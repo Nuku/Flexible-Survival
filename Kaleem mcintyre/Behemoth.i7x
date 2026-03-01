@@ -2,9 +2,6 @@ Behemoth by Kaleem mcintyre begins here.
 
 Section 1 - Creature Responses
 
-to say BehemothDesc:
-	say "     Charging straight for you on all fours is a beast straight out of legends. With teeth like razors, a forest-green and blue hide covering its massive sixteen foot long frame, a mane of pure white trailing around its monstrous head, twin onyx horns jutting from its scalp and four clawed paws scraping at the ground beneath its gigantic form, the mutant in front of you is definitely not something you would have ever hoped to come across. The fact that this behemoth of a creature has a massive nine foot tail covered in spikes and fur that lashes through the air behind it is nothing compared to the four and a half foot long cock and the pair of medicine ball-sized testicles dangling up under its body.";
-
 to say LoseToBehemoth:
 	project figure of Behemoth_hard_icon;
 	say "     Having been knocked into the air by the Behemoth you find yourself spinning around like a top before plummeting back to the ground.";
@@ -58,7 +55,7 @@ to say BeatTheBehemoth:
 		say "     Because you have subdued the Behemoth you could take this chance to revel in your victory over it, but because of the difference in its size compared to yours there's not a lot you can do to sexually [']tame['] the beast. But then again, if you want, you could fondle it some and maybe tease it into orgasm. Do you want to?";
 		if Player consents:
 			LineBreak;
-			say "     Making the decision to have some fun with the big brute you go over to the quietly panting beast to tease it. Should you play with its balls and cock or its cunt? (Y=Cock, N=Cunt)[line break]";
+			say "     Making the decision to have some fun with the big brute you go over to the quietly panting beast to tease it. Should you play with its [link]balls and cock (Y)[as]y[end link] or its [link]cunt (N)[as]n[end link]?";
 			if Player consents:
 				LineBreak;
 				say "     Noting the full testicles of the Behemoth you find yourself walking over to the fleshy orbs of the beast and then reaching out to hug them and thereby caress them with the front of your [BodyName of Player in lower case] chest. Hugging against the massive orbs you run your tongue over the two foot wide spheres while sniffing over the musk laden sack of flesh housing them. Grinding yourself against the massive cum factories you listen as the Behemoth moans and purrs in bliss while keeping a careful eye out for any suspicious movements or gestures that may come from the beast. Seeing none forthcoming you continue your motions, squeezing and dancing yourself against the Behemoth's low hanging orbs before moving on up to where its cock is extended out from between its legs.";
@@ -68,6 +65,7 @@ to say BeatTheBehemoth:
 				say "     Hot and flowing like water from a hydrant you wiggle your fingers around inside of the mutant's urethra while pumping your arm back and forth in order to [']sound['] the other in a way that it has never been before. Up above the beast moans and churrs as your efforts stimulate it to the point where it slowly rocks its hips back and forth into you in order to bring itself to full orgasm. Twisting your arm around you try to look for just the right spot necessary to send the other off into a spectacular climax, but sadly don't seem to locate it. The Behemoth seems not to mind this though!";
 				say "     Grunting and bringing up your second hand to slide it into the tip of the beast's girth you roll your arms around, sliding them side by side and then up and down throughout the Behemoth's cock, until finally, with an earth shaking roar, the mutant jerks and then throws its head back to roar loudly at the sky. The force of the first shot of Behemoth cum sends you flying back as the white bullet slams you dead center into the chest. Grunting as your back meets the ground you find yourself coughing and then sputtering as your body is polished down with the next dozen or so shots of the Behemoth's cum. The mutant begins to move his hips after the second shot and soon the beast is all but rutting against the ground as it pumps itself at you like a dog in heat.";
 				say "     When the Behemoth's orgasm finishes up you find yourself drenched in its white musky cum, but you come to realize that you are not all that mad about this as you roll the hot and gooey mess around all over your face, chest and neck. Down between your thighs your [if Player is male]cock[smn] throb[smv][else]cunt[sfn] throb[sfv][end if] with need and quickly you stick a hand into your pants and then tease yourself into orgasm along with the Behemoth. Letting out a bestial roar you cum and cum and cum until there's nothing inside of you left to give. Because of your stamina though you keep from passing out; ironically this also keeps you from missing the sight of a massive tongue coming at you. It would seem that the Behemoth wants to thank you for your efforts and benignly you allow the other to do as it wishes, but you make very sure to be careful in case the other's intentions change. Thankfully, they don't.";
+				CreatureSexAftermath "Behemoth" receives "Stroking" from "Player";
 				infect "Behemoth";
 			else:
 				LineBreak;
@@ -118,7 +116,7 @@ When Play begins:
 	now attack entry is "[one of]The Behemoth attacks with a bellowing roar, all but destroying your eardrums[or]The Behemoth sweeps its massive clawed forepaw into you sending you corkscrewing across the ground[or]The Behemoth batters with a mighty charge, knocking you across the ground[or]The Behemoth spins around to strike at you with its gargantuan tail[or]The Behemoth slams its forepaws into the ground causing an earthquake to upset your balance. It then flies into you to knock you into the ground[or]The Behemoth charges at you, hitting you directly in the chest with its toughened skull[at random]!"; [ Successful attack message ]
 	now defeated entry is "[BeatTheBehemoth]"; [ Text when monster loses. Change 'Behemoth' as above. ]
 	now victory entry is "[LoseToBehemoth]"; [ Text when monster wins. Change 'Behemoth' as above. ]
-	now desc entry is "[BehemothDesc]"; [ Description of the creature when you encounter it. ]
+	now desc entry is "     Charging straight for you on all fours is a beast straight out of legends. With teeth like razors, a forest-green and blue hide covering its massive sixteen foot long frame, a mane of pure white trailing around its monstrous head, twin onyx horns jutting from its scalp and four clawed paws scraping at the ground beneath its gigantic form, the mutant in front of you is definitely not something you would have ever hoped to come across. The fact that this behemoth of a creature has a massive nine foot tail covered in spikes and fur that lashes through the air behind it is nothing compared to the four and a half foot long cock and the pair of medicine ball-sized testicles dangling up under its body.[line break]"; [ Description of the creature when you encounter it. ]
 	now face entry is "lightly tinted with a greenish-blue hue with a long and angular muzzle, filled with twin rows of jagged fangs, protruding from the end of your face. Two curved, onyx, sixteen-inch horns jut out from your scalp, a shaggy white mane extending around your face and down to your back. Fierce, golden-orange, almond-shaped irises are centered in your pitch black eyes, and a pair of furry, tri-pointed ears flick back and forth beside both of your horns. You are a fearsome-looking beast, indeed"; [ Face description, format as "Your face is [Face of Player]." ]
 	now body entry is "stacked on with massive muscles and thickly corded sinew. Because of your body's new physique, you have acquired a slightly hunched over posture, symbolizing a better aptitude for you to walk and run on all fours instead of on two feet. Yet because of the density of your newly thickened bones you are able to walk without lumbering... too much. With your bestial eight foot frame, there is no denying your ferocity as you now boast sharpened claws at the end of your four fingered hands and at the tips of your three toed feet"; [ Body description, format as "Your body is [Body of Player]." ]
 	now skin entry is "a toughened hide of light greenish-blue"; [ Skin. Format as "Looking at yourself, your body is covered in [Skin of Player] skin." ]
@@ -269,8 +267,7 @@ When Play begins:
 	[Clit Size Adjective is generated by a function and can be used in scenes: very small/small/average/large/very large]
 ]
 
-[A sample structure for succumbing/surviving messages at the end of the game.]
-[Numerous other examples can be found in existing creature files.]
+Section 3 - Drop Item
 
 Table of Game Objects (continued)
 name	desc	weight	object
@@ -278,14 +275,13 @@ name	desc	weight	object
 
 behemoth horn is a grab object. Understand "horn" as behemoth horn.
 Usedesc of behemoth horn is "[behemoth horn use]".
+Scent of behemoth horn is "The scent coming from the Behemoth horn is heavy with musk, both male and female, and somehow filled with pride.".
 
 to say behemoth horn use:
 	say "     Taking the Behemoth horn and rolling it around inside of your hand you find you have the sudden strange urge to place the onyx piece of bone up against your skull. Not seeing any reason why you shouldn't, you place the horn on top of your head, right between your scalp and forehead. When nothing immediately happens you shrug and think nothing more of it, but when you remove your hand and the horn continues to stay in place you realize that something is about to happen to you. The onset of a throbbing in your skull and at your backside are definitely clues towards this assumption as you find yourself grunting somewhat in discomfort as your body goes to shifting around on its own.";
 	infect "Behemoth";
 
-Scent of behemoth horn is "The scent coming from the Behemoth horn is heavy with musk, both male and female, and somehow filled with pride.".
-
-Section 3 - Endings
+Section 4 - Endings
 
 Table of GameEndings (continued)
 Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)

@@ -21,7 +21,6 @@ When play begins:
 to say ResolveEvent Small Cave:
 	if glowing mushroom is owned:
 		say "     Walking around the forest, you find what appears to be a hole in a rock. It does have sound coming from the other side, so it might be worth exploring. Unfortunately, the hole is too small for your size, so you would need to shrink before going in there.";
-		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Eat the shrooms and try to scavenge the place.";
 		say "     ([link]N[as]n[end link]) - Could be dangerous while shrunk down. Search for another entrance.";
 		if Player consents:
@@ -34,15 +33,13 @@ to say ResolveEvent Small Cave:
 				say "You are eventually captured in her paws, and you become her toy for a while, the feline herm using you to kill her boredom. She hits you sometimes, encouraging you to keep moving to her amusement.";
 				ItemLoss glowing mushroom by 1;
 				say "     She is a cat, so maybe if you stopped moving, she would get bored of you and continue with what she was doing? However, she could also devour you. Your other choice is running away with all of your might, but if she did catch you again, who knows what she would do to you?";
-				LineBreak;
 				say "     ([link]Y[as]y[end link]) - Stop moving and hope the playful cat will get bored.";
 				say "     ([link]N[as]n[end link]) - RUN! It's the best option.";
 				if Player consents:
 					LineBreak;
 					say "     Against your own instincts, you stop moving, hoping that the beast will get bored of you as a toy and move on with her life, and for a while, it looks like it will work. The confused cat paws at you with curiosity as to why you would stop moving so suddenly, and she smells you, looking for any sign of life. You hold your breath with your eyes closed tight as to not show any emotion. Your body is immobile but not stiff, letting you roll around with some of the stronger hits your body takes. After some time of this, the cat finally looks like she got bored of you. You breathe a sigh of relief, although it was for naught. With your eyes closed, you couldn't have reacted to the hunger the beast showed, and you are tossed inside her mouth.";
 					say "     With a single pull, you travel to the inside of her mouth, her bigger teeth missing your body while her smaller teeth hold you in place as her meal. Her tongue touches your body, the sandpaper-like feeling stimulating your hot body. Those weird sensations of being held by her teeth and the sensation of her tongue, along with the slickness of her saliva, create a weird arousal inside of your brain. Your [if Player is female]pussy moistens[else if Player is male]member hardens[else]ass tightens[end if] with unwanted desire, distracting you long enough to not feel her tongue forcing you down her throat. Your mind is in shambles, and the idea of fighting back to stay on the surface doesn't even cross your mind as her fleshy canal pushes you towards her stomach. Your body stays in a bound state, your arms hugging your sides, and you are slightly red from your arousal, breathing heavily as if wanting some kind of release. But this place wasn't made for it - it was made to trap you. Finally, you can concentrate a bit more, and now, you need to make a choice.";
-					LineBreak;
-					say "     [bold type]Do you try to escape this place or just let it happen to the end?[roman type][line break]";
+					say "[line break]     [bold type]Do you try to escape this place or just let it happen to the end?[roman type][line break]";
 					say "     ([link]Y[as]y[end link]) - Try to escape by climbing back.";
 					say "     ([link]N[as]n[end link]) - Let yourself be devoured by the feline.";
 					if Player consents:
@@ -63,7 +60,6 @@ to say ResolveEvent Small Cave:
 					say "     In her mad humps, that giant cock lines up with your body, making you turn in dread as you see the opening of her cock slowly swallowing your feet. You try your best to escape your conundrum, but your flailing only makes her movements faster. Her pre lubes your travel through her urethra. When you are halfway through, you try to punch her gland, but with your diminutive size, it only tickles her, forcing moans out of her mouth. The entrance to her dick keeps swallowing you, which has now reached your thorax, and her musk is all that you can smell now. The rest of your body feels bound by the canal of flesh that surrounds it. Your arms stay above your head, trying to grasp at anything that will keep your head out of there. Her cock finally gets to your neck and jaw, making her pre splash in your mouth. The salty taste attacks your tongue, and you press your arms to the sides of your head in a last attempt to make you free, but it proves useless as you are swallowed whole by her cock.";
 					WaitLineBreak;
 					say "     You travel through her urethra bounding you with its tightness, but the lubing helps make this an almost pleasant sensation. The canal keeps pulling you with each spasm of pleasure that travels her body, and every movement you make forces her convulsions to get stronger. Her pre envelops you, making it very difficult to breathe and giving you only small pockets of air to use, the salty taste of her arousal overwhelming anything else on your tastebuds. Her movements are felt directly on your body from such an intimate moment, and right now, you are experiencing something that very few will ever savor. The mad shaking of your host pulls you more and more inside of her body and towards her balls. The horny feline trembles as your feet touch something that feels harder. Looks like you are passing by her prostate. This gives you an idea. Maybe if you can make her cum, you will be ejected from this place. Do you try this plan?";
-					LineBreak;
 					say "     ([link]Y[as]y[end link]) - Get out of here.";
 					say "     ([link]N[as]n[end link]) - Stay still and travel to her balls, even though this might be a one way trip.";
 					if Player consents:
@@ -81,17 +77,16 @@ to say ResolveEvent Small Cave:
 		else:
 			LineBreak;
 			say "     Going around the forest, never letting the rock wall out of your sights, you explore for a new opening. Finally, you find what appears to be a cave big enough for you to enter, but somebody might be living inside there. Do you still wish to go inside?";
-			LineBreak;
 			say "     ([link]Y[as]y[end link]) - Go inside the place.";
 			say "     ([link]N[as]n[end link]) - Give up and go home.";
 			if Player consents:
 				LineBreak;
 				say "     Going inside of the place, it looks like a nest for a feline. Some small bones litter the place, showing that whoever lives in there is a carnivore, so you better be on your toes. There is a stench in the air. The resident of this place probably did that to mark the place. A low growling and the sound of dry leaves cracking make you turn in a flash, and you find the one that lives in here. A big feline with yellow-brown fur is looking at you. The cat looks more feral than human, but she still has some characteristics that show she was a human before, specifically, her short, pixie-blonde hair. Outside of that, all that you can see is a beast ready to attack you. The fight is on.";
 				challenge "Cougar";
-				if fightoutcome >= 20 and fightoutcome <= 29:[lost]
+				if fightoutcome >= 20 and fightoutcome <= 29: [lost]
 					say "[losetocougar]"; [regular cougar scene]
 					now Resolution of Small Cave is 3; [fought cave cougar, lost]
-				else if fightoutcome >= 30:[fled]
+				else if fightoutcome >= 30: [fled]
 					say "     Running away with all that you have, you trip over a few times, but you get out of the cave before the feline leaps on you. You run without noticing that your legs took you back to the familiar sight of the Grey Abbey Library. You can finally rest.";
 					AttemptToWait;
 					move player to Grey Abbey Library;
@@ -106,17 +101,16 @@ to say ResolveEvent Small Cave:
 				now Resolution of Small Cave is 6; [didn't enter the small cave]
 	else:
 		say "     Walking around the forest, you find what appears to be a hole in a rock. It does have sound coming from the other side, so it might be worth exploring. Unfortunately, the hole is too small for your size, so you would need to shrink before going in there. Going around the forest, never letting the rock wall out of your sights, you explore for a new opening. Finally, you find what appears to be a cave big enough for you to enter, but somebody might be living inside there. Do you still wish to go inside?";
-		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Go inside the place.";
 		say "     ([link]N[as]n[end link]) - Give up and go home.";
 		if Player consents:
 			LineBreak;
 			say "     Going inside of the place, it looks like a nest for a feline. Some small bones litter the place, showing that whoever lives in there is a carnivore, so you better be on your toes. There is a stench in the air. The resident of this place probably did that to mark the place. A low growling and the sound of dry leaves cracking make you turn in a flash, and you find the one that lives in here. A big feline with yellow-brown fur is looking at you. The cat looks more feral than human, but she still has some characteristics that show she was a human before, specifically her short, pixie-blonde hair. Outside of that, all that you can see is a beast ready to attack you. The fight is on.";
 			challenge "Cougar";
-			if fightoutcome >= 20 and fightoutcome <= 29:[lost]
+			if fightoutcome >= 20 and fightoutcome <= 29: [lost]
 				say "[losetocougar]"; [regular cougar scene]
 				now Resolution of Small Cave is 3; [fought cave cougar, lost]
-			else if fightoutcome >= 30:[fled]
+			else if fightoutcome >= 30: [fled]
 				say "     Running away with all that you have, you trip over a few times, but you get out of the cave before the feline leaps on you. You run without noticing that your legs took you back to the familiar sight of the Grey Abbey Library. You can finally rest.";
 				AttemptToWait;
 				move player to Grey Abbey Library;

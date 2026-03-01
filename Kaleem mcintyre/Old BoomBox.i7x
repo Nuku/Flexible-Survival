@@ -32,16 +32,14 @@ Sarea of Old Record Store is "Outside".
 to say ResolveEvent Old Record Store:
 	say "     Walking along and scouting for danger around every other turn, you find your steps taking you to someplace that you aren't particularly familiar with. Surprised by the fact that your body has suddenly gained an awareness all its own, you don't think to stop yourself as you follow an unseen path to an old music store that looks as though it has seen much, much better days. Even before the so-called apocalypse, you don't actually remember having seen a music shop in the neighborhood where you lived, not even in the big city really. After iPods, cell phones and the likes started to come out and the internet became a hospice for people pirating bootleg music via unsecure web links, music stores like this one had become a relic of a past no one remembered or cared about.";
 	say "     A queer smile slips across your [FaceSpeciesName of Player in lower case] face as you make your way over to the window of the shop. Trying to peek to the best of your ability, you can't really get a good look of what's inside of the building[if CityPowerOn is true], despite having restored power to the city[end if]. Grunting and then shrugging, you prepare to turn away from the music store when you hear the telltale -click- of the front door being opened. Hastily, you crouch down to get on your guard and wonder if this is about to turn into some kind of devious mutant trick. When nothing happens after several seconds, you feel your nerves start to calm and your muscles unclench as a sense of safety washes over you. Not knowing what's going on here, you find yourself wondering if you should take a chance and go into the darkened storefront.";
-	LineBreak;
-	say "     [bold type]Should you go in?[roman type][line break]";
+	say "[line break]     [bold type]Should you go in?[roman type][line break]";
 	say "     ([link]Y[as]y[end link]) - Yes.";
 	say "     ([link]N[as]n[end link]) - No.";
 	if Player consents:
 		LineBreak;
 		say "     'Nothing ventured, nothing gained', someone once told you, and you can't help but think that said person might have been right for once. Taking a deep breath to draw up some confidence, you make your way over to the opened door, pull the barrier open, and then take a few timid steps inside. You instantly find yourself swarmed with the sounds of a weird style of music playing - a strange mix of bluegrass and acid jazz that somehow seems to work - as well as whispered words from unseen people having some sort of important discussion. At least you would guess the argument is significant by the tone of the utterances. Eyes swiftly tracking the area of the store from left to right and then up to down, you find yourself growing very confused when you don't actually see anybody. The lights are flicking on above you, illuminating the surrounding area, yet this is kinda confusing since it didn't look like this was so from the outside. A trick of the light perhaps?";
 		say "     Despite this, however, the whispers seem to grow somewhat quieter around you, as if your presence has become an inquiry to those unseen. Not believing in ghosts, since no such things could possibly exist, you wonder if this is some kind of strange mutant ploy. That's when the screech of a record needle scratching across a vinyl surface causes you to hiss in pain. Grunting in annoyance, you shake your head, wanting desperately to forget that noise ever happened, before you see a flicker from the back room that draws your attention. Not knowing what to do, you find yourself at the crossroads of yet another decision.";
-		LineBreak;
-		say "     [bold type]Should you go in or should you turn tail and flee?[roman type][line break]";
+		say "[line break]     [bold type]Should you go in or should you turn tail and flee?[roman type][line break]";
 		say "     ([link]Y[as]y[end link]) - Go in.";
 		say "     ([link]N[as]n[end link]) - Turn tail and flee.";
 		if Player consents:
@@ -82,13 +80,13 @@ Section 4 - Playing Music
 
 Boombox is a object.
 It is fixed in place.
-
-Description of BoomBox is "     An old jam machine that looks as though it had once been something very popular. Strangely enough, and despite the age of the machine, there is little wear and tear on the outside covering of the device. Perhaps whoever owned it kept the machine in a secure place so as to make sure that it wouldn't get damaged? Even more strange, the music player works... without power. Maybe if you pressed [bold type]play[roman type] the machine might start to work?[line break]".
-
+Description of BoomBox is "     An old jam machine that looks as though it had once been something very popular. Strangely enough, and despite the age of the machine, there is little wear and tear on the outside covering of the device. Perhaps whoever owned it kept the machine in a secure place so as to make sure that it wouldn't get damaged? Even more strange, the music player works... without power. Maybe if you pressed [link]play[end link] the machine might start to work?[line break]".
 Scent of BoomBox is "     The faint scent of good old times seem to waft around the old jam machine. Memories of days gone by, some of them before your time, flitter through your head as you sniff the machine in question. For some reason though, that doesn't bother you much.".
 
 Instead of using BoomBox:
-	say "[bold type]Play[roman type]";
+	try BoomBoxPlay;
+
+musicmessage is a text that varies.[@Tag:NotSaved]
 
 BoomBoxPlay is an action applying to nothing.
 Understand "play" as BoomBoxPlay.
@@ -96,14 +94,12 @@ Understand "music" as BoomBoxPlay.
 Understand "turn on" as BoomBoxPlay.
 
 Check BoomBoxPlay:
-	if BoomBox is in the bunker and the BoomBox is not visible, say "Want music, go to the Bunker! :D" instead;
 	if BoomBox is not in the bunker, say "You have nothing to play." instead;
+	if BoomBox is not visible, say "Want music, go to the Bunker! :D" instead;
 
 Carry out BoomBoxPlay:
 	say "     Looking over the old styled machine you find yourself wondering what flavor of music would be good to listen to right now. There are several switches, all with certain types of music on them, so you have options.";
-	say "[musicsession][line break]";
-
-musicmessage is a text that varies.[@Tag:NotSaved]
+	say "[musicsession]";
 
 to say musicsession:
 	say "     Today you feel like some...";
@@ -112,9 +108,9 @@ to say musicsession:
 	change the current menu to table of Music Selection;
 	carry out the displaying activity;
 	clear the screen;
-	say "     [musicmessage]";
+	say "[line break]     [musicmessage]";
 	WaitLineBreak;
-	try looking;
+	[try looking;]
 
 Table of Music Selection
 title					sortorder		toggle
@@ -132,19 +128,19 @@ This is the musiclisten rule:
 	choose row current menu selection in the current menu;
 	if title entry is:
 		-- "Jazz":
-			now musicmessage is "Looking over the old jam machine, you press the [italic type]jazz[roman type] button. Slowly, you find the soft sounds of trumpets and bass guitars and pianos rushing out at you in a soothing, almost laid back kind of rhythm. Without you noticing them doing so, your feet begin tapping in time with the smooth music as you bob your head, imagining yourself sitting back on a sofa and watching the sun set with a glass of wine in your hands.[line break][line break][jazzfriends]";
+			now musicmessage is "Looking over the old jam machine, you press the [italic type]jazz[roman type] button. Slowly, you find the soft sounds of trumpets and bass guitars and pianos rushing out at you in a soothing, almost laid back kind of rhythm. Without you noticing them doing so, your feet begin tapping in time with the smooth music as you bob your head, imagining yourself sitting back on a sofa and watching the sun set with a glass of wine in your hands.[paragraph break][jazzfriends]";
 			follow the turnpass rule;
 		-- "Tango":
-			now musicmessage is "Looking at the knobs on the old jam machine, you find yourself hitting the [italic type]tango[roman type] button and instantly the room is filled with the living sounds of violins, pianos, guitars and flutes all working in time together to fill the bunker with a smooth kind of ballroom-like music. Not really sure how to feel about this, you find yourself swaying with the notes as the instruments slowly work in concert to energize the bunker.[line break]     The feeling that you want to suddenly start dancing around passionately has you nearly shivering when the music takes on a sudden lively flare. You can almost see yourself swirling around while in the arms of a strong male lead as he guides you on the dance floor.[line break][line break][tangofriends]";
+			now musicmessage is "Looking at the knobs on the old jam machine, you find yourself hitting the [italic type]tango[roman type] button and instantly the room is filled with the living sounds of violins, pianos, guitars and flutes all working in time together to fill the bunker with a smooth kind of ballroom-like music. Not really sure how to feel about this, you find yourself swaying with the notes as the instruments slowly work in concert to energize the bunker.[line break]     The feeling that you want to suddenly start dancing around passionately has you nearly shivering when the music takes on a sudden lively flare. You can almost see yourself swirling around while in the arms of a strong male lead as he guides you on the dance floor.[paragraph break][tangofriends]";
 			follow the turnpass rule;
 		-- "R&B":
-			now musicmessage is "Looking at the working jam box, you find yourself going over the knobs before finally coming to [italic type]R&B[roman type] and then pressing the button. Like a storm coming in from the sea, the bunker is soon filled with the mournful sounds of rhythmic blues music spilling out into the small area. Going to sit down on one of the cots in the room, you let your head bob in time with the instruments, and you can almost hear someone singing in time with the melody. The music makes you imagine yourself driving down the road in a pop-top car while letting your hair dance in the wind as you speed down the highway.[line break][line break][R&Bfriends]";
+			now musicmessage is "Looking at the working jam box, you find yourself going over the knobs before finally coming to [italic type]R&B[roman type] and then pressing the button. Like a storm coming in from the sea, the bunker is soon filled with the mournful sounds of rhythmic blues music spilling out into the small area. Going to sit down on one of the cots in the room, you let your head bob in time with the instruments, and you can almost hear someone singing in time with the melody. The music makes you imagine yourself driving down the road in a pop-top car while letting your hair dance in the wind as you speed down the highway.[paragraph break][R&Bfriends]";
 			follow the turnpass rule;
 		-- "Rock and Roll":
-			now musicmessage is "The sounds of Rock and Roll soon pulse out from the beat machine as you press the button denoted as R&R. The sounds coming from the jam machine are a mix of electric guitars and drums, and you find that it actually takes you a while to get used to this kind of [italic type]noise[roman type] before you can stand the sounds.[line break]     When you do, however, you find yourself imagining yourself around a large number of screaming fans, all cheering for a leather-clad group of musicians working in sync together to jam their hearts out. A slight snap of your hips follows a hop and before you know it you are dancing your own heart out as your blood begins to quicken within your veins. Maybe this isn't so bad after all.[line break][line break][RockandRollfriends]";
+			now musicmessage is "The sounds of Rock and Roll soon pulse out from the beat machine as you press the button denoted as R&R. The sounds coming from the jam machine are a mix of electric guitars and drums, and you find that it actually takes you a while to get used to this kind of [italic type]noise[roman type] before you can stand the sounds.[line break]     When you do, however, you find yourself imagining yourself around a large number of screaming fans, all cheering for a leather-clad group of musicians working in sync together to jam their hearts out. A slight snap of your hips follows a hop and before you know it you are dancing your own heart out as your blood begins to quicken within your veins. Maybe this isn't so bad after all.[paragraph break][RockandRollfriends]";
 			follow the turnpass rule;
 		-- "Ocean":
-			now musicmessage is "Pressing the button marked as [italic type]ocean[roman type], you find yourself somewhat confused as you notice that the swaying rhythm of the sea lapping at the shore starts to play out across the room. Instantly, you feel somewhat sleepy and you go over to one of the cots in the room and then start to close your eyes to sleep.[line break]     The instant you shut your eyes, you can see the sights of calm blue waters rushing across clear white sands, while dolphins flip around up and down inside of these waters. Whales spray water from their blowholes, and you can't help but smile as you suddenly feel so warm and content within yourself. The feeling that someone is calling you makes you arch an eyebrow as you wonder if you had heard right...[line break][line break][Oceanfriends]";
+			now musicmessage is "Pressing the button marked as [italic type]ocean[roman type], you find yourself somewhat confused as you notice that the swaying rhythm of the sea lapping at the shore starts to play out across the room. Instantly, you feel somewhat sleepy and you go over to one of the cots in the room and then start to close your eyes to sleep.[line break]     The instant you shut your eyes, you can see the sights of calm blue waters rushing across clear white sands, while dolphins flip around up and down inside of these waters. Whales spray water from their blowholes, and you can't help but smile as you suddenly feel so warm and content within yourself. The feeling that someone is calling you makes you arch an eyebrow as you wonder if you had heard right...[paragraph break][Oceanfriends]";
 			follow the turnpass rule;
 		-- "Insert Tape A":
 			now musicmessage is "Realizing that you [']borrowed['] both of those tapes from the music shop without meaning to, you shrug and think that you'll take them back later before popping one into the boombox and then pressing PLAY. Quietly, the background music of the song plays and you find yourself nodding your head as you recall the song. A man's voice fills up the bunker and soon you are silently mouthing the words to his song in time with the lyrics being sung.[line break]     Old memories come flooding back into you from years ago, and without meaning to you start to sway back and forth while nodding your head around almost drunkenly. Amazing what old music can do to someone. This would be a good time for you to go out and find some music, preferably with a male singer, that you (the player) likes to listen to as well. It would make this scene much better. (Thanks for playing Flexible Survival by the way!)";
@@ -179,7 +175,7 @@ To say jazzfriends:
 	if Elijah is in the Bunker:
 		If HP of Elijah is 3 or HP of Elijah is 4:
 			say "     Elijah seems to enjoy the smooth melody playing on the boombox and soon begins to hum a tune that is unfamiliar to you. In fact, as you listen a little more closely, Elijah's humming almost sounds... otherworldly.";
-	if Alexandra is in the library:
+	if Alexandra is in Grey Abbey Library:
 		say "     Coming in to investigate the noise, Alexandra pokes her head inside and stands at the door, keeping an eye on the library in case of trouble while she listens. She sticks around, listening to the alternately soothing and bombastic jazz coming from the boombox as she becomes lost in thought.";
 	SanBoost 4;
 

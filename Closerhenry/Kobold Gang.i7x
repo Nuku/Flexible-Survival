@@ -4,8 +4,6 @@ Version 1 of Kobold Gang by Closerhenry begins here.
 
 Section 1 - Creature Responses
 
-[ Use 'to say xxxxx' for overlong text boxes or complex situations, using '[xxxxx]' (in square brackets) within a say statement to execute them. Typically, these are needed if there are a lot of cock/species/cunt checks. ]
-
 koboldgangmet is a number that varies.
 [koboldgangsubs is a number that varies.]
 
@@ -27,10 +25,7 @@ to say koboldgangdesc:
 		say "     A dull blue kobold steps forward, crossing his arms as he looks at you. 'We were just looking for you! Come, now, it's time for you to take care of your superiors, our little buttslut,' the kobold says menacingly as the creatures prepare to attack.";
 
 to say losetokoboldgang:
-	if HP of Player > 0 and Player is male:
-		[if Player is not male:
-			say "     <Sadly, scenes for a female player surrendering are not yet written for this enemy.>";
-		else:]
+	if HP of Player > 0 and Player is male: [Sadly, scenes for a female player surrendering are not yet written for this enemy]
 		if BodyName of Player is "Kobold" and Player is pure:
 			say "     You surrender to the group of kobolds, your submissive instincts too strong to ignore. The leader of the gang orders the others to cease fighting. 'Glad to know you see how things work around here!' he praises, walking toward you with a smirk on his muzzle. The pale blue kobold begins to undress you, making sure to sensually stroke your sensitive body with every deliberate movement. 'Why do you wear these rags? It is much better to show off your body. You have wonderful assets,' he murmurs, giving your pert rear a lecherous squeeze. You dimly realize that your tail is raising on its own accord when a light breeze tickles your rear. You know you should feel embarrassed, you know you should feel some sense of shame, but you can't help but feel pride in the fact that every kobold in the area's eyes are locked on your needy, submissive body, all of them thinking of different ways to use you.";
 			say "     The kobold gently guides you to your knees, running his claws lightly over your frame. The tips of his fingers send tingles of pleasure down your body, fogging your mind further with lust. 'Oh, yes, you turned out nicely. See what happens when you do what you're told? Yes, you're rewarded nicely...' he murmurs, as he positions himself behind you. The kobold brings his muzzle to your rear, and you feel his warm tongue lapping against your ass. His tapered tongue runs against your anus, moving around its outer edges and working its way inward. Your anus clenches, the sensitive nerves quaking in pleasure at the kobold's expert rimjob. His tongue pushes inward, probing your depths, filling you with the warmth of his tongue. His tongue explores inside of you, both teasing and preparing you. You feel the tip of his tongue reach your prostate, causing you to audibly moan in pleasure. The kobold pulls his tongue out, leaving your ass feeling hollow.";
@@ -178,8 +173,7 @@ to say losetokoboldgang:
 to say beatthekoboldgang:
 	if Player is male:
 		say "     The last kobold, the leader with the blue scales, shakes as he falls to the ground on his back. 'This is... inconceivable! We were all beaten by a whelp like... you,' he groans. An idea comes to your head, that maybe you could show their 'leader' his place by taking him right here and now.";
-		LineBreak;
-		say "     [bold type]Do you want to have some fun with the kobold gang?[roman type][line break]";
+		say "[line break]     [bold type]Do you want to have some fun with the kobold gang?[roman type][line break]";
 		say "     ([link]Y[as]y[end link]) - Fuck the kobold!";
 		say "     ([link]N[as]n[end link]) - No, this defeat was humiliating enough.";
 		if Player consents:
@@ -258,7 +252,6 @@ to say KoboldGangOrgy:
 		CreatureSexAftermath "Player" receives "PussyFuck" from "Kobold";
 		CreatureSexAftermath "Kobold" receives "OralPussy" from "Player";
 	else if Player is male:
-		CreatureSexAftermath "Player" receives "AssFuck" from "Kobold";
 		CreatureSexAftermath "Kobold" receives "OralCock" from "Player";
 	CreatureSexAftermath "Player" receives "AssFuck" from "Kobold";
 	CreatureSexAftermath "Player" receives "OralCock" from "Kobold";

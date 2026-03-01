@@ -18,8 +18,7 @@ MushroomCaveVisited is a number that varies. MushroomCaveVisited is usually 0
 to say ResolveEvent Mushroom Cave:
 	if MushroomCaveVisited is 0: [first visit]
 		say "     Stepping inside the dark alley, you find yourself drawn to a green glow at the end of it, a peculiar scene, even for the place that you are in. There is an opening in the side of one of the buildings flanking the alley. Looking through the hole in the wall, you realize that the rest of the building has mostly collapsed and is nothing more but rubble, and you're standing at the entrance of a small 'cave' in the pile. Entering this 'cave', you find something like a mini-forest in there. Some, if not all, of the plants there are miniature versions of the same ones that you would find outside. Even some inanimate items like garbage dumpsters and trash cans lying outside of the cave and in the alley have shrunk. Right through the middle of this whole ecosystem, a river flows, feeding the amazing sight with life. It is but a trickle of goop to you, but it's a mighty flow to the tiny forest. Glowing with an otherworldly green color, it slowly flows from an opening in the rubble and unloads down a sewer drain a short while later. It is possible that this is some kind of radioactive leak from inside the destroyed building, and with the touch of the nanites, it was made into a shrinking concoction. Looking at the green river, you spot some mushrooms growing near the sewer that don't appear to be tiny like all of the other stuff, but they still glow faintly with that green color. The shrooms probably absorbed the features of both the radioactive stuff and the nanites.";
-		LineBreak;
-		say "     [bold type]Do you pick some of the mushrooms?[roman type][line break]";
+		say "[line break]     [bold type]Do you pick some of the mushrooms?[roman type][line break]";
 		say "     ([link]Y[as]y[end link]) - You grab some of the mushrooms. They might prove useful in the future.";
 		say "     ([link]N[as]n[end link]) - Nah, eating stuff growing next to glowing sludge might be a bad idea, and besides, you won't need them anyway.";
 		if Player consents:
@@ -34,8 +33,7 @@ to say ResolveEvent Mushroom Cave:
 		now MushroomCaveVisited is 1;
 	else:
 		say "     Returning to the dark alley, you pay a visit to the little cave in the ruined building again. Stepping up to the hole in the wall, you are struck once again by the otherworldly beauty of the miniature land spreading out in front of you. Some of the trees appear to have grown a bit, but no more than a dandelion. Meanwhile, the goop still flows silently and slowly to the sewer, although it does seem to be smaller than the first time you saw it. Maybe someday, this whole scene will grow back to normal, and nothing that you see here will be witnessed by anyone else.";
-		LineBreak;
-		say "     [bold type]Do you pick some of the mushrooms?[roman type][line break]";
+		say "[line break]     [bold type]Do you pick some of the mushrooms?[roman type][line break]";
 		say "     ([link]Y[as]y[end link]) - You grab some of the mushrooms. They might prove useful in the future.";
 		say "     ([link]N[as]n[end link]) - Nah, eating stuff growing next to glowing sludge might be a bad idea, and besides, you won't need them anyway.";
 		if Player consents:
@@ -58,11 +56,7 @@ glowing mushroom is a grab object.
 Understand "mushroom" as glowing mushroom.
 Understand "shrooms" as glowing mushroom.
 Understand "glowing shrooms" as glowing mushroom.
-Usedesc of glowing mushroom is "[glowing mushroom use]".
-
-To say glowing mushroom use:
-	say "     You quickly shrink, your body getting smaller and smaller by the second. Meanwhile, the clothes and gear you carry stay the same size, quickly outgrowing your diminishing stature. Looking at the now giant world with awe, you wonder how you will be able to survive while being small as a mouse. And should you just leave your equipment behind? Not seeing too much hope for making it far like this, you decide to wait. Thankfully, after some time, you feel yourself growing back to normal. Looks like the effects weren't permanent - this time, at least.";
-	[ItemLoss glowing mushroom by 1;]
+Usedesc of glowing mushroom is "     You quickly shrink, your body getting smaller and smaller by the second. Meanwhile, the clothes and gear you carry stay the same size, quickly outgrowing your diminishing stature. Looking at the now giant world with awe, you wonder how you will be able to survive while being small as a mouse. And should you just leave your equipment behind? Not seeing too much hope for making it far like this, you decide to wait. Thankfully, after some time, you feel yourself growing back to normal. Looks like the effects weren't permanent - this time, at least.[line break]".
 
 Section 3 - Events
 
@@ -84,8 +78,7 @@ to say ResolveEvent Hungry Dog:
 	if vorelevel > 2:
 		say "     While exploring the nanite-infested city you hear some noises coming from an alley beside you. You turn around, trying your best to peek stealthily into the alley. Inside, you find what appears to be a giant, anthro German shepherd gorging himself with... some kind of food. By his side, you see a pile of clothes tossed carelessly aside. Most of them look like ordinary clothes, but there are some camo pattern uniforms in the mix, and they are all stained with what appears to be blood. This is weird - none of the German shepherds you found hunting in the city were wearing anything. Why would this one have clothes, or even take them off while he eats?";
 		say "     Oh god! Your legs tremble with the sudden realization, and you almost lose your breath. It can't be! He is eating someone!? Almost as if sniffing your fear, the beast puts his muzzle to the air and starts to turn around...";
-		LineBreak;
-		say "     [bold type]Extreme content warning! (The further scenes contain hard-vore with a possible shrinking scene and a game over!)[roman type][line break]";
+		say "[line break]     [bold type]Extreme content warning! (The further scenes contain hard-vore with a possible shrinking scene and a game over!)[roman type][line break]";
 		say "     ([link]Y[as]y[end link]) - Face the beast.";
 		say "     ([link]N[as]n[end link]) - RUN!";
 		if Player consents:
@@ -97,8 +90,7 @@ to say ResolveEvent Hungry Dog:
 				say "     Sniffing you, the dog quickly pushes his muzzle into your backpack. With an impish smile, he quickly grabs the glowing mushrooms that you had. Looks like this dog does know what they do to those who eat them. Holding the mushrooms with one hand and pulling you by the neck with the other, he tries to force the mushrooms into your mouth. Since you won't cooperate, he holds your [FaceSpeciesName of Player in lower case] nose, depriving you of oxygen. Try as you might, you can't escape his hold, and you are starting to need air quick. Opening your mouth just for a bit gives the strong dog enough time to shove the shrooms down your throat, forcing you to eat and swallow them. 'Stupid prey,' the shepherd says with a winning smile. 'You should know your place. Being my meal is the best end for someone like you.'";
 				say "     As soon as you swallow, you feel your body changing, quickly losing height and weight. The world keeps getting bigger and bigger, as well as the shepherd in front of you. Soon, all you can see is his paws as the now-absolutely-enormous predator grabs you. When you are brought in front of his giant face, you can see his saliva glistening, while his eyes shine with hunger. 'Thanks for the meal,' is all you hear after that.";
 				ItemLoss glowing mushroom by 1;
-				LineBreak;
-				say "     [bold type]Do you accept your fate?[roman type][line break]";
+				say "[line break]     [bold type]Do you accept your fate?[roman type][line break]";
 				say "     ([link]Y[as]y[end link]) - Let the huge beast eat you without trying to fight.";
 				say "     ([link]N[as]n[end link]) - It isn't supposed to end like this. You will fight to the end.";
 				if Player consents:
@@ -163,8 +155,7 @@ to say ResolveEvent Hungry Dog:
 			else:
 				say "     Coming from inside the dark alley, the German shepherd finally steps into the light, giving you a better view. He is monstrously large, quite a bit bigger than the ones you found to this day. He has some darker stains in his fur from what appears to be dried blood. A complete lack of clothing gives him an almost fully feral feel. Between the dog's legs, there is a huge sheath, and from the looks of it, an even bigger knotted penis. Even without it leaving the sheath, you can see it pressing against the skin, making it bulge, especially where the knot should be. Right below there are two orbs the size of tennis balls that appear to be full of the monster's seed.";
 				say "     The bloodthirsty dog jumps in your direction, putting his arms to the ground and running like a feral monster with a dark smile. He rams into you, making you lose your breath from the strength of the impact. You are knocked over onto the floor, falling on your butt, making you clench your teeth with the impact with the deserted road. You are left without breath as the hunter stands tall beside you, never letting you out of his sight. Licking his lips, he holds you by the neck and says, 'Looks like I found my next meal.'";
-				LineBreak;
-				say "     [bold type]Do you let the beast do what he wants with you?[roman type][line break]";
+				say "[line break]     [bold type]Do you let the beast do what he wants with you?[roman type][line break]";
 				say "     ([link]Y[as]y[end link]) - Let the beast do what he wants with you.";
 				say "     ([link]N[as]n[end link]) - You can't possibly win against him. Your only hope is to flee.";
 				if Player consents:
@@ -187,10 +178,8 @@ to say ResolveEvent Hungry Dog:
 	else:
 		say "     While exploring the nanite-infested city you hear some noises coming from an alley beside you. You turn around, trying your best to peek stealthily into the alley. Inside, you find what appears to be a giant, anthro German shepherd gorging himself with... some kind of food. By his side, you see a pile of clothes tossed carelessly aside. Most of them look like ordinary clothes, but there are some camo pattern uniforms in the mix, and they are all stained with what appears to be blood. This is weird - none of the German shepherds you found hunting in the city were wearing anything. Why would this one have clothes, or even take them off while he eats?";
 		say "     Oh god! Your legs tremble with the sudden realization, and you almost lose your breath. It can't be! He is eating someone!? Almost as if sniffing your fear the beast puts his muzzle to the air, starting to turn around, but you run as fast as you can from the scene.";
-		LineBreak;
-		say "     (Further options for this scene are locked for players who did not select 'more vore'. You can change your settings with the help of Trixie in the library, if you really want to see the rest.)";
+		say "[line break]     (Further options for this scene are locked for players who did not select 'More Vore'. You can change your settings with the help of Trixie in the library if you really want to see the rest.)";
 		now Resolution of Hungry Dog is 3; [vore-disabled resolution]
-		[now Hungry Dog is resolved;]
 
 Table of GameEventIDs (continued)
 Object	Name
@@ -209,8 +198,7 @@ When play begins:
 
 to say ResolveEvent Little Trouble:
 	say "     While exploring the city and wandering through an alley, you find a small hole at the foot of one of the two walls flanking you. The building it belongs to looks oriental in decoration. There are some banners with Chinese letters hanging on poles from the upper stories, but they're hard to read since the colors are pretty faded. The rest of the wall you're standing in front of is painted with some red and gold design across it. Upon hearing some noises from inside the building, you decide to crouch down and take a peek. You can't see much of what is going on inside, but clearly, something is making rhythmic banging noises in there.";
-	LineBreak;
-	say "     What do you want to do?";
+	say "[line break]     What do you want to do?";
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]
@@ -251,8 +239,6 @@ to say ResolveEvent Little Trouble:
 			say "     Giving up on the idea of exploring this weird place, you go on your merry way.";
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options], or 0 to exit.";
-	wait for any key;
-	clear the screen and hyperlink list;
 
 to say LittleExplorer:
 	say "     Going around the block, you keep looking for any opening or way you could use to enter the place. Reaching the front of the building, you find out that it doesn't actually have a door anymore - or most of the front wall. A pickup truck is sticking halfway through the wall, dented by the bricks that showered down upon it. Seems like the driver lost control of the vehicle... possibly because he was turning, or another passenger was. A glance through the passenger side window reveals a dried, cummy mess and ripped clothing all over the seats inside. There is barely any blood, thankfully, so it seems like both of the occupants walked away from the crash - in whatever form they may have been by then.";
@@ -263,10 +249,10 @@ to say LittleExplorer:
 	WaitLineBreak;
 	say "     That doesn't mean his erection is going down though - looks like one orgasm isn't enough to satisfy this beast. He lets go of his partner, but not actually because he wants to let her rest. Instead, the dominant dog turns towards you, somehow having become aware of your presence. His horny bedmate reaches out for his prick to guide him back into her, but the anthro dog pushes her aside, much to her dismay. 'Come, little pig,' he scoffs at you as he stands up. 'Let's play!'";
 	challenge "Husky Alpha";
-	if fightoutcome >= 20 and fightoutcome <= 29:[lost]
+	if fightoutcome >= 20 and fightoutcome <= 29: [lost]
 		say "     Now satisfied, the beast throws you out of the room and into the restaurant. You rest for a bit on the cold, uneven ground as your strength slowly comes back to your being. When you finally get on your feet again, you limp to the entrance and go back to the bunker, hoping that the next adventure will be better.";
 		now Resolution of Little Trouble is 2; [fought, lost]
-	else if fightoutcome >= 30:[fled]
+	else if fightoutcome >= 30: [fled]
 		say "     You run back the way you came, accidentally slamming into one of the pillars on your way out. The beast shouts profanities during your retreat, but you quickly lose him, leaving the place for good as you run directly to the bunker.";
 		now Resolution of Little Trouble is 3; [fought, fled]
 	else if fightoutcome >= 10 and fightoutcome <= 19: [won]
@@ -280,8 +266,7 @@ to say LittleShroom:
 	say "     Eating one of your mushrooms, you quickly diminish in size and soon have to crawl out of the pile of clothes and gear you had on you. Looks like you have to enter naked - better be quick so that the chance of someone coming along and finding your stuff is minimal. Making your way to the hole, you can more easily look inside from your new viewpoint. The place looks like a run down kitchen from what you see. There is some canned food on the other side of the room that you should be able to roll over to the hole and add to your possessions.";
 	say "     In one corner of the kitchen lies a cum-stained mattress, with a husky bitch sleeping on it, sitting slumped back against the wall. She has her legs spread enough that you can see her pussy - its nether lips slightly spread and looking quite inviting. [if ublevel < 3]Yet even if you wanted to, right now, you're just not in any position or size category to do anything with her[else]That looks like it might be a fun place to go and play around a bit if you feel like that[end if]. Also, there is still that pounding noise you heard earlier, coming from the next room. You could try to find who is doing that, but then again, [if vorelevel < 3]you probably shouldn't. Now that you're only about four inches high, you feel pretty vulnerable. Who knows what might happen if you walked in upon someone regular-sized who was busy fucking.[else]it might not be such a good idea to walk up to a being very much larger than yourself. You might end up a snack...[end if]";
 	ItemLoss glowing mushroom by 1;
-	LineBreak;
-	say "     What now?";
+	say "[line break]     What now?";
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]
@@ -330,6 +315,7 @@ to say LittleShroom:
 			say "     You give up and go back the way you came. It's not worth it";
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options], or 0 to exit.";
+	wait for any key;
 	clear the screen and hyperlink list;
 
 to say ChineseSupplies:
@@ -346,18 +332,17 @@ to say ChineseUB:
 	say "     Those lips are calling you, and it's not her mouth. You carefully walk up to the sleeping husky girl, making sure not to make noise so she won't wake until you finish your business with her. Soon standing between her strong digitigrade legs with their gray fur, you can't help but think that they look especially beautiful from this viewpoint and size. Such a strong woman makes you even hornier about what you are gonna do next. Impatiently dashing forward into the narrow canyon between her spread legs, you finally reach your destination a moment later.";
 	say "     Her snatch is pink and pulses with the rhythm of her heart, which is actually quite fast right now, and her clit is engorged, shiny with the juices showing her arousal. Looks like the horny bitch has dirty dreams... So really, you're doing her a favor. What kind of person would leave her like that, wound up without release? Not you, that's for sure. Touching her pussy, your hand slips against the wetness of her folds, and your elbow slides into her before you can do anything about it. The furry girl twitches at the sudden contact and pushes you into her body, giving you one hell of a jump scare... but it doesn't seem to have been enough to wake her up. Calming your heart after the accident, you go back to touching her more carefully and gently.";
 	WaitLineBreak;
-	say "     Slowly pulling her nether lips apart, you can see two holes that you could penetrate if you wanted to right now. ";
 	if wslevel > 2: [more WS selected]
-		say "Grinning from ear to ear, you touch her urethra, just prodding to see how the dame reacts to the stimuli. She squirms for a bit, but it doesn't look like this will wake her up either - so it's time to have some fun. Pushing your arm inside her urethra, you gently prod and even lightly pinch her insides, making the anthro dog squirm and tremble, giving you a hint on what is to come.";
+		say "     Slowly pulling her nether lips apart, you can see two holes that you could penetrate if you wanted to right now. Grinning from ear to ear, you touch her urethra, just prodding to see how the dame reacts to the stimuli. She squirms for a bit, but it doesn't look like this will wake her up either - so it's time to have some fun. Pushing your arm inside her urethra, you gently prod and even lightly pinch her insides, making the anthro dog squirm and tremble, giving you a hint on what is to come.";
 		say "     You feel the liquid starting to push your arm out of the hole, the golden flow almost scalding hot at your size and making your arm burn for a bit before you are flung out of her pee hole with a spurt of the liquid. Soon, your whole body is drenched in her urine, the acrid taste spilling in your mouth and the pungent smell filling your lungs. The golden rain goes on for a bit, showering your prone form in her piss. When it finally stops and you start to wipe the liquid from your eyes, you realize that the bitch is not sleeping anymore. She stares down at you in the pool of her urine, then reaches out to snatch you up in her paw.";
 	else: [going for the pussy]
-		say "You go right to her snatch, pushing your whole arm inside of her once more, this time on purpose. If you were your normal size, this fisting would be hard on her, but at this scale, she barely reacts to it a second time, even as you wiggle your arm around a bit inside her. Defiant about not being able to affect her that much after all, you step up to the challenge and start to climb up, wanting to enter her pussy with your whole naked body. But it isn't actually that easy to do. Surrounded by her slick, fleshy folds, you barely have anything to hold onto to pull yourself in. After a futile attempt or two, you eventually end up taking a running leap to jump into her opening head first, then work your way deeper, wiggling against her inner walls.";
+		say "     Slowly pulling her nether lips apart, you can see two holes that you could penetrate if you wanted to right now. You go right to her snatch, pushing your whole arm inside of her once more, this time on purpose. If you were your normal size, this fisting would be hard on her, but at this scale, she barely reacts to it a second time, even as you wiggle your arm around a bit inside her. Defiant about not being able to affect her that much after all, you step up to the challenge and start to climb up, wanting to enter her pussy with your whole naked body. But it isn't actually that easy to do. Surrounded by her slick, fleshy folds, you barely have anything to hold onto to pull yourself in. After a futile attempt or two, you eventually end up taking a running leap to jump into her opening head first, then work your way deeper, wiggling against her inner walls.";
 		say "     This is actually quite a bit of fun, slippery warmth rubbing against your naked body from all sides. Soon, your front half is in what feels like a little bit of a larger space. Blinking a few times, you realize that you can actually see a little bit in here too. Do those shrooms have a side effect of enabling you to see in the dark? No matter what or how, you are able to make out the enclosed space of her vagina around you with the inner ring of her cervix further up and back. That'll be a difficult, but definitely fun, climb. While you are already mapping out the best route to take, your legs, which are still sticking out between the husky's folds, are suddenly grasped and pulled upon. In one quick pull, you're out of the comfy enclosure once more and in the anthro canine's paw.";
 	WaitLineBreak;
 	say "     Locked in her paw now and with the size and strength of a mouse, you probably won't escape her easily. 'So cute,' your husky captor says as she keeps looking at you. 'Aren't you a pleasant surprise to find?' She giggles as she touches, prods, and squeezes you in every way possible. Then eventually, a meaningful smile spreads over her muzzle. 'You should finish what you started.' Opening her legs again and spreading her feminine folds apart with two fingers, she pushes you against them with some urgency. 'Go on. Make me cum, or else you will be my snack!'";
 	say "     Looks like you will be used as a dildo, and if you don't do a proper job, you will be eaten. The sweet smell coming from her lust fills your lungs easily, given your diminutive size. Without even one second more to think, you are pushed in between her soft folds, your body brushing against the engorged flesh lubed with her arousal. Once more penetrating the anthro girl, just not on your own accord this time, you are pushed and pulled in and out, rubbing up against her inner walls. Your mouth and lungs are filled with her sweet scent every time you try to breathe. After a few moments, it feels like the whole world is just her and the scent of her heat.";
 	WaitLineBreak;
-	say "     The bitch trembles and squirms as you are turned into her personal dildo. And not to overlook the effects on your own lust, [if Player is male]your hard member slides pleasantly over her supple flesh[else if Player is female]your clit rubs inside the bitch, making you wet yourself and mixing both of your juices[else]your excitement builds up, but without a sex organ to release, you are stuck in a cycle of perpetual denying and teasing[end if]. In her eagerness to get off, the bitch actually pushes you into herself all the way, then continues to shove you further up until only her fingertips touch your feet.";
+	say "     The bitch trembles and squirms as you are turned into her personal dildo. And not to overlook the effects on your own lust, your [if Player is male]hard member slides pleasantly over her supple flesh[else if Player is female]clit rubs inside the bitch, making you wet yourself and mixing both of your juices[else]excitement builds up, but without a sex organ to release, you are stuck in a cycle of perpetual denying and teasing[end if]. In her eagerness to get off, the bitch actually pushes you into herself all the way, then continues to shove you further up until only her fingertips touch your feet.";
 	say "     She has pushed you right to the spot where you had planned to go earlier. Well, not quite, as your face is squished somewhat uncomfortably against the ring of her cervix, but the position definitely has its advantages. It isn't hard to snake your absolutely soaked and slippery arm in at the center of the large ring of muscle. The second arm is a bit harder, but still doable, allowing you to really get a grip and pull yourself up. Your heart races as you get a first glimpse of the inside of her womb, then stick your head through the opening, wiggling and pulling to slide in. Such efforts don't go unnoticed - the husky bitch's insides tremble and leak even more fluids in reaction.";
 	WaitLineBreak;
 	say "     With a final push, your shoulders penetrate her cervix, allowing the rest of your body into the snug cave of her womb as her muscles quake in orgasm, squishing you with its flexible walls. Bouncing and sliding around in her innermost sanctuary, this also pushes you to, and past, the limit of your endurance, [if Player is male]making your cock shoot heavy blasts of seed right into her womb and over yourself[else if Player is female]your love juices slicking the inside of her womb[else]trembling and twitching in orgasm[end if]. Afterwards, you stay in the fetal position for a time, just resting after your breathtaking climax. After all, this is such a nice place. Warm and welcoming, you could live here forever.";
@@ -377,7 +362,7 @@ to say ChineseTrouble:
 	say "     The anthro canine's small body shivers and trembles with every pounce, and as much as her hips want to keep that nice, red rod inside of her, the male has other ideas as he gives in to his instincts. Even his knot is not enough to anchor the little husky to his crotch, and you can see her vagina bulging and gaping every time he pulls it out of her, his seed being splattered all over her belly, crotch, and legs. That doesn't mean his erection is going down though - looks like one orgasm isn't enough to satisfy this beast. He lets go of his partner, but not actually because he wants to let her rest. Instead, the dominant dog turns towards you, somehow having become aware of your presence.";
 	say "     His horny bed-mate reaches out for his prick to guide him back into her, but the anthro dog pushes her aside, much to her dismay. 'Come, little pig,' he scoffs at you as he stands up. 'Let's play!' Both of them jump from the bed and start coming for you. Without proper time to react, your best idea is to hide under a table, but sniffing the air with their excellent noses, the huskies are quick in finding and capturing you. Being snatched up by the male, you are turned and twisted in his grasp as the anthro dog examines your naked form from all sides. By the time he's finally done, you end up feeling more than a little dizzy.";
 	WaitLineBreak;
-	say "     A worrying smile and cruel expression on his face, the husky hands you over to his bitch with the words, 'Hang on to that for a moment, slut!' Then he leaves the room, kicking the door shut behind him. Now at the mercy of the female husky's whims, you are touched and prodded once more, if a little more gently than with her top dog. Soon, the crafty beast comes back holding a pair of shoelaces. Looks like he has some naughty ideas about how to deal with their miniature intruder. 'Hold [if Player is female]her[else]him[end if] out for me,' he growls dominantly at his bitch. It doesn't take long before your hands and feet have been tied together, tighter than you could ever hope to wind your way out of.";
+	say "     A worrying smile and cruel expression on his face, the husky hands you over to his bitch with the words, 'Hang on to that for a moment, slut!' Then he leaves the room, kicking the door shut behind him. Now at the mercy of the female husky's whims, you are touched and prodded once more, if a little more gently than with her top dog. Soon, the crafty beast comes back holding a pair of shoelaces. Looks like he has some naughty ideas about how to deal with their miniature intruder. 'Hold [ObjectPro of Player] out for me,' he growls dominantly at his bitch. It doesn't take long before your hands and feet have been tied together, tighter than you could ever hope to wind your way out of.";
 	say "     Your captor then grabs you and proceeds to push his red spear between your legs, sliding you down over its length like an improvised fleshlight. Your [if Player is male]penis[else if Player is female]vagina[else]bare crotch[end if] brushes against the pulsating red prick, eliciting helpless moans from you, your stomach now slippery with his pre. Pushing your whole body towards his crotch, the husky's dick soon presses against your chest[if Breast Size of Player > 2], giving him a really small boobjob[else if Nipple Count of Player > 0], rubbing your nipples and making them hard[end if].";
 	WaitLineBreak;
 	say "     Finally, his giant penis reaches your arms, as you are forced to hug it. You are finally up against his crotch all the way now, your[if Player is male] penis and[else if Player is female] vagina and[end if] ass pressing against his knot. Face pressed directly against his shaft, the husky's strong, manly scent fills your lungs. You can't help but feel intoxicated by the aroma, despite the dire situation you're in right now. Then the horny dog starts using you to masturbate. Pulling and pushing you along, his cock slides hotly against your body, pulsating against your skin with his heartbeat.";
@@ -391,8 +376,7 @@ to say ChineseTrouble:
 		say "     You hold the hard shaft with all of your might as it starts to throb and pulse, spurting out thick streams of cum from so close to your own head. The sucking husky gags again, and for a moment, you feel like you're swimming in a sea of cum and saliva before the girl finally swallows it all down. You're about to sigh in relief that you survived the experience when the male pulls his dick out of her mouth, then peels you off with a grin. 'You make a great sex toy,' the menacing male says with a laugh. 'But how good are you as a post-coital snack?' Holding you by your loosely tied-together wrists, he opens his mouth wide and drops you into it.";
 		WaitLineBreak;
 		say "     His muscles are strong and merciless, moving you along quickly down the slippery path into his gullet. The descent hurts as you're being forced along by a rhythmic contraction, your body being squished and tumbled head over heels. There is nothing you can do except to try and protect yourself at least a little bit by taking on the fetal position. Your body is still wet with the voracious dog's seed, and with the new sensation of his own saliva, you soon drop into the huge beast's stomach. Oh fuck, there must be some way out of this?!";
-		LineBreak;
-		say "     How do you want to escape?";
+		say "[line break]     How do you want to escape?";
 		now sextablerun is 0;
 		blank out the whole of table of fucking options;
 		[]
@@ -457,12 +441,10 @@ to say ChineseTrouble:
 					end the story saying "You were eaten alive!";
 			else:
 				say "Invalid Option. Pick between 0 and [the number of filled rows in the table of fucking options].";
-		clear the screen and hyperlink list;
 	else:
 		say "     Without any strength left to hold on any longer, you slide off of his cock as the male husky pulls back suddenly. With nothing at all to hold onto, as well as being tied up, the next thing you see is her gullet as you slide down at a breakneck speed. Meanwhile, the alpha feels the difference and takes his dick from his slut's mouth. You can hear his far-off growl of, 'Hey, where is that little fucker?' When he realizes that his partner swallowed you, he huffs. 'Shame, that felt pretty nice.'";
 		say "     Going down her gullet with a flood of cum and saliva, her muscles keep contracting in a wave, always pushing you further down. Given the circumstances, the voyage isn't actually that unpleasant, which might have something to do with all of the slippery fluids smoothing out your ride. It almost feels pleasurable to have your naked body slide over her warm, soft flesh, like a giant water slide. But that doesn't last forever as you finally fall into her stomach with all the jizz. The aroma of the place rapidly puts your head back where it should be - thinking about escape. If you don't, digestion awaits you. Hastily, you look around for options on how you can still save yourself.";
-		LineBreak;
-		say "     How will you escape this predicament?";
+		say "[line break]     How will you escape this predicament?";
 		now sextablerun is 0;
 		blank out the whole of table of fucking options;
 		[]
@@ -520,7 +502,6 @@ to say ChineseTrouble:
 					end the story saying "You were eaten alive!";
 			else:
 				say "Invalid Option. Pick between 0 and [the number of filled rows in the table of fucking options].";
-		clear the screen and hyperlink list;
 
 to say AlphaKick:
 	if a random chance of 1 in 4 succeeds:
@@ -662,8 +643,7 @@ to say ResolveEvent Ballsy Hung Horseman:
 			say "     'My eyes are up here, cute stuff,' he says, and that makes you alert of what you are doing. He gives you a very suggestive smirk, understanding that you were probably enthralled by the size of his equipment. 'Like what you see?' asks the horseman, his ridiculously large bulge bouncing before your gaze, an obscene sight that not even a pair of pants could attenuate. 'I do get a lot of attention anywhere I go, hence why I prefer a more... reclusive corner.' He crosses his arms and examines you once more, almost giving you the feeling he is taking measures of your form with his eyes. 'Tell you what... I'll sate your curiosity if you bring me some of those [bold type]glowing mushrooms[roman type] from that one [bold type]mushroom cave[roman type]... You'll know what I'm talking about, if you've ever been there.'";
 			WaitLineBreak;
 			say "     It sounds like he speaks of something particularly specific, though asking him for more details does not seem to result in a clearer answer. 'Have one with you, then we'll talk. My services are one of a kind, and I never had any complaints,' he adds, giving the area of his bulge respective to his massive nutsack a good rub as he talks. You have a feeling that, whatever services he provides, those seem to be involved. He does not say anything else, only dismissing you since you [bold type]do not seem to be carrying any of those mushrooms[roman type] he mentioned, which immediately disperses his attention.";
-			say "     You could find a way to [bold type]acquire some of those mushrooms[roman type] he talked about, or simply choose to [bold type]avoid him forever[roman type]. He does seem to be a little suspicious...";
-			LineBreak;
+			say "[line break]     You could find a way to [bold type]acquire some of those mushrooms[roman type] he talked about, or simply choose to [bold type]avoid him forever[roman type]. He does seem to be a little suspicious...";
 			say "     ([link]Y[as]y[end link]) - Return later, perhaps with these glowing mushrooms.";
 			say "     ([link]N[as]n[end link]) - Avoid him forever.";
 			if Player consents:
@@ -673,34 +653,17 @@ to say ResolveEvent Ballsy Hung Horseman:
 				LineBreak;
 				say "     Perhaps avoiding him would be the best move, you think. From now on, even if you see this horseman, you shall ignore him with the best of your abilities. If you can avoid this area in general, even better! You definitely will not see him again.";
 				now Ballsy Hung Horseman is resolved; [resolves the event, to never appear again]
-		else if carried of glowing mushroom > 0: [carrying shrooms]
+		else: [carrying shrooms]
 			say "     During your stay at the Stables, you see no lack of fine equine-looking men, women, and even somewhere in between these binary designations of gender, doing their turns and awaiting eager partners to share hot and intimate moments with. You have to be especially wary of those tall and burly horsemen who could definitely pose a threat to your safety, as some of them seem to be guards. But in your mindful stroll across the whorehouse, someone catches your attention as they see you passing by. One none other than, exactly one of those you were trying to avoid, except he does not seem hostile towards you. He has you in his sight, an especially strong looking [bold type]horseman[roman type] with a [bold type]very expansive bulge[roman type] confined in a pair of tight black leather pants, so indiscreet that your eyes are drawn to it in an instinctive reflex.";
 			say "     'My eyes are up here, cute stuff,' he says, and that makes you alert of what you are doing. He gives you a very suggestive smirk, understanding that you were probably enthralled by the size of his equipment. 'Like what you see?' asks the horseman, his ridiculously large bulge bouncing before your gaze, an obscene sight that not even a pair of pants could attenuate. 'I do get a lot of attention anywhere I go, hence why I prefer a more... reclusive corner.' He crosses his arms and examines you once more, almost giving you the feeling he is taking measures of your form with his eyes. 'Tell you what... I'll sate your curiosity if you bring me some of those [bold type]glowing mushrooms[roman type] from that one [bold type]mushroom cave[roman type]... You'll know what I'm talking about, if you've ever been there.'";
 			WaitLineBreak;
 			BHHShrinkingShroom;
-	else if Resolution of Ballsy Hung Horseman is 1: [was CV'd by him at least once]
+	else: [was CV'd by him at least once]
 		say "     During your stay at the Stables, you see no lack of fine equine-looking men, women, and even somewhere in between these binary designations of gender, doing their turns and awaiting eager partners to share hot and intimate moments with. You have to be especially wary of those tall and burly horsemen who could definitely pose a threat to your safety, as some of them seem to be guards. But in your mindful stroll across the whorehouse, someone catches your attention as they see you passing by. One none other than, exactly one of those you were trying to avoid, except he does not seem hostile towards you. He has you in his sight, an especially strong looking [bold type]horseman[roman type] with a [bold type]very expansive bulge[roman type] confined in a pair of tight black leather pants, so indiscreet that your eyes are drawn to it in an instinctive reflex.";
 		say "     'My eyes are up here, cute stuff,' he says, and that makes you alert of what you are doing. He gives you a very suggestive smirk, understanding that you were probably enthralled by the size of his equipment. 'Like what you see?' asks the horseman, his ridiculously large bulge bouncing before your gaze, an obscene sight that not even a pair of pants could attenuate. Though, to your surprise or not, the horseman seems to recognize you. 'Ah! Look who it is! Did you miss me? Or the hot and tight confines of my cum-flooded balls?' he asks, giving the area of his bulge respective to his massive nutsack a good rub as he talks. 'If you want another temporary go, just bring another one of those [bold type]glowing mushrooms[roman type] and I'll let you in again... Perhaps this time you'll want to stay longer...'";
 		WaitLineBreak;
 		say "     'But I suppose we could also do other things, now that we know each other better. We don't always need to use the mushrooms... or, at least, not right away.' The horseman smirks as you think about what to say.";
-		LineBreak;
 		say "[BallsyHungHorsemanSexMenu]";
-
-		[WaitLineBreak;
-		if carried of glowing mushroom < 1: [carrying no shrooms]
-			say "     He gives you another smirk as you are left to think about this, but as you do not happen to have any mushrooms with you, his attention is dispersed and he dismisses you afterwards. Should you [bold type]bring some more mushrooms[roman type] and have another go with the hung horseman? Or was the previous experience enough for you and, thus, has given you the will to [bold type]ignore him forever?[roman type][line break]";
-			say "     ([link]Y[as]y[end link]) - Return later, perhaps with these glowing mushrooms.";
-			say "     ([link]N[as]n[end link]) - Avoid him forever.";
-			if Player consents:
-				LineBreak;
-				say "     He mentioned they could be find in a certain [bold type]mushroom cave[roman type]... Where could you find such a place? Perhaps some place [bold type]outside[roman type], who knows? Whatever you decide, you can always look for this [bold type]Ballsy Hung Horseman[roman type] again once you've got what he wants and prepare for a journey down his massive cock and balls, once more...";
-			else:
-				LineBreak;
-				say "     Perhaps avoiding him would be the best move, you think. From now on, even if you see this horseman, you shall ignore him with the best of your abilities. If you can avoid this area in general, even better! You definitely will not see him again.";
-				now Ballsy Hung Horseman is resolved; [resolves the event, to never appear again]
-		else if carried of glowing mushroom > 0: [carrying shrooms]
-			WaitLineBreak;
-			BHHShrinkingShroom;]
 
 to BHHShrinkingShroom:
 	say "     Knowing that you happen to be carrying at least one of those mushrooms that he mentioned, you are left with a decision to make. You can either mention that you, indeed, have one, and would like to proceed with the trade in exchange for what he offers, lie and say you don't have any so you can leave for now, or simply decide to ignore him forever and avoid any further encounters with him.";
@@ -711,9 +674,7 @@ to BHHShrinkingShroom:
 	while calcnumber < 1 or calcnumber > 3:
 		say "Choice? (1-3)> [run paragraph on]";
 		get a number;
-		if calcnumber is 1 or calcnumber is 2 or calcnumber is 3:
-			break;
-		else:
+		if calcnumber < 1 or calcnumber > 3:
 			say "Invalid choice. Type [link]1[end link] to present the mushroom to him, [link]2[end link] to lie and make your leave or [link]3[end link] to simply go away and ignore him forever, for the future.";
 	LineBreak;
 	if calcnumber is 1:
@@ -722,7 +683,7 @@ to BHHShrinkingShroom:
 		say "[BHHScene1]";
 	else if calcnumber is 2:
 		say "     You put up your saddest expression and inform him that, sadly, you have none of those special mushrooms with you. 'I see. What a pity... I'll have to look for someone else,' he replies, as you continue on your way, not minding the hung horseman for some time.";
-	else if calcnumber is 3:
+	else:
 		say "     You put up your saddest expression and inform him that, sadly, you have none of those special mushrooms with you. 'I see. What a pity... I'll have to look for someone else,' he replies, and perhaps, avoiding him would be the best move, you think. From now on, even if you see this horseman, you shall ignore him with the best of your abilities. If you can avoid this area in general, even better! You definitely will not see him again.";
 		now Ballsy Hung Horseman is resolved; [resolves the event, to never appear again]
 
@@ -730,7 +691,6 @@ to say BHHScene1:
 	if Resolution of Ballsy Hung Horseman is 0: [first time]
 		say "     Pulling them out of your inventory, you show one of the strange glowing mushrooms to the horseman, and he smiles. 'That's it! Those are the ones!' You extend your hand in a gesture of offer, to let him take it off your possession, but he does not do so. 'Oh, I don't want it for myself, no. In fact, I must ask you to ingest it,' he says, very assertively. It seems like the horseman actually wanted you to [bold type]eat the mushrooms[roman type]! 'They have shrinking properties, which is what I require in order to interact with my... potential partners. Don't worry, I'll make sure you feel [italic type]very[roman type] good after you eat one.' The horseman scratches his balls through the tight leather bulging obscenely in his crotch as he explains this to you.";
 		say "     With this information now in mind, do you still wish to proceed? You would have to eat the mushroom, causing you to shrink to a very small size for an indefinite period of time. If you decide this, know that you will be [bold type]setting yourself at the hung horseman's mercy[roman type]! Who knows what he might do to you...";
-		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Ingest a shrinking mushroom.";
 		say "     ([link]N[as]n[end link]) - No. Never. Leave immediately and never return.";
 		if Player consents:
@@ -744,7 +704,6 @@ to say BHHScene1:
 			WaitLineBreak;
 			say "     He then makes you look at him in the eyes as he is holding you above his equine shaft, and you can definitely see his expression of pure lust as he keeps you just above the tip of his cock, making your feet touch the slit... And something odd takes place as you feel them warming up all of the sudden, as if something slick, pulsing and wet is wrapping itself around them, almost pulling you down...! With the grin on the horseman's face, it becomes evident that he had very clear plans for you. When you manage to glance below you, you realize that this hung equine man is feeding you to his hungry meatlog, slowly slurping your body deeper inside feet-first, and within the blink of an eye, your calves begin to disappear into the gaping leaking cumslit.";
 			say "     'Mmmh... you're gonna feel great deep in my balls, little [guygal]... Hope you enjoy your trip down there,' he says, tightening his grip around you to make sure you have no way of escaping... And you really do not. You are utterly trapped in his hand, and being slowly consumed by the giant throbbing penis he has, eating you up like a hungry snake, pulling you in deeper with each passing second. You are sinking down to your knees into the pulsing flesh tube, and things are only going to get stickier...!";
-			LineBreak;
 			say "     ([link]Y[as]y[end link]) - Embrace the situation.";
 			say "     ([link]N[as]n[end link]) - Throw a useless struggle.";
 			if Player consents:
@@ -762,13 +721,13 @@ to say BHHScene1:
 			WaitLineBreak;
 			say "     ...But then, you feel your world spinning, that comfortable warmth suddenly disappearing from around you, replaced with a cold breeze and a hard surface. You feel completely exhausted as you open your eyes and glance around you. You are outside the horseman, and on a pile of dirt still near the Stables. All over your body, however, is his cum, already drying up. It looks like you have been here for a while since he came you out of his balls, and back to your original size, no less! That was some journey you have just experienced! Now you have to find yourself a way to clean yourself up. Fortunately, the hung equine had the decency to bring all of your stuff to you once he was done with his trickery.";
 			now Resolution of Ballsy Hung Horseman is 1;
-			raise Player Libido by 30;
+			LibidoBoost 30;
 			SanLoss 20;
 		else:
 			LineBreak;
 			say "     You do not think this is a smart thing to do, and prefer to never see this horseman again. Time to give him an excuse and leave as fast as possible, with the mushrooms still on you, not [italic type]in[roman type] you. He does not stop you, as you simply turn tail and walk the other way.";
 			now Ballsy Hung Horseman is resolved; [resolves the event, to never appear again]
-	else if Resolution of Ballsy Hung Horseman is 1: [not the first time]
+	else: [not the first time]
 		say "     Reaching for your inventory, you show one of the strange glowing mushrooms to the horseman, and he smiles. 'Those are the ones, alright. Now get ready to feed my balls, they're aching and yearning for one certain little [guygal]...' The anticipation is further arousing the hung equine man, who is more than ready to set his massive member free, but he is waiting for you to do your part. Now, all you have to do is ingest the glowing mushroom; you do it, and experience the shrinkage once more, seeing yourself becoming smaller before him, [if Player is not naked]slipping through your own clothes and gear, [end if]and as your size continues to decrease, his, in your perspective, just keeps on looking bigger. It does not stop until you are small as a mouse, standing as stall as his ankles, just above his hooves.";
 		say "     Since you already have made yourselves acquainted with each other, he wastes no time. Making a move to grab you with one hand, he lifts you up to the same level as his eyes, then takes a seat back on a bench nearby. He really is excited, his huge equine dong looking more like it belongs to an actual horse than on an anthropomorphic body like his, thick, throbbing and leaking as he admires your shrunken and naked form. With one finger, he rubs your body all over gently, especially over your chest and crotch, [if Player is female]giving your pussy a little caress that just sends a shiver of pleasure up your whole being, [else if Player is male]giving your [Cock of Player] dick a gentle flicker and thorough stroking, stopping only when you get rock hard under his touch, [end if]and it sends your lust to a peak. He really does know what he is doing...!";
 		ItemLoss glowing mushroom by 1;
@@ -811,11 +770,11 @@ to say BHHScene1:
 			say "     You try your best to not fall asleep due to all this, and your awareness pays off. Soon, your body begins to give signs of wanting to regrow... But you are so exhausted that you black out moments after, as the creamy and thick pool of cum you are in takes you, submerging you completely.";
 			WaitLineBreak;
 			say "     ...But then, you feel your world spinning, that comfortable warmth suddenly disappearing from around you, replaced with a cold breeze and a hard surface. You feel completely exhausted as you open your eyes and glance around you. You are outside the horseman, and on a pile of dirt still near the Stables. All over your body, however, is his cum, already drying up. It looks like you have been here for a while since he came you out of his balls, and back to your original size, no less... [bold type]So that explains why he could not keep you inside any longer[roman type]! Now you have to find yourself a way to clean yourself up. Fortunately, the hung equine had the decency to bring all of your stuff to you once he was done with his trickery.";
-			raise Player Libido by 40;
+			LibidoBoost 40;
 			SanLoss 30;
 
 to say BallsyHungHorsemanSexMenu:
-	say "     [bold type]How will you handle this situation? Is there anything you want to do with this well-endowed horseman?[roman type][line break]";
+	say "[line break]     [bold type]How will you handle this situation? Is there anything you want to do with this well-endowed horseman?[roman type][line break]";
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]
@@ -921,7 +880,7 @@ to say BHHFistCock:
 			WaitLineBreak;
 			say "     While he is left cumming for an unforeseen amount of time, you grab your stuff back and try to get yourself as clean as you can. This ordeal left you exhausted, but you pity the poor horseman who just cannot stop his orgasm and cannot even walk away on his own due to the size of his endowments... You think he is about to curse at you, but only moans leave his mouth as he looks at you, extending his hand in your direction. 'You f-fucker...! I-I'll have you next time...!'";
 			say "     Those are the last words you hear from him as you begin to walk away. He is still cumming...";
-			raise Player Libido by 40;
+			LibidoBoost 40;
 			SanLoss 30;
 
 to say BHHFuckCock:
@@ -946,7 +905,6 @@ to say BHHFuckCock:
 		WaitLineBreak;
 		say "     'That was really hot,' says the horseman with a huge grin. 'Yeah, I was thinking of growing it big enough to suck you in, but then realized that doing it with your dick as a starting point wouldn't be too effective. So... Hope you liked the cum bath, instead. Heheh...' He then only laughs, making fun of you for falling into a little prank of his, but you cannot deny that it actually felt really good. Though, he does not even help you get up, instead laughing every time you try and fail. 'Take too long and I'll get hard again! Then, I might just let my cock swallow you up for good, since you're so slippery. Bet it would be fucking easy.' You bolster all your focus and, finally, manage to crawl out of the puddle and into more dry ground. This allows you to get up without any additional trouble. 'Ah, so you managed. Well... that's fine. There's your stuff, clean yourself up and go. Still gotta find myself a cockmeal, now that you emptied my balls. Heh, unless... You still wanna offer yourself to me.'";
 		say "     His cock is still huge enough for you to fit in, if you ever wanted to, and you can swear you see it throb as the horseman sees you merely looking at it. 'Oh, are you having thoughts about it now? I mean... I wouldn't stop you...' he says, the giant equine dong starting to give signs that it will harden, once more.";
-		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Offer yourself to the horseman's cock.";
 		say "     ([link]N[as]n[end link]) - Just leave.";
 		if Player consents:
@@ -957,7 +915,6 @@ to say BHHFuckCock:
 		else:
 			LineBreak;
 			say "     You shake your head and wish him good luck in his hunt for a [']cockmeal['], as he said himself. 'Are you sure? It'd feel really good, you know... I'd let you nap in my balls and you wouldn't have to just melt in there, you know...? I could get you out anytime! You could just say the word and I'd shoot you back out! But, in the meantime, you get to enjoy the comfort of my warm nuts... thick and tasty cum all over you... And making me feel so... so... good...' His cock throbs and thickens as he speaks, a small drop of precum oozing from its flat head as it seems almost resolute to reawaken.";
-			LineBreak;
 			say "     ([link]Y[as]y[end link]) - Change your mind and offer yourself to the horseman's cock.";
 			say "     ([link]N[as]n[end link]) - Reaffirm your decision and proceed to walk away.";
 			if Player consents:
@@ -1011,7 +968,7 @@ to BBHFuckCockCV:
 		WaitLineBreak;
 		say "     While he is left cumming for an unforeseen amount of time, you grab your stuff back and try to get yourself as clean as you can. This ordeal left you exhausted, but you pity the poor horseman who just cannot stop his orgasm and cannot even walk away on his own due to the size of his endowments... You think he is about to curse at you, but only moans leave his mouth as he looks at you, extending his hand in your direction. 'You f-fucker...! I-I'll have you next time...!'";
 		say "     Those are the last words you hear from him as you begin to walk away. He is still cumming...";
-		raise Player Libido by 40;
+		LibidoBoost 40;
 		SanLoss 30;
 
 Shrinking Shrooms ends here.

@@ -11,7 +11,7 @@ cheetah_mpreg is a truth state that varies.
 specialcheetah is a truth state that varies.[@Tag:NotSaved]
 
 to say cheetahdesc:
-	if ( a random chance of 1 in 3 succeeds ): [Special Cheetah]
+	if a random chance of 1 in 3 succeeds: [Special Cheetah]
 		now specialcheetah is true;
 		add "Feral Cheetah" to infections of VoreExclusion, if absent;
 		add "Feral Cheetah" to infections of HardVoreExclusion, if absent;
@@ -394,8 +394,7 @@ to say cheetahheat:
 			let hmonlist be a list of numbers;
 			repeat with X running from 1 to number of filled rows in Table of Random Critters:	[ Loop through and select all monsters that appear "Outside" ]
 				choose row X from the Table of Random Critters;
-				if there is no area entry, next;
-				if area entry is "Zoo":
+				if there is a area entry and area entry is "Zoo":
 					add X to hmonList;
 			sort hmonlist in random order;
 			if hmonlist is not empty:
@@ -426,7 +425,7 @@ This is the Feral Cheetah Infection rule:
 				say "     You [if Player is female or (Player is maleinterested and Player is not femaleinterested)]join the growing band of converts and soon take your place as the pack leader's proud mate. Your group manages to keep away the human forces with sheer speed and cunning, maintaining control of the zoo and some of the surrounding area even as the rest of the city is pacified[else]form the cheetahs of the zoo into a large, spotted band of conquerors and hold the humans off with sheer speed and cunning. One day, as you oversee and participate in the defense, you smell someone sweet, and entice her to choose you as her mate. While the military manages to pacify the rest of the city, the zoo and its surrounding area remains firmly under your pack's control, abandoned as too difficult to reclaim[end if].";
 			else:
 				say "     You [if Player is female or Player is mpreg_ok]choose a mate from the transformed and after escaping those hunting for you in the city bear him many children over the following years. Time goes by quickly with the sweet smell of freedom, love, and your mate to accompany you, until eventually humankind returns its grasp on the world and you prepare to teach them a lesson...[else]wait in the zoo, and, in the few days that the humans take to recapture and purify the city, a cheetah chooses you as her mate. The two of you flee the city together, stopping only when you are both on a remote plain, grass stretching as far as the eye can see. She bears you many children in your wild home, and the sweet smell of freedom, love, and your mate carry you outwards.[end if]";
-		else if cheetahmate > 0 and cheetah_mpreg is true and Cunt Count of Player is 0 and Player is mpreg_ok:
+		else if cheetahmate > 0 and cheetah_mpreg is true and Player is not female and Player is mpreg_ok:
 			if humanity of Player < 10:
 				say "     You are drawn back to the zoo by the images of your cheetah lover imprinted in your confused mind. Finding him, you submit yourself to being mounted by the lustful feline. After a few more wild romps with your stud cat, his trepidation about taking your ass to mate you fades. By the time your belly grows round with his offspring, he's become a passionate lover eager to pound or play with your ass as much as you desire. And being a wild, lustful feline yourself, you desire it very, very often.";
 			else:

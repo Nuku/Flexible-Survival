@@ -4,33 +4,34 @@ Version 1 of Bird of Paradise by Stripes begins here.
 
 "Adds Bird of Paradise to Flexible Survival."
 
-nobirdofparadisesex is a number that varies.
+[nobirdofparadisesex is a number that varies.]
 bopseen is a truth state that varies. bopseen is usually false.
 bopdefeated is a number that varies.
 
 to say losetobirdofparadise:
 	say "     The rather rambunctious mating dance over with, the bird woman takes a deep breath and starts to sing. The very notion sounds silly at first, but as the music begins to flow and ebb around you, you suddenly find your will to fight on rapidly draining. Surrounded by song, you're content to stand motionless with your mouth agape as the bird of paradise steps forward, her talons clicking against the ground in time with her music. Those eyes, that glassy stare, they seem to grow to fill the entire world as your surroundings melt away, leaving nothing but the clear light blue of the avian's gaze and the music - oh god, the music, you're sure that the bird of paradise hasn't so much as touched you and yet against all logic, you feel warm and good all over and there's a dull heat pulsing down below and the song, it's everywhere, EVERYWHERE!";
-	say "     You can't take it anymore; throbbing in time to bird of paradise's mesmerizing singing, you barely feel your [if Player is male]balls empty themselves as she sinks her cunt down over your pulsing shaft and your [end if][if Cunt Count of Player > 1]cunts explode in oozing wetness and[else if Cunt Count of Player is 1]cunt explode in oozing wetness and your [end if]spine tingles as shivers run down its length. Unable and unwilling to fight back, you can only lie exhausted on the ground, squirming with the last of your strength as the unearthly beauty of bird of paradise's music completely overwhelms you, and darkness slowly falls.";
+	say "     You can't take it anymore; throbbing in time to bird of paradise's mesmerizing singing, you barely feel your [if Player is male]balls empty themselves as she sinks her cunt down over your pulsing shaft and your [end if][if Player is female]cunt[sfn] explode in oozing wetness and your [end if]spine tingle as shivers run down its length. Unable and unwilling to fight back, you can only lie exhausted on the ground, squirming with the last of your strength as the unearthly beauty of bird of paradise's music completely overwhelms you, and darkness slowly falls.";
 	now Libido of Player is Libido of Player / 2;
-	if Player is male:
-		CreatureSexAftermath "Bird of Paradise" receives "PussyFuck" from "Player";
-	else:
-		CreatureSexAftermath "Bird of Paradise" receives "Other" from "Player";
+	CreatureSexAftermath "Bird of Paradise" receives "[if Player is male]PussyFuck[else]Other[end if]" from "Player";
 
 to say beatthebirdofparadise:
 	if bopdefeated is 3 and Player is male:
 		increase bopdefeated by 1;
-		say "     As your blows stagger the beautiful bird, you leap forward and tackle her to the ground before she can make her escape like the others. She squawks and flaps her wings wildly, trying to break free, but is too weakened by the fight to get away. Having been worked up by her lustful dancing and alluring song, you're reluctant to let her go now that you've got her. Shall you have your way with the vibrant bird (Y) or shall you let her go (N)?";
+		say "     As your blows stagger the beautiful bird, you leap forward and tackle her to the ground before she can make her escape like the others. She squawks and flaps her wings wildly, trying to break free, but is too weakened by the fight to get away. Having been worked up by her lustful dancing and alluring song, you're reluctant to let her go now that you've got her. Shall you [link]have your way (Y)[as]y[end link] with the vibrant bird or shall you [link]let her go (N)[as]n[end link]?";
 		if Player consents:
+			LineBreak;
 			say "[bopvictorysex1]";
 		else:
+			LineBreak;
 			say "     You pin the bird firmly to the ground, hand around her beak to keep her silent. You growl at the bird and grind a knee into her ribs, threatening to do worse if she bothers you again. Feeling you've made your point, you release her with a final swat on her feathered rear, sending her flying away with a pained chirp.";
 	else if bopdefeated > 3 and Player is male and a random chance of bopdefeated in ( bopdefeated + 3 ) succeeds:
 		increase bopdefeated by 1;
-		say "     Getting yourself into position, you move in close and knock the beautiful bird to the ground with your final blow only to tackle her down moments later. She squawks and tries to get free, but you've gotten quite worked up from her tempting show and consider getting yourself some release. Shall you have your way with the vibrant bird (Y) or shall you let her go (N)?";
+		say "     Getting yourself into position, you move in close and knock the beautiful bird to the ground with your final blow only to tackle her down moments later. She squawks and tries to get free, but you've gotten quite worked up from her tempting show and consider getting yourself some release. Shall you [link]have your way (Y)[as]y[end link] with the vibrant bird or shall you [link]let her go (N)[as]n[end link]?";
 		if Player consents:
+			LineBreak;
 			say "[bopvictorysex1]";
 		else:
+			LineBreak;
 			say "     You pin the bird firmly to the ground, hand around her beak to keep her silent. You growl at the bird and grind a knee into her ribs, threatening to do worse if she bothers you again. Feeling you've made your point, you release her with a final swat on her feathered rear, sending her flying away with a pained chirp.";
 	else:
 		say "     Having beaten the colorful bird woman, she shrieks angrily and takes flight, leaving you in search of a more cooperative mate. As the bird leaves, your arousal decreases a little once the temptation is out of sight.";
@@ -73,6 +74,7 @@ When Play begins:
 	add "Bird of Paradise" to infections of FemaleList;
 	add "Bird of Paradise" to infections of TaperedCockList;
 	add "Bird of Paradise" to infections of InternalCockList;
+	add "Bird of Paradise" to infections of InternalBallsList;
 	add "Bird of Paradise" to infections of BipedalList;
 	add "Bird of Paradise" to infections of FlightList;
 	add "Bird of Paradise" to infections of TailList;
@@ -90,7 +92,7 @@ When Play begins:
 	now skin entry is "multicolored, feathered";
 	now tail entry is "[if Player is bopskinned]Your tailfeathers are so long that they sweep the ground as you walk, yet somehow still manage to remain spotless despite that. The feathers themselves are large and broad, starting from a deep violet from within their shafts and gradually warming through all the colors of the rainbow up to the edges[else]Your ass is firm and muscular, the sort of thing you only find on magazine covers, but there seems to be something missing about it despite its perfection[end if].";
 	now cock entry is "[one of]warm[or]enticing[or]inviting[at random]";
-	now face change entry is "your field of vision widens as your eyes become inhumanly large and glassy, pupils practically vanishing from sight[if Player is bopskinned]. A new weight on your head prompts you to look up, and you notice the tip of a feathered crest in your vision even as your new beak grows in[else]. A sharp pain pricks at the front of your face, intensifying steadily until a new beak emerges from where your mouth one was[end if]";
+	now face change entry is "your field of vision widens as your eyes become inhumanly large and glassy, pupils practically vanishing from sight. A [if Player is bopskinned]new weight on your head prompts you to look up, and you notice the tip of a feathered crest in your vision even as your new beak grows in[else]sharp pain pricks at the front of your face, intensifying steadily until a new beak emerges from where your mouth one was[end if]";
 	now body change entry is "your ribs crack and shift as your torso firms up and thrusts outward to accommodate the changes taking place within, [if Player is bopskinned]feathers growing to cover you even as [end if]a pair of opulent, long-edged wings [if Player is bopskinned]unfold[else]unfolding[end if] from your back. You take a deep breath instinctively, and let it out with a gasp - that's a rather impressive set of lungs you've got now. With a soft squelching sound, your hands turn into talons, flesh melting away and skin hardening over your fingers as the change begins to sweep upwards, [if Player is bopskinned]covering your arms in soft, fine feathers in every color of the rainbow[else]golden scales forming on your skin all the way up to your shoulders[end if]. Your feet shift and twist, flesh migrating upwards from your toes to your thighs, leaving your lower legs looking rather bare. Huge, hooked talons push their way out of your toes, forcing you to drag them about as you walk. Seems like everyone's going to be blaming you for the scuff marks on their floors now";
 	now skin change entry is "a queer tingling creeps its way across your skin, and you gasp aloud as long, flowing feathers of every conceivable color blossom forth, making you feel warm and good all over. It's possible that some others might think you look silly for looking as if someone dumped a paint store over you, but who cares what they think, eh? You're beautiful and you know it";
 	now ass change entry is "a powerful warmth gathers in your rear, followed quickly by [if Player is bopskinned]a strange weight that turns out to be an exquisite fan of tailfeathers, each one already as long as you're tall and still growing by the moment. Thankfully, the growth eventually slows, but not before you're sporting the kind of rear plumage one usually only finds in the presence of royalty[else]your ass shaping up and firming out into something worthy of a supermodel. Despite how good it looks though, you still feel slightly unbalanced and bare, as if there should be something more that just isn't present. You can't help but wonder at what you're missing as you rub your sexy ass[end if]";
@@ -235,8 +237,6 @@ When Play begins:
 	[Clit Size Adjective is generated by a function and can be used in scenes: very small/small/average/large/very large]
 ]
 
-
-
 Section 3 - Alt Combat
 
 Table of Critter Combat (continued)
@@ -248,8 +248,8 @@ bopsongcount is a number that varies.
 this is the bopsong rule:
 	choose row MonsterID from the Table of Random Critters;
 	say "The exotic bird's sexy dancing and singing is quite tantalizing, seeking to entice you into giving into her advances. She flashes her breasts and juicy cunt at you, singing softly and alluring as she does.";
-	let playernum be 150 + humanity of Player + ( level of Player * 2 ) + charisma of Player + ( plmindbonus * 3) - Libido of Player;
-	let bopnum be 200 + ( lev entry * 2 ) + ( cha entry * 2 ) + ( monmindbonus * 3);
+	let playernum be 150 + humanity of Player + ( level of Player * 2 ) + charisma of Player + ( plmindbonus * 3 ) - Libido of Player;
+	let bopnum be 200 + ( lev entry * 2 ) + ( cha entry * 2 ) + ( monmindbonus * 3 );
 	if peppereyes > 0, decrease bopnum by 75;
 	if BodyName of Player is "Bird of Paradise":
 		decrease playernum by 12;
@@ -265,11 +265,10 @@ this is the bopsong rule:
 	say "[special-style-1][playernum][roman type] vs [special-style-2][bopnum][roman type]: ";
 	if Playernum >= bopnum:
 		say "As captivating and tantalizing as the large birds song and mating dance may be, you manage to avert your eyes and regain your senses.";
-		wait for any key;
+		AttemptToWait;
 	else:
 		let xx be ( lev entry + 10 ) / 10; [ xx=1 unless hard mode or otherwise boosted]
-		let rangenum be ( 80 - ( peppereyes * 4 ) );
-		let dam be ( ( wdam entry times a random number from rangenum to 120 ) / 100 );
+		let dam be ( wdam entry times a random number from ( 80 - ( peppereyes * 4 ) ) to 120 ) / 100;
 		increase Libido of Player by a random number between 5 and 10;
 		if BodyName of Player is "Bird of Paradise":
 			increase dam by a random number between 0 and xx;
@@ -285,13 +284,14 @@ this is the bopsong rule:
 		say "You are [descr][if HP of Player > 0 and Libido of Player < 110] and it takes an effort of will to refocus your mind and break your gaze away from those deep eyes of hers[end if].";
 		now peppereyes is 0; [pepperspray wears off]
 		if HP of Player > 0 and Libido of Player < 110:
-			wait for any key;
+			if BeforeCombat is 0, AttemptToWaitBeforeClear;
 		else:
-			if HP of Player <= 0, now fightoutcome is 20;
-			if Libido of Player >= 110, now fightoutcome is 21;
+			if HP of Player <= 0:
+				now fightoutcome is 20;
+			else:
+				now fightoutcome is 21;
 			Lose;
 		rule succeeds;
-
 
 Section 4 - Definitions
 
@@ -314,7 +314,6 @@ Definition: a person is bopcocked:
 Definition: a person is boptailed:
 	if TailName of Player is "Bird of Paradise", yes;
 	no;
-
 
 [
 Section 5 - Endings

@@ -2,6 +2,9 @@ Version 1 of Phantom Dolphin by Blue Bishop begins here.
 [Version 1 - Commissioned]
 "When in Rome..."
 
+flotmarked is a truth state that varies.
+flotintense is a number that varies. flotintense is usually -1.
+
 a postimport rule: [bugfixing rules for players that import savegames]
 	now OralVirgin of Discarded Dolphin is false;
 	now Virgin of Discarded Dolphin is false;
@@ -40,13 +43,10 @@ to say flotlook:
 		say "     Tethered to the end of the rope ladder leading into the entrance, an inflatable dolphin toy floats about, the unattended thing moving gently along with the waves.";
 		say "     This thing's particularly strange... in that it appears to be completely inanimate. It also looks different from the other bottlenose toys you've seen, having more 'realistic' gray color and otherwise unadorned in the usual handles or similar fare. For that reason, the rope has to be tied tightly around the base of the tail.";
 		say "     This odd thing raises a lot of questions. Why is it just floating there? Shouldn't it be the same as all the other infected here? Without having to touch it, you can see that the thing clearly has a hole for 'use', so it's clearly the product of this blight's influence. If you're so daring as to 'play' with it, you imagine the end result may be equally unpredictable...";
-		LineBreak;
-		say "     [italic type][if flotintense < 2]The thing looks completely inanimate. You're fairly certain there'll be little to no consequence in using it right now[else if flotintense < 4]The thing appears to be mostly in a mundane state right now, but it seems to subtly become excited as you approach. You could probably get away with using it[else if flotintense < 6]The thing seems tinged with a streak of wanton menace. You could probably get away with using it, but not for long[else if flotintense < 8]You feel ill at ease near the thing, as though you're being drawn to the tainted object. You don't think it'd be particularly wise to use it right now[else]The thing seems to undulate from the corners of your eyes, as though thrumming with an otherworldly need. You feel overwhelmingly drawn to the thing, but you'd have to be insane to use it now[end if]...[roman type][line break]";
+		say "[line break]     [italic type][if flotintense < 2]The thing looks completely inanimate. You're fairly certain there'll be little to no consequence in using it right now[else if flotintense < 4]The thing appears to be mostly in a mundane state right now, but it seems to subtly become excited as you approach. You could probably get away with using it[else if flotintense < 6]The thing seems tinged with a streak of wanton menace. You could probably get away with using it, but not for long[else if flotintense < 8]You feel ill at ease near the thing, as though you're being drawn to the tainted object. You don't think it'd be particularly wise to use it right now[else]The thing seems to undulate from the corners of your eyes, as though thrumming with an otherworldly need. You feel overwhelmingly drawn to the thing, but you'd have to be insane to use it now[end if]...[roman type][line break]";
 		if flotmarked is true:
 			say "     [italic type]You feel as though you've been marked by this object.[roman type][line break]";
 
-flotmarked is a truth state that varies.
-flotintense is a number that varies. flotintense is usually -1.
 [
 Variant for intensity:
 0-1: 1 struggle, almost no sanity loss.
@@ -92,7 +92,7 @@ to say flotfuck:
 				if Player is male:
 					say "     Its white undercarriage is completely smooth save for the subtle cleft of the toy's lewd hole. Seeing as how they still seem to be gaping from your last adventure, it takes no effort to force a digit past the synthetic folds, subtly vibrating against this particularly lewd act. The saltwater-slicked vinyl is exceedingly soft and yielding to your touch, though it seems to be trying to cling to the intrusion, and still laced with your sexual fluids.";
 					WaitLineBreak;
-					say "     Once you're satisfied, you fumble about to finally climb on top of the dolphin, [if scalevalue of Player > 3]a somewhat embarrassing sight, given how much larger you are than it, though it seems to manage your weight[else]easily managing your weight[end if]. Awkwardly aiming[if Cock Count of Player > 1] one of[end if] your [cock size desc of Player], half-erect dick[smn] for the entrance, you carefully sink it past its lips, the toy [if Cock Length of Player > 11]seeming to easily take your cock in spite of its impressive size; it takes a bit of work, but the pliable material stretches to handle its substantive girth[else]taking your cock without any difficulty, easily burying the organ within its pliable depths[end if]. Before you really begin, the inflatable trembles under your weight, engulfing your cock with a latex-like substance[if Player is female and Cock Count of Player > 2], as well as your cunt[sfn] and other rods[else if Player is female and Cock Count of Player > 1], as well as your cunt[sfn] and other rod[else if Cock Count of Player > 2], as well as your other rods[else if Cock Count of Player is 2], as well as your other rod[end if].";
+					say "     Once you're satisfied, you fumble about to finally climb on top of the dolphin, [if scalevalue of Player > 3]a somewhat embarrassing sight, given how much larger you are than it, though it seems to manage your weight[else]easily managing your weight[end if]. Awkwardly aiming[if Cock Count of Player > 1] one of[end if] your [cock size desc of Player], half-erect dick[smn] for the entrance, you carefully sink it past its lips, the toy [if Cock Length of Player > 11]seeming to easily take your cock in spite of its impressive size; it takes a bit of work, but the pliable material stretches to handle its substantive girth[else]taking your cock without any difficulty, easily burying the organ within its pliable depths[end if]. Before you really begin, the inflatable trembles under your weight, engulfing your cock with a latex-like substance[if Player is female and Cock Count of Player > 2], as well as your cunt[sfn] and other rods[else if Player is female and Cock Count of Player is 2], as well as your cunt[sfn] and other rod[else if Cock Count of Player > 2], as well as your other rods[else if Cock Count of Player is 2], as well as your other rod[end if].";
 				else:
 					say "     Its white undercarriage is completely smooth save for the subtle cleft of the toy's lewd hole. The saltwater-slicked vinyl is exceedingly soft and yielding to your touch, no doubt made to invite your curious fondling. Trembling under your touch, the object seems to be trying to cling to your digits, until you pull yourself free.";
 					WaitLineBreak;
@@ -116,9 +116,8 @@ to say flotfuck:
 				say "     Inflatable object loudly creaking under your[if scalevalue of Player > 3] substantive[end if] weight as you start to rock against the motion of the waves, the thing quickly heats up against your touch, water and sweat-slicked body clinging to the strange toy[if scalevalue of Player > 3] as it inflates to accommodate your impressive size[end if]. Its otherworldly life slowly reigniting itself from your influence, your [bodytype of Player] body begins to stick to its surface, soon making it difficult for your [bodytype of Player] body to move without its aid...";
 			else if flotintense < 8:
 				say "     As you descend back into the waters and swim close to the toy, the strange thing quivers and gravitates towards you. It responds intensely to your mere touch, vinyl liquefying around your prodding digits and slowly pulling you inside it. You instinctively try to push it off, but that only gets the other limb engulfed.";
-				say "     Forcibly, you're pulled on top of the dolphin, wobbling violently against the waves as it balances you on it";
 				if Player is male:
-					say ". Eagerly, it encases[if Cock Count of Player > 1] one of[end if] your [cock size desc of Player], half-erect dick[smn] where its hole would be[if Cock Count of Player > 2] before taking the rest along with it[else if Cock Count of Player is 2] before taking the other along with it[end if].";
+					say "     Forcibly, you're pulled on top of the dolphin, wobbling violently against the waves as it balances you on it. Eagerly, it encases[if Cock Count of Player > 1] one of[end if] your [cock size desc of Player], half-erect dick[smn] where its hole would be[if Cock Count of Player > 2] before taking the rest along with it[else if Cock Count of Player is 2] before taking the other along with it[end if].";
 					WaitLineBreak;
 					say "     The toy continues to wobble against the waters, easily having consumed your[if Cock Length of Player > 11] impressive[end if] meat as a latex-like substance quickly engulfs[if CockName of Player is not listed in infections of InternalCockList] your [Ball Size Adjective of Player] [Balls][else]the rest of your crotch[end if] as well";
 					if anallevel > 1:
@@ -126,20 +125,19 @@ to say flotfuck:
 					else if Player is female:
 						say ". Soon, you feel the tainted material flood your cunt[sfn], pounding your hole[sfn]";
 				else:
-					say ", forcing you to grind against its smooth surface as your crotch is quickly engulfed in the latex-like substance. Soon, you feel the tainted material flood your cunt[sfn][if anallevel > 1] and ass, pounding your holes[else], pounding your hole[sfn][end if]";
+					say "     Forcibly, you're pulled on top of the dolphin, wobbling violently against the waves as it balances you on it, forcing you to grind against its smooth surface as your crotch is quickly engulfed in the latex-like substance. Soon, you feel the tainted material flood your cunt[sfn][if anallevel > 1] and ass, pounding your holes[else], pounding your hole[sfn][end if]";
 				say " with a writhing series of tapered, worming tendrils. Finally, a tendril moves to force its way past your lips, plunging deep down your gullet and forcing you to breathe in an intoxicating, synthetic gas.";
 				say "     Inflatable object loudly creaking under your[if scalevalue of Player > 3] substantive[end if] weight, you're barely given time to acclimate before the thing rails you relentlessly, rocking you intensely against the waters. Sweat-slicked, [bodydesc of Player] form writhing against the tightly binding toy, it [if scalevalue of Player > 3]expands to fully accommodate your impressive size with each motion, squeezing[else]squeezes[end if] firmly against you as you're forced to endure its twisted need. Having reached a point of utterly deranged purpose, it shows absolutely no restraint in trying to fiercely abuse the bliss out of you...";
 			else:
 				say "     Some part of you questions the sanity of going through with this, by this point, but you go ahead with it regardless.";
-				say "     Just as you descend into the waters the dolphin seems to tear itself apart and lurch its open seam straight at you, wrapping itself around your [bodytype of Player] form and near-instantly enveloping you entirely. [if scalevalue of Player > 3]Tightly wrapped around you as it gradually expands to accommodate your impressive size[else]Wrapped around you[end if], ";
 				if Player is male:
-					say "your partially-aroused, [cock size desc of Player] cock[if Cock Count of Player > 1]s are[else] is[end if] firmly plunged within its vinyl depths";
+					say "     Just as you descend into the waters the dolphin seems to tear itself apart and lurch its open seam straight at you, wrapping itself around your [bodytype of Player] form and near-instantly enveloping you entirely. [if scalevalue of Player > 3]Tightly wrapped around you as it gradually expands to accommodate your impressive size[else]Wrapped around you[end if], your partially-aroused, [cock size desc of Player] cock[if Cock Count of Player > 1]s are[else] is[end if] firmly plunged within its vinyl depths";
 					if anallevel > 1:
 						say ". Moreover, you feel the tainted material flood your [if Player is female]cunt[sfn] and ass, pounding your holes[else]ass, pounding your hole[end if]";
 					else if Player is female:
 						say ". Moreover, you feel the tainted material flood your cunt[sfn], pounding your hole[sfn]";
 				else:
-					say "you feel the tainted material flood your cunt[sfn][if anallevel > 1] and ass, pounding your holes[else], pounding your hole[sfn][end if]";
+					say "     Just as you descend into the waters the dolphin seems to tear itself apart and lurch its open seam straight at you, wrapping itself around your [bodytype of Player] form and near-instantly enveloping you entirely. [if scalevalue of Player > 3]Tightly wrapped around you as it gradually expands to accommodate your impressive size[else]Wrapped around you[end if], you feel the tainted material flood your cunt[sfn][if anallevel > 1] and ass, pounding your holes[else], pounding your hole[sfn][end if]";
 				say " with a writhing series of tapered, worming tendrils. Finally, a tendril moves to force its way past your lips, plunging deep down your gullet and forcing you to breathe in an intoxicating, synthetic gas.";
 				say "     Completely encased in the slippery dolphin, there's no indication of your occupancy, your groans and lustful writhing masked by the motion and the sound of the waves. This wasn't the wisest thing to do, and you imagine it'll take a lot of work to escape this predicament, if it's even possible by this point...";
 			wait for any key;
@@ -148,14 +146,13 @@ to say flotfuck:
 
 to flotdecay:
 	if lastfuck of Discarded Dolphin - turns >= 4 and flotintense > 0:
-		decrease flotintense by ((lastfuck of Discarded Dolphin - turns) / 4);
+		decrease flotintense by (lastfuck of Discarded Dolphin - turns) / 4;
 		if flotintense < 0, now flotintense is 0;
 
 to flotbind:
 	psycheeval;
 	libidoeval;
 	now lustatt is Libido of Player;
-	now calcnumber is -1;
 	let Trixieexit be 0;
 	while Trixieexit is 0:
 		if clearnomore is 0:
@@ -196,18 +193,20 @@ to flotbind:
 				if the player's command matches "[number]":
 					now keychar is "[number understood]";
 			LineBreak;
-			if keychar in lower case exactly matches the text "s" or keychar in lower case exactly matches the text "1" or keychar in lower case exactly matches the text "return" or keychar in lower case matches the text "struggle":
+			if keychar is "s" or keychar is "1" or keychar is "return" or keychar in lower case matches the text "struggle":
 				increase struggleatt by 1;
 				if struggleatt < boundsegment:
 					say "     You struggle to [if flotintense < 4]pull yourself free of the toy, [one of]creaking softly against your motions[or]sticky thing trying its best to keep you in place[or]rocking against the waves[at random][else if flotintense < 6]pry yourself free of the toy's powerful hold, [one of]creaking and groaning against your protests[or]engulfing vinyl trying its best to pull you back within its hold[or]squeaking against your motions as you fight it[or]rocking violently against the waves[at random][else]escape this prison of a toy, [one of]creaking and groaning around you[or]enveloping vinyl trying its best to keep you within its hold[or]squeaking against your motions as you fight it[or]thrashing against the waves as it clings to you[at random][end if].";
 					flotsanitypassive;
 					flotlust;
+					LineBreak;
+					wait for any key;
 				else:
 					say "     [if flotintense < 3]Easily[else if flotintense < 5]With relative ease[else if flotintense < 8]Eventually[else]Finally[end if], you manage to wrench yourself free of the possessed toy and dive into the waters, [if flotintense < 3]though it quickly regresses to a state of complete inanimacy[else if flotintense < 5]gradually cooling down and becoming inanimate once more[else if flotintense < 8]quivering for a moment as it slowly begins to fill the void you left[else if flotintense < 10]the mess of a thing trembling in distress over its now-missing rider[else]the thing flailing in your general direction in hopes to be one with you once more, forcing you to swim even further[end if].";
 					say "     You climb back onto the castle and clean yourself off. [if flotintense > 4]It's likely best that you leave the vinyl object alone until it 'cools down' a bit[else]The vinyl object remains relatively harmless, for now at least[end if]...";
 					cleanboundmemory;
 					now Trixieexit is 1;
-			else if (obliging is true and (keychar in lower case exactly matches the text "o" or keychar in lower case matches the text "oblige")) or (obliging is false and (keychar in lower case exactly matches the text "a" or keychar in lower case matches the text "abide")) or keychar in lower case exactly matches the text "2":
+			else if (obliging is true and (keychar is "o" or keychar in lower case matches the text "oblige")) or (obliging is false and (keychar is "a" or keychar in lower case matches the text "abide")) or keychar is "2":
 				if 1 is 1: [if obliging is true]
 					say "     You continue to [if flotintense < 5]ride the vinyl dolphin[else]oblige the vinyl dolphin's influence[end if], [if flotintense < 7][one of]loudly creaking against your weight[or]squeaking against your body as you rub against it[or]motion slicked by sweat and saltwater[or]rocking gently against the waves[at random][else][one of]loudly creaking as it continues to milk you[or]squeaking as it uses your own sexual fluids to lubricate its motion[or]body trembling under its now-powerful influence[or]its motions emphasized by the waves[at random][end if].";
 					now obliging is true;
@@ -219,7 +218,9 @@ to flotbind:
 					LineBreak;
 					flotsanitypassive;
 					increase lustatt by 35 + (lustadjust * 5);] [Not needed, keeping just in case]
-			else:
+				LineBreak;
+				wait for any key;
+			else if (boundrecover is true and (keychar is "r" or keychar in lower case matches the text "recover")) or (boundrecover is false and (keychar is "e" or keychar in lower case matches the text "endure")) or keychar is "3":
 				now enduring is true;
 				if boundrecover is true:
 					if flotintense < 2:
@@ -235,8 +236,10 @@ to flotbind:
 					say "     You choose to endure the toy's influence, [if flotintense < 4][one of]with what little power it has over you[or]creaking softly under your weight[or]bobbing subtly against the waves[at random][else if flotintense < 6][one of]softly creaking as it tries to work against your resistance[or]with what moderate power it has over you[or]squeaking under your weight as it tries nonetheless[or]bobbing against the waves[at random][else][one of]barely able to resist the overwhelming power it has over you[or]creaking against you as it makes every effort in spite of you[or]seemingly undaunted by your efforts[or]writhing against the waves with you[at random][end if].";
 					flotlust;
 					flotsanitypassive;
-			LineBreak;
-			wait for any key;
+				LineBreak;
+				wait for any key;
+			else:
+				say "Invalid action.";
 
 to checkflotsegment:
 	if flotintense < 2:
@@ -252,18 +255,16 @@ to checkflotsegment:
 
 to flotprogress: [passable]
 	if flotintense is 2:
-		say "     You begin to find it somewhat difficult to pull your limbs free of the inflatable dolphin, sticking to its surface rather firmly. Moreover, you feel a warm, latex-like substance ";
 		if Player is male:
-			say "encase your dick[smn], [if CockName of Player is not listed in infections of InternalCockList]your [Ball Size Adjective of Player] [Balls], and coat[else]coating[end if] [if Player is female]your cunt[sfn] and ass[else]your ass[end if][if Player is female or anallevel > 1]. It doesn't seem compelled to penetrate you just yet, though the undulating material certainly drives your need further[end if].";
+			say "     You begin to find it somewhat difficult to pull your limbs free of the inflatable dolphin, sticking to its surface rather firmly. Moreover, you feel a warm, latex-like substance encase your dick[smn], [if CockName of Player is not listed in infections of InternalCockList]your [Ball Size Adjective of Player] [Balls], and coat[else]coating[end if] [if Player is female]your cunt[sfn] and ass[else]your ass[end if][if Player is female or anallevel > 1]. It doesn't seem compelled to penetrate you just yet, though the undulating material certainly drives your need further[end if].";
 		else:
-			say "coat your cunt[sfn] and ass. It doesn't seem compelled to penetrate you just yet, though the undulating material certainly drives your need further.";
+			say "     You begin to find it somewhat difficult to pull your limbs free of the inflatable dolphin, sticking to its surface rather firmly. Moreover, you feel a warm, latex-like substance coat your cunt[sfn] and ass. It doesn't seem compelled to penetrate you just yet, though the undulating material certainly drives your need further.";
 		say "     By the looks of things, this peculiar toy is only just getting started. Should you persist, things are clearly going to get a lot worse...[paragraph break]";
 	else if flotintense is 4:
-		say "     You're forced to realize that your limbs have partially submerged into the inflatable dolphin! You're now completely at the whim of the vinyl construct's influence, of which it seems eager now to exploit. The undulating material ";
 		if Player is male:
-			say "pumps your [cock size desc of Player] dick[smn] with such force that you rock against the toy with each motion, slicked by your own cum and exaggerated by the waves[if Player is female and anallevel > 1]. Moreover, you feel something large and hard force its way into your cunt[sfn] and ass, the shape shifting around until it appears satisfied with a tapered, worming tendril to rail you with[else if Player is female]. Moreover, you feel something large and hard force its way into your cunt[sfn], the shape shifting around until it appears satisfied with a tapered, worming tendril to rail you with[else if anallevel > 1]. Moreover, you feel something large and hard force its way into your ass, the shape shifting around until it appears satisfied with a tapered, worming tendril to rail you with[end if].";
+			say "     You're forced to realize that your limbs have partially submerged into the inflatable dolphin! You're now completely at the whim of the vinyl construct's influence, of which it seems eager now to exploit. The undulating material pumps your [cock size desc of Player] dick[smn] with such force that you rock against the toy with each motion, slicked by your own cum and exaggerated by the waves[if Player is female and anallevel > 1]. Moreover, you feel something large and hard force its way into your cunt[sfn] and ass, the shape shifting around until it appears satisfied with a tapered, worming tendril to rail you with[else if Player is female]. Moreover, you feel something large and hard force its way into your cunt[sfn], the shape shifting around until it appears satisfied with a tapered, worming tendril to rail you with[else if anallevel > 1]. Moreover, you feel something large and hard force its way into your ass, the shape shifting around until it appears satisfied with a tapered, worming tendril to rail you with[end if].";
 		else:
-			say "grinds against your [cunt size desc of Player] cunt[sfn] with such force that you rock against the toy with each motion, slicked by your own honey and exaggerated by the waves. [if anallevel > 1]Moreover, you feel something large and hard force its way into your holes, the shape shifting around until it appears satisfied with a tapered, worming tendrils to rail you with[else]Moreover, you feel something large and hard force its way into your hole[sfn], the shape shifting around until it appears satisfied with a tapered, worming tendril to rail you with[end if].";
+			say "     You're forced to realize that your limbs have partially submerged into the inflatable dolphin! You're now completely at the whim of the vinyl construct's influence, of which it seems eager now to exploit. The undulating material grinds against your [cunt size desc of Player] cunt[sfn] with such force that you rock against the toy with each motion, slicked by your own honey and exaggerated by the waves. [if anallevel > 1]Moreover, you feel something large and hard force its way into your holes, the shape shifting around until it appears satisfied with a tapered, worming tendrils to rail you with[else]Moreover, you feel something large and hard force its way into your hole[sfn], the shape shifting around until it appears satisfied with a tapered, worming tendril to rail you with[end if].";
 		say "     It's becoming extremely difficult to keep a clear head and in control of the situation. If there was any wiser time to get off this crazy thing, it'd be right about now...";
 		if flotmarked is false:
 			say "[line break]     ...[bold type]Moreover[italic type], you get the impression that you've been touched in some strange, intangible way - an extraordinary feat given how distracted your senses are now - though not in any overtly malevolent sense. You imagine you've gained some lingering benefit from this experience, though you doubt there'll be much more to gain beyond this[roman type].";
@@ -283,58 +284,47 @@ to say flotbinddesc: [passable]
 	else if flotintense < 4:
 		say "     Riding the inflatable dolphin, [one of]it creaks softly against your touch[or]it squeaks against your motion[or]it softly buckles under the weight of your motions[or]its motions are exaggerated by the waves[at random], having engulfed your [if Player is herm]cock[smn] and cunt[sfn][else if Player is male and anallevel > 1]cock[smn] and ass[else if Player is male]cock[smn][else if Player is female and anallevel > 1]cunt[sfn] and ass[else]cunt[sfn][end if] within its tainted, vinyl grasp. Its influence is growing to a point of some concern, though it's still relatively weak. You imagine your only active option is to [bold type]S[roman type]truggle enough until you can pull yourself completely free, else you can [bold type]O[roman type]blige, or [if boundrecover is true][bold type]R[roman type]ecover from[else][bold type]E[roman type]ndure[end if] these questionable circumstances.";
 	else if flotintense < 6:
-		say "     Riding the inflatable dolphin, [one of]it creaks softly against your touch[or]it squeaks against your motion[or]it softly buckles under the weight of your motions[or]its motions are exaggerated by the waves[at random], ";
 		if Player is male:
-			say "having engulfed your cock[smn] [if Player is female and anallevel > 1]while pounding your cunt[sfn] and ass with large and writhing tendrils[else if Player is female]while pounding your cunt[sfn] with large and writhing tendrils[else if anallevel > 1]while pounding your ass with large and writhing tendrils[else]within its tainted, vinyl grasp[end if]";
+			say "     Riding the inflatable dolphin, [one of]it creaks softly against your touch[or]it squeaks against your motion[or]it softly buckles under the weight of your motions[or]its motions are exaggerated by the waves[at random], having engulfed your cock[smn] [if Player is female and anallevel > 1]while pounding your cunt[sfn] and ass with large and writhing tendrils[else if Player is female]while pounding your cunt[sfn] with large and writhing tendrils[else if anallevel > 1]while pounding your ass with large and writhing tendrils[else]within its tainted, vinyl grasp[end if]. Limbs stuck firmly against the tainted object's surface, it's clear that the thing is reaching dangerous levels of power. You imagine your only active option is to [bold type]S[roman type]truggle enough until you can pull yourself completely free, else you can [bold type]O[roman type]blige, or [if boundrecover is true][bold type]R[roman type]ecover from[else][bold type]E[roman type]ndure[end if] these questionable circumstances.";
 		else:
-			say "pounding your cunt[sfn][if anallevel > 1] and ass[end if] with large and writhing tendrils";
-		say ". Limbs stuck firmly against the tainted object's surface, it's clear that the thing is reaching dangerous levels of power. You imagine your only active option is to [bold type]S[roman type]truggle enough until you can pull yourself completely free, else you can [bold type]O[roman type]blige, or [if boundrecover is true][bold type]R[roman type]ecover from[else][bold type]E[roman type]ndure[end if] these questionable circumstances.";
+			say "     Riding the inflatable dolphin, [one of]it creaks softly against your touch[or]it squeaks against your motion[or]it softly buckles under the weight of your motions[or]its motions are exaggerated by the waves[at random], pounding your cunt[sfn][if anallevel > 1] and ass[end if] with large and writhing tendrils. Limbs stuck firmly against the tainted object's surface, it's clear that the thing is reaching dangerous levels of power. You imagine your only active option is to [bold type]S[roman type]truggle enough until you can pull yourself completely free, else you can [bold type]O[roman type]blige, or [if boundrecover is true][bold type]R[roman type]ecover from[else][bold type]E[roman type]ndure[end if] these questionable circumstances.";
 	else if flotintense < 8:
-		say "     [one of]Now forced[or]Forced[stopping] to ride the inflatable dolphin, [one of]it creaks loudly against you[or]it squeaks against your hard motion[or]it buckles under the weight of your constant motions[or]its motions are intensely exaggerated by the waves[at random], ";
 		if Player is male:
-			say "having engulfed your cock[smn] [if Player is female and anallevel > 1]while relentlessly pounding your cunt[sfn] and ass with large and writhing tendrils[else if Player is female]while relentlessly pounding your cunt[sfn] with large and writhing tendrils[else if anallevel > 1]while relentlessly pounding your ass with large and writhing tendrils[else]within its powerful, vinyl grasp[end if]";
+			say "     [one of]Now forced[or]Forced[stopping] to ride the inflatable dolphin, [one of]it creaks loudly against you[or]it squeaks against your hard motion[or]it buckles under the weight of your constant motions[or]its motions are intensely exaggerated by the waves[at random], having engulfed your cock[smn] [if Player is female and anallevel > 1]while relentlessly pounding your cunt[sfn] and ass with large and writhing tendrils[else if Player is female]while relentlessly pounding your cunt[sfn] with large and writhing tendrils[else if anallevel > 1]while relentlessly pounding your ass with large and writhing tendrils[else]within its powerful, vinyl grasp[end if]. Limbs stuck firmly against the tainted object's surface as you're forced to fellate a large and intoxicating tendril, its power has reached dizzying proportions. You imagine your only active option is to [bold type]S[roman type]truggle enough until you can pull yourself completely free, else you can [bold type]O[roman type]blige, or [if boundrecover is true][bold type]R[roman type]ecover from[else][bold type]E[roman type]ndure[end if] these questionable circumstances.";
 		else:
-			say "relentlessly pounding your cunt[sfn][if anallevel > 1] and ass[end if] with large and writhing tendrils";
-		say ". Limbs stuck firmly against the tainted object's surface as you're forced to fellate a large and intoxicating tendril, its power has reached dizzying proportions. You imagine your only active option is to [bold type]S[roman type]truggle enough until you can pull yourself completely free, else you can [bold type]O[roman type]blige, or [if boundrecover is true][bold type]R[roman type]ecover from[else][bold type]E[roman type]ndure[end if] these questionable circumstances.";
+			say "     [one of]Now forced[or]Forced[stopping] to ride the inflatable dolphin, [one of]it creaks loudly against you[or]it squeaks against your hard motion[or]it buckles under the weight of your constant motions[or]its motions are intensely exaggerated by the waves[at random], relentlessly pounding your cunt[sfn][if anallevel > 1] and ass[end if] with large and writhing tendrils. Limbs stuck firmly against the tainted object's surface as you're forced to fellate a large and intoxicating tendril, its power has reached dizzying proportions. You imagine your only active option is to [bold type]S[roman type]truggle enough until you can pull yourself completely free, else you can [bold type]O[roman type]blige, or [if boundrecover is true][bold type]R[roman type]ecover from[else][bold type]E[roman type]ndure[end if] these questionable circumstances.";
 	else:
-		say "     Trapped within the confines of the inflatable dolphin, [one of]it creaks loudly all around you[or]it squeaks against your hard motion[or]its surface yields to your touch, but isn't inclined to let your escape[or]it seems to exploit the waves to exaggerate its motions against you[at random], ";
 		if Player is male:
-			say "having engulfed your cock[smn] [if Player is female and anallevel > 1]while relentlessly pounding your cunt[sfn] and ass with large and writhing tendrils[else if Player is female]while relentlessly pounding your cunt[sfn] with large and writhing tendrils[else if anallevel > 1]while relentlessly pounding your ass with large and writhing tendrils[else]within its overwhelming, vinyl grasp[end if]";
+			say "     Trapped within the confines of the inflatable dolphin, [one of]it creaks loudly all around you[or]it squeaks against your hard motion[or]its surface yields to your touch, but isn't inclined to let your escape[or]it seems to exploit the waves to exaggerate its motions against you[at random], having engulfed your cock[smn] [if Player is female and anallevel > 1]while relentlessly pounding your cunt[sfn] and ass with large and writhing tendrils[else if Player is female]while relentlessly pounding your cunt[sfn] with large and writhing tendrils[else if anallevel > 1]while relentlessly pounding your ass with large and writhing tendrils[else]within its overwhelming, vinyl grasp[end if]. Barely able to see anything through the eyes of the thing as you're forced to fellate a large and intoxicating tendril, it's clearly reached the apex of its power! You imagine your only active option is to [bold type]S[roman type]truggle enough until you can pull yourself completely free, else you can [bold type]O[roman type]blige, or [if boundrecover is true][bold type]R[roman type]ecover from[else][bold type]E[roman type]ndure[end if] these questionable circumstances.";
 		else:
-			say "relentlessly pounding your cunt[sfn][if anallevel > 1] and ass[end if] with large and writhing tendrils";
-		say ". Barely able to see anything through the eyes of the thing as you're forced to fellate a large and intoxicating tendril, it's clearly reached the apex of its power! You imagine your only active option is to [bold type]S[roman type]truggle enough until you can pull yourself completely free, else you can [bold type]O[roman type]blige, or [if boundrecover is true][bold type]R[roman type]ecover from[else][bold type]E[roman type]ndure[end if] these questionable circumstances.";
+			say "     Trapped within the confines of the inflatable dolphin, [one of]it creaks loudly all around you[or]it squeaks against your hard motion[or]its surface yields to your touch, but isn't inclined to let your escape[or]it seems to exploit the waves to exaggerate its motions against you[at random], relentlessly pounding your cunt[sfn][if anallevel > 1] and ass[end if] with large and writhing tendrils. Barely able to see anything through the eyes of the thing as you're forced to fellate a large and intoxicating tendril, it's clearly reached the apex of its power! You imagine your only active option is to [bold type]S[roman type]truggle enough until you can pull yourself completely free, else you can [bold type]O[roman type]blige, or [if boundrecover is true][bold type]R[roman type]ecover from[else][bold type]E[roman type]ndure[end if] these questionable circumstances.";
 
 to flotbindorgasm: [passable]
 	if flotintense < 2:
 		if Player is male:
-			say "     Finally overtaken by bliss, your cock pumps your [Cum Load Size of Player] load into the dolphin[if Cock Count of Player > 2], its brothers staining its underside[else if Cock Count of Player is 2], its brother staining its underside[end if]. [if Ball Size of Player > 5]Briefly bulging to contain your impressive release, it seems to recede and acclimate to the torrent[else]Eagerly, it seems to consume your release, motion further slicked by it[end if]";
+			say "     Finally overtaken by bliss, your cock pumps your [Cum Load Size of Player] load into the dolphin[if Cock Count of Player > 2], its brothers staining its underside[else if Cock Count of Player is 2], its brother staining its underside[end if]. [if Ball Size of Player > 5]Briefly bulging to contain your impressive release, it seems to recede and acclimate to the torrent[else]Eagerly, it seems to consume your release, motion further slicked by it[end if]. Trembling subtly in the wake of this, it seems to feed off your [if Player is male]cum[else]ecstasy[end if], [if flotintense < 1]gradually changing[else]close to changing[end if] while you continue riding it.";
 		else:
-			say "     Finally overtaken by bliss, your cunt[sfn] ache[sfv] against the toy, staining its underside with your juices";
-		say ". Trembling subtly in the wake of this, it seems to feed off your [if Player is male]cum[else]ecstasy[end if], [if flotintense < 1]gradually changing[else]close to changing[end if] while you continue riding it.";
+			say "     Finally overtaken by bliss, your cunt[sfn] ache[sfv] against the toy, staining its underside with your juices. Trembling subtly in the wake of this, it seems to feed off your [if Player is male]cum[else]ecstasy[end if], [if flotintense < 1]gradually changing[else]close to changing[end if] while you continue riding it.";
 	else if flotintense < 4:
 		if Player is male:
-			say "     Finally overtaken by bliss, your cock[smn] pump[smv] your [Cum Load Size of Player] load into the dolphin, engulfing vinyl milking it for as long as it can. [if Ball Size of Player > 5]Briefly bulging to contain your impressive release, it seems to recede and acclimate to the torrent[else]Eagerly, it seems to consume your release, motion further slicked by it[end if]";
+			say "     Finally overtaken by bliss, your cock[smn] pump[smv] your [Cum Load Size of Player] load into the dolphin, engulfing vinyl milking it for as long as it can. [if Ball Size of Player > 5]Briefly bulging to contain your impressive release, it seems to recede and acclimate to the torrent[else]Eagerly, it seems to consume your release, motion further slicked by it[end if]. Trembling further in the wake of this, it's further empowered by your [if Player is male]cum[else]ecstasy[end if], [if flotintense < 3]gradually changing[else]close to changing[end if] as you're driven to continue riding it.";
 		else:
-			say "     Finally overtaken by bliss, your cunt[sfn] ache[sfv] against the toy, engulfing vinyl prolonging your bliss for as long as it can";
-		say ". Trembling further in the wake of this, it's further empowered by your [if Player is male]cum[else]ecstasy[end if], [if flotintense < 3]gradually changing[else]close to changing[end if] as you're driven to continue riding it.";
+			say "     Finally overtaken by bliss, your cunt[sfn] ache[sfv] against the toy, engulfing vinyl prolonging your bliss for as long as it can. Trembling further in the wake of this, it's further empowered by your [if Player is male]cum[else]ecstasy[end if], [if flotintense < 3]gradually changing[else]close to changing[end if] as you're driven to continue riding it.";
 	else if flotintense < 6:
 		if Player is male:
-			say "     Finally overtaken by bliss, your cock[smn] pump[smv] your [Cum Load Size of Player] load into the dolphin, engulfing vinyl milking it for as long as it can[if Player is female and anallevel > 1] while pounding your holes[else if Player is female] while pounding your hole[sfn][else if anallevel > 1] while pounding your hole[end if]. [if Ball Size of Player > 5]Briefly bulging to contain your impressive release, it seems to revel in the torrential flood[else]Eagerly, it seems to consume your release, motion further slicked by it[end if]";
+			say "     Finally overtaken by bliss, your cock[smn] pump[smv] your [Cum Load Size of Player] load into the dolphin, engulfing vinyl milking it for as long as it can[if Player is female and anallevel > 1] while pounding your holes[else if Player is female] while pounding your hole[sfn][else if anallevel > 1] while pounding your hole[end if]. [if Ball Size of Player > 5]Briefly bulging to contain your impressive release, it seems to revel in the torrential flood[else]Eagerly, it seems to consume your release, motion further slicked by it[end if]. Groaning under you in the wake of this, it's further empowered by your [if Player is male]cum[else]ecstasy[end if], [if flotintense < 5]gradually changing[else]close to changing[end if] as you're forced to continue riding it...";
 		else:
-			say "     Finally overtaken by bliss, your cunt[sfn] ache[sfv] against the toy, pounding vinyl milking you for as long as it can";
-		say ". Groaning under you in the wake of this, it's further empowered by your [if Player is male]cum[else]ecstasy[end if], [if flotintense < 5]gradually changing[else]close to changing[end if] as you're forced to continue riding it...";
+			say "     Finally overtaken by bliss, your cunt[sfn] ache[sfv] against the toy, pounding vinyl milking you for as long as it can. Groaning under you in the wake of this, it's further empowered by your [if Player is male]cum[else]ecstasy[end if], [if flotintense < 5]gradually changing[else]close to changing[end if] as you're forced to continue riding it...";
 	else if flotintense < 8:
 		if Player is male:
-			say "     Overtaken by bliss, your cock[smn] pump[smv] your [Cum Load Size of Player] load into the dolphin, engulfing vinyl milking it for as long as it can[if Player is female and anallevel > 1] while pounding your holes[else if Player is female] while pounding your hole[sfn][else if anallevel > 1] while pounding your hole[end if]. [if Ball Size of Player > 5]Very quickly, you feel your hot release flood your maw through the rubbery tube, pumping you full with what excess its ill-equipped to contain itself[else]Starting to develop an excess of your release, you feel the hot fluid flood your maw through the rubbery tube, pumping you with what it can no longer contain[end if]";
+			say "     Overtaken by bliss, your cock[smn] pump[smv] your [Cum Load Size of Player] load into the dolphin, engulfing vinyl milking it for as long as it can[if Player is female and anallevel > 1] while pounding your holes[else if Player is female] while pounding your hole[sfn][else if anallevel > 1] while pounding your hole[end if]. [if Ball Size of Player > 5]Very quickly, you feel your hot release flood your maw through the rubbery tube, pumping you full with what excess its ill-equipped to contain itself[else]Starting to develop an excess of your release, you feel the hot fluid flood your maw through the rubbery tube, pumping you with what it can no longer contain[end if]. Visibly trembling under you, it's even further empowered by your [if Player is male]cum[else]ecstasy[end if], [if flotintense < 7]gradually changing[else]close to changing[end if] as you're forced to continue riding it...";
 		else:
-			say "     Overtaken by bliss, your cunt[sfn] ache[sfv] against the dolphin, pounding vinyl milking you for as long as it can. It seems compelled to make you taste your own honey, flooding your senses through the rubbery tube";
-		say ". Visibly trembling under you, it's even further empowered by your [if Player is male]cum[else]ecstasy[end if], [if flotintense < 7]gradually changing[else]close to changing[end if] as you're forced to continue riding it...";
+			say "     Overtaken by bliss, your cunt[sfn] ache[sfv] against the dolphin, pounding vinyl milking you for as long as it can. It seems compelled to make you taste your own honey, flooding your senses through the rubbery tube. Visibly trembling under you, it's even further empowered by your [if Player is male]cum[else]ecstasy[end if], [if flotintense < 7]gradually changing[else]close to changing[end if] as you're forced to continue riding it...";
 	else:
 		if Player is male:
-			say "     Sent crashing into bliss, your cock[smn] pump[smv] your [Cum Load Size of Player] load into your dolphin prison, vinyl material milking it for as long as it can[if Player is female and anallevel > 1] while pounding your holes[else if Player is female] while pounding your hole[sfn][else if anallevel > 1] while pounding your hole[end if]. [if Ball Size of Player > 5]Body awash in your hot release, you feel it very quickly flood your maw through the rubbery tube, pumping its occupant with the excess[else]Warmth of your hot release awash against you, you feel it gradually fill your maw through the rubbery tube, pumping its occupant with the slight excess[end if]";
+			say "     Sent crashing into bliss, your cock[smn] pump[smv] your [Cum Load Size of Player] load into your dolphin prison, vinyl material milking it for as long as it can[if Player is female and anallevel > 1] while pounding your holes[else if Player is female] while pounding your hole[sfn][else if anallevel > 1] while pounding your hole[end if]. [if Ball Size of Player > 5]Body awash in your hot release, you feel it very quickly flood your maw through the rubbery tube, pumping its occupant with the excess[else]Warmth of your hot release awash against you, you feel it gradually fill your maw through the rubbery tube, pumping its occupant with the slight excess[end if]. Barely seeming to react to your ecstasy, it's clear the thing has reached the apex of its purpose, seemingly more than happy to continue abusing its encased prisoner.";
 		else:
-			say "     Sent crashing into bliss, your cunt[sfn] ache[sfv] against the dolphin, pounding vinyl milking you for as long as it can. Warmth of your hot honey awash against you, it seems compelled to make you taste your own juices, flooding your senses through the rubbery tube";
-		say ". Barely seeming to react to your ecstasy, it's clear the thing has reached the apex of its purpose, seemingly more than happy to continue abusing its encased prisoner.";
+			say "     Sent crashing into bliss, your cunt[sfn] ache[sfv] against the dolphin, pounding vinyl milking you for as long as it can. Warmth of your hot honey awash against you, it seems compelled to make you taste your own juices, flooding your senses through the rubbery tube. Barely seeming to react to your ecstasy, it's clear the thing has reached the apex of its purpose, seemingly more than happy to continue abusing its encased prisoner.";
 	if Player is male:
 		NPCSexAftermath Discarded Dolphin receives "OralCock" from Player;
 	if flotintense > 3:
@@ -372,7 +362,7 @@ to flotsanitypassive:
 	else if flotintense > 3:
 		decrease humanity of Player by (3 + psycheadjust) / endureadj;
 	else if flotintense > 1:
-		let tempnum be (2 + psycheadjust);
+		now tempnum is 2 + psycheadjust;
 		if tempnum > 1 and enduring is true:
 			decrease tempnum by 1;
 		decrease humanity of Player by tempnum;
@@ -391,13 +381,13 @@ to flotsanityorgasm:
 		infect;
 		decrease humanity of Player by (15 + (psycheadjust * 5)) / endureadj;
 	else if flotintense > 5:
-		decrease humanity of Player by (9 + psycheadjust * 3) / endureadj;
+		decrease humanity of Player by (9 + (psycheadjust * 3)) / endureadj;
 		if a random chance of 2 in 3 succeeds:
 			infect;
 	else if flotintense > 3:
 		if a random chance of 1 in 3 succeeds:
 			infect;
-		decrease humanity of Player by (7 + psycheadjust * 2) / endureadj;
+		decrease humanity of Player by (7 + (psycheadjust * 2)) / endureadj;
 	else if flotintense > 1:
 		decrease humanity of Player by (5 + psycheadjust) / endureadj;
 	else:

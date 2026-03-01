@@ -15,15 +15,13 @@ when play begins:
 
 to say ResolveEvent Tidepool Treasure:
 	say "     You come across a large tide-pool, easily several feet across and probably about a foot deep in the center. It's full of small coral and shellfish, with starfish latched on to the half-buried rocks and kelp curling under the shallow surface. In the middle of it rests a small object covered in some sort of undersea moss, but it doesn't look natural. Circling the pool for a better view, it's clear that it's a bottle of some kind, perhaps soda or water, and maybe even unopened!";
-	LineBreak;
-	say "     [bold type]Do you want to try and take the bottle?[roman type][line break]";
+	say "[line break]     [bold type]Do you want to try and take the bottle?[roman type][line break]";
 	say "     ([link]Y[as]y[end link]) - Go for it!";
 	say "     ([link]N[as]n[end link]) - Nope!";
 	if Player consents:
 		LineBreak;
 		say "     As you wade into the pool, feeling the water lapping your ankles, something feels off. You ignore that little flash of instinct, bending down to grab at the bottle-like object. As you brush aside the kelp wrapped around it, your arm gets grabbed! You quickly look around for the source of it, tracing it back to a colorful rock with several organic looking holes over it, each of which has another pinkish limb sliding out. Dread washes over you as you hear shifting sand around you, again looking around. In a matter of seconds, dozens of these small slithering things are coming at you, while the ones nearest you are already coiling around your ankles.";
-		LineBreak;
-		say "     [bold type]You could keep trying to take the bottle, or you could let go and bolt. You also get a twinge of destructive curiosity, urging you to let these odd shellfish spring their trap and not fight it.[roman type][line break]";
+		say "[line break]     [bold type]You could keep trying to take the bottle, or you could let go and bolt. You also get a twinge of destructive curiosity, urging you to let these odd shellfish spring their trap and not fight it.[roman type][line break]";
 		say "     [link](1)[as]1[end link] - Grab it and run like hell!";
 		say "     [link](2)[as]2[end link] - Screw this, get out of there!";
 		say "     [link](3)[as]3[end link] - Let the creatures take you instead.";
@@ -31,13 +29,11 @@ to say ResolveEvent Tidepool Treasure:
 		while calcnumber < 1 or calcnumber > 3:
 			say "Choice? (1-3)> [run paragraph on]";
 			get a number;
-			if calcnumber is 1 or calcnumber is 2 or calcnumber is 3:
-				break;
-			else:
+			if calcnumber < 1 or calcnumber > 3:
 				say "Invalid choice. Type [link]1[end link] to try and steal the bottle, [link]2[end link] to run for it or [link]3[end link] to submit to the trap.";
 		LineBreak;
 		if calcnumber is 1:
-			let bonus be (( Dexterity of Player minus 10 ) divided by 2);
+			let bonus be ( Dexterity of Player minus 10 ) divided by 2;
 			let diceroll be a random number from 1 to 20;
 			say "You roll 1d20([diceroll])[if bonus >= 0]+[end if][bonus] = [special-style-1][diceroll + bonus][roman type] vs [special-style-2]16[roman type] (Dexterity Check):[line break]";
 			increase diceroll by bonus;

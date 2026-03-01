@@ -876,18 +876,7 @@ to say ResolveEvent Finding Pertho:
 
 Section 10 - Table of Game Objects
 
-Table of Game Objects (continued)
-name	desc	weight	object
-"firefighter coat"	"A thick yellow firefighting coat that looks as though it's not been used quite that often."	5	firefighter coat
-
-firefighter coat is equipment.
-It is not temporary.
-The AC of firefighter coat is 12.
-The effectiveness of firefighter coat is 65.
-The placement of firefighter coat is "body".
-The descmod of firefighter coat is "You have a thick and slightly musky firefighter's coat on.".
-The slot of firefighter coat is "body".
-
+[firefighter coat moved to Core Mechanics/Equipment.i7x]
 
 Section 11 - OtherDals
 

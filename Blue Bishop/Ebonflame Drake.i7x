@@ -10,15 +10,14 @@ to say ebdrakevic:
 	if HP of Player > 0:
 		say "     Some part of you questions the sanity of submitting to one of these horrors, but you do it all the same. It takes a moment for the drake to catch on that you're offering yourself, before she breaks out in shrill laughter.";
 		say "     '[one of]Oh[or]Hmpf[or]Ha[at random], [one of]you're hardly worth my energy[or]such a pitiful creature[or]you're at least an amusing piece of fuckmeat[at random]!' Immediately, she strikes you down to leave you doubled over, tearing free any attire blocking her way before you're assaulted by a barrage of lashes against your ass, using her tail as a terrible whip to punish you.";
-		say "     '[one of]Before you turn, all you'll remember of your past life is agony[or]So soft, you practically ask for pain[or]Have you forgotten already? You want for every bit of this suffering[at random]";
+		say "     '[one of]Before you turn, all you'll remember of your past life is agony[or]So soft, you practically ask for pain[or]Have you forgotten already? You want for every bit of this suffering[at random]!' She continues to harshly threaten you until your rear is glowing red with her constant abuse. Every time you think she might be satisfied, she lashes you again, just to watch you writhe.";
 	else:
 		say "     Having fallen to the ground, you desperately try to crawl away from the drake, either to flee or to try and get your footing. She seems to just cackle at you and strut alongside you until you finally can't go any further, laying there exhausted.";
 		say "     '[one of]Idiot[or]Fool[or]Whelp[at random], [one of]playtime's over[or]you will know your place, you walking piece of fuckmeat[or]was that even supposed to be a challenge? Ha[at random]!' With one hand she pulls your rear exposed into the open air, tearing free any attire blocking her way before you're assaulted by a barrage of lashes against your ass, using her tail as a terrible whip to punish your failure.";
-		say "     '[one of]No amount of suffering will suffice[or]So soft, you're hardly worth the energy[or]Hmpf, I should toss you to the whelps[at random]";
-	say "!' She continues to harshly threaten you until your rear is glowing red with her constant abuse. Every time you think she might be satisfied, she lashes you again, just to watch you writhe.";
+		say "     '[one of]No amount of suffering will suffice[or]So soft, you're hardly worth the energy[or]Hmpf, I should toss you to the whelps[at random]!' She continues to harshly threaten you until your rear is glowing red with her constant abuse. Every time you think she might be satisfied, she lashes you again, just to watch you writhe.";
 	WaitLineBreak;
 	say "     The dragon does eventually get bored of punishing you in this manner and starts to prepare you for something else, allowing you to take the small comfort of her brief relent...";
-	if anallevel > 1 and (Cunt Count of Player is 0 or anallevel is 3) and (a random chance of 1 in 2 succeeds or (anallevel is 3 and a random chance of 1 in 3 succeeds)):
+	if anallevel > 1 and (Player is not female or anallevel is 3) and (a random chance of 1 in 2 succeeds or (anallevel is 3 and a random chance of 1 in 3 succeeds)):
 		say "     Her plans become clear when you feel the tip of one of her talons caress along the crevice of your sore behind, teasing you before the razor sharp thing forces its way through your anal ring. She cackles as you tremble against her digit so casually shaming you.";
 		say "     '[one of]Such a soft hole, I'm going to take great joy in ravaging it[or]I'm going to love tearing you in half[or]Oh, don't worry, you're not going to feel a thing... After I'm done with you[at random]!' Finally pulling the talon free, it's apparent she wanted to humiliate you more than prepare, [if scalevalue of Player > 3]climbing on top of[else]positioning herself behind[end if] you before the pointed tip of the reptile's savage dick briefly presses against you quivering hole. Immediately, she plunges the massive thing as far in as she can, grunting as she forces what remains with successive thrusts. Not only is it apparent that she doesn't care to prepare you, but she actively enjoys hearing you howl in pain as her sharp barbs dig into your supple flesh, laughing and mocking you all along the way.";
 		WaitLineBreak;
@@ -265,12 +264,11 @@ This is the Ebonflame Drake Infection rule:
 			say "     There is a terrible need to move forward, as if to flee from your more feral kin. Dark whispers seem to compel your actions, but eventually there is only silence, punctuated by the cries of ecstasy.";
 			say "     [if Player is submissive and Player is kinky]Your final, distinctive memories are that of no longer finding satisfaction in your sisters, instead turning inward to embrace to the more wild, virile influence of the terrible beasts that follow in your wake, more than eager to make your future eternally filled with a blur of constantly breeding[else]Eventually, everything blurs into a haze of constant sex, you never even learn what dark powers compelled you, or if they achieved whatever it was that they sought[end if]...";
 		else:
-			say "     More than any other infected that is eventually rescued by the military, you're forced to linger in processing, largely from the infamy born of your strain";
 			if Player is submissive or "Strong Psyche" is listed in feats of Player:
-				say ". It's hard to keep everything together, but ultimately your [if Player is submissive]submissive tendencies allow[else]strong will allows[end if] you to endure until you're finally freed back into civilized society.";
+				say "     More than any other infected that is eventually rescued by the military, you're forced to linger in processing, largely from the infamy born of your strain. It's hard to keep everything together, but ultimately your [if Player is submissive]submissive tendencies allow[else]strong will allows[end if] you to endure until you're finally freed back into civilized society.";
 				say "     You ultimately find yourself doing mercenary work keeping the mindless infected at bay in the borders of civilization[if Player is submissive], often by using your own body as a twisted tribute[end if]. It seems to sate your terrible, burning need, but only by so much...";
 			else:
-				say ". This terrible, dark compulsion eventually becomes too much, however, and you're eventually forced to tear out an escape for yourself. It takes some weeks for the military to eventually stop searching for you - perhaps because you weren't infectious and there's more pressing matters to attend to.";
+				say "     More than any other infected that is eventually rescued by the military, you're forced to linger in processing, largely from the infamy born of your strain. This terrible, dark compulsion eventually becomes too much, however, and you're eventually forced to tear out an escape for yourself. It takes some weeks for the military to eventually stop searching for you - perhaps because you weren't infectious and there's more pressing matters to attend to.";
 				say "     Too lucid to join your sisters and too twisted to join society proper, you're forced to dwell in society's dark underbelly, torn between sating your fiery need and not becoming one of the monsters that first turned you. It's strange, at first, when you find others actively willing to be your plaything, but even they are paltry compared to the thrill of your terrible hunt...";
 
 Table of Game Objects (continued)
@@ -280,7 +278,6 @@ name	desc	weight	object
 ebonflame scale is a grab object.
 ebonflame scale is infectious. Strain of ebonflame scale is "Ebonflame Drake".
 Usedesc of ebonflame scale is "     You swallow the dark scale. It's extremely bitter and hot to the taste, like eating something charred black by an open fire.[line break]".
-
 Scent of ebonflame scale is "It smells of something burnt to a crisp.".
 
 Ebonflame Drake ends here.

@@ -19,8 +19,7 @@ to say ResolveEvent Demon Chase:
 	say "     The fleeing anthro glances over his shoulder and calls out, 'Fuck!' Yet by the time he does, he's already a dozen feet ahead of where the backpack dropped. His eyes widen when he sees you standing behind the car, and he shouts, 'RUN!' Slowing down for a step or two before focusing ahead of himself once more, he puts in an additional burst of speed. The reason for his panicked flight is revealed before you can do anything at all to react to his call: A lumbering brute of a purple demon barrels out of the original alley the canine came from, his mouth open in a teeth-filled snarl. You look down the street for the Labrador, but the guy has already fled into another alley it seems. That or maybe he's hiding somewhere.";
 	WaitLineBreak;
 	say "     With his immediate target no longer in sight, the large demon brute stomps forward to the middle of the street and shouts, 'I'll find you, stupid mutt! And when I do, you will know the real meaning of suffering!' He comes to stand over the dropped backpack, snatching it up from the ground with one clawed hand. 'So nice of you to leave me a memento, and with your scent all over it.' He then takes a deep sniff of the bag. 'I bet that you have something important in here too,' he adds, tightening his grip till you hear something crunch.";
-	say "     [bold type]What do you want to do now?[roman type][line break]";
-	LineBreak;
+	say "[line break]     [bold type]What do you want to do now?[roman type][line break]";
 	say "     ([link]Y[as]y[end link]) - Take that demon down a peg!";
 	say "     ([link]N[as]n[end link]) - Duck behind the car. Maybe he'll be too focused on the Labrador to care about you.";
 	if Player consents:
@@ -30,8 +29,7 @@ to say ResolveEvent Demon Chase:
 		if fightoutcome < 20: [player won]
 			say "     After another hard blow, the demon stumbles back and keels over, then turns into purple mist that wafts away, even though there is no breeze at all right now. You shrug at the creature making a getaway and turn back to the backpack. It is lying in a small, wet puddle, clearly made from whatever is leaking out of it. Carefully peeling the bag open, you find some soaked clothing, as well as several bottles of clean water, with the ones made from glass broken and several plastic ones punctured and leaking. Just one single bottle has survived intact, which you quickly add to your own backpack. Further down in the soggy pile are crackers (mushy), a few cans (punctured by demon claws and leaky), as well as more clothes, a few batteries, a now bent flashlight, as well as other small items. Seems like this was a carefully packed bug-out bag before getting the demon treatment.";
 			say "     Since it is 'only' clean water that drenched the backpack, you have little further hesitation from opening the front zippers of the bag and sliding your hand into the flat pockets there. The first thing that you feel is a piece of wet paper - a photograph, from the looks of it. Looks fairly well-worn, as if often held in someone's hands. There are two young men on it, one with his arm laid around the other one's shoulders and both of them grinning wildly at the camera. Also in the pocket is the wallet and a key-chain of who you assume must have been the Labrador. Apparently, his name is 'Luther Hanks', and he's nineteen. The final two objects in the bag are small clear cases holding two compact video cassettes. The plastic has protected them from water damage, meaning that you can read the labels easily: 'Wayne's secret tape 1. 11/02/2007. For Luth's eyes only!' and 'Wayne's secret tape 2. 12/30/2007. For Luth's eyes only!'";
-			say "     [bold type]The clothes and other stuff are soaked with water and whatever is leaking from the cans. Those won't be much use now. As for the rest...[roman type][line break]";
-			LineBreak;
+			say "[line break]     [bold type]The clothes and other stuff are soaked with water and whatever is leaking from the cans. Those won't be much use now. As for the rest...[roman type][line break]";
 			say "     ([link]Y[as]y[end link]) - Keep a hold of it all.";
 			say "     ([link]N[as]n[end link]) - Discard this stuff.";
 			if Player consents:
@@ -117,8 +115,7 @@ to say ResolveEvent Intercepted Bike Courier:
 	ItemGain food by 1;
 	ItemGain soda by 1;
 	say "     The food and drink are quickly stuffed into your own pack, leaving the envelope. It is addressed to Olivia Koenig, at Liberty Avenue 69, with the clear instruction of 'Personal Delivery ONLY' penned in neat handwriting on it. From the feel of it, there is something more than paper inside the envelope. Might be a video cassette?";
-	say "     [bold type]Do you want to open it and find out what might be inside?[roman type][line break]";
-	LineBreak;
+	say "[line break]     [bold type]Do you want to open it and find out what might be inside?[roman type][line break]";
 	say "     ([link]Y[as]y[end link]) - Sure! Who doesn't like to inspect a mystery package...";
 	say "     ([link]N[as]n[end link]) - Just toss it.";
 	if Player consents:
@@ -216,7 +213,6 @@ Sarea of Dressing Room Spycam is "High".
 
 when play begins:
 	add Dressing Room Spycam to BadSpots of HermList;
-
 
 to say ResolveEvent Dressing Room Spycam:
 	say "     Checking out one of the more upscale boutiques that dot the streets of the High Rise District, you find yourself standing in the midst of empty clothing racks and displays. Apparently, someone had decided to clean out not only the little fridge for complimentary drinks and snacks, but also all of the designer garments. It's funny how people can prioritize the strangest things even in the midst of an apocalypse. Strolling through the empty shop, you see a few items left here or there, but they have all been stained or torn somehow. Just as you are about to leave, you spot something inside one of the dressing booths that catches your attention. The tiny, enclosed room is thoroughly splattered in dried cum, but the aftermath of a gang-bang isn't actually all that surprising these days. What is, on the other hand, is that one of the ceiling panels above has been opened, and you can see a camera that has been positioned up there.";
@@ -323,8 +319,7 @@ when play begins:
 to say ResolveEvent Lost Explorer:
 	say "     Roaming the expansive warehouse district in search of anything that might aid your survival in this fallen city, your exploration leads you into a section that has been largely abandoned. Wrecked buildings and long-dead factories dominate your surroundings, creating a fairly creepy ambiance. On top of that, the area seems eerily quiet, missing the usual groans and grunts of creatures rutting in the distance. Maybe there just isn't anything interesting here to attract the post-human denizens of the city, or maybe something is lurking and waiting? You dispel those concerns and soldier on, determined to find some salvage while you're here. Crumbling walls, rusted metal, and countless spray-paint tags are everywhere you look, and [if daytimer is day]even in daylight, the whole area seems tailor-made for a horror movie[else]in the dim moonlight, the whole area appears tailor-made for a horror movie[end if].";
 	say "     Your sense of hopeful exploration wears thinner and thinner as you check out yet another empty building after at least an hour of searching the area. Not even homeless people have occupied these places, and whatever may once have been here has long been looted or willfully destroyed. But just as you are about to give up on this endeavor, a glimpse of crimson draws your attention to an old factory building across the cracked and rubble-covered road. Stepping out of the disappointing ruin, you look up at the factory and see a helmet dangling crookedly from an exposed piece of rebar that sticks out sideways from a landing on the second floor. It looks fairly modern and new, the material still gleaming under the light, and a compact helmet cam has been attached at the front. Letting your gaze wander down, you notice scattered shreds of clothing littering the ground below. Looks like the owner of that helmet didn't fare too well.";
-	say "     [bold type]What do you want to do now?[roman type][line break]";
-	LineBreak;
+	say "[line break]     [bold type]What do you want to do now?[roman type][line break]";
 	say "     ([link]Y[as]y[end link]) - Investigate the scene in detail.";
 	say "     ([link]N[as]n[end link]) - Better get out of here. Whatever did this might still be around.";
 	if Player consents:
@@ -349,7 +344,7 @@ to say UrbanExplorerVid1:
 	WaitLineBreak;
 	say "     After watching the sun vanish below the horizon and the red of its last rays fade, Mason pulls a compact flashlight from his pocket, then starts on the way back down through the abandoned factory. 'Wandering these old places after dark is always a bit freaky,' he says in a daredevil tone, letting the light dance over rusty machines. 'Maybe we'll see a ghost. In the old days, there was barely any worker safety, so you can generally expect there to have been deadly accidents over the years. Who knows how many men are still haunting the place where they lost their lives, bound to the thought that they have to fulfill their quota, no matter the cost.' With that said, your urban explorer falls silent and wanders past the production line, directing his flashlight here and there to highlight things and whisper what part of the factory it was. Eventually, Mason walks down a set of stairs to the second floor of the building and continues to play up the haunted air of it all, talking in hushed tones as he walks over the dust-laden factory floor.";
 	say "     Knowing that something is coming for him creates a nerve-wracking experience, and you hold your camera tightly as a creak of metal makes the urban explorer freeze in his steps. 'What the hell? Is someone there?' he says in a somewhat breathless voice and turns around, shining his light over the fairly open production floor. 'Must have been a rat,' the young man starts to tell himself, but before the last word is even out of his mouth, a sliver of movement becomes visible a little distance away. From behind one production line, a pair of what looks like black-furred tentacles rise into sight, complete with gripping pads that show a dim, green glow of bio-luminescence. The creature they belong to uses the two appendages to brace itself for a leap on top the machine, revealing itself to be a large feline with glowing green eyes. Letting out a low growl, it focuses on Mason, then jumps forward from its raised position, tearing over the concrete floor to pounce on your urban explorer.";
-	WaitLineBreak;
+	wait for any key;
 	project the Figure of ShadowBeast_icon;
 	say "     'Fuck! Fuck! Fuck!' Mason calls out in disbelief as he whirls around to run, his feet flying over the ground. The creature hunting him barely makes a sound as its paws touch the ground, and were it not for the horrified glimpse over the young man's shoulder that revealed it directly behind him, you'd have guessed that it was still far off. In his panicked flight through the darkness, Mason is driven right towards the end of the second floor that you remember from finding the tape. By the time he tries to take a corner to reach a nearby stairwell down to ground level, he finds out the hard way that he's moving far too fast. The helmeted explorer's boots scratch over the dusty floor and find it fairly slippery, the fleeing man's momentum enough to propel him right over the edge. The next moments are fairly chaotic, but from what you can tell, he grazed the rebar rods on the way down, with one catching a loop of his helmet and another ripping Mason's jacket halfway through.";
 	say "     Making a choking sound, Mason's hands fly upwards to release the helmet's fastening, and he tumbles to the ground, the increased strain on his jacket enough to shred the garment completely. The helmet (and your viewpoint) swings wildly for a few moments, making it hard to see anything clearly, but by the time it comes to hang at a crooked angle, you see Mason on all fours, trying to clear his head by shaking it and scrambling to his feet. Then another growl from off-screen makes him freeze in the half-crouch of standing up. 'Hey, wait! Slow down kitty! What are you even, some exotic pet or something? I - I'm not something to eat! Mason steak isn't on the menu!' Hands raised in a defensive position, the young man focuses on the creature that comes into view a moment later, prowling forward on silent paws, its tentacles raised to strike.";
@@ -460,30 +455,26 @@ Sarea of Explosive Breakup is "Campus".
 to say ResolveEvent Explosive Breakup:
 	say "     Wandering the campus, you're walking along a path between several dorm buildings, surrounded by students of numerous different types, from barely infected to full on anthros. Despite this, things seem almost painfully 'normal' as compared to the rest of the city, with no actual lewdness happening in sight and people going by their business as before the nanite plague. Then suddenly, there is a bit of commotion to one side, with a young anthro goose woman screaming at someone from a second story window. 'You think you can cheat on me? You bastard!' Curiosity drives you to glance over to it, as do many other passersby. There's a male bulldog standing on the grass below the window, calling out excuses and apologies back to her. It becomes clear that she doesn't accept his words, as the next thing that happens is a barrage of items being thrown at the student from above. 'I don't wanna see you back here! And take all your stupid shit with you!' Clothing, a backpack, books, all sorts of stuff rains down on him, which the canine dodges and picks up, then slinks away with his tail between his legs.";
 	say "     As the guy passes you a moment later, you hear a slight noise from the ground and look down, seeing the cartridge of a video tape lying on the walkway. It must have fallen out of the backpack he has clutched as part of his gathered possessions. Focusing on the tape, you see its label read 'Dog Pack Hazing - HOT'.";
-	say "     [bold type]What do you do now?[roman type][line break]";
+	say "[line break]     [bold type]What do you do now?[roman type][line break]";
 	say "     [link](1)[as]1[end link] - Quietly pick up the tape and slide it into your pocket.";
 	say "     [link](2)[as]2[end link] - Pick it up and hand the guy his lost property.";
 	say "     [link](3)[as]3[end link] - Ignore it.";
 	now calcnumber is 0;
 	while calcnumber < 1 or calcnumber > 3:
-		say "Choice? (1-3)>[run paragraph on]";
+		say "Choice? (1-3)> [run paragraph on]";
 		get a number;
-		if calcnumber is 1 or calcnumber is 2 or calcnumber is 3:
-			break;
-		else:
+		if calcnumber < 1 or calcnumber > 3:
 			say "Invalid choice. Type [link]1[end link] to take the tape, [link]2[end link] to give the tape back or [link]3[end link] to ignore it.";
+	LineBreak;
 	if calcnumber is 1:
-		LineBreak;
 		say "     Bending down casually as not to draw too much attention from anyone, you pick up the tape and just slip it into your backpack. Curiosity boils within you to see what is actually recorded on it, maybe you should try to play it sometime soon.";
 		say "[bold type]'Canine Hazing Vid' has been added to your tape inventory![roman type][line break]";
 		add "Canine Hazing Vid" to tapes of Player;
 		now Resolution of Explosive Breakup is 1; [took the vid]
 	else if calcnumber is 2:
-		LineBreak;
 		say "     Quickly bending down to grab the tape, you jog after the bulldog and tell him he lost it. 'Oh, thanks!' He stops for you to slip the little cartridge back into the backpack, pulling up its zipper so it doesn't fall out again. Then the canine wanders off with a friendly nod. Seems he still isn't in the mood to talk, and that's fairly understandable after his explosive breakup just now.";
 		now Resolution of Explosive Breakup is 2; [gave the vid back]
 	else:
-		LineBreak;
 		say "     With a shrug, you just keep walking.";
 		now Resolution of Explosive Breakup is 99; [ignored it]
 	now Explosive Breakup is resolved;

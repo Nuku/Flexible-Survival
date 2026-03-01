@@ -28,8 +28,7 @@ to say ResolveEvent Anal Probing:
 	say "     Quickly shielding your eyes from the overly brilliant light you find yourself able to faintly see between your fingers what is going on. As best you can you observe there is a strange, vaguely humanoid figure fiddling with the lion but it's too bright to see precisely what is going on. The next thing that happens is an ear-splitting noise forcing you to clap your hands on your ears to protect them, leaving nothing to do but clenching your eyes shut as tight as you can. Even so, you feel like you're seeing some of the brightness as it shines through your eyelids. Thankfully, whatever is happening is over quickly, replaced by a sudden silence and stars dancing before your eyes. Blinking your eyes open to find out what is going on, you catch a second's glimpse of some object zipping up into the sky towards the east, but before you can follow it with your gaze it is already gone.";
 	WaitLineBreak;
 	say "     Focusing your gaze on where the lion was, you find him still there but unconscious and looking a bit worse for wear. His balls are looking somewhat oddly large on his body, being almost the size of grapefruits, which is a quite respectable size even for a tall and strapping predator like this dude. The lion's cock appears to have grown as well, as almost a foot of lion manmeat is poking out of his fat sheath, lying on his abs and still oozing cum. There is no sign of the creature that the tentacles belonged to, and you wonder if it just burrowed underground completely or took off with that other being.";
-	LineBreak;
-	say "     [bold type]What will you do now?[roman type][line break]";
+	say "[line break]     [bold type]What will you do now?[roman type][line break]";
 	say "     [link](1)[as]1[end link] - Check out the naked lion. Might be fun to play with him.";
 	say "     [link](2)[as]2[end link] - Sprint over to the lion and help him. He's been through quite an ordeal.";
 	say "     [link](3)[as]3[end link] - Keep your distance and move on. Getting close could be dangerous.";
@@ -37,14 +36,11 @@ to say ResolveEvent Anal Probing:
 	while calcnumber < 1 or calcnumber > 3:
 		say "Choice? (1-3)> [run paragraph on]";
 		get a number;
-		if calcnumber is 1 or calcnumber is 2 or calcnumber is 3:
-			break;
-		else:
+		if calcnumber < 1 or calcnumber > 3:
 			say "Invalid choice. Type [link]1[end link] to approach with lusty intentions, [link]2[end link] to go help him or [link]3[end link] to move on.";
 	LineBreak;
 	if calcnumber is 1:
 		say "     You decide to have some fun with the lion.";
-		LineBreak;
 		say "[AnalProbingSexMenu]";
 	else if calcnumber is 2:
 		say "     Deciding to help the lion you quickly sprint over, stopping at his side. You squat down beside the unconscious feline and place a gentle hand on his arm, trying to rouse him. After a few gentle shakes, you realize that it is having no effect and decide to try harder, rolling him over onto his back and giving his cheeks some light slaps. Even then, other than snorting a little, he is unresponsive to being shaken. Seems like this man is so fucked-out and exhausted that he just can't wake up right now. Eventually, you are forced to admit that further attempts will be useless right now, so you do your best to make him comfortable, pushing some sand around to give him a bit of a head rest as he dozes and sleeps off his ordeal.";
@@ -55,7 +51,7 @@ to say ResolveEvent Anal Probing:
 	now Anal Probing is resolved;
 
 to say AnalProbingSexMenu:
-	say "     What do you want to do with the naked, unconscious lion?";
+	say "[line break]     What do you want to do with the naked, unconscious lion?";
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]

@@ -25,8 +25,7 @@ when play begins:
 
 to say ResolveEvent Bottled Tornado:
 	say "     Wandering through the verdant greenery of the forest, you stumble upon a small clearing with a stream running through it, an idyll place to stop for a short rest. As you move to the water to wash your face, you spot a small bottle half buried in the mud. After digging it out, you see that it's made of cloudy glass and seems to shift oddly in your hand despite appearing empty. A bit of wire is coiled around the cap to ensure the bottle doesn't accidentally come open. As you continue examining and manipulating the bottle, you hear a quiet whistling sound, as if from a great distance, and the bottle itself begins vibrating. Looking closer, you see a miniature whirlwind captured in this glass bottle! Setting the bottle down to consider your options, you notice the tiny cyclone seems to calm, and the vibrations and whistling seem to fall away.";
-	LineBreak;
-	say "     [bold type]Would you like to unleash the storm?[roman type][line break]";
+	say "[line break]     [bold type]Would you like to unleash the storm?[roman type][line break]";
 	let Ariel_Release_Choices be a list of text;
 	add "Unwind the wire keeping the cap on. What's the worst that could happen?" to Ariel_Release_Choices;
 	add "Probably best to leave the bottle where you found it. Whatever it contains appears to be angry." to Ariel_Release_Choices;
@@ -63,11 +62,11 @@ to say ResolveEvent Wind in the Willows:
 	WaitLineBreak;
 	say "     After a short walk, being pulled along by Ariel and occasionally pushed by gusts of wind, she leads you to a building on the outskirts of the forest that the trees haven't overtaken yet, a music store that was left abandoned when its owners fled the encroaching forest. Above the entrance, there's a sign with gilt letters spelling out the previous name, although all you can make out is the word [']Aria[']. Someone has rearranged the letters and brought new ones scavenged from nearby shops until it reads [']Ariel's Aria[']. It's truly a mystery. The sylph leaps through the shattered window while you pause to admire her handiwork, leaving you to enter through the doorway.";
 	say "     The inside is predictably chaotic, with most instruments and furniture tossed this way and that. Ariel seems to be waiting for you by a door near the back of the store, eagerly floating around the shop's interior while you pick your way through the ruined interior. Finally reaching the doorway, you're shocked when Ariel throws it open in a gust of wind, revealing a small stockroom with a mattress and some bedding. Perhaps an employee once used this backroom as a temporary shelter, but if so, they're long gone. This shelter must be where Ariel has been since you freed her, and she is trusting you with the knowledge of her newfound home.";
+	AddNavPoint Ariel's Aria;
 	AttemptToWait;
 	now HP of Ariel is 1;
 	move Ariel to Ariel's Home;
 	move player to Ariel's Home;
-	AddNavPoint Ariel's Aria;
 	now Wind in the Willows is resolved;
 
 Section 2 - Music Store Area
@@ -85,7 +84,7 @@ Object	Name
 Ariel's Home	"Ariel's Home"
 
 Ariel's Home is a room. Ariel's Home is east of Ariel's Aria.
-Description of Ariel's Home is "     The music store is [if HP of Ariel < 6]chaotic, with few intact instruments, and some unknown violence has shattered the plate glass window in the storefront. You can still see various fliers tacked onto the walls, bearing the previous name of the store. There's a stockroom in the back where the energetic sylph stays when she's not out watching creatures in the city or enjoying the skies[else]more orderly now that Ariel can move things around quickly with her human form. She's even dragged a couch and some chairs in from one of the nearby buildings to make it look more homely. The fliers on the wall have been redecorated, with creative drawings around the border and the old store name stricken through with [']Ariel's['] written above it. The stockroom in the back is still where the sylph has her bed, with curtains hung to hide the shelving. Next to the bed is a nightstand where she leaves the ribbon Eos gifted her when not being used to tie up her hair[end if].[line break]"
+Description of Ariel's Home is "     The music store is [if HP of Ariel < 7]chaotic, with few intact instruments, and some unknown violence has shattered the plate glass window in the storefront. You can still see various fliers tacked onto the walls, bearing the previous name of the store. There's a stockroom in the back where the energetic sylph stays when she's not out watching creatures in the city or enjoying the skies[else]more orderly now that Ariel can move things around quickly with her human form. She's even dragged a couch and some chairs in from one of the nearby buildings to make it look more homely. The fliers on the wall have been redecorated, with creative drawings around the border and the old store name stricken through with [']Ariel's['] written above it. The stockroom in the back is still where the sylph has her bed, with curtains hung to hide the shelving. Next to the bed is a nightstand where she leaves the ribbon Eos gifted her when not being used to tie up her hair[end if].[line break]"
 
 Section 3 - NPC Declaration
 
@@ -136,7 +135,8 @@ TwistedCapacity of Ariel is false. [Twisted Characters can take any penetration,
 Sterile of Ariel is false. [steriles can't knock people up]
 MainInfection of Ariel is "Sylph".
 Description of Ariel is "[ArielDesc]".
-Conversation of Ariel is { "Windy noises" }.
+[Conversation of Ariel is { "Windy noises" }.]
+fuckscene of Ariel is "[ArielSexMenu]".
 The scent of Ariel is "     Ariel smells like the fresh air and the wildflowers from where you first met.".
 
 to say ArielDesc:
@@ -225,90 +225,84 @@ to say ArielTalk2:
 		WaitLineBreak;
 		say "     You explain while you enjoyed her touches, you were upset that you couldn't return the attention she was giving to you. You want to lavish your attention upon your lover as she wishes to do to you. Tears begin to form at these words, and before you can continue to reassure her, the sylph leaps into your arms once more. With the mood truly dead, you stand with her in your arms as you console the distraught spirit. Surely somewhere in this city, between the nanites and the magic, something must exist to help bring her closer to you. After a bit, Ariel calms down, and you can guide her back to the stockroom, where she rests while not exploring. And then you wander back into the city wondering where you'll find something to let you touch the wind...";
 		now HP of Ariel is 5;
-	else if HP of Ariel is 5:
+	else if HP of Ariel < 7:
 		say "     You should keep looking for a solution to the sylph's problem before you try to get intimate with her again. Perhaps one of the museum's many artifacts could be the answer.";
-	else if HP of Ariel is 7:
-		if (lastfuck of Ariel - turns < 6): [she got fucked in the last 18 hours = 6 turns]
-			say "     Ariel looks at you apologetically but indicates that she's uninterested. It hasn't been all that long since the last time, after all.";
-		else:
-			say "[ArielSexMenu]";
+	else:
+		say "[ArielSexMenu]";
 
 Section 5 - Sex
 
-instead of fucking Ariel:
+to say ArielSexMenu:
 	if Dawning is not resolved:
 		say "     You're not sure how to make that work. She's made of air after all.";
-	else if (lastfuck of Ariel - turns < 6): [she got fucked in the last 18 hours = 6 turns]
+	else if lastfuck of Ariel - turns < 6: [she got fucked in the last 18 hours = 6 turns]
 		say "     Ariel looks at you apologetically but indicates that she's uninterested. It hasn't been all that long since the last time, after all.";
 	else: [ready for sex]
-		say "[ArielSexMenu]";
-
-to say ArielSexMenu:
-	now sextablerun is 0;
-	blank out the whole of table of fucking options;
-	[]
-	if Player is not Neuter:
-		choose a blank row in table of fucking options;
-		now title entry is "Mutual Masturbation";
-		now sortorder entry is 1;
-		now description entry is "See if the nymph will use her dexterous hands on you, while you return the favor";
+		now sextablerun is 0;
+		blank out the whole of table of fucking options;
 		[]
-		if Player is Male:
+		if Player is not Neuter:
 			choose a blank row in table of fucking options;
-			now title entry is "Blowjob";
-			now sortorder entry is 2;
-			now description entry is "Ask the sylph to blow somewhere else, namely your dick";
+			now title entry is "Mutual Masturbation";
+			now sortorder entry is 1;
+			now description entry is "See if the nymph will use her dexterous hands on you, while you return the favor";
 			[]
-			choose a blank row in table of fucking options;
-			now title entry is "Vaginal";
-			now sortorder entry is 3;
-			now description entry is "Lay her down and show her how you feel";
+			if Player is Male:
+				choose a blank row in table of fucking options;
+				now title entry is "Blowjob";
+				now sortorder entry is 2;
+				now description entry is "Ask the sylph to blow somewhere else, namely your dick";
+				[]
+				choose a blank row in table of fucking options;
+				now title entry is "Vaginal";
+				now sortorder entry is 3;
+				now description entry is "Lay her down and show her how you feel";
+			[]
+			if Player is Female:
+				choose a blank row in table of fucking options;
+				now title entry is "Cunnilingus";
+				now sortorder entry is 4;
+				now description entry is "See how long the air spirit can hold her breath while she licks your pussy";
 		[]
-		if Player is Female:
-			choose a blank row in table of fucking options;
-			now title entry is "Cunnilingus";
-			now sortorder entry is 4;
-			now description entry is "See how long the air spirit can hold her breath while she licks your pussy";
-	[]
-	choose a blank row in table of fucking options;
-	now title entry is "Lick Her";
-	now sortorder entry is 5;
-	now description entry is "Lick the sylph's pussy";
-	[]
-	sort the table of fucking options in sortorder order;
-	repeat with y running from 1 to number of filled rows in table of fucking options:
-		choose row y from the table of fucking options;
-		say "[link][y] - [title entry][as][y][end link][line break]";
-	say "[link]0 - Nevermind[as]0[end link][line break]";
-	while sextablerun is 0:
-		say "Pick the corresponding number> [run paragraph on]";
-		get a number;
-		if calcnumber > 0 and calcnumber <= the number of filled rows in table of fucking options:
-			now current menu selection is calcnumber;
-			choose row calcnumber in table of fucking options;
-			say "[title entry]: [description entry]?";
-			if Player consents:
+		choose a blank row in table of fucking options;
+		now title entry is "Lick Her";
+		now sortorder entry is 5;
+		now description entry is "Lick the sylph's pussy";
+		[]
+		sort the table of fucking options in sortorder order;
+		repeat with y running from 1 to number of filled rows in table of fucking options:
+			choose row y from the table of fucking options;
+			say "[link][y] - [title entry][as][y][end link][line break]";
+		say "[link]0 - Nevermind[as]0[end link][line break]";
+		while sextablerun is 0:
+			say "Pick the corresponding number> [run paragraph on]";
+			get a number;
+			if calcnumber > 0 and calcnumber <= the number of filled rows in table of fucking options:
+				now current menu selection is calcnumber;
+				choose row calcnumber in table of fucking options;
+				say "[title entry]: [description entry]?";
+				if Player consents:
+					LineBreak;
+					now sextablerun is 1;
+					if title entry is:
+						-- "Mutual Masturbation":
+							say "[ArielSex1]";
+						-- "Blowjob":
+							say "[ArielSex2]";
+						-- "Vaginal":
+							say "[ArielSex3]";
+						-- "Cunnilingus":
+							say "[ArielSex4]";
+						-- "Lick Her":
+							say "[ArielSex5]";
+			else if calcnumber is 0:
 				LineBreak;
 				now sextablerun is 1;
-				if title entry is:
-					-- "Mutual Masturbation":
-						say "[ArielSex1]";
-					-- "Blowjob":
-						say "[ArielSex2]";
-					-- "Vaginal":
-						say "[ArielSex3]";
-					-- "Cunnilingus":
-						say "[ArielSex4]";
-					-- "Lick Her":
-						say "[ArielSex5]";
-		else if calcnumber is 0:
-			LineBreak;
-			now sextablerun is 1;
-			say "     You step back from the sylph, shaking your head slightly as she gives a questioning look.";
-		else:
-			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options], or 0 to exit.";
-	wait for any key;
-	clear the screen and hyperlink list;
+				say "     You step back from the sylph, shaking your head slightly as she gives a questioning look.";
+			else:
+				say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options], or 0 to exit.";
+		wait for any key;
+		clear the screen and hyperlink list;
 
 to say ArielSex1: [Handsy]
 	if Player is female:
@@ -368,7 +362,6 @@ to say EventConditions_CloudSculpting:
 Cloud Sculpting is a situation.
 ResolveFunction of Cloud Sculpting is "[ResolveEvent Cloud Sculpting]".
 Prereq1 of Cloud Sculpting is Wind in the Willows.
-The level of Cloud Sculpting is 0.
 The sarea of Cloud Sculpting is "Nowhere".
 
 to say ResolveEvent Cloud Sculpting:
@@ -419,7 +412,6 @@ to say EventConditions_Dawning:
 Dawning is a situation.
 ResolveFunction of Dawning is "[ResolveEvent Dawning]".
 Prereq1 of Dawning is Eos' Gift.
-The level of Dawning is 0.
 The sarea of Dawning is "Nowhere".
 
 to say ResolveEvent Dawning:

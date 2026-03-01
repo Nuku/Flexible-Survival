@@ -38,7 +38,7 @@ When Play begins:
 	now defeated entry is "[butterfly defeat]";
 	[ Text or say command used when Monster is defeated.]
 	now victory entry is "[butterfly attack]";
-	now desc entry is "[Butterfly_Desc]"; [ Description of the creature when you encounter it.]
+	now desc entry is "     The one hovering before you is a female with richly colored translucent wings and pale velvet skin. Her attractive face is framed by wavy blonde hair down to her chin. Beneath her undulating fringe two large [one of]brilliant[or]vibrant[or]vivid[or]and rich[at random] lime green eyes follow your movements. Two long antennae poke out the top of her head. [ButterflyAttire] [if ButterflyBabyGestation is 3]Small droplets of milk twinkle on the ducts of her nipples. [end if][if ButterflyRaped is 1]One of her hands moves protectively to cover her vagina as she recognizes you. [end if][ButterflyTummy][if ButterflyBabyGestation > 0] [end if]For a moment her mouth opens and what appears to be a long wiry proboscis uncoils out and then retracts back in almost faster than your eyes can see. Her back blends into a plump yellow and black striped abdomen[if ButterflyRaped > 0 or inheat is true]. She is carrying an ominous looking little black bag in her hand[end if]. She [if ButterflyRaped is 1]glares at you [one of]angrily[or]furiously[or]enraged[or]fuming[or]seething in anger[or]with contempt[at random], flapping her wings erratically[else if ButterflyLikesYou is True and ButterflyLove is False]smiles and looks at you [one of]shyly[or]bashfully[or]sheepishly[or]blushing slightly[at random][else if ButterflyLove is True]looks at you [one of]adoringly[or]lovingly[or]passionately[or]devotedly[at random][else if ButterflyRevenge is True]looks at you remarkably calmly considering your previous encounter[else]looks at you [one of]apprehensively[or]cautiously[or]anxiously[or]nervously[at random][end if][if ButterflyRaped > 0]. Something tells you that submitting to her would be bad for your health[end if].[line break]"; [ Description of the creature when you encounter it.]
 	now face entry is "streamlined. It has a pair of [one of]brilliant[or]vibrant[or]vivid[at random] green eyes and two antennae on top of your head"; [ Face description, format as "Your face is [Face of Player]." ]
 	now body entry is "delicate and fragile, streamlined for flight. Two thin, bright and colorful wings stick out of your back. They aren't strong enough to allow you to fly, but with some effort you find you are able to hover without needing to walk"; [ Body Description, format as "Your Body is [Body of Player]." ]
 	now skin entry is "velvet and silky"; [ Skin Description, format as "Looking at yourself, your body is covered in [Skin of Player] skin." ]
@@ -207,23 +207,14 @@ ButterflyHasNegligee is a truth state that varies. ButterflyHasNegligee is usual
 ButterflyAttire is a text that varies. ButterflyAttire is usually "She is wearing a white negligee, but you can't help but notice the lack of undergarments through its sheer semi-translucency. The negligee is [if ButterflyNegligeeTorn is True][one of]ripped[or]torn[at random] open at the chest, exposing her [ButterflyBreastDesc] breasts and the protruding [one of]ruby[or]scarlet[at random] red nipples that adorn them. Her chest jiggles[else]held together at the bust with a white ribbon. Her build is slight and punctuated with a pair of [ButterflyBreastDesc] breasts jiggling slightly[end if] as her wings flap.".
 ButterflyBabyGestation is a number that varies.
 
-[Table of GameCharacterIDs (continued)
-object	name
-ButterflyBaby	"ButterflyBaby"
-
-ButterflyBaby is a person.]
-
 Section 3 - Creature Responses
-
-to say Butterfly_Desc:
-	say "     The one hovering before you is a female with richly colored translucent wings and pale velvet skin. Her attractive face is framed by wavy blonde hair down to her chin. Beneath her undulating fringe two large [one of]brilliant[or]vibrant[or]vivid[or]and rich[at random] lime green eyes follow your movements. Two long antennae poke out the top of her head. [ButterflyAttire] [if ButterflyBabyGestation is 3]Small droplets of milk twinkle on the ducts of her nipples. [end if][if ButterflyRaped is 1]One of her hands moves protectively to cover her vagina as she recognizes you. [end if][ButterflyTummy][if ButterflyBabyGestation > 0] [end if]For a moment her mouth opens and what appears to be a long wiry proboscis uncoils out and then retracts back in almost faster than your eyes can see. Her back blends into a plump yellow and black striped abdomen[if ButterflyRaped > 0 or inheat is true]. She is carrying an ominous looking little black bag in her hand[end if]. She [if ButterflyRaped is 1]glares at you [one of]angrily[or]furiously[or]enraged[or]fuming[or]seething in anger[or]with contempt[at random], flapping her wings erratically[else if ButterflyLikesYou is True and ButterflyLove is False]smiles and looks at you [one of]shyly[or]bashfully[or]sheepishly[or]blushing slightly[at random][else if ButterflyLove is True]looks at you [one of]adoringly[or]lovingly[or]passionately[or]devotedly[at random][else if ButterflyRevenge is True]looks at you remarkably calmly considering your previous encounter[else]looks at you [one of]apprehensively[or]cautiously[or]anxiously[or]nervously[at random][end if][if ButterflyRaped > 0]. Something tells you that submitting to her would be bad for your health[end if].";
 
 To say butterfly defeat:
 	setmonster "Butterfly";
 	choose row MonsterID from Table of Random Critters;
 	let ButterflyCanGetPregnant be False;
 	let cocktext be "[cock size desc of Player]";
-	if Cock of Player is not "":
+	if Cock of Player is not empty:
 		now cocktext is "[cock size desc of Player] [Cock of Player]";
 	if ButterflyPregnant is True:
 		say "[run paragraph on]";
@@ -286,7 +277,7 @@ To say butterfly defeat:
 			carry out the displaying activity;
 			now menu depth is old menu depth;
 			if ButterflyRaped > ButterflyRapedBefore:
-				say "    Locking her body in place with your strength, you keep pounding away with no respite. With a powerful thrust of your [cocktext] member, it bursts into her cervix.";
+				say "[line break]    Locking her body in place with your strength, you keep pounding away with no respite. With a powerful thrust of your [cocktext] member, it bursts into her cervix.";
 				if ButterflyRevenge is False and ButterflyRaped > 1:
 					say "    She screams at your deep penetration, but then tries to rein-in her outward emotions, determined not to give you the satisfaction. She bites her lip as she gyrates roughly on your cock in a dishonest show of strength. You [if ButterflyHasNegligee is True]tear the tattered remains of her negligee from her body[else]grab her firmly by the zig zag of ties on her leather top[end if] and press her back down to the ground, stretching her arms out wide. You restrain her arms under your weight and her wings lie pinned underneath. As your piston hammers away at her pussy unabated, her vulnerable breasts bob around on her chest like lumps of jelly. Continuing to pummel her cunt, you sense her mind begin to break as she moans and groans, gasping for air. As you feel the tension build in your cock, you withdraw it from her cunt and explode in a torrent, spraying your cum across her crotch, [if ButterflyHasNegligee is True]tummy[else]leather top[end if], breasts and face. Dazed, the butterfly starts to crawl away. Attempting to lift off, she loses her sense of direction and orientation and descends back to the ground with a thud. Eventually, after a couple of attempts, she manages to get airborne and flies off.";
 					if ButterflyHasNegligee is True:
@@ -301,7 +292,7 @@ To say butterfly defeat:
 					CreatureSexAftermath "Butterfly" receives "PussyFuck" from "Player";
 					now ButterflyLove is False;
 			else:
-				say "     Reacting to her discomfort you ease back to her pace and avoid probing so deep. Appreciating your kindness she embraces your [Skin of Player] body to get even closer relishing your every thrust as it gently kisses at the opening of her cervix. You gaze lustfully into her [one of]brilliant[or]vibrant[or]vivid[at random] green eyes as one hand stimulates the red nipple on one of her breasts. In response her well-lubricated snatch tightens around your [cocktext] cock and she blushes at the thought of [one of]your intimate copulation[or]your joined bodies[or]your interlocked reproductive organs[or]your linked genitalia[or]your bodies mating[or]you breeding with her[at random]. As you both climax in unison you pump a seemingly never-ending supply of cum into her womb, her eyes letting you know that she welcomes every spurt[if ButterflyCanGetPregnant is True] and the inevitable pregnancy that follows[end if]. After spending some time in each other's arms you each rise to go your separate ways. She gives you a deep kiss in the way only a girl with a tongue like hers can, and then lifts off the ground happily flapping her wings as she turns to depart. The last sight you see is your creamy semen oozing from her noticeably red cunt.";
+				say "[line break]     Reacting to her discomfort you ease back to her pace and avoid probing so deep. Appreciating your kindness she embraces your [Skin of Player] body to get even closer relishing your every thrust as it gently kisses at the opening of her cervix. You gaze lustfully into her [one of]brilliant[or]vibrant[or]vivid[at random] green eyes as one hand stimulates the red nipple on one of her breasts. In response her well-lubricated snatch tightens around your [cocktext] cock and she blushes at the thought of [one of]your intimate copulation[or]your joined bodies[or]your interlocked reproductive organs[or]your linked genitalia[or]your bodies mating[or]you breeding with her[at random]. As you both climax in unison you pump a seemingly never-ending supply of cum into her womb, her eyes letting you know that she welcomes every spurt[if ButterflyCanGetPregnant is True] and the inevitable pregnancy that follows[end if]. After spending some time in each other's arms you each rise to go your separate ways. She gives you a deep kiss in the way only a girl with a tongue like hers can, and then lifts off the ground happily flapping her wings as she turns to depart. The last sight you see is your creamy semen oozing from her noticeably red cunt.";
 				CreatureSexAftermath "Butterfly" receives "PussyFuck" from "Player";
 				let debit be 0;
 				if HardMode is true and level of Player > 3, let debit be level of Player - 3;
@@ -387,7 +378,7 @@ To say butterfly attack:
 	choose row MonsterID from Table of Random Critters;
 	let ButterflyCanGetPregnant be False;
 	let cocktext be "[cock size desc of Player]";
-	if Cock of Player is not "":
+	if Cock of Player is not empty:
 		now cocktext is "[cock size desc of Player] [Cock of Player]";
 	if ButterflyPregnant is True:
 		say "[run paragraph on]";
@@ -418,7 +409,7 @@ To say butterfly attack:
 				FeatGain "Sterile";
 		else if Player is female:
 			say "     She reaches down and roughly pulls [if Cunt Count of Player > 1]the largest of [end if]your cunt[sfn] wide open with her hands. Her proboscis shoots down your passage, quickly bursting into your uterus. It then runs up each of your fallopian tubes in turn. Her long tongue pierces through and begins to suck the eggs right out of your ovaries. You feel your womb contract with the assault as her feeding renders you sterile. As your lower tummy convulses in pain, she recoils her tongue and chides, 'You're not licking.'";
-			if Cunt Count of Player is not 0 and "One Way" is not listed in feats of Player:
+			if Player is female and "One Way" is not listed in feats of Player:
 				decrease Cunt Depth of Player by 1;
 				decrease Cunt Depth of Player by Cunt Depth of Player divided by 3;
 				decrease Cunt Tightness of Player by 1;
@@ -561,7 +552,6 @@ to ButterFlyChildBirth:
 	now ButterflyPregnant is False;
 	follow the ButterflyTummyDesc rule;
 	increase perception of Player by 2;
-	WaitLineBreak;
 
 Section 4 - Monster Definition
 
@@ -578,11 +568,10 @@ This is the Butterfly Girl Epilogue rule:
 	if Player has a body of "Butterfly" and ButterflyLove is true:
 		trigger ending "Butterfly Girl Epilogue";
 		if humanity of Player < 10:
-			say "     You settle down with that butterfly, your mind under the spell of her pheromones and bewitched by the colorful patterns on her wings. She welcomes you with open arms and cherishes your every moment together. You ";
 			if Player is male:
-				say "have a very passionate and active sex life[if Player is sterile], but are unable to have children[else] resulting in regular pregnancies, but your children no longer show any signs of sentience and rapidly fly off following their instincts[end if].";
+				say "     You settle down with that butterfly, your mind under the spell of her pheromones and bewitched by the colorful patterns on her wings. She welcomes you with open arms and cherishes your every moment together. You have a very passionate and active sex life[if Player is sterile], but are unable to have children[else] resulting in regular pregnancies, but your children no longer show any signs of sentience and rapidly fly off following their instincts[end if].";
 			else:
-				say "are unable to have children, but the two of you are inseparable all the same living as a happy [if Player is female]lesbian [end if]couple with a very passionate and active sex life.";
+				say "     You settle down with that butterfly, your mind under the spell of her pheromones and bewitched by the colorful patterns on her wings. She welcomes you with open arms and cherishes your every moment together. You are unable to have children, but the two of you are inseparable all the same living as a happy [if Player is female]lesbian [end if]couple with a very passionate and active sex life.";
 		else:
 			say "     You rush back to your lover's welcoming arms. She worries about re-entering human society, but your confidence eases her fears. Together you are rescued and rejoin society.";
 			if Player is male:
@@ -660,7 +649,7 @@ This is the butterflytreatment choice rule:
 				now str entry is 32;
 				now dex entry is 32 + ( lev entry / 5 );
 				now HP entry is 45 + ( debit * 5 );
-				now wdam entry is 14 + ( 4 * debit / 11 ); [Strong dmg growth rate]
+				now wdam entry is 14 + ( ( 4 * debit ) / 11 ); [Strong dmg growth rate]
 				now sex entry is "Female";
 			now ButterflyLove is False;
 	else:
@@ -674,13 +663,6 @@ This is the ButterflyTummyDesc rule:
 		-- 1: now ButterflyTummy is "Her skin gives off a radiant glow.";
 		-- otherwise: now ButterflyTummy is "";
 
-Does the player mean examining the damaged negligee when the damaged negligee is owned: it is very likely.
-Does the player mean examining the pristine negligee when the pristine negligee is owned: it is likely.
-Does the player mean littering the damaged negligee when the damaged negligee is owned: it is very likely.
-Does the player mean littering the pristine negligee when the pristine negligee is owned: it is likely.
-Does the player mean littering the testosterone pill when the testosterone pill is owned: it is likely.
-Does the player mean grabbing the pristine negligee: it is very likely.
-
 Section 7 - Monster Items
 
 Table of Game Objects (continued)
@@ -692,7 +674,16 @@ name	desc	weight	object
 "sexy nightie"	"The nightie you've picked out for Lance's boyfriend is a sexy number made of silk and lace."	0	sexy nightie
 "racy lingerie"	"This set of crimson red lingerie is very racy. It includes a bustier, bra, panties and stockings with garters."	0	racy lingerie
 
+to say pristine negligee desc:
+	say "A long and silky garment made of sheer and semi-translucent fabric. [if lingerie store is unknown]Upon closer inspection you recognize a logo printed on the label to be that of a store you've passed on your travels. You wonder if you should pay the store a visit sometime? [end if]";
+	AddNavPoint Lingerie Store;
+
+to say damaged negligee desc:
+	say "A long and silky garment made of sheer and semi-translucent fabric. This one is damaged. [if lingerie store is unknown]Upon closer inspection you recognize a logo printed on the label to be that of a store you've passed on your travels. You wonder if you should pay the store a visit sometime? [end if]";
+	AddNavPoint Lingerie Store;
+
 racy lingerie is a grab object. racy lingerie is equipment. It is not temporary.
+Traits of racy lingerie is {"sexy"}.
 The placement of racy lingerie is "body".
 The descmod of racy lingerie is "Over your [BodyType of Player] body, you're wearing a very racy set of red lingerie.".
 The slot of racy lingerie is "crotch".
@@ -706,21 +697,13 @@ cute panties is a grab object. It is not temporary.
 the scent of cute panties is "The cute panties smell like freshly aired linen with a slight hint of perfume.".
 Usedesc of cute panties is "     You cannot use that here.[line break]".
 
-pristine negligee is a grab object. It is not temporary.
-the scent of pristine negligee is "The pristine negligee smells fresh and airy just like the day it was made.".
-Usedesc of pristine negligee is "     You cannot use that here.[line break]".
-
-to say pristine negligee desc:
-	say "A long and silky garment made of sheer and semi-translucent fabric. [if lingerie store is unknown]Upon closer inspection you recognize a logo printed on the label to be that of a store you've passed on your travels. You wonder if you should pay the store a visit sometime? [end if]";
-	AddNavPoint Lingerie Store;
-
 damaged negligee is a grab object. It is not temporary.
 the scent of damaged negligee is "The damaged negligee smells of sex. You take a whiff and almost collapse as a wave of the butterfly's scent, pheromones and sexual fluids fills you.".
 Usedesc of damaged negligee is "     You cannot use that here.[line break]".
 
-to say damaged negligee desc:
-	say "A long and silky garment made of sheer and semi-translucent fabric. This one is damaged. [if lingerie store is unknown]Upon closer inspection you recognize a logo printed on the label to be that of a store you've passed on your travels. You wonder if you should pay the store a visit sometime? [end if]";
-	AddNavPoint Lingerie Store;
+pristine negligee is a grab object. It is not temporary.
+the scent of pristine negligee is "The pristine negligee smells fresh and airy just like the day it was made.".
+Usedesc of pristine negligee is "     You cannot use that here.[line break]".
 
 testosterone pill is a grab object.
 the scent of testosterone pill is "The testosterone pill is largely odorless, but a very faint scent conjures images of motor-oil, sawdust and duct tape.".
@@ -758,7 +741,7 @@ to say testosterone pill use:
 		now Ball Size of Player is 2;
 		say "[run paragraph on]";
 		follow the cock descr rule;
-		if Cock of Player is not "":
+		if Cock of Player is not empty:
 			now descr is "[cock size desc of Player] [Cock of Player]";
 		say "     With your body in shock, you feel your cunt[sfn] tighten, push out of your body and form into a [descr] cock, pulsing in excitement. As your vaginal passage[sfn] close[sfv], some new [Ball Size Adjective of Player] [Balls] [if CockName of Player is listed in infections of InternalCockList]form inside you[else]then pop out underneath your new manhood[end if]. ";
 	else if Player is male:				[MALE]
@@ -781,7 +764,7 @@ to say testosterone pill use:
 		now Ball Size of Player is 2;
 		say "[run paragraph on]";
 		follow the cock descr rule;
-		if Cock of Player is not "":
+		if Cock of Player is not empty:
 			now descr is "[cock size desc of Player] [Cock of Player]";
 		say "     With your body in shock, you feel your bare groin clench as internal changes begin and soon push out of your body to form into a [descr] cock, pulsing in excitement. Some new [Ball Size Adjective of Player] [Balls] [if CockName of Player is listed in infections of InternalCockList]form inside you[else]then pop out underneath your new manhood[end if]. ";
 	if "Breasts" is not listed in feats of Player:
@@ -794,7 +777,16 @@ to say testosterone pill use:
 		say "The odd feeling in your lower belly ceases. ";
 	follow the cock descr rule;
 
+Does the player mean examining the damaged negligee when the damaged negligee is owned: it is very likely.
+Does the player mean examining the pristine negligee when the pristine negligee is owned: it is likely.
+Does the player mean littering the damaged negligee when the damaged negligee is owned: it is very likely.
+Does the player mean littering the pristine negligee when the pristine negligee is owned: it is likely.
+Does the player mean littering the testosterone pill when the testosterone pill is owned: it is likely.
+Does the player mean grabbing the pristine negligee: it is very likely.
+
 Section 8 - Monster Locations
+
+rlingfound is a truth state that varies. rlingfound is usually false.
 
 Table of GameRoomIDs (continued)
 Object	Name
@@ -806,7 +798,7 @@ to say butterfly grove scene:
 	setmonster "Butterfly";
 	choose row MonsterID from Table of Random Critters;
 	let cocktext be "[cock size desc of Player]";
-	if Cock of Player is not "":
+	if Cock of Player is not empty:
 		now cocktext is "[cock size desc of Player] [Cock of Player]";
 	let ButterflyCanGetPregnant be False;
 	if "Sterile" is not listed in feats of Player and ButterflyPregnant is False:
@@ -816,7 +808,7 @@ to say butterfly grove scene:
 	say "[run paragraph on]";
 	follow the ButterflyTummyDesc rule;
 	say "     You enter the grove of trees and look around. You never knew this place even existed hidden away surrounded by buildings with no access to the street. Around you are a variety of tall trees, both evergreen and deciduous all inhabiting a lush grassy area rich and verdant green.";
-	if ButterflyPregnant is True and Cock Count of Player is 0: [How'd you manage that?]
+	if ButterflyPregnant is True and Player is not male: [How'd you manage that?]
 		say "     You sense someone is watching you, but no matter where you look you can't find anyone. As you look around you spot a small item resting in the grass.";
 		ItemGain testosterone pill by 1;
 	else if ButterflyRaped > 1 and ButterflyPregnant is True and ButterflyBabyGestation is 3:
@@ -847,9 +839,8 @@ to say butterfly grove scene:
 				now player_returned_negligee is True;
 				ItemLoss pristine negligee by 1;
 				now ButterflyRaped is 0;
-				LineBreak;
 				if Player is male:
-					say "     The butterfly girl lowers herself to the ground on her knees and spreads her legs apart. She bites her lip looking at you with a sultry gaze, and both her hands roughly drag the dangling leather straps aside exposing her [one of]beautiful[or]attractive[or]alluring[or]elegant[or]graceful[at random] pussy. The moisture of her [one of]pristine[or]perfect[or]flawless[at random] slit glistens in the light evidence to her state of arousal. As you watch she reaches her arms around her stripy abdomen, and with a hand to either side spreads her twat apart exposing her [one of]salmon-pink[or]wet[or]damp[or]moist[at random] interior to you. As you kneel down to her you release the ties on her top, her breasts spilling free of the leather. You fondle her [ButterflyBreastDesc] breasts circling your finger over her textured areola, and smoothly insert [if Cock Count of Player > 1]one of [end if]your [cocktext] cock[smn] deep into her wet and [one of]eager[or]expectant[or]excited[or]willing[at random] vagina.";
+					say "[line break]     The butterfly girl lowers herself to the ground on her knees and spreads her legs apart. She bites her lip looking at you with a sultry gaze, and both her hands roughly drag the dangling leather straps aside exposing her [one of]beautiful[or]attractive[or]alluring[or]elegant[or]graceful[at random] pussy. The moisture of her [one of]pristine[or]perfect[or]flawless[at random] slit glistens in the light evidence to her state of arousal. As you watch she reaches her arms around her stripy abdomen, and with a hand to either side spreads her twat apart exposing her [one of]salmon-pink[or]wet[or]damp[or]moist[at random] interior to you. As you kneel down to her you release the ties on her top, her breasts spilling free of the leather. You fondle her [ButterflyBreastDesc] breasts circling your finger over her textured areola, and smoothly insert [if Cock Count of Player > 1]one of [end if]your [cocktext] cock[smn] deep into her wet and [one of]eager[or]expectant[or]excited[or]willing[at random] vagina.";
 					WaitLineBreak;
 					say "     Simultaneously your tongue slips into her mouth as her proboscis coils around it locking your heads together as you exchange fluids. She grasps at your body to get even closer, relishing your every thrust pounding at the limits of her petite vagina and kissing at the opening of her cervix. You gaze lustfully into her [one of]brilliant[or]vibrant[or]vivid[at random] green eyes as one hand stimulates the red nipple on one of her breasts. In response her well-lubricated snatch tightens around your [cocktext] cock as she blushes at the thought of [one of]your intimate copulation[or]your joined bodies[or]your interlocked reproductive organs[or]your linked genitalia[or]your bodies mating[or]you breeding with her[at random]. As you both climax in unison you pump a seemingly never-ending supply of cum into her womb. Her eyes letting you know that she welcomes every spurt[if Player is not sterile], and the inevitable pregnancy that follows[end if]. After spending some time in each other's arms you rise to head home. As you're walking away you glance back to see the butterfly's naked form happily slipping into the negligee you gave her.";
 					CreatureSexAftermath "Butterfly" receives "PussyFuck" from "Player";
@@ -859,12 +850,12 @@ to say butterfly grove scene:
 					now ButterflyLove is True;
 					infect;
 					if "Sterile" is not listed in feats of Player: [if at all possible she will get pregnant here otherwise this path is a dead end and is difficult to re-trigger]
-						now Libido of Player is (Libido of Player) / 2;
+						now Libido of Player is Libido of Player / 2;
 						impregnatebutterfly;
 					else: [No other option but to re-enable her as a random spawn]
 						now area entry is "High";
 				else if Player is female:
-					say "     The butterfly lowers herself to the ground on her back and with her knees in the air spreads her legs apart. She bites her lip looking up at you with a sultry gaze, and both her hands roughly drag the dangling leather straps aside exposing her [one of]beautiful[or]attractive[or]alluring[or]elegant[or]graceful[at random] pussy. The moisture of her pristine slit glistens in the light, evidence to her state of arousal. As you watch she reaches her arms around her stripy abdomen, and with a hand to either side spreads her twat apart exposing her [one of]salmon-pink[or]wet[or]damp[or]moist[at random] interior to you. As you kneel down between her legs your tongue is drawn straight to her crotch as you service her eagerly. She reaches for your head and runs her fingers through your hair in ecstasy. She writhes at the sensation as you feel her body spasm at your touch. Momentarily you rise for air, but just as her scent is about to draw you back you find the butterfly is gently guiding your body to roll onto your back to which you oblige.";
+					say "[line break]     The butterfly lowers herself to the ground on her back and with her knees in the air spreads her legs apart. She bites her lip looking up at you with a sultry gaze, and both her hands roughly drag the dangling leather straps aside exposing her [one of]beautiful[or]attractive[or]alluring[or]elegant[or]graceful[at random] pussy. The moisture of her pristine slit glistens in the light, evidence to her state of arousal. As you watch she reaches her arms around her stripy abdomen, and with a hand to either side spreads her twat apart exposing her [one of]salmon-pink[or]wet[or]damp[or]moist[at random] interior to you. As you kneel down between her legs your tongue is drawn straight to her crotch as you service her eagerly. She reaches for your head and runs her fingers through your hair in ecstasy. She writhes at the sensation as you feel her body spasm at your touch. Momentarily you rise for air, but just as her scent is about to draw you back you find the butterfly is gently guiding your body to roll onto your back to which you oblige.";
 					WaitLineBreak;
 					say "     A sudden gust of wind surprises you as the butterfly rises with a rapid flap of her wings. As she descends face first towards your groin you're treated to a close up of her pussy suspended just before your eyes. As she spreads your labia apart with her delicate fingers and kisses at the sticky tissue between, you drink the sweet and sugary nectar flowing from her cunt. Thirstily you search ever deeper for your new favorite sustenance while she begins to chart [if Cunt Count of Player > 1]one of [end if]your [cunt size desc of Player] organ[sfn] with her thin proboscis exploring first through your folds, then all the way into your uterus, squirming in via the cervix[if Virgin of Player is false]. A sensation you've never experienced before hits you as the butterfly siphons out the minuscule traces of semen from your womb that had been deposited in you by your recent male admirers[end if]. Lost in the sensation your focus turns to her swollen clit. You pummel it with your tongue and lips as her juices continue to pour down your face. You climax together, your bodies dripping with both sweat and vaginal fluids. After spending some time in each other's arms you rise to head home. As you're walking away you glance back to see the butterfly's naked form happily slipping into the negligee you gave her.";
 					CreatureSexAftermath "Player" receives "OralPussy" from "Butterfly";
@@ -875,7 +866,7 @@ to say butterfly grove scene:
 					now ButterflyLove is True;
 					infect;
 				else:
-					say "     As you pull down your pants she gazes upon your sexless groin, tilting her head in confusion. She goes to leave, but before doing so takes your hand and places something in it. 'Eat this. Maybe we'll meet again sometime,' she says meekly before flying off.";
+					say "[line break]     As you pull down your pants she gazes upon your sexless groin, tilting her head in confusion. She goes to leave, but before doing so takes your hand and places something in it. 'Eat this. Maybe we'll meet again sometime,' she says meekly before flying off.";
 					ItemGain testosterone pill by 1;
 					now area entry is "High";
 		if Player_returned_negligee is False and Player is male and ButterflyPregnant is False:
@@ -885,7 +876,7 @@ to say butterfly grove scene:
 			say "     Rifling through the contents of the black bag she was carrying you stumble upon a large vibrator. Hearing the noise as you switch it on for a test, the butterfly looks back uneasily. Living up to her expectations you slowly insert the vibrator up her asshole and press it forward inch by inch as she moans loudly. Initially she squeals at the sensation of double penetration, but as you continue to pump at both holes she loses her mind, drooling from the corner of her mouth and onto the ground. Pressing deep, you push into her cervix once again as the butterfly relaxes as best she can in an attempt to minimize the pain. Within moments your cock erupts sending a torrent of your seed gushing into her womb. Once you're happy she's had her fill you liberate her arms and head home.";
 			CreatureSexAftermath "Butterfly" receives "PussyFuck" from "Player";
 			if ButterflyCanGetPregnant is True:
-				now Libido of Player is (Libido of Player) / 2;
+				now Libido of Player is Libido of Player / 2;
 				impregnatebutterfly;
 		else if Player_returned_negligee is False and Player is female:
 			say "     You fight at first, but you sense her heart isn't in it as she quickly submits, but instead of tears or anger she lies down on her left side and lifts her leg into the air giving you a clear view of the juices drooling out of her cunt and down her leg. 'Fuck me, master,' she says. 'I'm master's toy. Use me. Break me.' Seizing the leg held in front of you, you unzip and remove the boot and then remove her stocking peeling it off the smooth skin of her leg. Rolling her on to her tummy you take both her arms and tie them together behind her back with the stocking you removed. As she lifts her face off the ground her eyes find your naked crotch, legs spread to either side, sitting right in front of her. You reach down a hand and spread your lips apart as you survey the surroundings nonchalantly. As she hobbles forward without the use of her arms she plants her face into your groin and begins to service you, her antennae bouncing all the while. You grip deep in her blonde tresses and pull her head in firmly as you grind your [if Cunt Count of Player > 1]multiple [end if]damp cunt[sfn] against her face. Her prehensile tongue explores your insides reaching to places no cock has ever been. You feel yourself cum as she attempts to feed on your juices, but the volume is too great and you squirt your cum over her face. She splutters as some goes up her nose, but you're too preoccupied rifling through the contents of the black bag she'd been carrying.";
@@ -952,6 +943,7 @@ to say butterfly grove scene:
 			if Humanity of Player < 10:
 				end the story saying "You decide against leaving after all.";
 		else:
+			LineBreak;
 			say "     You decide you don't really want to spend time with her.";
 	else if Player is purefemale and ButterflyRaped is 0 and ButterflyLove is True:
 		say "     The butterfly girl is hovering before you. [ButterflyAttire] [ButterflyTummy][line break]";
@@ -1006,7 +998,7 @@ Object	Name
 Lingerie Store	"Lingerie Store"
 
 Lingerie Store is a room. "[lingerie store scene]". It is unknown. It is fasttravel. It is private.
-rlingfound is a truth state that varies. rlingfound is usually false.
+the scent of lingerie store is "     The store has a somewhat musty smell as the air conditioning hasn't been turned on for some time. The product however smells fresh and newly manufactured.".
 
 to say lingerie store scene:
 	say "     Displayed on the various racks and rails you see bras, panties and many other types of undergarments covering the room. Every style of underwear you could imagine can be found here including many you couldn't.";
@@ -1028,8 +1020,6 @@ to say lingerie store scene:
 		ItemGain racy lingerie by 1;
 		increase score by 5;
 		now rlingfound is true;
-
-the scent of lingerie store is "     The store has a somewhat musty smell as the air conditioning hasn't been turned on for some time. The product however smells fresh and newly manufactured.".
 
 Section 9 - Trixie support - Not for release
 

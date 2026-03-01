@@ -2,6 +2,10 @@ Version 1 of Infected Pool by Hellerhound begins here.
 
 Section 1 - Pure Pool
 
+PurePoolSeen is a truth state that varies. PurePoolSeen is usually false.
+PurePoolPolluted is a truth state that varies. PurePoolPolluted is usually false.
+PurePoolPollutedByPlayer is a truth state that varies. PurePoolPollutedByPlayer is usually false.
+
 Table of GameEventIDs (continued)
 Object	Name
 Pure Pool	"Pure Pool"
@@ -9,9 +13,6 @@ Pure Pool	"Pure Pool"
 Pure Pool is a situation.
 ResolveFunction of Pure Pool is "[ResolveEvent Pure Pool]".
 Sarea of Pure Pool is "Park".
-PurePoolSeen is a truth state that varies. PurePoolSeen is usually false.
-PurePoolPolluted is a truth state that varies. PurePoolPolluted is usually false.
-PurePoolPollutedByPlayer is a truth state that varies. PurePoolPollutedByPlayer is usually false.
 
 when play begins:
 	add Pure Pool to BadSpots of FeralList;
@@ -30,23 +31,54 @@ to say ResolveEvent Pure Pool:
 		if Player consents:
 			LineBreak;
 			say "     You follow the sound to the clear pool you found before. However, two wyverns are fighting. It is pretty obvious from the dialogue that they want to infect the pool, but cannot agree on who will do it first.";
-			if Player is male and Libido of Player > 49:
-				if CockName of Player is "Wyvern":
-					say "     You could help resolve the situation by corrupting the pond yourself. Do you wish to do so?";
+			if Player is male and Libido of Player > 49 and CockName of Player is "Wyvern":
+				say "     You could help resolve the situation by corrupting the pond yourself. Do you wish to do so?";
+				if Player consents:
+					LineBreak;
+					say "     You begin stroking your [cock size desc of Player] [one of]cock[smn][or]penis[esmn][or]shaft[smn][or]maleness[esmn][at random], moaning as pleasure builds in your loins. By the time the wyverns turn around and notice you, you are about to blow your load. [one of]They begin stroking as well, rushing to come before you[or]They watch as you continue, stunned that someone would have the precocity to subvert their efforts[at random].";
+					say "     You blow your load into the pool, thick streams of seed spraying from your [Cock of Player] [one of]cock[smn][or]penis[esmn][or]shaft[smn][or]maleness[esmn][at random], and you scream as your powerful orgasm overtakes you. The seed soaks into the pool, leaving the water murky and infecting the whole thing. The pool becomes cloudy and the clean smell in the air disappears.";
+					now Libido of Player is ( Libido of Player * 9 ) / 10;
+					now PurePoolPolluted is true;
+					now PurePoolPollutedByPlayer is true;
+					now Resolution of Pure Pool is 2; [player polluted it]
+				else:
+					LineBreak;
+			else:
+				say "     Do you try to stop them?";
+				if Player consents:
+					now WYVGEN is 2; [forced male wyvern]
+					challenge "Wyvern";
+					if fightoutcome < 20: [won]
+						say "     After you finish with the first wyvern, the second attacks!";
+						now WYVGEN is 2; [forced male wyvern]
+						challenge "Wyvern";
+					if fightoutcome < 20: [won]
+						say "     After your ferocity in defending the pool, the wyverns decide they have had enough and leave, crashing a path through the park that leads in the direction of the city. Now that you've saved the pool from the danger of infection, you decide that it owes you a good drink and dip your head into the clear water.";
+						PlayerDrink 25;
+						now Resolution of Pure Pool is 3; [player fought wyverns to save the pool]
+					else if fightoutcome < 30:
+						say "[WYVVIC]";
+						[now PurePoolPolluted is true;]
+						now Resolution of Pure Pool is 5; [player fought wyverns and lost]
+				else:
+					LineBreak;
+					say "     You watch silently as the first wyvern overpowers the second, and begins to stroke. This is your last chance to intervene. Do you?";
 					if Player consents:
-						LineBreak;
-						say "     You begin stroking your [cock size desc of Player] [one of]cock[smn][or]penis[esmn][or]shaft[smn][or]maleness[esmn][at random], moaning as pleasure builds in your loins. By the time the wyverns turn around and notice you, you are about to blow your load. [one of]They begin stroking as well, rushing to come before you[or]They watch as you continue, stunned that someone would have the precocity to subvert their efforts[at random].";
-						say "     You blow your load into the pool, thick streams of seed spraying from your [Cock of Player] [one of]cock[smn][or]penis[esmn][or]shaft[smn][or]maleness[esmn][at random], and you scream as your powerful orgasm overtakes you. The seed soaks into the pool, leaving the water murky and infecting the whole thing. The pool becomes cloudy and the clean smell in the air disappears.";
-						now Libido of Player is ( Libido of Player * 9 ) / 10;
-						now PurePoolPolluted is true;
-						now PurePoolPollutedByPlayer is true;
-						now Resolution of Pure Pool is 2; [player polluted it]
+						now WYVGEN is 2; [forced male wyvern]
+						challenge "Wyvern";
+						if fightoutcome < 20: [won]
+							say "     After freeing the pool from the danger of infection, you decide that it owes you a good drink.";
+							PlayerDrink 15;
+							now Resolution of Pure Pool is 3; [player fought wyverns to save the pool]
+						else if fightoutcome < 30:
+							say "[WYVVIC]";
+							[now PurePoolPolluted is true;]
+							now Resolution of Pure Pool is 5; [player fought wyverns and lost]
 					else:
 						LineBreak;
-				else:
-					say "[stop wyvern]";
-			else:
-				say "[stop wyvern]";
+						say "     You watch as the wyvern screams like it did before, then blows its load into the pool, clouding the water and dissipating the clean smell about the area.";
+						now PurePoolPolluted is true;
+						now Resolution of Pure Pool is 4; [player watched wyverns pollute the pool]
 		else:
 			LineBreak;
 	else:
@@ -54,52 +86,11 @@ to say ResolveEvent Pure Pool:
 		if Player consents:
 			LineBreak;
 			say "     You dip your head into the cloudy pool and drink deeply.";
-			PlayerDrink 40;
+			PlayerDrink a random number between 25 and 40;
 			if "Iron Stomach" is not listed in feats of Player:
-				MultiInfect "Wyvern" repeats 3;
+				MultiInfect "Wyvern" repeats a random number between 2 and 3;
 		else:
 			LineBreak;
 			say "     You keep clear of the infected water.";
-
-to say stop wyvern:
-	say "     Do you try to stop them?";
-	if Player consents:
-		now WYVGEN is 2;
-		challenge "Wyvern";
-		if fightoutcome < 20: [won]
-			say "     After you finish with the first wyvern, the second attacks!";
-			now WYVGEN is 2;
-			challenge "Wyvern";
-			if fightoutcome < 20: [won]
-				say "     After your ferocity in defending the pool, the wyverns decide they have had enough and leave, crashing a path through the park that leads in the direction of the city. Now that you've saved the pool from the danger of infection, you decide that it owes you a good drink and dip your head into the clear water.";
-				PlayerDrink 20;
-				now Resolution of Pure Pool is 3; [player fought wyverns to save the pool]
-			else if fightoutcome < 30:
-				say "[WYVVIC]";
-				[now PurePoolPolluted is true;]
-				now Resolution of Pure Pool is 5; [player fought wyverns and lost]
-		else if fightoutcome < 30:
-			say "[WYVVIC]";
-			[now PurePoolPolluted is true;]
-			now Resolution of Pure Pool is 5; [player fought wyverns and lost]
-	else:
-		LineBreak;
-		say "     You watch silently as the first wyvern overpowers the second, and begins to stroke. This is your last chance to intervene. Do you?";
-		if Player consents:
-			now WYVGEN is 2;
-			challenge "Wyvern";
-			if fightoutcome < 20: [won]
-				say "     After freeing the pool from the danger of infection, you decide that it owes you a good drink.";
-				PlayerDrink 20;
-				now Resolution of Pure Pool is 3; [player fought wyverns to save the pool]
-			else if fightoutcome < 30:
-				say "[WYVVIC]";
-				[now PurePoolPolluted is true;]
-				now Resolution of Pure Pool is 5; [player fought wyverns and lost]
-		else:
-			LineBreak;
-			say "     You watch as the wyvern screams like it did before, then blows its load into the pool, clouding the water and dissipating the clean smell about the area.";
-			now PurePoolPolluted is true;
-			now Resolution of Pure Pool is 4; [player watched wyverns pollute the pool]
 
 Infected Pool ends here.

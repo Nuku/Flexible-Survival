@@ -1,6 +1,8 @@
 Version 5 of Forest Events by Aureas Gigas begins here.
 [ Version 5 - Fifth Event ]
 
+CuckooWatched is a number that varies.
+
 Table of GameEventIDs (continued)
 Object	Name
 One flew into the Cuckoos Nest	"One flew into the Cuckoos Nest"
@@ -8,7 +10,6 @@ One flew into the Cuckoos Nest	"One flew into the Cuckoos Nest"
 One flew into the Cuckoos Nest is a situation.
 ResolveFunction of One flew into the Cuckoos Nest is "[ResolveEvent One flew into the Cuckoos Nest]".
 Sarea of One flew into the Cuckoos Nest is "Forest".
-CuckooWatched is a number that varies.
 
 when play begins:
 	add One flew into the Cuckoos Nest to BadSpots of MaleList;
@@ -22,8 +23,7 @@ to say ResolveEvent One flew into the Cuckoos Nest:
 	say "     While walking towards the bench, you pass by a small tent with a male and female cuckoo inside... and can't help but throw a look inside at them. Based on the affectionate ways the two are talking and holding each other, you think that they are probably a couple. With a smile on your lips, you move on and sit down on the nearby bench. Sitting down relieves your aching muscles and re-energizes your body. A short while later, the male cuckoo steps out of the tent and calls back to his mate that he is going to hunt for supplies, then leaves into the woods.";
 	WaitLineBreak;
 	say "     He is barely out of sight before a burly white-coated bull strolls over to the tent and glances inside, then asks, 'Is he gone?' Stepping out to meet him, the female anthro bird nods and starts kissing the tall bovine. They vanish inside the tent together, and from the muted grunts and moans coming out of it, you can guess what's going on in there now. Chuckling at the antics of these people, you get up from the bench eventually and move back out into the woods to continue your exploration. A couple of minutes down a narrow footpath between the trees, you cross paths with the male cuckoo from before - on his way back towards the settlement.";
-	LineBreak;
-	say "     [bold type]Remembering what is happening in his tent, part of you wants to give the man a little warning before he walks in on his partner having an affair.[roman type][line break]";
+	say "[line break]     [bold type]Remembering what is happening in his tent, part of you wants to give the man a little warning before he walks in on his partner having an affair.[roman type][line break]";
 	say "     ([link]Y[as]y[end link]) - Warn the guy.";
 	say "     ([link]N[as]n[end link]) - Don't say anything.";
 	if Player consents:
@@ -60,19 +60,14 @@ when play begins:
 to say ResolveEvent Two crash into the Cuckoos Nest:
 	now battleground is "void"; [prevents a random fight, as these are replacement random fights]
 	say "     While traveling through the woods you decide to see what the cuckoo couple you encountered before is up to. Walking back to the small community of transformed people in one of the less dangerous sections of the forest, what you find seems a little larger than what you remember. There is a new little shack or two and additional hammocks in places that used to be vacant. In the midst of it all is a large crackling campfire, around which two infected individuals sit and chat while toasting some marshmallows for s'mores. One of them is an anthro squirrel, who laughs amusedly as his fox-morph companion bites into his sweet treat and soon has a glob of gooey marshmallow dangling from his lips. A little embarrassed, the fox wipes the goop off his mouth, then smiles as he is handed another fresh marshmallow.";
-	say "     You continue on your way to the tent of the cuckoo couple. Approaching from a different angle than you had previously you see a couple of things that you hadn't seen last time. Behind the tent there appears to be a sizable pile of clothing. ";
-	if CuckooWatched is 100: [ignored them]
-		say "Based on the variety of sizes and shapes of the garments and the fact that they're piled up just behind the tent, the male cuckoo has to know what his lover is up to. Seems like more than a few of the visitors leave at least part of their clothes behind, very possibly as they're being shooed out by the female cuckoo 'before her mate returns'. Seeing many footprints of an anthro bird's feet that lead behind a nearby bush, you think that there is a high probability for them to be into some interesting sexual play. From the looks of it, cuckolding and voyeurism, as the female bird has fun with other males while her mate watches from a concealed position.";
-	else if CuckooWatched is 1: [watched before]
-		say "Based on the variety of sizes and shapes the clothes don't appear to belong to the couple but rather to their 'guests'. All of the boxers and briefs are stretched in the front - and knowing the cuckoo lady's preferences this isn't very surprising. Seems like more than a few of the visitors leave at least part of their clothes behind, very possibly as they're being shooed out by the female cuckoo 'before her mate returns'.";
+	say "     You continue on your way to the tent of the cuckoo couple. Approaching from a different angle than you had previously you see a couple of things that you hadn't seen last time. Behind the tent there appears to be a sizable pile of clothing[if CuckooWatched is 100]. Based on the variety of sizes and shapes of the garments and the fact that they're piled up just behind the tent, the male cuckoo has to know what his lover is up to. Seems like more than a few of the visitors leave at least part of their clothes behind, very possibly as they're being shooed out by the female cuckoo 'before her mate returns'. Seeing many footprints of an anthro bird's feet that lead behind a nearby bush, you think that there is a high probability for them to be into some interesting sexual play. From the looks of it, cuckolding and voyeurism, as the female bird has fun with other males while her mate watches from a concealed position[else if CuckooWatched is 1]. Based on the variety of sizes and shapes the clothes don't appear to belong to the couple but rather to their 'guests'. All of the boxers and briefs are stretched in the front - and knowing the cuckoo lady's preferences this isn't very surprising. Seems like more than a few of the visitors leave at least part of their clothes behind, very possibly as they're being shooed out by the female cuckoo 'before her mate returns'[end if].";
 	WaitLineBreak;
 	say "     There are also a couple of bras and panties in the pile showing that probably some herms or dick-girls have had their fun with the girl as well. Nearby you see a tree that has been carved into numerous times. Examining the tree closer you see some symbols with tally marks underneath them. Your eyes are drawn to a symbol of a circle with curved horns and one tally mark underneath. Remembering what happened last time, you surmise that the symbol represents the white bull that fucked the cuckooess [if CuckooWatched is 100]while her mate was away[else]while you and the male watched[end if]. Following this logic it is easy to deduce a couple more of the symbols. The dog bone symbol with seven tallies shows that the woman has been 'knotty' with more than a couple of canines, a feather symbol with five marks shows she has had some birdy fun with more than just her husband, a horseshoe marking with three rows of five tally marks indicates that she really likes to go for some 'pony rides'.";
 	say "     As you get quite close to the tent during your investigation of the clothes pile and tree, you can hear the lovebirds inside the tent, saying sweet nothings into each other's ears. The two campfire cooks notice which tree you're nearby and snicker. 'I'll bet two marshmallows the next one's a dog,' murmurs the squirrel. 'No way, it's gonna be a horse, she's ridden more equines than the Pony Express,' snarks the messy vulpine. It seems that cuckoo's dalliances aren't a well kept secret for this community. You then hear the flap of the tent move as Izzy the female cuckoo steps out of the tent. She tells her partner Gray that she is going off to 'hunt.' Gray grins and jokingly states she should bring back an 8 point buck. The slutty huntress winks one of her eyes and says happily, 'You've always got the best ideas.' Then the amorous woman struts down the trail.";
 	WaitLineBreak;
 	say "     Gray starts cleaning the inside of the tent, sweeping out any dirt or trash. He fluffs up a couple of pillows that lay inside. Content with the condition of the interior, the male sits inside the tent and takes a couple of deep breaths. He closes his eyes and starts to murmur something. After listening a little harder you discover he is imagining Izzy getting fucked by someone with a massive cock. Still with his eyes closed, the imaginative male starts to play with his cock. His quickly erect penis is a little on the small size at five inches and avian in shape, which means large at the base and tapering off towards the tip. Rubbing the top of the pointed tip the bird says a little louder, 'Take that bull's dick... get a cream-pie as white as his coat...'";
 	say "     It seems like the scene playing in his memory is based on the event that occurred the last time you were here. A wild idea crosses your mind as you watch the small cocked cuckoo. Wouldn't it be fun to step into the tent yourself and start fooling around with the boy, making Izzy the voyeur for once.";
-	LineBreak;
-	say "     [bold type]Do you want to head into the tent and switch things up for the couple?[roman type][line break]";
+	say "[line break]     [bold type]Do you want to head into the tent and switch things up for the couple?[roman type][line break]";
 	say "     ([link]Y[as]y[end link]) - Head inside.";
 	say "     ([link]N[as]n[end link]) - Don't go inside.";
 	if Player consents:
@@ -136,8 +131,7 @@ to say ResolveEvent Avian Tent:
 	say "     The promiscuous cuckoo asks, 'So what do you think of our humble little community Ace? Any interest in moving in?' The hunky osprey smiles and responds, 'It looks pretty good... but I might need a little more convincing.' The sultry avian femme leans in close to him and whispers 'Let me show you just how convincing I can be.' Then she begins to eagerly make out with the handsome raptor. By this point the bulge in the male's jumpsuit is at full mast. Breaking off from the oral fun a moment later, Izzy grabs the man's hand and pulls open the entrance of the tent. Inside, you can see Gray kneeling on the floor in one corner. He has been blindfolded and his arms are tied behind his back.";
 	WaitLineBreak;
 	say "     Stripping off the pilot's jumpsuit, the adulterous lady guides the anthro osprey to lie on a bedroll, and then starts to kiss down his toned abs and the tip of his 10 inch long avian cock. She then sits on the raptor's lap and starts to tease Gray by softly stroking her foot-talons across his face. The blindfolded male quietly moans. Grinning Izzy asks, 'You don't mind if we have some company? I made a bet with my partner here that if he doesn't climax before I cum I'll find a sexy woman to have a threesome.' With a mild chuckle the bird of prey says, 'This ain't my first time at this type of rodeo, you would be surprised just how many couples have a thing for a man in uniform. I'm gonna fuck you so hard it's going to be impossible for him to win the bet.'";
-	LineBreak;
-	say "     [bold type]Do you want to watch while the osprey hooks up with the cuckooess?[roman type][line break]";
+	say "[line break]     [bold type]Do you want to watch while the osprey hooks up with the cuckooess?[roman type][line break]";
 	say "     ([link]Y[as]y[end link]) - Watch.";
 	say "     ([link]N[as]n[end link]) - Don't watch.";
 	if Player consents:
@@ -179,8 +173,7 @@ to say ResolveEvent Sandwich Shop:
 	say "     You're keeping your head down, but outside the store you can hear the barks and yelps of two wolves. While keeping as absolutely still and quiet as you can be, you hear one wolf sniffing near the doorway. Uh-oh, has he got your scent!? You ready yourself to jump up and fight, but then... fate intervenes. The precariously leaning light-post outside suddenly falls, crashing to the ground and sending the two lupines running with a whimper. Once their barks are far enough away that they can be barely heard, you exit your hiding spot.";
 	WaitLineBreak;
 	say "     You look around the area and sense no current danger. Even though the restaurant is ruined, some small instinctual part of you feels like there has to be some food around here that hasn't been ruined or purloined. The metal support beams inside the store creak and groan enough to give you some pause to worry about being trapped if the building collapses.";
-	LineBreak;
-	say "     [bold type]What do you want to do now?[roman type][line break]";
+	say "[line break]     [bold type]What do you want to do now?[roman type][line break]";
 	say "     ([link]Y[as]y[end link]) - Scavenge inside the store.";
 	say "     ([link]N[as]n[end link]) - Leave the store.";
 	if Player consents:
@@ -201,6 +194,8 @@ to say ResolveEvent Sandwich Shop:
 [ 98: didn't help in the fight against the lizards     ]
 [ 99: didn't stay to see what Bridget does with Powell ]
 
+BridgetPowellEventVar is a number that varies. BridgetPowellEventVar is usually 0.
+
 Table of GameEventIDs (continued)
 Object	Name
 Thief's Punishment	"Thief's Punishment"
@@ -208,7 +203,6 @@ Thief's Punishment	"Thief's Punishment"
 Thief's Punishment is a situation.
 ResolveFunction of Thief's Punishment is "[ResolveEvent Thief's Punishment]".
 Sarea of Thief's Punishment is "Forest".
-BridgetPowellEventVar is a number that varies. BridgetPowellEventVar is usually 0.
 
 when play begins:
 	add Thief's Punishment to BadSpots of MaleList;
@@ -225,8 +219,7 @@ to say ResolveEvent Thief's Punishment:
 	WaitLineBreak;
 	say	"     After giving the would-be bandit a chance to catch his breath, the tigress grabs him by the scruff of his hood and growls through gritted fangs, 'You better give me one good reason why a wimp like you thought stealing from someone like me was a good idea!' Nervously the failed water-snatcher replies, 'I'm sorry! Please forgive me! A group of mutants discovered my hiding spot and robbed me of all my supplies. I... I haven't had anything to drink in two days. When I saw that crate of water bottles I just couldn't help myself. Please don't eat me!'";
 	say "     The cat-like weightlifter laughs and says teasingly, 'I could eat a shrimp like you for a post workout snack. But you look a little too lean to taste any good. You'll have to be punished another way. What's your name, anyways? Shrimp seems accurate for how you look but I doubt your momma named you that.' Squirming in her grasp, the mouse stutters, 'My name i... is... ppp... Powell.' The tigress bodybuilder listens to him with a toothy grin, but does little to acknowledge him, instead looking over towards you. 'Feel free to watch if you want, I'm going to make mousy here work for his atonement.'";
-	LineBreak;
-	say "     [bold type]It's only fair that thieves get punished, and it doesn't look she plans on doing any real harm to him...[roman type][line break]";
+	say "[line break]     [bold type]It's only fair that thieves get punished, and it doesn't look she plans on doing any real harm to him...[roman type][line break]";
 	say "     ([link]Y[as]y[end link]) - Watch the thief get punished.";
 	say "     ([link]N[as]n[end link]) - Walk away.";
 	if Player consents:
@@ -271,11 +264,7 @@ to say ResolveEvent Thief's Reformation:
 	say "     Looks like all that is holding the roof up at least a little are the countless smashed exercise machines, bent and broken from the collapse. Parts of broken mirrors still hang up on some of the small portions of the walls that are still upright, with the rest covering the floor in shards and splinters. But not everywhere, at a second glance - there is actually a path into the mess of a ruin which has been swept free of glass and stone shards, weaving around and sometimes through the tangles of broken machines. Must be a tight squeeze to get through in some places. Doesn't look like Bridget would fit.";
 	WaitLineBreak;
 	say "     Clearly, someone has salvaged several pieces of exercise equipment that were still intact and reachable, moving them out front. Besides the workout bench you saw previously, there is an old red metal exercise bike that seems to be in good condition. A pull-up bar hangs from a sturdy branch on a nearby oak tree and a machine designed to exercise your calves has been pulled to be nearby the weigh-lifting bench. Towers of disc-like weights are neatly organized on the ground. More boxes of water lie to the side of the tent, with numerous large containers of protein powder close by too.";
-	say "     While you're still inspecting the camp, you start to hear the sound of two individuals jogging down one of the paths leading to the clearing, chatting away happily. ";
-	if BridgetPowellEventVar is 99: [player doesn't know their arrangement]
-		say "As the two round a bend and come into view, you see it is Bridget the tigress - and also for some reason the mouse who tried to steal her water previously. Whatever the punishment was, it didn't seem too harsh based on the fact that he appears to enjoy his captor's company now.";
-	else if BridgetPowellEventVar is 1: [player watched Bridget sex up Powell and adopt him]
-		say "As the two round the bend and are visible, you see it is Bridget and Powell. Remembering the 'punishment' it seems like the mouse didn't weasel out of the agreement and has been helping her in the salvage operation too. Based on the way the rodent looks at his trainer/captor it seems like he really loves the arrangement.";
+	say "     While you're still inspecting the camp, you start to hear the sound of two individuals jogging down one of the paths leading to the clearing, chatting away happily. As the two round [if BridgetPowellEventVar is 99]a bend and come into view, you see it is Bridget the tigress - and also for some reason the mouse who tried to steal her water previously. Whatever the punishment was, it didn't seem too harsh based on the fact that he appears to enjoy his captor's company now[else]the bend and are visible, you see it is Bridget and Powell. Remembering the 'punishment' it seems like the mouse didn't weasel out of the agreement and has been helping her in the salvage operation too. Based on the way the rodent looks at his trainer/captor it seems like he really loves the arrangement[end if].";
 	WaitLineBreak;
 	say "     The two joggers see you and walk over to give you a warm hello[if BridgetPowellEventVar is 99], including an introduction of the mouse as Powell[end if]. The four and a half foot tall rodent has certainly changed since you saw him last. Instead of the gangly nerdish physique he had previously, there are toned muscles on his frame now. While still being pretty slender, where once his biceps had the consistency of a wet noodle, there are now muscles that make him someone to be reckoned with. Furthermore, it seems like more than just his body has changed. The athlete in training appears to have lost most of his nervous anxiety and apprehension, instead seeming quite calm and confident.";
 	say	"     Bridget steps forward and does her best to be a good host, saying, 'Let me go get some drinks for you and Powell, I've got a recipe for a dynamite protein shake.' She grabs two water bottles and a protein powder container then heads inside the tent. You ask the mouse what the two of them have been up to since you last met. Powell explains in an eager tone that Bridget has become his trainer and is very dedicated in making the best out of him. Clearing the rubble, weightlifting, and cardio exercises are all part of an intense training regimen that she set for him. Joyfully the male rodent explains how his feline fitness guru knows how to strike a perfect balance of punishment and reward to keep him well motivated. Judging from the way the bulge of his tight shorts throbbed when he said 'reward', it is fairly obvious that the tigress likes to use sex as a motivational goal.";
@@ -284,8 +273,7 @@ to say ResolveEvent Thief's Reformation:
 	say "     The trainer tigress replies matter-of-factly, 'Oh, it's a mixture of some of the various types of protein powders, clean water of course and several squirts of breast milk.' You look at her incredulously, and Bridget points at the rodent who is just licking a bit of a brown milk mustache off his upper lip. 'What can I say - sweet little mousy here got it into his head to suck my nipples during a 'training' session we were doing, and before I knew it, he was drinking from me. Surprised the hell out of me to suddenly start leaking, but hey - it feels pretty nice and really works for him. A fair bit of his gains are from the tiger milk!'";
 	WaitLineBreak;
 	say "     Your awkward conversation is interrupted by the sounds of a rowdy gang of six infected beings strutting out of the forest and into the clearing. They're all lizard-based infected, showing scaly skin and tails on their bodies. A large monitor lizard seems to be the one in charge, stepping forward and calling out, 'Hey look - it's a bitch and a pussy, but I don't know which one is which!' His goons burst into laughter. Continuing his statement he says, 'If you don't want to get hurt hand over all your water and supplies. You know how this goes, don't you mousy boy?' Powell glares at the intruders and replies, 'Go away, I don't want to hurt you.' Stepping up beside her companion, Bridget flexes her muscles and growls, 'But I do.' Looking over her shoulder, she says to you in a more civil tone, 'You don't have to stick around if you don't like to. This is our fight, we can handle ourselves.'";
-	LineBreak;
-	say "     [bold type]No matter what she says, the two of them are outnumbered pretty fiercely. Do you maybe want to stick around and help them fight off the gang of lizards?[roman type][line break]";
+	say "[line break]     [bold type]No matter what she says, the two of them are outnumbered pretty fiercely. Do you maybe want to stick around and help them fight off the gang of lizards?[roman type][line break]";
 	say "     ([link]Y[as]y[end link]) - Fight.";
 	say "     ([link]N[as]n[end link]) - Walk away.";
 	if Player consents:

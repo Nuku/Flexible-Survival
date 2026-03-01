@@ -65,13 +65,13 @@ TwistedCapacity of Ryan is false. [Twisted Characters can take any penetration, 
 Sterile of Ryan is false. [steriles can't knock people up]
 MainInfection of Ryan is "Fennec".
 Description of Ryan is "[RyanDesc]".
-Conversation of Ryan is { "Sir?" }.
+[Conversation of Ryan is { "Sir?" }.]
+icon of Ryan is Figure of Ryan_panties_icon.
 The scent of Ryan is "     Ryan smells of sex, heat, and fruit.".
 
 to say RyanDesc:
 	if debugactive is 1:
 		say "DEBUG -> HP of Jerome: [HP of Jerome], Libido of Jerome: [Libido of Jerome] <- DEBUG[line break]";
-	project Figure of Ryan_panties_icon;
 	say "     Looking Ryan up and down, you take in the lithe fox's features. Currently lounging on your bed, your lovely fennec is covered head to paw in silky golden fur and has thick dark lashes that nicely complement his ocean-blue eyes and give him a slightly effeminate appearance. Despite Ryan's timidity, the lightly muscled cuntboy wears only flimsy black lace panties that do scantly anything to hide his heated pussy or curvy rump[if Perception of Ryan > 24], nor his blossoming baby bump[else if Perception of Ryan > 0], nor his large baby bump[end if][if Hunger of Ryan is 1]. His only child clings close to him but turns quickly to greet you smiling happily and alerting Ryan of your presence[else if Hunger of Ryan > 1 and Hunger of Ryan < 8]. Ryan's moderate litter of [Hunger of Ryan in words] young fennecs chatter excitedly as they see you, alerting Ryan of your presence[else if Hunger of Ryan > 7]. Ryan's massive brood of [Hunger of Ryan] young fennecs chatter excitedly as they see you, some of them even moving forward to hug and kiss you, quickly alerting Ryan of your presence[end if]. Noticing your attention, your lover smiles at you. 'Is there anything you need, sir?";
 
 Section 2 - Talking
@@ -184,7 +184,7 @@ to say RyanTalk4:
 to say RyanTalk5:
 	if Strength of Ryan is 1:
 		say "     Briefly, the thought of trying to go on another date flicks through your mind again, but you quickly sour on it — the humiliating and depressing incident with the orca ruining any enjoyment the idea may have brought you. You daren't even try to bring up the idea of another outing to Ryan and put your poor fennec under any more distress.";
-	else if daytimer is not day:
+	else if daytimer is night:
 		say "     It'd be best to wait for the sun to rise before you invite Ryan on a date. You're sure your lovely fox will enjoy himself more in the warm daylight, but a romantic moonlit walk along the beach is a tempting idea.";
 	else:
 		say "     As you ask your question, Ryan looks up at you, worried. 'A trip to the beach, sir? Are you sure it'll be safe? I'd love to go with you, but the city isn't a place I want to wander around,' he frets anxiously. Stroking the fearful fennec's head and gently rubbing his ears, you assure him that the beach is safe and that you'll protect him during the journey. Ryan hesitates a bit more, torn between his usual caution and fear and his excitement toward the prospect of a beach date with you before finally he nervously agrees. 'A-alright, sir, you lead the way.' Grinning at him, you grab Ryan's hand and lead him out of the library with you. It's a relatively peaceful trip right up until the final stretch. You're only a couple blocks away from the promenade when a large orca decides to ambush you and your fox. Diving out of an alleyway, he breathes in deeply, taking in the scent of Ryan's heat, and rushes at you! Yelling at Ryan to get behind you and hide, you hurry to confront your attacker.";
@@ -197,7 +197,7 @@ to say RyanTalk5:
 				say "[RyanBeachDateLoss]";
 		else if fightoutcome >= 30: [fled]
 			say "[RyanBeachDateFlee]";
-		else if fightoutcome < 20: [player won]
+		else if fightoutcome >= 10 and fightoutcome <= 19: [player won]
 			say "[RyanBeachDateVictory]";
 		now inasituation is false;
 		TraitGain "Beach Date Done" for Ryan;
@@ -212,7 +212,7 @@ to say RyanBeachDateSubmit:
 			say "[RyanBeachDateLoss]";
 	else if fightoutcome >= 30: [fled]
 		say "[RyanBeachDateFlee]";
-	else if fightoutcome < 20: [player won]
+	else if fightoutcome >= 10 and fightoutcome <= 19: [player won]
 		say "[RyanBeachDateVictory]";
 
 to say RyanBeachDateLoss:
@@ -228,6 +228,7 @@ to say RyanBeachDateLoss:
 	CreatureSexAftermath "Ryan" receives "PussyFuck" from "Killer Whale";
 	WaitLineBreak;
 	say "     Already feeling wretched, your despair only grows as Ryan begins to weep. 'I'm so sorry, sir! I'm so sorry... I didn't do anything to help you fight. I couldn't stop him from-' A loud, hiccuped sob rolls through Ryan, preventing him from finishing his sentence. 'The worst part is that I even started to enjoy it. I'm such a worthless whore! Oh God, you're even hurt still!' Noticing a couple of light claw marks on your body Ryan starts hyperventilating as you rush forward to calm him. Hugging Ryan tightly, he cries into your chest, whimpering apologies and gripping your shoulders tightly as you assure Ryan that he has no reason to be the one feeling guilty. After all, you were the one that wanted to go on this trip and promised to protect him, then failed. Eventually, managing to soothe Ryan, you begin the long walk home. The both of you are utterly miserable as you enter the library and go down to your bed; flopping down on it, emotional exhaustion pulls you both into a dreamless sleep as you mutually hope to forget this horrible day.";
+	decrease morale of Player by 10;
 	now Strength of Ryan is 1;
 	TraitGain "Beach Date Loss" for Ryan;
 
@@ -288,14 +289,15 @@ Section 3 - Sex
 
 instead of fucking Ryan:
 	if lastfuck of Ryan - turns < 6:
+		project Figure of Ryan_panties_icon;
 		say "     Ryan looks up at you guiltily. 'Please give me a minute, sir! I won't be too long. I just need a couple of hours to recover,' he pleads. Feeling ashamed for stressing the poor fox and pushing for sex so soon after just fucking him, you quickly apologize and assure him that you can wait.";
 	else:
+		project Figure of Ryan_naked_icon;
 		say "[RyanSexMenu]";
 
 to say RyanSexMenu:
 	if debugactive is 1:
 		say "     DEBUG -> Ryan Sex Menu.";
-	project Figure of Ryan_naked_icon;
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]
@@ -328,7 +330,7 @@ to say RyanSexMenu:
 			now sortorder entry is 7;
 			now description entry is "Drown in fennec floof";
 		[]
-		if "Brood Bred" is listed in Traits of Ryan and (IncestList is not warded and IncestList is not banned):
+		if "Brood Bred" is listed in Traits of Ryan and IncestList is not warded and IncestList is not banned:
 			choose a blank row in table of fucking options;
 			now title entry is "Fennec Gangbang";
 			now sortorder entry is 8;
@@ -416,7 +418,7 @@ to say RyanSex3: [Fingering]
 		say "     Steadily, you pump your digits in and out of your mate's tightly gripping sex. With your other hand, you gently massage over his clit as Ryan grows increasingly wet with arousal, his sodden cunt squelching lewdly with each rapid motion into him. While doing this, you're humping between your mate's curvy bum, hot dogging his plump cheeks and occasionally purposely missing a thrust to rub yourself between his soft thighs and dripping slit while Ryan struggles to keep himself standing, panting, and trembling against the wall as you ruthlessly pleasure and tease him with the possibility of a hard fuck. Realizing Ryan's close, you lean over the fox and kiss him passionately as you drive him over the edge, the tod's juices soaking your hand. You can see his legs starting to shake, but as you give Ryan a stern look and command to stay, he whimpers needily and obeys. You continue to fingerbang the enticing vulpine through his climax, the loud wet slurps echoing throughout the room each time you withdraw as his clenching insides desperately try to keep you buried knuckle deep inside his drooling snatch, the fox trembling in overstimulation yet unable to resist rocking his hips back against your dexterous fingers. It's not too long before Ryan's rising close to climax again and you're right there with him.";
 		WaitLineBreak;
 		say "     Letting out a ragged groan. You mark the beautiful fennec's golden fur with thick ropes of your virile seed while the cuntboy moans, his juices running down his thighs as he slumps to the floor beneath you, limp and tired from his powerful orgasms. Catching Ryan before he falls, you carry him towards your bed and gently lay him down while quietly praising him, earning a tired grin from your exhausted fox as you tell him all about how sexy he looked and how amazing he felt wrapped around you. Giving your mate a parting kiss on the cheek, you leave him to rest.";
-	NPCSexAftermath Ryan receives "PussyDildoFuck" from Player
+	NPCSexAftermath Ryan receives "PussyDildoFuck" from Player;
 
 to say RyanSex4: [Cunnilingus]
 	if debugactive is 1:
@@ -467,11 +469,11 @@ to say RyanSex6: [Incestuous Group Sex]
 to say RyanSex7: [Fluff Pile & Cuddle]
 	say "     You're absolutely exhausted from your time in the city, and it's only natural given the immense struggle your once peaceful day-to-day life has become. Before, safety and comfort were promised to you, a guarantee of modernity and peace. Now it's something you must fight for every day as you battle with abominations and maddened infected while you scramble for food and water through the chaos. Ryan frowns as he notices your fatigue and reaches over to gently grasp your hand and pull you down to lay beside him on the bed. 'Take care of yourself, sir. This city takes its toll on everybody. Be careful not to lose yourself in its turmoil. Everyone needs a break from it all, even you,' Ryan whispers while stroking your head. The feeling of the delicate fox's soft paws running along your [Skin of Player] skin is immensely calming and comforting, as is his fluffy tail curling round you. His smell is also quite pleasing, though usually dominated by his heat and pheromones; this close, you're free to pet and sniff Ryan's silky soft coat enjoying the relaxing scent of his shampoo and the sensation of his carefully groomed fur. Your children also notice your distressed state and join in the cuddle. Soon you're surrounded by fluffy fennecs curled all around you, purring out their love to you and using their tails to provide a truly world-class blanket. In these conditions, it doesn't take long for your mood to improve, surrounded by your family and pampered by your lover. Once released, you feel ready to take on the world, your energy and hope restored.";
 	SanBoost 8;
+	increase morale of Player by 5;
 
 to say RyanSex8: [Fennec Gangbang]
 	say "     Instantaneously upon making your suggestion, your children erupt in cheers, ready and eager to breed either of you and show how much they love, adore, and appreciate you. Ryan seems much less outwardly enthused, a bright red blush shooting up his ears while he fumbles for a response. 'T-there's nothing wrong with rewarding the kits a little bit for being good,' your lover mumbles out eventually to the great excitement of your kits as they stare with undisclosed hunger and lust at your bodies. How long and how many times have your sons watched you fuck Ryan wanting nothing more than to be in your position, to slide between his slick nether lips and feel those silky soft walls clamp down on them or admire the curve of your rump and the way it bounced as you fucked Ryan, daydreamed of fucking you and feeling your tight ass clamp around them. Now finally, the opportunity arises. The only question is, who goes, you or Ryan?";
-	LineBreak;
-	say "     [bold type]Who is going to be bred? You or Ryan?[roman type][line break]";
+	say "[line break]     [bold type]Who is going to be bred? You or Ryan?[roman type][line break]";
 	let Ryan_Fennec_Gangbang_Choices be a list of text;
 	add "Ryan. Give your sons a chance to breed more of their brothers." to Ryan_Fennec_Gangbang_Choices;
 	add "You. Let your sons pour all their love into you." to Ryan_Fennec_Gangbang_Choices;
@@ -530,15 +532,13 @@ Ryan's Pregnancy	"Ryan's Pregnancy"
 Ryan's Pregnancy is a situation.
 ResolveFunction of Ryan's Pregnancy is "[ResolveEvent Ryan's Pregnancy]".
 Sarea of Ryan's Pregnancy is "Nowhere". [standard walkins that cannot be hunted for are Nowhere, but walkin events can also be made huntable as an alternate access way]
-Level of Ryan's Pregnancy is 0. [minimum level to encounter randomly]
 
 to say ResolveEvent Ryan's Pregnancy:
 	say "     Entering the storeroom that you've made your bedroom, you greet Ryan cheerily and move to lay beside him in your bed but quickly shift into a more serious bearing upon noticing your lover's evident tension. Sitting on your bed, Ryan anxiously clutches his long fluffy tail, kneading and stroking it to calm himself. The cute fennec's adorably large ears are pressed down tightly to his head, while his usually pristine golden fur is slightly scruffy. 'Oh, h-hello sir, how are you doing?' Ryan greets you nervously, the short fox's voice trembling somewhat as he gives you his best smile.";
 	say "     Frowning down slightly at Ryan's apparent stress, you sit beside your mate and run a soothing hand down his back as you nestle your delicate fennec close to you. Doing this until you can feel Ryan relax against you, you gently ask him what's wrong. At first, he seems to try to dismiss your concerns, but under your knowing gaze, your mate quickly relents, letting out a sigh as he responds. 'W-when we went to the beach, sir, I talked to a couple ladies during the time you were away getting us the food. Cutting it short, I noticed one was pregnant and asked how far along she was. The woman said only a couple of days, and the nanites sped things up. They told me all about how pregnancy is supposed to work now. Is that true?' Nodding your head in affirmation, your frown grows as Ryan looks down worriedly and rubs slowly at his tummy. 'Do you think there's something wrong with me, sir?' he whispers.";
 	WaitLineBreak;
 	say "     'It's been quite a while, but I've not grown any bigger. I feel them; I swear I do, but I should've given birth by now. Do you think it's stress? God forbid, could I have—' as Ryan goes on, his speech and breathing grow faster. You quickly recognize the lithe vulpine's spiraling and swiftly cut him off before he reaches the worst-case scenario and drives himself into any more of a frenzy. You draw him into your lap and give a couple of quick soft rubs at his ears and the base of his tail, drawing a soft moan from the sensitive fox, speedily ending his fretting.";
-	LineBreak;
-	say "     [bold type]Holding Ryan tightly, you firmly state to him that he and your children with him are perfectly healthy and...[roman type][line break]";
+	say "[line break]     [bold type]Holding Ryan tightly, you firmly state to him that he and your children with him are perfectly healthy and...[roman type][line break]";
 	say "     ([link]Y[as]y[end link]) - You'll prove it. There must be something in this crazed city that can help him.";
 	say "     ([link]N[as]n[end link]) - Time will tell. The long pregnancy time means he'll have extra time to care for his children. (Note: Will not give birth within known future.)";
 	if Player consents:
@@ -601,6 +601,6 @@ This is the Ryan's Ending rule:
 			if Hunger of Ryan is 0:
 				say "     When the rescue comes, you and Ryan are taken together and are briefly held for testing, but quickly you're both deemed safe and sane, then released as the military turns to more pressing matters. Reaching out to his well-off family Ryan manages to snag a large sum of money to start your new life together, finding a large lovely house to set yourselves in. You and your mate eagerly await the birth of your children and anticipate the breeding of many more.";
 			else:
-				say "     When the rescue comes, you, Ryan, and your [if Hunger of Ryan is 1]only child [else if Hunger of Ryan < 8]moderate litter of [Hunger of Ryan in words] young fennecs [else]massive brood of young fennecs [end if]are taken all together and are briefly held for testing, but you're all quickly deemed to be both safe and sane. You are soon released as the military turns to more pressing matters. Reaching out to his well-off family Ryan manages to snag a large sum of money to start your new life together, finding a large lovely house to set both you and your children up in. You live a peaceful and happy life with Ryan. Though the horrors and debauchery of the city have scarred you both and life as an infected isn't easy even with the support of Ryan's wealthy relatives, you live long, happy lives and raise many kits.";
+				say "     When the rescue comes, you, Ryan, and your [if Hunger of Ryan is 1]only child[else if Hunger of Ryan < 8]moderate litter of [Hunger of Ryan in words] young fennecs[else]massive brood of young fennecs[end if] are taken all together and are briefly held for testing, but you're all quickly deemed to be both safe and sane. You are soon released as the military turns to more pressing matters. Reaching out to his well-off family Ryan manages to snag a large sum of money to start your new life together, finding a large lovely house to set both you and your children up in. You live a peaceful and happy life with Ryan. Though the horrors and debauchery of the city have scarred you both and life as an infected isn't easy even with the support of Ryan's wealthy relatives, you live long, happy lives and raise many kits.";
 
 Ryan ends here.

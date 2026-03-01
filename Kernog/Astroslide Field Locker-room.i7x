@@ -17,8 +17,6 @@ Object	Name
 Astroslide Field Locker-room	"Astroslide Field Locker-room"
 
 Astroslide Field Locker-room is a room.
-[Astroslide Football Field is east of Astroslide Field Locker-room.]
-
 Description of Astroslide Field Locker-room is "[FootFieldLockerdesc]".
 
 to say FootFieldLockerdesc:
@@ -40,21 +38,19 @@ object	name
 Gorilla Team-Members	"Gorilla Team-Members"
 
 Gorilla Team-Members is a man.
+Gorilla Team-Members is in Astroslide Field Locker-room.
 understand "Team Members/--" as Gorilla Team-Members.
 understand "Members" as Gorilla Team-Members.
 understand "Gorillas" as Gorilla Team-Members.
 understand "Gorilla Team Members/--" as Gorilla Team-Members.
 understand "Gorilla Members" as Gorilla Team-Members.
 Description of Gorilla Team-Members is "     A highly variable number of gorillas is present at all times in their team locker-room, in all states of dress and undress, as well as sexual arousal. It would be an understatement to say that all these hunky guys, girls and in between are 'just interested' in football - it's more like the whole center of their existence, as you can see from the fact that an adjoining storage room has been totally cleared out to set up numerous bunk beds. Looks like they now live right here next to the field. The gorillas are definitively a jovial bunch, and you can hear almost constant chatting, laughing and more than a few aroused moans from all around you.[line break]".
-Conversation of Gorilla Team-Members is { "Yap!" }.
-Gorilla Team-Members is in Astroslide Field Locker-room.
-
+[Conversation of Gorilla Team-Members is { "Yap!" }.]
 Scent of Gorilla Team-Members is "     The attractive scents of gorillas hang in the air, with slight undertones of furry musk, cum and sweat.".
 
 instead of conversing the Gorilla Team-Members:
 	if HP of Roman is 3:
 		say "     You have a heavy secret concerning the team captain. [bold type]Do you wish you wish to share it? This decision will certainly break Roman, and without him you will probably not be able to work for the team anymore. Then again, free bitch to play with the other boys.[roman type][line break]";
-		LineBreak;
 		say "     ([link]Y[as]y[end link]) - 'Hey, guys! You won't believe what I saw the other day!'";
 		say "     ([link]N[as]n[end link]) - No. You are not this cruel.";
 		if Player consents:
@@ -151,14 +147,17 @@ instead of fucking the Gorilla Team-Members:
 
 [General Sex scenes]
 to say GorillaTeamSex1: [bukkake (giving)]
-	let tempGorillaGender be 0;
+	let tempGorillaGender be 0; [male newbie]
 	let randomnumber be a random number from 1 to 10;
 	if FemaleList is banned or FemaleList is warded or (Player is maleinterested and Player is not femaleinterested):
 		now randomnumber is a random number from 1 to 5;
 	else if MaleList is banned or MaleList is warded or (Player is femaleinterested and Player is not maleinterested):
 		now randomnumber is a random number from 6 to 10;
 	if randomnumber > 5:
-		now tempGorillaGender is 1;
+		now tempGorillaGender is 1; [female newbie]
+		setmongender 4;
+	else:
+		setmongender 3;
 	let TempGorillaName1 be text;
 	if randomnumber is:
 		-- 1: now TempGorillaName1 is "Barry";
@@ -171,23 +170,22 @@ to say GorillaTeamSex1: [bukkake (giving)]
 		-- 8: now TempGorillaName1 is "Mary";
 		-- 9: now TempGorillaName1 is "Jude";
 		-- 10: now TempGorillaName1 is "Martha";
-	say "     Stepping up to a handsome gorilla just sitting on one of the locker-room benches and jerking his own cock, you push down your own pants and bare your already hardening [Cock of Player] manhood to him. 'Nice equipment you have there,' the hunky primate replies, looking you up and down and then reaching out to stroke his fingers along your shaft. 'Did you just wanna show off or can I help you with anything?' His eyes widen and you think you see his cock getting even harder than it was before as you tell him that you want to have some bukkake action. He chuckles and says, 'Now that's an awesome idea! And it's well past time to initiate [TempGorillaName1] properly anyways.' The gorilla gives your cock a few quick jerks, then stands up and calls out, 'Hey guys! Let's give one of the newbies his team shower!'";
+	say "     Stepping up to a handsome gorilla just sitting on one of the locker-room benches and jerking his own cock, you push down your own pants and bare your already hardening [Cock of Player] manhood to him. 'Nice equipment you have there,' the hunky primate replies, looking you up and down and then reaching out to stroke his fingers along your shaft. 'Did you just wanna show off or can I help you with anything?' His eyes widen and you think you see his cock getting even harder than it was before as you tell him that you want to have some bukkake action. He chuckles and says, 'Now that's an awesome idea! And it's well past time to initiate [TempGorillaName1] properly anyways.' The gorilla gives your cock a few quick jerks, then stands up and calls out, 'Hey, guys! Let's give one of the newbies his team shower!'";
 	say "     It only takes moments for quite a few male gorillas to gather around the two of you - many already naked, some still in their gear and sweaty from playing and even a few who drip all over the floor after rushing over from the showers. There's aroused grunting between the young men and more than a bit of posing as they jerk their cocks and wiggle them at each other to show off, then soon a wide-eyed gorilla is let through to step into the center of the gathered group. Your original gorilla hunk clears his throat and says to the initiate, 'You've proved that you can really play and are a good mate - so now it's time to fully initiate you into the team! Kneel and get ready to receive the essence of the Tenvale Silverbacks!'";
 	WaitLineBreak;
-	say "     Widely grinning and obviously knowing what awaits [if tempGorillaGender is 0]him[else]her[end if], the new gorilla pulls off [if tempGorillaGender is 0]his[else]her[end if] shirt and pants without hesitation and throws them aside, then kneels with an eager expression on [if tempGorillaGender is 0]his[else]her[end if] face. [if tempGorillaGender is 0]His hands fly to his crotch, jerking his own cock[else]Her hands fly to her crotch, fingering her pussy[end if] a few times until the first of the surrounding gorillas steps up and holds out his manhood. As the newcomer takes it in [if tempGorillaGender is 0]his[else]her[end if] mouth and eagerly starts to bob [if tempGorillaGender is 0]his[else]her[end if] head, you feel a hand close around your own cock - it's the gorilla next to you, starting to slowly jerk you off and saying, 'We're going clockwise, with everyone having a turn at [if tempGorillaGender is 0]his[else]her[end if] mouth, so it'll be a bit. [bold type]How about we... take care of each other in the meantime?'[roman type][line break]";
-	LineBreak;
+	say "     Widely grinning and obviously knowing what awaits [ghim], the new gorilla pulls off [ghis] shirt and pants without hesitation and throws them aside, then kneels with an eager expression on [ghis] face. [if tempGorillaGender is 0]His hands fly to his crotch, jerking his own cock[else]Her hands fly to her crotch, fingering her pussy[end if] a few times until the first of the surrounding gorillas steps up and holds out his manhood. As the newcomer takes it in [ghis] mouth and eagerly starts to bob [ghis] head, you feel a hand close around your own cock - it's the gorilla next to you, starting to slowly jerk you off and saying, 'We're going clockwise, with everyone having a turn at [ghis] mouth, so it'll be a bit. [bold type]How about we... take care of each other in the meantime?'[roman type][line break]";
 	say "     ([link]Y[as]y[end link]) - Let your neighbor pleasure you and return the favor in kind.";
 	say "     ([link]N[as]n[end link]) - Refuse politely and wait for your turn.";
 	if Player consents:
 		LineBreak;
-		say "     With him already doing a very nice job of handling your manhood[if Nipple Count of Player > 1] and his other hand running up your side before moving on to stroke over your nipples[end if], you have no intention of saying no to this offer. Reaching out, you take your neighbor's erection in hand and start giving him a slow and long-lasting wank while getting busy feeling up his muscled body. It's quite nice to touch someone and be touched in this way and you close your eyes and moan silently while it lasts - until eventually, you hear your partner say, 'Your turn,' just as he pulls his hand away and the cocksucking newbie's lips close around your cock. It's clear that this [if tempGorillaGender is 0]guy[else]girl[end if] has had quite a bit of experience in taking care of male members, as [if tempGorillaGender is 0]he[else]she[end if] expertly deep-throats you and plays [if tempGorillaGender is 0]his[else]her[end if] tongue over just the right spots of the shaft and cock-head.";
-		say "     You can't help but take hold of the gorilla's head and pump in and out of [if tempGorillaGender is 0]his[else]her[end if] throat a few times, but eventually let go again and allow the kneeling athlete to move on to your jerking buddy. Your neighbor gives a lusty groan of, 'Oh yeah! [if tempGorillaGender is 0]He[else]She[end if]'s a real pro with that sweet mouth of [if tempGorillaGender is 0]his[else]hers[end if]! No wonder you took your time,' while at the same time putting a hand on your shoulder to steady himself. Eventually, the kneeling gorilla moves on to take care of the next guy and you move back to a mutual jerk-off with your buddy, continuing until the cocksucker has done a whole round pleasing everyone waiting for [if tempGorillaGender is 0]his[else]her[end if] attention. Then suddenly, the gorilla jerking you off grunts loudly, 'Let's paint [if tempGorillaGender is 0]him[else]her[end if] white boys,' and his hand starts to really pump your cock.";
+		say "     With him already doing a very nice job of handling your manhood[if Nipple Count of Player > 1] and his other hand running up your side before moving on to stroke over your nipples[end if], you have no intention of saying no to this offer. Reaching out, you take your neighbor's erection in hand and start giving him a slow and long-lasting wank while getting busy feeling up his muscled body. It's quite nice to touch someone and be touched in this way and you close your eyes and moan silently while it lasts - until eventually, you hear your partner say, 'Your turn,' just as he pulls his hand away and the cocksucking newbie's lips close around your cock. It's clear that this [if tempGorillaGender is 0]guy[else]girl[end if] has had quite a bit of experience in taking care of male members, as [ghe] expertly deep-throats you and plays [ghis] tongue over just the right spots of the shaft and cock-head.";
+		say "     You can't help but take hold of the gorilla's head and pump in and out of [ghis] throat a few times, but eventually let go again and allow the kneeling athlete to move on to your jerking buddy. Your neighbor gives a lusty groan of, 'Oh yeah! [gche]'s a real pro with that sweet mouth of [ghishers]! No wonder you took your time,' while at the same time putting a hand on your shoulder to steady himself. Eventually, the kneeling gorilla moves on to take care of the next guy and you move back to a mutual jerk-off with your buddy, continuing until the cocksucker has done a whole round pleasing everyone waiting for [ghis] attention. Then suddenly, the gorilla jerking you off grunts loudly, 'Let's paint [ghim] white, boys,' and his hand starts to really pump your cock.";
 	else:
 		LineBreak;
-		say "     You politely whisper to the gorilla that you'd prefer not. 'Hmpf. Suit yourself,' he says and turns towards his other neighbor. Eventually, the newbie turns towards you and closes [if tempGorillaGender is 0]his[else]her[end if] lips around your cock. It's clear that this [if tempGorillaGender is 0]guy[else]girl[end if] has had quite a bit of experience in taking care of male members, as [if tempGorillaGender is 0]he[else]she[end if] expertly deep-throats you and plays [if tempGorillaGender is 0]his[else]her[end if] tongue over just the right spots of the shaft and cock-head.";
-		say "     You can't help but take hold of the gorilla's head and pump in and out of [if tempGorillaGender is 0]his[else]her[end if] throat a few times, but eventually let go again and allow the kneeling athlete to move on to your jerking buddy. Your neighbor gives a lusty groan of, 'Oh yeah! [if tempGorillaGender is 0]He[else]She[end if]'s a real pro with that sweet mouth of [if tempGorillaGender is 0]his[else]hers[end if]! No wonder you took your time,' while at the same time putting a hand on your shoulder to steady himself. Eventually, the kneeling gorilla moves on to take care of the next guy and you resume your own jerk-off, continuing until the cocksucker has done a whole round pleasing everyone waiting for [if tempGorillaGender is 0]his[else]her[end if] attention. Suddenly, the gorilla who proposed you to jerk off each other earlier grunts loudly, 'Let's paint [if tempGorillaGender is 0]him[else]her[end if] white boys,' and his hand starts to really pump his cock.";
+		say "     You politely whisper to the gorilla that you'd prefer not. 'Hmpf. Suit yourself,' he says and turns towards his other neighbor. Eventually, the newbie turns towards you and closes [ghis] lips around your cock. It's clear that this [if tempGorillaGender is 0]guy[else]girl[end if] has had quite a bit of experience in taking care of male members, as [ghe] expertly deep-throats you and plays [ghis] tongue over just the right spots of the shaft and cock-head.";
+		say "     You can't help but take hold of the gorilla's head and pump in and out of [ghis] throat a few times, but eventually let go again and allow the kneeling athlete to move on to your jerking buddy. Your neighbor gives a lusty groan of, 'Oh yeah! [gche]'s a real pro with that sweet mouth of [ghishers]! No wonder you took your time,' while at the same time putting a hand on your shoulder to steady himself. Eventually, the kneeling gorilla moves on to take care of the next guy and you resume your own jerk-off, continuing until the cocksucker has done a whole round pleasing everyone waiting for [ghis] attention. Suddenly, the gorilla who proposed you to jerk off each other earlier grunts loudly, 'Let's paint [ghim] white, boys,' and his hand starts to really pump his cock.";
 	WaitLineBreak;
-	say "     Joining the frantic fapping all around, you have a little bit of a competition with the ape next to you, to see who can get the other off first... and you win. It's a pretty close thing, with just seconds between the grunted bellow signifying his first splash of cum spraying out over the kneeling gorilla's arm and your own orgasm, pumping out a long streak of your creamy load to hit the newbie on the shoulder. The gathered simian wankers don't let their target wait long either, and within moments, [if tempGorillaGender is 0]he[else]she[end if] is soaked to the bone in warm and sticky cum. After the short while they need to finish coming and catching their breaths, the freshly cum-bathed gorilla is lifted by many hands, gripping [if tempGorillaGender is 0]him[else]her[end if] securely despite [if tempGorillaGender is 0]his[else]her[end if] slipperiness, then carried off to the showers with a chant of 'One of us! One of us!'";
+	say "     Joining the frantic fapping all around, you have a little bit of a competition with the ape next to you, to see who can get the other off first... and you win. It's a pretty close thing, with just seconds between the grunted bellow signifying his first splash of cum spraying out over the kneeling gorilla's arm and your own orgasm, pumping out a long streak of your creamy load to hit the newbie on the shoulder. The gathered simian wankers don't let their target wait long either, and within moments, [ghe] is soaked to the bone in warm and sticky cum. After the short while they need to finish coming and catching their breaths, the freshly cum-bathed gorilla is lifted by many hands, gripping [ghim] securely despite [ghis] slipperiness, then carried off to the showers with a chant of 'One of us! One of us!'";
 	say "     'I love this tradition,' your wanking partner says, then brings his fingers to his mouth to lick off the accumulated cum. 'Have a nice day, and see ya,' he adds with a chuckle and gives your bare ass a playful swat before joining the others in the shower.";
 
 to say GorillaTeamSex2: [bukkake (receiving)]
@@ -205,20 +203,8 @@ to say GorillaTeamSex2: [bukkake (receiving)]
 	say "     'Nice job,' a familiar voice tells you, then you feel the soft touch of a towel wiping at your face. Your original gorilla stud uses it to clean you up - but soon the towel is totally drenched and he gives a resigned chuckle before dropping it. 'Let's get you clean in the showers,' he says a moment later, giving you a hand to help you stand up in the slippery state you are in. You are guided into the shower room next and soon find yourself under a warm spray of water, with your gorilla and two others washing you down, all the while giving you some lusty gropes. The warm and wet fun in the shower continues for a while, without going any further than just touching and rubbing, until you eventually leave the gorillas behind, walking out to dry yourself off and put your clothes back on.";
 
 to say GorillaTeamSex3: [chain fuck]
-	let TempGorillaName1 be text;
-	let TempGorillaName2 be text;
-	if a random number from 1 to 5 is:
-		-- 1: now TempGorillaName1 is "Bradley";
-		-- 2: now TempGorillaName1 is "Brian";
-		-- 3: now TempGorillaName1 is "Gavin";
-		-- 4: now TempGorillaName1 is "Nate";
-		-- 5: now TempGorillaName1 is "Andy";
-	if a random number from 1 to 5 is:
-		-- 1: now TempGorillaName2 is "Ike";
-		-- 2: now TempGorillaName2 is "Vinny";
-		-- 3: now TempGorillaName2 is "Reid";
-		-- 4: now TempGorillaName2 is "Tom";
-		-- 5: now TempGorillaName2 is "Everett";
+	let TempGorillaName1 be "[one of]Bradley[or]Brian[or]Gavin[or]Nate[or]Andy[at random]";
+	let TempGorillaName2 be "[one of]Ike[or]Vinny[or]Reid[or]Tom[or]Everett[at random]";
 	say "     Rubbing the bulge in your pants in anticipation of fucking a hot and tight hole, you let your eyes roam through the locker-room, soon finding the perfect target for your lusts. There is a pair of hunky gorillas over there, both naked, with one of them leaning forward against the wall while his buddy is crouched down behind him, lapping at his back door and showing off a very nice and shapely butt to the whole room. As you start moving towards them, the standing gorilla gives a needy moan of, 'Fuck me, [tempGorillaName1]! I'm ready!' - and his buddy is instantly on his feet to rub his hard shaft up and down the waiting primate's crack. You arrive beside them just in time to see him line up his cockhead with the other gorilla's ass and pump his hips forward, thrusting in more than half his length in one quick move.";
 	say "     [tempGorillaName1] gives his friend a moment to get used to the thick piece of man-meat impaling his ass, using the time to put his arms around and play with his nipples, then he slowly pushes in further and further until his crotch is rubbing against the bottoming gorilla's furry ass. 'Man, [tempGorillaName2] - you've really got one of the best asses in the whole team. Soo welcoming and tight - no matter how often it's getting pounded each day!' With that, the young man starts to pull back and slide in again, fucking [tempGorillaName2] in a steady rhythm of deep thrusts that has the bottom whimper and moan in lust.";
 	WaitLineBreak;
@@ -226,8 +212,7 @@ to say GorillaTeamSex3: [chain fuck]
 	say "     Who could refuse such a nice offer? You certainly won't, as it's just what you wanted. Taking hold of your erection with one hand, you softly whack it against [tempGorillaName1]'s ass a few times, then gather a bit of spit and let it drip on your cock, rubbing it all over to help with the penetration. Guiding your cockhead to his quivering pucker next, you push forward gently but steadily and pop into his hole a moment later. 'Oh yeah, a tight hole around my cock and a hard shaft in my ass - now that's just as I like it!' the gorilla groans with lust in his voice, then starts to move again, pounding into [tempGorillaName2] and at the same time fucking himself on your manhood.";
 	WaitLineBreak;
 	say "     Having an awesome time with these two hot hunks, your arms wrapped around the broad chest of [tempGorillaName1] while thrusting into his ass, you don't pay much attention to the room around you until someone suddenly reaches between your buttcheeks, rubbing thick fingers over your pucker. Unsurprisingly, someone else decided that he wants a piece of the action going on here and now there's yet another horny gorilla standing right behind you, giving you a lewd grin and demonstratively wagging his long and hard cock for you to see.";
-	LineBreak;
-	say "     [bold type]What now?[roman type][line break]";
+	say "[line break]     [bold type]What now?[roman type][line break]";
 	say "     ([link]Y[as]y[end link]) - Take the gorilla's cock and continue the fuck-chain.";
 	say "     ([link]N[as]n[end link]) - Shake your head to him to show that you're not in the mood to get fucked right now.";
 	if Player consents:
@@ -254,7 +239,7 @@ PeepingRoman is a situation.
 ResolveFunction of PeepingRoman is "".
 Sarea of PeepingRoman is "Nowhere".
 
-instead of going to Astroslide Field Locker-room while (PeepingRoman is active and PeepingRoman is not resolved and FurryList is not banned and FurryList is not warded and a random chance of 1 in 3 succeeds):
+instead of going to Astroslide Field Locker-room while PeepingRoman is active and PeepingRoman is not resolved and FurryList is not banned and FurryList is not warded and a random chance of 1 in 3 succeeds:
 	move player to Astroslide Field Locker-room;
 	PeepingRomanEvent;
 
@@ -267,8 +252,7 @@ to PeepingRomanEvent:
 	say "     'It's a shame. Did you [italic type]see[roman type] that package of his? There must be a monster under those shorts.'";
 	WaitLineBreak;
 	say "     The conversation piques your curiosity. It is at this moment that you notice that Roman did not close the door properly. It is slightly ajar, giving you the possibility to spy on the gorilla.";
-	LineBreak;
-	say "     [bold type]Do you keep peeping on Roman?[roman type][line break]";
+	say "[line break]     [bold type]Do you keep peeping on Roman?[roman type][line break]";
 	say "     ([link]Y[as]y[end link]) - There's nothing wrong with indulging in some innocuous peeping.";
 	say "     ([link]N[as]n[end link]) - Everyone needs a little privacy.";
 	if Player consents:

@@ -37,7 +37,7 @@ to say VixenFemNurseMaleNursingScene:
 	say "     The vixen nurse pushes you down as you stop fighting. 'You'll hurt yourself by struggling so much, my dear. I'm only trying to help you, you know,' she tuts disappointedly above you, seeming genuinely concerned for you despite the beatdown she's just delivered. Kneeling beside you, the sexy nurse removes any clothing you have on, leaving you bare before her. The cold breeze of the hospital makes you shiver as you gaze warily at the sly fox beside you. 'I need to complete a thorough inspection of your body to make sure you're healthy,' she says, but if the hungry gleam in her eyes is any indication, she's looking to do much more than a run-of-the-mill checkup! Leaning over you, the vixen starts with your [if Breast Size of Player < 0]pecs; squeezing[else]breasts; groping[end if], poking, and massaging at your chest, then teasing your nipples with her pointy claws. Despite your initial wariness you can't help but feel a little excited at her touch and the excellent view you have of her four ample breasts certainly isn't helping your situation. Satisfied with her inspection, she moves on to the next part of your body with that and the next, following the same pattern as the first, gradually raising your lust.";
 	say "     Once she's gotten her fill of your body, the perverted fox plasters a reassuring grin on her face. 'I've completed my inspection, and I think I know exactly what you need!' the fox quickly starts to strip, removing her uniform and revealing her perky tits and supermodel-esque figure. 'Open up, baby, it's time to take your medicine,' she purrs, and you briefly consider resisting, but before you can muster up a plan to escape or attack, the cheery vixen presses you into her bountiful boobies. They're incredibly soft and squishy, and under normal circumstances, you'd probably be overjoyed to have a sexy nurse like this shove your face into her rack. Still, given that she's just beaten you black and blue a few minutes ago, you're more than a little suspicious. Nonetheless, you can't deny there's also something relaxing about your current situation; being hugged into her criminally soft boobs and fur feels relaxing after all you've been through. When was the last time somebody held you so gently, so lovingly? With the caring nurse whispering calming words and telling you she wants to help you, you can quickly feel yourself giving in to her influence, so when she presses you to one of her perky nips, you don't question it too much.";
 	WaitLineBreak;
-	say "     The first thing you notice is the smell of milk, sweet delicious milk. You feel your mouth watering in anticipation. At the same time, you grow bolder in your appreciation, your hand straying upwards to caress the voluptuous vixen's chest, and of course, it feels just as amazingly soft and squishy to your hands as it does your face. Pressed against her nipples and remembering the naughty nurse's previous command, you open your mouth and let one of her tits enter your mouth and find yourself groaning in delight at the taste of her cream; it has an oddly medicinal taste, slightly minty but is also extraordinarily rich and sweet you can feel your aches and bruises from you battle fading with each eager gulp of milk you take as you drool against the sexy fox's boobs loudly licking and slurping while groping her breasts roughly in hopes of squeezing out just a bit more for you to drink. The buxom vixen seems to enjoy feeding you as much as you enjoy eating from her lustful gasps, moans, and praise pouring out from her as your drink your only interrupted from your feasting when she switches you to another of her full breast to give you more of her delicious dairy. The nurse's milk seems to have another after-effect besides its soothing effect on your wounds as you rapidly feel your arousal rising, your needy dick drooling precum all down your shaft and onto your balls, splattering onto your thighs and on the nurse,";
+	say "     The first thing you notice is the smell of milk, sweet delicious milk. You feel your mouth watering in anticipation. At the same time, you grow bolder in your appreciation, your hand straying upwards to caress the voluptuous vixen's chest, and of course, it feels just as amazingly soft and squishy to your hands as it does your face. Pressed against her nipples and remembering the naughty nurse's previous command, you open your mouth and let one of her tits enter your mouth and find yourself groaning in delight at the taste of her cream; it has an oddly medicinal taste, slightly minty but is also extraordinarily rich and sweet you can feel your aches and bruises from you battle fading with each eager gulp of milk you take as you drool against the sexy fox's boobs loudly licking and slurping while groping her breasts roughly in hopes of squeezing out just a bit more for you to drink. The buxom vixen seems to enjoy feeding you as much as you enjoy eating from her lustful gasps, moans, and praise pouring out from her as your drink your only interrupted from your feasting when she switches you to another of her full breast to give you more of her delicious dairy. The nurse's milk seems to have another after-effect besides its soothing effect on your wounds as you rapidly feel your arousal rising, your needy dick drooling precum all down your shaft and onto your balls, splattering onto your thighs and on the nurse.";
 	say "     'Oh my, you need some help with that, sugar? Don't worry, just let me take care of you,' the vixen murrs happily into your ear and wraps her hand around your shaft. Immediately the fox's experience is clear as she begins starting with your cocktip polishing the head of your prick with her plush paw pads and spreading your pre-all over you with slow strokes of her hand with her other paw she fondled and gropes your nuts encouraging them to work up more lube and your special kind of milk. Everything feels abnormally intense. Every movement of her hands sends shockwaves of pleasure through you; if you'd have to guess with your muddled mind, you'd assume it's another side effect of the milk you're gulping down seemingly by the gallon full. Moving on from her slower pace, the sexy nurse takes a firm grip on your [Cock of Player] meat and speeds up her stroking. She seems to know exactly how to handle you finding every sensitive spot you have and setting you humping desperately into her paws while you drink thirstily from her breasts, soft wet noises echoing through the hospital halls as her hand glides around you. Hopped up on aphrodisiac milk and expertly pleasured by the lewd nurse, it doesn't take too long to climax, shooting long sticky ropes of your seed onto yourself and the vixen, giving you an expert handjob, but of course, the debauched fox isn't satisfied until she's completely drained you. So you endure two more earth-shifting climaxes before you finally pass out. The last thing you remember is the beautiful vulpine licking your cum from her hands.";
 	CreatureSexAftermath "Player" receives "Stroking" from "Vixen Nurse";
 	if "Iron Stomach" is not listed in feats of Player, infect "Vixen Nurse";
@@ -91,6 +91,7 @@ to say VixenNursePlayWithHer:
 	WaitLineBreak;
 	say "     A soft pressure pushing you deeper into the fox's cleavage causes you to reluctantly flutter your eyes open to find the beautiful lady smiling gently while holding you against her breasts; any past aggression is forgotten as she feeds you while she does your hands begin to wander over her body squeezing her bubbly ass and ample hips before running to her waist as you try to memorize every curve of the fluffy woman's body. It seems you're touching, paired with your feeding, has awakened a different type of hunger in the both of you as she begins to masturbate. The sound of her self-pleasure paired with the sudden arousal her milk seems to have roused in you driving you to grind yourself against the curvaceous caretaker, unwilling to stop your hand from exploring her body or stop drinking to take of yourself. Your mutual climax is a slow and peaceful affair, a gradual and satisfying climb. You pop off first, quivering and shaking against her body as orgasm rolls through you, forcing you, at last, to stop eating, and the vixen nurse follows soon, her juices soaking the both of you and running down her thighs. You both enjoy the afterglow for a long while cuddled up cozily on the couch, but knowing your survival depends on being active and alert at all times, you force yourself to leave.";
 	lower Player Libido by 5;
+	if "Iron Stomach" is not listed in feats of Player, infect "Vixen Nurse";
 
 [to say VixenHermNurseRideHer:
 	say "     A";
@@ -109,28 +110,20 @@ to say LoseToVixenNurse:
 	setmonster "Vixen Nurse";
 	choose row MonsterID from the Table of Random Critters;
 	if vixgender is 0:
-		if Player is herm:
-			if a random number between 1 and 4 is:
-				-- 1: say "[VixenFemNurseMaleRidingScene]";
-				-- 2: say "[VixenFemNurseMaleNursingScene]";
-				-- 3: say "[VixenFemNurseFemaleNursingScene]";
-				-- 4: say "[VixenFemNurseFacesitting]";
-		else if Player is male:
-			if a random number between 1 and 3 is:
-				-- 1: say "[VixenFemNurseMaleRidingScene]";
-				-- 2: say "[VixenFemNurseMaleNursingScene]";
-				-- 3: say "[VixenFemNurseFacesitting]";
-		else if Player is female:
-			if a random number between 1 and 2 is:
-				-- 1: say "[VixenFemNurseFemaleNursingScene]";
-				-- 2: say "[VixenFemNurseFacesitting]";
-		else:
-			say "[VixenFemNurseFacesitting]";
+		let randomvixsex be { 4 };
+		if Player is male, add { 1, 2 } to randomvixsex;
+		if Player is female, add 3 to randomvixsex;
+		sort randomvixsex in random order;
+		if entry 1 of randomvixsex is:
+			-- 1: say "[VixenFemNurseMaleRidingScene]";
+			-- 2: say "[VixenFemNurseMaleNursingScene]";
+			-- 3: say "[VixenFemNurseFemaleNursingScene]";
+			-- 4: say "[VixenFemNurseFacesitting]";
 	else:
 		say "     The silver-furred vixen grins at you as she looks over her [if fightoutcome is 22]willing [end if]patient. Moving in close, she rubs her sexy body against yours, grinding her throbbing knotted erection against you even as she grabs your ass meaningfully. Knowing you're going to be mounted shortly by the horny vixen if you don't do anything, you consider trying to suck her off to satisfy her instead. Shall you attempt an [link]oral distraction (Y)[as]y[end link] or simply accept to let the herm [link]fuck you (N)[as]n[end link]?";
 		if Player consents:
 			LineBreak;
-			say "     Deciding you'd prefer that throbbing cock of hers in your mouth than elsewhere, you lower yourself to your knees and start licking and kissing at it. She moans in pleasure and runs her paws over your head, pushing her leaking shaft against your lips and into your mouth. As you suck her off, you grow increasingly aroused and eager to get her off, soon lusting for the sexy herm's seed. As you bob your head over her meaty rod, she scribbles some distracted notes on her clipboard, mumbling about her patient's ['][one of]cooperative nature[or]arousal response[or]satisfying progress[at random]['] and ['][one of]eagerness to take [if Player is female]her[else if Player is male]his[else]their[end if] medicine[or]oral fixation[or]lingum activity[at random]['] before turning her full attention back to you as you bump against her growing knot. You rub her plump ballsack with one hand and slide a pair of fingers into her puss with the other, pumping in time to her thrusting, getting her to cum hard and spew her hot load down your throat. You eagerly swallow down the musky mess and suck her cock clean before letting it go, having gotten quite turned on by the whole experience.";
+			say "     Deciding you'd prefer that throbbing cock of hers in your mouth than elsewhere, you lower yourself to your knees and start licking and kissing at it. She moans in pleasure and runs her paws over your head, pushing her leaking shaft against your lips and into your mouth. As you suck her off, you grow increasingly aroused and eager to get her off, soon lusting for the sexy herm's seed. As you bob your head over her meaty rod, she scribbles some distracted notes on her clipboard, mumbling about her patient's ['][one of]cooperative nature[or]arousal response[or]satisfying progress[at random]['] and ['][one of]eagerness to take [PosAdj of Player] medicine[or]oral fixation[or]lingum activity[at random]['] before turning her full attention back to you as you bump against her growing knot. You rub her plump ballsack with one hand and slide a pair of fingers into her puss with the other, pumping in time to her thrusting, getting her to cum hard and spew her hot load down your throat. You eagerly swallow down the musky mess and suck her cock clean before letting it go, having gotten quite turned on by the whole experience.";
 			let x be Libido of Player;
 			if fightoutcome is 22, increase x by 15; [submitted]
 			if Player is female or anallevel is 3, increase x by 15; [F/H]
@@ -165,8 +158,6 @@ to say BeatTheVixenNurse:
 		project Figure of VixenNurse_fem_naked_icon;
 	else:
 		project Figure of VixenNurse_herm_naked_icon;
-	setmonster "Vixen Nurse";
-	choose row MonsterID from the Table of Random Critters;
 	say "     The vixen nurse stops fighting and you move in to catch her; it seems you have a slutty vixen nurse on your hands. [bold type]What would you like to do?[roman type][line break]";
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
@@ -230,6 +221,7 @@ to say BeatTheVixenNurse:
 	wait for any key;
 	clear the screen and hyperlink list;
 	[value reset]
+	choose row with Name of "Vixen Nurse" from Table of Random Critters;
 	now lev entry is 4;
 
 to say VixenNurseDesc:
@@ -449,13 +441,15 @@ When Play begins:
 	[Clit Size Adjective is generated by a function and can be used in scenes: very small/small/average/large/very large]
 ]
 
+Section 3 - Alt Combat
+
 Table of Critter Combat (continued)
 name	combat (rule)	preattack (rule)	postattack (rule)	altattack1 (rule)	alt1chance (number)	altattack2 (rule)	alt2chance (number)	monmiss (rule)	continuous (rule)	altstrike (rule)
 "vixennurse"	vixhealboost rule	--	--	--	--	--	--	--	--	--
 
 this is the vixhealboost rule:
 	choose row MonsterID from the Table of Random Critters;
-	if monsterHP <= ( HP entry / 4 ) and lootchance entry > 0 and a random chance of 1 in 4 succeeds:	[weak and not used healing booster]
+	if monsterHP <= HP entry / 4 and lootchance entry > 0 and a random chance of 1 in 4 succeeds:	[weak and not used healing booster]
 		let healed be 25;
 		increase monsterHP by healed;
 		if monsterHP > HP entry:
@@ -465,8 +459,11 @@ this is the vixhealboost rule:
 		now lootchance entry is 0; [used up potential healing booster]
 		follow the monster injury rule;
 		say "[EnemyCapNameOrTitle] is [descr].";
+		if BeforeCombat is 0, AttemptToWaitBeforeClear;
 	else:
 		standardretaliate;
+
+Section 4 - Healing Booster
 
 Table of Game Objects (continued)
 name	desc	weight	object
@@ -477,24 +474,28 @@ the scent of the healing booster is "The healing booster smells of chemicals and
 Usedesc of healing booster is "[healing booster use]".
 
 to say healing booster use:
-	let healed be 20;
-	if "Expert Medic" is listed in the feats of Player:
-		now healed is 25;
-	else if carried of First Aid Manual > 0:
-		increase healed by 2;
-	if "Rapid Healing" is listed in the feats of Player:
-		increase healed by 2;
-	if "Regeneration" is listed in the feats of Player:
-		increase healed by 3;
-	if NoHealMode is true:
-		now healed is ( healed * 125 ) / 100;
-	increase HP of Player by healed;
-	if HP of Player > MaxHP of Player:
-		decrease healed by HP of Player minus MaxHP of Player;
-		now HP of Player is MaxHP of Player;
-	say "     Using your healing booster, you inject the mix into your body, giving a quick boost to your infected body's healing rate. You regain [special-style-1][healed][roman type] HP.";
+	if HP of Player < MaxHP of Player or inafight is 1:
+		let healed be 20;
+		if "Expert Medic" is listed in the feats of Player:
+			now healed is 25;
+		else if carried of First Aid Manual > 0:
+			increase healed by 2;
+		if "Rapid Healing" is listed in the feats of Player:
+			increase healed by 2;
+		if "Regeneration" is listed in the feats of Player:
+			increase healed by 3;
+		if NoHealMode is true:
+			now healed is ( healed * 125 ) / 100;
+		increase HP of Player by healed;
+		if HP of Player > MaxHP of Player:
+			decrease healed by HP of Player minus MaxHP of Player;
+			now HP of Player is MaxHP of Player;
+		say "Using your healing booster, you inject the mix into your body, giving a quick boost to your infected body's healing rate. You regain [special-style-1][healed][roman type] HP.";
+	else:
+		say "You're not hurt, so you decide to keep your syringe for when you actually need it.";
+		ItemGain healing booster by 1 silently; [quietly giving back the auto-destroyed item]
 
-Section 3 - Endings
+Section 5 - Endings
 
 Table of GameEndings (continued)
 Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
@@ -530,7 +531,8 @@ This is the Vixen Nurse Infection rule:
 				say "     Drawn by your instincts as a member of the hospital staff, you report back to Dr. Mouse. While you only vaguely remember him, he greets you with a smile and happily adds you to his hospital's staff. He puts you in charge of monitoring his test subjects with a pair of jaguars to act as your muscle. Obediently, you follow the mad doctor's orders, watching his [']volunteers['] and often using them as play-toys when he's done with them before sending them downstairs to the hospital proper to be assimilated into the staff[if Susan is in hidden lab]. Susan, as his assistant, is there with him to help you and reward you with lustful sex[end if].";
 				say "     When the time comes to leave the city, Dr. Mouse takes you[if Susan is in hidden lab], Susan[end if] and several other of the staff to escape through the service tunnels under the hospital. Meanwhile the main body of the staff hold the hospital against the army with the helicopter running as an added diversion. You all escape out of the city and Dr. Mouse sets up a new lab in secret. He begins selling off the fruits of his research to foreign powers and the growing factions of transformed creatures that form. He has you continue to monitor his test subjects for his ongoing experiments";
 				if Player is female or Player is maleinterested:
-					say ". You also are honored with being the little mouse's personal sex-toy when he needs to unwind after a particularly exciting procedure[if (Player is female or Player is mpreg_ok) and Player is not sterile]. You are very proud when your belly grows full, swelling with his young[end if].";
+					say ". You also are honored with being the little mouse's personal sex-toy when he needs to unwind after a particularly exciting procedure[if (Player is female or Player is mpreg_ok) and Player is not sterile]. You are very proud when your belly grows full, swelling with his young[end if]";
+				say ".";
 		else:
 			if hospquest > 13:
 				say "     When you are rescued from the infected city by the military, they take you to a base they've set up for the testing and processing of the infected. While you are being examined, you have to resist your urges to play with doctors like the naughty nurse you are. You can't afford to draw too much attention to yourself. Using your innate medical knowledge and your sensual body, you avoid receiving the treatment to render you non-infectious and fudge the results. When cleared, you travel to a new city and insinuate yourself into a small clinic, infecting the staff there and setting up a nice little den of silver foxes to be your mates.";

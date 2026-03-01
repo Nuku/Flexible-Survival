@@ -72,9 +72,9 @@ to say hdmale_sex04:
 	if anallevel is 3 or ( Player is neuter and anallevel > 1 ):
 		say "     Pulling on some latex gloves with a snap and a grin, he lubricates a finger and slips it between your ass cheeks. It is quite cool and uncomfortable at first, but quickly warms up as he probes around inside you. The wiggling of his digit becomes increasingly pleasurable as he even starts thrusting it in and out of you[if Player is male], stimulating your prostate[end if] until you're squirming and moaning from this as well.";
 	if Player is male:
-		say "     Taking [if Cock Count of Player > 1]one of your cocks[else]your cock[end if] in paw, he strokes and rubs over it. Already quite hard from all the teasing, he sizes you up even as he jerks you off[if Cock Length of Player > 20]. He seems quite impressed with your [cock size desc of Player] shaft[smn][else if Cock Length of Player > 10]. He seems rather pleased with your [cock size desc of Player] shaft[smn][else if Cock Length of Player > 5]. He seems unimpressed with your [cock size desc of Player] shaft[smn][else]. He shakes his head and clucks his tongue at your [cock size desc of Player] shaft[smn][end if] and leans in to give [itthemm] a quick lick and suck[if CockName of Player is not listed in infections of InternalCockList]. While he does this, his paw moves to your ballsack, rolling around your [Ball Size Adjective of Player] [Balls] in his palm and appraising their heft[end if]. He gets you to the point of drooling precum, laps some up for a taste test and then moves on.";
+		say "     Taking [if Cock Count of Player > 1]one of your cocks[else]your cock[end if] in paw, he strokes and rubs over it. Already quite hard from all the teasing, he sizes you up even as he jerks you off. He [if Cock Length of Player > 20]seems quite impressed with[else if Cock Length of Player > 10]seems rather pleased with[else if Cock Length of Player > 5]seems unimpressed with[else]shakes his head and clucks his tongue at[end if] your [cock size desc of Player] shaft[smn] and leans in to give [itthemm] a quick lick and suck[if CockName of Player is not listed in infections of InternalCockList]. While he does this, his paw moves to your ballsack, rolling around your [Ball Size Adjective of Player] [Balls] in his palm and appraising their heft[end if]. He gets you to the point of drooling precum, laps some up for a taste test and then moves on.";
 	if Player is female:
-		say "     Burying his nose between your thighs, he nuzzles at your pussy before giving it a quick lick. This is then followed by a pair of digits slipping their way into your vagina and rubbing along your inner walls[if Cunt Tightness of Player > 12]. Eventually two fingers moves up to three and then four before he ends up fisting you to pound away at your gaping cunny. As he stuffs[else if Cunt Tightness of Player > 8]. Eventually two fingers moves up to three and then four as he continues to pound away at your spacious cunny. As he fingerfucks[else if Cunt Tightness of Player > 5]. Eventually two fingers moves up to three as he continues to pound away at your widened cunny. As he fingerfucks[else]. As he fingerfucks[end if] your wet pussy, his other paw rubs across your outer folds, both teasing you and allowing him to examine your cunny in detail. There's something embarrassingly exciting about his scrutiny, especially when his fingertips move to your clit and start playing with it. You're left dripping with juices by the time he's finished the gynecological exam.";
+		say "     Burying his nose between your thighs, he nuzzles at your pussy before giving it a quick lick. This is then followed by a pair of digits slipping their way into your vagina and rubbing along your inner walls. [if Cunt Tightness of Player > 12]Eventually two fingers moves up to three and then four before he ends up fisting you to pound away at your gaping cunny. As he stuffs[else if Cunt Tightness of Player > 8]Eventually two fingers moves up to three and then four as he continues to pound away at your spacious cunny. As he fingerfucks[else if Cunt Tightness of Player > 5]Eventually two fingers moves up to three as he continues to pound away at your widened cunny. As he fingerfucks[else]As he fingerfucks[end if] your wet pussy, his other paw rubs across your outer folds, both teasing you and allowing him to examine your cunny in detail. There's something embarrassingly exciting about his scrutiny, especially when his fingertips move to your clit and start playing with it. You're left dripping with juices by the time he's finished the gynecological exam.";
 	WaitLineBreak;
 	if Player is herm:
 		say "     Largely dropping the pretense of an exam, he throws himself into stuffing your dripping cunny with one hand and pumping your [Cock of Player] cock with the other. Already very worked up by the constant teasing without proper release, you don't last for much longer, soon soaking your crotch with your feminine juices as your [Ball Size Adjective of Player] [Balls] tighten up. Your [cock size desc of Player] penis throbs in the canine doctor's paw as he watches[if Ball Size of Player > 5], stunned and impressed by[else if Ball Size of Player > 4], definitely impressed by[else if Ball Size of Player > 3], seemingly pleased by[else if Ball Size of Player > 2] with mild disapproval at[else], clearly disappointed with[end if] your [Cum Load Size of Player] output. Grabbing his stiff canine dong, he pumps it quickly, splattering a gooey mess of his own seed onto you, making you all the stickier. ";
@@ -117,7 +117,7 @@ to say hdfemale_sex02:
 	say "     With the doctor's canine cunny pressed to your mouth, you can't help but breathe in her excited scent and taste her juices as they run across your lips. Your tongue slips out before you even realize and starts lapping at her folds to get more. Her tongue lolls out the side of her [if hdform is 5 or hdform is 6]short [end if]muzzle as you go to town eating out the [hdformname]'s cunt while she yips and barks in delight. You start to moan and pant between breaths as you lick across and into her dripping cunny. In your lustful haze, you swallow down the infected doctor's juices eagerly, thirsty for more. She leans down overtop of you and buries her muzzle between your legs, [if Player is male]taking your cock into her muzzle and sucking you off in return[else if Player is female]pushing her long, canine tongue into your pussy and lapping deep inside you[else]slathering her long, canine tongue across your bare groin and asshole[end if] while humping your face. With your tongue teasing her clit and her own tongue working over your groin, it is not much longer before she cums with an excited bark. Her hot juices flow across your tongue and soak your face as she cries out in climactic bliss[if Player is not neuter]. This sends you over the edge, cumming with a muffled moan from beneath her leaking muff. She laps it all up eagerly with that long tongue of hers[end if]. Once the doctor's done soaking your face with her musky [']medicine['], she climbs off of your face and helps you out of the gurney before sending you on your way. Still in a bit of a daze after all that, you stumble off while licking the last of her juices from your lips.";
 	CreatureSexAftermath "Player" receives "OralPussy" from "Horny Doctor";
 	if Player is not neuter:
-		CreatureSexAftermath "Horny Doctor" receives "[if Player is male]OralCock[else]OralPussy[end if]" from "Player";
+		CreatureSexAftermath "Horny Doctor" receives "Oral[if Player is male]Cock[else]Pussy[end if]" from "Player";
 
 to say hdfemale_sex03:
 	say "***slot for another scene.";
@@ -138,9 +138,9 @@ to say hdfemale_sex04:
 	if anallevel is 3 or ( Player is neuter and anallevel > 1 ):
 		say "     Pulling on some latex gloves with a snap and a grin, she lubricates a finger and slips it between your ass cheeks. It is quite cool and uncomfortable at first, but quickly warms up as she probes around inside you. The wiggling of her digit becomes increasingly pleasurable as she even starts thrusting it in and out of you[if Player is male], stimulating your prostate[end if] until you're squirming and moaning from this as well.";
 	if Player is male:
-		say "     Taking [if Cock Count of Player > 1]one of your cocks[else]your cock[end if] in paw, she strokes and rubs over it. Already quite hard from all the teasing, she sizes you up even as she jerks you off[if Cock Length of Player > 20]. She seems quite impressed with[else if Cock Length of Player > 10]. She seems rather pleased with[else if Cock Length of Player > 5]. She seems unimpressed with[else]. She shakes her head and clucks her tongue at[end if] your [cock size desc of Player] shaft[smn] and leans in to give [itthemm] a quick lick and suck[if CockName of Player is not listed in infections of InternalCockList]. While she does this, her paw moves to your ballsack, rolling around your [Ball Size Adjective of Player] [Balls] in her palm and appraising their heft[end if]. She gets you to the point of drooling precum, laps some up for a taste test and then moves on.";
+		say "     Taking [if Cock Count of Player > 1]one of your cocks[else]your cock[end if] in paw, she strokes and rubs over it. Already quite hard from all the teasing, she sizes you up even as she jerks you off. She [if Cock Length of Player > 20]seems quite impressed with[else if Cock Length of Player > 10]seems rather pleased with[else if Cock Length of Player > 5]seems unimpressed with[else]shakes her head and clucks her tongue at[end if] your [cock size desc of Player] shaft[smn] and leans in to give [itthemm] a quick lick and suck[if CockName of Player is not listed in infections of InternalCockList]. While she does this, her paw moves to your ballsack, rolling around your [Ball Size Adjective of Player] [Balls] in her palm and appraising their heft[end if]. She gets you to the point of drooling precum, laps some up for a taste test and then moves on.";
 	if Player is female:
-		say "     Burying her nose between your thighs, she nuzzles at your pussy before giving it a quick lick. This is then followed by a pair of digits slipping their way into your vagina and rubbing along your inner walls[if Cunt Tightness of Player > 12]. Eventually two fingers moves up to three and then four before she ends up fisting you to pound away at your gaping cunny. As she stuffs[else if Cunt Tightness of Player > 8]. Eventually two fingers moves up to three and then four as she continues to pound away at your spacious cunny. As she fingerfucks[else if Cunt Tightness of Player > 5]. Eventually two fingers moves up to three as she continues to pound away at your widened cunny. As she fingerfucks[else]. As she fingerfucks[end if] your wet pussy, her other paw rubs across your outer folds, both teasing you and allowing her to examine your cunny in detail. There's something embarrassingly exciting about her scrutiny, especially when her fingertips move to your clit and start playing with it. You're left dripping with juices by the time she's finished the gynecological exam.";
+		say "     Burying her nose between your thighs, she nuzzles at your pussy before giving it a quick lick. This is then followed by a pair of digits slipping their way into your vagina and rubbing along your inner walls. [if Cunt Tightness of Player > 12]Eventually two fingers moves up to three and then four before she ends up fisting you to pound away at your gaping cunny. As she stuffs[else if Cunt Tightness of Player > 8]Eventually two fingers moves up to three and then four as she continues to pound away at your spacious cunny. As she fingerfucks[else if Cunt Tightness of Player > 5]Eventually two fingers moves up to three as she continues to pound away at your widened cunny. As she fingerfucks[else]As she fingerfucks[end if] your wet pussy, her other paw rubs across your outer folds, both teasing you and allowing her to examine your cunny in detail. There's something embarrassingly exciting about her scrutiny, especially when her fingertips move to your clit and start playing with it. You're left dripping with juices by the time she's finished the gynecological exam.";
 	WaitLineBreak;
 	if Player is herm:
 		say "     Largely dropping the pretense of an exam, she throws herself into stuffing your dripping cunny with one hand and pumping your [Cock of Player] cock with the other. Already very worked up by the constant teasing without proper release, you don't last for much longer, soon soaking your crotch with your feminine juices as your [Ball Size Adjective of Player] [Balls] tighten up. Your [cock size desc of Player] penis throbs in the canine doctor's paw as she watches[if Ball Size of Player > 5], stunned and impressed by[else if Ball Size of Player > 4], definitely impressed by[else if Ball Size of Player > 3], seemingly pleased by[else if Ball Size of Player > 2] with mild disapproval at[else], clearly disappointed with[end if] your [Cum Load Size of Player] output. Stuffing a few fingers into her own cunny, she works herself up to a barking climax and wipes her sticky fingers off onto you. ";
@@ -172,25 +172,26 @@ to say beatthehdmale:
 	say "     Now that you've beaten the fluffy doctor, you can't help but notice his nudity, complete with a bouncing doggy dick standing at attention. Maybe it wouldn't be so bad to 'Play Doctor' just this once- only from the opposite side of the interaction?";
 	say "     [bold type]Do you want to turn the tables on the horny doctor?[roman type][line break]";
 	if Player consents:
-		say "     Taking the opportunity to push the [hdformname] doctor backward, you quickly grab his stethoscope and create a makeshift pair of handcuffs, tying them above his head. You grab his labcoat while you're at it, rifling through the pockets and telling the now nude man that he'll have to make up for his actions as you take stock of your temporary stash of new toys. You weren't here for a check-up, but you're more than willing to 'Play Doctor' if that's what he wants to do. Struggling against his bonds and not quite able to get his feet under him, the still groggy canine growls under his breath, but the way his dick bounces gives away how he feels. The fact that he could call for one of his staff to assist him- and doesn't- only confirms what you already knew- the perverted doctor wants to see what you'll do! You'll have to make sure you don't disappoint him.";
 		LineBreak;
-		say "     [bold type]How do you want to play with the doctor?[roman type][line break]";
+		say "     Taking the opportunity to push the [hdformname] doctor backward, you quickly grab his stethoscope and create a makeshift pair of handcuffs, tying them above his head. You grab his labcoat while you're at it, rifling through the pockets and telling the now nude man that he'll have to make up for his actions as you take stock of your temporary stash of new toys. You weren't here for a check-up, but you're more than willing to 'Play Doctor' if that's what he wants to do. Struggling against his bonds and not quite able to get his feet under him, the still groggy canine growls under his breath, but the way his dick bounces gives away how he feels. The fact that he could call for one of his staff to assist him- and doesn't- only confirms what you already knew- the perverted doctor wants to see what you'll do! You'll have to make sure you don't disappoint him.";
+		say "[line break]     [bold type]How do you want to play with the doctor?[roman type][line break]";
 		let Doctor_Male_Choices be a list of text;
 		add "Use the pair of latex gloves to give him a 'prostate exam.'" to Doctor_Male_Choices;
 		add "Put the medical grade condom to use and 'collect a specimen.'" to Doctor_Male_Choices;
 		let Doctor_Male_Choice be what the player chooses from Doctor_Male_Choices;
+		LineBreak;
 		if Doctor_Male_Choice is:
 			-- "Use the pair of latex gloves to give him a 'prostate exam.'":
 				say "     Pulling out a white pair of latex gloves, you muse that you hope that the [hdformname] isn't allergic to the material. Amused by your little display of 'bedside manner,' you slip it on your hand with a satisfying snap, grabbing the canine's leg and clicking your tongue until he understands you want him on all fours. The dog's eyes widen as he capitulates, and you hear him mumble something about lube, but he assumes the position with little encouragement, his tail firmly between his legs. Is he having second thoughts now that he's on the opposite end of his 'treatments?' Unfortunately for him, you have no intention of stopping. Grabbing that fluffy tail with your ungloved hand, you yank it upward, revealing a pretty pink hole and dragging a whine from your patient. You shush him as your digits slowly circle that hole, forcing it to pucker and flex. Gathering a mouthful of spit, you let it drool down to glaze it, then press your index finger against the center, testing his tightness.";
 				say "     Unsurprisingly, for a resident of such a warped, sexually active hospital, the doctor's hole appears to be quite experienced, swallowing your gloved finger past the first knuckle, then to the root without issue, puckering around the base in halfhearted protest. A decidedly unprofessional moan leaves his mouth, and his back arches as you test his depths, morphing into a sound of pure need as a second finger joins the first, noisily digging into the doctor's hole with increasing fervor. The show's too hot to handle, and you can feel yourself starting to lose the character you attempted to put on when you stole the doctor's coat. Maybe you could push things further?";
-				LineBreak;
-				say "     [bold type]How do you want to play with the doctor?[roman type][line break]";
+				say "[line break]     [bold type]How do you want to play with the doctor?[roman type][line break]";
 				let Doctor_Male_2_Choices be a list of text;
 				if Player is male:
 					add "Fuck him now that you've loosened him up." to Doctor_Male_2_Choices;
 				add "Stick your entire fist inside." to Doctor_Male_2_Choices;
 				add "Leave him with his hands tied and his ass in the air." to Doctor_Male_2_Choices;
 				let Doctor_Male_2_Choice be what the player chooses from Doctor_Male_2_Choices;
+				LineBreak;
 				if Doctor_Male_2_Choice is:
 					-- "Fuck him now that you've loosened him up.":
 						say "     Throwing aside your flimsy attempt at roleplaying, you ready your manhood, using the [hdformname]'s tail as a handhold and dragging him into a better position, lining up your dick until it presses against that freshly loosened hole. Without much regard for the poor canine's comfort, you surge forward as soon as your dick kisses the rim, grunting under your breath at the tight squeeze that envelops you. It's like that fluffy ass is a vacuum! Your unwilling partner doesn't seem quite as enthused with the direction you're taking, gritting his teeth and whimpering under his breath as your rhythm grows less respectful.";
@@ -210,6 +211,7 @@ to say beatthehdmale:
 					add "Use your pussy to help him get off." to Doctor_Male_3_Choices;
 				add "Make out with him." to Doctor_Male_3_Choices;
 				let Doctor_Male_3_Choice be what the player chooses from Doctor_Male_3_Choices;
+				LineBreak;
 				if Doctor_Male_3_Choice is:
 					-- "Use your pussy to help him get off.":
 						say "     You want to enjoy yourself as much as the doctor, so you make yourself comfortable beneath the labcoat you stole, unveiling your feminine sex and guiding his dick against your lips. The cold kiss of latex across your most sensitive places sends a shiver down your spine, but you bite your lip and bear down, slipping him into your depths with little issue. You've abandoned your little roleplaying session to dominate the doctor more thoroughly, though you still manage to murmur something about giving him a lollipop if he behaves. The doctor doesn't seem used to losing control, attempting to guide your movements with short thrusts only to be pushed back by your firm hand on his chest, leaving him to scrabble weakly at the floor with his back claws. His teeth show in a grimace as he tries to dictate the pace, and like most horny guys, it seems he would prefer a more breakneck pace than your slow grind. Of course, you'll have none of it, and you tell him to be patient- after all, you may as well test his staying power.";
@@ -221,14 +223,15 @@ to say beatthehdmale:
 							CreatureSexAftermath "Player" receives "PussyFuck" from "Horny Doctor";
 						else:
 							say "     For better or worse, the latex balloon inside of you holds firm, squishing out of your quivering cunt with a gush of feminine juices as you release the [hdformname]'s softening dick. You grip it with both hands, raising it off the squirming doctor's sensitive dick and tying it closed, stowing it away in your pack, later to be placed in one of your many plastic bottles, thanking him for his specimen and promising to get his 'test results' back to him soon. You toss the doctor's labcoat over his panting muzzle and leave him to bask in the afterglow, still half hard, musing that a friendly nurse or orderly should help him soon enough.";
-							ItemGain horny doctor cum by 1;
 							CreatureSexAftermath "Player" receives "PussyDildoFuck" from "Horny Doctor";
+							ItemGain horny doctor cum by 1;
 					-- "Make out with him.":
 						say "     Leaning down and releasing the doctor's cock from your stroking grip, you nestle it more firmly between your thighs and abandon your little doctor role in favor of something more intimate. Slipping your fingers past the panting dog's lips, you play with his tongue for a moment, smirking as it immediately sends his cock slapping against your ass. You know just what you want to do, and before he can react, you withdraw your fingers and replace them with your mouth, dragging the captive doctor into a sloppy kiss. Whimpering into that sloppy oral embrace, the doctor can only meet your fervent tonguesmanship with excitement, his head tilting to the side and eyes sinking closed. His hips push upward in time with each stroke of your tongue across his, and drool leaks down the corners of his mouth as the air fills with steamy noises and the rhythmic slap of a furry ass meeting the tile, only to push back up to fuck your thighs. You don't mind the canine's sloppy attempts to match your fervor, rewarding him for his enthusiasm with a firmer squeeze of your thighs against that pulsating pillar of puppy passion. It's like kissing a big, silky ribbon covered with drool, but your excitement makes it much more palatable, allowing it to swirl and dance against the entrance to your throat and over your teeth. You want to make the dog cum, after all, and the more excited he is, the easier that'll be!";
 						say "     Within moments, your efforts bear fruit, and the kiss breaks to unleash the good doctor's high-pitched whine of pure need. He bucks like a Bronco beneath you, fucking your thighs with wild abandon, and you can feel every pulse of his orgasm rushing up that rock-hard shaft to splatter uselessly inside the condom, filling it until the tip rests against your ass, sloshing with each movement as if angry that it couldn't coat your skin. You take your time retrieving the 'specimen,' raising the condom from the dog's knot and gratuitously stroking the overstimulated man's member to drag noises of protest from his mouth. Sadly, it's over before you know it, and you can only quip about 'giving him his test results back next week' as you tie the condom off and place it in your bag. Finished with your fun, you toss the dog's labcoat over his panting muzzle and leave him there with a half-hard, still leaking cock, his hands above his head. With any luck, a nurse or orderly will help him soon enough, but you've got other things you'd rather be doing.";
-						ItemGain horny doctor cum by 1;
 						CreatureSexAftermath "Player" receives "Stroking" from "Horny Doctor";
+						ItemGain horny doctor cum by 1;
 	else:
+		LineBreak;
 		say "     You decide not to take advantage of the doctor and within a few moments, he recovers from the fight, the doctor stumbling back a few feet. There, he growls and shakes his paw at you. 'Just you wait until you get my bill. Then I'll have the last laugh!' And with that, he turns and dashes off into the dark depths of the hospital.";
 
 to say beatthehdfemale:
@@ -248,68 +251,61 @@ name(text)	PrepFunction(text)
 
 to say PrepCombat_Horny Doctor:
 	choose row MonsterID from the Table of Random Critters;
-	if a random chance of 1 in 2 succeeds:
-		now loot entry is "libido suppressant";
-		now lootchance entry is 20;
-	else:
-		now loot entry is "healing booster";
-		now lootchance entry is 24;
-	if hdmode is 3 or hdmode is 4:		[pre-selected gender from event]
-		increase score by 0;
-	else:
-		now hdmode is a random number between 1 and 2;
-	now hdform is a random number between 0 and 6;
-	if hdform is 0, now hdformname is "mutt";
-	if hdform is 1, now hdformname is "beagle";
-	if hdform is 2, now hdformname is "Rottweiler";
-	if hdform is 3, now hdformname is "Samoyed";
-	if hdform is 4, now hdformname is "Malamute";
-	if hdform is 5, now hdformname is "boxer";
-	if hdform is 6, now hdformname is "bulldog";
 	if hdmode is 3:				[event forces male]
 		now hdmode is 1;
 	else if hdmode is 4:	[event forces female]
 		now hdmode is 2;
-	else if MaleList is banned and FemaleList is banned:		[if both types are banned, the fight is aborted and removed from critter table]
+	else:
+		now hdmode is a random number between 1 and 2;
+	now hdform is a random number between 0 and 6;
+	if hdform is:
+		-- 0: now hdformname is "mutt";
+		-- 1: now hdformname is "beagle";
+		-- 2: now hdformname is "Rottweiler";
+		-- 3: now hdformname is "Samoyed";
+		-- 4: now hdformname is "Malamute";
+		-- 5: now hdformname is "boxer";
+		-- 6: now hdformname is "bulldog";
+	if MaleList is banned and FemaleList is banned:		[if both types are banned, the fight is aborted and removed from critter table]
 		say "     A dog in a doctor's coat passes by you in the hall, barely looking up from his chart. He looks you over briefly, gives you a quick sniff. 'The healthcare plan you've selected will not allow you to see a doctor here. You should consider not using banning so much and get a new provider.' And with that cryptic comment, the canine continues on his way. It seems they won't have any interest in you for some reason.";
 		now BannedStatus entry is true;
 		now fightoutcome is 19;
 		now combat abort is 1;
 		now hdmode is 0;
-	else if MaleList is banned:
-		now hdmode is 2;
-	else if FemaleList is banned:
-		now hdmode is 1;
-	else if MaleList is warded and FemaleList is warded:
-		now hdmode is a random number between 1 and 2;
-	else if ishunting is true:	[hunting results in 2/3rds chance to get unwarded option]
-		if MaleList is warded and a random chance of 1 in 3 succeeds:
-			now hdmode is 2;
-		else if FemaleList is warded and a random chance of 1 in 3 succeeds:
-			now hdmode is 1;
-	else if ishunting is false:
-		if MaleList is warded:
-			now hdmode is 2;
-		else if FemaleList is warded:
-			now hdmode is 1;
-	if hdmode is 1:				[male]
-		setmongender 3; [creature is male]
-		[project the figure of HornyDoctor_M_icon;]
-		now altcombat entry is "hump";
-	else if hdmode is 2:		[female]
-		setmongender 4; [creature is female]
-		now altcombat entry is "default";
-	[now BannedStatus entry is false;]
-	if Player is FemalePreferred:
-		now sex entry is "Female";
-	else if Player is HermPreferred:
-		now sex entry is "Both";
-	else if Player is MalePreferred:
-		now sex entry is "Male";
-	else if hdmode is 1:
-		now sex entry is "Female";
 	else:
-		now sex entry is "Male";
+		if MaleList is banned:
+			now hdmode is 2;
+		else if FemaleList is banned:
+			now hdmode is 1;
+		else if MaleList is not warded or FemaleList is not warded:	[hunting results in 2/3rds chance to get unwarded option]
+			if MaleList is warded and (ishunting is false or a random chance of 1 in 3 succeeds):
+				now hdmode is 2;
+			else if FemaleList is warded and (ishunting is false or a random chance of 1 in 3 succeeds):
+				now hdmode is 1;
+		if hdmode is 1:				[male]
+			setmongender 3; [creature is male]
+			[project the figure of HornyDoctor_M_icon;]
+			now altcombat entry is "hump";
+		else:		[female]
+			setmongender 4; [creature is female]
+			now altcombat entry is "default";
+		if a random chance of 1 in 2 succeeds:
+			now loot entry is "libido suppressant";
+			now lootchance entry is 20;
+		else:
+			now loot entry is "healing booster";
+			now lootchance entry is 24;
+		[now BannedStatus entry is false;]
+		if Player is FemalePreferred:
+			now sex entry is "Female";
+		else if Player is HermPreferred:
+			now sex entry is "Both";
+		else if Player is MalePreferred:
+			now sex entry is "Male";
+		else if hdmode is 1:
+			now sex entry is "Female";
+		else:
+			now sex entry is "Male";
 
 Table of Random Critters (continued)
 NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
@@ -330,8 +326,7 @@ When Play begins:
 	now enemy title entry is ""; [ Name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name. ]
 	now enemy Name entry is ""; [ Specific name of unique enemy. ]
 	now enemy type entry is 0; [ 0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters. ]
-	now attack entry is "The [one of]dog[or]canine doctor[or]doggy doctor[or]infected doctor[or]horny hound[or][hdformname][at random]
-[one of]presses [if hdmode is 1]his[else]her[end if] stethoscope against your groin. BRrr! That's cold![or]gropes you lustfully while grinding [if hdmode is 1]his[else]her[end if] crotch against your leg.[or]strikes you hard on the temple, making your ear ring.[or]seems to know just where to grab and grope you to turn you on.[or]gives you a hard punch to the solar plexus.[or]manages to slip behind you and grab your ass with one paw while fondling you with the other.[at random]";
+	now attack entry is "The [one of]dog[or]canine doctor[or]doggy doctor[or]infected doctor[or]horny hound[or][hdformname][at random][one of]presses [if hdmode is 1]his[else]her[end if] stethoscope against your groin. BRrr! That's cold![or]gropes you lustfully while grinding [if hdmode is 1]his[else]her[end if] crotch against your leg.[or]strikes you hard on the temple, making your ear ring.[or]seems to know just where to grab and grope you to turn you on.[or]gives you a hard punch to the solar plexus.[or]manages to slip behind you and grab your ass with one paw while fondling you with the other.[at random]";
 	now defeated entry is "[beatthehornydoc]"; [ Text when monster loses. Change 'hornydoc' as above. ]
 	now victory entry is "[losetohornydoc]"; [ Text when monster wins. Change 'hornydoc' as above. ]
 	now desc entry is "[hornydocdesc]"; [ Description of the creature when you encounter it. ]
@@ -485,8 +480,6 @@ When Play begins:
 	[Clit Size Adjective is generated by a function and can be used in scenes: very small/small/average/large/very large]
 ]
 
-
-
 Section 3 - Heat
 
 Table of infection heat (continued)
@@ -494,11 +487,9 @@ infect name	heat cycle	heat duration	trigger text	description text	heat start	he
 "Horny Doctor"	7	2	"You moan as a heated need grows inside you from a quiver to a clenching emptiness in your cunt that you try in vain to fill with some fingers. Your canine womb has gone into estrus and your pussy drips with juices to advertise this fact. You are in heat."	--	--	--	"[hdoctorheat]"	true	true	"You moan as a heated need grows inside you from a quiver to a clenching emptiness in your bowels that you try in vain to fill with some fingers. Your hidden womb has gone into estrus and your need for a horny male to treat your condition only grows. Your altered body is in heat."
 
 to say hdoctorheat:
-	increase Libido of Player by 6;
+	raise Player Libido by 6;
 	if heatlevel is 3:
-		increase Libido of Player by 2;
-	if Libido of Player > 100, now Libido of Player is 100;
-
+		raise Player Libido by 2;
 
 Section 4 - Endings
 
@@ -512,25 +503,12 @@ This is the Horny Doctor Infection rule:
 		if humanity of Player < 10:
 			say "     As you lose your grip on your mind, a new set of instincts and thoughts replace your old memories. A lot of it is a jumble of medical knowledge that occupies your thoughts, drawing you to come to the city hospital. There you feel a need to work alongside the other canine doctors wandering the halls. They welcome you happily, and lustfully, as do the other denizens of the medical facility.";
 			if hospquest < 2:
-				if Player is herm:
-					say "     Following your new urges, you hump and are humped by many of the other canine doctors, breeding more of your kind. You end up claiming one of the offices as your own and making it your preferred place to [']confer['] with your peers or give your patients an in-depth [']examination[']. Your favorite though is when you're able to book one of the operating rooms for a medical orgy where you and some of the nurses and orderlies take turns sexing up a captured patient until the treatment is successful in turning them into another member of the staff.";
-				else if Player is impreg_ok:
-					say "     Following your new urges, you are humped by many of the other canine doctors, breeding more of your kind. You end up claiming one of the offices as your own and making it your preferred place to [']confer['] with your peers or give your patients an in-depth [']examination[']. Your favorite though is when you're able to book one of the operating rooms for a medical orgy where you and some of the nurses and orderlies take turns sexing up a captured patient until the treatment is successful in turning them into another member of the staff.";
-				else if Player is male:
-					say "     Following your new urges, you hump many of the other canine doctors, breeding more of your kind. You end up claiming one of the offices as your own and making it your preferred place to [']confer['] with your peers or give your patients an in-depth [']examination[']. Your favorite though is when you're able to book one of the operating rooms for a medical orgy where you and some of the nurses and orderlies take turns sexing up a captured patient until the treatment is successful in turning them into another member of the staff.";
-				else:
-					say "     Following your new urges, you are humped by many of the other canine doctors. You end up claiming one of the offices as your own and making it your preferred place to [']confer['] with your peers or give your patients an in-depth [']examination[']. Your favorite though is when you're able to book one of the operating rooms for a medical orgy where you and some of the nurses and orderlies take turns sexing up a captured patient until the treatment is successful in turning them into another member of the staff.";
+				say "     Following your new urges, you [if Player is male and (Player is female or Player is mpreg_ok) and Player is not sterile]hump and are humped by many of the other canine doctors, breeding more of your kind[else if Player is female and Player is not sterile]are humped by many of the other canine doctors, breeding more of your kind[else if Player is male and Player is not sterile]hump many of the other canine doctors, breeding more of your kind[else]are humped by many of the other canine doctors[end if]. You end up claiming one of the offices as your own and making it your preferred place to [']confer['] with your peers or give your patients an in-depth [']examination[']. Your favorite though is when you're able to book one of the operating rooms for a medical orgy where you and some of the nurses and orderlies take turns sexing up a captured patient until the treatment is successful in turning them into another member of the staff.";
 			else if hospquest < 13:
 				say "     Drawn by your instincts as a member of the hospital staff, you report back to Dr. Mouse. While you only vaguely remember him, he greets you with a smile and happily adds you to his hospital's staff. He assigns you to one of the vacant offices and has you direct a few of his exploratory teams. You rarely go out with these teams, instead focused on keeping tabs on their forays to capture new [']volunteers['] for his experiments as well as the occasional [']patient['] for you.";
-				if Player is male and (Player is femaleinterested or Player is not maleinterested):
-					say "     During one of these trips to accompany a team, needing to survey the situation at the college campus yourself, your team gets stormed by a muscular team of bunnies in sports gear. During the fray, you get tackled by a pair of them and dragged away from the group. By the time you regain consciousness, you are in a locker room surrounded by the bunnies, who take turns celebrating their capture. Having been treated by the mouse director, you resist physically changing and becoming another bunny like them, but that's not what they want anyhow. You are instead remade into their sexy team doctor, tending to their injuries and providing relief for their aching loins.";
-				else:
-					say "     During one of these trips to accompany a team, wanting to hand-pick the next set of test subjects for a crucial experiment, the team gets stormed by a pack of huskies. While the females keep the team occupied, their alpha male leader - tired of having his girls snatched up by the hospital raids - assaults you from behind and captures you. You get added to his little pack of fucktoy bitches as a Samoyed plaything to add some spice to his breeding bitches.";
+				say "     During one of these trips to accompany a team, [if Player is male and (Player is femaleinterested or Player is not maleinterested)]needing to survey the situation at the college campus yourself, your team gets stormed by a muscular team of bunnies in sports gear. During the fray, you get tackled by a pair of them and dragged away from the group. By the time you regain consciousness, you are in a locker room surrounded by the bunnies, who take turns celebrating their capture. Having been treated by the mouse director, you resist physically changing and becoming another bunny like them, but that's not what they want anyhow. You are instead remade into their sexy team doctor, tending to their injuries and providing relief for their aching loins[else]wanting to hand-pick the next set of test subjects for a crucial experiment, the team gets stormed by a pack of huskies. While the females keep the team occupied, their alpha male leader - tired of having his girls snatched up by the hospital raids - assaults you from behind and captures you. You get added to his little pack of fucktoy bitches as a Samoyed plaything to add some spice to his breeding bitches[end if].";
 			else if hospquest is 13 and HP of doctor mouse is 1:
-				say "     Drawn by your instincts as a member of the hospital staff, you report back to Dr. Mouse. While you only vaguely remember him, he somehow recognizes you readily and is cruelly pleased with your fate. Fully subservient to him now, he takes delight in ordering you around and using you for any twisted experiment he wants. Your body is changed over and over again in countless ways over the years and you are often used to mate with any new test subjects he captures for his amusement";
-				if Player is fpreg_ok or Player is mpreg_ok:
-					say ". You birth many bizarre, hybrid creatures from these matings";
-				say ". You do all this for him gladly, though never understanding why he is so mean to you, his loyal follower.";
+				say "     Drawn by your instincts as a member of the hospital staff, you report back to Dr. Mouse. While you only vaguely remember him, he somehow recognizes you readily and is cruelly pleased with your fate. Fully subservient to him now, he takes delight in ordering you around and using you for any twisted experiment he wants. Your body is changed over and over again in countless ways over the years and you are often used to mate with any new test subjects he captures for his amusement[if Player is not sterile]. You birth many bizarre, hybrid creatures from these matings[end if]. You do all this for him gladly, though never understanding why he is so mean to you, his loyal follower.";
 			else if hospquest is 13 and HP of doctor mouse is 2:
 				say "     The hospital is in disarray when you arrive, more like a bunch of seagulls squabbling over scraps than the orderly flock of birds flying in formation it once resembled. The various factions strike out at each other at times, but cooperate at others. Some sections, such as the doctors['] offices, are calm enough, but the cafeteria and other locations are frequent homes to squabbles over mates.";
 				if intelligence of Player >= 20 and charisma of Player >= 15 and "Expert Medic" is listed in feats of Player:
@@ -539,7 +517,7 @@ This is the Horny Doctor Infection rule:
 					increase score by 50;
 				else:
 					say "     It is only with the coming of the military that control is restored. The united threat of military action unites the factions, at least temporarily. And you would see that unity remain and head out into the city to search for a means to ensure this. Feeling the need to have someone in charge, you break from the defense and slip past the military lines. You find [if PlayerMet of Doctor Medea is false]a small clinic with a reptilian doctor performing[else]the small clinic where Dr. Medea performs[end if] gynecological work within its ruins. Armed with a syringe filled with tranquilizers and a need to do what must be done for the good of the hospital, you slip in and attack the lizard girl doctor. Being a rather weak creature and having preferred to hide rather than fight to survive, she is easily taken down and knocked out.";
-					say "     It is touch and go at times, but you manage to evade the increasing military activity and drag her back to the hospital[if Player is male]. You have a very enjoyable time welcoming her to the hospital[else]. You have a very enjoyable time watching one the male doctors welcome her to the hospital[end if], fucking her senseless until she's bonded to become part of the staff as your new leader. The lizard doctor fills her position well, maintaining the unity of the hospital after the military is repulsed. The hospital's medical work picks up again after that time, but now is largely focused towards breeding and fertility of its patients (voluntary and involuntary), resulting in an overall increase in creature numbers. This growth in population strains the military's capacity to hold back their tide until finally they spill forth in all directions.";
+					say "     It is touch and go at times, but you manage to evade the increasing military activity and drag her back to the hospital. You have a very enjoyable time [if Player is male]welcoming[else]watching one the male doctors welcome[end if] her to the hospital, fucking her senseless until she's bonded to become part of the staff as your new leader. The lizard doctor fills her position well, maintaining the unity of the hospital after the military is repulsed. The hospital's medical work picks up again after that time, but now is largely focused towards breeding and fertility of its patients (voluntary and involuntary), resulting in an overall increase in creature numbers. This growth in population strains the military's capacity to hold back their tide until finally they spill forth in all directions.";
 			else:
 				say "     Drawn by your instincts as a member of the hospital staff, you report back to Dr. Mouse. While you only vaguely remember him, he greets you with a smile and happily adds you to his hospital's staff. He puts you in charge of monitoring the other doctors on his staff. Obediently, you follow the mad doctor's orders and relay them to the other doctors while checking up or assisting them with their activities and [']patients[']. This often involves you sexing up the horny canines as their alpha as well as aiding in several operations or experiments of theirs[if susan is in hidden lab]. Susan, as Dr. Mouse's assistant, is there with him to help you and reward you with lustful sex[end if].";
 				say "     Once all the preparations have been made and the military is about to move, Dr. Mouse takes you[if susan is in hidden lab], Susan[end if] and your small selection of staff to escape through the service tunnels under the hospital. The rest of the staff and the helicopter crew act as a distraction, holding the hospital against the army and drawing their attention while the director makes his getaway. You all escape out of the city and Dr. Mouse sets up a new lab in secret. He begins selling off the fruits of his research to foreign powers and the growing factions of transformed creatures that form. He has you continue to act as his chief of staff, checking up on and assisting with their work when he is otherwise occupied.";
@@ -547,13 +525,12 @@ This is the Horny Doctor Infection rule:
 			if hospquest > 13:
 				say "     When you are rescued from the infected city by the military, they take you to a base they've set up for testing and processing of the infected. While you're being examined, often by doctors and technicians whom you feel have no clue what they're doing, you have to bite your tongue often. You pass yourself off as another random canine survivor rather than as a doctor yourself. As much as you'd like the opportunity to join their staff and get your paws on their records, it is far more likely you'd be interrogated and monitored in regards to the strange activity at the hospital. Using your innate medical knowledge, you do know how to fool several of their tests as well as avoid receiving the treatment to render you non-infectious by fudging the results.";
 				if "Expert Medic" is listed in feats of Player:
-					say "     Once you're cleared, you travel to a small town and establish a private practice. At first, the residents are a little leery of the transformed doctor, but you gradually become accepted after a few residents come see you for their ailments rather than traveling to the city. As word gets around that you're a good doctor, the town starts to accept you and your practice blossoms. And once you've earned their trust, then you start to gradually and secretly infect your patients[if Player is not neuter]. With some you have to slip some of your sexual fluids into their treatment, though others you get to fuck outright in your examination room[else]. With most you have to slip some of your nanites into their treatment, though with a few you're able to entice into oral sex in your examination room[end if]. By the time people are starting to show outward signs, almost everyone's been infected, either directly or indirectly by you, and the whole town becomes populated by horny dog patients, eager for [']treatment['] by their favorite doctor.";
+					say "     Once you're cleared, you travel to a small town and establish a private practice. At first, the residents are a little leery of the transformed doctor, but you gradually become accepted after a few residents come see you for their ailments rather than traveling to the city. As word gets around that you're a good doctor, the town starts to accept you and your practice blossoms. And once you've earned their trust, then you start to gradually and secretly infect your patients. With [if Player is not neuter]some you have to slip some of your sexual fluids into their treatment, though others you get to fuck outright[else]most you have to slip some of your nanites into their treatment, though with a few you're able to entice into oral sex[end if] in your examination room. By the time people are starting to show outward signs, almost everyone's been infected, either directly or indirectly by you, and the whole town becomes populated by horny dog patients, eager for [']treatment['] by their favorite doctor.";
 				else:
 					say "     Once you're cleared, you gather some resources and take to the road as a traveling doctor. Only possessing a mish-mash of medical knowledge from your infection and what extra you can pick up from some books and journals you find, you are more quack than true doctor. You offer a variety of sexual healing, anti-nanite [']cures['] and other quackery. You trick a few rubes, make a few bucks and get a few fucks before leaving town with some doggy-infected people[if Player is not sterile] and puppies[end if] in your wake. Early on, it is difficult for you to get by, but as time goes on and the infection spreads, it becomes easier for you. You are increasingly treated as a show that people will willingly fall for, especially in towns you frequent regularly and have sown full of horny canines like yourself, often getting to fuck your [']patients['] right on stage for the audience as proof of your wondrous [']medical['] techniques.";
 			else if "Expert Medic" is listed in feats of Player:
 				say "     After being rescued by the military forces, you are brought to the base they've set up for the testing and processing of the infected. While you are being examined, you can't help but become an active participant in their testing. The medical knowledge you have, while somewhat jumbled or distorted in places, gives you some insight into what is being done and what you can do to help with their tests (or fool them, as needed). They are a little cautious at first but, being understaffed, they add you to their staff after a thorough clearance process by the military staff. While you're only cleared to assist with a few of the simpler tasks, the other doctors get lax over time as no issues seem to arise. Generally, you do very good work, though you do fudge a few things when it's convenient to you or to earn a sexual favor from one of the infected you're processing. Once the city clean-up attempt comes to an end, you use the contacts you've built up with the doctors and scientists to get hired on by Zephyr as part of their staff. The work with them is much the same, though for actual pay and greater opportunity for sex. While not strictly allowed by company policy, your coworkers are quite willing to turn a blind eye to your proclivities, fully knowing you'll afford them the same courtesy.";
 			else:
 				say "     After being rescued by the military forces, you are brought to the base they've set up for testing and processing of the infected. While you are being examined, the jumble of medical knowledge you've picked up from your infection helps you understand the tests they're doing (and even fool them as necessary). You comment and discuss the procedures, but your distorted knowledge often has you thinking there should be some sexual bent to what should be done. While it's clear to the staff that you aren't qualified to assist them, a couple of them do find your kinky ideas of medical sex play interesting and discreetly take you up on them after hours. By the time of your release, you've become well-acquainted with several of the doctors and scientists in this manner. You remain in contact with them and visit them often for roleplay sex or for some of their kinkier experiments to avoid requesting volunteers through proper channels. This gives you a lot of fun as well as a fair bit of money under the table.";
-
 
 Horny Doctor ends here.

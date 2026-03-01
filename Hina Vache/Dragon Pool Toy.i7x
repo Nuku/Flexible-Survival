@@ -249,7 +249,6 @@ Section 3 - Bound State
 
 to DragonPoolToyBind:		[Modified bound state that does not use lust or sanity]
 	setmonster "Dragon Pool Toy";
-	now calcnumber is -1;
 	let Trixieexit be 0;
 	while Trixieexit is 0:
 		if clearnomore is 0:
@@ -258,8 +257,7 @@ to DragonPoolToyBind:		[Modified bound state that does not use lust or sanity]
 		now obliging is true;
 		checkboundrecover;
 		if boundcounter is 3:
-			say "     You groan as the yellow soon completely encapsulates you, no amount of the purple innards of the dragon's cunt visible anymore. Knocking on the object confirms your suspicions. The dragon has created some sort of plastic egg around you, golden in color. You're unsure what the purpose of this egg is, but it cannot be good. Good news is, you hear a soft thump as your surroundings shake. The beast must have laid you and is walking away, if the muffled squeaks are any indication.";
-			LineBreak;
+			say "     You groan as the yellow soon completely encapsulates you, no amount of the purple innards of the dragon's cunt visible anymore. Knocking on the object confirms your suspicions. The dragon has created some sort of plastic egg around you, golden in color. You're unsure what the purpose of this egg is, but it cannot be good. Good news is, you hear a soft thump as your surroundings shake. The beast must have laid you and is walking away, if the muffled squeaks are any indication.[paragraph break]";
 			now boundsegment is 0;
 			now boundcounter is 0;
 			now struggleatt is 0;
@@ -281,7 +279,7 @@ to DragonPoolToyBind:		[Modified bound state that does not use lust or sanity]
 			if the player's command matches "[number]":
 				now keychar is "[number understood]";
 		LineBreak;
-		if keychar in lower case exactly matches the text "s" or keychar in lower case exactly matches the text "1" or keychar in lower case exactly matches the text "return" or keychar in lower case matches the text "struggle":
+		if keychar is "s" or keychar is "1" or keychar is "return" or keychar in lower case matches the text "struggle":
 			increase struggleatt by 1;
 			if boundsegment is 1:
 				if struggleatt is 1:
@@ -306,8 +304,7 @@ to DragonPoolToyBind:		[Modified bound state that does not use lust or sanity]
 			if Trixieexit is 0:
 				LineBreak;
 				wait for any key;
-			next;
-		else if (obliging is true and (keychar in lower case exactly matches the text "o" or keychar in lower case matches the text "oblige")) or (obliging is false and (keychar in lower case exactly matches the text "a" or keychar in lower case matches the text "abide")) or keychar in lower case exactly matches the text "2":
+		else if (obliging is true and (keychar is "o" or keychar in lower case matches the text "oblige")) or (obliging is false and (keychar is "a" or keychar in lower case matches the text "abide")) or keychar is "2":
 			if obliging is true:
 				if boundsegment is 1:
 					say "     You decide that you are actually in a spot that you would like to be. Maybe being in an egg wouldn't be so bad.";
@@ -324,8 +321,8 @@ to DragonPoolToyBind:		[Modified bound state that does not use lust or sanity]
 				say "     Invalid command. Please report this error on the Discord server.";
 			LineBreak;
 			wait for any key;
-			next;
-		say "Invalid action.";
+		else:
+			say "Invalid action.";
 
 to say DragonPoolToyStruggleBar:
 	if boundsegment is 1:

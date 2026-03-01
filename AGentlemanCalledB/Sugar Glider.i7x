@@ -15,15 +15,14 @@ to say losetoSugarGlider:
 			say "     Giving up on resisting the sweet marsupial, you allow her to push you to the ground in her eagerness, stripping you of your clothing and gear in the process. 'Yay! Let's have some fun, you stinky [one of]soda jerk[or]fizz head[or]carbonated tube rat[or]candy hoarder[or]pop guzzler[at random],' she says with a giggle.";
 		else:		[steal before]
 			say "     Beaten by the giggling marsupial, you are unable to continue resisting her. She pushes you to the ground, stripping you of your clothing and gear in the process. 'You [one of]soda jerks[or]fizz heads[or]carbonated tube rats[or]candy hoarders[or]pop guzzlers[at random] don't normally put up nearly so much of a fight. You must really be holding out on me.' She leans in closer, giving you an exaggerated, inquiring look before grinning and licking her long tongue across your cheek. 'Is that it? Got lots of candy you're trying to hide? I think you're holding out on me, honey,' she says with a playful giggle while her paws and bushy tail run tickling across your body.";
-			say "     Despite yourself, you can't help but squirm and laugh at the frantic tickling. In the throes of laughter, you can't resist as she paws through your stuff with one paw while the other and her tail keep you giggling";
 			if carried of chips > 0:
-				say ". Finding your stash of snacks, she swipes some with an exaggerated 'Ah-ha!' and stashes it away. Having claimed her prize, she turns her attention to you now, eager to celebrate her find.";
+				say "     Despite yourself, you can't help but squirm and laugh at the frantic tickling. In the throes of laughter, you can't resist as she paws through your stuff with one paw while the other and her tail keep you giggling. Finding your stash of snacks, she swipes some with an exaggerated 'Ah-ha!' and stashes it away. Having claimed her prize, she turns her attention to you now, eager to celebrate her find.";
 				ItemLoss chips by 1;
 			else if carried of soda > 0:
-				say ". Finding your stash of snacks empty, she instead turns her attention to your pop and swipes one. 'Well, since you've not got any candy for me, I guess I'll take this instead.' She gives your cheek another lick. 'Oh, don't worry, hon. I'll stop by later and trade it back for some sweet, sweet candy.' That said, she turns her attention to you now, eager to celebrate her find.";
+				say "     Despite yourself, you can't help but squirm and laugh at the frantic tickling. In the throes of laughter, you can't resist as she paws through your stuff with one paw while the other and her tail keep you giggling. Finding your stash of snacks empty, she instead turns her attention to your pop and swipes one. 'Well, since you've not got any candy for me, I guess I'll take this instead.' She gives your cheek another lick. 'Oh, don't worry, hon. I'll stop by later and trade it back for some sweet, sweet candy.' That said, she turns her attention to you now, eager to celebrate her find.";
 				ItemLoss soda by 1;
 			else:
-				say ". Finding your stash of snacks empty, she mock-pouts and grinds her twin cunts against your leg. 'Nothing for me at all? How about some sweet sex then, you [one of]soda jerk[or]fizz head[or]carbonated tube rat[or]candy hoarder[or]pop guzzler[at random]?' she says with a giggle as she turns her attention back to your body.";
+				say "     Despite yourself, you can't help but squirm and laugh at the frantic tickling. In the throes of laughter, you can't resist as she paws through your stuff with one paw while the other and her tail keep you giggling. Finding your stash of snacks empty, she mock-pouts and grinds her twin cunts against your leg. 'Nothing for me at all? How about some sweet sex then, you [one of]soda jerk[or]fizz head[or]carbonated tube rat[or]candy hoarder[or]pop guzzler[at random]?' she says with a giggle as she turns her attention back to your body.";
 			WaitLineBreak;
 		say "     ";
 	else:
@@ -69,37 +68,34 @@ to say losetoSugarGlider:
 			say "     It is then that you notice that your pack has been rifled through by the sneaky sugar glider while you were having sweet, syrupy sex together. Thankfully, there doesn't seem like anything's been taken. Looking towards the departing figure, you see her turn and [one of]make a rude gesture[or]flick her tail teasingly[or]blow you a raspberry[or]give her rear a shake[at random] before disappearing from sight.";
 
 to say beattheSugarGlider:
-	say "     Beaten, the giggling sugar glider falls to the ground. She looks up at you with a coy grin, putting her body on display as she traces a finger along the outer lips of each of her cunts, trying to entice you to take part in a different game";
 	if nosugarglidersex > 2:
-		say ", but you have little interest in the ditzy marsupial. As with the others of her kind before her, you shake your head and turn to leave. She gives you a cute scowl and blows a long raspberry at you before getting up and [one of]skipping off into the midway[or]scampering up a nearby light post and gliding off over the stalls[or]climbing a nearby stall and bounding off across the rooftops[at random].";
+		say "     Beaten, the giggling sugar glider falls to the ground. She looks up at you with a coy grin, putting her body on display as she traces a finger along the outer lips of each of her cunts, trying to entice you to take part in a different game, but you have little interest in the ditzy marsupial. As with the others of her kind before her, you shake your head and turn to leave. She gives you a cute scowl and blows a long raspberry at you before getting up and [one of]skipping off into the midway[or]scampering up a nearby light post and gliding off over the stalls[or]climbing a nearby stall and bounding off across the rooftops[at random].";
 	else if Player is not neuter and ( Libido of Player > 40 or BodyName of Player is "Sugar Ferret" or FaceName of Player is "Sugar Ferret" or BodyName of Player is "Sugar Glider" or FaceName of Player is "Sugar Glider" ):
-		say " and the sexy display is quite tempting. Will you take part in some fun with the beaten sugar glider? (Y/N)[line break]";
+		say "     Beaten, the giggling sugar glider falls to the ground. She looks up at you with a coy grin, putting her body on display as she traces a finger along the outer lips of each of her cunts, trying to entice you to take part in a different game and the sexy display is quite tempting. Will you take part in some fun with the beaten sugar glider?";
 		if Player consents:
 			LineBreak;
 			now nosugarglidersex is 0;
-			say "     Deciding to have some fun with the eager glider, you drop your gear and move towards her";
 			if Player is male and a random chance of 1 in 3 succeeds:	[fellatio]
-				say " front. She gives a disappointed squeak as you grab her head and pull it towards your crotch instead of using your manhood to satisfy her need, but you're more in the mood for some quick, oral relief. Despite not getting what she wanted, the horny marsupial smiles and seems quite pleased to lavish attention upon your [Cock of Player] cock[smn].";
+				say "     Deciding to have some fun with the eager glider, you drop your gear and move towards her front. She gives a disappointed squeak as you grab her head and pull it towards your crotch instead of using your manhood to satisfy her need, but you're more in the mood for some quick, oral relief. Despite not getting what she wanted, the horny marsupial smiles and seems quite pleased to lavish attention upon your [Cock of Player] cock[smn].";
 				say "     Her saliva smells sweet and is a little sticky, but that tongue of hers is a delight. The long, dexterous tongue slips out and runs across your maleness, licking your manhood and balls. You are soon fully hard and dripping precum across your lustful prize's lips. She welcomes your [cock size desc of Player] cock into her muzzle, sucking at it greedily while her paws grip your ass. The sugary scent of the horny girl has gotten you quite excited and you thrust firmly into her slick muzzle while running your fingers through her cotton-candy fur until you cum with a groan of ecstasy. The sexy marsupial swallows down your load, the scent of her arousal growing much stronger in the air as she orgasms as well, leaving wet patches of her juices on the ground and running down her thighs as she fingers her twin pussies to satisfy herself.";
 				CreatureSexAftermath "Sugar Glider" receives "OralCock" from "Player";
 				WaitLineBreak;
 				say "     Having been fed a tasty treat and had a crashing climax of her own, the sugar glider's soft form goes limp, her long tail slipping off your body as she basks in the afterglow of her orgasm. Pulling your still-twitching member from her syrupy muzzle, you take a moment to wipe it across her soft fur. You gather up your things, give her unfucked holes a teasing fingering and grin at her needy moans. You head off with a noticeable spring in your step after the sugary encounter.";
 			else if Player is male:
-				say " supine form. With a cheer she spreads her legs before you, and with her dual cunts now on full display, you quickly move over the giggling glider and find yourself pulled into a tight hug. Her long, sugary sweet tongue slips into your mouth as she kisses you deeply, her sickly sweet taste making you a bit lightheaded and giggly.";
+				say "     Deciding to have some fun with the eager glider, you drop your gear and move towards her supine form. With a cheer she spreads her legs before you, and with her dual cunts now on full display, you quickly move over the giggling glider and find yourself pulled into a tight hug. Her long, sugary sweet tongue slips into your mouth as she kisses you deeply, her sickly sweet taste making you a bit lightheaded and giggly.";
 				if Cock Count of Player is 1: [Male w/single cock]
 					say "     When she finally releases you, you quickly set about aligning your [Cock of Player] shaft with one of her drooling cunts before plunging into her. Your lovely companion squeals in delight and her long tail wraps around your body, enveloping you in a warm, soft embrace. Noticing her poor empty second cunt before you start thrusting, you plunge a pair of fingers into the syrupy folds just as you start pulling back, alternating between driving your shaft into her and driving your fingers into her depths in a slow, steady rhythm.";
 					WaitLineBreak;
 					say "     The excited giggles of the sugar glider soon give way to long moans of pleasure, her delightful squeezing folds gripping your member tightly as she rapidly approaches climax. With an adorable squeal the sugar glider reaches her peak, her feminine passage clamping down around your cock as her orgasm hits, pushing you over the edge as well. With a groan you blow you [Cum Load Size of Player] load into her body as her paws stroke her candy furred belly in satisfaction.";
 					say "     Sated, the sugar glider's soft form goes limp, her long tail slipping off your body as she basks in the afterglow of her climax. Pulling your still-twitching member from her syrupy folds, you take a moment to lick the delightfully sweet mess from your hand before gathering your things and departing, a noticeable spring in your step after the sugary encounter.";
 					CreatureSexAftermath "Sugar Glider" receives "PussyFuck" from "Player";
-				else if Cock Count of Player > 1: [Male w/multiple cocks]
+				else: [Male w/multiple cocks]
 					say "     When she finally releases you, you quickly set about aligning your [Cock of Player] shafts with her drooling cunts before plunging into her. Your lovely companion squeals in delight and her long tail wraps around your body, enveloping you in a warm, soft embrace. The delightful squeezing of her cunts alternates between your shafts, ensuring you don't get a moment of relief from the pleasurable sensation as your slow, steady rhythm builds. Soon the excited giggles of the sugar glider give way to long moans of pleasure. With an adorable squeal the sugar glider reaches her peak, her feminine passage clamping down around your cocks as her orgasm hits, pushing you over the edge as well. With a groan you blow you [Cum Load Size of Player] load into her body as her paws stroke her candy furred belly in satisfaction.";
 					CreatureSexAftermath "Sugar Glider" receives "PussyFuck" from "Player";
 					WaitLineBreak;
 					say "     Sated, the sugar glider's soft form goes limp, her long tail slipping off your body as she basks in the afterglow of her climax. She pouts a little as you pull your still-twitching members from her syrupy folds, but does little else to resist you leaving as you gather your things and depart, leaving the sugary marsupial to recover on her own.";
 			else: [Female]
 				say "     With a cheer, she springs to her knees, nearly knocking you over with her enthusiasm as she buries her muzzle between your thighs. Carefully letting yourself fall to the ground, you lay on your back and spread your legs, allowing the excited marsupial easier access to your needy cunt.";
-				WaitLineBreak;
 				say "     Her long wet tongue makes several slow passes across your outer lips before she presses her snout against your cunt and delves deep into your womanly passage with her dexterous tongue. You moan in delight as she works deeper and deeper into your body, her nose rubbing delightfully against your clit as her talented tongue seems to stretch like taffy, pressing into your innermost depths. You cry out loud in delight as she rapidly drives you to climax, soaking your lovely companion's muzzle in your feminine nectar as you orgasm powerfully.";
 				say "     Even in the afterglow of your climax, you moan at the delightful shivers the sugar glider's tongue sends through your body as it slowly slides out of your depths. She pulls her muzzle from your cunt with a wet slurp, doing her best to clean your female juices from her matted pink fur as she moves over your supine body. As her face reaches your own, the sugar glides presses her muzzle to your lips, her long tongue slipping into your mouth, filling it with the sugary taste of her own saliva mixed with your own musky fluids before she springs to her feet and [one of]skips off into the midway[or]scampers up a nearby light post and glides off over the stalls[or]climbs a nearby stall and bounds off across the rooftops[at random], but not before pulling a [one of]lollipop[or]jaw breaker[or]piece of saltwater taffy[at random] from her pouch and slipping it into your mouth with a smile.";
 				CreatureSexAftermath "Sugar Glider" receives "OralPussy" from "Player";
@@ -108,7 +104,7 @@ to say beattheSugarGlider:
 			increase nosugarglidersex by 1;
 			say "     Deciding to leave the ditzy marsupial be, you shake your head at her and turn to leave. She gives you a cute scowl and blows a long raspberry at you before getting up and [one of]skipping off into the midway[or]scampering up a nearby light post and gliding off over the stalls[or]climbing a nearby stall and bounding off across the rooftops[at random].";
 	else:
-		say ", but you decide to let the ditzy marsupial be. You shake your head at her and turn to leave. She gives you a cute scowl and blows a long raspberry at you before getting up and [one of]skipping off into the midway[or]scampering up a nearby light post and gliding off over the stalls[or]climbing a nearby stall and bounding off across the rooftops[at random].";
+		say "     Beaten, the giggling sugar glider falls to the ground. She looks up at you with a coy grin, putting her body on display as she traces a finger along the outer lips of each of her cunts, trying to entice you to take part in a different game, but you decide to let the ditzy marsupial be. You shake your head at her and turn to leave. She gives you a cute scowl and blows a long raspberry at you before getting up and [one of]skipping off into the midway[or]scampering up a nearby light post and gliding off over the stalls[or]climbing a nearby stall and bounding off across the rooftops[at random].";
 
 to say SugarGliderdesc:
 	say "     Before you is a peculiar looking rodent-like creature, with large dark eyes, swiveling ears and a thick tail almost as long as she is tall. Her brightly colored fur is primarily pink, with a light blue belly and chest, as well as a blue stripe from the tip of her nose down her back and tail. Even from a distance you can smell the sugary sweetness of her cotton-candy-like hide.";
@@ -305,6 +301,8 @@ When Play begins:
 	[Clit Size Adjective is generated by a function and can be used in scenes: very small/small/average/large/very large]
 ]
 
+Section 3 - Definitions
+
 Definition: a person is sugargliderskinned:
 	if SkinName of Player is "Sugar Glider", yes;
 	no;
@@ -325,13 +323,14 @@ Definition: a person is sugargliderfaced:
 	if FaceName of Player is "Sugar Glider", yes;
 	no;
 
-Section 3 - Crushed Candy
+Section 4 - Crushed Candy
 
 Table of Game Objects (continued)
 name	desc	weight	object
 "crushed candies"	"A small pile of broken bits of candy."	0	crushed candies
 
 crushed candies is a grab object. crushed candies is infectious. Strain of crushed candies is "Sugar Glider".
+the scent of crushed candies is "The crumbled candy smells unsurprisingly sweet.".
 Usedesc of crushed candies is "[crushedcandiesuse]".
 
 to say crushedcandiesuse:
@@ -347,9 +346,7 @@ to say crushedcandiesuse:
 	increase morale of Player by 1;
 	raise Player Libido by 8;
 
-the scent of crushed candies is "The crumbled candy smells unsurprisingly sweet.".
-
-Section 4 - Endings [Awaiting sugar ferret tie ins]
+Section 5 - Endings [Awaiting sugar ferret tie ins]
 
 [
 Table of GameEndings (continued)

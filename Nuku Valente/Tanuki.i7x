@@ -17,23 +17,13 @@ Shinto Shrine	"Shinto Shrine"
 
 Shinto Shrine is a room. "     How odd for an American city. A shinto shrine lays nestled in a small bamboo forest in this part of the park, tucked just off a narrow gravel trail and looking reasonably well kept. It is made of stone and features a number of carved pillars holding up a typically Japanese roof, gently curved and crowned by forked roof finials. In the midst of the structure, a large bronze mirror disc rests on an elaborate half-circular stand. There is a small box for donations, and a miniature iron mallet beside a bell. Perhaps it could be [bold type]rung[roman type]? The air smells of cherry blossoms and spring. You feel safe here.[line break]".
 Shinto Shrine is northwest of Park Trail.
-
+The invent of Shinto Shrine is { "tanuki coin" }.
 Scent of Shinto Shrine is "     The shrine smells faintly of cherry blossoms and spring. The scent puts you at ease.".
 
-The invent of Shinto Shrine is { "tanuki coin" }.
-
-SatisfiedTanuki is a number that varies. SatisfiedTanuki is usually 5.
 Shinto Shrine has a Grab Object called Demand.
 The demand of Shinto Shrine is usually journal.
-Tanuki Mom is a female person.
-
-[tanukiList is a list of objects that varies. [@Tag:NotSaved]]
-the tanukiList is always {medkit, dirty water, water bottle, dog milk, soda, chips, glob of goo, food, gryphon milk, distilled milk, libido pill, acid milk, batcubus milk, cheetah milk, cow milk, margay milk, blue gel, cheese, musky cock flower, lembas bread, mammoth jerky, pink gel, pita bread, purple gel, psionic egg, psionic larva, skunk goo, sticky sushi, tentacle tip, awesome fruit, awesomer fruit, awesomest fruit, wyvern goop, centaur cum, earthen seed, demon seed, fennec semen, gecko cum, hawkman male cum, orc cum, gryphon cum, pewter seed, rhino cum, sea dragon cum, smilodon cum, wolf cum, orc femcum, mead horn, orc brew, pony cider, satyr wine, Satyress Wine, egg nog, sports drink, chocolate milk, tasty peach, birth control pill, fertile pill, pepperspray, glowing mushroom, estosterogen pill, eagle feather, honeycomb, behemoth horn, testosterone pill, centaur hair, corota venom, tuft of chin fur, dolphin milk, dryad cum, ebonflame scale, elk antler, lucky horseshoe, glowing ember, foul scuttler spit, red fur, hermaid kelp, libido suppressant, stray links, Spotted fur, peacock feather, nullifying powder, cock pill, healing booster, Tasty Fish, Pegasus Quill, pirate bandana, tousky quill, tainted wool, Tiger patch, Chipped tooth, spider webbing, spidertaur hair, pixie dust, crushed candies, estrogen pill, dragon scale, dragon hair, zebra fur, lizard juice}.
-demandIndex is a number that varies.
-Tanukigender is a number that varies. Tanukigender is usually -1.
 
 There is a donation box and ornate bell in Shinto Shrine.
-
 Description of ornate bell is "     A small ornate bell. Next to it, a small ornate hammer hangs on a string.[line break]".
 Description of donation box is "     A small, empty, box, awaiting donations to the spirits, or whomever maintains this place.[line break]".
 
@@ -50,6 +40,7 @@ Tanukibell	"Tanukibell"
 Tanukibell is a situation.
 ResolveFunction of Tanukibell is "[ResolveEvent Tanukibell]".
 Sarea of Tanukibell is "Nowhere".
+Tanukigender is a number that varies. Tanukigender is usually -1.
 
 to say ResolveEvent Tanukibell:
 	if Tanukigender is -1:
@@ -74,6 +65,11 @@ to say ResolveEvent Tanukibell:
 		say "     'Didn't I tell you not to ring that?' They wave a finger at you admonishingly. 'What am I going to do with you? Go to your room!' With a flurry of leaves, your vision is lost a moment before you find yourself somewhere else.";
 		wait for any key;
 		now the player is in bunker;
+
+SatisfiedTanuki is a number that varies. SatisfiedTanuki is usually 5.
+demandIndex is a number that varies.
+[tanukiList is a list of objects that varies.[@Tag:NotSaved]]
+the tanukiList is always {medkit, dirty water, water bottle, dog milk, soda, chips, glob of goo, food, gryphon milk, distilled milk, libido pill, acid milk, batcubus milk, cheetah milk, cow milk, margay milk, blue gel, cheese, musky cock flower, lembas bread, mammoth jerky, pink gel, pita bread, purple gel, psionic egg, psionic larva, skunk goo, sticky sushi, tentacle tip, awesome fruit, awesomer fruit, awesomest fruit, wyvern goop, centaur cum, earthen seed, demon seed, fennec semen, gecko cum, hawkman male cum, orc cum, gryphon cum, pewter seed, rhino cum, sea dragon cum, smilodon cum, wolf cum, orc femcum, mead horn, orc brew, pony cider, satyr wine, Satyress Wine, egg nog, sports drink, chocolate milk, tasty peach, birth control pill, fertile pill, pepperspray, glowing mushroom, estosterogen pill, eagle feather, honeycomb, behemoth horn, testosterone pill, centaur hair, corota venom, tuft of chin fur, dolphin milk, dryad cum, ebonflame scale, elk antler, lucky horseshoe, glowing ember, foul scuttler spit, red fur, hermaid kelp, libido suppressant, stray links, Spotted fur, peacock feather, nullifying powder, cock pill, healing booster, Tasty Fish, Pegasus Quill, pirate bandana, tousky quill, tainted wool, Tiger patch, Chipped tooth, spider webbing, spidertaur hair, pixie dust, crushed candies, estrogen pill, dragon scale, dragon hair, zebra fur, lizard juice}.
 
 ringing is an action applying to nothing.
 understand "rung" and "ring" and "ring ornate/-- bell" and "ring ornate/-- bell with hammer" as ringing.
@@ -234,12 +230,12 @@ carry out breastshrinking:
 
 Section 2 - Creature Insertion
 
-Table of CombatPrep (continued)
+[Table of CombatPrep (continued)
 name(text)	PrepFunction(text)
 "Tanuki"	"[PrepCombat_Tanuki]"
 
 to say PrepCombat_Tanuki:
-	say "";
+	say "";]
 
 Table of Random Critters (continued)
 NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
@@ -260,10 +256,10 @@ When Play begins:
 	now enemy title entry is ""; [ Name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name. ]
 	now enemy Name entry is ""; [ Specific name of unique enemy. ]
 	now enemy type entry is 0; [ 0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters. ]
-	now attack entry is "";
-	now defeated entry is "";
-	now victory entry is "";
-	now desc entry is ""; [ Description of the creature when you encounter it.]
+	now attack entry is "[NonCombatError]";
+	now defeated entry is "[NonCombatError]";
+	now victory entry is "[NonCombatError]";
+	now desc entry is "[NonCombatError]"; [ Description of the creature when you encounter it.]
 	now face entry is "sleek muzzled with a raccoon's mask and set of large expressive ears"; [ Face description, format as "Your face is [Face of Player]." ]
 	now body entry is "somewhat pudgy and oddly animal-like, like a cartoon rendition of some kind of raccoon perhaps"; [ Body Description, format as "Your Body is [Body of Player]." ]
 	now skin entry is "[one of]tanuki colored[or]stripe furred[at random]"; [ Skin Description, format as "Looking at yourself, your body is covered in [Skin of Player] skin." ]
@@ -280,7 +276,7 @@ When Play begins:
 	now per entry is 14;
 	now int entry is 8;
 	now cha entry is 19;
-	now sex entry is "nochange"; [- Defines which sex the infection will try and make you. current options are "Male" "Female" "Both"-]
+	now sex entry is "Nochange"; [- Defines which sex the infection will try and make you. current options are "Male" "Female" "Both"-]
 	now HP entry is 64; [- How many HP has the monster got? -]
 	now lev entry is 5; [- Level of the Monster, you get this much HP if you win, or this much HP halved if you loose -]
 	now wdam entry is 10; [-Amount of Damage monster Does when attacking.-]
@@ -430,30 +426,25 @@ Section 3 - Tanuki Coin
 
 Table of Game Objects (continued)
 name	desc	weight	object
-"tanuki coin"	"[tancoindesc]"	1	tanuki coin
-
-to say tancoindesc:
-	say "A strange, solid gold coin. It's fairly heavy and quite worn. On one side there appears to be a leaf, while on the other an eastern dragon, which circles around the outer edge of its face, with its tail curving at the bottom to go straight up and occupy the center. It's warm to the touch, but doesn't feel particularly infectious.";
-
-the scent of tanuki coin is "It has a benign, metallic smell about it.".
+"tanuki coin"	"A strange, solid gold coin. It's fairly heavy and quite worn. On one side there appears to be a leaf, while on the other an eastern dragon, which circles around the outer edge of its face, with its tail curving at the bottom to go straight up and occupy the center. It's warm to the touch, but doesn't feel particularly infectious."	1	tanuki coin
 
 tanuki coin is a grab object. It is fast. It is not temporary. Usedesc of tanuki coin is "[usetancoin]".
+the scent of tanuki coin is "It has a benign, metallic smell about it.".
 
 to say usetancoin:
-	say "     You flip the coin";
 	if internalCockbypass is false:
-		say "... It lands leaf-side up";
+		say "     You flip the coin... It lands leaf-side up. You feel a strange, tingling sensation in your groin";
 		if Player is not male or (Player is male and CockName of Player is not listed in infections of InternalCockList):
-			say ". You feel a strange, tingling sensation in your groin, but nothing else happens. Strange...";
+			say ", but nothing else happens. Strange...";
 		else:
-			say ". You feel a strange, tingling sensation in your groin. Checking yourself, it appears your balls have grown back, in spite of your previously internal anatomy!";
+			say ". Checking yourself, it appears your balls have grown back, in spite of your previously internal anatomy!";
 		now internalCockbypass is true;
 	else:
-		say "... It lands dragon-side up";
+		say "     You flip the coin... It lands dragon-side up. You feel a strange, tingling sensation in your groin";
 		if Player is not male or (Player is male and CockName of Player is not listed in infections of InternalCockList):
-			say ". You feel a strange, tingling sensation in your groin, but nothing else happens. Strange...";
+			say ", but nothing else happens. Strange...";
 		else:
-			say ". You feel a strange, tingling sensation in your groin. Checking yourself, it appears your balls have disappeared, receding once more in compliance with your internal infection!";
+			say ". Checking yourself, it appears your balls have disappeared, receding once more in compliance with your internal infection!";
 		now internalCockbypass is false;
 
 Section 4 - Tanuki Dad
@@ -464,7 +455,6 @@ Tanuki Dad	"Tanuki Dad"
 Tanuki Mom	"Tanuki Mom"
 
 Tanuki Dad is a male person.
-TanukiTopics is a list of text that varies.
 ScaleValue of Tanuki Dad is 4. [large sized]
 Body Weight of Tanuki Dad is 8. [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
 Body Definition of Tanuki Dad is 3. [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
@@ -499,17 +489,16 @@ PenileVirgin of Tanuki Dad is true.
 SexuallyExperienced of Tanuki Dad is false.
 TwistedCapacity of Tanuki Dad is true. [Twisted Characters can take any penetration, no matter the size]
 Sterile of Tanuki Dad is true. [steriles can't knock people up]
-MainInfection of Tanuki Dad is "".
+MainInfection of Tanuki Dad is "Tanuki".
 Description of Tanuki Dad is "[TanukiDadDesc]".
-Conversation of Tanuki Dad is { "I hope you are ready for grade A parenting. I have so much to teach you! First lesson, don't ring the bell anymore." }.
-[The icon of Tanuki Dad is Figure of Jason_clothed_icon.]
+fuckscene of Tanuki Dad is "     He bursts into a merry fit of laughter. 'I'm your father, not your boyfriend. There is a difference.' He wags a finger at you reprimandingly. 'I know people look at these big things, but they are my tools, not my masters.'[line break]".
+The icon of Tanuki Dad is Figure of Tanuki_Dad_soft_icon.
+Scent of Tanuki Dad is "     He smells clean, if you don't mind the scent of fur and a bit of saki that clings to him. Noticing your attention, he grins. You would think this would be hard to notice, since grinning is his default expression, but there is a difference.".
+TanukiTopics is a list of text that varies.
 
 to say TanukiDadDesc:
-	project Figure of Tanuki_Dad_soft_icon;
 	say "     The tanuki spirit here has taken on the form of a father. You can tell, with the sharp blazer he's wearing with that big bold tie. He has his hands on either side of it, grinning at you proudly, his child. His belly is considerable, bulging in his clothing. Competing for the bulging contest, his great balls resist even the thought of trying to fit into any pants, so they are allowed to hang free, furry and virile. Compared to them, his furry sheath is actually comparatively small, not that he seems to care much.";
 	add "Tanuki Balls" to TanukiTopics;
-
-Scent of Tanuki Dad is "     He smells clean, if you don't mind the scent of fur and a bit of saki that clings to him. Noticing your attention, he grins. You would think this would be hard to notice, since grinning is his default expression, but there is a difference.".
 
 instead of conversing the Tanuki Dad:
 	project Figure of Tanuki_Dad_soft_icon;
@@ -521,12 +510,12 @@ instead of conversing the Tanuki Dad:
 	now title entry is "Survival";
 	now sortorder entry is 1;
 	now description entry is "Get some tricks about surviving these harsh times";
+	[]
 	choose a blank row in table of fucking options;
 	now title entry is "Romance";
 	now sortorder entry is 2;
 	now description entry is "Ask for advice on finding that special someone";
 	[
-	[]
 	if "Tanuki Balls" is listed in TanukiTopics:
 		choose a blank row in table of fucking options;
 		now title entry is "Balls";
@@ -536,14 +525,13 @@ instead of conversing the Tanuki Dad:
 	if HP of Tanuki Dad > 0:
 		choose a blank row in table of fucking options;
 		now title entry is "Hunting";
-		now sortorder entry is 3;
+		now sortorder entry is 4;
 		now description entry is "Suggest that the two of you go out hunting";
 	[]
 	choose a blank row in table of fucking options;
 	now title entry is "Fighting";
-	now sortorder entry is 4;
+	now sortorder entry is 5;
 	now description entry is "Talk about fighting with Boghrim";
-	sort the table of fucking options in sortorder order;
 	]
 	sort the table of fucking options in sortorder order;
 	repeat with y running from 1 to number of filled rows in table of fucking options:
@@ -565,10 +553,10 @@ instead of conversing the Tanuki Dad:
 						say "[TanukiSurvivalTalk]";
 					-- "Romance":
 						say "[TanukiRomanceTalk]";
-					-- "Hunting":
+					[-- "Hunting":
 						say "[TanukiHuntingTalk]";
 					-- "Balls":
-						say "[TanukiBallsTalk]";
+						say "[TanukiBallsTalk]";]
 		else if calcnumber is 0:
 			LineBreak;
 			now sextablerun is 1;
@@ -578,18 +566,14 @@ instead of conversing the Tanuki Dad:
 	wait for any key;
 	clear the screen and hyperlink list;
 
-to say TanukiRomanceTalk:
+[to say TanukiRomanceTalk:
 	say "...";
 
 to say TanukiHuntingTalk:
 	say "...";
 
 to say TanukiBallsTalk:
-	say "...";
-
-instead of fucking Tanuki Dad:
-	project Figure of Tanuki_Dad_soft_icon;
-	say "     He bursts into a merry fit of laughter. 'I'm your father, not your boyfriend. There is a difference.' He wags a finger at you reprimandingly. 'I know people look at these big things, but they are my tools, not my masters.'";
+	say "...";]
 
 Section 4 - Tanuki Mom
 
@@ -628,9 +612,10 @@ PenileVirgin of Tanuki Mom is true.
 SexuallyExperienced of Tanuki Mom is false.
 TwistedCapacity of Tanuki Mom is true. [Twisted Characters can take any penetration, no matter the size]
 Sterile of Tanuki Mom is true. [steriles can't knock people up]
-MainInfection of Tanuki Mom is "".
+MainInfection of Tanuki Mom is "Tanuki".
 Description of Tanuki Mom is "[TanukiMomDesc]".
-Conversation of Tanuki Mom is { "I hope you are ready for grade A parenting. I have so much to teach you! First lesson, don't ring the bell anymore." }.
+fuckscene of Tanuki Mom is "     Her cheeks warm brightly as she gives a gay fit of laughter, her curves jiggling with the motion, her hands on her pudgy belly. 'I'm your mother, not your girlfriend. Naughty boy, go find something closer to your age.'[line break]".
+Scent of Tanuki Mom is "     She smells clean, if you don't mind the scent of fur and a bit of saki that clings to her. Noticing your attention, she grins. You would think this would be hard to notice, since grinning is her default expression, but there is a difference.".
 
 to say TanukiMomDesc:
 	say "     The tanuki spirit here has taken on the form of a mother. Besides curves that defy any conventional method of biology, she's wearing a frilly apron and an equally obvious smile, her tail swaying as she watches you. The apron covers her entire front, but manages to be strangely tight, allowing her nipples to be seen through the fabric. Her belly and below are covered from the front, and she keeps turning if you try to circle her, preventing any easy view on her pert backside. Wielded in her right hand is a ladel that drips with something.";
@@ -641,7 +626,6 @@ instead of sniffing Tanuki Mom:
 	add "TanukiPerfume" to TanukiTopics;
 
 instead of conversing the Tanuki Mom:
-	LineBreak;
 	say "What do you want to talk with Tanuki about?";
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
@@ -660,18 +644,18 @@ instead of conversing the Tanuki Mom:
 		choose a blank row in table of fucking options;
 		now title entry is "Ladel";
 		now sortorder entry is 3;
-		now description entry is "Ask about that dripping ladel of hers.";
+		now description entry is "Ask about that dripping ladel of hers";
 	[]
 	if "TanukiPerfume" is listed in TanukiTopics:
 		choose a blank row in table of fucking options;
 		now title entry is "Perfume";
-		now sortorder entry is 3;
-		now description entry is "Ask about the perfume she is using.";
+		now sortorder entry is 4;
+		now description entry is "Ask about the perfume she is using";
 	[]
 	if HP of Tanuki Mom > 0:
 		choose a blank row in table of fucking options;
 		now title entry is "Cooking";
-		now sortorder entry is 3;
+		now sortorder entry is 5;
 		now description entry is "Suggest that the two of you cook together";
 	[]
 	sort the table of fucking options in sortorder order;
@@ -747,10 +731,7 @@ To say TanukiSurvivalTalk:
 			say "     She cranes her head back a little to look up at you. 'I've never had such a large child before. It's kind of exciting, to tell you the truth. Don't worry about it though. A good mother is a good mother, no matter how big or small she might be.' She wags a finger as she talks, nodding to herself. 'Now as for advice...'";
 
 to say TanukiRomanceTalk:
-	if Tanukigender is 2:
-		say "     'It's a strange world out there.' She sighs wistfully, twirling a few whiskers. 'I don't need to remind you of that. Still...' She crouches facing you. 'Love is still there, but just as fleeting. Cheap love, that's easier than ever, but real love? Just as far away.'";
-	else:
-		say "     Tanuki Dad looks like someone forgot to tell him what to say. He makes unsure noises and worries his fingers for a few moments. 'And that's how it's done!' he suddenly exclaims as if he had provided any wisdom.";
+	say "     [if Tanukigender is 2]'It's a strange world out there.' She sighs wistfully, twirling a few whiskers. 'I don't need to remind you of that. Still...' She crouches facing you. 'Love is still there, but just as fleeting. Cheap love, that's easier than ever, but real love? Just as far away.'[else]Tanuki Dad looks like someone forgot to tell him what to say. He makes unsure noises and worries his fingers for a few moments. 'And that's how it's done!' he suddenly exclaims as if he had provided any wisdom.[end if]";
 
 to say TanukiPerfumeTalk:
 	say "     'Oh, this?' She holds out an arm for you to get a sniff of. You are drawn away, visions of [one of]fishing in a calm bay[or]roasting meat on a warm summer afternoon[or]sharing a quality drink with friends[or]a world where it isn't a struggle to survive[at random] dance in your mind.";
@@ -784,8 +765,5 @@ to say TanukiLadelTalk:
 	else:
 		LineBreak;
 		say "     'Good. Now what else can momma help you with?' She flutters her lashes a little too much, smiling at you.";
-
-instead of fucking Tanuki Mom:
-	say "     Her cheeks warm brightly as she gives a gay fit of laughter, her curves jiggling with the motion, her hands on her pudgy belly. 'I'm your mother, not your girlfriend. Naughty boy, go find something closer to your age.'";
 
 Tanuki ends here.

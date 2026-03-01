@@ -10,12 +10,7 @@ Object	Name
 Tyr's Club	"Tyr's Club"
 
 Tyr's Club is a room. It is private. It is fasttravel.
-
 Description of Tyr's Club is "     Inside of the underground room hidden underneath an unused cabin inside of the park Tyr has made a large gym/fighting arena where several dozen mutants are busy training, exercising or else practicing some form of physical training. Over by the side you can see Tyr watching the collective with a wary eye. The Doberman is standing as strong and powerful as he usually is, but instead of being draped in his usual jeans and t-shirt he's only wearing a pair of cut-off camouflage shorts. Said shorts happen to be showing the Dobie's more than plentiful crotch off, and from the large bulge hiding within it would seem that Tyr is not lacking in the cock department.[line break]".
-Tyr is in Tyr's Club.
-FightPit is west of Tyr's Club.
-Club Lockerroom is north of Tyr's Club.
-
 Scent of Tyr's Club is "     The club smells heavily of sweat, tension, concentrated focus and lots of testosterone and estrogen.".
 
 Section 2 - Tyr
@@ -71,7 +66,7 @@ TwistedCapacity of Tyr is false. [Twisted Characters can take any penetration, n
 Sterile of Tyr is false. [steriles can't knock people up]
 MainInfection of Tyr is "Doberman Male".
 Description of Tyr is "     Standing roughly at about seven feet, three inches tall with floppy brown ears and a long, but thin curled tail is the Doberman you met at the dog show arena back at the warehouse district. With only a pair of camouflage shorts on, the black and brown furred canine's muscular frame regally stands out as he leans across an undecorated wall while watching the proceedings going on inside of his club. That is, until he turns to notice you walking up to him. The canine doesn't seem to be specifically trying, but there is an intimidating aura coming from off of him as he stares pointedly at you with his piercing green eyes. Holding you fast into place you don't feel as if you can take a step forward or backwards as the Doberman narrows his jade orbs at you. However, this feeling soon passes when Tyr smiles and waves you over. His perfectly straight fangs give you pause for a second though as the sharpened incisors look ready to rend both flesh and bone. Why does he suddenly seem so much scarier than he had before back at the arena???[line break]".
-Conversation of Tyr is { "Battle is the Key to Success!" }.
+[Conversation of Tyr is { "Battle is the Key to Success!" }.]
 The scent of Tyr is "     Tyr smells like a hardworking Dobie who has a couple of secrets he's not willing to share. Oh, and he also smells like a good fight!"
 
 Instead of conversing the Tyr:
@@ -90,7 +85,7 @@ Instead of conversing the Tyr:
 		say "     'Anyway, that's about it. Come, fight, fuck, have fun, but respect and obey my rules.' At that the Doberman turns away from you to go back looking around inside of his club.";
 		raise Player Libido by 15;
 		now Tyrtalk is 1;
-	else if Tyrtalk is 1:
+	else:
 		say "     [one of]'Good to see you today. You looking to train?'[or]Tyr nods to you before turning to survey his club again.[or]Barking at two Danes going at it too ferociously Tyr runs over into the pit to break them up.[or]'I wonder what that scallywag Homaru is up to? Maybe I should go by and ruffle his feathers.' Tyr chuckles while rubbing a hand underneath his chin.[or]'What's your name again? I keep forgetting.'[or]'I hope those military assholes get off their tails and do something about this place.'[or]Tyr seems to be contemplating something and isn't paying you much attention.[or]Tyr busies himself with looking up at the ceiling, seemingly deep in thought.[or]'Do you think that you ever might want to join up with the military after this? You'd make a pretty good leader in my opinion.'[or]'I so want to get up out of here and get back to Asg... ugh... never mind.'[or]'I wonder if the others have desce... ugh... come down this way yet.' Tyr chuckles while turning his head to the side.[or]'Just who are you?' Tyr looks to you with a curious glare covering his toughened features. 'You do not have the feeling of being a normal m...person.'[or]'I wish I had some honeyed wine right about now.' Tyr grunts as he rubs across his belly.[at random]";
 
 Part 2 - Sex Match with Tyr
@@ -105,17 +100,16 @@ Instead of fucking the Tyr:
 	if TyrDefeated > 2:	[3 player wins in a row]
 		TyrSexMenu;
 	else:
-		let bonus be (( Strength of Player minus 5 ) divided by 2);
+		let bonus be ( Strength of Player minus 5 ) divided by 2;
 		let diceroll be a random number from 1 to 20;
 		say "You roll 1d20([diceroll])[if bonus >= 0]+[end if][bonus] = [special-style-1][diceroll + bonus][roman type] vs [special-style-2]19[roman type] (Strength Check):[line break]";
 		increase diceroll by bonus;
 		if diceroll > 18:
 			increase TyrDefeated by 1;
 			say "     Tyr falls back hard onto his tail after your last assault. Defeated, the Doberman takes a minute to revel in his loss before he grunts and then flips himself up onto his feet. Just when you think the other is about ready to renew the fight you find yourself cocking your head in confusion as he waves a hand at you. 'Well won warrior. I didn't expect to have my tail handed to me, but I suppose that I still have extra training to do. No matter though, to the victor goes the spoils.' Tyr lowers his head to chuckle about something, what you're not sure, before lifting his face to stare at you with glowing green orbs.";
-			say "     'So how would you like to have me pleasure you";
 			if Player is male:
 				if Player is female:
-					say "?' Having defeated Tyr, you find yourself looking over the handsome, if not slightly bleeding form of the other and growing almost painfully aroused. At his words you wonder how best to slake your lusts with the beast of a Doberman? (Y=Cunt, N=Ass)[line break]";
+					say "     'So how would you like to have me pleasure you?' Having defeated Tyr, you find yourself looking over the handsome, if not slightly bleeding form of the other and growing almost painfully aroused. At his words you wonder how best to slake your lusts with the beast of a Doberman? (Y=Cunt, N=Ass)[line break]";
 					if Player consents:
 						LineBreak;
 						say "[TyrLost_Vaginal]";
@@ -123,16 +117,16 @@ Instead of fucking the Tyr:
 						LineBreak;
 						say "[TyrLost_Anal]";
 				else:
-					say "?' Because you don't have any physical feminine aspects, you go ahead and decide that taking Tyr's tail would be the best thing to do for today's grand prize.";
+					say "     'So how would you like to have me pleasure you?' Because you don't have any physical feminine aspects, you go ahead and decide that taking Tyr's tail would be the best thing to do for today's grand prize.";
 					WaitLineBreak;
 					say "[TyrLost_Anal]";
 			else:
 				if Player is female:
-					say "?' Feeling a bit needy inside of your aching cunt, you don't bother to hide this fact from Tyr as you roll your hips at him wantonly.";
+					say "     'So how would you like to have me pleasure you?' Feeling a bit needy inside of your aching cunt, you don't bother to hide this fact from Tyr as you roll your hips at him wantonly.";
 					WaitLineBreak;
 					say "[TyrLost_Vaginal]";
 				else:
-					say "?'";
+					say "     'So how would you like to have me pleasure you?'";
 					WaitLineBreak;
 					say "[TyrLost_Neuter]";
 		else:
@@ -150,11 +144,9 @@ Instead of fucking the Tyr:
 	if Player is MalePreferred:
 		MultiInfect "Doberman Male" repeats 2;
 	else:
-		setmonster "Doberman Bitch";
-		choose row MonsterID from the Table of Random Critters;
+		choose row with Name of "Doberman Bitch" from Table of Random Critters;
 		now non-infectious entry is false;
-		infect;
-		infect;
+		MultiInfect "Doberman Bitch" repeats 2;
 		now non-infectious entry is true;
 	increase Stamina of Tyr by 1;
 	now lastfuck of Tyr is turns;
@@ -188,7 +180,7 @@ to TyrSexMenu:
 		if lust of Tyr >= 3:
 			choose a blank row in table of fucking options;
 			now title entry is "Lose: Fuck Him";
-			now sortorder entry is 13;
+			now sortorder entry is 9;
 			now description entry is "Lose and fuck his ass";
 	[]
 	if Player is female:
@@ -204,43 +196,41 @@ to TyrSexMenu:
 		[]
 		choose a blank row in table of fucking options;
 		now title entry is "Lose: Vaginal";
-		now sortorder entry is 11;
+		now sortorder entry is 7;
 		now description entry is "Let him win and fuck you";
 		[]
 		choose a blank row in table of fucking options;
 		now title entry is "Lose: Cunnilingus";
-		now sortorder entry is 14;
+		now sortorder entry is 8;
 		now description entry is "Let him win and eat you out";
 		[]
 		choose a blank row in table of fucking options;
 		now title entry is "Lose: Training Massage";
-		now sortorder entry is 15;
+		now sortorder entry is 10;
 		now description entry is "Let him win and do some training";
-	[]
-	if Player is puremale:
-		if anallevel is 3:
+	else:
+		if Player is male and anallevel is 3:
 			choose a blank row in table of fucking options;
 			now title entry is "Lose: Anal Play + Handjob";
-			now sortorder entry is 16;
+			now sortorder entry is 5;
 			now description entry is "Let him win and jerk you off";
-	[]
-	if Player is neuter:
-		choose a blank row in table of fucking options;
-		now title entry is "Win: No Sex";
-		now sortorder entry is 10;
-		now description entry is "Beat him and leave it at that";
-	[]
-	if Player is not female:
+		[]
 		if Libido of Tyr >= 3:
 			choose a blank row in table of fucking options;
 			now title entry is "Lose: Receive Anal";
-			now sortorder entry is 12;
+			now sortorder entry is 2;
 			now description entry is "Lose and get fucked in the ass";
 		[]
 		choose a blank row in table of fucking options;
 		now title entry is "Lose: No Sex";
-		now sortorder entry is 18;
+		now sortorder entry is 8;
 		now description entry is "Let him win and leave it at that";
+		[]
+		if Player is neuter:
+			choose a blank row in table of fucking options;
+			now title entry is "Win: No Sex";
+			now sortorder entry is 7;
+			now description entry is "Beat him and leave it at that";
 	[]
 	sort the table of fucking options in sortorder order;
 	repeat with y running from 1 to number of filled rows in table of fucking options:
@@ -419,8 +409,7 @@ to say TyrLost_GiveOral:	[only available through multiple victory menu]
 	say "     Having decided what you want, you stride over to Tyr and pull the muscular stud into a hug. He runs his strong hands over your [bodydesc of Player] form as you kiss one another, tongue diving into his mouth. After some playful tongue-fencing, you break the kiss and drop to your knees in front of him, pulling down his shorts as you do. Finding him already half-hard after the kiss, you put a hand around his stiffening shaft and pop his cock directly into your mouth. He releases a deep moan and looks down at you with surprise on his muzzled face. 'I'd have thought you'd want to... ahhh... take something... ohh...' he groans as you suck down on his swelling rod. Pulling your mouth free momentarily, you reply that that is exactly what you intend to do, rubbing his hefty, cum-filled balls with your free hand. That said, you plunge your mouth right back onto his shaft before it can grow any further and become more difficult to stuff into your hungry maw.";
 	WaitLineBreak;
 	say "     Tyr rubs his paws over your head and shoulders, panting loudly as his excitement builds. His canine rod pulses and throbs in your mouth and throat, dribbling copious amounts of musky pre. As his rod swells to its full size, your mouth is stretched wide around it, squeezing tightly around that throbbing meat. Your tongue, palate and throat work over the manly spire while your hands knead at his large orbs, eager for their contents. The muscular dog-man rocks his hips slowly, thrusting into your mouth as you suck him off.";
-	LineBreak;
-	say "     [bold type]As the Doberman's excitement nears its peak, you consider whether to keep blowing him and swallow down that load or pull off and let him coat you in it.[roman type][line break]";
+	say "[line break]     [bold type]As the Doberman's excitement nears its peak, you consider whether to keep blowing him and swallow down that load or pull off and let him coat you in it.[roman type][line break]";
 	say "     ([link]Y[as]y[end link]) - Keep blowing him.";
 	say "     ([link]N[as]n[end link]) - Pull off.";
 	if Player consents:
@@ -564,11 +553,9 @@ Object	Name
 FightPit	"FightPit"
 
 FightPit is a room.
-
+FightPit is west of Tyr's Club.
 Scent of FightPit is "     The fighting pit smells of blood, sweat, and exertion mixed in with canine musk, spooge and female honey.".
-
 Description of FightPit is "     The fighting pit is a giant cage area with a chain link fence surrounding it. The large arena has several different spaces where different fighters are either sparring or working out together to practice their different forms and the like. A small boy seems to be looking over the area from atop a desk off to the side of the entryway of the arena. Should he be here? Walking inside of the pit you find several mutants looking at you with differentiating masks of emotions covering their faces. Some seem really eager to see you, others... well they look happy, but in the same way a dog does when looking at a new chew bone. Be careful, it looks like trouble may start here![line break]".
-Receptionist is in FightPit.
 
 Section 4 - Receptionist
 
@@ -579,16 +566,12 @@ object	name
 Receptionist	"Receptionist"
 
 Receptionist is a man.
-Description of Receptionist is "     Off to the side out of the way a young boy is busy scribbling down on some documents with a feathered pen. With gray fur, wire framed lens, red ball cap on and slightly chubby puppy face looking up at you with bright golden eyes you wonder if Tyr knows the other is here. Staring somewhat transfixed by the other's cute pointed ears, button nose, and, from what you can see by peeking over the desk, a chubby black-furred body you wonder if the Doberman has lost his mind by having the other in this kind of place. That is, right before you notice the sign that says [bold type]Receptionist[roman type] hanging down from off of the side of his desk with a giant arrow pointed upwards. For real?[line break]".
-Conversation of Receptionist is { "Everyone Have Fun Today!" }.
 Receptionist is in FightPit.
-
+Description of Receptionist is "     Off to the side out of the way a young boy is busy scribbling down on some documents with a feathered pen. With gray fur, wire framed lens, red ball cap on and slightly chubby puppy face looking up at you with bright golden eyes you wonder if Tyr knows the other is here. Staring somewhat transfixed by the other's cute pointed ears, button nose, and, from what you can see by peeking over the desk, a chubby black-furred body you wonder if the Doberman has lost his mind by having the other in this kind of place. That is, right before you notice the sign that says [bold type]Receptionist[roman type] hanging down from off of the side of his desk with a giant arrow pointed upwards. For real?[line break]".
+[Conversation of Receptionist is { "Everyone Have Fun Today!" }.]
+fuckscene of Receptionist is "     [one of]'Are you serious?! I'm just a puppy!?'[or]'Try it and I'll call Tyr on you!'[or]'No.'[or]'With all the creatures out here you want to try and do [bold type]THAT[roman type] with me???'[or]Kris whimpers a bit and suddenly you feel ashamed of yourself.[or]Kris backs away from you and then starts to sob.[at random][line break]".
 linkaction of Receptionist is "Possible Actions: [link]talk[as]talk Receptionist[end link], [link]smell[as]smell Receptionist[end link], [link]fuck[as]fuck Receptionist[end link], [link]battle[as]duel[end link][line break]".
-
 Scent of the Receptionist is "     The young pup smells like a cute young boy who's got a big secret! Oh and cookies!".
-
-instead of fucking the Receptionist:
-	say "     [one of]'Are you serious?! I'm just a puppy!?'[or]'Try it and I'll call Tyr on you!'[or]'No.'[or]'With all the creatures out here you want to try and do [bold type]THAT[roman type] with me???'[or]Kris whimpers a bit and suddenly you feel ashamed of yourself.[or]Kris backs away from you and then starts to sob.[at random]";
 
 Instead of conversing the Receptionist:
 	If ReceptionistTalk is 0:
@@ -624,7 +607,6 @@ Carry out PitBattle:
 		follow the turnpass rule;
 	else:
 		say "     'OK, so you want to fight? Well, we have several candidates for you,' Kris says while looking over a document on top of his desk. 'Most of them are canines, so I hope that's not a problem!' You shake your head at Kris to let him know that you'll be fine with that. A nod of the pup's head and then he is passing a list over to you. 'Choose one and have fun!'";
-		LineBreak;
 		say "[ArenaFightCheck]";
 
 to say ArenaFightCheck:
@@ -726,9 +708,8 @@ Object	Name
 Club Lockerroom	"Club Lockerroom"
 
 Club Lockerroom is a room.
-
+Club Lockerroom is north of Tyr's Club.
 Description of Club Lockerroom is "     The room where the lockers are kept is rather comfy as the white walls surrounding the area offset the silver metal containers standing in two separate rows from one another. Inside of here you can both see and smell several different mutants all walking around. Some are conversing with each other while others are storing things inside of their respective lockers, but strangely none of them seem especially hostile or lustful towards one another. Maybe releasing some excess aggression in the pit has calmed down their raging hormones?[line break]".
-
 Scent of Club Lockerroom is "     The locker room smells of fresh polish, multiple mutants, sweat, testosterone, estrogen, and other varying scents. Though strangely, no trace of cum or female juice can be found within here.".
 
 Tyr's Club ends here.

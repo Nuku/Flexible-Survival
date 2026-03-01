@@ -5,9 +5,7 @@ Version 1 of Sierrasaur by Blue Bishop begins here.
 
 Section 1 - Creature Responses
 
-[sierrapure is a truth state that varies. sierrapure is usually false. [Used as shorthand to detect if the player is a pure sierran]]
 sierramem is a number that varies. sierramem is usually 0. [Used to ward repetition of expository prose]
-[sierramale is a truth state that varies. sierramale is usually false. [A trigger used as shorthand to determine if the player banned herms]]
 
 to say sierradesc:
 	if sierramem is 0:
@@ -38,7 +36,6 @@ to say losetosierra:
 to sierrabind:
 	setmonster "Sierrasaur";
 	now lustatt is Libido of Player;
-	now calcnumber is -1;
 	let Trixieexit be 0;
 	while Trixieexit is 0:
 		if HP of Player > 0 or humanity of Player < 50:
@@ -48,8 +45,7 @@ to sierrabind:
 			clear the screen;
 			LineBreak;
 		if lustatt > 99:
-			say "     Finding yourself overtaken by lust, you are given no choice but to furiously [if Player is male]jerk yourself off[else]fondle yourself[end if], writhing and twisting in these dark, damp confines until you finally find reprieve, [if Player is male]unloading your [Cum Load Size of Player] load against the firm flesh[else if Player is female]cunt throbbing firmly against the firm flesh[else]a particularly trying task given your lack of outlet[end if][if Player is male and Ball Size of Player > 5]. This wasn't a particularly wise task, as you're now made to swim in a pool of your own seed, though it thankfully diminishes over time[end if]. Panting to catch your breath, your mental faculties eventually return to you, leaving you to assess the matter at hand.";
-			LineBreak;
+			say "     Finding yourself overtaken by lust, you are given no choice but to furiously [if Player is male]jerk yourself off[else]fondle yourself[end if], writhing and twisting in these dark, damp confines until you finally find reprieve, [if Player is male]unloading your [Cum Load Size of Player] load against the firm flesh[else if Player is female]cunt throbbing firmly against the firm flesh[else]a particularly trying task given your lack of outlet[end if][if Player is male and Ball Size of Player > 5]. This wasn't a particularly wise task, as you're now made to swim in a pool of your own seed, though it thankfully diminishes over time[end if]. Panting to catch your breath, your mental faculties eventually return to you, leaving you to assess the matter at hand.[paragraph break]";
 			if Libido of Player > 25, decrease Libido of Player by (Libido of Player / 10) + 1;
 			now lustatt is Libido of Player;
 			if enduring is true:
@@ -84,7 +80,7 @@ to sierrabind:
 				if the player's command matches "[number]":
 					now keychar is "[number understood]";
 			LineBreak;
-			if keychar in lower case exactly matches the text "s" or keychar in lower case exactly matches the text "1" or keychar in lower case exactly matches the text "return" or keychar in lower case matches the text "struggle":
+			if keychar is "s" or keychar is "1" or keychar is "return" or keychar in lower case matches the text "struggle":
 				increase struggleatt by 1;
 				if struggleatt < 3:
 					say "     [one of]You start a bit of a ruckus inside[or]You writhe about and push around[or]You quickly and forcibly make known your protest from within[at random] [one of]this fleshy prison[or]these firm confines[at random], forcing the beast to groan. [if struggleatt is 1]It seems less annoyed and more confused by your disapproval[else]It becomes increasingly difficult for the beast to keep you down. At this rate, it might not see you as worth the trouble[end if].";
@@ -114,8 +110,7 @@ to sierrabind:
 					cleanboundmemory;
 					now Trixieexit is 1;
 					follow the turnpass rule;
-				next;
-			else if (obliging is true and (keychar in lower case exactly matches the text "o" or keychar in lower case matches the text "oblige")) or (obliging is false and (keychar in lower case exactly matches the text "a" or keychar in lower case matches the text "abide")) or keychar in lower case exactly matches the text "2":
+			else if (obliging is true and (keychar is "o" or keychar in lower case matches the text "oblige")) or (obliging is false and (keychar is "a" or keychar in lower case matches the text "abide")) or keychar is "2":
 				if obliging is true:
 					say "     You're driven to submit to your current circumstance, your captor [one of]choosing to rest for a moment, the weight of its body bearing down on you slightly[or]choosing to mull about idly, with little mind paid to its occupant[or]rumbling lowly in approval of their occupant[at random].";
 					if (bsextimer > 5 and a random chance of bsextimer in 18 succeeds) or hunger of Player > 59 or thirst of Player > 59:
@@ -158,8 +153,7 @@ to sierrabind:
 				increase bsextimer by 1;
 				LineBreak;
 				wait for any key;
-				next;
-			else:
+			else if (boundrecover is true and (keychar is "r" or keychar in lower case matches the text "recover")) or (boundrecover is false and (keychar is "e" or keychar in lower case matches the text "endure")) or keychar is "3":
 				now enduring is true;
 				if boundrecover is true:
 					say "     With a brief flash of insight, you're able to find a glimpse of mental clarity within these confines, recovering a small portion of your lost humanity.";
@@ -202,11 +196,10 @@ to sierrabind:
 				increase bsextimer by 1;
 				LineBreak;
 				wait for any key;
-				next;
-			say "Invalid action.";
+			else:
+				say "Invalid action.";
 
 to sierrasex:
-	project Figure of Sierrasaur_hard_icon;
 	let sierrapure be false;
 	if BodyName of Player is "Sierrasaur" and Player is pure: [purity check shorthand]
 		now sierrapure is true;
@@ -219,9 +212,8 @@ to sierrasex:
 	if Player is female and Cunt Depth of Player > 5 and ((boundstate is true and a random chance of 1 in 8 succeeds) or (boundstate is false and a random chance of 1 in 6 succeeds)):
 		say "     Not particularly graceful in its motion, it shamelessly prods your exposed cunt with its rock-hard dick. [if HP of Player < 1]Not particularly inclined to be on the receiving end of it, you deliberately make it difficult for the creature to progress, which only forces it to lay on top of you, pinning you down before shoving[else]Once it gets its aim right, it shoves[end if] its tool past your supple folds. [if sierrapure is true]While the organ is fairly rough, your similar strain is resilient enough to only make it more pleasurable for you[else]Considering how rough and unyielding the organ is, this is a fairly uncomfortable ordeal until it's eventually lubricated by its copious precum[end if][if Player is male], cock[smn] soon driven to attention as well[else if Cunt Count of Player > 2], unattended cunts soon aching with need as well[else if Cunt Count of Player is 2], unattended cunt soon aching with need as well[end if], forcing a moan free from your lips.";
 		increase lustatt by 45 + (lustadjust * 10);
-		say "     Its initial thrusts are slow and ponderous, though this is only slightly assuaging since it plows you with its entire length with each motion. As it gradually picks up pace, you visibly begin to rock against the beast's motion, the air filling with the sounds of wet, irreverent slapping as it pounds your hole with a deliberate pace. It clearly finds bliss when that same motion briefly becomes erratic and opts to conclude by hilting the organ one last time";
 		if (Libido of Player > 49 and boundstate is false) or lustatt > 99:
-			say ". The force is more than enough to make you find ecstasy as well, [if Player is male]cock[smn] staining the ground and your torso with your [Cum Load Size of Player] payload[else]feminine portal eagerly tightening around its firm invader[end if], with little regard by the reptile.";
+			say "     Its initial thrusts are slow and ponderous, though this is only slightly assuaging since it plows you with its entire length with each motion. As it gradually picks up pace, you visibly begin to rock against the beast's motion, the air filling with the sounds of wet, irreverent slapping as it pounds your hole with a deliberate pace. It clearly finds bliss when that same motion briefly becomes erratic and opts to conclude by hilting the organ one last time. The force is more than enough to make you find ecstasy as well, [if Player is male]cock[smn] staining the ground and your torso with your [Cum Load Size of Player] payload[else]feminine portal eagerly tightening around its firm invader[end if], with little regard by the reptile.";
 			lower Player Libido by Libido of Player / 10;
 			now lustatt is Libido of Player;
 			if struggleatt > 0, decrease struggleatt by 1;
@@ -231,16 +223,15 @@ to sierrasex:
 				else:
 					decrease humanity of Player by 15 + (psycheadjust * 5);
 		else:
-			say ", causing your [if Player is male]cock[smn] to ooze meekly[else]feminine portal to tighten around its firm invader[end if] in insufficient orgasm, with little regard by the reptile.";
+			say "     Its initial thrusts are slow and ponderous, though this is only slightly assuaging since it plows you with its entire length with each motion. As it gradually picks up pace, you visibly begin to rock against the beast's motion, the air filling with the sounds of wet, irreverent slapping as it pounds your hole with a deliberate pace. It clearly finds bliss when that same motion briefly becomes erratic and opts to conclude by hilting the organ one last time, causing your [if Player is male]cock[smn] to ooze meekly[else]feminine portal to tighten around its firm invader[end if] in insufficient orgasm, with little regard by the reptile.";
 		CreatureSexAftermath "Player" receives "PussyFuck" from "Sierrasaur";
 		WaitLineBreak;
 		say "     Assailed with a flood of the beast's virile seed[if boundstate is true] - the volume of which is more substantive than what you'd guess is normal -[else],[end if] [if HP of Player < 1]you struggle impotently under its hold[else if sierrapure is true]you're eager to be filled to the brim by your larger kin's seed[else]it fills your womb to the very brim[end if][if sierrapure is false and scalevalue of Player < 4], quickly sputtering from your hole[end if]. [if boundstate is true and sierrapure is true]Clearly, it's used this opportunity to also sustain its twisted offspring[else if boundstate is true]The way it feels being pumped full of that slick fluid, you can guess that this was an excuse to sustain you[else]Oddly enough, being pumped full of that slick fluid has an oddly filling and satisfying effect on you, from what you can feel[end if]. The beast pulls its still-hard dick from your hole with a loud, wet squelch, leaving a trail of cum in its wake.";
-	else if anallevel > 1 and (Cunt Count of Player is 0 or anallevel is 3) and a random chance of 1 in 7 succeeds:
+	else if anallevel > 1 and (Player is not female or anallevel is 3) and a random chance of 1 in 7 succeeds:
 		say "     Not particularly graceful in its motion, it shamelessly prods your exposed asshole with its rock-hard dick. [if HP of Player < 1]Not particularly inclined to be on the receiving end of it, you deliberately make it difficult for the creature to progress, which only forces it to lay on top of you, pinning you down before shoving[else]Once it gets its aim right, it shoves[end if] its tool past your anal ring. [if sierrapure is true]While the organ is fairly rough, your similar strain is resilient enough to only make it more pleasurable for you[else]Considering how rough and unyielding the organ is, this is a fairly uncomfortable ordeal until it's eventually lubricated by its copious precum[end if][if Player is male], cock[smn] soon driven to attention as well[else if Player is female], unattended cunt[sfn] soon aching with need as well[end if], forcing a moan free from your lips.";
-		say "     Its initial thrusts are slow and ponderous, though this is only slightly assuaging since it plows you with its entire length with each motion. As it gradually picks up pace, you visibly begin to rock against the beast's motion, the air filling with the sounds of wet, irreverent slapping as it pounds your hole with a deliberate pace. It clearly finds bliss when that same motion briefly becomes erratic and opts to conclude by hilting the organ one last time";
 		increase lustatt by 35 + (lustadjust * 10);
 		if (Libido of Player > 49 and boundstate is false) or lustatt > 99:
-			say ". The force is more than enough to make you find[if Player is neuter] paltry[end if] ecstasy as well, [if Player is male]cock[smn] staining the ground and your torso with your [Cum Load Size of Player] payload[else if Player is female]neglected, feminine portal[sfn] gushing against the open air[else]supple hole eagerly tightening around its firm invader[end if], with little regard by the reptile.";
+			say "     Its initial thrusts are slow and ponderous, though this is only slightly assuaging since it plows you with its entire length with each motion. As it gradually picks up pace, you visibly begin to rock against the beast's motion, the air filling with the sounds of wet, irreverent slapping as it pounds your hole with a deliberate pace. It clearly finds bliss when that same motion briefly becomes erratic and opts to conclude by hilting the organ one last time. The force is more than enough to make you find[if Player is neuter] paltry[end if] ecstasy as well, [if Player is male]cock[smn] staining the ground and your torso with your [Cum Load Size of Player] payload[else if Player is female]neglected, feminine portal[sfn] gushing against the open air[else]supple hole eagerly tightening around its firm invader[end if], with little regard by the reptile.";
 			lower Player Libido by Libido of Player / 10;
 			now lustatt is Libido of Player;
 			if struggleatt > 0, decrease struggleatt by 1;
@@ -250,23 +241,21 @@ to sierrasex:
 				else:
 					decrease humanity of Player by 15 + (psycheadjust * 5);
 		else:
-			say ", causing your [if Player is male]cock[smn] to ooze meekly[else if Player is female]neglected, feminine portal[sfn] to ooze meekly[else]supple hole to meekly squeeze around its firm invader[end if] in insufficient orgasm, with little regard by the reptile.";
+			say "     Its initial thrusts are slow and ponderous, though this is only slightly assuaging since it plows you with its entire length with each motion. As it gradually picks up pace, you visibly begin to rock against the beast's motion, the air filling with the sounds of wet, irreverent slapping as it pounds your hole with a deliberate pace. It clearly finds bliss when that same motion briefly becomes erratic and opts to conclude by hilting the organ one last time, causing your [if Player is male]cock[smn] to ooze meekly[else if Player is female]neglected, feminine portal[sfn] to ooze meekly[else]supple hole to meekly squeeze around its firm invader[end if] in insufficient orgasm, with little regard by the reptile.";
 		CreatureSexAftermath "Player" receives "AssFuck" from "Sierrasaur";
 		WaitLineBreak;
 		say "     Assailed with a flood the beast's virile seed[if boundstate is true] - the volume of which is more substantive than what you guess is normal -[else],[end if] [if HP of Player < 1]you struggle impotently under its hold[else if sierrapure is true]you're eager to be filled to the brim by your larger kin's seed[else]it fills your bowels to the very brim[end if][if sierrapure is false and scalevalue of Player < 4], quickly sputtering from your hole[end if]. [if boundstate is true and sierrapure is true]Clearly, it's used this opportunity to also sustain its twisted offspring[else if boundstate is true]The way it feels being pumped full of that slick fluid, you can guess that this was an excuse to sustain you[else]Oddly enough, being pumped full of that slick fluid has an oddly filling and satisfying effect on you, from what you can feel[end if]. The beast pulls its still-hard dick from your hole with a loud, wet squelch, leaving a trail of cum in its wake.";
-	else if anallevel is 1 and Cock Count of Player > 0 and a random chance of 1 in 7 succeeds and HermList is not banned:
+	else if anallevel is 1 and Player is male and a random chance of 1 in 7 succeeds and HermList is not banned:
 		say "     [if scalevalue of Player < 4]Nearly banging you in the head with that perpetually erect dick, it's[else]It's[end if] not particularly graceful as it moves forward to position its slit over your crotch. Descending to slowly grind against your [cock size desc of Player] dick[smn], [if HP of Player < 1]you're not exactly in the mood for this sort of crude foreplay, but when you try to struggle free, it just pins you down and continues grinding until you're finally compelled into arousal[else if sierrapure is true]your strain of infection makes you already pretty hard as it is, and as such it doesn't take much work to render you fully aroused[else]the fairly crude foreplay eventually does compel you into arousal[end if], raising only to slowly sink back down,[if Cock Count of Player > 1] one of[end if] your tool[smn] now between its lips.";
-		say "     The taut cleft is definitely not all that yielding to any sort of intrusion, [if sierrapure is true]though your strain makes you equally as firm, allowing you to impale it with fair ease[else]subjecting you to a fair bit of duress before it finally parts to abide your length[end if], the inner walls only marginally softer on you. Not given much in the way of lubrication, the beast only eases you into the matter by first attempting to engulf the entirety of its length[if Cock Length of Player > 14], a feat not particularly easy given your size[end if]. ";
 		if Player is knotted and Cock Length of Player > 14:
-			say "At first, it becomes confused by your knot, firmly trying to impale itself with it. Too large for its tight hole to abide, it subjects you to the strain of this endeavor for a while before finally giving up, using what it has access to and bracing itself for what is to follow.";
+			say "     The taut cleft is definitely not all that yielding to any sort of intrusion, [if sierrapure is true]though your strain makes you equally as firm, allowing you to impale it with fair ease[else]subjecting you to a fair bit of duress before it finally parts to abide your length[end if], the inner walls only marginally softer on you. Not given much in the way of lubrication, the beast only eases you into the matter by first attempting to engulf the entirety of its length[if Cock Length of Player > 14], a feat not particularly easy given your size[end if]. At first, it becomes confused by your knot, firmly trying to impale itself with it. Too large for its tight hole to abide, it subjects you to the strain of this endeavor for a while before finally giving up, using what it has access to and bracing itself for what is to follow.";
 		else:
-			say "With little work, your tool disappears into its depths[if Player is knotted], knot included[end if]. Shifting slightly, it appears to brace itself for what is to follow.";
+			say "     The taut cleft is definitely not all that yielding to any sort of intrusion, [if sierrapure is true]though your strain makes you equally as firm, allowing you to impale it with fair ease[else]subjecting you to a fair bit of duress before it finally parts to abide your length[end if], the inner walls only marginally softer on you. Not given much in the way of lubrication, the beast only eases you into the matter by first attempting to engulf the entirety of its length[if Cock Length of Player > 14], a feat not particularly easy given your size[end if]. With little work, your tool disappears into its depths[if Player is knotted], knot included[end if]. Shifting slightly, it appears to brace itself for what is to follow.";
 		WaitLineBreak;
 		say "     You guess that it used this to know exactly how long you were, because it immediately raises its crotch just high enough that only a portion of your head remains engulfed, before bearing down firmly once more. It gradually builds a motion of repeating this very deliberate and forceful act, the motion quickly slicked with your pre and the beast's emergent sexual fluids, which ooze down to stain your crotch. [if HP of Player < 1]This ritual isn't particularly pleasing to you, but its persistence eventually starts to get to you[else if sierrapure is true]Built exactly for this use[else]The ritual quickly having an effect on you[end if], the weight of its wanton assault eventually squeezes a moan out of your lips, drowned out by the sound of its sex shamelessly slapping against you, moving you with each descent.";
-		say "     It doesn't take long, but eventually the reptile lets out a strained groan, hilting your dick one last time[if Player is knotted and Cock Length of Player > 14], this time tying with you proper[end if] before the taut abyss squeezes relentlessly against your tool, its own dick dribbling out a bit of seed, though the fluid release is easily eclipsed by that of its greedy cunt, gushing substantially to stain your torso[if boundstate is true] - in fact, more than you'd guess is normal[end if]";
 		increase lustatt by 50 + (lustadjust * 10);
 		if (Libido of Player > 49 and boundstate is false) or lustatt > 99:
-			say ". This is more than enough to bring you over the edge, spurting your [Cum Load Size of Player] jet of cum into the reptile's depths[if Cock Count of Player > 2], its brothers staining the both of you[else if Cock Count of Player is 2], its brother staining the both of you[end if]. It [if Ball Size of Player > 5]groans slightly, with how much it's forced to abide, but it does manage to take it all with not much issue[else]barely seems to notice you firing into its depths[end if]";
+			say "     It doesn't take long, but eventually the reptile lets out a strained groan, hilting your dick one last time[if Player is knotted and Cock Length of Player > 14], this time tying with you proper[end if] before the taut abyss squeezes relentlessly against your tool, its own dick dribbling out a bit of seed, though the fluid release is easily eclipsed by that of its greedy cunt, gushing substantially to stain your torso[if boundstate is true] - in fact, more than you'd guess is normal[end if]. This is more than enough to bring you over the edge, spurting your [Cum Load Size of Player] jet of cum into the reptile's depths[if Cock Count of Player > 2], its brothers staining the both of you[else if Cock Count of Player is 2], its brother staining the both of you[end if]. It [if Ball Size of Player > 5]groans slightly, with how much it's forced to abide, but it does manage to take it all with not much issue[else]barely seems to notice you firing into its depths[end if]";
 			lower Player Libido by Libido of Player / 10;
 			now lustatt is Libido of Player;
 			if struggleatt > 0, decrease struggleatt by 1;
@@ -276,35 +265,32 @@ to sierrasex:
 				else:
 					decrease humanity of Player by 15 + (psycheadjust * 5);
 		else:
-			say "[if boundstate is true] -[else],[end if] causing your cock to spurt weakly into the beast's tight depths, the reptile not seeming all that interested in getting you off properly and subsequently leaving you still lust-addled";
+			say "     It doesn't take long, but eventually the reptile lets out a strained groan, hilting your dick one last time[if Player is knotted and Cock Length of Player > 14], this time tying with you proper[end if] before the taut abyss squeezes relentlessly against your tool, its own dick dribbling out a bit of seed, though the fluid release is easily eclipsed by that of its greedy cunt, gushing substantially to stain your torso[if boundstate is true] - in fact, more than you'd guess is normal -[else],[end if] causing your cock to spurt weakly into the beast's tight depths, the reptile not seeming all that interested in getting you off properly and subsequently leaving you still lust-addled";
 		say ". [if sierrapure is true and boundstate is true]Clearly, your larger kin wishes to bathe its smaller occupant, leaving you awash in its rejuvenating effects[else if boundstate is true and sierramem is 2]The sexual fluids seem to have a rejuvenating effect as they wash over you, clearly indicating that it used this act to sustain its prisoner[else if sierramem is 2]Oddly, the sexual fluids feel a bit rejuvenating when partially coated in it[else if boundstate is true]Bathing you in its sexual fluids, it gives its prisoner a moment to bask in its rejuvenating effects[else]Bathing you in its sexual fluids, it gives you a moment to bask in its rejuvenating effects[end if]. Finally satisfied, it pulls itself free of you, the loud, wet sound of its departure filling the air briefly.";
 		if sierramem is 2 and sierrapure is false, now sierramem is 3;
 		CreatureSexAftermath "Sierrasaur" receives "PussyFuck" from "Player";
 	else: [Oral - Should be most prominent]
 		say "     Climbing on top of you with a clear lack of expedience, it shows no restraint in prodding your face with its perpetually hard dick[if boundstate is true and sierrapure is true], the reptile eager to feed its juvenile kin through its[else if boundstate is true]. You get the impression that the reptile feels it needs to compensate for draining you by forcing you to feed from its[else]. Clearly, it expects you to satisfy the reptile's[end if] lewd pipe. [if HP of Player < 1]You try to resist, at first, but this only compels it to be more insistent in pinning you down firmly until you cry out in obligation, your maw enveloping[else]Only briefly reluctant, your maw envelops[end if] the tool's blunt head. Quite firm against your lips, it nonetheless oozes precum almost immediately, even your brief affection amplifying the release of these fluids with considerable expedience.";
 		if FaceName of Player is "Sierrasaur":
-			say "     The creature insists on forcing it deeper into you - not that your wide-set maw can't handle it -";
+			say "     The creature insists on forcing it deeper into you - not that your wide-set maw can't handle it - [if boundstate is true]though he relents just enough to not overwhelm you, [end if]making you rapidly swallow down its sexual fluids just to keep up. This ritual [if HP of Player < 1]forcibly[else]quickly[end if] [if Player is male]drives your dick[smn] erect, throbbing in the open air[else if Player is female]makes your cunt[sfn] ache with an overwhelming need[else]makes you aroused, though you have no way of sating it[end if], a matter you're too preoccupied right now to properly attend to, as the beast thrusts instinctively against your attending hole.";
 		else:
-			say "     The creature insisting on forcing it deeper into you, your ability to breathe is considerably limited,";
-		say " [if boundstate is true]though he relents just enough to not overwhelm you, [end if]making you rapidly swallow down its sexual fluids just to keep up. This ritual [if HP of Player < 1]forcibly[else]quickly[end if] [if Player is male]drives your dick[smn] erect, throbbing in the open air[else if Player is female]makes your cunt[sfn] ache with an overwhelming need[else]makes you aroused, though you have no way of sating it[end if], a matter you're too preoccupied right now to properly attend to, as the beast thrusts instinctively against your attending hole.";
+			say "     The creature insisting on forcing it deeper into you, your ability to breathe is considerably limited, [if boundstate is true]though he relents just enough to not overwhelm you, [end if]making you rapidly swallow down its sexual fluids just to keep up. This ritual [if HP of Player < 1]forcibly[else]quickly[end if] [if Player is male]drives your dick[smn] erect, throbbing in the open air[else if Player is female]makes your cunt[sfn] ache with an overwhelming need[else]makes you aroused, though you have no way of sating it[end if], a matter you're too preoccupied right now to properly attend to, as the beast thrusts instinctively against your attending hole.";
 		WaitLineBreak;
 		say "     With a low, loud groan, the reptile [if boundstate is true]suddenly pins you down, forcing almost the entire length down your throat, flooding[else]floods[end if] your gullet with its thick, creamy fluid. [if boundstate is true and sierrapure is true]The creature is happy to feed its little companion, generating a fair amount more than what is normal for it, probably also using this time to train you, as your torso bloats to abide the overwhelming flood[else if boundstate is true]The creature is dead set on forcing you to swallow all of it down, and it's quickly clear that it seems to be generating more than usual, your stomach quickly bloating to abide this overwhelming flood[else if sierrapure is true]The creature is happy to feed its little companion, flooding your belly with its virile seed[else]The flood is so substantive, it eventually starts spurting from your lips, ultimately forcing you to pull free of its tool and get doused with the remnant flood of the creature's virile seed[end if].";
 		if sierramem is 2:
-			say "     [if HP of Player < 1]Thankfully[else if sierrapure is true]Much to your approval[else]Interestingly enough[end if], the taste is not all that bad, this lewd nectar mildly sweet and clearly filling. You imagine ";
 			if boundstate is true:
-				say "this is probably where the essence the beast has been draining has been going, [if sierrapure is true]eager to sustain its twisted offspring[else]though it's odd that it wants to feed it back to you[end if]";
+				say "     [if HP of Player < 1]Thankfully[else if sierrapure is true]Much to your approval[else]Interestingly enough[end if], the taste is not all that bad, this lewd nectar mildly sweet and clearly filling. You imagine this is probably where the essence the beast has been draining has been going, [if sierrapure is true]eager to sustain its twisted offspring[else]though it's odd that it wants to feed it back to you[end if]";
 			else:
-				say "the beast's seed is particularly sustaining, [if sierrapure is true]eager to aid one of its smaller kin[else]strange though it may be[end if]";
+				say "     [if HP of Player < 1]Thankfully[else if sierrapure is true]Much to your approval[else]Interestingly enough[end if], the taste is not all that bad, this lewd nectar mildly sweet and clearly filling. You imagine the beast's seed is particularly sustaining, [if sierrapure is true]eager to aid one of its smaller kin[else]strange though it may be[end if]";
 			now sierramem is 3;
 		else:
-			say "     [if HP of Player < 1 and sierrapure is false]Groaning weakly[else]Moaning[end if], you're full with the beast's sweet, tainted nectar, who's ";
 			if boundstate is true:
-				say "[if sierrapure is true]eager to sustain its twisted offspring[else]eager to feed your essence back to you[end if]";
+				say "     [if HP of Player < 1 and sierrapure is false]Groaning weakly[else]Moaning[end if], you're full with the beast's sweet, tainted nectar, who's [if sierrapure is true]eager to sustain its twisted offspring[else]eager to feed your essence back to you[end if]";
 			else:
-				say "[if sierrapure is true]eager to aid one of its smaller kin[else]strangely eager to sustain you[end if]";
+				say "     [if HP of Player < 1 and sierrapure is false]Groaning weakly[else]Moaning[end if], you're full with the beast's sweet, tainted nectar, who's [if sierrapure is true]eager to aid one of its smaller kin[else]strangely eager to sustain you[end if]";
 		increase lustatt by 45 + (lustadjust * 10);
 		if (Libido of Player > 49 and boundstate is false) or lustatt > 99:
-			say ". Too overtaken by your own need, you almost immediately resort to [if Player is male]jacking yourself off[else if Player is female]fingering yourself[else]fondling yourself[end if] madly right then and there. It doesn't take much work to set you off, [if Cock Count of Player > 1]dicks spurting their [Cum Load Size of Player] load into the open air and making a bigger mess of things[else if Cock Count of Player is 1]dick spurting its [Cum Load Size of Player] load into the open air and making a bigger mess of things[else if Player is female]cunt[sfn] throbbing firmly against your touch[else]barely able to find some reprieve out of your genderless form[end if]. The beast doesn't seem to regard this all that much, letting you perform this ritual.";
+			say ". Too overtaken by your own need, you almost immediately resort to [if Player is male]jacking yourself off[else if Player is female]fingering yourself[else]fondling yourself[end if] madly right then and there. It doesn't take much work to set you off, [if Cock Count of Player > 1]dicks spurting their [Cum Load Size of Player] load into the open air and making a bigger mess of things[else if Player is male]dick spurting its [Cum Load Size of Player] load into the open air and making a bigger mess of things[else if Player is female]cunt[sfn] throbbing firmly against your touch[else]barely able to find some reprieve out of your genderless form[end if]. The beast doesn't seem to regard this all that much, letting you perform this ritual.";
 			if struggleatt > 0, decrease struggleatt by 1;
 			lower Player Libido by Libido of Player / 10;
 			now lustatt is Libido of Player;
@@ -583,12 +569,10 @@ This is the Sierrasaur Infection rule:
 		trigger ending "Sierrasaur Infection";
 		if humanity of Player < 10:
 			say "     Overwhelmed by your infection, you eventually lose all self-control, made to wander the land a ponderous, twisted beast. Your strain eventually progresses until you fully assume the form of your kin, now a mere animal in the eyes of those unwise enough to enter your reach.";
-			say "     Encountering one such individual, no doubt searching for survivors, you instinctively subdue them before they are drawn within your slick confines, your new child soon made to be consort. It takes only a few hours of its beloved occupancy, intermittently broken up by your wanton rituals of feeding, until your new companion succumbs as you had, eventually offering itself ";
 			if Player is male and Player is not sterile and HermList is not banned:
-				say "to sire your children[if Player is female or Player is mpreg_ok] and you to sire its[end if]";
+				say "     Encountering one such individual, no doubt searching for survivors, you instinctively subdue them before they are drawn within your slick confines, your new child soon made to be consort. It takes only a few hours of its beloved occupancy, intermittently broken up by your wanton rituals of feeding, until your new companion succumbs as you had, eventually offering itself to sire your children[if Player is female or Player is mpreg_ok] and you to sire its[end if]. Over time, you make a great family of beasts, their slow pace belying a bottomless hunger...";
 			else:
-				say "[if Player is impreg_ok]for you to sire its children[else]to satisfy you on a whim and help you find more to be brought into the fold[end if]";
-			say ". Over time, you make a great family of beasts, their slow pace belying a bottomless hunger...";
+				say "     Encountering one such individual, no doubt searching for survivors, you instinctively subdue them before they are drawn within your slick confines, your new child soon made to be consort. It takes only a few hours of its beloved occupancy, intermittently broken up by your wanton rituals of feeding, until your new companion succumbs as you had, eventually offering itself [if Player is impreg_ok]for you to sire its children[else]to satisfy you on a whim and help you find more to be brought into the fold[end if]. Over time, you make a great family of beasts, their slow pace belying a bottomless hunger...";
 		else:
 			say "     You're soon found by the military and gradually reintroduced to normal society. Even though you're assessed to not be infectious, this doesn't stop the strain from eventually progressing to the point where you assume the full scale and stature of your feral kin - though you thankfully retain your mental articulation.";
 			say "     The way you are, there's little you can find for conventional work, and you ultimately find yourself following the same line of work of many infected[if Player is not neuter]. Given the regenerative effects of sexual fluids, you find a tidy income selling the stuff to less scrupulous individuals, away from the prying eyes of polite society, which helps for a while[end if].";

@@ -3,6 +3,8 @@ Anthro Shaft Beast by Guest Writers begins here.
 
 "Adds an Anthro Shaft Beast to Flexible Survival's Sewer Monsters table"
 
+asbeastseen is a truth state that varies. asbeastseen is usually false.
+
 Section 1 - Creature Responses
 
 to say shaft beast victory:
@@ -28,7 +30,7 @@ to say shaft beast victory:
 
 to say shaft beast defeat:
 	if Player is not neuter and Libido of Player > 29:
-		if Player is male and (Cunt Count of Player is 0 or a random chance of 2 in 3 succeeds):
+		if Player is male and (Player is not female or a random chance of 2 in 3 succeeds):
 			say "     The creature hisses and lands on her rear after your last strike, panting and exhausted. She just lays there, exposing her features to you submissively. The sight and the powerful scents prove too much for your own need, and the creature smiles as you approach, the skin of her head growing darker as she blushes. Undressing and immediately taking hold of her legs, she spreads her legs wider presents her massive slit to you, and then the swollen opening changes, adjusting to become a tight fit for you. You grin widely at the sight; this creature wants you to ravage and fuck it mindless alright.";
 			say "     In a blink, your [bodytype of Player] form is atop her and thrusting your spire deep into the willing monster without any inhibitions, pumping roughly and slamming against her on every powerful thrust. The beast moans out for you, every throbbing spire and nipple on her body drooling heavily, her scent driving you mad with lust. At the climax of it all, you release your seed deep within the beast, who roars in ecstasy as her own body is shaken by a blissful orgasm, making a huge mess like no other, your body splattered from head to toe in her many juices.";
 			say "     Once you are done, you pull out and kiss the creature's horns and face lustfully, and she kisses your neck and lets you go. For some reason, the beast must have allowed you to walk away unchanged; you are certain that they could infect with just a touch, but it seems they have control over to whom and when infection happens. You just go on your way, satisfied.";
@@ -43,8 +45,9 @@ to say shaft beast defeat:
 		say "     The creature hisses and steps away from you after your last strike. You're suddenly overwhelmed by a sharp, throbbing headache. Closing your eyes, you cover your ears to block out a sound like a hundred harpies are yelling at you. When the horrible screech is gone, you open your eyes again and the beast is gone, having escaped while you were stunned.";
 
 to say ShaftBeast_Desc:
-	say "     You see someone approach. A fellow survivor in a place like this? You are filled with joy when you see that it's a normal human [one of]male[or]female[at random], completely nude. However, your joy doesn't last long, dispelled when the other survivor grins at you. An odd feeling washes over you, one of lust and fear, along with other alien sensations that you had never felt before. When you snap out of it, there is a powerful musk in the air that fills your lungs and immediately makes your body tingle with arousal. You no longer see a survivor, but a monster that takes a few minutes to understand. The strange, bizarre creature chuckles and poses for you, showing her obscene and exaggerated features.";
-	LineBreak;
+	if asbeastseen is false:
+		say "     You see someone approach. A fellow survivor in a place like this? You are filled with joy when you see that it's a normal human [one of]male[or]female[at random], completely nude. However, your joy doesn't last long, dispelled when the other survivor grins at you. An odd feeling washes over you, one of lust and fear, along with other alien sensations that you had never felt before. When you snap out of it, there is a powerful musk in the air that fills your lungs and immediately makes your body tingle with arousal. You no longer see a survivor, but a monster that takes a few minutes to understand. The strange, bizarre creature chuckles and poses for you, showing her obscene and exaggerated features.[paragraph break]";
+		now asbeastseen is true;
 	say "     Before you is an abomination of purple flesh, standing on large feet with five throbbing cocks instead of toes, which also replace her fingers. The creature has an impressive breeding tool that stands proud at three feet in length, with several ridges and a barbed tip. Along the underside hang eight golf ball-sized [']tits['] that drip eagerly with a thick, white, cum-like goo that make you wonder if it's actually milk. Hanging heavily under that massive medieval torture device is a ballsack that packs four watermelon-sized testicles. Her chest and belly are swollen with six G cup-sized breasts, each with an oversized nipple. The monster's neck and the base of every breast has rings of large, round nubs that you can only recognize as clitorises the size of grapes. The breasts only have one ring, but her neck has four evenly spread along it.";
 	say "     Her head is also alarming, a combination of a pointy cock and the snout of a dragon. There are no eyes, nose, or ears - just the wide maw of the creature over the smooth surface of a cock-like head with a pair of long, cock-shaped [']horns['] that drip and spurt constantly with her musk. Behind her, you see six tentacles with pointy cock-heads at the tips, thicker than a baseball bat and five feet long each. Her tail also is an obscene show, as thick and heavy as one of her legs, the underside covered from its base to the large, fat cocktip at the end with two rows of heavy, dripping tits. You can't bear to see more, but you know by the female musk in the air that there must be a massive cunt behind those gigantic testicles, swollen and dripping. The dual-sexed musk she spreads around drills into your mind.";
 	say "     The exotic shape of her male genitalia suggests that this creature is likely draconian in nature, or at least was at one point. The highly sexual creature pulses and throbs from everywhere, dripping and shining with a thick layer of her own juices. She approaches quickly, ready to show you a rather blissful fate.";
@@ -230,6 +233,8 @@ When Play begins:
 	[Clit Size Adjective is generated by a function and can be used in scenes: very small/small/average/large/very large]
 ]
 
+Section 3 - Miscellaneous
+
 to sharethebliss:
 	infect "Anthro Shaft Beast";
 	raise Player Libido by 25;
@@ -244,15 +249,14 @@ an everyturn rule:
 		say "[broodmother call]";
 
 to say broodmother call:
-	LineBreak;
 	if humanity of Player > 89:
-		say "     You hear a beautiful song in the distance.";
+		say "[line break]     You hear a beautiful song in the distance.";
 		raise Player Libido by 4;
 		decrease humanity of Player by 1;
 		if "Strong Psyche" is listed in feats of Player, increase humanity of Player by a random number between 0 and 1;
 		if "Weak Psyche" is listed in feats of Player, decrease humanity of Player by a random number between 0 and 1;
 	else if humanity of Player > 69:
-		say "     Your legs feel weak, a soft, tender voice speaking to you. The beautiful sound caresses your body, the back of your mind pulsing with joy. You smile, enraptured by the strong entity speaking to you in unknown tongues... then snap out of it with a loud gasp. You look around with worry, feeling like you are being watched from every corner. No matter where you move, this feeling of paranoia never seems to go away.";
+		say "[line break]     Your legs feel weak, a soft, tender voice speaking to you. The beautiful sound caresses your body, the back of your mind pulsing with joy. You smile, enraptured by the strong entity speaking to you in unknown tongues... then snap out of it with a loud gasp. You look around with worry, feeling like you are being watched from every corner. No matter where you move, this feeling of paranoia never seems to go away.";
 		raise Player Libido by 6;
 		if "Horny Bastard" is listed in feats of Player, raise Player Libido by 1;
 		if "Cold Fish" is listed in feats of Player, lower Player Libido by 1;
@@ -260,7 +264,7 @@ to say broodmother call:
 		if "Strong Psyche" is listed in feats of Player, increase humanity of Player by a random number between 0 and 1;
 		if "Weak Psyche" is listed in feats of Player, decrease humanity of Player by a random number between 0 and 1;
 	else if humanity of Player > 49:
-		say "     The voice continues slowly drilling into your mind. You feel helpless, unable to ignore it - but why would you? It's so beautiful, so powerful... and it feels as if it is speaking to you and only you, as if this entity from nowhere had eyes only for you. You can't help but lay down and smile, caressing your wonderful, strong, sexy body and stroking your tendrils, making them coil and rub all over yourself. It takes hours for you to regain your control and leave. By then, you are dripping with arousal, part of you just wanting to give in and follow the voice's instructions. You can even understand the voice sometimes...";
+		say "[line break]     The voice continues slowly drilling into your mind. You feel helpless, unable to ignore it - but why would you? It's so beautiful, so powerful... and it feels as if it is speaking to you and only you, as if this entity from nowhere had eyes only for you. You can't help but lay down and smile, caressing your wonderful, strong, sexy body and stroking your tendrils, making them coil and rub all over yourself. It takes hours for you to regain your control and leave. By then, you are dripping with arousal, part of you just wanting to give in and follow the voice's instructions. You can even understand the voice sometimes...";
 		raise Player Libido by 8;
 		if "Horny Bastard" is listed in feats of Player, raise Player Libido by 2;
 		if "Cold Fish" is listed in feats of Player, lower Player Libido by 2;
@@ -268,7 +272,7 @@ to say broodmother call:
 		if "Strong Psyche" is listed in feats of Player, increase humanity of Player by a random number between 0 and 2;
 		if "Weak Psyche" is listed in feats of Player, decrease humanity of Player by a random number between 0 and 2;
 	else if humanity of Player > 19:
-		say "     You cannot help but hissss in delight as you feel a tender caress run across your spine. The voice is at it again... but now, you feel hands and kisses spreading all over your body, invisible lips pressing against your most sensitive parts. Invisible, tender fingers caress every inch of your body, your arousal burning like the sun, your body so warm. You feel those fingers dig into you, caressing your insides, touching your mind... then bliss, endless bliss lighting every fiber of your body. By the time you wake up, a silent cry escapes your lips. You had hoped it would never end. Your head hurts badly, and you want more. The Broodmother's call... you cannot wait for the next one.";
+		say "[line break]     You cannot help but hissss in delight as you feel a tender caress run across your spine. The voice is at it again... but now, you feel hands and kisses spreading all over your body, invisible lips pressing against your most sensitive parts. Invisible, tender fingers caress every inch of your body, your arousal burning like the sun, your body so warm. You feel those fingers dig into you, caressing your insides, touching your mind... then bliss, endless bliss lighting every fiber of your body. By the time you wake up, a silent cry escapes your lips. You had hoped it would never end. Your head hurts badly, and you want more. The Broodmother's call... you cannot wait for the next one.";
 		raise Player Libido by 10;
 		if "Horny Bastard" is listed in feats of Player, raise Player Libido by 3;
 		if "Cold Fish" is listed in feats of Player, lower Player Libido by 3;
@@ -276,7 +280,7 @@ to say broodmother call:
 		if "Strong Psyche" is listed in feats of Player, increase humanity of Player by a random number between 1 and 3;
 		if "Weak Psyche" is listed in feats of Player, decrease humanity of Player by a random number between 1 and 2;
 	else:
-		say "     [one of]'Come to me, my beautiful child. We await for your offering...' [or]'Join usssssss...' [or]'Resissssst no further...' [or]'We are waiting for you...' [at random]says the Broodmother from her hive, reaching out at you with waves of lust. Places and experiences from the past and the present flash before your eyes, the Broodmother giving you a mental map, preparing you for the long trip to her blissful home.";
+		say "[line break]     '[one of]Come to me, my beautiful child. We await for your offering[or]Join usssssss[or]Resissssst no further[or]We are waiting for you[at random]...' says the Broodmother from her hive, reaching out at you with waves of lust. Places and experiences from the past and the present flash before your eyes, the Broodmother giving you a mental map, preparing you for the long trip to her blissful home.";
 		if BodyName of Player is "Anthro Shaft Beast":
 			sharethebliss;
 		else if BodyName of Player is "Feral Shaft Beast":
@@ -301,12 +305,11 @@ name	desc	weight	object
 "psionic egg"	"A strange, purple, fleshy egg that constantly secretes a clear, musky goo. You feel odd while holding it, and you swear you hear someone whispering nearby."	1	psionic egg
 
 psionic egg is a grab object.
+the scent of psionic egg is "The purple, fleshy egg has the musky scent of sex lingering over it.".
 Usedesc of psionic egg is "[psionic egg use]".
 
 to say psionic egg use:
 	say "     You hold the egg tightly in your hands. As you look at it, you hear a beautiful, enthralling voice calling out at you. When you come to your senses, the egg has melted and is now being absorbed by your skin.";
 	infect "Anthro Shaft Beast";
-
-the scent of psionic egg is "The purple, fleshy egg has the musky scent of sex lingering over it.".
 
 Anthro Shaft Beast ends here.

@@ -8,7 +8,6 @@ Version 1 of Thunderbolt by CrimsonAsh begins here.
 [  50: player refused horse sex                         ]
 
 ThunderTrackingVariable is a number that varies.
-[ThunderboltRoomConnection is a number that varies.[@Tag:NotSaved]]
 
 a postimport rule: [bugfixing rules for players that import savegames]
 	if Campus Thunder is resolved and Resolution of Campus Thunder is 2: [event resolved the right way, room not connected yet]
@@ -42,7 +41,6 @@ Campus Thunder	"Campus Thunder"
 
 Campus Thunder is a situation.
 ResolveFunction of Campus Thunder is "[ResolveEvent Campus Thunder]".
-The level of Campus Thunder is 0.
 Sarea of Campus Thunder is "Campus". [Fountain]
 
 when play begins:
@@ -51,17 +49,15 @@ when play begins:
 
 to say ResolveEvent Campus Thunder:
 	if ThunderTrackingVariable is 0: [never met]
-		say "     While wandering the campus grounds, you spot a large brown horse with school colors depicted on a sash across his equine body. In big letters you read, 'Westside Stallions'. The horse whom had previously been drinking peacefully from the central fountain spots you and locks his dark eyes with yours. He starts trotting over to you after giving a friendly snort. You take a step back, looking for signs of... something on the beast. Aggression? Infection? You don't know, but there is nothing that seems dangerous at all, so in the end you just shrug and let him walk right up to you. The fairly large horse stands before you seemingly examining your body before he nuzzles his large head into your side affectionately. Before you can really react, a long and thick horse tongue licks across your neck covering it in warm saliva. It's then you hear someone yell, 'Thunderbolt! Leave [ObjPro of Player] alone!' You look over your shoulder to see two lioness girls in soccer uniforms with identical writing on their outfits as the horse. Must be the team name... 'Westside Stallions.'";
-		say "     The taller of the lioness girls whom had just spoken pads forward to gently pat the large equine mammal on the head. 'Sorry, he's a bit too friendly sometimes,' the pretty lioness says flashing you a toothy grin. 'I'm Ariana and this is my sister Eres,' she explains, gesturing to the clearly younger lioness behind her who shuffles forward anxiously to raise a delicate paw to wave nervously at you. 'Hey...' she pauses as she looks to you and then to the horse still standing next to you. Giving a light kiss on the side of the horse's head Ariana speaks up again, 'And this big fella is Thunderbolt, our team mascot.' Thunderbolt nuzzles into Ariana as you too introduce yourself to the two lioness sisters. 'It's good to meet someone new, but we really have to be going. Gotta take care of the big fella here,' she adds in a friendly tone, patting the large equine on the side as she turns away with Thunderbolt in tow. Eres follows with a light blush on her face and a smile in your direction.";
-		LineBreak;
+		say "     While wandering the campus grounds, you spot a large brown horse with school colors depicted on a sash across his equine body. In big letters you read, 'Westside Stallions'. The horse whom had previously been drinking peacefully from the central fountain spots you and locks his dark eyes with yours. He starts trotting over to you after giving a friendly snort. You take a step back, looking for signs of... something on the beast. Aggression? Infection? You don't know, but there is nothing that seems dangerous at all, so in the end you just shrug and let him walk right up to you. The fairly large horse stands before you seemingly examining your body before he nuzzles his large head into your side affectionately. Before you can really react, a long and thick horse tongue licks across your neck covering it in warm saliva. It's then you hear someone yell, 'Thunderbolt! Leave [ObjectPro of Player] alone!' You look over your shoulder to see two lioness girls in soccer uniforms with identical writing on their outfits as the horse. Must be the team name... 'Westside Stallions.'";
+		say "     The taller of the lioness girls whom had just spoken pads forward to gently pat the large equine mammal on the head. 'Sorry, he's a bit too friendly sometimes,' the pretty lioness says flashing you a toothy grin. 'I'm Ariana and this is my sister Eres,' she explains, gesturing to the clearly younger lioness behind her who shuffles forward anxiously to raise a delicate paw to wave nervously at you. 'Hey...' she pauses as she looks to you and then to the horse still standing next to you. Giving a light kiss on the side of the horse's head Ariana speaks up again, 'And this big fella is Thunderbolt, our team mascot.' Thunderbolt nuzzles into Ariana as you too introduce yourself to the two lioness sisters. 'It's good to meet someone new, but we really have to be going. Gotta take care of the big fella here,' she adds in a friendly tone, patting the large equine on the side as she turns away with Thunderbolt in tow. Eres follows with a light blush on her face and a smile in your direction.[paragraph break]";
 		say "     As you watch the three leave, you spot under the brown horse's undercarriage a large equine phallus, rapidly gaining in length and getting harder by the second. An eye-blink or two later, they all disappear behind some buildings... Interesting.";
 		now ThunderTrackingVariable is 1;
 		now Resolution of Campus Thunder is 1; [first meeting done]
 		now LastCampusWalkin is turns;
-	else if ThunderTrackingVariable is 1: [first encounter done]
+	else: [first encounter done]
 		say "     Once again wandering the college property, you hear from behind some buildings the loud and unmistakable 'neigh!' of a horse. Peeking from behind a corner you gasp slightly as you spot the horse mascot Thunderbolt. He's hitched to a post in a make-shift stable surrounded by hay and a nearby trough full of water. But what really draws your eye is his raging equine erection, fully hardened and pulsing slightly. Turning to look your way he whinnies and starts to trot closer, only to be stopped by his leash tied to the post. The large stallion rears up and whinnies again in frustration. It's abundantly clear this impressive beast is in rut. He looks to you with pleading eyes, shakes his well-groomed mane and then turns to his side showing off a truly impressive musculature and nearly two feet of erect horse cock. Almost seems like... he's trying to seduce you by flaunting his equine body.";
-		LineBreak;
-		say "     [bold type]What do you want to do now?[roman type][line break]";
+		say "[line break]     [bold type]What do you want to do now?[roman type][line break]";
 		say "     ([link]Y[as]y[end link]) - Mate with Thunderbolt?!";
 		say "     ([link]N[as]n[end link]) - Just... no. Walk away right now!";
 		if Player consents:
@@ -161,12 +157,8 @@ SexuallyExperienced of Thunderbolt is true.
 TwistedCapacity of Thunderbolt is false. [Twisted Characters can take any penetration, no matter the size]
 Sterile of Thunderbolt is false. [steriles can't knock people up]
 MainInfection of Thunderbolt is "Wild Mustang".
-Description of Thunderbolt is "[ThunderboltDesc]".
-Conversation of Thunderbolt is { "<This is nothing but a placeholder!>" }.
+Description of Thunderbolt is "     Thunderbolt is the college campus's football mascot, he is a young and well-muscled stallion with a brown coat and darker brown mane. He usually strides around donning his Westside Stallions regalia, almost always followed in tow by his two feline handlers, Ariana and Eres.[line break]".
 The scent of Thunderbolt is "     You sniff the feral horse. He smells like cut hay and soap, the sisters must keep him well bathed.".
-
-to say ThunderboltDesc:
-	say "     Thunderbolt is the college campus's football mascot, he is a young and well-muscled stallion with a brown coat and darker brown mane. He usually strides around donning his Westside Stallions regalia, almost always followed in tow by his two feline handlers, Ariana and Eres.";
 
 instead of conversing the Thunderbolt:
 	say "     Talking in soft tones, you reach out and stroke the horse Thunderbolt across his mane. Then you brush your palms down his flank, over his side and back up to his equine muzzle. He gives a low whinny as you pet him and caress his chin. Eventually you pull back letting the stallion settle. He stares back at you, shakes his mane then neighs in satisfaction.";
@@ -249,7 +241,7 @@ to say ThunderboltSex2: [pussy fuck]
 	NPCSexAftermath Player receives "PussyFuck" from Thunderbolt;
 
 to say ThunderboltSex3: [ass fuck]
-	say "     Feeling especially horny and randy you tie a leash around your stallion mate and lead him off somewhere further secluded. Ducking around the edge of another building behind Bolt's stable you find a nice quiet spot. Turning to face the magnificent horse you can see him already hardening at the sight of you, apparently aware of your plans for him. You smile and lean over to smooch him on his muzzle. Surprisingly he responds to the kiss, and lashes his thick tongue against your lips before slipping it into your mouth. Without planning to originally, you're now making out with your equine mate, swapping saliva as Bolt messily tongue-fucks your mouth. Pulling back slightly out of breath a little while later, [if Player is male]your own cock is rock-hard and your asshole itching [else if Player is female]your loins feel on fire and beg [else]you are itching [end if]to be plowed by this virile beast.";
+	say "     Feeling especially horny and randy you tie a leash around your stallion mate and lead him off somewhere further secluded. Ducking around the edge of another building behind Bolt's stable you find a nice quiet spot. Turning to face the magnificent horse you can see him already hardening at the sight of you, apparently aware of your plans for him. You smile and lean over to smooch him on his muzzle. Surprisingly he responds to the kiss, and lashes his thick tongue against your lips before slipping it into your mouth. Without planning to originally, you're now making out with your equine mate, swapping saliva as Bolt messily tongue-fucks your mouth. Pulling back slightly out of breath a little while later, [if Player is male]your own cock is rock-hard and your asshole itching[else if Player is female]your loins feel on fire and beg[else]you are itching[end if] to be plowed by this virile beast.";
 	say "     Stripping off any obstructions you get on all fours on a nearby bench. Then you spit into your hand and use it to rub your back door, moistening and massaging it with the improvised lube. Your ass raised high as you finger yourself, this beckons the stallion to come breed his mare. As he steps up to the bench, Thunderbolt's large body towers over you, the musk of his arousal very apparent and quickly filling your mind with all kinds of naughty thoughts. His glorious two foot cock is already rock hard and dripping tasty pre. You take a hold of his thick male-meat and guide it to your trembling entrance, rubbing the tip of his flared cock against your pucker. The pre-cum he is leaking in a constant drip helps lube you up nicely, until you push his dickhead against the opening a bit harder and feel it gliding into you slowly. Inch after inch of his manhood enters your asshole, stretching it oh so very nicely around the warm shaft. Yet something about the process seems to have been too slow for the horse's taste - as mid-way, Bolt suddenly rears up impatiently and thrusts forward, spearing you on his horse cock.";
 	WaitLineBreak;
 	say "     You let out a shriek of pleasure and shout obscenities at no one in particular as Thunderbolt starts to thrust back and forth. Taking control of his willing mate he stands above you and hammers away at your gripping hole. You barely have time to think or act as Bolt stretches out your tight chute with each thrust. You're glad you have the backrest of the bench to hold on to, because you doubt you could keep his hard thrusts from pushing you all over the place otherwise. Soon after, Bolt starts to speed up, grunting and snorting in pleasure as he fucks your ass. He jackhammers at incredible speed into you and you can but kneel there and take it like a good mate for your stallion. Bottoming out inside you one last time he thrust nearly every inch of his two foot cock into you, distending your belly magnificently.";
@@ -298,12 +290,8 @@ SexuallyExperienced of Ariana is true.
 TwistedCapacity of Ariana is true. [Twisted Characters can take any penetration, no matter the size]
 Sterile of Ariana is true. [steriles can't knock people up]
 MainInfection of Ariana is "".
-Description of Ariana is "[ArianaDesc]".
-Conversation of Ariana is { "<This is nothing but a placeholder!>" }.
+Description of Ariana is "     Ariana is a bipedal lioness girl standing around six feet tall with orange and yellow fur and a gorgeous face that closely resembles her sister's. Unlike her younger sister however Ariana is exceptionally more muscled and built. Ariana sports tight running shorts with a hole in them for her swishing lioness tail as well as a black tank top with her school colors strewn across them.[line break]".
 The scent of Ariana is "     Ariana smells musky from a day's jog, the scent underlain by a sweet smell of perfume and pheromones.".
-
-to say ArianaDesc:
-	say "     Ariana is a bipedal lioness girl standing around six feet tall with orange and yellow fur and a gorgeous face that closely resembles her sister's. Unlike her younger sister however Ariana is exceptionally more muscled and built. Ariana sports tight running shorts with a hole in them for her swishing lioness tail as well as a black tank top with her school colors strewn across them.";
 
 instead of conversing the Ariana:
 	say "     You walk up and say hello to the lovely lioness. 'Hey how have you been sweetie?' After some casual talk you eventually broach asking her about herself. She looks a little surprised but gives you a toothy smile. 'Well, I used to be a gymnast here, but now I sort of just hang around campus, beating sis at sports, annoying the football team and fucking the stallion,' she says, biting a finger and chuckling.";
@@ -387,12 +375,8 @@ SexuallyExperienced of Eres is true.
 TwistedCapacity of Eres is true. [Twisted Characters can take any penetration, no matter the size]
 Sterile of Eres is true. [steriles can't knock people up]
 MainInfection of Eres is "".
-Description of Eres is "[EresDesc]".
-Conversation of Eres is { "<This is nothing but a placeholder!>" }.
+Description of Eres is "     Eres is a bipedal lioness girl standing around six feet tall with orange and yellow fur and a gorgeous face that closely resembles her sister's. Unlike her older sister however Eres has a much thinner and lithe frame. Eres sports a fairly chaste knee-long white skirt and matching blouse; a hole poking out of her skirt lets her tail swish freely around.[line break]".
 The scent of Eres is "     Eres smells of evergreen grass with a hint of the innards of a book.".
-
-to say EresDesc:
-	say "     Eres is a bipedal lioness girl standing around six feet tall with orange and yellow fur and a gorgeous face that closely resembles her sister's. Unlike her older sister however Eres has a much thinner and lithe frame. Eres sports a fairly chaste knee-long white skirt and matching blouse; a hole poking out of her skirt lets her tail swish freely around.";
 
 instead of conversing the Eres:
 	say "     You walk up and say hello to the lovely lioness. Eres pokes her head up from a small journal she was writing in and gives you a shy smile. [first time]'Oh, hello there I don't think we've actually formally met. I'm Eres.' [only]She lays a paw out to shake, which you do. After some casual talk you ask her about herself. She flashes you a coy smile. 'I used to study economics here, you know before everything happened. I suppose now I just take it day by day, usually in the library reading about the past.' She gazes back down to her journal smiling fondly.";

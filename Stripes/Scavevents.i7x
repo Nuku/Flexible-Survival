@@ -140,11 +140,7 @@ to say ResolveEvent Protected Supplies:
 	let Q be a list of numbers;
 	repeat with tt running from 1 to number of filled rows in Table of Random Critters:
 		choose row tt from the Table of Random Critters;
-		if there is a lev entry:
-			if lev entry > level of Player and HardMode is false:
-				next;
-		else:
-			next;
+		if there is no lev entry or (lev entry > level of Player and HardMode is false), next;
 		if area entry matches the text battleground:
 			if BannedStatus entry is true:
 				next; [skips if banned creature]
@@ -177,8 +173,7 @@ to say ResolveEvent Protected Supplies:
 			let scavfight be 1;
 		else:
 			say "The creature remains watchful, but keeps you from moving towards your desired supplies.";
-			LineBreak;
-			say "     [bold type]Shall you attack to get them or leave?[roman type][line break]";
+			say "[line break]     [bold type]Shall you attack to get them or leave?[roman type][line break]";
 			say "     ([link]Y[as]y[end link]) - Attack.";
 			say "     ([link]N[as]n[end link]) - Leave.";
 			if Player consents:
@@ -213,8 +208,7 @@ Sarea of Dropped Handbag is "Allzones".
 
 to say ResolveEvent Dropped Handbag:
 	say "     Passing through the city, you find a dropped handbag with torn scraps of clothes around it. Given the messy stains on the torn dress, it seems whoever owned the bag met a rather sticky fate.";
-	LineBreak;
-	say "     [bold type]Do you want to search it? It doesn't seem like they'll be needing it anymore.[roman type][line break]";
+	say "[line break]     [bold type]Do you want to search it? It doesn't seem like they'll be needing it anymore.[roman type][line break]";
 	say "     ([link]Y[as]y[end link]) - Yes.";
 	say "     ([link]N[as]n[end link]) - No.";
 	if Player consents:
@@ -719,7 +713,7 @@ to say ResolveEvent Shattered House:
 		if dice >= 16:
 			say "Taking a quick look inside, you luckily feel the kitchen floor starting to give way out from under you and manage to back away before the middle of the kitchen floor caves in and that section of the damaged house collapses into the basement. You move on after that unsuccessful venture and remind yourself to be more careful inside damaged buildings from now on.";
 		else:
-			let dam be ( ( HP of Player + MaxHP of Player ) ) / 7;
+			let dam be ( HP of Player + MaxHP of Player ) / 7;
 			decrease HP of Player by dam;
 			say "Taking a quick look inside, you yell in surprise as the kitchen floor collapses out from under you, dropping you into the basement as more of the room falls in around you. You avoid a close call as the appliances come tumbling in. Once the dust settles, you grab a few items that fell out of the cubbard and climb out before the whole place collapses on top of you, much more wary about damaged buildings now.";
 			ItemGain chips by 2;
@@ -734,7 +728,7 @@ to say ResolveEvent Shattered House:
 		if dice >= 14:
 			say "As you're searching through the rubble, you luckily notice some creaking and some plaster dust falling out of the corner of your eye. You get out quickly, avoiding the sudden collapse of the house. Scared but safe, you leave the place behind before the noise can attract anything dangerous.";
 		else:
-			let dam be ( ( HP of Player + MaxHP of Player ) ) / 7;
+			let dam be ( HP of Player + MaxHP of Player ) / 7;
 			decrease HP of Player by dam;
 			say "As you're searching through the rubble, you are too focused on looking for something you can take that you don't notice the growing groans of the building until it's too late and it starts collapsing around you. Debris falls down atop you, hurting you quite a bit and pinning you beneath it. You eventually dig yourself out, but you're left tired and bruised.";
 			if a random chance of 2 in 3 succeeds:
