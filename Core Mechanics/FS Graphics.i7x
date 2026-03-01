@@ -625,6 +625,9 @@ Figure of Orbul_naked_icon is the file "Orbul_naked.jpg".
 Figure of Orthas_face_icon is the file "Orthas_face.jpg".
 Figure of Paula_icon is the file "Paula_ig.jpg".
 Figure of Penny_icon is the file "Penny.jpg".
+Figure of Pirate_Shark_Herm_hard_icon is the file "Pirate_Shark_Herm_hard.png".
+Figure of Pirate_Shark_Herm_soft_icon is the file "Pirate_Shark_Herm_soft.png".
+Figure of Priestess_soft_icon is the file "Priestess_soft.jpg".
 Figure of Priestess_clothed_icon is the file "Priestess_clothed.jpg".
 Figure of Priestess_hard_icon is the file "Priestess_hard.jpg".
 Figure of Priestess_soft_icon is the file "Priestess_soft.jpg".
@@ -1950,6 +1953,8 @@ title	icon(figure name)	artist	backgroundcolor	formatrule
 "Pink Gel"	Figure of PinkGel_icon	"Rastear"	g-black	"normal"
 "Pink Poodle"	Figure of PinkPoodle_icon	"Anymouse1968"	g-white	"normal"
 "Pewter Consort"	Figure of Pewter_Consort_icon	"Xilrayne"	g-black	"normal"
+"Pirate_Shark_Herm_hard"	Figure of Pirate_Shark_Herm_hard_icon	"Gherod"	g-dark-gray	"normal"
+"Pirate_Shark_Herm_soft"	Figure of Pirate_Shark_Herm_soft_icon	"Gherod"	g-dark-gray	"normal"
 "Priestess_clothed"	Figure of Priestess_clothed_icon	"Gherod"	g-dark-gray	"normal"
 "Priestess_hard"	Figure of Priestess_hard_icon	"Gherod"	g-dark-gray	"normal"
 "Priestess_soft"	Figure of Priestess_soft_icon	"Gherod"	g-dark-gray	"normal"
