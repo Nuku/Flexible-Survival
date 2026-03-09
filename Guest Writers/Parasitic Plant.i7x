@@ -109,7 +109,7 @@ When Play begins:
 	now body entry is "undeniably feminine with root-like legs, your needy cunt exuding a musky substance meant to attract males"; [ Body Description, format as "Your Body is [Body of Player]." ]
 	now skin entry is "[one of]green[or]beautiful[at random] plant-like"; [ Skin Description, format as "Looking at yourself, your body is covered in [Skin of Player] skin." ]
 	now tail entry is "A very moist vagina replaced your anus, concealed by a dress made of long petals which extends down to the floor."; [ Tail description, write a whole Sentence or leave blank. ]
-	now cock entry is "[if looknow is 1]tentacle[else][one of]vine-like[or]tentacle[or]green tendril[at random][end if]"; [ Cock Description, format as you have a 'size' (your text) cock]
+	now cock entry is "[if looknow is true]tentacle[else][one of]vine-like[or]tentacle[or]green tendril[at random][end if]"; [ Cock Description, format as you have a 'size' (your text) cock]
 	now face change entry is "long tendrils covered with leaves sprout like long green hair. A strange sensation spreads through your mouth as it seals up and your teeth disappear. A new slit forms just below your nose, ending at your chin, leaving you with a vagina for a mouth. It feels moist and fills your mind with an unending need for cum! At the same time, your face becomes rounder, and more feminine"; [ Face change text, format as "Your face feels funny as [face change entry]." ]
 	now body change entry is "a sudden surge of vines and roots spread like an infection through your body from a seed hidden inside of you. Your legs become root-like vines that dig into the ground if you stay in one place for too long, while the rest of your body shifts, leaving you much shorter, with feminine curves and a gorgeous body. Your pussy starts drooling a musky substance which arouses you"; [ Body change text, format as "Your body feels funny as [body change entry]." ]
 	now skin change entry is "thin vines suddenly force their way out of your ass spreading outward over your skin from some unseen seed inside your body. They cover every inch and work their way into every orifice of your body before sinking into your skin, turning your entire body a dark plant-like green color!"; [ Skin change text, format as "Your skin feels funny as [skin change entry]." ]
@@ -379,16 +379,16 @@ to say parasiticlust:
 		raise Player Libido by addedlibido;
 		if Libido of Player > 90:
 			if location of Player is fasttravel and timetillrampage > 3:
-				let keepskin be 0;
-				let keepface be 0;
-				let keeptail be 0;
-				let keepbody be 0;
-				let keepcock be 0;
-				if SkinName of Player is "Parasitic Plant", now keepskin is 1;
-				if FaceName of Player is "Parasitic Plant", now keepface is 1;
-				if TailName of Player is "Parasitic Plant", now keeptail is 1;
-				if BodyName of Player is "Parasitic Plant", now keepbody is 1;
-				if CockName of Player is "Parasitic Plant", now keepcock is 1;
+				let keepskin be false;
+				let keepface be false;
+				let keeptail be false;
+				let keepbody be false;
+				let keepcock be false;
+				if SkinName of Player is "Parasitic Plant", now keepskin is true;
+				if FaceName of Player is "Parasitic Plant", now keepface is true;
+				if TailName of Player is "Parasitic Plant", now keeptail is true;
+				if BodyName of Player is "Parasitic Plant", now keepbody is true;
+				if CockName of Player is "Parasitic Plant", now keepcock is true;
 				now timetillrampage is 0;
 				let hmonlist be a list of numbers;
 				repeat with X running from 1 to number of filled rows in Table of Random Critters:	[ Loop through and select all monsters that appear in the current area or Outside ]
@@ -414,20 +414,20 @@ to say parasiticlust:
 				say "     The sex rampage finally ends and you regain control of your urges. You are filled with a copious amount of cum; thick streams of cum are oozing from all your fuckable holes. You can feel the seed deep inside you throb as your plant-like infection reasserts itself as it soaks up the sexual juices it so desired. It seeps through your infected body, reclaiming your altered flesh and spreading further.";
 				setmonster "Parasitic Plant";
 				choose row MonsterID from Table of Random Critters;
-				if keepskin is 1:
+				if keepskin is true:
 					now SkinName of Player is "Parasitic Plant";
 					now Skin of Player is skin entry;
-				if keepface is 1:
+				if keepface is true:
 					now FaceName of Player is "Parasitic Plant";
 					now Face of Player is face entry;
-				if keeptail is 1:
+				if keeptail is true:
 					now TailName of Player is "Parasitic Plant";
 					now tail of Player is tail entry;
-				if keepbody is 1:
+				if keepbody is true:
 					now BodyName of Player is "Parasitic Plant";
 					now Body of Player is body entry;
 					attributeinfect;
-				if keepcock is 1:
+				if keepcock is true:
 					now CockName of Player is "Parasitic Plant";
 					now Cock of Player is cock entry;
 				infect;

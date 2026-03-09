@@ -70,11 +70,11 @@ to say cat def:
 		now z is 1;
 	if Feline_attached is 0 and BodyName of Player is "Feline":
 		if HP of Leonard >= 7 and HP of Leonard < 10:
-			if Feline_meow is 0, increase Feline_meow by 1;
+			if Feline_meow is 0, now Feline_meow is 1;
 			say "[if z is 1][line break][end if]     Recalling that Leonard has asked you to track down more of these felines, you pick up the cat girl and cradle her to your chest. She mewls softly and nuzzles you, wrapping her lips around your nipple and starting to suckle eagerly. You moan in pleasure as you [if Breast Size of Player is 0]surprisingly [end if]start to lactate, providing warm milk for the needy kitty. You feel very aroused by the experience and can hardly wait to bring her to Leonard.";
 			now z is 2;
 		else if HP of Leonard >= 16 and HP of Leonard < 100:
-			if Feline_meow is 0, increase Feline_meow by 1;
+			if Feline_meow is 0, now Feline_meow is 1;
 			say "[if z is 1][line break][end if]     Deciding that since you've got this pretty kitty right here, you might like to introduce her to Leonard as well, you pick her up gently and cradle her to your chest, purring soothingly to her. She mewls softly and nuzzles you, wrapping her lips around your nipple and suckling eagerly. You moan in pleasure as you [if Breast Size of Player is 0]eventually [end if]start to lactate, providing warm milk for the needy kitty. You grow increasingly protective of her and nuzzle her ears, whispering what a good and pretty kitty she is and how she'll love her new pride because her new pride will love her.";
 			now z is 2;
 		if z is 2:
@@ -278,16 +278,16 @@ When Play begins:
 	now defeated entry is "[feline def]"; [ Text or say command used when Monster is defeated.]
 	now victory entry is "[feline vict]"; [ Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block as the demonstration text shows.]
 	now desc entry is "[feline desc]"; [ Description of the creature when you encounter it.]
-	now face entry is "[if HP of Leonard >= 15 and HP of Leonard < 100]that of a proud and beautiful lioness[else]the cute head of a small lioness[end if]"; [ Face description, format as "Your face is [Face of Player]." ]
+	now face entry is "[if HP of Leonard >= 15 and HP of Leonard < 100]that of a proud and beautiful[else]the cute head of a small[end if] lioness"; [ Face description, format as "Your face is [Face of Player]." ]
 	now body entry is "[if HP of Leonard >= 15 and HP of Leonard < 100]that of a sexy lioness woman. Being full height and full-figured, you are a matronly pride mother now. Your nipples are visible and black, begging to be sucked on, leaking a constant stream of thick cream that runs down your body if it isn't being constantly drunk[else if Breast Size of Player > 2]a female lioness. You are only about four feet tall, though you have huge breasts for your height and your exposed sex is swollen and dripping with need. Your nipples are visible and black, begging to be sucked on, leaking a constant stream of thick cream that runs down into your fur if it isn't being drunk constantly[else]a female lioness. You are only about four feet tall, though your exposed sex is swollen and dripping with need. Your nipples are visible and black, begging to be sucked on. Despite the smaller size of your breasts, they are often leaking a stream of thick cream that runs down into your fur if it isn't being drunk constantly[end if]"; [ Body Description, format as "Your Body is [Body of Player]." ]
-	now skin entry is "[if looknow is 1]tawny brown fur, covering pliable[else]tawny brown fur covered[end if]"; [ skin Description, format as "Your body is covered in (your text) skin."]
+	now skin entry is "[if looknow is true]tawny brown fur, covering pliable[else]tawny brown fur-covered[end if]"; [ skin Description, format as "Your body is covered in (your text) skin."]
 	now tail entry is "You have a long, tufted lion's tail."; [ Tail description, write a whole Sentence or leave blank. ]
 	now cock entry is "leonine"; [ Cock Description, format as you have a 'size' (your text) cock]
-	now face change entry is "[if HP of Leonard >= 15 and HP of Leonard < 100]your head shifts and becomes that of a lovely lioness, proud and matronly in appearance[else]your head shrinks and, as you gasp, you notice your voice has lightened, gaining you the face of a small female feline. For some reason, the scents of the groins all around you become enticing and you can feel arousal building[end if]"; [ Face change text, format as "Your face feels funny as [face change entry]." ]
+	now face change entry is "your head [if HP of Leonard >= 15 and HP of Leonard < 100]shifts and becomes that of a lovely lioness, proud and matronly in appearance[else]shrinks and, as you gasp, you notice your voice has lightened, gaining you the face of a small female feline. For some reason, the scents of the groins all around you become enticing and you can feel arousal building[end if]"; [ Face change text, format as "Your face feels funny as [face change entry]." ]
 	now body change entry is "[if HP of Leonard >= 15 and HP of Leonard < 100]it shifts back into that of a womanly lioness. You can't help but moan and purr in pleasure at this change, feeling drawn to your handsome mate once more[else]the urge to giggle becomes powerful as you shrink and gain the softness of a small lioness[end if]"; [ Body change text, format as "Your body feels funny as [body change entry]." ]
 	now skin change entry is "tawny fur explodes over your chest, spreading rapidly across your front and back, slightly lighter on the front"; [ Skin change text, format as "Your skin feels funny as [skin change entry]." ]
 	now ass change entry is "[if HP of Leonard >= 15 and HP of Leonard < 100]you gain a pair of wide birthing hips and a sexy bottom to go with it. A leonine tail forms to go with it, twitching excitedly as you find yourself longing to feel your handsome mate's paws on your ass again[else]it shrinks even as it becomes rounder, pleasantly grabbable and covered in tan fur. You now have a female lion's butt[end if]"; [ Ass/tail change text, format as "Your ass feels funny as [ass change entry]." ]
-	now cock change entry is "[if HP of Leonard >= 15 and HP of Leonard < 100]your cock takes on a more feline form[else]your cock takes on a more feline form even as you feel cute and girly rather than as a male[end if]"; [ cock change text. format as "Your cock feels funny as (your text)." ]
+	now cock change entry is "it takes on a more feline form[if HP of Leonard < 15 or HP of Leonard >= 100] even as you feel cute and girly rather than as a male[end if]"; [ cock change text. format as "Your cock feels funny as (your text)." ]
 	now str entry is 6;
 	now dex entry is 21;
 	now sta entry is 8;

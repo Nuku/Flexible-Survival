@@ -119,13 +119,13 @@ When Play begins:
 	now desc entry is "     You turn a corner and see it. Looking up you realize due to the shape of the branches you are unable to actually see just how tall this monstrous and truly awesome tree is. Its branches are long and you see, among the foliage some fruits that look unbelievably tasty, if you could just shake the tree enough to get one to fall...[line break]"; [ Description of the creature when you encounter it.]
 	now face entry is "completely human"; [ Face description, format as "Your face is [Face of Player]." ]
 	now body entry is "human-looking"; [ Body Description, format as "Your Body is [Body of Player]." ]
-	now skin entry is "[if looknow is 1]human[else]normal human, lovely, healthy-looking[end if]"; [ skin Description, format as "Your body is covered in (your text) skin."]
+	now skin entry is "[if looknow is true]human[else]normal human, lovely, healthy-looking[end if]"; [ skin Description, format as "Your body is covered in (your text) skin."]
 	now tail entry is ""; [ Tail description, write a whole Sentence or leave blank. ]
 	now cock entry is "human"; [ Cock Description, format as you have a 'size' (your text) cock.]
 	now face change entry is "it seems to tingle, moving slightly. With a start you realize it's human"; [ Face change text, format as "Your face feels funny as [face change entry]." ]
 	now body change entry is "your muscles writhe about under your skin, slowly settling back into a human shape"; [ Body change text, format as "Your body feels funny as [body change entry]." ]
 	now skin change entry is "all the hair on your body seems to fall out at once only to have what would be considered normal human hair sprout back out"; [ Skin change text, format as "Your skin feels funny as [skin change entry]." ]
-	now ass change entry is "[if awesome_sex is 2]your hips seem to return to human male normal[else]your rear changes, sliding into the perfect wide-hipped female figure[end if]"; [ Ass/tail change text, format as "Your ass feels funny as [ass change entry]." ]
+	now ass change entry is "your [if awesome_sex is 2]hips seem to return to human male normal[else]rear changes, sliding into the perfect wide-hipped female figure[end if]"; [ Ass/tail change text, format as "Your ass feels funny as [ass change entry]." ]
 	now cock change entry is "it seems to feel hot, after a few gasps you realize it looks completely human"; [ cock change text. format as "Your cock feels funny as (your text)." ]
 	now str entry is 15;
 	now dex entry is 15;

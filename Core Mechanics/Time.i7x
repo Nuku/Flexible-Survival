@@ -23,7 +23,7 @@ playon is a number that varies. [endless play variable]
 Part 1 - Turnpass Rule (it makes the world go round)
 
 This is the turnpass rule:
-	now looknow is 0;
+	now looknow is false;
 	now ishunting is false;
 	now showlocale is true;
 	if the story has ended:
@@ -57,15 +57,15 @@ This is the turnpass rule:
 	if "Rapid Healing" is listed in feats of Player:
 		increase HP of Player by 2;
 	if "Singular" is listed in feats of Player:
-		let z be 1;
+		let z be true;
 		if FaceName of Player is BodyName of Player:
 			if TailName of Player is BodyName of Player:
 				if SkinName of Player is BodyName of Player:
 					if CockName of Player is BodyName of Player:
-						now z is 0;
+						now z is false;
 		if BodyName of Player is "Human" or ( Resolution of Secure Area is 2 and humanity of Player > 49 ): [blocked for humans and active shifters]
-			now z is 0;
-		if z is 1:
+			now z is false;
+		if z is true:
 			repeat with y running from 1 to number of filled rows in Table of Random Critters:
 				choose row y from the Table of Random Critters;
 				if Name entry exactly matches the text BodyName of Player, case insensitively:
@@ -149,40 +149,40 @@ This is the turnpass rule:
 	if the remainder after dividing turns by 3 is 0:
 		if "Perky" is listed in feats of Player:
 			increase morale of Player by 1;
-		let restoration be 0;
-		if "Physical Booster" is listed in feats of Player and wrcursestatus is not 5 and restoration is 0:
+		let restoration be false;
+		if "Physical Booster" is listed in feats of Player and wrcursestatus is not 5 and restoration is false:
 			if Strength of Player < 14 and a random chance of 1 in 2 succeeds:
 				increase Strength of Player by 1;
 				increase capacity of Player by 5;
 				say "[line break]Your body strives to restore its lost might and rebuilds your muscles. Your stomach grumbles with hunger at this sudden effort. [bold type]Strength increased by 1.[roman type][line break]";
-				now restoration is 1;
+				now restoration is true;
 			else if Stamina of Player < 14 and a random chance of 1 in 2 succeeds:
 				increase Stamina of Player by 1;
 				if remainder after dividing stamina of Player by 2 is 0:
 					increase MaxHP of Player by level of Player plus 1;
 				say "[line break]Your body strives to restore its lost hardiness and toughens your body. Your stomach grumbles with hunger at this sudden effort. [bold type]Stamina increased by 1.[roman type][line break]";
-				now restoration is 1;
+				now restoration is true;
 			else if Dexterity of Player < 14 and a random chance of 1 in 2 succeeds:
 				increase Dexterity of Player by 1;
 				say "[line break]Your body strives to regain its lost agility and restores your flexibility. Your stomach grumbles with hunger at this sudden effort. [bold type]Dexterity increased by 1.[roman type][line break]";
-				now restoration is 1;
-			if restoration is 1 and "Automatic Survival" is not listed in feats of Player:
+				now restoration is true;
+			if restoration is true and "Automatic Survival" is not listed in feats of Player:
 				increase hunger of Player by 6;
-		if "Mental Booster" is listed in feats of Player and wrcursestatus is not 5 and restoration is 0:
+		if "Mental Booster" is listed in feats of Player and wrcursestatus is not 5 and restoration is false:
 			if Intelligence of Player < 14 and a random chance of 1 in 2 succeeds:
 				increase Intelligence of Player by 1;
 				say "[line break]Your body strives to restore your mental functions. Your stomach churns and you sweat profusely from the effort of this process. [bold type]Intelligence increased by 1.[roman type][line break]";
-				now restoration is 1;
+				now restoration is true;
 			else if Charisma of Player < 14 and a random chance of 1 in 2 succeeds:
 				increase Charisma of Player by 1;
-				now restoration is 1;
+				now restoration is true;
 				say "[line break]Your body strives to restore your natural charm and allure. Your stomach churns and you sweat profusely from the effort of this process. [bold type]Charisma increased by 1.[roman type][line break]";
-				now restoration is 1;
+				now restoration is true;
 			else if Perception of Player < 14 and a random chance of 1 in 2 succeeds:
 				increase Perception of Player by 1;
 				say "[line break]Your body strives to restore your enhanced perceptive abilities. Your stomach churns and you sweat profusely from the effort of this process. [bold type]Perception increased by 1.[roman type][line break]";
-				now restoration is 1;
-			if restoration is 1 and "Automatic Survival" is not listed in feats of Player:
+				now restoration is true;
+			if restoration is true and "Automatic Survival" is not listed in feats of Player:
 				increase hunger of Player by 3;
 				increase thirst of Player by 5;
 		if hunger of Player > 3 or thirst of Player > 12:
@@ -394,7 +394,7 @@ to decide what number is (trncount - a number) converted to (ReturnType - a text
 	let Tleap be true;[According to the calendar above the only leap year that exists is 2008]
 	let tempDayCount be trncount + 102;[ adjusts days gone by to current date. This is  Redundant because of DayCount but allows the function to be independent of global variables.]
 	let tempYearCount be 0;[for calculating the years gone by]
-	let tempMonthCount be 0;[For calculating the months gone by]
+	[let tempMonthCount be 0;[For calculating the months gone by]]
 	if tempDayCount > 366:[If at least one year has passed]
 		while tempDayCount > 366: [subtract the years until a number of turns equalling less than one year is reached]
 			if Tleap is true:[2008 has not been counted]

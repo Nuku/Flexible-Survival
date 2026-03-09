@@ -213,9 +213,7 @@ understand "zPregStatus [text]" as PregStatus.
 understand "zPregCheck [text]" as PregStatus.
 
 check PregStatus:
-	if debugactive is 0:
-		say "You aren't currently debugging.";
-		stop the action;
+	if debugactive is 0, say "You aren't currently debugging." instead;
 
 carry out PregStatus:
 	let PregCheckObj be Player;
@@ -223,82 +221,26 @@ carry out PregStatus:
 		repeat with x running through persons:
 			if printed name of x exactly matches the text topic understood, case insensitively:
 				now PregCheckObj is x;
-	say "     DEBUG: Preg Status of [PregCheckObj]:[line break]";
-	say "impreg_ok: ";
-	if PregCheckObj is impreg_ok:
-		say "+";
-	else:
-		say "-";
-	say "[line break]impreg_able: ";
-	if PregCheckObj is impreg_able:
-		say "+";
-	else:
-		say "-";
-	say "[line break]impreg_now: ";
-	if PregCheckObj is impreg_now:
-		say "+";
-	else:
-		say "-";
-	say "[line break]partial_vacant: ";
-	if PregCheckObj is partial_vacant:
-		say "+";
-	else:
-		say "-";
-	say "[line break]total_vacant: ";
-	if PregCheckObj is total_vacant:
-		say "+";
-	else:
-		say "-";
-	LineBreak;
-	say "[line break]fpreg_ok: ";
-	if PregCheckObj is fpreg_ok:
-		say "+";
-	else:
-		say "-";
-	say "[line break]fpreg_able: ";
-	if PregCheckObj is fpreg_able:
-		say "+";
-	else:
-		say "-";
-	say "[line break]fpreg_now: ";
-	if PregCheckObj is fpreg_now:
-		say "+";
-	else:
-		say "-";
-	say "[line break]female_vacant: ";
-	if PregCheckObj is fem_vacant:
-		say "+";
-	else:
-		say "-";
-	LineBreak;
-	say "[line break]mpreg_ok: ";
-	if PregCheckObj is mpreg_ok:
-		say "+";
-	else:
-		say "-";
-	say "[line break]mpreg_able: ";
-	if PregCheckObj is mpreg_able:
-		say "+";
-	else:
-		say "-";
-	say "[line break]mpreg_now: ";
-	if PregCheckObj is mpreg_now:
-		say "+";
-	else:
-		say "-";
-	say "[line break]male_vacant: ";
-	if PregCheckObj is male_vacant:
-		say "+";
-	else:
-		say "-";
+	say "Preg Status of [PregCheckObj]:[line break]";
+	say "     impreg_ok: [if PregCheckObj is impreg_ok][special-style-1]+[else][special-style-2]-[end if][roman type][line break]";
+	say "     impreg_able: [if PregCheckObj is impreg_able][special-style-1]+[else][special-style-2]-[end if][roman type][line break]";
+	say "     impreg_now: [if PregCheckObj is impreg_now][special-style-1]+[else][special-style-2]-[end if][roman type][line break]";
+	say "     partial_vacant: [if PregCheckObj is partial_vacant][special-style-1]+[else][special-style-2]-[end if][roman type][line break]";
+	say "     total_vacant: [if PregCheckObj is total_vacant][special-style-1]+[else][special-style-2]-[end if][roman type][paragraph break]";
+	say "     fpreg_ok: [if PregCheckObj is fpreg_ok][special-style-1]+[else][special-style-2]-[end if][roman type][line break]";
+	say "     fpreg_able: [if PregCheckObj is fpreg_able][special-style-1]+[else][special-style-2]-[end if][roman type][line break]";
+	say "     fpreg_now: [if PregCheckObj is fpreg_now][special-style-1]+[else][special-style-2]-[end if][roman type][line break]";
+	say "     female_vacant: [if PregCheckObj is fem_vacant][special-style-1]+[else][special-style-2]-[end if][roman type][paragraph break]";
+	say "     mpreg_ok: [if PregCheckObj is mpreg_ok][special-style-1]+[else][special-style-2]-[end if][roman type][line break]";
+	say "     mpreg_able: [if PregCheckObj is mpreg_able][special-style-1]+[else][special-style-2]-[end if][roman type][line break]";
+	say "     mpreg_now: [if PregCheckObj is mpreg_now][special-style-1]+[else][special-style-2]-[end if][roman type][line break]";
+	say "     male_vacant: [if PregCheckObj is male_vacant][special-style-1]+[else][special-style-2]-[end if][roman type][line break]";
 
 ShowEncounteredEnemies is an action applying to nothing.
 understand "ShowEncounteredEnemies" as ShowEncounteredEnemies.
 
 check ShowEncounteredEnemies:
-	if debugactive is 0:
-		say "You aren't currently debugging.";
-		stop the action;
+	if debugactive is 0, say "You aren't currently debugging." instead;
 
 carry out ShowEncounteredEnemies:
 	EncounteredEnemiesList;
@@ -306,7 +248,7 @@ carry out ShowEncounteredEnemies:
 to EncounteredEnemiesList:
 	sort EncounteredEnemies of Player;
 	say "Thinking back to your misadventures in the city so far, you call into memory all the creatures you have encountered and fought:[line break]";
-	say "[EncounteredEnemies of Player][line break]";
+	say "[EncounteredEnemies of Player].";
 
 [TODO: write Infection overview for single infection]
 
@@ -336,7 +278,7 @@ carry out InfectionOverview:
 		LineBreak;
 
 to DescriptionDisplay:
-	now looknow is 1;
+	now looknow is true;
 	let cocktext be "";
 	follow the cock descr rule;
 	if Player is male:
@@ -405,9 +347,9 @@ to DescriptionDisplay:
 				say "You have two [descr] breasts on your [bodydesc of Player] chest, curving out [Breast Size of Player] inch[if Breast Size of Player is not 1]es[end if] from your chest.";
 	if child is not born and gestation of child > 0:
 		if gestation of child < 10:
-			now looknow is 0;
+			now looknow is false;
 			say "Your [Skin of Player] swollen belly looks ready to spill forth life at any moment.";
-			now looknow is 1;
+			now looknow is true;
 		else if gestation of child < 20:
 			say "You have a noticeable bulge, a soft roundness to your belly that speaks of too many nights with a tub of ice cream, or an incoming child.";
 		else if gestation of child < 30:
@@ -419,7 +361,7 @@ to DescriptionDisplay:
 			say "You are thankfully spared some undo sexual yearning because you've prevented your tainted womb from going into heat.";
 		else if heatlevel is 3 and player is impreg_able and CockName of Player is not "Human":
 			say "Your tainted womb is not troubling you unduly at the moment, though you're unsure when your next intensified heat may strike you.";
-	now looknow is 0;
+	now looknow is false;
 	rule succeeds;
 
 DebugCurrentMonsterID is an action applying to nothing.
@@ -719,6 +661,7 @@ check DebugInfectText:
 	if debugactive is 0, say "You aren't currently debugging." instead;
 
 carry out DebugInfectText:
+	now looknow is true;
 	repeat through Table of Random Critters:
 		if Name entry exactly matches the text topic understood, case insensitively:
 			say "Your face [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [face change entry].";
@@ -727,12 +670,19 @@ carry out DebugInfectText:
 			say "Your ass [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [ass change entry].";
 			say "Your groin [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [cock change entry].";
 			say "[line break]Looking at your new form:[line break]";
-			say "Your face is [Face of Player].";
-			say "Your body is [Body of Player].";
-			say "Looking at yourself, your body is covered in [Skin of Player] skin.";
-			say "[tail of Player] [line break]";
-			say "A private peek shows that you have a [Cock Size Desc of Player] [Cock Length of Player]-inch-long [Cock of Player] [one of]cock[or]penis[or]shaft[or]maleness[at random].";
+			say "Your face is [face entry].";
+			say "Your body is [body entry].";
+			say "Looking at yourself, your body is covered in [skin entry] skin. ";
+			now looknow is false;
+			say "(your [skin entry] [one of]skin[or]hide[or]flesh[at random])[line break]";
+			now looknow is true;
+			if tail entry is not empty:
+				say "[tail entry][line break]";
+			say "A private peek shows that you have a [Cock Size Desc of Player] [Cock Length of Player]-inch-long [cock entry] [one of]cock[or]penis[or]shaft[or]maleness[at random]. ";
+			now looknow is false;
+			say "(your [cock entry] [one of]cock[or]penis[or]shaft[or]maleness[at random])[line break]";
 			break;
+	now looknow is false;
 
 Chapter 3 - Forced Commands
 

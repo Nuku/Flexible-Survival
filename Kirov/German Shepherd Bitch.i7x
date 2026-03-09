@@ -4,10 +4,10 @@ German Shepherd Bitch by Kirov begins here.
 
 Section 0 - Monster Variables, Flags, and Markers
 
-gsbBuffer is a number that varies. [@Tag:Notsaved]			[ Buffer used to temporarily store values ]
+gsbBuffer is a number that varies.[@Tag:Notsaved]			[ Buffer used to temporarily store values ]
 gsbBuffer is usually 0.
 
-gsbKatherine is a truth state that varies. [@Tag:Notsaved]	[ controls whether a particular encounter is with Katherine ]
+gsbKatherine is a truth state that varies.[@Tag:Notsaved]	[ controls whether a particular encounter is with Katherine ]
 gsbKatherine is usually false.
 
 [ Energy of Katherine										- counts the number of consecutive player victories over Katherine ]
@@ -21,31 +21,21 @@ gsbKatherine is usually false.
 [ 1 - met				]
 
 a postimport rule: [bugfixing rules for players that import savegames]
-	repeat with y running from 1 to number of filled rows in Table of Random Critters:
-		choose row y in Table of Random Critters;
-		if Name entry is "German Shepherd Bitch":
-			now MonsterID is y;
-			now area entry is "Outside";
-			break;
+	choose row with Name of "German Shepherd Bitch" from Table of Random Critters;
+	now area entry is "Outside";
 
 Section 1 - Monster Description
 
 to say gsbDescription:
 	if gsbKatherine is true:
 		[ The player is encountering Katherine ]
-		project Figure of Katherine_icon;
-		if Energy of Katherine < 3:
-			say "     Walking along the street, you hear a familiar patter of pawsteps behind you. You turn and are not surprised when you're faced with the sight of an anthro canine sporting the distinctive coat pattern of a German shepherd. From the lack of clothes, it's quite apparent she's female. Your eyes are drawn to her B cup breasts and the sway of her hips as she walks, but her feminine curves are complemented by an athletic build and tough demeanor. 'Well, look who we have here. Trespassing on my turf again?' she says, [bold type]clearly recognizing you from past encounters.[roman type] From the way she carries herself, it's clear she's seen her fair share of scuffles and won, and the stance she takes as you finish taking her in tells you she intends to add one more to the list.";
-		else if Energy of Katherine < 5:
-			say "     Walking along the street, you hear a familiar patter of pawsteps behind you. You turn and are not surprised when you're faced with the sight of an anthro canine sporting the distinctive coat pattern of a German shepherd. From the lack of clothes, it's quite apparent she's female. Your eyes are drawn to her B cup breasts and the sway of her hips as she walks, but her feminine curves are complemented by an athletic build and tough demeanor. '[one of]You again? This ought to be a fun challenge,[or]Don't think I'll go easy on you this time! I'm tougher than I look,[or]You're going down this time. Then maybe we can have some fun my way afterwards,[or]You won't get me again! I've been training,[at random]' she says. [bold type]Clearly she's run into you before,[roman type] and she's not very happy about losing the fight. She takes a fighting stance and gives you a bring-it-on wave with her hand, eager to prove herself this time around.";
+		if Energy of Katherine < 5:
+			say "     Walking along the street, you hear a familiar patter of pawsteps behind you. You turn and are not surprised when you're faced with the sight of an anthro canine sporting the distinctive coat pattern of a German shepherd. From the lack of clothes, it's quite apparent she's female. Your eyes are drawn to her B cup breasts and the sway of her hips as she walks, but her feminine curves are complemented by an athletic build and tough demeanor. '[if Energy of Katherine < 3]Well, look who we have here. Trespassing on my turf again?' she says, [bold type]clearly recognizing you from past encounters[roman type]. From the way she carries herself, it's clear she's seen her fair share of scuffles and won, and the stance she takes as you finish taking her in tells you she intends to add one more to the list[else][one of]You again? This ought to be a fun challenge[or]Don't think I'll go easy on you this time! I'm tougher than I look[or]You're going down this time. Then maybe we can have some fun my way afterwards[or]You won't get me again! I've been training[at random],' she says. [bold type]Clearly she's run into you before,[roman type] and she's not very happy about losing the fight. She takes a fighting stance and gives you a bring-it-on wave with her hand, eager to prove herself this time around[end if].";
 		else:
 			say "     Walking along the street, you hear a familiar patter of pawsteps behind you. You turn and are not surprised when you're faced with the sight of an anthro canine sporting the distinctive coat pattern of a German shepherd. From the lack of clothes, it's quite apparent she's female. Your eyes are drawn to her B cup breasts and the sway of her hips as she walks, but her feminine curves are complemented by an athletic build and tough demeanor. 'Ooh, hey there [if Player is male]stud[else]sexy[end if]. How about a friendly spar so you can prove to me you're really an Alpha[if Player is male] male[else if Player is female] bitch[else][end if],' she says teasingly. [bold type]You recognize this particular bitch from past encounters,[roman type] and after beating her so many times, she clearly recognizes you as her Alpha, though she still wants you to prove it once again.";
 	else:
 		[ The player is encountering a random gsb ]
 		say "     Walking along the street, you hear the soft patter of pawsteps behind you. Expecting to find a creature as you turn, you are instead faced with the sight of an anthro canine sporting the distinctive coat pattern of a German shepherd. From the lack of clothes, it's quite apparent she's female. Your eyes are drawn to her [one of]A[or]B[at random] cup breasts and the sway of her hips as she walks, but her feminine curves are complemented by an athletic build and tough demeanor. From the way she carries herself, it's clear she's seen her fair share of scuffles and won, and the stance she takes as you finish taking her in tells you she intends to add one more to the list.";
-
-to say gsbAttack:
-	say "[one of]The shepherd takes a swing at you, raking your skin with her claws.[or]She kicks out with her long legs, connecting with a resounding thump. You can really feel the power behind those thick thighs of hers![or]The dog pounces at you, nearly taking you down to the floor before you can escape her grasp and stand back up.[at random]";
 
 Section 2 - Monster Victory Scenes
 
@@ -56,26 +46,22 @@ to say gsbVictory:          [Scene for when the GSB defeats the player]
 		now gsbBuffer is 0;
 		say "[gsbDom]";
 		CreatureSexAftermath "German Shepherd Bitch" receives "PussyFuck" from "Player";
-	else if Player is female:
-		[German Shepherd Bitch scene]
-		say "     The German shepherd bitch knocks you to the floor. She rifles through your stuff for anything of value before stripping you naked. She sees your female parts and decides she's not interested. Then she turns to depart, leaving you to recover on your own.";
 	else:
 		[German Shepherd Bitch scene]
-		say "     The German shepherd bitch knocks you to the floor. She rifles through your stuff for anything of value before stripping you naked. She sees your neuter parts and decides she's not interested. Then she turns to depart, leaving you to recover on your own.";
+		say "     The German shepherd bitch knocks you to the floor. She rifles through your stuff for anything of value before stripping you naked. She sees your [if Player is female]female[else]lack of[end if] parts and decides she's not interested. Then she turns to depart, leaving you to recover on your own.";
 
 Section 3 - Monster Defeat Scenes
 
 to say gsbDefeat:           [Scene for when the player defeats the GSB]
-	if gsbKatherine is true:
-		increase Energy of Katherine by 1;
 	say "     The German shepherd bitch stumbles from your final blow, clearly struggling to keep her balance. She drops to one knee to avoid falling flat on her ass, breathing heavily as she does so. You keep yourself at the ready as she struggles to stand back up, the tough bitch clearly eager to stay in the fight. But her body betrays her, and she collapses down onto all fours before you, head hanging in defeat.";
-	if gsbKatherine is true and Energy of Katherine > 4:
-		say "     The bitch looks back up at you from the ground, panting heavily in excitement. She's clearly turned on by being beaten by such a strong opponent. She gives you an imploring look as she whines in need, expecting you to claim her as your own. 'Please,' she begs in a needy voice. 'I need an Alpha to fuck me!'";
-	else if gsbKatherine is true and Energy of Katherine > 2:
-		say "     The bitch looks back up at you from the ground, panting heavily in excitement. She's clearly turned on by being beaten by such a strong opponent. She gives you an imploring look as she whines in need, but says nothing more. Perhaps she's starting to enjoy your victories over her.";
+	if gsbKatherine is true:
+		if Energy of Katherine > 2:
+			say "     The bitch looks back up at you from the ground, panting heavily in excitement. She's clearly turned on by being beaten by such a strong opponent. She gives you an imploring look as she whines in need, [if Energy of Katherine > 4]expecting you to claim her as your own. 'Please,' she begs in a needy voice. 'I need an Alpha to fuck me!'[else]but says nothing more. Perhaps she's starting to enjoy your victories over her.[end if]";
+		increase Energy of Katherine by 1;
 	say "     The fight with the bitch has gotten you a bit excited. If you wanted to have some fun, you could easily take this opportunity to use her for your own desires. [bold type]Do you take advantage of the fallen shepherd?[roman type][line break]";
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
+	[]
 	if Player is male:
 		choose a blank row in table of fucking options;
 		now title entry is "Fuck Her";
@@ -86,8 +72,8 @@ to say gsbDefeat:           [Scene for when the player defeats the GSB]
 			choose a blank row in table of fucking options;
 			now title entry is "Recruit Her";
 			now sortorder entry is 2;
-			now description entry is "Make her YOUR bitch";
-			[]
+			now description entry is "Make her [bold type]your[roman type] bitch";
+	[]
 	if Player is female:
 		choose a blank row in table of fucking options;
 		now title entry is "Receive Oral";
@@ -96,9 +82,10 @@ to say gsbDefeat:           [Scene for when the player defeats the GSB]
 	[]
 	choose a blank row in table of fucking options;
 	now title entry is "Eat Her Out";
-	now sortorder entry is 9;
+	now sortorder entry is 4;
 	now description entry is "Make up for the fight by licking her pussy";
 	[]
+	sort the table of fucking options in sortorder order;
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
 		say "[link][y] - [title entry][as][y][end link][line break]";
@@ -112,20 +99,24 @@ to say gsbDefeat:           [Scene for when the player defeats the GSB]
 			choose row calcnumber in table of fucking options;
 			say "[title entry]: [description entry]?";
 			if Player consents:
-				let nam be title entry;
+				LineBreak;
 				now sextablerun is 1;
-				if nam is "Fuck Her":
-					say "[gsbDefeatSex1]";
-				else if nam is "Recruit Her":
-					say "[gsbRecruitSex1]";
-				else if nam is "Receive Oral":
-					say "[gsbDefeatSex2]";
-				else if nam is "Eat Her Out":
-					say "[gsbDefeatSex3]";
-				wait for any key;
+				if title entry is:
+					-- "Fuck Her":
+						say "[gsbDefeatSex1]";
+					-- "Recruit Her":
+						say "[gsbRecruitSex1]";
+					-- "Receive Oral":
+						say "[gsbDefeatSex2]";
+					-- "Eat Her Out":
+						say "[gsbDefeatSex3]";
 		else if calcnumber is 0:
+			LineBreak;
 			say "     Deciding you're not in the mood, you wave the German shepherd off and move on, leaving her to recover from the fight.";
 			now sextablerun is 1;
+		else:
+			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options], or 0 to exit.";
+	wait for any key;
 	clear the screen and hyperlink list;
 
 to say gsbDefeatSex1:			[pussy fuck]
@@ -163,12 +154,7 @@ to say gsbDom:
 	[ requires gsbBuffer parameter to be set ]
 	[ 0 - Encounter with GSB in the wild ]
 	[ 1 - Katherine after recruiting ]
-	if gsbBuffer is 1:
-		say "     Sensing you want her to take charge, Katherine saunters over to you with a wicked smile, and grabs you rather possessively. 'I can tell my Alpha likes a girl who's willing to take what she wants from time to time,' she says as she pulls you in close and gives you a seductive lick across the lips. The feeling of her wet canine tongue tickles, and the strong grip of her paws around your hips leaves you shuddering and at her mercy. She growls assertively before guiding you down onto your back, where she eagerly strips you and prepares to mount your quickly hardening [Cock of Player] cock.";
-	else if HP of Player > 0: [Player submitted]
-		say "     Happy with your submission, the German shepherd bitch roughly pushes you to the ground, a little over-eager to have her way with you. She begins divesting you of your gear and clothes, and at first, you're afraid she's going to take them and leave you bare to fend for yourself. 'Don't worry, babe,' she says calmly. '[one of]I'm not gonna hurt you. Too much[or]You won't be needing these for what I have planned[at random].' She climbs on top of you, straddling you with her powerful legs and leaving you helpless to do anything but go along for the ride.";
-	else: [Player defeated]
-		say "     Defeated, you stumble back from the German shepherd bitch before falling to your knees. You look up at her to see a wicked grin on her face. With your face now at crotch level, it's easy to see how excited the fight has made her, and you can already smell her arousal. She slowly saunters over to you, swaying her hips seductively, before she gently reaches out and gives you the tiniest of nudges. With your body still too weak from the fight, it's enough to send you toppling to the floor. 'Ha! Too easy,' she says as she begins to strip you naked. 'Time to have a little fun.' You're unable to resist as she climbs atop you and straddles your hips with her powerful legs.";
+	say "     [if gsbBuffer is 1]Sensing you want her to take charge, Katherine saunters over to you with a wicked smile, and grabs you rather possessively. 'I can tell my Alpha likes a girl who's willing to take what she wants from time to time,' she says as she pulls you in close and gives you a seductive lick across the lips. The feeling of her wet canine tongue tickles, and the strong grip of her paws around your hips leaves you shuddering and at her mercy. She growls assertively before guiding you down onto your back, where she eagerly strips you and prepares to mount your quickly hardening [Cock of Player] cock[else if HP of Player > 0]Happy with your submission, the German shepherd bitch roughly pushes you to the ground, a little over-eager to have her way with you. She begins divesting you of your gear and clothes, and at first, you're afraid she's going to take them and leave you bare to fend for yourself. 'Don't worry, babe,' she says calmly. '[one of]I'm not gonna hurt you. Too much[or]You won't be needing these for what I have planned[at random].' She climbs on top of you, straddling you with her powerful legs and leaving you helpless to do anything but go along for the ride[else]Defeated, you stumble back from the German shepherd bitch before falling to your knees. You look up at her to see a wicked grin on her face. With your face now at crotch level, it's easy to see how excited the fight has made her, and you can already smell her arousal. She slowly saunters over to you, swaying her hips seductively, before she gently reaches out and gives you the tiniest of nudges. With your body still too weak from the fight, it's enough to send you toppling to the floor. 'Ha! Too easy,' she says as she begins to strip you naked. 'Time to have a little fun.' You're unable to resist as she climbs atop you and straddles your hips with her powerful legs[end if].";
 	say "     Now that she has you exactly where she wants you, the bitch begins to slowly and sensually gyrate her hips against your crotch, raising her arms up in the air and shaking her bust to give you a little show. The sight of her well-toned body on display before you quickly brings you to full mast. Smiling at you all the while, she gives a possessive growl as she feels your [Cock of Player] member harden between her legs. You're tempted to reach up and play with her body, but before you can, she leans down and grabs you by the wrists, pinning you down in place. You moan helplessly in pleasure as she rubs her now-dripping pussy against your shaft, teasing you with the promise of being inside her. She keeps you locked in place for some time, eagerly grinding against you for her own pleasure.";
 	WaitLineBreak;
 	say "     The dominant hound coats your [Cock of Player] member in her feminine juices, clearly turned on by watching you squirm and writhe beneath her. But her patience begins to wear thin, as she reaches down and grabs you by the base, guiding you inside her pussy. You both gasp in pleasure as you finally slip into her depths. Her nethers are warm and slick, and you're astonished at how sinfully tight she is. She slowly sinks down onto your [cock size desc of player] cock, taking you all the way to the hilt. She pauses for a moment to adjust to the sensation, her doggy tongue dangling from her mouth as she pants in pleasure. Then, without loosing her grip on you, she raises herself from your crotch until just the tip of your penis remains inside her. The coldness of the air bites at your skin as you are removed from her warm embrace, but only for a split second. She slams her hips down again, returning you to the warmth of her canine muff. The female shepherd repeats the process several more times, slowly building up to a pace that soon has the both of you reeling in ecstasy.";
@@ -219,10 +205,7 @@ to say gsbPleasure:
 	say "     Eventually, the stimulation proves to much for her, and you feel the walls of her pussy clamp down rhythmically around your tongue. You pick up the pace as she climaxes, and her femcum splurts across your face. Left panting from your oral skills, the shepherd releases your head and relaxes back into the ground. Licking your lips clean of her juices, you stand back up and redress before leaving her to recover.";
 
 to say gsbPleasureKatherine:
-	if gsbBuffer is 1:
-		say "     You push Katherine down on to the ground so that she's resting on her back. She looks up at you longingly, begging for attention from her Alpha. Deciding to give her just that, sink down on the ground between her legs, spreading them apart to expose her pussy. A faint scent of arousal wafts up into the air, which only strengthens as you bring your face closer to her furry mound. The shepherd gives a pleased huff, happy to receive such a treat from her mate. She lies back and relaxes, and you lower your head to nuzzle into her crotch.";
-	else:
-		say "     You approach the defeated German shepherd, and she looks up at you longingly, begging for attention from her Alpha. Deciding to give her just that, you twirl your finger in a gesture to roll over like a dog, and the obedient bitch happily complies. You walk around to kneel down between her legs and spread them to expose her pussy. A faint scent of arousal wafts up into the air, which only strengthens as you bring your face closer to her furry mound. The shepherd gives a pleased huff, happy to receive such a treat from her mate. She lies back and relaxes, and you lower your head to nuzzle into her crotch.";
+	say "     You [if gsbBuffer is 1]push Katherine down on to the ground so that she's resting on her back. She looks up at you longingly, begging for attention from her Alpha. Deciding to give her just that, sink down on the ground between her legs, spreading them apart[else]approach the defeated German shepherd, and she looks up at you longingly, begging for attention from her Alpha. Deciding to give her just that, you twirl your finger in a gesture to roll over like a dog, and the obedient bitch happily complies. You walk around to kneel down between her legs and spread them[end if] to expose her pussy. A faint scent of arousal wafts up into the air, which only strengthens as you bring your face closer to her furry mound. The shepherd gives a pleased huff, happy to receive such a treat from her mate. She lies back and relaxes, and you lower your head to nuzzle into her crotch.";
 	say "     The scent of her pussy becomes overwhelming as you bury your face into the fluff surrounding her nethers. You struggle at first to find her lips among the tangle of fur, to which the recovering canine gives a small chuckle. That chuckle turns to a gasp as you finally find your mark, and you begin eagerly licking away. You tighten your grip around her thighs as you set to work, lapping at the bitch's pussy with enthusiasm. As the horny canine's arousal grows, she becomes more bold, and she reaches her paws down to stroke over your head.";
 	WaitLineBreak;
 	say "     Encouraging you with her touch, she keeps you pressed up against her crotch. You rather enjoy the feeling of her fingers trailing through your hair as you eat her out, and you return your attention to the juicy muff before you. You take things up a notch and begin probing between her lips with your tongue. She growls appreciatively at your ministrations, enjoying the attention. You withdraw to bring your tongue to her clit, which elicits a moan and a tightening grip on your head. You play with her like this for some time, swapping between tongue-fucking her and swirling around her sensitive nub.";
@@ -250,21 +233,20 @@ name(text)	PrepFunction(text)
 to say PrepCombat_German Shepherd Bitch:
 	setmongender 4; [creature is female]
 	project figure of Katherine_icon;
-	if HP of Katherine > 0 and a random chance of 1 in 3 succeeds:
-		now gsbKatherine is true;
+	if a random chance of 1 in 3 succeeds:
+		if HP of Katherine > 0:
+			now gsbKatherine is true;
+		else:
+			now gsbKatherine is false;
+			now HP of Katherine is 1;
 	else:
 		now gsbKatherine is false;
-		if HP of Katherine is 0 and a random chance of 1 in 3 succeeds:
-			now HP of Katherine is 1;
 
 Table of Random Critters (continued)
 NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
-	say "[gsbInsert]";
-
-to say gsbInsert:
 	Choose a blank row from Table of Random Critters;
 	now NewTypeInfection entry is false;
 	now Species Name entry is "German Shepherd";
@@ -281,7 +263,7 @@ to say gsbInsert:
 	now enemy title entry is ""; [ Name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name. ]
 	now enemy Name entry is ""; [ Specific name of unique enemy. ]
 	now enemy type entry is 0; [ 0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters. ]
-	now attack entry is "[gsbAttack]";
+	now attack entry is "[one of]The shepherd takes a swing at you, raking your skin with her claws.[or]She kicks out with her long legs, connecting with a resounding thump. You can really feel the power behind those thick thighs of hers![or]The dog pounces at you, nearly taking you down to the floor before you can escape her grasp and stand back up.[at random]";
 	now defeated entry is "[gsbDefeat]";
 	now victory entry is "[gsbVictory]"; [ Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block]
 	now desc entry is "[gsbDescription]";
@@ -289,7 +271,7 @@ to say gsbInsert:
 	now body entry is "that of a bipedal dog, with digitigrade legs and paw-like hands";
 	now skin entry is "coarse, brown and black furred";
 	now tail entry is "Behind you is a dog's tail, which whips about expressively and frequently betrays your mood.";
-	now cock entry is "[if looknow is 1]shaft, surrounded in a tight sheath surrounded by [Skin of Player] skin, protecting the wonderfully sensitive German shepherd[else][one of]knotted[or]animalistic canine[or]doggy[at random][end if]";
+	now cock entry is "[if looknow is true]shaft, surrounded in a tight sheath surrounded by [Skin of Player] skin, protecting the wonderfully sensitive German shepherd[else][one of]knotted[or]animalistic canine[or]doggy[at random][end if]";
 	now face change entry is "it draws forward into a canine muzzle, which rapidly fills with teeth and a broad, lolling tongue. At the same time, your ears become more pointed and expressive and migrate towards the top of your now canine head";
 	now body change entry is "your legs bend and twist into digitigrade form with soft subtle snaps of flowing bones. You look down to see your feet becoming entirely paw-like and your hands become somewhat paw-like with dull black claws in the tips";
 	now skin change entry is "fur begins to push through from underneath, soon covering you in a coarse, protective coat of brown and black fur";
@@ -435,32 +417,21 @@ When Play begins:
 	[Clit Size Adjective is generated by a function and can be used in scenes: very small/small/average/large/very large]
 ]
 
+Section 6 - Drop Item
+
 Table of Game Objects (continued)
 name	desc	weight	object
 "german shepherd bitch fur"	"A tuft of tan fur that looks like it has been pulled out of the coat of a German shepherd. It's nicely soft."	0	german shepherd bitch fur
 
 german shepherd bitch fur is a grab object.
 Usedesc of german shepherd bitch fur is "[gsbFurUse]".
-
-It is temporary.
+Scent of german shepherd male fur is "The fur has a pleasing, not too strong, animal-like scent.".
 
 to say gsbFurUse:
-	say "Holding the tuft of fur between your fingers, you stroke over it, delighted in its softness. Strangely, the hair disintegrates after a while, becoming a cloud of fine particles that are absorbed into your skin.";
+	say "     Holding the tuft of fur between your fingers, you stroke over it, delighted in its softness. Strangely, the hair disintegrates after a while, becoming a cloud of fine particles that are absorbed into your skin.";
 	infect "German Shepherd Bitch";
 
-instead of sniffing german shepherd male fur:
-	say "The fur has a pleasing, not too strong, animal-like scent.";
-
-to say gsdheatstart:
-	if heatform is 0:
-		increase Cunt Tightness of Player by 1;
-	else:
-		increase Libido of Player by 5;
-
-to say gsdheatend:
-	if heatform is 0:
-		decrease Cunt Tightness of Player by 1;
-		if Cunt Tightness of Player is 0, now Cunt Tightness of Player is 1;
+Section 7 - Monster Heat
 
 Table of infection heat (continued)
 infect name	heat cycle	heat duration	trigger text	description text	heat start	heat end	inheat	fheat (truth state)	mpregheat (truth state)	mpregtrigger
@@ -480,10 +451,15 @@ When Play begins:
 	now mpregheat entry is true;
 	now mpregtrigger entry is "A sudden throb in your ass catches you off guard, startling a whimper from your throat as you feel a rush of heat surging inside you. You can feel your fecund ass preparing itself to be bred as you go into a tainted heat. Your anal passage quivers and you feel a longing for a nice, canine cock to fill it.";
 
-a postimport rule: [bugfixing rules for players that import savegames]
-	if there is a Name of "German Shepherd Bitch" in the Table of Random Critters:
-		say "";
+to say gsdheatstart:
+	if heatform is 0:
+		increase Cunt Tightness of Player by 1;
 	else:
-		say "[gsbInsert]";
+		raise Player Libido by 5;
+
+to say gsdheatend:
+	if heatform is 0:
+		decrease Cunt Tightness of Player by 1;
+		if Cunt Tightness of Player < 1, now Cunt Tightness of Player is 1;
 
 German Shepherd Bitch ends here.
