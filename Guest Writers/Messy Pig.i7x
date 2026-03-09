@@ -256,7 +256,7 @@ this is the pigpussy rule:
 	let playernum be 150 + humanity of Player - Libido of Player + ( level of Player * 2 ) + charisma of Player;
 	if BodyName of Player is "Messy Pig" or FaceName of Player is "Messy Pig" or BodyName of Player is "Piggy" or FaceName of Player is "Piggy":
 		decrease playernum by 30;
-	let messypigcaught be 1;
+	let messypigcaught be true;
 	let messypignum be 200 + ( lev entry * 2 ) + cha entry;
 	let dam be ( wdam entry times a random number from 80 to 120 ) divided by 125; [80% dmg this round]
 	say "The pig creature makes a grab at you and manages to knock you over briefly. Before you can get back up, she's atop you, grinding her wet, messy pussy down onto your face. Her juices run across your face, and her heavy scent is strong and strangely alluring. You take [special-style-2][dam][roman type] damage as those juices arouse you further and weaken your efforts to keep fighting!";
@@ -272,10 +272,10 @@ this is the pigpussy rule:
 		say "[special-style-1][playernum][roman type] vs [special-style-2][messypignum][roman type]: ";
 	if playernum >= messypignum and HP of Player > 0 and Libido of Player < 110:		[caught / escape attempt]
 		say "As enticing as her pussy may be, you manage to come to your senses and push the porcine female off of you before it is too late.";
-		now messypigcaught is 0;
+		now messypigcaught is false;
 	else:													[still caught]
 		say "Enticed by her dripping juices, you bury your face in her cunt and start licking away, making her squeal in pleasure. You fade further, your resistance continuing to wane.";
-	if messypigcaught is 1:
+	if messypigcaught is true:
 		if HP of Player > 0 and Libido of Player < 110:							[still fighting, damaged]
 			let dam be ( wdam entry times a random number from 80 to 120 ) divided by 125; [80% dmg this round]
 			say "You take [special-style-2][dam][roman type] damage and grow more aroused!";
@@ -291,10 +291,10 @@ this is the pigpussy rule:
 			say "[special-style-1][playernum][roman type] vs [special-style-2][messypignum][roman type]: ";
 		if playernum >= messypignum and HP of Player > 0 and Libido of Player < 110:		[caught / escape attempt]
 			say "As enticing as her pussy may be, you manage to come to your senses and push the porcine female off of you before it is too late.";
-			now messypigcaught is 0;
+			now messypigcaught is false;
 		else:													[still caught]
 			say "You continue to lick the pig woman's wonderful pussy, growing more and more excited as you continue to do so. You happily work your tongue inside of her, growing more and more pleased by her squeals of pleasure.";
-	if messypigcaught is 1:
+	if messypigcaught is true:
 		if HP of Player > 0 and Libido of Player < 110:							[still fighting, damaged]
 			let dam be ( wdam entry times a random number from 80 to 120 ) divided by 100; [100% dmg this round]
 			say "You take another [special-style-2][dam][roman type] damage as your lustful longing for her grows higher!";
@@ -310,10 +310,10 @@ this is the pigpussy rule:
 			say "[special-style-1][playernum][roman type] vs [special-style-2][messypignum][roman type]: ";
 		if playernum >= messypignum and HP of Player > 0 and Libido of Player < 110:		[caught / escape attempt]
 			say "As enticing as her pussy may be, you manage to come to your senses and push the porcine female off of you before it is too late.";
-			now messypigcaught is 0;
+			now messypigcaught is false;
 		else:													[still caught]
 			say "You dive your tongue in and out of her while rubbing her sticky folds and messy bottom with your hands. Her scent is leaving you reeling, and you're starting to oink and grunt in pleasure as well.";
-	if messypigcaught is 1:
+	if messypigcaught is true:
 		if HP of Player > 0 and Libido of Player < 110:							[still fighting, damaged]
 			let dam be ( wdam entry times a random number from 80 to 120 ) divided by 90; [111% dmg this round]
 			say "You take another [special-style-2][dam][roman type] damage as your arousal continues to climb while hers does!";
@@ -332,11 +332,11 @@ this is the pigpussy rule:
 			say "[special-style-1][playernum][roman type] vs [special-style-2][messypignum][roman type]: ";
 		if playernum >= messypignum and HP of Player > 0 and Libido of Player < 110:		[caught / escape attempt]
 			say "As enticing as her pussy may be, you manage to come to your senses and push the porcine female off of you before it is too late. She grunts in frustration, you having managed to stop just before her climax.";
-			now messypigcaught is 0;
+			now messypigcaught is false;
 		else:													[still caught]
 			say "Your efforts finally pay off as you drive the porcine beauty to climax, spraying a fresh wave of her juices across your face and down your throat. You oink and squeal happily, lapping it all up even as it starts to seep into your skin and start changing you.";
 			CreatureSexAftermath "Player" receives "OralPussy" from "Messy Pig";
-	if messypigcaught is 1:
+	if messypigcaught is true:
 		if HP of Player > 0 and Libido of Player < 110:							[still fighting, damaged]
 			let dam be ( wdam entry times a random number from 80 to 120 ) divided by 67; [150% dmg this round]
 			say "You take [special-style-2][dam][roman type] damage and are left sexually lustful yourself.";
@@ -358,8 +358,8 @@ Section 5 - Bound State
 to MessyPigBind:
 	setmonster "Messy Pig";
 	now lustatt is Libido of Player;
-	let Trixieexit be 0;
-	while Trixieexit is 0:
+	let Trixieexit be false;
+	while Trixieexit is false:
 		if humanity of Player < 50:
 			now obliging is true;
 		checkboundrecover;
@@ -377,7 +377,7 @@ to MessyPigBind:
 				decrease humanity of Player by 15 + (psycheadjust * 5);
 				if struggleatt > 0, decrease struggleatt by 1;
 		if humanity of Player < 1:
-			now Trixieexit is 1;
+			now Trixieexit is true;
 			trigger ending "Pig Vore";
 			the Player was ended by "Vore by Messy Pig";
 			end the story saying "A pig pigged out on you!";
@@ -411,7 +411,7 @@ to MessyPigBind:
 				else:
 					say "     You continue to thrash about from within your hungry captor, and eventually your efforts are rewarded when you are pushed up and out of her stomach. You travel back through the constricting throat and then get spat out onto the floor, covered in her juices and various food scraps. The irritated piggy snorts angrily as you recover, and after kicking a cloud of dirt at you, she runs away, likely to search for an easier meal.";
 					cleanboundmemory;
-					now Trixieexit is 1;
+					now Trixieexit is true;
 					follow the turnpass rule;
 			else if (obliging is true and (keychar is "o" or keychar in lower case matches the text "oblige")) or (obliging is false and (keychar is "a" or keychar in lower case matches the text "abide")) or keychar is "2":
 				if obliging is true:

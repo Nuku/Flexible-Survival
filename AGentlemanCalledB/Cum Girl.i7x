@@ -61,12 +61,8 @@ to say CumGirldesc:
 	if cumgirlfed is -1:
 		say "     The overwhelming smell of sex hits you as the creature gets within striking distance, and you realize this sickening creature appears to be made entirely of animate cum and other bodily fluids.";
 		now cumgirlfed is 0;
-	else if cumgrowth > 5:
-		say "     Having fed off you many times, the disturbing creature before you is now frighteningly large, her large, slimy mass seeming to have trouble supporting itself as the hungry cum girl shuffles forward.";
-	else if cumgrowth > 3:
-		say "     Having fed off you several times before, the cum girl is now slightly larger than the first time you encountered her, with added bulk in her [one of]breast[or]thigh[at random]s and [one of]ass[or]belly[or]hips[at random] that jiggles enticingly as she moves forward.";
 	else:
-		say "     The overwhelming smell of sex hits you again as the cum girl steps forward, licking her lips slowly as she approaches.";
+		say "     [if cumgrowth > 5]Having fed off you many times, the disturbing creature before you is now frighteningly large, her large, slimy mass seeming to have trouble supporting itself as the hungry cum girl shuffles forward[else if cumgrowth > 3]Having fed off you several times before, the cum girl is now slightly larger than the first time you encountered her, with added bulk in her [one of]breast[or]thigh[at random]s and [one of]ass[or]belly[or]hips[at random] that jiggles enticingly as she moves forward[else]The overwhelming smell of sex hits you again as the cum girl steps forward, licking her lips slowly as she approaches[end if].";
 
 Section 2 - Creature Insertion
 

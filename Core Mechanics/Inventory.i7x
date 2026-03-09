@@ -46,12 +46,12 @@ carry out Inventorying:
 			else:
 				now needstradecheck is 1;
 		[generic trader check]
-		let traderavailable be 0;
+		let traderavailable be false;
 		let tradeguy be a person;
 		if the number of trader in the Location of Player > 0:
 			now tradeguy is a random trader in the Location of Player;
-			let traderavailable be 1;
-		say "[bold type][bracket]U[close bracket][roman type]se, [bold type][bracket]L[close bracket][roman type]ook, [bold type][bracket]S[close bracket][roman type]mell, [bold type][bracket]D[close bracket][roman type]rop, [bold type][bracket]J[close bracket][roman type]unk, [bold type][bracket]X[close bracket][roman type]Junkall, [if traderavailable is 1 or needstradecheck > 1][bold type][bracket]T[close bracket][roman type]rade, [end if][if the number of smither in the Location of Player > 0][bold type][bracket]I[close bracket][roman type]mprove, [end if][bold type](*)[roman type] equipped/wielded, [bold type](+)[roman type] improved.";
+			let traderavailable be true;
+		say "[bold type][bracket]U[close bracket][roman type]se, [bold type][bracket]L[close bracket][roman type]ook, [bold type][bracket]S[close bracket][roman type]mell, [bold type][bracket]D[close bracket][roman type]rop, [bold type][bracket]J[close bracket][roman type]unk, [bold type][bracket]X[close bracket][roman type]Junkall, [if traderavailable is true or needstradecheck > 1][bold type][bracket]T[close bracket][roman type]rade, [end if][if the number of smither in the Location of Player > 0][bold type][bracket]I[close bracket][roman type]mprove, [end if][bold type](*)[roman type] equipped/wielded, [bold type](+)[roman type] improved.";
 		if invcolumns < 1 or invcolumns > 4, now invcolumns is 2;
 		[these are the default item actions in front of the item name]
 		let itemactions be {{"U", "use"}, {"L", "look"}, {"S", "smell"}, {"D", "drop"}, {"J", "junk"}, {"X", "junkall"}};
@@ -75,7 +75,6 @@ carry out Inventorying:
 					repeat with itemaction running through itemactions:
 						say "[invquicklink (itemname) for (itemaction)]";
 				if needstradecheck > 0 and trade of object entry is empty:
-					let notval be 0;
 					[! for every if block here there has to be a corresponding if before the loop !]
 					if Ronda Mallrat is visible and HP of Ronda Mallrat is 0 and itemname is "demon seed":
 						say "[if hypernull is not 1] [end if][link][bracket]T[close bracket][as]give [itemname] to Ronda Mallrat[end link] ";
@@ -87,12 +86,12 @@ carry out Inventorying:
 						say "[if hypernull is not 1] [end if][link][bracket]T[close bracket][as]give [itemname] to Kristen[end link] ";
 					else if Christy is visible and HP of Christy > 1 and HP of Christy < 50 and itemname is "super spicy sausage":
 						say "[if hypernull is not 1] [end if][link][bracket]T[close bracket][as]give [itemname] to Christy[end link] ";
-				else if traderavailable is 1:
+				else if traderavailable is true:
 					linkfind "give [itemname] to [tradeguy]";
 					say "[if hypernull is not 1] [end if][set link hyperindex][bracket]T[close bracket][terminate link] ";
 				if ((AC of object entry > 0 and effectiveness of object entry > 0 and object entry is not improved) or the itemname is "nanite collector") and the number of smither in the Location of Player > 0:
 					linkfind "upgrade [itemname]";
-					say "[if hypernull is not 1 and traderavailable is 0] [end if][set link hyperindex][bracket]I[close bracket][terminate link] ";
+					say "[if hypernull is not 1 and traderavailable is false] [end if][set link hyperindex][bracket]I[close bracket][terminate link] ";
 				[get available columns, plus 6 to show the increase to the original value]
 				let availcolumns be baseavailcolumns;
 				[add use and improve indicators which will reduce the available width for the item name]
@@ -124,7 +123,6 @@ carry out Inventorying:
 					repeat with itemaction running through itemactions:
 						say "[invquicklink (itemname) for (itemaction)]";
 				if needstradecheck > 0 and trade of object entry is empty:
-					let notval be 0;
 					[! for every if block here there has to be a corresponding if before the loop !]
 					if Ronda Mallrat is visible and HP of Ronda Mallrat is 0 and itemname is "demon seed":
 						say "[if hypernull is not 1] [end if][link][bracket]T[close bracket][as]give [itemname] to Ronda Mallrat[end link] ";
@@ -136,12 +134,12 @@ carry out Inventorying:
 						say "[if hypernull is not 1] [end if][link][bracket]T[close bracket][as]give [itemname] to Kristen[end link] ";
 					else if Christy is visible and HP of Christy > 1 and HP of Christy < 50 and itemname is "super spicy sausage":
 						say "[if hypernull is not 1] [end if][link][bracket]T[close bracket][as]give [itemname] to Christy[end link] ";
-				else if traderavailable is 1:
+				else if traderavailable is true:
 					linkfind "give [itemname] to [tradeguy]";
 					say "[if hypernull is not 1] [end if][set link hyperindex][bracket]T[close bracket][terminate link] ";
 				if (object entry is not improved or the itemname is "nanite collector") and the number of smither in the Location of Player > 0:
 					linkfind "upgrade [itemname]";
-					say "[if hypernull is not 1 and traderavailable is 0] [end if][set link hyperindex][bracket]I[close bracket][terminate link] ";
+					say "[if hypernull is not 1 and traderavailable is false] [end if][set link hyperindex][bracket]I[close bracket][terminate link] ";
 				[get available columns, plus 6 to show the increase to the original value]
 				let availcolumns be baseavailcolumns;
 				[add use and improve indicators which will reduce the available width for the item name]
@@ -173,7 +171,6 @@ carry out Inventorying:
 					repeat with itemaction running through itemactions:
 						say "[invquicklink (itemname) for (itemaction)]";
 				if needstradecheck > 0 and trade of object entry is empty:
-					let notval be 0;
 					[! for every if block here there has to be a corresponding if before the loop !]
 					if Ronda Mallrat is visible and HP of Ronda Mallrat is 0 and itemname is "demon seed":
 						say "[if hypernull is not 1] [end if][link][bracket]T[close bracket][as]give [itemname] to Ronda Mallrat[end link] ";
@@ -185,25 +182,13 @@ carry out Inventorying:
 						say "[if hypernull is not 1] [end if][link][bracket]T[close bracket][as]give [itemname] to Kristen[end link] ";
 					else if Christy is visible and HP of Christy > 1 and HP of Christy < 50 and itemname is "super spicy sausage":
 						say "[if hypernull is not 1] [end if][link][bracket]T[close bracket][as]give [itemname] to Christy[end link] ";
-				else if traderavailable is 1:
+				else if traderavailable is true:
 					linkfind "give [itemname] to [tradeguy]";
 					say "[if hypernull is not 1] [end if][set link hyperindex][bracket]T[close bracket][terminate link] ";
-				[if (((object entry is armament or (object entry is equipment and AC of object entry > 0 and effectiveness of object entry > 0)) and object entry is not improved) or the itemname is "nanite collector") and the number of smither in the Location of Player > 0:
-					linkfind "upgrade [itemname]";
-					say "[if hypernull is not 1 and traderavailable is 0] [end if][set link hyperindex][bracket]I[close bracket][terminate link] ";]
 				[get available columns, plus 6 to show the increase to the original value]
 				let availcolumns be baseavailcolumns;
-				[add use and improve indicators which will reduce the available width for the item name]
-				let useindicator be "";
-				[if (object entry is wielded and object entry is armament) or (object entry is equipment and object entry is equipped):
-					now useindicator is " (*)";
-					now availcolumns is availcolumns minus 4;]
-				let improveindicator be "";
-				[if object entry is improved and ( object entry is armament or object entry is equipment ):
-					now improveindicator is " (+)";
-					now availcolumns is availcolumns minus 4;]
 				[print item name and indicators]
-				say "[fixed letter spacing][itemname formatted to (availcolumns) characters][useindicator][improveindicator]";
+				say "[fixed letter spacing][itemname formatted to (availcolumns) characters]";
 				let weightnum be weight entry times ownedCount;
 				say " x[if ownedCount < 10] [end if][ownedCount]([if weightnum < 10] [end if][weightnum][if weightnum < 100] [end if]lbs)";
 				increase weight by weightnum;
@@ -222,7 +207,6 @@ carry out Inventorying:
 					repeat with itemaction running through itemactions:
 						say "[invquicklink (itemname) for (itemaction)]";
 				if needstradecheck > 0 and trade of object entry is empty:
-					let notval be 0;
 					[! for every if block here there has to be a corresponding if before the loop !]
 					if Ronda Mallrat is visible and HP of Ronda Mallrat is 0 and itemname is "demon seed":
 						say "[if hypernull is not 1] [end if][link][bracket]T[close bracket][as]give [itemname] to Ronda Mallrat[end link] ";
@@ -234,25 +218,13 @@ carry out Inventorying:
 						say "[if hypernull is not 1] [end if][link][bracket]T[close bracket][as]give [itemname] to Kristen[end link] ";
 					else if Christy is visible and HP of Christy > 1 and HP of Christy < 50 and itemname is "super spicy sausage":
 						say "[if hypernull is not 1] [end if][link][bracket]T[close bracket][as]give [itemname] to Christy[end link] ";
-				else if traderavailable is 1:
+				else if traderavailable is true:
 					linkfind "give [itemname] to [tradeguy]";
 					say "[if hypernull is not 1] [end if][set link hyperindex][bracket]T[close bracket][terminate link] ";
-				[if (((object entry is armament or (object entry is equipment and AC of object entry > 0 and effectiveness of object entry > 0)) and object entry is not improved) or the itemname is "nanite collector") and the number of smither in the Location of Player > 0:
-					linkfind "upgrade [itemname]";
-					say "[if hypernull is not 1 and traderavailable is 0] [end if][set link hyperindex][bracket]I[close bracket][terminate link] ";]
 				[get available columns, plus 6 to show the increase to the original value]
 				let availcolumns be baseavailcolumns;
-				[add use and improve indicators which will reduce the available width for the item name]
-				let useindicator be "";
-				[if (object entry is wielded and object entry is armament) or (object entry is equipment and object entry is equipped):
-					now useindicator is " (*)";
-					now availcolumns is availcolumns minus 4;]
-				let improveindicator be "";
-				[if object entry is improved and ( object entry is armament or object entry is equipment ):
-					now improveindicator is " (+)";
-					now availcolumns is availcolumns minus 4;]
 				[print item name and indicators]
-				say "[fixed letter spacing][itemname formatted to (availcolumns) characters][useindicator][improveindicator]";
+				say "[fixed letter spacing][itemname formatted to (availcolumns) characters]";
 				let weightnum be weight entry times ownedCount;
 				say " x[if ownedCount < 10] [end if][ownedCount]([if weightnum < 10] [end if][weightnum][if weightnum < 100] [end if]lbs)";
 				increase weight by weightnum;
@@ -306,17 +278,17 @@ carry out settinginvcolumns:
 
 to say set_invcolumns:
 	now calcnumber is -1;
-	let gsexit be 0;
+	let gsexit be false;
 	say "     How many columns would you like the inventory to display (1-4, or 0 to abort)?";
 	say "     [if invcolumns is not 1][link][bracket]1[close bracket][as]1[end link][else][bold type][bracket]1[close bracket][roman type][end if]  [if invcolumns is not 2][link][bracket]2[close bracket][as]2[end link][else][bold type][bracket]2[close bracket][roman type][end if]  [if invcolumns is not 3][link][bracket]3[close bracket][as]3[end link][else][bold type][bracket]3[close bracket][roman type][end if]  [if invcolumns is not 4][link][bracket]4[close bracket][as]4[end link][else][bold type][bracket]4[close bracket][roman type][end if]  [link][bracket]0[close bracket] - Abort[as]0[end link][line break]";
-	while gsexit is 0:
+	while gsexit is false:
 		say "Choice? (0-4)> [run paragraph on]";
 		get a number;
 		if calcnumber > 0 and calcnumber < 5:
 			now invcolumns is calcnumber;
-			now gsexit is 1;
+			now gsexit is true;
 		else if calcnumber is 0:
-			now gsexit is 1;
+			now gsexit is true;
 		else:
 			say "Invalid: Choose between 0 and 4.";
 	LineBreak;
@@ -355,12 +327,12 @@ understand "take [present grab object]" as grabbing.
 understand "grab [present grab object]" as grabbing.
 
 carry out grabbing something (called x):
-	let found be 0;
+	let found be false;
 	let num be 0;
 	repeat with Q running through invent of the Location of Player:
 		increase num by 1;
 		if q exactly matches the text printed name of x, case insensitively:
-			now found is 1;
+			now found is true;
 			ItemGain q by 1;
 			remove entry num from invent of the Location of Player;
 			if x is equipment:
@@ -368,7 +340,7 @@ carry out grabbing something (called x):
 			else:
 				say "You pick up the [printed name of x] and tuck it in your backpack.";
 			break;
-	if found is 0:
+	if found is false:
 		say "You don't see any [x] around here.";
 		if x is owned, say "You do see one in your backpack though. Did you mean to [bold type]use[roman type] it?";
 

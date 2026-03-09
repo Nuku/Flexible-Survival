@@ -49,15 +49,15 @@ to say ResolveEvent Gourmet Treats:
 		say "     'Do not worry, mon ami[if Player is purefemale]e[end if]. They left after having their fun; you're safe here now,' says a voice with a thick French accent. You turn towards the voice, seeing a figure step out of a nearby doorway. He appears to have the features of several species and breeds of domestic animals, a short, stocky canine body and face, covered with a thick coat of fur in many different colors and patterns. There even appear to be feathers poking out from his pelt in several places. Finally, feline ears and tail complete the rather unusual appearance of the hybrid before you.";
 		say "     'I appreciate your attempts to save me from those canine ruffians, and I'm sorry it ended the way it did,' he continues. 'I am Francois, master chef, at your service.'";
 		AddNavPoint Bone-Appetit;
-		AttemptToWait;
 		now Resolution of Gourmet Treats is 2; [fought, lost]
+		AttemptToWait;
 		move player to Bone-Appetit;
 	else if fightoutcome >= 10 and fightoutcome <= 19:
 		say "     Having finally dealt with the [if entry 1 of T is 1]huskies[else if entry 1 of T is 2]German shepherds[else if entry 1 of T is 3]Chocolate Labs[else]Retrievers[end if], you chase the last stragglers out the door and block it up behind them, propping up a table and a few chairs against it to keep any others out. Satisfied with the security of the building, you approach the canines['] captive, looking him over before kneeling down to help him to a sitting position. He appears to have the features of several species and breeds of domestic animals, a short, stocky canine body and face, covered with a thick coat of fur in many different colors and patterns. There even appear to be feathers poking out from his pelt in several places. Finally, feline ears and tail complete the rather unusual appearance of the hybrid before you.";
 		say "     'Thank you, mon ami[if Player is purefemale]e[end if],' the man says with a strong French accent. 'I shudder to imagine where I'd be had you not come along. I am Francois, master chef, at your service.'";
 		AddNavPoint Bone-Appetit;
-		AttemptToWait;
 		now Resolution of Gourmet Treats is 1; [fought, won]
+		AttemptToWait;
 		move player to Bone-Appetit;
 	else if fightoutcome >= 30:
 		say "     Unwilling or unable to continue fighting, you grab your bag and run for the bakery door, flipping a nearby table behind you to block your pursuers['] path on the way out. You continue running for some time, getting plenty of distance between you and the bakery before stopping to catch your breath. Taking a moment to reflect on the situation, you feel a wave of guilt for leaving the captive behind to his fate with the canines.";
@@ -232,7 +232,7 @@ Instead of conversing the Francois:
 		say "     Francois greets you with a smile as you approach. 'Ah, mon ami[if Player is purefemale]e[end if], good to see you again! And who is this you've brought with you?'";
 		say "     'It's me, Karen,' she responds. 'We were hoping you could help me out with-'[line break]";
 		WaitLineBreak;
-		say "     'Karen! Mon Dieu, I had feared the worst mon amie,' Francois interrupts, stepping around the counter and placing a small kiss on each side of her muzzle before pulling her into a hug. After breaking off, Francois motions towards one of the tables near the front of the store. The three of you sit and chat for a while, regaling the mutt with the tale of your escape from Rex before Karen finally asks him about her past. 'Ah, désolé mon amie, we never spoke much of our personal lives, only of our shared interest, les animaux. I recall you mentioning being a student at the college, but I am afraid that's all I know.'";
+		say "     'Karen! Mon Dieu, I had feared the worst, mon amie,' Francois interrupts, stepping around the counter and placing a small kiss on each side of her muzzle before pulling her into a hug. After breaking off, Francois motions towards one of the tables near the front of the store. The three of you sit and chat for a while, regaling the mutt with the tale of your escape from Rex before Karen finally asks him about her past. 'Ah, désolé, mon amie, we never spoke much of our personal lives, only of our shared interest, les animaux. I recall you mentioning being a student at the college, but I am afraid that's all I know.'";
 		say "     'Well, it's more than I knew before,' Karen responds. 'Thank you, Francois, for everything. I might not even be here if not for you helping our friend here escape from Rex,' she says, smiling at you before leaning in and giving him a timid kiss on the cheek. Soon after the conversation draws to a close, you and Karen gather your things and prepare to head back out into the city as Francois returns to his work behind the counter.";
 		now HP of Karen is 7;
 		now Forgotten Past is active;
@@ -253,13 +253,13 @@ Instead of conversing the Francois:
 			PlayerEat 5;
 		ItemGain Dog Treats by 1;
 	else if HP of Francois is 0:
-		say "     'I must thank you again, mon ami[if Player is purefemale]e[end if],' Francois says as he steps around the counter, 'but perhaps I could ask another favor of you? I have a desire to create, to expand my art, and there must be so many exotic and interesting new flavors out in this city now. Oh how I would love to experiment with them, but sadly, I am no fighter. I fear I cannot go out there to gather these new ingredients myself, but you, mon [if Player is purefemale]héroïne[else]héro[end if], seem more than capable of surviving out there. If you bring back any potential ingredients you find, I would love to bake something for you[if Player is male], and perhaps I could [']reward['] you in other ways as well,' he says, licking his lips as his eyes stray to your groin. 'Just[else]. Just[end if] bring back anything you find and let me know you would like me to [link]bake[as]bake Francois[end link] for you.";
+		say "     'I must thank you again, mon ami[if Player is purefemale]e[end if],' Francois says as he steps around the counter, 'but perhaps I could ask another favor of you? I have a desire to create, to expand my art, and there must be so many exotic and interesting new flavors out in this city now. Oh how I would love to experiment with them, but sadly, I am no fighter. I fear I cannot go out there to gather these new ingredients myself, but you, mon héro[if Player is purefemale]ïne[end if], seem more than capable of surviving out there. If you bring back any potential ingredients you find, I would love to bake something for you[if Player is male], and perhaps I could [']reward['] you in other ways as well,' he says, licking his lips as his eyes stray to your groin. '[else]. [end if]Just bring back anything you find and let me know you would like me to [link]bake[as]bake Francois[end link] for you.'";
 		now HP of Francois is 1;
 		now Bone-Appetit is sleepsafe;
 		FrancoisListCompile;
 	else if Libido of Francois >= 3 and Francoistalk1 is false and a random chance of 2 in 5 succeeds:
 		say "     'I was having such difficulty before you came along. I don't know if your coming around is scaring them off now, but I was having no end of trouble before. These hands, they were made for the baking and for the love, not the fighting,' he says, momentarily forgetting he's got paws now. 'Zut alors! How most of them were rude lovers! No passion, no care for their lover, just raw lust.";
-		say "     'Even from the girls. I tried to refuse them, but would they listen? Non! They would get what they wanted in the end, but it was always so hollow. I am sad for them. [if Player is male]But I have found a good lover in you, mon délice,' he adds, running his paws over you as he gives you a passionate kiss full of doggy tongue in your mouth[else if Player is female]But now I have found you, mon amie,' he says with a smile before giving you a kiss on the cheek[else]But now I have found you, mon ami,' he says with a smile before giving you a kiss on the cheek[end if].";
+		say "     'Even from the girls. I tried to refuse them, but would they listen? Non! They would get what they wanted in the end, but it was always so hollow. I am sad for them. But [if Player is male]I have found a good lover in you, mon délice,' he adds, running his paws over you as he gives you a passionate kiss full of doggy tongue in your mouth[else if Player is female]now I have found you, mon amie,' he says with a smile before giving you a kiss on the cheek[else]now I have found you, mon ami,' he says with a smile before giving you a kiss on the cheek[end if].";
 		now Francoistalk1 is true;
 	else if Francois_Undiscovered is not empty and a random chance of 3 in 5 succeeds:
 		say "[FrancoisHint]";
@@ -277,7 +277,7 @@ instead of fucking the Francois:
 	else if Player is neuter:
 		say "     Lacking any gender of your own, you can't quite get up the enthusiasm to play with the friendly French mutt.";
 	else if Player is not male:
-		say "     'Ah désolé, mon amie. I have never had much interest in what the English call the fairer sex. Ah, but if only you were a man...' he sighs wistfully.";
+		say "     'Ah, désolé, mon amie. I have never had much interest in what the English call the fairer sex. Ah, but if only you were a man...' he sighs wistfully.";
 	else if lastfuck of Francois - turns < 6:
 		say "     He licks his muzzle and eyes your crotch, but shakes his head. 'As much as I would relish the opportunity to show you my thanks again, there is so much else that needs to be done. Perhaps a little later though?' he adds with a smile and the brush of a paw down your side.";
 	else if Libido of Francois is 1:
@@ -358,7 +358,7 @@ to say Francoissexmenu:
 
 to say Francoissex1:		[Francois performs oral]
 	if Libido of Francois is 1:
-		say "     Francois smiles at your offer, his ears perking up and his eyes moving right away to your groin. His tongue slides slowly across his muzzle. 'Ah, mon ami, I would very much enjoy the opportunity to thank you for wanting to rescue me. Mmm... mon héro,' he moans sensually in his rich accent, speaking very softly and sexily now. Moving in closer, he runs his paws over your [if scalevalue of Player > 2]larger [end if]body and helps you out of your clothes and gear.";
+		say "     Francois smiles at your offer, his ears perking up and his eyes moving right away to your groin. His tongue slides slowly across his muzzle. 'Ah, mon ami, I would very much enjoy the opportunity to thank you for wanting to rescue me. Mmm... mon héro,' he moans sensually in his rich accent, speaking very softly and sexily now. Moving in closer, he runs his paws over your [if scalevalue of Player > 3]larger [end if]body and helps you out of your clothes and gear.";
 	else:
 		say "     Hearing your offer, he runs his tongue across his muzzle and lets his paws slide downwards. 'Mmm... I would certainly enjoy another opportunity to get another taste of your rich, thick cream, mon héro,' he says softly in his sensual accent. He places a paw on your cock and the other at your ballsack, gently caressing them.";
 	say "     Rather than delay any longer, he lowers himself in front of you, licking and sniffing as he goes, taking in your scent. 'Mmm... you have such an [one of]exciting[or]exotic[or]enjoyable[or]interesting[or]alluring[at random] flavor,' he moans as he slathers his canine tongue back and forth over your maleness. '[if Cock Length of Player > 24]And so very big! C'est magnifique! I shall enjoy this greatly[else if Cock Length of Player > 12]And so big! I shall enjoy this very much[else]I shall enjoy this[end if],' he adds, rubbing your cock with his paws before licking across your glans, lapping up the first dribbles of precum.";
@@ -369,7 +369,7 @@ to say Francoissex1:		[Francois performs oral]
 	else:
 		say "     This time the horny hybrid decides to take his good, sweet time with you, working over your throbbing meat with his muzzle [if Cock Length of Player > 12]and throat [end if]with all his considerable skill. His paws knead at your ballsack, rolling around those cum-filled orbs as he works with care to build you to greater and greater heights. He knows many delightful tricks to do with his tongue, made all the better by the long, canine one he now has. By the time he's sucking down hard at your cock and bobbing quickly across your shaft, your balls feel achingly full. You grab his head and pull his muzzle forward, jamming your full length into the sexy cur and cum with a loud moan. Unleashing your [Cum Load Size of Player] load down his throat, you send [if Ball Size of Player > 5]burst after burst of thick seed into your eager lover until his belly is plump and rounded with it all[else if Ball Size of Player > 4]shot after shot of thick seed into your eager lover until his belly has gained a few inches from it all[else]spurt after spurt until those balls of yours finally feel drained[end if]. Spent, you sag down into a chair, smiling down at the mutt as he licks his muzzle with a grin, clearly aware of how his fellatio's affected you. He licks his muzzle, rolling the cum left in his muzzle around on his tongue so he might enjoy its flavor. 'Mmm... very nice, mon ami. Such a rich[if Ball Size of Player > 4], filling[end if] treat.' He rubs a paw over his belly and gets up slowly.";
 	NPCSexAftermath Francois receives "OralCock" from Player;
-	if Libido of Francois is 1, increase Libido of Francois by 1;
+	if Libido of Francois is 1, now Libido of Francois is 2;
 
 to say Francoissex2:		[mounting Francois]
 	if Libido of Francois is 2:
@@ -386,12 +386,12 @@ to say Francoissex2:		[mounting Francois]
 		say "     'That was exquisite, mon ami. We shall definitely have to do that again... and again... and again...' he says sensually in his beautiful accent while running his paw over your body. He adjusts his groin and straightens his crumpled apron with a grin before making his way slowly back to what he was doing, clearly moving with care to keep your [Cum Load Size of Player] load inside him a little longer.";
 	else:
 		say "     Rather than delay any longer, he lowers himself in front of you, licking and sniffing as he goes on his way to the prize. 'Let's get this lovely... delicious... cock of yours ready to go, mon ami,' he moans as he slathers his canine tongue all over it, getting you nice and slick while he enjoys the musky taste of your maleness. [if Cock Length of Player > 24]Given the size of your [cock size desc of Player] cock, the mismatched hybrid takes his time, making sure you're nice and slick all over[else if Cock Length of Player > 12]Given the size of your [cock size desc of Player] cock, the mismatched hybrid spends some extra time licking you, making sure you're nice and slick all over[else]The mismatched hybrid, while he's down there, takes the opportunity to stuff your cock in his muzzle so he can lick and suck at you to get you all nice and slick[end if] before stretching out on his back across [if scalevalue of Player < 3]one of the low tables[else if scalevalue of Player is 3 or scalevalue of Player is 4]one of the tables[else]the counter with your help[end if]. With his legs apart and his paws spreading his cheeks in a wanton display, he moans for you to take him now. With such an offer after his expert tonguework has gotten you worked up, you move into position quickly, kissing your slick glans against his waiting pucker.";
-		say "     As you sink your cock into your hybrid lover, he pulls you overtop of him into a passionate kiss, his canine tongue slipping into your mouth to dance with yours. He moans and holds the kiss as long as he can while you pound into his tight rear[if Cock Length of Player > 12], his talented hole easily accommodating your [cock size desc of Player] meat[else], his practiced hole taking your [cock size desc of Player] meat in with ease[end if]. But as before, he's still quite tight around you and very adept at working his hips and inner walls to the delight of you both. Finally, and with a wet slurp of his long tongue pulling free, he must break the kiss so he can moan loudly in pleasure.";
+		say "     As you sink your cock into your hybrid lover, he pulls you overtop of him into a passionate kiss, his canine tongue slipping into your mouth to dance with yours. He moans and holds the kiss as long as he can while you pound into his tight rear, his [if Cock Length of Player > 12]talented hole easily accommodating your [cock size desc of Player] meat[else]practiced hole taking your [cock size desc of Player] meat in with ease[end if]. But as before, he's still quite tight around you and very adept at working his hips and inner walls to the delight of you both. Finally, and with a wet slurp of his long tongue pulling free, he must break the kiss so he can moan loudly in pleasure.";
 		WaitLineBreak;
 		say "     'Ah oui! Fourrez-moi!' he moans as you pound away at him. Noticing his apron has tented up, you grin down at him and rub over his hidden erection. He chuckles and flips his apron up, freeing you to grab his hips and drive into him all the harder while he plays with his cock and balls. He tries to take it slow and make a show of it for you, but you're both getting quite worked up by this point and won't last much longer. And the sight of his paws sliding over his eight inches of manmeat with its shapely mix of canine and feline features certainly isn't helping you hold back.";
 		say "     You lick your lips and knead his hips as you hold onto them, driving into him a few last times before cumming. 'Oui! Oui! Mon Dieu, oui!' he cries out as he feels your [Cum Load Size of Player] load shooting into him, setting him off. Gooey splatters of his seed, rich with a mix of canine, feline and avian scents, spray across his apron as well as a few reaching his face and muzzle. These last he licks up while he pumps the rest of his spurting load onto the white cloth. [if Ball Size of Player > 5]As you send more and more semen into the small hybrid's belly, it grows rounder and fuller until he's nice and plump with your cum. In the end, he's left heavy and overfull, leaking your seed from his creamy asshole, unable to get up until much of it has drained or been absorbed[else if Ball Size of Player > 4]As you send more and more semen into the small hybrid's belly, it gradually gains a couple more inches from your cum stuffing him. In the end, he's left leaking from his creamy hole and remains flopped out on his perch while he recovers[else]Once you're done, he remains flopped out on his perch with a trickle of your semen leaking from his creamy hole while he recovers[end if]. 'Mmm... mon héro,' he sighs softly as he basks in the afterglow.";
 	NPCSexAftermath Francois receives "AssFuck" from Player;
-	if Libido of Francois is 2, increase Libido of Francois by 1;
+	if Libido of Francois is 2, now Libido of Francois is 3;
 
 to say Francoissex3:		[player performs oral]
 	if Libido of Francois is 3:
@@ -413,7 +413,7 @@ to say Francoissex3:		[player performs oral]
 	WaitLineBreak;
 	say "     When you're done, the spent hybrid sags back into a nearby chair, panting softly. 'Oh, thank you, mon ami. That was very, very nice,' he says with a smile, casually readjusting his apron.";
 	francoisinfect;
-	if Libido of Francois is 3, increase Libido of Francois by 1;
+	if Libido of Francois is 3, now Libido of Francois is 4;
 
 to say Francoissex4:		[player receives anal]
 	if Libido of Francois is 4:
@@ -429,7 +429,7 @@ to say Francoissex4:		[player receives anal]
 	WaitLineBreak;
 	say "     As you're waiting for his knot to go down, Francois snuggles you, running his paws along your [bodytype of Player] body while whispering sweet nothings in a mix of English and French to you. Between these, he often licks and nibbles your ears or kisses your neck and shoulders, enjoying the sensual closeness with you after your lovemaking. It is some time before the hybrid's knot goes down and his cock can slip free. Only a little of the milky white semen leaks out, much of his cum having been absorbed into you during the interim while tied.";
 	francoisinfect;
-	if Libido of Francois is 4, increase Libido of Francois by 1;
+	if Libido of Francois is 4, now Libido of Francois is 5;
 
 Francoismix is always { "Catgirl", "Siamese Cat", "Ninja Cat", "Chocolate Lab", "Husky Bitch", "German Shepherd Male", "Pit Bull", "Retriever Female", "Smooth Collie Shemale", "Ember Breeder", "Pink Poodle", "Horny Doctor", "Blue Chaffinch", "Bird of Paradise" }.
 
@@ -482,8 +482,8 @@ check Francoisbaking:
 	if Francois_Discovered is empty and Francois_Undiscovered is empty, say "You don't know any baking recipes." instead;
 
 carry out Francoisbaking:
-	let Francoisbaked be 0;
 	if Francois_Undiscovered is not empty:
+		let Francoisbaked be false;
 		say "     Emptying out the contents of your bag on the counter, Francois looks each over individually, smelling or even tasting many of them as he considers their culinary potential.[paragraph break]";
 		if 3 is listed in Francois_Undiscovered and blue gel is owned and Awesome Fruit is owned:
 			say "[BoysenberryBlossomGet]";
@@ -491,35 +491,35 @@ carry out Francoisbaking:
 			add 3 to Francois_Discovered, if absent;
 			ItemLoss blue gel by 1;
 			ItemLoss Awesome Fruit by 1;
-			now Francoisbaked is 1;
+			now Francoisbaked is true;
 		else if 4 is listed in Francois_Undiscovered and pink gel is owned and Awesomer Fruit is owned:
 			say "[MuffinMuffinGet]";
 			remove 4 from Francois_Undiscovered;
 			add 4 to Francois_Discovered, if absent;
 			ItemLoss pink gel by 1;
 			ItemLoss Awesomer Fruit by 1;
-			now Francoisbaked is 1;
+			now Francoisbaked is true;
 		else if 2 is listed in Francois_Undiscovered and blue gel is owned and chocolate milk is owned:
 			say "[bleuettonneGet]";
 			remove 2 from Francois_Undiscovered;
 			add 2 to Francois_Discovered, if absent;
 			ItemLoss blue gel by 1;
 			ItemLoss chocolate milk by 1;
-			now Francoisbaked is 1;
+			now Francoisbaked is true;
 		else if 1 is listed in Francois_Undiscovered and pink gel is owned and distilled milk is owned:
 			say "[CrèmeAbondanteGet]";
 			remove 1 from Francois_Undiscovered;
 			add 1 to Francois_Discovered, if absent;
 			ItemLoss pink gel by 1;
 			ItemLoss distilled milk by 1;
-			now Francoisbaked is 1;
+			now Francoisbaked is true;
 		else if 5 is listed in Francois_Undiscovered and musky cock flower is owned and honeycomb is owned:
 			say "[lollicockGet]";
 			remove 5 from Francois_Undiscovered;
 			add 5 to Francois_Discovered, if absent;
 			ItemLoss honeycomb by 1;
 			ItemLoss musky cock flower by 1;
-			now Francoisbaked is 1;
+			now Francoisbaked is true;
 		else if 6 is listed in Francois_Undiscovered and ebonflame scale is owned and glowing ember is owned and chocolate milk is owned:
 			say "[dragonmoelleuxGet]";
 			remove 6 from Francois_Undiscovered;
@@ -528,7 +528,7 @@ carry out Francoisbaking:
 			ItemLoss glowing ember by 1;
 			ItemLoss chocolate milk by 1;
 			ItemGain dragon moelleux by 1;
-			now Francoisbaked is 1;
+			now Francoisbaked is true;
 		else if 7 is listed in Francois_Undiscovered and soda is owned and pony cider is owned and crushed candies is owned:
 			say "[fizz-aux-pommesGet]";
 			remove 7 from Francois_Undiscovered;
@@ -537,7 +537,7 @@ carry out Francoisbaking:
 			ItemLoss pony cider by 1;
 			ItemLoss crushed candies by 1;
 			ItemGain fizz-aux-pommes by 1;
-			now Francoisbaked is 1;
+			now Francoisbaked is true;
 		else if 8 is listed in Francois_Undiscovered and Satyr wine is owned and wyvern goop is owned and crushed candies is owned:
 			say "[vin-coeurGet]";
 			remove 8 from Francois_Undiscovered;
@@ -546,7 +546,7 @@ carry out Francoisbaking:
 			ItemLoss wyvern goop by 1;
 			ItemLoss crushed candies by 1;
 			ItemGain vin-coeur by 1;
-			now Francoisbaked is 1;
+			now Francoisbaked is true;
 		else if 9 is listed in Francois_Undiscovered and egg nog is owned and pixie dust is owned and blue gel is owned:
 			say "[gingerbreadGet]";
 			remove 9 from Francois_Undiscovered;
@@ -555,7 +555,7 @@ carry out Francoisbaking:
 			ItemLoss pixie dust by 1;
 			ItemLoss blue gel by 1;
 			ItemGain gingerbread by 1;
-			now Francoisbaked is 1;
+			now Francoisbaked is true;
 		else if 10 is listed in Francois_Undiscovered and cheese is owned and pixie dust is owned and pink gel is owned:
 			say "[cheesecakeGet]";
 			remove 10 from Francois_Undiscovered;
@@ -564,13 +564,20 @@ carry out Francoisbaking:
 			ItemLoss pixie dust by 1;
 			ItemLoss pink gel by 1;
 			ItemGain cheesecake by 1;
-			now Francoisbaked is 1;
-		if Francoisbaked is not 1:
-			say "     After looking over everything you've brought him, Francois decides none of your potential combinations of ingredients would make a good dish[if Francois_Discovered is empty].[else]. [end if]";
-		else:
-			sort Francois_Discovered;
-	if Francoisbaked is not 1 and Francois_Discovered is not empty:
-		say "[if Francois_Undiscovered is empty]     [end if]Would you like to have Francois bake a dish you've already discovered?";
+			now Francoisbaked is true;
+		if Francoisbaked is false:
+			if Francois_Discovered is not empty:
+				say "     After looking over everything you've brought him, Francois decides none of your potential combinations of ingredients would make a good dish. Would you like to have Francois bake a dish you've already discovered?";
+				if Player consents:
+					LineBreak;
+					say "[FrancoisBakingMenu]";
+				else:
+					LineBreak;
+					say "     You decide not to have Francois bake anything.";
+			else:
+				say "     After looking over everything you've brought him, Francois decides none of your potential combinations of ingredients would make a good dish.";
+	else if Francois_Discovered is not empty:
+		say "[line break]     Would you like to have Francois bake a dish you've already discovered?";
 		if Player consents:
 			LineBreak;
 			say "[FrancoisBakingMenu]";
@@ -842,7 +849,7 @@ to say lollicockGet:
 	say "     'What an unusual herb,' Francois says as he picks up the musky cock flower, taking a deep sniff of its musty scent. 'Hmm... perhaps...' Francois trails off as he spots the honeycomb, before inspiration strikes. Francois quickly gathers a few other things from behind the counter before stepping into his kitchen. Eventually Francois returns with a small tray of cock-shaped lollipops and a silly grin on his face. 'What do you think, mon ami[if Player is purefemale]e[end if]? Would you like to try one?' he asks, waving the phallic candy in your face.";
 	if Player consents:
 		LineBreak;
-		let lollicockCheck be 0;
+		let lollicockCheck be false;
 		if CockName of Player is not "candy cock" and Player is not FemalePreferred and a random chance of 1 in 4 succeeds:
 			if Player is not male:
 				say "     Wrapping your lips around the phallic treat, you begin bobbing up and down its length, savoring its sweet and salty taste as your tongue works over it. As the last of it melts away a warm tingling wells up in your belly, slowly spreading across your body. The sensation focuses on your groin as a lovely red hard candy cock, much like the one you just finished enjoying, erupts from you, spurting a few excited streams of fluid as it settles into place.";
@@ -855,11 +862,11 @@ to say lollicockGet:
 				say "     Wrapping your lips around the phallic treat, you begin bobbing up and down its length, savoring its sweet and salty taste as your tongue works over it. As the last of it melts away a warm tingling wells up in your belly, slowly spreading across your body. The sensation focuses on your groin as the flesh shifts to a deep red, your cock reshaping to a lovely canine hard candy shaft, much like the one you just finished enjoying.";
 				now CockName of Player is "candy cock";
 				now Cock of Player is "[one of]candy[or]confectionary[or]red candy[or]canine candy[as decreasingly likely outcomes]";
-			now lollicockCheck is 1;
+			now lollicockCheck is true;
 		else:
 			say "     Wrapping your lips around the phallic treat, you begin bobbing up and down its length, savoring its sweet and salty taste as your tongue works over it. As the last of it melts away a rumbling builds in your belly. Clearly your body doesn't agree with something about the treat.";
 		PlayerEat 5;
-		say "[line break]     [if lollicockCheck is 0]When your stomach finally stops its groaning, you look up to see Francois staring back at you, his previous happy expression somewhat dampened as a result of your reaction. You do your best to assure him that his dish was quite tasty, despite your body's apparent distaste, which helps to brighten his mood again[else]'Mon dieu! What an unexpected result!' Francois says, licking his lips as he eyes up your new candy member. 'I certainly would like to give that a taste,' he says with a naughty smirk[end if].";
+		say "[line break]     [if lollicockCheck is false]When your stomach finally stops its groaning, you look up to see Francois staring back at you, his previous happy expression somewhat dampened as a result of your reaction. You do your best to assure him that his dish was quite tasty, despite your body's apparent distaste, which helps to brighten his mood again[else]'Mon dieu! What an unexpected result!' Francois says, licking his lips as he eyes up your new candy member. 'I certainly would like to give that a taste,' he says with a naughty smirk[end if].";
 	else:
 		LineBreak;
 		say "     Accepting the treat from Francois, he looks quite disappointed as you stash the snack away in your bag. You assure him you'll eat it later and let him know how it was, but he still seems a little saddened that you aren't going to try it right away.";
@@ -974,7 +981,7 @@ to say crème abondante Use:
 		say "     Biting into the crème abondante, your mouth is filled with sweet strawberry cream. Savoring the rich mousse and fresh pastry, you finish the treat in several slow, deliberate bites. After finishing the last bite of your snack, a rumbling builds in your belly. Clearly your body doesn't agree with something about the treat, but it sure tasted great.";
 	else:
 		say "     Biting into the crème abondante, your mouth is filled with sweet strawberry cream. Savoring the rich mousse and fresh pastry, you finish the treat in several slow, deliberate bites. As you swallow the last bite, a warm tingling wells up in your belly, slowly spreading across your body. The sensation focuses on your chest[run paragraph on]";
-		if Nipple Count of Player < 8 and "One Pair" is not listed in feats of Player:
+		if Nipple Count of Player < 7 and "One Pair" is not listed in feats of Player:
 			say " as it increases in intensity, the tingling centers on two new sensitive points, which quickly swell into two new [bodytype of Player] breasts, pressing out of your [Skin of Player] hide[run paragraph on]";
 			increase Nipple Count of Player by 2;
 		if Breast Size of Player < 26 and "Passing Grade Chest" is not listed in feats of Player:
@@ -1014,18 +1021,18 @@ lollicock has a Usedesc "[lollicock Use]".
 the scent of lollicock is "The lollicock has a sweet aroma with a hint of male arousal.".
 
 to say lollicock Use:
-	let lollicockDildo be 0;
+	let lollicockDildo be false;
 	if Player is female:
 		say "     Eyeing up the cute cock-shaped treat, you are just about to wrap your lips around it before another, naughtier idea pops into your head. Would you like to 'play' with your food before enjoying the snack?";
 		if Player consents:
 			LineBreak;
 			say "     Stripping your gear and finding a comfortable place to stop and really enjoy this treat, you slowly lick along the length of the candy cock, wetting its surface while you begin teasing your womanly folds with your free hand. Once both you and the treat are sufficiently lubricated, you take one last taste of the sweet and salty candy before plunging it into your drooling cunt. You moan loudly as you drive the rigid length into yourself, your quivering pussy leaking a sticky mixture of sugar and your own feminine juices as you fuck yourself to a powerful climax.";
 			say "     Sliding the sticky candy cock out of yourself with a wet slurp, you bask in your afterglow as you wrap your lips around the sugary treat, savoring the musky flavor of your own cum mingling with its sweet and salty taste.";
-			CreatureSexAftermath "Player" receives "PussyDildoFuck" from "Human";
-			now lollicockDildo is 1;
+			increase PussyFuckTaken of Player by 1;
+			now lollicockDildo is true;
 		else:
 			LineBreak;
-	if lollicockDildo is not 1:
+	if lollicockDildo is false:
 		if CockName of Player is not "candy cock" and Player is not FemalePreferred and a random chance of 1 in 4 succeeds:
 			if Player is not male:
 				say "     Wrapping your lips around the phallic treat, you begin bobbing up and down its length, savoring its sweet and salty taste as your tongue works over it. As the last of it melts away a warm tingling wells up in your belly, slowly spreading across your body. The sensation focuses on your groin as a lovely red hard candy cock, much like the one you just finished enjoying, erupts from you, spurting a few excited streams of fluid as it settles into place.";

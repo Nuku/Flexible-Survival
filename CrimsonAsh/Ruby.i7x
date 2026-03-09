@@ -502,6 +502,5 @@ Description of Ruby's Cave is "     Ruby's humble abode consists of a short tunn
 
 check going up from Ruby's Cave while Ruby is in Ruby's Cave:
 	say "     [if PlayerRomanced of Ruby is true]As you set out to leave the cave, Ruby comes up to you and gives you a kiss on the cheek. 'Be sure to visit me again soon,' the dragoness adds with a wide, dopey smile on her face[else]You give Ruby a wave and head off to your next adventure[end if].";
-	[move player to Ashen Cliff;]
 
 Ruby ends here.

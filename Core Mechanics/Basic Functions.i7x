@@ -138,16 +138,16 @@ to ItemGain (ItemObj - text) by (N - number) silently:
 	ItemGain ItemObj by N silence state is 1;
 
 to ItemGain (ItemObj - text) by (N - number) silence state is (Silence - a number):
-	let found be 0;
+	let found be false;
 	repeat through Table of Game Objects:
 		if name entry exactly matches the text ItemObj, case insensitively:
 			if Silence is 0:
 				ItemGain object entry by N;
 			else:
 				ItemGain object entry by N silently;
-			now found is 1;
+			now found is true;
 			break;
-	if found is 0:
+	if found is false:
 		say "ERROR! Object [ItemObj] does not exist in the table of Game Objects. Please report this message on the FS Discord!";
 
 to ItemGain (ItemObj - a grab object) by (N - number):
@@ -913,28 +913,28 @@ to CreatureSexAftermath (TakingCharName - a text) receives (SexAct - a text) fro
 				increase OralPussyTaken of Player by 1;
 		now Lastfuck of Player is turns;
 	else:
-		let GivingCharIsNPC be 0;
-		let TakingCharIsNPC be 0;
+		let GivingCharIsNPC be false;
+		let TakingCharIsNPC be false;
 		let GivingChar be a person;
 		let TakingChar be a person;
 		if there is a name of GivingCharName in the Table of GameCharacterIDs:
 			now GivingChar is the object corresponding to a name of GivingCharName in the Table of GameCharacterIDs;
 			now Lastfuck of GivingChar is turns;
 			now LastSexualPartner of GivingChar is TakingCharName;
-			now GivingCharIsNPC is 1;
+			now GivingCharIsNPC is true;
 		if there is a name of TakingCharName in the Table of GameCharacterIDs:
 			now TakingChar is the object corresponding to a name of TakingCharName in the Table of GameCharacterIDs;
 			now Lastfuck of TakingChar is turns;
 			now LastSexualPartner of TakingChar is GivingCharName;
-			now TakingCharIsNPC is 1;
+			now TakingCharIsNPC is true;
 		if debugactive is 1:
 			say "DEBUG: GivingCharName: [GivingCharName], GivingCharIsNPC: [GivingCharIsNPC][line break]";
 			say "DEBUG: TakingCharName: [TakingCharName], TakingCharIsNPC: [TakingCharIsNPC][line break]";
-		if GivingCharIsNPC is 0 and TakingCharIsNPC is 0:
+		if GivingCharIsNPC is false and TakingCharIsNPC is false:
 			say "Error: The CreatureSexAftermath function should include at least one NPC if it is used. Please report this on the FS Discord and quote this full message. Giving Char: '[GivingCharName]', Taking Char: '[TakingCharName]'";
-		else if GivingCharIsNPC is 1 and TakingCharIsNPC is 1:
+		else if GivingCharIsNPC is true and TakingCharIsNPC is true:
 			say "Error: The CreatureSexAftermath function should include at least one infection if it is used. Please report this on the FS Discord and quote this full message. Giving Char: '[GivingCharName]' Taking Char: '[TakingCharName]'";
-		else if GivingCharIsNPC is 1: [NPC gives]
+		else if GivingCharIsNPC is true: [NPC gives]
 			if SexAct in lower case is "assfuck":
 				if GivingChar is not male:
 					say "Error: CreatureSexAftermath run with '[SexAct]' but character is not male! Please report this on the FS Discord and quote this full message. GivingChar: '[GivingChar]', TakingChar: '[TakingCharName]'[line break]";

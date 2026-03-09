@@ -85,13 +85,13 @@ before examining the grab object (called x):
 
 instead of examining a grab object (called x):
 	say "[the desc corresponding to a object of x in the table of game objects][line break]";
-	let found be 0;
+	let found be false;
 	repeat through the table of game art:
 		if printed name of x exactly matches the text title entry, case insensitively:
 			project icon entry;
-			now found is 1;
+			now found is true;
 			break;
-	if found is 0 and x is cum:
+	if found is false and x is cum:
 		project Figure of Item_Bottle_Cum;
 	if "Weaponsmaster" is listed in feats of Player and x is an armament:
 		say "     Looking over the weapon with your expert knowledge, you assess it to be a [weapon damage of x] damage weapon.";
@@ -144,13 +144,13 @@ instead of wearing something:
 ]
 
 To process (x - a grab object):
-	let found be 0;
+	let found be false;
 	repeat through the table of game art:
 		if printed name of x exactly matches the text title entry, case insensitively:
 			project icon entry;
-			now found is 1;
+			now found is true;
 			break;
-	if found is 0 and x is cum:
+	if found is false and x is cum:
 		project Figure of Item_Bottle_Cum;
 	let tempHungerValue be Hunger of Player;
 	if x is temporary and x is owned:

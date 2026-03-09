@@ -45,7 +45,7 @@ Usedesc of distilled cum is "[DistilledCumUse]".
 Scent of distilled cum is "You might want to be careful about sniffing this, you don't want to snort this stuff.".
 
 to say DistilledCumUse:
-	say "    Or not so eagerly, as you don't think eating this powder will be the most pleasant experience... And you're gonna want something to wash it down with. It takes some effort to force the slightly bitter powder down your throat, but once it hits your belly, your body is filled with a sudden warmth that quickly pools and focuses between your legs...";
+	say "     Or not so eagerly, as you don't think eating this powder will be the most pleasant experience... And you're gonna want something to wash it down with. It takes some effort to force the slightly bitter powder down your throat, but once it hits your belly, your body is filled with a sudden warmth that quickly pools and focuses between your legs...";
 	increase thirst of Player by 5;
 	if a random chance of 3 in 4 succeeds:
 		grow cock by 1;

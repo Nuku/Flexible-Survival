@@ -91,8 +91,8 @@ understand "graphics" as graphicmoding.
 
 carry out graphicmoding:
 	follow the ngraphics_blank rule;
-	let Trixieexit be 0;
-	while Trixieexit is 0:
+	let Trixieexit be false;
+	while Trixieexit is false:
 		clear the screen;
 		say "[bold type]Graphics Settings:[roman type][line break]";
 		say "(1) [link]Graphics[as]1[end link] - [bold type][if NewGraphicsInteger is 2]Side-Window Graphics[else if NewGraphicsInteger is 1]Inline Mode[else if NewGraphicsInteger is 0]Disabled[else]ERROR[end if][roman type][line break]";
@@ -108,7 +108,7 @@ carry out graphicmoding:
 		if calcnumber is 0:
 			say "Exit graphics menu?";
 			if Player consents:
-				now Trixieexit is 1;
+				now Trixieexit is true;
 			if NewGraphicsInteger is 2:
 				reconstruct graphics window;
 				follow the ngraphics_blank rule;

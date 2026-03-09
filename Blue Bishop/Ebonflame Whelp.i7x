@@ -10,17 +10,19 @@ ebneuterswitch is a truth state that varies.
 birthedwhelp is a truth state that varies.[@Tag:NotSaved] birthedwhelp is usually false.
 
 to say ebwhelpvic:
-	if ebneuterswitch is true:
-		if anallevel > 1 and (Player is not female or anallevel is 3) and (a random chance of 1 in 2 succeeds or (anallevel is 3 and a random chance of 1 in 3 succeeds)):
+	if birthedwhelp is true and (IncestList is warded or IncestList is banned):
+		now tempnum is 0;
+	else if ebneuterswitch is true:
+		if anallevel > 1 and (Player is not female or anallevel is 3) and (a random chance of 1 in 2 succeeds or (anallevel is 3 and a random chance of 1 in 3 succeeds) or birthedwhelp is true):
 			now tempnum is 2;
-		else if Player is female and a random chance of 3 in 4 succeeds:
+		else if Player is female and (a random chance of 3 in 4 succeeds or birthedwhelp is true):
 			now tempnum is 1;
 		else:
 			now tempnum is 0;
 	else:
-		if Player is not female and Player is male_vacant and ((anallevel is 2 and (Player is kinky or Player is mpreg_ok)) or anallevel is 3) and a random chance of 3 in 4 succeeds:
+		if Player is not female and Player is male_vacant and ((anallevel is 2 and (Player is kinky or Player is mpreg_ok)) or anallevel is 3) and (a random chance of 3 in 4 succeeds or birthedwhelp is true):
 			now tempnum is 2;
-		else if Player is female and Player is fem_vacant and a random chance of 3 in 4 succeeds:
+		else if Player is female and Player is fem_vacant and (a random chance of 3 in 4 succeeds or birthedwhelp is true):
 			now tempnum is 1;
 		else:
 			now tempnum is 0;
@@ -34,7 +36,7 @@ to say ebwhelpvic:
 			say ". The whole ordeal is more than enough to set you off, staining the ground with your [if Player is male][Cum Load Size of Player] load[else]juices[end if]";
 		say ".";
 		say "     Completely spent, the whelp chirps weakly and eventually flops off of you and onto the ground, the audibly wet sound of his oversized cock pulling free of your hole filling the air. After a few seconds, crawling away from it, he slowly pulls himself up and flies off into the distance. Apparently satisfied[if birthedwhelp is true] with fucking his own parent[end if], he leaves you to recover from being so thoroughly filled.";
-		CreatureSexAftermath "Player" receives "Ass[if ebneuterswitch is false]Dildo[end if]Fuck" from "Ebonflame Whelp";
+		CreatureSexAftermath "Player" receives "AssDildoFuck" from "Ebonflame Whelp";
 		if ebneuterswitch is false:
 			say "[line break]     [italic type]Forced to feel your bloated[if scalevalue of Player < 3], practically pregnant-looking[end if] belly, the effect of the creature's cum [one of]seems to linger[or]lingers[stopping] longer than it normally should. [one of]You have a bad feeling about what just happened[or][if HP of Player > 0]Here we go[else]Not[end if] again[stopping]...[roman type][line break]";
 			now mpreghijack is true;
@@ -49,7 +51,7 @@ to say ebwhelpvic:
 			say ". The whole ordeal is more than enough to set you off, staining the ground with your [if Player is male][Cum Load Size of Player] load[else]juices[end if]";
 		say ".";
 		say "     Completely spent, the whelp chirps weakly and eventually flops off of you and onto the ground, the audibly wet sound of his oversized cock pulling free of your hole filling the air. After a few seconds, crawling away from it, he slowly pulls himself up and flies off into the distance. Apparently satisfied[if birthedwhelp is true] with fucking his own parent[end if], he leaves you to recover from being so thoroughly filled.";
-		CreatureSexAftermath "Player" receives "Pussy[if ebneuterswitch is false]Dildo[end if]Fuck" from "Ebonflame Whelp";
+		CreatureSexAftermath "Player" receives "PussyDildoFuck" from "Ebonflame Whelp";
 		if ebneuterswitch is false:
 			say "[line break]     [italic type]Forced to feel your bloated[if scalevalue of Player < 3], practically pregnant-looking[end if] belly, the effect of the creature's cum [one of]seems to linger[or]lingers[stopping] longer than it normally should. [one of]You have a bad feeling about what just happened[or][if HP of Player > 0]Here we go[else]Not[end if] again[stopping]...[roman type][line break]";
 			now preghijack is true;
@@ -59,7 +61,7 @@ to say ebwhelpvic:
 		say "You're barely given a chance to ready yourself before he presses the base of his cock firmly against your face, flooding your senses with the tainted aroma of the creature's heady scent. He clearly wants you to suck him off, but either by some weird instinct or by a particularly sadistic tendency, he's not hard in the slightest, meaning you'd have to oblige him more than usual to suck him off.";
 		say "     [if HP of Player > 0]Conceding to this shameful relegation, you lower[else]Not wanting to be the subject of the creature's constant clawing and squealing, you eventually concede to this shameful relegation, lowering[end if] your head to engulf the pointed tip of the whelp's jet-black dick, the insistence of the tiny creature forcing you to swallow down more and more of its substantive length until your lips are flush against his coarse scales. [if scalevalue of Player > 3]Massive form sucking off this tiny beast, your taste is awash in the sting of his scalding precum, the creature starting to cling[else]Struggling to breathe as your taste is awash in the sting of his scalding precum, the creature starts clinging[end if] to you as tightly as he possibly can, dead set on making sure you never let up.";
 		WaitLineBreak;
-		say "     Your tongue [if HP of Player > 0 or Player is submissive]caressing[else]forced to writhe[end if] along its slick girth, the flaccid tool has more than enough yield to invite your maw's[if HP of Player < 1 and Player is not submissive] involuntary[end if] squeezing, milking endeavors, causing the twisted critter to chitter and howl slowly in bliss. [if Player is male]Driven by your rising arousal to jerk yourself off[else if Player is female]Driven by your rising arousal to fondle yourself[else]Genderless body wracked by an insatiable need[end if], you feel his molten precum sputter [if scalevalue of Player < 4]into your stomach[else]down your throat[end if], yourself lost in a haze of growing need[if scalevalue of Player < 4] and slight suffocation[end if].";
+		say "     Your tongue [if HP of Player > 0 or Player is submissive]caressing along its slick girth, the flaccid tool has more than enough yield to invite your maw's[else]forced to writhe along its slick girth, the flaccid tool has more than enough yield to invite your maw's involuntary[end if] squeezing, milking endeavors, causing the twisted critter to chitter and howl slowly in bliss. [if Player is male]Driven by your rising arousal to jerk yourself off[else if Player is female]Driven by your rising arousal to fondle yourself[else]Genderless body wracked by an insatiable need[end if], you feel his molten precum sputter [if scalevalue of Player < 4]into your stomach, yourself lost in a haze of growing need and slight suffocation[else]down your throat, yourself lost in a haze of growing need[end if].";
 		say "     Your[if HP of Player < 1] forced[end if] attendance is eventually rewarded when the whelp cries out, searing rod bulging significantly and your insides are doused with successive barrages of the monster's oversized load. It seems likely so much that you're not rightly sure how the little thing could even carry it all, stomach [if scalevalue of Player < 3]visibly bulging[else]aching painfully[end if] with the glowing cum.";
 		CreatureSexAftermath "Player" receives "OralCock" from "Ebonflame Whelp";
 		WaitLineBreak;
@@ -102,8 +104,6 @@ When Play begins:
 	add "Ebonflame Whelp" to infections of MaleList;
 	add "Ebonflame Whelp" to infections of BarbedCockList;
 	add "Ebonflame Whelp" to infections of TaperedCockList;
-	add "Ebonflame Whelp" to infections of InternalCockList;
-	add "Ebonflame Whelp" to infections of InternalBallsList;
 	add "Ebonflame Whelp" to infections of BipedalList;
 	add "Ebonflame Whelp" to infections of FlightList;
 	add "Ebonflame Whelp" to infections of TailList;
@@ -293,20 +293,19 @@ This is the Ebonflame Whelp Infection rule:
 ]
 
 to ebwhelphijackroutine:
-	LineBreak;
 	if ebwhelphijack is 1 and Player is not female:
 		now preghijack is false;
 		if Player is male_vacant:
-			say "[italic type]Your lack of a vaginal passage causes you to feel as though your insides are shifting in strange and somewhat uncomfortable ways...[roman type][line break]";
+			say "[line break][italic type]Your lack of a vaginal passage causes you to feel as though your insides are shifting in strange and somewhat uncomfortable ways...[roman type][line break]";
 			now ebwhelphijack is 2;
 			now mpreghijack is true;
 		else:
-			say "[italic type]With your lack of a vaginal passage, you can feel the dark egg you carry being absorbed into your body...[roman type][line break]";
+			say "[line break][italic type]With your lack of a vaginal passage, you can feel the dark egg you carry being absorbed into your body...[roman type][line break]";
 			SanLoss 3;
 			now ebgatorhijack is 0;
 			stop the action;
 	if hijackgestation < 0:
-		say "     Unable to take it for any longer, you finally double over and cry out. You can feel the tainted offspring writhing and clawing itself through your [if mpreghijack is true]bowels[else]birth canal[end if] in desperate need for escape, wracking you with waves of pain for each successive inch until it finally breaks away, air suddenly filling with the low squealing of an ebonflame whelp.";
+		say "[line break]     Unable to take it for any longer, you finally double over and cry out. You can feel the tainted offspring writhing and clawing itself through your [if mpreghijack is true]bowels[else]birth canal[end if] in desperate need for escape, wracking you with waves of pain for each successive inch until it finally breaks away, air suddenly filling with the low squealing of an ebonflame whelp.";
 		if mpreghijack is true:
 			say "     [if scalevalue of Player > 3 or player is twistcapped]You're thankfully stretchy enough for the monster to pull itself free of your[else]Tears strained from your eyes, the monster stretches you to your limits to pull itself free of your tight[end if] ring, a flood of molten-colored fluid following in its wake as it lands on the ground with an audible splat. The loud, messy little dragon only needing a few seconds to acclimate to its exposure before getting airborne...";
 		else:
@@ -320,10 +319,10 @@ to ebwhelphijackroutine:
 		challenge "Ebonflame Whelp";
 		now birthedwhelp is false;
 	else if hijackgestation < 3: [LATE]
-		say "Your [bodytype of Player] belly protrudes in a firm dome of pregnancy, full of the violently churning, unborn being, becoming increasingly desperate to escape. You don't feel hindered despite being bloated but the constant, burning sensation of your corrupted offspring torments you to no end.";
+		say "[line break]Your [bodytype of Player] belly protrudes in a firm dome of pregnancy, full of the violently churning, unborn being, becoming increasingly desperate to escape. You don't feel hindered despite being bloated but the constant, burning sensation of your corrupted offspring torments you to no end.";
 	else if hijackgestation < 5: [MIDDLE]
-		say "Your [bodydesc of Player] body is somewhat rounded by the effects of your terribly twisted pregnancy. It's progressing at what would seem to be a terrifyingly fast speed, even for these circumstances...";
+		say "[line break]Your [bodydesc of Player] body is somewhat rounded by the effects of your terribly twisted pregnancy. It's progressing at what would seem to be a terrifyingly fast speed, even for these circumstances...";
 	else: [EARLY]
-		say "[one of]You feel an ominous shifting of something inside[or]An unsettling warmth churns through[at random] your lower belly...";
+		say "[line break][one of]You feel an ominous shifting of something inside[or]An unsettling warmth churns through[at random] your lower belly...";
 
 Ebonflame Whelp ends here.

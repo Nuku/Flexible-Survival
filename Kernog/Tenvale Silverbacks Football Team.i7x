@@ -211,7 +211,7 @@ to say GorillaLaundryService3:
 to say GorillaLaundryRepeat:
 	say "     You start your new laundry shift. You pick up the dirty jockstraps and shorts one by one, and throw them in your basket. 'What's up?' a familiar voice asks from the entrance. As you give him a resentful look, the jock raises his hands in the air. '[one of]Sorry, sorry. Who knew we'd get so much into things, last time, huh?' he sort-of apologizes. 'Anyway, I'm just here to chat for now. And to help. Coach asked me to do laundry work for a week or face expulsion from the team[or]We're on the same shift again, huh? Let me help you[stopping].'";
 	say "     With the two of you picking up clothes, things go very fast, and there is still twenty minutes until the end of the training. You take the opportunity to chat with your teammate.";
-	say "     '[one of]The Fourmont Wolves are a decent bunch, once you get to know them. Their mouths are as good for talking as for drinking. And sucking. And sucking then drinking. Fucking a muzzle changes a lot of things, y'know?'[or]I'm screwing a lot of guys, and girls too. All you need is to roam the campus and pick up the first one you fancy. Most of the time they can't resist if you [']insist['] a little, heh heh. By the way... Have we met elsewhere?'[or][if HP of Roman is 5]So captain Roman is a girl down there? Who could have guessed! No wonder he was so prude. I've never screwed a trans guy before, maybe you could put in a word for me to the cap, eh?'[else]Captain Roman is a strange guy. For the leader of a pack of hornballs, he is surprisingly prude. He's never fucked anybody, and he's always changing in his own room. You should open your eye for him, next time you come here.'[end if][at random]";
+	say "     '[one of]The Fourmont Wolves are a decent bunch, once you get to know them. Their mouths are as good for talking as for drinking. And sucking. And sucking then drinking. Fucking a muzzle changes a lot of things, y'know?'[or]I'm screwing a lot of guys, and girls too. All you need is to roam the campus and pick up the first one you fancy. Most of the time they can't resist if you [']insist['] a little, heh heh. By the way... Have we met elsewhere?'[or][if HP of Team Captain Roman is 5]So captain Roman is a girl down there? Who could have guessed! No wonder he was so prude. I've never screwed a trans guy before, maybe you could put in a word for me to the cap, eh?'[else]Captain Roman is a strange guy. For the leader of a pack of hornballs, he is surprisingly prude. He's never fucked anybody, and he's always changing in his own room. You should open your eye for him, next time you come here.'[end if][at random]";
 	increase GorillasRep by 2; [Since there's nothing else for now, I give the player a little "help" to unlock the next stage, if needed]
 
 [Water Boy scenes]
@@ -220,14 +220,14 @@ to say GorillaWaterService:
 	say "[line break]     [bold type]Which group should you choose?[roman type][line break]";
 	say "     [link](1)[as]1[end link] - A large, bully-looking ape, whose dirty look gives you bad vibes.";
 	say "     [link](2)[as]2[end link] - Two players who look very close to each other and with an air of family.";
-	if HP of Roman >= 7:
+	if HP of Team Captain Roman >= 7:
 		say "     [link](3)[as]3[end link] - Isn't that Willy the orca, over there?";
 	while 1 is 1:
-		say "Choice? (1-[if HP of Roman >= 7]3[else]2[end if])> [run paragraph on]";
+		say "Choice? (1-[if HP of Team Captain Roman >= 7]3[else]2[end if])> [run paragraph on]";
 		get a number;
-		if calcnumber > 0 and (calcnumber < 3 or (HP of Roman >= 7 and calcnumber is 3)):
+		if calcnumber > 0 and (calcnumber < 3 or (HP of Team Captain Roman >= 7 and calcnumber is 3)):
 			break;
-		say "Invalid choice. Type [link]1[end link][if HP of Roman >= 7], [link]2[end link] or [link]3[end link][else] or [link]2[end link][end if] to choose an incoming group.";
+		say "Invalid choice. Type [link]1[end link][if HP of Team Captain Roman >= 7], [link]2[end link] or [link]3[end link][else] or [link]2[end link][end if] to choose an incoming group.";
 	LineBreak;
 	if calcnumber is 1:
 		say "[GorillaWater1]";
@@ -334,7 +334,12 @@ to say GorillaTraining:
 		say "[GorillaTraining1]";
 	else:
 		say "[GorillaTrainingNoire]";
-	say "[GorillaTrainingEnd]";
+	WaitLineBreak;
+	say "     You hear the sound of Roman's whistle, followed by his strong voice. 'Okay, boys! That's enough training for now. Time to let another group work. Go get some water, or take a shower, and get some rest.' You can hear your comrades around you groan like teenagers asked to stop playing, and you surprise yourself by letting out a small sigh as well.";
+	say "     You grab a water bottle from the nearest water-boy, then head straight for the showers. After a playful shower with the other members of the team, you come back on the field and take your leave of Roman. 'Yeah, nice work back there, champ. You're more than welcome to come back tomorrow.'";
+	if carried of football pads is 0:
+		say "     You see some of the other players leaving with their football pads still on them. 'I know. Since the campus is not quite safe, and the city even less, I allow the boys to take their gear with them if they want,' Roman replies, when asked. 'Of course, it applies for you, too. Keep these pads, you never know what kind of sick bastard you could meet out there.' You thank Roman for the advice, and grab back your football pads from the locker.";
+		ItemGain football pads by 1;
 	PlayerDrink 25;
 	increase GorillasRep by 3;
 
@@ -365,65 +370,56 @@ to say GorillaTraining1:
 	CreatureSexAftermath "Player" receives "OralCock" from "Football Gorilla Male";
 
 to say GorillaTrainingNoire:
-	say "     You greet Noire as you walk with the rest of your six-man group to the training. 'Oh, hello,' she replies. 'I'm glad you could join us. I was about to show these apes the traction power of a horse.' Someone neighs behind you, and the rest of the team giggles, as Noire turns around. 'Not taking me seriously, are you?' She scoffs. The equinoid grabs the ball, and turns towards the rest of you. 'Here's what I propose you as a training: you will try to block me and make me lose the ball. If I win, you get to service me. If you win, I'll give everyone some service. Deal?' The rest of the group agrees heartily. [bold type]You may tilt the balance in the player's favor if you participate. What do you do?[roman type][line break]";
+	say "     You greet Noire as you walk with the rest of your six-man group to the training. 'Oh, hello,' she replies. 'I'm glad you could join us. I was about to show these apes the traction power of a horse.' Someone neighs behind you, and the rest of the team giggles, as Noire turns around. 'Not taking me seriously, are you?' she scoffs. The equinoid grabs the ball, and turns towards the rest of you. 'Here's what I propose you as a training: you will try to block me and make me lose the ball. If I win, you get to service me. If you win, I'll give everyone some service. Deal?' The rest of the group agrees heartily. [bold type]You may tilt the balance in the player's favor if you participate. What do you do?[roman type][line break]";
 	say "     ([link]Y[as]y[end link]) - You're in.";
 	say "     ([link]N[as]n[end link]) - You're better off watching.";
 	if Player consents:
 		LineBreak;
-		say "     Noire scoffs. 'One more or less makes no difference to me. Now, get into position, the rest of you.' The four other gorillas get ready, and Noire suddenly sprints forward. The first gorilla tries to stop her, only to get deflected away, as if he was hit by a truck. The second player wraps his arms around Norie's waist, but it barely slows down the equine's momentum, who jerks the ape away. The remaining players go at her together, and for a moment it looks like Noire is about to flinch. That's the moment you were waiting for. You lunge at her, aiming at her legs. The three of you eventually manage to unbalance, then topple Noire, with some effort.";
-		say "     'Well done. The five of you took down the one of me,' the Equinoid says, dripping with sarcasm.";
+		say "     Noire scoffs, 'One more or less makes no difference to me. Now, get into position, the rest of you.' The four other gorillas get ready, and Noire suddenly sprints forward. The first gorilla tries to stop her, only to get deflected away, as if he was hit by a truck. The second player wraps his arms around Norie's waist, but it barely slows down the equine's momentum, who jerks the ape away. The remaining players go at her together, and for a moment it looks like Noire is about to flinch. That's the moment you were waiting for. You lunge at her, aiming at her legs. The three of you eventually manage to unbalance, then topple Noire, with some effort.";
+		say "     'Well done. The five of you took down the one of me,' the equinoid says, dripping with sarcasm.";
 		say "     'Hey, no walking off the bet,' one of the teammates replies.";
-		say "     'I do not intend to. Get in a circle, all of you!' You contain a chuckle as you place yourself with the others in from the equine. Noire wastes no time and gulps down the cock of the ape in front of her. 'Oh... Oook!' the gorilla said as he reacted to Noire's maw closing on his length. She took it flaccid, and it was already hard when she popped it out of her mouth. In the meantime, her hands went to the others. When she reaches you, Noire [if Player is male]grabs your dick firmly and gives it several strokes, making it grow to full length in no time[else]plunges her fingers into your pussy. She moves them inside while her thumb rubs your clitoris and, by the time she passes to your neighbor, you are already wet[end if].";
-		say "     A few minutes later, the gorilla that Noire sucked groaned loudly came, the horse taking every single drop into her mouth. Once he is milked for all he's worth, the equine switched to another teammate, letting the spent ape walk away, his cock slick and clean. You wait impatiently your turn as Noire sucks the second gorilla, then a third one. At least, the smaller the circle, the more time her hand is keeping you busy.";
+		WaitLineBreak;
+		say "     'I do not intend to. Get in a circle, all of you!' You contain a chuckle as you place yourself with the others in front of the equine. Noire wastes no time and gulps down the cock of the ape in front of her. 'Oh... Oook!' the gorilla says as he reacts to Noire's maw closing on his length. She took it flaccid, and it was already hard when she pops it out of her mouth. In the meantime, her hands go to the others. When she reaches you, Noire [if Player is male]grabs your dick firmly and gives it several strokes, making it grow to full length in no time[else]plunges her fingers into your pussy. She moves them inside while her thumb rubs your clitoris and, by the time she passes to your neighbor, you are already wet[end if].";
+		say "     A few minutes later, the gorilla that Noire is sucking groans loudly and cums, the horse taking every single drop into her mouth. Once he is milked for all he's worth, the equine switches to another teammate, letting the spent ape walk away, his cock slick and clean. You wait impatiently for your turn as Noire sucks the second gorilla, then a third one. At least, the smaller the circle, the more time her hand is keeping you busy.";
 		WaitLineBreak;
 		if Player is male:
-			say "     When your turn has come, and Noire's lips wrap around your dick, you understand how she made the other guys cum so fast. Thanks to the elongated shape of her muzzle, she could take your entire [cock size desc of Player] effortlessly, trapping it in the tight confines of her [if Cock Length of Player < 12]mouth[else]throat[end if]. Every time she swallowed your [Cock of Player] length to the hilt, she sucked on the sensitive flesh so strongly that you almost double over. After a dozen minutes, you signal that you are almost there. At this point, Noire lets one of her hands go, and stick one of her thick fingers into your taint. The addition of the pressure on your prostate makes you see star as you too unload your [Cum Load Size of Player] load in her. [if Ball Size of Player < 5]She swallows every single drop[else]She tries to swallow as much as she can, but you produce so much spunk that she has to let your cock out of her mouth, splashing semen all over her chest[end if].";
+			say "     When your turn has come, and Noire's lips wrap around your dick, you understand how she made the other guys cum so fast. Thanks to the elongated shape of her muzzle, she can take your entire [cock size desc of Player] effortlessly, trapping it in the tight confines of her [if Cock Length of Player < 12]mouth[else]throat[end if]. Every time she swallows your [Cock of Player] length to the hilt, she sucks on the sensitive flesh so strongly that you almost double over. After a dozen minutes, you signal that you are almost there. At this point, Noire lets one of her hands go, and pushes one of her thick fingers into your taint. The addition of the pressure on your prostate makes you see stars as you too unload your [Cum Load Size of Player] load in her. She [if Ball Size of Player < 5]swallows every single drop[else]tries to swallow as much as she can, but you produce so much spunk that she has to let your cock out of her mouth, splashing semen all over her chest[end if].";
 		else:
-			say "     When your turn has come, and Noire pushes her mouth against your mound, you understand how she made the other guys cum so fast. Her flat, thick tongue lapped at your [cunt size desc of Player] pussy, spreading its folds apart with strong up-and-down moves which, each time, gave your pleasure button a vigorous flicker. Gasping, you hold yourself to Noire's mane as the hermaphrodite mare licks your cunt as if it was a plate of her favorite dish. Your woman juices run down your trembling thighs during the long minutes that the cunnilingus lasted. After you signal that you are almost there, Noire grabs your hips for leverage, and push her large tongue as deep inside of you as she could. Your muscles squeeze down on the flexible appendage, as you cum hard. You are reduced to a moaning, trembling body while Noire audibly gulps down every squirt of your pussy.";
-		say "     Once everyone is done, Noire gets back on her feet, licking her chops. 'What are you all doing, sitting tired on the ground. You lack stamina, boys!' she says to you and the rest of the group. 'I will make sure to make you all work on that during next training.' Everyone else reacted with a collective groan, as she trots away like sucking[if Player is not male] and eating out[end if] five people was nothing to her.";
+			say "     When your turn has come, and Noire pushes her mouth against your mound, you understand how she made the other guys cum so fast. Her flat, thick tongue laps at your [cunt size desc of Player] pussy, spreading its folds apart with strong up-and-down moves which, each time, give your pleasure button a vigorous flicker. Gasping, you hold yourself to Noire's mane as the hermaphrodite mare licks your cunt as if it was a plate of her favorite dish. Your woman juices run down your trembling thighs during the long minutes that the cunnilingus lasts. After you signal that you are almost there, Noire grabs your hips for leverage, and pushes her large tongue as deep inside of you as she can. Your muscles squeeze down on the flexible appendage, as you cum hard. You are reduced to a moaning, trembling body while Noire audibly gulps down every squirt of your pussy.";
+		say "     Once everyone is done, Noire gets back on her feet, licking her chops. 'What are you all doing, sitting tired on the ground? You lack stamina, boys!' she says to you and the rest of the group. 'I will make sure to make you all work on that during next training.' Everyone else reacts with a collective groan, as she trots away like sucking[if Player is not male] and eating out[end if] five people was nothing to her.";
+		CreatureSexAftermath "Horsewoman" receives "Oral[if Player is male]Cock[else]Pussy[end if]" from "Player";
 	else:
 		LineBreak;
 		say "     Noire scoffs. 'Wise of you. Now, get into position, the rest of you.' The four other gorillas get ready, and Noire suddenly sprints forward. The first gorilla tries to stop her, only to get deflected away, as if he was hit by a truck. The second player wraps his arms around Norie's waist, but it barely slows down the equine's momentum, who jerks the ape away. The remaining players go at her together, and for a moment it looks like Noire is about to flinch. But she breathes loudly through her nostrils and powers through, easily passing the goal line.";
 		say "     'Pathetic. Now, pay your bet!' Noire says.";
-		say "     'W-Wait a minute, let's get somewh-hmmmpf!' Noire sacked the gorilla who just spoke, and the two of them crash on the grass. The horse-herm straddles the ape's face, and starts grinding her cunt against his mouth. 'Now!'";
+		say "     'W-Wait a minute, let's get somewh-hmmmpf!' Noire sacks the gorilla who just spoke, and the two of them crash on the grass. The horse-herm straddles the ape's face, and starts grinding her cunt against his mouth. 'Now!'";
+		WaitLineBreak;
 		say "     'Mmmmf!' the gorilla groans as he tries to prevent himself to be smothered by the black-furred posterior.";
 		say "     'You!' Noire orders the nearest ape. 'Suck my cock.'";
 		say "     'Now wait a min-'";
 		say "     'Suck my cock or I'll take your ass when I'm done with him.'";
-		say "     'Eek!' the gorilla says, as he gets on his knees, and begin taking care of the harm's equine cock. 'Ish thickk,' he complains as he tries to take the flared head in his mouth.";
-		say "     'Don't care', Noire replies, grabbing his head and pushing him forward.";
-		say "     'Ggggk!'";
-		say "     Then, Noire glared at the other two trainees. 'You two. Breasts. Suck. Now.' Your teammates obey reluctantly, and kneel on each side of her, and start working on her breasts. You look at the scene, at Noire working her four gorillas like a conductor managing his orchestra. 'Yeah, like that. Work on the clit. (Mmmf!) And you, take that medial ring already! (Gggk! Ggmmf!) Aaaah... You two don't be shy, pull on these nipples (suck, nnn, shlllk). And don't you dare touch yourself. You're servicing [italic type]me[roman type]. [if Player is defaultnamed]You there[else][name of Player][end if], hit any of them in the groin if they disobey (collective groan).";
 		WaitLineBreak;
-		say "     After spending the entire time devoted to the training like that, Noire lets out a surprisingly horse-like neigh as she reaches climax. She coats the gorilla under her with her fem-cum squirts, and pumps her male load inside the second ape's belly, while the other two fall back on their asses, their mouths dripping with warm milk. Noire takes a moment to recover from her orgasm, then get back on her hooves. 'That was good, although I wonder if that was all you're good for. I expect all of you to make more efforts, next time!' she says the rest of the group, as she trots away. Your teammates let out another collective groan, most of them rubbing their filled bellies. Training is over for today, it seems.";
-
-to say GorillaTrainingEnd:
-	WaitLineBreak;
-	say "     You hear the sound of Roman's whistle, followed by his strong voice. 'Okay, boys! That's enough training for now. Time to let another group work. Go get some water, or take a shower, and get some rest.' You can hear your comrades around you groan like teenagers asked to stop playing, and you surprise yourself by letting out a small sigh as well.";
-	say "     You grab a water bottle from the nearest water-boy, then head straight for the showers. After a playful shower with the other members of the team, you come back on the field and take your leave of Roman. 'Yeah, nice work back there, champ. You're more than welcome to come back tomorrow.'";
-	if carried of football pads is 0:
-		say "     You see some of the other players leaving with their football pads still on them. 'I know. Since the campus is not quite safe, and the city even less, I allow the boys to take their gear with them if they want,' Roman replies, when asked. 'Of course, it applies for you, too. Keep these pads, you never know what kind of sick bastard you could meet out there.' You thank Roman for the advice, and grab back your football pads from the locker.";
-		ItemGain football pads by 1;
+		say "     'Eek!' the gorilla says, as he gets on his knees, and begins taking care of the herm's equine cock. 'Ish thickk,' he complains as he tries to take the flared head in his mouth.";
+		say "     'Don't care,' Noire replies, grabbing his head and pushing him forward.";
+		say "     'Ggggk!'";
+		WaitLineBreak;
+		say "     Then, Noire glares at the other two trainees. 'You two. Breasts. Suck. Now.' Your teammates obey reluctantly, and kneel on each side of her, and start working on her breasts. You look at the scene, at Noire working her four gorillas like a conductor managing his orchestra. 'Yeah, like that. Work on the clit. (Mmmf!) And you, take that medial ring already! (Gggk! Ggmmf!) Aaaah... You two don't be shy, pull on these nipples (suck, nnn, shlllk). And don't you dare touch yourself. You're servicing [italic type]me[roman type]. [if Player is defaultnamed]You there[else][name of Player][end if], hit any of them in the groin if they disobey (collective groan).'";
+		say "     After spending the entire time devoted to the training like that, Noire lets out a surprisingly horse-like neigh as she reaches climax. She coats the gorilla under her with her fem-cum squirts, and pumps her male load inside the second ape's belly, while the other two fall back on their asses, their mouths dripping with warm milk. Noire takes a moment to recover from her orgasm, then gets back on her hooves. 'That was good, although I wonder if that was all you're good for. I expect all of you to make more efforts, next time!' she says to the rest of the group, as she trots away. Your teammates let out another collective groan, most of them rubbing their filled bellies. Training is over for today, it seems.";
 
 [Football match.]
 [future plans: quest because of fixed matches?]
 [Long-term project: having several variations]
 to say FootballMatch:
 	say "     'Right on time. We are going to play against the Fourmont Wolves in half-an-hour, and I was about to fill the last positions in our line-up. Go get your gear, champ[first time]. I assigned you a personal locker, by the way[only].' You hurry to the locker-room, and put on your helmet and shoulder-pads. You meet the other teammates there and, after some greeting and some motivation ritual, you go back on the field.";
-	say "     You find Roman chatting with the captain of the Wolves. 'Now, where were we?' you can hear him ponder. [first time]Curious, you interrogate one of the other players about the issue. 'Oh, that's right. It's your first match,' your teammate ponders. 'You see, since there is a lot of [italic type]action[roman type] going on, we barely have the time to play a couple of phases, before we stop for the day. And to be honest, these two are the only ones who keep the tabs. Even the ref stopped caring; he's only here to prevent the players from hurting each other, and keep us focused on the match. When he's not busy jacking and fingering himself, of course.' [only]'If I'm correct, we're pushing, and we stopped right on your thirty yards line,' the canine replies as he scratches his head, trying to remember, 'and we're still stuck at 7-7. In which quarter are we, by the way?'";
+	say "     You find Roman chatting with the captain of the Wolves. 'Now, where were we?' you can hear him ponder. [first time]Curious, you interrogate one of the other players about the issue. 'Oh, that's right. It's your first match,' your teammate ponders. 'You see, since there is a lot of [italic type]action[roman type] going on, we barely have the time to play a couple of phases, before we stop for the day. And to be honest, these two are the only ones who keep the tabs. Even the ref stopped caring; he's only here to prevent the players from hurting each other, and keep us focused on the match. When he's not busy jacking and fingering himself, of course.' [only]'If I'm correct, we're pushing, and we stopped right on your thirty yard line,' the canine replies as he scratches his head, trying to remember, 'and we're still stuck at 7-7. In which quarter are we, by the way?'";
+	WaitLineBreak;
 	say "     'Does it really matter?' Roman replies, and both of them smile mischievously at each other.";
-	say "     Everybody takes its position on the field[if HP of Roman >= 11], while the cheerleaders make an elaborate dance to psyche you up. 'Tenvale! Ten-vale! 10 V! Go go go!' [else]. [end if]Roman positions you as a cornerback. Safe from the middle-field melee, your job is to intercept receivers as they try to catch the pass from their quarterbacks.";
+	say "     Everybody takes their position on the field[if HP of Team Captain Roman >= 11], while the cheerleaders make an elaborate dance to psyche you up. 'Tenvale! Ten-vale! 10 V! Go go go!' [else]. [end if]Roman positions you as a cornerback. Safe from the middle-field melee, your job is to intercept receivers as they try to catch the pass from their quarterbacks.";
 	WaitLineBreak;
-	say "[FootballMatchDefense]";
-	say "[FootballMatchOffense]";
-	WaitLineBreak;
-	say "[FootballMatchEnd]";
-
-to say FootballMatchDefense:
 	say "     After a short moment of tension, the Fourmont Wolves play the ball. While most players throw themselves against each other, the Wolves['] quarterback readies a long pass towards the receiver facing you.";
 	let bonus be ( Perception of Player minus 10 ) divided by 2;
 	let diceroll be a random number from 1 to 20;
-	say "You roll 1d20([diceroll])[if bonus >= 0]+[end if][bonus] = [special-style-1][diceroll + bonus][roman type] vs [special-style-2]16[roman type] (Perception Check):[line break]";
+	say "[line break]You roll 1d20([diceroll])[if bonus >= 0]+[end if][bonus] = [special-style-1][diceroll + bonus][roman type] vs [special-style-2]16[roman type] (Perception Check):[line break]";
 	increase diceroll by bonus;
 	[preparing stamina roll]
 	let bonus be ( Stamina of Player minus 10 ) divided by 2;
@@ -433,14 +429,16 @@ to say FootballMatchDefense:
 	else:
 		say "     Distracted by the scrub-turning-orgy in the corner of your vision, you notice too late the Wolves['] receiver zooming past you, forcing you to run after him if you want to have any chance at keeping the ball.";
 	let diceroll be a random number from 1 to 20;
-	say "You roll 1d20([diceroll])[if bonus >= 0]+[end if][bonus] = [special-style-1][diceroll + bonus][roman type] vs [special-style-2]20[roman type] (Stamina Check):[line break]";
+	say "[line break]You roll 1d20([diceroll])[if bonus >= 0]+[end if][bonus] = [special-style-1][diceroll + bonus][roman type] vs [special-style-2]20[roman type] (Stamina Check):[line break]";
 	increase diceroll by bonus;
 	if diceroll >= 20:
-		say "     Thanks to your stamina, you manage to catch up to the canine, and you slam into him as he turns around to catch the pass. You fall with him on the ground, while the ball bounds away, failing the down for the Fourmont Wolves[if HP of Roman >= 11], under the cheers of the cheerleaders[end if].";
-		say "     Once the both of you stop, you find yourself lying over the lupine receiver, and the both of you staring at the other's crotch. Grinning, you pin the wolf's legs with your weight, and slip your tongue into his penial sheath. You can feel him shudder under you, which motivates you to keep licking at the male's groin until his pointy, canine dick slides out from its hiding place. You do not waste any time lathering it with a tongue bath as well, and hungrily put the blood-engorged shaft in your mouth[if HP of Roman >= 11]. 'Lick it! Suck it! Make it cum! Lots of jizz!' the cheerleaders chant, as they try to psyche you up[end if].";
+		say "     Thanks to your stamina, you manage to catch up to the canine, and you slam into him as he turns around to catch the pass. You fall with him on the ground, while the ball bounds away, failing the down for the Fourmont Wolves[if HP of Team Captain Roman >= 11], under the cheers of the cheerleaders[end if].";
+		say "     Once the both of you stop, you find yourself lying over the lupine receiver, and the both of you staring at the other's crotch. Grinning, you pin the wolf's legs with your weight, and slip your tongue into his penial sheath. You can feel him shudder under you, which motivates you to keep licking at the male's groin until his pointy, canine dick slides out from its hiding place. You do not waste any time lathering it with a tongue bath as well, and hungrily put the blood-engorged shaft in your mouth[if HP of Team Captain Roman >= 11]. 'Lick it! Suck it! Make it cum! Lots of jizz!' the cheerleaders chant, as they try to psyche you up[end if].";
 		WaitLineBreak;
-		say "     You suck on your prize like a lollypop, bobbing up and down as far you can on the turgescent member, and you are rewarded by the grunts and dog-like whines of your opponent. He suddenly decides to return the favor, and [if Player is female]pushes his muzzle against your pussy, licking it with its large canine tongue[else]closes his muzzle around your [cock size desc of Player] shaft, rolling his fat canine tongue around your [Cock of Player] shaft[end if].";
-		say "     Not to be outdone, you give the wolf's knot a hearty stroking, which makes him jolt in surprise and makes him cum quickly. The wolf pumps his hips in the air several times, as he launches rope after rope of cum into your mouth. Once he is done, you take your time [if Player is female]grinding your pussy against his submissive face[else]pumping your cock in and out of his submissive mouth[end if], before reaching your own climax";
+		say "     You suck on your prize like a lollipop, bobbing up and down as far you can on the turgescent member, and you are rewarded by the grunts and dog-like whines of your opponent. He suddenly decides to return the favor, and [if Player is female]pushes his muzzle against your pussy, licking it with his large canine tongue[else]closes his muzzle around your [cock size desc of Player] shaft, rolling his fat canine tongue around your [Cock of Player] shaft[end if].";
+		say "     Not to be outdone, you give the wolf's knot a hearty stroking, which makes him jolt in surprise and makes him cum quickly. The wolf pumps his hips in the air several times, as he launches rope after rope of cum into your mouth. Once he is done, you take your time [if Player is female]grinding your pussy against his submissive face[else]pumping your cock in and out of his submissive mouth[end if], before reaching your own climax.";
+		CreatureSexAftermath "Player" receives "OralCock" from "Football Wolfman";
+		CreatureSexAftermath "Football Wolfman" receives "Oral[if Player is female]Pussy[else]Cock[end if]" from "Player";
 		WaitLineBreak;
 		say "     After taking a minute to rest, you stand back up, and help your opponent do the same. Fair-play, he congratulates you, while licking your sexual fluids from his chops. Turning around, you notice that everyone, from the other players to the crowd, have been watching the two of you; some had already begun to masturbate from your little show. Blushing, you take your position, as the referee announces that your team goes on offense, thanks to your interception.";
 		LibidoLoss 20;
@@ -448,42 +446,43 @@ to say FootballMatchDefense:
 		PlayerDrink 5;
 	else:
 		say "     You run the best you can, but the wolf is already far away, and has the time to receive the ball safely. Fortunately, your side's safety blindsides the Fourmont player, preventing this from turning into a touchdown. You watch as your gorilla teammate pins the wolf under him for some victory-sex while you chastise yourself for your lack of performance. You go fetch some water, while the Tenvale safety fucks the Fourmont receiver doggy style, under the applause of the crowd, and replaces yourself on your line for the next down.";
-		say "     By luck, the next downs are either intercepted, or fumbled by the Wolves, and your team eventually switches to the offense.";
+		say "     By luck, the next downs are either intercepted, or fumbled by the Wolves, and your team eventually switches to offense.";
 		LibidoBoost 20;
-
-to say FootballMatchOffense:
-	say "     You are take your position as a receiver,[if HP of Roman >= 11] as the cheerleaders entice the crowd to cheer for your team,[end if] and wait for your teammates to start the game. You hear Roman shout his orders as the quarterback. It seems he's calling for you to make a sprint down your lane, and grab as much terrain as possible. As soon as the down begins, you start running as fast as you can, while Roman gets ready to throw the ball towards you. The Fourmont Wolves seem to have understood what you were doing, and, like a mirror of the previous phase, the cornerback and the safety are coming for you. You notice the cornerback getting uncomfortably close, in the corner of your vision.";
+	WaitLineBreak;
+	say "     You take your position as a receiver,[if HP of Team Captain Roman >= 11] as the cheerleaders entice the crowd to cheer for your team,[end if] and wait for your teammates to start the game. You hear Roman shout his orders as the quarterback. It seems he's calling for you to make a sprint down your lane, and grab as much terrain as possible. As soon as the down begins, you start running as fast as you can, while Roman gets ready to throw the ball towards you. The Fourmont Wolves seem to have understood what you are doing, and, like a mirror of the previous phase, the cornerback and the safety are coming for you. You notice the cornerback getting uncomfortably close, in the corner of your vision.";
 	let bonus be ( Dexterity of Player minus 10 ) divided by 2;
 	let diceroll be a random number from 1 to 20;
-	say "You roll 1d20([diceroll])[if bonus >= 0]+[end if][bonus] = [special-style-1][diceroll + bonus][roman type] vs [special-style-2]16[roman type] (Dexterity Check):[line break]";
+	say "[line break]You roll 1d20([diceroll])[if bonus >= 0]+[end if][bonus] = [special-style-1][diceroll + bonus][roman type] vs [special-style-2]16[roman type] (Dexterity Check):[line break]";
 	increase diceroll by bonus;
 	[preparing strength roll]
 	let bonus be ( Strength of Player minus 10 ) divided by 2;
 	if diceroll >= 16:
-		say "     You suddenly jump on the side, and feints the cornerback, as he tries to get his hands on you. He fails, and falls on the ground as he misses your tackle. You look up, and see the ball coming your way. You jump and catch it, and turn around to see the safety running towards you, straight in front of you. You brace yourself for the inescapable impact.";
+		say "     You suddenly jump on the side, and feint the cornerback, as he tries to get his hands on you. He fails, and falls on the ground as he misses your tackle. You look up, and see the ball coming your way. You jump and catch it, and turn around to see the safety running towards you, straight in front of you. You brace yourself for the inescapable impact.";
 		increase bonus by 2;
 	else:
 		say "     You try to strafe to the side, but you do not leap fast and far enough, and the Wolfman manages to grab your legs with his arms. His momentum is not enough to drag you down, but he will not let go. You manage to catch the ball barely, only to see the safety charging you. You prepare to endure his charge the best you can.";
 	let diceroll be a random number from 1 to 20;
-	say "You roll 1d20([diceroll])[if bonus >= 0]+[end if][bonus] = [special-style-1][diceroll + bonus][roman type] vs [special-style-2]20[roman type] (Strength Check):[line break]";
+	say "[line break]You roll 1d20([diceroll])[if bonus >= 0]+[end if][bonus] = [special-style-1][diceroll + bonus][roman type] vs [special-style-2]20[roman type] (Strength Check):[line break]";
 	increase diceroll by bonus;
 	if diceroll >= 20:
 		say "     The Fourmont safety and you bump against each other, shoulder pad against shoulder pad. You push forward, and eventually manage to overpower him and repel him on the side. The path is clear for a touchdown! But at the last moment, you feel a furry hand grab the grate of your helmet, stopping you in your tracks. The referees throw their flags and the game is promptly paused. You give the sore loser an angry glare, but the wolf simply shrugs it off. Nonetheless, the fact that you were able to gain this many yards, alongside the 10-yard penalty, puts you in high spirits.";
 		MoraleBoost 20;
 		SanBoost 20;
 	else:
-		say "     The impact makes you fall on the ground with the ball. The safety is almost instantly on you, and you feel his pointy canine dick push into your [if Player is female]pussy[else]ass[end if]. You open the mouth, but the cornerback, who was standing behind you, kneels down, tilts your head up, and buries his own maleness down your [FaceSpeciesName of Player in lower case] throat.";
+		say "     The impact makes you fall on the ground with the ball. The safety is almost instantly on you, and you feel his pointy canine dick push into your [if Player is female]pussy[else]ass[end if]. You open your mouth, but the cornerback, who was standing behind you, kneels down, tilts your head up, and buries his own maleness down your [FaceSpeciesName of Player in lower case] throat.";
 		say "     The two wolves spitroast you, and they do not miss the chance to play with your nipples [if Player is male]and your cock [end if]while you are lying between them and unable to do anything about it. On each other's signal, they force their knots inside of you, and you moan loudly around the one blocking your mouth. The two lupines cum shortly afterwards, and their knots force you to take every single drop of their load inside your body.";
+		CreatureSexAftermath "Player" receives "[if Player is female]Pussy[else]Ass[end if]Fuck" from "Football Wolfman";
+		CreatureSexAftermath "Player" receives "OralCock" from "Football Wolfman";
 		WaitLineBreak;
-		say "     Their lust satiated, they stand there while their knot half-deflates, and pull out. You yelp at the feeling of having the thick knots stretch you once more, and start protesting, as they did not even have the fairness to make you cum too.";
+		say "     Their lust satiated, they stand there while their knots half-deflate, and pull out. You yelp at the feeling of having the thick knots stretch you once more, and start protesting, as they did not even have the fairness to make you cum too.";
 		say "     But the wolves are already jogging away from you on their furry legs. Grunting, you stand up too with the help of your teammates. 'Acting as jerks, as usual,' you can hear one of them lament.";
 		LibidoBoost 50;
 		PlayerEat 5;
 		PlayerDrink 5;
+	WaitLineBreak;
 	say "     After this first down, your team progress little by little, but eventually spends all of its attempts, only to get twenty yards away from the Wolves['] goal.";
-
-to say FootballMatchEnd:
-	say "     As you were about to place yourself for another defense phase, you hear the referee whistling, and announcing the end of the match for today. You look at the clock, and realize that you have been playing for almost one hour and a half. Considering that each play ended in group sex, and the necessary pauses between each, it actually seems like a miracle that you were able to play this much during that period. Both teams walk off the field, under the applause of the spectators (at least those who were not engaged in any sexual activity).";
+	say "     As you are about to place yourself for another defense phase, you hear the referee whistling, and announcing the end of the match for today. You look at the clock, and realize that you have been playing for almost one and a half hours. Considering that each play ended in group sex, and the necessary pauses between each, it actually seems like a miracle that you were able to play this much during that period. Both teams walk off the field, under the applause of the spectators (at least those who are not engaged in any sexual activity).";
+	WaitLineBreak;
 	say "     'Good job, boys,' Roman congratulates the team. 'We'll get them next time, for sure. Take some rest, have some fun with the fans, and see you for the next match.'";
 	if carried of football pads is 0:
 		say "     You see some of the other players leaving with their football pads still on them. 'I know. Since the campus is not quite safe, and the city even less, I allow the boys to take their gear with them if they want,' Roman replies, when asked. 'Of course, it applies for you, too. Keep these pads, you never know what kind of sick bastard you could meet out there.'";

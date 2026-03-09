@@ -65,14 +65,14 @@ to setending ( Ending - text ) silently: [suppresses the debug output]
 	setending ending silence state is 1;
 
 to setending ( Ending - text ) silence state is ( Silence - a number ): [sets the ending ID by its name entry for later use]
-	let found be 0;
+	let found be false;
 	repeat with y running from 1 to number of filled rows in Table of GameEndings:
 		choose row y in Table of GameEndings;
 		if priority entry > 0 and Name entry exactly matches the text Ending, case insensitively:
-			now found is 1;
+			now found is true;
 			now EndingID is y;
 			break;
-	if found is 0 and Silence is 0:
+	if found is false and Silence is 0:
 		say "ERROR - Ending '[Ending]' not found. (setending)[line break]";
 	else if debug is at level 6:
 		say "DEBUG: Current [']ending['] set to: [EndingID] = [name entry][line break]";

@@ -401,7 +401,7 @@ to NumberVariableSave:
 		-- "centaurmate": now NumberVarValue entry is centaurmate;
 		-- "CenterVisits": now NumberVarValue entry is CenterVisits;
 		-- "centrallib": now NumberVarValue entry is centrallib;
-		-- "cerberusarousal": now NumberVarValue entry is cerberusarousal;
+		[-- "cerberusarousal": now NumberVarValue entry is cerberusarousal;]
 		-- "cerbmaulcount": now NumberVarValue entry is cerbmaulcount;
 		[-- "cfgmode": now NumberVarValue entry is cfgmode;]
 		-- "charcounter": now NumberVarValue entry is charcounter;
@@ -2587,8 +2587,8 @@ to VariableNumberLoad:
 					if CenterVisits is not NumberVarValue entry, now CenterVisits is NumberVarValue entry;
 				-- "centrallib":
 					if centrallib is not NumberVarValue entry, now centrallib is NumberVarValue entry;
-				-- "cerberusarousal":
-					if cerberusarousal is not NumberVarValue entry, now cerberusarousal is NumberVarValue entry;
+				[-- "cerberusarousal":
+					if cerberusarousal is not NumberVarValue entry, now cerberusarousal is NumberVarValue entry;]
 				-- "cerbmaulcount":
 					if cerbmaulcount is not NumberVarValue entry, now cerbmaulcount is NumberVarValue entry;
 				[-- "cfgmode":

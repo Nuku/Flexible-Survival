@@ -1978,8 +1978,8 @@ title	icon(figure name)	artist	backgroundcolor	formatrule
 "Richard_satyr_hard"	Figure of Richard_satyr_hard_icon	"SteppeCrow"	g-White	"normal"
 "Richard_satyr_soft"	Figure of Richard_satyr_soft_icon	"SteppeCrow"	g-White	"normal"
 "Rod"	Figure of Rod_icon	"Ticl"	g-black	"normal"
-"Roman"	Figure of Roman_clothed_icon	"SteppeCrow"	g-White	"normal"
-"Roman"	Figure of Roman_naked_icon	"SteppeCrow"	g-White	"normal"
+"Roman_clothed"	Figure of Roman_clothed_icon	"SteppeCrow"	g-White	"normal"
+"Roman_naked"	Figure of Roman_naked_icon	"SteppeCrow"	g-White	"normal"
 "Ronda"	Figure of Ronda_icon	"Ticl"	g-black	"normal"
 "RondaSR"	Figure of RondaSR_icon	"Uniformvixen"	g-black	"normal"
 "Ruby_naked"	Figure of Ruby_naked_icon	"Watsup"	g-white	"normal"
@@ -3132,8 +3132,8 @@ to artistbanmenu: [more compact version]
 	let artistlist be {"Anonymous", "Anyare", "Anymouse1968", "Aosuka", "Astro", "AugurMew", "Banni", "BeaverTyan", "Bix707", "Bludwing", "Boo3", "Brun69", "BushyCat", "Buzzybub", "Caltroplay", "Candy", "canned", "CastBound", "Catmonkshiro", "Cirrusthecloud", "Conchi", "ConnyChiwa", "Cooper", "Corbee", "CrashBurnDraw", "Damdidoo", "Darian821", "dbd", "Demon-Man", "dhstein", "Dolphpup", "DragonFlayer", "Dragonpunk", "Eevachu", "EmieChii", "Enaya-TheWhiteWolfen", "executaball", "Familliar", "FaroreNightclaw", "Feralise", "Furball", "FsMaverick", "Geir", "Genelightfoot", "Gherod", "Goncalo", "HBruton", "Hioshiru", "Hufnaar", "Inkydemon", "Jahi", "JaxxBlackFox", "Kadel", "Kattzie", "Keitaro87", "Kien-Biu", "Kikeri-arts", "Kupo Klein", "KV1NN4", "Laylo", "lionsilverwolf", "LocksTO", "Luneth", "Lyttathebug", "MadTurtle", "Moirah", "MoT", "Nokturnalkittie", "Obieblu", "Otterbits", "o-kemono", "Padunk", "Purplepardus", "Rastear", "Reaper3d", "RedCoatCat", "Redragon", "Rocketman", "Rosali", "Rukis", "SandySchreiber", "Seija", "Sharei", "SineAlas", "SonikkuDashu", "Soryane", "SparklePens", "SteppeCrow", "Strype", "Sususmiles", "Sokan", "Ticl", "The_Negative", "TheRedAngel", "TheWhiteWolfen", "TylerAz", "Uniformvixen", "Unknown", "ValdericBlackstag", "Valen", "Vashaa", "Visage48", "Wahn", "Watsup", "Waxraven/WXRVN", "Wemt", "Wolfram Rolf", "Xenotropos", "Xilrayne", "Yora", "Zealot"};
 	now calcnumber is -1;
 	let countnumber be 1;
-	let abmexit be 0;
-	while abmexit is 0:
+	let abmexit be false;
+	while abmexit is false:
 		say "[bold type]Artists:[roman type][line break]";
 		while countnumber <= number of entries in artistlist:
 			linkfind "[countnumber]";
@@ -3153,7 +3153,7 @@ to artistbanmenu: [more compact version]
 				say "Invalid Entry. Pick from 0 to [number of entries in artistlist].";
 		LineBreak;
 		if calcnumber is 0:
-			now abmexit is 1;
+			now abmexit is true;
 		else:
 			artistbanswitch entry calcnumber of artistList;
 

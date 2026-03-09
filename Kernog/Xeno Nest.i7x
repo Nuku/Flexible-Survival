@@ -159,9 +159,9 @@ to xenoNestBoundState:
 	psycheeval;
 	libidoeval;
 	now lustatt is Libido of Player;
-	let Trixieexit be 0;
+	let Trixieexit be false;
 	now boundsegment is 4;
-	while Trixieexit is 0:
+	while Trixieexit is false:
 		now boundstate is true;
 		now obliging is true;
 		checkboundrecover;
@@ -180,7 +180,7 @@ to xenoNestBoundState:
 			now BodyName of Player is "XenoNestHost";
 			now humanity of Player is 0;
 			end the story saying "Kept prisoner in the xeno nest, you are constantly milked of your sexual fluids, while welcoming new eggs in your body and birthing new creatures. You feel, rather than see, new people being added one-by-one to the nursery, and the nest slowly grows, ready to propagate its strain of mutation throughout the rest of the world.";
-			now Trixieexit is 1;
+			now Trixieexit is true;
 		else: [Section of actions possible during the bind.]
 			now enduring is false;
 			say "     You are solidly encased in one of the flesh walls of the alien nest. Organic material covers your arms and your legs, and you are only able to flex your body, as a number of drone-like creatures are attached to your body, each of them linked to the main structure with thick tubes. [if Player is male]An octopus-shaped creature is wrapped around your groin, sucking and massaging your [Cock of Player] cock[smn], and tugging and squeezing your [Ball Size Adjective of Player] [Balls], while a straw-like probe is buried in your cock-slit[smn], awaiting to drink your cum. [end if]Another crab-like drone is wrapped around your crotch. [if Player is female]It is busy pistoning thick tentacle-shaped organs inside each of your lower orifices, while its tiny mouth sucks and plays with your clit. [else if anallevel is 3]It is busy pistoning a thick tentacle-shaped organ inside your ass, drilling all the way up to your stomach then back. [end if][if Player is purefemale and wslevel is 3]There is even a small tendril wiggling and twisting inside your urethra. [end if][if Nipple Count of Player > 0 and Breast Size of Player > 0]Your breasts are trapped under a fleshy breast-plate, which constantly squeezes warm milk into ever-growing, individual reservoirs. [end if]An organic mask blocks your lower face. A thick tentacle extends from it, invading your throat and straining your jaw, air given to you through small slits at nose level.";
@@ -188,7 +188,7 @@ to xenoNestBoundState:
 			say "[bold type]1[roman type] - [link]Struggle[as]1[end link][line break]";
 			say "[bold type]2[roman type] - [link][if obliging is true]Oblige[else]Abide[end if][as]2[end link][line break]";
 			say "[bold type]3[roman type] - [link][if boundrecover is false]Endure[else]Recover[end if][as]3[end link][line break]";
-			say "Sanity: [humanity of Player]/100  Lust: [lustatt]/100  Struggle: [xenoNestBoundStruggleBar][line break]";
+			say "Sanity: [humanity of Player]/100  Lust: [lustatt]/100  Struggle: [close bracket]-[if struggleatt > 2]X[else]-[end if][if struggleatt > 1]X[else]-[end if][if struggleatt > 0]X[else]-[end if][bracket][line break]";
 			say "> [run paragraph on]";
 			let k be 0;
 			now keychar is "INVALID";
@@ -214,7 +214,7 @@ to xenoNestBoundState:
 					say "     The environment around you is eerily silent. You realize that you were brought in a recently built part of the nest, and that you are right next the exit, with no guards or traps in sight. You spot your bag and your clothes, put aside in a corner. After recovering your possessions, you run away as fast as your state allows you.";
 					if Libido of Player >= 75, now Libido of Player is 74;
 					cleanboundmemory;
-					now Trixieexit is 1;
+					now Trixieexit is true;
 			else if (obliging is true and (keychar is "o" or keychar in lower case matches the text "oblige")) or (obliging is false and (keychar is "a" or keychar in lower case matches the text "abide")) or keychar is "2": [player picked oblige/abide - currently no custom text for each!]
 				say "     You [one of]grind your hips as much as your encased state allows you, and let the drones work your [Body Size Adjective of Player] body, a debilitated smile on your face[or]bite your lower lip as you hump the drones molesting your body, trying to get closer to your climax[at random].";
 				if boundrecover is false, xenoNestBoundSanityPassive;
@@ -264,8 +264,5 @@ to xenoNestBoundSanityOrgasm: [Causes sanity to sharply plummet upon orgasm.]
 	else:
 		now struggleatt is 0;
 	decrease humanity of Player by (10 + psycheadjust) / endureadj;
-
-to say xenoNestBoundStruggleBar: [Displays struggle bar. The amount of struggle turns necessary to escape is always equal to the bound segment.]
-	say "[close bracket]-[if struggleatt > 2]X[else]-[end if][if struggleatt > 1]X[else]-[end if][if struggleatt > 0]X[else]-[end if][bracket]";
 
 Xeno Nest ends here.

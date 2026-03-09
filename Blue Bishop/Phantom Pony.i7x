@@ -182,8 +182,8 @@ to blotbind:
 	psycheeval;
 	libidoeval;
 	now lustatt is Libido of Player;
-	let Trixieexit be 0;
-	while Trixieexit is 0:
+	let Trixieexit be false;
+	while Trixieexit is false:
 		if clearnomore is 0:
 			clear the screen;
 			LineBreak;
@@ -201,7 +201,7 @@ to blotbind:
 			say "     Eventually, you completely lose track of time. From your limited vision through the toy's eyes, it's very apparent that nobody is aware of your ultimate fate, doomed to constant abuse by this tainted suit...";
 			wait for any key;
 			now humanity of Player is 0;
-			now Trixieexit is 1;
+			now Trixieexit is true;
 			trigger ending "Blotted by Inflatable Pony";
 			end the story saying "You are milked perpetually by the toy.";
 		else:
@@ -234,19 +234,13 @@ to blotbind:
 					say "     [if blotintense < 3]Easily[else if blotintense < 5]With relative ease[else if blotintense < 8]Eventually[else]Finally[end if], you manage to wrench yourself free and dismount the possessed toy, [if blotintense < 3]though it quickly regresses to a state of complete inanimacy[else if blotintense < 5]gradually cooling down and becoming inanimate once more[else if blotintense < 8]quivering for a moment as it slowly begins to fill the void you left[else if blotintense < 10]the mess of a thing trembling in distress over its now-missing rider[else]the thing practically crawling over to be one with you once more, forcing you to retreat even further[end if].";
 					say "     You clean yourself off and prepare to go about your business once more. [if blotintense > 5]It's likely best that you leave the vinyl object alone until it 'cools down' a bit[else]The vinyl object seems relatively harmless, for now at least[end if]...";
 					cleanboundmemory;
-					now Trixieexit is 1;
-			else if (obliging is true and (keychar is "o" or keychar in lower case matches the text "oblige")) or (obliging is false and (keychar is "a" or keychar in lower case matches the text "abide")) or keychar is "2":
-				if 1 is 1: [if obliging is true]
-					say "     You continue to [if blotintense < 5]ride the vinyl pony[else]oblige the vinyl pony's influence[end if], [if blotintense < 8][one of]loudly creaking against your weight[or]squeaking against your body as you rub against it[or]motion slicked by your perspiration[at random][else][one of]loudly creaking as it continues to milk you[or]squeaking as it uses your own sexual fluids to lubricate its motion[or]body trembling under its now-powerful influence[at random][end if].";
-					now obliging is true;
-					blotsanitypassive;
-					blotlust;
-					now obliging is false;
-				[else:
-					say "     ABIDE NYI.";
-					LineBreak;
-					blotsanitypassive;
-					increase lustatt by 35 + (lustadjust * 5);] [Not needed, keeping just in case]
+					now Trixieexit is true;
+			else if keychar is "o" or keychar is "2" or keychar in lower case matches the text "oblige":
+				say "     You continue to [if blotintense < 5]ride the vinyl pony[else]oblige the vinyl pony's influence[end if], [if blotintense < 8][one of]loudly creaking against your weight[or]squeaking against your body as you rub against it[or]motion slicked by your perspiration[at random][else][one of]loudly creaking as it continues to milk you[or]squeaking as it uses your own sexual fluids to lubricate its motion[or]body trembling under its now-powerful influence[at random][end if].";
+				now obliging is true;
+				blotsanitypassive;
+				blotlust;
+				now obliging is false;
 				LineBreak;
 				wait for any key;
 			else if (boundrecover is true and (keychar is "r" or keychar in lower case matches the text "recover")) or (boundrecover is false and (keychar is "e" or keychar in lower case matches the text "endure")) or keychar is "3":
@@ -285,7 +279,7 @@ to checkblotsegment:
 to blotprogress:
 	if blotintense is 3:
 		if Player is male:
-			say "     You begin to find it somewhat difficult to pull your limbs free of the inflatable pony, sticking to its surface rather firmly. Moreover, you feel a warm, latex-like substance encase your dick[smn], [if CockName of Player is not listed in infections of InternalCockList]your [Ball Size Adjective of Player] [Balls], and coat[else]coating[end if] [if Player is female]your cunt[sfn] and ass[else]your ass[end if][if Player is female or anallevel > 1]. It doesn't seem compelled to penetrate you just yet, though the undulating material certainly drives your need further[end if].";
+			say "     You begin to find it somewhat difficult to pull your limbs free of the inflatable pony, sticking to its surface rather firmly. Moreover, you feel a warm, latex-like substance encase your dick[smn], [if CockName of Player is not listed in infections of InternalCockList]your [Ball Size Adjective of Player] [Balls], and coat[else]coating[end if] your[if Player is female] cunt[sfn] and[end if] ass[if Player is female or anallevel > 1]. It doesn't seem compelled to penetrate you just yet, though the undulating material certainly drives your need further[end if].";
 		else:
 			say "     You begin to find it somewhat difficult to pull your limbs free of the inflatable pony, sticking to its surface rather firmly. Moreover, you feel a warm, latex-like substance coat your cunt[sfn] and ass. It doesn't seem compelled to penetrate you just yet, though the undulating material certainly drives your need further.";
 		say "     By the looks of things, this peculiar toy is only just getting started. Should you persist, things are clearly going to get a lot worse...[paragraph break]";
@@ -327,24 +321,24 @@ to say blotbinddesc:
 to blotbindorgasm:
 	if blotintense < 3:
 		if Player is male:
-			say "     Finally overtaken by bliss, your cock pumps your [Cum Load Size of Player] load into the toy[if Cock Count of Player > 2], its brothers staining its hind legs[else if Cock Count of Player is 2], its brother staining its hind legs[end if]. [if Ball Size of Player > 5]Briefly bulging to contain your impressive release, it seems to recede and acclimate to the torrent[else]Eagerly, it seems to consume your release, motion further slicked by it[end if]. Trembling subtly in the wake of this, it seems to feed off your [if Player is male]cum[else]ecstasy[end if], [if blotintense < 2]gradually changing[else]close to changing[end if] as you're compelled to continue riding it.";
+			say "     Finally overtaken by bliss, your cock pumps your [Cum Load Size of Player] load into the toy[if Cock Count of Player > 2], its brothers staining its hind legs[else if Cock Count of Player is 2], its brother staining its hind legs[end if]. [if Ball Size of Player > 5]Briefly bulging to contain your impressive release, it seems to recede and acclimate to the torrent[else]Eagerly, it seems to consume your release, motion further slicked by it[end if]. Trembling subtly in the wake of this, it seems to feed off your cum, [if blotintense < 2]gradually[else]close to[end if] changing as you're compelled to continue riding it.";
 		else:
-			say "     Finally overtaken by bliss, your cunt[sfn] ache[sfv] against the toy, staining it with your juices. Trembling subtly in the wake of this, it seems to feed off your [if Player is male]cum[else]ecstasy[end if], [if blotintense < 2]gradually changing[else]close to changing[end if] as you're compelled to continue riding it.";
+			say "     Finally overtaken by bliss, your cunt[sfn] ache[sfv] against the toy, staining it with your juices. Trembling subtly in the wake of this, it seems to feed off your ecstasy, [if blotintense < 2]gradually[else]close to[end if] changing as you're compelled to continue riding it.";
 	else if blotintense < 5:
 		if Player is male:
-			say "     Finally overtaken by bliss, your cock[smn] pump[smv] your [Cum Load Size of Player] load into the toy, engulfing vinyl milking it for as long as it can. [if Ball Size of Player > 5]Briefly bulging to contain your impressive release, it seems to recede and acclimate to the torrent[else]Eagerly, it seems to consume your release, motion further slicked by it[end if]. Trembling further in the wake of this, it's further empowered by your [if Player is male]cum[else]ecstasy[end if], [if blotintense < 4]gradually changing[else]close to changing[end if] as you're driven to continue riding it.";
+			say "     Finally overtaken by bliss, your cock[smn] pump[smv] your [Cum Load Size of Player] load into the toy, engulfing vinyl milking it for as long as it can. [if Ball Size of Player > 5]Briefly bulging to contain your impressive release, it seems to recede and acclimate to the torrent[else]Eagerly, it seems to consume your release, motion further slicked by it[end if]. Trembling further in the wake of this, it's further empowered by your cum, [if blotintense < 4]gradually[else]close to[end if] changing as you're driven to continue riding it.";
 		else:
-			say "     Finally overtaken by bliss, your cunt[sfn] ache[sfv] against the toy, engulfing vinyl prolonging your bliss for as long as it can. Trembling further in the wake of this, it's further empowered by your [if Player is male]cum[else]ecstasy[end if], [if blotintense < 4]gradually changing[else]close to changing[end if] as you're driven to continue riding it.";
+			say "     Finally overtaken by bliss, your cunt[sfn] ache[sfv] against the toy, engulfing vinyl prolonging your bliss for as long as it can. Trembling further in the wake of this, it's further empowered by your ecstasy, [if blotintense < 4]gradually[else]close to[end if] changing as you're driven to continue riding it.";
 	else if blotintense < 8:
 		if Player is male:
-			say "     Finally overtaken by bliss, your cock[smn] pump[smv] your [Cum Load Size of Player] load into the toy, engulfing vinyl milking it for as long as it can[if Player is female and anallevel > 1] while pounding your holes[else if Player is female] while pounding your hole[sfn][else if anallevel > 1] while pounding your hole[end if]. [if Ball Size of Player > 5]Briefly bulging to contain your impressive release, it seems to revel in the torrential flood[else]Eagerly, it seems to consume your release, motion further slicked by it[end if]. Groaning under you in the wake of this, it's further empowered by your [if Player is male]cum[else]ecstasy[end if], [if blotintense < 7]gradually changing[else]close to changing[end if] as you're forced to continue riding it...";
+			say "     Finally overtaken by bliss, your cock[smn] pump[smv] your [Cum Load Size of Player] load into the toy, engulfing vinyl milking it for as long as it can[if Player is female and anallevel > 1] while pounding your holes[else if Player is female] while pounding your hole[sfn][else if anallevel > 1] while pounding your hole[end if]. [if Ball Size of Player > 5]Briefly bulging to contain your impressive release, it seems to revel in the torrential flood[else]Eagerly, it seems to consume your release, motion further slicked by it[end if]. Groaning under you in the wake of this, it's further empowered by your cum, [if blotintense < 7]gradually[else]close to[end if] changing as you're forced to continue riding it...";
 		else:
-			say "     Finally overtaken by bliss, your cunt[sfn] ache[sfv] against the toy, pounding vinyl milking you for as long as it can. Groaning under you in the wake of this, it's further empowered by your [if Player is male]cum[else]ecstasy[end if], [if blotintense < 7]gradually changing[else]close to changing[end if] as you're forced to continue riding it...";
+			say "     Finally overtaken by bliss, your cunt[sfn] ache[sfv] against the toy, pounding vinyl milking you for as long as it can. Groaning under you in the wake of this, it's further empowered by your ecstasy, [if blotintense < 7]gradually[else]close to[end if] changing as you're forced to continue riding it...";
 	else if blotintense < 10:
 		if Player is male:
-			say "     Overtaken by bliss, your cock[smn] pump[smv] your [Cum Load Size of Player] load into the toy, engulfing vinyl milking it for as long as it can[if Player is female and anallevel > 1] while pounding your holes[else if Player is female] while pounding your hole[sfn][else if anallevel > 1] while pounding your hole[end if]. [if Ball Size of Player > 5]Very quickly, you feel your hot release flood your maw through the rubbery tube, pumping you full with what excess it's ill-equipped to contain itself[else]Starting to develop an excess of your release, you feel the hot fluid flood your maw through the rubbery tube, pumping you with what it can no longer contain[end if]. Visibly trembling under you, it's even further empowered by your [if Player is male]cum[else]ecstasy[end if], [if blotintense < 9]gradually changing[else]close to changing[end if] as you're forced to continue riding it...";
+			say "     Overtaken by bliss, your cock[smn] pump[smv] your [Cum Load Size of Player] load into the toy, engulfing vinyl milking it for as long as it can[if Player is female and anallevel > 1] while pounding your holes[else if Player is female] while pounding your hole[sfn][else if anallevel > 1] while pounding your hole[end if]. [if Ball Size of Player > 5]Very quickly, you feel your hot release flood your maw through the rubbery tube, pumping you full with what excess it's ill-equipped to contain itself[else]Starting to develop an excess of your release, you feel the hot fluid flood your maw through the rubbery tube, pumping you with what it can no longer contain[end if]. Visibly trembling under you, it's even further empowered by your cum, [if blotintense < 9]gradually[else]close to[end if] changing as you're forced to continue riding it...";
 		else:
-			say "     Overtaken by bliss, your cunt[sfn] ache[sfv] against the toy, pounding vinyl milking you for as long as it can. It seems compelled to make you taste your own honey, flooding your senses through the rubbery tube. Visibly trembling under you, it's even further empowered by your [if Player is male]cum[else]ecstasy[end if], [if blotintense < 9]gradually changing[else]close to changing[end if] as you're forced to continue riding it...";
+			say "     Overtaken by bliss, your cunt[sfn] ache[sfv] against the toy, pounding vinyl milking you for as long as it can. It seems compelled to make you taste your own honey, flooding your senses through the rubbery tube. Visibly trembling under you, it's even further empowered by your ecstasy, [if blotintense < 9]gradually[else]close to[end if] changing as you're forced to continue riding it...";
 	else:
 		if Player is male:
 			say "     Sent crashing into bliss, your cock[smn] pump[smv] your [Cum Load Size of Player] load into your prison, vinyl material milking it for as long as it can[if Player is female and anallevel > 1] while pounding your holes[else if Player is female] while pounding your hole[sfn][else if anallevel > 1] while pounding your hole[end if]. [if Ball Size of Player > 5]Body awash in your hot release, you very quickly feel it flood your maw through the rubbery tube, pumping its occupant with the excess[else]Warmth of your hot release awash against you, you feel it gradually flow into your maw through the rubbery tube, pumping its occupant with the slight excess[end if]. Barely seeming to respond to your ecstasy, it's clear the thing has reached the apex of its purpose, seemingly more than happy to continue abusing its encased prisoner.";
@@ -430,7 +424,7 @@ This is the Blotted by Inflatable Pony rule:
 	if ending "Blotted by Inflatable Pony" is triggered:
 		say "     You're eventually discovered by a rescue team and - albeit reluctantly - brought back for study. Between the distracting sounds of your moans and panting, you gather from the scientists that the toy itself is once again completely harmless, though it's now connected to you in such a way that removing it will most certainly kill you.";
 		say "     When it's clear there's nothing that can be done for you, you're eventually shipped from place to place, until the sting of your fate subsides in the consciousness of those who have been caring for you. Eventually, some seedy types manage to buy you off and cart you to a brothel that specializes in your 'type'.";
-		say "     Apparently, the pony is still 'rideable'[if Player is male and anallevel < 3 and Player is not female], especially with your cock[smn] exposed, like [ittheym] [ismv][end if]. Customers from far and wide come to make use of you, now subject to the whims of the pony and these complete strangers, who you can only barely glimpse at through your prison's eyes.";
+		say "     Apparently, the pony is still 'rideable'[if Player is puremale and anallevel < 3], especially with your cock[smn] exposed, like [ittheym] [ismv][end if]. Customers from far and wide come to make use of you, now subject to the whims of the pony and these complete strangers, who you can only barely glimpse at through your prison's eyes.";
 		say "     It's clear the pony has some sort of intelligence to it, as it does eventually ease up to make the task of being perpetually milked not completely banal over time, and it does seem to shake things up with you on occasion by varying the stimulation or coming up with different implements or just doing something peculiar. Ultimately, though, it seems content subjecting you to this eternal fate, and over time it manages to convert you to its way of thinking...";
 		the Player is imprisoned;
 

@@ -57,10 +57,10 @@ to say lizgirl defeat:
 		say "     [if lizgirlangry is 0]She looks up at you mournfully. 'Oh the things I could've done with you...' she says softly before collapsing[else]Looking at you one last time, she sheds a tear. 'Such a wonderful fighter. How can such a flawed creature be so grand?' before collapsing on the ground[end if].";
 	else:
 		say "     [if lizgirlmarked is 1]'Did you not want this? Was the canvas too flawed?' she murmurs before collapsing on the ground[else]With a whine she says, 'I only wanted what was best for you, now another artist must finish my work,' before collapsing[end if].";
-	if HP of Ronda is 4:
+	if HP of Ronda Mallrat is 4:
 		say "     Remembering that the lizard girl has part of the cure for Ronda, you run your hands over her body and slip a finger into her wet pussy. You start to rub and finger her cunt, making her moan and squirm in pleasure. She grips your shoulders firmly and bucks her hips as you pump a pair of fingers into her again and again. As her excitement builds and her vaginal walls quiver around your digits, she moans and bucks her hips almost as if thrusting before finally climaxing loudly. She sags against you, panting for breath after her orgasm. Still holding her up with one arm, you place a small vial under her pussy to gather the leaking juices, a little surprised to find them a thick and creamy white instead of clear juices. Sealing up the unusual sample, you resist the urge to lick your fingers clean and instead wipe them off after taking a moment to enjoy her thick, musky scent.";
 		ItemGain lizard juice by 1;
-		now HP of ronda is 5;
+		now HP of Ronda Mallrat is 5;
 	else if Libido of Player > 33:
 		if Player is male:
 			say "     You look down upon the defeated lizard girl's body, your arousal growing as you decide to sate your lust on this creature. You stride over to her[if Player is not naked] and undress[end if], your cock growing erect with thoughts of what you're about to do to her. You kneel down beside her and push her onto her stomach, causing her to groan. You position yourself behind her, taking hold of her hips with one hand while the other lifts up her reptilian tail to reveal her wet folds. You grin and lick your lips, pulling her up to meet you as you press the tip of your [Cock of Player] length against her sex and slide it in. You moan out in pleasure, her reptilian cunt instinctively gripping and pulling on your shaft, urging you to fuck her. Not wasting any time, you begin to buck into her tight depths, both arms wrapped around her tail for support. The lizard girl beneath you gasps and groans at this treatment, her tail wrapping around you as much as it can, trying to pull you closer to her.";
@@ -315,7 +315,7 @@ When Play begins:
 
 to say liz impreg:
 	if lizgirlimpreg is 1:
-		say "With a gasp you feel [if Player is not male]something you thought long lost to you, a male orgasm, but it feels odd, as it should since you have no[else]a male orgasm, but it feels odd, you cannot see any of your seed leaking out of your[end if] member, but it feels like you are still ejaculating. A growing fullness in your feminine depths reveals the true purpose of the lizard girl's earlier actions, she has reworked your reproductive system quite amazingly. As you look down in wonder, the glow of release still holding you immobile, you notice a small trail of cum leaking from your pussy lips.";
+		say "With a gasp you feel [if Player is not male]something you thought long lost to you, a male orgasm, but it feels odd - as it should since you have no member -[else]a male orgasm, but it feels odd. You cannot see any of your seed leaking out of your member,[end if] but it feels like you are still ejaculating. A growing fullness in your feminine depths reveals the true purpose of the lizard girl's earlier actions, she has reworked your reproductive system quite amazingly. As you look down in wonder, the glow of release still holding you immobile, you notice a small trail of cum leaking from your pussy lips.";
 		CreatureSexAftermath "Player" receives "PussyFuck" from "Lizard Girl";
 
 to say toggle heat flag:

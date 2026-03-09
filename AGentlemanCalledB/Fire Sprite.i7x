@@ -240,7 +240,7 @@ When Play begins:
 	now desc entry is "[FireSpritedesc]"; [ Description of the creature when you encounter it. ]
 	now face entry is "mostly human with slim features and pointed elven ears. You have long locks of orange and red hair that seem to shimmer and flicker like fire"; [ Face description, format as "Your face is [Face of Player]." ]
 	now body entry is "that of a small, energetic sprite"; [ Body description, format as "Your body is [Body of Player]." ]
-	now skin entry is "warm, smooth orange flesh. Occasionally small wisps of flame flare from your exposed"; [ Skin. Format as "Looking at yourself, your body is covered in [Skin of Player] skin." ]
+	now skin entry is "[if looknow is true]warm, smooth orange flesh. Occasionally small wisps of flame flare from your exposed[else]warm, smooth orange[end if]"; [ Skin. Format as "Looking at yourself, your body is covered in [Skin of Player] skin." ]
 	now tail entry is ""; [ Ass/Tail. Write as a full sentence (with period) or leave blank for none. ]
 	now cock entry is "glowing orange human-like"; [ Cock. Format as "You have a 'size' [Cock of Player] cock." ]
 	now face change entry is "slim elfin features overtake it, framed by long orange and red hair"; [ Face TF text. Format as "Your face tingles as [face change entry]." ]
@@ -395,17 +395,17 @@ name	combat (rule)	preattack (rule)	postattack (rule)	altattack1 (rule)	alt1chan
 "FireSprite"	retaliation rule	--	--	FireBallBarrage rule	15	--	--	--	--	--
 
 this is the FireBallBarrage rule:		[Multiple low damage hits]
-	let N be 0;
+	let N be false;
 	let M be 1;
-	let P be 0;
+	let P be false;
 	say "The sprite winds up, preparing to launch a barrage of fireballs!";
-	while N is 0:
+	while N is false:
 		choose row MonsterID from the Table of Random Critters;
 		let dam be ( wdam entry * a random number between ( 45 - ( peppereyes * 4 ) ) and 85 ) / 100;
 		if HardMode is true and a random chance of 1 in ( 10 + peppereyes ) succeeds:
 			now dam is (dam * 150) divided by 100;
 			say "The enemy finds a particular vulnerability in your defense - [italic type]Critical Hit![roman type][line break]";
-		say "The [if P is 0]first fireball strikes you [one of]in the shoulder[or]squarely in the chest[or]in the leg[at random], causing a searing pain as you try and shake the embers off[else]sprite winds up and launches another fireball[end if]! You take [special-style-2][dam][roman type] damage!";
+		say "The [if P is false]first fireball strikes you [one of]in the shoulder[or]squarely in the chest[or]in the leg[at random], causing a searing pain as you try and shake the embers off[else]sprite winds up and launches another fireball[end if]! You take [special-style-2][dam][roman type] damage!";
 		now damagein is dam;
 		say "[normalabsorbancy]";
 		if absorb > dam:
@@ -417,11 +417,11 @@ this is the FireBallBarrage rule:		[Multiple low damage hits]
 		if M < 5 and a random chance of 1 in M succeeds:
 			increase M by 1;
 		else:
-			now N is 1;
-		now P is 1;
+			now N is true;
+		now P is true;
 		follow the player injury rule;
 		say "You are [descr].";
-		if N is 0, AttemptToWait;
+		if N is false, AttemptToWait;
 
 Section 4 - Glowing Ember
 

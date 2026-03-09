@@ -1,11 +1,16 @@
 Version 1 of Robin by Wahn begins here.
 [ Version 1.0 - First Event                   ]
 
+Table of GameCharacterIDs (continued)
+object	name
+Robin	"Robin"
+
 Robin is a man.
 OralVirgin of Robin is false.
 Virgin of Robin is true.
 AnalVirgin of Robin is false.
 PenileVirgin of Robin is false.
+[MainInfection of Robin is "Easter Bunny".]
 
 Table of GameEventIDs (continued)
 Object	Name

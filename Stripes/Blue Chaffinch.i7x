@@ -132,11 +132,11 @@ to say bluechaffcaught:
 	if Player consents:
 		LineBreak;
 		say "     Moving your [bodytype of Player] body over his, you nip at his neck and grope his ass. 'Maybe. I might want a [']snack['] later,' you tease, pushing a few fingers into his creamy hole. He blushes and nods, his hips trembling. 'A-alright then... you've caught me, you sexy hunter,' he says with nervous excitement. [if Ball Size of Player > 4]After letting him drain, you[else]You[end if] help your new prize up and lead him back to the library to be your new caged songbird slut.";
-		AttemptToWait;
 		now battleground is "void";
 		increase score by 20;
 		move Icarus to Garden View;
 		now HP of Icarus is 1;
+		AttemptToWait;
 		move player to Garden View;
 		now icarus_lastpred is 1;
 	else:
@@ -198,11 +198,11 @@ to say bluechaffpounced:
 	if Player consents:
 		LineBreak;
 		say "     Moving your [bodytype of Player] body over his, you nip at his neck and grope his ass. 'Maybe. I might want a [']scratching post['] later,' you tease, pushing a few fingers into his creamy hole. He blushes and nods, his hips trembling. 'A-alright then... you've caught me, you sexy cat,' he says with nervous excitement. [if Ball Size of Player > 4]After letting him drain, you[else]You[end if] help your new prize up and lead him back to the library to be your new caged songbird slut.";
-		AttemptToWait;
 		now battleground is "void";
 		increase score by 20;
 		move Icarus to Garden View;
 		now HP of Icarus is 1;
+		AttemptToWait;
 		move player to Garden View;
 		now icarus_lastpred is 2;
 	else:

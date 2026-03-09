@@ -374,7 +374,7 @@ Name(text)	Type(text)
 "centaurmate"	"number"
 "CenterVisits"	"number"
 "centrallib"	"number"
-"cerberusarousal"	"number"
+["cerberusarousal"	"number"]
 "cerbmaulcount"	"number"
 ["cfgmode"	"number"]
 "charcounter"	"number"

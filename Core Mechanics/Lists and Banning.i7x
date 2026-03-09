@@ -144,8 +144,8 @@ to new ban menu:
 	let FlagList be {"Body Horror", "Females", "Feral", "Furry", "Hellspawn", "Hermaphrodite", "Humorous", "Males", "Transgender"};
 	let TagList be {"Cockvore", "Cuck", "Incest", "Mindcontrol", "Noncon", "Vore"};
 	let countnumber be 1;
-	let nbmexit be 0;
-	while nbmexit is 0:
+	let nbmexit be false;
+	while nbmexit is false:
 		say "[bold type]Select which categories you want banned/warded:[roman type][line break]";
 		say "[bold type]Warding or banning a category will permanently disable any associated events. Warding a category will mean you can only find a matching monster by hunting for them, while banning removes them from the game entirely.[roman type][line break]";
 		say "[bold type](Banning/warding is sure to choke off MANY threads of the story and quests as well. Use with caution. You have been warned.)[roman type][line break]";
@@ -171,7 +171,7 @@ to new ban menu:
 				say "Invalid Entry. Pick from 0 to [countnumber - 1].";
 		LineBreak;
 		if calcnumber is 0:
-			now nbmexit is 1;
+			now nbmexit is true;
 		else if calcnumber <= number of entries in FlagList:
 			banchange entry calcnumber of FlagList;
 		else:

@@ -100,14 +100,14 @@ To Vialchance (x - a text):
 				if vialcollectible > 75, now vialcollectible is 75;
 			else:
 				if vialcollectible > 70, now vialcollectible is 70;
-			let vcoll be 0;
+			let vcoll be false;
 			if a random number between 1 and 100 <= vialcollectible:
-				now vcoll is 1;
+				now vcoll is true;
 			else if "Expert Researcher" is listed in feats of Player and a random number between 1 and 100 <= vialcollectible:
-				now vcoll is 1;
-			if vcoll is 1:
+				now vcoll is true;
+			if vcoll is true:
 				VialGain x by 1;
-				now vcoll is 0;
+				now vcoll is false;
 	else:
 		say "ERROR! '[x]' is not a valid infection to gain infection vials for. Please report this message and the context you saw it in on the FS Discord!";
 
@@ -157,10 +157,10 @@ carry out vialing:
 	if debug is at level 5:
 		say "DEBUG: [NamedVial][line break]";
 		say "DEBUG: [NamedVialCap] in title case[line break]";
-	let found be 0;
+	let found be false;
 	repeat through Table of OwnedVials:
 		if Name entry exactly matches the text NamedVialCap, case insensitively:
-			now found is 1;
+			now found is true;
 			say "What harm could a terribly infectious bio-nanite be? Down the hatch!";
 			VialLoss name entry by 1;
 			repeat through Table of Random Critters:
@@ -175,7 +175,7 @@ carry out vialing:
 					now researchbypass is 0;
 					break;
 			break;
-	if found is 0:
+	if found is false:
 		say "You don't seem to have any such vial.";
 
 to deletevial (x - text):	[removes 1 vial of a given type from the player's inventory]
