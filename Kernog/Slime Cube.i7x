@@ -197,8 +197,8 @@ to say slimeCubeVoreScene:
 
 to slimeCubeVore:
 	now lustatt is Libido of Player;
-	let Trixieexit be 0;
-	while Trixieexit is 0:
+	let Trixieexit be false;
+	while Trixieexit is false:
 		if clearnomore is 0:
 			clear the screen;
 			LineBreak;
@@ -221,7 +221,7 @@ to slimeCubeVore:
 		else if enduring is false or a random chance of 2 in 3 succeeds:
 			increase thirst of Player by 1;
 		if humanity of Player < 1:
-			now Trixieexit is 1;
+			now Trixieexit is true;
 			trigger ending "Slime Cube Vore";
 			the Player was ended by "Vore by Slime Cube";
 			end the story saying "You were digested by a slime.";
@@ -231,7 +231,7 @@ to slimeCubeVore:
 			say "[bold type]1[roman type] - [link]Struggle[as]1[end link][line break]";
 			say "[bold type]2[roman type] - [link][if obliging is true]Oblige[else]Abide[end if][as]2[end link][line break]";
 			say "[bold type]3[roman type] - [link][if boundrecover is false]Endure[else]Recover[end if][as]3[end link][line break]";
-			say "Sanity: [humanity of Player]/100  Lust: [lustatt]/100  Hunger: [hunger of Player]  Thirst: [thirst of Player]  Struggle: [maneatingPlantStruggleBar][line break]";
+			say "Sanity: [humanity of Player]/100  Lust: [lustatt]/100  Hunger: [hunger of Player]  Thirst: [thirst of Player]  Struggle: < [bracket][if struggleatt is 0]-----[else if struggleatt is 1]----[bold type]X[roman type][else if struggleatt is 2]---[bold type]XX[roman type][else if struggleatt is 3]--[bold type]XXX[roman type][else]-[bold type]XXXX[roman type][end if][close bracket][line break]";
 			say "> [run paragraph on]";
 			let k be 0;
 			now keychar is "INVALID";
@@ -253,9 +253,9 @@ to slimeCubeVore:
 				else:
 					say "     Your arms eventually escape the confines of the slime. The firmer outer skin of the slime acts against it, and gives you additional leeway to push yourself out. You instinctively run as fast as you can away from the much slower slime.";
 					cleanboundmemory;
-					now Trixieexit is 1;
+					now Trixieexit is true;
 					follow the turnpass rule;
-				if Trixieexit is 0:
+				if Trixieexit is false:
 					wyvhumanityroll; [aka humanity loss]
 					LineBreak;
 					wait for any key;
@@ -283,9 +283,6 @@ to slimeCubeVore:
 				wait for any key;
 			else:
 				say "Invalid action.";
-
-to say maneatingPlantStruggleBar:
-	say "< [bracket][if struggleatt is 0]-----[else if struggleatt is 1]----[bold type]X[roman type][else if struggleatt is 2]---[bold type]XX[roman type][else if struggleatt is 3]--[bold type]XXX[roman type][else]-[bold type]XXXX[roman type][end if][close bracket]";
 
 Section 4 - Endings
 

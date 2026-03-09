@@ -11,7 +11,7 @@ Object	Name
 Overgrown Area	"Overgrown Area"
 
 Overgrown Area is a Room.
-Description of Overgrown Area is "[OvergrownBlockDesc]";
+Description of Overgrown Area is "[OvergrownBlockDesc]".
 
 after looking while player is in Overgrown Area:
 	project the Figure of Map_Beach_11_icon;
@@ -26,12 +26,7 @@ to say OvergrownBlockDesc:
 	else: [day]
 		say "     Tucked away behind the sheds is a vacant area. Looks like at one point, another shed stood here, but was torn down. It's mostly nondescript, though with all the wild, woody bushes and overlong grass, you probably wouldn't be able to see anything if it WAS here. There are several patches of dead grass, spots where it has just withered and formed a dead circle... Weird.";
 
-instead of sniffing the Overgrown Area:
-	if daytimer is night:	[night]
-		say "     The air smells strongly of smoke and brimstone.";
-	else: [day]
-		say "     The area mostly smells of the sea, but there is a faint hint of brimstone in the area.";
-
+Scent of Overgrown Area is "     The [if daytimer is night]air smells strongly of smoke and brimstone[else]area mostly smells of the sea, but there is a faint hint of brimstone in the area[end if].".
 
 beachrape is a truth state that varies. beachrape is usually false.
 houndfromhell is a truth state that Varies. houndfromhell is usually false.
@@ -48,14 +43,13 @@ isHellhound is a truth state that Varies. isHellhound is usually false.
 maleHound is a truth state that Varies. maleHound is usually false.
 hellHoundLevel is a number that varies. hellHoundLevel is usually 0.
 
-
 Table of Game Objects (continued)
 name	desc	weight	object
 "hellhound collar"	"[HCollarDesc]"	1	hellhound collar
 
-hellhound collar is a grab object.
-Usedesc of hellhound collar is "[HCollarUse]".
-It is not temporary.
+to say HCollarDesc:
+	say "     A sturdy leather collar, complete with very solid buckle and an inverted pentagram branded into the material, right where the throat of the wearer would be.";
+	now hellhound collar is equipped;
 
 hellhound collar is a grab object.
 hellhound collar is equipment.
@@ -69,13 +63,8 @@ The effectiveness of hellhound collar is 0.
 The placement of hellhound collar is "neck".
 The descmod of hellhound collar is "A sturdy leather collar is fastened tightly around your neck. Reaching up, you can feel the inverted pentagram branded into the material at your throat. You don't think this hellish mark of ownership will ever come off again.".
 The slot of hellhound collar is "neck".
-
-to say HCollarDesc:
-	say "     A sturdy leather collar, complete with very solid buckle and an inverted pentagram branded into the material, right where the throat of the wearer would be.";
-	now hellhound collar is equipped;
-
-instead of sniffing hellhound collar:
-	say "     The collar smells like leather, and a hint of sulfur too.";
+Usedesc of hellhound collar is "[HCollarUse]".
+Scent of hellhound collar is "The collar smells like leather, and a hint of sulfur too.".
 
 to say HCollarUse:
 	if hellhound collar is equipped:
@@ -97,10 +86,13 @@ to say meetHellhound:
 		say "     It takes a moment for it to notice you, but when it does, it licks its muzzle and then begins to approach. There is something about the strange monster that tells you it isn't the same as the other infected creatures. A whiff of sulfur hits you as it stalks closer.";
 	say "     If you're going to escape you'd best do so now. Shall you escape back south?";
 	if Player consents:
+		LineBreak;
 		say "     Hastily backing away, you slip back amongst the sheds. The fel hound doesn't bother to follow."; [Escape Text.]
+		AttemptToWait;
 		move player to Dirty Sheds;
 	else:
-		say ""; [Hellhound introduction text?]
+		LineBreak;
+		[say "";] [Hellhound introduction text?]
 		say "     As you glance behind at the way you came, a large wall of greenish fire leaps up, making a crackling noise as it sets the grass beneath it alight, even though you can feel no heat. A soft lusty growl drags your attention back to the infernal four-legged beast you are now trapped with.";
 		say "     'Oooh, what have we here? A mortal? How delicious!'"; [Gender detect line Removed]
 		say "     He licks his lips as he regards you, seeming to peer straight into your mind, if not deeper, weighing your thoughts, desires, and lusts. 'You seem like the opportunistic type. I do believe I could offer you something you'd like, a great deal even, for it is something you can obtain no other way!'";
@@ -110,12 +102,12 @@ to say meetHellhound:
 		say "     Shall you accept the Hellhound's dark offer?";
 		if Player consents:
 			remove "Herm Preferred" from feats of Player, if present;
-			if "Male Preferred" is listed in feats of Player or "Always Cocky" is listed in feats of Player:
+			if Player is MalePreferred or ("Always Cocky" is listed in feats of Player and "Always A Pussy" is not listed in feats of Player):
 				now isHellhound is true;
 				now maleHound is True;
 				now hellHoundLevel is 1;
 				Hellhound infect male;
-			else if "Female Preferred" is listed in feats of Player or "Always A Pussy" is listed in feats of Player:
+			else if Player is FemalePreferred or ("Always A Pussy" is listed in feats of Player and "Always Cocky" is not listed in feats of Player):
 				now isHellhound is true;
 				now maleHound is false;
 				now hellHoundLevel is 1;
@@ -169,7 +161,7 @@ to Hellhound infect female:
 	now Skin of Player is "smooth";
 	now Face of Player is "charmingly human";
 	now tail of Player is "";
-	now Cock of Player is "[if looknow is 1]encased in a dirty furred sheath, with dried up seed peeling off, rests your slimy, foul, Hellhound[else]foul, Hellhound[end if]";
+	now Cock of Player is "[if looknow is true]encased in a dirty furred sheath, with dried up seed peeling off, rests your slimy, foul, Hellhound[else]foul, Hellhound[end if]";
 	now Body of Player is "appears perfectly human at first glance";
 	now BodyName of Player is "Hellhound";
 	now FaceName of Player is "Hellhound";
@@ -209,7 +201,7 @@ to Hellhound infect male:
 	now Skin of Player is "smooth";
 	now Face of Player is "charmingly human";
 	now tail of Player is "";
-	now Cock of Player is "[if looknow is 1]encased in a dirty furred sheath, with dried up seed peeling off, rests your slimy, foul, Hellhound[else]foul, Hellhound[end if]";
+	now Cock of Player is "[if looknow is true]encased in a dirty furred sheath, with dried up seed peeling off, rests your slimy, foul, Hellhound[else]foul, Hellhound[end if]";
 	now Body of Player is "appears perfectly human at first glance";
 	now BodyName of Player is "Hellhound";
 	now FaceName of Player is "Hellhound";
@@ -235,6 +227,7 @@ to say returntoHellhound:
 	say "     As you approach the vacant block where you initially encountered the Hellhound, a sick feeling starts to grow in your gut. There is something inside you wrestling with the infernal infection as you approach the scorched line on the ground where the wall of fire had blocked your passage the night before. Lounging in the grass at the center of the clearing are three hellhounds. One is watching you, licking his lips as he waits for you to approach the line burnt in the grass.";
 	say "     Hesitating at the threshold, you get a sense that this is your last chance to turn back. Continue?";
 	if Player consents:
+		LineBreak;
 		if maleHound is true:	[if the Player is male]
 			say "     Stepping over the line causes the one watching to lift its head, a lusty growl escaping its throat as it bounds over. Wagging its tail as it heads towards you, the other two seems to start paying attention, heads coming up to regard you with interest in their eyes. 'Ooh you finally came back! We've been waiting! Yes, we have!'";
 			say "     She rears up onto her hind legs, paws resting on your shoulders as she eagerly licks your face, before grabbing the cloth at your shoulder with a mischievous grin and pulling. The fabric tears easily, coming apart as if it's starting to rot and decay. The other two bitches take this as a signal and soon they to have their fangs and claws buried in your clothing. They shred and destroy it until you're standing naked in the clearing, your twisted and tainted body visible for all three to appreciate.";
@@ -264,13 +257,14 @@ to say returntoHellhound:
 			WaitLineBreak;
 			end the story saying "Your soul is consumed by your hellish lusts.";
 	else:
+		LineBreak;
 		say "     Shuddering, you manage and turn and walk away despite the unholy urge to join the hellhounds in the clearing.";
+		AttemptToWait;
 		move player to Dirty Sheds;
 
-
-to say hellhoundheat:
+[to say hellhoundheat:
 	[Couldn't use this to check in male case, replaces with an every turn prompt.]
-	say "";
+	say "";]
 
 [Below this point is the mechanics to 'remove' the infection nanites.]
 every turn (This is the check Hellhound rule):
@@ -279,7 +273,7 @@ every turn (This is the check Hellhound rule):
 			now CockName of Player is "Hellhound";
 			if maleHound is True:
 				say "     Almost immediately after the infection alters your maleness, the Hellhound's [']gift['] makes your groin throb and shift back, tip dribbling a bit in arousal.";
-				now Cock of Player is "[if looknow is 1]encased in a dirty furred sheath, with dried up seed peeling off, rests your slimy, foul, Hellhound[else]foul, Hellhound[end if]";
+				now Cock of Player is "[if looknow is true]encased in a dirty furred sheath, with dried up seed peeling off, rests your slimy, foul, Hellhound[else]foul, Hellhound[end if]";
 			else:
 				say "     Almost immediately after the infection alters your sex, the Hellhound's [']gift['] makes your groin throb and shift back, spade loose and oozing lubricants.";
 				now Cock of Player is "";
@@ -460,7 +454,6 @@ every turn (This is the check Hellhound rule):
 				now Breast Size of Player is 4;
 		if Libido of Player < 90, now Libido of Player is 90;
 
-
 Table of infection heat (continued)
 infect name	heat cycle	heat duration	trigger text	description text	heat start	heat end	inheat	fheat (truth state)	mpregheat (truth state)	mpregtrigger
 --	--	--	--	--	--	--	--	--	--	--
@@ -470,12 +463,12 @@ When Play begins:
 	now infect Name entry is "Hellhound";
 	now heat cycle entry is 7;
 	now heat duration entry is 7;
-	now trigger text entry is "     You feel pressure build between your legs, then a wet gush.. You immediately lose control of your [if WSLevel is 3]bladder as well, a fetid mix of piss and cum [else]loins as well, a fetid stream of foul cum [end if]running down your legs, as you permanently enter a Hellhound's eternal heat.";
-	now description text entry is "[if Player is not male]your sex is dirty and oozing, peeling, dried up seed coating the outer lips and matting up the coarse dirty fur that sprouts around it[else]the fur of your sheath if musky and dirty, no matter how much you try to clean it. A permanent sign of your infernal taint[end if]";
+	now trigger text entry is "You feel pressure build between your legs, then a wet gush... You immediately lose control of your [if WSLevel is 3]bladder as well, a fetid mix of piss and cum [else]loins as well, a fetid stream of foul cum [end if]running down your legs, as you permanently enter a Hellhound's eternal heat.";
+	now description text entry is "[if Player is not male]your sex is dirty and oozing, peeling, dried up seed coating the outer lips and matting up the coarse dirty fur that sprouts around it[else]the fur of your sheath is musky and dirty, no matter how much you try to clean it. A permanent sign of your infernal taint[end if]";
 	now inheat entry is "[defaultheat]";
 	now fheat entry is true;
 	now mpregheat entry is true;
-	now mpregtrigger entry is "     Your [if Player is male]shaft throbs, tip poking free of your sheath, foul yellow cream oozing from the tip as your balls seem to endlessly churn in an infernal rut your member oozes cum constantly. Your bowels quiver and ache with a foul need, a musky scent laced with pheromones and brimstone seeping from it as your tainted body longs to be bred. These desires war inside you, driving you mad with the urge to bury your cock in someone or something, or to have your bowels[else]bowels quiver and ache with a foul need, a musky scent laced with pheromones and brimstone seeping from it as your tainted body longs to be bred. These infernal desires feel like they might overwhelm you, your tainted body longing to be[end if] bred full of some hellish spawn.";
+	now mpregtrigger entry is "Your [if Player is male]shaft throbs, tip poking free of your sheath, foul yellow cream oozing from the tip as your balls seem to endlessly churn in an infernal rut; your member oozes cum constantly. Your bowels quiver and ache with a foul need, a musky scent laced with pheromones and brimstone seeping from it as your tainted body longs to be bred. These desires war inside you, driving you mad with the urge to bury your cock in someone or something, or to have your bowels[else]bowels quiver and ache with a foul need, a musky scent laced with pheromones and brimstone seeping from it as your tainted body longs to be bred. These infernal desires feel like they might overwhelm you, your tainted body longing to be[end if] bred full of some hellish spawn.";
 
 When Play begins:
 	add "Hellhound" to infections of KnottedCockList;
@@ -483,7 +476,7 @@ When Play begins:
 Section 3 - Return to the Church
 
 churchenter is a number that varies.
-lastchurchattempt is a number that varies. lastchurchattempt is usually 248.
+[lastchurchattempt is a number that varies. lastchurchattempt is usually 248.]
 churchangelfriend is a truth state that varies. churchangelfriend is usually false.
 churchangelprisoner is a truth state that varies. churchangelprisoner is usually false.
 
@@ -509,8 +502,7 @@ instead of going north from the Beach Plaza while hellhoundlevel > 0 and churcha
 		else:
 			say "     Upon entering the private clearing you see the two other hellhounds waiting, an eager grin breaking out on both of their muzzles as they see their favorite bitch return. From behind you suddenly feel a sharp bump in the back that sends you sprawling forwards. 'Well well, looks like our bitch is back, and eager to see us.' You can't help but shiver at his words, your hellhound cunt already dripping as your clothes are roughly torn from your body, exposing you to your hellhound masters once again.";
 			say "     'It's nice to see you again bitch, and this time hopefully you can help us out with that so-called angel that hurt you last time.' As the hellhound speaks the one behind you plants its paws on your shoulders, unceremoniously lining up his messy shaft with your cunt before driving in with a single thrust. 'You see our boss gave us an opportunity to put that bitch in her place, assuming we can get your help of course.'";
-		LineBreak;
-		say "     ([link]Y[as]y[end link]) - Agree to help the hellhound take down the priestess.";
+		Say "     ([link]Y[as]y[end link]) - Agree to help the hellhound take down the priestess.";
 		say "     ([link]N[as]n[end link]) - Refuse to help the hellhound, at least for now...";
 		if Player consents: [Agree to take down the priestess]
 			LineBreak;
@@ -573,14 +565,14 @@ to say hellhoundplan:
 			choose row calcnumber in table of fucking options;
 			say "[title entry]: Attempt to [description entry]?";
 			if Player consents:
-				let nam be title entry;
 				now sextablerun is 1;
-				if (nam is "Charge In"):
-					say "[strength_church_hellhound_route]";
-				else if (nam is "Sneak in Through the Roof"):
-					say "[dexterity_church_hellhound_route]";
-				else if (nam is "Pose as a Soul in Need"):
-					say "[charisma_church_hellhound_route]";
+				if title entry is:
+					-- "Charge In":
+						say "[strength_church_hellhound_route]";
+					-- "Sneak in Through the Roof":
+						say "[dexterity_church_hellhound_route]";
+					-- "Pose as a Soul in Need":
+						say "[charisma_church_hellhound_route]";
 		else if calcnumber is 0:
 			say "     Taking a moment you ask the hellhounds to explain of the plans they had in mind.";
 			say "     The first one seems to be the most simple and relies on you taking the brunt force of the priestess's power while they flank. You'll probably need a good amount of strength to stand up to the priestess's power.";
@@ -591,6 +583,7 @@ to say hellhoundplan:
 			now sextablerun is 1;
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 99 to exit.";
+	wait for any key;
 	clear the screen and hyperlink list;
 
 to say strength_church_hellhound_route:
@@ -635,17 +628,17 @@ to say charisma_church_hellhound_route:
 
 to say church_hellhound_win:
 	say "     The priestess can barely put up a fight without her radiant magic to help her, her muscles straining in vain as you easier hold her down. 'Wait!  Please!' She begs, her eyes darting as the hellhounds circle the two of you like sharks in bloody water. 'You! I can see within you still!  A seed of light! Just please, please... let me go and I can help you.' As the priestess speaks you suddenly begin to question your motives here in the church. Being in direct contact with the celestial being your tainted mind finds some clarity, and maybe some truth to her words. But as quickly as the priestess speaks the leader of the hellhound snarls back, 'Lies! You think you can trick us with your holy deception! We will show you just exactly how much of angel you really are, and soon you will enjoy the pleasure of being under us and our master!' It seems the choice is up to you, will you free the priestess in an attempt to get rid of the hellhound's curse?";
-	WaitLineBreak;
-	say "     ([link]Y[as]y[end link]) - Yes.";
+	Say "     ([link]Y[as]y[end link]) - Yes.";
 	say "     ([link]N[as]n[end link]) - No.";
 	if Player consents:
+		LineBreak;
 		say "     In your moment of clarity you realize how strong the curse the hellhounds have put on you is, and how tainted your mind has become. Your hands release the fallen priestess and in that moment she raises a talon and a bright light fills the room. You pick up the putrid smell of burning fur [if WSLevel is 3]and piss [end if]all around you as the hellhounds cry out in pain. When the last remnants of their being turn to wisps of smoke you can hear them whisper in your ears, 'We will remember this', making you give a final shudder before they are gone completely. With the immediate threat gone the priestess stands up, brushing the dust off her wings and clothes.";
 		say "     'Thank you very much, your change or heart shows that there is hope for you yet.' With the hellhound's protection now gone you suddenly feel yourself weak. Upon realizing your struggle to stand the woman quickly waves a taloned hand and you find the extra weight gone in an instant. 'Apologies, your body is still tainted by the hellhounds. We must get you treated quickly before you are completely consumed! My name is Cassiel by the way, I'll have to go through some of the holy texts to see what I can do, but please speak to me again once you want the process to begin.' And with a smile and a bow she walks to the back of the church, beginning to rummage through the bookshelves and paging through holy text.";
 		now HP of Cassiel is 1;
 		now churchangelfriend is true;
 		move Cassiel to Church Hall;
-		wait for any key;
 	else:
+		LineBreak;
 		say "     Whether or not the priestess is telling the truth you're not gonna pass up a chance to take vengeance back for what she did. As you tighten your grip, her eyes go wide, realizing your decision.";
 		if maleHound is true:
 			say "     The other hellhounds don't waste their time, descending like a murder of crows they tear at her vestments until her body is fully exposed. Her scaled form is a sight to behold, and arguably a sin of its own. Laid out on her back two of the hellhounds pin her arms down while the other grabs her legs. Already your hands reach down to release your dirty hellhound shaft from the confines of your clothes, already out of it's sheath at full mast. The priestess looks with wide eyes as you kneel between her legs, taking your time to line up your cock to her virgin cunt before thrusting inside. A single cry rings through the church, followed by restrained grunts and heavy pants.";
@@ -660,7 +653,7 @@ to say church_hellhound_win:
 
 to say church_hellhound_lose:
 	say "     A sharp pain is the last thing you feel before you pass out. When you wake up you find yourself void of any equipment and the inability to move your arms or legs! Looking around you find your arms spread out and strapped down in a T position with leather belts. Your body has been placed on some sort of vertical cross, though you can't remember seeing anything of the like when you looked around the church previously. Upon closer inspection of your surroundings you find yourself in some kind of basement. Did the church have some sort of lower level? Your theory is confirmed when you hear soft footsteps coming down and you turn to see the priestess coming down the stairs.";
-	say "     'Ah, so you're awake now.' The priestess keeps her expression neutral as she approaches you, your body now struggling, hackles raised, straining against the bonds that stopped you from tearing this bitch apart. 'You've caused many problems for this holy and place and I have decided that you are too dangerous to let go. You will stay down here until the day of Judgement arises.' Eyes wide you begin to realize your predicament, and it doesn't help that between your legs your loins start to burn with pent up desire you feel you won't get the chance to quench it in awhile.";
+	say "     'Ah, so you're awake now.' The priestess keeps her expression neutral as she approaches you, your body now struggling, hackles raised, straining against the bonds that stopped you from tearing this bitch apart. 'You've caused many problems for this holy and place and I have decided that you are too dangerous to let go. You will stay down here until the day of Judgement arises.' Eyes wide you begin to realize your predicament, and it doesn't help that between your legs your loins start to burn with pent up desire you feel you won't get the chance to quench it in a while.";
 	now churchangelprisoner is true;
 	WaitLineBreak;
 	end the story saying "You have been captured by the church priestess, denied of all carnal pleasures.";

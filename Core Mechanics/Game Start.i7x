@@ -71,8 +71,8 @@ To regularstart: [normal start method]
 	follow the starting stats rule;
 	follow the starting gender rule;
 	now calcnumber is -1;
-	let Trixieexit be 0;
-	while Trixieexit is 0:
+	let Trixieexit be false;
+	while Trixieexit is false:
 		clear the screen;
 		say "[bold type]Character Creation:[roman type][line break]";
 		say "(1) [link]Name[as]1[end link] - [bold type][name of Player][roman type][line break]";
@@ -152,7 +152,7 @@ To regularstart: [normal start method]
 					now RestoreMode is true;
 					now RestoreSide is 1;
 					say "[silent_start]";
-					now Trixieexit is 1;
+					now Trixieexit is true;
 					if RestoreMode is true:
 						now RestoreMode is false;
 						now RestoreSide is 0;
@@ -166,7 +166,7 @@ To regularstart: [normal start method]
 					now RestoreMode is true;
 					now RestoreSide is 2;
 					say "[silent_start]";
-					now Trixieexit is 1;
+					now Trixieexit is true;
 					if RestoreMode is true:
 						now RestoreMode is false;
 						now RestoreSide is 0;
@@ -180,7 +180,7 @@ To regularstart: [normal start method]
 					now RestoreMode is true;
 					now RestoreSide is 0;
 					say "[silent_start]";
-					now Trixieexit is 1;
+					now Trixieexit is true;
 					if RestoreMode is true:
 						now RestoreMode is false;
 						now RestoreSide is 0;
@@ -199,7 +199,7 @@ To regularstart: [normal start method]
 						now LegsName of Player is "";
 						now CuntName of Player is "";
 					say "[gsopt_start]";
-					now Trixieexit is 1;
+					now Trixieexit is true;
 
 This is the starting gender rule:
 	[default male gender]
@@ -729,9 +729,9 @@ Maybe I should add a second menu choice after that, explaining:
 
 to newplayercustomizationmenu:
 	now calcnumber is -1;
-	let charactermenuexit be 0;
+	let charactermenuexit be false;
 	if Name of Player is not "DebugTesting": [reduced menu until the new system goes live]
-		while charactermenuexit is 0:
+		while charactermenuexit is false:
 			clear the screen;
 			say "[bold type]Character Customization:[roman type][line break]";
 			say "(1) [link]Player Starting Gender[as]1[end link] - [bold type][if StartingGender is 1]Male[else if StartingGender is 2]Female[else if StartingGender is 3]Trans-Woman[else if StartingGender is 4]Trans-Man[else if StartingGender is 5]Male Herm[else]Female Herm[end if][roman type][line break]";
@@ -756,9 +756,9 @@ to newplayercustomizationmenu:
 				say "[run paragraph on]";
 				try pronounsetting;
 			else:
-				now charactermenuexit is 1;
+				now charactermenuexit is true;
 	else: [just for testing till the new system goes live]
-		while charactermenuexit is 0:
+		while charactermenuexit is false:
 			clear the screen;
 			say "[line break][bold type]Character Customization:[roman type][line break]";
 			say "(1) [link]Gender Settings & Orientation[as]1[end link][line break]";
@@ -796,11 +796,11 @@ to newplayercustomizationmenu:
 			else if calcnumber is 8:
 				try pronounsetting;
 			else:
-				now charactermenuexit is 1;
+				now charactermenuexit is true;
 
 to PlayerStartingGenderSetting:
-	let gsexit be 0;
-	while gsexit is 0:
+	let gsexit be false;
+	while gsexit is false:
 		say "[bold type]Select a starting gender (exact sizes for all parts are randomized in human ranges):[roman type][line break]";
 		say "(1) [link]Male[as]1[end link] - You have a penis and flat chest.";
 		say "(2) [link]Female[as]2[end link] - You have a vagina and breasts.";
@@ -819,7 +819,7 @@ to PlayerStartingGenderSetting:
 		LineBreak;
 		if calcnumber is not 0:
 			now StartingGender is calcnumber;
-		now gsexit is 1;
+		now gsexit is true;
 
 to startgenderget:
 	say "Assigning Gender...";
@@ -872,8 +872,8 @@ to startgenderget:
 			now Breast Size of Player is a random number between 1 and 5;
 
 to playersexsetting: [OralVirgin of Player, Virgin of Player, AnalVirgin of Player, PenileVirgin of Player, SexuallyExperienced of Player]
-	let menuexit be 0;
-	while menuexit is 0:
+	let menuexit be false;
+	while menuexit is false:
 		clear the screen;
 		say "[bold type]Sexual Experience[roman type][line break]";
 		say "     Sexually Experienced: [bold type][if SexuallyExperienced of Player is true]Yes[else]No[end if][roman type][line break]";
@@ -910,7 +910,7 @@ to playersexsetting: [OralVirgin of Player, Virgin of Player, AnalVirgin of Play
 			else:
 				now AnalVirgin of Player is true;
 		else:
-			now menuexit is 1;
+			now menuexit is true;
 		if OralVirgin of Player is true and Virgin of Player is true and PenileVirgin of Player is true and AnalVirgin of Player is true:
 			now SexuallyExperienced of player is false;
 		else:
@@ -927,8 +927,8 @@ to say playervirginsay:
 			say ", [if Virgin of Player is false]Vaginally Experienced[else]Vaginal Virgin[end if]";
 
 to genderlockmenu:
-	let gsexit be 0;
-	while gsexit is 0:
+	let gsexit be false;
+	while gsexit is false:
 		say "[bold type]Select a body configuration lock:[roman type][line break]";
 		say "(1) [link]None[as]1[end link] - There is no restriction to your gender-transformation. You receive a 5% point bonus from this selection at game end.";
 		say "(2) [link]Random[as]2[end link] - Enjoy a loss of control? A random lock (4-8) is chosen for you at game start!";
@@ -950,7 +950,7 @@ to genderlockmenu:
 		LineBreak;
 		if calcnumber is not 0:
 			now GenderLock is calcnumber;
-		now gsexit is 1;
+		now gsexit is true;
 
 to startgenderlockget:
 	say "Locking Gender...";
@@ -1019,8 +1019,8 @@ Chapter 4 - Stats
 [TODO: Investigate Starting Stamina impact on MaxHP]
 
 to say gsopt_1:
-	let gsexit be 0;
-	while gsexit is 0:
+	let gsexit be false;
+	while gsexit is false:
 		clear the screen;
 		say "[bold type]Select your main stat (+5 bonus):[roman type][line break]";
 		say "(1) [link]Strength[as]1[end link]: [if MainStat is 1][bold type]17[roman type][else if MainStat is 7]??[no line break][else]12[end if] - Represents your raw physical might and your ability to deal damage.";
@@ -1043,7 +1043,7 @@ to say gsopt_1:
 			now MainStat is calcnumber;
 			say "[run paragraph on]";
 			gs_stats;
-		now gsexit is 1;
+		now gsexit is true;
 
 To gs_stats: [apply stat bonus]
 	follow the starting stats rule; [resets all to 12]
@@ -1182,7 +1182,7 @@ To startFeatget: [alternate featget used for start] [Checkpoint-]
 			repeat with y running from 1 to number of filled rows in table of gainable feats:
 				choose row y from the table of gainable feats;
 				say "[link][y] - [title entry][as][y][end link][line break]";
-			say "[link]0 - Abort[as]0[end link][line break]";
+			say "[line break][link]0 - Abort[as]0[end link][line break]";
 			say "Type the number corresponding to the feat you want> [run paragraph on]";
 			get a number;
 			if calcnumber > 0 and calcnumber <= the number of filled rows in table of gainable feats:
@@ -1218,7 +1218,7 @@ To startFunFeatget: [alternate funfeatget used for start]
 			repeat with y running from 1 to number of filled rows in table of gainable feats:
 				choose row y from the table of gainable feats;
 				say "[link][y] - [title entry][as][y][end link][line break]";
-			say "[link]0 - Abort[as]0[end link][line break]";
+			say "[line break][link]0 - Abort[as]0[end link][line break]";
 			say "Type the number corresponding to the feat you want> [run paragraph on]";
 			get a number;
 			if calcnumber > 0 and calcnumber <= the number of filled rows in table of gainable feats:
@@ -1241,8 +1241,8 @@ To startFunFeatget: [alternate funfeatget used for start]
 Chapter 6 - Scenario Choices
 
 to say gsopt_3:
-	let gsexit be 0;
-	while gsexit is 0:
+	let gsexit be false;
+	while gsexit is false:
 		clear the screen;
 		say "[bold type]Game Scenario:[roman type][line break]";
 		say "(1) [link]Bunker[as]1[end link]: You managed to find your way to a bunker, where you hid away for some time. No special perks, default start. [if ScenarioChosen is 1][bold type][bracket]Set[close bracket][roman type][end if][line break]";
@@ -1279,19 +1279,19 @@ to say gsopt_3:
 			-- 6:
 				now scenario is "Running with Wolves";
 				now ScenarioChosen is 6;
-		now gsexit is 1;
+		now gsexit is true;
 
 Chapter 7 - Difficulty Mode
 
 to say gsopt_4:
-	let gsexit be 0;
-	while gsexit is 0:
+	let gsexit be false;
+	while gsexit is false:
 		clear the screen;
 		say "[bold type]Difficulty Modes:[roman type][line break]";
 		say "(1) [link]Hard Mode[as]1[end link]: [bold type][if HardMode is true]On[else]Off[end if][roman type][line break]     Hard Mode causes the powerful monsters to be randomly roaming, levels the monsters up alongside you, limits your use of the journal and adds other difficulties to further challenge you.";
 		say "(2) [link]No-Heal Mode[as]2[end link]: [bold type][if NoHealMode is true]On[else]Off[end if][roman type][line break]     No-Heal Mode turns off the accelerated healing at the end of the turn. Medkits and healing boosters heal more though.";
 		say "(3) [link]Blind Mode[as]3[end link]: [bold type][if BlindMode is true]On[else]Off[end if][roman type][line break]     Blind Mode prevents hunting and scavenging for supplies. You have a significantly increased chance of encountering something of interest while exploring though.";
-		say "(0) [link]Return to main menu[as]0[end link][line break]";
+		say "[line break](0) [link]Return to main menu[as]0[end link][line break]";
 		now calcnumber is -1;
 		while calcnumber < 0 or calcnumber > 3:
 			say "Choice? (0-3)> [run paragraph on]";
@@ -1321,13 +1321,13 @@ to say gsopt_4:
 				now BlindMode is false;
 				say "Blind Mode de-activated.";
 		else:
-			now gsexit is 1;
+			now gsexit is true;
 
 Chapter 8 - Content restrictions
 
 to contentrestrictionmenu:
-	let contentrestrictionmenuexit be 0;
-	while contentrestrictionmenuexit is 0:
+	let contentrestrictionmenuexit be false;
+	while contentrestrictionmenuexit is false:
 		clear the screen;
 		say "(1) [link]Banned/Warded Types[as]1[end link] - [menuwardlist] & [menubanlist][line break]";
 		say "(2) [link]Anal Content[as]2[end link] - [bold type][if AnalLevel is 1]Less[else if AnalLevel is 2]Normal[else if AnalLevel is 3]More[end if][roman type][line break]";
@@ -1365,7 +1365,7 @@ to contentrestrictionmenu:
 			else:
 				add "Center of Attention" to Feats of Player;
 		else:
-			now contentrestrictionmenuexit is 1;
+			now contentrestrictionmenuexit is true;
 
 to say menuwardlist:
 	if number of warded flags > 0 or number of warded tags > 0:

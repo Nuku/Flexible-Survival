@@ -1268,67 +1268,41 @@ to say Ass Shape Adjective of ( x - a person ):
 
 to say Ass Width Adjective of ( x - a person ):
 	if Ass Width of X is:
-		-- 1:
-			say "dainty";
-		-- 2:
-			say "small";
-		-- 3:
-			say "round";
-		-- 4:
-			say "huge";
-		-- 5:
-			say "enormous";
+		-- 1: say "dainty";
+		-- 2: say "small";
+		-- 3: say "round";
+		-- 4: say "huge";
+		-- 5: say "enormous";
 
 to say Gender Adjective of ( x - a person ):
 	if Androginity of x is:
-		-- 1:
-			say "hypermasculine";
-		-- 2:
-			say "[one of]masculine[or]manly[at random]";
-		-- 3:
-			say "somewhat effeminate";
-		-- 4:
-			say "effeminate";
-		-- 5:
-			say "androgynous";
-		-- 6:
-			say "feminine butch";
-		-- 7:
-			say "tomboyish";
-		-- 8:
-			say "[one of]feminine[or]womanly[or]ladylike[at random]";
-		-- 9:
-			say "hyperfeminine";
+		-- 1: say "hypermasculine";
+		-- 2: say "[one of]masculine[or]manly[at random]";
+		-- 3: say "somewhat effeminate";
+		-- 4: say "effeminate";
+		-- 5: say "androgynous";
+		-- 6: say "feminine butch";
+		-- 7: say "tomboyish";
+		-- 8: say "[one of]feminine[or]womanly[or]ladylike[at random]";
+		-- 9: say "hyperfeminine";
 
 to say Body Hair Adjective of ( x - a person ): [used in "He touches your [Body Hair Adjective of Player] chest."]
 	if Body Hair Length of x is:
-		-- 0:
-			say "nonexistent";
-		-- 1:
-			say "smooth";
-		-- 2:
-			say "[one of]slightly hairy[or]lightly fuzzed[at random]";
-		-- 3:
-			say "[one of]somewhat hairy[or]moderately hairy[at random]";
-		-- 4:
-			say "[one of]hairy[or]thickly fuzzed[at random]";
-		-- 5:
-			say "[one of]very hairy[or]almost furry[at random]";
+		-- 0: say "nonexistent";
+		-- 1: say "smooth";
+		-- 2: say "[one of]slightly hairy[or]lightly fuzzed[at random]";
+		-- 3: say "[one of]somewhat hairy[or]moderately hairy[at random]";
+		-- 4: say "[one of]hairy[or]thickly fuzzed[at random]";
+		-- 5: say "[one of]very hairy[or]almost furry[at random]";
 
 to say Body Hair Description of ( x - a person ): [used in "You have a broad, [Torso Color of Player] chest with [Body Hair Description]."]
 	if Body Hair Length of x is:
-		-- 0:
-			say "ERROR: This infection should not show a body hair description! Please report how you saw this on the FS Discord.";
-		-- 1:
-			say "smooth skin";
-		-- 2:
-			say "[one of]light body hair[or]a light fuzz of hair[or]a little body hair[at random]";
-		-- 3:
-			say "[one of]moderate body hair[or]a moderate fuzz of hair[or]a moderate amount of body hair[at random]";
-		-- 4:
-			say "[one of]heavy body hair[or]thick body hair[or]a large amount of body hair[at random]";
-		-- 5:
-			say "[one of]furry body hair[or]a whole lot of body hair[or]a fur-like amount of hair[at random]";
+		-- 0: say "ERROR: This infection should not show a body hair description! Please report how you saw this on the FS Discord.";
+		-- 1: say "smooth skin";
+		-- 2: say "[one of]light body hair[or]a light fuzz of hair[or]a little body hair[at random]";
+		-- 3: say "[one of]moderate body hair[or]a moderate fuzz of hair[or]a moderate amount of body hair[at random]";
+		-- 4: say "[one of]heavy body hair[or]thick body hair[or]a large amount of body hair[at random]";
+		-- 5: say "[one of]furry body hair[or]a whole lot of body hair[or]a fur-like amount of hair[at random]";
 
 to say Limbs Adjective of ( x - a person ):
 	if Body Weight of x < 4: [low weight group]
@@ -1371,59 +1345,34 @@ to say Mouth Length Adjective of ( x - a person ):
 
 to say Mouth Circumference Adjective of ( x - a person ):
 	if Mouth Circumference of x is:
-		-- 1:
-			say "thin";
-		-- 2:
-			say "small";
-		-- 3:
-			say "normal";
-		-- 4:
-			say "wide";
-		-- 5:
-			say "gaping";
+		-- 1: say "thin";
+		-- 2: say "small";
+		-- 3: say "normal";
+		-- 4: say "wide";
+		-- 5: say "gaping";
 
 to say Breast Size Description of ( x - a person ):
 	if Breast Size of x is:
-		-- 0:
-			say "flat";
-		-- 1:
-			say "A cup";
-		-- 2:
-			say "B cup";
-		-- 3:
-			say "C cup";
-		-- 4:
-			say "D cup";
-		-- 5:
-			say "DD cup";
-		-- 6:
-			say "DDD cup";
-		-- 7:
-			say "DDDD cup";
-		-- 8:
-			say "H cup";
-		-- 9:
-			say "I cup";
-		-- 10:
-			say "J cup";
-		-- 11:
-			say "K cup";
-		-- 12:
-			say "L cup";
-		-- 13:
-			say "M cup";
-		-- 14:
-			say "N cup";
-		-- 15:
-			say "O cup";
-		-- 16:
-			say "P cup";
-		-- 17:
-			say "Q cup";
-		-- 18:
-			say "R cup";
-		-- 19:
-			say "S cup";
+		-- 0: say "flat";
+		-- 1: say "A cup";
+		-- 2: say "B cup";
+		-- 3: say "C cup";
+		-- 4: say "D cup";
+		-- 5: say "DD cup";
+		-- 6: say "DDD cup";
+		-- 7: say "DDDD cup";
+		-- 8: say "H cup";
+		-- 9: say "I cup";
+		-- 10: say "J cup";
+		-- 11: say "K cup";
+		-- 12: say "L cup";
+		-- 13: say "M cup";
+		-- 14: say "N cup";
+		-- 15: say "O cup";
+		-- 16: say "P cup";
+		-- 17: say "Q cup";
+		-- 18: say "R cup";
+		-- 19: say "S cup";
 
 to say Asshole Depth Adjective of ( x - a person ):
 	if Asshole Depth of x < 3: [inches deep]
@@ -1439,48 +1388,30 @@ to say Asshole Depth Adjective of ( x - a person ):
 
 to say Asshole Tightness Adjective of ( x - a person ):
 	if Asshole Tightness of x is:
-		-- 1:
-			say "extremely tight";
-		-- 2:
-			say "tight";
-		-- 3:
-			say "receptive";
-		-- 4:
-			say "open";
-		-- 5:
-			say "gaping";
+		-- 1: say "extremely tight";
+		-- 2: say "tight";
+		-- 3: say "receptive";
+		-- 4: say "open";
+		-- 5: say "gaping";
 
 to say Cock Girth Adjective of ( x - a person ):
 	if Cock Girth of x is:
-		-- 1:
-			say "thin";
-		-- 2:
-			say "slender";
-		-- 3:
-			say "average";
-		-- 4:
-			say "thick";
-		-- 5:
-			say "monstrous";
+		-- 1: say "thin";
+		-- 2: say "slender";
+		-- 3: say "average";
+		-- 4: say "thick";
+		-- 5: say "monstrous";
 
 to say Ball Size Adjective of ( x - a person ):
 	if Ball Size of x is:
-		-- 0:
-			say "nonexistent";
-		-- 1:
-			say "[one of]acorn-sized[or]gumball-sized[at random]";
-		-- 2:
-			say "dove egg-sized";
-		-- 3:
-			say "chicken egg-sized";
-		-- 4:
-			say "goose-egg sized";
-		-- 5:
-			say "ostrich-egg sized";
-		-- 6:
-			say "basketball-sized";
-		-- 7:
-			say "beachball-sized";
+		-- 0: say "nonexistent";
+		-- 1: say "[one of]acorn-sized[or]gumball-sized[at random]";
+		-- 2: say "dove egg-sized";
+		-- 3: say "chicken egg-sized";
+		-- 4: say "goose egg-sized";
+		-- 5: say "ostrich egg-sized";
+		-- 6: say "basketball-sized";
+		-- 7: say "beachball-sized";
 
 to say Cunt Tightness Adjective of ( x - a person ):
 	if Cunt Tightness of x < 4: [inches circumference]
@@ -1496,18 +1427,12 @@ to say Cunt Tightness Adjective of ( x - a person ):
 
 to say Clit Size Adjective of ( x - a person ):
 	if Clit Size of x is:
-		-- 0:
-			say "nonexistent";
-		-- 1:
-			say "[one of]very small[or]tiny[at random]";
-		-- 2:
-			say "small";
-		-- 3:
-			say "[one of]average[or]mid-sized[or]well sized[at random]";
-		-- 4:
-			say "[one of]large[or]big[or]above average[at random]";
-		-- 5:
-			say "[one of]very large[or]very big[or]huge[at random]";
+		-- 0: say "nonexistent";
+		-- 1: say "[one of]very small[or]tiny[at random]";
+		-- 2: say "small";
+		-- 3: say "[one of]average[or]mid-sized[or]well sized[at random]";
+		-- 4: say "[one of]large[or]big[or]above average[at random]";
+		-- 5: say "[one of]very large[or]very big[or]huge[at random]";
 
 This is the brain descr rule:
 	let lusting be " thoughts.";
@@ -1578,11 +1503,11 @@ This is the cock descr rule:
 	else if Cock Length of Player < 8:
 		now descr is "[one of]average in size[or]normal-sized[at random]";
 	else if Cock Length of Player < 12:
-		now descr is "[one of]large[or]sizable[or]well-built[or]longer than average[at random]";
-	else if Cock Length of Player is 12:
-		now descr is "foot long";
+		now descr is "[one of]large[or]sizable[or]well-built[or]above average[at random]";
+	else if Cock Length of Player < 14:
+		now descr is "footlong";
 	else if Cock Length of Player < 18:
-		now descr is "[one of]huge[or]heavy[or]ponderous[or]massive[or]forearm length[at random]";
+		now descr is "[one of]huge[or]heavy[or]ponderous[or]massive[or]forearm-length[at random]";
 	else if Cock Length of Player < 25:
 		now descr is "[one of]giant[or]hulking[or]hypertrophied[or]elephantine[or]monstrous[or]towering[at random]";
 	else:
@@ -1594,21 +1519,14 @@ to say Balls:
 	say "[one of]balls[or]testicles[or]gonads[at random]";
 
 to say Cum Load Size of ( x - a person ):
-	if Ball Size of x > 0:
-		if Ball Size of x is 1:
-			say "[one of]piddling[or]tiny[or]minuscule[or]feeble[or]small[or]meager[at random]";
-		else if Ball Size of x is 2:
-			say "[one of]average[or]normal-sized[or]fair-sized[or]moderate[or]adequate[or]regular-sized[at random]";
-		else if Ball Size of x is 3:
-			say "[one of]triple-dose[or]half-cup[or]cupful[or]ample[or]above-average[or]generous[or]sizable[at random]";
-		else if Ball Size of x is 4:
-			say "[one of]half-liter[or]considerable[or]impressive[or]pint-full[or]copious[or]substantial[or]large[or]abundant[or]plentiful[at random]";
-		else if Ball Size of x is 5:
-			say "[one of]one-liter[or]flowing[or]heavy[or]quart-sized[or]drenching[or]jumbo[or]whopping[at random]";
-		else if Ball Size of x is 6:
-			say "[one of]two-liter[or]half-gallon[or]giant[or]huge[or]blasting[or]enormous[or]immense[at random]";
-		else:
-			say "[one of]overflowing[or]bucket-filling[or]excessive[or]gushing[or]massive[at random]";
+	if Ball Size of x is:
+		-- 1: say "[one of]piddling[or]tiny[or]minuscule[or]feeble[or]small[or]meager[at random]";
+		-- 2: say "[one of]average[or]normal-sized[or]fair-sized[or]moderate[or]adequate[or]regular-sized[at random]";
+		-- 3: say "[one of]triple-dose[or]half-cup[or]cupful[or]ample[or]above-average[or]generous[or]sizable[at random]";
+		-- 4: say "[one of]half-liter[or]considerable[or]impressive[or]pint-full[or]copious[or]substantial[or]large[or]abundant[or]plentiful[at random]";
+		-- 5: say "[one of]one-liter[or]flowing[or]heavy[or]quart-sized[or]drenching[or]jumbo[or]whopping[at random]";
+		-- 6: say "[one of]two-liter[or]half-gallon[or]giant[or]huge[or]blasting[or]enormous[or]immense[at random]";
+		-- 7: say "[one of]overflowing[or]bucket-filling[or]excessive[or]gushing[or]massive[at random]";
 
 This is the cunt descr rule:
 	if Cunt Depth of Player < 3:
@@ -1620,7 +1538,7 @@ This is the cunt descr rule:
 	else if Cunt Depth of Player < 12:
 		now descr is "[one of]large[or]thick-lipped[or]above average[at random]";
 	else if Cunt Depth of Player < 18:
-		now descr is "[one of]belly bulgingly huge[or]inhumanly deep[or]forearm length[at random]";
+		now descr is "[one of]belly-bulgingly huge[or]inhumanly deep[or]forearm-sized[at random]";
 	else if Cunt Depth of Player < 25:
 		now descr is "[one of]titanic[or]astonishingly deep[or]elephantine[at random]";
 	else:

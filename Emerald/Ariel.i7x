@@ -63,8 +63,8 @@ to say ResolveEvent Wind in the Willows:
 	say "     After a short walk, being pulled along by Ariel and occasionally pushed by gusts of wind, she leads you to a building on the outskirts of the forest that the trees haven't overtaken yet, a music store that was left abandoned when its owners fled the encroaching forest. Above the entrance, there's a sign with gilt letters spelling out the previous name, although all you can make out is the word [']Aria[']. Someone has rearranged the letters and brought new ones scavenged from nearby shops until it reads [']Ariel's Aria[']. It's truly a mystery. The sylph leaps through the shattered window while you pause to admire her handiwork, leaving you to enter through the doorway.";
 	say "     The inside is predictably chaotic, with most instruments and furniture tossed this way and that. Ariel seems to be waiting for you by a door near the back of the store, eagerly floating around the shop's interior while you pick your way through the ruined interior. Finally reaching the doorway, you're shocked when Ariel throws it open in a gust of wind, revealing a small stockroom with a mattress and some bedding. Perhaps an employee once used this backroom as a temporary shelter, but if so, they're long gone. This shelter must be where Ariel has been since you freed her, and she is trusting you with the knowledge of her newfound home.";
 	AddNavPoint Ariel's Aria;
-	AttemptToWait;
 	now HP of Ariel is 1;
+	AttemptToWait;
 	move Ariel to Ariel's Home;
 	move player to Ariel's Home;
 	now Wind in the Willows is resolved;

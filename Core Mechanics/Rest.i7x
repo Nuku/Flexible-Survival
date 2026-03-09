@@ -50,7 +50,7 @@ check resting:
 				now battleground is the earea of location of Player;
 			else:
 				now battleground is "Outside"; [standard setting]
-			AttemptToWait;
+			WaitLineBreak;
 			let intodds be 3;
 			if "Bad Luck" is listed in feats of Player, increase intodds by 1;
 			if a random chance of intodds in 20 succeeds:

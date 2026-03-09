@@ -26,7 +26,7 @@ to say FootFieldLockerdesc:
 		say "[line break]You spot a cassette tape on one of the benches. Curious what may be on it, you pocket it right away.";
 		say "[bold type]Locker-room Tape has been added to your tape inventory![roman type][line break]";
 		add "Gorilla Locker-room Tape 1" to tapes of Player;
-	if Roman is in Astroslide Field Locker-room:
+	if Team Captain Roman is in Astroslide Field Locker-room:
 		say "[line break]Roman is also here, tied to one of the benches. From the encrusted cum stains covering his dark fur, you can tell that he has been used aplenty in your absence.";
 	if "rubber sneakers" is listed in the invent of Astroslide Field Locker-room:
 		say "[line break]You notice a pair of odd-looking sneakers, in a corner of the room.";
@@ -49,15 +49,15 @@ Description of Gorilla Team-Members is "     A highly variable number of gorilla
 Scent of Gorilla Team-Members is "     The attractive scents of gorillas hang in the air, with slight undertones of furry musk, cum and sweat.".
 
 instead of conversing the Gorilla Team-Members:
-	if HP of Roman is 3:
+	if HP of Team Captain Roman is 3:
 		say "     You have a heavy secret concerning the team captain. [bold type]Do you wish you wish to share it? This decision will certainly break Roman, and without him you will probably not be able to work for the team anymore. Then again, free bitch to play with the other boys.[roman type][line break]";
 		say "     ([link]Y[as]y[end link]) - 'Hey, guys! You won't believe what I saw the other day!'";
 		say "     ([link]N[as]n[end link]) - No. You are not this cruel.";
 		if Player consents:
 			LineBreak;
 			say "[RomanHumiliation]";
-			now HP of Roman is 4;
-			move Roman to Astroslide Field Locker-room;
+			now HP of Team Captain Roman is 4;
+			move Team Captain Roman to Astroslide Field Locker-room;
 		else:
 			LineBreak;
 			say "     No. You are here to have a normal conversation with the other gorillas, or what passes for normal these days. You join the gorilla team-members in their reveling; what you wanted to say or ask is soon forgotten and you find yourself embroiled in [one of]a discussion about new strategies on the field. Despite them having a lot more experience in these matters, your attempts to contribute something worthwhile are readily accepted, making you feel welcomed and almost as part of the team[or]a group of the guys retelling raunchy stories about past conquests. This escalates after a short while, then a gorilla draws an eager fan-girl to his chest from the crowd and proceeds to... demonstrate his technique. Before long, there's a proper little orgy going on as more fans eagerly flock towards the group or the hunky males just pair up with each other[at random].";
@@ -260,7 +260,7 @@ to PeepingRomanEvent:
 		say "     You tiptoe to the door of the private changing room and take a look inside. You can see Roman. His shorts are already down, exposing his slightly bubbly, furry ass to you. But what interests you is the other side. If only he could rotate just slightly, just enough to see what kind of package he has. Answering your silent prayers, Roman turns to the right in order to fetch a clean pair of shorts. He has... Nothing?";
 		say "     You are taken aback. There is no massive maleness, no large ballsack, totally contradicting the permanent bulge his shorts were giving him. Oblivious to your spying, Roman sits on a bench and spreads his legs. You can see the unmistakable folds of a vagina and the plump clit just over it. Roman nonchalantly pulls a large tuft of cotton from a bag and packs it into his new shorts without pulling them up. So that's the reason he always wears shorts and looks hung like a horse.";
 		say "     Roman hoists himself up from the bench, making you hurriedly retreat. However, you ponder about confronting Roman about his secret the next time you talk to him.";
-		now HP of Roman is 1;
+		now HP of Team Captain Roman is 1;
 		now PeepingRoman is resolved;
 		now Resolution of PeepingRoman is 1; [peeped]
 	else:

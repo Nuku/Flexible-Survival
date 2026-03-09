@@ -18,10 +18,10 @@ to say Yinglets wins:
 
 to say Yinglets loses:
 	say "     The trio of yinglets collapse in haphazard shapes. You toss one that lands on his back and lies there with his limbs in the air, another tumbles over and folds in half, getting a face full of his own butt. The last noodle lands face-first and bends over backwards. If they weren't the most flexible creatures you'd ever seen, you might've worried that you went a little overboard. As they recover though, they immediately surrender and beg for mercy.";
-	say "[line break][YingletsSexMenu]";
+	say "[YingletsSexMenu]";
 
 to say YingletsSexMenu:
-	say "     [bold type]What do you do with the little troublemakers?[roman type][line break]";
+	say "[line break]     [bold type]What do you do with the little troublemakers?[roman type][line break]";
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]

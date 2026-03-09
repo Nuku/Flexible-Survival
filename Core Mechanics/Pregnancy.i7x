@@ -249,7 +249,7 @@ to pregprotocol:
 						now z is 1;
 					if "Chase's Breeder" is listed in feats of Player and ChaseOffspring is 0: [override for Chase's first kids]
 						now z is 2;
-					if "Fang's Mate" is listed in feats of Player and hunger of Fang is 0:
+					if "Fang's Mate" is listed in feats of Player:
 						if hunger of Fang is 0:
 							now z is 2;
 						else:
@@ -384,22 +384,22 @@ to detailbirth:
 				now HP of Player is 1;
 				decrease morale of Player by 10;
 		else:
-			let ubpreggers be 0;
-			if Player can UB and ubpreg is not "false", now ubpreggers is 1;
+			let ubpreggers be false;
+			if Player can UB and ubpreg is not "false", now ubpreggers is true;
 			if "All-Mother's Blessing" is listed in feats of Player:
-				say "     A radiant glow starts to spread over your belly, settling into the shape of a five-pointed star. Any sense of discomfort brought on by the impending birth vanishes without a trace as pleasant warmth suffuses your whole being. All on their own, your arms come up in a holding pose, and as they do, the large egg[if ubpreggers is 1] now encapsulating the engulfed [ubpreg][end if] that had been inside you suddenly appears in your grasp. After such an effortless birth, you joyfully hug your offspring in a caring embrace.";
+				say "     A radiant glow starts to spread over your belly, settling into the shape of a five-pointed star. Any sense of discomfort brought on by the impending birth vanishes without a trace as pleasant warmth suffuses your whole being. All on their own, your arms come up in a holding pose, and as they do, the large egg[if ubpreggers is true] now encapsulating the engulfed [ubpreg][end if] that had been inside you suddenly appears in your grasp. After such an effortless birth, you joyfully hug your offspring in a caring embrace.";
 				increase mpregcount by 1;
 			else if mpregcount < 3:			[First few times, painful]
-				say "     Shifting the large mass through your lower colon sends horrible pain through your body as it struggles to adapt to this method of birthing. You claw at the ground and moan as your tight asshole is stretched and forced to open for the large egg[if ubpreggers is 1] now encapsulating the engulfed [ubpreg][end if]. Your body squeezes and pushes as your [bodydesc of Player] body is covered in sweat and you have a grimace of pain on your [FaceSpeciesName of Player in lower case] face with each painful shifting inside you. By the time you manage to push it free, you are left exhausted and winded, but have somehow managed to lay the noticeably big oval of your egg from your ass. Collapsed on your side, you gently caress the rocking egg as the shell which protected your child through this difficult passage starts to crack.";
+				say "     Shifting the large mass through your lower colon sends horrible pain through your body as it struggles to adapt to this method of birthing. You claw at the ground and moan as your tight asshole is stretched and forced to open for the large egg[if ubpreggers is true] now encapsulating the engulfed [ubpreg][end if]. Your body squeezes and pushes as your [bodydesc of Player] body is covered in sweat and you have a grimace of pain on your [FaceSpeciesName of Player in lower case] face with each painful shifting inside you. By the time you manage to push it free, you are left exhausted and winded, but have somehow managed to lay the noticeably big oval of your egg from your ass. Collapsed on your side, you gently caress the rocking egg as the shell which protected your child through this difficult passage starts to crack.";
 				now HP of Player is 1;
 				decrease morale of Player by 10;
 				increase mpregcount by 1;
 			else if mpregcount < 6:		[Next few times, struggle]
-				say "     As you struggle with your unusual birthing, you huff and push as best you can during your unnatural labor, working to nudge the large egg onwards, working to expel it from your anus. It is not nearly as painful as your first few were, your [bodytype of Player] body having become more adjusted to the process. After about twenty minutes of pushing and grunting, the egg is pushed free with a little discomfort and even some pleasure as your [if Player is male]male[else]neuter[end if] body feels a rush of pride at having [if ubpreggers is 1]turned the captured [ubpreg] into your newest offspring[else]created a new life[end if]. You hold the big egg in your arms, cradling it as the shell starts to crack.";
+				say "     As you struggle with your unusual birthing, you huff and push as best you can during your unnatural labor, working to nudge the large egg onwards, working to expel it from your anus. It is not nearly as painful as your first few were, your [bodytype of Player] body having become more adjusted to the process. After about twenty minutes of pushing and grunting, the egg is pushed free with a little discomfort and even some pleasure as your [if Player is male]male[else]neuter[end if] body feels a rush of pride at having [if ubpreggers is true]turned the captured [ubpreg] into your newest offspring[else]created a new life[end if]. You hold the big egg in your arms, cradling it as the shell starts to crack.";
 				increase morale of Player by 5;
 				increase mpregcount by 1;
 			else:					[After that, easy]
-				say "     Your well-practiced body has little trouble with the shifting and releasing of the egg within you. You recline and concentrate, feeling your [bodytype of Player] body easily working the large egg along your lower bowels, into your rectum before spreading your legs wide to pop it free of your anus. The egg pops free with some effort at the last step, but the process actually comes with considerable pleasure[if Player is male], and you can't help but stroke yourself into cumming as the firm shell grinds and presses against your prostate as it moves[end if]. As you pull the rocking, cracking egg into your arms, you [if ubpreggers is 1]know it contains the [ubpreg] you unbirthed and have now remade into your offspring[else if Player is male]can't help but feel considerable pride at what your male body has accomplished[else]can't help but feel considerable pride at what your neuter body has accomplished[end if].";
+				say "     Your well-practiced body has little trouble with the shifting and releasing of the egg within you. You recline and concentrate, feeling your [bodytype of Player] body easily working the large egg along your lower bowels, into your rectum before spreading your legs wide to pop it free of your anus. The egg pops free with some effort at the last step, but the process actually comes with considerable pleasure[if Player is male], and you can't help but stroke yourself into cumming as the firm shell grinds and presses against your prostate as it moves[end if]. As you pull the rocking, cracking egg into your arms, you [if ubpreggers is true]know it contains the [ubpreg] you unbirthed and have now remade into your offspring[else if Player is male]can't help but feel considerable pride at what your male body has accomplished[else]can't help but feel considerable pride at what your neuter body has accomplished[end if].";
 				increase morale of Player by 5;
 				increase mpregcount by 1;
 

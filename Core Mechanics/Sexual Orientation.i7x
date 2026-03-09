@@ -19,8 +19,8 @@ carry out UsePlayerSexualOrientationMenu:
 	PlayerSexualOrientationMenu;
 
 to PlayerSexualOrientationMenu:
-	let OrientationMenuExit be 0;
-	while OrientationMenuExit is 0:
+	let OrientationMenuExit be false;
+	while OrientationMenuExit is false:
 		clear the screen;
 		say "[bold type]Interested in (select Yes for all that apply):[roman type][line break]";
 		say "(1) [link]Males (cock)[as]1[end link] - [if MaleInterest of Player is true][special-style-1]Yes[else][special-style-2]No[end if][roman type][line break]";
@@ -68,6 +68,6 @@ to PlayerSexualOrientationMenu:
 			else:
 				now FemaleHermInterest of Player is true;
 		else:
-			now OrientationMenuExit is 1;
+			now OrientationMenuExit is true;
 
 Sexual Orientation ends here.

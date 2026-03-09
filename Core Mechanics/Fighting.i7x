@@ -35,12 +35,12 @@ To fight:
 		if there is no lev entry or (lev entry > level of Player + 1 and HardMode is false), next;
 		if there is a area entry and area entry exactly matches the text battleground, case insensitively:
 			if (DayCycle entry is 2 and daytimer is day) or (DayCycle entry is 1 and daytimer is night), next; [skips if day/night doesn't match]
-			let skipit be 0;
+			let skipit be false;
 			repeat with s running through warded flags:
 				if Name entry is listed in infections of s:
-					now skipit is 1;
+					now skipit is true;
 					break;
-			if skipit is 1, next;
+			if skipit is true, next;
 			add Name entry to PossibleEncounters;
 			if "Like Attracts Like" is listed in the feats of Player:
 				if BodyName of Player is Name entry, add Name entry to PossibleEncounters;
@@ -148,7 +148,7 @@ To challenge:
 	rule succeeds;
 
 To Challenge (x - text):
-	let TargetFound be 0;
+	let TargetFound be false;
 	repeat with y running from 1 to number of filled rows in Table of Random Critters:
 		choose row y from the Table of Random Critters;
 		if Name entry is x or enemy title entry is x or enemy Name entry is x:
@@ -159,11 +159,11 @@ To Challenge (x - text):
 			else:
 				if debugactive is 1:
 					say "DEBUG -> Creature [x] found.[line break]";
-				now TargetFound is 1;
+				now TargetFound is true;
 				now MonsterID is y;
 				now monsterHP is HP entry;
 				break;
-	if TargetFound is 1:
+	if TargetFound is true:
 		challenge;
 	else:
 		say "     ERROR: Creature [x] not found.";

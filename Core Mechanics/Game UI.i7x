@@ -3,7 +3,7 @@ Version 1 of Game UI by Core Mechanics begins here.
 
 Part 0 - Variables
 
-looknow is a number that varies.[@Tag:NotSaved]
+looknow is a truth state that varies.[@Tag:NotSaved]
 showlocale is a truth state that varies.[@Tag:NotSaved] showlocale is usually true.
 calcnumber is a number that varies.[@Tag:NotSaved] [used in all sorts of multi-choice points]
 freecred is a number that varies.
@@ -341,7 +341,7 @@ instead of examining a person (called x):
 			try linkactioning x;
 
 This is the self examine rule:
-	now looknow is 1;
+	now looknow is true;
 	showstats player;
 	if ScaleValue of Player is:
 		-- 1: say "[if Player is defaultnamed]You[else]Your name is [name of Player] and you[end if] are quite small, about the size of a housecat.";
@@ -432,9 +432,9 @@ This is the self examine rule:
 	else: [old style]
 		if Player is male:
 			if Cock Count of Player > 1:
-				now cocktext is "have [Cock Count of Player] [Cock Size Desc of Player] [Cock Length of Player]-inch-long [Cock of Player] [one of]cocks[or]penises[or]shafts[or]manhoods[at random]. They are [if Libido of Player <= 25]only somewhat aroused at the moment[else if Libido of Player <= 50]partially hard and dribbling a little pre[else if Libido of Player <= 75]erect and leaking precum[else]fully erect and drooling precum steadily[end if]. [if Player is internalBalls]Though they are not outwardly apparent, you wager you have[else]Underneath them hangs[end if] [one of]a pair of[or]a set of[at random] [Ball Size Adjective of Player] balls. ";
+				now cocktext is "have [Cock Count of Player] [Cock Size Desc of Player] [if Cock Length of Player < 10][Cock Length of Player in words][else][Cock Length of Player][end if]-inch-long [Cock of Player] [one of]cocks[or]penises[or]shafts[or]manhoods[at random]. They are [if Libido of Player <= 25]only somewhat aroused at the moment[else if Libido of Player <= 50]partially hard and dribbling a little pre[else if Libido of Player <= 75]erect and leaking precum[else]fully erect and drooling precum steadily[end if]. [if Player is internalBalls]Though they are not outwardly apparent, you wager you have[else]Underneath them hangs[end if] [one of]a pair of[or]a set of[at random] [Ball Size Adjective of Player] balls. ";
 			else:
-				now cocktext is "have a [Cock Size Desc of Player] [Cock Length of Player]-inch-long [Cock of Player] [one of]cock[or]penis[or]shaft[or]maleness[at random]. It is [if Libido of Player <= 25]only somewhat aroused at the moment[else if Libido of Player <= 50]partially hard and dribbling a little pre[else if Libido of Player <= 75]erect and leaking precum[else]fully erect and drooling precum steadily[end if]. [if Player is internalBalls]Though they are not outwardly apparent, you wager you have[else]Underneath it hangs[end if] [one of]a pair of[or]a set of[at random] [Ball Size Adjective of Player] balls. ";
+				now cocktext is "have a [Cock Size Desc of Player] [if Cock Length of Player < 10][Cock Length of Player in words][else][Cock Length of Player][end if]-inch-long [Cock of Player] [one of]cock[or]penis[or]shaft[or]maleness[at random]. It is [if Libido of Player <= 25]only somewhat aroused at the moment[else if Libido of Player <= 50]partially hard and dribbling a little pre[else if Libido of Player <= 75]erect and leaking precum[else]fully erect and drooling precum steadily[end if]. [if Player is internalBalls]Though they are not outwardly apparent, you wager you have[else]Underneath it hangs[end if] [one of]a pair of[or]a set of[at random] [Ball Size Adjective of Player] balls. ";
 	let cunttext be "";
 	follow the cunt descr rule;
 	if Cunt Description of Player is not "" and NewTypeInfectionActive is true: [new infection on player and activated]
@@ -517,7 +517,7 @@ This is the self examine rule:
 		repeat with x running from 1 to number of entries in CompanionList of Player:
 			say "[if x > 1 and x is number of entries in CompanionList of Player]and [end if][link][entry x of CompanionList of Player][as]look [entry x of CompanionList of Player][end link], who is level [level of (entry x of CompanionList of Player)][if x < number of entries in CompanionList of Player], [else]. [end if]";
 	LineBreak;
-	now looknow is 0;
+	now looknow is false;
 	rule succeeds;
 
 ListFollowingChildren is an action applying to nothing.

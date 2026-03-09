@@ -502,15 +502,17 @@ To MultiInfect (x - text) repeats (repeatCount - number):
 		if debugactive is 1:
 			say "DEBUG -> Can't infect with creature [Name entry] because it has Banned: [BannedStatus entry][line break]";
 	else:
-		let reset be 0;
+		let reset be false;
 		if researchbypass is 1 and non-infectious entry is true:
-			now reset is 1;
+			now reset is true;
 			now non-infectious entry is false;
 		let repeatVar be 0;
 		while repeatVar < repeatCount:
 			infect;
 			increase repeatVar by 1;
-		if reset is 1:
+			if repeatVar < repeatCount and remainder after dividing repeatVar by 3 is 0:
+				wait for any key;
+		if reset is true:
 			now non-infectious entry is true;
 
 to OldInfectionRoll: [old infections with less body parts made before 07.05.2019]
@@ -1030,18 +1032,18 @@ to setmonster ( x - text ) silently: [suppresses the debug output]
 	setmonster x silence state is 1;
 
 to setmonster ( x - text ) silence state is (Silence - a number): [puts an infection (named x) as lead monster for later use]
-	let found be 0;
+	let found be false;
 	choose row MonsterID in the Table of Random Critters;
 	if Name entry exactly matches the text x, case insensitively:
-		now found is 1;
+		now found is true;
 	else:
 		repeat with y running from 1 to number of filled rows in Table of Random Critters:
 			choose row y in Table of Random Critters;
 			if Name entry exactly matches the text x, case insensitively:
-				now found is 1;
+				now found is true;
 				now MonsterID is y;
 				break;
-	if found is 0 and Silence is 0:
+	if found is false and Silence is 0:
 		say "ERROR - Creature '[x]' not found. (setmonster)[line break]";
 	else if debugactive is 1:
 		say "DEBUG: Current [']monster['] set to: [MonsterID] = [Name entry][line break]";

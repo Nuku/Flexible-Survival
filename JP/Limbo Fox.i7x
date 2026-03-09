@@ -19,7 +19,7 @@ When Play begins: [This is Cyn's default creature encounter]
 	now enemy title entry is ""; [ Name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name. ]
 	now enemy Name entry is ""; [ Specific name of unique enemy. ]
 	now enemy type entry is 1; [ 0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters. ]
-	now attack entry is "She [one of]swings her unnaturally long, sharp claws wildly at you, leaving thin red lines as it cuts your [SkinName of Player] body[or]dashes towards you, using her elongated arms to propel herself and kneeing you in the stomach with great force[or]vanishes from vew whit a little giggle, and before you have time to react, she reappears behind you and kicks you in the back[at random].";
+	now attack entry is "She [one of]swings her unnaturally long, sharp claws wildly at you, leaving thin red lines as they cut your [SkinName of Player in lower case] body[or]dashes towards you, using her elongated arms to propel herself and kneeing you in the stomach with great force[or]vanishes from vew with a little giggle, and before you have time to react, she reappears behind you and kicks you in the back[at random].";
 	now defeated entry is "";
 	now victory entry is "";
 	now desc entry is "";
@@ -43,7 +43,7 @@ When Play begins: [This is Cyn's default creature encounter]
 	now HP entry is 125;
 	now lev entry is 25; [ Monster level. (Level x 2) XP for victory. (Level / 2) XP for losing. ]
 	now wdam entry is 20; [ Monster's average damage when attacking. ]
-	now area entry is "nowhere"; [ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
+	now area entry is "Nowhere"; [ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
 	now Cock Count entry is 1; [ Number of cocks the infection will try to cause if sex entry is 'Male' or 'Both'. ]
 	now Cock Length entry is 6; [ Length in inches infection will make cock grow to if cocks. ]
 	now Ball Size entry is 7; [ Cock width, more commonly used for ball size. ]
@@ -57,12 +57,12 @@ When Play begins: [This is Cyn's default creature encounter]
 	now libido entry is 0; [ Target libido the infection will rise towards. ]
 	now loot entry is ""; [ Dropped item, blank for none. Case sensitive. ]
 	now lootchance entry is 0; [ Percentage chance of dropping loot, from 0-100. ]
-	now MilkItem entry is "Limbo Fox Milk";
+	now MilkItem entry is "limbo fox milk";
 	now CumItem entry is "Limbo Fox Cum"; [ Item to be given to the player if they have this infection and jerk off. ]
-	now TrophyFunction entry is "";
+	now TrophyFunction entry is "-";
 	now scale entry is 3; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]ghostly[or]ethereal[or]willowy[or]eldritch[at random]"; [ Ex: "plump" "fat" "muscled" "strong" "slimy" "gelatinous" "slender". Use [one of] to vary ]
-	now type entry is "Anomaly"; [ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
+	now type entry is "anomaly"; [ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
 	now magic entry is false;
 	now resbypass entry is false; [ Bypasses Researcher bonus? true/false (almost invariably false) ]
 	now non-infectious entry is false; [ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
