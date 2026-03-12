@@ -161,7 +161,7 @@ When Play begins:
 	now libido entry is 30;
 	now lootchance entry is 40;
 	now loot entry is "ebonflame scale";
-	now MilkItem entry is "ebonflame dragator milk"; [ Item to be given to the player if they have this infection and milk themselves. ]
+	now MilkItem entry is ""; [ Item to be given to the player if they have this infection and milk themselves. ]
 	now CumItem entry is ""; [ Item to be given to the player if they have this infection and jerk off. ]
 	now TrophyFunction entry is "-"; [ Function to generate a list of optional loot items, of which the player can choose one after victory. ]
 	now scale entry is 4;
@@ -302,11 +302,7 @@ to ebgatorhijackroutine:
 			now mpreghijack is false;
 		now ebgatorhijack is 0;
 		if HP of Player > 8, decrease HP of Player by 5;
-	else if hijackgestation < 3: [LATE]
-		say "[line break]Your [bodytype of Player] belly protrudes in a firm dome of pregnancy, full of the terrible, glowing egg, becoming increasingly difficult to lug around. You don't feel that hindered despite being so bloated but the constant, burning sensation of the churning orb torments you to no end.";
-	else if hijackgestation < 5: [MIDDLE]
-		say "[line break]Your [bodydesc of Player] body is somewhat rounded with the effects of the egg growing inside you. It's progressing at what would seem to be a terrifyingly fast speed, growing with every passing hour, in heat just as much as it does in size.";
-	else: [EARLY]
-		say "[line break][one of]You feel an ominous shifting of something inside[or]An unsettling warmth churns through[at random] you as you continue to carry the dark egg.";
+	else:
+		say "[line break][if hijackgestation < 3]Your [bodytype of Player] belly protrudes in a firm dome of pregnancy, full of the terrible, glowing egg, becoming increasingly difficult to lug around. You don't feel that hindered despite being so bloated but the constant, burning sensation of the churning orb torments you to no end[else if hijackgestation < 5]Your [bodydesc of Player] body is somewhat rounded with the effects of the egg growing inside you. It's progressing at what would seem to be a terrifyingly fast speed, growing with every passing hour, in heat just as much as it does in size[else][one of]You feel an ominous shifting of something inside[or]An unsettling warmth churns through[at random] you as you continue to carry the dark egg[end if].";
 
 Ebonflame Dragator ends here.

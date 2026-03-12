@@ -249,7 +249,7 @@ to pregprotocol:
 						now z is 1;
 					if "Chase's Breeder" is listed in feats of Player and ChaseOffspring is 0: [override for Chase's first kids]
 						now z is 2;
-					if "Fang's Mate" is listed in feats of Player:
+					if "Fang's Mate" is listed in feats of Player and hunger of Fang is 0:
 						if hunger of Fang is 0:
 							now z is 2;
 						else:
@@ -459,7 +459,7 @@ To Birth:
 		if a random chance of 1 in 2 succeeds:
 			now PlayerRelationship is "wary";
 	else:
-		now PlayerRelationship is "[one of]loving[or]affectionate[purely at random]";
+		now PlayerRelationship is the substituted form of "[one of]loving[or]affectionate[purely at random]";
 	[genetic abnormalities]
 	let IsAlbino be false;
 	let HasMelanism be false;

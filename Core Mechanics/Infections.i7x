@@ -512,6 +512,8 @@ To MultiInfect (x - text) repeats (repeatCount - number):
 			increase repeatVar by 1;
 			if repeatVar < repeatCount and remainder after dividing repeatVar by 3 is 0:
 				wait for any key;
+		if remainder after dividing repeatVar by 3 > 0:
+			LineBreak;
 		if reset is true:
 			now non-infectious entry is true;
 
@@ -1124,7 +1126,7 @@ to say TerminalInfections:
 		if there is a lev entry and there is an area entry and area entry in lower case is not "nowhere":
 			say "[Name entry] - Danger Level: [if lev entry > level of Player][special-style-2][else][special-style-1][end if][lev entry][roman type], Typical Environment: [area entry][line break]";
 			if the remainder after dividing x by 15 is 0 and x < number of filled rows in Table of Random Critters:
-				AttemptToWait;
+				WaitLineBreak;
 	say "[line break][bold type]End infection list.[roman type][line break]";
 
 to say TerminalCredits:

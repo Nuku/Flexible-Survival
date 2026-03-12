@@ -104,13 +104,13 @@ to say ResolveEvent Ebonflame Nest:
 				now HP of Player is 1;
 				say "     Upon your travels across this blasted part of the city, you suddenly feel off-balance as the cracked asphalt below you begins to crumble. Too slow to react, the pavement gives way, you following in its wake as you descend into a shallow cave, landing on the broken earth with an audible thud. The impact is strong enough to render you unconscious, the chittering sound of ebonflame whelps the only thing you can recall before you black out.";
 				say "     Your consciousness is roused once again by strained squeals and yipping of your apparent assailants, the writhing, heated flesh of a few whelps on you, more strewn about, rather exhausted themselves. As you shift, it immediately becomes clear that you're partially doused with the creatures['] glowing seed[if scalevalue of Player > 3], an impressive feat for someone as large as you. These whelps have either been very busy, or you've been out for quite some time[else]. The whelps must have been busy with you while you were lying unconscious[end if].";
+				WaitLineBreak;
+				say "     Though you still feel a couple heaving against your [if scalevalue of Player > 3]large [end if]behind, it's clear they're all too spent to fight you. Embarrassed as you are, you easily shove them off, weakly pulling yourself back up the hole. As you crawl back from whence you came, it's clear by the twisted aftertaste in your mouth that the small creatures made the most of what they could against your helpless form.";
 				CreatureSexAftermath "Player" receives "OralCock" from "Ebonflame Whelp";
 				if Player is female:
 					CreatureSexAftermath "Player" receives "PussyFuck" from "Ebonflame Whelp";
 				if Player is not female or anallevel > 2:
 					CreatureSexAftermath "Player" receives "AssFuck" from "Ebonflame Whelp";
-				WaitLineBreak;
-				say "     Though you still feel a couple heaving against your [if scalevalue of Player > 3]large [end if]behind, it's clear they're all too spent to fight you. Embarrassed as you are, you easily shove them off, weakly pulling yourself back up the hole. As you crawl back from whence you came, it's clear by the twisted aftertaste in your mouth that the small creatures made the most of what they could against your helpless form.";
 				[MultiInfect "Ebonflame Whelp" repeats 3;] [non-infectious]
 				decrease humanity of Player by 10;
 				now Resolution of Ebonflame Nest is 5; [fell into the nest]

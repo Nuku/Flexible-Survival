@@ -64,7 +64,7 @@ to say ResolveEvent Wind in the Willows:
 	say "     The inside is predictably chaotic, with most instruments and furniture tossed this way and that. Ariel seems to be waiting for you by a door near the back of the store, eagerly floating around the shop's interior while you pick your way through the ruined interior. Finally reaching the doorway, you're shocked when Ariel throws it open in a gust of wind, revealing a small stockroom with a mattress and some bedding. Perhaps an employee once used this backroom as a temporary shelter, but if so, they're long gone. This shelter must be where Ariel has been since you freed her, and she is trusting you with the knowledge of her newfound home.";
 	AddNavPoint Ariel's Aria;
 	now HP of Ariel is 1;
-	AttemptToWait;
+	WaitLineBreak;
 	move Ariel to Ariel's Home;
 	move player to Ariel's Home;
 	now Wind in the Willows is resolved;
@@ -151,51 +151,48 @@ instead of conversing the Ariel:
 		say "     You find the sylph girl uncharacteristically focused, attempting to use her powers to blow some of the abundant debris out of her new home. Asking what she's up to, Ariel stops momentarily to come closer. Motioning around the room and the abandoned storefront, she draws up a wind before stopping as she lets out a tiny sneeze. You have to stifle a snicker as you process how an air spirit can have allergies and then decide to help her. You carefully drag some of the larger pieces of what were once musical instruments through the broken window, careful not to make too much noise and draw attention to your friend's refuge. Occasionally you catch Ariel looking you up and down when she thinks you're preoccupied with a large drum or boxes of sheet music. Once she moves the larger pieces, Ariel gives you an eager smile before commencing what you at first assume is a victory lap around the store before realizing that a small cyclone has started to build. You jump out of the way just as she blows the miniature dust storm out the front of the store. That's certainly one way to do spring cleaning.";
 		now HP of Ariel is 2;
 	else:
-		say "[ArielTalkMenu]";
-
-to say ArielTalkMenu:
-	say "     What do you wish to talk about with Ariel?";
-	now sextablerun is 0;
-	blank out the whole of table of fucking options;
-	[]
-	choose a blank row in table of fucking options;
-	now title entry is "The City";
-	now sortorder entry is 1;
-	now description entry is "Ask her how she's enjoying exploring the city";
-	[]
-	choose a blank row in table of fucking options;
-	now title entry is "Sex with Ariel";
-	now sortorder entry is 2;
-	now description entry is "Broach the topic of getting intimate with the flighty spirit";
-	[]
-	sort the table of fucking options in sortorder order;
-	repeat with y running from 1 to number of filled rows in table of fucking options:
-		choose row y from the table of fucking options;
-		say "[link][y] - [title entry][as][y][end link][line break]";
-	say "[link]0 - Nevermind[as]0[end link][line break]";
-	while sextablerun is 0:
-		say "Pick the corresponding number> [run paragraph on]";
-		get a number;
-		if calcnumber > 0 and calcnumber <= the number of filled rows in table of fucking options:
-			now current menu selection is calcnumber;
-			choose row calcnumber in table of fucking options;
-			say "[title entry]: [description entry]?";
-			if Player consents:
+		say "     What do you wish to talk about with Ariel?";
+		now sextablerun is 0;
+		blank out the whole of table of fucking options;
+		[]
+		choose a blank row in table of fucking options;
+		now title entry is "The City";
+		now sortorder entry is 1;
+		now description entry is "Ask her how she's enjoying exploring the city";
+		[]
+		choose a blank row in table of fucking options;
+		now title entry is "Sex with Ariel";
+		now sortorder entry is 2;
+		now description entry is "Broach the topic of getting intimate with the flighty spirit";
+		[]
+		sort the table of fucking options in sortorder order;
+		repeat with y running from 1 to number of filled rows in table of fucking options:
+			choose row y from the table of fucking options;
+			say "[link][y] - [title entry][as][y][end link][line break]";
+		say "[link]0 - Nevermind[as]0[end link][line break]";
+		while sextablerun is 0:
+			say "Pick the corresponding number> [run paragraph on]";
+			get a number;
+			if calcnumber > 0 and calcnumber <= the number of filled rows in table of fucking options:
+				now current menu selection is calcnumber;
+				choose row calcnumber in table of fucking options;
+				say "[title entry]: [description entry]?";
+				if Player consents:
+					LineBreak;
+					now sextablerun is 1;
+					if title entry is:
+						-- "The City":
+							say "[ArielTalk1]";
+						-- "Sex with Ariel":
+							say "[ArielTalk2]";
+			else if calcnumber is 0:
 				LineBreak;
 				now sextablerun is 1;
-				if title entry is:
-					-- "The City":
-						say "[ArielTalk1]";
-					-- "Sex with Ariel":
-						say "[ArielTalk2]";
-		else if calcnumber is 0:
-			LineBreak;
-			now sextablerun is 1;
-			say "     You step back from the sylph, simply waving at her, which she returns with a smile before moving to something else.";
-		else:
-			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options], or 0 to exit.";
-	wait for any key;
-	clear the screen and hyperlink list;
+				say "     You step back from the sylph, simply waving at her, which she returns with a smile before moving to something else.";
+			else:
+				say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options], or 0 to exit.";
+		wait for any key;
+		clear the screen and hyperlink list;
 
 to say ArielTalk1:
 	say "     Seeing Ariel zip in and out of the store so often, you ask whether she's enjoying the post-apocalyptic city you released her into. The sylph's eyes widen at your question, and she rapidly begins to make motions with her hands to try and describe the fantastical things she's seen across the city. In the excitement, it's hard to follow her description, but you can grasp a few of her experiences. When your lack of comprehension becomes apparent, Ariel pauses momentarily, closes her eyes, and begins to focus. Winds begin to stream into the room, and small clouds begin to take shape, quickly accumulating until a cloud roughly the size of a dog is floating in the center. Then Ariel begins to sculpt the cloud, quickly shaving down and removing the excess bits until a cute wyvern emerges. The sylph blows on the lizard, and it slowly begins moving, its cloudy wings moving up and down as if flying around the room. The falling bits of fluff draw your attention away from the wyvern as they begin to take the shape of miniature wolves, succubi, and other city residents. It looks as though your friend has been busy spying on her new neighbors.";
@@ -336,9 +333,9 @@ to say ArielSex3: [Vaginal]
 to say ArielSex4: [Cunnilingus]
 	say "     You decide to see what the frisky nymph will do when you come up to her and whisper in her ear that you want to feel her mouth on your pussy. Pulling you in for a kiss, she pulls you toward her bedroom, groping you under your clothes as you move toward the waiting bed. You begin to undress, taking your time to remove your clothing as you tease the eager girl. As soon as your pussy is in sight, though, Ariel decides your strip show is over and pushes you over and onto the mattress. Regaining your bearings after the short fall, you can see the impatient sylph between your legs, her long brown hair and shapely ass behind all you can make out as her face is already down in your crotch.";
 	say "     You feel her tongue moving along your pussy as she tastes your leaking girl-cum. Liking what she's found, her tongue penetrates further into your wet sex, driving a cry from your mouth as she tries to reach as far as her limited length will let her. With her face pressed firmly against your mound at this point, you can feel her breath every time she exhales directly onto your clit. The warm air brushes the sensitive spot as if it were the sylph's fingers that were rubbing you. Between the tongue deep in your folds and the strange currents running along the outside, you can feel an overwhelming orgasm approaching. Your legs lock around Ariel's head as the climax tears through you, although she does not pull away regardless, ensuring the sylph gets a face full of your juices. Riding your high to its conclusion, you release the woman from being trapped at your crotch.";
-	NPCSexAftermath Ariel receives "OralPussy" from Player;
 	WaitLineBreak;
 	say "     Slowly raising her head, Ariel wears a blissed-out grin on her soaked face, your nectar dripping from her chin. She crawls forward to lay with you, giving you a short kiss with her wet lips. The two of you rest briefly before rising and cleaning each other up, returning to what you were doing before your urges distracted the two of you.";
+	NPCSexAftermath Ariel receives "OralPussy" from Player;
 
 to say ArielSex5: [Lick Her]
 	say "     When you offer to go down on the sylph, she makes a show of thinking about it while playing with the ribbon in her hair. With a tug, the ribbon comes loose, and you lose sight of Ariel as she turns back into the familiar windy form. You hear a giggle from above you before a weight appears on your shoulders, forcing you to the ground. So that's how she wants to do this. As Ariel moves to your front, you spot the golden ribbon tied firmly around her forearm again before the pussy she thrusts into your face obscures your vision.";

@@ -178,58 +178,55 @@ to say beatthekoboldgang:
 		say "     ([link]N[as]n[end link]) - No, this defeat was humiliating enough.";
 		if Player consents:
 			LineBreak;
-			say "[KoboldGangSexMenu]";
+			say "     What shall you do with them?";
+			now sextablerun is 0;
+			blank out the whole of table of fucking options;
+			[]
+			if Player is male:
+				if BodyName of Player is "Kobold" and Player is pure:
+					choose a blank row in table of fucking options;
+					now title entry is "Fuck the Leader";
+					now sortorder entry is 1;
+					now description entry is "Rim and fuck the leader";
+				[]
+				choose a blank row in table of fucking options;
+				now title entry is "Start an Orgy";
+				now sortorder entry is 2;
+				now description entry is "Use seduction to spur the kobolds into a fuck-fest";
+			[]
+			sort the table of fucking options in sortorder order;
+			repeat with y running from 1 to number of filled rows in table of fucking options:
+				choose row y from the table of fucking options;
+				say "[link][y] - [title entry][as][y][end link][line break]";
+			say "[link]0 - Nevermind[as]0[end link][line break]";
+			while sextablerun is 0:
+				say "Pick the corresponding number> [run paragraph on]";
+				get a number;
+				if calcnumber > 0 and calcnumber <= the number of filled rows in table of fucking options:
+					now current menu selection is calcnumber;
+					choose row calcnumber in table of fucking options;
+					say "[title entry]: [description entry]?";
+					if Player consents:
+						LineBreak;
+						now sextablerun is 1;
+						if title entry is:
+							-- "Fuck the Leader":
+								say "[FuckKoboldGangLeader]";
+							-- "Start an Orgy":
+								say "[KoboldGangOrgy]";
+				else if calcnumber is 0:
+					LineBreak;
+					now sextablerun is 1;
+					say "     You back away and shake your head.";
+				else:
+					say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options], or 0 to exit.";
+			wait for any key;
+			clear the screen and hyperlink list;
 		else:
 			LineBreak;
 			say "     You shake your head, trying to ignore the deviant thoughts. You make your way out of the mess of defeated kobolds, feeling confident that you aren't just the bottom rung on the ladder.";
 	else:
 		say "     You sigh in relief as the last kobold falls to the ground defeated. Hopefully, this might teach the little bastards not to mess with you, but you feel as though this might only drive them to fight harder. You take care not to accidentally step on any of them as you leave the area, leaving the reptiles behind.";
-
-to say KoboldGangSexMenu:
-	say "     What shall you do with them?";
-	now sextablerun is 0;
-	blank out the whole of table of fucking options;
-	[]
-	if Player is male:
-		if BodyName of Player is "Kobold" and Player is pure:
-			choose a blank row in table of fucking options;
-			now title entry is "Fuck the Leader";
-			now sortorder entry is 1;
-			now description entry is "Rim and fuck the leader";
-		[]
-		choose a blank row in table of fucking options;
-		now title entry is "Start an Orgy";
-		now sortorder entry is 2;
-		now description entry is "Use seduction to spur the kobolds into a fuck-fest";
-	[]
-	sort the table of fucking options in sortorder order;
-	repeat with y running from 1 to number of filled rows in table of fucking options:
-		choose row y from the table of fucking options;
-		say "[link][y] - [title entry][as][y][end link][line break]";
-	say "[link]0 - Nevermind[as]0[end link][line break]";
-	while sextablerun is 0:
-		say "Pick the corresponding number> [run paragraph on]";
-		get a number;
-		if calcnumber > 0 and calcnumber <= the number of filled rows in table of fucking options:
-			now current menu selection is calcnumber;
-			choose row calcnumber in table of fucking options;
-			say "[title entry]: [description entry]?";
-			if Player consents:
-				LineBreak;
-				now sextablerun is 1;
-				if title entry is:
-					-- "Fuck the Leader":
-						say "[FuckKoboldGangLeader]";
-					-- "Start an Orgy":
-						say "[KoboldGangOrgy]";
-		else if calcnumber is 0:
-			LineBreak;
-			now sextablerun is 1;
-			say "     You back away and shake your head.";
-		else:
-			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options], or 0 to exit.";
-	wait for any key;
-	clear the screen and hyperlink list;
 
 to say FuckKoboldGangLeader:
 	say "     You let out a soft laugh, as you make your way to the defeated leader. You throw off your clothes and drop your belongings as you look down at the blue kobold. A look of fear grows in his eyes, but the way his tailhole begins clenching and unclenching and his reptilian cock begins emerging from his slit shows how he really feels. You get on your knees, bringing your tongue to his eager, wide hole. You have to make him want this. Just taking him wouldn't mean anything, and it'd just make you as bad as them. Your tapered tongue slides along his tailhole, picking up his musky taste. The leader lets out an involuntary yip as you begin to rim him, but he does nothing to stop you. Your tongue laps around his outer rim, before working its way inward. His hole is easy to enter, and soon your muzzle is buried between his thighs. His insides are easy to navigate, and your warm tongue slides around inside. The way his ass tastes and feels, your own cock is twitching with anticipation.";
@@ -283,6 +280,7 @@ When Play begins:
 	add "Kobold" to infections of BipedalList;
 	add "Kobold" to infections of TailList;
 	add "Kobold" to infections of OviImpregnatorList;
+	add "Kobold" to infections of TailweaponList;
 	now Name entry is "Kobold"; [ Infection/Creature name. Capitalized. ]
 	now enemy title entry is "Kobold Gang";
 	now enemy Name entry is ""; [ Specific name of unique enemy. ]
@@ -298,9 +296,9 @@ When Play begins:
 	now cock entry is "curved, reptilian[if looknow is true] cock. It is sensitive to the touch, and you are hard-pressed to not desire someone to rub your[end if]";
 	now face change entry is "your nose stretches out of it, forming a muzzle. You moan as you stroke your emerging reptilian muzzle, enjoying the new sensations coming with it. Your tongue lengthens and gains a pointed tip as it hangs out of your mouth, a drop of drool hitting the floor. You absentmindedly think about how the new length of your mouth is perfect for sucking someone off, but try to shake the dirty thought out of your head";
 	now body change entry is "you slowly begin to shrink. You lose height until you stand at around four feet tall, and your frame thins. Your fingers lengthen, becoming long and gangly with only slightly sharp claws at the tips, perfect for lightly digging into a lover";
-	now skin change entry is "it feels itchy. You scratch at your skin only to reveal dull bronze scales! You shed your human skin, leaving new kobold scales. Despite being made of sturdier material, your new scales feel even more sensitive, causing you to crave to be touched by others";
-	now ass change entry is "a pressure forms at the base of your spine. You bring a hand back and feel a small protrusion that slowly expands, as a tail slinks out of you! It is covered in dull bronze scales, and is meaty, unlike the rest of our body. The changes don't stop, as you feel your hole change, desperate to be filled! You can't help yourself as your tail takes over, bending as it shoves itself into your tailhole. It thrusts in and out as you tailfuck yourself, and moan in pleasure as you climax. It appears your new hole is designed to be fucked!";
-	now cock change entry is "your cockhead thins. It becomes tapered, and is sucked back into your body, balls and all. You begin to panic, only to realize a slit forms, and out from it your new reptilian cock emerges, smooth, red, and with a tapered point. You crave to stick it into the tailhole of another slutty kobold, to feel its perfect bottom contract around your enhanced tool";
+	now skin change entry is "it starts to feel itchy. You scratch at it only to reveal dull bronze scales! You shed your [SkinName of Player in lower case] skin, leaving new kobold scales. Despite being made of sturdier material, your new scales feel even more sensitive, causing you to crave to be touched by others";
+	now ass change entry is "a pressure forms at the base of your spine. You bring a hand back and feel a small protrusion that slowly expands, as a tail slinks out of you! It is covered in dull bronze scales, and is meaty, unlike the rest of your body. The changes don't stop, as you feel your hole change, desperate to be filled! You can't help yourself as your tail takes over, bending as it shoves itself into your tailhole. It thrusts in and out as you tailfuck yourself, and moan in pleasure as you climax. It appears your new hole is designed to be fucked";
+	now cock change entry is "your cockhead thins. It becomes tapered, and is sucked back into your body, balls and all. You begin to panic, only to realize a slit forms, and out from it your new reptilian cock emerges, smooth, red, and with a tapered point. You crave to stick it into the tailhole of another slutty kobold, to feel his perfect bottom contract around your enhanced tool";
 	now str entry is 9; [ These are now the creature's stats... ]
 	now dex entry is 17; [ ...and are only altered onto the player via Shifting or the Mighty Mutation feat ]
 	now sta entry is 12; [ These values may be used as part of alternate combat. ]

@@ -48,7 +48,7 @@ To fight:
 				if SkinName of Player is Name entry, add Name entry to PossibleEncounters;
 				if TailName of Player is Name entry, add Name entry to PossibleEncounters;
 				if CockName of Player is Name entry, add Name entry to PossibleEncounters;
-	if the number of entries in PossibleEncounters is not 0:
+	if PossibleEncounters is not empty:
 		sort PossibleEncounters in random order;
 		let RandomChosenMonster be entry 1 in PossibleEncounters;
 		setmonster RandomChosenMonster;

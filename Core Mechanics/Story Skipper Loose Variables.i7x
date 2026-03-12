@@ -17,21 +17,18 @@ carry out VariableSaving:
 
 [
 SVText is an action applying to nothing.
-
 understand "SVText" as SVText.
 
 carry out SVText:
 	VariableSaveA;
 
 SVNumber is an action applying to nothing.
-
 understand "SVNumber" as SVNumber.
 
 carry out SVNumber:
 	VariableSaveB;
 
 SVTruth is an action applying to nothing.
-
 understand "SVTruth" as SVTruth.
 
 carry out SVTruth:
@@ -70,18 +67,19 @@ to VariableSave:
 		now CurrentVariableName is Name entry;
 		[if debug is at level 10:
 			say "Stashing variable [CurrentVariableName].";]
-		if Type Entry is "text":
-			TextVariableSave;
-		else if Type Entry is "number":
-			NumberVariableSave;
-		else if Type Entry is "truth state":
-			TruthVariableSave;
-		else if Type Entry is "indexed text":
-			IndexedTextVariableSave;
-		else if Type Entry is "list of text":
-			TextListVariableSave;
-		else if Type Entry is "list of numbers":
-			NumberListVariableSave;
+		if Type Entry is:
+			-- "text":
+				TextVariableSave;
+			-- "number":
+				NumberVariableSave;
+			-- "truth state":
+				TruthVariableSave;
+			-- "indexed text":
+				IndexedTextVariableSave;
+			-- "list of text":
+				TextListVariableSave;
+			-- "list of numbers":
+				NumberListVariableSave;
 	write File of TextSave from the Table of GameTexts; [freshly made table gets saved to file]
 	if debug is at level 10:
 		say "TextSave File Written.";
@@ -1859,55 +1857,55 @@ to IndexedTextVariableSave:
 to TextListVariableSave:
 	if CurrentVariableName is:
 		-- "Childrenbodies":
-			if the number of entries in Childrenbodies is not 0:
+			if Childrenbodies is not empty:
 				repeat with y running from 1 to the number of entries in Childrenbodies:
 					choose a blank row in the table of GameTextLists;
 					now TextListVarName entry is CurrentVariableName;
 					now TextListVarValue entry is entry y of Childrenbodies;
 		-- "Childrenfaces":
-			if the number of entries in Childrenfaces is not 0:
+			if Childrenfaces is not empty:
 				repeat with y running from 1 to the number of entries in Childrenfaces:
 					choose a blank row in the table of GameTextLists;
 					now TextListVarName entry is CurrentVariableName;
 					now TextListVarValue entry is entry y of Childrenfaces;
 		-- "Childrenskins":
-			if the number of entries in Childrenskins is not 0:
+			if Childrenskins is not empty:
 				repeat with y running from 1 to the number of entries in Childrenskins:
 					choose a blank row in the table of GameTextLists;
 					now TextListVarName entry is CurrentVariableName;
 					now TextListVarValue entry is entry y of Childrenskins;
 		-- "Dolphinlist":
-			if the number of entries in Dolphinlist is not 0:
+			if Dolphinlist is not empty:
 				repeat with y running from 1 to the number of entries in Dolphinlist:
 					choose a blank row in the table of GameTextLists;
 					now TextListVarName entry is CurrentVariableName;
 					now TextListVarValue entry is entry y of Dolphinlist;
 		-- "lbcomplist":
-			if the number of entries in lbcomplist is not 0:
+			if lbcomplist is not empty:
 				repeat with y running from 1 to the number of entries in lbcomplist:
 					choose a blank row in the table of GameTextLists;
 					now TextListVarName entry is CurrentVariableName;
 					now TextListVarValue entry is entry y of lbcompList;
 		-- "ndmlist":
-			if the number of entries in ndmlist is not 0:
+			if ndmlist is not empty:
 				repeat with y running from 1 to the number of entries in ndmlist:
 					choose a blank row in the table of GameTextLists;
 					now TextListVarName entry is CurrentVariableName;
 					now TextListVarValue entry is entry y of ndmList;
 		-- "StoredSluts_Female":
-			if the number of entries in StoredSluts_Female is not 0:
+			if StoredSluts_Female is not empty:
 				repeat with y running from 1 to the number of entries in StoredSluts_Female:
 					choose a blank row in the table of GameTextLists;
 					now TextListVarName entry is CurrentVariableName;
 					now TextListVarValue entry is entry y of StoredSluts_Female;
 		-- "StoredSluts_Male":
-			if the number of entries in StoredSluts_Male is not 0:
+			if StoredSluts_Male is not empty:
 				repeat with y running from 1 to the number of entries in StoredSluts_Male:
 					choose a blank row in the table of GameTextLists;
 					now TextListVarName entry is CurrentVariableName;
 					now TextListVarValue entry is entry y of StoredSluts_Male;
 		-- "StoredSluts_Other":
-			if the number of entries in StoredSluts_Other is not 0:
+			if StoredSluts_Other is not empty:
 				repeat with y running from 1 to the number of entries in StoredSluts_Other:
 					choose a blank row in the table of GameTextLists;
 					now TextListVarName entry is CurrentVariableName;
@@ -1916,61 +1914,61 @@ to TextListVariableSave:
 to NumberListVariableSave:
 	if CurrentVariableName is:
 		-- "AlexandraNPC":
-			if the number of entries in AlexandraNPC is not 0:
+			if AlexandraNPC is not empty:
 				repeat with y running from 1 to the number of entries in AlexandraNPC:
 					choose a blank row in the table of GameNumberLists;
 					now NumberListVarName entry is CurrentVariableName;
 					now NumberListVarValue entry is entry y of AlexandraNPC;
 		-- "bookcollection":
-			if the number of entries in bookcollection is not 0:
+			if bookcollection is not empty:
 				repeat with y running from 1 to the number of entries in bookcollection:
 					choose a blank row in the table of GameNumberLists;
 					now NumberListVarName entry is CurrentVariableName;
 					now NumberListVarValue entry is entry y of bookcollection;
 		-- "campuswander":
-			if the number of entries in campuswander is not 0:
+			if campuswander is not empty:
 				repeat with y running from 1 to the number of entries in campuswander:
 					choose a blank row in the table of GameNumberLists;
 					now NumberListVarName entry is CurrentVariableName;
 					now NumberListVarValue entry is entry y of campuswander;
 		-- "Francois_Discovered":
-			if the number of entries in Francois_Discovered is not 0:
+			if Francois_Discovered is not empty:
 				repeat with y running from 1 to the number of entries in Francois_Discovered:
 					choose a blank row in the table of GameNumberLists;
 					now NumberListVarName entry is CurrentVariableName;
 					now NumberListVarValue entry is entry y of Francois_Discovered;
-		-- "Francois_Undiscovered":
-			if the number of entries in Francois_Undiscovered is not 0:
+		[-- "Francois_Undiscovered":
+			if Francois_Undiscovered is not empty:
 				repeat with y running from 1 to the number of entries in Francois_Undiscovered:
 					choose a blank row in the table of GameNumberLists;
 					now NumberListVarName entry is CurrentVariableName;
-					now NumberListVarValue entry is entry y of Francois_Undiscovered;
+					now NumberListVarValue entry is entry y of Francois_Undiscovered;]
 		-- "leodenlist":
-			if the number of entries in leodenlist is not 0:
+			if leodenlist is not empty:
 				repeat with y running from 1 to the number of entries in leodenlist:
 					choose a blank row in the table of GameNumberLists;
 					now NumberListVarName entry is CurrentVariableName;
 					now NumberListVarValue entry is entry y of leodenList;
 		-- "leoparklist":
-			if the number of entries in leoparklist is not 0:
+			if leoparklist is not empty:
 				repeat with y running from 1 to the number of entries in leoparklist:
 					choose a blank row in the table of GameNumberLists;
 					now NumberListVarName entry is CurrentVariableName;
 					now NumberListVarValue entry is entry y of leoparkList;
 		-- "mrevents":
-			if the number of entries in mrevents is not 0:
+			if mrevents is not empty:
 				repeat with y running from 1 to the number of entries in mrevents:
 					choose a blank row in the table of GameNumberLists;
 					now NumberListVarName entry is CurrentVariableName;
 					now NumberListVarValue entry is entry y of mrevents;
 		-- "pfpclist":
-			if the number of entries in pfpclist is not 0:
+			if pfpclist is not empty:
 				repeat with y running from 1 to the number of entries in pfpclist:
 					choose a blank row in the table of GameNumberLists;
 					now NumberListVarName entry is CurrentVariableName;
 					now NumberListVarValue entry is entry y of pfpcList;
 		-- "velospostmusings":
-			if the number of entries in velospostmusings is not 0:
+			if velospostmusings is not empty:
 				repeat with y running from 1 to the number of entries in velospostmusings:
 					choose a blank row in the table of GameNumberLists;
 					now NumberListVarName entry is CurrentVariableName;
@@ -5573,7 +5571,7 @@ to VariableNumberListLoad:
 		truncate bookcollection to 0 entries; [cleaning out the old data]
 		truncate campuswander to 0 entries; [cleaning out the old data]
 		truncate Francois_Discovered to 0 entries; [cleaning out the old data]
-		truncate Francois_Undiscovered to 0 entries; [cleaning out the old data]
+		[truncate Francois_Undiscovered to 0 entries; [cleaning out the old data]]
 		truncate leodenlist to 0 entries; [cleaning out the old data]
 		truncate leoparklist to 0 entries; [cleaning out the old data]
 		truncate mrevents to 0 entries; [cleaning out the old data]
@@ -5587,7 +5585,7 @@ to VariableNumberListLoad:
 				-- "bookcollection": add NumberListVarValue entry to bookcollection;
 				-- "campuswander": add NumberListVarValue entry to campuswander;
 				-- "Francois_Discovered": add NumberListVarValue entry to Francois_Discovered;
-				-- "Francois_Undiscovered": add NumberListVarValue entry to Francois_Undiscovered;
+				[-- "Francois_Undiscovered": add NumberListVarValue entry to Francois_Undiscovered;]
 				-- "leodenlist": add NumberListVarValue entry to leodenList;
 				-- "leoparklist": add NumberListVarValue entry to leoparkList;
 				-- "mrevents": add NumberListVarValue entry to mrevents;

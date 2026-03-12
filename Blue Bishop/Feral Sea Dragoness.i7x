@@ -45,9 +45,9 @@ to say fsdf attack:
 						WaitLineBreak;
 						say "     Like clockwork, the beast's wanton affection arouses you with little difficulty, much to her cooing approval. She continues to suck on your [cock size desc of Player] rod for a brief while longer before she moves on. Having gotten the hang of this, she uses her tail to aim[if Cock Count of Player > 1] one of[end if] your dick[smn] into the needy hole, resting partially on you as she slowly pushes its head into her soft cunt, [if Cock Length of Player >= 18]faintly churring in pleasure before she acclimates to your size[else]cooing softly in approval as it descends into the folds of her flesh[end if].";
 						say "     From here, she makes an earnest effort to use you, rocking her large body against your[if Cock Length of Player > 15] thick[end if] meat with an increasingly reckless fervor, occasionally nipping you in an aggressive show of passion before she sings deeply into the open air, climaxing against your hard organ. Much to the whim of your mistress's body, her pleasure pushes you to your own ecstasy, [if Cock Count of Player > 2]causing your exposed members to unload against both your frames as you pump[else if Cock Count of Player is 2]causing your exposed member to unload against both your frames as you pump[else]pumping[end if] her voracious hole full with your [Cum Load Size of Player] load.";
-						CreatureSexAftermath "Feral Sea Dragoness" receives "PussyFuck" from "Player";
 						WaitLineBreak;
 						say "     A little dizzied from pleasure, she eventually pulls herself free of you. She departs with a playful nip, diving back into the water's depths, transparently sated by her pet's company. As you recover, you remind yourself of the now-apparent, long-term implications of forcing such a normally submissive creature into a dominant role...";
+						CreatureSexAftermath "Feral Sea Dragoness" receives "PussyFuck" from "Player";
 					else:
 						say "     Briefly sharing affection with one of her kind, she seems inclined to nip and tease you, [one of]no doubt this being one who's had fun using you before[or]eager to abuse you already[stopping]. Firmly, she pins you to the ground with her body, shoving her exposed cunt against your head and very insistent on having you satisfy her.";
 						WaitLineBreak;
@@ -64,9 +64,9 @@ to say fsdf attack:
 						WaitLineBreak;
 						say "     Her lewd endeavors need only be brief to bring you to full arousal, continuing to suck on your [cock size desc of Player] rod for a while longer before she relents. Clearly not used to this, she awkwardly uses her tail to aim [if Cock Count of Player > 1]one of [end if]your dick[smn] into the needy hole, resting partially on you as she slowly pushes its head into her soft cunt, [if Cock Length of Player >= 18]faintly churring in pleasure before she acclimates to your size[else]cooing softly in approval as it descends into the folds of her flesh[end if].";
 						say "     From here, she makes an earnest effort to use you, rocking her large body against your[if Cock Length of Player > 15] thick[end if] meat with an increasingly reckless fervor, occasionally nipping you in an aggressive show of passion before she sings out loudly, climaxing against your hard organ. Oddly, her song's pitch is knocked down an octave, and its powerful influence tied with the clenching of her stuffed portal is more than enough to force you into climaxing yourself, regardless of how far along you may have been, [if Cock Count of Player > 2]and causing your exposed members to unload against both your frames as you pump[else if Cock Count of Player is 2]and causing your exposed member to unload against both your frames as you pump[else]pumping[end if] her voracious hole full with your [Cum Load Size of Player] load.";
-						CreatureSexAftermath "Feral Sea Dragoness" receives "PussyFuck" from "Player";
 						WaitLineBreak;
 						say "     A little dizzied from the whole ordeal, she eventually pulls herself free of you. She departs with a playful nip, diving back into the water's depths, no doubt satisfied in spite of the irregular circumstances of this encounter. As you recover, you [one of]ponder[or]remind yourself of[stopping] the potential long-term implications of forcing such a normally submissive creature into a dominant role...";
+						CreatureSexAftermath "Feral Sea Dragoness" receives "PussyFuck" from "Player";
 					else:
 						say "     Briefly sharing affection with one of her kind, she sniffs you over before finally relenting. Gently, she pins you to the ground with her body, facing her exposed cunt against your head, what she intends to have you do quite apparent.";
 						WaitLineBreak;
@@ -301,7 +301,9 @@ to fsdfvicmenu:
 				say "Invalid interaction: You don't meet the criteria.";
 			else:
 				say "[FSDF_1]"; [Cunt Pitching]
-				now tempnum is 0;
+				if fsddom > 0 and a random chance of 1 in fsddom succeeds:
+					decrease fsddom by 1;
+				now tempnum is 2;
 				fsdbiasshift;
 				now Trixieexit is true;
 		else if calcnumber is 2:
@@ -309,7 +311,9 @@ to fsdfvicmenu:
 				say "Invalid interaction: You don't meet the criteria.";
 			else:
 				say "[FSDF_2]"; [Anal Pitching]
-				now tempnum is 0;
+				if fsddom > 0 and a random chance of 1 in fsddom succeeds:
+					decrease fsddom by 1;
+				now tempnum is 2;
 				fsdbiasshift;
 				now Trixieexit is true;
 		else if calcnumber is 3:
@@ -317,7 +321,9 @@ to fsdfvicmenu:
 				say "Invalid interaction: You don't meet the criteria.";
 			else:
 				say "[FSDF_3]"; [Oral Receiving Cock]
-				now tempnum is 0;
+				if fsddom > 0 and a random chance of 1 in fsddom succeeds:
+					decrease fsddom by 1;
+				now tempnum is 2;
 				fsdbiasshift;
 				now Trixieexit is true;
 		else if calcnumber is 4:
@@ -325,12 +331,16 @@ to fsdfvicmenu:
 				say "Invalid interaction: You don't meet the criteria.";
 			else:
 				say "[FSDF_4]"; [Oral Receiving Cunt]
-				now tempnum is 0;
+				if fsddom > 0 and a random chance of 1 in fsddom succeeds:
+					decrease fsddom by 1;
+				now tempnum is 2;
 				fsdbiasshift;
 				now Trixieexit is true;
 		else if calcnumber is 5:
 			say "[FSDF_5]"; [Oral Giving cunt]
-			now tempnum is 0;
+			if fsddom > 0 and a random chance of 1 in fsddom succeeds:
+				decrease fsddom by 1;
+			now tempnum is 2;
 			fsdbiasshift;
 			now Trixieexit is true;
 		else:
@@ -633,15 +643,15 @@ When Play begins:
 	now victory entry is "[fsdf attack]";
 	now desc entry is "     You notice something in the water, which appears to be a large shadow on its approach towards you. Suddenly, the prior silence is shattered with the concussive crashing of waves as a massive beast hurls itself from under its surface, landing on the beach close to you. [one of]The dragoness looks around briefly before seeing you, softly cooing[or]Looking at you, the dragoness briefly sings at you, the influence of which sends a jolt of pleasure though you[or]The dragoness chirps, tilting her finned head at you. She probably thinks she can pull off looking cute while still being a massive monster[at random]. You'd imagine its fin-like limbs would be ill-equipped to move across land, but she's quick to prove otherwise as the massive bulk begins rushing down upon you.[line break]";
 	now face entry is "very much draconic in shape, adorned with a set of barbed and savage teeth. Clearly aquatic in design, ridges and fins adorn the sides of your head, and you find it a challenge to maneuver any building with such an elongated neck"; [ Face description, format as "Your face is [Face of Player]." ]
-	now body entry is "distinctly bloated and bulky fare, though somewhat streamlined in presentation, inferring that you'd be better suited for hauling it underwater, if your webbed and finned limbs were any indication"; [ Body Description, format as "Your Body is [Body of Player]." ]
+	now body entry is "distinctly bloated and bulky fare, though somewhat streamlined in presentation, inferring that you'd be better suited for hauling it underwater, if your webbed and finned limbs are any indication"; [ Body Description, format as "Your Body is [Body of Player]." ]
 	now skin entry is "light blue, [one of]smoothly[or]softly[or]delicately[at random] scaled"; [ Skin Description, format as "Looking at yourself, your body is covered in [Skin of Player] skin." ]
 	now tail entry is "You have a long, somewhat bulky tail, top adorned with a sail-like fin."; [ Tail description, write a whole Sentence or leave blank. ]
 	now cock entry is "[one of]spade-tipped, tapered[or]dark blue[at random]";
 	now face change entry is "it draws forward, narrowing into a distinctly draconic muzzle, the features of which are subtly feminine and finned for aquatic travel, and you nearly fall over as you find your neck suddenly elongated"; [ Face change text, format as "Your face feels funny as [face change entry]." ]
 	now body change entry is "you undergo the effects of this infectious strain. Your features become increasingly rounded to appeal to a more aquatic - though distinctly draconic - lifestyle, though thankfully your limbs retain their articulation and mobility so that you fare on land with minimal difficulty"; [ Body change text, format as "Your body feels funny as [body change entry]." ]
-	now skin change entry is "it toughens. Dark - though subtly glittering - scales sprout from your flesh to cover the whole of your body. Curiously, it feels better suited for aquatic life than one on land"; [ Skin change text, format as "Your skin feels funny as [skin change entry]." ]
-	now ass change entry is "you undergo the effects of this infectious strain. You nearly lose balance as a long, large - though relatively lightweight - tail explodes from your behind. It's distinguished with a fin across its top, inferring its more aquatic application"; [ Ass/tail change text, format as "Your ass feels funny as [ass change entry]." ]
-	now cock change entry is "your cock turns a deep, dark blue, gradually tapering towards the tip, the flair spreading to give it a distinctly spade shape";
+	now skin change entry is "it toughens. Dark though subtly glittering scales sprout from your flesh to cover the whole of your body. Curiously, it feels better suited for aquatic life than one on land"; [ Skin change text, format as "Your skin feels funny as [skin change entry]." ]
+	now ass change entry is "you undergo the effects of this infectious strain. You nearly lose balance as a long, large though relatively lightweight tail explodes from your behind. It's distinguished with a fin across its top, inferring its more aquatic application"; [ Ass/tail change text, format as "Your ass feels funny as [ass change entry]." ]
+	now cock change entry is "your cock turns a deep, dark blue, gradually tapering towards the tip, the flare spreading to give it a distinctly spade shape";
 	now str entry is 20;
 	now dex entry is 16;
 	now sta entry is 20;
@@ -1080,14 +1090,14 @@ to say fsdinheat:
 		if a random chance of fsdchance in 250 succeeds:
 			if location of Player is fasttravel and location of Player is not Beach Plaza and location of Player is not Bouncy Castle:
 				say "     Your heat-filled mind calls you towards the waterfront, wanting to swim in the ocean and find a sexy aquatic lover to satisfy your heat. Before you can regain your senses, you head back to the beach.";
-				AttemptToWait;
+				WaitLineBreak;
 				move player to Beach Plaza;
 				AddNavPoint Beach Plaza;
 				now heatturnskipper is true;
 				follow the turnpass rule;
 			else if location of Player is Beach Plaza or location of Player is Church Hall or location of Player is Boardwalk2 or location of Player is Restaurant or location of Player is Sunny Snacks or location of Player is Dirty Sheds or location of Player is Overgrown Area:
 				say "     Catching the breeze of the sea in the air, your [if Player is female]puss[yfn] quiver[sfv][else if Player is male]dick[smn] throb[smv][else]body trembles[end if] with need and your heat-addled mind is distracted, drawn back to the beach in the hopes of satisfying its need to be fucked and bred.";
-				AttemptToWait;
+				WaitLineBreak;
 				move player to Public Beach;
 			else if location of Player is Public Beach or location of Player is Rocky Cliff or location of Player is Wild Fringe:
 				say "     Looking out over the water, your lustful urges increase and you long to rush out and play in the water. Perhaps its cool waters will soothe your heat. Your [if Player is female]puss[yfn] quiver[sfv][else if Player is male]dick[smn] throb[smv][else]body trembles[end if] with each wave rolling onto the beach, making you feel all the more like you belong out there.";

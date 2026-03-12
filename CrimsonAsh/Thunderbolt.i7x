@@ -15,7 +15,7 @@ a postimport rule: [bugfixing rules for players that import savegames]
 		change the west exit of Greek Street to Thunderbolt's Stable;
 	now SexuallyExperienced of Thunderbolt is true;
 	now Sterile of Thunderbolt is false;
-	now MainInfection of Thunderbolt is "Wild Mustang";
+	now MainInfection of Thunderbolt is "Feral Mustang Stallion";
 
 Section 1 - Events
 
@@ -100,8 +100,7 @@ Thunderbolt's Stable	"Thunderbolt's Stable"
 Thunderbolt's Stable is a room.
 Description of Thunderbolt's Stable is "     Thunderbolt's stable is a mid-sized pen thrown together by the lioness sisters Ariana and Eres. It has all the basic amenities to keep a horse well cared for: a trough, a few bales of hay and a wooden lean-to big enough for the big stallion to sleep under.[line break]".
 
-instead of going to Thunderbolt's Stable:
-	move player to Thunderbolt's Stable;
+check going to Thunderbolt's Stable:
 	say "     Walking between a familiar set of campus buildings, you find your way back to Thunderbolt's stable. You see your large equine mate resting in a [if daytimer is day]particularly sunny[else]moonlit[end if] part of his pen, and as you enter he looks up to meet your eye.";
 	if Ariana is in Thunderbolt's Stable:
 		say "     The two lioness sisters are here as well, stroking their mascot's mane and talking amongst themselves. When they too spot you they wave you over and Ariana, the older of the two stands up. 'Hey friend! Good to see you back, glad Bolt here didn't scare you off,' she says with a wink. You can see behind her Eres giving you a shy smile and wave.";
@@ -156,7 +155,7 @@ PenileVirgin of Thunderbolt is false.
 SexuallyExperienced of Thunderbolt is true.
 TwistedCapacity of Thunderbolt is false. [Twisted Characters can take any penetration, no matter the size]
 Sterile of Thunderbolt is false. [steriles can't knock people up]
-MainInfection of Thunderbolt is "Wild Mustang".
+MainInfection of Thunderbolt is "Feral Mustang Stallion".
 Description of Thunderbolt is "     Thunderbolt is the college campus's football mascot, he is a young and well-muscled stallion with a brown coat and darker brown mane. He usually strides around donning his Westside Stallions regalia, almost always followed in tow by his two feline handlers, Ariana and Eres.[line break]".
 The scent of Thunderbolt is "     You sniff the feral horse. He smells like cut hay and soap, the sisters must keep him well bathed.".
 
@@ -294,7 +293,7 @@ Description of Ariana is "     Ariana is a bipedal lioness girl standing around 
 The scent of Ariana is "     Ariana smells musky from a day's jog, the scent underlain by a sweet smell of perfume and pheromones.".
 
 instead of conversing the Ariana:
-	say "     You walk up and say hello to the lovely lioness. 'Hey how have you been sweetie?' After some casual talk you eventually broach asking her about herself. She looks a little surprised but gives you a toothy smile. 'Well, I used to be a gymnast here, but now I sort of just hang around campus, beating sis at sports, annoying the football team and fucking the stallion,' she says, biting a finger and chuckling.";
+	say "     You walk up and say hello to the lovely lioness. 'Hey how have you been, sweetie?' After some casual talk you eventually broach asking her about herself. She looks a little surprised but gives you a toothy smile. 'Well, I used to be a gymnast here, but now I sort of just hang around campus, beating sis at sports, annoying the football team and fucking the stallion,' she says, biting a finger and chuckling.";
 
 instead of fucking Ariana:
 	say "     What exactly do you plan on doing with the young lioness?";
@@ -379,7 +378,7 @@ Description of Eres is "     Eres is a bipedal lioness girl standing around six 
 The scent of Eres is "     Eres smells of evergreen grass with a hint of the innards of a book.".
 
 instead of conversing the Eres:
-	say "     You walk up and say hello to the lovely lioness. Eres pokes her head up from a small journal she was writing in and gives you a shy smile. [first time]'Oh, hello there I don't think we've actually formally met. I'm Eres.' [only]She lays a paw out to shake, which you do. After some casual talk you ask her about herself. She flashes you a coy smile. 'I used to study economics here, you know before everything happened. I suppose now I just take it day by day, usually in the library reading about the past.' She gazes back down to her journal smiling fondly.";
+	say "     You walk up and say hello to the lovely lioness. Eres pokes her head up from a small journal she was writing in and gives you a shy smile. [first time]'Oh, hello there, I don't think we've actually formally met. I'm Eres.' [only]She lays a paw out to shake, which you do. After some casual talk you ask her about herself. She flashes you a coy smile. 'I used to study economics here, you know before everything happened. I suppose now I just take it day by day, usually in the library reading about the past.' She gazes back down to her journal, smiling fondly.";
 
 instead of fucking Eres:
 	say "     What exactly do you plan on doing with the young lioness?";

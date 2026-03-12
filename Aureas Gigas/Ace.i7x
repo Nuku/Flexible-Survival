@@ -80,7 +80,7 @@ to say ResolveEvent Jetlagged:
 	WaitLineBreak;
 	say "     Deciding that some lighthearted conversation is needed, Ace shares a story of his youth in the Pacific northwest and how one day when he was fishing at a lake with his family, he was reeling in a whopper of a trout when an osprey snatched the fish out of the water breaking the line and leaving a feather in its wake. Taking the feather out of one of his pockets, the fighter pilot surmises, 'Maybe this good luck charm is what shaped my current form. Not that I'm complaining, I think my body works well for me.' You begin to feel restless, which can be sensed by the stud. 'You seem like you're itching to get back on the trail. I'll see you out.' Exiting the tent, the former pilot states, 'I have to travel to work out some deals with some seagulls at the beach trading supplies for food. I might see you out and about.' He then moves close and whispers, 'And if you're ever in the mood for the type of fun that Gray and Izzy have, I offer my services.' He then gives you happy parting words.";
 	AddNavPoint Staghorn;
-	AttemptToWait;
+	WaitLineBreak;
 	move player to Staghorn;
 	now battleground is "void";
 	now HP of Ace is 2;
@@ -139,6 +139,7 @@ Sterile of Ace is false. [steriles can't knock people up]
 MainInfection of Ace is "". [since there is no fitting infection for him, he's sterile for now]
 Description of Ace is "     The athletic anthro osprey stands upright at a height of about six foot tall and exudes a commanding presence. His body toned and well-muscled due to military training seems to strain the fabric of his jumpsuit. The feathers of his torso are white colored while the ones on his back, arms, and legs are brown. His head is white with a dark mask across his eyes, reaching to the sides of his neck. His gold colored eyes seem to gaze over at some individuals engaging in conversation.[line break]".
 [Conversation of Ace is { "Skypilot!" }.]
+fuckscene of Ace is "[AceSexMenu]".
 icon of Ace is Figure of Ace_icon.
 the scent of the Ace is "     The avian has a strangely masculine scent that reminds you of the sea.".
 
@@ -146,57 +147,54 @@ Instead of conversing the Ace:
 	project Figure of Ace_icon;
 	say "     [one of]'I heard that a boar is trying to make a town similar to what we have here. I wish him the best of luck,' says the osprey.[or]'I wonder how Marsden is doing. The bull always has good wares and the cuckoos miss seeing him,' he muses while staring at a box of supplies.[or]'Hope my wingman is doing alright out there. Kaye wouldn't handle living in the city quite as well as I can,' he says as he looks at the partially clouded sky.[or]'I hope the antiques we sent to the peacock are worth a good price. We're running slightly low on water,' he says, examining an inventory checklist made in a notebook.[or]'Helping these settlers out has really given me a purpose.'[or]'Ace isn't my real name, Izzy started calling me that and I decided to roll with it. The name seems to fit my new form well,' he states, slightly embarrassed.[at random]";
 
-Instead of fucking the Ace:
+to say AceSexMenu:
 	project Figure of Ace_icon;
 	if lastfuck of Ace - turns < 6:
 		say "     Chuckling mildly, the osprey states, 'Sorry I can't have more fun right now, I need to keep an eye on the camp.'";
 	else: [ready for sex]
 		say "     As you walk up to Ace, he has a cocky look in his eyes as he asks, 'You need me for anything special?'";
-		say "[AceSexMenu]";
-
-to say AceSexMenu:
-	now sextablerun is 0;
-	blank out the whole of table of fucking options;
-	[]
-	choose a blank row in table of fucking options;
-	now title entry is "Suck Ace off"; [anyone can blow him]
-	now sortorder entry is 1;
-	now description entry is "Wrap your lips around the osprey's avian rod";
-	[]
-	if Player is female: [only females and herms can take him in the pussy]
+		now sextablerun is 0;
+		blank out the whole of table of fucking options;
+		[]
 		choose a blank row in table of fucking options;
-		now title entry is "Take Ace's shaft in your pussy";
-		now sortorder entry is 2;
-		now description entry is "Offer sex to the dominant anthro bird";
-	[]
-	sort the table of fucking options in sortorder order;
-	repeat with y running from 1 to number of filled rows in table of fucking options:
-		choose row y from the table of fucking options;
-		say "[link][y] - [title entry][as][y][end link][line break]";
-	say "[link]0 - Nevermind[as]0[end link][line break]";
-	while sextablerun is 0:
-		say "Pick the corresponding number> [run paragraph on]";
-		get a number;
-		if calcnumber > 0 and calcnumber <= the number of filled rows in table of fucking options:
-			now current menu selection is calcnumber;
-			choose row calcnumber in table of fucking options;
-			say "[title entry]: [description entry]?";
-			if Player consents:
+		now title entry is "Suck Ace off"; [anyone can blow him]
+		now sortorder entry is 1;
+		now description entry is "Wrap your lips around the osprey's avian rod";
+		[]
+		if Player is female: [only females and herms can take him in the pussy]
+			choose a blank row in table of fucking options;
+			now title entry is "Take Ace's shaft in your pussy";
+			now sortorder entry is 2;
+			now description entry is "Offer sex to the dominant anthro bird";
+		[]
+		sort the table of fucking options in sortorder order;
+		repeat with y running from 1 to number of filled rows in table of fucking options:
+			choose row y from the table of fucking options;
+			say "[link][y] - [title entry][as][y][end link][line break]";
+		say "[link]0 - Nevermind[as]0[end link][line break]";
+		while sextablerun is 0:
+			say "Pick the corresponding number> [run paragraph on]";
+			get a number;
+			if calcnumber > 0 and calcnumber <= the number of filled rows in table of fucking options:
+				now current menu selection is calcnumber;
+				choose row calcnumber in table of fucking options;
+				say "[title entry]: [description entry]?";
+				if Player consents:
+					LineBreak;
+					now sextablerun is 1;
+					if title entry is:
+						-- "Suck Ace off":
+							say "[AceSex1]";
+						-- "Take Ace's shaft in your pussy":
+							say "[AceSex2]";
+			else if calcnumber is 0:
 				LineBreak;
 				now sextablerun is 1;
-				if title entry is:
-					-- "Suck Ace off":
-						say "[AceSex1]";
-					-- "Take Ace's shaft in your pussy":
-						say "[AceSex2]";
-		else if calcnumber is 0:
-			LineBreak;
-			now sextablerun is 1;
-			say "     You step back from the anthro bird, shaking your head slightly as he gives a questioning look.";
-		else:
-			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options], or 0 to exit.";
-	wait for any key;
-	clear the screen and hyperlink list;
+				say "     You step back from the anthro bird, shaking your head slightly as he gives a questioning look.";
+			else:
+				say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options], or 0 to exit.";
+		wait for any key;
+		clear the screen and hyperlink list;
 
 to say AceSex1: [oral on Ace]
 	say "     With a randy look in your eye, you ask Ace in a flirtatious manner if he would like you to [']check out his equipment[']. The osprey pauses for a second before guiding you back to his tent, he temptingly says, 'You do seem to have a good eye for whether stuff is up to standards.' He begins to remove his jumpsuit showing his notably large tapered avian cock and hefty balls. With a ribald tone you utter, 'Quite a decent package, but I'm going to have to see what it looks like at the ready.' Your right hand softly runs along the sides of the rod, while your fingertips gently tease his sack. The avian brings you closer and traces along the small of your back. The tip of his hardening length starts pressing up against your body. With a cocky attitude the raptor boasts, 'Us pilots know how to be ready for action at a moment's notice.'";

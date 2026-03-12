@@ -192,7 +192,7 @@ Name(text)	Type(text)
 "bookcollection"	"list of numbers"
 "campuswander"	"list of numbers"
 "Francois_Discovered"	"list of numbers"
-"Francois_Undiscovered"	"list of numbers"
+["Francois_Undiscovered"	"list of numbers"]
 "leodenlist"	"list of numbers"
 "leoparklist"	"list of numbers"
 "mrevents"	"list of numbers"

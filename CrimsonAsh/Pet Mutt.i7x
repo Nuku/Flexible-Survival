@@ -156,10 +156,11 @@ to say Pet MuttTalkMenu:
 	now sortorder entry is 4;
 	now description entry is "Have a Lassie moment with [PetMuttName]";
 	[]
-	choose a blank row in table of fucking options;
-	now title entry is "Kiss him";
-	now sortorder entry is 5;
-	now description entry is "Smooch with [PetMuttName]";
+	if lastfuck of Pet Mutt - turns >= 2:
+		choose a blank row in table of fucking options;
+		now title entry is "Kiss him";
+		now sortorder entry is 5;
+		now description entry is "Smooch with [PetMuttName]";
 	[]
 	sort the table of fucking options in sortorder order;
 	repeat with y running from 1 to number of filled rows in table of fucking options:

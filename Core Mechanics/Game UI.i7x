@@ -87,7 +87,7 @@ to say promptsay:
 			if object entry is nowhere, now object entry is part of Player;
 		else if object entry is part of Player: [all other items get consigned to the void]
 			now object entry is nowhere;
-	if number of entries in invent of location of Player > 0:
+	if invent of location of Player is not empty:
 		say "Visible Objects: ";
 		repeat with q running through invent of location of Player:
 			if q is a name listed in Table of Game Objects: [make it accessible to player commands]
@@ -319,7 +319,7 @@ To showstats (x - Person):
 	if "Fast Learner" is listed in feats of x:
 		now z is ( level of x plus one ) times 8;
 	say "Level: [level of x], XP: [XP of x]/[z]";
-	if the number of entries in feats of the x > 0:
+	if feats of the x is not empty:
 		say ", [link]Feats[as]FeatsList[end link]";
 	say ", [link]Orientation[as]adjust player orientation[end link]";
 	if number of filled rows in Table of PlayerChildren + number of entries in childrenfaces > 0: [more than zero children of both types combined]
@@ -377,10 +377,10 @@ This is the self examine rule:
 		follow the breast descr rule;
 		if Nipple Count of Player > 0:
 			if Breast Size of Player is 0:
-				say "You have [Nipple Count of Player] nipples on your [Bodydesc of Player] chest. ";
+				say "You have [Nipple Count of Player in words] nipples on your [Bodydesc of Player] chest. ";
 			else:
 				if Nipple Count of Player > 2:
-					say "You have [Nipple Count of Player] breasts on your [Bodydesc of Player] chest. The first pair looks [descr] and curves out [Breast Size of Player] inch[if Breast Size of Player is not 1]es[end if] from your chest. The second pair curves out [(Breast Size of Player times three) divided by five] inch[if ( Breast Size of Player times three ) divided by 5 is not 1]es[end if] from your chest. ";
+					say "You have [Nipple Count of Player in words] breasts on your [Bodydesc of Player] chest. The first pair looks [descr] and curves out [Breast Size of Player] inch[if Breast Size of Player is not 1]es[end if] from your chest. The second pair curves out [(Breast Size of Player times three) divided by five] inch[if ( Breast Size of Player times three ) divided by 5 is not 1]es[end if] from your chest. ";
 					if Nipple Count of Player > 4, say "The rest jostle for space [Breast Size of Player divided by three] inch[if Breast Size of Player divided by 3 is not 1]es[end if] from your belly. ";
 				else:
 					say "You have two [descr] breasts on your [Bodydesc of Player] chest, curving out [Breast Size of Player] inch[if Breast Size of Player is not 1]es[end if] from your chest. ";
@@ -432,9 +432,9 @@ This is the self examine rule:
 	else: [old style]
 		if Player is male:
 			if Cock Count of Player > 1:
-				now cocktext is "have [Cock Count of Player] [Cock Size Desc of Player] [if Cock Length of Player < 10][Cock Length of Player in words][else][Cock Length of Player][end if]-inch-long [Cock of Player] [one of]cocks[or]penises[or]shafts[or]manhoods[at random]. They are [if Libido of Player <= 25]only somewhat aroused at the moment[else if Libido of Player <= 50]partially hard and dribbling a little pre[else if Libido of Player <= 75]erect and leaking precum[else]fully erect and drooling precum steadily[end if]. [if Player is internalBalls]Though they are not outwardly apparent, you wager you have[else]Underneath them hangs[end if] [one of]a pair of[or]a set of[at random] [Ball Size Adjective of Player] balls. ";
+				now cocktext is "have [Cock Count of Player in words] [Cock Size Desc of Player] [Cock Length of Player]-inch-long [Cock of Player] [one of]cocks[or]penises[or]shafts[or]manhoods[at random]. They are [if Libido of Player <= 25]only somewhat aroused at the moment[else if Libido of Player <= 50]partially hard and dribbling a little pre[else if Libido of Player <= 75]erect and leaking precum[else]fully erect and drooling precum steadily[end if]. [if Player is internalBalls]Though they are not outwardly apparent, you wager you have[else]Underneath them hangs[end if] [one of]a pair of[or]a set of[at random] [Ball Size Adjective of Player] balls. ";
 			else:
-				now cocktext is "have a [Cock Size Desc of Player] [if Cock Length of Player < 10][Cock Length of Player in words][else][Cock Length of Player][end if]-inch-long [Cock of Player] [one of]cock[or]penis[or]shaft[or]maleness[at random]. It is [if Libido of Player <= 25]only somewhat aroused at the moment[else if Libido of Player <= 50]partially hard and dribbling a little pre[else if Libido of Player <= 75]erect and leaking precum[else]fully erect and drooling precum steadily[end if]. [if Player is internalBalls]Though they are not outwardly apparent, you wager you have[else]Underneath it hangs[end if] [one of]a pair of[or]a set of[at random] [Ball Size Adjective of Player] balls. ";
+				now cocktext is "have [a Cock Size Desc of Player] [Cock Length of Player]-inch-long [Cock of Player] [one of]cock[or]penis[or]shaft[or]maleness[at random]. It is [if Libido of Player <= 25]only somewhat aroused at the moment[else if Libido of Player <= 50]partially hard and dribbling a little pre[else if Libido of Player <= 75]erect and leaking precum[else]fully erect and drooling precum steadily[end if]. [if Player is internalBalls]Though they are not outwardly apparent, you wager you have[else]Underneath it hangs[end if] [one of]a pair of[or]a set of[at random] [Ball Size Adjective of Player] balls. ";
 	let cunttext be "";
 	follow the cunt descr rule;
 	if Cunt Description of Player is not "" and NewTypeInfectionActive is true: [new infection on player and activated]
@@ -446,7 +446,7 @@ This is the self examine rule:
 	else: [old style]
 		if Player is female:
 			if Cunt Count of Player > 1:
-				now cunttext is "have [Cunt Count of Player] [Cunt Size Desc of Player] [one of]cunts[or]pussies[or]vaginas[at random]. Further probing shows them to be [Cunt Depth of Player] inches deep and able to stretch to about [Cunt Tightness of Player] inches in diameter. They are [if Libido of Player <= 25]a little damp at the moment[else if Libido of Player <= 50]wet with your juices[else if Libido of Player <= 75]hot and dripping juices[else]drooling musky nectar down your thighs[end if]. ";
+				now cunttext is "have [Cunt Count of Player in words] [Cunt Size Desc of Player] [one of]cunts[or]pussies[or]vaginas[at random]. Further probing shows them to be [Cunt Depth of Player] inches deep and able to stretch to about [Cunt Tightness of Player] inches in diameter. They are [if Libido of Player <= 25]a little damp at the moment[else if Libido of Player <= 50]wet with your juices[else if Libido of Player <= 75]hot and dripping juices[else]drooling musky nectar down your thighs[end if]. ";
 			else:
 				now cunttext is "have a [one of]cunt[or]pussy[or]vagina[or]cleft[at random] that looks [Cunt Size Desc of Player], and further probing shows it to be [Cunt Depth of Player] inches deep and able to stretch to [Cunt Tightness of Player] inches in diameter. It is [if Libido of Player <= 25]a little damp at the moment[else if Libido of Player <= 50]wet with your juices[else if Libido of Player <= 75]hot and dripping juices[else]drooling musky nectar down your thighs[end if]. ";
 	[displaying the texts]
@@ -535,7 +535,7 @@ carry out ListFollowingChildren:
 		say "Trailing behind come your children:[line break][line break]";
 	else: [exactly one child]
 		say "Trailing behind comes your child:[line break][line break]";
-	if the number of entries in childrenfaces > 0: [player has old style children]
+	if childrenfaces is not empty: [player has old style children]
 		if the number of entries in childrenfaces is 1:
 			if entry 1 of childrenskins is not entry 1 of childrenbodies or entry 1 of childrenskins is not entry 1 of childrenfaces:
 				say "Your child has a [entry 1 of childrenfaces] face, and a [entry 1 of childrenbodies] body covered in [entry 1 of childrenskins] skin.";
@@ -598,7 +598,7 @@ to linkaction (x - Person):
 	say "[linkaction of x]";
 
 to say PetdismissCheck (linkcheck - a person):
-	if number of entries in companionList of Player is greater than 0:
+	if companionList of Player is not empty:
 		let linkname be printed name of linkcheck;
 		repeat with companion running through companionList of Player:
 			if printed name of companion exactly matches the text linkname, case insensitively:

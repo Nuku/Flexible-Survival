@@ -366,7 +366,7 @@ carry out HuntAction:
 							now CreatureArtworkOverride is false;
 							now inasituation is false;
 						break;
-	if the number of entries in PossibleEncounters is not 0 and Found is 10: [got list of creatures in the area & found the target creature]
+	if PossibleEncounters is not empty and Found is 10: [got list of creatures in the area & found the target creature]
 		sort PossibleEncounters in random order; [the one who gets put on #1 is the winner]
 		if debugactive is 1:
 			say "DEBUG -> Random sorted PossibleEncounters: [PossibleEncounters][line break]";
@@ -464,7 +464,7 @@ carry out situationlisting:
 	now battleground is the earea of location of Player;
 	let situationlist be a list of text;
 	repeat with n running through active unresolved situations:
-		if Sarea of n exactly matches the text battleground, case insensitively or Sarea in lower case is "allzones":
+		if Sarea of n exactly matches the text battleground, case insensitively:
 			add printed name of n to situationlist;
 	sort situationlist;
 	repeat with target running through situationlist:
