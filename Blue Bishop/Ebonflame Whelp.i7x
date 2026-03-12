@@ -63,9 +63,9 @@ to say ebwhelpvic:
 		WaitLineBreak;
 		say "     Your tongue [if HP of Player > 0 or Player is submissive]caressing along its slick girth, the flaccid tool has more than enough yield to invite your maw's[else]forced to writhe along its slick girth, the flaccid tool has more than enough yield to invite your maw's involuntary[end if] squeezing, milking endeavors, causing the twisted critter to chitter and howl slowly in bliss. [if Player is male]Driven by your rising arousal to jerk yourself off[else if Player is female]Driven by your rising arousal to fondle yourself[else]Genderless body wracked by an insatiable need[end if], you feel his molten precum sputter [if scalevalue of Player < 4]into your stomach, yourself lost in a haze of growing need and slight suffocation[else]down your throat, yourself lost in a haze of growing need[end if].";
 		say "     Your[if HP of Player < 1] forced[end if] attendance is eventually rewarded when the whelp cries out, searing rod bulging significantly and your insides are doused with successive barrages of the monster's oversized load. It seems likely so much that you're not rightly sure how the little thing could even carry it all, stomach [if scalevalue of Player < 3]visibly bulging[else]aching painfully[end if] with the glowing cum.";
-		CreatureSexAftermath "Player" receives "OralCock" from "Ebonflame Whelp";
 		WaitLineBreak;
 		say "     So exhausted and spent, the whelp chittering feebly as he catches his breath, he doesn't seem to notice or care that you're still being forced to deepthroat his entire organ, only choosing to finally pull free when he flies off into the distance. Finally left to recover and gasp for air, you groan and writhe from the excessive amount of cum you were forced to swallow. Eventually, you climb to your feet finally free to go about your business once more.";
+		CreatureSexAftermath "Player" receives "OralCock" from "Ebonflame Whelp";
 		if ebwhelphijack > 0:
 			say "[line break]     [italic type]Still bloated from the original whelp's violation, consuming all this burning fluid seems to have worsened your situation by accelerating your twisted offspring's growth...[roman type][line break]";
 			decrease hijackgestation by 1;
@@ -153,7 +153,7 @@ When Play begins:
 	now libido entry is 10;
 	now lootchance entry is 10;
 	now loot entry is "ebonflame scale";
-	now MilkItem entry is "ebonflame whelp milk"; [ Item to be given to the player if they have this infection and milk themselves. ]
+	now MilkItem entry is ""; [ Item to be given to the player if they have this infection and milk themselves. ]
 	now CumItem entry is ""; [ Item to be given to the player if they have this infection and jerk off. ]
 	now TrophyFunction entry is "-"; [ Function to generate a list of optional loot items, of which the player can choose one after victory. ]
 	now scale entry is 3;
@@ -318,11 +318,7 @@ to ebwhelphijackroutine:
 		now birthedwhelp is true;
 		challenge "Ebonflame Whelp";
 		now birthedwhelp is false;
-	else if hijackgestation < 3: [LATE]
-		say "[line break]Your [bodytype of Player] belly protrudes in a firm dome of pregnancy, full of the violently churning, unborn being, becoming increasingly desperate to escape. You don't feel hindered despite being bloated but the constant, burning sensation of your corrupted offspring torments you to no end.";
-	else if hijackgestation < 5: [MIDDLE]
-		say "[line break]Your [bodydesc of Player] body is somewhat rounded by the effects of your terribly twisted pregnancy. It's progressing at what would seem to be a terrifyingly fast speed, even for these circumstances...";
-	else: [EARLY]
-		say "[line break][one of]You feel an ominous shifting of something inside[or]An unsettling warmth churns through[at random] your lower belly...";
+	else:
+		say "[line break][if hijackgestation < 3]Your [bodytype of Player] belly protrudes in a firm dome of pregnancy, full of the violently churning, unborn being, becoming increasingly desperate to escape. You don't feel hindered despite being bloated but the constant, burning sensation of your corrupted offspring torments you to no end.[else if hijackgestation < 5]Your [bodydesc of Player] body is somewhat rounded by the effects of your terribly twisted pregnancy. It's progressing at what would seem to be a terrifyingly fast speed, even for these circumstances...[else][one of]You feel an ominous shifting of something inside[or]An unsettling warmth churns through[at random] your lower belly...[end if]";
 
 Ebonflame Whelp ends here.

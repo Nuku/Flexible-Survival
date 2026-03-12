@@ -14,21 +14,21 @@ to say LoseToFeralDog:
 		if Player is herm: 			  [Yes = HERM Identified!]
 			say "     Backing up you place your arms up and lay your back down on the cold ground below, fully submitting to the canine beast. Before you can act further, surging forward the dog tears off your underclothes with sharp canines. Leaping atop your form at a moment's notice the mutt's cock has since grown to its full eight inch erectness with a bulging red knot at the base. Thrusting wildly at your tummy the feral covers your neck and face in doggy kisses and slobber, the musky smell of the beast filling your senses and better judgment as he finds home in your cunt. Throwing your head back at the sudden penetration the dog hilts himself to the knot inside you in one lucky hump before he pulls back and resumes thrusting. As the dog's exotic red cock ruts into your tender sex the feral beast continues to lick and kiss your face and neck. Hammering into you, you're overcome with a feral base lust and start to moan and yip like a bitch in heat.";
 			say "     Taking advantage of your parted lips the beast slips his long canine tongue into your mouth as his rough tongue tangles with your own. It explores every inch of your mouth and waves of tasty slobber follow, only further exciting you. As the feral beast essentially spit roasts you, he begins to speed up, humping with incredible speed into your receptive cunt. Letting his tongue withdraw from your mouth with a trail of saliva the mutt bites down on your neck, enough to hold you firmly but not enough to draw blood. With one final massive thrust the dog hilts himself in you again and continues to push; popping his huge swollen knot into your soaked cunt you let out a shriek of pleasure and clamp down around his hot doggy cock and climax. You shoot your own load all over your chest as you spasm around the canine's member. Following with you and stuck firmly inside your heavenly sex the feral cums as well. Pumping load after load of fertile canine cum into you the dog growls into your neck as he breeds you like a good bitch.";
-			CreatureSexAftermath "Player" receives "PussyFuck" from "Feral Mutt";
 			WaitLineBreak;
 			say "     Coming down from your climax the dog stays in his dominant missionary position as your sex milks the last drops of his dog seed into you. He resumes covering your face in wet kisses while waiting for his large knot to deflate in you. You faithfully make out with your canine mate until he slips out of your sensitive lips. You let out a moan as he slides out of your well-fucked pussy and then trots off, seemingly content with his breeding. You lay there for a while, rubbing your cum-slicked lips as dog jizz runs down your thighs before getting up and going on your way.";
+			CreatureSexAftermath "Player" receives "PussyFuck" from "Feral Mutt";
 		else if Player is female: [Yes = FEMALE Identified!]
 			say "     Backing up, you place your arms up and lay back down on the cold ground, fully submitting to the canine beast. Before you can act further, the dog surges forward, tearing off your underclothes with sharp canines. Leaping atop your form at a moment's notice, the mutt's cock has since grown to its full eight inch erectness with a bulging, red knot at the base. Thrusting wildly at your tummy, the feral covers your neck and face in doggy kisses and slobber. The musky smell of the beast fills your senses and better judgment as he finds home in your cunt. Throwing your head back at the sudden penetration, the dog hilts himself to the knot inside of you in one lucky hump before he pulls back and resumes thrusting. As the dog's exotic, red cock ruts into your tender sex, the feral beast continues to lick and kiss your face and neck. Hammering into you, you're overcome with a feral base lust and start to moan and yip like a bitch in heat.";
 			say "     Taking advantage of your parted lips, the beast slips his long, rough canine tongue into your mouth, tangling it with your own. It explores every inch of your mouth, and waves of tasty slobber follow, only further exciting you. As the feral beast essentially spit roasts you, he begins to speed up, humping with incredible speed into your receptive cunt. Letting his tongue withdraw from your mouth with a trail of saliva, the mutt bites down on your neck, enough to hold you firmly but not enough to draw blood. With one final massive thrust, the dog hilts himself in you again and continues to push, popping his huge, swollen knot into your soaked cunt. You let out a shriek of pleasure and clamp down around his hot doggy cock and climax. Still stuck firmly inside of your heavenly sex, the feral follows right after you and cums as well. Pumping load after load of fertile canine cum into you, the dog growls into your neck as he breeds you like a good bitch.";
-			CreatureSexAftermath "Player" receives "PussyFuck" from "Feral Mutt";
 			WaitLineBreak;
 			say "     Coming down from your climax, the dog stays in his dominant missionary position as your sex milks the last drops of his dog seed into you. He resumes covering your face in wet kisses while waiting for his large knot to deflate in you. You faithfully make out with your canine mate until he slips out of your sensitive lips. You let out a moan as he slides out of your well-fucked pussy and then trots off, seemingly content with his breeding. You lay there for a while, rubbing your cum-slicked lips as dog jizz runs down your thighs, before getting up and going on your way.";
+			CreatureSexAftermath "Player" receives "PussyFuck" from "Feral Mutt";
 		else: [Yes = MALE Identified!]
 			say "     Backing up, you place your arms up and lay back down on the cold ground, fully submitting to the canine beast. Before you can act further, the dog surges forward, tearing off your underclothes with sharp canines. Leaping atop your form at a moment's notice, the mutt's cock has since grown to its full eight inch erectness with a bulging, red knot at the base. Thrusting wildly at your tummy, the feral covers your neck and face in doggy kisses and slobber. The musky smell of the beast fills your senses and better judgment as he finds home in your ass. Throwing your head back at the sudden penetration, the dog hilts himself to the knot inside of you in one lucky hump before he pulls back and resumes thrusting. As the dog's exotic, red cock ruts into your tender anus, the feral beast continues to lick and kiss your face and neck. Hammering into you, you're overcome with a feral base lust and start to moan and yip like a bitch in heat.";
 			say "     Taking advantage of your parted lips, the beast slips his long, rough canine tongue into your mouth, tangling it with your own. It explores every inch of your mouth, and waves of tasty slobber follow, only further exciting you. As the feral beast essentially spit roasts you, he begins to speed up, humping with incredible speed into your receptive ass. Letting his tongue withdraw from your mouth with a trail of saliva, the mutt bites down on your neck, enough to hold you firmly but not enough to draw blood. With one final massive thrust, the dog hilts himself in you again and continues to push, popping his huge, swollen knot into your abused hole. You let out a shriek of pleasure and clamp down around his hot doggy cock[if Player is male], and you shoot your own load all over your chest[end if] as you spasm around the canine's member. Still stuck firmly inside of your heavenly anus, the feral follows right after you and cums as well. Pumping load after load of fertile canine cum into you, the dog growls into your neck as he breeds you like a good bitch.";
-			CreatureSexAftermath "Player" receives "AssFuck" from "Feral Mutt";
 			WaitLineBreak;
 			say "     Coming down from your climax the dog stays in his dominant missionary position as your tender butt milks the last drops of his dog seed into you. He resumes covering your face in wet kisses while waiting for his large knot to deflate in you. You faithfully make out with your canine mate until he slips out of your sensitive lips. You let out a moan as he slides out of your well-fucked ass and then trots off, seemingly content with his breeding. You lay there for a while, rubbing your cum-slicked hole as dog jizz runs down your thighs, before getting up and going on your way.";
+			CreatureSexAftermath "Player" receives "AssFuck" from "Feral Mutt";
 	else: 										  [PLAYER LOST THE FIGHT!]
 		if Player is herm: [Yes = HERM Identified!]
 			say "     Covered in scratches and bites you fall on your back struggling to crawl away. Mid-crawl the feral dog leaps atop your back and digs his jaws into your neck pinching tightly but not quite drawing blood. The dog's tongue laps at your neck covering it in slobber as his hind legs yank down any obstructions you have between the canine and his prize. He humps wildly at your raised ass rubbing his fully erect dog cock between your ass cheeks. Before long he hits his mark, thrusting into your cunt and smashing his knot against your wet lips; the dog growls and barks as he fucks you. You moan as the canine pounds into you and begin to pant as the feral beast dominates and breeds your now willing body. Thrusting your ass back against the dog in time with his wild humps you bark in pleasure as the male mutt pushes into you further, popping his swollen knot into your abused pussy lips.";
@@ -60,69 +60,66 @@ to say BeatTheFeralMutt:
 		say "     ([link]N[as]n[end link]) - No, no thank you.";
 		if Player consents: [Decides to fuck feral dog]
 			LineBreak;
-			say "[FeralDogSexMenu]";
+			say "     What exactly do you plan on doing with the dog?";
+			now sextablerun is 0;
+			blank out the whole of table of fucking options;
+			[]
+			choose a blank row in table of fucking options;
+			now title entry is "Suck him off";
+			now sortorder entry is 1;
+			now description entry is "Give the [FeralMuttCurrentBreed] a blowjob";
+			[]
+			choose a blank row in table of fucking options;
+			now title entry is "Ride his cock";
+			now sortorder entry is 2;
+			now description entry is "Impale yourself on the [FeralMuttFurColor] [FeralMuttCurrentBreed]'s cock";
+			[]
+			if Player is male:
+				choose a blank row in table of fucking options;
+				now title entry is "Fuck his ass";
+				now sortorder entry is 3;
+				now description entry is "Thrust your dick into the [FeralMuttFurColor] [FeralMuttCurrentBreed]'s ass";
+			[]
+			sort the table of fucking options in sortorder order;
+			repeat with y running from 1 to number of filled rows in table of fucking options:
+				choose row y from the table of fucking options;
+				say "[link][y] - [title entry][as][y][end link][line break]";
+			say "[link]0 - Nevermind[as]0[end link][line break]";
+			while sextablerun is 0:
+				say "Pick the corresponding number> [run paragraph on]";
+				get a number;
+				if calcnumber > 0 and calcnumber <= the number of filled rows in table of fucking options:
+					now current menu selection is calcnumber;
+					choose row calcnumber in table of fucking options;
+					say "[title entry]: [description entry]?";
+					if Player consents:
+						LineBreak;
+						now sextablerun is 1;
+						if title entry is:
+							-- "Suck him off":
+								say "[SuckFeralMutt]";
+							-- "Ride his cock":
+								say "[RideFeralMutt]";
+							-- "Fuck his ass":
+								say "[FuckFeralMutt]";
+						decrease FeralMuttDominance by 1;
+						if FeralMuttDominance > -3 or Player is neuter:
+							now Mutt Pack Submission is inactive; [inactive when they are less than 3x submissive]
+						else:
+							now Mutt Pack Submission is active; [active when they're sufficiently subby]
+						if FeralMuttDominance < 3 or Player is neuter:
+							now Mutt Pack Attack is inactive; [inactive when they're not dominant enough]
+				else if calcnumber is 0:
+					LineBreak;
+					now sextablerun is 1;
+					say "     You step back from the [FeralMuttFurColor] [FeralMuttCurrentBreed], shaking your head slightly as he gives a questioning look.";
+				else:
+					say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options], or 0 to exit.";
+			wait for any key;
+			clear the screen and hyperlink list;
 		else:
 			LineBreak;
 			say "     Shaking your head to put any such lewd impulses out of your mind, you walk away quickly before the feral beast gets back up.";
-
-to say FeralDogSexMenu:
-	say "     What exactly do you plan on doing with the dog?";
-	now sextablerun is 0;
-	blank out the whole of table of fucking options;
-	[]
-	choose a blank row in table of fucking options;
-	now title entry is "Suck him off";
-	now sortorder entry is 1;
-	now description entry is "Give the [FeralMuttCurrentBreed] a blowjob";
-	[]
-	choose a blank row in table of fucking options;
-	now title entry is "Ride his cock";
-	now sortorder entry is 2;
-	now description entry is "Impale yourself on the [FeralMuttFurColor] [FeralMuttCurrentBreed]'s cock";
-	[]
-	if Player is male:
-		choose a blank row in table of fucking options;
-		now title entry is "Fuck his ass";
-		now sortorder entry is 3;
-		now description entry is "Thrust your dick into the [FeralMuttFurColor] [FeralMuttCurrentBreed]'s ass";
-	[]
-	sort the table of fucking options in sortorder order;
-	repeat with y running from 1 to number of filled rows in table of fucking options:
-		choose row y from the table of fucking options;
-		say "[link][y] - [title entry][as][y][end link][line break]";
-	say "[link]0 - Nevermind[as]0[end link][line break]";
-	while sextablerun is 0:
-		say "Pick the corresponding number> [run paragraph on]";
-		get a number;
-		if calcnumber > 0 and calcnumber <= the number of filled rows in table of fucking options:
-			now current menu selection is calcnumber;
-			choose row calcnumber in table of fucking options;
-			say "[title entry]: [description entry]?";
-			if Player consents:
-				LineBreak;
-				now sextablerun is 1;
-				if title entry is:
-					-- "Suck him off":
-						say "[SuckFeralMutt]";
-					-- "Ride his cock":
-						say "[RideFeralMutt]";
-					-- "Fuck his ass":
-						say "[FuckFeralMutt]";
-				decrease FeralMuttDominance by 1;
-				if FeralMuttDominance > -3 or Player is neuter:
-					now Mutt Pack Submission is inactive; [inactive when they are less than 3x submissive]
-				else:
-					now Mutt Pack Submission is active; [active when they're sufficiently subby]
-				if FeralMuttDominance < 3 or Player is neuter:
-					now Mutt Pack Attack is inactive; [inactive when they're not dominant enough]
-		else if calcnumber is 0:
-			LineBreak;
-			now sextablerun is 1;
-			say "     You step back from the [FeralMuttFurColor] [FeralMuttCurrentBreed], shaking your head slightly as he gives a questioning look.";
-		else:
-			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options], or 0 to exit.";
-	wait for any key;
-	clear the screen and hyperlink list;
 
 to say RideFeralMutt:
 	if Player is herm: 			  [Yes = HERM Identified!]
@@ -201,7 +198,7 @@ to Pet MuttRecruitment:
 				now PetMuttDetailedlook is "a well-muscled [PetMuttColor] [PetMuttBreed]";
 			-- "Bulldog":
 				now PetMuttDetailedlook is "a large [PetMuttColor] [PetMuttBreed]";
-		AttemptToWait;
+		WaitLineBreak;
 		move Pet Mutt to Main & 7th Street;
 		move Player to Main & 7th Street;
 	else if calcnumber is 2:
@@ -209,6 +206,33 @@ to Pet MuttRecruitment:
 	else: [shoo away]
 		say "     You sneer, putting a hand on your hip and with your other you wave it aggressively, barking at the dog to get out of your sight. Even stepping closer with a stomp, growling cruelly at the mutt. That does it, he whines and quickly shuffles back when you stomp forward before fleeing, disappearing behind some nearby cover and padding off in retreat. You doubt you'll see that mongrel again or get any other similar offers of submission.";
 		now Loyalty of Pet Mutt is 99; [player doesn't want him]
+
+to RandomizeFeralMutt:
+	if a random number from 1 to 6 is: [adjust the latter number for the number of options]
+		-- 1:
+			now FeralMuttFurColor is the substituted form of "[one of]brown[or]gray[purely at random]";
+			now FeralMuttCurrentBreed is "Malamute";
+			now FeralMuttDetailedLook is "a well-muscled [FeralMuttFurColor] [FeralMuttCurrentBreed]";
+		-- 2:
+			now FeralMuttFurColor is the substituted form of "[one of]brown[or]yellow[purely at random]";
+			now FeralMuttCurrentBreed is "Labrador";
+			now FeralMuttDetailedLook is "a sleek and fast [FeralMuttFurColor] [FeralMuttCurrentBreed]";
+		-- 3:
+			now FeralMuttFurColor is the substituted form of "[one of]brown[or]black[purely at random]";
+			now FeralMuttCurrentBreed is "Mastiff";
+			now FeralMuttDetailedLook is "a strong looking [FeralMuttFurColor] [FeralMuttCurrentBreed]";
+		-- 4:
+			now FeralMuttFurColor is the substituted form of "[one of]brown[or]golden-brown[purely at random]";
+			now FeralMuttCurrentBreed is "Goldador";
+			now FeralMuttDetailedLook is "a stray and rugged [FeralMuttFurColor] [FeralMuttCurrentBreed]";
+		-- 5:
+			now FeralMuttFurColor is the substituted form of "[one of]brown[or]reddish-brown[purely at random]";
+			now FeralMuttCurrentBreed is "Blood Hound";
+			now FeralMuttDetailedLook is "a well-muscled [FeralMuttFurColor] [FeralMuttCurrentBreed]";
+		-- 6:
+			now FeralMuttFurColor is the substituted form of "[one of]brown[or]white and brown[purely at random]";
+			now FeralMuttCurrentBreed is "Bulldog";
+			now FeralMuttDetailedLook is "a large snarling [FeralMuttFurColor] [FeralMuttCurrentBreed]";
 
 Section 2 - Feral Mutt
 
@@ -281,7 +305,7 @@ When Play begins:
 	now libido entry is 60; [ As part of infection, the Player will be gradually moved towards this value; also used for the creature's seduce defense as a penalty ]
 	now loot entry is ""; [ Loot monster drops, usually infective with the monster's _own_ strain (for example if there is a Cross-Infection from sex)]
 	now lootchance entry is 0; [ Chance of loot dropping 0-100 ]
-	now MilkItem entry is "feral mutt man-milk"; [ Item to be given to the player if they have this infection and milk themselves. ]
+	now MilkItem entry is ""; [ Item to be given to the player if they have this infection and milk themselves. ]
 	now CumItem entry is ""; [ Item to be given to the player if they have this infection and jerk off. ]
 	now TrophyFunction entry is "-"; [ Function to generate a list of optional loot items, of which the player can choose one after victory. ]
 	now scale entry is 3; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
@@ -397,33 +421,6 @@ When Play begins:
 	[Clit Size Adjective is generated by a function and can be used in scenes: very small/small/average/large/very large]
 ]
 
-to RandomizeFeralMutt:
-	if a random number from 1 to 6 is: [adjust the latter number for the number of options]
-		-- 1:
-			now FeralMuttFurColor is "[one of]brown[or]gray[purely at random]";
-			now FeralMuttCurrentBreed is "Malamute";
-			now FeralMuttDetailedLook is "a well-muscled [FeralMuttFurColor] [FeralMuttCurrentBreed]";
-		-- 2:
-			now FeralMuttFurColor is "[one of]brown[or]yellow[purely at random]";
-			now FeralMuttCurrentBreed is "Labrador";
-			now FeralMuttDetailedLook is "a sleek and fast [FeralMuttFurColor] [FeralMuttCurrentBreed]";
-		-- 3:
-			now FeralMuttFurColor is "[one of]brown[or]black[purely at random]";
-			now FeralMuttCurrentBreed is "Mastiff";
-			now FeralMuttDetailedLook is "a strong looking [FeralMuttFurColor] [FeralMuttCurrentBreed]";
-		-- 4:
-			now FeralMuttFurColor is "[one of]brown[or]golden-brown[purely at random]";
-			now FeralMuttCurrentBreed is "Goldador";
-			now FeralMuttDetailedLook is "a stray and rugged [FeralMuttFurColor] [FeralMuttCurrentBreed]";
-		-- 5:
-			now FeralMuttFurColor is "[one of]brown[or]reddish-brown[purely at random]";
-			now FeralMuttCurrentBreed is "Blood Hound";
-			now FeralMuttDetailedLook is "a well-muscled [FeralMuttFurColor] [FeralMuttCurrentBreed]";
-		-- 6:
-			now FeralMuttFurColor is "[one of]brown[or]white and brown[purely at random]";
-			now FeralMuttCurrentBreed is "Bulldog";
-			now FeralMuttDetailedLook is "a large snarling [FeralMuttFurColor] [FeralMuttCurrentBreed]";
-
 Section 3 - Mutt Pack
 
 Table of CombatPrep (continued)
@@ -494,7 +491,7 @@ When Play begins:
 	now libido entry is 60; [ As part of infection, the Player will be gradually moved towards this value; also used for the creature's seduce defense as a penalty ]
 	now loot entry is ""; [ Loot monster drops, usually infective with the monster's _own_ strain (for example if there is a Cross-Infection from sex)]
 	now lootchance entry is 0; [ Chance of loot dropping 0-100 ]
-	now MilkItem entry is "mutt pack milk"; [ Item to be given to the player if they have this infection and milk themselves. ]
+	now MilkItem entry is ""; [ Item to be given to the player if they have this infection and milk themselves. ]
 	now CumItem entry is ""; [ Item to be given to the player if they have this infection and jerk off. ]
 	now TrophyFunction entry is "-"; [ Function to generate a list of optional loot items, of which the player can choose one after victory. ]
 	now scale entry is 3; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
@@ -653,11 +650,11 @@ to say PackSubmissionScenes:
 		WaitLineBreak;
 		say "     You lay on the ground, enjoying your aftershocks for some time when suddenly the dog locked in your cunt yanks at his cock embedded deep in your well-fucked cunt. You moan loudly as his nearly foot long length is slowly pulled from your sex. The mutt leans down and gives your pussy a last lick before bounding off behind a junk pile. Looking around you still see the other four mutts surrounding you, looking just as horny as the mutt who had just fucked you. You sigh and you can feel your pussy start to quiver with excitement again. You then turn over and put yourself in the doggy style position, raising your ass to the group of mutts still waiting their turn. 'Come and get it boys,' you moan out in anticipation.";
 		say "     They leap to you, at first there's a small scuffle as to who gets to go next but eventually one wins out. The new mutt, the golden furred shepherd mounts your rear and thrusts into your sloppy cunt. The previous dog's cum runs down your thighs and squishes out of your sex which makes wet sucking noises as the golden shepherd fucks you with a renewed vigor. For the next few hours you're fucked by all four dogs. Each of them mounting you, thrusting into you, knotting you, and then filling you up with what feels like gallons of canine spunk. When they're finally done your fucked cunt is stretched wide and gushing a mixture of dog jism and your own juices from it, while your member is just a spent mess covered in your own cum.";
+		WaitLineBreak;
+		say "     As the final dog pulls his thick cock from you, he stays behind a while to lap at your sloppy cunt before he too bounds off into the junkyard, barking after his pack. You lay there for a while, ass raised and slowly rubbing your creamed sex as your breathing slows again. Eventually you manage to stand, still very shaky and a little sore from the amazing fucking you've just gotten. You'll have to visit these mutts again sometime... maybe soon if this is what man's best friend is doing nowadays. You walk off contemplating this, globs of canine spunk still seeping out of your pussy and dripping to the ground or down your legs as you walk.";
 		CreatureSexAftermath "Feral Mutt" receives "OralCock" from "Player";
 		CreatureSexAftermath "Feral Mutt" receives "OralPussy" from "Player";
 		CreatureSexAftermath "Player" receives "PussyFuck" from "Feral Mutt";
-		WaitLineBreak;
-		say "     As the final dog pulls his thick cock from you, he stays behind a while to lap at your sloppy cunt before he too bounds off into the junkyard, barking after his pack. You lay there for a while, ass raised and slowly rubbing your creamed sex as your breathing slows again. Eventually you manage to stand, still very shaky and a little sore from the amazing fucking you've just gotten. You'll have to visit these mutts again sometime... maybe soon if this is what man's best friend is doing nowadays. You walk off contemplating this, globs of canine spunk still seeping out of your pussy and dripping to the ground or down your legs as you walk.";
 	else if Player is female: [female]
 		say "     The idea of mating with a group of submissive feral hounds sends a naughty shiver down your spine. You give a grin and begin to strip, you can already feel yourself flushed with arousal, your crotch already beginning to dampen. After stripping you wade into the group of them and kneel down to scratch the heads of two of the mutts. The others crowd around you, eagerly sniffing you and wagging their tails wildly. You lean in to give a third dog a kiss on the head, still petting the other two you kiss down this new canine's face ending on his muzzle. Meanwhile the other two dogs have ducked their heads low and have begun licking at your exposed body. They run thick, coarse tongues over your belly before swiping over your nipples and giving you a jolt of pleasure that runs down your back.";
 		say "     You moan over the attentions of the submissive pack, but right now, you need more. You're overwhelmed with an intense heat and a need to be ravaged by a pack of dogs. The mutts give a brief whine until you lay back and go spread eagle before them. The pack gives a few joyful barks and then sets about enjoying their shared alpha. Perhaps not what you were expecting, the mutts don't immediately start humping away at you. They all stand over you, gathered around, before lowering their heads and each individual dog starts to lap at your body with a wet, heavenly dog-tongue. Two mutts are licking your lower half while two others lap at your chest. The final mutt, the large one who had originally approached you leans his canine muzzle down to your own and begins to lick your face, covering most of it in a thin layer of slobber within the first few laps.";
@@ -670,10 +667,10 @@ to say PackSubmissionScenes:
 		WaitLineBreak;
 		say "     You lay on the ground, enjoying your aftershocks for some time when suddenly the dog locked in your cunt yanks at his cock embedded deep in your well-fucked cunt. You moan loudly as his nearly foot long length is slowly pulled from your sex. The mutt leans down and gives your pussy a last lick before bounding off behind a junk pile. Looking around you still see the other four mutts surrounding you, looking just as horny as the mutt who had just fucked you. You sigh and you can feel your pussy start to quiver with excitement again. You then turn over and put yourself in the doggy style position, raising your ass to the group of mutts still waiting their turn. 'Come and get it boys,' you moan out in anticipation.";
 		say "     They leap to you, at first there's a small scuffle as to who gets to go next but eventually one wins out. The new mutt, the golden furred shepherd mounts your rear and thrusts into your sloppy cunt. The previous dog's cum runs down your thighs and squishes out of your sex which makes wet sucking noises as the golden shepherd fucks you with a renewed vigor. For the next few hours you're fucked by all four dogs. Each of them mounting you, thrusting into you, knotting you, and then filling you up with what feels like gallons of canine spunk. When they're finally done your fucked cunt is stretched wide and gushing a mixture of dog jism and your own juices from it.";
-		CreatureSexAftermath "Feral Mutt" receives "OralPussy" from "Player";
-		CreatureSexAftermath "Player" receives "PussyFuck" from "Feral Mutt";
 		WaitLineBreak;
 		say "     As the final dog pulls his thick cock from you, he stays behind a while to lap at your sloppy cunt before he too bounds off into the junkyard, barking after his pack. You lay there for a while, ass raised and slowly rubbing your creamed sex as your breathing slows again. Eventually you manage to stand, still very shaky and a little sore from the amazing fucking you've just gotten. You'll have to visit these mutts again sometime... maybe soon if this is what man's best friend is doing nowadays. You walk off contemplating this, globs of canine spunk still seeping out of your pussy and dripping to the ground or down your legs as you walk.";
+		CreatureSexAftermath "Feral Mutt" receives "OralPussy" from "Player";
+		CreatureSexAftermath "Player" receives "PussyFuck" from "Feral Mutt";
 	else: [male]
 		say "     The idea of mating with a group of submissive feral hounds sends a naughty shiver down your spine. You give a grin and begin to strip, you can already feel yourself begin to stiffen with arousal. After stripping you wade into the group of them and kneel down to scratch the heads of two of the mutts. The others crowd around you, eagerly sniffing you and wagging their tails wildly. You lean in to give a third dog a kiss on the head, still petting the other two you kiss down this new canine's face ending on his muzzle. Meanwhile the other two dogs have ducked their heads low and have begun licking at your exposed body. They run thick, coarse tongues over your belly before swiping over your chest and giving you a jolt of pleasure that runs down your back.";
 		say "     You moan over the attentions of the submissive pack, but right now, you need more. You're overwhelmed with an intense heat and a need to ravage this pack of dogs. The mutts give a brief whine until you lay back and pump your cock a few times to get the point across. The pack gives a few joyful barks and then sets about enjoying their shared alpha. Perhaps not what you were expecting, the mutts don't immediately start humping away at you. They all stand over you, gathered around, before lowering their heads and each individual dog starts to lap at your body with a wet, heavenly dog-tongue. Two mutts are licking your lower half while two others lap at your chest. The final mutt, the large one who had originally approached you leans his canine muzzle down to your own and begins to lick your face, covering most of it in a thin layer of slobber within the first few laps.";

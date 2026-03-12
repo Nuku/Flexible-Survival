@@ -1499,11 +1499,11 @@ This is the cock descr rule:
 	if Cock Length of Player < 3:
 		now descr is "[one of]tiny[or]very small[or]puny[at random]";
 	else if Cock Length of Player < 6:
-		now descr is "[one of]smaller than average[or]small[or]below average[at random]";
+		now descr is "[one of]smaller than average[or]small[or]below-average[at random]";
 	else if Cock Length of Player < 8:
-		now descr is "[one of]average in size[or]normal-sized[at random]";
+		now descr is "[one of]average-in-size[or]normal-sized[at random]";
 	else if Cock Length of Player < 12:
-		now descr is "[one of]large[or]sizable[or]well-built[or]above average[at random]";
+		now descr is "[one of]large[or]sizable[or]well-built[or]above-average[at random]";
 	else if Cock Length of Player < 14:
 		now descr is "footlong";
 	else if Cock Length of Player < 18:
@@ -1555,7 +1555,7 @@ understand "chat with/-- [person]" as conversing.
 
 Check Conversing:
 	if the noun is the player, say "I know this is stressful, but talking to yourself will not help." instead;
-	if the number of entries in conversation of noun is 0, say "They have nothing to say." instead;
+	if conversation of noun is empty, say "They have nothing to say." instead;
 
 carry out conversing:
 	if icon of noun is not Figure of pixel:

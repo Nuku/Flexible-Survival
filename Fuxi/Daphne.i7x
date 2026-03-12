@@ -117,6 +117,7 @@ Sterile of Daphne is false. [steriles can't knock people up]
 MainInfection of Daphne is "Naiad".
 Description of Daphne is "     Daphne is an absolutely stunning naiad woman currently [one of]sitting on the edge of the pool[or]swimming laps inside the pool[or]practicing her diving inside the pool[at random]. She's a blonde bombshell with bright blue eyes, a perfect hourglass figure, and muscles that show the swimmer's dedication to her sport. Currently, the water spirit is wearing a one-piece swimsuit cutting off at her upper arm and thigh while tightly framing Daphne's body, leaving nothing to the imagination. The red and white sides and short sleeves of her outfit accentuate her curves and nicely complement her mesmerizing eyes while also pleasantly contrasting the rest of the piece's blue coloring. There's also a zipper at the chest of the one-piece area for more easy removal. Noticing your staring, Daphne calls out to you. 'Are ya just gonna stare all day, or are you gonna come over?!' she questions playfully.[line break]".
 [Conversation of Daphne is { "Hmph." }.]
+fuckscene of Daphne is "[DaphneSexMenu]".
 icon of Daphne is Figure of Daphne_clothed_icon.
 The scent of Daphne is "     Daphne smells like chlorinated water and flowers, an odd but certainly not unpleasant combination of scents.".
 
@@ -139,58 +140,55 @@ instead of conversing the Daphne:
 		now HP of Daphne is 4;
 		now Helot Negotiation is active;
 	else:
-		say "[DaphneTalkMenu]";
-
-to say DaphneTalkMenu:
-	say "     What do you wish to talk about with the stunning swimmer?";
-	now sextablerun is 0;
-	blank out the whole of table of fucking options;
-	[]
-	choose a blank row in table of fucking options;
-	now title entry is "The Spartans";
-	now sortorder entry is 1;
-	now description entry is "Ask how she feels about the warriors";
-	[]
-	choose a blank row in table of fucking options;
-	now title entry is "Daphne's Past";
-	now sortorder entry is 2;
-	now description entry is "Ask her about herself";
-	[]
-	choose a blank row in table of fucking options;
-	now title entry is "Sex With Daphne";
-	now sortorder entry is 3;
-	now description entry is "Ask Daphne how she wants things to go";
-	[]
-	sort the table of fucking options in sortorder order;
-	repeat with y running from 1 to number of filled rows in table of fucking options:
-		choose row y from the table of fucking options;
-		say "[link][y] - [title entry][as][y][end link][line break]";
-	say "[link]0 - Nevermind[as]0[end link][line break]";
-	while sextablerun is 0:
-		say "Pick the corresponding number> [run paragraph on]";
-		get a number;
-		if calcnumber > 0 and calcnumber <= the number of filled rows in table of fucking options:
-			now current menu selection is calcnumber;
-			choose row calcnumber in table of fucking options;
-			say "[title entry]: [description entry]?";
-			if Player consents:
+		say "     What do you wish to talk about with the stunning swimmer?";
+		now sextablerun is 0;
+		blank out the whole of table of fucking options;
+		[]
+		choose a blank row in table of fucking options;
+		now title entry is "The Spartans";
+		now sortorder entry is 1;
+		now description entry is "Ask how she feels about the warriors";
+		[]
+		choose a blank row in table of fucking options;
+		now title entry is "Daphne's Past";
+		now sortorder entry is 2;
+		now description entry is "Ask her about herself";
+		[]
+		choose a blank row in table of fucking options;
+		now title entry is "Sex With Daphne";
+		now sortorder entry is 3;
+		now description entry is "Ask Daphne how she wants things to go";
+		[]
+		sort the table of fucking options in sortorder order;
+		repeat with y running from 1 to number of filled rows in table of fucking options:
+			choose row y from the table of fucking options;
+			say "[link][y] - [title entry][as][y][end link][line break]";
+		say "[link]0 - Nevermind[as]0[end link][line break]";
+		while sextablerun is 0:
+			say "Pick the corresponding number> [run paragraph on]";
+			get a number;
+			if calcnumber > 0 and calcnumber <= the number of filled rows in table of fucking options:
+				now current menu selection is calcnumber;
+				choose row calcnumber in table of fucking options;
+				say "[title entry]: [description entry]?";
+				if Player consents:
+					LineBreak;
+					now sextablerun is 1;
+					if title entry is:
+						-- "The Spartans":
+							say "[DaphneTalk1]";
+						-- "Daphne's Past":
+							say "[DaphneTalk2]";
+						-- "Sex With Daphne":
+							say "[DaphneTalk3]";
+			else if calcnumber is 0:
 				LineBreak;
 				now sextablerun is 1;
-				if title entry is:
-					-- "The Spartans":
-						say "[DaphneTalk1]";
-					-- "Daphne's Past":
-						say "[DaphneTalk2]";
-					-- "Sex With Daphne":
-						say "[DaphneTalk3]";
-		else if calcnumber is 0:
-			LineBreak;
-			now sextablerun is 1;
-			say "     You step back, indicating an end to the conversation. Daphne looks about to say something before shaking her head and stepping back too.";
-		else:
-			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options], or 0 to exit.";
-	wait for any key;
-	clear the screen and hyperlink list;
+				say "     You step back, indicating an end to the conversation. Daphne looks about to say something before shaking her head and stepping back too.";
+			else:
+				say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options], or 0 to exit.";
+		wait for any key;
+		clear the screen and hyperlink list;
 
 to say DaphneTalk1:
 	say "     You decide to ask Daphne how she feels about the Spartans patrolling the campus despite knowing that it's likely nothing positive, and right away you can see the naiad getting worked up. 'Ugh, where do I begin with our campus's supposedly loyal protectors? They're a bunch of fuckin['] sexist dirtbags!' she exclaims angrily. 'These pigs all strut around like they own the place and think they're doing us all such a favor and supposedly protecting this place when most of the time they're the ones causing all the damn trouble! In my opinion, they're no better than the ferals outside the campus! I mean, come on, they're a bunch of delusional warriors stuck in the classical era, idiots who struggle with how a phone works that run around punishing students by turning them into slaves! Why do we tolerate them here at all? This is supposed to be a safe place for sane students, not a bunch of insane militaristic men!' Daphne rants for quite some time, expressing an awe-inspiring disdain for the Spartans as she continues to belittle them for, you'd guess, at least around 5 minutes before she finally stops, red in the face and painting with rage. Taking a moment to compose herself, she begins again.";
@@ -205,7 +203,7 @@ to say DaphneTalk3:
 
 Section 5 - Sex
 
-instead of fucking Daphne:
+to say DaphneSexMenu:
 	if lastfuck of Daphne - turns < 6: [she got fucked in the last 18 hours = 6 turns]
 		project Figure of Daphne_clothed_icon;
 		say "     'Slow down there, tiger. Not all of us have the time or the energy to fuck around all day. You're just going to have to find somebody else for now,' Daphne says sternly.";
@@ -218,44 +216,41 @@ instead of fucking Daphne:
 		say "     Sighing in relief, you meet Daphne's eyes again and let her resume her speech. 'Don't get me wrong, it was shitty of you to spy on me, but I get it, the nanites mess with your head. I mean, that's why I needed Alyssa's help after the Spartan incident. I was in my head a lot and couldn't fuck anybody. It was driving me crazy! So I went to her for help,' the water spirit explains calmly and continues with a lusty smile. 'Besides wouldn't be the first time somebody's watched me, and from the amount you left on the wall, you certainly loved it! I'm flattered. Just ask next time you want to see me in action or maybe get some action,' Daphne ends, whispering flirtatiously and winking at you before going back to the pool to sharpen her skills some more.";
 		now HP of Daphne is 3;
 	else: [ready for sex]
-		say "[DaphneSexMenu]";
-
-to say DaphneSexMenu:
-	project Figure of Daphne_naked_icon;
-	now sextablerun is 0;
-	blank out the whole of table of fucking options;
-	[]
-	if Player is Male:
-		choose a blank row in table of fucking options;
-		now title entry is "Blowjob";
-		now sortorder entry is 1;
-		now description entry is "Ask the beautiful Naiad to wrap her lips around your dick";
-	[]
-	sort the table of fucking options in sortorder order;
-	repeat with y running from 1 to number of filled rows in table of fucking options:
-		choose row y from the table of fucking options;
-		say "[link][y] - [title entry][as][y][end link][line break]";
-	say "[link]0 - Nevermind[as]0[end link][line break]";
-	while sextablerun is 0:
-		say "Pick the corresponding number> [run paragraph on]";
-		get a number;
-		if calcnumber > 0 and calcnumber <= the number of filled rows in table of fucking options:
-			now current menu selection is calcnumber;
-			choose row calcnumber in table of fucking options;
-			say "[title entry]: [description entry]?";
-			if Player consents:
+		project Figure of Daphne_naked_icon;
+		now sextablerun is 0;
+		blank out the whole of table of fucking options;
+		[]
+		if Player is Male:
+			choose a blank row in table of fucking options;
+			now title entry is "Blowjob";
+			now sortorder entry is 1;
+			now description entry is "Ask the beautiful Naiad to wrap her lips around your dick";
+		[]
+		sort the table of fucking options in sortorder order;
+		repeat with y running from 1 to number of filled rows in table of fucking options:
+			choose row y from the table of fucking options;
+			say "[link][y] - [title entry][as][y][end link][line break]";
+		say "[link]0 - Nevermind[as]0[end link][line break]";
+		while sextablerun is 0:
+			say "Pick the corresponding number> [run paragraph on]";
+			get a number;
+			if calcnumber > 0 and calcnumber <= the number of filled rows in table of fucking options:
+				now current menu selection is calcnumber;
+				choose row calcnumber in table of fucking options;
+				say "[title entry]: [description entry]?";
+				if Player consents:
+					LineBreak;
+					now sextablerun is 1;
+					if title entry is "Blowjob":
+						say "[DaphneSex1]";
+			else if calcnumber is 0:
 				LineBreak;
 				now sextablerun is 1;
-				if title entry is "Blowjob":
-					say "[DaphneSex1]";
-		else if calcnumber is 0:
-			LineBreak;
-			now sextablerun is 1;
-			say "     You step back from the naiad, shaking your head slightly as she gives a questioning look.";
-		else:
-			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options], or 0 to exit.";
-	wait for any key;
-	clear the screen and hyperlink list;
+				say "     You step back from the naiad, shaking your head slightly as she gives a questioning look.";
+			else:
+				say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options], or 0 to exit.";
+		wait for any key;
+		clear the screen and hyperlink list;
 
 to say DaphneSex1:
 	say "     Before you can even make your request to Daphne, she's seen through you. 'Spit it out already. You've been eye-fucking me for a minute now,' she says, flipping her hair behind her back. Well, there's no point in subtlety now, so you ask the athlete candidly if she'd like to give you a blowjob. Daphne pretends to think briefly, crossing her arms and pushing her boobs to tempt you. 'Okay, we can have some fun on one condition. We have to do it here in the pool room. Okay?' she agrees, mischievously smiling and waiting to see if you'll accept her conditions which doesn't take long. Whatever hang-ups you may have over fooling around in public with the water spirit are drowned out by your libido, and with Daphne actively showing off her body and all you stand to gain, it's clear to you that the benefit far outweighs the negatives. When Daphne starts stripping, you feel more than assured that you've made the correct choice as she unzips her swimsuit and pulls it down, revealing her flawless body, her boobs in particular drawing most of your attention as always. Every part of the nymph feels designed to tempt you. The stories certainly weren't exaggerating when they described the naiads, as you can see now.";

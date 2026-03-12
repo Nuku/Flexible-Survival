@@ -8,7 +8,7 @@ understand "tinv" as TapeInventorying.
 understand "tape inventory/inv" as TapeInventorying.
 
 check TapeInventorying:
-	if number of entries in tapes of Player is 0, say "Your collection of video tapes is empty." instead;
+	if tapes of Player is empty, say "Your collection of video tapes is empty." instead;
 
 carry out TapeInventorying:
 	say "Your video tape collection consists of:[line break]";

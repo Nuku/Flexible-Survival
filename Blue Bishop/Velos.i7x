@@ -284,7 +284,7 @@ to say ResolveEvent Odd Green Patches:
 	WaitLineBreak;
 	say "     'Now, back to the task at hand. You try to place your hands around this odd trunk, for the lack of a better name for it. Its texture is mossy, as expected, but more than that, it feels warm and alive, a sensation that creeps you out at first. Its surface is also slightly slimy, slippery even, and to pull it off the ground, you need to have a good grip on it. To your surprise, it comes off without any resistance, as it does not seem to have roots. A new problem presents itself, however, as you realize this is also somewhat heavy. You could simply carry this over back to the Library immediately, but before you consider it, you hear the voice again. 'Just do it now, you don't want to risk leaving it here at the mercy of the elements, do you?' says Velos almost imperatively, and given that he is, essentially, in your ass, you feel inclined to oblige him.";
 	say "     Without any further ado, you do your best to carry the organic mass back to Grey Abbey Library, with its new destination in mind...";
-	AttemptToWait;
+	WaitLineBreak;
 	move player to Grey Abbey Garden;
 	say "     After a harduous way back to the Library, and fortunately without any other issues, you rush to the garden in order to... plant, you guess, this weird thing. You find it some soil and get some moisture on it, which does not take much out of your personal supplies. As you place it down, it seems to throb lively... a slightly disturbing sight that you are wary of. Velos perks up as soon as you finish the job. 'Yeah, that should do it. Let me into it again,' he asks, and once more, you let him exit your butt and reach for the odd trunk. You wait... and, eventually, Velos returns, popping his head out. 'Works. I guess you can enjoy your lonely time for a while, but make sure to keep coming back for me for at least a chat. I wouldn't mind a walk on occasion, either. Unless you miss me so much you want me back in you indefinitely...' For some reason, you feel like he really would not mind the latter.";
 	say "[line break]     [bold type]You suppose you could always just let him in before you go, unless you would rather have him stay in there.[roman type][line break]";
@@ -339,7 +339,7 @@ carry out muselisting:
 	repeat with Q running through visible people:
 		if q is not mused and vmusings of q is not empty:
 			add q to L;
-	if the number of entries in L is 0:
+	if L is empty:
 		say "There is no one Velos is interested in talking with here.";
 	else:
 		say "The following individuals can be mused upon here:[line break]";
@@ -473,8 +473,8 @@ to say brianmusing:
 	say "     'But, I don't drink coffee.' By this point Brian looks right confused.";
 	say "     'And what makes you think the guards haven't noticed the growing crack from the other side of the wall, and the constant thumping of your thick head?'";
 	say "     'I wish my head was a bit thicker...' Velos could probably revel in that statement, but he's just too fixated on illuminating the ludicrousness of his endeavors.";
-	say "     'What I'm trying to say is that you have no plan and no goals, you're just hitting a wall and hoping that resolves all your problems for you.' This finally does sink into the rhino, who stops and is stricken with a rare instance of contemplation. His increasingly troubled expression seems to infer that he's on the cusp of an existential breakdown before he yells out in blind rage, charging the wall once more, so hard that he bounces back a few feet and falls right over. Possibly blacking out for a few seconds, he eventually does crawl back up on his feet, before looking at Velos with abject confusion.";
 	WaitLineBreak;
+	say "     'What I'm trying to say is that you have no plan and no goals, you're just hitting a wall and hoping that resolves all your problems for you.' This finally does sink into the rhino, who stops and is stricken with a rare instance of contemplation. His increasingly troubled expression seems to infer that he's on the cusp of an existential breakdown before he yells out in blind rage, charging the wall once more, so hard that he bounces back a few feet and falls right over. Possibly blacking out for a few seconds, he eventually does crawl back up on his feet, before looking at Velos with abject confusion.";
 	say "     'What... What are you doing in... there?' It would seem Brian completely lost his memory of the last minute, doubtlessly annoying the serpent to no end.";
 	say "     'Ugh, you know what? Never mind me, that wall isn't going to topple itself.' The rhino slowly nods in agreement before he returns to charging the wall, Velos mumbling to himself, 'Sometimes I wonder why I even bother...' before retreating once more inside you.";
 
@@ -681,21 +681,22 @@ to say diegomusing:
 	say "     'Ha, that's quite the impressive trick!'";
 	say "     'That's nothing, you'd be surprised how many things my friend can fit in their pockets!'";
 	say "     'I'm talking to you, actually.' [if Diegochanged > 0]She[else]He[end if] points to the serpent. 'How did you manage to get your friend to carry you around like this?'";
-	say "     'Good sir! Frankly, I'm quite offended you would assume deception on my part.' He feigns insult, no doubt a little bit amused by the coyote's cordial composure.";
+	say "     'Good sir! Frankly, I'm quite offended you would assume deception on my part,' he feigns insult, no doubt a little bit amused by the coyote's cordial composure.";
 	say "     'Well, it's either that or your host is a massive weirdo.' [if Diegochanged > 0]She[else]He[end if] briefly grins directly at you before returning his focus to the center of attention here.";
 	say "     'Fair enough. I guess you could say I wasn't... explicit... in describing our arrangement.'";
 	say "     'And I bet that means you can't be removed?'";
 	say "     'More or less.'";
 	say "     'Ha, that's amazing! I could really use someone like you. Though not for me, of course.'";
+	WaitLineBreak;
 	say "     'I don't catch your drift.' Velos's previous jovial regard is tinged with slight confusion at the coyote's claim. 'I mean, I'm glad you're not completely weirded out by me, but I think you're inferring I'm some weapon you can thrust on people.'";
 	say "     'It's not like that, but it pays to be a bit pragmatic in my line of work.'";
 	say "     'Which is?'";
 	say "     'Causing all sorts of trouble, it's in my nature! Oh boy, I can't wait to see your face when you see what I have planned for the military.' The snake is struck silent, his expression now wholly baffled, and he apparently requires a moment to really take in that statement. With a jolt, however, he suddenly reverts to normal.";
-	WaitLineBreak;
 	say "     'I see. So, I assume you're what's giving the military trouble around here, yes?'";
 	say "     'Of course. You must have seen some of my work, then?'";
 	say "     'Maybe; might have heard about it.'";
 	say "     'Well, what do you think?'";
+	WaitLineBreak;
 	say "     'Sir...' Velos's expression turns darker than anything you've seen up to this point. 'If I were to suggest that you [']go fuck yourself['], I'm afraid it would be quite redundant. Your head's already so far up your own ass that you give yourself a rimjob every time you talk.'";
 	say "     'Heh... What?'";
 	say "     'What gives you the bright idea to think that harming the people trying to help our sorry lot is even a remotely smart thing to do?'";
@@ -703,9 +704,8 @@ to say diegomusing:
 	say "     'You've got men, leaving their wives and children to protect the people they love, only to succumb to a fate worse than death. I feel sorry for the poor sap who has to walk up to that same wife and tell her that - no - she's not a widow, but instead her husband is now a sex-craved monstrosity with no memory of her or his kin, and if he were to encounter them again he would attempt to inflict the same fate as his own.'";
 	say "     'Don't you start preaching to me, you tricked a person into carrying you around like that!' By this point Diego is beginning to fume, Velos not relenting for a second.";
 	say "     'I did what I had to survive. You, on the other hand? You had a choice. And if you - for a second - even begin to repeat that it's in your nature then you only prove you're no better than an animal; a mangy dog.'";
-	say "     'Come out here and say that to my face you-' By this point the both of them look like they're about to fight, with you stuck in the middle. You're ultimately forced to end the conversation, splitting the two of them, and they do eventually recede back to their opposing corners, both visibly livid with the circumstances that just played out.";
-	WaitLineBreak;
-	say "     With Velos, grumbling to himself all along the way, returning back inside you, you find yourself not quite sure what had just transpired here - given how rapidly things descended into the way they became.";
+	say "     'Come out here and say that to my face you-' By this point the both of them look like they're about to fight, with you stuck in the middle. You're ultimately forced to end the conversation, splitting the two of them, and they do eventually recede back to their opposing corners, both visibly livid with the circumstances that just played out.[paragraph break]";
+	say "     With Velos, grumbling to himself all along the way, returning back inside you, you find yourself not quite sure what had just transpired here given how rapidly things descended into the way they became.";
 	add 14 to velospostmusings, if absent;
 
 Section 15 - Leonard

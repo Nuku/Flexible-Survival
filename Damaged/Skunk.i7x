@@ -146,15 +146,15 @@ When Play begins:
 	now defeated entry is "[skunk_male_defeat]";
 	now victory entry is "[skunk_male_vict]";
 	now desc entry is "     This skunkbeast would easily pass for a normal animal, if it weren't for two things. One, the creature is the size of a small horse, and two, it's sporting the biggest erection you've ever seen as it waddles around on all fours. Which is a bit less than comforting, with the way it looks into your eyes.[line break]"; [ Description of the creature when you encounter it.]
-	now face entry is "that of a large-muzzled male skunk's"; [ Face description, format as "Your face is [Face of Player]." ]
+	now face entry is "that of a large-muzzled male skunk"; [ Face description, format as "Your face is [Face of Player]." ]
 	now body entry is "burly and more built for four-legged movement than that of a true anthro"; [ Body Description, format as "Your Body is [Body of Player]." ]
-	now skin entry is "[if looknow is true]dark black fur contrasting with pure white down your front and a matching stripe down your back, completely covering your[else]black and white furred[end if]"; [ skin Description, format as "Your body is covered in (your text) skin."]
+	now skin entry is "[if looknow is true]dark black fur contrasting with pure white down your front and a matching stripe down your back, completely covering your[else]black-and-white furred[end if]"; [ skin Description, format as "Your body is covered in (your text) skin."]
 	now tail entry is "A thick, black mass of fur blossoms from your rear, growing in size until it's reached just above your head and then bending gracefully near the tip. A pair of white stripes travel up its length, completing the effect."; [ Tail description, write a whole Sentence or leave blank. ]
 	now cock entry is "human-shaped"; [- Cock Description, format as you have a "size" (your text) cock-]
 	now face change entry is "black fur moves over your head like a hood, leaving a muzzle that's white on the bottom with a head that's all black, all completed by the pair of rounded ears sitting atop it and a white stripe from the tip of your nose to your back"; [ Face change text, format as "Your face feels funny as [face change entry]." ]
 	now body change entry is "it becomes broad and burly, more built for four-legged movement than walking on two legs"; [body change text. format as "Your body feels funny as (your text)."]
 	now skin change entry is "a sea of black moves over your back and a sea of white over your chest, while a matching stripe forms down the middle of the black"; [- skin change text. format as "Your skin feels funny as (your text)." -]
-	now ass change entry is "the black fur shifts over your ass, squeezing it until it's tight and sexy"; [- ass/tail change text. format as "Your ass feels funny as (your text)." -]
+	now ass change entry is "the black fur shifts over it, squeezing it until it's tight and sexy"; [- ass/tail change text. format as "Your ass feels funny as (your text)." -]
 	now cock change entry is "it seems unneeded"; [- cock change text. format as "Your cock feels funny as (your text)." -]
 	now str entry is 16;
 	now dex entry is 14;
@@ -237,9 +237,9 @@ When Play begins:
 	now tail entry is "A thick, black mass of fur blossoms from your rear, growing in size until it's reached just above your head and then bending gracefully near the tip. A pair of white stripes travel up its length, completing the effect."; [ Tail description, write a whole Sentence or leave blank. ]
 	now cock entry is "human-shaped"; [- Cock Description, format as you have a "size" (your text) cock-]
 	now face change entry is "black fur moves over your head like a hood, leaving a muzzle that's white on the bottom with a head that's all black, all completed by the pair of rounded ears sitting atop it and a white stripe from the tip of your nose to your back"; [ Face change text, format as "Your face feels funny as [face change entry]." ]
-	now body change entry is "your body becomes [if Player is female]even more feminine, waist slimming, hips widening leaving you with curves that would make anyone, male or female, drool in lust[else]more feminine, curves building that make it impossible to define you as anything but female despite what equipment you might have[end if]"; [body change text. format as "Your body feels funny as (your text)."]
+	now body change entry is "it becomes [if Player is female]even more feminine, waist slimming, hips widening leaving you with curves that would make anyone, male or female, drool in lust[else]more feminine, curves building that make it impossible to define you as anything but female despite what equipment you might have[end if]"; [body change text. format as "Your body feels funny as (your text)."]
 	now skin change entry is "a sea of black moves over your back and a sea of white over your chest, while a matching stripe forms down the middle of the black"; [- skin change text. format as "Your skin feels funny as (your text)." -]
-	now ass change entry is "the black fur shifts over your ass, squeezing it until it's tight and sexy"; [- ass/tail change text. format as "Your ass feels funny as (your text)." -]
+	now ass change entry is "the black fur shifts over it, squeezing it until it's tight and sexy"; [- ass/tail change text. format as "Your ass feels funny as (your text)." -]
 	now cock change entry is "it seems unneeded"; [- cock change text. format as "Your cock feels funny as (your text)." -]
 	now str entry is 12;
 	now dex entry is 18;

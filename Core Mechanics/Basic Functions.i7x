@@ -631,7 +631,7 @@ to NPCSexAftermath (TakingChar - a person) receives (SexAct - a text) from (Givi
 				now FirstOralPartner of TakingChar is name of Player;
 				now SexuallyExperienced of TakingChar is true;
 				add printed name of TakingChar to OralVirginitiesTaken of Player;
-		LibidoLoss 15;
+		[LibidoLoss 15;]
 	else if TakingChar is player:
 		if debugactive is 1:
 			say "DEBUG -> Player is the receiving partner for '[SexAct]'[line break]";
@@ -706,7 +706,7 @@ to NPCSexAftermath (TakingChar - a person) receives (SexAct - a text) from (Givi
 				increase OralCockTaken of Player by 1;
 			else if SexAct in lower case is "oralpussy":
 				increase OralPussyTaken of Player by 1;
-		LibidoLoss 15;
+		[LibidoLoss 15;]
 	else:
 		if debugactive is 1:
 			say "DEBUG -> [GivingChar] is having sex with [TakingChar][line break]";
@@ -1582,7 +1582,7 @@ to decide if a perception check passes (difficulty - a number):
 [This can be used to avoid writing the choice code over and over again when needing
 to prompt the player with an number of options to choose from. example of usage: let playerChoice be what the player chooses from myList]
 to decide which text is what the player chooses from (choices - a list of text):
-	if the number of entries in choices is 0:
+	if choices is empty:
 		decide on "";
 	let choice order be 1;
 	repeat with option running through choices:

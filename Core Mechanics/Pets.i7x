@@ -121,7 +121,7 @@ understand "ally dismiss" as DismissFirstCompanion.
 understand "pet dismiss" as DismissFirstCompanion.
 
 check DismissFirstCompanion:
-	if number of entries in CompanionList of Player is 0, say "You don't have any allies following you right now!" instead;
+	if CompanionList of Player is empty, say "You don't have any allies following you right now!" instead;
 
 carry out DismissFirstCompanion:
 	let DismissName be printed name of entry 1 of companionList of Player;

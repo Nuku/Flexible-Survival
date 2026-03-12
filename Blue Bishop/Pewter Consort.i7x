@@ -594,9 +594,9 @@ When Play begins:
 	now skin entry is "[consortskinentry]";
 	now tail entry is "You are adorned with a lengthy, prehensile tail, which whistles through the air with a lash.";
 	now cock entry is "[one of]normal-looking[or]seemingly human[at random], uncut";
-	now face change entry is "[consortfacechange]";
+	now face change entry is "the infection overtakes it. All facial features save for your mouth meld into it, [consortfacechange]";
 	now body change entry is "the infection takes hold. Tensing up, your body shifts and adjusts to take on the structure of a feral beast, lean and agile. Looking at your forehands, this strain at least gives you fully articulated digits";
-	now skin change entry is "[consortskinchange]";
+	now skin change entry is "it begins to tingle with the infection's influence. It takes on a gray and faintly metallic appearance, shimmering in the light[consortskinchange]";
 	now ass change entry is "a long tail sprouts from it. Fairly strong and prehensile, it sings as it's lashed through the air";
 	now cock change entry is "a strange sensation courses through it. Checking it out, it appears to be strangely human, but the change compels it to slightly ooze from its uncut head, your seed taking on a silvery appearance";
 	now str entry is 14; [14]
@@ -742,19 +742,18 @@ When Play begins:
 to say consortfacechange:
 	if consortinsight is 0:
 		if boundstate is true:
-			say "the infection overtakes it. All facial features save for your mouth meld into it, your sight going from darkness to an overwhelming wave of vivid colors, your rounded and smooth head fondled by the creatures. From what you can gather, this strain can somehow sense the emotions of a living thing. The way it radiates from the writhing bodies surrounding you is overwhelming, making it even more difficult to keep a clear head, exacerbated by the faintly reflective surface of their flesh and their silvery seed";
+			say "your sight going from darkness to an overwhelming wave of vivid colors, your rounded and smooth head fondled by the creatures. From what you can gather, this strain can somehow sense the emotions of a living thing. The way it radiates from the writhing bodies surrounding you is overwhelming, making it even more difficult to keep a clear head, exacerbated by the faintly reflective surface of their flesh and their silvery seed";
 			now consortinsight is 2;
 		else:
-			say "the infection overtakes it. All facial features save for your mouth meld into it, leaving your sight in utter blackness and compelling you to fondle your rounded and smooth head. In a scant few seconds, your sight returns to you, but the world around you is now desaturated to the point of being almost entirely gray; however, when you look at your hands they shimmer and glow with a shifting cascade of colors. From what you can gather, this strain can somehow sense the emotions of a living thing. The way it radiates from others is strangely affecting, making it difficult for you not to obsessively fondle your head in idle revels of your own radiance";
+			say "leaving your sight in utter blackness and compelling you to fondle your rounded and smooth head. In a scant few seconds, your sight returns to you, but the world around you is now desaturated to the point of being almost entirely gray; however, when you look at your hands they shimmer and glow with a shifting cascade of colors. From what you can gather, this strain can somehow sense the emotions of a living thing. The way it radiates from others is strangely affecting, making it difficult for you not to obsessively fondle your head in idle revels of your own radiance";
 			now consortinsight is 1;
 	else:
-		say "the infection overtakes it. All facial features save for your mouth meld into it, [if boundstate is true]your sight going from darkness to an overwhelming wave of vivid colors, your rounded and smooth head fondled by the creatures and exposed once more to their strange empathy[else]leaving your sight in utter blackness and compelling you to fondle your rounded and smooth head. In a scant few seconds, your sight returns to you, exposing you once more to the strange and empathic senses of these creatures[end if]";
+		say "[if boundstate is true]your sight going from darkness to an overwhelming wave of vivid colors, your rounded and smooth head fondled by the creatures and exposed once more to their strange empathy[else]leaving your sight in utter blackness and compelling you to fondle your rounded and smooth head. In a scant few seconds, your sight returns to you, exposing you once more to the strange and empathic senses of these creatures[end if]";
 	if SkinName of Player is "Pewter Consort" and consortinsight is 1:
 		say ". You find this quickly exacerbated by your faintly metallic skin, which seems to magnify the effect. It takes you a moment to control yourself";
 		now consortinsight is 2;
 
 to say consortskinchange:
-	say "it begins to tingle with the infection's influence. Your skin takes on a gray and faintly metallic appearance, shimmering in the light";
 	if FaceName of Player is "Pewter Consort" and consortinsight is 1:
 		say ". You're nearly taken aback by how much this appears to exacerbate your peculiar sense of sight, suggesting that reflective surfaces magnify your senses somehow";
 		now consortinsight is 2;

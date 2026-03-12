@@ -4,6 +4,8 @@ Version 4 of Shrinking Shrooms by Defth begins here.
 
 Section 1 - Event
 
+MushroomCaveVisited is a number that varies. MushroomCaveVisited is usually 0
+
 Table of GameEventIDs (continued)
 Object	Name
 Mushroom Cave	"Mushroom Cave"
@@ -12,8 +14,6 @@ Mushroom Cave	"Mushroom cave"
 Mushroom Cave is a situation.
 ResolveFunction of Mushroom Cave is "[ResolveEvent Mushroom Cave]".
 Sarea of Mushroom Cave is "Outside".
-
-MushroomCaveVisited is a number that varies. MushroomCaveVisited is usually 0
 
 to say ResolveEvent Mushroom Cave:
 	if MushroomCaveVisited is 0: [first visit]
@@ -258,7 +258,7 @@ to say LittleExplorer:
 	else if fightoutcome >= 10 and fightoutcome <= 19: [won]
 		say "     Sending the husky running with a kick in the pants, you laugh as he flees with his tail tucked low. Still, it might not be a good idea to go back into the restaurant... There is at least one more member of his pack in there and who knows how many others. Leaving this place through the front door, you can finally go back to the bunker.";
 		now Resolution of Little Trouble is 1; [fought, won]
-	AttemptToWait;
+	WaitLineBreak;
 	move player to bunker;
 	now little trouble is resolved;
 
@@ -347,11 +347,11 @@ to say ChineseUB:
 	WaitLineBreak;
 	say "     With a final push, your shoulders penetrate her cervix, allowing the rest of your body into the snug cave of her womb as her muscles quake in orgasm, squishing you with its flexible walls. Bouncing and sliding around in her innermost sanctuary, this also pushes you to, and past, the limit of your endurance, [if Player is male]making your cock shoot heavy blasts of seed right into her womb and over yourself[else if Player is female]your love juices slicking the inside of her womb[else]trembling and twitching in orgasm[end if]. Afterwards, you stay in the fetal position for a time, just resting after your breathtaking climax. After all, this is such a nice place. Warm and welcoming, you could live here forever.";
 	say "     But despite what you may have wanted, at one point, the walls suddenly tremble and contract in a concerted way, sending you on a slippery slide towards her cervix, which opens just far enough to allow your exceptionally well-lubed body to slip through. Following the incline of her pussy, you arrive at the husky's folds a few heartbeats later and find yourself 'birthed', flopping wetly onto the mattress in the cruel outside world. Panting hard, you breathe in the fresh air of the room, and the all-encompassing aroma of her heat starts to leave you, not that you actually want that in this moment as you stagger to your feet and try to plunge into her depths once more.";
-	if Player is male:
-		CreatureSexAftermath "Husky Bitch" receives "PussyFuck" from "Player";
 	MultiInfect "Husky Bitch" repeats 3;
 	WaitLineBreak;
 	say "     But no, the satisfied husky blocks your path with her hand, nudging you away with a firm push. 'That was fun, but you gotta let mommy rest,' she sighs out in a somewhat sleepy tone, sinking back to lean against the wall once more. A moment later, you come back to your senses more or less and start to dash towards the entrance hole to get back to your normal life after this extraordinary experience. With one last glance over your shoulder, you see the husky waving her 'child' goodbye, then doze off again. Breathing a sigh of relief as you step outside of the building and see your pile of gear still undisturbed, you wait a while until you finally feel yourself growing. Quickly getting dressed again, you get ready for more adventures out in the city.";
+	if Player is male:
+		CreatureSexAftermath "Husky Bitch" receives "PussyFuck" from "Player";
 	now Resolution of Little Trouble is 5; [shrunk, UB'd]
 	now Little Trouble is resolved;
 
@@ -715,11 +715,10 @@ to say BHHScene1:
 			WaitLineBreak;
 			say "     As for the horseman, he is ecstatic, not minding you at all as your whole existence sinks in deeper into his manhood. You find your entire legs disappearing into the throbbing shaft, followed by the rest of your torso, leaving your arms and head for last with each passing second. Inch by inch you slide deep down his cock until the very last bit of you fully sinks inside, the horseman's slit closing above you as the pulsing movements along his member continue to squeeze all over you, bringing your helpless body into a long journey down to the equine's balls. 'Ohhh fuck yes... You feel amazing in there, little [boygirl]... Mmmmh I wish I could keep you in there forever without churning you down for good...' he moans, enjoying your presence in his [one of]right[or]left[at random] nut, curled up within the tight confines of his cum-filled orb.";
 			say "     There is not enough space to move, even. You are utterly trapped in his ballsack, unable to fight back nor squeeze yourself out, stuck and at the horseman's mercy. The testicle you are in continues to fill, that creamy and almost scorching hot cum beginning to make you feel... joyful, a bliss you cannot explain as your entire body reacts with sparks of pure pleasure. This strange stimulation, which feels so overwhelmingly good at first, starts making your body feel numb, but you keep diving into that warm and welcoming pool of thick jizz that yearns you to lose yourself in it... You feel your entire surroundings move around lullingly, which seems to be the horseman cupping and caressing his balls, feeling you inside him as he strokes his huge equine dong...";
-			CreatureSexAftermath "Player" receives "Other" from "Horseman";
-			WaitLineBreak;
 			say "     You black out moments after as the creamy and thick pool of cum you are in takes you, submerging you completely.";
 			WaitLineBreak;
 			say "     ...But then, you feel your world spinning, that comfortable warmth suddenly disappearing from around you, replaced with a cold breeze and a hard surface. You feel completely exhausted as you open your eyes and glance around you. You are outside the horseman, and on a pile of dirt still near the Stables. All over your body, however, is his cum, already drying up. It looks like you have been here for a while since he came you out of his balls, and back to your original size, no less! That was some journey you have just experienced! Now you have to find yourself a way to clean yourself up. Fortunately, the hung equine had the decency to bring all of your stuff to you once he was done with his trickery.";
+			CreatureSexAftermath "Player" receives "Other" from "Horseman";
 			now Resolution of Ballsy Hung Horseman is 1;
 			LibidoBoost 30;
 			SanLoss 20;
@@ -876,10 +875,10 @@ to say BHHFistCock:
 		else:
 			say "     You try your best to not fall asleep due to all this and resist with your very best efforts, still kicking at the horseman's balls and at every single one of his taunts. There is this particular kick that makes the horseman flinch unexpectedly... 'Whoa! Hey! S-stop doing that...!' he shouts, trying to block your blows, but the enormous size of his junk makes it difficult for him to find the right space to shield himself from you. Noticing this, you continue to hit that particular spot, the horseman's voice booming out from everywhere between grunts and heavy breathing. 'F-fuck, n-not there... C-come on! Let me enjoy you a little bit longer...! Fuuuck why does it feel so good...?!'";
 			say "     This causes your space to suddenly fill with a lot of cum, fully submerging you in it, but soon, your surroundings begin to retract and constrict you enough to force you back into the equine's shaft. It does not stop there, as the force of his cum pushes you further up while you hear him scream in bliss, naturally driving you outside with quite a massive blast. His cum follows you all the way until you hit the ground, further bathing you in it, and you have to roll away from the deluge he is causing with every spurt if you do not want to drown in it. As you are finally outside, you get a view of the horseman cumming a ridiculously huge load, completely helpless to all that overwhelming pleasure, but all as he grunts in frustration. A frustrating pleasure? Either way, he seems to be half-enjoying it.";
-			CreatureSexAftermath "Player" receives "Other" from "Horseman";
 			WaitLineBreak;
 			say "     While he is left cumming for an unforeseen amount of time, you grab your stuff back and try to get yourself as clean as you can. This ordeal left you exhausted, but you pity the poor horseman who just cannot stop his orgasm and cannot even walk away on his own due to the size of his endowments... You think he is about to curse at you, but only moans leave his mouth as he looks at you, extending his hand in your direction. 'You f-fucker...! I-I'll have you next time...!'";
 			say "     Those are the last words you hear from him as you begin to walk away. He is still cumming...";
+			CreatureSexAftermath "Player" receives "Other" from "Horseman";
 			LibidoBoost 40;
 			SanLoss 30;
 
@@ -964,10 +963,10 @@ to BBHFuckCockCV:
 		say "     You try your best to not fall back asleep due to all this and resist with your very best efforts, still kicking at the horseman's balls and at every single one of his taunts. There is this particular kick that makes the horseman flinch unexpectedly... 'Whoa! Hey! S-stop doing that...!' he shouts, trying to block your blows, but the enormous size of his junk makes it difficult for him to find the right space to shield himself from you. Noticing this, you continue to hit that particular spot, the horseman's voice booming out from everywhere among grunts and heavy breathing. 'F-fuck, n-not there... C-come on! Let me enjoy you a little bit longer...! Fuuuck why does it feel so good...?!'";
 		WaitLineBreak;
 		say "     This causes your space to suddenly fill with a lot of cum, fully submerging you in it, but soon, your surroundings begin to retract and constrict you enough to force you back into the equine's shaft. It does not stop there, as the force of his cum pushes you further up while you hear him scream in bliss, naturally driving you outside with quite a massive blast. His cum follows you all the way until you hit the ground, further bathing you in it, and you have to roll away from the deluge he is causing with every spurt if you do not want to drown in it. As you are finally outside, you get a view of the horseman cumming a ridiculously huge load, completely helpless to all that overwhelming pleasure, but all as he grunts in frustration. A frustrating pleasure? Either way, he seems to be half-enjoying it.";
-		CreatureSexAftermath "Player" receives "Other" from "Horseman";
 		WaitLineBreak;
 		say "     While he is left cumming for an unforeseen amount of time, you grab your stuff back and try to get yourself as clean as you can. This ordeal left you exhausted, but you pity the poor horseman who just cannot stop his orgasm and cannot even walk away on his own due to the size of his endowments... You think he is about to curse at you, but only moans leave his mouth as he looks at you, extending his hand in your direction. 'You f-fucker...! I-I'll have you next time...!'";
 		say "     Those are the last words you hear from him as you begin to walk away. He is still cumming...";
+		CreatureSexAftermath "Player" receives "Other" from "Horseman";
 		LibidoBoost 40;
 		SanLoss 30;
 

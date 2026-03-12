@@ -232,7 +232,7 @@ carry out Inventorying:
 		say "[variable letter spacing]Total Weight: [weight]/[capacity of Player] lbs. [if the player is overburdened]*OVERBURDENED*[line break][end if][line break]";
 	if scenario is "Researcher" or nanitemeter > 0:
 		say "(You may see your collection of vials using [link][bold type]vial inventory[roman type][end link] or [link][bold type]vinv[roman type][end link] for short.)";
-	if the number of entries in tapes of Player > 0:
+	if tapes of Player is not empty:
 		say "(You may see your collection of video tapes using [link][bold type]tape inventory[roman type][end link] or [link][bold type]tinv[roman type][end link] for short.)";
 	say "(You can adjust the number of inventory columns with the command [link]set columns[end link].)";
 	now invlinklistfilled is true;
@@ -350,7 +350,7 @@ understand "take all/everything" as looting.
 understand "grab all" as looting.
 
 check looting:
-	if number of entries in invent of location of Player is 0, say "You don't see anything around here." instead;
+	if invent of location of Player is empty, say "You don't see anything around here." instead;
 
 carry out looting:
 	repeat with Q running through invent of the Location of Player:

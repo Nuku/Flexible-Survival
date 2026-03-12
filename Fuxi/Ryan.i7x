@@ -66,6 +66,7 @@ Sterile of Ryan is false. [steriles can't knock people up]
 MainInfection of Ryan is "Fennec".
 Description of Ryan is "[RyanDesc]".
 [Conversation of Ryan is { "Sir?" }.]
+fuckscene of Ryan is "[RyanSexMenu]".
 icon of Ryan is Figure of Ryan_panties_icon.
 The scent of Ryan is "     Ryan smells of sex, heat, and fruit.".
 
@@ -156,6 +157,7 @@ to say RyanTalkMenu:
 						now TalkDone is true;
 					-- "Give Ryan Pill":
 						say "[RyanTalk7]";
+						now TalkDone is true;
 				wait for any key;
 				if TalkDone is false:
 					say "[RyanTalkMenu]";
@@ -218,16 +220,16 @@ to say RyanBeachDateSubmit:
 to say RyanBeachDateLoss:
 	say "     Seeing an opening, the orca relieves you of your legs['] support by sweeping them away with his thick and powerful tail. With you now on the ground and too weak to continue, the killer whale pulls you onto your knees, displaying a clear view of the beast's long, curving cock as it commences the ritual of emerging from its watertight home. 'Suck!' he orders you in a deep, rumbling command. Thrusting into your mouth at a slow and deliberate pace, you're made to slick his cetacean rod with your saliva while it becomes fully engorged. Eventually, you feel its immense length depart from your abused orifice before he indicates to you that he will be claiming another. He slides over you, his massive form pinning you against the cold concrete as his muscular tail spreads and otherwise prepares your legs for his eager intrusion. With a sharp jab, you feel the flexible member invade your ass, worming itself deeper into you like some meaty tentacle as he proceeds to pound your vulnerable hole.";
 	say "     Influenced by the whale's perverse hold on you, you're soon unable to refuse the pleasure of such a wriggling intrusion. Slickly sliding across the supple walls of your [bodytype of Player] anus, the orca-man's impressive shaft probes the depths of your fleshy labyrinth, and it's not long before your hole is sufficiently stretched to accommodate the whole of his cock within your confines. Writhing in pleasure against the wet sand, this strange sensation is enough to drive you to climax, and - like clockwork - the beast's own release is made apparent as his thick, virile cum floods the confines of your stomach. Visibly bloated by such an impressive release, you feel the writhing organ soften before the whale pulls himself free of your tight hole. Satisfied with what he has wrought upon you, he departs, leaving you to lay across the concrete in a dizzy stupor.";
-	CreatureSexAftermath "Player" receives "AssFuck" from "Killer Whale";
 	WaitLineBreak;
 	say "     While you lie on the ground recovering, you hear a panicked screech as the orca comes back, and you feel your heart sink as you realize what the sound was. Struggling in the orca's arms, Ryan is frantically trying to escape. 'Sir, help, please!' he screams for you, but desperately as you might want to assist your mate, after your brutal beating and fucking, you can't even stand, much less stop the orca. You can only give a pathetic whine in protest as the killer whale pins Ryan down on the concrete to lie in front of you, rips off his panties, and pushes his legs up. Lying where you are, you have a perfect view of Ryan's puffy vulpine spade, which means that you also have a perfect view to watch the strong cetacean's glossy cock part your lover's heated folds stretching him wide. You hear Ryan give a strained grunt as the beast pushes his girthy shaft into him. 'W-wait!' he stammers, but of course, the brute shows no restraint cramming inch after inch of cock into the small vulpine. He thrusts in deep, visibly bulging Ryan's stomach.";
 	say "     At first, your mate still struggles to resist, even stuffed full of dick; he persists in trying to push his attacker away, but quickly that resistance falls away. Ryan can't deny what his body needs. A strong male to pump him full of cum and leave him filled with pups, a need the orca is all too happy to fulfill, his oversized prick jammed past your lover's cervix and deep into his womb, primed and ready to bloat your lover with his seed with each harsh thrust from the orca edging him ever closer to that goal and leaving Ryan seeing stars, groaning out in pleasure as he pants from the intensity of the sensation. Thankfully Ryan's previous work in the Shag Shack [if Cock Length of Player > 20]and the time he spends with you seem[else]seems[end if] to have adequately prepared him for taking the orca's oversized shaft[if Cock Length of Player < 14]. You wonder if your mate will even be able to feel you again after this as you consider just how massive the cock shoved inside him is[end if]. You're distracted from your thoughts as Ryan goes limp under the orca, and you feel your heart drop as you know he's given in to the pleasure. Your fox begins to pant slowly as you notice the cetacean's cock growing sloppy with a mixture of his and Ryan's juices.";
 	WaitLineBreak;
 	say "     You can only watch impotently as the feral beast ravishes your lover, your shame and embarrassment only growing as Ryan's pleasure rises, moans and squeals replacing the vulpine's earlier groans of discomfort and pain, the orca's shaft glistening with his feminine juices. You even notice him rolling his hips to better receive the brute's shaft! It's not like you haven't watched Ryan get fucked before, but then you and he had control. It was something you both wanted! Now you're helpless, forced to listen to the raunchy wet noises of your fennec's pussy getting ruined. Turning to see you watching him and seeing the obvious pain and embarrassment on your face snaps Ryan out of his enjoyment momentarily. 'I'm so sorry, sir!' he sobs out to you, but despite Ryan's sorrow judging by his panting and increasingly loud moaning, your fox is edging ever closer to climax. You don't begrudge Ryan at all for his enjoyment, considering his heat and your own stolen orgasm under the orca. Your guess is quickly proved correct. A couple of rough thrusts later, your fox howls and shakes in orgasm, soaking the killer whale's shaft in his arousal while the walls of his snug cunny undoubtedly try to milk the superior male for every drop of his seed. The orca doesn't stop fucking Ryan for a moment, slamming into the cuntboy's pussy and slinging his femcum across the ground with each withdrawal from the vulpine's sopping wet pussy.";
 	say "     Regardless of the humiliating situation that you find yourself in, you can't help but grow aroused at the sweet pheromones from Ryan's orgasm. But, it's not you who reaches orgasm with the beautiful fox but rather the victorious killer whale triumphantly bellowing as he floods your mate's stretched snatch with his virile seed. He plants himself deep inside your lover to ensure every drop of his spunk is drained into him. Then, withdrawing slowly from Ryan, the cruel cetacean wanders off, satisfied by his two orgasms, leaving you to watch his cum slowly flow out of your lover's abused pussy. You both lie down defeated, but eventually, you recover physically from the beating and the fucking you got and mentally from the agonizing humiliation of watching Ryan get raped while you could do nothing to stop it. Not wanting anything else to hurt either of you, you stumble to your feet and pick up your dazed fox while the orca's cum still leaks from his gaping pussy, some splashing on you. Currently in no state to return to the library, you stumble into an abandoned store and collapse to the floor.";
-	CreatureSexAftermath "Ryan" receives "PussyFuck" from "Killer Whale";
 	WaitLineBreak;
 	say "     Already feeling wretched, your despair only grows as Ryan begins to weep. 'I'm so sorry, sir! I'm so sorry... I didn't do anything to help you fight. I couldn't stop him from-' A loud, hiccuped sob rolls through Ryan, preventing him from finishing his sentence. 'The worst part is that I even started to enjoy it. I'm such a worthless whore! Oh God, you're even hurt still!' Noticing a couple of light claw marks on your body Ryan starts hyperventilating as you rush forward to calm him. Hugging Ryan tightly, he cries into your chest, whimpering apologies and gripping your shoulders tightly as you assure Ryan that he has no reason to be the one feeling guilty. After all, you were the one that wanted to go on this trip and promised to protect him, then failed. Eventually, managing to soothe Ryan, you begin the long walk home. The both of you are utterly miserable as you enter the library and go down to your bed; flopping down on it, emotional exhaustion pulls you both into a dreamless sleep as you mutually hope to forget this horrible day.";
+	CreatureSexAftermath "Player" receives "AssFuck" from "Killer Whale";
+	CreatureSexAftermath "Ryan" receives "PussyFuck" from "Killer Whale";
 	decrease morale of Player by 10;
 	now Strength of Ryan is 1;
 	TraitGain "Beach Date Loss" for Ryan;
@@ -249,16 +251,16 @@ to say RyanBeachDateVictory:
 		WaitLineBreak;
 		say "     Though Ryan may have given you the reins, he's hardly idle in his worship, swallowing around your cock each time you sheathe yourself in his throat; he laps at the underside of your dick while massaging your balls with one hand. Your fennec lover puts all his experience into pleasing you, and his idolizing gaze as you plunge into his mouth makes things that much better. Turning your attention from the euphoric pleasure of the blowjob Ryan's giving you, you look around and notice you've attracted quite a lot of attention from the other beachgoers, a couple of them even openly masturbating. Ryan seems to have noticed as well. Glancing up at the crowd, you see a blush rise up his face, but as your eyes meet again, he only ups his efforts, milking loud moans from you as he sucks harder around your dick and grows louder slurping messily, his drool dripping down your dick to your balls as he speeds up his bobbing. The little minx wants to show off! You respond in kind by upping the ante on your end as well; as the powerful and arousing scent of Ryan's heat and pheromones rise in the air, you shift your grip from Ryan's head to around his ears, making him whine in pleasure as you grip them firmly and tug him down on your dick while massaging his sensitive ears.";
 		say "     You quickly feel your climax rising under your skilled fox's attention. Bucking into Ryan's throat faster and pushing him down harder, your churning balls slap against his chin as you howl in orgasm, shooting your load down your vulpine lover's throat. Ryan gulps down every drop of your spunk, his clenching throat squeezing more to feed him. Winding down from your climax, you slowly pull out, leaving Ryan's mouth with a loud pop and letting the last few shots coat his tongue and fall back, panting for breath. Opening his mouth to present you with the frothy mix of your seed and his spit while messy strings of it stretch between his jaws, Ryan then swallows. 'Thank you, sir,' he purrs to you, gently licking you clean. Through your haze of pleasure, you notice your fox hasn't gotten off, the sweet smell of his heat tickling your nose and rapidly hardening you up again.";
-		NPCSexAftermath Ryan receives "OralCock" from Player;
 		WaitLineBreak;
 		say "     Darting up, you flip Ryan over and move behind him, making him yelp in surprise. Leaning in close, you murmur into his ear that you're far from done, drawing a needy whine from your sexy vulpine as you tug down his panties. 'God, please, sir, take me now!' Ryan whimpers, wiggling his round bum in an unnecessary attempt to entice you. Grinding against his dripping pussy, you lube your already spit-slicked cock with his juices, driving Ryan wild with lust and anticipation as he begs you to fuck him loudly, drawing the attention of other beachgoers who stare in envy at both you and your fennec. You can't help but feel immensely pleased with this as you finally plunge deep into Ryan's tight wet pussy, publicly claiming him as yours and turning any past begging into a drawn-out moan.";
 		say "     You don't give Ryan a moment to recover. Grabbing his tail, you roughly buck into your fox and pull him into every thrust, your hips and balls slapping loudly against his thighs while his warm juicy cunny slurps lewdly around your shaft. You ruthlessly pound into Ryan's pussy and give his bouncy bubble butt a quick spank that makes him squeeze his inner muscles delightfully tight around you. 'Fuck me, sir, fuck me like I'm a bitch in heat! Show everyone I'm your bitch!' Ryan screams lustfully, all restraint forgotten, pounded out of him by your dick. Your tod's words light a fire in you as you remember the eyes of the crowd on you and the orca that tried to take him away from you, a primal need welling up to show everyone exactly who this fox belongs to! Upping the speed and strength of your thrusts, you soon push Ryan into a powerful climax, his femcum squelching lewdly to stain the towel beneath you and your crotch, his arousal dribbling down your nuts.";
 		WaitLineBreak;
 		say "     You don't stop fucking the cuntboy for a second. Growling bestially, you try to hold back your own orgasm while Ryan's inner muscles try to milk you desperately for your seed. Your lover pants in pleasure, squirming in overstimulation, yet still, he begs you for more, and that's exactly what you do, tirelessly jackhammering into his soft folds[if player is knotted], popping your knot in and out of his battered pussy[end if]. It doesn't take too long to drive Ryan into another climax. 'Please cum this time, sir. I need it. Knock me up! Breed me!' he pleads — the poor boy sounds like he could cry if you don't. Luckily you're unable to resist this time, your balls drawing up tightly as you roar out your climax, triumphantly flooding Ryan's fertile womb with your seed[if player is knotted] and popping in your swollen knot one last time to ensure every drop of your load stays in your mate[end if].";
 		say "     Still, as soon as you can do so again, you slam your hips forward into Ryan, your mind going blank from the pleasure. Eventually, when you come back to your senses, you see that Ryan is sleeping and you're still inside him. Pulling out of him, you admire the sight of his stretched, creamy cunny overflowing with your seed. Judging from the sky and how well-rested you feel, you must have fallen asleep at one point during your sex marathon. You can't remember much. Everything is a blur after the second orgasm. Though you hate to disturb your peacefully sleeping lover, you must be getting a move on before it gets too dark.";
-		NPCSexAftermath Ryan receives "PussyFuck" from Player;
 		WaitLineBreak;
 		say "     Ryan yawns adorably as you wake him. 'Good morning, sir. I'm sorry, did I fall asleep? You were insatiable; I couldn't keep up! I'm still a bit weak,' he exclaims, still quite sleepy given he's just woken up. Smiling a bit smugly, you scoop your lovely fox into your arms, pat him on the head and tell him it's time to go home. 'Alright, sir, I'll be ready in a moment.' Ryan takes a few minutes to collect himself, shaking his fur free of sand and wiping off his still-dripping snatch with the beach towel. After a quick stretch, he's right as rain and ready to follow you. Your journey home is uneventful, the aura of confidence and power you have still riding the high of your public breeding with Ryan warding off any threats. Entering the library, you guide Ryan to the bed, where he flops down in apparent exhaustion. 'I'm still tired from the sex, and I'm not as used to traversing the city as you. It's a long walk from the library to here,' he mumbles. Kissing Ryan on the cheek, you leave him to rest, already looking forward to your next date.";
+		NPCSexAftermath Ryan receives "OralCock" from Player;
+		NPCSexAftermath Ryan receives "PussyFuck" from Player;
 		if Libido of Ryan is 0 and Perception of Ryan is 0 and Hunger of Ryan is 0 and "Long Pregnancy" is not listed in Traits of Ryan:
 			now Libido of Ryan is 17;
 	else:
@@ -287,105 +289,102 @@ to say RyanTalk7:
 
 Section 3 - Sex
 
-instead of fucking Ryan:
+to say RyanSexMenu:
 	if lastfuck of Ryan - turns < 6:
 		project Figure of Ryan_panties_icon;
 		say "     Ryan looks up at you guiltily. 'Please give me a minute, sir! I won't be too long. I just need a couple of hours to recover,' he pleads. Feeling ashamed for stressing the poor fox and pushing for sex so soon after just fucking him, you quickly apologize and assure him that you can wait.";
 	else:
+		if debugactive is 1:
+			say "     DEBUG -> Ryan Sex Menu.";
 		project Figure of Ryan_naked_icon;
-		say "[RyanSexMenu]";
-
-to say RyanSexMenu:
-	if debugactive is 1:
-		say "     DEBUG -> Ryan Sex Menu.";
-	now sextablerun is 0;
-	blank out the whole of table of fucking options;
-	[]
-	if Player is male:
-		choose a blank row in table of fucking options;
-		now title entry is "Vaginal";
-		now sortorder entry is 1;
-		now description entry is "Lift the fox onto your lap and feel his folds embrace you";
+		now sextablerun is 0;
+		blank out the whole of table of fucking options;
 		[]
-		choose a blank row in table of fucking options;
-		now title entry is "Blowjob";
-		now sortorder entry is 2;
-		now description entry is "Have Ryan suck you off";
-		[]
-		if scalevalue of Player > 1:
+		if Player is male:
 			choose a blank row in table of fucking options;
-			now title entry is "Use His Ears";
-			now sortorder entry is 5;
-			now description entry is "Masturbate with his sinfully-soft ears";
-		[]
-		if Hunger of Ryan > 4:
-			if IncestList is not warded and IncestList is not banned:
-				choose a blank row in table of fucking options;
-				now title entry is "Incestuous Group Sex";
-				now sortorder entry is 6;
-				now description entry is "Have some fun with the whole family";
+			now title entry is "Vaginal";
+			now sortorder entry is 1;
+			now description entry is "Lift the fox onto your lap and feel his folds embrace you";
 			[]
 			choose a blank row in table of fucking options;
-			now title entry is "Fluff Pile & Cuddle";
-			now sortorder entry is 7;
-			now description entry is "Drown in fennec floof";
+			now title entry is "Blowjob";
+			now sortorder entry is 2;
+			now description entry is "Have Ryan suck you off";
+			[]
+			if scalevalue of Player > 1:
+				choose a blank row in table of fucking options;
+				now title entry is "Use His Ears";
+				now sortorder entry is 5;
+				now description entry is "Masturbate with his sinfully-soft ears";
+			[]
+			if Hunger of Ryan > 4:
+				if IncestList is not warded and IncestList is not banned:
+					choose a blank row in table of fucking options;
+					now title entry is "Incestuous Group Sex";
+					now sortorder entry is 6;
+					now description entry is "Have some fun with the whole family";
+					[]
+					if "Brood Bred" is listed in Traits of Ryan:
+						choose a blank row in table of fucking options;
+						now title entry is "Fennec Gangbang";
+						now sortorder entry is 8;
+						now description entry is "Let your offspring breed you or Ryan";
+				[]
+				choose a blank row in table of fucking options;
+				now title entry is "Fluff Pile & Cuddle";
+				now sortorder entry is 7;
+				now description entry is "Drown in fennec floof";
 		[]
-		if "Brood Bred" is listed in Traits of Ryan and IncestList is not warded and IncestList is not banned:
-			choose a blank row in table of fucking options;
-			now title entry is "Fennec Gangbang";
-			now sortorder entry is 8;
-			now description entry is "Let your offspring breed you or Ryan";
-	[]
-	choose a blank row in table of fucking options;
-	now title entry is "Fingering";
-	now sortorder entry is 3;
-	now description entry is "Finger the fennec's pussy";
-	[]
-	choose a blank row in table of fucking options;
-	now title entry is "Give Cunnilingus";
-	now sortorder entry is 4;
-	now description entry is "Orally pleasure the fox";
-	[]
-	sort the table of fucking options in sortorder order;
-	repeat with y running from 1 to number of filled rows in table of fucking options:
-		choose row y from the table of fucking options;
-		say "[link][y] - [title entry][as][y][end link][line break]";
-	say "[link]0 - Nevermind[as]0[end link][line break]";
-	while sextablerun is 0:
-		say "Pick the corresponding number> [run paragraph on]";
-		get a number;
-		if calcnumber > 0 and calcnumber <= the number of filled rows in table of fucking options:
-			now current menu selection is calcnumber;
-			choose row calcnumber in table of fucking options;
-			say "[title entry]: [description entry]?";
-			if Player consents:
+		choose a blank row in table of fucking options;
+		now title entry is "Fingering";
+		now sortorder entry is 3;
+		now description entry is "Finger the fennec's pussy";
+		[]
+		choose a blank row in table of fucking options;
+		now title entry is "Give Cunnilingus";
+		now sortorder entry is 4;
+		now description entry is "Orally pleasure the fox";
+		[]
+		sort the table of fucking options in sortorder order;
+		repeat with y running from 1 to number of filled rows in table of fucking options:
+			choose row y from the table of fucking options;
+			say "[link][y] - [title entry][as][y][end link][line break]";
+		say "[link]0 - Nevermind[as]0[end link][line break]";
+		while sextablerun is 0:
+			say "Pick the corresponding number> [run paragraph on]";
+			get a number;
+			if calcnumber > 0 and calcnumber <= the number of filled rows in table of fucking options:
+				now current menu selection is calcnumber;
+				choose row calcnumber in table of fucking options;
+				say "[title entry]: [description entry]?";
+				if Player consents:
+					LineBreak;
+					now sextablerun is 1;
+					if title entry is:
+						-- "Vaginal":
+							say "[RyanSex1]";
+						-- "Blowjob":
+							say "[RyanSex2]";
+						-- "Fingering":
+							say "[RyanSex3]";
+						-- "Give Cunnilingus":
+							say "[RyanSex4]";
+						-- "Use His Ears":
+							say "[RyanSex5]";
+						-- "Incestuous Group Sex":
+							say "[RyanSex6]";
+						-- "Fluff Pile & Cuddle":
+							say "[RyanSex7]";
+						-- "Fennec Gangbang":
+							say "[RyanSex8]";
+			else if calcnumber is 0:
 				LineBreak;
 				now sextablerun is 1;
-				if title entry is:
-					-- "Vaginal":
-						say "[RyanSex1]";
-					-- "Blowjob":
-						say "[RyanSex2]";
-					-- "Fingering":
-						say "[RyanSex3]";
-					-- "Give Cunnilingus":
-						say "[RyanSex4]";
-					-- "Use his Ears":
-						say "[RyanSex5]";
-					-- "Incestuous Group Sex":
-						say "[RyanSex6]";
-					-- "Fluff Pile & Cuddle":
-						say "[RyanSex7]";
-					-- "Fennec Gangbang":
-						say "[RyanSex8]";
-		else if calcnumber is 0:
-			LineBreak;
-			now sextablerun is 1;
-			say "     You step back from the fennec fox, shaking your head slightly as he gives a questioning look.";
-		else:
-			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options], or 0 to exit.";
-	wait for any key;
-	clear the screen and hyperlink list;
+				say "     You step back from the fennec fox, shaking your head slightly as he gives a questioning look.";
+			else:
+				say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options], or 0 to exit.";
+		wait for any key;
+		clear the screen and hyperlink list;
 
 to say RyanSex1: [Vaginal]
 	if debugactive is 1:
@@ -453,14 +452,14 @@ to say RyanSex6: [Incestuous Group Sex]
 	WaitLineBreak;
 	say "     You don't stay idle for long. After all, you've got many more fennecs to breed besides Ryan, and you've also got to put on a show for them. So quickly, you switch from savoring your lover's slick cunt to wrecking it. Gripping his legs tightly, you spread them wide and raise them to give your young the perfect view of your cock sawing in and out of his pretty pink depths while his juices waterfall down your balls, the loud slap of your hips against his ass mixed with the lurid and raunchy wet noises of you roughly stuffing your fennec's slobbering slit with your cock. The best part is your slutty vulpine loves every minute of it, practically screaming in pleasure. Ryan's no longer able even to speak, instead defaulting to the loud yips and barks of his infection as you fuck out every thought from him right in front of his brood, who watch in a mixture of wonder and excitement as they wait for their turn. The smell of vulpine arousal lies heavy in the air. The pheromones and musk of so many fertile and virile fennecs all lying in wait for you to breed them fogs your mind and drowns out any thought not related to filling as many asses and pussies as you possibly can. As this happens, your sons crowded around you grow bolder, licking and pinching, one of them even kneeling between your legs to lick you and Ryan while you fuck, and the others masturbating to the show.";
 	say "     It doesn't take long before Ryan climaxes, his warm pussy spasming around, squeezing you so delightfully and soaking you in his girl-cum, drawing you into a powerful climax with him, one of what is sure to be many of your orgasms during this session. Your lover shakes and moans loudly in your grasp as you fill him with fat wads of cum before finally falling limp, panting heavily. Your teasing and fucking have exhausted him for now. Pulling out of Ryan's creamy snatch earns you a weak whine from the tired fox, still craving the pleasure of your touch and seed. Admiring the sight of your cum dripping from his slit, a shiver goes down your spine as you think that with this, you've bred even more kits to join in future family breedings. But even if Ryan's done, you're certainly not. Luckily, you have many other eager fennecs, your very own children, to help drain your balls. Right away, your sons, who were massaging and licking you during your mating with Ryan, immediately rush to present themselves, raising their tails to show off their tight tailholes and dripping pussies while begging almost childishly for you to choose them. 'Dad, me first!' 'No, me! I'm more experienced!' 'I'm more flexible!'";
-	NPCSexAftermath Ryan receives "PussyFuck" from Player;
 	WaitLineBreak;
 	say "     Their arguing doesn't really matter to you. You're hardly paying attention, too busy eyeing their round asses and inviting holes, and in the end, you don't even get to choose one as another of your sons interrupts your choice. Quickly pouncing on you, the young fennec pushes you to the bed and straddles your waist, then lines up your cum and femcum-slicked cock with his tight asshole and starts riding you, his cute small pink prick bouncing which each rise and fall. You don't mind this change of pace at all, far too lust drunk to care. You're happy to let your son take the reins so long as he keeps his sweet hole wrapped around you. Your son rides you with an experience showing the results of past play times with his brothers. Smoothly bouncing himself up and down on your shaft, he runs his arms along your chest to play with your body pinching your nipples and leaning in for a hungry kiss.";
 	say "     You return his attention just as voraciously, moaning into the kiss as your tongues wrangle. You run your hands along your son's supple curves drinking in every inch of his body, gripping and running your hands along his soft thighs and stroking up his belly, enjoying that sinfully soft fur, then reaching down to grope your son's ample rear delighting in the way it jiggles with each slam down on your meaty dick. You cum first from this pairing. Still sensitive from your previous climax, you groan and whimper as you shoot a massive load deep into the curvy vulpine riding you but find no relief, your balls still feeling heavy with an ocean of cum, and your dick is still achingly hard. 'Daddy, I'm cumming!' the shapely fennec riding you cries out his climax only moments after you. The constant prostate battering and the feeling of your hot seed filling him up drives him over the edge, his gripping hole forcing a few more strings of cum from you while his tiny cock twitches shooting rather impressive lines all over you. All tuckered out, your son moves to lay beside Ryan, happily purring while you're already bending over your next partner.";
-	CreatureSexAftermath "Fennec" receives "AssFuck" from "Player";
 	WaitLineBreak;
 	say "     The son you're coupling with this time just so happens to be another cuntboy like Ryan, and you waste zero time in fucking him. There's no discussion, no announcement that he's your pick, only a loud moan as you slip into puffy pussy and push your son over the bed to take him doggy style as the sweet scent of vulpine heat and arousal overwhelms the urge to do anything more than rut every single fennec in this room, and your mating with this fox is no less rough than your mating with Ryan, and just as before, the slut captured in your embrace loves it. You discover a neat trick with this one, tugging on the small cuntboy's ears or tail makes him tighten up deliciously around you. The fucking is all a blur for you, your bodies sore and tired, and yet you're the horniest you've ever been in your entire life, and you can't stop moving your hips. This time you climax together, your partner's insides milking you thoroughly as you pop off inside him. A long groan pours out from you as you dump your nuts into the young fennec below you, siring your own future grandchildren, and that's the last thing you think before you black out, your primal urges momentarily taking all control.";
 	say "     When you come to you're surrounded by your brood with Ryan sleeping on your chest while all your children with him sleep curled up around you. The second thing you notice [if player is knotted]is that you're still knot-deep in one of your kids. Pulling out with a wet slurp, the third thing you notice [end if]as you stand up on wobbly legs is just how sore your body is from the sexual exertion of nonstop sex. Nonetheless, you succeeded as you look down on your still-slumbering family you see there is not an ass or pussy in sight that doesn't drip with your seed, even if you don't remember it all. With a tired smile, you take a moment to enjoy the view of your loved ones blissfully asleep before stumbling out of the room to continue your exploration.";
+	NPCSexAftermath Ryan receives "PussyFuck" from Player;
+	CreatureSexAftermath "Fennec" receives "AssFuck" from "Player";
 	CreatureSexAftermath "Fennec" receives "PussyFuck" from "Player";
 	TraitGain "Brood Bred" for Ryan;
 	if "Pregnant" is not listed in Traits of Ryan:
@@ -486,16 +485,16 @@ to say RyanSex8: [Fennec Gangbang]
 			WaitLineBreak;
 			say "     As much as you might want to keep up that performance, you can already feel your climax approaching as your cock throbs dangerously inside Ryan's slobbering snatch, the pleasure of his body and the exhibitionist thrill of mating for all your family to see rapidly driving you towards the climax. 'Fuck me, sir, pump me full of cum! Show our kits how it's done!' Ryan's begging is the last straw. With a euphoric howl, you breed your lover, your balls flexing with each virile rope of seed you shoot into your lover's heated womb drawing Ryan into orgasming with you as you douse the fires of his heat while his cunt squeezes you for every drop of your baby batter. For a moment, you both lay limp on the bed, panting slightly, relishing in the blissful afterglow of your quickie, sharing gentle kisses and loving caresses, but remembering your sons still haven't had their turn, you reluctantly pull out of your mate and sit up, laying Ryan on the bed. Glancing at your children, you shoot them a sly grin and reach down to part your lover's pussylips giving them a full view of their daddy's creamy muff. You teasingly ask who's next.";
 			say "     'Me, I'm first. I'm the oldest!' 'Not fair, I'm the most experienced!' 'Me me me!' Right away, your pups come scampering forward to be the next inside your lover's snatch. As adorable as you may find your children's enthusiasm, it's rather unsafe and sets a bad precedent for them to be pushing and shoving like this. Still, just as you're about to put your foot down, Ryan does first. 'Boys, behave yourselves. Everybody will get their turn,' the slender vulpine scolds them. The reaction is immediate, a chorus of apologies ringing out across the room as your children rush to obey. With that chaos dealt with, you are free to scan over your mate's massive brood. One, in particular, stands out to you as a possible first choice. The son who took charge during the breeding with you, his small vulpine cock throbs needily, spurting precum across the ground, the curvy vulpine nervously shifting as he glances at you and Ryan, now significantly less confident with the rush of the moment no longer clouding his thoughts and in a field he's less experienced in. The bubble butt fennec likely takes the bottom position among his kin more often than the top. Elias, you remember his name despite his many siblings. After all, what kind of horrible father can't remember his children's names?";
-			NPCSexAftermath Ryan receives "PussyFuck" from Player;
 			WaitLineBreak;
 			say "     Whistling, you call Elias's attention. He seems slightly confused, but as you pat Ryan's bum, it becomes clear what you're offering. The curvaceous fox scrambles forward. 'Are you sure about this? I'm not-' his doubts trail off as you gently pull him down to the floor and towards his dad's pussy. You know you don't have to do anything else after that as the young fennec stares, entranced by your lover's perfect pussy, the very pussy he slid from not too long ago dribbling the seed that made him. Elias's eyes flutter as his sensitive nose is flooded by the strong musky scent of your cum and the sweet, tangy smell of Ryan's heat, also inhaling intoxicating pheromones that cloud his mind and make anything but focusing on his parent's drooling snatch impossible. You recognize the look on the shapely Fennec's face well. It's one you've had many times before yourself in his place. Elias starts with long slow licks dragging his tongue up along your lover's cum splattered netherlips up to his love button, luring loud wails of joy from Ryan.";
 			say "     He continues this pace for quite some time savoring the sweet-salty taste of Ryan's fertility and your virility before finally, his civility all melts away, and he shifts to properly eating out Ryan. Stuffing his long dexterous vulpine tongue deep into his creamy muff to lap up the mixed juices of your coupling, smearing it all along his muzzle as he messily worships his maker's heated snatch. It's an enormous turn-on to watch your son fall so wholly under Ryan's spell, and you're quickly growing hard again, your erection still sloppy with the warm juices of your recent lovemaking, and you know just the fox to help clean it up. Tapping Ryan gently, you draw him from the heavenly pleasure of having his pussy devoured and present him your shaft. No sooner have you shown him your [cock of Player] meat than you're buried in his clenching throat, his tongue gently caressing the underside of your cock, and drawing pleasured groans from you. Elias's throbbing cock and Ryan's squirming make it clear they're drawing closer to climax, but unless you want the voluptuous vulpine to waste his opportunity, you'll have to stop that.";
 			WaitLineBreak;
 			say "     It takes a little effort to draw your son away from that, but eventually, you snap him out of his stupor. Gripping his dick, you guide Elias and line him up with the object of his fascination. From there, his instincts take all control as the fervent fox pounces on Ryan, shoving himself balls deep in one thrust. There's no technique or rhythm in Elias's thrusts, only animalistic need as he wants and drools above his parent, yipping in delirious pleasure each time he pops his knot past your lover's slick lips. Ryan also seems to be enjoying himself quite a bit, his legs wrapped tightly around Elias's waist to pull him deeper inside, and his moans of pleasure around your dick create quite a pleasant sensation for you. His partner may not be the biggest or the most experienced, but Elias is youthful and energetic. His brothers also seem pretty excited by the show, likely getting a great view of their brother's bountiful butt bouncing with his every jab into Ryan's sweltering depths. It seems some of them are tired of waiting for the main event, though, as they come to join the fun. One of them crouches beneath Ryan and Elias, licking them as they mate, with another coming to join you at Ryan's head to share his mouth.";
 			say "     Elias, you already know he likely wouldn't last very long. With the addition of a tongue along his cock and balls paired with the slick pussy he's sheathed in, it doesn't surprise you that the full-figured vulpine shoots early, popping his knot in one last time, his cute balls drawing up tight to his body as he unloads everything he has into Ryan's fertile womb to breed more of his siblings to join in the fun later. Ryan's pushed into climax right alongside his son, your lover's spasming cunt milking the curvy fox for all he can give despite his relatively short mating, with his heat, the cunnilingus, and being bred more than enough to make up for Elias's short timing. Your son seems a little embarrassed at his speed, but you quickly smother any worries bubbling up in a messy kiss and loudly smooch your boy. You only part once you are both panting for breath. Patting him on the back in your best fatherly tone, you praise Elias for his performance and pull the stunned fox from his parent's sloppy pussy to let his next sibling take their turn, drawing a muffled cry from Ryan around your meat as he's given no time to recover while his next child jackhammers into him, a wet squelch following each thrust while sticky strings of cum connect the two of them.";
-			CreatureSexAftermath "Ryan" receives "PussyFuck" from "Fennec";
 			WaitLineBreak;
 			say "     Things continue along this line for quite some time. One pup finishes another comes to take their place. Eventually, you reach a second climax grinding deep into Ryan's clenching throat as you feed him the first of many loads he's sure to drink down, with one of your kids taking your place soon after and facefucking Ryan, bucking his hips roughly into his dad's mouth and pushing him into every thrust. By the end, Ryan's a cumdrunk mess, his fur covered in his brood's seed. Not much later, when you've all finished up, Ryan falls asleep, the nonstop sex having tired him out completely. Patting your well-bred lover gently, you give him a parting kiss and tell your kids to wash him well before taking your leave, leaving your pups to clean up the mess they made and take care of their daddy. A request they fulfill without complaint, given how much they adore Ryan. As you leave, you catch a glimpse of your brood's chosen method of cleaning your mate as Elias moves between Ryan's legs and starts licking the weary vulpine's creamy cunny. Another kit moves to wash his chest, tongue flicking over your lover's sensitive nipples.";
+			NPCSexAftermath Ryan receives "PussyFuck" from Player;
+			CreatureSexAftermath "Ryan" receives "PussyFuck" from "Fennec";
 			NPCSexAftermath Ryan receives "OralCock" from Player;
 			if "Pregnant" is not listed in Traits of Ryan:
 				TraitGain "Pregnant" for Ryan;
@@ -508,7 +507,6 @@ to say RyanSex8: [Fennec Gangbang]
 			WaitLineBreak;
 			say "     Your predictions are proven right within the next couple of thrusts as Elias pushes his bitch breaker one last time and cums loudly, letting out a foxlike scream of euphoria. His siblings join in with his mating cry, yelling right alongside the ecstatic fennec as his cute balls draw up tight, and he blasts his seed deep inside you [if Player is not mpreg_ok]futilely [end if]trying to breed more brothers to join in the next round of family fun. The sensation of Elias's seed shooting deep inside you pushes you into orgasm alongside him, your muscles clenching and squeezing wildly around your son's prick, milking more sticky strings of cum to bathe your interior while your dick shoots its bounty across your stomach and mattress. You take a moment to enjoy the afterglow of climax alongside your son, panting slowly as the little fox licks your neck lovingly, purring slightly in contentment. Eventually, your little moment is interrupted by an impatient whine from one of Elias's siblings so you both decide to move on, the thick vulpine easily pulling his knot from your battered hole thanks to his light sizing and making room for the next of your brood to claim their turn inside you.";
 			say "     Your next suitor is a vibrant contrast to Elias, big in every way, taller, wider, more muscular, and bouncing between his legs is a sizable piece of knotted meat. You don't get too long to look at who'll be topping you before your view is interrupted by a more than welcome sight — dripping wet puffy fox cunt. It seems like Ryan has gotten tired of being a bystander with the rest of his brood and has decided to take a more active role in your mating. 'Sorry, sir, but I just need more!' your lover cries as he presses his pussy against your lips. Instead of responding, you show you're more than eager to please your mate with a long lick up his drooling slit, killing any attempt at modesty and pulling Ryan into the sexual frenzy. While you're distracted with your lover, your muscled top, for the moment, takes the opportunity to jab himself deep inside of you, which, despite his rather large size, provides no discomfort to you, given your recent fucking and preparation. Elias also blew quite a lot, leaving a lot of lube, so his follow-up could more easily breed you. Despite your current kit's many differences in physicality with Elias, they share the same sexual style of rapid no-holds-barred pounding that leaves you weak in the knees and gripping Ryan tightly while you eat him up in a useless attempt to ground yourself amidst an onslaught of pleasure and sex.";
-			CreatureSexAftermath "Player" receives "AssFuck" from "Fennec";
 			WaitLineBreak;
 			say "     Making it all the harder to keep a clear head is the fact you have your face pressed right against Ryan's heated pussy, your lover's pheromones and taste clogging your mind and redirecting all thoughts not aimed at pleasing the beautiful vulpine snatch presented in front of you to nothing while making every thrust feel so amazingly intense and raising your temperature almost as if you were going into heat right alongside your lover. You're drooling now against Ryan's cunny, wantonly slurping up his juices like a fuck drunk whore. At the same time, your son bangs your brains out, and this time you can't outlast your partners. You're trembling and quivering as you shoot another even batch of spunk all across your sheets, and still, so horny your body almost feels like it's on fire. You can't get enough of this, as evidenced by your rocking hips pushing you back into every harsh thrust your pup gives and ravenous licking as you eat your mate out. Ryan's the second to pop off, slathering you in his femcum and an explosion of his pheromones as he pulls you away from his intoxicating pussy. However, it's not long before you dive back between your lover's legs again, desperate for more of him. Finally, the hung fennec orgasms, loudly howling as he bastes your insides in the second of what's sure to be many coming loads. He resists knotting you and pulls out, his baby batter running down your thighs and balls with more squishing out with the next fennec and the next.";
 			say "     You're not aware of when it all stops, too tired to care much, sore, and drained from nonstop copulation but deeply satisfied as you lay your head on your lover's lap and prepare to nap. Distantly you hear Ryan call out for your children to clean you and feel their tongues lapping across your body in a rather lewd and unorthodox method of tidying you up. Still, you quickly fall asleep before you can properly enjoy your tongue bath.";

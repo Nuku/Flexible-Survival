@@ -41,91 +41,88 @@ to say beattheFireSprite:
 		say "     With a final blow, you knock the sprite to the ground, pinning [ghim] there with your foot. You could have some fun with the sprite if you wanted to.";
 		if Player consents:
 			LineBreak;
-			say "[FireSpriteSexMenu]";
+			now sextablerun is 0;
+			blank out the whole of table of fucking options;
+			[]
+			if Player is male:
+				if Cock Length of Player > 24:
+					choose a blank row in table of fucking options;
+					now title entry is "Masturbation";
+					now sortorder entry is 1;
+					now description entry is "Have the sprite stroke you off";
+				else if Cock Length of Player < 14:
+					choose a blank row in table of fucking options;
+					if FireSpritemode is 0: [female sprite]
+						now title entry is "Fuck her";
+						now description entry is "Fuck the sprite's pussy";
+					else: [male sprite]
+						now title entry is "Anal";
+						now description entry is "Fuck the sprite's ass";
+					now sortorder entry is 2;
+				[]
+				choose a blank row in table of fucking options;
+				now title entry is "Blowjob";
+				now sortorder entry is 5;
+				now description entry is "Have the sprite suck you off";
+			[]
+			if Player is female:
+				if Cunt Depth of Player < 14 and FireSpritemode is 1:
+					choose a blank row in table of fucking options;
+					now title entry is "Get fucked";
+					now sortorder entry is 3;
+					now description entry is "Ride the sprite's cock";
+				else if Cunt Depth of Player > 24:
+					choose a blank row in table of fucking options;
+					now title entry is "Insertion";
+					now sortorder entry is 3;
+					now description entry is "Use the sprite as a 'special' toy";
+				[]
+				choose a blank row in table of fucking options;
+				now title entry is "Cunnilingus";
+				now sortorder entry is 4;
+				now description entry is "Have the sprite eat you out";
+			[]
+			sort the table of fucking options in sortorder order;
+			repeat with y running from 1 to number of filled rows in table of fucking options:
+				choose row y from the table of fucking options;
+				say "[link][y] - [title entry][as][y][end link][line break]";
+			say "[link]0 - Nevermind[as]0[end link][line break]";
+			while sextablerun is 0:
+				say "Pick the corresponding number> [run paragraph on]";
+				get a number;
+				if calcnumber > 0 and calcnumber <= the number of filled rows in table of fucking options:
+					now current menu selection is calcnumber;
+					choose row calcnumber in table of fucking options;
+					say "[title entry]: [description entry]?";
+					if Player consents:
+						LineBreak;
+						now sextablerun is 1;
+						if title entry is:
+							-- "Masturbation":
+								say "[FireSpriteMasturbate]";
+							-- "Anal":
+								say "[FuckFireSprite]";
+							-- "Fuck her":
+								say "[FuckFireSprite]";
+							-- "Get fucked":
+								say "[RideFireSpriteCock]";
+							-- "Insertion":
+								say "[FireSpriteInsertion]";
+							-- "Cunnilingus":
+								say "[FireSpriteCunnilingus]";
+							-- "Blowjob":
+								say "[FireSpriteBlowJob]";
+				else if calcnumber is 0:
+					LineBreak;
+					now sextablerun is 1;
+					say "     Deciding against having some fun with the sprite, you release [ghim] and send [ghim] scampering off into the city with a light kick in the ass.";
+				else:
+					say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options], or 0 to exit.";
+			wait for any key;
+			clear the screen and hyperlink list;
 		else:
 			LineBreak;
 			say "     Deciding against having some fun with the sprite, you release [ghim] and send [ghim] scampering off into the city with a light kick in the ass.";
-
-to say FireSpriteSexMenu:
-	now sextablerun is 0;
-	blank out the whole of table of fucking options;
-	[]
-	if Player is male:
-		if Cock Length of Player > 24:
-			choose a blank row in table of fucking options;
-			now title entry is "Masturbation";
-			now sortorder entry is 1;
-			now description entry is "Have the sprite stroke you off";
-		else if Cock Length of Player < 14:
-			choose a blank row in table of fucking options;
-			if FireSpritemode is 0: [female sprite]
-				now title entry is "Fuck her";
-				now description entry is "Fuck the sprite's pussy";
-			else: [male sprite]
-				now title entry is "Anal";
-				now description entry is "Fuck the sprite's ass";
-			now sortorder entry is 2;
-		[]
-		choose a blank row in table of fucking options;
-		now title entry is "Blowjob";
-		now sortorder entry is 5;
-		now description entry is "Have the sprite suck you off";
-	[]
-	if Player is female:
-		if Cunt Depth of Player < 14 and FireSpritemode is 1:
-			choose a blank row in table of fucking options;
-			now title entry is "Get fucked";
-			now sortorder entry is 3;
-			now description entry is "Ride the sprite's cock";
-		else if Cunt Depth of Player > 24:
-			choose a blank row in table of fucking options;
-			now title entry is "Insertion";
-			now sortorder entry is 3;
-			now description entry is "Use the sprite as a 'special' toy";
-		[]
-		choose a blank row in table of fucking options;
-		now title entry is "Cunnilingus";
-		now sortorder entry is 4;
-		now description entry is "Have the sprite eat you out";
-	[]
-	sort the table of fucking options in sortorder order;
-	repeat with y running from 1 to number of filled rows in table of fucking options:
-		choose row y from the table of fucking options;
-		say "[link][y] - [title entry][as][y][end link][line break]";
-	say "[link]0 - Nevermind[as]0[end link][line break]";
-	while sextablerun is 0:
-		say "Pick the corresponding number> [run paragraph on]";
-		get a number;
-		if calcnumber > 0 and calcnumber <= the number of filled rows in table of fucking options:
-			now current menu selection is calcnumber;
-			choose row calcnumber in table of fucking options;
-			say "[title entry]: [description entry]?";
-			if Player consents:
-				LineBreak;
-				now sextablerun is 1;
-				if title entry is:
-					-- "Masturbation":
-						say "[FireSpriteMasturbate]";
-					-- "Anal":
-						say "[FuckFireSprite]";
-					-- "Fuck her":
-						say "[FuckFireSprite]";
-					-- "Get fucked":
-						say "[RideFireSpriteCock]";
-					-- "Insertion":
-						say "[FireSpriteInsertion]";
-					-- "Cunnilingus":
-						say "[FireSpriteCunnilingus]";
-					-- "Blowjob":
-						say "[FireSpriteBlowJob]";
-		else if calcnumber is 0:
-			LineBreak;
-			now sextablerun is 1;
-			say "     Deciding against having some fun with the sprite, you release [ghim] and send [ghim] scampering off into the city with a light kick in the ass.";
-		else:
-			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options], or 0 to exit.";
-	wait for any key;
-	clear the screen and hyperlink list;
 
 to say FuckFireSprite:
 	if FireSpritemode is 0: [female sprite]

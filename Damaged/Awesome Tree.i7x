@@ -14,7 +14,7 @@ Awesome_noreward is a number that varies.
 to say awesome attack:
 	if Awesome_boredom is 4:
 		say "The tree seems to vibrate. Whether your fervent attacks or the breeze caused it, a branch falls and thumps you on the arm. You notice some fruit on the branch, and without hesitation you put one in your pocket. As you look at the remaining two, you feel a sudden hunger and eat them uncontrollably.";
-		if a random number between 1 and 100 > 90:
+		if a random chance of 1 in 10 succeeds:
 			if awesome bat is not owned:
 				ItemGain awesome bat by 1;
 				now Awesome_noreward is 0;
@@ -29,7 +29,7 @@ to say awesome attack:
 		say "The world seems to go dark as you finish the second. Waking up, you can't see any trace of the tree, but you feel pretty awesome nonetheless. You pat your bag where you put the fruit, and smile at the thought that you still have some awesomeness in store.[no line break][combat abort]";
 		now hunger of Player is 0;
 		now thirst of Player is 0;
-		now dam is 0;
+		now dam is 1;
 		now fightoutcome is 20;
 	else:
 		say "[one of]While you try and attack the tree, you trip over a root that you hadn't seen[or]You stop for a moment, and as you ponder just how awesome the tree really is, suddenly your leg cramps[at random].[no line break]";
@@ -55,25 +55,22 @@ to say awesome defeat:
 		say "     Somehow you manage to strike the tree in such a way that it collapses, breaking along the fault line in its trunk you had made. You notice the branches are riddled with fruit and you make an effort to gather as many ripe ones as you can.";
 		say "     [if Awesome_noreward > 2]You drop to your knees, wailing, unable to live with yourself for how much awesome you have taken from the world. Rising to your feet, you pledge never to destroy another awesome tree so long as you live[else]With a start, you realize what you have done: you have ended a whole other kind of awesome in the world. Guiltily you walk away from the tree but promise you will find a way to atone for your sin[end if].";
 		repeat with N running from 1 to a random number between 2 and 5:
-			say "[Give Awesome]";
+			if a random chance of 3 in 5 succeeds:
+				ItemGain awesome fruit by 1;
+				if a random chance of 2 in 5 succeeds:
+					ItemGain awesomer fruit by 1;
+			else if a random chance of 3 in 5 succeeds:
+				if a random chance of 2 in 5 succeeds:
+					ItemGain awesome fruit by 1;
+				ItemGain awesomer fruit by 1;
+			if a random chance of 3 in 20 succeeds:
+				ItemGain awesomest fruit by 1;
 
 to say awesome vict:
 	say "     You proudly look up at the tree, standing still, and curse under your breath. All of a sudden, a crack sounds in the canopy above you and a single fruit drops down and smashes against the back of your head, knocking you out. The juice seeps down over your skin and almost seems to be absorbed by your body.";
 	infect "Pod Person";
 	WaitLineBreak;
 	say "     As you wake up, you look around and wonder how the tree got away. Guess that's just another awesome mystery for this messed up new world.";
-
-to say Give Awesome:
-	if a random chance of 3 in 5 succeeds:
-		ItemGain awesome fruit by 1;
-		if a random chance of 2 in 5 succeeds:
-			ItemGain awesomer fruit by 1;
-	else if a random chance of 3 in 5 succeeds:
-		if a random chance of 2 in 5 succeeds:
-			ItemGain awesome fruit by 1;
-		ItemGain awesomer fruit by 1;
-	if a random chance of 3 in 20 succeeds:
-		ItemGain awesomest fruit by 1;
 
 Section 2 - Creature Insertion
 
@@ -125,8 +122,8 @@ When Play begins:
 	now face change entry is "it seems to tingle, moving slightly. With a start you realize it's human"; [ Face change text, format as "Your face feels funny as [face change entry]." ]
 	now body change entry is "your muscles writhe about under your skin, slowly settling back into a human shape"; [ Body change text, format as "Your body feels funny as [body change entry]." ]
 	now skin change entry is "all the hair on your body seems to fall out at once only to have what would be considered normal human hair sprout back out"; [ Skin change text, format as "Your skin feels funny as [skin change entry]." ]
-	now ass change entry is "your [if awesome_sex is 2]hips seem to return to human male normal[else]rear changes, sliding into the perfect wide-hipped female figure[end if]"; [ Ass/tail change text, format as "Your ass feels funny as [ass change entry]." ]
-	now cock change entry is "it seems to feel hot, after a few gasps you realize it looks completely human"; [ cock change text. format as "Your cock feels funny as (your text)." ]
+	now ass change entry is "your [if awesome_sex is 2]hips seem to return to a human male's normal[else]rear changes, sliding into the perfect wide-hipped female figure[end if]"; [ Ass/tail change text, format as "Your ass feels funny as [ass change entry]." ]
+	now cock change entry is "it seems to feel hot; after a few gasps you realize it looks completely human"; [ cock change text. format as "Your cock feels funny as (your text)." ]
 	now str entry is 15;
 	now dex entry is 15;
 	now sta entry is 15;

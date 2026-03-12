@@ -67,9 +67,9 @@ to say ResolveEvent Captivating Plumage:
 		project Figure of Dmitri_naked_icon;
 		say "     Your fingers begin to curl around his nine inch shaft with the thumb swirling around the tip. By now, the avian's shaft has grown fully erect and leaks pre-cum onto your fingers. With a short grunt, the dommy male utters, 'Just relaxxx... let your body guide you...' A pleasurable sensation seems to radiate from your fingers and through your veins down to the rest of your body. Between this sensation and an unwillingness to lose control of the rest of your body, you submit to the enthralling male's demands. As soon as you resign yourself to giving the peacock a handjob, you start to regain control of your hands. But then, as thoughts of doing anything else vanish from your mind, you realize that this is just the proper thing to do anyways and focus on the large cock in front of you.";
 		say "     The frills on top of the peacock's head stand fully upright as your hands roam over his bird-like shaft. Strangely, your arms start to feel better, as if any fatigue you had from traveling through the post-apocalyptic city has been slowly erased from your appendages. Unable to think about anything other than how to get the bird to cum, you wrap both of your hands around his surprisingly large rod and vigorously pump that slick pink dick, only pausing to fondle his balls[if Breast Size of Player > 4] or to wrap your tits around his length and fuck him with your ample bosom[end if]. Soon, he hastily pulls your head close for a kiss while the peacock's sizable orbs tense up and semen spurts over your body. After the avian has released his load, he spreads his tail-feathers wide, dominating your field of vision with those vibrant... colorful... eyes...";
-		NPCSexAftermath Dmitri receives "Stroking" from Player;
 		WaitLineBreak;
 		say "     Regaining your faculties some time later, you find yourself sitting in an overstuffed armchair, an old quilted blanket wrapped around you. Despite only getting an hour of sleep at most, you feel like you've had a full night's rest. Sitting on a large leather chair, the peacock notices you come to and says, 'Look who is awake. You did an amazing job making me happy. You should really be proud of just how instinctively your body seeks pleasure and relaxation. If you are wound up too tight, you won't be able to notice an ambush or attack. Another individual I met refused my offer and got pounced on by a leopardman only seconds later. I really do hope you come back another time.' With that said, he gently tugs the blanket off you, then ushers you out the door. As much as it pains you to admit it, you do feel a lot better. Hopefully next time you will have more control on how the situation pans out. But then again... the [bold type]captivating plumage[roman type] of your avian friend is so hard to resist.";
+		NPCSexAftermath Dmitri receives "Stroking" from Player;
 		now Peacocked is 2; [handjob completed]
 		now Resolution of Captivating Plumage is 2;
 	else if Peacocked is 2: [previously gave Dmitri a handjob]
@@ -141,10 +141,10 @@ to say ResolveEvent Captivating Plumage:
 		WaitLineBreak;
 		say "     You begin to lap at the shy bunny's folds, coaxing loud and needful moans from her muzzle, and soon the crowd is cheering Ichi's name. Encouraged by this, the lapine begins to rub her lips against your mouth, her warm, heady juices coating your tongue as you pleasure her. It doesn't take long for her to orgasm and squirt over your face, her entire body trembling with bliss. As she moves away, she's quickly replaced by a male German shepherd with the long, floppy ears of a rabbit. Without any hesitation, he stuffs his average-sized rod into your mouth. Unexpectedly, your mouth proves quite pliant as it's filled with his canine cock. Your tongue twists and swirls around his throbbing shaft until the knot begins to inflate. Now fully knotted, you can't pull away from the bulb at its base. Frustrated, Clover says, 'Dammit Duo! Shit... Drei and Quatre, you're getting handjobs.' Slightly bummed, two rabbits step forward; one has a barbed feline rod, while the other has a curved cetacean cock. Your hands begin to stroke up and down their lengths, their pre coating your fingers as you pump their warm, slick cocks. Almost in tandem, the pair spurt their loads over your chest. A rabbit with the horns of an antelope and a naga-hybrid soon fill their place.";
 		say "     After stroking that cervine cock and reptilian hemipenis to completion, two more come to fill their place. While you are busy giving handjobs to the new pair, you feel something heavy slap against your back. Based on the sensation of a ring-like bulge, you can safely assume that the underside of a girthy equine cock is rubbing against your spine. On your left side, you hear the sounds of fingers sliding into a slick pussy. Some of the spent members of the crowd shout out, 'Cover [']em in femcum, Septa!' and 'Plaster [']em Oct!' As if on cue, the March Hares cum all over you. Hot pulses of canine seed shoot down your throat, filling your gullet with that virile essence. Once spent, the knot deflates surprisingly quickly, and the embarrassed male quickly walks away. Clover then shouts, 'All right Hares, you've had your fun. Now get back to work!' Heeding her words, they begin to clear out. Taking off your blindfold, Clover and Dmitri clean you off using a couple of rags.";
-		CreatureSexAftermath "Player" receives "OralPussy" from "Gunbunny";
-		CreatureSexAftermath "Player" receives "OralCock" from "German Shepherd Male";
 		WaitLineBreak;
 		say "     The boss rabbit says, 'You did a great job, sugar. The March Hares will have your back.' The peacock then helps you stand up and the two of you head back for the antique store. Once you are at the antique store, Dmitri runs a hand down the small of your back and proudly states, 'You've completely surpassed my expectations. With the help of our new friends, this heist should go a lot easier.' You redress with any clothing or equipment that you were wearing before this outing and head out the door. The colorful fowl stands at the doorway, waving a friendly goodbye as you leave.";
+		CreatureSexAftermath "Player" receives "OralPussy" from "Gunbunny";
+		CreatureSexAftermath "Player" receives "OralCock" from "German Shepherd Male";
 		now Peacocked is 6;
 		now Resolution of Captivating Plumage is 6;
 	else if Peacocked is 6:
@@ -175,7 +175,7 @@ to say ResolveEvent Captivating Plumage:
 		WaitLineBreak;
 		say "     After all the rowdy rabbits have left the store, Dmitri takes a seat on a leather chair and exhales loudly, as if a massive weight has just been taken off his chest. With a contented sigh, the peacock says, 'It's finally over, all that time and effort finally paid off.' You take a seat close by, feeling much more relaxed now that your little heist is out of the way. The avian looks deeply into your eyes and says in a tone that echoes through your nerves, 'You did a wonderful job. Feel free to come by anytime, and I'll make sure you feel good.' Somehow, a part of your mind feels like you've gained back a small modicum of control. You are now able to visit Argos Antiques whenever you want.";
 		AddNavPoint Argos's Antiques;
-		AttemptToWait;
+		WaitLineBreak;
 		move player to Argos's Antiques;
 		now battleground is "void";
 		now peacocked is 8;
@@ -239,6 +239,7 @@ Sterile of Dmitri is false. [steriles can't knock people up]
 MainInfection of Dmitri is "Peacock".
 Description of Dmitri is "     The slender anthro peacock stands with graceful poise. With the avian wearing nothing but a ripped pair of white shorts, you have a great view of his lithe figure. Blue and green colored feathers cover his slender frame, while piercing green eyes gaze at your form. His nude body provides a great view of his curved avian cock, which can reach nine inches when fully erect.[line break]".
 [Conversation of Dmitri is { "Fanout!" }.]
+fuckscene of Dmitri is "[DmitriSexMenu]".
 Icon of Dmitri is Figure of Dmitri_clothed_icon.
 the scent of Dmitri is "     The avian has a rather enticing scent of jasmine and sage that makes him seem all the more entrancing.".
 
@@ -246,81 +247,78 @@ Instead of conversing the Dmitri:
 	project Figure of Dmitri_clothed_icon;
 	say "     '[one of]I wish there were less ferals in this neighborhood. It discourages potential customers,' he grumbles angrily.[or]I wonder how Bain is doing right now. The batty guy's probably cooped up in his mansion,' he muses while staring at the suit of armor.[or]Shame there isn't more wine anywhere in the city,' he says, staring at an empty wine glass.[or]I hope this all gets sorted out soon,' he says. 'Business has been too slow.'[or]Collecting these antiques has helped me keep my sanity in these trying times.'[or]So did you see the new museum exhibit that opened this summer?' he asks. Not even waiting for you to respond, he elaborates upon his view of the pieces at the exhibit and their financial worth.[at random]";
 
-Instead of fucking the Dmitri:
+to say DmitriSexMenu:
 	if lastfuck of Dmitri - turns < 6:
 		project Figure of Dmitri_clothed_icon;
 		say "     Chuckling softly, the peacock states, 'I know you're enthusiastic to have some more fun with me, but I'd rather you wait a little while so that we can savor the experience.'";
 	else: [ready for sex]
 		project Figure of Dmitri_naked_icon;
 		say "     As you walk up to Dmitri, he smiles and asks, 'I wonder what you are thinking about...'";
-		say "[DmitriSexMenu]";
-
-to say DmitriSexMenu:
-	now sextablerun is 0;
-	blank out the whole of table of fucking options;
-	[]
-	if Player is male: [only males and herms can get a blowjob]
+		now sextablerun is 0;
+		blank out the whole of table of fucking options;
+		[]
+		if Player is male: [only males and herms can get a blowjob]
+			choose a blank row in table of fucking options;
+			now title entry is "Get a blowjob";
+			now sortorder entry is 1;
+			now description entry is "Let the amorous bird suck you off";
+			[
+			choose a blank row in table of fucking options;
+			now title entry is "Fuck the captivating bird";
+			now sortorder entry is 3;
+			now description entry is "Take Dmitri's ass for a ride";
+			]
+		[]
 		choose a blank row in table of fucking options;
-		now title entry is "Get a blowjob";
-		now sortorder entry is 1;
-		now description entry is "Let the amorous bird suck you off";
-		[
+		now title entry is "Suck Dmitri off"; [anyone can blow him]
+		now sortorder entry is 2;
+		now description entry is "Wrap your lips around the peacock's avian rod";
+		[]
+		if Player is female: [only females and herms can take him in the pussy]
+			choose a blank row in table of fucking options;
+			now title entry is "Take Dmitri's shaft in your pussy";
+			now sortorder entry is 4;
+			now description entry is "Offer sex to the entrancing anthro bird";
+		[]
 		choose a blank row in table of fucking options;
-		now title entry is "Fuck the captivating bird";
-		now sortorder entry is 3;
-		now description entry is "Take Dmitri's ass for a ride";
-		]
-	[]
-	choose a blank row in table of fucking options;
-	now title entry is "Suck Dmitri off"; [anyone can blow him]
-	now sortorder entry is 2;
-	now description entry is "Wrap your lips around the peacock's avian rod";
-	[]
-	if Player is female: [only females and herms can take him in the pussy]
-		choose a blank row in table of fucking options;
-		now title entry is "Take Dmitri's shaft in your pussy";
-		now sortorder entry is 4;
-		now description entry is "Offer sex to the entrancing anthro bird";
-	[]
-	choose a blank row in table of fucking options;
-	now title entry is "Take Dmitri's shaft in your ass";
-	now sortorder entry is 5;
-	now description entry is "Offer your butt to the lusty peacock";
-	[]
-	sort the table of fucking options in sortorder order;
-	repeat with y running from 1 to number of filled rows in table of fucking options:
-		choose row y from the table of fucking options;
-		say "[link][y] - [title entry][as][y][end link][line break]";
-	say "[link]0 - Nevermind[as]0[end link][line break]";
-	while sextablerun is 0:
-		say "Pick the corresponding number> [run paragraph on]";
-		get a number;
-		if calcnumber > 0 and calcnumber <= the number of filled rows in table of fucking options:
-			now current menu selection is calcnumber;
-			choose row calcnumber in table of fucking options;
-			say "[title entry]: [description entry]?";
-			if Player consents:
+		now title entry is "Take Dmitri's shaft in your ass";
+		now sortorder entry is 5;
+		now description entry is "Offer your butt to the lusty peacock";
+		[]
+		sort the table of fucking options in sortorder order;
+		repeat with y running from 1 to number of filled rows in table of fucking options:
+			choose row y from the table of fucking options;
+			say "[link][y] - [title entry][as][y][end link][line break]";
+		say "[link]0 - Nevermind[as]0[end link][line break]";
+		while sextablerun is 0:
+			say "Pick the corresponding number> [run paragraph on]";
+			get a number;
+			if calcnumber > 0 and calcnumber <= the number of filled rows in table of fucking options:
+				now current menu selection is calcnumber;
+				choose row calcnumber in table of fucking options;
+				say "[title entry]: [description entry]?";
+				if Player consents:
+					LineBreak;
+					now sextablerun is 1;
+					if title entry is:
+						-- "Get a blowjob":
+							say "[DmitriSex1]";
+						-- "Suck Dmitri off":
+							say "[DmitriSex2]";
+						[-- "Fuck the captivating bird":
+							say "[DmitriSex3]";]
+						-- "Take Dmitri's shaft in your pussy":
+							say "[DmitriSex4]";
+						-- "Take Dmitri's shaft in your ass":
+							say "[DmitriSex5]";
+			else if calcnumber is 0:
 				LineBreak;
 				now sextablerun is 1;
-				if title entry is:
-					-- "Get a blowjob":
-						say "[DmitriSex1]";
-					-- "Suck Dmitri off":
-						say "[DmitriSex2]";
-					[-- "Fuck the captivating bird":
-						say "[DmitriSex3]";]
-					-- "Take Dmitri's shaft in your pussy":
-						say "[DmitriSex4]";
-					-- "Take Dmitri's shaft in your ass":
-						say "[DmitriSex5]";
-		else if calcnumber is 0:
-			LineBreak;
-			now sextablerun is 1;
-			say "     You step back from the anthro bird, shaking your head slightly as he gives a questioning look.";
-		else:
-			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options], or 0 to exit.";
-	wait for any key;
-	clear the screen and hyperlink list;
+				say "     You step back from the anthro bird, shaking your head slightly as he gives a questioning look.";
+			else:
+				say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options], or 0 to exit.";
+		wait for any key;
+		clear the screen and hyperlink list;
 
 to say DmitriSex1: [oral on the player]
 	say "     With a randy look in your eye, you ask Dmitri in a flirtatious manner if he could [']examine your spear[']. The peacock pauses for a second before getting on his knees, temptingly saying, 'That all depends on the quality of the item.' He begins to remove any clothing or equipment obscuring your crotch until your semi-hard cock is exposed to him, pulsing with arousal. The avian traces along the underside of your shaft with a taloned hand. 'Quite an impressive specimen, but further oral examination is necessary to determine its worth.' The colorful anthro bird opens his beak and begins to swirl his tongue around the tip of your cock. He moans softly and utters quietly, 'Delicious.' One of his hands moves to gently cup your balls, while the other begins to stroke the shaft.";

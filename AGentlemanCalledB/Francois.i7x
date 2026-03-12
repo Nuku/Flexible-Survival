@@ -50,14 +50,14 @@ to say ResolveEvent Gourmet Treats:
 		say "     'I appreciate your attempts to save me from those canine ruffians, and I'm sorry it ended the way it did,' he continues. 'I am Francois, master chef, at your service.'";
 		AddNavPoint Bone-Appetit;
 		now Resolution of Gourmet Treats is 2; [fought, lost]
-		AttemptToWait;
+		WaitLineBreak;
 		move player to Bone-Appetit;
 	else if fightoutcome >= 10 and fightoutcome <= 19:
 		say "     Having finally dealt with the [if entry 1 of T is 1]huskies[else if entry 1 of T is 2]German shepherds[else if entry 1 of T is 3]Chocolate Labs[else]Retrievers[end if], you chase the last stragglers out the door and block it up behind them, propping up a table and a few chairs against it to keep any others out. Satisfied with the security of the building, you approach the canines['] captive, looking him over before kneeling down to help him to a sitting position. He appears to have the features of several species and breeds of domestic animals, a short, stocky canine body and face, covered with a thick coat of fur in many different colors and patterns. There even appear to be feathers poking out from his pelt in several places. Finally, feline ears and tail complete the rather unusual appearance of the hybrid before you.";
 		say "     'Thank you, mon ami[if Player is purefemale]e[end if],' the man says with a strong French accent. 'I shudder to imagine where I'd be had you not come along. I am Francois, master chef, at your service.'";
 		AddNavPoint Bone-Appetit;
 		now Resolution of Gourmet Treats is 1; [fought, won]
-		AttemptToWait;
+		WaitLineBreak;
 		move player to Bone-Appetit;
 	else if fightoutcome >= 30:
 		say "     Unwilling or unable to continue fighting, you grab your bag and run for the bakery door, flipping a nearby table behind you to block your pursuers['] path on the way out. You continue running for some time, getting plenty of distance between you and the bakery before stopping to catch your breath. Taking a moment to reflect on the situation, you feel a wave of guilt for leaving the captive behind to his fate with the canines.";
@@ -222,6 +222,7 @@ SexuallyExperienced of Francois is true.
 MainInfection of Francois is "".
 Description of Francois is "     Francois, the unusual hybrid before you, has an appearance that can only be described as a mutt. His short, stocky canine body and face are covered with a thick, mottled coat of fur made up of several different colors and patterns. There even appear to be small feathers poking out of his pelt in several places. Finally, a rather feline set of ears and tail complete the appearance. He wears a surprisingly clean white apron over his torso, which does a reasonable job of protecting his decency while still allowing his long tail to flit about unhindered.[line break]".
 [Conversation of Francois is { "Numnum!" }.]
+fuckscene of Francois is "[Francoissexmenu]".
 The icon of Francois is Figure of Francois_icon.
 the linkaction of Francois is "Possible Actions: [link]talk[as]talk Francois[end link], [link]smell[as]smell Francois[end link], [link]fuck[as]fuck Francois[end link], [link]bake[as]bake Francois[end link][line break]".
 the scent of Francois is "     Francois has a light male musk, difficult to catch over the smells pervading the bakery.".
@@ -270,14 +271,12 @@ Instead of conversing the Francois:
 	if Libido of Francois is 0:
 		now Libido of Francois is 1;
 
-instead of fucking the Francois:
+to say Francoissexmenu:
 	project Figure of Francois_icon;
 	if Libido of Francois is 0:
 		say "     Perhaps you should talk to the friendly mutt first?";
-	else if Player is neuter:
-		say "     Lacking any gender of your own, you can't quite get up the enthusiasm to play with the friendly French mutt.";
 	else if Player is not male:
-		say "     'Ah, désolé, mon amie. I have never had much interest in what the English call the fairer sex. Ah, but if only you were a man...' he sighs wistfully.";
+		say "     [if Player is neuter]Lacking any gender of your own, you can't quite get up the enthusiasm to play with the friendly French mutt[else]'Ah, désolé, mon amie. I have never had much interest in what the English call the fairer sex. Ah, but if only you were a man...' he sighs wistfully[end if].";
 	else if lastfuck of Francois - turns < 6:
 		say "     He licks his muzzle and eyes your crotch, but shakes his head. 'As much as I would relish the opportunity to show you my thanks again, there is so much else that needs to be done. Perhaps a little later though?' he adds with a smile and the brush of a paw down your side.";
 	else if Libido of Francois is 1:
@@ -295,66 +294,63 @@ instead of fucking the Francois:
 				say "[Francoissex1]";
 			now lastfuck of Francois is turns;
 		else:
-			say "[Francoissexmenu]";
-
-to say Francoissexmenu:
-	now sextablerun is 0;
-	blank out the whole of table of fucking options;
-	[]
-	choose a blank row in table of fucking options;
-	now title entry is "Mount him";
-	now sortorder entry is 2;
-	now description entry is "Ask Francois to bend over for you";
-	[]
-	if Libido of Francois > 3:
-		choose a blank row in table of fucking options;
-		now title entry is "Get mounted";
-		now sortorder entry is 4;
-		now description entry is "Give Francois a turn riding you";
-	[]
-	choose a blank row in table of fucking options;
-	now title entry is "Get a blowjob";
-	now sortorder entry is 1;
-	now description entry is "Ask Francois to suck you off";
-	[]
-	choose a blank row in table of fucking options;
-	now title entry is "Give a blowjob";
-	now sortorder entry is 3;
-	now description entry is "Offer to suck Francois off";
-	[]
-	sort the table of fucking options in sortorder order;
-	repeat with y running from 1 to number of filled rows in table of fucking options:
-		choose row y from the table of fucking options;
-		say "[link][y] - [title entry][as][y][end link][line break]";
-	say "[link]0 - Nevermind[as]0[end link][line break]";
-	while sextablerun is 0:
-		say "Pick the corresponding number> [run paragraph on]";
-		get a number;
-		if calcnumber > 0 and calcnumber <= the number of filled rows in table of fucking options:
-			now current menu selection is calcnumber;
-			choose row calcnumber in table of fucking options;
-			say "[title entry]: [description entry]?";
-			if Player consents:
-				LineBreak;
-				now sextablerun is 1;
-				if title entry is:
-					-- "Get a blowjob":
-						say "[Francoissex1]";
-					-- "Mount him":
-						say "[Francoissex2]";
-					-- "Give a blowjob":
-						say "[Francoissex3]";
-					-- "Get mounted":
-						say "[Francoissex4]";
-				now lastfuck of Francois is turns;
-		else if calcnumber is 0:
-			LineBreak;
-			say "     You step back from the hybrid, shaking your head slightly as he gives a questioning look.";
-			now sextablerun is 1;
-		else:
-			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options], or 0 to exit.";
-	wait for any key;
-	clear the screen and hyperlink list;
+			now sextablerun is 0;
+			blank out the whole of table of fucking options;
+			[]
+			choose a blank row in table of fucking options;
+			now title entry is "Mount him";
+			now sortorder entry is 2;
+			now description entry is "Ask Francois to bend over for you";
+			[]
+			if Libido of Francois > 3:
+				choose a blank row in table of fucking options;
+				now title entry is "Get mounted";
+				now sortorder entry is 4;
+				now description entry is "Give Francois a turn riding you";
+			[]
+			choose a blank row in table of fucking options;
+			now title entry is "Get a blowjob";
+			now sortorder entry is 1;
+			now description entry is "Ask Francois to suck you off";
+			[]
+			choose a blank row in table of fucking options;
+			now title entry is "Give a blowjob";
+			now sortorder entry is 3;
+			now description entry is "Offer to suck Francois off";
+			[]
+			sort the table of fucking options in sortorder order;
+			repeat with y running from 1 to number of filled rows in table of fucking options:
+				choose row y from the table of fucking options;
+				say "[link][y] - [title entry][as][y][end link][line break]";
+			say "[link]0 - Nevermind[as]0[end link][line break]";
+			while sextablerun is 0:
+				say "Pick the corresponding number> [run paragraph on]";
+				get a number;
+				if calcnumber > 0 and calcnumber <= the number of filled rows in table of fucking options:
+					now current menu selection is calcnumber;
+					choose row calcnumber in table of fucking options;
+					say "[title entry]: [description entry]?";
+					if Player consents:
+						LineBreak;
+						now sextablerun is 1;
+						if title entry is:
+							-- "Get a blowjob":
+								say "[Francoissex1]";
+							-- "Mount him":
+								say "[Francoissex2]";
+							-- "Give a blowjob":
+								say "[Francoissex3]";
+							-- "Get mounted":
+								say "[Francoissex4]";
+						now lastfuck of Francois is turns;
+				else if calcnumber is 0:
+					LineBreak;
+					say "     You step back from the hybrid, shaking your head slightly as he gives a questioning look.";
+					now sextablerun is 1;
+				else:
+					say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options], or 0 to exit.";
+			wait for any key;
+			clear the screen and hyperlink list;
 
 to say Francoissex1:		[Francois performs oral]
 	if Libido of Francois is 1:
@@ -409,9 +405,9 @@ to say Francoissex3:		[player performs oral]
 		say "     You keep it up, working to please the friendly fellow with the many tricks you've been learning. As his knot swells, you put a hand around it, squeezing gently as if he'd managed to tie with a tight hole. This has him yip in surprise and pleasure, his hips quivering. 'J'suis sur le point de jouir,' he pants in French, his paws moving to your shoulders for support as his cock and balls twitch. Quite certain he's close now, you pull back, wrapping your free hand around his throbbing shaft and pumping it quickly. Driven over the edge by this, he cums hard, splattering his creamy load all over your face. You lick what you can get of his seed running past your lips, but are quite pleased to have your friend's load coating your face[if Libido of Francois is 3] as a final show of how comfortable you are with his uniquely beautiful cock[end if].";
 	else:
 		say "     You keep it up, working to please the horny hybrid with your mouth. Longing for the prize but not wanting to rush it, you do your best to work him up, playing your tongue across his cock while you roll around the warm handful that are his balls. As his knot swells, you push your mouth fully down onto his cock, working your lips over that swollen, sensitive bulb and sucking down on him hard. This has him bark in surprise and pleasure, his hips quivering. 'J'veux jouir dans ta bouche,' he pants in French, his paws moving to your shoulders for support as his cock and balls twitch. Quite certain he's close now, you curl your tongue around his shaft and slide along it, squeezing gently while taking him into your throat. Driven over the edge by this, he cums hard, sending his rich, flavorful cum into your mouth and down your throat. You let his cum pool on your tongue, and once he's spent, you release his shaft to show him the creamy mouthful you've got before swallowing it down[if Libido of Francois is 3] as a final show of how comfortable you are with his uniquely beautiful cock[end if].";
-	NPCSexAftermath Player receives "OralCock" from Francois;
 	WaitLineBreak;
 	say "     When you're done, the spent hybrid sags back into a nearby chair, panting softly. 'Oh, thank you, mon ami. That was very, very nice,' he says with a smile, casually readjusting his apron.";
+	NPCSexAftermath Player receives "OralCock" from Francois;
 	francoisinfect;
 	if Libido of Francois is 3, now Libido of Francois is 4;
 
@@ -425,9 +421,9 @@ to say Francoissex4:		[player receives anal]
 	WaitLineBreak;
 	say "     You rock your hips and squeeze your hole down around him as he fucks you with increasing zeal. His sensual touches and caresses don't stop even as his pace builds until his cock is fucking you like an animal even if his paws are those of a tender lover. You hang on tight and moan in pleasure, loving the mix of sensuality and raw sex that your experienced lover's body can provide. His feathered fur brushes lightly across your back and his furry balls slap against your thighs. Feeling his knot swelling up, you do your best to relax and press your hips back, needing it inside you by this point, lusting to be tied to the sexy mongrel, an action his mutated form is certainly eager to complete as well.";
 	say "     'Ah, que je te veux! Le noeud est... presque... là...' he pants, grinding the meaty base of his cock against your tight ring. Your hole stretches further, opening a little more with each thrust. Francois holds your hip firmly with one paw while the other furiously pumps at your [Cock of Player] manhood, not neglecting his lover even as he tries hard to finish the tie. As your anal ring complies and allows the growing knot to pop inside, you both groan in lustful pleasure. His knot swells further, locking his shaft inside you. 'Ahh... je vais te remplir, mon ami. Je jouis. Je jouis!' he cries out in French moments before he cums hard, pumping his hot load into your bowels[if Libido of Francois is 4] for the first time[end if]. This pushes you over the edge and your rod pulses in his paw, spraying your [Cum Load Size of Player] load across the floor. The horny hybrid keeps thrusting even as he cums, stimulating your prostate to keep your orgasm going as well until eventually you both are drained and sag down atop the table, spent and sated.";
-	NPCSexAftermath Player receives "AssFuck" from Francois;
 	WaitLineBreak;
 	say "     As you're waiting for his knot to go down, Francois snuggles you, running his paws along your [bodytype of Player] body while whispering sweet nothings in a mix of English and French to you. Between these, he often licks and nibbles your ears or kisses your neck and shoulders, enjoying the sensual closeness with you after your lovemaking. It is some time before the hybrid's knot goes down and his cock can slip free. Only a little of the milky white semen leaks out, much of his cum having been absorbed into you during the interim while tied.";
+	NPCSexAftermath Player receives "AssFuck" from Francois;
 	francoisinfect;
 	if Libido of Francois is 4, now Libido of Francois is 5;
 
@@ -446,7 +442,7 @@ to francoisinfect:
 
 Section 4 - Baking
 
-Francois_Undiscovered is a list of numbers that varies.
+Francois_Undiscovered is a list of numbers that varies.[@Tag:NotSaved]
 Francois_Discovered is a list of numbers that varies.
 
 to FrancoisListCompile:

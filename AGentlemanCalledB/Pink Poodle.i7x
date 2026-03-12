@@ -12,37 +12,21 @@ to say losetoPinkPoodle:
 	if poodleapproved is false:
 		say "     Unable to fend off the aggressive pink poodle, she knocks you to the ground roughly, giving you a disdainful scowl as she stands over your beaten form. 'Either come back as a proper [one of]pooch[or]chienne[at random], or do not come back at all,' she says in her heavy French accent, giving you one last firm kick before turning and striding away.";
 	else:
-		if HP of Player > 0:
-			say "     Unable or unwilling to resist the pretty pink poodle any longer, you raise your hands and signal your submission. 'I knew you would come around, darling. Now let's get down to business,' she says in her refined French accent as she gently pushes you to the ground.";
-			if Player is male and a random chance of 2 in 3 succeeds:
-				say "[pinkpoodledefeatsex]";
-			else if Player is female and a random chance of 2 in 3 succeeds:
-				say "[pinkpoodledefeat69]";
-			else:
-				say "[pinkpoodledefeatoral]";
+		say "     Unable [if HP of Player > 0]or unwilling to resist the pretty pink poodle any longer, you raise your hands and signal your submission. 'I knew you would come around, darling. Now let's get down to business,' she says in her refined French accent as she gently pushes you to the ground[else]to fend off the aggressive pink poodle, you stumble and fall to the ground. 'Mmm, so you like to play rough? Usually that costs extra darling, but I suppose you could make up for it some other way,' she says in her refined French accent as she steps over your supine form[end if].";
+		if Player is male and a random chance of 2 in 3 succeeds:
+			say "     The poodle girl hums softly as her delicate paws roam your body, teasing and groping you as she quickly strips off your gear. After stripping you down, the attractive canine kneels down between your legs, taking your [cock size desc of Player] [Cock of Player] member in one paw as her other gently cups your [Ball Size Adjective of Player] [Balls]. With an expert touch, she teases your shaft to attention before she leans forward and wraps her muzzle around your shaft, gently sucking as her tongue plays along your length. Combined with her paw still massaging your testes, the effect is quite arousing, but the obviously well-practiced canine call girl is careful to not let you reach climax too soon.";
+			WaitLineBreak;
+			say "     Releasing your shaft with one final kiss, she raises herself up off her knees, positioning her wet canine spade over your [Cock of Player] cock before lowering herself down onto you. The feeling of her slick doggy cunt enveloping your flesh is delightful, and even as she bounces up and down your shaft, she reaches beneath herself to resume fondling your aching balls. The pleasure seems to go on forever as the canine call girl pushes you towards climax again and again, but each time letting off just before you peak to draw out the experience as long as possible. Eventually you can take no more, and as if sensing your orgasm the poodle girl makes one final thrust, [if Player is knotted]forcing your swollen knot into her body[else]hilting your entire length in herself[end if]. She howls in pleasure when you climax powerfully, blasting your [Cum Load Size of Player] load into her as your own howling joins hers.";
+			say "     The pink poodle collapses atop you, panting happily as [if Player is knotted]she waits for your knot to go down[else]her feminine juices leak out around your still-pulsing shaft[end if]. She cuddles up against your exhausted form for some time, whispering sweet French nothings in your ear as you both recover from the intense lovemaking. When she is finally able to, the poodle pulls herself off you with a wet slurp before giving you a quick kiss on the cheek and telling you to come back and see her again sometime. She sashays off down the street, stopping only to turn and blow you a kiss before she disappears from sight.";
+			CreatureSexAftermath "Pink Poodle" receives "PussyFuck" from "Player";
+		else if Player is female and (a random chance of 1 in 4 succeeds or (HP of Player < 1 and a random chance of 2 in 3 succeeds)):
+			say "     The poodle girl hums softly as her delicate paws roam your body, teasing and groping you as she quickly strips off your gear. After stripping you down the attractive canine steps over you, positioning her wet canine spade above your head. As she kneels down over you her paws and tongue tease your body, stroking and fondling you as she descends down your form towards your [cunt size desc of Player] pussy. You gasp as her cool wet nose presses into your womanly folds, leading the way for her long canine tongue. As she works her muzzle and tongue, she lowers her own dripping cunt to your face, grinding it against your nose as you moan in delight. Soon you are licking and sucking at the pink poodle's cunt in return, trying your best to mimic her talented tonguework as she pushes you towards climax again and again, but each time letting off just before you peak to draw out the experience as long as possible. Eventually you can take no more and you howl in pleasure as your crashing orgasm hits you, soaking the pink poodle's muzzle as she continues her work to draw out your climax as long as possible.";
+			say "     When your orgasm finally comes to an end, the pink poodle lifts herself up and turns to face you, sitting squarely on your chest with her legs on either side of your head. As you lay there, basking in your afterglow, she begins working a pair of fingers into her own drooling pussy to finish the job you started, frigging herself to a powerful climax that soaks you in her nectars. Satisfied with a job well done, the canine call girl gives you a quick kiss on the cheek and reminds you to come back and see her again sometime before sashaying off down the street, stopping only to turn and blow you a kiss before she disappears from sight.";
+			CreatureSexAftermath "Pink Poodle" receives "OralPussy" from "Player";
 		else:
-			say "     Unable to fend off the aggressive pink poodle, you stumble and fall to the ground. 'Mmm, so you like to play rough? Usually that costs extra darling, but I suppose you could make up for it some other way,' she says in her refined French accent as she steps over your supine form.";
-			if Player is male and a random chance of 2 in 3 succeeds:
-				say "[pinkpoodledefeatsex]";
-			else:
-				say "[pinkpoodledefeatoral]";
-
-to say pinkpoodledefeatsex:
-	say "     The poodle girl hums softly as her delicate paws roam your body, teasing and groping you as she quickly strips off your gear. After stripping you down, the attractive canine kneels down between your legs, taking your [cock size desc of Player] [Cock of Player] member in one paw as her other gently cups your [Ball Size Adjective of Player] [Balls]. With an expert touch, she teases your shaft to attention before she leans forward and wraps her muzzle around your shaft, gently sucking as her tongue plays along your length. Combined with her paw still massaging your testes, the effect is quite arousing, but the obviously well-practiced canine call girl is careful to not let you reach climax too soon.";
-	WaitLineBreak;
-	say "     Releasing your shaft with one final kiss, she raises herself up off her knees, positioning her wet canine spade over your [Cock of Player] cock before lowering herself down onto you. The feeling of her slick doggy cunt enveloping your flesh is delightful, and even as she bounces up and down your shaft, she reaches beneath herself to resume fondling your aching balls. The pleasure seems to go on forever as the canine call girl pushes you towards climax again and again, but each time letting off just before you peak to draw out the experience as long as possible. Eventually you can take no more, and as if sensing your orgasm the poodle girl makes one final thrust, [if Player is knotted]forcing your swollen knot into her body[else]hilting your entire length in herself[end if]. She howls in pleasure when you climax powerfully, blasting your [Cum Load Size of Player] load into her as your own howling joins hers.";
-	say "     The pink poodle collapses atop you, panting happily as [if Player is knotted]she waits for your knot to go down[else]her feminine juices leak out around your still-pulsing shaft[end if]. She cuddles up against your exhausted form for some time, whispering sweet French nothings in your ear as you both recover from the intense lovemaking. When she is finally able to, the poodle pulls herself off you with a wet slurp before giving you a quick kiss on the cheek and telling you to come back and see her again sometime. She sashays off down the street, stopping only to turn and blow you a kiss before she disappears from sight.";
-	CreatureSexAftermath "Pink Poodle" receives "PussyFuck" from "Player";
-
-to say pinkpoodledefeat69:
-	say "     The poodle girl hums softly as her delicate paws roam your body, teasing and groping you as she quickly strips off your gear. After stripping you down the attractive canine steps over you, positioning her wet canine spade above your head. As she kneels down over you her paws and tongue tease your body, stroking and fondling you as she descends down your form towards your [cunt size desc of Player] pussy. You gasp as her cool wet nose presses into your womanly folds, leading the way for her long canine tongue. As she works her muzzle and tongue, she lowers her own dripping cunt to your face, grinding it against your nose as you moan in delight. Soon you are licking and sucking at the pink poodle's cunt in return, trying your best to mimic her talented tonguework as she pushes you towards climax again and again, but each time letting off just before you peak to draw out the experience as long as possible. Eventually you can take no more and you howl in pleasure as your crashing orgasm hits you, soaking the pink poodle's muzzle as she continues her work to draw out your climax as long as possible.";
-	say "     When your orgasm finally comes to an end, the pink poodle lifts herself up and turns to face you, sitting squarely on your chest with her legs on either side of your head. As you lay there, basking in your afterglow, she begins working a pair of fingers into her own drooling pussy to finish the job you started, frigging herself to a powerful climax that soaks you in her nectars. Satisfied with a job well done, the canine call girl gives you a quick kiss on the cheek and reminds you to come back and see her again sometime before sashaying off down the street, stopping only to turn and blow you a kiss before she disappears from sight.";
-	CreatureSexAftermath "Pink Poodle" receives "OralPussy" from "Player";
-
-to say pinkpoodledefeatoral:
-	say "     The poodle girl smiles down at you as she positions herself above your face, panting eagerly as she lowers her wet canine cunt to your face. Her thighs grip tightly around your head as she presses her pussy to your lips, the musky fluids leaking into your mouth as she strokes and teases her clit with one padded paw. With your head awash in her arousing scent and taste, it's not long before you're digging into the delightful canine folds before you, working your tongue as best as you can from your confined position. The poodle girl moans happily, one paw still working her clit while the other rubs your head gently, occasionally slipping into her cunt alongside your tongue to further stimulate her before returning to petting you, smearing her delectable fluids across your face.";
-	say "     The pink poodle draws it out as long as she can, but your combined efforts soon push her to her limits, and she howls in pleasure as she orgasms above you, soaking you in her nectars as her cunt spasms around your tongue. Sated, the canine rolls off you slowly, panting happily as she lays on the ground next to you. Eventually she recovers enough from her powerful climax to climb to her feet. She gives you a quick kiss on the cheek and reminds you to come back and see her again sometime before sashaying off down the street, stopping only to turn and blow you a kiss before she disappears from sight.";
-	CreatureSexAftermath "Player" receives "OralPussy" from "Pink Poodle";
+			say "     The poodle girl smiles down at you as she positions herself above your face, panting eagerly as she lowers her wet canine cunt to your face. Her thighs grip tightly around your head as she presses her pussy to your lips, the musky fluids leaking into your mouth as she strokes and teases her clit with one padded paw. With your head awash in her arousing scent and taste, it's not long before you're digging into the delightful canine folds before you, working your tongue as best as you can from your confined position. The poodle girl moans happily, one paw still working her clit while the other rubs your head gently, occasionally slipping into her cunt alongside your tongue to further stimulate her before returning to petting you, smearing her delectable fluids across your face.";
+			say "     The pink poodle draws it out as long as she can, but your combined efforts soon push her to her limits, and she howls in pleasure as she orgasms above you, soaking you in her nectars as her cunt spasms around your tongue. Sated, the canine rolls off you slowly, panting happily as she lays on the ground next to you. Eventually she recovers enough from her powerful climax to climb to her feet. She gives you a quick kiss on the cheek and reminds you to come back and see her again sometime before sashaying off down the street, stopping only to turn and blow you a kiss before she disappears from sight.";
+			CreatureSexAftermath "Player" receives "OralPussy" from "Pink Poodle";
 
 To say beatthePinkPoodle:
 	if nopoodlesex > 2 and ( the remainder after dividing nopoodlesex by 5 is not 0 ):
@@ -52,60 +36,57 @@ To say beatthePinkPoodle:
 		say "     Defeated, the [if poodleapproved is true]alluring[else]haughty[end if] poodle falls to her hands and knees with a whimper. As she whines up at you with pleading puppy dog eyes, you realize you could have some fun with the beaten dog, but since you lack any gender of your own, you leave her be and continue on your way.";
 	else:
 		say "     Defeated, the [if poodleapproved is true]alluring[else]haughty[end if] poodle falls to her hands and knees with a whimper. As she whines up at you with pleading puppy dog eyes, you realize you could have some fun with the beaten dog.";
-		say "[PinkPoodleSexMenu]";
-
-to say PinkPoodleSexMenu:
-	now sextablerun is 0;
-	blank out the whole of table of fucking options;
-	[]
-	if HP of Dominick >= 10 and HP of Dominick < 20 and Player is female and ( BodyName of Player is "Breederslut" or FaceName of Player is "Breederslut" ) and inasituation is false:
+		now sextablerun is 0;
+		blank out the whole of table of fucking options;
+		[]
+		if HP of Dominick >= 10 and HP of Dominick < 20 and Player is female and ( BodyName of Player is "Breederslut" or FaceName of Player is "Breederslut" ) and inasituation is false:
+			choose a blank row in table of fucking options;
+			now title entry is "Recruit for Dominick";
+			now sortorder entry is 99;
+			now description entry is "Send her to Dominick to breed";
+		[]
+		if Player is male:
+			choose a blank row in table of fucking options;
+			now title entry is "Give vaginal";
+			now sortorder entry is 1;
+			now description entry is "Fuck the pink poodle";
+		[]
 		choose a blank row in table of fucking options;
-		now title entry is "Recruit for Dominick";
-		now sortorder entry is 99;
-		now description entry is "Send her to Dominick to breed";
-	[]
-	if Player is male:
-		choose a blank row in table of fucking options;
-		now title entry is "Give vaginal";
-		now sortorder entry is 1;
-		now description entry is "Fuck the pink poodle";
-	[]
-	choose a blank row in table of fucking options;
-	now title entry is "Receive oral";
-	now sortorder entry is 2;
-	now description entry is "Have her [if Player is male]suck you off[else]eat you out[end if]";
-	[]
-	sort the table of fucking options in sortorder order;
-	repeat with y running from 1 to number of filled rows in table of fucking options:
-		choose row y from the table of fucking options;
-		say "[link][y] - [title entry][as][y][end link][line break]";
-	say "[link]0 - Leave her be[as]0[end link][line break]";
-	while sextablerun is 0:
-		say "Pick the corresponding number> [run paragraph on]";
-		get a number;
-		if calcnumber > 0 and calcnumber <= the number of filled rows in table of fucking options:
-			now current menu selection is calcnumber;
-			choose row calcnumber in table of fucking options;
-			say "[title entry]: [description entry]?";
-			if Player consents:
+		now title entry is "Receive oral";
+		now sortorder entry is 2;
+		now description entry is "Have her [if Player is male]suck you off[else]eat you out[end if]";
+		[]
+		sort the table of fucking options in sortorder order;
+		repeat with y running from 1 to number of filled rows in table of fucking options:
+			choose row y from the table of fucking options;
+			say "[link][y] - [title entry][as][y][end link][line break]";
+		say "[link]0 - Leave her be[as]0[end link][line break]";
+		while sextablerun is 0:
+			say "Pick the corresponding number> [run paragraph on]";
+			get a number;
+			if calcnumber > 0 and calcnumber <= the number of filled rows in table of fucking options:
+				now current menu selection is calcnumber;
+				choose row calcnumber in table of fucking options;
+				say "[title entry]: [description entry]?";
+				if Player consents:
+					LineBreak;
+					now sextablerun is 1;
+					if title entry is:
+						-- "Recruit for Dominick":
+							say "[pinkpoodle_dom]";
+						-- "Give vaginal":
+							say "[pinkpoodlesex]";
+						-- "Receive oral":
+							say "[pinkpoodleoral]";
+			else if calcnumber is 0:
 				LineBreak;
 				now sextablerun is 1;
-				if title entry is:
-					-- "Recruit for Dominick":
-						say "[pinkpoodle_dom]";
-					-- "Give vaginal":
-						say "[pinkpoodlesex]";
-					-- "Receive oral":
-						say "[pinkpoodleoral]";
-		else if calcnumber is 0:
-			LineBreak;
-			now sextablerun is 1;
-			say "     Deciding against taking advantage of the whining poodle, you leave her where she is.";
-			increase nopoodlesex by 1;
-		else:
-			say "Invalid Option. Pick between 0 and [the number of filled rows in the table of fucking options].";
-	wait for any key;
-	clear the screen and hyperlink list;
+				say "     Deciding against taking advantage of the whining poodle, you leave her where she is.";
+				increase nopoodlesex by 1;
+			else:
+				say "Invalid Option. Pick between 0 and [the number of filled rows in the table of fucking options].";
+		wait for any key;
+		clear the screen and hyperlink list;
 
 to say pinkpoodlesex:
 	say "     Since she's already on all fours, you decide to use the beaten canine like the bitch she is. Dropping your gear as you move behind her, you grip the poodle's ample, shaved hips, causing her tail to wag softly as you caress them. You can't help but grin as you watch the large pink pompom swaying back and forth before you as you align your [cock size desc of Player] [Cock of Player] cock to her needy pussy, stroking your tip across her outer lips gently before pushing in slowly.";
