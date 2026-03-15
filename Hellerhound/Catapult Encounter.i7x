@@ -25,7 +25,7 @@ to say catapult fire:
 to say ResolveEvent loaded catapult:
 	say "     You find a loaded catapult, a large plastic grocery bag filled with a thick liquid in the cup, and the arms just waiting to let fly.";
 	say "     You look up to find the target, tilting your [FaceSpeciesName of Player in lower case] head into the distance. There seems to be a large military blockade there, a huge earthen wall with turrets and barbed wire, giant tanks in lines behind that, and then armed men stretching as far as the eye can see. They are all alert and tense, probably from the one who set this up.";
-	say "[line break]     Do you want to check out what the bags are filled with?";
+	say "     Do you want to check out what the bags are filled with?";
 	if Player consents:
 		LineBreak;
 		say "     You tear a bag open at random, and find they are containing large volumes of cum, milk, and piss. Whoever did this was not on the side of the rescuers. You could drink some of the reeking liquids, though that would not be without consequences for your health.";

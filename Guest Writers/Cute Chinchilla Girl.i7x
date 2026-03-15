@@ -116,12 +116,12 @@ When Play begins:
 	now defeated entry is "[chinloss]";
 	now victory entry is "[chinvic]";
 	now desc entry is "[chindesc]";
-	now face entry is "a short chinchilla muzzle, with small gray mouse-like ears, and cute, little whiskers adorned on it"; [ Face description, format as "Your face is [Face of Player]." ]
+	now face entry is "a short chinchilla muzzle, with small gray mouse-like ears, and cute little whiskers adorned on it"; [ Face description, format as "Your face is [Face of Player]." ]
 	now body entry is "voluptuous and somewhat bestial. You have powerful hindpaws that allow you to move with some speed and grace"; [ Body Description, format as "Your Body is [Body of Player]." ]
-	now skin entry is "[one of]gray fur[or]downy soft fur[at random] in place of"; [ Skin Description, format as "Looking at yourself, your body is covered in [Skin of Player] skin." ]
+	now skin entry is "[one of]gray[or]downy soft[at random][if looknow is true] fur in place of[else]-furred[end if]"; [ Skin Description, format as "Looking at yourself, your body is covered in [Skin of Player] skin." ]
 	now tail entry is "You have a fairly long tail which fluffs out quite a bit."; [ Tail description, write a whole Sentence or leave blank. ]
-	now cock entry is "[one of]tapered[or]chinchilla[at random]pinkish"; [ Cock Description, format as you have a 'size' (your text) cock]
-	now face change entry is "it draws forward into a chinchilla muzzle, sprouting soft, twitchy whiskers. Your ears migrate to the top of your head twisting into a more round, rodent-like shape"; [ Face change text, format as "Your face feels funny as [face change entry]." ]
+	now cock entry is "[one of]tapered[or]chinchilla[at random], pinkish"; [ Cock Description, format as you have a 'size' (your text) cock]
+	now face change entry is "it draws forward into a chinchilla muzzle, sprouting soft, twitchy whiskers. Your ears migrate to the top of your head, twisting into a more round, rodent-like shape"; [ Face change text, format as "Your face feels funny as [face change entry]." ]
 	now body change entry is "a soft heat sweeps over you. Your feet grow to leave you with plump, distinctive hind paws, tipped with little black claws while your hands and arms shrink, as very small claws sprout from your new paw tips"; [ Body change text, format as "Your body feels funny as [body change entry]." ]
 	now skin change entry is "gray fur spreads rapidly over your form, a lighter gray stripe covering your chest. Feeling yourself following the change, the fur is extremely soft to the touch"; [ Skin change text, format as "Your skin feels funny as [skin change entry]." ]
 	now ass change entry is "a long, sprig-like tail grows from you, hair sprouting across its length to give it a distinctly fluffy appearance"; [ Ass/tail change text, format as "Your ass feels funny as [ass change entry]." ]
@@ -275,10 +275,7 @@ Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered
 This is the Chinchilla Infection rule:
 	if Player has a body of "Chinchilla":
 		trigger ending "Chinchilla Infection";
-		if humanity of Player < 10:
-			say "     Overtaken by your infection's influence you retreat to the plains, where your kin reside. Warmly greeted by them, you find yourself fitting in quite well, your days soon filled with constant sex, only occasionally interrupted by other predators or hunters, of which you either evade or add to your numbers. Your population eventually reaches a point where you start spilling into more civilized areas, your disarming appearance proving very effective and quickly bringing them into the fold as well...";
-		else:
-			say "     Once you're rescued by the military you're processed by them with zero issue, likely aided by how non-threatening you look. Back in normal society, you find that, while children are easily drawn to your cute appearance, the rest of mainstream society doesn't quite regard you as highly, likely due to a stigma attached to the infected. You end up mostly staying within the social circles of other survivors, but otherwise lead a fairly reasonable life.";
+		say "     [if humanity of Player < 10]Overtaken by your infection's influence you retreat to the plains, where your kin reside. Warmly greeted by them, you find yourself fitting in quite well, your days soon filled with constant sex, only occasionally interrupted by other predators or hunters, of which you either evade or add to your numbers. Your population eventually reaches a point where you start spilling into more civilized areas, your disarming appearance proving very effective and quickly bringing them into the fold as well...[else]Once you're rescued by the military you're processed by them with zero issue, likely aided by how non-threatening you look. Back in normal society, you find that, while children are easily drawn to your cute appearance, the rest of mainstream society doesn't quite regard you as highly, likely due to a stigma attached to the infected. You end up mostly staying within the social circles of other survivors, but otherwise lead a fairly reasonable life.[end if]";
 
 Table of Game Objects (continued)
 name	desc	weight	object

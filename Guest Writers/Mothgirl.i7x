@@ -264,10 +264,7 @@ Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered
 This is the Mothgirl Infection rule:
 	if Player has a body of "Mothgirl":
 		trigger ending "Mothgirl Infection";
-		if humanity of Player < 10:
-			say "     You do not have any prejudice to any particular infected creature, except spidergirls whose nature invites trouble. You flit around acting on the instincts of wanting sex or having sex with numerable partners.";
-		else:
-			say "     You are able to fly anywhere you want in the city and take up a small delivery service. In exchange you get money and multiple sex partners to satisfy your lust.";
+		say "     You [if humanity of Player < 10]do not have any prejudice to any particular infected creature, except spidergirls whose nature invites trouble. You flit around acting on the instincts of wanting sex or having sex with numerable partners[else]are able to fly anywhere you want in the city and take up a small delivery service. In exchange you get money and multiple sex partners to satisfy your lust[end if].";
 
 Table of Game Objects (continued)
 name	desc	weight	object

@@ -351,8 +351,8 @@ Scent of dirty whip is "The sticky whip smells of equine cum.".
 
 An everyturn rule:
 	if the dirty whip is wielded:
-		now researchbypass is 1;
 		say "The cum on the dirty whip slips down onto your hand.";
+		now researchbypass is 1;
 		infect "Black Equinoid";
 		now researchbypass is 0;
 

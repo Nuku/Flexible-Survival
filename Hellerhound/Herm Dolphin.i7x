@@ -13,7 +13,7 @@ dolphintricked is a number that varies.
 to say Dolphin wins:
 	say "     'Weak little thing, how could you attempt to beat me?' she whispers, rolling your weakened body over and spreading your legs. You struggle but fail to free yourself from her grasp.";
 	if dolphinwantmate is 0 or dolphinwantmate is -1:
-		say "[line break]     [bold type]Though with a few little changes, you could be my mate?[roman type][line break]";
+		say "[line break]     [bold type]'Though with a few little changes, you could be my mate?'[roman type][line break]";
 		say "     ([link]Y[as]y[end link]) - Agree to be the dolphin's mate.";
 		say "     ([link]N[as]n[end link]) - Reject the dolphin, even if it might make her angry.";
 		if Player consents:
@@ -77,16 +77,15 @@ to say dolphin fuck:
 			else if Cunt Tightness of Player < 5:
 				now Cunt Tightness of Player is 5;
 		else if Cunt Tightness of Player < 8:
-			say "     The dolphin places her large, pink cock at your waiting entrance and rubs it back and forth, without touching it. You are horrified and fascinated by it. She shoves her cock head into you, but it is rough going, giving you much pleasure as she moans and groans. She continues to shove, turn, and wriggle the beginning of her large member inside of you.";
+			say "     The dolphin places her large, pink cock at your waiting entrance and rubs it back and forth, without touching it. You are horrified and fascinated by it. She shoves her cockhead into you, but it is rough going, giving you much pleasure as she moans and groans. She continues to shove, turn, and wriggle the beginning of her large member inside of you.";
 			increase Cunt Tightness of Player by 1;
 		else:
-			say "     The dolphin places her large, pink cock at your waiting entrance and rubs it back and forth, without touching it. You are horrified and fascinated by it. Her cock head slides into your lubricated tunnel with ease, and she prepares to pump the rest into you.";
+			say "     The dolphin places her large, pink cock at your waiting entrance and rubs it back and forth, without touching it. You are horrified and fascinated by it. Her cockhead slides into your lubricated tunnel with ease, and she prepares to pump the rest into you.";
 		if Cunt Depth of Player < 10: [won't go in far, must extend you]
-			say "     She slams her cock into you with a cry of success, but it is cut off as she realizes that she can't go halfway inside. She thinks for a moment, her member stimulating your pussy as it wriggles. 'I am going to have to lengthen your cunt, small one. It may hurt.' She begins to slam her cock into you and grunts when it smashes open your cervix. You wince and hope that ";
 			if Humanity of Player < 60:
-				say "your infected body can repair the damage she, no, it, is doing[if Player is not sterile] so that you may have children[end if].";
+				say "     She slams her cock into you with a cry of success, but it is cut off as she realizes that she can't go halfway inside. She thinks for a moment, her member stimulating your pussy as it wriggles. 'I am going to have to lengthen your cunt, small one. It may hurt.' She begins to slam her cock into you and grunts when it smashes open your cervix. You wince and hope that your infected body can repair the damage she, no, it, is doing[if Player is not sterile] so that you may have children[end if].";
 			else:
-				say "the damage can be fixed[if Player is not sterile] if you wish not to miscarry[end if].";
+				say "     She slams her cock into you with a cry of success, but it is cut off as she realizes that she can't go halfway inside. She thinks for a moment, her member stimulating your pussy as it wriggles. 'I am going to have to lengthen your cunt, small one. It may hurt.' She begins to slam her cock into you and grunts when it smashes open your cervix. You wince and hope that the damage can be fixed[if Player is not sterile] if you wish not to miscarry[end if].";
 			if "Modest Organs" is not listed in feats of Player:
 				increase Cunt Depth of Player by 3;
 			else if Cunt Depth of Player < 8:
@@ -110,7 +109,7 @@ to say dolphin fuck:
 			if Player consents:
 				LineBreak;
 				say "Your genitals feel odd as a cunt grows out of the base of your body, growing deeper and wider by the second.";
-				increase Cunt Count of Player by 1;
+				now Cunt Count of Player is 1;
 				increase Cunt Depth of Player by 6;
 				increase Cunt Tightness of Player by 4;
 			else:
@@ -118,7 +117,7 @@ to say dolphin fuck:
 				say "You wave a tiny microwave transmitter over the affected area. Ahhh, all clean!";
 		else:
 			say "[line break]Your genitals feel odd as a cunt grows out of the base of your body, growing deeper and wider by the second.";
-			increase Cunt Count of Player by 1;
+			now Cunt Count of Player is 1;
 			increase Cunt Depth of Player by 6;
 			increase Cunt Tightness of Player by 4;
 	else:

@@ -7,35 +7,29 @@ Version 5 of Anthro Rabbit by Rikaeus begins here.
 
 "Adds a Anthro Rabbit to Flexible Survival's Wandering Monsters table."
 
-LastLuckyFootTurn is a number that varies.
-
 Section 1 - Creature Responses
 
 to say AnthroRabbDesc:
+	setmongender a random number from 3 to 4;
 	if BodyName of Player is "Anthro Rabbit":
-		now combat abort is 1; [stops the fight]
-		say "     A small humanoid bunny appears in front of you! Less than four foot nine and completely naked, it could pass as a short adult human if it weren't for the rabbit-like qualities it had. [one of]He[or]She[at random] looks at you excitedly, obviously intrigued by the fact that you appear to share the same infection as them. Seconds later, more of them come out of various hiding places, all crowding around you, chittering about random things as they talk about you being a fellow pack member. The one that had appeared in front of you first walks closer to you, tilting its head at you. 'Does fellow rabbit want to join in some fun?' it asks curiously, gesturing to all of the rabbits present. You get the feeling that the small bunny is propositioning you so you have to think about what to do.";
+		say "     A small humanoid bunny appears in front of you! Less than four-foot-nine and completely naked, [ghe] could pass as a short adult human if it weren't for the rabbit-like qualities [ghe] had. [gche] looks at you excitedly, obviously intrigued by the fact that you appear to share the same infection as [ghim]. Seconds later, more of them come out of various hiding places, all crowding around you, chittering about random things as they talk about you being a fellow pack member. The one that had appeared in front of you first walks closer to you, tilting [ghis] head at you. 'Does fellow rabbit want to join in some fun?' [ghe] asks curiously, gesturing to all of the rabbits present. You get the feeling that the small bunny is propositioning you so you have to think about what to do.[combat abort]";
 		say "[DoubleRabbitSexMenu]";
 	else if BodyName of Player is "Bunny Jock":
-		now combat abort is 1; [stops the fight]
-		say "     A small humanoid bunny appears in front of you! Less than four foot nine and completely naked, it could pass as a short adult human if it weren't for the rabbit-like qualities it had. [one of]He[or]She[at random] looks almost worshipingly at you, admiring, from where they're staring, your tall stature. 'You're such a huge rabbit!' they say in complete awe, probably wondering how you could be your height. Seconds later however, more of the same rabbits come out of various hiding places, all crowding around you and adoring you just like the first one is. Some of them are even reverently touching your hands. The original however steps forward and stutters out a question. 'C-can we help big rabbit somehow?' they say in a way that makes you feel like they're trying to proposition you.";
+		say "     A small humanoid bunny appears in front of you! Less than four-foot-nine and completely naked, [ghe] could pass as a short adult human if it weren't for the rabbit-like qualities [ghe] had. [gche] looks almost worshipingly at you, admiring, from where [ghe][']s staring, your tall stature. 'You're such a huge rabbit!' [ghe] says in complete awe, probably wondering how you could be your height. Seconds later, however, more of the same rabbits come out of various hiding places, all crowding around you and adoring you just like the first one is. Some of them are even reverently touching your hands. The original, however, steps forward and stutters out a question. 'C-can we help big rabbit somehow?' [ghe] says in a way that makes you feel like [ghe][']s trying to proposition you.[combat abort]";
 		say "[JockRabbitSexMenu]";
 	else:
-		say "     A small humanoid bunny appears in front of you! Less than four foot nine and completely naked, it could pass as a short adult human if it wasn't for the ears, the paws, and the short fur covering [one of]his body. He[or]her body. She[at random] is looking at you curiously, as if contemplating what to do next. However, before you can say anything, out of various hiding places come multiple similar looking creatures, all of them of varying genders. As they approach, you can hear some of them mutter in an excited voice, 'A new pack member!'";
+		say "     A small humanoid bunny appears in front of you! Less than four-foot-nine and completely naked, [ghe] could pass as a short adult human if it wasn't for the ears, the paws, and the short fur covering [ghis] body. [gche] is looking at you curiously, as if contemplating what to do next. However, before you can say anything, out of various hiding places come multiple similar-looking creatures, all of them of varying genders. As they approach, you can hear some of them mutter in an excited voice, 'A new pack member!'";
+	setmongender 9;
 
 to say AnthroRabbVictory:
 	if HP of Player > 0: [submitted]
-		say "     Dropping to the floor and holding your hands up as if to present yourself in a submissive stance. The rabbits however look at you rather oddly, not comprehending what the heck you're doing. 'Maybe soon-to-be pack-member needs a hug?' one of them suggests. They all perk up at this and walk up to you and start hugging you, rubbing themselves up against you in a lovingly-like fashion, clearly trying to cheer you up in a misperceived assumption that you're sad. After a few minutes, you feel them leave you alone on the ground with accomplished looks on their faces.";
+		say "     You drop to the floor and hold your hands up as if to present yourself in a submissive stance. The rabbits, however, look at you rather oddly, not comprehending what the heck you're doing. 'Maybe soon-to-be pack member needs a hug?' one of them suggests. They all perk up at this and walk up to you and start hugging you, rubbing themselves up against you in a loving-like fashion, clearly trying to cheer you up in a misperceived assumption that you're sad. After a few minutes, you feel them leave you alone on the ground with accomplished looks on their faces.";
 		if lucky rabbit foot is not owned:
-			say "     Before you get up and leave, you notice something on the ground though. Pushing yourself onto your feet, you move towards it and see that it's a rabbit's foot. You think to yourself and assume that the bunnies left this behind, perhaps for you? You shrug your shoulders and pick it up, feeling the velvety softness of the fur, such nicety probably would be a pleasure in such a chaotic time. So, you quickly decide to pocket it, perhaps it could help you in dark times.";
+			say "     Before you get up and leave, you notice something on the ground though. Pushing yourself onto your feet, you move towards it and see that it's a rabbit's foot. You think to yourself and assume that the bunnies left this behind, perhaps for you? You shrug your shoulders and pick it up, feeling the velvety softness of the fur; such nicety probably would be a pleasure in such a chaotic time. So, you quickly decide to pocket it; perhaps it could help you in dark times.";
 			ItemGain lucky rabbit foot by 1;
-		infect "Anthro Rabbit";
 	else: [beaten]
-		say "     Falling back onto the ground as one of the rabbits give you one good punch, they all punch you. 'New pack member!' you hear some of them mutter again as they all move towards you and start rubbing their paws over you, massaging your wounds as if trying to make you feel better. It certainly does make you feel better, easing the aches and pains a little bit. Once they're done, all of the bunnies look over you and nod their heads before chittering amongst themselves and running off, giving you one last glance as they leave.";
-		infect "Anthro Rabbit";
-
-to say AnthroRabbBeaten:
-	say "     Knocking the last bunny to the ground, you wipe an imaginary bead of sweat from your brow as you give them a gesture as if asking them to try again. This causes several of the rabbits to [']eep['] out loud as all of them start to scurry and panic as they scramble to their feet and dash away from you. Shrugging your shoulders, you figure that decides that and head on your way.";
+		say "     Falling back onto the ground as one of the rabbits gives you one good punch, they all punch you. 'New pack member!' you hear some of them mutter again as they all move towards you and start rubbing their paws over you, massaging your wounds as if trying to make you feel better. It certainly does make you feel better, easing the aches and pains a little bit. Once they're done, all of the bunnies look over you and nod their heads before chittering amongst themselves and running off, giving you one last glance as they leave.";
+	infect "Anthro Rabbit";
 
 Section 2 - Creature Insertion
 
@@ -57,7 +51,8 @@ When Play begins:
 	add "Anthro Rabbit" to infections of LeporineList;
 	add "Anthro Rabbit" to infections of FurryList;
 	add "Anthro Rabbit" to infections of NatureList;
-	add "Anthro Rabbit" to infections of HermList;
+	add "Anthro Rabbit" to infections of MaleList;
+	add "Anthro Rabbit" to infections of FemaleList;
 	add "Anthro Rabbit" to infections of TaperedCockList;
 	add "Anthro Rabbit" to infections of SheathedCockList;
 	add "Anthro Rabbit" to infections of BipedalList;
@@ -67,19 +62,19 @@ When Play begins:
 	now enemy Name entry is ""; [ Specific name of unique enemy. ]
 	now enemy type entry is 0; [ 0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters. ]
 	now attack entry is "[one of]They give a coordinated attack, pushing you back one by one![or]One of them jumps onto your back and smacks you on the head. More than once.[or]You lose your balance and fall on the ground! They try to pin you down by piling on top of you![or]One of them manages to flank you and shoves you to the ground.[at random]";
-	now defeated entry is "[AnthroRabbBeaten]";
+	now defeated entry is "     Knocking the last bunny to the ground, you wipe an imaginary bead of sweat from your brow as you give them a gesture as if asking them to try again. This causes several of the rabbits to [']eep['] out loud as all of them start to scurry and panic as they scramble to their feet and dash away from you. Shrugging your shoulders, you figure that decides that and head on your way.[line break]";
 	now victory entry is "[AnthroRabbVictory]";
 	now desc entry is "[AnthroRabbDesc]";
 	now face entry is "that of a rabbit, with distinctive ears sprouting from the top of your head and flopping downwards";
-	now body entry is "far below average height but agile and your hands are human in quality, fingers and everything though they are lightly padded. The same goes for your feet, though they're a tad bit larger, possibly to help you with jumping."; [ Body Description, format as the text "Your Body is (your text)."]
-	now skin entry is "short fur covering almost every inch of your body"; [ skin Description, format as the text "Your body is covered in (your text) skin"]
+	now body entry is "far below average height but agile and your hands are human in quality, fingers and everything, though they are lightly padded. The same goes for your feet, though they're a tad bit larger, possibly to help you with jumping"; [ Body Description, format as the text "Your Body is (your text)."]
+	now skin entry is "short[if looknow is true] fur covering almost every inch of your[else]-furred[end if]"; [ skin Description, format as the text "Your body is covered in (your text) skin"]
 	now tail entry is "You have a [one of]short[or]fluffy[or]twitchy[at random] rabbit tail."; [ Tail description, write a whole Sentence or leave blank. ]
 	now cock entry is "[one of]sheathed[or]rabbit[at random]"; [ Cock Description, format as you have a 'size' (your text) cock]
 	now face change entry is "floppy bunny ears sprout from the top of your head and hang on the sides of your face"; [ face change text. format as "Your face feels funny as (your text)" ]
-	now body change entry is "you feel your body pulse as it changes right in front of your eyes. [if ScaleValue of Player < 2]It suddenly grows, becoming larger than it was before, but not as large as you probably were prior to everything. [else if ScaleValue of Player > 2]It suddenly starts to shrink, becoming smaller and tinier until you are far below average height for what you were prior to the apocalypse. [end if]Your body is pretty fit for your size, matching the lithe and dexterous form that you've acquired"; [ body change text. format as "Your body feels funny as (your text)" ]
+	now body change entry is "it changes right in front of your eyes. [if ScaleValue of Player < 2]It suddenly grows, becoming larger than it was before, but not as large as you probably were prior to everything. [else if ScaleValue of Player > 2]It suddenly starts to shrink, becoming smaller and tinier until you are far below average height for what you were prior to the apocalypse. [end if]Your body is pretty fit for your size, matching the lithe and dexterous form that you've acquired"; [ body change text. format as "Your body feels funny as (your text)" ]
 	now skin change entry is "a fair coating of fur covers you from head to toe. Feels almost like velvet"; [ skin change text. format as "Your skin feels funny as (your text)" ]
 	now ass change entry is "a small tail sprouts, waggling"; [ ass/tail change text. format as "Your ass feels funny as (your text)" ]
-	now cock change entry is "it shrinks into a furry sheath. A pair of soft balls descends as well"; [ cock change text. format as "Your cock feels funny as (your text)" ]
+	now cock change entry is "it shrinks into a furry sheath. A pair of soft balls descend as well"; [ cock change text. format as "Your cock feels funny as (your text)" ]
 	now str entry is 6;
 	now dex entry is 15;
 	now sta entry is 10;
@@ -220,24 +215,6 @@ When Play begins:
 	[Clit Size Adjective is generated by a function and can be used in scenes: very small/small/average/large/very large]
 ]
 
-Table of Game Objects (continued)
-name	desc	weight	object
-"lucky rabbit foot"	"A trinket in the form of a rabbit's foot that usually brings good luck. The fur appears rather soft to touch."	0	lucky rabbit foot
-
-lucky rabbit foot is a grab object.
-lucky rabbit foot is not temporary.
-Usedesc of lucky rabbit foot is "[lucky rabbit foot use]".
-Scent of lucky rabbit foot is "What are you expecting it to smell like? Okay, maybe a little bit of musk if anything, but that's it.".
-
-to say lucky rabbit foot use:
-	if LastLuckyFootTurn - turns < 5:
-		say "     Shooting a look towards the soft charm the rabbits gifted you, you shake your head and decide not to use it in fear of possibly ruining the novelty of the trinket. Perhaps you should wait a bit.";
-	else:
-		say "     Taking the soft furry trinket into your hands you rub it on your cheek, enjoying the velvety sensation that brushes your face, letting your worries fade away.";
-		SanBoost 15;
-		infect "Anthro Rabbit";
-		now LastLuckyFootTurn is turns;
-
 Section 3 - Sex Menus for the rabbits
 
 to say DoubleRabbitSexMenu:
@@ -249,41 +226,38 @@ to say DoubleRabbitSexMenu:
 		now title entry is "Take a rabbit up your ass";
 		now sortorder entry is 1;
 		now description entry is "Offer one of the rabbits your hole to ride";
+		[]
+		choose a blank row in table of fucking options;
+		now title entry is "Choose a cute rabbit girl";
+		now sortorder entry is 3;
+		now description entry is "Get sucked off by a rabbit girl";
+		[]
+		choose a blank row in table of fucking options;
+		now title entry is "Choose a cute rabbit girl while her friend joins in";
+		now sortorder entry is 4;
+		now description entry is "Ask to breed one of the pack girls, plus her friend";
 	[]
 	choose a blank row in table of fucking options;
 	now title entry is "Suck one of them off";
 	now sortorder entry is 2;
 	now description entry is "Offer your mouth to one of the rabbits";
 	[]
-	if Player is male:
-		choose a blank row in table of fucking options;
-		now title entry is "Choose a cute rabbit girl";
-		now sortorder entry is 3;
-		now description entry is "Get sucked off by a rabbit girl";
-	[]
-	if Player is male:
-		choose a blank row in table of fucking options;
-		now title entry is "Choose a cute rabbit girl while her friend joins in";
-		now sortorder entry is 4;
-		now description entry is "Ask to breed one of the pack girls, plus her friend";
-	[]
 	if Player is female:
 		choose a blank row in table of fucking options;
 		now title entry is "Take a rabbit girl for a spin";
 		now sortorder entry is 5;
 		now description entry is "Offer lesbian sex to a rabbit girl";
-	[]
-	if Player is female and anallevel > 1:
-		choose a blank row in table of fucking options;
-		now title entry is "Take a rabbit girl and her friend for a spin";
-		now sortorder entry is 6;
-		now description entry is "Offer lesbian sex to a rabbit girl, and her friend joins in";
-	[]
-	if Player is female:
+		[]
 		choose a blank row in table of fucking options;
 		now title entry is "Pick one of the rabbit boys";
 		now sortorder entry is 7;
 		now description entry is "Have a rabbit stud breed you";
+		[]
+		if anallevel > 1:
+			choose a blank row in table of fucking options;
+			now title entry is "Take a rabbit girl and her friend for a spin";
+			now sortorder entry is 6;
+			now description entry is "Offer lesbian sex to a rabbit girl, and her friend joins in";
 	[]
 	Sort the table of fucking options in sortorder order;
 	repeat with y running from 1 to number of filled rows in table of fucking options:
@@ -298,6 +272,7 @@ to say DoubleRabbitSexMenu:
 			choose row calcnumber in table of fucking options;
 			say "[title entry]: [description entry]?";
 			if Player consents:
+				LineBreak;
 				now sextablerun is 1;
 				if title entry is:
 					-- "Take a rabbit up your ass":
@@ -315,8 +290,9 @@ to say DoubleRabbitSexMenu:
 					-- "Pick one of the rabbit boys":
 						say "[RabbitSex7]";
 		else if calcnumber is 0:
+			LineBreak;
 			now sextablerun is 1;
-			say "     You shake your head and tell the rabbit that you'd rather not. It gives you a little forlorn look before it quickly recovers, bounding over to its allies who it leads off to somewhere private you guess. No doubt to either find another person or act like the bunnies they are.";
+			say "     You shake your head and tell the rabbit that you'd rather not. It gives you a little forlorn look before it quickly recovers, bounding over to its allies, who it leads off to somewhere private you guess. No doubt to either find another person or act like the bunnies they are.";
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options], or 0 to exit.";
 	wait for any key;
@@ -330,8 +306,8 @@ to say RabbitSex1: [Fuck Rabbit up the ass]
 	say "     Taking that as a cue to go all the way, the rabbit begins to fuck you vigorously, repeatedly pulling out and slamming back in, his balls slapping against your cheeks as he grips you close. As the both of you are in the throes of passion, you take a quick look around and see the other bunnies in rather intimate positions, clearly enjoying themselves. As time goes on you can feel the rabbit getting closer and nearer to climaxing with the tightening of his sack. You turn your head and pull the rabbit into a kiss which appears to set him off as he thrusts into you one last time with a grunt.";
 	WaitLineBreak;
 	say "     As soon as he thrusts into you one last time you feel his warm seed flow into you, filling you up. At the same time you hear many other gasps and look around, seeing the other bunnies all orgasming as well, shooting their loads over their partners or in them. When your rabbit's climax tapers off he pulls out and gives you another kiss before smiling happily at you, clearly having enjoyed your copulation. He helps you up and brushes off any dust that got on your body before assisting you in getting dressed, clearly a gentleman in your opinion. Once this is all done he gives you an expectant look.";
-	CreatureSexAftermath "Player" receives "AssFuck" from "Anthro Rabbit";
 	say "     'Perhaps pack mate can visit us again sometime?' he asks, looking at you with hopeful eyes. You give him a soft chuckle and a peck on the cheek which makes him light up with glee before telling him that you might just revisit them whenever you have free time. That causes the rabbit to happily bound over to his fellow bunnies who have already cleaned up rather good. They all wave at you, which prompts you to return it prior to them all leaving together, hopping or running away as they can. You smile and just walk away, continuing what you were doing before.";
+	CreatureSexAftermath "Player" receives "AssFuck" from "Anthro Rabbit";
 
 to say RabbitSex2: [get a BJ from a rabbit dude]
 	say "     You muse about what the bunnies are offering before nodding at them and suggesting something to the one in front of you. They grow a smile and turn to one of the many male rabbits in the group, gesturing for them to come over. He happily bounds on over and looks at you with an eager smile. Taking a glance over the bunny you can see that yes, it's clearly male from the anatomy that is visible. So, with that in mind you quite quickly get onto your knees and move your face towards his furry balls, inhaling his musky scent, the smell filling you with a horny need. Taking a quick look around before you continue you see that the others are getting into their own intimate scenarios.";
@@ -364,8 +340,8 @@ to say RabbitSex4:
 	say "     You groan at the sensitivity and begin to pull out, only to thrust right back into your sexy rabbit kinsmate. You hear muffled groans from below as the gagged bunny moans into the rabbit's crotch above her, causing a shiver in the girl who's riding her face. It doesn't slow her down luckily and she redoubles her efforts in licking your crotch, slathering it in spittle before she moves back some and latches onto her friend's protruding clitty. That causes an almost instant orgasm from your fellow furry mate. You can tell as she clamps down around your member and squirts droplets of bunny juice over your thrusting crotch. Your hands gripping her plush hips, you can feel yourself growing close to finish, to breeding this good little pack member of yours, the same pack member who's cumming all over your virile cock.";
 	WaitLineBreak;
 	say "     You see the rabbit who's eating her mate out seize up and slam her hips down onto the fucked-out girl who's clenching around your member like a vice. She yells out in intense pleasure and you can see a torrent of girl cum cover the anthro female you're pistoning in and out of. That brings you over the edge. You move your head back and groan lowly as you climax, pushing load after load of potent rabbit cum directly into the girl's clenching snatch. You cum for a good while, your breeder instincts taking over as you pack more cum into her stuffed pussy until it's leaking out around your shaft. The three of you slowly come down from your various orgasms, slowing thrusts and licks all together. Eventually it's just you simply pressed halfway into your mate's packed cunt, and the bunny atop her licking at the excess cum leaking around your member.";
-	CreatureSexAftermath "Anthro Rabbit" receives "PussyFuck" from "Player";
 	say "     After a good long while of resting there, stuck in your positions, you all disentangle, unwrapping yourselves from each other and pulling apart. You pull free with a sensitive gasp from her pussy, leaving a large trail of cum that leaks steadily from her pussy. Globs of your rabbit cum spill out from her and you all let out a collective sigh before laughing together. You help each other up, exchanging kisses, embraces and promises of future sweet nothings as you do. Eventually you all stand and with a slightly hesitant goodbye they return to their group, who of which have all been peeking from around a corner, watching you mate their females with excitement. Smiling and quite satisfied with your rut you turn and walk off, ready to continue on your way.";
+	CreatureSexAftermath "Anthro Rabbit" receives "PussyFuck" from "Player";
 
 to say RabbitSex5:
 	say "     You eye a pretty bunny among the crowd, she looks down a bit sheepishly when you make eye contact. You stride over, past a few jealous looking pack mates. Pushing out a hip to look extra seductive you ask the cute, white-furred bunny if she's interested in some one-on-one action between you two. She smiles broadly at your proposal and nearly jumps into your arms. You catch the excited jumper and give her a warm kiss to start things off. Your lips brush together, then interlock while tongues dance with each other in their own intimate way. Her larger front teeth nibble eagerly at your lips while her hands reach around to squeeze at your butt. You return her caresses and reach around her to fold an arm around her neck while another plays with her squeezable breasts.";
@@ -375,9 +351,9 @@ to say RabbitSex5:
 	say "     Now in a proper sixty-nine position you don't waste any time, you dive tongue first into the bunny girl's musky quim. You lean over the rabbit, pressing your hot body to hers, molding the two of you in a passionate sex pose. Your nameless bunny follows your example, she reaches up, groping your ass while she plants her muzzle directly into your sex. You hear, and feel her inhale loudly, taking in your sexual scent. You hear her coo at what she smells and a moment later you too are enjoying a hot tongue moving about in your quim. You groan into her crotch and she into yours as the two of you go about eating the other out. Between fervent licks your bunny lover moans desperately. 'Hmph. You. Taste. So good.' You can feels her smile against your lips as she speaks, which only drives on your own motivation to eat this bun's pussy faster and better.";
 	WaitLineBreak;
 	say "     Enjoying the taste of tasty rabbit sex you're suddenly bombarded by a wave of fem cum. The rabbit below you buries her face as far into your crotch as she can go and screams in pleasure, taking your entire cunt in her mouth and lashing her tongue wildly as she climaxes all over your face. She tries her best to keep working her tongue but you redouble your efforts on her sweet climaxing cunt. Nibbling, munching and swiping at her exposed clit with your free hand you bring her to one climax after another. After her fourth you find yourself exploding into orgasm yourself, filling the bunny gal's eager muzzle with your own fem cum. Her fifth orgasm comes at nearly the same time, caking your face in more fem cum while the both of you moan and groan in pleasure and sensitivity.";
+	say "     The bunny below you goes limp, apparently having fainted briefly from her overwhelming orgasm. You smile and pepper more kisses around her quivering pussy until she wakes with a sweet gasp. Once she does, you sit up and turn back around, still sitting atop but now facing her. She's breathing heavily and looking up at you with reverence. 'Tha-that was really good.' She smiles as her paws stroke your thighs affectionately. You smile back and ruffle her hair, taking a few more minutes to exchange more kisses and cuddles with your lover. But eventually you two part and she rejoins her pack, asking you to come back again soon before she molds back into the crowd of anthro rabbits. All of whom are watching from a distance, some looking quite jealous after your display.";
 	CreatureSexAftermath "Anthro Rabbit" receives "OralPussy" from "Player";
 	CreatureSexAftermath "Player" receives "OralPussy" from "Anthro Rabbit";
-	say "     The bunny below you goes limp, apparently having fainted briefly from her overwhelming orgasm. You smile and pepper more kisses around her quivering pussy until she wakes with a sweet gasp. Once she does, you sit up and turn back around, still sitting atop but now facing her. She's breathing heavily and looking up at you with reverence. 'Tha-that was really good.' She smiles as her paws stroke your thighs affectionately. You smile back and ruffle her hair, taking a few more minutes to exchange more kisses and cuddles with your lover. But eventually you two part and she rejoins her pack, asking you to come back again soon before she molds back into the crowd of anthro rabbits. All of whom are watching from a distance, some looking quite jealous after your display.";
 
 to say RabbitSex6:
 	say "     You eye a pretty bunny among the crowd, she looks down a bit sheepishly when you make eye contact. You stride over, past a few jealous looking pack mates. Pushing out a hip to look extra seductive you ask the cute, white-furred bunny if she's interested in some one-on-one action between you two. She smiles broadly at your proposal and nearly jumps into your arms. You catch the excited jumper and give her a warm kiss to start things off. Your lips brush together, then interlock while tongues dance with each other in their own intimate way. Her larger front teeth nibble eagerly at your lips while her hands reach around to squeeze at your butt. You return her caresses and reach around her to fold an arm around her neck while another plays with her squeezable breasts.";
@@ -385,9 +361,9 @@ to say RabbitSex6:
 	WaitLineBreak;
 	say "     The smooth, wet muscle glides down your lower lips before diving in. Around the same time, your pack mate, who's quite literally kissing your ass, takes it a step further, and she too dives in, tongue and furry muzzle first. Her wet tongue makes contact with your backdoor, drawing a low moan from you at the sensitivity. The bunny girls fervently eat out both of your holes, making low slurping and licking sounds and humming in delight as they delve deep into your sensitive depths. You grip at the back of both of their heads, caressing long, furry ears while the girls work your lower body over, sending jolts of pleasure through you and causing you to arch back and moan fervently.";
 	say "     Tongues lap in and out of your quivering pussy and clenching ass, your entire crotch soon soaked in eager bunny saliva. Soft paws grip at your fur, slide up your thighs and squeeze your ass softly while your mates eat. You don't last much longer. You finally fully throw your head back, slapping your own rabbit ears behind you as your moan grows into a shriek of pleasure. Your bunny girls only grow more eager as you cum, humming into your crotch and struggling to keep up with the flow of fem cum pouring out of your spasming cunt. The rabbit eating your crotch out from the front is enjoying the majority of your sweet cum, while your mate from behind licks between your thighs, tasting your run-off cum that she savors against her tongue before delving back in your ass, bringing you to another quick orgasm near the end of your first.";
-	CreatureSexAftermath "Anthro Rabbit" receives "OralPussy" from "Player";
 	WaitLineBreak;
 	say "     Your pack mates grip at your limp body, a bit numb from your intense orgasm. They lead you down to the ground gently, laying you there and each giving your cheek a kiss before they curl up next to you. 'Wow... you taste amazing, easily the tastiest pack girl I've ever tried.' She finishes licking her lips. The other rabbit cuddled to your side nods hastily in agreement, a light flush appearing beneath her fur. You smile at them and hold them close to you in your arms. They giggle and excitedly kiss at your exposed fur as the three of you settle in for a cuddly nap.";
+	CreatureSexAftermath "Anthro Rabbit" receives "OralPussy" from "Player";
 
 to say RabbitSex7:
 	say "     You look among the crowd of rabbits, spotting quite a few studs among the adorable rabbit-like faces. You call a particularly handsome one over, beckoning him with a hand and a wink. An eager smile greets you back and the rabbit boy hops over to you. You move seductively over to him, meeting halfway. Sliding up next to him you place a gentle palm on his furry shoulder, you smile knowingly at him asking if he's up for a little breeding. He gives you a wide smile, revealing his big front pearly whites. 'You betcha, stranger!' he chirps, moving in to grip your hips. Your hands fall to his shoulders and you give a wet smooch on his cheek before you pull away, tearing off yours and his gear, tossing it nearby.";
@@ -395,9 +371,9 @@ to say RabbitSex7:
 	WaitLineBreak;
 	say "     You turn to glare back at your bunny lover but just as you do he plunges in your cunt, shoving every inch in, in one go. You cry out, along with his groans you two moan out your sex melody as he holds himself fully embedded inside you. It's a bit hard to keep your balance on your hands and knees after that, more so when your rabbit stud starts to move inside you. He saws his length out of you before pushing back in, slowly repeating and gaining speed as he goes. His paws are all along your ass, holding on while his small furry fingers sink into your body. It's after his first few dozen thrusts that he starts to hammer into you proper, like the breeder the nanobots made him.";
 	say "     You turn into a pile of moans and cries of pleasure, only able to thrust your hips back at him as his powerful breeding muscles propel him into you. Your fingers dig into the ground and your eyes roll back as a mini orgasm takes you. That brings a groan from your rabbit stud as you tighten around his member. And soon after an affectionate slap on the backside, followed up by your rabbit boy speeding up to a truly impressive pace. He jumps into you at a breakneck speed, his hips slap off your jiggling ass and his balls graze your clit with every collision. After a good few dozen times you finally fully climax, cumming around his member and starting to see stars.";
-	CreatureSexAftermath "Player" receives "PussyFuck" from "Anthro Rabbit";
 	WaitLineBreak;
 	say "     You collapse to the ground fully now, only somewhat held up by your lover's soft paws. He joins you shortly, grunting and bringing you to another small orgasm as his virile rabbit seed splashes into your cunt. The torrent of cum floods your body and your womb, trying to make its mark on your eager body. He continues cumming until after the tenth jet of cum his thrusts at last slow. His paws squeeze your ass and he pushes in and out of you gently, teasing your overly sensitive body before fully pulling out. This leads a thick trail of seed to spill out of your gaped cunt, slowly closing up while the rabbit appreciates his handiwork. You hear him breathe heavily and sigh. 'Dang. Glad I could help, beautiful,' he finishes, patting your ass one last time and leaving you to yourself, properly bred now.";
+	CreatureSexAftermath "Player" receives "PussyFuck" from "Anthro Rabbit";
 
 to say JockRabbitSexMenu:
 	now sextablerun is 0;
@@ -408,23 +384,21 @@ to say JockRabbitSexMenu:
 		now title entry is "Fuck one of the rabbits anally";
 		now sortorder entry is 1;
 		now description entry is "Have one of the bunnies ride your cock";
+		[]
+		choose a blank row in table of fucking options;
+		now title entry is "Choose a rabbit girl to fuck";
+		now sortorder entry is 3;
+		now description entry is "Pick out the cutest rabbit you can find and fuck her pussy";
+		[]
+		choose a blank row in table of fucking options;
+		now title entry is "Get worshiped as a jock bunny by the girls";
+		now sortorder entry is 4;
+		now description entry is "The bunnies are already impressed by your size, now show them how impressive you really are";
 	[]
 	choose a blank row in table of fucking options;
 	now title entry is "Get double-teamed anally and orally";
 	now sortorder entry is 2;
 	now description entry is "Offer your ass and your mouth to two of the rabbits";
-	[]
-	if Player is male:
-		choose a blank row in table of fucking options;
-		now title entry is "Choose a rabbit girl to fuck";
-		now sortorder entry is 3;
-		now description entry is "Pick out the cutest rabbit you can find and fuck her pussy";
-	[]
-	if Player is male:
-		choose a blank row in table of fucking options;
-		now title entry is "Get worshiped as a jock bunny by the girls";
-		now sortorder entry is 4;
-		now description entry is "The bunnies are already impressed by your size, now show them how impressive you really are";
 	[]
 	Sort the table of fucking options in sortorder order;
 	repeat with y running from 1 to number of filled rows in table of fucking options:
@@ -439,6 +413,7 @@ to say JockRabbitSexMenu:
 			choose row calcnumber in table of fucking options;
 			say "[title entry]: [description entry]?";
 			if Player consents:
+				LineBreak;
 				now sextablerun is 1;
 				if title entry is:
 					-- "Fuck one of the rabbits anally":
@@ -450,6 +425,7 @@ to say JockRabbitSexMenu:
 					-- "Get worshiped as a jock bunny by the girls":
 						say "[JockRabbitSex4]";
 		else if calcnumber is 0:
+			LineBreak;
 			now sextablerun is 1;
 			say "     You shake your head and tell the rabbit that you'd rather not. It gives a rather sad look in your direction but respects your decision before hurrying off with its fellow bunnies. No doubt to find someone else or to have private time with its friends.";
 		else:
@@ -463,9 +439,9 @@ to say JockRabbitSex1: [fuck rabbit dude in the ass]
 	WaitLineBreak;
 	say "     With a swift thrust you push your cock into the rabbit's tight hole, causing the male to let out a loud moan as your length goes deeper and deeper into him. Once you're fully hilted you take a moment to appreciate how into your partner is before you quickly pull out and slam back in, making him yelp as you rub against all the right nerves. Taking that as a voice of consent, you begin to fuck him rapidly, driving your dick in and out as fast as you can, your balls slapping loudly against his cheeks. By now the bunny's own length is rock hard and leaking precum prominently, showing you how much he is enjoying it.";
 	say "     Looking around once more, you see that the other rabbits are nearing their own orgasms, as told by the [']eeps['] and shouts as well as the cum everywhere. This spurs you on to finish, so you speed up your thrusts, practically bouncing the bunny up and down your cock, his head thrown back in complete pleasure. However, it appears before you can get to your climax your partner does as you feel his hole clench around your dick and see him spurt all over himself. The tightness of the rabbit's ass on your length ends up being the end for you as you let out a shout of pleasure and slam in one last time, spilling your seed into him.";
-	CreatureSexAftermath "Anthro Rabbit" receives "AssFuck" from "Player";
 	WaitLineBreak;
 	say "     As you help the rabbit off your cock and onto the ground he appears to change a bit. He grows a little bit taller and muscular, becoming more like you than his friends. This appears to set off his fellow bunnies who look really excited at this change and surround him in awe. You back away, lest you get swept up into it and start cleaning yourself up a bit. As you do this you notice they've appeared to have started another orgy, which prompts you to chuckle and simply walk away, not wanting to participate again.";
+	CreatureSexAftermath "Anthro Rabbit" receives "AssFuck" from "Player";
 
 to say JockRabbitSex2: [spitroast anal/oral on the player]
 	say "     Having a few seconds to think about what you want to do, you quickly come to a conclusion. You tell the rabbit in front of you what you wish to do, causing their eyes to widen and then for them to dash over to the group of bunnies. A little bit later they drag over two males who are looking at you with excited looks on their faces, clearly happy about what they're about to get to do. Figuring you should get to it, you divest yourself of your clothes and kneel down on all fours, in front of one of them, bringing you face first with his furry balls and sheath. Inhaling, the musky smell causes you to groan a bit as you decide to get started.";
@@ -486,9 +462,9 @@ to say JockRabbitSex3: [fuck a rabbit girl]
 	WaitLineBreak;
 	say "     You push forward, piercing the bunny girl's quivering body. She lets out a squeal of delight and the other bunnies watching 'aww' at the sight of you taking one of their pack. Keeping a firm grip on the bunny girl, you hilt yourself in her, only to then withdraw before slamming back into her sexy, furry form. You look over and a few of the other rabbits have begun kissing and humping at each other, clearly aroused by the mating in their midst. Grinding your hips into hers, you hit all of the little weak points in her gripping pussy. Turned into a puddle of moans and ecstasy your rabbit girl grips tightly around your furry neck, her legs lock behind your waist as her whole body tenses.";
 	say "     Then, a loud moan erupts from her pretty lips. She clenches around your breed-machine, her large ears are thrown back along with her head. And for your part, you're gripping her plush ass with both paws while you hammer yourself through her orgasm. Around you, you hear the sounds of muffled grunts and moans. Seems the other rabbits have all but dropped pretenses of foreplay and have just started screwing like only rabbits know how to screw. Brought to your own orgasm you hold yourself deep inside the cute rabbit girl on your jock and shoot your virile load into her clenching womb. Seeming to bring her to a second and consecutive third climax herself. She twists and turns in your strong arms as you hold tightly onto her form, slowly being filled out with jets of your bunny spunk.";
-	CreatureSexAftermath "Anthro Rabbit" receives "PussyFuck" from "Player";
 	WaitLineBreak;
 	say "     When the orgasmic bliss fades your bunny girl slumps in your arms, her tongue lolled out a bit comically. You pull your member from her fucked-out quim, it's covered in both your mixed juices. And as you withdraw you take a moment to appreciate the sight of her ecstasy ridden body tremble in pleasure and ooze your seed from her stretched opening. You eventually set her gently down amongst a few of the other spent rabbits. The lot of them begin clambering around the pretty bunny, caressing her tender body and gently brushing against her sex, dripping with your seed. You then give a good stretch and move to sit down against a nearby tree to enjoy your afterglow as the rest of the rabbits enjoy their own sex. After a while you move on, horny rabbits brushing at your ankles as you leave.";
+	CreatureSexAftermath "Anthro Rabbit" receives "PussyFuck" from "Player";
 
 to say JockRabbitSex4: [harem fantasy with bunny girls]
 	say "     You look over the group of rabbits surrounding you, many of which are simply staring up at you in awe. Clearly they haven't come across many bunnies of your size before. A few of the females have their mouths open in wonderment, showing off their cute, rabbit-like buck teeth to you. You slowly stride up to a particular cluster of rabbit girls. They are snickering quietly to each other and gently groping one another's breasts as they watch you. When you reach them, they look eagerly to you, quite pleased you've blessed them with your presence. You smile down at the cute bunnies, flashing them a clearly suggestive smile as you reveal your growing manhood to them. There's a collective 'awe' from the group of six or so bunnies, and a few more gasps from the others behind you, but for now your focus is on this group of horny rabbits.";
@@ -496,14 +472,14 @@ to say JockRabbitSex4: [harem fantasy with bunny girls]
 	WaitLineBreak;
 	say "     After a minute of the girls worshiping your cock, the cute bunny who's suckling your tip grows bolder and shifts to take your whole member in her mouth. She slowly slides down, inch by inch of your length feeding into her mouth while her big front teeth push pleasantly down on top of your member. Once she reaches the back of her throat you can see her gagging and gurgling around your cock, desperate to take more. She pulls back to suckle your tip again only to then shove your length back into her sexy maw. She continues sucking while her sisters caress your body and kiss at your thighs, looking on a bit jealously at the one sucking you off. The stimulation is certainly affecting you, grunting and pushing your hips forward while your own paws rest on two nearby rabbits.";
 	say "     You're brought to an intense climax from the girl sucking your jock, pushing as far back into her throat as you can and releasing your load into her heavenly mouth. A load of your bunny jock spunk slams into the back of her throat. The bunny around your member moans in pleasure and fingers herself as you fill her mouth out, spilling seed around her lips as she struggles to keep it all down. You groan out in pleasure as the remainder of your seed is gingerly sucked out and played with on the tongue of the rabbit girl staring up at you. She withdraws slowly, opening her mouth she shows her cum stained mouth proudly, swirling the jizz around her mouth before swallowing loudly and showing you her clean mouth after.";
-	CreatureSexAftermath "Anthro Rabbit" receives "OralCock" from "Player";
 	WaitLineBreak;
 	say "     You pet your cute bunny cock sucker affectionately as thanks, she's breathing heavily with her tongue sticking out but coos when you stroke her head. Your flaccid, dripping member is then grabbed by another eager bunny who laps over the sticky pole, cleaning you with a spit polish. It's not long until you're coaxed onto your back by soft bunny paws and straddled by another bunny girl. This one is a bit plumper in the hips than the others but no less adorable. She aligns her engorged and excited quim to your towering pillar and drops down. She lets out a loud moan of pleasure as her hands fall to your chest. You grip her plump, furry hips tightly as she begins to ride you. Your vision is soon crowded, as a furry, white butt and dripping womanhood blocks your sight.";
 	say "     You move your hands up and grip the lady rabbit above you by her thighs and pull her down on your face. Diving muzzle first into her quim as you're ridden and surrounded by horny rabbit women. You play skillfully in the vagina above you with quick tongue flicks, quickly bringing it gushing into your mouth from climax. And the bunny riding you soon clamps down around your member in intense throws of orgasms. Both are soon replaced with other lovely lady bunnies, all very eager for your attention and more obviously, your cock. You cum when the third bunny girl climaxes, squealing and cooing on your member as you fill her with load after load of potent rabbit jism. Fem cum covers your face and you squeeze their furry bodies as anchors as you rut into your pack sluts, again and again.";
-	CreatureSexAftermath "Player" receives "OralPussy" from "Anthro Rabbit";
-	CreatureSexAftermath "Anthro Rabbit" receives "PussyFuck" from "Player";
 	WaitLineBreak;
 	say "     You're not sure how many times you've come exactly, but you know it's at least been a dozen; every bunny needed at least one stuffing, after all. And as the last moaning rabbit falls from your exhausted flaccid member she collapses onto your chest, nuzzling into your furry abs adoringly. Others follow her, nuzzling up to your sides as you all cuddle in for a rest of the aftermath orgasmic bliss. And you of course enjoy the sight of your work, in the form of a dozen rabbit girls dripping your potent seed from their satisfied cunts. You sigh and relax back in satisfaction, pulling two bunnies close to you, to which they coo in delight. Laying back and resting your eyes you enjoy some personal rest with your mates, the smell of rabbit rutting fresh in the air as you all lay beneath the sky together.";
+	CreatureSexAftermath "Anthro Rabbit" receives "OralCock" from "Player";
+	CreatureSexAftermath "Player" receives "OralPussy" from "Anthro Rabbit";
+	CreatureSexAftermath "Anthro Rabbit" receives "PussyFuck" from "Player";
 
 Section 5 - Heat Table
 
@@ -516,7 +492,7 @@ When Play begins:
 	now infect Name entry is "AnthroRabbit";
 	now heat cycle entry is 3;
 	now heat duration entry is 3;
-	now trigger text entry is "[one of]You feel yourself grow weak at the knees and your crotch burns fire hot. You have to hold yourself against a nearby boulder to keep from falling. And keep your paws from shoving themselves into your cunt. Clearly you're in some kind of rabbit induced heat.[or]There's a shudder in your cunt as you walk, everything grows sensitive and your mouth starts to water a bit, as if it craves something. You rub your furry thighs together attempting to snuff out the overwhelming need but only causing it to flare up further. You only start to crave more, you crave a lover, a mate, someone to fill you with their seed or finger you till you pass out.[or]As you round a corner you have to catch yourself from falling, your heat flares up with a passion all of a sudden. You eye every even vaguely creature shaped object as something to grind against, if only to relieve some of this intense warmth rising from you.[or]Your long ears perk up and your fur stands straight up. Your paws suddenly fly to your groin and you begin to rub and grab at your sex, desperate all of a sudden for touch. You could really use a breeding stud right now.[or]Your heat surges up your thighs and through your body, causing a brief lapse in your walking stride but you're able to recover. Your ears twitch slightly and your button nose wiggles, sniffling in sensitivity from the intense throws of heat.[at random]";
+	now trigger text entry is "[one of]You feel yourself grow weak at the knees and your crotch burns fire hot. You have to hold yourself against a nearby boulder to keep from falling... and keep your paws from shoving themselves into your cunt. Clearly you're in some kind of rabbit-induced heat[or]There's a shudder in your cunt as you walk, everything grows sensitive and your mouth starts to water a bit, as if it craves something. You rub your furry thighs together attempting to snuff out the overwhelming need but only causing it to flare up further. You only start to crave more, you crave a lover, a mate, someone to fill you with their seed or finger you till you pass out[or]As you round a corner you have to catch yourself from falling; your heat flares up with a passion all of a sudden. You eye every even vaguely creature-shaped object as something to grind against, if only to relieve some of this intense warmth rising from you[or]Your long ears perk up and your fur stands straight up. Your paws suddenly fly to your groin and you begin to rub and grab at your sex, desperate all of a sudden for touch. You could really use a breeding stud right now[or]Your heat surges up your thighs and through your body, causing a brief lapse in your walking stride, but you're able to recover. Your ears twitch slightly and your button nose wiggles, sniffling in sensitivity from the intense throes of heat[at random].";
 	now description text entry is "";
 	now heat start entry is "[AnthroRabbitHeatStart]";
 	now heat end entry is "[AnthroRabbitHeatEnd]";
@@ -530,14 +506,16 @@ to say AnthroRabbitHeatStart:
 		raise Player Libido by 5;
 
 to say AnthroRabbitHeatEnd:
-	say "You go a bit light headed briefly, grabbing ahold of your throbbing cranium and after a moment the haze fades. You notice almost immediately your senses have cleared and the heat radiating through your body and groin dissipates.";
+	say "You go a bit light-headed briefly, grabbing ahold of your throbbing cranium, and after a moment the haze fades. You notice almost immediately your senses have cleared and the heat radiating through your body and groin dissipates.";
 	now Libido of Player is ( Libido of Player * 9 ) / 10;
 
 Section 6 - Loot Table
 
+LastLuckyFootTurn is a number that varies.
+
 Table of Game Objects (continued)
 name	desc	weight	object
-"Anthro Rabbit fur"	"A tuft of short, velvety fur that looks like it has been pulled out of the coat of a anthro rabbit. It's short and has a slight sheen to it."	1	Anthro Rabbit fur
+"Anthro Rabbit fur"	"A tuft of short, velvety fur that looks like it has been pulled out of the coat of an anthro rabbit. It's short and has a slight sheen to it."	1	Anthro Rabbit fur
 
 Anthro Rabbit fur is a grab object.
 Usedesc of Anthro Rabbit fur is "[Anthro Rabbit fur use]".
@@ -546,5 +524,23 @@ Scent of Anthro Rabbit fur is "The fur has a pleasing, not too strong, animal-li
 to say Anthro Rabbit fur use:
 	say "     Holding the tuft of fur between your fingers, you stroke over it, delighted in its velvety texture. Strangely, the hair disintegrates after a while, becoming a cloud of fine particles that are absorbed into your skin.";
 	Infect "Anthro Rabbit";
+
+Table of Game Objects (continued)
+name	desc	weight	object
+"lucky rabbit foot"	"A trinket in the form of a rabbit's foot that usually brings good luck. The fur appears rather soft to touch."	0	lucky rabbit foot
+
+lucky rabbit foot is a grab object.
+lucky rabbit foot is not temporary.
+Usedesc of lucky rabbit foot is "[lucky rabbit foot use]".
+Scent of lucky rabbit foot is "What are you expecting it to smell like? Okay, maybe a little bit of musk if anything, but that's it.".
+
+to say lucky rabbit foot use:
+	if LastLuckyFootTurn - turns < 5:
+		say "     Shooting a look towards the soft charm the rabbits gifted you, you shake your head and decide not to use it in fear of possibly ruining the novelty of the trinket. Perhaps you should wait a bit.";
+	else:
+		say "     Taking the soft, furry trinket into your hands you rub it on your cheek, enjoying the velvety sensation that brushes your face, letting your worries fade away.";
+		SanBoost 15;
+		infect "Anthro Rabbit";
+		now LastLuckyFootTurn is turns;
 
 Anthro Rabbit ends here.

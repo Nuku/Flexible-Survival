@@ -38,10 +38,11 @@ to connect Jadako's Room:
 
 An everyturn rule:
 	if CampusCoupleRelationship > 0:
-		if daytimer is day and (Jadako is in Jadako's Room or Joseph is in Jadako's Room):
-			now Jadako is nowhere;
-			now Joseph is nowhere;
-		else if daytimer is night and (Jadako is not in Jadako's Room or Joseph is not in Jadako's Room):
+		if daytimer is day:
+			if Jadako is in Jadako's Room or Joseph is in Jadako's Room:
+				now Jadako is nowhere;
+				now Joseph is nowhere;
+		else if Jadako is not in Jadako's Room or Joseph is not in Jadako's Room:
 			move Jadako to Jadako's Room;
 			move Joseph to Jadako's Room;
 

@@ -150,10 +150,10 @@ to say GorillaLaundryService2:
 		say "     You open your mouth and slip your tongue inside your partner's foreskin, before sucking the rest of the glans in. From the gasp that he makes, you know that he loved the gesture. After having pulled back the foreskin, you roll your tongue around the sensitive flesh. The gorilla puts his hand on your hair; not to force you to go faster or deeper, but to make you relent. 'Oh, fuck, that tongue! Slow down, champ.'";
 		say "     In order to give the gorilla some pause, you run your tongue over the shaft, basking in the strong male scent when you press your face against his crotch. After this, you resume your fellatio. You keep assaulting the gorilla's glans with your tongue, amusing yourself when you feel his thick legs jiggle on each side of your head. You occasionally take the ape's dick deep in your mouth, going as far as you can, taking a whiff of the football player's musk, before pulling out.";
 		say "     Suddenly, his breath accelerates, and you feel his body tense up. 'Oh shit, here it comes! Here it... Nnng!' Before you can react, the pair of thick, furry legs press on each side of your [FaceSpeciesName of Player in lower case] face, and the big jock seems to attempt to crush you against his crotch. Your nose and windpipe blocked by the massive slab of gorilla meat, your brain overwhelmed with sweaty musk, you tremble and cum hard, while he sends several ropes of cum down your gullet.";
-		CreatureSexAftermath "Player" receives "OralCock" from "Football Gorilla Male";
 		WaitLineBreak;
 		say "     After his powerful orgasm, the ape's muscles seem to turn into jelly, and you immediately pull away, gasping for air. 'D-Damn. Between you and my friend, you're definitely the best sucker,' he says. After the both of you recover, the football player goes to fetch a can of soda and throws it in your direction. 'As thanks.' You catch it mid-flight, making him grin. 'Nice catch. Once you build some strength, you should talk to the team captain about some promotion. You'd make a good player.' On these words, the gorilla heads for the exit. 'Good luck with the rest of the laundry,' he wishes you.";
 		say "     You say goodbye too, and go back to your duty. Meeting your new friend has put you in a good mood, and you manage to handle the rest of the clothes way before the team comes back from training. You are even able to take some time to sit on a bench and take some whiffs at the thong that he gave you. It's not the same smell as the other time. Is it his hyena friend's? Your thoughts are interrupted by the hubbub of the team and its groupie escort. After another round of sweaty clothes collection, Roman tells you that you are done for today and free to go.";
+		CreatureSexAftermath "Player" receives "OralCock" from "Football Gorilla Male";
 		ItemGain soda by 1;
 		increase GorillasRep by 2;
 		now laundryProgress is 2;
@@ -437,10 +437,10 @@ to say FootballMatch:
 		WaitLineBreak;
 		say "     You suck on your prize like a lollipop, bobbing up and down as far you can on the turgescent member, and you are rewarded by the grunts and dog-like whines of your opponent. He suddenly decides to return the favor, and [if Player is female]pushes his muzzle against your pussy, licking it with his large canine tongue[else]closes his muzzle around your [cock size desc of Player] shaft, rolling his fat canine tongue around your [Cock of Player] shaft[end if].";
 		say "     Not to be outdone, you give the wolf's knot a hearty stroking, which makes him jolt in surprise and makes him cum quickly. The wolf pumps his hips in the air several times, as he launches rope after rope of cum into your mouth. Once he is done, you take your time [if Player is female]grinding your pussy against his submissive face[else]pumping your cock in and out of his submissive mouth[end if], before reaching your own climax.";
-		CreatureSexAftermath "Player" receives "OralCock" from "Football Wolfman";
-		CreatureSexAftermath "Football Wolfman" receives "Oral[if Player is female]Pussy[else]Cock[end if]" from "Player";
 		WaitLineBreak;
 		say "     After taking a minute to rest, you stand back up, and help your opponent do the same. Fair-play, he congratulates you, while licking your sexual fluids from his chops. Turning around, you notice that everyone, from the other players to the crowd, have been watching the two of you; some had already begun to masturbate from your little show. Blushing, you take your position, as the referee announces that your team goes on offense, thanks to your interception.";
+		CreatureSexAftermath "Player" receives "OralCock" from "Football Wolfman";
+		CreatureSexAftermath "Football Wolfman" receives "Oral[if Player is female]Pussy[else]Cock[end if]" from "Player";
 		LibidoLoss 20;
 		PlayerEat 10;
 		PlayerDrink 5;
@@ -471,11 +471,11 @@ to say FootballMatch:
 	else:
 		say "     The impact makes you fall on the ground with the ball. The safety is almost instantly on you, and you feel his pointy canine dick push into your [if Player is female]pussy[else]ass[end if]. You open your mouth, but the cornerback, who was standing behind you, kneels down, tilts your head up, and buries his own maleness down your [FaceSpeciesName of Player in lower case] throat.";
 		say "     The two wolves spitroast you, and they do not miss the chance to play with your nipples [if Player is male]and your cock [end if]while you are lying between them and unable to do anything about it. On each other's signal, they force their knots inside of you, and you moan loudly around the one blocking your mouth. The two lupines cum shortly afterwards, and their knots force you to take every single drop of their load inside your body.";
-		CreatureSexAftermath "Player" receives "[if Player is female]Pussy[else]Ass[end if]Fuck" from "Football Wolfman";
-		CreatureSexAftermath "Player" receives "OralCock" from "Football Wolfman";
 		WaitLineBreak;
 		say "     Their lust satiated, they stand there while their knots half-deflate, and pull out. You yelp at the feeling of having the thick knots stretch you once more, and start protesting, as they did not even have the fairness to make you cum too.";
 		say "     But the wolves are already jogging away from you on their furry legs. Grunting, you stand up too with the help of your teammates. 'Acting as jerks, as usual,' you can hear one of them lament.";
+		CreatureSexAftermath "Player" receives "[if Player is female]Pussy[else]Ass[end if]Fuck" from "Football Wolfman";
+		CreatureSexAftermath "Player" receives "OralCock" from "Football Wolfman";
 		LibidoBoost 50;
 		PlayerEat 5;
 		PlayerDrink 5;

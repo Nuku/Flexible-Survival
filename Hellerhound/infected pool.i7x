@@ -26,8 +26,7 @@ to say ResolveEvent Pure Pool:
 		now PurePoolSeen is true;
 		now Resolution of Pure Pool is 1; [saw the pool]
 	else if PurePoolPolluted is false:
-		say "     Exploring the park, you hear an echoing scream. It sounds like a wyvern, but what are those doing in the park?";
-		say "     Do you check out the situation?";
+		say "     Exploring the park, you hear an echoing scream. It sounds like a wyvern, but what are those doing in the park? Do you check out the situation?";
 		if Player consents:
 			LineBreak;
 			say "     You follow the sound to the clear pool you found before. However, two wyverns are fighting. It is pretty obvious from the dialogue that they want to infect the pool, but cannot agree on who will do it first.";

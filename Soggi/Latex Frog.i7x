@@ -21,9 +21,6 @@ to say Latex Frog Wins:
 	WaitLineBreak;
 	say "     Seemingly satisfied, the frog leaves you wrapped snugly in your latex cocoon with your own sex juices inside with you. The latex continues to pulsate and massage you, occasionally teasing you toward a second orgasm before relaxing again. After an hour, the latex has absorbed your [if Player is male]seed[else if Player is female]wet girlcum[else if Player is female and Nipple Count of Player > 1]milk[else]sweat[end if] and releases you. In your exhausted state you watch the strange latex form hop off down into the nearby sewer drain, just starting to take the form of another latex frog...";
 
-to say Latex Frog Loses:
-	say "     [if fightoutcome is 11]As the latex frog becomes more and more aroused it seems increasingly confused, unsure whether to attack or submit to your advances. Flustered, the frog escapes quickly[else]Striking a final decisive blow to the latex frog, the feral creature quickly deforms and escapes[end if] down the nearby sewer drain. You consider following, but decide to move on for now.";
-
 to say Latex Frog Desc:
 	say "     As you walk down the street, you see a sudden movement out of a sewer drain right next to you. A shiny dark green form leaps out from the drain, and turns to face you with interest, before letting out a loud *ribbit*. The latex frog with a wide mouth, eyes poking out above its head, and powerful hind legs looks ready to pounce on you. Its skin appears incredibly shiny and slippery, a thin layer of moisture coating it.";
 	say "     Suddenly the frog's thick tongue shoots out toward you with blinding speed! By luck it misses you by an inch, before zipping back into the frog's mouth.";
@@ -68,18 +65,18 @@ When Play begins:
 	now enemy Name entry is ""; [ Specific name of unique enemy. ]
 	now enemy type entry is 0; [ 0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters. ]
 	now attack entry is "The [one of]Latex Frog[or]sleek rubbery amphibian[or]slippery web-footed creature[or]frog[at random] [one of]flicks its tongue out with incredible speed, hitting you in the chest and leaving a bruise![or]jumps on you, trying to wrap its latex form around your body. After a difficult struggle you manage to break free.[or]flicks its tongue out and wraps it around your legs, causing you to trip and fall![or]kicks at you with its powerful hind legs.[at random]";
-	now defeated entry is "[Latex Frog Loses]";
+	now defeated entry is "     [if fightoutcome is 11]As the latex frog becomes more and more aroused it seems increasingly confused, unsure whether to attack or submit to your advances. Flustered, the frog escapes quickly[else]Striking a final decisive blow to the latex frog, the feral creature quickly deforms and escapes[end if] down the nearby sewer drain. You consider following, but decide to move on for now.[line break]";
 	now victory entry is "[Latex Frog Wins]";
 	now desc entry is "[Latex Frog Desc]";
-	now face entry is "changed to a sleek black wide mouthed, large-eyed latex frog head";
-	now body entry is "shiny latex with webbed hands and toes.";
-	now skin entry is "slippery dark green latex";
+	now face entry is "changed to a sleek, black, wide-mouthed, large-eyed latex frog head";
+	now body entry is "shiny latex with webbed hands and toes";
+	now skin entry is "slippery, dark green latex";
 	now tail entry is "";
-	now cock entry is "";
-	now face change entry is "your mouth stretches to an incredible wide shape, and your eyes shift slightly further apart and almost poke out from your head, like a frog's";
+	now cock entry is "[one of]latex[or]smooth[at random]";
+	now face change entry is "your mouth stretches to an incredibly wide shape, and your eyes shift slightly further apart and almost poke out from your head, like a frog's";
 	now body change entry is "your hands and feet grow webbing between your digits";
-	now skin change entry is "it shifts to a deep shiny green latex, some added moisture keeping your skin unnaturally slippery";
-	now ass change entry is "it shrinks, making room for your swelling powerful thighs";
+	now skin change entry is "it shifts to a deep, shiny green latex, some added moisture keeping your skin unnaturally slippery";
+	now ass change entry is "it shrinks, making room for your swelling, powerful thighs";
 	now cock change entry is "your shaft shrinks until it is nestled completely inside your cloaca";
  	[ now Legs Change entry is "your thighs swell with powerful muscles, each almost as wide as your torso"; ]
 	[ now Cunt Change entry is "it takes on a more rounded shape, perfect for laying soft tadpole eggs"; ]

@@ -168,10 +168,10 @@ to say hermaphrodite latex vixen victory:
 			WaitLineBreak;
 			say "     As she peaks her gigantic teats start spraying their bounty, causing hot oily lubricant to rain down on you. Some of the lube drips down into your mouth; the flavor is quite intense, tasting like a very spicy cinnamon candy. You can't quite remember if you liked cinnamon before the world ended, but licking your lips you realize that you sure like it now!";
 			say "     She brings one leg over your body and spins around until you are ass to ass. Every time her knot pulls at your stretched hole a bolt of pleasure runs up your spine. You lay there for over half an hour, as she slowly stretches your uterus with her seed. You feel every single squirt of hot fox cum, keeping you achingly close to orgasm the entire time. Eventually her swollen knot starts to reduce in size and with a loud POP it falls out of your pussy. Torrents of hot fox cum quickly follow, puddling on the ground below you. She squeezes one of your ass cheeks and lightly kisses the other one. She rises to her feet and starts to walk away.";
-			CreatureSexAftermath "Player" receives "PussyFuck" from "Latex Vixen Herm";
 			WaitLineBreak;
 			say "     Looking back at you, she smiles and says, 'That was fun, let's do it again sometime.'";
 			say "     As she leaves, you roll onto your back and start to masturbate furiously, the oily aphrodisiac covering your body keeping you incredibly horny, even after you force orgasm after orgasm. Eventually the raw animal lust subsides and you manage to get up and leave the scene of your latest degradation.";
+			CreatureSexAftermath "Player" receives "PussyFuck" from "Latex Vixen Herm";
 		else:
 			LineBreak;
 			say "     'Excellent!' she squeals. 'I always prefer the back door!'";
