@@ -113,20 +113,20 @@ To say Mutant Centaur Loses:
 				say "     The cock doesn't go in, no matter how hard you try, so you bend over and start to lick it eagerly. It spasms more precum in response, and your mouth becomes hot and gooey in an instant.";
 				say "     You open your mouth wide and fit as much of it in as you can, which means only the soft head. You start to lick it and suck at the hole, drinking in the juices, until it climaxes.";
 				say "     The spray of fluid begins slowly, but increases in flow rapidly until you cannot swallow it all, and it shoves your face back, and sprays of hot green cum soak your whole body in a few seconds.";
-				CreatureSexAftermath "Player" receives "OralCock" from "Mutant Centaur";
 				WaitLineBreak;
 				say "     After cleaning up the centaur as well as yourself, you go on your way, with an apple as payment.";
+				CreatureSexAftermath "Player" receives "OralCock" from "Mutant Centaur";
 				ItemGain fresh apple by 1;
 				lower Player Libido by 20;
 			else: [cock will fit]
 				say "     After pulling at it for a moment, the head goes in. Your walls contract, bringing more of it inside you, and you closer to the monstrous testicles[if anallevel > 1]. All of a sudden, the two tentacles that had been lying limp on the ground dart into your ass, causing you to gasp from addictive pleasure[end if].";
 				say "     At the noise, the centaur seems to wake up, and begins to bend its powerful muscles. You feel the giant cock pumping in and out of your cunt, soaking your insides in precum and bottoming out at each thrust.";
 				say "     You drift off into a haze of pleasure, filled with slapping noises of the centaur's balls. You come out of the haze into your orgasm, pleasure flooding your senses and hot cum flooding your insides, filling them until you look overdue for triplets. When your belly can stretch no more, cum sprays out of the tight seal between your lips and its shaft, covering what is in the way with green seed.";
+				WaitLineBreak;
+				say "     The centaur pulls out of you with a splotchy noise, green cum running like a small stream from your abused lips, and walks off, leaving you to clean up and be on your way, an apple or two in your bag.";
 				CreatureSexAftermath "Player" receives "PussyFuck" from "Mutant Centaur";
 				if anallevel > 1:
 					CreatureSexAftermath "Player" receives "AssDildoFuck" from "Mutant Centaur";
-				WaitLineBreak;
-				say "     The centaur pulls out of you with a splotchy noise, green cum running like a small stream from your abused lips, and walks off, leaving you to clean up and be on your way, an apple or two in your bag.";
 				ItemGain fresh apple by a random number between 1 and 2;
 		else if Player is kinky:
 			say "     The tentacles stir your interest even further, encouraging you to take the shaft and wiggling growths into your hands.";
@@ -212,13 +212,13 @@ When Play begins:
 	now victory entry is "[Mutant Centaur Wins]";
 	now desc entry is "     As you walk in the plain, a dust cloud becomes visible. You look at it with fear, and attempt to run, but fail to escape. As the dust cloud engulfs you and settles to the ground, it reveals an equine form with a powerful human torso. As it turns to slow down and stop in front of you, you catch a glimpse of a green thing under his belly, as it is very definitely a male. It seems you've encountered one of the tainted centaurs created by the one you released. The creature whinnies lustfully and makes a grab for you.[line break]"; [ Description of the creature when you encounter it.]
 	now face entry is "human, with horse ears"; [ Face description, format as "Your face is [Face of Player]." ]
-	now body entry is "that of a centaur, with a muscled, human upper torso. Your body has well-defined muscles, but they seem a little strange and don't quite move right. Your arms are strong and muscular, and roughly human in appearance as well. Your lower body is that of a horse, with a muscular equine form and slender legs leading to a set of bottle green hooves";
-	now skin entry is "human on your upper body and blending smoothly into black horsehair on your bottom half to cover your"; [ Skin Description, format as "Looking at yourself, your body is covered in [Skin of Player] skin." ]
-	now tail entry is "You have a green, flowing tail like a horse coming from just above your behind. It wriggles and squirms unlike a horsetail though, moving more like a tentacle.";
-	now cock entry is "[one of]green and equine[or]equine and tentacled[or]bumped and tentacled[or]bumped and equine[or]green and bump-covered[at random]";
+	now body entry is "that of a centaur, with a muscled, human upper torso. Your body has well-defined muscles, but they seem a little strange and don't quite move right. Your arms are strong and muscular, and roughly human in appearance as well. Your lower body is that of a horse, with a muscular equine form and slender legs leading to a set of bottle-green hooves";
+	now skin entry is "[if looknow is true]human skin on your upper body and blending smoothly into black horsehair on your bottom half to cover your[else]combination human and horsehair-covered[end if]"; [ Skin Description, format as "Looking at yourself, your body is covered in [Skin of Player] skin." ]
+	now tail entry is "You have a green, flowing tail like a horse coming from just above your behind. It wriggles and squirms unlike a horsetail, though, moving more like a tentacle.";
+	now cock entry is "[one of]green and equine[or]equine, tentacled[or]bumpy and tentacled[or]bumpy equine[or]green, bump-covered[at random]";
 	now face change entry is "your ears become longer and grow fur, changing shape to become like a horse's"; [ Face change text, format as "Your face feels funny as [face change entry]." ]
 	now body change entry is "your body grows muscled at the bottom, and your legs change into those of a horse. Your muscles grow and shift, moving into slightly different positions. Your breasts feel odd, and it seems like most of their girth is inside of you"; [ Body change text, format as "Your body feels funny as [body change entry]." ]
-	now skin change entry is "the skin below your abdomen grows black fur, melding smoothly into the human skin above"; [ Skin change text, format as "Your skin feels funny as [skin change entry]." ]
+	now skin change entry is "the area below your abdomen grows black fur, melding smoothly into the human skin above"; [ Skin change text, format as "Your skin feels funny as [skin change entry]." ]
 	now ass change entry is "a twitching quiver runs down your spine as it extends and grows a green horse's tail";
 	now cock change entry is "it spasms in orgasm, spraying out all its cum until dry as it shrinks and looks like it is dead, your balls shrunken and crinkling. They do not look like they were meant to be. Your cock becomes twisted and deformed as it's infested by the strange infection. It turns green and equine in shape with bumps covering it and tentacles growing out of two bulges along its sheath"; [ cock change text. format as "Your cock feels funny as (your text)." ]
 	now str entry is 22;

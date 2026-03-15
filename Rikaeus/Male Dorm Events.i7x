@@ -24,7 +24,7 @@ instead of going to Tenvale College Male Dorms while a random chance of 1 in 3 s
 				say "[MaleDormSlut2]"; [Leads to a repeat of scene one with Justin's name replaced in throughout the scene as well as a few sentences changed]
 		-- 5:
 			say "[FratPartyShameWalk]"; [Leads to a scene of the player seeing wasted/hungover students slowly head to their rooms]
-	AttemptToWait;
+	WaitLineBreak;
 	move player to Tenvale College Male Dorms;
 
 to say StudyingDormStudents:

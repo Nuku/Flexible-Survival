@@ -261,7 +261,7 @@ When Play begins:
 	now desc entry is "[felinegymnastdesc]";
 	now face entry is "very human, except for the furry pair of cat ears"; [ Face description, format as "Your face is [Face of Player]." ]
 	now body entry is "very thin, but with [one of]smooth[or]toned[or]sleek[at random] muscles. Your hands and feet, while retaining their human shape, now have retractable claws where your fingernails were"; [ Body description, format as "Your body is [Body of Player]." ]
-	now skin entry is "[one of]rich[or]dark[or]luxurious[at random] blue fur. It feels soft against your"; [ Skin. Format as "Looking at yourself, your body is covered in [Skin of Player] skin." ]
+	now skin entry is "[one of]rich[or]dark[or]luxurious[at random] blue[if looknow is true] fur. It feels soft against your[else]-furred[end if]"; [ Skin. Format as "Looking at yourself, your body is covered in [Skin of Player] skin." ]
 	now tail entry is "You have a long tail covered in a lovely shade of blue swaying behind you, helping you keep your balance."; [ Ass/Tail. Write as a full sentence (with period) or leave blank for none. ]
 	now cock entry is "[one of]light pink, feline[or]barbed, feline[or]cat-like[at random]"; [ Cock. Format as "You have a 'size' [Cock of Player] cock." ]
 	now face change entry is "it becomes thinner and much more womanly. Your scalp feels odd as two furry feline ears pop out of your head"; [ Face TF text. Format as "Your face tingles as [face change entry]." ]

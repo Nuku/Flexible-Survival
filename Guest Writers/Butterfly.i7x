@@ -46,7 +46,7 @@ When Play begins:
 	now cock entry is "ribbed"; [ Cock Description, format as you have a 'size' (your text) cock]
 	now face change entry is "it becomes more streamlined and two antennae poke out at the top of your head. Your eyes brighten into a [one of]brilliant[or]vibrant[or]vivid[at random] green"; [ Face change text, format as "Your face feels funny as [face change entry]." ]
 	now body change entry is "it becomes adapted for flight. Limbs narrow and become lean. Some large and colorful wings sprout out of your back. They aren't strong enough to allow you to fly, but with some effort you find you are able to hover without needing to walk"; [ Body change text, format as "Your body feels funny as [body change entry]." ]
-	now skin change entry is "your skin softens becoming velvet textured"; [ Skin change text, format as "Your skin feels funny as [skin change entry]." ]
+	now skin change entry is "it softens, becoming velvet-textured"; [ Skin change text, format as "Your skin feels funny as [skin change entry]." ]
 	now ass change entry is "it develops yellow and black stripes and pushes out into a large round abdomen"; [ Ass/tail change text, format as "Your ass feels funny as [ass change entry]." ]
 	now cock change entry is "it develops a ribbed texture"; [ cock change text. format as "Your cock feels funny as (your text)." ]
 	now str entry is 16;
@@ -675,11 +675,11 @@ name	desc	weight	object
 "racy lingerie"	"This set of crimson red lingerie is very racy. It includes a bustier, bra, panties and stockings with garters."	0	racy lingerie
 
 to say pristine negligee desc:
-	say "A long and silky garment made of sheer and semi-translucent fabric. [if lingerie store is unknown]Upon closer inspection you recognize a logo printed on the label to be that of a store you've passed on your travels. You wonder if you should pay the store a visit sometime? [end if]";
+	say "A long and silky garment made of sheer and semi-translucent fabric. [if lingerie store is unknown]Upon closer inspection you recognize a logo printed on the label to be that of a store you've passed on your travels. You wonder if you should pay the store a visit sometime?[end if]";
 	AddNavPoint Lingerie Store;
 
 to say damaged negligee desc:
-	say "A long and silky garment made of sheer and semi-translucent fabric. This one is damaged. [if lingerie store is unknown]Upon closer inspection you recognize a logo printed on the label to be that of a store you've passed on your travels. You wonder if you should pay the store a visit sometime? [end if]";
+	say "A long and silky garment made of sheer and semi-translucent fabric. This one is damaged. [if lingerie store is unknown]Upon closer inspection you recognize a logo printed on the label to be that of a store you've passed on your travels. You wonder if you should pay the store a visit sometime?[end if]";
 	AddNavPoint Lingerie Store;
 
 racy lingerie is a grab object. racy lingerie is equipment. It is not temporary.
@@ -816,7 +816,7 @@ to say butterfly grove scene:
 		ButterFlyChildBirth;
 		[now ButterflyProcreated is True;]
 		say "     You decide to head back to the library.";
-		AttemptToWait;
+		WaitLineBreak;
 		move player to Grey Abbey library;
 		follow the turnpass rule;
 		stop the action;
@@ -880,10 +880,10 @@ to say butterfly grove scene:
 				impregnatebutterfly;
 		else if Player_returned_negligee is False and Player is female:
 			say "     You fight at first, but you sense her heart isn't in it as she quickly submits, but instead of tears or anger she lies down on her left side and lifts her leg into the air giving you a clear view of the juices drooling out of her cunt and down her leg. 'Fuck me, master,' she says. 'I'm master's toy. Use me. Break me.' Seizing the leg held in front of you, you unzip and remove the boot and then remove her stocking peeling it off the smooth skin of her leg. Rolling her on to her tummy you take both her arms and tie them together behind her back with the stocking you removed. As she lifts her face off the ground her eyes find your naked crotch, legs spread to either side, sitting right in front of her. You reach down a hand and spread your lips apart as you survey the surroundings nonchalantly. As she hobbles forward without the use of her arms she plants her face into your groin and begins to service you, her antennae bouncing all the while. You grip deep in her blonde tresses and pull her head in firmly as you grind your [if Cunt Count of Player > 1]multiple [end if]damp cunt[sfn] against her face. Her prehensile tongue explores your insides reaching to places no cock has ever been. You feel yourself cum as she attempts to feed on your juices, but the volume is too great and you squirt your cum over her face. She splutters as some goes up her nose, but you're too preoccupied rifling through the contents of the black bag she'd been carrying.";
-			CreatureSexAftermath "Butterfly" receives "OralPussy" from "Player";
 			WaitLineBreak;
 			say "     Still attempting to expel the remains of your jizz from her nasal cavity she fails to notice as you reach around to her exposed rear end. As you stuff the large vibrator that you discovered in her bag deep into her wet pussy she loses her balance and falls the short distance to the ground face-first with her wings twitching. You flick the switch stimulating her vagina as she moans. Making full use of her bag's contents you set about attaching the strap-on you discovered inside it to your own crotch. You lift her stripy abdomen and spear her asshole with your artificial dick. Initially she squeals at the sensations of both anal sex and double penetration, but as you pump at both her holes she loses her mind, drooling from the corner of her mouth and onto the ground. Pulling her top half up by her restrained arms you reach around and drag down the ties on her leather top allowing her breasts to spill free. You continue to ram at her behind as her breasts cavort freely in the air.";
 			say "     You detach the fake member from your crotch, but leave it lodged up to the hilt in her anus. You roll the butterfly over and as she watches, her wet face gasping for breath, you pull the still-buzzing vibrator from her cunt and clean it with your lips and tongue, savoring the taste of her sweet nectar. Once you've sucked it clean you slowly push it up your own back passage throbbing as it fills you. From the bag you pull the only remaining treasure, a double-ended rubber dildo, which you rapidly lodge deep in your muse's cunt. Climbing on top of her incapacitated body you skewer [if Cunt Count of Player > 1]the most eager of [end if]your own vagina[sfn] down on the rubber toy that connects you and begin to gyrate. Her body squirms as you move your hips instinctively and she begins to do the same. Her moans increase as your hands pinch and pull at her nipples roughly stretching and twisting them. After climaxing together you extract the dildo linking your vaginas and force the sodden toy into her mouth as your mixed juices trickle down her throat. Once you're happy she's had her fill you liberate her arms and head home.";
+			CreatureSexAftermath "Butterfly" receives "OralPussy" from "Player";
 			CreatureSexAftermath "Player" receives "AssDildoFuck" from "Butterfly";
 			CreatureSexAftermath "Player" receives "PussyDildoFuck" from "Butterfly";
 			infect;
@@ -920,8 +920,7 @@ to say butterfly grove scene:
 		now ButterflyProcreated is True;
 	else if ButterflyProcreated is True and ButterflyLove is True and ButterflyRaped is 0 and Player is male:
 		say "     The butterfly girl is hovering before you. [ButterflyAttire] [ButterflyTummy][line break]";
-		say "     Your butterfly lover is very pleased to see both you and the offspring you created together, greeting you lovingly. After talking for a while she tries to pull you off alone to an isolated corner of the grove.";
-		say "     Do you follow?";
+		say "     Your butterfly lover is very pleased to see both you and the offspring you created together, greeting you lovingly. After talking for a while she tries to pull you off alone to an isolated corner of the grove. Do you follow?";
 		if Player consents:
 			LineBreak;
 			if cute panties is owned:
@@ -947,8 +946,7 @@ to say butterfly grove scene:
 			say "     You decide you don't really want to spend time with her.";
 	else if Player is purefemale and ButterflyRaped is 0 and ButterflyLove is True:
 		say "     The butterfly girl is hovering before you. [ButterflyAttire] [ButterflyTummy][line break]";
-		say "     Your butterfly lover is very pleased to see you and greets you lovingly. After talking for a while she tries to pull you off alone to an isolated corner of the grove.";
-		say "     Do you follow?";
+		say "     Your butterfly lover is very pleased to see you and greets you lovingly. After talking for a while she tries to pull you off alone to an isolated corner of the grove. Do you follow?";
 		if Player consents:
 			LineBreak;
 			if cute panties is owned:
@@ -984,13 +982,13 @@ to say butterfly grove scene:
 		say "[run paragraph on]";
 		follow the ButterflyTummyDesc rule;
 	say "[line break]     You decide to head back to the library.";
-	AttemptToWait;
+	WaitLineBreak;
 	move player to Grey Abbey library;
 	follow the turnpass rule;
 
 After examining butterfly grove:
 	say "     You head home.";
-	AttemptToWait;
+	WaitLineBreak;
 	move player to Grey Abbey Library;
 
 Table of GameRoomIDs (continued)

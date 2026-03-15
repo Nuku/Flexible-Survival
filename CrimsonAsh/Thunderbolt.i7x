@@ -107,10 +107,11 @@ check going to Thunderbolt's Stable:
 
 An everyturn rule:
 	if Resolution of Campus Thunder is 2:
-		if daytimer is night and (Ariana is in Thunderbolt's Stable or Eres is in Thunderbolt's Stable):
-			now Ariana is nowhere;
-			now Eres is nowhere;
-		else if daytimer is day and (Ariana is not in Thunderbolt's Stable or Eres is not in Thunderbolt's Stable):
+		if daytimer is night:
+			if Ariana is in Thunderbolt's Stable or Eres is in Thunderbolt's Stable:
+				now Ariana is nowhere;
+				now Eres is nowhere;
+		else if Ariana is not in Thunderbolt's Stable or Eres is not in Thunderbolt's Stable:
 			move Ariana to Thunderbolt's Stable;
 			move Eres to Thunderbolt's Stable;
 
