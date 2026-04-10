@@ -89,20 +89,15 @@ to sierrabind:
 					say "     [one of]You start a bit of a ruckus inside[or]You writhe about and push around[or]You quickly and forcibly make known your protest from within[at random] [one of]this fleshy prison[or]these firm confines[at random], forcing the beast to groan. [if struggleatt is 1]It seems less annoyed and more confused by your disapproval[else]It becomes increasingly difficult for the beast to keep you down. At this rate, it might not see you as worth the trouble[end if].";
 					if (bsextimer > 5 and a random chance of bsextimer in 18 succeeds) or hunger of Player > 59 or thirst of Player > 59:
 						sierrasex;
-						if BodyName of Player is "Sierrasaur" and Player is pure:
-							if a random chance of 1 in 5 succeeds:
-								infect;
-						else if a random chance of 2 in 3 succeeds:
-							infect;
 						now bsextimer is 2;
 					else:
-						if BodyName of Player is "Sierrasaur" and Player is pure:
-							if a random chance of 1 in 5 succeeds:
-								infect;
-						else if a random chance of 2 in 3 succeeds:
-							infect;
 						increase lustatt by 7 + (lustadjust * 2);
 						increase bsextimer by 2;
+					if BodyName of Player is "Sierrasaur" and Player is pure:
+						if a random chance of 1 in 5 succeeds:
+							infect;
+					else if a random chance of 2 in 3 succeeds:
+						infect;
 					if BodyName of Player is "Sierrasaur", decrease humanity of Player by 1;
 					if FaceName of Player is "Sierrasaur" and "Strong Psyche" is not listed in feats of Player, decrease humanity of Player by 1;
 					decrease humanity of Player by 3 + psycheadjust;
@@ -119,37 +114,22 @@ to sierrabind:
 					if (bsextimer > 5 and a random chance of bsextimer in 18 succeeds) or hunger of Player > 59 or thirst of Player > 59:
 						increase lustatt by 7 + (lustadjust * 2);
 						sierrasex;
-						if BodyName of Player is "Sierrasaur" and Player is pure:
-							if a random chance of 1 in 5 succeeds:
-								infect;
-						else if a random chance of 2 in 3 succeeds:
-							infect;
 						now bsextimer is 0;
 					else:
-						if BodyName of Player is "Sierrasaur" and Player is pure:
-							if a random chance of 1 in 5 succeeds:
-								infect;
-						else if a random chance of 2 in 3 succeeds:
-							infect;
 						increase lustatt by 14 + (lustadjust * 2);
 					if a random chance of 2 in 3 succeeds, increase bsextimer by 1;
 				else:
 					say "     You choose to remain within these confines for a bit longer, your captor [one of]choosing to rest for a moment, the weight of its body bearing down on you slightly[or]choosing to mull about idly, with little mind paid to its occupant[or]rumbling lowly in approval of their occupant[at random].";
 					if (bsextimer > 5 and a random chance of bsextimer in 18 succeeds) or hunger of Player > 59 or thirst of Player > 59:
 						sierrasex;
-						if BodyName of Player is "Sierrasaur" and Player is pure:
-							if a random chance of 1 in 5 succeeds:
-								infect;
-						else if a random chance of 2 in 3 succeeds:
-							infect;
 						now bsextimer is 0;
 					else:
-						if BodyName of Player is "Sierrasaur" and Player is pure:
-							if a random chance of 1 in 5 succeeds:
-								infect;
-						else if a random chance of 2 in 3 succeeds:
-							infect;
 						increase lustatt by 7 + (lustadjust * 2);
+				if BodyName of Player is "Sierrasaur" and Player is pure:
+					if a random chance of 1 in 5 succeeds:
+						infect;
+				else if a random chance of 2 in 3 succeeds:
+					infect;
 				if BodyName of Player is "Sierrasaur", decrease humanity of Player by 1;
 				if FaceName of Player is "Sierrasaur" and "Strong Psyche" is not listed in feats of Player, decrease humanity of Player by 1;
 				decrease humanity of Player by 3 + psycheadjust;
@@ -158,44 +138,23 @@ to sierrabind:
 				wait for any key;
 			else if (boundrecover is true and (keychar is "r" or keychar in lower case matches the text "recover")) or (boundrecover is false and (keychar is "e" or keychar in lower case matches the text "endure")) or keychar is "3":
 				now enduring is true;
+				say "     [if boundrecover is true]With a brief flash of insight, you're able to find a glimpse of mental clarity within these confines, recovering a smallportion of your lost humanity[else]You fight to maintain clarity while stuck in these confines, your captor [one of]choosing to rest for a moment, theweight of its body bearing down on you slightly[or]choosing to mull about idly, with little mind paid to its occupant[or]rumbling lowly in approval of theiroccupant[at random][end if].";
+				if (bsextimer > 5 and a random chance of bsextimer in 18 succeeds) or hunger of Player > 59 or thirst of Player > 59:
+					sierrasex;
+					now bsextimer is 0;
+				else:
+					increase lustatt by 5 + (lustadjust * 2);
 				if boundrecover is true:
-					say "     With a brief flash of insight, you're able to find a glimpse of mental clarity within these confines, recovering a small portion of your lost humanity.";
-					if (bsextimer > 5 and a random chance of bsextimer in 18 succeeds) or hunger of Player > 59 or thirst of Player > 59:
-						sierrasex;
-						if BodyName of Player is "Sierrasaur" and Player is pure:
-							if a random chance of 1 in 5 succeeds:
-								infect;
-						else if a random chance of 2 in 3 succeeds:
-							infect;
-						now bsextimer is 0;
-					else:
-						if BodyName of Player is "Sierrasaur" and Player is pure:
-							if a random chance of 1 in 5 succeeds:
-								infect;
-						else if a random chance of 2 in 3 succeeds:
-							infect;
-						increase lustatt by 5 + (lustadjust * 2);
 					SanBoost 3;
 					now boundrecover is false;
 				else:
-					say "     You fight to maintain clarity while stuck in these confines, your captor [one of]choosing to rest for a moment, the weight of its body bearing down on you slightly[or]choosing to mull about idly, with little mind paid to its occupant[or]rumbling lowly in approval of their occupant[at random].";
-					if (bsextimer > 5 and a random chance of bsextimer in 18 succeeds) or hunger of Player > 59 or thirst of Player > 59:
-						sierrasex;
-						if BodyName of Player is "Sierrasaur" and Player is pure:
-							if a random chance of 1 in 5 succeeds:
-								infect;
-						else if a random chance of 2 in 3 succeeds:
-							infect;
-						now bsextimer is 0;
-					else:
-						if BodyName of Player is "Sierrasaur" and Player is pure:
-							if a random chance of 1 in 5 succeeds:
-								infect;
-						else if a random chance of 2 in 3 succeeds:
-							infect;
-						increase lustatt by 5 + (lustadjust * 2);
 					if BodyName of Player is "Sierrasaur" and "Strong Psyche" is not listed in feats of Player, decrease humanity of Player by 1;
 					decrease humanity of Player by 2 + psycheadjust;
+				if BodyName of Player is "Sierrasaur" and Player is pure:
+					if a random chance of 1 in 5 succeeds:
+						infect;
+				else if a random chance of 2 in 3 succeeds:
+					infect;
 				increase bsextimer by 1;
 				LineBreak;
 				wait for any key;

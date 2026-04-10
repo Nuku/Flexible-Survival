@@ -218,9 +218,6 @@ instead of navigating Grey Abbey Library while "Cuckold" is listed in feats of P
 	move player to Grey Abbey Library;
 	if debugactive is 1:
 		say "     DEBUG: Vanessa makes a move on Ace - VanessaAceInteraction: [VanessaAceInteraction][line break]";
-	say "[VanssaAceOralCuckScene]";
-
-to say VanssaAceOralCuckScene:
 	say "     Walking up to the entrance of the library, you spot Ace the osprey near the front door. The athletic raptor is wearing his flight suit taut against his muscles, he has a backpack laden with supplies- and beside him is Vanessa, the flanks of her rear legs pressed against the wall. Looks like the centauress is having a seemingly friendly chat with the former pilot. But it might be more than just platonic, as you notice that she has her military jacket open wider than normal, baring her breasts fully. Trying as he might to look at the tauress's face, the avian pilot can't help but occasionally peek at Vanessa's breasts, his wagging a bit quicker every time he does. Curious of the things they're talking about, you wander a bit closer.";
 	say "     Ace is speaking at the moment and says, '...I think that allowing infected soldiers back into service would definitively be of use to the military. A lot of the infections keep troops in fighting form. I mean check out these guns.' He flexes his well toned biceps, the fabric grips his arms tightly. Vanessa wraps a hand around the muscle and teasingly says, 'Not bad for a flyboy. I didn't know daredevils like you had time to work out.' With an amused chuckle Ace playfully replies, 'It's something to do in the off time. And you're one to talk about daredevil acts, jumping out of a plane is not a thing most sane people do.' The two soldiers laugh, but the conversation goes a bit more serious as Vanessa asks, 'Do you think the top brass is really going to be OK with a bunch of lusty mutants who might mess with squad cohesion?' A loud gale blows past as the osprey contemplates her answer.";
 	WaitLineBreak;
@@ -252,9 +249,6 @@ instead of navigating Grey Abbey Library while Snow is in Grey Abbey Library and
 	move player to Grey Abbey Library;
 	if debugactive is 1:
 		say "     DEBUG: Ace bangs Snow - SnowAceInteraction: [SnowAceInteraction][line break]";
-	say "[SnowAceCuckScene1]";
-
-to say SnowAceCuckScene1:
 	say "     Ready to head back home, you make your way back to the library through the desolate streets. Passing some burned-out or wrecked cars, countless pieces of garbage litter the ground and flutter about with a gust of wind. Once you have arrived at the front of the Grey Abbey Library, you double check the area to make sure that no feral is stalking you. There's no movement and the only sounds you hear are the clanging of tools and quiet chatter that are coming from inside the abbey, so you walk up the concrete steps to enter the building, the cheery tone of a masculine baritone and a higher pitched feminine voice conversing amicably.";
 	say "     Turning to look at the pair conversing, you see that it is Snow and the anthro osprey pilot Ace. Snow sits leaning against the back of her chair after seemingly finishing her latest work; adjusting her tattered white shirt the squirrel girl inquires, 'So what do you think of the adjustments I've made to your knife? I modified the handle so that your hand talons will be better able to grip it.' The raptor's eyes stare intently as he examines his weapon. With a bemused chuckle the settlement leader sheathes his weapon and chimes brashly, 'Looks pretty good. You sure know how to work with tools...' Biting her lip temptingly, the red furred femme salaciously replies, 'You could say I have some experience...' Snow then begins to stretch her arms and arch her back, seductively highlighting her slim waist and curvy breasts. The avian's eyes can't help from staring at them.";
 	WaitLineBreak;

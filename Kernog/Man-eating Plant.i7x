@@ -370,6 +370,6 @@ to say man-eating flower seed use:
 		FeatGain "Vore Predator";
 		increase vorecount by 1;
 	else:
-		say "You gulp down the seed. It does not seem to have an effect on the present you.";
+		say "     You gulp down the seed. It does not seem to have an effect on the present you.";
 
 Man-eating Plant ends here.

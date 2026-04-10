@@ -16,9 +16,9 @@ Section 1 - General Events
 
 Table of WalkinEvents (continued)
 Priority	Name	EventObject	EventConditions	EventRoom	LastEncounterTurn	CoolDownTurns	EncounterPercentage
-3	"Cheetah Cheater"	Cheetah Cheater	"[EventConditions_Cheetah Cheater]"	College Walkway West	2500	2	100
+3	"Cheetah Cheater"	Cheetah Cheater	"[EventConditions_LastCampusWalkin]"	College Walkway West	2500	2	100
 
-to say EventConditions_Cheetah Cheater:
+to say EventConditions_LastCampusWalkin:
 	if LastCampusWalkin - turns > 0: [list of conditions here]
 		now CurrentWalkinEvent_ConditionsMet is true;
 
@@ -28,23 +28,18 @@ Cheetah Cheater	"Cheetah Cheater"
 
 Cheetah Cheater is a situation.
 ResolveFunction of Cheetah Cheater is "[ResolveEvent Cheetah Cheater]".
-The level of Cheetah Cheater is 0.
 Sarea of Cheetah Cheater is "Campus".
 
 to say ResolveEvent Cheetah Cheater:
 	say "     Walking down a pathway in the college, two figures emerge from one side and sprint toward you. Hearing their shouts of joy even from the distance you are at, they quickly get close enough for you to make them out. A female antelope and male cheetah are neck and neck in a race, with legs that blur as they cross ground at an amazing pace. As they close in you notice there is a fence in the way. The antelope goes around it and grabs the metal pole at the edge to slingshot herself to regain some speed while the cheetah jumps over it. They both get back up to full speed again, but the cheetah is now clearly winning. The antelope gives it her best shot, but they both streak past you and cross a finish line - marked out with a bit of tape - before she can catch up.";
-	LineBreak;
-	say "     'Ian, you're such a cheater!' she pants. He turns towards her and smirks 'I know.' Her nose scrunches in confusion for a second. 'That's not what I... Oh when are you going to stop making that joke!' He laughs a little bit, 'When you manage to keep up.' She looks at him, her face pensive. 'How about...' She stands and seductively drapes herself over him. 'I show you how well I can keep up.' With a look on his face like he has won the lottery, Ian stumbles out a yes and they both dash off, presumably going somewhere private.";
+	say "     'Ian, you're such a cheater!' she pants. He turns towards her and smirks. 'I know.' Her nose scrunches in confusion for a second. 'That's not what I... oh, when are you going to stop making that joke!' He laughs a little bit. 'When you manage to keep up.' She looks at him, her face pensive. 'How about...' She stands and seductively drapes herself over him. '...I show you how well I can keep up.' With a look on his face like he has won the lottery, Ian stumbles out a [']yes['] and they both dash off, presumably going somewhere private.";
+	increase score by 1;
 	now Cheetah Cheater is resolved;
 	now LastCampusWalkin is turns;
 
 Table of WalkinEvents (continued)
 Priority	Name	EventObject	EventConditions	EventRoom	LastEncounterTurn	CoolDownTurns	EncounterPercentage
-3	"Pregnant Friend"	Pregnant Friend	"[EventConditions_Pregnant Friend]"	College Walkway East	2500	2	100
-
-to say EventConditions_Pregnant Friend:
-	if LastCampusWalkin - turns > 0: [list of conditions here]
-		now CurrentWalkinEvent_ConditionsMet is true;
+3	"Pregnant Friend"	Pregnant Friend	"[EventConditions_LastCampusWalkin]"	College Walkway East	2500	2	100
 
 Table of GameEventIDs (continued)
 Object	Name
@@ -52,26 +47,26 @@ Pregnant Friend	"Pregnant Friend"
 
 Pregnant Friend is a situation.
 ResolveFunction of Pregnant Friend is "[ResolveEvent Pregnant Friend]".
-The level of Pregnant Friend is 0.
 Sarea of Pregnant Friend is "Campus".
+
+when play begins:
+	add Pregnant Friend to BadSpots of MaleList;
+	add Pregnant Friend to BadSpots of FemaleList;
+	add Pregnant Friend to BadSpots of FurryList;
 
 to say ResolveEvent Pregnant Friend:
 	say "     As you walk down the path you stumble upon two girls sitting on a wooden bench. One has been infected as a fox, and has fluffy fox ears on her head and a bushy tail poking through the back of the bench. She has an arm around her friend, a wolf anthro with a bulging stomach who is crying. The wolf girl has completely changed, complete with muzzle and fur all over. You step a bit closer and listen in.";
-	say "     'It all happened so fast!' she sobs 'One minute I was studying with my boyfriend, the next he's one of those wolves!' Her friend rubs her back. 'It's good to talk about it. So what happened next?' she asks. 'Well, he changed into one of those alphas, got real muscly, with a big you-know-what. I should have said no, he didn't have any condoms, but he just smelt so good and I let it happen.' Her friend takes the opportunity to jump in and say, 'It's OK, it's not your fault. So what happened next?' The wolf takes a deep breath and lets it out. 'Well, we did the deed, and he finished in me. A few minutes later I turned into this, and an hour after that, [italic type]THIS[roman type]-' she waves at her stomach '-started showing. He was really sorry after of course, got lost in his new instincts, but now I've got this...'";
-	LineBreak;
-	say "     'Don't worry,' the fox girl soothes. 'Look, you aren't alone in this, there are more than a couple of girls in your situation, turns out they grow really fast at the moment! You should give birth tonight and the child will be fully grown in a matter of weeks, you can continue your degree!' The wolf looks up. 'I can?' she questions. The fox girl nods and a small smile appears on the wolf girl's face before the fox girl continues, 'Looks like you need to start thinking of baby names! C'mon, let's go and have a look at a list of them, see what would be a good one.'";
-	LineBreak;
+	say "     'It all happened so fast!' she sobs. 'One minute I was studying with my boyfriend, the next he's one of those wolves!' Her friend rubs her back. 'It's good to talk about it. So what happened next?' she asks. 'Well, he changed into one of those alphas, got real muscly, with a big you-know-what. I should have said no, he didn't have any condoms, but he just smelt so good and I let it happen.' Her friend takes the opportunity to jump in and say, 'It's OK, it's not your fault. So what happened next?' The wolf takes a deep breath and lets it out. 'Well, we did the deed, and he finished in me. A few minutes later I turned into this, and an hour after that, [italic type]THIS[roman type]-' she waves at her stomach '-started showing. He was really sorry after of course, got lost in his new instincts, but now I've got this...'";
+	WaitLineBreak;
+	say "     'Don't worry,' the fox girl soothes. 'Look, you aren't alone in this, there are more than a couple of girls in your situation; turns out they grow really fast at the moment! You should give birth tonight and the child will be fully grown in a matter of weeks; you can continue your degree!' The wolf looks up. 'I can?' she questions. The fox girl nods and a small smile appears on the wolf girl's face before the fox girl continues, 'Looks like you need to start thinking of baby names! C'mon, let's go and have a look at a list of them, see what would be a good one.'";
 	say "     They both get up from the bench and walk down the path. You step out from behind the bush you have been hiding in and head off to continue exploring.";
+	increase score by 1;
 	now Pregnant Friend is resolved;
 	now LastCampusWalkin is turns;
 
 Table of WalkinEvents (continued)
 Priority	Name	EventObject	EventConditions	EventRoom	LastEncounterTurn	CoolDownTurns	EncounterPercentage
-3	"Art Class"	Art Class	"[EventConditions_Art Class]"	Creative Street	2500	2	100
-
-to say EventConditions_Art Class:
-	if LastCampusWalkin - turns > 0: [list of conditions here]
-		now CurrentWalkinEvent_ConditionsMet is true;
+3	"Art Class"	Art Class	"[EventConditions_LastCampusWalkin]"	Creative Street	2500	2	100
 
 Table of GameEventIDs (continued)
 Object	Name
@@ -79,28 +74,31 @@ Art Class	"Art Class"
 
 Art Class is a situation.
 ResolveFunction of Art Class is "[ResolveEvent Art Class]".
-The level of Art Class is 0.
 Sarea of Art Class is "Campus".
 
+when play begins:
+	add Art Class to BadSpots of MaleList;
+	add Art Class to BadSpots of FemaleList;
+	add Art Class to BadSpots of FurryList;
+
 to say ResolveEvent Art Class:
-	say "     On your travels around the campus you come across an art class – not a normal one though. A group of [one of]girls[or]ladies[or]women[at random] have all pulled up a chair and an easel to [one of]sketch[or]paint[or]draw[or]capture[at random] their model, and unusually for an art class set outside, their model is a nude one – Though with everything else going on, you suppose that this isn't all that out-there of an idea. With this particular model however, you can see why there is so much female attention to this art class. At the center of the circle there is a [one of]studly stallion[or]good looking wolf[or]sexy tiger[or]handsome [one of]German shepherd[or]Alsatian[at random][or]muscled panther[or]alluring stag[or]athletic snow leopard[or]buff moose[at random] standing in a [one of]proud[or]heroic[at random] pose.";
-	say "     The instructor seems pretty good at first, but as you are standing there she quickly starts to lose her composure.[line break]";
-	say "     'You don't need to be quick, but he can't stay in that pose forever, so you definitely can't be slow'[line break]";
-	say "     'Focus on getting the entire thing in rough detail before starting the fine stuff, just in case you run out of time'[line break]";
-	say "     'Make sure to get the fine detail around that strong... handsome jaw'[line break]";
-	say "     'Don't forget to get the shading just right for the small shadows around those gorgeous abs'[line break]";
-	say "     'Get as much detail as you can of that big, sexy sheath'[line break]";
+	say "     On your travels around the campus you come across an art class - not a normal one though. A group of [one of]girls[or]ladies[or]women[at random] have all pulled up a chair and an easel to [one of]sketch[or]paint[or]draw[or]capture[at random] their model, and unusually for an art class set outside, their model is a nude one - though with everything else going on, you suppose that this isn't all that out-there of an idea. With this particular model, however, you can see why there is so much female attention to this art class. At the center of the circle there is a [one of]studly stallion[or]good-looking wolf[or]sexy tiger[or]handsome [one of]German shepherd[or]Alsatian[at random][or]muscled panther[or]alluring stag[or]athletic snow leopard[or]buff moose[at random] standing in a [one of]proud[or]heroic[at random] pose.";
+	say "     The instructor seems pretty good at first, but as you are standing there she quickly starts to lose her composure.";
+	WaitLineBreak;
+	say "     'You don't need to be quick, but he can't stay in that pose forever, so you definitely can't be slow.'";
+	say "     'Focus on getting the entire thing in rough detail before starting the fine stuff, just in case you run out of time.'";
+	say "     'Make sure to get the fine detail around that strong... handsome jaw.'";
+	say "     'Don't forget to get the shading just right for the small shadows around those gorgeous abs.'";
+	say "     'Get as much detail as you can of that big, sexy sheath.'";
+	WaitLineBreak;
 	say "     You can see where this is going and keep your distance as the model becomes [one of]erect[or]engorged[or]aroused[at random] from the comments and the instructor begins to get distracted. First she begins to strip, then the male model's [one of]prodigious[or]marvelous[or]impressive[at random] cock gets some attention. It starts with a stray hand stroking upwards, and escalates from there. A loud gasp from the model breaks your transfixion and you realize where you are and what you are doing. You keep your distance and move on, not wanting to spend the entire day as a voyeur. You cannot resist the urge to catch one last glimpse before you go, and it's a sight you know you will remember - the model fucking the instructor while the art students begin a new, more lewd [one of]sketch[or]painting[or]drawing[at random].";
+	increase score by 1;
 	now Art Class is resolved;
 	now LastCampusWalkin is turns;
 
 Table of WalkinEvents (continued)
 Priority	Name	EventObject	EventConditions	EventRoom	LastEncounterTurn	CoolDownTurns	EncounterPercentage
-3	"CatsVSDogs"	CatsVSDogs	"[EventConditions_CatsVSDogs]"	Athletic Street	2500	3	100
-
-to say EventConditions_CatsVSDogs:
-	if LastCampusWalkin - turns > 0: [list of conditions here]
-		now CurrentWalkinEvent_ConditionsMet is true;
+3	"CatsVSDogs"	CatsVSDogs	"[EventConditions_LastCampusWalkin]"	Athletic Street	2500	3	100
 
 Table of GameEventIDs (continued)
 Object	Name
@@ -108,21 +106,25 @@ CatsVSDogs	"CatsVSDogs"
 
 CatsVSDogs is a situation.
 ResolveFunction of CatsVSDogs is "[ResolveEvent CatsVSDogs]".
-The level of CatsVSDogs is 0.
 Sarea of CatsVSDogs is "Campus".
 
+when play begins:
+	add CatsVSDogs to BadSpots of MaleList;
+	add CatsVSDogs to BadSpots of FurryList;
+
 to say ResolveEvent CatsVSDogs:
-	if CatsVSDogsCounter is 1:
-		say "     On your travels you spot a tennis court between buildings. There seems to be a game going on - between cats and dogs. On one side, a panther and a lynx. On the other side a husky and a Labrador retriever. Anthro dogs and cats of many types are standing to one side watching the game. The game looks pretty intense, dogs loping around, hitting hard and trying to wear out the cats. On the other side the cats are playing tactically. Each of them stick to their positions like glue and they keep aiming for spots they think the dogs can't defend.";
-		say "     You watch the yellow ball go from one side to the other a dozen times, both sides giving as good as they get, but nothing lasts forever. One of the cats hits high, causing the ball to go near the Labrador's head. Unfortunately for him, his instincts take over and [bold type]CHOMP[roman type]. Immediately the animals in the crowd yell in victory or defeat depending on their team and everyone starts to walk off. As they leave you hear the husky say to his teammate 'Again? That's the third ball this week!'";
+	if CatsVSDogsCounter < 2:
+		say "     On your travels you spot a tennis court between buildings. There seems to be a game going on, between cats and dogs. On one side, a panther and a lynx. On the other side a husky and a Labrador retriever. Anthro dogs and cats of many types are standing to one side watching the game. The game looks pretty intense, dogs loping around, hitting hard and trying to wear out the cats. On the other side the cats are playing tactically. Each of them stick to their positions like glue and they keep aiming for spots they think the dogs can't defend.";
+		say "     You watch the yellow ball go from one side to the other a dozen times, both sides giving as good as they get, but nothing lasts forever. One of the cats hits high, causing the ball to go near the Labrador's head. Unfortunately for him, his instincts take over and [bold type]CHOMP[roman type]. Immediately the animals in the crowd yell in victory or defeat depending on their team and everyone starts to walk off. As they leave you hear the husky say to his teammate, 'Again? That's the third ball this week!'";
 		now CatsVSDogsCounter is 2;
 	else if CatsVSDogsCounter is 2:
 		say "     You spot the cats and dogs again, this time at a running track. There are a number of them wearing sporty clothes and stretching, getting limber for the run. A cat walks up to the side of the track at the finish line and lifts a gun. Immediately they all get into position side by side.";
-		say "     The cat fires smoke into the air, and a second later they all sprint off as they hear the [bold type]BANG[roman type]. Immediately the cats etch out a small lead, legs pumping, ears flat. You notice something at the start, a greyhound shouts '[bold type]3[roman type]'. He launches off the line, catches and passes the dogs, slows down behind the cats and as the finish line approaches, gets around them just in time. The crowd back at the start line cheer and a large dog shouts [bold type]'ONE ALL'[roman type]. They all start walking towards the finish line, making you realize that you should be exploring the campus.";
+		say "     The cat fires smoke into the air, and a second later they all sprint off as they hear the [bold type]BANG[roman type]. Immediately the cats etch out a small lead, legs pumping, ears flat. You notice something at the start, a greyhound shouts, '[bold type]3[roman type]'. He launches off the line, catches and passes the dogs, slows down behind the cats and as the finish line approaches, gets around them just in time. The crowd back at the start line cheer and a large dog shouts, '[bold type]ONE ALL[roman type]'. They all start walking towards the finish line, making you realize that you should be exploring the campus.";
 		now CatsVSDogsCounter is 3;
-	else if CatsVSDogsCounter is 3:
+	else:
 		say "     Hearing the sounds in the distance, you recognize the cats and dogs before you even see them. This time each group is sitting around a table, throwing bits of food at the other. You take a seat a bit up the path and watch their antics for a minute, thankful for the cheer in an otherwise dreary city. From the opposite side you see a gryphon milkman come along, and you seem to notice him at the same time the two groups do. From each group a member steps forward and begins to walk towards the milkman. Suddenly they stop, look at each other, and both start running. Side by side they run to the milkman and side by side they tackle him. The two groups start cheering and patting each other on the back, watching the three of them fall to the ground.";
-		say "     The cat grabs the milk and the dog grabs the gryphon. Each of them begin to enjoy their prizes, the cat chugging down the milk as if he hasn't had a drink for days and the dog fucking the gryphon. Unfortunately they forgot about getting infected and both of them begin to show signs. The cats back bulges for a second before he begins to sprout wings, and the dogs muzzle changes into a beak. Slowly the groups stop cheering and start muttering amongst themselves. You distinctly hear 'Gang-bang should fix that...' from one group. As they start to each drag away their member from the milkman, you decide to keep exploring the city.";
+		say "     The cat grabs the milk and the dog grabs the gryphon. Each of them begin to enjoy their prizes, the cat chugging down the milk as if he hasn't had a drink for days and the dog fucking the gryphon. Unfortunately they forgot about getting infected and both of them begin to show signs. The cat's back bulges for a second before he begins to sprout wings, and the dog's muzzle changes into a beak. Slowly the groups stop cheering and start muttering amongst themselves. You distinctly hear 'Gang-bang should fix that...' from one group. As they start to each drag away their member from the milkman, you decide to keep exploring the city.";
+		increase score by 5;
 		now CatsVSDogs is resolved;
 	now LastCampusWalkin is turns;
 
@@ -140,26 +142,31 @@ SharkFountain	"SharkFountain"
 
 SharkFountain is a situation.
 ResolveFunction of SharkFountain is "[ResolveEvent SharkFountain]".
-The level of SharkFountain is 0.
-Sarea of SharkFountain is "Campus". [Fountain]
+Sarea of SharkFountain is "Nowhere". [Fountain]
+
+when play begins:
+	add SharkFountain to BadSpots of MaleList;
+	add SharkFountain to BadSpots of FemaleList;
+	add SharkFountain to BadSpots of FurryList;
 
 to say ResolveEvent SharkFountain:
-	if SharkFountainCounter is 1:
-		say "     The fountain seems very popular at the moment with students relaxing and chatting around it. Though currently, its water must only be a day or two from its next cleaning, as it is not as clear as usual. People around the edge suddenly start to point into the water, and you see a shark fin making its way around. Then in a shower of water, an anthro shark bursts from the depths of the fountain, soaking a group of students. Laughs and screams echo around the court as the shark walks back to his mates and high fives them.";
+	if SharkFountainCounter < 2:
+		say "     The fountain seems very popular at the moment with students relaxing and chatting around it. Though currently, its water must only be a day or two from its next cleaning, as it is not as clear as usual. People around the edge suddenly start to point into the water, and you see a shark fin making its way around. Then in a shower of water, an anthro shark bursts from the depths of the fountain, soaking a group of students. Laughs and screams echo around the court as the shark walks back to his mates and high-fives them.";
 		now SharkFountainCounter is 2;
-	else if SharkFountainCounter is 2:
+	else:
 		let randomnumber be a random number from 1 to 2;
-		say "     It's getting late and there only seems to be one person around at the fountain as you approach it. A [if randomnumber is 1]female[else]male[end if] husky sits on the side of large structure, scribbling on a notepad. Just like earlier, the same shark anthro circles in the water of the fountain and bursts through the surface, but this time he grabs [if randomnumber is 1]her[else]him[end if] and drags [if randomnumber is 1]her[else]him[end if] in. You rush over, thinking to save [if randomnumber is 1]her[else]his[end if] life, but as you approach you see them lying in the water, the shark's twin shafts [if randomnumber is 1]each taking one hole, with his 'victim' moaning in euphoric pleasure[else]squeezed together, being shoved into the husky's ass while the anthro dog is moaning in pleasure[end if]. You decide to leave them to it[if humanity of Player <= 50]. Seeing the two of them go at it makes you wonder what those dual shafts could do for you[end if].";
+		if Player is femaleinterested and Player is not maleinterested:
+			now randomnumber is 1;
+		else if Player is maleinterested and Player is not femaleinterested:
+			now randomnumber is 2;
+		say "     It's getting late and there only seems to be one person around at the fountain as you approach it. A [if randomnumber is 1]female[else]male[end if] husky sits on the side of the large structure, scribbling on a notepad. Just like earlier, the same shark anthro circles in the water of the fountain and bursts through the surface, but this time he grabs [if randomnumber is 1]her and drags her[else]him and drags him[end if] in. You rush over, thinking to save [if randomnumber is 1]her[else]his[end if] life, but as you approach you see them lying in the water, the shark's twin shafts [if randomnumber is 1]each taking one hole, with his 'victim' moaning in euphoric pleasure[else]squeezed together, being shoved into the husky's ass while the anthro dog is moaning in pleasure[end if]. You decide to leave them to it[if Libido of Player > humanity of Player or humanity of Player <= 50]. Seeing the two of them go at it makes you wonder what those dual shafts could do for you[end if].";
+		increase score by 1;
 		now SharkFountain is resolved;
 	now LastCampusWalkin is turns;
 
 Table of WalkinEvents (continued)
 Priority	Name	EventObject	EventConditions	EventRoom	LastEncounterTurn	CoolDownTurns	EncounterPercentage
-3	"Fountain Naiad"	Fountain Naiad	"[EventConditions_Fountain Naiad]"	College Fountain	2500	3	100
-
-to say EventConditions_Fountain Naiad:
-	if LastCampusWalkin - turns > 0: [list of conditions here]
-		now CurrentWalkinEvent_ConditionsMet is true;
+3	"Fountain Naiad"	Fountain Naiad	"[EventConditions_LastCampusWalkin]"	College Fountain	2500	3	100
 
 Table of GameEventIDs (continued)
 Object	Name
@@ -174,17 +181,14 @@ when play begins:
 
 to say ResolveEvent Fountain Naiad:
 	say "     Walking along the campus grounds you come across a large fountain still shooting streaks of water into the air before falling back down into a large pool below. Taking a moment to appreciate the sight you gaze into the waterfall of flowing liquid and see a most unusual sight. There in the fountain, naked as the day she was born is a strikingly beautiful young woman with long blond hair. She raises her arms as the water cascades over her flawless skin and perky breasts. She is seemingly content with her public bath as she catches your gaze through the flowing water.";
-	say "     Giving a wink and turning around to show her gropeable cheeks off she runs her hands over her firm buns as you feel your arousal flaring up. You're not the only one to notice either, a few other campus goers have stopped what they were doing to ogle the bathing beauty. A few even start to stroke stiffening members or finger moistening lips in their trousers as they watch. You're half-tempted to do the same as your eyes are transfix on this unnaturally gorgeous woman bathing in public. Barely managing to pull your gaze away from her luscious figure you see many others entirely hypnotized by her soaking pale body, noticing a few of the onlookers inching closer to the fountain's edge. Deciding it's probably best to move on before this gets out of hand you turn around and leave the woman to her bath and adoring audience.";
+	say "     Giving a wink and turning around to show her gropeable cheeks off she runs her hands over her firm buns as you feel your arousal flaring up. You're not the only one to notice either; a few other campus goers have stopped what they were doing to ogle the bathing beauty. A few even start to stroke stiffening members or finger moistening lips in their trousers as they watch. You're half-tempted to do the same as your eyes are transfixed on this unnaturally gorgeous woman bathing in public. Barely managing to pull your gaze away from her luscious figure you see many others entirely hypnotized by her soaking pale body, noticing a few of the onlookers inching closer to the fountain's edge. Deciding it's probably best to move on before this gets out of hand you turn around and leave the woman to her bath and adoring audience.";
+	increase score by 1;
 	now LastCampusWalkin is turns;
 	now Fountain Naiad is resolved;
 
 Table of WalkinEvents (continued)
 Priority	Name	EventObject	EventConditions	EventRoom	LastEncounterTurn	CoolDownTurns	EncounterPercentage
-3	"Campus Racing"	Campus Racing	"[EventConditions_Campus Racing]"	Athletic Street	2500	3	100
-
-to say EventConditions_Campus Racing:
-	if LastCampusWalkin - turns > 0: [list of conditions here]
-		now CurrentWalkinEvent_ConditionsMet is true;
+3	"Campus Racing"	Campus Racing	"[EventConditions_LastCampusWalkin]"	Athletic Street	2500	3	100
 
 Table of GameEventIDs (continued)
 Object	Name
@@ -202,14 +206,10 @@ to say ResolveEvent Campus Racing:
 
 Table of WalkinEvents (continued)
 Priority	Name	EventObject	EventConditions	EventRoom	LastEncounterTurn	CoolDownTurns	EncounterPercentage
-3	"Frat Party Recruiter"	Frat Party Recruiter	"[EventConditions_Frat Party Recruiter]"	College Walkway West	2500	3	50
-3	"Frat Party Recruiter"	Frat Party Recruiter	"[EventConditions_Frat Party Recruiter]"	College Walkway East	2500	3	50
-3	"Frat Party Recruiter"	Frat Party Recruiter	"[EventConditions_Frat Party Recruiter]"	College Walkway Northeast	2500	3	50
-3	"Frat Party Recruiter"	Frat Party Recruiter	"[EventConditions_Frat Party Recruiter]"	College Walkway Northwest	2500	3	50
-
-to say EventConditions_Frat Party Recruiter:
-	if LastCampusWalkin - turns > 0: [list of conditions here]
-		now CurrentWalkinEvent_ConditionsMet is true;
+3	"Frat Party Recruiter"	Frat Party Recruiter	"[EventConditions_LastCampusWalkin]"	College Walkway West	2500	3	50
+3	"Frat Party Recruiter"	Frat Party Recruiter	"[EventConditions_LastCampusWalkin]"	College Walkway East	2500	3	50
+3	"Frat Party Recruiter"	Frat Party Recruiter	"[EventConditions_LastCampusWalkin]"	College Walkway Northeast	2500	3	50
+3	"Frat Party Recruiter"	Frat Party Recruiter	"[EventConditions_LastCampusWalkin]"	College Walkway Northwest	2500	3	50
 
 Table of GameEventIDs (continued)
 Object	Name
@@ -230,26 +230,18 @@ to say ResolveEvent Frat Party Recruiter:
 		say "     Walking around the campus again you spot the handsome satyr recruiter from last time. He is talking with two good-looking frat-boys. It seems both are a bit wary about just how enthusiastically he approaches them, but nevertheless, one of them takes a flyer. While he is reading, the satyr makes the other one sample the contents of his wine-skin. The strong pull of whine he drinks seems to take immediate effect on the guy. He instantly is sprouting a thick goatee, and shows quite a hard-on in his pants. This frightens his buddy, but before the young man can flee, he finds himself being groped by the satyr and his frat-brother. It seems as if Talov and the satyr crew will soon get some new additions...";
 	else if FratPartyRecruiterProgression is 2:
 		say "     You are walking over the campus again as you happen upon a flyer advertising the satyr party in P.A.N. Picking that up and looking at it, you spot another one, and then another one. You follow the trail until it ends in front of some bushes, where you hear some quite unmistakable sounds. Curious but careful, you step closer to get a better look; Behind the leaves, you see the black furred satyr having fun with the two frat boys from before, suckling one's swelling and shifting cock, while being fucked by the other one. The features of the frat-guys shift in front of your eyes, and their legs take a goat-like form with cloven hooves and fur, while horns push out of their heads. It appears as if recruiting for P.A.N. is quite successful.";
-	else if FratPartyRecruiterProgression is 3:
+	else:
 		say "     You happen to wander around the campus again, seeing a crowd of people, transformed or not, standing around the good-looking black furred satyr and his new recruits. The three have set up a flimsy desk next to a footpath and are happily handing out samples of Telov and Kerr's satyr wine, as well as flyers, announcing another big party at P.A.N. The wine soon shows its effects, making all who tried a cup rather horny, with a few of the unchanged guys are soon sprouting goatees and horns. It appears the satyr frat will soon be the most popular one on campus!";
 		now Frat Party Recruiter is resolved;
-	else if FratPartyRecruiterProgression is 4:
-		say "";
-	else if FratPartyRecruiterProgression is 5:
-		say "";
 	increase FratPartyRecruiterProgression by 1;
 	now LastCampusWalkin is turns;
 
 Table of WalkinEvents (continued)
 Priority	Name	EventObject	EventConditions	EventRoom	LastEncounterTurn	CoolDownTurns	EncounterPercentage
-3	"Undie Race"	Undie Race	"[EventConditions_Undie Race]"	College Walkway West	2500	3	50
-3	"Undie Race"	Undie Race	"[EventConditions_Undie Race]"	College Walkway East	2500	3	50
-3	"Undie Race"	Undie Race	"[EventConditions_Undie Race]"	College Walkway Northeast	2500	3	50
-3	"Undie Race"	Undie Race	"[EventConditions_Undie Race]"	College Walkway Northwest	2500	3	50
-
-to say EventConditions_Undie Race:
-	if LastCampusWalkin - turns > 0: [list of conditions here]
-		now CurrentWalkinEvent_ConditionsMet is true;
+3	"Undie Race"	Undie Race	"[EventConditions_LastCampusWalkin]"	College Walkway West	2500	3	50
+3	"Undie Race"	Undie Race	"[EventConditions_LastCampusWalkin]"	College Walkway East	2500	3	50
+3	"Undie Race"	Undie Race	"[EventConditions_LastCampusWalkin]"	College Walkway Northeast	2500	3	50
+3	"Undie Race"	Undie Race	"[EventConditions_LastCampusWalkin]"	College Walkway Northwest	2500	3	50
 
 Table of GameEventIDs (continued)
 Object	Name
@@ -261,13 +253,14 @@ Sarea of Undie Race is "Campus".
 
 to say ResolveEvent Undie Race:
 	say "     As you trek down the walkway, you notice that the paved alley is almost deserted, and that people begin to assemble on the side. You eventually reach a gorilla, who looks busy directing people to stay away from the path, while others install a table and put water bottles on them. [if GorillasMember is 3]'Hey, nice to see you,' the ape greets you. 'A race is going to pass through here. Can you wait on the side for a few moments?'[else]'Hey, you!' the ape hailed. 'Stay out of the walkway! Racers are going to pass through here in a few moments.'[end if]";
-	say "     You follow the instructions and, as the gorilla said, a pack of sportsmen jog down the road. They do not wear the usual running garb: they are all in their undergarments and running shoes - for those who do not have pawed feet. Virile bulges and bare breasts jiggle with each stride, under the applause and the cheers of the crowd, on each side of the walkway, cheers on the runners, and some wave their hands in response. The runners pass by the table and pick a water bottle. The first to do so is a young, albinos lizard in a red speedo. He grabs the nearest bottle, then sprinkles its content over his scaly body in order to cool off. His wet scales glisten under the light [if daytimer is night]of the lamp posts[else]of the sun[end if], and several onlookers around you cheer him on even more. The reptile winks at the audience, then begins to run away.";
+	say "     You follow the instructions and, as the gorilla said, a pack of sportsmen jog down the road. They do not wear the usual running garb: they are all in their undergarments and running shoes - for those who do not have pawed feet. Virile bulges and bare breasts jiggle with each stride, under the applause and the cheers of the crowd, on each side of the walkway, cheers on the runners, and some wave their hands in response. The runners pass by the table and pick a water bottle. The first to do so is a young, albinos lizard in a red speedo. He grabs the nearest bottle, then sprinkles its content over his scaly body in order to cool off. His wet scales glisten under the light of the [if daytimer is night]lamp posts[else]sun[end if], and several onlookers around you cheer him on even more. The reptile winks at the audience, then begins to run away.";
+	WaitLineBreak;
 	if demon brute is listed in companionList of Player:
 		say "     You hear a grunt beside you, and as you glance to the side, you see Brutus's thick purple shaft standing at full erection. Clearly, the runners - and especially that lizard - have aroused the big demon. [if DBCaptureQuestVar is 5]He looks ready to snatch away one of the passing runners to satiate his lust, but your disapproving look discourages him from doing so[else]You pat his side amicably, praising him on his self-control[end if].";
 	if royal tiger companion is listed in companionList of Player:
 		say "     Ryousei looks at the scene, dismayed. 'Poor souls! What is their crime, for being punished like this?' he asks. Stifling a laugh, you explain to the tiger that this is a race, and they do it willingly. 'Oh, I see. I was wondering that it was a lot of criminals. But why are they barely clothed?' You smile, then shrug.";
 	say "     A few minutes later, every runner passed, and the crowd begins to disperse, and so do you.";
-	let bonus be (( Perception of Player minus 10 ) divided by 2);
+	let bonus be ( Perception of Player minus 10 ) divided by 2;
 	let diceroll be a random number from 1 to 20;
 	if diceroll > 15:
 		say "     [bold type]Perception check successful[roman type]: As you leave, you notice that a water bottle is still on the table, unopened. This is tap water, probably infected, but it is better than nothing. You snatch it discreetly and put it in your bag.";
@@ -299,16 +292,14 @@ to say ResolveEvent Dog Meets Dog:
 		say "     DEBUG: Walk-in Event - Korvin runs into a young adult beagle boy - GibsonRelationship: [GibsonRelationship][line break]";
 	say "     Walking over the campus in the direction of the Tenvale college dorms, you notice after a few steps that something - or rather someone - is missing from your side. As you start turning around to see where your attack dog Korvin ended up, you hear the German shepherd bark out, 'What are you looking at, pup? Never seen a [italic type]real[roman type] dog before?' It turns out that Korvin stopped walking about a dozen feet back, where he is standing now, hands on his furry hips and looking down at a young adult anthro standing right in front of him. The other guy is a canine too, though shorter and of a different breed of dog - a beagle, you'd say, judging by the floppy ears and the mixture of white, tan and brown fur. Dressed in shorts and a t-shirt bearing the 'Tenvale College' logo, a backpack slung over one shoulder, the slender young man gapes at Korvin with wide eyes, then gasps out, 'I - I'm sorry sir! It's just... um, you're naked and...'";
 	say "     'Hah!' Korvin barks, interrupting the canine student and stepping up right into his comfort zone. 'Real men have nothing to hide. Fur is everything you need!' With that, your anthro attack dog flexes his bicep and runs a hand over the rippling abs of his torso, grinning broadly at the beagle. The student is clearly overwhelmed by Korvin's 'in your face' attitude and is at a loss for words, just staring at the larger man's body and panting excitedly. You can see him stretch his head forward a little, nostrils flaring as he breathes in the masculine scent of your companion standing so very close, followed by his tail starting to wag cautiously. Korvin is quick to pick up on that too, the edges of his muzzle creasing in a toothy, hungry smile.";
-	say "     [bold type]Do you allow the two to act out on their urges?[roman type][line break]";
-	LineBreak;
+	say "[line break]     [bold type]Do you allow the two to act out on their urges?[roman type][line break]";
 	say "     ([link]Y[as]y[end link]) - Yeah, why not. Dogs will be dogs and all that...";
 	say "     ([link]N[as]n[end link]) - Nope! You tamed Korvin from being a wild dog who was attacking people in the streets. Best not to let him fall back to that.";
 	if Player consents:
 		LineBreak;
 		say "     Placing a hand on the student's shoulder and sliding it up to wrap his fingers behind his neck, Korvin asks, 'What's your name, boy?' Panting hard, the beagle replies, 'G-Gibson, sir!' Pulling the young man closer till his muzzle is pressed against his own furry pecs, Korvin leans forward to lick the side of his face and the floppy ear of the younger canine. 'Good dog, Gib! Someone taught you well to treat a top dog like he deserves!' Your collared dog gives a rough chuckle and lowers a hand to Gibson's crotch. Shivering, the college student takes a deep breath of your attack dog's masculine scent and begins to let his hands wander a bit, carefully pressing them up against Korvin's toned form, as if fearful he might be reprimanded. When one of Gibson's hands gravitate towards his firm buttocks, the German shepherd can't help but grin. 'Getting into the spirit now, aren't you?' he says with amusement in his voice.";
 		say "     'Nice bulge, little doggy. Let's see what you're packing,' Korvin barks to his... captive? Eager partner? Fellow dog? All of the above, you'd say. He loosens his grip and allows Gibson to raise his head from the muscled pec it was pressed against, then licks the smaller dog's muzzle. With an aroused growl, Korvin half-leads, half-drags the student into the bushes flanking the walkway.";
-		say "     [bold type]Do you want to walk closer and watch?[roman type][line break]";
-		LineBreak;
+		say "[line break]     [bold type]Do you want to walk closer and watch?[roman type][line break]";
 		say "     ([link]Y[as]y[end link]) - Anthro dogs humping in rut? Sure!";
 		say "     ([link]N[as]n[end link]) - Nah, pass.";
 		if Player consents:
@@ -340,10 +331,7 @@ Section 3 - Special Events / Mechanisms
 
 Table of WalkinEvents (continued)
 Priority	Name	EventObject	EventConditions	EventRoom	LastEncounterTurn	CoolDownTurns	EncounterPercentage
-3	"Course Advice"	Course Advice	"[EventConditions_Course Advice]"	College Administration Building	2500	3	100
-
-to say EventConditions_Course Advice:
-	now CurrentWalkinEvent_ConditionsMet is true;
+3	"Course Advice"	Course Advice	"[EventConditions_True]"	College Administration Building	2500	3	100
 
 Table of GameEventIDs (continued)
 Object	Name
@@ -362,8 +350,7 @@ to say ResolveEvent Course Advice:
 	say "     With that, the student gives a little wave, then enters the building. Your curiosity demands that you check this out in further detail, so you follow inside. The entrance hall is fairly well-filled, with numerous students sitting in small seating groups and chatting, office workers walking along with folders. Seems eerily normal, for any place during the nanite apocalypse. The upside is that nothing is gonna attack you in here, from the looks of it.";
 	WaitLineBreak;
 	say "     Glancing around, you see the tail-fin of your dolphin acquaintance vanish around a corner at the upper end of a stairway to the upper floor. Someone is certainly eager to meet their advisers. Following upwards yourself, you come to the landing of the second floor - but the dolphin isn't anywhere in sight. Hm, too bad. But hey, you know where they were going - there is a sign reading 'Course Adviser's Offices' with an arrow to the right. Following that hint, you soon arrive in a long hallway flanked by a number of doors, with waiting chairs arranged along the sides. No dolphin in sight here either - must have had an appointment and gone in right away.";
-	say "     [bold type]Well, the place is pretty peaceful and maybe you could talk with the student some more, or find out what the administrators side on the matter is. Do you want to sit down and wait around a bit?[roman type][line break]";
-	LineBreak;
+	say "[line break]     [bold type]Well, the place is pretty peaceful and maybe you could talk with the student some more, or find out what the administrators side on the matter is. Do you want to sit down and wait around a bit?[roman type][line break]";
 	say "     ([link]Y[as]y[end link]) - At the very least, it'll be relaxing.";
 	say "     ([link]N[as]n[end link]) - Nah, too boring.";
 	if Player consents:
@@ -376,8 +363,7 @@ to say ResolveEvent Course Advice:
 		WaitLineBreak;
 		say "     Dana is very openly enthralled by his display, giving a quiet little moan as she puts one hand on his chest to feel the firmness and warmth of her friend's body. 'I never told you, but I like you Dana. You've been a good friend and are really beautiful, before and now too. So - how about it, do you like the new me too? This new body feels so great! I'm here to adjust my courses a bit to make room for football,' Kyle says in a hopefully optimistic tone.";
 		say "     'Of course I do, silly! You've got the perfect brains and body now! I - um... can I see it?' the slender lioness replies, her hand on his crotch making it obvious what she's referring to. 'You're gonna be amazed!' Kyle says proudly, then pushes his shorts down in a single quick movement, freeing the weighty horsecock and full balls between his legs to dangle freely. Dana is quick to grasp the thick shaft with one hand, stroking its length and panting, 'I can't even get my fingers around it. Just... wow!'";
-		say "     [bold type]It seems fairly obvious that the two of them have mostly forgotten that you're still sitting just a few feet away. Do you want to lean back and enjoy the show?[roman type][line break]";
-		LineBreak;
+		say "[line break]     [bold type]It seems fairly obvious that the two of them have mostly forgotten that you're still sitting just a few feet away. Do you want to lean back and enjoy the show?[roman type][line break]";
 		say "     ([link]Y[as]y[end link]) - Sure!";
 		say "     ([link]N[as]n[end link]) - Quietly leave.";
 		if Player consents:
@@ -411,12 +397,14 @@ to say ResolveEvent Course Advice:
 			say "     With a grin on your face, you stand up and walk down the corridor, leaving the advisers offices of the Tenvale College behind for now. While the place seemed so dreadfully normal and regular before, you now know enough to interpret some low sounds that are audible in the building. That banging from somewhere above surely isn't connected to hanging a picture, and the slurp behind one of the doors you pass will likely be someone giving a blowjob.";
 			say "     So in the end, this place isn't an exception to the explosion of sexual needs - it's just... a possibility how society might adjust and flourish in a new shape. If all of these workers and students are here, doing their jobs or thinking about their education, they clearly are the best, brightest and most dedicated of the lot - if not them, who else could end up transformed, yet still well-balanced and sane? Finding out the details of this place gives you some hope for the future, and somehow you feel your humanity confirmed by the knowledge that you're not the only one who can learn to live with the urges.";
 			SanBoost 10;
+		WaitLineBreak;
 		move player to College Administration Building;
 		now Resolution of Course Advice is 2; [Waited outside office, Did not watch sex]
 	else:
 		LineBreak;
 		say "     With a shrug, you abandon the idea of exploring the Tenvale College administration building any further. This all seems to dreadfully normal and regular... it's the nanite apocalypse, for fuck's sake! Walking back downstairs and past the peaceful crowd there, you soon step out onto the campus grounds again. Almost the first thing you see out here is an incubus, standing not too far off. He has his leather pants pushed down below his ass and is stroking the sizable erection between his legs for everyone to see.";
 		say "     The demonic exhibitionist doesn't have to hold out his lure for too long, as a sexy little gazelle out on a jog diverts her route to stop by his side. You're too far away to make out the exact words they exchange... but you don't have to really, as the next thing they do is start fucking, right there on the green grass of the college campus. Yeah, this seems more like the regular fare you've been come to expect from this new reality.";
+		WaitLineBreak;
 		move player to College Fountain;
 		now Resolution of Course Advice is 3; [Did not wait outside office]
 	now Course Advice is resolved;
@@ -424,12 +412,9 @@ to say ResolveEvent Course Advice:
 [Silence in the Library - Repeatable event]
 
 BrowseLibrary is an action applying to nothing.
-understand "browse library" as browselibrary.
-understand "browse the library" as browselibrary.
-understand "explore library" as browselibrary.
-understand "explore the library" as browselibrary.
-understand "read library" as browselibrary.
-understand "read the library" as browselibrary.
+understand "browse the/-- library" as browselibrary.
+understand "explore the/-- library" as browselibrary.
+understand "read the/-- library" as browselibrary.
 
 check browselibrary:
 	if Player is not in Tenvale College Library, say "You should do this at the Tenvale College Library." instead;
@@ -442,20 +427,18 @@ carry out browselibrary:
 	Follow the turnpass rule;
 
 to LibrarySexEvent:
-	if (demon brute is listed in companionList of Player and CollegeLibraryBrutusEncounter is 0):
+	if demon brute is listed in companionList of Player and CollegeLibraryBrutusEncounter is 0:
 		BrutusLibraryEvent;
-	else if (royal tiger companion is listed in companionList of Player and CollegeLibraryRyouseiEncounter is 0):
+	else if royal tiger companion is listed in companionList of Player and CollegeLibraryRyouseiEncounter is 0:
 		RyouseiLibraryEvent;
 	else:
-		let randomnumber be a random number from 1 to 5;
 		say "     Taking advantage of being on campus, you stop by the library and browse a little. ";
-		if randomnumber is:
+		if a random number from 1 to 5 is:
 			-- 1:
 				say "     As you wander between the rows of bookshelves, you hear feminine giggles coming from the alley on the other side of the shelf.";
 				say "     'Ha ha... S-stop, the-the librarian w-will hear us,' one of them whispers.";
 				say "     'She will hear [italic type]you[roman type]. Keep these legs spread.'";
-				say "     [bold type]Do you wish to investigate?[roman type][line break]";
-				LineBreak;
+				say "[line break]     [bold type]Do you wish to investigate?[roman type][line break]";
 				say "     ([link]Y[as]y[end link]) - Curiosity has not killed you (yet).";
 				say "     ([link]N[as]n[end link]) - Lesbian sex is not your thing.";
 				if Player consents:
@@ -470,8 +453,7 @@ to LibrarySexEvent:
 				say "     As you wander between the rows of bookshelves, you hear a pair of female moans coming from the alley on the other side of the shelf.";
 				say "     'F-fuck. It feels s-so good.'";
 				say "     'Y-yeah. Keep going.'";
-				say "     [bold type]Do you wish to investigate?[roman type][line break]";
-				LineBreak;
+				say "[line break]     [bold type]Do you wish to investigate?[roman type][line break]";
 				say "     ([link]Y[as]y[end link]) - Curiosity has not killed you (yet).";
 				say "     ([link]N[as]n[end link]) - Lesbian sex is not your thing.";
 				if Player consents:
@@ -484,9 +466,8 @@ to LibrarySexEvent:
 					say "     You resume your perusing, doing your best to ignore the noises.";
 			-- 3:
 				say "You decide to wander around between the rows of bookshelves. Picking out one book that interests you, taking a seat at one of the reading tables is almost automatic right after. You find yourself next to an androgynous goat student. [if FemaleList is banned or FemaleList is warded]He[else]She[end if] has the complete look of the quiet, nerdy collegian, including the large glasses and the timid look given when your eyes catch each other. After ten minutes or so of reading, you hear something buzz. You look around, but you cannot see any mobile phone around. You go back to your reading, but the buzzing comes back at regular intervals, until it becomes rather annoying. You are about to go look for the guilty party, when you hear your caprine neighbor groan. 'E-enough.'";
-				say "     [bold type]Do you wish to talk to the student?[roman type][line break]";
-				LineBreak;
-				say "     ([link]Y[as]y[end link]) [if FemaleList is banned or FemaleList is warded]He[else]She[end if] acts funny. You should talk to [if FemaleList is banned or FemaleList is warded]him[else]her[end if].";
+				say "[line break]     [bold type]Do you wish to talk to the student?[roman type][line break]";
+				say "     ([link]Y[as]y[end link]) - [if FemaleList is banned or FemaleList is warded]He[else]She[end if] acts funny. You should talk to [if FemaleList is banned or FemaleList is warded]him[else]her[end if].";
 				say "     ([link]N[as]n[end link]) - Something fishy must be going on, you would better focus on your reading.";
 				if Player consents:
 					LineBreak;
@@ -497,8 +478,7 @@ to LibrarySexEvent:
 					say "     You resume your reading, doing your best to ignore the vibrating noise. Eventually, the student leaves in a hurry, the buzzing going away with [if FemaleList is banned or FemaleList is warded]him[else]her[end if].";
 			-- 4:
 				say "You make a round in the library, checking the various sections, when you hear a pair of virile grunts coming from the photocopy room.";
-				say "     [bold type]Do you wish to investigate?[roman type][line break]";
-				LineBreak;
+				say "[line break]     [bold type]Do you wish to investigate?[roman type][line break]";
 				say "     ([link]Y[as]y[end link]) - Check what the boys are up to.";
 				say "     ([link]N[as]n[end link]) - Better leave these two guys alone.";
 				if Player consents:
@@ -524,7 +504,6 @@ to CollegeLibraryBJ:
 	say "You quickly check a nearby bookshelf and take the latest volume of your favorite magazine to the reading table for a read. Taking a seat, you then and find yourself in front of a horse. The equine looks absorbed by his lecture more than one would usually be: his head is lowered on the table, straight on his book, and he is strangely panting. But he is calm, so you open your magazine and start reading.";
 	say "     You barely have the time to go past the few first articles that you hear the horse groan: 'Oh... Oh... Nnng...' You look up, puzzled. He is holding on to the table with both hands, eyes shut and gritting his teeth; and you hear faint gurgling noises. A little disturbed, you watch the equine student, now sweaty, catch his breath, readjust something with his pants, and stand up to leave. At the same moment, you feel a pat on your own groin.";
 	say "     'Psst,' an undefined voice whispers from under the table. [bold type]'Want some stress relief?'[roman type][line break]";
-	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Sure!";
 	say "     ([link]N[as]n[end link]) - Thanks, but no thanks.";
 	if Player consents:
@@ -543,8 +522,7 @@ to CollegeLibraryBJ:
 
 to BrutusLibraryEvent:
 	say "     You take advantage of being on campus to stop by the library and browse a few books. Next to you, Brutus is, funnily, quieter than usual. You turn your head, and realize that he has left, probably to wander the library on his own. You explore the alleys, letting the faint noises of sex guide you. After a couple of false leads, you eventually recognize his grunts, coming from the next alley. Judging by the nature of the noises, your demon must be busy [if DBCaptureQuestVar is 5]molesting[else]getting frisky with[end if] one of the students.";
-	say "     [bold type]Should you peep on Brutus?[roman type][line break]";
-	LineBreak;
+	say "[line break]     [bold type]Should you peep on Brutus?[roman type][line break]";
 	say "     ([link]Y[as]y[end link]) - You are curious. And worried. But mostly curious.";
 	say "     ([link]N[as]n[end link]) - At least he is occupied. You should go back to your browsing.";
 	if Player consents:
@@ -562,8 +540,7 @@ to BrutusLibraryEvent:
 
 to RyouseiLibraryEvent:
 	say "     You take advantage of being on campus to stop by the library and browse a few books. Next to you, Ryousei is, funnily, quieter than usual. You turn your head, and realize that he has left, probably to wander the library on his own. You explore the alleys, letting the faint noises of sex guide you. After a couple of false leads, you eventually recognize his meek protests, coming from the photocopy room.";
-	say "     [bold type]Should you check on him?[roman type][line break]";
-	LineBreak;
+	say "[line break]     [bold type]Should you check on him?[roman type][line break]";
 	say "     ([link]Y[as]y[end link]) - You should better check if the tiger is in trouble.";
 	say "     ([link]N[as]n[end link]) - He is a big boy. He will manage.";
 	if Player consents:
@@ -583,15 +560,11 @@ to RyouseiLibraryEvent:
 	else:
 		say "     You walk back to the bookshelves, and, inspired by Ryousei, decide to check the Asian history section. Shortly after, the tiger is back at your sides, but looks disheveled. 'Well, this place of knowledge is so, er, admirable,' the feline replies your query, while he readjusts his kimono. 'I wandered and... got lost. Shall we go soon? I do not wish to overstay my welcome in this place.' You follow his look to the information desk, and notice a middle-aged vulpine employee ogling at the tiger, and licking [if FemaleList is not banned and FemaleList is not warded]her[else]his[end if] chops. Ryousei makes a beeline for the exit, almost losing you again.";
 
-
 Table of WalkinEvents (continued)
 Priority	Name	EventObject	EventConditions	EventRoom	LastEncounterTurn	CoolDownTurns	EncounterPercentage
-3	"Campus Patrol"	Campus Patrol	"[EventConditions_Campus Patrol]"	College Walkway West	2500	3	100
-3	"Campus Patrol"	Campus Patrol	"[EventConditions_Campus Patrol]"	College Walkway East	2500	3	100
-3	"Campus Patrol"	Campus Patrol	"[EventConditions_Campus Patrol]"	College Campus Entrance	2500	3	100
-
-to say EventConditions_Campus Patrol:
-	now CurrentWalkinEvent_ConditionsMet is true;
+3	"Campus Patrol"	Campus Patrol	"[EventConditions_True]"	College Walkway West	2500	3	100
+3	"Campus Patrol"	Campus Patrol	"[EventConditions_True]"	College Walkway East	2500	3	100
+3	"Campus Patrol"	Campus Patrol	"[EventConditions_True]"	College Campus Entrance	2500	3	100
 
 Table of GameEventIDs (continued)
 Object	Name

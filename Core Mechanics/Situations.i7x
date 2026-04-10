@@ -108,6 +108,9 @@ to say EventConditions_ExampleEvent:
 	if 1 > 0: [list of conditions here]
 		now CurrentWalkinEvent_ConditionsMet is true;
 
+to say EventConditions_True:
+	now CurrentWalkinEvent_ConditionsMet is true;
+
 Table of GameEventIDs (continued)
 Object	Name
 ExampleEvent	"ExampleEvent"

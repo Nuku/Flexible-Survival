@@ -5,52 +5,17 @@ Version 3 of Ram by Luneth begins here.
 
 "Adds a Ram to Flexible Survival's Wandering Monsters table"
 
-Section 1 - Creature Insertion/Responses
+Section 1 - Creature Responses
 
 ramlosstick is a number that varies.
 novicsex is a number that varies.
 ramvar is a number that varies.
 
 to say ramdesc:
-	if ramslut is true and a random chance of 1 in 4 succeeds:
-		now ramvar is 2;
-		cmbtshift;
-		say "     As you go about your business, you spot a familiar set of horns and can't hold back your [if Libido of Player > 45]leer[else]grin[end if] as you approach one of the sissy rams you've broken in. It doesn't seem like he's noticed you yet, but there's no way you could miss that wooly ass of his - you've already had plenty of fun [if Player is dominant]fucking it raw[else]pounding away at it[end if]. Just the thought of sinking your cock into his warm depths has your [if Player is male]cock[smn] hardening[else]body tingling[end if] in anticipation. The ram bleats in surprise as you call out to him before turning around to face you. His eyes glaze over as he looks down at your crotch and shivers in lust and need before shaking his head and taking on a fighting stance. You might've managed to break this one in, but it seems that he still feels the need to pretend to put up a fight[if Player is dominant]. That's okay, though. You don't mind reminding him that you're his better in every way[end if].";
-	else if "Dominant" is listed in feats of Player:
-		if ramslut is true and a random chance of 1 in 2 succeeds:
-			now ramvar is 2;
-			cmbtshift;
-			say "     As you go about your business, you spot a familiar set of horns and can't hold back your [if Libido of Player > 45]leer[else]grin[end if] as you approach one of the sissy rams you've broken in. It doesn't seem like he's noticed you yet, but there's no way you could miss that wooly ass of his. You've already had plenty of fun [if Player is dominant]fucking it raw[else]pounding away at it[end if]. Just the thought of sinking your cock into his warm depths has your [if Player is male]cock[smn] hardening[else]body tingling[end if] in anticipation. The sissy ram bleats in surprise as you call out to him before turning around to face you. His eyes glaze over as he looks down at your crotch and shivers in lust and need before shaking his head and taking on a fighting stance. You might've managed to break this one in, but it seems that he still feels the need to pretend to put up a fight[if Player is dominant]. That's okay, though. You don't mind reminding him that you're his better in every way[end if].";
-		else:
-			now ramvar is 1;
-			cmbtshift;
-			project the Figure of Ram_naked_icon;
-			say "     You're faced with a strong and rugged-looking ram, the horns on his head curling back intimidatingly while the horn between his legs juts proudly forward, ready to breed. [if Player is male]Judging by the look on his face as he approaches you, he doesn't seem too pleased to see you here. [one of]'Great. Another trespasser to deal with,' he says in irritation[or]'Looks like I've got to teach another punk a lesson,' he says with a wicked grin[or]'You thought you could make a move on my territory?!' he shouts[or]'There's only room for one ram in this flock,' he jeers[or]'You don't stand a chance. Might as well just run,' he mocks[at random] as he readies himself to charge[else if Player is female]With a confident swagger, the beast looks you up and down and smirks as he approaches you, [one of]'Look at you... How about you be my sexy ewe?' he asks, rubbing his crotch[or]'Oh, I need you in my flock,' he groans lowly, stroking his shaft[or]'Why don't you just give in and let me fuck you?' he asks cockily[or]'I think I'll enjoy claiming you,' he leers haughtily[or]'Come on, baby, just give in to me,' he coos[at random] as he readies himself to try and wrestle you into submission[else]Eyeing you critically, the ram stomps closer, looking ready to try and wrestle you into submission[end if]. It looks like you've got a fight on your hands!";
-	else:
-		now ramvar is 1;
-		cmbtshift;
-		project the Figure of Ram_naked_icon;
+	if ramvar is 2: [sub ram]
+		say "     As you go about your business, you spot a familiar set of horns and can't hold back your [if Libido of Player > 45]leer[else]grin[end if] as you approach one of the sissy rams you've broken in. It doesn't seem like he's noticed you yet, but there's no way you could miss that wooly ass of his[if Player is dominant]. You've[else] - you've[end if] already had plenty of fun [if Player is dominant]fucking it raw[else]pounding away at it[end if]. Just the thought of sinking your cock into his warm depths has your [if Player is male]cock[smn] hardening[else]body tingling[end if] in anticipation. The [if Player is dominant]sissy [end if]ram bleats in surprise as you call out to him before turning around to face you. His eyes glaze over as he looks down at your crotch and shivers in lust and need before shaking his head and taking on a fighting stance. You might've managed to break this one in, but it seems that he still feels the need to pretend to put up a fight[if Player is dominant]. That's okay, though. You don't mind reminding him that you're his better in every way[end if].";
+	else: [dom ram]
 		say "     You're faced with a strong and rugged-looking ram, the horns on his head curling back intimidatingly while the horn between his legs juts proudly forward, ready to breed. [if Player is male]Judging by the look on his face as he approaches you, he doesn't seem too pleased to see you here. [one of]'Great. Another trespasser to deal with,' he says in irritation[or]'Looks like I've got to teach another punk a lesson,' he says with a wicked grin[or]'You thought you could make a move on my territory?!' he shouts[or]'There's only room for one ram in this flock,' he jeers[or]'You don't stand a chance. Might as well just run,' he mocks[at random] as he readies himself to charge[else if Player is female]With a confident swagger, the beast looks you up and down and smirks as he approaches you, [one of]'Look at you... How about you be my sexy ewe?' he asks, rubbing his crotch[or]'Oh, I need you in my flock,' he groans lowly, stroking his shaft[or]'Why don't you just give in and let me fuck you?' he asks cockily[or]'I think I'll enjoy claiming you,' he leers haughtily[or]'Come on, baby, just give in to me,' he coos[at random] as he readies himself to try and wrestle you into submission[else]Eyeing you critically, the ram stomps closer, looking ready to try and wrestle you into submission[end if]. It looks like you've got a fight on your hands!";
-
-to cmbtshift:
-	let debit be 0;
-	choose row MonsterID from the Table of Random Critters;
-	if HardMode is true and level of Player > 6, let debit be level of Player - 6;
-	now HP entry is 50 + ( debit * 4 );
-	now monsterHP is HP entry;
-	now lev entry is 6 + debit;
-	if ramvar is 2:
-		now wdam entry is 4 + ( debit / 3 );
-		now dex entry is 10 + ( lev entry / 5 );
-		now str entry is 12;
-		now sta entry is 14;
-		now per entry is 12;
-	else:
-		now wdam entry is 9 + ( debit / 3 );
-		now dex entry is 14 + ( lev entry / 5 );
-		now str entry is 16;
-		now sta entry is 18;
-		now per entry is 12;
 
 to say ram_attack:
 	now novicsex is 0;
@@ -59,36 +24,20 @@ to say ram_attack:
 		say "     'Now that's a good eager little ewe,' the ram mutters smugly, as he enjoys your body's automatic response to his dominant scent and actions. You try to protest, only to find yourself bleating just like a ewe as he sheathes himself in you in one swift move, the feel of his thick cock pressing into your body making your mind explode with pleasure. As the powerful ram thrusts into you again and again, you can feel your protests fading, and you can feel your dominant urges fading with each thrust, replaced by feelings of happy submission to your ram. With the intense pleasure of his cock stroking your insides, you can't help but embrace your new instincts, and you pant eagerly as you begin to clutch the powerful ram to your body tightly.";
 		say "     Happy at this newest evidence of his complete victory over your body, the ram lets out a triumphant cry as he shoots his seed into you, making you moan happily in response. After a minute of lying there with his cock still twitching inside you, the ram pulls himself out of your body, making you blink as you look up at the powerful beast. Standing up the ram grins down at you, 'Now that you know what it's like to be a proper ewe, I expect you will come running next time I call,' he says teasingly as you nod absently. 'I need to go find a few more members for the flock, so once you are a proper ewe, be sure to hunt me down. That's an order from your new ram,' he says with amusement as he turns and jogs off into the city. Leaving you lying there on the ground, your mind still fogged with submissive bliss, a strong desire to obey and do just what your ram ordered welling up within you, even as you try to hold on to your remaining humanity.";
 		CreatureSexAftermath "Player" receives "PussyFuck" from "Ram";
-		if FemaleList is not banned:
-			infect "Ewe";
-		else:
-			infect "Ram";
-	else if ramvar is 2 and HP of Player > 0:
+		if FemaleList is not banned and Player is not MalePreferred:
+			setmonster "Ewe";
+	else if ramvar is 2: [sub ram]
 		if Player is not male:
-			say "     Confused by your own submissive behavior, the ram seems unsure of what to do with himself. For a second, you're almost certain he's about to turn around and leave before a firm look of determination crosses his features. Approaching you, he eases you onto your back before reaching down for your cock... only to find none. Considering you've turned him into your cockhungry [if rambjvirg is false]slut[else]bottom[end if], the ram seems more than a little confused and disappointed that you aren't packing anything for him to play with. With a sad bleat, he rubs at where your cock once was before getting up and leaving you alone on the ground.";
+			say "     Confused [if HP of Player > 0]by your own submissive behavior[else]at somehow managing to beat you[end if], the ram seems unsure of what to do with himself. For a second, you're almost certain he's about to turn around and leave before a firm look of determination crosses his features. Approaching you, he eases you onto your back before reaching down for your cock... only to find none. Considering you've turned him into your cockhungry [if rambjvirg is false]slut[else]bottom[end if], the ram seems more than a little confused and disappointed that you aren't packing anything for him to play with. With a sad bleat, he rubs at where your cock once was before getting up and leaving you alone on the ground.";
 		else:
-			say "     Confused by your own submissive behavior, the ram seems unsure of what to do with himself. For a second, you're almost certain he's about to turn around and leave before a firm look of determination crosses his features. Approaching you, he eases you onto your back before reaching down to stroke your [Cock of Player] cock to fullness[if CockName of Player is not listed in infections of InternalCockList], making sure to massage your balls with his hoof-like hands[end if]. Tentatively, he [if rambjvirg is false]brings his muzzle down over your cock to suckle on your [cock size desc of Player] manhood before straddling your thighs and sinking [else]straddles your thighs and sinks [end if]your length into his waiting tailhole. Bleating in ecstasy, he pistons himself on your [if Cock Length of Player > 18]massive[else if Cock Length of Player > 12]impressive[else if Cock Length of Player > 6]sizable[else if Cock Length of Player > 3]average[end if] rod, bucking atop you desperately while trying to make this as pleasurable for you as it is for him. Clenching tight around you, the ram soon bucks roughly atop you as he bleats in orgasm and sprays his seed across your chest and stomach, prompting you to unload your own virile cum into his warm bowels. Collapsing atop you, he nuzzles your chest for a short while before climbing off of you and setting off.";
+			say "     Confused [if HP of Player > 0]by your own submissive behavior[else]at somehow managing to beat you[end if], the ram seems unsure of what to do with himself. For a second, you're almost certain he's about to turn around and leave before a firm look of determination crosses his features. Approaching you, he eases you onto your back before reaching down to stroke your [Cock of Player] cock to fullness[if CockName of Player is not listed in infections of InternalCockList], making sure to massage your balls with his hoof-like hands[end if]. Tentatively, he [if rambjvirg is false]brings his muzzle down over your cock to suckle on your [cock size desc of Player] manhood before straddling your thighs and sinking [else]straddles your thighs and sinks [end if]your length into his waiting tailhole. Bleating in ecstasy, he pistons himself on your [if Cock Length of Player > 18]massive[else if Cock Length of Player > 12]impressive[else if Cock Length of Player > 6]sizable[else if Cock Length of Player > 3]average[end if] rod, bucking atop you desperately while trying to make this as pleasurable for you as it is for him. Clenching tight around you, the ram soon bucks roughly atop you as he bleats in orgasm and sprays his seed across your chest and stomach, prompting you to unload your own virile cum into his warm bowels. Collapsing atop you, he nuzzles your chest for a short while before climbing off of you and setting off.";
 			CreatureSexAftermath "Ram" receives "AssFuck" from "Player";
-			if MaleList is not banned:
-				infect "Ram";
-	else if ramvar is 2:
-		if Player is not male:
-			say "     Confused at somehow managing to beat you, the ram seems unsure of what to do with himself. For a second, you're almost certain he's about to turn around and leave before a firm look of determination crosses his features. Approaching you, he eases you onto your back before reaching down for your cock... only to find none. Considering you've turned him into your cockhungry [if rambjvirg is false]slut[else]bottom[end if], the ram seems more than a little confused and disappointed that you aren't packing anything for him to play with. With a sad bleat, he rubs at where your cock once was before getting up and leaving you alone on the ground.";
-		else:
-			say "     Confused at somehow managing to beat you, the ram seems unsure of what to do with himself. For a second, you're almost certain he's about to turn around and leave before a firm look of determination crosses his features. Approaching you, he eases you onto your back before reaching down to stroke your [Cock of Player] cock to fullness[if CockName of Player is not listed in infections of InternalCockList], making sure to massage your balls with his hoof-like hands[end if]. Tentatively, he [if rambjvirg is false]brings his muzzle down over your cock to suckle on your [cock size desc of Player] manhood before straddling your thighs and sinking [else]straddles your thighs and sinks [end if]your length into his waiting tailhole. Bleating in ecstasy, he pistons himself on your [if Cock Length of Player > 18]massive[else if Cock Length of Player > 12]impressive[else if Cock Length of Player > 6]sizable[else if Cock Length of Player > 3]average[end if] rod, bucking atop you desperately while trying to make this as pleasurable for you as it is for him. Clenching tight around you, the ram soon bucks roughly atop you as he bleats in orgasm and sprays his seed across your chest and stomach, prompting you to unload your own virile cum into his warm bowels. Collapsing atop you, he nuzzles your chest for a short while before climbing off of you and setting off.";
-			CreatureSexAftermath "Ram" receives "AssFuck" from "Player";
-			if MaleList is not banned:
-				infect "Ram";
 	else if Player is MalePreferred:
 		say "     The beast pushes you down to the ground roughly, pinning you there as he pumps his own cock eagerly. You are forced to watch as his hoof-hands rub at his balls and cock, an impressive set of genitals on the woolly victor, unable to look away even as he starts to pump harder. You groan in defeat as he shoots his sticky seed all over your body, marking you as his. 'Ah, that was good,' the ram says happily as he rubs his cock some more. 'Almost nothing feels as good as defeating a trespasser in my territory,' the ram says as he gets off you, before turning to depart, leaving you to contend with the mess he left in his wake.";
-		if MaleList is not banned:
-			infect "Ram";
 	else:
 		say "     The beast pushes you down to the ground roughly, pinning you there as he pumps his own cock eagerly. You are forced to watch as his hoof-hands rub at his balls and cock, an impressive set of genitals on the woolly victor, unable to look away even as he starts to pump harder. You groan in defeat as he shoots his sticky seed all over your body, marking you as his. 'Ah that was good,' the ram says happily as he rubs his cock some more. 'Almost nothing feels as good as defeating a trespasser in my territory,' the ram says as he gets off you, before grinning evilly as he looks down at your helpless form. 'Now once you're done transforming into a proper ewe for me, you come find me right away. That's an order from your ram,' the powerful ram says, before chuckling as he heads back into the city. You are left lying there covered in his seed, and with a surprisingly strong desire to hunt him down again, just like he told you to...";
-		if FemaleList is not banned:
-			infect "Ewe";
-		else:
-			infect "Ram";
+		if FemaleList is not banned and Player is not MalePreferred:
+			setmonster "Ewe";
 
 To say ram_loss:
 	if novicsex > 2:
@@ -97,45 +46,60 @@ To say ram_loss:
 		say "     The ram groans as you knock him to the ground, the beast staring up at you fearfully as he signals his defeat. When you shift your weight as if to move closer, the formerly brave beast panics and scrambles away awkwardly before you can get close enough to grab him.";
 		increase ramlosstick by 1;
 	else if ramslut is true and ramvar is 2:
-		say "[subramdefeat]";
+		if Player is not male:
+			say "     Already used to this old song and dance, you move as if to land the final blow on the ram before he raises his hoof-like hands in defeat. [if Player is dominant]Smirking[else]Grinning[end if], you gesture for your [if Player is dominant]sissy [end if]ram to get on his knees. Eagerly, he drops onto them and reaches for where your cock should be... only to find none. Considering you've turned him into your cockhungry [if rambjvirg is false]slut[else]bottom[end if], the ram seems more than a little confused and disappointed that you aren't packing anything for him to play with.";
+		else:
+			if Libido of Player > 60: [Fuck him - Invol.]
+				say "[subramsex1]";
+			else:
+				say "     Already used to this old song and dance, you move as if to land the final blow on the ram before he raises his hoof-like hands in defeat. Finally done with false pretenses, the ram turns around and shakes his furry rump at you[if anallevel is 3], bleating and moaning as he spreads his cheeks for you while slipping a finger in and out of his twitching pucker[end if]. If you wanted to, you could have some fun with him. Will you?";
+				if Player consents:
+					LineBreak;
+					say "[subramsex]";
+				else:
+					LineBreak;
+					say "     [if Player is dominant]Growling, you shove him onto the ground and remind him that he isn't in any position to make demands. Your sissy ram whimpers submissively as you loom over him before slowly crawling away[else]Shrugging your shoulders, you tell him that his little display has put you out of the mood. His cheeks redden in shame and embarrassment as he turns and shuffles away awkwardly[end if].";
 	else:
 		say "     With a particularly vicious shove, you knock the stubborn ram to the ground, leaving him winded. [if Player is dominant]Grinning smugly, you approach the once-proud ram and pin him down with a firm foot on his chest[else]You can't help but smile from your victory as you step closer to the ram[end if]. [if Player is dominant]Considering his vulnerable position, will[else]Will[end if] you have some fun with him?";
 		if Player consents:
-			if (Player is female) and (Player is male):
-				LineBreak;
+			LineBreak;
+			if Player is herm:
 				say "     Would you rather [link]ride his cock (Y)[as]y[end link] or [link]fuck his ass (N)[as]n[end link]?";
 				if Player consents:
+					LineBreak;
 					say "[genericramride]";
 				else:
+					LineBreak;
 					say "[genericramfuck]";
 			else if Player is female:
 				say "[genericramride]";
 			else if Player is male:
 				say "[genericramfuck]";
-			else if (Cunt Count of Player is 0) and (Cock Count of Player is 0):
+			else:
 				say "     Without the proper equipment, there's not much for you to do with the beaten ram. Helpless as he is, you could [link]ride his cock (Y)[as]y[end link] or [link]leave him be (N)[as]n[end link].";
 				if Player consents:
+					LineBreak;
 					say "[genericramride1]";
 				else:
+					LineBreak;
 					say "     With a huff, you step back and watch as the ram staggers to his feet in a hurry and scrambles away in relief.";
 			now novicsex is 0;
 		else:
+			LineBreak;
 			increase novicsex by 1;
 			say "     Staring down at the once-proud beast, you shrug your shoulders in disinterest. [if Player is dominant]You sneer at the ram beneath you before stepping off of him. Seizing the opportunity, the formerly brave beast staggers onto his feet and scrambles away in a hurry[else]Confused by your lack of action, the beast staggers to his feet and scrambles away while he can[end if].";
 
 to say genericramfuck:
 	say "     [if Player is female]You could ride him, but you'd much rather fuck the ram's ass. [end if]Having come to a decision, you smirk down at the ram [if Player is dominant]smugly[else]coyly[end if] as you pull your [cock size desc of Player] [Cock of Player] cock out. 'I think I'll fuck you now.' At your words, his eyes go comically wide before he makes one last attempt at escaping. Scoffing, you use his own momentum against him and roll him over onto all fours. Without warning, you force your [if Cock Length of Player > 18]massive[else if Cock Length of Player > 12]impressive[else if Cock Length of Player > 6]sizable[else if Cock Length of Player > 3]average[end if] cock into his tailhole and pound away at the ram until you feel your orgasm closing in. With one final push, you drive your cock as deep as it'll go into the ram's ass and cum hard into his warm depths, claiming his insides with your [if Ball Size of Player > 3]plentiful [end if]seed. Catching your breath, you pull your wet cock out and slap it against his [if Ball Size of Player > 3]leaking[else]worn[end if] pucker before stroking his wooly rump and telling him what a good [if Player is dominant]little sissy[else]lay[end if] he is. Standing up, you see him viciously pumping his cock until he sprays his seed onto the ground with a loud bleat of pleasure.";
 	CreatureSexAftermath "Ram" receives "AssFuck" from "Player";
-	LineBreak;
 	if a random chance of 1 in 2 succeeds or "Dominant" is listed in feats of Player:
 		ramtrainingshift;
 
 to say genericramride:
 	say "     [if Player is male]You could fuck him, but you'd much rather ride the ram's cock. [end if]Having come to a decision, you smirk down at the ram [if Player is dominant]smugly[else]coyly[end if] before pouncing atop his prone form and tell him exactly what you intend to do. The ram bleats in surprise as you reach down and stroke his softening cock back to fullness, [if Player is dominant]giving it a tight squeeze to remind him you're the one in charge[else]giving it special attention[end if] before sinking your juicy cunt down onto it with a low moan. Exhausted as he is, he makes no effort to force you off of him as you [if Cunt Depth of Player < 5]try and take as much of his cock into you as you can[else]take his entire length into you[end if] and ride him hard and fast. Bleating and moaning, the two of you keep bucking and thrusting until you both reach a loud, crashing orgasm together[if Player is male], shooting your [Cum Load Size of Player] load over the ram's chest[end if]. Catching your breath, you slide off of him and moan at the warm feeling of his warm semen slipping out of your pussy. Standing up, you tell him what a good [if Player is dominant]obedient toy[else]lay[end if] he is.";
 	CreatureSexAftermath "Player" receives "PussyFuck" from "Ram";
-	LineBreak;
 	if a random chance of 1 in 2 succeeds:
-		if FemaleList is not banned:
+		if FemaleList is not banned and Player is not MalePreferred:
 			infect "Ewe";
 		else:
 			infect "Ram";
@@ -143,9 +107,8 @@ to say genericramride:
 to say genericramride1:
 	say "     Having come to a decision, you smirk down at the ram [if Player is dominant]smugly[else]coyly[end if] before pouncing atop his prone form and tell him exactly what you intend to do. The ram bleats in surprise as you reach down and stroke his softening cock back to fullness, [if Player is dominant]giving it a tight squeeze to remind him you're the one in charge[else]giving it special attention[end if] before lining up his cockhead with your backdoor. Exhausted as he is, he makes no effort to force you off of him as you sink his entire length into you, savoring the feel of his cock stretching out your inner walls as you start rocking your body and riding him hard and fast. Bleating and moaning, the two of you keep bucking and thrusting until you both reach a loud, crashing orgasm together, your anal muscles tightening around his pulsing manhood. Catching your breath, you slide off of him and moan at the warm feeling of his warm semen spilling out of your hole. Standing up, you tell him what a good [if Player is dominant]obedient toy[else]lay[end if] he is.";
 	CreatureSexAftermath "Player" receives "AssFuck" from "Ram";
-	LineBreak;
 	if a random chance of 1 in 2 succeeds:
-		if FemaleList is not banned:
+		if FemaleList is not banned and Player is not MalePreferred:
 			infect "Ewe";
 		else:
 			infect "Ram";
@@ -164,22 +127,7 @@ to ramtrainingshift:
 	else if ramtraining is 5:
 		now ramslut is true;
 
-to say subramdefeat:
-	if Player is not male:
-		say "     Already used to this old song and dance, you move as if to land the final blow on the ram before he raises his hoof-like hands in defeat. [if Player is dominant]Smirking[else]Grinning[end if], you gesture for your [if Player is dominant]sissy [end if]ram to get on his knees. Eagerly, he drops onto them and reaches for where your cock should be... only to find none. Considering you've turned him into your cockhungry [if rambjvirg is false]slut[else]bottom[end if], the ram seems more than a little confused and disappointed that you aren't packing anything for him to play with.";
-	else:
-		if Libido of Player > 60: [Fuck him - Invol.]
-			say "[subramsex1]";
-		else:
-			say "     Already used to this old song and dance, you move as if to land the final blow on the ram before he raises his hoof-like hands in defeat. Finally done with false pretenses, the ram turns around and shakes his furry rump at you[if anallevel is 3], bleating and moaning as he spreads his cheeks for you while slipping a finger in and out of his twitching pucker[end if]. If you wanted to, you could have some fun with him. Will you?";
-			if Player consents:
-				say "[subramsex]";
-			else:
-				LineBreak;
-				say "     [if Player is dominant]Growling, you shove him onto the ground and remind him that he isn't in any position to make demands. Your sissy ram whimpers submissively as you loom over him before slowly crawling away[else]Shrugging your shoulders, you tell him that his little display has put you out of the mood. His cheeks redden in shame and embarrassment as he turns and shuffles away awkwardly[end if].";
-
 to say subramsex:
-	LineBreak;
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]
@@ -193,6 +141,7 @@ to say subramsex:
 	now sortorder entry is 2;
 	now description entry is "Make the horny ram suck you off";
 	[]
+	sort the table of fucking options in sortorder order;
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
 		say "[link][y] - [title entry][as][y][end link][line break]";
@@ -205,23 +154,23 @@ to say subramsex:
 			choose row calcnumber in table of fucking options;
 			say "[title entry]: [description entry]?";
 			if Player consents:
-				let nam be title entry;
+				LineBreak;
 				now sextablerun is 1;
-				if (nam is "Fuck the ram"):
-					say "[subramsex1]";
-				if (nam is "Have him blow you"):
-					say "[subramsex2]";
-				wait for any key;
+				if title entry is:
+					-- "Fuck the ram":
+						say "[subramsex1]";
+					-- "Have him blow you":
+						say "[subramsex2]";
 		else if calcnumber is 0:
+			LineBreak;
 			now sextablerun is 1;
 			say "     Changing your mind, [if Player is dominant]you shove the ram onto the ground and tell him exactly that before ordering him to scram. Your sissy ram whimpers submissively as you loom over him before slowly crawling away[else]you shrug your shoulders and tell him exactly that[end if].";
-			wait for any key;
 		else:
-			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options], or 0 to exit.";
+	wait for any key;
 	clear the screen and hyperlink list;
 
 to say subramsex1: [Fuck him]
-	LineBreak;
 	if Player is dominant:
 		say "     Smirking, you gesture for the submissive ram to get on his knees. Eagerly, he drops onto them and reaches for your cock[if Cock Count of Player > 1]s, taking one in each hand[end if] and starts to stroke [itthemm] to fullness. Chuckling at his initiative, you tease the broken-in male about how much he clearly likes being the ewe in the relationship. He bleats out what might be a complaint, but given the expert handjob he's currently giving you, you're willing to let it slide as you thrust into his hoof-like hands eagerly. Satisfied with the foreplay, you shove the ram onto the ground and order him to get on all fours.";
 		say "     Bleating happily, he gets into position and presents his ass to you[if anallevel is 3], spreading his wooly cheeks apart for you to see his winking pucker begging to be filled[end if]. You can't help but take a moment to relish in what you've turned the once-proud ram into - your toy. Your plaything. Your slut. With a wicked grin, you press your cockhead against his tailhole, putting just enough pressure against it to feel the panting ram's anal ring yielding. Leaning over his prone figure, you ask him how badly he needs your cock, grinning broadly as the only answer is a needy whimper that has him squirming against you. Continuing on like this, you tease the submissive anthro mercilessly, just a hair's breadth away from sinking your length into him, until he is absolutely desperate and begging for you to fuck him. Relenting with a satisfied grunt, you finally plunge into his [if Cock Length of Player > 24]incredibly tight[else if Cock Length of Player > 12]tight[else]loose[end if] backdoor in one swift motion.";
@@ -236,7 +185,6 @@ to say subramsex1: [Fuck him]
 
 to say subramsex2: [Get blown]
 	if rambjvirg is true: [First time]
-		LineBreak;
 		if Player is dominant:
 			say "     Smirking, you ask him if he's ever sucked a cock before. 'No,' he admits meekly as he turns to face you - not that it surprises you considering you were the one to first claim his black cherry, 'But I, uh... wouldn't mind trying. With you.' Well, who are you to tell your little slut no? Pulling out your [cock size desc of Player] [Cock of Player] cock, you slowly stroke it to fullness while watching your sissy ram's pupils dilate with lust. Once you're fully hard, you shove him onto his knees before slapping your [cock size desc of Player] manhood against his cheeks and watch as he stares at your length [if Cock Length of Player > 12]with worry[else]in admiration[end if]. A quick reprimand from you gets him moving.";
 			say "     Sticking his tongue out, your sissy ram tentatively laps at the precum [if Ball Size of Player > 4]pouring[else]leaking[end if] out of your slit. His inexperience being obvious, he does this for a while before finally moving on to trace the length of your [cock size desc of Player] [Cock of Player] dick with his tongue. Growing impatient, you tell your little sissy to open wide. Without even questioning it, he opens his muzzle for you and you seize the opportunity to force your cock into his maw. Grabbing onto his horns, you fuck your little sissy's muzzle hard and fast, expecting him to adjust to the rough treatment you're giving him. Eventually, he starts to get the hang of it.";
@@ -249,7 +197,6 @@ to say subramsex2: [Get blown]
 			say "     Feeling your orgasm closing in, you warn the submissive ram that you're getting close. This only seems to edge him on to take you deeper as you shoot your [Cum Load Size of Player] load down his throat. Satisfied, you pull out of [if Cock Length of Player < 7]his mouth[else]his throat[end if] with a wet slurp. Grinning, you ask him how he liked tasting a cock for the first time. Considering he looks blissed out of his mind, you're inclined to believe it was pretty damn good for him.";
 		now rambjvirg is false;
 	else: [Repeat]
-		LineBreak;
 		if Player is dominant:
 			say "     Sensing your intent, the ram turns to face you and drops to his knees as you approach. Looking up at you with hooded eyes, the desire to suck your cock is painted on the ram's face, patently obvious in the way he licks and bites his lips. It seems you made an eager cumslut out of him, and he's just too proud to ask for it. You're more than happy to oblige his need, so you run your hand along his jawline and let him suck sensually on your fingers for a moment, reveling at the sight of what you turned the once-proud ram into. Satisfied with the foreplay, you pull your hand back with a wet pop and grab your [cock size desc of Player] cock, dangling it in front of his lips.";
 			say "     Without hesitation, he gets to lapping along the length of your manhood, moaning and bleating softly as he worships your meat. Not needing to be prompted this time, he opens his muzzle and starts to take your cock into [if Cock Length of Player > 6]his throat[else]his maw[end if], hollowing out his cheeks and starting to suck you off in earnest. Unwilling to hold back, you grab onto his horns and start to pull his head down as you fuck his mouth roughly. Moaning, [if CockName of Player is not listed in infections of InternalCockList]you feel him start to massage your balls reverentially[else]you feel his hoof-like hands clutch at your ass, pulling you closer[end if] as he takes you deep into [if Cock Length of Player < 7]his mouth[else]his throat[end if].";
@@ -270,6 +217,27 @@ name(text)	PrepFunction(text)
 
 to say PrepCombat_Ram:
 	setmongender 3;
+	now ramvar is 1;
+	if ramslut is true and (a random chance of 1 in 4 succeeds or (Player is dominant and a random chance of 1 in 2 succeeds)):
+		now ramvar is 2;
+	choose row MonsterID from the Table of Random Critters;
+	let debit be 0;
+	if HardMode is true and level of Player > 6, let debit be level of Player - 6;
+	now HP entry is 50 + ( debit * 4 );
+	now monsterHP is HP entry;
+	now lev entry is 6 + debit;
+	if ramvar is 2: [sub ram]
+		now wdam entry is 4 + ( debit / 3 );
+		now dex entry is 10 + ( lev entry / 5 );
+		now str entry is 12;
+		now sta entry is 14;
+	else: [dom ram]
+		project the Figure of Ram_naked_icon;
+		now wdam entry is 9 + ( debit / 3 );
+		now dex entry is 14 + ( lev entry / 5 );
+		now str entry is 16;
+		now sta entry is 18;
+	now per entry is 12;
 
 Table of Random Critters (continued)
 NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
@@ -445,28 +413,24 @@ When Play begins:
 	[Clit Size Adjective is generated by a function and can be used in scenes: very small/small/average/large/very large]
 ]
 
+Section 4 - Drop Item
 
 Table of Game Objects (continued)
 name	desc	weight	object
 "tainted wool"	"A small bundle of rough wool you found in the city, strangely enough, it has a rather pleasant musky scent coming from it."	1	tainted wool
 
 tainted wool is a grab object.
-
-Usedesc of tainted wool is "[taintedwooleffect]";
+Usedesc of tainted wool is "[taintedwooleffect]".
+Scent of Tainted wool is "The wool smells of ram musk.".
 
 to say taintedwooleffect:
-	say "You take out the small bundle of wool you acquired earlier, and your head swims slightly as your nose fills with its strong musky odor. Feeling a bit aroused by the strange scent, you slowly start to rub the wool up against your cheek in order to enjoy the smell better. The feeling of the soft wool rubbing against your body, as well as the arousing aroma, makes you lose track of time for a minute, until you realize you can feel your body starting to change.";
-	if FemaleList is not banned:
+	say "     You take out the small bundle of wool you acquired earlier, and your head swims slightly as your nose fills with its strong musky odor. Feeling a bit aroused by the strange scent, you slowly start to rub the wool up against your cheek in order to enjoy the smell better. The feeling of the soft wool rubbing against your body, as well as the arousing aroma, makes you lose track of time for a minute, until you realize you can feel your body starting to change.";
+	if FemaleList is not banned and Player is not MalePreferred:
 		infect "Ewe";
 	else:
 		infect "Ram";
 
-
-instead of sniffing Tainted wool:
-	say "The wool smells of ram musk.";
-
-
-Section 4 - Endings
+Section 5 - Endings
 
 Table of GameEndings (continued)
 Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
@@ -475,19 +439,11 @@ Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered
 This is the Ram Infection rule:
 	if Player has a body of "Ram":
 		trigger ending "Ram Infection"; [Here it states, that the ending has been played.]
-		let ram be "Ram";
-		let ewe be "Ewe";
 		if Libido of Mary > 0:
 			if humanity of Player < 10:
-				if Player is male:
-					say "     Your mind giving out under Strain of the infection, you head out into the city, Mary following along like a good little ewe. You quickly set about finding more members to convert to your flock, increasing your numbers for a time and protecting the trail of Ewes following you. Unfortunately you aren't alone in the city and are beset on all sides by different predators and infected until finally you and your small flock are captured by a group of hyenas. At first it is somewhat disconcerting to be surrounded by predators, but soon you realize it isn't all bad. As the only male you are indispensable to them, and you are kept in some comfort, your only duty is to breed the Ewes all day and relax. Eventually you don't even mind one or two of your flock disappearing every now and then, and you even come to enjoy being sheared...";
-				else:
-					say "     Your mind beginning to fray at the edges, you head back to the store where Mary is waiting for you. Without the makings of a real ram, you aren't quite able to form a flock of your own with your friendly little ewe, fortunately though, Mary has a plan for you both. Taking advantage of your increased strength, the two of you head out into the city together, your dimly recalled familiarity with the city, as well as Mary's expertise in scavenging serving you well as you look for a safe location to set up. Eventually finding a suitable spot, the two of you set out to trap yourselves a nice ram or two for you both to share. It isn't long before you have one of those rams wandering around without a flock trussed up and protesting in your new hideout, the two of you easily able to overpower his surprised form. His protesting stops quickly however, when he realizes that the two of you need a nice male like him for your flock, and he resolves to do his duty eagerly. He is somewhat surprised to find himself relegated to the role of a breeding stud, the two of you visiting him whenever the urge strikes you, and ignoring him otherwise. Your strength protecting the small flock instead of his, while Mary's smarts helps your small group survive in the dangerous city, while he warms both of your beds at night. Your lust fogged mind is happy to have found such a lovely flock to be a part of, as you cuddle happily up against Mary the two of you spending plenty of lustful time together without your new ram, even as she makes plans for the soldiers which are sure to come soon... and you feel a smile stretching your sheep-like muzzle as you realize your flock will probably be growing larger very soon indeed.";
+				say "     Your mind [if Player is male]giving out under Strain of the infection, you head out into the city, Mary following along like a good little ewe. You quickly set about finding more members to convert to your flock, increasing your numbers for a time and protecting the trail of Ewes following you. Unfortunately you aren't alone in the city and are beset on all sides by different predators and infected until finally you and your small flock are captured by a group of hyenas. At first it is somewhat disconcerting to be surrounded by predators, but soon you realize it isn't all bad. As the only male you are indispensable to them, and you are kept in some comfort, your only duty is to breed the Ewes all day and relax. Eventually you don't even mind one or two of your flock disappearing every now and then, and you even come to enjoy being sheared...[else]beginning to fray at the edges, you head back to the store where Mary is waiting for you. Without the makings of a real ram, you aren't quite able to form a flock of your own with your friendly little ewe, fortunately though, Mary has a plan for you both. Taking advantage of your increased strength, the two of you head out into the city together, your dimly recalled familiarity with the city, as well as Mary's expertise in scavenging serving you well as you look for a safe location to set up. Eventually finding a suitable spot, the two of you set out to trap yourselves a nice ram or two for you both to share. It isn't long before you have one of those rams wandering around without a flock trussed up and protesting in your new hideout, the two of you easily able to overpower his surprised form. His protesting stops quickly however, when he realizes that the two of you need a nice male like him for your flock, and he resolves to do his duty eagerly. He is somewhat surprised to find himself relegated to the role of a breeding stud, the two of you visiting him whenever the urge strikes you, and ignoring him otherwise. Your strength protecting the small flock instead of his, while Mary's smarts helps your small group survive in the dangerous city, while he warms both of your beds at night. Your lust fogged mind is happy to have found such a lovely flock to be a part of, as you cuddle happily up against Mary the two of you spending plenty of lustful time together without your new ram, even as she makes plans for the soldiers which are sure to come soon... and you feel a smile stretching your sheep-like muzzle as you realize your flock will probably be growing larger very soon indeed.[end if]";
 			else:
-				if Player is male:
-					say "     You and Mary are quite happy when the rescue arrives, allowing you to leave the city once you are determined to be safe enough. You travel together for a while, but it is lonely with only the two of you. You decide to settle down and raise a larger flock eventually, opening a small clothing and fabric store before settling down to breed some new young lambs. The demand for your hand-spun clothing and well-made designs quickly outstrips your ability to keep up, and so you find yourself hiring on a few other young women to help, who eventually join the flock eagerly after a gift of some of your [']specially treated['] wool garments. You soon enough have a rather brisk business going, and a small but ever increasing flock to take care of you. Though the next time the building inspector complains about the multiple occupancy you just might have to invite her into the flock as well...";
-				else:
-					say "     You and Mary are quite happy when the rescue arrives, the two of you more than happy to prove yourselves safe to the nice soldiers who examine you. Once they let you go, you both head out together into the world outside the city, your changed forms make it hard to fit in however, and a flock of just two members seems rather lonely sometimes. At Mary's urging, you both head out into the country, where you can start a small sheep farm of your own, both of you agreeing that at least having some fellow sheep around should be rather comforting to your changed senses. When your flock arrives, the two of you feel much better immediately, and you discover the other sheep follow you around without protest when you lead them places, making your job much easier than normal. You find one of the rams eyeing you and Mary rather often however, and are almost unsurprised to return home one day to find Mary bleating away happily underneath him. The sight is strangely arousing, as he finishes mating her, and she blushingly explains that her season crept up on her, and he was just so tempting and right there... Letting her know you aren't upset, she smiles happily, before teasingly reminding you that your own season will be coming soon. Blushing in surprise, you look at the handsome ram nosing around your flock member, and much to Mary's amusement, you let her know that you can hardly wait...";
+				say "     You and Mary are quite happy when the rescue arrives, [if Player is male]allowing you to leave the city once you are determined to be safe enough. You travel together for a while, but it is lonely with only the two of you. You decide to settle down and raise a larger flock eventually, opening a small clothing and fabric store before settling down to breed some new young lambs. The demand for your hand-spun clothing and well-made designs quickly outstrips your ability to keep up, and so you find yourself hiring on a few other young women to help, who eventually join the flock eagerly after a gift of some of your [']specially treated['] wool garments. You soon enough have a rather brisk business going, and a small but ever increasing flock to take care of you. Though the next time the building inspector complains about the multiple occupancy you just might have to invite her into the flock as well[else]the two of you more than happy to prove yourselves safe to the nice soldiers who examine you. Once they let you go, you both head out together into the world outside the city, your changed forms make it hard to fit in however, and a flock of just two members seems rather lonely sometimes. At Mary's urging, you both head out into the country, where you can start a small sheep farm of your own, both of you agreeing that at least having some fellow sheep around should be rather comforting to your changed senses. When your flock arrives, the two of you feel much better immediately, and you discover the other sheep follow you around without protest when you lead them places, making your job much easier than normal. You find one of the rams eyeing you and Mary rather often however, and are almost unsurprised to return home one day to find Mary bleating away happily underneath him. The sight is strangely arousing, as he finishes mating her, and she blushingly explains that her season crept up on her, and he was just so tempting and right there... Letting her know you aren't upset, she smiles happily, before teasingly reminding you that your own season will be coming soon. Blushing in surprise, you look at the handsome ram nosing around your flock member, and much to Mary's amusement, you let her know that you can hardly wait[end if]...";
 		else if Libido of Leon > 0:
 			if humanity of Player < 10:
 				if Player is female:
@@ -504,7 +460,10 @@ This is the Ram Infection rule:
 				else:
 					if lust of Leon < 2:
 						say "     Overwhelmed by your new instinctive desires and feeling alone without a flock, you make your way back to the store and the sheep there. But you are barred from entry, Leon not wanting another ram among his flock, even a neutered one. Knowing you have no real means to sway the ram, you eventually give up and wander off into the predator-filled city on your own.";
-						say "     [one of]Your wanderings take you to a wooded area growing in the heart of the city. Timidly, you slip into the forest and follow its paths. There you are a beset by a large wolf with an evil sneer on his muzzle, who captures you and brings you back to his wooded lair. At first you fear he's going to eat you, but you're instead given to his pups as a playtoy and practice prey. And while they do play rough at times, nipping and biting, they also use you for fucking practice upon growing older[or]Finding yourself out on the plains outside the city, you drift around there until you come across a large farm still in operation[if McDermott Farm Entrance is known]. And while there's something vaguely familiar about the place and its residents, your mind it too gone to recall properly[end if]. There you feel at ease with the other animal residents and settle there, [if SkinName of Player is ram or SkinName of Player is ewe]living in one of the barns and contributing your wool through regular shearing[else]helping where you can as a farmhand[end if][or][if SkinName of Player is ewe or SkinName of Player is ram]You quickly find yourself captured by a herm cougar. And while she's disappointed to find you genderless, she decides to keep you regardless. You are collared and chained to her bed. Trapped there, she makes use of you and your fluffy body as a living pillow, calling you her [italic type]dakimakura[roman type]. You are frequently stained with her semen and juices as she masturbates against your fleecy coat or humps you while asleep. Things get especially messy whenever she brings others back to her lair for a romp. And while you come to enjoy your indolent lifestyle and your affectionate mistress, you give up on ever being more than a cherished object[else]You quickly find yourself captured by a herm cougar. Disappointed to find you genderless, she brings you with her regardless. You are collared and chained in her kitchen to act as her cook and maid for the lustful feline. And you are subjected to those lusts as well, the puma having you provide oral pleasure or an ass to fuck as part of your duties. While this isn't too bad on most occasions, things are much more difficult on you whenever your mistress invites her friends over for a romp. Then you are constantly harassed while trying to cook for the predators, frequently groped or even fucked while trying to prepare or serve their meals[end if][at random]";
+						if SkinName of Player is "Ram" or SkinName of Player is "Ewe":
+							say "     [one of]Your wanderings take you to a wooded area growing in the heart of the city. Timidly, you slip into the forest and follow its paths. There you are a beset by a large wolf with an evil sneer on his muzzle, who captures you and brings you back to his wooded lair. At first you fear he's going to eat you, but you're instead given to his pups as a playtoy and practice prey. And while they do play rough at times, nipping and biting, they also use you for fucking practice upon growing older[or]Finding yourself out on the plains outside the city, you drift around there until you come across a large farm still in operation[if McDermott Farm Entrance is known]. And while there's something vaguely familiar about the place and its residents, your mind it too gone to recall properly[end if]. There you feel at ease with the other animal residents and settle there, living in one of the barns and contributing your wool through regular shearing[or]You quickly find yourself captured by a herm cougar. And while she's disappointed to find you genderless, she decides to keep you regardless. You are collared and chained to her bed. Trapped there, she makes use of you and your fluffy body as a living pillow, calling you her [italic type]dakimakura[roman type]. You are frequently stained with her semen and juices as she masturbates against your fleecy coat or humps you while asleep. Things get especially messy whenever she brings others back to her lair for a romp. And while you come to enjoy your indolent lifestyle and your affectionate mistress, you give up on ever being more than a cherished object[at random]";
+						else:
+							say "     [one of]Your wanderings take you to a wooded area growing in the heart of the city. Timidly, you slip into the forest and follow its paths. There you are a beset by a large wolf with an evil sneer on his muzzle, who captures you and brings you back to his wooded lair. At first you fear he's going to eat you, but you're instead given to his pups as a playtoy and practice prey. And while they do play rough at times, nipping and biting, they also use you for fucking practice upon growing older[or]Finding yourself out on the plains outside the city, you drift around there until you come across a large farm still in operation[if McDermott Farm Entrance is known]. And while there's something vaguely familiar about the place and its residents, your mind it too gone to recall properly[end if]. There you feel at ease with the other animal residents and settle there, helping where you can as a farmhand[or]You quickly find yourself captured by a herm cougar. Disappointed to find you genderless, she brings you with her regardless. You are collared and chained in her kitchen to act as her cook and maid for the lustful feline. And you are subjected to those lusts as well, the puma having you provide oral pleasure or an ass to fuck as part of your duties. While this isn't too bad on most occasions, things are much more difficult on you whenever your mistress invites her friends over for a romp. Then you are constantly harassed while trying to cook for the predators, frequently groped or even fucked while trying to prepare or serve their meals[at random]";
 					else:
 						say "     Overwhelmed by your new instinctive desires and feeling alone without a flock, you waste no time in returning to the store. There the flock is waiting for you, the studly ram is a little disappointed to see you in your current state, but welcomes you nonetheless. As a neutered wether, you are no threat to his position and he does make sure to give you the occasional attention like you'd received previously when male. At the store, you work along the other ewes while Leon cares for you all. And while Leon certainly prefers the others, as there's just a lot of breeding to be done, he does permit you to help by orally pleasing the ewes most in need while he's rutting another.";
 						say "     Eventually the military come through the city, and your flock sells some of the soldiers some basic equipment and items, and even arranges for some basic resupply from outside the city to fill the shelves back up again. While the soldiers suggest you should probably evacuate several times, Leon is more than happy with his new life here in the changed city. A viewpoint you are able to help your ram entice some of the visiting soldiers with, adding them to the flock when they won't be missed. Your being a passive, submissive wether helps to put them at ease. And once a candidate is alone with you, Leon appears to mount and make an ewe out of them. The flock grows slowly and steadily to become the largest flock in the city.";
@@ -518,11 +477,11 @@ This is the Ram Infection rule:
 						say "     When the soldiers arrive, you guide them to the store and the flock of sheep taking shelter there. The flock greet you with a joyous response, Leon welcoming you into his fleecy arms. And while he's reluctant to allow his excited flock to leave the store, he can't actually refuse under the circumstances either. You and the rest of the sheep end up going through the military base together. While Leon manages his ewes, your less aggressive nature allows you to help him deal with the processing procedures for the sheep. This helps give a better impression of your flock overall so things go more smoothly. You even manage to arrange access to some of the other survivors with ovine infections, leading to several more ewes being drawn into Leon's flock.";
 						say "     Upon release, Leon searches for a place to have his flock settle down. While several large stores and businesses are checked out, they prove to be insufficient for the large and growing flock's needs. In the end, Leon makes a large land purchase outside of a small country town and a homestead is established there. There's some tension early on with some townsfolk, but your passive nature helps smooth things over even as the flock's size and influence spreads into the community. Over time, those problems go away as more and more of the people become flock members themselves. Eventually, the whole of the valley town is sheep-run with Leon in charge.";
 						say "     As troubles outside the valley grow, your community becomes a safe stopover point and the general store established does business with those passing through. On occasion, these travelers don't end up leaving, drawn into the flock by Leon's confidence and your soft words. In time, when the flock's grown large enough, some of Leon's male heirs leave with a collection of ewes, moving on to establish themselves in other nearby towns and spreading the central flock's influence further.";
-				else:
+				[else:
 					if lust of Leon < 2:
 						say "***survived and refused as wether.";
 					else:
-						say "***survived and accepted as wether.";
+						say "***survived and accepted as wether.";]
 		else:
 			if humanity of Player < 10:
 				if Player is male:
@@ -534,6 +493,5 @@ This is the Ram Infection rule:
 					say "     You feel somewhat grateful when the rescue arrives, as they take you to their base to make sure you are no longer infectious. Once there, you waste no time in convincing the all too pliable female nurses to clear you for release, teasing them with your ram-like musk, and making them promise to follow after you as soon as they can. Grinning you head out into the world eagerly, already planning out the best way to acquire a nice flock to play with, and the best way to make a living. You eventually find yourself in one of the major cities, making some contacts, and working for minimum wage, under a lazy and abusive male supervisor, which is an offense to your Ram like dignity. When one of the nurses finally shows up, you waste no time in teasing and playing with her, enjoying how she begs and pleads for you to change her and make her your ewe. Once you finally give in and finish changing her, you have an amusing idea, which your new ewe eagerly goes along with, luring your offensive supervisor out with tempting glimpses of her changed body. When he is fully distracted and in your apartment, you strike, your ewe eagerly holding him down while you make a lovely new ewe for your flock, with your two first flock members by your side, it is easy enough to acquire several more. Soon you quit your old job entirely, and are able to relax in style, having your new ewes work for you, or often enough renting your shapely flock members out to curious people for a night or two of mind blowing sex, and some of those who come back often enough end up finding out just how mind-blowing the sex can be as a female ewe as well. It's a ram's life...";
 				else:
 					say "     When the rescue comes, several of the soldiers are amused by your sheep-like new body, and make several jokes as they return you to their base. Feeling somewhat aggressive, you end up challenging several of the soldiers to wrestling matches, which your new form lets you win handily. Flush with victory, you end up offering to have some fun with some of the recently defeated soldiers, an offer they heartily accept. Several hours and one amazing orgy later, you and a group of rather embarrassed looking new rams will emerge from the barracks, much to the amusement of their fellow squad-mates. Your new friends will call in several favors in order to sneak themselves and you out of the camp without anyone else noticing, which leads you all piling in for a road trip to the nearest soldiers house. Several hours spent in the car with their masculine musk nearly drives you crazy, and your female scent is equally distracting to your new mates, and when you eventually arrive at the house, you are barely through the door before sheep-like bodies are rubbing up against each other again. After several days of near constant rutting, you finally feel somewhat satiated, and start to think clearly again, and though you still enjoy the approving looks of your mates as they stroke your soft fleece, your burning need is mostly sated. Once they introduce themselves, you begin planning your next steps, all of the males amusingly enough bowing to your dominance as you go over who they know who might make good additions to your small flock, as well as family members they think would benefit from your new changes. Soon you are on a new road trip together, your new rams making several phone calls to get people ready, while you head out to gather up your soon-to-be flock members before you can all find someplace safe to settle down together, a smile stretching your muzzle as you look forward to how much fun you and your new flock are going to have together.";
-
 
 Ram ends here.

@@ -115,21 +115,11 @@ Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered
 This is the Rubber Puma Infection rule:
 	if Player has a body of "Rubber Puma":
 		trigger ending "Rubber Puma Infection";
-		if humanity of Player < 10:
-			say "     Having never found a way to remove the infected sneakers (or tried to), you succumb, body and mind, to the Rubber Puma infection. You elude the military countless times, thanks to your extraordinary athletic abilities, until your very existence becomes an urban legend. Soon, every jogger and sportsman of the area know of the Rubber Puma. They say that, if you run or exercise alone, during the night, the Puma chases you. [SubjectProCap of Player] outruns you; [SubjectPro of Player] always does. Then, [SubjectPro of Player] molests you all night, before leaving by your body a pair of rubber sport shoes. They say that those who choose to wear these shoes never come back.";
-		else:
-			say "     The infected rubber sneakers forced you to remain trapped in the form of a Rubber Puma. Fortunately, you managed to remain in control of your sanity, thanks to a careful planning of your physical efforts, convincing the military to let you go, under surveillance. During a particularly intense session on your treadmill, you discover that your rubber body begins to exude pools of latex which quickly reform as new pairs of sport shoes. This gives you a great idea, and you rush to your phone, to make some calls to your bank. Several months later, 'Rubber Pumas' become the new fashion among youngsters and sportsmen alike. Most of your sells comes from your microwaved line, which presents no risk of infection, but you let slip, from time to time, 'original' versions, which sell for gold on the black market, ensuring your company a steady flow of money from 'thankful' investors.";
+		say "     [if humanity of Player < 10]Having never found a way to remove the infected sneakers (or tried to), you succumb, body and mind, to the Rubber Puma infection. You elude the military countless times, thanks to your extraordinary athletic abilities, until your very existence becomes an urban legend. Soon, every jogger and sportsman of the area know of the Rubber Puma. They say that, if you run or exercise alone, during the night, the Puma chases you. [SubjectProCap of Player] outruns you; [SubjectPro of Player] always does. Then, [SubjectPro of Player] molests you all night, before leaving by your body a pair of rubber sport shoes. They say that those who choose to wear these shoes never come back[else]The infected rubber sneakers forced you to remain trapped in the form of a Rubber Puma. Fortunately, you managed to remain in control of your sanity, thanks to a careful planning of your physical efforts, convincing the military to let you go, under surveillance. During a particularly intense session on your treadmill, you discover that your rubber body begins to exude pools of latex which quickly reform as new pairs of sport shoes. This gives you a great idea, and you rush to your phone, to make some calls to your bank. Several months later, 'Rubber Pumas' become the new fashion among youngsters and sportsmen alike. Most of your sells comes from your microwaved line, which presents no risk of infection, but you let slip, from time to time, 'original' versions, which sell for gold on the black market, ensuring your company a steady flow of money from 'thankful' investors[end if].";
 
 Section 5 - Creature Insertion
 
 [The Rubber Puma is not an enemy proper (yet), but I leave the code there for the infection]
-
-[Table of CombatPrep (continued)
-name(text)	PrepFunction(text)
-"Rubber Puma"	"[PrepCombat_Rubber Puma]"
-
-to say PrepCombat_Rubber Puma:
-	say "";]
 
 Table of Random Critters (continued)
 NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)

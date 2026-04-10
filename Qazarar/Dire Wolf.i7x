@@ -4,24 +4,24 @@ Section 1 - Creature Responses
 
 DireWolfOral is a number that varies.
 
-to say DireWolfLoss:
+[to say DireWolfLoss:
 	if Direwolf Dom is tamed:
 		say "[DirewolfSuperLoss]";
 	else if Charisma of Direwolf Dom > 15: [temporary variable control]
 		say "[DireWolfNormalLoss]"; ['tame' the direwolf pet here, link to normal loss until implemented]
 	else: [regular scene]
-		say "[DireWolfNormalLoss]";
+		say "[DireWolfNormalLoss]";]
 
 to say DireWolfNormalLoss: [regular loss scenes]
 	say "     You collapse to the ground, defeated by the massive canine. The beast stands over you, growling loudly, the expression clearly demanding that you submit to him. At the mercy of the powerful wolf, you have no choice but to roll over and let him decide what to do with you.";
-	if Player is female and ((anallevel is 3 and a random chance of 1 in 3 succeeds) or (anallevel < 3 and a random chance of 1 in 2 succeeds)): [vaginal scene]
+	if Player is female and (a random chance of 1 in 3 succeeds or (anallevel < 3 and a random chance of 1 in 2 succeeds)): [vaginal scene]
 		say "     It takes very little time for the massive wolf to lay you across a log, leaving you in the perfect position to be taken by the creature. He steps into place above you, pressing your face into his fur, and his shafts against your ass. You're too dazed to do anything but lie there under the huge beast, awaiting whatever it chooses to do with you. You don't need to wait very long before it announces its plans, by way of pressing the tip of his lower shaft up against your entrance. The realization that one of those massive cocks is about to try and force its way into you starts to break you out of your daze, but not quickly enough to change your situation. Before you have a chance to do more than gasp, the beast has already started pushing forwards, the tip of his canine endowment easily spreading your cunt open enough to receive the head.";
 		say "     The dire wolf continues to press forward, the huge member stretching you wide open with far greater ease than it has any right to. As the lower shaft is filling you, the remaining shaft is [if Player is male]rubbing against your own[else]driving along your chest[end if], providing an entirely separate pleasure, dividing your limited focus even further. Despite your reduced concentration, you're still quite able to feel the over sized dick deep within you, larger than your body should be able to handle. When you pull your face out of his fur, you're even able to see the outline of his massive cock in your stomach, as he comes to a stop. For a moment, things are somewhat peaceful, letting you soak in the sensation of being completely filled with the canine rod, another pressed against your [if Player is male]own[else]chest[end if], feeling the knot waiting just outside your passage, and the powerful wolf looming completely above you. The peaceful moment does not last.";
 		WaitLineBreak;
 		say "     You go from soaking in the sensations to drowning in them when the creature begins to move, thrusting its shaft in and out of you. You are assailed on all sides, [if Player is male]the joined pleasures of being fucked and frotted all at once,[else if Breast Size of Player > 2]the joined pleasures of being fucked and titfucked all at once,[else] the pleasure of being fucked,[end if] the wolf's heavy balls slapping against your ass on the peak of each thrust, the bulge in your stomach reaching it's maximum size at the same time, and all the while you have the knot battering against your entrance. You start to lose focus, no longer able to perceive any one sensation, but simply to let the combined sensations wash over you. The indistinct blur of pleasure is only slightly disturbed by the sharper sensation of the lower knot finally forcing its way just a little bit further, and locking you in place.";
 		say "     The creature howls as it reaches climax, and at the same time a paired wave of pleasure and cum flow through you. The upper cock sprays a deluge all over your torso [if Player is male]and your own member[end if], soaking you thoroughly, and leaving you plastered in his release. The other shaft fills you with a matching load, further increasing the distended outline in your stomach. The shape is larger and less distinct from the flooding you have received, leaving you feeling bloated and full. That sensation is enough to cause you to cross that peak as well[if Player is male], your member adding to the sticky painting between the two of you[end if]. There you remain for quite some time, with the dire wolf growling out its dominance over you, until finally the knot recedes enough for it to pull out of you.";
 		CreatureSexAftermath "Player" receives "PussyFuck" from "Dire Wolf";
-	else if anallevel is not 1 and (Cunt Count of Player is 0 or anallevel is 3) and (a random chance of 1 in 2 succeeds or (anallevel is 3 and a random chance of 1 in 3 succeeds) or ("Mpreg" is listed in feats of Player and a random chance of 1 in 5 succeeds)): [anal scene]
+	else if anallevel is not 1 and (Player is not female or anallevel is 3) and (a random chance of 1 in 2 succeeds or (anallevel is 3 and a random chance of 1 in 3 succeeds) or ("Mpreg" is listed in feats of Player and a random chance of 1 in 5 succeeds)): [anal scene]
 		say "     It takes very little time for the massive wolf to lay you across a log, leaving you in the perfect position to be taken by the creature. He steps into place above you, pressing your face into his fur, and his shafts against your ass. You're too dazed to do anything but lie there under the huge beast, awaiting whatever it chooses to do with you. You don't need to wait very long before it announces its plans, by way of pressing the tip of his lower shaft up against your rear entrance. The realization that one of those massive cocks is about to try and force its way into you starts to break you out of your daze, but not quickly enough to change your situation. Before you have a chance to do more than gasp, the beast has already started pushing forwards, the tip of his canine endowment easily spreading your hole open enough to receive the head.";
 		say "     The dire wolf continues to press forward, the huge member stretching you wide open with far greater ease than it has any right to. As the lower shaft is filling your ass, the remaining shaft is rubbing against your [if Player is male]own[else]opening[end if], providing an entirely separate pleasure, dividing your limited focus even further. Despite your reduced concentration, you're still quite able to feel the over sized dick deep within you, larger than your body should be able to handle. When you pull your face out of his fur, you're even able to see the outline of his massive cock in your stomach, as he comes to a stop. For a moment, things are somewhat peaceful, letting you soak in the sensation of being completely filled with the canine rod, another pressed against your [if Player is male]own[else]cunt[end if], feeling the knot waiting just outside your passage, and the powerful wolf looming completely above you. The peaceful moment does not last.";
 		WaitLineBreak;
@@ -38,22 +38,24 @@ to say DireWolfNormalLoss: [regular loss scenes]
 		say "     That moment of reprieve is all you have, as the dire wolf starts pumping in and out. He starts gently, pulling his dick in and out of your mouth, the knot lightly pressing against your mouth at the bottom of each stroke. At the same time, the other shaft thrusts up and down across your vision, drooling more pre onto you. The combination of the two incredible cocks, of their powerful taste and smell, starts to overwhelm you in the sensation. As they overtake your senses, the wolf speeds up his actions, his twin members pumping faster and faster, the knot starting to apply more and more pressure to your mouth on each stroke. Finally he howls, and erupts, one jet of semen pouring down your throat, and the other spraying upwards, covering your face and hair in his wolf spunk. The wolf edges backwards, causing his dicks to finally exit you, leaving one final trail of his seed across your face.";
 		CreatureSexAftermath "Player" receives "OralCock" from "Dire Wolf";
 		now DireWolfOral is 1;
+	WaitLineBreak;
 	say "     Seemingly done with you, the massive wolf pulls away from you, turns around, and stalks back out into the wilderness, ready to pounce on whatever prey it finds next.";
-	increase Charisma of Direwolf Dom by 1;
+	[increase Charisma of Direwolf Dom by 1;]
 
-to say DireWolfSuperLoss: [pack bitch loss scenes]
-	say "     A";
+[to say DireWolfSuperLoss: [pack bitch loss scenes]
+	say "     A";]
 
 to say DireWolfVictory:
 	say "     You watch the dire wolf crash to the ground in defeat, slumped over on his side. You can see that the massive creature is still very hard, his cocks dripping with pre. You realize that this dire wolf is completely at your mercy.";
-	say "     [bold type]You could easily have your way with him if you want.[roman type][line break]";
-	LineBreak;
+	say "[line break]     [bold type]You could easily have your way with him if you want.[roman type][line break]";
 	say "     ([link]Y[as]y[end link]) - Have fun with the dire wolf.";
 	say "     ([link]N[as]n[end link]) - Leave it be.";
 	if Player consents:
+		LineBreak;
 		if Player is male:
-			say "     Deciding to have some fun with this poor wolf, you stop and think about how exactly you want to use him. You could easily roll him over and ride[if Cunt Count of Player < 1] one of[end if] his pair of thick canine shafts, or you could mount that tight little ass of his. (Y=Ride, N=Fuck)";
+			say "     Deciding to have some fun with this poor wolf, you stop and think about how exactly you want to use him. You could easily roll him over and [link]ride (Y)[as]y[end link] [if Player is not female]one of [end if]his pair of thick canine shafts, or you could [link]mount (N)[as]n[end link] that tight little ass of his.";
 			if Player consents:
+				LineBreak;
 				if Player is female: [herm ride]
 					say "     The massive wolf doesn't resist as you roll him onto his back, leaving his twin members standing firmly in the open. You waste no time preparing yourself, and soon you stand above the beast, ready to lower yourself onto his shafts. Before you do, the creature begins to whimper slightly, clearly as eager for what comes next as you are. Unwilling to disappoint him, you start to drop yourself slowly, using one hand to hold the shafts in place. The tapered shape of his cocks lets the tips of each one slide into you easily, one in your cunt and the other in your ass. From there, you start to slide further down, and then back up, slowly increasing in speed until you're bouncing on his twin two canine shafts, the feeling of having two dicks inside you at once causing a rapidly building sense of pleasure..";
 					say "     You soon increase the rate of your riding, feeling the massive dicks spearing you again and again, with the knots bumping against both of your entrances each time you bottom out. Finally, you can tell that the wolf is almost about to peak from the throbbing of the shafts, and you slam down with even more force than before, finally popping both of the knots into you simultaneously, filling you completely. That final thrust causes the beast to go overboard, both cocks erupting, filling you and coating you in his thick seed. The both of you are panting in exertion from the experience, but you feel a warm glow of satisfaction within you as you manage to climb off of the dire wolf. You leave the creature there, and finally leave, having shown it its place.";
@@ -63,6 +65,7 @@ to say DireWolfVictory:
 					say "     You soon increase the rate of your riding, feeling the massive dick spearing you again and again, with the knot bumping against your rear each time you bottom out. Finally, you can tell that the wolf is almost about to peak from the throbbing of the shafts, and you slam down with even more force than before, finally popping the knot into you, filling you completely. That final thrust causes the beast to go overboard, both cocks erupting, filling you and coating you in his thick seed. The both of you are panting in exertion from the experience, but you feel a warm glow of satisfaction within you as you manage to climb off of the dire wolf. You leave the creature there, and finally leave, having shown it its place.";
 					CreatureSexAftermath "Player" receives "AssFuck" from "Dire Wolf";
 			else: [fucking the wolf]
+				LineBreak;
 				say "     Having the wolf's puckered ring waiting for you invitingly is too much to pass up, so you press right up against him without waiting. Your [Cock of Player] rod is straining with excitement, the tip pressed against the dire wolf's opening. It only keeps that position for a split second before you proceed to thrust in, the warm tightness of the canine passage gripping your cock, stroking you and pleasuring you. The sensation of taking this mighty predator and making him yours is intoxicating, only adding to the pleasure of taking his tight hole for your own. Soon your thrusting into the beast starts to bear fruit, as you feel the ever-increasing sensations start to approach a peak. When it arrives, your [Cock of Player] shaft releases a torrent of seed into the wolf's rear, claiming him as yours. Soon enough you clean up, and leave the dire wolf lying there, content to know that your semen will remain inside him for quite a while.";
 				CreatureSexAftermath "Dire Wolf" receives "AssFuck" from "Player";
 		else:
@@ -75,14 +78,11 @@ to say DireWolfVictory:
 				say "     You soon increase the rate of your riding, feeling the massive dick spearing you again and again, with the knot bumping against your rear each time you bottom out. Finally, you can tell that the wolf is almost about to peak from the throbbing of the shafts, and you slam down with even more force than before, finally popping the knot into you, filling you completely. That final thrust causes the beast to go overboard, both cocks erupting, filling you and coating you in his thick seed. The both of you are panting in exertion from the experience, but you feel a warm glow of satisfaction within you as you manage to climb off of the dire wolf. You leave the creature there, and finally leave, having shown it its place.";
 				CreatureSexAftermath "Player" receives "AssFuck" from "Dire Wolf";
 	else:
-		WaitLineBreak;
+		LineBreak;
 		say "     Deciding against it, you turn around and head off, leaving the wolf to the mercy of any other creature that might come across it.";
 
-to say DommedByDirewolf: [scenes for getting dominated personally by your direwolf 'pet']
-	say "     A";
-
-to say DireWolfDesc:
-	say "     A feral-looking wolf on four feet, easily a full head taller than you, with great muscles under dense black fur. He has dark red eyes and white, sharp, canine teeth. His legs are thick and powerful, and his frame far bulkier and more powerful than any normal wolf. Visible between his rear legs are a pair of [one of]oversized canine shafts[or]massive wolf cocks[or]huge lupine members[at random]. When he sees you, his lips peel in a snarl, exposing those deadly teeth. [one of]'Grrrrrrrr!' he growls[or]He barks aggressively[or]He howls[at random], charging at you with feral rage in his eyes.";
+[to say DommedByDirewolf: [scenes for getting dominated personally by your direwolf 'pet']
+	say "     A";]
 
 Section 2 - Creature Insertion
 
@@ -116,8 +116,8 @@ When Play begins:
 	now enemy type entry is 0; [ 0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters. ]
 	now attack entry is "[one of]He slams into you and bites down.[or]He roars and swipes at you with his claws.[or]He pounces you and pins you down, tearing into you with his claws.[at random]";
 	now defeated entry is "[DireWolfVictory]";
-	now victory entry is "[DireWolfLoss]";
-	now desc entry is "[DireWolfDesc]"; [ Description of the creature when you encounter it.]
+	now victory entry is "[DireWolfNormalLoss]";
+	now desc entry is "     A feral-looking wolf on four feet, easily a full head taller than you, with great muscles under dense black fur. He has dark red eyes and white, sharp, canine teeth. His legs are thick and powerful, and his frame far bulkier and more powerful than any normal wolf. Visible between his rear legs are a pair of [one of]oversized canine shafts[or]massive wolf cocks[or]huge lupine members[at random]. When he sees you, his lips peel in a snarl, exposing those deadly teeth. [one of]'Grrrrrrrr!' he growls[or]He barks aggressively[or]He howls[at random], charging at you with feral rage in his eyes.[line break]"; [ Description of the creature when you encounter it.]
 	now face entry is "dire wolf face, with a long canine snout filled with the sharp teeth of a powerful predator"; [ Face description, format as "Your face is [Face of Player]." ]
 	now body entry is "that of a large and very muscled wolf, with canine features that give you a wild and deadly appearance"; [ Body Description, format as "Your Body is [Body of Player]." ]
 	now skin entry is "[one of]black furred[or]roughly furred[or]furry[at random]"; [ Skin Description, format as "Looking at yourself, your body is covered in [Skin of Player] skin." ]
@@ -275,7 +275,7 @@ object	name
 Direwolf Dom	"Direwolf Dom"
 
 Direwolf Dom is a pet.
-Description of Direwolf Dom is "".
+[Description of Direwolf Dom is "".
 Weapon Damage of Direwolf Dom is 18.
 The level of Direwolf Dom is 3.
 Dexterity of Direwolf Dom is 14.
@@ -283,8 +283,7 @@ Charisma of Direwolf Dom is 10.
 The summondesc of Direwolf Dom is "     A".
 The dismissdesc of Direwolf Dom is "     A".
 The assault of Direwolf Dom is "[one of]The powerful canine savages your foe with his claws![or]The direwolf stalks a circle around the target, dividing their attention.[or]Your ally grabs onto your opponent firmly with their jaws, providing you with an opening.[or]Your direwolf uses his sheer mass to crash into your opponent![or]A mighty howl from the wolf demoralizes your foe![at random]".
-the fuckscene of Direwolf Dom is "[DommedByDirewolf]".
-
+the fuckscene of Direwolf Dom is "[DommedByDirewolf]".]
 
 Section 4 - Dire-Wolf Cum
 
@@ -294,15 +293,16 @@ name	desc	weight	object
 
 dire-wolf cum is a grab object. dire-wolf cum is cum.
 dire-wolf cum is infectious. Strain of dire-wolf cum is "Dire Wolf".
-
-instead of sniffing dire-wolf cum:
-	say "The dire wolf semen smells of wolves and cum, naturally.";
-
-Usedesc of dire-wolf cum is "[dire-wolf cum use]";
+Usedesc of dire-wolf cum is "[dire-wolf cum use]".
+Scent of dire-wolf cum is "The dire wolf semen smells of wolves and cum, naturally.".
 
 to say dire-wolf cum use:
-	say "You shrug and gulp down the creamy liquid, gasping as you feel a sudden heat in your groin. Moaning as you rub your crotch, you realize that you need to get fucked, NOW!";
-	if Libido of Player < 75:
+	say "     You shrug and gulp down the creamy liquid, gasping as you feel a sudden heat in your groin. Moaning as you rub your crotch, you realize that you need to get fucked, NOW!";
+	if Libido of Player < 25:
+		increase Libido of Player by 50;
+	else if Libido of Player < 50:
+		increase Libido of Player by 25;
+	else if Libido of Player < 75:
 		now Libido of Player is 75;
 
 Section 5 - Endings
@@ -314,9 +314,6 @@ Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered
 This is the Dire Wolf Infection rule:
 	if Player has a body of "Dire Wolf":
 		trigger ending "Dire Wolf Infection"; [Here it states, that the ending has been played.]
-		if humanity of Player < 10:
-			say "Giving in to your feral nature, you prowl the city streets, enforcing your status as the biggest and most dominant. Your mind is gone and now only the most primal of instincts remain.";
-		else:
-			say "Returning to modern society proves to be hard for you. Your feral tendencies make it hard for you to be accepted in large urban areas, so you move out to a more secluded area in the mountains. You make your living by hunting deer and the like, your wolf senses giving you a major edge over anything else, and soon enough you have a comfortable and stable life to live till you're a gray muzzle.";
+		say "     [if humanity of Player < 10]Giving in to your feral nature, you prowl the city streets, enforcing your status as the biggest and most dominant. Your mind is gone and now only the most primal of instincts remain[else]Returning to modern society proves to be hard for you. Your feral tendencies make it hard for you to be accepted in large urban areas, so you move out to a more secluded area in the mountains. You make your living by hunting deer and the like, your wolf senses giving you a major edge over anything else, and soon enough you have a comfortable and stable life to live till you're a gray muzzle[end if].";
 
 Dire Wolf ends here.

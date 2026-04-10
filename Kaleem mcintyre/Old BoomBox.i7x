@@ -161,20 +161,16 @@ To say jazzfriends:
 			say "     You find Sarah coming up over to you to snuggle up while the jazz music plays softly in the background. The husky female seems to enjoy the music as she starts to pant happily while looking up at you with shining eyes. She almost seems to want to ask you to dance, but is holding back for some reason. Maybe because she would feel awkward in her new form? Regardless, you snuggle up close to her as you both listen to the soft rhythms bouncing through the bunker[if Colleen is in the bunker]. Colleen silently moves over to Sarah to snuggle up next to the other husky woman[end if].";
 			if SarahPups > 1:
 				say "     Sarah's pups all come around to bark and yip before making a circle to surround you and Sarah, almost as if they are trying to contain the feelings that both you and her are sharing right now.";
-	If Fang is in the Grey Abbey Library:
-		if HP of Fang is 3 or HP of Fang is 4 or HP of Fang is 6 or HP of Fang is 7:
-			say "     Fang seems quite interested in the music as [SubjectPro of Fang] comes over to lay by your leg while listening to it. Grumbling softly into the back of [PosPro of Fang] throat, the wolf nuzzles close to you while curling up into a large ball of fur and muscle. You do happen to notice, however, that the wolf's ears are ever tuned towards the door of the bunker. The lupine, no matter how relaxed, is ever vigilant towards [PosPro of Fang] duty to protect [PosPro of Fang] new home.";
-		else:
-			say "     Fang, not used to hearing music too often, seems a little intrigued by the noise coming from the boombox. Slowly, the feral wolf comes over and then lays down beside your cot to listen to the soft sounds coming from the unfamiliar machine.";
+	if Fang is in the Grey Abbey Library:
+		say "     Fang[if HP of Fang is 3 or HP of Fang is 4 or HP of Fang is 6 or HP of Fang is 7] seems quite interested in the music as [SubjectPro of Fang] comes over to lay by your leg while listening to it. Grumbling softly into the back of [PosPro of Fang] throat, the wolf nuzzles close to you while curling up into a large ball of fur and muscle. You do happen to notice, however, that the wolf's ears are ever tuned towards the door of the bunker. The lupine, no matter how relaxed, is ever vigilant towards [PosPro of Fang] duty to protect [PosPro of Fang] new home[else], not used to hearing music too often, seems a little intrigued by the noise coming from the boombox. Slowly, the feral wolf comes over and then lays down beside your cot to listen to the soft sounds coming from the unfamiliar machine[end if].";
 	if skunk kit is tamed:
 		say "     Peppy is somewhat amused by the noise as he comes over and then plops down to listen to the smooth jazz.";
 	if helper dog is tamed:
 		say "     Hobo seems to appreciate your taste in music as he comes over to lay across your lap. Maybe one of the people he once helped liked this kind of melody? The slight bob of the canine's head seems to give greater validation to this theory.";
 	if little fox is tamed:
 		say "     Dash seems to like the jazz music as he comes over to yip at the jam box while cocking his head from side to side, likely wondering who's making the pleasant noise. You are tempted to grab the cute thing to nuzzle it, but you decide not to bother the vulpine as he is just having too much fun to disturb right now, especially as he starts to roll around while yipping adorably in front of the boombox.";
-	if Elijah is in the Bunker:
-		If HP of Elijah is 3 or HP of Elijah is 4:
-			say "     Elijah seems to enjoy the smooth melody playing on the boombox and soon begins to hum a tune that is unfamiliar to you. In fact, as you listen a little more closely, Elijah's humming almost sounds... otherworldly.";
+	if Elijah is in the Bunker and (HP of Elijah is 3 or HP of Elijah is 4):
+		say "     Elijah seems to enjoy the smooth melody playing on the boombox and soon begins to hum a tune that is unfamiliar to you. In fact, as you listen a little more closely, Elijah's humming almost sounds... otherworldly.";
 	if Alexandra is in Grey Abbey Library:
 		say "     Coming in to investigate the noise, Alexandra pokes her head inside and stands at the door, keeping an eye on the library in case of trouble while she listens. She sticks around, listening to the alternately soothing and bombastic jazz coming from the boombox as she becomes lost in thought.";
 	SanBoost 4;
@@ -186,9 +182,8 @@ to say tangofriends:
 		say "     Hobo moves over to the platform beside the door to the bunker, sitting there and watching as he seems to listen both to the outside and to the music with an air of appreciation.";
 	if cute crab is tamed:
 		say "     The cute little crab comes over and soon starts to boogie a path up and down and then back and forth in front the boombox as he dances his own crustacean dance. You find yourself tempted to laugh at the sight of this, but you hold back in order to not hurt the little thing's feelings. Besides, it's really too cute to watch.";
-	if Sven is in the bunker:
-		if HP of Sven < 30:
-			say "     Without asking his permission, you go over to the shy snowmeow and take his paw, pulling him up to join you in dancing. He's timid and shy at first, but moves with considerable grace. With such a graceful partner, you pick up the pace, going for fancier and bolder moves. The kitty follows your lead, allowing you to perform a very energetic and sensual dance with him. Once you're done, you leave him on his bunk, blushing behind his tail and looking quite happy and excited.";
+	if Sven is in the bunker and HP of Sven < 30:
+		say "     Without asking his permission, you go over to the shy snowmeow and take his paw, pulling him up to join you in dancing. He's timid and shy at first, but moves with considerable grace. With such a graceful partner, you pick up the pace, going for fancier and bolder moves. The kitty follows your lead, allowing you to perform a very energetic and sensual dance with him. Once you're done, you leave him on his bunk, blushing behind his tail and looking quite happy and excited.";
 [		else:
 			say "     ***confident Sven.";]
 	if felinoid companion is tamed:
@@ -201,12 +196,9 @@ to say tangofriends:
 	raise Player Libido by 2;
 
 to say R&Bfriends:
-	If Fang is in the Grey Abbey Library:
-		if HP of Fang is 3 or HP of Fang is 4 or HP of Fang is 7:
-			say "     Fang pads over to you and then lays [PosPro of Fang] head down onto your lap. The music seems to have gotten to the other in a strange way as you could almost swear that tears are in [PosPro of Fang] eyes. Maybe this lupine has more soul than you think as you lay a hand down to stroke [ObjectPro of Fang] across [PosPro of Fang] rugged mane of fur. Neither of you speak as you just listen to the tunes. You find that words have no place here now.";
-		else:
-			say "     Fang moves over towards you before plopping [ReflexPro of Fang] down to listen to the R&B melody wafting from out of the speakers of the boombox. By the slow wag of [PosPro of Fang] tail, you can see that the feral creature likes the music very much.";
-	If Colleen is in the bunker:
+	if Fang is in the Grey Abbey Library:
+		say "     Fang [if HP of Fang is 3 or HP of Fang is 4 or HP of Fang is 7]pads over to you and then lays [PosPro of Fang] head down onto your lap. The music seems to have gotten to the other in a strange way as you could almost swear that tears are in [PosPro of Fang] eyes. Maybe this lupine has more soul than you think as you lay a hand down to stroke [ObjectPro of Fang] across [PosPro of Fang] rugged mane of fur. Neither of you speak as you just listen to the tunes. You find that words have no place here now[else]moves over towards you before plopping [ReflexPro of Fang] down to listen to the R&B melody wafting from out of the speakers of the boombox. By the slow wag of [PosPro of Fang] tail, you can see that the feral creature likes the music very much[end if].";
+	if Colleen is in the bunker:
 		say "     The rhythm of the melody playing on the boombox puts Colleen to sleep.";
 	if Sarah is in the bunker:
 		if SarahSlut is 0:
@@ -229,9 +221,8 @@ to say R&Bfriends:
 		say "     Honey finds herself almost weeping as she comes over to nuzzle herself into your body. The pitch of the music must be getting to her because her antennae are vibrating slightly.";
 	if the cute crab is tamed:
 		say "     The small crustacean you found on the beach seems to like the music as he comes over to you and then settles himself under your feet. You'll have to be careful not to step on the other, but a quick pinch of claws will stop you anyway from doing that by accident.";
-	if Elijah is in the Bunker:
-		If HP of Elijah is 3 or HP of Elijah is 4:
-			say "     Your white winged angel seems to find mild amusement in the soft croons playing on the boombox as he comes over to sit beside you while encircling one of his wings around your [BodyType of Player] form.";
+	if Elijah is in the Bunker and (HP of Elijah is 3 or HP of Elijah is 4):
+		say "     Your white winged angel seems to find mild amusement in the soft croons playing on the boombox as he comes over to sit beside you while encircling one of his wings around your [BodyType of Player] form.";
 	if Alexandra is booked:
 		say "     Coming in to investigate the noise, Alexandra pokes her head inside and stands at the door, keeping an eye on the library in case of trouble while she listens. She sticks around, listening to the music for a time. When one song takes on a more mournful tone, she seems to get sad, and then - having gotten sad - she gets angry and storms out.";
 		now lastfuck of Alexandra is turns + 8;
@@ -243,19 +234,15 @@ to say RockandRollfriends:
 		say "     Brushing up beside her to feel Sarah's furry body rolling against your own, you suddenly wish that both of you were in a normal bar doing this while getting drunk off of shared vodka and rum while dance lights flash around both your bodies. Maybe when all of this is over you and she could have your own private dance session together. Whether that will be with the husky female dancing on your lap or in your bed, well, the jury is out on that one.";
 		if SarahPups > 0:
 			say "     All around you, the puppies seem to be watching their mother curiously as the older female just moves and sways without her usual flustering or timid mannerisms embellishing her actions. Some of the pups try and mimic the older husky's maneuvers, but in the end they mostly seem to just fall over each other cutely.";
-	If Colleen is in the bunker:
+	if Colleen is in the bunker:
 		say "     At hearing the music playing on the boombox, Colleen proceeds to rock the house as she howls and swivels her body while dancing with the beat of the drumset and electric guitars being played.";
-	If Fang is in the Grey Abbey Library:
-		if HP of Fang is 3 or HP of Fang is 4 or HP of Fang is 7:
-			say "     Fang seems to have woken up from [PosPro of Fang] inopportune nap as the wolf rises onto [PosPro of Fang] feet and then pads over into your direction. Seeing that [SubjectPro of Fang] is not quite happy about being so rudely interrupted by the annoying sounds, you have to block [ObjectPro of Fang] off from the boombox as you can clearly see that [SubjectPro of Fang] wants to destroy the machine. It takes some bit of struggling before the lupine relents and then goes off somewhere else to not have to listen to the noise. You sigh softly at this. After all, a win is a win in your book by any accounts.";
-		else:
-			say "     Fang doesn't seem to care for this particular type of music as [SubjectPro of Fang] pops [PosPro of Fang] head into the bunker and then pops [ReflexPro of Fang] back out to return to [PosPro of Fang] post.";
+	if Fang is in the Grey Abbey Library:
+		say "     Fang [if HP of Fang is 3 or HP of Fang is 4 or HP of Fang is 7]seems to have woken up from [PosPro of Fang] inopportune nap as the wolf rises onto [PosPro of Fang] feet and then pads over into your direction. Seeing that [SubjectPro of Fang] is not quite happy about being so rudely interrupted by the annoying sounds, you have to block [ObjectPro of Fang] off from the boombox as you can clearly see that [SubjectPro of Fang] wants to destroy the machine. It takes some bit of struggling before the lupine relents and then goes off somewhere else to not have to listen to the noise. You sigh softly at this. After all, a win is a win in your book by any accounts[else]doesn't seem to care for this particular type of music as [SubjectPro of Fang] pops [PosPro of Fang] head into the bunker and then pops [ReflexPro of Fang] back out to return to [PosPro of Fang] post[end if].";
 	if Alexandra is booked:
 		say "     Coming in to investigate the noise[if fang is booked] when Fang exists the bunker angrily[end if], Alexandra pokes her head inside. Hearing the energetic, frenetic rock and roll music, she throws herself into dancing. Clearly not much of a dancer, she makes up for it with energy and wild abandon, throwing herself most of all into the songs about wild youth, sex and rebellion. It seems to get her quite worked up and she's got a hungry look in her eyes by the end of it.";
 		now lastfuck of Alexandra is turns + 8;
-	if Sven is in the bunker:
-		if HP of Sven < 30:
-			say "     You pull Sven up from his seat to get him to join in for a while. He's a little shy about it, but dances very well, moving with feline grace. Soon he's rocking his hips, swaying his tail and dancing up a storm. In the excitement, he reaches over and gives your rump a pinch. Surprised at his own boldness, he blushes brightly and dashes back to his bunk, to hide behind his tail. But despite that, you can tell he's had a really fun time.";
+	if Sven is in the bunker and HP of Sven < 30:
+		say "     You pull Sven up from his seat to get him to join in for a while. He's a little shy about it, but dances very well, moving with feline grace. Soon he's rocking his hips, swaying his tail and dancing up a storm. In the excitement, he reaches over and gives your rump a pinch. Surprised at his own boldness, he blushes brightly and dashes back to his bunk, to hide behind his tail. But despite that, you can tell he's had a really fun time.";
 [		else:
 			say "     ***confident Sven.";]
 	if Candy is in the bunker:
@@ -274,12 +261,12 @@ to say Oceanfriends:
 			say "     At hearing this kind of slow and melodious music, Sarah is quick to come up over to where you are lying down to snuggle up with you. Her furry body warms you up quickly and you find your arm wrapping around her without you thinking about it. The two of you nuzzle each other as wiry smiles cross both of your faces while sinking into the cool blue music playing around the bunker.";
 			if SarahPups > 0:
 				say "     Sarah's pups encircle both you and their mother as they sleepily start to drift off together, one after another.";
-	If Fang is in the Grey Abbey Library:
+	if Fang is in the Grey Abbey Library:
 		if HP of Fang is 3 or HP of Fang is 4 or HP of Fang is 6 or HP of Fang is 7:
-			say "     Fang slowly comes over to where you are and then curls [ReflexPro of Fang] up at your head. Panting softly, the big [if Fang is male]male [else]female [end if]has no problem whimpering at the sounds of the music and then drifting off to sleep as [SubjectPro of Fang] listens to the music with you.";
+			say "     Fang slowly comes over to where you are and then curls [ReflexPro of Fang] up at your head. Panting softly, the big [if Fang is male]male[else]female[end if] has no problem whimpering at the sounds of the music and then drifting off to sleep as [SubjectPro of Fang] listens to the music with you.";
 		else:
 			say "     Fang sleepily pads [ReflexPro of Fang] over to you and then curls up to go to sleep. No muss, no fuss. Just a large bundle of sleepy wolf curling [ReflexPro of Fang] up next to your head.";
-	If Colleen is in the bunker:
+	if Colleen is in the bunker:
 		say "     Colleen makes her way over to [if sarah is bunkered]where Sarah is and then proceeds to snuggle up with the other husky woman[else]the bunk and sits on the floor beside you, leaning back against the cot[end if].";
 	if house cat is tamed:
 		say "     The small feline you rescued earlier meows as she moves into your lap to curl up.";
@@ -291,9 +278,8 @@ to say Oceanfriends:
 		say "     Klauz is quick to go over and curl up at the small of your back. Purring distinctively inside of your ears, you chuckle some as his whiskers tickle you softly.";
 	if Candy is in Bunker:
 		say "     Candy seems to be somewhat offset by this kind of soothing music as the other seems to slink away out of the room. Maybe he doesn't feel like taking a nap?";
-	if Sven is in Bunker:
-		if HP of Sven < 30:
-			say "     The snow leopard seems put off by this music but can't stop from yawning as the ocean sounds have caught him good. He steps closer [if felinoid is tamed]and moves Klauz over to settle himself at your back alongside the other feline[else]and just plops down at your back[end if]. Sven nuzzles up to you and then goes right to sleep. His arms do come around you to hold you somewhat close though.";
+	if Sven is in Bunker and HP of Sven < 30:
+		say "     The snow leopard seems put off by this music but can't stop from yawning as the ocean sounds have caught him good. He steps closer [if felinoid is tamed]and moves Klauz over to settle himself at your back alongside the other feline[else]and just plops down at your back[end if]. Sven nuzzles up to you and then goes right to sleep. His arms do come around you to hold you somewhat close though.";
 [		else:
 			say "     ***confident Sven.";]
 	if little fox is tamed:
@@ -304,9 +290,8 @@ to say Oceanfriends:
 		say "     Hobo makes his way over to you and then settles himself at your feet. Wagging his tail leisurely, you listen to the other yawn as he goes right to sleep, though his ears always remain perked.";
 	if Gryphoness is tamed:
 		say "     Denise seems somewhat fatigued as she listens to the soft sounds of the ocean. Having heard it before, the gryphoness makes her way over to you and then lays by your legs to coo and then snooze. It's almost cute the way her feathers puff up as she coos and snores at the same time.";
-	if Elijah is in the Bunker:
-		If HP of Elijah is 3 or HP of Elijah is 4:
-			say "     Elijah moves over by your side and snuggles up to you as best he can. His large and fluffy wings prove to be very nice comforters for your head to rest on.";
+	if Elijah is in the Bunker and (HP of Elijah is 3 or HP of Elijah is 4):
+		say "     Elijah moves over by your side and snuggles up to you as best he can. His large and fluffy wings prove to be very nice comforters for your head to rest on.";
 	if Alexandra is booked:
 		say "     Noticing [if fang is booked]that Fang's not at the door[else]the lack of activity[end if], Alexandra pokes her head inside to see if anything's up. Hearing the soft music and beach sounds, she rolls her eyes with a huff and heads back out to stand watch.";
 		now lastfuck of Alexandra is lastfuck of Alexandra - 2;

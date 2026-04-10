@@ -61,9 +61,9 @@ when play begins:
 to say ResolveEvent Corrupt Kennel:			[Meet Dominick, your friendly Husky dom! Or Sir if you're nasty.]
 	say "     As you're cutting through a quiet neighborhood half-overgrown by trees, the silence is suddenly broken by the sounds of a struggle in the building you're passing. The door flies open as a male husky pushes through. While your first instinct is to expect an attack from him, he barely notices you, pushing past you after knocking into a parked car. With him so close, you can see his blackened eye and broken jaw.";
 	say "     'Don't you come back, you fucking cur! Otherwise you'll end up as one of my bitches!' Turning to this new voice, you find another husky standing in the open doorway. This second husky watches the first run off with his tail between his legs, standing firmly in the doorway of what you now realize is a former kennel. He runs his right hand, knuckles oozing blood, over his left shoulder which looks painfully out of joint. He snaps his shoulder back into place, with just a slight grimace.";
-	say "     'Damn crazies. There's one every now and then coming to sniff around,' he says more calmly as he notices you there. 'Name's Dominick by the way. You're welcome to come in my kennel; you still seem sane enough. [if Player is herm]Though you better not be thinking of getting at my bitches, or you'll get the same.' He pauses and eyes you firmly. 'No. I think you'd prefer to join them[else if Player is male]Though you better not be thinking of getting at my bitches, or you'll get the same.' He pauses and eyes you coldly. 'No. Scratch that. Consider what happened to him as your one and only warning[else]I'd welcome the company of another female.' He eyes you appreciatively. 'Perhaps you might even decide to stay. As you've seen, you'd certainly be safe here as one of my bitches[end if].' He turns to go inside, still rubbing his shoulder, and limps up the stairs.";
 	WaitLineBreak;
-	say "     Do you go inside as a friend? Do you take advantage of the situation? Or do you leave this place for now? [bold type]Dominant players beware; turnabout is fair play.[roman type][line break]";
+	say "     'Damn crazies. There's one every now and then coming to sniff around,' he says more calmly as he notices you there. 'Name's Dominick by the way. You're welcome to come in my kennel; you still seem sane enough. [if Player is herm]Though you better not be thinking of getting at my bitches, or you'll get the same.' He pauses and eyes you firmly. 'No. I think you'd prefer to join them[else if Player is male]Though you better not be thinking of getting at my bitches, or you'll get the same.' He pauses and eyes you coldly. 'No. Scratch that. Consider what happened to him as your one and only warning[else]I'd welcome the company of another female.' He eyes you appreciatively. 'Perhaps you might even decide to stay. As you've seen, you'd certainly be safe here as one of my bitches[end if].' He turns to go inside, still rubbing his shoulder, and limps up the stairs.";
+	say "[line break]     Do you go inside as a friend? Do you take advantage of the situation? Or do you leave this place for now? [bold type]Dominant players beware; turnabout is fair play.[roman type][line break]";
 	say "     ([link]1[as]1[end link]) - Enter as friend.";
 	say "     ([link]2[as]2[end link]) - Enter as foe.";
 	say "     ([link]3[as]3[end link]) - Leave for now.";
@@ -72,35 +72,34 @@ to say ResolveEvent Corrupt Kennel:			[Meet Dominick, your friendly Husky dom! O
 		say "Choice? (1-3)> [run paragraph on]";
 		get a number;
 		if calcnumber < 1 or calcnumber > 3:
-			say "Invalid choice. Type [link]1[end link] to enter as friend, [link]2[end link] to enter as foe, or [link]3[end link] to leave for now.";
+			say "Invalid choice. Type [link]1[end link] to enter as friend, [link]2[end link] to enter as foe or [link]3[end link] to leave for now.";
+	LineBreak;
 	if calcnumber is 1:
-		WaitLineBreak;
 		say "     You follow Dominick inside, grateful to have found another safe haven in these troubled times.";
+		WaitLineBreak;
 		now HP of Dominick is 1;
 		AddNavPoint Happy Puppy Kennel;
 		move player to Happy Puppy Kennel;
 		now battleground is "void";
 		now Resolution of Corrupt Kennel is 1; [Entered as Friend]
 	else if calcnumber is 2:
-		WaitLineBreak;
 		say "     You follow Dominick inside, eager to show him who's boss.";
 		let bonus be ( Strength of Player minus 5 ) divided by 2;
 		let diceroll be a random number from 1 to 30;
-		say "You roll 1d30([diceroll])[if bonus >= 0]+[end if][bonus] = [special-style-1][diceroll + bonus][roman type] vs [special-style-2]23[roman type] (Strength Check):[line break]";
+		say "[line break]You roll 1d30([diceroll])[if bonus >= 0]+[end if][bonus] = [special-style-1][diceroll + bonus][roman type] vs [special-style-2]23[roman type] (Strength Check):[line break]";
 		increase diceroll by bonus;
 		if diceroll > 22:
 			say "     As the door closes behind you, Dominick turns around to face you, just in time to catch your fist in his gut. Completely unprepared for your assault, he staggers backwards breathlessly clutching his stomach, leaving his face vulnerable to your next punch. Your blow knocks him to the ground and he moans in agony. He tries to crawl away from you, but a few swift kicks stops even that feeble attempt to escape. You survey the kennels that now belong to you, whimpering sluts and all, with a grin on your face. You announce that you're in charge now, getting a nod from the two canine girls and a nod from Dominick after you stare him down.";
+			WaitLineBreak;
 			now HP of Dominick is 60;
 			AddNavPoint Happy Puppy Kennel;
 			move player to Happy Puppy Kennel;
 			now battleground is "void";
 			now Resolution of Corrupt Kennel is 2; [Entered Kennel as Foe]
 		else:
-			LineBreak;
 			say "     As the door closes behind you, Dominick turns around to face you, just in time to block your fist with his arm. His eyes narrow and he growls, 'Wrong move, asshole.' He knees you in the groin, and as you double over in pain, he pushes you hard. You topple to the ground, knocking the wind out of your lungs, but you barely have time to register this new misery before Dominick begins kicking you viciously. Unable even to cry out, you tighten into a ball and try to endure. Your battered body now feeling like a giant bruise, you hear Dominick from somewhere above you, 'I warned you once and you ignored it. Now you'll get what [if Player is female]bitches[else]fuckers[end if] like you deserve.'";
 			say "[ForcedSubmissionToDom]";
 	else:
-		WaitLineBreak;
 		say "     You decide against entering the kennel for now. At least you know another safe location, should you need it.";
 		now HP of Dominick is 1;
 		AddNavPoint Happy Puppy Kennel;
@@ -127,16 +126,17 @@ to say hpkdesc:
 		say "     ([link]Y[as]y[end link]) - Make me your bitch.";
 		say "     ([link]N[as]n[end link]) - This was a mistake.";
 		if Player consents:
-			WaitLineBreak;
+			LineBreak;
 			say "     You nod, afraid to speak. Dominick growls and shakes you, saying, 'I asked you a question, bitch. Say yes or no when speaking to me.' You say yes in a whisper and that seems to be enough. Dominick drops you, leaving you in a heap as he walks back to his desk. He sits down in a big chair behind the desk, flanked by two dog girls, one a pink-furred husky and the other a teal-colored Samoyed. Both seem quite simple creatures, lost to their lusts and obedient to their canine master. You shudder with a mixture of pleasure and fear as you think you might join them one day. Now comfortably lounging, Dominick says, 'Your training begins whenever you're ready.'";
 			now HP of Dominick is 31;
 		else:
-			WaitLineBreak;
+			LineBreak;
 			say "     You shake your head, and try to push Dominick away. Dominick fends off your weak attempt to get free and growls, 'Then why the fuck are you here, bitch? Get out now and don't come back.' He tosses you back out the door and you get the feeling coming back here is not in your best interests.";
 			now HP of Dominick is 99;
+			WaitLineBreak;
 			move player to Forest;
 			now Happy Puppy Kennel is not known;
-	else if HP of Dominick > 30 and HP of Dominick < 40:
+	else if HP of Dominick < 40:
 		say "     You're standing in the front foyer of what was once the Happy Puppy Kennel. The posters of pedigree dogs on the wall and the large wall decals of happy cartoon puppies are at odds with its current residents. Your master, when not walking around the room or standing watch, lounges in a big chair behind the desk. His knotted cock is perpetually erect, even after his pets have tended to him. These pets are a collared pair of nude doggy girls, both of whom sit on the floor to either side of his chair and fawn over the studly male. One's a pink-furred husky and the other's a teal-colored Samoyed. Both seem quite simple creatures, lost to their lusts and obedient to their canine master. You envy their life and can't wait until Dom lets you join them at his side.";
 	else if HP of Dominick is 40:
 		say "     You're standing in the front foyer of what was once the Happy Puppy Kennel. The posters of pedigree dogs on the wall and the large wall decals of happy cartoon puppies are at odds with its current residents. Dominick, seeing you enter, springs from behind his desk and lunges for you, slamming you against the wall. 'I told you if you came back here, I'd make you my bitch. Is that why you're here? To get fucked like the sissy slut you are?'";
@@ -144,16 +144,17 @@ to say hpkdesc:
 		say "     ([link]Y[as]y[end link]) - Make me your bitch.";
 		say "     ([link]N[as]n[end link]) - This was a mistake.";
 		if Player consents:
-			WaitLineBreak;
+			LineBreak;
 			say "     You nod, afraid to speak. Dominick growls and shakes you, saying, 'I asked you a question, sissy. Say yes or no when speaking to me.' You say yes in a whisper and that seems to be enough. Dominick drops you, leaving you in a heap as he walks back to his desk. He sits down in a big chair behind the desk, flanked by two dog girls, one a pink-furred husky and the other a teal-colored Samoyed. Both seem quite simple creatures, lost to their lusts and obedient to their canine master. You shudder with a mixture of pleasure and fear as you think you might join them one day. Now comfortably lounging, Dominick says, 'Your training begins whenever you're ready.'";
 			now HP of Dominick is 41;
 		else:
-			WaitLineBreak;
+			LineBreak;
 			say "     You shake your head, and try to push Dominick away. Dominick fends off your weak attempt to get free and growls, 'Then why the fuck are you here, sissy? Get out now and don't come back.' He tosses you back out the door and you get the feeling coming back here is not in your best interests.";
 			now HP of Dominick is 99;
+			WaitLineBreak;
 			move player to Forest;
 			now Happy Puppy Kennel is not known;
-	else if HP of Dominick > 40 and HP of Dominick < 50:
+	else if HP of Dominick < 50:
 		say "     You're standing in the front foyer of what was once the Happy Puppy Kennel. The posters of pedigree dogs on the wall and the large wall decals of happy cartoon puppies are at odds with its current residents. Your master, when not walking around the room or standing watch, lounges in a big chair behind the desk. His knotted cock is perpetually erect, even after his pets have tended to him. These pets are a collared pair of nude doggy girls, both of whom sit on the floor to either side of his chair and fawn over the studly male. One's a pink-furred husky and the other's a teal-colored Samoyed. Both seem quite simple creatures, lost to their lusts and obedient to their canine master. You envy their life and can't wait until Dom lets you join them at his side.";
 	else if HP of Dominick is 50:
 		say "     You're standing in the front foyer of what was once the Happy Puppy Kennel. The posters of pedigree dogs on the wall and the large wall decals of happy cartoon puppies are at odds with its current residents. Dominick, seeing you enter, springs from behind his desk and lunges for you, slamming you against the wall. 'I told you if you came back here, I'd make you my bitch male. Is that why you're here? To get fucked like the sissy slut you are?'";
@@ -161,19 +162,18 @@ to say hpkdesc:
 		say "     ([link]Y[as]y[end link]) - Make me your bitch.";
 		say "     ([link]N[as]n[end link]) - This was a mistake.";
 		if Player consents:
-			WaitLineBreak;
+			LineBreak;
 			say "     You nod, afraid to speak. Dominick growls and shakes you, saying, 'I asked you a question, bitch male. Say yes or no when speaking to me.' You say yes in a whisper and that seems to be enough. Dominick drops you, leaving you in a heap as he walks back to his desk. He sits down in a big chair behind the desk, flanked by two dog girls, one a pink-furred husky and the other a teal-colored Samoyed. Both seem quite simple creatures, lost to their lusts and obedient to their canine master. You shudder with a mixture of pleasure and fear as you think you might join them one day. Now comfortably lounging, Dominick says, 'Your training begins whenever you're ready.'";
 			now HP of Dominick is 51;
 		else:
-			WaitLineBreak;
+			LineBreak;
 			say "     You shake your head, and try to push Dominick away. Dominick fends off your weak attempt to get free and growls, 'Then why the fuck are you here, bitch male? Get out now and don't come back.' He tosses you back out the door and you get the feeling coming back here is not in your best interests.";
 			now HP of Dominick is 99;
+			WaitLineBreak;
 			move player to Forest;
 			now Happy Puppy Kennel is not known;
-	else if HP of Dominick > 50 and HP of Dominick < 60:
-		say "     You're standing in the front foyer of what was once the Happy Puppy Kennel. The posters of pedigree dogs on the wall and the large wall decals of happy cartoon puppies are at odds with its current residents. Your master, when not walking around the room or standing watch, lounges in a big chair behind the desk. His knotted cock is perpetually erect, even after his pets have tended to him. These pets are a collared pair of nude doggy girls, both of whom sit on the floor to either side of his chair and fawn over the studly male. One's a pink-furred husky and the other's a teal-colored Samoyed. Both seem quite simple creatures, lost to their lusts and obedient to their canine master. You envy their life and can't wait until Dom lets you join them at his side.";
-	else if HP of Dominick >= 60:
-		say "     You're standing in the front foyer of what was once the Happy Puppy Kennel. The posters of pedigree dogs on the wall and the large wall decals of happy cartoon puppies are at odds with its current residents. Dominick, when not walking around the room or standing watch, sits uneasily in a big chair behind the desk. His knotted cock is perpetually erect, even after his pets have tended to him. These pets are a collared pair of nude doggy girls, both of whom sit on the floor to either side of his chair and tentatively comfort the studly male. One's a pink-furred husky and the other's a teal-colored Samoyed. Both seem quite simple creatures, openly showing their confusion with their canine master's defeat.";
+	else:
+		say "     You're standing in the front foyer of what was once the Happy Puppy Kennel. The posters of pedigree dogs on the wall and the large wall decals of happy cartoon puppies are at odds with its current residents. [if HP of Dominick < 60]Your master, when not walking around the room or standing watch, lounges in a big chair behind the desk. His knotted cock is perpetually erect, even after his pets have tended to him. These pets are a collared pair of nude doggy girls, both of whom sit on the floor to either side of his chair and fawn over the studly male. One's a pink-furred husky and the other's a teal-colored Samoyed. Both seem quite simple creatures, lost to their lusts and obedient to their canine master. You envy their life and can't wait until Dom lets you join them at his side[else]Dominick, when not walking around the room or standing watch, sits uneasily in a big chair behind the desk. His knotted cock is perpetually erect, even after his pets have tended to him. These pets are a collared pair of nude doggy girls, both of whom sit on the floor to either side of his chair and tentatively comfort the studly male. One's a pink-furred husky and the other's a teal-colored Samoyed. Both seem quite simple creatures, openly showing their confusion with their canine master's defeat[end if].";
 
 Section 3 - Dominick
 
@@ -225,16 +225,17 @@ Sterile of Dominick is false. [steriles can't knock people up]
 MainInfection of Dominick is "Breederslut". [Hopefully right. What his children should be, rather than what he is.]
 Description of Dominick is "[dominickdesc]".
 [Conversation of Dominick is { "Bitches love me!" }.]
+the fuckscene of Dominick is "[sexwithDominick]".
 the scent of the Dominick is "     Dominick has a strong, commanding scent that makes you want to bury your face in his balls and take a big, strong whiff of him.".
 
 to say dominickdesc:
 	if HP of Dominick < 30:
 		say "     Dominick (or Dom, as he prefers), is a well-built husky male. He's got a confident stance as he looks around the foyer of the former kennel. While you may have first mistaken him for another of the husky males you've seen out in the city, further examination shows he likely has a different strain from them. He stands just under six feet tall and has a somewhat different build than the others. His face and muzzle is broader and more cartoonish than a regular husky, further emphasized by the wolfish grin it often bears as he looks at you or his slutty pets. He has a crop of bluish hair atop his head that becomes bluish fur down his back. This changes to the more typical gray of normal huskies on his shoulders and around his sides before transitioning fully to white for his chest and belly.";
 		say "     He's got a plump cock that's perpetually erect. His semi-inflated knot rests outside his white sheath, keeping the furry sleeve from covering his manhood. And quite the impressive manhood it is - thick, long and decidedly canine-shaped, but with a pinker flesh tone. Its pointed tip is pierced with a ring-shaped Prince Albert. Beneath it hangs a plump ballsack covered in snowy fluff and filled with his heavy, virile balls. All in all, you can't help but find your eyes drawn back to it over and over, the tantalizing sight making your mouth water[if HP of Dominick > 3] for more[end if].";
-	else if HP of Dominick >= 30 and HP of Dominick < 60:
+	else if HP of Dominick < 60:
 		say "     Master Dom is a well-built husky male. He's got a confident stance as he looks around the foyer of the former kennel. While you may have first mistaken him for another of the husky males you've seen out in the city, further examination shows he likely has a different strain from them. He stands just under six feet tall and has a somewhat different build than the others. His face and muzzle is broader and more cartoonish than a regular husky, further emphasized by the wolfish grin it often bears as he looks at you or his other slutty pets. He has a crop of bluish hair atop his head that becomes bluish fur down his back. This changes to the more typical gray of normal huskies on his shoulders and around his sides before transitioning fully to white for his chest and belly.";
 		say "     He's got a plump cock that's perpetually erect. His semi-inflated knot rests outside his white sheath, keeping the furry sleeve from covering his manhood. And quite the impressive manhood it is - thick, long and decidedly canine-shaped, but with a pinker flesh tone. Its pointed tip is pierced with a ring-shaped Prince Albert. Beneath it hangs a plump ballsack covered in snowy fluff and filled with his heavy, virile balls. All in all, you can't help but find your eyes drawn back to it over and over, the tantalizing sight making your mouth water for more.";
-	else if HP of Dominick >= 60:
+	else:
 		say "     He's got a plump cock that's perpetually erect. His semi-inflated knot rests outside his white sheath, keeping the furry sleeve from covering his manhood. And quite the impressive manhood it is - thick, long and decidedly canine-shaped, but with a pinker flesh tone. Its pointed tip is pierced with a ring-shaped Prince Albert. Beneath it hangs a plump ballsack covered in snowy fluff and filled with his heavy, virile balls. All in all, you have vanquished a prime specimen for your own, and the knowledge that he is yours makes your mouth water at the opportunities.";
 
 Section 4 - Dialog
@@ -247,11 +248,11 @@ Instead of conversing the Dominick:
 		now HP of Dominick is 1;
 		now Corrupt Kennel is resolved;
 		AddNavPoint Happy Puppy Kennel;
-	else if HP of Dominick is 1:			[You enter for the first time.]
+	if HP of Dominick is 1:			[You enter for the first time.]
 		say "     'Well look at you,' he says with a confident smile. 'If you're coming in here, you must be looking for something. And I think it's more than just a safe place to hide...' He cups his balls and his cock twitches meaningfully.";
 		say "     'I'm Dominick, but you can call me Dom. Or Master. [if Player is herm]You might make for a good bitch with a little work.' Moving in close, he runs a paw over your ass[else if Player is female]You have the makings of a fine bitch in you, I'd say.' He moves in close and runs a paw possessively over your ass and then across your crotch[else]I don't have much need for males around here. I'm a top-ranked, A-1 breeding stud. Though if you want to stay here and be safe, you can always try [']sucking up['] a little.' He grins lewdly, holding his dick out[end if].";
 		now HP of Dominick is 2;
-	else if HP of Dominick is 2 or HP of Dominick is 3:			[You've met and/or sucked Dominick.]
+	else if HP of Dominick < 4:			[You've met and/or sucked Dominick.]
 		say "     [one of]Dom takes a seat in his chair, letting the two doggy girls lavish attention upon his cock in an arousing display.[or]Dominick runs a paw along his exposed cock. 'My cock's always out; the only time I sheathe is inside one of my toys.'[or]Dom [if Player is female]runs his paws over you, letting a finger slip into your pussy and give it a teasing tap[else]grinds that stiff cock of his against your thigh[end if], causing you to moan. 'I think you'd make a fine addition to my toys, you slut.'[or]Rather than talk, Dom pushes you down to your knees and rubs his shaft against your face. The scent of it fills your nose with his manly scent, making your mouth water.[or]'I take good care of my [if Player is female]breeding [end if]bitches. Isn't that right, girls?' he asks, groping a breast on each of them. They pant and moan at his touch.[or]Dom licks your ear while groping you from behind. '[if Player is herm]You herms are nothing but wannabe bitches for true studs like me[else if Player is female]I bet that juicy cunt of yours is just aching for a true stud like me to fill it[else if Player is male]It's hardly worth my time to bother with a slutty male like yourself... but you can always try[else]I guess it's only natural for a neutered slut like yourself to suck up to a true stud like me. Not that I have much use for the likes of you... but you can always try[end if][if HP of Dominick is 2]. How about you get on your knees and I'll show you your place here?'[else].'[end if][at random]";
 [	else if HP of Dominick is 4:
 		say "***regular conversation - has fucked player.";]
@@ -265,12 +266,10 @@ Instead of conversing the Dominick:
 		say "     [one of]Dom takes a seat in his chair, letting the two doggy girls lavish attention upon his cock in an arousing display, a jealous feeling striking your heart.[or]Dominick runs a paw along his exposed cock. 'My cock's always out; the only time I sheathe is inside one of my toys.'[or]Dom runs his paws over you, shoving two fingers into your [if Player is female]pussy and roughly fingering you[else]mouth and ramming them in and out[end if], causing you to moan. 'You'll make a fine addition to my toys, once you're broken in.'[or]Rather than talk, Dom pushes you down to your knees and rubs his shaft against your face. The scent of it fills your nose with his manly scent, making your mouth water.[or]'I take good care of my [if Player is female]breeding [end if]bitches. Isn't that right, girls?' he asks, groping a breast on each of them. They pant and moan at his touch and you wish he was fondling you like that.[or]Dom bites your ear while groping you from behind. '[if Player is herm]You herms are nothing but wannabe bitches for true studs like me[else if Player is female]I can tell your juicy cunt is aching for a true stud like me to fill it[else if Player is male]It's hardly worth my time to bother with a sissy like yourself but we both know you won't be like this for long[end if].'[at random]";
 	else if HP of Dominick is 51:			[Forced Omega.]
 		say "     [one of]Dom takes a seat in his chair, letting the two doggy girls lavish attention upon his cock in an arousing display, a jealous feeling striking your heart.[or]Dominick runs a paw along his exposed cock. 'My cock's always out; the only time I sheathe is inside one of my toys.'[or]Dom runs his paws over you, shoving two fingers into your boi pussy and roughly fingering you, causing you to moan. 'You'll make a fine addition to my toys, you [if Player is male]breeder male[else]fertile neuter[end if].'[or]Rather than talk, Dom pushes you down to your knees and rubs his shaft against your face. The scent of it fills your nose with his manly scent, making your mouth water.[or]'I take good care of my breeding bitches. Isn't that right, girls?' he asks, groping a breast on each of them. They pant and moan at his touch and you wish he was fondling you like that.[or]Dom bites your ear while groping you from behind. '[if Player is herm]You'll soon be the breeding male you were born to be[else if Player is female]Normally, I'd say that juicy cunt of yours needs to be filled, but your ass is your real pussy[else if Player is male]Look at your little dicklet, flaccid in the presence of a real man[else]You'll soon be the breeding male you were born to be[end if].'[at random]";
-	else if HP of Dominick is 60:			[You decide what to do with Dominick and the Happy Kennel.]
-		say "     CONTENT NOT YET IMPLEMENTED.";
+	[else if HP of Dominick is 60:			[You decide what to do with Dominick and the Happy Kennel.]
+		say "     CONTENT NOT YET IMPLEMENTED.";]
 
 Section 5 - Sex Mechanics
-
-the fuckscene of Dominick is "[sexwithDominick]".
 
 to say sexwithDominick:
 	setmonster "Breederslut";
@@ -282,213 +281,204 @@ to say sexwithDominick:
 		say "[sexwithDominick_00]";
 	else if HP of Dominick >= 30 and HP of Dominick < 60:
 		say "     'Approach me, bitch.' You make your way to Master Dom's chair and kneel in front of him. 'Here's what's going to happen, slut.'";
-		say "[ForcedSubtoDomSexMenu]";
+		now sextablerun is 0;
+		blank out the whole of table of fucking options;
+		[]
+		choose a blank row in table of fucking options;
+		now title entry is "Face Fuck";
+		now sortorder entry is 1;
+		now description entry is "Suck your master's doggy dick";
+		[]
+		choose a blank row in table of fucking options;
+		now title entry is "Creampie Trial";
+		now sortorder entry is 2;
+		now description entry is "Get your prize from the other bitches after Dom uses them";
+		[]
+		if nightmaretf < 1 and wrcursestatus < 7 and JackalBoyTF < 1 and JackalManTF < 1:
+			if HP of Dominick is 31 or HP of Dominick is 41 or HP of Dominick is 51:
+				choose a blank row in table of fucking options;
+				now title entry is "Full Doggy Training";
+				now sortorder entry is 3;
+				now description entry is "Dom transforms you into a proper doggy slut in one go (be warned, this is a permanent infection - you're Dom's bitch now)";
+			[]
+			if Player is not mpreg_ok and ((HP of Dominick > 30 and HP of Dominick < 34) or (HP of Dominick > 40 and HP of Dominick < 44)):
+				choose a blank row in table of fucking options;
+				now title entry is "Beta Doggy Training";
+				now sortorder entry is 4;
+				now description entry is "Learn to be a proper doggy slut in three easy steps (be warned, this is a permanent infection - you're Dom's bitch now)";
+			else if Player is mpreg_ok:
+				choose a blank row in table of fucking options;
+				now title entry is "Omega Doggy Training";
+				now sortorder entry is 7;
+				now description entry is "Your master breeds your fertile ass while you fuck another bitch (be warned, this is a permanent infection - you're Dom's bitch now)";
+		[]
+		choose a blank row in table of fucking options;
+		now title entry is "Doggy Anal";
+		now sortorder entry is 5;
+		now description entry is "Your master breeds your ass";
+		[]
+		if Player is female:
+			choose a blank row in table of fucking options;
+			now title entry is "Doggy Fuck";
+			now sortorder entry is 6;
+			now description entry is "Your master breeds you like the bitch you are";
+		[]
+		sort the table of fucking options in sortorder order;
+		repeat with y running from 1 to number of filled rows in table of fucking options:
+			choose row y from the table of fucking options;
+			say "[link][y] - [title entry][as][y][end link][line break]";
+		say "[link]0 - Denied[as]0[end link][line break]";
+		while sextablerun is 0:
+			say "Pick the corresponding number> [run paragraph on]";
+			get a number;
+			if calcnumber > 0 and calcnumber <= the number of filled rows in table of fucking options:
+				now current menu selection is calcnumber;
+				choose row calcnumber in table of fucking options;
+				say "[title entry]: [description entry]?";
+				if Player consents:
+					LineBreak;
+					now sextablerun is 1;
+					if title entry is:
+						-- "Face Fuck":
+							say "[ForcedSubToDomSex1]";
+						-- "Creampie Trial":
+							say "[ForcedSubToDomSex2]";
+						-- "Full Doggy Training":
+							say "[ForcedSubToDomSex3]";
+						-- "Beta Doggy Training":
+							say "[ForcedSubToDomSex4]";
+						-- "Omega Doggy Training":
+							say "[ForcedSubToDomSex5]";
+						-- "Doggy Anal":
+							say "[ForcedSubToDomSex6]";
+						-- "Doggy Fuck":
+							say "[ForcedSubToDomSex7]";
+			else if calcnumber is 0:
+				LineBreak;
+				now sextablerun is 1;
+				say "     Your master's face spreads in an evil grin. 'I'm not sure that you actually want this dick enough. I think we should wait until you're truly ready.' He shoves you away and turns his attention to his two collared pets.";
+				raise Player Libido by 10;
+			else:
+				say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options], or 0 to exit.";
+		wait for any key;
+		clear the screen and hyperlink list;
 	else if HP of Dominick >= 60:
 		say "     CONTENT NOT YET IMPLEMENTED.";
 	else:
 		say "     Dom sees your gaze continually returning to his dick and grins. He exudes self-confidence as he takes a seat in his chair and runs a finger slowly up his shaft. His thick meat gives a twitch and dribbles a little pre - a sight that has you lick your lips. 'I can tell you need it, you slut. Come on then[if Player is female], get to it[else] - start licking[end if].'";
-		say "[dominick_sexmenu]";
-
-to say dominick_sexmenu:
-	now sextablerun is 0;
-	blank out the whole of table of fucking options;
-	[]
-	if Player is female:
-		choose a blank row in table of fucking options;
-		now title entry is "Doggy style";
-		now sortorder entry is 1;
-		now description entry is "be fucked like a dog";
+		now sextablerun is 0;
+		blank out the whole of table of fucking options;
 		[]
-		if scalevalue of Player < 4 and HP of Dominick >= 4:
+		if Player is female:
 			choose a blank row in table of fucking options;
-			now title entry is "Lap ride";
-			now sortorder entry is 2;
-			now description entry is "get bounced on the husky's big pole";
+			now title entry is "Doggy style";
+			now sortorder entry is 1;
+			now description entry is "be fucked like a dog";
+			[]
+			if scalevalue of Player < 4 and HP of Dominick >= 4:
+				choose a blank row in table of fucking options;
+				now title entry is "Lap ride";
+				now sortorder entry is 2;
+				now description entry is "get bounced on the husky's big pole";
 		[]
-		if HP of Dominick >= 4 or Player is mpreg_ok:
+		if ( Player is female and HP of Dominick >= 4 ) or Player is mpreg_ok:
 			choose a blank row in table of fucking options;
 			now title entry is "Anal";
 			now sortorder entry is 3;
 			now description entry is "take it up the ass";
-	[]
-	choose a blank row in table of fucking options;
-	now title entry is "Suck his cock";
-	now sortorder entry is 4;
-	now description entry is "get between his legs and suck his cock for a sweet treat";
-	[]
-	choose a blank row in table of fucking options;
-	now title entry is "Cock worship";
-	now sortorder entry is 5;
-	now description entry is "lavish that doggy cock with attention";
-	[]
-	if Player is female and ( BodyName of Player is "Breederslut" or FaceName of Player is "Breederslut" ):
-		if HP of Dominick >= 5 and HP of Dominick < 10:
-			if "Submissive" is not listed in feats of Player and level of Player > 3:
+		[]
+		choose a blank row in table of fucking options;
+		now title entry is "Suck his cock";
+		now sortorder entry is 4;
+		now description entry is "get between his legs and suck his cock for a sweet treat";
+		[]
+		choose a blank row in table of fucking options;
+		now title entry is "Cock worship";
+		now sortorder entry is 5;
+		now description entry is "lavish that doggy cock with attention";
+		[]
+		if Player is female and ( BodyName of Player is "Breederslut" or FaceName of Player is "Breederslut" ):
+			if HP of Dominick >= 5 and HP of Dominick < 10:
+				if "Submissive" is not listed in feats of Player and level of Player > 3:
+					choose a blank row in table of fucking options;
+					now title entry is "Beta training";
+					now sortorder entry is 98;
+					now description entry is "get trained to be his beta-bitch (locks role)";
+				[
+				if "Dominant" is not listed in feats of Player:
+					choose a blank row in table of fucking options;
+					now title entry is "Omega training";
+					now sortorder entry is 99;
+					now description entry is "get trained to be his pack's omega-bitch (locks role)";
+				]
+	[		else if HP of Dominick >= 20 and HP of Dominick < 30:		[***omega scenes]
+				<stuff for omega scenes goes here>												]
+			else if HP of Dominick >= 10 and HP of Dominick < 20 and Libido of Dominick > 0:
 				choose a blank row in table of fucking options;
-				now title entry is "Beta training";
+				if Libido of Dominick is 1:			[last capture was Female Husky]
+					now title entry is "Female Husky 3some";
+					now description entry is "have a threesome with the recently captured husky";
+				else if Libido of Dominick is 2:			[last capture was Pit Bull]
+					now title entry is "Pit Bull 3some";
+					now description entry is "have a threesome with the recently captured pit bull";
+				[else if Libido of Dominick is 3:			[last capture was Pink Poodle]
+					now title entry is "Pink Poodle 3some";
+					now description entry is "have a threesome with the recently captured poodle";]
 				now sortorder entry is 98;
-				now description entry is "get trained to be his beta-bitch (locks role)";
-			[
-			if "Dominant" is not listed in feats of Player:
-				choose a blank row in table of fucking options;
-				now title entry is "Omega training";
-				now sortorder entry is 99;
-				now description entry is "get trained to be his pack's omega-bitch (locks role)";
-			]
-[		else if HP of Dominick >= 20 and HP of Dominick < 30:		[***omega scenes]
-			<stuff for omega scenes goes here>												]
-		else if HP of Dominick >= 10 and HP of Dominick < 20 and Libido of Dominick > 0:
-			choose a blank row in table of fucking options;
-			now sortorder entry is 97;
-			if Libido of Dominick is 1:			[last capture was Female Husky]
-				now title entry is "Female Husky 3some";
-				now description entry is "have a threesome with the recently captured husky";
-			else if Libido of Dominick is 2:			[last capture was Pit Bull]
-				now title entry is "Pit Bull 3some";
-				now description entry is "have a threesome with the recently captured pit bull";
-			[else if Libido of Dominick is 3:			[last capture was Pink Poodle]
-				now title entry is "Pink Poodle 3some";
-				now description entry is "have a threesome with the recently captured poodle";]
-	[]
-	sort the table of fucking options in sortorder order;
-	repeat with y running from 1 to number of filled rows in table of fucking options:
-		choose row y from the table of fucking options;
-		say "[link][y] - [title entry][as][y][end link][line break]";
-	while sextablerun is 0:
-		say "Pick the corresponding number> [run paragraph on]";
-		get a number;
-		if calcnumber > 0 and calcnumber <= the number of filled rows in table of fucking options:
-			now current menu selection is calcnumber;
-			choose row calcnumber in table of fucking options;
-			say "[title entry]: Shall you [description entry]?";
-			if Player consents:
-				LineBreak;
-				now sextablerun is 1;
-				if title entry is:
-					-- "Doggy style":
-						say "[sexwithDominick_01]";
-					-- "Lap ride":
-						say "[sexwithDominick_02]";
-					-- "Anal":
-						say "[sexwithDominick_03]";
-					-- "Suck his cock":
-						say "[sexwithDominick_04]";
-					-- "Cock worship":
-						say "[sexwithDominick_05]";
-					-- "Beta training":
-						say "[dom_betatraining]";
-					-- "Female Husky 3some":
-						say "[dom_captured3some_00]";
-					-- "Pit Bull 3some":
-						say "[dom_captured3some_00]";
-					[-- "Pink Poodle 3some":
-						say "[dom_captured3some_00]";
-					-- "Omega training":
-						say "[dom_omegatraining]";]
-		else:
-			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
-	infect "Breederslut";
-	if HP of Dominick >= 5:
+		[]
+		sort the table of fucking options in sortorder order;
+		repeat with y running from 1 to number of filled rows in table of fucking options:
+			choose row y from the table of fucking options;
+			say "[link][y] - [title entry][as][y][end link][line break]";
+		while sextablerun is 0:
+			say "Pick the corresponding number> [run paragraph on]";
+			get a number;
+			if calcnumber > 0 and calcnumber <= the number of filled rows in table of fucking options:
+				now current menu selection is calcnumber;
+				choose row calcnumber in table of fucking options;
+				say "[title entry]: Shall you [description entry]?";
+				if Player consents:
+					LineBreak;
+					now sextablerun is 1;
+					if title entry is:
+						-- "Doggy style":
+							say "[sexwithDominick_01]";
+						-- "Lap ride":
+							say "[sexwithDominick_02]";
+						-- "Anal":
+							say "[sexwithDominick_03]";
+						-- "Suck his cock":
+							say "[sexwithDominick_04]";
+						-- "Cock worship":
+							say "[sexwithDominick_05]";
+						-- "Beta training":
+							say "[dom_betatraining]";
+						-- "Female Husky 3some":
+							say "[dom_captured3some_00]";
+						-- "Pit Bull 3some":
+							say "[dom_captured3some_00]";
+						[-- "Pink Poodle 3some":
+							say "[dom_captured3some_00]";
+						-- "Omega training":
+							say "[dom_omegatraining]";]
+			else:
+				say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
 		infect "Breederslut";
-	SanLoss 5;
-	now lastfuck of Dominick is turns;
-	wait for any key;
-
-to say ForcedSubtoDomSexMenu:
-	WaitLineBreak;
-	now sextablerun is 0;
-	blank out the whole of table of fucking options;
-	[]
-	choose a blank row in table of fucking options;
-	now title entry is "Face Fuck";
-	now sortorder entry is 1;
-	now description entry is "Suck your master's doggy dick";
-	[]
-	choose a blank row in table of fucking options;
-	now title entry is "Creampie Trial";
-	now sortorder entry is 2;
-	now description entry is "Get your prize from the other bitches after Dom uses them";
-	[]
-	if (HP of Dominick is 31 or HP of Dominick is 41 or HP of Dominick is 51) and nightmaretf < 1 and wrcursestatus < 7 and JackalBoyTF < 1 and JackalManTF < 1:
-		choose a blank row in table of fucking options;
-		now title entry is "Full Doggy Training";
-		now sortorder entry is 3;
-		now description entry is "Dom transforms you into a proper doggy slut in one go (be warned, this is a permanent infection - you're Dom's bitch now)";
-	[]
-	if Player is not mpreg_ok:
-		if ((HP of Dominick > 30 and HP of Dominick < 34) or (HP of Dominick > 40 and HP of Dominick < 44)) and nightmaretf < 1 and wrcursestatus < 7 and JackalBoyTF < 1 and JackalManTF < 1:
-			choose a blank row in table of fucking options;
-			now title entry is "Beta Doggy Training";
-			now sortorder entry is 4;
-			now description entry is "Learn to be a proper doggy slut in three easy steps (be warned, this is a permanent infection - you're Dom's bitch now)";
-	[]
-	choose a blank row in table of fucking options;
-	now title entry is "Doggy Anal";
-	now sortorder entry is 5;
-	now description entry is "Your master breeds your ass";
-	[]
-	if Player is female:
-		choose a blank row in table of fucking options;
-		now title entry is "Doggy Fuck";
-		now sortorder entry is 6;
-		now description entry is "Your master breeds you like the bitch you are";
-	[]
-	if Player is mpreg_ok and nightmaretf < 1 and wrcursestatus < 7 and JackalBoyTF < 1 and JackalManTF < 1:
-		choose a blank row in table of fucking options;
-		now title entry is "Omega Doggy Training";
-		now sortorder entry is 7;
-		now description entry is "Your master breeds your fertile ass while you fuck another bitch (be warned, this is a permanent infection - you're Dom's bitch now)";
-	[]
-	sort the table of fucking options in sortorder order;
-	repeat with y running from 1 to number of filled rows in table of fucking options:
-		choose row y from the table of fucking options;
-		say "[link][y] - [title entry][as][y][end link][line break]";
-	say "[link]0 - Denied[as]0[end link][line break]";
-	while sextablerun is 0:
-		say "Pick the corresponding number> [run paragraph on]";
-		get a number;
-		if calcnumber > 0 and calcnumber <= the number of filled rows in table of fucking options:
-			now current menu selection is calcnumber;
-			choose row calcnumber in table of fucking options;
-			say "[title entry]: [description entry]?";
-			if Player consents:
-				now sextablerun is 1;
-				if title entry is:
-					-- "Face Fuck":
-						say "[ForcedSubToDomSex1]";
-					-- "Creampie Trial":
-						say "[ForcedSubToDomSex2]";
-					-- "Full Doggy Training":
-						say "[ForcedSubToDomSex3]";
-					-- "Beta Doggy Training":
-						say "[ForcedSubToDomSex4]";
-					-- "Omega Doggy Training":
-						say "[ForcedSubToDomSex5]";
-					-- "Doggy Anal":
-						say "[ForcedSubToDomSex6]";
-					-- "Doggy Fuck":
-						say "[ForcedSubToDomSex7]";
-		else if calcnumber is 0:
-			now sextablerun is 1;
-			say "     Your master's face spreads in an evil grin. 'I'm not sure that you actually want this dick enough. I think we should wait until you're truly ready.' He shoves you away and turns his attention to his two collared pets.";
-			raise Player Libido by 10;
-		else:
-			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options], or 0 to exit.";
-	wait for any key;
-	clear the screen and hyperlink list;
+		if HP of Dominick >= 5:
+			infect "Breederslut";
+		SanLoss 5;
+		now lastfuck of Dominick is turns;
+		wait for any key;
 
 Section 6 - Sex Scenes
 
 to say sexwithDominick_00:
-	let doggytype be false;
-	if FaceName of Player is listed in infections of CanineList or BodyName of Player is listed in infections of CanineList or CockName of Player is listed in infections of CanineList:
-		now doggytype is true;
 	say "     The tantalizing sight of Dom's doggy cock gets too tempting to resist any longer. Dropping to your knees before him, you nuzzle those plump balls and take in the heady scent of the canine stud. You slip further into lustful need, stroking his manhood while licking and kissing those big balls.";
 	say "     Dom leers down at you. 'That's it, you slut. [if Player is female]You girls can't get enough of my big meat. It's just what a bitch like you needs, isn't it?' he says as he takes hold of your head and grinds his hard, leaking shaft across your cheek. He doesn't bother waiting for your response, pushing his cock past your lips as soon as you open your mouth[else]That's all you guys are good for - licking my balls and polishing my cock.' He rubs said cock across your cheek, leaking precum onto your face. The scent of his arousal turns you on all the more and the next time you take a panting breath, he pushes his cock past your lips, his Prince Albert piercing tickling the back of your throat[end if]. With his shaft stuffed in your mouth, you're treated to a steady dribble of doggy pre that is deliciously exciting.";
 	WaitLineBreak;
-	say "     As you lick and suck on his canine rod, the flavor seeps deeper into your senses. It fills you with arousal, a [if Player is female]heat growing in your loins. Your pussy clenches,[else]hunger growing in your belly. You salivate uncontrollably, your mouth[end if] growing increasingly wet with every heady breath of his musk you take in[if doggytype is true]. His pheromones are particularly effective, arousing your carnal canine desires[end if][if Player is male]. Despite how turned on you've gotten, your cock remains flaccid, unwanted and unneeded when compared to the perfect specimen you're sucking on[end if].";
+	say "     As you lick and suck on his canine rod, the flavor seeps deeper into your senses. It fills you with arousal, a [if Player is female]heat growing in your loins. Your pussy clenches,[else]hunger growing in your belly. You salivate uncontrollably, your mouth[end if] growing increasingly wet with every heady breath of his musk you take in[if FaceName of Player is listed in infections of CanineList or BodyName of Player is listed in infections of CanineList or CockName of Player is listed in infections of CanineList]. His pheromones are particularly effective, arousing your carnal canine desires[end if][if Player is male]. Despite how turned on you've gotten, your cock remains flaccid, unwanted and unneeded when compared to the perfect specimen you're sucking on[end if].";
 	if Player is female:
-		say "     'Keep going, you slut. You're a good girl, aren't you? And there's nothing a good girl likes more than a big, juicy dick.' You can only moan wetly in response, sucking greedily. A [if doggytype is true]canine [end if]corner of your mind agrees with him - you certainly can't seem to get enough of his pre. You long for a more substantial treat as well. And when he starts thrusting into your mouth harder, you know you'll be getting it soon.";
+		say "     'Keep going, you slut. You're a good girl, aren't you? And there's nothing a good girl likes more than a big, juicy dick.' You can only moan wetly in response, sucking greedily. A [if FaceName of Player is listed in infections of CanineList or BodyName of Player is listed in infections of CanineList or CockName of Player is listed in infections of CanineList]canine [end if]corner of your mind agrees with him - you certainly can't seem to get enough of his pre. You long for a more substantial treat as well. And when he starts thrusting into your mouth harder, you know you'll be getting it soon.";
 		WaitLineBreak;
 		say "     With him pushing the tip of his hard cock down your throat, you do your best to stretch your mouth open wide to allow his knot entry. 'Mmm... nothing like a hot [if Player is male]wannabe [end if]bitch's hot hole,' he pants. 'I'm gonna- uggh- tie with that slutty mouth of yours annggg... and feed you my hot- ohhh... hot load. Gotta make sure you don't lose a single dr- Rrrrrrr- drop of my rich spunk.' He thrusts harder, forcing the growing bulge in and then holds your head steady as the knot continues to inflate. 'It's always so tough to train you sluts to take my knot for the first time, but I gotta make sure my new girl is well-fed.' Your response to this is to suck and swallow over his pulsing prick all while getting your mouth stretched open wider by his bulging shaft. It's difficult and makes it hard to breathe, but that only makes every gasp of his rich scent all the more satisfying.";
 		say "     Dom's swollen knot stuffs your mouth full, keeping you locked onto his cock as it throbs in your sore maw. You hardly notice the discomfort though, instead focused on how his plump ballsack draws up, signaling his imminent release. And it is quite the release indeed, the first of several powerful blasts of thick semen shoot down your throat, filling your belly with warmth. The flow is quite voluminous, causing a backwash that floods your mouth to be trapped behind his knot, giving you a taste of his potent, virile semen. Your eyes roll back in your head as the delightfully rich flavor fills your senses, becoming all you can think about.";
@@ -498,13 +488,13 @@ to say sexwithDominick_00:
 	else:
 		say "     With him pushing the tip of his hard cock down your throat, you do your best to stretch your mouth open wide to allow his knot entry. 'You should feel lucky I'm even letting you polish my rod. You slutty males are so pitiful, it hardly seems worth it to spill my seed in you.' You whimper and moan at the prospect of being denied the virile male's seed and work his pulsing shaft all the harder. He grins at this and grabs your head so he can roughly thrust into your mouth. 'Alright, you greedy fag, take that big knot. I'm gonna- uggh- tie with that slutty mouth of yours annggg... and there'll be no getting out of it, you man-whore. Bad enough I'm spending it in you. NNnnggg- Not gonna let you spill a drop of my prime puppy-making batter.' Your response to this verbal abuse is to suck and swallow over his pulsing prick all while getting your mouth stretched open wider by his bulging shaft. It's difficult and makes it hard to breathe, but that only makes every gasp of his rich scent all the more satisfying.";
 		say "     Dom's swollen knot stuffs your mouth full, keeping you locked onto his cock as it throbs in your sore maw. His thrusts are short and hard, rattling your brain as he pounds into your overstretched mouth and throat. You hardly notice the discomfort though, instead focused on how his plump ballsack draws up, signaling his imminent release. And it is quite the release indeed, the first of several powerful blasts of thick semen shoot down your throat, filling your belly with warmth. The flow is quite voluminous, causing a backwash that floods your mouth to be trapped behind his knot, giving you a taste of his potent, virile semen. Your eyes roll back in your head as the delightfully rich flavor fills your senses, becoming all you can think about.";
-		NPCSexAftermath Player receives "OralCock" from Dominick;
 		WaitLineBreak;
 		if wslevel > 1:
 			say "     True to his word, the bulging knot is locked tightly inside your mouth, making sure you don't lose any of his hot load. Being tied to him, you have ample opportunity to swallow down his copious load. As you lick his virile rod completely clean, he continues to deride you. 'Hungry for more, I see. Alright, you cock-slut, have some more,' he pants. A fresh rush of hot fluid goes down your throat, but this time it's his piss that backwashes into your mouth. You cough and sputter at the acrid taste suddenly washing away the flavor of his semen, but his knot keeps it all locked inside. Yet despite the harshness of it, it is also rich with that musky scent of the stud. The experience grows increasingly arousing to your musk-confused brain. Why shouldn't such an impressive male use you as he sees fit?";
 			say "     'Good job, you stupid toilet,' he growls, rubbing your jaw and throat as you do your best to swallow down the rest of his urine. 'It's such a waste spilling my seed into you when I could be breeding puppies, so the least you can do is let me wash it down with my piss. It's about all you're good for,' he adds, your sex-addled brain accepting the sexy stud of a dog's words. When his knot does eventually go down, Dom pulls it free right away and slaps it across your cheek. The harsh yet arousing taste of the dominant husky's drained fluids lingers in your mouth for some time, making you long for the next opportunity to get some.";
 		else:
 			say "     True to his word, the bulging knot is locked tightly inside your mouth, making sure you don't lose any of his hot load. You remain tied to him for some time, giving you ample opportunity to swallow down his copious load. As you lick his virile rod completely clean, he continues to deride you, calling you the man-slut and cocksucker that you clearly are. And given how eagerly you're going after the last few dregs of his delicious load, your sex-addled mind accepts the sexy stud of a dog's words. When it eventually does go down, Dom pulls it free right away and slaps it across your cheek. The arousing taste of the dominant husky's drained cum lingers in your mouth for some time, making you long for the next opportunity to get another load.";
+		NPCSexAftermath Player receives "OralCock" from Dominick;
 	SanLoss 5;
 	infect "Breederslut";
 	if HP of Dominick < 5, increase HP of Dominick by 1;
@@ -523,19 +513,16 @@ to say sexwithDominick_01:
 	WaitLineBreak;
 	say "     Dom quickens his pace as he's approaching his climax. He pounds into you roughly[if Cunt Tightness of Player < 8], working hard to pop his knot into your tight cunt[else if Cunt Tightness of Player < 16], working to pop his knot into your cunt[else], helping to stretch your cavernous cunt that little bit more to let his knot in[end if]. 'Nnnggg... [if HP of Dominick < 4]I always like taking a new bitch for the first time. Feeling her stretch for me. And... nggg... in it goes...' he says through gritted teeth, finally popping that deliciously thick knot into you. 'Gotta keep all the high-quality doggy sperm where it can do its job, my pet[else]Time to tie you again, my slutty pet. I know you love that big knot of mine. Take it you biiiitch,' he says through gritted teeth, finally popping that deliciously thick knot into you. '[one of]You're not going anywhere until you're stuffed full of my prime breeding cum[or]You'll be a good breeding bitch in no time[or]Time to fill that belly of yours with my seed[at random][end if].'";
 	say "     You cry out in orgasmic release as Dom's knot locks into you. As your cunt spasms around his shaft, he continues drilling into you with short thrusts that more tug on the cock buried inside you than thrust in and out. This is enough to push him to orgasm as well, blasting shot after shot of canine cum into your cunt. And true to his words, the knot means there's nowhere for the excessive flow to go than into your womb.";
-	NPCSexAftermath Player receives "PussyFuck" from Dominick;
 	WaitLineBreak;
 	if HP of Dominick is 4 and wslevel is 3:
 		say "     After the animalistic mating is over, you're left stuck on his knot while lost in the afterglow. The feel of all that hot doggy sperm inside you is strangely satisfying, making you feel content and passive. It is some time before Dom's able to remove his manhood from you, releasing a gush of trapped cum when it pops free. Sandwiching his meat between your buns, he grinds the messy pole against your ass. This is followed by a brief spray of hot fluid across your back. As the strong scent hits your nose, you realize the husky's taken a quick piss onto your back, further marking you as his. This way the dominant husky's scent will linger on you long after you've left. 'But why leave?' you ask yourself, sighing softly as you bask in afterglow. You keep your rear raised to hold his thick load inside you like a good breeder slut.";
 		decrease humanity of Player by 3;
 	else:
 		say "     After the animalistic mating is over, you're left stuck on his knot while lost in the afterglow. The feel of all that hot doggy sperm inside you is strangely satisfying. It provides a warmth that seeps through your whole body. The two other girls come up while you're locked together, licking at the point of your union with their master. Once his knot does finally go down enough to be removed, they're right there to catch the excess flowing from your stretched cunny and suck his cock clean for him. Only once they're finished are you permitted to get up unsteadily onto your feet as you try to recall what you wanted to do next.";
+	NPCSexAftermath Player receives "PussyFuck" from Dominick;
 	if HP of Dominick < 5, increase HP of Dominick by 1;
 
 to say sexwithDominick_02:
-	let doggytype be false;
-	if FaceName of Player is listed in infections of CanineList or BodyName of Player is listed in infections of CanineList or CockName of Player is listed in infections of CanineList:
-		now doggytype is true;
 	say "     Desiring another round with the sexy husky, you [if Player is breederslutbodied]pad[else]head[end if] over to him and take his erect member in hand. He smiles at this and places a paw meaningfully, possessively on your rear. 'Come back for more, I see. There's nothing a [if Player is male]wannabe-[else]sweet [end if]bitch like you needs more than cock.' His paw slips down between your legs to tease across your wet folds with casual skill. 'You want it in you, don't you?'";
 	say "     Not waiting for your answer, he pulls you along as he takes a seat in his nearby chair. You end up in his lap, his hard cock grinding between your buns. You can feel its warmth, its hardness, its girth and you give a soft moan of desire. Hooking his paws under your thighs, he raises your legs and boosts you up before lowering you down onto his erection. It drives into you like it has every right to be there and your cunt doesn't object, quivering and clutching around it with need. Held in his arms with your legs in the air, you're unable to do anything but let him do with you as he will while on lurid display for his attendant slut girls.";
 	WaitLineBreak;
@@ -543,7 +530,7 @@ to say sexwithDominick_02:
 	if Player is breederslutbodied and a random chance of 3 in 5 succeeds:
 		say "     Picking up his pace, Dominick thrusts up into you all the harder while bouncing you in his lap. 'How does that feel, my little Shiba Inu? A little bitch-girl like you moaning like a slut for a dick nearly as big as you are,' he teases, knocking that knot harder against your soaked folds, working them open a little further. And while you are only down to five feet tall, that cock of his is two or three times the average size, ensuring you'll be thoroughly filled. 'I can tell you love it. And once I've knotted you, there'll be no room for all that cum but right into that cute womb of yours,' he adds, grinding his cock deep inside you for emphasis. In your lust-addled state, you long for exactly that.";
 	else:
-		say "     Picking up his pace, Dominick thrusts up into you all the harder while bouncing you in his lap. 'Take it, you [if Player is male]wannabe-[else]horny [end if]slut,' he pants in your ear. Your crotch knocks down harder onto that big knot of his, working your folds open a little further. 'I know you want it. Every bitch[if doggytype is false]-in-training[end if] loves a good, hard dicking,' he says with confidence, grinding his cock deep inside you for emphasis. In your increasingly lust-addled state, your mind and body agree, needing the stud of a dog to fuck you senseless.";
+		say "     Picking up his pace, Dominick thrusts up into you all the harder while bouncing you in his lap. 'Take it, you [if Player is male]wannabe-[else]horny [end if]slut,' he pants in your ear. Your crotch knocks down harder onto that big knot of his, working your folds open a little further. 'I know you want it. Every bitch[if FaceName of Player is not listed in infections of CanineList and BodyName of Player is not listed in infections of CanineList and CockName of Player is not listed in infections of CanineList]-in-training[end if] loves a good, hard dicking,' he says with confidence, grinding his cock deep inside you for emphasis. In your increasingly lust-addled state, your mind and body agree, needing the stud of a dog to fuck you senseless.";
 	say "     Under the continual pounding, your pussy can only take so much before being spread wider and wider until his thick knot pops into you with a wet slurp. You [if FaceName of Player is listed in infections of CanineList]release a yelp[else]groan loudly[end if] as you're stretched that last bit and the thick bulb of meat finally pops and locks into your achingly stuffed cunt. You arch your back and quiver atop his pulsing rod, your inner walls squeezing and milking at his cock while he continues to bounce you up and down. Tied as you are, you can only move up a short distance before slamming back down onto his crotch, more grinding his cock into you and tugging at your insides.";
 	WaitLineBreak;
 	say "     But that's still more than enough to send you into orgasmic bliss. And your release is soon followed by that of your canine mate, his hot load shooting up into your womb in a near-steady stream of semen. You can feel the gooey warmth of it filling your uterus, the virile sperm filling you with ecstasy in your post-orgasmic haze[if Player is not male]. And as the seeding goes on, his two attendants approach at his signal, taking turns licking at your stuffed pussy to catch what few dribbles of their master's precious seed leak out around his throbbing knot[end if].";
@@ -572,14 +559,11 @@ to say sexwithDominick_03:
 	if HP of Dominick < 5, increase HP of Dominick by 1;
 
 to say sexwithDominick_04:
-	let doggytype be false;
-	if FaceName of Player is listed in infections of CanineList or BodyName of Player is listed in infections of CanineList or CockName of Player is listed in infections of CanineList:
-		now doggytype is true;
 	say "     Kneeling between the husky's legs, you start licking at that fine cock of his. The taste of his dick excites your senses, getting you all the more eager and aroused. Cupping his balls in one hand, you give his meat a long, slow lick from bottom to top. Once at the pointed glans, you swirl your tongue over it before lowering your lips down around his shaft.";
 	if Player is female:
 		say "     'Mmm... that's it, you slut. You [if Player is male]wannabe-[end if]bitches are all the same, lusting after a real stud's cock.' He places a paw atop your head and pushes it down, forcing you to quickly take more of his dripping shaft into your mouth and throat. You slurp your tongue across it, panting and moaning softly. His other paw soon follows, gripping your head so he can have you bob up and down on his pulsing rod.";
 		WaitLineBreak;
-		say "     As you lick and suck on his canine rod, the flavor seeps deeper into your senses. It fills you with arousal and a heat growing in your loins. Your pussy clenches, growing increasingly wet with every heady breath of his musk you take in[if doggytype is true]. His pheromones are particularly effective, arousing your carnal canine desires[end if][if Player is male]. Despite how turned on you've gotten, your cock remains flaccid, unwanted and unneeded when compared to the perfect specimen you're sucking on[end if].";
+		say "     As you lick and suck on his canine rod, the flavor seeps deeper into your senses. It fills you with arousal and a heat growing in your loins. Your pussy clenches, growing increasingly wet with every heady breath of his musk you take in[if FaceName of Player is listed in infections of CanineList or BodyName of Player is listed in infections of CanineList or CockName of Player is listed in infections of CanineList]. His pheromones are particularly effective, arousing your carnal canine desires[end if][if Player is male]. Despite how turned on you've gotten, your cock remains flaccid, unwanted and unneeded when compared to the perfect specimen you're sucking on[end if].";
 		say "     Rising from his seat, Dom switches to thrusting into your mouth while holding your head steady. His delicious cock pulses and throbs as his excitement builds. Knowing what's coming, you do your best to stretch your mouth open wide in an effort to accommodate the big dog's knot. 'Yeah! Take it, you slut. You're gonna take every last drop of my seed and love it.' It takes some effort, but is nowhere near as difficult as the first time, and soon you're rewarded with the meaty pop of his knot burying itself in your mouth.";
 		WaitLineBreak;
 		say "     Dom unleashes his hot, gooey seed down your throat. Much of it pours right down into your belly, filling you with a satisfying warmth that makes you content, if all the more wet and needy between your legs. One powerful blast comes after another and what you can't swallow fast enough comes bubbling back up into your mouth to give you a taste of his delicious, bestial seed. Your eyes roll back in your head as the delightfully rich flavor fills your senses, becoming all you can think about until he's finally done and spent.";
@@ -592,17 +576,17 @@ to say sexwithDominick_04:
 		if HP of Dominick is 4, increase HP of Dominick by 1;
 	else:
 		say "     'Keep going, you pitiful excuse for a male. You should feel lucky I'm even letting you polish my rod when I've got fine bitches I could be breeding. You better make it worth my while.' He places a paw atop your head and pushes it down, forcing you to quickly take more of his dripping shaft into your mouth and throat. You slurp your tongue across it, panting and moaning softly. His other paw soon follows, gripping your head so he can have you bob up and down on his pulsing rod.";
-		say "     As you lick and suck on his canine rod, the flavor seeps deeper into your senses. It fills you with arousal, a hunger growing in your belly. You salivate uncontrollably, your mouth growing increasingly wet with every heady breath of his musk you take in[if doggytype is true]. His pheromones are particularly effective, arousing your carnal canine desires[end if][if Player is male]. Despite how turned on you've gotten, your cock remains flaccid, unwanted and unneeded when compared to the perfect specimen you're sucking on[end if]. You pant and lick all the more enthusiastically, wanting to do your best to please the big, virile male.";
+		say "     As you lick and suck on his canine rod, the flavor seeps deeper into your senses. It fills you with arousal, a hunger growing in your belly. You salivate uncontrollably, your mouth growing increasingly wet with every heady breath of his musk you take in[if FaceName of Player is listed in infections of CanineList or BodyName of Player is listed in infections of CanineList or CockName of Player is listed in infections of CanineList]. His pheromones are particularly effective, arousing your carnal canine desires[end if][if Player is male]. Despite how turned on you've gotten, your cock remains flaccid, unwanted and unneeded when compared to the perfect specimen you're sucking on[end if]. You pant and lick all the more enthusiastically, wanting to do your best to please the big, virile male.";
 		WaitLineBreak;
 		say "     Rising from his seat, Dom switches to thrusting into your mouth while holding your head steady. His delicious cock pulses and throbs as his excitement builds. Knowing what's coming, you do your best to stretch your mouth open wide in an effort to accommodate the big dog's knot. 'Time to stuff that faggy mouth of yours, you slut. You're gonna take every last drop of my seed and love it, you cum dumpster.' It takes some effort, but is nowhere near as difficult as the first time, and soon you're rewarded with the meaty pop of his knot burying itself in your mouth.";
 		say "     Dom unleashes his hot, gooey seed down your throat. Much of it pours right down into your belly, filling you with a satisfying warmth that makes you content, if all the more wet and needy between your legs. One powerful blast comes after another and what you can't swallow fast enough comes bubbling back up into your mouth to give you a taste of his delicious, bestial seed. Your eyes roll back in your head as the delightfully rich flavor fills your senses, becoming all you can think about until he's finally done and spent.";
-		NPCSexAftermath Player receives "OralCock" from Dominick;
 		WaitLineBreak;
 		if wslevel > 1:
 			say "     True to his word, the bulging knot is locked tightly inside your mouth, making sure you don't lose any of his hot load. Being tied to him, you have ample opportunity to swallow down his copious load. As you lick his virile rod completely clean, he continues to deride you. 'Hungry for more, I see. Alright, you cock-slut, have some more,' he pants. A fresh rush of hot fluid goes down your throat, but this time it's his piss that backwashes into your mouth. You cough and sputter at the acrid taste suddenly washing away the flavor of his semen, but his knot keeps it all locked inside. Yet despite the harshness of it, it is also rich with that musky scent of the stud. The experience grows increasingly arousing to your musk-confused brain. Why shouldn't such an impressive male use you as he sees fit?";
 			say "     'Good job, you stupid toilet,' he growls, rubbing your jaw and throat as you do your best to swallow down the rest of his urine. 'It's such a waste spilling my seed into you when I could be breeding puppies, so the least you can do is let me wash it down with my piss. It's about all you're good for,' he adds, your sex-addled brain accepting the sexy stud of a dog's words. When his knot does eventually go down, Dom pulls it free right away and slaps it across your cheek. The harsh yet arousing taste of the dominant husky's drained fluids lingers in your mouth for some time, making you long for the next opportunity to get some.";
 		else:
 			say "     True to his word, the bulging knot is locked tightly inside your mouth, making sure you don't lose any of his hot load. You remain tied to him for some time, giving you ample opportunity to swallow down his copious load. As you lick his virile rod completely clean, he continues to deride you, calling you the man-slut and cocksucker that you clearly are. And given how eagerly you're going after the last few dregs of his delicious load, your sex-addled mind accepts the sexy stud of a dog's words. When it eventually does go down, Dom pulls it free right away and slaps it across your cheek. The arousing taste of the dominant husky's drained cum lingers in your mouth for some time, making you long for the next opportunity to get another load.";
+		NPCSexAftermath Player receives "OralCock" from Dominick;
 
 to say sexwithDominick_05:
 	say "     Dropping to your knees before the studly male, you take his stiff member in both hands and start nuzzling it. You take in his manly scent with a soft moan. It sends a shiver up your spine[if Player is female] and makes you wet between your thighs[end if]. There's something captivating about that wonderful cock. You feel you have to lavish that perfect doggy dong with the attention it so obviously deserves. You start to lick and kiss all over it, drawing a pleasured growl from the husky.";
@@ -641,15 +625,9 @@ to say dom_captured3some_00:
 		say "     A needy whine is the first you notice that the female husky has arrived. The former stray has been cleaned and groomed and is looking much prettier. She's got a new collar on and is panting at the sight of you going to town on Dom's cock. She fingers her dripping snatch, which leads you to notice she's got a tattoo above it marking her as a [']breeding bitch['].";
 		say "     At Dom's behest, you make room for her between his legs and the two of you take turns sucking him off. The two of you both share and compete at once - working to please your common master, but each vying to be the one to finish him off. This does not stop you [if Player is purefemale]both from fingering one another[else]from taking over fingering her[end if] as well, showing it to be a friendly competition.";
 		WaitLineBreak;
-		let playernum be 100 + Libido of Player + ( level of Player * 2 );
-		let monsternum be 190;
-		let playernum be a random number between 1 and playernum;
-		let monsternum be a random number between 1 and monsternum;
-		if Playernum > monsternum:	[player wins]
-			say "     You are the lucky winner, getting to taste several thick blasts of Dom's hot seed before he pushes you back. You are both then splattered";
-		else:	[husky wins]
-			say "     The husky girl is the lucky one, sucking greedily on Dom's shaft for the first several blasts. After pushing her back, you are both splattered";
-		say " with several more shots of his cum, marking each of you as his bitches. The two of you catch what you can on your tongues and, once he's finished, you sloppily lick each other's faces for the rest of it.";
+		let playernum be a random number between 1 and ( 100 + Libido of Player + ( level of Player * 2 ) );
+		let monsternum be a random number between 1 and 190;
+		say "     [if Playernum > monsternum]You are the lucky winner, getting to taste several thick blasts of Dom's hot seed before he pushes you back. You are both then[else]The husky girl is the lucky one, sucking greedily on Dom's shaft for the first several blasts. After pushing her back, you are both[end if] splattered with several more shots of his cum, marking each of you as his bitches. The two of you catch what you can on your tongues and, once he's finished, you sloppily lick each other's faces for the rest of it.";
 		say "     After that, the husky girl is given a few treats and a playful fingering from Dom to bring her to a yipping climax before he sends her back to await his next visit. Once she's gone, you are treated much the same, fingered to a climax as thanks for providing your sexy stud with another husky bitch to breed.";
 		NPCSexAftermath Player receives "OralCock" from Dominick;
 		NPCSexAftermath Player receives "PussyDildoFuck" from Dominick;
@@ -663,8 +641,8 @@ to say dom_captured3some_00:
 		say "     Between the pounding she's receiving and your licking tongue, the horny female has several quick orgasms before building up to a big finale. You lap up her juices from each of these eagerly and caress your master's heavy nuts as his climax approaches. You get to watch as Dom's knot stretches her cunt wide with every thrust before finally popping into her, tying her to him. You move your lips to suck on her hard little clit to finish her off even as you feel his plump orbs pulse, emptying their load into the moaning, barking bitch. You're treated to a fresh splash of her hot juices, spiced with dribbles of Dom's cum leaking around his thick knot.";
 		say "     After their orgasms fade to an afterglow which leaves them both panting heavily, you move your tongue away from their oversensitive loins and wait. You finger yourself vigorously to the memories of the event and to the sight of their tied loins. You know full well that Dom's virile seed is in her womb and seeking to knock up the tough bitch with a litter of his pups. The thought of this once forcefully independent girl turned into a willing breeding slut is thrilling. It makes you eager to be mounted and bred yourself. As you're picturing that, the husky's deflating knot pops free and a gooey splatter of husky semen and femme juices pours out onto your face. You open your mouth and catch as much of it as you can while fingering yourself to a powerful, moaning orgasm while the pit bull bitch strides off proudly.";
 		CreatureSexAftermath "Player" receives "OralPussy" from "Pit Bull";
-	else if Libido of Dominick is 3:		[Pink Poodle]
-		say "***Pink Poodle";
+	[else if Libido of Dominick is 3:		[Pink Poodle]
+		say "***Pink Poodle";]
 	if HP of Dominick is 10, now HP of Dominick is 11;
 	now Libido of Dominick is 0;
 
@@ -679,45 +657,30 @@ to say ForcedSubmissionToDom:
 			say "     Cum streaming out of your mouth as you cough and gasp, Dominick surveys his handiwork. You hear him say, 'Time to clean up,' before a hot stream of piss hits your face, blasting away any cum that remained. He aims his dick down to your chest, soaking your body as well. The musky scent is overpowering, and you know you've been well and truly marked as Dominick's for anyone with a sensitive nose. A minute or so passes before he's tapped out, shaking his cock in your face to flick the last few drops onto you. He walks behind you to untie your hands. After freeing your hands, he grabs you by the neck and drags you to the door. 'Now I've shown you your place, [if Player is male]bitch male, and if I catch you [']round here again, I'll make you MY bitch[else]neuter bitch, and if I catch you [']round here again, I'll make you MY neuter bitch[end if].' He tosses you outside and slams the door behind you. You pick yourself off of the ground and stagger into the woods, fighting the urge to take Dominick up on his offer.";
 		else:
 			say "     Cum streaming out of your mouth as you cough and gasp, Dominick surveys his handiwork. You hear him say, 'That's a good look for you, [if Player is male]breeder boy[else]breeding stock[end if]. You should wear it more often.' He chuckles to himself when you begin to nod, catching yourself too late. He walks behind you to untie your hands. After freeing your hands, he grabs you by the neck and drags you to the door. 'Now I've shown you your place, [if Player is male]bitch male, and if I catch you [']round here again, I'll make you MY bitch[else]neuter bitch, and if I catch you [']round here again, I'll make you MY neuter bitch[end if].' He tosses you outside and slams the door behind you. You pick yourself off of the ground and stagger into the woods, fighting the urge to take Dominick up on his offer and return to the kennel.";
-		NPCSexAftermath Player receives "OralCock" from Dominick;
 		now HP of Dominick is 50;
-		AddNavPoint Happy Puppy Kennel;
-		SanLoss 5;
 	else if Player is male:			[The path to forced beta bitch, with a side of sissy shaming as a former male.]
 		say "     As you lie on the ground, body throbbing from your defeat, you don't pay attention to what's going on around you. You're just glad no new pain has been introduced in the last few minutes, so you don't struggle at all when Dominick ties your hands behind your back or when he hauls you to your knees. You're not looking for trouble, not anymore. Dominick thrusts his muzzle into your face and says, 'Another worthless male who thought he could be top dog. You thought that I'd be weak after dealing with a pitiful male like that other guy? I barely broke a sweat fighting him, and you were even less of a challenge. You tried to sucker punch me and couldn't even manage that. Worse, the other guy managed to escape with a few broken bones, and here you are in a heap with barely a cracked rib.' Dominick spits on your face before continuing, 'You're not a man, you're a bitch. And I'm going to treat you like one.' He grabs the back of your head with his left hand while lining up his swollen cock with his right. That's all the preparation you get before he thrusts forward, pulling your face toward his dick.";
 		say "     Knowing it will only get worse if you resist, you open your mouth, which is quickly stuffed with Dominick's large rod. He slams repeatedly against your face, trying to work his knot past your already stretched lips, his piercing punching the back of your throat. His frustration mounts at your inability to take his knot, and he pulls out completely, yanking your head back. He spits into your open mouth and growls, 'Take it, bitch.' You feel a tingling in your mouth, but have no time to contemplate as Dominick thrusts back into you. To your surprise, it only takes a few thrusts before his knot finally pops into your mouth. Dominick yells in triumph as he fucks your face with wild abandon, paying no attention to your struggles. Soon, Dominick's grip on the back of your head tightens, and he lets out a howl as he cums down your throat. His seed fills your throat and mouth, but it is stopped by his knot, and you find it increasingly hard to breathe. Just when you think you might pass out, Dominick roughly pulls himself out of you.";
 		WaitLineBreak;
-		if wslevel > 1:
-			say "     Cum streaming out of your mouth as you cough and gasp, Dominick surveys his handiwork. You hear him say, 'Time to clean up,' before a hot stream of piss hits your face, blasting away any cum that remained. He aims his dick down to your chest, soaking your body as well. The musky scent is overpowering, and you know you've been well and truly marked as Dominick's for anyone with a sensitive nose. A minute or so passes before he's tapped out, shaking his cock in your face to flick the last few drops onto you. He walks behind you to untie your hands. After freeing your hands, he grabs you by the neck and drags you to the door. 'Now you're a bitch, and if I catch you [']round here again, I'll make you MY bitch.' He tosses you outside and slams the door behind you. You pick yourself off of the ground and stagger into the woods, fighting the urge to take Dominick up on his offer.";
-		else:
-			say "     Cum streaming out of your mouth as you cough and gasp, Dominick surveys his handiwork. You hear him say, 'That's a good look for you, weakling. You should wear it more often.' He chuckles to himself when you begin to nod, catching yourself too late. He walks behind you to untie your hands. After freeing your hands, he grabs you by the neck and drags you to the door. 'Now you're a bitch, and if I catch you [']round here again, I'll make you MY bitch.' He tosses you outside and slams the door behind you. You pick yourself off of the ground and stagger into the woods, fighting the urge to take Dominick up on his offer.";
-		NPCSexAftermath Player receives "OralCock" from Dominick;
+		say "     Cum streaming out of your mouth as you cough and gasp, Dominick surveys his handiwork. You hear him say, '[if wslevel > 1]Time to clean up,' before a hot stream of piss hits your face, blasting away any cum that remained. He aims his dick down to your chest, soaking your body as well. The musky scent is overpowering, and you know you've been well and truly marked as Dominick's for anyone with a sensitive nose. A minute or so passes before he's tapped out, shaking his cock in your face to flick the last few drops onto you[else]That's a good look for you, weakling. You should wear it more often.' He chuckles to himself when you begin to nod, catching yourself too late[end if]. He walks behind you to untie your hands. After freeing your hands, he grabs you by the neck and drags you to the door. 'Now you're a bitch, and if I catch you [']round here again, I'll make you MY bitch.' He tosses you outside and slams the door behind you. You pick yourself off of the ground and stagger into the woods, fighting the urge to take Dominick up on his offer.";
 		now HP of Dominick is 40;
-		AddNavPoint Happy Puppy Kennel;
-		SanLoss 5;
 	else:			[The path to forced beta bitch.]
 		say "     As you lie on the ground, body throbbing from your defeat, you don't pay attention to what's going on around you. You're just glad no new pain has been introduced in the last few minutes, so you don't struggle at all when Dominick ties your hands behind your back or when he hauls you to your knees. You're not looking for trouble, not anymore. Dominick thrusts his muzzle into your face and says, 'Now even bitches think they've got what it takes to be top dog. You thought that I'd be weak after dealing with a pitiful male like that other guy? I barely broke a sweat fighting him, and you were even less of a challenge. You tried to sucker punch me and couldn't even manage that. Worse, the other guy managed to escape with a few broken bones, and here you are in a heap with barely a cracked rib.' [if Player is female]Dominick spits on your face before continuing, 'You're a bitch, so you know what comes next. Nothing you haven't done before.' [else]Dominick pauses for a moment, his nose flaring, and he continues, 'I've been calling you a bitch, but you're not even that, are you? Guess we'll have to fix that, won't we?' [end if]He grabs the back of your head with his left hand while lining up his swollen cock with his right. That's all the preparation you get before he thrusts forward, pulling your face toward his dick.";
 		say "     Knowing it will only get worse if you resist, you open your mouth, which is quickly stuffed with Dominick's large rod. He slams repeatedly against your face, trying to work his knot past your already stretched lips, his piercing punching the back of your throat. His frustration mounts at your inability to take his knot, and he pulls out completely, yanking your head back. He spits into your open mouth and growls, 'Take it, bitch.' You feel a tingling in your mouth, but have no time to contemplate as Dominick thrusts back into you. To your surprise, it only takes a few thrusts before his knot finally pops into your mouth. Dominick yells in triumph as he fucks your face with wild abandon, paying no attention to your struggles. Soon, Dominick's grip on the back of your head tightens, and he lets out a howl as he cums down your throat. His seed fills your throat and mouth, but it is stopped by his knot, and you find it increasingly hard to breathe. Just when you think that you might pass out, Dominick roughly pulls himself out of you.";
 		WaitLineBreak;
-		if wslevel > 1:
-			say "     Cum streaming out of your mouth as you cough and gasp, Dominick surveys his handiwork. You hear him say, 'Time to clean up,' before a hot stream of piss hits your face, blasting away any cum that remained. He aims his dick down to your chest, soaking your body as well. The musky scent is overpowering, and you know you've been well and truly marked as Dominick's for anyone with a sensitive nose. A minute or so passes before he's tapped out, shaking his cock in your face to flick the last few drops onto you. He walks behind you to untie your hands. After freeing your hands, he grabs you by the neck and drags you to the door. 'Now I've shown you your place, bitch, and if I catch you [']round here again, I'll make you MY bitch.' He tosses you outside and slams the door behind you. You pick yourself off of the ground and stagger into the woods, fighting the urge to take Dominick up on his offer.";
-		else:
-			say "     Cum streaming out of your mouth as you cough and gasp, Dominick surveys his handiwork. You hear him say, 'That's a good look for you, bitch. You should wear it more often.' He chuckles to himself when you begin to nod, catching yourself too late. He walks behind you to untie your hands. After freeing your hands, he grabs you by the neck and drags you to the door. 'Now I've shown you your place, bitch, and if I catch you [']round here again, I'll make you MY bitch.' He tosses you outside and slams the door behind you. You pick yourself off of the ground and stagger into the woods, fighting the urge to take Dominick up on his offer and return to the kennel.";
-		NPCSexAftermath Player receives "OralCock" from Dominick;
+		say "     Cum streaming out of your mouth as you cough and gasp, Dominick surveys his handiwork. You hear him say, '[if wslevel > 1]Time to clean up,' before a hot stream of piss hits your face, blasting away any cum that remained. He aims his dick down to your chest, soaking your body as well. The musky scent is overpowering, and you know you've been well and truly marked as Dominick's for anyone with a sensitive nose. A minute or so passes before he's tapped out, shaking his cock in your face to flick the last few drops onto you[else]That's a good look for you, bitch. You should wear it more often.' He chuckles to himself when you begin to nod, catching yourself too late[end if]. He walks behind you to untie your hands. After freeing your hands, he grabs you by the neck and drags you to the door. 'Now I've shown you your place, bitch, and if I catch you [']round here again, I'll make you MY bitch.' He tosses you outside and slams the door behind you. You pick yourself off of the ground and stagger into the woods, fighting the urge to take Dominick up on his offer[if wslevel is 1] and return to the kennel[end if].";
 		now HP of Dominick is 30;
-		AddNavPoint Happy Puppy Kennel;
-		SanLoss 5;
+	NPCSexAftermath Player receives "OralCock" from Dominick;
+	AddNavPoint Happy Puppy Kennel;
+	SanLoss 5;
 
 to say ForcedSubToDomSex1:			[Facefuck]
-	let doggytype be false;
-	if FaceName of Player is listed in infections of CanineList or BodyName of Player is listed in infections of CanineList or CockName of Player is listed in infections of CanineList:
-		now doggytype is true;
 	say "     Dom grabs your head and pulls your head between his legs, burying your face in his groin. Your senses are flooded with his musk with each breath you take as he rubs your face into his massive balls. Your need to have Dom inside of you deepens, and you take one of his balls into your mouth, sucking on it and enjoying the fullness of it. You manage to work the other ball into your mouth, and your efforts draw a moan from your master. His hands on the back of your head pull you back, and you whine as his balls leave your lips.";
 	if HP of Dominick >= 30 and HP of Dominick < 40:
 		say "     Dom chuckles in response to your whining. 'Such an eager slut. [if Player is female]Girls can't get enough of my big meat. But you're not a girl, you're a bitch; you're already dripping, and you've only tasted my balls. Maybe you don't even need my cock. Maybe I'll just let you suck on my sack for a while, would you like that?' he says, as he takes hold of his hard, leaking shaft and slaps it across your cheeks a few times. He chuckles again as you shake your head vigorously, wanting to make it clear that you need his dick[else]And yet you're a disappointment; you still don't have a cunt for your master. How should we fix your little problem?' He rubs his cock across your cheek, leaking precum and smearing it onto your face. 'We'll have to work extra hard to get you a snatch.' You nod eagerly in anticipation of working hard[end if]. You open your mouth and wait obediently for him to fill it with his prick. He pulls you forward, all the way to his knot, his Prince Albert piercing grazing your tongue on its way to the back of your throat. He holds you there, with his shaft stuffed in your mouth, and you're treated to a steady dribble of doggy precum that is deliciously exciting.";
 		WaitLineBreak;
-		say "     You begin to suck on his canine rod, and the flavor of his seed inflames your mind. Arousal rages through your body, a [if Player is female]wet heat growing in your groin. Your cunt clenches,[else]subservient desire to suck this stud dry. You salivate uncontrollably, your mouth[end if] growing increasingly wet with every heady breath you take, your nose filled with his musk[if doggytype is true]. His pheromones are particularly effective, arousing your carnal canine desires[end if][if Player is male]. Despite how turned on you've gotten, your cock remains flaccid, unwanted and unneeded when compared to the perfect specimen that you're sucking on[end if].";
-		say "     'That's a good bitch. You're getting exactly what you want, what you need. Your master's meat filling your mouth so you can pleasure him. That's your purpose; serving your master's every need.' You can only moan lewdly in response, sucking greedily. A large[if doggytype is true] canine[end if] portion of your mind agrees with him; you can't get enough of his precum, though you long for the real treat as well, and when Dom starts thrusting into your mouth, no longer content with letting you suck him at your own pace, you know that you'll be getting his seed soon.";
+		say "     You begin to suck on his canine rod, and the flavor of his seed inflames your mind. Arousal rages through your body, a [if Player is female]wet heat growing in your groin. Your cunt clenches,[else]subservient desire to suck this stud dry. You salivate uncontrollably, your mouth[end if] growing increasingly wet with every heady breath you take, your nose filled with his musk[if FaceName of Player is listed in infections of CanineList or BodyName of Player is listed in infections of CanineList or CockName of Player is listed in infections of CanineList]. His pheromones are particularly effective, arousing your carnal canine desires[end if][if Player is male]. Despite how turned on you've gotten, your cock remains flaccid, unwanted and unneeded when compared to the perfect specimen that you're sucking on[end if].";
+		say "     'That's a good bitch. You're getting exactly what you want, what you need. Your master's meat filling your mouth so you can pleasure him. That's your purpose; serving your master's every need.' You can only moan lewdly in response, sucking greedily. A large[if FaceName of Player is listed in infections of CanineList or BodyName of Player is listed in infections of CanineList or CockName of Player is listed in infections of CanineList] canine[end if] portion of your mind agrees with him; you can't get enough of his precum, though you long for the real treat as well, and when Dom starts thrusting into your mouth, no longer content with letting you suck him at your own pace, you know that you'll be getting his seed soon.";
 		WaitLineBreak;
 		say "     With Dom now grinding his knot against your lips, you stretch your mouth open wide to let it in. The transformation that you had when you first blew your master helps, and his knot pops in with only a little struggle. 'Mmm... nothing like a hot bitch who knows how to take my knot in her,' he pants. 'I love tying that slutty mouth of yours and feeding you my,' he grunts, 'hot load. Can't wait to feed you my rich spunk!' Dom grunts again before thrusting harder, his growing bulge stretching your mouth even wider, and then he holds your head steady as the knot continues to inflate. [one of]'It's usually tough to train you sluts to take my knot, but you were a natural. Well, with a little help anyway.'[or]'You are quickly becoming my favorite bitch with your talented mouth.'[stopping] Your response to this is to suck and swallow over his pulsing prick, all while getting your mouth stretched open wider by his bulging shaft. You've learned by now how to breathe around his throbbing knot, reveling in his rich scent.";
 		say "     Dom's swollen knot stuffs your mouth full, keeping you locked onto his cock as it throbs in your mouth and throat. You enjoy the fullness briefly, before focusing on his plump ballsack drawing up, signaling his imminent release. Dom howls as he cums, and the first of several powerful blasts of thick semen shoot down your throat, filling your belly with warmth. His large balls empty themselves, and it fills you quickly, causing a backwash that floods your mouth. Your master's knot stoppers his seed in your mouth, giving you a taste of his potent, virile semen. You moan as best you can, filled to bursting with dick and cum, the delightfully rich flavor becoming all that you can think about.";
@@ -733,8 +696,8 @@ to say ForcedSubToDomSex1:			[Facefuck]
 	else if HP of Dominick >= 40 and HP of Dominick < 50:
 		say "     Dom chuckles in response to your whining. 'Such an eager slut[if Player is herm]. And it looks like my favorite sissy has been working hard to be a good bitch. I can smell your tasty twat... but I see that you still have your little dicklet still. That won't last for much longer[else if Player is female]. Girls can't get enough of my big meat. But you're not a girl, you're a sissy; you're already dripping, and you've only tasted my balls. Maybe you don't even need my cock. Maybe I'll just let you suck on my sack for a while, would you like that?' he says, as he takes hold of his hard, leaking shaft and slaps it across your cheeks a few times. He chuckles again as you shake your head vigorously, wanting to make it clear that you need his dick[else if Player is male]. Yet you're a disappointment; you still don't have a cunt for your master, AND you still have that little dicklet. Are you still playing at being a man? How should we fix your little problem?' He rubs his cock across your cheek, leaking precum and smearing it onto your face. 'We'll have to work extra hard to get you a snatch.' You nod eagerly in anticipation of working hard[end if]. You open your mouth and wait obediently for him to fill it with his prick. He pulls you forward, all the way to his knot, his Prince Albert piercing grazing your tongue on its way to the back of your throat. He holds you there, with his shaft stuffed in your mouth, and you're treated to a steady dribble of doggy precum that is deliciously exciting.";
 		WaitLineBreak;
-		say "     You begin to suck on his canine rod, and the flavor of his seed inflames your mind. Arousal rages through your body, a [if Player is female]wet heat growing in your groin. Your cunt clenches,[else]subservient desire to suck this stud dry. You salivate uncontrollably, your mouth[end if] growing increasingly wet with every heady breath you take, your nose filled with his musk[if doggytype is true]. His pheromones are particularly effective, arousing your carnal canine desires[end if][if Player is male]. Despite how turned on you've gotten, your cocklet remains flaccid, unwanted and unneeded when compared to the true male you're servicing[end if].";
-		say "     'That's a good slut. You're getting exactly what you want, what you need. Your master's meat filling your mouth so you can pleasure him. That's your purpose; serving a real man's every need.' You can only moan lewdly in response, sucking greedily. A large[if doggytype is true] canine[end if] portion of your mind agrees with him; you can't get enough of his precum, though you long for the real treat as well, and when Dom starts thrusting into your mouth, no longer content with letting you suck him at your own pace, you know that you'll be getting his seed soon.";
+		say "     You begin to suck on his canine rod, and the flavor of his seed inflames your mind. Arousal rages through your body, a [if Player is female]wet heat growing in your groin. Your cunt clenches,[else]subservient desire to suck this stud dry. You salivate uncontrollably, your mouth[end if] growing increasingly wet with every heady breath you take, your nose filled with his musk[if FaceName of Player is listed in infections of CanineList or BodyName of Player is listed in infections of CanineList or CockName of Player is listed in infections of CanineList]. His pheromones are particularly effective, arousing your carnal canine desires[end if][if Player is male]. Despite how turned on you've gotten, your cocklet remains flaccid, unwanted and unneeded when compared to the true male you're servicing[end if].";
+		say "     'That's a good slut. You're getting exactly what you want, what you need. Your master's meat filling your mouth so you can pleasure him. That's your purpose; serving a real man's every need.' You can only moan lewdly in response, sucking greedily. A large[if FaceName of Player is listed in infections of CanineList or BodyName of Player is listed in infections of CanineList or CockName of Player is listed in infections of CanineList] canine[end if] portion of your mind agrees with him; you can't get enough of his precum, though you long for the real treat as well, and when Dom starts thrusting into your mouth, no longer content with letting you suck him at your own pace, you know that you'll be getting his seed soon.";
 		WaitLineBreak;
 		say "     With Dom now grinding his knot against your lips, you stretch your mouth open wide to let it in. The transformation that you had when you first blew your master helps, and his knot pops in with only a little struggle. 'Mmm... nothing like a hot slut who knows how to take my knot in her,' he pants. 'I love tying that slutty mouth of yours and feeding you my,' he grunts, 'hot load. Can't wait to feed you my rich spunk!' Dom grunts again before thrusting harder, his growing bulge stretching your mouth even wider, and then he holds your head steady as the knot continues to inflate. [one of]'It's usually tough to train males to take my knot, but you and I both know that you were never a real man. That's why you're so good at this.'[or]'You are quickly becoming my favorite bitch with your talented mouth. Maybe I should find more sissies if they're all like you.'[stopping] Your response to this is to suck and swallow over his pulsing prick, all while getting your mouth stretched open wider by his bulging shaft. You've learned by now how to breathe around his throbbing knot, reveling in his rich scent.";
 		say "     Dom's swollen knot stuffs your mouth full, keeping you locked onto his cock as it throbs in your mouth and throat. You enjoy the fullness briefly, before focusing on his plump ballsack drawing up, signaling his imminent release. Dom howls as he cums, and the first of several powerful blasts of thick semen shoot down your throat, filling your belly with warmth. His large balls empty themselves, and it fills you quickly, causing a backwash that floods your mouth. Your master's knot stoppers his seed in your mouth, giving you a taste of his potent, virile semen. You moan as best you can, filled to bursting with dick and cum, the delightfully rich flavor becoming all that you can think about.";
@@ -750,8 +713,8 @@ to say ForcedSubToDomSex1:			[Facefuck]
 	else if HP of Dominick >= 50 and HP of Dominick < 60:
 		say "     Dom chuckles in response to your whining. 'Such an eager slut. Girls can't get enough of my big meat, but you're not a girl, you're a bitch [if Player is male]male. Your little dicklet is already drooling[else]neuter. Your nipples are rock hard[end if], and you've only tasted my balls. Maybe you don't even need my cock. Maybe I'll just let you suck on my sack for a while, would you like that?' he says, as he takes hold of his hard, leaking shaft and slaps it across your cheeks a few times. He chuckles again as you shake your head vigorously, wanting to make it clear that you need his dick. You open your mouth and wait obediently for him to fill it with his prick. He pulls you forward, all the way to his knot, his Prince Albert piercing grazing your tongue on its way to the back of your throat. He holds you there, with his shaft stuffed in your mouth, and you're treated to a steady dribble of doggy precum that is deliciously exciting.";
 		WaitLineBreak;
-		say "     You begin to suck on his canine rod, and the flavor of his seed inflames your mind. Arousal rages through your body, a [if Player is male]strange heat growing in your ass. Your hole clenches,[else] subservient desire to suck this stud dry. You salivate uncontrollably, your mouth[end if] growing increasingly supple with every heady breath you take, your nose filled with his musk[if doggytype is true]. His pheromones are particularly effective, arousing your carnal canine desires[end if][if Player is male]. Despite how turned on you've gotten, your cock remains flaccid, unwanted and unneeded when compared to the real male you're sucking[end if].";
-		say "     'That's a good [if Player is male]boy[else]bitch[end if]. You're getting exactly what you want, what you need. Your master's meat filling your mouth so you can pleasure him. That's your purpose; serving your master's every need.' You can only moan lewdly in response, sucking greedily. A large[if doggytype is true] canine[end if] portion of your mind agrees with him; you can't get enough of his precum, though you long for the real treat as well, and when Dom starts thrusting into your mouth, no longer content with letting you suck him at your own pace, you know that you'll be getting his seed soon.";
+		say "     You begin to suck on his canine rod, and the flavor of his seed inflames your mind. Arousal rages through your body, a [if Player is male]strange heat growing in your ass. Your hole clenches,[else] subservient desire to suck this stud dry. You salivate uncontrollably, your mouth[end if] growing increasingly supple with every heady breath you take, your nose filled with his musk[if FaceName of Player is listed in infections of CanineList or BodyName of Player is listed in infections of CanineList or CockName of Player is listed in infections of CanineList]. His pheromones are particularly effective, arousing your carnal canine desires[end if][if Player is male]. Despite how turned on you've gotten, your cock remains flaccid, unwanted and unneeded when compared to the real male you're sucking[end if].";
+		say "     'That's a good [if Player is male]boy[else]bitch[end if]. You're getting exactly what you want, what you need. Your master's meat filling your mouth so you can pleasure him. That's your purpose; serving your master's every need.' You can only moan lewdly in response, sucking greedily. A large[if FaceName of Player is listed in infections of CanineList or BodyName of Player is listed in infections of CanineList or CockName of Player is listed in infections of CanineList] canine[end if] portion of your mind agrees with him; you can't get enough of his precum, though you long for the real treat as well, and when Dom starts thrusting into your mouth, no longer content with letting you suck him at your own pace, you know that you'll be getting his seed soon.";
 		WaitLineBreak;
 		say "     With Dom now grinding his knot against your lips, you stretch your mouth open wide to let it in. The transformation that you had when you first blew your master helps, and his knot pops in with only a little struggle. 'You slutty [if Player is male]males[else]neuters[end if] are so desperate for dick, I can't believe I haven't tried to find breeder [if Player is male]males[else]neuters[end if] before. My knot just pops right in like your mouth was made for it.' You moan at the thought of your mouth being made for your master's dick. Dom grins at this, saying, 'Not gonna let you spill a drop of my prime puppy-making batter,' as he begins thrusting roughly into your mouth. Your response to this is to suck and swallow over his pulsing prick, all while getting your mouth stretched open wider by his bulging shaft. You've learned by now how to breathe around his throbbing knot, reveling in his rich scent.";
 		say "     Dom's swollen knot stuffs your mouth full, keeping you locked onto his cock as it throbs in your mouth and throat. You enjoy the fullness briefly, before focusing on his plump ballsack drawing up, signaling his imminent release. Dom howls as he cums, and the first of several powerful blasts of thick semen shoot down your throat, filling your belly with warmth. His giant balls empty themselves, and it fills you quickly, causing a backwash that floods your mouth. Your master's knot stoppers his seed in your mouth, giving you a taste of his potent, virile semen. Your eyes roll back in your head, filled to bursting with dick and cum, the delightfully rich flavor becoming all that you can think about.";
@@ -1064,14 +1027,12 @@ to say ForcedSubToDomSex4:			[Step by step Beta TF sequence]
 				say "     Your master humps against you, his dick forcing your legs apart. With his strong hands holding you in place, he continues to fuck himself between your thighs, his massive rod coming into view with each thrust[if Player is male], dwarfing your dicklet[end if]. You find yourself reaching down to run your fingers along his length each time it comes back. It's slick, with large globs of precum intermittently spurting from the tip as you caress it. If only, you think, it could be in you, rather than this glorified masturbation. You turn to ask Dom to fuck you, only to have him chuckle in response. 'Relax and enjoy the ride, slut. You'll get fucked soon enough.' Frustrated by your master's denial and feeling defiant, you try to push Dom's dick into you. Unfortunately your frustration only grows when Dom stops moving, and his hand knock yours away as he growls into your ear, 'Aw, the bitch doesn't like foreplay. Guess I'll give you it to you now.'";
 				if Player is male:
 					say "     He reaches down to your cocklet and begins circling it with his fingers, once again pumping away between your legs. As his fingers play with your little dick, you feel your orgasm building, not in your dick, but in your pussy. All thought ceases as Dom's fingers enter your cunt and the sensation overwhelms you. You moan as each push seems to expand your snatch until you feel yourself cum, your pussy dripping. Dom stops thrusting his cock and just holds you as you shudder through your orgasm. The moment passes and he pushes your upper body forward and you find yourself bracing your hands on your knees for lack of support, mostly relying on Dom's hands on your hips. You feel his cock at the entrance to your cunt and you push backwards, trying to get your master to fuck you for real. He laughs at your eagerness, saying, 'I'm not sure why you still have a dick but that's something we can fix later!' With that, he slides his dick in with one stroke.";
-					WaitLineBreak;
 				else:
 					say "     He reaches down to your pussy and begins fingerblasting you, while starting to fuck between your thighs again. As he fingers you, [if Cunt Depth of Player < 16]you feel your cunt expanding, a needy void growing deep within your body[else]you gasp as he finds the right spots with each pump of his hand[end if] and the sensation overwhelms you. Dom's rough handling pulls a powerful orgasm from you and you soak your master's hand with your femcum. Dom stops thrusting his cock and just holds you as you shudder through your orgasm. The moment passes and he pushes your upper body forward and you find yourself bracing your hands on your knees for lack of support, mostly relying on Dom's hands on your hips. You feel his cock at the entrance to your cunt and you push backwards, trying to get your master to fuck you for real. He laughs at your eagerness, sliding his dick in with one stroke.";
-					WaitLineBreak;
 			else:
 				say "     Your master humps against you, his dick forcing your legs apart. With his strong hands holding you in place, he continues to fuck himself between your thighs, his massive rod coming into view below your far less impressive dicklet. You find yourself reaching down to run your fingers along his length each time it comes back. It's slick, with large globs of precum intermittently spurting from the tip as you caress it. If only, you think, it could be in you, rather than this glorified masturbation. You turn to ask Dom to fuck you, only to have him chuckle in response. 'Relax and enjoy the ride, slut. You'll get fucked soon enough.' Frustrated by your master's denial and feeling defiant, you try to jack yourself off. Unfortunately your frustration only grows as you can't seem to get hard no matter what you do. Dom's hand knock yours away as he growls into your ear, 'Aw, the bitch doesn't know how to get herself off. Let me help you with that.'";
 				say "     He reaches down to your cocklet and begins circling it with his fingers, still pumping away between your legs. As his fingers circle and press at your groin, it seems as though he's expecting something that doesn't happen and he begins to roughly jack you off with a growl of disappointment. All thought ceases as Dom's talented paws bring you to the edge and the sensation overwhelms you. You moan as each wave flows through you, your little cock dribbling. Dom stops thrusting his cock and just holds you as you shudder through your orgasm. The moment passes and he pushes your upper body forward and you find yourself bracing your hands on your knees for lack of support, mostly relying on Dom's hands on your hips. You feel his cock at the entrance to your ass and you push backwards, trying to get your master to fuck you for real. He says, 'I don't know why you're still cuntless, but this will have to do for now!' With that, he slides his dick in with one stroke.";
-				WaitLineBreak;
+			WaitLineBreak;
 			say "     A low moan escapes your lips as your inner walls are stuffed with your master's rod. Dom seems content to fuck you slowly, letting you enjoy feeling every inch enter, and exit, your sensitive hole. The wonderful sensations your master's cock gives you are really something else; you're panting with lust, tongue lolling out of your mouth. You can't think of the last time sex felt this good and when Dom hits a particular spot inside you, you let out a yip of appreciation. Before you can think of why you yipped of all things, you feel your face shift and change and a tan muzzle appears before your eyes; your question is answered. Seeing his efforts have paid off, Dom lets out a low growl, 'Now take my puppies, sissy bitch.' He presses his knot against your opening and there's a moment of resistance before it pops in, the sudden entrance enough to set both of you off, howling in unison. You can feel his seed filling you up as his giant balls unleash their precious load deep inside you.";
 			say "     Dom sits back down in his chair, bringing you along for the ride. He holds you close against him, stroking your belly and licking your neck. You bask in his affection, enjoying your time together with your master. Eventually, Dom's knot frees you and he lets you down from his lap. He gives your butt a smack and says, 'That was not quite what I expected, slut. But don't worry, I'll make a good bitch of you yet.' He turns his attention to his other pets as you collect your things, readying yourself for survival in the outside world.";
 			NPCSexAftermath Player receives "[if Player is female]Pussy[else]Ass[end if]Fuck" from Dominick;
@@ -1084,14 +1045,12 @@ to say ForcedSubToDomSex4:			[Step by step Beta TF sequence]
 				say "     Your master humps against you, his dick forcing your legs apart. With his strong hands holding you in place, he continues to fuck himself between your thighs, his massive rod coming into view with each thrust[if Player is male], dwarfing your dicklet[end if]. You find yourself reaching down to run your fingers along his length each time it comes back. It's slick, with large globs of precum intermittently spurting from the tip as you caress it. If only, you think, it could be in you, rather than this glorified masturbation. You turn to ask Dom to fuck you, only to have him chuckle in response. 'Relax and enjoy the ride, slut. You'll get fucked soon enough.' Frustrated by your master's denial and feeling defiant, you try to push Dom's dick into you. Unfortunately your frustration only grows when Dom stops moving, and his hand knock yours away as he growls into your ear, 'Aw, the bitch doesn't like foreplay. Guess I'll give you it to you now.'";
 				if Player is male:
 					say "     He reaches down to your cocklet and begins circling it with his fingers, once again pumping away between your legs. As his fingers play with your little dick, it seems like he's having trouble finding it. It's almost as though all thought ceases as Dom's fingers enter your cunt and the sensation overwhelms you. You moan as each push seems to expand your snatch until you feel yourself cum, and you watch your dicklet disappear into your body as your pussy drips. Dom stops thrusting his cock and just holds you as you shudder through your last orgasm as a herm. The moment passes and he pushes your upper body forward and you find yourself bracing your hands on your knees for lack of support, mostly relying on Dom's hands on your hips. You feel his cock at the entrance to your cunt and you push backwards, trying to get your master to fuck you for real. He laughs at your eagerness, sliding his dick in with one stroke.";
-					WaitLineBreak;
 				else:
 					say "     He reaches down to your pussy and begins fingerblasting you, while starting to fuck between your thighs again. As he fingers you, [if Cunt Depth of Player < 16]you feel your cunt expanding, a needy void growing deep within your body[else]you gasp as he finds the right spots with each pump of his hand[end if] and the sensation overwhelms you. Dom's rough handling pulls a powerful orgasm from you and you soak your master's hand with your femcum. Dom stops thrusting his cock and just holds you as you shudder through your orgasm. The moment passes and he pushes your upper body forward and you find yourself bracing your hands on your knees for lack of support, mostly relying on Dom's hands on your hips. You feel his cock at the entrance to your cunt and you push backwards, trying to get your master to fuck you for real. He laughs at your eagerness, sliding his dick in with one stroke.";
-					WaitLineBreak;
 			else:
 				say "     Your master humps against you, his dick forcing your legs apart. With his strong hands holding you in place, he continues to fuck himself between your thighs, his massive rod coming into view below your far less impressive dicklet. You find yourself reaching down to run your fingers along his length each time it comes back. It's slick, with large globs of precum intermittently spurting from the tip as you caress it. If only, you think, it could be in you, rather than this glorified masturbation. You turn to ask Dom to fuck you, only to have him chuckle in response. 'Relax and enjoy the ride, slut. You'll get fucked soon enough.' Frustrated by your master's denial and feeling defiant, you try to jack yourself off. Unfortunately your frustration only grows as you can't seem to get hard no matter what you do. Dom's hand knock yours away as he growls into your ear, 'Aw, the bitch doesn't know how to get herself off. Let me help you with that.'";
 				say "     He reaches down to your cocklet and begins circling it with his fingers, still pumping away between your legs. As his fingers circle and press at your groin, it seems as though your flesh is yielding more than you thought possible. It's almost as though all thought ceases as Dom's fingers enter your newly formed cunt and the sensation overwhelms you. You moan as each push seems to expand your snatch until you feel yourself cum, and you watch your dicklet disappear into your body as your pussy continues to grow. Dom stops thrusting his cock and just holds you as you shudder through your last orgasm as a man. The moment passes and he pushes your upper body forward and you find yourself bracing your hands on your knees for lack of support, mostly relying on Dom's hands on your hips. You feel his cock at the entrance to your new cunt and you push backwards, trying to get your master to fuck you for real. He laughs at your eagerness, sliding his dick in with one stroke.";
-				WaitLineBreak;
+			WaitLineBreak;
 			say "     A low moan escapes your lips as your inner walls are stuffed with your master's rod[if Player is not female] for the first time[end if]. Dom seems content to fuck you slowly, letting you enjoy feeling every inch enter, and exit, your sensitive snatch. The wonderful[if Player is female] sensations your master's cock gives you[else], new sensations your pussy provides[end if] are really something else; you're panting with lust, tongue lolling out of your mouth. You can't think of the last time sex felt this good and when Dom hits a particular spot inside you, you let out a yip of appreciation. Before you can think of why you yipped of all things, you feel your face shift and change and a tan muzzle appears before your eyes; your question is answered. Seeing his efforts have paid off, Dom lets out a low growl, 'Now take my puppies, sissy bitch.' He presses his knot against your cleft and there's a moment of resistance before it pops in, the sudden entrance enough to set both of you off, howling in unison. You can feel his seed filling your womb as his giant balls unleash their precious load deep inside you.";
 			say "     Dom sits back down in his chair, bringing you along for the ride. He holds you close against him, stroking your belly and licking your neck. You bask in his affection, enjoying your time together with your master. Eventually, Dom's knot frees you and he lets you down from his lap. He gives your butt a smack and says, 'That was a good first step, slut. I'll make a good bitch of you yet.' He turns his attention to his other pets as you collect your things, readying yourself for survival in the outside world.";
 			SanLoss 5;
@@ -1140,12 +1099,7 @@ to say ForcedSubToDomSex4:			[Step by step Beta TF sequence]
 			now ForcedBreederslutTF is 2;
 	else if HP of Dominick is 33 or HP of Dominick is 43:
 		say "     You slink over to Dom's throne, ready for your final transformation session with your master. He gestures for you to sit on his lap,[if scalevalue of Player > 3] giving you a reassuring nod when you hesitate, gently settling your full weight onto Dom[else if scalevalue of Player < 2] and with his help, you haul yourself onto his lap[else] you sit down eagerly[end if]. He says,[if scalevalue of Player > 3] his voice a bit muffled by your mass,[end if] 'You're finally ready to be my bitch. Exactly as you're meant to be. Now take my cock and put it inside you.' He waits patiently as you adjust yourself to take his massive rod, barely grunting as you slide down his length to his knot. Dom lets you feel him fully for nearly a minute, flexing his dick inside you in panting silence. The minute passes and he growls, 'Now fuck yourself[if HP of Dominick is 33] slut[else] sissy[end if]. Fuck yourself whole.'";
-		if scalevalue of Player > 3:
-			say "     Your feet firmly planted on the floor, you lift up and slam yourself onto Dom's rod, over and over again. Dom seems to be willing to let you do all the work; he doesn't even play with your boobs or brace you. The oddness of his lack of interaction escapes you as your master's dick presses plenty of your buttons even without much input from its owner. Falling deeper into your lust, you don't notice that his breath has been moving from the center of your back upwards until you feel his hot breath on your neck. It's about that time when your steady fucking pace falls off as you suddenly find it difficult to brace yourself against the floor. You hilt yourself for the umpteenth time, only to realize you can't get back up; your feet no longer reach the floor. Now Dom's arms wrap themselves around you and it occurs to you that you're not so large anymore. 'Let me take over from here, pet. You've done such a good job, you deserve a reward.'";
-		else if scalevalue of Player < 2:
-			say "     Not quite sure that you'll be able to follow Dom's order, you try your hardest. You've slid down to his knot with practiced ease but getting back up to fuck yourself is a little difficult. You hear a chuckle from behind you and Dom says, 'Alright I guess you'll need a little help then. I really spoil you, pet.' Your master easily bobs you up and down his giant prick with one hand, using you like a cocksleeve, the thought giving you a little perverse pleasure. Though it's hard to think through your cocklust, you notice Dom's grip shifting a bit. He lets you fall to his knot freely before grasping you again, but this time, he's using both hands to hold you. 'There we go, bitch, now you're fun-sized instead of mini. Now the real fun begins.'";
-		else:
-			say "     Using the arms of the chair to brace yourself, you get to fucking your snatch on Dom's dick. Quickly sinking into a cocklust for your master's dick you barely notice the change until your shrinking form makes your current position unsteady. Dom catches you as you begin to fall forward and says, 'Your only had a little ways to go and now you're ready. Let's make sure that you don't fall off my dick too soon though.'";
+		say "     [if scalevalue of Player > 3]Your feet firmly planted on the floor, you lift up and slam yourself onto Dom's rod, over and over again. Dom seems to be willing to let you do all the work; he doesn't even play with your boobs or brace you. The oddness of his lack of interaction escapes you as your master's dick presses plenty of your buttons even without much input from its owner. Falling deeper into your lust, you don't notice that his breath has been moving from the center of your back upwards until you feel his hot breath on your neck. It's about that time when your steady fucking pace falls off as you suddenly find it difficult to brace yourself against the floor. You hilt yourself for the umpteenth time, only to realize you can't get back up; your feet no longer reach the floor. Now Dom's arms wrap themselves around you and it occurs to you that you're not so large anymore. 'Let me take over from here, pet. You've done such a good job, you deserve a reward[else if scalevalue of Player < 2]Not quite sure that you'll be able to follow Dom's order, you try your hardest. You've slid down to his knot with practiced ease but getting back up to fuck yourself is a little difficult. You hear a chuckle from behind you and Dom says, 'Alright I guess you'll need a little help then. I really spoil you, pet.' Your master easily bobs you up and down his giant prick with one hand, using you like a cocksleeve, the thought giving you a little perverse pleasure. Though it's hard to think through your cocklust, you notice Dom's grip shifting a bit. He lets you fall to his knot freely before grasping you again, but this time, he's using both hands to hold you. 'There we go, bitch, now you're fun-sized instead of mini. Now the real fun begins[else]Using the arms of the chair to brace yourself, you get to fucking your snatch on Dom's dick. Quickly sinking into a cocklust for your master's dick you barely notice the change until your shrinking form makes your current position unsteady. Dom catches you as you begin to fall forward and says, 'Your only had a little ways to go and now you're ready. Let's make sure that you don't fall off my dick too soon though[end if].'";
 		WaitLineBreak;
 		say "     Your master now fully in control of this fuck, you lean back into him, enjoying the pounding. Each stroke gets more and more of his knot into you until it pops into your willing pussy, locking you in place as Dom lets out a howl, flooding your womb with his seed. At long last fulfilled, your body orgasms, clenching around your master's cock, making him a grunt as his sensitive rod is squeezed for a few more spurts of cum. In the long moments as you wait to be freed, not really minding being stuck with your master, Dom says, 'You are forever my bitch now. No matter where you go, or what you do, you'll always be my[if HP of Dominick is 43] sissy[end if] slut. Too soon, his knot slips free from your cunt and he helps you down from his lap. You walk away, head tall, tail wagging, with a sense of purpose you've never known before.";
 		SanLoss 5;
@@ -1165,11 +1119,10 @@ to say ForcedSubToDomSex5:			[Step by step Omega TF sequence]
 		if Player is male:
 			say "     Your master humps against you, his dick forcing your legs apart. With his strong hands holding you in place, he continues to fuck himself between your thighs, his massive rod coming into view with each thrust. You find yourself reaching down to run your fingers along his length each time it comes back. It's slick, with large globs of precum intermittently spurting from the tip as you caress it. If only, you think, it could be in you, rather than this glorified masturbation. You turn to ask Dom to fuck you, only to have him chuckle in response. 'Relax and enjoy the ride, slut. You'll get fucked soon enough.' Frustrated by your master's denial and feeling defiant, you start jacking yourself off. Unfortunately your frustration only grows as you can't seem to get aroused no matter what you do. Dom's hand knock yours away as he growls into your ear, 'Aw, the bitch doesn't like foreplay. Guess I'll give you what you want.'";
 			say "     He reaches down to your cock and begins playing with it, while starting to fuck between your thighs again. At first, Dom's hand feels amazing, but it doesn't take too long before you realize something's strange. Your face is flushed, you're panting in lust but your dick is barely responding. You realize that what's really driving you wild is your master's cock between your legs; that's your true source of pleasure and the realization overwhelms you. You cry out again for Dom to fuck you, that you need him inside you. Dom stops thrusting and he says, 'You wanted to get fucked like we're equals before. But you're my bitch, and bitches only cum from one dick; mine.' With that, he pushes your upper body forward and you find yourself bracing your hands on your knees for lack of support, mostly relying on Dom's hands on your hips. You feel his cock at the entrance to your ass and you push backwards, trying to get your master to fuck you for real. He laughs at your eagerness, sliding his dick in with one stroke.";
-			WaitLineBreak;
 		else:
 			say "     Your master humps against you, his dick forcing your legs apart. With his strong hands holding you in place, he continues to fuck himself between your thighs, his massive rod coming into view below your smooth crotch. You find yourself reaching down to run your fingers along his length each time it comes back. It's slick, with large globs of precum intermittently spurting from the tip as you caress it. If only, you think, it could be in you, rather than this glorified masturbation. You turn to ask Dom to fuck you, only to have him chuckle in response. 'Relax and enjoy the ride, slut. You'll get fucked soon enough.' Frustrated by your master's denial and feeling defiant, you try to rub yourself to completion. Unfortunately your frustration only grows as you can't seem to get aroused no matter what you do. Dom's hand knock yours away as he growls into your ear, 'Aw, the bitch doesn't know how to get himself off. Let me help you with that.'";
 			say "     He reaches down to your flat groin and begins circling it with his fingers, still pumping away between your legs. As his fingers circle and press at your groin, your flesh seems to be a lot more malleable than usual. It's almost as though all thought ceases as a small cocklet rises from your flat groin into Dom's waiting hand and the sensation overwhelms you. You moan as Dom jerks your new dick into being, feeling an intense wave of pleasure that strangely does not break. Dom stops thrusting his cock and just holds you as you buck uselessly into his hand, trying to cum. The moment passes and he pushes your upper body forward and you find yourself bracing your hands on your knees for lack of support, mostly relying on Dom's hands on your hips. You feel his cock at the entrance to your ass and you push backwards, trying to get your master to fuck you for real. He laughs at your eagerness, sliding his dick in with one stroke.";
-			WaitLineBreak;
+		WaitLineBreak;
 		say "     A low moan escapes your lips as your inner walls are stuffed with your master's rod. Dom seems content to fuck you slowly, letting you enjoy feeling every inch enter, and exit, your sensitive rear. The wonderful sensations your master's cock gives you are really something else; you're panting with lust, tongue lolling out of your mouth. You can't think of the last time sex felt this good and when Dom hits a particular spot inside you, you let out a yip of appreciation. Before you can think of why you yipped of all things, you feel your face shift and change and a tan muzzle appears before your eyes; your question is answered. Seeing his efforts have paid off, Dom lets out a low growl, 'Now take my puppies, breeder boy.' He presses his knot against your hole and there's a moment of resistance before it pops in, the sudden entrance enough to set both of you off, howling in unison. You can feel his seed filling your womb as his giant balls unleash their precious load deep inside you.";
 		say "     Dom sits back down in his chair, bringing you along for the ride. He holds you close against him, stroking your belly and licking your neck. You bask in his affection, enjoying your time together with your master. Eventually, Dom's knot frees you and he lets you down from his lap. He gives your butt a smack and says, 'That was a good first step, pet. I'll make a good bitch boy of you yet.' He turns his attention to his other pets as you collect your things, readying yourself for survival in the outside world.";
 		SanLoss 5;
@@ -1186,13 +1139,7 @@ to say ForcedSubToDomSex5:			[Step by step Omega TF sequence]
 		say "     As your master's cock enters your muzzle, a wave of heat runs through your body and centers itself in your cunt. You can feel yourself getting wet, your body preparing itself to be fucked and filled. Moaning around Dom's rod, you continue down towards his knot, hoping that if you please him, he'll breed you. When you reach his knot Dom bucks forward, and, thanks to his transformative influence, it pops in easily. Now that he's knotted your mouth, Dom takes over for you, grasping your head firmly as he thrusts into your mouth, treating you like the cock sleeve you want to be. You can feel him getting close to climax as his knot swells in your maw, which makes your master's next move surprising. He pulls out abruptly, with an audible pop and shoves you backwards, sprawled out before him. He stands up, looming over you, and pumps his dick furiously.";
 		WaitLineBreak;
 		if "Male Preferred" is not listed in feats of Player or "Breasts" is listed in feats of Player:
-			if Breast Size of Player < 1:
-				say "     'Any toy of mine needs to look the part. Time to make my boy bitch into a real doggy bitch!' Dom finishes his statement with a grunt and he blasts your chest and face with his seed, temporarily blinding you with his copious load. Instantly, you feel your body changing as your nanites react to the superior male's cum. Your chest swells outward as your breasts come in, reaching cartoonish proportions. As you reach up to fondle your new tits, a prickling sensation courses through your body and golden brown fur covers the majority of your body, though your belly and breasts are instead a snowy white. A sharp pain suddenly stabs from your rear and you roll over, allowing your tail to sprout unhindered. Your new tail wags, displaying your happiness with your new form for all to see. After all, you're finally the doggy bitch Dom knew you to be, although you still feel a little incomplete. You start when Dom's fingers enter your ass, having lost track of anything outside your body as you transformed.";
-			else:
-				if Breast Size of Player < 12:
-					say "     'Any toy of mine needs to look the part. Time to make my boy bitch into a real doggy bitch!' Dom finishes his statement with a grunt and he blasts your chest and face with his seed, temporarily blinding you with his copious load. Instantly, you feel your body changing as your nanites react to the superior male's cum. Your chest swells outward as your breasts grow, reaching cartoonish proportions. As you reach up to fondle your newly enlarged tits, a prickling sensation courses through your body and golden brown fur covers the majority of your body, though your belly and breasts are instead a snowy white. A sharp pain suddenly stabs from your rear and you roll over, allowing your tail to sprout unhindered. Your new tail wags, displaying your happiness with your new form for all to see. After all, you're finally the doggy bitch Dom knew you to be, although you still feel a little incomplete. You start when Dom's fingers enter your ass, having lost track of anything outside your body as you transformed.";
-				else:
-					say "     'Any toy of mine needs to look the part. Time to make my boy bitch into a real doggy bitch!' Dom finishes his statement with a grunt and he blasts your chest and face with his seed, temporarily blinding you with his copious load. Instantly, you feel your body changing as your nanites react to the superior male's cum. As you reach up to fondle your cum-splattered tits, a prickling sensation courses through your body and golden brown fur covers the majority of your body, though your belly and breasts are instead a snowy white. A sharp pain suddenly stabs from your rear and you roll over, allowing your tail to sprout unhindered. Your new tail wags, displaying your happiness with your new form for all to see. After all, you're finally the doggy bitch Dom knew you to be, although you still feel a little incomplete. You start when Dom's fingers enter your ass, having lost track of anything outside your body as you transformed.";
+			say "     'Any toy of mine needs to look the part. Time to make my boy bitch into a real doggy bitch!' Dom finishes his statement with a grunt and he blasts your chest and face with his seed, temporarily blinding you with his copious load. Instantly, you feel your body changing as your nanites react to the superior male's cum. [if Breast Size of Player < 1]Your chest swells outward as your breasts come in, reaching cartoonish proportions. As you reach up to fondle your new[else if Breast Size of Player < 12]Your chest swells outward as your breasts grow, reaching cartoonish proportions. As you reach up to fondle your newly enlarged[else]As you reach up to fondle your cum-splattered[end if] tits, a prickling sensation courses through your body and golden brown fur covers the majority of your body, though your belly and breasts are instead a snowy white. A sharp pain suddenly stabs from your rear and you roll over, allowing your tail to sprout unhindered. Your new tail wags, displaying your happiness with your new form for all to see. After all, you're finally the doggy bitch Dom knew you to be, although you still feel a little incomplete. You start when Dom's fingers enter your ass, having lost track of anything outside your body as you transformed.";
 			say "     'You're a special kind of boy bitch, aren't you, slut? Not that I'm complaining; your tits are fantastic! Seems like you're almost ready to be my full bitch. I think one more session should do it. I can't wait to see your true self.' With that, Dom removes his fingers, leaving you panting in denied need. He sits back down in his chair, 'Now leave, pet. Try not to fuck too many people on your way out!' You meekly gather yourself and walk away from your master, even as your cocklet drips down your legs from your need.";
 		else:
 			say "     'Any toy of mine needs to look the part. Time to make my boy bitch into a real doggy bitch!' Dom finishes his statement with a grunt and he blasts your chest and face with his seed, temporarily blinding you with his copious load. Instantly, you feel your body changing as your nanites react to the superior male's cum. As you reach up to fondle your cum-splattered chest, a prickling sensation courses through your body and golden brown fur covers the majority of your body, though your belly and chest are instead a snowy white. A sharp pain suddenly stabs from your rear and you roll over, allowing your tail to sprout unhindered. Your new tail wags, displaying your happiness with your new form for all to see. After all, you're finally the bitch boy Dom knew you to be, although you still feel a little incomplete. You start when Dom's fingers enter your ass, having lost track of anything outside your body as you transformed.";
@@ -1215,10 +1162,8 @@ to say ForcedSubToDomSex5:			[Step by step Omega TF sequence]
 		say "     You slink over to Dom's throne, ready for your final transformation session with your master. He gestures for you to sit on his lap,[if scalevalue of Player > 3] giving you a reassuring nod when you hesitate, gently settling your full weight onto Dom[else if scalevalue of Player < 2] and with his help, you haul yourself onto his lap[else] you sit down eagerly[end if]. He says,[if scalevalue of Player > 3] his voice a bit muffled by your mass,[end if] 'You're finally ready to be my bitch. Exactly as you're meant to be. Now take my cock and put it inside you.' He waits patiently as you adjust yourself to take his massive rod, barely grunting as you slide down his length to his knot. Dom lets you feel him fully for nearly a minute, flexing his dick inside you in panting silence. The minute passes and he growls, 'Now fuck yourself slut. Fuck yourself whole.'";
 		if scalevalue of Player > 3:
 			say "     Your feet firmly planted on the floor, you lift up and slam yourself onto Dom's rod, over and over again. Dom seems to be willing to let you do all the work; he doesn't even [if Breast Size of Player > 0]play with your boobs or [end if]support you as you fuck yourself. The oddness of his lack of interaction escapes you as your master's dick presses plenty of your buttons even without much input from its owner. Falling deeper into your lust, you don't notice that his breath has been moving from the center of your back upwards until you feel his hot breath on your neck. It's about that time when your steady fucking pace falls off as you suddenly find it difficult to brace yourself against the floor. You hilt yourself for the umpteenth time, only to realize you can't get back up; your feet no longer reach the floor. Now Dom's arms wrap themselves around you and it occurs to you that you're not so large anymore. 'Let me take over from here, pet. You've done such a good job, you deserve a reward.'";
-		else if scalevalue of Player < 2:
-			say "     Not quite sure that you'll be able to follow Dom's order, you try your hardest. You've slid down to his knot with practiced ease but getting back up to fuck yourself is a little difficult. You hear a chuckle from behind you and Dom says, 'Alright I guess you'll need a little help then. I really spoil you, pet.' Your master easily bobs you up and down his giant prick with one hand, using you like a cocksleeve, the thought giving you a little perverse pleasure. Though it's hard to think through your cocklust, you notice Dom's grip shifting a bit. He lets you fall to his knot freely before grasping you again, but this time, he's using both hands to hold you. 'There we go, bitch, now you're fun-sized instead of mini. Now the real fun begins.'";
 		else:
-			say "     Using the arms of the chair to brace yourself, you get to fucking your snatch on Dom's dick. Quickly sinking into a cocklust for your master's dick you barely notice the change until your shrinking form makes your current position unsteady. Dom catches you as you begin to fall forward and says, 'Your only had a little ways to go and now you're ready. Let's make sure that you don't fall off my dick too soon though.'";
+			say "     [if scalevalue of Player < 2]Not quite sure that you'll be able to follow Dom's order, you try your hardest. You've slid down to his knot with practiced ease but getting back up to fuck yourself is a little difficult. You hear a chuckle from behind you and Dom says, 'Alright I guess you'll need a little help then. I really spoil you, pet.' Your master easily bobs you up and down his giant prick with one hand, using you like a cocksleeve, the thought giving you a little perverse pleasure. Though it's hard to think through your cocklust, you notice Dom's grip shifting a bit. He lets you fall to his knot freely before grasping you again, but this time, he's using both hands to hold you. 'There we go, bitch, now you're fun-sized instead of mini. Now the real fun begins[else]Using the arms of the chair to brace yourself, you get to fucking your snatch on Dom's dick. Quickly sinking into a cocklust for your master's dick you barely notice the change until your shrinking form makes your current position unsteady. Dom catches you as you begin to fall forward and says, 'Your only had a little ways to go and now you're ready. Let's make sure that you don't fall off my dick too soon though[end if].'";
 		WaitLineBreak;
 		say "     Your master now fully in control of this fuck, you lean back into him, enjoying the pounding. Each stroke gets more and more of his knot into you until it pops into your willing ass, locking you in place as Dom lets out a howl, flooding your womb with his seed. At long last fulfilled, your body orgasms, clenching around your master's cock, making him a grunt as his sensitive rod is squeezed for a few more spurts of cum. In the long moments as you wait to be freed, not really minding being stuck with your master, Dom says, 'You are forever my bitch now. No matter where you go, or what you do, you'll always be my [if Breast Size of Player > 0]big-titted [end if]slut.' Too soon, his knot slips free from your ass and he helps you down from his lap. You walk away, head tall, tail wagging, with a sense of purpose you've never known before.";
 		SanLoss 5;
@@ -1280,9 +1225,7 @@ to say ForcedSubToDomSex7:			[Dom fucks your snatch doggy style.]
 Section 9 - Forced Breederslut and Forced Breederslut Boy TF
 
 An everyturn rule:
-	if ForcedBreederslutTF is 4:
-		increase score by 0; [do nothing statement]
-	else:
+	if ForcedBreederslutTF > 0 and ForcedBreederslutTF < 4:
 		if ForcedBreederslutTF >= 1:
 			if FaceName of Player is not "Breederslut":
 				say "     Something seems wrong to you for a minute, making you whine and whimper as you try to work out the problem. You can feel the pressure inside your head building, until finally something seems to snap, and you let out a loud low moan of pleasure as your face begins to reshape itself. Your moaning cry soon transforms into a howl, as you happily greet the return of the cute face your master gave you.";
@@ -1294,31 +1237,27 @@ An everyturn rule:
 				now Cunt Tightness of Player is 12;
 			if Player is male:
 				now Cock Count of Player is 0;
-		if ForcedBreederslutTF >= 2:
-			if SkinName of Player is not "Breederslut":
-				say "     Your skin seems to writhe and twitch, as if something were fighting underneath the surface. Soon you can see patches of tan and white fur sprouting all over your body. The fur continues to spread in a pleasurable wave as the other infection is conquered, until finally your entire body is covered in its sandy softness once again.";
-				now SkinName of Player is "Breederslut";
-				now Skin of Player is "golden brown and snowy white fur-covered";
-			if TailName of Player is not "Breederslut":
-				say "     Your ass tingles as it shifts and changes while you watch, your master's influence obviously still strongly affecting your body. It doesn't take long for your curled tail to reform. Its fluffy presence behind you proves that your desire to serve Dom is stronger than a normal infection can handle.";
-				now TailName of Player is "Breederslut";
-				now tail of Player is "You have a short, fluffy tail that curls up cutely.";
-			if Nipple Count of Player is not 2:
-				now Nipple Count of Player is 2;
-			if Breast Size of Player < 12:
-				now Breast Size of Player is 12;
-		if ForcedBreederslutTF >= 3:
-			if BodyName of Player is not "Breederslut":
-				say "     Your body seems to twist and warp, making you convulse as it fights off the intrusive new infection. Soon you can see your form slimming back down into the soft, round lines of the Shiba Inu your master likes so much. The sight fills you with relief, as you shake off the last vestiges of the other infection. After all, you wouldn't want to make your master unhappy by being anything less than the lovely submissive bitch he made you.";
-				now BodyName of Player is "Breederslut";
-				now Body of Player is "quite short, not even five feet tall, and with a cute, feminine build. As a Shiba Inu, you've got an overall canine frame and, while bipedal, are quite comfortable moving down onto all fours (for presenting yourself). Your limbs are short and end in partially paw-like hands. Just above your crotch, you have the word [']fucktoy['] tattooed there, always showing through any fur you might have";
-			if scalevalue of Player is not 2:
-				now scalevalue of Player is 2;
-
-An everyturn rule:
-	if ForcedBreederslutBoyTF is 4:
-		increase score by 0; [do nothing statement]
-	else:
+			if ForcedBreederslutTF >= 2:
+				if SkinName of Player is not "Breederslut":
+					say "     Your skin seems to writhe and twitch, as if something were fighting underneath the surface. Soon you can see patches of tan and white fur sprouting all over your body. The fur continues to spread in a pleasurable wave as the other infection is conquered, until finally your entire body is covered in its sandy softness once again.";
+					now SkinName of Player is "Breederslut";
+					now Skin of Player is "golden brown and snowy white fur-covered";
+				if TailName of Player is not "Breederslut":
+					say "     Your ass tingles as it shifts and changes while you watch, your master's influence obviously still strongly affecting your body. It doesn't take long for your curled tail to reform. Its fluffy presence behind you proves that your desire to serve Dom is stronger than a normal infection can handle.";
+					now TailName of Player is "Breederslut";
+					now tail of Player is "You have a short, fluffy tail that curls up cutely.";
+				if Nipple Count of Player is not 2:
+					now Nipple Count of Player is 2;
+				if Breast Size of Player < 12:
+					now Breast Size of Player is 12;
+				if ForcedBreederslutTF >= 3:
+					if BodyName of Player is not "Breederslut":
+						say "     Your body seems to twist and warp, making you convulse as it fights off the intrusive new infection. Soon you can see your form slimming back down into the soft, round lines of the Shiba Inu your master likes so much. The sight fills you with relief, as you shake off the last vestiges of the other infection. After all, you wouldn't want to make your master unhappy by being anything less than the lovely submissive bitch he made you.";
+						now BodyName of Player is "Breederslut";
+						now Body of Player is "quite short, not even five feet tall, and with a cute, feminine build. As a Shiba Inu, you've got an overall canine frame and, while bipedal, are quite comfortable moving down onto all fours (for presenting yourself). Your limbs are short and end in partially paw-like hands. Just above your crotch, you have the word [']fucktoy['] tattooed there, always showing through any fur you might have";
+					if scalevalue of Player is not 2:
+						now scalevalue of Player is 2;
+	if ForcedBreederslutBoyTF > 0 and ForcedBreederslutBoyTF < 4:
 		if ForcedBreederslutBoyTF >= 1:
 			if FaceName of Player is not "Breederslut":
 				say "     Something seems wrong to you for a minute, making you whine and whimper as you try to work out the problem. You can feel the pressure inside your head building, until finally something seems to snap, and you let out a loud low moan of pleasure as your face begins to reshape itself. Your moaning cry soon transforms into a howl, as you happily greet the return of the cute face your master gave you.";
@@ -1333,27 +1272,27 @@ An everyturn rule:
 			if CockName of Player is not "Breederslut":
 				now CockName of Player is "Breederslut";
 				now Cock of Player is "[one of]canine[or]knotted[or]doggy[at random]";
-		if ForcedBreederslutBoyTF >= 2:
-			if SkinName of Player is not "Breederslut":
-				say "     Your skin seems to writhe and twitch, as if something were fighting underneath the surface. Soon you can see patches of tan and white fur sprouting all over your body. The fur continues to spread in a pleasurable wave as the other infection is conquered, until finally your entire body is covered in its sandy softness once again.";
-				now SkinName of Player is "Breederslut";
-				now Skin of Player is "golden brown and snowy white fur-covered";
-			if TailName of Player is not "Breederslut":
-				say "     Your ass tingles as it shifts and changes while you watch, your master's influence obviously still strongly affecting your body. It doesn't take long for your curled tail to reform. Its fluffy presence behind you proves that your desire to serve Dom is stronger than a normal infection can handle.";
-				now TailName of Player is "Breederslut";
-				now tail of Player is "You have a short, fluffy tail that curls up cutely.";
-			if Nipple Count of Player is not 2:
-				now Nipple Count of Player is 2;
-			if ("Male Preferred" is listed in feats of Player and "Breasts" is not listed in feats of Player) or "Flat Chested" is listed in feats of Player:
-				now Breast Size of Player is 0;
-			else if Breast Size of Player < 12:
-				now Breast Size of Player is 12;
-		if ForcedBreederslutBoyTF >= 3:
-			if BodyName of Player is not "Breederslut":
-				say "     Your body seems to twist and warp, making you convulse as it fights off the intrusive new infection. Soon you can see your form slimming back down into the soft, round lines of the Shiba Inu your master likes so much. The sight fills you with relief, as you shake off the last vestiges of the other infection. After all, you wouldn't want to make your master unhappy by being anything less than the lovely submissive bitch he made you.";
-				now BodyName of Player is "Breederslut";
-				now Body of Player is "quite short, not even five feet tall, and with a cute, feminine build. As a Shiba Inu, you've got an overall canine frame and, while bipedal, are quite comfortable moving down onto all fours (for presenting yourself). Your limbs are short and end in partially paw-like hands. Just above your crotch, you have the word [']fucktoy['] tattooed there, always showing through any fur you might have";
-			if scalevalue of Player is not 2:
-				now scalevalue of Player is 2;
+			if ForcedBreederslutBoyTF >= 2:
+				if SkinName of Player is not "Breederslut":
+					say "     Your skin seems to writhe and twitch, as if something were fighting underneath the surface. Soon you can see patches of tan and white fur sprouting all over your body. The fur continues to spread in a pleasurable wave as the other infection is conquered, until finally your entire body is covered in its sandy softness once again.";
+					now SkinName of Player is "Breederslut";
+					now Skin of Player is "golden brown and snowy white fur-covered";
+				if TailName of Player is not "Breederslut":
+					say "     Your ass tingles as it shifts and changes while you watch, your master's influence obviously still strongly affecting your body. It doesn't take long for your curled tail to reform. Its fluffy presence behind you proves that your desire to serve Dom is stronger than a normal infection can handle.";
+					now TailName of Player is "Breederslut";
+					now tail of Player is "You have a short, fluffy tail that curls up cutely.";
+				if Nipple Count of Player is not 2:
+					now Nipple Count of Player is 2;
+				if ("Male Preferred" is listed in feats of Player and "Breasts" is not listed in feats of Player) or "Flat Chested" is listed in feats of Player:
+					now Breast Size of Player is 0;
+				else if Breast Size of Player < 12:
+					now Breast Size of Player is 12;
+				if ForcedBreederslutBoyTF >= 3:
+					if BodyName of Player is not "Breederslut":
+						say "     Your body seems to twist and warp, making you convulse as it fights off the intrusive new infection. Soon you can see your form slimming back down into the soft, round lines of the Shiba Inu your master likes so much. The sight fills you with relief, as you shake off the last vestiges of the other infection. After all, you wouldn't want to make your master unhappy by being anything less than the lovely submissive bitch he made you.";
+						now BodyName of Player is "Breederslut";
+						now Body of Player is "quite short, not even five feet tall, and with a cute, feminine build. As a Shiba Inu, you've got an overall canine frame and, while bipedal, are quite comfortable moving down onto all fours (for presenting yourself). Your limbs are short and end in partially paw-like hands. Just above your crotch, you have the word [']fucktoy['] tattooed there, always showing through any fur you might have";
+					if scalevalue of Player is not 2:
+						now scalevalue of Player is 2;
 
 Dominick ends here.

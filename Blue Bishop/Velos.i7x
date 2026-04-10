@@ -41,7 +41,7 @@ to say ResolveEvent Strange Serpent:
 				say "     Deciding to agree in taking him with you, he seems a little taken off guard by this.";
 				say "     'Oh, huh, what a pleasant surprise! Well then, your job is quite simple; could you turn around for me? Yeah, like that, facing the other wall...' A bit unsure of what he exactly plans to do, but you slowly oblige. You're not sure what you're supposed to be waiting for before his plans are made blatantly obvious.";
 				WaitLineBreak;
-				If scalevalue of Player < 3:
+				if scalevalue of Player < 3:
 					say "     Like a bolt of lightning, you're struck with the blindingly intense sensation of the serpentine creature worming its way past any attire that might obstruct him, his strangely slicked head driving past your anal ring with surprisingly little resistance, the rest of him soon following. Your bowels, on the other hand, are another matter altogether regarding these turn of events. There's quite a lot of him, especially when you consider your diminutive size, and your belly bloats almost immediately to abide his slippery frame.";
 					if insectlarva is true:
 						say "     Even as you fully engulf the serpent, his endeavors fail to relent, as it's made apparent that some manner of conflict is waged within you. Soon, you're wracked with the sensation of another mass passing through your anal ring, soon made apparent to be your previous parasite, who - after leaving your body - is relegated to rolling around in a confused daze before retreating from the sewers. It is a pale creature, looking much like a bloated, insect larva with several tiny legs and phallic back end[if larvaegg is 1]. Its expulsion is followed by that of the unfertilized insect eggs[end if]. You'd imagine that its kin will find and retrieve the thing, no doubt to be inflicted upon another.";
@@ -79,8 +79,7 @@ to say ResolveEvent Strange Serpent:
 					SanBoost 10;
 					now Libido of Player is Libido of Player / 2;
 					now preghijack is false;
-					if there is a Name of "Black Wasp" in Table of Random Critters:
-						choose row with Name of "Black Wasp" from Table of Random Critters;
+					if "Black Wasp" is a Name listed in Table of Random Critters:
 						now area entry is "Nowhere";
 						now non-infectious entry is true; [Wasps locked again]
 				if Player consents:
@@ -825,7 +824,7 @@ the vmusings of Christy is "[Christymusing]".
 
 to say Christymusing:
 	say "     Calling Velos out, Christy is immediately taken aback by your now-apparent resident, though her large scale likely prevents her from being really all that intimidated by its presence, soon moving closer to investigate.[paragraph break]";
-	If dragontype > 0:
+	if dragontype > 0:
 		say "     'Oh, you naughty little thing, you wanted to see what it was like from my perspective, didn't you?' The dragoness's query eliciting a curious look from the serpent.";
 		say "     'I'm sorry, you lost me there, madam. If our friend here's predicament were yours then you'd not be able to remove them.'";
 		say "     'Oh, well, sometimes I think of finding some way to do something like - Wait, no, naughty thoughts, bad!' The serpent can't help but furrow his brow at the dragoness's presently conflicted state.";

@@ -311,8 +311,6 @@ to say beatthegoblin:
 					say "[gob_nosex]";
 				else:
 					say "Invalid Option. Pick between 0 and [the number of filled rows in the table of fucking options].";
-		wait for any key;
-		clear the screen and hyperlink list;
 
 to say fgob_vicsex1:	[f-gob vaginal sex]
 	say "     While she attempts to recover you move behind her, exposing your cock[smn] and driving [if Cock Count of Player > 1]one of them[else]it[end if] to arousal. Suddenly, you pounce on her, [if scalevalue of Player > 3]lifting her clean off the ground and impaling the poor lass[else]pinning her to the ground as you drill into her hole[end if] with your [cock size desc of Player] dick. She cries out, [if Cock Length of Player > 8]forced to contend with your sizable flesh[else]struggling in vain against your hold[end if].";

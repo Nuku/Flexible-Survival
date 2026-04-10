@@ -71,10 +71,7 @@ Chapter 1 - Event
 
 Table of WalkinEvents (continued)
 Priority	Name	EventObject	EventConditions	EventRoom	LastEncounterTurn	CoolDownTurns	EncounterPercentage
-3	"Vent_Noises"	Vent_Noises	"[EventConditions_Vent_Noises]"	Mall East Wing	2500	2	100
-
-to say EventConditions_Vent_Noises:
-	now CurrentWalkinEvent_ConditionsMet is true;
+3	"Vent_Noises"	Vent_Noises	"[EventConditions_True]"	Mall East Wing	2500	2	100
 
 Table of GameEventIDs (continued)
 Object	Name

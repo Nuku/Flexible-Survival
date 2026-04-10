@@ -8,8 +8,7 @@ Table of Game Objects(continued)
 name	desc	weight	object
 "bitch breaker gel"	"A small bottle of slimy red goo. The label says that it will grow your cock larger. External use only."	0	bitch breaker gel
 
-bitch breaker gel is a grab object. It is temporary.
-
+bitch breaker gel is a grab object.
 Usedesc of bitch breaker gel is "[bitch breaker gel use]".
 
 to say bitch breaker gel use:
@@ -19,7 +18,7 @@ to say bitch breaker gel use:
 		say "     You [SelfStripCrotch], then slowly smear the red goo over your cock[smn] making sure that [if Cock Count of Player > 1]they are[else]it is[end if] completely coated. After applying the spicy-scented slime you start to feel your dick[smn] heat up, leaving you feeling hot and aroused, your libido climbing rapidly. ";
 		increase Cock Length of Player by a random number from 2 to 4;
 		Follow the cock descr rule;
-		say "     You groan as you gain more male meat, leaving you with [if Cock Count of Player < 2]a[end if] [cock size desc of Player] [Cock of Player] cock[smn].";
+		say "     You groan as you gain more male meat, leaving you with [if Cock Count of Player < 2]a [end if][cock size desc of Player] [Cock of Player] cock[smn].";
 		LibidoBoost 10;
 		if debugactive is 1:
 			say "DEBUG -> After-Use: Cock Count of Player: [Cock Count of Player]; Cock Length of Player: [Cock Length of Player][line break]";
@@ -33,8 +32,7 @@ Table of Game Objects(continued)
 name	desc	weight	object
 "breeder serum"	"A small energy drink with a very masculine and pungent odor. The label says that once consumed, it will increase the size of your balls."	0	breeder serum
 
-breeder serum is a grab object. It is temporary.
-
+breeder serum is a grab object.
 Usedesc of breeder serum is "[breeder serum use]".
 
 to say breeder serum use:
@@ -60,8 +58,7 @@ Table of Game Objects(continued)
 name	desc	weight	object
 "cock remover"	"A small pill that when consumed, will force a transformation that should remove any male genitalia that you have gained."	0	cock remover
 
-cock remover is a grab object. It is temporary.
-
+cock remover is a grab object.
 Usedesc of cock remover is "[cock remover use]".
 
 to say cock remover use:
@@ -84,8 +81,7 @@ Table of Game Objects(continued)
 name	desc	weight	object
 "sissifier gel"	"A small tub of slimy pink goo. The label says that it will shrink your cock but will not remove it. External use only."	0	sissifier gel
 
-sissifier gel is a grab object. It is temporary.
-
+sissifier gel is a grab object.
 Usedesc of sissifier gel is "[sissifier gel use]".
 
 to say sissifier gel use:
@@ -100,8 +96,7 @@ to say sissifier gel use:
 			Follow the cock descr rule;
 			say "     You groan as your prick[smn] [if Cock Count of Player > 1]decrease in size, leaving you with[else]decreases in size, leaving you with a[end if] [cock size desc of Player] [Cock of Player] cock[smn]";
 		else:
-			LineBreak;
-			say "     Weirdly enough, nothing else seems to happen. Apparently, the gel can't make your prick[smn] any smaller.";
+			say "[line break]     Weirdly enough, nothing else seems to happen. Apparently, the gel can't make your prick[smn] any smaller.";
 			LibidoBoost 10;
 			if debugactive is 1:
 				say "DEBUG -> After-Use: Cock Count of Player: [Cock Count of Player]; Cock Length of Player: [Cock Length of Player][line break]";
@@ -115,8 +110,7 @@ Table of Game Objects(continued)
 name	desc	weight	object
 "trap serum"	"A small energy drink with a cotton candy scent. The label says that once consumed, it will decrease the size of your balls, but won't remove them."	0	trap serum
 
-trap serum is a grab object. It is temporary.
-
+trap serum is a grab object.
 Usedesc of trap serum is "[trap serum use]".
 
 to say trap serum use:
@@ -133,8 +127,7 @@ to say trap serum use:
 		if debugactive is 1:
 			say "DEBUG -> After-Use: Cock Count of Player: [Cock Count of Player]; Ball Size of Player: [Ball Size of Player][line break]";
 	else:
-		LineBreak;
-		say "     At first, you don't feel any different, that is until you start to cramp up. The shooting pain in your abdomen is almost crippling, but thankfully, after a few moments, it passes.";
+		say "[line break]     At first, you don't feel any different, that is until you start to cramp up. The shooting pain in your abdomen is almost crippling, but thankfully, after a few moments, it passes.";
 		LibidoLoss 20;
 
 Part 6 - Pussy Spreader Cream
@@ -143,8 +136,7 @@ Table of Game Objects(continued)
 name	desc	weight	object
 "pussy spreader cream"	"A small jar full of a dark-purple cream. The label says that once applied to your vagina, it will begin to stretch wider."	0	pussy spreader cream
 
-pussy spreader cream is a grab object. It is temporary.
-
+pussy spreader cream is a grab object.
 Usedesc of pussy spreader cream is "[pussy spreader cream use]".
 
 to say pussy spreader cream use:
@@ -167,8 +159,7 @@ Table of Game Objects(continued)
 name	desc	weight	object
 "cock holster upgrade"	"A small cylinder that is meant to be placed inside of your vagina. The label says that once inserted, the device will release an expanding gel that, after filling your pussy to capacity, will begin to stretch it even deeper."	0	cock holster upgrade
 
-cock holster upgrade is a grab object. It is temporary.
-
+cock holster upgrade is a grab object.
 Usedesc of cock holster upgrade is "[cock holster upgrade use]".
 
 to say cock holster upgrade use:
@@ -193,8 +184,7 @@ Table of Game Objects(continued)
 name	desc	weight	object
 "cunt remover"	"A small pill that when consumed, will force a transformation that should remove all female genitalia that you have gained."	0	cunt remover
 
-cunt remover is a grab object. It is temporary.
-
+cunt remover is a grab object.
 Usedesc of cunt remover is "[cunt remover use]".
 
 to say cunt remover use:
@@ -217,8 +207,7 @@ Table of Game Objects(continued)
 name	desc	weight	object
 "rightntight cream"	"A small jar full of a pure-white cream. The label say that once applied to your vagina, it will make it tighten up."	0	rightntight cream
 
-rightntight cream is a grab object. It is temporary.
-
+rightntight cream is a grab object.
 Usedesc of rightntight cream is "[rightntight cream use]".
 
 to say rightntight cream use:
@@ -244,8 +233,7 @@ Table of Game Objects(continued)
 name	desc	weight	object
 "cervix smasher upgrade"	"A small cylinder that is meant to be placed inside of your vagina. The label says that once inserted, the device will release a tightening gel, that after filling your pussy, will begin to make the overall size of your pussy smaller and shallower."	0	cervix smasher upgrade
 
-cervix smasher upgrade is a grab object. It is temporary.
-
+cervix smasher upgrade is a grab object.
 Usedesc of cervix smasher upgrade is "[cervix smasher upgrade use]".
 
 to say cervix smasher upgrade use:
@@ -273,8 +261,7 @@ Table of Game Objects(continued)
 name	desc	weight	object
 "tits inflator pump"	"A small canister with large suction cups. The label on the side of the canister says to place the suction cups over your nipples and then press the button on the top to cause breast growth."	0	tits inflator pump
 
-tits inflator pump is a grab object. It is temporary.
-
+tits inflator pump is a grab object.
 Usedesc of tits inflator pump is "[tits inflator pump use]".
 
 to say tits inflator pump use:
@@ -296,8 +283,7 @@ Table of Game Objects(continued)
 name	desc	weight	object
 "tits deflator pump"	"A small canister with two large suction cups. The label on the side of the canister says to place the suction cups over your nipples and then press the button on the top to shrink the size of your breasts."	0	tits deflator pump
 
-tits deflator pump is a grab object. It is temporary.
-
+tits deflator pump is a grab object.
 Usedesc of tits deflator pump is "[tits deflator pump use]".
 
 to say tits deflator pump use:
@@ -319,8 +305,7 @@ Table of Game Objects(continued)
 name	desc	weight	object
 "tits multiplier injection"	"A jar of clear liquid with two syringes coming out of the sides. On the jar itself is a huge red plus sign. The label on the back says to place the jar between where you wish for more breasts to grow and then inject the chemical into the area. Once all of the clear fluid is gone, a new pair of breasts will grow in place."	0	tits multiplier injection
 
-tits multiplier injection is a grab object. It is temporary.
-
+tits multiplier injection is a grab object.
 Usedesc of tits multiplier injection is "[tits multiplier injection use]".
 
 to say tits multiplier injection use:
@@ -330,7 +315,7 @@ to say tits multiplier injection use:
 		say "     You [SelfStripChest], and hold the jar to the middle of your chest, approximately where you feel that your breasts should be. Slowly, you inject the needle into the flesh there, and the clear fluid starts being pumped into your chest. At first, you feel a bit lightheaded, and you search for something to steady yourself while at the same time making sure not to remove the needles. Finally once the liquid is gone, you remove the item and inspect yourself, only to find that nothing has happened. At first, you are disappointed, but then you feel an itchiness on your chest. Looking down, you see small protrusions start to swell up, their color slowly darkening and forming into two new nipples. You now have gained your first row of breasts. You are so excited that you can't help but want to go show them off to anyone you can!";
 		increase Nipple Count of Player by 2;
 		LibidoBoost 20;
-	else if Nipple Count of Player < 8: [and "One Pair" is not listed in feats of Player:]
+	else if Nipple Count of Player < 7: [and "One Pair" is not listed in feats of Player:]
 		say "     You [SelfStripChest], and hold the jar to the middle of your chest, right beneath the breasts that you already have. Slowly, you inject the needle into the flesh there, and the clear fluid starts being pumped into your chest. At first, you feel a bit lightheaded, and you search for something to steady yourself while at the same time making sure not to remove the needles. Finally once the liquid is gone, you remove the item and inspect yourself, only to find that nothing has happened. At first you are disappointed, but then you feel an itchiness on your chest. Looking down, you see small protrusions start to swell up, their color slowly darkening and forming into two new nipples. You now have an extra row of breasts. You are so excited that you can't help but want to go show them off to anyone you can!";
 		increase Nipple Count of Player by 2;
 		LibidoBoost 10;
@@ -344,8 +329,7 @@ Table of Game Objects(continued)
 name	desc	weight	object
 "tits divider injection"	"A jar of clear liquid with two syringes coming out of the sides. On the jar itself is a huge blue minus sign. The label on the back says to place the jar between your breasts and then inject the chemical into your tits. Once all of the clear fluid is gone, the row of breasts that you injected will shrink until they disappear."	0	tits divider injection
 
-tits divider injection is a grab object. It is temporary.
-
+tits divider injection is a grab object.
 Usedesc of tits divider injection is "[tits divider injection use]".
 
 to say tits divider injection use:
@@ -420,6 +404,9 @@ Table of Game Objects (continued)
 name	desc	weight	object
 "zephyr protective riot shield"	"[RiotShieldProtectDesc]"	4	zephyr protective riot shield
 
+to say RiotShieldProtectDesc:
+	say "A black shield that Zephyr's riot security uses to suppress threats. This one is yours, and you've chosen to use it for defending yourself with. You might [link]change your mind[as]RSAttackMode[end link] though, and direct your shield to more offensive purposes instead. ";
+
 zephyr protective riot shield is equipment. It is not temporary.
 Taur-compatible of zephyr protective riot shield is true.
 The AC of zephyr protective riot shield is 46.
@@ -429,25 +416,20 @@ Traits of zephyr protective riot shield is {"adventurous"}.
 The placement of zephyr protective riot shield is "shield".
 The descmod of zephyr protective riot shield is "You hold the riot shield in your hands; its size is large enough to cover most of your torso. It is painted black with the Zephyr trademark branded across the front, just underneath the vision slot.".
 The slot of zephyr protective riot shield is "shield".
+the scent of the zephyr protective riot shield is "The Zephyr protective riot shield smells faintly of suppressive authority.".
 EquipFunction of zephyr protective riot shield is "[RiotShieldProtectUse]".
 UnequipFunction of zephyr protective riot shield is "[RiotShieldProtectUse]".
 
-to say RiotShieldProtectDesc:
-	say "A black shield that Zephyr's riot security uses to suppress threats. This one is yours, and you've chosen to use it for defending yourself with. You might [link]change your mind[as]RSAttackMode[end link] though, and direct your shield to more offensive purposes instead. ";
-
-the scent of the zephyr protective riot shield is "The Zephyr protective riot shield smells faintly of suppressive authority.".
-
 to say RiotShieldProtectUse:
-	LineBreak;
 	if zephyr protective riot shield is equipped:
-		say "You raise up the riot shield to protect most of your torso";
 		if "RiotShieldDexPenalty" is not listed in Traits of Player:
-			say ". While providing very nice protection, it is a bit unwieldly though, making it harder to move freely";
+			say "[line break]You raise up the riot shield to protect most of your torso. While providing very nice protection, it is a bit unwieldly though, making it harder to move freely";
 			decrease Dexterity of Player by 2;
 			add "RiotShieldDexPenalty" to Traits of Player;
-		say ".";
+		else:
+			say "[line break]You raise up the riot shield to protect most of your torso.";
 	else: [unequipped]
-		say "You lower the riot shield.";
+		say "[line break]You lower the riot shield.";
 		if "RiotShieldDexPenalty" is listed in Traits of Player:
 			increase Dexterity of Player by 2;
 			remove "RiotShieldDexPenalty" from Traits of Player;
@@ -458,11 +440,10 @@ an everyturn rule:
 		remove "RiotShieldDexPenalty" from Traits of Player;
 
 riotshieldAttackMode is an action applying to one topic.
-
 understand "RSAttackMode" as riotshieldAttackMode.
 
 check riotshieldAttackMode:
-	if carried of zephyr protective riot shield < 1, say "     What shield? You're not holding one right now." instead;
+	if carried of zephyr protective riot shield < 1, say "What shield? You're not holding one right now." instead;
 
 carry out riotshieldAttackMode:
 	if zephyr protective riot shield is equipped:
@@ -473,9 +454,7 @@ carry out riotshieldAttackMode:
 	if "RiotShieldDexPenalty" is listed in Traits of Player:
 		increase Dexterity of Player by 2;
 		remove "RiotShieldDexPenalty" from Traits of Player;
-	ItemLoss zephyr protective riot shield by 1;
+	ItemLoss zephyr protective riot shield by 1 silently;
 	ItemGain zephyr bashing riot shield by 1;
-
-
 
 Black Market Items ends here.

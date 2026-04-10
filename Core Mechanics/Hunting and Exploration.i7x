@@ -74,8 +74,7 @@ carry out HuntAction:
 					if larvacounter > 3:
 						repeat with x running from 1 to ( larvacounter / 3 ):
 							add "Black Wasp" to PossibleEncounters;
-	if there is a name of HuntId in the Table of GameRoomIDs:
-		choose a row with name of HuntId in the Table of GameRoomIDs;
+	if HuntId is a Name listed in Table of GameRoomIDs:
 		if debugactive is 1:
 			say "DEBUG -> Target Room: [Name entry] found by exact match with: [HuntId][line break]";
 		if object entry is private:
@@ -110,8 +109,7 @@ carry out HuntAction:
 				move player to object entry;
 				AddNavPoint object entry;
 				now Found is 20; [room found]
-	else if there is a name of HuntId in the Table of GameEventIDs: [exact situation name match]
-		choose a row with name of HuntId in the Table of GameEventIDs;
+	else if HuntId is a Name listed in Table of GameEventIDs: [exact situation name match]
 		if debugactive is 1:
 			say "DEBUG -> Situation found: [Name entry] by matching with [HuntId] (EXACT MATCH).[line break]";
 		if object entry is resolved:
@@ -161,8 +159,7 @@ carry out HuntAction:
 				say "[ResolveFunction of object entry]";
 				now CreatureArtworkOverride is false;
 				now inasituation is false;
-	else if there is a name of HuntId in the Table of Random Critters: [exact creature match]
-		choose a row with name of HuntId in the Table of Random Critters;
+	else if HuntId is a Name listed in Table of Random Critters: [exact creature match]
 		if debugactive is 1:
 			say "DEBUG -> Target Creature: [Name entry] found by exact match with: [HuntId][line break]";
 		if there is an area entry:
@@ -524,7 +521,7 @@ This is the explore rule:
 	[Chance for new events - increased by perception]
 	if something is false and a random number from 1 to 20 < ( bonus + 8 ) and there is an active unresolved situation:
 		let L be a random available situation;
-		If L is not nothing and Level of Player + 2 > Level of L:
+		if L is not nothing and Level of Player + 2 > Level of L:
 			if battleground is "Smith Haven":
 				say "Wandering around a bit, you find [bold type][L][roman type].";
 			else:

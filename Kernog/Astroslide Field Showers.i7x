@@ -26,7 +26,7 @@ instead of going to Astroslide Field Showers:
 		say "Choice? (1-4)> [run paragraph on]";
 		get a number;
 		if calcnumber < 1 or calcnumber > 4:
-			say "Invalid choice. Type [link]1[end link] to shower in one of the unoccupied stalls, [link]2[end link] to shower in the group shower, [link]3[end link] to join someone in one of the stalls, or [link]4[end link] to renounce using the showers.";
+			say "Invalid choice. Type [link]1[end link] to shower in one of the unoccupied stalls, [link]2[end link] to shower in the group shower, [link]3[end link] to join someone in one of the stalls or [link]4[end link] to renounce using the showers.";
 	LineBreak;
 	if calcnumber is 1:
 		say "[astroslideShowers1]";

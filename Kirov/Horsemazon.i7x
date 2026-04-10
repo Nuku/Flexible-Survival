@@ -52,7 +52,7 @@ to say horsemazonDefeat:           [Scene for when the player defeats the Horsem
 	if Player is female:
 		choose a blank row in table of fucking options;
 		now title entry is "Receive Oral";
-		now sortorder entry is 3;
+		now sortorder entry is 2;
 		now description entry is "Force her to eat you out";
 	[]
 	choose a blank row in table of fucking options;

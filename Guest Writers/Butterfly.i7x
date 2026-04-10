@@ -46,7 +46,7 @@ When Play begins:
 	now cock entry is "ribbed"; [ Cock Description, format as you have a 'size' (your text) cock]
 	now face change entry is "it becomes more streamlined and two antennae poke out at the top of your head. Your eyes brighten into a [one of]brilliant[or]vibrant[or]vivid[at random] green"; [ Face change text, format as "Your face feels funny as [face change entry]." ]
 	now body change entry is "it becomes adapted for flight. Limbs narrow and become lean. Some large and colorful wings sprout out of your back. They aren't strong enough to allow you to fly, but with some effort you find you are able to hover without needing to walk"; [ Body change text, format as "Your body feels funny as [body change entry]." ]
-	now skin change entry is "it softens, becoming velvet-textured"; [ Skin change text, format as "Your skin feels funny as [skin change entry]." ]
+	now skin change entry is "it softens, becoming velvet textured"; [ Skin change text, format as "Your skin feels funny as [skin change entry]." ]
 	now ass change entry is "it develops yellow and black stripes and pushes out into a large round abdomen"; [ Ass/tail change text, format as "Your ass feels funny as [ass change entry]." ]
 	now cock change entry is "it develops a ribbed texture"; [ cock change text. format as "Your cock feels funny as (your text)." ]
 	now str entry is 16;

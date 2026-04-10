@@ -380,7 +380,7 @@ Name(text)	Type(text)
 "charcounter"	"number"
 ["chargeup"	"number"]
 "ChaseMarking"	"number"
-"ChaseOffspring"	"number"
+["ChaseOffspring"	"number"]
 "ChasePetplay"	"number"
 ["ChasePetplayTraining"	"number"]
 "ChaseSexCounter"	"number"
@@ -455,8 +455,8 @@ Name(text)	Type(text)
 "dobieresist"	"number"
 "DoctorMouseProgress"	"number"
 "dogfoodcount"	"number"
-["doggyboned"	"number"]
-"doggyness"	"number"
+["doggyboned"	"number"
+"doggyness"	"number"]
 "dolinfloss"	"number"
 "dollfound"	"number"
 "dolphinbundle"	"number"
@@ -501,7 +501,7 @@ Name(text)	Type(text)
 "dragontaurcatch"	"number"
 "dragontype"	"number"
 ["Dre"	"number"]
-"Drinkserved"	"number"
+["Drinkserved"	"number"]
 "dronevict"	"number"
 "DVtaurcatch"	"number"
 "DylanFucked"	"number"
@@ -545,7 +545,7 @@ Name(text)	Type(text)
 "FangDashRel"	"number"
 "FangSarahInteraction"	"number"
 "FangWS"	"number"
-"fashionfight"	"number"
+["fashionfight"	"number"]
 "featgained"	"number"
 "Featqualified"	"number"
 "featunlock"	"number"
@@ -771,8 +771,8 @@ Name(text)	Type(text)
 "KinksandFetishes"	"number"
 "Kitsunearoused"	"number"
 "Kitsunetalk"	"number"
-"kittyness"	"number"
-["knightcrestnum"	"number"]
+["kittyness"	"number"
+"knightcrestnum"	"number"]
 "KoballoonLossCounter"	"number"
 "KoballoonMet"	"number"
 "koboldgangmet"	"number"
@@ -933,8 +933,8 @@ Name(text)	Type(text)
 "Leonardtimer"	"number"
 "leosupplies"	"number"
 "lessontime"	"number"
-["lgnumber"	"number"]
-"libidomemory"	"number"
+["lgnumber"	"number"
+"libidomemory"	"number"]
 "libstealth"	"number"
 "libsuppcount"	"number"
 "libvis"	"number"
@@ -984,7 +984,7 @@ Name(text)	Type(text)
 "mdrakeloss"	"number"
 "mdrakeoversized"	"number"
 "medeaget"	"number"
-"MenuRiddleNumber"	"number"
+["MenuRiddleNumber"	"number"]
 "metalskin"	"number"
 "micaela_bf"	"number"
 "MichaelGholeMeetings"	"number"
@@ -1675,7 +1675,7 @@ Name(text)	Type(text)
 "bcseenpunchingpillars"	"truth state"
 "bcseenthroneroom"	"truth state"
 "bcswordplay"	"truth state"
-"beachrape"	"truth state"
+["beachrape"	"truth state"]
 "beauceronmet"	"truth state"
 ["birthedwhelp"	"truth state"]
 "blanchetalk1"	"truth state"
@@ -1749,7 +1749,7 @@ Name(text)	Type(text)
 "flotmarked"	"truth state"
 ["Francoismixcleaned"	"truth state"]
 "Francoistalk1"	"truth state"
-"fsnakevalid"	"truth state"
+["fsnakevalid"	"truth state"]
 "garrettinfo1"	"truth state"
 ["gobdem"	"truth state"]
 "grhouse"	"truth state"
@@ -1832,7 +1832,7 @@ Name(text)	Type(text)
 "MoreauPaymentAccepted"	"truth state"
 "mpreghijack"	"truth state"
 "mre04"	"truth state"
-"msnakevalid"	"truth state"
+["msnakevalid"	"truth state"]
 "muggerison"	"truth state"
 "nagawarning"	"truth state"
 ["NavCheckReturn"	"truth state"]
@@ -1900,7 +1900,7 @@ Name(text)	Type(text)
 "TerminatorSleepActivated"	"truth state"
 "thmpregdetect"	"truth state"
 "TomeEventPending"	"truth state"
-"toystoreoverride"	"truth state"
+["toystoreoverride"	"truth state"]
 "toystoreseen"	"truth state"
 ["ts_warrior"	"truth state"
 "tsw_victory"	"truth state"]

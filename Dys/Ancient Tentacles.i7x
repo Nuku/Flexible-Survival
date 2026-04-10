@@ -31,7 +31,7 @@ to say TentacleSex:
 			say "Choice? (1-4)> [run paragraph on]";
 			get a number;
 			if calcnumber < 1 or calcnumber > 4:
-				say "Invalid choice. Type [link]1[end link] to protect yourself, [link]2[end link] to reverse the spell, [link]3[end link] to go in without any magical interference, or [link]4[end link] to drop the idea of summoning the ancient tentacles.";
+				say "Invalid choice. Type [link]1[end link] to protect yourself, [link]2[end link] to reverse the spell, [link]3[end link] to go in without any magical interference or [link]4[end link] to drop the idea of summoning the ancient tentacles.";
 		LineBreak;
 		if calcnumber is 1:
 			say "     With a nod, you tell Xaedihr to cast the protective ward on you. He does so without a problem, with a few arcane words and magic gestures, and the spell makes you feel a little funny, though nothing unbearable. You then proceed to summon the tentacle beast, carefully following the tome's instructions.";

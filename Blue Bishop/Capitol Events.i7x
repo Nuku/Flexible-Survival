@@ -32,8 +32,10 @@ Sarea of whelpspot is "Capitol".
 to say ResolveEvent whelpspot:
 	say "     A shadow darts overhead and you instinctively dive for cover. Hiding in an abandoned car, you watch worriedly while a flock of [one of]dark[or]ashen[or]ebonflame[stopping] whelps swoops overhead. They do not linger long, heading off in the direction of the Capitol Building.";
 	increase score by 1;
-	increase whelpspotnum by 1;
-	if whelpspotnum is 3, now whelpspot is resolved;
+	if whelpspotnum < 3:
+		increase whelpspotnum by 1;
+	else:
+		now whelpspot is resolved;
 
 Section 2 - Ebonflame Nest
 

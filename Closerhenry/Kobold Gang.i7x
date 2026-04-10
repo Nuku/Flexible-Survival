@@ -220,8 +220,6 @@ to say beatthekoboldgang:
 					say "     You back away and shake your head.";
 				else:
 					say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options], or 0 to exit.";
-			wait for any key;
-			clear the screen and hyperlink list;
 		else:
 			LineBreak;
 			say "     You shake your head, trying to ignore the deviant thoughts. You make your way out of the mess of defeated kobolds, feeling confident that you aren't just the bottom rung on the ladder.";

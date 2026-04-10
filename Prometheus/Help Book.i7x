@@ -7,7 +7,7 @@ Version 1 of Help Book by Prometheus begins here.
 a postimport rule: [bugfixing rules for players that import savegames]
 	if HP of Help Book is 0:
 		move Help Book to Grey Abbey Library;
-	else if HP of Help Book is 1:
+	else:
 		now Help Book is nowhere;
 
 Section 1 - NPC

@@ -28,9 +28,7 @@ DetachGrabObs is an action applying to nothing.
 understand "DetachGrabObs" as DetachGrabObs.
 
 check DetachGrabObs:
-	if debugactive is 0:
-		say "You aren't currently debugging.";
-		stop the action;
+	if debugactive is 0, say "You aren't currently debugging." instead;
 
 carry out DetachGrabObs:
 	repeat with x running through grab objects:
@@ -40,9 +38,7 @@ AttachGrabObs is an action applying to nothing.
 understand "AttachGrabObs" as AttachGrabObs.
 
 check AttachGrabObs:
-	if debugactive is 0:
-		say "You aren't currently debugging.";
-		stop the action;
+	if debugactive is 0, say "You aren't currently debugging." instead;
 
 carry out AttachGrabObs:
 	repeat with x running through grab objects:
@@ -52,9 +48,7 @@ AttachInventory is an action applying to nothing.
 understand "AttachInventory" as AttachInventory.
 
 check AttachInventory:
-	if debugactive is 0:
-		say "You aren't currently debugging.";
-		stop the action;
+	if debugactive is 0, say "You aren't currently debugging." instead;
 
 carry out AttachInventory:
 	repeat with x running through owned grab objects:
@@ -64,9 +58,7 @@ ZTeleport is an action applying to one topic.
 understand "ZTeleport [text]" as ZTeleport.
 
 check ZTeleport:
-	if debugactive is 0:
-		say "You aren't currently debugging.";
-		stop the action;
+	if debugactive is 0, say "You aren't currently debugging." instead;
 
 carry out ZTeleport:
 	repeat with x running through rooms:
@@ -77,9 +69,7 @@ ZAnalyzeEvent is an action applying to one topic.
 understand "ZAnalyzeEvent [text]" as ZAnalyzeEvent.
 
 check ZAnalyzeEvent:
-	if debugactive is 0:
-		say "You aren't currently debugging.";
-		stop the action;
+	if debugactive is 0, say "You aren't currently debugging." instead;
 
 carry out ZAnalyzeEvent:
 	say "DEBUG -> Analyzing reasons why event '[topic understood]' might not be available.";
@@ -103,15 +93,11 @@ ZCall is an action applying to one topic.
 understand "ZCall [text]" as ZCall.
 
 check ZCall:
-	if debugactive is 0:
-		say "You aren't currently debugging.";
-		stop the action;
+	if debugactive is 0, say "You aren't currently debugging." instead;
 
 carry out ZCall:
 	repeat with x running through persons:
-		if x is a pet:
-			next;
-		if printed name of x exactly matches the text topic understood, case insensitively:
+		if x is not a pet and printed name of x exactly matches the text topic understood, case insensitively:
 			now x is in location of Player;
 
 Chapter 1 - Debug Mode
@@ -176,9 +162,7 @@ ZReadout is an action applying to one topic.
 understand "ZReadout [text]" as ZReadout.
 
 check ZReadout:
-	if debugactive is 0:
-		say "You aren't currently debugging.";
-		stop the action;
+	if debugactive is 0, say "You aren't currently debugging." instead;
 
 carry out ZReadout:
 	repeat with x running through persons:
@@ -200,9 +184,7 @@ understand "zCurrent turn" as turncountdisplay.
 understand "zCurrentturn" as turncountdisplay.
 
 check turncountdisplay:
-	if debugactive is 0:
-		say "You aren't currently debugging.";
-		stop the action;
+	if debugactive is 0, say "You aren't currently debugging." instead;
 
 carry out turncountdisplay:
 	say "DEBUG: CURRENT TURN IS [turns]; Current Turn Count is [turn count]";
@@ -256,9 +238,7 @@ InfectionOverview is an action applying to nothing.
 understand "zInfectionOverview" as InfectionOverview.
 
 check InfectionOverview:
-	if debugactive is 0:
-		say "You aren't currently debugging.";
-		stop the action;
+	if debugactive is 0, say "You aren't currently debugging." instead;
 
 carry out InfectionOverview:
 	repeat with y running from 1 to number of filled rows in Table of Random Critters:
@@ -502,9 +482,7 @@ EndingTableReadout is an action applying to nothing.
 understand "zEndingTableReadout" as EndingTableReadout.
 
 check EndingTableReadout:
-	if debugactive is 0:
-		say "You aren't currently debugging.";
-		stop the action;
+	if debugactive is 0, say "You aren't currently debugging." instead;
 
 carry out EndingTableReadout:
 	let NameCol be "";
@@ -694,9 +672,7 @@ TestMode is an action applying to nothing.
 understand "iwannatest" as TestMode.
 
 check TestMode:
-	if debugactive is 0:
-		say "You aren't currently debugging.";
-		stop the action;
+	if debugactive is 0, say "You aren't currently debugging." instead;
 	if TestingActive is true, say "You're already in testing mode." instead;
 
 carry out TestMode:
@@ -779,9 +755,7 @@ levelcheat is an action applying to nothing.
 understand "zGiveLevel" as levelcheat.
 
 check levelcheat:
-	if debugactive is 0:
-		say "You aren't currently debugging.";
-		stop the action;
+	if debugactive is 0, say "You aren't currently debugging." instead;
 
 carry out levelcheat:
 	now XP of Player is (10 + (level of Player times 10));
@@ -795,9 +769,7 @@ PetTest is an action applying to nothing.
 understand "zAllPetTest" as PetTest.
 
 check PetTest:
-	if debugactive is 0:
-		say "You aren't currently debugging.";
-		stop the action;
+	if debugactive is 0, say "You aren't currently debugging." instead;
 
 carry out PetTest:
 	repeat with x running through pets: [rebuilds the table of GameCharacters with current data]
@@ -814,9 +786,7 @@ understand "zSize Change" as PlayerSizeChange.
 understand "zSizeChange" as PlayerSizeChange.
 
 check PlayerSizeChange:
-	if debugactive is 0:
-		say "You aren't currently debugging.";
-		stop the action;
+	if debugactive is 0, say "You aren't currently debugging." instead;
 
 carry out PlayerSizeChange:
 	say "[line break]     [bold type]What size do you want your character to be?[roman type][line break]";
@@ -1001,9 +971,7 @@ understand "zImpreg with [text]" as impregwith.
 understand "zImpreg [text]" as impregwith.
 
 check impregwith:
-	if debugactive is 0:
-		say "You aren't currently debugging.";
-		stop the action;
+	if debugactive is 0, say "You aren't currently debugging." instead;
 
 carry out impregwith:
 	repeat with X running from 1 to number of filled rows in Table of Random Critters:
@@ -1019,9 +987,7 @@ understand "zInfect [text]" as DebugInfect.
 understand "DebugInfect [text]" as DebugInfect.
 
 check DebugInfect:
-	if debugactive is 0:
-		say "You aren't currently debugging.";
-		stop the action;
+	if debugactive is 0, say "You aren't currently debugging." instead;
 
 carry out DebugInfect:
 	say "Infecting with [topic understood]:[line break]";
@@ -1029,19 +995,27 @@ carry out DebugInfect:
 
 Section 2 - Feats
 
+GiveFeat is an action applying to one topic.
+understand "zAddFeat [text]" as GiveFeat.
+
+check GiveFeat:
+	if debugactive is 0, say "You aren't currently debugging." instead;
+	if topic understood is listed in feats of Player:
+		say "[topic understood] is already in Feats of Player!" instead;
+
+carry out GiveFeat:
+	FeatGain topic understood;
+
 RemoveFeat is an action applying to one topic.
 understand "RemoveFeat [text]" as RemoveFeat.
 
 check RemoveFeat:
-	if debugactive is 0:
-		say "You aren't currently debugging.";
-		stop the action;
+	if debugactive is 0, say "You aren't currently debugging." instead;
+	if topic understood is not listed in feats of Player:
+		say "[topic understood] is not in Feats of Player!" instead;
 
 carry out RemoveFeat:
-	if topic understood is listed in feats of Player:
-		remove topic understood from feats of Player;
-	else:
-		say "[topic understood] is not in Feats of Player!";
+	remove topic understood from feats of Player;
 
 [Allows the player to add or remove the "Kinky" feat without leveling. Useful for testing some scenes.]
 AddRemoveKinky is an action applying to nothing.
@@ -1049,9 +1023,7 @@ understand "add kinky" as AddRemoveKinky.
 understand "remove kinky" as AddRemoveKinky.
 
 check AddRemoveKinky:
-	if debugactive is 0:
-		say "You aren't currently debugging.";
-		stop the action;
+	if debugactive is 0, say "You aren't currently debugging." instead;
 
 carry out AddRemoveKinky:
 	if Player is kinky:
@@ -1067,24 +1039,21 @@ understand "flip sub dom" as SubDomFlip.
 understand "flip subdom" as SubDomFlip.
 
 check SubDomFlip:
-	if debugactive is 0:
-		say "You aren't currently debugging.";
-		stop the action;
+	if debugactive is 0, say "You aren't currently debugging." instead;
 
 carry out SubDomFlip:
-	say "     Summoning a magic coin with the two-faced god Janus on its sides, you look at it for a second, then throw the shiny coin into the air. After watching it turn end over end, ";
 	if Player is submissive:
-		say "you catch it in your hand and smack that on the back of the other one.";
+		say "     Summoning a magic coin with the two-faced god Janus on its sides, you look at it for a second, then throw the shiny coin into the air. After watching it turn end over end, you catch it in your hand and smack that on the back of the other one.";
 		say "     Lifting your upper hand after that, you see the coin resting on your skin, displaying the strong and determined face of its design. Then the piece of metal suddenly feels hot for a moment, not quite enough to burn you, but almost so. Flowing into you, the energy changes your whole outlook of the world!";
 		remove "Submissive" from feats of Player;
-		add "Dominant" to feats of Player;
+		add "Dominant" to feats of Player, if absent;
 	else if Player is dominant:
-		say "you catch it in your hand and smack that on the back of the other one.";
+		say "     Summoning a magic coin with the two-faced god Janus on its sides, you look at it for a second, then throw the shiny coin into the air. After watching it turn end over end, you catch it in your hand and smack that on the back of the other one.";
 		say "     Lifting your upper hand after that, you see the coin resting on your skin, displaying the timid and shy face of its design. Then the piece of metal suddenly feels hot for a moment, not quite enough to burn you, but almost so. Flowing into you, the energy changes your whole outlook of the world!";
 		remove "Dominant" from feats of Player;
-		add "Submissive" to feats of Player;
+		add "Submissive" to feats of Player, if absent;
 	else:
-		say "you catch - no, try to catch it in your hand.";
+		say "     Summoning a magic coin with the two-faced god Janus on its sides, you look at it for a second, then throw the shiny coin into the air. After watching it turn end over end, you catch - no, try to catch it in your hand.";
 		say "     Somehow it slips through your fingers, bouncing off the ground and rolling around a little, until it comes to a sudden standstill. And that is how it remains, just standing on its side, falling over in neither direction. As you pick the little disc of metal off the ground, it is strangely cold between your fingers for a second. Almost seems like it's giving you the cold shoulder since you fit neither of its different faces.";
 
 Section 3 - World Manipulation
@@ -1093,9 +1062,7 @@ Spawnmonster is an action applying to one topic.
 understand "zSpawn [text]" as spawnmonster.
 
 check spawnmonster:
-	if debugactive is 0:
-		say "You aren't currently debugging.";
-		stop the action;
+	if debugactive is 0, say "You aren't currently debugging." instead;
 
 carry out spawnmonster:
 	repeat with X running from 1 to number of filled rows in Table of Random Critters:
@@ -1110,9 +1077,7 @@ unresolvecheat is an action applying to one topic.
 understand "zUnresolve [text]" as unresolvecheat.
 
 check unresolvecheat:
-	if debugactive is 0:
-		say "You aren't currently debugging.";
-		stop the action;
+	if debugactive is 0, say "You aren't currently debugging." instead;
 
 carry out unresolvecheat:
 	repeat with X running from 1 to number of filled rows in Table of GameEventIDs:
@@ -1126,9 +1091,7 @@ activatecheat is an action applying to one topic.
 understand "zActivate [text]" as activatecheat.
 
 check activatecheat:
-	if debugactive is 0:
-		say "You aren't currently debugging.";
-		stop the action;
+	if debugactive is 0, say "You aren't currently debugging." instead;
 
 carry out activatecheat:
 	repeat with X running from 1 to number of filled rows in Table of GameEventIDs:

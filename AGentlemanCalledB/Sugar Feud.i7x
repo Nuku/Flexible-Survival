@@ -62,7 +62,11 @@ to say ResolveEvent Sugar Shack:
 			SanLoss 35;
 		else:
 			SanLoss 25;
-		say "[fullSugarGliderTF]";
+		turn the Player into a "Sugar Glider";
+		if hellHoundLevel is 0:
+			say "[run paragraph on]";
+			follow the sex change rule;
+			follow the sex change rule;
 		if humanity of Player < 10:
 			say "     As you bask in the afterglow of your orgasm, your attention is drawn back to the cotton candy machine, still humming away happily as it continues spinning that delicious candy fluff. Still craving yet more sugary treats, you go back to the machine for more cotton candy. As you're reaching in, swirling your arm around, the sugar glider comes over and starts lifting you into the machine. Rather than fight her, you giggle happily and let her boost you in. Tumbling around in the swirling vortex of sweet colors, you feel more and more cotton candy clinging to you, sinking into your body. When the machine's finally shut off and your dizzy self is helped out of the cotton candy machine, your mind has been spun and fluffed until it is filled with nothing but thoughts of sweets and sex, or sweet, sweet sex. Giggling happily, you collapse into the arms of the sugar glider, still quite dizzy, and give her a sugary kiss, eager for more fun.";
 			wait for any key;
@@ -91,13 +95,5 @@ to say ResolveEvent Sugar Shack:
 		now Resolution of Sugar Shack is 2; [sugar gliders refused]
 		ItemGain crushed candies by 1;
 	now Sugar Shack is resolved;
-
-to say fullSugarGliderTF:
-	setmonster "Sugar Glider" silently;
-	turn the Player into a "Sugar Glider";
-	if hellHoundLevel is 0:
-		say "[run paragraph on]";
-		follow the sex change rule;
-		follow the sex change rule;
 
 Sugar Feud ends here.

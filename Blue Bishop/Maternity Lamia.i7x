@@ -117,8 +117,6 @@ to say beatthelamia:
 			LineBreak;
 			now sextablerun is 1;
 			say "     Not wanting to get involved any further, you let the lamia depart and return to your own business.";
-	wait for any key;
-	clear the screen and hyperlink list;
 	increase mlamiabeaten by 1;
 
 to say mlamiavsex01:

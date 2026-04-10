@@ -89,9 +89,8 @@ instead of using porn collection:
 			follow the turnpass rule;
 
 to say simplemast:
-	say "     You settle yourself down to [if Player is herm]play around with your junk for a bit[else if Player is male]jerk yourself off briefly[else]give yourself a quick fingering[end if]. You grab one of the magazines for added inspiration and get yourself off, relieving some of your excess arousal";
 	if mouse girl is listed in companionList of Player:
-		say ". Partway into your masturbatory session, thoughts of sexy mice slip into your mind";
+		say "     You settle yourself down to [if Player is herm]play around with your junk for a bit[else if Player is male]jerk yourself off briefly[else]give yourself a quick fingering[end if]. You grab one of the magazines for added inspiration and get yourself off, relieving some of your excess arousal. Partway into your masturbatory session, thoughts of sexy mice slip into your mind.";
 		decrease humanity of Player by 1;
 		if a random chance of 1 in 2 succeeds:
 			if a random chance of 1 in 2 succeeds, now researchbypass is 1;
@@ -99,7 +98,8 @@ to say simplemast:
 			decrease humanity of Player by 1;
 			now researchbypass is 0;
 		now Libido of Player is ( 9 * Libido of Player ) / 10;
-	say ".";
+	else:
+		say "     You settle yourself down to [if Player is herm]play around with your junk for a bit[else if Player is male]jerk yourself off briefly[else]give yourself a quick fingering[end if]. You grab one of the magazines for added inspiration and get yourself off, relieving some of your excess arousal.";
 	now Libido of Player is ( 4 * Libido of Player ) / 5;
 
 Masturbate ends here.

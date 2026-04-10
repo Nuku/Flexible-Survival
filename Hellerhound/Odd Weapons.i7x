@@ -55,8 +55,9 @@ to say ResolveEvent Sword Nest:
 			SanLoss 15;
 			repeat with T running from one to 6:
 				weakrandominfect; [most of first set don't affect researcher]
-				if remainder after dividing T by 3 is 0, randominfect;
-				if T is 3, wait for any key;
+				if remainder after dividing T by 3 is 0:
+					randominfect;
+					if T is 3, wait for any key;
 			say "...";
 			WaitLineBreak;
 			say "     The sludge covering you releases that desire, as you orgasm intensely in the muck.";

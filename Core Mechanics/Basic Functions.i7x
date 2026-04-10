@@ -794,8 +794,7 @@ to CreatureSexAftermath (TakingCharName - a text) receives (SexAct - a text) fro
 	if GivingCharName in lower case is "player":
 		if debugactive is 1:
 			say "DEBUG -> Player is the giving partner for '[SexAct]'[line break]";
-		if there is a name of TakingCharName in the Table of Random Critters: [security in case someone made a typo - avoids Runtime Errors]
-			choose a row with name of TakingCharName in the Table of Random Critters;
+		if TakingCharName is a Name listed in Table of Random Critters: [security in case someone made a typo - avoids Runtime Errors]
 			now LastSexualPartner of Player is TakingCharName;
 		else: [lets tell people to report this too]
 			say "     < ERROR: [TakingCharName] not found in Table of Random Critters. Please report the situation you saw this in on the Flexible Survival Discord Bug Report Channel! >";
@@ -875,8 +874,7 @@ to CreatureSexAftermath (TakingCharName - a text) receives (SexAct - a text) fro
 	else if TakingCharName in lower case is "player":
 		if debugactive is 1:
 			say "DEBUG -> Player is the receiving partner for '[SexAct]'[line break]";
-		if there is a name of GivingCharName in the Table of Random Critters: [security in case someone made a typo - avoids Runtime Errors]
-			choose a row with name of GivingCharName in the Table of Random Critters;
+		if GivingCharName is a Name listed in Table of Random Critters: [security in case someone made a typo - avoids Runtime Errors]
 			now LastSexualPartner of Player is GivingCharName;
 		else: [lets tell people to report this too]
 			say "     < ERROR: [GivingCharName] not found in Table of Random Critters. Please report the situation you saw this in on the Flexible Survival Discord Bug Report Channel! >";

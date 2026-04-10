@@ -163,7 +163,7 @@ to say JadakoTalkMenu:
 	now sortorder entry is 3;
 	now description entry is "Ask him what sport he plays";
 	[]
-	Sort the table of fucking options in sortorder order;
+	sort the table of fucking options in sortorder order;
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
 		say "[link][y] - [title entry][as][y][end link][line break]";
@@ -232,7 +232,7 @@ to say JosephTalkMenu:
 	now sortorder entry is 3;
 	now description entry is "Ask him what sport he teaches";
 	[]
-	Sort the table of fucking options in sortorder order;
+	sort the table of fucking options in sortorder order;
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
 		say "[link][y] - [title entry][as][y][end link][line break]";
@@ -310,7 +310,7 @@ to say CampusCoupleSexMenu:
 	now sortorder entry is 3;
 	now description entry is "Take care of both of their cocks";
 	[]
-	Sort the table of fucking options in sortorder order;
+	sort the table of fucking options in sortorder order;
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
 		say "[link][y] - [title entry][as][y][end link][line break]";

@@ -66,13 +66,12 @@ to say AsterDesc:
 	say "     Aster is a large minotaur, towering above most humanoids. Further, he is wearing clothing that makes him resemble an eccentric uncle or university professor, with a pair of slacks sized for his frame, a collared shirt that seems fit to burst from trying to contain his musculature, and to top it all off, a pair of reading glasses resting on his nose.";
 
 an everyturn rule:
-	if time is early night: [3 or -5]
-		if Aster is in Museum Foyer:
+	if PlayerMet of Aster is true:
+		if time is early night: [3 or -5]
 			if Player is in Museum Foyer:
 				say "[line break]     Aster gets up from his desk and stretches, straining his shirt. 'Well, it's getting a bit late. I'm going to head home for the night, but feel free to come by tomorrow if you like.' With a short wave, he heads out the door.";
 			now Aster is nowhere;
-	else if time is morning: [6 or -2]
-		if PlayerMet of Aster is true and Aster is not in Museum Foyer:
+		else if time is morning: [6 or -2]
 			if Player is in Museum Foyer:
 				say "[line break]     As you stand in the foyer, you notice the door open, and a familiar minotaur comes walking through. He pauses to wave at you as he passes by. 'Good morning! Nice to see you here. If you want to speak with me, I'll be over at my desk, working.'";
 			now Aster is in Museum Foyer;
@@ -186,7 +185,7 @@ to say AsterTalkMenu:
 	else if Loyalty of Aster is 3:
 		choose a blank row in table of fucking options;
 		now title entry is "Amulet";
-		now sortorder entry is 4;
+		now sortorder entry is 3;
 		now description entry is "Give Aster the amulet";
 	[]
 	sort the table of fucking options in sortorder order;
@@ -273,61 +272,107 @@ to say SexWithAster:
 	else: [ready for sex]
 		if SexuallyExperienced of Aster is true:
 			say "     Aster grins and looks at you hungrily. 'Well, I'd be happy to have sex with you. I'll even let you decide what to do, if you'd like. As long as you pick quickly, that is.'";
-			say "[AsterDomMenu]";
+			now sextablerun is 0;
+			blank out the whole of table of fucking options;
+			[]
+			choose a blank row in table of fucking options;
+			now title entry is "Offer a BJ";
+			now sortorder entry is 1;
+			now description entry is "Suck Aster off under the desk";
+			[]
+			choose a blank row in table of fucking options;
+			now title entry is "Ask him to fuck you";
+			now sortorder entry is 2;
+			now description entry is "Ask him to take you right there on his desk";
+			[]
+			if Player is male:
+				choose a blank row in table of fucking options;
+				now title entry is "Ask to fuck him";
+				now sortorder entry is 3;
+				now description entry is "Tell the minotaur you're interested in his ass";
+			[]
+			sort the table of fucking options in sortorder order;
+			repeat with y running from 1 to number of filled rows in table of fucking options:
+				choose row y from the table of fucking options;
+				say "[link][y] - [title entry][as][y][end link][line break]";
+			say "[link]0 - Nevermind[as]0[end link][line break]";
+			while sextablerun is 0:
+				say "Pick the corresponding number> [run paragraph on]";
+				get a number;
+				if calcnumber > 0 and calcnumber <= the number of filled rows in table of fucking options:
+					now current menu selection is calcnumber;
+					choose row calcnumber in table of fucking options;
+					say "[title entry]: [description entry]?";
+					if Player consents:
+						LineBreak;
+						now sextablerun is 1;
+						if title entry is:
+							-- "Offer a BJ":
+								say "[AsterDom1]";
+							-- "Ask him to fuck you":
+								say "[AsterDom2]";
+							-- "Ask to fuck him":
+								say "[AsterDom3]";
+				else if calcnumber is 0:
+					LineBreak;
+					now sextablerun is 1;
+					say "     You step back from the confident minotaur, shaking your head slightly as he gives a questioning look.";
+				else:
+					say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options], or 0 to exit.";
+			wait for any key;
+			clear the screen and hyperlink list;
 		[else:
 			say "     When you ask for sex, the minotaur nods, ready to go along with whatever you choose.";
-			say "[AsterSubMenu]";]
-
-to say AsterDomMenu:
-	now sextablerun is 0;
-	blank out the whole of table of fucking options;
-	[]
-	choose a blank row in table of fucking options;
-	now title entry is "Offer a BJ";
-	now sortorder entry is 1;
-	now description entry is "Suck Aster off under the desk";
-	[]
-	choose a blank row in table of fucking options;
-	now title entry is "Ask him to fuck you";
-	now sortorder entry is 2;
-	now description entry is "Ask him to take you right there on his desk";
-	[]
-	if Player is male:
-		choose a blank row in table of fucking options;
-		now title entry is "Ask to fuck him";
-		now sortorder entry is 3;
-		now description entry is "Tell the minotaur you're interested in his ass";
-	[]
-	sort the table of fucking options in sortorder order;
-	repeat with y running from 1 to number of filled rows in table of fucking options:
-		choose row y from the table of fucking options;
-		say "[link][y] - [title entry][as][y][end link][line break]";
-	say "[link]0 - Nevermind[as]0[end link][line break]";
-	while sextablerun is 0:
-		say "Pick the corresponding number> [run paragraph on]";
-		get a number;
-		if calcnumber > 0 and calcnumber <= the number of filled rows in table of fucking options:
-			now current menu selection is calcnumber;
-			choose row calcnumber in table of fucking options;
-			say "[title entry]: [description entry]?";
-			if Player consents:
-				LineBreak;
-				now sextablerun is 1;
-				if title entry is:
-					-- "Offer a BJ":
-						say "[AsterDom1]";
-					-- "Ask him to fuck you":
-						say "[AsterDom2]";
-					-- "Ask to fuck him":
-						say "[AsterDom3]";
-		else if calcnumber is 0:
-			LineBreak;
-			now sextablerun is 1;
-			say "     You step back from the confident minotaur, shaking your head slightly as he gives a questioning look.";
-		else:
-			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options], or 0 to exit.";
-	wait for any key;
-	clear the screen and hyperlink list;
+			now sextablerun is 0;
+			blank out the whole of table of fucking options;
+			[]
+			choose a blank row in table of fucking options;
+			now title entry is "Offer a BJ";
+			now sortorder entry is 1;
+			now description entry is "Suck Aster off under the desk";
+			[]
+			choose a blank row in table of fucking options;
+			now title entry is "Demand his dick";
+			now sortorder entry is 2;
+			now description entry is "Take control and powerbottom Aster";
+			[]
+			if Player is male:
+				choose a blank row in table of fucking options;
+				now title entry is "Ask to fuck him";
+				now sortorder entry is 3;
+				now description entry is "Tell the minotaur you want to ride his ass";
+			[]
+			sort the table of fucking options in sortorder order;
+			repeat with y running from 1 to number of filled rows in table of fucking options:
+				choose row y from the table of fucking options;
+				say "[link][y] - [title entry][as][y][end link][line break]";
+			say "[link]0 - Nevermind[as]0[end link][line break]";
+			while sextablerun is 0:
+				say "Pick the corresponding number> [run paragraph on]";
+				get a number;
+				if calcnumber > 0 and calcnumber <= the number of filled rows in table of fucking options:
+					now current menu selection is calcnumber;
+					choose row calcnumber in table of fucking options;
+					say "[title entry]: [description entry]?";
+					if Player consents:
+						LineBreak;
+						now sextablerun is 1;
+						if title entry is:
+							-- "Offer a BJ":
+								say "[AsterSub1]";
+							-- "Demand his dick":
+								say "[AsterSub2]";
+							-- "Ask to fuck him":
+								say "[AsterSub3]";
+						wait for any key;
+				else if calcnumber is 0:
+					LineBreak;
+					now sextablerun is 1;
+					say "     You step back from the gentle minotaur, shaking your head slightly as he gives a questioning look.";
+					wait for any key;
+				else:
+					say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options], or 0 to exit.";
+			clear the screen and hyperlink list;]
 
 to say AsterDom1: [oral]
 	say "     'So you're interested in my cock, hmm? Well, I suppose I could let you use it. But I have some work to do, so how about you crawl under the desk and take care of me.' While he phrases it like an offer, you have no intention of denying his request. Somewhat awkwardly, you shuffle your way into the space under his desk. Once you're in position on your knees before the dominant minotaur, you are left face-to-face with the large bulge in his slacks. Taking the initiative, you unbutton his pants and carefully extricate his large package from its cloth prison. For a moment, you simply stare at the towering pillar before you, mentally preparing yourself for the task of pleasing it.";
@@ -341,68 +386,16 @@ to say AsterDom1: [oral]
 to say AsterDom2: [ask to be fucked]
 	say "     You tell Aster you want him to fuck you, and he responds with a broad grin. 'Alright, then, I'll give you what you want. But first I want you to get up on the desk, so I can do this properly.' You waste no time in listening to the confident minotaur, and in moments you're lying on your stomach across his desk, with papers and books strewn about you. Being so exposed, out in the open museum atrium, adds a thrill to what's about to happen. He doesn't leave you waiting, and in almost no time at all you feel a very sizable shaft drop down onto your rear, allowing you to feel all the weight of his package resting on you.";
 	say "     There is only a moment of peace, savoring the touch of the minotaur's cock, before he begins to pull it back. The tip drags its way across your back, tracing a line directly towards your opening. For a scant few seconds, he is motionless, poised to take you without actually doing so. Then the seconds pass, and without warning the broad head of his shaft is resting deep within you as you gasp for breath. From there Aster begins to hammer in and out, plowing you right in the open. The thrusting of his member starts to build a well of pleasure within you, growing significantly alongside the force of his thrusts. Finally it rises to a peak, and with one final slam he hilts his dick in you, flooding you with his bovine essence.";
-	NPCSexAftermath Player receives "AssFuck" from Aster;
 	WaitLineBreak;
 	say "     For a time you feel adrift in the pleasure you were given by the incredible plowing from the once-shy minotaur. Afterwards, however, you start to come down from the sensation when Aster pulls out of you, leaving you simply lying on his desk, with minotaur spunk dripping from you. 'Hey, you were a pretty excellent fuck, I've gotta say. I'd love to stick around, but I have some more work to get to. Go ahead and take five to get yourself together, though. If you need to get properly railed again later, you know who to call.' With that, the studious minotaur leaves you, presumably to perform some menial task. Eventually you do gather yourself, despite your embarrassment, and you follow suit.";
+	NPCSexAftermath Player receives "AssFuck" from Aster;
 
 to say AsterDom3: [ask to fuck him]
 	say "     'Hmm, is that so? Well, I'll let you enjoy my ass, but it will be on my own terms.' He gets up from his desk, and gestures at his chair. 'How about you take a seat and let me work?' With no need to refuse his request, you comply, setting yourself down in his desk chair. In expectation of what is about to happen, your [CockName of Player in lower case] member begins to harden. The minotaur grins at the sight, already stripping off his slacks, exposing his own hardening shaft at the same time. For a moment you simply look at his impressive physique, until he steps forward and climbs up onto the seat. [if strength of Player > 17]You can comfortably support his weight as he adjusts himself until his rear is hovering just above the tip of[else]His full weight is more than you can easily handle, leaving you pinned under him as he maneuvers his rear into place above[end if] your rod. Finally, he lowers himself down with much more speed than you were expecting, impaling himself on your cock.";
 	say "     The minotaur begins to ride you with far more fervor than you expected, and with a skill that can only be born of the amulet you gave him. The up and down motion combined with the way his hole grips your cock brings you incredible pleasure, enough that you can do nothing except wait and allow him to have his way with you. The only thing you can focus on is the feeling on your dick and the sound of his voice. 'Ha, even when I let you use your cock, it's still me in charge, and it always will be. Isn't that right?' You can only nod in response, as your helpless state more than proves him right. 'Well, I only need you to do one more thing. Cum for me, now!' Driven on by his words, you find yourself climaxing, faster than you expected, unloading your cream directly into the bull. As you do so, he comes to a stop, allowing it to fill him, before he smiles. 'Well done, just like I asked. Now, I'm going to get up, and then you'll need to get up as well. I still need that chair.' After the experience he just gave you, there's really nothing to do but what he requests.";
 	NPCSexAftermath Aster receives "AssFuck" from Player;
 
-[to say AsterSubMenu:
-	now sextablerun is 0;
-	blank out the whole of table of fucking options;
-	[]
-	choose a blank row in table of fucking options;
-	now title entry is "Offer a BJ";
-	now sortorder entry is 1;
-	now description entry is "Suck Aster off under the desk";
-	[]
-	choose a blank row in table of fucking options;
-	now title entry is "Demand his dick";
-	now sortorder entry is 2;
-	now description entry is "Take control and powerbottom Aster";
-	[]
-	if Player is male:
-		choose a blank row in table of fucking options;
-		now title entry is "Ask to fuck him";
-		now sortorder entry is 3;
-		now description entry is "Tell the minotaur you want to ride his ass";
-	[]
-	sort the table of fucking options in sortorder order;
-	repeat with y running from 1 to number of filled rows in table of fucking options:
-		choose row y from the table of fucking options;
-		say "[link][y] - [title entry][as][y][end link][line break]";
-	say "[link]0 - Nevermind[as]0[end link][line break]";
-	while sextablerun is 0:
-		say "Pick the corresponding number> [run paragraph on]";
-		get a number;
-		if calcnumber > 0 and calcnumber <= the number of filled rows in table of fucking options:
-			now current menu selection is calcnumber;
-			choose row calcnumber in table of fucking options;
-			say "[title entry]: [description entry]?";
-			if Player consents:
-				LineBreak;
-				now sextablerun is 1;
-				if title entry is:
-					-- "Offer a BJ":
-						say "[AsterSub1]";
-					-- "Demand his dick":
-						say "[AsterSub2]";
-					-- "Ask to fuck him":
-						say "[AsterSub3]";
-				wait for any key;
-		else if calcnumber is 0:
-			LineBreak;
-			now sextablerun is 1;
-			say "     You step back from the gentle minotaur, shaking your head slightly as he gives a questioning look.";
-			wait for any key;
-		else:
-			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options], or 0 to exit.";
-	clear the screen and hyperlink list;
-
-to say AsterSub1: [oral]
+[to say AsterSub1: [oral]
 	say "     <suck off Aster under his desk";
 	NPCSexAftermath Player receives "OralCock" from Aster;
 

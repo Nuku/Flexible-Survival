@@ -32,12 +32,22 @@ BrianOral is a number that varies.
 
 Section 1- Brian
 
+a postimport rule: [bugfixing rules for players that import savegames]
+	now OralVirgin of Brian is false;
+	now PenileVirgin of Brian is false;
+	now SexuallyExperienced of Brian is true;
+
 Table of GameCharacterIDs (continued)
 object	name
 Brian	"Brian"
 
 Brian is a man.
 Brian is in Border Wall.
+OralVirgin of Brian is false.
+Virgin of Brian is true.
+AnalVirgin of Brian is true.
+PenileVirgin of Brian is false.
+SexuallyExperienced of Brian is true.
 MainInfection of Brian is "Rhino".
 Description of Brian is "[BrianNPCDesc]".
 [Conversation of Brian is { "Ouch!" }.]
@@ -49,7 +59,6 @@ after going to Border Wall while BrianRelationship < 2:
 	if BrianRelationship is 0:
 		say "     You see an exceptionally large and sculpted rhino man, entirely consumed by one of the more unique infections running around. He's currently standing over by the massive wall next to the zoo, right in front of a large cluster of cracks arcing over the structure. The cracks shoot out over a good ten-foot radius, and you wouldn't be surprised if he was the cause of all that damage, him looking like an eight foot linebacker and all. However, he still has more muscle than a normal human could ever manage, linebacker or no. Then you remember that 'normal' is all relative now, and that's made even more obvious the longer your eyes sweep over the male.";
 		say "     His giant body, in addition to defying many standards you had for amount of muscle possible, has skin you'd never expect a person to have: gray, rough looking leathery stuff. Even more parts of him surprise you though, like his shoulders and hips, which carry what looks to be armor, but organic, almost like chitin. One thing that isn't so unexpected, however, is how unsteady he is, possibly because of the fact that he is trying to balance such a large form on just two hooved feet. Above his hooves and past his muscle packed legs, a long, thick cock hangs over his baseball-sized testicles, knocking against his upper thighs with an almost audible slap of flesh on flesh. His face is like that of a rhino, stretching out into a muzzle that carries the same rough, almost armored look of the other parts of his body. Of course, he wouldn't be much of a rhino if he didn't have a bony horn protruding from right between his wide nostrils.";
-		LineBreak;
 		say "     As you get closer, you can see said nostrils expanding and contracting rapidly, for a reason you can't discern yet, not until you see his left hoof scrape across the ground over and over again, his muscles tensing, his head lowering, and then his body charging forward and slamming into the wall, causing rocks and debris to clatter off the slightly slanted structure.";
 		now BrianRelationship is 1;
 	else:
@@ -60,9 +69,8 @@ to say BrianNPCDesc:
 		say "DEBUG -> BrianRelationship: [BrianRelationship], HP: [HP of Brian] <- DEBUG[line break]";
 	say "     The sweaty rhino stands there watching you with his gleaming, blue eyes. His shoulders raise and lower as he pants, still not taking his eyes off you for a second, all too content to glare at you with a mix of lust and interest. Even though he breathes almost straight towards your face, you smell nothing foul, in fact, it smells a little good, as if he's managed to keep his oral hygiene up. However, it doesn't look like he has any kind of supplies other than food in his vast... homey field. You chock it up to nanites... or something even stranger, and move on.";
 	say "     You see his form in all its glory when you look over the rest of his ripped form; down his eight-pack, over his Adonis belt that points right to his almost equine cock, eyes hovering over it before they continue to sweep over his muscled thighs, and finally down his defined legs and to his glossy, gray hooves. He's a hunk, that's for sure, and his chitinous shoulder 'pads' make him seem almost like a football player. And even though you can't see him from behind right now, you already have his muscled back and bubble-butt ingrained in your memory. His face is like that of a rhino, stretching out into a muzzle that carries the same rough, almost armored look of the other parts of his body. Of course, he wouldn't be much of a rhino if he didn't have a bony horn protruding from right between his wide nostrils.";
-	LineBreak;
 	if WallStanding is 0:
-		say "     You see Brian leaning against the damaged barrier wall, the hole next to him large enough to fit just about any living thing through it.";
+		say "[line break]     You see Brian leaning against the damaged barrier wall, the hole next to him large enough to fit just about any living thing through it.";
 
 Section 2 - Talk
 
@@ -76,9 +84,7 @@ Instead of conversing the Brian:
 		say "     'I'm sure a person of your [if Player is purehuman]resistance[else]curiosity[end if],' he begins as he gestures at his large, rhino-like form, 'has seen things like this, and it's a big change no matter who you are. I mean, I wasn't a small guy before all of this, but now. I mean damn, right?' Brian chuckles out with a bit of tainted amusement. 'Some parts of it can be a bit distractin['], if ya know what I mean... but hey, at least I'm ripped,' he says while flexing.";
 		say "     'I should be able to get us out of here right quick with this much muscle!' The excited rhino man shouts, 'I mean, ya know the military is watchin['] all the regular ways out of the city, but way I figures it, they won't be watchin['] this concrete bit. So once I crush this concrete bit into smaller bits, it'll be clear sailing from there!' Brian yells excitedly, pumping himself up to charge. He then turns back to the wall, lowers his head, and rams it again. The impact sends him reeling back from the wall, but beyond that the impact does little more than make him shake his head. You give one more glance to the wall, and can almost swear the cracks are thicker now, but that seems unlikely.";
 		now BrianRelationship is 2; [The player has talked to him at least once]
-	[else if BrianRelationship is 2:
-		say "     ";]
-	else if BrianRelationship > 1:
+	else:
 		say "     [one of]'One more should do it!' he says as he charges the wall.[or]'I'll have us out of here in no time!'[or]Brian is too busy holding his head from his last run at the wall to talk to you right now.[or]'Watch this one!' he says as he charges.[or]'Whoa,' Brian mutters as he reels back from the wall. 'I can hear magenta...' he mutters, and you decide it might be best trying to talk to him later.[or]'Chaaaaarge!'[or]'Hey, haven't I seen you somewhere before?' Brian asks blearily, his eyes unfocused as he tries to think.[or]'For the Horde!' Brian shouts as he leads a particularly vigorous charge at the wall. Sadly, the wall seems unimpressed at this impassioned cry, remaining standing, although Brian doesn't as he lands hard on his ass.[or]'If ya are just gonna stand there and watch, ya could like do some cheering or something,' Brian says as he eyes the wall again.[or]'Eat this, wallface!'[or]'Dude, you don't think all this headbanging is gonna hurt my brain any do yas?'[or]'Die concrete!'[or]'Whoa, I can still hear my brain ringing from that last hit...'[at random]";
 
 Section 3 - Sex
@@ -87,19 +93,18 @@ to say attemptsexwithbrian:
 	project Figure of Brian_icon;
 	if Player is neuter:
 		say "     You consider asking the rhino man for sex, but you can't see yourself being able to tempt him away in your current, genderless state.";
-	else if BrianRelationship is 1: [Met but not talked to]
+	else if BrianRelationship < 2: [Met but not talked to]
 		say "     The rhino is repeatedly charging headlong at the concrete wall with all his might. You should probably talk to him and see what's up before blindly offering sex to this strange and possibly dangerous fellow.";
 	else if lastfuck of Brian - turns < 3: [He got fucked within the last 9 hours]
 		say "     '[one of]Mmmm... that sounds kinda tempting, but this wall ain't gonna knock itself down[or]Sure. Lemme just finish up with this first. Shouldn't be much longer[or]Not tonight. I've got a headache, honey[or]Just a few more hits first[or]Not today, wall!' he growls, pointing angrily at it and seemingly ignoring you. 'You're goin['] down[in random order],' he says as he lines up for another charge at the wall.";
-	else if BrianRelationship >= 2 and XP of Brian is 0: [He has been talked to at the very least]
+	else if XP of Brian is 0: [He has been talked to at the very least]
 		if Player is female and Breast Size of Player > 2:
-			say "     'Oh, hello there pretty lady,' the rhino almost whistles out. After he finishes talking, the big muscled man then turns to drink in your feminine form, one of his hooved feet scraping lightly across the ground. 'I'm glad to see you back, but how I didn't notice how fine you were before, I'll never.' Brian just glares at you as his hoof scrapes across the ground faster and faster, his cock soon joining as another obvious sign of arousal. Content with his displays of need, you walk over to him, his big, meaty hands helping you out of your gear, while his naked form rubs and grinds at your own throughout. With great speed the clothing is thrown off to the side, leaving you grinding into each other's bodies, both groping and kneading at each other as time goes on. Your eyes meet after several minutes of exploration, his hands gripping at your breasts as you begin to wonder about the main course.";
-			LineBreak;
+			say "     'Oh, hello there, pretty lady,' the rhino almost whistles out. After he finishes talking, the big muscled man then turns to drink in your feminine form, one of his hooved feet scraping lightly across the ground. 'I'm glad to see you back, but how I didn't notice how fine you were before, I'll never.' Brian just glares at you as his hoof scrapes across the ground faster and faster, his cock soon joining as another obvious sign of arousal. Content with his displays of need, you walk over to him, his big, meaty hands helping you out of your gear, while his naked form rubs and grinds at your own throughout. With great speed the clothing is thrown off to the side, leaving you grinding into each other's bodies, both groping and kneading at each other as time goes on. Your eyes meet after several minutes of exploration, his hands gripping at your breasts as you begin to wonder about the main course.";
 			say "[briansexmenu]";
 		else:
-			say "     'Sorry dude, but I only like to fuck the ladies. Well... I think anyways, it can be hard to remember sometimes,' Brian says in an absentminded manner as he stares at the wall. Brian hesitates for a moment as he eyes you though, clearly tempting the hard-headed mutant. Even as he moves back into charging position, he glances back at you and is uneven of the mark. Seeing your opportunity, you rush after him. A few paces behind, you end up tackling him down while he's dazed after running into the wall. Pinning him beneath you, you give him an aggressive kiss while getting into position atop him.";
+			say "     'Sorry, dude, but I only like to fuck the ladies. Well... I think anyways, it can be hard to remember sometimes,' Brian says in an absentminded manner as he stares at the wall. Brian hesitates for a moment as he eyes you though, clearly tempting the hard-headed mutant. Even as he moves back into charging position, he glances back at you and is uneven of the mark. Seeing your opportunity, you rush after him. A few paces behind, you end up tackling him down while he's dazed after running into the wall. Pinning him beneath you, you give him an aggressive kiss while getting into position atop him.";
 			if Player is male:
-				Say "[line break]     [bold type]What do you want to do with the rhino now?[roman type][line break]";
+				say "[line break]     [bold type]What do you want to do with the rhino now?[roman type][line break]";
 				say "     ([link]Y[as]y[end link]) - Fuck him!";
 				say "     ([link]N[as]n[end link]) - Ride his cock!";
 				if Player consents:
@@ -109,18 +114,16 @@ to say attemptsexwithbrian:
 					LineBreak;
 					say "[sexwithbrian00r]";
 			else:
-				WaitLineBreak;
 				say "[sexwithbrian00r]";
 			now XP of Brian is 1;
 			now lastfuck of Brian is turns;
 			infect "Rhino";
-	else if BrianRelationship >= 2 and XP of Brian >= 1: [He's been talked to and fucked at least once]
+	else: [He's been talked to and fucked at least once]
 		say "     'Hmmm... It was awfully nice when you helped me out earlier. You could be onto something,' he says, rubbing his head. 'I could use a bit of a fuck break to catch my breath.' Steadying himself by putting his meaty arms around you, he helps you with your gear while giving you a kiss. You run your hands over his tough hide, finding the sensitive spots of his nipples, ass, cock and balls. As you get him good and riled up, you consider how you'd like to have some fun with the good-natured hunk.";
-		LineBreak;
 		say "[briansexmenu]";
 
 to say briansexmenu:
-	say "     What do you want to do with Brian?";
+	say "[line break]     What do you want to do with Brian?";
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]
@@ -135,27 +138,25 @@ to say briansexmenu:
 		now sortorder entry is 2;
 		now description entry is "Press his cock between your jugs";
 	[]
+	choose a blank row in table of fucking options;
 	if Player is female:
-		choose a blank row in table of fucking options;
 		now title entry is "Get fucked - vaginal";
-		now sortorder entry is 3;
 		now description entry is "Ride his cock";
 	else:
-		choose a blank row in table of fucking options;
 		now title entry is "Get fucked - anal";
-		now sortorder entry is 4;
 		now description entry is "Have the rhino pound your ass";
+	now sortorder entry is 3;
 	[]
 	if Player is male:
 		choose a blank row in table of fucking options;
 		now title entry is "Fuck him";
-		now sortorder entry is 5;
+		now sortorder entry is 4;
 		now description entry is "Stuff the rhino's ass";
 		[]
 		if Cock Length of Player > 8:
 			choose a blank row in table of fucking options;
 			now title entry is "Frottage";
-			now sortorder entry is 6;
+			now sortorder entry is 5;
 			now description entry is "Grind and stroke your cocks against one another";
 	[]
 	sort the table of fucking options in sortorder order;
@@ -218,17 +219,17 @@ to say sexwithBrian01:		[oral on Brian]
 		WaitLineBreak;
 		say "     Brian pants and grunts happily, his strong hands surprisingly tender as he caresses your head. As his moans of pleasure rise, you can tell he's getting close and begin fervently bobbing your head back and forth around his shaft, working your tongue along its entirety while doing so. This soon brings him over the edge and you're treated to blast after blast of his gooey load. You swallow down as much as you can of the rich spunk, but it comes too fast and too thick to consume completely. You end up with a sticky mess overflowing from your mouth and down your chest.";
 		say "     Once spent, Brian breathes a happy sigh of relief and rubs his balls. Lighter for having been drained, at least for the moment, they weigh a little less heavily in his hand. The rhino smiles happily, then thanks you with a big kiss, not minding that it's flavored with his own spunk. After the kiss though, his break is over and he returns to his attempts to batter through the wall with his head.";
-	else if BrianOral is 0 and player is puremale and Breast Size of Player < 3: [Initial oral on Brian that opens gay storyline]
+	else: [Initial oral on Brian that opens gay storyline]
 		say "     With an excited snort, the rhino puts a hand around his meaty rod and points it to your mouth as you kneel down. You place a hand on his plump orbs and rub them as you start licking along his thick shaft. Twirling your tongue over his glans, you gather up the gooey pre that wells up from it, and discover his rich and musky taste. You get a noseful of Brian's strong musky scent as well, your nose close enough to his virile manhood to pick up his manly smell. Add to that the growing scent of his exertion, and you find your mind fully submitting to this muscular stud: his smell overriding any thought of stopping your ministrations.";
 		say "     Even as aroused as you are, it takes some effort to get his impressive cock into your mouth and down your throat, but your horny dedication eliminates any thought of giving up or slowing down. Eventually, your face is buried in Brian's crotch and his heavy balls are tapping against your chest. Having succeeded in taking all of the intoxicatingly masculine cock into your mouth and throat, you slowly pull back and forward again, gradually increasing the pace as you bob over the gray pillar of meat.";
 		WaitLineBreak;
 		say "     Your bobbing picks up as time passes, and soon your gagging and salivating all over his cock, leaving globs of saliva behind on his meat each time you withdraw. As you keep up your messy blowjob, Brian pants and grunts happily, his strong hands surprisingly tender as he caresses your head. As his moans of pleasure rise, you can tell he's getting close and begin fervently bobbing your head back and forth over his throbbing shaft, working your tongue along it as you do so. As Brian's cock begins to get to its biggest, you feel the sheer amount of pre filling your mouth and throat grow, and as it does, you realize your chance.";
 		say "     You immediately start gathering precum onto your index-finger from your own cock, and once you feel you have enough, you angle it between the rhino's cheeks, pushing past his anal ring and right into his prostate. 'Yeah! Take... cock, all of it,' he shouts out as he rams down your throat. 'Mmmm. A faggot like you doesn't deserve to breathe, just swallow my cock for a livin[']. I bet ya'd love to swallow my cock for the entire, worthless life you have left.' You then feel his cock swelling, the foot-and-a-half rod throbbing deep inside your throat, so deep that it almost feels like your stomach is being stretched. Of course, that doesn't actually happen until every pint that fills the big man's gray balls starts to shoot out of his dilating urethra. So many pints squirt out, that it begins to feel like gallons, and after that, the only amount you could imagine is closer to tub size.";
 		WaitLineBreak;
-		say "     The quantity of cum being pumped into you is quickly becoming the least of your worries though, as black begins to creep into the edge of your vision, the oxygen in your lungs completely gone as he keeps both hands digging into your scalp, holding you in his groin. As soon as your off hand grabs at a muscled ass cheek, he shows mercy, and before you are forced to enact a plan to fight him off, the gray cock quickly pulls from your throat and gets left to ooze over your tongue. Your lips are still closed tight right behind Brian's dickhead, but you're thankfully able to catch your breath through your nose. His rhino face than peers down at you with a good-natured smirk that almost immediately gets overwhelmed by a look of shock, his eyes and mouth now hanging open and just staring down at you in sheer fear.";
+		say "     The quantity of cum being pumped into you is quickly becoming the least of your worries, though, as black begins to creep into the edge of your vision, the oxygen in your lungs completely gone as he keeps both hands digging into your scalp, holding you in his groin. As soon as your off hand grabs at a muscled ass cheek, he shows mercy, and before you are forced to enact a plan to fight him off, the gray cock quickly pulls from your throat and gets left to ooze over your tongue. Your lips are still closed tight right behind Brian's dickhead, but you're thankfully able to catch your breath through your nose. His rhino face than peers down at you with a good-natured smirk that almost immediately gets overwhelmed by a look of shock, his eyes and mouth now hanging open and just staring down at you in sheer fear.";
 		say "     You pull off, asking him what's wrong, and as he moves his mouth, looking to be about to give an answer, you're forced to pull your finger out from his ass as well, which is swiftly followed by him turning around and yelling over his shoulder, 'Leave!' And that's all you get from his raspy voice. You think about staying, but looking around, you figure it'd be best to leave for the moment.";
 		now BrianOral is 1;
-	NPCSexAftermath Brian receives "OralCock" from Player;
+	NPCSexAftermath Player receives "OralCock" from Brian;
 
 to say sexwithBrian02:		[titty-fuck]
 	say "     Wanting that rock-hard pillar nestled between your breasts, you lower yourself to your knees and squeeze it between your tits. The rhino moans happily and rubs his meaty hand over your head. 'Mmm... now that's what I'm talkin['] about. Ain't nothing like a sexy pair of tits,' he says with a grin. His gray shaft throbs and drools precum as you rub your breasts around it. Licking your lips, you give its glans several kisses and licks while working your bosom around it. You tweak and pinch your nipples, playing with yourself as you work to get the rhino off.";
@@ -249,10 +250,7 @@ to say sexwithBrian04:		[anal on player]
 	NPCSexAftermath Player receives "AssFuck" from Brian;
 
 to say sexwithBrian05_prelim:		[anal on Brian preliminary - not been fucked before]
-	if XP of Brian is 0:		[not suggested before]
-		say "     When you suggest the rhino take a turn as bottom, he edges back a step. 'Hey now. I don't know about that. I mean, aside from that other rhino, there ain't been nobody in there...' he starts to protest. As you're pondering a way to convince him, he snaps his fingers. 'We'll wrassle for it. That seems fair,' he says with a big smile on his face. Looking at his bulging muscles, you have trouble seeing how that's quite fair. You don't even get a chance to refuse before he's coming at you.";
-	else:					[trying again]
-		say "     'Alright,' he says confidently. 'We'll wrassle for it again.' And with that, the rhino adopts a stance to charge.";
+	say "     [if XP of Brian is 0]When you suggest the rhino take a turn as bottom, he edges back a step. 'Hey now. I don't know about that. I mean, aside from that other rhino, there ain't been nobody in there...' he starts to protest. As you're pondering a way to convince him, he snaps his fingers. 'We'll wrassle for it. That seems fair,' he says with a big smile on his face. Looking at his bulging muscles, you have trouble seeing how that's quite fair. You don't even get a chance to refuse before he's coming at you[else]'Alright,' he says confidently. 'We'll wrassle for it again.' And with that, the rhino adopts a stance to charge[end if].";
 	let playernum be ( strength of Player * 2 ) + dexterity of Player + stamina of Player + level of Player;
 	if "Martial Artist" is listed in feats of Player, increase playernum by 4;
 	if "Black Belt" is listed in feats of Player, increase playernum by 4;
@@ -262,13 +260,12 @@ to say sexwithBrian05_prelim:		[anal on Brian preliminary - not been fucked befo
 	if HardMode is true, increase briannum by level of Player / 2;
 	now briannum is a random number between 1 and briannum;
 	now playernum is a random number between 1 and playernum;
-	say "     [special-style-1][playernum][roman type] vs [special-style-2][briannum][roman type]: ";
 	if Playernum > briannum:
-		say "It is a tough match against your burly opponent, but you eventually manage to get him to the ground beneath you. Pinning him down, he's forced to concede to you. 'Nice going,' he pants. 'I guess that's that, then.' Being a good sport (and quite aroused after the exciting tussle), he seems quite ready to let you claim your victory prize. Quite turned on yourself, you're ready and raring to get to it as well.";
+		say "[line break]     [special-style-1][playernum][roman type] vs [special-style-2][briannum][roman type]: It is a tough match against your burly opponent, but you eventually manage to get him to the ground beneath you. Pinning him down, he's forced to concede to you. 'Nice going,' he pants. 'I guess that's that, then.' Being a good sport (and quite aroused after the exciting tussle), he seems quite ready to let you claim your victory prize. Quite turned on yourself, you're ready and raring to get to it as well.";
 		WaitLineBreak;
 		say "[sexwithBrian05]";
 	else:
-		say "Try as you might, you end up pinned beneath the muscly rhino as he uses his great strength against you. With you in such a position and the burly male hard after the exciting tussle, he seems quite ready now to claim his victory prize. And you're too turned on by this point to be that upset about how things turned out. You raise your ass, offering your [if Player is female]juicy pussy[else]crinkled hole[end if] to him.";
+		say "[line break]     [special-style-1][playernum][roman type] vs [special-style-2][briannum][roman type]: Try as you might, you end up pinned beneath the muscly rhino as he uses his great strength against you. With you in such a position and the burly male hard after the exciting tussle, he seems quite ready now to claim his victory prize. And you're too turned on by this point to be that upset about how things turned out. You raise your ass, offering your [if Player is female]juicy pussy[else]crinkled hole[end if] to him.";
 		WaitLineBreak;
 		if Player is female:
 			say "[sexwithBrian03]";

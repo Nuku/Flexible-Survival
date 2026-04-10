@@ -149,8 +149,6 @@ to say JaguarWarriorCaptured: [TODO: Add tracking to the way the player took him
 			say "     You change your mind, just pushing him over to sprawl confusedly on the ground as you walk off without a word. The sudden rejection makes the feline hiss after you as he slowly gets to his feet afterwards.";
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options], or 0 to exit.";
-	wait for any key;
-	clear the screen and hyperlink list;
 
 to say TehuantlTameNonSexM:
 	say "     You swat the muscled feline's ass lightly, telling him that there's enough of that for now, you're not going to rape him. No, you just pull him up by the scruff of his neck, meeting his eyes and giving him a good long stare to show your dominance. Then you lay out how things are going to be - he's proven to be weaker than you more than once, and you're claiming him as yours now. As such, he'll follow you and obey, or else. The proud warrior actually starts to nod and relax even before you add the last part, accepting the new status you're putting him in readily. 'Yes, tlacahua. I'm your warslave and will serve,' he says, almost purring. Curiosity has you ask what that word he used was, and he explains that it means '[master]' in his original Nahuatl language. You can't help but smile at this and tell him that he's starting to behave like a very good little kitty, then hold out a hand for him to take and pull him up along as you stand up. Your new pet leans in and nuzzles against your chest as you make your way back to the Grey Abbey Library with him.";

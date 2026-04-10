@@ -19,10 +19,9 @@ to VialGain (VialName - text) by (N - number) silently:
 
 to VialGain (VialName - text) by (N - number) silence state is (Silence - a number):
 	if there is a Name of VialName in the Table of Random Critters: [infection exists]
-		if there is a Name of VialName in the Table of OwnedVials: [row already exists]
+		if VialName is a Name listed in Table of OwnedVials: [row already exists]
 			if debug is at level 5:
 				say "DEBUG: Row [VialName] exists. Adding 1 to PlayerOwned.";
-			choose a row with name of VialName in the Table of OwnedVials;
 			now PlayerOwned entry is PlayerOwned entry + N;
 		else: [new row to be filled]
 			if debug is at level 5:
@@ -43,8 +42,7 @@ to VialLoss (VialName - text) by (N - number) silently:
 	VialLoss VialName by N silence state is 1;
 
 to VialLoss all (VialName - text):
-	if there is a Name of VialName in the Table of OwnedVials:
-		choose a row with name of VialName in the Table of OwnedVials;
+	if VialName is a Name listed in Table of OwnedVials:
 		if PlayerOwned entry > 0:
 			VialLoss VialName by PlayerOwned entry;
 		else:
@@ -56,8 +54,7 @@ to VialLoss all (VialName - text):
 			say "DEBUG -> Trying to remove [VialName] from player who doesn't have any.[line break]";
 
 to VialLoss all (VialName - text) silently:
-	if there is a Name of VialName in the Table of OwnedVials:
-		choose a row with name of VialName in the Table of OwnedVials;
+	if VialName is a Name listed in Table of OwnedVials:
 		if PlayerOwned entry > 0:
 			VialLoss VialName by PlayerOwned entry silently;
 		else:
@@ -69,8 +66,7 @@ to VialLoss all (VialName - text) silently:
 			say "DEBUG -> Trying to remove [VialName] from player who doesn't have any.[line break]";
 
 to VialLoss (VialName - text) by (N - number) silence state is (Silence - a number):
-	if there is a Name of VialName in the Table of OwnedVials:
-		choose a row with name of VialName in the Table of OwnedVials;
+	if VialName is a Name listed in Table of OwnedVials:
 		if Silence is 0:
 			if N is 1:
 				say "[line break]     [bold type]You lose [if PlayerOwned entry is 1]your[else]1[end if] [VialName] infection vial![roman type][line break]";
@@ -86,10 +82,9 @@ to VialLoss (VialName - text) by (N - number) silence state is (Silence - a numb
 [called in the code of Core Mechanics/Alt Combat.i7x]
 To Vialchance (x - a text):
 	if researchbypass is 1, continue the action;
-	if there is a name of x in the Table of Random Critters:
-		choose row with name of x from Table of Random Critters;
-		if there is a non-infectious in row MonsterID of Table of Random Critters and non-infectious entry is true, continue the action;
-		if there is a resbypass in row MonsterID of Table of Random Critters and resbypass entry is true, continue the action;
+	if x is a Name listed in Table of Random Critters:
+		if there is a non-infectious entry and non-infectious entry is true, continue the action;
+		if there is a resbypass entry and resbypass entry is true, continue the action;
 		if scenario is "Researcher" or nanite collector is equipped:
 			let vialcollectible be 10 + ( 2 * intelligence of Player ) + ( level of Player / 2 );
 			if nanitemeter is 1:

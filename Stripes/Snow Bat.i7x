@@ -6,17 +6,9 @@ Section 1 - Creature Responses
 
 nightcheck is a number that varies.
 
-
-to say daynightcheck:
-	if daytimer is day:
-		now nightcheck is 0; [daylight hours]
-	else:
-		now nightcheck is 4; [nighttime hours]
-
-
 to say losetosnowbat:
-	if scalevalue of Player > 0 and ( Player is female or anallevel is 3 or Player is mpreg_ok ) and daytimer is night and a random chance of 2 in 5 succeeds:
-		say "     As you [if HP of Player > 0]submit[else]fall[end if] to the snow bat, he quickly grabs and pulls you into the sky[if HP of Player > 0]. You show no protest, lest the twisted feline release its hold upon you[else]. You briefly struggle, but you quickly refrain as the earth below you grows ever distant[end if]. There, suspended in the twilight, he would have his way with you, pulling you tightly into his arms. Sharing his irreverent affection with you, he caressing your neck with his fanged muzzle, his coarse tongue teasing your [bodytype of Player] surface before he sinks his teeth into you.";
+	if scalevalue of Player > 0 and ( Player is female or anallevel is 3 or Player is mpreg_ok ) and nightcheck is 4 and a random chance of 2 in 5 succeeds:
+		say "     As you [if HP of Player > 0]submit[else]fall[end if] to the snow bat, he quickly grabs and pulls you into the sky. You [if HP of Player > 0]show no protest, lest the twisted feline release its hold upon you[else]briefly struggle, but you quickly refrain as the earth below you grows ever distant[end if]. There, suspended in the twilight, he would have his way with you, pulling you tightly into his arms. Sharing his irreverent affection with you, he caressing your neck with his fanged muzzle, his coarse tongue teasing your [bodytype of Player] surface before he sinks his teeth into you.";
 		if Player is female:
 			say "     His assault relents briefly, tongue tasting your bleeding wound as you feel his hardening cock pressed firmly against your ass, illustrating his desire to have you sate another hunger. He skips ceremony, his expedience exacerbated by the apparent urgency of your suspended state, as he thrusts his barbed rod into [if Cunt Count of Player > 1]one of your cunts[else]your cunt[end if], his belligerent assault intensified with each successive flap of his wings.";
 			say "     [if Cock Count of Player > 1]Cocks growing hard from his wanton assault, they bob freely against the open air[else if Player is male]Cock growing hard from his wanton assault, it bobs freely against the open air. [end if][if Breast Size of Player > 3]With your [breast size desc of Player] bosom bouncing freely as you sway with his flaps, he slightly loosens his hold to offer them brief teasing. [else]Panting weakly as he works to hold you both aloft, his hands tease your [bodydesc of Player] form while you're in their grasp. [end if]He continues to suck your blood from you, causing you to become increasingly lightheaded both from the thinner air and the deprivation of your life fluids until his loud moan audibly illustrates his cum flooding your depths.[impregchance]";
@@ -27,18 +19,13 @@ to say losetosnowbat:
 	else if ( Player is female or anallevel > 1 or Player is mpreg_ok ) and a random chance of 3 in 5 succeeds:
 		say "     As you [if HP of Player > 0]submit[else]fall[end if] to the snow bat, he quickly pushes you to the ground. His show of force reprieved by the softer affection of stroking your [if scalevalue of Player > 4]massive[else if scalevalue of Player > 3]sizable[else if scalevalue of Player < 3]smaller[end if] form, [if HP of Player > 0]obliging him[else]too weak to contest him[end if]. At his mercy, he crawls [if scalevalue of Player > 3]over your back[else]up behind you[end if], his fanged muzzle caressing your neck as he purrs soothingly. This almost tender moment only lasts a few breaths before his soft demeanor is betrayed when he sinks his fangs into your neck, causing you to writhe impotently against his hold.";
 		if Player is female:
-			say "     His assault relents briefly, tongue tasting your bleeding wound as you feel his hardening cock pressed firmly against your [if scalevalue of Player > 3]back[else]ass[end if], illustrating his desire to have you sate another hunger. ";
 			if scalevalue of Player > 3:
-				say "His endeavor is clearly impeded by your disparate size, and he continues to feed himself for a while longer before he briefly relinquishes you, crawling down to treat you proper. You quickly feel his cock drive into [if Cunt Count of Player > 1]one of your cunts[else]your cunt[end if].";
+				say "     His assault relents briefly, tongue tasting your bleeding wound as you feel his hardening cock pressed firmly against your back, illustrating his desire to have you sate another hunger. His endeavor is clearly impeded by your disparate size, and he continues to feed himself for a while longer before he briefly relinquishes you, crawling down to treat you proper. You quickly feel his cock drive into [if Cunt Count of Player > 1]one of your cunts[else]your cunt[end if].";
 			else:
-				say "Skipping ceremony, he thrusts his barbed rod into [if Cunt Count of Player > 1]one of your cunts[else]your cunt.";
+				say "     His assault relents briefly, tongue tasting your bleeding wound as you feel his hardening cock pressed firmly against your ass, illustrating his desire to have you sate another hunger. Skipping ceremony, he thrusts his barbed rod into [if Cunt Count of Player > 1]one of your cunts[else]your cunt.";
 			say "     [if Cock Count of Player > 1]Cocks growing hard from his wanton assault, they grind unabated against the ground. [else if Player is male]Cock growing hard from his wanton assault, it grinds unabated against the ground. [end if][if scalevalue of Player > 3]Panting with arousal, his hands tease what they can of the side of your [Body Size Adjective of Player] [bodydesc of Player] torso. His payment in blood having its toll on you, you [else]Panting with arousal, his hands tease your [bodydesc of Player] form. He continues to suck your blood from you, causing you to[end if] become increasingly lightheaded with his escalating fervor until he releases a loud, screeching moan, an audible illustration of his cum flooding your depths.[impregchance]";
 		else:
-			say "     His assault relents briefly, tongue tasting your bleeding wound as you feel his hardening cock pressed firmly against your [if scalevalue of Player > 3]back[else]ass[end if], illustrating his desire to have you sate another hunger. ";
-			if scalevalue of Player > 3:
-				say "His endeavor is clearly impeded by your disparate size, and he continues to feed himself for a while longer before he briefly relinquishes you, crawling down to treat you proper. You quickly feel his barbed rod flood the depths of your anal ring.";
-			else:
-				say "Skipping ceremony, he thrusts his cock into your anal ring.";
+			say "     His assault relents briefly, tongue tasting your bleeding wound as you feel his hardening cock pressed firmly against your [if scalevalue of Player > 3]back, illustrating his desire to have you sate another hunger. His endeavor is clearly impeded by your disparate size, and he continues to feed himself for a while longer before he briefly relinquishes you, crawling down to treat you proper. You quickly feel his barbed rod flood the depths of[else]ass, illustrating his desire to have you sate another hunger. Skipping ceremony, he thrusts his cock into[end if] your anal ring.";
 			say "     [if Cock Count of Player > 1]Cocks growing hard from his wanton assault, they grind unabated against the ground. [else if Player is male]Cock growing hard from his wanton assault, it grinds unabated against the ground. [end if][if scalevalue of Player > 3]Panting with arousal, his hands tease what they can of the side of your [Body Size Adjective of Player] [bodydesc of Player] torso. His payment in blood having its toll on you, you [else]Panting with arousal, his hands tease your [bodydesc of Player] form. He continues to suck your blood from you, causing you to[end if] become increasingly lightheaded with his escalating fervor until he releases a loud, screeching moan, an audible illustration of his cum flooding your bowels.[mimpregchance]";
 		say "     Overwhelmed, [if Cock Count of Player > 1]your cocks fire off their load into the dirt, causing you to pass out[else if Player is male]your cock fires off its load into the dirt, causing you to pass out[else]you pass out[end if]; eventually, you awake. Now abandoned, exhausted, and thirsty, you gather yourself before slowly going back on your way.";
 	else:
@@ -49,10 +36,9 @@ to say losetosnowbat:
 			say "     As he licks and sucks at your wound, lapping up your blood, you can feel your strength waning. You try again to pull away, but cannot do more than push lightly at his shoulders. He keeps purring and caressing you as he feeds, making you feel more relaxed about your fate despite your peril. His muzzle remains at your neck, purring and panting as he keeps drinking your life blood. As you're passing out, you groan in pleasure then black out. When you awaken, weak and thirsty, your dark assailant is gone.";
 	increase thirst of Player by 8;
 
-
 to say beatthesnowbat:
-	let skipx be 0;
-	let resistance be ( 100 + humanity of Player ) - ( Libido of Player + ( thirst of Player * 2 ) );
+	let skipx be false;
+	let resistance be 100 + humanity of Player - Libido of Player + ( thirst of Player * 2 );
 	if BodyName of Player is "Snow Bat" and FaceName of Player is "Snow Bat" and a random number between 1 and 200 >= resistance:
 		say "     Driven by your feral infection you'll not abide the peculiar feline's retreat, compelling you to fling yourself into the open air and grab him as he attempts to fly off, forcibly anchoring the creature to the earth. This snow bat will reap the harvest he has sewn, much in spite of his screeching lack of compliance.";
 		say "     You have to contend with him flailing about, clearly not intent on playing the victim, until your fangs find shelter within the flesh of the beast's neck. Feeding on his blood, he rapidly fatigues until he can only barely contest your assault, your own blinding fervor fueled further[if Player is herm]. Much in spite the feast, you hunger further, and you prepare to assail your victim in another manner, relinquishing yourself of your clothing[end if].";
@@ -60,7 +46,7 @@ to say beatthesnowbat:
 			say "     Cock[smn] driven blatantly erect, you only need to shift your position briefly until you drive [if Cock Count of Player > 1]one of them[else]it[end if] into his vulnerable hole. His protests too impotent to contest your abuse, he can only suffer through each harsh thrust, leaving you free to use him as you see fit. Your feline cries in pleasure muffled by his beleaguered flesh, you find blissful relief as you begin pumping your [if Ball Size of Player > 5]expansive [end if]load into him, a lascivious recompense for your exacted payment, [if Cock Count of Player > 2]free cocks spilling their seed against his soft fur[else if Cock Count of Player > 1]free cock spilling its seed against his soft fur[else]forcing him to take the full brunt of your release[end if].";
 		else if Player is female and a random chance of 3 in 5 succeeds:
 			say "     Puss[yfn] transparently dripping with wanton desire, it takes a bit of effort to compel the creature into erection, but your endeavors are richly rewarded and you're soon impaling yourself with his cock. His exhausted form further fatigued from this abuse, he can only remain a victim of your lust. Your cries in pleasure muffled by his beleaguered flesh, you find blissful release, your cunt tightening against his rod until it too is brought to deliver you its load. Doubly draining the snow bat of his essence, [if Cock Count of Player > 1]your own cocks spilling their seed against him[else if Player is male]your own cock spilling it seed against him[else]you don't shy away from stealing his seed as well[end if].[impregchance]";
-		else if anallevel is 3 and (a random chance of 1 in 4 succeeds or ( Player is kinky and a random chance of 1 in 5 succeeds ) ):
+		else if anallevel is 3 and ( a random chance of 1 in 4 succeeds or ( Player is kinky and a random chance of 1 in 5 succeeds ) ):
 			if Player is neuter:
 				say "     Much in spite the feast, you hunger further, and you prepare to assail your victim in another manner, relinquishing yourself of your clothing.";
 			say "     [if Player is male]Cock[smn] driven blatantly erect[else if Player is female]Puss[yfn] transparently dripping with wanton desire[else]Your genital-devoid crotch exposed before him[end if], you would humiliate the creature in another fashion... It takes a bit of effort to compel the creature into erection, but your endeavors are richly rewarded and you're soon impaling yourself through your anal ring with his cock. His exhausted form further fatigued from this abuse, he can only remain a victim of your lust.";
@@ -71,17 +57,13 @@ to say beatthesnowbat:
 			say "     Dipping a few fingers into your juicy cunt[sfn], you tease your clit[sfn] rub your folds. Already quite wet from the earlier excitement, you're eager to get yourself off. Pinning your foe down with ease, you grind your [cunt size desc of Player] puss[yfn] against his soft fur, letting some of your juices wet his pet. You grind and rub yourself, purring softly as his fluffy pelt rubs against you. It is all the more exciting for the power you have over your fallen enemy, able to use him as an object of your pleasure after feasting from him. It only takes a short session to push you over the edge and you cum with a hissing mrowl of delight, your hot juices soaking into his fur, returning a little of the fluid you've stolen from him.";
 		else:
 			say "     Fed and done with your would-be assailant, you give his wound a parting lick and rise up, leaving the drained creature to recover if it can before something else finds it.";
-			let skipx be 1;
-		if skipx is 0:
+			let skipx be true;
+		if skipx is false:
 			say "     Your taste for delicious revenge sated, you free yourself of the victim, leaving him an exhausted heap and recover if he can before something else finds him. No doubt he'll think twice about crossing you again. You gather your things and depart[if nightcheck is 0][else] into the night[end if].";
 	else:
-		say "     [one of]With your final blow, your enemy takes to the air again and releases a screeching mrowl of frustration, flying off to find easier prey.[or]Successfully fending off the snow bat, he emits a high-pitched hiss before he retreats back into the sky, perhaps to recover and find easier prey.[at random]";
-
+		say "     [one of]With your final blow, your enemy takes to the air again and releases a screeching mrowl of frustration, flying off to[or]Successfully fending off the snow bat, he emits a high-pitched hiss before he retreats back into the sky, perhaps to recover and[at random] find easier prey.";
 
 Section 2 - Creature Insertion
-
-to say snowbatdesc:
-	say "     Swooping from the sky is a hybrid snow bat, a cross between a snow leopard and a bat. The bat wings which allow this snowmeow to fly are covered in an even gray fur, lacking the spots and markings of his feline body. His feline face is distorted into the sharper and more pointed shape of a bat's, with an upturned nose, pointed muzzle, fangs and large ears. His footpaws have been reshaped for perching as well as grasping its prey. He's got a sizable sheath and large balls between his legs and may be hoping to use them on you[if daytimer is day]. With the bright daytime sun out, his sensitive eyes water as he tries to shield them from the light[else]. In dark of the night, this bat-hybrid has a definite advantage with its echolocation[end if].";
 
 Table of CombatPrep (continued)
 name(text)	PrepFunction(text)
@@ -92,11 +74,14 @@ to say PrepCombat_Snow Bat:
 	choose row MonsterID from Table of Random Critters;
 	if Player is MalePreferred:
 		now sex entry is "Male";
-	else if "Herm Preferred" is listed in feats of Player:
+	else if Player is HermPreferred:
 		now sex entry is "Both";
 	else:
 		now sex entry is "Female";
-	say "[daynightcheck]";
+	if daytimer is day:
+		now nightcheck is 0; [daylight hours]
+	else:
+		now nightcheck is 4; [nighttime hours]
 	let debit be 0;
 	if HardMode is true and level of Player > 9, let debit be level of Player - 9;
 	now dex entry is 20 + nightcheck + ( ( debit + 4 ) / 5 ); [equivalent to +4 dex at night]
@@ -130,7 +115,7 @@ When Play begins:
 	now attack entry is "[one of]The snow bat digs its claws into you painfully as it tries to sink its fangs into your neck![or]The snow bat releases a sharp, high-pitched mrowl that hurts your ears and makes you dizzy from the ultrasonic attack![or]The feline bat swoops at you and digs its talons into your shoulders![or]The hybrid bat-feline growls and slashes at you with its sharp claws![or]The snow bat bites you, sinking its teeth into your arm![at random]";
 	now defeated entry is "[beatthesnowbat]";
 	now victory entry is "[losetosnowbat]";
-	now desc entry is "[snowbatdesc]";
+	now desc entry is "     Swooping from the sky is a hybrid snow bat, a cross between a snow leopard and a bat. The bat wings which allow this snowmeow to fly are covered in an even gray fur, lacking the spots and markings of his feline body. His feline face is distorted into the sharper and more pointed shape of a bat's, with an upturned nose, pointed muzzle, fangs and large ears. His footpaws have been reshaped for perching as well as grasping its prey. He's got a sizable sheath and large balls between his legs and may be hoping to use them on you. [if nightcheck is 0]With the bright daytime sun out, his sensitive eyes water as he tries to shield them from the light[else]In dark of the night, this bat-hybrid has a definite advantage with its echolocation[end if].[line break]";
 	now face entry is "a mix of bat and feline, with a bat-like muzzle and large, sensitive ears, but a snow leopard appearance overall. Bright light is somewhat painful for you and you have a dark thirst that you do your best to satisfy with other liquids";
 	now body entry is "tall and slender, with a broad chest and strong shoulders. Your shoulder muscles support the large bat wings at your back. Your hands are paw-like and your fingers end in sharp claws. Your feet end in talon-like toes for perching or grabbing prey";
 	now skin entry is "soft fur that is snowy white and ash gray in color with a leopard-like pattern across your";
@@ -140,7 +125,7 @@ When Play begins:
 	now body change entry is "your body is wracked with painful snaps. Your body becomes slender, but with a strong chest and shoulders, where the pain is now centering. Large growths at your back swell up under your shoulder as it feels like some pressure inside them building, fighting to get out. As a pair of big bat wings burst from your back, you scream in a mix of pain and pleasure as they are freed. Your hands warp and reform into feline paws with clawed digits while your feet become more bat-like with grasping toes";
 	now skin change entry is "you gain a lovely coat of snow leopard fur, soft and light";
 	now ass change entry is "a fluffy, feline tail forms. It is covered in thick, soft fur and takes on the beautiful pattern of a snow leopard";
-	now cock change entry is "takes on an even, gray hue and becomes feline with stimulating barbs to please even unwilling partners";
+	now cock change entry is "it takes on an even, gray hue and becomes feline with stimulating barbs to please even unwilling partners";
 	now str entry is 14;
 	now dex entry is 20;
 	now sta entry is 12;
@@ -281,19 +266,11 @@ When Play begins:
 	[Clit Size Adjective is generated by a function and can be used in scenes: very small/small/average/large/very large]
 ]
 
-
-
 An everyturn rule:
 	if FaceName of Player is "Snow Bat" and a random chance of 1 in 2 succeeds:
 		increase thirst of Player by a random number between 0 and 1;
-		if "Strong Psyche" is listed in feats of Player and a random chance of 1 in 2 succeeds:
-			decrease humanity of Player by a random number between 0 and 1;
-		else if "Weak Psyche" is listed in feats of Player:
-			decrease humanity of Player by a random number between 0 and 1;
-			decrease humanity of Player by a random number between 0 and 1;
-		else:
-			decrease humanity of Player by a random number between 0 and 1;
-
+		decrease humanity of Player by a random number between 0 and 1;
+		if "Weak Psyche" is listed in feats of Player, decrease humanity of Player by a random number between 0 and 1;
 
 Section 3 - Endings
 
@@ -315,12 +292,12 @@ This is the Snow Bat Infection rule:
 				else:
 					say "     You fly out into the city in search of a new home, setting up a lair in a high-rise tower. The floor you've chosen has been isolated from the others by rubble and contains several windowless rooms, perfect for your daytime sleeping. You capture and bring back prey to enjoy there at your leisure. Most you feed on heavily over several days until they are drained and uselessly discarded, while a few of the strong ones you take your time with, turning them into more of your kind to darken the skies. You make sure that any females you do this to are well bred by you before they are sent off into the night.";
 			if HP of Sven > 0 and HP of Sven < 10:
-				say "     You head off to your true goal. While part of your memories are hazy, you do recall a male snow leopard waiting to see you again and make your way there one evening. Standing in the shadows outside, you purr softly and wait for him to notice you. Hearing you, he is drawn out and into your arms. You guide him to the ground and slide atop him, stroking and caressing his body as you kiss and nip at his neck[if Player is female]. As you sink down onto his cock, you sink your fangs into his neck and start drinking as you ride his erection until he cums for you[else]. As you give his ass a squeeze, you sink your fangs into his neck and start drinking[end if]. After he passes out, you kiss his neck and take him away in your arms.";
+				say "     You head off to your true goal. While part of your memories are hazy, you do recall a male snow leopard waiting to see you again and make your way there one evening. Standing in the shadows outside, you purr softly and wait for him to notice you. Hearing you, he is drawn out and into your arms. You guide him to the ground and slide atop him, stroking and caressing his body as you kiss and nip at his neck. As you [if Player is female or Player is mpreg_ok]sink down onto his cock, you sink your fangs into his neck and start drinking as you ride his erection until he cums for you[else]give his ass a squeeze, you sink your fangs into his neck and start drinking[end if]. After he passes out, you kiss his neck and take him away in your arms.";
 				say "     You fly off with him into the night, taking him to your hidden lair in a high-rise tower. The floor you've chosen has been isolated from the others by rubble and contains several windowless rooms, perfect for your daytime sleeping. Sven, unable to escape even if he wanted to, becomes [if Player is female]yours to mate and feed upon, filling you with hybrid spawn even as his transformation into a snow bat is completed[else]a feline-bat hybrid like yourself and thirsting to feed upon others. As partners, you snatch up those unfortunate enough to be spotted by you at night and brought back to your lair for feeding[end if].";
 			else if HP of Sven is 10:
-				say "     You head off to your true goal. While part of your memories are hazy, you do recall a male snow leopard waiting to see you again and make your way there one evening. Standing in the shadows outside, you purr softly and wait for him to notice you. Hearing you, he is drawn out and into your arms. You guide him to the ground and slide atop him, stroking and caressing his body as you kiss and nip at his neck[if Player is female]. As you sink down onto his cock, you sink your fangs into his neck and start drinking as you ride his erection until he cums for you[else]. As you give his ass a squeeze, you sink your fangs into his neck and start drinking[end if]. After he passes out, you kiss his neck as Candy pokes his head out of the bunker to look for the snowmeow.";
+				say "     You head off to your true goal. While part of your memories are hazy, you do recall a male snow leopard waiting to see you again and make your way there one evening. Standing in the shadows outside, you purr softly and wait for him to notice you. Hearing you, he is drawn out and into your arms. You guide him to the ground and slide atop him, stroking and caressing his body as you kiss and nip at his neck. As you [if Player is female or Player is mpreg_ok]sink down onto his cock, you sink your fangs into his neck and start drinking as you ride his erection until he cums for you[else]give his ass a squeeze, you sink your fangs into his neck and start drinking[end if]. After he passes out, you kiss his neck as Candy pokes his head out of the bunker to look for the snowmeow.";
 				say "     Candy rushes over to see what has happened to his friend, little realizing that you are the cause. As you help him lower Sven to the ground, the pink raccoon leans overtop the snow leopard, leaving himself vulnerable. Moving softly at first, like a concerned friend, you move in behind him and put an arm around him. Nuzzling at his neck, you bite him, sinking your fangs into him and making him moan[if coonsex > 0 and Player is male]. With a firm grip on him, you slide your cock under his skirt and start fucking him as you feed to keep him submissive[end if]. As he passes out as well, you are left to struggle with getting them both back to your new home.";
-				say "     You fly off with them into the night, taking them to your hidden lair in a high-rise tower. The floor you've chosen has been isolated from the others by rubble and contains several windowless rooms, perfect for your daytime sleeping. Sven and Candy, unable to escape even if they wanted to, becomes yours to play with and feed upon[if Player is female]. Sven fills you with hybrid spawn even as his transformation into a snow bat is completed[else]. You fuck the sexy snowmeow even as his transformation into a snow bat is completed[end if]. While Candy doesn't change much physically, his pink color becomes a little darker and he gains a taste for blood as well, lustfully fucking and feeding upon any male prey you and Sven bring back to the lair.";
+				say "     You fly off with them into the night, taking them to your hidden lair in a high-rise tower. The floor you've chosen has been isolated from the others by rubble and contains several windowless rooms, perfect for your daytime sleeping. Sven and Candy, unable to escape even if they wanted to, becomes yours to play with and feed upon. [if Player is female or Player is mpreg_ok]Sven fills you with hybrid spawn[else]You fuck the sexy snowmeow[end if] even as his transformation into a snow bat is completed. While Candy doesn't change much physically, his pink color becomes a little darker and he gains a taste for blood as well, lustfully fucking and feeding upon any male prey you and Sven bring back to the lair.";
 		else:
 			say "     You manage to survive your time in the city and are rescued by the military's forces. Once out of the city, you are better able to deal with your body's dark urges and manage to suppress them. You hide the true nature from the scientists, fearful of their reaction and pass yourself off as having run into a bat creature somewhere.";
 			if FaceName of Player is "Snow Bat":
@@ -328,6 +305,6 @@ This is the Snow Bat Infection rule:
 			else:
 				say "     After your release, you take to working night jobs, as you find the nighttime preferable. Flying unfortunately eludes you, but you do manage a little gliding during your attempts. Your exotic body attracts several other winged lovers and while you often lick and nibble along their necks, you are always careful never to bite as those lightly slumbering instincts would have you do.";
 			if Sven is in the bunker:
-				say "     Sven remains with you leaving the military holding facility and stays with you as your [if HP of Sven > 7 and HP of Sven < 30]slutty pet[else]lover[end if]. Strongly attracted to your body, he always snuggles up close to you, resting his head on your chest as he listens to you purr. You often end up nuzzling at the kitty's neck and biting him, the only one you'll drink from to help you slake your thirsts. He moans and mewls sensually as you feed, loving his bond with you[if Player is female]. Feeding always makes you both so horny that you'll ride his cock until he fills you with his seed before passing out[else]. Feeding always makes you both so horny that you'll fuck his tight ass until you fill him with your seed before just as he's passing out[end if].";
+				say "     Sven remains with you leaving the military holding facility and stays with you as your [if HP of Sven > 7 and HP of Sven < 30]slutty pet[else]lover[end if]. Strongly attracted to your body, he always snuggles up close to you, resting his head on your chest as he listens to you purr. You often end up nuzzling at the kitty's neck and biting him, the only one you'll drink from to help you slake your thirsts. He moans and mewls sensually as you feed, loving his bond with you. Feeding always makes you both so horny that you'll [if Player is female or Player is mpreg_ok]ride his cock until he fills you with his seed before[else]fuck his tight ass until you fill him with your seed before just as he's[end if] passing out.";
 
 Snow Bat ends here.

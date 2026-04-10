@@ -232,10 +232,10 @@ This is the Epilogue Intro rule: [The player didn't die or bad ended]
 			say "     Following some unknown instinct, you seek out another of your own, and home in on Orthas, the dragon that was guarding the lab. She pets you gently along your neck and makes soothing sounds that have you almost purring. She proves to be a loving and kind mistress and you protect her fiercely for the remainder of your long life.";
 	else:
 		trigger ending "Epilogue Intro";
-		say "     You emerge from your harrowing experience with your mind intact, with your [BodySpeciesName of Player in lower case] form and [FaceSpeciesName of Player in lower case] face";
 		if BodyName is "Human":
-			say ". Despite the traumas set on you, you do your best to fit back in with humanity after the rescue arrives";
-		say ".";
+			say "     You emerge from your harrowing experience with your mind intact, with your [BodySpeciesName of Player in lower case] form and [FaceSpeciesName of Player in lower case] face. Despite the traumas set on you, you do your best to fit back in with humanity after the rescue arrives.";
+		else:
+			say "     You emerge from your harrowing experience with your mind intact, with your [BodySpeciesName of Player in lower case] form and [FaceSpeciesName of Player in lower case] face.";
 		if Player is male:
 			if Cock Length of Player > 10 or Ball Size of Player > 3:
 				say "     Your extreme masculine attributes prove to be more than a little awkward. As society puts itself back together, you do find a niche. Others, changed as you, require the services of such studs, and you never lack for something to do on the weekends[if Cock Count of Player > 1]. Your multiple endowments become quite popular amongst some infected, who come from some great distances to be serviced by you. Though it is illegal to charge for such services, many leave you a 'gift' regardless, even a marriage proposal or two[end if].";

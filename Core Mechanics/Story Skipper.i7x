@@ -1554,8 +1554,7 @@ to BeastRestore:
 				-- "football gorilla": now Beastname is "Football Gorilla Male";
 				-- "feral wolf": now Beastname is "Feral Wolf Male";
 				-- "skunk": now Beastname is "Skunk Female";
-			if there is a Name of BeastName in the Table of Random Critters:
-				choose row with Name of BeastName in Table of Random Critters;
+			if BeastName is a Name listed in Table of Random Critters:
 				if Area entry is not BeastArea, now Area entry is BeastArea;
 				if Area entry is:
 					-- "Midway": [bugfix code after re-naming Midway to Fair]
@@ -1581,8 +1580,7 @@ to BeastRestore:
 			let BeastArea be Area entry;
 			let BeastNonInfect be non-infectious entry;
 			let BeastSex be sex entry;
-			if there is a Name of BeastName in the Table of Random Critters:
-				choose row with Name of BeastName in Table of Random Critters;
+			if BeastName is a Name listed in Table of Random Critters:
 				if Area entry is not BeastArea, now Area entry is BeastArea;
 				[bugfix code after re-naming Midway to Fair]
 				if Area entry is "Midway":

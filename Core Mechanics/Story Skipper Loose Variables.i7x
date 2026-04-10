@@ -405,7 +405,7 @@ to NumberVariableSave:
 		-- "charcounter": now NumberVarValue entry is charcounter;
 		[-- "chargeup": now NumberVarValue entry is chargeup;]
 		-- "ChaseMarking": now NumberVarValue entry is ChaseMarking;
-		-- "ChaseOffspring": now NumberVarValue entry is ChaseOffspring;
+		[-- "ChaseOffspring": now NumberVarValue entry is ChaseOffspring;]
 		-- "ChasePetplay": now NumberVarValue entry is ChasePetplay;
 		[-- "ChasePetplayTraining": now NumberVarValue entry is ChasePetplayTraining;]
 		-- "ChaseSexCounter": now NumberVarValue entry is ChaseSexCounter;
@@ -479,8 +479,8 @@ to NumberVariableSave:
 		-- "dobieresist": now NumberVarValue entry is dobieresist;
 		-- "DoctorMouseProgress": now NumberVarValue entry is DoctorMouseProgress;
 		-- "dogfoodcount": now NumberVarValue entry is dogfoodcount;
-		[-- "doggyboned": now NumberVarValue entry is doggyboned;]
-		-- "doggyness": now NumberVarValue entry is doggyness;
+		[-- "doggyboned": now NumberVarValue entry is doggyboned;
+		-- "doggyness": now NumberVarValue entry is doggyness;]
 		-- "dolinfloss": now NumberVarValue entry is dolinfloss;
 		-- "dollfound": now NumberVarValue entry is dollfound;
 		-- "dolphinbundle": now NumberVarValue entry is dolphinbundle;
@@ -524,7 +524,7 @@ to NumberVariableSave:
 		-- "dragonessfuck": now NumberVarValue entry is dragonessfuck;
 		-- "dragontaurcatch": now NumberVarValue entry is dragontaurcatch;
 		-- "dragontype": now NumberVarValue entry is dragontype;
-		-- "Drinkserved": now NumberVarValue entry is Drinkserved;
+		[-- "Drinkserved": now NumberVarValue entry is Drinkserved;]
 		-- "dronevict": now NumberVarValue entry is dronevict;
 		-- "DVtaurcatch": now NumberVarValue entry is DVtaurcatch;
 		-- "DylanFucked": now NumberVarValue entry is DylanFucked;
@@ -568,7 +568,7 @@ to NumberVariableSave:
 		-- "FangDashRel": now NumberVarValue entry is FangDashRel;
 		-- "FangSarahInteraction": now NumberVarValue entry is FangSarahInteraction;
 		-- "FangWS": now NumberVarValue entry is FangWS;
-		-- "fashionfight": now NumberVarValue entry is fashionfight;
+		[-- "fashionfight": now NumberVarValue entry is fashionfight;]
 		-- "Featqualified": now NumberVarValue entry is Featqualified;
 		-- "featunlock": now NumberVarValue entry is featunlock;
 		-- "Feline_attached": now NumberVarValue entry is Feline_attached;
@@ -793,8 +793,8 @@ to NumberVariableSave:
 		-- "KinksandFetishes": now NumberVarValue entry is KinksandFetishes;
 		-- "Kitsunearoused": now NumberVarValue entry is Kitsunearoused;
 		-- "Kitsunetalk": now NumberVarValue entry is Kitsunetalk;
-		-- "kittyness": now NumberVarValue entry is kittyness;
-		[-- "knightcrestnum": now NumberVarValue entry is knightcrestnum;]
+		[-- "kittyness": now NumberVarValue entry is kittyness;
+		-- "knightcrestnum": now NumberVarValue entry is knightcrestnum;]
 		-- "KoballoonLossCounter": now NumberVarValue entry is KoballoonLossCounter;
 		-- "KoballoonMet": now NumberVarValue entry is KoballoonMet;
 		-- "koboldgangmet": now NumberVarValue entry is koboldgangmet;
@@ -955,8 +955,8 @@ to NumberVariableSave:
 		-- "Leonardtimer": now NumberVarValue entry is Leonardtimer;
 		-- "leosupplies": now NumberVarValue entry is leosupplies;
 		-- "lessontime": now NumberVarValue entry is lessontime;
-		[-- "lgnumber": now NumberVarValue entry is lgnumber;]
-		-- "libidomemory": now NumberVarValue entry is libidomemory;
+		[-- "lgnumber": now NumberVarValue entry is lgnumber;
+		-- "libidomemory": now NumberVarValue entry is libidomemory;]
 		-- "libstealth": now NumberVarValue entry is libstealth;
 		-- "libsuppcount": now NumberVarValue entry is libsuppcount;
 		-- "libvis": now NumberVarValue entry is libvis;
@@ -1005,7 +1005,7 @@ to NumberVariableSave:
 		-- "mdrakeloss": now NumberVarValue entry is mdrakeloss;
 		-- "mdrakeoversized": now NumberVarValue entry is mdrakeoversized;
 		-- "medeaget": now NumberVarValue entry is medeaget;
-		-- "MenuRiddleNumber": now NumberVarValue entry is MenuRiddleNumber;
+		[-- "MenuRiddleNumber": now NumberVarValue entry is MenuRiddleNumber;]
 		-- "metalskin": now NumberVarValue entry is metalskin;
 		-- "micaela_bf": now NumberVarValue entry is micaela_bf;
 		-- "MichaelGholeMeetings": now NumberVarValue entry is MichaelGholeMeetings;
@@ -1588,7 +1588,7 @@ to TruthVariableSave:
 		-- "bcseenpunchingpillars": now TruthVarValue entry is bcseenpunchingpillars;
 		-- "bcseenthroneroom": now TruthVarValue entry is bcseenthroneroom;
 		-- "bcswordplay": now TruthVarValue entry is bcswordplay;
-		-- "beachrape": now TruthVarValue entry is beachrape;
+		[-- "beachrape": now TruthVarValue entry is beachrape;]
 		-- "beauceronmet": now TruthVarValue entry is beauceronmet;
 		[-- "birthedwhelp": now TruthVarValue entry is birthedwhelp;]
 		-- "blanchetalk1": now TruthVarValue entry is blanchetalk1;
@@ -1664,7 +1664,7 @@ to TruthVariableSave:
 		-- "flotmarked": now TruthVarValue entry is flotmarked;
 		[-- "Francoismixcleaned": now TruthVarValue entry is Francoismixcleaned;]
 		-- "Francoistalk1": now TruthVarValue entry is Francoistalk1;
-		-- "fsnakevalid": now TruthVarValue entry is fsnakevalid;
+		[-- "fsnakevalid": now TruthVarValue entry is fsnakevalid;]
 		-- "garrettinfo1": now TruthVarValue entry is garrettinfo1;
 		[-- "gobdem": now TruthVarValue entry is gobdem;]
 		-- "grhouse": now TruthVarValue entry is grhouse;
@@ -1747,7 +1747,7 @@ to TruthVariableSave:
 		-- "MoreauPaymentAccepted": now TruthVarValue entry is MoreauPaymentAccepted;
 		-- "mpreghijack": now TruthVarValue entry is mpreghijack;
 		-- "mre04": now TruthVarValue entry is mre04;
-		-- "msnakevalid": now TruthVarValue entry is msnakevalid;
+		[-- "msnakevalid": now TruthVarValue entry is msnakevalid;]
 		-- "muggerison": now TruthVarValue entry is muggerison;
 		-- "nagawarning": now TruthVarValue entry is nagawarning;
 		[-- "NavCheckReturn": now TruthVarValue entry is NavCheckReturn;]
@@ -1815,7 +1815,7 @@ to TruthVariableSave:
 		-- "TerminatorSleepActivated": now TruthVarValue entry is TerminatorSleepActivated;
 		-- "thmpregdetect": now TruthVarValue entry is thmpregdetect;
 		-- "TomeEventPending": now TruthVarValue entry is TomeEventPending;
-		-- "toystoreoverride": now TruthVarValue entry is toystoreoverride;
+		[-- "toystoreoverride": now TruthVarValue entry is toystoreoverride;]
 		-- "toystoreseen": now TruthVarValue entry is toystoreseen;
 		[-- "ts_warrior": now TruthVarValue entry is ts_warrior;
 		-- "tsw_victory": now TruthVarValue entry is tsw_victory;]
@@ -2597,8 +2597,8 @@ to VariableNumberLoad:
 					if chargeup is not NumberVarValue entry, now chargeup is NumberVarValue entry;]
 				-- "ChaseMarking":
 					if ChaseMarking is not NumberVarValue entry, now ChaseMarking is NumberVarValue entry;
-				-- "ChaseOffspring":
-					if ChaseOffspring is not NumberVarValue entry, now ChaseOffspring is NumberVarValue entry;
+				[-- "ChaseOffspring":
+					if ChaseOffspring is not NumberVarValue entry, now ChaseOffspring is NumberVarValue entry;]
 				-- "ChasePetplay":
 					if ChasePetplay is not NumberVarValue entry, now ChasePetplay is NumberVarValue entry;
 				[-- "ChasePetplayTraining":
@@ -2746,9 +2746,9 @@ to VariableNumberLoad:
 				-- "dogfoodcount":
 					if dogfoodcount is not NumberVarValue entry, now dogfoodcount is NumberVarValue entry;
 				[-- "doggyboned":
-					if doggyboned is not NumberVarValue entry, now doggyboned is NumberVarValue entry;]
+					if doggyboned is not NumberVarValue entry, now doggyboned is NumberVarValue entry;
 				-- "doggyness":
-					if doggyness is not NumberVarValue entry, now doggyness is NumberVarValue entry;
+					if doggyness is not NumberVarValue entry, now doggyness is NumberVarValue entry;]
 				-- "dollfound":
 					if dollfound is not NumberVarValue entry, now dollfound is NumberVarValue entry;
 				-- "dolphinbundle":
@@ -2833,8 +2833,8 @@ to VariableNumberLoad:
 					if dragontaurcatch is not NumberVarValue entry, now dragontaurcatch is NumberVarValue entry;
 				-- "dragontype":
 					if dragontype is not NumberVarValue entry, now dragontype is NumberVarValue entry;
-				-- "Drinkserved":
-					if Drinkserved is not NumberVarValue entry, now Drinkserved is NumberVarValue entry;
+				[-- "Drinkserved":
+					if Drinkserved is not NumberVarValue entry, now Drinkserved is NumberVarValue entry;]
 				-- "dronevict":
 					if dronevict is not NumberVarValue entry, now dronevict is NumberVarValue entry;
 				-- "DVtaurcatch":
@@ -2923,8 +2923,8 @@ to VariableNumberLoad:
 					if FangSarahInteraction is not NumberVarValue entry, now FangSarahInteraction is NumberVarValue entry;
 				-- "FangWS":
 					if FangWS is not NumberVarValue entry, now FangWS is NumberVarValue entry;
-				-- "fashionfight":
-					if fashionfight is not NumberVarValue entry, now fashionfight is NumberVarValue entry;
+				[-- "fashionfight":
+					if fashionfight is not NumberVarValue entry, now fashionfight is NumberVarValue entry;]
 				-- "Featqualified":
 					if Featqualified is not NumberVarValue entry, now Featqualified is NumberVarValue entry;
 				-- "featunlock":
@@ -3375,9 +3375,9 @@ to VariableNumberLoad:
 					if Kitsunearoused is not NumberVarValue entry, now Kitsunearoused is NumberVarValue entry;
 				-- "Kitsunetalk":
 					if Kitsunetalk is not NumberVarValue entry, now Kitsunetalk is NumberVarValue entry;
-				-- "kittyness":
+				[-- "kittyness":
 					if kittyness is not NumberVarValue entry, now kittyness is NumberVarValue entry;
-				[-- "knightcrestnum":
+				-- "knightcrestnum":
 					if knightcrestnum is not NumberVarValue entry, now knightcrestnum is NumberVarValue entry;]
 				-- "KoballoonLossCounter":
 					if KoballoonLossCounter is not NumberVarValue entry, now KoballoonLossCounter is NumberVarValue entry;
@@ -3700,9 +3700,9 @@ to VariableNumberLoad:
 				-- "lessontime":
 					if lessontime is not NumberVarValue entry, now lessontime is NumberVarValue entry;
 				[-- "lgnumber":
-					if lgnumber is not NumberVarValue entry, now lgnumber is NumberVarValue entry;]
+					if lgnumber is not NumberVarValue entry, now lgnumber is NumberVarValue entry;
 				-- "libidomemory":
-					if libidomemory is not NumberVarValue entry, now libidomemory is NumberVarValue entry;
+					if libidomemory is not NumberVarValue entry, now libidomemory is NumberVarValue entry;]
 				-- "libstealth":
 					if libstealth is not NumberVarValue entry, now libstealth is NumberVarValue entry;
 				-- "libsuppcount":
@@ -3799,8 +3799,8 @@ to VariableNumberLoad:
 					if mdrakeoversized is not NumberVarValue entry, now mdrakeoversized is NumberVarValue entry;
 				-- "medeaget":
 					if medeaget is not NumberVarValue entry, now medeaget is NumberVarValue entry;
-				-- "MenuRiddleNumber":
-					if MenuRiddleNumber is not NumberVarValue entry, now MenuRiddleNumber is NumberVarValue entry;
+				[-- "MenuRiddleNumber":
+					if MenuRiddleNumber is not NumberVarValue entry, now MenuRiddleNumber is NumberVarValue entry;]
 				-- "metalskin":
 					if metalskin is not NumberVarValue entry, now metalskin is NumberVarValue entry;
 				-- "micaela_bf":
@@ -4982,8 +4982,8 @@ to VariableTruthLoad:
 					if bcseenthroneroom is not TruthVarValue entry, now bcseenthroneroom is TruthVarValue entry;
 				-- "bcswordplay":
 					if bcswordplay is not TruthVarValue entry, now bcswordplay is TruthVarValue entry;
-				-- "beachrape":
-					if beachrape is not TruthVarValue entry, now beachrape is TruthVarValue entry;
+				[-- "beachrape":
+					if beachrape is not TruthVarValue entry, now beachrape is TruthVarValue entry;]
 				-- "beauceronmet":
 					if beauceronmet is not TruthVarValue entry, now beauceronmet is TruthVarValue entry;
 				[-- "birthedwhelp":
@@ -5132,8 +5132,8 @@ to VariableTruthLoad:
 					if Francoismixcleaned is not TruthVarValue entry, now Francoismixcleaned is TruthVarValue entry;]
 				-- "Francoistalk1":
 					if Francoistalk1 is not TruthVarValue entry, now Francoistalk1 is TruthVarValue entry;
-				-- "fsnakevalid":
-					if fsnakevalid is not TruthVarValue entry, now fsnakevalid is TruthVarValue entry;
+				[-- "fsnakevalid":
+					if fsnakevalid is not TruthVarValue entry, now fsnakevalid is TruthVarValue entry;]
 				-- "garrettinfo1":
 					if garrettinfo1 is not TruthVarValue entry, now garrettinfo1 is TruthVarValue entry;
 				[-- "gobdem":
@@ -5300,8 +5300,8 @@ to VariableTruthLoad:
 					if mpreghijack is not TruthVarValue entry, now mpreghijack is TruthVarValue entry;
 				-- "mre04":
 					if mre04 is not TruthVarValue entry, now mre04 is TruthVarValue entry;
-				-- "msnakevalid":
-					if msnakevalid is not TruthVarValue entry, now msnakevalid is TruthVarValue entry;
+				[-- "msnakevalid":
+					if msnakevalid is not TruthVarValue entry, now msnakevalid is TruthVarValue entry;]
 				-- "muggerison":
 					if muggerison is not TruthVarValue entry, now muggerison is TruthVarValue entry;
 				-- "nagawarning":
@@ -5438,8 +5438,8 @@ to VariableTruthLoad:
 					if thmpregdetect is not TruthVarValue entry, now thmpregdetect is TruthVarValue entry;
 				-- "TomeEventPending":
 					if TomeEventPending is not TruthVarValue entry, now TomeEventPending is TruthVarValue entry;
-				-- "toystoreoverride":
-					if toystoreoverride is not TruthVarValue entry, now toystoreoverride is TruthVarValue entry;
+				[-- "toystoreoverride":
+					if toystoreoverride is not TruthVarValue entry, now toystoreoverride is TruthVarValue entry;]
 				-- "toystoreseen":
 					if toystoreseen is not TruthVarValue entry, now toystoreseen is TruthVarValue entry;
 				[-- "ts_warrior":

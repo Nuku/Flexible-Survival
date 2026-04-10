@@ -247,8 +247,8 @@ to pregprotocol:
 					if z > 4, now z is 4; [extra chance, still limited to 4]
 					if ubpreg is not "false":
 						now z is 1;
-					if "Chase's Breeder" is listed in feats of Player and ChaseOffspring is 0: [override for Chase's first kids]
-						now z is 2;
+					[if "Chase's Breeder" is listed in feats of Player and ChaseOffspring is 0: [override for Chase's first kids]
+						now z is 2;]
 					if "Fang's Mate" is listed in feats of Player and hunger of Fang is 0:
 						if hunger of Fang is 0:
 							now z is 2;
@@ -506,7 +506,7 @@ To Birth:
 		else if HasMelanism is true:
 			say "     Their pigmentation is almost pure black. [bold type]They've got melanism![roman type][line break]";
 		say "[line break]     As you spend a little time with your 'offspring', you get the feeling that they have [a ChildPersonality] personality.";
-	else if "Chase's Breeder" is listed in feats of Player: [special NPC impregnation]
+	[else if "Chase's Breeder" is listed in feats of Player: [special NPC impregnation]
 		now IsFeral is false;
 		if Player is female and pregtype < 2:
 			say "     Vagina birth of the chosen one.";
@@ -520,7 +520,7 @@ To Birth:
 			say "twin2";
 		else:
 			say "regulars";
-		increase ChaseOffspring by 1;
+		increase ChaseOffspring by 1;]
 	else if "Chris's Breeder Slut" is listed in feats of Player: [Special Pregnancy from Warrior Chris]
 		now IsFeral is false;
 		if Player is female and pregtype < 2:

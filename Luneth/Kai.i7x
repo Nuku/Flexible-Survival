@@ -14,6 +14,7 @@ object	name
 Kai	"Kai"
 
 Kai is a man.
+Kai is in Kai's Campsite.
 [physical details as of game start]
 ScaleValue of Kai is 3. [scalevalue 1-5: "tiny(under 1 foot)", "small(under 4 feet)", "average(around 6 feet)", "large(around 10 feet)", "huge(over 11 feet)"]
 Body Weight of Kai is 5. [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
@@ -50,21 +51,9 @@ SexuallyExperienced of Kai is true.
 TwistedCapacity of Kai is false. [Twisted Characters can take any penetration, no matter the size]
 Sterile of Kai is false. [steriles can't knock people up]
 MainInfection of Kai is "Tiger Shark Male".
-Description of Kai is "[KaiDesc]".
-Conversation of Kai is { "mew" }.
-The scent of Kai is "[KaiScent]".
-Kai is in Kai's Campsite.
-
-to say KaiDesc:
-	let randomnumber be a random number from 1 to 2;
-	if randomnumber is:
-		-- 1:
-			say "     Kai is a tall, athletic-looking man with a six pack and muscular arms. He's shirtless, which shows off his black and gray koi fish tattoo on his left arm, and wears super low rise boardshorts. The surfer boy has ocean blue-eyes, shoulder-length sandy-blonde hair, and tan skin that glistens in the sun from sweat and wearing tanning lotion. He has large-sized gill slits on both sides of his throat and blue tiger-like stripes running down the nape of his neck and back. When he sees you, he smiles, showing off his razor-sharp pearly-whites.";
-		-- 2:
-			say "     Your surfer friend hasn't changed much since you last saw him. His shoulder length, sandy-blonde hair is pulled back into a ponytail and still damp from the ocean water. The smell of coconuts and musk is coming off his skin, clearly from him previously lathering it with suntan lotion. He's wearing a black muscle tee with a large SurfSilver logo on the back and another small one on the chest, which still shows off his toned arms and beautiful koi fish tattoo. His tiger stripes are barely visible on the nape of his neck, but you can still see his gill slits. As usual, he has on his super low-rise boardshorts, which are black and blue with an all over striped pattern and a small SurfSilver logo on the left leg. The surfer boy is also wearing a black and white puka shell necklace that is tight fitting around his neck. When your friend notices you, he waves and gives you a smirk.";
-
-to say Kaiscent:
-	say "He has the scent of coconuts and musk from his tanning lotion, however you can still smell the salt from the ocean with an undertone of fish; he is half-shark after all. ";
+Description of Kai is "     [one of]Kai is a tall, athletic-looking man with a six pack and muscular arms. He's shirtless, which shows off his black and gray koi fish tattoo on his left arm, and wears super low rise boardshorts. The surfer boy has ocean blue-eyes, shoulder-length sandy-blonde hair, and tan skin that glistens in the sun from sweat and wearing tanning lotion. He has large-sized gill slits on both sides of his throat and blue tiger-like stripes running down the nape of his neck and back. When he sees you, he smiles, showing off his razor-sharp pearly-whites[or]Your surfer friend hasn't changed much since you last saw him. His shoulder length, sandy-blonde hair is pulled back into a ponytail and still damp from the ocean water. The smell of coconuts and musk is coming off his skin, clearly from him previously lathering it with suntan lotion. He's wearing a black muscle tee with a large SurfSilver logo on the back and another small one on the chest, which still shows off his toned arms and beautiful koi fish tattoo. His tiger stripes are barely visible on the nape of his neck, but you can still see his gill slits. As usual, he has on his super low-rise boardshorts, which are black and blue with an all over striped pattern and a small SurfSilver logo on the left leg. The surfer boy is also wearing a black and white puka shell necklace that is tight fitting around his neck. When your friend notices you, he waves and gives you a smirk[at random].[line break]".
+[Conversation of Kai is { "mew" }.]
+The scent of Kai is "     He has the scent of coconuts and musk from his tanning lotion, however you can still smell the salt from the ocean with an undertone of fish; he is half-shark after all.".
 
 Section 2 - Events
 
@@ -90,7 +79,7 @@ Sarea of KaiInitialEncounter is "Beach".
 to say ResolveEvent KaiInitialEncounter:
 	say "     Walking to the entrance of the beach, you take a deep breath in, to smell the aromatic scent of the ocean. It draws you in, and you find you take your shoes off to feel the sand between your toes. You make your way over to the shore to walk alongside the ocean water, feeling the cool current run over your feet. Looking out to the ocean, you can see gigantic, crystal clear waves forming and crashing in the distance, the sunlight's reflection off the water creates a sparkling light that's almost blinding. The light makes your eyes start to water, making them close tight, when all of a sudden, you hear what sounds like a man hollering in excitement.";
 	say "     Opening your eyes you can see a tanned man on a surfboard, riding a huge wave that had just formed. The surfer seems to be riding the wave perfectly, when suddenly, he wipes out and disappears into the water. The waves die down and you watch worryingly for the surfer to come back to the surface. You scan all over the ocean water for the man, but see no signs of him anywhere, and everyone on the beach hasn't seemed to notice. While you're searching the ocean for the surfer, you wonder what to do? You could jump into the water and possibly save his life or just continue on your way, what will you do?";
-	LineBreak;
+	WaitLineBreak;
 	say "     [bold type]Do you wish to save the surfer?[roman type][line break]";
 	say "     ([link]Y[as]y[end link]) - Yes, it's been some time since he wiped out, and he still hasn't come up for air.";
 	say "     ([link]N[as]n[end link]) - No, you're sure that this wasn't the first time he's wiped out before.";
@@ -120,24 +109,20 @@ Kai's Campsite	"Kai's Campsite"
 Kai's Campsite is a room. It is a fasttravel. It is private.
 Description of Kai's Campsite is "     Kai has a blue, 2-person dome tent that's set up on the beach. Inside the tent is a queen-sized inflatable mattress, pillows, and blankets. A large gym bag filled with clothes and other accouterments sits on the mattress, along with various surfer magazines to read. There's an area in the sand not too far from the tent that has been dug out several inches for a makeshift fire pit. The wood is stacked in a log cabin kind of arrangement with small twigs and seaweed built up in the middle to help start the fire. If you sit by the firepit, you get an amazing view of the ocean and rocky cliffs that aren't too far from the area. The sounds of the waves in the distance create a sense of calmness here and put you in a meditative state. The little setup is away from the busier parts of the beach, so you have more privacy and solitude to relax. Simple, just the way Kai seems to prefer it.".
 earea of Kai's Campsite is "Beach".
-
-Instead of sniffing Kai's Campsite:
-	say "     It smells like salt and smoke.";
-
+Scent of Kai's Campsite is "     It smells like salt and smoke.".
 
 Section 4 - Talk Options
 
 instead of conversing the Kai:
-	if TimekeepingVar is 5 or TimekeepingVar is -3:
+	if time is afternoon: [5 or -3]
 		say "     The surfer smiles at you while rubbing suntan lotion on his washboard abs. He asks what you would like to talk about.";
-	else if TimekeepingVar is 3 or TimekeepingVar is -5:
+	else if time is early night: [3 or -5]
 		say "     Coming out of the water, the surfer is already smiling wide at you. He places his surfboard in the sand, grabs a towel, and asks what you would like to talk about.";
-	else if TimekeepingVar is 1 or TimekeepingVar is -7:
+	else if time is post midnight: [1 or -2]
 		say "     Sitting by the fire at his set-up, he gives you a warm smile and says he was getting ready to cook something on the barbie, but he does have some time to talk.";
-	else if TimekeepingVar is 7 or TimekeepingVar is -1:
+	else if time is early morning: [7 or -1]
 		say "     Looking up from grabbing his surfboard, he gives a smile and says [']G'Day['] before letting you know he is getting ready to hit the waves.";
-	LineBreak;
-	say "[KaiTalkMenu]";
+	say "[line break][KaiTalkMenu]";
 
 [these need to be ordered by location]
 [Talking with Kai]
@@ -151,7 +136,8 @@ instead of conversing the Kai:
 [Looking up from picking up his board, he gives a smile and asks what you want, but says he is getting ready to hit the waves.]
 
 to say KaiTalkMenu:
-	say "What do you want to talk with Kai about?";
+	let TalkDone be false;
+	say "     What do you want to talk with Kai about?";
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]
@@ -193,34 +179,36 @@ to say KaiTalkMenu:
 			choose row calcnumber in table of fucking options;
 			say "[title entry]: [description entry]?";
 			if Player consents:
-				let nam be title entry;
+				LineBreak;
 				now sextablerun is 1;
-				if nam is "Just chat":
-					say "[KaiTalk1]";
-				if nam is "Himself":
-					say "[KaiTalk2]";
-				if nam is "Australia":
-					say "[KaiTalk3]";
-				if nam is "His tattoo":
-					say "[KaiTalk4]";
-				if nam is "His interest in surfing":
-					say "[KaiTalk5]";
+				if title entry is:
+					-- "Just chat":
+						say "[KaiTalk1]";
+					-- "Himself":
+						say "[KaiTalk2]";
+						now TalkDone is true;
+					-- "Australia":
+						say "[KaiTalk3]";
+						now TalkDone is true;
+					-- "His tattoo":
+						say "[KaiTalk4]";
+					-- "His interest in surfing":
+						say "[KaiTalk5]";
+						now TalkDone is true;
 				wait for any key;
+				if TalkDone is false:
+					say "[KaiTalkMenu]";
 		else if calcnumber is 0:
+			LineBreak;
 			now sextablerun is 1;
 			say "     You step back from the surfer boy, shaking your head slightly as he gives you the usual razor-sharp smile.";
 			wait for any key;
 		else:
-			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
+			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options], or 0 to exit.";
 	clear the screen and hyperlink list;
 
 to say KaiTalk1: [just casual conversation]
-	let randomnumber be a random number from 1 to 2;
-	if randomnumber is:
-		-- 1:
-			say "     'Have you ever been to Sunny Snacks before?' Kai asks with a raised eyebrow. 'I was starving and didn't feel like catching my own food today, so I decided to check the place out. I ordered a fish burger and some fries from the friendly owner, a little too [']friendly['] if you ask me. She gave me a couple compliments at first, which I thought was nice. Until those compliments quickly turned into throwing sexual advances my way,' he says with a shocked look on his face and then continues. 'It made me very uncomfortable, so I told her that I wasn't interested and gave her the flick to go away. Wouldn't you know that when she brought my fishburger over to me, she fucking threw it right in my face and started calling me every name in the book!' At this point, you can hear the frustration in his voice. 'She made me so angry that I flipped her the bird and told her to piss off, before walking away. Man, was she a bitch!' You both start to laugh loudly together afterwards.";
-		-- 2:
-			say "     'You wouldn't believe what happened to me today!' He shakes his head and covers his face with his hands. 'While I was surfing earlier, I saw a couple good lookin' babes watching me. I had the bright idea that I was going to show off for them. Let's just say I gave them a [']show['] alright.' His face now turning red and nervously chuckling to himself. 'I was doing my thing, hittin' some bloody ripper waves and showin' off some cool tricks. The babes were really loving it, jumping up and down and even hollering at me, which made me feel even more confident in what I was doing. At this point, I'm really trying hard. So I'm riding this wave, and before I know it, I'm doing a double flip in the air. While I'm in midair, my fuckin['] boardies go flying off and my donger is just swinging around for everyone to see.' His face now turning completely red, that you would think it had just happened to him. 'Yeah, the babes thought it was hilarious before walking away and telling others what happened.'";
+	say "     '[if a random chance of 1 in 2 succeeds]Have you ever been to Sunny Snacks before?' Kai asks with a raised eyebrow. 'I was starving and didn't feel like catching my own food today, so I decided to check the place out. I ordered a fish burger and some fries from the friendly owner, a little too [']friendly['] if you ask me. She gave me a couple compliments at first, which I thought was nice. Until those compliments quickly turned into throwing sexual advances my way,' he says with a shocked look on his face and then continues. 'It made me very uncomfortable, so I told her that I wasn't interested and gave her the flick to go away. Wouldn't you know that when she brought my fishburger over to me, she fucking threw it right in my face and started calling me every name in the book!' At this point, you can hear the frustration in his voice. 'She made me so angry that I flipped her the bird and told her to piss off, before walking away. Man, was she a bitch!' You both start to laugh loudly together afterwards.[else]You wouldn't believe what happened to me today!' He shakes his head and covers his face with his hands. 'While I was surfing earlier, I saw a couple good lookin' babes watching me. I had the bright idea that I was going to show off for them. Let's just say I gave them a [']show['] alright.' His face now turning red and nervously chuckling to himself. 'I was doing my thing, hittin' some bloody ripper waves and showin' off some cool tricks. The babes were really loving it, jumping up and down and even hollering at me, which made me feel even more confident in what I was doing. At this point, I'm really trying hard. So I'm riding this wave, and before I know it, I'm doing a double flip in the air. While I'm in midair, my fuckin['] boardies go flying off and my donger is just swinging around for everyone to see.' His face now turning completely red, that you would think it had just happened to him. 'Yeah, the babes thought it was hilarious before walking away and telling others what happened.'[end if]";
 
 to say KaiTalk2:
 	say "     Kai faces you, staring into your eyes, as you tell him that you're interested in knowing more about him. He lets out a deep breath, now looking down at the sand and running his feet through it. 'Well, there isn't much to really say about me these days,' he says with a shrug and then goes on. 'The me before the infection was a little different. I had a life, a home, friends, family and on my way to becoming a pro surfer. Now my life only consists of surfing, which don't get me wrong, it's always been my first love, but these days I feel lonely and like my life has no meaning anymore.' He gazes back up at you, and you stare into his eyes, which now look so full of sadness.";
@@ -236,6 +224,5 @@ to say KaiTalk4:
 to say KaiTalk5:
 	say "     You ask him how he became so interested in surfing? This question causes him to give you a razor-sharp grin. 'Hmmm, I've been surfing for as long as I can remember. When I was a kid, I lived really close to the beach and used to go down there a lot to watch people surf. I would sit on that beach for hours just watching, trying to learn anything I could from the surfers. Finally one year for my birthday, my parents got me my first surfboard. Man, was it a real beauty. I think that I ran right out the front door before I could even tell them thank you. I was stoked.' Both of you start to laugh a bit. 'Man, did I suck at first. I thought that just from watching those guys surfing all day, that I would know what the hell I was doing. Not even close.'";
 	say "     He shakes his head and covers his face with his hands. 'I finally begged my parents to pay for surfing lessons. They knew how badly I wanted to learn, and it didn't take much convincing either. After taking those lessons for a while, I got really good. I loved it so much that I listened to everything the instructor told me to do, and I would practice all day until my parents had to come and physically collect me. I can still remember the time that I caught my first wave.' The surfer smiles and continues, 'The feeling was so intense and addictive. My adrenaline rushed like crazy, and I've literally been surfing ever since. I made it my goal to become pro and to actually believe that I was on my way too. Those were some really great times.' The surfer looks out to the ocean, causing him to lose track of the conversation. You leave him to reminiscence about his past.";
-
 
 Kai ends here.

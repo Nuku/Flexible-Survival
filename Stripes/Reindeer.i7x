@@ -25,40 +25,42 @@ to say reindeerattack:
 	else:
 		say "The reindeer swoops in to attack and ";
 	if a random number between 1 and 6 is:
-		-- 1: say "gropes you with a merry laugh as his candy-cane scented breath wafts past your nose![no line break]";
-		-- 2: say "dangles some mistletoe above your head and kisses you lustfully. His tongue dives into your surprised mouth and the taste of candy canes washes across your tastebuds![no line break]";
-		-- 3: say "grinds his hard cock against your hip, leaking precum as he struggles to hold you down![no line break]";
-		-- 4: say "tries to push you to the ground with a loud tinkling of bells![no line break]";
+		-- 1:
+			say "gropes you with a merry laugh as his candy-cane scented breath wafts past your nose![no line break]";
+		-- 2:
+			say "dangles some mistletoe above your head and kisses you lustfully. His tongue dives into your surprised mouth and the taste of candy canes washes across your tastebuds![no line break]";
+		-- 3:
+			say "grinds his hard cock against your hip, leaking precum as he struggles to hold you down![no line break]";
+		-- 4:
+			say "tries to push you to the ground with a loud tinkling of bells![no line break]";
 		-- 5:
 			say "banks sharply, getting behind you. He grinds firmly against your rear while his hoofed paws grope your chest. You can feel his precum leaking out as he tries to cum on you, but you shake him off. The scent of his eggnog flavored precum hangs in the air, arousing you further![no line break]";
 			increase Libido of Player by a random number from 2 to 5;
 			if "Horny Bastard" is listed in feats of Player, increase Libido of Player by a random number between 0 and 1;
 			if "Cold Fish" is listed in feats of Player, decrease Libido of Player by 1;
-		-- 6: say "spins around you quickly, swirling up a snowy wind. The temperature plummets further, making your teeth chatter as the cold seeps deep inside you. When he finally spins off dizzily, you brush off the layer of snow, but the cold has taken its toll on you![no line break]";
+		-- 6:
+			say "spins around you quickly, swirling up a snowy wind. The temperature plummets further, making your teeth chatter as the cold seeps deep inside you. When he finally spins off dizzily, you brush off the layer of snow, but the cold has taken its toll on you![no line break]";
 
 to say Reindeer_wins:
 	say "     Unable to resist the arousing holiday cheer of the reindeer male, you give in and kiss him lustfully. Once in his arms, the cold chill around you is still there, but he feels like a warm fireplace, stoking the fires of your libido. He gives a happy bleat and returns the kiss, filling your mouth with the taste of candy canes. His hoof-like hands move across your chest and down to your hips before pushing you to your knees. He strokes your head and pushes his cock to your mouth, telling you to [one of]suck his yule log[or]fondle his sugar plums[or]lick his candy cane[or]drink his tasty eggnog[purely at random]. You groan a little, but take it in happily in your aroused state, licking and sucking it eagerly. It is slender, but long, with ample balls, each the size of large tree ornaments. His pre tastes of delicious eggnog, spiked rather heavily with brandy, making you give in more and more to his merriness. When he spurts a few shots of cum down your throat, you give in entirely and present yourself to him even as you feel your strength returning.";
 	if Player is female:
-		say "     He gives a merry laugh that causes his jingle bells to ring and lines up his cock behind you. With another spurt of pre, he starts to slide his slender cock into you. You moan in pleasure as the joyous male starts to rut you with the loud jingle-jangle of bells. His slender cock is easy to take but fills [if Cunt Count of Player > 1]one of your pussies[else]your pussy[end if] nice and deep. ";
 		if Cunt Depth of Player < 12:
-			say "Your puss[yfn] leak[sfv] juices steadily in your hyper-aroused state, dripping onto the cold ground to make a frozen puddle. But you only feel the heat of your strong buck atop you as he ruts with you. When he gives a few last shoves into you, you groan loudly and climax as his reindeer cock pushes past your cervix[if Player is male]. Your cock[smn] throb[smv] beneath you and spill[smv] your semen across the ground[end if]. His thick seed sprays into you moments later, filling your womb with his holiday cheer. This load is quite substantial, a ball-draining, womb-filling, doe-breeding flow that leaves you panting on the ground but filled with warmth and happiness.";
+			say "     He gives a merry laugh that causes his jingle bells to ring and lines up his cock behind you. With another spurt of pre, he starts to slide his slender cock into you. You moan in pleasure as the joyous male starts to rut you with the loud jingle-jangle of bells. His slender cock is easy to take but fills [if Cunt Count of Player > 1]one of your pussies[else]your pussy[end if] nice and deep. Your puss[yfn] leak[sfv] juices steadily in your hyper-aroused state, dripping onto the cold ground to make a frozen puddle. But you only feel the heat of your strong buck atop you as he ruts with you. When he gives a few last shoves into you, you groan loudly and climax as his reindeer cock pushes past your cervix[if Player is male]. Your cock[smn] throb[smv] beneath you and spill[smv] your semen across the ground[end if]. His thick seed sprays into you moments later, filling your womb with his holiday cheer. This load is quite substantial, a ball-draining, womb-filling, doe-breeding flow that leaves you panting on the ground but filled with warmth and happiness.";
 		else:
-			say "Your puss[yfn] leak[sfv] juices steadily in your hyper-aroused state, dripping onto the cold ground to make a frozen puddle. But you only feel the heat of your strong buck atop you as he ruts with you. When he gives a few last shoves into you, you groan loudly as he sheathes his cock entirely in your depths and climaxes[if Player is male]. Your cock[smn] throb[smv] beneath you and spill[smv] your semen across the ground[end if]. His thick seed blasts into you moments later, spraying against your cervix and flowing up into your womb to fill you with his holiday cheer. This load is quite substantial, a ball-draining, womb-filling, doe-breeding flow that leaves you panting on the ground but filled with warmth and happiness.";
+			say "     He gives a merry laugh that causes his jingle bells to ring and lines up his cock behind you. With another spurt of pre, he starts to slide his slender cock into you. You moan in pleasure as the joyous male starts to rut you with the loud jingle-jangle of bells. His slender cock is easy to take but fills [if Cunt Count of Player > 1]one of your pussies[else]your pussy[end if] nice and deep. Your puss[yfn] leak[sfv] juices steadily in your hyper-aroused state, dripping onto the cold ground to make a frozen puddle. But you only feel the heat of your strong buck atop you as he ruts with you. When he gives a few last shoves into you, you groan loudly as he sheathes his cock entirely in your depths and climaxes[if Player is male]. Your cock[smn] throb[smv] beneath you and spill[smv] your semen across the ground[end if]. His thick seed blasts into you moments later, spraying against your cervix and flowing up into your womb to fill you with his holiday cheer. This load is quite substantial, a ball-draining, womb-filling, doe-breeding flow that leaves you panting on the ground but filled with warmth and happiness.";
 		CreatureSexAftermath "Player" receives "PussyFuck" from "Reindeer";
 	else:
 		say "     He gives a merry laugh that causes his jingle bells to ring and lines up his cock behind you. With another spurt of his pre, this time to lube your tailhole, he starts to slide his slender cock into you. You moan in pleasure as the joyous male starts to rut you with the loud jingle-jangle of bells. His cock fills you nice and deep but isn't painful to take at all. You leak precum onto the cold ground, only feeling the heat of your strong buck atop you. When he gives a few last shoves into you, you groan loudly and cum hard, spilling your seed moments before his hot cum sprays into you, filling you with his holiday cheer. This load is quite substantial, a ball-draining, belly-plumping, ass-flooding flow that leaves you panting on the ground but filled with warmth and happiness.";
 		CreatureSexAftermath "Player" receives "AssFuck" from "Reindeer";
+	WaitLineBreak;
 	say "     He gives you a final, minty-sweet kiss under the mistletoe before flying off to spread more holiday cheer with others. As he leaves, the temperature gradually returns to normal, but his hot, special present keeps you warm inside until then.";
 	increase morale of Player by a random number from 2 to 4;
 	decrease humanity of Player by a random number from 2 to 5;
 	if "Strong Psyche" is listed in feats of Player, increase humanity of Player by a random number between 0 and 2;
 	if "Weak Psyche" is listed in feats of Player, decrease humanity of Player by a random number between 0 and 2;
 	now Libido of Player is ( Libido of Player * 3 ) divided by 4;
-	increase HP of Player by ( MaxHP of Player / 5 );
+	increase HP of Player by MaxHP of Player / 5;
 	if HP of Player > MaxHP of Player, now HP of Player is MaxHP of Player;
-
-to say Reindeer_loses:
-	say "     'Oh, you Scrooge. Where's your holiday spirit?' he whines as your continued resistance frustrates him. Having had enough, the holiday reindeer finally flies off, heading elsewhere for someone to fill with a load of his special holiday cheer.";
 
 Section 2 - Creature Insertion
 
@@ -91,7 +93,7 @@ When Play begins:
 	now enemy Name entry is ""; [ Specific name of unique enemy. ]
 	now enemy type entry is 0; [ 0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters. ]
 	now attack entry is "[reindeerattack]"; [ Successful attack message ]
-	now defeated entry is "[Reindeer_loses]"; [ Text when monster loses. ]
+	now defeated entry is "     'Oh, you Scrooge. Where's your holiday spirit?' he whines as your continued resistance frustrates him. Having had enough, the holiday reindeer finally flies off, heading elsewhere for someone to fill with a load of his special holiday cheer.[line break]"; [ Text when monster loses. ]
 	now victory entry is "[Reindeer_wins]"; [ Text when monster wins. ]
 	now desc entry is "[reindeerdesc]"; [ Description of the creature when you encounter it. ]
 	now face entry is "transformed into that of a reindeer, with a ruminant's muzzle, cute ears and arching antlers"; [ Face description, format as "Your face is [Face of Player]." ]
@@ -258,7 +260,7 @@ to say nogging:
 	say "     You drink down the tasty eggnog, feeling the warmth of the brandy-rich liquid flowing into you. You are filled with a burst of the holiday spirit and a lustful longing for someone to share this feeling with. You feel a little better all around because of it even as the warmth changes from that of the alcohol to the warmth of your activated infection.";
 	PlayerEat 3;
 	PlayerDrink 6;
-	increase HP of Player by ( Stamina of Player / 2 );
+	increase HP of Player by Stamina of Player / 2;
 	if HP of Player > MaxHP of Player, now HP of Player is MaxHP of Player;
 	increase morale of Player by a random number from 0 to 1;
 	increase morale of Player by a random number from 0 to 1;
@@ -270,7 +272,8 @@ to say nogging:
 	if "Horny Bastard" is listed in feats of Player, raise Player Libido by 1;
 	if "Cold Fish" is listed in feats of Player, decrease Libido of Player by 1;
 	if humanity of Player < 1:
-		say "     Drunk on the eggnog, you drink all of it you have down, losing yourself in the holiday spirit as your mind unravels.";
+		say "[line break]     Drunk on the eggnog, you drink all of it you have down, losing yourself in the holiday spirit as your mind unravels.";
+		wait for any key;
 		turn the Player into a "Reindeer" silently; [NOTE: Avoid attributeinfect output in a game over (@Stadler#3007)]
 		end the story saying "You gave in to the holiday spirit.";
 		now battleground is "void";
@@ -288,13 +291,13 @@ When Play begins:
 	now infect Name entry is "Reindeer"; [ This should be exactly the same as your monster name in the main table]
 	now heat cycle entry is 15; [ Total cycle - from start to starting again. Default is 7. ]
 	now heat duration entry is 12; [ This is how many days of the cycle you are actually in heat. Default is 1, set it to the same as cycle for permanently in heat.]
-	now trigger text entry is "Naughty, festive thoughts start to creep into your head. Thoughts of sugar plums and sodomy, of candy cane dildos and creamy reindeer eggnog. Your dripping cunny feels hot, like a warm fireplace in need of someone to stoke it. You start humming The Twelve Days of... Uh oh."; [ This is the text that is written to the screen when the player comes into heat]
+	now trigger text entry is "Naughty, festive thoughts start to creep into your head. Thoughts of sugar plums and sodomy, of candy cane dildos and creamy reindeer eggnog. Your dripping cunny feels hot, like a warm fireplace in need of someone to stoke it. You start humming The Twelve Days of... Uh oh.[line break]"; [ This is the text that is written to the screen when the player comes into heat]
 	now inheat entry is "[reindeerheat]"; [this final say block is triggered every 3 hours the player is in heat. you can use defaultheat or write your own. defaultheat raises libido value by 5 every 3 hours. ]
 	now fheat entry is true;
 	now mpregheat entry is false; [no mpreg heat at present]
 
 to say reindeerheat:
-	let diceroll be ( Libido of Player plus a random number between 0 and 100 );
+	let diceroll be Libido of Player plus a random number between 0 and 100;
 	if heatturnskipper is true:
 		now heatturnskipper is false;
 	else if diceroll < 90:
@@ -318,18 +321,12 @@ to say reindeerheat:
 		say "[reindeerbreastheat]";
 	else:					[185 - 200]
 		if egg nog is owned:
-			ItemLoss egg nog by 1;
 			raise Player Libido by a random number from 3 to 8;
 			say "As a wave of holiday merriment washes over you, you bleat lustfully and drive a pair of fingers into your sopping puss[yfn]. Feeling the strength of your heat pulsing through you, you are so thirsty. You look around for something to satisfy your thirst for holiday cheer. Remembering the eggnog, you pull it out from your pack and take a drink.[line break][nogging]";
+			ItemLoss egg nog by 1;
 		else if "egg nog" is listed in invent of the Location of Player:
 			say "As a wave of holiday merriment washes over you, you bleat lustfully and drive a pair of fingers into your sopping puss[yfn]. Feeling the strength of your heat pulsing through you, you are so thirsty. You look around for something to satisfy your thirst for holiday cheer. Spotting the eggnog, you grab it and take a drink.";
-			let num be 0;
-			repeat with Q running through invent of the Location of Player:
-				increase num by 1;
-				if q matches the text "egg nog", case insensitively:
-					ItemGain q by 1 silently;
-					break;
-			remove entry num from invent of the Location of Player;
+			remove "egg nog" from invent of the Location of Player;
 			ItemGain egg nog by 1 silently;
 			process egg nog;
 		else:
@@ -345,7 +342,7 @@ to say reindeerbreastheat:
 		say "You moan lustfully and fondle your chest, teasing your nipples. Your heat is quite unbearable, with your sweet juices running down your legs and filling the air with the scent of your arousal. As you continue to play with yourself, your nipples start to leak milk, rich and scented like brandy eggnog. Delighted at this, you continue to milk yourself until this surge of lust passes.";
 		[copied entirely from the 'milk me' section]
 		now lastBreastMilking is turns;
-		ItemGain egg nog by ( Nipple Count of Player ) / 2;
+		ItemGain egg nog by Nipple Count of Player / 2;
 		increase Libido of Player by a random number from 3 to 8;
 		raise Player Libido by a random number from 3 to 8;
 		if "Horny Bastard" is listed in feats of Player, raise Player Libido by a random number between 1 and 3;
@@ -370,11 +367,6 @@ This is the Reindeer Infection rule:
 			say "     After dealing with the military and being treated to be non-infectious, you are released and decide to move to the north, far from the outbreak site. You settle down for a peaceful life of simple pleasures surrounded by a collection of holiday ornaments. You are filled with the holiday spirit all year round, giving you a happy and generous personality, always feeling it is better to give than to receive.";
 			say "     This positive attitude lands you an office job early into the new year after lending a helping hand to the man who would become your boss. Having few transformees in your area, the meeting changes his preconceptions of the infected and you become the first one he employs. You happily work there, keeping morale up with your cheerful nature. You seem to make what would be a boring job quite pleasant for all your coworkers.";
 			say "     This goes on for most of the year until December rolls around. You are an obvious choice for organizing the company Christmas party and happily take on the task. Seeing the holidays on display all around you in the city fills you with increasingly bubbling energy, reawakening your infection so that you almost float with joy at times.";
-			if Player is herm:			[HERM]
-				say "     The Christmas party is a smash hit. Everyone particularly enjoys the eggnog and generous and thoughtful gifts are shared. As the party goes on, things become more bawdy as your 'special' eggnog takes effect and your coworkers start to become herm reindeer like yourself. The power of the season, having reawakened your dormant infection, has allowed you to transform them with your thick cum and milk passed off as the holiday drink. The office becomes a large orgy of sex and rutting, with you mating many of your coworkers. Late into the night, you and your boss take turns being the doe repeatedly, giving her the present she wanted most of all - you as her mate.";
-			else if Player is female:					[FEMALE]
-				say "     The Christmas party is a smash hit. Everyone particularly enjoys the eggnog and generous and thoughtful gifts are shared. As the party goes on, things become more bawdy as your 'special' eggnog takes effect and your coworkers start to become reindeer like yourself. The power of the season, having reawakened your dormant infection, has allowed you to transform them with your thick milk passed off as the holiday drink. The office becomes a large orgy of sex and rutting, much to your delight. Late into the night, you let your boss rut you repeatedly, giving him the present he wanted most of all - you as his mate.";
-			else:									[MALE]
-				say "     The Christmas party is a smash hit. Everyone particularly enjoys the eggnog and generous and thoughtful gifts are shared. As the party goes on, things become more bawdy as your 'special' eggnog takes effect and your coworkers start to become reindeer like yourself. The power of the season, having reawakened your dormant infection, has allowed you to transform them with your thick cum passed off as the holiday drink. The office becomes a large orgy of sex and rutting, with you mating many of your coworkers. Late into the night, you and your boss take turns rutting his secretary, whom everyone knows he's wanted for years, making it such a touching gift for her boss.";
+			say "     The Christmas party is a smash hit. Everyone particularly enjoys the eggnog and generous and thoughtful gifts are shared. As the party goes on, things become more bawdy as your 'special' eggnog takes effect and your coworkers start to become [if Player is herm]herm reindeer like yourself. The power of the season, having reawakened your dormant infection, has allowed you to transform them with your thick cum and milk passed off as the holiday drink. The office becomes a large orgy of sex and rutting, with you mating many of your coworkers. Late into the night, you and your boss take turns being the doe repeatedly, giving her the present she wanted most of all - you as her mate[else if Player is female]reindeer like yourself. The power of the season, having reawakened your dormant infection, has allowed you to transform them with your thick milk passed off as the holiday drink. The office becomes a large orgy of sex and rutting, much to your delight. Late into the night, you let your boss rut you repeatedly, giving him the present he wanted most of all - you as his mate[else]reindeer like yourself. The power of the season, having reawakened your dormant infection, has allowed you to transform them with your thick cum passed off as the holiday drink. The office becomes a large orgy of sex and rutting, with you mating many of your coworkers. Late into the night, you and your boss take turns rutting his secretary, whom everyone knows he's wanted for years, making it such a touching gift for her boss[end if].";
 
 Reindeer ends here.

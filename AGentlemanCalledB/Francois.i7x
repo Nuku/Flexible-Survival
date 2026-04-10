@@ -263,7 +263,28 @@ Instead of conversing the Francois:
 		say "     'Even from the girls. I tried to refuse them, but would they listen? Non! They would get what they wanted in the end, but it was always so hollow. I am sad for them. But [if Player is male]I have found a good lover in you, mon délice,' he adds, running his paws over you as he gives you a passionate kiss full of doggy tongue in your mouth[else if Player is female]now I have found you, mon amie,' he says with a smile before giving you a kiss on the cheek[else]now I have found you, mon ami,' he says with a smile before giving you a kiss on the cheek[end if].";
 		now Francoistalk1 is true;
 	else if Francois_Undiscovered is not empty and a random chance of 3 in 5 succeeds:
-		say "[FrancoisHint]";
+		sort Francois_Undiscovered in random order;
+		if entry 1 of Francois_Undiscovered is:
+			-- 1:	[crème abondante - distilled milk + pink gel]
+				say "     '[one of]Crème à la fraise, strawberry cream, is always a popular ingredient. Perhaps we could find a way to make our own out in the city?'[or]It's a shame I was out of milk when all this started. Strangely, most of my other stock seems to have stayed fresh.'[or]Fresh fruit is rather hard to come by these days. I wonder if there is another source of such flavors out in the city now?'[at random]";
+			-- 2:	[bleuettonne - chocolate milk + blue gel]
+				say "     '[one of]Le chocolat et les fruits frais are always a good combination.'[or]I have seen the most unusual chiens running around outside; they appear to be made entirely of chocolat.'[or]Fresh fruit is rather hard to come by these days. I wonder if there is another source of such flavors out in the city now?'[at random]";
+			-- 3:	[boysenberry blossom - Awesome Fruit + blue gel]
+				say "     '[one of]A simple fruit pastry is a staple of a good menu.'[or]There was a bizarre tree outside the store earlier. It had such lovely fruit hanging from its branches. I was going to go out and pick some, but I turned around for a moment and it was suddenly gone.'[or]Fresh fruit is rather hard to come by these days. I wonder if there is another source of such flavors out in the city now?'[at random]";
+			-- 4:	[Muffin muffin - Awesomer Fruit + pink gel]
+				say "     '[one of]Gelée de fruit is always an interesting way to enrich a simple treat.'[or]There was a bizarre tree outside the store earlier. It had such lovely fruit hanging from its branches. I was going to go out and pick some, but I turned around for a moment and it was suddenly gone.'[or]Fresh fruit is rather hard to come by these days. I wonder if there is another source of such flavors out in the city now?'[at random]";
+			-- 5:	[lollicock - musky cock flower + honeycomb]
+				say "     '[one of]Surely there must be many interesting new flavors to discover out in the city park now.'[or]I used to collect fresh herbs from the forest surrounding the city park before all this began. I wonder what strange plants must be out there now?'[or]Fresh honey was always one of my favorite ingredients. I wonder how this strange maladie has affected the honeybees...'[at random]";
+			-- 6:	[6 - dragon moelleux - dragon heart + glowing ember + chocolate milk]
+				say "     '[one of]I have seen a lot of smoke over the skyline from the capitol district. I wonder what is happening over there?'[or]I have seen a lot of smoke over the skyline from the capitol district. I wonder what is happening over there?'[or]I have seen the most unusual chiens running around outside; they appear to be made entirely of chocolat.'[at random]";
+			-- 7:	[7 - fizz-aux-Pommes - pony cider + soda + crushed candies]
+				say "     '[one of]I used to keep a small amount of soda around for my customers, and it made an interesting addition to some dishes as well[or]A splash of fresh cider is a wonderful addition to most any dish[or]I used to get such wonderful fresh candy from the fair; they add a certain je ne sais quoi to several of my recipes[at random].'";
+			-- 8:	[8 - vin-coeur - crushed candies+ Satyr wine + wyvern goop]
+				say "     '[one of]A small amount of wine is wonderful for rich cakes[or]I have seen incredible beasts flying above the rooftops. One of them left an egg just outside, but I didn't dare approach it[or]I used to get such wonderful fresh candy from the fair; they add a certain je ne sais quoi to several of my recipes[at random].'";
+			-- 9:	[gingerbread - eggnog + pixie dust + blue gel]
+				say "     '[one of]I could have swore I saw a reindeer fly past earlier. He is a little out of season, non?'[or]Something to add a little extra sweetness would be tres bon.'[or]Fresh fruit is rather hard to come by these days. I wonder if there is another source of such flavors out in the city now?'[at random]";
+			-- 10:	[cheesecake - cheese + pixie dust + pink gel]
+				say "     '[one of]Le fromage seems hard to come by these days. Quel dommage.'[or]Something to add a little extra sweetness would be tres bon.'[or]Fresh fruit is rather hard to come by these days. I wonder if there is another source of such flavors out in the city now?'[at random]";
 	else if a random chance of 1 in 3 succeeds:
 		say "     '[if daytimer is day]Bonjour[else]Bonsoir[end if], [one of]mon ami[if Player is purefemale]e[end if][or]my friend[at random]. [one of]Comment ça va[or]Comment allez-vous[or]How are you[at random]?'";
 	else:
@@ -432,8 +453,7 @@ Francoismix is always { "Catgirl", "Siamese Cat", "Ninja Cat", "Chocolate Lab", 
 to francoisinfect:
 	let L be a list of text; [build the list of Francois' infections]
 	repeat with x running through Francoismix:
-		if there is a Name of x in Table of Random Critters:
-			choose row with Name of x from Table of Random Critters;
+		if x is a Name listed in Table of Random Critters:
 			if BannedStatus entry is false:
 				add x to L;
 	if L is not empty: [found at least one infection that's not banned]
@@ -448,25 +468,25 @@ Francois_Discovered is a list of numbers that varies.
 to FrancoisListCompile:
 	truncate Francois_Undiscovered to 0 entries;
 	if FemaleList is not banned:
-		if 1 is not listed in Francois_Discovered, add 1 to Francois_Undiscovered; [crème abondante - distilled milk + pink gel]
+		add 1 to Francois_Undiscovered, if absent; [crème abondante - distilled milk + pink gel]
 	if MaleList is not banned and FurryList is not banned and HumorousList is not banned and HermList is not banned:
-		if 2 is not listed in Francois_Discovered, add 2 to Francois_Undiscovered; [bleuettonne - chocolate milk + blue gel]
+		add 2 to Francois_Undiscovered, if absent; [bleuettonne - chocolate milk + blue gel]
 	if MaleList is not banned:
-		if 3 is not listed in Francois_Discovered, add 3 to Francois_Undiscovered; [boysenberry blossom - Awesome Fruit + blue gel]
+		add 3 to Francois_Undiscovered, if absent; [boysenberry blossom - Awesome Fruit + blue gel]
 	if FemaleList is not banned:
-		if 4 is not listed in Francois_Discovered, add 4 to Francois_Undiscovered; [Muffin muffin - Awesomer Fruit + pink gel]
+		add 4 to Francois_Undiscovered, if absent; [Muffin muffin - Awesomer Fruit + pink gel]
 	if HermList is not banned:
-		if 5 is not listed in Francois_Discovered, add 5 to Francois_Undiscovered; [lollicock - musky cock flower + honeycomb]
+		add 5 to Francois_Undiscovered, if absent; [lollicock - musky cock flower + honeycomb]
 	if (MaleList is not banned or FemaleList is not banned) and FurryList is not banned and HumorousList is not banned and HermList is not banned:
-		if 6 is not listed in Francois_Discovered, add 6 to Francois_Undiscovered; [dragon moelleux - dragon heart + glowing ember + chocolate milk]
+		add 6 to Francois_Undiscovered, if absent; [dragon moelleux - dragon heart + glowing ember + chocolate milk]
 	if FurryList is not banned and FeralList is not banned and HumorousList is not banned and FemaleList is not banned:
-		if 7 is not listed in Francois_Discovered, add 7 to Francois_Undiscovered; [fizz-aux-Pommes - pony cider + soda + crushed candies]
+		add 7 to Francois_Undiscovered, if absent; [fizz-aux-Pommes - pony cider + soda + crushed candies]
 	if MaleList is not banned and FurryList is not banned and FeralList is not banned and HumorousList is not banned and FemaleList is not banned:
-		if 8 is not listed in Francois_Discovered, add 8 to Francois_Undiscovered; [vin-coeur - crushed candies+ Satyr wine + wyvern goop]
+		add 8 to Francois_Undiscovered, if absent; [vin-coeur - crushed candies+ Satyr wine + wyvern goop]
 	if MaleList is not banned and FurryList is not banned and HumorousList is not banned:
-		if 9 is not listed in Francois_Discovered, add 9 to Francois_Undiscovered; [gingerbread - Egg nog + pixie dust + Blue gel]
+		add 9 to Francois_Undiscovered, if absent; [gingerbread - Egg nog + pixie dust + Blue gel]
 	if FemaleList is not banned and FurryList is not banned and HermList is not banned and MindcontrolList is not banned:
-		if 10 is not listed in Francois_Discovered, add 10 to Francois_Undiscovered; [cheesecake - cheese + pixie dust + pink gel]
+		add 10 to Francois_Undiscovered, if absent; [cheesecake - cheese + pixie dust + pink gel]
 
 Francoisbaking is an action applying to nothing.
 understand "bake with/-- francois/francis" as Francoisbaking.
@@ -760,30 +780,6 @@ to say FrancoisBakingMenu:
 			now sextablerun is 1;
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options], or 0 to exit.";
-
-to say FrancoisHint:
-	sort Francois_Undiscovered in random order;
-	if entry 1 of Francois_Undiscovered is:
-		-- 1:	[crème abondante - distilled milk + pink gel]
-			say "     '[one of]Crème à la fraise, strawberry cream, is always a popular ingredient. Perhaps we could find a way to make our own out in the city?'[or]It's a shame I was out of milk when all this started. Strangely, most of my other stock seems to have stayed fresh.'[or]Fresh fruit is rather hard to come by these days. I wonder if there is another source of such flavors out in the city now?'[at random]";
-		-- 2:	[bleuettonne - chocolate milk + blue gel]
-			say "     '[one of]Le chocolat et les fruits frais are always a good combination.'[or]I have seen the most unusual chiens running around outside; they appear to be made entirely of chocolat.'[or]Fresh fruit is rather hard to come by these days. I wonder if there is another source of such flavors out in the city now?'[at random]";
-		-- 3:	[boysenberry blossom - Awesome Fruit + blue gel]
-			say "     '[one of]A simple fruit pastry is a staple of a good menu.'[or]There was a bizarre tree outside the store earlier. It had such lovely fruit hanging from its branches. I was going to go out and pick some, but I turned around for a moment and it was suddenly gone.'[or]Fresh fruit is rather hard to come by these days. I wonder if there is another source of such flavors out in the city now?'[at random]";
-		-- 4:	[Muffin muffin - Awesomer Fruit + pink gel]
-			say "     '[one of]Gelée de fruit is always an interesting way to enrich a simple treat.'[or]There was a bizarre tree outside the store earlier. It had such lovely fruit hanging from its branches. I was going to go out and pick some, but I turned around for a moment and it was suddenly gone.'[or]Fresh fruit is rather hard to come by these days. I wonder if there is another source of such flavors out in the city now?'[at random]";
-		-- 5:	[lollicock - musky cock flower + honeycomb]
-			say "     '[one of]Surely there must be many interesting new flavors to discover out in the city park now.'[or]I used to collect fresh herbs from the forest surrounding the city park before all this began. I wonder what strange plants must be out there now?'[or]Fresh honey was always one of my favorite ingredients. I wonder how this strange maladie has affected the honeybees...'[at random]";
-		-- 6:	[6 - dragon moelleux - dragon heart + glowing ember + chocolate milk]
-			say "     '[one of]I have seen a lot of smoke over the skyline from the capitol district. I wonder what is happening over there?'[or]I have seen a lot of smoke over the skyline from the capitol district. I wonder what is happening over there?'[or]I have seen the most unusual chiens running around outside; they appear to be made entirely of chocolat.'[at random]";
-		-- 7:	[7 - fizz-aux-Pommes - pony cider + soda + crushed candies]
-			say "     '[one of]I used to keep a small amount of soda around for my customers, and it made an interesting addition to some dishes as well[or]A splash of fresh cider is a wonderful addition to most any dish[or]I used to get such wonderful fresh candy from the fair; they add a certain je ne sais quoi to several of my recipes[at random].'";
-		-- 8:	[8 - vin-coeur - crushed candies+ Satyr wine + wyvern goop]
-			say "     '[one of]A small amount of wine is wonderful for rich cakes[or]I have seen incredible beasts flying above the rooftops. One of them left an egg just outside, but I didn't dare approach it[or]I used to get such wonderful fresh candy from the fair; they add a certain je ne sais quoi to several of my recipes[at random].'";
-		-- 9:	[gingerbread - eggnog + pixie dust + blue gel]
-			say "     '[one of]I could have swore I saw a reindeer fly past earlier. He is a little out of season, non?'[or]Something to add a little extra sweetness would be tres bon.'[or]Fresh fruit is rather hard to come by these days. I wonder if there is another source of such flavors out in the city now?'[at random]";
-		-- 10:	[cheesecake - cheese + pixie dust + pink gel]
-			say "     '[one of]Le fromage seems hard to come by these days. Quel dommage.'[or]Something to add a little extra sweetness would be tres bon.'[or]Fresh fruit is rather hard to come by these days. I wonder if there is another source of such flavors out in the city now?'[at random]";
 
 to say BoysenberryBlossomGet:
 	say "     'Ah! Oui! These will do wonderfully!' Francois says as he takes the blue gel and Awesome Fruit from you with a smile, collecting a few other things from behind the counter before heading to his kitchen. The warm, sweet smell of Francois['] craft fills the bakery as you wait, making your mouth water in anticipation. Eventually Francois returns with a small dish of fruity-smelling pastries. 'I will call them boysenberry blossoms,' Francois says with obvious excitement. 'Please, be the first to taste one, mon ami[if Player is purefemale]e[end if]!' Would you like to taste it right now?";

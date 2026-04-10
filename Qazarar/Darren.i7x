@@ -182,66 +182,63 @@ to say SexWithDarren:
 		say "     You haven't even spoken to him yet!";
 	else:
 		say "     'Well, I'm sure we can think of something to do together, but nothing too wild, okay?'";
-		say "[DarrenSexMenu]";
-
-to say DarrenSexMenu:
-	now sextablerun is 0;
-	blank out the whole of table of fucking options;
-	[]
-	choose a blank row in table of fucking options;
-	now title entry is "Offer a BJ";
-	now sortorder entry is 1;
-	now description entry is "Volunteer some oral action";
-	[]
-	choose a blank row in table of fucking options;
-	now title entry is "Ask him to fuck you";
-	now sortorder entry is 2;
-	now description entry is "See about getting some salamander dick";
-	[]
-	if Player is male and Loyalty of Darren > 2:
+		now sextablerun is 0;
+		blank out the whole of table of fucking options;
+		[]
 		choose a blank row in table of fucking options;
-		now title entry is "Ask to fuck him";
-		now sortorder entry is 3;
-		now description entry is "Ask if you can test out his ass";
-	[
-	if Loyalty of Darren > 3 and (Player is female or "MPreg" is listed in the feats of Player):
+		now title entry is "Offer a BJ";
+		now sortorder entry is 1;
+		now description entry is "Volunteer some oral action";
+		[]
 		choose a blank row in table of fucking options;
-		now title entry is "Get bred";
-		now sortorder entry is 4;
-		now description entry is "Have the salamander stud breed you";
-	]
-	sort the table of fucking options in sortorder order;
-	repeat with y running from 1 to number of filled rows in table of fucking options:
-		choose row y from the table of fucking options;
-		say "[link][y] - [title entry][as][y][end link][line break]";
-	say "[link]0 - Nevermind[as]0[end link][line break]";
-	while sextablerun is 0:
-		say "Pick the corresponding number> [run paragraph on]";
-		get a number;
-		if calcnumber > 0 and calcnumber <= the number of filled rows in table of fucking options:
-			now current menu selection is calcnumber;
-			choose row calcnumber in table of fucking options;
-			say "[title entry]: [description entry]?";
-			if Player consents:
+		now title entry is "Ask him to fuck you";
+		now sortorder entry is 2;
+		now description entry is "See about getting some salamander dick";
+		[]
+		if Player is male and Loyalty of Darren > 2:
+			choose a blank row in table of fucking options;
+			now title entry is "Ask to fuck him";
+			now sortorder entry is 3;
+			now description entry is "Ask if you can test out his ass";
+		[
+		if Loyalty of Darren > 3 and (Player is female or "MPreg" is listed in the feats of Player):
+			choose a blank row in table of fucking options;
+			now title entry is "Get bred";
+			now sortorder entry is 4;
+			now description entry is "Have the salamander stud breed you";
+		]
+		sort the table of fucking options in sortorder order;
+		repeat with y running from 1 to number of filled rows in table of fucking options:
+			choose row y from the table of fucking options;
+			say "[link][y] - [title entry][as][y][end link][line break]";
+		say "[link]0 - Nevermind[as]0[end link][line break]";
+		while sextablerun is 0:
+			say "Pick the corresponding number> [run paragraph on]";
+			get a number;
+			if calcnumber > 0 and calcnumber <= the number of filled rows in table of fucking options:
+				now current menu selection is calcnumber;
+				choose row calcnumber in table of fucking options;
+				say "[title entry]: [description entry]?";
+				if Player consents:
+					LineBreak;
+					now sextablerun is 1;
+					if title entry is:
+						-- "Offer a BJ":
+							say "[DarrenSex1]";
+						-- "Ask him to fuck you":
+							say "[DarrenSex2]";
+						-- "Ask to fuck him":
+							say "[DarrenSex3]";
+						[-- "Get bred":
+							say "[DarrenSex4]";]
+			else if calcnumber is 0:
 				LineBreak;
 				now sextablerun is 1;
-				if title entry is:
-					-- "Offer a BJ":
-						say "[DarrenSex1]";
-					-- "Ask him to fuck you":
-						say "[DarrenSex2]";
-					-- "Ask to fuck him":
-						say "[DarrenSex3]";
-					[-- "Get bred":
-						say "[DarrenSex4]";]
-		else if calcnumber is 0:
-			LineBreak;
-			now sextablerun is 1;
-			say "     You step back from the salamander, and tell him you've reconsidered for now.";
-		else:
-			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options], or 0 to exit.";
-	wait for any key;
-	clear the screen and hyperlink list;
+				say "     You step back from the salamander, and tell him you've reconsidered for now.";
+			else:
+				say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options], or 0 to exit.";
+		wait for any key;
+		clear the screen and hyperlink list;
 
 to say DarrenSex1: [blow him]
 	say "     With Darren's cock visibly needy, you volunteer yourself to help him relieve the pressure, if only for a little while. The salamander enthusiastically nods in response. 'That would be incredible. I can do some of it myself, but it just isn't the same.' Because his member is already exposed and ready, there's nothing else you need to do for this particular act other than to get down onto your knees to better be in position. This brings you face to face with the perpetually throbbing shaft, lined with smooth ridges and already seeming to almost vibrate in anticipation. You were already fully prepared to take care of this for him, so there's really no point in waiting any further.";

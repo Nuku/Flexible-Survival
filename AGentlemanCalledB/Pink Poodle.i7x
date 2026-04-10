@@ -42,18 +42,18 @@ To say beatthePinkPoodle:
 		if HP of Dominick >= 10 and HP of Dominick < 20 and Player is female and ( BodyName of Player is "Breederslut" or FaceName of Player is "Breederslut" ) and inasituation is false:
 			choose a blank row in table of fucking options;
 			now title entry is "Recruit for Dominick";
-			now sortorder entry is 99;
+			now sortorder entry is 1;
 			now description entry is "Send her to Dominick to breed";
 		[]
 		if Player is male:
 			choose a blank row in table of fucking options;
 			now title entry is "Give vaginal";
-			now sortorder entry is 1;
+			now sortorder entry is 2;
 			now description entry is "Fuck the pink poodle";
 		[]
 		choose a blank row in table of fucking options;
 		now title entry is "Receive oral";
-		now sortorder entry is 2;
+		now sortorder entry is 3;
 		now description entry is "Have her [if Player is male]suck you off[else]eat you out[end if]";
 		[]
 		sort the table of fucking options in sortorder order;
@@ -85,8 +85,6 @@ To say beatthePinkPoodle:
 				increase nopoodlesex by 1;
 			else:
 				say "Invalid Option. Pick between 0 and [the number of filled rows in the table of fucking options].";
-		wait for any key;
-		clear the screen and hyperlink list;
 
 to say pinkpoodlesex:
 	say "     Since she's already on all fours, you decide to use the beaten canine like the bitch she is. Dropping your gear as you move behind her, you grip the poodle's ample, shaved hips, causing her tail to wag softly as you caress them. You can't help but grin as you watch the large pink pompom swaying back and forth before you as you align your [cock size desc of Player] [Cock of Player] cock to her needy pussy, stroking your tip across her outer lips gently before pushing in slowly.";

@@ -75,10 +75,7 @@ to say ResolveEvent Snake Charmer:
 
 Table of WalkInEvents (continued)
 Priority	Name	EventObject	EventConditions	EventRoom	LastEncounterTurn	CoolDownTurns	EncounterPercentage
-4	"Naga Mate"	Naga Mate	"[EventConditions_NagaMate]"	Zoo Entryway	2500	8	50
-
-to say EventConditions_NagaMate:
-	now CurrentWalkinEvent_ConditionsMet is true;
+4	"Naga Mate"	Naga Mate	"[EventConditions_True]"	Zoo Entryway	2500	8	50
 
 Table of GameEventIDs (continued)
 Object	Name

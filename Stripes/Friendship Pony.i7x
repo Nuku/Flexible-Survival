@@ -34,11 +34,10 @@ to say losetofpony:
 	say "     'I hope to see you again, my new friend. It's been magic.' That said, she [if rfponytype is 2]flies[else]trots[end if] off, probably in search of another new friend. It's some time before your head clears enough for you to get up and head on your way.";
 
 to say beatthefpony:
-	say "     After your last blow, you slam yourself against the staggering pony's side, knocking her over. The [rfponycolor1] [if rfponytype is 1]equine[else if rfponytype is 2]pegasus[else if rfponytype is 3]unicorn[end if] lands in the dirt with a groan. '[one of]Why are you being such a meany?' [or]That's not how friends should act!' [or]I think you need to learn a lesson about friendship,' [at random]she whines. ";
 	if nofponysex > 2:
-		say "As with the others of her kind, you [if rfponytype is 2]send her flying away[else]drive her off[end if] with a hard swat to her flank, right on her mark of [rfponybm].";
+		say "     After your last blow, you slam yourself against the staggering pony's side, knocking her over. The [rfponycolor1] [if rfponytype is 1]equine[else if rfponytype is 2]pegasus[else if rfponytype is 3]unicorn[end if] lands in the dirt with a groan. '[one of]Why are you being such a meany?' [or]That's not how friends should act!' [or]I think you need to learn a lesson about friendship,' [at random]she whines. As with the others of her kind, you [if rfponytype is 2]send her flying away[else]drive her off[end if] with a hard swat to her flank, right on her mark of [rfponybm].";
 	else if Player is male:
-		say "As you look over her, your eyes wander back to that rear of hers and the juicy pussy under her [rfponycolor2] tail. You find yourself tempted to get [']friendly['] with the pony, but on your own terms.";
+		say "     After your last blow, you slam yourself against the staggering pony's side, knocking her over. The [rfponycolor1] [if rfponytype is 1]equine[else if rfponytype is 2]pegasus[else if rfponytype is 3]unicorn[end if] lands in the dirt with a groan. '[one of]Why are you being such a meany?' [or]That's not how friends should act!' [or]I think you need to learn a lesson about friendship,' [at random]she whines. As you look over her, your eyes wander back to that rear of hers and the juicy pussy under her [rfponycolor2] tail. You find yourself tempted to get [']friendly['] with the pony, but on your own terms.";
 		say "[line break]     [bold type]Shall you grab those flanks and mount her?[roman type][line break]";
 		say "     ([link]Y[as]y[end link]) - Yes.";
 		say "     ([link]N[as]n[end link]) - No.";
@@ -53,7 +52,7 @@ to say beatthefpony:
 			say "     Resisting the impulse, you decide to instead [if rfponytype is 2]send her flying away[else]drive her off[end if] with a hard swat to her flank, right on her mark of [rfponybm].";
 			increase nofponysex by 1;
 	else if Player is female:
-		say "As you look over her, your eyes wander back to that cute face of hers. You find yourself tempted to get [']friendly['] with the pony, but on your own terms.";
+		say "     After your last blow, you slam yourself against the staggering pony's side, knocking her over. The [rfponycolor1] [if rfponytype is 1]equine[else if rfponytype is 2]pegasus[else if rfponytype is 3]unicorn[end if] lands in the dirt with a groan. '[one of]Why are you being such a meany?' [or]That's not how friends should act!' [or]I think you need to learn a lesson about friendship,' [at random]she whines. As you look over her, your eyes wander back to that cute face of hers. You find yourself tempted to get [']friendly['] with the pony, but on your own terms.";
 		say "[line break]     [bold type]Shall you grab that pretty [rfponycolor2] hair of hers and make her eat you out?[roman type][line break]";
 		say "     ([link]Y[as]y[end link]) - Yes.";
 		say "     ([link]N[as]n[end link]) - No.";
@@ -67,7 +66,7 @@ to say beatthefpony:
 			say "     Resisting the impulse, you decide to instead [if rfponytype is 2]send her flying away[else]drive her off[end if] with a hard swat to her flank, right on her mark of [rfponybm].";
 			increase nofponysex by 1;
 	else:
-		say "With no gender of your own, you don't really feel like taking advantage of this opportunity. You decide to instead [if rfponytype is 2]send her flying away[else]drive her off[end if] with a hard swat to her flank, right on her mark of [rfponybm].";
+		say "     After your last blow, you slam yourself against the staggering pony's side, knocking her over. The [rfponycolor1] [if rfponytype is 1]equine[else if rfponytype is 2]pegasus[else if rfponytype is 3]unicorn[end if] lands in the dirt with a groan. '[one of]Why are you being such a meany?' [or]That's not how friends should act!' [or]I think you need to learn a lesson about friendship,' [at random]she whines. With no gender of your own, you don't really feel like taking advantage of this opportunity. You decide to instead [if rfponytype is 2]send her flying away[else]drive her off[end if] with a hard swat to her flank, right on her mark of [rfponybm].";
 
 to say fponydesc:
 	say "     You find yourself facing off against a vaguely equine creature with a rather strange and toyetic appearance. Its short body is slender and has only a few curves to accentuate the creature's femininity[if rfponytype is 2] and has a pair of small, feathered wings at its back[end if]. The strange, smiling pony creature stands on four flat, featureless hooves that are little more than flat stumps at the end of its legs. Its overall look is quite smooth and plasticky, having a [rfponycolor1] color to its body. Its head is large and roundish with cartoonishly oversized eyes that look at you with a vacant, happy gaze. Despite lacking any hair or fur anywhere else on its body, the pony has a lush mane and fluffy tail of [rfponycolor2] hair [if a random chance of 1 in 5 succeeds]with brighter highlights [end if]that looks stylishly brushed[if rfponytype is 3]. There is a short horn poking out the front of its hair[end if].";

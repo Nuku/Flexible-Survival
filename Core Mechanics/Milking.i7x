@@ -65,15 +65,14 @@ Carry out PlayerBreastMilking:
 			now MilkVolume is MilkVolume / 2;
 		ItemGain mothers milk by 1;
 		increase lastBreastMilking by 1;
-	if there is a name of BodyName of Player in the Table of Random Critters:
-		choose a row with name of BodyName of Player in the Table of Random Critters;
+	if BodyName of Player is a Name listed in Table of Random Critters:
 		if MilkVolume > 0 and MilkItem Entry is not empty:
-			say "You milk your own breasts, gathering the rich fluid produced in [if MilkVolume is 1]a bottle and labeling it[else]bottles and labeling them[end if]";
 			if MilkVolume is greater than 8: [max milkvolume number is 8 in itemGain of milk]
 				now MilkVolume is 8;
-				say ". As you run out of empty bottles, the remaining milk starts streaming down and forms a puddle on the ground";
+				say "You milk your own breasts, gathering the rich fluid produced in [if MilkVolume is 1]a bottle and labeling it[else]bottles and labeling them[end if]. As you run out of empty bottles, the remaining milk starts streaming down and forms a puddle on the ground.";
 				raise Player Libido by 5;
-			say ".";
+			else:
+				say "You milk your own breasts, gathering the rich fluid produced in [if MilkVolume is 1]a bottle and labeling it[else]bottles and labeling them[end if].";
 			ItemGain MilkItem Entry by MilkVolume;
 		else: [no milk item exists]
 			say "You milk your own breasts, providing relief from their fullness.";
@@ -94,8 +93,7 @@ Carry out PlayerCockmilking:
 	if Ball Size of Player > 1:
 		increase CumVolume by Ball Size of Player - 1;
 	now lastCockMilking is turns;
-	if there is a name of CockName of Player in the Table of Random Critters:
-		choose a row with name of CockName of Player in the Table of Random Critters;
+	if CockName of Player is a Name listed in Table of Random Critters:
 		if CumVolume > 0 and CumItem Entry is not empty:
 			say "You jerk off your [Cock of Player] cock, holding [if CumVolume is 1]a plastic bottle[else]plastic bottles[end if] to catch what semen you produce. After labeling [if CumVolume is 1]it, you pack it[else]them, you pack them[end if] away.";
 			ItemGain CumItem Entry by CumVolume;

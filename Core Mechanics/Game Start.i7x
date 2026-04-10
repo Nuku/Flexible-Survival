@@ -327,8 +327,7 @@ to say gsopt_start:
 			now the HP of Doctor Matt is 100;
 			now the icon of Doctor Matt is figure of pixel;
 			now Orthas is nowhere;
-			if there is a Name of "Deer" in Table of Random Critters:
-				choose row with Name of "Deer" from Table of Random Critters;
+			if "Deer" is a Name listed in Table of Random Critters:
 				now area entry is "Park";
 			increase score by 600;
 			extend game by 240;
@@ -378,7 +377,7 @@ to say gsopt_start:
 			say "Choice? (1-3)> [run paragraph on]";
 			get a number;
 			if calcnumber < 1 or calcnumber > 3:
-				say "Invalid choice. Type [link]1[end link], [link]2[end link], or [link]3[end link].";
+				say "Invalid choice. Type [link]1[end link], [link]2[end link] or [link]3[end link].";
 		LineBreak;
 		if calcnumber is 1: [Alpha Fang]
 			now HP of Fang is 4;
@@ -703,8 +702,7 @@ to say silent_start:
 			now the HP of Doctor Matt is 100;
 			now the icon of Doctor Matt is figure of pixel;
 			now Orthas is nowhere;
-			if there is a Name of "Deer" in Table of Random Critters:
-				choose row with Name of "Deer" from Table of Random Critters;
+			if "Deer" is a Name listed in Table of Random Critters:
 				now area entry is "Park";
 			increase score by 600;
 			extend game by 240;

@@ -84,16 +84,16 @@ to say felinoid wins:
 						say "     The big cat rubs himself against you, purring deeply; without thinking your hand reaches to scritch his ears. 'You're not so bad, friendly even...' you murmur just before the first tingling feeling builds at your groin making you whine and whimper softly into his fur, breathing in more of the big animal's suddenly fiery smelling musk.";
 			else:		[***]
 				if (Nipple Count of Player is 0 or Breast Size of Player is 0) and "Flat Chested" is not listed in feats of Player:
-					say "     The big cat rubs himself against you, purring deeply; without thinking your hand reaches to scritch his ears. 'You're not so bad, friendly even...' you murmur just before the first tingling feeling builds at your groin and chest. Quickly, two large breasts swell into existence, pressing against the remnants of your clothing, making you gasp at the feeling of the cloth against the sensitive flesh";
 					now Nipple Count of Player is 2;
 					now Breast Size of Player is 6;
 					increase catnum by 1;
 					if "One Way" is not listed in feats of Player and "Always Cocky" is not listed in feats of Player:
-						say " even as you feel further changes at your groin";
+						say "     The big cat rubs himself against you, purring deeply; without thinking your hand reaches to scritch his ears. 'You're not so bad, friendly even...' you murmur just before the first tingling feeling builds at your groin and chest. Quickly, two large breasts swell into existence, pressing against the remnants of your clothing, making you gasp at the feeling of the cloth against the sensitive flesh even as you feel further changes at your groin.";
 						now Cock Count of Player is 0;
 						now Cock Length of Player is 0;
 						now Ball Size of Player is 0;
-					say ".";
+					else:
+						say "     The big cat rubs himself against you, purring deeply; without thinking your hand reaches to scritch his ears. 'You're not so bad, friendly even...' you murmur just before the first tingling feeling builds at your groin and chest. Quickly, two large breasts swell into existence, pressing against the remnants of your clothing, making you gasp at the feeling of the cloth against the sensitive flesh.";
 				else:
 					say "     The big cat rubs himself against you, purring deeply; without thinking your hand reaches to scritch his ears. 'You're not so bad, friendly even...' you murmur just before the first tingling feeling builds at your groin making you whine and whimper softly into his fur, breathing in more of the big animal's suddenly fiery smelling musk.";
 
