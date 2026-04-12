@@ -116,8 +116,6 @@ to say gsbDefeat:           [Scene for when the player defeats the GSB]
 			now sextablerun is 1;
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options], or 0 to exit.";
-	wait for any key;
-	clear the screen and hyperlink list;
 
 to say gsbDefeatSex1:			[pussy fuck]
 	if gsbKatherine is true:
@@ -137,7 +135,11 @@ to say gsbDefeatSex2:			[female player receives oral]
 	if gsbKatherine is true:
 		say "[gsbOralKatherine]";
 	else:
-		say "[gsbOral]";
+		say "     Deciding to put her mouth to good use, you grab the German shepherd and roll her over on to her back. She gives a grunt as you roughly handle her, but she's unable to resist you after the fight. Swinging one leg up and over the dog, you straddle her torso, pinning her down beneath you. Her ears flatten against her head, embarrassed at the submissive position she now finds herself in. You smile at her predicament. Seeing her lovely breasts on display, you reach down and give them a loving squeeze. She stifles a moan at your touch, then gives a stubborn growl, clearly telling you how unhappy she is with the situation.";
+		say "     You grab her by the head with both hands and bring your crotch to her face. 'Better start licking, bitch,' you say to her. She gives a hesitant whine before deciding she has no other choice. Her long doggy tongue darts forth from her muzzle, taking exploratory laps at your pussy. You give a short cry as you feel her moist digit tease against your labia. Apparently a little turned on by your reaction, the unwilling bitch finally relents and starts to become more vigorous with her licking.";
+		WaitLineBreak;
+		say "     Her forceful tongue pushes further into your cunt with each lap, spreading your lips apart. Pleasure courses through your body as she services you, and you pet her head like a dog to reward her behavior. Your feminine juices begin to leak down and across her face, soaking her brown fur in your scent. Perhaps eager to get you off so she can be free, she changes tactics and withdraws her tongue to lick at your clit. You gasp at the sensation, once again tightening your grip and pressing her muzzle against you, much to her chagrin.";
+		say "     Riding the shepherd's face for some time, you eventually hit your limit and come to a wonderful climax. Your femcum leaks out onto the bitch beneath you, further soaking her already drenched face. She'll be marked with your scent for some time. As you come down from your high, you reluctantly step up from the German shepherd and grab your gear. Your cowed opponent remains on the floor until you pull her up. She's still bitter about her treatment, but you thank her nonetheless and send her on her way with a pat on the ass.";
 	CreatureSexAftermath "German Shepherd Bitch" receives "OralPussy" from "Player";
 
 to say gsbDefeatSex3:			[eat her out]
@@ -145,7 +147,11 @@ to say gsbDefeatSex3:			[eat her out]
 		now gsbBuffer is 0;
 		say "[gsbPleasureKatherine]";
 	else:
-		say "[gsbPleasure]";
+		say "     You flip the German shepherd bitch over on to her back and walk around to kneel down between her legs. The dog is too exhausted to resist you, and you spread her legs to expose her pussy. A faint scent of arousal wafts up into the air, which only strengthens as you bring your face closer to her furry mound. The dazed shepherd gives a huff, surprised that you would pleasure her rather than take her for yourself. She visibly relaxes, and you lower your head to nuzzle into her crotch.";
+		say "     The scent of her pussy becomes overwhelming as you bury your face into the fluff surrounding her nethers. You struggle at first to find her lips among the tangle of fur, to which the recovering canine gives a small chuckle. That chuckle turns to a gasp as you finally find your mark, and you begin eagerly licking away. You tighten your grip around her thighs as you set to work, lapping at the bitch's pussy with enthusiasm. As the horny canine's arousal grows, she becomes more bold, and you feel a paw reach down to stroke over your head.";
+		WaitLineBreak;
+		say "     Sensing no malintent from the defeated dog, you allow her to continue with her groping. You rather enjoy the feeling of her fingers trailing through your hair as you eat her out, and you return your attention to the juicy muff before you. You take things up a notch and begin probing between her lips with your tongue. She growls appreciatively at your ministrations, enjoying the attention. You withdraw to bring your tongue to her clit, which elicits a moan and a tightening grip on your head. You play with her like this for some time, swapping between tongue-fucking her and swirling around her sensitive nub.";
+		say "     Eventually, the stimulation proves to much for her, and you feel the walls of her pussy clamp down rhythmically around your tongue. You pick up the pace as she climaxes, and her femcum splurts across your face. Left panting from your oral skills, the shepherd releases your head and relaxes back into the ground. Licking your lips clean of her juices, you stand back up and redress before leaving her to recover.";
 	CreatureSexAftermath "Player" receives "OralPussy" from "German Shepherd Bitch";
 
 Section 4 - Monster Sex Scenes
@@ -183,26 +189,12 @@ to say gsbFuckKatherine:
 	say "     Your efforts are soon rewarded. You look down to see the brown and black dog with her eyes glazed over and her tongue lolling out as she loses herself in your shared pleasure. Releasing her hips, you bring your face down to her muzzle and assault her mouth in a sloppy kiss. She puts up no resistance as you explore her muzzle with your tongue. Then it's your turn to be surprised as your bitch eagerly begins returning the kiss, her long doggy tongue quickly overpowering your own. You reach up your hands to caress her breasts, further stimulating her as you continue to pound and kiss her. It's too much for the horny canine, and she moans into your mouth as she climaxes. Her pussy clamps down around you, and the tightness pushes you into your own orgasm. Your lips parting, you both cry in ecstasy as you fill her with your seed, marking her as yours.";
 	say "     You pant heavily as you finish spurting inside her. When you finally finish, you give her a quick peck on the nose before pulling out and standing back up. Exhausted from your long fuck-session, she remains resting on the ground as you redress. She keeps her legs parted, giving you nice view of your handiwork as your [Cum Load Size of Player] load begins to dribble out of her. She stares at the mess longingly, perhaps imagining herself filled with your pups. 'Thank you Alpha' she says as she wipes up some of your cum with her paw, then slowly licks it clean with a smile, enjoying the taste.";
 
-to say gsbOral:
-	say "     Deciding to put her mouth to good use, you grab the German shepherd and roll her over on to her back. She gives a grunt as you roughly handle her, but she's unable to resist you after the fight. Swinging one leg up and over the dog, you straddle her torso, pinning her down beneath you. Her ears flatten against her head, embarrassed at the submissive position she now finds herself in. You smile at her predicament. Seeing her lovely breasts on display, you reach down and give them a loving squeeze. She stifles a moan at your touch, then gives a stubborn growl, clearly telling you how unhappy she is with the situation.";
-	say "     You grab her by the head with both hands and bring your crotch to her face. 'Better start licking, bitch,' you say to her. She gives a hesitant whine before deciding she has no other choice. Her long doggy tongue darts forth from her muzzle, taking exploratory laps at your pussy. You give a short cry as you feel her moist digit tease against your labia. Apparently a little turned on by your reaction, the unwilling bitch finally relents and starts to become more vigorous with her licking.";
-	WaitLineBreak;
-	say "     Her forceful tongue pushes further into your cunt with each lap, spreading your lips apart. Pleasure courses through your body as she services you, and you pet her head like a dog to reward her behavior. Your feminine juices begin to leak down and across her face, soaking her brown fur in your scent. Perhaps eager to get you off so she can be free, she changes tactics and withdraws her tongue to lick at your clit. You gasp at the sensation, once again tightening your grip and pressing her muzzle against you, much to her chagrin.";
-	say "     Riding the shepherd's face for some time, you eventually hit your limit and come to a wonderful climax. Your femcum leaks out onto the bitch beneath you, further soaking her already drenched face. She'll be marked with your scent for some time. As you come down from your high, you reluctantly step up from the German shepherd and grab your gear. Your cowed opponent remains on the floor until you pull her up. She's still bitter about her treatment, but you thank her nonetheless and send her on her way with a pat on the ass.";
-
 to say gsbOralKatherine:
 	say "     Deciding to put her mouth to good use, you grab the German shepherd and roll her over on to her back. She wiggles within your grip as you handle her, eager for what's to come. Swinging one leg up and over the dog, you straddle her torso, pinning her down beneath you. Her ears perk up, and she licks her lips as her gaze fixes on your crotch. Looking down and seeing her lovely breasts on display, you reach out and give them a loving squeeze. She lets out a slutty moan as you caress her, loving the feel of your hands on her body.";
 	say "     You then grab her by the head with both hands and bring your crotch up to her face. 'Be a good bitch and start licking' you say to her. She gives you a smile before setting to her task with enthusiasm. Her long doggy tongue darts forth from her muzzle, taking exploratory laps at your pussy. You give a short cry as you feel her moist digit tease against your labia. Turned on at pleasing her Alpha, the obedient bitch reaches around to grab you by the ass and starts to become more vigorous with her licking.";
 	WaitLineBreak;
 	say "     Her forceful tongue pushes further into your cunt with each lap, spreading your lips apart. Pleasure courses through your body as she services you, and you pet her head like a dog to reward her behavior. Your feminine juices begin to leak down and across her face, soaking her brown fur in your scent. Eager to prove her worth to her partner, she changes tactics and withdraws her tongue to lick at your clit. You gasp at the sensation, once again tightening your grip and pressing her muzzle against you, much to her delight.";
 	say "     Riding the shepherd's face for some time, you eventually hit your limit and come to a wonderful climax. Your femcum leaks out onto the bitch beneath you, further soaking her already drenched face. She'll be marked with your scent for some time. As you come down from your high, you reluctantly step up from the German shepherd and grab your gear. Your willing bitch remains on the floor until you help her up, complementing her on a job well done. Wagging her tail at your praise, she thanks you, and you send her on her way with a pat on the ass.";
-
-to say gsbPleasure:
-	say "     You flip the German shepherd bitch over on to her back and walk around to kneel down between her legs. The dog is too exhausted to resist you, and you spread her legs to expose her pussy. A faint scent of arousal wafts up into the air, which only strengthens as you bring your face closer to her furry mound. The dazed shepherd gives a huff, surprised that you would pleasure her rather than take her for yourself. She visibly relaxes, and you lower your head to nuzzle into her crotch.";
-	say "     The scent of her pussy becomes overwhelming as you bury your face into the fluff surrounding her nethers. You struggle at first to find her lips among the tangle of fur, to which the recovering canine gives a small chuckle. That chuckle turns to a gasp as you finally find your mark, and you begin eagerly licking away. You tighten your grip around her thighs as you set to work, lapping at the bitch's pussy with enthusiasm. As the horny canine's arousal grows, she becomes more bold, and you feel a paw reach down to stroke over your head.";
-	WaitLineBreak;
-	say "     Sensing no malintent from the defeated dog, you allow her to continue with her groping. You rather enjoy the feeling of her fingers trailing through your hair as you eat her out, and you return your attention to the juicy muff before you. You take things up a notch and begin probing between her lips with your tongue. She growls appreciatively at your ministrations, enjoying the attention. You withdraw to bring your tongue to her clit, which elicits a moan and a tightening grip on your head. You play with her like this for some time, swapping between tongue-fucking her and swirling around her sensitive nub.";
-	say "     Eventually, the stimulation proves to much for her, and you feel the walls of her pussy clamp down rhythmically around your tongue. You pick up the pace as she climaxes, and her femcum splurts across your face. Left panting from your oral skills, the shepherd releases your head and relaxes back into the ground. Licking your lips clean of her juices, you stand back up and redress before leaving her to recover.";
 
 to say gsbPleasureKatherine:
 	say "     You [if gsbBuffer is 1]push Katherine down on to the ground so that she's resting on her back. She looks up at you longingly, begging for attention from her Alpha. Deciding to give her just that, sink down on the ground between her legs, spreading them apart[else]approach the defeated German shepherd, and she looks up at you longingly, begging for attention from her Alpha. Deciding to give her just that, you twirl your finger in a gesture to roll over like a dog, and the obedient bitch happily complies. You walk around to kneel down between her legs and spread them[end if] to expose her pussy. A faint scent of arousal wafts up into the air, which only strengthens as you bring your face closer to her furry mound. The shepherd gives a pleased huff, happy to receive such a treat from her mate. She lies back and relaxes, and you lower your head to nuzzle into her crotch.";
@@ -233,14 +225,12 @@ name(text)	PrepFunction(text)
 to say PrepCombat_German Shepherd Bitch:
 	setmongender 4; [creature is female]
 	project figure of Katherine_icon;
+	now gsbKatherine is false;
 	if a random chance of 1 in 3 succeeds:
 		if HP of Katherine > 0:
 			now gsbKatherine is true;
 		else:
-			now gsbKatherine is false;
 			now HP of Katherine is 1;
-	else:
-		now gsbKatherine is false;
 
 Table of Random Critters (continued)
 NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
@@ -442,14 +432,14 @@ When Play begins:
 	now infect Name entry is "German Shepherd Bitch";
 	now heat cycle entry is 7;
 	now heat duration entry is 2;
-	now trigger text entry is "A sudden throb between your legs catches you off guard, startling a whimper from your throat as you feel a rush of heat between your legs. Nested between your thighs, your canine spade begins to puff up and swell, engorging and becoming looser, a slow but constant seepage of lubricating fluids starting to run down your thigh, making a mess of your [SkinSpeciesName of Player in lower case] flesh. You are in heat, and your body is making it easy for any male to find and impregnate you.";
+	now trigger text entry is "A sudden throb between your legs catches you off guard, startling a whimper from your throat as you feel a rush of heat between your legs. Nested between your thighs, your canine spade begins to puff up and swell, engorging and becoming looser, a slow but constant seepage of lubricating fluids starting to run down your thigh, making a mess of your [SkinSpeciesName of Player in lower case] flesh. You are in heat, and your body is making it easy for any male to find and impregnate you.[line break]";
 	now description text entry is "swollen and dripping German shepherd twat ";
 	now heat start entry is "[gsdheatstart]"; [Events that trigger at the start of the Heat, in the female-GSD case it increases the cunt tightness]
 	now heat end entry is "[gsdheatend]"; [Events that trigger at the end of the Heat, in the female-GSD case it reduces cunt tightness]
 	now inheat entry is "[defaultheat]"; [This happens each heat cycle, Default is to increase libido by 5]
 	now fheat entry is true;
 	now mpregheat entry is true;
-	now mpregtrigger entry is "A sudden throb in your ass catches you off guard, startling a whimper from your throat as you feel a rush of heat surging inside you. You can feel your fecund ass preparing itself to be bred as you go into a tainted heat. Your anal passage quivers and you feel a longing for a nice, canine cock to fill it.";
+	now mpregtrigger entry is "A sudden throb in your ass catches you off guard, startling a whimper from your throat as you feel a rush of heat surging inside you. You can feel your fecund ass preparing itself to be bred as you go into a tainted heat. Your anal passage quivers and you feel a longing for a nice, canine cock to fill it.[line break]";
 
 to say gsdheatstart:
 	if heatform is 0:

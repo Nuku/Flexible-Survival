@@ -5,9 +5,9 @@ Version 2 of More Misc Events by Kaleem mcintyre begins here.
 
 "Adds a series of random events to Flexible Survival."
 
-FoxMasterEncounters is a number that varies.
-
 Section 1- Unorthodox Sight
+
+FoxMasterEncounters is a number that varies.
 
 Table of GameEventIDs (continued)
 Object	Name
@@ -16,14 +16,14 @@ Unorthodox Sight	"Unorthodox Sight"
 Unorthodox Sight is a situation.
 ResolveFunction of Unorthodox Sight is "[ResolveEvent Unorthodox Sight]".
 Sarea of Unorthodox Sight is "Red".
+
 when play begins:
 	add Unorthodox Sight to BadSpots of FurryList;
 	add Unorthodox Sight to BadSpots of MaleList;
 
 to say ResolveEvent Unorthodox Sight:
 	say "     Suddenly overcome by the sensation that something is wrong, you quickly whip your head around, looking this way and that in an attempt to figure out what is amiss. Due to having managed to brave a great deal of dangers already, you know it is wise to listen to your instincts when they tell you that something is off. For now the street seems empty, with nothing but the burned-out husks of buildings on the side opposite you and a row of uninteresting shops along your side of the street. They seem to be the kind of places that virtually nobody would ever actually bother going into. You assume they only managed to survive at all because the rent was cheap here right at the edge of the red light district. Focusing on your other senses, you then hear movement somewhere down the street and around a corner. Whoever it is doesn't appear to be in a rush, but even so, they'll be here soon enough.";
-	say "     [bold type]What to do you want to do now?[roman type][line break]";
-	LineBreak;
+	say "[line break]     [bold type]What to do you want to do now?[roman type][line break]";
 	say "     ([link]Y[as]y[end link]) - Hide and observe who or what it could be.";
 	say "     ([link]N[as]n[end link]) - Just get out of here.";
 	if Player consents:
@@ -45,7 +45,6 @@ Section 2 - Desperation
 
 [Moved to Consolidated Outside Events]
 
-
 Section 3 - Family Fun
 
 Table of GameEventIDs (continued)
@@ -55,6 +54,7 @@ Family Fun	"Family Fun"
 Family Fun is a situation.
 ResolveFunction of Family Fun is "[ResolveEvent Family Fun]".
 Sarea of Family Fun is "Beach".
+
 when play begins:
 	add Family Fun to BadSpots of FurryList;
 	add Family Fun to BadSpots of MaleList;
@@ -64,7 +64,6 @@ to say ResolveEvent Family Fun:
 	say "     Curious about the peculiar sight, you follow a few yards behind them so as to not disturb their moment together. As the canine trio reaches a stretch of empty beach, they suddenly let go of their clasped hands and run away from the fox. You wonder why they would do that, only to realize with a start that they're actually playing a game of tag! While you watch, both of the big wolves take turns acting as the [']prey['] for the other two at a seemingly random interval. You take your leave as the game changes from tag to wrestling, quietly pleased that there is still something sweet left in the world despite the chaos and depravity of the city.";
 	increase score by 1;
 	now Family Fun is resolved;
-
 
 Section 4 - Magic
 
@@ -79,6 +78,7 @@ Auto Shop	"Auto Shop"
 Auto Shop is a situation.
 ResolveFunction of Auto Shop is "[ResolveEvent Auto Shop]".
 Sarea of Auto Shop is "Red".
+
 when play begins:
 	add Auto Shop to BadSpots of FurryList;
 	add Auto Shop to BadSpots of MaleList;
@@ -91,6 +91,5 @@ to say ResolveEvent Auto Shop:
 	say "     Unsure if those inside are actually sane or not, and guessing that no matter which, they might just draw you into their orgy given their current mood, you decide to gain some distance for now. Maybe returning here at another time could allow for a safer first contact...";
 	increase score by 1;
 	now Auto Shop is resolved;
-
 
 More Misc Events ends here.

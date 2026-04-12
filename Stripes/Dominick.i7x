@@ -185,8 +185,8 @@ object	name
 Dominick	"Dominick"
 
 Dominick is a man.
-understand "Dom" as Dominick.
 Dominick is in Happy Puppy Kennel.
+understand "Dom" as Dominick.
 ScaleValue of Dominick is 3. [human sized]
 SleepRhythm of Dominick is 0. [0 - awake at all times, 1 - day active, 2 - night active]
 Body Weight of Dominick is 5. [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]

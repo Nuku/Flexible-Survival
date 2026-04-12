@@ -3,7 +3,11 @@ Version 1 of Pewter Consort by Blue Bishop begins here.
 
 "Adds a Pewter Consort creature to Flexible Survival's Wandering Monsters table"
 
-Section 1 - Creature Responses
+a postimport rule: [bugfixing rules for players that import savegames]
+	choose a row with Name of "Pewter Consort" in Table of Random Critters;
+	now sex entry is "Male"; [infection never had female stats]
+
+Section 0 - Creature Responses
 
 consortinsight is a number that varies. [Consort Insight, entails how much the player knows about the Pewter Consort and their perception]
 
@@ -70,7 +74,7 @@ to say losetopewter:
 		say "     Appearing somewhat satisfied by making a mess of you, the creature eventually pulls off of you, leaving you an embarrassing, cum-stained mess. [if showlocale is true]You hear sounds in the distance, no doubt the sordid affair catching some attention, compelling you to gather your things and quickly flee[else]Eventually, you recover enough to gather your things, clean yourself off to the best of your ability, and depart[end if].";
 		CreatureSexAftermath "Player" receives "OralCock" from "Pewter Consort";
 
-Section 1.1 - Pewter Consort Bind
+Section 1 - Pewter Consort Bind
 
 pewtertorsosuppress is a truth state that varies.
 pewterheadcap is a number that varies. [Dictates, via scale, how many consorts might occupy a body region]
@@ -177,44 +181,32 @@ to pewterbind:
 			else if (obliging is true and (keychar is "o" or keychar in lower case matches the text "oblige")) or (obliging is false and (keychar is "a" or keychar in lower case matches the text "abide")) or keychar is "2":
 				if obliging is true:
 					say "     You choose to submit to their hold, [one of]hissing and caressing you in approval[or]their continued affection arousing and influencing you further[or]absorbed in the frenzy of flesh and motion[at random].";
-					pewteroccupyroll;
 					if a random chance of 2 in 3 succeeds, pewteroccupyroll;
-					if BodyName of Player is "Pewter Consort" and Player is pure:
-						if a random chance of 1 in 8 succeeds:
-							infect;
-					else if a random chance of 1 in 5 succeeds:
-						infect;
 					increase lustatt by 6 + (lustadjust * 2);
 				else:
 					say "     You choose to abide their hold, [one of]hissing and caressing you in approval[or]their continued affection arousing and influencing you further[or]absorbed in the frenzy of flesh and motion[at random].";
-					pewteroccupyroll;
-					if BodyName of Player is "Pewter Consort" and Player is pure:
-						if a random chance of 1 in 8 succeeds:
-							infect;
-					else if a random chance of 1 in 5 succeeds:
+				pewteroccupyroll;
+				if BodyName of Player is "Pewter Consort" and Player is pure:
+					if a random chance of 1 in 8 succeeds:
 						infect;
+				else if a random chance of 1 in 5 succeeds:
+					infect;
 				LineBreak;
 				wait for any key;
 			else if (boundrecover is true and (keychar is "r" or keychar in lower case matches the text "recover")) or (boundrecover is false and (keychar is "e" or keychar in lower case matches the text "endure")) or keychar is "3":
 				now enduring is true;
 				if boundrecover is true:
 					say "     With a brief flash of insight, you're able to find a glimpse of mental clarity within these confines, recovering a small portion of your lost humanity.";
-					if a random chance of 4 in 5 succeeds, pewteroccupyroll;
-					if BodyName of Player is "Pewter Consort" and Player is pure:
-						if a random chance of 1 in 9 succeeds:
-							infect;
-					else if a random chance of 1 in 6 succeeds:
-						infect;
 					SanBoost 4;
 					now boundrecover is false;
 				else:
 					say "     You fight to maintain clarity against their influence, [one of]hissing and caressing you nonetheless[or]their continued affection briefly less effective at arousing you further[or]absorbed in the frenzy of flesh and motion regardless[at random].";
-					if a random chance of 4 in 5 succeeds, pewteroccupyroll;
-					if BodyName of Player is "Pewter Consort" and Player is pure:
-						if a random chance of 1 in 9 succeeds:
-							infect;
-					else if a random chance of 1 in 6 succeeds:
+				if a random chance of 4 in 5 succeeds, pewteroccupyroll;
+				if BodyName of Player is "Pewter Consort" and Player is pure:
+					if a random chance of 1 in 9 succeeds:
 						infect;
+				else if a random chance of 1 in 6 succeeds:
+					infect;
 				LineBreak;
 				wait for any key;
 			else:
@@ -224,10 +216,11 @@ to pewterlustsate:
 	if Player is male and (Player is not female or pewtercockocc > 0 or pewtercuntocc is 0):
 		if pewtercockocc > 0:
 			if pewtercockocc > 1:
-				if pewtercockvar1 > 0 and pewtercockvar2 > 0:
-					say "     Unable to hold back any longer, you cry out in bliss, [pewtercockvar1 in words] of your dicks firing its [Cum Load Size of Player] load into the [if pewtercockvar1 > 1]consorts['] attending maws[else]consort's attending maw[end if], the [pewtercockvar2 in words] other[if pewtercockvar2 > 1]s[end if] unloaded into their rider[if pewtercockvar2 > 1]s[end if][if Cock Count of Player > pewtercockocc], those unattended further sullying your slick surroundings[end if]";
-				else if pewtercockvar1 > 0:
-					say "     Unable to hold back any longer, you cry out in bliss, [pewtercockvar1 in words] of your dicks firing its [Cum Load Size of Player] load into the [if pewtercockvar1 > 1]consorts['] attending maws[else]consort's attending maw[end if][if Cock Count of Player > pewtercockocc], those unattended further sullying your slick surroundings[end if]";
+				if pewtercockvar1 > 0:
+					if pewtercockvar2 > 0:
+						say "     Unable to hold back any longer, you cry out in bliss, [pewtercockvar1 in words] of your dicks firing its [Cum Load Size of Player] load into the [if pewtercockvar1 > 1]consorts['] attending maws[else]consort's attending maw[end if], the [pewtercockvar2 in words] other[if pewtercockvar2 > 1]s[end if] unloaded into their rider[if pewtercockvar2 > 1]s[end if][if Cock Count of Player > pewtercockocc], those unattended further sullying your slick surroundings[end if]";
+					else:
+						say "     Unable to hold back any longer, you cry out in bliss, [pewtercockvar1 in words] of your dicks firing its [Cum Load Size of Player] load into the [if pewtercockvar1 > 1]consorts['] attending maws[else]consort's attending maw[end if][if Cock Count of Player > pewtercockocc], those unattended further sullying your slick surroundings[end if]";
 				else:
 					say "     Unable to hold back any longer, you cry out in bliss, [pewtercockvar2 in words] of your dicks firing its [Cum Load Size of Player] load into the [if pewtercockvar2 > 1]consorts['] eager asses[else]consort's eager ass[end if][if Cock Count of Player > pewtercockocc], those unattended further sullying your slick surroundings[end if]";
 			else:
@@ -243,10 +236,10 @@ to pewterlustsate:
 					else:
 						say "     Unable to hold back any longer, you cry out in bliss, [if pewtercuntvar1 > 0][pewtercuntvar1 in words] of your cunts tightening around their invading tongues[else][pewtercuntvar2 in words] of your cunts tightening around their invading dicks[end if]";
 				else:
-					if pewtercuntvar1 > 0 and pewtercuntvar2 > 0:
-						say "     Unable to hold back any longer, you cry out in bliss, your cunt[if pewtercuntvar1 > 1][sfn][end if] tightening around the [pewtercuntvar1 in words] tonguing [if pewtercuntvar1 is 1]it[else][itthemf][end if], as with the [pewtercuntvar2 in words] other[if pewtercuntvar2 > 1]s[end if] fucking the doubtlessly strained thing[if pewtercuntvar2 > 1][sfn][end if]";
-					else if pewtercuntvar1 > 0:
+					if pewtercuntvar1 > 0:
 						say "     Unable to hold back any longer, you cry out in bliss, your cunt[if pewtercuntvar1 > 1][sfn][end if] tightening around the [pewtercuntvar1 in words] tonguing [if pewtercuntvar1 is 1]it[else][itthemf][end if]";
+						if pewtercuntvar2 > 0:
+							say ", as with the [pewtercuntvar2 in words] other[if pewtercuntvar2 > 1]s[end if] fucking the doubtlessly strained thing[if pewtercuntvar2 > 1][sfn][end if]";
 					else:
 						say "     Unable to hold back any longer, you cry out in bliss, your cunt[if pewtercuntvar2 > 1][sfn][end if] tightening around the [pewtercuntvar2 in words] fucking [if pewtercuntvar2 is 1]it[else][itthemf][end if]";
 			else:
@@ -357,21 +350,19 @@ to pewtergenitalapply:
 			if pewtercockocc is 0:
 				say "[line break]     You shudder at the sensation of a consort's tongue along the length of [if Cock Count of Player > 1]one of [end if]your [cock size desc of Player] dick[smn], his teasing only brief before his lips envelop its head, eager to taste your emergent sexual fluids as he continues to attend you.";
 			else:
-				say "[line break]     Another consort moves to suck off [if Cock Count of Player - pewtercockocc is 1]your lone, unattended dick[else]one of your unattended dicks[end if], joining the ";
 				if pewtercockvar1 > 0:
-					say "[pewtercockvar1 in words] other[if pewtercockvar1 > 1]s[end if] [if pewtercockvar2 > 0]and the [pewtercockvar2 in words] riding[else]attending[end if] you, all eager to milk you dry.";
+					say "[line break]     Another consort moves to suck off [if Cock Count of Player - pewtercockocc is 1]your lone, unattended dick[else]one of your unattended dicks[end if], joining the [pewtercockvar1 in words] other[if pewtercockvar1 > 1]s[end if] [if pewtercockvar2 > 0]and the [pewtercockvar2 in words] riding[else]attending[end if] you, all eager to milk you dry.";
 				else:
-					say "[pewtercockvar2 in words] riding you, all eager to milk you dry.";
+					say "[line break]     Another consort moves to suck off [if Cock Count of Player - pewtercockocc is 1]your lone, unattended dick[else]one of your unattended dicks[end if], joining the [pewtercockvar2 in words] riding you, all eager to milk you dry.";
 			increase pewtercockvar1 by 1;
 		else:
 			if pewtercockocc is 0:
 				say "[line break]     You writhe at the sensation of a consort's toned ass grinding along the length of [if Cock Count of Player > 1]one of [end if]your [cock size desc of Player] dick[smn], his teasing only brief before he shoves its head past his tight anal ring, eager to take their new guest out for a ride.";
 			else:
-				say "[line break]     Another consort moves to ride [if Cock Count of Player - pewtercockocc is 1]your lone, unattended dick[else]one of your unattended dicks[end if], joining the ";
 				if pewtercockvar2 > 0:
-					say "[pewtercockvar2 in words] other[if pewtercockvar2 > 1]s[end if] [if pewtercockvar1 > 0]and the [pewtercockvar1 in words] sucking you off[else]taking you[end if], all eager to milk you dry.";
+					say "[line break]     Another consort moves to ride [if Cock Count of Player - pewtercockocc is 1]your lone, unattended dick[else]one of your unattended dicks[end if], joining the [pewtercockvar2 in words] other[if pewtercockvar2 > 1]s[end if] [if pewtercockvar1 > 0]and the [pewtercockvar1 in words] sucking you off[else]taking you[end if], all eager to milk you dry.";
 				else:
-					say "[pewtercockvar1 in words] sucking you off, all eager to milk you dry.";
+					say "[line break]     Another consort moves to ride [if Cock Count of Player - pewtercockocc is 1]your lone, unattended dick[else]one of your unattended dicks[end if], joining the [pewtercockvar1 in words] sucking you off, all eager to milk you dry.";
 			increase pewtercockvar2 by 1;
 		increase pewtercockocc by 1;
 	else if Player is female and (a random chance of 1 in anallevel succeeds or (anallevel < 3 and pewterassocc > 0)):
@@ -407,21 +398,19 @@ to pewtergenitalapply:
 			if pewterassocc is 0:
 				say "[line break]     You suddenly feel a consort's tongue force its way past your anal ring, worming shamelessly into your tight hole, its motion slicked by the overwhelming prevalence of sexual fluids encompassing you and its saliva.";
 			else:
-				say "[line break]     Another creature joins in on the fun being had with your tailpipe, squeezing his writhing tongue past the ";
 				if pewterassvar1 > 0:
-					say "[pewterassvar1 in words] other[if pewterassvar1 > 1]s[end if] [if pewterassvar2 > 0]and the [pewterassvar2 in words] fucking[else]attending[end if] you, further putting a strain on your beleaguered hole.";
+					say "[line break]     Another creature joins in on the fun being had with your tailpipe, squeezing his writhing tongue past the [pewterassvar1 in words] other[if pewterassvar1 > 1]s[end if] [if pewterassvar2 > 0]and the [pewterassvar2 in words] fucking[else]attending[end if] you, further putting a strain on your beleaguered hole.";
 				else:
-					say "[pewterassvar2 in words] fucking you, further putting a strain on your beleaguered hole.";
+					say "[line break]     Another creature joins in on the fun being had with your tailpipe, squeezing his writhing tongue past the [pewterassvar2 in words] fucking you, further putting a strain on your beleaguered hole.";
 			increase pewterassvar1 by 1;
 		else:
 			if pewterassocc is 0:
 				say "[line break]     You suddenly feel a consort's dick squeeze its way past your anal ring, thrusting shamelessly into your tight hole, its motion slicked by the overwhelming prevalence of sexual fluids encompassing you.";
 			else:
-				say "[line break]     Another creature joins in on the fun being had with your tailpipe, squeezing his cock past the ";
 				if pewterassvar2 > 0:
-					say "[pewterassvar2 in words] other[if pewterassvar2 > 1]s[end if] [if pewterassvar1 > 0]and the [pewterassvar1 in words] tonguing[else]riding[end if] you, further putting a strain on your stuffed hole.";
+					say "[line break]     Another creature joins in on the fun being had with your tailpipe, squeezing his cock past the [pewterassvar2 in words] other[if pewterassvar2 > 1]s[end if] [if pewterassvar1 > 0]and the [pewterassvar1 in words] tonguing[else]riding[end if] you, further putting a strain on your stuffed hole.";
 				else:
-					say "[pewterassvar1 in words] tonguing you, further putting a strain on your stuffed hole.";
+					say "[line break]     Another creature joins in on the fun being had with your tailpipe, squeezing his cock past the [pewterassvar1 in words] tonguing you, further putting a strain on your stuffed hole.";
 			increase pewterassvar2 by 1;
 		increase pewterassocc by 1;
 
@@ -489,10 +478,7 @@ to say pewtercharacterassess:
 				say "split between attending [if pewterheadvar1 is 1 and pewterheadvar2 is 1]the tongue of one creature and the dick of another, left only with the taste of silvery pre and saliva[else if pewterheadvar1 is 2]the tongues of two creatures, their slick, writhing organs tormenting you in unison[else]two of the creatures['] dicks lodged firmly in your maw, forcing you to taste their silvery pre[end if]";
 			now tempnum is pewterbodyocc + pewtercockocc + pewtercuntocc + pewterassocc;
 			if tempnum > 0:
-				if pewterbodyocc is tempnum or pewtercockocc is tempnum or pewtercuntocc is tempnum or pewterassocc is tempnum:
-					say " and ";
-				else:
-					say ", ";
+				say "[if pewterbodyocc is tempnum or pewtercockocc is tempnum or pewtercuntocc is tempnum or pewterassocc is tempnum] and[else],[end if] ";
 		if pewterbodyocc > 0:
 			if pewtertorsosuppress is true:
 				say "embraced by a consort, his digits slickly caressing your [bodytype of Player] form";
@@ -500,42 +486,36 @@ to say pewtercharacterassess:
 				say "suckled upon by [pewterbodyocc in words] upon your teat[if pewterbodyocc > 1]s[end if], feeding and attending you";
 			now tempnum is pewtercockocc + pewtercuntocc + pewterassocc;
 			if tempnum > 0:
-				if pewtercockocc is tempnum or pewtercuntocc is tempnum or pewterassocc is tempnum:
-					say " and ";
-				else:
-					say ", ";
+				say "[if pewtercockocc is tempnum or pewtercuntocc is tempnum or pewterassocc is tempnum] and[else],[end if] ";
 		if pewtercockocc > 0 or pewtercuntocc > 0 or pewterassocc > 0:
 			say "made to writhe as ";
 		if pewtercockocc > 0:
 			if pewtercockocc > 1:
-				if pewtercockvar1 > 0 and pewtercockvar2 > 0:
-					say "[pewtercockvar1 in words] of your dicks [if pewtercockvar1 is 1]is[else]are[end if] sucked off, [pewtercockvar2 in words] other[if pewtercockvar2 > 1]s[end if] being ridden";
-				else if pewtercockvar1 > 0:
+				if pewtercockvar1 > 0:
 					say "[pewtercockvar1 in words] of your dicks [if pewtercockvar1 is 1]is[else]are[end if] sucked off";
+					if pewtercockvar2 > 0:
+						say ", [pewtercockvar2 in words] other[if pewtercockvar2 > 1]s[end if] being ridden";
 				else:
 					say "[pewtercockvar2 in words] of your dicks [if pewtercockvar2 is 1]is[else]are[end if] being ridden";
 			else:
 				say "[if Cock Count of Player > 1]one of [end if]your dick[smn] is [if pewtercockvar1 > 0]sucked off[else]being ridden[end if]";
 			now tempnum is pewtercuntocc + pewterassocc;
 			if tempnum > 0:
-				if pewtercuntocc is tempnum or pewterassocc is tempnum:
-					say " and ";
-				else:
-					say ", ";
+				say "[if pewtercuntocc is tempnum or pewterassocc is tempnum] and[else],[end if] ";
 		if pewtercuntocc > 0:
 			if pewtercuntocc > 1:
 				if Cunt Count of Player >= pewtercuntocc:
-					if pewtercuntvar1 > 0 and pewtercuntvar2 > 0:
-						say "[pewtercuntvar1 in words] of your cunts [if pewtercuntvar1 is 1]is[else]are[end if] being tongued, [pewtercockvar2 in words] other[if pewtercockvar2 > 1]s[end if] being fucked";
-					else if pewtercuntvar1 > 0:
+					if pewtercuntvar1 > 0:
 						say "[pewtercuntvar1 in words] of your cunts [if pewtercuntvar1 is 1]is[else]are[end if] being tongued";
+						if pewtercuntvar2 > 0:
+							say ", [pewtercockvar2 in words] other[if pewtercockvar2 > 1]s[end if] being fucked";
 					else:
 						say "[pewtercuntvar2 in words] of your cunts [if pewtercuntvar2 is 1]is[else]are[end if] being fucked";
 				else:
-					if pewtercuntvar1 > 0 and pewtercuntvar2 > 0:
-						say "your cunt[if Cunt Count of Player > 1]s are[else] is[end if] tongued by [pewtercuntvar1 in words], fucked by [pewtercockvar2 in words] other[if pewtercockvar2 > 1]s[end if][if Cunt Count of Player > 1] as they share your [Cunt Count of Player in words] holes[end if]";
-					else if pewtercuntvar1 > 0:
+					if pewtercuntvar1 > 0:
 						say "your cunt[if Cunt Count of Player > 1]s are[else] is[end if] tongued by [pewtercuntvar1 in words]";
+						if pewtercuntvar2 > 0:
+							say ", fucked by [pewtercockvar2 in words] other[if pewtercockvar2 > 1]s[end if][if Cunt Count of Player > 1] as they share your [Cunt Count of Player in words] holes[end if]";
 					else:
 						say "your cunt[if Cunt Count of Player > 1]s are[else] is[end if] fucked by [pewtercuntvar2 in words]";
 			else:
@@ -552,10 +532,6 @@ to say pewtercharacterassess:
 				say "your ass is being [if pewterassvar1 > 0]rimmed[else]pounded[end if] by one of them";
 
 Section 2 - Creature Insertion
-
-a postimport rule: [bugfixing rules for players that import savegames]
-	choose a row with Name of "Pewter Consort" in Table of Random Critters;
-	now sex entry is "Male"; [infection never had female stats]
 
 Table of CombatPrep (continued)
 name(text)	PrepFunction(text)

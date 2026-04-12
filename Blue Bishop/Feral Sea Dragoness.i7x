@@ -4,7 +4,7 @@ Version 6 of Feral Sea Dragoness by Blue Bishop begins here.
 
 "Adds a Feral Sea Dragoness to Flexible Survival's Wandering Monsters table"
 
-Section 1 - Creature Responses
+Section 0 - Creature Responses
 
 fsddom is a number that varies.
 lastfsdfeeding is a number that varies. lastfsdfeeding is usually 2500.
@@ -14,7 +14,7 @@ FSDOPEN is a number that varies. FSDOPEN is usually 0.
 
 to say fsdf attack:
 	project Figure of SeaDragoness_NSFW_icon;
-	if vorelevel is 3 and scalevalue of Player < 4 and (A random chance of 1 in 4 succeeds or (Player is kinky and a random chance of 1 in 3 succeeds)):
+	if vorelevel is 3 and scalevalue of Player < 4 and (a random chance of 1 in 4 succeeds or (Player is kinky and a random chance of 1 in 3 succeeds)):
 		if HP of Player > 0:
 			say "     You immediately throw up your arms and lower your guard, showing you don't wish to fight. She doesn't seem inclined to very much regard your submission as anything more than the opening for her and she betrays her innocent demeanor to immediately dive for you, maw wide open!";
 		else:
@@ -101,8 +101,8 @@ to say fsdf attack:
 		else:
 			say "     Carefully, she forces you onto your back by her snout, pinning you down in a same manner. She gives you a cute and affectionate look, much-maligned by her paradoxically bestial form. [if intelligence of Player > 14]You wager she's trying to sway you into compliance by appearing non-threatening, to little success[else]Uncertain of her intent, you remain cautious and wait[end if].";
 			WaitLineBreak;
-			If "Touched by Madness" is listed in feats of Player and ((Player is kinky and a random chance of 1 in 3 succeeds) or a random chance of 1 in 4 succeeds) and scalevalue of Player < 4 and FSDOPEN < 2 and inasituation is false:
-				If FFSDUBM is false:
+			if "Touched by Madness" is listed in feats of Player and ((Player is kinky and a random chance of 1 in 3 succeeds) or a random chance of 1 in 4 succeeds) and scalevalue of Player < 4 and FSDOPEN < 2 and inasituation is false:
+				if FFSDUBM is false:
 					say "     Suddenly, she appears to become confused about these circumstances, some otherworldly influence throwing her off-kilter, going so far that she almost seems to have lost track of where she is; however, this absent-mindedness is only momentary before she snaps back to attention, feral eyes aglint with a new, twisted intent. Her affections become more fervent and insistent. Slick, dripping tongue absolutely drenching your smaller form with her salty saliva before she finally relents.";
 					say "     By now, you're clearly aroused from these tainted fluids, but she doesn't even remotely seem interested in that. Rather, she would instead pull herself over you, soft underbelly grinding against your lubricated, [bodydesc of Player] frame before she stops, showing no desire to spare you of her massive weight, her reasoning by now very clear as you feel yourself pushed past the lips of her aquatic vent.";
 					WaitLineBreak;
@@ -115,7 +115,7 @@ to say fsdf attack:
 					say "     Wailing songs of her perverse need muffled within these confines, her portal tightens against your wholly engulfed frame, pulling you deeper into her slick depths as she seeks her wanton reprieve. This overwhelming heat; this hungry, demanding tunnel, now all-too familiar to you; it[if Player is not neuter]'s but a moment before it elicits your orgasm, sealing your fate when this is all that this dragoness needs to find bliss[else] torments you to no end, your fate soon sealed as the dragoness finds her bliss[end if], pulling you into that final, inevitable destination before your senses fade. The dragoness would no doubt recover and move on, the occupancy of her new captive not outwardly apparent to those who might see her large form, and doubtlessly happy that you are hers...";
 				if (Player is kinky and a random chance of 1 in 3 succeeds) or a random chance of 1 in 4 succeeds:
 					say "     In due time you come to, the thick, hard walls of an egg surrounding you; however, you feel yourself slightly tumbling and shifting about, and when you attempt to break free of the egg you find yourself unable to. The heat is overwhelming, your arousal quickly rising once more, [if Player is not neuter]driving you to pleasure yourself uncontrollably within these confines, making a further mess of yourself[else]forced to abide the torment of these demented confines[end if].";
-					if MaleList is banned or Player is FemalePreferred:
+					if MaleList is banned or (Player is FemalePreferred and FemaleList is not banned):
 						MultiInfect "Feral Sea Dragoness" repeats 2;
 					else:
 						MultiInfect "Feral Sea Dragon" repeats 2;
@@ -176,7 +176,7 @@ to say fsdf attack:
 							now FSDOPEN is 0;
 				else:
 					say "     In due time you come to, greeted by the thick and hard confines of an egg, light from the outside spilling through the translucent surface and compelling you to break yourself free. Exposed to the salty air once more, you were thankfully left on the beach, and you clean yourself off before gathering your belongings as they are, strewn across the beach.";
-					if MaleList is banned or Player is FemalePreferred:
+					if MaleList is banned or (Player is FemalePreferred and FemaleList is not banned):
 						infect "Feral Sea Dragoness";
 					else:
 						infect "Feral Sea Dragon";
@@ -244,7 +244,7 @@ to say fsdfeeding:
 	PlayerEat 15;
 	now lastfsdfeeding is turns;
 	if "Iron Stomach" is not listed in feats of Player or fsdfeedmemory is 3: [additional infection]
-		if MaleList is banned or Player is FemalePreferred:
+		if MaleList is banned or (Player is FemalePreferred and FemaleList is not banned):
 			infect "Feral Sea Dragoness";
 		else:
 			infect "Feral Sea Dragon";
@@ -259,7 +259,7 @@ To say fsdf loss:
 		say "     Very suddenly, she cries out, reveling in being rammed underneath a virile beast such as you. The sound of her voice, along with her clenching hole, is enough to make quick work of you, forcing you to roar out in pleasure as you finally fire off your [Cum Load Size of Player] load into the dragoness.";
 		say "     This is more than enough to trigger her own climax, her greedy hole milking every last drop of seed you have to offer her[if Ball Size of Player > 6], even as she visibly bloats to abide it[end if]. Eventually, you manage to pull yourself free of her, the dragoness turning to offer you some soft affections before she descends back into the depths of the ocean. As you recover and regain your clarity, you see her look back at you from within the water, perhaps hoping to see you again...";
 		CreatureSexAftermath "Feral Sea Dragoness" receives "PussyFuck" from "Player";
-		if MaleList is banned or Player is FemalePreferred:
+		if MaleList is banned or (Player is FemalePreferred and FemaleList is not banned):
 			infect "Feral Sea Dragoness";
 		else:
 			infect "Feral Sea Dragon";
@@ -276,7 +276,7 @@ To say fsdf loss:
 				LineBreak;
 				say "     You choose to leave the dragoness with her need unsated, going about your business once more.";
 
-Section 1-2 - Player Victory
+Section 1 - Player Victory
 
 to fsdfvicmenu:
 	say "     What will you do?[paragraph break]";
@@ -298,7 +298,7 @@ to fsdfvicmenu:
 		LineBreak;
 		if calcnumber is 1:
 			if Player is not male:
-				say "Invalid interaction: You don't meet the criteria.";
+				say "Invalid interaction: You don't meet the criteria.[paragraph break]";
 			else:
 				say "[FSDF_1]"; [Cunt Pitching]
 				if fsddom > 0 and a random chance of 1 in fsddom succeeds:
@@ -308,7 +308,7 @@ to fsdfvicmenu:
 				now Trixieexit is true;
 		else if calcnumber is 2:
 			if Player is not male:
-				say "Invalid interaction: You don't meet the criteria.";
+				say "Invalid interaction: You don't meet the criteria.[paragraph break]";
 			else:
 				say "[FSDF_2]"; [Anal Pitching]
 				if fsddom > 0 and a random chance of 1 in fsddom succeeds:
@@ -318,7 +318,7 @@ to fsdfvicmenu:
 				now Trixieexit is true;
 		else if calcnumber is 3:
 			if Player is not male:
-				say "Invalid interaction: You don't meet the criteria.";
+				say "Invalid interaction: You don't meet the criteria.[paragraph break]";
 			else:
 				say "[FSDF_3]"; [Oral Receiving Cock]
 				if fsddom > 0 and a random chance of 1 in fsddom succeeds:
@@ -328,7 +328,7 @@ to fsdfvicmenu:
 				now Trixieexit is true;
 		else if calcnumber is 4:
 			if Player is not female:
-				say "Invalid interaction: You don't meet the criteria.";
+				say "Invalid interaction: You don't meet the criteria.[paragraph break]";
 			else:
 				say "[FSDF_4]"; [Oral Receiving Cunt]
 				if fsddom > 0 and a random chance of 1 in fsddom succeeds:
@@ -346,7 +346,6 @@ to fsdfvicmenu:
 		else:
 			say "     You have some second thoughts and choose against having your way with the dragoness, leaving her to go about your business once more."; [turn down]
 			now Trixieexit is true;
-		if Trixieexit is false, LineBreak;
 
 to fsdfdomshift:
 	if fsddom < 8:
@@ -365,6 +364,7 @@ to say FSDF_1: [Cunt Pitching]
 	else:
 		LineBreak;
 		now tempnum is 0;
+	now tempnum2 is 0;
 	if Cock Count of Player > 1: [1 = Yes, cunt. 2 = Shared, ass and cunt. 0 = No.]
 		say "     You figure you can use [if Cock Count of Player is 2]both[else]two[end if] of your cocks. Shall you[if Cock Length of Player < 20]?[else]? You're probably too well-endowed to fit both of them in there, though, so the only choice you have is to stick the other up her ass.[end if]";
 		if Player consents:
@@ -380,9 +380,6 @@ to say FSDF_1: [Cunt Pitching]
 				LineBreak;
 		else:
 			LineBreak;
-			now tempnum2 is 0;
-	else:
-		now tempnum2 is 0;
 	if tempnum2 is not 2:
 		say "     Exposing your [cock size desc of Player] dick[smn] to the open air, [if tempnum is 1]your prior bit of fun has already left you hard, quickly sinking[else]it takes a little work to get you fully hard before slowly sinking[end if] [if tempnum2 is 1 and Cock Count of Player > 2]the head of two of them[else if tempnum2 is 1]the head of both of them[else]its head[end if] into the monster's[if Cock Length of Player > 18 or tempnum2 is 1] tight[end if] hole. ";
 	else:
@@ -431,6 +428,7 @@ to say FSDF_2: [Anal Pitching]
 	else:
 		LineBreak;
 		now tempnum is 0;
+	now tempnum2 is 0;
 	if Cock Count of Player > 1: [1 = Yes, ass. 2 = Shared, ass and cunt. 0 = No.]
 		say "     You figure you can use [if Cock Count of Player is 2]both[else]two[end if] of your cocks. Shall you[if Cock Length of Player < 20]?[else]? You're probably too well-endowed to fit both of them in her ass, so the only choice you have is to go for both holes.[end if]";
 		if Player consents:
@@ -446,9 +444,6 @@ to say FSDF_2: [Anal Pitching]
 				LineBreak;
 		else:
 			LineBreak;
-			now tempnum2 is 0;
-	else:
-		now tempnum2 is 0;
 	if tempnum2 is not 2:
 		say "     Exposing your [cock size desc of Player] dick[smn] to the open air, [if tempnum is 1]your prior bit of fun has already left you hard, quickly sinking[else]it takes a little work to get you fully hard before slowly sinking[end if] [if tempnum2 is 1 and Cock Count of Player > 2]the head of two of them[else if tempnum2 is 1]the head of both of them[else]its head[end if] into the monster's[if Cock Length of Player > 18 or tempnum2 is 1] tight[end if] asshole. ";
 	else:
@@ -554,19 +549,17 @@ to say FSDF_5: [Oral Giving Cunt]
 		LineBreak;
 		say "     Lowering yourself to the sea dragoness's inviting cunt, your scent is flooded with a cocktail of saltwater and her feminine odor, inviting your tongue to caress along her supple lips. Feminine portal [if scalevalue of Player < 4]barely phased by your small size[else]hardly phased by the size[end if] as you plunge into her depths, supple lips squeezing around you tightly, its owner letting out a soft coo of pleasure as your slick, writhing appendage works its way in deeper.";
 		now tempnum is 1;
-	else if anallevel is 3:
-		LineBreak;
-		say "     Very well, shall you be a bit rougher on the beast and stimulate her anally? Otherwise, you'll keep things simple.";
-		if Player consents:
-			LineBreak;
-			say "     Shifting a bit, your hand moves to access the sea dragoness's tailpipe, forcing a digit into its tight, supple depths. Weakly cooing as you assault her so, you show little restraint in forcing another, and another, until you're properly fisting the beast. Writhing lustfully against your[if scalevalue of Player > 3] substantial[end if] intrusion, her cunt oozes with her tainted honey, strained by your persisting abuse.";
-			now tempnum is 2;
-		else:
-			LineBreak;
-			now tempnum is 0;
 	else:
 		LineBreak;
 		now tempnum is 0;
+		if anallevel is 3:
+			say "     Very well, shall you be a bit rougher on the beast and stimulate her anally? Otherwise, you'll keep things simple.";
+			if Player consents:
+				LineBreak;
+				say "     Shifting a bit, your hand moves to access the sea dragoness's tailpipe, forcing a digit into its tight, supple depths. Weakly cooing as you assault her so, you show little restraint in forcing another, and another, until you're properly fisting the beast. Writhing lustfully against your[if scalevalue of Player > 3] substantial[end if] intrusion, her cunt oozes with her tainted honey, strained by your persisting abuse.";
+				now tempnum is 2;
+			else:
+				LineBreak;
 	if Player is not neuter:
 		say "     Your continued attention quickly picks up in pace, fueled by your own lust. Driven by her submissive instinct, the beast moves her head down to meet your crotch, intent on attending you in turn. Shall you oblige her offering?";
 		if Player consents:
@@ -827,7 +820,7 @@ to fsdfvore:
 			if boundcounter is 5:
 				say "     The sea dragoness's body churns and she seems to have reached a point where she can keep you down. It seems your prolonged presence here has given you no other choice but to leave the beast through the other way out...[paragraph break]";
 				now boundmod2 is 1;
-				increase boundcounter by 1;
+				now boundcounter is 6;
 			if boundsegment is 1:
 				say "     Lost in the utter blackness of the sea dragoness's gullet, you feel yourself constantly being pushed downward to your inevitable destination, slick tunnel tightly wrapped around you. Your captor [one of]churrs lowly, causing your prison to tremble as she feigns innocence[or]seems to be trying to physically force you the rest of the way down with one of her fins[or]audibly endeavors to swallow you down, each attempt constricting you more firmly[purely at random]. You imagine your only active option is to [bold type]S[roman type]truggle enough until she lets you go, else you can [if obliging is true][bold type]O[roman type]blige[else][bold type]A[roman type]bide[end if] her, or [if boundrecover is true][bold type]R[roman type]ecover from[else][bold type]E[roman type]ndure[end if] these questionable circumstances.";
 			else if boundsegment is 2:
@@ -1038,28 +1031,28 @@ When Play begins:
 	now infect Name entry is "Feral Sea Dragoness";
 	now heat cycle entry is 7;
 	now heat duration entry is 3;
-	now trigger text entry is "A groan of excitement fills you as quivers of unexpected delight and need run through your loins, your cunt quivering with need. You slide a hand between your legs and play with yourself, but find little relief for your growing urges as thoughts of the sea and its myriad, sexy creatures begin seeping into your mind. You can feel your dripping lips becoming full and engorged in a wanton display of your body's need to be bred. With this realization, it is clear that you've gone into heat.";
+	now trigger text entry is "A groan of excitement fills you as quivers of unexpected delight and need run through your loins, your cunt quivering with need. You slide a hand between your legs and play with yourself, but find little relief for your growing urges as thoughts of the sea and its myriad, sexy creatures begin seeping into your mind. You can feel your dripping lips becoming full and engorged in a wanton display of your body's need to be bred. With this realization, it is clear that you've gone into heat.[line break]";
 	now description text entry is "";
 	now heat start entry is "[fsdheatstart]"; [Events that trigger at the start of the Heat, in the GSD case it increases the cunt tightness]
 	now heat end entry is "[fsdheatend]"; [Events that trigger at the end of the Heat, in the GSD case it reduces cunt tightness]
 	now inheat entry is "[fsdinheat]"; [This happens each heat cycle, Default is to increase libido by 5]
 	now fheat entry is true;
 	now mpregheat entry is true;
-	now mpregtrigger entry is "A groan of excitement fills you as quivers of unexpected delight and need run through your lower abdomen, your ass quivering with need. You slide a hand between your legs and play with your asshole, but find little relief for your growing urges as thoughts of the sea and its myriad, sexy creatures begin seeping into your mind. You can feel your hole rhythmically clenching and relaxing, becoming full and engorged in preparation for your body's need to be bred. With this realization, it is clear that you've gone into some strange heat.";
+	now mpregtrigger entry is "A groan of excitement fills you as quivers of unexpected delight and need run through your lower abdomen, your ass quivering with need. You slide a hand between your legs and play with your asshole, but find little relief for your growing urges as thoughts of the sea and its myriad, sexy creatures begin seeping into your mind. You can feel your hole rhythmically clenching and relaxing, becoming full and engorged in preparation for your body's need to be bred. With this realization, it is clear that you've gone into some strange heat.[line break]";
 
 When Play begins:
 	Choose a blank row from Table of infection heat;
 	now infect Name entry is "Feral Sea Dragon";
 	now heat cycle entry is 7;
 	now heat duration entry is 3;
-	now trigger text entry is "A groan of excitement fills you as quivers of unexpected delight and need run through your loins, your cunt quivering with need. You slide a hand between your legs and play with yourself, but find little relief for your growing urges as thoughts of the sea and its myriad, sexy creatures begin seeping into your mind. You can feel your dripping lips becoming full and engorged in a wanton display of your body's need to be bred. With this realization, it is clear that you've gone into heat.";
+	now trigger text entry is "A groan of excitement fills you as quivers of unexpected delight and need run through your loins, your cunt quivering with need. You slide a hand between your legs and play with yourself, but find little relief for your growing urges as thoughts of the sea and its myriad, sexy creatures begin seeping into your mind. You can feel your dripping lips becoming full and engorged in a wanton display of your body's need to be bred. With this realization, it is clear that you've gone into heat.[line break]";
 	now description text entry is "";
 	now heat start entry is "[fsdheatstart]"; [Events that trigger at the start of the Heat, in the GSD case it increases the cunt tightness]
 	now heat end entry is "[fsdheatend]"; [Events that trigger at the end of the Heat, in the GSD case it reduces cunt tightness]
 	now inheat entry is "[fsdinheat]"; [This happens each heat cycle, Default is to increase libido by 5]
 	now fheat entry is true;
 	now mpregheat entry is true;
-	now mpregtrigger entry is "A groan of excitement fills you as quivers of unexpected delight and need run through your lower abdomen, your ass quivering with need. You slide a hand between your legs and play with your asshole, but find little relief for your growing urges as thoughts of the sea and its myriad, sexy creatures begin seeping into your mind. You can feel your hole rhythmically clenching and relaxing, becoming full and engorged in preparation for your body's need to be bred. With this realization, it is clear that you've gone into some strange heat.";
+	now mpregtrigger entry is "A groan of excitement fills you as quivers of unexpected delight and need run through your lower abdomen, your ass quivering with need. You slide a hand between your legs and play with your asshole, but find little relief for your growing urges as thoughts of the sea and its myriad, sexy creatures begin seeping into your mind. You can feel your hole rhythmically clenching and relaxing, becoming full and engorged in preparation for your body's need to be bred. With this realization, it is clear that you've gone into some strange heat.[line break]";
 
 to say fsdheatstart:
 	if heatform is 0:	[female heat has added effects]

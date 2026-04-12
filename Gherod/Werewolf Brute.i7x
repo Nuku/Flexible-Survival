@@ -48,9 +48,9 @@ to say Werewolf Brute Wins:
 				WaitLineBreak;
 				say "     [italic type]Though, as his throbbing intensifies, you are only teased with a couple of warning shots before he slides his knot into you. 'Ohh... Fuck... This one's gonna be so big[if Player is female]... It's gotta go in the proper place!' He warns as he quickly pulls out of your anus and mercilessly shoves his big lupine cock past your womanhood, so hard that it even feels mildly painful. Not only he is now penetrating your vagina, but also pushes it all the way in, even past his knot, and locks himself[else] you're gonna look like a pregnant bitch...' He warns as he lets out a loud grunt, pushing his big lupine cock all the way into you, that swollen knot of his sliding past your anal ring and effectively locking the big werewolf[end if] inside you. Then, as his overgrown balls rest against your skin, you feel each pump of his massive load invading you, an amount so big and so great that you feel it hitting you like a geyser, filling you up so much and so quickly you can even feel [if Player is female]your womb[else]your bowels[end if] extending to keep all that he gives you. 'Take it all, pup!' He shouts as he takes you in for an embrace, pressing his whole body against you and towards the ground, howling in pleasure. 'You deserve every drop...! Fuck... YEAH!'";
 				say "     You continue to feel his meat throbbing and filling you up, until your insides swell up due to all the cum he pumps into you, for like a full minute, in which you are unable to move due to two reasons, one of which is the fact he is pinning you down, and the other being the weight you feel within you from the ridiculous amount of jizz sloshing in there. Once the beastman is done breeding you, he takes the next following minutes to cuddle with you, licking your face all over while he waits for his knot to deflate. 'This is what you get for coming back to take it, pup. And I could keep filling you up, if you wanted... well, me and my pack, even.' His cock still twitches inside you slightly as he says this.[roman type][line break]";
-				CreatureSexAftermath "Player" receives "[if Player is female]Pussy[else]Ass[end if]Fuck" from "Werewolf Brute";
 				WaitLineBreak;
 				say "     Once the werewolf can finally pull his dick out of you, he does so and stands up, leaving on lying down on the floor with cum leaking through your [if Player is female]gaping cunt[else]stretched asshole[end if]. 'Keep that up and I might actually bring you over. Maybe we can see how many loads we can fit inside you before you start leaking wolf cum out of every hole in your body. Hehe...' He then walks away. You definitely have to take some time to be able to feel your legs and get up on your feet in order to take your leave, but this time, you must also wait until your body has processed all the cum inside you... Somehow.";
+				CreatureSexAftermath "Player" receives "[if Player is female]Pussy[else]Ass[end if]Fuck" from "Werewolf Brute";
 			else: [normal ending]
 				say "     Then, finally, you feel several hot gushes of creamy seed being delivered in quick succession right into your bowels as the large beastman locks himself inside you, taking you in for an embrace as he presses his whole body against you and towards the ground, howling in pleasure. 'That's right...! Fuck yes! Take it all in, little pup...' he grunts and moans in utter bliss as he continues to unload his full balls inside you. Helpless to the situation, you are forced to take everything in and endure a long time of cuddling as he licks your face waiting for his knot to deflate. 'Love being ballsdeep on someone like this. You sure you don't wanna pay my pack a visit?' he asks, in an obvious teasing way, but you are even too exhausted to even think of replying.";
 				WaitLineBreak;
@@ -128,8 +128,6 @@ to say WerewolfBruteLosesSexMenu:
 			say "     You decide to leave him there and start walking away, turning your attention to more important matters. He begs you to not leave him like that, but you pay no further mind to the werewolf brute.";
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options], or 0 to exit.";
-	wait for any key;
-	clear the screen and hyperlink list;
 
 to say WerewolfBruteLosesBodyWorship:
 	if fightoutcome is 11:
@@ -296,7 +294,7 @@ to say WerewolfBruteLair:
 	CreatureSexAftermath "Player" receives "AssFuck" from "Werewolf Brute";
 	if Player is female:
 		CreatureSexAftermath "Player" receives "PussyFuck" from "Werewolf Brute";
-	AttemptToWait;
+	WaitLineBreak;
 	move player to Lair Of The Lupines Oubliette;
 
 Section 3 - Creature Insertion

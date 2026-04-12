@@ -89,8 +89,6 @@ Section 3 - overrides for included places
 
 [this is the stuff from the main story.ni file. Other content is in their files.]
 
-the scent of Doctor Matt is "     [if HP of Doctor Matt is not 100]Safely encapsulated in his environment suit, he cannot be smelled[else]The doctor isn't here, and his tape recorder smells like old plastic[end if].".
-
 [instead of sniffing Smith Haven Mall Lot:
 	say "The parking lot smells of the smashed cars and the sticky remains left when their drivers were infected.";]
 

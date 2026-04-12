@@ -152,7 +152,7 @@ To say QytatStatusQuo:
 
 To say KarishaHelp1:
 	say "     Her eyes light up at the offer of assistance. 'I would be very grateful for your help actually. I am only one person, you see, and not many single-sex are willing to aid a herm, even if she is doing her level best to assist those beneath her station,' she adds coldly. 'However, I have heard that there is a male gryphon who appreciates what I do here, and might be able to send some help my way. His name is Quintus and he lives in the informal settlement east of the Qytat fountain. Speak to him and ask if he is willing to assist in the good work we do here, can you do that?'";
-	Say "     ([link]Y[as]y[end link]) - Yes, you will help the tall herm.";
+	say "     ([link]Y[as]y[end link]) - Yes, you will help the tall herm.";
 	say "     ([link]N[as]n[end link]) - No, perhaps later.";
 	if Player consents:
 		LineBreak;
@@ -351,7 +351,7 @@ to say DekkanPersonalDescription:
 
 to say DekkanAssistance1:
 	say "     'Now that you ask, there is something you could assist me with. I need to speak with Quintus, the leader of the primary rebellion faction here in the city. I must convince him to speak out against the violence in this city. Nothing good can come of it. He can be found in the amphitheater west of the fountain. Convince him to come here and speak to me, and I will vouch for you to the rest of the gryphon community. What say you?'";
-	Say "     ([link]Y[as]y[end link]) - Yes, you will help the old priest.";
+	say "     ([link]Y[as]y[end link]) - Yes, you will help the old priest.";
 	say "     ([link]N[as]n[end link]) - No, perhaps later.";
 	if Player consents:
 		LineBreak;
@@ -551,7 +551,7 @@ To say QuintusDekkan1:
 		say "     You tell him about the old priest's request to speak and he sighs deeply. 'I have told that old coot that I am not interested in quelling my flock. The citizens of Qytat a'th Lundrues have tried to be diplomatic and it has not got us anywhere but here.' He indicates the ramshackle tent about him as he considers your request a moment longer. 'Still, I suppose it cannot hurt to talk to the old bird; he means well and perhaps our goals are not so unaligned. Tell him I will see him when I have the time. For now I am busy.' I guess you cannot hope for more than that.";
 		TraitGain "QuintusDekkanTask1Success" for Quintus;
 	else:
-		say "     You mention that the old priest is still waiting to hear from him to which Quintus responds, 'I told you already that I would see him when I am able. For now I have no time for idle chit-chat. Good day!'";
+		say "     You mention that the old priest is still waiting to hear from him to which Quintus responds, 'I told you already that I would see him when I am able. For now I have no time for idle chitchat. Good day!'";
 	say "[line break]     [Bold Type]***Content currently under development. This quest will be continued in the next Qytat a'th Lundrues update.***[roman type][line break]";
 
 To say QuintusKarisha1:

@@ -5,13 +5,9 @@ Version 1 of Math Teacher by Stripes begins here.
 
 Section 1 - Creature Responses
 
-
 to say losetomathteacher:
 	if Player is female:
-		if Player is male:
-			say "     The math teacher stands with her spine perfectly straight and glares at you sternly. 'You,' she says, 'have been a very naughty student. Turn around.' You cannot help but comply, intimidated and oddly unable to get the fear of your old high school principal out of your head. The math teacher raises her ruler and slaps your ass - hard. She slaps again and again, pausing occasionally to squeeze one of your cheeks. Finally, after you feel your ass MUST be in more pain than possible, the creature pushes you to all fours.";
-		else:
-			say "     The teacher glares at you through her spectacles. 'Young lady,' she barks, 'you need to be taught a lesson about disrespecting mathematics.' She pushes you to the ground and exposes your bottom. You cannot help but comply, cursing yourself for not having paid more attention during [one of]Calc III[or]Algebra 101[or]trigonometry[at random]. The math teacher raises her ruler and slaps your ass - hard. She takes her ruler and smacks it against your rear, eliciting from you pained gasps as your ass turns pink from the abuse. She only pauses occasionally to squeeze one of your cheeks.";
+		say "     The [if Player is male]math teacher stands with her spine perfectly straight and glares at you sternly. 'You,' she says, 'have been a very naughty student. Turn around.' You cannot help but comply, intimidated and oddly unable to get the fear of your old high school principal out of your head. The math teacher raises her ruler and slaps your ass - hard. She slaps again and again, pausing occasionally to squeeze one of your cheeks. Finally, after you feel your ass MUST be in more pain than possible, the creature pushes you to all fours[else]teacher glares at you through her spectacles. 'Young lady,' she barks, 'you need to be taught a lesson about disrespecting mathematics.' She pushes you to the ground and exposes your bottom. You cannot help but comply, cursing yourself for not having paid more attention during [one of]Calc III[or]Algebra 101[or]trigonometry[at random]. The math teacher raises her ruler and slaps your ass - hard. She takes her ruler and smacks it against your rear, eliciting from you pained gasps as your ass turns pink from the abuse. She only pauses occasionally to squeeze one of your cheeks[end if].";
 		if a random chance of 1 in 3 succeeds:
 			say "     You hear the faint sound of clothing crumpling to the floor. With the clacking of heels against the ground, the teacher walks in front of you. With her skirt and panties gone, you are treated to the sight of her eight-inch penis bobbing erect in front of your face. 'Now, you need to make up for interrupting the class,' she barks. You obediently take the cock into your mouth and start to bob your head, still wincing from your spanking. After a few moments, the cock suddenly is pulled from your mouth and paints your face white with her spunk. 'Now, go clean yourself up and [one of]finish your homework next time[or]don't be late for class again[or]don't let me catch you cheating again[at random].' With that, the deluded teacher walks away, a slight annoyance evident in her pace.";
 		else:
@@ -29,7 +25,7 @@ to say losetomathteacher:
 		say "     The math teacher stares down at you and mumbles about the terrible state of public education before pushing you down onto all fours. 'Look at you,' she says, groping your bare groin. 'You're neither convex nor concave. Your previous professors clearly did not spend enough time preparing you before sending you to my class.' With that, she starts to slap you with her ruler. After several painful swats that leave your ass sore, you hear the rustle of clothes as she drops her skirt and panties, exposing her eight-inch cock. She lines it up with your tight pucker and slowly sinks it into you. 'This should teach you to [one of]be more mathematically interesting than zero next time[or]be more geometrically pleasing when you come to class[or]score better than a zero on the gender numerics quiz[at random],' she says with a moan as she thrusts hard into you. You groan between the pleasure of the fucking and the soreness of your tender ass. As she's about to cum, she pulls out and sprays her seed across your bottom, leaving you sticky with the professor's semen. She gives your bare crotch a swat to further emphasize her displeasure before striding away, heels clacking as she goes.";
 
 to say beatthemathteacher:
-	let mathnum be 0;
+	[let mathnum be 0;]
 	say "     You push the math teacher onto all fours and flip up the back of her dress. Exposing her rear, you take her ruler and slap her rump with several thwacks, venting ancient frustrations with your previous professors as well as disciplining this one for attacking you. She starts to moan and you can see her panties getting wet and becoming stretched taut by her erection.";
 	if Player is herm:
 		say "     Shall you have some more fun with her? You could [link]fuck her (1)[as]1[end link], [link]ride her cock (2)[as]2[end link] or [link]let her go (3)[as]3[end link].";
@@ -37,10 +33,9 @@ to say beatthemathteacher:
 		while calcnumber < 1 or calcnumber > 3:
 			say "Choice? (1-3)>";
 			get a number;
-			if calcnumber is 1 or calcnumber is 2 or calcnumber is 3:
-				break;
-			else:
+			if calcnumber < 1 or calcnumber > 3:
 				say "Invalid choice. Type [link]1[end link] to fuck her, [link]2[end link] to ride her cock or [link]3[end link] to let her go.";
+		LineBreak;
 		if calcnumber is 1:
 			say "[mathteachsex1]";
 		else if calcnumber is 2:
@@ -48,23 +43,25 @@ to say beatthemathteacher:
 		else:
 			say "     Not interested in more fun, you give her a few final swats before sending her on her way. She grumbles something about unruly students and walks away as quickly as her sore ass will let her, heels clacking all the way.";
 	else if Player is male:
-		say "     [bold type]Shall you have some fun with her? You could fuck her or just let her go.[roman type][line break]";
-		LineBreak;
+		say "[line break]     [bold type]Shall you have some fun with her? You could [link]fuck her (Y)[as]y[end link] or just [link]let her go (N)[as]n[end link].[roman type][line break]";
 		say "     ([link]Y[as]y[end link]) - Fuck her.";
 		say "     ([link]N[as]n[end link]) - Let her go.";
 		if Player consents:
+			LineBreak;
 			say "[mathteachsex1]";
 		else:
+			LineBreak;
 			say "     Not interested in more fun, you give her a few final swats before sending her on her way. She grumbles something about unruly students and walks away as quickly as her sore ass will let her, heels clacking all the way.";
 	else if Player is female:
-		say "     ";
-		say "     [bold type]Shall you have some more fun with her? You could ride her cock or let her go.[roman type][line break]";
-		LineBreak;
+		[say "     ";]
+		say "[line break]     [bold type]Shall you have some more fun with her? You could [link]ride her cock (Y)[as]y[end link] or [link]let her go (N)[as]n[end link].[roman type][line break]";
 		say "     ([link]Y[as]y[end link]) - Ride her cock.";
 		say "     ([link]N[as]n[end link]) - Let her go.";
 		if Player consents:
+			LineBreak;
 			say "[mathteachsex2]";
 		else:
+			LineBreak;
 			say "     Not interested in more fun, you give her a few final swats before sending her on her way. She grumbles something about unruly students and walks away as quickly as her sore ass will let her, heels clacking all the way.";
 	else:
 		say "     You give her a few final swats before sending her on her way. She grumbles something about unruly students and walks away as quickly as her sore ass will let her, heels clacking all the way.";
@@ -77,10 +74,6 @@ to say mathteachsex2:
 	say "     Tossing aside the meter stick, you push down her panties and push her down onto her tender rear. Grabbing her cock, you move over her crotch and lower your wet pussy down onto it with a moan of pleasure. As you start to ride in her lap, she tries to muffle her moans of pleasure at first, but soon she's eagerly getting into it despite her previously stern demeanor. She wraps her arms around you, mumbling something about [one of]earning extra credit[or]maybe being able to adjust your grade a little[or]correctly solving for cream pi[at random]. You ride the herm professor until you can get her to cum, shooting her hot seed into your waiting cunt as you climax as well. Once she's drained, you get up and leave her lying there on the floor, mutter numbers to herself as if evaluating your cunt and grading the quality of the fuck you gave her.[impregchance]";
 
 Section 2 - Creature Insertion
-
-to say mathteacherdesc:
-	let testnum be a random number between 1 and 4;
-	say "     You find yourself faced with a strangely human foe with a stern expression on her pretty female face. She has a pair of wire-framed glasses in from of her strict, watchful eyes and her brown hair is kept in a tight bun. She wears red lipstick. She is dressed in a white, button-up shirt with a brown, knee-length skirt. She has a pocket protector which holds a couple of pens and a slide rule. She holds a long, metric ruler in one hand and a heavy [one of]calculus textbook[or]textbook on complex differential equations[or]textbook on number theory[or]mathematics textbook[at random] under her other arm. Several papers, labeled as '[one of]Student Killer Exam [testnum][or]Brain Breaker Quiz [testnum][or]Impossible Assignment [testnum][or]Non-Euclidean Geometry Test of Doom[at random]' and slashed full of red F's, are sticking out of the book. Her brown heels click loudly as she steps towards you, slapping the ruler across her palm. With each slap, you notice a twitch under her skirt, warning you that there's more to this sexy math teacher than a her sexy ass and pert breasts.";
 
 Table of CombatPrep (continued)
 name(text)	PrepFunction(text)
@@ -108,7 +101,7 @@ When Play begins:
 	now attack entry is "[one of]The teacher swats you painfully with her ruler![or]The professor bashes you with her textbook, making numbers swirl around in your eyes temporarily![or]The math teacher confuses you by asking you a math question that derails your brain. When you can't answer in time, she screams that you get an F and clubs you with her textbook![or]She runs her hands over her [if a random chance of 2 in 3 succeeds]D-cup breasts[else]plump ass cheeks[end if] while making sexy comments about their area, volume, density, elasticity and other numerical attributes, ending by summarizing them as [if a random chance of 1 in 3 succeeds]a 10 out of 10[else if a random chance of 1 in 2 succeeds]an A+[else]worth 10 bonus points[end if]. While unusual, this wanton display wears down your resistance to her advances![at random]";
 	now defeated entry is "[beatthemathteacher]";
 	now victory entry is "[losetomathteacher]";
-	now desc entry is "[mathteacherdesc]";
+	now desc entry is "     You find yourself faced with a strangely human foe with a stern expression on her pretty female face. She has a pair of wire-framed glasses in from of her strict, watchful eyes and her brown hair is kept in a tight bun. She wears red lipstick. She is dressed in a white, button-up shirt with a brown, knee-length skirt. She has a pocket protector which holds a couple of pens and a slide rule. She holds a long, metric ruler in one hand and a heavy [one of]calculus textbook[or]textbook on complex differential equations[or]textbook on number theory[or]mathematics textbook[at random] under her other arm. Several papers, labeled as '[one of]Student Killer Exam [a random number between 1 and 4][or]Brain Breaker Quiz [a random number between 1 and 4][or]Impossible Assignment [a random number between 1 and 4][or]Non-Euclidean Geometry Test of Doom[at random]' and slashed full of red F's, are sticking out of the book. Her brown heels click loudly as she steps towards you, slapping the ruler across her palm. With each slap, you notice a twitch under her skirt, warning you that there's more to this sexy math teacher than a her sexy ass and pert breasts.[line break]";
 	now face entry is "a female human's head. You have wire-framed reading glasses in front of your strict eyes. Your brown hair is kept in a neat bun, and you're wearing red lipstick. From time to time your thoughts [one of]drift to numbers and equations rather than words and ideas[or]get caught up in a numerical analysis of the genitals of the various creatures you spot[or]mull over what paths through the city might get you the most sex[at random]";
 	now body entry is "a human female body. You are wearing a white, button-up shirt with a pocket protector in it. Half-hidden by your knee-length brown skirt, you have long, shapely legs with brown high-heeled shoes on your feet";
 	now skin entry is "human";
@@ -258,8 +251,6 @@ When Play begins:
 	now Clit Size entry is 0; [size 1-5, see Clit Size Adjective]
 	[Clit Size Adjective is generated by a function and can be used in scenes: very small/small/average/large/very large]
 ]
-
-
 
 Section 3 - Endings
 

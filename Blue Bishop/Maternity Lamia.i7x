@@ -383,10 +383,10 @@ this is the lamiaboob rule:	[***]
 		let playernum be a random number between 20 and playernum;
 		let matlamianum be a random number between 20 and matlamianum;
 		say "[special-style-1][playernum][roman type] vs [special-style-2][matlamianum][roman type]: ";
-	if matlamiacaught is 1 and playernum >= matlamianum:
-		say "You twist and squirm in her grip, doing your best to keep from suffocating amid her fleshy fun-pillows. Eventually, she tosses you aside in frustration. '[one of]Oh, why don't you want to have fun[or]Aren't these good enough for you[or]What? Don't you like hugs[at random]?' she asks, giving a pair of her tits a jiggle, jostling around the rest of the rows as well.";
-		now matlamiacaught is 0;
-	else if matlamiacaught > 0:
+		if playernum >= matlamianum:
+			say "You twist and squirm in her grip, doing your best to keep from suffocating amid her fleshy fun-pillows. Eventually, she tosses you aside in frustration. '[one of]Oh, why don't you want to have fun[or]Aren't these good enough for you[or]What? Don't you like hugs[at random]?' she asks, giving a pair of her tits a jiggle, jostling around the rest of the rows as well.";
+			now matlamiacaught is 0;
+	if matlamiacaught > 0:
 		let dam be ( wdam entry times a random number from 80 to 120 ) divided by 125; [80% dmg this round]
 		decrease HP of Player by dam;
 		increase Libido of Player by a random number between 4 and 6;
@@ -404,10 +404,10 @@ this is the lamiaboob rule:	[***]
 		let playernum be a random number between 10 and playernum;
 		let matlamianum be a random number between 10 and matlamianum;
 		say "[special-style-1][playernum][roman type] vs [special-style-2][matlamianum][roman type]: ";
-	if matlamiacaught is 1 and playernum >= matlamianum:
-		say "Sensing her grip relax as she laughs, you re-focus yourself on trying to escape. With a strong push, you're able to break free of her coils. She's disappointed at your behavior, but giggles all the more. '[one of]I guess I'll just have to catch you again[or]Now, don't be like that? I can tell you were having fun, too[or]Too rough? Well, come here and I'll give you a hug to make it up to you[at random].'";
-		now matlamiacaught is 0;
-	else if matlamiacaught > 0:
+		if playernum >= matlamianum:
+			say "Sensing her grip relax as she laughs, you re-focus yourself on trying to escape. With a strong push, you're able to break free of her coils. She's disappointed at your behavior, but giggles all the more. '[one of]I guess I'll just have to catch you again[or]Now, don't be like that? I can tell you were having fun, too[or]Too rough? Well, come here and I'll give you a hug to make it up to you[at random].'";
+			now matlamiacaught is 0;
+	if matlamiacaught > 0:
 		let dam be ( wdam entry times a random number from 80 to 120 ) divided by 110; [90% dmg this round]
 		decrease HP of Player by dam;
 		increase Libido of Player by a random number between 5 and 8;
@@ -425,9 +425,10 @@ this is the lamiaboob rule:	[***]
 		let playernum be a random number between 1 and playernum;
 		let matlamianum be a random number between 1 and matlamianum;
 		say "[special-style-1][playernum][roman type] vs [special-style-2][matlamianum][roman type]: ";
-	if matlamiacaught is 1 and playernum >= matlamianum:
-		say "The taste of her milk shocks you into the realization of what's going on. Spitting it out across her breast, you push yourself away from her grip. Thankfully, she'd relaxed further when you started nursing, so you're able to squirm free before she can stop you.";
-	else if matlamiacaught > 0:
+		if playernum >= matlamianum:
+			say "The taste of her milk shocks you into the realization of what's going on. Spitting it out across her breast, you push yourself away from her grip. Thankfully, she'd relaxed further when you started nursing, so you're able to squirm free before she can stop you.";
+			now matlamiacaught is 0;
+	if matlamiacaught > 0:
 		let dam be ( wdam entry times a random number from 80 to 120 ) divided by 100; [100% dmg this round]
 		decrease HP of Player by dam;
 		increase Libido of Player by a random number between 8 and 12;
@@ -467,10 +468,9 @@ This is the Lamia Infection rule:
 		else:
 			say "     Eventually taken in by the military and processed, you're brought through with relatively little difficulty, in spite of your rather strange state.";
 			say "     Finding a job as an infected that doesn't involve the sex trade is particularly difficult, especially when you're a giant snake-person. Your strain compels you to work in a maternity ward, but social stigmas mean you'd never be hired for an uninfected ward, and the infected don't produce offspring in such a way that there's ever any need for one.";
-			say "     You eventually concede to a more scandalous job of merely 'playing' one for particularly deviant suitors, infected or otherwise. ";
 			if "Horny Bastard" is listed in feats of Player or Player is kinky:
-				say "It pays well, and you find yourself rather fond of these twisted games...";
+				say "     You eventually concede to a more scandalous job of merely 'playing' one for particularly deviant suitors, infected or otherwise. It pays well, and you find yourself rather fond of these twisted games...";
 			else:
-				say "As well as it pays, you feel the whole thing to be somewhat beneath your dignity...";
+				say "     You eventually concede to a more scandalous job of merely 'playing' one for particularly deviant suitors, infected or otherwise. As well as it pays, you feel the whole thing to be somewhat beneath your dignity...";
 
 Maternity Lamia ends here.

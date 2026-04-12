@@ -10,7 +10,6 @@ Version 1 of Siren by Stripes begins here.
 charcounter is a number that varies.
 sirenfight is a number that varies. [counts how many times the player fought a siren - used for resistance to the siren song]
 
-
 Section 1 - Creature Responses
 
 to say sirendesc:
@@ -19,30 +18,29 @@ to say sirendesc:
 		say "     As the song fills your ears until it is all you can hear, you try all the harder to make it to that jagged rock to find that beautiful singer. You love it. You love them. They are your everything.";
 		let bonus be ( Strength of Player + Stamina of Player - 20 ) divided by 2;
 		let dice be a random number from 1 to 20;
-		say "You roll 1d20([dice])+[bonus] vs 16 and score [dice plus bonus]:[line break]";
+		say "[line break]     You roll 1d20([dice])[if bonus >= 0]+[end if][bonus] = [special-style-1][dice + bonus][roman type] vs [special-style-2]16[roman type] (Strength + Stamina Check): ";
 		if dice + bonus > 15:
-			say "     You manage to fight your way through the rough waves and reach the rocky crag tired, but uninjured. You call out in search of the singer and are shocked as they appear.";
+			say "You manage to fight your way through the rough waves and reach the rocky crag tired, but uninjured. You call out in search of the singer and are shocked as they appear.";
 		else:
-			say "     You are tossed and battered by the rough waters before you finally are bashed up against the rocky crag. You take [special-style-2]12[roman type] damage! You do manage to hang on and not be pulled away by the next wave and scramble up onto the sharp rock. You call out in search of the singer and are shocked as they appear.";
+			say "You are tossed and battered by the rough waters before you finally are bashed up against the rocky crag. You take [special-style-2]12[roman type] damage! You do manage to hang on and not be pulled away by the next wave and scramble up onto the sharp rock. You call out in search of the singer and are shocked as they appear.";
 			decrease HP of Player by 12;
 		say "     The figure, despite their beauty and lovely face, is male and not entirely human as they first appeared. With the spell of the song breaking as they stop singing for a moment, you shake your head and look the creature over. This siren has a beautifully feminine face, but is otherwise entirely male. His body is mostly human and covered in smooth, perfect skin. But behind his back are a pair of white, feathery wings capable of supporting him in flight. His feet are taloned and bird-like, covered in golden-brown scales. Between his legs, he has a twin pair of long cocks with a pair of large balls to accompany them. He grins viciously at you, his teeth a little too pointed and his eyes flashing menacingly.";
 		increase sirenfight by 1;
 	else:
 		let bonus be ( Charisma of Player - 20 ) divided by 2;
 		let dice be a random number from 1 to 20;
-		say "You roll 1d20([dice])+[bonus]+[sirenfight] vs 16 and score [dice plus bonus plus sirenfight]:[line break]";
-		say "     As you travel along, you can hear a siren's song again and it starts to cloud your mind. You struggle against it, trying to maintain control in the face of its hypnotizing effect. ";
+		say "[line break]You roll 1d20([dice])[if bonus + sirenfight >= 0]+[end if][bonus plus sirenfight] = [special-style-1][dice plus bonus plus sirenfight][roman type] vs [special-style-2]16[roman type] (Charisma Check):[line break]";
 		if dice + bonus + sirenfight > 15:
-			say "Your will is strong and you are able to resist the haunting tune calling you into the sea. From afar, you hear the angry screech of the siren. They launch themselves off their rocky home and fly across the water, swooping in to attack you moments later.";
+			say "     As you travel along, you can hear a siren's song again and it starts to cloud your mind. You struggle against it, trying to maintain control in the face of its hypnotizing effect. Your will is strong and you are able to resist the haunting tune calling you into the sea. From afar, you hear the angry screech of the siren. They launch themselves off their rocky home and fly across the water, swooping in to attack you moments later.";
 		else:
-			say "With that lovely song filling your mind, you head out into the water towards the rocky outcropping in the sea, heedless of the danger. As you start swimming out, the siren swoops down from the air to attack you, catching its entranced prey by surprise. You take [special-style-2]8[roman type] damage before you can struggle to land to fight the siren.";
+			say "     As you travel along, you can hear a siren's song again and it starts to cloud your mind. You struggle against it, trying to maintain control in the face of its hypnotizing effect. With that lovely song filling your mind, you head out into the water towards the rocky outcropping in the sea, heedless of the danger. As you start swimming out, the siren swoops down from the air to attack you, catching its entranced prey by surprise. You take [special-style-2]8[roman type] damage before you can struggle to land to fight the siren.";
 			decrease HP of Player by 8;
 		say "     He has a mostly-human body with lovely, feminine features and beautiful, smooth skin. His eyes are sharp and menacing, as are his pointed teeth. Attached to his back are a pair of white, feathered wings and his feet end in bird-like talons. This well-endowed male has a pair of giant cocks and a large ballsack to go with them. From the way those pricks are growing hard, it's clear he intends to use them on you.";
 
 to say Siren wins:
 	project Figure of Siren_hard_icon;
 	let tempnum be 0;
-	say "     With the siren's song filling your mind, you become enraptured and stop resisting the beautiful creature. He grins down at you with his sharp teeth and you smile back up at him happily. He pushes you down onto all fours and spreads your legs, still singing softly as he gets his twin meat logs lined up with [if Cunt Count of Player is 1]your pussy and asshole[else if Cunt Count of Player > 1]your pussies[else]your asshole[end if].";
+	say "     With the siren's song filling your mind, you become enraptured and stop resisting the beautiful creature. He grins down at you with his sharp teeth and you smile back up at him happily. He pushes you down onto all fours and spreads your legs, still singing softly as he gets his twin meat logs lined up with your [if Cunt Count of Player is 1]pussy and asshole[else if Cunt Count of Player > 1]pussies[else]asshole[end if].";
 	if Player is female:
 		say "     Mounting you slowly, he sinks his cocks into you, making you moan as he stretches out your holes with them. He climbs atop you, singing in your ear the whole while. Even with his lips at your ear, you can't make out the words, but know them to be beautiful. You are filled with increasing pleasure as the well-hung male makes love to you for a long time, proving to be a skilled lover as his fingers and wings tease over your body as he seems to work those cocks at the perfect pace to fill you with ecstasy. Or that may just again be the song.";
 	else if the Player is submissive and scalevalue of Player > 1 and a random chance of 3 in 5 succeeds:
@@ -59,8 +57,8 @@ to say Siren wins:
 		say "     Mounting you slowly, he sinks one of his cocks into you, making you moan as he stretches out your back door. His other cock is wedged underneath you as he moves atop you, pressing his thick, hard dick against yours. He sings in your ear the whole while. Even with his lips at your ear, you can't make out the words, but you know them to be beautiful. You are filled with increasing pleasure as the well-hung male makes love to you for a long time, proving to be a skilled lover as his fingers and wings tease over your body as he seems to work those cocks at the perfect pace to fill you with ecstasy. Or that may just again be the song.";
 	if tempnum is not 3:
 		WaitLineBreak;
-		say "     It feels like hours that he's thrusting into you before finally you feel a large bulge at the base of his cock pressing into you. As it pops into you and starts sliding deeper and there is another one starting to push past your [if Player is female]pussy lips[else]anal ring[end if], you realize that they are eggs. You moan and wriggle beneath him as you feel those eggs sliding into you again and again, filling your [if Cunt Count of Player > 1]wombs[else if Cunt Count of Player is 1]womb and bowels[else]belly[end if]. While they're about the size of tennis balls, they feel much larger and you start orgasming again and again as you're stuffed with the siren's entire clutch. You are so full of warm eggs that your bloated belly presses against the ground[if tempnum is 2] with his second cock wedged beneath. That lower cock has been cumming the whole time, pumping out sticky juices during the whole egg-laying process[else if tempnum is 1]. With his upper cock pressed to your back, it has been cumming the whole time, pumping out sticky juices during the whole egg-laying process[else]. With both cocks stuffed inside you, the eggs alternate between them - as soon as one pops in one hole, another is pressing at the other[end if].";
-		say "     When he finally pulls his [if Player is not female]cock[else]cocks[end if] free, he wipes his penises across your body and you can see that they had reshaped themselves to perfectly fit your [if Cunt Count of Player > 1]cunts and slide into your wombs[else if Cunt Count of Player is 1]cunt and ass to slide deep inside you[else]tight hole and wriggle deep inside you[end if] to deposit the eggs. He releases a sing-song laugh and strokes your cheek. 'You should be proud. You make such a lovely and enjoyable nest.' While a small part of you is disturbed by what he has done and his power over you, your mind as a whole is lost in the sensation of being so full and at pleasing your beautiful, musical lover. With that, he takes to the air quickly, much lighter without the weight of his eggs and flies off among the rocks out in the coastal waters.";
+		say "     It feels like hours that he's thrusting into you before finally you feel a large bulge at the base of his cock pressing into you. As it pops into you and starts sliding deeper and there is another one starting to push past your [if Player is female]pussy lips[else]anal ring[end if], you realize that they are eggs. You moan and wriggle beneath him as you feel those eggs sliding into you again and again, filling your [if Cunt Count of Player > 1]wombs[else if Player is female]womb and bowels[else]belly[end if]. While they're about the size of tennis balls, they feel much larger and you start orgasming again and again as you're stuffed with the siren's entire clutch. You are so full of warm eggs that your bloated belly presses against the ground[if tempnum is 2] with his second cock wedged beneath. That lower cock has been cumming the whole time, pumping out sticky juices during the whole egg-laying process[else if tempnum is 1]. With his upper cock pressed to your back, it has been cumming the whole time, pumping out sticky juices during the whole egg-laying process[else]. With both cocks stuffed inside you, the eggs alternate between them - as soon as one pops in one hole, another is pressing at the other[end if].";
+		say "     When he finally pulls his [if Player is not female]cock[else]cocks[end if] free, he wipes his penises across your body and you can see that they had reshaped themselves to perfectly fit your [if Cunt Count of Player > 1]cunts and slide into your wombs[else if Player is female]cunt and ass to slide deep inside you[else]tight hole and wriggle deep inside you[end if] to deposit the eggs. He releases a sing-song laugh and strokes your cheek. 'You should be proud. You make such a lovely and enjoyable nest.' While a small part of you is disturbed by what he has done and his power over you, your mind as a whole is lost in the sensation of being so full and at pleasing your beautiful, musical lover. With that, he takes to the air quickly, much lighter without the weight of his eggs and flies off among the rocks out in the coastal waters.";
 	WaitLineBreak;
 	say "     Still lost in the daze of the song and bloated with your lover's eggs, you struggle to make your way back to the sandy beach. You wander around in a haze for quite a while before you feel something shift inside you. Trying to hum the tune to the siren's song, you dig a hole above the tide line and push out the eggs, moaning in painful ecstasy with each golden egg that slips from you. Covering them back up with warm sand, you bury them and wander off. By the time your head clears, you have lost track of the nest and the full weight of how you were used, and how good it felt, strikes you as the song's enchantment fades away. You find a corner of your mind longing to hear that song again, regardless of the consequences[if Player is female], and also hoping you didn't manage to push them all out[end if].[ovichance]";
 	if Player is not female, follow the sex change rule;
@@ -81,13 +79,16 @@ to say Siren Attack:
 			decrease HP of Player by tempnum;
 			decrease charcounter by tempnum;
 			if charcounter < 1:
+				now dam is 0;
 				now HP of Player is 0;
-				say "     The siren's song drains the last of your will to fight and you collapse before it, submitting to the creature's beautiful melody as it knocks you to the ground.";
+				say "The siren's song drains the last of your will to fight and you collapse before it, submitting to the creature's beautiful melody as it knocks you to the ground.";
 				continue the action;
 			else:
-				say "     As you continue to fight the siren, it continues to sing at you, clouding your mind and making it harder and harder for you to keep fighting. You take [special-style-2][tempnum][roman type] additional damage as your will to struggle is drained by the siren's song. It grows more difficult for you to continue to fight the creature. While dazed by the song, ";
+				say "As you continue to fight the siren, it continues to sing at you, clouding your mind and making it harder and harder for you to keep fighting. You take [special-style-2][tempnum][roman type] additional damage as your will to struggle is drained by the siren's song. It grows more difficult for you to continue to fight the creature. While dazed by the song, ";
 		else:
 			say "     As you continue to fight the siren, it continues to sing at you, but you manage to block it out and keep fighting. As you try to keep your head clear, ";
+	else:
+		say "     As you continue to fight the siren, it continues to sing at you, but you manage to block it out and keep fighting. As you try to keep your head clear, ";
 	if charcounter > 0:
 		say "[one of]he swoops in and claws at you with his sharp talons![or]the siren emits a powerful shriek so loud and focused that you must clutch your hands over your ears![or]those sharp teeth dig into you painfully![or]he slams his hefty cocks against you, spurting his musky pre onto you![or]the siren banks agilely around behind you and slams his taloned feet into your back, slashing at you as he knocks you down![at random]";
 
@@ -103,7 +104,7 @@ to say PrepCombat_Siren:
 	choose row MonsterID from the Table of Random Critters;
 	if Player is FemalePreferred:
 		now sex entry is "Female";
-	else if "Herm Preferred" is listed in feats of Player:
+	else if Player is HermPreferred:
 		now sex entry is "Both";
 	else:
 		now sex entry is "Male";
@@ -284,8 +285,6 @@ When Play begins:
 	[Clit Size Adjective is generated by a function and can be used in scenes: very small/small/average/large/very large]
 ]
 
-
-
 Section 3 - Endings
 
 Table of GameEndings (continued)
@@ -306,9 +305,6 @@ This is the Siren Infection rule:
 				say "     When the military came through, Denise was scared, but you managed to convince her to come with you and kept her close with you during that time. Once released, you are quick to combine your singing talents with hers, forming a powerful duet. Your alluring voice quickly draws in some talented musicians among the other infected you met at the military's camp to form the rest of your band. Denise quickly gets excited about this project and manages to get a small gig booked. With her lovely voice and your alluring tones to back her up, the band's popularity spreads quickly. Soon your group is drawing larger and larger crowds, with the novelty of a band made up entirely of those changed in the outbreak helping you get started before your unique musical abilities can win them over. The two of you are soon happier than ever as you travel around with the band, enjoying your new [if charisma of Player > 17]legendary[else if charisma of Player > 14]international[else]major[end if] success status. You both enjoy spending time together, both on and off the stage, and are happy to include with some of the band's groupies and die-hard fans as well when on tour.";
 			else:
 				say "     With your release, you use your musical voice to convince several musically talented people among the infected in the camp to form a band with you. Your alluring tones, coupled with the band's unique musical style and lyrics, helps your group's popularity spread quickly. Soon your group is drawing larger and larger crowds, with your promoter using the novelty of a band made up entirely of those changed in the outbreak to help spread the word during the initial wave of public curiosity and excitement over the event. After that initial novelty wears off, your enchanting voice has had its effect and your popularity remains. Your group has a great time as a new [if charisma of Player > 17]superstar[else if charisma of Player > 14]major[else]minor[end if] musical sensation that always keeps a steady level of fan interest. And the best part of this continued fame is the tours and all the fun you can have with the groupies and die-hard fans.";
-			if Player is male:							[MALE/HERM]
-				say "     During your many travels on tour, you take the opportunity to welcome groupies backstage or to the hotel for some post-show fun. Your inner changes, having reached completion, have given you an inner womb full of eggs which you merrily deposit into your adoring fans. Pushing those golden ova into others is an orgasmic pleasure for you and after the powerful exposure to your voice during the concert, they are easy prey and more than willing to take your eggs. You spread your eggs all across the country, stuffing a few into some fans in every city. Devoted to you, they protect and nurture their eggs after they push them out, raising the young sirens that hatch from them to spread your young all across the country.";
-			else:									[FEMALE]
-				say "     During your many travels on tour, you take the opportunity to welcome groupies backstage or to the hotel for some post-show fun. Your inner changes, having reached completion, have given you an inner womb full of eggs to be seeded. After being mated and pumped full of cum, you release the eggs with an orgasm of pleasure and bestow them to your adoring fan. After the powerful exposure to your voice during the concert, they are easy prey and more than willing to take your eggs. You spread your eggs all across the country, gifting some to fans in every city. Devoted to you, they protect and nurture their eggs, raising the young sirens that hatch from them to spread your young all across the country.";
+			say "     During your many travels on tour, you take the opportunity to welcome groupies backstage or to the hotel for some post-show fun. Your inner changes, having reached completion, have given you an inner womb full of eggs [if Player is male]which you merrily deposit into your adoring fans. Pushing those golden ova into others is an orgasmic pleasure for you and after the powerful exposure to your voice during the concert, they are easy prey and more than willing to take your eggs. You spread your eggs all across the country, stuffing a few into some fans in every city. Devoted to you, they protect and nurture their eggs after they push them out[else]to be seeded. After being mated and pumped full of cum, you release the eggs with an orgasm of pleasure and bestow them to your adoring fan. After the powerful exposure to your voice during the concert, they are easy prey and more than willing to take your eggs. You spread your eggs all across the country, gifting some to fans in every city. Devoted to you, they protect and nurture their eggs[end if], raising the young sirens that hatch from them to spread your young all across the country.";
 
 Siren ends here.

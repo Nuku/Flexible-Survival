@@ -115,8 +115,6 @@ to say BouncySuccubusVictory: [player wins]
 				say "     You decide against it, and simply leave her there.";
 			else:
 				say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options], or 0 to exit.";
-		wait for any key;
-		clear the screen and hyperlink list;
 	else:
 		LineBreak;
 		say "     You're not interested, or at least not now, and so you simply ignore the curious demon, and return to your adventures.";

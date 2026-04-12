@@ -12,14 +12,11 @@ to say losetoquilledtousky:
 	else:
 		say "     The quilled tousky bounds over to your prone form, and attempts to lick your face. His ungainly beak interferes, and he simply winds up affectionately clonking you upside the head with it. 'Marp!' he joyfully exclaims, as if clumsily smacking his beak into you is an event worthy of triumphant celebration. He gives you an inquisitive look, then abruptly bounds away, [one of]taking a running leap from the top of a nearby mound of junk. The creature's wings flutter frantically as he hangs suspended in the air for a brief second, and then with a dismayed and puzzled 'marp?' he drops like a rock. You wince at the heavy thump that follows... but a few moments later, you hear another determined 'marp' from below, some more frantic fluttering, and, inevitably, another thud from farther away in the junkyard[or]smacking right into a nearby mound of junk. 'Marp,' he says, giving the pile an annoyed look. The creature takes a deep breath, and with an expression of keen concentration leaps at the mound again, bouncing off with a confused and dismayed 'marp?' and collapsing in a heap on the ground. He looks over at you, as if asking you to explain to the junk that it's being entirely unreasonable here[or]toward a small boulder of rubble. With an excited 'marp!' he slaps the stone with his tail, its quills making a noisy clattering sound, and then scampers away a few yards. After a moment, he looks back toward it, exasperated, and repeats the process, with the same result. He shakes his head in disappointment, muttering 'marp,' and goes to find a less grumpy rock to play tag with[or]wandering off around a scrapped car. After coming back around it, he spots you and releases a 'Marp!' of surprise, apparently already having forgotten you were here. He runs over to you excitedly and pounces atop you. His quills are a little scratchy at your skin as he pushes his cock to your face. You [if HP of Player > 0]willingly[else]are too weak to resist and[end if] open your mouth, accepting his throbbing shaft into your mouth. He rubs his paws over your head and thrusts into your mouth, cumming rather quickly. His release isn't that large, but is surprisingly tasty and you swallow it all down and suck the last drops from his shaft. He gives another happy 'marp' and runs off, this time heading in the other direction[at random]. What an odd creature.";
 
-to say beatthequilledtousky:
-	say "     The strange creature, as if the idea of playing with you has been knocked out of its head, staggers off in search of a new source of amusement.";
-
-Section 2 - Creature Insertion
-
 to say quilledtouskydesc:
 	say "     Before you is a strange, mish-mash creature that seems to have been cobbled together by some exceptionally confused nanites. The quilled tousky's body is covered in feathery-quilled flesh. His head is large, mostly resembling that of a husky, with a long, broad, colorful beak instead of a muzzle, big enough to take up most of his face. His canine body is solidly-built, with just a bit of adorable chubbiness to him. A cute pair of black-feathered wings (which appear far too small to support him in flight) flutters upon his back. His arms are somewhat short and pudgy, with harmless-looking claws on the tips of his paws. His legs are digitigrade, puppy-like in proportion to the rest of his body, and ending in bird claws where paws might be on a more sensibly-assembled creature. He has what looks like a cheerfully-wagging canine tail, covered in an alarming blend of long quills and feathers instead of fur. At his crotch, he has a large perky canine maleness, measuring 8 inches and a small set of balls.";
 	say "     He looks at you and tilts his head to the side. 'Marp?' it inquires before rushing towards you with a silly grin on its odd face.";
+
+Section 2 - Creature Insertion
 
 Table of CombatPrep (continued)
 name(text)	PrepFunction(text)
@@ -53,7 +50,7 @@ When Play begins:
 	now enemy Name entry is ""; [ Specific name of unique enemy. ]
 	now enemy type entry is 0; [ 0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters. ]
 	now attack entry is "[one of]The quilled tousky smacks you with its quilled tail. After the initial pain, you feel oddly euphoric.[or]The quilled tousky headbutts you with a happy 'Marp!'[or]The odd creature grabs you with its taloned feet and climbs all over you, marping happily as it sits on your head like an odd, pointy hat.[or]The hybrid creature flails its paws at you, slapping at you wildly.[at random]";
-	now defeated entry is "[beatthequilledtousky]";
+	now defeated entry is "     The strange creature, as if the idea of playing with you has been knocked out of its head, staggers off in search of a new source of amusement.[line break]";
 	now victory entry is "[losetoquilledtousky]";
 	now desc entry is "[quilledtouskydesc]";
 	now face entry is "large, mostly resembling that of a husky, with a long, broad, colorful beak instead of a muzzle, big enough to take up most of your face";
@@ -206,31 +203,30 @@ When Play begins:
 	[Clit Size Adjective is generated by a function and can be used in scenes: very small/small/average/large/very large]
 ]
 
-
 to say qtbodydesc:
 	say "solidly-built, with just a bit of adorable chubbiness to it. A cute pair of black-feathered wings (which appear far too small to support you in flight) flutters upon your back";
 	if SkinName of Player is "Quilled Tousky":
 		say ", seeming to have trouble coming to rest comfortably against your sharp-quilled hide";
 	say ". Your arms are somewhat short and pudgy, with harmless-looking claws on the tips of your paws. Your legs are digitigrade, puppy-like in proportion to the rest of your body, and ending in bird claws where paws might be on a more sensibly-assembled creature";
 
+Section 3 - Drop Item
+
 Table of Game Objects (continued)
 name	desc	weight	object
 "tousky quill"	"Exactly what it sounds like."	0	tousky quill
 
-tousky quill is a grab object. tousky quill is infectious. Strain of tousky quill is "Quilled Tousky".
-
-Usedesc of tousky quill is "[usetouskyquill]";
+tousky quill is a grab object.
+the scent of tousky quill is "The colorful quill's scent muddles your mind, making you feel stupid and giddy.".
+Usedesc of tousky quill is "[usetouskyquill]".
 
 to say usetouskyquill:
 	say "     You fiddle briefly with the large tousky quill and end up pricking yourself with it. Ouch! Dropping it, you suck on your poked finger. Your mind becomes clouded, making you muddle-headed and giddy about everything.";
 	increase morale of Player by 1;
+	infect "Quilled Tousky";
 
-the scent of tousky quill is "The colorful quill's scent muddles your mind, making you feel stupid and giddy.".
-
+Section 4 - Endings
 
 [
-Section 3 - Endings
-
 Table of GameEndings (continued)
 Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
 "Quilled Tousky Infection"	"Infection"	""	Quilled Tousky Infection rule	1000	false
@@ -249,6 +245,5 @@ This is the Quilled Tousky Infection rule:
 			else:									[F-STERILE]
 				say "     Additional text for a female survivor who cannot become preggers.";
 ]
-
 
 Quilled Tousky ends here.

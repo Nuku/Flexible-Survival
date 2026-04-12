@@ -115,8 +115,6 @@ to say BeatTheFeralMutt:
 					say "     You step back from the [FeralMuttFurColor] [FeralMuttCurrentBreed], shaking your head slightly as he gives a questioning look.";
 				else:
 					say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options], or 0 to exit.";
-			wait for any key;
-			clear the screen and hyperlink list;
 		else:
 			LineBreak;
 			say "     Shaking your head to put any such lewd impulses out of your mind, you walk away quickly before the feral beast gets back up.";

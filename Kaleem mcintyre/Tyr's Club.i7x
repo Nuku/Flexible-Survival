@@ -91,7 +91,7 @@ Instead of conversing the Tyr:
 Part 2 - Sex Match with Tyr
 
 Instead of fucking the Tyr:
-	If lastfuck of Tyr - turns < 6:
+	if lastfuck of Tyr - turns < 6:
 		say "     'Sorry, I'm not ready to go another round with you yet. Maybe come back in a little while?' Tyr rolls his shoulders and you can hear his spine pop slightly.";
 		stop the action;
 	else:
@@ -574,7 +574,7 @@ linkaction of Receptionist is "Possible Actions: [link]talk[as]talk Receptionist
 Scent of the Receptionist is "     The young pup smells like a cute young boy who's got a big secret! Oh and cookies!".
 
 Instead of conversing the Receptionist:
-	If ReceptionistTalk is 0:
+	if ReceptionistTalk is 0:
 		say "     'Oh hey! Nice to meet you! My name's Kris, but most people around here call me the Receptionist.' The pup giggles at you and suddenly you feel as though you want to squeeze him into your chest in an impossibly tight hug. Is anything allowed to be this cute in this world anymore?";
 		say "     'Anyway, welcome to the fighting pit, Tyr's own little glorified haven for those people looking to battle their hearts away. If you want to participate in any of the fights happening here then just let me know and I'll call someone over to fight against you. Also, if you want to fight one of the Great Danes, you can only fight here in the pit as they don't venture away from the club too often. They're kinda a mean bunch and don't like to take on weak people, so be careful if you go up against them.' Kris lowers his ears against his head as he says this.";
 		WaitLineBreak;

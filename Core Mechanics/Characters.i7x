@@ -341,14 +341,14 @@ Chapter 2 - Location Based
 A person can be collected. A person is usually not collected.
 
 Definition: A person (Called x) is collected:
-	If x is booked, yes;
+	if x is booked, yes;
 	if x is bunkered, yes;
 	no;
 
 A person can be booked. A person is usually not booked.
 
 Definition: A person (Called x) is booked:
-	If x is Trixie, no;
+	if x is Trixie, no;
 	if x is Velos, no;
 	if x is Help Book, no;
 	if the location of x is Grey Abbey Library, yes;
@@ -373,7 +373,7 @@ Definition: A person (Called x) is booked:
 A person can be bunkered. A person is usually not bunkered.
 
 Definition: A person (Called x) is bunkered:
-	If x is Trixie, no;
+	if x is Trixie, no;
 	if x is Velos, no;
 	if x is Help Book, no;
 	if the location of x is Bunker, yes;

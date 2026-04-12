@@ -239,11 +239,11 @@ When Play begins:
 
 Section 3 - Alt Combat
 
+[bopsongcount is a number that varies.]
+
 Table of Critter Combat (continued)
 name	combat (rule)	preattack (rule)	postattack (rule)	altattack1 (rule)	alt1chance (number)	altattack2 (rule)	alt2chance (number)	monmiss (rule)	continuous (rule)	altstrike (rule)
 "boparadise"	bopsong rule	--	--	--	--	--	--	--	--	--
-
-bopsongcount is a number that varies.
 
 this is the bopsong rule:
 	choose row MonsterID from the Table of Random Critters;
@@ -264,7 +264,7 @@ this is the bopsong rule:
 	let bopnum be a random number between 1 and bopnum;
 	say "[special-style-1][playernum][roman type] vs [special-style-2][bopnum][roman type]: ";
 	if Playernum >= bopnum:
-		say "As captivating and tantalizing as the large birds song and mating dance may be, you manage to avert your eyes and regain your senses.";
+		say "As captivating and tantalizing as the large bird's song and mating dance may be, you manage to avert your eyes and regain your senses.";
 		AttemptToWait;
 	else:
 		let xx be ( lev entry + 10 ) / 10; [ xx=1 unless hard mode or otherwise boosted]
@@ -315,9 +315,9 @@ Definition: a person is boptailed:
 	if TailName of Player is "Bird of Paradise", yes;
 	no;
 
-[
 Section 5 - Endings
 
+[
 Table of GameEndings (continued)
 Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
 "Bird of Paradise Infection"	"Infection"	""	Bird of Paradise Infection rule	1000	false

@@ -11,11 +11,7 @@ Section 1 - Creature Responses
 goocolor is a number that varies.[@Tag:NotSaved]
 
 to say goovictory:
-	if HP of Player > 0:
-		say "     Surrendering to the goo girl, you allow the creature to move in closer, looking as giddy as ever. '[one of]Oh[or]Hm[or]Ah[at random], [one of]eager for a bit of fun, are we?[run paragraph on][or]it's play time![run paragraph on][or]how nice of you to offer![run paragraph on][at random]' ";
-	else:
-		say "     Losing the will to fight, you fall to your knees, allowing the creature to move in closer, clearly giddy over defeating you. '[one of]Hmpf[or]Ha[or]Oh[at random], [one of]that'll show you[or]I hope you like to play[or]this'll be fun[at random]!' ";
-	say "Wrapping her undulating arms around your [if scalevalue of Player < 2]smaller, [else if scalevalue of Player > 3]larger, [end if][bodydesc of Player] form, her transparent appendages carefully worm around, fondling around lewdly and easily prying away any obstruction in her way.";
+	say "     [if HP of Player > 0]Surrendering to the goo girl, you allow the creature to move in closer, looking as giddy as ever. '[one of]Oh[or]Hm[or]Ah[at random], [one of]eager for a bit of fun, are we?' [or]it's play time!' [or]how nice of you to offer!' [at random][else]Losing the will to fight, you fall to your knees, allowing the creature to move in closer, clearly giddy over defeating you. '[one of]Hmpf[or]Ha[or]Oh[at random], [one of]that'll show you[or]I hope you like to play[or]this'll be fun[at random]!' [end if]Wrapping her undulating arms around your [if scalevalue of Player < 2]smaller, [else if scalevalue of Player > 3]larger, [end if][bodydesc of Player] form, her transparent appendages carefully worm around, fondling around lewdly and easily prying away any obstruction in her way.";
 	if Player is male and (a random chance of 1 in 2 succeeds or (Player is not female and anallevel < 3)):
 		say "     [if HP of Player < 1 and Player is not submissive]Forcing[else]Bringing[end if] you to lay on your back, she writhes her way on top of you, crotch enveloped in her amorphous base. Positioned such that her crotch meets yours, your [cock size desc of Player] dick[if Cock Count of Player > 1]s are[else] is[end if] visibly trapped within her transparent torso[if Cock Length of Player > 14 and Cock Count of Player is 1], visibly bulging to contain it[else if Cock Length of Player > 10 and Cock Count of Player > 1], visibly bulging to contain them[end if]. Her gelatinous form eagerly kneading the whole of your length[smn], it's no effort for her to drive you to full arousal.";
 		say "     '[one of]I think somebody likes that[or]We're just getting started here[or]You should see the look on your face[at random]!' Teasing you, [if Player is female and anallevel is 3]you feel her malleable mass flood your ass and cunt[sfn], further stimulating[else if Player is female]you feel her malleable mass flood your cunt[sfn], further stimulating[else if anallevel is 3]you feel her malleable mass flood your ass, further stimulating[else]she caresses your [bodytype of Player] form, offering gentle affection to[end if] you. Dark sewers filled with the wet sounds of her writhing body against your [bodydesc of Player] frame, you're made to watch on as she grins at you, taking a certain joy in seeing you squirm against her overwhelming touch.";
@@ -34,19 +30,14 @@ to say goovictory:
 	now tempnum2 is 0;
 
 To say goodefeat:
-	say "     Fending the goo girl off she reels back, compressing herself lowly before you and pouting in submission";
 	if Libido of Player > 30 or "Dominant" is listed in feats of Player:
-		say ". Perhaps you could have a bit of fun with her?";
+		say "     Fending the goo girl off she reels back, compressing herself lowly before you and pouting in submission. Perhaps you could have a bit of fun with her?";
 		if Player consents:
+			LineBreak;
 			if Player is male and (Player is not female or a random chance of 1 in 2 succeeds):
 				if Cock Length of Player > 20:
 					say "     Slowly approaching the prone, jelly lady, you lower your [cock size desc of Player] dick[smn] to her exposed lips. Some resistance is felt, but you press more firmly, and she begins to spread out around [if Cock Count of Player > 1]one of your tools[else]your tool[end if]. You push further, deeper, marveling at the deliciously tight, snug fit her body offers to your sensitive body. Rearing back, she cries out, lifted entirely from the ground, impaled on your [cock size desc of Player] pole.";
-					say "     Your throbbing tool has stretched her round, making her look more like a colored condom than a girl, though her assets do jiggle quite nicely against your raging cock. You grab for them and start to caress, jerking yourself off while teasing the goo girl, and you can feel yourself rising rapidly toward release. Cum billows up your spear, flooding her with your [Cum Load Size of Player] load";
-					if Ball Size of Player > 5:
-						say ". The huge gobs of it explode into her, making her mouth bulge, then spew out of her, running down her front in a messy drizzle of your virile seed. Her entire form goes murky with the volume of seed you inject into her";
-					else:
-						say ", gobs of it flooding her transparent form";
-					say ". She squirms on your great pole before she melts free of it, becoming a limp pool on the ground before you, worn out from the session.";
+					say "     Your throbbing tool has stretched her round, making her look more like a colored condom than a girl, though her assets do jiggle quite nicely against your raging cock. You grab for them and start to caress, jerking yourself off while teasing the goo girl, and you can feel yourself rising rapidly toward release. Cum billows up your spear, flooding her with your [Cum Load Size of Player] load[if Ball Size of Player > 5]. The huge gobs of it explode into her, making her mouth bulge, then spew out of her, running down her front in a messy drizzle of your virile seed. Her entire form goes murky with the volume of seed you inject into her[else], gobs of it flooding her transparent form[end if]. She squirms on your great pole before she melts free of it, becoming a limp pool on the ground before you, worn out from the session.";
 				else:
 					say "     You expose your eager, [cock size desc of Player] cock[smn] before the girl as you move over her. Your mouth finds a translucent nipple, and a [one of]strawberry[or]grape[or]cherry[at random] flavor dances across your tongue as you suckle firmly. She awakens with a soft moan that raises in pitch as you start to ease[if Cock Count of Player > 1] one of[end if] your firm [Cock of Player] tool[smn] into her quivering passage.";
 					say "     She rocks up against you, her hands grabbing at your sides, pulling you closer as you thrust faster, harder, her body able to take you with scarcely any effort at all. She trembles as hot honey runs down your length, climaxing powerfully against you. The taste in your mouth seems to grow more intense and the passage holding your cock firmly ripples delightfully. You can feel yourself tensing, then exploding into the jellied female, staining her pristine flesh with blasts of milky gray.";
@@ -64,13 +55,10 @@ To say goodefeat:
 				say "     Emboldened, you press your fist in easily, her sex gobbling it up, then your forearm, thrusting it into the depths of the jellied girl to her obvious satisfaction. You lose track of yourself, fascinated with her capacity as you shove in the rest of your arm, the area filled with loud squelching sounds.";
 				say "     Her wail almost hurts your ears as she seems to have a full body earthquake of an orgasm, your arm and torso drenched in her fluids before she melts beneath you, passing out with that smile on her face, lost to the intense climax. Cleaning yourself off, you go about your business once more.";
 		else:
+			LineBreak;
 			say "     You decide against it, letting the creature slide off into the dark.";
 	else:
-		say ". Slowly, the creature slinks back into the darkness, freeing you to go about your business once more.";
-
-to say goodesc:
-	say "     A jiggling girl of [if tempnum2 is 1]blue[else if tempnum2 is 2]green[else]purple[end if] color appears from the darkness, having spotted you. You can see through her, mostly, her gelatin-like flesh tinting the dim light behind her with its lustrous shade. Her upper torso is well defined, with large breasts somehow jiggling just a little more noticeably than the rest of her. Her lower body seems to meld into a grand base of goop just past her thighs, her legs permanently held together. With soft slurping sounds, she propels herself at you like an incoming wave, hands outstretched for you with an unwavering smile.";
-
+		say "     Fending the goo girl off she reels back, compressing herself lowly before you and pouting in submission. Slowly, the creature slinks back into the darkness, freeing you to go about your business once more.";
 
 Section 2 - Creature Insertion
 
@@ -97,7 +85,6 @@ When Play begins:
 	Choose a blank row from Table of Random Critters;
 	now NewTypeInfection entry is false;
 	now Species Name entry is "Goo"; [ Name of the overall species of the infection, used so a "male x" and "female x" have "pureblood X" children. ]
-	add "Goo Girl" to infections of FurryList;
 	add "Goo Girl" to infections of SlimeList;
 	add "Goo Girl" to infections of FemaleList;
 	add "Goo Girl" to infections of BipedalList;
@@ -105,10 +92,10 @@ When Play begins:
 	now enemy title entry is ""; [ Name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name. ]
 	now enemy Name entry is ""; [ Specific name of unique enemy. ]
 	now enemy type entry is 0; [ 0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters. ]
-	now attack entry is "[one of][if Player is male]With a swipe of a flexible hand, she bypasses your clothes, slithering under them to grab at your [cock size desc of Player], [Cock of Player] shaft and start squeezing, causing pain and pleasure in equal parts[else if Player is female and Cunt Depth of Player < 12]She surges towards you and grabs at your crotch. Her fluid body flows through creases and cracks, finding your [cunt size desc of Player] pussy and diving into it with great zeal, stretching and buzzing harshly, almost making you dizzy with forced pleasure[else if Player is female and Cunt Depth of Player > 11]The goo girl grabs at your crotch and suddenly seems to be shrinking. Your [cunt size desc of Player] cunt suddenly sings in pleasure as she flows into you rapidly, making your belly bloat wide for a moment as she fully inhabits your womb before she spills back out in a great, warm rush of thick fluids[else]She swats at you with a flexible hand, bruising you between the legs[end if].[or]She hugs you into her soft bosom. It would be kind of nice if you could breathe![or]A thousand tiny tendrils suddenly spread from her body, slapping at you wildly. It's fortunate that they are not too hard.[at random]";
+	now attack entry is "[one of][if Player is male]With a swipe of a flexible hand, she bypasses your clothes, slithering under them to grab at your [cock size desc of Player] [Cock of Player] shaft and start squeezing, causing pain and pleasure in equal parts[else if Player is female and Cunt Depth of Player < 12]She surges towards you and grabs at your crotch. Her fluid body flows through creases and cracks, finding your [cunt size desc of Player] pussy and diving into it with great zeal, stretching and buzzing harshly, almost making you dizzy with forced pleasure[else if Player is female and Cunt Depth of Player > 11]The goo girl grabs at your crotch and suddenly seems to be shrinking. Your [cunt size desc of Player] cunt suddenly sings in pleasure as she flows into you rapidly, making your belly bloat wide for a moment as she fully inhabits your womb before she spills back out in a great, warm rush of thick fluids[else]She swats at you with a flexible hand, bruising you between the legs[end if].[or]She hugs you into her soft bosom. It would be kind of nice if you could breathe![or]A thousand tiny tendrils suddenly spread from her body, slapping at you wildly. It's fortunate that they are not too hard.[at random]";
 	now defeated entry is "[goodefeat]";
 	now victory entry is "[goovictory]";
-	now desc entry is "[goodesc]";
+	now desc entry is "     A jiggling girl of [if tempnum2 is 1]blue[else if tempnum2 is 2]green[else]purple[end if] color appears from the darkness, having spotted you. You can see through her, mostly, her gelatin-like flesh tinting the dim light behind her with its lustrous shade. Her upper torso is well defined, with large breasts somehow jiggling just a little more noticeably than the rest of her. Her lower body seems to meld into a grand base of goop just past her thighs, her legs permanently held together. With soft slurping sounds, she propels herself at you like an incoming wave, hands outstretched for you with an unwavering smile.[line break]";
 	now face entry is "that of a pretty human's, yet with a curiously disquieting smile"; [ Face description, format as "Your face is [Face of Player]." ]
 	now body entry is "human-like, but melded together just at your thighs, flowing together into a large and bulbous base of [Skin of Player] flesh"; [ Body description, format as "Your body is [Body of Player]." ]
 	now skin entry is "[one of]jellied[or]gelatin-like[or]translucent[at random] [if goocolor is 1]blue[else if goocolor is 2]purple[else]green[end if]"; [ Skin. Format as "Looking at yourself, your body is covered in [Skin of Player] skin." ]
@@ -259,15 +246,33 @@ When Play begins:
 	[Clit Size Adjective is generated by a function and can be used in scenes: very small/small/average/large/very large]
 ]
 
+to say googirlbodychange:
+	say "your body changes. Looking over yourself afterwards, ";
+	if SkinName of Player is "Goo Girl":
+		say "you appear human; however, you feel a strange throbbing building in your shins. Lower legs drawn together, they flow into one another, creating a [Skin of Player] base of flesh that goes up to your lower thigh";
+	else:
+		say "it seems that you're human! Something feels off about it, however";
+
+to say googirlskinchange:
+	let tempnum be a random number between 0 and 3;
+	while goocolor is tempnum:
+		now tempnum is a random number between 0 and 3;
+	now goocolor is tempnum;
+	say "a ripple of tingles rushes through your entire body as you sink towards the ground, then rise again, wobbling along the way. A glance at a hand shows that you can see right through your now jello-like flesh, [if goocolor is 1]blue[else if goocolor is 2]purple[else]green[end if] in color";
+	if BodyName of Player is "Goo Girl":
+		say ". Moreover, your lower legs are drawn together, flowing into one another and creating a base of flesh that goes up to your lower thigh";
+
+Section 3 - Drop Item
+
 Table of Game Objects (continued)
 name	desc	weight	object
 "glob of goo"	"A small container of strange, neon green colored, goop."	1	glob of goo
 
 glob of goo is a grab object.
-It is temporary.
 glob of goo is infectious.
 Strain of glob of goo is "Goo Girl".
-Usedesc of glob of goo is "[glob of goo use]";
+Usedesc of glob of goo is "[glob of goo use]".
+Scent of glob of goo is "Smells a bit like mint.".
 
 to say glob of goo use:
 	say "     Putting the handful of goo into your mouth, you are pleased to learn that it tastes a bit like mint. Chewing and letting the flavor cover your whole tongue, you swallow the goo.";
@@ -279,27 +284,7 @@ to say glob of goo use:
 		if morale of Player > 0, now morale of Player is 0;
 		say "You feel better having eaten.";
 
-instead of sniffing glob of goo:
-	say "     Smells a bit like mint.";
-
-
-to say googirlbodychange:
-	say "your body changes";
-	if SkinName of Player is "Goo Girl":
-		say ". Looking over yourself afterwards, you appear human; however, you feel a strange throbbing building in your shins. Lower legs drawn together, they flow into one another, creating a [Skin of Player] base of flesh that goes up to your lower thigh";
-	else:
-		say ". Looking over yourself afterwards, it seems that you're human! Something feels off about it, however";
-
-to say googirlskinchange:
-	let tempnum be goocolor;
-	now goocolor is a random number between 0 and 3;
-	if goocolor is tempnum, increase goocolor by 1;
-	if goocolor is 4, now goocolor is 0;
-	say "a ripple of tingles rushes through your entire body as you sink towards the ground, then rise again, wobbling along the way. A glance at a hand shows that you can see right through your now jello-like flesh, [if goocolor is 1]blue[else if goocolor is 2]purple[else]green[end if] in color";
-	if BodyName of Player is "Goo Girl":
-		say ". Moreover, your lower legs are drawn together, flowing into one another and creating a base of flesh that goes up to your lower thigh";
-
-Section 3 - Endings
+Section 4 - Endings
 
 Table of GameEndings (continued)
 Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)

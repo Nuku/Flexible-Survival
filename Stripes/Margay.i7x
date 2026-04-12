@@ -7,7 +7,6 @@ Version 1 of Margay by Stripes begins here.
 
 "Adds Margay to Flexible Survival."
 
-margaydancecount is a number that varies.
 margayubed is a number that varies.
 margaymet is a number that varies.
 
@@ -17,19 +16,16 @@ to say losetomargay:
 	if UBlevel is 1 or a random chance of 1 in 4 succeeds:
 		say "     The female margay looms over you, purring happily at her new prize. You are grabbed by the ample feline and your face pressed to her bosom. With your lips at her large nipple, you can't help but taste the dribbles of milk coming from it and that first taste is enough to set you to nursing. As you drink it down, it becomes all you can focus on.";
 		say "     'Oh, such a good [if Player is female]girl[else]boy[end if]. Drink it all down for your new mama,' she purrs while running her paws over your [bodydesc of Player] body.";
-		say "     She holds you even closer and runs her paws along your back, reaching down to grab your ass in a most un-motherly way. With a paw kneading your rear and the other [if Player is male]stroking your cock[else if Player is female]fingering your pussy[else if anallevel > 1]fingering your asshole[else]rubbing your bare crotch[end if], you can't help but moan and mewl softly and suckle all the harder[if Player is not neuter]. You're pushed to climax just as you're emptying her plentiful milkjugs of the last few drops[else]. You're snuggled and caressed until you've emptied her plentiful milkjugs of every last drop[end if]. With your belly full of her warm milk, you end up drifting off in the big kitty's arms, only to awaken some time later [one of]in a large, open-topped box left in a secluded corner behind some rides[or]under a shut down ride[or]in the corner of a looted concession stand[or]on some torn costumes behind the carnival sideshow[at random]. And you feel different too, changed a little by your intimate meal. You stagger to your feet and leave the private spot where your feline mother left you to be safely hid until you awoke and soon find your way back to where you were.";
+		say "     She holds you even closer and runs her paws along your back, reaching down to grab your ass in a most un-motherly way. With a paw kneading your rear and the other [if Player is male]stroking your cock[else if Player is female]fingering your pussy[else if anallevel > 1]fingering your asshole[else]rubbing your bare crotch[end if], you can't help but moan and mewl softly and suckle all the harder. You're [if Player is not neuter]pushed to climax just as you're emptying her plentiful milkjugs of the last few drops[else]snuggled and caressed until you've emptied her plentiful milkjugs of every last drop[end if]. With your belly full of her warm milk, you end up drifting off in the big kitty's arms, only to awaken some time later [one of]in a large, open-topped box left in a secluded corner behind some rides[or]under a shut down ride[or]in the corner of a looted concession stand[or]on some torn costumes behind the carnival sideshow[at random]. And you feel different too, changed a little by your intimate meal. You stagger to your feet and leave the private spot where your feline mother left you to be safely hid until you awoke and soon find your way back to where you were.";
 		SanLoss 5;
 		PlayerDrink 6;
 	else if margayubed is not 0 and margayubed is even:
 		say "     The female margay looms over you, purring happily at her new prize. You are grabbed by the ample feline and your face pressed to her bosom. With your lips at her large nipple, you can't help but taste the dribbles of milk coming from it and that first taste is enough to set you to nursing. As you drink it down, it becomes all you can focus on.";
 		say "     'Oh, such a good [if Player is female]girl[else]boy[end if]. Drink it all down for your new mama,' she purrs while running her paws over your [bodydesc of Player] body.";
-		say "     She holds you even closer and runs her paws down your legs, guiding your feet to her gaping pussy before sliding them in with a happy moan. This goes largely unnoticed by you as you nurse past the increasingly warm and pleasurable feelings spreading up your legs and then to your hips. Her wet folds ripple over your [if Cock Count of Player > 1]throbbing [cock size desc of Player] [Cock of Player] cocks[else if Cock Count of Player is 1]throbbing [cock size desc of Player] [Cock of Player] cock[else if Player is female]juicy [cunt size desc of Player] petals[else]bare groin[end if].";
+		say "     She holds you even closer and runs her paws down your legs, guiding your feet to her gaping pussy before sliding them in with a happy moan. This goes largely unnoticed by you as you nurse past the increasingly warm and pleasurable feelings spreading up your legs and then to your hips. Her wet folds ripple over your [if Cock Count of Player > 1]throbbing [cock size desc of Player] [Cock of Player] cocks[else if Player is male]throbbing [cock size desc of Player] [Cock of Player] cock[else if Player is female]juicy [cunt size desc of Player] petals[else]bare groin[end if].";
 		say "     Holding your arms to your sides, she takes your hands in as well. But it's only when you're pulled away from that dribbling nipple by the constant peristaltic motion of her vaginal walls that you realize what's happening. Though your main reaction to this is to mewl in disappointment and smack your lips for more of that tasty milk. The Rubenesque feline only chuckles at this and rubs her paws over your head, pushing you further into her swollen body.";
 		if UBlevel > 1 and margaymet > 2 and MKunleashed is false:
-			let tempmon be MonsterID;
-			setmonster "Megakitty";
-			choose row MonsterID from the Table of Random Critters;
-			if Name entry is "Megakitty":
+			if "Megakitty" is a Name listed in Table of Random Critters:
 				now MKunleashed is true;
 				now area entry is "Fair";
 			say "     'I can't wait to tell Big Momma about you. The Megakitty so loves to meet the new kitties in our family,' she purrs, caressing your head tenderly before pushing you in further. While not quite understanding her meaning, her words do please you and you wriggle gently in her rippling cunny, adding to her pleasure.";
@@ -37,30 +33,27 @@ to say losetomargay:
 		say "     When you come to, you're curled up [one of]in a large, open-topped box left in a secluded corner behind some rides[or]under a shut down ride[or]in the corner of a looted concession stand[or]on some torn costumes behind the carnival sideshow[at random]. And you feel different too, changed a little by your unusual experience. You stagger to your feet and leave the private spot where your feline mother left you safely hidden while you napped and soon find your way back to where you were.";
 		increase margayubed by 1;
 		SanLoss 10;
-		increase Libido of Player by 5;
+		raise Player Libido by 5;
 		PlayerDrink 6;
 	else:
 		say "     The female margay looms over you, purring happily at her new prize. You [if margayubed > 2]are almost looking forward to it as[else]aren't prepared for what happens next as[end if] the feline turns around and flashes her two vaginas in your face. 'Oh you'll make a FINE member of my family,' she purrs before squatting on your head, pressing her large body down atop you.";
-		say "     [if margayubed > 2]You raise your head into position and lick at her wet folds as she kisses them to your face[else]You're too paralyzed to move[end if], her posterior cunt easily stretching around your head and swallowing you up as her bulk forces her down over you. Within moments you feel the rest of your body getting sucked up into her second yet very warm uterus[if Player is male]. As your cock[smn] [isfv] pressed between your body and[else]. As your puss[yfn] grind[sfv] against[end if] her rippling vaginal walls, you cannot help but climax, cumming hard from the stimulation and the arousing taste and scent of female juices surrounding you. You are fully forced into her womb and are pressed into a fetal position as you struggle to remain conscious. Your captor's walls grow a placenta and an umbilical cord snakes its way down to your navel area to connect with a warm tingling that is somehow pleasant. Feeling her paws rubbing over her full belly, your struggles grow weaker until you pass out.";
+		say "     [if margayubed > 2]You raise your head into position and lick at her wet folds as she kisses them to your face[else]You're too paralyzed to move[end if], her posterior cunt easily stretching around your head and swallowing you up as her bulk forces her down over you. Within moments you feel the rest of your body getting sucked up into her second yet very warm uterus. As your [if Player is male]cock[smn] [isfv] pressed between your body and[else]puss[yfn] grind[sfv] against[end if] her rippling vaginal walls, you cannot help but climax, cumming hard from the stimulation and the arousing taste and scent of female juices surrounding you. You are fully forced into her womb and are pressed into a fetal position as you struggle to remain conscious. Your captor's walls grow a placenta and an umbilical cord snakes its way down to your navel area to connect with a warm tingling that is somehow pleasant. Feeling her paws rubbing over her full belly, your struggles grow weaker until you pass out.";
 		say "     When you come to, you're curled up [one of]in a large, open-topped box left in a secluded corner behind some rides[or]under a shut down ride[or]in the corner of a looted concession stand[or]on some torn costumes behind the carnival sideshow[at random]. And you feel different too, changed a little by your unusual experience. You stagger to your feet and leave the private spot where your feline mother left you safely hidden while you napped and soon find your way back to where you were.";
 		increase margayubed by 1;
 		SanLoss 5;
-		increase Libido of Player by 5;
+		raise Player Libido by 5;
 
 to say beatthemargay:
 	if ( BodyName of Player is "Margay" or FaceName of Player is "Margay" ) and ( Libido of Player > 25 or humanity of Player < 67 ):
 		say "     As you look down at your defeated foe, you eye those large, wet slits of hers, feeling drawn to them. You lick your lips and, seeing your interest, she mewls softly and spreads her legs further, showing off her gaping, twitching pussies to you. The full-figured female runs her furry hands over her large belly, then down to her thighs to spread her wet holes open, releasing another mewl of need. 'Mmm... dive in, kitty. I know you want to.' Your new instincts are telling you to dive on in and eat out those delicious cunts.";
-		say "     [bold type]Shall you do so?[roman type][line break]";
-		LineBreak;
+		say "[line break]     [bold type]Shall you do so?[roman type][line break]";
 		say "     ([link]Y[as]y[end link]) - Eat her out.";
 		say "     ([link]N[as]n[end link]) - Leave.";
 		if Player consents:
+			LineBreak;
 			say "     You crawl between her legs and start nuzzling and licking at your large, luscious lips. Her pussies are quite huge, easily able to take much more than your arm with ease, as you prove by soon fisting her to get her mewling and even more. Your tongue travels all along those plump lips before diving into lick deeper. As you continue licking, you are urged to push deeper and delve further with your tongue, pressing your head into her to lick along those deliciously wet vaginal walls.";
 			if UBlevel > 1 and margaymet > 2 and MKunleashed is false:
-				let tempmon be MonsterID;
-				setmonster "Megakitty";
-				choose row MonsterID from the Table of Random Critters;
-				if Name entry is "Megakitty":
+				if "Megakitty" is a Name listed in Table of Random Critters:
 					now MKunleashed is true;
 					now area entry is "Fair";
 				say "     As you're starting to push your way into her welcoming cunny, she caresses you tenderly. 'Mmm... you'll make a fine, loving kitty. I can't wait to let Big Momma know. The Megakitty will be looking forward to meeting you.' With your head sliding into her, you find it difficult to focus on her words, but feel quite pleased to have made her happy.";
@@ -68,31 +61,23 @@ to say beatthemargay:
 			say "     You slide fully into her warm, welcoming womb and curl up into a fetal ball, purring softly as the warmth of your new mother surrounds you. Her uterine wall grows a placenta which attaches an umbilical cord to your belly with a pleasant sensation of union. Feeling her paws rubbing over her full belly, you drift off into a happy slumber, dreaming of full-figured felines with full, pregnant bellies snuggled all around you.";
 			say "     When you awaken, you find yourself hidden [one of]in a bundle of rags in an abandoned shop[or]in a large, cardboard box on a pile of plush margay toys[or]under a ride undergoing maintenance[or]behind the changing room for a haunted house attraction[at random]. And you feel different too, changed by your enjoyable, if unusual, experience. You stagger to your feet and leave the private spot where your feline mother left you safely hidden and soon find your way back to known territory.";
 			SanLoss 5;
-			increase Libido of Player by 5;
+			raise Player Libido by 5;
 			infect "Margay";
 		else:
+			LineBreak;
 			say "[margayoral]";
 	else:
 		say "[margayoral]";
 
 to say margayoral:
-	if Player is male:
-		say "     You run a hand over your throbbing cock as you look down at the moaning feline you've defeated and decide to put that lovely muzzle of hers to work. Walking up to her, you grab her head and guide her to your groin. Soon enough, she mewls softly and starts nuzzling against your cock before taking it into her muzzle. She licks and sucks at your cock tenderly, purring and moaning happily as she bobs her muzzle over your shaft hungrily. You run your hands through her soft fur, rubbing those feline ears and scritching the underside of her muzzle, getting her to purr all the more. Which adds a very enjoyable rumble to the sensations you're receiving by the eager feline. When your climax comes, you drive your cock down her throat, which stretches easily to accommodate it, and pump shot after shot of your hot seed down her throat. When your balls are drained, you pull your cock out and leave her there, moaning and mewling in her need, fingering her gaping pussy with nothing to fill it.";
-	else:
-		say "     You run a fingers over your wet pussy as you look down at the moaning feline you've defeated and decide to put that lovely muzzle of hers to work. Walking up to her, you grab her head and guide her to your groin. Soon enough, she mewls softly and starts nuzzling against your cunt before diving her raspy tongue into it to lap at your clit. She licks and kisses at it tenderly, purring and moaning happily as she laps up your juices. You run your hands through her soft fur, rubbing those feline ears and scritching the underside of her muzzle, getting her to purr all the more. Which adds a very enjoyable rumble to the sensations you're receiving by the eager feline. When your climax comes, you grab her head firmly and press her against your lips and she nuzzles hard against your pussy as if trying to bury her muzzle into it to lick as deep as she can. After a series of very fulfilling orgasms that leave the kitty's muzzle soaked, you push her away and leave her there, moaning and mewling in her need, fingering her gaping pussy with nothing to fill it.";
+	say "     You run [if Player is male]a hand over your throbbing cock as you look down at the moaning feline you've defeated and decide to put that lovely muzzle of hers to work. Walking up to her, you grab her head and guide her to your groin. Soon enough, she mewls softly and starts nuzzling against your cock before taking it into her muzzle. She licks and sucks at your cock tenderly, purring and moaning happily as she bobs her muzzle over your shaft hungrily. You run your hands through her soft fur, rubbing those feline ears and scritching the underside of her muzzle, getting her to purr all the more. Which adds a very enjoyable rumble to the sensations you're receiving by the eager feline. When your climax comes, you drive your cock down her throat, which stretches easily to accommodate it, and pump shot after shot of your hot seed down her throat. When your balls are drained, you pull your cock out[else]your fingers over your wet pussy as you look down at the moaning feline you've defeated and decide to put that lovely muzzle of hers to work. Walking up to her, you grab her head and guide her to your groin. Soon enough, she mewls softly and starts nuzzling against your cunt before diving her raspy tongue into it to lap at your clit. She licks and kisses at it tenderly, purring and moaning happily as she laps up your juices. You run your hands through her soft fur, rubbing those feline ears and scritching the underside of her muzzle, getting her to purr all the more. Which adds a very enjoyable rumble to the sensations you're receiving by the eager feline. When your climax comes, you grab her head firmly and press her against your lips and she nuzzles hard against your pussy as if trying to bury her muzzle into it to lick as deep as she can. After a series of very fulfilling orgasms that leave the kitty's muzzle soaked, you push her away[end if] and leave her there, moaning and mewling in her need, fingering her gaping pussy with nothing to fill it.";
 	if UBlevel > 1 and margaymet > 2 and MKunleashed is false:
-		let tempmon be MonsterID;
-		setmonster "Megakitty";
-		choose row MonsterID from the Table of Random Critters;
-		if Name entry is "Megakitty":
+		if "Megakitty" is a Name listed in Table of Random Critters:
 			now MKunleashed is true;
 			now area entry is "Fair";
 		say "     'If you're not going to be a good little kitty and play with me properly, I think we'll need to send Big Momma after you. The Megakitty will make sure you're brought up right as a sexy kitty,' she calls out at you as you walk off. You're not quite sure what all that means, but it could be trouble.";
 
 Section 2 - Creature Insertion
-
-to say margaydesc:
-	say "     It seems like one of the fair's more hefty attendees has picked up some feline traits. Looking over the margay, her Rubenesque body is covered in a soft coat of golden fur speckled by leopard-like spots. The pattern changes on her head where it becomes a pair of stripes that run down the middle of her face, brushing past the eyes and passing both sides of the nose to stop at the end of said nose. The whole is decorated with cute little spots. Her head is a small feline head with large feline eyes and small pointed feline ears. From the way she moves and stretches, her large body is both quite large and VERY elastic in the belly. Over her plump belly is three rows of breasts, all fairly small and decreasing slightly in size. Her arms are motherly feline arms with human-style hands featuring retractable claws. Her legs are plantigrade legs with plenty of jiggle and firmly toned muscles. Her legs end with nearly human feet which have clawed toes and whose undersides consist of thick black skin pads. She has wide hips that look big enough to swallow or birth people whole, easily capable of giving painless and effortless births. Your eyes drawn to there, you can see she has a pair of large, wet vaginas, gaping a little as if in need to be filled. You can see a fresh trickle of juices from them as her feline eyes stare at you with a hungry desire.";
 
 Table of CombatPrep (continued)
 name(text)	PrepFunction(text)
@@ -126,7 +111,7 @@ When Play begins:
 	now attack entry is "[one of]The large feline slashes at you with her rending claws![or]The Rubenesque beauty grabs you in her strong arms and grinds her large pussies against you![or]The tropical cat mrowls as she grabs one arm with a clawed paw and keeps the other velveted as she gropes you firmly![or]In a surprising feat of flexibility for one so large, the margay kicks you firmly in the gut, causing you to stumble back![or]The full-figured margay pulls you in close for a warm, tender hug that saps some of your will to resist her increasing tempting body![or]The large feline slams into you and pushes you down, trying to smother you under her ample figure![at random]";
 	now defeated entry is "[beatthemargay]";
 	now victory entry is "[losetomargay]";
-	now desc entry is "[margaydesc]";
+	now desc entry is "     It seems like one of the fair's more hefty attendees has picked up some feline traits. Looking over the margay, her Rubenesque body is covered in a soft coat of golden fur speckled by leopard-like spots. The pattern changes on her head where it becomes a pair of stripes that run down the middle of her face, brushing past the eyes and passing both sides of the nose to stop at the end of said nose. The whole is decorated with cute little spots. Her head is a small feline head with large feline eyes and small pointed feline ears. From the way she moves and stretches, her large body is both quite large and VERY elastic in the belly. Over her plump belly is three rows of breasts, all fairly small and decreasing slightly in size. Her arms are motherly feline arms with human-style hands featuring retractable claws. Her legs are plantigrade legs with plenty of jiggle and firmly toned muscles. Her legs end with nearly human feet which have clawed toes and whose undersides consist of thick black skin pads. She has wide hips that look big enough to swallow or birth people whole, easily capable of giving painless and effortless births. Your eyes drawn to there, you can see she has a pair of large, wet vaginas, gaping a little as if in need to be filled. You can see a fresh trickle of juices from them as her feline eyes stare at you with a hungry desire.[line break]";
 	now face entry is "a small feline head with large feline eyes and small pointed feline ears"; [ Face description, format as "Your face is [Face of Player]." ]
 	now body entry is "quite large and VERY elastic in the belly, allowing you to move freely despite your size. Your body feels quite stretchable, and almost eager to take something large and filling inside you. Your arms are motherly feline arms with human-style hands featuring retractable claws. Your legs are plantigrade legs with plenty of jiggle and firmly toned muscles. They end with nearly human feet which have clawed toes and whose undersides consist of thick black skin pads";
 	now skin entry is "a lovely, spotted patterned coat of fur over your";
@@ -136,7 +121,7 @@ When Play begins:
 	now body change entry is "the infection seeps into you, flowing into your body. Your torso then starts growing bigger and taller, developing extra space that makes you feel like you could smuggle a washing machine in your belly. Your arms burn with an itchy fire as the infection spreads through them. Your hands crack and grow a little smaller while new claws take form in your fingers. The itchy fire hits your legs as the Margay infection takes hold in them, forcing your toes to grow claws and plumping them up with extra muscles to carry your increased weight, and even more for short periods of time";
 	now skin change entry is "the Margay infection strikes your skin, soaking into it and making your entire body itch. Your body hair starts to grow in thicker and in heavier density thanks to new follicles growing in your skin. The new fur then shifts into gold and black patterns before your eyes";
 	now ass change entry is "your hips immediately start to widen to fit a very large frame, gaining wide, birthing hips and a very plush bottom. Above this bootilicious behind, you grow a new tail that lengthens until it brushes the ground with its tip";
-	now cock change entry is "its pulses with need, priming to explode in orgasm. There is a burning need growing in your loins, changing the way it looks. Your cock becomes more feline in shape and twitches with need. You can feel a growing need inside you as well, a longing to be filled, stuffed more full than you've ever been before";
+	now cock change entry is "it pulses with need, priming to explode in orgasm. There is a burning need growing in your loins, changing the way it looks. Your cock becomes more feline in shape and twitches with need. You can feel a growing need inside you as well, a longing to be filled, stuffed more full than you've ever been before";
 	now str entry is 16;
 	now dex entry is 16;
 	now sta entry is 14;
@@ -277,9 +262,9 @@ When Play begins:
 	[Clit Size Adjective is generated by a function and can be used in scenes: very small/small/average/large/very large]
 ]
 
-
-
 Section 3 - Alt Combat - Sensual Dance
+
+margaydancecount is a number that varies.
 
 Table of Critter Combat (continued)
 name	combat (rule)	preattack (rule)	postattack (rule)	altattack1 (rule)	alt1chance (number)	altattack2 (rule)	alt2chance (number)	monmiss (rule)	continuous (rule)	altstrike (rule)
@@ -308,8 +293,7 @@ this is the margaydance rule:
 			say "As captivating and tantalizing as the large feline's movements may be, you manage to avert your eyes and regain your senses.";
 		else:
 			let xx be ( lev entry + 10 ) / 10; [ xx=1 unless hard mode or otherwise boosted]
-			let rangenum be ( 80 - ( peppereyes * 4 ) );
-			let dam be ( ( wdam entry times a random number from rangenum to 120 ) / 100 );
+			let dam be ( wdam entry times a random number from ( 80 - ( peppereyes * 4 ) ) to 120 ) / 100;
 			increase Libido of Player by a random number between 5 and 10;
 			if BodyName of Player is "Margay":						[Margays take more dmg]
 				increase dam by a random number between 0 and xx;
@@ -325,10 +309,12 @@ this is the margaydance rule:
 			say "You are [descr].";
 		now peppereyes is 0; [pepperspray wears off]
 		if HP of Player > 0 and Libido of Player < 110:
-			wait for any key;
+			if BeforeCombat is 0, AttemptToWaitBeforeClear;
 		else:
-			if HP of Player <= 0, now fightoutcome is 20;
-			if Libido of Player >= 110, now fightoutcome is 21;
+			if HP of Player <= 0:
+				now fightoutcome is 20;
+			else:
+				now fightoutcome is 21;
 			Lose;
 		rule succeeds;
 	else:
@@ -336,7 +322,18 @@ this is the margaydance rule:
 
 Section 4 - Margay Milk
 
-[Moved to Milk Items.]
+Table of Game Objects (continued)
+name	desc	weight	object
+"margay milk"	"Milk from a hefty feline."	1	margay milk
+
+[margay milk is a grab object.] [defined in Milk Items to prevent name conflicts]
+margay milk is infectious. margay milk is milky. Strain of margay milk is "Margay".
+Usedesc of margay milk is "[drinkmargaymilk]".
+Scent of margay milk is "This milk has a feline scent to it.".
+
+to say drinkmargaymilk:
+	say "     Feeling suddenly thirsty for the feline milk, you drink it down, releasing a soft purring sound as you do.";
+	PlayerDrink 6;
 
 Section 5 - Endings
 

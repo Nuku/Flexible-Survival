@@ -13,7 +13,7 @@ to say Sharkman Brute Wins:
 		say "     You try to fight against this powerhouse of a sharkman; however, his strength proves to be too much for you. After hitting you several times, everything in your body hurts all over, even without any major injuries. As you are barely able to move, the sharkman takes an opportunity to tackle you while you are distracted and tired, hits you with full force and manages to bring you down to the ground. He then sits by your chest and squeezes your arms and torso between his legs, successfully immobilizing you. 'Looks like I win! You were really fighting aggressively there...! What's wrong?' he asks, and you only look back at him with a grimace. 'Oh, sorry, didn't mean to hurt you all that much; I just sorta had to, uh... defend myself!'";
 		say "     He loosens his probably close-to-deadly thigh grip, which alleviates the pain. These guys are really strong, and something tells you they are not fully aware of how much... 'So, now that we've settled this, how about we have some fun? Surely there's better ways to spend energy that don't involve trying to knock each other off, yeah?'";
 	say "[line break]     Facing this peculiar situation, you consider your options. Shall you even think about [bold type]having sex with the sharkman?[roman type][line break]";
-	Say "     ([link]Y[as]y[end link]) - Yes.";
+	say "     ([link]Y[as]y[end link]) - Yes.";
 	say "     ([link]N[as]n[end link]) - No!";
 	if Player consents:
 		LineBreak;
@@ -26,7 +26,7 @@ to say Sharkman Brute Wins:
 to say Sharkman Brute Loses:
 	say "     [if fightoutcome is 11]As you so meticulously perform what you could only describe as a sensual dance with your best seduction abilities, you manage to evade the sharkman's attempts at bringing you down. Such skill comes with the added extra of having turned him on beyond what he, most likely, would have expected upon meeting you. 'Well, aren't you one teasing little bastard! Can't say I'm unpleasantly surprised...' he says, dropping the fight right there and then. 'So, now that you've done your thing, how about we have some fun together? Surely you weren't just doing that with no interest whatsoever in this body, right?' The enormous sharkman then starts flexing, every single one of his muscles bulging as he moves them.[else]Your skill in battle proves to be superior as you manage to defeat the sharkman, causing him to drop on his knees with a grimace. 'Ow! Ooow...! Okay, okay! You win! I surrender! No need to continue hitting me so hard like that!' he exclaims, and since you really do not see a reason to keep beating him, you simply stand put. 'Thanks! Phew, you're quite a strong fighter! I wasn't expecting to be so easily outmatched! So, uh... I guess I lost, which means you get to do whatever you want to me or something like that, yeah?' He seems willing to let you have your way with him, and so cheerfully so. While only slightly odd, perhaps you should take on the opportunity to enjoy some pleasurable time with a willing sex partner...[end if]";
 	say "[line break]     Facing this peculiar situation, you consider your options. Shall you even think about [bold type]having sex with the sharkman?[roman type][line break]";
-	Say "     ([link]Y[as]y[end link]) - Yes.";
+	say "     ([link]Y[as]y[end link]) - Yes.";
 	say "     ([link]N[as]n[end link]) - No!";
 	if Player consents:
 		LineBreak;
@@ -68,8 +68,6 @@ to say SharkmanBruteSexMenu:
 			say "     Maybe you are fine with just walking away without engaging in anything sexual. The sharkman does not force you to stay and, in fact, lets you go without much insisting. 'Aw... Alright... Well, see you next time then!'";
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options], or 0 to exit.";
-	wait for any key;
-	clear the screen and hyperlink list;
 
 to say SharkmanBruteSexBlowjob:
 	say "     Looking at the two red tips already poking out of the slit on his crotch, you know exactly what kind of fun you could be having with this handsome sharkman. It almost seems like he read your mind just then, as these internal cocks begin to push themselves out, growing bigger by each seconds, while your eyes glance between them and his face. 'Well, the anticipation's kinda getting me... So, uh, would you like to blow me?' he goes ahead and asks, to which you nod, bringing a hand over each of his rods and stroking them to their highest erection point. 'Oh, fuck that feels good... I like having them both worked like that, it's double the pleasure... Doesn't compare to when I used to just have one!'";
@@ -101,7 +99,7 @@ to say SharkmanBruteSBCEvent:
 	say "     'Well, you're a really fun person! Damn nice to have met you! Say... One more thing before you decide to go and we risk never meeting each other again...' He then walks up to you and places his hand on your opposite shoulder, prompting you to walk with him. 'Would you like to see where I'm living? Yeah, it's not here in this weird place, we have a sort of a [bold type]beach camp[roman type] that we found out it is somehow connected to this place by an underwater passage. I... don't think you could get through on your own, it's a bit of a long one and tricky to navigate, but I know the way and could take you there! I'm a really good swimmer! And I'd really love if you got to know about this place before you left!'";
 	say "     You could consider his offer, but quite frankly, why would you not accept his help to explore this place? It is not like he is some sort of shark person who could lure you into a trap only to eat you or something... 'I promise it's a fun place! We throw parties in there, we even got someone making drinks, the sea just for us, and we can fuck a whole lot too! And, yeah, I know that maybe venturing into a shark den might not sound like the best idea, but I promise we're all cool dudes. Just... dudes, yeah. The shark women were a little, uh... too fierce.' Well, all you can do is give it some thought, though he seems to really want to have you come along.";
 	say "[line break]     Maybe you should take his offer? Otherwise, [bold type]you doubt you will be able to find him around this area again[roman type]...";
-	Say "     ([link]Y[as]y[end link]) - Go with him.";
+	say "     ([link]Y[as]y[end link]) - Go with him.";
 	say "     ([link]N[as]n[end link]) - No, that is enough. You shall part ways.";
 	if Player consents:
 		LineBreak;

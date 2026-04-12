@@ -8,62 +8,56 @@ Version 1 of Giraffe by Stripes begins here.
 nogiraffesex is a number that varies.
 
 a postimport rule: [bugfixing rules for players that import savegames]
-	repeat with y running from 1 to number of filled rows in Table of Random Critters:
-		choose row y in Table of Random Critters;
-		if Name entry is "Giraffe":
-			now MonsterID is y;
-			now area entry is "Stable";
-			break;
+	choose row with Name of "Giraffe" from Table of Random Critters;
+	now area entry is "Stable";
 
 to say losetogiraffe:
 	project the Figure of GiraffeHerm_hard_icon;
 	now nogiraffesex is 0;
-	if HP of Player > 0:
-		say "     Unwilling to continue to resist the giraffe's advances, you are pulled into a French kiss that dives her long, blue tongue down your throat. ";
-	else:
-		say "     Unable to continue to resist the giraffe's advances, you are pulled into a French kiss that dives her long, blue tongue down your throat. ";
-	say "You can't help but moan into this kiss as her agile tongue squirms inside you, sending shivers of delight through your body. In a daze after the kiss, she pushes you down into a nearby room, onto a bed and leaps atop you.";
-	let raffesex be 0;
-	let mchance be 4;
-	if Player is submissive, increase mchance by 2;
-	if anallevel is 3, increase mchance by 2;
-	if Player is mpreg_ok, increase mchance by 2;
-	if anallevel is 1, now mchance is 0;
-	if ( Cunt Count of Player is 0 and a random chance of mchance in 12 succeeds ) or (Player is neuter):
+	say "     [if HP of Player > 0]Unwilling[else]Unable[end if] to continue to resist the giraffe's advances, you are pulled into a French kiss that dives her long, blue tongue down your throat. You can't help but moan into this kiss as her agile tongue squirms inside you, sending shivers of delight through your body. In a daze after the kiss, she pushes you down into a nearby room, onto a bed and leaps atop you.";
+	[let raffesex be 0;]
+	let mchance be 0;
+	if anallevel > 1:
+		now mchance is 4;
+		if Player is submissive, increase mchance by 2;
+		if anallevel is 3, increase mchance by 2;
+		if Player is mpreg_ok, increase mchance by 2;
+	if ( Player is not female and a random chance of mchance in 12 succeeds ) or Player is neuter:
 		say "     You are pushed over onto your stomach and something warm and moist prods against your anus. You brace yourself for a pounding from the crazed mutant, but instead what penetrates you moves about inside of you, hitting every little point of pleasure it can find. You dare a look behind you to see the giraffe's muzzle pushed between your legs, her tongue working wonders inside you as it plumbs your very depths. After a while, she pulls her head back, sliding her body up along your backside as a different heat replaces the last one. And as the giraffe's long neck rubs against yours, you realize this is the one you expected before, her massive cock pushing into you and stretching your asshole wide now that she's gotten you ready with her tongue.";
 		say "     With her tongue having prepared you, there's little discomfort and even that fades quickly as she pounds away at you. With a heavy thrust, she spears you on her cock. Vigorous thrusting brings both you and the giraffe quickly to an orgasm. You feel her hot seed spreading throughout your bowels, a gush of fluid from your overstuffed asshole soaking your thighs. Her large output leaves your belly plump and rounded[if Player is male]. Your cock gives a twitch as it sprays the bedding beneath you with ropey streams of your own cum[end if]. Done with you, the giraffe pulls out, a gush of her seed flowing from your distended anus as she strides off in search of more amusement, leaving you behind to recover as best you can.[mimpregchance]";
-	else if Player is female and ( Cock Count of Player is 0 or a random chance of 2 in 3 succeeds ):
+	else if Player is female and ( Player is not male or a random chance of 2 in 3 succeeds ):
 		say "     You are pushed over onto your stomach and something warm and moist prods against your slit. You brace yourself for a pounding from the crazed mutant, but instead what penetrates you moves about inside of you, hitting every little point of pleasure it can find. You dare a look behind you to see the giraffe's muzzle pushed between your legs, her tongue working wonders inside you as it plumbs your very depths. After a while, she pulls her head back, sliding her body up along your backside as a different heat replaces the last one. And as the giraffe's long neck rubs against yours, you realize this is the one you expected before, her massive cock pushing into you and stretching your pussy wide now that she's gotten you ready with her tongue.";
 		if Cunt Depth of Player < 16:
-			say "     With her tongue having prepared you, there's little discomfort and even that fades quickly as she pounds away at you. With a heavy thrust, she spears you on her cock. Vigorous thrusting brings both you and the giraffe quickly to an orgasm. You feel her hot seed spreading throughout your womb, a gush of fluid from your cunt soaking your thighs. Her large output leaves your belly plump and rounded, as if already pregnant with the giraffe's well-hung offspring[if Player is male]. Your cock gives a twitch as it sprays the bedding beneath you with ropey streams of your own cum[end if]. Done with you, the giraffe pulls out, a gush of her seed flowing from your distended cunt as she strides off in search of more amusement, leaving you behind to recover as best you can.[impregchance]";
+			say "     With her tongue having prepared you, there's little discomfort and even that fades quickly as she pounds away at you. With a heavy thrust, she spears you on her cock. Vigorous thrusting brings both you and the giraffe quickly to an orgasm. You feel her hot seed spreading throughout your womb, a gush of fluid from your cunt soaking your thighs. Her large output leaves your belly plump and rounded, as if already pregnant with the giraffe's well-hung offspring[if Player is male]. Your cock gives a twitch as it sprays the bedding beneath you with ropey streams of your own cum[end if]. Done with you, the giraffe pulls out, a gush of her seed flowing from your distended cunt as she strides off in search of more amusement, leaving you behind to recover as best you can.[fimpregchance]";
 		else:
-			say "     With her tongue having prepared you, her large cock spears into you easily. Vigorous thrusting brings both you and the giraffe quickly to an orgasm. You feel her hot seed spreading throughout your womb, a gush of fluid from your cunt soaking your thighs. Her large output leaves your belly plump and rounded, as if already pregnant with the giraffe's well-hung offspring[if Player is male]. Your cock gives a twitch as it sprays the bedding beneath you with ropey streams of your own cum[end if]. Done with you, the giraffe pulls out, a gush of her seed flowing from your distended cunt as she strides off in search of more amusement, leaving you behind to recover as best you can.[impregchance]";
+			say "     With her tongue having prepared you, her large cock spears into you easily. Vigorous thrusting brings both you and the giraffe quickly to an orgasm. You feel her hot seed spreading throughout your womb, a gush of fluid from your cunt soaking your thighs. Her large output leaves your belly plump and rounded, as if already pregnant with the giraffe's well-hung offspring[if Player is male]. Your cock gives a twitch as it sprays the bedding beneath you with ropey streams of your own cum[end if]. Done with you, the giraffe pulls out, a gush of her seed flowing from your distended cunt as she strides off in search of more amusement, leaving you behind to recover as best you can.[fimpregchance]";
 	else if Player is male:
 		say "     You are pushed over onto your back and the tall, slender herm climbs atop you, grinding her curvy hips down into your lap. Her hefty cock and large balls weigh heavily across your body as she grinds down onto your cock, quickly getting you erect so she might ride your pole. As she sinks down onto your shaft, her [if Cock Length of Player > 36]shapely body taking your [cock size desc of Player] rod with ease and only a slight pause to adjust despite the clear outline your throbbing meat makes in her[else if Cock Length of Player > 24]shapely body taking your [cock size desc of Player] rod with surprising ease, stuffing it all into her without delay[else]shapely body taking your [cock size desc of Player] rod in without delay[end if]. As she rides you, she runs her hands over her throbbing, two foot long cock and heavy balls. Large spurts of her precum splatter across your body and face. With her pounding her hips down onto yours and her cunt squeezing down around your shaft, it's not long before you cum, pumping your hot load into her. And she's more than eager to return the favor, blasting her hot seed across your upper body and face, coating you in her sperm. Once she's drained you and emptied her balls all over you, she gets up and strides out, leaving you there, panting and bathed in her semen.";
 
 to say beatthegiraffe:
 	project the Figure of GiraffeHerm_hard_icon;
-	say "     Having beaten the giraffe, you knock the herm to the ground. She moans softly, blue tongue hanging out as she pants for breath. ";
 	if nogiraffesex > 2:
-		say "You resist taking advantage of the fallen herm like the others before her and instead send her packing with a boot to her rear. She whimpers and rubs her sore ass as she goes off looking for someone to kiss it and make it better.";
+		say "     Having beaten the giraffe, you knock the herm to the ground. She moans softly, blue tongue hanging out as she pants for breath. You resist taking advantage of the fallen herm like the others before her and instead send her packing with a boot to her rear. She whimpers and rubs her sore ass as she goes off looking for someone to kiss it and make it better.";
 	else if Player is not neuter:
-		say "You find yourself tempted to make use of that agile tongue to get a little relief for yourself. Shall you do so?";
+		say "     Having beaten the giraffe, you knock the herm to the ground. She moans softly, blue tongue hanging out as she pants for breath. You find yourself tempted to make use of that agile tongue to get a little relief for yourself. Shall you do so?";
 		if Player consents:
+			LineBreak;
 			if Player is female:
 				say "     [if Player is male]While you're tempted to use her muzzle for your cock, you really want that tongue of hers in your cunny. [end if]Pressing her muzzle to your juicy slit, you grip her head by her short, knobby horns and grind your pussy against her lips. Her tongue slides out, diving into your pussy and writhes around inside you. You moan in pleasure and force her (though little forcing is actually needed once she's started) to eat you out with her agile tongue until you've had several powerful climaxes that leave you quite satisfied. When you're finally done with her, you push her head back, her tongue popping out with a wet slurp. She smiles up at you, licks her muzzle with a long, slow swipe of her tongue and bounds off, looking for someone else to play with now that you've gotten her so very hard. You almost feel bad for the poor, unfortunate soul who'll end up speared on that thick cock of hers... almost.";
 			else:
 				say "     Pressing her muzzle to your cock, you grip her head by her short, knobby horns and grind your throbbing cock against her lips. Her tongue slides out and wraps around your shaft, working itself all over it as she starts to suck you off with soft moans of delight. You groan in pleasure and for her (though little forcing is actually needed once she's started) to lick and suck you until you blow your load down that long throat of hers, feeding her your thick semen, which she licks all up. When you're finally done with her, you push her head back, her tongue popping off a wet slurp. She smiles up at you, licks her muzzle with a long, slow swipe of her tongue and bounds off, looking for someone else to play with now that you've gotten her so very hard. You almost feel bad for the poor, unfortunate soul who'll end up speared on that thick cock of hers... almost.";
 		else:
+			LineBreak;
 			say "     Resisting the urge to give in to your baser instincts, you push the horny herm away and send her packing with a boot to her rear. She whimpers and rubs her sore ass as she goes off looking for someone to kiss it and make it better.";
 			increase nogiraffesex by 1;
 	else:
-		say "Having little interest in sex at the moment, you send her packing with a boot to her rear. She whimpers and rubs her sore ass as she goes off looking for someone to kiss it and make it better.";
-
-Section 2 - Creature Insertion
+		say "     Having beaten the giraffe, you knock the herm to the ground. She moans softly, blue tongue hanging out as she pants for breath. Having little interest in sex at the moment, you send her packing with a boot to her rear. She whimpers and rubs her sore ass as she goes off looking for someone to kiss it and make it better.";
 
 to say giraffedesc:
 	say "     You find yourself facing off against a tall, slender giraffe humanoid. Measuring over eight feet to the top of her head, much of that height comes from her extra-long neck. Her body is covered in short bristly fur, irregular shapes of dark brown separated by a random pattern of cream, though lighter on the chest and stomach. Her head is sitting atop a thick, long neck. Her narrow face is dominated by a tapered muzzle, containing a long blue-black tongue. A pair of leaf-shaped ears constantly flick about on either side of the head and have two short, boney horns between them. Her body is slender, but toned with shapely limbs and a curvy waist that shows off her plump breasts. Her arms are elongated and slender, the joints thick and solid. Her hands are broad, ending in three fingers and a thumb each with a thick dark nail. Her legs are long, but sturdy to support her sexy body. The solid joints bent in a digitigrade stance, ending in black cloven hooves. She has a ropey, knee-length tail, ending in a tuft of black fur. Hanging between those legs, she has a massive thick, pink, flat-headed maleness tucked into a sheath that has trouble holding the hefty monster cock. Below that hangs a pair of lap-filling balls.";
 	say "     Eyeing you, the herm slides her long tongue in a disturbingly sensual display across her muzzle. 'Mmm... [one of]how about a kiss, sweetie[or]can I get a kiss, hot stuff[or]gimme some sugar, baby[or]you look like you need a kiss, am I right[or]how about some tonsil tennis, hon[at random]?' she says, leaning in uncomfortably close. From the way her cock throbs and slips a little further from her sheath, it seems that's not all she's got in mind for you.";
+
+Section 2 - Creature Insertion
 
 Table of CombatPrep (continued)
 name(text)	PrepFunction(text)
@@ -246,10 +240,9 @@ When Play begins:
 	[Clit Size Adjective is generated by a function and can be used in scenes: very small/small/average/large/very large]
 ]
 
-
-[
 Section 3 - Endings
 
+[
 Table of GameEndings (continued)
 Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
 "Giraffe Infection"	"Infection"	""	Giraffe Infection rule	1000	false

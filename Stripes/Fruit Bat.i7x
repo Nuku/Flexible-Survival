@@ -8,11 +8,9 @@ Section 1 - Creature Responses
 frbatbeaten is a number that varies.
 
 to say fruitbatdesc:
-	setmongender 3; [creature is male]
 	say "     You are met by a slender bat creature that stands roughly six feet tall. Covered in brown fur with a bluish tinge to it, the creature is part bat and part man in form. His wings are part of his arms and hands, his arm bones and elongated fingers having webbing between them, though the thumb and an extra finger are free to provide some added dexterity. All he's wearing is a snug [one of]pink[or]purple[or]aqua[or]green[or]rainbow[at random] speedo that leaves little to the imagination, his plump package making quite the bulge in it.";
 	say "     He has a fox-like face with large, conical ears that are now focused on you. The right ear is pierced with a [one of]gold[or]amethyst[or]spinel[or]silver[or]sapphire[or]heart-shaped[at random] stud as well as another piercing in his tongue[if daytimer is day]. He's also wearing a pair of shades to keep the sun out of his eyes[end if]. The soft, fruity scent he's giving off as well the shape of his vulpine head and teeth lead you to guess that a large part of him is based on fruit bats.";
 	say "     '[one of]Hey there, honey. Let's play[or]Come on, let's hang out[or][if Player is male]Lemme see that nice cock of yours[else]Lemme see what you've got[end if][or]Come closer and I'll give you a peek in my package[or]Have a lick. It tastes like blueberries[at random],' he says with a grin while rubbing his crotch bulge, causing it to stretch the taut fabric further.";
-
 
 to say losetofruitbat:
 	setmonster "Fruit Bat";
@@ -33,15 +31,13 @@ to say losetofruitbat:
 	else:
 		say "pulls you to your knees and grinds his crotch bulge against your face. With his covered manhood right there, the tantalizing fruity scent is stronger and makes your mouth water [if HP of Player > 0]all the more for it[else]involuntarily a little[end if]. Tugging down on the front of his speedo, he frees his turgid member and presses it to your lips. Tasting a mix of predominantly [one of]pineapple[or]peach[or]plum[or]apricot[or]strawberry[or]mango[or]cherry[at random] and blueberry flavors on it, you respond by opening your mouth and plunging over his eight-inch member.";
 		say "     The bat's vestigial hands rub over your head as he thrusts into your mouth. Your tongue, loving his fruity taste, slathers all across it, lapping up his precum while you rub those plump balls of his. '[one of]Mmm... that's it, sweetie. Rub those big plums of mine[or]Oh yeah, keep it up and you'll get your tasty treat[or]Mmm... berries and cream on its way, you horny thing[at random],' he moans. [if HP of Player > 0]You[else]Despite your earlier resistance, you[end if] can't help but respond, working all the harder for the delicious load he has for you as your lustful desires take control.";
-		say "     When the blowjob finally becomes too much for him, your winged lover drives his cock fully into your mouth and releases a high-pitched cry of delight. Your mouth is flooded with his hot semen, splattering that blueberry goo across your palate and down your throat. You eagerly gulp it down and keep sucking for more, only releasing him after he's given up the last drops of his delicious spunk. After he eases his spent shaft from your sticky mouth, ";
 		if Player is male and a random chance of Libido of Player in 50 succeeds:
-			say "his eyes are drawn to your own erection[smn] and he pushes you onto your back. Putting his muzzle around your manhood, he licks and sucks at it until his talented tongue soon pushes you over the edge and you feed your [Cum Load Size of Player] load of [CockSpeciesName of Player in lower case] cum to him in return. His sweet taste lingers on your lips after he's sent you on your way in a sex-addled haze.";
+			say "     When the blowjob finally becomes too much for him, your winged lover drives his cock fully into your mouth and releases a high-pitched cry of delight. Your mouth is flooded with his hot semen, splattering that blueberry goo across your palate and down your throat. You eagerly gulp it down and keep sucking for more, only releasing him after he's given up the last drops of his delicious spunk. After he eases his spent shaft from your sticky mouth, his eyes are drawn to your own erection[smn] and he pushes you onto your back. Putting his muzzle around your manhood, he licks and sucks at it until his talented tongue soon pushes you over the edge and you feed your [Cum Load Size of Player] load of [CockSpeciesName of Player in lower case] cum to him in return. His sweet taste lingers on your lips after he's sent you on your way in a sex-addled haze.";
 			CreatureSexAftermath "Player" receives "OralCock" from "Fruit Bat";
 			CreatureSexAftermath "Fruit Bat" receives "OralCock" from "Player";
 		else:
-			say "he pulls you into a kiss, thrusting his tongue into your mouth. You moan at the taste of it, fresh [one of]pineapple[or]peaches[or]plums[or]apricots[or]strawberries[or]mangos[or]cherries[at random] mixing with the lingering taste of wild blueberries already on your tongue. His sweet taste lingers on your lips after he's sent you on your way in a sex-addled haze.";
+			say "     When the blowjob finally becomes too much for him, your winged lover drives his cock fully into your mouth and releases a high-pitched cry of delight. Your mouth is flooded with his hot semen, splattering that blueberry goo across your palate and down your throat. You eagerly gulp it down and keep sucking for more, only releasing him after he's given up the last drops of his delicious spunk. After he eases his spent shaft from your sticky mouth, he pulls you into a kiss, thrusting his tongue into your mouth. You moan at the taste of it, fresh [one of]pineapple[or]peaches[or]plums[or]apricots[or]strawberries[or]mangos[or]cherries[at random] mixing with the lingering taste of wild blueberries already on your tongue. His sweet taste lingers on your lips after he's sent you on your way in a sex-addled haze.";
 			CreatureSexAftermath "Player" receives "OralCock" from "Fruit Bat";
-
 
 to say beatthefruitbat:
 	increase frbatbeaten by 1;
@@ -51,41 +47,50 @@ to say beatthefruitbat:
 		say "     Your continued resistance proves to be more than the bat wants to endure in his search for fun. But this time you're ready for him and tackle him as he starts to take to the air. Unable to support the weight of both of you, he tumbles [if showlocale is true]onto the sandy beach[else]to the ground[end if] and is pinned beneath you. But you'd reacted without considering why, or even if, you want him at all. Now that you've caught the bat, what shall you do?";
 		now sextablerun is 0;
 		blank out the whole of table of fucking options;
+		[]
 		if Player is male:
 			choose a blank row in table of fucking options;
 			now title entry is "Fuck him";
 			now sortorder entry is 1;
 			now description entry is "Pound that fruity ass of his";
-[			choose a blank row in table of fucking options;
+			[
+			choose a blank row in table of fucking options;
 			now title entry is "69";
 			now sortorder entry is 4;
-			now description entry is "suck each other off";]
+			now description entry is "suck each other off";
+			]
 			choose a blank row in table of fucking options;
 			now title entry is "Blowjob";
 			now sortorder entry is 5;
 			now description entry is "Make him suck you off";
+		[]
 		if Player is female:
 			choose a blank row in table of fucking options;
 			now title entry is "Ride him (vaginal)";
 			now sortorder entry is 2;
 			now description entry is "Ride the fruity bat's cock";
-[			choose a blank row in table of fucking options;
+			[
+			choose a blank row in table of fucking options;
 			now title entry is "Cunnilingus";
 			now sortorder entry is 6;
-			now description entry is "make him eat your juicy peach";]
+			now description entry is "make him eat your juicy peach";
+			]
+		[]
 		choose a blank row in table of fucking options;
 		now title entry is "Ride him (anal)";
 		now sortorder entry is 3;
 		now description entry is "Take the fruity bat's cock up the ass";
+		[]
 		sort the table of fucking options in sortorder order;
 		repeat with y running from 1 to number of filled rows in table of fucking options:
 			choose row y from the table of fucking options;
 			say "[link][y] - [title entry][as][y][end link][line break]";
 		say "[link]0 - Let him go[as][0][end link][line break]";
 		while sextablerun is 0:
-			say "Pick the corresponding number> ";
+			say "Pick the corresponding number> [run paragraph on]";
 			get a number;
 			if calcnumber is 0:
+				LineBreak;
 				say "     You give the bat a threatening growl and spank that speedo'd ass of his a few times as a warning not to cross you again. The fruity boytoy gives a high-pitched whimper and scrambles away a few feet once you let him go. '[one of]You big sourpuss[or]You're no fun[or]Hey, don't bruise the fruit[or]You're a rotten winner[or]You're rotten to the core, you spoilsport[at random],' he grumbles, rubbing his sore behind with a winghand. He takes to the air with an angry shriek and flies off in search of more agreeable fun.";
 				now sextablerun is 1;
 			else if calcnumber > 0 and calcnumber <= the number of filled rows in table of fucking options:
@@ -93,23 +98,23 @@ to say beatthefruitbat:
 				choose row calcnumber in table of fucking options;
 				say "[title entry]: Shall you [description entry]?";
 				if Player consents:
-					let num be sortorder entry;
+					LineBreak;
 					now sextablerun is 1;
-					if num is 1:
-						say "[frbatsex_01]";
-					else if num is 2:
-						say "[frbatsex_02]";
-					else if num is 3:
-						say "[frbatsex_03]";
-					else if num is 4:
-						say "[frbatsex_04]";
-					else if num is 5:
-						say "[frbatsex_05]";
-					else if num is 6:
-						say "[frbatsex_06]";
+					if title entry is:
+						-- "Fuck him":
+							say "[frbatsex_01]";
+						-- "Ride him (vaginal)":
+							say "[frbatsex_02]";
+						-- "Ride him (anal)":
+							say "[frbatsex_03]";
+						[-- "69":
+							say "[frbatsex_04]";]
+						-- "Blowjob":
+							say "[frbatsex_05]";
+						[-- "Cunnilingus":
+							say "[frbatsex_06]";]
 			else:
-				say "Invalid Option. Pick between 0 and [the number of filled rows in the table of fucking options].";
-
+				say "Invalid Option. Pick between 0 and [the number of filled rows in the table of fucking options], or 0 to exit.";
 
 to say frbatsex_01:
 	say "     Already having the bat pinned beneath you, it's easy enough to yank down the back of his speedo and get your cock lined up with his bubble butt. His little hands dig at the [if showlocale is true]soft beach sand[else]ground[end if] as he tries to pull away, though his rear automatically grinds back against your manhood in obvious invitation. Knowing just what this fruity bat needs, you press your glans to his tailhole and [if Cock Length of Player > 20]force your [cock size desc of Player] cock into his sexy ass with a grunt of effort[else if Cock Length of Player > 12]drive your [cock size desc of Player] cock into his sexy ass with a strong thrust[else if Cock Length of Player > 5]push your [cock size desc of Player] cock into his sexy ass with a steady thrust[else]ease your [cock size desc of Player] cock into his sexy ass[end if]. His tight ring opens easily enough for you[if Cock Length of Player > 12] despite your considerable size[end if], showing that the cute bat's no stranger to taking it up the ass.";
@@ -118,21 +123,19 @@ to say frbatsex_01:
 	CreatureSexAftermath "Fruit Bat" receives "AssFuck" from "Player";
 
 to say frbatsex_02:
-	setmonster "Fruit Bat";
 	say "     Having the bat pinned beneath you, it's easy enough to force the worn boytoy into the position you want. Groping that package of his, you find him still semi-hard and quickly get him back to full erection once you yank down that speedo and start stroking him. You lower your juicy cunt down overtop of his large cock, taking [if Cunt Depth of Player < 8]as much of his eight inches as you can get[else]the full length of his eight inches[end if] into your [cunt size desc of Player] pussy with a soft moan of delight. He releases a pleasured cry as well and starts thrusting up into you even as you ride his pulsing pole.";
 	say "     As he gets into it, you don't have to worry about holding him down and can instead pull his little wing hands to your [if Breast Size of Player > 0]breasts so they can be played with as well[else][bodytype of Player] chest so it can be caressed[end if][if Player is male]. He eyes your cock longingly, his long tongue licking across his rather vulpine muzzle, but you keep his hands at your chest[end if]. You have your way with the boytoy's cock, riding it for all its worth. Being on top and in control, you adjust the pace and position as needed for your own pleasure, making the most out of the hot and juicy fucking.";
 	say "     When you climax and your cunt clamps down around his shaft in spasms of ecstasy, the bat's not long to follow, spraying his own load into you. You pull off of him even as he's still cumming and pump the last few shots of his berry-scented cum across your crotch and his belly. Your fun over, you pull the colorful swimsuit back over his crotch with an elastic snap onto his oversensitive shaft, making him whimper cutely. You give his ass a final swat and send him on his way.";
 	CreatureSexAftermath "Player" receives "PussyFuck" from "Fruit Bat";
 
 to say frbatsex_03:
-	setmonster "Fruit Bat";
 	say "     Having the bat pinned beneath you, it's easy enough to force the worn boytoy into the position you want. Groping that package of his, you find him still semi-hard and quickly get him back to full erection once you yank down that speedo and start stroking him. You lower your crinkled hole down overtop of his large cock and he gives a high-pitched chirp of pleasure as his eight incher sinks into your [if scalevalue of Player < 3]tight[else if scalevalue of Player is 3]sexy[else]large[end if] ass. You release a soft moan of delight as he starts thrusting up into you, meeting your downward pushes eagerly.";
 	say "     With him clearly getting into it, you don't have to worry about holding him down and can instead pull his little wing hands to your [if Player is male]throbbing cock[smn] for him to play with. He works [itthemm] over with an eagerness and familiarity of someone who's had plenty of experience pleasing other males[else if Breast Size of Player > 0]breasts for him to play with[else][bodytype of Player] chest so it can be caressed[end if][if Player is female]. You slip a hand between your thighs to play with your pussy while the bat's rod stuffs your asshole[end if]. You have your way with the boytoy's cock, riding it for all its worth. Being on top and in control, you adjust the pace and position as needed for your own pleasure, making the most out of the hot, tight fucking[if Player is male] by ensuring it pounds right into your prostate[end if].";
 	say "     When you reach orgasm and your rectum clamps down around his shaft in spasms of ecstasy, the bat's not long to follow. He sprays his load onto your bowels even as you [if Player is herm]coat his chest with your [Cum Load Size of Player] load and your feminine juices soak his crotch[else if Player is male]coat his chest with your [Cum Load Size of Player] load[else]soak his crotch with your feminine juices[end if]. You pull off of him even as he's still cumming and pump the last few shots of his berry-scented cum across your groin and his tummy[if Player is male], adding to your own mess[end if]. Your fun over, you pull the colorful swimsuit back over his crotch with an elastic snap onto his oversensitive shaft, making him whimper cutely. You give his ass a final swat and send him on his way.";
 	CreatureSexAftermath "Player" receives "AssFuck" from "Fruit Bat";
 
-to say frbatsex_04:
-	say "***69";
+[to say frbatsex_04:
+	say "***69";]
 
 to say frbatsex_05:
 	say "     With the boytoy bat too worn out after the fight and his capture, you have little difficulty manhandling him onto his knees. With your hands on his head, you press your [Cock of Player] cock against his foxish muzzle. His large ears twitch as he looks over your waiting erection, then licks his lips and wraps his elongated tongue around your manhood. The fruity bat is clearly well practiced at the task and takes to sucking your cock with eager skill, aided by his lengthy tongue. You moan in delight and rub his sensitive ears, coaxing him on.";
@@ -140,15 +143,10 @@ to say frbatsex_05:
 	say "     Between the show and the tonguework, you are built up to a powerful orgasm that culminates in you shooting your [Cum Load Size of Player] load down his throat. The fruit bat eagerly swallows it all down like some delicious treat and sucks you for every last drop you'll give. And being fed your hot semen also drives the fruity bat to cum as well, spraying out his sticky, berry-scented load onto the [if showlocale is true]sandy shore[else]ground[end if]. You caress his head and ears as he licks your spent shaft clean before pulling away and sending him off with a swat on his speedo'd butt.";
 	CreatureSexAftermath "Fruit Bat" receives "OralCock" from "Player";
 
-to say frbatsex_06:
-	say "***cunnilingus";
+[to say frbatsex_06:
+	say "***cunnilingus";]
 
 Section 2 - Creature Insertion
-
-to say fruitbatdesc:
-	say "     You are met by a slender bat creature that stands roughly six feet tall. Covered in brown fur with a bluish tinge to it, the creature is part bat and part man in form. His wings are part of his arms and hands, his arm bones and elongated fingers having webbing between them, though the thumb and an extra finger are free to provide some added dexterity. All he's wearing is a snug [one of]pink[or]purple[or]aqua[or]green[or]rainbow[at random] speedo that leaves little to the imagination, his plump package making quite the bulge in it.";
-	say "     He has a fox-like face with large, conical ears that are now focused on you. The right ear is pierced with a [one of]gold[or]amethyst[or]spinel[or]silver[or]sapphire[or]heart-shaped[at random] stud as well as another piercing in his tongue[if daytimer is day]. He's also wearing a pair of shades to keep the sun out of his eyes[end if]. The soft, fruity scent he's giving off as well the shape of his vulpine head and teeth lead you to guess that a large part of him is based on fruit bats.";
-	say "     '[one of]Hey there, honey. Let's play[or]Come on, let's hang out[or][if Player is male]Lemme see that nice cock of yours[else]Lemme see what you've got[end if][or]Come closer and I'll give you a peek in my package[or]Have a lick. It tastes like blueberries[at random],' he says with a grin while rubbing his crotch bulge, causing it to stretch the taut fabric further.";
 
 Table of CombatPrep (continued)
 name(text)	PrepFunction(text)
@@ -329,10 +327,9 @@ When Play begins:
 	[Clit Size Adjective is generated by a function and can be used in scenes: very small/small/average/large/very large]
 ]
 
-
-[
 Section 3 - Endings
 
+[
 Table of GameEndings (continued)
 Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
 "Fruit Bat Infection"	"Infection"	""	Fruit Bat Infection rule	1000	false

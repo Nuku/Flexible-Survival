@@ -4,12 +4,6 @@ Sphinx by Sarokcat begins here.
 
 Section 1 - Creature Responses
 
-to say Sphinx Wins:
-	say "     'Not so tough now are you, silly little thief,' Valerie says with a grin as she knocks you backwards, her paw reaching out and deftly swiping the item you were trying to steal back from you. 'Now I am going to go put this back on display, and we will forget this little incident ever happened... because I don't think even someone as silly as you will be making the same mistake twice, now will they?' the sphinx asks with amusement, before vanishing off down the museum halls, likely to return the item to its proper place before she returns to her perch at her desk. Well, at least you are still alive and allowed in the museum, though trying again certainly seems a bit dangerous right now...";
-
-To say Sphinx Loses:
-	say "     Valerie groans with pain as she stumbles backwards and crashes into one of the museum displays, her large wings becoming tangled in the display and her leonine flanks heaving with effort as she tries to extricate herself. Taking advantage of the situation, you quickly back off and look for a way out of the museum, just knowing that coming back here is going to be rather awkward...'";
-
 Section 2 - Creature Insertion
 
 Table of CombatPrep (continued)
@@ -41,10 +35,10 @@ When Play begins:
 	now enemy Name entry is "Valerie";
 	now enemy type entry is 1; [ 0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters. ]
 	now attack entry is "[one of]She riddles you this and that till your head spins.[or]the sphinx lashes out at you with he powerful leonine paws![or]Valerie barrels into you, sending you both crashing to the ground![or]the enraged sphinx leaps at you and rakes you with her claws![or]You duck out of the way of Valerie's leonine claws only to be sent flying as one of her powerful wings smashes into your side.[or]Catching your eyes, Valerie stares at you intimidatingly, and your head starts to swim for a minute before you manage to pull yourself back together.[at random]";
-	now defeated entry is "[Sphinx Loses]";
-	now victory entry is "[Sphinx Wins]";
-	now desc entry is "     Valerie comes charging down the halls of the museum, her wings half spread and a look of rage on her face as she charges forward on her powerful and sharply clawed leonine paws. 'You put that back, you thief!' she cries out with a roar as she leaps at you!";
-	now face entry is "Mostly human face, with slitted cat pupiled eyes and several slight feline features lending a feral cast to your face"; [ Face description, format as "Your face is [Face of Player]." ]
+	now defeated entry is "     Valerie groans with pain as she stumbles backwards and crashes into one of the museum displays, her large wings becoming tangled in the display and her leonine flanks heaving with effort as she tries to extricate herself. Taking advantage of the situation, you quickly back off and look for a way out of the museum, just knowing that coming back here is going to be rather awkward...'[line break]";
+	now victory entry is "     'Not so tough now are you, silly little thief,' Valerie says with a grin as she knocks you backwards, her paw reaching out and deftly swiping the item you were trying to steal back from you. 'Now I am going to go put this back on display, and we will forget this little incident ever happened... because I don't think even someone as silly as you will be making the same mistake twice, now will they?' the sphinx asks with amusement, before vanishing off down the museum halls, likely to return the item to its proper place before she returns to her perch at her desk. Well, at least you are still alive and allowed in the museum, though trying again certainly seems a bit dangerous right now...[line break]";
+	now desc entry is "     Valerie comes charging down the halls of the museum, her wings half spread and a look of rage on her face as she charges forward on her powerful and sharply clawed leonine paws. 'You put that back, you thief!' she cries out with a roar as she leaps at you![line break]";
+	now face entry is "a mostly human face, with slitted cat pupiled eyes and several slight feline features lending a feral cast to your face"; [ Face description, format as "Your face is [Face of Player]." ]
 	now body entry is "long and lean, you have a feral lions body starting just below the shoulders, your hips and lower legs almost indistinguishable from those of a great cat, though your arms are still more human than beast, with clawed fingers instead of paws. Along your back rest a pair of soft feathered wings, the powerful muscles in them still not quite strong enough to let you use them to fly"; [ Body Description, format as "Your Body is [Body of Player]." ]
 	now skin entry is "[one of]soft leonine furred[or]tan furred[or]soft lion furred[at random]"; [ Skin Description, format as "Looking at yourself, your body is covered in [Skin of Player] skin." ]
 	now tail entry is "You have a long, leonine tail lashing happily over your tight, feral-shaped hindquarters."; [ Tail description, write a whole Sentence or leave blank. ]
@@ -193,7 +187,6 @@ When Play begins:
 	now Clit Size entry is 0; [size 1-5, see Clit Size Adjective]
 	[Clit Size Adjective is generated by a function and can be used in scenes: very small/small/average/large/very large]
 ]
-
 
 Section 3 - Endings
 

@@ -3,7 +3,6 @@ Opossum Sailor by StripeGuy begins here.
 
 "Adds an Opossum Sailor to Flexible Survival's Wandering Monsters table."
 
-
 Section 1 - Creature Responses
 
 to say Opossum Sailor wins:
@@ -25,9 +24,6 @@ to say Opossum Sailor wins:
 			CreatureSexAftermath "Opossum Herm" receives "PussyDildoFuck" from "Player";
 			CreatureSexAftermath "Player" receives "PussyDildoFuck" from "Opossum Herm";
 
-To say Opossum Sailor loses:
-	say "     'It will be a cold day in hell afore a landlubber makes me swallow anchor!' Despite being handily defeated, the opossum sailor remains defiant! She scrambles on the ground for one of her ripped off medals or naval insignia, tail thrashing in alarm. 'You think to put me six fathoms down? To Davy Jones with you!' With a horrible agonized hiss, the opossum flops over and goes into a series of horrific death throes. Finally, she goes still, smelling foul. You recognize the classic ruse immediately, but a handful of drunk dockworkers do not. Before you can stop them, a gaggle of stevedores toss the [']corpse['] into the water. Cursing your luck, you can only watch as she floats away to sail another day.";
-
 Section 2 - Creature Insertion
 
 Table of CombatPrep (continued)
@@ -35,7 +31,7 @@ name(text)	PrepFunction(text)
 "Opossum Herm"	"[PrepCombat_Opossum Herm]"
 
 to say PrepCombat_Opossum Herm:
-	setmongender 4;
+	setmongender 5; [creature is herm]
 
 Table of Random Critters (continued)
 NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
@@ -58,7 +54,7 @@ When Play begins:
 	now enemy Name entry is ""; [ Specific name of unique enemy. ]
 	now enemy type entry is 0; [ 0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters. ]
 	now attack entry is "[one of]The opossum snaps her hips forward and around, prehensile tail whipping toward your face![or]With a hissing growl, the opossum hops up and swings from a rope to kick you hard![or]Darting forward, she goes low and swipes upward to slash you with her claws![or]The opossum fumbles for her cutlass, and finding it missing, whups you with the leather scabbard![or]Feeling threatened, the opossum slumps onto the ground and flops around for a moment before spraying foul-smelling secretions on you![at random]";
-	now defeated entry is "[Opossum Sailor loses]";
+	now defeated entry is "     'It will be a cold day in hell afore a landlubber makes me swallow anchor!' Despite being handily defeated, the opossum sailor remains defiant! She scrambles on the ground for one of her ripped off medals or naval insignia, tail thrashing in alarm. 'You think to put me six fathoms down? To Davy Jones with you!' With a horrible agonized hiss, the opossum flops over and goes into a series of horrific death throes. Finally, she goes still, smelling foul. You recognize the classic ruse immediately, but a handful of drunk dockworkers do not. Before you can stop them, a gaggle of stevedores toss the [']corpse['] into the water. Cursing your luck, you can only watch as she floats away to sail another day.[line break]";
 	now victory entry is "[Opossum Sailor wins]";
 	now desc entry is "     The warehouse and docks are alive with sailors and dock workers and various hangers-on milling about, unloading cargo, or maintaining the ships. Unfortunately you cannot travel too far before attracting some attention from at least one lonely sailor. Swagging out of the crowd in hobnailed boots comes an opossum decked out in leather and gold brocade like a sailor of old, a cutlass by her side. She sneers at you from under her tricorn hat, spitting out the stub of a cigar that had been in her muzzle. You would almost swear you can hear the opossum's cunt sizzling as she levels a finger at you. [one of]'Ahoy! Stand fast and prepare to be boarded!' [or]'Polish your brightwork and stow your duffle, officer on deck!' [or]'No time to caulk, sailor, you've got to dig out!' [or]'I've no patience for your drip, ya['] dogsbody!' [or]'Strike your colors and come with me to the cuddy!' [or]'I'm always looking to press gang, come along or I'll clap you in bilboes!' [or]'All standing! I just spotted my new bloke!' [or]'Surrender to me or you'll dance the hemp jig!' [or]'Which would you rather, be a blue under my command, or get tossed to the pirate sharks that hunt the sandy shore?' [at random]she cackles with a matter-of-fact threat, adjusting her epaulettes before beginning her attack!"; [ Description of the creature when you encounter it.]
 	now face entry is "a round and tapering face, with a sensitive pink nose and wide eyes. Your ears are black and contrast with the very pale pink and white of your face. The overall effect is a bit clownish and not very threatening";
@@ -211,7 +207,6 @@ When Play begins:
 	[Clit Size Adjective is generated by a function and can be used in scenes: very small/small/average/large/very large]
 ]
 
-
 Section 3 - Endings
 
 Table of GameEndings (continued)
@@ -221,9 +216,6 @@ Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered
 This is the Opossum Herm Infection rule:
 	if Player has a body of "Opossum Herm":
 		trigger ending "Opossum Herm Infection"; [Here it states, that the ending has been played.]
-		if humanity of Player < 10:
-			say "     Giving in fully to your marsupial instincts, you are driven to find the one that gifted you such an adaptable lust. You find her at the docks, and no words are needed between the two of you. You wear nothing but a blue coat, your life serving her ship in sail and her body in sex. You are one among many in her crew of opossum sailors, seeking new lands and new people to explore. You walk on burning sands and ice, your tongue tastes the cum of all creatures the ship can find. In time the turning of scenery erasing all long term memories that you have, your life and humanity fading away forever. Nothing stays in your mind for long, except for your love and submissive service to the saucy swashbuckling lady you call captain.";
-		else:
-			say "     Finally rescued by the military, you find yourself aching every moment you are in captivity for the end of your quarantine. When they finally release you, the realization hits. You have a terminal case of wanderlust, and that drives you to put paws to the road. You walk, ride, and fly in whatever direction strikes you at the moment, not caring for long-term connections or relationships. Your muddled, adaptable form suits you well for this - you might not be excellently suited for all climates, but you never suffer unduly. You even take some time to try out the glory of sail, and find it as pleasurable as any other form of travel. You collect experience as you go, and in a way infect everyone you meet with a fraction of your wanderlust by ways of exotic tales. You never stay in one spot for long, though, and even in death your ashes fly on the winds to all corners.";
+		say "     [if humanity of Player < 10]Giving in fully to your marsupial instincts, you are driven to find the one that gifted you such an adaptable lust. You find her at the docks, and no words are needed between the two of you. You wear nothing but a blue coat, your life serving her ship in sail and her body in sex. You are one among many in her crew of opossum sailors, seeking new lands and new people to explore. You walk on burning sands and ice, your tongue tastes the cum of all creatures the ship can find. In time the turning of scenery erasing all long term memories that you have, your life and humanity fading away forever. Nothing stays in your mind for long, except for your love and submissive service to the saucy swashbuckling lady you call captain[else]Finally rescued by the military, you find yourself aching every moment you are in captivity for the end of your quarantine. When they finally release you, the realization hits. You have a terminal case of wanderlust, and that drives you to put paws to the road. You walk, ride, and fly in whatever direction strikes you at the moment, not caring for long-term connections or relationships. Your muddled, adaptable form suits you well for this - you might not be excellently suited for all climates, but you never suffer unduly. You even take some time to try out the glory of sail, and find it as pleasurable as any other form of travel. You collect experience as you go, and in a way infect everyone you meet with a fraction of your wanderlust by ways of exotic tales. You never stay in one spot for long, though, and even in death your ashes fly on the winds to all corners[end if].";
 
 Opossum Sailor ends here.

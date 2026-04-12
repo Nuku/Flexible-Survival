@@ -11,7 +11,7 @@ The medicine case is a backdrop. It is in Zephyr Storeroom. Description of the m
 Scent of the medicine case is "     The medicine case has little in the way of a scent of its own.".
 
 to say medicine case list:
-	say "[line break]To buy an item, type [bold type]buy <name>[roman type]. ";
+	say "To buy an item, type [bold type]buy <name>[roman type]. ";
 	repeat through table of Zephyr Black Market Medicine Case:
 		follow allowed entry;
 		if rule failed:
@@ -52,7 +52,7 @@ The outfitters rack is a backdrop. It is in Zephyr Storeroom. Description of the
 Scent of the outfitters rack is "     The outfitters rack has little in the way of a scent of its own.".
 
 to say outfitters rack list:
-	say "[line break]To buy an item, type [bold type]buy <name>[roman type]. ";
+	say "To buy an item, type [bold type]buy <name>[roman type]. ";
 	repeat through table of Zephyr Black Market Outfitters Rack:
 		follow allowed entry;
 		if rule failed:
@@ -97,7 +97,7 @@ BrowseTPKMaleClothing is an action applying to nothing.
 understand "browse TPK/-- male clothing selection/--" as BrowseTPKMaleClothing.
 
 check BrowseTPKMaleClothing:
-	If TPK male clothing section is not visible, say "What is it you want to browse?" instead;
+	if TPK male clothing section is not visible, say "What is it you want to browse?" instead;
 
 carry out BrowseTPKMaleClothing:
 	say "[TPC male clothing selector]";
@@ -815,7 +815,7 @@ BrowseTPKFemaleClothing is an action applying to nothing.
 understand "browse TPK/-- female clothing selection/--" as BrowseTPKFemaleClothing.
 
 check BrowseTPKFemaleClothing:
-	If TPK female clothing section is not visible, say "What is it you want to browse?" instead;
+	if TPK female clothing section is not visible, say "What is it you want to browse?" instead;
 
 carry out BrowseTPKFemaleClothing:
 	say "[TPC female clothing selector]";
@@ -1950,7 +1950,7 @@ BrowseRDCostumeClothing is an action applying to nothing.
 understand "browse RD/-- costume clothing selection/--" as BrowseRDCostumeClothing.
 
 check BrowseRDCostumeClothing:
-	If RD costume clothing section is not visible, say "What is it you want to browse?" instead;
+	if RD costume clothing section is not visible, say "What is it you want to browse?" instead;
 
 carry out BrowseRDCostumeClothing:
 	say "[RD costume clothing selector]";

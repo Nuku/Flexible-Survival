@@ -11,6 +11,12 @@ a postimport rule: [bugfixing rules for players that import savegames]
 
 Section 1 - The Situation
 
+Tanukigender is a number that varies. Tanukigender is usually -1.
+SatisfiedTanuki is a number that varies. SatisfiedTanuki is usually 5.
+demandIndex is a number that varies.
+[tanukiList is a list of objects that varies.[@Tag:NotSaved]]
+the tanukiList is always {medkit, dirty water, water bottle, dog milk, soda, chips, glob of goo, food, gryphon milk, distilled milk, libido pill, acid milk, batcubus milk, cheetah milk, cow milk, margay milk, blue gel, cheese, musky cock flower, lembas bread, mammoth jerky, pink gel, pita bread, purple gel, psionic egg, psionic larva, skunk goo, sticky sushi, tentacle tip, awesome fruit, awesomer fruit, awesomest fruit, wyvern goop, centaur cum, earthen seed, demon seed, fennec semen, gecko cum, hawkman male cum, orc cum, gryphon cum, pewter seed, rhino cum, sea dragon cum, smilodon cum, wolf cum, orc femcum, mead horn, orc brew, pony cider, satyr wine, Satyress Wine, egg nog, sports drink, chocolate milk, tasty peach, birth control pill, fertile pill, pepperspray, glowing mushroom, estosterogen pill, eagle feather, honeycomb, behemoth horn, testosterone pill, centaur hair, corota venom, tuft of chin fur, dolphin milk, dryad cum, ebonflame scale, elk antler, lucky horseshoe, glowing ember, foul scuttler spit, red fur, hermaid kelp, libido suppressant, stray links, Spotted fur, peacock feather, nullifying powder, cock pill, healing booster, Tasty Fish, Pegasus Quill, pirate bandana, tousky quill, tainted wool, Tiger patch, Chipped tooth, spider webbing, spidertaur hair, pixie dust, crushed candies, estrogen pill, dragon scale, dragon hair, zebra fur, lizard juice}.
+
 Table of GameRoomIDs (continued)
 Object	Name
 Shinto Shrine	"Shinto Shrine"
@@ -27,11 +33,11 @@ There is a donation box and ornate bell in Shinto Shrine.
 Description of ornate bell is "     A small ornate bell. Next to it, a small ornate hammer hangs on a string.[line break]".
 Description of donation box is "     A small, empty, box, awaiting donations to the spirits, or whomever maintains this place.[line break]".
 
-Instead of taking the ornate bell:
-	say "The bell is securely attached to the shrine. The small hammer hanging next to it isn't - but you don't see much use of it on its own, as the thing is clearly too small to be a weapon.";
+check taking the ornate bell:
+	say "The bell is securely attached to the shrine. The small hammer hanging next to it isn't - but you don't see much use of it on its own, as the thing is clearly too small to be a weapon." instead;
 
-Instead of taking the donation box:
-	say "While you're fairly sure you could pry it up, a feeling of impending doom stays your thieving hands.";
+check taking the donation box:
+	say "While you're fairly sure you could pry it up, a feeling of impending doom stays your thieving hands." instead;
 
 Table of GameEventIDs (continued)
 Object	Name
@@ -40,7 +46,6 @@ Tanukibell	"Tanukibell"
 Tanukibell is a situation.
 ResolveFunction of Tanukibell is "[ResolveEvent Tanukibell]".
 Sarea of Tanukibell is "Nowhere".
-Tanukigender is a number that varies. Tanukigender is usually -1.
 
 to say ResolveEvent Tanukibell:
 	if Tanukigender is -1:
@@ -57,19 +62,14 @@ to say ResolveEvent Tanukibell:
 			now Tanuki Mom is in shinto shrine;
 		else:
 			say "     'I don't quite understand. Go on, think about it. I'll still be here.'";
-			continue the action;
+			stop the action;
 		say "     The pitch of the voice shifts subtly to match your choice. 'Well, there we are,' speaks the [if tanukigender is 2]female[else]male[end if] voice. 'Now then, go ahead and ring that little bell if you need more parental advice. I'll go get the book. This is going to be so much fun!' Though you see no form, you can hear the sound of padded feet dashing away.";
 		WaitLineBreak;
 		say "     There is a rushing noise and a loud pop, a [if tanukigender is 2]female[else]male[end if] figure appears with a bright smile. The tanuki bows towards you. 'There we are! Now, I hope you are ready for grade A parenting. I have so much to teach you! First lesson, don't ring the bell anymore.'";
 	else:
 		say "     'Didn't I tell you not to ring that?' They wave a finger at you admonishingly. 'What am I going to do with you? Go to your room!' With a flurry of leaves, your vision is lost a moment before you find yourself somewhere else.";
-		wait for any key;
+		WaitLineBreak;
 		now the player is in bunker;
-
-SatisfiedTanuki is a number that varies. SatisfiedTanuki is usually 5.
-demandIndex is a number that varies.
-[tanukiList is a list of objects that varies.[@Tag:NotSaved]]
-the tanukiList is always {medkit, dirty water, water bottle, dog milk, soda, chips, glob of goo, food, gryphon milk, distilled milk, libido pill, acid milk, batcubus milk, cheetah milk, cow milk, margay milk, blue gel, cheese, musky cock flower, lembas bread, mammoth jerky, pink gel, pita bread, purple gel, psionic egg, psionic larva, skunk goo, sticky sushi, tentacle tip, awesome fruit, awesomer fruit, awesomest fruit, wyvern goop, centaur cum, earthen seed, demon seed, fennec semen, gecko cum, hawkman male cum, orc cum, gryphon cum, pewter seed, rhino cum, sea dragon cum, smilodon cum, wolf cum, orc femcum, mead horn, orc brew, pony cider, satyr wine, Satyress Wine, egg nog, sports drink, chocolate milk, tasty peach, birth control pill, fertile pill, pepperspray, glowing mushroom, estosterogen pill, eagle feather, honeycomb, behemoth horn, testosterone pill, centaur hair, corota venom, tuft of chin fur, dolphin milk, dryad cum, ebonflame scale, elk antler, lucky horseshoe, glowing ember, foul scuttler spit, red fur, hermaid kelp, libido suppressant, stray links, Spotted fur, peacock feather, nullifying powder, cock pill, healing booster, Tasty Fish, Pegasus Quill, pirate bandana, tousky quill, tainted wool, Tiger patch, Chipped tooth, spider webbing, spidertaur hair, pixie dust, crushed candies, estrogen pill, dragon scale, dragon hair, zebra fur, lizard juice}.
 
 ringing is an action applying to nothing.
 understand "rung" and "ring" and "ring ornate/-- bell" and "ring ornate/-- bell with hammer" as ringing.
@@ -81,7 +81,7 @@ check ringing:
 Carry out ringing:
 	say "     You strike the bell, and it rings out like a gong, echoing through the shrine quite loudly!";
 	say "     A spirit takes form before you, looking like some kind of strange raccoon like being. It studies you a moment before it speaks:";
-	if the demand of the Shinto Shrine is journal or demand of Shinto Shrine is gill fruit:
+	if the demand of the Shinto Shrine is journal [or demand of Shinto Shrine is gill fruit]:
 		now demandIndex is a random number from 1 to the number of entries in tanukiList;
 		now the demand of Shinto Shrine is entry demandIndex of tanukiList;
 	else:
@@ -121,17 +121,10 @@ check leafing:
 
 carry out leafing:
 	say "     Concentrating intently on leaves, you feel a large one appear over you and settle on your head. Suddenly erotic pulses rock your form as you begin to assume your natural form!";
-	setmonster "Tanuki";
-	choose row MonsterID from Table of Random Critters;
+	choose row with Name of "Tanuki" from Table of Random Critters;
 	now non-infectious entry is false;
 	now Cross-Infection entry is ""; [ Infection that this infection will give the player when they lose; can be left empty if they infect with the monster's own strain. ] [swap to allow infection...]
-	infect;
-	infect;
-	infect;
-	infect;
-	infect;
-	infect;
-	infect;
+	MultiInfect "Tanuki" repeats 7;
 	now non-infectious entry is true; [...then close to prevent random infection]
 	say "     With the changes complete, you feel you could [bold type]grow balls[roman type] and [bold type]shrink balls[roman type] and also grow or shrink your cock or breasts!";
 
@@ -146,6 +139,7 @@ carry out ballgrowing:
 		say "Your tanuki magic forms a set a balls for you, growing a tiny cock to go with them.";
 		now Cock Count of Player is 1;
 		now Cock Length of Player is 2;
+		follow the cock descr rule;
 	BallsGrow Player by 1;
 	say "Your tanuki magic surges down into your balls as they begin to swell rapidly! Your balls feel like they have become [Ball Size Adjective of Player] balls!";
 
@@ -229,13 +223,6 @@ carry out breastshrinking:
 		say "Your tanuki magic surges up into your chest as it begins to shrink rapidly, leaving you with [descr] breasts!";
 
 Section 2 - Creature Insertion
-
-[Table of CombatPrep (continued)
-name(text)	PrepFunction(text)
-"Tanuki"	"[PrepCombat_Tanuki]"
-
-to say PrepCombat_Tanuki:
-	say "";]
 
 Table of Random Critters (continued)
 NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
@@ -433,21 +420,15 @@ the scent of tanuki coin is "It has a benign, metallic smell about it.".
 
 to say usetancoin:
 	if internalCockbypass is false:
-		say "     You flip the coin... It lands leaf-side up. You feel a strange, tingling sensation in your groin";
-		if Player is not male or (Player is male and CockName of Player is not listed in infections of InternalCockList):
-			say ", but nothing else happens. Strange...";
-		else:
-			say ". Checking yourself, it appears your balls have grown back, in spite of your previously internal anatomy!";
+		say "     You flip the coin... It lands leaf-side up. You feel a strange, tingling sensation in your groin[if Player is not male or (Player is male and CockName of Player is not listed in infections of InternalCockList)], but nothing else happens. Strange...[else]. Checking yourself, it appears your balls have grown back, in spite of your previously internal anatomy![end if]";
 		now internalCockbypass is true;
 	else:
-		say "     You flip the coin... It lands dragon-side up. You feel a strange, tingling sensation in your groin";
-		if Player is not male or (Player is male and CockName of Player is not listed in infections of InternalCockList):
-			say ", but nothing else happens. Strange...";
-		else:
-			say ". Checking yourself, it appears your balls have disappeared, receding once more in compliance with your internal infection!";
+		say "     You flip the coin... It lands dragon-side up. You feel a strange, tingling sensation in your groin[if Player is not male or (Player is male and CockName of Player is not listed in infections of InternalCockList)], but nothing else happens. Strange...[else]. Checking yourself, it appears your balls have disappeared, receding once more in compliance with your internal infection![end if]";
 		now internalCockbypass is false;
 
 Section 4 - Tanuki Dad
+
+TanukiTopics is a list of text that varies.
 
 Table of GameCharacterIDs (continued)
 object	name
@@ -494,7 +475,6 @@ Description of Tanuki Dad is "[TanukiDadDesc]".
 fuckscene of Tanuki Dad is "     He bursts into a merry fit of laughter. 'I'm your father, not your boyfriend. There is a difference.' He wags a finger at you reprimandingly. 'I know people look at these big things, but they are my tools, not my masters.'[line break]".
 The icon of Tanuki Dad is Figure of Tanuki_Dad_soft_icon.
 Scent of Tanuki Dad is "     He smells clean, if you don't mind the scent of fur and a bit of saki that clings to him. Noticing your attention, he grins. You would think this would be hard to notice, since grinning is his default expression, but there is a difference.".
-TanukiTopics is a list of text that varies.
 
 to say TanukiDadDesc:
 	say "     The tanuki spirit here has taken on the form of a father. You can tell, with the sharp blazer he's wearing with that big bold tie. He has his hands on either side of it, grinning at you proudly, his child. His belly is considerable, bulging in his clothing. Competing for the bulging contest, his great balls resist even the thought of trying to fit into any pants, so they are allowed to hang free, furry and virile. Compared to them, his furry sheath is actually comparatively small, not that he seems to care much.";
@@ -502,7 +482,7 @@ to say TanukiDadDesc:
 
 instead of conversing the Tanuki Dad:
 	project Figure of Tanuki_Dad_soft_icon;
-	say "What do you want to talk with Tanuki about?";
+	say "     What do you want to talk with Tanuki about?";
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]
@@ -626,7 +606,7 @@ instead of sniffing Tanuki Mom:
 	add "TanukiPerfume" to TanukiTopics;
 
 instead of conversing the Tanuki Mom:
-	say "What do you want to talk with Tanuki about?";
+	say "     What do you want to talk with Tanuki about?";
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]
@@ -695,40 +675,35 @@ instead of conversing the Tanuki Mom:
 	clear the screen and hyperlink list;
 
 To say TanukiSurvivalTalk:
+	if Humanity of Player < 20, now Humanity of Player is 20;
 	if Tanukigender is 1: [Tanuki Dad!]
-		if Humanity of Player < 20, now Humanity of Player is 20;
 		say "     'It's a tough world out there.' He nods appreciatively. 'The most important part is that you keep your chin up.'";
-		If humanity of Player < 40:
+		if humanity of Player < 40:
 			say "     His wet nose twitches softly. 'Looks like you're letting things get to you. I know how to relax you. Go on, play a few notes.' He gestures broadly to his expansive, if clothed, belly. 'Beat a few bars and you'll be right as rain.'";
 			if the player consents:
 				LineBreak;
 				say "     You reach your [if scalevalue of Player is 3]normal-size[else if scalevalue of Player is 4]large[else]massive[end if] [BodySpeciesName of Player in lower case] hands out and pat lightly at his belly. He reaches with his furry paws and pats at your hands in return. 'Go on, harder, and faster. Think of a song!' You play all the harder, thinking up a [one of]lively[or]rhythmic[or]random[at random] song to play with his belly serving as the drum. He manages to somehow hum along with the song in your head despite you not sharing it. Time passes without you noticing. By the time the drum session is over, you feel more grounded and together.";
 				increase Humanity of Player by 50;
 				follow turnpass rule;
+				WaitLineBreak;
 			else:
 				LineBreak;
 				say "     'Aw, be that way, but the offer's open, champ!' When he thinks you aren't looking at him directly, he speaks more quietly to himself, 'Nailed it, I'm a great dad.'";
-		if scalevalue of Player < 4:
-			say "     He tucks a furry finger under your chin, lifting it slightly. 'Now, I know I'm not your, you know, original dad, and that's alright. My biologicals are all off that way.' He points to the East. 'I invited them to come along, but they said this place was too far. Maybe I'll find another place that's closer to them? Never mind me, this is about you!' He pats your shoulders softly. 'Now let's see...'";
-		else:
-			say "     He cranes his head back a little to look up at you. 'I've never had such a large child before. It's kind of exciting, to tell you the truth. Don't worry about it though. A good father is a good father, no matter how big or small he might be.' He wags a finger as he talks, nodding to himself. 'Now as for advice...'";
+		say "     He [if scalevalue of Player < 4]tucks a furry finger under your chin, lifting it slightly. 'Now, I know I'm not your, you know, original dad, and that's alright. My biologicals are all off that way.' He points to the East. 'I invited them to come along, but they said this place was too far. Maybe I'll find another place that's closer to them? Never mind me, this is about you!' He pats your shoulders softly. 'Now let's see[else]cranes his head back a little to look up at you. 'I've never had such a large child before. It's kind of exciting, to tell you the truth. Don't worry about it though. A good father is a good father, no matter how big or small he might be.' He wags a finger as he talks, nodding to himself. 'Now as for advice[end if]...'";
 	else: [Tanuki Mom!]
-		if Humanity of Player < 20, now Humanity of Player is 20;
 		say "     'It's a tough world out there.' She nods appreciatively. 'The most important part is that you keep your chin up.'";
-		If humanity of Player < 40:
+		if humanity of Player < 40:
 			say "     Her wet nose twitches softly. 'Looks like you're letting things get to you. I know how to relax you. Go on, play a few notes.' She gestures broadly to her expansive, if clothed, belly. 'Beat a few bars and you'll be right as rain.'";
 			if the player consents:
 				LineBreak;
 				say "     You reach your [if scalevalue of Player is 3]normal-size[else if scalevalue of Player is 4]large[else]massive[end if] [BodySpeciesName of Player in lower case] hands out and pat lightly at her belly. She reaches with her furry paws and pats at your hands in return. 'Go on, harder, and faster. Think of a song!' You play all the harder, thinking up a [one of]lively[or]rhythmic[or]random[at random] song to play with her belly serving as the drum. She manages to somehow hum along with the song in your head despite you not sharing it. Time passes without you noticing. By the time the drum session is over, you feel more grounded and together.";
 				increase Humanity of Player by 50;
 				follow turnpass rule;
+				WaitLineBreak;
 			else:
 				LineBreak;
 				say "     'Aw, be that way, but the offer's open, champ!' When she thinks you aren't looking at her directly, she speaks more quietly to herself, 'Nailed it, I'm a great mom.'";
-		if scalevalue of Player < 4:
-			say "     She tucks a furry finger under your chin, lifting it slightly. 'Now, I know I'm not your, you know, original mom, and that's alright. My biologicals are all off that way.' She points to the East. 'I invited them to come along, but they said this place was too far. Maybe I'll find another place that's closer to them? Never mind me, this is about you!' She pats your shoulders softly. 'Now let's see...'";
-		else:
-			say "     She cranes her head back a little to look up at you. 'I've never had such a large child before. It's kind of exciting, to tell you the truth. Don't worry about it though. A good mother is a good mother, no matter how big or small she might be.' She wags a finger as she talks, nodding to herself. 'Now as for advice...'";
+		say "     She [if scalevalue of Player < 4]tucks a furry finger under your chin, lifting it slightly. 'Now, I know I'm not your, you know, original mom, and that's alright. My biologicals are all off that way.' She points to the East. 'I invited them to come along, but they said this place was too far. Maybe I'll find another place that's closer to them? Never mind me, this is about you!' She pats your shoulders softly. 'Now let's see[else]cranes her head back a little to look up at you. 'I've never had such a large child before. It's kind of exciting, to tell you the truth. Don't worry about it though. A good mother is a good mother, no matter how big or small she might be.' She wags a finger as she talks, nodding to herself. 'Now as for advice[end if]...'";
 
 to say TanukiRomanceTalk:
 	say "     [if Tanukigender is 2]'It's a strange world out there.' She sighs wistfully, twirling a few whiskers. 'I don't need to remind you of that. Still...' She crouches facing you. 'Love is still there, but just as fleeting. Cheap love, that's easier than ever, but real love? Just as far away.'[else]Tanuki Dad looks like someone forgot to tell him what to say. He makes unsure noises and worries his fingers for a few moments. 'And that's how it's done!' he suddenly exclaims as if he had provided any wisdom.[end if]";

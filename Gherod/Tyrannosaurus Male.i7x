@@ -109,8 +109,6 @@ to say TyrannosaurusMaleVictorySexMenu:
 			say "     Maybe he is not worth your attention at all, so you just leave him ranting and shouting all he wants, not even minding any additional words he says, and just continue what you were doing before all this.";
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options], or 0 to exit.";
-	wait for any key;
-	clear the screen and hyperlink list;
 
 to say TyrannosaurusMaleVictorySexEdging:
 	say "     You do have an idea of what to do to the strong dinosaur man that would be fun, and that involves getting close to him. However, such a powerful reptilian person could prove a challenge in case things get rough, but to your fortune, he happens to have some stuff with him that you can use to tie his hands, like a rope! So, you get behind him, use the fact he is still weak from the fight, grab him by the wrists and tie his hands up with the best of your abilities, to ensure he does not break free during the time you are going to spend with him. Obviously, he offers some resistance and complains, but nothing you cannot control. 'Hey! Stop that! No one ties me up, what the fuck are you doing?!'";

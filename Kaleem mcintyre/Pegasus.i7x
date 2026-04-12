@@ -4,9 +4,6 @@ Pegasus by Kaleem mcintyre begins here.
 
 Section 1 - Creature Responses
 
-to say PegasusDesc:
-	say "     Reminiscent of the flying mount of Bellerophon back in the myths of old, the creature folding its wings onto its side is both a thing of beauty and terror as the feral winged horse rears up at you in preparation to fight. With its luxurious gold and white hide [if daytimer is day]gleaming underneath the light of the sun[else]radiating underneath the cool glow of the moon[end if], expansive wings set on side of it, cloven hooves, and proud cerulean mane flowing in the breeze, the mutated mount is truly a beast to dwarf all equines in both ferocity and intelligence as it stares at you with blue eyes filled with almost endless wisdom. Strangely enough, the creature seems to be female, if the heated scent of equine mare in heat wafting from around it is anything to go by.";
-
 to say losetoPegasus:
 	say "     Knocked down after being beaten by the flying mount you find yourself planted fully onto the ground by a wide hoof as the majestic creature whinnies loudly over you in triumph.";
 	if Player is male:
@@ -25,16 +22,14 @@ to say beatthePegasus:
 	say "     Having felled the winged equine, you watch as the other slumps down onto the ground and then looks up at you imploringly.";
 	if Libido of Player > 40:
 		say "     Gazing at the beautiful feral mare, you wonder what it would be like to become intimate with such a mythical beast. At the subservient look in the winged mare's blue eyes, you get the feeling that the other would be satisfied with pleasuring you in one way or the other since you bested it.";
-		say "     [bold type]Do you want to try something with her?[roman type][line break]";
-		LineBreak;
+		say "[line break]     [bold type]Do you want to try something with her?[roman type][line break]";
 		say "     ([link]Y[as]y[end link]) - Yes.";
 		say "     ([link]N[as]n[end link]) - No.";
 		if Player consents:
 			LineBreak;
 			if Player is male:
 				say "     With you having a cock, there are some choices open to you.";
-				say "     [bold type]What would you prefer oral or vaginal?[roman type][line break]";
-				LineBreak;
+				say "[line break]     [bold type]What would you prefer oral or vaginal?[roman type][line break]";
 				say "     ([link]Y[as]y[end link]) - Oral.";
 				say "     ([link]N[as]n[end link]) - Vaginal.";
 				if Player consents:
@@ -52,9 +47,7 @@ to say beatthePegasus:
 					say "     You fuck the mare for the greater part of half an hour before you can feel the first signs that your orgasm about to hit. Grunting and then snorting like the beast beneath you, you reach out to grab at the winged mare's mane and then tug it somewhat viciously before raising a hand to smack the other across the ass. When your hand cracks loudly into the pegasus's glutes you smirk in untamed delight as her nethers suddenly lock up around you. Your thrusts slow down for a second after that because of the newly made friction, and just as soon as the winged mare loosens up you smack her again while pulling at her mane even harder, forcing her to tighten up once again. Over and over you fuck and spank your mount, making her whinny to the sky as her body is caught between both unimaginable pleasure and pain, but finally it all comes to an end when you smack her one time more and then gasp in adulation as your cock fires your seed off deep inside of her juicy folds. The feel of your male heat inside of her feminine depths does the pegasus in and soon the winged mare is neighing loudly and cumming hard enough that your white wash is forced out around your thighs and then down onto your legs.";
 					say "     When you pull out of the female, you don't have any regrets as you look at your sopping wet [BodyType of Player] body and then over to the newly pink-tinted ass belonging to the winged mare. Of course, when the pegasus finishes her orgasm, she makes her displeasure for your antics known by [one of]chasing you throughout the area[or]knocking you down and then planting her dripping ass onto your face[or]headbutting you onto the ground[at random]; however, you take your punishment with good grace.";
 			else:
-				LineBreak;
 				say "     [bold type]What would you prefer, though? Oral, or maybe...?[roman type][line break]";
-				LineBreak;
 				say "     ([link]Y[as]y[end link]) - Oral.";
 				say "     ([link]N[as]n[end link]) - Fisting.";
 				if Player consents:
@@ -67,7 +60,6 @@ to say beatthePegasus:
 		else:
 			LineBreak;
 			say "     [one of]Not feeling up to anything, you shake your head at the pegasus and then turn to go off about your way[or]The desire to mate just isn't there, but at seeing the wings of the beautiful horse lying prone on the creature's back, you ask it if it would be okay if you ride it. When it snorts and then suddenly jumps up to fly off, you get the feeling that [italic type]no[roman type] is the answer to that question[at random].";
-
 
 Section 2 - Creature Insertion
 
@@ -103,7 +95,7 @@ When Play begins:
 	now attack entry is "[one of]The pegasus rushes forward to kick you with its cloven hooves![or]The pegasus flies up into the sky and then shoots some of its needle-like feather down onto you![or]The pegasus batters you as it knocks you down with its head and then stomp viciously onto your chest![or]The pegasus flies up into the sky and then power-dives into you![or]The pegasus raises up onto its back hooves and then flaps its wings hard enough to send a gale of wind shooting at you![or]The pegasus pushes up into the sky and then folds its wings tight before spinning. Sadly in its descent it directs itself unswervingly towards you![at random]"; [ Successful attack message ]
 	now defeated entry is "[beatthePegasus]"; [ Text when monster loses. Change 'Pegasus' as above. ]
 	now victory entry is "[losetoPegasus]"; [ Text when monster wins. Change 'Pegasus' as above. ]
-	now desc entry is "[Pegasusdesc]"; [ Description of the creature when you encounter it. ]
+	now desc entry is "     Reminiscent of the flying mount of Bellerophon back in the myths of old, the creature folding its wings onto its side is both a thing of beauty and terror as the feral winged horse rears up at you in preparation to fight. With its luxurious gold and white hide [if daytimer is day]gleaming underneath the light of the sun[else]radiating underneath the cool glow of the moon[end if], expansive wings set on side of it, cloven hooves, and proud cerulean mane flowing in the breeze, the mutated mount is truly a beast to dwarf all equines in both ferocity and intelligence as it stares at you with blue eyes filled with almost endless wisdom. Strangely enough, the creature seems to be female, if the heated scent of equine mare in heat wafting from around it is anything to go by.[line break]"; [ Description of the creature when you encounter it. ]
 	now face entry is "long and narrowed in a familiarly equine manner with a wide set of nostrils, a thick cerulean mane at the back of your head and a pair of cute, but thinly shaped ears atop your head"; [ Face description, format as "Your face is [Face of Player]." ]
 	now body entry is "like that of an anthro horse, but instead of just being powerful muscular and attractively risqué, like a normal equine's would be. You are also gifted with two lustrous white wings flapping at your back. Able to extend out about twice you height in width you have no problems taking minor bouts of flight as you use them to carry you around the city. Said wings bring out an almost majestic quality to you as they rest in a folded manner against your backside for right now though"; [ Body description, format as "Your body is [Body of Player]." ]
 	now skin entry is "a beautiful equine hide colored both bright gold and pristine white instead of the usual darker colors that are common to your equine brothers/sisters"; [ Skin. Format as "Looking at yourself, your body is covered in [Skin of Player] skin." ]
@@ -254,22 +246,16 @@ When Play begins:
 	[Clit Size Adjective is generated by a function and can be used in scenes: very small/small/average/large/very large]
 ]
 
-
+Section 3 - Drop Item
 
 Table of Game Objects (continued)
 name	desc	weight	object
 "Pegasus Quill"	"A fine white feather that was dropped off of a Pegasus."	1	Pegasus Quill
 
 Pegasus Quill is a grab object. Pegasus Quill is infectious. Strain of Pegasus Quill is "Pegasus".
+Usedesc of Pegasus Quill is "     The quill you picked up is actually a large feather from the end of a Pegasus mutant. Large and fluffy and very warm you have the strangest notion to make a pillow from the things. Maybe if you find more you will?[line break]".
 
-Usedesc of Pegasus Quill is "The quill you picked up is actually a large feather from the end of a Pegasus mutant. Large and fluffy and very warm you have the strangest notion to make a pillow from the things. Maybe if you find more you will?";
-
-
-[A sample structure for succumbing/surviving messages at the end of the game.]
-[Numerous other examples can be found in existing creature files.]
-
-
-Section 3 - Endings
+Section 4 - Endings
 
 Table of GameEndings (continued)
 Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
@@ -284,24 +270,16 @@ This is the Pegasus Infection rule:
 			say "     Having survived the trails of the city just as the military arrives to clean up, you find something strange happening to you as your body goes through and almost epileptic fit one day. Not wanting to, at first anyway, you end up letting the soldiers cart you off to one of their bunkers to be tested over when a particularly spectacular fit causes strange fluid to tumble out of your muzzle, nose, eyes and ears. It takes a while but the military scientist end up determining that you have an unidentified malfunction in the nanites running around throughout your body which is causing them to respond in a way that has never before been documented. Joy... When driving several chemicals and newer nanites inside of you does nothing the doctors ask you permission to amputate one of your wings in an effort to try and make a counter batch of nanites to combat the problem. Agreeing, after having another explosive fit, you end up with one less wing a day later. However, because of this, you end up growing another soon after as your body tries to reassert the correct [']form['] you need to take in order to be [']right['], which sends you into another shock. Least to say, you become a pet project to the scientist after this as your stay with the military becomes...somewhat indefinite. And yet, not all of the news is bad as you happen to end up meeting someone who helps you along as the [']good doctors['] try to work on you.";
 			if Player is male:							[MALE/HERM]
 				say "     During your stint with the military, you come across a young herm pony boi who happens to have been [']rescued['] by the military just as he was coming from [if The Stables is unknown]someplace called [end if]the Stables. Talking with him and getting to know the other you find that both you and he grow closer and closer during the weeks that happen to roll by as your [']condition['] get progressively worse. When another day of trying to test certain medical operations on your somewhat unstable body ends with you flat-lining there's an uproar from the pony for someone to try and revive you. Nothing works sadly and hours later you end up bagged and then shipped off to another facility in order to have an autopsy done in order to figure out what caused your early demise. Upon being processed in order to be shipped, you end up coming back to life, somewhat miraculously, after hearing a voice tell you that it's [']not your time yet['], which alternatively ends up scaring the living hell out of the pony boi and your friends who are currently trying to help smuggle your carcass out of the delivery truck before it could take off.";
-				WaitLineBreak;
 				say "     Not knowing what's going on, you blink when the pony jumps up into your lap and then snogs the hell out of you. It doesn't take long for the pony, whose name is Marcus, to help you to flee back into the city and then to an abandoned house somewhere near the warehouse district. Once there you and he settle down for a while and then restart you efforts at growing closer while the military works to clean up the town. It's only when Marcus notices that you're no longer having your usual fits, several days after your mysterious rise from the dead, that you and he attempt to try and get a more sexual relationship going. Mounting the other and then filling the slut boi pony with your cum you accidentally infect the other with your still active nanites which makes the other grow wings while his former dark mane turns silver in color instead of cerulean. Not knowing why, or caring much, you and he mate for almost three days straight after that. However, once Marcus realizes that his wings are useful for more than just decorations, despite the other dressing the ends of them up in ribbons, things get really kinky between the two of you. Least to say, aerial sex proves to be a fun pastime for the two of you, especially since Marcus isn't afraid to top whenever you ask him to.";
-				WaitLineBreak;
 				say "     Flying away from the city, after realizing that Marcus has none of the strange symptoms you did, you pack up some things and then tell your friends where you are going, north being the general direction, before taking off with your new lover into the wild blue yonder. The two of you find a place to reside in, somewhere near the border between Canada and the States, and then you send word to your friends to come and join you. The rest of your days are spent with Marcus happily flying to and fro as the boundaries of the world become nothing more than idle ideologies made up by those not blessed with flight as you and your lover go from place to place on a grand tour of the world. You always make sure to return home though to check on everyone from time to time though.";
 			else if "Sterile" is not listed in feats of Player:	[F-BREEDABLE]
 				say "     The person in question turns out to be a female filly who happens to have been captured when she was just recently born. Having grown up quite fast, and yet not had an idea of her place in the world you end up taking the other under your wings and treating her as something of a daughter while the two of you stay with the military. Days turn into weeks and soon you and she grow closer and closer, breaching the line of mother/daughter to that of friends and then best friends, but before anything more serious can happen to step-up the course of your relationship a strange fit causes you to flat-line on the doctor's table, much to Marissa's, the filly, distress. Not knowing why Marissa ends up making something or another happen inside of you when she tries to do mouth-to-mouth to get you to breathe again, even though you technically didn't die because of a respiratory shutdown. The doctors are amazed when you get up, minutes after your heart had gone quiet, if what the scanners they had attached to you have anything to say about your [']death['], as you look around in confusion as to what in the world is going on.";
-				WaitLineBreak;
 				say "     After that, things calm down immensely for you as you and Marissa are checked out by the scientists and then given a clean bill of health, only to then be sent on your way. You're not sure, but you don't think to brook an argument as you take the filly with you into your arms and then head back to the Bunker to try and figure things out. Days later, when nothing comes to mind, you finally decide to quietly surrender your curiosity over in favor of making sweet love to your new mate. Marissa, for someone you just met less than a month ago, is voracious in her sexual appetite and strangely enough only you can quench her lusts. Not having anything resembling a cock between the two of you, you and she do a lot of oral and fingering before going to a local porn shop to buy a couple of strap-ons. It's when you have Marissa testing one out on you, with the sale's mouse girl watching and teasing herself silently, that you end up getting a strange surprise when the filly suddenly starts to grow both muscles and height before she suddenly sprouts black wings along her back.";
-				WaitLineBreak;
 				say "     Of course, had these been the only strange changes, you might have let the situation slide, but when the dildo attached to Marissa actually melds into her and the new pegasus herm fills your belly with her cream so much that your belly actually bloats visibly, you decide that this can't just slide. Asking the sales rep what the heck happened, after Marissa pulls out of you with a satisfied whicker, the mouse can only shrug as she says that this has never happened before. Marissa doesn't seem to mind the new changes, especially after she pumps her new cock and shudders from the response of it growing and throbbing because of her action, so you don't bother trying to figure it out anymore, especially once the other fills you up again, but this time inside of your tailhole instead of now leaking pussy. Three weeks later both you and your lover decide that leaving the city would be a very good idea, as you now have two hermaphrodite pegasus daughters trailing after you almost all the time. Least to say that moving your new family and your friends to Canada is an idea no one argues about as you all use the dark of the night to hustle yourself away to safety.";
 			else:									[F-STERILE]
 				say "     The person in question turns out to be a female filly who happens to have been captured when she was just recently born. Having grown up quite fast, and yet not had an idea of her place in the world you end up taking the other under your wings and treating her as something of a daughter while the two of you stay with the military. Days turn into weeks and soon you and she grow closer and closer, breaching the line of mother/daughter to that of friends and then best friends, but before anything more serious can happen to step-up the course of your relationship a strange fit causes you to flat-line on the doctor's table, much to Marissa's, the filly, distress. Not knowing why Marissa ends up making something or another happen inside of you when she tries to do mouth-to-mouth to get you to breathe again, even though you technically didn't die because of a respiratory shutdown. The doctors are amazed when you get up, minutes after your heart had gone quiet, if what the scanners they had attached to you have anything to say about your [']death['], as you look around in confusion as to what in the world is going on.";
-				WaitLineBreak;
 				say "     After that, things calm down immensely for you as you and Marissa are checked out by the scientists and then given a clean bill of health, only to then be sent on your way. You're not sure, but you don't think to brook an argument as you take the filly with you into your arms and then head back to the Bunker to try and figure things out. Days later, when nothing comes to mind, you finally decide to quietly surrender your curiosity over in favor of making sweet love to your new mate. Marissa, for someone you just met less than a month ago, is voracious in her sexual appetite and strangely enough only you can quench her lusts. Not having anything resembling a cock between the two of you, you and she do a lot of oral and fingering before going to a local porn shop to buy a couple of strap-ons. It's when you have Marissa testing one out on you, with the sale's mouse girl watching and teasing herself silently, that you end up getting a strange surprise when the filly suddenly starts to grow both muscles and height before she suddenly sprouts black wings along her back.";
-				WaitLineBreak;
 				say "     Of course, had these been the only strange changes, you might have let the situation slide, but when the dildo attached to Marissa actually melds into her and the new pegasus herm fills your belly with her cream so much that your belly actually bloats visibly, you decide that this can't just slide. Asking the sales rep what the heck happened, after Marissa pulls out of you with a satisfied whicker, the mouse can only shrug as she says that this has never happened before. Marissa doesn't seem to mind the new changes, especially after she pumps her new cock and shudders from the response of it growing and throbbing because of her action, so you don't bother trying to figure it out anymore, especially once the other fills you up again, but this time inside of your tailhole instead of now leaking pussy.";
-				WaitLineBreak;
 				say "     Leaving the city after that isn't a hard thing to do as the need to fly free of your former [']home['] just seems like the right thing to do, especially after Marissa talks you into trying to get a job at the Stables. After the rumors about that place...Canada suddenly seems like a wonderful place to live now. So in the dark of the night, you Marissa and your friends set off for the northern territories with the hope of starting a new life.";
-
 
 Pegasus ends here.

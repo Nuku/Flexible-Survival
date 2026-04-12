@@ -13,14 +13,15 @@ This is the zephyrad rule:
 		say "     It doesn't sound particularly nice to have such fully branded hardware, but it might be worth checking out as a replacement for your currently bricked Cell Phone.";
 		AddNavPoint Zephyr Lobby;
 
+sblzephyr is a truth state that varies. sblzephyr is usually false.
+
 Table of GameRoomIDs (continued)
 Object	Name
 Zephyr Lobby	"Zephyr Lobby"
 
 Zephyr Lobby is a room. "[zephyrlobbydesc]". It is fasttravel.
 earea of Zephyr Lobby is "High".
-
-sblzephyr is a truth state that varies. sblzephyr is usually false.
+Scent of the Zephyr Lobby is "     The office that Zephyr's set up here smells rather clean. There is only a faint smell of sex and creatures in the air, probably wafting in from outside.".
 
 to say zephyrlobbydesc:
 	say "     This is a small Zephyr Inc branch. Their power is hard to argue with, as they actually have power, with bright, fluorescent lights shining down from above. The floor is clean and swept. To the left are some chairs next to a table with old magazines on it. A few people loiter around, eating doughnuts and chatting, all in various stages of mutation. Your eyes are drawn to a [link]price sign[as]look price sign[end link] that hangs above the counter.";
@@ -41,27 +42,23 @@ to say zephyrlobbydesc:
 			WaitLineBreak;
 			say "     Taking another glance around the room, she motions for you to lean in a little closer. 'How'd you come by an infection so high up on our alert status?' Do you tell her what happened?";
 			if Player consents:
+				LineBreak;
 				say "     You tell her how you'd stumbled across the battle between Zephyr and the previous Skunkbeast Lord. You gloss over some of the details while enhancing the epicness of your struggle with the monstrous mephit. Leaving out the orgiastic nature of your transformation process, you do reassure her that the previous Lord was deposed.";
 				say "     'So you're in charge of those skunks in the forest now?' she asks with more than casual curiosity in her tone. Remembering who she works for and how they reacted to you even having the infection, you decide it probably wouldn't be healthy to let that be known. 'No, no,' you say with a dismissive wave. 'The skunks leave me alone, but that's about it. There's plenty more of the skunkbeast ones around, so one of them has probably taken over or something.' She seems to buy it and asks you for a few more details before saying she has to get back to work. While you're browsing in the lobby, she seems calm enough as she types away. From the way she glances over on occasion, a paranoid corner of your mind does suspect she's filing some report about what you've just told her.";
 				decrease morale of Player by 3;
 			else:
+				LineBreak;
 				say "     Given what you'd just gone through, you decide to play it safe. You tell her you'd picked it up from a mess you'd ended up stepping in (which is true enough, after a fashion). She nods and comments that she hears about that sort of thing happening often. She does end up asking you when and where this happened, what it looked like and so on. She tries to seem casual about her questioning, but you can tell she's fishing for details. You make some generic answers, suspecting they'll all end up in some report. And sure enough, as soon as your chat's done, she's busily typing away at her computer.";
 		now sblzephyr is true;
-
-
-Scent of the Zephyr Lobby is "     The office that Zephyr's set up here smells rather clean. There is only a faint smell of sex and creatures in the air, probably wafting in from outside.".
-
 
 Section 2 - Larissa
 
 [Moved to Larissa file in the Stripes sub-folder]
 
-
 Section 3 - Selling Vials
 
-understand "vialsell [text]" as vialselling.
-
 Vialselling is an action applying to one topic.
+understand "vialsell [text]" as vialselling.
 
 check vialselling:
 	if Larissa is not visible, say "There's no one here who's buying." instead;
@@ -69,19 +66,17 @@ check vialselling:
 Carry out vialselling:
 	let basevalue be 0;
 	let NamedVial be the topic understood;
-	let found be 0;
+	let found be false;
 	sort Table of OwnedVials in name order;
 	sort Table of LarissaVials in name order;
 	repeat with Y running from 1 to number of filled rows in Table of OwnedVials:
 		choose row Y in the Table of OwnedVials;
 		if Name entry exactly matches the text NamedVial, case insensitively:
-			now found is 1;
+			now found is true;
 			let InfectionName be Name entry;
-			say "Pulling out the sample vial, you offer to sell it to Larissa";
-			if there is a Name of InfectionName in the Table of LarissaVials: [row already exists]
+			if InfectionName is a Name listed in Table of LarissaVials: [row already exists]
 				if debug is at level 5:
 					say "DEBUG: Row [InfectionName] exists in LarissaVials.";
-				choose a row with name of InfectionName in the Table of LarissaVials;
 			else: [new row to be filled]
 				if debug is at level 5:
 					say "DEBUG: Row [InfectionName] does not exist in LarissaVials.";
@@ -89,39 +84,36 @@ Carry out vialselling:
 				now Name entry is InfectionName;
 				now LarissaOwned entry is 0;
 			if LarissaOwned entry > 4:
-				say ", but she shakes her head. 'We have no interest in further samples of that kind. Try hunting for different game.'";
+				say "Pulling out the sample vial, you offer to sell it to Larissa, but she shakes her head. 'We have no interest in further samples of that kind. Try hunting for different game.'";
 				stop the action;
 			choose a row with name of InfectionName in the Table of Random Critters;
-			now basevalue is ( ( lev entry * 7 ) / 4 );
+			now basevalue is ( lev entry * 7 ) / 4;
 			choose a row with name of InfectionName in the Table of LarissaVials;
 			if LarissaOwned entry is 1:
 				now basevalue is ( basevalue * 2 ) / 3;
 			else if LarissaOwned entry > 1:
-				now basevalue is ( basevalue / ( LarissaOwned entry + 1 ) );
+				now basevalue is basevalue / ( LarissaOwned entry + 1 );
 			if basevalue < 1:
-				say ", but she shakes her head. 'We have met our quota for that sample and have no more interest in nanites from [Name entry] creatures. Try hunting for bigger game.'";
+				say "Pulling out the sample vial, you offer to sell it to Larissa, but she shakes her head. 'We have met our quota for that sample and have no more interest in nanites from [Name entry] creatures. Try hunting for bigger game.'";
 				continue the action;
-			if LarissaOwned entry is 0:
-				say " and she smiles, taking it from you. 'We were hoping to get one of these samples for our bureau's collection.' She credits you for [special-style-1][basevalue][roman type] freecred.";
-			else if LarissaOwned entry is 1:
-				say " and she smiles, taking it from you. 'Thanks for another sample. I can give you an okay price for that.' She credits you for [special-style-1][basevalue][roman type] freecred.";
-			else if LarissaOwned entry >= 2:
-				say " and she nods, taking it from you. 'We have a few of these already, so I can't pay you as much for more.' She only credits you with [special-style-1][basevalue][roman type] freecred for it.";
+			say "Pulling out the sample vial, you offer to sell it to Larissa and she smiles, taking it from you. '[if LarissaOwned entry is 0]We were hoping to get one of these samples for our bureau's collection.' She credits you for [special-style-1][basevalue][roman type] freecred[else if LarissaOwned entry is 1]Thanks for another sample. I can give you an okay price for that.' She credits you for [special-style-1][basevalue][roman type] freecred[else]We have a few of these already, so I can't pay you as much for more.' She only credits you with [special-style-1][basevalue][roman type] freecred for it[end if].";
 			increase freecred by basevalue;
 			VialLoss InfectionName by 1;
 			now LarissaOwned entry is LarissaOwned entry + 1;
 			break;
-	if found is 0:
+	if found is false:
 		say "You don't seem to have any such vial.";
 
 Section 4 - Purchasing from Zephyr
 
-The price sign is a backdrop. It is in Zephyr Lobby. Description of the price sign is "[price list]".
+nanitemeter is a number that varies. nanitemeter is usually 0.	[marks if Player bought a nanite collector]
+pepped is a number that varies. pepped is usually 0.	[marks how many pepperspray a player's bought]
 
+The price sign is a backdrop. It is in Zephyr Lobby. Description of the price sign is "[price list]".
 Scent of the price sign is "     The price sign has little in the way of scent of its own.".
 
 to say price list:
-	say "[line break]To buy an item, type [bold type]buy <name>[roman type].";
+	say "To buy an item, type [bold type]buy <name>[roman type].";
 	repeat through table of zephyr goods:
 		follow allowed entry;
 		if rule failed:
@@ -131,20 +123,15 @@ to say price list:
 
 Table of Game Objects (continued)
 name	desc	weight	object
-"nanite collector"	"[nanitecolldesc]"	25	nanite collector
+"nanite collector"	"A great and ponderous object that is worn on the back and can draw in nanites to produce infection vials. Interesting[if nanitemeter is 1]. It has been modified to be lighter, somewhat dropping its effectiveness[else if nanitemeter is 3]. It has been modified with an additional pump and larger tank, increasing its effectiveness and its overall weight[end if]."	25	nanite collector
 "pistol"	"A small, but serviceable, hand gun. It has a stylized Z on the grip. It never seems to run out of bullets, and gets oddly warm when you fire it."	2	pistol
 
 pistol is armament. It has a weapon "[one of]a quick shot[or]speedy pistol play[or]your pistol[at random]". It is ranged. It is not temporary. Weapon Damage of pistol is 7. Objsize of pistol is 3.
-
 
 nanite collector is equipment. It is not temporary.
 The placement of it is "back".
 The size of nanite collector is 0. [anyone can wear this]
 The descmod of it is " A great contraption rests across your back, with many valves and pipes. It looks more like a steampunk jetpack than anything else. Still, it has the Zephyr logo displayed boldly.".
-
-to say nanitecolldesc:
-	say "A great and ponderous object that is worn on the back and can draw in nanites to produce infection vials. Interesting[if nanitemeter is 1]. It has been modified to be lighter, somewhat dropping its effectiveness[else if nanitemeter is 3]. It has been modified with an additional pump and larger tank, increasing its effectiveness and its overall weight[end if].";
-
 
 Table of Zephyr Goods
 name	price	object	allowed
@@ -155,9 +142,6 @@ name	price	object	allowed
 "pepperspray"	320	pepperspray	pepper rule
 "water bottle"	100	water bottle	true rule
 
-nanitemeter is a number that varies. nanitemeter is usually 0.	[marks if Player bought a nanite collector]
-pepped is a number that varies. pepped is usually 0.	[marks how many pepperspray a player's bought]
-
 This is the true rule:
 	rule succeeds;
 
@@ -167,10 +151,9 @@ This is the noresearch rule:
 	rule succeeds;
 
 This is the pepper rule:
-	if ( level of Player / 4 ) < pepped:
+	if level of Player / 4 < pepped:
 		rule fails;
 	rule succeeds;
-
 
 Section 5 - Nanite Density Monitors Sub-Quest
 
@@ -226,7 +209,6 @@ to say zephyrmouse3:
 	increase freecred by 200;
 	now hospquest is 18;
 
-
 Chapter 2 - The Situations
 
 Book 1 - Beach
@@ -240,11 +222,10 @@ ResolveFunction of Beach Detector Site is "[ResolveEvent Beach Detector Site]". 
 Sarea of Beach Detector Site is "Beach".
 
 to say ResolveEvent Beach Detector Site:
-	say "     Keeping an eye out for an appropriate spot to place the device for Zephyr, you notice a tall outcropping of rock out in the water that you might be able to scale. It is certainly closer closer than most of the other rocks as well, so you should be able to swim out to it";
 	if nanite density monitor is not owned:
-		say ". You should return here with the device so you can install it. Hopefully it's waterproof.";
+		say "     Keeping an eye out for an appropriate spot to place the device for Zephyr, you notice a tall outcropping of rock out in the water that you might be able to scale. It is certainly closer closer than most of the other rocks as well, so you should be able to swim out to it. You should return here with the device so you can install it. Hopefully it's waterproof.";
 	else:
-		say ". You remove one of the detectors from the suitcase and hide the case among some tall grass. Hoping the thing is waterproof, you bundle it up in a couple of plastic bags you have in your pack just in case, then head into the water, swimming out towards the rocky spire. As you struggle to make it out there, a creature moves in to attack.";
+		say "     Keeping an eye out for an appropriate spot to place the device for Zephyr, you notice a tall outcropping of rock out in the water that you might be able to scale. It is certainly closer closer than most of the other rocks as well, so you should be able to swim out to it. You remove one of the detectors from the suitcase and hide the case among some tall grass. Hoping the thing is waterproof, you bundle it up in a couple of plastic bags you have in your pack just in case, then head into the water, swimming out towards the rocky spire. As you struggle to make it out there, a creature moves in to attack.";
 		if a random chance of 1 in 2 succeeds:
 			challenge "Feral Sea Dragon";
 		else if a random chance of 1 in 2 succeeds:
@@ -258,7 +239,7 @@ to say ResolveEvent Beach Detector Site:
 			say "     With the creature defeated, you make it to the rocky spire. You now must climb the wet stone to get to the top. While parts of it are fairly easy to scale, there are a few difficult sections that make the climbing treacherous.";
 			let bonus be ( dexterity of Player + strength of Player minus 20 ) divided by 2;
 			let dice be a random number from 1 to 20;
-			say "     You roll 1d20([dice])+[bonus]: [dice + bonus] - ";
+			say "[line break]     You roll 1d20([dice])[if bonus >= 0]+[end if][bonus] = [special-style-1][dice + bonus][roman type] vs [special-style-2]17[roman type] (Dexterity + Strength Check):[line break]";
 			if bonus + dice > 16:
 				say "You manage to safely make it up to the top!";
 			else:
@@ -269,7 +250,6 @@ to say ResolveEvent Beach Detector Site:
 			now Resolution of Beach Detector Site is 1; [detector placed]
 			now Beach Detector Site is resolved;
 			say "[onelessndm]";
-
 
 Book 2 - Red Light District
 
@@ -282,13 +262,12 @@ ResolveFunction of Red Light Detector Site is "[ResolveEvent Red Light Detector 
 Sarea of Red Light Detector Site is "Red".
 
 to say ResolveEvent Red Light Detector Site:
-	say "     While scouting around in the fancier parts of this neighborhood, you spot a large nightclub and sex show with a huge neon sign. Somehow the neon outline of a twenty-five feet tall, big breasted woman is still lit, flashing along with the name of the club. It certainly seems to the be the tallest spot around, the sign rising high above the three story building, dwarfing all around it";
 	if nanite density monitor is not owned:
-		say ". Clearly the best spot around, you'll have to come back here with the device so you can install it.";
+		say "     While scouting around in the fancier parts of this neighborhood, you spot a large nightclub and sex show with a huge neon sign. Somehow the neon outline of a twenty-five feet tall, big breasted woman is still lit, flashing along with the name of the club. It certainly seems to the be the tallest spot around, the sign rising high above the three story building, dwarfing all around it. Clearly the best spot around, you'll have to come back here with the device so you can install it.";
 	else:
-		say ". There is clearly a lot of activity still going on in this club, with rampant sex from a myriad of creatures both inside and out. Going in from the front is simply out of the question.";
+		say "     While scouting around in the fancier parts of this neighborhood, you spot a large nightclub and sex show with a huge neon sign. Somehow the neon outline of a twenty-five feet tall, big breasted woman is still lit, flashing along with the name of the club. It certainly seems to the be the tallest spot around, the sign rising high above the three story building, dwarfing all around it. There is clearly a lot of activity still going on in this club, with rampant sex from a myriad of creatures both inside and out. Going in from the front is simply out of the question.";
 		say "     It takes some effort to work your way around to the back of the building, this area much denser in creature activity, probably due to the highly sexual nature of the place, but you eventually find a way around back and scale the fire escape. On your way up, you spy several ongoing orgies inside the building, including one group which seems to be on display for the others, though there is little difference between the audience and the show save for the audience members paying a little more attention to the show than the other way around. You find yourself briefly captivated by the display, watching [one of]a male lizard plowing into a smaller dog girl[or]twin cats sucking on a wolf's cock[or]a female hyena sandwiched between a cheetah stuffing her ass and a horse filling her cunt, their combined seed bloating her belly[or]a small, male tiger getting buggered by a tigress herm[or]a chimp in a suit getting sucked off by a bear[at random] and growing quite aroused. You feel a strong compulsion to open the window and join them, which you have to struggle to fight down.";
-		increase Libido of Player by 15;
+		raise Player Libido by 15;
 		SanLoss 5;
 		WaitLineBreak;
 		say "     Reaching the building's roof, you find that you are not alone. There is a large, latex vixen here who seems to be lustfully enjoying sounds coming from the building below. You try to slip around her quietly, but her eyes lock on you and she grins.";
@@ -303,7 +282,6 @@ to say ResolveEvent Red Light Detector Site:
 			now Red Light Detector Site is resolved;
 			say "[onelessndm]";
 
-
 Book 3 - High Rise District
 
 Table of GameEventIDs (continued)
@@ -316,28 +294,26 @@ Sarea of High Rise Detector Site is "High".
 ndmhigh is a number that varies.
 
 to say ResolveEvent High Rise Detector Site:
-	say "     While this part of the city has no shortage of tall buildings where the detector could be placed, other issues make most of them unsuitable. Many of the buildings have been damaged by the aerial battles of some large creatures or have had their upper floors turned into the aeries. Even those that aren't destroyed in this manner often show clear signs of habitation from large groups of infected creatures. You do eventually come across one office building that seems less populated and sufficiently intact up to the top";
 	if nanite density monitor is not owned:
-		say ". Clearly the best spot around, you'll have to come back here with the device so you can install it.";
+		say "     While this part of the city has no shortage of tall buildings where the detector could be placed, other issues make most of them unsuitable. Many of the buildings have been damaged by the aerial battles of some large creatures or have had their upper floors turned into the aeries. Even those that aren't destroyed in this manner often show clear signs of habitation from large groups of infected creatures. You do eventually come across one office building that seems less populated and sufficiently intact up to the top. Clearly the best spot around, you'll have to come back here with the device so you can install it.";
 	else:
-		say ". Not looking forward to the long climb, you head into the building.";
-		say "     You start to ascend the stairs, occasionally passing a passed-out creature who seems to have been assaulted during its own climb up the stairs. Wary, you continue on";
-		let T be a random number between 1 and 4;
-		if T is 1:
-			say ", but are met a few floors later by a pack of bunnies who open the stairwell door as you walk past.";
-			challenge "Anthro Rabbit";
-		else if T is 2:
-			say ", but run into a pair of cougars descending the stairs quietly on their padded paws.";
-			challenge "Cougar";
-			if lost is 0:
+		say "     While this part of the city has no shortage of tall buildings where the detector could be placed, other issues make most of them unsuitable. Many of the buildings have been damaged by the aerial battles of some large creatures or have had their upper floors turned into the aeries. Even those that aren't destroyed in this manner often show clear signs of habitation from large groups of infected creatures. You do eventually come across one office building that seems less populated and sufficiently intact up to the top. Not looking forward to the long climb, you head into the building.";
+		if a random number between 1 and 4 is:
+			-- 1:
+				say "     You start to ascend the stairs, occasionally passing a passed-out creature who seems to have been assaulted during its own climb up the stairs. Wary, you continue on, but are met a few floors later by a pack of bunnies who open the stairwell door as you walk past.";
+				challenge "Anthro Rabbit";
+			-- 2:
+				say "     You start to ascend the stairs, occasionally passing a passed-out creature who seems to have been assaulted during its own climb up the stairs. Wary, you continue on, but run into a pair of cougars descending the stairs quietly on their padded paws.";
 				challenge "Cougar";
-		else if T is 3:
-			say ", but are surprised as a creature leaps out from behind a partially open door. Having heard you coming, it must have lain in wait until you moved past. His surprise blow is uncoordinated, but does make you stumble on the steps. You take [special-style-2]8[roman type] damage.";
-			now ndmhigh is 1;
-			challenge "Zebra Stallion";
-			now ndmhigh is 0;
-		else if T is 4:
-			say ", but manage to make it to the top without incident.";
+				if lost is 0:
+					challenge "Cougar";
+			-- 3:
+				say "     You start to ascend the stairs, occasionally passing a passed-out creature who seems to have been assaulted during its own climb up the stairs. Wary, you continue on, but are surprised as a creature leaps out from behind a partially open door. Having heard you coming, it must have lain in wait until you moved past. His surprise blow is uncoordinated, but does make you stumble on the steps. You take [special-style-2]8[roman type] damage.";
+				now ndmhigh is 1;
+				challenge "Zebra Stallion";
+				now ndmhigh is 0;
+			-- 4:
+				say "     You start to ascend the stairs, occasionally passing a passed-out creature who seems to have been assaulted during its own climb up the stairs. Wary, you continue on, but manage to make it to the top without incident.";
 		if lost is 1:
 			say "     Having been bested, you are forced to descend back down to the street. You'll have to rest and recover before coming back to try again.";
 			now Resolution of High Rise Detector Site is 2; [detector not placed, lost fight]
@@ -345,7 +321,7 @@ to say ResolveEvent High Rise Detector Site:
 			say "     Making it to the top floor, you search around quietly, eventually finding the service entrance to the roof and make your way up there. It is rather windy at the top of the tower, a pleasant change after your long, hot climb up the building. The ascent has left you tired, hungry and thirsty, but you still have work to do before you can rest and head back down.";
 			increase thirst of Player by 12;
 			increase hunger of Player by 6;
-			decrease HP of Player by ( HP of Player divided by 6 );
+			decrease HP of Player by HP of Player divided by 6;
 			say "     Heading over to the central spire, you place the black box against a flat spot and turn it on. There is a whirr as the screws drill into the smooth stone and secure the detector in place. You are about to congratulate yourself on a job well done when you hear the shifting of stone nearby. Looking around, you notice that one of the decorative gargoyles lining the building's edge doesn't match the others and has begun to move. Aroused from its nap by the sound of the device locking itself into place, the huge creature takes to the air and swoops around, coming in to attack you.";
 			challenge "Gargoyle";
 			say "     Your battle the with creature completed, you stagger back down to the street level, sore, tired and exhausted, but one step of this job completed at least.";
@@ -353,7 +329,6 @@ to say ResolveEvent High Rise Detector Site:
 			now Resolution of High Rise Detector Site is 1; [detector placed]
 			now High Rise Detector Site is resolved;
 			say "[onelessndm]";
-
 
 Book 4 - Park
 
@@ -366,11 +341,10 @@ ResolveFunction of Park Detector Site is "[ResolveEvent Park Detector Site]". It
 Sarea of Park Detector Site is "Park".
 
 to say ResolveEvent Park Detector Site:
-	say "     You're unsure where in the park you could place the device which would be suitable for Zephyr's requirements. You somehow doubt sticking it in a tree will quite be enough to satisfy them. As you travel the park, trying to find a worthwhile place, you spot the old, disused observatory on the hill at one end of the park. Pretty much forgotten by the city as the light pollution made it largely unusable, it is still the highest point in the area";
 	if nanite density monitor is not owned:
-		say ". Clearly the best spot around, you'll have to come back here with the device so you can install it.";
+		say "     You're unsure where in the park you could place the device which would be suitable for Zephyr's requirements. You somehow doubt sticking it in a tree will quite be enough to satisfy them. As you travel the park, trying to find a worthwhile place, you spot the old, disused observatory on the hill at one end of the park. Pretty much forgotten by the city as the light pollution made it largely unusable, it is still the highest point in the area. Clearly the best spot around, you'll have to come back here with the device so you can install it.";
 	else:
-		say ".";
+		say "     You're unsure where in the park you could place the device which would be suitable for Zephyr's requirements. You somehow doubt sticking it in a tree will quite be enough to satisfy them. As you travel the park, trying to find a worthwhile place, you spot the old, disused observatory on the hill at one end of the park. Pretty much forgotten by the city as the light pollution made it largely unusable, it is still the highest point in the area.";
 		say "     You make your way across the park, backtracking along paths to avoid groups of creatures too large to safely fight. Eventually you find your way to the observatory and climb the small hill up to it. Approaching, you find the main doors open and are about to go inside to search for a way up when a growl comes from inside, followed by a long, white streak flying out and climbing into the air. The oriental dragon creature flies around the observatory, looking for other intruders upon its home before zooming down to attack.";
 		challenge "Yamato Dragon";
 		if lost is 1:
@@ -384,8 +358,9 @@ to say ResolveEvent Park Detector Site:
 			now Park Detector Site is resolved;
 			say "[onelessndm]";
 
-
 Chapter 3 - Alternate Drop-off Points
+
+ndmLisa is a truth state that varies. ndmLisa is usually false.
 
 instead of entering the Confession Booth while "Beach" is listed in ndmlist and nanite density monitor is owned:
 	say "     Stepping into the confessional, you ask the priestess if you may place one of the nanite density monitors atop the belltop.";
@@ -396,25 +371,26 @@ instead of entering the Confession Booth while "Beach" is listed in ndmlist and 
 	WaitLineBreak;
 	say "     With that chore done, you pause for a moment, wondering if you want to thank Peter in a more personal way for his help. Shall you try to sex up the red panda?";
 	if Player consents:
+		LineBreak;
 		say "     As he moves to head back down the hatch, you move in close to the red panda and slide your arms around his waist, running your hands over his tummy and down to his groin. You whisper in his ear that you'd like to really thank him for all his help. He moans softly and mumbles something about not giving into baser urges, so you slip up the front of his robe and fondle his sheath directly, pleased to see that his cock's slipped further from it. You tell him that you think he's very cute and that you only want to show how much you appreciate his help, all while sliding your fingertips across his stiffening member. He releases a soft [']wah['] of pleasure and pulls his robe up further, blushing redder under his fur.";
 		if Player is female:
 			say "     Eager to get that cock inside you, you guide him to lay back on the dusty floor and climb atop him. His paws run over your body as you hold his penis in position and sink your pussy down around it. The red panda releases a wah of pleasure as your cunt envelops his maleness and you start riding up and down it. Despite his small stature, he's got an impressive eight inch cock that pulses and throbs inside of you as you fuck. His nimble paws caress your breasts and tease your nipples as the russet furred fellow squirms in delight beneath you. You moan in pleasure as he releases another, louder wah and cums hard, blasting his thick seed into your pussy and up into your womb.";
 			CreatureSexAftermath "Player" receives "PussyFuck" from "Red Panda";
-		else if Player is male and scalevalue of Player > 1:
-			say "     Being [if scalevalue of Player is 2]the same size as him[else]larger than him[end if], you decide to mount the sexy male. Without removing your hand from his cock, you guide the red panda onto all fours, smiling at how his tail arches up and twitches as he presents himself. Deciding not to tarry too long in case someone comes to check on you both, you line up your cock with his tight pucker and slowly sink into him[if Cock Length of Player > 16]. He slaps both paws over his muzzle to muffle a long, pleasured wah as you slowly push your massive meat into him, bulging his furry tummy outwards to accommodate it[else if Cock Length of Player > 8]. He slaps a paw over his muzzle to muffle a pleasured wah as you slowly push your large meat into him, stuffing the little fellow full[else], the red panda releasing another wah of pleasure as you slowly push your meat into him[end if]. Peter's shaft throbs in your hand, dribbling precum onto the dusty floor while you fuck him. You pound his gripping ass until you can't hold back any longer and blast your [Cum Load Size of Player] load into his depths, your release driving him to a shuddering orgasm that stains the ground with his seed.";
-		else if Player is male and scalevalue of Player is 1:
-			say "     Being smaller than the red panda, he guides you down onto all fours and climbs atop you. You stifle a moan as he moves his cock into position at your back door, sinking himself slowly into your tight rear. His stiff cock spreads you open gently, and he starts to thrust while a paw moves around to stroke your shaft[smn]. His soft fur rubs against your back as his pudgy belly rests atop you and his plump balls slap against you with each thrust. You go at this for several minutes until the red panda presses his muzzle against your neck and releases a muffled wah of pleasure, cumming hard inside you. You can feel his hot seed filling your ass and your climax hits as well, blasting your hot seed across the dusty floor.";
-			CreatureSexAftermath "Player" receives "AssFuck" from "Red Panda";
+		else if Player is male:
+			if scalevalue of Player > 1:
+				say "     Being [if scalevalue of Player is 2]the same size as him[else]larger than him[end if], you decide to mount the sexy male. Without removing your hand from his cock, you guide the red panda onto all fours, smiling at how his tail arches up and twitches as he presents himself. Deciding not to tarry too long in case someone comes to check on you both, you line up your cock with his tight pucker and slowly sink into him[if Cock Length of Player > 16]. He slaps both paws over his muzzle to muffle a long, pleasured wah as you slowly push your massive meat into him, bulging his furry tummy outwards to accommodate it[else if Cock Length of Player > 8]. He slaps a paw over his muzzle to muffle a pleasured wah as you slowly push your large meat into him, stuffing the little fellow full[else], the red panda releasing another wah of pleasure as you slowly push your meat into him[end if]. Peter's shaft throbs in your hand, dribbling precum onto the dusty floor while you fuck him. You pound his gripping ass until you can't hold back any longer and blast your [Cum Load Size of Player] load into his depths, your release driving him to a shuddering orgasm that stains the ground with his seed.";
+			else:
+				say "     Being smaller than the red panda, he guides you down onto all fours and climbs atop you. You stifle a moan as he moves his cock into position at your back door, sinking himself slowly into your tight rear. His stiff cock spreads you open gently, and he starts to thrust while a paw moves around to stroke your shaft[smn]. His soft fur rubs against your back as his pudgy belly rests atop you and his plump balls slap against you with each thrust. You go at this for several minutes until the red panda presses his muzzle against your neck and releases a muffled wah of pleasure, cumming hard inside you. You can feel his hot seed filling your ass and your climax hits as well, blasting your hot seed across the dusty floor.";
+				CreatureSexAftermath "Player" receives "AssFuck" from "Red Panda";
 		else:
 			say "     Lacking any sexual organs of your own, you drop to your knees in front of the red panda and stuff his cock into your mouth. You tease your tongue across his leaking shaft and eagerly start sucking him off. He rubs a paw over your head as the other covers his muzzle to muffle a wah of pleasure. You work his penis with your mouth, tongue, and lips until he finally can't take any more and releases another muffled wah as he cums hard, flooding your mouth with his tasty load.";
 		say "     Your quick fun over, he gives you a kiss and nuzzles you before leading you back down into the church. As he descends, he tries his best to wipe his dusty robe clean. Once downstairs, he gives you another quick kiss before dashing off to the confessional.";
 	else:
+		LineBreak;
 		say "     You decide to just speak your thanks to the red panda and follow him back down the steps, pleased with yourself at your ingenuity in placing it here.";
 	remove "Beach" from ndmList;
 	now Beach Detector Site is resolved;
 	say "[onelessndm]";
-
-ndmLisa is a truth state that varies. ndmLisa is usually false.
 
 instead of conversing the Lisa while "Red Light District" is listed in ndmlist and nanite density monitor is owned and ndmLisa is false:
 	say "     You decide to ask Lisa if it would be okay to put the detector on top of her porn store. It might be as tall as some of the other buildings, but it would certainly be a safer spot, so you're willing to give it a try. As you start to bring up the topic, the mousetaur gets very upset. 'Zephyr? You're helping those greedy bastards? I've been hearing stuff about them and you shouldn't get involved with them. They're bad news and it's going to get messy when the infected people around here have had enough of their money-grubbing scientists.'";
@@ -425,7 +401,6 @@ instead of conversing Alex while "High Rise District" is listed in ndmlist and n
 	remove "High Rise District" from ndmList;
 	now High Rise Detector Site is resolved;
 	say "[onelessndm]";
-
 
 Chapter 4 - The NDM item
 
@@ -438,10 +413,9 @@ to say ndmdesc:
 	if the number of entries in ndmlist is 1:
 		say "     With only one last cube remaining to be placed, you recall that Larissa said Zephyr wanted one placed at the [ndmlist] as well. You should make your way there and [bold type]hunt[roman type] for a suitable ['][bold type]detector site[roman type]['] in the area.";
 	else:
-		say "     With [the number of entries in ndmlist] remaining to be placed, you recall that Larissa said Zephyr wanted the others placed at the [ndmlist] areas. You should make your way there and [bold type]hunt[roman type] for a suitable ['][bold type]detector site[roman type]['] in those locations.";
+		say "     With [the number of entries in ndmlist in words] remaining to be placed, you recall that Larissa said Zephyr wanted the others placed at the [ndmlist] areas. You should make your way there and [bold type]hunt[roman type] for a suitable ['][bold type]detector site[roman type]['] in those locations.";
 
 nanite density monitor is a grab object.
-
 It is not temporary.
 
 to say onelessndm:
@@ -453,10 +427,9 @@ to say onelessndm:
 	if weight entry > 0:
 		say "     With one less device in it, the carrying case is now lighter.";
 		increase score by 20;
-	if weight entry is 0:
+	else:
 		say "     With the last device in place, you discard the empty carrying case. You should report back to Zephyr now that your task is completed.";
 		increase score by 40;
-		ItemGain nanite density monitor by 0;
-
+		ItemLoss nanite density monitor by 1;
 
 Zephyr Inc ends here.

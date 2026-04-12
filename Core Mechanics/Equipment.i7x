@@ -383,6 +383,27 @@ Placement of combat helmet is "head".
 Descmod of combat helmet is "A green and brown camo army helmet rests atop your head.".
 Slot of combat helmet is "head".
 
+Chapter 9 - Gimp Mask
+
+Table of Game Objects (continued)
+name	desc	weight	object
+"gimp mask"	"A full, black leather mask that leaves only the eyes and has a zip where the mouth should be. Often used by bondage enthusiasts who fancy full-bodied latex or leather suits."	0	gimp mask
+
+gimp mask is a grab object.
+gimp mask is equipment.
+It is not temporary.
+Plural of gimp mask is false.
+Taur-compatible of gimp mask is true.
+Size of gimp mask is 3.
+AC of gimp mask is 0.
+Effectiveness of gimp mask is 0.
+GA of gimp mask is 0.
+Traits of gimp mask is {"slave"}.
+Placement of gimp mask is "head".
+Descmod of gimp mask is "A black leather mask covers your head, leaving only your eyes visible.".
+Slot of gimp mask is "head".
+Scent of gimp mask is "The gimp mask smells like leather.".
+
 Part 2 - Hair Accessories
 
 Part 3 - Glasses
@@ -785,6 +806,7 @@ Chapter 1 - Vests
 Table of Game Objects (continued)
 name	desc	weight	object
 "bulletproof vest"	"A heavy-duty bulletproof vest, complete with metal plates for extra protection. Judging by the vest's appearance, it's [']unisex['] and pretty [']authoritative[']."	10	bulletproof vest
+"chainmail vest"	"A heavy chainmail vest that always seems to be a good fit thanks to nanite adjustment."	20	chainmail vest
 
 bulletproof vest is a grab object.
 bulletproof vest is equipment.
@@ -800,6 +822,21 @@ Placement of bulletproof vest is "body".
 Descmod of bulletproof vest is "A reinforced bulletproof vest covers your upper body.".
 Slot of bulletproof vest is "back".
 Scent of bulletproof vest is "The vest smells slightly of sweat, which isn't too wondrous as these things usually are put on in times of great stress.".
+
+chainmail vest is a grab object.
+chainmail vest is equipment.
+It is not temporary.
+Plural of chainmail vest is false.
+Taur-compatible of chainmail vest is true.
+Size of chainmail vest is 3.
+AC of chainmail vest is 40.
+Effectiveness of chainmail vest is 60.
+GA of chainmail vest is 0.
+Traits of chainmail vest is {"authoritive"}.
+Placement of chainmail vest is "body".
+Descmod of chainmail vest is "You are wearing a chainmail vest that covers your torso and shoulders.".
+Slot of chainmail vest is "back".
+Scent of chainmail vest is "There is little scent to the chainmail itself.".
 
 Part 9 - Bras
 

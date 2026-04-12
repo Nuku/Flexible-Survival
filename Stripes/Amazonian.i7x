@@ -18,10 +18,7 @@ to say losetoamazonian:
 			say "     Defeated by the powerful Amazonian, you are unable to resist when she grabs you and presses you up against a wall. 'You fought bravely, little [if Player is female]girl[else]man[end if], but I am the greater warrior. And now, to claim my prize,' she says with a lustful grin. Baring your ass, she flips aside her loincloth to reveal her sixteen inch long cock and grind it between your cheeks. '[if Player is female]And now to prove that I am better than any man[else]And now I'll show you the only thing men are good for[end if].' And with that, she thrusts her thick rod into your [if Player is female]juicy pussy[else]tight asshole[end if].";
 			say "     [if Player is female]Your pussy is spread open around the herm warrior's throbbing cock as she fucks you, pounding away at your increasingly wet hole as you can't help but respond to the vigorous fucking you're receiving[else]Your asshole is spread open around the herm warrior's throbbing cock as she fucks you, pounding away at your painfully stretched hole. As the vigorous fucking continues, the discomfort fades and the pleasure of getting pounded in the ass grows to replace it[end if]. She keeps you pressed against the broken wall as she drives her pulsing rod into you again and again. When she finally cums, she empties her hot seed inside you, [if Player is female]coating your womb in her virile sperm[else]filling your bowels with her virile sperm[end if].";
 			say "     Once finished, she pulls out, but does not release you, instead grinding her semi-hard shaft messily against your rear. 'Mmm... I've found you to be a most enjoyable [if Player is female]mate[else]plaything[end if]. Perhaps I might keep you for my harem. Let me leave you with something to remind you to whom you belong,' she whispers softly as she licks along the edge of your ear. You feel a heat wash across your ass, your nose catching the acrid scent of urine. She's pissing on you, marking you as her property. You wriggle and squirm, but her grip is strong and you're too worn from earlier to break free. She chuckles as you try to resist, only growing more excited and you feel a surge in the flow of hot liquid. You even feel a splatter of it spray against your creamy, leaking hole, staking her claim again on it. When her bladder's drained, she releases you and drives you off, saying she looks forward to challenging you again soon.";
-			if Player is female:
-				CreatureSexAftermath "Player" receives "PussyFuck" from "Amazonian";
-			else:
-				CreatureSexAftermath "Player" receives "AssFuck" from "Amazonian";
+			CreatureSexAftermath "Player" receives "[if Player is female]Pussy[else]Ass[end if]Fuck" from "Amazonian";
 	else if HP of Player > 0:
 		say "     Unwilling to continue to resist this powerful woman, you drop to your knees before her, intent on letting her have her way with you. She seems displeased that you've given up so easily and pushes you roughly to the ground with her heel. 'Why should I [if Player is female]breed with one such as you if you will not fight to the last[else]want one such as you as a mate if you will not fight to the last[end if]?' she growls. 'You are useless to me but as a means of amusement.'";
 		say "     With that said, she grabs your head and pushes your face to her loincloth, forcing you to take in the heady scent of her arousal. Despite the short fight, it seems it's gotten her blood flowing and she needs some relief. Pushing back the furry cloth, she frees her sixteen inch cock and presses it to your face, forcing you to take it in your mouth. The scent of her pussy is there as well, but you are not allowed near it, instead forced to suck her off.";
@@ -31,23 +28,17 @@ to say losetoamazonian:
 	else:
 		say "     Beaten to the ground by the powerful Amazonian's last blow, you are pinned down by her. 'You fought well, little [if Player is female]girl[else]man[end if], but you are mine now,' she says with a lustful grin. Pushing aside her loincloth, she frees her large, sixteen inch member and presses it to your [if Player is female]hot pussy[else]tight asshole[end if]. 'It's time for me to claim my prize[if Player is not female] and show you the only thing men are good for[end if],' she says, thrusting her thick rod into you.";
 		say "     [if Player is female]Your cunt is spread open by her large shaft as she starts fucking you, pounding into your juicy hole with the intent of breeding another powerful Amazon in you[else]Your asshole is spread open by her large shaft as she starts fucking you, pounding your tight anus to drain her balls into you like a sex slave for her needs[end if]. She keeps you pinned down with her strong body and drives her pulsing rod into you again and again, fucking you until she finally cums, emptying her hot seed inside you. Once she's done with you, she pulls out and gets up, dragging you to your feet and sending you on your way with a firm spank on your rear.";
-		if Player is female:
-			CreatureSexAftermath "Player" receives "PussyFuck" from "Amazonian";
-		else:
-			CreatureSexAftermath "Player" receives "AssFuck" from "Amazonian";
+		CreatureSexAftermath "Player" receives "[if Player is female]Pussy[else]Ass[end if]Fuck" from "Amazonian";
 
 to say beattheamazonian:
 	say "     Having beaten the powerful woman, you look down at her. Beneath her loincloth you can see both her juicy cunt and her thick cock. It's clear she's gotten quite excited from the fight and is quite aroused in her defeat.";
 	if noamazoniansex > 2:
 		say "     [bold type]As with the others of her kind, you send her on her way with a firm swat on her rear to remind her of her defeat.[roman type][line break]";
-	if Player is male:
-		say "     [bold type]Shall you claim your prize and fuck her?[roman type][line break]";
-	else:
-		say "     [bold type]Shall you claim your prize and use that cock of hers as you'd please?[roman type][line break]";
-	LineBreak;
+	say "[line break]     [bold type]Shall you claim your prize and [if Player is male]fuck her[else]use that cock of hers as you'd please[end if]?[roman type][line break]";
 	say "     ([link]Y[as]y[end link]) - Yes.";
 	say "     ([link]N[as]n[end link]) - No.";
 	if Player consents:
+		LineBreak;
 		if Player is puremale:
 			say "     Pinning the Amazonian woman down, you pull aside her loincloth and press a pair of fingers into her juicy cunt. She moans and tries to struggle, claiming she needs no man, but her clear arousal and her eyes on your throbbing cock betray her desires for you to prove otherwise. Getting your pulsing rod lined up with her, you sink it into her hot pussy, making her moan loudly as you start fucking her. You pound away at the warrior woman, thrusting into her again and again. Despite her protests, she cums several times before you are done with her, clearly aroused at being fucked by a man who could beat her in combat.";
 			say "     When you're done with her, you pull her up and grope her leaking, cum-filled pussy, reminding her that she was taken by a male. Despite her anger at this, it's clear that she's quite turned on by it as well, as if she's had something forbidden, taboo and therefore wonderfully arousing. You send her on her way with a firm swat on her rear as an added reminder of her defeat.";
@@ -57,11 +48,9 @@ to say beattheamazonian:
 			CreatureSexAftermath "Amazonian" receives "PussyFuck" from "Player";
 		else:
 			say "     Pinning the Amazonian woman down, you grab her cock and rub over it, intent on taking what you want from her. She moans softly as you stroke her cock to its full sixteen inches before climbing atop it. Her large, throbbing rod feels wonderful inside you as you start riding it, pushing it into your [if Player is female]juicy cunt[else]tight ass[end if] and bouncing atop it hard and fast. You ride the warrior woman's cock until she cums hard, pumping her hot load into you, claiming it for yourself with a moan of delight. When you're done with her, you pull her to her feet, squeeze her drained cock and swat her ass firmly as a reminder of her defeat.";
-			if Player is female:
-				CreatureSexAftermath "Player" receives "PussyFuck" from "Amazonian";
-			else:
-				CreatureSexAftermath "Player" receives "AssFuck" from "Amazonian";
+			CreatureSexAftermath "Player" receives "[if Player is female]Pussy[else]Ass[end if]Fuck" from "Amazonian";
 	else:
+		LineBreak;
 		say "     Having beaten the Amazonian woman and having no more use for her, you pull her to her feet and send her on her way with a firm swat on her rear as a reminder that she was beaten by you.";
 		increase noamazoniansex by 1;
 
@@ -248,8 +237,6 @@ When Play begins:
 	[Clit Size Adjective is generated by a function and can be used in scenes: very small/small/average/large/very large]
 ]
 
-
-
 Section 3 - Loot table
 
 to say GenerateTrophyList_Amazonian:
@@ -265,17 +252,20 @@ Table of Game Objects (continued)
 name	desc	weight	object
 "estosterogen pill"	"This bi-color pill has a pair of interconnected rings marked onto it, one with a cross and the other with a plus quartering them."	1	estosterogen pill
 
-estosterogen pill is a grab object. It is temporary.
+estosterogen pill is a grab object.
+Usedesc of estosterogen pill is "[estosterogen pill use]".
 
-Usedesc of estosterogen pill is "[estosterogen pill use]";
+check using a estosterogen pill:
+	if Player is MalePreferred or Player is FemalePreferred:
+		say "Your feats will not allow this to work." instead;
 
-before using a grab object (called x):
+[before using a grab object (called x):
 	if x is estosterogen pill:
 		LineBreak;
 		if "Male Preferred" is listed in feats of Player or "Female Preferred" is listed in feats of Player or "Single Sexed" is listed in feats of Player:
 			say "Your feat will not allow this to work.";
 			stop the action;
-		continue the action;
+		continue the action;]
 
 to say estosterogen pill use:
 	if Player is herm:		[HERM]
@@ -283,8 +273,9 @@ to say estosterogen pill use:
 		BallsGrow Player by 1;
 		increase Cunt Depth of Player by 2;
 		increase Cunt Tightness of Player by 1;
-		say "You feel a rush of warmth to your loins as your dual-gendered genitals grow suddenly. ";
-		say "Your [Cock of Player] penis[esmn] swell[smv] beyond the point of simply growing erect, gaining in length to become [if Cock Count of Player is 1]a [end if][cock size desc of Player] cock[smn]. Your balls plump up a little as well with a surge of added virility. ";
+		say "You feel a rush of warmth to your loins as your dual-gendered genitals grow suddenly. [run paragraph on]";
+		follow the cock descr rule;
+		say "Your [Cock of Player] penis[esmn] swell[smv] beyond the point of simply growing erect, gaining in length to become [if Cock Count of Player is 1]a [end if][cock size desc of Player] cock[smn]. Your balls plump up a little as well with a surge of added virility. [run paragraph on]";
 		follow the cunt descr rule;
 		say "Even as this is occurring, you watch your puss[if Cunt Count of Player > 1]ies['][else]y's[end if] lips puff up as your cunt[sfn] enlarge[sfv] and deepen[sfv], becoming [descr]. ";
 	else if Player is female:				[FEMALE]
@@ -293,9 +284,10 @@ to say estosterogen pill use:
 		now Cock Length of Player is 4;
 		increase Cunt Depth of Player by 2;
 		increase Cunt Tightness of Player by 1;
+		say "You feel an aching warmth rush to your loins. [run paragraph on]";
 		follow the cunt descr rule;
-		say "You feel an aching warmth rush to your loins. ";
-		say "You watch as your puss[if Cunt Count of Player > 1]ies['][else]y's[end if] lips puff up as your cunt[sfn] enlarge[sfv] and deepen[sfv], becoming [descr] with rapid growth. ";
+		say "You watch as your puss[if Cunt Count of Player > 1]ies['][else]y's[end if] lips puff up as your cunt[sfn] enlarge[sfv] and deepen[sfv], becoming [descr] with rapid growth. [run paragraph on]";
+		follow the cock descr rule;
 		say "As this is occurring, a twinge centered at your clit increases rapidly. With a sudden surge of growth, your love button enlarges into a phallic growth, soon becoming separate from the cunt from which it spawned to become a [cock size desc of Player] [Cock of Player] cock with its own set of balls[if CockName of Player is listed in infections of InternalCockList] forming inside you[end if]. ";
 	else if Player is male:				[MALE]
 		increase Cock Length of Player by 2;
@@ -303,8 +295,10 @@ to say estosterogen pill use:
 		now Cunt Count of Player is 1;
 		now Cunt Depth of Player is 6;
 		now Cunt Tightness of Player is 4;
-		say "You feel an aching warmth rush to your loins. ";
-		say "Your [Cock of Player] penis[esmn] swell[smv] beyond the point of simply growing erect, gaining in length to become [if Cock Count of Player is 1]a [end if][cock size desc of Player] cock[smn]. Your balls plump up a little as well with a surge of added virility. ";
+		say "You feel an aching warmth rush to your loins. [run paragraph on]";
+		follow the cock descr rule;
+		say "Your [Cock of Player] penis[esmn] swell[smv] beyond the point of simply growing erect, gaining in length to become [if Cock Count of Player is 1]a [end if][cock size desc of Player] cock[smn]. Your balls plump up a little as well with a surge of added virility. [run paragraph on]";
+		follow the cunt descr rule;
 		say "Even as this is occurring, you feel your bare groin clench as internal changes begin. There comes a pulling sensation as a wet passage opens and flesh folds form around it. Within moments, you have a wet pussy and needy little cunt between your legs as well. ";
 	else:								[NEUTER]
 		now Cock Count of Player is 1;
@@ -313,7 +307,9 @@ to say estosterogen pill use:
 		now Cunt Count of Player is 1;
 		now Cunt Depth of Player is 6;
 		now Cunt Tightness of Player is 4;
-		say "You feel an aching warmth rush to your loins. ";
+		say "You feel an aching warmth rush to your loins. [run paragraph on]";
+		follow the cock descr rule;
+		follow the cunt descr rule;
 		say "With your body in shock, you feel your bare groin clench as internal changes begin. Soon you feel pushing and pulling sensations there as both a wet passage opens and a pillar of flesh rises. Soon enough, you've grown a [cock size desc of Player] [Cock of Player] cock and a [cunt size desc of Player] cunt as your gender suddenly reverses from neither to both male and female in one. ";
 	if "Flat Chested" is not listed in feats of Player:
 		if Nipple Count of Player is 0:
@@ -335,20 +331,16 @@ name	desc	weight	object
 "Amazonian hair"	"A few strands of brown hair, deceptively simple and harmless despite where it came from. The strands feel smooth but tough."	1	Amazonian hair
 
 Amazonian hair is a grab object.
-It is temporary.
 Usedesc of Amazonian hair is "[Amazonian hair use]".
+Scent of Amazonian hair is "The strands tickle at your nostrils, and you get the distinct scent of feminine strength, it burns a bit, as if a warning.".
 
 to say Amazonian hair use:
-	say "Holding the strands of hair between your fingers, you find yourself with a sudden inexplicable urge to gain the strength held within. Bringing the hairs up to your head, you intermingle the brown strands close to the base of your own. Almost immediately, the strands escape your fingers, disappearing and leaving you moving your hands away in confusion.";
+	say "     Holding the strands of hair between your fingers, you find yourself with a sudden inexplicable urge to gain the strength held within. Bringing the hairs up to your head, you intermingle the brown strands close to the base of your own. Almost immediately, the strands escape your fingers, disappearing and leaving you moving your hands away in confusion.";
 	infect "Amazonian";
 
-instead of sniffing Amazonian hair:
-	say "The strands tickle at your nostrils, and you get the distinct scent of feminine strength, it burns a bit, as if a warning."
-
-
-[
 Section 4 - Endings
 
+[
 Table of GameEndings (continued)
 Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
 "Amazonian Infection"	"Infection"	""	Amazonian Infection rule	1000	false

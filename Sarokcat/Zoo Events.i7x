@@ -9,7 +9,6 @@ Section 1- Electric shockers
 
 Section 2 - Hyena cages
 
-
 Table of GameEventIDs (continued)
 Object	Name
 Hyena Cages	"Hyena Cages"
@@ -21,17 +20,14 @@ Sarea of Hyena Cages is "Zoo".
 
 to say ResolveEvent Hyena Cages:
 	say "     As you walk around the zoo you come to an enclosure. A couple of the metal bars that once held its residents inside are broken and bent, leaving a gap large enough for a human-sized creature to get through. Whatever escaped must have been quite strong to break solid steel. With a cursory glance at the enclosure you can see a pile of cloth scraps lies just outside the bars, the smell of cum wafts over from the pile leaving little doubt as what might have happened to it.";
-	LineBreak;
-	say "     [bold type]Do you want to search the cummy pile of cloth?[roman type][line break]";
-	LineBreak;
+	say "[line break]     [bold type]Do you want to search the cummy pile of cloth?[roman type][line break]";
 	say "     ([link]Y[as]y[end link]) - Search the pile";
 	say "     ([link]N[as]n[end link]) - Leave";
 	if Player consents:
 		LineBreak;
 		say "     You carefully root through the soggy pile of rags, discovering a badly damaged camera and, in what used to be a pocket, a granola bar still in its package. The camera unfortunately no longer works, but you manage to eject a tape from it.";
 		ItemGain food by 1;
-		LineBreak;
-		say "[bold type]Hyena Breakout Video has been added to your tape inventory![roman type][line break]";
+		say "[line break][bold type]Hyena Breakout Video has been added to your tape inventory![roman type][line break]";
 		add "Hyena Breakout Video" to tapes of Player;
 		now resolution of Hyena Cages is 1; [Player Investigated]
 	else:
@@ -63,6 +59,7 @@ Pachyderm Predicament	"Pachyderm Predicament"
 Pachyderm Predicament is a situation.
 ResolveFunction of Pachyderm Predicament is "[ResolveEvent Pachyderm Predicament]".
 Sarea of Pachyderm Predicament is "Zoo".
+
 when play begins:
 	add Pachyderm Predicament to BadSpots of HermList;
 	add Pachyderm Predicament to BadSpots of FurryList;
@@ -73,7 +70,7 @@ to say ResolveEvent Pachyderm Predicament:
 	say "     Sadly, you really don't see any way you can reach the employee to help with anything short of a helicopter, and you certainly aren't up to taking on two large foes of that size. Shaking your head, you move off into the zoo, trying not to shudder at the soon-to-be-elephantine employee's cries.";
 	now Pachyderm Predicament is resolved;
 
-Section 4 - Snake Knot 
+Section 4 - Snake Knot
 [ Rewritten by Alexeo in February 2024]
 
 Table of GameEventIDs (continued)
@@ -87,27 +84,23 @@ Sarea of Snake Knot is "Zoo".
 
 to say ResolveEvent Snake Knot:
 	say "     Traveling past the snake house, you decide to chance a glance inside, only to stare in amazement at a writhing knot of snakes of various sizes filling the room. They are a mix from pretty tiny to the truly enormous bulk of a fully grown anaconda, and there are enough of them to fill the room hip high for a normal human. The smell of snakes and sex fills the area, and their hissing is only broken by the occasional moan or cry of ecstasy, proving that there are a few non-snakes caught up in their mating knot as well, though you are sure they're soon to transform.";
-	LineBreak;
-	say "     [bold type]What do you do now?[roman type][line break]";
+	say "[line break]     [bold type]What do you do now?[roman type][line break]";
 	say "     [link](1)[as]1[end link] - Watch the orgy and enjoy the sights inside the snake house.";
 	say "     [link](2)[as]2[end link] - Wade in and let the snakes have their way with you too.";
 	say "     [link](3)[as]3[end link] - Attempt to rescue one of the victims of the fuckpile.";
 	say "     [link](4)[as]4[end link] - You're not interested in this. Just leave.";
 	now calcnumber is 0;
 	while calcnumber < 1 or calcnumber > 4:
-		say "Choice? (1-4)>[run paragraph on]";
+		say "Choice? (1-4)> [run paragraph on]";
 		get a number;
-		if calcnumber is 1 or calcnumber is 2 or calcnumber is 3 or calcnumber is 4:
-			break;
-		else:
+		if calcnumber < 1 or calcnumber > 4:
 			say "Invalid choice. Type [link]1[end link] to just watch, [link]2[end link] to join in, [link]3[end link] to try to save someone or [link]4[end link] to walk away.";
+	LineBreak;
 	if calcnumber is 1: [Option A]
-		LineBreak;
 		say "     Choosing not to participate yourself, but still interested, you decide to watch and see what happens. Crouching down to avoid detection, you peer over the edge of the pit and see the mass of squirming reptiles as well as a few humans and anthropomorphic animals in varying degrees of transformation. As the orgy begins, some of them already have forked tongues which dart out of their untainted mouths lustfully, while others take on a more naga-like appearance with their relatively humanlike upper bodies with the lower bodies of giant snakes. As you continue to gaze into the crowd of serpents, you can see flashes of dicks and pussies between the crevices of coils, every so often spotting a glimpse of penetration. Any individual act within the sex pile is difficult to spy, however, as their twisting forms move and roll over each other in an undulating mess of sex. After several moments, [if Lust of Player > 80]you realize you have begun to drool in desire [else]you find yourself oddly aroused by the show [end if]before eventually coming to your senses. You then stand up and turn your back on the lot, thoroughly turned on despite not getting directly involved.";
 		LibidoBoost 15;
 		now Resolution of Snake Knot is 1; [player watched]
 	else if calcnumber is 2: [Option B]
-		LineBreak;
 		say "     Gazing into the snake ball, you can feel your loins react to the sexy scene playing out before you and it is then and there you decide that you want to have some fun too. You shuck off your [if Player is not naked]clothing and [end if]gear and step into the knot of snakes, one foot in front of the other. As soon as half of your body is inside, the mass of slithering serpents pull you into their horde, covering you completely. You can feel the writhing group of reptiles squirming and twisting against you, their smooth scales pressing onto your bare flesh, causing your senses to spark with delight as their coils wrap around your body. It is then you feel something much smoother and wetter pressing against your backside. You quickly realize that it's a hard cock as it slides between your asscheeks, hotdogging you lewdly. It continues to grind and press there for a few moments, before finally it moves back and poises against [if Player is female]the lips if your pussy[else]your rear entrance[end if]. The cock pauses for an agonizing moment, before finally cramming deep inside you all at once! ";
 		say "     Meanwhile, you can feel another of the reptiles grinding against your front, and you feel its hot entrance pressing against your [if Player is purefemale]belly[else if Player is male]throbbing dick[else]bare, genderless groin[end if]. You can't tell if it's a cunt or an anus, but it seems to radiate heat against you. At the same time, another dick presses against your lips and shoves inside, burying itself down your throat. On your other end, the cock inside your [if Player is female]pussy[else]ass[end if] starts sliding back and forth languidly, building up pleasure deep in your core. The one in your mouth does the same as it twitches against your tongue repeatedly. [if Player is male]Furthermore, the hole on your pulsing member shoves itself down your length, taking you fully inside its depths. [end if]As you are stimulated from all angles, the folds of multiple vipers and pythons are covering your entire body, blocking out your vision and making hearing difficult, except for the moist sounds of fucking which constantly flood your ears. You can do nothing but let out a choked moan around the shaft in your mouth as your body is used and abused by the sexy snakes, being completely at their mercy.";
 		WaitLineBreak;
@@ -125,7 +118,6 @@ to say ResolveEvent Snake Knot:
 		infect "Naga";
 		now Resolution of Snake Knot is 2; [player joined in]
 	else if calcnumber is 3: [Option C]
-		LineBreak;
 		say "     It comes to your mind that some of the forms in the pile might not be willing occupants. So, you decide to throw caution to the wind and slide into the crowd of cobras, sidewinders, and constrictors in hopes of pulling out a person or two. As you make your way into the group of ophidians, your vision becomes filled with scales as well as different sizes and shapes of serpent pricks and twats. It's nearly impossible to see as the coils block out most of the light, and hearing is difficult as the writhing forms began to grind and squelch up against each other, beginning their sexual foray. Reaching out, your digits brush against slick malehoods and sopping cunnys before eventually, you feel something akin to a human hand latching onto your fingers. So, you tug with all your might in an attempt to rescue what you hope is an untransformed human.";
 		say "     As you pull them into your arms, you realize it's a woman who still retains her human figure. Before you can make your way out of the batch of snakes however, you can feel a tail [if Player is barecrotch]slide along your loins, teasing you and pushing you into unplanned arousal. [else]slip under your clothes before quickly pulling away, yanking the garments from your body. Following touches tease your body and push you into unplanned arousal. [end if] Afterwards, you perceive a pair of hard, slippery phalluses pressing onto your crotch. One of them squirms against the cleft of your ass while the other slips along your [if Player is female]twat. [else if Player is male]your own hardening prick. [else]your bare, genderless groin. [end if]At the same time, the woman in your arms is pressed tightly against you by the grind of bodies.";
 		WaitLineBreak;
@@ -141,12 +133,10 @@ to say ResolveEvent Snake Knot:
 			CreatureSexAftermath "Naga" receives "PussyFuck" from "Player";
 		infect "Naga";
 		now Resolution of Snake Knot is 3; [player saved someone]
-	else if calcnumber is 4: [Option D]
-		LineBreak;
+	else: [Option D]
 		say "     Carefully, you back away from the door, not desiring to get caught up in their mating frenzy, though it could be fun to try if there were fewer of them...";
 		now Resolution of Snake Knot is 4; [player just left]
 	now Snake Knot is resolved;
-
 
 Section 5 - Useful pamphlet
 
@@ -162,10 +152,9 @@ Sarea of Useful Pamphlet is "Zoo".
 to say ResolveEvent Useful Pamphlet:
 	say "     Wandering around the zoo, you come across an area dedicated to visitor information. You browse through the few remaining pamphlets and find a couple that seem to be very pertinent on how to defend yourself from wild animals. Useful information indeed under the current circumstances!";
 	increase XP of Player by 5;
-	say "Your XP increases slightly due to the helpful pamphlet!";
+	say "[line break]     [bold type]Your XP increases slightly due to the helpful pamphlet![roman type][line break]";
 	if a random chance of 1 in 6 succeeds:
 		now Useful Pamphlet is resolved;
-
 
 Section 6 - Unidentified sex scene
 
@@ -180,10 +169,8 @@ Sarea of Unidentified Sex Scene is "Zoo".
 
 to say ResolveEvent Unidentified Sex Scene:
 	say "     Traveling through the zoo area, you arrive at one of the resting areas. In the mood for a short break, you move closer. Unfortunately, it seems several other people or creatures were here before you, and it is obvious not much [']resting['] occurred, although several of the participants were probably horizontal at one point. Looking around, you survey the splatters of cum from several unidentified participants, several articles of shed clothing tossed around haphazardly, and a variety of mixed animal prints tracked in the dirt. You really aren't sure just who all or what all enjoyed themselves here, but they definitely had a lot of fun. Sighing, you leave without taking a rest, the scene making you too nervous, and aroused, to stay there any longer.";
-	increase Libido of Player by 20;
-	if Libido of Player > 100, now Libido of Player is 100;
+	raise Player Libido by 20;
 	now Unidentified Sex Scene is resolved;
-
 
 Section 7 - Grizzly gone
 
@@ -204,7 +191,6 @@ to say ResolveEvent Grizzly Gone:
 	say "     'Grizzly so good, grizzly cock sized juuust right.' The last note ends there, trailing off into an unrecognizable scrawl.";
 	now Grizzly Gone is resolved;
 
-
 Section 8 - Tasty Treats
 
 Table of GameEventIDs (continued)
@@ -219,7 +205,6 @@ to say ResolveEvent Tasty Treats:
 	say "     Wandering along the zoo pathways, you come across a zoo candy cart, stuffed full with plenty of still-wrapped treats and snacks. After checking around to make sure it is safe, you take a short break to help yourself to several different delicious snacks before moving on your way, feeling happy and full.";
 	now hunger of Player is 0;
 	now Tasty Treats is resolved;
-
 
 Section 9- - AngieTrapped
 
@@ -241,7 +226,6 @@ to say ResolveEvent Panda Parade:
 	say "     You are about to come out of hiding when another, more bestial panda comes barreling down the path. This one is obviously female, and it quickly chases after the retreating male panda. The second panda is swiftly followed by two more female pandas, each batting at each other as they try to get ahead, and finally one last slightly pandalike female trailing along after everyone else, the final one still kicking off its encumbering clothing as it continues to change into a full panda. Amused at the strange situation, you wait to make sure there aren't any more girl pandas chasing after the obviously very popular guy panda before coming out of hiding and continuing on your way.";
 	now Panda Parade is resolved;
 
-
 Section 11 - Petting zoo
 
 Table of GameEventIDs (continued)
@@ -259,7 +243,6 @@ to say ResolveEvent Petting Zoo:
 		ItemGain water bottle by 2;
 	now Petting Zoo is resolved;
 
-
 Section 12 - Instructional video
 
 Table of GameEventIDs (continued)
@@ -275,7 +258,6 @@ to say ResolveEvent Instructional Video:
 	say "     Coming across one of the zoo buildings in your wanderings, you try taking a look inside and find a small, open, class-like area with several desks set up and a projector hooked up to a VCR. Taking a closer look at the VCR, you notice that it's labeled [']Animal Handling Training[']. Feeling curious, you push play and settle down to watch a bit. Soon you are caught up in all the tips and tricks the training tape teaches to aspiring zookeepers on how to handle the animals and deal with any trouble. By the time the tape clicks off an hour later, you find yourself feeling much more confident about your ability to deal with any animals or beasts that you might come across.";
 	increase XP of Player by 30;
 	now Instructional Video is resolved;
-
 
 Section 13 - Vet supplies
 
@@ -297,11 +279,13 @@ to say ResolveEvent Vet Supplies:
 		say "     While still thinking about it, your hand seemingly moves on its own, rising to your neck and tracing the band of sturdy leather around your neck, as if to remind you that you're Diego's plaything. This makes you realize that injecting yourself with some stuff you just found somewhere would be a mistake. With a shrug, you fling the bag into the bushes and move on.";
 		now Vet Supplies is resolved;
 	else if Player consents:
+		LineBreak;
 		say "     Deciding to try your luck with the animal drugs, you sort them out until you have male and female hormone shots and treatments fully laid out, as well as having figured out just how to apply them properly. Now that leaves you with just one last decision... which shots do you want to take? Female (1), male (2), both (3) or change your mind and take none (0)?";
 		now calcnumber is -1;
 		while calcnumber < 0 or calcnumber > 3:
-			say "Choice? (0-3)>[run paragraph on]";
+			say "Choice? (0-3)> [run paragraph on]";
 			get a number;
+		LineBreak;
 		if calcnumber > 0 and calcnumber < 4:		[***not aborted - temporary fix***]
 			remove "Single Sexed" from feats of Player, if present;
 			remove "Always Cocky" from feats of Player, if present;
@@ -316,9 +300,9 @@ to say ResolveEvent Vet Supplies:
 		else:
 			say "     Looking over all the needles and foreign hormones, you decide it might just be best not to mess with your already messed up biochemistry any further than the infection already has.";
 	else:
+		LineBreak;
 		say "     Deciding not to take your chances with any of the medicine designed for animals, you leave the veterinary bag where it lies, and continue along your way through the zoo.";
 [		now Vet Supplies is resolved; ]
-
 
 to say vetsup_fshots:
 	say "     Examining the female shots you have laid out before you, you decide to discard the male shots, and slowly begin the process of injecting yourself with the female chemicals, your skin seeming to twitch as each animal based injection enters your body, and your head seeming to swim as a surge of estrogen rushes through your body, altering your perspective on things...";
@@ -378,8 +362,6 @@ to say vetsup_hshots:
 		SanLoss 20;
 		FeatGain "Herm Preferred";
 
-
-
 Section 14 - Feeding time
 
 Table of GameEventIDs (continued)
@@ -390,6 +372,7 @@ Feeding Time	"Feeding time"
 Feeding Time is a situation.
 ResolveFunction of Feeding Time is "[ResolveEvent Feeding Time]". The level of Feeding Time is 9.
 Sarea of Feeding Time is "Zoo".
+
 when play begins:
 	add Feeding Time to BadSpots of HermList;
 	add Feeding Time to BadSpots of FurryList;
@@ -397,6 +380,7 @@ when play begins:
 to say ResolveEvent Feeding Time:
 	say "     Traveling through the twisting paths of the zoo, you come across a rather strange sight. Someone has left several cans of food and a bottle of water out in one of the animal feeding areas. Looking around, you can't see any reason for someone to have done so, and the food and water could be pretty useful. Still, it is rather suspicious. Do you try to take it?";
 	if Player consents:
+		LineBreak;
 		say "     You can't resist the temptation to snag some fresh supplies and cautiously move forward to take the food and water. Just as you are bending over to stuff them in your backpack, you hear a sound behind you and whirl around to see a tigertaur charge at you out of the bushes, obviously glad someone has taken the bait and walked into its trap!";
 		decrease HP of Player by 15;
 		challenge "Tigertaur";
@@ -409,12 +393,11 @@ to say ResolveEvent Feeding Time:
 		else:
 			say "     Lying there on the ground while you recover from the beast's devious trap, you eventually manage to roll over and pull yourself back to your feet. Looking around, you note with a sigh that the tigertaur took the food with it when it left, leaving you with nothing to show for your efforts other than your well-fucked body. Shouldering your pack sadly, you continue on through the zoo, resolving to not be so easily tricked next time.";
 			now Resolution of Feeding time is 2; [was ambushed, trap still active]
-			Stop the action;
 	else:
+		LineBreak;
 		say "     Deciding that anything that looks this suspicious is probably some form of trap, you continue along your way, leaving the food and water behind.";
 		now Resolution of Feeding time is 99; [refused the trap]
 		now Feeding Time is resolved;
-
 
 Section 15 - Security Station
 
@@ -425,6 +408,7 @@ Security Station	"Security Station"
 Security Station is a situation.
 ResolveFunction of Security Station is "[ResolveEvent Security Station]".
 Sarea of Security Station is "Zoo".
+
 when play begins:
 	add Security Station to BadSpots of MaleList;
 	add Security Station to BadSpots of FemaleList;
@@ -435,7 +419,6 @@ to say ResolveEvent Security Station:
 	now Libido of Player is 100;
 	SanLoss 10;
 	now Security Station is resolved;
-
 
 Section 16 - Broken fences
 
@@ -451,7 +434,6 @@ Sarea of Broken Fences is "Zoo".
 to say ResolveEvent Broken Fences:
 	say "     While traveling through the zoo paths, you note a small broken area of the underbrush, and out of curiosity move a little closer to take a look. Behind the foliage, you can see the back of one of the animal enclosures, a nice thick area of fence designed to keep the animals inside. Of course in this case you can see how this group of animals got out, as the fence has been broken and torn here where it isn't easily visible, leaving more than enough room for someone, or something, to slip into or out of the enclosure. Examining the edges of the fence, you find yourself more than a little worried about encountering something able to do that kind of damage to the special cage fences, and you decide to move along down the pathway quickly, just in case it might still be in the area.";
 	now Broken Fences is resolved;
-
 
 Section 17 - Wandering beasts
 
@@ -469,7 +451,6 @@ to say ResolveEvent Wandering Beasts:
 	fight;
 	now Wandering Beasts is resolved;
 
-
 Section 18 - Roaming spots
 
 Table of GameEventIDs (continued)
@@ -483,9 +464,8 @@ Sarea of Roaming Spots is "Zoo".
 
 to say ResolveEvent Roaming Spots:
 	say "     Wandering through the zoo, you find yourself alongside one of the small stands of trees set up against the sides of the zoo. You freeze as you hear a noise come from the branches up ahead, and slowly look up, not seeing anything for a minute, before suddenly realizing that a large leopardman is slowly moving across the branches. You feel your cheeks heating up even as you try to hold your breath, your eyes fixed on his large sheath even as the spotted leopardman slowly shifts into the next tree. You watch with a mixture of fascination and a strange desire as the sleek feline stretches up from his position in his newest tree, until he can grip the top of the zoo wall easily. You blink as in one swift movement the lithe Leopard hauls himself onto the top of the wall, before sliding down out of sight on the other side.";
-	say "You let out a soft gasp of relief as you realize you are safe from the large feline for now, although for some strange reason you find yourself almost wishing the powerful male cat had noticed you standing there...";
+	say "     You let out a soft gasp of relief as you realize you are safe from the large feline for now, although for some strange reason you find yourself almost wishing the powerful male cat had noticed you standing there...";
 	now Roaming Spots is resolved;
-
 
 Section 19 - Picture striping
 
@@ -497,6 +477,7 @@ Picture Striping	"Picture striping"
 Picture Striping is a situation.
 ResolveFunction of Picture Striping is "[ResolveEvent Picture Striping]".
 Sarea of Picture Striping is "Zoo".
+
 when play begins:
 	add Picture Striping to BadSpots of MaleList;
 	add Picture Striping to BadSpots of FemaleList;
@@ -508,7 +489,6 @@ to say ResolveEvent Picture Striping:
 	say "     You shudder as you realize how lucky you are to arrive here late. If you had been the first person into that booth, there would have been no way for you to escape or fight in such a confined space. Sighing, you prop the pictures up against the photo booth, leaving them there in case the zebras involved want to come back for a memento, then continue your trip through the zoo.";
 	now Picture Striping is resolved;
 
-
 Section 20 - Lazy River (Event by Shadowwolf94)
 
 Table of GameEventIDs (continued)
@@ -518,6 +498,7 @@ Lazy River	"Lazy River"
 Lazy River is a situation.
 ResolveFunction of Lazy River is "[ResolveEvent Lazy River]".
 Sarea of Lazy River is "Zoo".
+
 when play begins:
 	add Lazy River to BadSpots of MaleList;
 	add Lazy River to BadSpots of FurryList;
@@ -525,9 +506,7 @@ when play begins:
 to say ResolveEvent Lazy River:
 	say "     Traveling through the zoo area, you spot something odd in the hippo enclosure. Sneaking up to the fence and peaking over, you spot a large hippo man relaxing on his back in the water. One of his large hands is wrapped around his massive shaft, gently stroking its thick length while his other kneads his large ballsack. Floating lazily along, he pumps and strokes his throbbing shaft. You can't seem to look away from this arousing scene, your knees feeling weak as your mind is filled with thoughts of sex with this beast.";
 	say "     You are shaken out of your fantasy when the large beast man roars out in orgasm, painting his belly and filling the nearby water with sticky white seed. Afterwards, he flops around in the water, looking relaxed and content as he bobs along. You shake your head clear and slip away quietly before something notices you, feeling quite aroused by the whole voyeuristic experience.";
-	increase Libido of Player by 30;
-	if Libido of Player > 100, now Libido of Player is 100;
+	raise Player Libido by 30;
 	now Lazy River is resolved;
-
 
 Zoo Events ends here.

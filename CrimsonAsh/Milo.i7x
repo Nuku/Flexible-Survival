@@ -62,7 +62,7 @@ to say ResolveEvent Bobcat Encounter:
 			say "     You stare at the cat for a minute, scratching the back of your neck awkwardly as you think of what to say. You were curious maybe? The feline creature huffs in impatience while you think, putting his paws on his lithe, furry hips. 'Well that's a fine how-do-ya-do, didn't your mother ever teach you it's impolite to stare?' He gives an indignant huff, before he drops back down the hole, disappearing from sight. You stare down the dark, deep hole a moment before backing up, looking around at your surroundings and then turning around. 'Come back when you've learned to greet properly!' you hear echoed out from the inside of the tree. With a shrug, you walk away and try to remember some of the landmarks near the tree, to make sure that you don't run into him again for another embarrassing encounter.";
 			now Resolution of Bobcat Encounter is 99; [disinterest]
 			now Bobcat Encounter is resolved;
-	else if Resolution of Bobcat Encounter is 1 or Resolution of Bobcat Encounter is 2: [got fucked once before]
+	else if Resolution of Bobcat Encounter < 3: [got fucked once before]
 		say "     As you are wandering through the lively forest, you notice a small [']M['] on a tree you pass. Remembering that little cat-morph that you had submitted to before, you think that you can follow these tree signs back to Milo's home. Whether for free food or a quick fuck, or both given how you get them, it should be easy to find Milo.";
 		say "[line break]     [bold type]Do you want to search out the bobcat?[roman type][line break]";
 		say "     ([link]Y[as]y[end link]) - Sure, let's have some fun!";

@@ -73,6 +73,7 @@ to say ResolveEvent Shark Warrior:
 			say "     The fish-guy lets out a vocal 'Yes!' before he practically jumps atop you, pressing his hard body against yours. His skin gets your clothes wet, making them stick a bit to his body, but you can also feel his hard pecs and abs through the fabric. His elongated muzzle finds your own, tilting to adjust for its altered shape as he catches your mouth in a lustful kiss. Surprisingly enough, his teeth aren't as prominent as you expected, and you even end up seeking them out with your tongue to convince yourself that they are truly there. All the while, the eager fish-man begins to peel off your clothes, tugging off each layer with increasing impatience as you kiss. 'Alright, pal. How about we skip to the good stuff? I've got some nice cocks that need some attention, too.' You sneak a peek towards his uncovered groin. He's sporting two pointed, glistening erections, each throbbing hard against your thighs.";
 			say "[line break]     How would you like to pleasure the big guy?";
 			say "[TSWSexSelection]";
+			WaitLineBreak;
 			say "[line break]     Satisfied the tiger shark gives you one last playful swat on the rear as a goodbye. 'Thanks, pal. Stuff like this definitely keeps me going. Now, I need to get back to fending off those dragons!' With that, your partner takes off into the water, leaving you on your own again to recover from the exciting encounter.";
 		else:
 			LineBreak;
@@ -194,8 +195,6 @@ to say TSWSexSelection:	[The Sex menu that shows up]
 			say "     You give the shark a cold glare and even kick some sand onto him, as you turn around to leave.";
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options], or 0 to exit.";
-	wait for any key;
-	clear the screen and hyperlink list;
 
 Section 3 - Dominant Sex Scenes
 

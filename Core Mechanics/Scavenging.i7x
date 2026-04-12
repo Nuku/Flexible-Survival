@@ -25,7 +25,7 @@ carry out ScavengingAction:
 	if "Survivalist" is listed in feats of Player, increase bonus by 4;
 	if "Three Bags Full" is listed in feats of Player, increase bonus by 1;
 	let the dice be a random number from 1 to 20;
-	say "You roll 1d20([dice])[if bonus >= 0]+[end if][bonus] = [special-style-1][dice plus bonus][roman type] vs [special-style-2]10[roman type] (Perception Check): ";
+	say "[line break]You roll 1d20([dice])[if bonus >= 0]+[end if][bonus] = [special-style-1][dice plus bonus][roman type] vs [special-style-2]10[roman type] (Perception Check): ";
 	if dice plus bonus > 9:
 		now inasituation is true;
 		if a random chance of 3 in 4 succeeds:
@@ -33,7 +33,7 @@ carry out ScavengingAction:
 		else:
 			now tempnum is 1;
 			let L be a random available scavevent;
-			If L is not nothing:
+			if L is not nothing:
 				say "[one of]During your search for supplies, you end up at[or]Searching systematically for resources, you locate[or]Following signs of recent activity, you end up at[or]Doing a slow circuit while scavenging, you manage to find[or]Wandering around aimlessly in search of supplies, you locate[at random] [L].";
 				say "[ResolveFunction of L]";
 			else:
@@ -51,10 +51,8 @@ Part 2 - Targeted Scavenging (nonfunctional) - Not for release
 Scavengetarget is an indexed text that varies.[@Tag:NotSaved]
 
 tscavenging is an action applying to one topic.
-[
 understand "Scavenge [text]" as tscavenging.
 understand "Scav [text]" as tscavenging.
-]
 
 check tscavenging:
 	if location of Player is not fasttravel, say "You can only scavenge from quick travel points." instead;

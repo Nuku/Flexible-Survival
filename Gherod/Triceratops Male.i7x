@@ -66,8 +66,6 @@ to say TriceratopsMaleVictorySexMenu:
 			say "     Maybe he is not worth your attention at all, so you just leave him. 'Really?! You're just gonna leave me like this?! You fucking suck!' he starts shouting, and you simply move on, paying no further mind to him.";
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options], or 0 to exit.";
-	wait for any key;
-	clear the screen and hyperlink list;
 
 to say TriceratopsMaleVictoryFingering:
 	say "     Perhaps, you could at least do something for him, and he does seem to have a needy large ass. Walking towards the triceratops, you make your intentions clear as you eye his rear. 'Oh, you want the ass?' he asks as he turns around immediately, putting it in your direct sight. He seems eager to do this, but all you do is reach up to him and slide your hand over his pudgy buttocks. The saurian male lets out a pleased grunt as he feels his ass being played with by you, as you squeeze those glutes all over. Slowly, you begin to slide your fingers to the space between them, and this really excites the male. 'You're fucking teasing me, now...' he exclaims, arching his back and letting you do what you want.";

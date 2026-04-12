@@ -27,14 +27,15 @@ to say CheetahWomanWins:
 		say "     Before you know it, the two of you are orgasming together, your highly aroused bodies shuddering in pleasure as they rub against each other. Eventually she pulls herself off you as you lie your head back on the ground, the taste of her arousal filling your mouth still. 'That was so good,' the cheetah woman moans as she stretches, and you nod weakly in agreement. 'Maybe next time we can find a male for us both,' she says, lowering her muzzle to you and giving you a swift kiss, before standing up and sauntering away. You find your gaze fixed on her lashing tail, the taste of your juices from her mouth mixing with her strong feline taste on your tongue as you wonder about her last comment...";
 		CreatureSexAftermath "Player" receives "OralPussy" from "Cheetah Woman";
 		CreatureSexAftermath "Cheetah Woman" receives "OralPussy" from "Player";
-	infect "Cheetah Woman";
+	[infect "Cheetah Woman";]
 
 To say CheetahWomanLoses:
 	if (Player is male and Cock Length of Player <= 18) or Player is female:
 		say "     You find yourself considering having some fun with the cheetah woman. [bold type]Do you take advantage of the situation and use her to sate your lusts?[roman type][line break]";
-		Say "     ([link]Y[as]y[end link]) - Yes.";
+		say "     ([link]Y[as]y[end link]) - Yes.";
 		say "     ([link]N[as]n[end link]) - No.";
 		if Player consents:
+			LineBreak;
 			if Player is male: [Male]
 				say "     Moving to restrain her before she can get away you force her down on to her knees, holding her up by her arms. After you are sure that she will not try to run or attack you again you let go of her arms, force her onto all fours[if Player is not barecrotch] and [one of]hurredly[or]quickly[or]hastily[at random] remove your clothes, exposing your [Cock of Player] [one of]dick[or]cock[or]penis[at random][end if]. You tear away at the tattered remains of her clothes and stare down at her lustfully. She has by now returned the same stare and presents herself for your use. Her tail swaying with delight. You thrust your [one of]dick[or]member[or]cock[at random] into her feline [one of]pussy[or]slit[or]twat[at random] and pound into her furiously. Her body quickly joins the rhythm of your thrusts and her [one of]large[or]small[or]pert[at random]breasts sway up and down on her chest. As the two of you continue to fuck you soon reach orgasm and she quickly follows. The two of you are tired and worn out and she is clearly half conscious. Deciding that you have had your fun you collect yourself and leave the cheetah woman to collect herself or be fucked before she can escape.";
 				CreatureSexAftermath "Cheetah Woman" receives "PussyFuck" from "Player";
@@ -42,15 +43,13 @@ To say CheetahWomanLoses:
 				say "     The Cheetah woman falls to her knees in defeat and you grab hold of her arms and push her to the ground and sit on top of her ensuring she can't escape. You interlock your lips with her [one of]muzzle[or]mouth[at random]. She quickly gives in to her own lust and personality returns the kiss, you let go of her arms and she quickly wraps them around you. Refusing to let go th two of you passionately embrace one another, your lust takes over and soon the both of you are on the floor kissing passionately and rubbing at each others [one of]pussies[or]cunts[at random]";
 				say "     The both of you are brought to orgasm almost simultaneously, you are lost in bliss and it feels as if an eternity has passed. You look to your partner and smile, satisfied that you have had your pleasure you gather your things and make on your way, leaving the cheetah woman to whatever fate awaits her";
 		else: [Milking]
+			LineBreak;
 			say "     Moving to restrain her before she can get away, you force her down onto the ground with her [one of]muzzle[or]face[or]snout[at random] pressed against the earth. You [one of]pick up a glass bottle from the ground[or]pull a glass bottle from your bag[or]pick up a plastic bottle from the ground[or]pull a plastic bottle from your bag[at random] and place the container under her [one of]right breast[or]left breast[at random], then begin to stimulate her nipples. Her breathing starts to get heavy as the stimulation to her tits intensifies. Soon she is moaning and purring as milk shoots out her tits and into the container. After you are done with her, you move her slumping body to the side and put a cap on the bottle of cheetah milk, then go on your merry way.";
 			ItemGain cheetah milk by 1;
 	else: [Milking]
 		say "     Moving to restrain her before she can get away, you force her down onto the ground with her [one of]muzzle[or]face[or]snout[at random] pressed against the earth. You [one of]pick up a glass bottle from the ground[or]pull a glass bottle from your bag[or]pick up a plastic bottle from the ground[or]pull a plastic bottle from your bag[at random] and place the container under her [one of]right breast[or]left breast[at random], then begin to stimulate her nipples. Her breathing starts to get heavy as the stimulation to her tits intensifies. Soon she is moaning and purring as milk shoots out her tits and into the container. After you are done with her, you move her slumping body to the side and put a cap on the bottle of cheetah milk, then go on your merry way.";
 
 Section 2 - Creature Insertion
-
-to say CheetahWomanDesc:
-	say "     As you wander around the deserted paths of the zoo, you spot a blur for a second, and turning towards it you find yourself staring straight into the eyes of an almost feral-like cheetah woman. She is adorned with [one of]the tattered remains of a dress[or]the tattered remains of a zookeepers uniform[or]the tattered remains of some jeans and a shirt[or]nothing[at random], her long lean body resting on narrow paws and a long cheetah tail lashing behind her as she focuses her gaze directly on you. [one of]'Why don't you run? I love the chase,' [or]'Hmmm, not a gazelle, but you look almost as fun,' [or]'Oooo, something to chase!' [or]'Oh good, I was feeling bored,' [or]'I was feeling kind of lonely here. Maybe you can help?' [or]'Finally someone to pounce!' [at random]she says with a soft grin, her pert breasts standing out from her body as she takes a deep breath in anticipation and slips into a runner's stance, her eyes locked on her newest prey... you.";
 
 Table of CombatPrep (continued)
 name(text)	PrepFunction(text)
@@ -82,7 +81,7 @@ When Play begins:
 	now attack entry is "[one of]She darts forward quickly, sideswiping you with her body.[or]Swiftly racing forward and to the side, she slashes at you as she passes.[or]Her front paw flashes out faster than the eye can follow, leaving a painful set of claw marks on you.[or]Lashing her tail in anticipation, the cheetah woman purrs as she stares deep into your eyes, her sinuous movements almost hypnotically appealing.[or]Charging forward with no warning whatsoever, she pounces and knocks you to the ground.[or]She bunches her powerful hind legs up and leaps directly at you![or]She grins at you, baring her sharp feline teeth, before leaping forward and snapping them at you.[at random]";
 	now defeated entry is "[CheetahWomanLoses]";
 	now victory entry is "[CheetahWomanWins]";
-	now desc entry is "[CheetahWomanDesc]";
+	now desc entry is "     As you wander around the deserted paths of the zoo, you spot a blur for a second, and turning towards it you find yourself staring straight into the eyes of an almost feral-like cheetah woman. She is adorned with [one of]the tattered remains of a dress[or]the tattered remains of a zookeepers uniform[or]the tattered remains of some jeans and a shirt[or]nothing[at random], her long lean body resting on narrow paws and a long cheetah tail lashing behind her as she focuses her gaze directly on you. [one of]'Why don't you run? I love the chase,' [or]'Hmmm, not a gazelle, but you look almost as fun,' [or]'Oooo, something to chase!' [or]'Oh good, I was feeling bored,' [or]'I was feeling kind of lonely here. Maybe you can help?' [or]'Finally someone to pounce!' [at random]she says with a soft grin, her pert breasts standing out from her body as she takes a deep breath in anticipation and slips into a runner's stance, her eyes locked on her newest prey... you.[line break]";
 	now face entry is "sleek and cheetah-like, with a short muzzle, soft whiskers, and small, rounded ears resting on top of your new head"; [ Face description, format as "Your face is [Face of Player]." ]
 	now body entry is "slim and sleek, with not an ounce of wasted fat anywhere you can spot, its strong tight muscles made for running. You balance easily on your new, pawlike feet, gripping the ground tightly. You find yourself leaning forward slightly as you walk, as if you were always ready to spring into action"; [ Body Description, format as "Your Body is [Body of Player]." ]
 	now skin entry is "[one of]cheetah-spotted[or]cheetah-furred[or]black and yellow-spotted[or]sleek-furred[or]short fur-covered[at random]"; [ skin Description, format as "Your body is covered in (your text) skin."]
@@ -233,6 +232,8 @@ When Play begins:
 	[Clit Size Adjective is generated by a function and can be used in scenes: very small/small/average/large/very large]
 ]
 
+Section 3 - Drop Item
+
 Table of Game Objects (continued)
 name	desc	weight	object
 "cheetah milk"	"The creamy milk collected from a Cheetah. It has a potent smell to it, yet it's slightly enticing."	1	cheetah milk
@@ -247,7 +248,7 @@ to say drinkcheetahmilk:
 	PlayerDrink 10;
 	raise Player Libido by 5;
 
-Section 3 - Heat Table
+Section 4 - Heat Table
 
 Table of infection heat (continued)
 infect name	heat cycle	heat duration	trigger text	description text	heat start	heat end	inheat	fheat (truth state)	mpregheat (truth state)	mpregtrigger

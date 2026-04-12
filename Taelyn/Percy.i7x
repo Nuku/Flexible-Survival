@@ -29,13 +29,8 @@ Version 1 of Percy by Taelyn begins here.
 [Adding mini questlines to unlock more Percy content, relationship, and equipment          ]
 
 a postimport rule: [bugfixing rules for players that import savegames]
-	if HP of Percy > 0 and Percy is in NPC Nexus:
+	if HP of Percy > 0:
 		move Percy to Ironscale Hollow;
-
-the linkaction of Percy is "[Percylinkaction]".
-
-to say Percylinkaction:
-	say "Possible Actions: [link]talk[as]talk Percy[end link], [link]smell[as]smell Percy[end link][line break]";
 
 Section 1 - NPC
 
@@ -44,6 +39,7 @@ object	name
 Percy	"Percy"
 
 Percy is a man.
+Percy is in Ironscale Hollow.
 ScaleValue of Percy is 2. [small sized]
 SleepRhythm of Percy is 0. [0 = awake at all times, 1 = awake in the day, 2 = awake at night]
 Cock Count of Percy is 1. [cock]
@@ -64,23 +60,18 @@ PlayerFucked of Percy is false.
 OralVirgin of Percy is true.
 Virgin of Percy is true.
 AnalVirgin of Percy is true.
-
 Description of Percy is "[PercyDesc]".
-Conversation of Percy is { "mew" }.
-Percy is in Ironscale Hollow.
-
-The scent of Percy is "[PercyScent]".
-
-to say PercyScent:
-	say "     The pangolin has a surprisingly complex scent. He smells very earthy, with a hint of iron from his work. There's a slight masculine musk, but it is somewhat hidden by a strangely herbal scent.";
+[Conversation of Percy is { "mew" }.]
+The scent of Percy is "     The pangolin has a surprisingly complex scent. He smells very earthy, with a hint of iron from his work. There's a slight masculine musk, but it is somewhat hidden by a strangely herbal scent.".
+the linkaction of Percy is "Possible Actions: [link]talk[as]talk Percy[end link], [link]smell[as]smell Percy[end link][line break]".
 
 to say PercyDesc:
 	if debugactive is 1:
 		say "DEBUG -> HP of Percy: [HP of Percy], Dexterity: [Dexterity of Percy], LIBIDO: [libido of Percy], LUST: [lust of Percy], Strength: [Strength of Percy], Stamina: [Stamina of Percy] <- DEBUG[line break]";
 	if Dexterity of Percy is 0: [regular Percy]
 		say "     Percy stands on the tips of his clawed feet, trying to seem taller than the four feet that he is. Though he has a somewhat stocky build, his smooth, sand-colored skin still hints to the lean muscles underneath. Thick, steel-colored scales cover his back and sides, each scale highlighted with yellow-gold on its edge. Percy's long and broad tail stretches behind him, just barely off of the ground, giving him a slight hunch forward when standing unsupported. His head is somewhat conical in shape with a dark nose on the end of his muzzle. He smiles meekly as he avoids your gaze with his mossy-green eyes. Though not wearing any traditional clothes, Percy still wears a leather apron, preventing you from getting a good look at his [']naughty bits['].";
-	else if Dexterity of Percy is 1: [Percy has become Medium sized]
-		say "     A";
+	[else if Dexterity of Percy is 1: [Percy has become Medium sized]
+		say "     A";]
 
 Section 2 - Talking with Percy
 
@@ -108,18 +99,18 @@ to say PercyTalkMenu:
 		[]
 		choose a blank row in table of fucking options;
 		now title entry is "Crafting";
-		now sortorder entry is 20;
+		now sortorder entry is 4;
 		now description entry is "Ask Percy about crafting you an item";
 	else:
 		if Strength of Percy > 0: [crafted item NOT ready for pickup]
 			choose a blank row in table of fucking options;
 			now title entry is "Check if the crafting is done yet";
-			now sortorder entry is 18;
+			now sortorder entry is 3;
 			now description entry is "Check to see if Percy has finished crafting";
 		else: [crafted item ready for pickup]
 			choose a blank row in table of fucking options;
 			now title entry is "Pick up your finished item";
-			now sortorder entry is 19;
+			now sortorder entry is 3;
 			now description entry is "Collect an item Percy made";
 	[]
 	sort the table of fucking options in sortorder order;
@@ -164,8 +155,7 @@ to say PercyTalk1: [Rumors]
 		-- 3: say "     'A Knight and Squire tried to attack me the other day. They kept calling me a monster.' Percy looks slightly saddened by the thought. 'Not all the knights are like that though, you know? Those are just the ones that lost themselves to the infections. Some of the sane ones come to me to have new equipment forged.'";
 		-- 4: say "     'The wisps are strange little guys. I used to read stories about how wisps lead people to their destiny or great treasures. I first met one while exploring the Mysterious Glade down the path from my burrow. I'm not sure I would have ever found Avalon without their help.'";
 		-- 5: say "     'Kobolds may be a bit mischievous, but I like them. They come here from time to time to have things made that they can't make themselves; things like more advanced weapons and armors. They have some smiths themselves, but they aren't very good yet. A few of them have asked me to teach them, but if I did, it could upset the Heroes, and I'd rather stay neutral in their silly war.'";
-	LineBreak;
-	say "[PercyTalkMenu]";
+	say "[line break][PercyTalkMenu]";
 
 to say PercyTalk2: [Percy History]
 	say "     'You... You want to hear about me[if player is not defaultnamed], [name of player][end if]?' Percy fidgets anxiously, tapping his claws together. 'Well I'm not that interesting. I used to live here as a normal human before the infection. I had a small home business where I made or repaired various things before selling them. I worked on everything from furniture to suits of armor. I didn't make much, but I loved it.' The pangolin's eyes are bright as he talks. You can tell that his craft is something he is comfortable with, something he knows well.";
@@ -174,8 +164,7 @@ to say PercyTalk2: [Percy History]
 
 to say PercyTalk18:
 	say "     The doors to Percy's workshop are [if Strength of Percy < 3]open and he seems to be busy putting on the finishing touches. It shouldn't be long now[else if Strength of Percy < 5]closed, but the sounds behind them are softer. It seems that Percy is getting close to finishing[else]closed, and by the loud noises and music playing in the background, it seems like it will be some time until his work is complete[end if].";
-	LineBreak;
-	say "[PercyTalkMenu]";
+	say "[line break][PercyTalkMenu]";
 
 to say PercyTalk19:
 	if Stamina of Percy is 1: [Spear]
@@ -200,28 +189,28 @@ to say PercyTalk20: [Workshop]
 
 Section 3 - Fucking Percy
 
-instead of fucking the Percy:
+[instead of fucking the Percy:
 	say "     This option is unavailable at this time. (WIP)";[Remove this when adding fucking]
-	[if (lastfuck of Percy - turns < 6): [he got fucked in the last 15 hours = 5 turns]
+	if lastfuck of Percy - turns < 6: [he got fucked in the last 15 hours = 5 turns]
 		say "     'Sorry, I would love to spend some more time with you, but it looks like neither of us really are ready for that,' Percy says apologetically, 'Maybe we should take it slow and you should come back and visit me again later.'";
 	else: [ready for sex]
 		say "     Walking up to Percy, you allow your gaze to take in everything on offer. Sliding an arm around the tiger's side, you place a kiss to his throat. 'Someone's in a mood today, huh?' Turning to further embrace you, a content sigh escapes your lips. 'So what did you have in mind babe?'";
 		wait for any key;
-		say "[PercySexMenu]";]
+		say "[PercySexMenu]";
 
 to say PercySexMenu:
-	LineBreak;
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
+	[]
 	if Player is female: [only females and herms can take him in the pussy]
 		choose a blank row in table of fucking options;
 		now title entry is "Take Percy's shaft in your pussy";
-		now sortorder entry is 3;
+		now sortorder entry is 1;
 		now description entry is "Offer vaginal sex to the dorky pangolin";
 	[]
 	choose a blank row in table of fucking options;
 	now title entry is "Take Percy's shaft in your ass";
-	now sortorder entry is 4;
+	now sortorder entry is 2;
 	now description entry is "Offer anal sex to the dorky pangolin";
 	[]
 	sort the table of fucking options in sortorder order;
@@ -237,6 +226,7 @@ to say PercySexMenu:
 			choose row calcnumber in table of fucking options;
 			say "[title entry]: [description entry]?";
 			if Player consents:
+				LineBreak;
 				now sextablerun is 1;
 				if title entry is:
 					-- "Take Percy's shaft in your pussy":
@@ -245,42 +235,41 @@ to say PercySexMenu:
 						say "[PercySex2]";
 				now lastfuck of Percy is turns;
 		else if calcnumber is 0:
+			LineBreak;
 			now sextablerun is 1;
 			say "     You step back from the anthro pangolin, shaking your head slightly as he gives a questioning look.";
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options], or 0 to exit.";
 	wait for any key;
-	clear the screen and hyperlink list;
+	clear the screen and hyperlink list;]
 
-to say PercySex1: [vaginal on the player]
+[to say PercySex1: [vaginal on the player]
 	say "     A";
 	NPCSexAftermath Player receives "PussyFuck" from Percy;
 
 to say PercySex2: [anal on Percy]
 	say "     A";
-	NPCSexAftermath Player receives "AssFuck" from Percy;
+	NPCSexAftermath Player receives "AssFuck" from Percy;]
 
 Section 5 - Percy Quests And Events
 
 Part 1 - Pangolin Encounter
 
-instead of going east from Urban Forest while (HP of Percy < 1):
+instead of going east from Urban Forest while HP of Percy < 1:
 	say "     Following a path east, you stumble across what you at first think is a cave, but you quickly realize that it is some kind of tunnel or burrow in the side of a raised mound of earth. Keeping your distance at first, you can see that the passage is round with deep claw marks furrowed into its walls. You begin to wonder what sort of terrible creature would be powerful enough to construct it when you hear the rustle of leaves nearby. Ducking behind a bush, you wait, hiding from or ready to ambush whatever appears.";
 	say "     A small creature, a little over four feet tall, emerges from the forest path. His legs are fairly short, giving him a slight wobble to his step, and a long and broad tail stretches behind him. His back is completely covered in thick scales, and his fingers are tipped with powerful looking claws. Despite the reptilian-like traits though, he doesn't look like any kind of lizard that you have seen before. He looks more like some sort of scaled armadillo, one who apparently is singing to himself.";
 	WaitLineBreak;
 	say "     The creature mumbles and hums something about [']dancing if he wanted to['] while carrying a bundle of wood. He even shuffles his feet a little to the tune in his head until a slight breeze blows from behind you. The singing creature's nose twitches a few times before he turns towards where you are hiding. He squints for a moment, followed by a look of surprise. You quickly stand up out of reflex, ready to fight or run. Your potential attacker, however, drops the bundle of wood, and for a moment, he opens his mouth and looks as if he is going to wave to you in greeting, only to stop and curl up into a tight ball of scales before suddenly rolling away into the burrow!";
-	LineBreak;
-	say "     [bold type]Do you want to go after the creature?[roman type][line break]";
+	say "[line break]     [bold type]Do you want to go after the creature?[roman type][line break]";
 	say "     ([link]Y[as]y[end link]) - Follow the strange creature.";
 	say "     ([link]N[as]n[end link]) - Leave it be for now.";
-	if Player consents:[Follow]
+	if Player consents: [Follow]
 		LineBreak;
 		say "     Having piqued your interest, you come out from your hiding place and begin your pursuit, following the panicked little guy into what you now assume is his burrow. To your surprise, the tunnel is dimly lit by small yellowish crystals embedded in the earthen walls. Not that there is much to see. Most of the tunnel is the same; a rounded passage carved out by claws and large enough for even larger creatures to pass through relatively unhindered. Just as you begin to wonder just how long this tunnel is, a wooden wall comes into view. It is built out of whole logs and solid enough that it would take a massive force to break through. Luckily, there is also a door, which means that you haven't reached a dead-end. There is even a sign hanging above it with a hammer and anvil crudely drawn on it. You reach for the ironwork handle and pull tentatively. Unfortunately, the door seems to be barred from the other side and no amount of pulling is going to change that.";
-		LineBreak;
-		say "     [bold type]Knock on the door?[roman type][line break]";
+		say "[line break]     [bold type]Knock on the door?[roman type][line break]";
 		say "     ([link]Y[as]y[end link]) - Yes, knock on the door.";
 		say "     ([link]N[as]n[end link]) - No, you don't know what's behind that door.";
-		if Player consents:[Knock]
+		if Player consents: [Knock]
 			LineBreak;
 			say "     With no other options available to you, you do the one sensible thing left and knock. 'One moment!' you hear from the other side, the voice seeming a little flustered. [if Perception of Player > 16]You can hear some shuffling and mumbling as it sounds as if he's quickly cleaning up before the tip tapping of his claws against the floor get closer to the door. There is a decently loud clunk sound as the door's lock is disengaged at last[else]Things go quiet for a moment, leaving you to wonder if this is such a good idea, until you finally hear the clunk of the lock being released[end if].";
 			say "     The door slowly swings open with a creak, revealing the scaly creature from before. Now that you are much closer than your previous encounter, you can see him in more detail. From the front, he has smooth, sand-colored skin that shows off his lean muscles despite his naturally stocky build. The scales that cover his back are a matte-steel color with a yellow-gold trim on the edges. His tail is long and broad, more on the flat side, but still clearly powerful since in his worry, it knocks over a coat rack beside him, sending it rolling across the room for a few feet. His eyes are a mossy-green, and his face bears a mixed expression of nervousness, embarrassment, and slight surprise at seeing you again.";
@@ -290,29 +279,30 @@ instead of going east from Urban Forest while (HP of Percy < 1):
 			say "     However you feel about the little guy, he at least seems like he could be useful. After all, it's not always easy to come across good equipment, and from the sound of it, he might know the area fairly well. Either way, this pangolin seems like a good ally to have.";
 			ItemGain water bottle by 1;
 			now HP of Percy is 2;
-			AttemptToWait;
+			WaitLineBreak;
 			move player to Ironscale Hollow;
 			AddNavPoint Ironscale Hollow;
-		else:[Don't Knock]
+		else: [Don't Knock]
+			LineBreak;
 			say "     You decide it best just to leave for now. You can always return later if you change your mind.";
-			AttemptToWait;
+			WaitLineBreak;
 			move player to Forest Burrow Entrance;
 			now HP of Percy is 1;
-	else:[Don't Follow]
+	else: [Don't Follow]
+		LineBreak;
 		say "     You aren't quite sure what that was all about, but you have other things to do. You know where the burrow is, and you can always return to look for him if you want.";
-		AttemptToWait;
+		WaitLineBreak;
 		move player to Forest Burrow Entrance;
 		now HP of Percy is 1;
 
 Part 2 - Pangolin Reencounter
 
-instead of going east from Forest Burrow Entrance while (HP of Percy < 2):
+instead of going east from Forest Burrow Entrance while HP of Percy < 2:
 	say "     You head down into the burrow where you had seen the strange creature from before roll down. The tunnel is dimly lit by small yellowish crystals embedded in the earthen walls. Not that there is much to see. Most of the tunnel is the same; a rounded passage carved out by claws and large enough for even larger creatures to pass through relatively unhindered. Just as you begin to wonder just how long this tunnel is, a wooden wall comes into view. It is built out of whole logs and solid enough that it would take a massive force to break through. Luckily, there is also a door, which means that you haven't reached a dead-end. There is even a sign hanging above it with a hammer and anvil crudely drawn on it. You reach for the ironwork handle and pull tentatively. Unfortunately, the door seems to be barred from the other side and no amount of pulling is going to change that.";
-	LineBreak;
-	say "     [bold type]Knock on the door?[roman type][line break]";
+	say "[line break]     [bold type]Knock on the door?[roman type][line break]";
 	say "     ([link]Y[as]y[end link]) - Yes, knock on the door.";
 	say "     ([link]N[as]n[end link]) - No, you don't know what's behind that door.";
-	if Player consents:[Knock]
+	if Player consents: [Knock]
 		LineBreak;
 		say "     With no other options available to you, you do the one sensible thing left and knock. 'One moment!' you hear from the other side, the voice seeming a little flustered. [if Perception of Player > 16]You can hear some shuffling and mumbling as it sounds as if he's quickly cleaning up before the tip tapping of his claws against the floor get closer to the door. There is a decently loud clunk sound as the door's lock is disengaged at last[else]Things go quiet for a moment, leaving you to wonder if this is such a good idea, until you finally hear the clunk of the lock being released[end if].";
 		say "     The door slowly swings open with a creak, revealing the scaly creature from before. Now that you are much closer than your previous encounter, you can see him in more detail. From the front, he has smooth, sand-colored skin that shows off his lean muscles despite his naturally stocky build. The scales that cover his back are a matte-steel color with a yellow-gold trim on the edges. His tail is long and broad, more on the flat side, but still clearly powerful since in his worry, it knocks over a coat rack beside him, sending it rolling across the room for a few feet. His eyes are a mossy-green, and his face bears a mixed expression of nervousness, embarrassment, and slight surprise at seeing you again.";
@@ -323,11 +313,12 @@ instead of going east from Forest Burrow Entrance while (HP of Percy < 2):
 		ItemGain water bottle by 1;
 		AddNavPoint Ironscale Hollow;
 		now HP of Percy is 2;
-		AttemptToWait;
+		WaitLineBreak;
 		move player to Ironscale Hollow;
-	else:[Don't Knock]
+	else: [Don't Knock]
+		LineBreak;
 		say "     You decide it best just to leave for now. You can always return later if you change your mind.";
-		AttemptToWait;
+		WaitLineBreak;
 		move player to Forest Burrow Entrance;
 
 Section 6 - Rooms
@@ -343,12 +334,9 @@ Description of Forest Burrow Entrance is "[ForestBurrow desc]".
 earea of Forest Burrow Entrance is "Forest".
 
 to say ForestBurrow desc:
-	say "     If it wasn't for the degraded fences and crumbling houses, you could almost believe that you are in a natural forest. The birds sing in harmony, and the gentle breeze blowing through the leaves brings with it the herbal scent of the trees and earth around you. You've come to a point where the path splits.";
-	LineBreak;
-	say "To the [bold type]south[roman type] looks to be a clearing among the trees. Some kind of glade, though you get a somewhat strange feeling as you look towards it. You could almost swear seeing a glint of blue from it.";
-	LineBreak;
+	say "     If it wasn't for the degraded fences and crumbling houses, you could almost believe that you are in a natural forest. The birds sing in harmony, and the gentle breeze blowing through the leaves brings with it the herbal scent of the trees and earth around you. You've come to a point where the path splits.[paragraph break]";
+	say "     To the [bold type]south[roman type] looks to be a clearing among the trees. Some kind of glade, though you get a somewhat strange feeling as you look towards it. You could almost swear seeing a glint of blue from it.";
 	say "     To the [bold type]east[roman type] is a large burrow that continues deep into an earthen mound. Fresh tracks cover the ground, both coming to and from the tunnel, as well as passing by.";
-	LineBreak;
 	say "     To the [bold type]west[roman type] is the entrance to the Urban Forest. You can still see the edge of the tree line if you look hard enough, and the buildings in the area are more intact than where you currently are.";
 
 Part 2 - Ironscale Hollow
@@ -360,7 +348,6 @@ Ironscale Hollow	"Ironscale Hollow"
 Ironscale Hollow is a room. It is fasttravel. Ironscale Hollow is sleepsafe. It is private.
 Ironscale Hollow is east of Forest Burrow Entrance.
 Description of Ironscale Hollow is "[IronscaleHollow desc]".
-
 the scent of Ironscale Hollow is "     It smells of dirt and iron.".
 
 to say IronscaleHollow desc:
@@ -369,21 +356,8 @@ to say IronscaleHollow desc:
 
 [Place holder until drops are created]
 when play begins:
-	add "leather scrap" to invent of Ironscale Hollow;
-	add "leather scrap" to invent of Ironscale Hollow;
-	add "leather scrap" to invent of Ironscale Hollow;
-	add "leather scrap" to invent of Ironscale Hollow;
-	add "leather scrap" to invent of Ironscale Hollow;
-	add "cloth scrap" to invent of Ironscale Hollow;
-	add "cloth scrap" to invent of Ironscale Hollow;
-	add "cloth scrap" to invent of Ironscale Hollow;
-	add "cloth scrap" to invent of Ironscale Hollow;
-	add "cloth scrap" to invent of Ironscale Hollow;
-	add "cloth scrap" to invent of Ironscale Hollow;
-	add "cloth scrap" to invent of Ironscale Hollow;
-	add "cloth scrap" to invent of Ironscale Hollow;
-	add "cloth scrap" to invent of Ironscale Hollow;
-	add "cloth scrap" to invent of Ironscale Hollow;
+	add { "leather scrap", "leather scrap", "leather scrap", "leather scrap", "leather scrap" } to invent of Ironscale Hollow;
+	add { "cloth scrap", "cloth scrap", "cloth scrap", "cloth scrap", "cloth scrap", "cloth scrap", "cloth scrap", "cloth scrap", "cloth scrap", "cloth scrap" } to invent of Ironscale Hollow;
 
 Section 7 - Workshop
 
@@ -420,6 +394,7 @@ to say PercyCraftingMenu:
 			choose row calcnumber in table of fucking options;
 			say "[title entry]: [description entry]?";
 			if Player consents:
+				LineBreak;
 				now sextablerun is 1;
 				if title entry is:
 					-- "A Makeshift-Spear":
@@ -429,6 +404,7 @@ to say PercyCraftingMenu:
 					-- "Gambeson":
 						say "[PercyCrafting3]";
 		else if calcnumber is 0:
+			LineBreak;
 			now sextablerun is 1;
 			say "     You decide to keep the supplies you have to yourself, at least for now.";
 		else:
@@ -441,7 +417,6 @@ Part 1 - Makeshift-Spear
 to say PercyCrafting1: [Con 1]
 	if pocketknife is owned and Broke-Ass Hoe is owned and freecred > 49: [create the item]
 		say "     'Oh hey, your pocket knife and broken hoe would be perfect for making a Makeshift-Spear. I would just need the two materials and 50 Freecred.'";
-		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Yes, craft the item.";
 		say "     ([link]N[as]n[end link]) - No, keep the materials.";
 		if Player consents:
@@ -457,19 +432,16 @@ to say PercyCrafting1: [Con 1]
 		else:
 			LineBreak;
 			say "     You decide to keep your items for now.";
-			LineBreak;
-			say "[PercyCraftingMenu]";
+			say "[line break][PercyCraftingMenu]";
 	else: [explain the requirements]
 		say "     'If you need an easy and cheap weapon and you have a [bold type]pocket knife[roman type] and a suitable haft, like a rake or [bold type]hoe[roman type], I can make you a simple survival spear for 50 Freecred.'";
-		LineBreak;
-		say "[PercyCraftingMenu]";
+		say "[line break][PercyCraftingMenu]";
 
 Part 2 - Leather Vambraces
 
 to say PercyCrafting2: [Con 2]
 	if carried of leather scrap > 4 and freecred > 49:
 		say "     'Using your five pieces of scrap leather, I can make you leather vambraces to protect your forearms for 50 Freecred if you want.'";
-		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Yes, craft the item.";
 		say "     ([link]N[as]n[end link]) - No, keep the materials.";
 		if Player consents:
@@ -482,19 +454,16 @@ to say PercyCrafting2: [Con 2]
 		else:
 			LineBreak;
 			say "     You decide to keep your items for now.";
-			LineBreak;
-			say "[PercyCraftingMenu]";
+			say "[line break][PercyCraftingMenu]";
 	else:
-		say "     'If you have five suitable pieces of scrap leather, I can make you leather vambraces to protect your forearms for 50 Freecred.'";[replace forearms with arm desc once done]
-		LineBreak;
-		say "[PercyCraftingMenu]";
+		say "     'If you have five suitable pieces of scrap leather, I can make you leather vambraces to protect your forearms for 50 Freecred.'"; [replace forearms with arm desc once done]
+		say "[line break][PercyCraftingMenu]";
 
 Part 3 - Gambeson
 
 to say PercyCrafting3: [Con 2]
 	if carried of cloth scrap > 9 and freecred > 74:
 		say "     'Using your ten pieces of scrap cloth, I can make you a medieval Gambeson for 75 Freecred. It's a kind of cloth chest armor.'";
-		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Yes, craft the item.";
 		say "     ([link]N[as]n[end link]) - No, keep the materials.";
 		if Player consents:
@@ -507,21 +476,16 @@ to say PercyCrafting3: [Con 2]
 		else:
 			LineBreak;
 			say "     You decide to keep your items for now.";
-			LineBreak;
-			say "[PercyCraftingMenu]";
+			say "[line break][PercyCraftingMenu]";
 	else:
 		say "     'If you have ten suitable pieces of scrap cloth, I can make you a kind of cloth chest armor called a Gambeson for 75 Freecred.'";
-		LineBreak;
-		say "[PercyCraftingMenu]";
+		say "[line break][PercyCraftingMenu]";
 
 An everyturn rule:
 	if Strength of Percy is 1:
-		if Percy is visible:
-			say "     Percy emerges from the workshop, stepping up to the counter, smiling towards you. 'I finished your commission. Come over and I'll show you.'";
-		else:
-			say "     [bold type]You wonder if Percy is done working on your project. Maybe you should check in with him sometime.[roman type][line break]";
+		say "[if Percy is visible]     Percy emerges from the workshop, stepping up to the counter, smiling towards you. 'I finished your commission. Come over and I'll show you.'[else][bold type]You wonder if Percy is done working on your project. Maybe you should check in with him sometime.[roman type][line break][end if]";
 		now Strength of Percy is 0;
-	if Strength of Percy > 1: [countdown]
+	else if Strength of Percy > 1: [countdown]
 		decrease Strength of Percy by 1;
 
 Percy ends here.

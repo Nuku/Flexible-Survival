@@ -2,7 +2,6 @@ Version 1 of Trash Coon by Stripes begins here.
 
 "Adds a Trash Coon creature to Flexible Survival's Wandering Monsters table"
 
-
 Section 1 - Creature Responses
 
 notrashcoonsex is a number that varies.
@@ -19,7 +18,7 @@ to say losetotrashcoon:
 	CreatureSexAftermath "Player" receives "OralPussy" from "Trash Coon";
 
 to say beatthetrashcoon:
-	let skipx be 0;
+	let skipx be false;
 	if BodyName of Player is "Trash Coon" or FaceName of Player is "Trash Coon":
 		now notrashcoonsex is 0;
 		say "     The bulky coon stumbles back from the final blow and collapses atop the pile of trash she was rummaging through. Laying back against it, this gives you a lovely view of her pudgy raccoon body, awakening a lustful urge in you. Her aroused scent mixes with that of the trash, which also seems strangely enticing and you cannot help yourself. Tossing aside your gear, you pounce onto her bulky body and kiss her passionately. A little surprised by the kiss after the fight, she wraps her arms around you and welcomes the affection.";
@@ -27,8 +26,7 @@ to say beatthetrashcoon:
 		say "     The bulky coon stumbles back from the final blow and collapses atop the pile of trash she was rummaging through. As with the others of her kind, you take this opportunity to turn and head off, leaving her behind.";
 	else if Libido of Player > a random number between 30 and 130:
 		say "     The bulky coon stumbles back from the final blow and collapses atop the pile of trash she was rummaging through. Laying back against it, this gives you a lovely view of her pudgy raccoon body, awakening a lustful urge in you. Her aroused scent is heavy in the air, enticing you above the smell of the trash.";
-		say "     [bold type]She is there for the taking, if you want her.[roman type][line break]";
-		LineBreak;
+		say "[line break]     [bold type]She is there for the taking, if you want her.[roman type][line break]";
 		say "     ([link]Y[as]y[end link]) - Yes.";
 		say "     ([link]N[as]n[end link]) - No.";
 		if Player consents:
@@ -39,25 +37,22 @@ to say beatthetrashcoon:
 			LineBreak;
 			say "     Resisting the urge to roll around in the trash with the lusty raccoon, you turn and head off, leaving her behind.";
 			increase notrashcoonsex by 1;
-			now skipx is 1;
+			now skipx is true;
 	else:
 		say "     The bulky coon stumbles back from the final blow and collapses atop the pile of trash she was rummaging through. Deciding to make use of this opportunity, you turn and head off, leaving her behind.";
-		now skipx is 1;
-	if Player is male and skipx is 0:
-		say "     Your cock grows quite hard and throbs, soon slipping between her wet folds to dive into her needy pussy. She chirrs in pleasure as you penetrate her and start thrusting. With the cushion of her fat and the soft trash beneath her, you pound away vigorously, enjoying the soft sway of her body as you mate with her. You kiss one another repeatedly and your paws wander up to her bosom to grope her big breasts [if Breast Size of Player > 0]while she does the same to you[else]while her paws squeeze and pull at your ass with each thrust[end if]. Your tongues slide around inside each other's mouths as the pace quickens until finally you drive hard into her, pumping your hot [CockSpeciesName of Player in lower case] semen into her and she orgasms powerfully in response. Her quivering pussy milks and squeezes at your cock, drawing out your cum until you collapse panting atop her. Spent now, you give her a final kiss before climbing off and heading on your way, leaving her to rest in the trash after the lustful mating.";
-		CreatureSexAftermath "Trash Coon" receives "PussyFuck" from "Player";
-	else if Player is female and skipx is 0:
-		say "     Your puss[yfn] grow[sfv] dripping wet and your clit[sfn] throb[sfv]. You bring a hand between her thighs, stroking and teasing her wet snatch. She chirrs in pleasure as you dive a trio of fingers into her and start pumping, and she quickly returns the favor by rubbing your sensitive folds and slipping a few fingers into you. You kiss one another repeatedly while fingering one another. Your tongues slide around inside each other's mouths as the pace quickens until finally you are each pumping vigorously into the other as you orgasm powerfully in response. Your groins and hands are soaked in female cum as your pussies quiver and squeeze at the digits filling them until finally you collapse panting atop her softly padded body. Satisfied now, you give her a final kiss before climbing off and heading on your way, leaving her to rest in the trash after the lustful encounter.";
-		CreatureSexAftermath "Player" receives "PussyDildoFuck" from "Trash Coon";
-	else if skipx is 0:
-		say "     Lacking much of a gender of your own, but still excited by the rotund female, you dive between her legs and start licking at her juicy cunt. Her strong scent and the taste of her juices is very exciting. You dive your tongue into her and rub her clit with your thumb, enjoying the chirring sounds of pleasure she's emitting. You work her to an eventual climax that is quite powerful and leaves your face soaked in her cum. You move atop her and give her a sticky kiss before climbing off and heading on your way, leaving her to rest in the trash after the lustful encounter.";
-		CreatureSexAftermath "Player" receives "OralPussy" from "Trash Coon";
-
+		now skipx is true;
+	if skipx is false:
+		if Player is male:
+			say "     Your cock grows quite hard and throbs, soon slipping between her wet folds to dive into her needy pussy. She chirrs in pleasure as you penetrate her and start thrusting. With the cushion of her fat and the soft trash beneath her, you pound away vigorously, enjoying the soft sway of her body as you mate with her. You kiss one another repeatedly and your paws wander up to her bosom to grope her big breasts [if Breast Size of Player > 0]while she does the same to you[else]while her paws squeeze and pull at your ass with each thrust[end if]. Your tongues slide around inside each other's mouths as the pace quickens until finally you drive hard into her, pumping your hot [CockSpeciesName of Player in lower case] semen into her and she orgasms powerfully in response. Her quivering pussy milks and squeezes at your cock, drawing out your cum until you collapse panting atop her. Spent now, you give her a final kiss before climbing off and heading on your way, leaving her to rest in the trash after the lustful mating.";
+			CreatureSexAftermath "Trash Coon" receives "PussyFuck" from "Player";
+		else if Player is female:
+			say "     Your puss[yfn] grow[sfv] dripping wet and your clit[sfn] throb[sfv]. You bring a hand between her thighs, stroking and teasing her wet snatch. She chirrs in pleasure as you dive a trio of fingers into her and start pumping, and she quickly returns the favor by rubbing your sensitive folds and slipping a few fingers into you. You kiss one another repeatedly while fingering one another. Your tongues slide around inside each other's mouths as the pace quickens until finally you are each pumping vigorously into the other as you orgasm powerfully in response. Your groins and hands are soaked in female cum as your pussies quiver and squeeze at the digits filling them until finally you collapse panting atop her softly padded body. Satisfied now, you give her a final kiss before climbing off and heading on your way, leaving her to rest in the trash after the lustful encounter.";
+			CreatureSexAftermath "Player" receives "PussyDildoFuck" from "Trash Coon";
+		else:
+			say "     Lacking much of a gender of your own, but still excited by the rotund female, you dive between her legs and start licking at her juicy cunt. Her strong scent and the taste of her juices is very exciting. You dive your tongue into her and rub her clit with your thumb, enjoying the chirring sounds of pleasure she's emitting. You work her to an eventual climax that is quite powerful and leaves your face soaked in her cum. You move atop her and give her a sticky kiss before climbing off and heading on your way, leaving her to rest in the trash after the lustful encounter.";
+			CreatureSexAftermath "Player" receives "OralPussy" from "Trash Coon";
 
 Section 2 - Creature Insertion
-
-to say trashcoondesc:
-	say "     As you wander along, a [one of]large dumpster opens up[or]mound of trash shifts[or]pile of garbage bags tumbles over[at random], revealing a large, female raccoon underneath. Her nimble paws brush over one another as she stares at you with bright eyes within her dark mask. This large, scruffy raccoon woman has dirty fur and nothing else on to cover her heavy-set body. Her wide hips and ample breasts are plain to see, as is the wet pussy between her legs. She has a strong odor about her, a mix of arousal and trash from her recent dumpster diving.";
 
 Table of CombatPrep (continued)
 name(text)	PrepFunction(text)
@@ -95,7 +90,7 @@ When Play begins:
 	now attack entry is "[one of]The large coon punches you![or]The female raccoon twists your arm painfully![or]The horny raccoon woman takes you into a strong hug, burying your face in her bosom. Her strong smell makes you a little woozy![or]The big coon heaves you up and tosses you into a pile of junk![or]The female raccoon socks you one in the jaw![at random]"; [ Successful attack message ]
 	now defeated entry is "[beatthetrashcoon]"; [ Text when monster loses. ]
 	now victory entry is "[losetotrashcoon]"; [ Text when monster wins. ]
-	now desc entry is "[trashcoondesc]"; [ Description of the creature when you encounter it. ]
+	now desc entry is "     As you wander along, a [one of]large dumpster opens up[or]mound of trash shifts[or]pile of garbage bags tumbles over[at random], revealing a large, female raccoon underneath. Her nimble paws brush over one another as she stares at you with bright eyes within her dark mask. This large, scruffy raccoon woman has dirty fur and nothing else on to cover her heavy-set body. Her wide hips and ample breasts are plain to see, as is the wet pussy between her legs. She has a strong odor about her, a mix of arousal and trash from her recent dumpster diving.[line break]"; [ Description of the creature when you encounter it. ]
 	now face entry is "that of a scruffy looking raccoon. You have a raccoon's dark mask around your eyes and a perpetually dirty face. Your cute ears move and flick around, twitching at every sound";
 	now body entry is "bulky and well-padded. Your hands have darker, nimble fingers ending in little, black claws";
 	now skin entry is "scruffy gray fur which is darker across your back";
@@ -246,7 +241,6 @@ When Play begins:
 	[Clit Size Adjective is generated by a function and can be used in scenes: very small/small/average/large/very large]
 ]
 
-
 Section 3 - Endings
 
 Table of GameEndings (continued)
@@ -260,7 +254,7 @@ This is the Trash Coon Infection rule:
 			say "     As your human mind falters, it is filled with a longing for trash and scavenging. You find your way to the city mall and set up your home among the many dumpsters behind the food court. Several of the rats who live there become friends with you, though only a few are willing to have a romp with you in the messy trash, much preferring their clean stores and mall. They try to encourage you to come in and live with them, but you much prefer your messy home, though you'll go through the trouble of cleaning up (a little) to visit on occasion.";
 		else:
 			say "     You manage to maintain your sanity during your time in the city until rescue from the military arrives. You join the others in their holding area and have to wait through testing and processing. [if coonstatus > 0]While the pink raccoon is distracting the guards[else]During this time[end if], you do manage to slip away at night on occasion, drawn to the dumpsters behind the mess hall. You rummage around in them happily, unable to stop yourself. When you get caught one night by one of the mess officers, you are able to convince him to not call the MPs in exchange for a blowjob. After that, he stops by every night during your nocturnal visits to enjoy another blowjob. You are happy to see his balls and cock swelling and gaining gray fur after a few quickies with you. [if Player is female or Player is mpreg_ok]And after a few nights, it's on to him fucking you roughly in the dumpster and his changes progress further[else]His changes continue to progress over the next week or so until finally there is no hiding them[end if]. After that, there's another messy coon in the waiting area with you. He's not at all upset with this, enjoying the pleasures of his new form and joining you in sneaking off to the dumpsters at night.";
-			if Player is fpreg_ok or Player is mpreg_ok:
+			if Player is impreg_ok:
 				say "     The cook remains with you and you get a house together, having rough, messy sex all over your home whenever you can. Soon enough, your belly grows full with kits and you have lots of scruffy coons running around the place. You are happy to stay home and raise them while your mate runs a greasy diner.";
 			else:
 				say "     You and the cook remain friends, roommates and occasional lovers to satisfy your lusts. That is, until you meet a big, sexy coon woman. After a few dates, she moves in with you and you have wild, messy sex with her all over your home. When you come home from work at the recycling facility one day, you find your roommate fucking your girlfriend. A loud fistfight ensues that reminds you of your fights back in the city, the three of you collapse into a heap and it devolves into a lustful threesome. From that point on, you have a messy [italic type]ménage a trois[roman type], filling her with litters of kits[if Player is not sterile] from both of you[end if].";

@@ -3,148 +3,76 @@ Version 2 of Mismatched Chimera by Stripes begins here.
 [ Edit the above line, replace monster name with your monster's name, and your name with the name you'd like credited for the mod. ]
 "Adds a Mismatched Chimera creature to Flexible Survival's Wandering Monsters table, with impreg chance"
 
-
 Section 1 - Creature Responses
 
-
-bodyselector is a text that varies.
-headdata is a text that varies.[@Tag:NotSaved]
+bodyselector is a text that varies.[@Tag:NotSaved]
+bodydata is a list of text that varies.[@Tag:NotSaved] [for storing random body part types]
+breastdata is a number that varies.[@Tag:NotSaved]
+[headdata is a text that varies.[@Tag:NotSaved]
 larmdata is a text that varies.[@Tag:NotSaved]
 rarmdata is a text that varies.[@Tag:NotSaved]
 torsodata is a text that varies.[@Tag:NotSaved]
 cockdata is a text that varies.[@Tag:NotSaved]
 llegdata is a text that varies.[@Tag:NotSaved]
-rlegdata is a text that varies.[@Tag:NotSaved]
-breastdata is a number that varies.[@Tag:NotSaved]
+rlegdata is a text that varies.[@Tag:NotSaved]]
 
 to say mischimdesc:
-	say "     You have seen a variety of strange creatures and hominids in the city, but this is definitely one of the strangest. Somehow, it is a strange, cobbled-together mish-mash of other creatures. The body parts don't match and you can see stitchmarks in several places where they were grafted together. Several other spots have scars from what may have been medical procedures or experiments.";
-	say "     This unfortunate creature has the head of a [headdata] sewn onto its [torsodata] body. Its body has several smaller mismatched patches and scars. The strange chimera's right arm and shoulder are that of a [rarmdata], ending in a clawed human hand while its left forearm has that of a [larmdata] grafted on. Its left leg is fully that of a [llegdata] attached on at the hip while its right leg is that of a [rlegdata] from the knee down. Stitched to its chest are [breastdata] mismatched breasts while a [cockdata] dick hangs between its legs over a large, stitched-up scrotum. It looks at you with its mismatched, animal eyes and growls lustfully before attacking.";
 	choose row MonsterID from the Table of Random Critters;
+	say "     You have seen a variety of strange creatures and hominids in the city, but this is definitely one of the strangest. Somehow, it is a strange, cobbled-together mish-mash of other creatures. The body parts don't match and you can see stitchmarks in several places where they were grafted together. Several other spots have scars from what may have been medical procedures or experiments.";
+	say "     This unfortunate creature has the head of a [entry 1 of bodydata] sewn onto its [entry 4 of bodydata] body. Its body has several smaller mismatched patches and scars. The strange chimera's right arm and shoulder are that of a [entry 3 of bodydata], ending in a clawed human hand while its left forearm has that of a [entry 2 of bodydata] grafted on. Its left leg is fully that of a [entry 6 of bodydata] attached on at the hip while its right leg is that of a [entry 7 of bodydata] from the knee down. Stitched to its chest are [breastdata in words] mismatched breasts while a [entry 5 of bodydata] dick hangs between its legs over a large, stitched-up scrotum. It looks at you with its mismatched, animal eyes and growls lustfully before attacking.";
 	if HardMode is false and ( lev entry is 8 or lev entry is 9 ) and level of Player < 10:
 		say "     This particular hybrid seems especially powerful and dangerous. Best be careful.";
 
-to say mixnmatch:
-	now bodyselector is "ready";
-	say "[randombodypart]";
-	now headdata is bodyselector;
-	say "[randombodypart]";
-	now larmdata is bodyselector;
-	say "[randombodypart]";
-	now rarmdata is bodyselector;
-	say "[randombodypart]";
-	now torsodata is bodyselector;
-	say "[randombodypart]";
-	now cockdata is bodyselector;
-	say "[randombodypart]";
-	now llegdata is bodyselector;
-	say "[randombodypart]";
-	now rlegdata is bodyselector;
-	let T be a random number between one and three;
-	now breastdata is ( T times 2 );
-	choose row MonsterID from the Table of Random Critters;
-	let qq be a random number between 5 and 9;
-	let zz be a random number between 1 and 15;
-	if HardMode is true and level of Player > 7:		[Hard Mode Version!]
-		increase qq by level of Player - 7;
-		now HP entry is 27 + ( ( 5 * qq ) + zz + a random number between 0 and qq );
-		now monsterHP is HP entry;
-		now lev entry is qq;
-		if lev entry > 9:
-			now wdam entry is 9 + ( ( qq * 2 ) / 7 );
-		else:
-			now wdam entry is ( ( ( qq - 1 ) * 3 ) / 2 );
-		now dex entry is 15 + ( qq / 6 ) + ( square root of ( qq + 8 ) ); [faster initial growth, but slows down more]
-	else:								[Normal Play Version!]
-		now HP entry is ( ( 8 times qq ) plus zz );
-		now monsterHP is HP entry;
-		now wdam entry is ( ( ( qq minus 1 ) times 3 ) divided by 2 );
-		now lev entry is qq;
-		now dex entry is ( ( ( ( qq minus 1 ) times 4 ) divided by 3 ) plus 10 );
-	[testing values achieved]
-[	say "Lvl is [qq]. Variable is [zz].";
-	say "HP is [HP entry].";
-	say "Dmg is [wdam entry]. Dex is [dex entry].[line break]";]
-
-to say randombodypart:
-	let T be a random number between 1 and 20;
-	if T is 1:
-		now bodyselector is "husky";
-	if T is 2:
-		now bodyselector is "hawk";
-	if T is 3:
-		now bodyselector is "panther";
-	if T is 4:
-		now bodyselector is "horse";
-	if T is 5:
-		now bodyselector is "Doberman";
-	if T is 6:
-		now bodyselector is "gazelle";
-	if T is 7:
-		now bodyselector is "cheetah";
-	if T is 8:
-		now bodyselector is "kangaroo";
-	if T is 9:
-		now bodyselector is "skunk";
-	if T is 10:
-		now bodyselector is "bull";
-	if T is 11:
-		now bodyselector is "zebra";
-	if T is 12:
-		now bodyselector is "seal";
-	if T is 13:
-		now bodyselector is "tiger";
-	if T is 14:
-		now bodyselector is "hyena";
-	if T is 15:
-		now bodyselector is "wolf";
-	if T is 16:
-		now bodyselector is "rabbit";
-	if T is 17:
-		now bodyselector is "mouse";
-	if T is 18:
-		now bodyselector is "pig";
-	if T is 19:
-		now bodyselector is "lizard";
-	if T is 20:
-		now bodyselector is "bat";
-
 to say losetomischim:
 	[reset creature stats for next encounter]
+	setmonster "Mismatched Chimera";
 	choose row MonsterID from the Table of Random Critters;
 	now dex entry is 15; [ reset dexterity for random infection ]
 	now lev entry is 6; [ reset level for random encounter availability ]
 	if Player is female and a random chance of 1 in 2 succeeds:
-		say "     The hybrid creature pushes you down onto a nearby hospital bed, bending you over it. With a little fumbling with your remaining clothes, it gets itself lined up with your pussy and mounts you with a throaty purr. The creature's [headdata] muzzle nips along your neck as it thrusts its [cockdata] cock into you again and again with increasing vigor. The chimera's heavy ballsack feels strange as it slaps against you again and again, quite full and heavy.";
-		say "     You soon realize that it has at least four balls in there of various size, probably from a variety of creatures like the rest of its body. This leads you to the realization that the creature could contain almost any seed or strain of infection to alter you. You struggle for a moment, but the creature keeps you pinned with its clawed hand and [larmdata] paw. The pleasure of its mating starts to get to you and you find yourself growing less concerned about that and even more and more turned on by it as the strange creature's myriad scents excite you. The idea of it changing you in random ways or siring almost anything inside you arouses you greatly. As you push back into its final thrusts, you both moan in pleasure as you feel its hot seed, thick and plentiful from its many balls, being shot deep into your womb.";
-		say "[randomfimpreg]";
+		say "     The hybrid creature pushes you down onto a nearby hospital bed, bending you over it. With a little fumbling with your remaining clothes, it gets itself lined up with your pussy and mounts you with a throaty purr. The creature's [entry 1 of bodydata] muzzle nips along your neck as it thrusts its [entry 5 of bodydata] cock into you again and again with increasing vigor. The chimera's heavy ballsack feels strange as it slaps against you again and again, quite full and heavy.";
+		say "     You soon realize that it has at least four balls in there of various size, probably from a variety of creatures like the rest of its body. This leads you to the realization that the creature could contain almost any seed or strain of infection to alter you. You struggle for a moment, but the creature keeps you pinned with its clawed hand and [entry 2 of bodydata] paw. The pleasure of its mating starts to get to you and you find yourself growing less concerned about that and even more and more turned on by it as the strange creature's myriad scents excite you. The idea of it changing you in random ways or siring almost anything inside you arouses you greatly. As you push back into its final thrusts, you both moan in pleasure as you feel its hot seed, thick and plentiful from its many balls, being shot deep into your womb.[randomfimpreg]";
 		CreatureSexAftermath "Player" receives "PussyDildoFuck" from "Mismatched Chimera";
-	else if anallevel > 1 and ( Cunt Count of Player is 0 or anallevel is 3 ) and a random chance of anallevel in 5 succeeds:
-		say "     The hybrid creature pushes you down onto a nearby hospital bed, bending you over it. With a little fumbling with your remaining clothes, it gets itself lined up with your anal ring and mounts you with a throaty purr. The creature's [headdata] muzzle nips along your neck as it thrusts its [cockdata] cock into you again and again with increasing vigor. The chimera's heavy ballsack feels strange as it slaps against you again and again, quite full and heavy.";
-		say "     You soon realize that it has at least four balls in there of various size, probably from a variety of creatures like the rest of its body. This leads you to the realization that the creature could contain almost any seed or strain of infection to alter you. You struggle for a moment, but the creature keeps you pinned with its clawed hand and [larmdata] paw. The pleasure of its mating starts to get to you and you find yourself growing less concerned about that and even more and more turned on by it as the strange creature's myriad scents excite you. The idea of it changing you in random ways ";
-		if Player is mpreg_ok:
-			say "or siring almost anything inside you ";
-		say "arouses you greatly. As you push back into its final thrusts, you both moan in pleasure as you feel its hot seed, thick and plentiful from its many balls, being shot deep into your bowels.";
-		if Player is mpreg_ok, say "[randommimpreg]";
+	else if anallevel > 1 and ( Player is not female or anallevel is 3 ) and a random chance of anallevel in 5 succeeds:
+		say "     The hybrid creature pushes you down onto a nearby hospital bed, bending you over it. With a little fumbling with your remaining clothes, it gets itself lined up with your anal ring and mounts you with a throaty purr. The creature's [entry 1 of bodydata] muzzle nips along your neck as it thrusts its [entry 5 of bodydata] cock into you again and again with increasing vigor. The chimera's heavy ballsack feels strange as it slaps against you again and again, quite full and heavy.";
+		say "     You soon realize that it has at least four balls in there of various size, probably from a variety of creatures like the rest of its body. This leads you to the realization that the creature could contain almost any seed or strain of infection to alter you. You struggle for a moment, but the creature keeps you pinned with its clawed hand and [entry 2 of bodydata] paw. The pleasure of its mating starts to get to you and you find yourself growing less concerned about that and even more and more turned on by it as the strange creature's myriad scents excite you. The idea of it changing you in random ways[if Player is mpreg_ok] or siring almost anything inside you[end if] arouses you greatly. As you push back into its final thrusts, you both moan in pleasure as you feel its hot seed, thick and plentiful from its many balls, being shot deep into your bowels.[randommimpreg]";
 		CreatureSexAftermath "Player" receives "AssDildoFuck" from "Mismatched Chimera";
 	else:
-		say "     The hybrid creature, quite aroused by its workout and victory, pushes you to your knees before it. It presses its [cockdata] cock to your face and into your mouth. It moans softly and strokes your head, coaxing you to lick and suck it. Its arousing scent, such a strong and virile mix, excites you and you comply willingly enough. It starts to thrust into you, holding your head steady with its clawed hand and [larmdata] paw while pumping its 8 inch cock into your eager mouth. Its precum leaks onto your tongue, thick with an array of arousing flavors.";
+		say "     The hybrid creature, quite aroused by its workout and victory, pushes you to your knees before it. It presses its [entry 5 of bodydata] cock to your face and into your mouth. It moans softly and strokes your head, coaxing you to lick and suck it. Its arousing scent, such a strong and virile mix, excites you and you comply willingly enough. It starts to thrust into you, holding your head steady with its clawed hand and [entry 2 of bodydata] paw while pumping its 8 inch cock into your eager mouth. Its precum leaks onto your tongue, thick with an array of arousing flavors.";
 		say "     You slide a hand up to fondle its large, sewn-together ballsack and find it very full and heavy. As you fondle it, you come to realize that the heavy sack contains at least four different balls of various sizes, probably from a variety of creatures like the rest of its body. You soon realize as well that this means it could carry almost any strain of the infection and change you in unpredictable ways. You struggle for a moment, but the creature keeps you pinned with its strong grip and soon its mix of precum has done its job, filling you with lust and hunger for the chimera's mix of seed. The idea starts to fill you with excitement even. You start to picture yourself changing in random ways while these creatures have their way with you again and again.";
 		say "     You moan in delight as the creature growls in climax, pumping a hot, thick medley of cum into your mouth and down your throat. You swallow down as much as you can of its impressive load, then sag to the ground as it releases you. Sated for now, the mismatched hybrid wanders off, leaving you to the infection's changes.";
 		CreatureSexAftermath "Player" receives "OralCock" from "Mismatched Chimera";
 	weakrandominfect;
-	increase MonsterID by 1;
-	choose row MonsterID from Table of Random Critters;
-	while there is a non-infectious in row MonsterID of Table of Random Critters and non-infectious entry is true:
-		increase MonsterID by 1;
-		choose row MonsterID from Table of Random Critters;
 
 to say beatthemischim:
 	[reset creature stats for next encounter]
-	choose row MonsterID from the Table of Random Critters;
+	choose row with Name of "Mismatched Chimera" from Table of Random Critters;
 	now dex entry is 15; [ reset dexterity for random infection ]
 	now lev entry is 6; [ reset level for random encounter availability ]
 	say "     You manage to defeat the strange, hybrid creature, driving it off.";
+
+to say randombodypart:
+	if a random number between 1 and 20 is:
+		-- 1: now bodyselector is "husky";
+		-- 2: now bodyselector is "hawk";
+		-- 3: now bodyselector is "panther";
+		-- 4: now bodyselector is "horse";
+		-- 5: now bodyselector is "Doberman";
+		-- 6: now bodyselector is "gazelle";
+		-- 7: now bodyselector is "cheetah";
+		-- 8: now bodyselector is "kangaroo";
+		-- 9: now bodyselector is "skunk";
+		-- 10: now bodyselector is "bull";
+		-- 11: now bodyselector is "zebra";
+		-- 12: now bodyselector is "seal";
+		-- 13: now bodyselector is "tiger";
+		-- 14: now bodyselector is "hyena";
+		-- 15: now bodyselector is "wolf";
+		-- 16: now bodyselector is "rabbit";
+		-- 17: now bodyselector is "mouse";
+		-- 18: now bodyselector is "pig";
+		-- 19: now bodyselector is "lizard";
+		-- 20: now bodyselector is "bat";
 
 Section 2 - Creature Insertion
 
@@ -154,7 +82,29 @@ name(text)	PrepFunction(text)
 
 to say PrepCombat_Mismatched Chimera:
 	setmongender 5; [creature is herm]
-	say "[mixnmatch]";
+	truncate bodydata to 0 entries;
+	repeat with y running from 1 to 7: [1-head, 2-left arm, 3-right arm, 4-torso, 5-cock, 6-left leg, 7-right leg]
+		say "[randombodypart]";
+		add bodyselector to bodydata;
+	now breastdata is ( a random number between one and three ) times 2;
+	choose row MonsterID from the Table of Random Critters;
+	let qq be a random number between 5 and 9;
+	let zz be a random number between 1 and 15;
+	if HardMode is true and level of Player > 7:		[Hard Mode Version!]
+		increase qq by level of Player - 7;
+		now HP entry is 27 + ( 5 * qq ) + zz + a random number between 0 and qq;
+		now monsterHP is HP entry;
+		if qq > 9:
+			now wdam entry is 9 + ( ( qq * 2 ) / 7 );
+		else:
+			now wdam entry is ( ( qq - 1 ) * 3 ) / 2;
+		now dex entry is 15 + ( qq / 6 ) + square root of ( qq + 8 ); [faster initial growth, but slows down more]
+	else:								[Normal Play Version!]
+		now HP entry is ( 8 times qq ) plus zz;
+		now monsterHP is HP entry;
+		now wdam entry is ( ( qq minus 1 ) times 3 ) divided by 2;
+		now dex entry is ( ( ( qq minus 1 ) times 4 ) divided by 3 ) plus 10;
+	now lev entry is qq;
 
 Table of Random Critters (continued)
 NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
@@ -176,7 +126,7 @@ When Play begins:
 	now enemy title entry is ""; [ Name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name. ]
 	now enemy Name entry is ""; [ Specific name of unique enemy. ]
 	now enemy type entry is 0; [ 0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters. ]
-	now attack entry is "[one of]The mismatched hybrid strikes you with its [larmdata] fist![or]The strange chimera wraps its mismatched arms around you and squeezes you with a powerful bearhug![or]The disturbing creature manages to bite your arm with its [headdata] head![or]The vicious creature slashes at you with its clawed right hand, leaving bloody gashes![or]The beast charges at you, swinging a volley of wild punches and slashes![or]The angry creature grabs your arm and bites your shoulder with its [headdata] mouth![or]The fractured beast growls and kicks you with its [llegdata]![at random]";
+	now attack entry is "The [one of]mismatched hybrid strikes you with its [entry 2 of bodydata] fist[or]strange chimera wraps its mismatched arms around you and squeezes you with a powerful bearhug[or]disturbing creature manages to bite your arm with its [entry 1 of bodydata] head[or]vicious creature slashes at you with its clawed right hand, leaving bloody gashes[or]beast charges at you, swinging a volley of wild punches and slashes[or]angry creature grabs your arm and bites your shoulder with its [entry 1 of bodydata] mouth[or]fractured beast growls and kicks you with its [entry 6 of bodydata][at random]!";
 	now defeated entry is "[beatthemischim]";
 	now victory entry is "[losetomischim]"; [Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block as the demonstration text shows.]
 	now desc entry is "[mischimdesc]"; [ Description of the creature when you encounter it.]
@@ -330,7 +280,6 @@ When Play begins:
 	[Clit Size Adjective is generated by a function and can be used in scenes: very small/small/average/large/very large]
 ]
 
-
 Section 3 - Endings
 
 Table of GameEndings (continued)
@@ -342,18 +291,14 @@ This is the Mismatched Chimera Infection rule:
 		trigger ending "Mismatched Chimera Infection"; [Here it states, that the ending has been played.]
 		if humanity of Player < 10:
 			say "     As your identity collapses, you are left with your fractured mind and instincts. Lacking any true focus to your instincts, you wander the city in a haze. You pass from one territory group to another, mating with the creatures there, but never transforming further, remaining a mismatched hodgepodge of creatures. Several try to keep you as a mate or prisoner, but you always escape eventually and move on. Your existence is aimless and with little conscious thought, but filled with sex of endless variety from all those you meet.";
-			if "Sterile" is not listed in feats of Player and Player is female:
-				say "     Your womb gives birth of a wide array of hybrid children over the years. Some are taken and assimilated into other groups, but some go on to form new species in their own right, adding to the variety of lovers for you to mate with over the centuries of your strangely unending life. You are one of the few constants in this ever-changing world and exist as an eternal source for much of this new life which you bear witness to until the end of time.";
-			else if Player is male:
-				say "     You sire a wide array of hybrid children over the years. Some are taken and assimilated into other groups, but some go on to form new species in their own right, adding to the variety of lovers for you to mate with over the centuries of your strangely unending life. You are one of the few constants in this ever-changing world and exist as an eternal source for much of this new life which you bear witness to until the end of time.";
+			if "Sterile" is not listed in feats of Player and Player is not neuter:
+				say "     [if Player is female]Your womb gives birth to[else]You sire[end if] a wide array of hybrid children over the years. Some are taken and assimilated into other groups, but some go on to form new species in their own right, adding to the variety of lovers for you to mate with over the centuries of your strangely unending life. You are one of the few constants in this ever-changing world and exist as an eternal source for much of this new life which you bear witness to until the end of time.";
 			else:
 				say "     You watch time march on over the centuries, taking lovers from the various new species and races that continually form from the intermingling of the infected groups. They rise and fall around you, adding to the variety of lovers for you to mate with over the centuries of your strangely unending life. You are one of the few constants in this ever-changing world and exist as an eternal witness to the variety of life until the end of time.";
 		else:
 			say "     After your rescue from the city, you are left aimless and take frequently to wandering the world for extended periods. Your altered, hybrid body makes you stand out always, but you can always seem to find companionship for a time, perhaps drawn in by the medley of pheromones you emit. You take on temporary dalliances of all kinds on these journeys, loving to experience the endless variety of lovers this world can provide to you. You are never changed by these lovers, no matter how infected or mindless these may be.";
-			if "Sterile" is not listed in feats of Player and Player is female:
-				say "     Your womb gives birth to a wide array of hybrid children over the years. Some, you are pleased to see, give rise to new species in their own right, adding to the variety of lovers for you to mate with over the centuries of your strangely unending life. Even as your old friends and allies pass on, you continue your eternal drifting across the globe. You are always drifting discreetly through the world in your search to experience the ever-changing array of life rising and falling on this planet. You are one of the few constants in this ever-changing world and exist as an eternal source for much of this new life which you bear witness to until the end of time.";
-			else if Player is male:
-				say "     You sire a wide array of hybrid children over the years. Some, you are pleased to see, give rise to new species in their own right, adding to the variety of lovers for you to mate with over the centuries of your strangely unending life. Even as your old friends and allies pass on, you continue your eternal drifting across the globe. You are always drifting discreetly through the world in your search to experience the ever-changing array of life rising and falling on this planet. You are one of the few constants in this ever-changing world and exist as an eternal source for much of this new life which you bear witness to until the end of time.";
+			if "Sterile" is not listed in feats of Player and Player is not neuter:
+				say "     [if Player is female]Your womb gives birth to[else]You sire[end if] a wide array of hybrid children over the years. Some, you are pleased to see, give rise to new species in their own right, adding to the variety of lovers for you to mate with over the centuries of your strangely unending life. Even as your old friends and allies pass on, you continue your eternal drifting across the globe. You are always drifting discreetly through the world in your search to experience the ever-changing array of life rising and falling on this planet. You are one of the few constants in this ever-changing world and exist as an eternal source for much of this new life which you bear witness to until the end of time.";
 			else:
 				say "     You watch time march on over the centuries, taking on new lovers wherever you go, enjoying their company for a time before leaving and continuing on. The various species and races of the infected groups rise and fall over time, adding to the variety of lovers for you to mate with over the centuries of your strangely unending life. Even as your old friends and allies pass on, you continue your eternal drifting across the globe. You are always drifting discreetly through the world in your search to experience the ever-changing array of life rising and falling on this planet. You are one of the few constants in this ever-changing world and exist as an eternal source for much of this new life which you bear witness to until the end of time.";
 

@@ -9,25 +9,19 @@ mammoth_cv_count is a number that varies.	[number of times CV'd]
 
 to say losetomammoth:
 	let antiscale be 8 - scalevalue of Player;
-	if mammoth_cv_count > 2:
-		increase antiscale by 2;
-	else if mammoth_cv_count > 0:
+	if mammoth_cv_count > 0:
 		increase antiscale by 1;
+		if mammoth_cv_count > 2:
+			increase antiscale by 1;
 	if vorelevel > 1 and a random chance of vorelevel in 4 succeeds and a random chance of antiscale in 8 succeeds:
 		increase mammoth_cv_count by 1;
-		if graphics is true:
-			if the remainder after dividing mammoth_cv_count by 5 is 1:
-				project the figure of Mammoth_CV1_icon;
-			else if the remainder after dividing mammoth_cv_count by 5 is 2:
-				project the figure of Mammoth_CV2_icon;
-			else if the remainder after dividing mammoth_cv_count by 5 is 3:
-				project the figure of Mammoth_CV3_icon;
-			else if the remainder after dividing mammoth_cv_count by 5 is 4:
-				project the figure of Mammoth_CV4_icon;
-			else:
-				project the figure of Mammoth_CV5_icon;
-			WaitLineBreak;
-		say "     The mammoth creature laughs at her victory and pushes you down to the floor. She drops her massive cock down atop you, making you release an [']Oof!['] as it slams atop you. She starts rubbing her large hands overtop of it and her balls while grinding her growing erection down atop you[if scalevalue of Player is 5]. Once erect, her cock is nearly as large as you are and drools a constant stream of her precum over you[else if scalevalue of Player > 2]. Once erect, her cock is larger than you are and drools a constant flow of precum over you[else]. Even before the fight ended, her cock was probably bigger than you and now it's utterly massive, burying you under its enormous weight and drooling what seems like mouthfuls of precum by the second all over you[end if]. The scent of this starts to cloud your mind, making you rub yourself against it as best you can, working to pleasure the hyper-endowed mammoth, only to be frustrated as she pulls it away and stomps back several steps.";
+		if the remainder after dividing mammoth_cv_count by 5 is:
+			-- 1: project the figure of Mammoth_CV1_icon;
+			-- 2: project the figure of Mammoth_CV2_icon;
+			-- 3: project the figure of Mammoth_CV3_icon;
+			-- 4: project the figure of Mammoth_CV4_icon;
+			-- otherwise: project the figure of Mammoth_CV5_icon;
+		say "     The mammoth creature laughs at her victory and pushes you down to the floor. She drops her massive cock down atop you, making you release an [']Oof!['] as it slams atop you. She starts rubbing her large hands overtop of it and her balls while grinding her growing erection down atop you. [if scalevalue of Player is 5]Once erect, her cock is nearly as large as you are and drools a constant stream of her precum[else if scalevalue of Player > 2]Once erect, her cock is larger than you are and drools a constant flow of precum[else]Even before the fight ended, her cock was probably bigger than you and now it's utterly massive, burying you under its enormous weight and drooling what seems like mouthfuls of precum by the second all[end if] over you. The scent of this starts to cloud your mind, making you rub yourself against it as best you can, working to pleasure the hyper-endowed mammoth, only to be frustrated as she pulls it away and stomps back several steps.";
 		say "     Slapping her massive meat onto the floor, she moves forward again, charging her yawning cock towards your feet. They pop right into her cumslit as you're taken in up to you [if scalevalue of Player > 3]ankles[else]knees[end if]. With that start, her muscular inner walls squeeze and pull at your legs, drawing you steadily further into her. The floor, already slick with her precum, provides little purchase for you as you slide across the tiles and steadily deeper into the mighty phallus. As more of you is consumed by the pulsating rod, your hips are engulfed[if Cock Count of Player is 1], pressing your shaft firmly against your belly, massaging it until you cry out in orgasm[else if Cock Count of Player > 1], pressing your shafts firmly against your belly, massaging them until you cry out in orgasm[else if Player is female], squeezing your thighs tightly against your aching puss[yfn] until you cry out in orgasm[end if].";
 		say "     You are pulled in further and further, her giant cock bulging around your [Body Size Adjective of Player] body as more and more of you is pulled in until only your head remains outside. She pauses here briefly to catch her breath before wrapping both meaty hands around her enormous phallus, raising it upwards and stroking down it, helping to push you the rest of the way in. With a scream that turns to a wet gurgle before being muffled entirely, you are pulled fully into her shaft and slide your way even deeper. Pushed and pulled down, you are eventually deposited in one of her massive balls. Exhausted and surrounded by the hot, musky air, you pass out as her semen soaks into you.";
 		say "     A churning around you awakens you to a semi-conscious state much later. This builds quickly with a trumpeting cry from beyond the fleshy walls surrounding you. You move quickly back through her titanic cock as she ejaculates, pushed along by the torrent of semen that comes out with you. You land in a big, sticky mess that stains the floor and wall all around you. You lay there for quite some time, overcome by your strange, yet oddly arousing, experience.";
@@ -36,14 +30,12 @@ to say losetomammoth:
 		say "     You cry out as the large fingers spread your [if Player is female]pussy[else]ass[end if] apart. [if scalevalue of Player > 3]It takes several minutes for your head to pass the tight barrier, not helped in the least by the muscles squeezing you as the mammoth goes through an orgasm[else]your head passes through, followed by your body; midway, your advance is stopped as the inner walls squeeze you while the mammoth orgasms[end if]. Eventually, you fall into her womb. The pouch stretches to accommodate your size, but even then it is a tight fit. The moistness and the heat reaches new levels, and your arousal peaks as well. Unable to hold out any longer, you hump against the tight space, and masturbate yourself. You feel something press on the outside, and pet your flesh shelter: it seems than the hermaphrodite appreciates your wriggling. You cry out in orgasm. Afterwards, drowsiness overtakes you; assuming a fetal position, your eyes close, and you pass out.";
 		say "     A churning around you awakens you to a semi-conscious state much later. This builds quickly with a trumpeting cry from beyond the fleshy walls surrounding you. You move quickly back through her deep cunt as she gives [']birth['] to you once again, pushed along by the contractions and the torrents of femcum that comes out with you. You land in a big, sticky mess that stains the floor and wall all around you. You lay there for quite some time, overcome by your strange, yet oddly arousing, experience.";
 	else:
-		say "     The mammoth creature laughs at her victory and pushes you down to the floor. She drops her massive cock down atop you, making you release an [']Oof!['] as it slams atop you. She starts rubbing her large hands overtop of it and her balls while grinding her growing erection down atop you[if scalevalue of Player is 5]. Once erect, her cock is nearly as large as you are and drools a constant stream of her precum over you[else if scalevalue of Player > 2]. Once erect, her cock is larger than you are and drools a constant flow of precum over you[else]. Even before the fight ended, her cock was probably bigger than you and now it's utterly massive, burying you under its enormous weight and drooling what seems like mouthfuls of precum by the second all over you[end if]. The scent of this starts to cloud your mind, making you rub yourself against it as best you can, working to pleasure the hyper-endowed mammoth. Eventually, she trumpets in ecstasy and presses her cock down onto you hard before blasting a huge load that paints your upper body (and a large chunk of the floor and wall behind you) white with her semen.";
+		say "     The mammoth creature laughs at her victory and pushes you down to the floor. She drops her massive cock down atop you, making you release an [']Oof!['] as it slams atop you. She starts rubbing her large hands overtop of it and her balls while grinding her growing erection down atop you. [if scalevalue of Player is 5]Once erect, her cock is nearly as large as you are and drools a constant stream of her precum[else if scalevalue of Player > 2]Once erect, her cock is larger than you are and drools a constant flow of precum[else]Even before the fight ended, her cock was probably bigger than you and now it's utterly massive, burying you under its enormous weight and drooling what seems like mouthfuls of precum by the second all[end if] over you. The scent of this starts to cloud your mind, making you rub yourself against it as best you can, working to pleasure the hyper-endowed mammoth. Eventually, she trumpets in ecstasy and presses her cock down onto you hard before blasting a huge load that paints your upper body (and a large chunk of the floor and wall behind you) white with her semen.";
 	CreatureSexAftermath "Player" receives "Stroking" from "Mammoth";
 
 to say beatthemammoth:
 	say "     Having beaten the mammoth herm, you knock her onto her back and she moans in disappointment. Weighed down by her own endowments, she's too tired to get up and continue fighting. She pulls her cock into her arms to get some relief on her own.";
-	LineBreak;
-	say "     [bold type]You find yourself wondering if perhaps you could help her along a little while having some fun as well.[roman type][line break]";
-	LineBreak;
+	say "[line break]     [bold type]You find yourself wondering if perhaps you could help her along a little while having some fun as well.[roman type][line break]";
 	let BeatenMammoth_Choices be a list of text;
 	if Player is male:
 		add "Fuck her pussy!" to BeatenMammoth_Choices;
@@ -56,13 +48,12 @@ to say beatthemammoth:
 	]
 	add "Nah, you're good right now. Just leave." to BeatenMammoth_Choices;
 	let BeatenMammoth_Choice be what the player chooses from BeatenMammoth_Choices;
+	LineBreak;
 	if BeatenMammoth_Choice is:
 		-- "Fuck her pussy!":
-			LineBreak;
 			say "     Heaving up her balls, you catch a glimpse of her large, dripping cunt and grin. Feeling you playing with her there, she removes a meaty paw from her cock to help hold up her giant testicles while you bring your penis into position. Thrusting into her juicy hole, you slide in easily. Her huge cunt, while loose, it still delightfully warm, wet and juicy, and grips around your shaft quite well. You bring your hands back up to keep her balls boosted up, letting her bring her paw back to her massive cock. By this point, it seems nearly twice her height and most of her width as well. As you fuck her, you can feel her balls churn with semen, signaling her approaching peak. You pick up the pace, fucking her as hard as you can until she trumpets happily and blasts her load across the floor and wall behind her. Finding the massive display of virility arousing, you cum as well, pumping your load into her, [if Ball Size of Player < 5]invoking some small tremors in response[else if Ball Size of Player < 6]making her moan softly as her cunt ripples over your spurting shaft[else if Ball Size of Player < 7]making her moan loudly as her cunt squeezes down onto your spurting shaft[else]causing her to trumpet again as she cums a second time as you fill her with your huge load, making even her large body bloat noticeably to contain it all[end if]. Once you're finished, you pull out and leave her on the floor, dazed after her massive orgasm.";
 			CreatureSexAftermath "Mammoth" receives "PussyFuck" from "Player";
 		-- "Straddle and ride her cock to orgasm!":
-			LineBreak;
 			say "     You climb on her cock and straddle the thick, hard shaft. You move your hips, grinding your crotch against the warm skin. The mammoth does not mind at all, and keep stroking herself, while you get along for the ride. You progressively get faster and faster, emboldened by the sensation of the blood flowing under your legs, eventually grabbing the massive rod in your arms for additional leverage. The pachyderm cums eventually, around the same time as you, the soft rumble of the cum rushing in her urethra accompanying the quivers of your puss[yfn]. Once you're finished, you leave your comfortable and slowly softening seat and leave her on the floor, dazed after her massive orgasm.";
 			CreatureSexAftermath "Mammoth" receives "Stroking" from "Player";
 		[
@@ -74,14 +65,13 @@ to say beatthemammoth:
 			say "     Insert Text Here";
 		]
 		-- "Nah, you're good right now. Just leave.":
-			LineBreak;
 			say "     You choose to leave her to her own devices, certain that she'll be able to take care of herself.";
-
-Section 2 - Creature Insertion
 
 to say mammothdesc:
 	say "     Before you is a large, stocky herm creature. Her infection clearly having been affected by the woolly mammoths on display at the museum, she's become a very heavy set individual. At roughly six-and-a-half feet tall, she's also about four feet wide. She's got a head not-unlike that of an elephant, with a long, flexing trunk and a pair of large, ivory tusks. But unlike an elephant, her head and body is covered in a thick pelt of brown fur. She's got big, meaty hands with short, stubby fingers. Her feet are round, flat and have barely noticeable toes.";
 	say "     But what is clearly the most noticeable on her is her massive endowments. This mammoth is truly mammoth, with breasts, balls and cock of massive proportions. Her breasts have a shorter coat of fur on them, but even a lengthy coat wouldn't hide those beachball-sized knockers. Her balls, nearly as big, are as big as medicine balls and seem nearly as heavy to look at them. And those balls are huge to feed her enormous cock. Dragging to the floor, her member is nearly four feet long when flaccid. You gulp audibly as you notice it start to stir and swell as she looks you over with a lustful twinkle in her wild eyes.";
+
+Section 2 - Creature Insertion
 
 Table of CombatPrep (continued)
 name(text)	PrepFunction(text)
@@ -119,7 +109,7 @@ When Play begins:
 	now face change entry is "your vision blurs and there's a painful stabbing at your jaw that seems to build and build. This almost keeps you from noticing the odd swelling you feel at your nose. By the time your sight becomes clear again, you have large tusks of ivory in the way and a long, flexible trunk between them";
 	now body change entry is "it begins to bulge outwards, taking on an overall stocky build, but you are over six feet tall as well. Your hands and feet swell, becoming large and rounded, with stubby fingers and toes on them";
 	now skin change entry is "shaggy, brown hair starts to cover you all over";
-	now ass change entry is "as your lower spine changes, growing to form a short, thin tail. It twitches a few times before being covered in a thick coat of brown fur";
+	now ass change entry is "your lower spine changes, growing to form a short, thin tail. It twitches a few times before being covered in a thick coat of brown fur";
 	now cock change entry is "it throbs and spurts, spraying copious amounts of semen as it takes on a predominantly human form, uncut and dripping";
 	now str entry is 18; [ These are now the creature's stats... ]
 	now dex entry is 16; [ ...and are only altered onto the player via Shifting or the Mighty Mutation feat ]
@@ -261,15 +251,12 @@ When Play begins:
 	[Clit Size Adjective is generated by a function and can be used in scenes: very small/small/average/large/very large]
 ]
 
-
 Section 4 - Endings
 
 Table of GameEndings (continued)
 Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
 "Mammoth Infection"	"Infection"	""	Mammoth Infection rule	1000	false
 
-[A sample structure for succumbing/surviving messages at the end of the game.]
-[Numerous other examples can be found in existing creature files.]
 This is the Mammoth Infection rule:
 	if Player has a body of "Mammoth":
 		trigger ending "Mammoth Infection"; [Here it states, that the ending has been played.]
@@ -294,6 +281,6 @@ This is the Mammoth Infection rule:
 				let mammothskintemp be "";
 				if SkinName of Player is "Mammoth":
 					now mammothskintemp is "northern ";
-				say "     You get a job working dockside at a coastal city, your big, strong body an asset in your line of work. While your hands aren't the best for delicate work, they're more than able to grip and heave around the crates and boxes while loading and unloading ships. It's largely a peaceful job, which satisfies you. The only excitement comes on the rare occasion you spot an infected stowaway trying to smuggle themselves into the country. Feeling sympathy for them, you always play with the pent-up transformee before helping them get off the ship and past the security checks. It always brings a smile to your face when you see a few others in town having gained the new infection in the area.";
+				say "     You get a job working dockside at a coastal [mammothskintemp]city, your big, strong body an asset in your line of work. While your hands aren't the best for delicate work, they're more than able to grip and heave around the crates and boxes while loading and unloading ships. It's largely a peaceful job, which satisfies you. The only excitement comes on the rare occasion you spot an infected stowaway trying to smuggle themselves into the country. Feeling sympathy for them, you always play with the pent-up transformee before helping them get off the ship and past the security checks. It always brings a smile to your face when you see a few others in town having gained the new infection in the area.";
 
 Mammoth ends here.

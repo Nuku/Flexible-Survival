@@ -101,8 +101,6 @@ to say hermaphrodite latex vixen defeat:
 				say "     Wanting no more to do with the Latex Vixen, you resist the temptation and walk away. The Latex Vixen is left on the ground, stroking herself while she whimpers plaintively.";
 			else:
 				say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options], or 0 to exit.";
-		wait for any key;
-		clear the screen and hyperlink list;
 	else:
 		say "Having no gender of your own, you're able to resist your darker urges and walk away. The Latex Vixen's left on the ground, stroking herself while she whimpers plaintively.";
 

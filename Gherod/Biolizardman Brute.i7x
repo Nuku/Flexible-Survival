@@ -75,8 +75,6 @@ to say BiolizardmanBruteLosesVictorySexMenu:
 			say "     You tell him he has much to learn, but that you will not be the one who is going to teach him. Stating that you have other places to be, you bid the lizardman goodbye and walk away. No further words are exchanged between the two of you.";
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options], or 0 to exit.";
-	wait for any key;
-	clear the screen and hyperlink list;
 
 to say BiolizardmanBruteLosesSitOnFace:
 	say "     Wanting to get some pleasure for yourself using one of the characteristics lizardmen are very well known for, you walk up to him and forward your intentions, arguing that his reach may need some practicing. Regarding you as the wiser one for having emerged victorious, he nods and lets you call the shots. In order to get him in the best position possible, you tell him to follow your directions and lie down so that you can get on top of him. Before that, you remove any obstructions that may be between your intimate parts and his face, so that you can finally take a seat on that face of his. He seems a bit surprised at first, but then you tell him what he should do, and he complies. Sooner than you expect, you find a nimble and long tongue prodding your [if Player is female]labia[else]anus[end if] rather pleasantly.";

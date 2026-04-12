@@ -4,7 +4,7 @@ Version 1 of Weapons by Core Mechanics begins here.
 
 [X moved to Core Mechanics/Weapons.i7x]
 
-Book 1 - Blades
+Chapter 1 - Blades
 
 Section 1 - Small Blades
 
@@ -184,12 +184,10 @@ Weapon Type of infected sword is "Melee".
 Objsize of infected sword is 4.
 Hitbonus of infected sword is 1. [magic]
 Purified of infected sword is "Nothing".
-
 Scent of infected sword is "The infected sword smells of a myriad of musky scents, all shifting and changing. You can never seem to identify a scent before a new one appears.".
 
 instead of purifying an infected sword:
-	say "That doesn't even fit in the microwave. Also, putting metal in one is a really bad idea.";
-	stop the action;
+	say "That doesn't even fit in the microwave. Also, putting metal in one is a really bad idea." instead;
 
 An everyturn rule:
 	if the infected sword is wielded:
@@ -221,7 +219,7 @@ Objsize of viking sword is 3.
 Hitbonus of viking sword is 1. [mastercraft]
 Scent of the viking sword is "The blade smells of nothing but metal. Sonya always kept it clean without fail, and you've done the same since you got it.".
 
-Book 2 - Impact Weapons
+Chapter 2 - Impact Weapons
 
 Section 1 - Small
 
@@ -555,7 +553,7 @@ carry out riotshieldProtectMode:
 	ItemLoss zephyr bashing riot shield by 1;
 	ItemGain zephyr protective riot shield by 1;
 
-Book 3 - Stabbing Weapons
+Chapter 3 - Stabbing Weapons
 
 Table of Game Objects (continued)
 name	desc	weight	object
@@ -617,6 +615,6 @@ Objsize of rusty nail is 1.
 Hitbonus of rusty nail is -1. [not a weapon]
 Scent of rusty nail is "The rusty nail smells like iron.".
 
-Book 4 - Ranged Weapons
+Chapter 4 - Ranged Weapons
 
 Weapons ends here.

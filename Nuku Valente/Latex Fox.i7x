@@ -5,24 +5,16 @@ Version 2 of Latex Fox by Nuku Valente begins here.
 
 Section 1 - Creature Responses
 
-to say latexfoxdesc:
-	say "     You run into [one of]what appears to be a fox made entirely of latex[or]a latex fox[stopping]. Humanoid in build, its distinctly reddish and white, rubbery skin glistens in the [if daytimer is day]day[else]dim[end if] light. Loudly squeaking and creaking as the creature approaches, he appears very eager to see you, his blatant arousal exposed against the open air.";
-
 to say latexfoxvictory:
 	project Figure of LatexFox_hard_icon;
-	if HP of Player > 0:
-		say "     Choosing to surrender to the monster, he immediately pounces";
-	else:
-		say "     Too exhausted to fight any longer, the monster exploits this by suddenly pouncing";
-	say " your [if scalevalue of Player < 3]smaller, [bodytype of Player] form, easily pinning you to the ground[else if scalevalue of Player > 3]larger, [bodytype of Player] form, bringing you to your knees, though he cannot properly pin you down[else][bodytype of Player] form, pinning you to the ground[end if]. Yipping victoriously, he nips at his[if HP of Player > 0] compliant[end if] [if scalevalue of Player < 4]little[else]'little'[end if] toy, rubbery maw squeaking loudly with each bite.";
-	if anallevel > 1 and (Cunt Count of Player is 0 or anallevel is 3) and (a random chance of 1 in 3 succeeds or (anallevel is 3 and a random chance of 1 in 2 succeeds)):
+	say "     [if HP of Player > 0]Choosing to surrender to the monster, he immediately pounces[else]Too exhausted to fight any longer, the monster exploits this by suddenly pouncing[end if] your [if scalevalue of Player < 3]smaller, [bodytype of Player] form, easily pinning you to the ground[else if scalevalue of Player > 3]larger, [bodytype of Player] form, bringing you to your knees, though he cannot properly pin you down[else][bodytype of Player] form, pinning you to the ground[end if]. Yipping victoriously, he nips at his[if HP of Player > 0] compliant[end if] [if scalevalue of Player < 4]little[else]'little'[end if] toy, rubbery maw squeaking loudly with each bite.";
+	if anallevel > 1 and (Player is not female or anallevel is 3) and (a random chance of 1 in 3 succeeds or (anallevel is 3 and a random chance of 1 in 2 succeeds)):
 		say "     The latex fox barely checks to see if there's anything obstructing his access before thrusting his tainted, precum-slicked dick between your cheeks, audibly squeaking as it's forced through your anal ring, causing you to squirm and writhe under his[if scalevalue of Player > 3] diminutive[end if] weight.";
 		say "     Barely needing any time to get warmed up, the creature eagerly pounds your ass, air filled with the sound of his smooth form's creaking and squeaking, matched only by his incessant yipping. Unable to restrain yourself, your [if Player is male]own, unattended dick[smn] ache[smv] against the ground[else if Player is female]unattended cunt[sfn] ache[sfv] against the open air[else]genderless body aches with an insatiable need[end if].";
-		say "     The monster doesn't need long before his motion reaches a fever pitch[if scalevalue of Player < 4], body visibly rocking against each motion[end if]. With one final thrust, he forces his thick knot through your hole, loudly yipping as your bowels are pumped full with the twisted fox's rubbery seed";
 		if Libido of Player > 20 and Player is not neuter:
-			say ". More than enough to set you off as well, you [if Player is male]waste your [Cum Load Size of Player] load impotently against the ground[else if Cunt Count of Player > 1]stain the ground with your neglected pussies['] honey[else]stain the ground with your neglected pussy's honey[end if].";
+			say "     The monster doesn't need long before his motion reaches a fever pitch[if scalevalue of Player < 4], body visibly rocking against each motion[end if]. With one final thrust, he forces his thick knot through your hole, loudly yipping as your bowels are pumped full with the twisted fox's rubbery seed. More than enough to set you off as well, you [if Player is male]waste your [Cum Load Size of Player] load impotently against the ground[else if Cunt Count of Player > 1]stain the ground with your neglected pussies['] honey[else]stain the ground with your neglected pussy's honey[end if].";
 		else:
-			say ". Writhing in a lust-fueled haze, his bliss isn't enough to set you off as well, with the fox showing little interest in helping you.";
+			say "     The monster doesn't need long before his motion reaches a fever pitch[if scalevalue of Player < 4], body visibly rocking against each motion[end if]. With one final thrust, he forces his thick knot through your hole, loudly yipping as your bowels are pumped full with the twisted fox's rubbery seed. Writhing in a lust-fueled haze, his bliss isn't enough to set you off as well, with the fox showing little interest in helping you.";
 		say "     Apparently satisfied, the monster pulls free of you and runs off, yipping happily. It takes you a while to recover from being used by the tainted creature and, eventually, you go about your business once more.";
 		CreatureSexAftermath "Player" receives "AssFuck" from "Latex Fox";
 	else if Player is female and a random chance of 1 in 2 succeeds:
@@ -43,42 +35,32 @@ to say latexfoxdefeat:
 	if (Libido of Player > 30 or "Dominant" is listed in feats of Player) and (Player is female or (Player is male and anallevel > 1)):
 		say "     Having subdued to the fox, perhaps you should use him to sate your need?";
 		if Player consents:
-			latexfoxdefeatsex;
+			LineBreak;
+			if (Player is female and (Player is not male or anallevel is 1)) or (Player is herm and a random chance of 1 in 2 succeeds):
+				say "     The critter lays on the ground, his big red knotted cock looking painfully erect. Not wanting to waste such a perfect opportunity, you straddle the fox and slowly ease yourself down. His paws move to your hips, then up to your [bodytype of Player] body as you get into position";
+				if Cunt Depth of Player < 6:
+					say ".";
+					say "     As the tip of the fox's shaft reaches[if Cunt Count of Player > 1] one of[end if] your opening[sfn], you realize it is far too big for you to accommodate. Seeing your frustration, the fox lets out a long, hissing sigh and seems to shrink in size. You now easily take him right down to the knot.";
+				else:
+					say ". The fox's [if Cunt Depth of Player < 10]shaft slides into you smoothly as you take him all the way to the knot[else]little erection slides into you easily, a bit too easily for your liking as it seems too small to give you any real pleasure. Seeing your frustration, the fox takes a large breath and seems to grow in size, filling you completely[end if].";
+				say "     Resting comfortably on the fox's knot, you start sliding up and down on his red latex shaft, gradually increasing speed. You feel the knot trying to sneak in on every thrust, but it seems like the knot is just too big to tie to you. You start to think it's a lost cause when suddenly a sharp, blinding pain and a yelp from the Fox lets you know that the knot made it inside and you are indeed tied.";
+				say "     As the pain subsides, you are left with an amazing feeling of fullness, gob after gob of thick rubbery jism starting to fill you. The feeling of the thick cum churning inside you is too much and sends you into a screaming orgasm.";
+				say "     Eventually, the swollen knot starts to shrink and the fox's spent member slides out of you. Still not satisfied, you position your moist, swollen pussy over the fox's face and descend slowly, dribbling his own cum onto his face. To your surprise, the fox starts eagerly lapping it up, burying his face in your crotch. Bolts of lightning travel through your body as that rubbery tongue seems to find all the right places to lick you. His bright red nose rubbing against your clit is all it takes to send you into another earth-shattering orgasm, spilling the last of his rubbery canid seed into his waiting mouth.";
+				say "     Letting out happy little chirps, the fox bounds away. You take the opportunity to rise to a stand, knees still shaking from your multiple orgasms, then get dressed and head off on your way.";
+				CreatureSexAftermath "Player" receives "PussyFuck" from "Latex Fox";
+				CreatureSexAftermath "Latex Fox" receives "OralPussy" from "Player";
+			else:
+				say "     Presenting its ass to you, it lets out a plaintive whimper. Needing no more invitation you dive right in.";
+				say "     Positioning[if Cock Count of Player > 1] one of[end if] your [cock size desc of Player] cock[smn] at the puckered hole, you are amazed as you realize the little fox is leaking what appears to be a small dribble of lubricant from its asshole. [if Cock Length of Player < 6]Your diminutive [Cock of Player] cock slips right into the fox's waiting asshole. With little effort you start pistoning away; what you lack in size you are more than making up for in force and speed[else if Cock Length of Player < 10]Your [Cock of Player] cock slides into the fox with little effort; the tight, well-lubed hole seems to suck you in even deeper as the fox whimpers in pleasure[else if Cock Length of Player < 15]You place the head of your ample [Cock of Player] cock at the fox's dribbling asshole, slowly increasing the pressure. With a small yelp from the fox you are in, you get the feeling that this little guy could stretch to accommodate a much larger member than you are currently packing[else]With a sadistic grin, you point your gargantuan [Cock of Player] missile at its target. The fox's eyes go wide when it realizes how large you are. He starts trying to crawl away, but you have none of that, grabbing the fox by its ankles and pulling him towards you. The fox's legs stretch elastically as you pull, his poor little asshole straining against your rod. [one of]At last[or]Finally[at random], the fox's rubbery sphincter relaxes enough to let you in, and like a slingshot the fox is instantly impaled on your gigantic penis, obscenely stretching the poor creature all the way to his head. You realize the fox is just fine as he lets out a euphoric yelp and his eyes glaze over, lost in the pleasurable fullness[end if].";
+				say "     As you start sliding your [cock size desc of Player] shaft in and out, you notice the fox's ass seems to be adjusting to you, stretching and tightening in just the right places to fit your [Cock of Player] penis perfectly. As this is happening, the fox switches from whimpers and yelps to long, low moans of pleasure as you press your [bodydesc of Player] body over his and pound away, his knotted red shaft starting to grow and leak rubbery precum.";
+				say "     Nearing orgasm, you pick up the pace, your little red toy drooling in bliss. Fucking the fox like a wild beast, you let out a roar as your [Cum Load Size of Player] load pours forth from your tool, lewdly distending the belly of your victim. Not to be left out, the fox starts shooting gobs of thick, rubbery cum onto the ground, pooling around him. Through some effort, you pull your cock out of the little fox with an audible pop[if Ball Size of Player > 6]. Your massive load bloats the rubbery fox, swelling him up like a cum-filled balloon[else if Ball Size of Player > 5]. Your large load causes a noticeable bulge in the rubbery fox, making his tummy look like he swallowed a cum-filled balloon[end if]. The seed you just planted comes spilling out of the abused hole, adding to the already large pool of cum the fox is laying in.";
+				say "     With your lust sated, you put on your clothes. Walking away, you smile as you see the little fox lustily wallowing in the pool of cum, occasionally dipping its head to the pool and taking loud slurpy gulps of semen, cooing with satisfaction.";
+				CreatureSexAftermath "Latex Fox" receives "AssFuck" from "Player";
 		else:
+			LineBreak;
 			say "     Deciding against it, the creature chooses to run off, yipping in defeat.";
 	else:
-		say "[one of]With one final lash, the latex fox begins to make a whining sound.[run paragraph on] It appears that the creature is deflating, flumping onto the ground as an inanimate pile of rubber.[run paragraph on] It's unclear if the thing is dead or simply pretending to be to make you leave[or]Striking the critter down, he yips loudly, bouncing off into the distance and away from you[at random]. With the matter attended to, you move on.";
-
-to latexfoxdefeatsex:
-	if ( Player is female and (Cock Count of Player is 0 or anallevel is 1)) or ( Player is herm and a random chance of 1 in 2 succeeds ):
-		say "     The critter lays on the ground, his big red knotted cock looking painfully erect. Not wanting to waste such a perfect opportunity, you straddle the fox and slowly ease yourself down. His paws move to your hips, then up to your [bodytype of Player] body as you get into position.";
-		if Cunt Depth of Player < 6:
-			say "     As the tip of the fox's shaft reaches[if Cunt Count of Player > 1] one of[end if] your opening[sfn], you realize it is far too big for you to accommodate. Seeing your frustration, the fox lets out a long, hissing sigh and seems to shrink in size. You now easily take him right down to the knot.";
-		else if Cunt Depth of Player < 10:
-			say "The fox's shaft slides into you smoothly as you take him all the way to the knot.";
-		else:
-			say "The fox's little erection slides into you easily, a bit too easily for your liking as it seems too small to give you any real pleasure. Seeing your frustration, the fox takes a large breath and seems to grow in size, filling you completely.";
-		say "     Resting comfortably on the fox's knot, you start sliding up and down on his red latex shaft, gradually increasing speed. You feel the knot trying to sneak in on every thrust, but it seems like the knot is just too big to tie to you. You start to think it's a lost cause when suddenly a sharp, blinding pain and a yelp from the Fox lets you know that the knot made it inside and you are indeed tied.";
-		say "     As the pain subsides, you are left with an amazing feeling of fullness, gob after gob of thick rubbery jism starting to fill you. The feeling of the thick cum churning inside you is too much and sends you into a screaming orgasm.";
-		say "     Eventually, the swollen knot starts to shrink and the fox's spent member slides out of you. Still not satisfied, you position your moist, swollen pussy over the fox's face and descend slowly, dribbling his own cum onto his face. To your surprise, the fox starts eagerly lapping it up, burying his face in your crotch. Bolts of lightning travel through your body as that rubbery tongue seems to find all the right places to lick you. His bright red nose rubbing against your clit is all it takes to send you into another earth-shattering orgasm, spilling the last of his rubbery canid seed into his waiting mouth.";
-		say "     Letting out happy little chirps, the fox bounds away. You take the opportunity to rise to a stand, knees still shaking from your multiple orgasms, then get dressed and head off on your way.";
-		CreatureSexAftermath "Player" receives "PussyFuck" from "Latex Fox";
-		CreatureSexAftermath "Latex Fox" receives "OralPussy" from "Player";
-	else:
-		say "     Presenting its ass to you, it lets out a plaintive whimper. Needing no more invitation you dive right in.";
-		say "     Positioning[if Cock Count of Player > 1] one of[end if] your [cock size desc of Player] cock[smn] at the puckered hole, you are amazed as you realize the little fox is leaking what appears to be a small dribble of lubricant from its asshole";
-		if Cock Length of Player < 6:
-			say ". Your diminutive [Cock of Player] cock slips right into the fox's waiting asshole. With little effort you start pistoning away; what you lack in size you are more than making up for in force and speed.";
-		else if Cock Length of Player < 10:
-			say ". Your [Cock of Player] cock slides into the fox with little effort; the tight, well-lubed hole seems to suck you in even deeper as the fox whimpers in pleasure.";
-		else if Cock Length of Player < 15:
-			say ". You place the head of your ample [Cock of Player] cock at the fox's dribbling asshole, slowly increasing the pressure. With a small yelp from the fox you are in, you get the feeling that this little guy could stretch to accommodate a much larger member than you are currently packing.";
-		else:
-			say ". With a sadistic grin, you point your gargantuan [Cock of Player] missile at its target. The fox's eyes go wide when it realizes how large you are. He starts trying to crawl away, but you have none of that, grabbing the fox by its ankles and pulling him towards you. The fox's legs stretch elastically as you pull, his poor little asshole straining against your rod. [one of]At last[or]Finally[at random], the fox's rubbery sphincter relaxes enough to let you in, and like a slingshot the fox is instantly impaled on your gigantic penis, obscenely stretching the poor creature all the way to his head. You realize the fox is just fine as he lets out a euphoric yelp and his eyes glaze over, lost in the pleasurable fullness.";
-		say "     As you start sliding your [cock size desc of Player] shaft in and out, you notice the fox's ass seems to be adjusting to you, stretching and tightening in just the right places to fit your [Cock of Player] penis perfectly. As this is happening, the fox switches from whimpers and yelps to long, low moans of pleasure as you press your [bodydesc of Player] body over his and pound away, his knotted red shaft starting to grow and leak rubbery precum.";
-		say "     Nearing orgasm, you pick up the pace, your little red toy drooling in bliss. Fucking the fox like a wild beast, you let out a roar as your [Cum Load Size of Player] load pours forth from your tool, lewdly distending the belly of your victim. Not to be left out, the fox starts shooting gobs of thick, rubbery cum onto the ground, pooling around him. Through some effort, you pull your cock out of the little fox with an audible pop[if Ball Size of Player > 6]. Your massive load bloats the rubbery fox, swelling him up like a cum-filled balloon[else if Ball Size of Player > 5]. Your large load causes a noticeable bulge in the rubbery fox, making his tummy look like he swallowed a cum-filled balloon[end if]. The seed you just planted comes spilling out of the abused hole, adding to the already large pool of cum the fox is laying in.";
-		say "     With your lust sated, you put on your clothes. Walking away, you smile as you see the little fox lustily wallowing in the pool of cum, occasionally dipping its head to the pool and taking loud slurpy gulps of semen, cooing with satisfaction.";
-		CreatureSexAftermath "Latex Fox" receives "AssFuck" from "Player";
+		say "     [one of]With one final lash, the latex fox begins to make a whining sound. It appears that the creature is deflating, flumping onto the ground as an inanimate pile of rubber. It's unclear if the thing is dead or simply pretending to be to make you leave[or]Striking the critter down, he yips loudly, bouncing off into the distance and away from you[at random]. With the matter attended to, you move on.";
 
 Section 2 - Creature Insertion
 
@@ -92,7 +74,7 @@ to say PrepCombat_Latex Fox:
 	choose row MonsterID from Table of Random Critters;
 	if Player is FemalePreferred:
 		now sex entry is "Female";
-	else if "Herm Preferred" is listed in feats of Player:
+	else if Player is HermPreferred:
 		now sex entry is "Both";
 	else:
 		now sex entry is "Male";
@@ -119,9 +101,9 @@ When Play begins:
 	now enemy Name entry is ""; [ Specific name of unique enemy. ]
 	now enemy type entry is 0; [ 0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters. ]
 	now attack entry is "The [one of]latex fox lunges at you with gleaming rubber fangs and sinks them into your body, growling as it does so[or]fox leaps on you, raking several bloody lines with its claws[or]fox bowls into you, knocking you back painfully as it snarls, exposing sharp rubber teeth[at random].";
-	now defeated entry is "[if toystoreoverride is false][latexfoxdefeat][end if]";
-	now victory entry is "[if toystoreoverride is false][latexfoxvictory][end if]";
-	now desc entry is "[latexfoxdesc]";
+	now defeated entry is "[latexfoxdefeat]";
+	now victory entry is "[latexfoxvictory]";
+	now desc entry is "     You run into [one of]what appears to be a fox made entirely of latex[or]a latex fox[stopping]. Humanoid in build, its distinctly reddish and white, rubbery skin glistens in the [if daytimer is day]day[else]dim[end if] light. Loudly squeaking and creaking as the creature approaches, he appears very eager to see you, his blatant arousal exposed against the open air.[line break]";
 	now face entry is "a mixture of a vulpine and human, in a perpetual sneer of exposed teeth, making for an interesting combination"; [ Face description, format as "Your face is [Face of Player]." ]
 	now body entry is "mostly human, except for the digitigrade stance of your feet, er, or is that paws? And those claws look dangerous"; [ Body description, format as "Your body is [Body of Player]." ]
 	now skin entry is "red, black, and white latex covering your"; [ Skin. Format as "Looking at yourself, your body is covered in [Skin of Player] skin." ]
@@ -272,7 +254,6 @@ When Play begins:
 	[Clit Size Adjective is generated by a function and can be used in scenes: very small/small/average/large/very large]
 ]
 
-
 Section 3 - Endings
 
 Table of GameEndings (continued)
@@ -283,14 +264,8 @@ This is the Latex Fox Infection rule:
 	if Player has a body of "Latex Fox":
 		trigger ending "Latex Fox Infection"; [Here it states, that the ending has been played.]
 		if humanity of Player < 10:
-			say "     Driven mad with your new, rubbery instincts, you leave the bunker and wander the city, looking for further victims";
-			if Player is male:
-				say ". In time, you find plenty to play with, getting lots of practice with your knotted dick as you tie with them and they become another yapping fox beneath you";
-			if Player is female:
-				say ". A strange pain paralyzes you a few days later and you squat. A small rubbery ball escapes your distended vulva, rapidly growing into another fox being. Driven mad with jealousy, you give the young thing a nip, and it flees off to find its own victims";
-			say ". You set up a den at an adult toy manufacturing plant. The stores of latex are wonderfully tasty and you drink some down every day, making you extra [if Player is male]virile[else]fertile[end if], increasing the number of other latex foxes you are able to create. The large collection of unshipped products are quite enjoyable as well, both as snacks and as playthings. Despite being relatively weak, the surge in numbers help the latex foxes survive and spread. And while you have little urge to leave your new den, you're quite certain many of your offspring have escaped to spread beyond the city and create dens of their own.";
+			say "     Driven mad with your new, rubbery instincts, you leave the bunker and wander the city, looking for further victims[if Player is male]. In time, you find plenty to play with, getting lots of practice with your knotted dick as you tie with them and they become another yapping fox beneath you[end if][if Player is female]. A strange pain paralyzes you a few days later and you squat. A small rubbery ball escapes your distended vulva, rapidly growing into another fox being. Driven mad with jealousy, you give the young thing a nip, and it flees off to find its own victims[end if]. You set up a den at an adult toy manufacturing plant. The stores of latex are wonderfully tasty and you drink some down every day, making you extra [if Player is male]virile[else]fertile[end if], increasing the number of other latex foxes you are able to create. The large collection of unshipped products are quite enjoyable as well, both as snacks and as playthings. Despite being relatively weak, the surge in numbers help the latex foxes survive and spread. And while you have little urge to leave your new den, you're quite certain many of your offspring have escaped to spread beyond the city and create dens of their own.";
 		else:
 			say "     Your vulpine body draws little concern from the military, classified as a weak and inoffensive form. Despite it making your processing much simpler, this does rankle you a little for some reason. After your release, you find work at a toy factory and save some money, eventually opening your own toy manufacturing business - an adult toy company. Running it out of your basement at first, you design and create a variety of molds and toys for the needs of a new, altered customer base among the infected. You get several other transformed individuals to act as models for some of your toys, which is a fun and enjoyable process for all concerned. You also enjoy testing each and every design on yourself, often multiple times, to make sure that it meets your approval. Your small business does well and grows quickly, soon hiring several other latex foxes to help your fledgling enterprise grow to meet the enormous demand for toys of all shapes, sizes and species.";
 
-[ Edit this to have the correct creature name as well]
 Latex Fox ends here.

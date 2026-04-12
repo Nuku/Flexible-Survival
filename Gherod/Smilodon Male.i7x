@@ -37,7 +37,6 @@ to say Smilodon Male Wins:
 		say "     'Unngh... I'm gonna fill you up, [boygirl]... Breed that sexy [if Player is female]cunt[else]ass[end if] of yours any second now...' he warns you, panting like an Olympian athlete as he fucks you like one, non-stop for what seems to be minutes, making sure he strokes, squeezes and rubs your whole body as much as he can, actually caring a bit for your enjoyment once he reaches for your [if Player is male]cock, stroking it merrily and enthusiastically[else]chest, softly tweaking your nipples[end if]... 'Grr, here it comes... Take it all in... Oh, fuck yesss!' The large feline explodes in a blissful of cum that coats your [if Player is female]womb[else]insides[end if] generously, filling you up for about a full minute of virile jizz.";
 		if Player is male:
 			say "     You were not left behind on the climax, as his stroking, combined with the prostate smashing you experienced until this, that big hard cock throbbing and pounding at your sensitive pleasure spot, just made you cum as hard onto the ground, a gush of sperm making a trail forward with the force it came through.";
-		CreatureSexAftermath "Player" receives "[if Player is female]Pussy[else]Ass[end if]Fuck" from "Smilodon Male";
 		WaitLineBreak;
 		if Player is submissive:
 			say "     Then, the Smilodon cuddles with you for some additional time, praising your submission to him and stroking your head and face as if you were his pet. 'You've been such a good [boygirl] to me... I should keep you, to be honest. Breed you full everyday and fuck you until you can't walk. You'd like that, wouldn't you?' he asks you, licking at your neck with more of that dominant affection of his, tempting you to follow through with his words. 'I gotta go now, but I'll want your [if Player is female]pussy[else]ass[end if] ready for me when we meet again, yeah? I'll pound you even harder, then, and fill you up even more.'";
@@ -45,6 +44,7 @@ to say Smilodon Male Wins:
 			say "     Then, the Smilodon cuddles with you for some additional time, not really caring if you would like to or not. His strength overpowers yours at this point, and you do not really have a choice. 'Wasn't that a good time, you and me? Fucking like animals, you taking my load... Why can't you realize it'd be so much better if you were my little slut...?' he teases you, licking at your neck with more of that dominant affection of his. 'Next time we meet, just bend over. Take my cock. You'll enjoy it way, way more like that, trust me...'";
 		say "     With those being his last words, he lets go of you, getting up and leaving you lying down on the floor. Giving his balls another scratch, he admires the sight of you for some seconds, then turns tail and leaves, walking triumphantly.";
 		say "     It takes you some time to recover from that big cat's pounding, and once you do, you stand up and manage to grab your things to get ready to leave.";
+		CreatureSexAftermath "Player" receives "[if Player is female]Pussy[else]Ass[end if]Fuck" from "Smilodon Male";
 	else: [facefuck]
 		say "     As you feel the softness of his feline fur, you drop to your knees in front of him as your hands follow over to his thighs. A thick furred sheath now hangs before your eyes as the fleshy tip of his member begins to peek through, then slowly exiting its shelter to come greet you in its full glory. It is pretty much human shaped, albeit more red in color, its main distinguishing factor being the furry package it resides in. Its about ten inches of length now throb in anticipation as it comes poking at you in the face, with the girth of a tall soda can. 'You do not deserve such a reward, as you are a pretty bad [boygirl]... But I figured you just needed to try it and see how good it feels.' he teases you, grabbing his member and rubbing it across your entire face, leaking some precum in the process.";
 		say "     The Smilodon then points it towards your lips and begins to push against them, sliding a hand over the back of your head to pull you towards him. 'Open up and take it. I promise it's a tasty treat.' he says, chuckling as your lips inevitable part to receive his manhood, which enters your mouth to fill it generously. 'Mmh... That's it... Use your tongue...' the catman continues to order you around as he pets you on the head, his gentle domination making you feel oddly safe. As soon as you are feeling his erection pulse against your tongue, you lick it all over and take a taste of his precum, which causes the feline to thrust into you a little deeper than before. Grabbing your head with both his hands now, he starts to push his cock in and out of your mouth with warm tenderness.";
@@ -54,10 +54,10 @@ to say Smilodon Male Wins:
 		WaitLineBreak;
 		say "     Though, he does not let his edge break that easily, slowing down and enjoying these close moments as much as he can, passing you all his affection as he now only slowly thrusts into your mouth. 'You're gonna swallow your big catman's load?' he asks you, stroking your cheek and looking down at you, his big hand feeling soft against your skin. As the male Smilodon locks gaze in your eyes, you almost feel compelled to nod. 'That's a nice little kitten. Have it, then... you deserve it.' It is not like you have a choice. Once he tightens his grasp around your head, again, he resumes thrusting at full speed. It does not take long until the large feline blows his full load down your throat, forcing you to swallow his creamy and warm spunk, drop after drop delivered with each throb of his thick cock in your mouth, until the very last.";
 		say "     He holds his member deep down your mouth until he is done, only then pulling it out as you struggle to catch your breath. 'Feeling a bit tired? Aw...' With these words, the catman crouches down and takes you for a cuddly embrace, now whispering in your ear. '[if Player is submissive]I really should keep you... have you worship me everyday and unload my balls inside you, feeding you lots and lots of this sweet cum down your throat... Bet you'd like that...' he teases you, licking at your neck with more of that dominant affection of his, tempting you to follow through with his words. 'I gotta go now, but make sure you are ready to kneel the next time we meet. Don't fight it... I know you'll want more of this.'[else]Didn't that feel good? Just letting yourself go... Worshiping me, you swallowing my load... How long will it take for you to understand you'd be so much happier submitting to me, right away...?' he teases you, licking at your neck with more of that dominant affection of his. 'Next time we meet, just kneel and take my cock. You'll enjoy it way, way more like that, trust me...'[end if]";
-		CreatureSexAftermath "Player" receives "OralCock" from "Smilodon Male";
 		WaitLineBreak;
 		say "     With those being his last words, he lets go of you, getting up and leaving you kneeling down on the floor. Giving his balls another scratch, he admires the sight of you for some seconds, then turns tail and leaves, walking triumphantly.";
 		say "     It takes you some time to recover from that big cat's facefucking, and once you do, you stand up and manage to grab your things to get ready to leave.";
+		CreatureSexAftermath "Player" receives "OralCock" from "Smilodon Male";
 	if Lust of Ranfer < 4:
 		increase Lust of Ranfer by 1;
 
@@ -102,9 +102,9 @@ to say Smilodon Male Loses:
 		WaitLineBreak;
 		say "     He barely finished these last words and he has to let out a low moan, once he finds your tongue wiggling around his sensitive areolas. There is not as much fur around here, so you can definitely feel the Smilodon's warm skin and beating heart against the lower half of your face, and his thick member throbbing crazy the more you suck on his nipple. It seems that the large catman has very sensitive ones! The more you tease him there, the more he comes rubbing his cock against your body, and he loves having you alternate from one pec to the other. Eventually, he gets very comfortable in this position, enough to let his belly rest on top of you, as well, with both his thighs hugging your sides and keeping you really, really trapped underneath him.";
 		say "     With how turned on he is with all of this, it is not so surprising that he ends up blasting his load on top of you with a loud grunt, coating your waist and chest in warm feline spunk as you continue to stimulate his nipples. 'Hnng... Fuck...! I... Oh, that really got me horny, didn't it?' he comments, looking down at the mess he just made on top of you as he lifts himself away from your body. A fresh breeze comes brushing against your face as your sober senses return to you. It feels like the Smilodon took this chance to dominate you in a sexual approach, as he so much loves. 'I figured you were going to want to have fun with me, either way, so... I took the freedom to apply some of my pheromones on you. And you did a great job.' he adds with the boldest of smiles as he flexes his arms, still sitting on top of you.";
-		CreatureSexAftermath "Smilodon Male" receives "Other" from "Player";
 		WaitLineBreak;
 		say "     'Anyway, you're great company. I hope next time we can just enjoy each other.' The male Smilodon starts to get up, and actually helps you stand up, as well, like the proper gentlecatman he is. 'See you around. I'm gonna train so I can pin you down quicker, the next time we meet.' he lets you know with a wink and a grin as you prepare to leave, simply watching you go as you grab your gear to return to your own affairs.";
+		CreatureSexAftermath "Smilodon Male" receives "Other" from "Player";
 		if Lust of Ranfer < 4:
 			increase Lust of Ranfer by 1;
 	else:
@@ -147,7 +147,7 @@ to say Smilodon Male Desc:
 				LineBreak;
 				say "     You do not see a reason to refuse the big cat's request, so a simple positive reply is all you need to make him smile. 'Oh, that's lovely!' he says, pulling you tightly against him and giving you a big hug. 'I'm sure you won't regret keeping this large feline of love close to you... And he'll make sure to thank you everyday for it.' He then hands you over something, which seems to be a small whistle. 'Just blow it and I'll be able to hear it from miles away, should help me protect you even when I'm away.' You take the whistle and tuck it away in your pockets.";
 				say "     It seems you have made a new companion!";
-				say "[line break]     (Ranfer the Smilodon Bodyguard is now a possible ally! You can make him your active ally by typing [bold type][link]ally Ranfer[end link][roman type] or [bold type][link]ally Smilodon bodyguard[end link][roman type] and initiate sex with him while active by typing [bold type][link]fuck Ranfer[end link][roman type]. You can see all the allies you have with the [bold type][link]allies[end link][roman type] command. Allies will lower the XP you gain from battle, but can gain levels themselves to be more useful in a scrap. Want to get rid of an ally? Use [bold type][link]ally dismiss[end link][roman type], or just [bold type][link]dismiss[end link][roman type])[line break]";
+				say "[line break]     (Ranfer the Smilodon Bodyguard is now a possible ally! You can make him your active ally by typing [link][bold type]ally Ranfer[roman type][end link] or [link][bold type]ally Smilodon bodyguard[roman type][end link] and initiate sex with him while active by typing [link][bold type]fuck Ranfer[roman type][end link]. You can see all the allies you have with the [link][bold type]allies[roman type][end link] command. Allies will lower the XP you gain from battle, but can gain levels themselves to be more useful in a scrap. Want to get rid of an ally? Use [link][bold type]ally dismiss[roman type][end link], or just [link][bold type]dismiss[roman type][end link])[line break]";
 				add "Tamed" to Traits of smilodon bodyguard;
 				now smilodon bodyguard is tamed;
 				move Ranfer to Main & 7th Street;
@@ -251,7 +251,7 @@ RanferDoneTalking is a truth state that varies.[@Tag:NotSaved]
 instead of conversing Ranfer:
 	if Ranfer is asleep:
 		say "     The large Smilodon is deep asleep, splayed out nakedly on his bedroll. [bold type]Do you want to wake him?[roman type][line break]";
-		Say "     ([link]Y[as]y[end link]) - Yes, you want to talk to him.";
+		say "     ([link]Y[as]y[end link]) - Yes, you want to talk to him.";
 		say "     ([link]N[as]n[end link]) - No, it's not that important.";
 		if Player consents: [go after them]
 			LineBreak;
@@ -372,7 +372,7 @@ to say SexWithRanfer:
 		if lastfuck of Ranfer - turns < 6:
 			say "     He hears you and smiles, takes you in for a gentle embrace, tightly squeezing you around his big furred muscles and gives you a kiss on the forehead... But nothing sexual. 'I'm sorry, kitten, I'm still a little tired from last time... But we can cuddle! Love feeling you close to me...'";
 			say "[line break]     It seems Ranfer is not yet in the mood for sex, but you could cuddle with him. Following his suggestion, [bold type]do you want to?[roman type][line break]";
-			Say "     ([link]Y[as]y[end link]) - Of course, cuddles are nice!";
+			say "     ([link]Y[as]y[end link]) - Of course, cuddles are nice!";
 			say "     ([link]N[as]n[end link]) - You took the hug and that is enough, for now.";
 			if Player consents:
 				LineBreak;
@@ -483,12 +483,12 @@ to say RanferSexFacefucked:
 	WaitLineBreak;
 	say "     Though, he does not let his edge break that easily, slowing down and enjoying these close moments as much as he can, passing you all his affection as he now only slowly thrusts into your mouth. 'You're gonna swallow your big catman's load?' he asks you, stroking your cheek and looking down at you, his big hand feeling soft against your skin. As the male Smilodon locks gaze in your eyes, you almost feel compelled to nod. 'That's a nice little kitten. Have it, then... you deserve it.' It is not like you have a choice. Once he tightens his grasp around your head, again, he resumes thrusting at full speed. It does not take long until the large feline blows his full load down your throat, forcing you to swallow his creamy and warm spunk, drop after drop delivered with each throb of his thick cock in your mouth, until the very last.";
 	say "     He holds his member deep down your mouth until he is done, only then pulling it out as you struggle to catch your breath. 'Feeling a bit tired? Aw...' With these words, the catman crouches down and takes you for a cuddly embrace, now whispering in your ear. '[if Player is submissive]I really should keep you... have you worship me everyday and unload my balls inside you, feeding you lots and lots of this sweet cum down your throat... Bet you'd like that...' he teases you, licking at your neck with more of that dominant affection of his, tempting you to follow through with his words. 'Thanks for coming by. I'll definitely love to dominate you, again[else]Didn't that feel good? Just letting yourself go... Worshiping me, you swallowing my load... Much better than fighting, yeah?' he teases you, licking at your neck with more of that dominant affection of his. 'Thanks for coming by. I'll definitely love to dominate you, again[end if].'";
+	WaitLineBreak;
+	say "     With those being his last words, he lets go of you, helping you up and giving your cheek an affectionate stroke. The Smilodon then simply watches you go as you grab your gear to return to your own affairs.";
 	if smilodon bodyguard is tamed:
 		NPCSexAftermath Player receives "OralCock" from Ranfer;
 	else:
 		CreatureSexAftermath "Player" receives "OralCock" from "Smilodon Male";
-	WaitLineBreak;
-	say "     With those being his last words, he lets go of you, helping you up and giving your cheek an affectionate stroke. The Smilodon then simply watches you go as you grab your gear to return to your own affairs.";
 
 to say RanferSexGetFucked:
 	say "     When you give the large feline a hug back, you grab his hand and lead it towards your rear, letting him know what you want. As he gives both your asscheeks a hungry squeeze, you are prompted to bend over for him as he [if player is naked]enjoys the feeling of your exposed cheeks in his grasp[else]removes any gear between him and your butt[end if]. Now, you are all his, as he slides one of his paws down on your [if Player is female]pussy[else]hole[end if] to rub at it. 'It would be a pleasure, kitten. You've got such a [if Player is female]nice wet one[else]nice tight one[end if], down there... I'm gonna enjoy drilling it.' With these words, the sizable male gets a good grip on you and pulls you to him, rubbing his furred sheath against your behind which only engorges by each passing second. A much warmer and harder piece of meat emerges from it, poking at your sensitive [if Player is female]curls[else]hole[end if] as it throbs harder and harder.";
@@ -501,12 +501,12 @@ to say RanferSexGetFucked:
 	WaitLineBreak;
 	say "     Then, the Smilodon cuddles with you for some additional time, praising your submission to him and stroking your head and face as if you were his pet. 'You've been such a good [boygirl] to me... I should keep you, to be honest. Breed you full everyday and fuck you until you can't walk. You'd like that, wouldn't you?' he asks you, licking at your neck with more of that dominant affection of his, tempting you to follow through with his words. 'Thanks for coming by. I'll definitely love to have your [if Player is female]pussy[else]ass[end if] ready for me when we meet again. I'll pound you even harder, then, and fill you up even more, yeah?'";
 	say "     With those being his last words, he lets go of you, getting up and helping you, as well. Giving his balls another scratch, he admires the sight of you for some seconds, then makes sure you are alright. 'Hope you can walk on your own...! But if not, you can always stay with me.' he says, jokingly, as he gives your cheek an affectionate stroke.";
+	WaitLineBreak;
+	say "     It takes you some time to recover from that big cat's pounding, and once you do, you manage to grab your things to get ready to leave. The smilodon simply watches you go.";
 	if smilodon bodyguard is tamed:
 		NPCSexAftermath Player receives "[if Player is female]Pussy[else]Ass[end if]Fuck" from Ranfer;
 	else:
 		CreatureSexAftermath "Player" receives "[if Player is female]Pussy[else]Ass[end if]Fuck" from "Smilodon Male";
-	WaitLineBreak;
-	say "     It takes you some time to recover from that big cat's pounding, and once you do, you manage to grab your things to get ready to leave. The smilodon simply watches you go.";
 
 to say RanferSexWorshipTorso:
 	say "     You do not see any issue in hugging the big Smilodon back, and as you do, you have the best sensations of his incredibly soft and fluffy body, covered in such a large muscular bulk that one average person could easily be subdued by him. All your touching over his strong musculature has him knowing exactly what you want. Keeping close to him, you begin to feel his arms and chest, to what he replies with a cheeky smile. 'Oh, you wanna feel me all over? Why not, be my guest!' The large feline seems into this idea and starts flexing his bulging biceps at you, which despite being covered in fur, they are quite noticeable from within the soft fluff hugging their shape. His muscles, themselves, feel really hard, but they are very soft to the touch, at the same time.";
@@ -517,12 +517,12 @@ to say RanferSexWorshipTorso:
 	WaitLineBreak;
 	say "     He barely finished these last words and he has to let out a low moan, once he finds your tongue wiggling around his sensitive areolas. There is not as much fur around here, so you can definitely feel the Smilodon's warm skin and beating heart against the lower half of your face, and his thick member throbbing crazy the more you suck on his nipple. It seems that the large catman has very sensitive ones! The more you tease him there, the more he comes rubbing his cock against your body, and he loves having you alternate from one pec to the other. Eventually, he gets very comfortable in this position, enough to let his belly rest on top of you, as well, with both his thighs hugging your sides and keeping you really, really trapped underneath him.";
 	say "     With how turned on he is with all of this, it is not so surprising that he ends up blasting his load on top of you with a loud grunt, coating your waist and chest in warm feline spunk as you continue to stimulate his nipples. 'Hnng... Fuck...! I... Oh, that really got me horny, didn't it?' he comments, looking down at the mess he just made on top of you as he lifts himself away from your body. A fresh breeze comes brushing against your face as your sober senses return to you. It feels like the Smilodon took this chance to dominate you in a sexual approach, as he so much loves. 'Every time you want to worship me, I'm just gonna do this. It's so much more fun.' he adds with the boldest of smiles as he flexes his arms, still sitting on top of you.";
+	WaitLineBreak;
+	say "     'Anyway, you're great company. I hope next time we can enjoy each other just as much.' The male Smilodon starts to get up, and actually helps you stand up, as well, like the proper gentlecatman he is. 'See you around. I hope, soon.' he lets you know with a wink and a grin as you prepare to leave, simply watching you go as you grab your gear to return to your own affairs.";
 	if smilodon bodyguard is tamed:
 		NPCSexAftermath Ranfer receives "Other" from Player;
 	else:
 		CreatureSexAftermath "Smilodon Male" receives "Other" from "Player";
-	WaitLineBreak;
-	say "     'Anyway, you're great company. I hope next time we can enjoy each other just as much.' The male Smilodon starts to get up, and actually helps you stand up, as well, like the proper gentlecatman he is. 'See you around. I hope, soon.' he lets you know with a wink and a grin as you prepare to leave, simply watching you go as you grab your gear to return to your own affairs.";
 
 to say RanferSexWorshipPaws:
 	say "     Hugging the large feline back, you let him know that you would like to provide him with proper worship, and end up complimenting his large paw-like hands and feet. 'Oh...? Are you a fan of these, little kitten?' he asks as he plants one of his hands on your face, feeling it up while sliding a thick furred finger past your lips. He is careful enough to not let his large claws scratch your tongue as you almost feel compelled to suck on it, all that feeling increasing the closer he brings you to his body. That warm soft fur brushing against your entire self makes you relax as he teases you, filling your mouth with finger after finger as he plays with both your tongue and lips. 'Such a cute little mouth you have... Maybe we could put it to a better use...'";
@@ -533,12 +533,12 @@ to say RanferSexWorshipPaws:
 	WaitLineBreak;
 	say "     Suddenly, you feel him pushing against you, and you find yourself forced to lie down on your back as his paws stick on top of your face. Then, he forces his big toe down your mouth, quite carefully, and has you suck on it like your life depended on it. In your vision, there is only a large feline in joy and pure ecstasy looking down on you, edging his large cock which stands rock hard and throbbing. 'Keep sucking on it, kitten [boygirl]... Then I'll just have to reward you...' he says, keeping his climax right before the point of no return a little longer, enjoying the view of you down on his feet with a mouthful of a furred toe from his footpaw wiggling against your tongue.";
 	say "     As he keeps that one footpaw on you, the other leaves your cheek to help the large Smilodon stand up. He admires the view you of sucking on his furred toe as he begins to jerk himself a little faster... then more, as his cock begins to leak heavy drops of precum onto your face... With this, you have an idea of what is going to happen as he picks up the pace... 'Ungh... yes...! Here it is...!' The male Smilodon grunts as a generous shot of feline cum lands on his foot and on you, with more following right after as he aims towards your face. The result is a thick layer of spunk covering your head and his paw as he smears it all over your cheeks and lips over nearly a full minute, having pulled his toe off your mouth in the meantime.";
+	WaitLineBreak;
+	say "     'So fucking good... Mmh... Kitten, you gotta clean my paw, now...' he tells you with a toothy grin, chuckling to himself as you get ready to lick it all off him. And you do a good job, sliding your tongue all over his footpaw once more, swallowing down all the cum you catch. He only lets you go once he deems that his furred toes and soles are all pristine clean, and while it does take a while, he enjoys it thoroughly.";
 	if smilodon bodyguard is tamed:
 		NPCSexAftermath Ranfer receives "Other" from Player;
 	else:
 		CreatureSexAftermath "Smilodon Male" receives "Other" from "Player";
-	WaitLineBreak;
-	say "     'So fucking good... Mmh... Kitten, you gotta clean my paw, now...' he tells you with a toothy grin, chuckling to himself as you get ready to lick it all off him. And you do a good job, sliding your tongue all over his footpaw once more, swallowing down all the cum you catch. He only lets you go once he deems that his furred toes and soles are all pristine clean, and while it does take a while, he enjoys it thoroughly.";
 
 to say RanferSexShrinkingShroom:
 	if "Giant Cat" is not listed in traits of Ranfer: [first time]
@@ -560,12 +560,12 @@ to say RanferSexShrinkingShroom:
 	WaitLineBreak;
 	say "     Eventually, your ability to endure such overwhelming sensations ends, and you begin to uncontrollably moan and wiggle around while stuck between his lips. He takes this as a sign to intensify his movements, and also begins to jerk faster. His increasing want for your joy is evident, almost seeming hungrier for you, growing more desperate to feel you under and over his tongue as he puts additional effort on it, that slick organ of his rubbing against you with enough force to drive you insane with pleasure. Then, Ranfer's breathing quickens, he begins to let out low grunts as he does his very best to keep up the pace, and the large cat successfully manages to throw you beyond your edging point. As a wave of intense pleasure strikes you, your [if Player is male]load is delivered[else if Player is female]pussy keeps on quivering as your entire body tingles[else]whole body tingling[end if] inside his mouth.";
 	say "     He also lets a longer grunt as he shoots his [if Player is male]own [end if]load all over the ground beneath you, powerful shots originated from how turned on he was, gushing out like a small geyser of pure lust. You are, finally, pulled out of his mouth, the coldness of the outside now washing your body as you begin to miss the warmth of his maw. 'You're the best kitten ever. And [if Player is male]your cum tastes[else]you taste[end if] really good...' he says, giving you a few additional licks, tender and loving ones. 'If you ever get some more of those, be sure to come to me. I'd love to play with a little sized you, again.' Ranfer then holds you close to his soft and fuzzy chest until your body gives signs of wanting to grow back to its original height.";
+	WaitLineBreak;
+	say "     When you are finally back to normal, you grab your things and kiss Ranfer goodbye. He responds by tapping your butt and smiling back at you.";
 	if Player is neuter:
 		NPCSexAftermath Ranfer receives "Other" from Player;
 	else:
 		NPCSexAftermath Ranfer receives "Oral[if Player is male]Cock[else]Pussy[end if]" from Player;
-	WaitLineBreak;
-	say "     When you are finally back to normal, you grab your things and kiss Ranfer goodbye. He responds by tapping your butt and smiling back at you.";
 
 Section 5 - Ranfer Library Interactions
 

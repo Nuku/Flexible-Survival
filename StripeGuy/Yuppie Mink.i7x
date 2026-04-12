@@ -7,83 +7,53 @@ Section 1 - Creature Responses
 
 ymgmode is a number that varies. ymgmode is usually 1.
 
-to say ymgfight:
-	if ymgmode is 1:
-		say "     [one of]The mink digs her manicured claws into your flesh![or]She pulls out her racquet and gives you a firm swat with it![or]With a sudden swirl of her short skirt, she kicks you right in the shin![or]She falls back and gestures, allowing a deckhand to throw something heavy at you![or]She bites at you fiercely, then spends a moment wiping the taste of commoner from her mouth.[or]She hits you on the head with an empty bottle of champagne.[or]With a keening cry, she hurls herself at you with limited effectiveness.[or]She lifts her short skirt, exposing her needy cunt to you playfully, sapping your will to fight.[at random]";
-	else:
-		say "     [one of]The mink digs his manicured claws into your flesh![or]He pulls off his hat and throws it like a disc![or]With a growling snarl, he whips his pocketwatch around by the chain and hits you in the face![or]He steps back to allow a deckhand to wallop you from behind![or]He momentarily sidesteps, accepting a mixed drink from a deckhand. After draining it, he hurls the empty glass at you![or]He writhes his hips forward and milks his cock, splattering you with precum.[or]He digs around in his pockets, and passes a bribe to the nearest stevedore. You never see the empty crate that falls on your head![at random]";
-
 to say losetoymg:
 	if ymgmode is 1:
-		say "[losetoymgirl]";
+		say "     [if HP of Player > 0]Unable to resist the mink gal's insistent arrogance, you sink to your knees. Your fingers go slack, gear falling to the deck as she closes in to rest one foot on your shoulder. With a smirk, she pushes you onto your back. 'At least you have the sense to take your place,' she muses quietly, gesturing for you to strip.[else]Beaten senseless by the yachting mink, you collapse to the wooden slats of the dock. At the snap of her fingers, deckhands yank your gear and clothes of without ceremony, leaving you bare to her. 'You locals are so unfriendly! This is worse than that trip to Peru!'[end if]";
+		if Player is male:
+			say "     With a soft little self-amused hum the mink stands beside you, swinging one short leg across your body to straddle your prone form. 'At least you've got something I can amuse myself with.' She hikes her skirt up to expose the dripping slit of her needy cunt, rubbing it idly with her paws. Her eyes close, head tilting back as she teases herself with her fingers and you with the sight of her lips opening. Honey-like juices dribble down, splattering on your belly and crotch. The warmth and scent is enough to get your prick stiff and ready for her, but things are outside your control! Your dick is aching with need by the time she is ready, smoothly crouching down and aligning her cunt with the tip of your cock. 'There we go.' She churrs with satisfaction as she sits down in a single motion, her cunt swallowing you to the base!";
+			say "     She feels so good around you, her tight cunt expertly massaging and milking your length as she begins to bounce. Her pert tits wobble in the high-dollar sports bra she wears, out of your reach. Every time you extend a hand toward them, she slaps it away. The mink girl is running the show, but you are lucky enough to be along for the ride. Eventually you have to lay back and enjoy it, but are only halfway to your own orgasm before she is barking and trembling in delight! With a gush of femjuices, she has her delightful orgasm, eyes rolling back in her head. She stands up suddenly, leaving you blueballed and in sexual agony. 'Not terrible.' Daintily, she flicks the tip of your still thrumming cock with a toe. That is enough for you to finally limp to orgasm, the mink laughing as you splatter yourself. Still laughing, she returns to her yacht.";
+		else:
+			say "     Finding only a wet pussy between your legs, the mink clicks her tongue in disappointment. 'Unfortunate,' she chides you gently, but hikes her skirt up to expose the dripping slit of her needy cunt, rubbing it idly with her paws. Her eyes close, head tilting back as she teases herself with her fingers and you with the sight of her lips opening. With a huff she steps forward, gripping your head firmly and bringing up to her needy cunt. Its lick or die, and you have little choice but to worship that hot slit! Time loses meaning as you slurp and lick, teasing her swollen clit until at last the mink gushes femjuices and soaks your face! Satisfied, she allows you to collapse, climbing back aboard her yacht.";
 	else:
 		project figure of YuppieMink_M_hard_icon;
-		say "[losetoymguy]";
-
-to say losetoymgirl:
-	if HP of Player > 0:
-		say "     Unable to resist the mink gal's insistent arrogance, you sink to your knees. Your fingers go slack, gear falling to the deck as she closes in to rest one foot on your shoulder. With a smirk, she pushes you onto your back. 'At least you have the sense to take your place,' she muses quietly, gesturing for you to strip.";
-	else:
-		say "     Beaten senseless by the yachting mink, you collapse to the wooden slats of the dock. At the snap of her fingers, deckhands yank your gear and clothes of without ceremony, leaving you bare to her. 'You locals are so unfriendly! This is worse than that trip to Peru!'";
-	if Player is male:
-		say "     With a soft little self-amused hum the mink stands beside you, swinging one short leg across your body to straddle your prone form. 'At least you've got something I can amuse myself with.' She hikes her skirt up to expose the dripping slit of her needy cunt, rubbing it idly with her paws. Her eyes close, head tilting back as she teases herself with her fingers and you with the sight of her lips opening. Honey-like juices dribble down, splattering on your belly and crotch. The warmth and scent is enough to get your prick stiff and ready for her, but things are outside your control! Your dick is aching with need by the time she is ready, smoothly crouching down and aligning her cunt with the tip of your cock. 'There we go.' She churrs with satisfaction as she sits down in a single motion, her cunt swallowing you to the base!";
-		say "     She feels so good around you, her tight cunt expertly massaging and milking your length as she begins to bounce. Her pert tits wobble in the high-dollar sports bra she wears, out of your reach. Every time you extend a hand toward them, she slaps it away. The mink girl is running the show, but you are lucky enough to be along for the ride. Eventually you have to lay back and enjoy it, but are only halfway to your own orgasm before she is barking and trembling in delight! With a gush of femjuices, she has her delightful orgasm, eyes rolling back in her head. She stands up suddenly, leaving you blueballed and in sexual agony. 'Not terrible.' Daintily, she flicks the tip of your still thrumming cock with a toe. That is enough for you to finally limp to orgasm, the mink laughing as you splatter yourself. Still laughing, she returns to her yacht.";
-	else:
-		say "     Finding only a wet pussy between your legs, the mink clicks her tongue in disappointment. 'Unfortunate,' she chides you gently, but hikes her skirt up to expose the dripping slit of her needy cunt, rubbing it idly with her paws. Her eyes close, head tilting back as she teases herself with her fingers and you with the sight of her lips opening. With a huff she steps forward, gripping your head firmly and bringing up to her needy cunt. Its lick or die, and you have little choice but to worship that hot slit! Time loses meaning as you slurp and lick, teasing her swollen clit until at last the mink gushes femjuices and soaks your face! Satisfied, she allows you to collapse, climbing back aboard her yacht.";
-
-to say losetoymguy:
-	if HP of Player > 0:
-		say "     Swayed by the mink stud's almost obnoxious confidence, you find yourself kneeling on the dock, head bowing. 'There is the trait I like. Subservience.' His claws tick on the wooden planks as he draws closer, gesturing for you to disrobe as he removes his cravat.";
-	else:
-		say "     Having beaten the stuffing out of you, the studly mink unknots his cravat with something almost like disinterest as a deckhand pulls off your gear and clothing. Too weak to resist, you allow yourself to be stripped bare and laid out.";
-	if Player is female:
-		say "     Eyeing your wet cunt, the mink gives his cock a stroke to milk out a few fat droplets of precum in anticipation. 'In this dirty town I suppose I have no choice but to slum a bit.' The insult is coldly smug, but you're in no position to complain as he lowers himself onto you. Though he seems awful self-centered, he's well mannered enough to balance his weight on his elbows instead of you! That seems the extent of his manners, though, as you get no warning before he plunges his fat cock into you! If it didn't feel so damn good to have that well-formed cock jammed to the hilt, you might be tempted to complain! With a soft chuff and a roll of his hips, the mink begins to fuck you with smooth motions. The mixed juices of your cunt and his dribbling cock slick things up nicely and allow such a fluid breeding!";
-		say "     He completely ignores your body or your pleasure in favor of his own, even going so far to growl and snap when you lift up for a desperate kiss. Despite his selfish nature, the pleasure from being bred stokes a fire from your clit to the ridges of your womb within! As if sensing your deep excitement, the mink churrs quietly to you as his pace quickens. 'Don't think for a moment my litter entitles you to a slice of the inheritance.' His grin is humorless as he continues to pound in deep, his orgasm on the way. With a deep rolling bark he sinks in as deep as his hips will bear, massive nuts cradled against your thighs. The warmth of his seed is almost agonizing as he fills your cunt to the brim, streams of it bubbling out to splatter on the deck. With a sigh he pulls out and leaves you well fucked and dribbling, returning to his yacht.";
-		CreatureSexAftermath "Player" receives "PussyFuck" from "Yuppie Mink";
-	else:
-		say "     Noting your lack of a tight cunt, the mink rotates his paw, the deckhand helpfully flipping you over. 'In this dirty town I suppose I have no choice but to slum a bit.' The insult is coldly smug, but you're in no position to complain as he kicks your legs apart to expose your dimpled asshole. He kneels between your legs, getting a grip on your spread thighs. Without so much as a by-your-leave he rocks his cock forward and your ass backwards to meet it! Without regard for your comfort, the mink pushes his thick slicked-up cock in at a steady pace deep into your asshole! Such upfront rape should horrify you, but thanks to the nanites your cock is rock-hard as he starts to smoothly fuck you senseless!";
-		say "     He completely ignores your body or your pleasure in favor of his own, even being cruel enough to slap your hand down if you attempt to give your cock a stroking. Despite his selfish nature, the pleasure from being bred stokes a fire from your toes to ears as he expertly saws in and out of your ass! His grip tightens as his strokes speed up, hammering your ass harder with that shapely cock! 'You're almost as tight as the Cayaman resort boys!' He snickers, and lunges forward with a snarl, his fat nuts nestling against your thighs as he impales you as deep as he can drive. With a satisfied sigh, he unloads his massive torrent of hot, fertile seed deep into your asshole, filling your guts with warmth! It's just enough, barely, to push you over the edge, your neglected cock splattering milky ropes across the dock timbers. His load spent, the mink withdraws and leaves you to collapse, already walking back to his yacht.";
-		CreatureSexAftermath "Player" receives "AssFuck" from "Yuppie Mink";
+		say "     [if HP of Player > 0]Swayed by the mink stud's almost obnoxious confidence, you find yourself kneeling on the dock, head bowing. 'There is the trait I like. Subservience.' His claws tick on the wooden planks as he draws closer, gesturing for you to disrobe as he removes his cravat[else]Having beaten the stuffing out of you, the studly mink unknots his cravat with something almost like disinterest as a deckhand pulls off your gear and clothing. Too weak to resist, you allow yourself to be stripped bare and laid out[end if].";
+		if Player is female:
+			say "     Eyeing your wet cunt, the mink gives his cock a stroke to milk out a few fat droplets of precum in anticipation. 'In this dirty town I suppose I have no choice but to slum a bit.' The insult is coldly smug, but you're in no position to complain as he lowers himself onto you. Though he seems awful self-centered, he's well mannered enough to balance his weight on his elbows instead of you! That seems the extent of his manners, though, as you get no warning before he plunges his fat cock into you! If it didn't feel so damn good to have that well-formed cock jammed to the hilt, you might be tempted to complain! With a soft chuff and a roll of his hips, the mink begins to fuck you with smooth motions. The mixed juices of your cunt and his dribbling cock slick things up nicely and allow such a fluid breeding!";
+			say "     He completely ignores your body or your pleasure in favor of his own, even going so far to growl and snap when you lift up for a desperate kiss. Despite his selfish nature, the pleasure from being bred stokes a fire from your clit to the ridges of your womb within! As if sensing your deep excitement, the mink churrs quietly to you as his pace quickens. 'Don't think for a moment my litter entitles you to a slice of the inheritance.' His grin is humorless as he continues to pound in deep, his orgasm on the way. With a deep rolling bark he sinks in as deep as his hips will bear, massive nuts cradled against your thighs. The warmth of his seed is almost agonizing as he fills your cunt to the brim, streams of it bubbling out to splatter on the deck. With a sigh he pulls out and leaves you well fucked and dribbling, returning to his yacht.";
+			CreatureSexAftermath "Player" receives "PussyFuck" from "Yuppie Mink";
+		else:
+			say "     Noting your lack of a tight cunt, the mink rotates his paw, the deckhand helpfully flipping you over. 'In this dirty town I suppose I have no choice but to slum a bit.' The insult is coldly smug, but you're in no position to complain as he kicks your legs apart to expose your dimpled asshole. He kneels between your legs, getting a grip on your spread thighs. Without so much as a by-your-leave he rocks his cock forward and your ass backwards to meet it! Without regard for your comfort, the mink pushes his thick slicked-up cock in at a steady pace deep into your asshole! Such upfront rape should horrify you, but thanks to the nanites your cock is rock-hard as he starts to smoothly fuck you senseless!";
+			say "     He completely ignores your body or your pleasure in favor of his own, even being cruel enough to slap your hand down if you attempt to give your cock a stroking. Despite his selfish nature, the pleasure from being bred stokes a fire from your toes to ears as he expertly saws in and out of your ass! His grip tightens as his strokes speed up, hammering your ass harder with that shapely cock! 'You're almost as tight as the Cayaman resort boys!' He snickers, and lunges forward with a snarl, his fat nuts nestling against your thighs as he impales you as deep as he can drive. With a satisfied sigh, he unloads his massive torrent of hot, fertile seed deep into your asshole, filling your guts with warmth! It's just enough, barely, to push you over the edge, your neglected cock splattering milky ropes across the dock timbers. His load spent, the mink withdraws and leaves you to collapse, already walking back to his yacht.";
+			CreatureSexAftermath "Player" receives "AssFuck" from "Yuppie Mink";
 
 to say beattheymg:
 	if Libido of Player < 30:
 		say "     'I'll never hear the end of this at the yacht club!,' the mink gasps, collapsing into a heap on the docks. 'Valet! Get me to the belowdeck spa so I can recover!' The mink's dainty ears flutter with fear as you approach, but before you get your hands on the uppity cruiser, a bevy of valets and manicurists descend. In the flurry, you lose sight of your prey! You'll need to be fast next time around.";
 	else:
 		if ymgmode is 1:
-			say "[beattheymgirl]";
+			say "     The uppity mink lady looks positively confused as she is beaten into submission. 'This is preposterous! I am too important and rich for this!' Before she can continue, you deftly slap her down to reinforce your control.";
+			if Player is male: [male or herm]
+				say "     The shocked mink is made speechless by the rough treatment, too startled to struggle even weakly as her skirt is flipped up. Despite the beatdown, her cunt is inflamed with arousal and dripping with femmy juices, beckoning to your hard cock! You descend on her like a severe market correction, pinning her down against the rough planks of the dock. She yelps, her tits bouncing up and out of the sportsbra to jiggle in the salty air. They look so delectable, but you cannot resist the siren song of that hot snatch! There is a deep pleasure to be had from putting the bratty mustelid in her place, roughly fucking her like some low-class bimbo until at last you spurt your hot cum deep inside! You snicker at the thought of impregnating her with a scandalous mixed-breed litter as you draw back out, admiring how her cunt bubbles with your cum.";
+				CreatureSexAftermath "Yuppie Mink" receives "PussyFuck" from "Player";
+			else if Player is female: [female]
+				say "     The shocked mink is made speechless by the rough treatment, too startled to struggle even weakly as her skirt is flipped up. Despite the beatdown, her cunt is inflamed with arousal and dripping with femmy juices, mirroring your own excited gash! Without a word you just take hold of her tiny ears and yank that angular muzzle right up against your snatch! At first she struggle a bit, but after a box to the ears she gets the picture! Her tiny tongue is small but skillful, and hot as the shining sun! By flexing your arms, you get her into a good cunt-lapping rhythm that brings you to a happy gushing orgasm before too long! Satisfied, you shove the sticky splattered mink aside and return to your adventure!";
+				CreatureSexAftermath "Yuppie Mink" receives "OralPussy" from "Player";
+			else:
+				say "     Having nothing to work with, you leave the beaten mink to be ravaged by dock-workers or merchants as fate decides.";
 		else:
 			project figure of YuppieMink_M_hard_icon;
-			say "[beattheymguy]";
-
-to say beattheymgirl:
-	say "     The uppity mink lady looks positively confused as she is beaten into submission. 'This is preposterous! I am too important and rich for this!' Before she can continue, you deftly slap her down to reinforce your control.";
-	if Player is male: [male or herm]
-		say "     The shocked mink is made speechless by the rough treatment, too startled to struggle even weakly as her skirt is flipped up. Despite the beatdown, her cunt is inflamed with arousal and dripping with femmy juices, beckoning to your hard cock! You descend on her like a severe market correction, pinning her down against the rough planks of the dock. She yelps, her tits bouncing up and out of the sportsbra to jiggle in the salty air. They look so delectable, but you cannot resist the siren song of that hot snatch! There is a deep pleasure to be had from putting the bratty mustelid in her place, roughly fucking her like some low-class bimbo until at last you spurt your hot cum deep inside! You snicker at the thought of impregnating her with a scandalous mixed-breed litter as you draw back out, admiring how her cunt bubbles with your cum.";
-		CreatureSexAftermath "Yuppie Mink" receives "PussyFuck" from "Player";
-	else if Player is female: [female]
-		say "     The shocked mink is made speechless by the rough treatment, too startled to struggle even weakly as her skirt is flipped up. Despite the beatdown, her cunt is inflamed with arousal and dripping with femmy juices, mirroring your own excited gash! Without a word you just take hold of her tiny ears and yank that angular muzzle right up against your snatch! At first she struggle a bit, but after a box to the ears she gets the picture! Her tiny tongue is small but skillful, and hot as the shining sun! By flexing your arms, you get her into a good cunt-lapping rhythm that brings you to a happy gushing orgasm before too long! Satisfied, you shove the sticky splattered mink aside and return to your adventure!";
-		CreatureSexAftermath "Yuppie Mink" receives "OralPussy" from "Player";
-	else:
-		say "     Having nothing to work with, you leave the beaten mink to be ravaged by dock-workers or merchants as fate decides.";
-
-to say beattheymguy:
-	say "     The poor mink fellow sinks down to his knees, jaunty cap sliding off to clatter across the deck. It splashes into the water, forlornly.";
-	if Player is male: [male]
-		say "     Your cock is rock hard in anticipation as you kneel down and flip the mink over. His short tail presents no obstacle to revealing his puckered tailhole, which winks at you as the poor male gasps for breath. You show him the same mercy he would have shown you - none. Your cock is lubed with drizzles of your precum, and that is all you need to press deep inside the defeated man! His soft humiliated moan is drowned out by your happy growl, as the yuppie mink is very tight and very hot! Before long you are jackhammering the poor ermine hard enough to make your balls slap together with wet sexual sounds! Like the nice person you are, you grope underneath his hips, finding his fat mink-fucker, giving it a few strokes. Somehow you manage to time your orgasms together completely by accident, splattering his jizz across the dock as you fill his guts with cum! After you're fully sated, a single shove decouples you and after a dick-shake, it's time to hit the adventuring trail!";
-		CreatureSexAftermath "Yuppie Mink" receives "AssFuck" from "Player";
-	else if Player is female: [female]
-		say "     You admire the well-tenderized mink, one hand dropping down to fondle your needy cunt. Despite the violence, his cock is still throbbing and ready for action - an elegantly curved and shapely mass of thick cunt-pleasing pole. It is simply too tempting to pass up, and you give in to your own carnal desires for that thick cock! With a happy sigh, you straddle the mink's slender hips and guide that fat cunt-spreader to your lips, hissing gently as it spreads your cunt. It feels so hot and thick, filling you wonderfully with sheer animal pleasure! Using his supple body as your anchor, you start bouncing on it, riding it like a throbbing dildo until at last you come to a screaming orgasm! Weakly, he mirrors your intense pleasure, weakly groaning as his fat cock pumps a massive load into your steamy snatch! After a few moments of recovery, you pry yourself off him, snickering as you dribble a mixture of juices all over his fancy jacket. Maybe next time he'll think twice before attacking you!";
-		CreatureSexAftermath "Player" receives "PussyFuck" from "Yuppie Mink";
-	else:
-		say "     Having nothing to work with, you leave the beaten mink to be ravaged by dock-workers or merchants as fate decides.";
+			say "     The poor mink fellow sinks down to his knees, jaunty cap sliding off to clatter across the deck. It splashes into the water, forlornly.";
+			if Player is male: [male]
+				say "     Your cock is rock hard in anticipation as you kneel down and flip the mink over. His short tail presents no obstacle to revealing his puckered tailhole, which winks at you as the poor male gasps for breath. You show him the same mercy he would have shown you - none. Your cock is lubed with drizzles of your precum, and that is all you need to press deep inside the defeated man! His soft humiliated moan is drowned out by your happy growl, as the yuppie mink is very tight and very hot! Before long you are jackhammering the poor ermine hard enough to make your balls slap together with wet sexual sounds! Like the nice person you are, you grope underneath his hips, finding his fat mink-fucker, giving it a few strokes. Somehow you manage to time your orgasms together completely by accident, splattering his jizz across the dock as you fill his guts with cum! After you're fully sated, a single shove decouples you and after a dick-shake, it's time to hit the adventuring trail!";
+				CreatureSexAftermath "Yuppie Mink" receives "AssFuck" from "Player";
+			else if Player is female: [female]
+				say "     You admire the well-tenderized mink, one hand dropping down to fondle your needy cunt. Despite the violence, his cock is still throbbing and ready for action - an elegantly curved and shapely mass of thick cunt-pleasing pole. It is simply too tempting to pass up, and you give in to your own carnal desires for that thick cock! With a happy sigh, you straddle the mink's slender hips and guide that fat cunt-spreader to your lips, hissing gently as it spreads your cunt. It feels so hot and thick, filling you wonderfully with sheer animal pleasure! Using his supple body as your anchor, you start bouncing on it, riding it like a throbbing dildo until at last you come to a screaming orgasm! Weakly, he mirrors your intense pleasure, weakly groaning as his fat cock pumps a massive load into your steamy snatch! After a few moments of recovery, you pry yourself off him, snickering as you dribble a mixture of juices all over his fancy jacket. Maybe next time he'll think twice before attacking you!";
+				CreatureSexAftermath "Player" receives "PussyFuck" from "Yuppie Mink";
+			else:
+				say "     Having nothing to work with, you leave the beaten mink to be ravaged by dock-workers or merchants as fate decides.";
 
 Section 2 - Creature Insertion
-
-to say ymgdesc:
-	if ymgmode is 1:
-		say "     Moored at the docks among the industrial and commercial crafts are also several pleasure boats caught up in the military blockade. From one of them, a slender white figure appears. Some kind of mink or ermine, with shimmering white fur and a regal bearing that oozes haughty attitude. The matching white tennis ensemble she wears does little to conceal her pert breasts and shapely thighs, attractive even if she is huffy and upset. [one of]'This dock is absolutely filthy! It puts me in a crass mood,' [or]'Did you bring the fresh supplies of caviar and wine? No? Then what are you good for?' [or]'This outbreak has ruined my shed-ule! You there! Amuse me for a bit!' [or]'Ah, a replacement for my cabana boy!' [or]'Does the harbormaster know who I am? This is asinine!' [or]'I hope you brought a racquet with you,' [at random]she says it in a clipped tone, pausing before hopping from the deck to fight you!";
-	else if ymgmode is 2:
-		say "     Moored at the docks among the industrial and commercial crafts are also several pleasure boats caught up in the military blockade. From one of them, a slender white figure appears. Some kind of mink or ermine, with shimmering white fur and a regal bearing that oozes contempt. The smart blue captain's jacket he wears with the matching hat is lovely, but the lack of pants leaves his dripping cock and swinging sack on full display. He doesn't seem to mind at all, setting down his wine glass before calling to you. [one of]'Ahoy there! You must be my new sexy cabin boy!' [or]'Did you bring the fresh supplies of caviar and wine? No? Then what are you good for?' [or]'This city is so droll. Nothing like Madrid. You look a bit like a whore I knew there, though. Come aboard and remind me more!' [or]'Thank goodness, someone to scrub this decking. I am dripping all over the inlaid hardwoods.' [or]'Don't they know who I am? Why, I'll have them bent over the rail of my yacht and pound their asses until they're blue in the face. Mmm... that sounds lovely. Perhaps I'll practice a bit of that with you.' [or]'Thank goodness, someone other than these blue collar types. Come aboard for some wine and a hard fucking, will you?' [at random]He hops down from the deck, gearing up to fight!";
 
 Table of CombatPrep (continued)
 name(text)	PrepFunction(text)
@@ -91,30 +61,34 @@ name(text)	PrepFunction(text)
 
 to say PrepCombat_Yuppie Mink:
 	choose row MonsterID from the Table of Random Critters;
+	now ymgmode is a random number between 1 and 2;
 	if (MaleList is banned or MaleList is warded) and (FemaleList is banned or FemaleList is warded):		[if both types are banned, the fight is aborted and removed from critter table]
 		say "     Your wandering feet bring you close enough to see an aristocratic mink, albino or just royal white, puttering around the deck of their yacht. With a haughty sniff, they turn their nose up at you and vanish belowdecks.";
 		now BannedStatus entry is true;
 		now fightoutcome is 19;
 		now combat abort is 1;
 		now ymgmode is 0;
-	else if MaleList is banned or MaleList is warded:
-		now ymgmode is 1;
-	else if FemaleList is banned or FemaleList is warded:
-		now ymgmode is 2;
-	else if a random chance of 1 in 2 succeeds:
-		now ymgmode is 1;
 	else:
-		now ymgmode is 2;
-	if ymgmode is 1:
-		setmongender 4; [creature is female]
-		project figure of YuppieMink_icon;
-		now sex entry is "Male";
-		if Player is FemalePreferred, now sex entry is "Female";
-	else if ymgmode is 2:
-		setmongender 3; [creature is male]
-		project figure of YuppieMink_M_clothed_icon;
-		now sex entry is "Female";
-		if Player is MalePreferred, now sex entry is "Male";
+		if MaleList is banned or (MaleList is warded and FemaleList is not warded):
+			now ymgmode is 1;
+		else if FemaleList is banned or (FemaleList is warded and MaleList is not warded):
+			now ymgmode is 2;
+		if ymgmode is 1:
+			setmongender 4; [creature is female]
+			project figure of YuppieMink_icon;
+		else:
+			setmongender 3; [creature is male]
+			project figure of YuppieMink_M_clothed_icon;
+		if Player is MalePreferred:
+			now sex entry is "Male";
+		else if Player is FemalePreferred:
+			now sex entry is "Female";
+		else if Player is HermPreferred:
+			now sex entry is "Both";
+		else if ymgmode is 1:
+			now sex entry is "Male";
+		else:
+			now sex entry is "Female";
 
 Table of Random Critters (continued)
 NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
@@ -127,8 +101,6 @@ When Play begins:
 	add "Yuppie Mink" to infections of MustelidList;
 	add "Yuppie Mink" to infections of FurryList;
 	add "Yuppie Mink" to infections of NatureList;
-	add "Yuppie Mink" to infections of MaleList;
-	add "Yuppie Mink" to infections of FemaleList;
 	add "Yuppie Mink" to infections of TaperedCockList;
 	add "Yuppie Mink" to infections of BipedalList;
 	add "Yuppie Mink" to infections of TailList;
@@ -136,10 +108,10 @@ When Play begins:
 	now enemy title entry is ""; [ Name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name. ]
 	now enemy Name entry is ""; [ Specific name of unique enemy. ]
 	now enemy type entry is 0; [ 0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters. ]
-	now attack entry is "[ymgfight]";
+	now attack entry is "     [if ymgmode is 1][one of]The mink digs her manicured claws into your flesh![or]She pulls out her racquet and gives you a firm swat with it![or]With a sudden swirl of her short skirt, she kicks you right in the shin![or]She falls back and gestures, allowing a deckhand to throw something heavy at you![or]She bites at you fiercely, then spends a moment wiping the taste of commoner from her mouth.[or]She hits you on the head with an empty bottle of champagne.[or]With a keening cry, she hurls herself at you with limited effectiveness.[or]She lifts her short skirt, exposing her needy cunt to you playfully, sapping your will to fight.[at random][else][one of]The mink digs his manicured claws into your flesh![or]He pulls off his hat and throws it like a disc![or]With a growling snarl, he whips his pocketwatch around by the chain and hits you in the face![or]He steps back to allow a deckhand to wallop you from behind![or]He momentarily sidesteps, accepting a mixed drink from a deckhand. After draining it, he hurls the empty glass at you![or]He writhes his hips forward and milks his cock, splattering you with precum.[or]He digs around in his pockets, and passes a bribe to the nearest stevedore. You never see the empty crate that falls on your head![at random][end if]";
 	now defeated entry is "[beattheymg]";
 	now victory entry is "[losetoymg]";
-	now desc entry is "[ymgdesc]";
+	now desc entry is "     Moored at the docks among the industrial and commercial crafts are also several pleasure boats caught up in the military blockade. From one of them, a slender white figure appears. Some kind of mink or ermine, with shimmering white fur and a regal bearing that oozes [if ymgmode is 1]haughty attitude. The matching white tennis ensemble she wears does little to conceal her pert breasts and shapely thighs, attractive even if she is huffy and upset. [one of]'This dock is absolutely filthy! It puts me in a crass mood,' [or]'Did you bring the fresh supplies of caviar and wine? No? Then what are you good for?' [or]'This outbreak has ruined my shed-ule! You there! Amuse me for a bit!' [or]'Ah, a replacement for my cabana boy!' [or]'Does the harbormaster know who I am? This is asinine!' [or]'I hope you brought a racquet with you,' [at random]she says it in a clipped tone, pausing before hopping from the deck to fight you[else]contempt. The smart blue captain's jacket he wears with the matching hat is lovely, but the lack of pants leaves his dripping cock and swinging sack on full display. He doesn't seem to mind at all, setting down his wine glass before calling to you. [one of]'Ahoy there! You must be my new sexy cabin boy!' [or]'Did you bring the fresh supplies of caviar and wine? No? Then what are you good for?' [or]'This city is so droll. Nothing like Madrid. You look a bit like a whore I knew there, though. Come aboard and remind me more!' [or]'Thank goodness, someone to scrub this decking. I am dripping all over the inlaid hardwoods.' [or]'Don't they know who I am? Why, I'll have them bent over the rail of my yacht and pound their asses until they're blue in the face. Mmm... that sounds lovely. Perhaps I'll practice a bit of that with you.' [or]'Thank goodness, someone other than these blue collar types. Come aboard for some wine and a hard fucking, will you?' [at random]He hops down from the deck, gearing up to fight[end if]![line break]";
 	now face entry is "narrowed and strongly defined with an arrogant, aristocratic bearing made all the more visible by stark white fur. Tiny ears, a pink nose, and lips that reflexively twitch into sneers";
 	now body entry is "elegantly thin and tapered, with an elongated torso and somewhat short limbs. The narrow width of your shoulders and hips simplifies your silhouette to the most basic and sleek of profiles. Slightly built, and delicately wrought, your body is perfect for complementing satin and gold";
 	now skin entry is "[one of]satin soft white fur[or]elegantly white-furred[or]short but silky-smooth milky fur[at random]";
@@ -290,7 +262,6 @@ When Play begins:
 	[Clit Size Adjective is generated by a function and can be used in scenes: very small/small/average/large/very large]
 ]
 
-
 Section 3 - Endings
 
 Table of GameEndings (continued)
@@ -311,6 +282,5 @@ This is the Yuppie Mink Infection rule:
 			else: [MALE]
 				say "     It takes a bit of time and some quick thinking, but before long you manage to identify a young heiress, pretty enough but unattached. You use your considerable charm and sensuality, capitalizing on the rich allure of your natural scent to captivate her. When you judge her to be at the apex of affection and fertile, you strike with the predatory swiftness of your mink breeding. The stolen poetry flows from your lips like honeyed wine, and the touch of your nimble paws tear down the last of her defenses. She offers her body, and you take it with all the masculine force you can bring to bear. Again and again you dump thick, hot loads from your oversized nuts deep into her cunt, taking pains to ensure she catches your litter that first night. By morning, your pups are planted deep inside her young body, securing the first part of your plan.";
 				say "     Her parents are less than pleased that a seemingly penniless mutant has bred their daughter, and intends to wed. A bit of charm does the trick - dear old mum gets a skilled fucking right atop her tea cozies, while dad experiences the famous mink flexibility as you ride his cock and suck his balls at the same time. She is barely showing when you walk down the aisle, but that soon changes. A lot of things change, actually, as you become the center of a slew of minks! Between your children and your wife, you also infect her immediate family with your strain of nouveau riche minkness.";
-
 
 Yuppie Mink ends here.

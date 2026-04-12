@@ -13,40 +13,25 @@ automatonending is a number that varies.
 
 to say losetoautomaton:
 	if autogender is 1:
-		if HP of Player > 0:
-			say "     You submit to the metal man, unwilling to fight the robotic person any longer. ";
-		else:
-			say "     You are knocked down by the metal man, unable to continue to fight the robotic person any longer. ";
 		if Player is female and a random chance of 3 in 4 succeeds:
-			say "He grabs you and pins you down beneath him, moving mechanically, but with clear intent. Laying you on the ground beneath him, the metal man moves atop you and sinks his stiff, metal cock into your pussy. His rod is quite hard and is cool at first, but warms up quickly as he thrusts into you with mechanical motion over and over. His rhythm is steady and soon has you moaning beneath him as he drives his [if metalskin is 1]bronze[else if metalskin is 2]aluminum[else if metalskin is 3]cobalt[else if metalskin is 4]steel[end if] shaft into you until you cum. As you orgasm beneath him, you feel the hot pulse of his silvery seed shooting into you, claiming your womb with his mercurial semen. Once he's been drained, he gets up and moves off, searching for a new partner to infect and breed.";
+			say "     You [if HP of Player > 0]submit to the metal man, unwilling[else]are knocked down by the metal man, unable to continue[end if] to fight the robotic person any longer. He grabs you and pins you down beneath him, moving mechanically, but with clear intent. Laying you on the ground beneath him, the metal man moves atop you and sinks his stiff, metal cock into your pussy. His rod is quite hard and is cool at first, but warms up quickly as he thrusts into you with mechanical motion over and over. His rhythm is steady and soon has you moaning beneath him as he drives his [if metalskin is 1]bronze[else if metalskin is 2]aluminum[else if metalskin is 3]cobalt[else if metalskin is 4]steel[end if] shaft into you until you cum. As you orgasm beneath him, you feel the hot pulse of his silvery seed shooting into you, claiming your womb with his mercurial semen. Once he's been drained, he gets up and moves off, searching for a new partner to infect and breed.";
 			CreatureSexAftermath "Player" receives "PussyFuck" from "Automaton";
 		else if Player is not female and a random chance of anallevel in 4 succeeds:
-			say "He grabs you and pins you down beneath him, moving mechanically, but with clear intent. Pushing you onto all fours, the metal man moves atop you and sinks his stiff, metal cock into your ass. His rod is quite hard and is cool at first, but warms up quickly as he thrusts into you with mechanical motion over and over. His rhythm is steady and soon has you moaning beneath him as he drives his [if metalskin is 1]bronze[else if metalskin is 2]aluminum[else if metalskin is 3]cobalt[else if metalskin is 4]steel[end if] shaft into you until [if Player is male]you cum. As you orgasm beneath him, [end if]you feel the hot pulse of his silvery seed shooting into you. This mercurial semen flows into you, claiming your ass as the metal man empties his balls into you. Once he's been drained, he gets up and moves off, searching for a new partner to mount and infect.";
+			say "     You [if HP of Player > 0]submit to the metal man, unwilling[else]are knocked down by the metal man, unable to continue[end if] to fight the robotic person any longer. He grabs you and pins you down beneath him, moving mechanically, but with clear intent. Pushing you onto all fours, the metal man moves atop you and sinks his stiff, metal cock into your ass. His rod is quite hard and is cool at first, but warms up quickly as he thrusts into you with mechanical motion over and over. His rhythm is steady and soon has you moaning beneath him as he drives his [if metalskin is 1]bronze[else if metalskin is 2]aluminum[else if metalskin is 3]cobalt[else if metalskin is 4]steel[end if] shaft into you until [if Player is male]you cum. As you orgasm beneath him, [end if]you feel the hot pulse of his silvery seed shooting into you. This mercurial semen flows into you, claiming your ass as the metal man empties his balls into you. Once he's been drained, he gets up and moves off, searching for a new partner to mount and infect.";
 			CreatureSexAftermath "Player" receives "AssFuck" from "Automaton";
 		else:
-			say "He takes you by the shoulders and firmly pushes you to your knees. Mechanically moving a hand to the back of your head, your face is pressed to his crotch[if HP of Player > 0]. Having conceded the fight, you must acceded to his emotionless demand and[else]. Given the firmness of his emotionless demand, you have little choice but to[end if] open your mouth to welcome his [if metalskin is 1]bronze[else if metalskin is 2]aluminum[else if metalskin is 3]cobalt[else if metalskin is 4]steel[end if] shaft into your mouth. The rod is quite hard and is cool at first, though it warms up quickly as you lick and suck at it.";
+			say "     You [if HP of Player > 0]submit to the metal man, unwilling[else]are knocked down by the metal man, unable to continue[end if] to fight the robotic person any longer. He takes you by the shoulders and firmly pushes you to your knees. Mechanically moving a hand to the back of your head, your face is pressed to his crotch. [if HP of Player > 0]Having conceded the fight, you must acceded to his emotionless demand and[else]Given the firmness of his emotionless demand, you have little choice but to[end if] open your mouth to welcome his [if metalskin is 1]bronze[else if metalskin is 2]aluminum[else if metalskin is 3]cobalt[else if metalskin is 4]steel[end if] shaft into your mouth. The rod is quite hard and is cool at first, though it warms up quickly as you lick and suck at it.";
 			say "     He remains impassive as he thrusts into you with mechanical motion over and over. His rhythm is steady and allows you to work your tongue and palate over the shiny penis. While it does have a faintly metallic taste, there is something enticing about its flavor as well. His lack of external reaction only goads you on further, working with increasing zeal in your attempt to get the unfeeling robot man to cum. After a few minutes of this, you've gotten yourself quite worked up and are finally rewarded for your efforts with the metal man's mercurial seed. Pulse after pulse of silvery cum shoots across your tongue and down your throat. The taste and texture of it may be unusual, but is also strangely exciting, with both the musky tang of semen and the slickness of the flowing metal. Once he's been drained, you are pushed back and he moves off, searching for a new partner to claim and infect.";
 			CreatureSexAftermath "Player" receives "OralCock" from "Automaton";
 	else:
-		if HP of Player > 0:
-			say "     You submit to the metal woman, unwilling to fight the robotic person any longer. ";
-		else:
-			say "     You are knocked down by the metal woman, unable to continue to fight the robotic person any longer. ";
 		if Player is male and a random chance of 3 in 4 succeeds:
-			say "She grabs you and pushes you to the ground, moving mechanically atop you. Her movements may be stiff, but her intent is clear as she grabs your cock and sinks her lubricated pussy down over your [cock size desc of Player] [Cock of Player] shaft. Her [if metalskin is 1]bronze[else if metalskin is 2]aluminum[else if metalskin is 3]cobalt[else if metalskin is 4]steel[end if] lips spread open around your [cock size desc of Player] rod with a soft whirr, opening to be a perfect fit for you[if Cock Length of Player > 30]. Your oversized shaft deforms her metal hide as she rides you[else if Cock Length of Player > 20]. Your enlarged shaft makes a noticeable bulge in her metal hide as she rides you[end if]. The robotic woman's cunt is cool at first, but warms up quickly as you fuck her. Her even, mechanical motions over your cock soon has your rod throbbing and pulsing until you're driven to cum inside her, pumping your hot load into her robotic womb. Her function complete, she pulls off of you, pushes you to the ground and strides off.";
+			say "     You [if HP of Player > 0]submit to the metal woman, unwilling[else]are knocked down by the metal woman, unable to continue[end if] to fight the robotic person any longer. She grabs you and pushes you to the ground, moving mechanically atop you. Her movements may be stiff, but her intent is clear as she grabs your cock and sinks her lubricated pussy down over your [cock size desc of Player] [Cock of Player] shaft. Her [if metalskin is 1]bronze[else if metalskin is 2]aluminum[else if metalskin is 3]cobalt[else if metalskin is 4]steel[end if] lips spread open around your [cock size desc of Player] rod with a soft whirr, opening to be a perfect fit for you[if Cock Length of Player > 30]. Your oversized shaft deforms her metal hide as she rides you[else if Cock Length of Player > 20]. Your enlarged shaft makes a noticeable bulge in her metal hide as she rides you[end if]. The robotic woman's cunt is cool at first, but warms up quickly as you fuck her. Her even, mechanical motions over your cock soon has your rod throbbing and pulsing until you're driven to cum inside her, pumping your hot load into her robotic womb. Her function complete, she pulls off of you, pushes you to the ground and strides off.";
 			CreatureSexAftermath "Automaton" receives "PussyFuck" from "Player";
 		else:
-			say "She grabs you by the head and presses your face between her legs, pushing your lips to her [if metalskin is 1]bronze[else if metalskin is 2]aluminum[else if metalskin is 3]cobalt[else if metalskin is 4]steel[end if] pussy. Those folds are cool and lightly oiled, yielding to your tongue's touch as you set to work. The metal woman remains impassive as you lick her, but shows no intent on letting you go, so you continue attempting to pleasure her, working with increasing zeal as you work all the harder to get the unfeeling robot woman to cum. The only clear signs that it's working is the fact that her pussy grows warmer and wetter as you continue. Eventually, you are met with success of a kind as the automaton presses your head between her thighs and a fresh flow of oily juices soak your face. Apparently satisfied, she pushes you away and strides off.";
-			CreatureSexAftermath "Automaton" receives "OralPussy" from "Player";
-
-to say beattheautomaton:
-	say "     Having beaten the metal [if autogender is 1]man[else]woman[end if], the lights in its eyes go out and it crumples to the ground like an unpowered toy. There's a faint electrical hum from it, soft but slowly growing, as if it's working to charge itself up again.";
+			say "     You [if HP of Player > 0]submit to the metal woman, unwilling[else]are knocked down by the metal woman, unable to continue[end if] to fight the robotic person any longer. She grabs you by the head and presses your face between her legs, pushing your lips to her [if metalskin is 1]bronze[else if metalskin is 2]aluminum[else if metalskin is 3]cobalt[else if metalskin is 4]steel[end if] pussy. Those folds are cool and lightly oiled, yielding to your tongue's touch as you set to work. The metal woman remains impassive as you lick her, but shows no intent on letting you go, so you continue attempting to pleasure her, working with increasing zeal as you work all the harder to get the unfeeling robot woman to cum. The only clear signs that it's working is the fact that her pussy grows warmer and wetter as you continue. Eventually, you are met with success of a kind as the automaton presses your head between her thighs and a fresh flow of oily juices soak your face. Apparently satisfied, she pushes you away and strides off.";
+			CreatureSexAftermath "Player" receives "OralPussy" from "Automaton";
 
 Section 2 - Creature Insertion
-
-to say automatondesc:
-	say "     Before you is a strange person, completely human in form but covered in a layer of metallic skin. This polished hide is made of [if metalskin is 1]bronze[else if metalskin is 2]aluminum[else if metalskin is 3]cobalt with a faint blue tint[else if metalskin is 4]steel[end if] and seamless. The metal [if autogender is 1]man[else]woman[end if][']s eyes are featureless [if metalskin is 1]amber[else if metalskin is 2]blue[else if metalskin is 3]green[else if metalskin is 4]red[end if] lights. [if autogender is 1]His[else]Her[end if] hair has become metallic in color to match its skin. This person looks like any normal person you might meet, but transformed into metal and sapped of their will. [if autogender is 1]He[else]She[end if] moves stiffly and without emotion, moving towards you with the intent of grabbing you[if autogender is 1]. The metal man's cock is a hard pillar of metallic flesh that it probably intends on nailing you with[else]. The metal woman's pussy is damp with an oily sheen, showing the automaton's arousal[end if].";
-
 
 Table of CombatPrep (continued)
 name(text)	PrepFunction(text)
@@ -61,33 +46,33 @@ to say PrepCombat_Automaton:
 		now fightoutcome is 19;
 		now autogender is 0;
 		now combat abort is 1;
-	else if FemaleList is banned:
-		now autogender is 1; [male]
-	else if MaleList is banned:
-		now autogender is 2; [female]
-	else if MaleList is warded and FemaleList is warded:
-		now autogender is a random number between 1 and 2;
-	else if ishunting is true:	[hunting results in 2/3rds chance to get unwarded option]
-		if MaleList is warded and a random chance of 1 in 3 succeeds:
-			now autogender is 2;
-		else if FemaleList is warded and a random chance of 1 in 3 succeeds:
-			now autogender is 1;
-	else if ishunting is false:
-		if MaleList is warded:
-			now autogender is 2;
-		else if FemaleList is warded:
-			now autogender is 1;
-	now metalskin is a random number between 1 and 4;
-	if autogender is 1:		[male]
-		setmongender 3;
-		now sex entry is "Female";
-		if Player is MalePreferred, now sex entry is "Male";
-		now lootchance entry is 33;
 	else:
-		setmongender 4; [female]
-		now sex entry is "Male";
-		if Player is FemalePreferred, now sex entry is "Female";
-		now lootchance entry is 0;
+		if FemaleList is banned:
+			now autogender is 1; [male]
+		else if MaleList is banned:
+			now autogender is 2; [female]
+		else if MaleList is not warded or FemaleList is not warded:	[hunting results in 2/3rds chance to get unwarded option]
+			if MaleList is warded and (ishunting is false or a random chance of 1 in 3 succeeds):
+				now autogender is 2;
+			else if FemaleList is warded and (ishunting is false or a random chance of 1 in 3 succeeds):
+				now autogender is 1;
+		now metalskin is a random number between 1 and 4;
+		if autogender is 1:		[male]
+			setmongender 3;
+			now lootchance entry is 33;
+		else:
+			setmongender 4; [female]
+			now lootchance entry is 0;
+		if Player is MalePreferred:
+			now sex entry is "Male";
+		else if Player is FemalePreferred:
+			now sex entry is "Female";
+		else if Player is HermPreferred:
+			now sex entry is "Both";
+		else if autogender is 1:
+			now sex entry is "Female";
+		else:
+			now sex entry is "Male";
 
 Table of Random Critters (continued)
 NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
@@ -97,28 +82,26 @@ When Play begins:
 	Choose a blank row from Table of Random Critters;
 	now NewTypeInfection entry is false;
 	now Species Name entry is "Automaton"; [ Name of the overall species of the infection, used so a "male x" and "female x" have "pureblood X" children. ]
-	add "Automaton" to infections of FemaleList;
 	add "Automaton" to infections of MachineList;
-	add "Automaton" to infections of MaleList;
 	add "Automaton" to infections of BipedalList;
 	now Name entry is "Automaton"; [ Infection/Creature name. Capitalized. ]
 	now enemy title entry is ""; [ Name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name. ]
 	now enemy Name entry is ""; [ Specific name of unique enemy. ]
 	now enemy type entry is 0; [ 0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters. ]
 	now attack entry is "[one of][if a random chance of 1 in 3 succeeds]The automaton[else if autogender is 1]He[else]She[end if] strikes you with a metal fist![or][if a random chance of 1 in 3 succeeds]The automaton[else if autogender is 1]He[else]She[end if] squeezes your wrist in its painfully strong grip![or][if a random chance of 1 in 3 succeeds]The automaton[else if autogender is 1]He[else]She[end if] batters you hard blows![or][if a random chance of 1 in 3 succeeds]The automaton[else if autogender is 1]He[else]She[end if] knees you in the gut with its metal leg![at random]";
-	now defeated entry is "[beattheautomaton]"; [ Text when monster loses. ]
+	now defeated entry is "     Having beaten the metal [if autogender is 1]man[else]woman[end if], the lights in its eyes go out and it crumples to the ground like an unpowered toy. There's a faint electrical hum from it, soft but slowly growing, as if it's working to charge itself up again.[line break]"; [ Text when monster loses. ]
 	now victory entry is "[losetoautomaton]"; [ Text when monster wins. ]
-	now desc entry is "[automatondesc]"; [ Description of the creature when you encounter it. ]
+	now desc entry is "     Before you is a strange person, completely human in form but covered in a layer of metallic skin. This polished hide is made of [if metalskin is 1]bronze[else if metalskin is 2]aluminum[else if metalskin is 3]cobalt with a faint blue tint[else if metalskin is 4]steel[end if] and seamless. The metal [if autogender is 1]man[else]woman[end if][']s eyes are featureless [if metalskin is 1]amber[else if metalskin is 2]blue[else if metalskin is 3]green[else if metalskin is 4]red[end if] lights. [if autogender is 1]His[else]Her[end if] hair has become metallic in color to match its skin. This person looks like any normal person you might meet, but transformed into metal and sapped of their will. [if autogender is 1]He[else]She[end if] moves stiffly and without emotion, moving towards you with the intent of grabbing you. The metal [if autogender is 1]man's cock is a hard pillar of metallic flesh that it probably intends on nailing you with[else]woman's pussy is damp with an oily sheen, showing the automaton's arousal[end if].[line break]"; [ Description of the creature when you encounter it. ]
 	now face entry is "a [if Player is female]feminine[else]masculine[end if] version of your human face, but flat and expressionless. Your eyes glow with a [if Playermetalskin is 1]yellow[else if Playermetalskin is 2]blue[else if Playermetalskin is 3]green[else if Playermetalskin is 4]red[end if] light";
 	now body entry is "back to human in form, but moves with stiff, mechanical motions as if you're no longer flesh and blood inside"; [ Body description, format as "Your body is [Body of Player]." ]
 	now skin entry is "[if Playermetalskin is 1]bronze[else if Playermetalskin is 2]aluminum[else if Playermetalskin is 3]cobalt with a faint blue tint[else if Playermetalskin is 4]steel[end if]";
 	now tail entry is ""; [ Ass/Tail. Write as a full sentence (with period) or leave blank for none. ]
 	now cock entry is "[one of]metallic[or][if Playermetalskin is 1]bronze[else if Playermetalskin is 2]aluminum[else if Playermetalskin is 3]cobalt[else if Playermetalskin is 4]steel[end if][or]human-shaped[at random]";
 	now face change entry is "your head shifts and changes, becoming a [if Player is female]feminine[else]masculine[end if] version of your old, human face, but stiff and expressionless with [if Playermetalskin is 1]amber[else if Playermetalskin is 2]blue[else if Playermetalskin is 3]green[else if Playermetalskin is 4]red[end if], glowing eyes";
-	now body change entry is "feels painful, especially at the joints, stiffening your body. Your muscles and bones seems to change inside you, finally settling back down into a normal, human form. Your body now moves quick stiffly with rather mechanical movements as if you're not quite human inside any longer";
+	now body change entry is "it feels painful, especially at the joints, stiffening your body. Your muscles and bones seems to change inside you, finally settling back down into a normal, human form. Your body now moves quick stiffly with rather mechanical movements as if you're not quite human inside any longer";
 	now skin change entry is "[autoskinchange]";
 	now ass change entry is "your ass whirrs mechanically as it changes, becoming a sexy human rump that moves with a stiff, rocking motion as you walk";
-	now cock change entry is "throbs and pulses, spurting silvery white semen as your flesh becomes metallic [if Playermetalskin is 1]bronze[else if Playermetalskin is 2]aluminum[else if Playermetalskin is 3]cobalt[else if Playermetalskin is 4]steel[end if]";
+	now cock change entry is "it throbs and pulses, spurting silvery white semen as your flesh becomes metallic [if Playermetalskin is 1]bronze[else if Playermetalskin is 2]aluminum[else if Playermetalskin is 3]cobalt[else if Playermetalskin is 4]steel[end if]";
 	now str entry is 16; [ These are now the creature's stats... ]
 	now dex entry is 16; [ ...and are only altered onto the player via Shifting or the Mighty Mutation feat ]
 	now sta entry is 16; [ These values may be used as part of alternate combat.]
@@ -259,7 +242,6 @@ When Play begins:
 	[Clit Size Adjective is generated by a function and can be used in scenes: very small/small/average/large/very large]
 ]
 
-
 to say autoskinchange:
 	now playermetalskin is metalskin;
 	say "grows hard and metallic, stiffening into a shifting, flexing skin made of [if Playermetalskin is 1]bronze[else if Playermetalskin is 2]aluminum[else if Playermetalskin is 3]cobalt[else if Playermetalskin is 4]steel[end if]";
@@ -282,56 +264,24 @@ name	desc	weight	object
 "Automaton gear"	"A copper gear that looks like it has been pulled out of an automaton."	1	Automaton gear
 
 Automaton gear is a grab object.
-It is temporary.
 Usedesc of Automaton gear is "[Automaton gear use]".
+Scent of Automaton gear is "The gear has a coppery, metallic scent.".
 
 to say Automaton gear use:
-	say "Holding the automaton gear on a finger, you spin it idly with your other hand, curious as to how well it turns. Strangely, the gear disintegrates after a while, becoming a cloud of fine particles that are absorbed into your skin.";
-	Infect "Automaton";
+	setmonster "Automaton";
+	choose row MonsterID from Table of Random Critters;
+	if Player is FemalePreferred:
+		now sex entry is "Female";
+	else if Player is HermPreferred:
+		now sex entry is "Both";
+	else:
+		now sex entry is "Male";
+	say "     Holding the automaton gear on a finger, you spin it idly with your other hand, curious as to how well it turns. Strangely, the gear disintegrates after a while, becoming a cloud of fine particles that are absorbed into your skin.";
+	infect;
 
-instead of sniffing Automaton gear:
-	say "The gear has a coppery, metallic scent.";
-
-Table of Game Objects (continued)
-name	desc	weight	object
-"automaton cum"	"A plastic water bottle containing a moderate amount of milky white fluid. Almost could be mistaken for mercury, if someone hadn't written 'Automaton Cum' across the label on the bottle. You [italic type]could[roman type] drink it to quench your thirst, or you maybe just do it for fun. Who knows what else it might do to you though..."	1	automaton cum
-
-automaton cum is a grab object.
-automaton cum is cum.
-automaton cum is infectious.
-Purified of automaton cum is "distilled cum".
-Strain of automaton cum is "Automaton".
-Usedesc of automaton cum is "[automaton cum use]";
-
-to say automaton cum use:
-	say "Lifting the plastic bottle to your mouth, you take a drink from it, letting the creamy cum run over your tongue and down your throat. Tastes metallic. Swishing it around in your mouth a little, you finish the bottle off, then stuff it back into your collection of 'empties'.";
-	PlayerDrink 5;
-	SanLoss 5;
-
-instead of sniffing automaton cum:
-	say "You open the lid for a moment and take a sniff. Doesn't smell too bad actually, just kinda coppery.";
-
-Table of Game Objects (continued)
-name	desc	weight	object
-"automaton milk"	"A plastic water bottle filled with what is clearly milk. One could think it was a regular cow's milk, if someone hadn't written 'Automaton Milk' across the label on the bottle. You [italic type]could[roman type] drink it to quench your thirst. Who knows what else it might do to you though..."	1	automaton milk
-
-automaton milk is a grab object.
-automaton milk is milky.
-Purified of automaton milk is "distilled milk".
-automaton milk is infectious.
-Strain of automaton milk is "Automaton".
-Usedesc of automaton milk is "[automaton milk use]";
-
-to say automaton milk use:
-	say "Lifting the plastic bottle to your mouth, you take a drink from it, letting the automaton milk run over your tongue and down your throat. Tastes rich and a little like metal. Swishing it around in your mouth a little, you finish the bottle off, then stuff it back into your collection of 'empties'.";
-	PlayerDrink 15;
-
-instead of sniffing automaton milk:
-	say "You open the lid for a moment and take a sniff. Smells kinda like any other milk, really.";
+Section 4 - Endings
 
 [
-Section 3 - Endings
-
 Table of GameEndings (continued)
 Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
 "Automaton Infection"	"Infection"	""	Automaton Infection rule	1000	false

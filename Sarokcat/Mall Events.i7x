@@ -15,31 +15,28 @@ Sarea of Tight Space is "Mall".
 to say ResolveEvent Tight Space:
 	say "     You come across a very narrow opening in the sewers underneath the city. You think you see something gleaming in the back of it, but it would be a really tight squeeze to fit in there and might leave you vulnerable to attack. Do you try to enter the tight space anyways?";
 	if Player consents:
-		let T be a random number between one and five;
-		if T is 1:
-			say "     It looks like the glint was just some leftover iridescent paint someone smeared here.";
-			now Resolution of Tight Space is 1; [found nothing]
-		else if T is 2:
-			say "     You find an unopened bottle of water that must have rolled in here!";
-			ItemGain water bottle by 1;
-			now Resolution of Tight Space is 2; [found water]
-		else if T is 3:
-			say "     You get stuck in the tight space. Panicking, you struggle and fight to get out, eventually managing to tear your way free, leaving a good portion of skin behind though... damn that hurts!";
-			decrease HP of Player by 20;
-			now Resolution of Tight Space is 3; [stuck]
-		else if T is 4:
-			say "     It looks like someone made a little nest down here. You find some comic books and a few other shiny items, but most importantly you find some chips and soda to snack on!";
-			ItemGain chips by 1;
-			ItemGain soda by 1;
-			now Resolution of Tight Space is 4; [nest]
-		else:
-			say "     As you wriggle into the tight space, you hear something moving behind in behind you. It was a trap!";
-			fight;
-			now Resolution of Tight Space is 5; [trap]
+		LineBreak;
+		now Resolution of Tight Space is a random number between one and five;
+		if Resolution of Tight Space is:
+			-- 1: [found nothing]
+				say "     It looks like the glint was just some leftover iridescent paint someone smeared here.";
+			-- 2: [found water]
+				say "     You find an unopened bottle of water that must have rolled in here!";
+				ItemGain water bottle by 1;
+			-- 3: [stuck]
+				say "     You get stuck in the tight space. Panicking, you struggle and fight to get out, eventually managing to tear your way free, leaving a good portion of skin behind though... damn that hurts!";
+				decrease HP of Player by 20;
+			-- 4: [nest]
+				say "     It looks like someone made a little nest down here. You find some comic books and a few other shiny items, but most importantly you find some chips and soda to snack on!";
+				ItemGain chips by 1;
+				ItemGain soda by 1;
+			-- 5: [trap]
+				say "     As you wriggle into the tight space, you hear something moving behind in behind you. It was a trap!";
+				fight;
 	else:
+		LineBreak;
 		say "     Deciding to play it safe, you leave the narrow opening alone and continue about your business.";
 		now Resolution of Tight Space is 99; [did not want to go in]
-
 
 Section 2 - Strange echo
 
@@ -55,7 +52,6 @@ Sarea of Strange Echo is "Mall".
 to say ResolveEvent Strange Echo:
 	say "     While exploring the sewers, you come across a strange tapping noise, almost like someone is following you. The noise stops when you stop moving and try to determine where it is coming from. Feeling slightly paranoid, you try moving in a different direction, only to have the noise begin again even louder. Panicking slightly you break into a run, only to have the sounds of lots of creatures charging forward surround you. Fearing the worst, you let out a loud shout as you ready for combat! When your shout reverberates back at you from all around you due to the many hollow pipes and arches in the area, you blush as you realize you have been scared by the echo of your own passage.";
 	now Strange Echo is resolved;
-
 
 Section 3 - Sewer worker
 
@@ -89,7 +85,6 @@ to say ResolveEvent Totally Lost:
 	say "     After a while of traveling the sewer passages, you try to head back only to realize that you must have somehow got turned around down here, and have no idea just where you are and how to get out. Beginning to panic, you start to run down different passageways at random - only to stumble out right into the area you entered the sewers. Apparently you have been wandering around in circles for hours.";
 	now Totally Lost is resolved;
 
-
 Section 6 - puddle of goo
 
 Table of GameEventIDs (continued)
@@ -100,26 +95,28 @@ Puddle of Goo	"Puddle of Goo"
 Puddle of Goo is a situation.
 ResolveFunction of Puddle of Goo is "[ResolveEvent Puddle of Goo]".
 Sarea of Puddle of Goo is "Mall".
-when play begins:
-	add Puddle of Goo to BadSpots of FemaleList;
+
+[when play begins:
+	add Puddle of Goo to BadSpots of FemaleList;]
 
 to say ResolveEvent Puddle of Goo:
 	say "     Looking around in the area under the mall, you find a strange puddle of goo just lying there in the middle of the passageway. You think you could take a sample if you wanted to.";
 	if Player consents:
-		let bonus be (( Dexterity of Player minus 10 ) divided by 2);
+		LineBreak;
+		let bonus be ( Dexterity of Player minus 10 ) divided by 2;
 		let diceroll be a random number from 1 to 20;
-		say "     You roll 1d20([diceroll])+[bonus]: [diceroll + bonus], ";
+		say "     You roll 1d20([diceroll])[if bonus >= 0]+[end if][bonus] = [special-style-1][diceroll + bonus][roman type] vs [special-style-2]15[roman type] (Dexterity Check): ";
 		increase diceroll by bonus;
 		if diceroll > 14:
 			say "You manage to gather up some of the strange goo without incident!";
 			ItemGain glob of goo by 2;
 		else:
 			say "While trying to gather up some of the strange substance, you slip and fall in it instead!";
-			infect "Goo Girl";
-			infect "Goo Girl";
+			MultiInfect "Goo Girl" repeats 2;
 			ItemGain glob of goo by 1;
-			now Resolution of Puddle of Goo is 1; [collected]
+		now Resolution of Puddle of Goo is 1; [collected]
 	else:
+		LineBreak;
 		say "     Deciding it is always best to leave strange, gooey puddles alone, you give it a wide berth as you continue on your way.";
 		now Resolution of Puddle of Goo is 2; [did not collect]
 	now Puddle of Goo is resolved;
@@ -149,15 +146,16 @@ Goo Gathering	"Goo Gathering"
 Goo Gathering is a situation.
 ResolveFunction of Goo Gathering is "[ResolveEvent Goo Gathering]". The level of Goo Gathering is 2.
 Sarea of Goo Gathering is "Mall".
+
 when play begins:
 	add Goo Gathering to BadSpots of MaleList;
 	add Goo Gathering to BadSpots of FurryList;
 
 to say ResolveEvent Goo Gathering:
 	say "     Traveling through the dim passages under the city, you come across a large open area where several tunnels come together. Looking out into the area, you are surprised to see a large amount of those gooey girls gathered around talking to each other. Deciding discretion is the better part of valor, you try to slip away down the passageway before you can be noticed.";
-	let bonus be (( Dexterity of Player minus 10 ) divided by 2);
+	let bonus be ( Dexterity of Player minus 10 ) divided by 2;
 	let diceroll be a random number from 1 to 20;
-	say "     You roll 1d20([diceroll])+[bonus]: [diceroll + bonus], ";
+	say "[line break]     You roll 1d20([diceroll])[if bonus >= 0]+[end if][bonus] = [special-style-1][diceroll + bonus][roman type] vs [special-style-2]15[roman type] (Dexterity Check): ";
 	increase diceroll by bonus;
 	if diceroll > 14:
 		say "Your nimble feet navigate the passage without any problems, allowing you to slip away from the potentially dangerous situation unharmed.";
@@ -171,7 +169,6 @@ to say ResolveEvent Goo Gathering:
 		now Resolution of Goo Gathering is 2; [fight]
 	now Goo Gathering is resolved;
 
-
 Section 9 - Old rail system
 
 Table of GameEventIDs (continued)
@@ -184,17 +181,15 @@ ResolveFunction of Old Rail System is "[ResolveEvent Old Rail System]".
 Sarea of Old Rail System is "Mall".
 
 to say ResolveEvent Old Rail System:
-	say "     Moving through the deserted passages under the city, you find an old metal door, half concealed by the darkness and rubble. You curiously try the door only to find that while it is unlocked, it is partially rusted shut, you pull and tug on the door, until with a rusty shriek it finally opens. You pause for a second, the silence seeming deafening after the loud noise, hoping nothing down here heard that. ";
 	if a random chance of 1 in 2 succeeds:
-		say "Luckily, it seems nothing heard the noise and you continue through the now open door.";
+		say "     Moving through the deserted passages under the city, you find an old metal door, half concealed by the darkness and rubble. You curiously try the door only to find that while it is unlocked, it is partially rusted shut, you pull and tug on the door, until with a rusty shriek it finally opens. You pause for a second, the silence seeming deafening after the loud noise, hoping nothing down here heard that. Luckily, it seems nothing heard the noise and you continue through the now open door.";
 		now Resolution of Old Rail System is 1; [safe]
 	else:
-		say "Unfortunately, the noise seems to have alerted something to your location!";
+		say "     Moving through the deserted passages under the city, you find an old metal door, half concealed by the darkness and rubble. You curiously try the door only to find that while it is unlocked, it is partially rusted shut, you pull and tug on the door, until with a rusty shriek it finally opens. You pause for a second, the silence seeming deafening after the loud noise, hoping nothing down here heard that. Unfortunately, the noise seems to have alerted something to your location!";
 		fight;
 		say "     Recovering from the unexpected encounter, you continue through the now open door.";
+		now Resolution of Old Rail System is 2; [fight]
 	say "     Inside the door you find a large mostly sealed off area, the remains of what appears to be an old rail station, with part of an old rail truck still sitting there on the turning section. You look around in amazement at this abandoned bit of history, and at a few of the still open rail tunnels, the partially rusted rails leading farther off into the darkness. Sadly the place is so old you don't think you will find much of use here for your current situation, but it could be fun to return and explore further sometime.";
-	now Resolution of Old Rail System is 2; [fight]
 	now Old Rail System is resolved;
-
 
 Mall Events ends here.

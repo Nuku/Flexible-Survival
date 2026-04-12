@@ -186,8 +186,6 @@ to say beatthefelinegymnast:
 				say "Pick between 1 and [the number of filled rows in the table of fucking options], or 0 to exit.";
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options], or 0 to exit.";
-	wait for any key;
-	clear the screen and hyperlink list;
 
 [Victory scene - Give oral
 Player is given the option to:

@@ -2,7 +2,6 @@ Badger by StripeGuy begins here.
 
 "Adds a Badger to Flexible Survival's Wandering Monsters table, with impreg chance"
 
-
 Section 1 - Creature Responses
 
 to say Badger wins:
@@ -21,20 +20,14 @@ to say Badger wins:
 		say "     With a growling snarl, the badger tenses and grips you tighter as he slams in. With his cock buried deep and fat balls mashed against your ass, the mustelid explodes in orgasm. The sensation of his hot cum filling your guts is enough to send your overwhelmed body over the cliff onto a tidal wave of orgasm. Satisfaction and pleasure explode behind your eyelids in a bright flash like demolition charges. Your [if Player is male][Cum Load Size of Player] load spills onto the ground[else]genderless body pulls and squeezes at his cock, unable to gain its own release[end if], but what does that matter? Your dominant stud has his seed where it belongs - deep inside of you. When the badger pulls out and stands up, you are left a weak and woozy mess - humiliated, but well-fucked and deeply pleased. 'Go ahead and have a kip, slut. Give us a bell when you want to visit my kingdom.' The badger stretches his limbs and adjusts his monocle before burrowing back into the earth.";
 		CreatureSexAftermath "Player" receives "AssFuck" from "Badger";
 
-To say Badger loses:
-	project Figure of Badger_clothed_icon;
-	say "     'I thought that'd be a doddle,' the badger complains, his voice low and lacking in gall. 'You must be quite chuffed, but leaving a badger on the ground is a botch job, you know?' Before you can quite parse his odd vernacular, he's put all paws to the ground. The dirt surges, and the defeated brock vanishes in a spray of turf and earth. All that is left of him is a dark hole in the ground and his final echoing taunt. 'Cheerio!'";
-
 Section 2 - Creature Insertion
-
-to say Badger_desc:
-	say "     Wandering around the park and admiring the sights, your eyes are looking anywhere but down. This is a mistake, as you almost tumble headlong into a deep pit, barely catching your feet. The narrow pit leads into a tunnel, from which a burly anthro badger emerges! Splattered in rich, clean earth, this rugged, muscular male is wearing almost nothing, just a ripped pair of shorts and white undershirt, plus a battered helmet with a lantern on the front. [one of]'Cor! An invader, or immigrant to my kingdom?' [or]'You look like a dog's dinner. Let me bugger you better, love,' [or]'Cost of a gander is a bit of fagging, mate,' [or]'Now who's this now, looking so fit and fruity!' [or]'No need to flog your arse, I'm easy,' [or]'Not enough badgers, in my mind. I'll get that sorted now,' [or]'No time to leg it, you're in for the duration,' [or]'Trying to nick my kit? You're off your trolley,' [at random]he growls out, before tightening his helmet strap and moving in to attack!";
 
 Table of CombatPrep (continued)
 name(text)	PrepFunction(text)
 "Badger"	"[PrepCombat_Badger]"
 
 to say PrepCombat_Badger:
+	setmongender 3; [creature is male]
 	project Figure of Badger_clothed_icon;
 
 Table of Random Critters (continued)
@@ -58,9 +51,9 @@ When Play begins:
 	now enemy Name entry is ""; [ Specific name of unique enemy. ]
 	now enemy type entry is 0; [ 0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters. ]
 	now attack entry is "[one of]The brock lunges forward, leaning his shoulder into a powerful tackle![or]The big mustelid rubs down his striped body, flexing thick musculature in sequence, milking out his thickly scented musk. He flings the liquid at you in a spray, dazing you![or]The broad badger bring his big paws to bear, swiping at you with his thick claws![or]With a deep growl, the badger crouches down and shoots forward, open muzzle darting forward to bite![or]The gruff badger stud throws himself forward into a dropkick, slamming his stout legs into your chest![at random]";
-	now defeated entry is "[Badger loses]";
+	now defeated entry is "     'I thought that'd be a doddle,' the badger complains, his voice low and lacking in gall. 'You must be quite chuffed, but leaving a badger on the ground is a botch job, you know?' Before you can quite parse his odd vernacular, he's put all paws to the ground. The dirt surges, and the defeated brock vanishes in a spray of turf and earth. All that is left of him is a dark hole in the ground and his final echoing taunt, 'Cheerio!'[line break]";
 	now victory entry is "[Badger wins]";
-	now desc entry is "[Badger_desc]";
+	now desc entry is "     Wandering around the park and admiring the sights, your eyes are looking anywhere but down. This is a mistake, as you almost tumble headlong into a deep pit, barely catching your feet. The narrow pit leads into a tunnel, from which a burly anthro badger emerges! Splattered in rich, clean earth, this rugged, muscular male is wearing almost nothing, just a ripped pair of shorts and white undershirt, plus a battered helmet with a lantern on the front. [one of]'Cor! An invader, or immigrant to my kingdom?' [or]'You look like a dog's dinner. Let me bugger you better, love,' [or]'Cost of a gander is a bit of fagging, mate,' [or]'Now who's this now, looking so fit and fruity!' [or]'No need to flog your arse, I'm easy,' [or]'Not enough badgers, in my mind. I'll get that sorted now,' [or]'No time to leg it, you're in for the duration,' [or]'Trying to nick my kit? You're off your trolley,' [at random]he growls out, before tightening his helmet strap and moving in to attack![line break]";
 	now face entry is "a very acutely wedge-shaped face, long and tapered for powerful biting and burrowing. Your ears are small and round, black with stripes that roll forward across your eyes and snout. Anyone can see you have a badger";
 	now body entry is "broad and stocky, limbs rather short but incredibly strong. Slightly hunched over and tightly packed with powerful muscle, you present a compact and extremely dense collection of high-torque low upkeep tunneling capacity";
 	now skin entry is "[one of]black and white stripes on a gray setting[or]coarse furred[or]badger striped[or]musky badger fur[at random]";
@@ -210,7 +203,6 @@ When Play begins:
 	now Clit Size entry is 0; [size 1-5, see Clit Size Adjective]
 	[Clit Size Adjective is generated by a function and can be used in scenes: very small/small/average/large/very large]
 ]
-
 
 Section 3 - Endings
 

@@ -85,7 +85,7 @@ TwistedCapacity of Kyle is false. [Twisted Characters can take any penetration, 
 Sterile of Kyle is true. [steriles can't knock people up]
 MainInfection of Kyle is "".
 Description of Kyle is "[KyleDesc]".
-Conversation of Kyle is { "<This is nothing but a placeholder!>" }.
+fuckscene of Kyle is "[KyleSexMenu]".
 The scent of Kyle is "     Kyle smells like scales and paper.".
 
 to say KyleDesc:
@@ -99,8 +99,7 @@ Section 2 - Talk
 instead of conversing the Kyle:
 	if KyleRelationship < 1: [First time meeting Kyle]
 		say "     As you walk up to the lizardman, he looks up from the book he seems to be absentmindedly reading. 'Oh, hello there. I don't think I've seen you around here before. We don't get a lot of new faces in the bookstore here.' He closes the book he is holding and slides it back on to the bookshelves before turning back to face you again. 'My name is Kyle, and I'm something of a regular here.' He pauses, and looks slightly lizardman-ish for a moment. 'But I don't want to just go off on a long speech right here out in the middle of the store. Do you have time to sit down and chat?'";
-		say "     [bold type]Do you stay and talk with Kyle?[roman type][line break]";
-		LineBreak;
+		say "[line break]     [bold type]Do you stay and talk with Kyle?[roman type][line break]";
 		say "     ([link]Y[as]y[end link]) - Stay and talk with the lizardman.";
 		say "     ([link]N[as]n[end link]) - Not right now.";
 		if Player consents:
@@ -113,8 +112,7 @@ instead of conversing the Kyle:
 			now KyleRelationship is 100;
 	else if KyleRelationship is 100:
 		say "     As you walk up to Kyle, he looks up from the book he seems to be absentmindedly reading. 'Oh, it's you again, hello. Do you have time to chat?'";
-		say "     [bold type]Do you stay and talk with Kyle?[roman type][line break]";
-		LineBreak;
+		say "[line break]     [bold type]Do you stay and talk with Kyle?[roman type][line break]";
 		say "     ([link]Y[as]y[end link]) - Stay and talk with the lizardman.";
 		say "     ([link]N[as]n[end link]) - Not right now.";
 		if Player consents:
@@ -127,7 +125,6 @@ instead of conversing the Kyle:
 			say "     Kyle looks slightly crestfallen at your response, before speaking. 'I suppose that's fair. I'm sure you must be busy. But feel free to come back to talk if you have time.'";
 	else:
 		say "     As you walk up to Kyle, he brightens upon seeing you. Then the tall lizardman puts away the book he was browsing, and brings you into the back room of the bookstore once again. Once you arrive, you both sit down, and Kyle clears some space on the table in front of him before speaking. 'Nice to see you again. What did you want to talk about?'";
-		WaitLineBreak;
 		say "[KyleTalkMenu]";
 
 to say KyleIntroTalk:
@@ -135,8 +132,7 @@ to say KyleIntroTalk:
 	say "     You take a seat at the table, and on the opposite side, Kyle does the same. 'Well, like I already told you, my name is Kyle. Before all of this happened,' he says, gesturing broadly outward, 'I was just living in the city, getting by with part time jobs after I graduated from Tenvale. I was an English major, if you were wondering. In my free time, I was trying to write a novel, and make a career as a writer. This whole mess shot that down somewhat, though I'm not giving up completely.' He pauses, and looks more intently at you. 'And what about you? What's your story?' You take a few moments and summarize your experience to Kyle. 'That sounds like quite the experience, friend. I'm glad you came into the store, and that we had this talk. If you ever want to talk more, just stop by, and we can come back here again.' After your conversation, both you and Kyle leave the back room, returning to the bookstore.";
 
 to say KyleTalkMenu:
-	LineBreak;
-	say "What do you want to talk with Kyle about?";
+	say "[line break]     What do you want to talk with Kyle about?";
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]
@@ -160,24 +156,24 @@ to say KyleTalkMenu:
 		now title entry is "His Friend";
 		now sortorder entry is 4;
 		now description entry is "Talk to him about the friend he mentioned";
-	[]
-	if KyleRelationship > 4 and KyleRelationship < 100:
-		choose a blank row in the table of fucking options;
-		now title entry is "Relationship";
-		now sortorder entry is 5;
-		now description entry is "Talk to him about a relationship";
-	[]
-	if KyleRelationship is 10 and Libido of Kyle is 0:
-		choose a blank row in the table of fucking options;
-		now title entry is "Having Sex";
-		now sortorder entry is 6;
-		now description entry is "Talk to Kyle about progressing your relationship";
-	[]
-	if KyleRelationship is 10:
-		choose a blank row in the table of fucking options;
-		now title entry is "Date";
-		now sortorder entry is 7;
-		now description entry is "Ask Kyle on another date";
+		[]
+		if KyleRelationship > 4 and KyleRelationship < 100:
+			choose a blank row in the table of fucking options;
+			now title entry is "Relationship";
+			now sortorder entry is 5;
+			now description entry is "Talk to him about a relationship";
+		[]
+		if KyleRelationship is 10:
+			if Libido of Kyle is 0:
+				choose a blank row in the table of fucking options;
+				now title entry is "Having Sex";
+				now sortorder entry is 6;
+				now description entry is "Talk to Kyle about progressing your relationship";
+			[]
+			choose a blank row in the table of fucking options;
+			now title entry is "Date";
+			now sortorder entry is 7;
+			now description entry is "Ask Kyle on another date";
 	[]
 	if GertyRelationship is 6:
 		choose a blank row in the table of fucking options;
@@ -198,32 +194,33 @@ to say KyleTalkMenu:
 			choose row calcnumber in table of fucking options;
 			say "[title entry]: [description entry]?";
 			if Player consents:
-				let nam be title entry;
+				LineBreak;
 				now sextablerun is 1;
-				if (nam is "Himself"):
-					say "[KyleTalk1]";
-				if (nam is "The City"):
-					say "[KyleTalk2]";
-				if (nam is "His Novel"):
-					say "[KyleTalk3]";
-				if (nam is "His Friend"):
-					say "[KyleTalk4]";
-				if (nam is "Relationship"):
-					say "[KyleTalk5]";
-				if (nam is "Having Sex"):
-					say "[KyleTalk6]";
-				if (nam is "Date"):
-					say "[KyleTalk7]";
-				if (nam is "Threesome"):
-					say "[KyleTalk8]";
+				if title entry is:
+					-- "Himself":
+						say "[KyleTalk1]";
+					-- "The City":
+						say "[KyleTalk2]";
+					-- "His Novel":
+						say "[KyleTalk3]";
+					-- "His Friend":
+						say "[KyleTalk4]";
+					-- "Relationship":
+						say "[KyleTalk5]";
+					-- "Having Sex":
+						say "[KyleTalk6]";
+					-- "Date":
+						say "[KyleTalk7]";
+					-- "Threesome":
+						say "[KyleTalk8]";
 				say "     Kyle gets up and heads for the door out of the back room, and you follow. 'Well, it was nice talking to you. Come back soon when you have some time, and we can chat some more.'";
-				wait for any key;
 		else if calcnumber is 0:
+			LineBreak;
 			now sextablerun is 1;
 			say "     You step back from Kyle, shaking your head slightly as he gives a questioning look.";
-			wait for any key;
 		else:
-			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options], or 0 to exit.";
+	wait for any key;
 	clear the screen and hyperlink list;
 
 to say KyleTalk1: [talk about him]
@@ -249,8 +246,7 @@ to say KyleTalk4: [talk about his friend]
 	if GertyQuest is 0: [player has not accepted GertyQuest]
 		say "     'Ah, Gerty. Definitely an interesting individual. He's one of my best friends, but he's often a bit... much for most people. He takes his literature very seriously, and is similarly serious about his art. He doesn't let anything keep him away from those things, that's for sure. When he was changed in the disaster, he ended up without arms. Instead he worked with an acquaintance of his to design some prosthetic limbs he could still manipulate, and even though it's barely been any time, he can already handle himself about as well as he could before.' Kyle looks fairly contented talking about his friend, but pauses, and stares off to the side for several moments. His expression grows somewhat concerned.";
 		say "     'Now that I think about it, Gerty was supposed to come back here with some books he was going to collect a while ago. He's usually very punctual. I'm worried that something may have happened to him. I'm not really suited to going out and making sure he's all right, but I can ask you. Would you mind looking for Gerty, and helping him out if he's in trouble? He's almost certainly at a bookstore in the [bold type]High Rise District[roman type] if he's in trouble.'";
-		say "     [bold type]Do you tell him you'll look for Gerty?[roman type][line break]";
-		LineBreak;
+		say "[line break]     [bold type]Do you tell him you'll look for Gerty?[roman type][line break]";
 		say "     ([link]Y[as]y[end link]) - Accept the task.";
 		say "     ([link]N[as]n[end link]) - No, it's too dangerous.";
 		if Player consents:
@@ -262,10 +258,9 @@ to say KyleTalk4: [talk about his friend]
 			LineBreak;
 			say "     Kyle looks crestfallen. 'I understand, the city out there is dangerous, and I'm sure you're a busy person. Just... think about it, okay?'";
 			now GertyQuest is 99;
-	if GertyQuest is 99: [if Player refused before]
+	else if GertyQuest is 99: [if Player refused before]
 		say "     Kyle looks at you pleadingly. 'Have you reconsidered looking for Gerty?'";
-		say "     [bold type]Do you tell him you'll look for Gerty?[roman type][line break]";
-		LineBreak;
+		say "[line break]     [bold type]Do you tell him you'll look for Gerty?[roman type][line break]";
 		say "     ([link]Y[as]y[end link]) - Accept the task.";
 		say "     ([link]N[as]n[end link]) - No, it's too dangerous.";
 		if Player consents:
@@ -277,22 +272,21 @@ to say KyleTalk4: [talk about his friend]
 			LineBreak;
 			say "     Kyle looks crestfallen. 'I understand, the city out there is dangerous, and I'm sure you're a busy person. Just... think about it, okay?'";
 			now GertyQuest is 99;
-	if GertyQuest is 1: [player accepted GertyQuest]
+	else if GertyQuest is 1: [player accepted GertyQuest]
 		say "     Kyle looks at you, concerned. 'Please, you should be looking for Gerty right now. Time with me can wait until I know he's not in danger.'";
-	if GertyQuest is 2: [player completed GertyQuest]
+	else if GertyQuest is 2: [player completed GertyQuest]
 		say "     Kyle turns to you, questioningly. You quickly reassure him, and pass on the message Gerty left with you. 'Oh, thank goodness that turned out okay!' Kyle throws his arms around you, hugging you tightly, and pressing your face against the bare scales of his shoulder. He holds you there for a moment, before pulling back slightly. Suddenly, he kisses you briefly, before almost leaping back, and stammering. 'I'm... glad you're okay too. Thank you so much for helping out.' While his new reptilian biology doesn't allow for it, you are completely certain he would be blushing if it was possible. After a moment of both of you shuffling somewhat awkwardly, he speaks once more. 'So yeah, thanks. I, uh, have some ideas I want to write about now, so I'll talk to you later okay?'";
 		now GertyQuest is 3;
 		now KyleRelationship is 5;
-	if GertyQuest is 3: [player turned in GertyQuest already]
+	else: [player turned in GertyQuest already]
 		say "     'Yeah, Gerty's doing alright, it seems. He was by here not that long ago with a few more books and observations.' Kyle looks off past you, clearly in thought for a moment. He then looks back at you, focused again. 'You should actually go see him one of these days. He likes to spend time in the library at Tenvale.' The lizardman grins. 'He'd be happy to see you, even if he complains about it. That's just how he acts about everything.'";
 
 to say KyleTalk5: [talk about relationship]
 	if KyleRelationship is 5:
 		say "     Kyle looks visibly embarrassed as you ask him about your relationship. 'Well, you've been such a good friend, and so willing to listen to me ramble on, I'd certainly love to keep spending more time with you. Really, I'd be happy to be more than just friends with you.' He pauses, and seems to be grasping for the right way to say it. 'I guess the best way to say this, is do you want to go on a date?'";
-		say "     [bold type]Do you agree to go on a date with Kyle[roman type][line break]";
-		LineBreak;
-		say "     ([link]Y[as]y[end link]) - Yes, you'll date him";
-		say "     ([link]N[as]n[end link]) - No, not right now";
+		say "[line break]     [bold type]Do you agree to go on a date with Kyle?[roman type][line break]";
+		say "     ([link]Y[as]y[end link]) - Yes, you'll date him.";
+		say "     ([link]N[as]n[end link]) - No, not right now.";
 		if Player consents:
 			LineBreak;
 			say "     Kyle looks incredibly happy. 'Oh, man, this is gonna be great. But what should we do...' He thinks for a moment, and looks through a few things at his table. 'Okay, I've got an idea. I don't really want to head too far out, so that cuts a lot of options. But let's meet up in the Mall Atrium, and go from there. Whenever you're ready I'll see you there, and we can do this.";
@@ -307,10 +301,9 @@ to say KyleTalk5: [talk about relationship]
 		say "     Kyle looks very excited to speak with you. 'I'm so glad you agreed to date me, you know. For all my writing skills, it can be really hard to explain it properly, but I'm really happy about it. I love spending time with you, and having you around.'";
 	else if KyleRelationship is 99:
 		say "     Kyle looks notably expectant as you ask him about your relationship. 'If you're asking, does that mean you've reconsidered going on a date with me?'";
-		say "     [bold type]Do you agree to go on a date with Kyle[roman type][line break]";
-		LineBreak;
-		say "     ([link]Y[as]y[end link]) - Yes, you'll date him";
-		say "     ([link]N[as]n[end link]) - No, not right now";
+		say "[line break]     [bold type]Do you agree to go on a date with Kyle?[roman type][line break]";
+		say "     ([link]Y[as]y[end link]) - Yes, you'll date him.";
+		say "     ([link]N[as]n[end link]) - No, not right now.";
 		if Player consents:
 			LineBreak;
 			say "     Kyle looks incredibly happy. 'Oh, man, this is gonna be great. But what should we do...' He thinks for a moment, and looks through a few things at his table. 'Okay, I've got an idea. I don't really want to head too far out, so that cuts a lot of options. But let's meet up in the Mall Atrium, and go from there. Whenever you're ready I'll see you there, and we can do this.";
@@ -341,10 +334,10 @@ to say KyleTalk8: [ask for threesome]
 
 Section 3 - Sex
 
-instead of fucking the Kyle:
-	if (lastfuck of Kyle - turns < 6): [he got fucked in the last 18 hours = 6 turns]
+to say KyleSexMenu:
+	if lastfuck of Kyle - turns < 6: [he got fucked in the last 18 hours = 6 turns]
 		say "     Kyle looks somewhat apologetic. 'Sorry, I'm still worn out from last time. You're almost more than I can handle. Definitely later though.'";
-	else if (KyleRelationship < 3): [relationship not high enough]
+	else if KyleRelationship < 3: [relationship not high enough]
 		say "     'Sorry, I'm not ready to just go and sleep with somebody I still don't know very well.'";
 	else if Libido of Kyle is 0: [not convinced yet]
 		say "     'I know you pretty well now and all, but I don't think I'm quite ready for that.'";
@@ -362,67 +355,62 @@ instead of fucking the Kyle:
 		now thirst of Kyle is 1;
 	else: [ready for sex]
 		say "     As you ask about more personal things, Kyle looks around quickly, and ushers you into the back room, looking rather excited.";
-		WaitLineBreak;
-		say "[KyleSexMenu]";
-
-to say KyleSexMenu:
-	LineBreak;
-	now sextablerun is 0;
-	blank out the whole of table of fucking options;
-	[]
-	if Player is male: [only males and herms can get a blowjob]
+		now sextablerun is 0;
+		blank out the whole of table of fucking options;
+		[]
+		if Player is male: [only males and herms can get a blowjob]
+			choose a blank row in table of fucking options;
+			now title entry is "Get a blowjob";
+			now sortorder entry is 1;
+			now description entry is "Let Kyle suck you off";
+			[]
+			choose a blank row in table of fucking options;
+			now title entry is "Fuck the lizardman"; [only males and herms can fuck him]
+			now sortorder entry is 3;
+			now description entry is "Take Kyle's ass for a ride";
+		[]
 		choose a blank row in table of fucking options;
-		now title entry is "Get a blowjob";
-		now sortorder entry is 1;
-		now description entry is "Let Kyle suck you off";
-	[]
-	choose a blank row in table of fucking options;
-	now title entry is "Suck Kyle off"; [anyone can blow him]
-	now sortorder entry is 2;
-	now description entry is "Wrap your lips around the lizardman's reptilian shaft";
-	[]
-	if Player is male: [only males and herms can fuck him]
+		now title entry is "Suck Kyle off"; [anyone can blow him]
+		now sortorder entry is 2;
+		now description entry is "Wrap your lips around the lizardman's reptilian shaft";
+		[
 		choose a blank row in table of fucking options;
-		now title entry is "Fuck the lizardman";
-		now sortorder entry is 3;
-		now description entry is "Take Kyle's ass for a ride";
-	[]
-	[choose a blank row in table of fucking options;
-	now title entry is "Take Kyle's shaft in your ass";
-	now sortorder entry is 4;
-	now description entry is "Offer sex to the lizardman";]
-	[]
-	sort the table of fucking options in sortorder order;
-	repeat with y running from 1 to number of filled rows in table of fucking options:
-		choose row y from the table of fucking options;
-		say "[link][y] - [title entry][as][y][end link][line break]";
-	say "[link]0 - Nevermind[as]0[end link][line break]";
-	while sextablerun is 0:
-		say "Pick the corresponding number> [run paragraph on]";
-		get a number;
-		if calcnumber > 0 and calcnumber <= the number of filled rows in table of fucking options:
-			now current menu selection is calcnumber;
-			choose row calcnumber in table of fucking options;
-			say "[title entry]: [description entry]?";
-			if Player consents:
-				let nam be title entry;
+		now title entry is "Take Kyle's shaft in your ass";
+		now sortorder entry is 4;
+		now description entry is "Offer sex to the lizardman";
+		]
+		sort the table of fucking options in sortorder order;
+		repeat with y running from 1 to number of filled rows in table of fucking options:
+			choose row y from the table of fucking options;
+			say "[link][y] - [title entry][as][y][end link][line break]";
+		say "[link]0 - Nevermind[as]0[end link][line break]";
+		while sextablerun is 0:
+			say "Pick the corresponding number> [run paragraph on]";
+			get a number;
+			if calcnumber > 0 and calcnumber <= the number of filled rows in table of fucking options:
+				now current menu selection is calcnumber;
+				choose row calcnumber in table of fucking options;
+				say "[title entry]: [description entry]?";
+				if Player consents:
+					LineBreak;
+					now sextablerun is 1;
+					if title entry is:
+						-- "Get a blowjob":
+							say "[KyleSex1]";
+						-- "Suck Kyle off":
+							say "[KyleSex2]";
+						-- "Fuck the lizardman":
+							say "[KyleSex3]";
+						[-- "Take Kyle's shaft in your ass":
+							say "[KyleSex4]";]
+			else if calcnumber is 0:
+				LineBreak;
 				now sextablerun is 1;
-				if (nam is "Get a blowjob"):
-					say "[KyleSex1]";
-				if (nam is "Suck Kyle off"):
-					say "[KyleSex2]";
-				if (nam is "Fuck the lizardman"):
-					say "[KyleSex3]";
-				if (nam is "Take Kyle's shaft in your ass"):
-					say "[KyleSex4]";
-				wait for any key;
-		else if calcnumber is 0:
-			now sextablerun is 1;
-			say "     You step back from the anthro lizardman, shaking your head slightly as he gives a questioning look.";
-			wait for any key;
-		else:
-			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
-	clear the screen and hyperlink list;
+				say "     You step back from the anthro lizardman, shaking your head slightly as he gives a questioning look.";
+			else:
+				say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options], or 0 to exit.";
+		wait for any key;
+		clear the screen and hyperlink list;
 
 to say KyleSex1: [oral on the player]
 	say "     It doesn't take long after you enter the room before Kyle has already taken a hold of your erection. He strokes it a few times, and sinks to his knees. He smiles up at you from his lowered position, and then starts licking up and down your shaft with his lengthy tongue, performing some rather impressive feats of dexterity with it as he does so. Soon he shifts forward, and engulfs your dick in his reptilian mouth, starting to bob up and down, adding to the sensation offered by his skilled tongue. He looks up, and you lock eyes as he pleasures you, the feelings only growing more intense. Kyle is the one to break your eye contact, as he pushes down further onto your [Cock of Player in lower case] cock, and reaches below to tease your sack as well.";
@@ -444,8 +432,8 @@ to say KyleSex3: [Kyle fucked]
 	say "     Soon enough the pleasure intensifies as Kyle begins to properly ride you, rising up and down on your shaft. You can feel the warm tightness of his ass around you, the friction bringing ever greater sensations. The lizardman seems to be feeling similarly, as his bouncing pace increases, and he starts to let out moans, a slight peaking in the tone each time his cheeks slap back against your thighs. Time seems to get away from you, blurring into a sexual haze as Kyle continues to ride your cock like there's no tomorrow. Eventually the growing pleasure begins to surge, cutting through the haze, and bringing the scene back into sharp clarity just as you start to come. Your erection throbs, and you can feel yourself releasing deep into Kyle, as he holds himself pressed down all the way, taking your shaft completely. As you cry out in orgasm, Kyle follows soon after, his member jerking and firing spurts of seed across each of your chests.";
 	say "     The two of you remain sitting there for a short while, panting from the exertion, Kyle leaning draped across you and holding tight. Eventually you both fully catch your breath, and extricate yourselves from your emrace, starting to clean up from your exploits. After you've cleaned off, Kyle finally picks up his pants, and slips them back on. Then the lizardman walks back over to you and embraces you. 'That was wonderful, love. I'd probably be a bit more verbose about it, but I don't think I'll be able to concentrate properly for a while yet.' He laughs. 'Anyway, can't wait to do this again, so come back soon, okay?' You nod to Kyle, and he squeezes you once more before letting go, and the two of you leave the back room.";
 
-to say KyleSex4: [Kyle fucks player ass]
-	say "     <text to be added later";
+[to say KyleSex4: [Kyle fucks player ass]
+	say "     <text to be added later";]
 
 Section 4 - Events
 
@@ -468,7 +456,6 @@ to say ResolveEvent Angry Snake:
 		let GroupFightCounter be 0;
 		now fightoutcome is 0; [reset]
 		while fightoutcome < 20 and GroupFightCounter < 3: [runs three times or until loss/flee]
-			now inasituation is true;
 			challenge "German Shepherd Male";
 			increase GroupFightCounter by 1;
 		if fightoutcome < 20:
@@ -488,13 +475,11 @@ to say ResolveEvent Angry Snake:
 			say "     You decide to cut your losses and get out of the bookstore before you are defeated by your canine adversaries. You turn around and run, fleeing out the door of the building to the sound of Gerty hurling both books and insults at your foes. Hopefully he'll be fine for now.";
 			now Resolution of Angry Snake is 3; [fled the fight]
 			now GertyQuest is 100;
-		now inasituation is false;
-	if GertyQuest is 100:
+	else:
 		say "     You return to the bookshop where Gerty had been holding out in, and peer inside. It seems he's still been able to keep any ferals at bay, as any given creature that makes a move towards his fort receives a swift retribution in the form of a book to the nose. Deciding not to leave him trapped any longer, you leap into action to fight the canines prowling around.";
 		let GroupFightCounter be 0;
 		now fightoutcome is 0; [reset]
 		while fightoutcome < 20 and GroupFightCounter < 3: [runs three times or until loss/flee]
-			now inasituation is true;
 			challenge "German Shepherd Male";
 			increase GroupFightCounter by 1;
 		if fightoutcome < 20:
@@ -512,77 +497,69 @@ to say ResolveEvent Angry Snake:
 		if fightoutcome is 30:
 			say "     You decide to cut your losses and get out of the bookstore before you are defeated by your canine adversaries. You turn around and run, fleeing out the door of the building to the sound of Gerty hurling both books and insults at your foes. Hopefully he'll be fine for now.";
 			now Resolution of Angry Snake is 3; [fled the fight]
-		now inasituation is false;
 
-instead of going to Mall Atrium while HP of Kyle is 1: [Kyle date event] [{]
-	KyleDateEvent;
-
-to KyleDateEvent:
-	move player to Mall Atrium;
+after going to Mall Atrium while HP of Kyle is 1: [Kyle date event]
+	[move player to Mall Atrium;]
 	say "     As you enter the main room of the mall, you see Kyle leaning up against the wall, slightly out of the way of the main crowds. You walk over to him, dodging out of the way of a mall rat as you go. When you get close, Kyle notices you, and smiles. 'Glad to see you. Now, we should probably decide what we're actually going to do for the date.' He stteps away from the wall, and glances around the atrium. 'I'm not entirely sure about leaving the mall for it, since it can be pretty dangerous out there, and I'm not really good at the whole danger thing. And I'm sure we could have an excellent time here in the mall. But I'll leave the decision to you. Where do you want to go?'";
+	now HP of Kyle is 0;
 	if KyleRelationship < 10:
 		now KyleRelationship is 10;
-		now HP of Kyle is 0;
-		say KyleDate1;
+		say "[KyleDate1]";
 	else:
-		now HP of Kyle is 0;
-		say "[KyleDateMenu]";
-
-to say KyleDateMenu:
-	LineBreak;
-	say "Where do you want to go on a date with Kyle?";
-	now sextablerun is 0;
-	blank out the whole of table of fucking options;
-	[]
-	choose a blank row in table of fucking options;
-	now title entry is "The Mall";
-	now sortorder entry is 1;
-	now description entry is "Stay in the mall and hang out";
-	[]
-	[if Park Entrance is known:
+		say "[line break]     Where do you want to go on a date with Kyle?";
+		now sextablerun is 0;
+		blank out the whole of table of fucking options;
+		[]
 		choose a blank row in table of fucking options;
-		now title entry is "The Park";
-		now sortorder entry is 2;
-		now description entry is "Go to the park";]
-	[]
-	[if Beach Plaza is known:
-		choose a blank row in table of fucking options;
-		now title entry is "The Beach";
+		now title entry is "The Mall";
 		now sortorder entry is 1;
-		now description entry is "Take Kyle to the beach";]
-	[]
-	sort the table of fucking options in sortorder order;
-	repeat with y running from 1 to number of filled rows in table of fucking options:
-		choose row y from the table of fucking options;
-		say "[link][y] - [title entry][as][y][end link][line break]";
-	while sextablerun is 0:
-		say "Pick the corresponding number> [run paragraph on]";
-		get a number;
-		if calcnumber > 0 and calcnumber <= the number of filled rows in table of fucking options:
-			now current menu selection is calcnumber;
-			choose row calcnumber in table of fucking options;
-			say "[title entry]: [description entry]?";
-			if Player consents:
-				let nam be title entry;
-				now sextablerun is 1;
-				if (nam is "The Mall"):
-					say "[KyleDate2]";
-				if (nam is "The Park"):
-					say "[KyleDate3]";
-				if (nam is "The Beach"):
-					say "[KyleDate4]";
-				wait for any key;
-		else:
-			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options]";
-	clear the screen and hyperlink list;
+		now description entry is "Stay in the mall and hang out";
+		[
+		if Park Entrance is known:
+			choose a blank row in table of fucking options;
+			now title entry is "The Park";
+			now sortorder entry is 3;
+			now description entry is "Go to the park";
+		[]
+		if Beach Plaza is known:
+			choose a blank row in table of fucking options;
+			now title entry is "The Beach";
+			now sortorder entry is 2;
+			now description entry is "Take Kyle to the beach";
+		]
+		sort the table of fucking options in sortorder order;
+		repeat with y running from 1 to number of filled rows in table of fucking options:
+			choose row y from the table of fucking options;
+			say "[link][y] - [title entry][as][y][end link][line break]";
+		while sextablerun is 0:
+			say "Pick the corresponding number> [run paragraph on]";
+			get a number;
+			if calcnumber > 0 and calcnumber <= the number of filled rows in table of fucking options:
+				now current menu selection is calcnumber;
+				choose row calcnumber in table of fucking options;
+				say "[title entry]: [description entry]?";
+				if Player consents:
+					LineBreak;
+					now sextablerun is 1;
+					if title entry is:
+						-- "The Mall":
+							say "[KyleDate1]";
+						[-- "The Park":
+							say "[KyleDate3]";
+						-- "The Beach":
+							say "[KyleDate4]";]
+			else:
+				say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options]";
+		wait for any key;
+		clear the screen and hyperlink list;
 
 to say KyleDate1: [first mall date]
-	say "     You tell Kyle that you're fine with staying in the mall, and spending some time with him there. He smiles in response. 'It may not be the most spectacular, but hey, it'll be a pretty great date no matter what, as long as we're spending it together, right?' You nod at Kyle in affirmation. 'Great. Now, I've spent enough time here to know my way around fairly well, so come on. I'll give you a tour.' For the next while, Kyle leads you around the mall, showing you the various points of interest, and telling you things about them that only a mall local would know. Some time is spent at the various mall stores that are still functional, browsing collections, discussing items, and generally having an enjoyable time. Finally, the two of you come back to the atrium of the mall, and the two of you sit in the center, looking at the fountain. Though it's now just a stagnant pool of water, you can still see clearly how it used to look.";
+	say "     You tell Kyle that you're fine with staying in the mall, and spending some time with him here. He smiles in response. 'It may not be the most spectacular, but hey, it'll be a pretty great date no matter what, as long as we're spending it together, right?' You nod at Kyle in affirmation. 'Great. Now, I've spent enough time here to know my way around fairly well, so come on. I'll give you a tour.' For the next while, Kyle leads you around the mall, showing you the various points of interest, and telling you things about them that only a mall local would know. Some time is spent at the various mall stores that are still functional, browsing collections, discussing items, and generally having an enjoyable time. Finally, the two of you come back to the atrium of the mall, and the two of you sit in the center, looking at the fountain. Though it's now just a stagnant pool of water, you can still see clearly how it used to look.";
 	say "     As the two of you lean into each other in front of the fountain, Kyle speaks. 'Hey, I had a really good time, even without leaving the mall. Spending time with you is nice, and I'd definitely like to do it more.' Kyle looks away from the still water of the fountain, and meets your gaze. 'I think that I'm ready for this to be a relationship, now. I was nervous before, I'd never really done anything of the sort. Always too much of an introvert, never looked very hard. But this? This is good. I definitely want to do this again.' Kyle's voice is somewhat tense, a measure of nervous energy putting him on edge. You smile at the lizardman, agreeing on may of those points. Rather than let him engage further in his nervous speech, however, you answer him affirmatively, by leaning forward and catching his lips with a kiss.";
 	WaitLineBreak;
 	say "     As the kiss goes on, Kyle relaxes, and leans further into you. After a short while, you finally break apart to breathe properly, and Kyle smiles. 'Well, I suppose I can take that as an agreement, can't I? Well, I may have said it already, but it bears saying again. The date was wonderful, and you were wonderful. I'm glad we did it, and I can't wait for more.' Kyle suddenly shoots forwards and gives you a hug. 'I'll see you soon, I hope, back at the shop, love. Oh, that sounds great. Love. Anyway, even the best date has to end somewhere, so see you later, love.' Kyle stands up and walks back towards the east wing of the mall, leaving you sitting by the fountain in the atrium, enjoying the warm feeling you still have.";
 
-to say KyleDate2: [mall date]
+[to say KyleDate2: [mall date]
 	say "     A";
 
 to say KyleDate3: [park date]
@@ -592,16 +569,13 @@ to say KyleDate3: [park date]
 to say KyleDate4: [beach date]
 	say "     <text>";
 
-
-[instead of going to Brookstone Books while (GertyRelationship is 5 and a random chance of 1 in 3 succeeds): [First Gerty threesome event]
+instead of going to Brookstone Books while (GertyRelationship is 5 and a random chance of 1 in 3 succeeds): [First Gerty threesome event]
 	move player to Brookstone Books;
-	say "     <Gerty Threesome Event Text>";]
+	say "     <Gerty Threesome Event Text>";
 
-[
 instead of going to Brookstone Books while (Thirst of Kyle is 1):
 	move player to Brookstone Books;
 	say "     <Second Threesome Text>";
-	now Thirst of Kyle is 0;
-]
+	now Thirst of Kyle is 0;]
 
 Kyle ends here.

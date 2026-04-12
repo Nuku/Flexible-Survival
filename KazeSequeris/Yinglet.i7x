@@ -60,8 +60,6 @@ to say Yinglets loses:
 			say "     You've had enough of their antics for one day. You assure them you won't harm them any further, and tell them they're in for another beatdown if they tangle with you again. You continue on your way, leaving the needy yinglets in one part relief and two parts disappointment.";
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options], or 0 to exit.";
-	wait for any key;
-	clear the screen and hyperlink list;
 
 to say YingletsFuck1:
 	say "     The largest of them clasps his hands together and pleads, 'Please, sopretty lady! Sostrong lady! We didn't want no'zing bad! We just... so so needy!' His two underlings chime in together. 'Ya, zis big misunderstand!' 'Yes yes, sopretty lady! Just wanted ze humping!' Poor things, all they need is a little attention. With your own libido urging you on, you step over the largest of the group. He looks fearfully up at you from his vulnerable position on his back, but you reassure him with a smile. You lower your body over his, hand sliding down his tiny body until your fingers graze his length. That seems to do the trick. His quivering stops, and you lower yourself until your netherlips press against his tip. His eyes roll back as you slide yourself down around his cock.";

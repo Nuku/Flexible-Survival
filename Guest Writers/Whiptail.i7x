@@ -139,8 +139,6 @@ to say WhiptailVanquishedSexMenu:
 			say "     You stand up and walk away, shaking your head at the thought of what you almost did.";
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options], or 0 to exit.";
-	wait for any key;
-	clear the screen and hyperlink list;
 
 to say WhiptailHermTrib:			[Maybe penis isn't so bad.]
 	setmonster "Whiptail";

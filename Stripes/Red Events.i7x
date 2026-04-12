@@ -3,7 +3,6 @@ Version 2 of Red Events by Stripes begins here.
 
 "Adds a series of random events to Flexible Survival located at or focusing on the Red Light District."
 
-
 Section 1 - Leather Wolves
 
 [Moved to Zigor file]
@@ -22,37 +21,33 @@ to say ResolveEvent Fetish Store:
 	if Resolution of Fetish Store is 0:
 		say "     While wandering the streets of Red Light District, you come across a gloomy alleyway, which looks somewhat forgotten like the rest of the area. As you take a few steps into the alley, shards of glass from the shattered shop windows crack beneath your feet. It looks like most of the buildings around you have been thoroughly ransacked, but one place still draws your interest with a darkened neon sign reading 'Fetish Store' just above the windows. It used to have mannequins to show the sexy gear on sale, but you can clearly see these no longer occupy their due place, being instead left on the floor in a pitiful state among other types of shop furniture.";
 		say "     There doesn't seem to be anyone around, if the disturbing silence wasn't evident enough. Nonetheless, you could find something of value, or even entertaining, in this kinky emporium, if you chose to search it. You do need to be careful with any traces of sloppy fun some past visitors may have already had with the contents inside, as of course, you know better than to hope that didn't happen already. The faint smell of sex fluids already reaching your nostrils would prove you wrong.";
-		say "     [bold type]Do you still choose to enter and search the place?[roman type] You could also come back later, if you choose to leave.[line break]";
+		say "[line break]     [bold type]Do you still choose to enter and search the place?[roman type] You could also come back later, if you choose to leave.";
 		say "     [link](1)[as]1[end link] - Enter and search.";
 		say "     [link](2)[as]2[end link] - Leave for now.";
 		say "     [link](3)[as]3[end link] - Leave for good. This doesn't interest you.";
 		now calcnumber is 0;
 		while calcnumber < 1 or calcnumber > 3:
-			say "Choice? (1-3)>[run paragraph on]";
+			say "Choice? (1-3)> [run paragraph on]";
 			get a number;
-			if calcnumber is 1 or calcnumber is 2 or calcnumber is 3:
-				break;
-			else:
+			if calcnumber < 1 or calcnumber > 3:
 				say "Invalid choice. Type [link]1[end link] to go in and search, [link]2[end link] to leave for now or [link]3[end link] to leave the store for good.";
+		LineBreak;
 		if calcnumber is 1: [lift the shelf on their own]
-			LineBreak;
 			FetishStoreExploration1;
 		else if calcnumber is 2:
-			LineBreak;
 			say "     The store won't go anywhere and you have other places to be, for the moment. You turn away from the store and walk up the alleyway, back to the main streets of Red Light District.";
 			now Resolution of Fetish Store is 1; [Discovered Fetish Store]
-		else if calcnumber is 3:
-			LineBreak;
+		else:
 			say "     Having decided that a place like this Fetish Store doesn't interest you at all, you turn away from it and walk up the alleyway, back to the main streets of Red Light District, avoiding the place from now on.";
 			now Resolution of Fetish Store is 100; [desinterest]
 			now Fetish Store is resolved;
 	else if Resolution of Fetish Store is 1: [found it before, didn't go in]
 		say "     While wandering the streets of Red Light District, you come across a gloomy alleyway that seems familiar to you. A few moments of closer inspection reminds you of the Fetish Store you found in the past, which you chose to leave behind, hoping to return later. The place looks the same as you first found it, with shattered glass all over the ground, empty shop windows with toppled mannequins, and the still persisting ominous silence. You could now choose to search the store, if consider yourself prepared for the associated risks. Places like this are prone to receive unwanted visitors anytime, especially the rather kinky and horny ones.";
-		say "     [bold type]Are you going to enter and search the place[roman type], this time? You could also come back later, if you choose to leave.[line break]";
-		LineBreak;
+		say "[line break]     [bold type]Are you going to enter and search the place[roman type], this time? You could also come back later, if you choose to leave.";
 		say "     ([link]Y[as]y[end link]) - Enter and search.";
 		say "     ([link]N[as]n[end link]) - Leave.";
 		if Player consents:
+			LineBreak;
 			FetishStoreExploration1;
 		else:
 			LineBreak;
@@ -63,20 +58,18 @@ to say ResolveEvent Fetish Store:
 	else if Resolution of Fetish Store is 3: [found it before, got to the dark room]
 		say "     While wandering the streets of Red Light District, you come across a gloomy alleyway that seems familiar to you. It is the Fetish Store, still looking like the same as you first found it, with shattered glass all over the ground, empty shop windows with toppled mannequins, and the persisting ominous silence. After having searched the initial room before, you recall hearing that strange noise coming from the door just across the cash register counter, still clueless of what it could be. You retrace your steps from before, entering the store, heading past the door and down the stairs through the dark corridor, being greeted with the faint light creeping from the small windows at ground level and the same dark room you once faced. You are now presented with a few choices.";
 		FetishStoreExploration3;
-	else if Resolution of Fetish Store is 4: [found it before, got to the shelf]
+	else: [found it before, got to the shelf]
 		say "     While wandering the streets of Red Light District, you come across a gloomy alleyway that seems familiar to you. It is the Fetish Store, still looking like the same as you first found it, with shattered glass all over the ground, empty shop windows with toppled mannequins, and the persisting ominous silence. After having searched the initial room before, you recall hearing that strange noise coming from the door just across the cash register counter, which called your attention to the storage room, where you found an unnaccessible gimp mask. You retraced your steps from before, entering the store, heading past the door and down the stairs through the dark corridor, being greeted with the faint light creeping from the small windows at ground level and the same dark room you once faced.";
 		say "     Now that you know where the gimp mask is located, it's easy for you to avoid any unpleasantries by following the same path you took before, through the corridors of boxes and shelves, back to the large obstacle that is separating you from the piece of headgear you encountered. With the big toppled shelf in front of you, it's time to consider your options once more. Were you strong enough, you could move it out of your way on your own, but there's always the possibility of bringing someone capable to fetch the item for you.";
 		FetishStoreExploration4;
 
 to FetishStoreExploration1:
-	LineBreak;
 	say "     Resolving you should at least take a peek inside, you bolster up your will and approach the entrance.";
 	WaitLineBreak;
 	say "     While inspecting the half-broken glass door, you notice that its lock has definitely seen better days, as the door has already been forced open. You cautiously glance around as you step inside, already able to see and smell the debauchery that must have taken place in here, were it not for the sticky puddles and toppled displays scattered all over. You nearly trip over a broken shelf as you arrive, having to raise your legs higher in order to make it through. Stepping on the humid wood, you hear it creaking as your weight is added above the collapsed shelf.";
 	say "     Having a look around, you notice the surprising amount of space it has inside. Clearly this must have been a very sought after shop with great amounts of material, from a huge variety of sex toys and fantasy gear, to porn films and magazines. Except that now, it all seems to have been taken, and you now stand in the middle of furniture debris with little to nothing left. Behind a stained counter, where was the cash register, you see a door that probably leads to some kind of storage room. There's a corner ahead with a few boxes, the only area in the room in which the chance to find something isn't completely null.";
 	WaitLineBreak;
 	say "     With slow and steady steps, you carefully move towards the boxes, passing through the toppled furniture. This is not an easy task, as every time your foot meets the ground, it turns out to be slippery. Not falling or tripping over something on the way proves to be a challenge before you finally reach the boxes. Several of them are empty, and those who aren't have little of use. On a closer inspection, you manage to lay your eyes on a riding crop between a box and the wall, hidden from careless view. It seems to be in relatively good condition. [bold type]Do you want to take it with you?[roman type][line break]";
-	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Take the Riding Crop.";
 	say "     ([link]N[as]n[end link]) - Leave it.";
 	if Player consents:
@@ -93,8 +86,7 @@ to FetishStoreExploration1:
 	FetishStoreExploration2;
 
 to FetishStoreExploration2:
-	say "     Are you going to [bold type]risk searching the storage room[roman type] and try your luck, or [bold type]leave the store[roman type] and head back to the streets?[line break]";
-	LineBreak;
+	say "     Are you going to [bold type]risk searching the storage room[roman type] and try your luck, or [bold type]leave the store[roman type] and head back to the streets?";
 	say "     ([link]Y[as]y[end link]) - Go through the door."; [enter storage room]
 	say "     ([link]N[as]n[end link]) - Leave the store for now.";
 	if Player consents: [storage room]
@@ -109,32 +101,26 @@ to FetishStoreExploration2:
 
 to FetishStoreExploration3:
 	say "     The stairway is just behind you. You can still [bold type]leave the store[roman type] and come back later if you wish, or press on and attempt to [bold type]search this dark room[roman type], aware of all the risks that decision poses.";
-	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Search the dark room."; [commit to searching storage room]
 	say "     ([link]N[as]n[end link]) - Turn tail and head back, this might be dangerous."; [leave the store]
 	if Player consents:
 		LineBreak;
-		let randomnumber be a random number from 1 to 3;
-		if randomnumber is:
+		if a random number from 1 to 3 is:
 			-- 1: [infection]
 				say "     You're carefully making your way through the room, trying to be as quiet as possible while taking a few glances around, in an attempt to find something that catches your eye. But as you step forward, in a moment of distraction, you place your foot right in a slippery puddle. Inevitably, you lose your balance and fall, your instant reflex being moving your hands behind to soften the shock. Though this is not the best idea, as you end up sinking them in the cold and thick fluid underneath you. Now that you got yourself drenched in some random creature's sex fluids, there's nothing to be done about it but to get up, try to clean yourself as much as possible and continue on your way. It doesn't take long to feel the infection's tingling sensation flowing over your body.";
 				weakrandominfect;
-				WaitLineBreak;
 			-- 2: [fight]
 				say "     With enough caution, you make your way through the room, passing by the dark corridors of shelves and boxes, keeping your eye open for something of interest. However, it seems like you start hearing movement not too far from your position. Raising your guard, you prepare yourself for a possible confrontation, as your senses tingle with danger. Seconds pass, and nothing appears. You choose to proceed further, glancing around for any other signs of activity, and you feel it again. You are under the impression whatever you're about to find it just around the corner in your right. Taking a deep breath, only reminding you of the musty room you're in, you take a step forward and ready yourself to face this creature.";
 				challenge "Mannequin";
 				if fightoutcome < 20: [won]
 					say "     Having fought with all your might, the mannequin falls to the ground as lifeless as it could be. Nobody would believe that it was once attacking you by looking at it now. Since the fight is over, you're free to proceed with your search.";
-					WaitLineBreak;
 				else if fightoutcome > 19 and fightoutcome < 30: [lost]
 					say "     Despite your efforts to resist this attack, the mannequin eventually gains the upper hand and knocks you down. However, before it can deliver its final strike, it falls to the ground as lifeless as it could be. Nobody would believe that the thing was once attacking you by looking at it now. Carefully standing up on your feet, you realize you've taken quite the beat, and your search is somewhat slowed down.";
-					WaitLineBreak;
 				else if fightoutcome >= 30: [fled]
 					say "     Deciding that facing this mannequin would prove a risk, you decide to try to elude it, hoping it will lose you and give up on trying to fight. This proves to be easier than you thought, as once you gain some distance, the mannequin falls to the ground when it attempts to chase you, as lifeless as it could be. Nobody would believe that it was once attacking you by looking at it now. Since you successfully dodged this fight, you're free to proceed with the search.";
-					WaitLineBreak;
 			-- 3:  [successful search without incidents]
 				say "     With enough caution, you make your way through the room, passing by the dark corridors of shelves and boxes, keeping your eye open for something of interest. At first, there seems to be someone following you, so you turn around and glance over your surroundings. The silence persists, and you no longer feel anyone's presence, so you decide to keep going. Your efforts at searching this place seem futile for some time, as everything you find are either useless or broken objects. The little light doesn't help either, as you have to get really close to be able to investigate every corner where you could possibly find something.";
-				WaitLineBreak;
+		WaitLineBreak;
 		say "     Eventually, luck seems to smile upon you as you spot what seems to be a [bold type]gimp mask[roman type], just laying there over a few other boxes! You try to study a path that would take you there, but the way is impeded by a large toppled shelf. There's no way you could pass over it, the only solution being either removing it out of the way, were you strong enough to move it on your own, or being agile and small enough to climb over or crawl under all this mess to get to the other side without any danger. [if HP of Player < 10]Accomplishing this task on your own would be remotely impossible in your current state, however, as every muscle in your body hurts as you move, indicating your diminished strength.[end if]";
 		FetishStoreExploration4;
 	else: [leaving short of the dark room]
@@ -142,30 +128,27 @@ to FetishStoreExploration3:
 		now Resolution of Fetish Store is 3; [entered the storeroom, didn't search the dark room]
 
 to FetishStoreExploration4:
-	say "     [bold type]Will you [if HP of Player < 10]still[end if] attempt to move this heavy shelf on your own[roman type] or [bold type]seek someone's help to retrieve the item for you?[roman type] You could also [bold type]leave to return later[roman type], now that you know where the gimp mask is located. If the mask doesn't interest you, there's always the option to [bold type]leave and never return[roman type].";
-	LineBreak;
+	say "[line break]     [bold type]Will you [if HP of Player < 10]still [end if]attempt to move this heavy shelf on your own[roman type] or [bold type]seek someone's help to retrieve the item for you?[roman type] You could also [bold type]leave to return later[roman type], now that you know where the gimp mask is located. If the mask doesn't interest you, there's always the option to [bold type]leave and never return[roman type].";
 	say "     [link](1)[as]1[end link] - Try to move the shelf with all your strength.";
 	say "     [link](2)[as]2[end link] - Ask someone for help. A companion maybe?";
 	say "     [link](3)[as]3[end link] - Give up for now and return later.";
 	say "     [link](4)[as]4[end link] - You've got no interest in the mask. Continue looking for other stuff.";
 	now calcnumber is 0;
 	while calcnumber < 1 or calcnumber > 4:
-		say "Choice? (1-3)>[run paragraph on]";
+		say "Choice? (1-4)> [run paragraph on]";
 		get a number;
-		if calcnumber is 1 or calcnumber is 2 or calcnumber is 3 or calcnumber is 4:
-			break;
-		else:
+		if calcnumber < 1 or calcnumber > 4:
 			say "Invalid choice. Type [link]1[end link] try to move the shelf on your own, [link]2[end link] to ask a companion, [link]3[end link] to leave the store or [link]4[end link] to explore elsewhere.";
+	LineBreak;
 	if calcnumber is 1: [lift the shelf on their own]
-		LineBreak;
 		say "     After thinking about your next step, you take a deep breath as you prepare yourself mentally for this rather heavy task. Moving the shelf carelessly could prove dangerous, since you don't want to end up crushed under it nor making your way to the mask even more difficult by a bad attempt. With this in thought, you search of a good place to use your strength and study your chances at succeeding for each one of the possibilities that come to your mind. When you're finally satisfied with your conclusions, you decide the best move and get ready to try moving the shelf.";
 		if HP of Player < 10: [player is severely hurt]
 			say "     But as badly hurt as you are, this heavy fallen shelf proves to be too much for your exhausted body. You're not even able to put a decent effort as your muscles simply refuse to function. Disappointed, you turn back to where you came from, taking note of this particular corner so that you can return later, when you've fully recovered or have brought a worthy companion with you.";
 			now Resolution of Fetish Store is 3; [Found Gimp Mask, but failed to get it]
 		else:
-			let bonus be (( strength of player minus 10 ) divided by 2);
+			let bonus be ( strength of player minus 10 ) divided by 2;
 			let diceroll be a random number from 1 to 20;
-			say "You roll 1d20([diceroll])+[bonus] = [special-style-1][diceroll + bonus][roman type] vs [special-style-2]15[roman type] (Strength Check):[line break]";
+			say "[line break]You roll 1d20([diceroll])[if bonus >= 0]+[end if][bonus] = [special-style-1][diceroll + bonus][roman type] vs [special-style-2]15[roman type] (Strength Check):[line break]";
 			if diceroll + bonus >= 15:
 				say "     Proving your strength, you lift the heavy shelf very slowly. Your motivation increases as you realize you're handling the task quite well. Eventually, you have to change your grip in order to start pushing against the wall to the side, to get it back up. Sweat is running down your brow soon and you start to feel the strain making your muscles tremble, but you don't give up. Soon, you hit the point where the shelf's weight allows you some maneuver, as the way between you and the mask is cleared. However, since the shelf is damaged, you have to reach the mask while keeping the heavy furniture from crashing again.";
 				say "     With the mask in your possession, you only have to head back, as your body begins to give signals of exhaustion. Fortunately, you manage to make it through in one piece, letting the shelf fall with a huge, loud slam on the ground. You doubt you could have survived such a crushing force, being glad that you're in one piece. Now that you have your prize, it's time to leave the store, happy with your search results.";
@@ -179,7 +162,6 @@ to FetishStoreExploration4:
 				say "     With your hands below the shelf, you attempt to lift the shelf very slowly. However, no matter how much effort you put into it, you simply can't manage to move the heavy furniture one bit. Realizing you're nowhere nearly strong enough for this, you're forced to give up for now. Disappointed, you turn back to where you came from, taking note of this particular corner so that you can return later, when you've built some more muscle on yourself or have brought a worthy companion with you.";
 				now Resolution of Fetish Store is 4; [got to the shelf but left there]
 	else if calcnumber is 2: [order the pet]
-		LineBreak;
 		if companionList of Player is empty: [player is alone]
 			say "     Which companion? You're here alone! With a shrug, you resolve to return later, hopefully in the company of a strong assistant.";
 			now Resolution of Fetish Store is 4; [got to the shelf but left there]
@@ -286,33 +268,15 @@ to FetishStoreExploration4:
 		else: [catch-all for the rest of companions]
 			say "     Your companion looks at the shelf and doesn't quite know what to do. Possibly because he was created after this event was written. Please report this on the Flexible Survival Discord in the bug report section, quoting what your companion was that you saw this with.";
 	else if calcnumber is 3: [leave the store]
-		LineBreak;
 		say "     You suppose there isn't anything to do right now regarding such a difficult obstacle, choosing to leave for now. With your decision made, you retrace your steps to the stairway, carefully walking back up, go through the door, make it through the toppled shelves and leave through the shattered glass entrance, leaving the shadowy alleyway and returning to the main streets of Red Light District.";
 		now Resolution of Fetish Store is 4; [got to the shelf but left there]
-	else if calcnumber is 4: [leave the store with no interest in the mask]
-		LineBreak;
+	else: [leave the store with no interest in the mask]
 		say "     You understand that you have no need for such item, so you continue looking around. However, the more you look, the more you convince yourself that there isn't anything of interest left in this place, as everything else is either trash, broken objects, dirt or nothing at all. Disappointed with your search, you decide it's time to leave this place for good. With your decision made, you retrace your steps to the stairway, carefully walking back up, go through the door, make it through the toppled shelves and leave through the shattered glass entrance, leaving the shadowy alleyway and returning to the main streets of Red Light District, having finished searching inside the Fetish Store for good.";
 		now Resolution of Fetish Store is 99; [no interest in the mask]
 		now Fetish Store is resolved;
 
 [Riding Crop moved to Core Mechanics/Weapons.i7x]
-
-Table of Game Objects (continued)
-name	desc	weight	object
-"gimp mask"	"A full, black leather mask that leaves only the eyes and has a zip where the mouth should be. Often used by bondage enthusiasts who fancy full-bodied latex or leather suits."	0	gimp mask
-
-gimp mask is a grab object.
-gimp mask is equipment.
-It is not temporary.
-Plural of gimp mask is false.
-Taur-compatible of gimp mask is true.
-The size of gimp mask is 3.
-The AC of gimp mask is 0.
-The effectiveness of gimp mask is 0.
-The placement of gimp mask is "head".
-The descmod of gimp mask is "A black leather mask covers your head, leaving only your eyes visible.".
-The slot of gimp mask is "head".
-the scent of gimp mask is "The gimp mask smells like leather.".
+[gimp mask moved to Core Mechanics/Equipment.i7x]
 
 Section 3 - Raided Corner Store
 
@@ -323,17 +287,18 @@ Raided Corner Store	"Raided Corner Store"
 Raided Corner Store is a situation.
 ResolveFunction of Raided Corner Store is "[ResolveEvent Raided Corner Store]". The level of Raided Corner Store is 3.
 Sarea of Raided Corner Store is "Red".
+
 when play begins:
 	add Raided Corner Store to BadSpots of HermList;
 	add Raided Corner Store to BadSpots of FurryList;
 
 to say ResolveEvent Raided Corner Store:
 	say "     You come across a small corner store. While it has been raided, you can see that it's not been as badly damaged as others and may still hold something of interest. You slip inside and glance around, but the shelves, coolers and displays have been emptied of anything useful. The cash register is empty as well. You head to check the back and find that the entrance to the back is locked. Perhaps there is something worthwhile in there. You start by knocking as asking if anyone's still safe in there, but get no response.";
-	say "     [bold type]Do you try to break in?[roman type][line break]";
-	LineBreak;
+	say "[line break]     [bold type]Do you try to break in?[roman type][line break]";
 	say "     ([link]Y[as]y[end link]) - Yes.";
 	say "     ([link]N[as]n[end link]) - No.";
 	if Player consents:
+		LineBreak;
 		say "     You kick and slam at the door several times, with growing frustration as you fail to have any effect. The door is quite sturdy, and would have to be to have survived any previous scavengers. After giving it one last kick, you turn away in frustration, only to see the commotion has attracted others. There are now a pair of hyenas between you and the exit.";
 		if hyg is 4:
 			if the BodyName of Player is "Hyena Herm" or FaceName of Player is "Hyena Herm":
@@ -343,11 +308,13 @@ to say ResolveEvent Raided Corner Store:
 				ItemGain chips by 2;
 			else:
 				challenge "Hyena Herm";
-				challenge "Hyena Herm";
+				if lost is 0:
+					challenge "Hyena Herm";
 				say "     After the hyenas are gone, you try the door again, taking greater care to avoid noise, but are unable to force it open.";
 		else:
 			challenge "Hyena Herm";
-			challenge "Hyena Herm";
+			if lost is 0:
+				challenge "Hyena Herm";
 			say "     After the hyenas are gone, you try the door again, taking greater care to avoid noise, but are unable to force it open. Disappointed, you head back into the city.";
 		now Resolution of Raided Corner Store is 1; [tried to get into the back]
 	else:
@@ -355,7 +322,6 @@ to say ResolveEvent Raided Corner Store:
 		now Resolution of Raided Corner Store is 99; [disinterest]
 		increase score by 1;
 	now Raided Corner Store is resolved;
-
 
 Section 4 - Aussie Pub
 
@@ -370,6 +336,7 @@ Flooded Street	"Flooded Street"
 Flooded Street is a situation.
 ResolveFunction of Flooded Street is "[ResolveEvent Flooded Street]". The level of Flooded Street is 3.
 Sarea of Flooded Street is "Red".
+
 when play begins:
 	add Flooded Street to BadSpots of MaleList;
 	add Flooded Street to BadSpots of HumorousList;
@@ -379,19 +346,20 @@ to say ResolveEvent Flooded Street:
 	WaitLineBreak;
 	if a random chance of 1 in 3 succeeds:
 		say "     You are spotted by one of the ambulatory cock creatures and its rush towards you alerts the others.";
-		LineBreak;
 		challenge "Cock Cannon";
-		challenge "Cock Cannon";
-		challenge "Cock Cannon";
+		if lost is 0:
+			challenge "Cock Cannon";
+			if lost is 0:
+				challenge "Cock Cannon";
 		say "     Those disturbing creatures finally dealt with, you make good your escape before others turn up.";
 	else:
 		say "     You quietly make your escape.";
 		increase score by 1;
 	now Flooded Street is resolved;
 
-
-
 Section 6 - Strip Bar
+
+stripbarcounter is a number that varies.
 
 Table of GameEventIDs (continued)
 Object	Name
@@ -400,7 +368,7 @@ Strip Bar	"Strip Bar"
 Strip Bar is a situation.
 ResolveFunction of Strip Bar is "[ResolveEvent Strip Bar]".
 Sarea of Strip Bar is "Red".
-stripbarcounter is a number that varies.
+
 when play begins:
 	add Strip Bar to BadSpots of HermList;
 	add Strip Bar to BadSpots of FurryList;
@@ -408,78 +376,79 @@ when play begins:
 to say ResolveEvent Strip Bar:
 	if stripbarcounter is 1:
 		say "     After a few hours of fruitless searching among the besieged city, you come across another strip bar that's in fairly good shape. You see no obvious signs of trouble and after the last few hours of getting nowhere, you consider searching inside.";
-		say "     [bold type]Do you enter?[roman type][line break]";
-		LineBreak;
+		say "[line break]     [bold type]Do you enter?[roman type][line break]";
 		say "     ([link]Y[as]y[end link]) - Yes.";
 		say "     ([link]N[as]n[end link]) - No.";
 		if Player consents:
+			LineBreak;
 			say "[stripbarsearch]";
 		else:
+			LineBreak;
 			say "     You go off, deciding to find a safer place to search.";
 			increase score by 1;
 		now stripbarcounter is 2;
 	else if stripbarcounter is 2:
 		say "     You come to a third strip bar tucked into secluded part of this seedy part of town. It seems to have fared relatively well, with only minor damage. After a cautious glance inside, you don't see any signs of trouble.";
-		say "     [bold type]Do you enter?[roman type][line break]";
-		LineBreak;
+		say "[line break]     [bold type]Do you enter?[roman type][line break]";
 		say "     ([link]Y[as]y[end link]) - Yes.";
 		say "     ([link]N[as]n[end link]) - No.";
 		if Player consents:
+			LineBreak;
 			say "[stripbarsearch]";
 		else:
+			LineBreak;
 			say "     You go off, deciding to find a safer place to search.";
 			now Resolution of Strip Bar is 99; [disinterest]
 			increase score by 1;
 		now Strip Bar is resolved;
 	else:
 		say "     Passing through the infected city, you keep a watch for aggressive creatures or possible things of use while you await rescue. During your searching, you come across a relatively intact strip bar. While the lights and neon are off and it seems unoccupied, the place seems to be in better shape than many of the others you've come across. Perhaps there may still be something useful in there. Though given the nature of the business, you do worry about the risks.";
-		say "     [bold type]Do you enter?[roman type][line break]";
-		LineBreak;
+		say "[line break]     [bold type]Do you enter?[roman type][line break]";
 		say "     ([link]Y[as]y[end link]) - Yes.";
 		say "     ([link]N[as]n[end link]) - No.";
 		if Player consents:
+			LineBreak;
 			say "[stripbarsearch]";
 		else:
+			LineBreak;
 			say "     You go off, deciding to find a safer place to search.";
 			increase score by 1;
 		now stripbarcounter is 1;
-	stop the action;
 
 to say stripbarsearch:
-	let T be a random number between one and twelve;
-	if T is 1:
-		say "     Navigating around the tables and the occasional cum puddle, you see that the outbreak struck here as well while the business was running. You are extra cautious and avoid the main public area, instead checking behind the bar for supplies. It seems that much of it was damaged or take already, but you do have some luck and find some soda you can take.";
-		increase score by 5;
-		ItemGain soda by 3;
-	if T is 2:
-		say "     Searching through the strip bar, you have to avoid cum puddles. You head over to check the bar, but find that it was destroyed during the outbreak. It is covered in claw marks all over. You can see a huge puddle of cum behind the bar. You consider leaving, but spot the backstage door and slip in there before you leave. It's also quite messy back here, but you do manage to recover some snacks that one of the girls must have brought.";
-		ItemGain soda by 1;
-		increase score by 1;
-	if T is 3:
-		say "     Searching the strip bar, take care to avoid the cum puddles you find in there. Clearly this place was open when the infection struck and the patrons and staff fell quickly. You look around as best you can, but the extent of the contamination is too great and you have to give up the place for a loss. As you step out, you are spotted by a tigress who emerges from a nearby alleyway. She grins at you and runs a paw along her side. 'Looking for a little fun, are we? I've got just what you need,' she purrs, fondling a sizable bulge under her skirt.";
-		challenge "Malayan Tiger Herm";
-	if T is 4:
-		say "     Searching the strip bar, take care to avoid the cum puddles you find in there. Clearly this place was open when the infection struck and the patrons and staff fell quickly. You start to look around as best you can, but you are interrupted when a large, shemale collie bursts out of the backstage area. 'I was looking to see if there were still any of the sexy girls back there to bear my puppies, but now I've got you instead.' She grins at you and crosses the distance between you even as you try to run out. You manage to make it outside before she catches up with you, pulling you into a fight.";
-		challenge "Smooth Collie Shemale";
-	if T is 5:
-		say "     Searching through the strip bar, you navigate cautiously around the tables and puddles of cum. It seems that this place was struck rather hard when the infection took hold. Despite outer appearances, the inside has been quite devastated. You decide to head back out, but not in time. A large glob of cum which was stuck to the ceiling comes down right on top of you. You try your best to wipe it off, but you can feel the tingles of the infection."; [random infection]
-		weakrandominfect;
-	if T is 6:
-		say "     Searching through the strip bar, you navigate cautiously around the tables and puddles of cum. A quick check shows that the bar area has been already picked clean of anything that survived the initial damage. You turn to head out, but step on an empty bottle. Rolling away, it sends your foot out from under you and you fall. Your hand feels wet and sticky, having landed in a puddle of cum. You try to shake it off, but you can feel the tingles of the infection."; [random infection]
-		weakrandominfect;
-	if T is 7:
-		say "     Searching through the strip bar, you navigate cautiously around the tables and puddles of cum. Clearly this place was open when the infection struck and the patrons and staff fell quickly. You head over to check the bar, but find that it was destroyed during the outbreak and even partially burned. Did the bartender try to ward off the monsters with fire or did something else occur? Seeing how there is nothing usable left, you decide not to investigate further and instead head to leave. As you're heading to leave, you spot the backstage door decide to check it out before you go.";
-		say "     This turns out to be your undoing, as a bucketful of sticky, musky cum and juices falls onto you. An array of scents fill your nose, the bucket clearly having been filled by a variety of creatures, possibly the ex-staff of this establishment. Their combined fluids have soaked you and you can feel the tingles of the infection."; [triple unrelated random]
-		weakrandominfect;
-		weakrandominfect;
-		randominfect; [researcher still gets one]
-		decrease score by 5;
-		SanLoss 5;
-	if T > 7:
-		say "Searching through the strip bar, you have to avoid cum puddles. You head over to check the bar, but find that it was destroyed during the outbreak. Clearly someone became something large and aggressive. The booze rack has been knocked completely over and the bottles are shattered. There are large patches of cum all around that area, so you have no inclination to search it more closely for any goods which may have survived. Well, better luck next time.";
-		increase score by 1;
+	if a random number between one and twelve is:
+		-- 1:
+			say "     Navigating around the tables and the occasional cum puddle, you see that the outbreak struck here as well while the business was running. You are extra cautious and avoid the main public area, instead checking behind the bar for supplies. It seems that much of it was damaged or take already, but you do have some luck and find some soda you can take.";
+			increase score by 5;
+			ItemGain soda by 3;
+		-- 2:
+			say "     Searching through the strip bar, you have to avoid cum puddles. You head over to check the bar, but find that it was destroyed during the outbreak. It is covered in claw marks all over. You can see a huge puddle of cum behind the bar. You consider leaving, but spot the backstage door and slip in there before you leave. It's also quite messy back here, but you do manage to recover some snacks that one of the girls must have brought.";
+			ItemGain soda by 1;
+			increase score by 1;
+		-- 3:
+			say "     Searching the strip bar, take care to avoid the cum puddles you find in there. Clearly this place was open when the infection struck and the patrons and staff fell quickly. You look around as best you can, but the extent of the contamination is too great and you have to give up the place for a loss. As you step out, you are spotted by a tigress who emerges from a nearby alleyway. She grins at you and runs a paw along her side. 'Looking for a little fun, are we? I've got just what you need,' she purrs, fondling a sizable bulge under her skirt.";
+			challenge "Malayan Tiger Herm";
+		-- 4:
+			say "     Searching the strip bar, take care to avoid the cum puddles you find in there. Clearly this place was open when the infection struck and the patrons and staff fell quickly. You start to look around as best you can, but you are interrupted when a large, shemale collie bursts out of the backstage area. 'I was looking to see if there were still any of the sexy girls back there to bear my puppies, but now I've got you instead.' She grins at you and crosses the distance between you even as you try to run out. You manage to make it outside before she catches up with you, pulling you into a fight.";
+			challenge "Smooth Collie Shemale";
+		-- 5:
+			say "     Searching through the strip bar, you navigate cautiously around the tables and puddles of cum. It seems that this place was struck rather hard when the infection took hold. Despite outer appearances, the inside has been quite devastated. You decide to head back out, but not in time. A large glob of cum which was stuck to the ceiling comes down right on top of you. You try your best to wipe it off, but you can feel the tingles of the infection."; [random infection]
+			weakrandominfect;
+		-- 6:
+			say "     Searching through the strip bar, you navigate cautiously around the tables and puddles of cum. A quick check shows that the bar area has been already picked clean of anything that survived the initial damage. You turn to head out, but step on an empty bottle. Rolling away, it sends your foot out from under you and you fall. Your hand feels wet and sticky, having landed in a puddle of cum. You try to shake it off, but you can feel the tingles of the infection."; [random infection]
+			weakrandominfect;
+		-- 7:
+			say "     Searching through the strip bar, you navigate cautiously around the tables and puddles of cum. Clearly this place was open when the infection struck and the patrons and staff fell quickly. You head over to check the bar, but find that it was destroyed during the outbreak and even partially burned. Did the bartender try to ward off the monsters with fire or did something else occur? Seeing how there is nothing usable left, you decide not to investigate further and instead head to leave. As you're heading to leave, you spot the backstage door decide to check it out before you go.";
+			say "     This turns out to be your undoing, as a bucketful of sticky, musky cum and juices falls onto you. An array of scents fill your nose, the bucket clearly having been filled by a variety of creatures, possibly the ex-staff of this establishment. Their combined fluids have soaked you and you can feel the tingles of the infection."; [triple unrelated random]
+			weakrandominfect;
+			weakrandominfect;
+			randominfect; [researcher still gets one]
+			decrease score by 5;
+			SanLoss 5;
+		-- otherwise:
+			say "Searching through the strip bar, you have to avoid cum puddles. You head over to check the bar, but find that it was destroyed during the outbreak. Clearly someone became something large and aggressive. The booze rack has been knocked completely over and the bottles are shattered. There are large patches of cum all around that area, so you have no inclination to search it more closely for any goods which may have survived. Well, better luck next time.";
+			increase score by 1;
 	now Resolution of Strip Bar is 1; [searched through the strip bar]
-
 
 Section 7 - Evangelist
 
@@ -490,6 +459,7 @@ Evangelist	"Evangelist"
 Evangelist is a situation.
 ResolveFunction of Evangelist is "[ResolveEvent Evangelist]".
 Sarea of Evangelist is "Red".
+
 when play begins:
 	add Evangelist to BadSpots of FemaleList;
 	add Evangelist to BadSpots of MaleList;
@@ -519,15 +489,16 @@ to say ResolveEvent Evangelist:
 			increase score by 50;
 			now Evangelist is resolved;
 		else:
-			say "     [bold type]Do you choose to participate?[roman type][line break]";
-			LineBreak;
+			say "[line break]     [bold type]Do you choose to participate?[roman type][line break]";
 			say "     ([link]Y[as]y[end link]) - Join them.";
 			say "     ([link]N[as]n[end link]) - Leave.";
 			if Player consents:
+				LineBreak;
 				say "[orgyoutcome]";
 				increase score by 50;
 				now Evangelist is resolved;
 			else:
+				LineBreak;
 				say "     You resist the urge to give in and join the orgy that has formed after the battle and scan around the sea of fur and flesh surrounding you. You notice the leather wolves are still at it with the cock cannon and one of them points towards you, trying to get the attention of his lustful brethren. You need to get out of here soon. Finding a path between several mating pairs, you try to dash to safety before things cascade further. You run, making it most of the way out of the crowd before being blocked by another monster.";
 				fight;
 				say "     Pushing your way free, you move to the relative safety of a nearby alcove, panting to catch your breath and to recover you energy. You look back at the top of the car, seeing that the leopard has prevailed against the other prospective lovers and is now plowing into the newly corrupted leopardess beneath him. They both yowl in feline ecstasy as he pumps his heavy load into her womb, seeking to breed his new mate.";
@@ -549,43 +520,29 @@ to say orgyoutcome:
 		say "     Deciding it's high time you tend to your cock, you guide the raccoon onto all fours and slide your cock into her dripping pussy. Her pussy grips you tightly as you plow into her again and again. Surprisingly strong for her size, you find she's able to support your weight easily, freeing your hands to play with her tits and cock while you fuck her. She turns out to be a wonderful fucktoy, squealing and moaning in delight as you have your way with her until finally spraying your hot load into her body. Her heavy nuts drain their load onto the pavement as you pump her cock while seeding her, forming a large puddle of coonseed.";
 		say "     As you withdraw, you're pulled into the arms of a lioness. Shoving you down, she wraps her muzzle around your cock while offering her pussy for you to lick. Your tongues please one another until you both reach a powerful climax. Then it's off to have a herm gryphon fill your ass again while sucking off two different strains of horses at once. Things grow hazier as you pass from partner to partner. There is only the lust of so many creatures satisfying one another together.";
 	say "     This wild romp continues for hours, with numerous monsters sharing you or being shared by you. You quickly lose track of all the creatures you mate with and cycle through a myriad of positions and partners before it finally all falls apart from exhaustion. Your grip on your identity has been shaken from the intensity of the orgy, but you are quite sexually sated - for the time being.[randomimpreg][randomimpreg]";
-	LineBreak;
 	SanLoss 25;
-	decrease Libido of Player by 40;
-	if Libido of Player < 0:
-		now Libido of Player is 0;
+	lower Player Libido by 40;
 	randominfect; [4 different infections]
 	now researchbypass is 1;
 	increase MonsterID by 1;
 	choose row MonsterID from Table of Random Critters;
-	while there is a non-infectious in row MonsterID of Table of Random Critters and non-infectious entry is true:
+	while there is a non-infectious entry and non-infectious entry is true:
 		increase MonsterID by 1;
 		choose row MonsterID from Table of Random Critters;
-		if there is a non-infectious in row MonsterID of Table of Random Critters and non-infectious entry is true:
-			next;
-		break;
 	infect;
 	increase MonsterID by 1;
 	choose row MonsterID from Table of Random Critters;
-	while there is a non-infectious in row MonsterID of Table of Random Critters and non-infectious entry is true:
+	while there is a non-infectious entry and non-infectious entry is true:
 		increase MonsterID by 1;
 		choose row MonsterID from Table of Random Critters;
-		if there is a non-infectious in row MonsterID of Table of Random Critters and non-infectious entry is true:
-			next;
-		break;
 	infect;
 	increase MonsterID by 1;
 	choose row MonsterID from Table of Random Critters;
-	while there is a non-infectious in row MonsterID of Table of Random Critters and non-infectious entry is true:
+	while there is a non-infectious entry and non-infectious entry is true:
 		increase MonsterID by 1;
 		choose row MonsterID from Table of Random Critters;
-		if there is a non-infectious in row MonsterID of Table of Random Critters and non-infectious entry is true:
-			next;
-		break;
 	infect;
 	now researchbypass is 0;
-
-
 
 Section 8 - Business as Usual
 
@@ -603,7 +560,7 @@ when play begins:
 to say ResolveEvent Business as Usual:
 	say "     You spot a gray-furred mouse morph a few buildings away. He's wearing glasses, a blue button down t-shirt, khaki shorts, complete with red sneakers and is carrying a small backpack slung over his back, holding one of the straps in one hand to keep it there. Despite their small size, barely over four feet tall, you decide to be cautious and take cover to observe his actions for a moment, trying to decide what to do in the event you get discovered. He darts intently across the street, stopping in front of an alleyway where a tigress had apparently been waiting unnoticed by you until stepping out of the shadows. The orange and black striped tigress is much taller than him and wearing a skimpy outfit that shows off her shapely body. She has a pink half-shirt that barely holds her large breast line, but enough cleavage to show and compliment her assets. Beneath that, you can see a fishnet undershirt that covers her tight belly.";
 	say "     Finally, a cheap, short, pink colored leather skirt that barely covers her generous ass and feminine slit completes the outfit, not quite hiding, yet still teasing and promoting. Her red hair is tied back into a ponytail by a small pink bow, with another similar pink bow at the end of her tail as if to lure others to try and sneak a peak at what she has under her skirt. The mouse stands there nervous to be out in the open while conversing with the tigress, shifting from one foot to another and glancing here and there for signs of enemies, while the tigress is seemingly at ease, almost as if bored by the lack of action and their current topic of discussion. Finally, she grows weary of the conversation she's probably had many times before and waves for him to show her the bag's contents. He smiles and pulls out a two-liter carton of milk and the tigress's eyes light up with barely contained excitement. She quickly grabs and rushes him into the alley, paws roaming over his body, now openly burning with deep need that she had been hiding under a façade of disinterest.";
-	say "     [bold type]Seems like this is going to get heated...[roman type][line break]";
+	say "[line break]     [bold type]Seems like this is going to get heated...[roman type][line break]";
 	say	"     ([link]Y[as]y[end link]) - Step closer and watch.";
 	say	"     ([link]N[as]n[end link]) - Leave them to finish their business.";
 	if Player consents:
@@ -619,8 +576,6 @@ to say ResolveEvent Business as Usual:
 	increase score by 1;
 	now Business as Usual is resolved;
 
-
-
 Section 9 - Kink Warehouse
 
 Table of GameEventIDs (continued)
@@ -630,6 +585,7 @@ Kink Warehouse	"Kink Warehouse"
 Kink Warehouse is a situation.
 ResolveFunction of Kink Warehouse is "[ResolveEvent Kink Warehouse]".
 Sarea of Kink Warehouse is "Red".
+
 when play begins:
 	add Kink Warehouse to BadSpots of FurryList;
 
@@ -637,8 +593,6 @@ to say ResolveEvent Kink Warehouse:
 	if Thirst of Fancy is 2 or Thirst of Fancy is 3 or Thirst of Fancy is 99:
 		if Resolution of Transformationledger is 1:
 			say "     As you approach the warehouse at the coordinates Fancy gave you, you notice a large horseman loitering outside the main entrance, looking displeased and utterly bored. The brand on his arm marks him as one of the Stablemaster's goons, almost certainly dispatched to intercept you. He doesn't seem to have noticed you, so you have the opportunity to try and sneak past him instead of engaging him directly.";
-			LineBreak;
-			[]
 			now sextablerun is 0;
 			blank out the whole of table of fucking options;
 			[]
@@ -668,40 +622,41 @@ to say ResolveEvent Kink Warehouse:
 					choose row calcnumber in table of fucking options;
 					say "[title entry]: [description entry]?";
 					if Player consents:
-						let nam be title entry;
+						LineBreak;
 						now sextablerun is 1;
-						if (nam is "Fight the guard"):
-							challenge "Horseman";
-							if fightoutcome >= 10 and fightoutcome <= 19: [player won]
-								say "     The stallion dispatched, you step through the door to find yourself confronted by another horseman! He must be the backup - get ready to fight again!";
+						if title entry is:
+							-- "Fight the guard":
 								challenge "Horseman";
 								if fightoutcome >= 10 and fightoutcome <= 19: [player won]
-									say "     With both goons incapacitated, you are able to enter the warehouse proper. The workers inside seem to have been evacuated beforehand, leaving you to painstakingly search the boxes['] labels for the right code. At last, you manage to find the right stack of boxes and open one to reveal a vast mass of rubbery clothing individually wrapped in plastic bags. Grabbing one and stashing it in your backpack, you beat a hasty retreat before anyone else comes to investigate.";
+									say "     The stallion dispatched, you step through the door to find yourself confronted by another horseman! He must be the backup - get ready to fight again!";
+									challenge "Horseman";
+									if fightoutcome >= 10 and fightoutcome <= 19: [player won]
+										say "     With both goons incapacitated, you are able to enter the warehouse proper. The workers inside seem to have been evacuated beforehand, leaving you to painstakingly search the boxes['] labels for the right code. At last, you manage to find the right stack of boxes and open one to reveal a vast mass of rubbery clothing individually wrapped in plastic bags. Grabbing one and stashing it in your backpack, you beat a hasty retreat before anyone else comes to investigate.";
+										if Thirst of Fancy is 2 or Thirst of Fancy is 3:
+											now Thirst of Fancy is 4;
+										else:
+											say "     Tearing open the package reveals the contents to be some curious hybrid of a latex catsuit with hooves instead of gloves and an attached pony-shaped hood. Trying to put it on by yourself would be an exercise in futility without fingers to close (or open!) the zippers, so you'll need to find someone who can modify it for you.";
+											now Thirst of Fancy is 100;
+										now Kink Warehouse is resolved;
+								if fightoutcome >= 20 and fightoutcome <= 29:	[lost any fight]
+									say "     The horseman manages to get the better of you, and it's all you can do to scramble away before he can catch you. You're going to have to try again later, once your bruises have faded.";
+							-- "Sneak past":
+								let bonus be ( Perception of Player minus 10 ) divided by 2;
+								if "Experienced Scout" is listed in feats of Player, increase bonus by 5;
+								let diceroll be a random number from 1 to 20;
+								say "You roll 1d20([diceroll])[if bonus >= 0]+[end if][bonus] = [special-style-1][diceroll + bonus][roman type] vs [special-style-2]15[roman type] (Perception Check):[line break]";
+								increase diceroll by bonus;
+								if diceroll >= 15:
+									say "     Your careful scouting pays off as you discover the emergency exit at the back of the warehouse, the lock broken and the door boarded closed with planks of rotting wood. A hard yank easily dislodges both barriers and lets you slip inside unnoticed. The place is oddly deserted, but it works to your benefit as you are able to leisurely discover not only the box that matches the code on the token, but a discarded pack of food lying on the table as well. Opening the box reveals a vast mass of rubbery clothing wrapped in plastic bags, so you grab one and stash it in your backpack next to the food pack before quietly exiting the same way you came.";
 									if Thirst of Fancy is 2 or Thirst of Fancy is 3:
 										now Thirst of Fancy is 4;
 									else:
 										say "     Tearing open the package reveals the contents to be some curious hybrid of a latex catsuit with hooves instead of gloves and an attached pony-shaped hood. Trying to put it on by yourself would be an exercise in futility without fingers to close (or open!) the zippers, so you'll need to find someone who can modify it for you.";
 										now Thirst of Fancy is 100;
+									ItemGain food by 1;
 									now Kink Warehouse is resolved;
-							if fightoutcome >= 20 and fightoutcome <= 29:	[lost any fight]
-								say "     The horseman manages to get the better of you, and it's all you can do to scramble away before he can catch you. You're going to have to try again later, once your bruises have faded.";
-						else if (nam is "Sneak past"):
-							let bonus be (( Perception of Player minus 10 ) divided by 2);
-							if "Experienced Scout" is listed in feats of Player, increase bonus by 5;
-							let diceroll be a random number from 1 to 20;
-							say "You roll 1d20([diceroll])+[bonus] = [special-style-1][diceroll + bonus][roman type] vs [special-style-2]15[roman type] (Perception Check):[line break]";
-							increase diceroll by bonus;
-							if diceroll >= 15:
-								say "     Your careful scouting pays off as you discover the emergency exit at the back of the warehouse, the lock broken and the door boarded closed with planks of rotting wood. A hard yank easily dislodges both barriers and lets you slip inside unnoticed. The place is oddly deserted, but it works to your benefit as you are able to leisurely discover not only the box that matches the code on the token, but a discarded pack of food lying on the table as well. Opening the box reveals a vast mass of rubbery clothing wrapped in plastic bags, so you grab one and stash it in your backpack next to the food pack before quietly exiting the same way you came.";
-								if Thirst of Fancy is 2 or Thirst of Fancy is 3:
-									now Thirst of Fancy is 4;
 								else:
-									say "     Tearing open the package reveals the contents to be some curious hybrid of a latex catsuit with hooves instead of gloves and an attached pony-shaped hood. Trying to put it on by yourself would be an exercise in futility without fingers to close (or open!) the zippers, so you'll need to find someone who can modify it for you.";
-									now Thirst of Fancy is 100;
-								ItemGain food by 1;
-								now Kink Warehouse is resolved;
-							else:
-								say "     Despite looking around for any sort of alternative route, your search proves futile as the walls of the warehouse appear to be solidly built, with all its other entrances firmly locked up tight. With the guard already eyeing you suspiciously, it looks like you're just going to have to come back and try again later.";
+									say "     Despite looking around for any sort of alternative route, your search proves futile as the walls of the warehouse appear to be solidly built, with all its other entrances firmly locked up tight. With the guard already eyeing you suspiciously, it looks like you're just going to have to come back and try again later.";
 				else:
 					say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
 		else if Resolution of Transformationledger is 2:
@@ -715,7 +670,5 @@ to say ResolveEvent Kink Warehouse:
 			now Kink Warehouse is resolved;
 	else:
 		say "     You happen across a medium-sized warehouse on the outskirts of the Red Light District, bustling with activity as workers carry heavy loads of crates, boxes and other assorted packages in and out through the open doors. Any attempt to investigate is blocked, however, by a pair of burly-looking stallions standing guard to either side of the doors, clearly refusing to let anyone who isn't a worker into the warehouse.";
-
-
 
 Red Events ends here.

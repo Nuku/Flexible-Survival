@@ -14,17 +14,6 @@ Section 1 - Creature Responses
 
 UrsineDefeatCount is a number that varies.
 
-to say UrsineDesc:
-	say "     A towering figure comes into view. At first you assume it's a wild bear standing on its hind legs, but on closer inspection, you realize that its legs are somewhat long and its black claws are painted with nail polish. The infected woman has bright [one of]brown[or]blue[or]green[at random] eyes and huge, pointed teeth. A dense coat of shaggy fur covers her tall and wide body completely. Her muscular chest is padded with three rows of flattish breasts, and long nipples peek out through her fur. On seeing you, she exposes more of her teeth and speaks, [one of]'Run! I don't want to break another one!'[or]'Not now, you idiot!'[or]'Are you stalking me?'[at random]";
-
-
-to say UrsineAttack:
-	if HP of bee girl is 3:
-		say "[one of]She slams you with one of her great clawed hands, sending you flying.[or]With terrifying ease, she picks you up and throws you into the underbrush.[or]The ursine knocks you down with a sweep of her fur covered arm.[or]The bear snaps at you with her powerful teeth.[or]You are clubbed upside the head with a fuzzy fist.[or]Your head is grabbed and your face is buried in her red-shirted bosom. It is sticky with honey and heady with her scent, leaving you a little dazed by the time you squirm free.[at random]";
-	else:
-		say "[one of]She slams you with one of her great clawed hands, sending you flying.[or]With terrifying ease, she picks you up and throws you into a pile of rubbish.[or]The ursine knocks you down with a sweep of her fur covered arm.[or]The bear snaps at you with her powerful teeth.[or]The bear charges and tackles you, knocking the wind out of your lungs.[at random]";
-
-
 to say UrsineWins:
 	if UrsineDefeatCount is 0: [ first time losing to a bear ]
 		say "     [if fightoutcome is 21 or fightoutcome is 22]Succumbing to your lusts, you submit and offer yourself to the bear. She[else]You realize that the bear has been holding back on you when she[end if] easily hefts you up towards her broad, well-padded chest and presses your face into her thick, coarse fur. The pressure of her furry grip engulfs you, and you fear you are about to be crushed out of existence. As your consciousness fades, you realize it's not the worst way to go, and you begin to feel oddly comfortable as the pressure decreases.";
@@ -37,41 +26,35 @@ to say UrsineWins:
 			say "     Once you're in position, the bear kneels over your head, her intoxicating fragrance strongest near her drenched and dripping nethers. You breathe deeply of the heady scent which wafts from her honeypot, its heady promise wetting your palate as her curvy heft descends on your face. Soon, your whole world goes dark, your vision filled with nothing but that slavering ursine snatch and the thick fur of your lover. You slide your hands around the bear's curvy hips and squeeze them, letting her know that you're ready to indulge her.";
 			WaitLineBreak;
 			say "     Your tongue caresses her salmon pink folds, sweeping over the supple flesh of her snatch in long and delicate strokes. When not tending to her labia, you angle your head to seal a kiss to the thick nub of her clit, tongue swirling and lashing around that sensitive button. Your ministrations are met with a long, low groan from your feral partner, who rocks her hips against your face while you worship her. Hungry for more, you slide your tongue deeper into that sordid, drooling tunnel, lapping along her inner walls with ravenous zeal. Every sweep gathers more of her addictive nectar, coating your tongue in a sticky slurry of ursine arousal.";
-			say "     The insistent stimulation becomes too much for your needy lover, and she clenches her thighs tightly around your head as she cums, roaring her pleasure into the [if daytimer is day]sky[else]night[end if] with a body-wide shudder. You dig your hands into her thighs to hold her still, catching as much of her spurting femcum in your mouth as you can manage, basking in the heat and taste of her orgasm";
 			if Player is herm:
-				say ". Eager to return the favor, the ursine reaches over to take hold of [if Cock Count of Player > 1]one of [end if]your cock[smn] and plunges her digits into your hot, damp folds. She pumps and jills you vigorously until you reach the precipice of orgasm, then lowers her head to suck you off until you cum, hips bucking against her muzzle as you spray your [Cum Load Size of Player] load across her tongue [if Cock Count of Player > 1]and face [end if]while your nectar squirts all over the ground below.";
-				CreatureSexAftermath "Brown Bear Female" receives "OralCock" from "Player";
-				CreatureSexAftermath "Player" receives "Stroking" from "Brown Bear Female";
+				say "     The insistent stimulation becomes too much for your needy lover, and she clenches her thighs tightly around your head as she cums, roaring her pleasure into the [if daytimer is day]sky[else]night[end if] with a body-wide shudder. You dig your hands into her thighs to hold her still, catching as much of her spurting femcum in your mouth as you can manage, basking in the heat and taste of her orgasm. Eager to return the favor, the ursine reaches over to take hold of [if Cock Count of Player > 1]one of [end if]your cock[smn] and plunges her digits into your hot, damp folds. She pumps and jills you vigorously until you reach the precipice of orgasm, then lowers her head to suck you off until you cum, hips bucking against her muzzle as you spray your [Cum Load Size of Player] load across her tongue [if Cock Count of Player > 1]and face [end if]while your nectar squirts all over the ground below.";
 			else if Player is female:
-				say ". Eager to return the favor, the ursine reaches over to plunge her digits into your hot, damp folds. She rubs a thumb against your clit and jills you vigorously until you reach the precipice of orgasm, then lowers her head to eat you out until you cum, hips bucking against her muzzle as you drench her fur in your nectar.";
-				CreatureSexAftermath "Brown Bear Female" receives "OralPussy" from "Player";
-				CreatureSexAftermath "Player" receives "Stroking" from "Brown Bear Female";
+				say "     The insistent stimulation becomes too much for your needy lover, and she clenches her thighs tightly around your head as she cums, roaring her pleasure into the [if daytimer is day]sky[else]night[end if] with a body-wide shudder. You dig your hands into her thighs to hold her still, catching as much of her spurting femcum in your mouth as you can manage, basking in the heat and taste of her orgasm. Eager to return the favor, the ursine reaches over to plunge her digits into your hot, damp folds. She rubs a thumb against your clit and jills you vigorously until you reach the precipice of orgasm, then lowers her head to eat you out until you cum, hips bucking against her muzzle as you drench her fur in your nectar.";
 			else:
-				say ". Eager to return the favor, the ursine reaches over to take hold of [if Cock Count of Player > 1]one of [end if]your cock[smn]. She pumps your length vigorously until you reach the precipice of orgasm, then lowers her head to suck you off until you cum, hips bucking against her muzzle as you spray your [Cum Load Size of Player] load across her tongue [if Cock Count of Player > 1]and face [end if]in powerful blasts.";
-				CreatureSexAftermath "Brown Bear Female" receives "OralCock" from "Player";
-				CreatureSexAftermath "Player" receives "Stroking" from "Brown Bear Female";
-			CreatureSexAftermath "Player" receives "OralPussy" from "Brown Bear Female";
+				say "     The insistent stimulation becomes too much for your needy lover, and she clenches her thighs tightly around your head as she cums, roaring her pleasure into the [if daytimer is day]sky[else]night[end if] with a body-wide shudder. You dig your hands into her thighs to hold her still, catching as much of her spurting femcum in your mouth as you can manage, basking in the heat and taste of her orgasm. Eager to return the favor, the ursine reaches over to take hold of [if Cock Count of Player > 1]one of [end if]your cock[smn]. She pumps your length vigorously until you reach the precipice of orgasm, then lowers her head to suck you off until you cum, hips bucking against her muzzle as you spray your [Cum Load Size of Player] load across her tongue [if Cock Count of Player > 1]and face [end if]in powerful blasts.";
 			WaitLineBreak;
 			say "     By the time [if Player is neuter]she comes[else]you come[end if] to, your mind is awash in a haze of sticky bliss. The bear rises on unsteady footing and pulls you up into her arms, grinding her sopping wet snatch against your thigh while her tongue lavishes your face in affection. The treatment nearly readies you for another round with the extra-sized ursine, but she pulls away before you succumb to those urges, grinning broadly and rubbing your head with a furry paw. Sharing one last affectionate hug, the bear saunters off with a spring to her step, and you stumble away feeling very much drained.";
+			CreatureSexAftermath "Brown Bear Female" receives "Oral[if Player is male]Cock[else]Pussy[end if]" from "Player";
 		else:
 			say "     The bear towers over your fallen form. Her shaggy thighs are already damp with arousal, and her long, hard nipples peek through her fur. 'I feel naughty. Help me.' She hesitates for a moment before kneeling over your head. Her warm juices drip over your face before your whole world grows dark and your vision is filled with slavering bear snatch. With surprising delicacy, she begins to grind your face into her pussy, filling your breath with her nectar's potent aroma.";
 			say "     Unable to break free, you drive your tongue deep into her sweet, inviting cleft in the hope you can make her cum and let you go. After a few desperate, breathless minutes of orally worshiping your ursine captor, you feel her shudder in orgasm atop you, her thick honeys drenching your face in her delicious, sticky essence. After her climax, she rests atop you for several long minutes, her breathing somewhat troubled as aftershocks of pleasure ripple through her form. The moment she rolls off, you scramble to your feet and run away, fleeing before she can catch you again. You continue to lick your lips long after her abuse, her lingering flavor as distracting as it is enjoyable.";
-			CreatureSexAftermath "Player" receives "OralPussy" from "Brown Bear Female";
-		if "Microwaved" is not listed in feats of Player and Player is not MalePreferred:
-			if Player is not female:
-				now Cunt Count of Player is 1;
-				say "     You feel a wetness between your legs as the bear woman's honey creates a new, juicy cunt between your legs. You release a hazy moan as pleasure radiates from your newly formed slit, the bliss of its first orgasm washing over you.";
-				if "Modest Organs" is listed in feats of Player:
-					now Cunt Depth of Player is 4;
-					now Cunt Tightness of Player is 2;
-				else: [these will be increased momentarily]
-					now Cunt Depth of Player is 1;
-					now Cunt Tightness of Player is 0;
-			if "Modest Organs" is not listed in feats of Player:
-				if Cunt Depth of Player < 8, increase Cunt Depth of Player by 3;
-				if Cunt Tightness of Player < 11, increase Cunt Tightness of Player by 2;
-		if "Microwaved" is not listed in feats of Player and ( Player is not MalePreferred or "Breasts" is listed in feats of Player ) and "Flat Chested" is not listed in feats of Player:
-			if Breast Size of Player < 5, increase Breast Size of Player by 2;
+		CreatureSexAftermath "Player" receives "OralPussy" from "Brown Bear Female";
+		if "Microwaved" is not listed in feats of Player:
+			if Player is not MalePreferred:
+				if Player is not female:
+					now Cunt Count of Player is 1;
+					say "     You feel a wetness between your legs as the bear woman's honey creates a new, juicy cunt between your legs. You release a hazy moan as pleasure radiates from your newly formed slit, the bliss of its first orgasm washing over you.";
+					if "Modest Organs" is listed in feats of Player:
+						now Cunt Depth of Player is 4;
+						now Cunt Tightness of Player is 2;
+					else: [these will be increased momentarily]
+						now Cunt Depth of Player is 1;
+						now Cunt Tightness of Player is 0;
+				if "Modest Organs" is not listed in feats of Player:
+					if Cunt Depth of Player < 8, increase Cunt Depth of Player by 3;
+					if Cunt Tightness of Player < 11, increase Cunt Tightness of Player by 2;
+			if ( Player is not MalePreferred or "Breasts" is listed in feats of Player ) and "Flat Chested" is not listed in feats of Player:
+				if Breast Size of Player < 5, increase Breast Size of Player by 2;
 		now UrsineDefeatCount is 2;
 	else if a random chance of 1 in 5 succeeds:
 		if fightoutcome is 21 or fightoutcome is 22:
@@ -80,12 +63,10 @@ to say UrsineWins:
 		else:
 			say "     That last blow was a doozy. You feel your limp body being picked up and helplessly carried to the shade. The bear watches over you with an odd mixture of concern and barely restrained lust. 'It's hard sometimes,' she says absently while giving your head affectionate pats. Despite the way her huge paw jars your aching head, you cannot help but feel warmly towards the bear before passing out. You awaken to find the tattered remains of your clothes feeling odd. With a start, you realize they have been washed and ironed. Of all the messed up things in the world, that small gesture affects you deeply.";
 		increase morale of Player by 2;
-		decrease Libido of Player by 4;
+		lower Player Libido by 4;
 		increase HP of Player by 5;
-		if HP of Player > MaxHP of Player, now HP of Player is MaxHP of Player;
-		if Libido of Player < 0, now Libido of Player is 0;
 	else if ( UrsineDefeatCount is 2 or a random chance of 2 in 3 succeeds ) and Player is not neuter:
-		if Player is male and ( Cunt Count of Player is 0 or a random chance of 2 in 5 succeeds ):
+		if Player is male and ( Player is not female or a random chance of 2 in 5 succeeds ):
 			say "     She licks her lips as her favorite survivor is once again at her mercy. 'Oh why did you came back?' The smell of her arouses you, and she spots your hardening maleness. 'Oh. I guess we all have needs, now. Let me help you with that.' With that, she kneels down and wraps her huge mouth around your almost painfully swollen cock. You stay motionless as you see her lethal teeth not inches from your straining member, but the fear is soon forgotten as her skillful lips and tongue work you to an orgasm that has you [one of]spurting until your balls ache[or]moaning in pleasure[or]fighting unsuccessfully to avoid cumming over and over[at random]. After an age of being pleasured until your straining cock relaxes, you lay back and begin to doze. While you rest, the honey-scented bear departs, saying in a voice thick with lust, 'I've got to attend to myself now, [one of]Hotshot[or]Honey[at random]. Come back when you're ready for more fun.' Hearing the moaning of the bear as she pleasures herself, you realize it's time to move.";
 			CreatureSexAftermath "Brown Bear Female" receives "OralCock" from "Player";
 		else:
@@ -95,25 +76,17 @@ to say UrsineWins:
 			CreatureSexAftermath "Player" receives "OralPussy" from "Brown Bear Female";
 		now UrsineDefeatCount is 3;
 		increase morale of Player by 2;
-		decrease Libido of Player by 6;
+		lower Player Libido by 6;
 		increase HP of Player by 5;
-		if HP of Player > MaxHP of Player, now HP of Player is MaxHP of Player;
-		if Libido of Player < 0, now Libido of Player is 0;
 	else:
 		say "     [if fightoutcome is 21]Falling prey to your lusts, the[else if fightoutcome is 22]Seeing you submit, the[else]The[end if] bear hugs you against her honey-scented body and presses you deep into her warm, dark fur. Through her hide you hear her say, 'Why must we always fight so?' You feel her nipples leaking honeyed milk, and you are compelled to suck on them in your daze. Incredibly sweet milk flows into your mouth and into your body, each delicious spurt leaving you more and more aroused. After coating your palate in her intoxicating flavor, you move from one dark nipple to the next, squeezing and suckling on it for more. You can hear the bear purring deeply as you indulge yourself, her claw-tipped fingers roaming over your back to show her appreciation. Your hand snakes down between the bear's huge thighs, and you rub across her drenched and dripping pussy to increase the flow of her milk. You can feel and taste her orgasm approaching, and with one last generous spurt, you both orgasm hard. Refreshed and satisfied after your meal, you give the bear a grateful hug before heading on your way again.";
 		CreatureSexAftermath "Brown Bear Female" receives "Stroking" from "Player";
 		PlayerDrink 3;
 		PlayerEat 2;
 		increase morale of Player by 2;
-		decrease Libido of Player by 6;
+		lower Player Libido by 6;
 		increase HP of Player by 5;
-		if HP of Player > MaxHP of Player, now HP of Player is MaxHP of Player;
-		if Libido of Player < 0, now Libido of Player is 0;
-
-
-to say UrsineLoses:
-	say "     [one of]The beaten bear comes back to her senses. 'Oh. That's better,' and then slumps over, apparently peacefully asleep.[or]You find yourself watching the motion of her big furry backside as the defeated bear hurriedly ambles off.[at random]";
-
+	if HP of Player > MaxHP of Player, now HP of Player is MaxHP of Player;
 
 Section 2 - Creature Insertion
 
@@ -123,6 +96,13 @@ name(text)	PrepFunction(text)
 
 to say PrepCombat_Brown Bear Female:
 	setmongender 4; [creature is female]
+	choose row MonsterID from Table of Random Critters;
+	if Player is MalePreferred:
+		now sex entry is "Male";
+	else if Player is HermPreferred:
+		now sex entry is "Both";
+	else:
+		now sex entry is "Female";
 
 Table of Random Critters (continued)
 NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
@@ -144,16 +124,16 @@ When Play begins:
 	now enemy title entry is "Female Brown Bear"; [ Name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name. ]
 	now enemy Name entry is ""; [ Specific name of unique enemy. ]
 	now enemy type entry is 0; [ 0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters. ]
-	now attack entry is "[UrsineAttack]"; [Text used when the monster makes an Attack]
-	now defeated entry is "[UrsineLoses]"; [ Text or say command used when Monster is defeated.]
+	now attack entry is "[if HP of bee girl is 3][one of]She slams you with one of her great clawed hands, sending you flying[or]With terrifying ease, she picks you up and throws you into the underbrush[or]The ursine knocks you down with a sweep of her fur covered arm[or]The bear snaps at you with her powerful teeth[or]You are clubbed upside the head with a fuzzy fist[or]Your head is grabbed and your face is buried in her red-shirted bosom. It is sticky with honey and heady with her scent, leaving you a little dazed by the time you squirm free[at random][else][one of]She slams you with one of her great clawed hands, sending you flying[or]With terrifying ease, she picks you up and throws you into a pile of rubbish[or]The ursine knocks you down with a sweep of her fur covered arm[or]The bear snaps at you with her powerful teeth[or]The bear charges and tackles you, knocking the wind out of your lungs[at random][end if]."; [Text used when the monster makes an Attack]
+	now defeated entry is "     [one of]The beaten bear comes back to her senses. 'Oh. That's better,' and then slumps over, apparently peacefully asleep[or]You find yourself watching the motion of her big furry backside as the defeated bear hurriedly ambles off[at random].[line break]"; [ Text or say command used when Monster is defeated.]
 	now victory entry is "[UrsineWins]"; [ Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block as the demonstration text shows.]
-	now desc entry is "[UrsineDesc]"; [ Description of the creature when you encounter it.]
+	now desc entry is "     A towering figure comes into view. At first you assume it's a wild bear standing on its hind legs, but on closer inspection, you realize that its legs are somewhat long and its black claws are painted with nail polish. The infected woman has bright [one of]brown[or]blue[or]green[at random] eyes and huge, pointed teeth. A dense coat of shaggy fur covers her tall and wide body completely. Her muscular chest is padded with three rows of flattish breasts, and long nipples peek out through her fur. On seeing you, she exposes more of her teeth and speaks, '[one of]Run! I don't want to break another one!'[or]Not now, you idiot!'[or]Are you stalking me?'[at random][line break]"; [ Description of the creature when you encounter it.]
 	now face entry is "that of a bear, with an elongated snout and big bear teeth set in what is definitely not a teddy bear"; [ Face description, format as "Your face is [Face of Player]." ]
 	now body entry is "tall and broad, with heavy shoulders and an undeniable presence that reeks of sheer strength"; [ Body Description, format as "Your Body is [Body of Player]." ]
 	now skin entry is "[one of]shaggy-furred[or]coarsely furred[or]furry, honey-scented[at random]"; [ Skin Description, format as "Looking at yourself, your body is covered in [Skin of Player] skin." ]
 	now tail entry is "You have a short black tail hidden mostly by the sheer size of you."; [ Tail description, write a whole Sentence or leave blank. ]
-	now cock entry is "[one of]pink bulbous[or]ribbed[or]usually sheathed[at random]"; [ Cock Description, format as you have a 'size' (your text) cock]
-	now face change entry is "your nose changes and darkens as your face draws forward into a bear like muzzle, and your ears become rounded and furry as they move into their new position"; [ Face change text, format as "Your face feels funny as [face change entry]." ]
+	now cock entry is "[one of]pink, bulbous[or]ribbed[or]usually sheathed[at random]"; [ Cock Description, format as you have a 'size' (your text) cock]
+	now face change entry is "your nose changes and darkens as your face draws forward into a bear-like muzzle, and your ears become rounded and furry as they move into their new position"; [ Face change text, format as "Your face feels funny as [face change entry]." ]
 	now body change entry is "you swell with the sudden appearance of more muscles and height, growing taller and heavier by the moment"; [ Body change text, format as "Your body feels funny as [body change entry]." ]
 	now skin change entry is "coarse, shaggy, dark brown fur spreads rapidly over your form"; [ Skin change text, format as "Your skin feels funny as [skin change entry]." ]
 	now ass change entry is "the forming of your stubby tail almost goes unnoticed"; [ Ass/tail change text, format as "Your ass feels funny as [ass change entry]." ]
@@ -299,7 +279,6 @@ When Play begins:
 	[Clit Size Adjective is generated by a function and can be used in scenes: very small/small/average/large/very large]
 ]
 
-
 Section 3 - Endings
 
 Table of GameEndings (continued)
@@ -309,25 +288,21 @@ Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered
 This is the Brown Bear Female Infection rule:
 	if Player has a body of "Brown Bear Female":
 		trigger ending "Brown Bear Female Infection"; [Here it states, that the ending has been played.]
-		if humanity of Player < 10:
-			say "     You amble off into the parkland, only occasionally reappearing to scare the hell out of anyone still foolish enough to try camping. Occasionally you leave signs of your passing in the form of rifles twisted into pretzels and tales from horrified hunters that have been both attacked and abused. Seeing you are no threat unless threatened, you are left to your own devices.";
-		else:
-			say "     Your body shape strongly inclines you to seek an outdoor life. Your resourcefulness, hardiness and aptitude are noted and your kind are soon recognized as excellent park warden material. Despite often being posted to wilderness areas, you are seldom left completely alone for long as bears begin to build an increasing fanbase amongst both the infected and the more [one of]adventurous[or]deviant[at random] uninfected.";
+		say "     [if humanity of Player < 10]You amble off into the parkland, only occasionally reappearing to scare the hell out of anyone still foolish enough to try camping. Occasionally you leave signs of your passing in the form of rifles twisted into pretzels and tales from horrified hunters that have been both attacked and abused. Seeing you are no threat unless threatened, you are left to your own devices[else]Your body shape strongly inclines you to seek an outdoor life. Your resourcefulness, hardiness and aptitude are noted and your kind are soon recognized as excellent park warden material. Despite often being posted to wilderness areas, you are seldom left completely alone for long as bears begin to build an increasing fanbase amongst both the infected and the more [one of]adventurous[or]deviant[at random] uninfected[end if].";
+
+Section 4 - Drop Item
 
 Table of Game Objects (continued)
 name	desc	weight	object
 "honeycomb"	"A red-painted tin containing a wonderfully sweet-smelling slice of coarse honeycomb. From the size of the cells, you know you really don't want to find the hive."	1	honeycomb
 
-honeycomb is a grab object. It is temporary.
-
-Usedesc of honeycomb is "[honeycombuse]";
+honeycomb is a grab object.
+Usedesc of honeycomb is "[honeycombuse]".
+Scent of honeycomb is "The small piece of honeycomb smells like a sweet smackerel of honey. You don't notice anything unusual or infected about its odor.".
 
 to say honeycombuse:
-	say "You are overcome with the need for sweetness. The sticky goodness of the honeycomb makes you drool as you shove it into your suddenly hungry mouth.";
+	say "     You are overcome with the need for sweetness. The sticky goodness of the honeycomb makes you drool as you shove it into your suddenly hungry mouth.";
 	PlayerEat 6;
 	PlayerThirst 1;
-
-instead of sniffing honeycomb:
-	say "The small piece of honeycomb smells like a sweet smackerel of honey. You don't notice anything unusual or infected about its odor.";
 
 Brown Bear ends here.

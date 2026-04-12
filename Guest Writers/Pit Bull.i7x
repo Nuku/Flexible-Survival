@@ -19,7 +19,7 @@ to say losetopitbull:
 			CreatureSexAftermath "Pit Bull" receives "PussyFuck" from "Player";
 		else if Player is purefemale and a random chance of 3 in 5 succeeds: [Female Pit scissoring female player]
 			say "     Gripping your thighs firmly, you're forced to watch as her tongue begins to assault [if Cunt Count of Player > 1]one of [end if]your exposed, [cunt size desc of Player] cunt[sfn], that slick organ's twisted affection [if Libido of Player > 33]an imposed attempt to alleviate your lingering desire[else]forcing you to twist impotently as your desire rises[end if]. She disengages only briefly to relinquish herself of her pants, dripping portal already slick with her own arousal, before she returns to the task at hand.";
-			If scalevalue of Player < 3:
+			if scalevalue of Player < 3:
 				say "     Pulling the legs of your diminutive form up, forcing you to hang mercilessly in the air as she grinds her snatch against yours with a dizzyingly wanton fervor, exacerbated as you're forced to contend with the blood rushing to your head, it's not long before [if Libido of Player > 33]you cry out in orgasm, her[else]she cries out in orgasm, your[end if] own soon following in its wake, gushing holes dripping down against your beleaguered form. Satisfied, she lets you go, causing you to stumble to the ground, and she doesn't give you much time to gather yourself and your things before she starts booting you out of her territory, forcing you to flee an embarrassed mess as you are.";
 			else if scalevalue of Player > 3:
 				say "     Holding you once more, her following assault is somewhat awkward - though just as much outwardly satisfying to her ego - by your comparatively large size as she grinds her snatch against yours with such a wanton fervor, lust streaked with shame that you are so mercilessly used by a canine smaller than you. It's not long before [if Libido of Player > 33]you cry out in orgasm, her[else]she cries out in orgasm, your[end if] own soon following in its wake, gushing holes smearing their mess across your exposed crotch. Now satisfied, she pulls free of you, and she doesn't give you much time to gather yourself and your things before she starts booting you out of her territory, forcing you to flee an embarrassed mess as you are.";
@@ -35,27 +35,26 @@ to say losetopitbull:
 			else:
 				say "     You [if HP of Player > 0]reluctantly oblige her abuse, taking[else]try to turn away, but she grabs you by your head, forcing you to face[end if] the full brunt of her acrid release. [if scalevalue of Player > 3]It's a pitiful sight, to see a creature as large as you are pissed on by this comparatively diminutive pit bull, forcing your senses to be[else]You can only silently take her humiliation, senses forcefully[end if] flooded with the taste and smell of her harsh fluids. Her flow inevitably diminishes before ceasing altogether, much to your relief, before she puts her pants back on and leaves you with a harsh swat on the rear, forcing you to gather your things and retreat from her domain.";
 		else if anallevel is 3 and a random chance of 2 in 5 succeeds: [Ass fingered]
-			If scalevalue of Player > 4:
+			if scalevalue of Player > 4:
 				say "     She laughs, slapping your rear harshly, no doubt amused to have felled a such a massive trespasser. Too embarrassed, you look away as you feel a couple of fingers beginning to penetrate your anal ring. [if HP of Player <= 0]Ignoring what protests you may offer up[else]Soft moans of pleasure escaping your lips[end if], your large passage is more than willing to abide her intrusion. With an audible snort, she regards your accommodation as a challenge and shows no restraint in stuffing the whole of her fist down the portal, her harsh treatment determined to leave an impact.";
 			else if scalevalue of Player is 4:
 				say "     Amused, she gives your rear an audible smack and watches you flinch before you're left to observe as she slowly pushes two of her fingers into your exposed anal ring. Met only with marginal resistance, she replaces her querying intrusion with the whole of her fist, causing you to squirm and struggle impotently against her irreverent hold.";
 			else:
 				say "     Amused, she gives your rear an audible smack and watches you flinch before you watch as she slowly pushes two of her fingers into your exposed anal ring. Writhing in discontent, her irreverent inspection is briefly concluded, only to be replaced by the whole of her fist! [if Player is twistcapped]Thankfully, your infection abides such an intrusion in spite of its size and belligerence, though this only serves to amuse the rough dog and encourage her to assault you more harshly[else]You feel a sharp pain as your beleaguered hole is stretched so suddenly, your impotent struggles an endless source of entertainment to the rough dog[end if].";
 			WaitLineBreak;
-			say "     [if Player is male]Cock[smn] driven erect by her influence, [itstheirm] need for attention is left largely disregarded by the canine[else if Player is female]Cunt[sfn] dripping wet with a needy hunger in the wake of her influence, [itstheirf] desire for attention is left largely disregarded by the canine[else]Twisted lust gradually overwhelming you, she doesn't appear to regard your genderless state[end if]; rather, she intends to stimulate you purely by force. You feel her knuckles grind against your [if Player is male]prostate[else]passage[end if] with a reckless abandon. ";
 			if Player is not neuter:
 				if Libido of Player > 69:
 					if Player is male:
-						say "You almost immediately fire off your [Cum Load Size of Player] load, [if Ball Size of Player > 4]drenching your torso and neck[else]seed wasted against your torso[end if]. She's actually a bit surprised by this, probably not suspecting you to be this pathetically easy to get off. Her clear annoyance is inevitably abated when she seems satisfied in her goal of humiliating you, regardless.";
+						say "     Cock[smn] driven erect by her influence, [itstheirm] need for attention is left largely disregarded by the canine; rather, she intends to stimulate you purely by force. You feel her knuckles grind against your prostate with a reckless abandon. You almost immediately fire off your [Cum Load Size of Player] load, [if Ball Size of Player > 4]drenching your torso and neck[else]seed wasted against your torso[end if]. She's actually a bit surprised by this, probably not suspecting you to be this pathetically easy to get off. Her clear annoyance is inevitably abated when she seems satisfied in her goal of humiliating you, regardless.";
 					else:
-						say "You almost immediately cry out in orgasm, your sexual fluids dripping down and only serving to lubricate what thrusts that might follow. She's actually a bit surprised by this, probably not suspecting you to be this pathetically easy to get off. Her clear annoyance is inevitably abated when she seems satisfied in her goal of humiliating you, regardless.";
+						say "     Cunt[sfn] dripping wet with a needy hunger in the wake of her influence, [itstheirf] desire for attention is left largely disregarded by the canine; rather, she intends to stimulate you purely by force. You feel her knuckles grind against your passage with a reckless abandon. You almost immediately cry out in orgasm, your sexual fluids dripping down and only serving to lubricate what thrusts that might follow. She's actually a bit surprised by this, probably not suspecting you to be this pathetically easy to get off. Her clear annoyance is inevitably abated when she seems satisfied in her goal of humiliating you, regardless.";
 				else:
 					if Player is male:
-						say "[if Libido of Player > 33]It's not long before you[else]It seems like forever until you finally[end if] cry out in orgasm, your cock[smn] firing off [itstheirm] [Cum Load Size of Player] load, [if Ball Size of Player > 4]drenching your torso and neck[else]seed wasted against your torso[end if]. As you eventually recover, it becomes clear that the canine appears satisfied with her endeavors to humiliate you as you are.";
+						say "     Cock[smn] driven erect by her influence, [itstheirm] need for attention is left largely disregarded by the canine; rather, she intends to stimulate you purely by force. You feel her knuckles grind against your prostate with a reckless abandon. [if Libido of Player > 33]It's not long before you[else]It seems like forever until you finally[end if] cry out in orgasm, your cock[smn] firing off [itstheirm] [Cum Load Size of Player] load, [if Ball Size of Player > 4]drenching your torso and neck[else]seed wasted against your torso[end if]. As you eventually recover, it becomes clear that the canine appears satisfied with her endeavors to humiliate you as you are.";
 					else:
-						say "[if Libido of Player > 33]It's not long before you[else]It seems like forever until you finally[end if] cry out in orgasm, your sexual fluids dripping down and only serving to lubricate what thrusts that might follow. As you eventually recover, it becomes clear that the canine appears satisfied with her endeavors to humiliate you as you are.";
+						say "     Cunt[sfn] dripping wet with a needy hunger in the wake of her influence, [itstheirf] desire for attention is left largely disregarded by the canine; rather, she intends to stimulate you purely by force. You feel her knuckles grind against your passage with a reckless abandon. [if Libido of Player > 33]It's not long before you[else]It seems like forever until you finally[end if] cry out in orgasm, your sexual fluids dripping down and only serving to lubricate what thrusts that might follow. As you eventually recover, it becomes clear that the canine appears satisfied with her endeavors to humiliate you as you are.";
 			else:
-				say "It feels like hours before she finally relents, yourself exhausted by this physical assault and that of your unabated lust. The canine appears satisfied in her endeavors to humiliate you.";
+				say "     Twisted lust gradually overwhelming you, she doesn't appear to regard your genderless state; rather, she intends to stimulate you purely by force. You feel her knuckles grind against your passage with a reckless abandon. It feels like hours before she finally relents, yourself exhausted by this physical assault and that of your unabated lust. The canine appears satisfied in her endeavors to humiliate you.";
 			say "     Pulling her fist free of you with an audible, wet sound, she adds further insult to injury by cleaning it against your [if scalevalue of Player > 3]large and [end if]beleaguered frame before she inevitably starts forcing your exhausted and embarrassed form to flee from her territory[if scalevalue of Player < 4 and player is not twistcapped], no doubt relegated to walking funny for the while that follows[end if].";
 			CreatureSexAftermath "Player" receives "AssDildoFuck" from "Pit Bull";
 		else: [Player gets pussy in face from female Pit]
@@ -98,27 +97,26 @@ to say losetopitbull:
 			else:
 				say "     You [if HP of Player > 0]reluctantly oblige his abuse, taking[else]try to turn away, but he grabs you by your head, forcing you to face[end if] the full brunt of his acrid release. [if scalevalue of Player > 3]It's a pitiful sight, to see a creature as large as you are pissed on by the comparatively diminutive pit bull, forcing your senses to be[else]You can only silently take his humiliation, senses forcefully[end if] flooded with the taste and smell of his harsh fluids. His flow inevitably diminishes before ceasing altogether, much to your relief, before he puts his pants back on and leaves you with a harsh swat on the rear, forcing you to gather your things and retreat from his domain.";
 		else if anallevel > 1 and ( a random chance of 1 in 5 succeeds or ( Player is not female and a random chance of 1 in 5 succeeds ) or ( ( anallevel is 3 or Player is mpreg_ok ) and a random chance of 1 in 5 succeeds ) ):
-			If scalevalue of Player > 4: [Player's ass fingered by male Pit]
+			if scalevalue of Player > 4: [Player's ass fingered by male Pit]
 				say "     He laughs, slapping your rear harshly, no doubt amused to have felled a such a massive trespasser. Too embarrassed, you look away as you feel a couple of fingers beginning to penetrate your anal ring. [if HP of Player < 1]Ignoring what protests you may offer up[else]Soft moans of pleasure escaping your lips[end if], your large passage is more than willing to abide his intrusion. With an audible snort, he regards your accommodation as a challenge and shows no restraint in stuffing the whole of his fist down the portal, to little avail.";
 			else if scalevalue of Player is 4:
 				say "     Amused, he gives your rear an audible smack and watches you flinch before you're left to observe as he slowly pushes two of his fingers into your exposed anal ring. Met only with marginal resistance, he replaces his querying intrusion with the whole of his fist, causing you to squirm and struggle impotently against his irreverent hold.";
 			else:
 				say "     Amused, he gives your rear an audible smack and watches you flinch before you watch as he slowly pushes two of his fingers into your exposed anal ring. Writhing in discontent, his irreverent inspection is briefly concluded, only to be replaced by the whole of his fist! [if Player is twistcapped]Thankfully, your infection abides such an intrusion in spite of its size and belligerence, though this only serves to amuse the rough dog and encourage him to assault you more harshly[else]You feel a sharp pain as your beleaguered hole is stretched so suddenly, your impotent struggles an endless source of entertainment to the rough dog[end if].";
 			WaitLineBreak;
-			say "     [if Player is male]Cock[smn] driven erect by his influence, [itstheirm] need for attention is left largely disregarded by the canine[else if Player is female]Cunt[sfn] dripping wet with a needy hunger in the wake of his influence, [itstheirf] desire for attention is left largely disregarded by the canine[else]Twisted lust gradually overwhelming you, he doesn't appear to regard your genderless state[end if]; rather, he intends to stimulate you purely by force. You feel his knuckles grind against your [if Player is male]prostate[else]passage[end if] with a reckless abandon. ";
 			if Player is not neuter:
 				if Libido of Player > 69:
 					if Player is male:
-						say "You almost immediately fire off your [Cum Load Size of Player] load, [if Ball Size of Player > 4]drenching your torso and neck[else]seed wasted against your torso[end if]. He's actually a bit surprised by this, probably not suspecting you to be this pathetically easy to get off. His clear annoyance is inevitably abated when he seems satisfied in his goal of humiliating you, regardless.";
+						say "     Cock[smn] driven erect by his influence, [itstheirm] need for attention is left largely disregarded by the canine; rather, he intends to stimulate you purely by force. You feel his knuckles grind against your prostate with a reckless abandon. You almost immediately fire off your [Cum Load Size of Player] load, [if Ball Size of Player > 4]drenching your torso and neck[else]seed wasted against your torso[end if]. He's actually a bit surprised by this, probably not suspecting you to be this pathetically easy to get off. His clear annoyance is inevitably abated when he seems satisfied in his goal of humiliating you, regardless.";
 					else:
-						say "You almost immediately cry out in orgasm, your sexual fluids dripping down and only serving to lubricate what thrusts that might follow. He's actually a bit surprised by this, probably not suspecting you to be this pathetically easy to get off. His clear annoyance is inevitably abated when he seems satisfied in his goal of humiliating you, regardless.";
+						say "     Cunt[sfn] dripping wet with a needy hunger in the wake of his influence, [itstheirf] desire for attention is left largely disregarded by the canine; rather, he intends to stimulate you purely by force. You feel his knuckles grind against your passage with a reckless abandon. You almost immediately cry out in orgasm, your sexual fluids dripping down and only serving to lubricate what thrusts that might follow. He's actually a bit surprised by this, probably not suspecting you to be this pathetically easy to get off. His clear annoyance is inevitably abated when he seems satisfied in his goal of humiliating you, regardless.";
 				else:
 					if Player is male:
-						say "[if Libido of Player > 33]It's not long before you[else]It seems like forever until you finally[end if] cry out in orgasm, your cock[smn] [itstheirm] [Cum Load Size of Player] load, [if Ball Size of Player > 4]drenching your torso and neck[else]seed wasted against your torso[end if]. As you eventually recover, it becomes clear that the canine appears satisfied with his endeavors to humiliate you as you are.";
+						say "     Cock[smn] driven erect by his influence, [itstheirm] need for attention is left largely disregarded by the canine; rather, he intends to stimulate you purely by force. You feel his knuckles grind against your prostate with a reckless abandon. [if Libido of Player > 33]It's not long before you[else]It seems like forever until you finally[end if] cry out in orgasm, your cock[smn] [itstheirm] [Cum Load Size of Player] load, [if Ball Size of Player > 4]drenching your torso and neck[else]seed wasted against your torso[end if]. As you eventually recover, it becomes clear that the canine appears satisfied with his endeavors to humiliate you as you are.";
 					else:
-						say "[if Libido of Player > 33]It's not long before you[else]It seems like forever until you finally[end if] cry out in orgasm, your sexual fluids dripping down and only serving to lubricate what thrusts that might follow. As you eventually recover, it becomes clear that the canine appears satisfied with his endeavors to humiliate you as you are.";
+						say "     Cunt[sfn] dripping wet with a needy hunger in the wake of his influence, [itstheirf] desire for attention is left largely disregarded by the canine; rather, he intends to stimulate you purely by force. You feel his knuckles grind against your passage with a reckless abandon. [if Libido of Player > 33]It's not long before you[else]It seems like forever until you finally[end if] cry out in orgasm, your sexual fluids dripping down and only serving to lubricate what thrusts that might follow. As you eventually recover, it becomes clear that the canine appears satisfied with his endeavors to humiliate you as you are.";
 			else:
-				say "It feels like hours before he finally relents, yourself exhausted by this physical assault and that of your unabated lust, the canine appears satisfied in his endeavors to humiliate you.";
+				say "     Twisted lust gradually overwhelming you, he doesn't appear to regard your genderless state; rather, he intends to stimulate you purely by force. You feel his knuckles grind against your passage with a reckless abandon. It feels like hours before he finally relents, yourself exhausted by this physical assault and that of your unabated lust, the canine appears satisfied in his endeavors to humiliate you.";
 			say "     Pulling his fist free of you with an audible, wet sound, he adds further insult to injury by cleaning it against your [if scalevalue of Player > 3]large and [end if]beleaguered frame before he inevitably starts forcing your exhausted and embarrassed form to flee from his territory[if scalevalue of Player < 4 and player is not twistcapped], no doubt relegated to walking funny for the while that follows[end if].";
 			CreatureSexAftermath "Player" receives "AssDildoFuck" from "Pit Bull";
 		else:
@@ -128,7 +126,6 @@ to say losetopitbull:
 				CreatureSexAftermath "Player" receives "OralCock" from "Pit Bull";
 
 To say beatthepitbull:
-	say "     With one final effort you set upon the canine, who falls under the weight of your superior prowess. ";
 	now sextablerun is 0;
 	let randompitbullchoice be a list of numbers;
 	blank out the whole of table of fucking options;
@@ -136,53 +133,53 @@ To say beatthepitbull:
 	if Player is male:
 		choose a blank row in table of fucking options;
 		now title entry is "Receive fellatio";
-		now sortorder entry is 1;
+		now sortorder entry is 2;
 		add 1 to randompitbullchoice;
 		[]
 		if Cock Length of Player < 18:
 			if pitbullgender is 1:
 				choose a blank row in table of fucking options;
 				now title entry is "Give vaginal";
-				now sortorder entry is 3;
+				now sortorder entry is 4;
 				add 3 to randompitbullchoice;
 			[]
 			choose a blank row in table of fucking options;
 			now title entry is "Give anal";
-			now sortorder entry is 4;
+			now sortorder entry is 5;
 			if anallevel > 1:
 				add 4 to randompitbullchoice;
 	[]
 	if Player is female:
 		choose a blank row in table of fucking options;
 		now title entry is "Receive cunnilingus";
-		now sortorder entry is 2;
+		now sortorder entry is 3;
 		add 2 to randompitbullchoice;
 		[]
 		if pitbullgender is 2:
 			choose a blank row in table of fucking options;
 			now title entry is "Receive vaginal";
-			now sortorder entry is 5;
+			now sortorder entry is 6;
 			add 6 to randompitbullchoice;
 		else if Player is not male:
 			choose a blank row in table of fucking options;
 			now title entry is "Scissoring";
-			now sortorder entry is 5;
+			now sortorder entry is 6;
 			add 5 to randompitbullchoice;
 	[]
 	if pitbullgender is 1:
 		if HP of Dominick >= 10 and HP of Dominick < 20 and Player is female and ( BodyName of Player is "Breederslut" or FaceName of Player is "Breederslut" ) and inasituation is false:
 			choose a blank row in table of fucking options;
 			now title entry is "Recruit for Dominick";
-			now sortorder entry is 99;
+			now sortorder entry is 1;
 	else:
 		choose a blank row in table of fucking options;
 		now title entry is "Receive anal";
-		now sortorder entry is 6;
+		now sortorder entry is 7;
 		if anallevel > 1:
 			add 7 to randompitbullchoice;
 	[]
 	if humanity of Player - Libido of Player < 0 and (Player is male or (Player is female and ( HP of Dominick < 10 or HP of Dominick >= 20 or BodyName of Player is not "Breederslut" or FaceName of Player is not "Breederslut"))):
-		say "Compelled by your lust, you lose your self-control and seek to sate your sexual needs using your fallen foe. You immediately remove what attire might obstruct your tainted endeavor and advance upon [ghim].";
+		say "     With one final effort you set upon the canine, who falls under the weight of your superior prowess. Compelled by your lust, you lose your self-control and seek to sate your sexual needs using your fallen foe. You immediately remove what attire might obstruct your tainted endeavor and advance upon [ghim].";
 		sort randompitbullchoice in random order;
 		if entry 1 of randompitbullchoice is:
 			-- 1: say "[pitbull_vsex1]";
@@ -193,7 +190,7 @@ To say beatthepitbull:
 			-- 6: say "[pitbull_vsex6]";
 			-- 7: say "[pitbull_vsex7]";
 	else if Libido of Player >= 30 and Player is not neuter:
-		say "As [ghe] lies before you this might be an opportune moment to satisfy any lingering need you might possess. Looking over the fallen canine, you quickly weigh your possible options for sexual fun[if HP of Dominick >= 10 and HP of Dominick < 20 and Player is female and ( Player is breederslutbodied or Player is breederslutfaced ) and pitbullgender is 1], including possibly trying to turn this junkyard dog into another pet for Dominick[end if].";
+		say "     With one final effort you set upon the canine, who falls under the weight of your superior prowess. As [ghe] lies before you this might be an opportune moment to satisfy any lingering need you might possess. Looking over the fallen canine, you quickly weigh your possible options for sexual fun[if HP of Dominick >= 10 and HP of Dominick < 20 and Player is female and ( Player is breederslutbodied or Player is breederslutfaced ) and pitbullgender is 1], including possibly trying to turn this junkyard dog into another pet for Dominick[end if].";
 		sort the table of fucking options in sortorder order;
 		repeat with y running from 1 to number of filled rows in table of fucking options:
 			choose row y from the table of fucking options;
@@ -233,7 +230,7 @@ To say beatthepitbull:
 			else:
 				say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options], or 0 to exit.";
 	else:
-		say "Satisfied with your victory, and feeling that you might not require anything further from [ghim], you depart from the beast.";
+		say "     With one final effort you set upon the canine, who falls under the weight of your superior prowess. Satisfied with your victory, and feeling that you might not require anything further from [ghim], you depart from the beast.";
 
 to say pitbull_vsex1:		[receive fellatio]
 	say "     Pulling the pit bull upright, you offer [if Cock Count of Player > 1]one of [end if]your exposed, [Cock of Player] dick[smn] to [ghim]. [if pitbullgender is 2]His expression one of ill-regard to this prospect, you're compelled to grind the hardening, [cock size desc of Player] organ against his face until he obliges you[else]A growl her remark, she looks clearly disinterested in what you're offering her, forcing you to coax her into compliance as you grind the hardening, [cock size desc of Player] thing until she'll reluctantly oblige[end if]. [if Cock Length of Player > 18]Much too massive to abide, the beast is relegated to offering a tongue's lone, imposed affection[else]Tongue's imposed affection offered against its length, the beast follows up with [ghis] lip's embrace[end if], organ now slick with a mix of saliva and pre.";

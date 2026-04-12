@@ -16,8 +16,9 @@ Section A - Establishing Poseidon and His Rules
 
 An everyturn rule:
 	if daytimer is night:
-		now Poseidon is nowhere;
-	else if daytimer is day:
+		if Poseidon is in Royal Throne Room:
+			now Poseidon is nowhere;
+	else if Poseidon is not in Royal Throne Room:
 		move Poseidon to Royal Throne Room;
 
 Table of GameCharacterIDs (continued)
@@ -61,21 +62,13 @@ SexuallyExperienced of Poseidon is true.
 TwistedCapacity of Poseidon is false. [Twisted Characters can take any penetration, no matter the size]
 Sterile of Poseidon is true. [steriles can't knock people up]
 MainInfection of Poseidon is "".
-Description of Poseido is "[PoseidonDesc]".
-Conversation of Poseidon is { "<This is nothing but a placeholder!>" }.
-The scent of Poseidon is "He smells heavily of the sea and the earth. It's an odd combination but it works for him".
-
-to say PoseidonDesc:
-	say "     Poseidon is a strong looking man with a visible six pack and muscular arms. The king of Atlantis is different than most mermen in the fact that he doesn't appear to wear a shirt, though he does wear a pair of form fitting jeans. The god-like male has shoulder length black hair and stormy blue eyes that could and probably do, draw attention. He has a powerful aura emanating from him, clearly letting everyone know that he has strength. When he notices you looking at him, he smiles at you.";
+Description of Poseido is "     Poseidon is a strong-looking man with a visible six pack and muscular arms. The king of Atlantis is different than most mermen in the fact that he doesn't appear to wear a shirt, though he does wear a pair of form-fitting jeans. The god-like male has shoulder length black hair and stormy blue eyes that could, and probably do, draw attention. He has a powerful aura emanating from him, clearly letting everyone know that he has strength. When he notices you looking at him, he smiles at you.[line break]".
+fuckscene of Poseidon is "[PoseidonSexMenu]".
+The scent of Poseidon is "     He smells heavily of the sea and the earth. It's an odd combination but it works for him".
 
 instead of conversing the Poseidon:
 	say "     The merman king smiles at you before waiting for you to say something.";
-	wait for any key;
-	say "[PoseidonTalkMenu]";
-
-to say PoseidonTalkMenu:
-	LineBreak;
-	say "What do you wish to talk about with Poseidon?";
+	say "[line break]     What do you wish to talk about with Poseidon?";
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]
@@ -84,17 +77,16 @@ to say PoseidonTalkMenu:
 		now title entry is "Courtship";
 		now sortorder entry is 1;
 		now description entry is "Ask him about the courtship";
+	else if PoseidonRelationship is 3 and Loyalty of Poseidon > 0:
+		choose a blank row in table of fucking options;
+		now title entry is "First Date";
+		now sortorder entry is 3;
+		now description entry is "Ask him on a date";
 	[]
 	choose a blank row in table of fucking options;
 	now title entry is "Siblings";
 	now sortorder entry is 2;
 	now description entry is "Ask him about his siblings";
-	[]
-	if PoseidonRelationship is 3 and Loyalty of Poseidon > 0:
-		choose a blank row in table of fucking options;
-		now title entry is "First Date";
-		now sortorder entry is 3;
-		now description entry is "Ask him on a date";
 	[]
 	sort the table of fucking options in sortorder order;
 	repeat with y running from 1 to number of filled rows in table of fucking options:
@@ -109,34 +101,37 @@ to say PoseidonTalkMenu:
 			choose row calcnumber in table of fucking options;
 			say "[title entry]: [description entry]?";
 			if Player consents:
-				let nam be title entry;
+				LineBreak;
 				now sextablerun is 1;
-				if (nam is "Courtship"):
-					say "[PoseidonTalk1]";
-				if (nam is "Siblings"):
-					say "[PoseidonTalk2]";
-				if (nam is "First Date"):
-					say "[PoseidonTalk3]";
-				wait for any key;
+				if title entry is:
+					-- "Courtship":
+						say "[PoseidonTalk1]";
+					-- "Siblings":
+						say "[PoseidonTalk2]";
+					-- "First Date":
+						say "[PoseidonTalk3]";
 		else if calcnumber is 0:
+			LineBreak;
 			now sextablerun is 1;
 			say "     You shake your head, which simply causes the king to return to whatever he was doing.";
-			wait for any key;
 		else:
-			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options], or 0 to exit.";
+	wait for any key;
 	clear the screen and hyperlink list;
 
 to say PoseidonTalk1:
 	say "     Recalling what the buff male asked of you last time, a question pops into your head.";
-	say "     [bold type]Do you wish to accept the courtship this time?[roman type][line break]";
-	LineBreak;
+	say "[line break]     [bold type]Do you wish to accept the courtship this time?[roman type][line break]";
 	say "     ([link]Y[as]y[end link]) - It wouldn't hurt to give it a try.";
 	say "     ([link]N[as]n[end link]) - No, I'm not a marrying-type of person.";
 	if Player consents:
+		LineBreak;
 		say "     Shrugging your shoulders mentally you voice that you want to accept his courtship. This causes the merman's face to light up. 'Great! It's official then!' He says with a smile. You ask him what this relationship will consist of, something that Poseidon promptly gives a response to. 'Simple, we go on dates, if it turns out well then perhaps marriage,' the buff male tells you. Well... you guess that was kind of obvious, causing you to wonder out loud when the first date will be. 'Oh, that, don't worry I'll plan the date and let you know when it's time,' he says, waving your concerns off. With a shrug you figure you should go on your way, heading back out of the palace, to the entrance.";
+		WaitLineBreak;
 		move player to Royal Palace Entrance;
 		now PoseidonRelationship is 3;
 	else:
+		LineBreak;
 		say "     You mentally shake your head and tell him that you didn't have anything to say and apologize. The king shrugs his shoulders at you and goes on with his business.";
 
 to say PoseidonTalk2:
@@ -146,52 +141,48 @@ to say PoseidonTalk2:
 
 Section B - Sex
 
-instead of fucking Poseidon:
+to say PoseidonSexMenu:
 	if PoseidonRelationship is 99:
 		say "     The king looks at you oddly before shaking his head. 'I won't bed you unless we're courting, it wouldn't be fair to you,' he says firmly, causing you to sigh.";
 	else if PoseidonRelationship is 3:
 		say "     The king chuckles at you and smiles. 'Sorry my dear but not until we've at least gone on a date,' he tells you waving you off. You shrug your shoulders and figure you can wait.";
-	else if (lastfuck of Poseidon - turns < 3): [fucked in the last 3 turns]
+	else if lastfuck of Poseidon - turns < 3: [fucked in the last 3 turns]
 		say "     He gives you an apologetic look before saying something. 'I'm sorry love but while I'd like to spend some time alone with you, I do have work to do.' Poseidon says, gesturing to his paperwork and the guests in the corner.";
 	else if PoseidonRelationship > 3:
 		say "     Raising a brow at you, the king takes you by the hand and leads you to his bedroom where a big double bed sits. 'So my love, what is it that you wish to do?' Poseidon asks, a soft tone to his voice.";
-		say "[PoseidonSexMenu]";
-
-to say PoseidonSexMenu:
-	LineBreak;
-	now sextablerun is 0;
-	blank out the whole of table of fucking options;
-	[]
-	choose a blank row in table of fucking options;
-	now title entry is "Make Love Anally";
-	now sortorder entry is 1;
-	now description entry is "Have romantic sex with the merman";
-	[]
-	sort the table of fucking options in sortorder order;
-	repeat with y running from 1 to number of filled rows in table of fucking options:
-		choose row y from the table of fucking options;
-		say "[link][y] - [title entry][as][y][end link][line break]";
-	say "[link]0 - Nevermind[as]0[end link][line break]";
-	while sextablerun is 0:
-		say "Pick the corresponding number> [run paragraph on]";
-		get a number;
-		if calcnumber > 0 and calcnumber <= the number of filled rows in table of fucking options:
-			now current menu selection is calcnumber;
-			choose row calcnumber in table of fucking options;
-			say "[title entry]: [description entry]?";
-			if Player consents:
-				let nam be title entry;
+		now sextablerun is 0;
+		blank out the whole of table of fucking options;
+		[]
+		choose a blank row in table of fucking options;
+		now title entry is "Make Love Anally";
+		now sortorder entry is 1;
+		now description entry is "Have romantic sex with the merman";
+		[]
+		sort the table of fucking options in sortorder order;
+		repeat with y running from 1 to number of filled rows in table of fucking options:
+			choose row y from the table of fucking options;
+			say "[link][y] - [title entry][as][y][end link][line break]";
+		say "[link]0 - Nevermind[as]0[end link][line break]";
+		while sextablerun is 0:
+			say "Pick the corresponding number> [run paragraph on]";
+			get a number;
+			if calcnumber > 0 and calcnumber <= the number of filled rows in table of fucking options:
+				now current menu selection is calcnumber;
+				choose row calcnumber in table of fucking options;
+				say "[title entry]: [description entry]?";
+				if Player consents:
+					LineBreak;
+					now sextablerun is 1;
+					if title entry is "Make Love Anally":
+						say "[PoseidonSex1]";
+			else if calcnumber is 0:
+				LineBreak;
 				now sextablerun is 1;
-				if (nam is "Make Love Anally"):
-					say "[PoseidonSex1]";
-				wait for any key;
-		else if calcnumber is 0:
-			now sextablerun is 1;
-			say "     You say that you've changed your mind, which just causes Poseidon to smile and say it's alright before leading you back to the palace throne room. ";
-			wait for any key;
-		else:
-			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
-	clear the screen and hyperlink list;
+				say "     You say that you've changed your mind, which just causes Poseidon to smile and say it's alright before leading you back to the palace throne room. ";
+			else:
+				say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options], or 0 to exit.";
+		wait for any key;
+		clear the screen and hyperlink list;
 
 to say PoseidonSex1:
 	say "     Walking into the Atlantean King's bubble you lean into his ear and whisper what you wish to do, causing him to smile and pull you into an embrace. 'Sounds good my love,' he murmurs before kissing you softly taking your lips unto his. Seconds later after he pulls his lips off he begins to help you remove anything you have on that might get in the way. Once you're nice and naked, Poseidon strips himself of his pants and underwear, revealing his large cock underneath. He the leads you to the bed and lays on it, back first, you on the other hand are currently kneeling over your merman lover, staring over his buff physique, getting an eyeful of everything.";
@@ -205,6 +196,7 @@ to say PoseidonSex1:
 	WaitLineBreak;
 	say "     By now the thrusts into your hole are rough, but the kisses are loving and passionate and you can see that Poseidon's eyes are glazed over with a desire for you that fills you with intense feelings. However, just as you suspected it's not long before you feel your merman lover's cock begin to swell inside of you and soon after his seed start to fill you up, warmth coating your insides. [if Player is neuter]The sensation sets off a trigger in your mind as you have your own climax but with nowhere for it to go, your body sends the pleasure everywhere from your toes to your head. The feeling is mind-numbing but boy does it feel absolutely amazing[else if Player is herm]The sensation causes your cock to jerk and your pussy to twitch with the last edge they needed. Suddenly you start to shoot your own load, your cum coating the Atlantean King's chest with some of the femcum from your pussy leaking onto the bedsheets[else if Player is male]The sensation causes your body to alight with pleasure as your dick suddenly jerks with the last bit of edge it needed to shoot its load. Your cum explodes from your length, coating the Atlantean King's chest in sticky streaks[else if Player is female]The sensation causes your body to alight with pleasure as your pussy twitches with the last edge it needs before femcum starts to leak and coat your Atlantean lover's balls. With the amount, some of it even ends up making it onto the bedsheets below you two[end if]. By the time the two of you are done with your orgasms, you are both panting in each other's arms.";
 	say "     Apparently not wanting to get up, Poseidon keeps you in his arms and kisses you softly before starting to cuddle with you despite how sticky you feel from the sweat and cum. But then you just shrug and let him do as he please cause it's kinda nice anyways. Especially since your merman lover lazily snaps his fingers and all the cum and sweat vanishes. 'Magic is always nice for things like this,' he says with a happy tone before pulling you into his side and snuggling you. You chuckle and agree with him, enjoying the sensation of being held. The two of you lay like this for a good while before there's a knock at the door and in comes a guard saying that Poseidon's needed for something. 'Well, work never ends, I'll lead you out love,' your lover says with a sigh before leading you back to the throne room.";
+	NPCSexAftermath Player receives "AssFuck" from Poseidon;
 	now lastfuck of Poseidon is turns;
 	now PlayerFucked of Poseidon is true;
 

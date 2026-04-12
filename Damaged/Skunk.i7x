@@ -487,5 +487,4 @@ Section 5 - Endings
 
 [For endings, see the 'Skunkbeast Lord' file by Stripes.]
 
-[ Edit this to have the correct name as well]
 Skunk ends here.

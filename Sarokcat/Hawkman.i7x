@@ -33,8 +33,8 @@ To say Hawkman loses:
 		say "     With one last vicious blow, you knock the hawkman back, the creature seemingly surprisingly fragile for all his striking power, and as he hops back and takes to the sky again to flee, you wonder if his bones are just as delicate as most birds... Sighing you turn to continue on your way, though you resolve to keep a better eye on the sky above just in case more of those surprisingly sexy hawkmen are in the area.";
 	else:
 		say "     With a final, vicious blow, you knock the hawkman back. Prepared for the avian's escape attempt, you reach out and grab him by the ankle as he starts to flap his wings. Too weak, you pull him down, slamming him to the ground, leaving the anthro avian vulnerable to you.";
+		say "[line break]     [bold type]What do you want to do to your captive?[roman type][line break]";
 		now sextablerun is 0;
-		say "     [bold type]What do you want to do to your captive?[roman type][line break]";
 		blank out the whole of table of fucking options;
 		[]
 		choose a blank row in table of fucking options;
@@ -61,13 +61,15 @@ To say Hawkman loses:
 				choose row calcnumber in table of fucking options;
 				say "[title entry]: [description entry]?";
 				if Player consents:
-					let nam be title entry;
+					LineBreak;
 					now sextablerun is 1;
-					if nam is "Milk him for cum":
-						say "[HawkmanCumMilking]";
-					else if nam is "Fuck him":
-						say "[HawkmanAssfuck]";
+					if title entry is:
+						-- "Milk him for cum":
+							say "[HawkmanCumMilking]";
+						-- "Fuck him":
+							say "[HawkmanAssfuck]";
 			else if calcnumber is 0:
+				LineBreak;
 				say "     To reinforce your victory, you pull a few feathers from the bird's tail, making him squawk in pain.";
 				now sextablerun is 1;
 			else:
@@ -82,16 +84,12 @@ to say HawkmanCumMilking:
 to say HawkmanAssfuck:
 	if hawkmanbeaten is odd:
 		say "     Wanting some proper payback, you pin the weakened bird beneath you and grind your cock beneath his tail feathers. He squawks indignantly, but a firm hand around its beak and thrust forward has you mounting the bird and fucking his tight ass. You stuff [if Cock Length of Player > 36]as much as you can in the hawkman's ass, filling his slender body to capacity with your throbbing meat[else if Cock Length of Player > 18]your [cock size desc of Player] cock entirely into the hawkman's ass, filling him with your throbbing meat[else]your [cock size desc of Player] cock into the hawkman's ass, working your full length into him[end if]. You pound away at him, loving the feel of his tight ass around your pulsing shaft as you fuck him until you cum. Your [if Ball Size of Player > 6]massive load leaves him bloated and full like a stuffed holiday bird, unable to move he's so full[else if Ball Size of Player > 4]heavy load leaves him stuffed and leaking cum as he staggers away[else]creamy load is pumped into him, leaving his rump and tailfeathers sticky with your seed once you're done[end if].";
-		CreatureSexAftermath "Hawkman Male" receives "AssFuck" from "Player";
 	else:
 		say "     Feeling the need to teach the raptor to pick his would-be prey more wisely, you grab the weakened bird by the tailfeathers and pull his ass up. He gives an indignant squawk, but cannot prevent you from pressing your throbbing member between his feathery cheeks. With your other hand pressing his head to the ground, you drive your [Cock of Player] manhood into his tight ass. You stuff [if Cock Length of Player > 36]as much of your [cock size desc of Player] cock as you can get into his slender body, filling him with your throbbing meat[else if Cock Length of Player > 18]your [cock size desc of Player] cock entirely into him, filling him with your throbbing meat[else]your [cock size desc of Player] cock fully into him[end if].";
 		say "     While it is tempting to finish quickly, you manage to resist the urge - at least for a little while - wanting to thoroughly show this would-be predator the depth [if Cock Length of Player > 18](and girth) [end if]of his error in attacking you. As you continue fucking the panting bird, weak moans and soft caws start to escape his beak. You reach around and let your fingertips brush against his stiffened member, proving you're well aware the raptor's hard and dripping despite himself. He blushes and closes his eyes in shame, but also pushes up into your thrusts a little. You can feel his anus squeeze around your pulsing rod in more than just reaction to your thrusts and you reward this response by taking his throbbing penis in hand and stroking it.";
 		WaitLineBreak;
 		say "     You bugger the increasingly compliant hawk until finally you achieve climax. Driving your cock deep into his thoroughly pounded ass, you unleash your balls['] [Cum Load Size of Player] payload into him. Your [if Ball Size of Player > 6]massive load blasts wave after wave of semen into him until he's left bloated and full like a stuffed holiday bird. So full he's unable to move, he can only quiver and caw weakly in orgasm even as your excess load overflows his stretched pucker. He rolls over onto his side, weak, dazed and unable to move. You leave him there, going about your own business with a proud smile on your face for your accomplishment[else if Ball Size of Player > 4]mighty load gushes wad after wad of semen into him, stuffing him until he's full. With the heat of your seed filling his bowels, he struggles to clench around you as he caws loudly in orgasm. Once spent, he slips off of you slowly and weakly staggers to his feet. Laden down with your [Cum Load Size of Player] load, he can only stumble off in a weak daze. You let him leave, instead returning to your own affairs with a proud smile on your face[else]creamy load is pumped into him, painting his bowels with streaks of your semen. Feeling you climax inside him, he clenches down around you and caws in orgasm. Once spent, he slips off you slowly and he staggers to his feet. Blushing as he tries to hide his sticky rump and tailfeathers, he takes to the air. You let him leave at this point, returning to your own affairs[end if]. At least now one of those troublesome hawks has learnt his lesson.";
-		CreatureSexAftermath "Hawkman Male" receives "AssFuck" from "Player";
-
-to say hawkmandesc:
-	say "     As you wander through the city streets, you hear a whistling sound from above and look up to see a powerful avian form swooping down towards you. You jump back as it lands right in front of you and get a closer look at the anthro raptor's body as he stalks towards you on taloned feet. The strange bird-man has large, hawk-like wings stretching out from his back, clearly flight-ready given the creature's aerial approach. He is covered in a rather soft and beautiful looking plumage of brown, layered feathers with ivory-white countershading. The obviously male creature is half-erect as he cocks his avian head to the side appraisingly, and you swear you can see a lecherous grin stretching across his beak as he leaps forward to attack.";
+	CreatureSexAftermath "Hawkman Male" receives "AssFuck" from "Player";
 
 Section 2 - Creature Insertion
 
@@ -129,7 +127,7 @@ When Play begins:
 	now attack entry is "[one of]He lashes out at you with his wing, the powerful wing strike smashing you backwards.[or]The hawkman flaps his wings and leaps into the air, lashing out at you with his powerful rear talons.[or]he grabs at you with his taloned fingers.[or]He charges forward, his wings flapping behind him giving him speed as he barrels into you.[or]He lets out a loud screech causing you to duck instinctively as he barrels forward.[or]He stalks forward teasingly, his rhythmic movements almost hypnotic as he postures in front of you.[or]He strikes forward with his large, predatory beak and rubs it against you teasingly.[or]The hawkman stretches forward with one of his taloned fingers and strokes his cool finger down the side of your face teasingly.[at random]";
 	now defeated entry is "[Hawkman loses]";
 	now victory entry is "[Hawkman wins]";
-	now desc entry is "[hawkmandesc]";
+	now desc entry is "     As you wander through the city streets, you hear a whistling sound from above and look up to see a powerful avian form swooping down towards you. You jump back as it lands right in front of you and get a closer look at the anthro raptor's body as he stalks towards you on taloned feet. The strange bird-man has large, hawk-like wings stretching out from his back, clearly flight-ready given the creature's aerial approach. He is covered in a rather soft and beautiful looking plumage of brown, layered feathers with ivory-white countershading. The obviously male creature is half-erect as he cocks his avian head to the side appraisingly, and you swear you can see a lecherous grin stretching across his beak as he leaps forward to attack.[line break]";
 	now face entry is "a narrow, hawk-like head with a sharp, curved beak and piercing eyes"; [ Face description, format as "Your face is [Face of Player]." ]
 	now body entry is "lithe and slim, with powerful taloned feet and rather claw-like taloned hands, your avian body sports two large, powerful wings, which catch the air behind you and make you almost feel like you could fly"; [ Body Description, format as "Your Body is [Body of Player]." ]
 	now skin entry is "[one of]soft feathered[or]brown feathered[or]hawk-like[or]feathered[at random]"; [ Skin Description, format as "Looking at yourself, your body is covered in [Skin of Player] skin." ]
@@ -279,13 +277,6 @@ When Play begins:
 	now Clit Size entry is 2; [size 1-5, see Clit Size Adjective]
 	[Clit Size Adjective is generated by a function and can be used in scenes: very small/small/average/large/very large]
 ]
-
-Table of CombatPrep (continued)
-name(text)	PrepFunction(text)
-"Hawkman Female"	"[PrepCombat_Hawkman Female]"
-
-to say PrepCombat_Hawkman Female:
-	say "";
 
 Table of Random Critters (continued)
 NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
@@ -473,12 +464,11 @@ name	desc	weight	object
 
 hawkman male feathers is a grab object.
 Usedesc of hawkman male feathers is "[HawkmanMaleFeatherUse]".
+Scent of hawkman male feathers is "The feathers have a pleasing, not too strong, animal-like scent.".
 
 to say HawkmanMaleFeatherUse:
-	say "Holding the feathers between your fingers, you stroke over them, delighted in the softness. Strangely, the feathers disintegrate after a while, becoming a cloud of fine particles that are absorbed into your skin.";
+	say "     Holding the feathers between your fingers, you stroke over them, delighted in the softness. Strangely, the feathers disintegrate after a while, becoming a cloud of fine particles that are absorbed into your skin.";
 	infect "Hawkman Male";
-
-Scent of hawkman male feathers is "The feathers have a pleasing, not too strong, animal-like scent.".
 
 Table of Game Objects (continued)
 name	desc	weight	object
@@ -486,36 +476,11 @@ name	desc	weight	object
 
 hawkman female feathers is a grab object.
 Usedesc of hawkman female feathers is "[HawkmanFemaleFeatherUse]".
-
-to say HawkmanFemaleFeatherUse:
-	say "Holding the feathers between your fingers, you stroke over them, delighted in the softness. Strangely, the feathers disintegrate after a while, becoming a cloud of fine particles that are absorbed into your skin.";
-	infect "Hawkman Female";
-
 Scent of hawkman female feathers is "The feathers have a pleasing, not too strong, animal-like scent.".
 
-Table of Game Objects (continued)
-name	desc	weight	object
-"hawkman male cum"	"A plastic bottle filled with some virile, avian seed."	1	hawkman male cum
-
-hawkman male cum is a grab object. hawkman male cum is infectious. Strain of hawkman male cum is "Hawkman Female". hawkman male cum is cum.
-the scent of hawkman male cum is "The swill has an overwhelming, masculine aroma about it.".
-Usedesc of hawkman male cum is "     There's so much of the stuff, it's a challenge to consume all of the warm, salty fluid. By the end, you feel dizzy and a little tingly.[line break]".
-
-Table of Game Objects (continued)
-name	desc	weight	object
-"hawkman man-milk"	"A plastic water bottle filled with what is clearly milk. One could think it was a regular cow's milk, if someone hadn't written 'Hawkman Man-Milk' across the label on the bottle. You [italic type]could[roman type] drink it to quench your thirst. Who knows what else it might do to you though..."	1	hawkman man-milk
-
-hawkman man-milk is a grab object.
-hawkman man-milk is milky.
-hawkman man-milk is infectious.
-Strain of hawkman man-milk is "Hawkman Male".
-Usedesc of hawkman man-milk is "[hawkman man-milk use]".
-
-to say hawkman man-milk use:
-	say "     Lifting the plastic bottle to your mouth, you take a drink from it, letting the avian man-milk run over your tongue and down your throat. Tastes rich and animal-like. Swishing it around in your mouth a little, you finish the bottle off, then stuff it back into your collection of 'empties'.";
-	PlayerDrink 15;
-
-Scent of hawkman man-milk is "You open the lid for a moment and take a sniff. Smells kinda like any other milk, really.".
+to say HawkmanFemaleFeatherUse:
+	say "     Holding the feathers between your fingers, you stroke over them, delighted in the softness. Strangely, the feathers disintegrate after a while, becoming a cloud of fine particles that are absorbed into your skin.";
+	infect "Hawkman Female";
 
 Section 4 - Endings
 
@@ -528,11 +493,11 @@ This is the Hawkman Infection rule:
 		trigger ending "Hawkman Infection";
 		if humanity of Player < 10:
 			if Player is female:
-				say "Giving in to your new hawk-like instincts you spread your wings out and take to the air, the feel of the cool air whistling over your soft feathers feels amazing as you begin your first awkward flight over the city. It isn't long before you have managed to master the use of your new wings however, and are soaring easily over the city and enjoying the sights of the world spread out below you. Of course your first flight doesn't go unnoticed, and you soon have several handsome male hawks circling you teasingly, their beautiful feathers and virile male bodies speaking to something within you as you alter your flight path to give them teasing glimpses of your own sexy feathered body. Several of the hawks vie for your attention for a while, but you are eventually drawn to a rather handsome specimen who has a lovely way of slipping through the air with ease, and soon find yourself following him through the air back to his nest on top of one of the buildings in the area. Already aroused from your flight, he has no trouble in getting you to spread yourself for him, and he wastes no time in mounting you and making you screech your pleasure to the sky as he takes you again and again.";
-				say "You lose track of what time it is, and eventually even what day it is, as your handsome hawk mates you often, keeping you nice and happy, feeding you and making sure you are well taken care of, even as he ensures you are unable to even think about leaving your new shared nest. Almost before you know it you can feel your belly swelling large with your new mate's seed, and you realize you are now a properly claimed and bred hawkwoman, which for some reason seems strangely satisfying to your new instincts. Soon you lay your first clutch of lovely little hawk eggs, the feeling of their ovoid shapes slipping out of your new sex is absolutely amazing, and before you know it you are panting happily in your egg filled nest with your mate looking on proudly. You find you can hardly wait for your eggs to grow and hatch into even more lovely hawks, and look forward to the happy event enthusiastically even as your new avian mate works on filling your eager body with a fresh clutch of eggs for you to lay... And you find yourself looking forward more than ever to the many breedings and clutches of eggs to come, as you fully embrace your new life as a slutty hawkwoman with a lovely belly full of life...";
+				say "     Giving in to your new hawk-like instincts you spread your wings out and take to the air, the feel of the cool air whistling over your soft feathers feels amazing as you begin your first awkward flight over the city. It isn't long before you have managed to master the use of your new wings however, and are soaring easily over the city and enjoying the sights of the world spread out below you. Of course your first flight doesn't go unnoticed, and you soon have several handsome male hawks circling you teasingly, their beautiful feathers and virile male bodies speaking to something within you as you alter your flight path to give them teasing glimpses of your own sexy feathered body. Several of the hawks vie for your attention for a while, but you are eventually drawn to a rather handsome specimen who has a lovely way of slipping through the air with ease, and soon find yourself following him through the air back to his nest on top of one of the buildings in the area. Already aroused from your flight, he has no trouble in getting you to spread yourself for him, and he wastes no time in mounting you and making you screech your pleasure to the sky as he takes you again and again.";
+				say "     You lose track of what time it is, and eventually even what day it is, as your handsome hawk mates you often, keeping you nice and happy, feeding you and making sure you are well taken care of, even as he ensures you are unable to even think about leaving your new shared nest. Almost before you know it you can feel your belly swelling large with your new mate's seed, and you realize you are now a properly claimed and bred hawkwoman, which for some reason seems strangely satisfying to your new instincts. Soon you lay your first clutch of lovely little hawk eggs, the feeling of their ovoid shapes slipping out of your new sex is absolutely amazing, and before you know it you are panting happily in your egg filled nest with your mate looking on proudly. You find you can hardly wait for your eggs to grow and hatch into even more lovely hawks, and look forward to the happy event enthusiastically even as your new avian mate works on filling your eager body with a fresh clutch of eggs for you to lay... And you find yourself looking forward more than ever to the many breedings and clutches of eggs to come, as you fully embrace your new life as a slutty hawkwoman with a lovely belly full of life...";
 			else:
-				say "Giving in to your strong new hawk-like instincts, you spread your wings and take to the sky for the first time, enjoying the feeling of freedom as you slowly begin to master the skies above the infected city. Before long you are soaring through the skies with ease, and enjoying the feel of the wind rushing over your feathers as your eyes scan the city below for someone to play with. Unfortunately, the city is full of other infected, and most of the people have already become playtoys already, which leaves you flying aimlessly through the skies, until you realize that you are being silly. Looking up at the open skies around you, you can feel a grin tugging at your beak as you begin to angle your wings to take you down the coast a ways. There is after all a whole wide world out there full of people you can chase and catch. And the open skies are calling out to you as you head off in search of new places to hunt, and new partners to share the joys of flight with. Let the military do with the city as they wish, you find yourself thinking as you fly under the cover of the night sky, you have the world out there to play in...";
+				say "     Giving in to your strong new hawk-like instincts, you spread your wings and take to the sky for the first time, enjoying the feeling of freedom as you slowly begin to master the skies above the infected city. Before long you are soaring through the skies with ease, and enjoying the feel of the wind rushing over your feathers as your eyes scan the city below for someone to play with. Unfortunately, the city is full of other infected, and most of the people have already become playtoys already, which leaves you flying aimlessly through the skies, until you realize that you are being silly. Looking up at the open skies around you, you can feel a grin tugging at your beak as you begin to angle your wings to take you down the coast a ways. There is after all a whole wide world out there full of people you can chase and catch. And the open skies are calling out to you as you head off in search of new places to hunt, and new partners to share the joys of flight with. Let the military do with the city as they wish, you find yourself thinking as you fly under the cover of the night sky, you have the world out there to play in...";
 		else:
-			say "When the military rescues you from the city, you find yourself watched closely by their scientists, as they seem fascinated by your new avian form, and the changes in your muscle density and bone mass. Their attention makes you nervous, and before long you are asking to leave, especially once they start talking about bone marrow samples and similar painful tests. Fortunately enough, they are soon far too busy dealing with the fallout from the city and some of the other infected who they 'rescued' that are causing problems in camp to devote full attention to you for very long, and soon enough you are released. Wandering around outside of the city, you soon find your new looks gathering quite a bit of attention, though they certainly aren't very helpful in finding a job of some sort. Eventually you manage to get a job as a mail courier, and while it is rather dull delivering the mail and packages most days, it does let you meet some rather interesting people. One day you even meet a fellow avian, a sexy black [one of]hawkman[or]tengu[or]eagle[or]gryphon[at random], the powerful male is more than happy to meet you as well, and while both of you have never given yourself over to your new instincts enough to master your new wings and fly, you still find the draw of meeting a fellow avian to be nearly irresistible. [if Player is female or Player is mpreg_ok]Before long the two of you are inseparable, and it isn't much longer before you are expecting your first clutch of eggs, and you find yourself eagerly anticipating seeing just how they will look when they finally hatch, and looking forward to many more clutches of eggs in the future[else]After a few months and becoming friends, he introduces you to his sister, who was similarly infected. He held back on telling you about her until your friendship was strong enough that he could trust you. You both hit it off and are soon a happy couple with a clutch on the way[end if].";
+			say "     When the military rescues you from the city, you find yourself watched closely by their scientists, as they seem fascinated by your new avian form, and the changes in your muscle density and bone mass. Their attention makes you nervous, and before long you are asking to leave, especially once they start talking about bone marrow samples and similar painful tests. Fortunately enough, they are soon far too busy dealing with the fallout from the city and some of the other infected who they 'rescued' that are causing problems in camp to devote full attention to you for very long, and soon enough you are released. Wandering around outside of the city, you soon find your new looks gathering quite a bit of attention, though they certainly aren't very helpful in finding a job of some sort. Eventually you manage to get a job as a mail courier, and while it is rather dull delivering the mail and packages most days, it does let you meet some rather interesting people. One day you even meet a fellow avian, a sexy black [one of]hawkman[or]tengu[or]eagle[or]gryphon[at random], the powerful male is more than happy to meet you as well, and while both of you have never given yourself over to your new instincts enough to master your new wings and fly, you still find the draw of meeting a fellow avian to be nearly irresistible. [if Player is female or Player is mpreg_ok]Before long the two of you are inseparable, and it isn't much longer before you are expecting your first clutch of eggs, and you find yourself eagerly anticipating seeing just how they will look when they finally hatch, and looking forward to many more clutches of eggs in the future[else]After a few months and becoming friends, he introduces you to his sister, who was similarly infected. He held back on telling you about her until your friendship was strong enough that he could trust you. You both hit it off and are soon a happy couple with a clutch on the way[end if].";
 
 Hawkman ends here.

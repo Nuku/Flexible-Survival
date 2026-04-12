@@ -39,7 +39,7 @@ when play begins:
 to say ResolveEvent Guard Gryphon:
 	project Figure of BlueGryphon_soft_icon;
 	say "     You come across a hermaphrodite gryphon, this one with a red banner with an 8-pointed silver star in the center. She is watching the sky from a rooftop, as if watching for others of her kind in the air. The guard seems to notice your nearing presence as you approach her position.";
-	If resolution of Guard Gryphon is 0:
+	if resolution of Guard Gryphon is 0:
 		if BodyName of Player is "Blue Gryphon Herm" and Player is pure:
 			say "     But soon the guard realizes that you're not just another intruder, your appearance being the same of her kind. Carefully walking towards her, you sense lack of trust and caution from the gryphoness, but she ends up lowering her guard as you come closer. 'You don't seem lost to the infection like most of my kind,' she says, but before you can explain who you are, she makes the conclusion by herself. 'You might be an outsider, but honestly... we don't really care anymore. Our kind has been lost to sex craziness after the nanites were spread among the city, so we're in dire need of sane allies.' The guard signals you to come closer, no longer in a defensive stance. 'We fear the entire species may succumb, one day... so we do our best to protect ourselves. You'll have to forgive me for my initial hostility. I'm Azure, by the way. Nice to meet you.'";
 			WaitLineBreak;
@@ -57,7 +57,7 @@ to say ResolveEvent Guard Gryphon:
 			say "     Seeing you coming closer, she adopts a defensive stance, looking ready to charge at you.";
 			if carried of Gryphon Milk > 0:
 				say "[line break]     She doesn't seem sex-crazed like the other gryphons you found. Perhaps you can negotiate a peaceful deal with a token of your deeds. Their kind attacked you plenty of times, already, and you actually managed to fetch some of their milk. [bold type]Will you attempt a diplomatic approach by showing her a bottle of Gryphon Milk?[roman type][line break]";
-				Say "     ([link]Y[as]y[end link]) - Show the Gryphon Milk.";
+				say "     ([link]Y[as]y[end link]) - Show the Gryphon Milk.";
 				say "     ([link]N[as]n[end link]) - Fight the Guard.";
 				if Player consents:
 					LineBreak;
@@ -103,7 +103,7 @@ to say ResolveEvent Guard Gryphon:
 			now Guard Gryphon is resolved;
 		else:
 			say "     'I see you came back! Does it mean you reconsidered my proposal?' she asks, however from a distance, cautiously assuming a defensive stance as you approach her. [bold type]It seems she'd still turn you into one of her kind, but fighting is always an option.[roman type][line break]";
-			Say "     ([link]Y[as]y[end link]) - Accept the transformation.";
+			say "     ([link]Y[as]y[end link]) - Accept the transformation.";
 			say "     ([link]N[as]n[end link]) - Fight the Guard.";
 			if Player consents:
 				LineBreak;
@@ -135,7 +135,7 @@ to GryphonGuardFight:
 	challenge "Blue Gryphon Herm";
 	if fightoutcome < 20: [won]
 		say "     Having successfully defeated the gryphoness guard, the hostilities between seemed to drop down for brief moments. You've got the chance to engage in dialogue now. The question is, [bold type]how will you address the situation?[roman type][line break]";
-		Say "     ([link]Y[as]y[end link]) - Try to convince the guard you mean no harm.";
+		say "     ([link]Y[as]y[end link]) - Try to convince the guard you mean no harm.";
 		say "     ([link]N[as]n[end link]) - Demand to know what the hostilities are for.";
 		if Player consents: [friendly]
 			LineBreak;

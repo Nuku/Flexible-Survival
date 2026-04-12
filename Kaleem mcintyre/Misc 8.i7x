@@ -10,6 +10,7 @@ Old Tale	"Old Tale"
 Old Tale is a situation.
 ResolveFunction of Old Tale is "[ResolveEvent Old Tale]".
 Sarea of Old Tale is "High".
+
 When play begins:
 	Add Old Tale to BadSpots of FurryList;
 	Add Old Tale to BadSpots of MaleList;
@@ -17,17 +18,17 @@ When play begins:
 to say ResolveEvent Old Tale:
 	say "     As you walk through the high-rise district, you come across an unusual pair. A bulky feral wolf with unruly black fur and a cross-shaped scar marring his chest sits, scratching at his left ear with one of his rear paws. Prancing around him with a happy-go-lucky expression on his face, a smaller wolf with fur the color of autumn leaves and a bracelet wound around one of his legs bows as if begging to play. The smaller creature's happiness seems infectious. Before long, the rough-looking wolf's expression matches his, his tail sweeping the sidewalk and his muzzle wrinkling as he shakes himself, planting a long lick over his companion's face and playfully nipping at his companion's muzzle.";
 	say "     Pressing his nose against the gnarled wolf's with a yapping bark, the lighter wolf wiggles his rear, turning to present his rump to his stoic companion and letting out a low whine as the darker wolf's nose nuzzles under his tail, followed by an indulgent lick. As you watch, the larger wolf stands, his wolfhood peeking from its sheath as he awkwardly positions himself, then surges forward with a pleased huff once he finds his mark. A bulge appears in the smaller wolf's fluffy stomach, rhythmically expanding with each movement of his companion's hips. You swear, from the size of that bulge, their mating would be ruining the smaller wolf's insides if not for the nanites['] influence.";
-	say "     You feel you might be able to get a closer look if you step out of the alley you're currently standing in. Do you want to take a closer look?";
-	LineBreak;
+	say "[line break]     You feel you might be able to get a closer look if you step out of the alley you're currently standing in. Do you want to take a closer look?";
 	say "     ([link]Y[as]y[end link]) - Sneak Closer.";
 	say "     ([link]N[as]n[end link]) - Watch From Afar.";
 	if the player consents: [Sneak Closer]
+		LineBreak;
 		say "     Deciding to get a closer look, you attempt to sneak around the mating pair, but as you step from the shadows, your foot descends on a trash bag, rattling its contents and alerting them to your presence. Immediately, the scarred wolf abandons his task with a wet pop, his cock flopping wildly between his rear legs as he whirls on you, snarling a challenge. Watching your hasty retreat, he noses his partner, encouraging him to leave, then follows behind him, painting the sidewalk with his neglected cock's weeping fluids. As they disappear into the distance, you chastise yourself for ruining the show.";
 	else: [Watch From Afar]
+		LineBreak;
 		say "     Passionate mating continues for what feels like hours, surprising you with exactly how gentle the scarred wolf's movements are, despite his appearance. Finally, with a pant of triumph, the wolf on top surges forward, filling the air with a sloppy-sounding pop, then collapsing forward, burying the lighter-furred wolf under him and licking at his companion's cheek. A spreading puddle beneath them leaves no doubt about their enjoyment, and you decide to move on before the lovers spot you, or the scent of their mating attracts mutant attention.";
 	increase score by 1;
 	now Old Tale is resolved;
-
 
 Section 2 - Peace
 
@@ -46,7 +47,6 @@ to say ResolveEvent Peace:
 	increase score by 5;
 	now Peace is resolved;
 
-
 Section - 3 Champion
 
 Table of GameEventIDs (continued)
@@ -60,12 +60,10 @@ Sarea of Champion is "High".
 to say ResolveEvent Champion:
 	say "     While making your way through the streets of the high rise district, you find yourself pausing as you come across a shadow boxing bipedal silver wolf. The graceful form of the large and slightly shaggy furred creature makes you look on in awe as you note the way the wolf is moving around while striking out at his own darkened form mimicking him against a nearby brick wall. With a pair of black jeans strapped onto his lower end and an open orange vest clinging around his back and shoulders, the other doesn't seem the least bit out of sorts, given the circumstances that have taken over the city.";
 	say "     Not quite knowing what to think about this, you are taken by surprise when a large... mole wearing a martial arts uniform and a bandanna across its head pops up out of nowhere after stepping out of a large cloud of smoke. Beady black eyes watch the wolf, who hasn't so much as twitched an ear at the appearance of the other. Not sure what is supposed to happen next, you turn away to go about your business. Your sudden departure causes you to miss what happens next as the silver wolf turns to regard the mole and then charges for the brown furred creature with fists raised. The mole is more than ready for the challenge and ends up clashing against the silver wolf in an epic battle of claws and fists!";
-	LineBreak;
 	increase XP of Player by 10;
-	say "Watching the silver wolf you think you've picked up a trick or two!";
+	say "[line break]Watching the silver wolf you think you've picked up a trick or two!";
 	increase score by 1;
 	now Champion is resolved;
-
 
 Section 4 - Cosplay
 
@@ -76,6 +74,7 @@ Cosplay	"Cosplay"
 Cosplay is a situation.
 ResolveFunction of Cosplay is "[ResolveEvent Cosplay]".
 Sarea of Cosplay is "Red".
+
 When play begins:
 	Add Cosplay to BadSpots of FurryList;
 	Add Cosplay to BadSpots of MaleList;
@@ -85,16 +84,13 @@ to say ResolveEvent Cosplay:
 	say "     'Forget it, I'm not getting into this fetish of yours, even if we both do look like furry cosplay characters.' From the small smile that is blooming across the other's muzzle you can tell that the vulpine is wavering ever so slightly in his conviction. When the wolf tries again to get his companion to wear the clothing he had held in between his paws the fox turns to wag his long plume of a tail at the other in playful indignation. That proves to be a mistake on the vulpine's part.";
 	WaitLineBreak;
 	say "     With the kind of agility than only an animal can possess the wolf tosses the clothes off to the side and then tackles the fox to the ground. From what you can see as you lift yourself up higher against the window the lupine wastes no time as he lifts his friend's naked rump up, unzips the crotch of the pants he happens to be wearing and then mounts the smaller male with a rough and eager thrust of his hips. Backing away from the window you don't feel that the vulpine is in any danger as the protective embrace the wolf has his companion wrapped up in speaks of a kind of passion only lovers or best friends could muster into being. The primal howls and yips of ecstasy that the fox lets out are another sign that everything is going to be alright with the pair.";
-	increase Libido of Player by 5;
-	if Libido of Player > 100, now Libido of Player is 100;
+	raise Player Libido by 5;
 	increase score by 1;
 	now Cosplay is resolved;
-
 
 Section 5 - Fox hunt
 
 [Moved to Consolidated Park Events]
-
 
 Section 6 - Fantasy
 
@@ -105,6 +101,7 @@ Fantasy	"Fantasy"
 Fantasy is a situation.
 ResolveFunction of Fantasy is "[ResolveEvent Fantasy]".
 Sarea of Fantasy is "High".
+
 When play begins:
 	Add Fantasy to BadSpots of FurryList;
 	Add Fantasy to BadSpots of TransList;
@@ -115,7 +112,6 @@ to say ResolveEvent Fantasy:
 	say "     With that problem taken care of, you grunt in annoyance as you realize that video game characters must seriously have it rough if they have to deal with things like that every day.";
 	now Fantasy is resolved;
 
-
 Section 7 - Controversy
 
 Table of GameEventIDs (continued)
@@ -124,16 +120,15 @@ Controversy	"Controversy"
 
 Controversy is a situation.
 ResolveFunction of Controversy is "[ResolveEvent Controversy]".
-
 Sarea of Controversy is "High".
+
 When play begins:
 	Add Controversy to BadSpots of HumorousList;
 
 to say ResolveEvent Controversy:
 	say "     Walking down the street you find yourself coming across a boarded up mini mart with a fat black bear wearing a long overcoat and a skinny weasel with long dirty blonde hair draped down off the side of his head bobbing their heads in time with music playing on an old fashioned boombox in between them. From what you can see the weasel is smoking on something that looks like a cigarette, but from the smell that's lingering in the air you can tell that what he's trippin['] on isn't tobacco. Finding yourself getting slightly lightheaded you walk over to the others without really knowing why.";
 	say "     As the weasel hands off the joint he's puffin['] on to the black bear you find your head nodding in time to the music that's playing on the bulky looking jam machine. The rhythm of the music is an 80[']s remix and for some reason you find yourself really getting into it. 'Yo little homie, what's up?' The weasel asks all of a sudden and you can only shake your head at him. 'S'OK. Wanna hit this one time?'";
-	say "     [bold type]Looking at the roach the bear is taking a hit of, you wonder if you should.[roman type][line break]";
-	LineBreak;
+	say "[line break]     [bold type]Looking at the roach the bear is taking a hit of, you wonder if you should.[roman type][line break]";
 	say "     ([link]Y[as]y[end link]) - Hit it.";
 	say "     ([link]N[as]n[end link]) - Nah.";
 	if Player consents:
@@ -170,7 +165,6 @@ to say ResolveEvent Controversy:
 		increase score by 30;
 		now Resolution of Controversy is 2; [nah]
 
-
 Section 8 - Dr Feel Good
 
 Table of GameEventIDs (continued)
@@ -180,6 +174,7 @@ Dr Feel Good	"Dr Feel Good"
 Dr Feel Good is a situation.
 ResolveFunction of Dr Feel Good is "[ResolveEvent Dr Feel Good]".
 Sarea of Dr Feel Good is "Hospital". The level of Dr Feel Good is 5.
+
 When play begins:
 	Add Dr Feel Good to BadSpots of FurryList;
 	Add Dr Feel Good to BadSpots of FemaleList;
@@ -189,8 +184,7 @@ to say ResolveEvent Dr Feel Good:
 	say "     'Maybe we should try something else since that didn't work?' one of the nurses questions to her companion while giggling naughtily. 'You could be right,' the other agrees while nodding her head. 'How about we get the new serum that the doctor was working on? That might help things along quite a bit.' The youth grows still at that and from what you can see the uncertainty on his face seems to be growing into a light panic. Bizarrely enough, the fennec doesn't look as though he's going to complain about the situation he's somewhat wrapped up in. When one of the nurses goes off to fetch something the fennec turns his head to watch the gray furred vulpine with suspicious eyes.";
 	WaitLineBreak;
 	say "     Upon returning with a syringe in her hand, the fennec's eyes nearly pop out of his head as his hazel orbs lock on to the point of the needle as though it were a missile about to impact on him. 'Now hold still dearie,' the fox holding the syringe chirps. 'This will only hurt for a second.' The fennec backs up into the bed with the clear indication that he wants nothing to do with the evil pointed object. When the other nurse reaches out to hold the youth steady the sudden feeling that you should do something rises up inside of your guts. Maybe you should speak up in the youth's defense?";
-	say "     [bold type]Even though you don't exactly know what's going on here, this whole event just seems wrong for some reason. Do you?[roman type][line break]";
-	LineBreak;
+	say "[line break]     [bold type]Even though you don't exactly know what's going on here, this whole event just seems wrong for some reason. Do you?[roman type][line break]";
 	say "     ([link]Y[as]y[end link]) - Yes.";
 	say "     ([link]N[as]n[end link]) - No.";
 	if Player consents:
@@ -211,7 +205,7 @@ to say ResolveEvent Dr Feel Good:
 				WaitLineBreak;
 				say "     Shoving the coat and pants into your [BodySpeciesName of Player in lower case] hands, the youth gives you a shaky smile and then hurries around side of you to run out of the room at top speed. Turning to watch the other go you wonder how many more people in this city are [']missing['] like that fennec's girlfriend.";
 				ItemGain doctor's uniform by 1;
-				Increase score by 10;
+				increase score by 10;
 				now Dr Feel Good is resolved;
 				now Resolution of Dr Feel Good is 1; [fought & won]
 		if fightoutcome >= 20:		[lose/run]
@@ -247,7 +241,6 @@ to say ResolveEvent Dr Feel Good:
 		now Dr Feel Good is resolved;
 		now Resolution of Dr Feel Good is 99; [disinterest]
 
-
 Section 9 - Table of Game Objects
 
 Table of Game Objects (continued)
@@ -258,12 +251,8 @@ doctor's uniform is equipment.
 doctor's uniform is not temporary.
 Traits of doctor's uniform is {"authoritive", "smart"}.
 The placement of doctor's uniform is "body".
-The descmod of doctor's uniform is "A standard doctor's coat with a pair of clinical white pants to go along with it.".
+The descmod of doctor's uniform is "A standard doctor's coat rests upon your shoulders with a pair of clinical white pants to go along with it.".
 The slot of doctor's uniform is "body".
-
-instead of sniffing doctor's uniform:
-	say "The doctor's coat and pants smell like medicine, tension, hope and other chemical agents along with a detached air of professionalism.";
-
-
+Scent of doctor's uniform is "The doctor's coat and pants smell like medicine, tension, hope and other chemical agents along with a detached air of professionalism.".
 
 Misc 8 ends here.

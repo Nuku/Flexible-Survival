@@ -4,9 +4,8 @@ Version 1 of Vixen Kunoichi by Qazarar begins here.
 Section 1 - Monster Responses
 
 VixenKunoichiLust is a number that varies. VixenKunoichiLust is usually 0. [tracks corruption progress]
-VixenKunoichiDomScore is a number that varies. VixenKunoichiDomScore is usually 0. [these are used to determine who is in control in scenes]
-VixenKunoichiSubScore is a number that varies. VixenKunoichiSubScore is usually 0.
-
+[VixenKunoichiDomScore is a number that varies. VixenKunoichiDomScore is usually 0. [these are used to determine who is in control in scenes]
+VixenKunoichiSubScore is a number that varies. VixenKunoichiSubScore is usually 0.]
 
 to say VixenKunoichiLoss: [player loses]
 	if VixenKunoichiLust is 0: [groping]
@@ -24,8 +23,7 @@ to say VixenKunoichiLoss: [player loses]
 
 to say VixenKunoichiVictory: [player wins]
 	say "     With a final strike, you cause the vixen to fall to her knees, unable to continue fighting. She hangs her head in shame, but regardless of her feelings her shaft is still throbbing eagerly.";
-	say "     [bold type]You could easily have your way with her if you want to.[roman type][line break]";
-	LineBreak;
+	say "[line break]     [bold type]You could easily have your way with her if you want to.[roman type][line break]";
 	say "     ([link]Y[as]y[end link]) - Play with the Vixen Kunoichi.";
 	say "     ([link]N[as]n[end link]) - Walk away.";
 	if Player consents:
@@ -43,12 +41,13 @@ to say VixenKunoichiVictory: [player wins]
 			now title entry is "Sit on her face";
 			now sortorder entry is 2;
 			now description entry is "Have her use her mouth";
-		[]
+		[
 		if VixenKunoichiLust > 5:
 			choose a blank row in table of fucking options;
 			now title entry is "Ride her";
 			now sortorder entry is 3;
 			now description entry is "Use her oversized shaft";
+		]
 		sort the table of fucking options in sortorder order;
 		repeat with y running from 1 to number of filled rows in table of fucking options:
 			choose row y from the table of fucking options;
@@ -62,33 +61,32 @@ to say VixenKunoichiVictory: [player wins]
 				choose row calcnumber in table of fucking options;
 				say "[title entry]: [description entry]?";
 				if Player consents:
-					let nam be title entry;
+					LineBreak;
 					now sextablerun is 1;
-					if (nam is "Suck her"):
-						say "[VixenKunoichiSex1]";
-					if (nam is "Sit on her face"):
-						say "[VixenKunoichiSex2]";
-					if (nam is "Ride her"):
-						say "[VixenKunoichiSex3]";
-					wait for any key;
+					if title entry is:
+						-- "Suck her":
+							say "[VixenKunoichiSex1]";
+						-- "Sit on her face":
+							say "[VixenKunoichiSex2]";
+						[-- "Ride her":
+							say "[VixenKunoichiSex3]";]
 			else if calcnumber is 0:
+				LineBreak;
 				now sextablerun is 1;
 				say "     You decide against it, and simply leave her there.";
-				wait for any key;
 			else:
-				say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
-		clear the screen and hyperlink list;
+				say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options], or 0 to exit.";
 	else:
-		WaitLineBreak;
+		LineBreak;
 		say "     You're not interested, or at least not now, and so you simply ignore the Vixen shemale, and return to your adventures.";
 
-to say VixenKunoichiDesc:
+[to say VixenKunoichiDesc:
 	if VixenKunoichiLust > 15: [corrupt desc]
 		say "     ";
 	else if VixenKunoichiLust > 8: [lusty desc]
 		say "     'Don't move any further!' When you turn towards the sound of the voice, you see the vixen kunoichi perched on the hood of a stopped vehicle, hopping down and striding closer to you. You can see that her even more egregious endowments have limited her ability to do some of her prior acrobatics, and even further you can see that she appears significantly distracted. When you first saw her she was poised and composed, ready for battle, but now you can see that she is continuously fidgeting. Whether adjusting her reduced clothing nervously, or unconsciously tracing a finger up her shaft, she seems unable to focus completely on combat readiness. 'It's your fault that I'm feeling like this, with your lewd body and actions, so you're going to fix it!'";
 	else: [pure desc]
-		say "     'Stop right there, not another step!' You turn just in time to witness a figure standing dramatically atop a nearby building leap forward, gracefully flipping in the air before landing smoothly in front of you. Up close, you can clearly tell that you're looking at a particularly elegant vixen, wearing nice-looking clothing in purples and grays in stark contrast to her vibrant golden yellow fur. Her pose also strikes you as a practiced display of skill, clearly marking her as a trained combatant of some sort. However, the impressive elegance is somewhat diminished by the fact that her large breasts are uncovered by her outfit, and even more so that an absolutely massive cock is exposed, still bouncing from her drop. 'Stop looking at me with your lustful gaze and fight me!'";
+		say "     'Stop right there, not another step!' You turn just in time to witness a figure standing dramatically atop a nearby building leap forward, gracefully flipping in the air before landing smoothly in front of you. Up close, you can clearly tell that you're looking at a particularly elegant vixen, wearing nice-looking clothing in purples and grays in stark contrast to her vibrant golden yellow fur. Her pose also strikes you as a practiced display of skill, clearly marking her as a trained combatant of some sort. However, the impressive elegance is somewhat diminished by the fact that her large breasts are uncovered by her outfit, and even more so that an absolutely massive cock is exposed, still bouncing from her drop. 'Stop looking at me with your lustful gaze and fight me!'";]
 
 to say VixenKunoichiSex1: [sucking]
 	say "     Really, the only reasonable choice you have is to have a closer look at the huge shaft sitting there attached to the defeated vixen. The sheer size is enchanting, an endowment rarely seen even in this transformed city, and it's the least you can do to give it a little bit of affection. Besides, while you're sure that she'll enjoy the treatment, you know it will be just as much fun for you to tackle something like that with your mouth. You begin by reaching forward, and grasping the shaft, feeling the affirming weight under your fingers. As your fingers touch her, the vixen lets out a shocked gasp and freezes in place, clearly unused to the sensation. Her face is a mess of conflicted emotion, her sense of dignity at war with her sensitive member. However, that war is one you're about to weight in favor of her lovely cock.";
@@ -106,10 +104,10 @@ to say VixenKunoichiSex2: [face sitting]
 	say "     Regardless of the source of her skill, the growing pleasure starting to echo outwards from your rear to the rest of your body is undeniable proof that it exists. You arch your back and rock faintly back and forth, grinding just that little bit harder against her to eke out additional traces of sensation for your overflowing lusts, and she meets each motion with further work from her vulpine tongue until it is finally too much for you. In a surge of uncontrollable energy, you can feel a powerful anal orgasm shooting through your body, collecting and magnifying until it finally escapes in the form of powerful lewd moans. Satisfied with the care given to you, you are prepared to offer mercy to the vixen, and release her from beneath you. For a time she merely gasps, her gaze unfocused, but as you prepare to leave you can hear a faint call from behind you. 'This... you were lucky this time, with your strange lustful spell you cast upon me. Next time I shall not be so easily fooled.' It seems that she isn't quite ready to accept that she willingly gave in, but perhaps in time she'll realize the truth.";
 	[increase VixenKunoichiSubScore by 1;]
 
-to say VixenKunoichiSex3: [riding her]
+[to say VixenKunoichiSex3: [riding her]
 	say "     A";
 	increase VixenKunoichiSubScore by 1;
-	CreatureSexAftermath "Player" receives "AssFuck" from "Vixen Kunoichi";
+	CreatureSexAftermath "Player" receives "AssFuck" from "Vixen Kunoichi";]
 
 Section 2 - Creature Insertion
 
@@ -128,7 +126,6 @@ When Play begins:
 	Choose a blank row from Table of Random Critters;
 	now NewTypeInfection entry is false;
 	now Species Name entry is "Vixen"; [ Name of the overall species of the infection, used so a "male x" and "female x" have "pureblood X" children. ]
-	now Name entry is "Vixen Kunoichi";
 	add "Vixen Kunoichi" to infections of VulpineList;
 	add "Vixen Kunoichi" to infections of NatureList;
 	add "Vixen Kunoichi" to infections of HermList;
@@ -138,23 +135,24 @@ When Play begins:
 	add "Vixen Kunoichi" to infections of BipedalList;
 	add "Vixen Kunoichi" to infections of TailList;
 	add "Vixen Kunoichi" to infections of FurryList;
-	now enemy title entry is "Vixen Kunoichi"; [ Name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name. ]
+	now Name entry is "Vixen Kunoichi";
+	now enemy title entry is ""; [ Name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name. ]
 	now enemy Name entry is "Rena"; [ Specific name of unique enemy. ]
 	now enemy type entry is 1; [ 0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters. ]
 	now attack entry is "She [one of]rakes at you with her claws[or]deftly launches a kick[or]dashes in for a rapid blow[at random]!";
 	now defeated entry is "[VixenKunoichiVictory]";
 	now victory entry is "[VixenKunoichiLoss]";
-	now desc entry is "[VixenKunoichiDesc]"; [ Description of the creature when you encounter it.]
-	now face entry is "A"; [ Face description, format as "Your face is [Face of Player]." ]
-	now body entry is "A"; [ Body Description, format as "Your Body is [Body of Player]." ]
-	now skin entry is "[one of]A[or]A[or]A[at random]"; [ Skin Description, format as "Looking at yourself, your body is covered in [Skin of Player] skin." ]
-	now tail entry is "A"; [ Tail description, write a whole Sentence or leave blank. ]
-	now cock entry is "[one of]A[or]A[or]A[at random]"; [ Cock Description, format as you have a 'size' (your text) cock]
-	now face change entry is "A"; [ Face change text, format as "Your face feels funny as [face change entry]." ]
-	now body change entry is "A"; [ Body change text, format as "Your body feels funny as [body change entry]." ]
-	now skin change entry is "A"; [ Skin change text, format as "Your skin feels funny as [skin change entry]." ]
-	now ass change entry is "A"; [ Ass/tail change text, format as "Your ass feels funny as [ass change entry]." ]
-	now cock change entry is "A"; [ cock change text. format as "Your cock feels funny as (your text)." ]
+	now desc entry is "     'Stop right there, not another step!' You turn just in time to witness a figure standing dramatically atop a nearby building leap forward, gracefully flipping in the air before landing smoothly in front of you. Up close, you can clearly tell that you're looking at a particularly elegant vixen, wearing nice-looking clothing in purples and grays in stark contrast to her vibrant golden yellow fur. Her pose also strikes you as a practiced display of skill, clearly marking her as a trained combatant of some sort. However, the impressive elegance is somewhat diminished by the fact that her large breasts are uncovered by her outfit, and even more so that an absolutely massive cock is exposed, still bouncing from her drop. 'Stop looking at me with your lustful gaze and fight me!'[line break]"; [ Description of the creature when you encounter it.]
+	now face entry is ""; [ Face description, format as "Your face is [Face of Player]." ]
+	now body entry is ""; [ Body Description, format as "Your Body is [Body of Player]." ]
+	now skin entry is ""; [ Skin Description, format as "Looking at yourself, your body is covered in [Skin of Player] skin." ]
+	now tail entry is ""; [ Tail description, write a whole Sentence or leave blank. ]
+	now cock entry is ""; [ Cock Description, format as you have a 'size' (your text) cock]
+	now face change entry is ""; [ Face change text, format as "Your face feels funny as [face change entry]." ]
+	now body change entry is ""; [ Body change text, format as "Your body feels funny as [body change entry]." ]
+	now skin change entry is ""; [ Skin change text, format as "Your skin feels funny as [skin change entry]." ]
+	now ass change entry is ""; [ Ass/tail change text, format as "Your ass feels funny as [ass change entry]." ]
+	now cock change entry is ""; [ cock change text. format as "Your cock feels funny as (your text)." ]
 	now str entry is 17;
 	now dex entry is 20;
 	now sta entry is 15;
@@ -179,11 +177,11 @@ When Play begins:
 	now libido entry is 60; [ As part of infection, the Player will be gradually moved towards this value; also used for the creature's seduce defense as a penalty ]
 	now loot entry is "";
 	now lootchance entry is 0; [ Chance of loot dropping 0-100 ]
-	now MilkItem entry is "vixen kunoichi milk"; [ Item to be given to the player if they have this infection and milk themselves. ]
+	now MilkItem entry is ""; [ Item to be given to the player if they have this infection and milk themselves. ]
 	now CumItem entry is ""; [ Item to be given to the player if they have this infection and jerk off. ] [TODO]
 	now TrophyFunction entry is "-"; [ Function to generate a list of optional loot items, of which the player can choose one after victory. ]
 	now scale entry is 3; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
-	now body descriptor entry is "[one of]A[or]A[or]A[at random]"; [ Ex: "plump" "fat" "muscled" "strong" "slimy" "gelatinous" "slender". Use [one of] to vary ]
+	now body descriptor entry is ""; [ Ex: "plump" "fat" "muscled" "strong" "slimy" "gelatinous" "slender". Use [one of] to vary ]
 	now type entry is "vulpine"; [ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
 	now magic entry is false;
 	now resbypass entry is false;
@@ -308,6 +306,5 @@ This is the Vixen Kunoichi Infection rule:
 			say "";
 		else:
 			say "";]
-
 
 Vixen Kunoichi ends here.

@@ -17,6 +17,10 @@ Jana by Kirov begins here.
 
 [ Armor of Jana			- Not used ]
 
+a postimport rule: [bugfixing rules for players that import savegames]
+	connect Janas Bedroom;
+	move Jana to Janas Bedroom;
+
 Section 0 - Setup and Declaration
 
 Table of GameCharacterIDs (continued)
@@ -24,6 +28,7 @@ object	name
 Jana	"Jana"
 
 Jana is a woman.
+Jana is in Janas Bedroom.
 ScaleValue of Jana is 4. [slightly larger than human]
 Body Weight of Jana is 6. [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
 Body Definition of Jana is 8. [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
@@ -60,68 +65,46 @@ TwistedCapacity of Jana is true. [Twisted Characters can take any penetration, n
 Sterile of Jana is false. [steriles can't knock people up]
 MainInfection of Jana is "Horsemazon".
 The description of Jana is "[JanaDescription]".
-The scent of Jana is "Jana has an outdoorsy, equine smell which reminds you of green fields and meadows.".
-The conversation of Jana is { "Neigh!" }.
-The fuckscene of Jana is "[JanaSexCheck]".
-
-to say JanaDescription:
-	if debugactive is 1:
-		say "[JanaDebug]";
-	say "     Jana is an anthropomorphic horse lady with the body of an Amazon goddess. Her impressive figure is almost intimidating, but her feminine curves also give her a sexy, alluring appeal.";
-
-to say JanaDebug:
-	say "     DEBUG -> Energy: [Energy of Jana], HP: [HP of Jana], XP: [XP of Jana], Level: [Level of Jana], Armor: [Armor of Jana] <- DEBUG[line break]";
-
-instead of conversing the Jana:
-	say "[JanaTalkMenu]";
-
+The scent of Jana is "     Jana has an outdoorsy, equine smell which reminds you of green fields and meadows.".
+[The conversation of Jana is { "Neigh!" }.]
+The fuckscene of Jana is "[JanaSexMenu]".
 HP of Jana is 0.
 MaxHP of Jana is 0.
 XP of Jana is 0.
 Level of Jana is 0.
 Armor of Jana is 0.
 
-JanaRoomFix is a number that varies. [@Tag:Notsaved]			[ used to control whether the import fix has been run ]
-JanaRoomFix is usually 0.
+to say JanaDescription:
+	if debugactive is 1:
+		say "     DEBUG -> Energy: [Energy of Jana], HP: [HP of Jana], XP: [XP of Jana], Level: [Level of Jana], Armor: [Armor of Jana] <- DEBUG[line break]";
+	say "     Jana is an anthropomorphic horse lady with the body of an Amazon goddess. Her impressive figure is almost intimidating, but her feminine curves also give her a sexy, alluring appeal.";
 
 Table of GameRoomIDs (continued)
 Object	Name
 Janas Bedroom	"Janas Bedroom"
 
-Janas Bedroom is a room. It is sleepsafe. The description of Janas Bedroom is "     You are greeted with the sight of a Spartanly furnished room, with little more than a bed and nightstand as far as living accommodations are concerned. The exception, however, is the impressive array of lewd toys and bondage gear displayed proudly on the shelving of the nearest wall. There's even a pillory stashed into a corner, positioned perfectly to have someone strapped inside and be 'punished.'".
+Janas Bedroom is a room. The description of Janas Bedroom is "     You are greeted with the sight of a spartanly furnished room, with little more than a bed and nightstand as far as living accommodations are concerned. The exception, however, is the impressive array of lewd toys and bondage gear displayed proudly on the shelving of the nearest wall. There's even a pillory stashed into a corner, positioned perfectly to have someone strapped inside and be 'punished.'[line break]".
 
 to connect Janas Bedroom:
 	change the West exit of Janas Bedroom to Mares Quarters;
-	if HP of Jana > 0:
+	if HP of Jana > 0: [ Jana has revealed her location to the player ]
 		change the East exit of Mares Quarters to Janas Bedroom;
 
 After going to Janas Bedroom for the first time:
 	say "     You knock on the door to the room which Jana told you was hers, then step back to wait. After only a short pause, the door opens to reveal the stunning Amazon, complete with her leather getup. 'Hey there, Sweetie,' she greets you with a wink. 'Glad you decided to stop by. Come on in.' She waves you in and you step inside as she closes the door behind you. She gestures toward the small one-room living quarters, letting you take in the sight. 'Welcome to my humble abode!'";
 
-an everyturn rule: [ bugfixing rules for players that import savegames ]
-	if ( JanaRoomFix is 0 ) and ( HP of Jana > 0 ): [ Jana has revealed her location to the player ]
-		change the East exit of Mares Quarters to Janas Bedroom;
-		now JanaRoomFix is 1;
-
-to say JanaInit:
-	connect Janas Bedroom;
-	move Jana to Janas Bedroom;
-
 When Play begins:
-	say "[JanaInit]";
-
-a postimport rule: [bugfixing rules for players that import savegames]
-	say "[JanaInit]";
+	connect Janas Bedroom;
 
 Section 1 - Discussion
 
-to say JanaTalkMenu:
+instead of conversing the Jana:
 	if debugactive is 1:
-		say "[JanaDebug]";
+		say "     DEBUG -> Energy: [Energy of Jana], HP: [HP of Jana], XP: [XP of Jana], Level: [Level of Jana], Armor: [Armor of Jana] <- DEBUG[line break]";
 	if HP of Jana is 0:
 		say "ERROR: KIRJUN001 - Please report on the FS Discord";
-	if HP of Jana is 1:
-		say "     You eye the rack of gear as you approach Jana for the first time in her own room. She picks up on what you're looking at and says, 'Interested in what you see?' She gives you a teasing smile and you blush furiously. 'These are my toys,' she goes on to explain. 'But I'm sure you're not surprised to see them in a place like this.' When the topic of the Stables comes up, you give her an inquisitive look. 'I'm sure you're wondering why I live here. I'm not actually an 'employee,' but when things went to hell in a handbasket, I needed a place to stay and lie low. I happened to run into Fancy, and she was kind enough to set me up with a secret place here. In return, I help the girls out with training and equipment when they have clients that are into... certain kinks.' She winks at you provocatively. 'But enough about that. How are you doing?'";
+	else if HP of Jana is 1:
+		say "     You eye the rack of gear as you approach Jana for the first time in her own room. She picks up on what you're looking at and says, 'Interested in what you see?' She gives you a teasing smile and you blush furiously. 'These are my toys,' she goes on to explain. 'But I'm sure you're not surprised to see them in a place like this.' When the topic of the Stables comes up, you give her an inquisitive look. 'I'm sure you're wondering why I live here. I'm not actually an [']employee,['] but when things went to hell in a handbasket, I needed a place to stay and lie low. I happened to run into Fancy, and she was kind enough to set me up with a secret place here. In return, I help the girls out with training and equipment when they have clients that are into... certain kinks.' She winks at you provocatively. 'But enough about that. How are you doing?'";
 		now HP of Jana is 2;
 	else:
 		say "     Jana smiles as you approach, flipping her lush mane behind her back before turning to look at you. [bold type]What did you want to talk to her about?[roman type][line break]";
@@ -133,6 +116,7 @@ to say JanaTalkMenu:
 		now sortorder entry is 1;
 		now description entry is "Talk about whatever comes to mind";
 		[]
+		sort the table of fucking options in sortorder order;
 		repeat with y running from 1 to number of filled rows in table of fucking options:
 			choose row y from the table of fucking options;
 			say "[link][y] - [title entry][as][y][end link][line break]";
@@ -146,102 +130,72 @@ to say JanaTalkMenu:
 				choose row calcnumber in table of fucking options;
 				say "[title entry]: [description entry]?";
 				if Player consents:
-					let nam be title entry;
+					LineBreak;
 					now sextablerun is 1;
-					if nam is "Chitchat":
+					if title entry is "Chitchat":
 						say "[JanaChitchat]";
-					wait for any key;
 			else if calcnumber is 0:
+				LineBreak;
 				say "     You take a step back from the anthropomorphic horse woman, who gives you a puzzled look, expecting you to say something.";
 				now sextablerun is 1;
+			else:
+				say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options], or 0 to exit.";
+		wait for any key;
 		clear the screen and hyperlink list;
 
-to say JanaChitchat:
-	let cclist be a list of texts;
-	now cclist is {};
-	[]
-	add "[JanaCC1]" to cclist;
-	[]
-	add "[JanaCC2]" to cclist;
-	[]
-	add "[JanaCC3]" to cclist;
-	[]
-	add "[JanaCC4]" to cclist;
-	[]
-	add "[JanaCC5]" to cclist;
-	[]
-	if XP of Jana > 0:
-		add "[JanaCC7]" to cclist;
-		[]
-		add "[JanaCC9]" to cclist;
-		[]
-	if XP of Jana < 0:
-		add "[JanaCC6]" to cclist;
-		[]
-		add "[JanaCC8]" to cclist;
-		[]
-		if Level of Jana is 1:
-			add "[JanaCC10]" to cclist;
-			[]
-	sort cclist in random order;
-	say "[entry 1 of cclist]";
-
 [ Jana's random musings about the situation and her past ]
-to say JanaCC1:
-	say "     'You know, it's funny that I turned into a horse of all things,' she says. 'I actually used to be an equestrian rider before this outbreak happened. I used to love visiting my parents stables.' You can see her eyes glaze over a bit as she reflects back on how things used to be. 'We had a mare named Matilda. I loved taking her out on rides as often as I could. I wonder what ever happened to her.'";
-
-to say JanaCC2:
-	say "     'You ever play any sports or anything? I'm a really competitive person, and I'll do what it takes to win. Maybe we can play a game sometime and have a little friendly competition. Winner get's a prize?'";
-
-to say JanaCC3:
-	say "     'Not many people get to see inside my room. It's a bit of a private sanctuary for me, but I like you. Not to mention all of these...' she gestures towards the wall of bondage toys. You can see wide variety of tools and toys for use on both herself, and her partners, some of which look quite intimidating. 'They can put people off sometimes.'";
-
-to say JanaCC4:
-	say "     'My parents used to run a horse club, of sorts. They'd meet up with their rich friends and act all hoity-toity before retreating behind closed doors. I used to always wonder what they did, but I didn't find out until I was older. Maybe I'll tell you about it someday.'";
-	if Level of Jana is 0:
-		now Level of Jana is 1;
-
-to say JanaCC5:
-	say "     'My mother is where I got my love of horses from. She taught me how to ride as a child. She loved those animals so much, she'd even pose with them out on photoshoots as a model.' Jana gestures towards her nightstand, where you see a photo of an attractive human woman posing next to an impressive stallion. The woman has a youthful appearance with a lithe build that's rather easy to see. You note that she's completely nude, save for a rather expensive-looking fur coat. It seems a bit suggestive for a pose with a horse.";
-
-to say JanaCC6:
-	say "     'You know you can fuck me anytime, right? Just bend me over my bed, pull down my panties, and stuff me full of cock. I won't mind.' she says with wink.";
-
-to say JanaCC7:
-	say "     'You'd look mighty fine all tied up and wearing a collar. The look would really suit you, I think.'";
-
-to say JanaCC8:
-	say "     'If only there was someone around to slap me when I've been a bad girl,' she pouts sarcastically, doing her best to give you a seductive flutter of her eyes.";
-
-to say JanaCC9:
-	say "     I've been meaning to brush up on my knot tying skills. Maybe someday I'll use you as a practice subject,' she says with a wink.";
-
-to say JanaCC10:
-	say "     Just before the outbreak, I finally found out what my parents were doing in those secret club meetings. I snuck in one night to see my mother strapped to a table nude, while the men of the club used her for their own pleasure. They were all wearing horse masks, and my mother had a horseshoe tattoo right on her ass. I didn't stay long for fear of getting caught, but of the men was also bringing out one of the stallions.' You see her reach down to her crotch and unconsciously begin to rub herself. 'God it was soo hot,' she says. 'If only there was someone around who would tie me down and use me like a piece of meat, just like that.'";
+to say JanaChitchat:
+	let cclist be {1, 2, 3, 4, 5};
+	if XP of Jana > 0:
+		add {7, 9} to cclist;
+	else if XP of Jana < 0:
+		add {6, 8} to cclist;
+		if Level of Jana is 1:
+			add 10 to cclist;
+	sort cclist in random order;
+	if entry 1 of cclist is:
+		-- 1:
+			say "     'You know, it's funny that I turned into a horse of all things,' she says. 'I actually used to be an equestrian rider before this outbreak happened. I used to love visiting my parents['] stables.' You can see her eyes glaze over a bit as she reflects back on how things used to be. 'We had a mare named Matilda. I loved taking her out on rides as often as I could. I wonder what ever happened to her.'";
+		-- 2:
+			say "     'You ever play any sports or anything? I'm a really competitive person, and I'll do what it takes to win. Maybe we can play a game sometime and have a little friendly competition. Winner gets a prize?'";
+		-- 3:
+			say "     'Not many people get to see inside my room. It's a bit of a private sanctuary for me, but I like you. Not to mention all of these...' she gestures towards the wall of bondage toys. You can see a wide variety of tools and toys for use on both herself, and her partners, some of which look quite intimidating. 'They can put people off sometimes.'";
+		-- 4:
+			say "     'My parents used to run a horse club, of sorts. They'd meet up with their rich friends and act all hoity-toity before retreating behind closed doors. I used to always wonder what they did, but I didn't find out until I was older. Maybe I'll tell you about it someday.'";
+			if Level of Jana is 0:
+				now Level of Jana is 1;
+		-- 5:
+			say "     'My mother is where I got my love of horses from. She taught me how to ride as a child. She loved those animals so much, she'd even pose with them out on photoshoots as a model.' Jana gestures towards her nightstand, where you see a photo of an attractive human woman posing next to an impressive stallion. The woman has a youthful appearance with a lithe build that's rather easy to see. You note that she's completely nude, save for a rather expensive-looking fur coat. It seems a bit suggestive for a pose with a horse.";
+		-- 6:
+			say "     'You know you can fuck me anytime, right? Just bend me over my bed, pull down my panties, and stuff me full of cock. I won't mind,' she says with wink.";
+		-- 7:
+			say "     'You'd look mighty fine all tied up and wearing a collar. The look would really suit you, I think.'";
+		-- 8:
+			say "     'If only there was someone around to slap me when I've been a bad girl,' she pouts sarcastically, doing her best to give you a seductive flutter of her eyes.";
+		-- 9:
+			say "     'I've been meaning to brush up on my knot tying skills. Maybe someday I'll use you as a practice subject,' she says with a wink.";
+		-- 10:
+			say "     'Just before the outbreak, I finally found out what my parents were doing in those secret club meetings. I snuck in one night to see my mother strapped to a table nude, while the men of the club used her for their own pleasure. They were all wearing horse masks, and my mother had a horseshoe tattoo right on her ass. I didn't stay long for fear of getting caught, but one of the men was also bringing out one of the stallions.' You see her reach down to her crotch and unconsciously begin to rub herself. 'God it was soo hot,' she says. 'If only there was someone around who would tie me down and use me like a piece of meat, just like that.'";
 
 Section 2 - Sex
-
-to say JanaSexCheck:
-	if lastfuck of Jana - turns < 4:
-		if XP of Jana > 0:
-			[ Dominant Jana ]
-			say "     Jana looks at you with a teasing smile. 'Sorry,' she says. 'I'm not quite in the mood right now.' Despite her words, she claps her hands in front of her in a way that squeezes her chest together, treating you to a show of her cleavage. 'You'll just have to wait until my appetite is a little more ravenous.' She winks at you before turning around and walking away, swaying her hips seductively as she does.";
-			increase Libido of Player by 5;
-		else:
-			[ Submissive Jana ]
-			say "     'Sorry,' she says. 'You really wore me out last time.' She pants to make a show of how tired she is. 'Give me a bit of time to rest, and then we can have some more fun, alright?'";
-	else:
-		say "[JanaSexMenu]";
 
 to say JanaSexMenu:
 	if HP of Jana is 0:
 		say "ERROR: KIRJUN002 - Please report on the FS Discord";
 	else if HP of Jana is 1:
 		say "     You just stepped into her room for the first time. You might want to talk to her first before proceeding.";
+	else if lastfuck of Jana - turns < 4:
+		if XP of Jana > 0: [ Dominant Jana ]
+			say "     Jana looks at you with a teasing smile. 'Sorry,' she says. 'I'm not quite in the mood right now.' Despite her words, she claps her hands in front of her in a way that squeezes her chest together, treating you to a show of her cleavage. 'You'll just have to wait until my appetite is a little more ravenous.' She winks at you before turning around and walking away, swaying her hips seductively as she does.";
+			raise Player Libido by 5;
+		else: [ Submissive Jana ]
+			say "     'Sorry,' she says. 'You really wore me out last time.' She pants to make a show of how tired she is. 'Give me a bit of time to rest, and then we can have some more fun, alright?'";
 	else:
-		say "     Jana smiles as you approach, flipping her lush mane behind her back before turning to look at you. [if XP of Jana > 0]She quickly steps up to you and grabs you around the waist, pulling you in for a quick kiss. When she pulls back, she asks, 'So, what did you have in mind?'[else]You step up and pull her into a loving embrace, your hand reaching around to her butt as you kiss her. When you pull back, she asks, 'So, what did you have in mind?' [bold type]What would you like to do?[roman type][line break]";
+		say "     Jana smiles as you approach, flipping her lush mane behind her back before turning to look at you. [if XP of Jana > 0]She quickly steps up to you and grabs you around the waist, pulling you in for a quick kiss. When she pulls back[else]You step up and pull her into a loving embrace, your hand reaching around to her butt as you kiss her. When you pull back[end if], she asks, 'So, what did you have in mind?'";
+		say "[line break]     [bold type]What would you like to do?[roman type][line break]";
 		now sextablerun is 0;
 		blank out the whole of table of fucking options;
+		[]
 		if Player is male:
 			choose a blank row in table of fucking options;
 			now title entry is "Fuck Her";
@@ -253,18 +207,19 @@ to say JanaSexMenu:
 				now title entry is "Blowjob";
 				now sortorder entry is 2;
 				now description entry is "Use her mouth for your pleasure, and punish her if it's not good enough";
-				[]
+		[]
 		if Player is female:
 			choose a blank row in table of fucking options;
 			now title entry is "Receive Oral";
-			now sortorder entry is 10;
+			now sortorder entry is 3;
 			now description entry is "Have her set to work on your pussy";
 		[]
 		choose a blank row in table of fucking options;
 		now title entry is "Eat Her Out";
-		now sortorder entry is 20;
+		now sortorder entry is 4;
 		now description entry is "Give her pussy some oral attention";
 		[]
+		sort the table of fucking options in sortorder order;
 		repeat with y running from 1 to number of filled rows in table of fucking options:
 			choose row y from the table of fucking options;
 			say "[link][y] - [title entry][as][y][end link][line break]";
@@ -278,21 +233,25 @@ to say JanaSexMenu:
 				choose row calcnumber in table of fucking options;
 				say "[title entry]: [description entry]?";
 				if Player consents:
-					let nam be title entry;
+					LineBreak;
 					now sextablerun is 1;
-					if nam is "Fuck Her":
-						say "[JanaFuck1]";
-					else if nam is "Blowjob":
-						say "[JanaBlowjob1]";
-					else if nam is "Receive Oral":
-						say "[JanaOral1]";
-					else if nam is "Eat Her Out":
-						say "[JanaPleasure1]";
+					if title entry is:
+						-- "Fuck Her":
+							say "[JanaFuck1]";
+						-- "Blowjob":
+							say "[JanaBlowjob1]";
+						-- "Receive Oral":
+							say "[JanaOral1]";
+						-- "Eat Her Out":
+							say "[JanaPleasure1]";
 					now lastfuck of Jana is turns;
-					wait for any key;
 			else if calcnumber is 0:
+				LineBreak;
 				say "     Deciding you're not in the mood after all, you untangle yourself from her embrace and depart, leaving her with a confused look on her face.";
 				now sextablerun is 1;
+			else:
+				say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options], or 0 to exit.";
+		wait for any key;
 		clear the screen and hyperlink list;
 
 to say JanaFuck1:
@@ -304,6 +263,7 @@ to say JanaFuck1:
 		if "Dominant" is listed in feats of Player:
 			say "     You spin her around and push her onto all fours on the bed, then slowly walk around behind the fallen horse to admire her read end. The Amazon beauty's well-toned butt is a tantalizing sight, and you can't help but reach out and grope it, giving it a firm smack to watch it jiggle and sway. She responds with a whinny and neigh of surprise, but she eagerly pushes her ass back into your kneading hands nonetheless. Your eyes are then drawn the horses array of toys displayed neatly on the nearby wall. Hidden away in her secret little room in the stables is a wide variety of kinky bondage gear, from small leather collars to fully body latex suits to even some nasty looking whips. Seeing the assortment of tools puts more than a few wicked thoughts in your head. You grab her usual riding crop form its place on the shelf and peel down her leather chaps, then wind up your arm to build the suspense. When you bring the crop back down, it makes contact with a satisfying 'SMACK!', and you don't doubt that her skin is left a beet red beneath all that fur. You smack her again and again, hearing her whinny with each strike, and you notice that she's begun dripping with arousal at your abuse. 'Oh, you're a naughty girl, aren't you?' you tease with another smack from the crop.";
 			say "     Finally deciding that you've head enough of the foreplay, you reposition yourself to be kneeling behind her exposed, fleshy ass. You plop your [Cock of Player] cock right between her cheeks, to which she responds with a half-hearted, almost playful struggle to get away. You grip her by the hips and pull her back in place, hotdogging your dick as you do. 'You won't be getting away that easy,' you tell her, playing along with the game. Then you bring your cock down to rub against her pussy, finding it moistened and lubed, aching to be fucked. 'Feels, like you're more than ready to go for a little ride,' you tease her. She shudders and whinnies at your words, trying to deny your claim, but you know she secretly likes it. She's already starting to press back against you, trying to draw you inside.";
+			WaitLineBreak;
 			say "     Not wanting to waste another second after such an invitation, you quickly thrust inside her. Both of you cry aloud in unison as the sensation of your cock piercing her tight sex overtakes you. You hilt yourself in one go, then hold yourself there as she adjusts to your size. You only give her a handful of seconds though, before you begin to thoroughly pound her, sawing rapidly in and out of her sweet pussy. Her eyes glaze over as she revels in being used as your personal fucktoy. You grip her ass firmly as you continue to fuck her, squeezing her malleable flesh and giving a her another slap here and there to remind her of her place. Her tail flicks up and down your chest in rhythm with the rocking of your bodies. Sensing that she's nearing her limit, you give a particularly hard and deep thrust that sends her over the edge. She shouts up into the air as her marehood clamps down tightly around your member and starts to throb as she climaxes. The continuous squeezing and clenching sends you over the edge as well, and you paint her insides with splurt after splurt of cum.";
 			say "     You collapse on top of her after orgasming, pinning her below you as you both take a well-deserved rest. When you've both finally calmed down from your orgasmic highs, you pull out of her with a wet slurp, watching as your seed slowly drips down her thighs. With a pat on the rump, you stand back up and redress, leaving her where she is to lie exhausted in the mess.";
 		else:
@@ -345,7 +305,6 @@ Encountering Jana	"Encountering Jana"
 
 Encountering Jana is a situation.
 ResolveFunction of Encountering Jana is "[ResolveEvent Encountering Jana]".
-The level of Encountering Jana is 0.
 Sarea of Encountering Jana is "Stable".
 
 when play begins:
@@ -355,12 +314,10 @@ when play begins:
 to say ResolveEvent Encountering Jana:
 	say "     You start to wander the hallways of the Stable Hotel, looking for anything of interest, when suddenly, you turn a corner and accidentally run into a tall, athletic horse woman, face planting right between her breasts. 'Oof!' she exclaims as you bounce off her, somewhat embarrassed. 'Who the hell are you?' She scowls at your unexpected appearance. Looking over who it is you just encountered, you see the towering figure of a woman, but with the features of a horse. She possesses a striking, muscled physique, alongside an equine head and hooves, a coat of short brown fur, and a beautiful, flowing mane of deep brown. The striking Amazon of a horse is dressed in a set of leather chaps and a small corset, though how she managed to find one in her size puzzles you, given how much she towers over the average person. In her hands, she's holding a lasso and a riding crop, which she points aggressively at you as you continue to ogle her. 'And didn't your mother teach you any manners?' She seems a bit unhappy.";
 	say "     Raising your hands in a friendly gesture of peace, you try to deescalate the situation. She takes a deep breath and calms down, the expression on her face softening. 'I'm sorry,' she says. 'I just wasn't expecting to run into anyone, other than horny horsemen.' Still holding her whip like a weapon, she loosens her grip and stores it back on her belt. You take the opportunity to speak, putting on a friendly smile. 'I'm not here to fight,' you try to calmly explain. 'And I'm not some crazy mutant, like those horsemen,' you say with a chuckle, hoping it's persuasive. It appears you were convincing, as she brings her hands to her hips and takes up a more conversational stance.";
+	WaitLineBreak;
 	say "     'Well, you ought to not be wandering the streets like one. Otherwise you might get into trouble with a strong woman like me,' she says a bit jokingly. She strides over to you and holds out her hand in greeting. Seeing as she was so jumpy and eager to start a fight, you're taken by surprise at the sudden shift in the tone of the situation. She seems to have taken you for your word about being friendly. You reach out and shake her hand, finding her grip unsurprisingly strong and firm. 'I'm Jana, by the way,' she lets you know. The two of you exchange names and pleasantries, and after a little while of chatting, you feel like you've gotten to know Jana a bit. 'Well,' she says. 'It's been really nice getting to know you, but I really ought to head off. Now that I know who you are, you won't have to worry about being jumped. Just make sure you don't go wild on me,' she says with a teasing smile. As she turns to depart, she looks over her shoulder and adds, 'I'd love if you came to stop by and visit me sometime. I've got a room in the Mare's Quarters.' Realizing how much time has passed, you wave goodbye and collect yourself before returning to your own explorations.";
-	repeat with y running from 1 to number of filled rows in Table of Random Critters:
-		choose row y in Table of Random Critters;
-		if Name entry is "Horsemazon":
-			now area entry is "Nowhere";
-			break;
+	if "Horsemazon" is a Name listed in Table of Random Critters:
+		now area entry is "Nowhere";
 	now HP of Jana is 1;
 	change the East exit of Mares Quarters to Janas Bedroom;
 	now Encountering Jana is resolved;

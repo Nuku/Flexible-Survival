@@ -2004,15 +2004,6 @@ Scent of mareslut milk is "[breastmilk smell]".
 
 Table of Game Objects (continued)
 name	desc	weight	object
-"margay milk"	"[breastmilk Strain of margay milk]"	1	margay milk
-
-margay milk is a infectious milky grab object.
-Strain of margay milk is "Margay".
-Usedesc of margay milk is "[breastmilk use]".
-Scent of margay milk is "[breastmilk smell]".
-
-Table of Game Objects (continued)
-name	desc	weight	object
 "math teacher milk"	"[breastmilk Strain of math teacher milk]"	1	math teacher milk
 
 math teacher milk is a infectious milky grab object.
@@ -3422,6 +3413,19 @@ Section 1 - Custom Milk
 
 Table of Game Objects (continued)
 name	desc	weight	object
+"automaton milk"	"[breastmilk Strain of automaton milk]"	1	automaton milk
+
+automaton milk is a infectious milky grab object.
+Strain of automaton milk is "Automaton".
+Usedesc of automaton milk is "[automaton milk use]".
+Scent of automaton milk is "[breastmilk smell]".
+
+to say automaton milk use:
+	say "     Lifting the plastic bottle to your mouth, you take a drink from it, letting the automaton milk run over your tongue and down your throat. Tastes rich and a little like metal. Swishing it around in your mouth a little, you finish the bottle off, then stuff it back into your collection of 'empties'.";
+	PlayerDrink 15;
+
+Table of Game Objects (continued)
+name	desc	weight	object
 "cheesecake milk"	"[breastmilk Strain of cheesecake milk]"	1	cheesecake milk
 
 cheesecake milk is a infectious milky grab object.
@@ -3452,9 +3456,9 @@ to say Dragon Breeder milk use:
 	increase Cunt Depth of Player by 3;
 	increase Cunt Tightness of Player by 3;
 	if Cock Count of Player is 1:
-		Increase Cock Length of Player by 5;
+		increase Cock Length of Player by 5;
 	if Ball Size of Player <= 6:
-		Increase Ball size of player by 1;
+		increase Ball size of player by 1;
 	if scalevalue of Player < 5:
 		now scalevalue of Player is 5;
 
@@ -3507,7 +3511,7 @@ name	desc	weight	object
 Hermacore Cream is a infectious milky grab object.
 Strain of Hermacore Cream is "Hermacore".
 Usedesc of Hermacore Cream is "[Hermacore Cream use]".
-Scent of Hermacore Cream is "You open the lid for a moment and take a sniff. Smells kinda like any other milk, really.".
+Scent of Hermacore Cream is "[breastmilk smell]".
 
 to say Hermacore Cream use:
 	say "     Tilting the creamy vessel to lips, you take a deep greedy pull of your exotic milk. Your inner sommelier detects hints of subtle oaks, interspliced with effervescent spear mints, and a light undercurrent of fresh vanilla playing across your palate. Swallowing, your tastebuds note aftertaste leaves an uncanny but not wholly unwelcome sour bite evocative of some high proof liquor.";
@@ -3520,6 +3524,19 @@ to say Hermacore Cream use:
 	increase Cunt Tightness of Player by 3;
 	decrease turns in heat by 8;
 	SanLoss 5;
+
+Table of Game Objects (continued)
+name	desc	weight	object
+"husky bitch milk"	"[breastmilk Strain of husky bitch milk]"	1	husky bitch milk
+
+husky bitch milk is a infectious milky grab object.
+Strain of husky bitch milk is "Husky Bitch".
+Usedesc of husky bitch milk is "[husky bitch milk use]".
+Scent of husky bitch milk is "[breastmilk smell]".
+
+to say husky bitch milk use:
+	say "     Lifting the plastic bottle to your mouth, you take a drink from it, letting the canine milk run over your tongue and down your throat. Tastes rich and animal-like. Swishing it around in your mouth a little, you finish the bottle off, then stuff it back into your collection of 'empties'.";
+	PlayerDrink 15;
 
 Table of Game Objects (continued)
 name	desc	weight	object
@@ -3552,6 +3569,8 @@ Scent of macho milk is "[breastmilk smell]".
 Table of Game Objects (continued)
 name	desc	weight	object
 "margay taur milk"	"A glass bottle filled to the brim with rich and thick creamy milk. Oddly, the bottle and its contents never seem to get warm or even go off when left out in the sun."	1	margay taur milk
+
+margay milk is a grab object. [define early to resolve name conflicts]
 
 margay taur milk is a grab object.
 margay taur milk is milky.
@@ -3665,6 +3684,19 @@ Scent of biolizardman brute man-milk is "[breastmilk smell]".
 
 to say biolizardman brute man-milk use:
 	say "     Lifting the plastic bottle to your mouth, you take a drink from it, letting the reptilian man-milk run over your tongue and down your throat. Tastes rich and animal-like. Swishing it around in your mouth a little, you finish the bottle off, then stuff it back into your collection of 'empties'.";
+	PlayerDrink 15;
+
+Table of Game Objects (continued)
+name	desc	weight	object
+"hawkman man-milk"	"A plastic water bottle filled with what is clearly milk. One could think it was a regular cow's milk, if someone hadn't written 'Hawkman Man-Milk' across the label on the bottle. You [italic type]could[roman type] drink it to quench your thirst. Who knows what else it might do to you though..."	1	hawkman man-milk
+
+hawkman man-milk is a infectious milky grab object.
+Strain of hawkman man-milk is "Hawkman Male".
+Usedesc of hawkman man-milk is "[hawkman man-milk use]".
+Scent of hawkman man-milk is "[breastmilk smell]".
+
+to say hawkman man-milk use:
+	say "     Lifting the plastic bottle to your mouth, you take a drink from it, letting the avian man-milk run over your tongue and down your throat. Tastes rich and animal-like. Swishing it around in your mouth a little, you finish the bottle off, then stuff it back into your collection of 'empties'.";
 	PlayerDrink 15;
 
 Table of Game Objects (continued)
@@ -3827,6 +3859,15 @@ Does the player mean littering kobold milk when avalon kobold milk is visible: i
 Does the player mean burninating kobold milk when avalon kobold milk is visible: it is likely.	[junk kobold milk]
 Does the player mean stashing kobold milk when avalon kobold milk is visible: it is likely.	[stash kobold milk]
 Does the player mean retrieving kobold milk when avalon kobold milk is visible: it is likely.	[retrieve kobold milk]
+
+Does the player mean grabbing margay milk when margay taur milk is visible: it is likely.	[get kobold milk]
+Does the player mean using margay milk when margay taur milk is visible: it is likely.	[use kobold milk]
+Does the player mean examining margay milk when margay taur milk is visible: it is likely.	[look kobold milk]
+Does the player mean sniffing margay milk when margay taur milk is visible: it is likely.	[smell kobold milk]
+Does the player mean littering margay milk when margay taur milk is visible: it is likely.	[drop kobold milk]
+Does the player mean burninating margay milk when margay taur milk is visible: it is likely.	[junk kobold milk]
+Does the player mean stashing margay milk when margay taur milk is visible: it is likely.	[stash kobold milk]
+Does the player mean retrieving margay milk when margay taur milk is visible: it is likely.	[retrieve kobold milk]
 
 Does the player mean grabbing panther milk: it is likely.	[get panther milk]
 Does the player mean using panther milk: it is likely.	[use panther milk]

@@ -136,8 +136,6 @@ to say Frost DrakeSexMenu:
 			say "     You back away and shake your head.";
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options], or 0 to exit.";
-	wait for any key;
-	clear the screen and hyperlink list;
 
 to say SuckFrostDrake:
 	say "     You smile lewdly and walk forward, circling behind the draconic beast. He rests on his side and breathes heavily with anticipation, and from your earlier scuffle. You reach out and grip his limp, but still very solid, drake meat and squeeze it gently. The once ferocious predator lets out a gentle whine as his member grows thicker and longer, hardening in your grip. You smile and lean down to kiss the tip of the reptilian cock, giving him a smile before trailing your tongue down his length and back up again. You suckle his tip and fondle his tight, scaly sack before engulfing the head fully between your lips.";

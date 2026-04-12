@@ -5,7 +5,6 @@ Version 2 of Dry Plains Events by Stripes begins here.
 
 "Adds a series of random events to Flexible Survival located at or focusing on the Dry Plains area."
 
-
 Section 1 - Creeping Grass
 
 Table of GameEventIDs (continued)
@@ -20,7 +19,6 @@ to say ResolveEvent Creeping Grass:
 	say "     As you check out a few fallen buildings, you notice that the rubble pile has already been partially covered by the dry grasses of the plains. Somehow, despite their recent collapse, the plains are already starting to cover and reclaim them. Checking more closely and prodding it with a stick, you can see that the grass roots, instead of burrowing into the soil, have climbed up the fallen beams and boards, spreading to grow fresh grass overtop of them. Putting some weight on the covered spot, it breaks and crumbles easily, showing that the grasses are breaking down and destroying the ruins they cover.";
 	increase score by 1;
 	now Creeping Grass is resolved;
-
 
 Section 2 - Ranch House
 
@@ -41,7 +39,6 @@ to say ResolveEvent Soaring Eagle:
 	increase score by 1;
 	now Soaring Eagle is resolved;
 
-
 Section 4 - Partial Ruin
 
 Table of GameEventIDs (continued)
@@ -51,6 +48,7 @@ Partial Ruin	"Partial Ruin"
 Partial Ruin is a situation.
 ResolveFunction of Partial Ruin is "[ResolveEvent Partial Ruin]". The level of Partial Ruin is 5.
 Sarea of Partial Ruin is "Plains".
+
 when play begins:
 	add Partial Ruin to BadSpots of HermList;
 	add Partial Ruin to BadSpots of FurryList;
@@ -59,7 +57,7 @@ to say ResolveEvent Partial Ruin:
 	say "     You manage to find a stretch of asphalt that is only partially broken up by the grasses, most roadway here having already been split and broken through extensively by the plantlife here. This stretch has only started to succumb, but looks a couple of decades old and poorly maintained despite its probably newness. Following it, you come to a half-fallen building, the remains of a corner store. Hopeful of finding something of use, you rush over and start searching through the place. You have only started to look around when the ground starts to shake and rumble and another wall of the building collapses.";
 	let bonus be ( Dexterity of Player + Strength of Player - 20 ) divided by 2;
 	let dice be a random number from 1 to 20;
-	say "You roll 1d20([dice])+[bonus] vs 15 and score [dice plus bonus]:";
+	say "[line break]You roll 1d20([dice])[if bonus >= 0]+[end if][bonus] = [special-style-1][dice + bonus][roman type] vs [special-style-2]15[roman type] (Dexterity + Strength Check):[line break]";
 	if dice + bonus > 14:
 		say "     You push and dodge your way past the debris to get out of the collapsing building before it all comes tumbling down atop you. From a safe distance, you watch the last of it collapse down. The strange rumble seemed more like a cave-in or sinkhole than an earthquake, so you start looking around for clues when suddenly you hear some barking sounds around you moments before the ground gives out beneath you.";
 	else:
@@ -77,7 +75,6 @@ to say ResolveEvent Partial Ruin:
 		now Resolution of Partial Ruin is 2; [Successfully scavenged food]
 	now Partial Ruin is resolved;
 
-
 Section 5 - Hardware Store Ruins
 
 Table of GameEventIDs (continued)
@@ -91,25 +88,26 @@ Sarea of Hardware Store Ruins is "Plains".
 to say ResolveEvent Hardware Store Ruins:
 	say "     You wander across the dry plains, following the path of a worn-down road as it meanders through the rolling hills. The smell of dust still lingers in the air, likely the result of a herd of centaurs as they move through the plains. Not wanting to be caught off guard, you walk with further haste, until the dust settles, and you can once again relax. You pause for a moment to catch your breath. Taking the opportunity to survey your	surroundings, you think you spot a number of buildings up ahead. You approach to a safe distance, your eyes scanning the horizon for both peril and plunder, until eventually, they settle on the ruins of an old hardware store.";
 	say "     [bold type]Do you want to investigate the ruins? [roman type]There's a good chance you could find some useful tools, but it looks risky, and rummaging around in the debris might bring unwanted attention.";
-	LineBreak;
 	if Player consents:
+		LineBreak;
 		let diceRoll be a random number from 1 to 20;
-		let bonus be ( ( Perception of Player minus 10 ) divided by 2 );
+		let bonus be ( Perception of Player minus 10 ) divided by 2;
 		let perceptionRoll be diceRoll plus bonus;
 		say "     You proceed to clamber into the ruins, moving aside fallen junk in an effort to find something of use. The rubble is difficult to move and the task quickly becomes both tiring and frustrating. More and	more as you work, you come to believe this place was picked completely clean before it collapsed. While some parts are too buried to reach and check, those you can find yield nothing of value at all. At one point, you notice a solid plank of wood buried under the rubble that looks like it might be of use. You give it a tug, but it barely moves. You pull again, getting it to budge this time, but you can see that it's a bit longer than you thought and moves much of the surrounding rubble along with it.";
-		say "     You roll 1d20([diceRoll])+[bonus] = [special-style-1][perceptionRoll][roman type] vs [special-style-2]10[roman type] (Perception Check):[line break]";
+		say "[line break]You roll 1d20([diceRoll])[if bonus >= 0]+[end if][bonus] = [special-style-1][perceptionRoll][roman type] vs [special-style-2]10[roman type] (Perception Check):[line break]";
 		if perceptionRoll < 10:
 			say "     Giving one last heave on the plank, you manage to dislodge it. What you didn't notice is that it was the only thing holding back a pile of rubble above you. It begins to topple down, and you dive away just in time to avoid being hit. The crash echoes through the store. Checking yourself over, you are relieved to find yourself undamaged, save for a few scrapes and bruises.";
 			say "     On that note, you decide you've done enough rummaging for today. You are about to head out when you hear voices in the distance. It seems the noise of your rummaging has attracted some visitors. You slip into the shadows of one of the few walls still standing, hoping to avoid detection. Peeking around the corner, you count three centaurs approaching your position. You pull back into hiding and ponder your next move.";
-			say "     [bold type]Do you challenge the group to a fight? [roman type]Otherwise you can try to sneak away without being seen.";
-			LineBreak;
+			say "     [bold type]Do you challenge the group to a fight?[roman type] Otherwise you can try to sneak away without being seen.";
 			if Player consents:
+				LineBreak;
 				say "[CentaurHardwareFight]";
 			else:
+				LineBreak;
 				let diceRoll be a random number from 1 to 20;
-				let bonus be ( ( Dexterity of Player minus 10 ) divided by 2 );
+				let bonus be ( Dexterity of Player minus 10 ) divided by 2;
 				let dexterityRoll be diceRoll plus bonus;
-				say "     You roll 1d20([diceRoll])+[bonus]: [special-style-1][dexterityRoll][roman type] vs [special-style-2]10[roman type] (Dexterity Check):[line break]";
+				say "You roll 1d20([diceRoll])[if bonus >= 0]+[end if][bonus]: [special-style-1][dexterityRoll][roman type] vs [special-style-2]10[roman type] (Dexterity Check):[line break]";
 				if dexterityRoll < 10:
 					say "     You slink deeper into the shadows and turn to depart in the other direction. You are able to follow the shadow of the crumbling wall for some time, but eventually it ends. With the ceiling having collapsed quite some time ago, you are left to cross a brightly lit gap before you can reach safety. You take your chances and speed across the opening in a standing crouch, but halfway through, you hear one of the centaurs shout. You've been spotted!";
 					say "[CentaurHardwareFight]";
@@ -121,36 +119,25 @@ to say ResolveEvent Hardware Store Ruins:
 			increase score by 5;
 			now Hardware Store Ruins is resolved;
 	else:
+		LineBreak;
 		say "     Deciding discretion is the better part of valor, you pass the ruins by and continue on with your journey. You	keep an eye open for any trouble, but there are no further disturbances along your pleasant stroll.";
 
 to say CentaurHardwareFight:
-	let enemySelector be 0;
 	let i be 0;
 	now fightoutcome is 0;
-	while i < 3:
-		now inasituation is true;
-		let enemySelector be a random number from 1 to 2;
-		if enemySelector is 1:
-			challenge "Centaur Mare";
-		else:
-			challenge "Centaur Stallion";
-		now inasituation is false;
+	while i < 3 and fightoutcome < 20:
+		challenge "[one of]Centaur Mare[or]Centaur Stallion[purely at random]";
 		increase i by 1;
 	if fightoutcome < 20: [player victory]
 		say "     You stand over the defeated centaurs, breathing heavily after the fight. You take a moment to revel in your victory, but with only three to their number, you realize there's a good possibility that more of them might be nearby. Deciding it's best to get out of here before more show up, you pick your way out of the mess of rubble which toppled over in the chaos. Perhaps you can return and continue your search when there's a little less foot traffic around.";
 	else if fightoutcome > 19 and fightoutcome < 30: [player loss]
 		say "     You slump to the floor, defeated at the hands of the small centaur scouting party. They grin wickedly, eager to have their way with you. One of them steps forward and grabs you by the collar, roughly dragging you to the center of the group while the others clear some room to have some fun.";
-		if enemySelector is 1:
-			say "[losetocentaurmare]";
-		else:
-			say "[losetocentaurstallion]";
-	else if fightoutcome is 90: [player fled]
+		choose row MonsterID from Table of Random Critters;
+		say "[victory entry]";
+	else if fightoutcome is 30: [player fled]
 		say "     Escaping from the grasp of the centaurs, you quickly dash around a corner of rubble and begin to run. The centaurs attempt to give chase, but they're bulky form gives them trouble navigating the debris of the hardware store. Sparing a glance behind you, you see that they've given up the chase, and you slow your retreat to a more comfortable pace. You make your way out of the ruins and endeavour to come back later, when it's a little less dangerous around. Perhaps then you'll be able to find something useful.";
-	else:
-		say "You should not be seeing this.";
 
 [spiked club moved to Core Mechanics/Weapons.i7x]
-
 
 Section 6 - Hunting Party
 
@@ -170,14 +157,12 @@ when play begins:
 to say ResolveEvent Hunting Party:
 	project the Figure of CentaurMare_icon;
 	say "     Walking along a broken up patch of roadway, you hear loud clopping coming your way from over the small hillock beside you. Getting ready for a fight, you spot a female centaur galloping down the slope towards you, but then she charges right past you. It's then that you notice that her hooves are not the only ones you hear as several horsemen come running over the hill. They are wearing cowboy hats and a few of them have lassos at the ready. Most thankfully run past you, continuing their pursuit of the escaping centauress, but a pair stop to deal with you.";
-	WaitLineBreak;
 	if Nightmaremastery is 1:
 		say "     Recognizing you as their leader, they nod respectfully and start giving you a report on their activity out here. While they had been hopeful that the equine centaurs could be encouraged to join the staff at the Stables, they seem quite reluctant, and even violent, about the prospect. Not taking no for an answer, the horsemen have been trying to capture some of the female centaurs to [']encourage['] them to come along. Squirming under your gaze as you keep questioning them, they report that they haven't yet been successful, as the four-legged centaurs are much faster than them. You order them back to their task and warn them that you expect results or you'll be seeing them in your office. Taking a mental note of their names, you find yourself equally looking forward to either their success or their failure, as either will get you some new mares to fuck.";
 		increase score by 10;
 		now Resolution of Hunting Party is 1; [Nightmare met horsemen]
 	else:
 		say "     Their stallionhoods are hanging from their sheaths at the ready after their invigorating chase. It seems this pair has decided that you'll be a good enough to satisfy them. Clearly looking as much for a fight as they are sex, they laugh and arrogantly decide to take turns facing you, feeling quite confident.";
-		LineBreak;
 		say "     The muscular horseman steps up to you with balled fists. Standing on digitigrade legs that are covered in a cream colored fur up to his thickly built human torso, his right bicep bears an intricate interlocking horseshoe tattoo. An impressive equine package bulges his ripped khaki shorts and behind him, a short tail flicks in annoyance. He grumbles. 'By the time I'm done with you, you're gonna be a proper horsey fucktoy.'";
 		challenge "Horseman";
 		say "     With the first one finished, the other cracks his knuckles and gets ready to have a go at you as well.";
@@ -186,7 +171,6 @@ to say ResolveEvent Hunting Party:
 		increase score by 1;
 		now Resolution of Hunting Party is 2; [Fought horsemen]
 	now Hunting Party is resolved;
-
 
 Section 7 - Pit Trap
 
@@ -197,6 +181,7 @@ Pit Trap	"Pit Trap"
 Pit Trap is a situation.
 ResolveFunction of Pit Trap is "[ResolveEvent Pit Trap]". The level of Pit Trap is 5.
 Sarea of Pit Trap is "Plains".
+
 when play begins:
 	add Pit Trap to BadSpots of HermList;
 	add Pit Trap to BadSpots of FurryList;
@@ -204,11 +189,11 @@ when play begins:
 to say ResolveEvent Pit Trap:
 	say "     Cresting a small hillock, you notice a large hole at the bottom of the hill and can hear a soft moan of pain coming from it. Cautiously approaching, you peek inside to find an injured soldier down at the bottom of a deep hole. The hole seems quite smoothly dug and has vertical sides, clearly dug by someone or something. Given its placement along the path between the hillocks and the pile of berries the soldier is munching on while trapped, it was clearly made as a pit trap and was successful. In the grass beside the pit is a small pack, probably dropped by the soldier when he fell.";
 	say "     Spotting you, the soldier starts calling up for you to help him. He tells you that there's some rope in the pack he lost up there and to get him out quick. Looking at the pack, you reach for it.";
-	say "     [bold type]Shall you grab it and run, leaving him to his fate?[roman type][line break]";
-	LineBreak;
+	say "[line break]     [bold type]Shall you grab it and run, leaving him to his fate?[roman type][line break]";
 	say "     ([link]Y[as]y[end link]) - Yes.";
 	say "     ([link]N[as]n[end link]) - No.";
 	if Player consents:
+		LineBreak;
 		say "     Grabbing the pack, you start to hoof it away before whoever set the trap returns. You chuckle as you hear the soldier screaming at you before his screams of anger turn to those of fear before being silenced. Clearly the pit's creator or some other monster found the noisy human and they are going to be getting better acquainted. You find a spot some distance away, sheltered by a mound of rubble, to examine the bag's contents. Aside from a pocketknife, there a medkit and a ration pack to go along with the rope.";
 		if scenario is "Bunker" or scenario is "Caught Outside":
 			ItemGain medkit by 1;
@@ -224,20 +209,42 @@ to say ResolveEvent Pit Trap:
 			SanLoss 5;
 			now Resolution of Pit Trap is 2; [Stole bag, Other Scenarios]
 	else:
-		say "     Quickly digging out the rope, you start securing it to a large rock nearby. The soldier keeps babbling his thanks to you. But as you try to warn him to be quiet, it is too late. Emerging from hidden holes in the ground come numerous three foot prairie dog creatures. One of them waves her shovel at you. 'Hey now! You leave that alone. We caught it fair and square! That one's ours,' she says, crossing her fluffy arms over her large breasts. ";
+		LineBreak;
 		if BodyName of Player is "Prairie Dog" and FaceName of Player is "Prairie Dog" and SkinName of Player is "Prairie Dog":
-			say "Looking you over, the rodent herm grins. 'But you know what, you're a fine looking burrower. How about we share him?' The soldier, just having finished coming up the rope, whimpers at this suggestion.";
-			say "     [bold type]Shall you take her up on her offer?[roman type][line break]";
-			LineBreak;
+			say "     Quickly digging out the rope, you start securing it to a large rock nearby. The soldier keeps babbling his thanks to you. But as you try to warn him to be quiet, it is too late. Emerging from hidden holes in the ground come numerous three foot prairie dog creatures. One of them waves her shovel at you. 'Hey now! You leave that alone. We caught it fair and square! That one's ours,' she says, crossing her fluffy arms over her large breasts. Looking you over, the rodent herm grins. 'But you know what, you're a fine looking burrower. How about we share him?' The soldier, just having finished coming up the rope, whimpers at this suggestion.";
+			say "[line break]     [bold type]Shall you take her up on her offer?[roman type][line break]";
 			say "     ([link]Y[as]y[end link]) - Yes.";
 			say "     ([link]N[as]n[end link]) - No.";
 			if Player consents:
-				say "[prairiedogsex]";
+				LineBreak;
+				setmonster "Prairie Dog";
+				say "     Looking from your fellow rodents to the human soldier, you nod at the offer and the reach to grab him. He struggles a little, but superior numbers have him down soon enough. Numerous little paws grab at his clothes and strip him bare. The one prairie dog you spoke with motions for you to pick a spot to have a go at him.";
+				if Player is herm:
+					say "[line break]     [bold type]Shall you ride his cock or stuff his ass?[roman type][line break]";
+					say "     ([link]Y[as]y[end link]) - Ride his cock.";
+					say "     ([link]N[as]n[end link]) - Stuff his ass.";
+					if Player consents:
+						LineBreak;
+						say "     Deciding to get the soldier's cock in you, you climb atop him and sink yourself down onto it with a soft moan. His cock throbs in you as you watch the others scramble atop him, stroking and teasing him all over. Their leader drives her hard shaft into his mouth, fucking his face until he starts moaning and sucking on it hungrily. Spotting your stiff member, one of them [if Cock Length of Player < 10]snuggles her back against you and starts riding your shaft to get you to fill her[else]starts groping and fondling your large meat, running her tongue over it and sucking at its tip to get you to cum down her throat[end if]. Another moves up behind you and, with a little cooperation from you, raises him up enough to drive into his tight behind while rubbing her soft breasts against your back. Others spray their seed onto him again and again. As you ride, you can feel his cock shifting and changing inside you while sandy brown fur spreads over his body and breasts form on his chest. Two lucky rodents get their muzzles onto them and start sucking his nipples, getting him to moan and cum in you, draining away his human seed into you to be replaced by much better prairie dog semen as he transforms. He is now well on his way to becoming a prairie dog herm. Lost in the lust of transforming a human, you cum hard and pump your load into the prairie dog in front of you. Sated, you cede your place to another who wants her turn on the soldier's cock while their leader moves to take his new pussy's virginity.[impregchance]";
+					else:
+						LineBreak;
+						say "     Deciding to get have a go at his ass, you boost his hips up and drive your cock slowly into him[if Cock Length of Player > 12]. It takes some effort to stuff your big meat into the soldier's tight rump, but it is well worth it when you do[end if]. His ass is snug and warm around your pistoning shaft. His cock throbs and twitches as you fuck him as you watch the others scramble atop him, stroking and teasing him all over. Their leader drives her hard shaft into his mouth, fucking his face until he starts moaning and sucking on it hungrily. Another is helped up so she can get his cock into her dripping snatch. Another moves in behind you and, with your cooperation, sinks her throbbing shaft into your wet, dripping pussy. You moan in pleasure at the sensation of fucking and being fucked at once, and the knowledge that you're corrupting this poor soldier making it all the better. You can feel the sandy brown fur spreading over his hips and then up his body and breasts form on his chest. Two lucky rodents get their muzzles onto them and start sucking his nipples, getting him to moan and cum into the rodent in front of you, draining away his human seed to be replaced by much better prairie dog semen as he transforms. He is now well on his way to becoming a prairie dog herm. Lost in the lust of transforming a human, you cum hard, blasting your cum into his ass while the one behind you fills your pussy. Sated, you cede your place, allowing their leader to move in to take his new pussy's virginity.[fimpregchance]";
+				else if Player is male:
+					say "     Deciding to have a go at his ass, you boost his hips up and drive your cock slowly into him[if Cock Length of Player > 12]. It takes some effort to stuff your big meat into the soldier's tight rump, but it is well worth it when you do[end if]. His ass is snug and warm around your pistoning shaft. His cock throbs and twitches as you fuck him as you watch the others scramble atop him, stroking and teasing him all over. Their leader drives her hard shaft into his mouth, fucking his face until he starts moaning and sucking on it hungrily. Another is helped up so she can get his cock into her dripping snatch. Another moves in behind you and, with your cooperation, sinks her throbbing shaft into your tight asshole to give you the same treatment you're giving the soldier. You moan in pleasure at the sensation of fucking and being fucked at once, and the knowledge that you're corrupting this poor soldier making it all the better. You can feel the sandy brown fur spreading over his hips and then up his body and breasts form on his chest. Two lucky rodents get their muzzles onto them and start sucking his nipples, getting him to moan and cum into the rodent in front of you, draining away his human seed to be replaced by much better prairie dog semen as he transforms. He is now well on his way to becoming a prairie dog herm. Lost in the lust of transforming a human, you cum hard, blasting your cum into his ass while the one behind you fills your rump in return. Sated, you cede your place, allowing their leader to move in to take his new pussy's virginity.";
+				else:
+					say "     Deciding to get the soldier's cock in you, you climb atop him and sink yourself down onto it with a soft moan. His cock throbs in you as you watch the others scramble atop him, stroking and teasing him all over. Their leader drives her hard shaft into his mouth, fucking his face until he starts moaning and sucking on it hungrily. Another moves up behind you and, with a little cooperation from you, raises him up enough to drive into his tight behind while rubbing her soft breasts against your back. Others spray their seed onto him again and again. As you ride, you can feel his cock shifting and changing inside you while sandy brown fur spreads over his body and breasts form on his chest. Two lucky rodents get their muzzles onto them and start sucking his nipples, getting him to moan and cum in you, draining away his human seed into you to be replaced by much better prairie dog semen as he transforms. He is now well on his way to becoming a prairie dog herm. Lost in the lust of transforming a human, you cum hard. Sated, you cede your place to another who wants her turn on the soldier's cock while their leader moves to take his new pussy's virginity.[impregchance]";
+				say "     You play with and tease him, mostly watching as the others share him around until they're all satisfied. Lost in a lustful haze, the new prairie dog herm is easily led underground where you're sure her induction into the warren will continue. You feel a strong longing to join them, but manage to resist it, at least for the moment.";
+				infect "Prairie Dog";
+				now Libido of Player is Libido of Player / 2;
+				SanLoss 20;
+				increase score by 25;
+				now Resolution of Pit Trap is 1; [Had sex with Soldier]
 			else:
+				LineBreak;
 				say "     'Well, that's just too bad. We'll just have to take what's ours then,' she growls, raising her shovel.";
 				say "[prairiedogfight]";
 		else:
-			say "'And maybe we'll have some fun with you as well,' she says with a growl. 'Get [']em, girls,' she says, raising her shovel and charging. The poor soldier, having just managed to get himself up the rope, finds himself swarmed with a pack of horny prairie dogs.";
+			say "     Quickly digging out the rope, you start securing it to a large rock nearby. The soldier keeps babbling his thanks to you. But as you try to warn him to be quiet, it is too late. Emerging from hidden holes in the ground come numerous three foot prairie dog creatures. One of them waves her shovel at you. 'Hey now! You leave that alone. We caught it fair and square! That one's ours,' she says, crossing her fluffy arms over her large breasts. 'And maybe we'll have some fun with you as well,' she says with a growl. 'Get [']em, girls,' she says, raising her shovel and charging. The poor soldier, having just managed to get himself up the rope, finds himself swarmed with a pack of horny prairie dogs.";
 			say "[prairiedogfight]";
 	now Pit Trap is resolved;
 
@@ -255,33 +262,6 @@ to say prairiedogfight:
 		increase morale of Player by 3;
 		now Resolution of Pit Trap is 4; [Fought Prairie Dogs, Won]
 
-to say prairiedogsex:
-	choose row MonsterID in Table of Random Critters;
-	setmonster "Prairie Dog";
-	say "     Looking from your fellow rodents to the human soldier, you nod at the offer and the reach to grab him. He struggles a little, but superior numbers have him down soon enough. Numerous little paws grab at his clothes and strip him bare. The one prairie dog you spoke with motions for you to pick a spot to have a go at him.";
-	if Player is herm:
-		say "     [bold type]Shall you ride his cock or stuff his ass?[roman type][line break]";
-		LineBreak;
-		say "     ([link]Y[as]y[end link]) - Ride his cock.";
-		say "     ([link]N[as]n[end link]) - Stuff his ass.";
-		if Player consents:
-			say "     Deciding to get the soldier's cock in you, you climb atop him and sink yourself down onto it with a soft moan. His cock throbs in you as you watch the others scramble atop him, stroking and teasing him all over. Their leader drives her hard shaft into his mouth, fucking his face until he starts moaning and sucking on it hungrily. Spotting your stiff member, one of them [if Cock Length of Player < 10]snuggles her back against you and starts riding your shaft to get you to fill her[else]starts groping and fondling your large meat, running her tongue over it and sucking at its tip to get you to cum down her throat[end if]. Another moves up behind you and, with a little cooperation from you, raises him up enough to drive into his tight behind while rubbing her soft breasts against your back. Others spray their seed onto him again and again. As you ride, you can feel his cock shifting and changing inside you while sandy brown fur spreads over his body and breasts form on his chest. Two lucky rodents get their muzzles onto them and start sucking his nipples, getting him to moan and cum in you, draining away his human seed into you to be replaced by much better prairie dog semen as he transforms. He is now well on his way to becoming a prairie dog herm. Lost in the lust of transforming a human, you cum hard and pump your load into the prairie dog in front of you. Sated, you cede your place to another who wants her turn on the soldier's cock while their leader moves to take his new pussy's virginity.[impregchance]";
-		else:
-			say "     Deciding to get have a go at his ass, you boost his hips up and drive your cock slowly into him[if Cock Length of Player > 12]. It takes some effort to stuff your big meat into the soldier's tight rump, but it is well worth it when you do[end if]. His ass is snug and warm around your pistoning shaft. His cock throbs and twitches as you fuck him as you watch the others scramble atop him, stroking and teasing him all over. Their leader drives her hard shaft into his mouth, fucking his face until he starts moaning and sucking on it hungrily. Another is helped up so she can get his cock into her dripping snatch. Another moves in behind you and, with your cooperation, sinks her throbbing shaft into your wet, dripping pussy. You moan in pleasure at the sensation of fucking and being fucked at once, and the knowledge that you're corrupting this poor soldier making it all the better. You can feel the sandy brown fur spreading over his hips and then up his body and breasts form on his chest. Two lucky rodents get their muzzles onto them and start sucking his nipples, getting him to moan and cum into the rodent in front of you, draining away his human seed to be replaced by much better prairie dog semen as he transforms. He is now well on his way to becoming a prairie dog herm. Lost in the lust of transforming a human, you cum hard, blasting your cum into his ass while the one behind you fills your pussy. Sated, you cede your place, allowing their leader to move in to take his new pussy's virginity.[impregchance]";
-	else if Player is male:
-		WaitLineBreak;
-		say "     Deciding to have a go at his ass, you boost his hips up and drive your cock slowly into him[if Cock Length of Player > 12]. It takes some effort to stuff your big meat into the soldier's tight rump, but it is well worth it when you do[end if]. His ass is snug and warm around your pistoning shaft. His cock throbs and twitches as you fuck him as you watch the others scramble atop him, stroking and teasing him all over. Their leader drives her hard shaft into his mouth, fucking his face until he starts moaning and sucking on it hungrily. Another is helped up so she can get his cock into her dripping snatch. Another moves in behind you and, with your cooperation, sinks her throbbing shaft into your tight asshole to give you the same treatment you're giving the soldier. You moan in pleasure at the sensation of fucking and being fucked at once, and the knowledge that you're corrupting this poor soldier making it all the better. You can feel the sandy brown fur spreading over his hips and then up his body and breasts form on his chest. Two lucky rodents get their muzzles onto them and start sucking his nipples, getting him to moan and cum into the rodent in front of you, draining away his human seed to be replaced by much better prairie dog semen as he transforms. He is now well on his way to becoming a prairie dog herm. Lost in the lust of transforming a human, you cum hard, blasting your cum into his ass while the one behind you fills your rump in return. Sated, you cede your place, allowing their leader to move in to take his new pussy's virginity.";
-	else:
-		WaitLineBreak;
-		say "     Deciding to get the soldier's cock in you, you climb atop him and sink yourself down onto it with a soft moan. His cock throbs in you as you watch the others scramble atop him, stroking and teasing him all over. Their leader drives her hard shaft into his mouth, fucking his face until he starts moaning and sucking on it hungrily. Another moves up behind you and, with a little cooperation from you, raises him up enough to drive into his tight behind while rubbing her soft breasts against your back. Others spray their seed onto him again and again. As you ride, you can feel his cock shifting and changing inside you while sandy brown fur spreads over his body and breasts form on his chest. Two lucky rodents get their muzzles onto them and start sucking his nipples, getting him to moan and cum in you, draining away his human seed into you to be replaced by much better prairie dog semen as he transforms. He is now well on his way to becoming a prairie dog herm. Lost in the lust of transforming a human, you cum hard. Sated, you cede your place to another who wants her turn on the soldier's cock while their leader moves to take his new pussy's virginity.[impregchance]";
-	say "     You play with and tease him, mostly watching as the others share him around until they're all satisfied. Lost in a lustful haze, the new prairie dog herm is easily led underground where you're sure her induction into the warren will continue. You feel a strong longing to join them, but manage to resist it, at least for the moment.";
-	infect "Prairie Dog";
-	now Libido of Player is Libido of Player / 2;
-	SanLoss 20;
-	increase score by 25;
-	now Resolution of Pit Trap is 1; [Had sex with Soldier]
-
-
 Section 8 - Watering Hole
 
 Table of GameEventIDs (continued)
@@ -291,29 +271,30 @@ Watering Hole	"Watering Hole"
 Watering Hole is a situation.
 ResolveFunction of Watering Hole is "[ResolveEvent Watering Hole]". The level of Watering Hole is 8.
 Sarea of Watering Hole is "Plains".
+
 when play begins:
 	add Watering Hole to BadSpots of MaleList;
 	add Watering Hole to BadSpots of FurryList;
 
 to say ResolveEvent Watering Hole:
-	choose row MonsterID in Table of Random Critters;
 	setmonster "Bald Eagle";
-	say "     In a depression in the grassy plains, you find a greener spot around a small pond. However, there is an eagle man bathing himself in the water and clearly enjoying it. The avian creature strokes his hard cock, leaking precum into the water. Focused on his own fun, he hasn't spotted you yet. Shall you approach the bathing bird (Y) or take this opportunity to leave (N) while you still can?";
+	say "     In a depression in the grassy plains, you find a greener spot around a small pond. However, there is an eagle man bathing himself in the water and clearly enjoying it. The avian creature strokes his hard cock, leaking precum into the water. Focused on his own fun, he hasn't spotted you yet. Shall you [link]approach (Y)[as]y[end link] the bathing bird or take this opportunity to [link]leave (N)[as]n[end link] while you still can?";
 	if Player consents:
+		LineBreak;
 		say "     Deciding to approach, you move cautiously towards the bird. It doesn't notice you until you get closer to the water. When you're spotted, it squawks and flaps angrily in the water, startled by your arrival. Thankfully, it does calm down a little when you don't attack right away. You start telling him that you were just coming over to get some water, but he grins and waves off your comments. 'Oh, I know you were really coming over to join me in my bath. No need to be coy about it, sexy. Come on in and let's have a little romp? You look like you could use some fine eagle cock stuffed inside you.' Shall you take him up on his offer?";
 		if Player consents:
+			LineBreak;
 			say "     The bird grins at the corners of his beak and takes your hand as he helps you into the pond. Aside from a little sediment at the bottom of the pond, the water is rather clean and feels good after your long trek through the city and the dry plains. The eagle runs his wet wings over your body as he moves in behind you, rubbing his throbbing cock against your ass.";
 			if Player is female:
 				say "     Lowering you onto all fours in the water, he lines up his cock with your wet pussy and slowly sinks his shaft into you. You moan in pleasure and push into his thrusts, aroused by the idea of fucking in this pond the birds have been using as their bath. And you're quite certain many of them have been cumming in it as well, tasting their semen in the water as you take that drink you wanted while getting fucked. The strong eagle rubs his feathered hands along your back and over your ass as he keep plowing his throbbing, leaking prick into you. 'Isn't that nice, my little chick? A big eagle cock to fuck you right. Breed you full of eaglets.' You moan and nod, lost in the lustful mating. When he finally cums, he blasts his thick load into you and you cum moments later.[ovichance]";
 			else:
 				say "     Lowering you onto all fours in the water, he lines up his cock with your waiting pucker and slowly sinks his shaft into you. You moan in pleasure and push into his thrusts, aroused by the idea of fucking in this pond the birds have been using as their bath. And you're quite certain many of them have been cumming in it as well, tasting their semen in the water as you take that drink you wanted while getting fucked. The strong eagle rubs his feathered hands along your back and over your ass as he keep plowing his throbbing, leaking prick into you. 'Isn't that nice, my little chick? A big eagle cock to fuck you right. Stuff that slutty ass of yours.' You moan and nod, lost in the lustful mating. When he finally cums, he blasts his thick load into you and you cum moments later.[movichance]";
 			if humanity of Player > 15:
-				say "     Finished with his bath and his fuck, he helps you out of the water and rubs his feathered hand across your stuffed tummy, nipping at your neck with his beak. As you prepare to go, he flies off. Looking up as he gains altitude, you spot several other eagles soaring over the pond and head on your way, as the others may not be so friendly about an intruder at their bathing spot. Both covered in and filled with eagle-tainted fluids, ";
 				if BodyName of Player is "Bald Eagle" and Player is pure:
-					say "the infection soaks deeper into you, further corrupting your body and mind. Still awash in the pleasures of the mating and the overdose on tainted water, you are quite pleased with the feeling of the infection spreading through you.";
+					say "     Finished with his bath and his fuck, he helps you out of the water and rubs his feathered hand across your stuffed tummy, nipping at your neck with his beak. As you prepare to go, he flies off. Looking up as he gains altitude, you spot several other eagles soaring over the pond and head on your way, as the others may not be so friendly about an intruder at their bathing spot. Both covered in and filled with eagle-tainted fluids, the infection soaks deeper into you, further corrupting your body and mind. Still awash in the pleasures of the mating and the overdose on tainted water, you are quite pleased with the feeling of the infection spreading through you.";
 					SanLoss 5;
 				else:
-					say "you quickly start to change, fully changing into an eagle creature like your lover. Still awash in the pleasures of the mating and the overdose on tainted water, you are quite pleased with the feeling of the infection spreading through you.";
+					say "     Finished with his bath and his fuck, he helps you out of the water and rubs his feathered hand across your stuffed tummy, nipping at your neck with his beak. As you prepare to go, he flies off. Looking up as he gains altitude, you spot several other eagles soaring over the pond and head on your way, as the others may not be so friendly about an intruder at their bathing spot. Both covered in and filled with eagle-tainted fluids, you quickly start to change, fully changing into an eagle creature like your lover. Still awash in the pleasures of the mating and the overdose on tainted water, you are quite pleased with the feeling of the infection spreading through you.";
 				say "[eaglefulltf]";
 				increase morale of Player by 3;
 				SanLoss 15;
@@ -337,6 +318,7 @@ to say ResolveEvent Watering Hole:
 				trigger ending "Watering Hole Bad End";
 				end the story saying "You have given yourself over to your handsome eagle mate.";
 		else:
+			LineBreak;
 			say "     He seems upset that you've refused his offer, but lets you approach the pond to take some water regardless. His hands move back to his cock, stroking and pumping at it casually. As you lean in to take some water though, he quickly swoops in to attack you and you stumble back a few steps away from the pond onto firmer soil and prepare to fight. It seems he'll try to have his way with you, regardless of your wishes.";
 			challenge "Bald Eagle";
 			if lost is 1:
@@ -346,9 +328,10 @@ to say ResolveEvent Watering Hole:
 			else:
 				say "     After defeating the eagle and sending it on its way, you face the pond, trying to decide if you'll take a drink. Shall you lean down and have some water from the pond?";
 				if Player consents:
+					LineBreak;
 					say "     Deciding that you'd rather have the water, regardless of the consequences, you lean in and drink your fill of the tainted waters. You can taste the arousing flavor of their semen mixed into the water, but you're too excited now to stop. As you finish your long drink, you spot a reflection in the water and, looking up, you spot more eagles soaring above you. You decide to hightail it out of there before the others come swooping in to deal with the interloper around their bathing spot, only pausing to grab a couple of the feathers lying around before you go.";
 					ItemGain eagle feather by 2 silently;
-					let ponddrinks be ( 1 + ( ( thirst of Player - 1 ) / 25 ) );
+					let ponddrinks be 1 + ( ( thirst of Player - 1 ) / 25 );
 					if "Iron Stomach" is not listed in feats of Player:
 						repeat with y running from 1 to ponddrinks:
 							infect "Bald Eagle";
@@ -362,20 +345,20 @@ to say ResolveEvent Watering Hole:
 					increase score by 5;
 					now Resolution of Watering Hole is 4; [Defeated eagle, Did not Drink]
 	else:
+		LineBreak;
 		say "     Rather than risk facing the [if level of Player <= 10]powerful [end if]creature for clearly tainted water, you decide to continue on your way, counting yourself lucky that you were able to learn that the water was infected. Had he not been there, you may have ended up drinking it without knowing any better.";
 		increase score by 1;
 		now Resolution of Watering Hole is 5; [Avoided Watering Hole]
 	now Watering Hole is resolved;
 
 to say eaglefulltf:
-	[puts Bald Eagle as lead monster for infection and impregnation]
 	setmonster "Bald Eagle" silently;
 	turn the Player into a "Bald Eagle";
 	if hellHoundLevel is 0:
+		say "[run paragraph on]";
 		follow the sex change rule;
 		follow the sex change rule;
 	if Libido of Player < 50, now Libido of Player is 50;
-
 
 Section 9 - Treasure Hunters
 
@@ -386,10 +369,10 @@ Treasure Hunters	"Treasure Hunters"
 Treasure Hunters is a situation.
 ResolveFunction of Treasure Hunters is "[ResolveEvent Treasure Hunters]".
 Sarea of Treasure Hunters is "Plains".
+
 when play begins:
 	add Treasure Hunters to BadSpots of HermList;
 	add Treasure Hunters to BadSpots of FurryList;
-
 
 to say ResolveEvent Treasure Hunters:
 	say "     Taking a short break on a mound of rubble, you hear a pair of arguing voices approaching. Not really having anywhere you can hide on these dry plains, you decide to sit and wait, though you do prepare yourself in case of battle. You spot a pair of hyenas cresting the rise in front of you, arguing vehemently with each other. The pair of herms have shovels in hand and their furry coats are covered in dust and dirt.";
@@ -413,16 +396,18 @@ to say ResolveEvent Treasure Hunters:
 		else:
 			say "     Cluing in that you're another gang member, they approach you cautiously. 'We're... uh... we're on a mission here. Top secret,' the second, the questionable genius, says. 'So you can't tell no one!' she adds. 'Yeah, not even the Matriarch! It's a... uh... surprise,' the first adds. 'Yeah, that's it. A surprise for her.' It takes considerable effort not to laugh at them, but you somehow manage. 'We've been working hard,' the second says. 'For the gang, you know, and could use a bit of a break, if you know what I mean.' Shall you continue the break you were taking by having some fun with this duo of hyenas?";
 			if Player consents:
+				LineBreak;
 				if Player is male:
 					say "     Deciding to have some fun with this pair, you put your arms around the nominally smarter one and grope her bosom, making her moan. You let your hands roam over her body, slipping off her loose shirt so you can uncover her breasts and fondle them directly. Teasing her nipples, you pull her down to sit in your lap, back to your chest and pussy at your cock. You slowly thrust into her, enjoying her lustful moans and groans. Her cunt is hot, wet and dripping around your shaft, eager to be fucked. Her own swollen cock is tended to by her partner, who drops to her knees and starts licking and sucking at it. You bounce her lightly in your lap, setting the pace for her thrusts into the other hyena's muzzle. You continue playing with her hard nipples while she strokes the other's ears and rides your throbbing shaft.";
 					say "     Being on the receiving end of you both, she cums first, soaking your crotch and blasting her load into her partner's muzzle. With the squeezing, orgasming cunt milking at your cock, you unleash your load shortly afterwards. You pump your hot load into the herm hyena's womb, watching as her partner pumps her own shaft until she splatters her load onto the grass. Finished, you shove her off, telling them that they should get back to work. They nod and grab their stuff, rushing off.";
 					increase score by 10;
 					now Resolution of Treasure Hunters is 3; [Player is Male Gang Member, Sex]
 				else:
-					say "     Deciding to have some fun with this pair, you put your arms around the nominally smarter one and grope her bosom, making her moan. You let your hands roam over her body, slipping off her loose shirt so you can uncover her breasts and fondle them directly. Teasing her nipples, you guide her to lay down on the dry grass and move atop her. Bringing your hips over hers, you grab her sheath and emerging cock, stroking her to full erection before lowering yourself down onto her meat. Enjoying to soft sound of her moan, you start riding her meat and motion for the other to come up and bring her shaft to your mouth. Licking and sucking at it, you lustfully savor the pleasure of having two hyena cocks stuffed inside you, licking and sucking at them until you cum loudly in pleasure and are rewarded with two hot loads of hyena cum from the herms. Finished and satisfied, you push the one back and climb off the other, telling them that they should get back to work. They nod and grab their stuff, rushing off.[impregchance]";
+					say "     Deciding to have some fun with this pair, you put your arms around the nominally smarter one and grope her bosom, making her moan. You let your hands roam over her body, slipping off her loose shirt so you can uncover her breasts and fondle them directly. Teasing her nipples, you guide her to lay down on the dry grass and move atop her. Bringing your hips over hers, you grab her sheath and emerging cock, stroking her to full erection before lowering yourself down onto her meat. Enjoying the soft sound of her moan, you start riding her meat and motion for the other to come up and bring her shaft to your mouth. Licking and sucking at it, you lustfully savor the pleasure of having two hyena cocks stuffed inside you, licking and sucking at them until you cum loudly in pleasure and are rewarded with two hot loads of hyena cum from the herms. Finished and satisfied, you push the one back and climb off the other, telling them that they should get back to work. They nod and grab their stuff, rushing off.[impregchance]";
 					increase score by 10;
 					now Resolution of Treasure Hunters is 4; [Player is female Gang Member, Sex]
 			else:
+				LineBreak;
 				say "     Deciding not to waste your time and energy on these fools, you tell them that they should probably get back to work. They seem a little disappointed but nod and head back the way they came.";
 				increase score by 1;
 				now Resolution of Treasure Hunters is 5; [Player is Gang Member, No sex]
@@ -431,7 +416,6 @@ to say ResolveEvent Treasure Hunters:
 		increase score by 1;
 		now Resolution of Treasure Hunters is 6; [Player is not Gang Member]
 	now Treasure Hunters is resolved;
-
 
 Section 10 - Endings
 
@@ -445,6 +429,5 @@ This is the Watering Hole Bad End rule:
 		say "     Over time, the details of your past life grow hazier, then disappear altogether. After one session, you find that you can't even remember your name - not that you'd need to, what with this handsome hunk to do all the thinking for you. You shiver at the thought of others sharing this simple-minded bliss, and you eagerly accompany your partner when he violates those unlucky few who enter your hunting territory, sharing the ecstasy of the infection by transforming them into sexy little eagle-morphs like you. Though he spends long hours grooming them as he did you on that fateful day, you take solace in the fact that soon you'll be entwined again, reunited with your mate in a mindless fucking frenzy.";
 		say "     When the military arrives, your safe distance from the city provides you with a distant vantage to observe their operations. By then, you have only dim awareness of their actions, much preferring devoting every waking second to wrapping your tongue around your mate's hard avian cock or pushing back against his waist as he bucks into your [if Player is female]needy, gripping folds[else]horny, cum-sullied asshole[end if]. The sweltering heat of sex eventually becomes your whole world, little more than a hollow shell of a conscience whose simple sapience is limited to chirping and moaning for more cock[if Player is impreg_ok], more cum, and more eggs for your ever-growing brood[else] and more cum, his horny buttslut to pin and ravage to his infectious, corrupted content[end if], soon knowing nothing more than the instinct-driven bliss that permeates you to your core.";
 		the Player is gone;
-
 
 Dry Plains Events ends here.

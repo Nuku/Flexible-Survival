@@ -208,9 +208,9 @@ to say beatthegoblin:
 	else:
 		say "     Driven back by your final blow, the goblin lands doubled over on the dirt. Now that [ghe] is at your mercy, you find yourself [if Libido of Player < 33]somewhat[else if Libido of Player < 67]rather[else]very[end if] excited after the fight. Tempted to give a little of what you would have gotten if the tables were turned, you consider some options.";
 		now sextablerun is 0;
+		blank out the whole of table of fucking options;
+		[]
 		if gobgender is 1:	[female goblin]
-			blank out the whole of table of fucking options;
-			[]
 			if Player is male and Cock Length of Player < 13:
 				choose a blank row in table of fucking options;
 				now title entry is "Give vaginal";
@@ -256,8 +256,6 @@ to say beatthegoblin:
 				else:
 					say "Invalid Option. Pick between 0 and [the number of filled rows in the table of fucking options].";
 		else:	[male goblin]
-			blank out the whole of table of fucking options;
-			[]
 			if Player is female:
 				choose a blank row in table of fucking options;
 				now title entry is "Receive vaginal";

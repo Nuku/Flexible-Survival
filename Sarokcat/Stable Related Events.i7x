@@ -2,7 +2,6 @@ Stable Related Events by Sarokcat begins here.
 
 "Adds a series of random events to Flexible Survival set in the Stables area."
 
-
 Section 1 - Kitchenkegger
 
 Table of GameEventIDs (continued)
@@ -12,6 +11,7 @@ Kitchenkegger	"Kitchenkegger"
 Kitchenkegger is a situation.
 ResolveFunction of Kitchenkegger is "[ResolveEvent Kitchenkegger]".
 Sarea of Kitchenkegger is "Stable".
+
 when play begins:
 	add Kitchenkegger to BadSpots of MaleList;
 	add Kitchenkegger to BadSpots of FurryList;
@@ -19,8 +19,7 @@ when play begins:
 to say ResolveEvent Kitchenkegger:
 	say "     Wandering through the halls of the Stables, you hear strange noises coming from behind one of the employee passages, and being curious at the time, you move to investigate. As you travel down the dimly lit service passages, the strange noise resolves itself into rather drunken sounding singing, which only serves to increase your curiosity as you continue to approach. You eventually find yourself outside of a set of large double doors marked [']kitchen['] from which the singing seems to originate. Figuring that whatever or whoever is singing doesn't sound terribly dangerous, and that if you are ever going to find some useful supplies it would be in a kitchen, you steel yourself for combat as you swing the doors open and step inside.";
 	say "     Stepping into the kitchen, you are in for something of a surprise, however, as a trio of what appear to be draft horse hybrids are staggering around singing, even as they expertly prepare several meals from the supplies gathered here. The horses notice you immediately and cheer slightly as they all grab mugs of some dark, frothy liquid and toast your arrival. Feeling rather surprised, you stare at the rather shaggy and relatively smaller horsemen as they chug their drinks, before cheering and refilling them again as they break out into drunken song once again. Relaxing slightly, you find yourself rather surprised as one of them tries to shove a mug full of the same dark, frothy brew in front of you as well, and you look up to see all three of them smiling happily at you as they lift their own mugs.";
-	say "     [bold type]Do you take a drink?[roman type][line break]";
-	LineBreak;
+	say "[line break]     [bold type]Do you take a drink?[roman type][line break]";
 	say "     ([link]Y[as]y[end link]) - The drink will help quench your thirst.";
 	say "     ([link]N[as]n[end link]) - Don't drink strange liquids from strangers.";
 	if Player consents:
@@ -36,7 +35,6 @@ to say ResolveEvent Kitchenkegger:
 		now Resolution of Kitchenkegger is 2; [didn't drink]
 	now Kitchenkegger is resolved;
 
-
 Section 2 - Tack room
 
 Table of GameEventIDs (continued)
@@ -50,9 +48,9 @@ Sarea of Tack Room is "Stable".
 
 to say ResolveEvent Tack Room:
 	say "     Wandering through the narrow halls of the Stables, you come across a rather strangely marked room, labeled [']Tack room[']. Curiosity getting the better of you, you try the door and find it unlocked. A peek inside shows you a rather large room filled with all sorts of saddles and leather instruments lining the walls. The strong scent of well-oiled and well-used leather fills your nose as you wander carefully into the room, your eyes drawn to the many different types of harnesses and straps hung up carefully along the walls. As you continue to look around, you find yourself noticing that more and more of these pieces of equipment are equally sized for usage on more than just horses, and you find yourself growing worried as you wander through the large array of bridles and blinders. You find quite a few gags, whips, and breaking harnesses as well, and the mingled smell of equine sex underlie the scent of leather.";
-	let bonus be (( Perception of Player minus 10 ) divided by 2);
+	let bonus be ( Perception of Player minus 10 ) divided by 2;
 	let diceroll be a random number from 1 to 20;
-	say "You roll 1d20([diceroll])+[bonus] = [special-style-1][diceroll + bonus][roman type] vs [special-style-2]16[roman type] (Perception Check):[line break]";
+	say "[line break]You roll 1d20([diceroll])[if bonus >= 0]+[end if][bonus] = [special-style-1][diceroll + bonus][roman type] vs [special-style-2]15[roman type] (Perception Check):[line break]";
 	increase diceroll by bonus;
 	if diceroll > 14:
 		say "     As your eyes scan over the leather implements on the walls, you spot a riding whip that looks like that it would be useful for more than just sexual play or horses, and you decide to slip it into your pack to take it with you. After all, given the nature of this place, having a horse whip around certainly couldn't hurt... although some of the creatures here might just find it more arousing to be whipped instead of painful... Still thinking about those creatures and looking around the room, you decide that it might be best to leave while you still can. After all, this is obviously an area some of them visit often, and being found in a place with so many ways to restrain a person could be problematical you think as you slip out the door, even though for some reason, the idea of being restrained seems increasingly sexy to you as you can't help but imagine yourself in one of those nice sexy harnesses...";
@@ -62,7 +60,6 @@ to say ResolveEvent Tack Room:
 		say "     Thinking about those creatures and what they might use this gear for as you look around the room, you decide that it might be best to leave while you still can. After all, this is obviously an area some of them visit often, and being found in a place with so many ways to restrain a person could be problematical you think as you slip out the door, even though for some reason, the idea of being restrained seems increasingly sexy to you as you can't help but imagine yourself in one of those nice sexy harnesses...";
 		increase score by 1;
 	now Tack Room is resolved;
-
 
 Section 3 - Onyxroom
 
@@ -78,7 +75,6 @@ to say ResolveEvent Onyxroom:
 	say "     Exploring deeper into the maze of halls and rooms of the converted hotel, you find yourself in another hallway much like the others. Checking to make sure that you are alone, you venture down the hallway, noticing that next to each of the doors is a neatly engraved name plate, obviously the name of the room's occupant. Halfway down the hall, you see a name plate that reads [']Onyx[']. Taking a deep breath, you open the door to the room and go inside. On the walls is an assortment of horse tack done in black leather. Bridles and halters of every description hang neatly from the walls alongside reigns and bits. A large, old-fashioned horse collar hangs on another wall, and on a stand sits an English saddle. Exploring further, you find that the closet is filled with fetish clothes and other outfits while the dresser drawers are filled with more clothes and an even larger assortment of sex toys. Quickly backing out of the room, you don't know if you should feel sorry for [if XP of Onyx > 0]the young man you met in the holding pens[else]its eventual occupant[end if] or a little bit envious.";
 	increase score by 1;
 	now Onyxroom is resolved;
-
 
 Section 4 - Unlucky elevator
 
@@ -96,7 +92,6 @@ to say ResolveEvent Unlucky Elevator:
 	increase score by 1;
 	now Unlucky Elevator is resolved;
 
-
 Section 5 - Lupine visit
 
 Table of GameEventIDs (continued)
@@ -113,8 +108,9 @@ to say ResolveEvent Lupine Visit:
 	increase score by 1;
 	now Lupine Visit is resolved;
 
-
 Section 6 - Soldierstabling
+
+Soldierhorsetf is a number that varies.
 
 Table of GameEventIDs (continued)
 Object	Name
@@ -123,7 +119,7 @@ Soldierstabling	"Soldierstabling"
 Soldierstabling is a situation.
 ResolveFunction of Soldierstabling is "[ResolveEvent Soldierstabling]".
 Sarea of Soldierstabling is "Stable".
-Soldierhorsetf is a number that varies.
+
 when play begins:
 	add Soldierstabling to BadSpots of FemaleList;
 	add Soldierstabling to BadSpots of FurryList;
@@ -133,35 +129,27 @@ to say ResolveEvent Soldierstabling:
 		say "     Wandering around the large and dimly lit hallways, you think you hear a sound coming from down one of the halls, a low moaning sound, interspersed with several other unidentifiable noises coming from relatively nearby. After pausing for a minute to make sure that nothing is coming, you carefully inch down the hallway until you can see into what appears to have once been a small dining room. Now the room is filled with numerous posts and benches, and you can see a number of rather equine people hitched up to the posts, while a few full horsemen wander around among them, stroking and teasing the tied people with amusement. Blinking, you realize that these transforming people are the former soldiers you saw being escorted into the Stables earlier, their forms having already begun to change enough that they are quite hard to recognize.";
 		say "     As you look at the features of the bound captives, their partially equine faces a mixture of fear and intense arousal, you find yourself growing increasingly aroused as well. Your eyes trace over their half changed forms, finding that the mix of equine and human features to be surprisingly erotic. You shake yourself as you realize that your hands have started to drift down to your privates, and force yourself to move away from the strange sight of the soldiers turning into sexy equines, though you consider stopping by again next time you are in the area... just to see how they have progressed, of course.";
 		now Soldierhorsetf is 1;
-		increase Libido of Player by 25;
-		if Libido of Player > 100, now Libido of Player is 100;
 		increase score by 1;
 	else if Soldierhorsetf is 1:
 		say "     Wandering through the large old hotel, you find yourself near the room where the soldiers were being trained last time you were down this way, and finding your curiosity to be getting the better of you, you silently slip down the hallway again until you can peek into the room once more. You can see that many of the former soldiers have continued their rapid changes, and now appear to be more equine than anything else, and no longer appear to be bothered at all by their changes. You watch as one of the new mares flicks her tail teasingly at one of the handsome stallions wandering around the room, and the sight of the stallion mounting her fills your mind with a strange lust, as you watch the former soldier moan helplessly under the powerful stallion, as he trains her body to respond like a proper mareslut should.";
 		say "     Trying to distract yourself from the rather kinky sight, you look around, only to groan as all you can see are more sexy transforming mares and the handsome stallions helping them transform. Your own body seems to burn with arousal and change as well as you find yourself imagining one of the handsome male beasts hitching you up and training you to be a proper mare... Pulling yourself away from the strange fantasy, you stagger slightly as you hurry back down towards the entrance, just knowing that if you stay there much longer, you will be begging them to tie you up and transform you as well...";
 		now Soldierhorsetf is 2;
-		increase Libido of Player by 25;
-		if Libido of Player > 100, now Libido of Player is 100;
 		infect "Mareslut";
 		SanLoss 5;
 	else if Soldierhorsetf is 2:
 		say "     Returning to the area where the soldiers were being trained, you find that you can't help but go investigate the training room again yourself, your body growing aroused again in anticipation as you creep up to where you can look inside of the room again. Peeking inside, you find yourself moaning softly with arousal as you look upon the sexy scene inside, the numerous horse creatures making more than enough noise to cover your own soft noises of arousal, as they move against each other in a large orgy. The smell of horsey sex fills the air as the now fully transformed new recruits demonstrate their skills as slutty little maresluts underneath the large stallions in the room, the sight of all of the naked sexy horseflesh making you pant with need as you watch the orgy.";
 		say "     You can't even see any signs of humanity left in the transformed soldiers as they perform with the stallions eagerly, and somehow knowing that they were formerly proud and independent men only makes their final submissive transformation even more erotic as you watch the show. Finally, you catch yourself about to enter the room to join in the fun, and manage to shake yourself out of the lust-filled trance the sexy sights and scents of the training room had inspired. You drag yourself reluctantly away down the hall as the sounds of horses having fun slowly fades behind you. You still find yourself idly wondering when the next 'training class' starts, and if they are accepting applicants...";
 		now Soldierhorsetf is 3;
-		increase Libido of Player by 25;
-		if Libido of Player > 100, now Libido of Player is 100;
 		infect "Mareslut";
 		SanLoss 5;
-	else if Soldierhorsetf is 3:
+	else:
 		say "     Your feet guide you through the halls once more to the strange training room that you have encountered several times now, and unable to resist your burning curiosity, you once more creep forth to peer into the room. Looking around, you see to your surprise a number of partially clothed humans hitched up in the room, their slight equine features showing through their tattered military clothing as they look around nervously. You can feel a strange grin of amusement crossing your face as you realize that this new batch of recruits has no idea what kind of sexy fate lies in store for them.";
 		say "     Recalling your glimpses of the training of the last group, you nearly run into the room to join them in being trained into a proper little mareslut. Only the sight of the sexy stallions entering to start the day's training reminds you of where you are, and you shudder as you turn and run down the hall in the opposite direction. Thinking about what a close call you had there, you resolve not to come down this way again, lest you end up losing control of yourself completely, at least until you are ready to be trained into a proper little mare slut that is...";
-		increase Libido of Player by 25;
-		if Libido of Player > 100, now Libido of Player is 100;
 		infect "Mareslut";
 		SanLoss 10;
 		now Soldierstabling is resolved;
 		increase score by 5;
-
+	raise Player Libido by 25;
 
 Section 7 - Satisfied customer
 
@@ -173,6 +161,7 @@ Satisfied Customer	"Satisfied Customer"
 Satisfied Customer is a situation.
 ResolveFunction of Satisfied Customer is "[ResolveEvent Satisfied Customer]".
 Sarea of Satisfied Customer is "Stable".
+
 when play begins:
 	add Satisfied Customer to BadSpots of FurryList;
 
@@ -182,8 +171,9 @@ to say ResolveEvent Satisfied Customer:
 	increase score by 1;
 	now Satisfied Customer is resolved;
 
-
 Section 8 - Hyenahorsemeet
+
+hyenastabledeal is a number that varies.
 
 Table of GameEventIDs (continued)
 Object	Name
@@ -191,7 +181,6 @@ Hyenahorsemeet	"Hyenahorsemeet"
 
 Hyenahorsemeet is a situation.
 ResolveFunction of Hyenahorsemeet is "[ResolveEvent Hyenahorsemeet]".
-hyenastabledeal is a number that varies.
 Sarea of Hyenahorsemeet is "Stable".
 
 to say ResolveEvent Hyenahorsemeet:
@@ -201,7 +190,6 @@ to say ResolveEvent Hyenahorsemeet:
 	enable the Stables;
 	increase score by 1;
 	now Hyenahorsemeet is resolved;
-
 
 Section 9 - Waitingcustomer
 
@@ -215,16 +203,8 @@ Sarea of Waitingcustomer is "Stable".
 
 to say ResolveEvent Waitingcustomer:
 	say "     Heading through the mostly empty halls of the sex hotel, you find yourself coming across what appears to be a rather strange-looking waiting room, with images of all kinds of sexy horses plastering the walls of the dimly lit room, along with a number of benches and other areas set up to provide seating for those who aren't fully human anymore. As you look around, you shudder as you hear a noise from behind you, and realize that there was already a creature in here waiting their turn to have some fun, and as it draws closer, you are pretty sure that it has decided that now that you are here, it doesn't have to wait any longer. Cautiously, you brace yourself as you turn around to face this new opponent.";
-	let T be a random number between one and three;
-	if T is 1:
-		now battleground is "Zoo";
-		fight;
-	if T is 2:
-		now battleground is "Outside";
-		fight;
-	if T is 3:
-		now battleground is "Red";
-		fight;
+	now battleground is the substituted form of "[one of]Zoo[or]Outside[or]Red[purely at random]";
+	fight;
 	now battleground is "Stable";
 	say "     Recovering from the fight with the waiting creature, you sigh as you wonder just what kind of place they are running here. Gathering your wits around you, you glance around the room one last time, before heading back in the direction of the entryway, though you get the feeling that there are plenty of similar waiting rooms likely scattered throughout the hotel...";
 
@@ -240,11 +220,11 @@ Sarea of Videoshow is "Stable".
 
 to say ResolveEvent Videoshow:
 	say "     Wandering around in the area near the entryway, you find yourself peeking through several doors marked 'Employees only', and eventually come across a strange room set up like a small theater. Interestingly enough, you see that someone has managed to hook the room up to some source of power, and the projector seems ready and able to work at any time. A glance at the label on the film shows that it is labeled as 'Basic Training,' which makes you rather curious about the contents.";
-	say "     [bold type]Do you play the video?[roman type][line break]";
-	LineBreak;
+	say "[line break]     [bold type]Do you play the video?[roman type][line break]";
 	say "     ([link]Y[as]y[end link]) - There might be useful information in the video.";
 	say "     ([link]N[as]n[end link]) - Better to play it safe and not make any noise.";
 	if Player consents:
+		LineBreak;
 		say "     Starting the video, you settle down to watch the show, and are mildly surprised when you see several horses trot out into a training ring on the film, along with some horsemen trainers. You find yourself watching with idle curiosity as the trainers begin to put the horses through their paces, though your curiosity changes somewhat as after the horses are taught a few tricks, you see several horsemen are led out into the ring and taught the same tricks as well. Soon, you find yourself unable to look away as the increasingly sexual video shows some humans being led out into the ring to be taught tricks as well, and the sight of the men being treated like beasts seems strangely arousing as you continue to watch. The film varies between full horses, horsemen, and still-changing humans rather often, as first one group, and then the others are trained to perform an increasingly sexual variety of tricks for the camera.";
 		say "     Before long, you find yourself panting with arousal as you watch the trainers reduce their charges to the level of properly trained sexual animals, willing to perform any action on command for their masters. The happy submissive looks on their increasingly equine faces help you to understand just how enjoyable it is to be a well-trained beastslut for an owner. Eventually, however, you come to the end of the film, and stare at the blank screen for several minutes, panting eagerly before blinking and shaking yourself, barely able to grasp just how well put together the seductive little video was. You shudder for a minute as you realize that while the video certainly taught you several tricks about how to handle beasts and animals, the one it was really trying to train was actually you, and you already feel less human and more animalistic just from one viewing. Thoughts of being trained and owned like a good little beast fill your mind as you stagger out of the training booth...";
 		decrease humanity of Player by a random number between 25 and 50;
@@ -253,9 +233,9 @@ to say ResolveEvent Videoshow:
 		now Videoshow is resolved;
 		increase score by 10;
 	else:
+		LineBreak;
 		say "     Deciding to leave well enough alone, you leave the room and continue along your way for now, though maybe you will be back later if you are in the area again...";
 		now Resolution of Videoshow is 2; [didn't watched the brainwashing video (yet)]
-
 
 Section 11 - Horsegarden
 
@@ -272,8 +252,6 @@ to say ResolveEvent Horsegarden:
 	say "     Looking at the obviously lusty beasts as they slowly draw closer, you find yourself thinking they are trying almost a little too hard to appear friendly and helpful as they approach. Realizing that several of the stallions are already obviously excited, you step back carefully and reach for the door, only to realize that one of the beasts was slowly creeping up along the wall while the others drew your attention and is almost upon you. The horse leaps forward to try to snag you with his teeth, but you were far enough back to easily evade the beast, and you slam the door leading out to the garden in his face before quickly hurrying off. As you make your way back towards the entryway, you resolve to avoid the gardens in this place in the future, regardless of how tempting they may seem.";
 	increase score by 1;
 	now Horsegarden is resolved;
-
-
 
 Section 12 - Transformationledger
 
@@ -299,8 +277,6 @@ to say ResolveEvent Transformationledger:
 		now Resolution of Transformationledger is 1;
 	else:
 		say "     Coming back across a familiar room, you note that the leather bound book is still lying open on top of the desk, now with additional entries inside. It seems that the management of this place is intent upon vastly expanding its membership, although you note with relief that your own entry has yet to be modified. You find yourself confronted with the same dilemma as before: do you want to risk tearing out the page and the consequences of doing so, or leave the book alone?";
-	LineBreak;
-	[]
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]
@@ -336,30 +312,31 @@ to say ResolveEvent Transformationledger:
 			choose row calcnumber in table of fucking options;
 			say "[title entry]: [description entry]?";
 			if Player consents:
-				let nam be title entry;
+				LineBreak;
 				now sextablerun is 1;
-				if (nam is "Tear page"):
-					say "     Using your bare hands, you rip the page out as cleanly as you can, but a jagged line of paper clearly marks the former location of the missing sheet. No time to do a neater job, for you can hear the sound of hooves clopping on the floorboards! Quickly, you slip out of the room and around the corner, paper stashed in your bag. Hmm... there seems to be a token attached to the page, specifying a location and a code. Perhaps you should find someone who can figure out what this means.";
-					now Thirst of Fancy is 1;
-					now Resolution of Transformationledger is 1;
-					now Transformationledger is resolved;
-				if (nam is "Cut page"):
-					say "     You carefully run the blade neatly along the spine of the book and begin to tear along the line left behind, leaving almost no discernible trace of the missing page. Before you can finish, however, a guard passes by the open door and, stopping, notices you at the desk. 'Hey! You're not supposed to be here,' he growls as he strides into the room. Looks like you're going to have to fight!";
-					challenge "Horseman";
-					if fightoutcome >= 10 and fightoutcome <= 19: [player won]
-						say "     With the distraction taken care of, you resume your prior work, and in no time at all you have that page neatly cut out and stuffed inside your bag. Hmm... there seems to be a token attached to the page, specifying a location and a code. Perhaps you should find someone who can figure out what this means.";
+				if title entry is:
+					-- "Tear page":
+						say "     Using your bare hands, you rip the page out as cleanly as you can, but a jagged line of paper clearly marks the former location of the missing sheet. No time to do a neater job, for you can hear the sound of hooves clopping on the floorboards! Quickly, you slip out of the room and around the corner, paper stashed in your bag. Hmm... there seems to be a token attached to the page, specifying a location and a code. Perhaps you should find someone who can figure out what this means.";
 						now Thirst of Fancy is 1;
-						now Resolution of Transformationledger is 2;
+						now Resolution of Transformationledger is 1;
 						now Transformationledger is resolved;
-					else if fightoutcome >= 20 and fightoutcome <= 29:	[player lost]
-						say "     Beaten and humiliated, you find yourself being bodily thrown from the room, crashing onto the floor outside with a painful crunch. You scramble to put distance between yourself and your opponent - you'll have to come back later for another opportunity to erase your name from that ledger.";
-					else if fightoutcome >= 30:	[player fled]
-						say "     Discretion may be the better part of valor, but unfortunately you've lost your opportunity to remove your name from the ledger. You'll have to come back later if you want to try again.";
-				if (nam is "Come back later"):
-					say "     You don't want to risk drawing unwanted attention for the time being, so you slip out of the room again and make a note of its location for later.";
-				if (nam is "Leave permanently"):
-					say "     The thought of being trapped in this place is unsettling enough without seeing what they have planned for you in painful detail! Your legs can't take you out of this accursed room quickly enough.";
-					now Transformationledger is resolved;
+					-- "Cut page":
+						say "     You carefully run the blade neatly along the spine of the book and begin to tear along the line left behind, leaving almost no discernible trace of the missing page. Before you can finish, however, a guard passes by the open door and, stopping, notices you at the desk. 'Hey! You're not supposed to be here,' he growls as he strides into the room. Looks like you're going to have to fight!";
+						challenge "Horseman";
+						if fightoutcome >= 10 and fightoutcome <= 19: [player won]
+							say "     With the distraction taken care of, you resume your prior work, and in no time at all you have that page neatly cut out and stuffed inside your bag. Hmm... there seems to be a token attached to the page, specifying a location and a code. Perhaps you should find someone who can figure out what this means.";
+							now Thirst of Fancy is 1;
+							now Resolution of Transformationledger is 2;
+							now Transformationledger is resolved;
+						else if fightoutcome >= 20 and fightoutcome <= 29:	[player lost]
+							say "     Beaten and humiliated, you find yourself being bodily thrown from the room, crashing onto the floor outside with a painful crunch. You scramble to put distance between yourself and your opponent - you'll have to come back later for another opportunity to erase your name from that ledger.";
+						else if fightoutcome >= 30:	[player fled]
+							say "     Discretion may be the better part of valor, but unfortunately you've lost your opportunity to remove your name from the ledger. You'll have to come back later if you want to try again.";
+					-- "Come back later":
+						say "     You don't want to risk drawing unwanted attention for the time being, so you slip out of the room again and make a note of its location for later.";
+					-- "Leave permanently":
+						say "     The thought of being trapped in this place is unsettling enough without seeing what they have planned for you in painful detail! Your legs can't take you out of this accursed room quickly enough.";
+						now Transformationledger is resolved;
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
 

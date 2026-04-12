@@ -10,19 +10,14 @@ Section 1 - Creature Responses
 
 to say teddy bear attack:
 	now noteddybearsex is 0;
-	choose row MonsterID from the Table of Random Critters;
 	if scalevalue of Player <= 3 and vorelevel is not 1 and a random chance of 2 in 5 succeeds:
-		if HP of Player > 0:
-			say "     You are pulled into a soft hug by the stuffed bear";
-		else:
-			say "     You are grabbed by the fluffy, stuffed bear in a tight hug, squeezing the air out of you";
 		if teddyvored is even:
-			say ". The pink bear smiles down at you, the smile growing wider and wider as she continues. As the wide open smile gets closer, you start to struggle, but the bear keeps a firm grip on you. With a happy giggle, the living plush bear lifts you up, stuffing your head into her open maw. The soft, fabric mouth slides over you smoothly as you're pulled into her.";
+			say "     You are [if HP of Player > 0]pulled into a soft hug by the stuffed bear[else]grabbed by the fluffy, stuffed bear in a tight hug, squeezing the air out of you[end if]. The pink bear smiles down at you, the smile growing wider and wider as she continues. As the wide open smile gets closer, you start to struggle, but the bear keeps a firm grip on you. With a happy giggle, the living plush bear lifts you up, stuffing your head into her open maw. The soft, fabric mouth slides over you smoothly as you're pulled into her.";
 			say "     The teddy bear's smooth mouth and velvety tongue slide over your face as you're pulled in further. The sensation is strangely pleasant, erotic even. You moan softly as her muzzle slides over your shoulders and down your [bodytype of Player] body as you're lifted up. Her round, padded paws rub at your [if Player is herm]cock[smn] and cunt[sfn][else if Player is male]cock[smn][else if Player is female]cunt[sfn][else]bare groin[end if], further adding to your pleasure and distracting you from the need to struggle. You slip ever inwards, moving down her velvety throat and down into her warm, padded belly.";
 			say "     Her smooth, fabric lining slides smoothly across your flesh[if Player is male], pressing against your engorging shaft[else if Player is female], rubbing against your wet pussy[end if] as you grow aroused despite (or perhaps even because of) your current predicament. Her tummy is soft and squeezes down around you, making you feel sleepy as it closes down around you. As you feel her rub her paws over her stuffed belly, you curl up in her padded stomach as a warm, fuzzy feeling fills you and you drift off.";
 		else:
-			say ". As has happened before, the pink bear holding you opens her muzzle in a wide, wide grin, pulling you towards her. You try to squirm from her grip, but she's got too strong a hold on you. Your head gets stuffed into her open maw. The soft, fabric mouth slides over you smoothly as you're pulled into her. Her fabric tongue brushes across your face and neck as you're steadily lifted further up and into her mouth.";
-			say "     You feel her thump to the ground on her padded ass after raising you vertically, your momentum and gravity sliding your shoulders into her muzzle and down into her throat. Soft, velvety gulping feeds your [bodytype of Player] body into her mouth. Your groin is slathered by her soft tongue. The feel of it across your [if Player is herm]cock[smn] and cunt[sfn][else if Player is male]cock[smn][else if Player is female]cunt[sfn][else]bare groin[end if] causes you to moan and grow aroused despite yourself[if Player is not neuter]. She takes her time licking you, savoring playing with you until she can get you to cum. You and your cum are[else]. After some playful licking, you are[end if] swallowed down, destined for her warm belly. You curl up there, feeling sleepy inside the bear's padded tummy, eventually drifting off into childlike slumber.";
+			say "     You are [if HP of Player > 0]pulled into a soft hug by the stuffed bear[else]grabbed by the fluffy, stuffed bear in a tight hug, squeezing the air out of you[end if]. As has happened before, the pink bear holding you opens her muzzle in a wide, wide grin, pulling you towards her. You try to squirm from her grip, but she's got too strong a hold on you. Your head gets stuffed into her open maw. The soft, fabric mouth slides over you smoothly as you're pulled into her. Her fabric tongue brushes across your face and neck as you're steadily lifted further up and into her mouth.";
+			say "     You feel her thump to the ground on her padded ass after raising you vertically, your momentum and gravity sliding your shoulders into her muzzle and down into her throat. Soft, velvety gulping feeds your [bodytype of Player] body into her mouth. Your groin is slathered by her soft tongue. The feel of it across your [if Player is herm]cock[smn] and cunt[sfn][else if Player is male]cock[smn][else if Player is female]cunt[sfn][else]bare groin[end if] causes you to moan and grow aroused despite yourself. [if Player is not neuter]She takes her time licking you, savoring playing with you until she can get you to cum. You and your cum[else]After some playful licking, you[end if] are swallowed down, destined for her warm belly. You curl up there, feeling sleepy inside the bear's padded tummy, eventually drifting off into childlike slumber.";
 		teddybearvored;
 	else if Player is male:
 		say "     The giant stuffed bear lets out a happy cry as you collapse, before quickly climbing on top of you. You soon see that someone has stitched a large opening in the crotch, right where a cunt should be. Before you can think about it too much, she quickly stuffs your [Cock of Player] cock into her waiting opening. You cry out as her velvety insides caress you, her body moving and twisting on top of you as her insides massage you like a velvet glove, ripping one of your most intense orgasms ever out of you. Soon your mind begins to cloud over with pleasure as she tirelessly rides you to orgasm after orgasm, hardly pausing at all as she runs her soft plush hands up and down your body, her ursine muzzle planting soft kisses over your face the entire time. Eventually your body can't take anymore, and you pass out in a haze of pleasure. Waking up, there is no sign of your plush tormentor, realizing she has probably gone off to pleasure someone else, you quickly gather up your belongings and leave while you can.";
@@ -40,20 +35,23 @@ To say teddy bear loss:
 			say "     Would you like to [link]fuck the stuffed bear (1)[as]1[end link], [link]go for a 69 (2)[as]2[end link] or [link]leave her be (0)[as]0[end link]?";
 			now calcnumber is -1;
 			while calcnumber < 0 or calcnumber > 2:
-				say "Choice? (0-2)>[run paragraph on]";
+				say "Choice? (0-2)> [run paragraph on]";
 				get a number;
+			LineBreak;
 			if calcnumber is 1:
 				say "[teddybearsex]";
 			else if calcnumber is 2:
 				say "[teddybear69]";
-			else if calcnumber is 0:
+			else:
 				say "     Deciding against taking advantage of the poor bear, you leave her where she is. You return to what you were doing before she got in your way.";
 				increase noteddybearsex by 1;
 		else:
-			say "     Would you like to go for a 69 (y) or [link]leave her be (n)[as]n[end link]?";
+			say "     Would you like to go for a [link]69 (Y)[as]y[end link] or [link]leave her be (N)[as]n[end link]?";
 			if Player consents:
+				LineBreak;
 				say "[teddybear69]";
 			else:
+				LineBreak;
 				say "     Deciding against taking advantage of the poor bear, you leave her where she is. You return to what you were doing before she got in your way.";
 				increase noteddybearsex by 1;
 	else:
@@ -66,7 +64,6 @@ to say teddybearsex:
 	say "     Spent and happy, you rest atop her for a while as she continues to hug you, content to be your plush pillow for a while. Eventually you realize that you should get moving again and reluctantly pull free of her padded arms. She gives a little sigh of disappointment, but contents herself with rubbing her tummy, feeling the warm mess being absorbed into her plush padding.";
 	CreatureSexAftermath "Teddy Bear" receives "PussyFuck" from "Player";
 
-
 to say teddybear69:
 	now noteddybearsex is 0;
 	say "     Moving in on the fallen bear, you bring your crotch to her face and press your [bodytype of Player] body down onto her plush form. She squirms a little at first, but giggles and settles down as she notices your [if Player is male][Cock of Player] cock[else][cunt size desc of Player] pussy[end if] before her ursine muzzle. After a few light licks with her fabric tongue, she sets her muzzle to work [if Player is male]sucking you off[else]eating you out[end if].";
@@ -75,16 +72,19 @@ to say teddybear69:
 	say "     Playing with her hot tunnel with your tongue and fingers gets her really worked up and she runs her tongue all over your loins in response. With her soft whiskers tickling your thighs, her padded muzzle [if Player is male]squeezes and sucks on your cock until you're pushed to orgasm, shooting your [Cum Load Size of Player] load down her throat to fill her plush tummy[else]presses against your wet folds and her tongue laps into your cunt until you're pushed to orgasm, covering her plush face in your feminine juices[end if].";
 	say "     After your powerful orgasm, you're left feeling fuzzy-headed and content. As you're recovering from your orgasm, you feel the bear's plush paws move to your feet and guide them to her muzzle. She gives them a few licks before opening her muzzle and slipping them into her maw. Shall you let her continue?";
 	if Player consents:
+		LineBreak;
 		say "     Feeling too happy to take notice of what's going on, you are content to enjoy the licking and the soft feel of the bear's muzzle around your feet and ankles. As she continues to sit up, the pleasant sensation moves up to envelop more of your legs. When she reaches your hips, you start to wonder what's going on, but those thoughts are pushed aside when her tongue finds its way to your crotch again. The feel of it across your [if Player is herm]cock[smn] and cunt[sfn][else if Player is male]cock[smn][else if Player is female]cunt[sfn][end if] causes you to moan and grow aroused once again.";
 		say "     While it takes a little longer to get you off this time, it is no less pleasant an experience - perhaps even better from the added sensation of her soft muzzle and throat squeezing and rubbing along your lower body. As she gets you to cum for the second time, she opens her mouth wider and raises you up. She lowers you down into her plush maw, swallowing down your [bodytype of Player] body even as she's swallowing down your sexual fluids. It is only as the ursine muzzle is closing around your head before your very eyes that you realize what's happening all too late. But you're also too fuzzy-headed and awash in pleasure to even think of resisting. You curl up happily in the warm embrace of the plush bear's belly, drifting off into a peaceful sleep.";
-		CreatureSexAftermath "Teddy Bear" receives "[if Player is male]OralCock[else]OralPussy[end if]" from "Player";
+		CreatureSexAftermath "Teddy Bear" receives "Oral[if Player is male]Cock[else]Pussy[end if]" from "Player";
 		teddybearvored;
 	else:
+		LineBreak;
 		say "     Realizing what's about to happen, you shake the fluff from your mind and pull yourself up. The plush bear gives a soft sigh of disappointment and flops back onto the ground. Her disappointment doesn't last long though, as she contents herself with [if Player is male]rubbing her cum-filled tummy[else]licking her cum-damp muzzle[end if] while your fluids are absorbed into her polyfill padding. Having dealt with the strange bear, you're now free to continue on your way.";
-		CreatureSexAftermath "Teddy Bear" receives "[if Player is male]OralCock[else]OralPussy[end if]" from "Player";
+		CreatureSexAftermath "Teddy Bear" receives "Oral[if Player is male]Cock[else]Pussy[end if]" from "Player";
 		now Libido of Player is ( 2 * Libido of Player ) / 3;
 
 to teddybearvored:
+	setmonster "Teddy Bear";
 	choose row MonsterID from the Table of Random Critters;
 	now fightoutcome is 23;
 	increase teddyvored by 1;
@@ -103,13 +103,12 @@ to teddybearvored:
 			repeat with x running through companionList of Player:
 				now XP of x is 0;
 		now non-infectious entry is true; [prevents regular teddy bear infection from occurring]
-		setmonster "Teddy Bear" silently;
 		turn the Player into a "Teddy Bear" silently; [NOTE: Avoid attributeinfect output in a game over (@Stadler#3007)]
 		if Libido of Player < 30, now Libido of Player is 30;
 		now humanity of Player is 0;
 		now battleground is "void";
 		now combat abort is 1;
-		WaitLineBreak;
+		wait for any key;
 		trigger ending "Teddy Beared";
 		end the story saying "Having been consumed by the teddy bear, you've been turned into another of the plush bears roaming the fairgrounds.";
 		stop the action;
@@ -144,7 +143,7 @@ When Play begins:
 	now attack entry is "[one of]The bear windmills its arms and crashes into you, knocking you down.[or]The strange plush bear takes a moment out of combat to give you a big fuzzy hug, causing you to feel vaguely unsettled.[or]Its large plush hands come down hard on your head, making you wonder through the ringing in your ears just what the heck it's stuffed with, lead?[or]Jumping up as it charges, the big fluffy bear knocks you flat as it crashes to the ground.[or]Singing along with the fair music, the fluffy bear prances around seemingly at random, until it ends up ramming into you.[or]Charging forward with its oversized head lowered, the giant bear rams right into you, knocking you both down.[at random]";
 	now defeated entry is "[teddy bear loss]";
 	now victory entry is "[teddy bear attack]";
-	now desc entry is "     A giant teddy bear, covered in soft pink fur toddles down the midway towards you, moving surprisingly fast on its round plush legs. [one of]'Oh good, I was looking for someone to play with!' [or]'Don't you want a prize?' [or]'Take me home with you!' [or]'Don't you want a cuddle?' [or]'You would look great if you were fluffy like me!' [or]'You will be my carnival prize!' [at random]she says as she charges towards you, her large roundish arms windmilling dangerously.";
+	now desc entry is "     A giant teddy bear, covered in soft pink fur toddles down the midway towards you, moving surprisingly fast on its round plush legs. [one of]'Oh good, I was looking for someone to play with!' [or]'Don't you want a prize?' [or]'Take me home with you!' [or]'Don't you want a cuddle?' [or]'You would look great if you were fluffy like me!' [or]'You will be my carnival prize!' [at random]she says as she charges towards you, her large roundish arms windmilling dangerously.[line break]";
 	now face entry is "large teddy bear like face, with a short muzzle and rosy cheeks. Your big black eyes seem comical and cute, and your mouth is pulled upwards by your muzzle, so it seems as if you are always smiling goofily"; [ Face description, format as "Your face is [Face of Player]." ]
 	now body entry is "rounded in the middle with somewhat round arms and legs, and plump, plush, paw-like hands, your body almost feels like it is full of some sort of strange stuffing that moves around as you walk, poking yourself you can see your clawed paw sink deeply into your stuffed side with almost no pain whatsoever"; [ Body Description, format as "Your Body is [Body of Player]." ]
 	now skin entry is "[one of]brown furred[or]softly furred[or]fake furred[or]strangely plush[at random]"; [ Skin Description, format as "Looking at yourself, your body is covered in [Skin of Player] skin." ]
@@ -294,7 +293,6 @@ When Play begins:
 	now Clit Size entry is 0; [size 1-5, see Clit Size Adjective]
 	[Clit Size Adjective is generated by a function and can be used in scenes: very small/small/average/large/very large]
 ]
-
 
 Section 3 - Endings
 

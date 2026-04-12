@@ -14,21 +14,20 @@ Section 1 - Creature Responses
 
 to say losetoorca:
 	project Figure of Orca_hard_icon;
-	if HP of Player > 0:
-		say "     Not wanting to fight, you immediately drop to your knees and let the killer whale advance upon you. Grabbing hold of you, you're given a clear view of the beast's long, curving cock as it commences the ritual of relinquishing itself from its beleaguered confines. 'Suck it!' he orders to you in a deep, rumbling command. ";
-	else:
-		say "     Seeing an opening, the orca relieves you of your legs['] support by sweeping them away with his thick and powerful tail. With you now on the ground and too weak to continue, the killer whale pulls you onto your knees, displaying a clear view of the beast's long, curving cock as it commences the ritual of emerging from its watertight home. 'Suck it!' he orders you in a deep, rumbling command. ";
-	if Libido of Player > 40 or HP of Player > 0:
-		say "Overwhelmed by lust, you shame your better senses as you engulf the emergent tip of the whale's cock within the confines of your [bodytype of Player] lips, your olfactories flooded with the salty musk of the aquatic beast's arousal.";
-	else:
-		say "You look reluctant to comply with such an order, and - perceiving this immediately - the orcaman grabs you by your head, carefully prying your [bodytype of Player] maw loose so that he may so occupy this new void with his emergent cock, forcing you to taste his thick, writhing meat.";
+	say "     [if HP of Player > 0]Not wanting to fight, you immediately drop to your knees and let the killer whale advance upon you. Grabbing hold of you, you're given a clear view of the beast's long, curving cock as it commences the ritual of relinquishing itself from its beleaguered confines. 'Suck it!' he orders to[else]Seeing an opening, the orca relieves you of your legs['] support by sweeping them away with his thick and powerful tail. With you now on the ground and too weak to continue, the killer whale pulls you onto your knees, displaying a clear view of the beast's long, curving cock as it commences the ritual of emerging from its watertight home. 'Suck it!' he orders[end if] you in a deep, rumbling command. [if Libido of Player > 40 or HP of Player > 0]Overwhelmed by lust, you shame your better senses as you engulf the emergent tip of the whale's cock within the confines of your [bodytype of Player] lips, your olfactories flooded with the salty musk of the aquatic beast's arousal[else]You look reluctant to comply with such an order, and - perceiving this immediately - the orcaman grabs you by your head, carefully prying your [bodytype of Player] maw loose so that he may so occupy this new void with his emergent cock, forcing you to taste his thick, writhing meat[end if].";
 	if Player is female:
 		if anallevel is 3 and a random chance of 1 in 5 succeeds:
 			say "[orcadefeatsex1]";
-		else if a random chance of 3 in 5 succeeds:
-			say "[orcadefeatsex2]";
-		else if a random chance of 1 in 2 succeeds:
-			say "[orcadefeatsex3]";
+		else if a random chance of 3 in 5 succeeds: [new vaginal sex]
+			say "     Thrusting into your mouth at a slow and deliberate pace, you're made to slick his cetacean rod with your saliva while it becomes fully engorged. Eventually, you feel its immense length depart from your abused orifice before he indicates to you that he will be claiming another. He slides overtop of you, his massive form pinning you against the beach's sand as his muscular tail spreads and otherwise prepares your legs for his eager intrusion. With a sharp jab, you feel the flexible member invade your pussy, worming itself deeper into you like some meaty tentacle as he proceeds to pound your vulnerable hole.";
+			say "     Influenced by the whale's perverse hold on you, you're soon unable to refuse the pleasure of such a wriggling intrusion. Slickly sliding across the supple walls of your [bodytype of Player] cunt, the orcaman's impressive shaft probes your depths before it intrudes past your cervix, and the prospect of occupying your womb is enough motivation for him to engulf the remainder of his cock within these confines. Writhing in pleasure against the wet sand, this strange sensation is enough to drive you to climax, and - like clockwork - the beast's own release is made apparent as his thick, virile cum floods the confines of your uterus.";
+			say "     Visibly bloated by such an impressive release, your feel the writhing organ soften before the whale firmly pulls himself free of your tight hole. Satisfied with what he has wrought upon you, he departs, leaving you to lay across the sand in a dizzy stupor.";
+			CreatureSexAftermath "Player" receives "PussyFuck" from "Killer Whale";
+		else if a random chance of 1 in 2 succeeds: [old vaginal sex]
+			say "     He thrusts into your mouth a few times, but once it's fully engorged, he slides that slick, flexible member from your throat and pushes you over. Sliding atop you, he keeps you pinned with his massive body and spreads your legs apart with his muscular tail. He drives his cock into your pussy, squirming and wiggling his flexible member around inside you like some meaty tentacle as he pounds into you.";
+			say "     Holding you under the water, you [if hasgills is 1]are thankful for your gills and breathe through them. Without the distraction of drowning, you quickly start to enjoy the strange sensation of that wriggling inside you. The orcaman's slick shaft slides along your walls and probes at the depths of your pussy before pushing past your cervix and worming its way into your womb. You writhe in pleasure beneath him as this strange sensation drives you to climax, the orca filling your uterus with his thick, virile cum[else]struggle to hold your breath as each hard thrust he makes into you seeks to push the air from your lungs. You can feel his throbbing, wriggling cock inside you. It is very enjoyable and arousing despite your desperate situation. Your desire for air, your struggle to live, somehow makes it all the more exciting. It is as if some primal part of you wants you to live so that you may breed and have children. When the orca cums inside you, forcing his way into your womb and filling it with his seed, you orgasm powerfully as that primal need is fulfilled. You can feel him pumping blast after blast of his thick, virile cum into you even as you're starting to black out[end if].";
+			say "     When he's finished draining his large balls into you, his flexible cock pulls itself from your stuffed, bloated womb and he releases you. The killer whale departs, leaving you floating on your back in a stupor.";
+			CreatureSexAftermath "Player" receives "PussyFuck" from "Killer Whale";
 		else:
 			say "[orcadefeatsex4]";
 	else:
@@ -43,21 +42,6 @@ to say orcadefeatsex1: [anal sex]
 	say "     Visibly bloated by such an impressive release, your feel the writhing organ soften before the whale firmly pulls himself free of your tight hole. Satisfied with what he has wrought upon you, he departs, leaving you to lay across the sand in a dizzy stupor.";
 	CreatureSexAftermath "Player" receives "AssFuck" from "Killer Whale";
 
-to say orcadefeatsex2: [new vaginal sex]
-	say "     Thrusting into your mouth at a slow and deliberate pace, you're made to slick his cetacean rod with your saliva while it becomes fully engorged. Eventually, you feel its immense length depart from your abused orifice before he indicates to you that he will be claiming another. He slides overtop of you, his massive form pinning you against the beach's sand as his muscular tail spreads and otherwise prepares your legs for his eager intrusion. With a sharp jab, you feel the flexible member invade your pussy, worming itself deeper into you like some meaty tentacle as he proceeds to pound your vulnerable hole.";
-	say "     Influenced by the whale's perverse hold on you, you're soon unable to refuse the pleasure of such a wriggling intrusion. Slickly sliding across the supple walls of your [bodytype of Player] cunt, the orcaman's impressive shaft probes your depths before it intrudes past your cervix, and the prospect of occupying your womb is enough motivation for him to engulf the remainder of his cock within these confines. Writhing in pleasure against the wet sand, this strange sensation is enough to drive you to climax, and - like clockwork - the beast's own release is made apparent as his thick, virile cum floods the confines of your uterus.";
-	say "     Visibly bloated by such an impressive release, your feel the writhing organ soften before the whale firmly pulls himself free of your tight hole. Satisfied with what he has wrought upon you, he departs, leaving you to lay across the sand in a dizzy stupor.";
-	CreatureSexAftermath "Player" receives "PussyFuck" from "Killer Whale";
-
-to say orcadefeatsex3: [old vaginal sex]
-	say "     He thrusts into your mouth a few times, but once it's fully engorged, he slides that slick, flexible member from your throat and pushes you over. Sliding atop you, he keeps you pinned with his massive body and spreads your legs apart with his muscular tail. He drives his cock into your pussy, squirming and wiggling his flexible member around inside you like some meaty tentacle as he pounds into you.";
-	if hasgills is 1:
-		say "     Holding you under the water, you are thankful for your gills and breathe through them. Without the distraction of drowning, you quickly start to enjoy the strange sensation of that wriggling inside you. The orcaman's slick shaft slides along your walls and probes at the depths of your pussy before pushing past your cervix and worming its way into your womb. You writhe in pleasure beneath him as this strange sensation drives you to climax, the orca filling your uterus with his thick, virile cum.";
-	else:
-		say "     Holding you under the water, you struggle to hold your breath as each hard thrust he makes into you seeks to push the air from your lungs. You can feel his throbbing, wriggling cock inside you. It is very enjoyable and arousing despite your desperate situation. Your desire for air, your struggle to live, somehow makes it all the more exciting. It is as if some primal part of you wants you to live so that you may breed and have children. When the orca cums inside you, forcing his way into your womb and filling it with his seed, you orgasm powerfully as that primal need is fulfilled. You can feel him pumping blast after blast of his thick, virile cum into you even as you're starting to black out.";
-	say "     When he's finished draining his large balls into you, his flexible cock pulls itself from your stuffed, bloated womb and he releases you. The killer whale departs, leaving you floating on your back in a stupor.";
-	CreatureSexAftermath "Player" receives "PussyFuck" from "Killer Whale";
-
 to say orcadefeatsex4: [oral sex]
 	say "     With an eager energy, he thrusts his writhing cock against your maw, driving him ever deeper into your throat as his arousal grows, happy to illustrate his pleasure with audible clicking noises.";
 	if a random chance of 1 in 2 succeeds: [oral in]
@@ -68,44 +52,36 @@ to say orcadefeatsex4: [oral sex]
 		say "     You feel that worming rod throb against your tongue, informing you of his approaching release; however, your captor doubtlessly has a more articulate grasp on the state of his imminent orgasm and instead opts to abruptly pull his rod from your abused orifice. His intent made immediately clear, he finishes himself off with a few final strokes before you're showered with spray after spray of the orcaman's cum.";
 		say "     Eventually, after having sufficiently unloaded himself all over you, he leaves to let you lay your jizz-soaked form across the sand in a dizzy stupor.";
 
-
 to say beattheorca:
 	project Figure of Orca_hard_icon;
-	if ( Libido of Player - humanity of Player > 15 ) and BodyName of Player is "Killer Whale" and Player is not neuter:
+	if Libido of Player - humanity of Player > 15 and BodyName of Player is "Killer Whale" and Player is not neuter:
 		if Player is herm and anallevel > 1:
 			say "     Having beaten your foe, the heat of battle has gotten your blood pumping and your lustful orca instincts come to the fore.";
-			say "     [bold type]Being dual-gendered, does your male or female aspect take over to dominate this fallen male?[roman type][line break]";
-			LineBreak;
+			say "[line break]     [bold type]Being dual-gendered, does your male or female aspect take over to dominate this fallen male?[roman type][line break]";
 			say "     ([link]Y[as]y[end link]) - Male.";
 			say "     ([link]N[as]n[end link]) - Female.";
 			if Player consents:
-				say "[orcavicsex1]";
+				LineBreak;
+				say "     Victorious against the muscular orca, you find your better senses ill-equipped to handle your more feral needs. Too weak to challenge your strength any further, you pull the male into a headlock. Intent on asserting your dominance, you grind your throbbing [Cock of Player] cock against his ass, pushing it under his tail. The beast can only impotently struggle as you tease his tailhole with the tip of your [cock size desc of Player] rod before you ram it into the vulnerable portal, your victim's moans his only reply.";
+				say "     Pumping your organ into him with assertive determination, you sate your lust by making an example of this lesser male and confirm your claim on this territory. Roughly abusing the orca's hole, his own lust betrays him, moaning audibly as the sheer force of your thrusts brings him to cum in the sand. The tight clenching of his abused hole enough to bring you to your own orgasm, [one of]flooding his bowels with your thick seed[or]pulling out just before to spend your seed across his back[at random]. Relinquishing him, you punctuate your violation with a hard swat on the killer whale's abused rump before he takes off. Satisfied after reasserting your territory by humiliating the muscular beast, you depart back from whence you came.";
+				increase orcadom by 1;
+				CreatureSexAftermath "Killer Whale" receives "AssFuck" from "Player";
 			else if Player is female:
-				say "[orcavicsex2]";
+				LineBreak;
+				say "     Victorious against the muscular orca, you find your better senses ill-equipped to handle your more feral needs. Too weak to challenge your strength any further, you pin the male to the ground. Amused by the male's physical inadequacy, you can be sure he'll be useful for at least one thing, stroking the whale's meaty rod until it is sufficiently hard. Only briefly teasing the beleaguered beast with the entrance of your [bodytype of Player] cunt, you skip the foreplay and jump straight to impaling yourself with that cetacean cock, your victim's moans his only reply.";
+				say "     Too weak to contend with your will, you ride the creature's organ with brutal abandon, illustrating to him that the measure of his merit is scaled in these engulfed inches as you assert your dominion over this territory, and it's not long before your abuse finishes him off, moaning weakly as you feel his hot cum erupting within you.";
+				say "     Relinquishing him, you punctuate your violation with a hard swat on the killer whale's abused rump before he hobbles off awkwardly, no doubt sore from such rough treatment. Satisfied after reasserting your territory by humiliating the muscled beast, you depart back from whence you came.";
+				increase orcafdom by 1;
+				CreatureSexAftermath "Player" receives "PussyFuck" from "Killer Whale";
 			else:
+				LineBreak;
 				say "     Defeating the orca, you leave his exhausted form floating on the water. You're sure he'll be fine, but you feel ill-inclined to be around when he does recover.";
 		else:
 			say "     Defeating the orca, you leave his exhausted form floating on the water. You're sure he'll be fine, but you feel ill-inclined to be around when he does recover.";
 	else:
 		say "     Defeating the orca, you leave his exhausted form floating on the water. You're sure he'll be fine, but you feel ill-inclined to be around when he does recover.";
 
-to say orcavicsex1:
-	say "     Victorious against the muscular orca, you find your better senses ill-equipped to handle your more feral needs. Too weak to challenge your strength any further, you pull the male into a headlock. Intent on asserting your dominance, you grind your throbbing [Cock of Player] cock against his ass, pushing it under his tail. The beast can only impotently struggle as you tease his tailhole with the tip of your [cock size desc of Player] rod before you ram it into the vulnerable portal, your victim's moans his only reply.";
-	say "     Pumping your organ into him with assertive determination, you sate your lust by making an example of this lesser male and confirm your claim on this territory. Roughly abusing the orca's hole, his own lust betrays him, moaning audibly as the sheer force of your thrusts brings him to cum in the sand. The tight clenching of his abused hole enough to bring you to your own orgasm, [one of]flooding his bowels with your thick seed[or]pulling out just before to spend your seed across his back[at random]. Relinquishing him, you punctuate your violation with a hard swat on the killer whale's abused rump before he takes off. Satisfied after reasserting your territory by humiliating the muscular beast, you depart back from whence you came.";
-	increase orcadom by 1;
-	CreatureSexAftermath "Killer Whale" receives "AssFuck" from "Player";
-
-to say orcavicsex2:
-	say "     Victorious against the muscular orca, you find your better senses ill-equipped to handle your more feral needs. Too weak to challenge your strength any further, you pin the male to the ground. Amused by the male's physical inadequacy, you can be sure he'll be useful for at least one thing, stroking the whale's meaty rod until it is sufficiently hard. Only briefly teasing the beleaguered beast with the entrance of your [bodytype of Player] cunt, you skip the foreplay and jump straight to impaling yourself with that cetacean cock, your victim's moans his only reply.";
-	say "     Too weak to contend with your will, you ride the creature's organ with brutal abandon, illustrating to him that the measure of his merit is scaled in these engulfed inches as you assert your dominion over this territory, and it's not long before your abuse finishes him off, moaning weakly as you feel his hot cum erupting within you.";
-	say "     Relinquishing him, you punctuate your violation with a hard swat on the killer whale's abused rump before he hobbles off awkwardly, no doubt sore from such rough treatment. Satisfied after reasserting your territory by humiliating the muscled beast, you depart back from whence you came.";
-	increase orcafdom by 1;
-	CreatureSexAftermath "Player" receives "PussyFuck" from "Killer Whale";
-
 Section 2 - Creature Insertion
-
-to say orcadesc:
-	say "     Looking over the killer whale, his body is covered in the distinctive patterning of an orca on thick, sleek flesh. His head is sleek and streamlined, drawing to a blunt, rounded muzzle. His mouth is filled with small, sharp, dagger-like teeth. The blowhole on the top of his head occasionally opens to take a breath. His body is large and heavily muscled, but with the sleek shape of a swimmer. He stands easily ten feet tall. The large dorsal fin projecting from his back extends nearly a foot behind him in a sharp, knife-like shape. His arms are dense with sleek muscle. His hands have a thick webbing between his fingers. His legs are humanoid in appearance, thick with powerful muscle. His ass is dense with muscle, supporting a thick and very muscular tail that is four feet in length and ends in a whale's flukes. Between his powerful swimmer's legs he has a titanic, sleek and curving cetacean cock. Beneath his impressive maleness is a large bulge, showing his swollen balls. While they would normally be internal on the oceanic creature, their apparent hugeness cannot be fully contained inside him and bulge out considerably.";
 
 Table of CombatPrep (continued)
 name(text)	PrepFunction(text)
@@ -130,6 +106,7 @@ When Play begins:
 	add "Killer Whale" to infections of TaperedCockList;
 	add "Killer Whale" to infections of PrehensileCockList;
 	add "Killer Whale" to infections of InternalCockList;
+	add "Killer Whale" to infections of InternalBallsList;
 	add "Killer Whale" to infections of BipedalList;
 	add "Killer Whale" to infections of SwimList;
 	add "Killer Whale" to infections of TailList;
@@ -141,16 +118,16 @@ When Play begins:
 	now attack entry is "[one of]The orca smashes his tail against your side![or]The killer whale bites down onto your arm![or]The killer whale leans forward and hits you with a blast of sea water from his blowhole![or]The orca strikes you with his powerful arms![or]The orca tries to crush you in his strong arms![at random]";
 	now defeated entry is "[beattheorca]";
 	now victory entry is "[losetoorca]";
-	now desc entry is "[orcadesc]";
+	now desc entry is "     Looking over the killer whale, his body is covered in the distinctive patterning of an orca on thick, sleek flesh. His head is sleek and streamlined, drawing to a blunt, rounded muzzle. His mouth is filled with small, sharp, dagger-like teeth. The blowhole on the top of his head occasionally opens to take a breath. His body is large and heavily muscled, but with the sleek shape of a swimmer. He stands easily ten feet tall. The large dorsal fin projecting from his back extends nearly a foot behind him in a sharp, knife-like shape. His arms are dense with sleek muscle. His hands have a thick webbing between his fingers. His legs are humanoid in appearance, thick with powerful muscle. His ass is dense with muscle, supporting a thick and very muscular tail that is four feet in length and ends in a whale's flukes. Between his powerful swimmer's legs he has a titanic, sleek and curving cetacean cock. Beneath his impressive maleness is a large bulge, showing his swollen balls. While they would normally be internal on the oceanic creature, their apparent hugeness cannot be fully contained inside him and bulge out considerably.[line break]";
 	now face entry is "sleek and streamlined, drawing to a rounded, blunt muzzle. Your mouth is filled with small, sharp teeth. The blow hole on the top of your head occasionally opens to take a breath";
 	now body entry is "large and heavily muscled, but with the sleek shape of a swimmer. You stand almost ten feet tall now. The large dorsal fin projecting from your back extends nearly a foot behind you, making it hard to comfortably rest your backpack. Your arms are dense with sleek muscle, and your hands have a thick webbing between your fingers. Your legs are humanoid in appearance, thick with powerful muscle as well[if Player is male]. A slit between the legs conceals your manhood[end if]";
 	now skin entry is "the distinctive patterning of an orca on thick, sleek";
 	now tail entry is "Your ass is dense with muscle, supporting a thick and very muscular tail that is four feet in length and ends in a whale's flukes.";
 	now cock entry is "sleek and curving cetacean";
 	now face change entry is "your skull reshapes into something smoother and more aquadynamic, drawing into a blunt, rounded muzzle. Your larger mouth fills with many small but very sharp teeth. You feel a strange sensation and realize you are now breathing through a hole atop your head";
-	now body change entry is "as you suddenly grow to a height of almost ten feet. You then feel all the muscles in your torso swell with new power. While you can feel great strength locked in your muscles, you still bear the sleek form of a swimmer. As these changes pass to your arms and legs, webbing grows thick between your fingers and toes";
+	now body change entry is "you suddenly grow to a height of almost ten feet. You then feel all the muscles in your torso swell with new power. While you can feel great strength locked in your muscles, you still bear the sleek form of a swimmer. As these changes pass to your arms and legs, webbing grows thick between your fingers and toes";
 	now skin change entry is "your hide thickens, but becomes sleek and highly aquadynamic. Dark patches color your skin, while other parts begin to pale. Soon you sport the rather distinctive patterning of a killer whale across your entire body";
-	now ass change entry is "as your ass becomes dense with muscle to drive the strong orca tail that grows behind you, designed to help propel you through the water";
+	now ass change entry is "your ass becomes dense with muscle to drive the strong orca tail that grows behind you, designed to help propel you through the water";
 	now cock change entry is "it becomes narrow, but with a sleek and curving shape. It now emerges from a slit at your groin, and your balls have been mostly pulled into your body as well, so your waist may be smooth and streamlined while swimming";
 	now str entry is 18;
 	now dex entry is 13;
@@ -292,7 +269,6 @@ When Play begins:
 	[Clit Size Adjective is generated by a function and can be used in scenes: very small/small/average/large/very large]
 ]
 
-
 Section 3 - Endings
 
 Table of GameEndings (continued)
@@ -304,14 +280,10 @@ This is the Killer Whale Infection rule:
 		trigger ending "Killer Whale Infection"; [Here it states, that the ending has been played.]
 		if humanity of Player < 10: [SUCCUMB]
 			say "     As the last of your humanity is washed away like a sand castle by the waves of the ocean, you are drawn back to the beachside. You join the other beachgoers and lose yourself in the enjoyment of the beachfront area. You swim among the other creatures, strong and powerful. You are not troubled by the other predators often and happily satisfy your urges on the others swimming in the area.";
-			if orcadom < 4 and Player is male:
-				say "     The only difficulties you have are with the other male orcas in the area, as you fight with them over the territory and to defend the breeding females of your pod.";
-			else if Player is male:
-				say "     Having driven away several of the other muscled orcamen from the area, the territory is yours and you have little trouble driving away the other, weaker males. With the territory near the city claimed as yours, you build up a large pod of females to breed. Those killer whales who do venture into your waters are quickly beaten and dominated as you did the others before them.";
-			else if orcafdom < 4 and Player is female:
-				say "     You find a powerful male among the other killer whales swimming in the waters around the city and join his pod, relishing the feel of him atop you. He breeds you, and the other females of the pod, often, to add to his mates. The males, when mature, are driven off to find pods of their own. You miss them a little, but there will always be more young ones, as your mate is strong and virile.";
+			if Player is male:
+				say "     [if orcadom < 4]The only difficulties you have are with the other male orcas in the area, as you fight with them over the territory and to defend the breeding females of your pod[else]Having driven away several of the other muscled orcamen from the area, the territory is yours and you have little trouble driving away the other, weaker males. With the territory near the city claimed as yours, you build up a large pod of females to breed. Those killer whales who do venture into your waters are quickly beaten and dominated as you did the others before them[end if].";
 			else if Player is female:
-				say "     Doubtlessly unprepared for a reign such as yours, you wrangle together a number of males and females for your own pod, wherein the males are subjugated to your whims and to those of the females whom you matron over. Rarely do you find a consort to sufficiently placate your desires, but when you do, you make considerable use of them, regardless of their compliance.";
+				say "     [if orcafdom < 4]You find a powerful male among the other killer whales swimming in the waters around the city and join his pod, relishing the feel of him atop you. He breeds you, and the other females of the pod, often, to add to his mates. The males, when mature, are driven off to find pods of their own. You miss them a little, but there will always be more young ones, as your mate is strong and virile[else]Doubtlessly unprepared for a reign such as yours, you wrangle together a number of males and females for your own pod, wherein the males are subjugated to your whims and to those of the females whom you matron over. Rarely do you find a consort to sufficiently placate your desires, but when you do, you make considerable use of them, regardless of their compliance[end if].";
 			else:
 				say "     Lacking a gender of your own, you instead delight in turning others into orcas, stroking their cocks or rubbing their pussies, making them cum repeatedly as you transform them. You take particular amusement in watching them sate their new, instinctual lusts for the first time.";
 		else: [SURVIVE]

@@ -276,12 +276,11 @@ to flotbind:
 					else:
 						SanBoost 3;
 					say "     With a brief flash of insight, you're able to find a glimpse of mental clarity[if flotintense > 4] within these confines[end if], recovering a small portion of your lost humanity.";
-					flotlust;
 					now boundrecover is false;
 				else:
 					say "     You choose to endure the toy's influence, [if flotintense < 4][one of]with what little power it has over you[or]creaking softly under your weight[or]bobbing subtly against the waves[at random][else if flotintense < 6][one of]softly creaking as it tries to work against your resistance[or]with what moderate power it has over you[or]squeaking under your weight as it tries nonetheless[or]bobbing against the waves[at random][else][one of]barely able to resist the overwhelming power it has over you[or]creaking against you as it makes every effort in spite of you[or]seemingly undaunted by your efforts[or]writhing against the waves with you[at random][end if].";
-					flotlust;
 					flotsanitypassive;
+				flotlust;
 				LineBreak;
 				wait for any key;
 			else:

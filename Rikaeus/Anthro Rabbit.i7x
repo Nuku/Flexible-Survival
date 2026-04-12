@@ -259,7 +259,7 @@ to say DoubleRabbitSexMenu:
 			now sortorder entry is 6;
 			now description entry is "Offer lesbian sex to a rabbit girl, and her friend joins in";
 	[]
-	Sort the table of fucking options in sortorder order;
+	sort the table of fucking options in sortorder order;
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
 		say "[link][y] - [title entry][as][y][end link][line break]";
@@ -400,7 +400,7 @@ to say JockRabbitSexMenu:
 	now sortorder entry is 2;
 	now description entry is "Offer your ass and your mouth to two of the rabbits";
 	[]
-	Sort the table of fucking options in sortorder order;
+	sort the table of fucking options in sortorder order;
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
 		say "[link][y] - [title entry][as][y][end link][line break]";
@@ -481,7 +481,7 @@ to say JockRabbitSex4: [harem fantasy with bunny girls]
 	CreatureSexAftermath "Player" receives "OralPussy" from "Anthro Rabbit";
 	CreatureSexAftermath "Anthro Rabbit" receives "PussyFuck" from "Player";
 
-Section 5 - Heat Table
+Section 4 - Heat Table
 
 Table of infection heat (continued)
 infect name	heat cycle	heat duration	trigger text	description text	heat start	heat end	inheat	fheat (truth state)	mpregheat (truth state)	mpregtrigger
@@ -509,7 +509,7 @@ to say AnthroRabbitHeatEnd:
 	say "You go a bit light-headed briefly, grabbing ahold of your throbbing cranium, and after a moment the haze fades. You notice almost immediately your senses have cleared and the heat radiating through your body and groin dissipates.";
 	now Libido of Player is ( Libido of Player * 9 ) / 10;
 
-Section 6 - Loot Table
+Section 5 - Loot Table
 
 LastLuckyFootTurn is a number that varies.
 

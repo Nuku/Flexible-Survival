@@ -165,7 +165,7 @@ to say velosdesc:
 	say "     A pure, pearl white in color, his form seems scaled, though you're not sure if the scales are false, as you've never seen him shed them, to say nothing of the difficulty in determining its proper texture, given his perpetually slick frame. Thankfully, the odorless lubricant is not overly abundant, and only becomes a slight mess around where it accumulates - particularly, your anal ring.";
 	say "     He generally doesn't like being touched all that much, but your occasional prodding does seem to offer a reciprocal sensation onto you, inferring that your senses are tied - at least at the base level. This would also infer that any harm done to him would be received in kind, and it's unclear if it works both ways; that he feels what you feel.";
 	if level of Velos > 0:
-		say "[line break][italic type]Demeanor-wise, he [if level of Velos < 2]doesn't seem to regard you all that well, and is otherwise a little belligerent towards you[else if level of Velos is 2]seems to regard you fairly well, and is a bit less perturbed by having himself be summoned before you[else]seems to put you in high regard, more than happy to be on the receiving end of your attention[end if].[roman type][line break]";
+		say "[line break]     [italic type]Demeanor-wise, he [if level of Velos < 2]doesn't seem to regard you all that well, and is otherwise a little belligerent towards you[else if level of Velos is 2]seems to regard you fairly well, and is a bit less perturbed by having himself be summoned before you[else]seems to put you in high regard, more than happy to be on the receiving end of your attention[end if].[roman type][line break]";
 
 Instead of conversing the Velos:
 	if Odd Green Patches is not resolved and Odd Green Patches is inactive:
@@ -260,7 +260,7 @@ an everyturn rule:
 					else:							[large player]
 						say "[one of]You tense slightly as your occupant makes a rather sudden jolt within your confines, though it's not enough to be a substantial distraction[or]You're briefly forced to grit your teeth in a wave of tense, twisted pleasure, the serpent readjusting himself a fair bit. A little embarrassed afterwards, you hope nobody saw that, as his occupancy isn't made outwardly apparent[or]You're lightly assaulted with some rather erratic movement by your resident. Aimless as it is, you get the impression he's lost track of his orientation[cycling].";
 	else if velosfleepenalty is true:
-		now velosfleepenalty is false; [reset velos's flee penalty notice]
+		now velosfleepenalty is false; [reset velos's flee penalty notification]
 	if level of velos > 2 and velossaved is true:
 		now velossaved is false; [reset velos's fight saving feature]
 

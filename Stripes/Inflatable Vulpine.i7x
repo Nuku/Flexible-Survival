@@ -222,4 +222,26 @@ an everyturn rule:
 		else:
 			now last_infvulp_airhead is -2147483648;
 
+Section 4 - Endings
+
+[
+Table of GameEndings (continued)
+Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
+"Inflatable Vulpine Infection"	"Infection"	""	Inflatable Vulpine Infection rule	1000	false
+
+This is the Inflatable Vulpine Infection rule:
+	if Player has a body of "Inflatable Vulpine":
+		trigger ending "Inflatable Vulpine Infection"; [Here it states, that the ending has been played.]
+		if humanity of Player < 10:
+			say "     You succumb to your template infection.";
+		else:
+			say "     You survive, but were infected by the template.";
+			if Player is male:							[MALE/HERM]
+				say "     Additional text for a male/herm survivor.";
+			else if "Sterile" is not listed in feats of Player:	[F-BREEDABLE]
+				say "     Additional text for a female survivor who can become preggers.";
+			else:									[F-STERILE]
+				say "     Additional text for a female survivor who cannot become preggers.";
+]
+
 Inflatable Vulpine ends here.

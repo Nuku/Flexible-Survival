@@ -7,12 +7,12 @@ Version 1 of Flaming Lynx by Stripes begins here.
 
 Section 1 - Creature Responses
 
-
 to say flaminglynxattack:
 	let randomtarget be "[one of]ankle[or]leg[or]thigh[or]rear[or]forearm[or]wrist[or]arm[or]side[or]belly[at random]";
-	say "The [one of]fiery creature strikes at you with one of his paws[or]large lynx growls and bites your [randomtarget][or]flaming lynx tries to tackle you with his body as his flames surge higher[or]feral feline slashes at you with his claws, digging them into your [randomtarget][or]flames across the creature's back rise higher moments before a wave of fire blasts into you[at random]!";
+	say "The [one of]fiery creature strikes at you with one of his paws[or]large lynx growls and bites your [randomtarget][or]flaming lynx tries to tackle you with his body as his flames surge higher[or]feral feline slashes at you with his claws, digging them into your [randomtarget][or]flames across the creature's back rise higher moments before a wave of fire blasts into you[at random]![no line break]";
 
 to say losetoflaminglynx:
+	setmonster "Flaming Lynx";
 	choose row MonsterID from the Table of Random Critters;
 	say "     The fiery feline growls sends the surging flames from its body across the ground, scorching the slimy tunnel floor into soot. As the flames subside to a faint glow across his fur like lamplight, he gives you a final cuff with one large paw, knocking you down onto the blackened patch. He sniffs at you and nuzzles along your body. For a moment, you think those flames will burn, but they are only pleasantly warm now - a warmth that you begin to find strangely soothing and you run a hand across his side, cautiously petting the wild feline. His fur doesn't quite feel like normal fur, though you'd be hard pressed to express what makes it different, as it is still soft and yielding.";
 	let lynxfun be 0;
@@ -69,7 +69,7 @@ to say losetoflaminglynx:
 			if "Weak Psyche" is listed in feats of Player, decrease humanity of Player by a random number between 0 and 1;
 	if lynxfun is 1:				[anal selected]
 		if ( HP of Player > 0 or the Player is submissive ) and a random chance of 1 in 2 succeeds:
-			say "     He paws over you, nuzzling along your side with a chuff[if Player is submissive]. Your submissive tendencies kick in and you grow increasingly aroused, moaning softly with desire[else]. Already having submitted to him, you see no point in resisting now[end if]. Knowing what he wants, you divest yourself of your gear and move onto all fours. Nuzzling between your cheeks, he [if Player is female]steers clear of your feminine entrance and instead [end if]licks across your crinkled hole. A sensual rush of excitement flows into you from that warm tongue and you grind back into his licking.";
+			say "     He paws over you, nuzzling along your side with a chuff. [if Player is submissive]Your submissive tendencies kick in and you grow increasingly aroused, moaning softly with desire[else]Already having submitted to him, you see no point in resisting now[end if]. Knowing what he wants, you divest yourself of your gear and move onto all fours. Nuzzling between your cheeks, he [if Player is female]steers clear of your feminine entrance and instead [end if]licks across your crinkled hole. A sensual rush of excitement flows into you from that warm tongue and you grind back into his licking.";
 			say "     After a few more licks, he moves onto the main event and mounts you with an animalistic rumble. Having prepped you, his feline shaft slips into you with ease. You moan as the pleasant warmth of his body that you've been enjoying atop you can now be felt warming your insides as well, filling you with greater pleasure and arousing you greatly. Grinding your hips back into his thrusts entices him to fuck you more zealously. Your [if the Player is submissive]submissive desires[else]lustful body[end if] revels in this as his stimulating barbs feel delightful along your sensitive anal passage[if Player is male] and the press of his thrusts against your prostate make your cock twitch[end if].";
 			say "     The feline keeps a large paw on your shoulders as he pounds away at your back door. You squeeze your anal muscles and shift your hips, rocking along and gripping around his pulsing meat as he buggers you. You do your best to please the virile beast, longing to feel his release. And when it does come, the enlarged lynx nips down on your shoulder firmly[if the Player is submissive], sending another shiver of delight through you[end if] as his deliciously hot seed surges into you. Blast after blast from him fills you with a rush of sexual excitement that culminates in [if Player is male]your own orgasm that sends your [Cum Load Size of Player] load shooting forth from your twitching rod[else]an unfocused wave of sensual warmth rushing through you[end if]. Once he's finished, he eases himself off you and slides his spent shaft from your sticky and leaking hole. He pads around you, nuzzling and purring like a big pussycat before strutting off. The warm pleasure radiating from your filled rectum lingers inside you for quite some time, a pleasant reminder of your kinky encounter.[mimpregchance]";
 		else:
@@ -85,13 +85,14 @@ to say losetoflaminglynx:
 to say beattheflaminglynx:
 	let lynxfun be 0;
 	if Player is male:
-		say "     Beaten, the fiery feline's flames die down, going low as the lynx mewls in pain. He turns around and raises his hindquarters and flags his short tail, exposing his rump and tight tailhole to you, submitting to the victor. He releases a soft mewl, this time with more longing to it as a ripple of rainbow-colored flames run across his body as he lowers his forequarters to further display his waiting hole. You find yourself momentarily considering taking this strange feline up on his offer. ";
+		now calcnumber is -1;
+		say "     Beaten, the fiery feline's flames die down, going low as the lynx mewls in pain. He turns around and raises his hindquarters and flags his short tail, exposing his rump and tight tailhole to you, submitting to the victor. He releases a soft mewl, this time with more longing to it as a ripple of rainbow-colored flames run across his body as he lowers his forequarters to further display his waiting hole. You find yourself momentarily considering taking this strange feline up on his offer.";
 		if Player is female:
 			say "     Would you like to [link]mount the flaming cat (1)[as]1[end link], get him to [link]suck your cock (2)[as]2[end link], relieve your [link]female needs (3)[as]3[end link] with the vibrant kitty, have him [link]fuck your ass (4)[as]4[end link] or [link]let him go (0)[as]0[end link]?";
-			now calcnumber is -1;
 			while calcnumber < 0 or calcnumber > 4:
 				say "Choice? (0-4)>";
 				get a number;
+			LineBreak;
 			if calcnumber is 1:
 				now lynxfun is 1;
 			else if calcnumber is 2:
@@ -104,10 +105,10 @@ to say beattheflaminglynx:
 				now lynxfun is 3;
 		else:
 			say "     Would you like to [link]mount the flaming cat (1)[as]1[end link], get him to [link]suck your cock (2)[as]2[end link], have him [link]fuck your ass (3)[as]3[end link] or [link]let him go (0)[as]0[end link]?";
-			now calcnumber is -1;
 			while calcnumber < 0 or calcnumber > 3:
 				say "Choice? (0-3)>";
 				get a number;
+			LineBreak;
 			if calcnumber is 1:
 				now lynxfun is 1;
 			else if calcnumber is 2:
@@ -126,14 +127,11 @@ to say beattheflaminglynx:
 	else if lynxfun is 3:
 		say "     You shake your head at the eager kitty and give his rear a swat to send him on his way. He gives a disappointed mewl and pads off down the tunnels. The light from his presence gradually fades as he heads off down tunnels until he's out of sight completely, leaving you once more in the dark save for your own light source.";
 	else if lynxfun is 4:
-		say "     Still wanting to get the flaming lynx's cock in your ass, but just on your own terms, you grab the horny kitty and push him over. His fur is merely warm and his flames are no longer scorching. Taking a hold of his stiff member, you stroke it to full erection and spread his pre along it as it dribbles down over your fingers. Once you've gotten him nice and slick, you straddle the oversized feline and bring your hips into position[if Player is female]. He seems briefly worried and eyes your cunt[sfn] warily, but is relieved when it is your asshole you press against his pulsing shaft[else]. He mrowls and ripples with color as you press his pulsing shaft to your asshole[end if].";
+		say "     Still wanting to get the flaming lynx's cock in your ass, but just on your own terms, you grab the horny kitty and push him over. His fur is merely warm and his flames are no longer scorching. Taking a hold of his stiff member, you stroke it to full erection and spread his pre along it as it dribbles down over your fingers. Once you've gotten him nice and slick, you straddle the oversized feline and bring your hips into position. He [if Player is female]seems briefly worried and eyes your cunt[sfn] warily, but is relieved when it is your asshole you press against his pulsing shaft[else]mrowls and ripples with color as you press his pulsing shaft to your asshole[end if].";
 		say "     You moan softly as you push down onto him, his slick shaft sliding into your tight bottom and filling you nicely. His fur gives another ripple of color as you stroke his tummy and scritch his ears while riding him. Warmth begins to suffuse into you from your stuffed ass, increasing your pleasure and arousing you greatly. The feline's paws twitch in the air, trying in vain to find purchase to fuck you harder, but you're setting the pace and work to ensure your own enjoyment foremost. Regardless of his instincts wanting him to be mounting you, he's still quite happy being ridden like this, if his rumbling purr is to be an accurate sign.";
 		say "     You have a very enjoyable time riding the animalistic mutant, squeeze down on his feline shaft and working it to rub at all your most sensitive spots just the way you like it. When you finally cum and splatter your seed across his fur, his flames seem to surge and ripple with a rainbow excitement. His shaft pulses and throbs in you as this rush of energy sends him over the edge, the heat filling you as he cums, sending shot after shot of deliciously hot semen into your bowels. You wait until you're both done before easing off of the flaming lynx and letting him up. His flames seem more vibrant and colorful after your fun and he dashes off while purring loudly.[mimpregchance]";
 
 Section 2 - Creature Insertion
-
-to say flaminglynxdesc:
-	say "     Before you is an oversized lynx-like creature that is vibrantly visible even in these dark, underground tunnels. This strange animal is roughly the size of a large dog or wolf and covered in rippling flames. These short flames flicker across its furred body with an occasional rainbow sheen to them without harm to the large feline. The coat itself is a blend of reds, yellows and oranges with charcoal black markings mixed in. The flames are stronger at the lynx's characteristic cheek ruffs and across the tufts atop its ears as well as the tip of its short tail. Beneath the creature's belly you can see the hanging bulge of his sheath and balls. He growls softly and pads closer to you, the lamplight fire around its body swelling to full flames.";
 
 Table of CombatPrep (continued)
 name(text)	PrepFunction(text)
@@ -166,7 +164,7 @@ When Play begins:
 	now attack entry is "[flaminglynxattack]";
 	now defeated entry is "[beattheflaminglynx]"; [ Text when monster loses. ]
 	now victory entry is "[losetoflaminglynx]"; [ Text when monster wins. ]
-	now desc entry is "[flaminglynxdesc]"; [ Description of the creature when you encounter it. ]
+	now desc entry is "     Before you is an oversized lynx-like creature that is vibrantly visible even in these dark, underground tunnels. This strange animal is roughly the size of a large dog or wolf and covered in rippling flames. These short flames flicker across its furred body with an occasional rainbow sheen to them without harm to the large feline. The coat itself is a blend of reds, yellows and oranges with charcoal black markings mixed in. The flames are stronger at the lynx's characteristic cheek ruffs and across the tufts atop its ears as well as the tip of its short tail. Beneath the creature's belly you can see the hanging bulge of his sheath and balls. He growls softly and pads closer to you, the lamplight fire around its body swelling to full flames.[line break]"; [ Description of the creature when you encounter it. ]
 	now face entry is "that of a lynx with tufted ears and a sizable cheekruff of fluffy fur";
 	now body entry is "transformed into that of a quadrupedal feline. You have the stocky build of a lynx, but expanded to roughly the size of a wolf or large dog. Your hands and feet have become large, padded paws hiding sharp claws";
 	now skin entry is "[one of]flaming fur[or]fiery fur[or]flame-colored fur[at random]";
@@ -317,8 +315,6 @@ When Play begins:
 	[Clit Size Adjective is generated by a function and can be used in scenes: very small/small/average/large/very large]
 ]
 
-
-
 Section 3 - Endings
 
 Table of GameEndings (continued)
@@ -334,8 +330,8 @@ This is the Flaming Lynx Infection rule:
 				say "     You and your companion subsist on the lingering natural gas in the city's pipes for your flames, though your passions for male sex also fuels your fiery pelts. When the soldiers comes in to clean up the city, you and your companion use the sewer system to circumvent most of them. Once at the edge of the city, you blaze through the military's blockades, literally setting many of the barriers on fire, before you and your new friend head out into the bright unknown world together.";
 			else if Player is female:
 				say "     As your mind falls into a constant cycle of depravity, you find yourself unsure of where to go next. With your feline twat nestled deep between your legs, you instinctively know that you would not be welcomed among your new flaming feline family. Lacking any proper direction of your own, you find yourself settling into hiding out at a gas station with a few motorized mutants. In trade for your companionship, you share in their supply of gasoline to [if Player is fireskinned]fuel your fiery hide[else]stoke your inner fires[end if]. By the time the military forces come through the city, you've descended fully into your role as the animal pet for the others living there - going around on all fours, guarding their territory around the gas station and getting fucked by their pistoning rods.";
-			else:
-				say "***Neuter ending needed.";
+			[else:
+				say "***Neuter ending needed.";]
 		else:
 			if the player is fireskinned:
 				say "     Having retained your sense of identity until the military arrives, you find yourself being quarantined by your rescuers. As scientist from all over try to figure out how you're able to constantly retain the flames along your body without being burned or burning everything around you, you are subjected to a battery of tests. Finding yourself bored with being poked and prodded, you spend your time teasing some of the military men who have been giving you several questioning looks.";
@@ -345,6 +341,5 @@ This is the Flaming Lynx Infection rule:
 				say "     Having retained your sense of identity until the military arrives, you find yourself detained like so many others while the survivors are processed. It seems your form is unique among those rescued from the city and so is subject to additional testing. You are questioned about the creature that infected you, though you can give little in the way of answers. Eventually, you are released and left to find a place for yourself in this new world. Able to endure heat better than most, you get employment in a foundry which works to recycle the large amounts of metal trash left behind into fresh materials for reconstruction.";
 				if Player is not neuter and charisma of Player > 14:
 					say "     You become quite popular among the staff, taking on the unofficial role of company mascot. Break time often involves one or more of your fellow employees slaking their fiery lusts upon you after several hours working the smelters and forges[if the player is impreg_ok]. You bear many offspring from your coworkers, often having no idea whose child you're having at any given time. Many of your children grow up to join the company, working alongside you - both at the job and in the break room, further expanding the company's workforce as they become pregnant as well[end if].";
-
 
 Flaming Lynx ends here.
