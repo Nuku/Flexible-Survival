@@ -152,7 +152,7 @@ When Play begins:
 	now attack entry is "The latex wolf [one of]slaps you with a rubbery pad[or]claws you with plastic nails[or]bites with rubbery teeth[or]pounces forward and bodyslams you[at random].";
 	now defeated entry is "[latex wolf loses]";
 	now victory entry is "[latex wolf wins]";
-	now desc entry is "     You are startled when you hear a rubbery, skidding noise [if a random chance of 1 in 2 succeeds]from behind you[else if a random chance of 1 in 2 succeeds]to your left[else]to your right[end if]. Turning to face the noise, you spot a black and white latex wolf whipping around the corner."; [ Description of the creature when you encounter it.]
+	now desc entry is "     You are startled when you hear a rubbery, skidding noise [one of]from behind you[or]to your left[or]to your right[purely at random]. Turning to face the noise, you spot a black and white latex wolf whipping around the corner."; [ Description of the creature when you encounter it.]
 	now face entry is "elongated with a muzzle and sharp teeth"; [ Face description, format as "Your face is [Face of Player]." ]
 	now body entry is "lupine, bent onto all fours. Your insides feel strange, as if they are made of something shifting and changing"; [ Body Description, format as "Your Body is [Body of Player]." ]
 	now skin entry is "rubbery latex with black, fur-like patterned"; [ skin Description, format as "Your body is covered in (your text) skin."]

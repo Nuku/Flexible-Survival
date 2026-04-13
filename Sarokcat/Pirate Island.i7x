@@ -2,7 +2,6 @@ Pirate Island by Sarokcat begins here.
 
 "Adds a quest to seek pirate treasure."
 
-
 Section 1 - Pirate Island environment
 
 Table of GameRoomIDs (continued)
@@ -10,12 +9,8 @@ Object	Name
 Pirate Island	"Pirate Island"
 
 Pirate Island is a room. It is fasttravel. It is private.
-
-Description of Pirate Island is "     Finally, the island with the treasure marked on the map! The small island seems to be a rather nice island not far off the coast, seeming just like many other similar islands in the area. This one, however, happens to be riddled with what seems to be a rather large amount of caves and tunnels, just waiting to be explored.".
-
-instead of sniffing Pirate Island:
-	say "The island smells of the ocean and fetid sea caves.";
-
+Description of Pirate Island is "     Finally, the island with the treasure marked on the map! The small island seems to be a rather nice island not far off the coast, seeming just like many other similar islands in the area. This one, however, happens to be riddled with what seems to be a rather large amount of caves and tunnels, just waiting to be explored.[line break]".
+Scent of Pirate Island is "     The island smells of the ocean and fetid sea caves.".
 Pirate Island is west of Sandbar.
 
 Table of GameCharacterIDs (continued)
@@ -23,160 +18,131 @@ object	name
 Treasure cave	"Treasure cave"
 
 Treasure cave is a man.
-Description of Treasure cave is "     Not just one cave, but a large series of caves that dot the shores of the island. They look like the perfect place for some suspicious pirate to have hidden some treasure. Still, the dark openings look ominous, and you can hear water sloshing within some of them occasionally. It will take a lot of bravery to explore these caves. You will have to [']hunt for treasure['] in them.".
 Treasure cave is in Pirate Island.
-
-instead of linkactioning Treasure Cave when treasurefound is 0:
-	say "Possible Actions: [link]hunt for treasure[end link], [link]smell[as]smell treasure cave[end link][line break]";
-
-instead of sniffing Treasure cave:
-	say "The sea cases smell of stagnant sea air.";
+Description of Treasure cave is "     Not just one cave, but a large series of caves that dot the shores of the island. They look like the perfect place for some suspicious pirate to have hidden some treasure. Still, the dark openings look ominous, and you can hear water sloshing within some of them occasionally. It will take a lot of bravery to explore these caves. You will have to [']hunt for treasure['] in them.[line break]".
+linkaction of Treasure cave is "Possible Actions: [link]smell[as]smell Treasure cave[end link][if treasurefound is 0], [link]hunt for treasure[end link][end if][line break]".
+Scent of Treasure cave is "     The sea cases smell of stagnant sea air.".
 
 Treasurefound is a number that varies.
 Lasttreasurehunt is a number that varies. Lasttreasurehunt is usually 250.
-treasurehunt is a number that varies. treasurehunt is usually 0.
+[treasurehunt is a number that varies. treasurehunt is usually 0.]
 
 treasurehunt is an action applying to nothing.
-
-understand "explore caves" as treasurehunt.
-understand "explore cave" as treasurehunt.
-understand "explore tunnel" as treasurehunt.
-understand "explore tunnels" as treasurehunt.
-understand "explore the caves" as treasurehunt.
+understand "explore the/-- caves/cave/tunnel/tunnels" as treasurehunt.
 understand "treasure hunt" as treasurehunt.
 understand "hunt for treasure" as treasurehunt.
 understand "explore treasure caves" as treasurehunt.
-understand "find treasure" as treasurehunt.
-understand "find the treasure" as treasurehunt.
-understand "search cave" as treasurehunt.
-understand "search caves" as treasurehunt.
-understand "search the caves" as treasurehunt.
-
+understand "find the/-- treasure" as treasurehunt.
+understand "search the/-- cave/caves" as treasurehunt.
 
 check treasurehunt:
-	if Treasure cave is not visible, say "where?" instead;
-
+	if Treasure cave is not visible, say "Where?" instead;
+	if treasurefound is 1, say "You already found the treasure." instead;
+	if lasttreasurehunt - turns < 8:
+		say "Approaching the dark caves that dot the island, you realize that you still haven't fully recovered from your last trip down into the darkness and decide to come back again later..." instead;
 
 carry out treasurehunt:
-	if lasttreasurehunt - turns < 8:
-		say "     Approaching the dark caves that dot the island, you realize that you still haven't fully recovered from your last trip down into the darkness and decide to come back again later...";
-		stop the action;
+	now lasttreasurehunt is turns;
+	say "     Stepping forward boldly, you eye the numerous caves that dot the shores of the island, knowing that inside one of them your future treasure awaits you, and you can't wait to find it! With a grin on your face you pick a cave and stride forward!";
+	if rarequesting is 5:
+		say "     Traveling through the caves, you come across a large open cave with light filtering in from above, as you look in the cave, a glint of light catches on something shiny in a small pool towards the rear of the cave. Thinking it might be the treasure you quickly hurry over to take a look, only to realize your mistake when you hear a roar from behind you. The cave seems to be a Sea dragons lair!";
+		challenge "Feral Sea Dragon";
+		if lost is 1:
+			say "     Defeated by the large beast, you are forced to withdraw from the cave without determining whether or not the treasure was actually there, but you vow to yourself you will return and try again!";
+		else:
+			say "     Having driven back the sea dragon for now, you investigate the small pool where you saw the glint earlier. Looking down into the small pool, you see what appears to be an empty chest, someone else got to the treasure before you did! You sigh despondently, before realizing that an empty chest doesn't glint, looking around for the thing that made the glint, you spot a small handful of gold coins scattered around the bottom of the pool, and excited you quickly dive in and gather them all up. Heading out of the cave with your new bit of treasure, you realize that you may not have found a large pirates hoard, but just staring at the gold coins you did find makes you grin and feel better about your adventure, and the great experience you had finding it, and a bit of gold sure won't hurt once you get back to civilization either!";
+			say "Your XP has increased!";
+			increase XP of Player by 50;
+			now treasurefound is 1;
 	else:
-		if treasurefound is 0:
-			now lasttreasurehunt is turns;
-			say "     Stepping forward boldly, you eye the numerous caves that dot the shores of the island, knowing that inside one of them your future treasure awaits you, and you can't wait to find it! With a grin on your face you pick a cave and stride forward!";
-			if rarequesting is 5:
-				say "     Traveling through the caves, you come across a large open cave with light filtering in from above, as you look in the cave, a glint of light catches on something shiny in a small pool towards the rear of the cave. Thinking it might be the treasure you quickly hurry over to take a look, only to realize your mistake when you hear a roar from behind you. The cave seems to be a Sea dragons lair!";
+		if a random number between one and ten is:
+			-- 1:
+				say "     Wandering through the dark caves, you feel increasingly nervous as they twist deeper and deeper into the island, becoming partially submerged at times, forcing you to wade through the still water in the dark, nevertheless, the thought of the treasure pushes you ever onwards, until you finally emerge into gleaming sunlight, having somehow ended up on the other side of the island, and no treasure.";
+			-- 2:
+				say "     Walking through the dark and damp caves, you hear a soft trickling noise from one of the nearby alcoves, deciding to investigate you find a small stream trickling up from a crack in the wall. Taking a look at the small spring you find the water is both crisp and clear, and decide to gather some of it up to take with you. You continue exploring through the caves, but eventually find they twist and turn back on each other, and you end up back on the beach.";
+				ItemGain water bottle by 1;
+			-- 3:
+				say "     Walking through the caves, you find yourself starting to jog a bit, and then a bit more, as you move along the long cave, always following the left passage when it appears in an attempt to solve the maze of passages within. After some time you begin to tire, but there is no end to the cave in sight, as you move in the dim light you realize your surrounding seem increasingly familiar even as you continue to jog along. Finally in frustration you take a right turn instead of a left turn, and almost immediately shoot back out onto the beach from the cave you entered from, with an embarrassed glance behind you, you realize the left part of that cave looped in a large circle, and you have been running around it for hours. You sigh as you plop down on the beach to rest for a minute, still you do feel slightly more dexterous from all that jogging you find yourself thinking, as you let the waves lap at your body.";
+				StatChange "dexterity" by 1;
+			-- 4:
+				say "     Traveling along the dim caves, you can see small bits of light filter through from holes far above you in the cave walls, leaving you barely enough light to see as you slowly feel your way forward. The cave stretches on endlessly before you as you hunt for the treasure you know is in here somewhere, eventually you grow slightly careless as you move forward, and your foot comes down on empty air as you tumble forward into a natural pit in the rock. You lie there for a minute, cursing at the dark hole as your body aches with pain. Slowly you climb back out of the pit, and in too much pain to continue, you carefully make your way back to the entrance, the treasure still safe in its caves, for now...";
+				decrease HP of Player by 20;
+			-- 5:
+				say "     Wandering through the dark tunnels, you eventually trip over something as you explore one of the alcoves, reaching down you find a small item, hoping it is part of the treasure you decide to take it with you as you explore. Eventually you find your way back out of the caves, without finding the treasure and rather tired, and examine the site you found... well it may not be part of the treasure, but at least it will make a nice souvenir.";
+				let minortreasure be a random number from 1 to number of filled rows in the Table of Random Critters;
+				choose row minortreasure from the Table of Random Critters;
+				if there is a loot entry:
+					if loot entry is not empty and lootchance entry > 0:
+						ItemGain loot entry by 1;
+						ItemGain dirty water by 1;
+					else:
+						ItemGain pirate bandana by 1;
+				else:
+					ItemGain food by 1;
+			-- 6:
+				say "     Traveling through the caves, you come across a large open cave with light filtering in from above. As you look in the cave, a glint of light catches on something shiny in a small pool towards the rear of the cave. Thinking it might be the treasure, you quickly hurry over to take a look, only to realize your mistake when you hear a roar from behind you. The cave seems to be a Sea Dragon's lair!";
 				challenge "Feral Sea Dragon";
 				if lost is 1:
 					say "     Defeated by the large beast, you are forced to withdraw from the cave without determining whether or not the treasure was actually there, but you vow to yourself you will return and try again!";
-					stop the action;
 				else:
-					say "     Having driven back the sea dragon for now, you investigate the small pool where you saw the glint earlier. Looking down into the small pool, you see what appears to be an empty chest, someone else got to the treasure before you did! You sigh despondently, before realizing that an empty chest doesn't glint, looking around for the thing that made the glint, you spot a small handful of gold coins scattered around the bottom of the pool, and excited you quickly dive in and gather them all up. Heading out of the cave with your new bit of treasure, you realize that you may not have found a large pirates hoard, but just staring at the gold coins you did find makes you grin and feel better about your adventure, and the great experience you had finding it, and a bit of gold sure won't hurt once you get back to civilization either![line break]";
-					say "Your XP has increased!";
+					say "     Having driven back the sea dragon for now, you investigate the small pool where you saw the glint earlier. Looking down into the small pool, you see what appears to be an empty chest, someone else got to the treasure before you did! You sigh despondently, before realizing that an empty chest doesn't glint, looking around for the thing that made the glint, you spot a small handful of gold coins scattered around the bottom of the pool, and excited you quickly dive in and gather them all up. Heading out of the cave with your new bit of treasure, you realize that you may not have found a large pirates hoard, but just staring at the gold coins you did find makes you grin and feel better about your adventure, and the great experience you had finding it, and a bit of gold sure won't hurt once you get back to civilization either!";
+					say "[bold type]You gain 50 XP![roman type][line break]";
 					increase XP of Player by 50;
 					now treasurefound is 1;
-					stop the action;
-			else:
-				let T be a random number between one and ten;
-				if T is 1:
-					say "     Wandering through the dark caves, you feel increasingly nervous as they twist deeper and deeper into the island, becoming partially submerged at times, forcing you to wade through the still water in the dark, nevertheless, the thought of the treasure pushes you ever onwards, until you finally emerge into gleaming sunlight, having somehow ended up on the other side of the island, and no treasure.";
-					stop the action;
-				if T is 2:
-					say "     Walking through the dark and damp caves, you hear a soft trickling noise from one of the nearby alcoves, deciding to investigate you find a small stream trickling up from a crack in the wall. Taking a look at the small spring you find the water is both crisp and clear, and decide to gather some of it up to take with you. You continue exploring through the caves, but eventually find they twist and turn back on each other, and you end up back on the beach.[line break]";
-					ItemGain water bottle by 1;
-					stop the action;
-				if T is 3:
-					say "     Walking through the caves, you find yourself starting to jog a bit, and then a bit more, as you move along the long cave, always following the left passage when it appears in an attempt to solve the maze of passages within. After some time you begin to tire, but there is no end to the cave in sight, as you move in the dim light you realize your surrounding seem increasingly familiar even as you continue to jog along. Finally in frustration you take a right turn instead of a left turn, and almost immediately shoot back out onto the beach from the cave you entered from, with an embarrassed glance behind you, you realize the left part of that cave looped in a large circle, and you have been running around it for hours. You sigh as you plop down on the beach to rest for a minute, still you do feel slightly more dexterous from all that jogging you find yourself thinking, as you let the waves lap at your body.[line break]";
-					StatChange "dexterity" by 1;
-					stop the action;
-				If T is 4:
-					say "     Traveling along the dim caves, you can see small bits of light filter through from holes far above you in the cave walls, leaving you barely enough light to see as you slowly feel your way forward. The cave stretches on endlessly before you as you hunt for the treasure you know is in here somewhere, eventually you grow slightly careless as you move forward, and your foot comes down on empty air as you tumble forward into a natural pit in the rock. You lie there for a minute, cursing at the dark hole as your body aches with pain. Slowly you climb back out of the pit, and in too much pain to continue, you carefully make your way back to the entrance, the treasure still safe in its caves, for now...";
-					decrease HP of Player by 20;
-					stop the action;
-				if T is 5:
-					say "     Wandering through the dark tunnels, you eventually trip over something as you explore one of the alcoves, reaching down you find a small item, hoping it is part of the treasure you decide to take it with you as you explore. Eventually you find your way back out of the caves, without finding the treasure and rather tired, and examine the site you found... well it may not be part of the treasure, but at least it will make a nice souvenir.";
-					let minortreasure be a random number from 1 to number of filled rows in the Table of Random Critters;
-					choose row minortreasure from the Table of Random Critters;
-					if there is a loot entry:
-						if loot entry is not "" and loot entry is not " " and loot entry is not "journal":
-							ItemGain loot entry by 1;
-							ItemGain dirty water by 1;
-						else:
-							ItemGain pirate bandana by 1;
+			-- 7:
+				say "     Traveling through the dark and damp caves, you swear you hear some off key singing from around the bend, peeking around you find several pirate sharks dicing over some small items in a cave half filled with water. You lean closer to get a closer look, only to be spotted by one of the sharks, they give out a cry and dive into the water, circling before charging back to engage you, looks like you are in for a fight!";
+				challenge "Shark Herm";
+				challenge "Shark Herm";
+				challenge "Shark Herm";
+				say "     After a long and exhausting ordeal, the sharks have finally left, leaving you in the cave by yourself. Sighing, you lie down to rest for a minute, only to find something uncomfortable underneath you. Glancing down, you realize they left behind the items they were dicing over! While it may not be actual treasure, it certainly isn't anything to sniff at you think as you tuck the items into your pack.";
+				let minortreasure be a random number from 1 to number of filled rows in the Table of Random Critters;
+				choose row minortreasure from the Table of Random Critters;
+				if there is a loot entry:
+					if loot entry is not empty and lootchance entry > 0:
+						ItemGain loot entry by 1;
+						ItemGain dirty water by 1;
 					else:
-						ItemGain food by 1;
-					stop the action;
-				if T is 6:
-					say "     Traveling through the caves, you come across a large open cave with light filtering in from above. As you look in the cave, a glint of light catches on something shiny in a small pool towards the rear of the cave. Thinking it might be the treasure, you quickly hurry over to take a look, only to realize your mistake when you hear a roar from behind you. The cave seems to be a Sea Dragon's lair!";
-					challenge "Feral Sea Dragon";
-					if lost is 1:
-						say "     Defeated by the large beast, you are forced to withdraw from the cave without determining whether or not the treasure was actually there, but you vow to yourself you will return and try again!";
-						stop the action;
-					else:
-						say "     Having driven back the sea dragon for now, you investigate the small pool where you saw the glint earlier. Looking down into the small pool, you see what appears to be an empty chest, someone else got to the treasure before you did! You sigh despondently, before realizing that an empty chest doesn't glint, looking around for the thing that made the glint, you spot a small handful of gold coins scattered around the bottom of the pool, and excited you quickly dive in and gather them all up. Heading out of the cave with your new bit of treasure, you realize that you may not have found a large pirates hoard, but just staring at the gold coins you did find makes you grin and feel better about your adventure, and the great experience you had finding it, and a bit of gold sure won't hurt once you get back to civilization either![line break]";
-						say "[bold type]Your gain 50 XP![roman type][line break]";
-						increase XP of Player by 50;
-						now treasurefound is 1;
-						stop the action;
-				if T is 7:
-					say "     Traveling through the dark and damp caves, you swear you hear some off key singing from around the bend, peeking around you find several pirate sharks dicing over some small items in a cave half filled with water. You lean closer to get a closer look, only to be spotted by one of the sharks, they give out a cry and dive into the water, circling before charging back to engage you, looks like you are in for a fight!";
-					challenge "Shark Herm";
-					challenge "Shark Herm";
-					challenge "Shark Herm";
-					say "     After a long and exhausting ordeal, the sharks have finally left, leaving you in the cave by yourself. Sighing, you lie down to rest for a minute, only to find something uncomfortable underneath you. Glancing down, you realize they left behind the items they were dicing over! While it may not be actual treasure, it certainly isn't anything to sniff at you think as you tuck the items into your pack.";
-					let minortreasure be a random number from 1 to number of filled rows in the Table of Random Critters;
-					choose row minortreasure from the Table of Random Critters;
-					if there is a loot entry:
-						if loot entry is not "" and loot entry is not " " and loot entry is not "journal":
-							ItemGain loot entry by 1;
-							ItemGain dirty water by 1;
-						else:
-							ItemGain pirate bandana by 1;
-					else:
-						ItemGain food by 1;
-					let minortreasure be a random number from 1 to number of filled rows in the Table of Random Critters;
-					choose row minortreasure from the Table of Random Critters;
-					if there is a loot entry:
-						if loot entry is not "" and loot entry is not " " and loot entry is not "journal":
-							ItemGain loot entry by 1;
-							ItemGain dirty water by 1;
-						else:
-							ItemGain pirate bandana by 1;
-					else:
-						ItemGain food by 1;
-					stop the action;
-				if T is 8:
-					say "     Hunting through the dark and dreary caves, you begin to wonder if you will ever find the treasure that is supposedly to be hidden in this place, sighing you continue your long journey through the caves, only to come across a cave exit that leads to a secluded pool on the interior of the island. Looking around you realize this place is absolutely beautiful, and seems to speak to something deep down inside you. Deciding not to worry about treasure for a time, you spend some time basking in the beautiful light as you watch it shine off the pool, and drinking your fill of the gloriously clear water. Eventually you get back up to leave, feeling much happier after your visit to the nice pool.";
-					now thirst of Player is 0;
-					increase humanity of Player by 15;
-					stop the action;
-				if T is 9:
-					say "     Wandering through the caves of the island, you hear a strange, rhythmic noise coming from one of the caverns up ahead. Do you want to investigate?";
-					if Player consents:
-						say "     Moving ahead, you find yourself in a large open beach cave, a strangely pleasant scent filling your nostrils as you move into the cave. The noise continues, before a loud roar lets out behind you. Jumping you turn around swiftly to see a sea dragon and dragoness panting together in the far back of the cave, this must be their lair, and the rhythmic sound was the sound of their mating! The two large beasts stare at you for a second, and you stare back at them as well, before they can react you break into a run, leaving the cave to the two large beasts before they can get around to punishing you for trespassing. Still after the encounter you find yourself feeling slightly strange and woozy, your head still filled with the scent of their mating as you realize it is trying to change you...";
-						if Player is female or FemaleList is banned:
-							infect "Feral Sea Dragon";
-							infect "Feral Sea Dragon";
-						else:
-							infect "Feral Sea Dragoness";
-							infect "Feral Sea Dragoness";
-					else:
-						say "     Deciding that it probably isn't treasure, you continue on your way.";
-					stop the action;
+						ItemGain pirate bandana by 1;
 				else:
-					say "     Wandering through the dark caves, you slip on one of the damp corridors and find yourself sliding out of control down a long ramp. The ramp twists and turns before depositing your screaming body in the sea at the coast of the island. As you sputter and look around for a way back to the beach, you spot something heading your way!";
-					now battleground is "Beach";
-					fight;
-					stop the action;
-			if rarequesting is 3:
-				say "     You look at the dark caves and think about entering them again to seek your fortune, only to pull out one of the coins you found earlier, flip it a few times, and decide that perhaps it would be best to be content with the treasure you have already found.";
-				stop the action;
-		else:
-			say "     You already found the treasure.";
-
+					ItemGain food by 1;
+				let minortreasure be a random number from 1 to number of filled rows in the Table of Random Critters;
+				choose row minortreasure from the Table of Random Critters;
+				if there is a loot entry:
+					if loot entry is not empty and lootchance entry > 0:
+						ItemGain loot entry by 1;
+						ItemGain dirty water by 1;
+					else:
+						ItemGain pirate bandana by 1;
+				else:
+					ItemGain food by 1;
+			-- 8:
+				say "     Hunting through the dark and dreary caves, you begin to wonder if you will ever find the treasure that is supposedly to be hidden in this place, sighing you continue your long journey through the caves, only to come across a cave exit that leads to a secluded pool on the interior of the island. Looking around you realize this place is absolutely beautiful, and seems to speak to something deep down inside you. Deciding not to worry about treasure for a time, you spend some time basking in the beautiful light as you watch it shine off the pool, and drinking your fill of the gloriously clear water. Eventually you get back up to leave, feeling much happier after your visit to the nice pool.";
+				now thirst of Player is 0;
+				increase humanity of Player by 15;
+			-- 9:
+				say "     Wandering through the caves of the island, you hear a strange, rhythmic noise coming from one of the caverns up ahead. Do you want to investigate?";
+				if Player consents:
+					LineBreak;
+					say "     Moving ahead, you find yourself in a large open beach cave, a strangely pleasant scent filling your nostrils as you move into the cave. The noise continues, before a loud roar lets out behind you. Jumping you turn around swiftly to see a sea dragon and dragoness panting together in the far back of the cave, this must be their lair, and the rhythmic sound was the sound of their mating! The two large beasts stare at you for a second, and you stare back at them as well, before they can react you break into a run, leaving the cave to the two large beasts before they can get around to punishing you for trespassing. Still after the encounter you find yourself feeling slightly strange and woozy, your head still filled with the scent of their mating as you realize it is trying to change you...";
+					if (Player is female and Player is not FemalePreferred) or Player is MalePreferred or FemaleList is banned:
+						MultiInfect "Feral Sea Dragon" repeats 2;
+					else:
+						MultiInfect "Feral Sea Dragoness" repeats 2;
+				else:
+					LineBreak;
+					say "     Deciding that it probably isn't treasure, you continue on your way.";
+			-- 10:
+				say "     Wandering through the dark caves, you slip on one of the damp corridors and find yourself sliding out of control down a long ramp. The ramp twists and turns before depositing your screaming body in the sea at the coast of the island. As you sputter and look around for a way back to the beach, you spot something heading your way!";
+				now battleground is "Beach";
+				fight;
+	[if rarequesting is 3:
+		say "     You look at the dark caves and think about entering them again to seek your fortune, only to pull out one of the coins you found earlier, flip it a few times, and decide that perhaps it would be best to be content with the treasure you have already found.";]
 
 Section 2 - Pirate island quest line
+
+tmapfound is a number that varies.
+boatfound is a number that varies.	[tracks need for a boat for Bouncy Castle quest]
+[0 = not looking, 1 = looking, 2 = dingy, 3 = boat]
 
 Table of GameEventIDs (continued)
 Object	Name
@@ -185,8 +151,6 @@ Noteinbottle	"Noteinbottle"
 Noteinbottle is a situation.
 ResolveFunction of Noteinbottle is "[ResolveEvent Noteinbottle]".
 Sarea of Noteinbottle is "Beach".
-
-tmapfound is a number that varies.
 
 to say ResolveEvent Noteinbottle:
 	say "     Walking along the beach and enjoying the view of the surf, you notice something bobbing on the waves just out of reach of shore. Do you dive in to try to get it?";
@@ -206,8 +170,8 @@ to say ResolveEvent Noteinbottle:
 		if fightoutcome >= 20:
 			say "     Driven back by the sea creatures, you are forced back to the beach. You've lost sight of the bottle for now.";
 	else:
+		LineBreak;
 		say "     Deciding not to bother with the strange bobbing object, you continue your nice walk along the beach.";
-
 
 [ - moved into Rod's dialog set
 Instead of conversing Rod Mallrat while tmapfound is 1:
@@ -222,15 +186,13 @@ Findingboat	"Findingboat"
 Findingboat is a situation.
 ResolveFunction of Findingboat is "[ResolveEvent Findingboat]". The level of Findingboat is 7.
 Sarea of Findingboat is "Beach".
-boatfound is a number that varies.	[tracks need for a boat for Bouncy Castle quest]
-[0 = not looking, 1 = looking, 2 = dingy, 3 = boat]
 
 to say ResolveEvent Findingboat:
 	if tmapfound is 2:
 		say "     Wandering along the beach, you come across a large jumbled mess made up of several different abandoned boats from the marina that have all washed up ashore here. Glancing through the tangle of boats shows you that one or two of them might still work, even though they wouldn't go too far, they might be able to get you to the island shown on the map[if boatfound is 2]! While your little dingy won't make to the island, one of these might be able to do the job[else if boatfound is 1]. After you get back, you could probably use this to get to that bouncy castle the dolphins have set up, you think, though the thoughts of gold are in the foremost of your mind right now[else if boatfound is 4]. After you get back, you could probably use this to get to Vohr Island, following the tip of the rat twins, though the thoughts of gold are in the foremost of your mind right now[end if]. Deciding to take a look, you spend some time searching through the boats to find one that could get you where you need to go.";
-		let bonus be (( Perception of Player minus 10 ) divided by 2);
+		let bonus be ( Perception of Player minus 10 ) divided by 2;
 		let diceroll be a random number from 1 to 20;
-		say "     You roll 1d20([diceroll])+[bonus]: [diceroll + bonus], ";
+		say "[line break]     You roll 1d20([diceroll])[if bonus >= 0]+[end if][bonus] = [special-style-1][diceroll + bonus][roman type] vs [special-style-2]15[roman type] (Perception Check): ";
 		increase diceroll by bonus;
 		if diceroll > 14:
 			say "Finding a usable boat, you make sure you have everything you might need, before setting out on the waves in search of the island the map talks about, visions of pirate treasure sparkling through your head.";
@@ -239,8 +201,9 @@ to say ResolveEvent Findingboat:
 				challenge "Shark Herm";
 				if lost is 0:
 					say "     Victorious over the pirates who seem intent on stopping you from reaching the island, you continue along your way, and soon the small island is in sight, the island doesn't seem much different from many other small islands in these waters, but you are sure it is the right one, and even better yet, you can see a much easier path back to the shore from here and a cove to store your boat. It should be much easier to visit and leave the island now that you have been here once!";
-					AddNavPoint Pirate Island;
+					WaitLineBreak;
 					Move player to Pirate Island;
+					AddNavPoint Pirate Island;
 					now Findingboat is resolved;
 					now tmapfound is 3;
 					now boatfound is 3;
@@ -257,6 +220,5 @@ to say ResolveEvent Findingboat:
 		now boatfound is 2;
 	else:
 		say "     Traveling along the beach, you come across a large, jumbled mess made up of several different abandoned boats from the marina that have all washed up ashore here. Glancing through the tangle of boats shows you that one or two of them might still work, but they probably wouldn't be able to take you very far, so you end up continuing on your way, forced to look for another method of getting out of the city.";
-
 
 Pirate Island ends here.

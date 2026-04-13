@@ -396,7 +396,7 @@ this is the hoofstomp rule:		[double-damage hoof stomping]
 	let dam be ( wdam entry times a random number from ( 80 - ( peppereyes * 4 ) ) to 120 ) / 50; [Double damage]
 	if HardMode is true and a random chance of 1 in ( 10 + peppereyes ) succeeds:
 		now dam is (dam * 150) divided by 100;
-		say "The enemy finds a particular vulnerability in your defense - [italic type]Critical Hit![roman type][line break]";
+		say "The enemy finds a particular vulnerability in your defense - Critical Hit!";
 	say "The centaur rears up to attack you, slamming both hooves into [one of]you[or]your chest[purely at random], knocking your over briefly. [one of]While you're prone,[or]This allows it to use[purely at random] its hard, heavy hooves to [one of]pound at you[or]stomp away at you[or]strike you repeatedly[purely at random] until you manage to get out of the way and get back on your feet. This [one of]powerful[or]strong[or]devastating[purely at random] attack does [special-style-2][dam][roman type] damage!";
 	now damagein is dam;
 	say "[noshieldabsorbancy]"; [unable to use shield while pinned]

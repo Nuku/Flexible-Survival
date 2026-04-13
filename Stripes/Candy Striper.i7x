@@ -14,24 +14,24 @@ Version 5 of Candy Striper by Stripes begins here.
 Section 1 - Creature Responses
 
 nocandycoonsex is a number that varies.
-coonstatus is a number that varies.
-LastCandyWalkin is a number that varies.
 
 to say losetocandycoon:
+	setmonster "Raccoon";
 	choose row MonsterID from the Table of Random Critters;
 	now nocandycoonsex is 0;
 	project Figure of Candy_naked_icon;
 	if Player is male:
-		say "     Victorious, the girlish coon giggles happily and pushes you to the ground. Working off your remaining clothes with nimble fingers, the candy striper raises his skirt, exposing his hot-pink erection.[line break]";
-		say "     [bold type]Knowing you'll be taking his six inch cock one way or the other, you have a brief opportunity to try to distract him or simply let him take your ass as he clearly intends.[roman type][line break]";
-		LineBreak;
+		say "     Victorious, the girlish coon giggles happily and pushes you to the ground. Working off your remaining clothes with nimble fingers, the candy striper raises his skirt, exposing his hot-pink erection.";
+		say "[line break]     [bold type]Knowing you'll be taking his six inch cock one way or the other, you have a brief opportunity to try to distract him or simply let him take your ass as he clearly intends.[roman type][line break]";
 		say "     ([link]Y[as]y[end link]) - Anal.";
 		say "     ([link]N[as]n[end link]) - Oral.";
 		if Player consents:
+			LineBreak;
 			say "     Having decided to accept your fate, you pause and allow the cotton candy coon to move in behind you, lining up his cock with your butt. After a few strokes to enjoy the feel of your bottom against his hot-pink shaft, he presses its glans against your back passage and slowly sinks it into you. His paws move around to play with your cock[smn] while he pounds away at your ass with soft moans and squeals of pleasure. His hot-pink cock sinks into you again and again with practiced strokes. The stimulation quickly gets you quite aroused and you're leaking precum all over the coon's paws. Leaning overtop you, he licks and nibbles at your ears, moaning that you're such a nice fuck and a good patient who'll get his hot medicine real soon. True enough, in a few more strokes you can feel the pink raccoon thrust hard into you and pump his hot seed deep into your bowels. His paws work at your cock frantically, coaxing you to climax moments later.";
 			say "     Finished with you, the coon slides his spent shaft out and gives you a kiss, rich with the taste of cotton candy before leaving you to recover.";
 			CreatureSexAftermath "Player" receives "AssFuck" from "Raccoon";
 		else:
+			LineBreak;
 			say "     In the hopes of distracting the horny coon from your ass, you do the only thing you can hope will work and plunge your mouth over his cock, licking and sucking at it. He moans softly and grins at this. 'Oh, I knew you were going to be fun. With an attitude like that, you'll make for a sexy boytoy soon enough,' he giggles as he thrusts. His hard shaft leaks cotton candy flavored pre onto your tongue. Its sweetness surprises you and makes you lick and suck more eagerly. As you work to suck him off, his sweet taste excites you more and more and you become increasingly eager to get a tasty treat from this gay boi. Your tongue plays over his cock as you fondle his balls, making him release more girly moans and squeaks until he finally does cum, shooting his sugary seed down your throat. He strokes your head and smiles down at you as he slips his cock from your lips. You can see that the dangling strand of cum connecting you has a light, rose tint to it before it snaps.";
 			let x be Libido of Player;
 			if Player is submissive, increase x by 15;
@@ -43,13 +43,12 @@ to say losetocandycoon:
 				WaitLineBreak;
 				say "     You realize that he's still intent on fucking you even after the blowjob, but you don't find yourself adverse to the prospect anymore. Lost in a rush of hormones from the girly coon's sweet seed, you move into position willingly for him this time. As you raise your ass for him, he pumps a hand over his waning erection[if anallevel is 3] while running a paw over your bottom. He pops a finger into his muzzle and draws it out slowly before working the wet digit into your anus to open you up[else], bringing it back up for another go[end if] before pressing his slick cock between your cheeks. After a few strokes to enjoy the feel of your bottom against his hot-pink shaft, he presses its glans against your back passage and slowly sinks it into you. His paws move around to play with your cock[smn] while he pounds away at your ass with soft moans and squeals of pleasure. You can't help but respond in kind, succumbing further to your lusts. His hot-pink cock sinks into you again and again with practiced strokes. The stimulation quickly gets you quite aroused and you're leaking precum all over the coon's paws. Leaning overtop you, he licks and nibbles at your ears, moaning that you're such a nice fuck and a good patient who'll get his hot medicine real soon. True enough, in a few more strokes you can feel the pink raccoon thrust hard into you and pump his hot seed deep into your bowels. His paws work at your cock frantically, coaxing you to climax moments later.";
 				say "     Finished with you, the coon slides his spent shaft out and gives you a kiss, rich with the taste of cotton candy before leaving you to recover.";
+				CreatureSexAftermath "Player" receives "AssFuck" from "Raccoon";
 				now Libido of Player is ( Libido of Player + Libido of Player + libido entry ) / 3;
 				infect "Raccoon"; [extra infection for double-sex]
-				CreatureSexAftermath "Player" receives "AssFuck" from "Raccoon";
 			else:
 				say "     'Nice job, sweetie,' he giggles, kissing you to share in the taste of his own cotton candy sweetness before dashing off. 'Catch you later, cutie.' Licking your lips, you find yourself looking forward to it.";
-				increase Libido of Player by 15;
-				if Libido of Player > 100, now Libido of Player is 100;
+				raise Player Libido by 15;
 			CreatureSexAftermath "Player" receives "OralCock" from "Raccoon";
 	else:
 		say "     The pink highlighted raccoon shoves you down to your knees in front of him. With a flourish, he flips up his skirt to expose his hot pink six incher to you. You resist the urge to make a comment about its size, given the size on most other creatures you've seen running around these days. He pulls your head forward, sliding his cock into your mouth with a soft moan. 'You're no sexy boi, but you'll have to do. Any port in a storm, as it were,' he giggles as he thrusts. His hard shaft leaks cotton candy flavored pre onto your tongue. Its sweetness surprises you and makes you lick and suck more eagerly. Glancing up, you can see he's closed his eyes, perhaps imagining a horny male in your place.";
@@ -66,6 +65,7 @@ to say beatthecandycoon:
 	else:
 		say "     You manage to knock the fight out of the coon boytoy. He moans and plays with himself, rolling over to expose his bottom to you. You lick your lips, finding yourself quite tempted to have your way with him and use him like your own pink plaything for a bit.";
 		if Player consents:
+			LineBreak;
 			now nocandycoonsex is 0;
 			if Player is male:
 				say "     You step over to him and grab his cute bottom, giving it a squeeze. He moans and wiggles his rear back against your hands as you line up your cock with that tight pucker. His back door spreads open for you rather easily, though still squeezes quite nicely around your cock as you mount him. You grip his shoulders firmly and pound into him, making the girly boi moan in delight again and again. The coon's cock, hot pink in color and six inches in length, twitches between his legs, dripping precum onto the ground beneath him as he's fucked. Eventually, your excitement becomes too great and you climax, shooting your hot seed deep inside the effeminate coon boi, much to his delight. As the pink raccoon sprays his pink seed onto the ground, the air fills with the scent of cotton candy. Done with him, you leave him there, moaning and panting in pleasure.";
@@ -75,13 +75,11 @@ to say beatthecandycoon:
 				say "     The girly coon you've found makes a wonderful plaything, able to give you a long, satisfying ride with several orgasms before he finally gives in to his instincts and shoots his hot seed deep inside you. The cotton candy smell that hangs around him grows stronger as he cums. You let the cute coon drain his balls inside you before pulling off. A mix of your juices and his pink cum clings to his cock as he sags back to the floor, panting and blushing as you tell him what a fine job he's done before leaving.";
 				CreatureSexAftermath "Player" receives "PussyFuck" from "Raccoon";
 		else:
+			LineBreak;
 			say "     You decide it best to just leave the horny coon to his own devices.";
 			increase nocandycoonsex by 1;
 
 Section 2 - Creature Insertio
-
-to say candycoondesc:
-	say "     You have encountered a cute raccoon in a pink, candy striper outfit. The raccoon has a slender, feminine build. The fur that should normally be the dark mask around its eyes is a cotton-candy pink, as are the stripes to ring its tail, matching the striped top it wears. The pink raccoon looks you over, licking its lips and smiling at you with a girlish grin, running its paws down its body. That's when you notice that this rather flat-chested girl has a bulge in 'her' skirt. The gay boytoy grins playfully as you notice the growing bump in his mini skirt and moves in to play with you.";
 
 Table of CombatPrep (continued)
 name(text)	PrepFunction(text)
@@ -111,7 +109,7 @@ When Play begins:
 	now attack entry is "[one of]The uniformed raccoon gropes you firmly![or]The candy-striped raccoon beats you mercilessly with his teddy bear![or]The effeminate raccoon scratches at you with his claws![or]The effeminate raccoon shrieks and kicks you in the shin![or]The pink raccoon gives you a firm slap across the face![or]The girly coon slaps at you repeatedly![or]The candy striper manages a hard bite to your upper arm![or]The uniformed coon latches onto you and humps itself against you![or]The pink raccoon pulls you into a sudden, cotton-candy flavored kiss while its paws grope your ass![or]The raccoon turns and grinds his butt against your crotch, moaning with arousal![or]The pink raccoon turns and flips up the back of his skirt with his tail, exposing his cute bottom, hard cock and full balls, and his tailhole to you, in an effort to entice you to play![at random]";
 	now defeated entry is "[beatthecandycoon]";
 	now victory entry is "[losetocandycoon]"; [Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block as the demonstration text shows.]
-	now desc entry is "[candycoondesc]"; [ Description of the creature when you encounter it.]
+	now desc entry is "     You have encountered a cute raccoon in a pink, candy striper outfit. The raccoon has a slender, feminine build. The fur that should normally be the dark mask around its eyes is a cotton-candy pink, as are the stripes to ring its tail, matching the striped top it wears. The pink raccoon looks you over, licking its lips and smiling at you with a girlish grin, running its paws down its body. That's when you notice that this rather flat-chested girl has a bulge in 'her' skirt. The gay boytoy grins playfully as you notice the growing bump in his mini skirt and moves in to play with you.[line break]"; [ Description of the creature when you encounter it.]
 	now face entry is "girlish, raccoon head with luscious lips and a mask of pink around your eyes"; [ Face description, format as "Your face is [Face of Player]." ]
 	now body entry is "slender and effeminate, with nimble little hands with pink claws. You smell faintly of cotton candy and lust"; [ Body Description, format as "Your Body is [Body of Player]." ]
 	now skin entry is "soft, gray fur with pink highlights over your"; [ skin Description, format as "your body is covered in (your text) skin."]
@@ -121,7 +119,7 @@ When Play begins:
 	now body change entry is "it becomes a slender and effeminate. Your hands become nimble paws, with little pink claws at the tips of your gray-furred fingers"; [ Body change text, format as "Your body feels funny as [body change entry]." ]
 	now skin change entry is "it grows a soft, gray fur with pink highlights"; [ Skin change text, format as "Your skin feels funny as [skin change entry]." ]
 	now ass change entry is "as the nanites bigin to remold it, leaving you with an adorable bubble butt. The tingling in your bum is soon overshadowed by a painful stinging as a fluffy raccoon's tail extends from your spine. Where there would be dark fur, it instead has bright pink bands to ring it"; [ Ass/tail change text, format as "Your ass feels funny as [ass change entry]." ]
-	now cock change entry is "it takes becomes hot-pink in color and otherwise human-like in shape"; [ cock change text. format as "Your cock feels funny as (your text)." ]
+	now cock change entry is "it becomes hot-pink in color and otherwise human-like in shape"; [ cock change text. format as "Your cock feels funny as (your text)." ]
 	now str entry is 10;
 	now dex entry is 14;
 	now sta entry is 12;
@@ -262,8 +260,6 @@ When Play begins:
 	[Clit Size Adjective is generated by a function and can be used in scenes: very small/small/average/large/very large]
 ]
 
-
-
 Section 3 - Raccoon Pet
 
 Table of GameCharacterIDs (continued)
@@ -279,89 +275,54 @@ Description of pink raccoon is "[PinkRacconDesc]".
 Weapon Damage of pink raccoon is 10.
 Level of pink raccoon is 1.
 Dexterity of pink raccoon is 15.
-Summondesc of pink raccoon is "[SummonPinkRaccoon]".
+Summondesc of pink raccoon is "     Coming happily to your call, the girly raccoon runs up to you and wraps his arms around you, hugging you close. He churrs happily, ready and eager to obey.[line break]".
 Dismissdesc of pink raccoon is "[DismissPinkRaccoon]".
 Assault of pink raccoon is "[one of]The raccoon charges in, regardless of any risk to himself and strikes wildly at your enemy![or]Your raccoon pet leaps at the enemy, trying to tackle them. He gets them off balance long enough for you to score a quick hit before he's tossed off![or]Yipping angrily, he nips at your foe![or]The coon boy hikes up his skirt and starts masturbating, shooting his hot seed onto his dress in a show that distracts your foe long enough to get in a quick strike![or]The raccoon grabs stray trash and rubble, pelting your enemy with it![at random]".
-Fuckscene of pink raccoon is "[sexwithpinkraccoonpet]".
+fuckscene of pink raccoon is "[sexwithpinkraccoonpet]".
+the scent of the pink raccoon is "     The pink coonboi smell of cotton candy, arousal and sex, all with a faint hint of your own scent beneath that.".
 
 when play begins:
-	add "Feral" to Traits of pink raccoon;
+	add "Feral" to Traits of pink raccoon, if absent;
 
 to say PinkRacconDesc:
 	say "     The pink coonboi has soft, gray fur with pink highlights and pink rings around his tail. He looks at you with mindless adoration, now a loyal and obedient pet and plaything.";
 	if pink raccoon is listed in companionList of Player:
 		say "     [bold type]He is currently following you as your battle companion.[roman type][line break]";
 
-the scent of the pink raccoon is "The pink coonboi smell of cotton candy, arousal and sex, all with a faint hint of your own scent beneath that.".
-
-to say SummonPinkRaccoon:
-	if Pink Raccoon is visible:
-		say "     Coming happily to your call, the girly raccoon runs up to you and wraps his arms around you, hugging you close. He churrs happily, ready and eager to obey.";
-	else:
-		say "     Coming happily to your call, the girly raccoon runs up to you and wraps his arms around you, hugging you close. He churrs happily, ready and eager to obey.";
-
 to say DismissPinkRaccoon:
 	move Pink Raccoon to Computer Lab;
-	if Player is not in Computer Lab:
-		say "     The girly raccoon wraps his arms around you, hugging you before leaving your side. Eager to return to it when you call.";
-	else:
-		say "     The girly raccoon wraps his arms around you, hugging you before leaving your side. Eager to return to it when you call.";
+	say "     The girly raccoon wraps his arms around you, hugging you before leaving your side. Eager to return to it when you call.";
 
 to say sexwithpinkraccoonpet:
-	[puts Raccoon as lead monster in case of impregnation]
-	repeat with y running from 1 to number of filled rows in Table of Random Critters:
-		choose row y in Table of Random Critters;
-		if Name entry is "Raccoon":
-			now MonsterID is y;
-			break;
 	if lastfuck of pink raccoon - turns < 4:
-		say "As eager as pink fucktoy pet is, you decide he might need a short break before going again.";
+		say "     As eager as your pink fucktoy pet is, you decide he might need a short break before going again.";
 	else:
 		if Player is puremale:
-			let T be a random number between one and five;
-			if T is 1:
-				say "[coonpetsex1]";
-			if T is 2:
-				say "[coonpetsex2]";
-			if T is 3:
-				say "[coonpetsex3]";
-			if T is 4:
-				say "[coonpetsex4]";
-			if T is 5:
-				say "[coonpetsex5]";
+			if a random number between one and five is:
+				-- 1: say "[coonpetsex1]";
+				-- 2: say "[coonpetsex2]";
+				-- 3: say "[coonpetsex3]";
+				-- 4: say "[coonpetsex4]";
+				-- 5: say "[coonpetsex5]";
 		else if Player is purefemale:
-			let T be a random number between one and six;
-			if T is 1:
-				say "[coonpetsex6]";
-			if T is 2:
-				say "[coonpetsex7]";
-			if T is 3:
-				say "[coonpetsex8]";
-			if T is 4:
-				say "[coonpetsex9]";
-			if T is 5:
-				say "[coonpetsex10]";
-			if T is 6:
-				say "[coonpetsex11]";
+			if a random number between one and six is:
+				-- 1: say "[coonpetsex6]";
+				-- 2: say "[coonpetsex7]";
+				-- 3: say "[coonpetsex8]";
+				-- 4: say "[coonpetsex9]";
+				-- 5: say "[coonpetsex10]";
+				-- 6: say "[coonpetsex11]";
 		else:
-			let T be a random number between one and seven;
-			if T is 1:
-				say "[coonpetsex1]";
-			if T is 2:
-				say "[coonpetsex2]";
-			if T is 3:
-				say "[coonpetsex3]";
-			if T is 4:
-				say "[coonpetsex4]";
-			if T is 5:
-				say "[coonpetsex5]";
-			if T is 6:
-				say "[coonpetsex6]";
-			if T is 7:
-				say "[coonpetsex11]";
+			if a random number between one and seven is:
+				-- 1: say "[coonpetsex1]";
+				-- 2: say "[coonpetsex2]";
+				-- 3: say "[coonpetsex3]";
+				-- 4: say "[coonpetsex4]";
+				-- 5: say "[coonpetsex5]";
+				-- 6: say "[coonpetsex6]";
+				-- 7: say "[coonpetsex11]";
 		infect "Raccoon";
 		now lastfuck of pink raccoon is turns;
-
 
 An everyturn rule:
 	if pink raccoon is listed in companionList of Player and skipturnblocker is 0:
@@ -369,7 +330,7 @@ An everyturn rule:
 		let diceroll be a random number from 40 to 180; [lust check vs 180, player libido 40 or less auto-wins]
 		if diceroll < Libido of Player and lastfuck of pink raccoon - turns >= 4:
 			say "[sexwithpinkraccoonpet]";
-
+		if Libido of Player > 100, now Libido of Player is 100;
 
 to say coonpetsex1:		[fuck coon ass]
 	say "     Feeling a stirring in your loins, you glance over at the candy coon accompanying you and decide to get a little relief. His cotton candy scent has been driving you wild for the longest time, and with the lull in the action you figure you'll let him know it. He looks up at you with his adoring eyes and you grab his cute, skirted bottom, giving it a squeeze. He moans softly and turns around, getting on all fours to present himself to you. His pink-banded tail arches up high, flipping up his skirt and baring his ass to you with the sort of eager anticipation you've come to expect from him..";
@@ -437,6 +398,11 @@ to say coonpetsex11:		[f paw him off]
 
 Section 4 - Raccoon at Bunker
 
+coonstatus is a number that varies.
+LastCandyWalkin is a number that varies.
+[candytalk is a number that varies.]
+lastCandyfucked is a number that varies. lastCandyfucked is usually 555.
+coonsex is a number that varies.
 
 Table of GameCharacterIDs (continued)
 object	name
@@ -479,17 +445,12 @@ SexuallyExperienced of Candy is true.
 TwistedCapacity of Candy is false. [Twisted Characters can take any penetration, no matter the size]
 Sterile of Candy is false. [steriles can't knock people up]
 MainInfection of Candy is "Raccoon".
-Description of Candy is "[coondesc]".
-Conversation of Candy is { "Cock!" }.
-The scent of the Candy is "The candy coon smell of cotton candy, male arousal and sex.".
-candytalk is a number that varies.
-lastCandyfucked is a number that varies. lastCandyfucked is usually 555.
-coonsex is a number that varies.
+Description of Candy is "     The pink raccoon, now going by the name of Candy, is staying peaceably in the bunker. His fur is a light gray with pink highlights. His raccoon mask is pink, as are the stripes on his body and tail. The raccoon has an effeminate body with a tight ass and slender figure. He's sewed his candy striper uniform and is happily prancing around in it, looking quite cute. Watching him, you do notice that he's found some lace-trimmed panties to add to his ensemble, keeping him from completely showing when he sashays around. He's largely keeping himself out of trouble, though occasionally seems to revert to more primal needs and [if HP of Sven >= 10 and HP of Sven < 30]coaxes your feline pet into some more playtime[else]masturbates furiously until the room smells of cotton candy from his sweet cum[end if]. You find yourself unsure if he's succumbed to the nanites or not, though the fact that he hasn't molested anybody yet instills hope, and you'll just hope for the best for now.[line break]".
+[Conversation of Candy is { "Cock!" }.]
+the fuckscene of Candy is "[sexwithCandy]".
+icon of Candy is Figure of Candy_clothed_icon.
+The scent of the Candy is "     The candy coon smell of cotton candy, male arousal and sex.".
 [ lust of Candy controls his interaction w/Fang]
-
-to say coondesc:
-	project Figure of Candy_clothed_icon;
-	say "     The pink raccoon, now going by the name of Candy, is staying peaceably in the bunker. His fur is a light gray with pink highlights. His raccoon mask is pink, as are the stripes on his body and tail. The raccoon has an effeminate body with a tight ass and slender figure. He's sewed his candy striper uniform and is happily prancing around in it, looking quite cute. Watching him, you do notice that he's found some lace-trimmed panties to add to his ensemble, keeping him from completely showing when he sashays around. He's largely keeping himself out of trouble, though occasionally seems to revert to more primal needs and [if HP of Sven >= 10 and HP of Sven < 30]coaxes your feline pet into some more playtime[else]masturbates furiously until the room smells of cotton candy from his sweet cum[end if]. You find yourself unsure if he's succumbed to the nanites or not, though the fact that he hasn't molested anybody yet instills hope, and you'll just hope for the best for now.";
 
 [Update for WalkinEvents table]
 Table of NavInEvents (continued)
@@ -513,15 +474,14 @@ to say ResolveEvent LibraryCandyMeeting:
 	project Figure of Candy_clothed_icon;
 	say "     As you arrive at the library, you can see the pink coon waiting for you near the entrance, having made the trip here per your directions. He prances over to you with a grin on his face. 'Thanks for getting me out of there, hon. I checked out our place and picked a bunk down in the bunker if that's alright,' he churrs. 'Doc's been going extra-crazy lately. I mean, I think he was a little odd before the whole mouse thing, but since then, he's been doing more and more experiments on everyone at the hospital.' He hugs his arms around himself and shudders a little. 'I think there used to be more doctors... I think... but, well, if there were, there obviously aren't anymore, right?' he asks, looking a bit perturbed by the gap in his memory.'";
 	say "     'I don't really remember who I am anymore. I'm pretty sure I was volunteering at the hospital and that I was gay before the change... which, admittedly, hasn't really changed much... But aside from that, it's all rather hazy. Since I don't remember my name, how about you call me Candy, hon?' He reaches into his pocket and pulls out a small needle, another of the healing boosters. 'I don't really have much to give you to say thanks, but you should probably take this. With the way things are, you might need it out there if you're going to keep running around. Better safe than sorry, right?'";
-	ItemGain healing booster by 1;
 	if Player is male:
-		say "     'What I'd really like to do is show you how much I appreciate your help,' he says, running a finger up your thigh. 'I doubt I can stop you from keeping up your work out there, but... you don't have to go right away, do you?' he asks, giving you an openly seductive look.";
+		say "     'What I'd really like to do is show you how much I appreciate your help,' he says, running a finger up your thigh. 'I doubt I can stop you from keeping up your work out there, but... you don't have to go right away, do you?' he asks, giving you an openly seductive look";
 		if BodyName of Player is "Raccoon":
 			say ". 'I'm so glad you decided to keep the new look, sweetie,' he adds, rubbing his slender, coon body against yours with a sexy smile";
 		say ".";
 	say "     With that said, the pink raccoon saunters into the building on his paw-pads, swaying his hips and tail a little before throwing you a look over the shoulder and vanishing inside.";
+	ItemGain healing booster by 1;
 	now LibraryCandyMeeting is resolved;
-
 
 instead of conversing the Candy: [MIGHT ACTUALLY BE A HUGE MESS, I DID MY BEST.]
 	project Figure of Candy_clothed_icon;
@@ -533,34 +493,28 @@ instead of conversing the Candy: [MIGHT ACTUALLY BE A HUGE MESS, I DID MY BEST.]
 		say "     [one of]'I'm glad I'm away from there. I mean, the orderlies were fun if you could catch them when they weren't busy, but lately they're always doing something. And a coon's got needs, you know,' he says with a playful wink.[or]'Please keep an eye out for any toys or lube while you're out there, books only go so far!' the coon says with a giggle.[or]'See if you can find some more cute guys to bring back here so we have some proper company, sweetie,' he churrs with a grin.[or]'I'm sorry for any trouble I caused you back at the hospital. I was a little... ah... worked up. I'm doing better now, really,' he says, giving you a big smile, trying to look sincere. At least he's apologizing?[or]'You know, being cooped up in a library reminded me of one thing, at least. Turns out I loved romance novels! And this place is the motherlode!' he says, a sparkle briefly visible in the coon's eyes.[or]'Y'know what I really don't miss? The Chimeras. Sure, they were hung, but... I've got some standards. And the walking dead just don't do it for me.'[or]'You know, sometimes I remember the silliest things. Like my grandmother's recipe for chicken kiev. I don't remember anything else about her, but I remember the chicken. Weird, huh?'[or]Candy pats your hand. 'Don't worry about Sven, sweetie. I know he's yours. I'm just... helping him get some experience.'[or]Candy grins. 'I'll keep a close eye on your kitty while you're out, sweetie.'[at random]";
 [	else if HP of Sven >= 30 and HP of Sven < 50:
 		say "***Dialog variations w/confident Sven in bunker.";]
-	else if HP of Candy > 2 and HP of Candy < 100 and HP of Sven >= 10 and HP of Sven < 30 and lastfuck of sven < 6:
-		say "     [one of]'I'm glad I'm away from there. I mean, the orderlies were fun if you could catch them when they weren't busy, but lately they're always doing something. And a coon's got needs, you know,' he says with a playful wink.[or]'Please keep an eye out for any toys or lube while you're out there, books only go so far!' the coon says with a giggle.[or]'See if you can find some more cute guys to bring back here so I have some proper company, sweetie,' he churrs with a grin.[or]'I'm sorry for any trouble I caused you back at the hospital. I was a little... ah... worked up. I'm doing better now, really,' he says, giving you a big smile, trying to look sincere. At least he's apologizing?[or]'You know, being cooped up in a library reminded me of one thing, at least. Turns out I loved romance novels! And this place is the motherlode!' he says, a sparkle briefly visible in the coon's eyes.[or]'Y'know what I really don't miss? The Chimeras. Sure, they were hung, but... I've got some standards. And the walking dead just don't do it for me.'[or]'You know, sometimes I remember the silliest things. Like my grandmother's recipe for chicken kiev. I don't remember anything else about her, but I remember the chicken. Weird, huh?'[or]Candy pats your hand. 'Don't worry about Sven, sweetie. I know he's yours. I'm just... helping him get some experience.'[or]Candy grins. 'I'll keep a close eye on your kitty while you're out, sweetie.'[or]'I can't wait to introduce you and Sven to John, he'll just adore you both, I'm sure of it!'[or]'Really, I guess it was kind of a blessing I went to the hospital after that fight. I don't wanna think about what would have happened if I hadn't wound up meeting you...'[or]'I wonder if I'm going to start remembering more things, now? It'd be nice, I suppose.'[at random]";
 	else if HP of Candy > 2 and HP of Candy < 100:
-		say "     [one of]'I'm glad I'm away from there. I mean, the orderlies were fun if you could catch them when they weren't busy, but lately they're always doing something. And a coon's got needs, you know,' he says with a playful wink.[or]'Please keep an eye out for any toys or lube while you're out there, books only go so far!' the coon says with a giggle.[or]'See if you can find some more cute guys to bring back here so I have some proper company, sweetie,' he churrs with a grin.[or]'I'm sorry for any trouble I caused you back at the hospital. I was a little... ah... worked up. I'm doing better now, really,' he says, giving you a big smile, trying to look sincere. At least he's apologizing?[or]'You know, being cooped up in a library reminded me of one thing, at least. Turns out I loved romance novels! And this place is the motherlode!' he says, a sparkle briefly visible in the coon's eyes.[or]'Y'know what I really don't miss? The Chimeras. Sure, they were hung, but... I've got some standards. And the walking dead just don't do it for me.'[or]'You know, sometimes I remember the silliest things. Like my grandmother's recipe for chicken kiev. I don't remember anything else about her, but I remember the chicken. Weird, huh?'[or]Candy pats your hand. 'Don't worry about Sven, sweetie. I know he's yours. I'm just... helping him get some experience.'[or]Candy grins. 'I'll keep a close eye on your kitty while you're out, sweetie.'[or]'I can't wait to introduce you and Sven to John, he'll just adore you both, I'm sure of it!'[or]'Really, I guess it was kind of a blessing I went to the hospital after that fight. I don't wanna think about what would have happened if I hadn't wound up meeting you...'[or]'I wonder if I'm going to start remembering more things, now? It'd be nice, I suppose.'[or]You end up speaking to Candy just as he's walking back from Sven's bunk. 'I've got him all warmed up for you, hon,' he churrs, licking his lips. 'Have fun!'[at random]";
-	else if HP of Candy >= 100 and HP of Sven < 10 or HP of Sven >= 50:
-		say "     [one of]'I'm glad I'm away from there. I mean, the orderlies were fun if you could catch them when they weren't busy, but lately they're always doing something. And a coon's got needs, you know,' he says with a playful wink.[or]'Please keep an eye out for any toys or lube while you're out there, books only go so far!' the coon says with a giggle.[or]'See if you can find some more cute guys to bring back here so I have some proper company, sweetie,' he churrs with a grin.[or]'I'm sorry for any trouble I caused you back at the hospital. I was a little... ah... worked up. I'm doing better now, really,' he says, giving you a big smile, trying to look sincere. At least he's apologizing?[or]'You know, being cooped up in a library reminded me of one thing, at least. Turns out I loved romance novels! And this place is the motherlode!' he says, a sparkle briefly visible in the coon's eyes.[or]'Y'know what I really don't miss? The Chimeras. Sure, they were hung, but... I've got some standards. And the walking dead just don't do it for me.'[or]Candy scratches his arm and frowns. 'I guess it's good that I'm not bothering with my past anymore. Maybe there's a reason I forgot everything, really.'[at random]";
-	else if HP of Candy >= 100 and HP of Sven >= 10 and HP of Sven < 30 and lastfuck of sven < 6:
-		say "     [one of]'I'm glad I'm away from there. I mean, the orderlies were fun if you could catch them when they weren't busy, but lately they're always doing something. And a coon's got needs, you know,' he says with a playful wink.[or]'Please keep an eye out for any toys or lube while you're out there, books only go so far!' the coon says with a giggle.[or]'See if you can find some more cute guys to bring back here so we have some proper company, sweetie,' he churrs with a grin.[or]'I'm sorry for any trouble I caused you back at the hospital. I was a little... ah... worked up. I'm doing better now, really,' he says, giving you a big smile, trying to look sincere. At least he's apologizing?[or]'You know, being cooped up in a library reminded me of one thing, at least. Turns out I loved romance novels! And this place is the motherlode!' he says, a sparkle briefly visible in the coon's eyes.[or]'Y'know what I really don't miss? The Chimeras. Sure, they were hung, but... I've got some standards. And the walking dead just don't do it for me.'[or]Candy scratches his arm and frowns. 'I guess it's good that I'm not bothering with my past anymore. Maybe there's a reason I forgot everything, really.'[or]Candy pats your hand. 'Don't worry about Sven, sweetie. I know he's yours. I'm just... helping him get some experience.'[or]Candy grins. 'I'll keep a close eye on your kitty while you're out, sweetie.'[at random]";
+		if HP of Sven >= 10 and HP of Sven < 30 and lastfuck of sven < 6:
+			say "     [one of]'I'm glad I'm away from there. I mean, the orderlies were fun if you could catch them when they weren't busy, but lately they're always doing something. And a coon's got needs, you know,' he says with a playful wink.[or]'Please keep an eye out for any toys or lube while you're out there, books only go so far!' the coon says with a giggle.[or]'See if you can find some more cute guys to bring back here so I have some proper company, sweetie,' he churrs with a grin.[or]'I'm sorry for any trouble I caused you back at the hospital. I was a little... ah... worked up. I'm doing better now, really,' he says, giving you a big smile, trying to look sincere. At least he's apologizing?[or]'You know, being cooped up in a library reminded me of one thing, at least. Turns out I loved romance novels! And this place is the motherlode!' he says, a sparkle briefly visible in the coon's eyes.[or]'Y'know what I really don't miss? The Chimeras. Sure, they were hung, but... I've got some standards. And the walking dead just don't do it for me.'[or]'You know, sometimes I remember the silliest things. Like my grandmother's recipe for chicken kiev. I don't remember anything else about her, but I remember the chicken. Weird, huh?'[or]Candy pats your hand. 'Don't worry about Sven, sweetie. I know he's yours. I'm just... helping him get some experience.'[or]Candy grins. 'I'll keep a close eye on your kitty while you're out, sweetie.'[or]'I can't wait to introduce you and Sven to John, he'll just adore you both, I'm sure of it!'[or]'Really, I guess it was kind of a blessing I went to the hospital after that fight. I don't wanna think about what would have happened if I hadn't wound up meeting you...'[or]'I wonder if I'm going to start remembering more things, now? It'd be nice, I suppose.'[at random]";
+		else:
+			say "     [one of]'I'm glad I'm away from there. I mean, the orderlies were fun if you could catch them when they weren't busy, but lately they're always doing something. And a coon's got needs, you know,' he says with a playful wink.[or]'Please keep an eye out for any toys or lube while you're out there, books only go so far!' the coon says with a giggle.[or]'See if you can find some more cute guys to bring back here so I have some proper company, sweetie,' he churrs with a grin.[or]'I'm sorry for any trouble I caused you back at the hospital. I was a little... ah... worked up. I'm doing better now, really,' he says, giving you a big smile, trying to look sincere. At least he's apologizing?[or]'You know, being cooped up in a library reminded me of one thing, at least. Turns out I loved romance novels! And this place is the motherlode!' he says, a sparkle briefly visible in the coon's eyes.[or]'Y'know what I really don't miss? The Chimeras. Sure, they were hung, but... I've got some standards. And the walking dead just don't do it for me.'[or]'You know, sometimes I remember the silliest things. Like my grandmother's recipe for chicken kiev. I don't remember anything else about her, but I remember the chicken. Weird, huh?'[or]Candy pats your hand. 'Don't worry about Sven, sweetie. I know he's yours. I'm just... helping him get some experience.'[or]Candy grins. 'I'll keep a close eye on your kitty while you're out, sweetie.'[or]'I can't wait to introduce you and Sven to John, he'll just adore you both, I'm sure of it!'[or]'Really, I guess it was kind of a blessing I went to the hospital after that fight. I don't wanna think about what would have happened if I hadn't wound up meeting you...'[or]'I wonder if I'm going to start remembering more things, now? It'd be nice, I suppose.'[or]You end up speaking to Candy just as he's walking back from Sven's bunk. 'I've got him all warmed up for you, hon,' he churrs, licking his lips. 'Have fun!'[at random]";
 	else if HP of Candy >= 100:
-		say "     [one of]'I'm glad I'm away from there. I mean, the orderlies were fun if you could catch them when they weren't busy, but lately they're always doing something. And a coon's got needs, you know,' he says with a playful wink.[or]'Please keep an eye out for any toys or lube while you're out there, books only go so far!' the coon says with a giggle.[or]'See if you can find some more cute guys to bring back here so we have some proper company, sweetie,' he churrs with a grin.[or]'I'm sorry for any trouble I caused you back at the hospital. I was a little... ah... worked up. I'm doing better now, really,' he says, giving you a big smile, trying to look sincere. At least he's apologizing?[or]'You know, being cooped up in a library reminded me of one thing, at least. Turns out I loved romance novels! And this place is the motherlode!' he says, a sparkle briefly visible in the coon's eyes.[or]'Y'know what I really don't miss? The Chimeras. Sure, they were hung, but... I've got some standards. And the walking dead just don't do it for me.'[or]Candy scratches his arm and frowns. 'I guess it's good that I'm not bothering with my past anymore. Maybe there's a reason I forgot everything, really.'[at random]";
+		if HP of Sven < 10 or HP of Sven >= 50:
+			say "     [one of]'I'm glad I'm away from there. I mean, the orderlies were fun if you could catch them when they weren't busy, but lately they're always doing something. And a coon's got needs, you know,' he says with a playful wink.[or]'Please keep an eye out for any toys or lube while you're out there, books only go so far!' the coon says with a giggle.[or]'See if you can find some more cute guys to bring back here so I have some proper company, sweetie,' he churrs with a grin.[or]'I'm sorry for any trouble I caused you back at the hospital. I was a little... ah... worked up. I'm doing better now, really,' he says, giving you a big smile, trying to look sincere. At least he's apologizing?[or]'You know, being cooped up in a library reminded me of one thing, at least. Turns out I loved romance novels! And this place is the motherlode!' he says, a sparkle briefly visible in the coon's eyes.[or]'Y'know what I really don't miss? The Chimeras. Sure, they were hung, but... I've got some standards. And the walking dead just don't do it for me.'[or]Candy scratches his arm and frowns. 'I guess it's good that I'm not bothering with my past anymore. Maybe there's a reason I forgot everything, really.'[at random]";
+		else if HP of Sven >= 10 and HP of Sven < 30 and lastfuck of sven < 6:
+			say "     [one of]'I'm glad I'm away from there. I mean, the orderlies were fun if you could catch them when they weren't busy, but lately they're always doing something. And a coon's got needs, you know,' he says with a playful wink.[or]'Please keep an eye out for any toys or lube while you're out there, books only go so far!' the coon says with a giggle.[or]'See if you can find some more cute guys to bring back here so we have some proper company, sweetie,' he churrs with a grin.[or]'I'm sorry for any trouble I caused you back at the hospital. I was a little... ah... worked up. I'm doing better now, really,' he says, giving you a big smile, trying to look sincere. At least he's apologizing?[or]'You know, being cooped up in a library reminded me of one thing, at least. Turns out I loved romance novels! And this place is the motherlode!' he says, a sparkle briefly visible in the coon's eyes.[or]'Y'know what I really don't miss? The Chimeras. Sure, they were hung, but... I've got some standards. And the walking dead just don't do it for me.'[or]Candy scratches his arm and frowns. 'I guess it's good that I'm not bothering with my past anymore. Maybe there's a reason I forgot everything, really.'[or]Candy pats your hand. 'Don't worry about Sven, sweetie. I know he's yours. I'm just... helping him get some experience.'[or]Candy grins. 'I'll keep a close eye on your kitty while you're out, sweetie.'[at random]";
+		else:
+			say "     [one of]'I'm glad I'm away from there. I mean, the orderlies were fun if you could catch them when they weren't busy, but lately they're always doing something. And a coon's got needs, you know,' he says with a playful wink.[or]'Please keep an eye out for any toys or lube while you're out there, books only go so far!' the coon says with a giggle.[or]'See if you can find some more cute guys to bring back here so we have some proper company, sweetie,' he churrs with a grin.[or]'I'm sorry for any trouble I caused you back at the hospital. I was a little... ah... worked up. I'm doing better now, really,' he says, giving you a big smile, trying to look sincere. At least he's apologizing?[or]'You know, being cooped up in a library reminded me of one thing, at least. Turns out I loved romance novels! And this place is the motherlode!' he says, a sparkle briefly visible in the coon's eyes.[or]'Y'know what I really don't miss? The Chimeras. Sure, they were hung, but... I've got some standards. And the walking dead just don't do it for me.'[or]Candy scratches his arm and frowns. 'I guess it's good that I'm not bothering with my past anymore. Maybe there's a reason I forgot everything, really.'[at random]";
 	else:
 		say "     [one of]'I'm glad I'm away from there. I mean, the orderlies were fun if you could catch them when they weren't busy, but lately they're always doing something. And a coon's got needs, you know,' he says with a playful wink.[or]'Please keep an eye out for any toys or lube while you're out there, books only go so far!' the coon says with a giggle.[or]'See if you can find some more cute guys to bring back here so we have some proper company, sweetie,' he churrs with a grin.[or]'I'm sorry for any trouble I caused you back at the hospital. I was a little... ah... worked up. I'm doing better now, really,' he says, giving you a big smile, trying to look sincere. At least he's apologizing?[or]'You know, being cooped up in a library reminded me of one thing, at least. Turns out I loved romance novels! And this place is the motherlode!' he says, a sparkle briefly visible in the coon's eyes.[or]'Y'know what I really don't miss? The Chimeras. Sure, they were hung, but... I've got some standards. And the walking dead just don't do it for me.'[or]'You know, sometimes I remember the silliest things. Like my grandmother's recipe for chicken kiev. I don't remember anything else about her, but I remember the chicken. Weird, huh?'[or]Candy pats your hand. 'Don't worry about Sven, sweetie. I know he's yours. I'm just... helping him get some experience.'[or]Candy grins. 'I'll keep a close eye on your kitty while your out, sweetie.'[or]You end up speaking to Candy just as he's walking back from Sven's bunk. 'I've got him all warmed up for you, hon,' he churrs, licking his lips. 'Have fun!'[at random]";
 
-
-the fuckscene of Candy is "[sexwithCandy]".
-
 to say sexwithCandy:
 	if lastCandyfucked - turns < 8:
+		project Figure of Candy_clothed_icon;
 		say "     The coon smiles and kisses your cheek. 'I'm sorry, sweetie. I need a little time to recover. I want to make the most of our playtime.'";
 	else:
-		project Figure of Candy_naked_icon;
-		[puts Raccoon as lead monster in case of impregnation]
-		repeat with y running from 1 to number of filled rows in Table of Random Critters:
-			choose row y in Table of Random Critters;
-			if Name entry is "Raccoon":
-				now MonsterID is y;
-				break;
 		if Player is male:
+			project Figure of Candy_naked_icon;
 			say "     You decide to take up Candy on his offer for a little fun. As you walk over to him, his eyes light up, as if sensing what you want. His paws are all over you in moments, pulling your clothes off. He nuzzles and nibbles at your neck, churring softly while rubbing his body against yours.";
 			now sextablerun is 0;
 			[]
@@ -590,30 +544,32 @@ to say sexwithCandy:
 			now sortorder entry is 5;
 			now description entry is "Suck each other off";
 			[]
+			sort the table of fucking options in sortorder order;
 			repeat with y running from 1 to number of filled rows in table of fucking options:
 				choose row y from the table of fucking options;
 				say "[link][y] - [title entry][as][y][end link][line break]";
 			while sextablerun is 0:
-				say "Pick the corresponding number> ";
+				say "Pick the corresponding number> [run paragraph on]";
 				get a number;
 				if calcnumber > 0 and calcnumber <= the number of filled rows in table of fucking options:
 					now current menu selection is calcnumber;
 					choose row calcnumber in table of fucking options;
 					say "[title entry]: Shall you [description entry]?";
 					if Player consents:
-						let num be sortorder entry;
+						LineBreak;
 						now sextablerun is 1;
 						increase coonsex by 1;
 						now lastCandyfucked is turns;
-						if num is 1:
+						if sortorder entry is:
+						-- 1:
 							say "[sexwithcandy_01]";
-						else if num is 2:
+						-- 2:
 							say "[sexwithcandy_02]";
-						else if num is 3:
+						-- 3:
 							say "[sexwithcandy_03]";
-						else if num is 4:
+						-- 4:
 							say "[sexwithcandy_04]";
-						else if num is 5:
+						-- 5:
 							say "[sexwithcandy_05]";
 				else:
 					say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
@@ -623,16 +579,13 @@ to say sexwithCandy:
 				say ". Maybe you can find a sexy guy out there willing to play with a pair of coons we can share";
 			say ".";
 
-
 to say sexwithcandy_01:
+	if BodyName of Player is "Raccoon":
+		say "     Candy moans softly and runs nimble fingers over your equally raccoonish body, teasing and caressing you. His paws travel over your shapely, girly body with churrs of delight as he slides his fluffy, pink tail around your waist. 'You make such a sexy coon,' he churrs as he takes a hold of your cock in one paw. 'I can't wait to have you on top of me,' he adds with a nibble to your ear.";
 	if a random chance of 1 in 2 succeeds:
-		if BodyName of Player is "Raccoon":
-			say "     Candy moans softly and runs nimble fingers over your equally raccoonish body, teasing and caressing you. His paws travel over your shapely, girly body with churrs of delight as he slides his fluffy, pink tail around your waist. 'You make such a sexy coon,' he churrs as he takes a hold of your cock in one paw. 'I can't wait to have you on top of me,' he adds with a nibble to your ear.";
 		say "     He keeps his own outfit on and drops onto all fours. He waves his rear at you and flicks his tail up to raise his skirt and reveal his ready tailhole to you. 'Mmm... come on... Fill your sweet Candy.' You grab his hips and line your cock up with the coon's tight pucker, making him moan softly as you thrust into his rear eagerly. You grip his bubble-butt firmly and start pounding away at him, much to the coon's delight. His tailhole, despite taking you in quite easily, is snug and delightfully warm around your shaft. The cute raccoon's tail swishes about as he pushes back into each of your thrusts with a soft moan. His insides squeeze firmly around you with each thrust into his body, a testament to the raccoon's experience.";
 		say "     The girly raccoon reaches back and wraps his paw around his hot-pink cock, stroking himself rapidly as you pound away at his ass, driving your cock into him again and again. You move your hand overtop his, moving it with his along his quivering shaft. The effeminate coon wiggles his rear and squeezes his tailhole down around your penis each time you thrust into his warm bottom. The feel of his tight ass around your cock, the sight of the girly boytoy beneath you and the cute moans he makes as you fuck him all adds up to be too much. You squeeze his fuzzy rump firmly and drive your shaft deep inside him, unleashing your hot load with a gasp. Having a fresh load of cum warming his insides is enough to set him off, spraying his pink cum onto the floor below and filling the air with the scent of cotton candy.";
 	else:
-		if BodyName of Player is "Raccoon":
-			say "     Candy moans softly and runs nimble fingers over your equally raccoonish body, teasing and caressing you. His paws travel over your shapely, girly body with churrs of delight as he slides his fluffy, pink tail around your waist. 'You make such a sexy coon,' he churrs as he takes a hold of your cock in one paw. 'I can't wait to have you on top of me,' he adds with a nibble to your ear.";
 		say "     You run your hand along the coon's side and around his hip to give that cute skirted butt of his a squeeze. He giggles at this display of dominance and flicks his tail up to give you easier access. Slipping under his skirt, you caress his bottom, moving his panties down as you do, the coon kicking them somewhere off to the side when they reach his ankles. Placing a hand on your crotch, he rubs your manhood, clearly imagining having it in him soon. Not wanting to disappoint the girly boy, you guide him down onto the cot with his ass in the air. Spreading his ass cheeks, you slide your [Cock of Player] cock between them and grind firmly against his bubble butt. His tail twitches with excitement and he churrs, grinding back against your meat as you hotdog it between those sexy buns of his. Drooling pre onto his pucker, the only lube you intend to provide the coon, you ease your [cock size desc of Player] penis into his welcoming hole.";
 		say "     Stretching open easily to accommodate you, it still squeezes and pumps tightly around your [Cock of Player] cock as he wiggles and shifts his hips to skillfully work his inner muscles. Running your hands along his back and over his stuffed bottom, you tell him what a pretty coonboy he is and how nice he looks with a cock buried in his ass. He giggles happily at this, adding how it's always available for [one of]you to fuck[or]his sexy friend[or]his heroic stud[in random order]. Reaching around to take hold of his stiff penis, you stroke that hot pink rod of his. The feel of his hard and throbbing cock in your hand is proof of just how much the coon's loving getting buggered.";
 		say "     As your excitement builds, you pick up the pace and fuck him harder, much to his moaning delight. And with such a delightfully responsive lover beneath you, it eventually becomes too much to hold back and you drive your [cock size desc of Player] cock fully into him and cry out in orgasm. Cumming hard, you pump your [Cum Load Size of Player] load into him, painting his bowels with your seed. Feeling your release inside his clenching rectum, he arches his back and grinds hard against your crotch as he cries out in his own release. The scent of cotton candy fills the air around you as his pinkish seed splatters across his sheets. When you're done and have pulled out, he flops down on his bed beside the stain and makes of show of sampling dollops of rosy cum with a coquettish grin even as your own seed leaks out from his creamy hole.";
@@ -640,22 +593,19 @@ to say sexwithcandy_01:
 	NPCSexAftermath Candy receives "AssFuck" from Player;
 
 to say sexwithcandy_02:
-	setmonster "Raccoon";
-	choose row MonsterID from the Table of Random Critters;
 	if BodyName of Player is "Raccoon":
 		say "     Candy moans softly as he rubs his body against the equally raccoonish body he's given you and runs his paws over it. He lets his little claws run over your shapely curves and girly body with churrs of delight. His fluffy tail brushes across your legs, caressing them. 'You look so sexy like this, sweetie. I'm glad you appreciate it. And now I'm going to show you how much I appreciate it, too,' he adds with a nibble to your ear as he takes a hold of your stiff erection.";
 	if Player is submissive:
 		say "     Candy runs his paws over you with a girlish moan, groping your ass and crotch. 'Mmm... now it's not fair to you for me to always be on bottom, isn't it? I can tell a subby guy like you likes playing receiver, too,' he churrs as he presses you down onto the cot. Flipping up his skirt, he slips his cock out of his panties and grinds it against your ass[if Player is female] while giving a few tentative brushes of his fingertips across your pussy, more out of courtesy than any real eagerness, but his cock is aimed elsewhere[end if]. You don't resist, your submissive tendencies coming to the fore and making you eager to allow the coon to take charge this time. After a few playful grinds against your buttocks, he presses his pink cock against your tight pucker and sinks slowly into you, letting his sweet-smelling pre act as a surprisingly good lube. Soon the coon's average cock is stuffed into you as he moans and churrs, intent on giving his sexy hero a good fucking.";
 		say "     And a good fucking it is, with the coon's ample practice making for a very enjoyable screw while his playful paws tease across your body and stroke your pulsing cock and balls. While Candy's not as hugely hung as most creatures out there, he more than makes up for it in skill, soon having you panting and moaning with lustful delight. He seems to deliberately press against every sensitive spot in your ass, his soft, caressing paws adding to the pleasure shooting through your system. He licks and nibbles at your ear, occasionally letting out a moan or whispering about how handsome you are before driving into you hard for the last few thrusts, pushing you over the edge to spray your load onto the bed as his cotton candy cum sprays into your bowels. He cums so hard that the air around is heavy with the scent of it despite it all being shot inside you. Idly, you become aware of a pleasant buzz, as if his seed is sweet enough to give you a slight sugar rush.";
 	else:
-		say "     Wanting to give the coon a chance on top, you take up position on all fours and offer your ass up to him. He smiles happily at the sight and starts by lubing up his hot pink member. 'Whatever my hero wants,' he says with a grin";
 		if anallevel is 3:
-			say ".";
+			say "     Wanting to give the coon a chance on top, you take up position on all fours and offer your ass up to him. He smiles happily at the sight and starts by lubing up his hot pink member. 'Whatever my hero wants,' he says with a grin.";
 			say "     Before jumping into the sex, he buries his muzzle between your cheeks and licks at your tight ring. His tongue sends shivers of pleasure up your spine as he slathers your hole with his saliva, proving that the raccoon seems to have tried just about everything to do with the male sex. After getting the crinkled hole nice and wet, he squirms it right into your rectum to further prep you, moving his tongue around with the sort of ease that indicates he's done this more than most have. The soft licking has you moaning and very eager for the main event by the time he pulls his muzzle back, a thin line of his drool connecting his tongue and your pucker.";
 		else:
-			say " as he takes a moment to spread some of the lube across your pucker as well.";
+			say "     Wanting to give the coon a chance on top, you take up position on all fours and offer your ass up to him. He smiles happily at the sight and starts by lubing up his hot pink member. 'Whatever my hero wants,' he says with a grin as he takes a moment to spread some of the lube across your pucker as well.";
 		say "     Once ready, the girly raccoon moves in behind you, lining up his six-inch stiffy with your back door. He eases into you with a soft churr of delight, spending a moment buried in to the hilt to let you adjust. His paws caress your sides and back while thrusting away steadily at your ass. At first, he shifts his position often, working to find the perfect angle and motion to please you. Being a practiced veteran at fucking asses, he has plenty of endurance, letting him fuck you for as long as he pleases, rarely needing to slow down or pause. At those times, he reaches around to stroke your manhood, rub your sack or knead your rear. You end up quickly worked up near the end of it and are almost begging for him to cum in you. Probably knowing how far he's pushed you, he throws himself into pounding your ass extra hard for a messy finish that has you both crying out in release as semen is sown in your clenching anus and across his cot.";
-	infect;
+	infect "Raccoon";
 	now Libido of Player is ( Libido of Player + 1 ) / 3;
 	NPCSexAftermath Player receives "AssFuck" from Candy;
 
@@ -671,9 +621,9 @@ to say sexwithcandy_04:
 	if BodyName of Player is "Raccoon":
 		say "     Candy moans softly as he rubs his body against the equally raccoonish body he's given you and runs his paws over it. He lets his little claws run over your shapely curves and girly body with churrs of delight. His fluffy tail brushes across your legs, caressing them. 'You look so sexy like this, sweetie. I'm glad you appreciate it. You certainly look adorably sexy like this; it gets me so hard,' he adds with a nibble to your ear as he grinds against you.";
 	say "     Deciding you'd like a taste of the girly coon's cock, you go down on your knees and flip up his short skirt. He giggles cutely, mock-swooning as you run your eyes over the bulge in his panties. Pulling his underwear down, his erection pops free, bobbing in the air and drooling a think trickle of his sticky-sweet precum. Taking a moment to lick your lips, you plunge your mouth over the hot pink rod and start sucking. Your mouth and tongue work over the cute cock, lapping up Candy's faintly sweet pre and teasing against the more sensitive areas of his manhood. You caress the coonboi's nuts in your palm, enjoying his moans and churrs of pleasure. When the raccoon cums, your mouth fills with spurts of hot, cotton candy flavored seed. Enjoying the sugary treat, you lick and suck for all he'll give before releasing him from your mouth, giving a coquettish grin before leaving him to catch his breath.";
-	increase Libido of Player by 10;
-	infect;
+	raise Player Libido by 10;
 	NPCSexAftermath Player receives "OralCock" from Candy;
+	infect "Raccoon";
 
 to say sexwithcandy_05:
 	if BodyName of Player is "Raccoon":
@@ -733,8 +683,7 @@ Sarea of CandyMemory2 is "Nowhere".
 to say ResolveEvent CandyMemory2:
 	say "     Returning to the relative safety of the Library, you notice that Candy seems to have returned to the small office he'd discovered earlier. You approach him quietly, the coon seated at one of the desks, looking at a framed photo with a contemplative gaze. The nametag on the desk states it belongs to an 'Amanda Taylors', and the photo in Candy's hands depicts an older woman and a younger man, apparently mother and son. The young man is rather toned, dressed in military uniform and smiling with an arm around the woman. Candy seems like he's close to an epiphany, though that's lost as you tap him on the shoulder. 'Oh! Oh. Sorry, I know I shouldn't be messing with things here, but...' he glances back at the photo, 'I think I might be close to a breakthrough,' he admits. '...I didn't like her. Whoever this is, I didn't like her one bit. And you know me, I like everybody,' he says. He frowns, then glances up at your face.";
 	say "     '...maybe this is a bad idea, though. What do you think?'";
-	LineBreak;
-	say "     [bold type]Should Candy keep pursuing his memories?[roman type][line break]";
+	say "[line break]     [bold type]Should Candy keep pursuing his memories?[roman type][line break]";
 	say "     ([link]Y[as]y[end link]) - Maybe he'll be happier...";
 	say "     ([link]N[as]n[end link]) - The past doesn't matter, anymore.";
 	if Player consents:
@@ -776,7 +725,7 @@ Priority	Name	EventObject	EventConditions	EventRoom	LastEncounterTurn	CoolDownTu
 3	"CandyMemory4"	CandyMemory4	"[EventConditions_CandyMemory4]"	Grey Abbey Library	2500	2	100
 
 to say EventConditions_CandyMemory4:
-	if (Candy is in the Bunker and HP of Candy > 1 and HP of Candy < 3 and LastCandyWalkin - turns > 1 and Carl is collected):
+	if Candy is in the Bunker and HP of Candy > 1 and HP of Candy < 3 and LastCandyWalkin - turns > 1 and Carl is collected:
 		now CurrentWalkinEvent_ConditionsMet is true;
 
 Table of GameEventIDs (continued)
@@ -790,7 +739,7 @@ Sarea of CandyMemory4 is "Nowhere".
 to say ResolveEvent CandyMemory4:
 	say "     Candy stops you at the door as you walk in, seeming just as excited as when he remembered his brother. 'Hey! I just had a thought! Carl was in the army, right? Well, I'm gonna ask him if he knew John! You should come with me, I think, since you're the one who told me to keep looking for my memories!' Before you can say anything one way or the other, the raccoon takes you by the hand and drags you up to Carl's usual spot with the sort of eagerness you've come to expect from him. Carl glances over at the two of you as Candy barges into the room. [if Lust of Carl >= 100]'Candy, c'mon, I told you we can't just...' [else]'Oh, hey, Candy! I guess it has been a little while...' he says, before seeming to finally notice you. 'Are, uh... are we having an audience this time?' he asks, gesturing to you. [end if]Candy shakes his head vigorously. 'I'm not here to fuck! It's something different!' Carl raises an eyebrow. 'Is he feeling alright?' he asks you. Candy gives an annoyed huff. 'I like things other than sex! Gosh! But...' The raccoon takes a deep breath.";
 	say "     'Did you know someone named [']Jonathan Taylors['] before?' Candy begins, apparently not sure how to tactfully bring up the issue. 'Before one of my best friends went crazy and turned me into this?' Carl asks, taking the conversational bullet in Candy's stead. 'Actually, yes. I mean, I didn't [italic type]know[roman type] him, but you'd hear things, see him around and all that. He built up a reputation for being a bit of a 'hero' type, really. Seems like every other day I'd hear about him pulling off some miraculous stunt on his patrols and saving some poor guy who'd gotten in over their head. Probably the sort who'd earn a bunch of medals if there was anyone left to give [']em,' Carl says. 'Why? He your boyfriend or something? I'm not a homewrecker now, am I?' Carl jokes.";
-	LineBreak;
+	WaitLineBreak;
 	say "     Candy says nothing, visibly over the moon to hear more about his brother, and by extension, his brother's heroics. So you explain to Carl about Candy's recent discoveries regarding his family. The husky nods, understanding. 'Huh. Y'know, I guess I can kinda see it, if I squint,' he says. 'Some similarities don't go away even with the infection, and from what I've seen those two have them,' he adds with a shrug. 'Well, glad to help. Anything that makes Candy a bit happier is fine by me,' he says. You decide to lead a still rather overjoyed Candy back downstairs to avoid distracting Carl. 'He's a [italic type]hero,[roman type] you heard him!' Candy whispers, a bit awed. 'And he's still out there! He's fighting back!' Candy's happiness switches to sudden determination. 'That's it. Now I've really got to make sure I get out of this. I'm seeing Johnathan again, no matter what,' he says. You're not sure you've ever seen the raccoon so serious before, but you don't dislike it.";
 	now HP of Candy is 4;
 	now CandyMemory4 is resolved;
@@ -824,7 +773,7 @@ Priority	Name	EventObject	EventConditions	EventRoom	LastEncounterTurn	CoolDownTu
 4	"CandyCarlCompany"	CandyCarlCompany	"[EventConditions_CandyCarlCompany]"	Grey Abbey Library	2500	8	50
 
 to say EventConditions_CandyCarlCompany:
-	if (Candy is in the Bunker and Lust of Carl > 0 and Lust of Carl < 100 and Carl is in Grey Abbey 2F and LastCandyWalkin - turns > 8):
+	if Candy is in the Bunker and Lust of Carl > 0 and Lust of Carl < 100 and Carl is in Grey Abbey 2F and LastCandyWalkin - turns > 8:
 		now CurrentWalkinEvent_ConditionsMet is true;
 
 Table of GameEventIDs (continued)
@@ -836,10 +785,10 @@ ResolveFunction of CandyCarlCompany is "[ResolveEvent CandyCarlCompany]".
 Sarea of CandyCarlCompany is "Nowhere".
 
 to say ResolveEvent CandyCarlCompany:
-	say "[NavCheck Grey Abbey Library]";
+	[say "[NavCheck Grey Abbey Library]";
 	if NavCheckReturn is false, stop the action;
 	move player to Grey Abbey Library;
-	if debugactive is 1:
+	if debugactive is 1:]
 		say "     DEBUG: HP of Candy: [HP of Candy], Lust of Carl: [Lust of Carl][line break]";
 	say "     You let out a sigh of relief as you enter the library. A moment of peace, at least for now. You hear Candy's voice upstairs, from the second floor of the building. Figuring you might as well see what they're up to, you head upstairs... to discover Candy, seated on Carl's mattress, reading out loud from a book as the husky keeps watch out the window. They both turn to look at you as you come up the stairway. 'Oh, hey!' Candy says, smiling. 'I was just keeping Carl company. He wasn't really in the mood for anything, but I figured we could still spend time together,' Candy says and smiles at the husky, who's already returned to his vigilant watch. 'Isn't that right, Carl?' he asks, receiving a nod and a 'Hmhm' from the task-minded canine. You give the pair a thumbs up, deciding to leave the both of them to it while you attend to other business.";
 	now LastCandyWalkin is turns;
@@ -1024,11 +973,12 @@ This is the Candy's Epilogue rule:
 					say "     This problem is solved when the military pass through. Unable to confront the squads head on, you sneak up and drag off a lone soldier. A few hours later and you have an olive green coon who's more than happy topping his two playmates. A few more are added every couple of days and eventually the bunker houses a rainbow collection of girly coons.";
 			else if coonstatus is 101:		[Coon player - Coon at pet]
 				say "     Unable to maintain your sanity, you end up giving in to your body's instinctual needs. You establish a love nest with your pink playtoy back at the bunker, using him for your pleasure as you see fit.";
-				if Player is female and "Sterile" is not listed in feats of Player:
-					say "     His reluctance to play with your pussy fades away completely and you have the girly coon fuck you again and again, breeding litters of raccoon cubs in a rainbow array of colors. The females and herms are always the dominant ones, while the males are subservient playtoys for them. They eagerly seek out others to capture and bring back to turn into colorful raccoon lovers to add to the gaze you lead at the bunker.";
-				else if Player is female and "Sterile" is listed in feats of Player:
-					say "     His reluctance to play with your pussy fades away completely and you have the girly coon fuck you again and again. Being sterile, you can have no cubs so you instead seek to add to your love nest from the outside.";
-					say "     This problem is solved when the military pass through. Unable to confront the soldiers head on, you sneak up and drag off a lone soldier. A few hours later and you have an olive green coon who is just as subservient. A few more are added every couple of days and eventually the bunker houses a rainbow collection of girly coons. When a few females are taken in, breeding begins in earnest.";
+				if Player is female:
+					if "Sterile" is not listed in feats of Player:
+						say "     His reluctance to play with your pussy fades away completely and you have the girly coon fuck you again and again, breeding litters of raccoon cubs in a rainbow array of colors. The females and herms are always the dominant ones, while the males are subservient playtoys for them. They eagerly seek out others to capture and bring back to turn into colorful raccoon lovers to add to the gaze you lead at the bunker.";
+					else:
+						say "     His reluctance to play with your pussy fades away completely and you have the girly coon fuck you again and again. Being sterile, you can have no cubs so you instead seek to add to your love nest from the outside.";
+						say "     This problem is solved when the military pass through. Unable to confront the soldiers head on, you sneak up and drag off a lone soldier. A few hours later and you have an olive green coon who is just as subservient. A few more are added every couple of days and eventually the bunker houses a rainbow collection of girly coons. When a few females are taken in, breeding begins in earnest.";
 				else:
 					say "     Your pink playtoy is eager to service you in any way you would like. You happily explore a range of positions with him over several days, taking the top or bottom position as suits your fancy in the moment. In time, you do feel the urge for more amusement.";
 					say "     This problem is solved when the military pass through. Unable to confront the soldiers head on, you sneak up and drag off a lone soldier. A few hours later and you have an olive green coon who is just as subservient. A few more are added every couple of days and eventually the bunker houses a rainbow collection of girly coons. When a few females are taken in, breeding begins in earnest.";
@@ -1044,11 +994,7 @@ This is the Candy's Epilogue rule:
 					say "     Even with your empathy near-destroyed by your advanced infection, you feel regret about the loss of Candy. In time, you give birth to his kits, and together you begin infecting as many people as you can, including a few unlucky soldiers in the wrong place at the wrong time... but you always wind up pining for the father of your kits, even when your infection causes you to forget his name and face...";
 		else:							[coon player survives]
 			if coonstatus is 0:				[w/o coon friend]
-				say "     After being rescued and cleared by the military, you find yourself aimless for a time. You bounce around clubs, looking for amusement to fill your needs";
-				if Player is female:
-					say ". Being a transformee in a predominantly human area, you are at first looked on as an oddity and nothing more, but eventually you manage to tempt a sexy guy into a little fun in the alley behind the club one night. From that point on, word starts to get around and you become more popular. In time, you have become an exotic treat that everyone wants to play with and you have no lack of favorite lovers.";
-				else:
-					say ". Being a transformee in a predominantly human area, you are at first looked on as an oddity and nothing more, but eventually you manage to tempt a sexy guy into a little fun in the gay club's bathroom. From that point on, word starts to get around and you become more popular. In time, you have become an exotic treat that everyone wants to play with and you have no lack of favorite lovers.";
+				say "     After being rescued and cleared by the military, you find yourself aimless for a time. You bounce around clubs, looking for amusement to fill your needs. Being a transformee in a predominantly human area, you are at first looked on as an oddity and nothing more, but eventually you manage to tempt a sexy guy into a little fun in the [if Player is female]alley behind the club one night[else]gay club's bathroom[end if]. From that point on, word starts to get around and you become more popular. In time, you have become an exotic treat that everyone wants to play with and you have no lack of favorite lovers.";
 			else:
 				if coonstatus is 101:			[w/coon pet]
 					say "     When their forces move in to rescue survivors, the military is reluctant to let your pink raccoon pet accompany you. But between the emotional breakdown he starts to go through when this separation is discussed and your clear physical similarities to him, they quickly relent and bring him back to the base with you.";
@@ -1059,7 +1005,7 @@ This is the Candy's Epilogue rule:
 					say "     Despite being rendered non-infectious before getting discharged from the internment camp, playing with the infected soldiers reactivates your strain, allowing you to continue to change them. When their traits start becoming too noticeable to hide any longer, you arrange for a special orgy with all of them at once. You and [if coonstatus < 100]Candy[else]your pet coon[end if] have a long romp with them, completing their change into a rainbow collection of coon bois for you.";
 				else if coonstatus > 0 and HP of Candy > 2 and HP of Candy < 100: [w/Sane Candy]
 					say "     When the military arrives to rescue survivors, you and Candy are both taken to one of the military's many camps. Candy and you search for any sign of his brother, but according to everyone you ask, Johnathan seems to have simply... disappeared, just before the rescue efforts began. Candy is distraught, but resolves to continue his new, saner life, if only to honor his brother's memory.";
-					say "     The two of you remain [if Player is male]vigorous lovers[else]good friends[end if], but you can't help but notice that the raccoon's self-control is almost legendary in comparison to his past behaviors, refusing to so much as touch a soldier even if they express interest. When you question him about it, he claims that 'It'd be... wrong. I'd rather not risk infecting anyone if I can help it. Johnathan wouldn't have wanted that.'[if Player is male] This doesn't stop him from playing with you every night, of course...[end if]";
+					say "     The two of you remain [if Player is male]vigorous lovers[else]good friends[end if], but you can't help but notice that the raccoon's self-control is almost legendary in comparison to his past behaviors, refusing to so much as touch a soldier even if they express interest. When you question him about it, he claims that 'It'd be... wrong. I'd rather not risk infecting anyone if I can help it. Johnathan wouldn't have wanted that[if Player is male].' This doesn't stop him from playing with you every night, of course...[else].'[end if]";
 	else if Player has a non-shifting body of "Trash Coon":	[Trash-coon player variations]
 		if humanity of Player < 10:
 			if Candy is in the bunker:
@@ -1096,7 +1042,7 @@ This is the Candy's Epilogue rule:
 				say "     When you are leaving the compound, you can't help but notice that they were starting to get a little more effeminate themselves and you suspect there'll be a few more girly coons running around the base soon enough. Your playtoy pet remains with you throughout the years, always giving you a source of amusement as you play with him or share him with others as a special reward[if Player is female]. When a few of your kits are born as colorful, girly coons, your mate is not at all surprised or upset and they're loved as much as their siblings[end if].";
 			else if coonstatus > 0 and HP of Candy > 2 and HP of Candy < 100: [w/Sane Candy]
 				say "     When the military arrives to rescue survivors, you and Candy are both taken to one of the military's many camps. Candy and you search for any sign of his brother, but according to everyone you ask, Johnathan seems to have simply... disappeared, just before the rescue efforts began. Candy is distraught, but resolves to continue his new, saner life, if only to honor his brother's memory.";
-				say "     The two of you remain [if Player is male]vigorous lovers[else]good friends[end if], but you can't help but notice that the raccoon's self-control is almost legendary in comparison to his past behaviors, refusing to so much as touch a soldier even if they express interest. When you question him about it, he claims that 'It'd be... wrong. I'd rather not risk infecting anyone if I can help it. Johnathan wouldn't have wanted that.' This doesn't stop him from covering for your nightly excursions, [if Player is male]and playing with you every night,[end if] of course...";
+				say "     The two of you remain [if Player is male]vigorous lovers[else]good friends[end if], but you can't help but notice that the raccoon's self-control is almost legendary in comparison to his past behaviors, refusing to so much as touch a soldier even if they express interest. When you question him about it, he claims that 'It'd be... wrong. I'd rather not risk infecting anyone if I can help it. Johnathan wouldn't have wanted that.' This doesn't stop him from covering for your nightly excursions, [if Player is male]and playing with you every night, [end if]of course...";
 	else if pink raccoon is tamed:				[non-coon player w/pet coon]
 		if humanity of Player < 10:
 			say "     Bound to you, your girly coon pet remains loyally with you even as your mind collapses and succumbs to the infection. He becomes a playtoy for you, fulfilling your sexual needs as best he can between any other lovers or mates you may have.";
@@ -1105,7 +1051,7 @@ This is the Candy's Epilogue rule:
 			say "     When you are leaving the compound, you can't help but notice that they were starting to get a little more effeminate themselves and you suspect there'll be a few more girly coons running around the base soon enough. Your playtoy pet remains with you throughout the years, always giving you a source of amusement as you play with him or share him with others as a special reward.";
 	else if Candy is in the Bunker:			[non-coon player w/Candy rescued]
 		if humanity of Player < 10:
-			if Player is male and (HP of Candy > 0 and HP of Candy < 3) or HP of Candy >= 100:
+			if Player is male and ((HP of Candy > 0 and HP of Candy < 3) or HP of Candy >= 100):
 				say "     When you give in to the nanite infection, Candy's attempts to resist end as well. The girly raccoon reverts as the few shreds of humanity he was able to regain give out. The pink coon accompanies you, an eager fucktoy for your use between any lovers or mates you may find out in the city. He has dalliances of his own, seeking the attention of any sexy males you come across.";
 			else if Player is male and HP of Candy > 2 and HP of Candy < 100:
 				say "     When you give in to the nanite infection, Candy doesn't even pretend he wants anything to do with you, though he's saddened by what you've become. He abandons the library and manages to find relative safety until the military rescues him.";
@@ -1145,15 +1091,12 @@ This is the Candy's Epilogue rule:
 				else:
 					say "     Having saved him from an uncertain and frightening fate, Candy treats you like a protective big sister. Wanting to do good on the outside and drawing on what he still remembers of his past, he begins nurse training, and proves quite adept at it despite his regular lewd suggestions of 'sexual healing' and 'sweet injections.' The raccoon soldiers are always eager patients, coming to him for the most minor of complaints and are always up for Candy's playful suggestions. Outside of his work, he seems to spend a lot of time stealing your clothes and teasing and enticing every male he can. You would put a stop to it if he wasn't so damn cute in your outfits, and at least he always does the laundry on time.";
 			if pigfucked > 0:
-				if ( Cock Count of Player is 0 and Player is female ) or ( Cunt Count of Player is 0 and pigfucked > 2 ):
+				if Player is purefemale or ( Player is not female and pigfucked > 2 ):
 					say "     Candy never seems to warm up to Philip and is catty with him whenever the two end up together at your place. It is clear that he is upset with your decision to join Philip at his farm, but has his own life as well (thanks to you) and has to accept your decision. He does visit from time to time, but only when Philip is out, preferring you instead come visit him at his sex den. You are always careful to clean the boar's strong scent from you before going over, lest it spoil the mood. He always has at least one of his coon soldier bois over to play with, so he's never lonely and the visit is always fun.";
 				else:
 					say "     Candy never seems to warm up to Philip and is catty with him whenever the two end up together. You have to take care to wash the boar's strong scent from you after sex, lest it upset the gay coonboi. Aside from holiday get-togethers with all your new, transformed family of friends, you make sure they are kept apart.";
 		else if coonstatus is 101:				[coon pet]
-			if Player is male:
-				say "     Your little pink pet remains a loyal slut under your care after your release from the military. He serves and services you with absolute devotion and keeps a variety of cute dresses and frilly outfits to tease and excite you. He seems to show a preference for a French maid dress, and dutifully keeps house whenever you are out.";
-			else:
-				say "     Your little pink pet remains a loyal slut under your care after your release from the military. He serves and services you with absolute devotion and keeps a variety of cute dresses and frilly outfits to tease and excite you. He seems to show a preference for a French maid's dress, and dutifully keeps house whenever you are out. You make sure to pass him off to your male and herm friends from time to time, to appease his lust for cock.";
+			say "     Your little pink pet remains a loyal slut under your care after your release from the military. He serves and services you with absolute devotion and keeps a variety of cute dresses and frilly outfits to tease and excite you. He seems to show a preference for a French maid dress, and dutifully keeps house whenever you are out[if Player is not male]. You make sure to pass him off to your male and herm friends from time to time, to appease his lust for cock[end if].";
 			if Player has a non-shifting body of "Ferret":
 				say "     Lorenda and Lee take particular enjoyment out of their fellow [']maid's['] companionship and are often found playing with him in their outfits.";
 			if Player has a non-shifting body of "Siren":
@@ -1163,15 +1106,12 @@ This is the Candy's Epilogue rule:
 					say "     Your pet raccoon loyally accompanies you on your band's tours and is there to give you his obedient and lustful affection whenever wanted. He seems to legitimately love your band's music as well, dancing happily to it with your groupies whenever he can sneak away from his handlers during your shows. You aren't at all surprised when you start spotting a few fans with colorful raccoon tails in the audience.";
 				else:
 					say "     Denise and your raccoon pet seem to get along well, and one day you return home to be greeted with beautiful singing and amazing dancing by your two loving pets. You are so impressed, you urge them to continue working on music and choreography, and privately wonder if you should take this show on the road, and how to do so without breaking certain decency laws.";
-			if ( pigfucked > 0 ) or ( ( BodyName of Player is "Messy Pig" or BodyName of Player is "Piggy" ) and Player is female and Philip is in the Large Shed ):
+			if pigfucked > 0 or ( ( BodyName of Player is "Messy Pig" or BodyName of Player is "Piggy" ) and Player is female and Philip is in the Large Shed ):
 				say "     Your raccoon pet seems jealous of the affection you give Philip. He mopes quietly if he sees you being affectionate with him or notices the boar's strong scent on you after you've had sex with him. He steadfastly refuses to play with the pig, though will happily enjoy any other lover you share with him. ";
-				if ( Cock Count of Player is 0 and Player is female ) or ( ( BodyName of Player is "Messy Pig" or BodyName of Player is "Piggy" ) and Player is female ):	[Female at farm OR F/H Piggy at farm]
+				if Player is purefemale or ( ( BodyName of Player is "Messy Pig" or BodyName of Player is "Piggy" ) and Player is female ):	[Female at farm OR F/H Piggy at farm]
 					say "     When the coon gets even more sullen after the move to the pig farm and your oncoming litter, Philip has had enough. The next time the coon hisses at him when he strokes your pregnant belly, he grabs the little boitoy and takes him right then and there, with much squealing from the boar and moans from the coon. From that point on, he's much more affectionate with the boar and seems to like it best when the pig is rough and dirty with him. The raccoon does pick up some bad habits though. When once he was always well-groomed and clean, he becomes a scruffy and dirty raccoon, often rummaging around in the garbage or even taunting the pig to fuck him in the dumpster. You've lost your slutty housekeeper, but gained a much happier, if messier, home for it.";
 				else if Player has a non-shifting body of "Messy Pig" or Player has a non-shifting body of "Piggy" and pigfucked > 0:
-					if pigfucked > 2:						[M Piggy sub]
-						say "     When the coon gets even more sullen after the move to the pig farm and your repeated rutting with the boar, Philip has had enough. The next time the coon hisses at him when he squeezes your subby, cum-filled bottom, he grabs the little boitoy and takes him right then and there, with much squealing from the boar and moans from the coon. From that point on, he's much more affectionate with the boar and seems to like it best when the pig is rough and dirty with him. The raccoon does pick up some bad habits though. When once he was always well-groomed and clean, he becomes a scruffy and dirty raccoon, often rummaging around in the garbage or even taunting the pig to fuck him in the dumpster. You've lost your slutty housekeeper, but gained a much happier, if messier, home for it.";
-					else:					[M Piggy lover]
-						say "     When the coon gets even more sullen after the move to the pig farm and your repeated rutting of the sows, Philip has had enough. The next time the coon hisses at him while watching you in the pen, siring more hogs, he grabs the little boitoy and takes him right then and there, with much squealing from the boar and moans from the coon. From that point on, he's much more affectionate with the boar and seems to like it best when the pig is rough and dirty with him. The raccoon does pick up some bad habits though. When once he was always well-groomed and clean, he becomes a scruffy and dirty raccoon, often rummaging around in the garbage or even taunting the pig to fuck him in the dumpster. You've lost your slutty housekeeper, but gained a much happier, if messier, home for it.";
+					say "     When the coon gets even more sullen after the move to the pig farm and your repeated rutting [if pigfucked > 2]with the boar, Philip has had enough. The next time the coon hisses at him when he squeezes your subby, cum-filled bottom[else]of the sows, Philip has had enough. The next time the coon hisses at him while watching you in the pen, siring more hogs[end if], he grabs the little boitoy and takes him right then and there, with much squealing from the boar and moans from the coon. From that point on, he's much more affectionate with the boar and seems to like it best when the pig is rough and dirty with him. The raccoon does pick up some bad habits though. When once he was always well-groomed and clean, he becomes a scruffy and dirty raccoon, often rummaging around in the garbage or even taunting the pig to fuck him in the dumpster. You've lost your slutty housekeeper, but gained a much happier, if messier, home for it."; [M Piggy sub/lover]
 			else if ( Player has a non-shifting body of "Messy Pig" or Player has a non-shifting body of "Piggy" ) and pigfucked is 0 and Philip is in the Large Shed:
 				say "     Your raccoon pet seems jealous of the friendship you have with Philip. He mopes quietly if he sees you with him or notices the boar's strong scent on you after you've hung out. He steadfastly refuses to play with the pig, though will happily enjoy any other lover you offer him."; [M Piggy friend]
 

@@ -1041,7 +1041,7 @@ to standardhit:
 	now dam is ( wdam entry times a random number from ( 80 - ( peppereyes * 4 ) ) to 120 ) / 100;
 	if HardMode is true and a random chance of 1 in ( 10 + peppereyes ) succeeds:
 		now dam is (dam * 150) divided by 100;
-		say "The enemy finds a particular vulnerability in your defense - [italic type]Critical Hit![roman type][line break]";
+		say "The enemy finds a particular vulnerability in your defense - Critical Hit!";
 	say "[Attack entry] You take [special-style-2][dam][roman type] damage!";
 	now damagein is dam;
 	say "[normalabsorbancy]";
@@ -1785,7 +1785,7 @@ this is the humping rule:
 		let dam be ( wdam entry times xyz ) / 100;
 		if HardMode is true and a random chance of 1 in ( 10 + peppereyes ) succeeds:
 			now dam is (dam * 150) divided by 100;
-			say "The enemy finds a particular vulnerability in your defense - [italic type]Critical Hit![roman type][line break]";
+			say "The enemy finds a particular vulnerability in your defense - Critical Hit!";
 		say "You are grabbed by [if enemy type entry is not 2]the [end if][EnemyNameOrTitle], which grinds its throbbing cock against your [bodytype of Player] body. Precum dribbles from it onto you, the scent of which momentarily entices your infected body, making you press back against their [body descriptor entry] form as the [cock entry] shaft is humped against you. It takes an effort of will to resist giving into the alluring creature, but you manage to push it away. Your drive to continue resisting has waned somewhat after the arousing attack. You take [special-style-2][dam][roman type] damage!";
 		increase Libido of Player by a random number from 2 to 6;
 		if "Horny Bastard" is listed in feats of Player, increase Libido of Player by 1;
@@ -1803,7 +1803,7 @@ this is the ftaurpounce rule:		[double-damage pouncing]
 	let dam be ( wdam entry times a random number from ( 80 - ( peppereyes * 4 ) ) to 120 ) / 50; [Double damage]
 	if HardMode is true and a random chance of 1 in ( 10 + peppereyes ) succeeds:
 		now dam is (dam * 150) divided by 100;
-		say "The enemy finds a particular vulnerability in your defense - [italic type]Critical Hit![roman type][line break]";
+		say "The enemy finds a particular vulnerability in your defense - Critical Hit!";
 	say "The [one of][EnemyNameOrTitle][or]feline[or]feline taur[or]large cat[purely at random] growls and pounces playfully atop you, [one of]knocking[or]pushing[or]slamming[purely at random] you down briefly. Its many paws knead and claw at you while the feline rumbles and purrs at having caught its [one of]toy[or]prey[or]plaything[purely at random], rubbing its body against yours. This [one of]powerful[or]strong[or]devastating[purely at random] assault does [special-style-2][dam][roman type] damage!";
 	now damagein is dam;
 	say "[noshieldabsorbancy]"; [unable to use shield while pinned]

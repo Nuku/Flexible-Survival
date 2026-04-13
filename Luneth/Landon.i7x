@@ -22,7 +22,6 @@ Version 1 of Landon by Luneth begins here.
 [ 6 - pure female lock (views player as a feminine who is biologically female)  ]
 [ 7 - butch female lock (views player as a masculine who is biologically female)]
 
-
 Table of GameCharacterIDs (continued)
 object	name
 Landon	"Landon"
@@ -64,30 +63,21 @@ SexuallyExperienced of Landon is true.
 TwistedCapacity of Landon is false. [Twisted Characters can take any penetration, no matter the size]
 Sterile of Landon is false. [steriles can't knock people up]
 MainInfection of Landon is "Golden Retriever Male".
-
-Description of Landon is "[LandonDesc]".
-
-Conversation of Landon is { "ruff" }.
-
-The scent of Landon is "[LandonScent]";
-
-to say LandonDesc:
-	say "     The tall and muscled golden retriever jock is decked out in some baggy cream-colored shorts, a black tank top, and a red lettermen jacket with the name [']Landon['] on the back. His fur is the normal golden-yellow color, which compliment his warm honey-brown eyes.";
-
-to say LandonScent:
-	say "     He smells like clean sweat, with a hint of something that you can't quite put your finger on... but if you could, you would probably lick it.";
+Description of Landon is "     The tall and muscled golden retriever jock is decked out in some baggy cream-colored shorts, a black tank top, and a red lettermen jacket with the name [']Landon['] on the back. His fur is the normal golden-yellow color, which compliment his warm honey-brown eyes.[line break]".
+[Conversation of Landon is { "ruff" }.]
+fuckscene of Landon is "     That would probably not be the best idea, especially since you are both still feeling out your friendship.[line break]".
+The scent of Landon is "     He smells like clean sweat, with a hint of something that you can't quite put your finger on... but if you could, you would probably lick it.[line break]".
 
 Section 1 - Events
 
 Part 1 - Intro
 
-after going to Athletic Street while (Resolution of HypnoGeeks > 0 and Resolution of HypnoGeeks < 98 and HP of Landon is 0): [intro event]
+after going to Athletic Street while Resolution of HypnoGeeks > 0 and Resolution of HypnoGeeks < 98 and HP of Landon is 0: [intro event]
 	say "     You decide to take a walk around the Athletic Street. For the most part, it seems like walking through a normal college area, albeit the shapes of those on campus are far different than most. While you can hear the sounds you would expect from the area, something catches your attention: an angry shouting match. Walking closer, you can see three individuals in close contact with each other. Two of them are males, one a human facing you and the other a golden anthro canine with his back mostly on show. They seem to be the ones fighting, while the lone female, a dark-brown anthro equine, stands to the side and appears to be pretty amused by what's happening in front of her. Hugging the side of a nearby building, you attempt to keep your presence hidden.";
 	say "     Upon closer inspection, you can see that the man facing you is one of the Spartan guards that seem to be all over the campus. He is wearing a crimson cloak around most of his form, however as a breeze blows through the area, you get a full view of his olive-complexed body, which you learn is completely bare underneath. Looking him up and down, you can see that he has a big overall frame with thick thighs and powerful pectorals, but what really grabs your attention though is his large uncut cock swaying back and forth between his legs as he moves. As your gaze reaches his face framed by his bronze helmet, you aren't all that surprised to see a full black beard adorning his rugged mug, but what does shock you are his eyes. While full of rage at the moment, they are a beautiful jade-green color, and you have to force yourself to look away when those same orbs flick in your direction for a moment before zeroing back on their opponent.";
 	WaitLineBreak;
 	say "     The chocolate-colored horse girl standing next to the Spartan has her arms crossed over her ample breasts and a wicked smile on her lips. She is wearing black spandex pants coupled with a black tube top. She laughs at what you assume is something funny about the fight taking place in front of her, causing the long black mane behind her to sway into view, showing off the single tight braid that she has styled it into. You can also see the powerful muscles under her fur flex with every movement that she makes, showcasing that while she may be a pretty mare, she is also something akin to war horse. From the angle that you're standing, you can't get a very good look at the goldie, well other than the fact that he's wearing a letterman jacket and baggy pants.";
-	LineBreak;
-	say "     [bold type]Do you think that you should stick around?[roman type][line break]";
+	say "[line break]     [bold type]Do you think that you should stick around?[roman type][line break]";
 	say "     ([link]Y[as]y[end link]) - Yes, by the looks of it, someone might need some help.";
 	say "     ([link]N[as]n[end link]) - No, whatever is going on over here, is none of your business.";
 	if Player consents: [encounter Landon]
@@ -158,12 +148,10 @@ after going to Athletic Street while HP of Landon is 1 and "Placement Event Done
 	move Landon to Athletic Street;
 	TraitGain "Placement Event Done" for Landon;
 
-
 Section 2 - Talking
 
 to say LandonTalkMenu:
-	LineBreak;
-	say "What do you want to talk with Landon about?";
+	say "     What do you want to talk with Landon about?";
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]
@@ -185,29 +173,25 @@ to say LandonTalkMenu:
 			choose row calcnumber in table of fucking options;
 			say "[title entry]: [description entry]?";
 			if Player consents:
-				let nam be title entry;
+				LineBreak;
 				now sextablerun is 1;
-				if (nam is "Just chat a bit"):
+				if title entry is "Just chat a bit":
 					say "[LandonTalk1]";
 				wait for any key;
 				say "[LandonTalkMenu]";
 		else if calcnumber is 0:
+			LineBreak;
 			now sextablerun is 1;
 			say "     You step back from the goldie baseball player, shaking your head slightly as he gives a questioning look.";
 			wait for any key;
 		else:
-			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
+			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options], or 0 to exit.";
 	clear the screen and hyperlink list;
 
 to say LandonTalk1:
-			say "     'Sup[if Player is not defaultnamed], [name of Player][end if], so... yeah, I might not show off my tattoo too much anymore. I was showing it to this new pledge at the house, and before I knew it, he was trying to lick my butt. I had to push him back and ask what the heck he was doing! Then he mentioned something about how I smelled really good, and I just ran for it after that.";
-
-
+	say "     'Sup[if Player is not defaultnamed], [name of Player][end if], so... yeah, I might not show off my tattoo too much anymore. I was showing it to this new pledge at the house, and before I knew it, he was trying to lick my butt. I had to push him back and ask what the heck he was doing! Then he mentioned something about how I smelled really good, and I just ran for it after that.";
 
 Section 3 - Fucking
-
-instead of fucking the Landon:
-	say "     That would probably not be the best idea, especially since you are both still feeling out your friendship.";
 
 [to say LandonBJ:
 	if Player is female:
@@ -227,7 +211,6 @@ instead of fucking the Landon:
 			say "...";
 			NPCSexAftermath Player receives "OralCock" from Landon;]
 
-
 Section 4 - Quests
 
 Section 5 - Infection
@@ -238,7 +221,5 @@ Section 6 - Notes&Comments
 [WARNING SPOILERS!]
 
 [See HypnoHeeks file notes for the plans that Landon has in store for the mice]
-
-
 
 Landon ends here.

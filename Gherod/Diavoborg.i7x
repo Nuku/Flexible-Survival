@@ -47,8 +47,7 @@ to say ResolveEvent Four Leg Wrath:
 	if scalevalue of Player > 4: [no matter the state of the quest, going into this event while under any of those conditions will overwrite progression with this new variant. Diavoborg will immediately notice the player and engage them.]
 		say "     Amidst your walking through the dry plains, you often expect to encounter some of its creatures roaming around, which makes you be extra careful when making your way through the wide open terrain. Your advantage is that you can see anyone coming from miles away, but then... Are you not absolutely, incredibly [bold type]huge[roman type] as well? Nothing here, not even one thing, can help you conceal yourself from possible dangers, but taking up such a size may mean that you, all by yourself, can be one dangerous opponent to anyone who dares to face you... right?";
 		say "     One of the rarest finds who inhabits this area is one certain red behemoth, whom you might have or yet not encountered during your past adventures. Clearly, he is not the first thing you see, which means that this beast person is very cautious. Once you find yourself within his proximity, you will most likely be noticed and engaged upon immediately. If you want to [bold type]know more about him and follow him about more discreetly[roman type], you might want to continue seeking him under a [bold type]smaller frame[roman type]... Or you can simply just continue and face the beast right now, as soon as you find him.";
-		LineBreak;
-		say "     [bold type]Do you want to continue?[roman type][line break]";
+		say "[line break]     [bold type]Do you want to continue?[roman type][line break]";
 		say "     ([link]Y[as]y[end link]) - Yes, go find this beast right now."; [proceed]
 		say "     ([link]N[as]n[end link]) - No, back away."; [avoid this encounter, for now]
 		if Player consents:
@@ -59,8 +58,7 @@ to say ResolveEvent Four Leg Wrath:
 			say "     So you take a turn in order to not walk towards the beast, in hopes to have better luck in finding the peculiar kind of behemoth. However...";
 			WaitLineBreak;
 			say "     You begin to hear and feel some heavy footsteps. At some point, you think it is the wild behemoth you spotted who started to walk, but in fact, it is another one who joined the area. The confront takes place soon after, once the two approach each other. They do not fight, though, and simply stand put near one another cautiously. Then, one moves forward, and the other flinches for brief moments, but allows it. They smell each other like dogs taking others['] scents, and you would think this is all just to perform greetings... until one of them positions behind the other and begins to mount them. The top's front legs, which would be their arms, hold their massive body around the bottom's, who does not make any attempt at resisting this, and soon after, the mating begins.";
-			LineBreak;
-			say "     [bold type]Do you want to keep watching, or would you rather just wait it out?[roman type][line break]";
+			say "[line break]     [bold type]Do you want to keep watching, or would you rather just wait it out?[roman type][line break]";
 			say "     ([link]Y[as]y[end link]) - Yes, spy on the mating behemoths."; [watch the fuck]
 			say "     ([link]N[as]n[end link]) - No, give them some privacy."; [skip it]
 			if Player consents:
@@ -76,35 +74,30 @@ to say ResolveEvent Four Leg Wrath:
 				WaitLineBreak;
 			say "     And just before the couple of behemoths are finished with their interactions, you feel something poking at you. As you turn around to check what is going on, a large hand, big enough to rival the size of yours, gets around your mouth as you find yourself being pulled back. You are then knocked down, falling on your back to the ground as a huge beast stands above you. Though, to your relief, it is not an attacker, judging by the smile on the stranger's face. 'Kinda hard to not see you striding about, bud. Though since you haven't attacked that innocent couple of behemoths, I suppose you're friendly.' You take some additional time to process what just happened, and in front of you stands the creature you have been looking for. A red behemoth.";
 			say "     'Name's Diavoborg, but you can call me Diavol. Shorter and, uh, I guess... sounds better. Anyway, what are you doing here, pal? Don't you know this is a bit of a dangerous zone for someone with such a sizable mutation and possibly a still sane mind such as yourself?' he asks ([']he['], as he is clearly some sort of individual who sounds and looks quite male) and you are quite sure he should be wondering that himself, but details to the side, it seems the odd behemoth is actually intelligent and quite friendly, at least so far.";
-			LineBreak;
-			say "     [bold type]What answer will you give to Diavoborg?[roman type][line break]";
+			say "[line break]     [bold type]What answer will you give to Diavoborg?[roman type][line break]";
 			say "     [link](1)[as]1[end link] - Tell him that you were just passing by, though you know that's an excuse.";
 			say "     [link](2)[as]2[end link] - Be honest and tell him that you were following him about, fascinated with his unique features.";
 			say "     [link](3)[as]3[end link] - Let him know that, in all truth, you're just craving for a really big beasty lover like him.";
 			now calcnumber is 0;
 			while calcnumber < 1 or calcnumber > 3:
-				say "Choice? (1-3)>[run paragraph on]";
+				say "Choice? (1-3)> [run paragraph on]";
 				get a number;
-				if calcnumber is 1 or calcnumber is 2 or calcnumber is 3:
-					break;
-				else:
+				if calcnumber < 1 or calcnumber > 3:
 					say "Invalid choice. Type [link]1[end link] to give an excuse, [link]2[end link] to tell him that you've been curious about him or [link]3[end link] to blatantly flirt with the beast that could surely handle someone your size.";
+			LineBreak;
 			if calcnumber is 1:
-				LineBreak;
 				say "     All you can think about is saying that your really just happened to be walking through and saw tracks that he left behind, then got a little distracted and let yourself be pinned down by a gigantic behemoth... Him. He squints his big eyes with a grin still in his expression. 'So you just [italic type]happened[roman type] to pass by the area I call my hunting grounds when the plains are huge and filled with behemoths who are like me? Seems to me that you like big beasts. Surely I could tell from just looking at you, big [boygirl].' As he says this, he eyes you from head to feet, taking in your form, shape and size before locking his gaze onto yours. 'Can't say I'm complaining, though. You're quite good looking.' he adds, with a wink.";
 				say "     However, before anything else could follow this interaction with the crimson beast, an unfortunate interruption arrives.";
 				WaitLineBreak;
 			else if calcnumber is 2:
-				LineBreak;
 				say "     There really isn't any reason to lie to the friendly beast, so you decide to be sincere and let him know that you've actually been wanting to observe him, wondering to yourself why is he so different from the other behemoths. He looks at your for a while, then shows you a really, like, [italic type]really[roman type] toothy smile that could scare away even an army of soldiers. 'Ah, that's it? You're just curious as to why I'm red and have a weird tail? That happens if you spend way too much time in a nanite filled apocalypse like this one and get too close to behemoths and scorpions simultaneously, I think. Or at least that's one of the possibilities regarding what happened to me.'";
 				say "     Scorpions and behemoths? That would be some incredible result, but before you're able to know more, something comes to interrupt you...";
 				WaitLineBreak;
 			else if calcnumber is 3:
-				LineBreak;
 				now Libido of Diavoborg is 1;
 				say "     This opportunity cannot be wasted, you have to tell him how you feel about that enormous frame, those sharp teeth, those claws that could so easily make anything of their prey, the absolutely monstrous dick hanging beneath him, with the pair of balls that are easily bigger than your head, the fun addition of a gaping cunt right behind them... And you're daydreaming, which leaves the friendly beast staring at you with an inquisitive look. 'Uh... Can I get you anything?' he asks ironically, and what occurs in your mind at the moment is commenting on how [']big['] he is, and how much you'd love to get to know him [']up close['].";
 				say "     The beast's eyes widen, as he seems to have liked your answer. 'Ohh...! Well, you've got a big beast right here! I suppose I could invite you to my place and... Eh, you know... We could get to know each other better.' he says, flirting with you, and you cannot help but notice that his enormous junk seems to be half-hard by now. Whatever is going on in his mind must involve you in many different sexual scenarios with the red behemoth... It's actually exhilarating how ready he seems to invite you over, and his cock slowly thickening and hardening as you two share a brief silence. You are left there, simply admiring the amazing view this behemoth is giving you...";
-				say "     ... But unfortunately, something happens to interrupt this moment.";
+				say "     ...But unfortunately, something happens to interrupt this moment.";
 			WaitLineBreak;
 			say "     Feeling the earth shaking around you with the red behemoth above you standing still, you know that's bad news. 'Looks like we've got another visitor...' he says, letting go of you as he walks towards a certain direction. When you look, you see another behemoth, of the usual forest green color, looking back at him fiercely. It looks like they're about to fight each other, leaving you with a few options as they walk in circles with their guards up to see who makes the first move. As they growl at each other, you can use this opportunity to [bold type]run away while you can, forever[roman type], or you can actually [bold type]offer help in fighting the behemoth[roman type]. Alternatively, you can simply [bold type]observe the combat until it's over[roman type], since it's a very big threat, but it might net you some positive score with the peculiar beast if you actually manage to show off your strength, perhaps.";
 			LineBreak;
@@ -113,19 +106,17 @@ to say ResolveEvent Four Leg Wrath:
 			say "     [link](3)[as]3[end link] - Just stay where you are, this will be over soon.";
 			now calcnumber is 0;
 			while calcnumber < 1 or calcnumber > 3:
-				say "Choice? (1-3)>[run paragraph on]";
+				say "Choice? (1-3)> [run paragraph on]";
 				get a number;
-				if calcnumber is 1 or calcnumber is 2 or calcnumber is 3:
-					break;
-				else:
+				if calcnumber < 1 or calcnumber > 3:
 					say "Invalid choice. Type [link]1[end link] to go away and never return, [link]2[end link] to help him fight the behemoth intruder or [link]3[end link] to stay where you are.";
+			LineBreak;
 			if calcnumber is 1:
 				say "     The two beasts are very distracted fighting each other, so you find the best opportunity to scramble away and run as fast as you can until you can't hear their grunts and growls anymore. Though the beast took an apparent liking to you, you don't think you will ever see him again.";
 				now Resolution of Four Leg Wrath is 99;
 				now Four Leg Wrath is resolved;
 			else if calcnumber is 2:
 				say "     Seeing how this will be a ferocious battle, your help could be crucial to allow your new acquaintance to leave without any major injury. With that in mind, you rush towards the fight with all your might.";
-				wait for any key;
 				FLWBehemothFight;
 			else if calcnumber is 3:
 				say "     It might be better if you do not interfere. Fighting a giant wild beast all by yourself may not be the most wise decision, especially when there's a chance it might be enraged. You simply step back and observe the fight from a safe spot.";
@@ -154,7 +145,6 @@ to say ResolveEvent Four Leg Wrath:
 	else if Resolution of Four Leg Wrath is 0: [Sighting]
 		say "     Amidst your walking through the dry plains, you often expect to encounter some of its creatures roaming around, which makes you be extra careful when making your way through the wide open terrain. Your advantage is that you can see anyone coming from miles away, but that is simultaneously your problem, as they can also see you from a considerable distance. While there's plenty of tall grass, it isn't by far an ideal way of concealing yourself from possible dangers, so you're left pretty much out in the open. Nonetheless, this fact actually somewhat helps you in the upcoming event. Far, very far in the distance, you see a monstrous shape, looking small to your eyes now, but seemingly huge when you come closer.";
 		say "     Whatever you are looking at, from this far, you can't quite make any distinguishments regarding its shape or nature, but it seems to be some sort of beast, and a [italic type]very[roman type] big one. You should know by now what very big beasts can do to puny little preys if they ever get their strong, gigantic clawed paws on them, so you should make a decision based on that, and possibly in how much courage and bravery you've got... and even how kinky you are. Would you like to [bold type]investigate? There are enough conditions to do it safely[roman type]. Or you can always just [bold type]leave and note this area out of your future wandering[roman type], if you prefer.";
-		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Approach the mystery."; [get closer]
 		say "     ([link]N[as]n[end link]) - Perhaps it would be better to avoid this general area from now on."; [avoid this encounter forever]
 		if Player consents:
@@ -176,14 +166,12 @@ to say ResolveEvent Four Leg Wrath:
 	else if Resolution of Four Leg Wrath is 1: [Hunting... lovingly.]
 		say "     Another day exploring the Dry Plains, making your way through the open golden fields that are only filled with tall grass and the occasional tree. Speaking of which, you happen to stumble across that same tree where you last saw the peculiar behemoth beast, a four-legged beast of magnificent proportions, with slight differences compared to the usual forest green behemoth that often roams the farthest region of the plains. It was interesting to see how resourceful it was - and how well-endowed - when it was reaching for all the fruits in this tree. You can't help but wonder if you'll ever see it again, and discover the reason behind this odd mutation[if intelligence of Player > 16]... Well, [italic type]certainly it must have had something to do with the nanites and the way they reacted in this specific beast, or a mutation set that is not entirely originary from the behemoth strain[roman type]... almost surely[end if].";
 		say "     Although, while spending some time thinking to yourself and glancing around the area, you notice some marks on the ground that you could almost for sure never fail to notice. It's footprints, and very large ones, which can only mean a monstrous creature was here just recently. Following the tracks could, perhaps, lead you to it... But it may also lead you to a normal behemoth, and that might be problematic. This particular area of the plains isn't covered by a lot of grass, so you will be left visible, denying you any chance of preemptively retreating. This means that if you decide to [bold type]follow the tracks[roman type], you will have to commit to this action until the very end and deal with any consequences of this decision, but it may be worth your time, as there is a chance that these footprints belong to the red behemoth.";
-		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Let's follow the tracks.";
 		say "     ([link]N[as]n[end link]) - Back off for now.";
 		if Player consents:
 			LineBreak;
 			say "     The worst that can happen is that you find yourself facing a gigantic behemoth that is probably not happy to see you, and you still have the option to flee, so you could be in worse predicaments. Nonetheless, you decide to follow the tracks, and they're quite visible for a while...";
-			let randomnumber be a random number from 1 to 3;
-			if randomnumber is:
+			if a random number from 1 to 3 is:
 				-- 1: [finds nothing]
 					LineBreak;
 					say "     During your long and exhausting walk, some wind rose to the plains, and the tracks soon seem to have been erased with the dust covering them. You lose the trail and end in the middle of nowhere, with nothing to be found and no clue of where to go next. Seems like you have to call it quits and hope for another opportunity. Maybe you should keep searching for tracks that would hopefully lead you to that [bold type]Four Leg Wrath[roman type] of a beast...";
@@ -191,7 +179,6 @@ to say ResolveEvent Four Leg Wrath:
 				-- 2: [finds a normal behemoth]
 					LineBreak;
 					say "     It's a long and exhausting walk until your efforts finally provide some sort of reward... Though this is definitely not what you desired. More like, this is definitely what you feared. The tracks belonged to a normal behemoth, who seems to be walking around the plains, apparently without any specific goal. What is important is that it notices you on its tail, and it seems like you are in a pinch. You will have to either fight the beast or evade it somehow.";
-					wait for any key;
 					now inasituation is false;
 					challenge "Behemoth";
 					say "     After having dealt with the behemoth, you're back to square one. Maybe you should keep searching for tracks that would hopefully lead you to that [bold type]Four Leg Wrath[roman type] of a beast...";
@@ -199,7 +186,7 @@ to say ResolveEvent Four Leg Wrath:
 					LineBreak;
 					say "     It's a long and exhausting walk until your efforts finally provide some sort of reward... And you find yourself, gladly, looking at the oddly colored behemoth you found the other day. Fortunately, it seems distracted enough to not notice your presence, but what is it doing, exactly? Your curiosity gets the best of you immediately, though this area where the beast led you actually has a little more to take cover from view than the one behind, which means you're in luck. Same strategy as before, you seek a hiding place that provides you with a good view of what is happening, and take it, concealing yourself within the tall grass.";
 					WaitLineBreak;
-					say "     The first thing you notice is that the beast seems to be... the right word would be grunting a little, not out of annoyance, but something similar to a moan, just way more beastlike and definitely scarier. It is an exciting find, however, but it is even more interesting to see what is the situation causing such a thing. The view widens your eyes, as a fully erect, four and a half foot long of an gigantic dick right beneath the enormous frame of the beast is brightly presented to your gaze for entertainment, and as the creature's back legs are slightly spread, you can also see that the beast shares the hermaphroditism from its cousin species, with a leaking vulva just behind the basketball-sized testicles hanging in there.";
+					say "     The first thing you notice is that the beast seems to be... the right word would be grunting a little, not out of annoyance, but something similar to a moan, just way more beastlike and definitely scarier. It is an exciting find, however, but it is even more interesting to see what is the situation causing such a thing. The view widens your eyes, as a fully erect, four-and-a-half foot long of an gigantic dick right beneath the enormous frame of the beast is brightly presented to your gaze for entertainment, and as the creature's back legs are slightly spread, you can also see that the beast shares the hermaphroditism from its cousin species, with a leaking vulva just behind the basketball-sized testicles hanging in there.";
 					say "     What's more relevant, however, is that said massive shaft is getting grinded on some other creature underneath the beast, screeching like mad in what seems to be an enduring protest. A closer look reveals that it is one of the bald eagles, a rather large avian man, but tiny in comparison to the towering behemoth that is pinning him down. There's not much he can do against a giant and heavy meatlog almost as big as him, pressing against his body and keeping him on the ground, slowly getting more and more covered in the beast's precum. Looks like the red behemoth is finding himself in need of a satisfying release, and what's better to achieve that than finding another creature, willing or not, to satisfy its primal desires?";
 					WaitLineBreak;
 					say "     You observe them for a while, the behemoth just going faster and faster as if it was fucking some hole, in desperate need of pleasure and nearly dragging the bald eagle across the ground with every thrust. Eventually, he begins to cooperate, wrapping his arms and legs slightly around the girthy beasthood, a gesture that the monstrous creature greatly appreciates, with its grunting intensifying as the enormous balls bounce back and forth, hitting the eagle's legs, smashing the ground, and making a dusty mess all over the area that makes it hard for you to see. Although the prolonged grunt that follows in the next moments is quite suggestive of what's happening.";
@@ -209,7 +196,6 @@ to say ResolveEvent Four Leg Wrath:
 					now Resolution of Four Leg Wrath is 2;
 	else if Resolution of Four Leg Wrath is 2: [He notices player, pins him down... then fights another behemoth. Choose to watch, or try to help. Successful help nets loyalty, while losing lowers it. Doing nothing has no changes.]
 		say "     While you're taking a walk around the Dry Plains, you remind yourself of the gigantic beast you've been encountering lately, the mysterious red behemoth that still lingers in your mind as an unsolved enigma, one that you could crack if you continued to observe it, hopefully. It also ends up being quite fun to watch it in action, so you can't really complain. Given the opportunity, there is now a chance to head over the area where you last saw it, in hopes of finding another trail, or even the beast itself. Although you should keep in your mind that it's always somewhat risky to do this, so you should [bold type]keep your guard up[roman type] and give a good thinking about proceeding with this quest.";
-		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Attempt to find the red behemoth.";
 		say "     ([link]N[as]n[end link]) - Postpone this for now.";
 		if Player consents:
@@ -227,24 +213,20 @@ to say ResolveEvent Four Leg Wrath:
 			say "     [link](3)[as]3[end link] - Let him know that, in all truth, you're just craving for a really big beasty lover like him.";
 			now calcnumber is 0;
 			while calcnumber < 1 or calcnumber > 3:
-				say "Choice? (1-3)>[run paragraph on]";
+				say "Choice? (1-3)> [run paragraph on]";
 				get a number;
-				if calcnumber is 1 or calcnumber is 2 or calcnumber is 3:
-					break;
-				else:
+				if calcnumber < 1 or calcnumber > 3:
 					say "Invalid choice. Type [link]1[end link] to give an excuse, [link]2[end link] to tell him that you've been curious about him or [link]3[end link] to blatantly flirt with the beast that could eat you up in one go.";
+			LineBreak;
 			if calcnumber is 1:
-				LineBreak;
 				say "     All you can think about is saying that your really just happened to be walking through and saw tracks that he left behind, then got a little distracted and let yourself be pinned down by a gigantic behemoth... Him. He squints his big eyes before his voice booms out again. 'Lies! I know you've been following me around. I saw you looking at my junk while I was teaching that eagle man a lesson, or when I was leaning over that tree to have a snack. I even insisted on giving you a prolonged show, since you seemed to be enjoying the view, in hopes that you would be satisfied and go away... And now I find you here?! Not a coincidence... Tell me what you want from me before I bite and chew you into minced meat!'";
 				say "     It seems you would be forced to answer, were it not for a situation that comes to save you... Or at least, serving as an interruption.";
 				WaitLineBreak;
 			else if calcnumber is 2:
-				LineBreak;
 				say "     You're in no position to be attempting to deceive a beast of gigantic proportions that could easily tear you apart with one strike, so you decide to be sincere and let him know that you've actually been wanting to observe him, wondering to yourself why is he so different from the other behemoths. He looks at your for a while, then shows you a really, like, [italic type]really[roman type] toothy smile that could scare away even an army of soldiers. 'Ah, that's it? You're just curious as to why I'm red and have a weird tail? That happens if you spend way too much time in a nanite filled apocalypse like this one and get too close to behemoths and scorpions simultaneously, I think. Or at least that's one of the possibilities regarding what happened to me.'";
 				say "     Scorpions and behemoths? That would be some incredible result, but before you're able to know more, something comes to interrupt you...";
 				WaitLineBreak;
 			else if calcnumber is 3:
-				LineBreak;
 				now Libido of Diavoborg is 1;
 				say "     This opportunity cannot be wasted, you have to tell him how you feel about that enormous frame, those sharp teeth, these claws that could crush you so easily, the absolutely monstrous dick hanging beneath him, with the pair of balls that are easily bigger than your head, the fun addition of a gaping cunt right behind them... And you're daydreaming, which pisses him off quite a lot. 'Answer at once!' he shouts, looking scarier by the second. The only thing that occurs to you is commenting on how [']big['] he is, and how much you'd love to get to know him [']up close[']. The beast retracts with an frowned eyebrow, or well, the closest expression to that which he could make. 'Uh... Really? Shouldn't you be picking someone your size or something? I don't think I could fit in any of your holes... But sure, if that's all you want, I can pin you down under one of my parts. Which one do you want?'";
 				say "     It's actually exhilarating how promptly he raises up, to bring his musky junk hovering above your head. You can even notice his cock slowly thickening and hardening at the situation... 'I've got something for everyone, I'd say. It's quite awesome, in my opinion...' With a lot of choices to make, you're left there, simply admiring the amazing view this behemoth is giving you, with a maximized representation of each reproductive organ that are getting progressively more excited...";
@@ -257,12 +239,11 @@ to say ResolveEvent Four Leg Wrath:
 			say "     [link](3)[as]3[end link] - Just stay where you are, this will be over soon.";
 			now calcnumber is 0;
 			while calcnumber < 1 or calcnumber > 3:
-				say "Choice? (1-3)>[run paragraph on]";
+				say "Choice? (1-3)> [run paragraph on]";
 				get a number;
-				if calcnumber is 1 or calcnumber is 2 or calcnumber is 3:
-					break;
-				else:
+				if calcnumber < 1 or calcnumber > 3:
 					say "Invalid choice. Type [link]1[end link] to go away and never return, [link]2[end link] to help him fight the behemoth intruder or [link]3[end link] to stay where you are.";
+			LineBreak;
 			if calcnumber is 1:
 				say "     The two beasts are very distracted fighting each other, so you find the best opportunity to scramble away and run as fast as you can until you can't hear their grunts and growls anymore. Phew, that was a very dangerous experience... Let's not do that again. He will probably be thankful if you don't show him your face ever again, too, given how he found you to be quite an annoyance.";
 				if libido of Diavoborg is 1:
@@ -271,7 +252,6 @@ to say ResolveEvent Four Leg Wrath:
 					now Four Leg Wrath is resolved;
 			else if calcnumber is 2:
 				say "     Seeing how this will be a ferocious battle, your help could be crucial to allow your new acquaintance to leave without any major injury. With that in mind, you rush towards the fight with all your might.";
-				wait for any key;
 				FLWBehemothFight;
 			else if calcnumber is 3:
 				say "     It might be better if you do not interfere. Fighting a beast much bigger than yourself may not be the most wise decision, especially when there's a chance it might be enraged. You simply step back and observe the fight from a safe spot.";
@@ -298,22 +278,17 @@ to say ResolveEvent Four Leg Wrath:
 			say "     Given how risky your last attempt was, your resolve tells you to come better prepared for any upcoming events that could pose a risk to you. With that in mind, you dismiss the idea and continue on whatever you were doing previously.";
 
 to FLWBehemothFight:
-	now inasituation is true;
 	Challenge "Behemoth";
-	now inasituation is false;
 	if fightoutcome < 20: [won]
 		say "     Incredibly so, your might, wits, courage and swift strikes manage to bring down the beast completely on your own, as the red behemoth eyes you in awe. 'Oh... you can slay them on your own?! You're more powerful than you look...' he comments, poking the behemoth with his frontal paw as he examines the collapsed creature, who is grunting - or rather... moaning, to your surprise - as it lies defeated. 'It seems that my venom aided you, as well.' adds the red beast as he points you towards the massive hard-on your enemy now has, helplessly throbbing between its legs.";
 		now Loyalty of Diavoborg is 9;
-		WaitLineBreak;
 	else if fightoutcome > 19 and fightoutcome < 30: [lost]
 		say "     This was a terrible idea, you can't really fight it and now you're in too much pain to even move. Seems like [bold type]you've made yourself of a fool[roman type] in front of the red behemoth...";
 		say "     'Some fighter you are. If it wasn't for me, you'd be in a bad spot right now.' comments your new acquaintance as he bodyblocks the beast's next attacks and keeps you away from harm, then attempts to tackle the beast once it has to stop in order to recover some stamina. This allows him to gain an excellent angle in reach of his tail, and within a gleaming shine provided by the sunlight's touch against the razor sharp spike on the tip of his tail, he stings the creature with an incredible speed, releasing a grunt of pain from the enraged monster. The grunt diminishes quickly, and becomes something more prolonged and low, associated with a brief dizziness. Then, it's only moans, as the beast collapses. Dust finally settles down completely, and you can see the red behemoth is victorious, flexing his thick frame on top of the defeated enemy who, by the way, has a massive hard-on throbbing helplessly between its legs.";
-		WaitLineBreak;
 	else if fightoutcome is 30: [fled]
 		say "     This was a terrible idea, you can't really fight it and now you've provoked it to target you, so you're forced to run before it can end you.";
 		say "     Though, to your luck, your new acquaintance bodyblocks the beast's next attacks and keeps you away from harm, then attempts to tackle the beast once it has to stop in order to recover some stamina. 'Let me take the fight from now on.' he shouts, while he gains an excellent angle in reach of his tail, and within a gleaming shine provided by the sunlight's touch against the razor sharp spike on the tip of his tail, he stings the creature with an incredible speed, releasing a grunt of pain from the enraged monster. The grunt diminishes quickly, and becomes something more prolonged and low, associated with a brief dizziness. Then, it's only moans, as the beast collapses. Dust finally settles down completely, and you can see the red behemoth is victorious, flexing his thick frame on top of the defeated enemy who, by the way, has a massive hard-on throbbing helplessly between its legs.";
 		now Loyalty of Diavoborg is 5;
-		WaitLineBreak;
 
 Section 1.1 - Finding the Cave
 
@@ -337,21 +312,21 @@ to say ResolveEvent That Red Cave:
 	say "     You follow a path near the base of the mountains, on the border shared with Mount Shirley. But before proceeding any further, you decide to take a little rest...";
 	WaitLineBreak;
 	if Resolution of Four Leg Wrath is 3 and scalevalue of Player < 5: [Ended as smaller than Diavoborg and is still smaller]
-		say "     ... And as you are about to take a seat and lean back against a rocky bump, you hear a strange noise. It sounded like someone had suddenly start walking... Someone heavy, causing some tiny pebbles to roll down the slope as you glance around, trying to catch a clue of what it was, but you find nothing. It could be just a bird or something, so nothing too important to note. Perhaps you are being paranoid, even...";
+		say "     ...And as you are about to take a seat and lean back against a rocky bump, you hear a strange noise. It sounded like someone had suddenly start walking... Someone heavy, causing some tiny pebbles to roll down the slope as you glance around, trying to catch a clue of what it was, but you find nothing. It could be just a bird or something, so nothing too important to note. Perhaps you are being paranoid, even...";
 		say "     So after a few moments of search, you let you guard down and decide to take into your resting efforts once more...";
 		WaitLineBreak;
-		say "     ... Then suddenly, an enormous creature jumps out of nowhere towards you, pinning you down under its heavy, clawed paw, and proceeds to give you a very, very large and wet lick on the face. It is the red behemoth. 'Look who's here! I thought you'd have been eaten by now! Glad to see my tasty snack found its way to my trap!' Your eyes widen in realization, then revolt takes over as you discover that you have been tri-... He speaks again before you can finish that thought. 'I'm just kidding. It would have been a genius move on my part... which also surprises me that it would have worked, somehow... But that wasn't my intention. I just wanted to say hi.' he says, giving you another lick as you attempt to process what is happening. 'And by the way, the name is Diavoborg. You can call me Diavol, though, if my name makes your tongue twist and swirl too much.' - he says, smiling, then continues - 'You look tired. Wanna head inside?' His grin is very wide, open enough so you can see his gaping throat from where you are, and you blink for a moment... 'Not inside ME, you dork. I mean my lair. Home. Whatever you want to call it. I'm not going to eat you! Or at least without consent...' he ends with a chuckle.";
+		say "     ...Then suddenly, an enormous creature jumps out of nowhere towards you, pinning you down under its heavy, clawed paw, and proceeds to give you a very, very large and wet lick on the face. It is the red behemoth. 'Look who's here! I thought you'd have been eaten by now! Glad to see my tasty snack found its way to my trap!' Your eyes widen in realization, then revolt takes over as you discover that you have been tri-... He speaks again before you can finish that thought. 'I'm just kidding. It would have been a genius move on my part... which also surprises me that it would have worked, somehow... But that wasn't my intention. I just wanted to say hi.' he says, giving you another lick as you attempt to process what is happening. 'And by the way, the name is Diavoborg. You can call me Diavol, though, if my name makes your tongue twist and swirl too much.' - he says, smiling, then continues - 'You look tired. Wanna head inside?' His grin is very wide, open enough so you can see his gaping throat from where you are, and you blink for a moment... 'Not inside ME, you dork. I mean my lair. Home. Whatever you want to call it. I'm not going to eat you! Or at least without consent...' he ends with a chuckle.";
 		say "     Since he is making the invitation, perhaps you should take it. You did not come all the way here to leave with no results, after all your effort. You nod at the big beast, and so he helps you up and pushes you gently to walk in front of him. 'It's not too far. Just keep going forward, then turn around that corner over there, and we'll be close.' he tells you, as you both make your way towards your next destination.";
 	else if Resolution of Four Leg Wrath is 3 and scalevalue of Player > 4: [Ended as smaller than Diavoborg but arrives bigger]
-		say "     ... And as you are about to take a seat and lean back against a rocky bump, you hear a familiar voice booming out from a relative distance. 'Wow!' It is the behemoth, who was probably surprised at your change of looks. 'I almost didn't recognize you! Wooow... You're big, now.' Though he seems quite amazed at the fact you grew some extra feet in height, he, for some reason, remains cautious. 'Does that mean you can become of different sizes and shapes depending on what ends up transforming you... or something? Well, that's... cool...! I just hope you won't, like, have a weird effect on me or something, if we end up... Er... You know.' You assure him that you never actually had any experience in which you were the one transforming another, to his relief.";
+		say "     ...And as you are about to take a seat and lean back against a rocky bump, you hear a familiar voice booming out from a relative distance. 'Wow!' It is the behemoth, who was probably surprised at your change of looks. 'I almost didn't recognize you! Wooow... You're big, now.' Though he seems quite amazed at the fact you grew some extra feet in height, he, for some reason, remains cautious. 'Does that mean you can become of different sizes and shapes depending on what ends up transforming you... or something? Well, that's... cool...! I just hope you won't, like, have a weird effect on me or something, if we end up... Er... You know.' You assure him that you never actually had any experience in which you were the one transforming another, to his relief.";
 		say "     'That's great, then! Alright, uh... I can't say I'm not pleased! It's been ages since I had a friend the same size as me. The name is Diavoborg, by the way. You can call me Diavol, though, if my name makes your tongue twist and swirl too much.' - he says, smiling, then continues - 'You look tired. Wanna head inside? It's warm and safe in my cave! Well, maybe not the warmest place, but I can guarantee it's safe, at least!' Since he is making the invitation, perhaps you should take it. You did not come all the way here to leave with no results, after all your effort. You nod at the big beast, and so he helps you up and pushes you gently to walk in front of him. 'It's not too far. Just keep going forward, then turn around that corner over there, and we'll be close.' he tells you, as you both make your way towards your next destination.";
 	else if Resolution of Four Leg Wrath is 4 and scalevalue of Player > 4: [Ended as same size as Diavoborg and arrives big still]
-		say "     ... And as you are about to take a seat and lean back against a rocky bump, you hear a familiar voice booming out from a relative distance. 'You've made it! I was wondering when you'd show up!' It is Diavoborg, who comes to approach you eagerly. 'Hopefully you didn't find much trouble your way? I'm sorry this location is a bit... far from everything, but I can guarantee its safety, above all!' he says, putting one of his front paws on your shoulder as he smiles. 'You look tired. Wanna head inside?' Since he is making the invitation, perhaps you should take it. You did not come all the way here to leave with no results, after all your effort. You nod at the big beast, and so he helps you up and pushes you gently to walk in front of him. 'It's not too far. Just keep going forward, then turn around that corner over there, and we'll be close.' he tells you, as you both make your way towards your next destination.";
+		say "     ...And as you are about to take a seat and lean back against a rocky bump, you hear a familiar voice booming out from a relative distance. 'You've made it! I was wondering when you'd show up!' It is Diavoborg, who comes to approach you eagerly. 'Hopefully you didn't find much trouble your way? I'm sorry this location is a bit... far from everything, but I can guarantee its safety, above all!' he says, putting one of his front paws on your shoulder as he smiles. 'You look tired. Wanna head inside?' Since he is making the invitation, perhaps you should take it. You did not come all the way here to leave with no results, after all your effort. You nod at the big beast, and so he helps you up and pushes you gently to walk in front of him. 'It's not too far. Just keep going forward, then turn around that corner over there, and we'll be close.' he tells you, as you both make your way towards your next destination.";
 	else if Resolution of Four Leg Wrath is 4 and scalevalue of Player < 5: [Ended as same size as Diavoborg but arrives smaller]
-		say "     ... And as you are about to take a seat and lean back against a rocky bump, you hear a strange noise. It sounded like someone had suddenly start walking... Someone heavy, causing some tiny pebbles to roll down the slope as you glance around, trying to catch a clue of what it was, but you find nothing. It could be just a bird or something, so nothing too important to note. Perhaps you are being paranoid, even...";
+		say "     ...And as you are about to take a seat and lean back against a rocky bump, you hear a strange noise. It sounded like someone had suddenly start walking... Someone heavy, causing some tiny pebbles to roll down the slope as you glance around, trying to catch a clue of what it was, but you find nothing. It could be just a bird or something, so nothing too important to note. Perhaps you are being paranoid, even...";
 		say "     So after a few moments of search, you let you guard down and decide to take into your resting efforts once more...";
 		WaitLineBreak;
-		say "     ... Then suddenly, an enormous creature jumps out of nowhere towards you, pinning you down under its heavy, clawed paw, and proceeds to give you a very scary roar that comes blowing hard against your face. It is the red behemoth. Though something is not quite right... 'An intruder?! How did you find your way here?!' he asks, loudly, gnarling at you with his sharp teeth quite visible only to intimidate you. 'You'd better explain yourself now...' - the red behemoth makes a threat, as his huge wet tongue slips on top of you, not just licking you all over in one go, but actually coming back to get an even deeper feeling about you, as if... he is [bold type]tasting[roman type] you! - '... Or you're going to be my tasty meal, cute little snack.'";
+		say "     ...Then suddenly, an enormous creature jumps out of nowhere towards you, pinning you down under its heavy, clawed paw, and proceeds to give you a very scary roar that comes blowing hard against your face. It is the red behemoth. Though something is not quite right... 'An intruder?! How did you find your way here?!' he asks, loudly, gnarling at you with his sharp teeth quite visible only to intimidate you. 'You'd better explain yourself now...' - the red behemoth makes a threat, as his huge wet tongue slips on top of you, not just licking you all over in one go, but actually coming back to get an even deeper feeling about you, as if... he is [bold type]tasting[roman type] you! - '...Or you're going to be my tasty meal, cute little snack.'";
 		say "     You find yourself pinned down by Diavoborg, soaked wet and dripping with his saliva, which keeps leaking from the edges of his tongue. It does not seem like he has recognized you at all! You beckon him to wait and hear you out, but he seems impatient... and very hungry. 'I don't really care about what you have to say, I'm just gonna eat you. You shouldn't have ventured here.' he says, and gives you another very wet lick across your entire body. To your shock, this time, he starts pulling you into his mouth, slurping your legs in and raising your body up, so that you start sliding inside him naturally with the help of gravity! He opens just enough to feel you slipping between his lips...!";
 		WaitLineBreak;
 		say "     Though he now has a good look at your face from very, very close up, and his eyes widen. 'Wai-a-econ...' he mutters, with his mouth full, only able to say half-words, and then spits you out gently onto the ground. You are covered in drool, and nearly swimming in a pool of it. 'Ooooh! I know who you are! Damn, I almost ate you!' The behemoth lets out a laughter as he finds the fact that he mistook you with a tiny and edible prey is very amusing. Not only that, you also hear his stomach growling. 'Well I probably should have eaten you up, to be honest! Because with that tiny size of yours, I don't think we can do half the things we would be able to if you were big like me! What happened to you?!'";
@@ -364,26 +339,21 @@ to say ResolveEvent That Red Cave:
 
 Section 1.2 - Red Rock Lair
 
+a postimport rule: [bugfixing rules for players that import savegames]
+	if That Red Cave is resolved: [event resolved, room not connected yet]
+		connect Entrance to Red Rock Lair;
+
 Table of GameRoomIDs (continued)
 Object	Name
 Entrance to Red Rock Lair	"Entrance to Red Rock Lair"
 
 Entrance to Red Rock Lair is a room. It is a fasttravel. Entrance to Red Rock Lair is private.
 The earea of Entrance to Red Rock Lair is "Plains".
-Description of Entrance to Red Rock Lair is "[DiavoborgLairEntranceDesc]".
-
-to say DiavoborgLairEntranceDesc:
-	say "     The entrance to Diavoborg's Lair lays east of your position and at the base of a smaller mount, which is an extension connected to a bigger mountain, being large enough for any giant-sized beast to fit in comfortably. From here, you can see the vast area of the Dry Plains, hiding behind fog at longer distances.";
+Description of Entrance to Red Rock Lair is "     The entrance to Diavoborg's Lair lays east of your position and at the base of a smaller mount, which is an extension connected to a bigger mountain, being large enough for any giant-sized beast to fit in comfortably. From here, you can see the vast area of the Dry Plains, hiding behind fog at longer distances.[line break]".
+Scent of Entrance to Red Rock Lair is "     This place doesn't give off any particular smell, apart from a faint animalistic scent. Probably a behemoth's, which wouldn't be that odd.".
 
 to connect Entrance to Red Rock Lair:
 	now Entrance to Red Rock Lair is known;
-
-a postimport rule: [bugfixing rules for players that import savegames]
-	if That Red Cave is resolved: [event resolved, room not connected yet]
-		connect Entrance to Red Rock Lair;
-
-instead of smelling Entrance to Red Rock Lair:
-	say "     This place doesn't give off any particular smell, apart from a faint animalistic scent. Probably a behemoth's, which wouldn't be that odd.";
 
 [-----------------------------------------------]
 
@@ -392,17 +362,15 @@ Object	Name
 Red Rock Lair Hall	"Red Rock Lair Hall"
 
 Red Rock Lair Hall is a room.
-Red Rock Lair Hall is east of Entrance to Red Rock Lair. It is sleepsafe.
+Red Rock Lair Hall is east of Entrance to Red Rock Lair.
 Description of Red Rock Lair Hall is "[DiavoborgLairHallDesc]".
+Scent of Red Rock Lair Hall is "     Inside Diavoborg's lair, his animalistic scent is more intense. You can definitely tell it apart from other beasts.".
 
 to say DiavoborgLairHallDesc:
 	if Ambush The Wyvern Patriarch is resolved:
 		say "     This particular division serves as the hall of Diavoborg's Lair, leading to other rooms that the behemoth himself excavated. There isn't a lot to tell about, only that it is ample and spacious, so that Diavoborg can freely move around. At the middle of this particular room there is a firecamp, bigger than you are used to, which is lit during the night to provide some light. He also took the time to hang some torches on the walls, since little light gets in the deepest parts of the cave. One of these paths leads to his resting place, while the other further [bold type]east[roman type] leads to another chamber where Vuukzasqig, the former Wyvern Patriarch, is settled in.";
 	else:
 		say "     This particular division serves as the hall of Diavoborg's Lair, leading to other rooms that the behemoth himself excavated. There isn't a lot to tell about, only that it is ample and spacious, so that Diavoborg can freely move around. At the middle of this particular room there is a firecamp, bigger than you are used to, which is lit during the night to provide some light. He also took the time to hang some torches on the walls, since little light gets in the deepest parts of the cave. One of these paths leads to his resting place, while the other seems unfinished, with rubble scattered around. Perhaps the red behemoth is working on something.";
-
-instead of smelling Red Rock Lair Hall:
-	say "     Inside Diavoborg's lair, his animalistic scent is more intense. You can definitely tell it apart from other beasts.";
 
 [-----------------------------------------------]
 
@@ -411,14 +379,9 @@ Object	Name
 Red Rock Resting Chamber	"Red Rock Resting Chamber"
 
 Red Rock Resting Chamber is a room.
-Red Rock Resting Chamber is southeast of Red Rock Lair Hall. It is sleepsafe.
-Description of Red Rock Resting Chamber is "[DiavoborgRestingChamberDesc]".
-
-to say DiavoborgRestingChamberDesc:
-	say "     Here is where Diavoborg retreats to sleep. He has set up a really neat bedrock to serve as bed for someone his size, which would probably feel a little too hard and uncomfortable for you. The walls have lit torches, so that this division doesn't fall into pitch darkness. It also looks like the behemoth has a good collection of colorful gemstones and different rocks, all organized and ordered by size, appearance and shape. There are some wild scratches on the floor, as well.";
-
-instead of smelling Red Rock Resting Chamber:
-	say "     Inside Diavoborg's lair, his animalistic scent is more intense. You can definitely tell it apart from other beasts.";
+Red Rock Resting Chamber is southeast of Red Rock Lair Hall.
+Description of Red Rock Resting Chamber is "     Here is where Diavoborg retreats to sleep. He has set up a really neat bedrock to serve as bed for someone his size, which would probably feel a little too hard and uncomfortable for you. The walls have lit torches, so that this division doesn't fall into pitch darkness. It also looks like the behemoth has a good collection of colorful gemstones and different rocks, all organized and ordered by size, appearance and shape. There are some wild scratches on the floor, as well.[line break]".
+Scent of Red Rock Resting Chamber is "     Inside Diavoborg's lair, his animalistic scent is more intense. You can definitely tell it apart from other beasts.".
 
 [-----------------------------------------------]
 
@@ -426,14 +389,9 @@ Table of GameRoomIDs (continued)
 Object	Name
 Red Rock Wyvern Chamber	"Red Rock Wyvern Chamber"
 
-Red Rock Wyvern Chamber is a room. It is sleepsafe.
-Description of Red Rock Wyvern Chamber is "[DiavoborgWyvernChamberDesc]".
-
-to say DiavoborgWyvernChamberDesc:
-	say "     This chamber is still recently dug up, and you can tell that by some rough edges that will take some time to perfect, but is otherwise a cozy place where your former nemesis now calls his own room. There is not much to say about it other than being a rocky room with a few piles of rubble and rocks next to the walls, and the only thing illuminating this place is more torches. There is definitely enough space for a colossal creature to hang around comfortably.";
-
-instead of smelling Red Rock Wyvern Chamber:
-	say "     In this particular room, the scents mix. Ultimately, it is Diavoborg's which prevails, but there is a certain something added to it, from another obvious male.";
+Red Rock Wyvern Chamber is a room.
+Description of Red Rock Wyvern Chamber is "     This chamber is still recently dug up, and you can tell that by some rough edges that will take some time to perfect, but is otherwise a cozy place where your former nemesis now calls his own room. There is not much to say about it other than being a rocky room with a few piles of rubble and rocks next to the walls, and the only thing illuminating this place is more torches. There is definitely enough space for a colossal creature to hang around comfortably.[line break]".
+Scent of Red Rock Wyvern Chamber is "     In this particular room, the scents mix. Ultimately, it is Diavoborg's which prevails, but there is a certain something added to it, from another obvious male.".
 
 to connect Red Rock Wyvern Chamber:
 	change the east exit of Red Rock Lair Hall to Red Rock Wyvern Chamber;
@@ -448,6 +406,10 @@ object	name
 Diavoborg	"Diavoborg"
 
 Diavoborg is a man.
+Understand "Diavol" as Diavoborg.
+Understand "Diavo" as Diavoborg.
+Understand "Diav" as Diavoborg.
+Understand "Dia" as Diavoborg.
 ScaleValue of Diavoborg is 5. [Behemoth sized]
 Body Weight of Diavoborg is 9. [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
 Body Definition of Diavoborg is 9. [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
@@ -484,13 +446,7 @@ TwistedCapacity of Diavoborg is false. [Twisted Characters can take any penetrat
 Sterile of Diavoborg is true. [steriles can't knock people up]
 MainInfection of Diavoborg is "Behemoth".
 Description of Diavoborg is "[Diavoborgdesc]".
-Conversation of Diavoborg is { "<This is nothing but a placeholder!>" }.
 The scent of Diavoborg is "     Diavoborg smells like a beast you can't quite compare to anything but the behemoths themselves, though perhaps the closest would be something between a bull and a dragon. It is very animalistic, nonetheless, especially around his junk, which makes you quite dizzy at first if you take a deeper whiff while standing next to him.".
-
-Understand "Diavol" as Diavoborg.
-Understand "Diavo" as Diavoborg.
-Understand "Diav" as Diavoborg.
-Understand "Dia" as Diavoborg.
 
 to say DiavoborgDesc:
 	say "     The unique example of the Viper Behemoth subspecies that Diavoborg is features a dark red fur, his main characteristic, and it greatly distinguishes him from the remaining beasts of his kind. He still has teeth like razors, albeit shorter in length, and he is about the same size as other Behemoths, with the same amount of hide covering his hulking sixteen foot long frame, a generous white mane adorning his enormous head just like them, sharing the shape of his cousins regarding his two onyx horns that jut from his scalp, and equally clawed paws that scrap the ground beneath his monstrous form. The only exception is his tail, which while retaining the usual nine foot long size, its spikes are longer and stretch forward, the ones towards the center arching downwards, resembling scythes, and are venomous. He's laying it at ease for now, merely sitting in front of you as his thick, heavy long cock and basketball-sized nuts rest between his four legs, but fully exposed.";
@@ -510,7 +466,6 @@ instead of conversing Diavoborg:
 
 to say DiavoborgTalkMenu:
 	say "     [bold type]What do you want to talk to Diavoborg about?[roman type][line break]";
-	LineBreak;
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]
@@ -524,7 +479,7 @@ to say DiavoborgTalkMenu:
 		now title entry is "This location";
 		now sortorder entry is 2;
 		now description entry is "Inquire about his choice of home";
-	[]
+		[]
 		choose a blank row in table of fucking options;
 		now title entry is "Him as a Behemoth";
 		now sortorder entry is 3;
@@ -567,22 +522,22 @@ to say DiavoborgTalkMenu:
 			choose row calcnumber in table of fucking options;
 			say "[title entry]: [description entry]?";
 			if Player consents:
-				let nam be title entry;
 				now sextablerun is 1;
-				if (nam is "Himself"):
-					say "[DiavoborgTalkHimself]";
-				else if (nam is "This location"):
-					say "[DiavoborgTalkLocation]";
-				else if (nam is "Him as a Behemoth"):
-					say "[DiavoborgTalkBehemoth]";
-				else if (nam is "Sex"):
-					say "[DiavoborgTalkSex]";
-				else if (nam is "Gender"):
-					say "[DiavoborgTalkGender]";
-				else if (nam is "Vuukzasqig"):
-					say "[DiavoborgTalkVuukzy]";
-				else if (nam is "Wyvern Patriarch"):
-					say "[DiavoborgTalkWP]";
+				if title entry is:
+					-- "Himself":
+						say "[DiavoborgTalkHimself]";
+					-- "This location":
+						say "[DiavoborgTalkLocation]";
+					-- "Him as a Behemoth":
+						say "[DiavoborgTalkBehemoth]";
+					-- "Sex":
+						say "[DiavoborgTalkSex]";
+					-- "Gender":
+						say "[DiavoborgTalkGender]";
+					-- "Vuukzasqig":
+						say "[DiavoborgTalkVuukzy]";
+					-- "Wyvern Patriarch":
+						say "[DiavoborgTalkWP]";
 				wait for any key;
 				say "[DiavoborgTalkMenu]"; [looping back to keep talking with him]
 		else if calcnumber is 0:
@@ -590,7 +545,7 @@ to say DiavoborgTalkMenu:
 			say "     You excuse yourself as you have to take your leave. Diavoborg smiles to you, though he can't hide the disappointment in seeing you go.";
 			wait for any key;
 		else:
-			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options], or 0 to exit.";
 	clear the screen and hyperlink list;
 
 to say DiavoborgTalkHimself:
@@ -668,7 +623,6 @@ to say DiavoborgTalkWP:
 	WaitLineBreak;
 	say "     'I think I've already told you about my tail, right? So, this big sting here is capable of injecting a powerful venom that gives uncontrollable, even debilitating, lust. Basically makes them so horny they are immediately subdued. I've used it plenty of times to get out of trouble, but I'm wondering if we could use this to tame ourselves a large wyvern?' You consider his words and whether it would be a good idea or not to practically drug the Wyvern Patriarch into submission with Diavoborg's venom. There are moral questions associated with this, but there is also the possibility of a peaceful resolution between you and him, provided that the red behemoth can reach him and accomplish what he is suggesting.";
 	say "     Should you accept Diavoborg's help in dealing with the Wyvern Patriarch? Beware though, as this will [bold type]disable the Wyvern Patriarch encounter[roman type] for the remainder of the playthrough.";
-	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Accept Diavoborg's help in dealing with the Wyvern Patriarch permanently.";
 	say "     ([link]N[as]n[end link]) - It is not the time for this, give up on the idea for now.";
 	if Player consents:
@@ -698,7 +652,6 @@ Instead of fucking Diavoborg:
 			say "     You are [bold type]smaller than[roman type] Diavoborg, which allows you to get into size difference interactions with the red behemoth. You will be locked out of [italic type]same size scenes[roman type], however.";
 		WaitLineBreak;
 		say "     [bold type]What shall you do with Diavoborg?[roman type][line break]";
-		LineBreak;
 		now sextablerun is 0;
 		blank out the whole of table of fucking options;
 		[]
@@ -711,48 +664,48 @@ Instead of fucking Diavoborg:
 			if Resolution of WPExtBallTF is 1:
 				choose a blank row in table of fucking options;
 				now title entry is "Special: Massage his balls with Vuukzasqig";
-				now sortorder entry is 1;
+				now sortorder entry is 3;
 				now description entry is "You remember Vuuk's request. Perhaps this would be the time";
 			[]
 			if Libido of Diavoborg > 2:
 				choose a blank row in table of fucking options;
 				now title entry is "Get pinned under his sex";
-				now sortorder entry is 2;
+				now sortorder entry is 4;
 				now description entry is "Have the behemoth use your body to please himself using either of his genitals";
 				[]
 				choose a blank row in table of fucking options;
 				now title entry is "Ask him to play with you using his mouth";
-				now sortorder entry is 3;
+				now sortorder entry is 5;
 				now description entry is "The idea of feeling that huge wet tongue all over your body seems like fun, right";
 			[]
 			if Libido of Diavoborg > 2 and Loyalty of Diavoborg > 9:
 				choose a blank row in table of fucking options;
 				now title entry is "Milk the behemoth";
-				now sortorder entry is 4;
+				now sortorder entry is 6;
 				now description entry is "Get some cum from Diavoborg";
 			[]
 			if Libido of Diavoborg > 2 and Loyalty of Diavoborg >= 10 and vorelevel > 2:
 				choose a blank row in table of fucking options;
 				now title entry is "Feed yourself to his beast cock";
-				now sortorder entry is 5;
+				now sortorder entry is 7;
 				now description entry is "Ask him if he would like to swallow you down with his cock... for fun";
 				[]
 				if Resolution of WPExtBallTF is 2 and Lust of Diavoborg > 0:
 					choose a blank row in table of fucking options;
 					now title entry is "Special: Feed yourself to his beast cock with Vuukzasqig";
-					now sortorder entry is 5;
+					now sortorder entry is 8;
 					now description entry is "Ask him if he would like to swallow you down with his cock for Vuukzasqig to watch";
 				[]
 				if "Stubbornly Alive" is listed in Feats of Player:
 					choose a blank row in table of fucking options;
 					now title entry is "Have him eat you";
-					now sortorder entry is 6;
+					now sortorder entry is 9;
 					now description entry is "Allow Diavoborg to put you in his mouth and swallow you";
 		[]
 		else if scalevalue of Player > 4: [same size as Diavoborg]
 			choose a blank row in table of fucking options;
 			now title entry is "Suck his cock";
-			now sortorder entry is 1;
+			now sortorder entry is 2;
 			now description entry is "He really likes receiving blowjobs, so why wouldn't you offer";
 		[]
 		sort the table of fucking options in sortorder order;
@@ -768,33 +721,32 @@ Instead of fucking Diavoborg:
 				choose row calcnumber in table of fucking options;
 				say "[title entry]: [description entry]?";
 				if Player consents:
-					let nam be title entry;
 					now sextablerun is 1;
-					if (nam is "Massage his balls"):
-						say "[DiavoborgBallsMassage]";
-					else if (nam is "Get pinned under his sex"):
-						say "[DiavoborgGrinding]";
-					else if (nam is "Milk the behemoth"):
-						say "[DiavoborgMilking]";
-					else if (nam is "Ask him to play with you using his mouth"):
-						say "[DiavoborgMouthplay]";
-					else if (nam is "Feed yourself to his beast cock"):
-						say "[DiavoborgCockVore]";
-					else if (nam is "Have him eat you"):
-						say "[DiavoborgOralVore]";
-					else if (nam is "Suck his cock"):
-						say "[DiavoborgGiveBlowjob]";
-					else if (nam is "Special: Massage his balls with Vuukzasqig"):
-						say "[DiavoborgSexSpecialBalls]";
-					else if (nam is "Special: Feed yourself to his beast cock with Vuukzasqig"):
-						say "[DiavoborgSexSpecialCV]";
-					wait for any key;
+					if title entry is:
+						-- "Massage his balls":
+							say "[DiavoborgBallsMassage]";
+						-- "Get pinned under his sex":
+							say "[DiavoborgGrinding]";
+						-- "Milk the behemoth":
+							say "[DiavoborgMilking]";
+						-- "Ask him to play with you using his mouth":
+							say "[DiavoborgMouthplay]";
+						-- "Feed yourself to his beast cock":
+							say "[DiavoborgCockVore]";
+						-- "Have him eat you":
+							say "[DiavoborgOralVore]";
+						-- "Suck his cock":
+							say "[DiavoborgGiveBlowjob]";
+						-- "Special: Massage his balls with Vuukzasqig":
+							say "[DiavoborgSexSpecialBalls]";
+						-- "Special: Feed yourself to his beast cock with Vuukzasqig":
+							say "[DiavoborgSexSpecialCV]";
 			else if calcnumber is 0:
 				now sextablerun is 1;
 				say "     You excuse yourself as you have to take your leave. Diavoborg smiles to you, though he can't hide the disappointment in seeing you go.";
-				wait for any key;
 			else:
-				say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
+				say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options], or 0 to exit.";
+		wait for any key;
 		clear the screen and hyperlink list;
 
 to say DiavoborgBallsMassage:
@@ -827,12 +779,11 @@ to say DiavoborgGrinding:
 		say "     Knowing how excited the behemoth gets with this, you bring up the possibility of him using your body to rub either of his privates on. He really liked the idea, and promptly accepts, winking as he gives you a very good view of his slowly building erection. 'Get on there, then. I'll give you a good hump.' he teasingly says in a tone that manages to fill you with excitement.";
 	WaitLineBreak;
 	say "     Before walking towards Diavoborg, you [if Player is not naked]get rid of any clothes and equipment you might have on you, so that you can provide your fully naked body for his pleasure[else]let him have a look at your fully exposed naked body that will provide him all the pleasure[end if]. He appreciates eyeing you from head to feet before you slide yourself underneath him, the big beast even trembling with all the eagerness. The real question now is, you do have two possibilities that would prove pleasurable for him. Either you should embrace his meaty shaft, yearning for lots of attention, or you could go past his balls and get a [italic type]bodyful[roman type] of moist and beastly pussy upon you.";
-	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Go for his throbbing cock.";
 	say "     ([link]N[as]n[end link]) - Head for his dripping cunt.";
 	if Player consents: [cock time]
 		LineBreak;
-		say "     You cannot ignore what is right in front of you... A massive, four and a half foot long of a giant dick, oozing precum with its tip soaked already, only from the anticipation. Diavoborg throws you a rather mischievous gaze as you exchange looks for a second, as if you allowed him to read your mind. The agreement is implied and undeniable, and you rush to slide down underneath his monstrous cock, throbbing like mad and so warm against your now vulnerable body. The beast rises it just enough to allow you to comfortably settle in, and lets you work on it by yourself for now, simply resting his appendage on top of you and right between your [if Breast Size of Player is 0]pectorals[else]tits[end if]. His member is actually incredibly heavy...! if he were to fully relax his lower torso, his enormous cock would probably smother you. But for now, you resort to wrapping your arms and legs around his veiny dark shaft, feeling it pulsing within your embrace as you begin to give it a few good welcoming rubs.";
+		say "     You cannot ignore what is right in front of you... A massive, four-and-a-half foot long of a giant dick, oozing precum with its tip soaked already, only from the anticipation. Diavoborg throws you a rather mischievous gaze as you exchange looks for a second, as if you allowed him to read your mind. The agreement is implied and undeniable, and you rush to slide down underneath his monstrous cock, throbbing like mad and so warm against your now vulnerable body. The beast rises it just enough to allow you to comfortably settle in, and lets you work on it by yourself for now, simply resting his appendage on top of you and right between your [if Breast Size of Player is 0]pectorals[else]tits[end if]. His member is actually incredibly heavy...! if he were to fully relax his lower torso, his enormous cock would probably smother you. But for now, you resort to wrapping your arms and legs around his veiny dark shaft, feeling it pulsing within your embrace as you begin to give it a few good welcoming rubs.";
 		say "     Naturally, your soft touch sends all the bliss to the beast as he lets out a grunt. 'Grr... Can you... lick it?' he asks, his voice barely catching up to his breathing, dropping heavy and deep by the time you're fully clinging to his manhood, and you cannot possibly deny such a request. Sticking your tongue out, you give his soaked glans a wide and generous lick, followed by several, as you get hooked on the sweet and salty taste of his precum. 'Ohhh... yes...!' he murmurs, albeit audibly enough to echo through the cave, and it is all the encouragement you need to continue to feast on his dribbling penis, having given you a faceful of the sticky stuff by now. The quantity of pre that he already dropped should be the equivalent of many cum loads from an average human male, and you know it will soon begin to create a puddle around you...";
 		WaitLineBreak;
 		say "     Unawarely, you've already dropped the just licking part, and have put your lips to work, effectively making out with not just the smooth wet surface of his glans, but having shifted to the slit, the source of all the juice and also the most sensitive spot of the behemoth's rod, until an unexpected hard hump awakens you from your almost trance-like devotion. 'Fuck, sorry...' apologizes the beast, but he does a few more tentative humps as you continue to rub his shaft and lick the tip. Soon, he really starts to grint his massive tool against your body, so you let go your grasp just enough so that you don't slide across the rocky floor with it. You are quickly coated in more of the beast's precum, feeling that heavy and hard member rubbing across your entire body, part of his shaft against your sensitive bits, and you too find yourself sinking in pleasure.";
@@ -863,15 +814,14 @@ to say DiavoborgGrinding:
 		say "     Although, the beast relieves the pressure once more, and proceeds to hump against you, his movements getting harder and a bit more desperate as time passes. The sensation of that warm cunt drenching you in sex juices and rubbing across your whole body is actually turning you on so much that you, too, are driven closer to the edge as the behemoth continues to grind his pussy on you. He grunts and moans, all while intensifying his movements, to a point he can barely, very barely, resist the urge of sitting his whole rear on you...";
 		if Loyalty of Diavoborg >= 10 and UBlevel > 1: [there's enough trust for this and Player doesn't have UB deactivated]
 			say " He stops for a moment, lifting his cunt just enough to give you some breathing air, and asks you a question amidst his heavy breathing. 'Do you... Wanna go... in?' You could tell the behemoth was asking this shyly but very eagerly, however the decision remains yours.";
-			LineBreak;
 			say "     ([link]Y[as]y[end link]) - Let him pull you inside him.";
 			say "     ([link]N[as]n[end link]) - You'll pass the chance.";
 			if Player consents: [UB scene]
 				LineBreak;
 				say "     You just know Diavoborg has a wide grin painted across his muzzle, and even his dripping cunt seemed to have responded to your generosity. When you allow him to descend upon you again, he goes all the way down, pressing you deeply below his drooling pussy as he grinds some more. His lower lips touch every corner of your body as they get comfortable around you, stretching wide to accommodate your whole self, soaking you more in his juices as you're brought in between his labia. Not only you can hear, but even feel, the beast grunting and moaning as he pulls every inch of your body inside him, as you are slowly pulled off the ground and sucked inside the welcoming pussy. The warm and squishy walls around you are relentless in providing you all sorts of blissful sensations with each movement the behemoth makes, and as you settle in his womb, Diavoborg just lets an enormously powerful orgasm take over him.";
 				say "     From inside him, it is impossible to see the massive mess he must be making of his cave, and you cannot ignore the urge to cum as well. Quickly, you are brought over the edge by the overwhelming sensations, [if Player is male]covering his insides with your own load[else]a rush of pure pleasure striking your body from the core of your crotch[end if], and finishing your already longer than normal climax even before the behemoth's! He just keeps on roaring with joy for what seems like a full minute or more, before he returns to a heavy breathing as his orgasm subsides. 'Ohhhh... crap crap crap...' you can hear his voice storming from your whole surroundings as you're dazing off. 'Uhh... You have a nap in there, I'll... take you out in a... er... bit... I think... Shit, I made a fucking mess...' These words are the last you hear before you dive into a deep slumber inside the beast.";
-				WaitLineBreak;
 				follow the turnpass rule;
+				AttemptToWait;
 				say "     There is not really a way to tell when, but you do wake up eventually, feeling yourself sliding off the behemoth's pussy and being delivered into open air. He urges to lick you clean from his cunt juices with a big smile on his face. 'Hey hey! Hope you enjoyed your stay... Gave me quite the time to clean the mess I made. I didn't know I could cum that much...' You are only left to wonder how messy of a load this was, since you couldn't see it with your own eyes. 'I guess... unbirthing makes me hornier... But I'm down for a repeat, if you are.' he chuckles, and you decide to take a moment to recover from the ordeal before you are ready to move on to other matters.";
 				if Libido of Diavoborg is 3:
 					now Libido of Diavoborg is 4;
@@ -896,7 +846,6 @@ to say DiavoborgMilking:
 	WaitLineBreak;
 	say "     'Unngh... Fuck... I just gotta say that... you're doing reeeeally well...' he says, dragging his words along with a long grunt, as he humps his beastly hips against the ground. As he made it clear he is enjoying your efforts, you double them, making sure you use your whole body as possible to bring him closer to orgasm. The monster cock you are holding onto pulses harder than ever, and as it trembles within your grasp, his balls enlarge and begin to raise, despite their massive weight. Diavoborg's breathing deepens and hastens, the huge creature letting out a moan as he approaches his climax... 'Y-you might want to... position yourself... But... oh fuck yes... don't stop what you're doing...!'";
 	say "     Seeing that the behemoth is very close to deliver his generous load, [bold type]how shall you receive it?[roman type][line break]";
-	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Feast on it directly from his cock.";
 	say "     ([link]N[as]n[end link]) - Bottle up some cum.";
 	if Player consents: [bottle up]
@@ -905,12 +854,13 @@ to say DiavoborgMilking:
 		say "     The salty and warm liquid coats your tongue and the inner walls of your mouth, and it hooks you up in such a way that you cannot bring yourself to stop drinking more and more of it...! By the time his orgasm has started to subside, you are still licking the fat drops from his shaft, sucking it all up as you work hard to get just a bit more in your already swollen stomach. Panting, the beast looks down to watch you feast on the cum banquet he provided you, and lets out a chuckle. 'Phew... Heh, looks like someone's enjoying themselves down there.' You do not really pay much attention to his words, and simply continue to fill yourself to your heart's content. At some point, you feel a heavy paw rubbing against your back, surprisingly delicately, as if encouraging you to feel comfortable in the whole sticky mess he made.";
 		WaitLineBreak;
 		say "     Eventually, though, you are too full to even think about drinking or eating anything else for the next few hours, and just feel like taking a nap. Your body registers this and falls limp as you dive into a deep slumber, cuddling with the giant beast as he holds you safely in his huge arms.";
+		AttemptToWait;
 		follow the turnpass rule;
 		PlayerDrink 24;
 		PlayerEat 16;
 		LibidoBoost 30;
 		if Loyalty of Diavoborg < 20:
-			say "     [bold type]The time you spent together has contributed to increase Diavoborg's trust in you.[roman type][line break]";
+			say "[line break]     [bold type]The time you spent together has contributed to increase Diavoborg's trust in you.[roman type][line break]";
 			increase Loyalty of Diavoborg by 1;
 	else:
 		LineBreak;
@@ -994,9 +944,9 @@ to say DiavoborgOralVore:
 	say "     When he is done playing around with you, a sudden force pulls you into his throat, and just like that, you are swallowed. The walls of his esophagus merciless squeeze and throb around you as you continue to be pulled downwards, gravity aiding this process greatly and leaving no hopes for you to return from whence you came from. His voice now booms from every direction, deeper than ever, and makes your whole surroundings shake. 'Nice little snack... Hmm, think I might just take a nap while you stay in my belly. Since nothing permanent will happen to you, I'll just have to wait until you come out, somehow... You do feel great moving about in there... So relaxing...' You feel, yet again, your surroundings shake, and with it, your center of gravity shifting. You theorize the behemoth must have lied down on his back.";
 	say "     As you are deposited in the beast's stomach, the entire thing begins to rumble. You barely have enough space in here, but this huge body pays no mind to that and treats you like any other meal, as the gastric juices begin to make their way towards and around you. You recall this ability of yours letting you make a choice, but you would not want to traumatize poor Diavoborg by letting him actually eat you against his own conscience, so you focus on your new physical properties and calmly allow the dissolution of your form as you endure the digestion process. Strangely, it is not painful, as you feel yourself melting away into a goopy substance that you feel as your own, as if your organism adapted to survive unscathed. This is something that lasts for at least a couple hours, and while you chose a route that will lead you to a safe outcome, you have otherwise no control over what happens to you...";
 	say "     This almost blissful calm eventually overwhelms you as you swim in Diavoborg's stomach juices, numb and barely awake, until you are no more, losing consciousness for who knows how long...";
-	WaitLineBreak;
 	follow the turnpass rule;
 	follow the turnpass rule;
+	AttemptToWait;
 	say "     Eventually, you find yourself whole and smelling a little funny next to a pile of rocks. Next to you is the beast himself, who had been observing you since... Well, since you were here. 'It's really fascinating seeing you taking shape back from a pile of goop! And it's a strangely similar one to what the wyverns out there spit... Then, your body returns to what it was before! How is that even possible...?' He then takes a step forward and gives you a big lick, then another, and then yet another... Only stopping himself when he realizes he was getting too enthusiastic once more. 'You still taste as well as before, too! Though I should probably stop licking you or I'll end up eating you again... Heh. Hope you enjoyed it, nice to make you my snack without any dangers!'";
 	say "     This was... definitely an experience, and who knows, maybe you could use things like this to train this ability of yours and, perhaps, control it at will.";
 	if Player is male:
@@ -1017,8 +967,7 @@ to say DiavoborgGiveBlowjob:
 	say "     It does not stop here. Diavoborg really gets enthusiasmed as he rams his beastly manhood into you, grabbing your head and thrusting his way deep. You have to place your hands on the lower half of his body to discourage him from absolutely wrecking your throat, and thankfully, in the position he is in, you manage to regain control. He is even harder than before, his huge dick leaking and throbbing after that taste of a facefuck, and the behemoth can only moan at every extra movement your tongue and lips provide, now freely roaming about his shaft and wet tip. Each kiss, lick and sucking motion you give rips a moan of pleasure from the red beast, and with a gentle squeeze, you feel his heavy nutsack, each orb completely full of cum yearning to be released.";
 	WaitLineBreak;
 	say "     The moment you feel up his gonads is when his huge cock starts leaking the most, throbbing a nearly costant stream of precum. 'I'm very close to burst...' he lets you know, giving you full freedom to pleasure his manhood in any way you see fit, playing with it using your lips, gently nibbling on the very sensitive head, and your tongue drawing circles around his shaft... And as you push his cock inside, he grunts audibly! Right around the edge, with the point of no return imminent, you keep your movements tamed, just enough to hold him right there for a few seconds... then several, up to a minute and beyond, testing the red beast's resilience. 'Fuck fuck fuck... I need to cum... so badly...!'";
-	LineBreak;
-	say "     [bold type]How do you want to finish this?[roman type][line break]";
+	say "[line break]     [bold type]How do you want to finish this?[roman type][line break]";
 	say "     ([link]Y[as]y[end link]) - Go ahead and drink his whole load.";
 	say "     ([link]N[as]n[end link]) - Stroke it, from here on.";
 	if Player consents:
@@ -1038,7 +987,6 @@ to say DiavoborgGiveBlowjob:
 		say "     [bold type]The time you spent together has contributed to increase Diavoborg's trust in you.[roman type][line break]";
 		increase Loyalty of Diavoborg by 1;
 
-
 [SPECIAL SCENES - VUUKZASQIG]
 
 to say DiavoborgSexSpecialBalls:
@@ -1057,7 +1005,7 @@ to say DiavoborgSexSpecialBalls:
 	say "     'Ngh... Wanted to just look at my balls... Now you're deepthroating that dick like a champ...' the behemoth teases, placing one of his paw-like hands tenderly over the wyvern's head, 'You're giving me ideas, wyvern boy...' As this goes on, together with your most appreciated rubbing all over those ever filling balls, the behemoth's cock begins to throb intensely as he gasps and moans, a clear indicative of what is to come next. 'Man, I gotta cum... O-oh fuck... S-sorry Vuukzy it's gonna be a big o-ooh...!' He does not even finish his attempt at warning the wyvern, his load comes right away bursting down into Vuukzasqig's throat, who swallows every drop without absolutely any trouble. As your massive furred friend releases loud moans that echo through the rocky cave, you get a first-hand experience of how his balls tremble, rise and squirm as they expel all the cum within with massive force.";
 	say "     Once the behemoth's orgasm finally subsides, Vuukzasqig pulls away slowly, leaving the huge cock to flop down half-hard as he looks back at Diavoborg with a smug expression. 'You didn't last long at all... So much talk and so little stamina.' The red furred beast is still trying to catch his breath as he hears the wyvern's taunts, but he only chuckles and smiles, 'It's because you're a really good cocksucker, Vuukzy... Why don't you suck me more often? Maybe then my balls won't be aching for release so much...' Vuukzasqig shakes his head and scoffs, 'I have better things to do. And besides, I still fail to realize the purpose of your external sac. It continues to baffle me how nature has decided on having this happen! Surely, appealing to the eye, but that's it.' You are still under the behemoth's balls as they argue and fail to draw their attention...";
 	WaitLineBreak;
-	If vorelevel > 2 and lust of Diavoborg > 0: [Already CV'd player, vore active]
+	if vorelevel > 2 and lust of Diavoborg > 0: [Already CV'd player, vore active]
 		say "     'Oh, you want to see what other purpose they serve other than being appealing to the eye? Well, there is one other thing you'd get to appreciate more, if you were to do it...' With one of his paws, Diavoborg pushes you away from under his nuts and looks down at you with a smirk, 'But we should probably leave that for another time... When and if our little friend is in the mood to go down some loving, hungry cock...' The mention of this immediately causes Vuukzasqig to perk up, his interest piqued, but unfortunately met with the disappointment of having to wait. 'Oh, right, you can do that too...' comments the wyvern as you get up, letting them both know you will let them know once you are ready for what Diavoborg is suggesting. 'I'd still need to recharge, anyway. I prefer to give my cock snacks a big cum bath on their arrival...' If the wyvern could blush, he would be doing so now, judging by his shiny and hopeful eyes that he gets to see such a thing.";
 		say "     'I... I shall await the demonstration, then. If you can prove to me that these... sac of yours benefits the act of consuming a prey through one's endowment, then you earn some of my respect.' Diavoborg grins, then looks down at you in hopes you would help him out... 'It won't be long, I'm sure!' He then non-chalantly walks out of the wyvern's chambers, and you give Vuukzasqig a nod before doing the same, trailing the behemoth's steps right behind him...";
 		WaitLineBreak;
@@ -1115,7 +1063,8 @@ name	desc	weight	object
 "diavoborg cum"	"A sizeable bottle filled to the brim with thick beast cum from Diavoborg. You could only save so much with a single bottle."	2	diavoborg cum
 
 diavoborg cum is a grab object. diavoborg cum is cum.
-Usedesc of diavoborg cum is "[diavoborg cum use]";
+[diavoborg cum is infectious. Strain of diavoborg cum is "Behemoth".]
+Usedesc of diavoborg cum is "[diavoborg cum use]".
 
 to say diavoborg cum use:
 	say "Lifting the bottle to your mouth, you take a drink from it, letting the creamy cum run over your tongue and down your throat. It tastes rich, sweet and beast-like. Swishing it around in your mouth a little, you finish the bottle off, then stuff it back into your collection of 'empties'. You feel especially sated after drinking all of that, and it got you thinking about that big strong behemoth again...";

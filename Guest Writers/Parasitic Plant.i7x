@@ -303,7 +303,7 @@ this is the ppattack rule:
 		let dam be ( wdam entry times a random number from 80 to ( 120 + lev entry ) ) / 100;
 		if HardMode is true and a random chance of 1 in 10 succeeds:
 			now dam is (dam * 150) divided by 100;
-			say "The plant pulses and writhes energetically - [italic type]Critical Hit![roman type][line break]";
+			say "The plant pulses and writhes energetically - Critical Hit!";
 		say "[didnotsubmit]The [one of]bulb inside of you inflates suddenly, causing your belly to expand due to its size[or]vine inside you wriggles and squirms in an arousing manner[or]knot inside you pulses as the plant spurts a mind numbing fluid that makes you more aroused[at random]! You take [special-style-2][dam][roman type] damage and grow more aroused!";
 		now damagein is dam;
 		say "[noarmorabsorbancy]"; [natural defense only]

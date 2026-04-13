@@ -46,12 +46,8 @@ SexuallyExperienced of Elstan is false.
 TwistedCapacity of Elstan is false. [Twisted Characters can take any penetration, no matter the size]
 Sterile of Elstan is true. [steriles can't knock people up]
 MainInfection of Elstan is "Werewolf Brute".
-Description of Elstan is "[Elstandesc]".
-Conversation of Elstan is { "<This is nothing but a placeholder!>" }.
-The scent of Elstan is "     Elstan's scent is quite beastlike and masculine, nearly intoxicatingly so[if Player is submissive]. It arouses you, getting you to think how good it would be to serve him[else if player is dominant]. It fills you with an urge to compete with him for who is stronger[else]. It makes your groin tingle and your heart race[end if].".
-
-to say ElstanDesc:
-	say "     This brute seems to be a bodybuilder, judging by how much muscle he has, but you cannot deny that he is, by werewolf brute standards, a quite handsome fellow. The tall and muscular lupine beast has light brown fur and seems very proud of his physique, always standing up straight with his large chest puffed out. He could very well rival even Jett in strength, as you really cannot see anyone else with as much bulk as him other than the alpha himself. He does not wear anything to cover his sheathed bits, which hang heavily between his legs, and also seem to be bigger than most. However, his expression does not inspire confidence, making him seem not easily approachable. Whenever you pass by him, his crystal blue eyes only trace your figure with clear contempt.";
+Description of Elstan is "     This brute seems to be a bodybuilder, judging by how much muscle he has, but you cannot deny that he is, by werewolf brute standards, a quite handsome fellow. The tall and muscular lupine beast has light brown fur and seems very proud of his physique, always standing up straight with his large chest puffed out. He could very well rival even Jett in strength, as you really cannot see anyone else with as much bulk as him other than the alpha himself. He does not wear anything to cover his sheathed bits, which hang heavily between his legs, and also seem to be bigger than most. However, his expression does not inspire confidence, making him seem not easily approachable. Whenever you pass by him, his crystal blue eyes only trace your figure with clear contempt.[line break]".
+The scent of Elstan is "     Elstan's scent is quite beastlike and masculine, nearly intoxicatingly so. It [if Player is submissive]arouses you, getting you to think how good it would be to serve him[else if player is dominant]fills you with an urge to compete with him for who is stronger[else]makes your groin tingle and your heart race[end if].".
 
 ElstanDoneTalking is a truth state that varies.[@Tag:NotSaved]
 
@@ -67,7 +63,6 @@ instead of conversing Elstan:
 to say ElstanTalkMenu:
 	now ElstanDoneTalking is false;
 	say "     [bold type]What would you like to talk about with Elstan?[roman type][line break]";
-	LineBreak;
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]
@@ -106,16 +101,16 @@ to say ElstanTalkMenu:
 			choose row calcnumber in table of fucking options;
 			say "[title entry]: [description entry]?";
 			if Player consents:
-				let nam be title entry;
 				now sextablerun is 1;
-				if (nam is "Himself"):
-					say "[ElstanTalkHimself]";
-				else if (nam is "The pack"):
-					say "[ElstanTalkPack]";
-				else if (nam is "His sexual preferences"):
-					say "[ElstanTalkSex]";
-				else if (nam is "Persuade Elstan to take Jett's spot"):
-					say "[ElstanTalkGiftJett]";
+				if title entry is:
+					-- "Himself":
+						say "[ElstanTalkHimself]";
+					-- "The pack":
+						say "[ElstanTalkPack]";
+					-- "His sexual preferences":
+						say "[ElstanTalkSex]";
+					-- "Persuade Elstan to take Jett's spot":
+						say "[ElstanTalkGiftJett]";
 				wait for any key;
 				if ElstanDoneTalking is false:
 					say "[ElstanTalkMenu]"; [looping back to keep talking with him]
@@ -124,7 +119,7 @@ to say ElstanTalkMenu:
 			say "     You excuse yourself as Elstan immediately starts to mind something else.";
 			wait for any key;
 		else:
-			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options], or 0 to exit.";
 	clear the screen and hyperlink list;
 
 to say ElstanTalkHimself:
@@ -220,26 +215,25 @@ to say ElstanSexMenu:
 			choose row calcnumber in table of fucking options;
 			say "[title entry]: [description entry]?";
 			if Player consents:
-				let nam be title entry;
 				now sextablerun is 1;
-				if (nam is "Worship his muscles"):
-					say "[ElstanSexMuscleWorship]";
-				else if (nam is "Suck his cock"):
-					say "[ElstanSexBlowjob]";
-				else if (nam is "Watch him working out"):
-					say "[ElstanSexWorkoutWatch]";
-				else if (nam is "Ask him to use your throat again"):
-					say "[ElstanSexFacefuckRepeat]";
-				wait for any key;
+				if title entry is:
+					-- "Worship his muscles":
+						say "[ElstanSexMuscleWorship]";
+					-- "Suck his cock":
+						say "[ElstanSexBlowjob]";
+					-- "Watch him working out":
+						say "[ElstanSexWorkoutWatch]";
+					-- "Ask him to use your throat again":
+						say "[ElstanSexFacefuckRepeat]";
 		else if calcnumber is 0:
 			now sextablerun is 1;
 			if Loyalty of Elstan > 3:
 				say "     Figuring that you may have preferred to do something else with your time, you excuse yourself. 'You keep blueballing me like that... You don't know what you're getting into,' he replies, his eyes narrow as his deep, calm voice reaches your ears.";
 			else:
 				say "     Figuring that you may have preferred to do something else with your time, you excuse yourself. 'Well, then stop fucking wasting my time!' he replies, annoyed.";
-			wait for any key;
 		else:
-			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
+			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options], or 0 to exit.";
+	wait for any key;
 	clear the screen and hyperlink list;
 
 to say ElstanSexMuscleWorship:
@@ -270,7 +264,6 @@ to say ElstanSexBlowjob:
 	if Loyalty of Elstan < 3:
 		say "     Shifting your gaze over to the handsome werewolf's crotch, a thought crosses your mind that he may very well enjoy hearing, or so you think. Nevertheless, you are keen on asking him about it, which leads you to propose a blowjob to him. At first, he looks at you from the corner of his eye, as if he was suspicious of that offer, before he grunts and turns to face you heads on. 'Is that a feeble attempt to gain access to the my goods without any effort? You just come here, say you wanna suck my dick and expect me to nod and agree to it?' You admit that you did not think he would take that as an offense and that you purely meant it as a way to treat him with something nice and pleasant. 'Is that so? Or are you just a little bitch hungry for my cock? If that's it, you should get in line.'";
 		say "     You get the feeling he is expecting something more out of you. Perhaps [bold type]this would require convincing at the cost of your own dignity[roman type], but for you, it may just be a small price to pay for some hot fun. Shall [bold type]you subject yourself to this?[roman type][line break]";
-		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Stroke his ego as much as you can.";
 		say "     ([link]N[as]n[end link]) - You have no time nor patience for this. Leave him at once. This may piss him off, however.";
 		if Player consents:
@@ -314,17 +307,17 @@ to ElstanSexBlowjob1:
 	say "     'Oh yeah, don't stop now, I'm getting there...' You continue as he demands, even as your neck aches and your arms threaten to falter, doing your absolute best to keep going. 'Almost there...' he warns, and you make a final push, sucking him as deep and fast as you can, hands stroking the entirety of his shaft where your lips cannot reach, and soon, his balls begin to raise. Elstan breathes deeply before he releases a loud grunt, grabs your head and keeps you in place, burying more of his cock inside your throat than you would feel comfortable with. Finally, he starts shooting his load directly into your stomach, powerful shots that you are forced to swallow almost as if you were chugging down a bottle full of it.";
 	if Loyalty of Elstan < 3:
 		say "     Everyone keeps their eyes on you as Elstan ensures you drink his cum to the very last drop, before finally letting go of your head and allowing you to breathe with a bellyful of wolf spunk. 'That was good, slut. You put up a good show too!' He then turns around, picks up some weights and resumes his exercising, ignoring you completely from that point on. The wolfmen who were watching you all stare at you hoping you would come assist them with their erections, except Kirnon, who seemed to have ignored your display since it started. You figure you have had enough and simply consider leaving.";
-		WaitLineBreak;
-		say "     [bold type]Do you wish to say goodbye to Elstan before you go?[roman type][line break]";
-		LineBreak;
+		say "[line break]     [bold type]Do you wish to say goodbye to Elstan before you go?[roman type][line break]";
 		say "     ([link]Y[as]y[end link]) - Say something to him. It feels wrong just leaving like that.";
 		say "     ([link]N[as]n[end link]) - No, just leave. That is how he wants it.";
 		if Player consents:
+			LineBreak;
 			say "     Even though he completely disregarded your existence right after he made you swallow his cum, you still insist in approaching him. The look on his face is best described as perplexed when you politely thanked him for the fun activity. 'Uh... Did I forget to tell you to fuck off? Oh, yeah, I actually did. So... fuck off.' He says it like that, but his eyes loom over you long enough to give you the impression he actually appreciated your gesture. 'Alright, or you could stare and admire the best werewolf in the den, yeah? Just do it quietly. I gotta focus.' Well, that was a little less hostile statement from him, so you are content with having done this before you commited to leaving.";
 			if Loyalty of Elstan < 10:
 				say "     [bold type]In his own way, Elstan seems to like you more.[roman type][line break]";
 				increase Loyalty of Elstan by 1;
 		else:
+			LineBreak;
 			say "     You discard that thought and commit to being on your way.";
 	else: [variant for players Elstan starts to like more]
 		say "     Everyone keeps their eyes on you as Elstan ensures you drink his cum to the very last drop, before finally letting go of your head and allowing you to breathe with a bellyful of wolf spunk. 'You did great... as expected from you.' He then gives your face a few slaps with his half-hard meat as he lets out a chuckle. 'Good little bitch did so well I might give [ObjectPro] a reward if [SubjectPro] kisses my body all the way back up...' Elstan slides his index and thumb under your chin, making you turn your gaze at him, and waits for you to follow his suggestion. Beginning with a kiss above the base of his sheath, you do as he says, your lips colliding with his pelvis, following through his waist, his soft fur-covered abs and all the way towards his chest, until you are almost standing up completely.";
@@ -375,7 +368,7 @@ to say ElstanSexWorkoutWatch: [can be extended with more possible outcomes]
 		say "     [bold type]In his own way, Elstan seems to have appreciated that.[roman type][line break]";
 		increase Loyalty of Elstan by 1;
 	NPCSexAftermath Player receives "Other" from Elstan;
-	increase Libido of Player by 50;
+	raise Player Libido by 50;
 
 Section 1-2-1 - Elstan Oubliette Scenes
 
@@ -424,16 +417,15 @@ to say WerewolfBruteLairElstanWorship:
 			say "     [bold type]In his own way, Elstan seems to like you more.[roman type][line break]";
 			increase Loyalty of Elstan by 1;
 
-
 Section 2 - Elstan Special Scenes
 
 to say ElstanTalkGiftJett:
 	say "     You take a deep breath before you bring this subject, as you have a feeling Elstan will not take it too greatly, but you have decided to give it a shot. Politely, you tell him that you have a message from the alpha werewolf, or rather, a request. He immediately interrupts you, puffing out his chest as he places his hands over his hips. 'Oh, the alpha has a [']request['] for me and he sends his new little bitch to deliver the message? Cute. You really are a little slut, aren't you? Doing everything you're told?' He then laughs, just enjoying making fun of you for a while. 'Now, what does his royal ass want? I'm actually curious. It's not everyday I get asked a personal favor from him.'";
 	say "     As uncalled for as that was, you have a task at hand and intend to complete it, so you disregard Elstan's attitude and proceed to inform him of Jett's will. He... does not look happy upon hearing your words. 'What the fuck? He wants me to do his job?! And not only that, just the job he could very well fucking do on his own and leave me in charge of things that matter, since he can't fucking do it at all! That fucking prick sends you here for what, so I don't fucking punch him in the face?!' You swear even his massive muscles start pumping at the rage that has been built inside him. He really does not seem to like Jett, and now you really just had been shown proof of that. Nonetheless, your job is not done...";
 	WaitLineBreak;
-	let bonus be (( charisma of player minus 10 ) divided by 2);
+	let bonus be ( charisma of player minus 10 ) divided by 2;
 	let diceroll be a random number from 1 to 20;
-	say "You roll 1d20([diceroll])+[bonus] = [special-style-1][diceroll + bonus][roman type] vs [special-style-2]12[roman type] (Charisma Check):[line break]";
+	say "You roll 1d20([diceroll])[if bonus >= 0]+[end if][bonus] = [special-style-1][diceroll + bonus][roman type] vs [special-style-2]12[roman type] (Charisma Check):[line break]";
 	if diceroll + bonus >= 12: [Managed to calm him down]
 		say "     Perhaps you feel inspired today, or you are just extremely charismatic, but you manage to pull the seemingly impossible. Through a carefully placed speech and words, you try telling Elstan that, perhaps, this is Jett's way to show he trusts him and wants to find a way to improve their relationship. It may be because he cares that he has sent you to ask Elstan to replace him for a while, and this is more of a test to you than it is to him. The brown muscular werewolf seems to think twice before he says his next thing.";
 		say "     'Alright, look. I don't fucking like when he just picks me as his second option, or uses me to cover the frickin' holes he leaves behind. Well, I'd gladly put my dick in his asshole to teach him a fucking lesson, but you get what I mean. It just fucking sucks to be in my place! All I get from him is this kind of treatment, as if I'm secondary! Or if I just wasn't good enough for his standards. Whatever, I still think I should've taken his place because I'm plain better at doing his job than he is.' You give him an understanding look, but then, you figure you can tell him that if he does prove he can do a better job than him, he might be sending the right message to the alpha.";
@@ -445,19 +437,20 @@ to say ElstanTalkGiftJett:
 		now Resolution of JettDominance is 3; [persuaded Elstan successfully]
 	else: [No luck there...]
 		say "     You try to reason with Elstan, but he is having none of that. He truly thinks Jett is being an asshole by doing this. 'Fuck you! And fuck him! I'm not doing any of that. Good fucking luck trying to be his little bitch, you're not getting his favor at the cost of my fucking hard work!' Well, that complicates things. You cannot really return to Jett without completing this, so... What shall you do?";
-		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Take even more time trying to convince him.";
 		say "     ([link]N[as]n[end link]) - Just beg him to do this for you and tell him you would do anything for it.";
 		if Player consents:
+			LineBreak;
 			say "     Well, this is going to take a while, but you really have to succeed in this task. Figuring that Elstan will need a whole lot of convincing, you give up on your next few hours to follow him on his workout routine, much to his annoyance.";
-			WaitLineBreak;
 			follow the turnpass rule;
+			AttemptToWait;
 			say "     'You're really insistent, aren't you? Or you just like watching me lift some weights and punch stuff? Because if it ain't none of that, I'm thinking you're just trying to piss me off.' You tell him it is not that, in fact, you are simply trying to fulfill a request the alpha werewolf brute dearly asked of you. Though, every time you mention Jett, Elstan grunts and reacts negatively. You know for a fact there is some rivalry between them, which is indeed adding a certain difficulty to this task. Nonetheless, you must insist, and so, you try to spend some time accompanying the muscular werewolf's exercises. Amidst one, he puts his weights on the ground and looks at you dead in the eye.";
 			say "     'Fuck this, I'll do this fricking stupid shit he asked so you can fuck off and leave me alone! Fuck's sake, how can you be so fucking persistent?! That ain't the kind of bitch I like, for sure. Not one who bitches about what they fucking want done for them!' It is clear Elstan does not like being told what to do, but it is not like you were given any choice. He forced you to insist... 'Just go fucking [bold type]tell Jett[roman type] I'll be there, I need only a sec to get finished around here. And you... Just fuck you! I'll fist your ass open senseless right on spot if I have to look at you any fucking minute longer!' He then turns around to leave and finish his workout.";
 			WaitLineBreak;
 			say "     Your persistence tactic worked, and so, you can call this quest a success. Now, you can go back to Jett.";
 			now Resolution of JettDominance is 4; [persuaded through persistence and exhaustion]
 		else:
+			LineBreak;
 			say "     Out of desperation, you simply beg him to please take the spot, and that you shall do anything for him to make that happen. You think that just annoyed him even more, but that also caused his hanging furred sheath to thicken visibly. 'You fucking slut... Is that all you've got to say?! So things don't work out in your favor and you just beg like a bitch? You truly are one, after all!' He then walks towards you and, suddenly, you find yourself pinned against the wall, with his large paw-like hand surrounding your neck...";
 			WaitLineBreak;
 			say "     'Beg me. Go on... Do what you do best, slut...' He leans his head over to the side of your skull, then presses his muscular chest against your body, and you start feeling something throbbing against you, as if it was just slowly growing. This is the game he wants to play, so you oblige, although the force of his thick fingers around your vulnerable throat is making it somewhat difficult for you to speak. You give him what he wants to hear and beg him to help you, which makes him growl lowly. 'Bitches like you turn me on, you know... But it's such a shame you simp for that crappy alpha over there when you could have someone so much better to serve...'";

@@ -13,7 +13,6 @@ a postimport rule:
 		move Skyler to Snapjaw_Beach_Camp;
 		AddNavPoint Snapjaw_Beach_Camp silently;
 
-
 Table of GameRoomIDs (continued)
 Object	Name
 Snapjaw_Beach_Camp	"Snapjaw_Beach_Camp"
@@ -24,13 +23,11 @@ Printed name of Snapjaw_Beach_Camp is "Snapjaw Beach Camp".
 RoomID of Snapjaw_Beach_Camp is "Snapjaw_Beach_Camp".
 Snapjaw_Beach_Camp is north of Snapjaw_Beach_South. It is sleepsafe.
 Description of Snapjaw_Beach_Camp is "[SnapjawBeachCampDesc]".
+Scent of Snapjaw_Beach_Camp is "     There is this fresh breeze from the sea that brings you a salty scent, quite pleasant and liberating.".
 
 to say SnapjawBeachCampDesc:
 	say "     What would be an otherwise pretty normal small beach has now been turned into a lively spot with wooden shacks on the sand for all the sharkmen in here. They are not many, but they surely have done a good job to make this place look festive and homey, even. They mostly serve as small resting spots, though there is an improvised bar counter and barrels potentially holding drinks inside. On one of the sides of the beach, they even managed to bring a campervan to complement their little society. In the center, there is a campfire that is only lit at night, and just ahead of it, one strange structure resembling a totem.";
 	say "     The beach itself extends towards the [bold type]south[roman type] for a little bit, and further [bold type]north[roman type] towards the protruding cliff, just before a narrower sandy pathway.";
-
-instead of sniffing Snapjaw_Beach_Camp:
-	say "     There is this fresh breeze from the sea that brings you a salty scent, quite pleasant and liberating.";
 
 [---]
 
@@ -43,13 +40,8 @@ Snapjaw_Beach_South is a room.
 Printed name of Snapjaw_Beach_South is "Snapjaw Beach South".
 RoomID of Snapjaw_Beach_South is "Snapjaw_Beach_South".
 The earea of Snapjaw_Beach_South is "High".
-Description of Snapjaw_Beach_South is "[SnapjawBeachSouthDesc]".
-
-to say SnapjawBeachSouthDesc:
-	say "     The sharkmen's constructions are fewer and fewer towards this area, until the point there is just the beach and the sea converging closer and closer to one another as the sand grows scarcer. It is the end of the beach and the lowest point of the cliff, which could be a connecting point to the area above. Past several palm trees and looming over in the distance are the tall buildings of High Rise District, which leads you to believe you could set on an [bold type]exploration[roman type] route from here. There is not much else in here, as the sharkmen prefer to linger back [bold type]north[roman type] and stay away from most of civilization, or whatever is left of it.";
-
-instead of sniffing Snapjaw_Beach_South:
-	say "     There is this fresh breeze from the sea that brings you a salty scent, quite pleasant and liberating.";
+Description of Snapjaw_Beach_South is "     The sharkmen's constructions are fewer and fewer towards this area, until the point there is just the beach and the sea converging closer and closer to one another as the sand grows scarcer. It is the end of the beach and the lowest point of the cliff, which could be a connecting point to the area above. Past several palm trees and looming over in the distance are the tall buildings of High Rise District, which leads you to believe you could set on an [bold type]exploration[roman type] route from here. There is not much else in here, as the sharkmen prefer to linger back [bold type]north[roman type] and stay away from most of civilization, or whatever is left of it.[line break]".
+Scent of Snapjaw_Beach_South is "     There is this fresh breeze from the sea that brings you a salty scent, quite pleasant and liberating.".
 
 	[---]
 
@@ -59,16 +51,11 @@ Snapjaw_Beach_North	"Snapjaw_Beach_North"
 Snapjaw_Beach_North	"Snapjaw Beach North"
 
 Snapjaw_Beach_North is a room.
-Snapjaw_Beach_North is north of Snapjaw_Beach_Camp. It is sleepsafe.
+Snapjaw_Beach_North is north of Snapjaw_Beach_Camp.
 Printed name of Snapjaw_Beach_North is "Snapjaw Beach North".
 RoomID of Snapjaw_Beach_North is "Snapjaw_Beach_North".
-Description of Snapjaw_Beach_North is "[SnapjawBeachNorthDesc]".
-
-to say SnapjawBeachNorthDesc:
-	say "     A cozy sandy area set towards an inner corner of the cliff, which fortunately seems to have been secured from potential falling boulders. Here is where the sharkmen keep most of their party material, stock and supplies, as well as their homely abodes. From the countless barrels and crates to the shacks and hanging clothes, you can tell these sharkmen seem to have been able to get through just fine. One could only wonder how they could find that much wood to make all this...";
-
-instead of sniffing Snapjaw_Beach_North:
-	say "     There is this fresh breeze from the sea that brings you a salty scent, quite pleasant and liberating.";
+Description of Snapjaw_Beach_North is "     A cozy sandy area set towards an inner corner of the cliff, which fortunately seems to have been secured from potential falling boulders. Here is where the sharkmen keep most of their party material, stock and supplies, as well as their homely abodes. From the countless barrels and crates to the shacks and hanging clothes, you can tell these sharkmen seem to have been able to get through just fine. One could only wonder how they could find that much wood to make all this...[line break]".
+Scent of Snapjaw_Beach_North is "     There is this fresh breeze from the sea that brings you a salty scent, quite pleasant and liberating.".
 
 Section 2 - NPCs
 
@@ -114,12 +101,8 @@ SexuallyExperienced of Skyler is true.
 TwistedCapacity of Skyler is false. [Twisted Characters can take any penetration, no matter the size]
 Sterile of Skyler is false. [steriles can't knock people up]
 MainInfection of Skyler is "Sharkman Brute".
-Description of Skyler is "[SkylerDesc]".
-Conversation of Skyler is { "<This is nothing but a placeholder!>" }.
+Description of Skyler is "     Skyler is a nice, handsome and quite tall hybrid between a man and a shark, with the head of one and the body of mostly a human. His scales are mostly dark gray and white towards the inner areas, which if stroked the right way feel very smooth, and a large shark tail keeps swinging around behind his very muscular and toned figure. He is almost always smiling, with those many sharp teeth giving out a slightly terrifying visage were it not for his lovable and cheerful attitude. As for his clothes, sometimes you can see him wear swim trunks, other times just a pareo, but often he is simply naked, like right now. Between his thick legs there is only a slit, where you know two large red cocks hide behind.[line break]".
 The scent of Skyler is "     He smells like the salty sea with a hint of masculinity, a quite fresh scent.".
-
-to say SkylerDesc:
-	say "     Skyler is a nice, handsome and quite tall hybrid between a man and a shark, with the head of one and the body of mostly a human. His scales are mostly dark gray and white towards the inner areas, which if stroked the right way feel very smooth, and a large shark tail keeps swinging around behind his very muscular and toned figure. He is almost always smiling, with those many sharp teeth giving out a slightly terrifying visage were it not for his lovable and cheerful attitude. As for his clothes, sometimes you can see him wear swim trunks, other times just a pareo, but often he is simply naked, like right now. Between his thick legs there is only a slit, where you know two large red cocks hide behind.";
 
 SkylerDoneTalking is a truth state that varies.[@Tag:NotSaved]
 
@@ -133,7 +116,6 @@ instead of conversing Skyler:
 to say SkylerTalkMenu:
 	now SkylerDoneTalking is false;
 	say "     [bold type]What would you like to talk about with Skyler?[roman type][line break]";
-	LineBreak;
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]
@@ -147,7 +129,7 @@ to say SkylerTalkMenu:
 		now title entry is "The camp and the other sharkmen";
 		now sortorder entry is 2;
 		now description entry is "Ask the big sharkman about his people";
-	[]
+		[]
 		choose a blank row in table of fucking options;
 		now title entry is "Helping the camp";
 		now sortorder entry is 3;
@@ -172,16 +154,16 @@ to say SkylerTalkMenu:
 			choose row calcnumber in table of fucking options;
 			say "[title entry]: [description entry]?";
 			if Player consents:
-				let nam be title entry;
 				now sextablerun is 1;
-				if (nam is "Himself"):
-					say "[SkylerTalkHimself]";
-				else if (nam is "The camp and the other sharkmen"):
-					say "[SkylerTalkCamp]";
-				else if (nam is "Helping the camp"):
-					say "[SkylerTalkHelpCamp]";
-				else if (nam is "Ask him for a scale"):
-					say "[SkylerTalkScale]";
+				if title entry is:
+					-- "Himself":
+						say "[SkylerTalkHimself]";
+					-- "The camp and the other sharkmen":
+						say "[SkylerTalkCamp]";
+					-- "Helping the camp":
+						say "[SkylerTalkHelpCamp]";
+					-- "Ask him for a scale":
+						say "[SkylerTalkScale]";
 				wait for any key;
 				if SkylerDoneTalking is false:
 					say "[SkylerTalkMenu]"; [looping back to keep talking with him]
@@ -190,7 +172,7 @@ to say SkylerTalkMenu:
 			say "     You excuse yourself as Skyler gives a polite nod.";
 			wait for any key;
 		else:
-			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options], or 0 to exit.";
 	clear the screen and hyperlink list;
 
 to say SkylerTalkHimself:
@@ -272,12 +254,8 @@ SexuallyExperienced of Caleb is true.
 TwistedCapacity of Caleb is false. [Twisted Characters can take any penetration, no matter the size]
 Sterile of Caleb is false. [steriles can't knock people up]
 MainInfection of Caleb is "Sharkman Brute".
-Description of Caleb is "[CalebDesc]".
-Conversation of Caleb is { "<This is nothing but a placeholder!>" }.
+Description of Caleb is "     This seems to be the bulky sharkman who handles all the building and woodworking. He definitely looks like a powerhouse capable of lifting just about anything he wishes, with muscles so massive they would make Skyler look small. His face is the fiercest of all the sharkmen, one truly terrifying one, and probably the widest, a group of attributes that would make anyone think twice before even thinking about provoking him in any way. He even has a thick scar going from above his left eye to the right side of his face in a diagonal. As for his attire, he seems to be wearing an improvised apron to protect him from wooden splinters, and you doubt he could find much else that would fit him, given his size. You can often see him making adjustments to the shacks or maintaining fishing equipment.[line break]".
 The scent of Caleb is "     He smells like the salty sea with a hint of masculinity, a quite fresh scent.".
-
-to say CalebDesc:
-	say "     This seems to be the bulky sharkman who handles all the building and woodworking. He definitely looks like a powerhouse capable of lifting just about anything he wishes, with muscles so massive they would make Skyler look small. His face is the fiercest of all the sharkmen, one truly terrifying one, and probably the widest, a group of attributes that would make anyone think twice before even thinking about provoking him in any way. He even has a thick scar going from above his left eye to the right side of his face in a diagonal. As for his attire, he seems to be wearing an improvised apron to protect him from wooden splinters, and you doubt he could find much else that would fit him, given his size. You can often see him making adjustments to the shacks or maintaining fishing equipment.";
 
 instead of conversing Caleb:
 	say "     << Author's Note: The bulky sharkman seems too busy to talk right now. Perhaps he will be able to, in the near future. >>";
@@ -327,12 +305,8 @@ SexuallyExperienced of Kody is true.
 TwistedCapacity of Kody is false. [Twisted Characters can take any penetration, no matter the size]
 Sterile of Kody is false. [steriles can't knock people up]
 MainInfection of Kody is "Sharkman Brute".
-Description of Kody is "[KodyDesc]".
-Conversation of Kody is { "<This is nothing but a placeholder!>" }.
+Description of Kody is "     Oddly enough, this sharkman does not look like the others in here. He is much shorter, to the point his size would be comparable to an average male human adult, and he is more fit than muscular. What jumps to the eye is, however, a really prominent bubblebutt just underneath the base of his shark tail. While not looking nearly as strong as the bigger sharkmen, he still looks athletic and in shape, with the added perk of being able to wear shorts his size. Also, despite his shark face, you can find a hint of softness about it, making him seem a lot more naturally approachable, at first glance, than the others. You often see him reading a book or writing on one, though once you pass by him, he nods at you with a cheerful smile.[line break]".
 The scent of Kody is "     He smells like the salty sea with a hint of masculinity, a quite fresh scent.".
-
-to say KodyDesc:
-	say "     Oddly enough, this sharkman does not look like the others in here. He is much shorter, to the point his size would be comparable to an average male human adult, and he is more fit than muscular. What jumps to the eye is, however, a really prominent bubblebutt just underneath the base of his shark tail. While not looking nearly as strong as the bigger sharkmen, he still looks athletic and in shape, with the added perk of being able to wear shorts his size. Also, despite his shark face, you can find a hint of softness about it, making him seem a lot more naturally approachable, at first glance, than the others. You often see him reading a book or writing on one, though once you pass by him, he nods at you with a cheerful smile.";
 
 instead of conversing Kody:
 	say "     << Author's Note: The cute sharkman seems too busy to talk right now. Perhaps he will be able to, in the near future. >>";
@@ -384,12 +358,8 @@ SexuallyExperienced of Snapjaw is true.
 TwistedCapacity of Snapjaw is false. [Twisted Characters can take any penetration, no matter the size]
 Sterile of Snapjaw is false. [steriles can't knock people up]
 MainInfection of Snapjaw is "Sharkman Brute".
-Description of Snapjaw is "[SnapjawDesc]".
-Conversation of Snapjaw is { "<This is nothing but a placeholder!>" }.
+Description of Snapjaw is "     Alone at the exit of the camp stands a towering sharkman with a mean look, who you can discern as some sort of guard of this whole place. However, judging by the size of the cottage near him, which seems to be his own home, you immediately understand he is no ordinary guard. Physically, this sharkman has bigger muscles than the others, a considerable amount of scars all over his body, including a large one across his eye on the right side of his shark muzzle, and wears only a stretchy red speedo, which shows the one big difference compared to the other sharkmen, the fact he has this enormous bulge. He shows it off proudly, with a confidence that might be as or more intimidating as his utterly impressive physique. As you approach him, he does not seem to pay you much attention, instead preferring to look over the distant horizon.[line break]".
 The scent of Snapjaw is "     He smells like the salty sea with a hint of masculinity, a quite fresh scent.".
-
-to say SnapjawDesc:
-	say "     Alone at the exit of the camp stands a towering sharkman with a mean look, who you can discern as some sort of guard of this whole place. However, judging by the size of the cottage near him, which seems to be his own home, you immediately understand he is no ordinary guard. Physically, this sharkman has bigger muscles than the others, a considerable amount of scars all over his body, including a large one across his eye on the right side of his shark muzzle, and wears only a stretchy red speedo, which shows the one big difference compared to the other sharkmen, the fact he has this enormous bulge. He shows it off proudly, with a confidence that might be as or more intimidating as his utterly impressive physique. As you approach him, he does not seem to pay you much attention, instead preferring to look over the distant horizon.";
 
 SnapjawDoneTalking is a truth state that varies.[@Tag:NotSaved]
 
@@ -431,23 +401,17 @@ to say ResolveEvent Snapjaw_Intro:
 	else if Resolution of Snapjaw_Intro is 1:
 		SnapjawWorkoutEvent1; [guaranteed chance here]
 		now Resolution of Snapjaw_Intro is 2;
-	else if Resolution of Snapjaw_Intro is 2: [a repeat until more is added into this]
-		say "     As you walk into the southern area of the sharkmen's beach, you lay your eyes on Snapjaw, who is currently";
-		let randomnumber be a random number from 1 to 2;
-		if randomnumber is:
+	else: [a repeat until more is added into this]
+		if a random number from 1 to 3 is:
 			-- 1: [just doing guard duty]
-				say " standing on watch. By the looks of it, he seems quite bored, as it is per usual while the only thing he does is sentinel duty. You could probably go talk to him and see if he will not mind your company.";
+				say "     As you walk into the southern area of the sharkmen's beach, you lay your eyes on Snapjaw, who is currently standing on watch. By the looks of it, he seems quite bored, as it is per usual while the only thing he does is sentinel duty. You could probably go talk to him and see if he will not mind your company.";
 			-- 2: [he is working out, but nothing special]
-				say " in the middle of a workout, doing some pushups. At first, he does them normally, then shifts to one arm only and does it for each, keeping this up for a while until he decides to take a break. You could probably go talk to him and see if he will not mind your company.";
+				say "     As you walk into the southern area of the sharkmen's beach, you lay your eyes on Snapjaw, who is currently in the middle of a workout, doing some pushups. At first, he does them normally, then shifts to one arm only and does it for each, keeping this up for a while until he decides to take a break. You could probably go talk to him and see if he will not mind your company.";
 			-- 3: [special event, repeatable]
-				let randomnumber be a random number from 1 to 3;
-				if randomnumber is:
-					-- 1:
-						SnapjawWorkoutEvent1; [boulder workout]
-					-- 2:
-						SnapjawWorkoutEvent2; [breaking logs with his bare hands]
-					-- 3:
-						SnapjawWorkoutEvent3; [doing one-handed push-ups with added weight]
+				if a random number from 1 to 3 is:
+					-- 1: SnapjawWorkoutEvent1; [boulder workout]
+					-- 2: SnapjawWorkoutEvent2; [breaking logs with his bare hands]
+					-- 3: SnapjawWorkoutEvent3; [doing one-handed push-ups with added weight]
 
 to SnapjawWorkoutEvent1:
 	say "     While heading to the southern area of the sharkmen's beach, you lay your eyes on Snapjaw himself shortly after, and notice that the huge sharkman does not seem to be on watch. Instead, you see him holding this enormous boulder above his head, with one leg placed forward for stable support, and lifting the massive rock in the air with controlled and slow movements, moving it up and down as the entirety of his body's muscles bulge out and flex, all pumped up. He looks even bigger doing this as his muscles do their best to keep up with what is demanded of them, and you can even see drops of sweat running down his towering figure as you come in closer. He is not struggling with this at all, being able to raise and lower the boulder with so much discipline one would think he is actually doing this effortlessly.";
@@ -485,7 +449,6 @@ instead of conversing Snapjaw:
 to say SnapjawTalkMenu:
 	now SnapjawDoneTalking is false;
 	say "     [bold type]What would you like to talk about with the large sharkman?[roman type][line break]";
-	LineBreak;
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]
@@ -540,22 +503,22 @@ to say SnapjawTalkMenu:
 			choose row calcnumber in table of fucking options;
 			say "[title entry]: [description entry]?";
 			if Player consents:
-				let nam be title entry;
 				now sextablerun is 1;
-				if (nam is "Himself"):
-					say "[SnapjawTalkHimself]";
-				else if (nam is "Respect from others"):
-					say "[SnapjawTalkRespect]";
-				else if (nam is "How to show him appreciation"):
-					say "[SnapjawTalkAppreciation]";
-				else if (nam is "Sex"):
-					say "[SnapjawTalkSex]";
-				else if (nam is "His genitals"):
-					say "[SnapjawTalkGenitals]";
-				else if (nam is "Superstrength"):
-					say "[SnapjawTalkSuperstrength]";
-				else if (nam is "Scavenge in the city"):
-					say "[SnapjawTalkScavenge]";
+				if title entry is:
+					-- "Himself":
+						say "[SnapjawTalkHimself]";
+					-- "Respect from others":
+						say "[SnapjawTalkRespect]";
+					-- "How to show him appreciation":
+						say "[SnapjawTalkAppreciation]";
+					-- "Sex":
+						say "[SnapjawTalkSex]";
+					-- "His genitals":
+						say "[SnapjawTalkGenitals]";
+					-- "Superstrength":
+						say "[SnapjawTalkSuperstrength]";
+					-- "Scavenge in the city":
+						say "[SnapjawTalkScavenge]";
 				wait for any key;
 				if SnapjawDoneTalking is false:
 					say "[SnapjawTalkMenu]"; [looping back to keep talking with him]
@@ -564,7 +527,7 @@ to say SnapjawTalkMenu:
 			say "     You excuse yourself as Snapjaw grunts, returning his attention to whatever he does.";
 			wait for any key;
 		else:
-			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options], or 0 to exit.";
 	clear the screen and hyperlink list;
 
 to say SnapjawTalkHimself:
@@ -623,7 +586,7 @@ to say SnapjawTalkSuperstrength:
 				say "     'See that boulder over there? C'mon, with me', he practically orders, gesturing at you to follow him. He then takes you to this massive and thick rock slab near the cliff, which you really do not think it can be moved by any means, and he explains, 'This is what I use for my workouts. Might be the only thing that helps me feel these muscles working. Now, a van's fucking heavy, as you know, but this shit right here... It's dense. A thing this size could fucking crush your bones if it comes down on you. But for me, it's merely a bodybuilding tool.' He then beckons you to take a step back as he demonstrates how he uses it. 'You better fucking pay attention if you wanna take notes...'";
 				say "     First, he makes sure he has enough space to work this out, and then, he places himself right in front of the boulder. Then, he squats down, the muscles in his legs tensing up as his glutes pop out. His entire back flexes as he puts his arms around the slab, hands holding it from opposite sides, and after some deep breathing, he slowly raises it, bringing it up until he is holding it in front of him. Honestly, it does not seem like he is struggling at all, as he turns around to face you with a big cocky smile. 'Alright, here we go. I use it as a barbell, which is sorta useful for a lot of muscle groups. My favorites are bicep curls, but you gotta keep it varied.' He then begins to lift it towards his chest, then back down, and you see his muscles work, flexing and relaxing at the end of every movement.";
 				WaitLineBreak;
-				say "     It is hypnotic, you have to admit. You find yourself admiring his physique as he completes the exercise, and at some point, you could even swear you saw some twitching in his bulge as he looks at you. 'You look impressed. Let me tell you, this ain't all I can do,' he adds, waking you back up from the trance you were just in, and you only nod in response. He just chuckles before putting the slab back down and clapping the sand off his hands.";			
+				say "     It is hypnotic, you have to admit. You find yourself admiring his physique as he completes the exercise, and at some point, you could even swear you saw some twitching in his bulge as he looks at you. 'You look impressed. Let me tell you, this ain't all I can do,' he adds, waking you back up from the trance you were just in, and you only nod in response. He just chuckles before putting the slab back down and clapping the sand off his hands.";
 		say "     'Alright, enough of a show for now, or I'm gonna make you start paying for it.' You simply nod and thank him for sating your curiosity, to which he just smirks. 'There's very few things I can't lift or bend. Can definitely lift you with one arm, and maybe a couple more your size. As if that's natural or not, I don't fucking know. Probably some mutation effect.' At least, he seems glad to talk about this, so you use that opportunity to gather a bit more information. Is this why they call him Snapjaw, you ask... 'Oh. I mean, I can snap any jaw I want, but nah. It's for another reason...' he says, grinning as his gaze shifts towards below his waist, then back at you, and chuckles. 'Nah, I'm fucking with you. That'd be more like jawbreaker with how fucking huge my guns are.'";
 		WaitLineBreak;
 		say "     'I might tell you sometime. That tale isn't for the faintest of heart, as they say. Or jaws... Hahah.'";
@@ -645,7 +608,6 @@ instead of fucking Snapjaw:
 
 to say SnapjawSexMenu:
 	say "     [bold type]What would you like to talk about with the large sharkman?[roman type][line break]";
-	LineBreak;
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]
@@ -673,19 +635,18 @@ to say SnapjawSexMenu:
 			choose row calcnumber in table of fucking options;
 			say "[title entry]: [description entry]?";
 			if Player consents:
-				let nam be title entry;
 				now sextablerun is 1;
-				if (nam is "Offer him a blowjob"):
-					say "[SnapjawSexBlowjob]";
-				else if (nam is "Volunteer to worship his body"):
-					say "[SnapjawSexMuscleWorship]";
-				wait for any key;
+				if title entry is:
+					-- "Offer him a blowjob":
+						say "[SnapjawSexBlowjob]";
+					-- "Volunteer to worship his body":
+						say "[SnapjawSexMuscleWorship]";
 		else if calcnumber is 0:
 			now sextablerun is 1;
 			say "     You excuse yourself as Snapjaw grunts, returning his attention to whatever he does.";
-			wait for any key;
 		else:
-			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options], or 0 to exit.";
+	wait for any key;
 	clear the screen and hyperlink list;
 
 to say SnapjawSexBlowjob:
@@ -702,7 +663,7 @@ to say SnapjawSexBlowjob:
 	say "     'Haha... Relax, there's so much of it I doubt anyone could do something about it. I'm a fucking leaker...' One would dare say that is an understatement, because not even as you rush to place your mouth around that thick head you can manage to contain a lot of it. Drops of precum dribble from the corners of your mouth every time you try to swallow a mouthful of it. You cannot tell if this is because he is so huge, or if this is actually some abnormality, but your struggle is clearly an amusement for Snapjaw, whose smirk never leaves his muzzle. As for its taste, you half-expected it to be salty, and it does remind you of sea water, except thicker, warmer and, in general, more pleasant. 'Don't think you'll feel hungry for a long while... Heheh...'";
 	WaitLineBreak;
 	say "     Your hands continue to rub at his enormous length, its girth causing your jaw to ache as you attempt to bring it into your mouth, but you do your best to make his cock happy. As for his balls, you also try not to leave them simply hanging and give them a good rub, even sometimes leaning your head over to them, to provide his orbs with plenty of licking and sucking wherever you can. There is definitely a load building up inside of those, yet, you feel like you are far from over. 'If you need a break, lemme know. I can take over...' he says as you, in fact, have to take a moment to breathe after you pull away from his cock, but you let him know you planned to get back to it, as you indeed do, wrapping your lips around his tip to keep sucking at that slit, tongue pushing into it as more and more of that precum travels down your throat.";
-	say "     'Seriously, though, it's fine if you do...' he then places a hand over your head, which startles you at first, '... As I said, I can take over.' The way he looks at you as his cock throbs in your hands and against your mouth makes you wonder what that actually means, but you have an idea. Your eyes shift up to his, and that really makes those teeth of his show with a glimmer of excitement. 'Actually... I do think you need a break. Or at least some assistance...' he says, chuckling in the end, as he moves one of his fingers over your mouth and pushes against one of its corners, prompting you to open wide. There is an evident concerned look in your eyes, even amidst your lust. 'You should know you're safe with big ol' Snapjaw... Relax.'";
+	say "     'Seriously, though, it's fine if you do...' he then places a hand over your head, which startles you at first, '...As I said, I can take over.' The way he looks at you as his cock throbs in your hands and against your mouth makes you wonder what that actually means, but you have an idea. Your eyes shift up to his, and that really makes those teeth of his show with a glimmer of excitement. 'Actually... I do think you need a break. Or at least some assistance...' he says, chuckling in the end, as he moves one of his fingers over your mouth and pushes against one of its corners, prompting you to open wide. There is an evident concerned look in your eyes, even amidst your lust. 'You should know you're safe with big ol' Snapjaw... Relax.'";
 	WaitLineBreak;
 	say "     He then stands up, the towering sharkman overshadowing over you as he keeps your head at crotch level, finger still in your mouth. With another hand, he pushes his speedo down his legs until it falls on its own to his feet, then promptly kicks it away. As you think he is about to shove his cock down your impossibly wide open mouth, he instead grins as he leaves your lips be, and moves them to grab you, then lift you. This is done so effortlessly that the sharkman does not even make a grunt, and simply flips you over as he holds you in front of him. Now, you are upside down with your legs up, but your head is still facing his menacingly throbbing meat. 'Manhandling is my specialty, that's why. Don't try this at home, though. You ain't as strong as I am...'";
 	say "     Chuckling, Snapjaw then grabs your head and lines up your mouth with the tip of his cock, then begins to push it against it. The other arm is holding you tightly against his torso by your lower back, and he is so big your knees barely reach his shoulders. Indeed, despite having to endure the fact your blood is rushing down to your head, you have to do nothing but let the huge sharkman handle things, which by this point means using you up like a sex doll. Somehow, though, it feels a little easier to open your mouth and let his cock in, even if slowly, inch by inch, as he carefully attempts to put more and more of it in. 'It always ends up fitting... Must be a special talent I have. That, or you're really eager to get opened up and stretched...'";
@@ -742,7 +703,6 @@ to say SnapjawSexMuscleWorship:
 	if Loyalty of Snapjaw < 9:
 		increase Loyalty of Snapjaw by 1;
 
-
 [SCAVENGE EVENT]
 
 to say SnapjawTalkScavenge:
@@ -754,7 +714,7 @@ to say SnapjawTalkScavenge:
 		if lastfuck of Snapjaw - turns < 4:
 			say "     You do not think it would be a good time for that, as you have recently been with Snapjaw already. Perhaps later would be best, you also have to give the sharkman some time for himself...";
 		else:
-			say "     Finding yourself with some free time, you ask if Snapjaw would like your generous services to assist him with some scavenging around the city. 'Eager to help aren't you? Yeah, I suppose we could get some of that done. You ready or what?'"; 
+			say "     Finding yourself with some free time, you ask if Snapjaw would like your generous services to assist him with some scavenging around the city. 'Eager to help aren't you? Yeah, I suppose we could get some of that done. You ready or what?'";
 			say "     ([link]Y[as]y[end link]) - Yes, you are ready to go with him.";
 			say "     ([link]N[as]n[end link]) - No, you changed your mind.";
 			if Player consents:
@@ -778,15 +738,15 @@ to SnapjawScavengeEvent:
 	WaitLineBreak;
 	if Libido of Snapjaw > 0:
 		say "     However... A thought crosses your mind, seeing Snapjaw so exposed, his hands busy doing such heavy lifting. You could seize this opportunity to have some fun with that big body of his. There is no way he is not putting on a show for you, so there is very little chance he will stay angry at you for long. There is the chance of forfeiting those supplies, but perhaps it would be worth it for the thrill...";
-		LineBreak;
-		say "     [bold type]Would you like to give Snapjaw some body worshipping here and now? Who knows where it might lead...[roman type][line break]";
+		say "[line break]     [bold type]Would you like to give Snapjaw some body worshipping here and now? Who knows where it might lead...[roman type][line break]";
 		say "     ([link]Y[as]y[end link]) - Caress the sharkman and be ready to offer your holes.";
 		say "     ([link]N[as]n[end link]) - You came here for the supplies.";
 		if Player consents:
+			LineBreak;
 			say "     He is quite a strong bulwark of muscle, it gets harder to take your eyes off those throbbing muscles, seemingly yearning for a generous touch only you could give at the moment. As you let these thoughts flow in your mind, you get closer and closer to the sharkman, disregarding the initial motive you came here for. You are dead set on giving him a good time, and before you can even think about your next move, your hand is already groping at one of his pecs. 'Uuuh... What the fuck are you doing?' he asks, looking down at you from above with an expression that could pierce your very soul, but it is too late to back off now. You tell him you could not resist groping those massive slabs of meat when the chance was there, all too easy to skip on.";
 			say "     'Is that so? Well, you're lucky my hands are the only thing keeping you from getting crushed under a van.' You note that, while that is true, he would be missing out on someone who really wants to please him right now, as you keep massaging those huge pectorals of his. You are pretty confident only because you notice the cock in his stretched speedos twitch, otherwise you would probably be running for your life from his glare alone. 'You little shit... You're really damn lucky I can't grab and open up that fucking ass of yours right now, because you're begging to become a cocksleeve...' All this talk makes it even more satisfying for you as you step in front of him, now getting both your hands on both his pecs.";
 			WaitLineBreak;
-			say "     It really does not take that long until the sharkman's thick shaft slips out of his speedo, rapidly growing enough to keep poking at you as your hands run all over those pecs, fingers pressing against and around his nipples while his erection rages on. But with so much body to worship, you show intentions of moving elsewhere when Snapjaw stops you in your tracks, 'No. Nowhere else...' he says with a domineering tone, causing you to freeze up as you look back at him, but then he continues, '... Just down. Right there,' and his meat throbs out visible at you, a drop of precum already leaking down the thick glans of his dick, 'You better worship it like your fucking life depends on it, because it fucking does.'";
+			say "     It really does not take that long until the sharkman's thick shaft slips out of his speedo, rapidly growing enough to keep poking at you as your hands run all over those pecs, fingers pressing against and around his nipples while his erection rages on. But with so much body to worship, you show intentions of moving elsewhere when Snapjaw stops you in your tracks, 'No. Nowhere else...' he says with a domineering tone, causing you to freeze up as you look back at him, but then he continues, '...Just down. Right there,' and his meat throbs out visible at you, a drop of precum already leaking down the thick glans of his dick, 'You better worship it like your fucking life depends on it, because it fucking does.'";
 			say "     Despite how threatening he sounds, you are not one to deny him the pleasure of your warm mouth around that thick monster cock of his. You keep your hands on him and, as you begin to lower yourself, you trace down the lines of his abs, feeling up those powerful core muscles as you line yourself up with his waiting member. Now, you move your hands down to his muscular thighs, so impossibly big and even more due to how tense they are, quadriceps so pumped you think he could crush just about anything between them. While you do not want to be said thing, the temptation to take your time appreciating those massive leg muscles takes over as you spend a little too long groping and massaging his thighs. His cock gets so impatient it shoots a drop of precum in your face.";
 			WaitLineBreak;
 			say "     Suddenly, you feel a hand on the back of your head, which really means Snapjaw is just holding the van with a single arm. The thought of it both arouses and terrifies you, but you do not have time to react as, obviously, he pushes your face against his cock. 'What didn't you understand about SUCKING MY FUCKING DICK, you fucking cum rag?!' He is not gentle with it, not even slightly, as you are forced to open really wide to take just the tip in your mouth. Another blast of precum floods its inside, causing you nearly choke while you try your best to swallow it, but soon, more of his cock pushes in, your jaw holding for its dear life as it tries desperately to keep up. 'With the amount of dick you must suck daily, I was expecting that mouth to be loose by now. Gotta snap your jaw too? Heheh...' While that pun definitely seemed to have been intended, you are more worried about actually managing to take the entire thing rather than paying attention to his dirty talking, which proves to be indeed a difficult task.";
@@ -818,10 +778,11 @@ to SnapjawScavengeEvent:
 				say "     It is still a good long minute until Snapjaw finally gives signs of slowing down, and there is so much cum all over you and everywhere... Whatever you were hoping to scavenge from here is now covered in Snapjaw's special, an enormous amount of shark load. And you could definitely use a shower, unless you like being covered in the stuff yourself. 'Look at what you've done... Maybe I could've avoided cumming all over our stuff if you'd just take my cum like a good slut, now you get nothing. Hope that was worth it,' he says as he puts you over his shoulder, not even bothering putting you down as you keep leaking his jizz from your body.";
 				say "     He then simply walks away while carrying you, as you both are still covered in his cum. All the other sharkmen are going to see you and know exactly what happened...";
 			WaitLineBreak;
+			say "     Fortunately, they happen to live in a beach, and there is plenty of sea for you to get cleaned up once you arrive. All eyes are on you as Snapjaw puts you down and goes for a swim, leaving you to care for yourself without a word. None are necessary, you have just arrived from a scavenging round with empty hands and a load from the sharkman himself. Maybe you really should not try to explain...";
 			NPCSexAftermath Player receives "OralCock" from Snapjaw;
 			NPCSexAftermath Player receives "AssFuck" from Snapjaw;
-			say "     Fortunately, they happen to live in a beach, and there is plenty of sea for you to get cleaned up once you arrive. All eyes are on you as Snapjaw puts you down and goes for a swim, leaving you to care for yourself without a word. None are necessary, you have just arrived from a scavenging round with empty hands and a load from the sharkman himself. Maybe you really should not try to explain...";
 		else:
+			LineBreak;
 			say "     You perish the thought and get your mind back on track. You should be checking those supplies and then leave, not wasting your time with funny ideas... And so, you get under the van and proceed to browse through the products in this machine. Most of them are expired or damaged, but you still try your luck...";
 			WaitLineBreak;
 			SnapjawScavengeEventRoll1;
@@ -832,7 +793,6 @@ to SnapjawScavengeEvent:
 	if Loyalty of Snapjaw < 9:
 		increase Loyalty of Snapjaw by 1;
 	now lastfuck of Snapjaw is turns;
-
 
 to SnapjawScavengeEventRoll1:
 	let randomnumber be a random number from 1 to 3; [adjust the latter number for the number of options]
@@ -848,7 +808,5 @@ to SnapjawScavengeEventRoll1:
 			ItemGain soda by 1;
 	WaitLineBreak;
 	say "     'You done yet? We gotta head back,' informs Snapjaw as you get ready to leave. He does not talk much on your way back to the beach, but at least you have not arrived from that empty-handed. Staying on his good side does seem to benefit you in more ways than one. Once you have returned, Snapjaw goes back to his usual spot, and you have a bit more supplies for yourself. Perhaps someday you will be able to provide significant help for all the sharkmen here...";
-	
-
 
 Snapjaw Beach Camp ends here.

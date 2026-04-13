@@ -6,23 +6,14 @@ Section 0 - Flags
 
 Section 1 - Creature Responses
 
-to say DullahanDefeat:
-	say "     You shouldn't be able to encounter the dullahan out of a situation. If you are, please let @Gherod know on the FS Discord.";
-
-to say DullahanVictory:
-	say "     You shouldn't be able to encounter the dullahan out of a situation. If you are, please let @Gherod know on the FS Discord.";
-
-to say DullahanDesc:
-	say "     You shouldn't be able to encounter the dullahan out of a situation. If you are, please let @Gherod know on the FS Discord.";
+Section 2 - Creature Insertion
 
 Table of CombatPrep (continued)
 name(text)	PrepFunction(text)
 "Dullahan"	"[PrepCombat_Dullahan]"
 
 to say PrepCombat_Dullahan:
-	say "";
-
-Section 2 - Creature Insertion
+	setmongender 3; [creature is male]
 
 Table of Random Critters (continued)
 NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
@@ -40,9 +31,9 @@ when play begins:
 	now enemy Name entry is ""; [ Specific name of unique enemy. ]
 	now enemy type entry is 1; [ 0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters. ]
 	now attack entry is "[one of]The statuesque knight swings his greataxe at you, luckily only leaving you with a superficial cut.[or]The demonic warrior knocks you back with his weapon's pommel.[or]With his powerful body, the Dullahan Knight tackles you painfully, causing you to lose your balance for a short time.[or]Rushing at you, the Dullahan swings his greataxe in your direction, its blade tearing through your skin[at random]";
-	now defeated entry is "[DullahanVictory]";
-	now victory entry is "[DullahanDefeat]";
-	now desc entry is "[DullahanDesc]";
+	now defeated entry is "You shouldn't be able to encounter the dullahan out of a situation. If you are, please let @Gherod know on the FS Discord.";
+	now victory entry is "You shouldn't be able to encounter the dullahan out of a situation. If you are, please let @Gherod know on the FS Discord.";
+	now desc entry is "You shouldn't be able to encounter the dullahan out of a situation. If you are, please let @Gherod know on the FS Discord.";
 	now face entry is "nonexistent, instead covered with darksteel in the shape of a durable helmet. A green mist oozes from within.";
 	now body entry is "statuesque and musclebound, fit for the art of battle and war. You're almost twice as tall than an average humanoid.";
 	now skin entry is "pale and scarred, like one of a seasoned warrior.";
@@ -200,16 +191,9 @@ name	desc	weight	object
 "dullahan dust"	"A substance similar to powder, green in color"	1	dullahan dust
 
 dullahan dust is a grab object.
-
-instead of sniffing dullahan dust:
-	say "The dust doesn't have any particular smell, though you've got to be careful not to inhale it by accident.";
-
-Usedesc of dullahan dust is "[DullahanDustUse]";
-
-to say DullahanDustUse:
-	say "You shrug before opening your mouth and throwing the dust into your mouth. It tingles in your tongue and seemingly melts, like pop rocks, making your entire mouth numb for a moment.";
-
 dullahan dust is infectious. Strain of dullahan dust is "Dullahan".
+Scent of dullahan dust is "The dust doesn't have any particular smell, though you've got to be careful not to inhale it by accident.".
+Usedesc of dullahan dust is "     You shrug before opening your mouth and throwing the dust into your mouth. It tingles in your tongue and seemingly melts, like pop rocks, making your entire mouth numb for a moment.[line break]".
 
 Section 4 - Sex menu
 
@@ -242,19 +226,18 @@ to DullahanSex:
 			choose row calcnumber in table of fucking options;
 			say "[title entry]: [description entry]?";
 			if Player consents:
-				let nam be title entry;
 				now sextablerun is 1;
-				if (nam is "Get your hands and mouth on his two feet long of a cock"):
-					say "[DullahanBlow]";
-				if (nam is "Have the demon knight turn around and bend over"):
-					say "[DullahanFuck]";
-				wait for any key;
+				if title entry is:
+					-- "Get your hands and mouth on his two feet long of a cock":
+						say "[DullahanBlow]";
+					-- "Have the demon knight turn around and bend over":
+						say "[DullahanFuck]";
 		else if calcnumber is 0:
 			now sextablerun is 1;
 			say "     You politely tell the Dullahan that you are done for today and say goodbye to him. He nods, and both of you part ways to your respective realms.";
-			wait for any key;
 		else:
-			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
+			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options], or 0 to exit.";
+	wait for any key;
 	clear the screen and hyperlink list;
 
 to say DullahanBlow: [player blows the Dullahan]
@@ -307,9 +290,10 @@ to say DullahanSummon:
 		say "     You attempt to put your focus on this, but your mind is just too tired right now. Maybe you should get some rest first.";
 	else if demonologist is not listed in companionList of Player and resolution of Dullahan Knight is 1: [warning if going the first time without Xaedihr]
 		say "     You chose to proceed with summoning a dangerous demonic creature without Xaedihr, who is an expert demonologist able to protect you significantly during your confrontations with the dark knight. The events that will follow can be punishing and unrelentless without proper guidance, and you know what will happen if you lose to the Dullahan in battle. [bold type]Are you sure you wish to delve into demonic affairs all by yourself?[roman type][line break]";
-		say "     [link](Y)[as]y[end link] - Danger? What danger? Just continue with the ritual.";
-		say "     [link](N)[as]n[end link] - Let's be cautious about this.";
+		say "     ([link]Y[as]y[end link]) - Danger? What danger? Just continue with the ritual.";
+		say "     ([link]N[as]n[end link]) - Let's be cautious about this.";
 		if Player consents:
+			LineBreak;
 			say "     Nonsense. You consider yourself more than capable of doing this alone. With your decision made, your get ready to perform the ritual.";
 			LineBreak;
 			DullahanSummon1;
@@ -352,21 +336,18 @@ to DullahanSummon1Choice1:
 	say "     [link](4)[as]4[end link] - He looks too strong to face in a battle. Run away!";
 	now calcnumber is 0;
 	while calcnumber < 1 or calcnumber > 4:
-		say "Choice? (1-4)>[run paragraph on]";
+		say "Choice? (1-4)> [run paragraph on]";
 		get a number;
-		if calcnumber is 1 or calcnumber is 2 or calcnumber is 3 or calcnumber is 4:
-			break;
-		else:
-			say "Invalid choice. Type [link]1[end link] to stay put and calm, [link]2[end link] to rise your guard, [link]3[end link] to initiate the fight yourself and charge ahead, or [link]4[end link] to attempt an escape.";
+		if calcnumber < 1 or calcnumber > 4:
+			say "Invalid choice. Type [link]1[end link] to stay put and calm, [link]2[end link] to raise your guard, [link]3[end link] to initiate the fight yourself and charge ahead or [link]4[end link] to attempt an escape.";
+	LineBreak;
 	if calcnumber is 1:
-		LineBreak;
 		if demonologist is listed in companionList of Player:
 			say "     Following Xaedihr's recommendation, you decide to stay put and ease your breathing. The Dullahan continues to move in your direction, slowly and steadily. 'Good, he's moving this way. Let him come.'";
 		else:
 			say "     Following your best intuition, you decide to stay put and ease your breathing. The Dullahan continues to move in your direction, slowly and steadily.";
 		DullahanSummon1a;
 	else if calcnumber is 2:
-		LineBreak;
 		say "     Your posture is stationary, but defensive. The Dullahan senses your readiness for battle and swings his greataxe around, keeping it stretched towards one side as he moves towards you.";
 		if demonologist is listed in companionList of Player:
 			say " 'Wasn't I clear when I told you not to look like a threat? You'll put us both in danger!' - exclaims the half-demon, followed by a sigh - 'But he's coming this way, I guess. Let him approach.'";
@@ -376,7 +357,6 @@ to DullahanSummon1Choice1:
 				decrease loyalty of Xaedihr by 1;
 		DullahanSummon1a;
 	else if calcnumber is 3:
-		LineBreak;
 		say "     You have no time for this. If all you need is to take off his horse, then a head-on attack could work, if you're strong enough. With this in mind, you get ready and dash towards the Dullahan,";
 		if demonologist is listed in companionList of Player:
 			say " hearing Xaedihr cursing from behind you. 'You fool! What did I tell you?!' he tries to put some sense into you, but his voice is soon too far to be clearly audible.";
@@ -384,16 +364,13 @@ to DullahanSummon1Choice1:
 			say " somehow questioning your decision as the intimidating shape of the knight becomes more obvious.";
 		say " As you approach the dark knight, he moves forward a bit more with his greataxe in hand, ready to counterattack your charge.";
 		say "     Your bravery, however, is not rewarded. As soon as you come in reach of the horserider, you're presented with the cold, sharp feeling of his heavy blade across your neck. An intense pain takes over as the world around you spins before your eyes, until you stop feeling anything at all.";
-		WaitLineBreak;
-		now battleground is "Void";
+		now battleground is "void";
 		the Player was ended by "Decapitated by Dullahan";
 		trigger ending "Player has died";
 		end the story saying "Your body lies decapitated on the floor in a bloody mess.";
 	else if calcnumber is 4:
-		LineBreak;
 		say "     There is no way you can face a foe like this in battle! You must run away and find a way to escape this realm before it's too late. With this in mind, you turn your tail and start running, only hearing a deep, earth-shaking shout from behind in the form of a single word 'COWARD!'. Soon the horse trot catches up to you, and his intimidating presence is made obvious, right next to you. It's not long before you're presented with the cold, sharp feeling of his heavy blade across your neck. An intense pain takes over as the world around you spins before your eyes, until you stop feeling anything at all.";
-		WaitLineBreak;
-		now battleground is "Void";
+		now battleground is "void";
 		the Player was ended by "Decapitated by Dullahan";
 		trigger ending "Player has died";
 		end the story saying "Your body lies decapitated on the floor in a bloody mess.";
@@ -408,29 +385,27 @@ to DullahanSummon1a:
 	else: [player relies on a roll for success, dexterity and strength]
 		say "     A dead silence remains between you both, but not for long. Soon, the dark knight hurries his shadow horse and charges towards you, with his greataxe ready to swing at you. The only advantage you have is the time at your disposal to react!";
 		WaitLineBreak;
-		let bonus be (( dexterity of player minus 10 ) divided by 2);
+		let bonus be ( dexterity of player minus 10 ) divided by 2;
 		let diceroll be a random number from 1 to 20;
-		say "You roll 1d20([diceroll])+[bonus] = [special-style-1][diceroll + bonus][roman type] vs [special-style-2]15[roman type] (Dexterity Check):[line break]";
+		say "You roll 1d20([diceroll])[if bonus >= 0]+[end if][bonus] = [special-style-1][diceroll + bonus][roman type] vs [special-style-2]15[roman type] (Dexterity Check):[line break]";
 		if diceroll + bonus >= 15:
 			say "     Your great dexterity and agility allows you to dodge an incoming swing, and you're nimble enough to get a good angle for a critical strike!";
-			let bonus be (( strength of player minus 10 ) divided by 2);
+			let bonus be ( strength of player minus 10 ) divided by 2;
 			let diceroll be a random number from 1 to 20;
-			say "You roll 1d20([diceroll])+[bonus] = [special-style-1][diceroll + bonus][roman type] vs [special-style-2]14[roman type] (Strength Check):[line break]";
+			say "You roll 1d20([diceroll])[if bonus >= 0]+[end if][bonus] = [special-style-1][diceroll + bonus][roman type] vs [special-style-2]14[roman type] (Strength Check):[line break]";
 			if diceroll + bonus >= 14:
 				say "     And with enough strength, your strike is extremely effective! Kicking the shadow horse throws the shape off balance, which vanishes as it falls on the ground, and the knight ends up several meters away from you with a loud crash, but with his greataxe still in reach. You may have removed his horse, but when he manages to stand up again, you get reminded of how strong of a foe he is, even on foot. His ominous voice shows itself in your mind, once more, but clearer this time '...You are valiant. Duel me. The victor takes the spoils.' With this, the Dullahan awaits your move with greataxe in hand.";
 				say "     This is a fight you have to win.";
 				DullahanSummon1FightSolo;
 			else:
 				say "     But unfortunately, you weren't strong enough. Without managing to connect a good attack with your initiative, you remain vulnerable, an easy prey for the Dullahan. A ghastly voice surges in your mind... '...YOU HAVE FAILED...!' It's not long before you're presented with the cold, sharp feeling of his heavy blade across your neck. An intense pain takes over as the world around you spins before your eyes, until you stop feeling anything at all.";
-				WaitLineBreak;
-				now battleground is "Void";
+				now battleground is "void";
 				the Player was ended by "Decapitated by Dullahan";
 				trigger ending "Player has died";
 				end the story saying "Your body lies decapitated on the floor in a bloody mess.";
 		else:
 			say "     Unfortunately, you're not fast enough. Without a quick reaction and support, you're vulnerable, and easy prey for the Dullahan. A ghastly voice surges in your mind... '...INTRUDERS WON'T BE SPARED...!' It's not long before you're presented with the cold, sharp feeling of his heavy blade across your neck. An intense pain takes over as the world around you spins before your eyes, until you stop feeling anything at all.";
-			WaitLineBreak;
-			now battleground is "Void";
+			now battleground is "void";
 			the Player was ended by "Decapitated by Dullahan";
 			trigger ending "Player has died";
 			end the story saying "Your body lies decapitated on the floor in a bloody mess.";
@@ -469,18 +444,17 @@ to DullahanSummon1FightSolo:
 		ItemGain dullahan dust by 5 silently;
 		WaitLineBreak;
 		say "     Your questions are answered as soon as when you crouch to lay a hand on the powder. The same voice from before finds itself in your mind, speaking in a calm and clear manner... 'I never had such a formidable opponent. One that wouldn't fall on my first strike, coming here out of either bravery or stupidity, managed to defeat me in a fair duel... I am impressed.' The voice's fluidity gives you a chill that runs down your spine, making your hair standing, although he keeps speaking... 'Do not fear me. I will not take your soul, for you have deserved my respect. However, I would like to ask you a question...' the voice informs, making a brief pause before continuing.";
-		say "     [bold type]'Why did you come here to find me? What is that you seek?'[roman type][line break]";
+		say "[line break]     [bold type]'Why did you come here to find me? What is that you seek?'[roman type][line break]";
 		say "     [link](1)[as]1[end link] - To gain power and dominate those who dare to stand in your way.";
 		say "     [link](2)[as]2[end link] - You wish only to serve, and came to seek your true purpose.";
 		say "     [link](3)[as]3[end link] - Sheer curiosity brought you to the realms of Hell.";
 		now calcnumber is 0;
 		while calcnumber < 1 or calcnumber > 3:
-			say "Choice? (1-3)>[run paragraph on]";
+			say "Choice? (1-3)> [run paragraph on]";
 			get a number;
-			if calcnumber is 1 or calcnumber is 2 or calcnumber is 3:
-				break;
-			else:
+			if calcnumber < 1 or calcnumber > 3:
 				say "Invalid choice. Type [link]1[end link] to say you want power, [link]2[end link] to say you wish for servitude or [link]3[end link] to tell the knight that you were brought by curiosity.";
+		LineBreak;
 		if calcnumber is 1:
 			say "     The ominous voice throws a laughter in your mind that nearly makes you lose your balance. 'Hah! Petty mortals, always wanting more than what they deserve. Though you have demonstrated your strength, and so you have earned the right to see me once more. Perhaps I'll give you what you seek... Who knows.' With this said, the presence within your conscience fades away, and with it, a familiar mist envelops you, obscuring your view from the dark empty plain, the sounds being not as horrific as before. Within a minute, the fog subsides and you see yourselves back to where you performed the ritual, with the Ancient Tome in your possession. You go over the respective pages in a rush, and there seems to be a change in the rituals' words. Looks like the next time you perform it, a different thing may happen.";
 			now resolution of Dullahan Knight is 4; [Told Dullahan they want power]
@@ -503,12 +477,14 @@ to DullahanSummon2: [Dullahan rematch]
 	say "     Reciting the words written in the pages of the Ancient Tome is now enough to perform the ritual. Soon, a strange limbo envelops you, no longer bringing you anywhere, but freezing the world around you. It is then when you realize you've been brought to an alternate dimension, an in-between separating the demonic realm and yours. As intended, your actions are enough to summon the Dullahan, who materializes before you as he walks in your direction with greataxe in hand. There's a faint trace of green mist oozing out of his helmet's front opening as the statuesque knight stands in front of you, as if eyeing you from head to feet.";
 	WaitLineBreak;
 	say "     He strikes you with a single question, his deep voice barging into your mind like a sharp blade onto your skin. [bold type]'Are you here for a fair duel, mortal?'[roman type][line break]";
-	say "     [link](Y)[as]y[end link] - Let's duel.";
-	say "     [link](N)[as]n[end link] - Refuse to duel him.";
+	say "     ([link]Y[as]y[end link]) - Let's duel.";
+	say "     ([link]N[as]n[end link]) - Refuse to duel him.";
 	if Player consents:
+		LineBreak;
 		say "     You nod, and bring your guard up. Your acceptance is met with excitement from the knight's behalf. 'Good. Let us fight.'";
 		DullahanSummon2Fight;
 	else:
+		LineBreak;
 		say "     You say that you're not here to fight, and he stops you before you can say anything else. 'Do not waste my time, then. Next time you call me, make sure you're willing to duel me instead of acting like the coward you are.' He turns around and starts walking away, forcing your limbo to break apart. You're painfully shoved back into your realm, the process leaving you very dizzy. It takes you a while until you're able to collect your senses and focus on what you'll be doing next.";
 
 to DullahanSummon2Fight:
@@ -537,12 +513,11 @@ to DullahanSummon3: [Sparring or sex]
 	say "     [link](3)[as]3[end link] - You've changed your mind, so you just salute him and say goodbye.";
 	now calcnumber is 0;
 	while calcnumber < 1 or calcnumber > 3:
-		say "Choice? (1-3)>[run paragraph on]";
+		say "Choice? (1-3)> [run paragraph on]";
 		get a number;
-		if calcnumber is 1 or calcnumber is 2 or calcnumber is 3:
-			break;
-		else:
+		if calcnumber < 1 or calcnumber > 3:
 			say "Invalid choice. Type [link]1[end link] to say you want to spar, [link]2[end link] to say you came for sex or [link]3[end link] to leave.";
+	LineBreak;
 	if calcnumber is 1:
 		say "     You nod, and bring your guard up. Your acceptance is met with excitement from the knight's behalf. 'Good. Let us fight.'";
 		DullahanSummon3Fight;
@@ -579,8 +554,7 @@ to DullahanBadEnd:
 	say "     'You've left your physical boundaries. Breathing is no longer necessary.' the Dullahan informs you as he pushes into your mouth once more. His now rock solid length finds itself slipping into your throat again, stretching the fleshy tunnel around his considerable girth. 'Your throat makes a nice fuckhole, mortal... I'm glad I can use it without end.' You feel his cock sliding in and out of your esophagus vigorously as he thrusts powerfully, grabbing you by the ears and moving your head in rhythm with his pounding. Just when you're starting to get used to the treatment, he stops abruptly, then pulls out the same way as before. This time, his dick is removed completely out of your mouth as he gives it a few strokes, though he does reward you with the good sight of his two feet-long pulsing in front of you. 'You feel good... But you don't deserve my load yet.'";
 	WaitLineBreak;
 	say "     His words strike you [if Player is submissive]as a tremendous disappointment, just when your body was craving to be used by him all the time[else]as commanding and compelling, and you outright understand why[end if]... 'We'll have an entire eternity for that.' The Dullahan just pulls you from the ground and makes you walk in front of him, his erection dandling between his legs as you both approach a shadowy shaped wagon. A look over your shoulder has your eyes meeting with the visage of your previous human shell. A body your soul no longer inhabits lies on the floor several meters behind you, one that you won't need nor miss anymore. Not for now, at least, as an eternity of servitude next to your new Master awaits you...";
-	WaitLineBreak;
-	now battleground is "Void";
+	now battleground is "void";
 	the Player was ended by "Soul taken away by Dullahan";
 	trigger ending "Player has died";
 	end the story saying "Your soul has been taken away by the Dullahan";

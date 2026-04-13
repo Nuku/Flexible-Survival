@@ -5,11 +5,11 @@ Version 1 of Satyress by Wahn begins here.
 
 Section 1 - Creature Responses
 
-beatSatyress is a number that varies.
+[beatSatyress is a number that varies.]
 
 to say Satyress wins:
 	if Player is male:
-		say "     As you give up and raise your hands in a consoling gesture, the satyress dances closer on lithe hooves and plants a kiss on your cheek. 'I knew you'd come around! Who wouldn't want all this...' she says in a happy giggle, taking both your hands and running them up her naked chest, moving them to cup her breasts. Animating you to fondle and stoke her perky boobs, the satyress meanwhile gets busy on your clothes - quickly loosening them and pulling them off you one by one. Soon, you're bare-ass naked in front of her, your manhood standing proud and erect from all her groping and touching[if Cock Length of Player > 24]. Reaching down to feel the size of your massive prick, the satyress looks up at you with raised eyebrows and gives an almost musical giggle. 'My, you are a big boy, aren't you?' she says in a somewhat drunken laugh[else if Cock Length of Player > 12]. Reaching down to feel the size of your large prick, the satyress gives an almost musical giggle. 'Come on, I wanna feel this bad boy in me now,' she adds with a somewhat drunken laugh[else]. Feeling your [cock size desc of Player] prick, the satyress gives an almost musical giggle. 'Well, you're not as huge as some satyrs I know, but this should still be fun,' she adds with a drunken laugh[end if], then pulls you by the hand to walk a few steps on the green grass between the campus buildings and directs you to lie down.";
+		say "     As you give up and raise your hands in a consoling gesture, the satyress dances closer on lithe hooves and plants a kiss on your cheek. 'I knew you'd come around! Who wouldn't want all this...' she says in a happy giggle, taking both your hands and running them up her naked chest, moving them to cup her breasts. Animating you to fondle and stoke her perky boobs, the satyress meanwhile gets busy on your clothes - quickly loosening them and pulling them off you one by one. Soon, you're bare-ass naked in front of her, your manhood standing proud and erect from all her groping and touching. [if Cock Length of Player > 24]Reaching down to feel the size of your massive prick, the satyress looks up at you with raised eyebrows and gives an almost musical giggle. 'My, you are a big boy, aren't you?' she says in a somewhat[else if Cock Length of Player > 12]Reaching down to feel the size of your large prick, the satyress gives an almost musical giggle. 'Come on, I wanna feel this bad boy in me now,' she adds with a somewhat[else]Feeling your [cock size desc of Player] prick, the satyress gives an almost musical giggle. 'Well, you're not as huge as some satyrs I know, but this should still be fun,' she adds with a[end if] drunken laugh, then pulls you by the hand to walk a few steps on the green grass between the campus buildings and directs you to lie down.";
 		say "     As soon as you're stretched out on the ground, the very eager satyress steps over you and starts to crouch down, bringing her crotch into position just above your hard dick. And then she impales herself on it without any hesitation, moaning loudly as her nether lips are parted by your member. A few rapid heartbeats later, you find yourself with the young woman straddling your hips and your cock buried balls-deep inside her sex. She feels great to be in - warm and slick, driving your arousal to new heights... and that's just the first moment of her having fun with you. Next she starts to gyrate her hips and rocks back and forth on your member, using you as a very big (and hard) sex toy - not that you're complaining or anything. You're quite content with the sensations she gives you and the almost hypnotic swaying of her breasts that draws you into touching and fondling them.";
 		WaitLineBreak;
 		say "     The naked half-goat woman is a very eager partner to get fucked, vocally telling you - and everyone in earshot - that she likes it hard and grinding her crotch against you. As continues ride your shaft, the satyress teases you to tough her body and hump your hips, proving that she lives to have fun. In between loud moans, she tells you about the [one of]powerful gorilla[or]sexy incubus[or]dick-girl cheerleader[or]insanely well-hung nerd[at random] that had her behind the library and the satyr gang-bang she was in at a nearby frat-house. You just know that it had to be Phi Alpha Nu - the place where you helped spread satyr-dom to the college campus. It is with great pleasure that you enjoy the fruits of your 'hard work' over there, feeling your dick enveloped by this sexy young woman now turned into a mythological being.";
@@ -31,10 +31,10 @@ To say Satyress loses:
 	if Player consents:
 		say "[SatyressSexSelection]";
 	else:
+		LineBreak;
 		say "     Explaining that she should work on getting to recognize when people just aren't in the mood, you step away from the satyress. Picking herself up, she snatches up her now empty cup, then stalks off, a picture of offended innocence as he looks for a refill.";
 
 to say SatyressSexSelection:
-	LineBreak;
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]
@@ -75,35 +75,34 @@ to say SatyressSexSelection:
 			choose row calcnumber in table of fucking options;
 			say "[title entry]: [description entry]?";
 			if Player consents:
-				let nam be title entry;
 				now sextablerun is 1;
-				if (nam is "Tell her to lie down and spread her legs"):
-					say "[SatyressFuck1]";
-				if (nam is "Tell her to bend over"):
-					say "[SatyressFuck2]";
-				if (nam is "Tell her to start sucking"):
-					say "[SatyressFuck3]";
-				if (nam is "Tell her to get on her knees and service you"):
-					say "[SatyressFuck4]";
-				wait for any key;
+				if title entry is:
+					-- "Tell her to lie down and spread her legs":
+						say "[SatyressFuck1]";
+					-- "Tell her to bend over":
+						say "[SatyressFuck2]";
+					-- "Tell her to start sucking":
+						say "[SatyressFuck3]";
+					-- "Tell her to get on her knees and service you":
+						say "[SatyressFuck4]";
 		else if calcnumber is 0:
 			now sextablerun is 1;
 			say "     You step back from the bare-breasted young woman, shaking your head slightly as she gives a questioning look.";
-			wait for any key;
 		else:
-			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
+			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options], or 0 to exit.";
+	wait for any key;
 	clear the screen and hyperlink list;
 
 to say SatyressFuck1:
 	say "     The satyress looks up at you with momentary surprise before responding, 'Well, why did you act like you wanted to beat me off with a stick just before? We could have had this fun without scuffling and all. Ah, no matter - come here and give me a good dicking...' Her beaming expression shows how eager she is for some fun, and in a move worthy of a trained gymnast, she pushes her body up in a graceful arch, showing off all her curves and the already moist pussy lips between her legs. Then she sinks back down again, lying on the grass between the campus buildings, spreading her legs slightly and cupping her own breasts. 'Come on then, I'm waiting,' she coos in an enticing tone. Eager to get going, you rapidly discard your gear and clothing as you walk towards, then kneel on the grass between her legs. Running your hands along the sides of her lithe legs, you feel the soft fur of her blond curls and soon reach the moist folds of her sex. The transformed student moans lustfully as you brush over them, rubbing her nether lips and the sensitive clit at the top.";
-	say "     You play with the satyress for a moment, teasing and stroking her body and reveling in the sounds you can make her do. Then finally the throbbing of your own [Cock of Player] shaft can't be denied anymore. Time to claim your prize. Moving forward on your knees, you brush your hard manhood against the young woman's pussy lips and the trimmed bush of her pubes[if Cock Length of Player > 24]. Feeling the size of your massive prick, she looks up at you with raised eyebrows and gives an almost musical giggle, then grinds against you all the harder. 'My, you are a big boy, aren't you?' she says in a somewhat drunken laugh[else if Cock Length of Player > 12]. Feeling the size of your large prick, she shows no hesitation and grinds back against you. 'Come on, I wanna feel this bad boy in me now,' she says with a somewhat drunken laugh[else]. Feeling your [cock size desc of Player] prick, she gives an almost musical giggle and grinds back against you. 'Well, you're not as huge as some satyrs I know, but this should still be fun,' she says with a drunken laugh[end if]. Just grinning in reply, you line up the tip of your shaft and sink it into her waiting snatch.";
+	say "     You play with the satyress for a moment, teasing and stroking her body and reveling in the sounds you can make her do. Then finally the throbbing of your own [Cock of Player] shaft can't be denied anymore. Time to claim your prize. Moving forward on your knees, you brush your hard manhood against the young woman's pussy lips and the trimmed bush of her pubes. Feeling [if Cock Length of Player > 24]the size of your massive prick, she looks up at you with raised eyebrows and gives an almost musical giggle, then grinds against you all the harder. 'My, you are a big boy, aren't you?' she says in a somewhat[else if Cock Length of Player > 12]the size of your large prick, she shows no hesitation and grinds back against you. 'Come on, I wanna feel this bad boy in me now,' she says with a somewhat[else]your [cock size desc of Player] prick, she gives an almost musical giggle and grinds back against you. 'Well, you're not as huge as some satyrs I know, but this should still be fun,' she says with a[end if] drunken laugh. Just grinning in reply, you line up the tip of your shaft and sink it into her waiting snatch.";
 	WaitLineBreak;
 	say "     Moaning loudly as you penetrate deeper and deeper, the satyress digs her hands into the grass in arousal, trembling from feeling your shaft inside her pussy. 'Yeah - fuck me,' she pants and looks you right in the eyes, sliding her legs around your hips to pull you closer. You're more than ready to indulge her request and start sawing your hard cock in and out of her pussy. The naked half-goat woman is a very eager partner to get fucked, vocally telling you - and everyone in earshot - that she likes it hard and grinding her crotch up against you. As you continue to hammer into her warm and wet hole, the satyress teases you on and on, proving that she lives to have fun. In between loud moans, she tells you about the [one of]powerful gorilla[or]sexy incubus[or]dick-girl cheerleader[or]insanely well-hung nerd[at random] that had her behind the library and the satyr gang-bang she was in at a nearby frat-house. You just know that it had to be Phi Alpha Nu - the place where you helped spread satyr-dom to the college campus. It is with great pleasure that you enjoy the fruits of your 'hard work' over there, sliding in and out of this sexy young woman now turned into a mythological being.";
 	say "     After a long and satisfying ride, you drive your cock deep inside and fill her with your potent load. The sexy student with you isn't far behind - as she proceeds to finger her clit in a frantic pace to finish herself off. Mere moments later, she is squirting femcum over your crotch as well as herself, soaking her pubes and the start of her leg fur. Once you're done and pulled out, she grabs her fallen cup (crawling over to it on all fours and also stopping a few times to show her messy pussy with your creamy load [if Ball Size of Player > 5]flowing[else if Ball Size of Player > 4]running[else if Ball Size of Player > 2]leaking[else]trickling[end if] out of it. Looking over her shoulder and giving you a wink, the satyress says, 'Thanks! I really needed that. See you again soon, I hope!' And with that she stands up and dashes off, looking to find a refill of wine.";
 	CreatureSexAftermath "Satyress" receives "PussyFuck" from "Player";
 
 to say SatyressFuck2:
-	say "     The satyress looks up at you with a salacious smile and says, 'Oooh, you wanna do me in the ass? Naughty, naughty, ...' Her beaming expression shows how eager she is for some fun, and in a move worthy of a trained gymnast, she jumps to her feet - or hooves - in one smooth move. After putting a hand on your crotch and rubbing it for a second, feeling the hard manhood ready for her there, the satyress skips over to a nearby wall in little jumps and braces herself against it, her ass wiggling and flagging you with its tail. Eager to get going, you rapidly discard your gear and clothing as you walk after her, then run your hands over the perky curves of her furred ass. Mmmh - firm muscles and warm, soft curls of blond fur - you can't wait to grind your stiff member against it[if Cock Length of Player > 24]. Feeling the size of your massive prick, she looks over her shoulder with raised eyebrows. The young woman gives an almost musical giggle and grinds against you all the harder. 'My, you are a big boy, aren't you?' she says in a somewhat drunken laugh[else if Cock Length of Player > 12]. Feeling the size of your large prick, she shows no hesitation and grinds back against you. 'Come on, I wanna feel this bad boy in me now,' she says with a somewhat drunken laugh[else]. Feeling your [cock size desc of Player] prick, she gives an almost musical giggle and grinds back against you. 'Well, you're not as huge as some satyrs I know, but this should still be fun,' she says with a drunken laugh[end if].";
+	say "     The satyress looks up at you with a salacious smile and says, 'Oooh, you wanna do me in the ass? Naughty, naughty, ...' Her beaming expression shows how eager she is for some fun, and in a move worthy of a trained gymnast, she jumps to her feet - or hooves - in one smooth move. After putting a hand on your crotch and rubbing it for a second, feeling the hard manhood ready for her there, the satyress skips over to a nearby wall in little jumps and braces herself against it, her ass wiggling and flagging you with its tail. Eager to get going, you rapidly discard your gear and clothing as you walk after her, then run your hands over the perky curves of her furred ass. Mmmh - firm muscles and warm, soft curls of blond fur - you can't wait to grind your stiff member against it. Feeling [if Cock Length of Player > 24]the size of your massive prick, she looks over her shoulder with raised eyebrows. The young woman gives an almost musical giggle and grinds against you all the harder. 'My, you are a big boy, aren't you?' she says in a somewhat[else if Cock Length of Player > 12]the size of your large prick, she shows no hesitation and grinds back against you. 'Come on, I wanna feel this bad boy in me now,' she says with a somewhat[else]your [cock size desc of Player] prick, she gives an almost musical giggle and grinds back against you. 'Well, you're not as huge as some satyrs I know, but this should still be fun,' she says with a[end if] drunken laugh.";
 	say "     Shifting your hips, you press your cock against the sweet little pink pucker between her buttocks and sink yourself in [if Cock Length of Player > 24]slowly[else if Cock Length of Player > 12]smoothly[else]with ease[end if], making your partner tremble with excitement, giving little coo's and pants of pleasure. The musky scent of aroused satyress grows stronger, and her raised tail wags almost like a dog's, signaling her happiness at this mating - as does the eager way in which she braces herself with both hands on her furry legs. Best not to keep such a sexy girl waiting any longer, so you start pulling back, groaning lustfully as her tightly stretched ring slides over your shaft. You wait a second when only your cockhead is left inside, teasingly pulling against her pucker just weak enough not to pop out - and then you surprise her with a sudden deep plunge that has both of you shouting in lust, continuing on with rapid pounding right after feeling your crotch hit her ass in a satisfying thump.";
 	WaitLineBreak;
 	say "     The naked half-goat woman is a very eager partner to get fucked, vocally telling you and everyone in earshot that she likes it hard and grinding her ass back against you. As you continue to hammer into her tightly gripping hole, the satyress teases you on and on, proving that she lives to have fun. In between loud moans, she tells you about the [one of]powerful gorilla[or]sexy incubus[or]dick-girl cheerleader[or]insanely well-hung nerd[at random] that had her behind the library and the satyr gang-bang she was in at a nearby frat-house. You just know that it had to be Phi Alpha Nu - the place where you helped spread satyr-dom to the college campus. It is with great pleasure that you enjoy the fruits of your 'hard work' over there, sliding in and out of this sexy young woman now turned into a mythological being. After a long and satisfying ride on the satyress's hot ass, you drive your cock deep inside and fill her with your load.";
@@ -316,16 +315,12 @@ name	desc	weight	object
 "Satyress Wine"	"A red plastic cup with a small sample of some dark wine you found left behind by one of the sexy satyresses on the college campus. It looks like there is about enough left for a single mouthful."	1	Satyress Wine
 
 Satyress Wine is a grab object. Understand "wine" as Satyress Wine. Satyress Wine is infectious. Strain of Satyress Wine is "Satyress".
-
-Usedesc of Satyress Wine is "[SatyressWineUsing]";
+Usedesc of Satyress Wine is "[SatyressWineUsing]".
+Scent of Satyress Wine is "The wine is aromatic and quite powerful. And after everything you've seen in this strange city, you could definitely go for a drink.".
 
 to say SatyressWineUsing:
 	say "Taking out the cup with its small mouthful of dark wine, you swirl the liquid around in the cup for a second then toss it back, gasping as the heady wine burns its way down your throat and makes your head spin. That's definitely the good stuff!";
 	PlayerDrink 10;
-
-instead of sniffing Satyress Wine:
-	say "The wine is aromatic and quite powerful. And after everything you've seen in this strange city, you could definitely go for a drink.";
-
 
 Section 4 - Endings
 

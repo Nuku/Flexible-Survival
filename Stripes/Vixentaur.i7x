@@ -235,7 +235,7 @@ this is the vxntaurpounce rule:		[damage+arousing pounce]
 	let dam be ( wdam entry times a random number from ( 80 - ( peppereyes * 4 ) ) to 120 ) / 66; [+50% damage]
 	if HardMode is true and a random chance of 1 in ( 10 + peppereyes ) succeeds:
 		now dam is (dam * 150) divided by 100;
-		say "The enemy finds a particular vulnerability in your defense - [italic type]Critical Hit![roman type][line break]";
+		say "The enemy finds a particular vulnerability in your defense - Critical Hit!";
 	say "The [one of][EnemyNameOrTitle][of]vulpine[or]vixentaur[or]fox creature[or]vixen[purely at random] growls and pounces atop you, [one of]knocking[or]pushing[or]shoving[purely at random] you down briefly. Her many talons claw at you while she giggles and presses her many breasts down atop you while giggling happily. This [one of]painfully[or]viciously[or]devastatingly[purely at random] [one of]arousing[or]sexy[purely at random] assault does [special-style-2][dam][roman type] damage and aroused you further!";
 	now damagein is dam;
 	say "[noshieldabsorbancy]"; [unable to use shield while pinned]

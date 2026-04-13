@@ -8,9 +8,6 @@ Version 1 of Goat Janitor by Luneth begins here.
 
 Section 1 - Creature Responses
 
-to say Goat Janitor desc:
-	say "     Rounding a corner ahead of you is a janitor's push cart, soon followed by a goat-like man wearing a pair of dirty gray coveralls, more than likely a hospital janitor succumbed to the infection. He strokes his beard as he watches you for a moment. 'Damn kids, lookit that mess. Just leave it fer the old goat huh?' He narrows his eyes and grabs hold of his mop, 'Think I'm gonna clean up after you? You've got another thing coming.' He charges at you, wielding his mop like a long club.";
-
 to say LoseToGoatJanitor:
 	say "     [if HP of Player > 0]Unwilling to keep fighting against the old goat[else]Defeated[end if], you collapse to your knees only to look up as the victorious janitor steps in front of you. You fail to suppress a whimper at the sight of the wicked grin on the old goat's face.";
 	if Player is male: [male/herm]
@@ -36,25 +33,26 @@ to say LoseToGoatJanitor:
 		CreatureSexAftermath "Player" receives "OralCock" from "Anthro Goat";
 
 to say BeatTheGoatJanitor:
-	say "     Frustrated with fighting the old goat, you body check him with your shoulder after your last blow, sending him tumbling to the ground. He groans weakly as he hits the floor, falling on his side";
 	if Libido of Player > 29 and Player is not neuter:
-		say ". Your blood (and excitement) up after the fight with the surprisingly spry goat. Shall you take advantage of the opportunity to get some relief?";
+		say "     Frustrated with fighting the old goat, you body check him with your shoulder after your last blow, sending him tumbling to the ground. He groans weakly as he hits the floor, falling on his side. Your blood (and excitement) up after the fight with the surprisingly spry goat. Shall you take advantage of the opportunity to get some relief?";
 		if Player consents:
+			LineBreak;
 			if Player is male: [males]
 				say "     The goat glares up at you prone on the ground, 'Can't believe...' He grunts, standing up using his mop as a cane, '...that a dandy like you... beat me.' You narrow your eyes and decide to show this old goat how much of a man you are... The exhausted janitor realizes your intent too late to do anything as you knock the mop aside and the goat, giving a weak bleat, falls once again to his knees before you. A devilish smirk crosses your features as you grab hold of his horns and grind his face against your balls. 'Get to cleaning.' The order is no sooner out of your mouth than the goat's long tongue begins to snake out across your sack, licking its sensitive skin. Guiding him around by the horns, you continue until your balls are completely clean of the sweat built up as you battled it out.";
 				say "     You allow him to pull back a bit so you can look him in the face. 'Good job. Now let's give you a tasty treat.' The goat's eyes widen as he realizes what you mean and tries to shake off your hands - without having any luck, as exhausted as he is from the fight. Pulling his head against your crotch, you rub your erection over the soft fur of his cheeks, then press the tip of your shaft against his lips. Overcoming the weak struggles to keep you out, you force yourself into the goat's mouth using the horns as handles and begin to fuck the unwilling janitor's face. Moaning and pumping in and out of his wet and warm mouth, you lose track of time, but notice that after a while the goat starts to get more into it. He uses his tongue to caress your shaft, suckles on your cock, even moans as you thrust into his muzzle. Grinning at making the old goat submit and accept sucking you off, you increase the tempo, fucking his throat with deep thrusts. Soon you feel a familiar tingling rise in your balls, and with a shout of victory you unload into the janitor's mouth. Fully in the role of obedient cocksucker - for now - he swallows it all. Giving a chuckle you pull free and paint his face with the last few ropes of your cum, then walk away, smirking as you hear him begin to masturbate.";
 				CreatureSexAftermath "Anthro Goat" receives "OralCock" from "Player";
-			else if Player is female: [female/herm]
+			else: [female/herm]
 				say "     The goat glares up at you prone on the ground. 'I went easy on you...' he grunts, standing up using his mop as a cane, '...[']cause you're a girl.' Noticing the bulge his package makes in his coveralls, you decide to show him how much of a woman you are... The exhausted janitor realizes your intent too late to do anything as you knock the mop aside and the goat, giving a weak bleat, falls once again to his knees before you. A devilish smirk crosses your features as you grab hold of his shoulders and push him to the ground. Holding him by one horn, you pull open his coveralls and fish out his stiffening cock and heavy balls. It seems this dirty old goat's already getting hard. Aiming his swelling shaft upwards, you sink down onto it and start riding him before it's even fully erect. Not that it stays that way for much longer. For an old fellow, he's still got quite a bit of pep and he's up and ready for you in seconds. Keeping a grip on one of the horns on his head, you excitedly bounce up and down on the one between his legs. Playing with his balls, you find him very well hung, each ball the size of lemons in his low-hanging scrotum.";
 				say "     You don't relent, riding him hard and fast until you can get him to cum. His caprid cock throbs inside you, pulsing with every shot of his gooey seed. He cums in you hard and so plentifully that [if Cunt Depth of Player > 25]much[else]some[end if] of it overflows from your cunt as you roll and knead those pulsing orbs in your hand for all they'll give. Once he's drained, you don't let him off the hook so easily. Still holding him by the horn, you stand and pull his face to your crotch, ordering him to clean up his mess. It is only once the goat's licked you nice and clean, and to another orgasm, that you push him away, leaving him to deal with the extra mess he's made on the floor.";
 				CreatureSexAftermath "Player" receives "PussyFuck" from "Anthro Goat";
 				CreatureSexAftermath "Anthro Goat" receives "OralPussy" from "Player";
-			else: 						[neuter - closed for now]
-				say "***     The player has no genitals (but there might still be some stuff to do with the beaten enemy).";
+			[else: 						[neuter - closed for now]
+				say "***     The player has no genitals (but there might still be some stuff to do with the beaten enemy).";]
 		else: [sex refused]
+			LineBreak;
 			say "     Delivering another blow to the janitor, he stumbles backwards and crashes into his janitorial cart with a startled bleating sound. Grabbing frantically at it to keep standing, the goat manages to topple it over with himself spilling the contents of the garbage bag as well as the water from the mop bucket. Worried the noises will draw the attention of other staff members you leave the moderately comical sight of the former janitor slipping around in the puddle of mop water as he continues trying to stand.";
 	else:
-		say ". Feeling that he shouldn't give you any more trouble, at least until something new has got his goat, you leave the old fellow to recover and get back to cleaning up this mess.";
+		say "     Frustrated with fighting the old goat, you body check him with your shoulder after your last blow, sending him tumbling to the ground. He groans weakly as he hits the floor, falling on his side. Feeling that he shouldn't give you any more trouble, at least until something new has got his goat, you leave the old fellow to recover and get back to cleaning up this mess.";
 
 Section 2 - Creature Insertion
 
@@ -88,7 +86,7 @@ When Play begins:
 	now attack entry is "[one of]The janitor jabs you in the face with the wet end of his mop, soaking you in a nauseating, and exhilarating, mixture of cleaners and the many sexual fluids he's cleaned up.[or]The janitor lowers his head and, moving faster than you'd expect of an old man, charges at you and knocks you over.[or]'Back in my day...' The goat starts to drone on in that boring way only old people can. He smacks you when he realizes you've zoned out and stopped paying attention.[at random]";
 	now defeated entry is "[BeatTheGoatJanitor]";
 	now victory entry is "[LoseToGoatJanitor]";
-	now desc entry is "[Goat Janitor desc]";
+	now desc entry is "     Rounding a corner ahead of you is a janitor's push cart, soon followed by a goat-like man wearing a pair of dirty gray coveralls, more than likely a hospital janitor succumbed to the infection. He strokes his beard as he watches you for a moment. 'Damn kids, lookit that mess. Just leave it fer the old goat huh?' He narrows his eyes and grabs hold of his mop, 'Think I'm gonna clean up after you? You've got another thing coming.' He charges at you, wielding his mop like a long club.[line break]";
 	now face entry is "that of an anthropomorphic goat, covered in fur and with your nose and mouth drawn out into a short muzzle. A pair of curved horns grow from your forehead, and you have a long goatee hanging from your chin";
 	now body entry is "humanoid, with a scraggly build and a slightly pudgy belly. Despite that, you feel pretty confident with your climbing skills due to your two digitigrade goat legs, complete with hooves";
 	now skin entry is "gray-furred";
@@ -246,16 +244,12 @@ name	desc	weight	object
 "Anthro Goat fur"	"A tuft of gray and white fur that looks like it has been pulled out of the coat of an anthro goat. It has the slight sheen of cleaning chemicals."	1	Anthro Goat fur
 
 Anthro Goat fur is a grab object.
-It is temporary.
 Usedesc of Anthro Goat fur is "[Anthro Goat fur use]".
+Scent of Anthro Goat fur is "The fur has a slight, animal-like scent that is overshadowed by the sharp scent of cleaning products.".
 
 to say Anthro Goat fur use:
-	say "Holding the tuft of fur between your fingers, you stroke over it, the feel of cleaning product rubbing onto your fingers. Strangely, the fur disintegrates after a while, becoming a cloud of fine particles that are absorbed into your skin.";
+	say "     Holding the tuft of fur between your fingers, you stroke over it, the feel of cleaning product rubbing onto your fingers. Strangely, the fur disintegrates after a while, becoming a cloud of fine particles that are absorbed into your skin.";
 	Infect "Anthro Goat";
-
-instead of sniffing Anthro Goat fur:
-	say "The fur has a slight, animal-like scent that is overshadowed by the sharp scent of cleaning products.";
-
 
 Section 4 - Endings
 
@@ -266,9 +260,6 @@ Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered
 This is the Anthro Goat Infection rule:
 	if Player has a body of "Anthro Goat":
 		trigger ending "Anthro Goat Infection"; [Here it states, that the ending has been played.]
-		if humanity of Player < 10:
-			say "     You succumb to your Goat Janitor infection and eventually wander past the city hospital. 'You're late!' a somewhat familiar voice shouts. A glance up to the entrance you see a very angry goat in coveralls. After an hour of being berated for how young people are ruining today's economy with their laziness and loud music, you find yourself mopping one of the many hallways of the hospital in your own coveralls as your boss continues to complain over a walkie talkie.";
-		else:
-			say "     You survive, but were infected by the goat janitor. After dealing with the rigmarole at the military processing camp, you're eventually released. Thankfully, it doesn't take you too long to find some work. There's always a need for someone to clean up, especially after an apocalypse and especially after a particularly messy, sexual one. It's nothing glamourous, but it pays alright and gives you plenty to do, at least. And getting to join in on the occasional make-out session you find in the janitor's closet (which are at least once a week), is an added perk.";
+		say "     You [if humanity of Player < 10]succumb to your Goat Janitor infection and eventually wander past the city hospital. 'You're late!' a somewhat familiar voice shouts. A glance up to the entrance you see a very angry goat in coveralls. After an hour of being berated for how young people are ruining today's economy with their laziness and loud music, you find yourself mopping one of the many hallways of the hospital in your own coveralls as your boss continues to complain over a walkie talkie[else]survive, but were infected by the goat janitor. After dealing with the rigmarole at the military processing camp, you're eventually released. Thankfully, it doesn't take you too long to find some work. There's always a need for someone to clean up, especially after an apocalypse and especially after a particularly messy, sexual one. It's nothing glamourous, but it pays alright and gives you plenty to do, at least. And getting to join in on the occasional make-out session you find in the janitor's closet (which are at least once a week), is an added perk[end if].";
 
 Goat Janitor ends here.

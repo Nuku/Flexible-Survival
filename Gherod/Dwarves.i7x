@@ -18,7 +18,6 @@ Sarea of Savage Dwarf is "Forest".
 
 to say ResolveEvent Savage Dwarf:
 	say "     During your exploration efforts within the forest, you come across a grassy path near the base of a cliff. A little further ahead, there is - or was - what seems to be an entrance to a tunnel right through the rocky walls. It has collapsed, though you hear a lot of agitation coming from there, namely a short burly man shouting and hitting on the debris with his stone hammer. You can't quite understand what he's saying from here, you're standing too far to be able to hear him decently, but whatever it is, it looks like the man is having an argument with the rubble, or maybe someone is on the other side? [bold type]You could risk approaching him, but there isn't a lot of hiding area if you get closer, and he might see you.[roman type][line break]";
-	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Get closer.";
 	say "     ([link]N[as]n[end link]) - Ignore the situation for now.";
 	if Player consents:
@@ -30,8 +29,7 @@ to say ResolveEvent Savage Dwarf:
 			say "     After your last hit, the dwarf lies defeated on the ground, and his unability to move allowed you enough time to get out of there, back to safety and away from the crazy short man.";
 		else if fightoutcome > 19 and fightoutcome < 30: [lost]
 			say "     With yet another blow from his hammer, his strength proves to be higher than yours. After an intense and hard fight, your efforts fail you as the dwarf overtakes you. Bruised and defeated, you now remain at his mercy.";
-			let randomnumber be a random number from 1 to 3;
-			if randomnumber is:
+			if a random number from 1 to 3 is:
 				-- 1: [facefuck]
 					DwarfFucksOral;
 				-- 2: [fuck]
@@ -48,13 +46,9 @@ to say ResolveEvent Savage Dwarf:
 			say "     Running away as fast as you can, you manage to outrun the dwarf. It's a rather easy task, as his short legs really are not match for yours. After getting out of track, you return to relative safety.";
 		say "     This is new. You don't think this dwarf will be an unique case, and you might actually encounter more like him during your stay here. Anyway, he's gone now, so you're free to return to your previous tasks. However, there might be something interesting regarding that [bold type]collapsed tunnel[roman type]... Perhaps you should investigate it in the future.";
 		now Savage Dwarf is resolved;
-		repeat with y running from 1 to number of filled rows in Table of Random Critters:
-			choose row y in Table of Random Critters;
-			if Name entry is "Dwarf Male":
-				now MonsterID is y;
-				now area entry is "Forest";
-				now non-infectious entry is false;
-				break;
+		choose row with Name of "Dwarf Male" from Table of Random Critters;
+		now area entry is "Forest";
+		now non-infectious entry is false;
 	else:
 		LineBreak;
 		say "     Deciding you have better things to do than to listen to an old crazy short person smashing some rubble while shouting towards nothing, you turn around with a shrug, returning to your previous path.";
@@ -100,9 +94,9 @@ to CTunnel1Pathway:
 	say "     You suppose it's no use lingering here, so you're set to explore the area around you. There's only one way to follow, so you get on that immediately. Following through the corridors gives you a whole another feeling of where you are, as the structures seem really old, even too much for just a simple underground warehouse. It gives you the feeling of some kind of old ruins, excavated and built in a large scale, even more so for dwarves. There are some large doors along the massive corridor, but none of them are open and you don't think there's any way to force them. You've got no choice but to walk forward and hope to find something worth coming here.";
 	say "     With a few minutes worth of walking, you arrive at another room, behind one of the doors that you could actually manage to slip through. There are armor stands, some filled with rusty and heavy armor of a dwarf's stature, swords, shields and other large two-handed weapons. Seems like you just stepped into an armory, or at least some place where the dwarves store their old equipment. Any of this would be too heavy or bothersome for you to take, and the armor is not even usable... You figure it should be better to investigate this room a little more, having a look at every bit and corner, and you do manage to find an adjacent chamber with something covered with a large blanket. Sounds like treasure, and it makes sense the dwarves would attempt to protect good equipment from deterioration.";
 	WaitLineBreak;
-	let bonus be (( perception of player minus 5 ) divided by 2);
+	let bonus be ( perception of player minus 5 ) divided by 2;
 	let diceroll be a random number from 1 to 20;
-	say "You roll 1d20([diceroll])+[bonus] = [special-style-1][diceroll + bonus][roman type] vs [special-style-2]13[roman type] (Perception Check):[line break]";
+	say "You roll 1d20([diceroll])[if bonus >= 0]+[end if][bonus] = [special-style-1][diceroll + bonus][roman type] vs [special-style-2]13[roman type] (Perception Check):[line break]";
 	if diceroll + bonus >= 13: [player detects trap]
 		say "     However, as you're heading into the room, you notice that something feels off. You look around, carefully and attentively, and you're relieved to know that you have escaped a well concealed trap! Well, at least for now. The trap is still there, and while it might not be deadly, it will be enough to immobilize you completely if it hits you. It seems to be armed with ropes and activated by a pressure plate, which is most certainly activated with your weight. To make things worse, there's no companions around to help you with this, as you had to leave them behind guarding the tunnel's entrance for you.";
 		WaitLineBreak;
@@ -121,18 +115,16 @@ to CTunnel2:
 	say "     [link](4)[as]4[end link] - Leave and avoid this place forever.";
 	now calcnumber is 0;
 	while calcnumber < 1 or calcnumber > 4:
-		say "Choice? (1-4)>[run paragraph on]";
+		say "Choice? (1-4)> [run paragraph on]";
 		get a number;
-		if calcnumber is 1 or calcnumber is 2 or calcnumber is 3 or calcnumber is 4:
-			break;
-		else:
+		if calcnumber < 1 or calcnumber > 4:
 			say "Invalid choice. Type [link]1[end link] to attempt to disarm the trap, [link]2[end link] to trigger the trap, [link]3[end link] to leave this place or [link]4[end link] to leave for good.";
+	LineBreak;
 	if calcnumber is 1: [attempt to disarm]
-		LineBreak;
 		say "     You chose to attempt to disarm the trap, which will be a somewhat difficult thing to do. Nonetheless, you're motivated to give it a good try.";
-		let bonus be (( dexterity of player minus 10 ) divided by 2);
+		let bonus be ( dexterity of player minus 10 ) divided by 2;
 		let diceroll be a random number from 1 to 20;
-		say "You roll 1d20([diceroll])+[bonus] = [special-style-1][diceroll + bonus][roman type] vs [special-style-2]15[roman type] (Dexterity Check):[line break]";
+		say "You roll 1d20([diceroll])[if bonus >= 0]+[end if][bonus] = [special-style-1][diceroll + bonus][roman type] vs [special-style-2]12[roman type] (Dexterity Check):[line break]";
 		if diceroll + bonus >= 12: [player disarms trap]
 			say "     The trigger seems to be a large pressure plate in front of you, or rather, several of them. They're pretty much unavoidable and need a good amount of weight to activate, that of an equivalent to a living bipedal. Studying the trap, you eventually discover that you can remove the access from the trigger to the trap by tapping into one of the mechanisms, which you can access easily. You're dexterous enough to not trigger it accidentally and successfully deactivate the trap, freeing your way ahead of any obstacles.";
 			WaitLineBreak;
@@ -169,7 +161,6 @@ to CTunnel2Trap:
 	say "     His considerable thickness starts filling you once he's past your anal orifice's first resistance, and slides in without much trouble thanks to the preparation he made sure you had. As you're hanging immobile, the dwarf is free to fuck your ass as much as the whim takes him, grabbing you by the hips to aid his thrusting motions, burying his cock as deep as he can inside you. There's almost no pain on your side, and eventually it all starts feeling too good. There's something in you urging you to let out an audible moan, [if Player is female]with his manhood pressuring against your pleasure spot[else]with his manhood hitting your prostate with vigor[end if]... 'You're liking it, aren't you? Like getting your holes used while you're all tied up, eh? Could have thought about this before, it's so much fun...!'";
 	WaitLineBreak;
 	say "     He's been fucking you for some time now and you can't help yourself but to really enjoy it. The stocky dwarf knows when to get rough, pounding you as hard as he can with surprising strength, you even feel your body swinging back and forth as he thrusts, and you can hear him grunting as he slows down. 'Fuck, I'm getting really close... I was gonna cum in your ass, but tell you what, I'll let you pick between ass or mouth. Don't take too long deciding or I might just end up cumming ballsdeep inside you!' he tells you, and you sure can feel his cock throbbing like mad. He gave you a choice, so what's it going to be? [bold type]Want to swallow the dwarf's cum or let him fill your ass?[roman type][line break]";
-	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Ask him to cum in your mouth.";
 	say "     ([link]N[as]n[end link]) - Let him fill your ass.";
 	if Player consents:
@@ -191,7 +182,6 @@ to CTunnel2Trap:
 
 to CTunnel3: [player successfully gets past the trap]
 	say "     Now your way to your treasure is free! Eagerly, you walk towards the spot where you saw your spoils, hopeful that it will be enough to call this exploration worth it. Pulling the blanket away, your eyes widen as they land on a large stone hammer made of gold and in pristine conditions! You can't believe that you've stumbled on a weapon like this, beautiful and seemingly deadly! Looks like a great opportunity to acquire yourself a brand new means of beating your enemies, but the question is... [bold type]Do you actually want to steal from the dwarves and take this weapon with you?[roman type] That might provoke them... [bold type]but if you leave it here like nothing happened, they might just never come out of hiding.[roman type] What will you do?";
-	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Take the weapon with you.";
 	say "     ([link]N[as]n[end link]) - Leave it there. You have no interest in provoking the dwarves.";
 	if Player consents:
@@ -236,14 +226,13 @@ to say DwarfQuest3: [continuation]
 	WaitLineBreak;
 	say "     Some time later, you begin to regain your senses, with an intense headache. Confused as to what happened, you glance around in confusion, finding something amiss... Your golden greathammer is [bold type]gone[roman type]! Still looking around for it, you try to get up, only to lose your balance a second later from the dizziness that's still blocking your senses. 'I wouldn't do that if I were you. Sounds like you were hit pretty hard.' It's a familiar voice, someone you met not long ago... Oh, but of course, the dwarf scavenger! 'Don't worry, this wasn't my fault. I think we provoked the dwarves on the other side of the mountain by intruding in their territory and stealing that weapon.'";
 	say "     As it appears, a bunch of dwarves charged against you, knocked you off your senses and stole the greathammer right off your hands. At least, judging by what the scavenger is saying. 'I followed behind them for a while, sounds like it was a gift for one of the grooms who is going to get married soon. A member of the guard, no less! I guess we pissed them off.' The bearded man crouches next to you, helping you at least to take a proper, straight up sitting position. 'There, you better now?' he asks you. In fact, you're still seeing two of him, but you reassure him, saying you're okay. Though, not without questioning his sudden sympathy for you. 'What, I'm partially responsible for this... I figured I should have made sure you were fine. But I can leave, if you want.'";
+	WaitLineBreak;
 	say "     He gets up, apparently to grab his things and make his retreat. [bold type]Do you want to stop him from leaving?[roman type][line break]";
-	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Yes, call him and apologize for questioning him.";
 	say "     ([link]N[as]n[end link]) - No, let him leave. You're done with this dwarf nonsense.";
 	if Player consents:
 		LineBreak;
 		say "     You ask him to wait, and he almost immediately stops. Was the little prick expecting you to do that, already? 'Heh, thought you wouldn't be able to get enough of me.' he teases you with a snarky grin, approaching your position once more. Though you suppose since you already called him back, might as well apologize for questioning his intentions and thank him for the help. 'Nah, you were right. I am helping you, but I also want to ask you for a little favor in return.' Well, are you surprised for this? Given his outlaw behavior as of always, since you've met him... 'It should be of your interest too, however. Might benefit us both if we manage to pull it off.' Now, what is he just talking about, you ask? [bold type]Do you even want to know?[roman type][line break]";
-		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Let's hear it.";
 		say "     ([link]N[as]n[end link]) - No, that's enough. You already thanked him, and that shall be all.";
 		if Player consents:
@@ -274,12 +263,11 @@ to DwarfQuestQuestion1: [Player presents himself with a dwarf appearance]
 	say "     [link](3)[as]3[end link] - Refuse this crazy proposal.";
 	now calcnumber is 0;
 	while calcnumber < 1 or calcnumber > 3:
-		say "Choice? (1-3)>[run paragraph on]";
+		say "Choice? (1-3)> [run paragraph on]";
 		get a number;
-		if calcnumber is 1 or calcnumber is 2 or calcnumber is 3:
-			break;
-		else:
+		if calcnumber < 1 or calcnumber > 3:
 			say "Invalid choice. Type [link]1[end link] to accept and begin, [link]2[end link] to postpone this or [link]3[end link] to refuse immediately.";
+	LineBreak;
 	if calcnumber is 1:
 		if Resolution of Collapsed Tunnel is 5: [player was always a dwarf]
 			say "     [bold type]Starting with Yogdrak Approval: 3.[roman type][line break]";
@@ -292,10 +280,8 @@ to DwarfQuestQuestion1: [Player presents himself with a dwarf appearance]
 		WaitLineBreak;
 		WWQuest;
 	else if calcnumber is 2:
-		LineBreak;
 		say "     You need more time before making a decision, so you let him know that. 'Alright, you know where to find me whenever you have decided.' With this said, you walk away. At least the scavenger won't be hostile the next time you meet him... At least for a while.";
 	else if calcnumber is 3:
-		LineBreak;
 		say "     Infiltrating the dwarven kingdom, stealing their things right under their noses, only because a crazy infected scavenger asks you?! No, you won't do it. Standing your ground firmly, you let him know that you won't be a part of that. 'Oh, alright then. I guess I'll go on my own, eventually. Way to ruin a friendship...' He starts walking away from you, but still adding something in the end 'I think you should stay away from my territory, then. Or I'll beat you out.' Definitely a charming fellow, but you think you've done the best thing. Sure, you won't see any real dwarves for a long time, but at least you won't get in trouble, except if you come for this scavenger again... He'll want to smash you as hard as before.";
 		now Resolution of Collapsed Tunnel is 99;
 		now Collapsed Tunnel is resolved;
@@ -308,22 +294,20 @@ to DwarfQuestQuestion2: [Player is not a dwarf]
 	say "     [link](4)[as]4[end link] - Refuse this crazy proposal.";
 	now calcnumber is 0;
 	while calcnumber < 1 or calcnumber > 4:
-		say "Choice? (1-4)>[run paragraph on]";
+		say "Choice? (1-4)> [run paragraph on]";
 		get a number;
-		if calcnumber is 1 or calcnumber is 2 or calcnumber is 3 or calcnumber is 4:
-			break;
-		else:
+		if calcnumber < 1 or calcnumber > 4:
 			say "Invalid choice. Type [link]1[end link] to accept and have sex with him, [link]2[end link] to accept and drink his ale, [link]3[end link] to postpone your decision or [link]4[end link] to refuse the deal for good.";
+	LineBreak;
 	if calcnumber is 1:
-		LineBreak;
 		say "     Is there any better way to do this other than receiving the transformation right from the source? Besides, the dwarf seems eager to utilize this method, and you totally know why... Looks like all you have to do is let him know, and you do so by approach him and groping his sizable bulge, already throbbing in anticipation. 'So you wanna do it this way, too? I mean... I'm glad you chose this option, too.' he says, as he grabs you for... not a kiss, as you were expecting at first, but instead guiding you straight to his crotch, pulling your face right against it as he undoes his belt. Might as well open your mouth and let that concealed bump of throbbing meat in your mouth, which seems to excite the short man even more, feeling the warmth of your lips and tongue wrapped around his thick boner before he manages to slide his pants off.";
 		say "     You pull out for mere seconds as his dick jumps out of the prison it was in, then back in your mouth as you give the dwarf a hungry blowjob. This time, you're wanting to get transformed into one like him, eager to drain the cum out of his balls as much as you can, and amidst moans and grunts, he lets you know he wants to do exactly that for you. Grabbing you by both sides of your head, the bearded dwarf rams his entire thick length down your throat, forcing you to take every inch inside your mouth, then proceed to fuck your face as his plump balls swing heavily, back and forth, against your chin. 'Fuck yeah... Hope you're ready to swallow lots of dwarf spunk... It's gonna taste so good.' he tells you, and you can't help but believe his words, as if your body was craving for that creamy seed...";
 		WaitLineBreak;
 		say "     He facefucks you for a long period of time before wanting to use your ass too, holding up his first orgasm as much as he can. Obviously, he's enjoying the perfect excuse to fuck you over and over, but he competently does so, as skilled as he is. Turning you around, as naked as you are by now, he easily shoves his wet cock inside your pucker, grabbing you by the hips and thrusting slowly at first, increasing his rhythm progressively... 'Can't wait to fill you up... How many times you think I need to cum in you? Maybe five? I could do it all day... hehe...' he says, chuckling, while ballsdeep in you, pounding your butt vigorously like the virile dwarf man he is. Though, eventually, you feel like he's getting close, as his grunting gets more intense.";
 		say "     'Nngh, fuck yeah...! Guess you're about to have your first filling...' he tells you, picking up the pace as he pushes in deep and hard inside your ass, and soon you're feeling his meat pulse and throb inside you as he lets out a long moan, warm dwarf seed coating your insides as he shoots more and more of it... 'Feels so fucking good... Oh yeah...' Enjoying his first climax, the short man leans his head back and takes some time before he resumes the action. 'About to start the round two, now I'll slide in and out even better...' he tease, slapping your buttcheek hard with those powerful dwarf hands of his. He doesn't wait for long, as you feel his cock already moving inside you, back and forth, slowly, and repeats the process, fucking your ass once more.";
 		say "     Your time together lasts for several hours, as the dwarf keeps pounding you, both your ass and mouth in turns, either making you swallow his load or breeding you with it, always with that naughty grin in his bearded face. He surely enjoys fucking you again and again...";
-		WaitLineBreak;
 		follow the turnpass rule;
+		AttemptToWait;
 		say "[DwarfMaleTF]";
 		say "     This really only stops once the dwarf falls over by exhaustion, catching his breath next to you, fully naked and lying down on his back, with his half-hard cock proudly on display. He looks at you with the biggest smile you've ever seen drawn in his expression. 'Look at you, looking so sexy... I could just keep fucking you, but damn, I'm all sore now...' he says, eyeing your entire body and face, now much more similar to his. 'You make a pretty hot dwarf, let me tell you. Should keep that look. You'll find it really fun, trust me.' He wouldn't say otherwise, looking like a dwarf himself. But then this means you're all set to begin your plan! That is... after you've had your well deserved rest. This dwarf is one intense fucker...";
 		say "     Shortly after, the dwarf gets up, and helps you back up while he's at it. Standing really close to him as you are right now makes both your dicks tingle, wanting to start fucking again... but you've been at it for long enough, and there was a goal for all this, in the first place. 'Alright, then. Grab your stuff and come with me. We'll get that greathammer back.' he says, as he turns around and starts getting dressed, and you should do the same. 'By the way, my name's Yogdrak. I suppose you can know that bit about me, since we're partners now.' He trusted you with his name? You must really have connected with each other, right? Who would say, after literal hours of fucking together. Is this the beginning of a new friendship? Or just temporary partnership for the same goal, knowing the likes of this scavenger...? You try not to think all that much about it, for now, but it sure was a great time...";
@@ -332,7 +316,6 @@ to DwarfQuestQuestion2: [Player is not a dwarf]
 		now Resolution of Collapsed Tunnel is 13;
 		WWQuest;
 	else if calcnumber is 2:
-		LineBreak;
 		say "     Honestly, you'd rather just have whatever ale he is offering. That will turn you into a dwarf without the actual need to spend a whole time having sex with the more than eager dwarf. He rolls his eyes, but hands you the drink, which smells a lot like alcohol. 'It's potent stuff. I hope you can handle it.' With the potent beverage in your hands, all that it takes now is to drink it. The first sip tastes horribly, like an incredibly strong and bitter drink that stings your tongue, and just smelling it makes you a little lightheaded... 'Drink it all. You'll need a full transformation.' he tells you, and of course, you try your best to chug the entire bottle down, as much as that bothers you...";
 		say "     When you're done with the drink, you give the empty bottle away, and immediately start feeling a little strange. 'I guess it's starting, your skin is changing colors... And... everything else. Wow, didn't know this would be that effective.' What, he just gave you something he wasn't sure it was going to work?!";
 		WaitLineBreak;
@@ -343,10 +326,8 @@ to DwarfQuestQuestion2: [Player is not a dwarf]
 		now Resolution of Collapsed Tunnel is 12;
 		WWQuest;
 	else if calcnumber is 3:
-		LineBreak;
 		say "     You need more time before making a decision, and may even find a way to turn into a dwarf without any of his help, so you let him know that. 'Alright, you know where to find me whenever you have decided. I doubt that you could turn into one without me, anyway.' With this said, you walk away. At least the scavenger won't be hostile the next time you meet him... At least for a while.";
 	else if calcnumber is 4:
-		LineBreak;
 		say "     Infiltrating the dwarven kingdom, stealing their things right under their noses, only because a crazy infected scavenger asks you?! No, you won't do it. Standing your ground firmly, you let him know that you won't be a part of that. 'Oh, alright then. I guess I'll go on my own, eventually. Way to ruin a friendship...' He starts walking away from you, but still adding something in the end 'I think you should stay away from my territory, then. Or I'll beat you out.' Definitely a charming fellow, but you think you've done the best thing. Sure, you won't see any real dwarves for a long time, but at least you won't get in trouble, except if you come for this scavenger again... He'll want to smash you as hard as before.";
 		now Resolution of Collapsed Tunnel is 99;
 		now Collapsed Tunnel is resolved;
@@ -372,7 +353,6 @@ to WWQuest:
 	say "     'There's another entrance, one that the dwarves use to collect resources outside of their territory.' Without any further ado, the dwarf starts walking towards a specific direction, to the left of the tunnel. 'Are you going to follow or not?' You took a few seconds to start tagging along, as the first doubts that come across your mind is... Why is he going back into the woods? The distance between the rocky edge of the mountains increases, but you walk after the dwarf in hopes that he knows where he is going. Past a few trees, you head into a particularly dense area, trees and bushes almost melding together. 'The perfect place to hide something, right? I thought so too.' he says, as he begins searching the area thoroughly. 'Now, where was it... Not here... Nope... Darn, I shouldn't be drinking this much.' You have to wait a while before he finally finds something.";
 	WaitLineBreak;
 	say "     'Ah, there it is. Come over here.' You head to his side, and in a cleverly hidden spot, you find a trapdoor on the ground. The foliage around it makes it very easy to miss. 'If you don't know what you're looking for, you'd never find this. We dwarves are a resourceful bunch.'";
-	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Oh, that's right. We are really resourceful dwarves. Him, especially.";
 	say "     ([link]N[as]n[end link]) - We? You should probably remind him that you're not truly dwarves.";
 	if Player consents:
@@ -391,8 +371,8 @@ to WWQuest:
 	WaitLineBreak;
 	say "     Exploring for a bit, you arrive at a wide corridor, outside of what seems to be the building you were in. Looking around, this place seems to be an entire district in ruins, built underground, with most of the edifices still whole. There is an intense dusty smell in the air. 'Look at this... That's their network. This is how they arrive at places. Y'know, if you wanted to pass through the military lines, I'm sure you could slip by here. Just be careful to not end up in their dimension.' he informs you, and that would actually make sense. Maybe it is something to consider for later, after you're done with this quest for the golden greathammer. For now, you and Yogdrak have to keep checking your surroundings for clues in order to arrive at the kingdom.";
 	say "     Having decided on a specific direction, you both head on that way, into the rocky roads ahead. The place looks desolated, although you can hear what you think is wind blowing not far away from your position. Your partner is brought to attention by this. 'Wind... Ah! We must be close.' He runs ahead, and you follow, your footsteps echoing through the rocky walls as you come across an unexpected point of interest. You notice this only when Yogdrak stops in front of you, almost running him over. He's whispering, and asks you to be quiet with a gesture. 'This is definitely the way, but look over there.' You look, and see a railroad, turning to another way. Asking the dwarf what that means, he replies with an eye roll. 'Isn't it obvious? They transport stuff over there. A treasury, most likely.'";
+	WaitLineBreak;
 	say "     As tempting as it may be, you have more important things to do. Unless you think [bold type]assaulting a treasury would be worth it? Yogdrak would surely enjoy it, and may be disappointed if you skip this chance.[roman type][line break]";
-	LineBreak;
 	say "     ([link]Y[as]y[end link]) - You don't say no to treasure!";
 	say "     ([link]N[as]n[end link]) - No, you're here for the greathammer, and that's where you are going.";
 	if Player consents:
@@ -403,9 +383,9 @@ to WWQuest:
 		LineBreak;
 		say "     Shaking your head, you pull Yogdrak's arm and head towards your previous goal, telling him you'd prefer to head into kingdom directly and that it isn't worth to rob a treasury. 'What?! You can't be serious! With so many riches in there? Are you seriously going to pass up this opportunity?' He doesn't look very happy with your decision, but you calmly attempt to explain him why...";
 		WaitLineBreak;
-		let bonus be (( charisma of player minus 10 ) divided by 2);
+		let bonus be ( charisma of player minus 10 ) divided by 2;
 		let diceroll be a random number from 1 to 20;
-		say "You roll 1d20([diceroll])+[bonus] = [special-style-1][diceroll + bonus][roman type] vs [special-style-2]10[roman type] (Charisma Check):[line break]";
+		say "You roll 1d20([diceroll])[if bonus >= 0]+[end if][bonus] = [special-style-1][diceroll + bonus][roman type] vs [special-style-2]10[roman type] (Charisma Check):[line break]";
 		if diceroll + bonus >= 10:
 			say "     Fortunately, you manage to bring him to his senses, and he ends up giving you the credit. 'Yeah, yeah okay, sure, you have a point. Wouldn't want to have an entire civilization after us for stealing their treasures, and that could alert the guards up ahead and stuff... Fine. We'll continue heading towards the kingdom, instead. All I care about is that gorgeous greathammer, anyway.' You breathe in relief, as you don't want an angry dwarf partner, either.";
 			say "     [bold type]+1 Yogdrak Approval.[roman type][line break]";
@@ -417,7 +397,6 @@ to WWQuest:
 to WWTreasury:
 	say "     Making the turn towards where the railway leads, which is to your right, you make the small climb up to the crossing, then glance around carefully to make sure there are no eyes watching you. Noise is also reduced to the maximum possible, as you both sneak on your tiptoes while moving across the way leading into this point of interest. Eventually, you find opposition. At the door of the building you find, nobody is guarding the entrance, though you can hear raspy male voices inside. Dwarves, you're sure, but they don't seem to have their guards up. Instead, they are engaging in a group conversation, it seems. Yogdrak looks at you, whispering 'That's good for us. Let's look closer.' as you tag right behind him. Upon closer inspection, you notice the guards having a cheerful chatter with a few drinks, four in total, with the heaviest components of their armor removed. They are relaxed.";
 	say "     'This is an easy one. Though they still outnumber us... Here, use this.' He hands you some kind of... Grenade?! You ask him if he really wants to blow them up. 'No! That's just a few libido pills mixed up in harmless gas. When it detonates, it's gonna make them debilitatingly horny for a long time... Hehe.' Now, while certainly that is better than exploding their heads, you'd still be throwing a lust-inducing bomb into a room with a group of joyful guards, enjoying their leisure time during happy festivities, then rob them blind and possibly risk their jobs... But who cares about that when you want to get your hands on their valuables? Shouldn't be a problem to [bold type]get this plan working[roman type] or, if you're having second thoughts, you can always just [bold type]give up on this idea[roman type]. Yogdrak won't be happy about it at this point, even if you attempt to persuade him, but it's a choice you can make.";
-	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Throw in the (safe) bomb!";
 	say "     ([link]N[as]n[end link]) - No, this is too much. Just head back.";
 	if Player consents:
@@ -428,7 +407,6 @@ to WWTreasury:
 		say "     The knights begin to feel each other, all four of them, and soon they're kissing, groping bulges and rubbing their bodies together. Besides the metallic sound from the clashing of armor pieces, you're able to hear them moan and grunt in lust, and it doesn't take long until they start to undress. The first thing you see is all those dwarves removing their upper gear, revealing their powerful torsos and bulging muscles only a seasoned warrior would have, and their fuzzy man pillows of pecs colliding between each other[']s, playing with nipples while sharing tongue kisses. Soon, not even their legwear remains, some quickly becoming bare ass naked with their thick dwarf cocks proudly erect and throbbing...";
 		WaitLineBreak;
 		say "     Obviously, you haven't kept your eyes closed. Not even Yogdrak, and you're both visibly turned on. Part of you just wants to grab him and have some wild sex right here, but... You did have a goal to serve. 'If we're quick, we can get past them now without... Ah, fuck that. I'm down for an orgy with those guys if you're in, too.' He tells you, your eyes landing on his prominent boner poking right through his pants. You can't talk much, as yours is just as stiff and throbbing... [bold type]Do you want to forget about the treasure and join the orgy? Or just try to get past them for the riches, instead?[roman type][line break]";
-		LineBreak;
 		say "     ([link]Y[as]y[end link]) - You can't help it. You want some group dwarf fun!";
 		say "     ([link]N[as]n[end link]) - Treasure comes first. Let's not waste this opportunity.";
 		if Player consents:
@@ -436,7 +414,6 @@ to WWTreasury:
 			say "     [bold type]+1 Yogdrak Approval.[roman type][line break]";
 			increase Resolution of Collapsed Tunnel by 1;
 			say "     Who cares about gold, jewels, money, or any other kind of riches when you have a group of handsome dwarves, with their muscular bodies on display, rubbing each other, out in the open for anyone to watch? And with the chance of joining them without any repercussions? They're so drunk in lust they won't even notice you're outsiders, neither really true dwarves, and you get to enjoy some fun with so many of them at once... 'You're in for a quickie with these dudes? That will be worth it alone.' Look like Yogdrak is as eager as you are, and with a nod, you two slowly walk up to the dwarves, who are already hard at it, boners free of any restraint. With this many hot dwarves, the many possibilities begin to arise in your mind...";
-			LineBreak;
 			say "     ([link]Y[as]y[end link]) - Get in the middle of the circle.";
 			say "     ([link]N[as]n[end link]) - Push Yogdrak right into the middle.";
 			if Player consents: [player gets a gangbang]
@@ -466,15 +443,14 @@ to WWTreasury:
 			say "     [bold type]Your decision will have consequences...[roman type][line break]";
 			now Resolution of Wedding Wreckers is 2; [Bad rep]
 			say "     As hot as it sounds, money talks louder... Well, at least in this specific case. You snap Yogdrak out of his lusty thoughts and set your path towards the vault behind them. Doing your best to sneak around and not breathe any of the intoxicating gas, you both make your way around the knights, who are by now sucking each other[']s dicks or tugging on them, completely distracted from everything that could happen around them. This is good for you, as it allows you to approach the vault's door without any issues. Luckily, the dwarves don't use any kind of unbreakable locks, although this one is pretty tough. You could [bold type]give it a shot yourself, or just let Yogdrak handle it[roman type]. After all, he's very used to this kind of thing.";
-			LineBreak;
 			say "     ([link]Y[as]y[end link]) - Try to pick the lock.";
 			say "     ([link]N[as]n[end link]) - Let Yogdrak do the lockpicking.";
 			if Player consents:
 				LineBreak;
 				say "     Might as well give it a try, since you're already at it... Yogdrak hands you a batch of lockpicks and you're ready to make a serious attempt.";
-				let bonus be (( dexterity of player minus 10 ) divided by 2);
+				let bonus be ( dexterity of player minus 10 ) divided by 2;
 				let diceroll be a random number from 1 to 20;
-				say "You roll 1d20([diceroll])+[bonus] = [special-style-1][diceroll + bonus][roman type] vs [special-style-2]15[roman type] (Dexterity Check):[line break]";
+				say "You roll 1d20([diceroll])[if bonus >= 0]+[end if][bonus] = [special-style-1][diceroll + bonus][roman type] vs [special-style-2]15[roman type] (Dexterity Check):[line break]";
 				if diceroll + bonus >= 15:
 					say "     Thanks to your high dexterity, you manage to pick the vault's lock without breaking too many lockpicks, and soon, you're able to push the door open. 'Looks like you know your way around locks... good to know.' comments your dwarf partner, chuckling. Probably a sexual pun about keys and locks, you're sure, but whatever the case, the vault's door is open.";
 					say "     [bold type]+1 Yogdrak Approval.[roman type][line break]";
@@ -486,12 +462,11 @@ to WWTreasury:
 				say "     Better let Yogdrak handle this. By telling him so, he walks forward, facing the lock, and grabs a lockpick. After a few tries, he manages to pus teh door open. 'See? This is how you handle a lock. Hope you've learned something.' he says, probably with a sexual pun about keys and locks in mind, you're sure, but whatever the case, the vault's door is now open.";
 			say "     Well, now for the amount of treasure you find... It's mostly ores and ingots. Slightly disappointing, in fact. 'Ugh, of course this treasury had to be all construction and crafting materials. Ugh... Dwarves value their materialistic independence more than money itself, I suppose. But hey, let's check around and see what we can find. Maybe there's some stuff we can sell.' It would be foolish to reach this point and leave empty-handed, so you start searching the place thoroughly. Between more ingots, raw ores, rocks and stones that you think must be of some value, you do manage to find a few boxes with jewelry. Calling Yogdrak immediately, his eyes gleam with greed and ambition. 'Aha! I knew it! Get as many as you can, we're going to get significantly richer!'";
 			WaitLineBreak;
-			say "     You can only fit so many jewels in your limited pockets, but after all this work, you should fill them generously. They will be worth a couple of freecreds once you arrive back at the surface. For now, you'll have your share of the spoils, while Yogdrak takes his. 'Alright, fair division. Now, it's about time we take our leave. I don't think the knights will last for long.' he says, and he's right, because they're really hard at it and probably about to hit their orgasms. While it's very tempting to sit and watch, you have other places to be, and your dwarf friend is rather impatient. Greed always makes him careless about his surroundings...";
+			say "     You can only fit so many jewels in your limited pockets, but after all this work, you should fill them generously. They will be worth a couple of freecred once you arrive back at the surface. For now, you'll have your share of the spoils, while Yogdrak takes his. 'Alright, fair division. Now, it's about time we take our leave. I don't think the knights will last for long.' he says, and he's right, because they're really hard at it and probably about to hit their orgasms. While it's very tempting to sit and watch, you have other places to be, and your dwarf friend is rather impatient. Greed always makes him careless about his surroundings...";
 			say "     You have acquired [bold type]Dwarven jewelry[roman type]. (Event Item)";
 			now Resolution of Wedding Wreckers is 4; [bad rep with treasure]
 		WaitLineBreak;
 		say "     As you're preparing to leave the room, Yogdrak makes an important observation. 'Hey, might as well snatch two sets of armor while we're at it. We might need them to infiltrate the place wherever they're hosting the wedding.' Indeed, it's one of the possible ways of gaining entry, but it will inevitably deny you of any sneaky options, as the armor is loud and heavy. Though, it might be your best choice, and you doubt these knights will even remember someone was here. Do you wish to [bold type]take a couple of sets of dwarf knight armor with you[roman type], while the dwarves are still recovering from their lusty ordeal, or [bold type]rely on stealth tactics in order to get to the greathammer[roman type]? The latter might be riskier, however, so weigh your options carefully.";
-		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Take two sets of armor.";
 		say "     ([link]N[as]n[end link]) - No need, you're [italic type]dexterous[roman type] enough to be sneaky.";
 		if Player consents:
@@ -525,9 +500,9 @@ to WWDKingdom:
 		say "     Now, onto the sneaking part. How are you going to do this? That's a good question. The entire place is filled with guards, and entrance is not gained so easily. 'Heh, looks like we'll have to do some wall jumping and pray nobody sees us. This place is really out in the open.' says Yogdrak, with a lot of hidden positivity in his speech, you're certain. No irony at all. But none of that will help you get past the security and inside the building, so you both lay out an infiltration plan, study the best angles to get inside unseen, and calculate your chances meticulously. After a good while, you arrive at a conclusion that you both agree with. 'Alright, let's go for that corner. The wall isn't that hard to climb, and there isn't a lot of vigilance in that area.' With the lack of a safer approach, this is what you decide to do.";
 		say "     Approaching the targeted area, both you and Yogdrak swiftly move towards the assigned positions. Indeed, the wall isn't that much hard to climb, as it isn't that very tall and you've got some support with a few objects laying around, as well as cover from neighboring edifices. Very conveniently, but you suppose the dwarves never really had any urgency in analyzing every single vulnerability spot of a single building. All the better for you, though. With enough effort, you manage to find a climbable path and bring yourself upwards, with one foot on top of a crate and your hands pulling your weight to the upper side of the wall. Then, you help Yogdrak the same way, and quickly, you fall down to the other side.";
 		WaitLineBreak;
-		let bonus be (( dexterity of player minus 10 ) divided by 2);
+		let bonus be ( dexterity of player minus 10 ) divided by 2;
 		let diceroll be a random number from 1 to 20;
-		say "You roll 1d20([diceroll])+[bonus] = [special-style-1][diceroll + bonus][roman type] vs [special-style-2]13[roman type] (Dexterity Check):[line break]";
+		say "You roll 1d20([diceroll])[if bonus >= 0]+[end if][bonus] = [special-style-1][diceroll + bonus][roman type] vs [special-style-2]13[roman type] (Dexterity Check):[line break]";
 		if diceroll + bonus >= 13:
 			say "     As your dwarf friend lands next to you, he urges you to rush towards the wall before one of the armored dwarves spots you. Thanks to your speed and agility, you managed to stick close to him without alerting anyone. 'Close call. Good job.' he commends you, and fortunately you're both safe and ready to sneak into the edifice. There shouldn't be so much of a problem once you're inside, as most of the guards are out there in the courtyard. Yogdrak gestures you to climb up a window that's just a few meters away from where you're standing and into the edifice.";
 			say "     [bold type]+2 Yogdrak Approval.[roman type][line break]";
@@ -555,8 +530,7 @@ to WWKEmbassy:
 	WaitLineBreak;
 	say "     And, unexpectedly or not, you suddenly hear the bells being hit. 'That's the ceremony beginning, alright.' Looks like the wedding is about to begin, which means now it's a good time to go fetch the hammer before they are all called for the banquet. Going through more corridors and halls, you eventually reach the connection between the courtyard and the banquet room. There's food already there, but nobody dares to touch it while the wedding music plays and as the bride... wait, no, there's no bride. From the window you're peeking from, you can see two male dwarves making the walk towards what you think could be the priest... Well, he has white robes and a funny hat, so that must be it. 'Two guys marrying... That's cute. Now, I spotted the hammer. There, that white sheet. The shape is unmistakable' he tells you, pointing at one of the corners in the room.";
 	say "     Indeed, that looks like it. There it is, your prize, the thing you've been looking for all this time, for all this work... Though you can't help but watch the ceremony for just a little bit. All dwarves, with smiles on their faces, and you can actually see some female ones, this time! They're all observing the handsome couple of suited dwarves walking in the middle of them towards the welcoming priest. Though... Yogdrak looks impatiently at you. 'There's the hammer right there! Let's grab it and get the hell out of here! Do you want to waste this opportunity?!' he uses a very demanding tone, one that you haven't seen in a bit. Though you don't have to do as he says... Even if you observe for just a while longer, you will have plenty of time to snatch the greathammer and run.";
-	say "[bold type]Do you insist in watching the ceremony? Yogdrak may react differently depending on how well he sees you...[roman type][line break]";
-	LineBreak;
+	say "[line break]     [bold type]Do you insist in watching the ceremony? Yogdrak may react differently depending on how well he sees you...[roman type][line break]";
 	say "     ([link]Y[as]y[end link]) - Stay and watch for a tad longer. This is an unique chance.";
 	say "     ([link]N[as]n[end link]) - Let's just get the hammer, you've already seen what's important.";
 	if Player consents:
@@ -602,14 +576,12 @@ to WWEnd:
 	say "     [link](3)[as]3[end link] - Do not take the greathammer.";
 	now calcnumber is 0;
 	while calcnumber < 1 or calcnumber > 3:
-		say "Choice? (1-3)>[run paragraph on]";
+		say "Choice? (1-3)> [run paragraph on]";
 		get a number;
-		if calcnumber is 1 or calcnumber is 2 or calcnumber is 3:
-			break;
-		else:
+		if calcnumber < 1 or calcnumber > 3:
 			say "Invalid choice. Type [link]1[end link] to help him out with the sheet, [link]2[end link] to grab the hammer while he takes the sheet out and then betray him or [link]3[end link] to not take the hammer.";
+	LineBreak;
 	if calcnumber is 1:
-		LineBreak;
 		say "     [bold type]+2 Yogdrak Approval.[roman type][line break]";
 		increase Resolution of Collapsed Tunnel by 2;
 		say "     This is what you came for, and you're not going to leave without it. Rushing to his side, you do your best to uncover the weapon quietly, as Yogdrak finally manages to grab it. 'Ohh, this baby is finally ours, again... Such a magnificent piece of art. I'd keep it and snuggle with it at night...' he says, with a big smile on his face. The greed of this dwarf...";
@@ -618,7 +590,7 @@ to WWEnd:
 			say "     You take some time to recover from that strike, and just as you manage to stand up, Yogdrak is gone without a trace. And to make things worse, people are starting to come inside the room... And they see you, with the greathammer being gone. This is definitely not a good place to be right now, so you start running as fast as you can out of there before anyone can catch you! By the time you make it across the tables of food, you manage to get out of the area and storm through the streets of the dwarven kingdom, back to where you came from. Guards from the embassy attempt to chase you down, but you're much faster with your regular clothing than them with their armors.";
 			WaitLineBreak;
 			say "     Fortunately, you manage to reach the tunnel and slip inside the underground corridors, tracing your steps back to the surface after an exhausting sprinting for your life. That narrow passage leading to the trapdoor where this all began is still clear, so you are able to proceed further in and leave out, back to the surface. Just to be safe, you push a boulder towards the top of the entry in order to lock it down, hopefully as long as it stays there. Finally, you can have some time to breathe and enjoy the scenery of the surface, much brighter, plants all around, and with a much clearer atmosphere. You really worked out some sweat!";
-			say "     However, it seems you really were betrayed. Yogdrak took the greathammer with him and disappeared without a trace. You don't think you'll see him again, and better stay away from this area, else you want to run the risk of stumbling across an angry [bold type]dwarf knight[roman type]...[line break]";
+			say "     However, it seems you really were betrayed. Yogdrak took the greathammer with him and disappeared without a trace. You don't think you'll see him again, and better stay away from this area, else you want to run the risk of stumbling across an angry [bold type]dwarf knight[roman type]...";
 			choose a row with name of "Dwarf Male" in the Table of Random Critters;
 			now area entry is "Nowhere";
 			if Resolution of Wedding Wreckers is 4 or Resolution of Wedding Wreckers is 5: [bad rep + treasure]
@@ -655,7 +627,7 @@ to WWEnd:
 			say "     You take some time to recover from that strike, and just as you manage to stand up, Yogdrak is gone without a trace. And to make things worse, people are starting to come inside the room... And they see you, with the greathammer being gone. This is definitely not a good place to be right now, so you start running as fast as you can out of there before anyone can catch you! By the time you make it across the tables of food, you manage to get out of the area and storm through the streets of the dwarven kingdom, back to where you came from. Guards from the embassy attempt to chase you down, but you're much faster with your regular clothing than them with their armors.";
 			WaitLineBreak;
 			say "     Fortunately, you manage to reach the tunnel and slip inside the underground corridors, tracing your steps back to the surface after an exhausting sprinting for your life. That narrow passage leading to the trapdoor where this all began is still clear, so you are able to proceed further in and leave out, back to the surface. Just to be safe, you push a boulder towards the top of the entry in order to lock it down, hopefully as long as it stays there. Finally, you can have some time to breathe and enjoy the scenery of the surface, much brighter, plants all around, and with a much clearer atmosphere. You really worked out some sweat!";
-			say "     However, it seems you really were betrayed. Yogdrak took the greathammer with him and disappeared without a trace. You don't think you'll see him again, and better stay away from this area, else you want to run the risk of stumbling across an angry [bold type]dwarf knight[roman type]...[line break]";
+			say "     However, it seems you really were betrayed. Yogdrak took the greathammer with him and disappeared without a trace. You don't think you'll see him again, and better stay away from this area, else you want to run the risk of stumbling across an angry [bold type]dwarf knight[roman type]...";
 			choose a row with name of "Dwarf Male" in the Table of Random Critters;
 			now area entry is "Nowhere";
 			if Resolution of Wedding Wreckers is 4 or Resolution of Wedding Wreckers is 5: [bad rep + treasure]
@@ -684,8 +656,7 @@ to say Dwarf wins:
 	else: [player loses]
 		say "     Having sustained so much damage from the dwarf's heavy pommeling, you're no longer capable to hold your ground against him. Your strength fails you as you're forced on your knees in front of the short man, his face showing a snarky grin as he looks down at you. 'Beating you to submission was easier than I thought. Look at you now! In your due place, at my full mercy.' With a sudden move, he gives you a kick on the chest, throwing you off balance to the ground. He keeps his dirty boot just below your beck, looking down at you with an amused chuckle. 'Now, if you do what you're told, things will go well for you. If not, then I'll just remind you who's the boss, here...' he says while making a suggestive movement with his hammer, reminding you of how painful his strikes felt. The dwarf certainly has the ways to make you regret any disobedience[if Player is submissive], though your submissive instincts make you so eager to be used by him that he shouldn't worry too much about it[end if].";
 	WaitLineBreak;
-	let randomnumber be a random number from 1 to 3;
-	if randomnumber is:
+	if a random number from 1 to 3 is:
 		-- 1: [facefuck]
 			DwarfFucksOral;
 		-- 2: [fuck]
@@ -768,7 +739,7 @@ to say DwarfSex:
 		now title entry is "Fuck his ass";
 		now sortorder entry is 3;
 		now description entry is "Strip the dwarf and get between his hairy buns";
-	[]
+		[]
 		choose a blank row in table of fucking options;
 		now title entry is "Ride his cock";
 		now sortorder entry is 4;
@@ -777,13 +748,13 @@ to say DwarfSex:
 	if Resolution of Collapsed Tunnel is 3:
 		choose a blank row in table of fucking options;
 		now title entry is "Steal the golden greathammer";
-		now sortorder entry is 4;
+		now sortorder entry is 5;
 		now description entry is "Confiscate the hammer (Thing will happen)";
 	[]
 	if Resolution of Collapsed Tunnel is 4 and golden greathammer is owned:
 		choose a blank row in table of fucking options;
 		now title entry is "Assert your dominance over him";
-		now sortorder entry is 4;
+		now sortorder entry is 6;
 		now description entry is "Tell him some things he needs to hear (Things will happen)";
 	[]
 	sort the table of fucking options in sortorder order;
@@ -799,27 +770,26 @@ to say DwarfSex:
 			choose row calcnumber in table of fucking options;
 			say "[title entry]: [description entry]?";
 			if Player consents:
-				let nam be title entry;
 				now sextablerun is 1;
-				if (nam is "Blow him"):
-					say "[DwarfBJ]";
-				if (nam is "Facefuck the dwarf"):
-					say "[DwarfFacefuck]";
-				if (nam is "Fuck his ass"):
-					say "[DwarfAssFuck]";
-				if (nam is "Ride his cock"):
-					say "[DwarfRide]";
-				if (nam is "Steal the golden greathammer"):
-					say "[DwarfQuest1]";
-				if (nam is "Assert your dominance over him"):
-					say "[DwarfQuest2]";
-				wait for any key;
+				if title entry is:
+					-- "Blow him":
+						say "[DwarfBJ]";
+					-- "Facefuck the dwarf":
+						say "[DwarfFacefuck]";
+					-- "Fuck his ass":
+						say "[DwarfAssFuck]";
+					-- "Ride his cock":
+						say "[DwarfRide]";
+					-- "Steal the golden greathammer":
+						say "[DwarfQuest1]";
+					-- "Assert your dominance over him":
+						say "[DwarfQuest2]";
 		else if calcnumber is 0:
 			now sextablerun is 1;
 			say "     You have done enough to the poor little man, so you decide to leave him alone with his bruises and return to your previous tasks.";
-			wait for any key;
 		else:
-			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
+			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options], or 0 to exit.";
+	wait for any key;
 	clear the screen and hyperlink list;
 
 to say DwarfBJ:
@@ -828,8 +798,8 @@ to say DwarfBJ:
 	WaitLineBreak;
 	say "     As you're giving the dwarf a treat of your own, there's a need in you to also please yourself, so you reach over your bits and caress yourself with one hand while the other is kept either stroking the large dick or fondling his plump ballsack. With this, you're doing your best to orally please the dwarf scavenger, soon able to take most of his length down inside, keeping a steady pace with your vertical motions while twisting your head slightly with each movement. Making sure every inch of his organ is thoroughly stimulated for a good time, there's nothing stopping you from picking up the rhythm, going down at it faster and faster... 'Oh fuck... if I knew you'd be this good, I wouldn't have fought you... I'd just let you do that all day!'";
 	say "     Hearing the stocky man praise your efforts [if Player is submissive]fills you with joy, and you even feel tempted to let him take charge for a while, but now is not the time for that[else]gives you the sign you're looking for[end if], as you feel he's actually getting closer to orgasm. You resolve that it'd be fun to slow down a bit and edge him, to make sure his load comes out as hard as possible, even though it creates great frustration on the poor dwarf, who's already grunting and begging you to don't stop. 'Please! I just need to cum... I'm not able to hold much longer...' he exclaims in a plea, but you give him a deaf ear, continuing this process for the next few minutes. 'Fuuck... P-please... I need to...!' but he tries yet again to convince you to make him blow, so you know he's on the verge of hitting his limit.";
-	say "     With all that you made him endure by now, it's probably enough to get him burst hard. Are you going to test this theory by [bold type]letting him blow is load out, or will you swallow it all?[roman type][line break]";
-	LineBreak;
+	WaitLineBreak;
+	say "     With all that you made him endure by now, it's probably enough to get him burst hard. Are you going to test this theory by [bold type]letting him blow his load out, or will you swallow it all?[roman type][line break]";
 	say "     ([link]Y[as]y[end link]) - Let it blow!";
 	say "     ([link]N[as]n[end link]) - Drink all of that dwarf cum.";
 	if Player consents:
@@ -874,7 +844,7 @@ to say DwarfRide:
 	say "     Pleased to know that your foe is enjoying your treat, you take as much as you can of his thick cock, albeit slowly as you manage to accommodate its considerable girth. In fact, it's not the length at all that makes this a hard task to endure, but the thickness of his meat that seems to stretch you from the inside so much, yet feeling like it's filling you completely. Once you're comfortable with it, you begin humping up and down, effectively riding him as he looks at you go with a smile on his face. 'Fuck yeah! Damn! That's just what I needed!' he shouts - or grunts - as his breathing gets deeper as well as his dick inside you. Not limiting yourself to simple vertical movements, you also jerk your hips around to bring out most of the sensations you can provide to the short man, and the meat inside you really seems to respond well to it, by throbbing with desire.";
 	WaitLineBreak;
 	say "     You keep this up steadily for a while, often jumping on his lap suddenly faster and harder, alternating between both rhythms. Though at some point, you feel like you just want to go along with the lust claiming both of your minds, giving your best at milking his dick with your ass. 'Oh, fuck... if you keep this up, I'll... fucking cum in you.' Feeling the dwarf's warm cum filling you up as you're on top of him is really what's going to happen if you don't stop riding him. With the inevitable result so close, there's really no point in stopping at all, so you just go faster on him, jumping on his cock until the sounds of skin clashing against each other are loud and clear.";
-	say "     'Damn, I'm gonna cum...!' Despite his warnings, you don't remove yourself from his dick, and are keen on accepting his load inside you. Soon, you feel it pulsing, quickly followed by a warm liquid gushing into you, coating your fleshy tunnel for a good while as the dwarf keeps shooting. His almost beastly grunts only calm down when his orgasm subsides, but your own happens while [if Player is male]his rock-hard meat is still ramming hard against your prostate. Your cock bursts in a joyful blast of cum that lands on all over the short burly man, some even getting stuck in his beard![else]his rock-hard meat is still filling you in. Your body just trembles all over as a strong wave of pleasure overtakes you![end if] The dwarf smiles at you once things slow down, and you look at him as his dick slowly slides out of your pucker, a long stream of cum oozing out of your used asshole.";
+	say "     'Damn, I'm gonna cum...!' Despite his warnings, you don't remove yourself from his dick, and are keen on accepting his load inside you. Soon, you feel it pulsing, quickly followed by a warm liquid gushing into you, coating your fleshy tunnel for a good while as the dwarf keeps shooting. His almost beastly grunts only calm down when his orgasm subsides, but your own happens while [if Player is male]his rock-hard meat is still ramming hard against your prostate. Your cock bursts in a joyful blast of cum that lands on all over the short burly man, some even getting stuck in his beard[else]his rock-hard meat is still filling you in. Your body just trembles all over as a strong wave of pleasure overtakes you[end if]! The dwarf smiles at you once things slow down, and you look at him as his dick slowly slides out of your pucker, a long stream of cum oozing out of your used asshole.";
 	WaitLineBreak;
 	say "     'Fuck damn wow! That was amazing! Makes up for having lost against you, though next time things won't be so easy for you!' he chuckles as he taunts you. With a little legwork, you manage to stand up and gather your things. 'So... I guess I can go now, right? As much as it pities me... but I have places to be!' he asks you, reminding you that he's still just one defeated foe at your mercy. But as you're finished with whatever you had in mind, there's no reason to keep him. You grab your things and leave the dwarf behind, returning to your previous affairs.";
 	CreatureSexAftermath "Player" receives "AssFuck" from "Dwarf Male";
@@ -902,7 +872,6 @@ to say Dwarf Desc:
 			say "     'Time for you to experience what's it like to get beaten by a dwarf. You'll be on your knees and at my mercy!' With that, he rushes at you.";
 
 to say YogdrakRoamingTalk:
-	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Just have a chat.";
 	say "     ([link]N[as]n[end link]) - Go for a fight with all that comes with it.";
 	if Player consents:
@@ -918,6 +887,7 @@ to say YogdrakRoamingTalk:
 		say "     Well, what can you say. You just want to beat his ass in some friendly fight, so you let him know of your intentions. 'Oh, is that so? Very well, then. I'm gonna beat you up and put you in your place, if you want that so badly.' With that, he readies himself to fight you.";
 		wait for any key;
 
+Section 3 - Creature Insertion
 
 Table of CombatPrep (continued)
 name(text)	PrepFunction(text)
@@ -930,8 +900,6 @@ to say PrepCombat_Dwarf Male:
 	if Resolution of Collapsed Tunnel is 5 or Resolution of Collapsed Tunnel is 6: [player wants to handle their transformation on their own or postponed the plan]
 		say "[DwarfQuest4]";
 		now combat abort is 1;
-
-Section 3 - Creature Insertion
 
 Table of Random Critters (continued)
 NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
@@ -1201,17 +1169,14 @@ name	desc	weight	object
 "dwarven ale"	"A canteen bottle with some sort of strong alcoholic beverage inside. It's obviously dwarven in origin."	1	dwarven ale
 
 dwarven ale is a grab object.
-
 dwarven ale is infectious. Strain of dwarven ale is "Dwarf Male".
-
 Usedesc of dwarven ale is "[dwarven ale use]".
+Scent of dwarven ale is "This beverage smells a lot like alcohol. It must be very strong.".
+
 to say dwarven ale use:
 	say "You bring the canteen bottle to your mouth and chug its contents down, the drink tasting like a very strong beer that nearly burns down your throat.";
 	PlayerDrink 10;
 	addAlcPoints 4;
-
-instead of sniffing dwarven ale:
-	say "This beverage smells a lot like alcohol. It must be very strong.";
 
 to say DwarfMaleTF:
 	now TailName of Player is "Dwarf Male";

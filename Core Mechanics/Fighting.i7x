@@ -42,6 +42,10 @@ To fight:
 					break;
 			if skipit is true, next;
 			add Name entry to PossibleEncounters;
+			if Name entry is "Reindeer" and DateMonth is 12 and DateDay < 26:
+				repeat with x running from 1 to ( DateDay / 7 ):
+					add Name entry to PossibleEncounters;
+				if DateDay is 25, add Name entry to PossibleEncounters;
 			if "Like Attracts Like" is listed in the feats of Player:
 				if BodyName of Player is Name entry, add Name entry to PossibleEncounters;
 				if FaceName of Player is Name entry, add Name entry to PossibleEncounters;

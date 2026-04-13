@@ -59,23 +59,19 @@ to say DamienIntroResolve:
 	say "     [link](3)[as]3[end link] - Things like these do not concern you, so ignore it and stop worrying about it.";
 	now calcnumber is 0;
 	while calcnumber < 1 or calcnumber > 3:
-		say "Choice? (1-3)>[run paragraph on]";
+		say "Choice? (1-3)> [run paragraph on]";
 		get a number;
-		if calcnumber is 1 or calcnumber is 2 or calcnumber is 3:
-			break;
-		else:
+		if calcnumber < 1 or calcnumber > 3:
 			say "Invalid choice. Type [link]1[end link] to investigate, [link]2[end link] to ignore it or [link]3[end link] to pay no mind to events like these.";
+	LineBreak;
 	if calcnumber is 1:
-		LineBreak;
 		say "     This odd sound came from a nearby alley, rather close to your position. It must have echoed through the area, as it reached your ears in a somewhat faded tone. Nonetheless, you have decided to go investigate, and in order to do that, you begin to walk towards where you think it is the most likely direction to be the source of that noise.";
 		DamienTrap1;
 	else if calcnumber is 2:
-		LineBreak;
 		say "     Is that not a bit ridiculous? A bear trap, in the middle of an urban area? It surely must have only been your imagination. You shall simply proceed as normal and continue on your way.";
 		now Resolution of DamienIntro is 1;
 		now DamienIntroCooldown is turns;
 	else if calcnumber is 3:
-		LineBreak;
 		say "     Whatever it may be, it really does not concern you if there is anyone ill-intentioned around here who would pose a threat to the demons. They know better how to defend themselves if that ever happens, and besides, you doubt any enemy of theirs would be any successful at actually harming them.";
 		now Resolution of DamienIntro is 99; [ignored forever]
 
@@ -83,25 +79,24 @@ to DamienTrap1:
 	now DamienIntroCooldown is turns;
 	say "     Moving through the darkness of the night is a particularly dangerous thing to do, especially if there is a demon hunter on the loose. You probably should be extremely careful and tread gingerly, lest you want to be caught in a trap... If that is the case. Once you make it to the alley, you figure it is time to adopt the most sneaky stance you can think of, probably bending your body forward a bit and minding where you step, reducing the noise you produce as much as possible while you walk through this desolated urban corridor. You throw glances all around you and keep you ears up (figuratively), trying to get a feeling of the surrounding area and any possible threats. The place has a few garbage containers along the way, as well as trash scattered on the ground, which makes it more difficult for you to sneak through silently or spot anomalies...";
 	WaitLineBreak;
-	let bonus be (( dexterity of player minus 10 ) divided by 2);
+	let bonus be ( dexterity of player minus 10 ) divided by 2;
 	let diceroll be a random number from 1 to 20;
-	say "You roll 1d20([diceroll])+[bonus] = [special-style-1][diceroll + bonus][roman type] vs [special-style-2]12[roman type] (Dexterity Save):[line break]";
-	if diceroll + bonus <= 11:
+	say "You roll 1d20([diceroll])[if bonus >= 0]+[end if][bonus] = [special-style-1][diceroll + bonus][roman type] vs [special-style-2]12[roman type] (Dexterity Save):[line break]";
+	if diceroll + bonus < 12:
 		say "     A loud clank catches you by surprise, startling you as you freeze in place. This was, very honestly, the worst thing you could do, as suddenly, you feel something grabbing you by the ankles before you are pulled upwards so fast you are left with no reaction. Blood comes flowing down towards your head as you are left hanging upside down, pulled to a considerable height and effectively immobilized. It seems you were caught in a trap, one that you triggered in some way, and it had a rope ready to be tightened around your feet in order to pull you up.";
 		DamienIntroTrapped;
 	else:
 		say "     Suddenly, you feel something poking at your ankle, to which you react immediately by not moving it, then slowly step back. A closer look reveals a very thin rope, nearly invisible in the dark, stretched along the alleyway's width in some sort of triggering mechanism. Now, that sound definitely was not just your imagination, this is a trap ready to capture any distracted passerby! Though, now that you know the existence of said trap, how should you proceed?";
 		say "     If you [bold type]passed through trap without triggering it[roman type], you could be able to catch this hunter by surprise, but you may fail to find him easily if you are not [italic type]perceptive[roman type] enough... On the other hand, [bold type]triggering the trap[roman type] would, probably, draw their attention to you, but you risk getting caught in it with your attempts at releasing it, especially if you don't trust your [italic type]dexterity[roman type]. It should not be too difficult, though, since you know the trap is here, right in front of you, and you know what mechanism it is using.";
-		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Pass through it.";
 		say "     ([link]N[as]n[end link]) - Trigger it.";
 		if Player consents:
 			LineBreak;
 			say "     It is just a rope at a low altitude, so you could probably put one leg above and to the other side, then do the same with the other leg, in order to get through without touching it. And that is what you do, successfully, even though it was not particularly difficult. Now, with the trap out of the way, comes the part of trying to find whoever set it in the first place. You have no idea what this person looks like; they might as well look like something you have never seen before, or like just an average bipedal humanoid, for all you know. Maybe they are a criminal mastermind?! You are in the Red Light District, after all... But nonetheless, you should focus on finding this culprit.";
 			WaitLineBreak;
-			let bonus be (( perception of player minus 10 ) divided by 2);
+			let bonus be ( perception of player minus 10 ) divided by 2;
 			let diceroll be a random number from 1 to 20;
-			say "You roll 1d20([diceroll])+[bonus] = [special-style-1][diceroll + bonus][roman type] vs [special-style-2]10[roman type] (Perception Roll):[line break]";
+			say "You roll 1d20([diceroll])[if bonus >= 0]+[end if][bonus] = [special-style-1][diceroll + bonus][roman type] vs [special-style-2]10[roman type] (Perception Roll):[line break]";
 			if diceroll + bonus >= 10:
 				say "     After a good amount of time searching the place, and despite being crippled by the possibility of there being more traps along the way, you think you see a shape. Then, you see that shape move, so you are sure you just laid your eyes on someone. Now is the time to catch this hunter once and for all, as they will not see you coming from where you are!";
 				DamienIntroSpotted;
@@ -112,9 +107,9 @@ to DamienTrap1:
 			LineBreak;
 			say "     Deciding that triggering the trap would be the one way to make sure you would see this hunter coming, you give it your best shot while trying to position yourself in relative safety. With only the information you have gathered so far, this might still be a risky thing to do...";
 			WaitLineBreak;
-			let bonus be (( dexterity of player minus 10 ) divided by 2);
+			let bonus be ( dexterity of player minus 10 ) divided by 2;
 			let diceroll be a random number from 1 to 20;
-			say "You roll 1d20([diceroll])+[bonus] = [special-style-1][diceroll + bonus][roman type] vs [special-style-2]8[roman type] (Dexterity Roll):[line break]";
+			say "You roll 1d20([diceroll])[if bonus >= 0]+[end if][bonus] = [special-style-1][diceroll + bonus][roman type] vs [special-style-2]8[roman type] (Dexterity Roll):[line break]";
 			if diceroll + bonus >= 8:
 				say "     And with some finesse, you manage to trigger the trap with enough pressure on the rope to set it loose, while keeping out from harm's way. A loud clank fires away and the rope ascends, having captured nothing and remaining hanging in the air. You are definitely sure this sound was heard around the vicinity, so you hide behind one of the garbage containers and check if someone arrives within your sight.";
 				DamienIntroDrawn;
@@ -170,10 +165,11 @@ to DamienIntroEnding:
 	say "     'Alright, I've had a similar experience with them in the past, before I learned better. I do hope you know all their leader cares about is your soul. If you intend to spend time with them, hold onto it, though I'd suggest you keep your distance.' You two walk around the corner to find yourselves in another [bold type]Dark Alley[roman type], and the man leads you over to a specific trashcan. 'Can't say I'm doing all too good, but I've been surviving however I can. I figured I could do some good by hunting down troublemakers, starting with those demons,' he reveals, and just then, you become certain of the goal of his traps. 'They're not merely defensive, no. I'm trying to capture them, one by one. Eventually, the Red Light District will be a little safer for us all.'";
 	say "     Capturing them, you ask? What does he even do to them? 'I teach them a lesson they won't forget. It seems to work, as I don't really see them again after that.' With such a cryptic reply, you even have doubts if you want to ask more about that, but of course, you still argue that they are a little bit too many for just one man to be doing this, and end up asking why does it matter so much to him. He does not even have a safe place to sleep, so why not worry about his own safety first? 'I've got a camping tent I place down whenever I need to catch a sleep, that's no problem for me. I know how to take good care of myself, and besides, staying around for too long in one place is a risk. I can't let them catch me too. As to why it matters so much to me... It's only a matter of justice.' There surely must be a story behind all this, but you figure you should not pry too deep into it. Perhaps once he trusts you more, you will know his true motives. For now, all you can do is offer him help, in any way you can.";
 	WaitLineBreak;
-	say "     'Help, you say? What makes you think I need any sort of help?' he asks. Quite frankly, the man seems capable of handling himself, but perhaps some company would not hurt him. His stoic expression breaks for a second as that offer alone catches him by surprise, but he quickly recomposes himself. 'I... I've always been alone. It works better like that.' Well, one would need to be good to read facial expressions to understand whether someone is lying or not, but not for this guy. You clearly know he is lying, because he is one really terrible liar. '... Fine, I won't stop you if you want to stay or... Find me again, whatever. For now, you'll be able to find me around here at night, just look around for this sign,' he says, pointing at a scribbled symbol over the trashcan.";
+	say "     'Help, you say? What makes you think I need any sort of help?' he asks. Quite frankly, the man seems capable of handling himself, but perhaps some company would not hurt him. His stoic expression breaks for a second as that offer alone catches him by surprise, but he quickly recomposes himself. 'I... I've always been alone. It works better like that.' Well, one would need to be good to read facial expressions to understand whether someone is lying or not, but not for this guy. You clearly know he is lying, because he is one really terrible liar. '...Fine, I won't stop you if you want to stay or... Find me again, whatever. For now, you'll be able to find me around here at night, just look around for this sign,' he says, pointing at a scribbled symbol over the trashcan.";
 	say "     'Though, if you sell me out, I'll know. And if I know, I'll do the same to you as I do to them.' His stare is quite threatening, so you know he means business. It is best to keep on his good side before you decide how to proceed with him. You tell him you will not do anything to anger him, hopefully, though you cannot help but sympathize. 'Right... As for introductions... My name's Damien. I guess... Nice to meet you.' You introduce yourself as well, and let him know you are looking forward to get to know him better. 'I-... J-just stay out of trouble.' You think he stuttered there, but conclude you would rather drop it, for now.";
 	WaitLineBreak;
 	say "     You will be able [bold type]to find Damien in the Dark Alley[roman type] during the [bold type]night[roman type]. Perhaps you should build some trust with him before knowing for sure what to do with him.";
+	WaitLineBreak;
 	move Player to Dark Alley;
 	move Damien to Dark Alley;
 	now PlayerMet of Damien is true;
@@ -190,9 +186,9 @@ An everyturn rule:
 		else:
 			now Damien is nowhere;
 	else if Resolution of DamienIntro >= 5 and Resolution of DamienIntro < 99:
-		if TimekeepingVar is 2 or TimekeepingVar is -6: [early night - arrives at the Club]
+		if time is night: [early night - arrives at the Club]
 			now Damien is in Hellfire Lounge;
-		else if TimekeepingVar is 0 or TimekeepingVar is -8: [pre-dawn - leaves]
+		else if time is pre dawn: [pre-dawn - leaves]
 			now Damien is nowhere;
 
 Table of GameEventIDs (continued)
@@ -243,7 +239,7 @@ TwistedCapacity of Damien is false. [Twisted Characters can take any penetration
 Sterile of Damien is true. [steriles can't knock people up]
 MainInfection of Damien is "".
 Description of Damien is "[Damiendesc]".
-Conversation of Damien is { "<This is nothing but a placeholder!>" }.
+fuckscene of Damien is "[SexWithDamien]".
 The scent of Damien is "     Damien smells like he has been in the streets, for a while... But there is also a very subtle and faint scent of brimstone emanating from him, curiously.".
 
 to say DamienDesc:
@@ -255,7 +251,7 @@ to say DamienDesc:
 Section 2-1 - Damien Talk Menu
 
 DamienDoneTalking is a truth state that varies.[@Tag:NotSaved]
-DamienScavengingCooldown is a number that varies. DamienScavengingCooldown is usually 20000. [@Tag:NotSaved]
+DamienScavengingCooldown is a number that varies. DamienScavengingCooldown is usually 20000.[@Tag:NotSaved]
 
 instead of conversing Damien:
 	now DamienDoneTalking is false;
@@ -275,7 +271,6 @@ instead of conversing Damien:
 
 to say DamienTalkMenu:
 	say "     [bold type]What do you want to talk to Damien about?[roman type][line break]";
-	LineBreak;
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]
@@ -288,17 +283,17 @@ to say DamienTalkMenu:
 	if Libido of Damien > 2 and Resolution of DamienTF > 0:
 		choose a blank row in table of fucking options;
 		now title entry is "Buy Damien a drink";
-		now sortorder entry is 1;
+		now sortorder entry is 2;
 		now description entry is "Give him something special";
 	[]
 	choose a blank row in table of fucking options;
 	now title entry is "Himself";
-	now sortorder entry is 2;
+	now sortorder entry is 3;
 	now description entry is "Ask Damien to tell you more about himself";
 	[]
 	choose a blank row in table of fucking options;
 	now title entry is "Sex";
-	now sortorder entry is 3;
+	now sortorder entry is 4;
 	now description entry is "Ask him about his sexual life";
 	[]
 	sort the table of fucking options in sortorder order;
@@ -314,16 +309,16 @@ to say DamienTalkMenu:
 			choose row calcnumber in table of fucking options;
 			say "[title entry]: [description entry]?";
 			if Player consents:
-				let nam be title entry;
 				now sextablerun is 1;
-				if (nam is "Go on some scavenging"):
-					say "[DamienTalkScavenging]";
-				else if (nam is "Buy Damien a drink"):
-					say "[DamienTalkDrink]";
-				else if (nam is "Himself"):
-					say "[DamienTalkHimself]";
-				else if (nam is "Sex"):
-					say "[DamienTalkSex]";
+				if title entry is:
+					-- "Go on some scavenging":
+						say "[DamienTalkScavenging]";
+					-- "Buy Damien a drink":
+						say "[DamienTalkDrink]";
+					-- "Himself":
+						say "[DamienTalkHimself]";
+					-- "Sex":
+						say "[DamienTalkSex]";
 				wait for any key;
 				if DamienDoneTalking is false:
 					say "[DamienTalkMenu]"; [looping back to keep talking with him]
@@ -332,7 +327,7 @@ to say DamienTalkMenu:
 			say "     You excuse yourself as you have to take your leave. Damien nods to you.";
 			wait for any key;
 		else:
-			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options], or 0 to exit.";
 	clear the screen and hyperlink list;
 
 to say DamienTalkScavenging:
@@ -383,9 +378,8 @@ to say DamienTalkScavenge:
 		WaitLineBreak;
 		say "     'I immediately feared betrayal the day my friend simply disappeared. He was nowhere to be found, didn't return to our shelter, didn't leave any messages... Nothing. I then went back to the club and asked [bold type]Mogdraz[roman type] directly, and the fucker didn't even try to hide it. He said it to my face that they took his soul and welcomed him into their ranks, by his request...! Yeah, by his request my ass. How the fuck would he...' His voice begins to show more and more anger as he goes on, but gets a hold of himself before it happens. 'They fucking tricked him. They must have put something on his drink, or cast some demonic sorcery on him, I don't fucking know.' The reason to why he hates demons seems clear enough. His friend gave away his soul to the Hellfires, and Damien understands he has been tricked into doing that.";
 		say "     'Let's just keep moving. I don't want to linger here.' You then agree to head deeper into the street, about to move into some alleys between a bunch of residential buildings. Damien keeps talking, but lowering his voice as you both walk on ahead. 'I want my message to be clear to them. No one fucks with me, and especially with those I love and care for. Anyway... Sorry for the rant, I guess. I underestimated how fucking miserable it feels to not have anyone to talk to for so long.' These are his final words on the subject before you turn your attention to the urban landscape in front of you. It is nothing impressive, really, just several shattered ground floor windows and the generic desolate street. You are not quite familiar with this area of the district, but you can tell it probably has also been completely ransacked.";
-		LineBreak;
+		WaitLineBreak;
 		say "     'I usually don't find much around here besides some junk and unused parts for my craftworks. I take it you'd prefer to look for something more edible?' he asks you, looking at you directly as he is about to examine one of the windows.";
-		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Say that you would prefer looking for edible supplies, indeed.";
 		say "     ([link]N[as]n[end link]) - Tell him you are fine with whatever he decides.";
 		if Player consents:
@@ -398,9 +392,8 @@ to say DamienTalkScavenge:
 		say "     With a few steps, you approach his position as he gestures you to come closer, in silence. You hear a voice, a really deep one, which actually sounds very familiar to you... 'Speaking of the goddamned devils, fucking literally.' You immediately know what that means, that there are hellfire demons close by, and as far as you can tell, they are a pair. Additionally, after hearing the voices for a while longer, [bold type]you are very convinced that you know them[roman type]. Damien lowers his voice to a whisper as he beckons you to keep it down as well. 'They don't know we're here, so we can turn this around. Follow me.' Not wanting to go against his judgment, you do as he says, for now.";
 		say "     Once you have got yourselves a good hiding position, the voices come closer, to the point you can actually hear what they are saying. If you still had any doubts, you can definitely tell this is Arad and Egran's voices, though mostly Arad speaking, 'Would I ever fucking know that there'd be one of those walking dick fuckers in there? I wouldn't! It's not my fault they managed to group up and splatter our supplies full of their stupid jizz!' Egran retorts, visibly annoyed, 'You damn fucking knew it, don't play innocent. And thanks to your carelessness, we gotta hunt at least two dozens of them down before we report.' Arad persists in this argument and attempts to excuse himself, 'Look, yeah they're nosy, but I thought, hey it's just a few crates! Nobody's gonna care! I wasn't told there was a herb in there that fucking lured them! I blame the imp courier fucker!'";
 		WaitLineBreak;
-		say "     '... Idiots, as always...' whispers Damien, bringing his palm to his face. Then, you see him loading his crossbow, and you realize things might actually get rough, as he is literally preparing a deadly weapon. You rush to stop him and ask him to reconsider, arguing that killing them is extremely excessive. 'Killing them? Who... I'm not killing anyone, you crazy shit.' You blink, then look down at his crossbow, then back to him with a clearly inquisitive expression. 'These aren't meant to kill, they're tranquilizers. Although I...' he pauses, and you feel a hint of anxiety creeping in as you fear what he is going to say next, '... I haven't tried any on them. Guess we'll find out what it does.' It seems like your scavenge run has turned into a demon hunt and you cannot really do anything to detain him...";
+		say "     '...Idiots, as always...' whispers Damien, bringing his palm to his face. Then, you see him loading his crossbow, and you realize things might actually get rough, as he is literally preparing a deadly weapon. You rush to stop him and ask him to reconsider, arguing that killing them is extremely excessive. 'Killing them? Who... I'm not killing anyone, you crazy shit.' You blink, then look down at his crossbow, then back to him with a clearly inquisitive expression. 'These aren't meant to kill, they're tranquilizers. Although I...' he pauses, and you feel a hint of anxiety creeping in as you fear what he is going to say next, '...I haven't tried any on them. Guess we'll find out what it does.' It seems like your scavenge run has turned into a demon hunt and you cannot really do anything to detain him...";
 		say "     As you run behind Damien, he gets himself in a position that gives him the angle he needs to aim at one of the twins. Distracted as they are arguing with each other, you doubt they would see any of this coming. Perhaps you should do something about it?";
-		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Warn Arad and Egran.";
 		say "     ([link]N[as]n[end link]) - Damien said it was just a tranquilizer. They'll be fine, right?";
 		if Player consents:
@@ -417,7 +410,6 @@ to say DamienTalkScavenge:
 		say "     'Dude, I think you're reading too much into it. You've known him for what, days? And then you were just sort of hanging out and scavenging together. Seemed like a business relationship to me. Unless you felt different towards him, I guess...' He tenses up and points his crossbow again as soon as he hears that last part, but no words come out of his mouth. Arad continues, 'Sorry, I didn't mean to offend, but... Is that why?' He does not reply, only standing there for several seconds before uttering a grunt. 'Grab Egran and get the fuck outta here,' he orders him, gesturing him away with his weapon as he finally takes his sights away. The demon adds nothing else as he drags his unconscious brother away from the scene.";
 		WaitLineBreak;
 		say "     'Don't say a word,' he says, sort of pointing at you with his finger before letting go a sigh. 'I... Don't know what to believe in, just yet. And... Right, we were here to scavenge. Guess that went to shits. I'm... just tired after this.' You tell him that is quite understandable, and that he should take his time to process whatever happened here. 'I've got some spare food I can give you for your trouble, so this isn't just wasted time for you.' You really have not gone far, so it does not take long for you both to arrive back at that one dark alley, which eventually greets you with the unpleasant air of garbage. The two of you finally slow down your paces and stop by Damien's stash as he lets out a sigh. 'I'm... really sorry about that. This really didn't go as I planned,' he apologizes as he hands you some canned food, just like he promised.";
-		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Take it.";
 		say "     ([link]N[as]n[end link]) - Refuse and tell him to keep it.";
 		if Player consents:
@@ -431,21 +423,22 @@ to say DamienTalkScavenge:
 		say "     Seeing him there, you also lean against the wall next to him. With all that just happened, you have to ask what that was all about, and Damien knows he has to give you an explanation. 'I cut all contact with them once I heard from Mogdraz. I was very convinced they had taken him by some form of trickery. And I'm not yet fully convinced they fucking didn't, I just...' He sighs yet again, almost as if immediately disbelieving his words. 'Shit, I don't know. Maybe he really... Didn't see me the same way. I mean, not as a friend he could count on, I suppose, just a... Well, someone who could help him survive. Honestly, I don't know which I prefer to be true.' You argue that Arad's explanation could have made sense, as from what you have been told, you need to give proper consent for them to be able to do anything with your soul.";
 		say "     'Such consent can come out of being desperate, which isn't entirely consent, just a last resort move of some kind. How do you know they didn't threaten him or gave him any sort of ultimatum?' Somehow, you doubt these demons are the sort to do that, judging by how much they enjoy their hedonistic lives. Sure, they could encourage you to do something like that, but they are definitely not the kind to force that upon you. Perhaps Damien misjudges them, or you are indeed missing something. Regardless, all you can do is listen and advise from what you know about them. 'I guess if Iker wasn't coerced into giving away his soul, he did it willingly. And maybe... Maybe I really interpreted it wrong. It's true, we had just met for a few days when we started to hang out at the club, and I guess beyond the scavenging and hunting... There wasn't much else going on.'";
 		WaitLineBreak;
-		say "     You end up asking if he had any sort of... More intimate interest in him. '... Well, you can't judge me. I was a pretty active person before, and being alone for such a long time made me consider other... Options.' There really is not anything wrong with fancying another guy, you tell him. 'I didn't mean any romantic interest, though, it's mostly just sex. He was pretty good-looking, I'll give him that, but, uh... I never made any advance on him.' Perhaps that is why his view on the matter is so blurry. Amidst his contemplation, he probably failed to see Iker really could not tell how Damien felt towards him, thus, nothing really sprouted between the two other than just a business relationship. 'You may be right... And Arad may be right, too. That's what I hate, the fact I'm not fucking sure about anything anymore.'";
+		say "     You end up asking if he had any sort of... More intimate interest in him. '...Well, you can't judge me. I was a pretty active person before, and being alone for such a long time made me consider other... Options.' There really is not anything wrong with fancying another guy, you tell him. 'I didn't mean any romantic interest, though, it's mostly just sex. He was pretty good-looking, I'll give him that, but, uh... I never made any advance on him.' Perhaps that is why his view on the matter is so blurry. Amidst his contemplation, he probably failed to see Iker really could not tell how Damien felt towards him, thus, nothing really sprouted between the two other than just a business relationship. 'You may be right... And Arad may be right, too. That's what I hate, the fact I'm not fucking sure about anything anymore.'";
 		say "     He does not say anything else, only staring into the void for the next few moments. You cannot be more sure that he feels very alone at this moment, and the need to stick besides him strikes you very convincingly. That, and a question of how to proceed next.";
-		LineBreak;
 		say "     ([link]Y[as]y[end link]) - You have fancied him since the beginning, perhaps you could rub his shoulder and give him a compliment. Who knows what could follow...";
 		say "     ([link]N[as]n[end link]) - Just play cool and tell him you are here for whatever he needs.";
 		if Player consents:
+			LineBreak;
 			now Libido of Damien is 1;
 			say "     Indeed, this seems to have been a story and a half. Damien is definitely having trouble digesting whatever happened, but you could at least show him some affection. While he does not look back at you for all that time, you take the chance to lay your hand on his shoulder, then slowly move towards the other through the back of his neck. As you see him offer no resistance whatsoever, you gently pull him to you, with the intention of giving him a tender embrace. You tell him he is one handsome man and should not waste his life mourning over the loss of someone who did not reciprocate his feelings. 'Handsome, huh... I'd say you're trying to flatter me, but that wouldn't be very smart of you.' He says those words with a hint of sarcasm that passes through evidently enough, but other than that, he stops you on your tracks.";
 			say "     'I appreciate your... Interest. But I can't really do any of that.' Your reaction is to ask why, even though you can sort of already guess the answer. To your surprise, however, Damien chuckles as he explains himself, 'You're an alright person, but... I gotta deal with something first. It's a... Me kinda thing.' You tell him that, of course, you understand if he needs to take some time before getting involved with someone, as in fact, that is how it would work with most people before the entire apocalypse took place. 'That's also very appreciated, though it isn't exactly my feelings I'm talking about... Though, sorry, I don't really wanna talk about that. Think I need to come to terms with it myself, first.'";
 			WaitLineBreak;
 			say "     Now very unsure of what exactly he is talking about, you figure you should respect his request for dropping the subject here. He nods and gets up to put all his stuff back into his secret stash and call off the day. Maybe you could try [bold type]talking to him later[roman type], when you have got the chance again?";
 		else:
+			LineBreak;
 			say "     Given the harsh ending Damien got with his friend, you suppose he could use a genuinely friendly gesture. You pat his shoulder and give him some encouraging words, which he appreciates, as he turns to you with a slight smile on his face, a rare occasion since you have met him. 'Thanks. You know... You're actually alright. Maybe I shouldn't have judged you so prematurely. I guess... Sorry about that,' he says, and you both continue to chat for a while before you part ways.";
-		WaitLineBreak;
 		follow the turnpass rule;
+		AttemptToWait;
 		say "     You may have had a lot of indications that you should probably inquire [bold type]Mogdraz[roman type] on this guy, but you must continue to [bold type]interact with Damien[roman type] and see where things go. Mentioning him to the Demon Lord could potentially reach Damien's ears, and you probably do not want him to think you are betraying him. A more trusting friendship is in order before you start asking questions.";
 		now Resolution of DamienIntro is 3;
 		now Loyalty of Damien is 1;
@@ -457,7 +450,7 @@ to say DamienTalkScavenge:
 		say "     Perhaps some encouragement words were, indeed, in order, and you add that this time things will be better, with whatever optimism you can muster. Such preoccupation on your behalf is well-received by the young man, and there is even a smile over the corner of his mouth that escapes his best attempts at looking all tough and serious. You are confident that, eventually, he will open up to you, but for now, spending more time with him will be essential to ensure what happens. Plus, having a partner alongside you also increases your chance at finding useful supplies. Once Damien ensures he is fully ready, you both walk down the alley and into a rather dingy one. The stickiness of the ground and the smell does its best at perturbing your attempts at positivity.";
 		say "     'Doesn't smell particularly good in here... Sounds like shit goes down in here.' As you wonder what he means by that, you look around and realize how secluded this area seems to be, then have a few ideas of what could be going on in here. Perhaps you should just move on, as it is unlikely you will find anything in here other than vestiges of unsavory acts and whatnot... Like sex. 'Yeah, nothing else to see here. There's an area ahead that was an old market place. It's usually not a good idea to venture there on your own, but as a pair, we can hold ourselves pretty well in case there's trouble.' It seems like a sound plan, and there may still be useful stuff in there, overlooked amidst all the apocalyptic chaos.";
 		WaitLineBreak;
-		say "     You then decide to just move on and head past this alley, towards the Northern Street, and into an adjacent pathway, to then proceed to simply following Damien around, as he seems to know where to go. As you pass by some edifices, you begin to notice what he was talking about a few moments ago about a market place, as most of these seem to be former stores and small commercial venues. Looking closely, you conclude it must be an extension of what really makes the Red Light District, though it seems to have been an older area that will most certainly be forgotten once this is all over... If it ever will. 'Well, there's one that doesn't look too bad over there. Think we should check it out?' he asks you, pointing at a discrete entrance with a door that still has its glass window intact. As it happens to be a bit out of view, it could have very well escaped the eyes of the ransackers.";
+		say "     You then decide to just move on and head past this alley, towards the Northern Street, and into an adjacent pathway, to then proceed to simply following Damien around, as he seems to know where to go. As you pass by some edifices, you begin to notice what he was talking about a few moments ago about a market place, as most of these seem to be former stores and small commercial venues. Looking closely, you conclude it must be an extension of what really makes the Red Light District, though it seems to have been an older area that will most certainly be forgotten once this is all over... If it ever will. 'Well, there's one that doesn't look too bad over there. Think we should check it out?' he asks you, pointing at a discreet entrance with a door that still has its glass window intact. As it happens to be a bit out of view, it could have very well escaped the eyes of the ransackers.";
 		say "     As you both agree to go check that place out, you start walking in that direction. Damien is the first to get to the door and tries to push it open, quickly noticing it does not give in. 'Locked up... That's unusual. Either someone's living here and uses this place as a shelter, which wouldn't be all that strange given how hidden this place is, or it just hasn't been checked out. Could've been closed off before it all began...' He then looks at the lock, then at the window, and finally at his crossbow... But stops himself there. 'Breaking the window could be risky, and I don't wanna step on anyone's toes if this happens to be a hideout. I can pick the lock instead.' Well, that is certainly a useful skill to have. Damien grabs some tools from his backpack and fiddles with the lock for a while, until you hear a loud clack.";
 		WaitLineBreak;
 		say "     'Got it,' he informs, as he is now able to push it open. The door creaks and drags across the floor, forcing Damien to lift it in order to be a little more quiet about it. 'Shit, now that was fucking loud... Hope nobody's in here.' Once your entry is finally unimpeded, you two enter the mysterious shop, and the first thing you notice is an odd, faint lingering scent of incense. 'Looks abandoned, but smells funny,' he comments, and as you look around, you see the store is mostly empty and, frankly, quite uninteresting. You cannot even tell what kind of shop this used to be, and it might not even be a shop at all, but it is too early to draw any definitive conclusions. 'There ain't much going on in here, is it? Also dark as fuck... Lemme grab a light.'";
@@ -468,11 +461,12 @@ to say DamienTalkScavenge:
 		say "     Once he finds it, he tries it out, only to ensure it is no longer functioning. 'I wasn't expecting anything else, just double-checking. Wouldn't want to fry myself trying to dismantle it. Could you keep on watch while I take care of this?' he asks, and it is a good idea, in fact. You nod before heading back to the entrance and wait for him to be done while discreetly looking out for undesirable surprises. Besides that, the next few moments are only filled with noises of things falling, metal clanking and other stuff being forcefully pulled... You think. All necessary measures to properly strip down a complex structure off its now obsolete parts! You can only wonder what he is going to do with all those materials...";
 		WaitLineBreak;
 		say "     It takes a while, but the sound eventually stops and Damien returns, having packed his loot. 'Alright, I've got enough to entertain myself for some time now. And you got some water, so I'd call this a success. I'm gonna have to look for food myself, but I've got some other traps set that should take care of that... Those aren't meant to keep intruders away, don't worry,' he states as you make your way out of the strange shop. 'Now, to find a place to stash all of this... I wonder what I can make with it. How about we meet up again tomorrow? Or... whenever you can,' he asks, and you nod, agreeing on considering it depending on how things go on your end. 'Alright, I suppose we can part ways here. Might check out my old shelter and see if it's still in one piece. If not... I'll find some other use for these. Anyway, see you soon. And thanks.'";
-		WaitLineBreak;
 		follow the turnpass rule;
+		AttemptToWait;
 		say "     You both are walking up to the intersection neighboring the Northern Street when Damien heads in another direction, down south. He seemed better today... But you have a feeling this still was not the end of it.";
 		now Resolution of DamienIntro is 4;
 		now DamienScavengingCooldown is turns;
+		WaitLineBreak;
 		move player to Northern Street 1;
 	else if Resolution of DamienIntro is 4:
 		say "     You ask Damien if he would be down to go for some more scavenging around the district, or if he wants the company at all. He looks at you, but takes time delivering a reply, as if distracted by something in his thoughts. 'Uh... Yeah... Sure...' You ask him if everything is alright, first. He, once more, turns his gaze at you with a delayed timing. 'Yes... Uh... Mind if I lead the way?' There is no reason to not allow him to, so you tell him to go on ahead. 'Thanks. Let's go, if you're ready.' Well, this is strange. Damien is definitely not acting like himself, hesitating with his words and staring into the void too many times. For now, though, you only tell him you are ready to go and follow behind him. Both of you begin to walk in the other direction of the alley, into the narrower area, then across the Northern Street.";
@@ -483,7 +477,6 @@ to say DamienTalkScavenge:
 		WaitLineBreak;
 		say "     When you met him, Damien gave you the idea of him being a resourceful survivor, trying to get by without getting infected by the nanites, but it is true that the fact he was still sticking around Red Light District was... A bit strange, to say the least. The more time you spent with him, the more you were sure there was more to it. 'I've got my answer from Mogdraz himself that day. Iker made his choice. There's no reason why he'd lie to me, I just didn't want to accept that fucker actually didn't care about me and made that decision without even... Considering how I felt about that. Maybe because he knew I'd be against it, or whatever. Fuck, even that shelter was in a shit place, why did I believe I could make that work...' He then makes a pause and takes a seat again. 'Sorry. I guess I've dragged you here to rant.'";
 		say "     You tell him that it is fine. With all that has been going on, it is easy to lose our minds over the most stressful things. Hopefully not to the nanites, which he has not, and you even argue that this alone should be a victory for him. He carried himself through these hardships all on his own and he should feel proud of that. 'You're right. I should feel happy with that, yet I'm not. Because I'm stuck in the past for no good reason. I could've... Just left, and maybe that's what I should do.' He says this, but you do not think he can make that decision on his own. Perhaps you could influence him, in some manner. There is always another way to go about solving a problem.";
-		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Advise him to move on and leave. Resourceful as he is, Damien could probably find his way out of here.";
 		say "     ([link]N[as]n[end link]) - Admit that you would like him to stay. Maybe you can think of something, offer him a place at the Library?";
 		if Player consents:
@@ -501,9 +494,8 @@ to say DamienTalkScavenge:
 			LineBreak;
 			say "     It is true this place has not done him justice, but you have to tell him that you actually liked hanging out with him during these last days. Perhaps he could stay over at the Library, or worst case scenario, he could make this little shelter work. 'You... Don't want me to leave, is that what you're saying?' he asks, and you confirm that is more or less what you meant. 'I see... I was pretty adamant on leaving this place, actually...' Of course, you do not mean to force him to stay, but you would, at least, like to have him around, if he does not wish to leave so desperately. 'Yeah, I get what you mean. I'm happy to hear that, but... I'm not sure I can stay. Even with your offer, as generous as it is.'";
 			say "     There is a prolonged silence, but he eventually breaks it. 'It's just... What can I really do about my situation? I... Probably wronged the Hellfires-... Well, most likely wronged the Hellfires by judging them too hastily, because I failed to realize someone I considered a friend was just using me, or something, and preferred to sell his soul to them-... Look, it's all a fucking mess. I don't know if they'd even hear me out after this.' If that is his problem, you are quite sure the Hellfire demons would listen to him and forgive, they are not known for holding grudges. 'I suppose you're right. But... I don't know. I feel like the best move would be to just get out of here. There really isn't anything tying me to this place, even though you've been a great friend... But I'm sure you'd understand, right?'";
-			LineBreak;
+			WaitLineBreak;
 			say "     You think that, perhaps, he might need something more to stay. Given the circumstances, it makes sense why he would want to leave, although... Is there anything else you have to say to him?";
-			LineBreak;
 			say "     ([link]Y[as]y[end link]) - Tell him you would like to be more than just a 'great friend', then make a move.";
 			say "     ([link]N[as]n[end link]) - No, you choose to respect his decision and allow him to leave.";
 			if Player consents:
@@ -537,13 +529,10 @@ to say DamienTalkScavenge:
 				say "     If you are still curious about Damien, perhaps [bold type]people in the Hellfire Club[roman type] would be able to tell you more about him. Though there would not be much of a point in doing so right now, you could sate your curiosity somewhat, if you want to rummage through his past relations with the Hellfires.";
 				now Resolution of DamienIntro is 99; [he left, for good]
 				now Damien is nowhere;
+		WaitLineBreak;
 		move player to Northern Street 1;
 
-
 Section 2-2 - Damien Sex Menu
-
-instead of fucking Damien:
-	say "[SexWithDamien]";
 
 to say SexWithDamien:
 	if Libido of Damien < 2:
@@ -591,21 +580,20 @@ to say DamienSexMenu:
 			choose row calcnumber in table of fucking options;
 			say "[title entry]: [description entry]?";
 			if Player consents:
-				let nam be title entry;
 				now sextablerun is 1;
-				if (nam is "Give him a blowjob"):
-					say "[DamienSexBlowjob]";
-				else if (nam is "Let him fuck you"):
-					say "[DamienSexFuck]";
-				else if (nam is "Propose a foursome with the demon twins"):
-					say "[DamienSexAradEgranFoursome]";
-				wait for any key;
+				if title entry is:
+					-- "Give him a blowjob":
+						say "[DamienSexBlowjob]";
+					-- "Let him fuck you":
+						say "[DamienSexFuck]";
+					-- "Propose a foursome with the demon twins":
+						say "[DamienSexAradEgranFoursome]";
 		else if calcnumber is 0:
 			now sextablerun is 1;
 			say "     It is true that you have already gone to a bedroom together, but you tell Damien that you forgot you had something to do around this time and really, really have to leave. He looks disappointed, but does not stop you. Maybe he can get someone else to spend the night with!";
-			wait for any key;
 		else:
-			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options], or 0 to exit.";
+	wait for any key;
 	clear the screen and hyperlink list;
 
 to say DamienSexBlowjob:
@@ -613,7 +601,6 @@ to say DamienSexBlowjob:
 	say "     With your choice made, Damien kisses you deeply as you are slowly pushed towards the only bed in the room. He is not quite ready to let you go down on him yet, so he pushes you back to keep making out with you, pinning you down between him and the soft crimson sheets. While you feel his tongue wrestling yours, the erection in his pants only grows harder and bigger, with the air around you heating up as lust begins to take over. 'Ready to put that mouth to work?' he asks, turning around to take a seat over the edge of the bed as he lets you move in front of him in order to undo his belt and pants['] buttons, only to slide them down and reveal the so eager draconic dong, waiting for your affection and love.";
 	WaitLineBreak;
 	say "     A kiss on his tip is all it takes to make that cock throb, and Damien never takes his eyes away from you. So much, in fact, that you begin to get drawn to them as you tease him with a lot of licking around that pointy tip, leaking precum by now. It's hot and sweet, and it kind of entices you to keep licking it up the more his dick oozes, though your attention really gets grabbed by his gaze. Somehow, the junction of that warm cock in your mouth and his lusty draconic eyes tempts you to just let your mind afloat...";
-	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Keep looking into his eyes.";
 	say "     ([link]N[as]n[end link]) - Avert your gaze.";
 	if Player consents:
@@ -636,7 +623,6 @@ to say DamienSexFuck:
 	say "     With your choice made, Damien kisses you deeply as you are slowly taken towards the only bed in the room, and he then pushes you back to keep making out with you, pinning you down between him and the soft crimson sheets. While you feel his tongue wrestling yours, the erection in his pants only grows harder and bigger, with the air around you heating up as lust begins to take over. 'I'm gonna love fucking you.' he says, amidst his lusty kissing, until he stands up and begins taking off [if player is naked]his clothes[else]your clothes, only getting naked after you[end if].";
 	WaitLineBreak;
 	say "     As the young man feels up your body, he never takes his eyes away from you. So much, in fact, that you begin to get drawn to them as you are teased with his touch, his hands moving around your chest, your waist, moving down to your legs, just past your butt... though your attention really gets grabbed by his gaze. Somehow, the junction of that warm touching all over your body and his lusty draconic eyes tempts you to just let your mind afloat...";
-	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Keep looking into his eyes.";
 	say "     ([link]N[as]n[end link]) - Avert your gaze.";
 	if Player consents:
@@ -666,7 +652,6 @@ to say DamienSexAradEgranFoursome:
 	WaitLineBreak;
 	say "     'The ass is mine.' says Egran as he winks at his brother. 'Typical of you, always a fan of backdoors!' replies Arad with a smirk, while both him and the young man begin to push you against the bearded devil behind you. He also grabs you back and sits down on the bed with you, keeping you in his arms as Arad's cock comes into your sight, at eye level. 'Gonna suck us off while you ride Egran's dick? Sounds like a plan.' he says, giving Damien's reptilian dick a grope as it reveals itself to the group. Then, you have two very different dicks in front of you, and with it, a decision to pick whichever you are going to put in your mouth, first... 'Heh, don't think too much! You're gonna have to suck both, eventually...' says Damien, as he and Arad both make their cocks jump repeatedly, patiently waiting...";
 	say "     In the meantime, Egran's erection is throbbing against your buttcheeks, pulsing with a nearly scorching warmth. He does not move to put it in you, yet, only enjoying the gentle friction between his body and yours, for now.";
-	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Suck Damien's dragon cock first.";
 	say "     ([link]N[as]n[end link]) - Pick Arad's big red dick, instead.";
 	if Player consents:
@@ -726,7 +711,6 @@ to say ToronTalkDamien:
 to say DamienTalkDrink:
 	if Player is dominant:
 		say "     Note that if you intend to pursue this path, Damien will shift towards a much more dominant personality, and given your [bold type]Dominant[roman type] trait, that might be something you do not want. There will be no way to offer any resistance against his efforts to subdue you. Are you sure you wish to proceed with this?";
-		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Yes.";
 		say "     ([link]N[as]n[end link]) - No.";
 		if Player consents:
@@ -739,11 +723,9 @@ to say DamienTalkDrink:
 		say "     You have already fooled around with Damien enough for a night. Perhaps some other time?";
 	else:
 		say "     Are you really going to do this? It would be really easy to trick Damien into drinking another Hellfire Draconic Special, and Toron would appreciate the opportunity to study its results, but who knows what that might do to the scavenger. If it is anything similar to what Damien told you, before, you two will end up having sex, most likely.";
-		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Do it.";
 		say "     ([link]N[as]n[end link]) - On second thought... Don't do it.";
 		if Player consents:
-			LineBreak;
 			now DamienDoneTalking is true;
 			ItemLoss obsidian coin by 3;
 			if Resolution of DamienTF < 2:
@@ -775,8 +757,7 @@ to say DamienHRBSex:
 	WaitLineBreak;
 	say "     'You like that, bitch? Like when a man takes charge and uses you as he pleases?' He pulls out momentarily, gives your cheek a few cockslaps and then shoves it back inside your mouth, having you take his length all the way in. 'Good [boygirl]... Such a good cocksucker, you're definitely in the right place' teases the scavenger as his manhood keeps on throbbing in your mouth. After a while, he pulls out again with a grin on his face as a first guest seems to want to join the action, having shoved his member through one of the holes in the walls...";
 	WaitLineBreak;
-	let randomnumber be a random number from 1 to 5;
-	if randomnumber is:
+	if a random number from 1 to 5 is:
 		-- 1: [Hellfire Demon cock, 16"]
 			say "     This one is a pretty familiar red one, of the common hellfire demon kind, throbbing hard at nearly sixteen inches of length. Demonic pheromones reach your nostrils as the whole thing slides into full view, thick and veiny. They are usually quite big ones to work with, and this dick is no exception.";
 			now HRBCockLength1 is 16;
@@ -786,7 +767,7 @@ to say DamienHRBSex:
 			now HRBCockLength1 is 12;
 			CreatureSexAftermath "Player" receives "OralCock" from "Football Wolfman";
 		-- 3: [Huge draconic cock, 24"]
-			say "     To really start well, a whole two foot-long of a dragon dick slowly comes into full view, so big that it barely fits the hole with its girth alone. You will have to work really hard for this one, as there is plenty of it to appreciate.";
+			say "     To really start well, a whole two-foot-long of a dragon dick slowly comes into full view, so big that it barely fits the hole with its girth alone. You will have to work really hard for this one, as there is plenty of it to appreciate.";
 			now HRBCockLength1 is 24;
 			CreatureSexAftermath "Player" receives "OralCock" from "Yamato Dragon";
 		-- 4: [Orc cock, 14"]
@@ -801,8 +782,7 @@ to say DamienHRBSex:
 	say "     'You don't want to leave them waiting, do you?' Damien does not wait for an answer as he moves your head towards this new cock, forcing you to lean over to it and begin to kiss and lick it, as that is what it truly wants. At first, you tease its shaft until you feel the dick throb with desire, so eager to be put past your lips and sucked like it yearns to be. Then, you grab it and aim it towards your mouth, letting it slide into you [if HRBCockLength1 < 7]all the way in down to your throat, only stopping once the entire thing disappears into you[else if HRBCockLength1 < 19]as far as you can make it, taking it inch by inch until you cannot possibly push it in any further[else if HRBCockLength1 >= 19], barely fitting in at all due to its colossal size, so you have no alternative but to focus your sucking mostly around its tip and, maybe, a few inches past it[end if]. It pulses in response, pleased with your efforts, and juice starts to come out, giving you a sweet taste of their lusts. You think you even hear them moan as you work on their meat, really showing off your oral skills and putting on a good effort at worshiping this dick.";
 	say "     As you suck, rub and pleasure the first stranger's pulsing rod that came to greet you, Damien crouches down behind you and lines up his manhood between your buns. Grabbing you by the hips, he leads your [if Player is female]labia[else]pucker[end if] over to his cock, making you feel that eager tip poking at your entrance, then slowly pushes against it, stretching your [if Player is female]lower lips[else]anal ring[end if] around his girth. 'Yes... Feels fucking good! Suck on that cock, slut...' As he says this, a second one begins to slide in from your side...";
 	WaitLineBreak;
-	let randomnumber be a random number from 1 to 5;
-	if randomnumber is:
+	if a random number from 1 to 5 is:
 		-- 1: [Hellfire Demon cock, 16"]
 			say "     Your new visitor must be a hellfire demon, throbbing hard at nearly sixteen inches of length. There are definitely some demonic pheromones flowing from it as the whole thing slides into full view, thick and veiny. The hung demon's cock now remains only waiting for your approach.";
 			now HRBCockLength2 is 15;
@@ -827,8 +807,7 @@ to say DamienHRBSex:
 	say "     You definitely should not let it stay lonely for long, and after having provided your first dick its share of kissing and sucking, you move on to the next, keeping your hand there stroking it so that it won't miss you. As this new manhood that comes to see you is [if HRBCockLength2 < 7]of a manageable size, you just go ahead and give it a deepthroat, a gesture that it really appreciates as it immediately delivers a sweet glob of precum into your mouth[else if HRBCockLength2 < 19]of a large size, you first only caress its shaft with your lips before going ahead to take what you can of it down your throat. It definitely appreciates your gesture as it immediately delivers a sweet glob of precum into your mouth[else if HRBCockLength2 >= 19]of a massive size, you can only caress its shaft with your lips and try to suck on its tip, with perhaps a few more inches besides. Nonetheless, it definitely appreciates your effort as it immediately delivers a sweet glob of precum into your mouth[end if]. You find yourself giving one a handjob and a blowjob to the other, keeping them pulsing as hard as they can possibly get, and eventually, you alternate, sucking the first and handling the second as they just keep on throbbing in either your grasp or mouth.";
 	say "     This all happens as Damien takes you from behind, fucking your [if Player is female]pussy[else]ass[end if] deep and hard by the time you are servicing the duo of cocks yearning for your attention. At times, he is the one leading you around, enjoying your submission to him and the strangers who come looking for some mystery blowjob. 'You're such a good little slut, sucking some strangers['] dicks while taking one up your [if Player is female]cunt[else]mancunt[end if]... and you're loving it, aren't you?' he teases you, letting out a pleased moan as he buries his full length in you with each thrust. His meat keeps on sliding in and out of you, hard, fast and deep, and your mouth remains busy with one or the other trying to throatfuck you. Though, as you are keeping both strangers on edge with your cock handling and sucking skills, a third manhood slides in right from the door in front of you.";
 	WaitLineBreak;
-	let randomnumber be a random number from 1 to 4;
-	if randomnumber is:
+	if a random number from 1 to 4 is:
 		-- 1: [Hellfire Demon cock, 16"]
 			say "     It is a really nice crimson one, probably about seventeen inches and giving out an alluring fiery scent. Might be a hellfire demon's log now yearning for your attention.";
 			now HRBCockLength3 is 15;
@@ -916,7 +895,6 @@ to say DamienTFRoom1:
 	NPCSexAftermath Player receives "AssFuck" from Damien;
 	WaitLineBreak;
 	say "     After his climax subsides, Damien goes quiet as he rests half on top of you, leaning more to your side, waiting for his knot to shrink back. You still feel his cock pulsating inside you as its last drops ooze. But things become... strange. Your mind's focus returns, and your transformed friend does not move an inch. A sense of dread falls upon you as you realize the consequences of your actions, with this sudden cease.";
-	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Ask if he is okay.";
 	say "     ([link]N[as]n[end link]) - Remain silent.";
 	if Player consents:
@@ -940,7 +918,7 @@ an everyturn rule:
 			now Resolution of DamienTF is 4;
 			now DamienTFCooldown is 0;
 
-instead of going inside from Hellfire Club while (Resolution of DamienTF is 4):
+instead of going inside from Hellfire Club while Resolution of DamienTF is 4:
 	say "     As you arrive at the club and greet the twin hellfire demons by the door, one of them, Egran specifically, beckons you to wait and come closer. 'Hey, you, [bold type]Toron[roman type] said he'd like to speak to you at the bar. Looks important, so best not to keep him waiting. I think it's about your friend or... whatever he is to you.' The demon then steps back and allows you to walk in. The urgency in his tone was somewhat evident, so you do not even think about going anywhere else but to the bartender, immediately.";
 	move player to Hellfire Lounge;
 	say "     Once you approach the bar, you notice that Mogdraz is also there, the two talking to one another as you walk to them. They acknowledge your presence and wait for you to come closer, then beckon you to take a seat next to the Demon Lord, himself. He has this odd and cryptic expression when he tells you to do so, and looking over to Toron does not really give you any answer, much the contrary. The bartender begins to speak soon after, taking the initiative to address the matter of this [']meeting['], 'So... I've told Lord Mogdraz about the situation with your friend, Damien. Not that he didn't already know most of it, but more specifically, it is regarding the transformation he underwent during your last encounter.'";
@@ -965,11 +943,11 @@ instead of going inside from Hellfire Club while (Resolution of DamienTF is 4):
 to say ToronTalkExoticEscortsDamien:
 	say "     Toron stares into your eyes and you almost feel him asking if you are certain of your choice, but proceeds to do the introduction he usually does as if he was any other escort. 'Damien, isn't it? Well, formerly a human, Damien is now a proud draconic hellfire demon with a knack for peering into minds and influencing their will. For those who like letting go of their ability to make decisions and be fully under control of someone else, there is a guarantee that their encounter with him will be most pleasurable. He prefers a highly dominant approach, usually subduing his clients into doing... whatever crosses his mind. Safety policies ensure that nothing permanent or threatening in the long term happens to your clients... If they are, indeed, covered by such.'";
 	if Resolution of DamienTF is 5:
-		LineBreak;
 		say "     'With that said, do you wish to schedule a session with Mister Damien? The usual price is 10 Obsidian Coins for a full hour, but for you it is... [bold type]free[roman type], as you may already know.'";
 		say "     ([link]Y[as]y[end link]) - Yes, go see Damien.";
 		say "     ([link]N[as]n[end link]) - Perhaps... You should not.";
 		if Player consents:
+			LineBreak;
 			say "     With a nod, you state that you want to go see Damien. 'Is that so...? Very well, I... shall escort you there. Remember, this is entirely your responsibility,' he tells you, before gesturing towards the Staff door and beckoning you to follow him, 'Through here.' You find yourself going from corridors to more corridors, taking turns into places you could never hope to remember, but Toron seems to know exactly where he is going for. There is this uncomfortable feeling in your stomach as you near your destination...";
 			say "     You have no idea where this is, but Damien's room seems to be just after this door. The bartender leaves you be with only a cryptic stare instead of words...";
 			WaitLineBreak;
@@ -980,7 +958,6 @@ to say ToronTalkExoticEscortsDamien:
 			WaitLineBreak;
 			say "[ToronTalkExoticEscortsMenu]";
 	else if Resolution of DamienTF > 5:
-		LineBreak;
 		say "     'With that said, do you wish to schedule a session with Mister Damien? The usual price is 10 Obsidian Coins for a full hour, but for you it is... [bold type]free[roman type], as you may already know.'";
 		say "     ([link]Y[as]y[end link]) - Yes, go see Damien.";
 		say "     ([link]N[as]n[end link]) - Perhaps... You should not.";
@@ -1035,8 +1012,7 @@ to say ExoticEscortsDamienSession:
 
 to say ExoticEscortsDamienSession2: [loopable scene with dialogue variations]
 	say "     Once you knock on the door, you hear Damien's voice on the other side, 'The space is all yours, friend... Come right in.' Since he just gave permission for you to enter, you place your hand over the door's knob and rotate it to the side, then slowly push it open, greeting the dragonmorph upon laying your eyes on him. He is lying down on the bed wearing only a black robe on his otherwise naked body, observing you stepping into his room. He has a grin on his face, ever so off putting, but you think you are growing accustomed to it. 'Knew you wouldn't be able to keep away for long. Thought of me often? Bet you did, otherwise you wouldn't be here...' Damien then makes a gesture with his hand to beckon you to approach him. 'Come on... there's no need to be shy anymore. We've been doing this for a while now!";
-	let randomnumber be a random number from 1 to 5;
-	if randomnumber is:
+	if a random number from 1 to 5 is:
 		-- 1: [hypno loving sex]
 			say "     Seeing no reason to just stand by the door, you approach him after closing it. Spreading his legs slightly, Damien straightens up and beckons you to come sit next to him, by the edge of the bed. He seems to be particularly in a good mood as he smiles, seeming happy to see you. 'Hope you've been having a good day! It's good to see you,' he says, reaching for your cheek with the back of his hand and giving it an affectionate stroke. You reply as you would and ask him how he has been faring while in here, to which he happily answers 'A whole lot of fucking, which keeps me happy. But none is as special as you, if I gotta say.' He then moves his hand to the back of your head and rubs it. 'Why don't you lay down with me? You're already here, after all...'";
 			WaitLineBreak;
@@ -1050,14 +1026,12 @@ to say ExoticEscortsDamienSession2: [loopable scene with dialogue variations]
 			say "     [link](3)[as]3[end link] - You really want him to fuck you.";
 			now calcnumber is 0;
 			while calcnumber < 1 or calcnumber > 3:
-				say "Choice? (1-3)>[run paragraph on]";
+				say "Choice? (1-3)> [run paragraph on]";
 				get a number;
-				if calcnumber is 1 or calcnumber is 2 or calcnumber is 3:
-					break;
-				else:
+				if calcnumber < 1 or calcnumber > 3:
 					say "Invalid choice. Type [link]1[end link] to blow him, [link]2[end link] to worship him or [link]3[end link] to request him to fuck you.";
+			LineBreak;
 			if calcnumber is 1:
-				LineBreak;
 				say "     It is plain simple to you. Your desire is focused on the idea of pleasuring Damien orally, using your mouth to worship his cock and make him feel really good and happy. As you let him know the answer to his question, he smiles, clearly liking what he hears. Your eyes are, once again, drawn to his, looking even more alluring than before, as you move your head up to keep looking at him. Damien is now on his knees atop the bed, both his legs on each side of your figure, which remains sat down by the pillows, and his cock quickly finds itself bumping against your face. 'Is that so?' he asks, swinging his sizable member against your jaw and brushing the tip against your cheek as his erection grows further.";
 				say "     'Well, I can only see one way to fix that...' he says as his member, now fully hard, keeps on throbbing right before your eyes. Almost immediately, you feel compelled to push your lips against it and let it in, savoring the meat as droplets of precum greet you in all their sweetness. 'Yeah, you know it... Good [boygirl]! I don't even have to say it, do I?' he praises you, his words fueling your motivation to please him. And so, you take more of his cock in your mouth, licking along the shaft as you have your hands join the efforts, fondling his scarlet ballsack with on and stroking what is left of his dick with the other. Damien makes no additional moves, only remains still and observes you work.";
 				WaitLineBreak;
@@ -1077,7 +1051,6 @@ to say ExoticEscortsDamienSession2: [loopable scene with dialogue variations]
 				if Player is submissive:
 					say "     [italic type]You can only think about him owning you completely, just as he said he wanted to, as images of all sorts of things you could do with him pass through your mind, servicing him in every way he desires, hoping for him to praise you for a job well done with a passionate kiss, calling you his special [boygirl] slave...[roman type][line break]";
 			else if calcnumber is 2:
-				LineBreak;
 				say "     Looking all over his muscular, athletic, even statuesque and sculptural body, you cannot help but think only one thing, that you wish to appreciate every single inch, curve, corner and angle of that phenomenal physique. You wish to touch, stroke and caress it all to let him know how perfect he is, with the figure of a god you crave to worship. Such thoughts are seemingly felt by Damien, who smiles at you seeing you eye him from head to feet. 'Well, bud... Seems obvious by the look on your face. Why don't you put those thoughts into action, then...?' he says, his hand sliding over the back of your head and pulling you to him, which you accept without resistance. Soon, you are facing his scaly pecs, built with pure muscle, and you are pleased to see that, despite his transformation, Damien has retained a pair of sensitive nipples eager to be caressed.";
 				say "     Wasting no time, you bring your lips over those meaty nubs, ready to suckle on them as you squeeze his chest with your hands. 'Going right for my chest, aren't you? Well, that does feel good...' His words are of praise, you can tell, as he happily strokes his throbbing erection while appreciating your gestures. To really show him that you mean to worship him, you grind your lips around his nipple and even tug on it, pulling it to you while also wiggling your tongue all around it, efforts that do not go unnoticed. He lets out a moan as he raises one of his arms, the one whose hand is still free, and rests it against the back of the bed. A look upwards reveals to you the sight of his exposed armpit and bulging bicep practically hovering above you.";
 				WaitLineBreak;
@@ -1095,7 +1068,6 @@ to say ExoticEscortsDamienSession2: [loopable scene with dialogue variations]
 				if Player is submissive:
 					say "     [italic type]You can only think about him owning you completely, just as he said he wanted to, as images of all sorts of things you could do with him pass through your mind, servicing him in every way he desires, hoping for him to praise you for a job well done with a passionate kiss, calling you his special [boygirl] slave...[roman type][line break]";
 			else if calcnumber is 3:
-				LineBreak;
 				say "     Taking on his words from before, you are quick to follow up with a suggestion of [']actual sex['] as your mind depicts this handsome draconic devil mounting you. Your eyes do not lie, either, as your desire for this exact act burns in your gaze back to Damien's, a smile forming across his face. 'Well, since you ask so nicely... Why would I not finally give you the fucking you crave so badly?' Your heart leaps for a moment as you realize he has just agreed to it, lust flowing through you as it warms up your erogenous areas with an eager excitement. Aware that he has you under his complete control, Damien simply proceeds to tell you what to do, [if Player is not naked]'Make sure you get rid of any unnecessary garments and whatnot surrounding your body and... We can get started[else]'Since you've already saved time by coming in here naked, I suppose we could just get started[end if].'";
 				say "     He does not move from his place, instead beckoning you to move towards him. By now, the dragonmorph has his throbbing rod in plain view as he spreads his legs slightly in order to let you position yourself between them. While he comfortably lies down and observes your exposed figure readjusting itself, his hands run over your silhouette, the mere touch leaving you yearning for more. 'Looking forward to ride me, aren't you?' he asks, caressing your obviously aroused genitals[if Player is male], your shaft pulsating in response, [end if] while keeping his eyes on yours, fiery orange orbs still twirling about in your perception and drawing you to them with compulsion. You just cannot look away, nor you want to, as your desire to please him only continues to grow.";
 				WaitLineBreak;
@@ -1129,6 +1101,7 @@ to say ExoticEscortsDamienSession2: [loopable scene with dialogue variations]
 			say "     ([link]Y[as]y[end link]) - Oblige his request.";
 			say "     ([link]N[as]n[end link]) - Get up and leave, you are definitely not into this.";
 			if Player consents:
+				LineBreak;
 				say "     Knowing that the draconic demon man means what he said, and judging by those bedroom dragon eyes, he really wants you to put your hands on his feet and rub them around a bit, so you begin to do it with the best of your abilities. 'Aah... That's nice. I could've asked anyone to do this for me, but I knew you'd come by eventually. And we both know how much you enjoy making me feel good... I'd be wasting a perfectly fun activity for us two!' He brings his arms up, hands between his head and the pillow, and gets comfortable as you feel up his feet and toes, trying to find the best pressure points. Whatever you do seems to please him, however, so you might be doing something right.";
 				say "     'Yeah, I was right, you still have nice hands... I remember how good they felt on my cock when you were giving me a helping hand. Which, by the way... got hard just now.' When you give your side a glance, you realize he has his huge dragon dong in his own hands, being stroked slowly. 'But I'll take care of it myself, today. I'd rather do something different with you...' While hearing him speak, you continue to rub his soles and toes generously, moving your fingers around firmly and pressing on them steadily. 'Why don't you get more comfortable? Still sitting like that, turned towards the door... I'd rather have you face me while you rub my feet. Then you can also feast your eyes on this... It's much better!'";
 				WaitLineBreak;
@@ -1146,6 +1119,7 @@ to say ExoticEscortsDamienSession2: [loopable scene with dialogue variations]
 					say "     [italic type]Strangely happy. He said he practically owned you, and that really rubs your submissive instincts just right. But is it a good idea to give in? You think it is, and you were definitely left wanting more.[roman type][line break]";
 				NPCSexAftermath Player receives "Other" from Damien;
 			else:
+				LineBreak;
 				say "     Your eyes visibly widen, as you have deemed that you are definitely not about to massage anyone's feet right now. Informing Damien of that, you push his feet away and get up to leave. You are not necessarily impolite, but the refusal alone seems to have annoyed the dragon devil. 'Oh well, your loss. Someone else will pay to have an opportunity you have wasted, for free... Guess if you don't wanna follow my rules, then you should probably just stop coming, really. Find someone else.' Feeling at a loss of words, you just remove yourself from Damien's room.";
 				say "     Toron appears shortly after to escort you back to the lounge, and not without commenting on how quickly the session went, 'Hm... I suppose it was not to your liking, this time? It's alright. I'm sure Damien will be more open to suggestions in the future. Give it time.' With that, you are returned to the bar shortly after.";
 				now lastfuck of Damien is turns; [no sex here, but lastfuck is being used as a cooldown for the escort, and this counts as a session]
@@ -1153,10 +1127,10 @@ to say ExoticEscortsDamienSession2: [loopable scene with dialogue variations]
 			say "     Seeing no reason to just stand by the door, you approach him after closing it. He remains in the same position, except part of his robe has slide over his thigh and... revealed this huge draconic dong already throbbing at full attention, together with the plump crimson sack laying down underneath. Obviously, your attention is drawn to all that manhood immediately. 'Aw, would you look at that... This bad boy here doesn't wanna go down, no matter what I do...' he says, giving it a light slap, causing it to rigidly bounce. 'I tried jerking off between sessions, but I just couldn't stop thinking of you...' He notices your eyes unable to look away, so he spreads his legs and gives you a wider view.";
 			WaitLineBreak;
 			say "     'It's totally your fault, but I'll give you a chance to make up to me. I'm sure you'll like the idea.' He raises his hand and points it towards the edge of the bed. 'You, lying down over there, head towards the edge, and letting me use your throat... Doesn't it sound like something you'd enjoy?' Damien gives you the widest grin as his cock just keeps throbbing with the idea. Facing this, you are left with a decision before you commit to get your face utterly ravaged by the draconic devil.";
-			LineBreak;
 			say "     ([link]Y[as]y[end link]) - Eagerly obey him and get facefucked.";
 			say "     ([link]N[as]n[end link]) - Avert your gaze, excuse yourself and leave. Probably feign indisposition.";
 			if Player consents:
+				LineBreak;
 				say "     Wasting no time with any additional thoughts, you move to the bed and do as he said, lying down by the bottom of the bed with your head facing the edge. Damien is already up, watching you position yourself as he moves closer to you, placing both his muscular legs on each side of your skull. Above you comes that huge dong and balls covering your view, and past them, the devil's smirk and glaring eyes. Little time passes and he is already resting his meat atop your face, rubbing it across your cheek as you realize how large a foot-and-half-long cock truly feels. 'Fuck, I'm huge... Look at that, it's gonna make your neck bulge out!' he exclaims, dick pulsating with the anticipation.";
 				say "     And then, Damien pulls back, the tip of his cock moving from under your chin to your lips as he leans his body forward, lining up his shaft directly towards your mouth. From there, he only has to push it down in order to have his dick enter you, making you wrap your lips around that meaty shaft as he buries himself into your throat. It is a little quicker than you would find comfortable, but there is this really sweet liquid that leaks out of his member that just seems to soften your sensitivity there, and you find yourself easily able to swallow all that cock without gagging, no matter how deep he goes. His thickness still, however, proves a challenge for your jaw, as you have to open wide to get all of it in.";
 				WaitLineBreak;
@@ -1176,6 +1150,7 @@ to say ExoticEscortsDamienSession2: [loopable scene with dialogue variations]
 				if Player is submissive:
 					say "     [italic type]You can only think about him owning you completely, just as he said he wanted to, as images of all sorts of things you could do with him pass through your mind, servicing him in every way he desires, hoping for him to praise you for a job well done with a passionate kiss, calling you his special [boygirl] slave...[roman type][line break]";
 			else:
+				LineBreak;
 				say "     You immediately excuse yourself to Damien as you tell him you are not feeling so good, then head towards the door. 'Oh, uh, yeah... Come back later, then? I guess?' he tells you, the last words you hear before you leave the room. Oh, wait, no, there is something else that you can still hear from past the door. 'Fucking hell, what got into [ObjectPro]? I'm gonna have to take care of this, it's fucking killing me! Maybe I should-...'";
 				WaitLineBreak;
 				say "     Whatever Damien was about to say is interrupted by Toron's sudden arrival. 'I see you are in a pristine condition. Took you no time, either. Though, you seem distressed? What happened?' You tell Toron that you had to refuse Damien's order, and eventually, you find yourself telling him every detail. You are not really... sure why you did that. The bartender simply nods. 'I understand. Do not worry, though, Damien was also given the demonic ability to eliminate gag reflexes. I am sure if you would partake in his suggestion, you would be fine. But perhaps you should return another time, lest you want to have to explain yourself to him once he realizes you feigned an indisposition.' Oh, you really cannot get anything past Toron, he sees right through you.";
@@ -1194,7 +1169,7 @@ to say ExoticEscortsDamienSession2: [loopable scene with dialogue variations]
 				say ", his full focus remaining on your ass.";
 			WaitLineBreak;
 			say "     By now, your back entrance seems to feel relaxed enough, and somehow feels like you could take a full-sized dragon cock ballsdeep with confidence. Damien happens to have something similar dandling between his legs at full attention, eager to drill you deep as per your mind's compulsive desire. Suddenly, you feel his weight on top of you, putting his arm around your neck and embracing you from behind, then slamming you down onto the bed's sheets, the impact making the entire mattress bounce in retribution. You can feel the draconic devil's cock pulsating in lust, as its shaft remains tucked between your buttcheeks, while Damien has his fun squeezing you a bit under him. Having you properly manhandled, he gives the side of your face a domineering lick before he whispers into your ear 'I own you now, don't I?'";
-			say "     Moving his hips back, he aligns his cock with your butthole, rubbing the tip against it as hot precum begins to coat it. Your anus flares with desire the second you feel Damien poking at it with his tool, and you find yourself instinctively arching your back and moving your ass towards it, but the young man really has a tight grip on your body's movements, denying you any accomplishment. Though, you can hear him chuckle as he sees you desperately trying to get him inside you. 'I'll take that as a [']yes[']... worth more than any word, really. Alright, then maybe I should...' he says before beginning to push his cock into you, causing you to flinch as that thick and hard piece of flesh pushes your anal ring open, '... Do just that.'";
+			say "     Moving his hips back, he aligns his cock with your butthole, rubbing the tip against it as hot precum begins to coat it. Your anus flares with desire the second you feel Damien poking at it with his tool, and you find yourself instinctively arching your back and moving your ass towards it, but the young man really has a tight grip on your body's movements, denying you any accomplishment. Though, you can hear him chuckle as he sees you desperately trying to get him inside you. 'I'll take that as a [']yes[']... worth more than any word, really. Alright, then maybe I should...' he says before beginning to push his cock into you, causing you to flinch as that thick and hard piece of flesh pushes your anal ring open, '...Do just that.'";
 			WaitLineBreak;
 			say "     From that point on, Damien only goes further inside you, burying his cock into you inch after inch while keeping you immobilized under him, with no other choice but to take more and more of his erection inside you as far as he decides. His grip on you is tight to almost the point of pain, denying you any movement other than helpless squirming, but feels way more exciting now. Somehow, the whole thing fits inside you and only results in pure pleasure, all augmented by the feeling of utter powerlessness. 'Ooh... Fuck yeah! You're one tight little cutie, aren't you? Let's see if you'll be able to walk away on your own when I'm finished with you...' Damien's words once more flow into your ear and mind as your lust for him only becomes greater.";
 			say "     At last, he seems satisfied with the degree of your craving and proceeds to pull his cock back, only to thrust into you powerfully once, then twice, and relentlessly so for the next several more times. There is nearly no build-up, only aggressive fucking starting from the fourth or fifth move, pounding you like a beast in heat, around eighteen inches of thick draconic cock entering you and beating your insides out in ways you would not believe humanly possible to endure, but for some reason made so easy and pleasurable. Since this demon magic aids you through Damien's relentless and rough treatment, all you feel is the sheer bliss and joy resulting from the presence of his manhood in your sensitive areas.";

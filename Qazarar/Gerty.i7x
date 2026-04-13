@@ -62,8 +62,8 @@ TwistedCapacity of Gerty is false. [Twisted Characters can take any penetration,
 Sterile of Gerty is true. [steriles can't knock people up]
 MainInfection of Gerty is "".
 Description of Gerty is "[GertyDesc]".
-Conversation of Gerty is { "<This is nothing but a placeholder!>" }.
-The scent of Gerty is "     Gerty smells like X.".
+fuckscene of Gerty is "[GertySexMenu]".
+[The scent of Gerty is "     Gerty smells like X.".]
 
 to say GertyDesc:
 	if debugactive is 1:
@@ -74,12 +74,7 @@ Section 2 - Talk
 
 instead of conversing the Gerty:
 	say "     As you walk up to Gerty, the eccentric snakeman notices you. 'Ah, you again, I see. Don't you have somebody else to bother?' Despite his unkind commentary, there is no real heat in his voice. Having dealt with Gerty before, you know he means little by it.";
-	WaitLineBreak;
-	say "[GertyTalkMenu]";
-
-to say GertyTalkMenu:
-	LineBreak;
-	say "What do you want to talk with Gerty about?";
+	say "[line break]     What do you want to talk with Gerty about?";
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]
@@ -117,23 +112,25 @@ to say GertyTalkMenu:
 			choose row calcnumber in table of fucking options;
 			say "[title entry]: [description entry]?";
 			if Player consents:
-				let nam be title entry;
+				LineBreak;
 				now sextablerun is 1;
-				if (nam is "Himself"):
-					say "[GertyTalk1]";
-				if (nam is "The City"):
-					say "[GertyTalk2]";
-				if (nam is "His Arms"):
-					say "[GertyTalk3]";
-				if (nam is "His Success"):
-					say "[GertyTalk4]";
+				if title entry is:
+					-- "Himself":
+						say "[GertyTalk1]";
+					-- "The City":
+						say "[GertyTalk2]";
+					-- "His Arms":
+						say "[GertyTalk3]";
+					-- "His Success":
+						say "[GertyTalk4]";
 				wait for any key;
 		else if calcnumber is 0:
+			LineBreak;
 			now sextablerun is 1;
 			say "     You step back from Gerty, shaking your head slightly as he gives a questioning look.";
-			wait for any key;
 		else:
-			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options], or 0 to exit.";
+	wait for any key;
 	clear the screen and hyperlink list;
 
 to say GertyTalk1: [talk about him]
@@ -159,74 +156,70 @@ to say GertyTalk4: [talk about his success, and learn secret]
 
 Section 3 - Sex
 
-instead of fucking the Gerty:
-	if (lastfuck of Gerty - turns < 6): [he got fucked in the last 18 hours = 6 turns]
+to say GertySexMenu:
+	if lastfuck of Gerty - turns < 6: [he got fucked in the last 18 hours = 6 turns]
 		say "     'I only have so much time in my day for distractions. Bother me about it later.'";
-	else if (GertyRelationship < 3): [relationship not high enough]
+	else if GertyRelationship < 3: [relationship not high enough]
 		say "     'I like you and all, but I think we should get to know each other a bit better first.'";
 	else: [ready for sex]
 		say "     'Ah, so you want some action? I'll allow it. Just watch out for the books. There's already enough hooligans cluttering the library with their sexual acts, I don't need another.'";
-		WaitLineBreak;
-		say "[GertySexMenu]";
-
-to say GertySexMenu:
-	LineBreak;
-	now sextablerun is 0;
-	blank out the whole of table of fucking options;
-	[]
-	if Player is male: [only males and herms can get a blowjob]
+		now sextablerun is 0;
+		blank out the whole of table of fucking options;
+		[]
+		if Player is male: [only males and herms can get a blowjob]
+			choose a blank row in table of fucking options;
+			now title entry is "Get a blowjob";
+			now sortorder entry is 1;
+			now description entry is "Let Gerty suck you off";
+			[
+			choose a blank row in table of fucking options;
+			now title entry is "Fuck the lizardman";
+			now sortorder entry is 3;
+			now description entry is "Take Gerty's ass for a ride";
+			]
+		[]
 		choose a blank row in table of fucking options;
-		now title entry is "Get a blowjob";
-		now sortorder entry is 1;
-		now description entry is "Let Gerty suck you off";
-	[]
-	choose a blank row in table of fucking options;
-	now title entry is "Suck Gerty off"; [anyone can blow him]
-	now sortorder entry is 2;
-	now description entry is "Wrap your lips around the snakeman's ophidian shaft";
-	[]
-	[if Player is male:
+		now title entry is "Suck Gerty off"; [anyone can blow him]
+		now sortorder entry is 2;
+		now description entry is "Wrap your lips around the snakeman's ophidian shaft";
+		[
 		choose a blank row in table of fucking options;
-		now title entry is "Fuck the lizardman";
-		now sortorder entry is 3;
-		now description entry is "Take Gerty's ass for a ride";]
-	[]
-	[choose a blank row in table of fucking options;
-	now title entry is "Take Gerty's shaft in your ass";
-	now sortorder entry is 4;
-		now description entry is "Offer sex to the snakeman";]
-	[]
-	sort the table of fucking options in sortorder order;
-	repeat with y running from 1 to number of filled rows in table of fucking options:
-		choose row y from the table of fucking options;
-		say "[link][y] - [title entry][as][y][end link][line break]";
-	say "[link]0 - Nevermind[as]0[end link][line break]";
-	while sextablerun is 0:
-		say "Pick the corresponding number> [run paragraph on]";
-		get a number;
-		if calcnumber > 0 and calcnumber <= the number of filled rows in table of fucking options:
-			now current menu selection is calcnumber;
-			choose row calcnumber in table of fucking options;
-			say "[title entry]: [description entry]?";
-			if Player consents:
-				let nam be title entry;
+		now title entry is "Take Gerty's shaft in your ass";
+		now sortorder entry is 4;
+		now description entry is "Offer sex to the snakeman";
+		]
+		sort the table of fucking options in sortorder order;
+		repeat with y running from 1 to number of filled rows in table of fucking options:
+			choose row y from the table of fucking options;
+			say "[link][y] - [title entry][as][y][end link][line break]";
+		say "[link]0 - Nevermind[as]0[end link][line break]";
+		while sextablerun is 0:
+			say "Pick the corresponding number> [run paragraph on]";
+			get a number;
+			if calcnumber > 0 and calcnumber <= the number of filled rows in table of fucking options:
+				now current menu selection is calcnumber;
+				choose row calcnumber in table of fucking options;
+				say "[title entry]: [description entry]?";
+				if Player consents:
+					LineBreak;
+					now sextablerun is 1;
+					if title entry is:
+						-- "Get a blowjob":
+							say "[GertySex1]";
+						-- "Suck Gerty off":
+							say "[GertySex2]";
+						[-- "Fuck the snakeman":
+							say "[GertySex3]";
+						-- "Take Gerty's shaft in your ass":
+							say "[GertySex4]";]
+			else if calcnumber is 0:
+				LineBreak;
 				now sextablerun is 1;
-				if (nam is "Get a blowjob"):
-					say "[GertySex1]";
-				if (nam is "Suck Gerty off"):
-					say "[GertySex2]";
-				if (nam is "Fuck the snakeman"):
-					say "[GertySex3]";
-				if (nam is "Take Gerty's shaft in your ass"):
-					say "[GertySex4]";
-				wait for any key;
-		else if calcnumber is 0:
-			now sextablerun is 1;
-			say "     You step back from the anthro lizardman, shaking your head slightly as he gives a questioning look.";
-			wait for any key;
-		else:
-			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
-	clear the screen and hyperlink list;
+				say "     You step back from the anthro lizardman, shaking your head slightly as he gives a questioning look.";
+			else:
+				say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options], or 0 to exit.";
+		wait for any key;
+		clear the screen and hyperlink list;
 
 to say GertySex1: [Get blown]
 	say "     Gerty slides downward, no longer holding himself up on his own coils, until his face is level with your crotch. His long, ophidian tongue darts out and gives your hardening cock a quick lick. Then he leans forward, and opens his mouth, resting it around the head of your shaft. You look down at the snakeman, eagerly awaiting his performance, but he simply holds that position. Then, right as you are about to speak up, his tongue begins to move. The lengthy appendage wraps around your member, coiling and sliding along the length, bringing a strange feeling that is nonetheless immensely pleasurable. Gerty then adds a more traditional oral technique along with his tongue work, sliding his mouth up and down your shaft as his tongue continues to perform incredible serpentine motions.";
@@ -242,7 +235,7 @@ to say GertySex2: [Blow him]
 	if GertyRelationship is 3:
 		now GertyRelationship is 4;
 
-to say GertySex3: [Fuck him]
+[to say GertySex3: [Fuck him]
 	say "     <text>";
 	if GertyRelationship is 3:
 		now GertyRelationship is 4;
@@ -250,6 +243,6 @@ to say GertySex3: [Fuck him]
 to say GertySex4: [Get fucked]
 	say "     <text>";
 	if GertyRelationship is 3:
-		now GertyRelationship is 4;
+		now GertyRelationship is 4;]
 
 Gerty ends here.

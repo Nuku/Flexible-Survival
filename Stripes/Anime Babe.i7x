@@ -343,7 +343,7 @@ this is the animehammer rule:		[double-damage]
 	let dam be ( wdam entry times a random number from ( 80 - ( peppereyes * 4 ) ) to 120 ) / 50; [+100% damage]
 	if HardMode is true and a random chance of 1 in ( 10 + peppereyes ) succeeds:
 		now dam is (dam * 150) divided by 100;
-		say "The enemy finds a particular vulnerability in your defense - [italic type]Critical Hit![roman type][line break]";
+		say "The enemy finds a particular vulnerability in your defense - Critical Hit!";
 	say "The anime babe pulls a huge hammer out of nowhere, slamming it into your head and [one of]pummeling you into the ground[or]sending you flying[at random]. This powerful blow does [special-style-2][dam][roman type] damage!";
 	now damagein is dam;
 	say "[headabsorbancy]"; [blow to the head]

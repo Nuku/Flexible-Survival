@@ -8,7 +8,7 @@ Version 3 of Jackal Alpha by Gherod begins here.
 
 "Adds a Jackal Alpha enemy as a possible encounter"
 
-JackalAlphaSubmitCount is a number that varies. [@Tag:NotSaved]
+JackalAlphaSubmitCount is a number that varies.[@Tag:NotSaved]
 JackalAlphaSubmitCount is usually 0.
 
 Section 1 - Encounter
@@ -41,14 +41,7 @@ to say Alpha Jackal Wins:
 		say "     Unable to offer any resistance to the buff jackal, he approaches you unchallenged, his enormous equipment starting to twitch as the male canine, surprisingly effortlessly, given the oversized nature of his sheathed hose and dandling balls, walks towards you. A grin shows across his jackal face, hinting at something more wicked than his gentle words suggest, but his voice is calm and collected, so soft and soothing that you feel inclined to immediately trust him. 'Just accept my gift, it is one of great prestige...' he says, reaching towards you in a very tender manner as you helplessly give in.";
 		WaitLineBreak;
 		if Player is male:
-			let randomnumber be a random number from 1 to 3;
-			if randomnumber is:
-				-- 1:
-					say "[AlphaJWinsCockWorship]";
-				-- 2:
-					say "[AlphaJWinsRimming]";
-				-- 3:
-					say "[AlphaJWinsFacesitting]";
+			say "[one of][AlphaJWinsCockWorship][or][AlphaJWinsRimming][or][AlphaJWinsFacesitting][purely at random]";
 		else:
 			say "[AlphaJWinsCockWorship]";
 	if JackalAlphaSubmitCount < 5:
@@ -93,7 +86,6 @@ to say AlphaJWinsFacesitting:
 to say AlphaJWinsCV:
 	say "     You notice the jackal approaching you differently, this time. And by different, you really mean... bigger. His male appendage seems thicker, meatier, heavier and throbbing harder than ever as he steps towards you. It all happens as if by magic, with not only the hieroglyphs around his muscular body glowing, but also the ones around his enormous balls, nearly dragging along the floor as they heavily swing on every movement. Once he is within reach of you, his cock has already surpassed the entirety of your being in length and girth, and is still hardening before your very eyes. The one thing you notice the most is the gaping slit at the tip, which is also getting closer and closer to you.";
 	say "     'Why not give it a kiss? I'm sure it will like you back...' he asks, the grin on his face betraying the calming nature of his voice.";
-	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Comply and kiss his cock.";
 	say "     ([link]N[as]n[end link]) - Refuse.";
 	if Player consents:
@@ -110,7 +102,6 @@ to say AlphaJWinsCV:
 	WaitLineBreak;
 	say "     He encourages you to keep going, pressing your mouth against his slit as you feel yourself sinking in just a bit more, and before you can realize what is happening, your whole face is being engulfed by the slippery meat, slurping at you at an alarming rate. 'Mmmmh... you're on your way there, now...'";
 	say "     The sucking force is strong, and will only get worse...";
-	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Don't resist.";
 	say "     ([link]N[as]n[end link]) - Struggle.";
 	if Player consents:
@@ -127,7 +118,6 @@ to say AlphaJWinsCV:
 	WaitLineBreak;
 	say "     Soon enough, you are dropped into his balls, already carrying a generous amount of seed that bathes you in the instant you arrive at your destination. The soft walls embrace you, forcing you to a curling position since, despite their hyper size, his balls are still not large enough to hold you comfortably. Not that this is a problem for the jackal, however. Your body bulges visibly inside his sack, a defined, moving shape that is easily seen on the furred skin of his hanging orbs. 'Ohh you feel sooo good in there... I bet you can't wait to be made into a good slutty jackal femboy...' he finally speaks to you, his voice booming from every side as your mind is thrown into bliss.";
 	say "     Within all the darkness, all you see is his thick cum sloshing around, trying to cover you entirely, and the glowing dimming light of his mystical hieroglyphs that you can still see from inside. They capture your gaze and make you feel so in peace... Like little lights drawing your full attention as they rub you to sleep, gently and tenderly...";
-	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Give in.";
 	say "     ([link]N[as]n[end link]) - Keep it together.";
 	if Player consents:
@@ -136,7 +126,7 @@ to say AlphaJWinsCV:
 		SanLoss 25;
 	else:
 		LineBreak;
-		say "     ... But you can't let it take your mind like this. Even though everything feels so good, this tight space keeping you in a drug-like effect that oozes pure bliss and joy... The least you can do is attempt to not fall too low... as hard as it may be...";
+		say "     ...But you can't let it take your mind like this. Even though everything feels so good, this tight space keeping you in a drug-like effect that oozes pure bliss and joy... The least you can do is attempt to not fall too low... as hard as it may be...";
 		SanLoss 10;
 	WaitLineBreak;
 	say "     And with this feeling of pure ecstasy that assails you at every opportunity, comes change...";
@@ -152,9 +142,7 @@ to say AlphaJWinsCV:
 	infect "Jackal Femboy";
 	WaitLineBreak;
 	say "     You end up opening your mouth and feasting on that oh so sweet syrup that bathes you, an explosion of addictive flavor that makes you want more and more. Your senses are overwhelmed as your body keeps on changing with each gulp and each second, tempting you to lose your mind and give in to the alpha jackal...";
-	infect "Jackal Femboy";
-	infect "Jackal Femboy";
-	infect "Jackal Femboy";
+	MultiInfect "Jackal Femboy" repeats 3;
 	WaitLineBreak;
 	say "     Your captor huffs and grunts, pleasure being too much for him with your presence in his balls, and soon, you feel yourself being brought up through the passage you just arrived through. Completely submerged in his cum-filled orbs, you are then violently pushed outside, the world spinning around you with nothing but white covering your vision. It seems the jackal shot you so hard that you came flying a considerable distance from his position to the floor, which hits you with surprising cold. He howls in pleasure as he continues to cum for what seems to be a long minute, and while you attempt to grasp for freedom, more layers of canine spunk seem to form above and around you. Your newly shaped body is utterly covered in jizz, amidst a pool made of his load that only seems to increase in size.";
 	CreatureSexAftermath "Player" receives "OralCock" from "Jackal Alpha";
@@ -163,7 +151,6 @@ to say AlphaJWinsButtAugment:
 	say "     There is something about this creature that renders your resisting efforts useless, if they ever get a chance to occur. Must be something about the hieroglyphs drawn in patterns around his beautifully sculpted muscles, or in his hypermasculinity that takes you over like a fly to a light bulb. 'Come, now.' he begins to speak, flipping you over so you're lying down on the ground with your ass up, that he grabs generously. 'You come here so often that, in fact, I prepared something special for you...' he says, slapping your ass playfully as your cheeks wobble with more momentum than you're used to... 'It looks thirsty, my [boygirl]... How about we give it something to drink?'";
 	say "     With a glance over your shoulder, you notice the jackal pouring a generous amount of the oil he carries in those small flasks on to his hands, rubbing them together as they gleam under the light, lubed up and ready. Then, you feel one of his fingers slide down your butthole, slipping inside so easily and feeling so... right... and good... that you reflexively let out a moan that excites the alpha. 'Glad you like it... I'm just preparing it for what is to come...' he teases you, playing with your pucker in ways that manage to make you [italic type]desperate[roman type] for more. Instinctively, you begin to wiggle your butt before you realize how low your mind is going, and the alpha takes the opportunity to follow up with another tease.";
 	say "     'Beg for it... I might slide in another finger... and another... filling your hole more... and more...' his words just feel right on your ears as he keeps saying them...";
-	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Beg.";
 	say "     ([link]N[as]n[end link]) - Resist the urge.";
 	if Player consents:
@@ -178,7 +165,6 @@ to say AlphaJWinsButtAugment:
 	say "     He slides down another finger, moving and wiggling them against your sensitive butthole, rubbing against your moist fleshy tunnel as it continues to yearn for more. It's something you cannot resist, feeling that much pleasure focused on your ass, and you act as if your body had a mind of its own. He slides in another, filling your hole just a bit more, and it still feels like it is not enough... so he gives you yet another, and another... until all five are in. It feels so easy for you to take his whole fist inside, and you're so deep in pleasure that you only barely notice that your ass is no longer of the same size as it was when you arrived, but much, much bigger. Your cheeks bounce heavily as he rubs them, and are so swollen that his hands almost sink in your skin.";
 	say "     'Such a hot sight...' he comments, as he seems to be stroking his own hypersized prick while working on your butt. Your clouded mind forces your focus on all that sweet sensation happening in your anus, as the jackal fists you with his slippery hand that continues to assail you, leaving you with insane amounts of bliss. You hump and wiggle back and forth, as if instinctively begging for more stimulation in there, unable to help yourself... and only satisfying the jackal more.";
 	say "     'Could it be... that you want my second hand in?' he asks, without any brink of innocence visible, clearly provoking you on purpose. 'If you say please, I might do it...'";
-	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Say [']please['].";
 	say "     ([link]N[as]n[end link]) - Fight it.";
 	if Player consents:
@@ -193,15 +179,16 @@ to say AlphaJWinsButtAugment:
 	say "     And within a short moment, you feel his other hand entering your ass, which pulses in pleasure... or maybe in more size? It feels so heavy, yet so good... You don't want it to stop. You want more, being filled with all the things, your butthole stretched beyond measure. Your mind dwells in ideas of the biggest, fattest cocks fucking you over and over, filling you up with massive loads as your butt keeps yearning yet for more unending pleasure. The jackal's hands only sink in deeper, and you feel completely overtaken. 'Yesss... Oh, yes... You need more, a whole lot more...' he says, while slowly pulling his hands out of your ass, which cries as it feels its temporary emptiness...";
 	say "     But the moment of loneliness doesn't last for long. The jackal gets a bigger flask of oil, opens it, and shoves it down your ass like a buttplug. You feel its contents pouring inside you, slowing and dropping right into your bowels, and it's such an explosion of sensations...! Your ass grows much, much bigger, and much hungrier... So much, that you can't physically bear it. It's so heavy that it drops to the floor, and you can't lift it anymore. And when you think it is about to stop, it surprises you with additional growth... You are given such a massive, colossal ass like one you never had before, nor thought possible... And behind you, the alpha jackal grunts as he strokes his also gigantic cock, the sight of your transformation turning him on beyond measure.";
 	say "     You simply cannot bear this amount of... thirst and pleasure...";
-	infect "Jackal Femboy";
-	infect "Jackal Femboy";
+	MultiInfect "Jackal Femboy" repeats 2;
 	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Beg him to fuck your ass.";
 	say "     ([link]N[as]n[end link]) - Resist the temptation.";
 	if Player consents:
+		LineBreak;
 		say "     At the top of your lungs, you shout and beg for him to take your ass, to fill you up with his enormous cock, to let you feel it throb and pulse inside you as it fills you up, breeding you like the slut you are! 'Ohh... you...' he answers in a breathy tone, moaning and grunting as he strokes his gigantic hard-on, savoring your words and replaying them in his mind, probably imagining how good that would feel... and you can't help but do the same...";
 		SanLoss 25;
 	else:
+		LineBreak;
 		say "     You want his cock in your ass, or rather, your ass wants his cock inside you. It feels like it is taking over your brain, as you cannot process anything else but the image of that big strong jackal taking your colossal rear and breeding you full with his cum. But you still manage to hold onto your dear mind without saying it out loud, hoping to pass through this situation while retaining part of your sanity...";
 		SanLoss 10;
 	WaitLineBreak;
@@ -212,8 +199,7 @@ to say AlphaJWinsAnalFuck:
 	say "     'Mmmh... I think I could go another round... And you seem very, very ready... all lubed up, too... with just the right size...' he grins, grinding his shaft across your soft pucker as he guides his enormous appendage towards it. Your shrug, then shake, and suddenly, a massive wave of pleasure strikes you like a thunder, as you feel your orifice stretch around that gigantic cock with surprising ease. It feels unbearably good, you find yourself squirming and moaning like a slut, unable to withstand the overwhelming sensation that takes you over in ways you cannot comprehend! 'Yesss...! I could fuck you forever... For all eternity... We were made for each other...' he adds, shoving more than several inches inside your heavy and colossal ass, his meat throbbing at the rhythm of a fastened heartbeat.";
 	WaitLineBreak;
 	say "     He grunts ecstatically, fucking your hypersized ass like there was no tomorrow, humping and pounding you as if his dream came true, a butt with the perfect size for his gigantic dong, especially tailored to take him... And you feel so full, filled with that much meat inside your begging ass, yearning to be taken and owned by a true alpha worthy of your size, so sensitive to pleasure that you can't help but be moaning during the whole process. Your body only responds with further change as he unloads more and more of his jackal seed inside you, filling your insides to the point of swelling, making you crave more and more with each blast of thick juice that keeps assaulting you for another whole minute...";
-	infect "Jackal Femboy";
-	infect "Jackal Femboy";
+	MultiInfect "Jackal Femboy" repeats 2;
 	SanLoss 15;
 	WaitLineBreak;
 	say "     Once he is done filling you, the jackal pulls his manhood out while appreciating the mess he has done with you. 'Do keep coming back... I will fulfill your desires every time...' he says, dropping some of that mystical tone in exchange for a more lustful one, especially as he eyes you from head to toe, completely coated in his spunk, with the obscene changes your body underwent while under his influence. You feel too weak to even move, and your hole is still twitching and blinking, which still manages to make the alpha canine's dick throb. 'How tempting it would be to take you again... but alas, I must retreat for now. Enjoy my gift, I expect to provide you more in the future... One day, you shall be fully ready, my [boygirl]...'";
@@ -239,8 +225,8 @@ to say AlphaJWinsCV2:
 	WaitLineBreak;
 	say "     All the soft, tender hands rubbing at you, the alpha jackal's enormous manhood, feel beyond anything you have experienced until now. They follow your thick veins, your meaty length, and slick tongues find their way over to your sensitive head, the jackal's cock glans. These concepts feel more and more like the same to you, your former mind inclined to feel more like one with his dick, your thoughts merging with the canine's to a point they are no longer yours. All these people are jackal femboys, just like you were, eager to worship the alpha that made them his slaves. And you find yourself wanting them close to you, or to be inside their enormous hungry butts, You want to fuck them, you want to be inside them and stretch them wide, make them yours, and in the end, you contemplate pulling them within your depths...";
 	say "     The joy is too much. There is no way to handle all of this, and you helplessly begin to throb and ooze, uncomfortably so. With so many hands and bodies rubbing against you, there is a surge of ultimate pleasure that makes your body harden more than you ever thought possible, and through your slit mouth, a deluge of thick cum is expelled at an absurd rate, covering the little femboys from head to toe as the alpha moans and squirms in bliss. He rubs his heavy paws at you, encouraging your climax to continue for a good couple of minutes, just coating everything and everyone in white, countless drops and spurts of jackal seed continuing to flow from within you... It feels overwhelmingly good, so much that you could scream in utter ecstasy, if only you had a voice left in you...";
-	WaitLineBreak;
 	follow the turnpass rule;
+	AttemptToWait;
 	say "     ...";
 	say "     You wake up soon after, your senses coming back to you one by one. There's arms and legs, and you can move them. Actually, they are your arms and legs, and it feels like your thoughts are your own again. Your body is covered in dry spunk, but there is still a puddle around you full of the stuff. Still confused, you glance around, trying to find the jackal, as if you were unconsciously missing him. Immediately, you feel like attempting to find him again, beg him to stay, beg him to have you forever, but you stop there and take a deep breath... Wait, breathing in the smell of his cum was not a good idea, you end up missing him even more...! You have to get out of here before the last bit of sanity left in your mind is taken away by hopeless submission...";
 	say "     And you do so, hardly enough. For a moment, you can think clearly again. It looks like all the jackal gave you was a dangerously realistic illusion of what could happen... And you feel like this was your [bold type]last chance[roman type]. You feel like [bold type]if you let the Alpha Jackal have his way with you one more time, you will lose yourself to him... forever[roman type]! Perhaps it wouldn't be a bad idea to stay away from him, or make sure you are able to defeat him the next time you meet, as that is the only thing that will save you from the fate he has in store for you.";
@@ -250,7 +236,7 @@ to say AlphaJBadEnd: [Bad End CV + total absorption scene]
 	say "     Once again, the alpha jackal won, as he stands in front of your defeated self. Your mind feels so clouded near the big alpha that you are simply compelled to fall on your knees in front of the massive male with the gigantic dong, yearning for your attention. His enormous manhood is, by now, much bigger and thicker than your entire body, as if by the anticipation of what is to come. The jackal would have been showing his true colors to you perceptively enough were not for your weakened mental state, as his now very wicked grin threatens your very safety. 'Now now... After all this time coming at me, were you really thinking you still held a grasp on your mind?' he asks, his words merely causing you to squirm like some hopeless horny slut.";
 	say "     'You've come so far, bringing me all the pleasure I seek, and being such a good jackal slut for me... Perhaps you're ready for the final step. You want to belong to me, don't you, my good [boygirl]?' He looks down at you, locking his gaze on yours as you nod helplessly, putting your hands around the exposed tip of his enormous manhood, and begin licking at it as much as you are able. The sweet taste of his precum gets you hooked up instantly as the large male observes you worshiping him. 'You really want this cock, don't you?' he asks, but his words fly by your ears like wind, as your mind is already far lost in depravity by now. You rub his veiny, throbbing shaft, licking and kissing at his sensitive tip, driving your tongue closer to the slit...";
 	WaitLineBreak;
-	say "     'Look at you... So eager to please me... It's so...' he doesn't finish his sentence, instead throwing in a laughter as you continue to raise your head to lick deeper inside the oozing exit, already feeling an urge to climb inside. 'So, so eager... Aren't you...? This time, once you're in...' he stops, as you struggle to look at him in his eyes, still lost in the overwhelming joy that you are feeling for being almost face buried inside his giant cock. '... there's no coming out.' While his words sounded final, everything that goes in your mind is how much you want to please this jackal, just how you want to satisfy all his cravings and desires, almost as much as your own submissive eagerness urges you to give yourself in. The big alpha grins once more, proud of his unbeatable effect on you...";
+	say "     'Look at you... So eager to please me... It's so...' he doesn't finish his sentence, instead throwing in a laughter as you continue to raise your head to lick deeper inside the oozing exit, already feeling an urge to climb inside. 'So, so eager... Aren't you...? This time, once you're in...' he stops, as you struggle to look at him in his eyes, still lost in the overwhelming joy that you are feeling for being almost face buried inside his giant cock. '...There's no coming out.' While his words sounded final, everything that goes in your mind is how much you want to please this jackal, just how you want to satisfy all his cravings and desires, almost as much as your own submissive eagerness urges you to give yourself in. The big alpha grins once more, proud of his unbeatable effect on you...";
 	say "     The alpha canine allows you to worship his enormous dong for a good long while, having drenched your face and body in precum with the immense droplets that keep oozing from his slit, which is opening wider the closer your lick. Something within you urges you to keep licking deeper into it as the jackal encourages you. 'You belong to me, now... Come on in... My balls are aching...' he says, your tongue wiggling around the inner walls of his cock, and before you could even blink, your surroundings become a world of darkness as your head begins to get pulled in, the slit having slurped you in just enough to get a grasp on you. With each throb, more of you is taken inside the jackal's enormous cock, hardening even more with excitement, eventually having pulled you down to your waist and raised your feet off the ground like a hungry beast.";
 	WaitLineBreak;
 	say "     With all the joy in the world, the jackal leans back, enjoying your presence in his dick as he pulls you past the thighs, and then, with the volume made by his balls that are about to make space for your arrival, his cock raises up just enough to help your descent. It's so dark, warm and humid inside that you feel like melting already, and soon, his slit closes behind your feet, as they too disappear into the shaft. Your surroundings pulse and throb, pulling you even deeper as his orbs eagerly await you, desperate to be filled with a new presence. Your body movements and wiggling only further excites the alpha canine, who seems to be enjoying his time so much that he may find himself at a loss of words.";
@@ -271,8 +257,7 @@ to say AlphaJBadEnd: [Bad End CV + total absorption scene]
 	say "     Suddenly, this hunger strikes you like none you have ever felt, the urge to feel someone inside you, wiggling within your body and aching to be filled... Or is that the alpha who is feeling this? Your doubts and confusion keep growing as it gets harder to process everything that is happening. Soon enough, your mouth is stretching around the jackal femboy's head as you slurp him inside you... Inside the jackal's cock, throbbing and pulsing at a gigantic size, simply swallowing the femboy until his shoulders, then his chest, down to his waist and beyond, as he continues to slide down your cavernous body as the alpha's balls make up space for their new arrival. The pleasure is unbelievable... as if an emptiness inside you was suddenly filled with the most sating reward, a rapturous bliss as you feel yourself, or what was left of you, slowly melt away into a one-dimensional being... It was just what you needed.";
 	WaitLineBreak;
 	say "     Your thoughts are his. Your senses are his... Your desires are his as well. There is no more you, there is only the alpha jackal. You are one with the other, and your only wishes are to be worshiped, to fuck and to devour whoever falls into your spells.";
-	wait for any key;
-	now battleground is "Void";
+	now battleground is "void";
 	the Player was ended by "Jackal Alpha";
 	trigger ending "Player has died";
 	end the story saying "You have been digested and absorbed into the Jackal Alpha's cock.";
@@ -310,22 +295,21 @@ to say Alpha Jackal Loses:
 			choose row calcnumber in table of fucking options;
 			say "[title entry]: [description entry]?";
 			if Player consents:
-				let nam be title entry;
 				now sextablerun is 1;
-				if (nam is "Play with his massive cock"):
-					say "[AlphaJLosesCockPlay]";
-				if (nam is "Gather some cum from the jackal"):
-					say "[AlphaJLosesCumMilk]";
-				wait for any key;
+				if title entry is:
+					-- "Play with his massive cock":
+						say "[AlphaJLosesCockPlay]";
+					-- "Gather some cum from the jackal":
+						say "[AlphaJLosesCumMilk]";
 		else if calcnumber is 0:
 			now sextablerun is 1;
 			say "     Perhaps it would be best to drop it here. No way to know the risks messing with such a creature could pose to you, and it is better to be safe than sorry.";
 			if JackalAlphaSubmitCount > 0:
 				now JackalAlphaSubmitCount is 0;
 				say "     [bold type]Beating the alpha jackal once has released you from his magical influence completely[roman type]. You feel much more like yourself, now!";
-			wait for any key;
 		else:
-			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
+			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options], or 0 to exit.";
+	wait for any key;
 	clear the screen and hyperlink list;
 
 to say AlphaJLosesCockPlay:
@@ -333,7 +317,6 @@ to say AlphaJLosesCockPlay:
 	say "     He simply observes you as you make his appendage harden, the more you rubbed and stroked. 'Or did you want to do this on your own terms...? It is peculiar that you still desire me, after having beaten me...' Turning to him, you let the jackal know you intend to beat him again, but in other ways, as your hands run over his manhood, caressing every inch of his gigantic cock. It grows and grows, each pulse prompting a surge in size, and you almost can't believe how big he actually is getting. The thing could wrap around your whole body if it wasn't all rock solid, and it's so heavy it curves downwards with the gravity. What is also worth mentioning is his enormous, heavy ballsack, so massive it could possibly fit a single person inside.";
 	WaitLineBreak;
 	say "     It happens to become a workout, giving attention to his full size. But you are not keen on giving up so soon, as you wrap your arms around his cock and, together with your chest, you provide him with enough friction to actually get him moaning. As you take charge of things, he says nothing, simply staring at you as you do all the work, although he says one thing with what is left of his audacity. 'Too big for you to handle? I guess you could use your mouth, too... It really works on making me bigger and harder, if that's what you're looking for...' Something in his words actually makes you consider his recommendation, however if you happen to ingest any of his fluids, you might risk infection... [bold type]How will you reply?[roman type][line break]";
-	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Stick to handjob.";
 	say "     ([link]N[as]n[end link]) - Take your chances and use your mouth.";
 	if Player consents:
@@ -369,6 +352,7 @@ to say AlphaJLosesCumMilk:
 		now JackalAlphaSubmitCount is 0;
 		say "     [bold type]Beating the alpha jackal once has released you from his magical influence completely[roman type]. You feel much more like yourself, now!";
 
+Section 2 - Creature Insertion
 
 Table of CombatPrep (continued)
 name(text)	PrepFunction(text)
@@ -376,8 +360,6 @@ name(text)	PrepFunction(text)
 
 to say PrepCombat_Jackal Alpha:
 	setmongender 3;
-
-Section 2 - Creature Insertion
 
 Table of Random Critters (continued)
 NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
@@ -397,7 +379,7 @@ When Play begins:
 	add "Jackal Alpha" to infections of BipedalList;
 	add "Jackal Alpha" to infections of TailList;
 	now Name entry is "Jackal Alpha";
-	now enemy title entry is "Jackal Alpha";
+	now enemy title entry is "";
 	now enemy Name entry is ""; [ Specific name of unique enemy. ]
 	now enemy type entry is 1; [ 0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters. ]
 	now attack entry is "[one of]He leaps forward and almost manages to grab you, but instead deals a painful strike on your head with his paw, which leaves the big jackal looking at you almost apologetically.[or]With surprisingly agility, the jackal dashes behind you and attempts a charge with his full weight on top of you! Looks like he intends to pin you down, but you manage to keep that from happening just yet, although the collision still hurt.[or]The jackal charges at you in an attempt to overpower you with his heavily muscled bulk. Fortunately, it was just a mildly painful tackle and you're still standing.[or]Leaping towards you, the huge canine wraps his arm around your neck, forcing your nose into his armpit. You barely manage to avoid the worst, but his masculine scent is stuck in your nostrils[or]He poses for a second, showing off his buff body and every inch of his bulging muscles, partially covered in glowing hieroglyphs. Inevitably, you stare at them for a second, leaving a grin on the big jackal's face as you start losing the will to fight.[or]He darts forward, but instead of attacking, he rubs his large physique up against your body, his arousing scent clinging to you even as he retreats back out of reach.[or]He stalks forward confidently, his only intention to make you stare at his absurdly oversized cock and balls hanging soft between his huge trunks for thighs. He rubs them teasingly, showing them off to you, and for a second, you forget about the fight with your eyes locked on the gigantic endowment.[or]The buff jackal looks at you with the biggest cocky grin, dick twitching with each step he gives, as he catches your gaze with the hieroglyphs around his body, glowing and mesmerizing you. Once he has your attention, he takes you in for a crushing bear hug and gives you a lick on your face. He's so powerful that you don't know how you managed to break free, but that was a very close one.[at random]";
@@ -409,7 +391,7 @@ When Play begins:
 	now skin entry is "[one of]dark black[or]sleek black furred[or]jackal furred[at random]";
 	now tail entry is "You have a fluffy, black-furred jackal's tail attached to your rear, swaying excitedly over your huge muscle ass with every step you take.";
 	now cock entry is "[one of]canine[or]jackalboy[or]jackal-like[or]knotted[at random]";
-	now face change entry is "as your mouth pushes forward into a sleek black muzzle, and your eyes blur as they shift in both color and position. New sounds and smells explode through your enhanced senses as your new jackal's muzzle finishes forming and your ears complete shifting into proper canine ears, swiveling around on top of your head like a proper jackal's";
+	now face change entry is "your mouth pushes forward into a sleek black muzzle, and your eyes blur as they shift in both color and position. New sounds and smells explode through your enhanced senses as your new jackal's muzzle finishes forming and your ears complete shifting into proper canine ears, swiveling around on top of your head like a proper jackal's";
 	now body change entry is "it seems to bulk up, its form becoming both heavy and solidly muscular as it seems to enlarge significantly. You can feel your legs shift and change as well, causing you to stumble for a minute as your heels seem to shift upwards on your legs, shifting your weight forward onto the balls of your changing feet. Soon your feet finish their transformation and you find yourself balancing easily on your new jackal-like paws, as you stand on your thick digitigrade legs";
 	now skin change entry is "a soft tingling sensation spreads across your body and soft, sleek, black jackal fur begins to push its way out of it. The fur quickly covers your body in a sexy coat of short dark fur, emanating a hypermasculine scent that makes even you, the bearer of it, excited";
 	now ass change entry is "a strange tingling sensation seems to grow in your rear. It softens and flattens somewhat, then with a soft pulling sensation you feel a thin black canine tail slowly extend from your tailbone, lengthening until it is down past your knees before the changing stops. You can't help but notice that your buttocks seem quite heavier than before, made of such massive and solid muscle that makes it hard for you to walk, at first";
@@ -560,15 +542,11 @@ name	desc	weight	object
 
 jackal alpha fur is a grab object.
 Usedesc of jackal alpha fur is "[JackalAlphaFurUse]".
-
-It is temporary.
+Scent of jackal alpha fur is "The fur has an intoxicatingly pleasant, hypermasculine animal-like scent.".
 
 to say JackalAlphaFurUse:
-	say "Holding the tuft of fur between your fingers, you stroke over it, delighted in its softness. Strangely, the hair disintegrates after a while, becoming a cloud of fine particles that are absorbed into your skin.";
+	say "     Holding the tuft of fur between your fingers, you stroke over it, delighted in its softness. Strangely, the hair disintegrates after a while, becoming a cloud of fine particles that are absorbed into your skin.";
 	infect "Jackal Alpha";
-
-instead of sniffing jackal alpha fur:
-	say "The fur has an intoxicatingly pleasant, hypermasculine animal-like scent.";
 
 Table of Game Objects (continued)
 name	desc	weight	object
@@ -577,17 +555,13 @@ name	desc	weight	object
 jackal alpha cum is a grab object.
 jackal alpha cum is cum.
 jackal alpha cum is infectious.
-Purified of jackal alpha cum is "distilled cum".
 Strain of jackal alpha cum is "Jackal Femboy".
-Usedesc of jackal alpha cum is "[jackal alpha cum use]";
+Usedesc of jackal alpha cum is "[jackal alpha cum use]".
+Scent of jackal alpha cum is "You open the lid for a moment and take a sniff. You almost feel compelled to drink it once its mesmerizing scent gets caught in your nostrils, so you put it back down in that instant.".
 
 to say jackal alpha cum use:
-	say "Lifting the flask to your mouth, you take a drink from it, letting the creamy cum run over your tongue and down your throat. Tastes rich, sweet and animal-like. Swishing it around in your mouth a little, you finish the flask off, then stuff it back into your collection of 'empties'.";
+	say "     Lifting the flask to your mouth, you take a drink from it, letting the creamy cum run over your tongue and down your throat. Tastes rich, sweet and animal-like. Swishing it around in your mouth a little, you finish the flask off, then stuff it back into your collection of 'empties'.";
 	PlayerDrink 5;
 	SanLoss 5;
-
-instead of sniffing jackal alpha cum:
-	say "You open the lid for a moment and take a sniff. You almost feel compelled to drink it once its mesmerizing scent gets caught in your nostrils, so you put it back down in that instant.";
-
 
 Jackal Alpha ends here.

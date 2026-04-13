@@ -67,7 +67,7 @@ an everyturn rule:
 			now Fallen King is nowhere;
 
 a postimport rule:
-	if Resolution of Gift From Abyss is 2 and Resolution of DarkTyrantQuest > -1 and Resolution of DarkTyrantQuest < 2: [sword has been removed, quest not resolved]
+	if Resolution of Gift From Abyss is 2 and (Resolution of DarkTyrantQuest is 0 or Resolution of DarkTyrantQuest is 1): [sword has been removed, quest not resolved]
 		now VRDarkTyrantTracker is 0;
 
 Table of GameCharacterIDs (continued)
@@ -111,7 +111,7 @@ TwistedCapacity of Fallen King is true. [Twisted Characters can take any penetra
 Sterile of Fallen King is true. [steriles can't knock people up]
 MainInfection of Fallen King is "".
 Description of Fallen King is "[Fallen King desc]".
-Conversation of Fallen King is { "<This is nothing but a placeholder!>" }.
+fuckscene of Fallen King is "[SexWithFallenKing]".
 The scent of Fallen King is "     The Dark Tyrant, or Fallen King, smells like nothing, a very characteristic trait of the void".
 
 to say Fallen King desc:
@@ -119,7 +119,7 @@ to say Fallen King desc:
 		say "[SymbioticDarknessDesc]";
 	else:
 		project figure of DarkTyrant_icon;
-		say "     The one and only great tyrant of the Void, feared by almost every creature in the Void Realm. Thought to be a [']he['] due to its enormous male appendage, the gigantic body of pitch black goo gives you a [']toothy smile['], with an arrangement of razor sharp teeth that reminds you of a shark's maw. As a long reaching tongue comes out, there is a constant stream of gooey drool being a clear suggestion of how much this monster hungers. He assumes the shape of a freaky, gigantic and shredded humanoid monster with its dark slimey form, enough to overpower anything and anyone in his path. The only thing you cannot help but avoid looking at is his eyes. His bottomless gaze strikes you with a disturbing familiarity...";
+		say "     The one and only great tyrant of the Void, feared by almost every creature in the Void Realm. Thought to be a [']he['] due to its enormous male appendage, the gigantic body of pitch black goo gives you a [']toothy smile['], with an arrangement of razor sharp teeth that reminds you of a shark's maw. As a long reaching tongue comes out, there is a constant stream of gooey drool being a clear suggestion of how much this monster hungers. He assumes the shape of a freaky, gigantic and shredded humanoid monster with its dark slimy form, enough to overpower anything and anyone in his path. The only thing you cannot help but avoid looking at is his eyes. His bottomless gaze strikes you with a disturbing familiarity...";
 
 Section 2-1 - Dark Tyrant/Fallen King Talk Menu
 
@@ -132,7 +132,6 @@ instead of conversing Fallen King:
 
 to say FallenKingTalkMenu:
 	say "     [bold type]Do you want to try to communicate with the Dark Tyrant?[roman type][line break]";
-	LineBreak;
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]
@@ -171,16 +170,16 @@ to say FallenKingTalkMenu:
 			choose row calcnumber in table of fucking options;
 			say "[title entry]: [description entry]?";
 			if Player consents:
-				let nam be title entry;
 				now sextablerun is 1;
-				if (nam is "Ask about who or what exactly he is"):
-					say "[FallenKingTalkWho]";
-				else if (nam is "Ask what does he need you for"):
-					say "[FallenKingTalkHelp]";
-				else if (nam is "Talk about that embrace"):
-					say "[FallenKingTalkEmbrace]";
-				else if (nam is "Symbiosis"):
-					say "[FallenKingTalkSymbiosis]";
+				if title entry is:
+					-- "Ask about who or what exactly he is":
+						say "[FallenKingTalkWho]";
+					-- "Ask what does he need you for":
+						say "[FallenKingTalkHelp]";
+					-- "Talk about that embrace":
+						say "[FallenKingTalkEmbrace]";
+					-- "Symbiosis":
+						say "[FallenKingTalkSymbiosis]";
 				wait for any key;
 				if FallenKingDoneTalking is false:
 					say "[FallenKingTalkMenu]"; [looping back to keep talking with him]
@@ -189,7 +188,7 @@ to say FallenKingTalkMenu:
 			say "     You excuse yourself as you have to take your leave. The Dark Tyrant stands and nods in apparent understanding.";
 			wait for any key;
 		else:
-			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options], or 0 to exit.";
 	clear the screen and hyperlink list;
 
 to say FallenKingTalkWho:
@@ -211,7 +210,7 @@ to say FallenKingTalkHelp:
 		say "     He mentioned that he needed your help before you became... friends. So, now that he has found you, as he said he would, you decide to ask him about it. He looks at you, attentively listening to your question, and then seems to be thinking about how to answer it. 'I... need... Learn... help. You can.' says the black giant, and you encourage him to continue, as that has not said much. He seems a bit frustrated to not be able to find better words, but he tries. 'Need... essence. Not... the same. Different. Yours.' His deep and eerie voice gets unsettling the more you hear, and the way he says that makes you feel very, very uncomfortable. He notices this, and beckons you to wait as he tries this again.";
 		say "     'I... No... Want to... eat you.' he hurries to say, and that kind of relieves you, but you are still finding it difficult to understand him. 'Only feel... Is safe.' he says, gesturing a sort of an embrace motion as his huge goo rod twitches.";
 		WaitLineBreak;
-		say "     So, all this time, the freakingly horrible and terrible Dark Tyrant was just trying to hit on you? Well, maybe the way his dick keeps throbbing when he sees you was already a sign, though that sort of relieves you even more. Not completely, though, as he still looks terrifying. You nod, declaring that you understood what he meant, and you would be happy(?) to sate him in that way, as well. 'With help, I... No longer... Just... Fallen. I... claim... ... my place.'";
+		say "     So, all this time, the freakingly horrible and terrible Dark Tyrant was just trying to hit on you? Well, maybe the way his dick keeps throbbing when he sees you was already a sign, though that sort of relieves you even more. Not completely, though, as he still looks terrifying. You nod, declaring that you understood what he meant, and you would be happy(?) to sate him in that way, as well. 'With help, I... No longer... Just... Fallen. I... claim... ...my place.'";
 		say "     He claims to be a Fallen King... Hopefully this deal is as safe as he says!";
 		if Libido of Fallen King is 0:
 			now Libido of Fallen King is 1;
@@ -232,20 +231,20 @@ to say FallenKingTalkEmbrace:
 to say FallenKingTalkSymbiosis:
 	say "     You cannot deny how fusing with the dark goo giant felt so pleasurable, but more importantly, how complete you felt once he settled into and around your body. It was as if all the void there could be in you was erased and filled with a newfound presence of confidence and might. With this in mind, you decide to ask him if there is more to it than just fun. 'There is, in fact...' he replies, then extends his hand towards you, beckoning you to join yours with his. You do so, your hand touching his gooey palm as these tingling shivers of bliss begin to surge through your body, relaxing and arousing you simultaneously. 'We are meant to be one. By practicing this symbotic process, I can do so without overwhelming your existence. Before, I would have utterly consumed you... But now, I can make it so we both co-exist and learn from each other.'";
 	say "     His black goo envelops your arm as you are drawn closer to that massive body of darkness, a smile drawing itself across the tyrant's face. 'I thoroughly enjoy it, as well. Feeling you in me, crawling all over you, as if we were the same person... It fills me with joy. Allow me to join you, mortal, and I shall provide you strength and pleasure alike... for as long as you live.' This looks like a proposition the fallen voidling is making, and it sounds definitive. Perhaps you could even benefit from this, although there is no way to tell how this will affect you in the future...";
-	LineBreak;
+	WaitLineBreak;
 	say "     [bold type]Do you wish to accept the Dark Tyrant as your new traveling partner[roman type]? You will be able to call upon his strength whenever you need, and in exchange, you let him tag along in your shadow, feeding from you and learning with your adventures. This deal, however, [bold type]is permanent[roman type], so you will never be able to get rid of him, ever.";
 	say "     Alternatively, you may just tell him you are not ready for this, and things will remain unchanged.";
-	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Have him join you.";
 	say "     ([link]N[as]n[end link]) - Refuse.";
 	if Player consents:
+		LineBreak;
 		say "     There is no fooling yourself, here. You want this, and he knows it, so much that he even suggested it, knowing you would accept... maybe. But it is as he says, you are meant to be one, together, invincible, unstoppable... Your mind fills up in a rush, an eagerness that consumes your thoughts as you find yourself mindlessly taking a step towards the giant black goo. He then embraces you, pulling you closer, his mass surrounding you and eventually encapsulating you inside him. You are safe... Complete... Every missing piece of you has converged into a single being, giving you a sense of fulfillness. It is then that the process begins, the now joyful tyrant swirling around you as your body tingles with newfound strength. You feel like you could move a mountain on your own.";
 		say "     'Good, mortal... We are as we were meant to be.' His voice now speaks from your mind, along with your thoughts, and you cannot help but feel an extreme urge to masturbate. This lust that overtakes you is so unbearable that you touch yourself on spot, yearning for a blissful release to welcome the tyrant inside you. Every caress you give yourself is received with increased sensitivity, a pleasure so powerful your legs fall weak. You cannot help but soon arrive at your climax, [if Player is male]cumming hard and intensely[else]quivering in ecstasy[end if] for what seems like forever...";
 		WaitLineBreak;
 		say "     Them, you hear a laugh echoing in your mind, the same deep voice that once spoke from the outside. 'This is only a fraction of what I can give you. Keep our bond active and you will experience things beyond what your mortal mind could ever conceive on its own... And no one will ever dare to try to stop you.'";
 		WaitLineBreak;
 		LineBreak;
-		say "     (The Fallen King has joined you as a symbotic darkness and is now a possible ally! You can make him your active ally by typing [bold type][link]ally Dark Tyrant[end link][roman type] or [bold type][link]ally symbiotic darkness[end link][roman type] and initiate sex with him while active by typing [bold type][link]fuck Fallen King[end link][roman type]. You can see all the allies you have with the [bold type][link]allies[end link][roman type] command. Allies will lower the XP you gain from battle, but can gain levels themselves to be more useful in a scrap. Want to get rid of an ally? Use [bold type][link]ally dismiss[end link][roman type], or just [bold type][link]dismiss[end link][roman type])[line break]";
+		say "     (The Fallen King has joined you as a symbotic darkness and is now a possible ally! You can make him your active ally by typing [link][bold type]ally Dark Tyrant[roman type][end link] or [link][bold type]ally symbiotic darkness[roman type][end link] and initiate sex with him while active by typing [link][bold type]fuck Fallen King[roman type][end link]. You can see all the allies you have with the [link][bold type]allies[roman type][end link] command. Allies will lower the XP you gain from battle, but can gain levels themselves to be more useful in a scrap. Want to get rid of an ally? Use [link][bold type]ally dismiss[roman type][end link], or just [link][bold type]dismiss[roman type][end link])[line break]";
 		say "     (The symbiotic darkness is an unique type of companion. Summoning him will boost all your stats, while dismissing him will cancel its effects. Additionally, while active, the Dark Tyrant will reinforce your attacks in a drastically more reliable way than any other companion, but deals significantly less damage, while starting at a higher level by default. Increasing his level will upgrade his unique ability, Aura of Darkness, which will boost your stats even further.)";
 		add "Tamed" to Traits of symbiotic darkness;
 		now symbiotic darkness is tamed;
@@ -253,12 +252,10 @@ to say FallenKingTalkSymbiosis:
 		now Fallen King is nowhere;
 		now Intelligence of Fallen King is 5;
 	else:
+		LineBreak;
 		say "     You choose to tell him that you do not think you are ready to do such a thing. He gives you an understanding nod and says no more, instead retracting from your arm and taking a step back. 'Perhaps some time later, then. I do not wish to pressure you into this matter. Take your time, but know that it is inevitable. Sooner or later... We will be only one.'";
 
 Section 2-2 - Fallen King Sex Menu
-
-instead of fucking Fallen King:
-	say "[SexWithFallenKing]";
 
 to say SexWithFallenKing:
 	project figure of DarkTyrant_icon;
@@ -293,30 +290,30 @@ to DarkTyrantSexMenuContinue:
 		[]
 		choose a blank row in table of fucking options;
 		now title entry is "Grab and worship that massive cock";
-		now sortorder entry is 2;
+		now sortorder entry is 3;
 		now description entry is "He has totally been asking for it, right";
 		[]
 		if Intelligence of Fallen King >= 3 and "Given Dark Embrace" is listed in traits of Fallen King:
 			choose a blank row in table of fucking options;
 			now title entry is "Let him get inside you";
-			now sortorder entry is 3;
+			now sortorder entry is 5;
 			now description entry is "Have him temporarily inside your body";
 		[]
 	else:
 		choose a blank row in table of fucking options;
 		now title entry is "Let him feel and touch you";
-		now sortorder entry is 1;
+		now sortorder entry is 2;
 		now description entry is "Let yourself be at his mercy";
 		[]
 		choose a blank row in table of fucking options;
 		now title entry is "Have him in his former black goo form and worship his cock";
-		now sortorder entry is 2;
+		now sortorder entry is 4;
 		now description entry is "You would love a hung goo lover right now, so why not ask him, in name of the good memories";
 		[]
 		if hunger of player >= 50 or "Automatic Survival" is listed in feats of Player:
 			choose a blank row in table of fucking options;
 			now title entry is "Have him... feed you?";
-			now sortorder entry is 3;
+			now sortorder entry is 6;
 			now description entry is "You feel an odd urge to let him in you. Go forward with it";
 	[]
 	sort the table of fucking options in sortorder order;
@@ -332,27 +329,26 @@ to DarkTyrantSexMenuContinue:
 			choose row calcnumber in table of fucking options;
 			say "[title entry]: [description entry]?";
 			if Player consents:
-				let nam be title entry;
 				now sextablerun is 1;
-				if (nam is "Walk into his embrace"):
-					say "[DarkTyrantSexEmbrace]";
-				else if (nam is "Grab and worship that massive cock"):
-					say "[DarkTyrantSexCockWorship]";
-				else if (nam is "Let him get inside you"):
-					say "[DarkTyrantSexSymbiosis]";
-				else if (nam is "Let him feel and touch you"):
-					say "[DarkTyrantSexEmbraceTamed]";
-				else if (nam is "Have him in his former black goo form and worship his cock"):
-					say "[DarkTyrantSexCockWorshipTamed]";
-				else if (nam is "Have him... feed you?"):
-					say "[DarkTyrantSexGooFeedTamed]";
-				wait for any key;
+				if title entry is:
+					-- "Walk into his embrace":
+						say "[DarkTyrantSexEmbrace]";
+					-- "Grab and worship that massive cock":
+						say "[DarkTyrantSexCockWorship]";
+					-- "Let him get inside you":
+						say "[DarkTyrantSexSymbiosis]";
+					-- "Let him feel and touch you":
+						say "[DarkTyrantSexEmbraceTamed]";
+					-- "Have him in his former black goo form and worship his cock":
+						say "[DarkTyrantSexCockWorshipTamed]";
+					-- "Have him... feed you?":
+						say "[DarkTyrantSexGooFeedTamed]";
 		else if calcnumber is 0:
 			now sextablerun is 1;
 			say "     You back off with your decision, which is greeted with sad disappointment.";
-			wait for any key;
 		else:
-			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options], or 0 to exit.";
+	wait for any key;
 	clear the screen and hyperlink list;
 
 to say DarkTyrantSexEmbrace:
@@ -370,19 +366,19 @@ to say DarkTyrantSexEmbrace:
 	say "     There is no way to resist what happens next, his gooey extensions beginning to intrude into your body, stretching your mouth open[if Player is female], spreading your pussy[end if] and invading your anus. You are thoroughly claimed from the outside and the inside as he presses his gooeyness deeper into you, feeling like at least [if Player is female]three[else]two[end if] really thick and monstrously long cocks were burying themselves deep inside you, without any resistance from your part. The way they wiggle like throbbing snakes drives you wild with lust more quickly than you can think this situation probably got out of hand, and everything feels so overwhelmingly good that you really do not think about it, at all.";
 	say "     The Dark Tyrant has just gotten started with you, fucking your every entrance with hungry extensions of himself while you are helplessly trapped inside him, feeling more like a wiggling thick body of jelly encapsulating and keeping you still while humping and stroking every inch of your body. He reaches deeper within you, as far as he can go, his many goo cocks claiming your insides like horny alpha males breeding you over and over again, triggering all your sweet and sensitive pleasure spots that you want you quiver and squirm inside the Tyrant. Moaning desperately out of all the overwhelming pleasure, your every movement is met with an impossibly thick gooey resistance that quickly drains all your strength.";
 	WaitLineBreak;
-	say "     He continues to push and pull his inner goo dicks against your entrances, fucking you mercilessly, while the one outside of him causes a deluge of its equivalent of precum in the form of dark goo all over the place. The giant gets so excited that you think he seems to [']cum['] into you, and you feels your insides bloat and swell with warm liquid, quickly making you feel like you just came out of a royal feast with a stomach [if Player is female]and womb[end if] so full you think you won't be able to move for a while. As you body reaches its maximum capacity, his extensions stop moving, but they do not remove themselves, and continue to stimulate until your hit your first climax, your [if Player is male]man[end if] juices feeding the Tyrant's body generously. The pleasure is so intense you are left weak and trembling...";
+	say "     He continues to push and pull his inner goo dicks against your entrances, fucking you mercilessly, while the one outside of him causes a deluge of its equivalent of precum in the form of dark goo all over the place. The giant gets so excited that you think he seems to [']cum['] into you, and you feels your insides bloat and swell with warm liquid, quickly making you feel like you just came out of a royal feast with a stomach [if Player is female]and womb [end if]so full you think you won't be able to move for a while. As you body reaches its maximum capacity, his extensions stop moving, but they do not remove themselves, and continue to stimulate until your hit your first climax, your [if Player is male]man [end if]juices feeding the Tyrant's body generously. The pleasure is so intense you are left weak and trembling...";
 	say "     You'd think he would let you go once he had given you an orgasm like this, but he keeps you still inside him, pressing his gooey appendages [italic type]even[roman type] deeper and wiggling them wildly, quickly causing your second orgasm to hit you like a truck, your [if Player is male]balls producing and pumping more and more cum[else if Player is female]pussy moistening and dripping more of your love juices[end if] as he continues yet fucking all your available holes without mercy. You cannot tell him it is enough, nor that you cannot handle any more, and your biological limiters do not seem to be working as you are yet thrown into a third orgasm, following disturbingly quickly after your last.";
 	WaitLineBreak;
 	say "     He milks you for everything he can take from you for hours and hours and only leaving you with an overwhelming ecstasy and joyful pleasure you cannot humanly withstand, and at some point, you lose your senses and black out as only your subconscious remains, still letting you know that you are feeling so good you do not want to leave the Dark Tyrant's warm embrace, ever... as these motions repeat themselves in your body and mind endlessly, torturing you with subsequently infinite orgasms as your body is pushed beyond its limits...";
-	WaitLineBreak;
 	follow the turnpass rule;
 	follow the turnpass rule;
+	AttemptToWait;
 	say "     You wake up, very dizzy and soaked in black goo, which is... absolutely everywhere, dripping from the ceiling and making a pool in the room with at least a couple of inches of depth. Your movements are free, but all this dark goo feels so comforting and warm you struggle to tell yourself that you need to get up. In your mind, a dark voice whispers the words [']thank you['], and you look around to see if the Dark Tyrant is still around, but he is gone by now. Your legs are shaking and you can barely stand, but you manage to get out of the goo flooded room and back to the safety of the Club. To your dismay, you feel you still haven't been fully satisfied[if Player is male], as you realize you still have an erection standing solidly between your legs[end if], even after what you just went through.";
 	NPCSexAftermath Player receives "OralCock" from Fallen King;
 	NPCSexAftermath Player receives "AssFuck" from Fallen King;
 	if Player is female:
 		NPCSexAftermath Player receives "PussyFuck" from Fallen King;
-	increase Libido of Player by 50;
+	raise Player Libido by 50;
 	if "Strong Psyche" is listed in feats of Player:
 		SanLoss 10;
 	else if "Weak Psyche" is listed in feats of Player:
@@ -413,12 +409,12 @@ to say DarkTyrantSexCockWorship:
 	say "     His slit continues to leak all that sticky goo at every second, but somehow, you can sense that he is close. His legs have moved under your body in a morphed gooey shape to support your current seating place, and you are free to hug his glans and feast on the sensitive gooey flesh. Without hesitating, you do so, and give him your best oral skills at licking his gigantic penis head, using your hands for additional stimulation as it continues to throb without cease. Eventually, it begins to shake and tremble with a lot of force, and literally seconds after, your entire world is an avalanche of cum-like goo drenching and burying you down under a tsunami of it, each shot causing a massive throb on his cock that you can definitely feel!";
 	WaitLineBreak;
 	say "     More morphing happens all over you as you feel your body being carried around, and the still perpetually hard dick ends up on top to you. The giant has placed you on top of his abs as the tip of his huge manhood rests against your chest, with just enough warm goo oozing on top of your body, this one feeling pleasantly warm and relaxing, as it must have been the last drops of his orgasm. You can still rub it, and it will still leak more and more, and everything else can still happen again and again... but you are exhausted, so the giant simply leaves you be, enjoying your company as you fall into a slumber.";
-	WaitLineBreak;
 	follow the turnpass rule;
 	follow the turnpass rule;
+	AttemptToWait;
 	say "     You wake up, very dizzy and soaked in black goo, which is... absolutely everywhere, dripping from the ceiling and making a pool in the room with at least a couple of inches of depth. Your movements are free, but all this dark goo feels so comforting and warm you struggle to tell yourself that you need to get up. In your mind, a dark voice whispers the words [']thank you['], and you look around to see if the Dark Tyrant is still around, but he is gone by now. Your legs are shaking and you can barely stand, but you manage to get out of the goo flooded room and back to the safety of the Club. To your dismay, you feel you still haven't been fully satisfied[if Player is male], as you realize you still have an erection standing solidly between your legs[end if], even after what you just went through.";
 	NPCSexAftermath Player receives "OralCock" from Fallen King;
-	increase Libido of Player by 50;
+	raise Player Libido by 50;
 	if "Strong Psyche" is listed in feats of Player:
 		SanLoss 10;
 	else if "Weak Psyche" is listed in feats of Player:
@@ -439,7 +435,7 @@ to say DarkTyrantSexSymbiosis:
 		say "     Now that you are acquainted with this technique and found it rather pleasurable, you ask the dark giant if he would like to perform a dark symbiosis once more. 'It is my pleasure to take on your offer, mortal' he replies, crouching down in front of you, his erection almost bumping on you, though he carefully makes space for himself by beckoning you to step back. He then stretches his hand towards you and you give him yours, placing your palm on his before dark goo begins to engulf your arm.";
 	WaitLineBreak;
 	say "     Rather than pushing you into him, the goo goes to you, swirling around your skin like a consuming aura that was about to hurl you into darkness, but the process delivers plenty of tiny warm stings throughout your pores as you feel like it is taking over you, somehow. Pleasure is undeniable as it surrounds you, the giant now turned into a mass of flowing blackness around you, and within a minute, you feel it sort of merging with your body. You can feel it as your own skin, the goo around you following your movements, every motion you make, as if you were the Dark Tyrant himself, except... you are still you. His voice whispers in your mind like a second consciousness, tempting you to explore your new body.";
-	say "     'This is rather enjoyable, mortal [if Intelligence of Fallen King is 4]. I knew you were special...' He says, with newfound intelligence[else]. I hope we can continue to do this.' He says, after completely settling in within you, once more[end if]. It is as if your relationship with one another had deepened in such a way that you feel like you were one and one only. Looking over yourself, you appear to be a tall, musclebound black goo monster, much like the Tyrant himself, except not as gigantic and with a big cock that dandles softly, yet heavily, between your thighs. 'We are perfect together, you and I. You complement me, and I grant you mighty greatness. Let us enjoy each other.'";
+	say "     'This is rather enjoyable, mortal. I [if Intelligence of Fallen King is 4]knew you were special...' he says, with newfound intelligence[else]hope we can continue to do this,' he says, after completely settling in within you, once more[end if]. It is as if your relationship with one another had deepened in such a way that you feel like you were one and one only. Looking over yourself, you appear to be a tall, musclebound black goo monster, much like the Tyrant himself, except not as gigantic and with a big cock that dandles softly, yet heavily, between your thighs. 'We are perfect together, you and I. You complement me, and I grant you mighty greatness. Let us enjoy each other.'";
 	WaitLineBreak;
 	say "     A mix of lust and curiosity takes over you as your hands, almost with a mind of their own, begin to rub all over your new body, caressing your bulging muscles and feeling up your slick gooey skin. The cock between your legs is quick to harden as you fondle your chest, run your fingers down your abs and, finally, join your hands around that soon to be throbbing shaft. You can feel it, yearning for your attention as it only grows, bigger and meaner, a dick you would need at least four hands the size of yours to fully cover its length. The pair of hanging nuts underneath your dark member weighs heavily, as your orbs fill with the anticipation of a powerful release. You feel powerful, durable, virile... And invincible.";
 	say "     Keeping one hand over your chest, you stroke that impressive member of yours with the other, giving in to the lust that begs for your full focus. Each time you rub at that wet tip, a glob of goo precum drops at your feet, and you can feel the pleasure of your companion doubling your own, truly as if you were the same individual. The form he bestowed you fits better and better as you thoroughly enjoy the blissfulness it provides, and the more you embrace it, the better it all feels. 'Enjoying my form, mortal? Think of the things we could do together... We would be... Unstoppable.' The Tyrant speaks still in your mind, your erection growing bigger and harder as you jerk off, even your muscles seem to grow slightly larger as he lingers within you.";
@@ -466,13 +462,13 @@ to say DarkTyrantSexEmbraceTamed:
 	say "     There is no way to resist what happens next, his gooey extensions beginning to intrude into your body, stretching your mouth open[if Player is female], spreading your pussy[end if] and invading your anus. You are thoroughly claimed from the outside and the inside as he presses his gooeyness deeper into you, feeling like at least [if Player is female]three[else]two[end if] really thick and monstrously long cocks were burying themselves deep inside you, without any resistance from your part. The way they wiggle like throbbing snakes drives you wild with lust more quickly than you can think this situation probably got out of hand, and everything feels so overwhelmingly good that you really do not think about it, at all.";
 	say "     The Dark Tyrant has just gotten started with you, fucking your every entrance with hungry extensions of himself while you are helplessly trapped inside him, feeling more like a wiggling thick body of jelly encapsulating and keeping you still while humping and stroking every inch of your body. He reaches deeper within you, as far as he can go, his many goo cocks claiming your insides like horny alpha males breeding you over and over again, triggering all your sweet and sensitive pleasure spots that you want you quiver and squirm inside the Tyrant. Moaning desperately out of all the overwhelming pleasure, your every movement is met with an impossibly thick gooey resistance that quickly drains all your strength.";
 	WaitLineBreak;
-	say "     He continues to push and pull his inner goo dicks against your entrances, fucking you mercilessly, while the one outside of him causes a deluge of its equivalent of precum in the form of dark goo all over the place. The giant gets so excited that you think he seems to [']cum['] into you, and you feels your insides bloat and swell with warm liquid, quickly making you feel like you just came out of a royal feast with a stomach [if Player is female]and womb[end if] so full you think you won't be able to move for a while. As you body reaches its maximum capacity, his extensions stop moving, but they do not remove themselves, and continue to stimulate until your hit your first climax, your [if Player is male]man[end if] juices feeding the Tyrant's body generously. The pleasure is so intense you are left weak and trembling...";
+	say "     He continues to push and pull his inner goo dicks against your entrances, fucking you mercilessly, while the one outside of him causes a deluge of its equivalent of precum in the form of dark goo all over the place. The giant gets so excited that you think he seems to [']cum['] into you, and you feels your insides bloat and swell with warm liquid, quickly making you feel like you just came out of a royal feast with a stomach [if Player is female]and womb [end if]so full you think you won't be able to move for a while. As you body reaches its maximum capacity, his extensions stop moving, but they do not remove themselves, and continue to stimulate until your hit your first climax, your [if Player is male]man [end if]juices feeding the Tyrant's body generously. The pleasure is so intense you are left weak and trembling...";
 	say "     You'd think he would let you go once he had given you an orgasm like this, but he keeps you still inside him, pressing his gooey appendages [italic type]even[roman type] deeper and wiggling them wildly, quickly causing your second orgasm to hit you like a truck, your [if Player is male]balls producing and pumping more and more cum[else if Player is female]pussy moistening and dripping more of your love juices[end if] as he continues yet fucking all your available holes without mercy. You cannot tell him it is enough, nor that you cannot handle any more, and your biological limiters do not seem to be working as you are yet thrown into a third orgasm, following disturbingly quickly after your last.";
 	WaitLineBreak;
 	say "     He milks you for everything he can take from you for hours and hours and only leaving you with an overwhelming ecstasy and joyful pleasure you cannot humanly withstand, and at some point, you lose your senses and black out as only your subconscious remains, still letting you know that you are feeling so good you do not want to leave the Dark Tyrant's warm embrace, ever... as these motions repeat themselves in your body and mind endlessly, torturing you with subsequently infinite orgasms as your body is pushed beyond its limits...";
-	WaitLineBreak;
 	follow the turnpass rule;
 	follow the turnpass rule;
+	AttemptToWait;
 	say "     This seems to go on for hours and hours, your pleasure prolonged for a considerable amount of time until your dark companion begins to retreat. 'This was very fun, mortal... We could continue to do this, but I sense you might need a break. Your puny flesh would not endure my endless pleasure before your mind broke.' His voice echoes in your mind as your body begins to calm down, now free of the blackness['] embrace and back to being free to move.";
 	NPCSexAftermath Player receives "OralCock" from Fallen King;
 	NPCSexAftermath Player receives "AssFuck" from Fallen King;
@@ -490,9 +486,9 @@ to say DarkTyrantSexCockWorshipTamed:
 	say "     His slit continues to leak all that sticky goo at every second, but somehow, you can sense that he is close. His legs have moved under your body in a morphed gooey shape to support your current seating place, and you are free to hug his glans and feast on the sensitive gooey flesh. Without hesitating, you do so, and give him your best oral skills at licking his gigantic penis head, using your hands for additional stimulation as it continues to throb without cease. Eventually, it begins to shake and tremble with a lot of force, and literally seconds after, your entire world is an avalanche of cum-like goo drenching and burying you down under a tsunami of it, each shot causing a massive throb on his cock that you can definitely feel!";
 	WaitLineBreak;
 	say "     More morphing happens all over you as you feel your body being carried around, and the still perpetually hard dick ends up on top of you. The giant has placed you on top of his abs as the tip of his huge manhood rests against your chest, with just enough warm goo oozing on top of your body, this one feeling pleasantly warm and relaxing, as it must have been the last drops of his orgasm. You can still rub it, and it will still leak more and more, and everything else can still happen again and again... but you are exhausted, so the giant simply leaves you be, enjoying your company as you fall into a slumber.";
-	WaitLineBreak;
 	follow the turnpass rule;
 	follow the turnpass rule;
+	AttemptToWait;
 	say "     You seem to have slept on for hours and hours, your dark companion providing you all the comfort you needed for the duration of your nap. 'This was very fun, mortal... We could continue to do this, but I sensed you might have needed a break, since you have fallen asleep on top of me. Your puny flesh would not endure my endless pleasure before your mind broke.' You then get up from him and allow the Tyrant to return to his less active state, inhabiting your shadow once more as you get ready to carry on with your day.";
 	NPCSexAftermath Player receives "OralCock" from Fallen King;
 

@@ -27,13 +27,13 @@ ResolveFunction of Hungry Piggy is "[ResolveEvent Hungry Piggy]".
 
 to say ResolveEvent Hungry Piggy:
 	if hbmr is 0:
-		say "While exploring the city, you stumble upon an odd sight in the basement of one of the buildings. A water pipe must have burst at some point, because the floor of the entire room is covered in mud. What's even stranger is that it looks like someone is living down here despite all the mud.[line break][line break]You spot a strange boar man rolling in the mud on the floor. He's enjoying himself so much that it takes him awhile to realize that someone is in the room. When he finally does, he stares at you with his beady pig eyes for a moment. Not knowing if he's friendly or not, you mentally brace yourself for a fight.[line break][line break]You relax a little when he smiles and says, 'Hello there! My name is Philip. Don't worry, I'm not like those other creatures that are roaming the streets, humping everything in sight. I am really hungry though, could you please FEED me?'";
-		increase hbmr by 1;
+		say "While exploring the city, you stumble upon an odd sight in the basement of one of the buildings. A water pipe must have burst at some point, because the floor of the entire room is covered in mud. What's even stranger is that it looks like someone is living down here despite all the mud.[line break][line break]You spot a strange boar man rolling in the mud on the floor. He's enjoying himself so much that it takes him a while to realize that someone is in the room. When he finally does, he stares at you with his beady pig eyes for a moment. Not knowing if he's friendly or not, you mentally brace yourself for a fight.[line break][line break]You relax a little when he smiles and says, 'Hello there! My name is Philip. Don't worry, I'm not like those other creatures that are roaming the streets, humping everything in sight. I am really hungry though, could you please FEED me?'";
+		now hbmr is 1;
+		WaitLineBreak;
 		move player to Pig Pen;
 		AddNavPoint Pig Pen;
 		increase the score by 1;
 		now Hungry Piggy is Resolved;
-
 
 Section 2 - Pig Pen
 
@@ -42,12 +42,8 @@ Object	Name
 Pig Pen	"Pig Pen"
 
 Pig Pen is a room. It is fasttravel. It is private.
-
-Description of Pig Pen is "Not a literal pig pen, a basement actually. The floor is covered in a thick layer of mud. It seems whomever lives here is well stocked with small bottles of water, but there is no food anywhere, just a bunch of empty wrappers. There is a foul odor in the air.".
-
-instead of sniffing Pig Pen:
-	say "This place smells like a sty. Oh... wait... yeah.";
-
+Description of Pig Pen is "     Not a literal pig pen, a basement actually. The floor is covered in a thick layer of mud. It seems whomever lives here is well stocked with small bottles of water, but there is no food anywhere, just a bunch of empty wrappers. There is a foul odor in the air.[line break]".
+Scent of Pig Pen is "     This place smells like a sty. Oh... wait... yeah.".
 
 Section 3 - Philip the Piggy
 
@@ -64,6 +60,7 @@ Philip	"Philip"
 Philip	"philip"
 
 Philip is a man.
+Philip is in Pig Pen.
 [Physical details as of game start]
 ScaleValue of Philip is 3. [human sized]
 SleepRhythm of Philip is 0. [0 - awake at all times, 1 - day active, 2 - night active]
@@ -90,9 +87,11 @@ AnalVirgin of Philip is true.
 PenileVirgin of Philip is true.
 SexuallyExperienced of Philip is false.
 MainInfection of Philip is "Messy Pig".
-Description of Philip is "This creature is almost a complete pig, the only thing human about it is the fact that it is standing on two legs that end in hoofs instead of feet. He is extremely fat with a bald head, floppy ears, and an upturned nose. Flies are constantly buzzing around him, enticed by his foul odor. He has a huge, flabby gut that hangs half way over his crotch, but not far enough to hide a pig cock that is the size of a forearm. Past his cock is a pair of large swollen balls. He seems to take great delight in rolling around in the mud on the floor[if Philip is in Large Shed]. He's made a mudhole of his own in one corner of the large shed by breaking a hole in the wall and cracking a pipe. He spends much of his time lounging in it[end if]. Looking at all the mud, the idea of [bold type]wrestling[roman type] with Philip in it just springs to your mind all of its own.".
-Philip is in Pig Pen.
-Conversation of Philip is { "Oink!" }.
+Description of Philip is "     This creature is almost a complete pig, the only thing human about it is the fact that it is standing on two legs that end in hoofs instead of feet. He is extremely fat with a bald head, floppy ears, and an upturned nose. Flies are constantly buzzing around him, enticed by his foul odor. He has a huge, flabby gut that hangs half way over his crotch, but not far enough to hide a pig cock that is the size of a forearm. Past his cock is a pair of large swollen balls. He seems to take great delight in rolling around in the mud on the floor[if Philip is in Large Shed]. He's made a mudhole of his own in one corner of the large shed by breaking a hole in the wall and cracking a pipe. He spends much of his time lounging in it[end if]. Looking at all the mud, the idea of [bold type]wrestling[roman type] with Philip in it just springs to your mind all of its own.[line break]".
+[Conversation of Philip is { "Oink!" }.]
+the fuckscene of Philip is "[sexwithphilip]".
+Scent of Philip is "     Philip has the strong scent of a male hog[if pigfucked > 3]. You've become quite used to his musky scent and find it quite arousing now[end if].".
+the linkaction of Philip is "Possible Actions: [link]talk[as]talk Philip[end link], [link]smell[as]smell Philip[end link], [link]fuck[as]fuck Philip[end link], [link]feed[as]feed Philip[end link], [link]wrestle[as]wrestle Philip[end link][line break]".
 
 [[or]'How did I end up like this? Some jerk zapped me with a strange ray gun that turned me into this.';]
 
@@ -143,16 +142,16 @@ to say PhilipTalkMenu:
 			choose row calcnumber in table of fucking options;
 			say "[title entry]: [description entry]?";
 			if Player consents:
-				let nam be title entry;
 				now sextablerun is 1;
-				if (nam is "Himself"):
-					say "[PhilipTalkHimself]";
-				if (nam is "His transformation"):
-					say "[PhilipTalkTransformation]";
-				if (nam is "Become more piggy-like"):
-					say "[PhilipTalkTF]";
-				if (nam is "Phi Iota Gamma initiation"):
-					say "[PhilipTalkPIG]";
+				if title entry is:
+					-- "Himself":
+						say "[PhilipTalkHimself]";
+					-- "His transformation":
+						say "[PhilipTalkTransformation]";
+					-- "Become more piggy-like":
+						say "[PhilipTalkTF]";
+					-- "Phi Iota Gamma initiation":
+						say "[PhilipTalkPIG]";
 				wait for any key;
 				if PhilipDoneTalking is false:
 					say "[PhilipTalkMenu]"; [looping back to keep talking with him]
@@ -161,7 +160,7 @@ to say PhilipTalkMenu:
 			say "     You let Philip resume whatever he is doing as you excuse yourself and leave him.";
 			wait for any key;
 		else:
-			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options], or 0 to exit.";
 	clear the screen and hyperlink list;
 
 to say PhilipTalkHimself:
@@ -175,33 +174,29 @@ to say PhilipTalkTransformation:
 to say PhilipTalkTF:
 	say "     Having taken a liking for Philip's [']studly physique['], you wonder if it would be possible for you to share some similarities. In other words, you ask him if he can make you look more like him. It might be the first time you see the big pig jump out of his usual resting spot and move so fast towards you, eagerness visible in his body motions. 'Really?! You want some of this meat on you?' he asks, grabbing his gut and raising it before letting go, his whole fatness jiggling with the momentum. He then puts his big arm around you and gives [italic type]you[roman type] a generous rub all over your body. 'I'm sure you'd look really sexy as a sow... But there are options, depending on what you [']take['] from me...'";
 	say "     Surprisingly carefully, he explains the differences between two of the results you can obtain from him. 'I guess you'd get to be [bold type]more like me if you got some of my fur[roman type]... But if you really want to aim for that [bold type]sow look, maybe you should drink something more creamy[roman type]... Y'know.' he says, leaning back just enough for you to be able to see past his big gut, as he massages his own balls that seem full of what he's talking about. 'I know I'd prefer the latter, but since you've been feeding me well and keeping me safe, I'll let you choose.' he adds, and you can see his rather sizable boar cock twitching as it raises towards a near erection.";
-	WaitLineBreak;
 	if Player is submissive:
+		WaitLineBreak;
 		say "     [italic type]You really have a hard time resisting his advances, your mind being so close to automatically pick the cum option and just make you kneel in front of him, giving him the greatest blowjob you possibly could and swallow all of that pig cum in the end, letting that tasty creamy seed turn into the sexiest sow just for him and his pleasure... But fortunately, you manage to get a grip of yourself. Barely, though. And the thought still lingers in your mind... He would really like that, wouldn't he?[roman type][line break]";
 		SanLoss 5;
-		WaitLineBreak;
-	say "     [bold type]What will you pick for your change attempt?[roman type][line break]";
+	say "[line break]     [bold type]What will you pick for your change attempt?[roman type][line break]";
 	say "     [link](1)[as]1[end link] - His fur.";
 	say "     [link](2)[as]2[end link] - His cum, right from the tap. Quite eagerly.";
 	say "     [link](3)[as]3[end link] - His cum, but hand him a bottle.";
 	say "     [link](4)[as]4[end link] - Actually, nothing for now.";
 	now calcnumber is 0;
 	while calcnumber < 1 or calcnumber > 4:
-		say "Choice? (1-3)>[run paragraph on]";
+		say "Choice? (1-4)> [run paragraph on]";
 		get a number;
-		if calcnumber is 1 or calcnumber is 2 or calcnumber is 3 or calcnumber is 4:
-			break;
-		else:
+		if calcnumber < 1 or calcnumber > 4:
 			say "Invalid choice. Type [link]1[end link] to pick his fur or [link]2[end link] to drink some cum directly off his dick or [link]3[end link] to ask for some bottled cum instead or [link]4[end link] to go back with your request.";
+	LineBreak;
 	if calcnumber is 1: [his fur]
-		LineBreak;
-		say "     You decided that you want a safer approach and go with his own strain, which means his fur. He doesn't look too disappointed, but you know he would prefer something else. 'Alright.' he says, as he goes grab something sharp enough to cut some of his short pig fur and hand it to you. 'Handle it carefully, a little breeze could send it all flying. Best you use it now... Just a suggestion, *oink!* of course...' As he finishes speaking, you collect his offering and thank him for it. 'It was nothing. You can pay me later, in food or something else. Like offering yourself to be my [if Player is male]sowboy once you're looking studly like me[else]sow once you're a sexy pig lady[end if].' he winks and grins, before he returns to his corner.";
+		say "     You decided that you want a safer approach and go with his own strain, which means his fur. He doesn't look too disappointed, but you know he would prefer something else. 'Alright.' he says, as he goes grab something sharp enough to cut some of his short pig fur and hand it to you. 'Handle it carefully, a little breeze could send it all flying. Best you use it now... Just a suggestion, *oink!* of course...' As he finishes speaking, you collect his offering and thank him for it. 'It was nothing. You can pay me later, in food or something else. Like offering yourself to be my [if Player is male]sowboy once you're looking studly like me[else]sow once you're a sexy pig lady[end if],' he winks and grins, before he returns to his corner.";
 		ItemGain piggy fur by 1;
 	else if calcnumber is 2: [his cum, from a blowjob]
 		if lastfuck of Philip - turns < 6:
 			say "     What better way there is to drink some cum if not from a blowjob? Philip agrees, but that's all teasing from him. 'I knew you'd pick that option. Unfortunately, I'm still drained from last time we fucked, so maybe we should do this another time. My load has to be especially big for it to take the desired effect, you see...' Sad that this was the outcome, you understand that you have to wait a bit more until he can get into action again.";
 		else:
-			LineBreak;
 			say "     What better way there is to drink some cum if not from a blowjob? Besides, his junk looks so plump and tasty by now, as he didn't stop caressing it while you were unawarely staring at it. Or perhaps you wanted to look at those large hanging balls as his cock kept on getting harder... a big fat boar cock rising to attention as it throbs every other second. Your mouth is watering at the thought, and his large hand pig hand brushes your cheek while he pulls you closer to his large body. 'How about I give you a huge load? The biggest one... and have you swallow every drop?' he teases you, his words sounding like a blissful lullaby to your ears... 'And as a payment, you suck me off like a good little sow. Because that's what you'll be doing all the time once you turn into this sexy, big and beautiful pig slut.'";
 			say "     You look at him with all the eagerness to just drop down to your knees, and he allows you once you're literally squirming with the need to stuff your mouth with his boar meat. Now facing his hard-on, you eagerly lean your head over to taste his shaft as his hand plants itself on the back of your head, pulling you to him with as much vigor as the desire you have. Rapidly, you shove his cock past your lips, sucking on the big and fat rod that pulses with desire, leaking precum onto your tongue with each caress you give. The horny pigman puts his other hand on your head and leads you back and forth on his shaft, taking it deep in your throat with each powerful thrust. You can feel his heavy balls swinging heavily against your chin, as well, plump and full...";
 			WaitLineBreak;
@@ -209,10 +204,9 @@ to say PhilipTalkTF:
 			say "     Barely with a warning, the horny boar unleashes an enormous torrent of cum just exploding in your mouth, covering every bit and corner of your oral insides with creamy boar cum, your only option to drink it all. Audibly gulping down his load, Philip keeps on feeling the encouragement to pump out just a bit more, grunting through the whole process as he continues to feed you his precious seed. His hands remain planted on the back of your head with a tight grip, not letting you go until his climax gives signs of subsiding, making you nearly run out of breath. The piggy musk around his crotch made you dizzy enough, and now with a belly full of pig cum, you can only think of taking a nap. 'You missed a drop.' he says, a thick droplet of spunk still hanging from his slit, which you immediately proceed to lick clean.";
 			WaitLineBreak;
 			say "     'Good [boygirl]. You make a good sow.' he sends the compliment, patting your head as if you were a puppy, then retreating to his corner once the job is done. You feel really sleepy, perhaps you should take a little power nap until some energy returns to you...";
-			infect "Messy Pig";
 			NPCSexAftermath Player receives "OralCock" from Philip;
+			infect "Messy Pig";
 	else if calcnumber is 3: [his cum, from a bottle]
-		LineBreak;
 		if lastfuck of Philip - turns < 6:
 			say "     Wanting to become more of a sow but without having to get dirty, you suggestively hand Philip a bottle before you say you want some of his cum. 'What?! Are you serious? We just fucked a while ago, and you're asking me to cum into a bottle?! Not only I'm drained from that yet, but I think that's very... *oink!* *snort!* unthoughtful of you! I figured if you rubbed me for a while, I'd get enough in my balls to pump a good load...' he exclaims, clearly disappointed at your choice. 'Whatever, if you really want some bottled cum, come back later once I've got my balls full again.' he finishes, moving back to his corner slightly annoyed. You should not worry, this is temporary.";
 		else:
@@ -220,7 +214,6 @@ to say PhilipTalkTF:
 			say "     Some short minutes after, you hear him say 'It's done!' before you walk back to the shed. 'Here.' he says, handing you a quite messy, and very full, bottle of his own cum. 'Make sure you drink it all to maximize its effects. To the last drop. And lick the interior. You gotta stick your tongue reeeeally deep in there to get everything. Don't stop until it's all clean and shiny again, got it?' While his recommendation seems rather appropriate for the cause, that will be your call in the end. Philip gives you a pat on the shoulder before he returns to his corner.";
 			ItemGain piggy cum by 1;
 	else if calcnumber is 4: [nothing]
-		LineBreak;
 		say "     You decide to not go any further with this plan, and tell Philip that you'll give him an answer later. 'Oh... alright...' he oinks sadly as he lets go of you, returning to his corner. 'I'll be waiting to feed you later, then...' the pig man teases you a bit more, giving his cock and balls another visible stroke in front of you, grinning all the time, which makes you wonder how much exactly he would like if you took his offer. Perhaps a lot, but this time, it is your call.";
 	now PhilipDoneTalking is true;
 
@@ -228,11 +221,10 @@ to say PhilipTalkPIG:
 	if Player is in large shed:
 		say "     Deciding to give it a shot, you ask Philip if he knows anything about the Phi Iota Gamma fraternity you encountered. 'Ahhh, the mighty Phi Iota Gamma... *oink* *snort* ...those were the days. I was the frat's mud wrestling champ. How do you think I got to be good? Mmm... I miss the ole mudhole. We had some really good parties. I wonder how the place is doing these days...' he muses, rubbing his roly-poly belly.";
 		say "     Seeing your opportunity, you tell him that it seems to be doing really well, just having had a really wild party the other day. Plenty of beer, lots of horny sows, all still there and having a good time. You add that you'd wanted to check it out, but they'd said it was for frat brothers only.";
+		WaitLineBreak;
 		say "     He nods at this. 'Yeah, them's the rules,' he mutters, clearly already thinking of the prospect of beer and sows. 'Ain't nothing saying I can't go though. You can be my guest and we can get you initiated into the mighty Phi Iota Gamma.' He wraps his big arm around you and hugs you to his muddy body, grinning merrily and oinking up a storm as the requisite response.";
 		say "     Having gotten just what you'd wanted, you get Philip on the move before his enthusiasm fades into lethargy. 'Here, I'll teach you the secret handshake on the way. Now normally it takes a while for a freshman like you to be inducted into the frat, but with me there to sponsor you, you'll be a shoe-in.'";
-		WaitLineBreak;
-		say "     [bold type]Would you like to proceed with the initiation into Phi Iota Gamma? Things might get piggy![roman type][line break]";
-		LineBreak;
+		say "[line break]     [bold type]Would you like to proceed with the initiation into Phi Iota Gamma? Things might get piggy![roman type][line break]";
 		say "     ([link]Y[as]y[end link]) - Yes (beware of infection).";
 		say "     ([link]N[as]n[end link]) - No.";
 		if Player consents:
@@ -243,11 +235,10 @@ to say PhilipTalkPIG:
 	else if piginitiation is 3 and Philip is in large shed and Player is not neuter:
 		say "     Deciding to bring up his old fraternity again now that he's fed and safe, you get a much better response from the big piggy. 'Those were some good times back with the guys at the mighty Phi Iota Gamma,' he says with a series of loud oinking at the end. 'Mmm... I miss the ole mudhole. We had some really good parties. I wonder how the place is doing these days...' he muses, rubbing his roly-poly belly.";
 		say "     Seeing your opportunity, you tell him that it seems to be doing really well, just having had a really wild party the other day. Plenty of beer, lots of horny sows, all still there and having a good time. You add that you'd wanted to check it out, but they'd said it was for frat brothers only.";
+		WaitLineBreak;
 		say "     He nods at this. 'Yeah, them's the rules,' he mutters, clearly already thinking of the prospect of beer and sows. 'Ain't nothing saying I can't go though. You can be my guest and we can get you initiated into the mighty Phi Iota Gamma.' He wraps his big arm around you and hugs you to his muddy body, grinning merrily and oinking up a storm as the requisite response.";
 		say "     Having gotten just what you'd wanted, you get Philip on the move before his enthusiasm fades into lethargy. 'Here, I'll teach you the secret handshake on the way. Now normally it takes a while for a freshman like you to be inducted into the frat, but with me there to sponsor you, you'll be a shoe-in.'";
-		WaitLineBreak;
-		say "     [bold type]Would you like to proceed with the initiation into Phi Iota Gamma? Things might get piggy![roman type][line break]";
-		LineBreak;
+		say "[line break]     [bold type]Would you like to proceed with the initiation into Phi Iota Gamma? Things might get piggy![roman type][line break]";
 		say "     ([link]Y[as]y[end link]) - Yes (beware of infection).";
 		say "     ([link]N[as]n[end link]) - No.";
 		if Player consents:
@@ -261,26 +252,11 @@ to say PhilipTalkPIG:
 		if piginitiation is 2:
 			now piginitiation is 3;
 
-the fuckscene of Philip is "[sexwithphilip]".
-
-instead of sniffing Philip:
-	say "Philip has the strong scent of a male hog[if pigfucked > 3]. You've become quite used to his musky scent and find it quite arousing now[end if].";
-
-
 Section 4 - Feeding/Wrestling the Piggy
 
-the linkaction of Philip is "Possible Actions: [link]talk[as]talk Philip[end link], [link]smell[as]smell Philip[end link], [link]fuck[as]fuck Philip[end link], [link]feed[as]feed Philip[end link], [link]wrestle[as]wrestle Philip[end link][line break]";
-
-
 Pigfeeding is an action applying to nothing.
-
 understand "feed Philip" as pigfeeding.
-understand "feed pig" as pigfeeding.
-understand "feed the pig" as pigfeeding.
-understand "feed hungry boar man" as pigfeeding.
-understand "feed the hungry boar man" as pigfeeding.
-understand "feed boar" as pigfeeding.
-understand "feed the boar" as pigfeeding.
+understand "feed the/-- hungry/-- pig/boar man/--" as pigfeeding.
 
 check pigfeeding:
 	if Philip is not visible, say "Who?" instead;
@@ -324,8 +300,7 @@ to pigfeed:
 	else if pigfed is 1:
 		say "     'I'm still digesting the food you gave me before. However, I did find some other food a few minutes ago. You fed me, so I want to pay you back by feeding you. You can eat it if you want,' he says as he holds out a strange box.";
 		say "     You take a look at the box and notice that it is different from all the other packages of food that you've found. There is a picture of a cartoon pig on the front. The name of the product is too faded for you to read.";
-		say "     [bold type]Will you accept his offer? It looks safe enough...[roman type][line break]";
-		LineBreak;
+		say "[line break]     [bold type]Will you accept his offer? It looks safe enough...[roman type][line break]";
 		say "     ([link]Y[as]y[end link]) - Yes.";
 		say "     ([link]N[as]n[end link]) - No.";
 		if Player consents:
@@ -340,8 +315,7 @@ to pigfeed:
 		now lastpigfed is turns;
 	else if pigfed is 2:
 		say "     'I'm hungry again,' Philip whines then looks at you eagerly. 'Can you give me more food?'";
-		say "     [bold type]Will you give him some food?[roman type][line break]";
-		LineBreak;
+		say "[line break]     [bold type]Will you give him some food?[roman type][line break]";
 		say "     ([link]Y[as]y[end link]) - Yes.";
 		say "     ([link]N[as]n[end link]) - No.";
 		if Player consents:
@@ -357,6 +331,7 @@ to pigfeed:
 					LineBreak;
 					add "water bottle" to invent of large shed;
 					add "water bottle" to invent of large shed;
+					WaitLineBreak;
 					move Philip to large shed;
 					move player to large shed;
 					now pigfed is 3;
@@ -368,20 +343,20 @@ to pigfeed:
 					now pig pen is not fasttravel;
 					follow turnpass rule;
 				else:
+					LineBreak;
 					say "     'Well... alright, I'll stay here for now,' he oinks.";
 			else:
 				say "     'You don't have any food,' he oinks sadly.";
 		else:
+			LineBreak;
 			say "     'Aww...,' he snorts.";
 	else if pigfed >= 3:
 		say "     'Well, I finally figured out how to scavenge safely on my own. You don't really have to get food for me any more...' he says, thoughtful for a moment, and then continues to speak. 'But... I guess if we had a [bold type]whole lot of food[roman type], we could do something... fun...' He grins at you suggestively and rubs his big gut, oinking happily at his plumpness. It is clear to you that he wants to get stuffed.";
 		if carried of food >= 5:
 			say "     Knowing you are carrying at least five units of food, would you like to go forth with his suggestion and help feed the pig until he's stuffed? It might lead to some [']fun['], as well...";
-			LineBreak;
 			say "     ([link]Y[as]y[end link]) - Feed Philip.";
 			say "     ([link]N[as]n[end link]) - No.";
 			if Player consents:
-				LineBreak;
 				ItemLoss food by 5;
 				say "[PhilipSpecialFeed]";
 			else:
@@ -416,14 +391,8 @@ to say PhilipSpecialFeed:
 	NPCSexAftermath Philip receives "Other" from Player;
 
 Mudwrestling is an action applying to nothing.
-
 understand "wrestle Philip" as Mudwrestling.
-understand "wrestle pig" as Mudwrestling.
-understand "wrestle the pig" as Mudwrestling.
-understand "wrestle hungry boar man" as Mudwrestling.
-understand "wrestle the hungry boar man" as Mudwrestling.
-understand "wrestle boar" as Mudwrestling.
-understand "wrestle the boar" as Mudwrestling.
+understand "wrestle the/-- hungry/-- pig/boar man/--" as Mudwrestling.
 
 check Mudwrestling:
 	if Philip is not visible, say "Who?" instead;
@@ -454,19 +423,18 @@ To Mudwrestle:
 				increase PhilipMudWrestleCount by 1;
 			else:
 				say "     Taking off your gear and clothing, you stack it far enough away so it doesn't get dirty, then step into the slippery mud with Philip. The boar man directs you to take position opposite himself, then calls out 'Go!' and wades towards you.";
-			say "     What do you do as the boar approaches you?";
 			LineBreak;
+			say "     What do you do as the boar approaches you?";
 			say "     [link](1)[as]1[end link] - Charge right at Philip to knock him down.";
 			say "     [link](2)[as]2[end link] - Wait for Philip to come to you and counter.";
 			say "     [link](3)[as]3[end link] - Kite him around the ring to wear him out!";
 			now calcnumber is 0;
 			while calcnumber < 1 or calcnumber > 3:
-				say "Choice? (1-3)>[run paragraph on]";
+				say "Choice? (1-3)> [run paragraph on]";
 				get a number;
-				if calcnumber is 1 or calcnumber is 2 or calcnumber is 3:
-					break;
-				else:
+				if calcnumber < 1 or calcnumber > 3:
 					say "Invalid choice. Type [link]1[end link] charge Philip or [link]2[end link] to try to counter Philip or [link]3[end link] to kite him around the ring.";
+			LineBreak;
 			if calcnumber is 1: [charge Philip]
 				say "     You wade through the mud as quickly as you can with the intent to tackle Philip, but he sees it coming a mile away. At the last second, he steps to the side, causing you to move right past him, nearly tripping. You barely regain your balance, but things are not looking in your favor now as Philip moves closer to you.";
 				decrease PhilipMudWrestleCount by 0;
@@ -474,38 +442,37 @@ To Mudwrestle:
 				say "     Philip has a lot of experience with mud wrestling, so you know he'd say a charge coming. Instead, you buckle down and prepare yourself. Philip collides into you, but you shift your weight and pivot, adding your momentum to Philip's and throwing him. He flails his arms as he slides, barely regaining his balance. You make your way closer, not letting him regain his balance.";
 				increase PhilipMudWrestleCount by 1;
 			else if calcnumber is 3: [kite Philip]
-				let bonus be (( stamina of Player minus 10 ) divided by 2);
+				let bonus be ( stamina of Player minus 10 ) divided by 2;
 				let diceroll be a random number from 1 to 20;
-				say "You roll 1d20([diceroll])+[bonus] = [special-style-1][diceroll + bonus][roman type] vs [special-style-2]16[roman type] (Stamina Check):[line break]";
+				say "You roll 1d20([diceroll])[if bonus >= 0]+[end if][bonus] = [special-style-1][diceroll + bonus][roman type] vs [special-style-2]18[roman type] (Stamina Check):[line break]";
 				if diceroll + bonus >= 18:
-					say "     You begin trudging through the mud, intent on giving Philip a chase before he can get to you. After you've been moving for awhile, you look back to see Philip following after you, panting for breath and visibly exhausted. As a last attempt, he tries to lunge at you, but falls just short onto the muddy floor before you. He quickly rises, now eye to eye with you.";
+					say "     You begin trudging through the mud, intent on giving Philip a chase before he can get to you. After you've been moving for a while, you look back to see Philip following after you, panting for breath and visibly exhausted. As a last attempt, he tries to lunge at you, but falls just short onto the muddy floor before you. He quickly rises, now eye to eye with you.";
 					increase PhilipMudWrestleCount by 1;
 				else:
-					say "     You begin trudging through the mud, intent on giving Philip a chase before he can get to you. After you've been moving for awhile, you look back, panting for breath, only to see Philip following you effortlessly! He doesn't even look slightly worn out! You mentally reprimand yourself, you should have known Philip would have an easier time moving in the mud than you due to experience! Now, Philip is close to you and you're out of breath.";
+					say "     You begin trudging through the mud, intent on giving Philip a chase before he can get to you. After you've been moving for a while, you look back, panting for breath, only to see Philip following you effortlessly! He doesn't even look slightly worn out! You mentally reprimand yourself, you should have known Philip would have an easier time moving in the mud than you due to experience! Now, Philip is close to you and you're out of breath.";
 					decrease PhilipMudWrestleCount by 0;
 			say "     Face to face with the muddy hog, it appears you are both waiting to see who will make the next move. You're sure if you take too long, Philip will eventually come at you, but is that what you want to do? Making the first move isn't always the worst idea... What will you do to break the tension?";
 			LineBreak;
-			say "     [link](1)[as]1[end link] - Try to grab Philip and make him squeal![line break]";
-			say "     [link](2)[as]2[end link] - Prepare for Philip to try to grab you and make him sorry![line break]";
-			say "     [link](3)[as]3[end link] - Taunt the sexy boar and break his focus![line break]";
+			say "     [link](1)[as]1[end link] - Try to grab Philip and make him squeal!";
+			say "     [link](2)[as]2[end link] - Prepare for Philip to try to grab you and make him sorry!";
+			say "     [link](3)[as]3[end link] - Taunt the sexy boar and break his focus!";
 			now calcnumber is 0;
 			while calcnumber < 1 or calcnumber > 3:
-				say "Choice? (1-3)>[run paragraph on]";
+				say "Choice? (1-3)> [run paragraph on]";
 				get a number;
-				if calcnumber is 1 or calcnumber is 2 or calcnumber is 3:
-					break;
-				else:
+				if calcnumber < 1 or calcnumber > 3:
 					say "Invalid choice. Type [link]1[end link] grab Philip or [link]2[end link] wait for Philip to strike or [link]3[end link] to taunt him.";
+			LineBreak;
 			if calcnumber is 1: [grab Philip]
-				say "     You reach out at Philip as suddenly as you can, wrapping your arms around the fat pig. Philip laughs, as he raises his arms out, easily breaking your grip. He slams into you with his massive gut, sending you sliding back. You fall backwards, hitting the ground and being covered in more mud. Phillip slides forward on his knees, getting ready to move in for the pin.";
+				say "     You reach out at Philip as suddenly as you can, wrapping your arms around the fat pig. Philip laughs, as he raises his arms out, easily breaking your grip. He slams into you with his massive gut, sending you sliding back. You fall backwards, hitting the ground and being covered in more mud. Philip slides forward on his knees, getting ready to move in for the pin.";
 				decrease PhilipMudWrestleCount by 0;
 			else if calcnumber is 2: [prepare Philip]
 				say "     You continue to stand your ground, not taking your eyes off Philip. When it seems like you two will be here forever, you see his arm twitch as he lunges at you! He wraps his arms around you, his warm fat smothering you, making you feel all warm and covered. You snap out of it, lifting your arms to pry open his grip, and you take the opportunity to push into him with your shoulder. Philip slides back, falling onto his ass. You fall to your knees, but definitely have the advantage in this scenario now.";
 				increase PhilipMudWrestleCount by 1;
 			else if calcnumber is 3: [taunt Philip]
-				let bonus be (( charisma of Player minus 10 ) divided by 2);
+				let bonus be ( charisma of Player minus 10 ) divided by 2;
 				let diceroll be a random number from 1 to 20;
-				say "You roll 1d20([diceroll])+[bonus] = [special-style-1][diceroll + bonus][roman type] vs [special-style-2]16[roman type] (Charisma Check):[line break]";
+				say "You roll 1d20([diceroll])[if bonus >= 0]+[end if][bonus] = [special-style-1][diceroll + bonus][roman type] vs [special-style-2]16[roman type] (Charisma Check):[line break]";
 				if diceroll + bonus >= 16:
 					say "     You yell to Philip, 'I know you can do better, you fat pig! If you want me, come and get me!' Philip grows visibly enraged and rushes at you with reckless abandon. It's as easy as sidestepping and extending your leg that he comes crashing down into the mud. However, you misjudged how fast he was running and you fall as well when he hits your leg. Luckily, you're in a much more favorable position as you turn to face Philip, who is only just moving off of his chest.";
 					increase PhilipMudWrestleCount by 1;
@@ -514,17 +481,16 @@ To Mudwrestle:
 					decrease PhilipMudWrestleCount by 0;
 			say "     You lock eyes with Philip, both on the ground, as it appears this match is quickly coming to a close. Judging by his massive erection, it looks as though this match has been highly arousing to Philip. He looks at you lustfully, clearly excited for the after-match fun. It all comes down to this! What do you do to try to secure your victory?";
 			LineBreak;
-			say "     [link](1)[as]1[end link] - Try to stand up and get a height advantage![line break]";
-			say "     [link](2)[as]2[end link] - Try to beat Philip at his own game and pin him![line break]";
-			say "     [link](3)[as]3[end link] - Give Philip a 'hand' and distract him with pleasure![line break]";
+			say "     [link](1)[as]1[end link] - Try to stand up and get a height advantage!";
+			say "     [link](2)[as]2[end link] - Try to beat Philip at his own game and pin him!";
+			say "     [link](3)[as]3[end link] - Give Philip a 'hand' and distract him with pleasure!";
 			now calcnumber is 0;
 			while calcnumber < 1 or calcnumber > 3:
-				say "Choice? (1-3)>[run paragraph on]";
+				say "Choice? (1-3)> [run paragraph on]";
 				get a number;
-				if calcnumber is 1 or calcnumber is 2 or calcnumber is 3:
-					break;
-				else:
+				if calcnumber < 1 or calcnumber > 3:
 					say "Invalid choice. Type [link]1[end link] to stand up or [link]2[end link] to pin Philip or [link]3[end link] to distract him with a handjob.";
+			LineBreak;
 			if calcnumber is 1: [stand Philip]
 				say "     You try as quickly as possible to rise to your feet, slipping and sliding in the mud as you do. Eventually, you manage to find your balance and start to rise up, but just as you begin to stand, you feel Philip's meaty hands shove at your legs, and you come tumbling down forward. As you rapidly fall, you can see that the boar has positioned himself perfectly so that your head will land right on his cushiony balls. When you land on them, you inhale deeply, taking in his manly musk. While you're dazed, Philip's fat arm wraps around your neck as he goes for the pin. Before you can do anything, you are wrapped in his arms.";
 				decrease PhilipMudWrestleCount by 0;
@@ -532,9 +498,9 @@ To Mudwrestle:
 					say "     Philip holds you steady, but you aren't giving up yet. You start to squirm, and just before five seconds have passed, you squeeze out of Philip's grasp. Using the confusion to your advantage, you pin Philip, who is still letting out a curse. Philip tries to break free, but it's too late, as the five seconds pass. You release him, as you cheer in victory. Despite all the odds, you managed to defeat the boar at his own game!";
 					increase PhilipWrestleEnd by 1;
 			else if calcnumber is 2: [pin Philip]
-				let bonus be (( strength of Player minus 10 ) divided by 2);
+				let bonus be ( strength of Player minus 10 ) divided by 2;
 				let diceroll be a random number from 1 to 20;
-				say "You roll 1d20([diceroll])+[bonus] = [special-style-1][diceroll + bonus][roman type] vs [special-style-2]16[roman type] (Strength Check):[line break]";
+				say "You roll 1d20([diceroll])[if bonus >= 0]+[end if][bonus] = [special-style-1][diceroll + bonus][roman type] vs [special-style-2]20[roman type] (Strength Check):[line break]";
 				if diceroll + bonus >= 20:
 					say "     You lunge forward, taking your chance to finish things as you wrap your arm around Philip's thick, meaty neck. He brings up his arms and attempts to pry you off of him, but you have him pinned too tight. The feeling of his fat, muddy body writhing in your embrace turns you on, the slick feeling of his muddy skin rubbing against yours. You laugh, and wrap your hand around his thick shaft and begin jacking him off. His body quakes in pleasure, as he lets out a half-hearted protest.";
 					increase PhilipMudWrestleCount by 1;
@@ -548,7 +514,7 @@ To Mudwrestle:
 						increase PhilipWrestleEnd by 1;
 					decrease PhilipMudWrestleCount by 0;
 			else if calcnumber is 3: [masturbate Philip]
-				say "     You let out a short laugh, as you lunge forward. Phillip lifts his arm to protect his neck, but that's not your target. You wrap your hand around his thick, meaty cock, causing it to throb. Philip lets out a stammered protest, but does nothing more as you begin slowly rubbing your hand up and down his large shaft. He leans back on his hands, his tongue resting outside of his mouth, completely lost in the pleasure you give him. The cock continues to throb, as his balls begin to churn. You don't have any problems leaning forward and grabbing him tightly, as he lets out a gasp of surprise. 'H-hey, you weren't finished yet!' he complains, as you tighten your grasp. He squirms, but is unable to build up the strength to break out.";
+				say "     You let out a short laugh, as you lunge forward. Philip lifts his arm to protect his neck, but that's not your target. You wrap your hand around his thick, meaty cock, causing it to throb. Philip lets out a stammered protest, but does nothing more as you begin slowly rubbing your hand up and down his large shaft. He leans back on his hands, his tongue resting outside of his mouth, completely lost in the pleasure you give him. The cock continues to throb, as his balls begin to churn. You don't have any problems leaning forward and grabbing him tightly, as he lets out a gasp of surprise. 'H-hey, you weren't finished yet!' he complains, as you tighten your grasp. He squirms, but is unable to build up the strength to break out.";
 				increase PhilipMudWrestleCount by 1;
 				if PhilipMudWrestleCount < 2:
 					say "     You continue to hold Philip steady, but you become concerned when his squirming resumes. 'You thought you had me, but you forgot about the mud!' he laughs, as he quickly slips out from your grasp. You look down and realize that the mud you had accumulated throughout the match must have allowed him to slip out! It's while you're realizing this that he grabs you, locking you a pin. 'I'll admit, you almost had me. But only almost! I'm still the top pig in this house, and you're just my sow to breed!' he snorts, as he locks you in his pin. You try to escape, but your efforts are useless as he has you held for five seconds. He releases you, shooting his arms up and hollering in victory. You fall back into the mud, grumbling with frustration.";
@@ -557,19 +523,17 @@ To Mudwrestle:
 				if PhilipMudWrestleCount > 1:
 					say "     You hold Philip steady, as he writhes with increasing desperation, until finally, five seconds pass! You release Philip, and cheer as you rise up. Philip lets out a disappointed groan, but the way is his cock is twitching reveals he is still excited regardless. 'Alright, you won, no need to brag about it,' the proud boar grumbles. 'What do you want to do to me?' he asks.";
 					if Player is male:
-						LineBreak;
-						say "     [bold type]What do you want to do with the defeated Philip?[roman type][line break]";
+						say "[line break]     [bold type]What do you want to do with the defeated Philip?[roman type][line break]";
 						say "     [link](1)[as]1[end link] - Take him from behind and make him your sow.";
 						say "     [link](2)[as]2[end link] - Ride his thick cock, but with you in charge";
 						say "     [link](3)[as]3[end link] - Shove your dick down his throat";
 						now calcnumber is 0;
 						while calcnumber < 1 or calcnumber > 3:
-							say "Choice? (1-3)>[run paragraph on]";
+							say "Choice? (1-3)> [run paragraph on]";
 							get a number;
-							if calcnumber is 1 or calcnumber is 2 or calcnumber is 3:
-								break;
-							else:
+							if calcnumber < 1 or calcnumber > 3:
 								say "Invalid choice. Type [link]1[end link] to fuck Philip from behind, [link]2[end link] to ride him or [link]3[end link] to throat-fuck him.";
+						LineBreak;
 						if calcnumber is 1:
 							say "     Deciding to take the sexy boar from behind, you tell him to get up and get on his knees. Philip complies, but not without complaining. 'Riding me just isn't good enough, I guess?' he grumbles. As he gets on his knees and presents his chubby ass to you, your [Cock of Player] dick already twitching in anticipation. You scoop your hand down into the mud, grabbing a nice, cool, handful, and smear the slick substance on your cock as a makeshift lube. You take one of your fingers, similarly covered in mud, and slowly caress Philip's tight tailhole, causing it clench. You slowly insert your finger, preparing the pig to be stuffed, and feel the insides of the boar. He quakes in pleasure, and you can hear his breathing quicken. 'J-just... get going already...' he breathes. More than happy to comply, you remove your finger and move closer.";
 							say "     [if PlayerPigBodied is true]You lift your hefty stomach onto Philip's back, enjoy the feeling of your soft, doughy stomach resting on his cushiony fat. [end if]You rest your chest on his lower back, mounting him like the sow he is. You align your [Cock of Player] cock with the entrance of his hole, and slowly push yourself in. The pigman gasps softly as you enter him, and judging from how tight his hole is, he must not be used to being on bottom. As you push all the way in, your pelvic area is cushioned by his plump ass, nearly as soft as pillows. You wrap your arms around the pig's torso, barely able to get around his large stomach. You hold tight, squeezing his soft folds as you slowly pull out, then push back in. You slowly build a rhythm as you fuck the pig morph[if PlayerPigBodied is true]. Every thrust shakes your fat body, and it slaps against Philip over and over again, only serving to turn you on more[end if].";
@@ -611,7 +575,7 @@ To Mudwrestle:
 							say "     You feel pretty flattened, with Philip lying halfway across your chest, and the... aroma of the mud all around you distracts you from any thoughts for moves to get out of this situation. Trying to only breathe through your mouth, you give an aroused sigh at being so fully in the power of another and admit defeat, much to the elation of your boar opponent. Philip grins down at you and says 'You give up? OK, now show me that you really mean it.' With that, he moves into position to straddle your chest, one thick leg on each side of your body. Then he leans forward, brushing the hairy balls under his erect cock against your face. Phew, they're quite fragrant and wet - how could he have gotten this sweaty in such short a match? 'Go on, lick my balls,' he says, and you comply, extending your tongue to lap at his hairy, dangling orbs. Philip squeals in satisfaction as you do so and pull your head against his crotch to keep you going, pressing your nose right against the base of his cock. Your eyes water at the combined smell and taste and you're somewhat dazed for a moment, not being able to do anything but continue licking when he prods you to do so. The horny boar savors your oral attention for a while, then lets go of your head and stands up, leaving you staring at the ceiling and panting heavily to get some fresh air.";
 							WaitLineBreak;
 							say "     Suddenly Philip's head comes back into your line of view and his hand softly slaps your cheeks a few times. 'I know I'm a breathtakingly handsome guy, but snap out of it. Time to pay up - you lost, so I get to fuck you now,' he oinks, then maneuvers you into a position on all fours as you slowly get up. Rubbing his piggish body against yours, the boar man grabs your ass and teases a meaty finger in between your cheeks and against your tight pucker. Incredibly aroused by having a dominant male fondling your back door, you eagerly push back against him and pant for him please to take you and fuck you in any way he wants. Moments later, his throbbing porcine cock rubs between your ass cheeks, dribbling its greasy precum to act as lube.";
-							say "     'I'm going to enjoy making you squeal like a sow,' he oinks, sinking the first few inches of his cock into you. You moan and press back onto him, pushing more of his thick shaft into you as he chuckles. Then he gives a sudden deep thrust, indeed making you give out a high-pitched gasp. 'Oh, how I love that sound,' he says as he grips your cheeks firmly and starts pounding into you hard and fast. This gets you moaning and panting all the more, further exciting your porcine partner. The heavy hog nibbles at your ear, snorting and oinking as his excitement builds. He drives in hard one last time and cums inside you, filling your rectum with his greasy load[if Player is male]. The feel of his hot semen filling you, proving you to be his submissive sex toy to pound and fill with his spunk, drives you over the edge right with him. With a grunt from you, your own cock starts pumping out spurts of cum to splash down and add to the messy contents of the mud pit[else if Player is female]. The feel of his hot semen filling you, proving you to be his submissive sex toy to pound and fill with his spunk, drives you over the edge right with him. Panting, you feel your own femcum trickle down your leg and spurt from your swollen pussy, to dribble down into the mud and add to the messy contents of Philip's pit[else]. The feel of his hot semen filling you, proving you to be his submissive sex toy to pound and fill with his spunk, drives you over the edge right with him. Trembling as a warm feeling of satisfaction spreads throughout your body, you pant silently under your piggy partner[end if].";
+							say "     'I'm going to enjoy making you squeal like a sow,' he oinks, sinking the first few inches of his cock into you. You moan and press back onto him, pushing more of his thick shaft into you as he chuckles. Then he gives a sudden deep thrust, indeed making you give out a high-pitched gasp. 'Oh, how I love that sound,' he says as he grips your cheeks firmly and starts pounding into you hard and fast. This gets you moaning and panting all the more, further exciting your porcine partner. The heavy hog nibbles at your ear, snorting and oinking as his excitement builds. He drives in hard one last time and cums inside you, filling your rectum with his greasy load. The feel of his hot semen filling you, proving you to be his submissive sex toy to pound and fill with his spunk, drives you over the edge right with him. [if Player is male]With a grunt from you, your own cock starts pumping out spurts of cum to splash down and add to the messy contents of the mud pit[else if Player is female]Panting, you feel your own femcum trickle down your leg and spurt from your swollen pussy, to dribble down into the mud and add to the messy contents of Philip's pit[else]Trembling as a warm feeling of satisfaction spreads throughout your body, you pant silently under your piggy partner[end if].";
 							WaitLineBreak;
 							say "     But Philip doesn't stop there. After a brief pause during which he snuffles at your neck and tells you what a fine sow you make, he starts thrusting again, intent on claiming you a second time. Already filled with a load of slick boar cum, his thrusts make the semen slosh around inside you. Some of it leaks out around his thrusting cock, but much of it gets pushed deeper. Soon you're squealing again beneath Philip with the wet, slick sounds of him stuffing your well-used hole a delightful chorus to your cries.";
 							say "     He pounds into you even harder than before, playing perfectly into your need to be dominated and taken. As his causes your lust to quickly rise and soon surpass the arousal you felt when he fucked you before, the empty feeling as he pulls out before he's done this time is like an electric shock to you. Whimpering, you try to slide yourself back onto his porcine manhood, but he just gives you a shove that pushes you over. You land in the mud with the boar kneeling over you, pumping at his slick cock frantically, drawing a loud oink out of him as he cums hard, blasting his greasy load all across your body, basting you in his juices[if Cock Count of Player > 1]. With your hands on your own cocks, you pump them hard, cumming a second time and adding your seed to his[else if Player is male]. With your hands on your own cock, you pump it hard, cumming a second time and adding your seed to his[else if Player is female]. With your hands rubbing your pussy frantically, you come a second time, squirting more femcum over yourself and the mud under you[end if].";
@@ -620,19 +584,17 @@ To Mudwrestle:
 				if PhilipMudWrestleCount > 1:
 					say "     As you cool down from your high of winning, Philip lets out a disappointed groan, but the way is his cock is twitching reveals he is still excited regardless. 'Alright, you won, no need to brag about it,' the proud boar grumbles. 'What do you want to do to me?' he asks.";
 					if Player is male:
-						LineBreak;
-						say "     [bold type]What do you want to do with the defeated Philip?[roman type][line break]";
+						say "[line break]     [bold type]What do you want to do with the defeated Philip?[roman type][line break]";
 						say "     [link](1)[as]1[end link] - Take him from behind and make him your sow.";
 						say "     [link](2)[as]2[end link] - Ride his thick cock, but with you in charge";
 						say "     [link](3)[as]3[end link] - Shove your dick down his throat";
 						now calcnumber is 0;
 						while calcnumber < 1 or calcnumber > 3:
-							say "Choice? (1-3)>[run paragraph on]";
+							say "Choice? (1-3)> [run paragraph on]";
 							get a number;
-							if calcnumber is 1 or calcnumber is 2 or calcnumber is 3:
-								break;
-							else:
+							if calcnumber < 1 or calcnumber > 3:
 								say "Invalid choice. Type [link]1[end link] to fuck Philip from behind, [link]2[end link] to ride him or [link]3[end link] to throat-fuck him.";
+						LineBreak;
 						if calcnumber is 1:
 							say "     Deciding to take the sexy boar from behind, you tell him to get up and get on his knees. Philip complies, but not without complaining. 'Riding me just isn't good enough, I guess?' he grumbles. As he gets on his knees and presents his chubby ass to you, your [Cock of Player] dick already twitching in anticipation. You scoop your hand down into the mud, grabbing a nice, cool, handful, and smear the slick substance on your cock as a makeshift lube. You take one of your fingers, similarly covered in mud, and slowly caress Philip's tight tailhole, causing it clench. You slowly insert your finger, preparing the pig to be stuffed, and feel the insides of the boar. He quakes in pleasure, and you can hear his breathing quicken. 'J-just... get going already...' he breathes. More than happy to comply, you remove your finger and move closer.";
 							say "     [if PlayerPigBodied is true]You lift your hefty stomach onto Philip's back, enjoy the feeling of your soft, doughy stomach resting on his cushiony fat. [end if]You rest your chest on his lower back, mounting him like the sow he is. You align your [Cock of Player] cock with the entrance of his hole, and slowly push yourself in. The pigman gasps softly as you enter him, and judging from how tight his hole is, he must not be used to being on bottom. As you push all the way in, your pelvic area is cushioned by his plump ass, nearly as soft as pillows. You wrap your arms around the pig's torso, barely able to get around his large stomach. You hold tight, squeezing his soft folds as you slowly pull out, then push back in. You slowly build a rhythm as you fuck the pig morph[if PlayerPigBodied is true]. Every thrust shakes your fat body, and it slaps against Philip over and over again, only serving to turn you on more[end if].";
@@ -676,7 +638,7 @@ To Mudwrestle:
 							say "     You feel pretty flattened, with Philip lying halfway across your chest, and the... aroma of the mud all around you distracts you from any thoughts for moves to get out of this situation. Trying to only breathe through your mouth, you give an aroused sigh at being so fully in the power of another and admit defeat, much to the elation of your boar opponent. Philip grins down at you and says 'You give up? OK, now show me that you really mean it.' With that, he moves into position to straddle your chest, one thick leg on each side of your body. Then he leans forward, brushing the hairy balls under his erect cock against your face. Phew, they're quite fragrant and wet - how could he have gotten this sweaty in such short a match? 'Go on, lick my balls,' he says, and you comply, extending your tongue to lap at his hairy, dangling orbs. Philip squeals in satisfaction as you do so and pull your head against his crotch to keep you going, pressing your nose right against the base of his cock. Your eyes water at the combined smell and taste and you're somewhat dazed for a moment, not being able to do anything but continue licking when he prods you to do so. The horny boar savors your oral attention for a while, then lets go of your head and stands up, leaving you staring at the ceiling and panting heavily to get some fresh air.";
 							WaitLineBreak;
 							say "     Suddenly Philip's head comes back into your line of view and his hand softly slaps your cheeks a few times. 'I know I'm a breathtakingly handsome guy, but snap out of it. Time to pay up - you lost, so I get to fuck you now,' he oinks, then maneuvers you into a position on all fours as you slowly get up. Rubbing his piggish body against yours, the boar man grabs your ass and teases a meaty finger in between your cheeks and against your tight pucker. Incredibly aroused by having a dominant male fondling your back door, you eagerly push back against him and pant for him please to take you and fuck you in any way he wants. Moments later, his throbbing porcine cock rubs between your ass cheeks, dribbling its greasy precum to act as lube.";
-							say "     'I'm going to enjoy making you squeal like a sow,' he oinks, sinking the first few inches of his cock into you. You moan and press back onto him, pushing more of his thick shaft into you as he chuckles. Then he gives a sudden deep thrust, indeed making you give out a high-pitched gasp. 'Oh, how I love that sound,' he says as he grips your cheeks firmly and starts pounding into you hard and fast. This gets you moaning and panting all the more, further exciting your porcine partner. The heavy hog nibbles at your ear, snorting and oinking as his excitement builds. He drives in hard one last time and cums inside you, filling your rectum with his greasy load[if Player is male]. The feel of his hot semen filling you, proving you to be his submissive sex toy to pound and fill with his spunk, drives you over the edge right with him. With a grunt from you, your own cock starts pumping out spurts of cum to splash down and add to the messy contents of the mud pit[else if Player is female]. The feel of his hot semen filling you, proving you to be his submissive sex toy to pound and fill with his spunk, drives you over the edge right with him. Panting, you feel your own femcum trickle down your leg and spurt from your swollen pussy, to dribble down into the mud and add to the messy contents of Philip's pit[else]. The feel of his hot semen filling you, proving you to be his submissive sex toy to pound and fill with his spunk, drives you over the edge right with him. Trembling as a warm feeling of satisfaction spreads throughout your body, you pant silently under your piggy partner[end if].";
+							say "     'I'm going to enjoy making you squeal like a sow,' he oinks, sinking the first few inches of his cock into you. You moan and press back onto him, pushing more of his thick shaft into you as he chuckles. Then he gives a sudden deep thrust, indeed making you give out a high-pitched gasp. 'Oh, how I love that sound,' he says as he grips your cheeks firmly and starts pounding into you hard and fast. This gets you moaning and panting all the more, further exciting your porcine partner. The heavy hog nibbles at your ear, snorting and oinking as his excitement builds. He drives in hard one last time and cums inside you, filling your rectum with his greasy load. The feel of his hot semen filling you, proving you to be his submissive sex toy to pound and fill with his spunk, drives you over the edge right with him. [if Player is male]With a grunt from you, your own cock starts pumping out spurts of cum to splash down and add to the messy contents of the mud pit[else if Player is female]Panting, you feel your own femcum trickle down your leg and spurt from your swollen pussy, to dribble down into the mud and add to the messy contents of Philip's pit[else]Trembling as a warm feeling of satisfaction spreads throughout your body, you pant silently under your piggy partner[end if].";
 							WaitLineBreak;
 							say "     But Philip doesn't stop there. After a brief pause during which he snuffles at your neck and tells you what a fine sow you make, he starts thrusting again, intent on claiming you a second time. Already filled with a load of slick boar cum, his thrusts make the semen slosh around inside you. Some of it leaks out around his thrusting cock, but much of it gets pushed deeper. Soon you're squealing again beneath Philip with the wet, slick sounds of him stuffing your well-used hole a delightful chorus to your cries.";
 							say "     He pounds into you even harder than before, playing perfectly into your need to be dominated and taken. As his causes your lust to quickly rise and soon surpass the arousal you felt when he fucked you before, the empty feeling as he pulls out before he's done this time is like an electric shock to you. Whimpering, you try to slide yourself back onto his porcine manhood, but he just gives you a shove that pushes you over. You land in the mud with the boar kneeling over you, pumping at his slick cock frantically, drawing a loud oink out of him as he cums hard, blasting his greasy load all across your body, basting you in his juices[if Cock Count of Player > 1]. With your hands on your own cocks, you pump them hard, cumming a second time and adding your seed to his[else if Player is male]. With your hands on your own cock, you pump it hard, cumming a second time and adding your seed to his[else if Player is female]. With your hands rubbing your pussy frantically, you come a second time, squirting more femcum over yourself and the mud under you[end if].";
@@ -702,12 +664,14 @@ to say sexwithphilip:
 	if Sandra is bunkered and HP of Philip is 0 and lust of philip - turns >= 16 and lastfuck of Philip < 255:
 		say "     Approaching Philip for some more of his big, sloppy loving, you find him in Sandra's company. She's chatting to him pleasantly, but clearly has her eyes on his enlarged cock. He's also eyeing her quite appreciatively, quite literally salivating at the bunny girl's breasts. Shall you encourage them to have some fun so you can join in or will you let them be alone together?";
 		if Player consents:
+			LineBreak;
 			say "     You smile as you go join them, moving in beside Philip and running your hands over him. He oinks and gives you a sloppy kiss as he welcomes you. 'Mmm... hello there,' he grunts. 'The bunny and I were just getting to know each other a li-' he starts to say before getting distracted as you give his pink shaft a playful stroke, causing him to oink loudly again. Glancing over, you catch Sandra glaring at you as you manhandle her prize.";
 			say "     With an agreeing nod and a friendly, yet flirtatious smile, you remark that, indeed, you should take this opportunity to know each other better, while playfully complimenting Philip's body, hinting at his very large size. He chuckles at his, rubbing his hands over his pudgy body, though it's the hefty, dribbling cock that has Sandra's attention as you offer her a go at his erection. And she's quickly on her knees, licking and kissing at that porcine rod, her earlier anger gone as she goes down on that musky pillar of meat.";
 			say "     Pleased to see your two new friends going at it, you drift between them, your hands running over their bodies. Sandra's pussy drips with her juices, which you enjoy lapping up for a few minutes before fondling Philip's balls. When you swap to the bunny girl's breasts, you remember the pig's interest in them and get them to change positions so the big boar man's cock is pressed between those fuzzy globes. Between that, the eager sucking and your playful groping, it's not much longer before Philip's greasy cum is pumped into her muzzle and then sprayed across those lovely tits. You have fun helping to lick her clean[if thirst of Player > 50] and suckling a delicious drink of her milk to wash it all down[end if] while Philip rolls over to rest in his muddy wallow.";
 			NPCSexAftermath Sandra receives "OralCock" from Philip;
 			now HP of Philip is 2;
 		else:
+			LineBreak;
 			say "     Not wanting to interfere, you go find something else to do for a while, though it is difficult to ignore Philip's piggish grunts and the bunny girl's loud cries as they get better acquainted.";
 			now HP of Philip is 1;
 		continue the action;
@@ -721,7 +685,7 @@ to say sexwithphilip:
 			NPCSexAftermath Player receives "AssFuck" from Philip;
 		else:
 			say "     As much as the pig's enjoying the foreplay, he oinks that it's time to get porking. Moving it back, he gives it a few quick strokes, spurting some precum onto the two sexy lovers out for his meat before choosing which will get it this time. Sandra giggles happily as the big boar ends up moving behind her. She wiggles her cute bunny tail and reaches between her legs, spreading her pussy lips in a wanton display as Philip mounts her with a belching oink. As Philip grunts and oinks atop her, rutting her like a hog, you move underneath them to lick at that stuffed cunt of hers.";
-			say "     Playing your tongue across those wide folds, you lick at both the bunny's juicy pussy and the boar's musky rod. The scent and taste of them both as they rut is very exciting and you lap up as much of it as you can[if Player is male]. With your [Cock of Player] cock beneath the bunny's muzzle, she latches onto it and suckles you to climax. Even as she's gulping down your load[else if Player is female]. With your [cunt size desc of Player] cunt beneath the bunny's muzzle, she stuffs a few fingers into you while working her tongue over your clit, driving you to climax[else]. With only your bare crotch beneath her muzzle, the muzzle licks and few fingers and stuffs them into your asshole instead to tease you. As she fingerfucks you[end if], Philip cums with a squeal and starts filling the horny bunny with his greasy seed. You lap up the excess leaking around his shaft along with the bunny's juices until you all collapse in a sticky, sweaty heap in the mud.";
+			say "     Playing your tongue across those wide folds, you lick at both the bunny's juicy pussy and the boar's musky rod. The scent and taste of them both as they rut is very exciting and you lap up as much of it as you can. With [if Player is male]your [Cock of Player] cock beneath the bunny's muzzle, she latches onto it and suckles you to climax. Even as she's gulping down your load[else if Player is female]your [cunt size desc of Player] cunt beneath the bunny's muzzle, she stuffs a few fingers into you while working her tongue over your clit, driving you to climax[else]only your bare crotch beneath her muzzle, the muzzle licks and few fingers and stuffs them into your asshole instead to tease you. As she fingerfucks you[end if], Philip cums with a squeal and starts filling the horny bunny with his greasy seed. You lap up the excess leaking around his shaft along with the bunny's juices until you all collapse in a sticky, sweaty heap in the mud.";
 			NPCSexAftermath Sandra receives "PussyFuck" from Philip;
 		NPCSexAftermath Sandra receives "OralCock" from Philip;
 		NPCSexAftermath Player receives "OralCock" from Philip;
@@ -729,7 +693,6 @@ to say sexwithphilip:
 	else:
 		say "     'I knew you couldn't resist my -OINK!- studly physique,' Philip says as he jiggles his fat gut for emphasis while a grin spreads across his pig like face. 'Now, what should we do first?' He takes a moment to look over your body, before he makes a decision.";
 	say "     It seems that Philip is very dominant when it comes to casual sex, which means he will be making the decisions for you. Are you okay with this? You can always turn back, if you want.";
-	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Let Philip take charge.";
 	say "     ([link]N[as]n[end link]) - Back away.";
 	if Player consents:
@@ -765,7 +728,7 @@ to say sexwithphilip:
 			say "     'I'm going to enjoy making you squeal like a sow,' he oinks, sinking the first few inches of his cock into you. You moan and press back onto him, pushing more of his thick shaft into you as he chuckles. He gives your plump, piggy bottom a slap, drawing a squeal out of you. 'Oh, how I love that sound,' he says as he grips your cheeks firmly and starts pounding into you hard and fast. This gets you squealing all the more, in part to further excite your lover and partially because you just can't control yourself. The heavy hog nibbles at your floppy pig ear, snorting and oinking as his excitement builds. He drives hard into you one last time and cums inside you, filling your rectum with his greasy load[if Player is male]. You can't help but cum as you feel his hot semen filling you as he fucks you like a pig[end if].";
 			WaitLineBreak;
 			say "     But he doesn't stop there. After a brief pause during which he snuffles at your neck and tells you what a fine sow you make, he starts thrusting again, intent on claiming you a second time. Already filled with a load of slick boar cum, his thrusts make the semen slosh around inside you. Some of it leaks out around his thrusting cock, but much of it gets pushed deeper. Soon you're squealing again beneath Philip with the wet, stick sounds of him stuffing your reused hole a delightful chorus to your cries.";
-			say "     He pounds into you even harder than before, but pulls out before he's done. You try to push yourself back onto him, but he rolls you over onto your back. You land in the mud with the boar kneeling over you, pumping at his slick cock frantically, drawing a loud oink out of him as he cums hard, blasting his greasy load all across your body, basting you in his juices[if Cock Count of Player > 1]. With your hands on your own cocks, you pump them hard, cumming a second time and adding your seed to his[else]. With your hands on your own cock, you pump it hard, cumming a second time and adding your seed to his[end if].";
+			say "     He pounds into you even harder than before, but pulls out before he's done. You try to push yourself back onto him, but he rolls you over onto your back. You land in the mud with the boar kneeling over you, pumping at his slick cock frantically, drawing a loud oink out of him as he cums hard, blasting his greasy load all across your body, basting you in his juices. With your hands on your own cock[smn], you pump [itthemm] hard, cumming a second time and adding your seed to his.";
 			say "     He runs a piggish hand all over your body as he blasts the last few shots across your face. 'That's my good sow,' he says as he runs his fingers over your sticky body";
 			if Nipple Count of Player < 8:
 				if ("Male Preferred" is not listed in feats of Player or "Breasts" is listed in feats of Player) and "One Pair" is not listed in feats of Player and (BodyName of Player is "Messy Pig" or BodyName of Player is "Piggy"):
@@ -794,7 +757,6 @@ to say sexwithphilip:
 		increase pigfucked by 1;
 	else:
 		stop the action;
-
 
 [REMOVED FORCED MUTATION
 if pigfed > 0 and TailName of Player is not "Piggy":
@@ -834,14 +796,14 @@ HayatoPhilip	"HayatoPhilip"
 HayatoPhilip is a situation.
 ResolveFunction of HayatoPhilip is "". Sarea of HayatoPhilip is "Nowhere".
 
-Instead of going to large shed while (Resolution of Sweets For The Piggy is 0 and Philip is in large shed and PlayerFucked of Philip is true and a random chance of 1 in 3 succeeds):
+Instead of going to large shed while Resolution of Sweets For The Piggy is 0 and Philip is in large shed and PlayerFucked of Philip is true and a random chance of 1 in 3 succeeds:
 	say "     As you walk into Philip, you see that the pigman seems to be munching on something while turned towards a wall, as if doing it on secret. In fact, you would not have even noticed him if you did not happen to look over there, where he is, but the sound of his chomping would probably give away his position. Regardless, you approach him as you normally would. Upon hearing your footsteps, Philip gets startled and chokes, coughing frantically as he sees you. Fortunately, he seems to be able to recover quickly enough from it, but turns to you with his eyes wide open. 'Oh! It's... You! I... this isn't what it looks like...' he says, mouth still full and dirty with what seems to be... chocolate?";
 	say "     You wonder how he got his hands on such a thing, given how rare any kind of uncanned food, especially sweets like that, are. 'I dunno. It was just laying around, so I grabbed it while nobody was looking. Was it yours?' The boar man licks the sides of his mouth as you wonder to yourself what to tell him, but nothing comes to mind. You have no idea where they came from. 'Gotta say, they were some really good chocolate truffles. I haven't had these in so long! Tastes really good. Ah... I'd offer you some, but I ate them all... Sorry.' He does not seem to be sincerely apologizing, but you let it slide. You must know by now how much Philip likes to eat, even if it is just some little snack.";
 	WaitLineBreak;
 	say "     'So, I take it you wanted to talk to me?' he asks, before letting out a belch. 'Ooh, that one really hit the bottom. Hmm... I guess you could get a taste, still...' With that, the pigman pulls you to him, your body squeezed against his pudgy frame and full belly as he wraps his arms around you, and gives you a kiss. You can definitely feel some of the sweet truffle taste in his mouth as your tongues touch one another, wiggling around each other and wrestling for a while, before he lets go of you. 'Good, right? Hehe... Or was it something else you liked?' The pigman winks at you as he rubs his large gut, causing his beefy and fat physique to wobble slightly.";
 	now Resolution of Sweets For The Piggy is 1;
 
-Instead of going to large shed while (Resolution of Sweets For The Piggy is 1 and Philip is in large shed and (Xaedihr is in Grey Abbey Library or demonologist is listed in companionList of Player) and a random chance of 1 in 2 succeeds):
+Instead of going to large shed while Resolution of Sweets For The Piggy is 1 and Philip is in large shed and (Xaedihr is in Grey Abbey Library or demonologist is listed in companionList of Player) and a random chance of 1 in 2 succeeds:
 	say "     When you arrive at the large shed";
 	if Xaedihr is in Grey Abbey Library:
 		say ", you see not only Philip there, but also Xaedihr, talking to him in a very upset manner";
@@ -854,7 +816,7 @@ Instead of going to large shed while (Resolution of Sweets For The Piggy is 1 an
 	say "     'Here I thought you could conjure food out of nowhere... That'd make me like you a lot. I like people who can make food appear in front of me.' The mage rolls his eyes and sighs 'Of course you do.' Philip only carries on finishing his little meal as Xaedihr turns around and walks away. He does not really pay much further attention to you until it is over. 'That redhead's cute and he can make food appear... I like him. Without all that imp stuff, though, that's nasty. Tell him I want my food imp-free!' You tell him you will do what you can just to leave him relieved and in peace.";
 	now Resolution of Sweets For The Piggy is 2;
 
-Instead of going to large shed while ((Ranfer is in Main & 7th Street or smilodon bodyguard is listed in companionList of Player) and Philip is in Large Shed and Resolution of RanferPhilip is 0 and a random chance of 1 in 2 succeeds):
+Instead of going to large shed while (Ranfer is in Main & 7th Street or smilodon bodyguard is listed in companionList of Player) and Philip is in Large Shed and Resolution of RanferPhilip is 0 and a random chance of 1 in 2 succeeds:
 	say "     When you walk into the large shed";
 	if Ranfer is in Main & 7th Street:
 		say ", you see not only Philip there, but also Ranfer, as they seem to be exchanging something";
@@ -867,7 +829,7 @@ Instead of going to large shed while ((Ranfer is in Main & 7th Street or smilodo
 	say "     'Then I suggest you practice. It might take you... several attempts.' The big cat then stands up and proceeds to walk away, past you, with the biggest smug expression you have seen on him. Though, Philip does not seem too bothered by it. You can tell that he probably even liked it. 'Damn, he's your bodyguard?! That dude flipped me like I weighed nothing... And he can find food! That's hot. You really make great friends, you know?' He just remains there, lying down on the ground, not bothering to get up as he gets himself comfortable. 'So, you wanted to talk or something?'";
 	now Resolution of RanferPhilip is 1;
 
-Instead of going to large shed while (Hayato is in Darkened Alcove and Philip is in Large Shed and Resolution of HayatoPhilip is 0 and a random chance of 1 in 3 succeeds):
+Instead of going to large shed while Hayato is in Darkened Alcove and Philip is in Large Shed and Resolution of HayatoPhilip is 0 and a random chance of 1 in 3 succeeds:
 	say "     As you arrive at the large shed, you notice a large red person talking to Philip, and you quickly can tell this is Hayato, and they seem to be talking. 'Whoa, where did you get this? Tastes fucking good!' says the boar man, excitedly, as he munches on something. 'I've found these noodles that on an abandoned Asian restaurant. You just put hot water on it and it becomes cooked like this. Pretty good, right?' explains Hayato. What Philip seems to be eating is, indeed, a cup of noodles the red oni must have found while scavenging. The boar man seems to love every bit of it, too. 'I really love this! Can you get me more?' he asks, still munching on it all. 'Ah, I guess if I find some, I can share... They're not that common, though, but I heard you liked food, so...'";
 	say "     'So you wanted to be friends with me? Hehe... I'd offer to wrestle in the mud against you, but you're a really big dude, I wouldn't stand a chance and you'd always win. No fun in that!' Hayato laughs at this. 'I could go easy on you, if that'd make you feel better?' 'Nah, it wouldn't. I like earning my victories... Oink!' The red oni leans forward, curious about this. 'But why is that? I thought it'd be just for the fun...' The pig man then replies, 'It just feels better to give the loser what they deserve when you worked for it, yeah? Like you actually get on top of them and pin them down with your moves... But since you're so... huge... It kinda defeats the purpose. But you're cool and give me nice food. I like you!'";
 	WaitLineBreak;
@@ -968,7 +930,7 @@ This is the Pig Infection rule:
 					say "     The time in the military's quarantine area is quite unpleasant, as most people tend to avoid you for some reason. But at least it ends up being brief, as they don't seem to want to keep you around long either. You have such a full figure with luscious curves and a rich scent; you feel that you are a lovely and attractive woman, but no one else you meet seems to realize this.";
 					say "     After your eventual release, you have difficulty finding steady work. No one seems to appreciate your rich fragrance. You only manage to get odd jobs for quite a while before eventually becoming a garbage woman. The prevalent scent of your work keeps your coworkers from complaining about your scent and some part of you always enjoys getting dirtier and smellier from a day's work.";
 					say "     One day while working the bulldozer at the far end of the landfill, a friendly coworker calls you over. When you climb out to join the seagull, he presses you down into the trash and mounts you. You try your best to muffle your squeals of delight, not wanting to get into trouble, but loving the nasty feeling of being fucked at work on a messy pile of trash. After filling you, he invites you to join him at his place after work for more. That night is a wild romp that soon becomes more and more nights of the same. You move into his love nest and bear him clutch after clutch of eggs filled with winged piggies, loving your messy, dirty bird.";
-			if ( pigfucked > 0 ) or ( Player is female and Philip is in Large Shed ):	[Philip farm endings]
+			if pigfucked > 0 or ( Player is female and Philip is in Large Shed ):	[Philip farm endings]
 				if Sandra is in the Bunker:
 					if Snow is in the Grey Abbey Library:
 						say "     Sandra and Snow join you and Philip at the pig farm. The four of you spend your days having extremely wild and passionate orgies. Sandra and Snow are soon expecting their own litters of piglets. Philip feels like the luckiest pig in world now that he has his own personal harem.";
@@ -979,7 +941,5 @@ This is the Pig Infection rule:
 			if Philip is in Large Shed:										[any farm ending]
 				if SarahSlut is 4:
 					say "     Sarah's numerous pups make fine farm dogs. You set up a nice kennel to breed them on the farm as well. They guard the farm and make for fine playthings when you're not enjoying messy, piggy sex.";
-
-
 
 Hungry Boar Man ends here.

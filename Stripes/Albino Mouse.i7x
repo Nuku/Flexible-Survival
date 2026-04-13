@@ -3,31 +3,9 @@ Version 1 of Albino Mouse by Stripes begins here.
 [ Edit the above line, replace monster name with your monster's name, and your name with the name you'd like credited for the mod. ]
 "Adds Dr. Mouse the Albino Mouse opponent to Flexible Survival's Monsters table"
 
-
 Section 1 - Creature Responses
 
-to say drmouseattack:
-	if hospfight is 1:
-		say "[one of]Dr. Mouse swings his fists in wild punches, managing a few glancing blows![or]The maddened mouse manages to bite your wrist with his sharp teeth.[or]The doctor starts tossing random glassware from his worktable at you![or]Dr. Mouse shoves one of the stools into your path, causing you to stumble. He punches you in the jaw while you're off balance![or]The mad doctor manages to punch you in the groin with one of his wild punches. He's not very strong, but it still hurts![at random]";
-	else if hospfight is 2:
-		say "[one of]The mouse monster punches your head with one of his bony fists, making the room spin for a moment![or]Dr. Mouse's vicious claws slash across your body, opening bloody gashes![or]That twisted head manages to snap its fangorious jaws onto your shoulder![or]The transformed mouse jabs your arm with one of its horns as you try to swing at him. It stabs into your bicep and your blood flows down your arm![or]Dr. Mouse grabs one of the wooden stools and proceeds to beat you with it, only stopping when it shatters against one of the worktables![or]The monstrous mouse hisses at you and releases a spray of stinging mist into your face, momentarily blinding you. As you try to stumble back while wiping your eyes, you get slammed by a powerful backhand and sent flying back several feet![or]Dr. Mouse chuckles madly as he grabs your shoulder with one clawed hand and gets your arm in the other. He pulls and twists your arm, smiling as you scream in pain. Luckily, you manage to break free before he pulls it completely free of its socket, but your shoulder burns with pain![or]The monstrous creature charges, slamming his shoulder into you before sending you flying over one of the worktables![or]The transformed doctor clubs you several times with his powerful fists, laughing in mad delight as he does![at random]";
-
-to say losetodrmouse:
-	say "     Unable to continue fighting, you collapse to your knees. Dr. Mouse chuckles and grabs a bottle from one of the tables. He splashes some of the liquid onto a cloth, then covers your mouth and nose with it. 'Does this smell like chloroform?' he asks with a mad titter. The room goes hazy and you pass out.";
-
-to say beatdrmouse:
-	if hospfight is 1:
-		say "     Your blows leave the weak little mouse bruised and bloodied. He staggers and leans heavily against one of the work tables, panting for breath as he's no longer able to fight you.";
-	else if hospfight is 2:
-		say "     Your final blow strikes and causes the monstrous creature to stumble back. He reaches for one of the stools to hurl at you, but you grab one and send it flying into his head first. He staggers back a few more steps, slips in a puddle and collapses at one side of the room.";
-
 Section 2 - Creature Insertion
-
-to say drmousedesc:
-	if hospfight is 1:
-		say "     Dr. Mouse, barely four feet tall, intends to fight you. With his white fur disheveled, his blood red eyes and sharp, rodent teeth, the albino lab mouse would be quite threatening were he not so small and weak. But the murine doctor snarls angrily and charges at you, tiny paws clenched into fists. You ready to strike, prepared to deal with the mad doctor once and for all.";
-	else if hospfight is 2:
-		say "     The now monstrous mouse is attacking you. His altered body is huge, almost nine feet tall and bristling with sharp claws, teeth, horns and spikes. He has managed to give himself a powerful physique and seems to have retained his twisted mind. His hide is toughened, making it much harder to harm the mutated hybrid he's become.";
 
 Table of CombatPrep (continued)
 name(text)	PrepFunction(text)
@@ -47,12 +25,11 @@ to say PrepCombat_Albino Mouse:
 		now str entry is 8;
 		now dex entry is 12 + ( lev entry / 6 );
 		now sta entry is 12;
-		now MilkItem entry is "albino mouse milk"; [ Item to be given to the player if they have this infection and milk themselves. ]
-	now CumItem entry is "albino mouse cum"; [ Item to be given to the player if they have this infection and jerk off. ]
-	now TrophyFunction entry is "-"; [ Function to generate a list of optional loot items, of which the player can choose one after victory. ]
-	now scale entry is 1;
-	if hospfight is 2:
-		let debit be 0;
+		[now MilkItem entry is "albino mouse milk"; [ Item to be given to the player if they have this infection and milk themselves. ]
+		now CumItem entry is "albino mouse cum"; [ Item to be given to the player if they have this infection and jerk off. ]
+		now TrophyFunction entry is "-"; [ Function to generate a list of optional loot items, of which the player can choose one after victory. ]]
+		now scale entry is 1;
+	else:
 		if HardMode is true and level of Player > 12, let debit be level of Player - 12;
 		now HP entry is 150 + ( debit * 6 );
 		now monsterHP is 150 + ( debit * 6 );
@@ -63,10 +40,10 @@ to say PrepCombat_Albino Mouse:
 		now str entry is 20;
 		now dex entry is 24 + ( ( debit + 2 ) / 5 );
 		now sta entry is 20;
-		now MilkItem entry is "albino mouse milk"; [ Item to be given to the player if they have this infection and milk themselves. ]
-	now CumItem entry is "albino mouse cum"; [ Item to be given to the player if they have this infection and jerk off. ]
-	now TrophyFunction entry is "-"; [ Function to generate a list of optional loot items, of which the player can choose one after victory. ]
-	now scale entry is 4;
+		[now MilkItem entry is "albino mouse milk"; [ Item to be given to the player if they have this infection and milk themselves. ]
+		now CumItem entry is "albino mouse cum"; [ Item to be given to the player if they have this infection and jerk off. ]
+		now TrophyFunction entry is "-"; [ Function to generate a list of optional loot items, of which the player can choose one after victory. ]]
+		now scale entry is 4;
 
 Table of Random Critters (continued)
 NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
@@ -87,10 +64,10 @@ When Play begins:
 	now enemy title entry is ""; [ Name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name. ]
 	now enemy Name entry is ""; [ Specific name of unique enemy. ]
 	now enemy type entry is 1; [ 0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters. ]
-	now attack entry is "[drmouseattack]";
-	now defeated entry is "[beatdrmouse]";
-	now victory entry is "[losetodrmouse]"; [Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block as the demonstration text shows.]
-	now desc entry is "[drmousedesc]"; [ Description of the creature when you encounter it.]
+	now attack entry is "[if hospfight is 1][one of]Dr. Mouse swings his fists in wild punches, managing a few glancing blows![or]The maddened mouse manages to bite your wrist with his sharp teeth.[or]The doctor starts tossing random glassware from his worktable at you![or]Dr. Mouse shoves one of the stools into your path, causing you to stumble. He punches you in the jaw while you're off balance![or]The mad doctor manages to punch you in the groin with one of his wild punches. He's not very strong, but it still hurts![at random][else][one of]The mouse monster punches your head with one of his bony fists, making the room spin for a moment[or]Dr. Mouse's vicious claws slash across your body, opening bloody gashes[or]That twisted head manages to snap its fangorious jaws onto your shoulder[or]The transformed mouse jabs your arm with one of its horns as you try to swing at him. It stabs into your bicep and your blood flows down your arm[or]Dr. Mouse grabs one of the wooden stools and proceeds to beat you with it, only stopping when it shatters against one of the worktables[or]The monstrous mouse hisses at you and releases a spray of stinging mist into your face, momentarily blinding you. As you try to stumble back while wiping your eyes, you get slammed by a powerful backhand and sent flying back several feet[or]Dr. Mouse chuckles madly as he grabs your shoulder with one clawed hand and gets your arm in the other. He pulls and twists your arm, smiling as you scream in pain. Luckily, you manage to break free before he pulls it completely free of its socket, but your shoulder burns with pain[or]The monstrous creature charges, slamming his shoulder into you before sending you flying over one of the worktables[or]The transformed doctor clubs you several times with his powerful fists, laughing in mad delight as he does[at random]![end if]";
+	now defeated entry is "     Your [if hospfight is 1]blows leave the weak little mouse bruised and bloodied. He staggers and leans heavily against one of the work tables, panting for breath as he's no longer able to fight you[else]final blow strikes and causes the monstrous creature to stumble back. He reaches for one of the stools to hurl at you, but you grab one and send it flying into his head first. He staggers back a few more steps, slips in a puddle and collapses at one side of the room[end if].[line break]";
+	now victory entry is "     Unable to continue fighting, you collapse to your knees. Dr. Mouse chuckles and grabs a bottle from one of the tables. He splashes some of the liquid onto a cloth, then covers your mouth and nose with it. 'Does this smell like chloroform?' he asks with a mad titter. The room goes hazy and you pass out.[line break]"; [Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block as the demonstration text shows.]
+	now desc entry is "     [if hospfight is 1]Dr. Mouse, barely four feet tall, intends to fight you. With his white fur disheveled, his blood red eyes and sharp, rodent teeth, the albino lab mouse would be quite threatening were he not so small and weak. But the murine doctor snarls angrily and charges at you, tiny paws clenched into fists. You ready to strike, prepared to deal with the mad doctor once and for all[else]The now monstrous mouse is attacking you. His altered body is huge, almost nine feet tall and bristling with sharp claws, teeth, horns and spikes. He has managed to give himself a powerful physique and seems to have retained his twisted mind. His hide is toughened, making it much harder to harm the mutated hybrid he's become[end if].[line break]"; [ Description of the creature when you encounter it.]
 	now face entry is "mouse-like head with large ears and cute whiskers on your muzzle"; [ Face description, format as "Your face is [Face of Player]." ]
 	now body entry is "small and mouse-like, with pink paws for hands and feet"; [ Body Description, format as "Your Body is [Body of Player]." ]
 	now skin entry is "pure white fur over your"; [ skin Description, format as "your body is covered in (your text) skin."]
@@ -99,7 +76,7 @@ When Play begins:
 	now face change entry is "it deforms and reshapes itself into something more rodent-like. You gain large ears and whiskers around your muzzle. Your eyes turn a blood-red"; [ Face change text, format as "Your face feels funny as [face change entry]." ]
 	now body change entry is "it becomes that of an anthropomorphic mouse. At only about four feet tall, your stature matches your species. Your hands are replaced with pink paws with nimble digits"; [ Body change text, format as "Your body feels funny as [body change entry]." ]
 	now skin change entry is "soft, white fur covers you"; [ Skin change text, format as "Your skin feels funny as [skin change entry]." ]
-	now ass change entry is "long, thin tail forms. It is rodent-like and has pale white fur covering it"; [ Ass/tail change text, format as "Your ass feels funny as [ass change entry]." ]
+	now ass change entry is "a long, thin tail forms. It is rodent-like and has pale white fur covering it"; [ Ass/tail change text, format as "Your ass feels funny as [ass change entry]." ]
 	now cock change entry is "it turns a soft pink in color. It is nearly human in shape"; [ cock change text. format as "Your cock feels funny as (your text)." ]
 	now str entry is 8;
 	now dex entry is 12;
@@ -240,6 +217,5 @@ When Play begins:
 	now Clit Size entry is 0; [size 1-5, see Clit Size Adjective]
 	[Clit Size Adjective is generated by a function and can be used in scenes: very small/small/average/large/very large]
 ]
-
 
 Albino Mouse ends here.

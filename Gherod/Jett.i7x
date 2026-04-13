@@ -51,13 +51,9 @@ SexuallyExperienced of Jett is false.
 TwistedCapacity of Jett is false. [Twisted Characters can take any penetration, no matter the size]
 Sterile of Jett is true. [steriles can't knock people up]
 MainInfection of Jett is "Werewolf Brute".
-Description of Jett is "[Jettdesc]".
-Conversation of Jett is { "<This is nothing but a placeholder!>" }.
+Description of Jett is "     You would say that a normal werewolf brute is large, but this one is ridiculously massive. Jett is an alpha werewolf brute and one built of pure muscle, with a thick dark silver fur coat only damaged by battle scars around his chest, arms and some around his thighs. You can also spot one large scar across the left side of his face, which makes him look quite intimidating, at first glance. The Alpha does not wear anything to cover his hanging junk, which looks almost hyper-sized, even for someone of his stature. You also do not think anything would be able to cover that much cock and that pair of ostrich-egg sized balls, as even his furred sheath can barely contain all the meat within. His piercing yellow eyes loom over you like an observant owl whenever you come close, but curiously, they do not give any hostile sense. Much the contrary, more in the way of a caring parent looking over their children. All in all, you feel safe around Jett[if Player is submissive], and very subservient[end if].[line break]".
+icon of Jett is Figure of Jett_soft_icon.
 The scent of Jett is "     Jett's scent is intoxicating. It is so masculine that [if Player is submissive]it inevitably arouses you, causing your muscles and orifices to relax and moisten in his presence[else if player is dominant]it fills you with an urge to dominate anyone, even him[else]it makes your groin tingle and your heart race[end if].".
-
-to say JettDesc:
-	project Figure of Jett_soft_icon;
-	say "     You would say that a normal werewolf brute is large, but this one is ridiculously massive. Jett is an alpha werewolf brute and one built of pure muscle, with a thick dark silver fur coat only damaged by battle scars around his chest, arms and some around his thighs. You can also spot one large scar across the left side of his face, which makes him look quite intimidating, at first glance. The Alpha does not wear anything to cover his hanging junk, which looks almost hyper-sized, even for someone of his stature. You also do not think anything would be able to cover that much cock and that pair of ostrich-egg sized balls, as even his furred sheath can barely contain all the meat within. His piercing yellow eyes loom over you like an observant owl whenever you come close, but curiously, they do not give any hostile sense. Much the contrary, more in the way of a caring parent looking over their children. All in all, you feel safe around Jett[if Player is submissive], and very subservient[end if].";
 
 JettDoneTalking is a truth state that varies.[@Tag:NotSaved]
 
@@ -77,7 +73,6 @@ instead of conversing Jett:
 to say JettAlphaTalkMenu:
 	now JettDoneTalking is false;
 	say "     [bold type]What matter would you like to discuss with Jett?[roman type][line break]";
-	LineBreak;
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]
@@ -120,18 +115,18 @@ to say JettAlphaTalkMenu:
 			choose row calcnumber in table of fucking options;
 			say "[title entry]: [description entry]?";
 			if Player consents:
-				let nam be title entry;
 				now sextablerun is 1;
-				if (nam is "Himself"):
-					say "[JettAlphaTalkHimself]";
-				else if (nam is "The pack"):
-					say "[JettAlphaTalkPack]";
-				else if (nam is "His sexual preferences"):
-					say "[JettAlphaTalkSex]";
-				else if (nam is "His approval of you"):
-					say "[JettAlphaTalkApproval]";
-				else if (nam is "Offer Jett a gift"):
-					say "[JettAlphaTalkOfferGift]";
+				if title entry is:
+					-- "Himself":
+						say "[JettAlphaTalkHimself]";
+					-- "The pack":
+						say "[JettAlphaTalkPack]";
+					-- "His sexual preferences":
+						say "[JettAlphaTalkSex]";
+					-- "His approval of you":
+						say "[JettAlphaTalkApproval]";
+					-- "Offer Jett a gift":
+						say "[JettAlphaTalkOfferGift]";
 				wait for any key;
 				if JettDoneTalking is false:
 					say "[JettAlphaTalkMenu]"; [looping back to keep talking with him]
@@ -140,7 +135,7 @@ to say JettAlphaTalkMenu:
 			say "     You excuse yourself as Jett gives you an understanding nod.";
 			wait for any key;
 		else:
-			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options], or 0 to exit.";
 	clear the screen and hyperlink list;
 
 to say JettAlphaTalkHimself:
@@ -215,24 +210,25 @@ to say JettAlphaSexMenu:
 	[]
 	choose a blank row in table of fucking options;
 	now title entry is "Worship his body";
-	now sortorder entry is 2;
+	now sortorder entry is 3;
 	now description entry is "Propose that you worship his body wherever he wants";
 	[]
 	choose a blank row in table of fucking options;
 	now title entry is "Rim him";
-	now sortorder entry is 3;
+	now sortorder entry is 5;
 	now description entry is "Get down and eat out his massive muscular ass";
 	[]
 	if Libido of Jett > 0:
 		choose a blank row in table of fucking options;
 		now title entry is "Go for a 69";
-		now sortorder entry is 1;
-		now description entry is "Get Jett to eat you out while you suck his dick";
-	[]
-		[choose a blank row in table of fucking options;
-		now title entry is "Be his seat";
 		now sortorder entry is 2;
-		now description entry is "Allow the werewolf alpha to sit on your face";]
+		now description entry is "Get Jett to eat you out while you suck his dick";
+		[
+		choose a blank row in table of fucking options;
+		now title entry is "Be his seat";
+		now sortorder entry is 4;
+		now description entry is "Allow the werewolf alpha to sit on your face";
+		]
 	[]
 	sort the table of fucking options in sortorder order;
 	repeat with y running from 1 to number of filled rows in table of fucking options:
@@ -247,25 +243,24 @@ to say JettAlphaSexMenu:
 			choose row calcnumber in table of fucking options;
 			say "[title entry]: [description entry]?";
 			if Player consents:
-				let nam be title entry;
 				now sextablerun is 1;
-				if (nam is "Blow him"):
-					say "[JettAlphaSexBlowjob]";
-				else if (nam is "Worship his body"):
-					say "[JettAlphaSexWorship]";
-				else if (nam is "Rim him"):
-					say "[JettAlphaSexRimming]";
-				else if (nam is "Go for a 69"):
-					say "[JettAlphaSex69Scene]";
+				if title entry is:
+					-- "Blow him":
+						say "[JettAlphaSexBlowjob]";
+					-- "Worship his body":
+						say "[JettAlphaSexWorship]";
+					-- "Rim him":
+						say "[JettAlphaSexRimming]";
+					-- "Go for a 69":
+						say "[JettAlphaSex69Scene]";
 				[else if (nam is "Be his seat"):
 					say "[JettAlphaSexFacesit]";]
-				wait for any key;
 		else if calcnumber is 0:
 			now sextablerun is 1;
 			say "     Deciding against this, you excuse yourself away from Jett. He nods respectfully.";
-			wait for any key;
 		else:
-			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
+			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options], or 0 to exit.";
+	wait for any key;
 	clear the screen and hyperlink list;
 
 to JettLoyaltyBoost1: [for normal scenes before intimate is unlocked]
@@ -297,11 +292,10 @@ to JettScentSanityLoss:
 to say JettAlphaSexBlowjob:
 	say "     Seeing the alpha sitting on his couch by his lone self, with his goods so visibly exposed, you wonder if there would be a way to provide him with a service he would enjoy receiving. More specifically, you offer him a blowjob. His ears perk up at the mention of a potential good time, and his piercing yellow eyes shift towards you like a predator's gaze, one that always manages to make your legs shake as a shiver runs down your spine. Not an unpleasant sensation by any means, but his posture and body language clearly demands respect, so much that you almost feel like you offend him by making such offers. However, your doubts are quickly dismissed when he raises his forehead and grins, slowly making space between his huge thighs as his red tip begins to protrude out of his thick sheath. 'Then what's stopping you?' he says, as if giving you permission to approach him.";
 	say "     Almost immediately, you are kneeling before him, feeling those strong quads pulling you in between them and denying you any means of escape, though for now, he merely keeps you in place, right in front of his crotch. With this much proximity, you begin to breathe in that musk, that sweet masculine and beast-like scent, which is so much more intense this up-close. An urge begins building within you fast, to breathe it in, to let it in your system as you worship this huge, strong werewolf that is looking down at you, a towering presence so powerful you feel completely disarmed. He does not have to say nor do anything, you know exactly what you want to do...";
-	WaitLineBreak;
+	wait for any key;
 	project figure of Jett_hard_icon;
 	if player is submissive: [submissive players are more susceptible to the alpha's scent]
 		say "     [bold type]Given your natural submissive instincts, you feel like giving in to his scent might be... Really good for you.[roman type][line break]";
-		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Give in and breathe it in...";
 		say "     ([link]N[as]n[end link]) - Hold yourself together and just suck his cock.";
 		if Player consents:
@@ -317,20 +311,20 @@ to say JettAlphaSexBlowjob:
 	WaitLineBreak;
 	say "     Soon, you are wrapping your lips around the alpha's tip as well, not content in just licking it. You want to try to suck as much of it as you can, pushing your face and mouth against the shaft while holding it steady so you can try to fit in as much of it as you can. This time, you got the werewolf grunting as he observes you going down on him, your administrations proving to be quite pleasurable for him. One of his big hands begins to go over your head and the back of your ears, almost as if caressing you affectionately, though despite the non-verbal praise, you do not let go, determined to bring this alpha beast to an orgasm sooner or later. His cock is definitely huge, though it seems to pulsate into an even larger size the more excited he gets...";
 	say "     It might have been that the alpha simply was not fully hard until now, after so much licking and sucking on his red prick, your hands still stroking the whole shaft from below where you lips cannot reach just yet. Your jaw aches with how much you force it open to fit in more of his cock, inch after inch, but it really is hard work. With the best of your abilities, you jerk him off, suck and lick from every angle, going around and over his cock slobbering on the whole thing, leaving trails of saliva all over his meat, and all the while his scent continuously assaults you. It really becomes hard to focus on anything but to sloppily blow him, not even caring how, just that you must worship it until you lose even the track of time.";
-	WaitLineBreak;
 	follow the turnpass rule;
+	AttemptToWait;
 	say "     And you do, eventually. You have been worshiping Jett's cock for so long you forgot how long you have been here for. He has not let you go, which means you should be doing a good job. The werewolf's dick is coated in saliva and precum, wet to the very end, and it slides so easily between your lips every time you go down on it. Your jaw and face are numb, but it does not matter. All that does is his cock and pleasure, licking the shaft, swallowing the juices, giving his balls a good rub while you suck on his cock, feeling that warm meat pulsate in your mouth and pouring more of that tasty, thick precum onto your tastebuds, almost like a continuous reward...";
 	say "     However, at some point, you feel Jett getting restless, adjusting himself in his seat a few more times than usual as he takes plenty of deep breaths. He has been holding it all this time while you continuously worship his manhood without any plans on stopping. While this goes on for a while, Jett eventually places both his hands on your head and keeps you with your mouth wide open and his cock inside, having you held in place as his climax finally arrives. 'Hnng... Take it all, don't waste a drop...!' he utters, and you do not fully realize the meaning of this until he begins to shoot enormous amounts of cum into your mouth, so much that you immediately struggle to gulp the first shot, and even more the second. The quantity is so absurd some of it finds itself traveling through your nose as you desperately fight to gulp everything down...";
 	WaitLineBreak;
 	say "     No matter how hard you try to comply to his orders, your face ends up soaked, cum having found its way through your nose and escaping the corners of your mouth. Once you are set free, you need to cough in order to unclog your breathing canals before you drown in the alpha's ridiculous load. You take some time to recover from this ordeal, and as you look up at Jett, he has this big smile on his muzzle. 'Heh... Not too bad. You got most of it,' he says, chuckling as he beckons you to stand. He then places one hand over your face, rubbing his thumb around your mouth and cheeks, and bringing remaining drops of his cum over to your lips. He gives an approving nod as you lick it back from his fingers. 'But for now, you should take a rest. There'll be more opportunities for you to pledge your services to me.'";
 	say "     Patting you like a well-behaved pet, Jett then lets you walk away. It is evident that you have pleased the alpha werewolf as he observes you leaving with a pleased look.";
-	JettLoyaltyBoost1;
 	NPCSexAftermath Player receives "OralCock" from Jett;
+	JettLoyaltyBoost1;
 
 to say JettAlphaSexWorship:
 	say "     Looking at the alpha's enormous, muscular and powerful body, covered in such soft fur, you wonder if he would like to have someone to appreciate his size and strength, if not just to cuddle with the big beast. He laughs whole-heartedly at your question, then lays back on his couch with his arms raised behind his head and legs spread to each side. The view is already incredible, not only because of the thick sheath between his legs, where the tip of his cock is already peeking outside, but because of how massive he looks when he sits like this, displaying his muscles in such a way you cannot help but run your eyes all over him. 'You wanna come give your alpha a hug, is that what you're saying?' he asks teasingly, his expression suggesting an encouraging invitation.";
 	say "     With nothing else to add, you walk up to Jett, stepping towards his couch and moving in between his legs. He then receives you in his embrace by placing his big furred arms around you, then pulling you to him. You sink into his soft fur and muscles, your head laying on his powerful chest, allowing you to feel and hear the werewolf's heartbeat with each powerful thud. However, this is not your typical cuddling session, as the werewolf has been grinning this whole time, so you half-expect what comes next. He really hugs you, like, really tight, his arms pressing you against his body with an unbeatable grip, so strong that it severely hinders your movement. 'Lucky you, this werewolf loves hugs... Don't worry, though, I won't crush you... Completely, at least.'";
-	WaitLineBreak;
+	wait for any key;
 	project figure of Jett_hard_icon;
 	say "     You feel like he could break your bones if he wanted to, but it is clear he does not mean to hurt you, especially when one of his hands finds its way just behind your rear. A thick finger begins to travel between your buttocks as he searches for your [if player is female]pussy from behind[else]hole[end if], and though he is not quite fingering you, he presses against it, the rubbing being enough to relax you in such teasing pleasure. Meanwhile, your entire front is pressed against the werewolf's massive body, with his warm and soft fur caressing you everywhere it touches, [if player is male]which feels especially nice on your cock, hard as it is rubbing against his midriff[else]your erogenous regions appreciating the additional stimulation[end if]. 'That's for being a good pup...'";
 	say "     Another thing that hits you in the middle of all this... Is his scent. It is so powerful from here that you inevitably feel the urge to trace its source, which obviously is spread through his whole body, but you know one close enough place where you could feel it at its peak. With that said, you also have his big, musclebound pecs, each with a meaty nipple that must be, for sure, quite sensitive. In fact, you wanted to worship his body, and that has not left your mind ever since he embraced you. Although, it is not like you had much of a choice with the werewolf holding you tightly like that, but after a while, he loosens his grip on you. 'Alright [boygirl]... Pick one spot. That'll be your duty for the next hour.' With that, he raises one of his arms and bounces the adjacent pec right above your face,. It is almost like he just read your mind...";
@@ -359,7 +353,7 @@ to say JettAlphaSexWorship:
 to say JettAlphaSexRimming:
 	say "     You cannot help but stare at the werewolf's massive furred thighs and the way he leans back, almost showing the crack between his huge, muscular buttcheeks. They are not quite just muscle, however, you can see there is a certain amount of fat covering his glutes, which makes his body look softer and even bulkier. In fact, you are pretty sure if you placed your face right there, you would sink in so deep you would probably feel trapped in there, munching on that tasty-looking hole of his... 'Hm... Curious. You seem oddly focused on my groin, pup. It's not like you never saw it...' he says, chuckling, as you wake up from your daydreaming. You have just noticed you were staring at him, thinking of his ass, for probably a bit too long.";
 	say "     Perhaps you should ask him directly, that you would like to rim him. His ears perk at your words, the werewolf's expression turning into a mix of amusement, yet intrigue. 'Huh. That's not usually the request I get...' he says, yet he spreads his legs and leans back further, this time bringing his ass more into your view as his butthole is now visible, albeit barely due to how bulky and fuzzy it is, 'But it's a more than adequate away to serve me. In fact, one of my [italic type]favorite ways[roman type]... So why don't you come closer and bury your face in there?' The way he makes it look and sound so welcoming has you immediately kneeling down between his legs, though something else strikes your senses... His musk is very, very strong in here, more than anywhere else in his body. You have not even started and you can feel its addicting scent, threatening to take over your mind. It is pure beastly sweat and pheromones concentrated in a single, very hot spot...";
-	WaitLineBreak;
+	wait for any key;
 	project figure of Jett_hard_icon;
 	say "     [bold type]There is no way you will be able to resist it once you get started, but your body and mind want it, and the more you wait, the more you crave it...[roman type][line break]";
 	say "     ([link]Y[as]y[end link]) - Give in and just sink your face into his marvelous ass.";
@@ -388,8 +382,8 @@ to say JettAlphaSexRimming:
 
 to say JettAlphaSex69Scene: [intimate]
 	say "     You tell the alpha that you would like to be intimate with him, away from others['] eyes, in privacy. Given how you have pleased him in the past, Jett is glad to grant you your wish, as evidently shown by his warm smile at your request. 'You wanna give your alpha some private pleasure this time? That's alright... It can be arranged.' With a satisfied grin on his scarred muzzle, Jett gives you a pat on the head as he gets up, his whole enormous body now towering over you as he beckons you to move after him. 'Let's head inside. No one will disturb us in there.' You nod and start moving where he tells you, towards his chambers once more...";
-	say "     The two of you then walk through a discrete pathway parting from the main hub into a corridor, then into a door, which he unlocks. Then, you are led to his internal apartment's hallway and through a few extra-sized divisions. As you take a turn to the bedroom, Jett pulls you to him and brings your face closer to his, the warmth of his breath brushing against your features. 'All alone now... Just you and me...' This much proximity allows you to feel his powerful heartbeat, and his own arousal perfumes the entire room with an intense, masculine scent. Without any further ado, the werewolf begins to kiss you passionately, his nimble tongue voraciously invading your mouth, skillful enough to leave you longing for more. Your bodies join one another in a tight embrace as the massive werewolf holds you gently, then carries you to the comfortable bed that awaits your lovemaking.";
-	WaitLineBreak;
+	say "     The two of you then walk through a discreet pathway parting from the main hub into a corridor, then into a door, which he unlocks. Then, you are led to his internal apartment's hallway and through a few extra-sized divisions. As you take a turn to the bedroom, Jett pulls you to him and brings your face closer to his, the warmth of his breath brushing against your features. 'All alone now... Just you and me...' This much proximity allows you to feel his powerful heartbeat, and his own arousal perfumes the entire room with an intense, masculine scent. Without any further ado, the werewolf begins to kiss you passionately, his nimble tongue voraciously invading your mouth, skillful enough to leave you longing for more. Your bodies join one another in a tight embrace as the massive werewolf holds you gently, then carries you to the comfortable bed that awaits your lovemaking.";
+	wait for any key;
 	project figure of Jett_hard_icon;
 	say "     'I'm always happy to make you all mine, [boygirl]...' Jett sort of reminds you of a gentle giant as he handles your body with such care, though always firmly, like he owns you and knows exactly how to handle you. But lets not forget, you have both come here with one specific thing in mind, and as such, the alpha brute lies down on the bed, legs still past the edge of the mattress and with his back turned down, and holds you on top of him. With formidable strength and, frankly, absolutely no effort, he raises you and lines up your [if Player is female]womanhood[else]ass[end if] with his muzzle, then descends your body in a way that you end up sitting right on it. You kind of have to find some balance amidst all this, but the grip he keeps on your hips helps you remain atop his face.";
 	say "     Immediately, you feel that furred long muzzle of his pressed between your buttcheeks and his tongue seeking your [if Player is female]moistened labia[else]hole[end if], and it definitely does not disappoint. Without holding back once, the alpha werewolf begins to eat you out like a famished beast, pushing that slick organ of his deep into you as it wiggles against the walls of your [if Player is female]pussy[else]bottom insides[end if]. All this does not come without a pleasant extra, however, as you get a great and broad view of Jett's muscular body down below, especially that absolutely massive red cock of his throbbing compulsively at every other second, oozing copious amounts of precum, and accompanied by a huge set of balls that you can only see the girth of from here.";
@@ -408,7 +402,7 @@ to say JettAlphaSex69Scene: [intimate]
 		say "     [italic type]To reciprocate your attention, one of the alpha's hands moves towards your chest as Jett decides to fondle it, slowly but firmly and steadily, which, combined with all the tonguing you are getting, makes you absolutely lose your mind. His touch seems to escalate the more intensely you rub and suck on that big dick of his, but it is so massive you can really just lick at the sides and suck on the tip comfortably. This seems to be enough to please the werewolf, however, as he makes your [if Breast Size of Player > 0]tits[else]pecs[end if] feel so good with his fingers all over your nipples, as sensitive as they are. Such dexterity and attention certainly confirms that Jett had never lost his touch and lovemaking skills.";
 		say "     With your [if Player is female]pussy[else]hole[end if] still thoroughly stimulated during all this and your erogenous zones feeling properly appreciated, you can barely focus on providing oral attention to that well deserving monster cock of his, but he seems to take delight on torturing you with pleasure. It also means that you can not last that much longer either, so eventually, your body speaks for itself. Jett gets this and begins to intensify his gestures, tongue you deeper - not knowing that was still even possible! - and it fully commits. You hit your climax right there, moaning with your lips still wrapped around his dick as this wave of pleasure surges through you. 'Mmh... You might... wanna watch out...' he warns you, though during your lust stupor, you fail to process that information in time before...";
 	WaitLineBreak;
-	say "     ... Well, before you are showered by a real alpha werewolf's load, that is, shooting all over your body (and, in consequence, his, as you are on top of him still) with a nearly continuous stream of creamy white jizz. 'Hnng... Yeah, that's... What I meant...!' he moans and grunts as spurt after spurt leaves him and lands directly on the both of you, making a mess of the ceiling, sheets and even floor. This big guy's load surely matches his size, and you are earning a personal demonstration of that. The whole room is already coated in his cream, and he has not stopped cumming yet. Howling and grunting all the way to the end, Jett's orgasm only ends with his last drops slowly pouring out of his huge cock into your drenched body. The two of you are a complete mess, as is everything else around you.'";
+	say "     ...Well, before you are showered by a real alpha werewolf's load, that is, shooting all over your body (and, in consequence, his, as you are on top of him still) with a nearly continuous stream of creamy white jizz. 'Hnng... Yeah, that's... What I meant...!' he moans and grunts as spurt after spurt leaves him and lands directly on the both of you, making a mess of the ceiling, sheets and even floor. This big guy's load surely matches his size, and you are earning a personal demonstration of that. The whole room is already coated in his cream, and he has not stopped cumming yet. Howling and grunting all the way to the end, Jett's orgasm only ends with his last drops slowly pouring out of his huge cock into your drenched body. The two of you are a complete mess, as is everything else around you.'";
 	say "     'Mmmh... You're such a tasty, good [boygirl]...' he says as he flips you over, bringing you below him, that enormous, muscular and heavy body of his now pinning you down against the cum-drenched sheets and under his jizz-coated fur, and begins to switch between licking your face and making out with you, almost possessively as his hand holds your head in place. Being this close to the alpha werewolf, especially after such a powerful climax, already has your senses escaping you, feeling lightheaded as his intoxicating musky scent overwhelms you, beastly sweat and cum combined. 'You've done such a good job at pleasing your alpha... But he's got stuff to take care of now... Gotta get back to the real world out there...' He gives you yet another lick across your face, chuckling at the end, before helping you get up.";
 	WaitLineBreak;
 	say "     With the deed done, he brings you a relatively clean towel for you to get rid of that mess all over your body. 'Get yourself nice and presentable before you get out there, lest you want a group of werewolves on your ass as soon as you step outta that door...' You do just that, trying to get the cum out of you, though a simple towel can only do so much. It should be good enough, however, and Jett gives you the green sign. He then escorts you out of his chambers and lets you go... after giving your butt another loving tap.";
@@ -487,7 +481,7 @@ to say JettAlphaTalkOfferGift:
 			say "     You do try to tell him how you have managed to do it, but you cannot help but feel embarrassed about your tactic of choice. As you explain everything that happened, Jett's expression changes to a worrisome one. 'Oh... You didn't have to put yourself in such position. Elstan's just a pushover, he likes to bark but he doesn't actually get anything done. Might I suggest next time to simply bore him until he accepts the task at hand? In last case, you just return to me and I'll advise you properly.' He beckons you to approach him, and so you do, only to be surprised by a gentle stroke over your face. 'Just remember you're a very strong person. You've managed to endure this apocalypse with your mind intact, and you're still kicking. You can face a lot more shit than the average person around here, and you don't have to do anything you don't really want to. So feel free to keep up that cute smile of yours, it'd be a shame if you lost it!'";
 			say "     'Unless you actually liked to be put in that position. In that case, hope you have fun being his little slut...!' he then chuckles loudly with a grin on his muzzle. Sure, Jett can be nice, but he never drops the naughty about him. 'Nonetheless, you got the job done, so that's something good.'";
 		WaitLineBreak;
-		say "     Jett then gets up and stands in front of you, his towering frame become even more evident, and with a happy smile on his muzzle, he puts his large hand over your shoulder. 'Now that congratulations are in order, let's get to what brought you here in the first place... I'm pretty sure Elstan will be here any moment, so we can start going to my personal chambers.' He beckons you to walk in front of him as he directs your way through a discrete pathway parting from the main hub into a corridor, then into a door, which he unlocks. Then, you are led to what seems like a hallway of an apartment, to your surprise. It is even resized to Jett's impressive height and size, so everything seems quite big compared to an average person.";
+		say "     Jett then gets up and stands in front of you, his towering frame become even more evident, and with a happy smile on his muzzle, he puts his large hand over your shoulder. 'Now that congratulations are in order, let's get to what brought you here in the first place... I'm pretty sure Elstan will be here any moment, so we can start going to my personal chambers.' He beckons you to walk in front of him as he directs your way through a discreet pathway parting from the main hub into a corridor, then into a door, which he unlocks. Then, you are led to what seems like a hallway of an apartment, to your surprise. It is even resized to Jett's impressive height and size, so everything seems quite big compared to an average person.";
 		say "     The werewolf then closes the door behind you, and you hear a lock kicking in. 'To keep undesired guests from entering,' he says, and gestures you to walk forward, then turn right, as to dismiss any worries you may have. He follows you closely as you arrive at a bedroom with a massive bed, which is in fact almost the entire room. There are pillows and... quite not what you would expect from an [']alpha brute['], as the decoration of choice, despite the rocky walls, feels very cozy and colorful. He even has a plushie of a cute little green blob monster, and you are quick to ask about it, as it just is too unexpected. He laughs it out as beckons you to take a seat atop his bed's sheets, which are extremely comfortable.";
 		WaitLineBreak;
 		say "     'Yes, I admit my personal chambers may look as something quite unexpected to people who haven't known me in a while...' he jokingly says, but you notice his expression changing when looking back at the plushie. 'That was a gift from my parents back when I was a small kid, and it was one of my favorite toys. Obviously we... Eventually disconnect from such stuff as we lose interest in children's plays and whatnot, so this one was among many others back at my parents' house. So... Well, I've had lost contact with them for a while, but they used to live in the area. When this whole shit started, I've decided to visit the place, and... Found this little guy, still undamaged, among the debris. No trace of my parents, however, nor their belongings... Which is probably a good thing. Hopefully they went on a travel, enjoying retirement...'";

@@ -3,7 +3,6 @@ Version 1 of Exploration Events by Kurainyx begins here.
 
 "Adds exploration events to Flexible Survival."
 
-
 Section 1 - Capitol
 
 Table of GameEventIDs (continued)

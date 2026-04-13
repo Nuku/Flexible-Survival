@@ -8,13 +8,13 @@ Version 1 of Midnight by Luneth begins here.
 section 1- Midnight
 
 Lastmidnightmimiced is a number that varies. Lastmidnightmimiced is usually 250.
-Midnightmimiced is a number that varies. Midnightmimiced is usually 0.
+[Midnightmimiced is a number that varies. Midnightmimiced is usually 0.]
 
 Table of GameCharacterIDs (continued)
 object	name
 Midnight	"Midnight"
 
-Midnight is a man.[or woman]
+Midnight is a man. [or woman]
 [Physical details as of game start]
 ScaleValue of Midnight is 3. [human sized]
 Body Weight of Midnight is 3. [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
@@ -51,59 +51,50 @@ AnalVirgin of Midnight is true.
 PenileVirgin of Midnight is false.
 SexuallyExperienced of Midnight is true.
 MainInfection of Midnight is "Panther Herm".
-Description of Midnight is "A large and powerful black panther is reclining lazily up against the gift shop counter, its golden eyes watching both you and Angie with lazy arrogance.".
-Conversation of Midnight is { "Mrowl!" }.
-
-instead of linkactioning Midnight:
-	say "Possible Actions: [link]talk[as]talk Midnight[end link], [link]smell[as]smell Midnight[end link], [link]fuck[as]fuck Midnight[end link], [link]mimic[as]mimic Midnight[end link][line break]";
-
-instead of sniffing Midnight:
-	say "Midnight has a strong scent of herm panther arousal and hot, feline sex clinging to him.";
+Description of Midnight is "     A large and powerful black panther is reclining lazily up against the gift shop counter, its golden eyes watching both you and Angie with lazy arrogance.[line break]".
+[Conversation of Midnight is { "Mrowl!" }.]
+linkaction of Midnight is "Possible Actions: [link]talk[as]talk Midnight[end link], [link]smell[as]smell Midnight[end link], [link]fuck[as]fuck Midnight[end link], [link]mimic[as]mimic Midnight[end link][line break]".
+Scent of Midnight is "     Midnight has a strong scent of herm panther arousal and hot, feline sex clinging to him.".
 
 instead of conversing the Midnight:
-	say "[one of]'Isn't he amazing?' Angie says.[or]'Just being near him makes me feel so... submissive...' Angie says with a rumbling purr.[or]The large cat makes a soft rumbling purr at you.[or]You find your eyes locking with the panther's strong, golden eyes for a second, and you find yourself dropping to all fours almost automatically as you meet his dominant stare.[or]The large, black panther ignores your feeble attempt at communication as beneath him.[or]The large cat reaches out and licks your hand with his rough tongue, making you shudder in pleasure.[or]The large panther's erotic musk fills the air as you try to talk to him, and you find yourself less and less interested in speech as the handsome cat smiles at you knowingly.[or]'He only knew a few commands,' Angie says as you try to talk to the large cat. 'Though I am definitely thinking about teaching him a few more,' she adds with a teasing grin. 'Or maybe we should let him teach us a few commands instead,' she purrs happily, as you stare at the obviously amused large panther.[or]'You know, you could learn a lot from a powerful panther like him,' Angie says with a happy purr. 'Maybe you should try acting like him sometime.'[or]'Sometimes I find myself mimicking Midnight's movements,' Angie says as you watch the large cat eye you with amusement. 'It makes me feel much more like a proper feline. Maybe you should try to [link]mimic[as]mimic midnight[end link] Midnight sometime, too.'[at random]";
+	say "     [one of]'Isn't he amazing?' Angie says.[or]'Just being near him makes me feel so... submissive...' Angie says with a rumbling purr.[or]The large cat makes a soft rumbling purr at you.[or]You find your eyes locking with the panther's strong, golden eyes for a second, and you find yourself dropping to all fours almost automatically as you meet his dominant stare.[or]The large, black panther ignores your feeble attempt at communication as beneath him.[or]The large cat reaches out and licks your hand with his rough tongue, making you shudder in pleasure.[or]The large panther's erotic musk fills the air as you try to talk to him, and you find yourself less and less interested in speech as the handsome cat smiles at you knowingly.[or]'He only knew a few commands,' Angie says as you try to talk to the large cat. 'Though I am definitely thinking about teaching him a few more,' she adds with a teasing grin. 'Or maybe we should let him teach us a few commands instead,' she purrs happily, as you stare at the obviously amused large panther.[or]'You know, you could learn a lot from a powerful panther like him,' Angie says with a happy purr. 'Maybe you should try acting like him sometime.'[or]'Sometimes I find myself mimicking Midnight's movements,' Angie says as you watch the large cat eye you with amusement. 'It makes me feel much more like a proper feline. Maybe you should try to [link]mimic[as]mimic midnight[end link] Midnight sometime, too.'[at random]";
 
-Midnightmimicking is an action applying to nothing
-
-Understand "Mimic Midnight" as Midnightmimicking.
-Understand "Mimic Cat" as Midnightmimicking.
+Midnightmimicking is an action applying to nothing.
+Understand "Mimic Midnight/Cat" as Midnightmimicking.
 Understand "act like Midnight" as Midnightmimicking.
 Understand "Act feline" as Midnightmimicking.
 Understand "Mimicing Midnight" as Midnightmimicking.
 Understand "Mimicking Midnight" as Midnightmimicking.
 
 Check Midnightmimicking:
-	If Midnight is not visible, say "Who?" instead;
+	if Midnight is not visible, say "Who?" instead;
+	if lastMidnightmimiced - turns < 8:
+		say "     'I think he is a little bored with the idea of performing for you,' Angie says with a soft chuckle as Midnight yawns at you and proceeds to promptly ignore your attempts to get the large cat to show you how to move. 'Maybe you should come back and try again later,' Angie says as she reaches down to pet the large cat fondly, 'Then again, maybe he is more interested in playing with you in another way, if you know what I mean.' The panther herm says teasingly as she runs her golden eyes over your body lustily." instead;
 
 carry out Midnightmimicking:
-	if lastMidnightmimiced - turns < 8:
-		say "     'I think he is a little bored with the idea of performing for you,' Angie says with a soft chuckle as Midnight yawns at you and proceeds to promptly ignore your attempts to get the large cat to show you how to move. 'Maybe you should come back and try again later,' Angie says as she reaches down to pet the large cat fondly, 'Then again, maybe he is more interested in playing with you in another way, if you know what I mean.' The panther herm says teasingly as she runs her golden eyes over your body lustily.";
-		stop the action;
 	now lastMidnightmimiced is turns;
 	say "     'Ah! You want to learn a few tricks from Midnight?' Angie says happily as you study the large feline closely. 'You can learn a lot about how to move and pounce if you watch a panther for a while, here I'll help you out,' she says as she coaxes Midnight to his feet. You watch with interest as Angie convinces the large cat to stalk around the small shop where you can watch, the powerful feline pouncing and leaping around and seeming to enjoy himself as he does so. Watching the play of those powerful muscles ripple underneath the black panthers skin, you find yourself trying to imitate the large cat's smooth and swift movements as he prowls around the store.";
-	let bonus be (( Intelligence of Player minus 10 ) divided by 2);
+	let bonus be ( Intelligence of Player minus 10 ) divided by 2;
 	let diceroll be a random number from 1 to 20;
-	say "     You roll 1d20([diceroll])+[bonus]: [diceroll + bonus], ";
+	say "[line break]You roll 1d20([diceroll])[if bonus >= 0]+[end if][bonus] = [special-style-1][diceroll + bonus][roman type] vs [special-style-2]16[roman type] (Intelligence Check):[line break]";
 	increase diceroll by bonus;
 	if diceroll > 15:
-		say "Watching the large cat closely, you think you begin to realize just how to achieve the same kind of fluid movement, and Angie grins and even Midnight gives you a chuff of approval as you try to move through some of the same tricks Angie put the large cat through. Angie helps by calling out some suggestions as you do, and soon you find yourself stalking around the store with an almost predatory grace, feeling more spry and nimble than ever before, almost feeling a bit like a large cat yourself.'";
+		say "     Watching the large cat closely, you think you begin to realize just how to achieve the same kind of fluid movement, and Angie grins and even Midnight gives you a chuff of approval as you try to move through some of the same tricks Angie put the large cat through. Angie helps by calling out some suggestions as you do, and soon you find yourself stalking around the store with an almost predatory grace, feeling more spry and nimble than ever before, almost feeling a bit like a large cat yourself.'";
 		infect "Panther Herm";
 		if dexterity of Player < 24:
 			StatChange "dexterity" by 1;
-		stop the action;
 	else:
-		say "You sigh as Angie snickers at your pathetic attempts to mimic the way the large feline moves, Midnight giving you a disgusted sniff as you trip and stumble and trip into several displays, obviously having not grasped something important in your studies. Giving up your attempts, you resolve to try to mimic the powerful felines movements again later.";
+		say "     You sigh as Angie snickers at your pathetic attempts to mimic the way the large feline moves, Midnight giving you a disgusted sniff as you trip and stumble and trip into several displays, obviously having not grasped something important in your studies. Giving up your attempts, you resolve to try to mimic the powerful felines movements again later.";
 		decrease HP of Player by 10;
 
-
 Instead of fucking the Midnight:
-	setmonster "Panther Herm";
 	if lastfuck of Midnight - turns < 6:
 		say "     'The large cat looks at you with lazy arrogance. 'I don't think he is ready to play again just yet,' Angie says with a slight grin on her muzzle, 'Sorry that is probably my fault, your last romp with him looked like so much fun I had one with him a little later... Don't worry though, cats recover quickly so I am sure he will be ready to play again soon,' the panther herm says as she reaches over to pet the large cat fondly a couple times, her touches becoming increasingly intimate caresses until with a soft blush she realizes what she was doing and stops.";
 	else:
 		now lastfuck of Midnight is turns;
 		say "     As you approach the large black feline, Angie grins happily as Midnight stands up on all four paws to greet you with a happy chuff. 'I think he's ready to play with you, and make you a sexy little kitty just like me,' Angie practically purrs as she watches the large cat stalk towards you. 'God! Just the thought of watching him and you together is making me so hot,' the former zookeeper pants out as she runs the tips of her claws through her own dark black fur. Seeing how aroused the sight of the large panther approaching you intently is making her, you are tempted to ask Angie if she wants to join the two of you in having some fun... but then again, having the large panther all to yourself is a tempting idea as well. Do you invite Angie to join you?";
 		if Player consents:
+			LineBreak;
 			if Player is male:
 				if Player is female:
 					say "     Angie smiles as you invite her over to play as well, her tail lashing behind her eagerly as she moves up next to you, stroking her soft hands through over your body teasingly, as her soft rumbling purr mixes with the purr of the large panther stalking towards you. 'Thanks for inviting me over to play,' she says teasingly as she runs her paws over your body, 'I have been fantasizing about something like this since you brought Midnight back to the shop,' she purrs, turning and rubbing her back up against your chest as her tail rubs against the inside of your legs teasingly. 'And I bet you have too,' Angie says with a chuckle as she lowers herself down on her hands and knees in front of you, looking back at you over her shoulder teasingly, as her tail strokes across your chest. Your cock stiffens with excitement as Angie's heat-filled perfume fills the air, your own pussy dampening as well, and you find yourself reaching forward as Midnight rumbles behind you in encouragement. Your arms slide around the pantheress's waist, making her purr as you draw her back towards you, your cock rubbing up against her swollen pussy even as your arms slide up to grip and massage her large breasts.";
@@ -111,16 +102,14 @@ Instead of fucking the Midnight:
 					NPCSexAftermath Angie receives "PussyFuck" from Player;
 					NPCSexAftermath Player receives "PussyFuck" from Midnight;
 					SanLoss 5;
-					Infect "Panther Herm";
-					Infect "Panther Herm";
+					MultiInfect "Panther Herm" repeats 2;
 				else:
 					say "     Angie smiles as you invite her over to play as well, her tail lashing behind her eagerly as she moves up next to you, stroking her soft hands through over your body teasingly, as her soft rumbling purr mixes with the purr of the large panther stalking towards you. 'Oh yes, make us both your little kitties,' Angie purrs out eagerly, stalking in front of you and dropping to all fours in front of you, her tail lashing teasingly behind her, and stroking across Midnight's muzzle seductively. The large cat wastes no time in switching his attentions to his favorite mate, and Angie moans in pleasure as the experienced feline moves on top of her, his paws gripping her sides as he sinks himself into her body. You can feel your cock growing increasingly stiff, as the scent of their feline arousal fills the room, and your eyes are drawn to Midnight's own damp female sex as the large cat's tail lifts up with arousal.";
 					say "     You can feel a grin tugging at your mouth as you step up behind the large feline, burying your hands in the herm panthers soft fur as you rub the tip of your cock up against her body. Midnight yowls with pleasure as after teasing her for a second, you bury your stiff rod in their body, and you groan at feel of the panthers sex rocking up against your cock even as Midnight thrusts into Angie. After a few thrusts, you find yourself matching the rhythm of felines thrusts with your own, the feel of the herm's soft fur underneath your hands and her velvety opening gripping your cock is nothing short of glorious. Midnight's soft cries of pleasure mingling with Angie's as you mate them both eagerly, feeling increasingly more bestial and dominant with each stroke, until eventually your eyes drift shut as a powerful orgasm rocks your body. You cry out as you spill your seed into the panther, your voice mingling with Midnight's and Angie's low yowls of pleasure, as they orgasm in turn. Your mind awash with pleasure, you can barely manage to stagger over to the counter as you pull out of your feline mate, leaning on it for support as Midnight dismounts Angie, the large cat stalking over to you and purring as it settles down next to you like a good mate, Angie following happily and sprawling down at your feet as well, their obvious acceptance of your dominant male position making you smile as you try to recover from your wits after such an amazing experience.";
 					NPCSexAftermath Angie receives "PussyFuck" from Midnight;
 					NPCSexAftermath Midnight receives "PussyFuck" from Player;
 					SanLoss 5;
-					Infect "Panther Herm";
-					Infect "Panther Herm";
+					MultiInfect "Panther Herm" repeats 2;
 			else:
 				say "     Angie smiles as you invite her over to play as well, her tail lashing behind her eagerly as she moves up next to you, stroking her soft hands through over your body teasingly, as her soft rumbling purr mixes with the purr of the large panther stalking towards you. 'I think he wants you to be on all fours for him, like a proper cat,' Angie says teasingly as she helps guide you down onto all fours before the large panther, the position seeming increasingly erotic as she pets your head lightly. You can hear Angie chuckle slightly at how easily she gets you positioned in front of the aroused panther, and you almost open your mouth to protest, only to let out a moan of pleasure as Midnight settles his weight down on your back. His feline cock rubs up against your body several times, before Angie reaches back and helps guide him into your waiting vagina, causing you to groan as he buries his pointed rod deep into your body.";
 				say "     The feel of Midnight's barbed shaft pressing into your cunt obliterating all capacity for thought as his feline barbs massage your insides, even as his tip rubs up against your cervix. You don't even notice when Angie moves, lost in the feeling of the large cat's short thrusts as he pistons his cock in and out of your needy cunt, but you notice when Midnight yowls in pleasure above you, and you manage to glance back over your shoulder to see Angie mounting the large cat from behind. This only seems to encourage Midnight to mate you even harder, and you find yourself awash in pleasure again as he pounds into your body with increasing vigor, the tip of his cock pushing against your inner barrier with each thrust, and making you shudder with pleasure. All too soon you find yourself crying out underneath the large cat as your body shudders in orgasm, Midnight and Angie's cries mingling with your own as they orgasm as well. You lower your head down to the ground and pant with exhaustion, your mind overcome with pleasure at the feeling of the panther's hot, infectious seed filling your womb to the brim. You groan and sprawl out onto the floor as Midnight shifts his weight off of you, rolling over so you can look up into the grinning faces of the large panther and the panther-like zookeeper. Angie's smile only seems to widen as she sprawls out onto the floor next to you, drawing you in for a teasing kiss and making you moan. Your moan changes to a yelp of surprise as you feel a large rough tongue lick over the edges of your well-used sex. Looking down you find yourself staring into the amused eyes of a panther, as Midnight runs his feline tongue over your damp crotch again, making you shudder with pleasure as Angie chuckles next to you, the panther herm holding you close, her hands roaming your body teasingly as Midnight cleans your crotch in the feline manner. Finally your two mates relax next to you, their happy purrs filling your head as you lie their basking in the pleasure, and sigh as you wonder whether you really have to actually go back out into the city, instead of just staying here in this makeshift den where your mates can use you and mate you like a proper pantheress...";
@@ -128,9 +117,9 @@ Instead of fucking the Midnight:
 				NPCSexAftermath Midnight receives "PussyFuck" from Angie;
 				NPCSexAftermath Midnight receives "OralPussy" from Player;
 				SanLoss 5;
-				Infect "Panther Herm";
-				Infect "Panther Herm";
+				MultiInfect "Panther Herm" repeats 2;
 		else:
+			LineBreak;
 			if Player is male:
 				if Player is female:
 					say "     The sight of the large panther stalking toward you, and the thought of having that large powerful feline all to yourself is just too tempting, and you find yourself grinning as the large cat brushes against you, circling you teasingly while his soft feline tail brushes up against your body. His erotic scent and the sensual feel of his soft fur brushing against you teasingly soon has you panting harshly with arousal, your cock stiffening even as your pussy dampens in anticipation. You are unsure which prospect entices you more, the possibility of mating the large feline with your cock, or letting him mate you with the dark red member you can see hanging erect underneath the large cat as he circles you. Midnight seems to have his own ideas on what to do however, as he stops facing you, making you look at him curiously, before he stalks up and hops towards you, his front paws rising off the ground to hit you squarely in the chest. You let out a noise of surprise, as the large cat's weight knocks you to the ground, you have the wind knocked out of you as you land on the soft blankets Angie has laid out over in the big cat's corner, Midnight's large paws still resting on your chest as the cat lowers his muzzle down to sniff at your surprised face. You swear you can almost see a grin on the large cat's face as you gasp and try to recover from his surprising pounce, but before you can tell for sure, the large cat opens his muzzle and licks his tongue across your cheek teasingly. Midnight shifts his weight off you as you blink in surprise at his feline kiss, his paws moving to the side as he moves over you, you are surprised by his actions until you feel his feline cock rubbing against your damp passage teasingly.";
@@ -149,9 +138,9 @@ Instead of fucking the Midnight:
 				NPCSexAftermath Player receives "PussyFuck" from Player;
 				infect "Panther Herm";
 
-
-
 Section 2- midnight quests
+
+midnightsighted is a number that varies.
 
 Table of GameEventIDs (continued)
 Object	Name
@@ -161,15 +150,12 @@ FindingMidnight is a situation.
 ResolveFunction of FindingMidnight is "[ResolveEvent FindingMidnight]".
 Sarea of FindingMidnight is "Zoo".
 
-midnightsighted is a number that varies.
-
-
 to say ResolveEvent FindingMidnight:
 	if midnightsighted is 2:
 		say "     Traveling down the zoo paths yet again, you find your feet leading you back to the area where you encountered the large panther earlier, a smile tugging at your face as you remember how excited Angie looked at the thought of the large cat. Deciding it can't hurt to check, you return to the stage where the cat was lounging earlier, only to find the stage empty, you sigh in disappointment, and turn to leave, wondering how you will break the news to the obviously excited Angie. Though as you turn around, you are shocked to notice the large black panther you were looking for, is lying languidly by the exit to the show area, sprawled out in a picture of feline indolence as he stares at you with amusement. Feeling somewhat nervous and excited in the presence of the large exotic beast, you reach into your pack and pull out the small specially treated bundle of catnip, its exotic scent filling the already pheromone laced air with its own special aroma. Midnight's golden eyes fix on the small bundle as you try to coax the large beast to follow you back to the gift shop where Angie is waiting, any doubts you might have had about bringing the two together completely forgotten in the heady sexually charged situation.";
-		let bonus be (( Charisma of Player minus 10 ) divided by 2);
+		let bonus be ( Charisma of Player minus 10 ) divided by 2;
 		let diceroll be a random number from 1 to 20;
-		say "     You roll 1d20([diceroll])+[bonus]: [diceroll + bonus] (Charisma-Check)[line break][line break]";
+		say "[line break]You roll 1d20([diceroll])[if bonus >= 0]+[end if][bonus] = [special-style-1][diceroll + bonus][roman type] vs [special-style-2]16[roman type] (Charisma Check):[line break]";
 		increase diceroll by bonus;
 		if diceroll > 15:
 			say "     Midnight is obviously just as interested in you and your body as he is in the small sexually scented catnip you wave in front of him. The panther begins to pant eagerly as he stands up and starts to stalk after you, his red feline member poking out of his sheath. The strange panther herm's male musk and female heat tease your senses, almost drawing you into a trance. Starting to feel a growing urge to just give in and let the magnificent beast fuck you right then and there, you quickly shake it off and start to back away slowly. The large cat follows you and you somehow just know that he's becoming increasing amusement and aroused as you lead it down the zoo pathways back towards the gift shop, your own body growing increasingly hot and needy with every step. Finally you push the door of the shop open behind you and the panther bounds inside with a rumbling purr as you let the door fall shut behind him.";
@@ -179,6 +165,7 @@ to say ResolveEvent FindingMidnight:
 				say "     Looking at you with slightly lust fogged feline eyes Angie moans happily, 'And I owe it all to you!' She purrs as she stands up and gives you a large hug, the mingled scent of the two aroused felines filling your head with their exotic scent. As you open your mouth slightly, Angie covers it with her feline muzzle, her rumbling purr rolling through your body as she kisses you deeply before backing off, you blink as you realize that Angie managed to swipe the scented bundle of catnip back from you while she kissed you. 'I know you probably want a turn too, but I just can't wait any longer,' Angie says teasingly as she waves the scented bundle of catnip in front of the large panther's twitching nose. He responds eagerly to the sexually teasing scent, and as she kneels before the large cat, you find your eyes locked to the erotic scene of Midnight eagerly mounting the pantherwoman. Your hands stray over your own body as the sounds of their wild mating fill the gift shop. Watching their bestial coupling, you can't help but wonder what it would be like yourself, and find yourself eagerly anticipating your own turn with the large panther...";
 				now Midnight is in Zoo Giftshop;
 				Infect "Panther Herm";
+				WaitLineBreak;
 				now player is in Zoo Giftshop;
 				now battleground is "void"; [blocks a random fight after this]
 				now AngieAroused is 50;
@@ -186,8 +173,8 @@ to say ResolveEvent FindingMidnight:
 			else: [Angie likes the player more than Midnight]
 				say "     Looking at you with slightly lust fogged feline eyes Angie moans happily, 'And I owe it all to you!' She purrs as she stands up and gives you a large hug, the mingled scent of the two aroused felines filling your head with their exotic aroma. As you open your mouth slightly, Angie covers it with her feline muzzle, her rumbling purr rolling through your body as she kisses you deeply. Pulling back while still holding you in her arms, she looks deep into your eyes, a thoughtful expression spreading over her face as she says, 'I - I really do owe it all to you, don't I? You saved me, spent time with me, we learned how much... fun this new body is together. I...' Looking over to Midnight, she sniffs the air that is still heavy with his musk and you can feel her cock twitch against you as lust makes her shiver, then looks back and forth between the two of you. Breathlessly fast, she pants, 'I feel I should let him mount me, make me into his willing pet forever, but... at the same time, I want to be with you. I... do care deeply about you.'";
 				say "     Taking a deep breath, she continues 'And... now that I think about it, what about all the other animals in the zoo? I'm supposed to be their keeper! Leaving them to take care of themselves while I just lounge around here seems... wrong. Anything might happen while I'm just waiting to be mounted by Midnight - feeling his weight on my back, that hard cock thrust into - oooh...' Angie shivers in arousal against you as she takes another whiff of Midnight's musk and her thoughts are scattered by a wave of lust running through her. Then she pushes her urges down again, barely managing to stop short of succumbing, and goes back to thinking aloud about what she should do.";
-				LineBreak;
-				say "     It's clear that Angie is on a knife's edge between two choices, reeling between going one way or the other. Maybe you should help her out with finding a decision? Do you talk her into becoming Midnight's sex pet (Y), or do you want her to be with you and take up her duties as zookeeper again (N)?";
+				WaitLineBreak;
+				say "     It's clear that Angie is on a knife's edge between two choices, reeling between going one way or the other. Maybe you should help her out with finding a decision? Do you talk her into becoming [link]Midnight's sex pet (Y)[as]y[end link], or do you want her to be with you and take up her [link]duties as zookeeper again (N)[as]n[end link]?";
 				if Player consents: [Angie+Midnight]
 					LineBreak;
 					say "     Reaching down to cup a breast and rub her hermaphrodite sex, you gently whisper to her to go to Midnight, just let it happen and be what she's supposed to be. And that last little push is enough to make up her mind. With a breathless moan, the panther-herm snatches the scented bundle of catnip from you and steps over to Midnight, waving it in front of the large feline's twitching nose. He responds eagerly to the sexually teasing scent, and as she kneels before the large cat, you find your eyes locked to the erotic scene of Midnight eagerly mounting the pantherwoman. Your hands stray over your own body as the sounds of their wild mating fill the gift shop. Watching their bestial coupling, you can't help but wonder what it would be like yourself, and find yourself eagerly anticipating your own turn with the large panther...";
@@ -201,7 +188,6 @@ to say ResolveEvent FindingMidnight:
 					say "     That clearly isn't what the panther wanted to hear - as he gives an angry yowl and jumps up at Angie, tripping her. His erect cock leaves little doubt that he wants to force the issue. But the zookeeper is having none of that, now that she's set on her path. It's a matter of moments before she has got the large cat in hand, clawed fingers gripping his throat and another paw-hand dug into the loose fur at his neck. 'No, Midnight! Bad cat!' she chides, standing up without letting go of him. 'I still care about you, big furball - but you won't mount me again. Now go,' Angie says, then lets him loose. The cat starts to stalk away, a disapproving growl in his throat, at least until Angie calls his name one more time and throws the catnip-package to be caught by him. Holding that consolation prize in his teeth, the black feline then vanishes out the door, back into the zoo proper.";
 					WaitLineBreak;
 					say "     When Midnight is out of sight, Angie blows out her breath and says 'Phew - I hated to disappoint him like that, but it had to be done. And... it felt pretty good to be in control for once, I have to say.' Lowering a hand to rub the bulge under her skirt, she continues a moment later 'You know, I'm still horny as hell, and... really wanna fuck someone now. So how about it? Wanna let me mount you, baby? Stick my hard feline cock deep in your [if Player is female]pussy[else]ass[end if]?";
-					LineBreak;
 					if Player consents:
 						LineBreak;
 						if Player is female:
@@ -213,10 +199,10 @@ to say ResolveEvent FindingMidnight:
 							WaitLineBreak;
 							say "     She starts pulling out and thrusting into you again and again in short rough movements, the barbs pulling and tugging at your inner folds in a strangely pleasurable manner. Then she leans her body down over you, her large breasts pressing into your back as she rests more and more of her weight on you, forcing your face down to the ground as her thrusts increase in both speed and force. You are panting in desire as she covers you and fucks you roughly, with an almost bestial abandon, and then acting on some inner instinct of her own, Angie lets out a growl, and grips the back of your neck with her teeth.";
 							say "     Pleasure shoots through you as her teeth lightly but firmly grip your skin, and for just a moment you feel like you know what it must have been like for Angie, trapped helplessly under a wild beast, a beast intent on fucking you roughly just like the animal it is, your will and desires completely secondary to its bestial needs... and it feels wonderful. As your wild coupling continues, you soon find yourself screaming in orgasm, just as Angie lets loose her own beast-like roar above you, her cock shooting its changed seed deep into your body.";
-							NPCSexAftermath Player receives "PussyFuck" from Angie;
 							WaitLineBreak;
 							say "     You both lie there for a minute, panting as you try to absorb what just happened. Eventually her cock starts to soften and she pulls it back out of you, then staggers back to lean on the counter, while you stare up at her from your position on the floor. Angie looks down at you with a self-satisfied look on her face, standing there proudly in the nude, her fur matted a bit with cum and sweat.";
 							say "     'That was unbelievably amazing,' she says after getting her breath back with a self-satisfied look on her face, stroking her fur happily. 'Stay here with me and let's do that again soon. I know I just can't wait,' Angie says with a dreamy smile as she looks down at you panting on the floor, her words speaking to some part of you that imagines all kinds of sexy things to do with her as your girlfriend. The increasingly erotic images fill your mind and make your body tingle with desire again even as you try to recover from your intense orgasm.";
+							NPCSexAftermath Player receives "PussyFuck" from Angie;
 						else:
 							say "     As you agree, Angie gives an aroused mrowl and steps up to you, drawing you into her arms. 'Thanks, my love - I need this so much now,' she pants while making out with you and her hands roam over your body, pulling off your clothes in eager haste. Soon, you're both completely naked and Angie steps back, letting her eyes roaming over your shapely form. 'Mmm, yes! It looks like you are definitely ready,' she says as she runs one of her soft paws teasingly over your crotch, paw-pads gently stroking over your [if Player is male]balls and cock[else]genderless but still sensitive pubic area[end if], making you gasp with renewed arousal as the panther herm chuckles at your eager response. 'I wanna mount you, like a stud panther on a needy female in heat,' Angie says happily, a large feline grin spreading across her muzzle, 'Trust me - it'll feel great to have my shaft thrusting deep into you again and again...'";
 							say "     Angie runs her hands over your body, focusing her attentions on your chest and nipples[if Player is male], as well as the rapidly hardening manhood between your legs[end if], before leaning over and giving you a long kiss, her tongue teasing yours as her large breasts press up against your body. And they are not the only thing pressing up against you - Angie's thick panther cock brushes against your belly, obviously erect and ready for the fun to come. Breaking the kiss, you find yourself panting almost as much as she is, the scent of her strong feline arousal overwhelming you, forgetting everything but the exaltation of being together with her right now.";
@@ -226,10 +212,10 @@ to say ResolveEvent FindingMidnight:
 							WaitLineBreak;
 							say "     She starts pulling out and thrusting into you again and again in short rough movements, the barbs pulling and tugging at your inner folds in a strangely pleasurable manner. Then she leans her body down over you, her large breasts pressing into your back as she rests more and more of her weight on you, forcing your face down to the ground as her thrusts increase in both speed and force. You are panting in desire as she covers you and fucks you roughly, with an almost bestial abandon, and then acting on some inner instinct of her own, Angie lets out a growl, and grips the back of your neck with her teeth.";
 							say "     Pleasure shoots through you as her teeth lightly but firmly grip your skin, and for just a moment you feel like you know what it must have been like for Angie, trapped helplessly under a wild beast, a beast intent on fucking you roughly just like the animal it is, your will and desires completely secondary to its bestial needs... and it feels wonderful. As your wild coupling continues, you soon find yourself screaming in orgasm[if Player is male], splattering the floor between your legs with cum[end if], just as Angie lets loose her own beast-like roar above you, her cock shooting its changed seed deep into your body.";
-							NPCSexAftermath Player receives "AssFuck" from Angie;
 							WaitLineBreak;
 							say "     You both lie there for a minute, panting as you try to absorb what just happened. Eventually her cock starts to soften and she pulls it back out of you, then staggers back to lean on the counter, while you stare up at her from your position on the floor. Angie looks down at you with a self-satisfied look on her face, standing there proudly in the nude, her fur matted a bit with cum and sweat.";
 							say "     'That was unbelievably amazing,' she says after getting her breath back with a self-satisfied look on her face, stroking her fur happily. 'Stay here with me and let's do that again soon. I know I just can't wait,' Angie says with a dreamy smile as she looks down at you panting on the floor, her words speaking to some part of you that imagines all kinds of sexy things to do with her as your girlfriend. The increasingly erotic images fill your mind and make your body tingle with desire again even as you try to recover from your intense orgasm.";
+							NPCSexAftermath Player receives "AssFuck" from Angie;
 							now Resolution of FindingMidnight is 3; [player and Angie]
 						now lastfuck of Angie is turns;
 					else:
@@ -237,6 +223,7 @@ to say ResolveEvent FindingMidnight:
 						say "     As you decline, Angie gives a disappointed mrowl, then says 'Aww - not in the mood? Too bad, I'd have loved to spend some fun-time with you. Guess I'll just go and take care of things on my own...' She steps up to you and gives you an affectionate kiss, then walks into the store break-room, no doubt to jerk herself off.";
 					Infect "Panther Herm";
 					now AngieAroused is 7;
+				WaitLineBreak;
 				now player is in Zoo Giftshop;
 				now battleground is "void"; [blocks a random fight after this]
 				now Resolution of FindingMidnight is 4; [player turned Angie down to mount them]
@@ -250,7 +237,6 @@ to say ResolveEvent FindingMidnight:
 	else:
 		say "     Traveling through the twisting paths of the zoo, you hear a low rumbling off to the side and freeze, looking over you see a large black panther crouched amidst the bushes, his golden feline eyes watching you with amusement. You cringe slightly as you realize the large beast has the drop on you, the panther eyes you with amusement in his predatory gaze for a minute, before he stands up and walks off, brushing up against your surprised form as he stalks past you, his tail waving teasingly as he vanishes into the bushes across the path. As you let out the breath you were holding, you realize what a narrow escape that was, although something about the beasts strong erotic scent has you almost wanting to follow him into the bushes to see if he wants to play with you some more... Shaking your head to clear it, you count yourself lucky and continue on your way through the zoo, your thoughts wandering back to the handsome panther even as you unconsciously begin to imitate his prowling movements.";
 		infect "Panther Herm";
-
 
 Instead of conversing the Angie while midnightsighted is 1:
 	say "     'Hey it's my favorite friend, come to play with the kitty again?' Angie purrs teasingly as she gives you a large hug. The feel of her softly furred feline form pressing up against you reminding you of your encounter with the strange panther out in the zoo. Angie listens eagerly as you describe your recent encounter, her feline tail lashing behind her with increasing excitement as you describe the strange hermaphrodite panther you encountered, and how excited he made you feel. 'That's him!' Angie exclaims when you finish, her large breasts rubbing up against you as she hugs you tightly to her obviously excited body. 'That has to be Midnight, the panther that changed me!'";

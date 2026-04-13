@@ -28,15 +28,14 @@ Section 1 - Events
 to say ResolveEvent Missing Farm Hand:
 	if FinnTrackingProgress is 0:
 		say "     Moving to the far end of the farm proper, you check out the usual patrol route along its perimeter, easily visible in the nanite-enhanced fast-growing grass. The stalks of it seem too tenacious to be beaten by being regularly walked on with horseman hooves, so it is just path of trodden-down grass, not actually a dirt track, despite the obvious heavy foot traffic. From what Anthony said and your own observations, one or another of the farmhands makes the circuit around the farm at least once an hour. Now if you only could find a trace of what happened to Finn...";
-		let bonus be (( Perception of Player minus 10 ) divided by 2);
+		let bonus be ( Perception of Player minus 10 ) divided by 2;
 		let diceroll be a random number from 1 to 20;
 		say "You roll 1d20([diceroll])+[bonus]: [diceroll + bonus], (Perception-Check)[line break]";
 		LineBreak;
 		increase diceroll by bonus;
 		if diceroll > 13:
 			say "     Walking along the path, you do spot something a little bit out of the ordinary - there is a faint dip in the height of the grass in one spot, a bit off into the grassland. You move closer and see the signs of a struggle, with a moderately sized patch of the quick-growing grass still recovering from a disturbance in its growing pattern. Looks like someone - or several someones - wrestled on the ground here. The typical cowboy-hat of one of the farmhands is visible between the yellow and green stalks of the grass, obviously abandoned when Finn was abducted. Following a fairly well visible trail starting at the fight's location, you walk out into the grassland. A bit further along, on a small patch of dirt they moved across, you see that the group left numerous hoof-prints. Looks like they were some sort of equines too...";
-			LineBreak;
-			say "     [bold type]Do you want to keep tracking the raiders? There'll likely be a few of them, so you'd better be ready for a fight.[roman type][line break]";
+			say "[line break]     [bold type]Do you want to keep tracking the raiders? There'll likely be a few of them, so you'd better be ready for a fight.[roman type][line break]";
 			if Player consents: [keep going]
 				LineBreak;
 				say "     Best to keep at it before this trail goes any colder than it is! Determined to see things through, you set out to track whoever took one of Anthony's men. An hour or two go by as you follow the hoof-prints, and you're starting to doubt that this will go anywhere when you stumble upon a very lucky break! There is a fresh trail of what looks like the same group of people crossing the original one! If you had to guess, they seem to be roaming the whole area in a search for targets.";
@@ -51,9 +50,8 @@ to say ResolveEvent Missing Farm Hand:
 		say "[FinnTracked]";
 
 to say FinnTracked:
-	now inasituation is true;
 	say "     Turning to follow the newer trail, it doesn't take all that long before you hear shouts and cursing coming from somewhere ahead of you. There are fragments of partially collapsed buildings sticking out of the grassland a short distance that way, the largest one rising not quite two stories. With the ruins breaking up the sounds a bit, you hear snippets of laughter, as well as angry and amused shouting from somewhere behind.";
-	WaitLineBreak;
+	wait for any key;
 	project the Figure of CentaurMare_icon;
 	say "     Cautiously moving closer, you do your best to stay hidden and peek around a crumbling wall and see a camp between the ruins, filled with multiple creatures. Two are centaurs, a male and female, and both of them have their front legs tied together, negating the usual speed and agility of the mythical beings. Clearly, these are captives of the other inhabitants of the camp - a trio of horsemen, bearing a brand of overlapping horseshoes on their shoulders. Two of them are restraining the male centaur while number three is standing at the female's rear end, one arm around a completely naked Finn's shoulder and his hand tightly gripping the farmhand's hard equine cock.";
 	say "     'Have a taste how good it feels to follow our master!' the guy next to Finn barks out in a rough voice, smacking the missing farmhand's manhood against the centauress's bare pussy lips, then shoving its cockhead in between her folds. There is a frightened whimper from the young woman and the male centaur tries to rear up, shouting at the height of his voice, 'Get your stinking hands off my sister, you bastards!' Meanwhile, Finn gives a deep grunt and starts pumping his hips back and forth all on his own, clearly enjoying the feel of being inside the centauress.";
@@ -106,8 +104,7 @@ to say FinnTracked:
 			WaitLineBreak;
 			say "     The enraged male is about to follow up and trample Finn while he's down, but you quickly intercept him and do your best to calm him down. Arguing that Finn was just a captive, like they were and he was more or less forced into sex, you appeal to the centaur's sense of fairness. The young stallion snorts derisively and growls out, 'Fair you say? Pah, my sister's first time has been taken from her, and by such horseman bastards too!' He angrily gestures at the young woman who looks over her shoulder in breathless need, her nether lips literally dripping with fluids. She's one very aroused centauress right now, despite the roughness of her first sexual experience.";
 			say "     You can see the male centaur's nostrils flare at the scent wafting up from under her tail and he tells her in a somewhat hoarse tone, 'G-go over there please, okay? Just... wait and calm down. I'll deal with these guys in the meantime!' Looks like the young man couldn't help but get aroused, despite the fact that the fertile centaur's musk clouding his senses is his sister's. A glance at the enormous equine shaft dangling under his barrel-shaped horse body gives you an idea how to avoid any further violence...";
-			LineBreak;
-			say "     [bold type]The centaur is about to attack Finn again. Do you want to try solving this peacefully (if sexually) ([link]Y[as]y[end link]), or do you want to fight him off ([link]N[as]n[end link])?[roman type][line break]";
+			say "[line break]     [bold type]The centaur is about to attack Finn again. Do you want to try solving this peacefully (if sexually) ([link]Y[as]y[end link]), or do you want to fight him off ([link]N[as]n[end link])?[roman type][line break]";
 			if Player consents:
 				LineBreak;
 				say "     With some diplomatic finesse, you manage to explain to the horny centaur that there's no need to kill anyone right now. After all, if his sister was a virgin, then the debt should be payable with another virginity. Surely, such a strapping hunk of a horseman like Finn hasn't taken a dick before (and hopefully he'll forgive you for brokering this deal and saving his life). The red-faced young male is torn between his anger and libido as he looks at the prone horseman, then concern is added to the mix as he glances over to his sister. The centauress seems to be pretty entranced by her first heat flaring up strongly and is wandering off a little bit.";
@@ -125,6 +122,7 @@ to say FinnTracked:
 							say "     Hastily wrenching up your pants again and stuffing a hard [Cock of Player] erection into it, you finish dressing in a few moments, then get an arm around the horseman to lead him off, half bracing and dragging him. A glance back shows you that the centaurs are still in the midst of mating, leaving you free to make your getaway. Guiding the rescued horseman through the open plain, you're sure to keep an eye open for possible encounters or followers, but thankfully everything is quiet and you eventually arrive back at the farm. Handing off the still somewhat bruised and dizzy Finn to his farmhand buddies, there's little left but tell Anthony that you've got his worker back safe and sound.";
 							now FinnTrackingProgress is 3; [Finn rescued, no sex]
 							now Resolution of Missing Farm Hand is 3; [Finn rescued, no sex]
+							WaitLineBreak;
 							move player to McDermott Farm Entrance;
 						else: [sex!]
 							LineBreak;
@@ -142,6 +140,7 @@ to say FinnTracked:
 							NPCSexAftermath Finn receives "AssFuck" from Player;
 							now FinnTrackingProgress is 4; [Finn rescued, player fucked him]
 							now Resolution of Missing Farm Hand is 4; [Finn rescued, player fucked him]
+							WaitLineBreak;
 							move player to McDermott Farm Entrance;
 					else: [care for the centauress]
 						LineBreak;
@@ -151,7 +150,6 @@ to say FinnTracked:
 					say "[FinnCentauressCaring]";
 			else:
 				LineBreak;
-				now inasituation is true;
 				challenge "Centaur Stallion";
 				if fightoutcome >= 20 and fightoutcome <= 29: [lost]
 					say "     Having lost the fight, there's little left but to get the hell away from the homicidal centaur and slink back to the farm in defeat. You don't think the sounds of repeated heavy hoof impacts on a defenseless body will leave you anytime soon. Nothing left but to tell Anthony that he's not coming back... ever.";
@@ -170,7 +168,6 @@ to say FinnTracked:
 					now Resolution of Missing Farm Hand is 3; [Finn rescued, no sex]
 					move player to McDermott Farm Entrance;
 		increase score by 1;
-	now inasituation is false;
 	now Missing Farm Hand is resolved;
 
 to say FinnCentauressCaring:
@@ -263,7 +260,6 @@ TwistedCapacity of Finn is false. [Twisted Characters can take any penetration, 
 Sterile of Finn is false. [steriles can't knock people up]
 MainInfection of Finn is "Horseman".
 Description of Finn is "[FinnDesc]".
-Conversation of Finn is { "<This is nothing but a placeholder!>" }.
 The scent of Finn is "     Finn smells nicely masculine, with a little bit of fur, straw and sweat in the mix. Seems like he's not adverse to doing some good and solid work for his boss at the farm.".
 
 to say FinnDesc:
@@ -290,15 +286,13 @@ instead of conversing the Finn:
 		say "     ERROR: Finn is in an undefined state. Please report to Wahn on the FS forum and quote this tracking number for easier bugfixing: [FinnTrackingProgress]";
 
 instead of fucking the Finn:
-	if (lastfuck of Finn - turns < 6): [he got fucked in the last 18 hours = 6 turns]
+	if lastfuck of Finn - turns < 6: [he got fucked in the last 18 hours = 6 turns]
 		say "     <Reason why Finn doesn't feel like having sex right now. Exhaustion, duty, or otherwise>";
 	else: [ready for sex]
 		say "     As you walk up to Finn, <positive reaction at being approached for sex>";
-		wait for any key;
 		say "[FinnSexMenu]";
 
 to say FinnSexMenu:
-	LineBreak;
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]
@@ -349,27 +343,27 @@ to say FinnSexMenu:
 			choose row calcnumber in table of fucking options;
 			say "[title entry]: [description entry]?";
 			if Player consents:
-				let nam be title entry;
 				now sextablerun is 1;
-				if (nam is "Get a blowjob"):
-					say "[FinnSex1]";
-				if (nam is "Suck Finn off"):
-					say "[FinnSex2]";
-				if (nam is "Talk the handsome farmhand into giving up his virginity"):
-					say "[FinnSex3]";
-				if (nam is "Fuck the handsome farmhand's ass"):
-					say "[FinnSex4]";
-				if (nam is "Take Finn's shaft in your pussy"):
-					say "[FinnSex5]";
-				if (nam is "Take Finn's shaft in your ass"):
-					say "[FinnSex6]";
+				if title entry is:
+					-- "Get a blowjob":
+						say "[FinnSex1]";
+					-- "Suck Finn off":
+						say "[FinnSex2]";
+					-- "Talk the handsome farmhand into giving up his virginity":
+						say "[FinnSex3]";
+					-- "Fuck the handsome farmhand's ass":
+						say "[FinnSex4]";
+					-- "Take Finn's shaft in your pussy":
+						say "[FinnSex5]";
+					-- "Take Finn's shaft in your ass":
+						say "[FinnSex6]";
 				wait for any key;
 		else if calcnumber is 0:
 			now sextablerun is 1;
 			say "     You step back from the horseman farmhand, shaking your head slightly as he gives a questioning look.";
 			wait for any key;
 		else:
-			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options], or 0 to exit.";
 	clear the screen and hyperlink list;
 
 to say FinnSex1: [oral on the player]
@@ -395,6 +389,5 @@ to say FinnSex5: [Finn fucks player pussy]
 to say FinnSex6: [Finn fucks player ass]
 	say "     A";
 	NPCSexAftermath Player receives "AssFuck" from Finn;
-
 
 Finn ends here.

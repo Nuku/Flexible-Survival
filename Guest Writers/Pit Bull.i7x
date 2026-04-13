@@ -545,7 +545,7 @@ this is the balltit rule:
 	let dam be ( wdam entry times ( a random number from ( 90 - ( peppereyes * 4 ) ) to 135 ) ) / 100;
 	if HardMode is true and a random chance of 1 in ( 10 + peppereyes ) succeeds:
 		now dam is (dam * 150) divided by 100;
-		say "The enemy finds a particular vulnerability in your defense - [italic type]Critical Hit![roman type][line break]";
+		say "The enemy finds a particular vulnerability in your defense - Critical Hit!";
 	if Player is male:			[powerful ball kick]
 		now multiplier is 120 + ( ( square root of ( Ball Size of Player + 6 ) ) * 20 );
 		now dam is ( dam * multiplier ) / 100;

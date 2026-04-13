@@ -10,12 +10,12 @@ Section 1 - Creature Responses
 
 Section 2 - Creature Insertion
 
-Table of CombatPrep (continued)
+[Table of CombatPrep (continued)
 name(text)	PrepFunction(text)
 "Dalmatian Male"	"[PrepCombat_Dalmatian Male]"
 
 to say PrepCombat_Dalmatian Male:
-	say "";
+	setmongender 3;]
 
 Table of Random Critters (continued)
 NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
@@ -200,12 +200,11 @@ dalmatian fur is a grab object. [define early to resolve name conflicts]
 
 dalmatian male fur is a grab object.
 Usedesc of dalmatian male fur is "[DalmatianMaleFurUse]".
+Scent of dalmatian male fur is "The fur has a pleasing, not too strong, animal-like scent.".
 
 to say DalmatianMaleFurUse:
 	say "     Pouring the pile of fur into your cupped palm, you rub it with a fingertip. Strangely, the hair disintegrates after a while, becoming a cloud of fine particles that are absorbed into your skin.";
 	infect "Dalmatian Male";
-
-Scent of dalmatian male fur is "The fur has a pleasing, not too strong, animal-like scent.".
 
 Table of Game Objects (continued)
 name	desc	weight	object
@@ -216,20 +215,19 @@ dalmatian male cum is cum.
 dalmatian male cum is infectious.
 Strain of dalmatian male cum is "Dalmatian Bitch".
 Usedesc of dalmatian male cum is "[dalmatian male cum use]".
+Scent of dalmatian male cum is "You open the lid for a moment and take a sniff. Doesn't smell too bad actually, just kinda nutty.".
 
 to say dalmatian male cum use:
 	say "     Lifting the plastic bottle to your mouth, you take a drink from it, letting the creamy cum run over your tongue and down your throat. Tastes rich and animal-like. Swishing it around in your mouth a little, you finish the bottle off, then stuff it back into your collection of 'empties'.";
 	PlayerDrink 5;
 	SanLoss 5;
 
-Scent of dalmatian male cum is "You open the lid for a moment and take a sniff. Doesn't smell too bad actually, just kinda nutty.".
-
-Table of CombatPrep (continued)
+[Table of CombatPrep (continued)
 name(text)	PrepFunction(text)
 "Dalmatian Bitch"	"[PrepCombat_Dalmatian Bitch]"
 
 to say PrepCombat_Dalmatian Bitch:
-	say "";
+	setmongender 4;]
 
 Table of Random Critters (continued)
 NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
@@ -405,12 +403,12 @@ When Play begins:
 	now Clit Size entry is 0; [size 1-5 (very small/small/average/large/very large)] [Size of Clit (1-5); very small/small/average/large/very large]
 ]
 
-Table of CombatPrep (continued)
+[Table of CombatPrep (continued)
 name(text)	PrepFunction(text)
 "Dalmatian Herm"	"[PrepCombat_Dalmatian Herm]"
 
 to say PrepCombat_Dalmatian Herm:
-	say "";
+	setmongender 5;]
 
 Table of Random Critters (continued)
 NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
@@ -586,12 +584,12 @@ When Play begins:
 	now Clit Size entry is 0; [size 1-5 (very small/small/average/large/very large)] [Size of Clit (1-5); very small/small/average/large/very large]
 ]
 
-Table of CombatPrep (continued)
+[Table of CombatPrep (continued)
 name(text)	PrepFunction(text)
 "Dalmatian Transman"	"[PrepCombat_Dalmatian Transman]"
 
 to say PrepCombat_Dalmatian Transman:
-	say "";
+	setmongender 8;]
 
 Table of Random Critters (continued)
 NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
@@ -767,12 +765,12 @@ When Play begins:
 	now Clit Size entry is 0; [size 1-5 (very small/small/average/large/very large)] [Size of Clit (1-5); very small/small/average/large/very large]
 ]
 
-Table of CombatPrep (continued)
+[Table of CombatPrep (continued)
 name(text)	PrepFunction(text)
 "Dalmatian Transbitch"	"[PrepCombat_Dalmatian Transbitch]"
 
 to say PrepCombat_Dalmatian Transbitch:
-	say "";
+	setmongender 6;]
 
 Table of Random Critters (continued)
 NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
@@ -953,8 +951,7 @@ Definition: a person is DalSkinned:
 	no;
 
 to SetMonsterRandomDalOffspring:
-	let randomnumber be a random number from 1 to 5;
-	if randomnumber is:
+	if a random number from 1 to 5 is:
 		-- 1: setmonster "Dalmatian Male";
 		-- 2: setmonster "Dalmatian Bitch";
 		-- 3: setmonster "Dalmatian Herm";
@@ -967,12 +964,11 @@ Table of Game Objects (continued)
 name	desc	weight	object
 "dalmatian cum"	"A tiny plastic shampoo bottle as you might find in a motel, filled with something milky white, thick and creamy. If you didn't know where it's from, you'd almost think it to be liquid soap rather than Darius's cum. You could drink it to quench your thirst, but who knows what else it might do to you..."	1	dalmatian cum
 
-Scent of dalmatian cum is "You open the lid for a moment and take a sniff. Smells rather tasty actually, kinda nutty. You can't help but be tempted to take a swallow of it.".
-
 [dalmatian cum is a grab object.] [defined in Cum Items to prevent name conflicts]
 dalmatian cum is cum.
 dalmatian cum is infectious. Strain of dalmatian cum is "Dalmatian Bitch".
 Usedesc of dalmatian cum is "[dalmatian cum use]".
+Scent of dalmatian cum is "You open the lid for a moment and take a sniff. Smells rather tasty actually, kinda nutty. You can't help but be tempted to take a swallow of it.".
 
 to say dalmatian cum use:
 	say "     Lifting the tiny plastic bottle to your mouth, you let Darius's creamy cum run over your tongue and down your throat. Mmmmh, this stuff actually tastes fairly nice and your body calls for more. You can't help yourself and keep pouring cum into your mouth, right until you're hungrily sucking at the mouth of the bottle with it turned upside down.";
@@ -983,6 +979,7 @@ to say dalmatian cum use:
 			say "'Yeah babe, just swallow it all! If you like that one, I've got a whole lot more here for you...' Grabbing his crotch, the anthro canine gives it a demonstrative squeeze.";
 		else:
 			say "'Let's hope the stuff makes something nice out of you. Wouldn't mind giving you more, if you want it that badly - as soon as you grow a juicy pussy!' Grabbing his crotch, the anthro canine gives it a demonstrative squeeze.";
+		raise Player Libido by 3;
 	PlayerDrink 6;
 	SanLoss 5;
 
@@ -990,10 +987,9 @@ Table of Game Objects (continued)
 name	desc	weight	object
 "dalmatian fur"	"A small tuft of white and black fur, held together by a rubber band. You bought it from Darius."	1	dalmatian fur
 
-Scent of dalmatian fur is "You sniff at the tuft of fur. It has a definitive smell of dog to it.".
-
 [dalmatian fur is a grab object.] [defined earlier to prevent name conflicts]
 Usedesc of dalmatian fur is "[dalmatian fur use]".
+Scent of dalmatian fur is "You sniff at the tuft of fur. It has a definitive smell of dog to it.".
 
 to say dalmatian fur use:
 	say "     Lifting the small tuft of fur with your fingers holding on to the rubber band around it, you brush the hairs over the inside of your other arm. It feels soft and tickles a little, then a lot, as the strands seem to slowly crumble away, leaving minute traces of silvery dust that vanishes into your skin.";

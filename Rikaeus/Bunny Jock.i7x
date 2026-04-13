@@ -286,7 +286,7 @@ this is the powerplay rule:
 	let dam be ( wdam entry times a random number from ( 80 - ( peppereyes * 4 ) ) to 120 ) / 50; [Double-damage]
 	if HardMode is true and a random chance of 1 in ( 10 + peppereyes ) succeeds:
 		now dam is (dam * 150) divided by 100;
-		say "The enemy finds a particular vulnerability in your defense - [italic type]Critical Hit![roman type][line break]";
+		say "The enemy finds a particular vulnerability in your defense - Critical Hit!";
 	if a random chance of 1 in 2 succeeds:
 		say "'And there was 5 seconds left on the clock in the big game and then Darrell was [']Woosh! Woosh!['] past them and SLAM DUNK!' As he's excitedly re-enacting the play, he grabs you, leaps ten feet in the air with his powerful rabbit legs and dunks you like a ball through an imaginary hoop. 'Dude! That game was awesome!' he yells as your head rings. You take [special-style-2][dam][roman type] damage!";
 	else:

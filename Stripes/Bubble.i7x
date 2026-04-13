@@ -73,19 +73,16 @@ TwistedCapacity of Bubble is false. [Twisted Characters can take any penetration
 Sterile of Bubble is false. [steriles can't knock people up]
 MainInfection of Bubble is "Inflatable Vulpine".
 Description of Bubble is "[bubbledesc]".
-Conversation of Bubble is { "Yay!" }.
-The scent of Bubble is "Bubble smells of warm latex with a hint of vulpine arousal.".
+[Conversation of Bubble is { "Yay!" }.]
+the fuckscene of Bubble is "[sexwithBubble]".
+The scent of Bubble is "     Bubble smells of warm latex with a hint of vulpine arousal.".
+icon of Bubble is Figure of Bubble_icon.
 
 Section 1 - Description
 
 to say bubbledesc:
-	project Figure of Bubble_icon;
 	say "     Having become an inflatable creature after her stint at the strange bouncy castle, Bubble (as she's now called) is a latex-skinned vixen with an air-filled body. Her transformation has also deeply affected her mind, making her a bubbly airhead most of the time. Occasionally, she'll remember enough of her old self to be able to focus on a task or keep herself from doing anything too foolish, but generally she's a happy-go-lucky girl who's eager to have some fun.";
-	if Libido of Bubble is 0:
-		say "     She's got a very sexy figure that's been improved if anything by her transformation. She's got lovely, smooth curves, a narrow waist and a super-flexible body that's always light on its feet. Her inflatable skin is made of smooth latex. It is predominantly orange, though there's some black sections starting at her wrists and ankles and white ones at her chest and thighs. These are all joined by seams between the various sections. Her vulpine face has a happy expression and big, blue eyes that are more like living decals than real ones. Not bothering to dress beyond a pair of brightly colored sneakers she's found, she goes around nude. Her breasts are buoyant and have ever-perky nipples. Her delectable pussy is always wet with a slick sheen of her lube-like juices. She's got a puffed out, balloony fox tail with a nozzle tip on the end of it above her (quite literally) bubble butt.";
-	else if Libido of Bubble is 1:
-		say "     Having been blown up by you, she's now got a much rounder and fuller figure. She's got lovely, round curves, a plump belly and wide hips, all while still having a super-flexible body that's always light on its feet. Her inflatable skin made of smooth latex. It is predominantly orange, though there's some black sections starting at her wrists and ankles and white ones at her chest and thighs. These are all joined by seams between the various sections. Her vulpine face has a happy expression and big, blue eyes that are more like living decals than real ones. Not bothering to dress beyond a pair of brightly colored sneakers she's found, she goes around nude. Her big breasts are buoyant and have ever-perky nipples. Her pussy's puffy, swollen lips are always wet with a slick sheen of her lube-like juices. She's got a puffed out, balloony fox tail with a nozzle tip on the end of it above her inflated and rounded ass.";
-
+	say "     [if Libido of Bubble is 0]She's got a very sexy figure that's been improved if anything by her transformation. She's got lovely, smooth curves, a narrow waist and a super-flexible body that's always light on its feet. Her inflatable skin is made of smooth latex. It is predominantly orange, though there's some black sections starting at her wrists and ankles and white ones at her chest and thighs. These are all joined by seams between the various sections. Her vulpine face has a happy expression and big, blue eyes that are more like living decals than real ones. Not bothering to dress beyond a pair of brightly colored sneakers she's found, she goes around nude. Her breasts are buoyant and have ever-perky nipples. Her delectable pussy is always wet with a slick sheen of her lube-like juices. She's got a puffed out, balloony fox tail with a nozzle tip on the end of it above her (quite literally) bubble butt[else]Having been blown up by you, she's now got a much rounder and fuller figure. She's got lovely, round curves, a plump belly and wide hips, all while still having a super-flexible body that's always light on its feet. Her inflatable skin made of smooth latex. It is predominantly orange, though there's some black sections starting at her wrists and ankles and white ones at her chest and thighs. These are all joined by seams between the various sections. Her vulpine face has a happy expression and big, blue eyes that are more like living decals than real ones. Not bothering to dress beyond a pair of brightly colored sneakers she's found, she goes around nude. Her big breasts are buoyant and have ever-perky nipples. Her pussy's puffy, swollen lips are always wet with a slick sheen of her lube-like juices. She's got a puffed out, balloony fox tail with a nozzle tip on the end of it above her inflated and rounded ass[end if].";
 
 Section 2 - Conversation
 
@@ -94,7 +91,7 @@ Instead of conversing the Bubble:
 	if HP of Bubble < 4 or HP of Bubble is 99 or HP of Bubble is 100: [Formerly just < 4, but expanded to include other possible errors]
 		say "ERROR-Bubble-[HP of Bubble]C: Something funky's going on here. Please report this error on the forums or on the official FS Discord in sp-bug-reports";
 	else if HP of Bubble is 4:
-		say "     'This is such a fun place you've got here,' she giggles happily. There's lots of space[if the number of bunkered people + the number of booked people > 3], lots of new friends[end if] and plenty of interesting stuff to go see outside. Thanks for letting me stay here, cutie.' She gives you a kiss on the cheek while giving your ass a squeeze before bounding around happily, only the weight of her sneakers keeping her partly grounded.";
+		say "     'This is such a fun place you've got here,' she giggles happily. There's lots of space[if number of collected people > 3], lots of new friends[end if] and plenty of interesting stuff to go see outside. Thanks for letting me stay here, cutie.' She gives you a kiss on the cheek while giving your ass a squeeze before bounding around happily, only the weight of her sneakers keeping her partly grounded.";
 		now HP of Bubble is 5;
 	else if HP of Bubble is 6 and a random chance of 1 in 3 succeeds:
 		say "     'I've been having such a great time since I've come here. Playing [']High Dive['] is especially fun!' she says excitedly. Confused, you ask her what she's talking about and she just giggles. 'I'll show you. It's loads of fun!'";
@@ -106,10 +103,7 @@ Instead of conversing the Bubble:
 	else:
 		say "     [one of]'I think I'll go and see if I can meet up with one of those cute foxes out there. They have such a sexy sheen to their latex.'[or]'Thanks again for saving me. From what I saw of it, getting to me couldn't have been easy. And now we can have lots of fun together,' she giggles at the end, her bubbling joviality returning.[or]'I think I look really sexy now, don't you?' she asks, posing naughtily for you.[or]'I can do lots of fun stuff now that I'm a balloon. It's great.'[or]'I was so stressed before. So many worries and problems. All pointless stuff that was weighing me down. But now - Poof! - no room for them in my fun-loving bubble brain,' she giggles happily.[or][if SkinName of Player is listed in infections of LatexList]'Your skin feels so nice like this,' she says, running her paws over your smooth hide[else]'Mmm... I think you'd look pretty sexy with a nice latex coating,' she purrs, running a finger teasingly across your chest[end if].[or][if HP of Bubble is 6]Cuddling her own inflatable tail, she licks her tongue slowly around the air valve. 'The great thing about the new me is I can have any sexy figure I want. Or you want,' she adds coquettishly[else]She giggles vapidly and makes some air-headed comment[end if].[at random]";
 
-
 Section 3 - Sexytimes
-
-the fuckscene of Bubble is "[sexwithBubble]";
 
 to say sexwithBubble:
 	project Figure of Bubble_icon;
@@ -120,111 +114,119 @@ to say sexwithBubble:
 	else if Player is neuter:
 		say "     For now, there's nothing you can do with Bubble while you're genderless."; [***]
 	else:
-		say "[Bubblesex00]";
-
-
-to say bubblesex00:
-	say "     Running your eyes over Bubble's [if Libido of Bubble is 0]lissome[else]plump[end if] figure, you find yourself becoming aroused. Deciding to have some erotic fun with her with the vixen who's essentially a living sex doll, only way better, you now have to decide how you'd like to enjoy her company. As you're mulling it over, you pull the inflatable fox woman into your arms and run your hands over her, delighting in her happy giggles.";
-	now sextablerun is 0;
-	blank out the whole of table of fucking options;
-	if Player is male:
+		say "     Running your eyes over Bubble's [if Libido of Bubble is 0]lissome[else]plump[end if] figure, you find yourself becoming aroused. Deciding to have some erotic fun with her with the vixen who's essentially a living sex doll, only way better, you now have to decide how you'd like to enjoy her company. As you're mulling it over, you pull the inflatable fox woman into your arms and run your hands over her, delighting in her happy giggles.";
+		now sextablerun is 0;
+		blank out the whole of table of fucking options;
+		[]
+		if Player is male:
+			choose a blank row in table of fucking options;
+			now title entry is "Fuck her";
+			now sortorder entry is 1;
+			now description entry is "Stuff her slick cunny";
+			[]
+			choose a blank row in table of fucking options;
+			now title entry is "Anal";
+			now sortorder entry is 2;
+			now description entry is "Stuff her [if Libido of Bubble is 0]bubble butt[else]inflated ass[end if]";
+			[]
+			choose a blank row in table of fucking options;
+			now title entry is "Blowjob";
+			now sortorder entry is 3;
+			now description entry is "Have her suck you off";
+		[]
+		if Player is female:
+			choose a blank row in table of fucking options;
+			now title entry is "Get cunnilingus";
+			now sortorder entry is 4;
+			now description entry is "Try that delightful tongue in your snatch";
+		[
 		choose a blank row in table of fucking options;
-		now title entry is "Fuck her";
-		now sortorder entry is 1;
-		now description entry is "stuff her slick cunny";
+		now title entry is "Eat her out";
+		now sortorder entry is 5;
+		now description entry is "Lick Bubble's snatch";
+		[]
+		if Player is not neuter:
+			choose a blank row in table of fucking options;
+			now title entry is "69";
+			now sortorder entry is 6;
+			now description entry is "69 with the inflatable vixen";
+		[]
 		choose a blank row in table of fucking options;
-		now title entry is "Anal";
-		now sortorder entry is 2;
-		now description entry is "stuff her [if Libido of Bubble is 0]bubble butt[else]inflated ass[end if]";
-	if Player is male:
-		choose a blank row in table of fucking options;
-		now title entry is "Blowjob";
-		now sortorder entry is 3;
-		now description entry is "have her suck you off";
-	if Player is female:
-		choose a blank row in table of fucking options;
-		now title entry is "Get cunnilingus";
-		now sortorder entry is 4;
-		now description entry is "try that delightful tongue in your snatch";
-[	choose a blank row in table of fucking options;
-	now title entry is "Eat her out";
-	now sortorder entry is 5;
-	now description entry is "lick Bubble's snatch";]
-[	if Player is not neuter:
-		choose a blank row in table of fucking options;
-		now title entry is "69";
-		now sortorder entry is 6;
-		now description entry is "69 with the inflatable vixen";]
-[	choose a blank row in table of fucking options;
-	now title entry is "Rim job";
-	now sortorder entry is 7;
-	now description entry is "have your ass licked";]
-	if HP of Bubble >= 7:
-		choose a blank row in table of fucking options;
-		now title entry is "UB";
-		now sortorder entry is 9;
-		now description entry is "get stuffed inside the balloony vixen";
-		choose a blank row in table of fucking options;
-		if Libido of Bubble is 0:
-			now title entry is "Inflate her";
-		else:
-			now title entry is "Deflate her";
-		now sortorder entry is 10;
-		now description entry is "change her figure by [if Libido of Bubble is 0]inflating[else]deflating[end if] her";
-		choose a blank row in table of fucking options;
-	if HP of Bubble >= 8 and BodyName of Player is "Inflatable Vulpine" and Player is pure:
-		if infvulpstate <= 2:
-			now title entry is "Be inflated";
-		else:
-			now title entry is "Be deflated";
-		now sortorder entry is 11;
-		now description entry is "change your figure by getting [if Libido of Bubble is 0]inflated[else]deflated[end if]";
-	repeat with y running from 1 to number of filled rows in table of fucking options:
-		choose row y from the table of fucking options;
-		say "[link][y] - [title entry][as][y][end link][line break]";
-	while sextablerun is 0:
-		say "Pick the corresponding number> [run paragraph on]";
-		get a number;
-		if calcnumber > 0 and calcnumber <= the number of filled rows in table of fucking options:
-			now current menu selection is calcnumber;
-			choose row calcnumber in table of fucking options;
-			say "[title entry]: [description entry][line break]";
-			say "Is this what you want?";
-			if Player consents:
-				let nam be title entry;
-				now sextablerun is 1;
-				if nam is "Fuck her":
-					say "[bubblesex01]";
-				else if nam is "Anal":
-					say "[bubblesex02]";
-				else if nam is "Blowjob":
-					say "[bubblesex03]";
-				else if nam is "Get cunnilingus":
-					say "[bubblesex04]";
-				else if nam is "Eat her out":
-					say "[bubblesex05]";
-				else if nam is "69":
-					say "[bubblesex06]";
-				else if nam is "Rim job":
-					say "[bubblesex07]";
-				else if nam is "Inflate her":
-					say "[bubblesex08]";
-				else if nam is "Deflate her":
-					say "[bubblesex09]";
-				else if nam is "UB":
-					say "[bubblesex10]";
-				else if nam is "Be inflated":
-					say "[bubblesex11]";
-				else if nam is "Be deflated":
-					say "[bubblesex12]";
-		else:
-			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
-	if HP of Bubble is 5, now HP of Bubble is 6;
-	now Libido of Player is ( ( Libido of Player * 2 ) + 50 ) / 3;
-	now lastfuck of Bubble is turns;
-	wait for any key;
-	clear the screen and hyperlink list;
-
+		now title entry is "Rim job";
+		now sortorder entry is 7;
+		now description entry is "Have your ass licked";
+		]
+		if HP of Bubble >= 7:
+			choose a blank row in table of fucking options;
+			now title entry is "UB";
+			now sortorder entry is 8;
+			now description entry is "Get stuffed inside the balloony vixen";
+			[]
+			choose a blank row in table of fucking options;
+			if Libido of Bubble is 0:
+				now title entry is "Inflate her";
+				now description entry is "Change her figure by inflating her";
+			else:
+				now title entry is "Deflate her";
+				now description entry is "Change her figure by deflating her";
+			now sortorder entry is 9;
+			[]
+			if HP of Bubble >= 8 and BodyName of Player is "Inflatable Vulpine" and Player is pure:
+				choose a blank row in table of fucking options;
+				if infvulpstate <= 2:
+					now title entry is "Be inflated";
+					now description entry is "Change your figure by getting inflated";
+				else:
+					now title entry is "Be deflated";
+					now description entry is "Change your figure by getting deflated";
+				now sortorder entry is 10;
+		[]
+		sort the table of fucking options in sortorder order;
+		repeat with y running from 1 to number of filled rows in table of fucking options:
+			choose row y from the table of fucking options;
+			say "[link][y] - [title entry][as][y][end link][line break]";
+		while sextablerun is 0:
+			say "Pick the corresponding number> [run paragraph on]";
+			get a number;
+			if calcnumber > 0 and calcnumber <= the number of filled rows in table of fucking options:
+				now current menu selection is calcnumber;
+				choose row calcnumber in table of fucking options;
+				say "[title entry]: [description entry]?";
+				if Player consents:
+					LineBreak;
+					now sextablerun is 1;
+					if title entry is:
+						-- "Fuck her":
+							say "[bubblesex01]";
+						-- "Anal":
+							say "[bubblesex02]";
+						-- "Blowjob":
+							say "[bubblesex03]";
+						-- "Get cunnilingus":
+							say "[bubblesex04]";
+						[-- "Eat her out":
+							say "[bubblesex05]";
+						-- "69":
+							say "[bubblesex06]";
+						-- "Rim job":
+							say "[bubblesex07]";]
+						-- "Inflate her":
+							say "[bubblesex08]";
+						-- "Deflate her":
+							say "[bubblesex09]";
+						-- "UB":
+							say "[bubblesex10]";
+						-- "Be inflated":
+							say "[bubblesex11]";
+						-- "Be deflated":
+							say "[bubblesex12]";
+					if HP of Bubble is 5, now HP of Bubble is 6;
+					now Libido of Player is ( ( Libido of Player * 2 ) + 50 ) / 3;
+					now lastfuck of Bubble is turns;
+			else:
+				say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
+		wait for any key;
+		clear the screen and hyperlink list;
 
 to say bubblesex01:
 	if Libido of Bubble is 0:
@@ -241,10 +243,7 @@ to say bubblesex02:
 	say "     In the mood to fuck the [if Libido of Bubble is 0]lithe vixen's bubble butt[else]plump vixen's well-rounded rear[end if] by the back door, you bend her over one of the tables. She giggles happily and raises her tail, giving a surprised meep as you finger her rubbery asshole instead of her dripping cunny. She doesn't shy away from it though, bouncing her hips and teasing that you're [one of]a dirty boy[or]a kinky guy[or]quite the perv[or]a horndog[in random order]. Feeling it relax and leak a little lube of its own, you know she's ready and you line your stiff cock with her anal ring.";
 	say "     Pushing past that rubbery seal gains you entrance into a tight, clinging passage that grips your meat tightly. You take your time sliding into her at first, but soon find it easy to thrust hard and fast into her. With a tight grip on her [if Libido of Bubble is 0]bubble butt[else]wide butt[end if], you drill into her again and again, enjoying the squeaking sounds of her happy yips and moans. Her inflatable fox tail swishes around excitedly, twitching and bouncing every time you bury yourself [if CockName of Player is listed in infections of InternalCockList]fully[else]balls-deep[end if] into her ass.";
 	say "     Feeling your climax coming quickly, you make a few last frantic thrusts before you can't hold back any longer. Driving yourself as deep as you can into her back passage, you unload your hot cum into her, splattering it across her inner walls. As your [Cum Load Size of Player] output sprays into her, her lower body trembles with delight, and you soon smell a fresh outpouring of her pussy juices in the air as she cums as well. Her latex anus and rectum ripple in time to her cunt's orgasmic reaction, milking you of the last few dribbles of your seed.";
-	if Libido of Bubble is 0:
-		say "     Spent and sated, you pull your softening shaft from the gracile vixen's ass. Her asshole closes up snug as soon as you're out, keeping your load in. Aside from a sheen of slickness across it, you'd hardly be able to tell it was just fucked and filled, though the rivulets of femcum running from her dripping snatch are proof that she thoroughly enjoyed the assfucking. She giggles while you look her over, happy to put herself on sexual display for you. Eventually her attention wavers and she bounds off in search of some new form of amusement.";
-	else:
-		say "     Spent and sated, you flop down across her back, smooshing the well-padded vixen between you and the table a little. She releases a long, happy sigh that's also a bit of a squeak as you force a little of her excess air out. You rest atop her for a while, finding her cushioned form very comfortable. Once your shaft softens, you slide free of her asshole and the rim closes up snug again. After a while, she starts to grow bored of just laying there beneath you and starts to fidget. Getting up, you're given a quick kiss before she bounds off in search of something else to amuse her.";
+	say "     Spent and sated, you [if Libido of Bubble is 0]pull your softening shaft from the gracile vixen's ass. Her asshole closes up snug as soon as you're out, keeping your load in. Aside from a sheen of slickness across it, you'd hardly be able to tell it was just fucked and filled, though the rivulets of femcum running from her dripping snatch are proof that she thoroughly enjoyed the assfucking. She giggles while you look her over, happy to put herself on sexual display for you. Eventually her attention wavers and she bounds off in search of some new form of amusement[else]flop down across her back, smooshing the well-padded vixen between you and the table a little. She releases a long, happy sigh that's also a bit of a squeak as you force a little of her excess air out. You rest atop her for a while, finding her cushioned form very comfortable. Once your shaft softens, you slide free of her asshole and the rim closes up snug again. After a while, she starts to grow bored of just laying there beneath you and starts to fidget. Getting up, you're given a quick kiss before she bounds off in search of something else to amuse her[end if].";
 	NPCSexAftermath Bubble receives "AssFuck" from Player;
 
 to say bubblesex03:
@@ -257,14 +256,14 @@ to say bubblesex04:
 	say "     As your excitement grows, you grab her head and press it to your crotch, grinding your hips against her inflatable muzzle. The wriggling of her tongue inside you and the soft caress of her latex lips against your folds have you panting and moaning. Eventually you can't hold back and pull her head in even harder, smooshing her flexible face against your quivering pussy as you cum hard. Your vagina squeezes down around that squirming latex flesh inside you and a gush of femcum flows across it. She continues to work her tongue around inside you as you're orgasming until finally your over-sensitive pussy can take no more. Pushing her muzzle back, her elongated tongue pops out of you. Having been stretched out and inflated into a tube balloon while inside you, it gradually shrinks back down to its regular size. Thinking nothing of this strange ability, she merrily licks her dripping chops and your crotch clean once it's gone down enough to use again. Playtime over, something else catches her interest and she wanders off with a happy giggle.";
 	NPCSexAftermath Bubble receives "OralPussy" from Player;
 
-to say bubblesex05:		[***]
+[to say bubblesex05:		[***]
 	say "***Eat her out";
 
 to say bubblesex06:		[***]
 	say "***69";
 
 to say bubblesex07:		[***]
-	say "***Rim job";
+	say "***Rim job";]
 
 to say bubblesex08:
 	say "     Deciding you'd like to see her with a fuller, more inflated figure, you run your hands over her tail. When you brush your fingertips across the air valve at its tip, she murrs and gives a soft shiver of delight. Moving eagerly onto all fours, she raises her tail and ass in the air, putting herself on display for you as you ready to blow her up. Taking a deep breath and opening the valve, you press your lips around it and blow hard. You can feel her tail swell up a little and she gives a happy moan as hot juices run down her legs. It seems this is quite the turn on for the inflatable vixen.";
@@ -305,14 +304,13 @@ to say bubblesex10:
 	else:
 		if infvulpstate is 0 or infvulpstate is 1, now infvulpstate is 3; [plump mode]
 	now researchbypass is 1;
-	infect "Inflatable Vulpine";
-	infect "Inflatable Vulpine";
+	MultiInfect "Inflatable Vulpine" repeats 2;
 	now researchbypass is 0;
 	NPCSexAftermath Player receives "OralPussy" from Bubble;
 
 to say bubblesex11:
 	say "     Feeling you might prefer a fuller, more inflated figure, you pass your balloony tail to the sexy vixen and ask her to help blow you up. A shiver of delight runs through you as she fingers the air valve at the tip. You stretch out on your back, smiling up at her as she gets ready, puffing herself up with some quick breaths. When she wraps her lips around the valve and blows a big puff of vixen-scented air into you, you moan loudly and shiver again. After a few more of these, you're panting with arousal as your latex stretches with the added gas filling you.";
-	say "     As she continues to blow you up, you make a show of rubbing your balloony body, both to turn her on and to help distribute the air being blown into you[if Player is male]. Your balloony cock swells up to erection as well under the increased pressure inside you. Wrapping a padded paw around it, you start stroking yourself in the aim of relieving a bit of that pressure. As you pump and stroke yourself, lube-like precum dribbles from your inflated penis. After a few last breaths blown into you and a firm squeeze on your shaft, you cry out in orgasmic relief, cumming across your bulging belly in delight[else if Player is female]. The puffy lips of your balloony pussy quiver and drip with juices as well under the increased pressure inside you. Stuffing a few fingers into it, you start frigging yourself in the aim of relieving a bit of the pressure. As you pump and rub your fingers into yourself, lube-like juices seep from your quivering cunny. After a few last breaths blown into you and a rapid pumping into your latex cunt, you cry out in orgasmic relief, soaking your plump, rounded thighs with your feminine juices[else]. The whole of your body grows rounder and fuller as your belly inflates, your thighs and ass plump out, and you overall get fatter. Gaining no weight from this since it's just air, you're still delightfully light while being huggably pudgy[end if][if Breast Size of Player > 0]. Your breasts are also fuller, ballooning outwards with buoyant growth[end if]. 'Ooo! You look so cute and huggable now,' she says with a woozy giggle, lightheaded after the effort of blowing you up. Flopping against you for support as you sit up, the [if Libido of Bubble is 0]slender[else]plump[end if] vixen fingers herself to a yipping orgasm.";
+	say "     As she continues to blow you up, you make a show of rubbing your balloony body, both to turn her on and to help distribute the air being blown into you. [if Player is male]Your balloony cock swells up to erection as well under the increased pressure inside you. Wrapping a padded paw around it, you start stroking yourself in the aim of relieving a bit of that pressure. As you pump and stroke yourself, lube-like precum dribbles from your inflated penis. After a few last breaths blown into you and a firm squeeze on your shaft, you cry out in orgasmic relief, cumming across your bulging belly in delight[else if Player is female]The puffy lips of your balloony pussy quiver and drip with juices as well under the increased pressure inside you. Stuffing a few fingers into it, you start frigging yourself in the aim of relieving a bit of the pressure. As you pump and rub your fingers into yourself, lube-like juices seep from your quivering cunny. After a few last breaths blown into you and a rapid pumping into your latex cunt, you cry out in orgasmic relief, soaking your plump, rounded thighs with your feminine juices[else]The whole of your body grows rounder and fuller as your belly inflates, your thighs and ass plump out, and you overall get fatter. Gaining no weight from this since it's just air, you're still delightfully light while being huggably pudgy[end if][if Breast Size of Player > 0]. Your breasts are also fuller, ballooning outwards with buoyant growth[end if]. 'Ooo! You look so cute and huggable now,' she says with a woozy giggle, lightheaded after the effort of blowing you up. Flopping against you for support as you sit up, the [if Libido of Bubble is 0]slender[else]plump[end if] vixen fingers herself to a yipping orgasm.";
 	increase Cock Length of Player by Cock Length of Player / 4;
 	BallsGrow Player by 1;
 	if Breast Size of Player > 0:
@@ -338,8 +336,7 @@ to say bubblesex12:
 		decrease Breast Size of Player by Breast Size of Player / 7;
 	now infvulpstate is 2;
 
-
-Section 9 - Information
+Section 4 - Information
 
 [ word lists:
 

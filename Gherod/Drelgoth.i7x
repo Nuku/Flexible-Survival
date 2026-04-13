@@ -304,11 +304,11 @@ to say DrelgothSexSubBlowjob: [Submissive Route Blowjob]
 		WaitLineBreak;
 		say "     Your head is simply held between his hands as Drelgoth continues to thrust into your mouth, feeding you his cock as he pleases. 'Isn't it great to let someone else take charge when your mind's so tired of everything? And here you have, a generous demon companion who'd be more than happy to take over...' The grin on his face widens as his visage darkens, and the cock in your mouth just feels even thicker and harder than before. A once tender and passionate demon now becomes rough and domineering as he continues to pound your throat, his full balls swinging back and forth against your chin once he manages to fit every inch in you. He gets so enthusiastic, in fact, that soon, his climax catches up to him, your only warning being an incessant throbbing focused on his whole shaft.";
 		say "     After that, it is only a significant gushing of cum coating the insides of your mouth that continues to spew at increased force, each spurt thick and rich in flavor as the demonic seed touches your tongue and slides down your throat. 'Mmmh... Looks like you deserved your reward after all...!' he manages to say amidst his moans, in a climax that seems to go on for longer than you would expect in any other average person. Once the last drop leaves him and drops into your stomach, he pulls his cock out and slaps your cheek repeatedly with it. 'I'm sure you're feeling better now, aren't you? Just keep thinking of this big cock and how good it tastes, that'll keep your mind grounded...'";
-		NPCSexAftermath Player receives "OralCock" from Drelgoth;
 		WaitLineBreak;
 		say "     Somehow, you feel calm. Your life just feels right, and this demon seems to be all you need. The taste of his manhood and cum leaves you joyful and looking forward for more.";
+		NPCSexAftermath Player receives "OralCock" from Drelgoth;
 		SanBoost 10;
-	If Strength of Drelgoth < 5:
+	if Strength of Drelgoth < 5:
 		increase Strength of Drelgoth by 1; [Dom Meter]
 
 to say DrelgothSexSubArmpitWorship: [Submissive Route Worship]
@@ -336,11 +336,11 @@ to say DrelgothSexSubArmpitWorship: [Submissive Route Worship]
 		WaitLineBreak;
 		say "     With a chuckle, Drelgoth orders you to continue making out with his pit, all while his erection throbs with excitement at your caresses, which you feel in your hand. Of course, you definitely do not want to disappoint him, thus, you put your tongue to work all around his smooth and salty armpit, giving it the worship it deserves as you stroke that big cock of his. Even if you wanted to take your head somewhere else, he has got you in such a tight lock that it would be practically impossible to escape... but you do not really care. You keep giving him what he wants, which is consequently what you want, and eventually, your efforts pay off. Soon, the demon's body is squirming slightly as he nears his climax, not stopping you from just going ahead.";
 		say "     'Don't stop now... Keep going...' His voice shifts to a couple of moanings that intensify in sequence as his cock begins to throb in your hand, then with each major quiver, he shoots his load spurt by spurt with enough force to travel a significant distance. 'Oooh, fuck yes... This... feels great...' He then finally pulls your head away from his pit, which immediately makes you miss it. Then, he locks his eyes on yours, and there is this big smile on his face. 'Good [boygirl]... I like to see that devotion to me. Do feel free to bury your face in my pits anytime... I'll make sure you get as much of me as you crave.' With your mind finally clearing up, you realize what you have done, but then, you feel good about it.";
-		NPCSexAftermath Drelgoth receives "Stroking" from Player;
 		WaitLineBreak;
 		say "     It was just a nicely spent time with your demon friend. You are now happy and joyful, ready to take on the world, knowing he will be there for you when you need his sexy companionship.";
+		NPCSexAftermath Drelgoth receives "Stroking" from Player;
 		SanBoost 10;
-	If Strength of Drelgoth < 5:
+	if Strength of Drelgoth < 5:
 		increase Strength of Drelgoth by 1; [Dom Meter]
 
 to say DrelgothSexSubFeetWorship:
@@ -375,11 +375,11 @@ to say DrelgothSexSubFeetWorship:
 		WaitLineBreak;
 		say "     So, you really try to make it worth his time, taking as much of his foot as you can in your mouth while sucking on it, and allowing the other foot to grind all across the side of your face it can reach. Sometimes, he pushes it a little further ahead, onto your chest and back to your face, as he can practically walk on top of you in perfect balance, and really smearing his scent on you. In spite of his experimentation, he really does seem to prefer just covering your face, instead, and at some point, his feet trade places, the other going into your mouth instead while the opposite side of your face gets grinded on. 'Hm... Very well... You might have earned a reward after all...'";
 		say "     It takes some time, but Drelgoth eventually pulls his feet away, coming to stand on the floor once more. But before you can even move, he crouches down above your face and pushes his cock into your mouth. Almost immediately after he does this, a gush of warm cum greets you, then more as it shoots down your throat. 'The fruit of your hard labor, slave... Don't waste a drop.' You really do not, swallowing every bit of his cum as you can, which really is all of it, almost for a good full minute as he moans in pleasure. The demon really ensures you take it to the very last drop before pulling away, slapping his shaft against your cheek and calling you 'Good [boygirl].'";
-		NPCSexAftermath Player receives "OralCock" from Drelgoth;
 		WaitLineBreak;
 		say "     Your senses awaken from that lusty haze soon after, with the demon still crouching down above you with a wide, happy smile. He reaches for your cheek to stroke it with a hand, softly and tenderly. 'That was great fun. Hope you're feeling better after spending some quality time with me... Be sure to keep coming back. I'll be happy to put my feet on your face anytime you want.'";
+		NPCSexAftermath Player receives "OralCock" from Drelgoth;
 		SanBoost 10;
-	If Strength of Drelgoth < 5:
+	if Strength of Drelgoth < 5:
 		increase Strength of Drelgoth by 1; [Dom Meter]
 
 Drelgoth ends here.

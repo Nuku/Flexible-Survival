@@ -54,6 +54,14 @@ to VariableSave:
 		choose blank row in Table of GameNumbers;
 		now NumberVarName entry is "ColaVendingMachine_dispensed";
 		now NumberVarValue entry is dispensed of Cola Vending Machine;
+	if caffeinehigh of Player > 0: [storing player caffeine level]
+		choose blank row in Table of GameNumbers;
+		now NumberVarName entry is "Player_caffeinehigh";
+		now NumberVarValue entry is caffeinehigh of Player;
+	if CandyShop is resolved: [storing Sweet Tooth caffeine timer]
+		choose blank row in Table of GameNumbers;
+		now NumberVarName entry is "SweetTooth_lastcaffeine";
+		now NumberVarValue entry is lastcaffeine of Sweet Tooth;
 	if Cola Vending Machine is not in Mall Foodcourt: [storing mall vending machine state]
 		choose blank row in Table of GameTruths;
 		now TruthVarName entry is "ColaVendingMachine_dead";
@@ -61,6 +69,10 @@ to VariableSave:
 	if library computer is on: [storing library PC activation]
 		choose blank row in Table of GameTruths;
 		now TruthVarName entry is "LibraryComputer_on";
+		now TruthVarValue entry is true;
+	if shownermine of phoenix egg is true: [storing phoenix egg Nermine interaction]
+		choose blank row in Table of GameTruths;
+		now TruthVarName entry is "PhoenixEgg_shownermine";
 		now TruthVarValue entry is true;
 	[continue with storing supported variables]
 	repeat through Table of GameVariableIDs:
@@ -2251,6 +2263,10 @@ to VariableNumberLoad:
 			if NumberVarName entry is:
 				-- "ColaVendingMachine_dispensed":
 					if dispensed of Cola Vending Machine is not NumberVarValue entry, now dispensed of Cola Vending Machine is NumberVarValue entry;
+				-- "Player_caffeinehigh":
+					if caffeinehigh of Player is not NumberVarValue entry, now caffeinehigh of Player is NumberVarValue entry;
+				-- "SweetTooth_lastcaffeine":
+					if lastcaffeine of Sweet Tooth is not NumberVarValue entry, now lastcaffeine of Sweet Tooth is NumberVarValue entry;
 				-- "featgained":
 					if featgained of Player is not NumberVarValue entry, now featgained of Player is NumberVarValue entry;
 				[-- "absorb":
@@ -4864,6 +4880,8 @@ to VariableTruthLoad:
 					if Cola Vending Machine is in Mall Foodcourt, now Cola Vending Machine is nowhere;
 				-- "LibraryComputer_on":
 					if library computer is not on, now library computer is on;
+				-- "PhoenixEgg_shownermine":
+					if shownermine of phoenix egg is not TruthVarValue entry, now shownermine of phoenix egg is TruthVarValue entry;
 				-- "A_Candy":
 					if A_Candy is not TruthVarValue entry, now A_Candy is TruthVarValue entry;
 				-- "A_Colleen":

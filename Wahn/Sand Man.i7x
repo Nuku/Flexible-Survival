@@ -7,7 +7,7 @@ Section 1 - Creature Responses
 
 to say sandman wins:
 	say "     Defeated, you stop struggling and the sand man pulls you in for a deep kiss, his lips touching yours with a tickling feeling. '[if Player is male]Dude[else]Sweetie[end if], now let's have some fun!' He leads you over to a large towel lying nearby in the sand, then pulls off your clothes and lowers you on it to lie on your back.";
-	if Player is male:[male + herm]
+	if Player is male: [male + herm]
 		say "     Kneeling between your legs, he runs his hands down your body, caressing your prone form. Then he leans in to [if Nipple Count of Player > 0]lick over your nipples and [end if]kiss your stomach before moving his hands to your legs and lifting them over his shoulders. With a softly spoken 'Relax, baby.' he puts his hard manhood against your asshole and starts pushing in against your pucker, slowly but surely until his cockhead pops in. Accompanied by his hands softly stroking up and down your legs, he sinks more and more into you until he finally bottoms out, his balls tickling your skin.";
 		WaitLineBreak;
 		say "     'I'm gonna rock your world,' his charming voice tells you, then he starts grinding his hips against your crotch. Thrusting in and out, the feeling of his slightly rough member rubbing your insides has you gasping in lust in no time, grabbing the towel with both hands to hold on to something as you writhe around. Your sandy beach lover has quite some technique, often changing the angle in which he slides into you to rub sensitive spots you barely knew you had. Fucking you with deep thrusts, then pausing for a while and just caressing your body as you get too close to orgasm, he keeps you in a state of sexual bliss for a long time, allowing you to forget about the hardships of survival in this changed world for now.";
@@ -15,7 +15,7 @@ to say sandman wins:
 		WaitLineBreak;
 		say "     He rests a moment to catch his breath with his slowly softening cock still inside you, then leans over you and gives you a kiss on the lips. 'You're an amazing lay, baby. Come find me again later if you want to have another go. But for now, just listen to the waves and rest...' He's right about that - your coupling was incredibly satisfying, but pretty exhausting too. As you realize how tired you really are, you feel the sand man pull out of you carefully, then see him walk off along the beach looking for new conquests as you doze off.";
 		CreatureSexAftermath "Player" receives "AssFuck" from "Sand Man";
-	else if Player is female:[female]
+	else if Player is female: [female]
 		say "     Kneeling between your legs, he runs his hands down your body, caressing your prone form. Then he leans in to [if Nipple Count of Player > 0]lick over your nipples and [end if]kiss your stomach before moving his hands to your legs and lifting them over his shoulders. With a softly spoken 'Relax, baby.' he puts his hard manhood against your pussy lips and rubs it against them, then slowly but surely pushes his cockhead into your moist hole. Accompanied by his hands softly stroking up and down your legs, he sinks more and more into you until he finally bottoms out, his balls tickling your skin.";
 		WaitLineBreak;
 		say "     'I'm gonna rock your world,' his charming voice tells you, then he starts grinding his hips against your crotch. Thrusting in and out, the feeling of his slightly rough member rubbing your insides has you gasping in lust in no time, grabbing the towel with both hands to hold on to something as you writhe around. Your sandy beach lover has quite some technique, often changing the angle in which he slides into you to rub sensitive spots you barely knew you had. Fucking you with deep thrusts, then pausing for a while and just caressing your body as you get too close to orgasm, he keeps you in a state of sexual bliss for a long time, allowing you to forget about the hardships of survival in this changed world for now.";
@@ -23,7 +23,7 @@ to say sandman wins:
 		WaitLineBreak;
 		say "     He rests a moment to catch his breath with his slowly softening cock still inside you, then leans over you and gives you a kiss on the lips. 'You're an amazing lay, baby. Come find me again later if you want to have another go. But for now, just listen to the waves and rest...' He's right about that - your coupling was incredibly satisfying, but pretty exhausting too. As you realize how tired you really are, you feel the sand man pull out of you carefully, then see him walk off along the beach looking for new conquests as you doze off.";
 		CreatureSexAftermath "Player" receives "PussyFuck" from "Sand Man";
-	else:[neuter]
+	else: [neuter]
 		say "     Kneeling between your legs, he runs his hands down your body, caressing your prone form. Then he leans in to [if Nipple Count of Player > 0]lick over your nipples and [end if]kiss your stomach before moving his hands to your legs and lifting them over his shoulders. With a softly spoken 'Relax, baby.' he puts his hard manhood against your asshole and starts pushing in against your pucker, slowly but surely until his cockhead pops in. Accompanied by his hands softly stroking up and down your legs, he sinks more and more into you until he finally bottoms out, his balls tickling your skin.";
 		WaitLineBreak;
 		say "     'I'm gonna rock your world,' his charming voice tells you, then he starts grinding his hips against your crotch. Thrusting in and out, the feeling of his slightly rough member rubbing your insides has you gasping in lust in no time, grabbing the towel with both hands to hold on to something as you writhe around. Your sandy beach lover has quite some technique, often changing the angle in which he slides into you to rub sensitive spots you barely knew you had. Fucking you with deep thrusts, then pausing for a while and just caressing your body as you get too close to orgasm, he keeps you in a state of sexual bliss for a long time, allowing you to forget about the hardships of survival in this changed world for now.";
@@ -39,38 +39,39 @@ to say sandman loses:
 		say "     Looking over the handsome sand man, you could either mount his cock with you on top [link](1)[as]1[end link], turn the tables and fuck him [link](2)[as]2[end link], try to teach him a painful lesson to leave you alone in the future [link](3)[as]3[end link] or just go [link](4)[as]4[end link].";
 		now calcnumber is 0;
 		while calcnumber < 1 or calcnumber > 4:
-			say "Choice? (1-4)>[run paragraph on]";
+			say "Choice? (1-4)> [run paragraph on]";
 			get a number;
-			if calcnumber is 1 or calcnumber is 2 or calcnumber is 3 or calcnumber is 4:
-				break;
-			else:
+			if calcnumber < 1 or calcnumber > 4:
 				say "Invalid choice. Type [link]1[end link] to ride his cock, [link]2[end link] to fuck him, [link]3[end link] to knee him or [link]4[end link] to just leave.";
-		if calcnumber is 1:[mount his cock]
+		LineBreak;
+		if calcnumber is 1: [mount his cock]
 			say "[sandman ride]";
-		else if calcnumber is 2:[fuck him in the ass]
+		else if calcnumber is 2: [fuck him in the ass]
 			say "[sandman fucked]";
-		else if calcnumber is 3:[knee him in the crotch]
+		else if calcnumber is 3: [knee him in the crotch]
 			say "     Calmly stepping up to the beach stud, you tell him that sometimes he should take the hint when someone is not interested... and then you knee him in the groin, leaving him to sink to his knees in a pained whimper as you walk away. It's doubtful that he'll learn anything from this and actually stop bothering you the next time you meet, though there's something oddly satisfying in leaving this pushy guy on his knees and holding his crotch.";
-		else:[leave]
+		else: [leave]
 			say "     Deciding you should focus on more important stuff right now, you turn away and walk off, leaving a rather surprised and disappointed beach stud behind.";
 	else:
 		LineBreak;
 		say "     You consider getting a ride on that cock of his ([link]Y[as]y[end link]) or just leaving ([link]N[as]n[end link]).";
 		if Player consents:
+			LineBreak;
 			say "[sandman ride]";
 		else:
+			LineBreak;
 			say "     Deciding you should focus on more important stuff right now, you turn away and walk off, leaving a rather surprised and disappointed beach stud behind.";
 
 to say sandman ride:
 	say "     As you agree to taking a ride on the beach stud's manhood, he smiles and pulls you in for a deep kiss, his lips touching yours with a tickling feeling. '[if Player is male]Dude[else]Sweetie[end if], now let's have some fun!' He leads you over to a large towel lying nearby in the sand and pulls off your clothes followed by his own speedo. ";
-	if Player is male:[male + herm]
+	if Player is male: [male + herm]
 		say "Lying down on the towel, he leans back on his elbows and spreads his legs, showing off his proudly standing erection. Then he reaches for it with one hand and strokes its shaft, saying, 'I'm all ready for you baby. Can't wait to feel you around me.' Eager for a good fucking, you kneel over him with your legs on both sides of his hips, then lower yourself till the tip of his cock touches your pucker. 'I'm gonna rock your world,' his charming voice tells you as he puts his hands on your hips and softly pulls you downwards. Doing your best to relax, you nevertheless give a small gasp as the tip of his manhood pops into your body and a pleasant feeling of fullness comes upon you. You keep going, sinking further and further onto his magnificent shaft, until your hips touch and you feel his slightly rough skin against your cheeks.";
 		say "     After a moment's worth of reveling in your intimate connection, your beach lover starts grinding his hips against your crotch. Not to be outdone, you join him in his movements, pulling off partway and then impaling yourself again fully on his cock. The feeling of his slightly rough member rubbing your insides has you moaning in lust in no time, leaning forward and grabbing the towel with both hands to hold on to something as your bodies slap against each other. Your sandy beach lover proves to have expert technique, often changing the angle of his upward thrusts slightly to rub sensitive spots you barely knew you had. Each time you speed up as you feel your orgasm approaching, he raises his upper body to embrace and kiss you, holding you tight and slowly caressing your body. With these pauses in the hot and heavy action, he keeps you in a state of sexual bliss for a long time, allowing you to forget about the hardships of survival in this changed world for a moment.";
 		WaitLineBreak;
 		say "     Then finally, you just can't hold back any more, pulling out till only the tip of his cock remains inside you and slamming down on it all the way again, followed by quick and hard bouncing up and down on his shaft. It doesn't take long till that drives you over the edge, shouting in pleasure as your balls tighten and long strings of cum shoot from your [Cock of Player] shaft all over your partner's stomach and chest. The sand man stud isn't far behind with his own orgasm, pulling you down against his hips, his cock pumping a huge load of his seed deep into your asshole. As you rest a moment to catch your breath, his slowly softening maleness still inside you, he leans up and gives you a kiss on the lips.";
 		say "     'You're an amazing lay, baby. Come find me again later if you want to have another go. But for now, just listen to the waves and rest...' He's right about that - your coupling was incredibly satisfying, but pretty exhausting too. As you realize how tired you really are, the sand man embraces you again and rolls the both of you over so you're lying on the towel now. Pulling out of you carefully, he gives you a seductive smile, then walks off along the beach looking for new conquests. You just stay there on the towel for a while and doze off for a nap.";
 		CreatureSexAftermath "Player" receives "AssFuck" from "Sand Man";
-	else if Player is female:[female]
+	else if Player is female: [female]
 		say "Lying down on the towel, he leans back on his elbows and spreads his legs, showing off his proudly standing erection. Then he reaches for it with one hand and strokes its shaft, saying, 'I'm all ready for you baby. Can't wait to feel you around me.' Eager for a good fucking, you kneel over him with your legs on both sides of his hips, then lower yourself till the tip of his cock touches your nether lips.";
 		WaitLineBreak;
 		say "     'I'm gonna rock your world,' his charming voice tells you as he puts his hands on your hips and softly pulls you downwards. You give a small gasp as you feel the tip of his rock-hard manhood spread your lips and enter your body. You keep going, sinking further and further onto his magnificent shaft, until your hips touch and you feel his slightly rough skin against your cheeks.";
@@ -78,7 +79,7 @@ to say sandman ride:
 		WaitLineBreak;
 		say "     Then finally, he can't hold back any more, urging you into pulling out till only the tip of his cock remains inside you and slamming down on it all the way again, followed by quick and hard bouncing up and down on his shaft. That quickly drives him over the edge and grinding your hips together tightly, his cock starts shooting a huge load of cum directly into your womb. As you rest a moment to catch your breath, his slowly softening maleness still inside you, he leans up and gives you a kiss on the lips. 'You're an amazing lay, baby. Come find me again later if you want to have another go. But for now, just listen to the waves and rest...' He's right about that - your coupling was incredibly satisfying, but pretty exhausting too. As you realize how tired you really are, the sand man embraces you again and rolls the both of you over so you're lying on the towel now. Pulling out of you carefully, he gives you a seductive smile, then walks off along the beach looking for new conquests. You just stay there on the towel for a while and doze off for a nap.";
 		CreatureSexAftermath "Player" receives "PussyFuck" from "Sand Man";
-	else:[neuter]
+	else: [neuter]
 		say "Lying down on the towel, he leans back on his elbows and spreads his legs, showing off his proudly standing erection. Then he reaches for it with one hand and strokes its shaft, saying, 'I'm all ready for you baby. Can't wait to feel you around me.' Eager for a good fucking, you kneel over him with your legs on both sides of his hips, then lower yourself till the tip of his cock touches your pucker. 'I'm gonna rock your world,' his charming voice tells you as he puts his hands on your hips and softly pulls you downwards. Doing your best to relax, you nevertheless give a small gasp as the tip of his manhood pops into your body and a pleasant feeling of fullness comes upon you. You keep going, sinking further and further onto his magnificent shaft, until your hips touch and you feel his slightly rough skin against your cheeks.";
 		say "     After a moment's worth of reveling in your intimate connection, your beach lover starts grinding his hips against your crotch. Not to be outdone, you join him in his movements, pulling off partway and then impaling yourself again fully on his cock. The feeling of his slightly rough member rubbing your insides has you moaning in lust in no time, leaning forward and grabbing the towel with both hands to hold on to something as your bodies slap against each other. Your sandy beach lover proves to have expert technique, often changing the angle of his upward thrusts slightly to rub sensitive spots you barely knew you had. Each time you speed up as you feel your orgasm approaching, he raises his upper body to embrace and kiss you, holding you tight and slowly caressing your body. With these pauses in the hot and heavy action, he keeps you in a state of sexual bliss for a long time, allowing you to forget about the hardships of survival in this changed world for a moment.";
 		WaitLineBreak;
@@ -279,7 +280,6 @@ When Play begins:
 	now Clit Size entry is 0; [size 1-5, see Clit Size Adjective]
 	[Clit Size Adjective is generated by a function and can be used in scenes: very small/small/average/large/very large]
 ]
-
 
 Section 3 - Endings
 

@@ -10,6 +10,7 @@ Cheerleader vs Furling	"Cheerleader vs Furling"
 Cheerleader vs Furling is a situation.
 ResolveFunction of Cheerleader vs Furling is "[ResolveEvent Cheerleader vs Furling]". The level of Cheerleader vs Furling is 5.
 Sarea of Cheerleader vs Furling is "Campus".
+
 when play begins:
 	add Cheerleader vs Furling to BadSpots of TransList; [shemale vs cuntboy]
 	add Cheerleader vs Furling to BadSpots of FurryList; [Furling]
@@ -56,7 +57,7 @@ To say Furling loses:
 				LineBreak;
 				if BodyName of Player is listed in infections of Taurlist:
 					say "     You demand that the shaggy deviant worship your cock if he expects you to pleasure his cunt. The almost feral cunt-man drools at the sight of your [Cock of Player] cock, crawling forwards on all fours to kiss sloppily at the shaft. This soon escalates to him putting it in his mouth, but sadly not being too careful about doing that, so you feel the jarring touch of teeth against your sensitive pole. Rearing back and taking a few steps, you make the furling crawl over to you once more, shaming him for such hastiness. Luckily he's a quick learner, licking your sweaty balls and worshiping that hard cock without further complaints. When you tell him you're ready to fuck, the former student quickly gets on al fours, shoving his wet and dripping pussy against your hard member and panting loudly as your shaft spears his welcoming depths. As you fuck what likely was a former college football star, he lets out loud grunts of joy, not even attempting to hide his pleasure from whoever or whatever is around to see and hear the two of you.";
-					say "     Eventually, you grow tired of the cuntman just bouncing himself on your shaft at his pace. Instead, you give a harsh thrust, smooshing him between the ground and your tauric body, followed by a full on rutting as your testicles slap the muscle slut's rear. Knowing you're close to cumming, you think he's trying to say something, but the babble is quickly silenced as your relentless cock delivers a deluge of cum into his needy womb, stuffing the furling's insides. That should teach him from trying to stop your deep thrusts for whatever he was saying. After the last throb of seed blasts into your cock-sheath, you unceremoniously pull out, your dick dangling underneath your body accompanied by the wet splash of a gush of cum onto the ground. You spend no time comforting the freshly bred beast and just walk away. He can clean up his own mess and you have other things to do with your time. [if a random chance of 1 in 2 succeeds]Before you're out of earshot, you're fairly certain that you hear the furling start moaning and grunting again - seems like someone else moved in and is taking their chance at enjoying your sloppy seconds. But that's not your problem...[end if][line break]";
+					say "     Eventually, you grow tired of the cuntman just bouncing himself on your shaft at his pace. Instead, you give a harsh thrust, smooshing him between the ground and your tauric body, followed by a full on rutting as your testicles slap the muscle slut's rear. Knowing you're close to cumming, you think he's trying to say something, but the babble is quickly silenced as your relentless cock delivers a deluge of cum into his needy womb, stuffing the furling's insides. That should teach him from trying to stop your deep thrusts for whatever he was saying. After the last throb of seed blasts into your cock-sheath, you unceremoniously pull out, your dick dangling underneath your body accompanied by the wet splash of a gush of cum onto the ground. You spend no time comforting the freshly bred beast and just walk away. He can clean up his own mess and you have other things to do with your time[one of]. Before you're out of earshot, you're fairly certain that you hear the furling start moaning and grunting again - seems like someone else moved in and is taking their chance at enjoying your sloppy seconds. But that's not your problem...[or].[at random]";
 				else:
 					LineBreak;
 					say "     Seeing the large furred man-beast at your mercy, you push his wrists into the ground, laying on top of him while he sobs from touch alone. 'Fuck... Please!' he whines needily, but you let him squirm for a little while longer. This muscle slut needs a little training to not tackle random people on the streets anyway. While still holding the furling down with one hand, you pull out your [Cock of Player] cock and prod its length at the completely soaked nether lips of your defeated opponent. His panting suddenly stops and his eyes focus on your face as he bites his lower lip in heightened arousal. He's already submitting so easily, just as you knew he would when you mercilessly teased the big brute. As you carefully buck your fuckstick to hotdog the furling's pussy, you hear the scrape of claws against the floor as he braces for you to take him hard, only to whine needily as you keep bucking against his crotch instead of slamming right in.";
@@ -150,31 +151,30 @@ to say FurlingSexMenu:
 			choose row calcnumber in table of fucking options;
 			say "[title entry]: [description entry]?";
 			if Player consents:
-				let nam be title entry;
 				now sextablerun is 1;
-				if (nam is "Fuck his pussy"):
-					say "[Furling_PussyFuck]";
-				else if (nam is "Fuck his ass"):
-					say "[Furling_AssFuck]";
-				else if (nam is "Finger his pussy"):
-					say "[Furling_Fingering]";
-				else if (nam is "Fist his pussy"):
-					say "[Furling_PussyFist]";
-				else if (nam is "Fuck his pecs"):
-					say "[Furling_PecFuck]";
-				else if (nam is "Fuck his face"):
-					say "[Furling_Facefuck]";
-				else if (nam is "Give him cunnilingus"):
-					say "[Furling_CunniGive]";
-				else if (nam is "Receive cunnilingus from him"):
-					say "[Furling_CunniReceive]";
-				wait for any key;
+				if title entry is:
+					-- "Fuck his pussy":
+						say "[Furling_PussyFuck]";
+					-- "Fuck his ass":
+						say "[Furling_AssFuck]";
+					-- "Finger his pussy":
+						say "[Furling_Fingering]";
+					-- "Fist his pussy":
+						say "[Furling_PussyFist]";
+					-- "Fuck his pecs":
+						say "[Furling_PecFuck]";
+					-- "Fuck his face":
+						say "[Furling_Facefuck]";
+					-- "Give him cunnilingus":
+						say "[Furling_CunniGive]";
+					-- "Receive cunnilingus from him":
+						say "[Furling_CunniReceive]";
 		else if calcnumber is 0:
 			now sextablerun is 1;
 			say "     Deciding you should focus on more important stuff right now, you land your last blow and see him fall back on his ass, then turn away and walk off, leaving the bruised furling behind alone.";
-			wait for any key;
 		else:
-			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
+			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options], or 0 to exit.";
+	wait for any key;
 	clear the screen and hyperlink list;
 
 to say Furling_PussyFuck: [vaginal]
@@ -450,7 +450,6 @@ When Play begins:
 	[Clit Size Adjective is generated by a function and can be used in scenes: very small/small/average/large/very large]
 ]
 
-
 Section 3 - Endings
 
 Table of GameEndings (continued)
@@ -485,14 +484,10 @@ name	desc	weight	object
 
 red fur is a grab object.
 Usedesc of red fur is "[redfuruse]".
-
-It is temporary.
+Scent of red fur is "The fur has a pleasing, not too strong, animal-like scent.".
 
 to say redfuruse:
 	say "Holding the tuft of fur between your fingers, you stroke over it, delighted in its softness. Strangely, the hair disintegrates after a while, becoming a cloud of fine particles that are absorbed into your skin.";
 	infect "Furling";
-
-instead of sniffing red fur:
-	say "The fur has a pleasing, not too strong, animal-like scent.";
 
 Furling ends here.

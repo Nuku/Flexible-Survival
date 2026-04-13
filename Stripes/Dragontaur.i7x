@@ -249,7 +249,7 @@ this is the drtaurpounce rule:		[double-damage pouncing]
 	let dam be ( wdam entry times a random number from ( 80 - ( peppereyes * 4 ) ) to 120 ) / 50; [Double damage]
 	if HardMode is true and a random chance of 1 in ( 10 + peppereyes ) succeeds:
 		now dam is (dam * 150) divided by 100;
-		say "The enemy finds a particular vulnerability in your defense - [italic type]Critical Hit![roman type][line break]";
+		say "The enemy finds a particular vulnerability in your defense - Critical Hit!";
 	say "The [one of][EnemyNameOrTitle][or]draconid[or]dragontaur[or]dragon creature[purely at random] growls and pounces atop you, [one of]knocking[or]pushing[or]slamming[purely at random] you down briefly. Its many talons claw at you while the dragon roars. This [one of]powerful[or]strong[or]devastating[purely at random] assault does [special-style-2][dam][roman type] damage!";
 	now damagein is dam;
 	say "[noshieldabsorbancy]"; [unable to use shield while pinned]

@@ -3,7 +3,6 @@ Version 2 of Pirate Shark by Sarokcat begins here.
 
 "Adds a shark to Flexible Survival's Wandering Monsters table, with impreg chance"
 
-
 Section 1 - Creature Responses
 
 nopiratesharksex is a number that varies.
@@ -24,33 +23,33 @@ to say shark attack:
 To say shark loss:
 	project Figure of Pirate_Shark_Herm_hard_icon;
 	choose row MonsterID from the Table of Random Critters;
-	if ( HardMode is false and level of Player < ( lev entry + 2 ) ) or dexterity of Player < ( dex entry + 2 ) or Cock Count of Player is 0:
+	if ( HardMode is false and level of Player < lev entry + 2 ) or dexterity of Player < dex entry + 2 or Player is not male:
 		say "     Your blows send the pirate shark reeling backwards, making the strange beast cry out in pain. Before you can press the advantage though, the shark-like pirate turns and dives into the water again, her tail and her fin cutting through the water as she flees. Somehow though, you don't think you have seen the last of these shark pirates...";
-	else if nopiratesharksex > 2 and ( the remainder after dividing nopiratesharksex by 5 is not 0 ):
+	else if nopiratesharksex > 2 and the remainder after dividing nopiratesharksex by 5 is not 0:
 		say "     Your blows send the pirate shark reeling backwards, making the strange beast cry out in pain. Like with the others of its kind, you choose not to press your advantage, instead letting the shark-like pirate turn and dive into the water again. Her tail and her fin cut through the water as she flees. Somehow though, you don't think you have seen the last of these shark pirates...";
 		increase nopiratesharksex by 1;
 	else:
 		say "     Your blows send the pirate shark reeling backwards, making the strange beast cry out in pain. Knowing you've beaten the fight out of her, you suspect she is going to attempt an escape. Quick - shall you catch her for some fun?";
 		if Player consents:
+			LineBreak;
 			now nopiratesharksex is 0;
 			say "     As it turns to make its escape, you pounce upon it. Managing to grab it by the tail fins as it prepares to dive back into the water, you brace yourself and pull hard. This results in its leap falling short and landing on the ground. With her weak and pinned beneath you, you find yourself eager to take advantage of the situation and drive your throbbing manhood into her slick pussy.";
-			say "     Despite her cool skin, her cunt is delightfully warm and a pleasant hole to fuck[if Cock Length of Player < 10]. You're an easy fit for the creature's cunny, her slick flesh squeezing nicely around your throbbing manhood[else if Cock Length of Player < 20]. She's a bit of a tight fuck thanks to your enlarged manhood, but you're able to work your way into her treasure cave and plunder this pirate's booty[else]. Given your [cock size desc of Player] size, she's a tight fuck, but you're intent of plundering this pirate's booty and press on, stretching her treasure cave wide to take you[end if]. She only struggles weakly at first and even that fades off quickly as her arousal gets the better of her. Soon enough, the herm is pushing back into your thrusts, panting heavily as pre drools from her throbbing cock and her hot juices leak out around your [Cock of Player] cock.";
+			say "     Despite her cool skin, her cunt is delightfully warm and a pleasant hole to fuck. [if Cock Length of Player < 10]You're an easy fit for the creature's cunny, her slick flesh squeezing nicely around your throbbing manhood[else if Cock Length of Player < 20]She's a bit of a tight fuck thanks to your enlarged manhood, but you're able to work your way into her treasure cave and plunder this pirate's booty[else]Given your [cock size desc of Player] size, she's a tight fuck, but you're intent of plundering this pirate's booty and press on, stretching her treasure cave wide to take you[end if]. She only struggles weakly at first and even that fades off quickly as her arousal gets the better of her. Soon enough, the herm is pushing back into your thrusts, panting heavily as pre drools from her throbbing cock and her hot juices leak out around your [Cock of Player] cock.";
 			say "     Seeing the tough pirate reduced to a slutty wench as you pound away at her gray-skinned ass, you don't hold back. As you're about to reach your peak, she cries out beneath you, spraying her hot load from her throbbing cock and drenching your cock in her juices. This sends you over the edge and you drive deep into her, dumping your [Cum Load Size of Player] load into her briny depths. Once spent, you pull out and give her ass a slap with your cock, laughing that she can go now that you've [']buried your treasure[']. She tries to act tough, but she can't help but blush and finger herself as she staggers into the water and swims away.";
 			CreatureSexAftermath "Shark Herm" receives "PussyFuck" from "Player";
 		else:
+			LineBreak;
 			increase nopiratesharksex by 1;
 			say "     Rather than pressing your advantage, you let the shark-like pirate turn and dive back into the water. You can see her tail and fin cut through the water as she flees. Somehow though, you don't think you have seen the last of these shark pirates...";
 
 Section 2 - Creature Insertion
-
-To say pirateSharkDesc:
-	say "     All of a sudden, you notice a triangular fin cutting through the water nearby, heading right for you! Before you can respond, there is a loud splash as a shark-like beast erupts out of the water, its strange and sudden appearance startling you as you stare at it. The beast seems to be a cross between a shark and a person, with webbed hands and feet, as well as small breast-like bulges on its torso and a rather obvious shark-like genital slit between its legs, from which you can see the tip of a slight pink cock poking, as well as a slight wet opening below that. Its long shark-like tail lashes against the ground behind it as it stares at you in obvious desire, its mouth pulled back in a grin that exposes its many serrated teeth. Its head seems to sport a rather jaunty looking pirate bandana with a skull with shark teeth above crossed bones, and a similar bandana is tied to the beast's upper arm. [']Is this some sort of pirate shark?['] you find yourself thinking as it stalks forward. Its mouth opens in a grin as it says, '[one of]Surrender the booty[or]Time to do some plunderin['][or]You will make a fine addition to my crew[or]I think I might keep you[or]You're mine now[or]Looks like I found myself a treasure[or]You won't be getting away from me[or]I knew I'd find me some treasure in these waters[at random]!' The beast grins as it charges, its intentions clear!";
 
 Table of CombatPrep (continued)
 name(text)	PrepFunction(text)
 "Shark Herm"	"[PrepCombat_Shark Herm]"
 
 to say PrepCombat_Shark Herm:
+	setmongender 5; [creature is herm]
 	project Figure of Pirate_Shark_Herm_soft_icon;
 
 Table of Random Critters (continued)
@@ -68,6 +67,7 @@ When Play begins:
 	add "Shark Herm" to infections of MaleList;
 	add "Shark Herm" to infections of TaperedCockList;
 	add "Shark Herm" to infections of InternalCockList;
+	add "Shark Herm" to infections of InternalBallsList;
 	add "Shark Herm" to infections of BipedalList;
 	add "Shark Herm" to infections of SwimList;
 	add "Shark Herm" to infections of TailList;
@@ -80,7 +80,7 @@ When Play begins:
 	now attack entry is "[if inasituation is true][one of]She drags you towards the water with a sneer.[or]The beast manages to get your head under the surface of the water, holding you down a moment.[or]The powerful beast tosses you into the water painfully before chasing after you.[or]Her sharp shark teeth snap at you viciously, tearing and rending at your body![or]She charges at you with her sleek form, knocking you down painfully.[or]She twists around for a second, bringing her large shark-like tail around in a powerful slap![at random][else][one of]Her sharp shark teeth snap at you viciously, tearing and rending at your body![or]She charges at you with her sleek form, knocking you down painfully.[or]She twists around for a second, bringing her large shark-like tail around in a powerful slap![at random][end if]";
 	now defeated entry is "[shark loss]";
 	now victory entry is "[shark attack]";
-	now desc entry is "[pirateSharkDesc]";
+	now desc entry is "     All of a sudden, you notice a triangular fin cutting through the water nearby, heading right for you! Before you can respond, there is a loud splash as a shark-like beast erupts out of the water, its strange and sudden appearance startling you as you stare at it. The beast seems to be a cross between a shark and a person, with webbed hands and feet, as well as small breast-like bulges on its torso and a rather obvious shark-like genital slit between its legs, from which you can see the tip of a slight pink cock poking, as well as a slight wet opening below that. Its long shark-like tail lashes against the ground behind it as it stares at you in obvious desire, its mouth pulled back in a grin that exposes its many serrated teeth. Its head seems to sport a rather jaunty looking pirate bandana with a skull with shark teeth above crossed bones, and a similar bandana is tied to the beast's upper arm. [']Is this some sort of pirate shark?['] you find yourself thinking as it stalks forward. Its mouth opens in a grin as it says, '[one of]Surrender the booty[or]Time to do some plunderin['][or]You will make a fine addition to my crew[or]I think I might keep you[or]You're mine now[or]Looks like I found myself a treasure[or]You won't be getting away from me[or]I knew I'd find me some treasure in these waters[at random]!' The beast grins as it charges, its intentions clear![line break]";
 	now face entry is "rough shark-like snout, above a mouth filled with sharp jagged shark-like teeth stretching out in an easy grin, giving you a very shark-like"; [ Face description, format as "Your face is [Face of Player]." ]
 	now body entry is "long and sleek, its rounded shape perfect for cutting through the water, aided by your long shark-like dorsal fin, and your webbed hands and feet, you feel like you would be a terror in any underwater situation, though moving around on land is slightly awkward"; [ Body Description, format as "Your Body is [Body of Player]." ]
 	now skin entry is "[one of]shark-like[or]rough pebbled[or]rough gray[at random]"; [ Skin Description, format as "Looking at yourself, your body is covered in [Skin of Player] skin." ]
@@ -231,17 +231,16 @@ When Play begins:
 	[Clit Size Adjective is generated by a function and can be used in scenes: very small/small/average/large/very large]
 ]
 
+Section 3 - Drop Item
 
 Table of Game Objects (continued)
 name	desc	weight	object
 "pirate bandana"	"A slightly damp bit of black cloth, with a skull and crossbones on the front, closer inspection reveals that the skull has sharp shark-like teeth."	1	pirate bandana
 
 pirate bandana is a grab object. Understand "bandana" and "bandana" as pirate bandana. Pirate bandana is infectious. Strain of pirate bandana is "Shark Herm".
+Usedesc of pirate bandana is "     Looking at the small piece of cloth, you decide to put it on for a minute, tying it around your head and grinning at the vicious look it gives you. You pose for a minute in your new bandana, before the much abused cloth finally tears and falls to the ground, you sigh sadly at the loss of your new fashion accessory, but still feel much more piratical afterwards.[line break]".
 
-Usedesc of pirate bandana is "Looking at the small piece of cloth, you decide to put it on for a minute, tying it around your head and grinning at the vicious look it gives you. You pose for a minute in your new bandana, before the much abused cloth finally tears and falls to the ground, you sigh sadly at the loss of your new fashion accessory, but still feel much more piratical afterwards.";
-
-
-Section 3 - Endings
+Section 4 - Endings
 
 Table of GameEndings (continued)
 Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
@@ -253,10 +252,7 @@ This is the Pirate Treasure Quest Epilogue rule:
 		make no decision; [Handled in "Shark Herm Infection" ending]
 	if treasurefound is 1:
 		trigger ending "Pirate Treasure Quest Epilogue"; [Here it states, that the ending has been played.]
-		if humanity of Player < 10:
-			say "     Surrendering to the infection completely, for some reason you still find yourself holding onto the shiny gold you found while wandering the city, it becomes something of a small treasure for you, and you keep it safe and secure, even though its actual value as money is something you can no longer manage to grasp, having it nearby still makes you happy.";
-		else:
-			say "     Escaping the city with your mind intact, you are careful not to mention your newfound gold coins until you are far away from military hands, at which point you end up changing the small handful of coins for a rather nice amount of money, allowing you to get ahead of the other refugees from the city in establishing your happy new life, though sometimes you wonder if there might not be more treasure out there somewhere, just waiting to be discovered.";
+		say "     [if humanity of Player < 10]Surrendering to the infection completely, for some reason you still find yourself holding onto the shiny gold you found while wandering the city, it becomes something of a small treasure for you, and you keep it safe and secure, even though its actual value as money is something you can no longer manage to grasp, having it nearby still makes you happy[else]Escaping the city with your mind intact, you are careful not to mention your newfound gold coins until you are far away from military hands, at which point you end up changing the small handful of coins for a rather nice amount of money, allowing you to get ahead of the other refugees from the city in establishing your happy new life, though sometimes you wonder if there might not be more treasure out there somewhere, just waiting to be discovered[end if].";
 
 This is the Shark Herm Infection rule:
 	if Player has a body of "Shark Herm":
@@ -271,6 +267,5 @@ This is the Shark Herm Infection rule:
 				say "     Finally giving in to your new instincts, you return to the coast and head out into the sea, leaving the military and the other infected to fight over the city itself, you realize there is a whole world out there for you to plunder instead. Soon you run into several other piratical sharks, and working together you manage to overwhelm small ships, moving your way from marina to marina as you convert the ship owners into fellow sharks, employing them as lesser crew members, and gathering a small fleet of lesser boats to transport your loot from place to place. Eventually with several different crews working together you manage to start taking cruise ships, and transport liners, your and your fellow pirates influence spreading throughout the ocean by leaps and bounds as your numbers increase as do your captured ships. While several navies try to find and stop you, your ability to vanish into the waves, only to appear again swarming up the sides of the navies boats, soon makes this a losing proposition for the navies, and nets you several well armed boats as well. Eventually you and your fellow sharks rule the oceans in all but name, and those traveling on them bring you tribute in order to pass unmolested, and you settle down on a small island of your own, with your crew at hand, and proceed to enjoy the leisurely life of a successful pirate, and breed the next generation with the best members of your transformed crew...";
 			else:
 				say "     Rescued from the doomed city with your humanity still intact, you find most people are just not ready or willing to accept someone as shark-like as you are, leaving you as somewhat of an outcast in normal society. It doesn't help matters any that you still have sudden urges to take what you want and to hell with anyone or anything in the way. You try several different jobs in an attempt to find ways to channel your aggressive tendencies, in all cases however you eventually get frustrated and snap at your co workers or boss and end up looking for yet another job. Eventually you give up trying to live a normal life in a city, and move down to a smaller town on one of the coasts, where you buy a boat, and can fish and enjoy the coastline to your hearts content. On one of your swims off the coast you manage to find the wreck of an older boat, and while there wasn't any treasure to be found there, this leads you to find your new calling in life. Your shark-like features and swimming ability make you the perfect salvage diver, able to scout for and find wrecks with an ease most other divers envy, you even start a small tourist side business showing tourists some of the more interesting wrecks you have found. Most normal sharks steer clear of you in the water as well, making you feel safe and powerful when you dive, on one occasion a shark seems to take a liking to you, and hangs around you while you dive, and even follows your boat back to the small cove you call home. Curious you spend some time diving with this strange shark, as it rubs its sides up against you and teases at you, and you finally realize just what it is after, you had pretty much despaired of finding sexual satisfaction amongst the humans who were intimidated by your shark-like looks, but it looks like you managed to find yourself a mate on the other end of the spectrum instead.";
-
 
 Pirate Shark ends here.

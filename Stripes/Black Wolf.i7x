@@ -8,6 +8,13 @@ Section 1 - Creature Responses
 
 Section 2 - Creature Insertion
 
+[Table of CombatPrep (continued)
+name(text)	PrepFunction(text)
+"Black Wolf"	"[PrepCombat_Black Wolf]"
+
+to say PrepCombat_Black Wolf:
+	setmongender 3;]
+
 Table of Random Critters (continued)
 NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
@@ -30,9 +37,9 @@ When Play begins:
 	now enemy Name entry is "Andrew";
 	now enemy type entry is 1; [ 0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters. ]
 	now attack entry is "Andrew's a lover, not a fighter."; [ Successful attack message ]
-	now defeated entry is "[NonCombatError]"; [beattheblackwolf][ Text when monster loses. ]
-	now victory entry is "[NonCombatError]"; [losetoblackwolf][ Text when monster wins. ]
-	now desc entry is "[NonCombatError]"; [blackwolfdesc][ Description of the creature when you encounter it. ]
+	now defeated entry is "[NonCombatError]"; [ Text when monster loses. ]
+	now victory entry is "[NonCombatError]"; [ Text when monster wins. ]
+	now desc entry is "[NonCombatError]"; [ Description of the creature when you encounter it. ]
 	now face entry is "rather lupine in form, with an elongated muzzle, pointed ears and a wolfish face. Your features are rather soft and friendly though, even somewhat sexy. You have rather pretty, violet eyes";
 	now body entry is "altered to have paw-like hands and digitigrade feet to go along with its otherwise rather normal build. It does possess a rather attractive, even sexy quality to it that's hard to pin down to anything specific though";
 	now skin entry is "black-furred";

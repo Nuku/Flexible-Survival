@@ -328,7 +328,7 @@ to gb_gatling_attack:
 		let dam be ( wdam entry times a random number from ( 80 - ( peppereyes * 4 ) ) to 120 ) / 100;
 		if HardMode is true and a random chance of 1 in ( 10 + peppereyes ) succeeds:
 			now dam is (dam * 150) divided by 100;
-			say "A shot strikes a particular vulnerable spot - [italic type]Critical Hit![roman type][line break]";
+			say "A shot strikes a particular vulnerable spot - Critical Hit!";
 		increase damagetotal by dam;
 		say "Hit: You try to avoid the deadly strafing, but are too slow and get hit by some [if gb_gun is 6]pellets of hot plasma[else]bullets[end if] during one sweeping pass.";
 		now gatling_hit is true;
@@ -339,7 +339,7 @@ to gb_gatling_attack:
 		let dam be ( wdam entry times a random number from ( 80 - ( peppereyes * 4 ) ) to 120 ) / 100;
 		if HardMode is true and a random chance of 1 in ( 10 + peppereyes ) succeeds:
 			now dam is (dam * 150) divided by 100;
-			say "A shot strikes a particular vulnerable spot - [italic type]Critical Hit![roman type][line break]";
+			say "A shot strikes a particular vulnerable spot - Critical Hit!";
 		increase damagetotal by dam;
 		say "Hit: You try to scramble to some temporary cover, but the gunbunny's anticipated your plan and ends up hopping past it just as you dive behind it. You get shot by a volley of [if gb_gun is 6]plasma fire[else]bullets[end if] even as the shots that miss tear your would-be cover apart.";
 		now gatling_hit is true;
@@ -350,7 +350,7 @@ to gb_gatling_attack:
 		let dam be ( wdam entry times a random number from ( 80 - ( peppereyes * 4 ) ) to 120 ) / 100;
 		if HardMode is true and a random chance of 1 in ( 10 + peppereyes ) succeeds:
 			now dam is (dam * 150) divided by 100;
-			say "A shot strikes a particular vulnerable spot - [italic type]Critical Hit![roman type][line break]";
+			say "A shot strikes a particular vulnerable spot - Critical Hit!";
 		increase damagetotal by dam;
 		say "Hit: Getting up, you scramble away even as the wild bunny continues to give chase. You are unable to stay ahead of the [if gb_gun is 6]searing blasts of energy pursuing you[else]flurry of bullets tearing holes into everything around you[end if], eventually getting hit[if gatling_hit is true] again[end if].";
 		now gatling_hit is true;

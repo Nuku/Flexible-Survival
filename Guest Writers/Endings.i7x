@@ -4,7 +4,7 @@ Version 1 of Endings by Guest Writers begins here.
 
 "Adds several endings for bodies to Flexible Survival"
 
-Section 1 Human Ending
+Section 1 - Human Ending
 
 Table of GameEndings (continued)
 Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)

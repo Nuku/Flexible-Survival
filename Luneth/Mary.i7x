@@ -1,7 +1,6 @@
 Version 1 of Mary by Luneth begins here.
 [ Original content by Sarokcat ]
 
-
 [ Libido of Mary                                                               ]
 [ 0 = Mary not chosen as main interest                                         ]
 [ 1 = Mary chosen as main interest                                             ]
@@ -47,12 +46,10 @@ SexuallyExperienced of Mary is true.
 TwistedCapacity of Mary is false. [Twisted Characters can take any penetration, no matter the size]
 Sterile of Mary is true. [steriles can't knock people up]
 MainInfection of Mary is "Ewe".
-Description of Mary is "A somewhat shy looking ewe woman is watching you carefully as you move around. You remember her introducing herself as Mary.".
-Conversation of Mary is { "Baa, honey!" }.
+Description of Mary is "     A somewhat shy looking ewe woman is watching you carefully as you move around. You remember her introducing herself as Mary.[line break]".
+[Conversation of Mary is { "Baa, honey!" }.]
 the fuckscene of Mary is "[sexwithmary]".
-
-instead of sniffing Mary:
-	say "Mary smells like a female sheep and has traces of the city's scents in her wool.";
+Scent of Mary is "     Mary smells like a female sheep and has traces of the city's scents in her wool.".
 
 instead of conversing the Mary:
 	if HyenaTrailing is 3:
@@ -72,6 +69,7 @@ instead of conversing the Mary:
 		else:
 			say "     'But I'm glad you came over to talk to me. I was kind of hoping I would get a chance to thank you properly,' she says while blushing. 'I really thought we worked well together out there, and you were so brave and strong keeping me safe. I've been thinking, and I'd really like it if we could be part of the same flock, then we could be together all the time. What do you say?'";
 			if Player consents:
+				LineBreak;
 				say "     'Really? You mean it? That's wonderful!' she says with a smile, before grabbing the sides of your face and giving you another big kiss. As she breaks the kiss you stare at her slightly bemused as she blushes, realizing every eye in the store is on the two of you. Glancing around at all the staring eyes she quickly grabs your arm and nearly drags your unprotesting body outside, slamming the door behind you. Pausing for a moment in the street, she quickly makes her way to one of the abandoned buildings next to the store, motioning you to follow as she quickly unlocks the door and slips inside.";
 				WaitLineBreak;
 				say "     Following Mary into the dimly lit building, you realize someone has gone to some effort to keep it looking abandoned, but out of sight of the front windows it has actually been furnished as a nice little hideaway. Mary is standing there blushing again as she admits 'I found this place a while back, and I cleaned it up for when I needed to get away from the rest of the flock. You're the only other person who knows about it now.' Before you can respond to her surprising statement, she reaches up and kisses you again, taking her time to rub her sheep-like muzzle along your [FaceSpeciesName of Player in lower case] face, and exploring your mouth with her tongue.";
@@ -79,15 +77,14 @@ instead of conversing the Mary:
 				WaitLineBreak;
 				say "     She eventually talks about the infection sweeping the city, and how everyone at the store both employees and customers alike began to change, and all the males fought until Leon was the only male left, and the rest had become ewes like everyone else. Not really wanting to end up like some of the rest of the flock who seemed to lose most of their intelligence the more they stayed there, she volunteered to do much of the scouting and scavenging for the rest. She was able to put Leon off of claiming her personally so far, but she figured it was only a matter of time before he got to her, until she met you. She says with a yawn, staring up at you adoringly, she thinks she could really like being part of your flock instead.";
 				say "     You continue to talk about a number of subjects as you both relax, eventually Mary falling asleep in your lap. Softly moving her into a more comfortable position, you realize how much your comfortable time with your new flock member seems to have changed you, even making you smell a bit like her.";
-				increase Libido of Player by 10;
+				raise Player Libido by 10;
 				increase Libido of Mary by 1;
 				if MaleList is not banned and Player is not FemalePreferred:
-					infect "Ram";
-					infect "Ram";
+					MultiInfect "Ram" repeats 2;
 				else:
-					infect "Ewe";
-					infect "Ewe";
+					MultiInfect "Ewe" repeats 2;
 			else:
+				LineBreak;
 				say "     'Oh, that's OK then, I understand if you have other things you'd rather do, but I'd really like it if you thought about it some more.'";
 
 to say sexwithmary:
@@ -102,16 +99,13 @@ to say sexwithmary:
 	else:
 		now lastfuck of Mary is turns;
 		say "     'Mary blushes eagerly at your advances, nodding shyly she quickly looks around the store before ducking outside with you. Quickly heading over to her nearby hideout she kisses you as soon as the two of you are safe and alone. Breaking off the kiss Mary says, 'I'm so glad to see you again,' she pants eagerly, 'I haven't been able to stop thinking about you since last time.' Before you know it she has quickly stripped you naked and is pushing you down onto the couch.";
-		WaitLineBreak;
 		if Player is male:
 			say "     Her eyes slowly drift down your body only to stop at your erect [Cock of Player] cock, staring in licking her lips in anticipation she lowers her head to it and runs her long tongue along the base of it, her eyes crossing as she savors the taste. Unable to wait any longer, she quickly moves herself over you, straddling you as she positions herself over your erect maleness. Before you can say anything she lowers herself onto you in one swift movement, moaning in ecstasy as her soft cavern wraps around your cock.";
 			WaitLineBreak;
 			say "     Unable to resist the soft feel of her wet folds enveloping you, you bury your hands in the soft wool of her hips, gripping tightly as you thrust upwards. Mary moans in pleasure as you take charge, her inner muscles tightening around you deliciously with your every movement. Soon you settle into a rhythm of short quick thrusts into your willing ewe, her soft body rubbing up against your [Skin of Player] with every thrust, her face full of animalistic pleasure as she makes soft bleating and moaning noises in time with your thrusting. Before you know it you feel your muscles tense in orgasm, as your cock empties its load into her fertile belly, causing her to shudder in orgasm as well as your seed fills her belly. Panting, she collapses on top of you, your cock still twitching in her, as you both lie there exhausted.";
-			WaitLineBreak;
 			say "     Waking up after a couple hours, you find yourself alone on the couch, quickly gathering up your belongings you find a short note left behind from Mary. 'I had to return to the store to take care of a few things, though I am definitely looking forward to spending more time with you as soon as we can. Signed, your loyal ewe.' Smiling as you read the note, you feel a surge of satisfaction at having taken care of your ewe properly, and tuck the note into your backpack before heading back over to the store yourself.";
 		else:
 			say "     Mary's sheep-like face pouts slightly as she takes in your female form. 'It looks like you aren't quite ready to be the ram of the flock yet,' she says as she runs her hands over your body, 'but that doesn't mean we can't have a little bonding time in the flock anyways.' She leans over you to lick the side of your face erotically. Wasting no time she begins running her hands up and down your body, teasing and exciting you as she begins to lick and kiss her way down your body. She pays special attention to your nipples and stomach, before finally lowering her head to your wet pussy, which she begins to nibble and tease with her soft lips and flexible tongue. Unable to help yourself you bury your hands in the soft fleece around her head as you moan and writhe underneath her, her marvelously skilled tongue quickly bringing you to the edge of orgasm, before finally making you cry out as you cum, your juices eagerly licked up by her wonderful tongue.";
-			WaitLineBreak;
 			say "     As you collapse back onto the couch from your amazing orgasm, Mary slowly moves back up your body in order to kiss you again, the taste of your own sexual fluids exploding into your mouth from the deep kiss. Eventually breaking the kiss off, she lies next to you as you drift off into an exhausted sleep. You can vaguely here her comment as you drift off, something about not being able to wait for next time...";
 		if MaleList is not banned and Player is not FemalePreferred:
 			infect "Ram";

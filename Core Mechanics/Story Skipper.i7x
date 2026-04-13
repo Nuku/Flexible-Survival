@@ -3,7 +3,7 @@ Version 224 of Story Skipper by Core Mechanics begins here.
 [ Version 223.1 - Updated w/Enhanced Chimera material ]
 [ Version 224 - Completely rewritten - Wahn]
 
-Part 0 - Variables
+Chapter 0 - Variables
 
 postimport rules is a rulebook.
 
@@ -33,8 +33,10 @@ The File of NoteSave (owned by another project) is called "FSNoteSave".
 The File of StorageSave (owned by another project) is called "FSStorageSave".
 The File of VialData (owned by another project) is called "FSVialDataSave".
 
-[PetList is a list of text that varies.[@Tag:NotSaved] [for stashing the pet objects in the Character Nexus]
-PetList is { "Nullpet", "Latex Vixen", "strange doll", "pink raccoon", "demon brute", "wukong", "human dog", "Retriever Girl", "Rubber Tigress companion", "frost giantess", "Little fox", "skunk kit", "equinoid warrior", "Felinoid Companion", "Cute Crab", "house cat", "Exotic Bird", "helper dog", "Gryphoness", "bee girl", "gshep", "mouse girl", "royal tiger companion", "doberman companion", "demonologist", "Carnivorous Plant", "orc supersized breeder", "Best Wolf", "submissive demonic prince", "White Wolf Zero", "White Wolf One", "White Wolf Two", "White Wolf Three", "White Wolf Four", "White Wolf Five", "White Wolf Six", "White Wolf Seven", "White Wolf Eight", "White Wolf Nine", "White Wolf Ten"}.]
+[
+PetList is a list of text that varies.[@Tag:NotSaved] [for stashing the pet objects in the Character Nexus]
+PetList is { "Nullpet", "Latex Vixen", "strange doll", "pink raccoon", "demon brute", "wukong", "human dog", "Retriever Girl", "Rubber Tigress companion", "frost giantess", "Little fox", "skunk kit", "equinoid warrior", "Felinoid Companion", "Cute Crab", "house cat", "Exotic Bird", "helper dog", "Gryphoness", "bee girl", "gshep", "mouse girl", "royal tiger companion", "doberman companion", "demonologist", "Carnivorous Plant", "orc supersized breeder", "Best Wolf", "submissive demonic prince", "White Wolf Zero", "White Wolf One", "White Wolf Two", "White Wolf Three", "White Wolf Four", "White Wolf Five", "White Wolf Six", "White Wolf Seven", "White Wolf Eight", "White Wolf Nine", "White Wolf Ten"}.
+]
 
 an everyturn rule:
 	if Player is in NPC Nexus:

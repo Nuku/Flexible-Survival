@@ -398,7 +398,7 @@ to say beatWukongThugs_worship:
 
 to say losetoWukongThugs:
 	say "     'He's down, get him!' The whole gang piles on you, pinning you on the ground and exposing your naked body. You try to struggle but your limbs are pulled apart, preventing you from resisting the countless hands running over your body and harassing your erogenous zones. 'We'll have a lots of fun together, [if Player is male]bro[else]sis[end if],' says one of the monkeys who had slipped under you in the confusion. 'You'll see.'";
-	say "     You try to protest, but one of the monkeys takes the opportunity to plant [if a random chance of 1 in 2 succeeds]his legs around your head and push his cock inside your mouth. You cough and gag as the slab of meat descends down your throat, and the simian starts hitting your uvula with each maw-stretching pump[else]her legs around your head and press her crotch against your mouth. You groan as she smothers you and grinds her pussy against your face, wetting your tongue with her vaginal fluids[end if].";
+	say "     You try to protest, but one of the monkeys takes the opportunity to plant [one of]his legs around your head and push his cock inside your mouth. You cough and gag as the slab of meat descends down your throat, and the simian starts hitting your uvula with each maw-stretching pump[or]her legs around your head and press her crotch against your mouth. You groan as she smothers you and grinds her pussy against your face, wetting your tongue with her vaginal fluids[at random].";
 	WaitLineBreak;
 	if Player is not neuter or anallevel > 1:
 		if anallevel > 1:

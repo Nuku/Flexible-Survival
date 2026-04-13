@@ -25,15 +25,13 @@ to connect LupinesPit:
 a postimport rule:
 	if Resolution of Discover The Werewolves Den is 1:
 		now Find The Werewolves Den is resolved;
-		AddNavPoint Hidden Rock Cavern Entrance;
+		AddNavPoint Hidden Rock Cavern Entrance silently;
 		connect LupinesPit;
 		move Jett to Lair Of The Lupines Main Hub;
 		move Elstan to Lair Of The Lupines Pit;
 		move Kirnon to Lair Of The Lupines Pit;
 		move Rodion to Lair Of The Lupines Kitchen;
 		move Wyatt to Lair Of The Lupines Common Room;
-
-a postimport rule:
 	now Sterile of Wyatt is false;
 
 [---]
@@ -51,8 +49,7 @@ to say Hidden Rock Cavern Entrance Desc:
 	if Resolution of Discover The Werewolves Den is 0:
 		say "     [bold type]You have a feeling that you probably should not venture forth, if anyone happens to live deeper inside...[roman type][line break]";
 
-instead of smelling Hidden Rock Cavern Entrance:
-	say "     This place smells like greenery and nature, but with a faint odor of... wolves?";
+Scent of Hidden Rock Cavern Entrance is "     This place smells like greenery and nature, but with a faint odor of... wolves?".
 
 Table of GameEventIDs (continued)
 Object	Name
@@ -64,6 +61,7 @@ ResolveFunction of Find The Werewolves Den is "[ResolveEvent Find The Werewolves
 to say ResolveEvent Find The Werewolves Den:
 	say "     As you walk through a few unknown paths in hopes of finding something interesting within the region of Avalon, you are led into an area almost completely covered by tall grass and bushes. Normally, this would not mean much, but there is a distinct smell flowing in the air that resembles wolves, yet you hear no movement nor any sort of howling. Moreover, when you inspect the dirty ground near this section of the woods, you notice large lupine footprints here and there. With your curiosity duly incited, you press on through the vegetation and find your way to some rocky cliffs. The path is not the easiest to traverse, but it eventually reveals that all this greenery seems almost purposefully meant to conceal an entrance to a cavern.";
 	say "     Having stumbled upon this finding, you take note of its location immediately and wonder if it would be worth investigating.";
+	WaitLineBreak;
 	move player to Hidden Rock Cavern Entrance;
 	AddNavPoint Hidden Rock Cavern Entrance;
 	now Find The Werewolves Den is resolved;
@@ -83,8 +81,7 @@ to say Rocky Dark Path Desc:
 	if Resolution of Discover The Werewolves Den is 0:
 		say "     [bold type]There is a strange sensation in your mind that you are being watched. You might want to go back, unless you want to increase the chances of something happening to you...[roman type][line break]";
 
-instead of smelling Rocky Dark Path:
-	say "     This area's scent does not strike as anything particular, but the air feels colder than it is outside.";
+Scent of Rocky Dark Path is "     This area's scent does not strike as anything particular, but the air feels colder than it is outside.".
 
 instead of going west from Rocky Dark Path while Resolution of Discover The Werewolves Den is 0:
 	say "     Despite your odd feelings about this place, you decide to press on further, [bold type]but something, indeed, takes place...[roman type][line break]";
@@ -103,13 +100,8 @@ Lair Of The Lupines Main Hub	"Lair Of The Lupines Main Hub"
 
 Lair Of The Lupines Main Hub is a room.
 Lair Of The Lupines Main Hub is west of Rocky Dark Path.
-Description of Lair Of The Lupines Main Hub is "[Lair Of The Lupines Main Hub Desc]".
-
-to say Lair Of The Lupines Main Hub Desc:
-	say "     You are standing in the main hub of the werewolf brutes['] lair, which connects to every area of interest within the entire den. The place is not as unwelcoming as the rest, with some furniture around that somewhat compensates the desolate and rocky look of the room, like couches and a central small table. It would be better, however, if they were in good conditions, as most of the seats are torn and shredded. There is only one large couch in decent conditions, located further ahead between the entrances to the other sections, and that one is claimed by the alpha, so it is kept vacant. You could head further [bold type]below[roman type], through some nearby stairs leading down, to arrive at the pit, [bold type]West[roman type] towards the feast room, [bold type]North[roman type] to the common room (besides this one) and [bold type]East[roman type] to leave this place through the rocky dark path.";
-
-instead of smelling Lair Of The Lupines Main Hub:
-	say "     You get a more distinct scent of masculine wolves, as they inhabit this place.";
+Description of Lair Of The Lupines Main Hub is "     You are standing in the main hub of the werewolf brutes['] lair, which connects to every area of interest within the entire den. The place is not as unwelcoming as the rest, with some furniture around that somewhat compensates the desolate and rocky look of the room, like couches and a central small table. It would be better, however, if they were in good conditions, as most of the seats are torn and shredded. There is only one large couch in decent conditions, located further ahead between the entrances to the other sections, and that one is claimed by the alpha, so it is kept vacant. You could head further [bold type]below[roman type], through some nearby stairs leading down, to arrive at the pit, [bold type]West[roman type] towards the feast room, [bold type]North[roman type] to the common room (besides this one) and [bold type]East[roman type] to leave this place through the rocky dark path.[line break]".
+Scent of Lair Of The Lupines Main Hub is "     You get a more distinct scent of masculine wolves, as they inhabit this place.".
 
 [---]
 
@@ -120,22 +112,20 @@ Lair Of The Lupines Pit	"Lair Of The Lupines Pit"
 Lair Of The Lupines Pit is a room.
 Lair Of The Lupines Pit is below Lair Of The Lupines Main Hub. [Also South from Lair Of The Lupines Bar, but is only later connected]
 Description of Lair Of The Lupines Pit is "[Lair Of The Lupines Pit Desc]".
+Scent of Lair Of The Lupines Pit is "     The musk from the werewolves is much stronger here, and the smell of sex is more than enough to give you a tingle on the groin.".
 
 to say Lair Of The Lupines Pit Desc:
 	say "     This particular area is located right underneath the main hub, and is a place where all the werewolf brutes get together to spar and have sex with each other and passersby they happen to claim for themselves. Most of the noise, grunts and moans come from here, due to that. Shaped like a circle, it contains a pit in the middle, like some sort of arena. In its center, you see a grid that leads to a kind of oubliette, down [bold type]below[roman type], and every else is just plain dirt on top of, you would presume, an otherwise irregular rocky floor. The rest of the decoration is very simple, as well, with only the occasional torch hanging on the wall, but they do have some larger ones on each corner of the pit to illuminate what is happening in the middle, which is where all the action takes place. If you tire of this place, you could always just go [bold type]up[roman type] towards the Main Hub.";
 	if Resolution of Discover The Werewolves Den > 0:
 		say "     You also notice that the pit connects directly to the bar, if you walk [bold type]North[roman type] from here.";
 
-instead of smelling Lair Of The Lupines Pit:
-	say "     The musk from the werewolves is much stronger here, and the smell of sex is more than enough to give you a tingle on the groin.";
-
-instead of going down from Lair Of The Lupines Main Hub while (Resolution of Discover The Werewolves Den is 1 and Player is not naked):
+instead of going down from Lair Of The Lupines Main Hub while Resolution of Discover The Werewolves Den is 1 and Player is not naked:
 	say "     Before you decide to move anywhere deeper inside the Lair, Jett stops you with an imposing step. 'Nu-huh. Remember the rules? You gotta be naked. If you're shy, you can have a loincloth and that's it. And no funny stuff, or you know what happens.' He seems pretty serious about this rule, so you should [bold type]strip down all your gear[roman type] if you intend on continuing.";
 
-instead of going west from Lair Of The Lupines Main Hub while (Resolution of Discover The Werewolves Den is 1 and Player is not naked):
+instead of going west from Lair Of The Lupines Main Hub while Resolution of Discover The Werewolves Den is 1 and Player is not naked:
 	say "     Before you decide to move anywhere deeper inside the Lair, Jett stops you with an imposing step. 'You need to be clothed to grab something to eat? Don't think so around here. Get rid of those, I want nothing with pockets near the kitchen.' He seems pretty serious about this rule, so you should [bold type]strip down all your gear[roman type] if you intend on continuing.";
 
-instead of going north from Lair Of The Lupines Main Hub while (Resolution of Discover The Werewolves Den is 1 and Player is not naked):
+instead of going north from Lair Of The Lupines Main Hub while Resolution of Discover The Werewolves Den is 1 and Player is not naked:
 	say "     Before you decide to move anywhere deeper inside the Lair, Jett stops you with an imposing step. 'Smuggling any substances inside those pockets of yours? My boys don't need any of that shit. If you're not, whatever, just strip naked because I'm sure you know the rules by now.' He seems pretty serious about this rule, so you should [bold type]strip down all your gear[roman type] if you intend on continuing.";
 
 [---]
@@ -147,39 +137,38 @@ Lair Of The Lupines Oubliette	"Lair Of The Lupines Oubliette"
 Lair Of The Lupines Oubliette is a room.
 Lair Of The Lupines Oubliette is below Lair Of The Lupines Pit.
 Description of Lair Of The Lupines Oubliette is "[Lair Of The Lupines Oubliette Desc]".
+Scent of Lair Of The Lupines Oubliette is "     It strongly smells like sex fluids and werewolf musk, to an almost unbearable level. The air is damp and it weighs on your head.".
 
 to say Lair Of The Lupines Oubliette Desc:
 	say "     You are now in the werewolves['] slave storage, as they call it, which is a sort of oubliette located below the pit where they fight and fuck most of the time. Whoever they throw in here, however, does not seem to care about their fate, and is more than glad to be part of their harem. They are kept isolated from the rest of the world and brought up only for the werewolves['] personal pleasure. It is not too deep, however, and it would be quite possible for a regular person to escape through the opening [bold type]above[roman type], by removing the grid covering it. You also see some other unknown and random creatures, naked and curled in their corners, with what seems to be like cum oozing from their orifices. They do not seem in the mood to chat, and others are simply sleeping, so you pay no mind to them.";
 	if Resolution of Discover The Werewolves Den is 0:
 		say "     [bold type]Perhaps you should escape, lest you want to become a slave to the brutes.[roman type][line break]";
 
-instead of smelling Lair Of The Lupines Oubliette:
-	say "     It strongly smells like sex fluids and werewolf musk, to an almost unbearable level. The air is damp and it weighs on your head.";
-
 instead of going up from Lair Of The Lupines Oubliette:
-	let bonus be (( dexterity of player minus 10 ) divided by 2);
+	let bonus be ( dexterity of player minus 10 ) divided by 2;
 	let diceroll be a random number from 1 to 20;
-	say "You roll 1d20([diceroll])+[bonus] = [special-style-1][diceroll + bonus][roman type] vs [special-style-2]13[roman type] (Dexterity Check):[line break]";
+	say "You roll 1d20([diceroll])[if bonus >= 0]+[end if][bonus] = [special-style-1][diceroll + bonus][roman type] vs [special-style-2]13[roman type] (Dexterity Check):[line break]";
 	if diceroll + bonus >= 13:
 		say "     As the trapdoor is not too far above you and is always unlocked, you manage to jump and hold yourself onto one of it metallic bars and swing it open with the momentum of your body and a few well-placed pushes. It takes you a few attempts, but you eventually manage to crawl out of it, abandoning the dungeon-like room.";
 		move player to Lair Of The Lupines Pit;
 	else:
 		say "     You try to jump and hold yourself onto one the trapdoor's metallic bars, and while you succeed at some times, you fail to create the right momentum to swing it open and allow yourself to crawl away. Perhaps because you are too tired, and eventually, the ordeal exhausts you. There is no other choice but to wait it out until you can try again.";
-		WaitLineBreak;
 		follow the turnpass rule;
+		AttemptToWait;
 
 instead of going down from Lair Of The Lupines Pit:
 	if Resolution of Discover The Werewolves Den is 0:
 		say "     Now, why would you go back there? You should be worried in finding a way out of here!";
 	else:
 		say "     You approach the metal bar trapdoor with the intent of going down onto the oubliette below the pit. Are you certain you wish to proceed with this move? While in there, you will be treated as a slave to the werewolves like all the others resting below. Though, it should not be too hard to climb back out.";
-		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Go down.";
 		say "     ([link]N[as]n[end link]) - Stay up.";
 		if Player consents:
+			LineBreak;
 			say "     Aware of what it means to be down in the oubliette, you pull the trapdoor open and carefully slide over the edge to land below in the dark, letting it close above you.";
 			move Player to Lair Of The Lupines Oubliette;
 		else:
+			LineBreak;
 			say "     Perhaps you will stay where you are, after all.";
 
 [---]
@@ -190,13 +179,8 @@ Lair Of The Lupines Feast Room	"Lair Of The Lupines Feast Room"
 
 Lair Of The Lupines Feast Room is a room.
 Lair Of The Lupines Feast Room is west of Lair Of The Lupines Main Hub.
-Description of Lair Of The Lupines Feast Room is "[Lair Of The Lupines Feast Room Desc]".
-
-to say Lair Of The Lupines Feast Room Desc:
-	say "     This is probably the best decorated room in the entire lair, a feast room for all the werewolves to gather and, indeed, feast on whatever food is prepared in the kitchen, located [bold type]North[roman type]from here. They placed a massive table with benches surrounding it in the center, a whole chandelier of torches above it, and there are even pictures hanging on the walls next to some other torches to keep every corner of the room lit. Said pictures are, actually, quite normal-looking ones, of landscapes and historical figures, and there is even a portrait of their Alpha drawn in acrylic, a quite impressive display of skill. If you have nothing to do here, you could always just return to the Main Hub by heading [bold type]East[roman type] from here.";
-
-instead of smelling Lair Of The Lupines Feast Room:
-	say "     Sometimes, you can smell food being cooked from here, though in most cases it is just the werewolves['] natural scent.";
+Description of Lair Of The Lupines Feast Room is "     This is probably the best decorated room in the entire lair, a feast room for all the werewolves to gather and, indeed, feast on whatever food is prepared in the kitchen, located [bold type]North[roman type]from here. They placed a massive table with benches surrounding it in the center, a whole chandelier of torches above it, and there are even pictures hanging on the walls next to some other torches to keep every corner of the room lit. Said pictures are, actually, quite normal-looking ones, of landscapes and historical figures, and there is even a portrait of their Alpha drawn in acrylic, a quite impressive display of skill. If you have nothing to do here, you could always just return to the Main Hub by heading [bold type]East[roman type] from here.[line break]".
+Scent of Lair Of The Lupines Feast Room is "     Sometimes, you can smell food being cooked from here, though in most cases it is just the werewolves['] natural scent.".
 
 [---]
 
@@ -206,13 +190,8 @@ Lair Of The Lupines Kitchen	"Lair Of The Lupines Kitchen"
 
 Lair Of The Lupines Kitchen is a room.
 Lair Of The Lupines Kitchen is north of Lair Of The Lupines Feast Room.
-Description of Lair Of The Lupines Kitchen is "[Lair Of The Lupines Kitchen Desc]".
-
-to say Lair Of The Lupines Kitchen Desc:
-	say "     A quite cozy corner of the lair reserved for preparing food for the pack. There are plenty of cooking utensils, a stove, an oven, cabinets and armoires probably filled with food supplies and other relevant objects and supplements. It seems the werewolves are not as savage as they look, if they actually prepare their meals and have a designated cook to do so. Nothing else seems of relevance here, it is just a normal kitchen in an underground settlement. You can simply walk [bold type]South[roman type] to return to the feast room, a large entrance to give space to whoever comes from here carrying large plates of food. It is quite likely that these werewolves eat a lot.";
-
-instead of smelling Lair Of The Lupines Kitchen:
-	say "     It smells deliciously in here, most of the times, like good food being cooked by a skillful chef, whenever he is around.";
+Description of Lair Of The Lupines Kitchen is "     A quite cozy corner of the lair reserved for preparing food for the pack. There are plenty of cooking utensils, a stove, an oven, cabinets and armoires probably filled with food supplies and other relevant objects and supplements. It seems the werewolves are not as savage as they look, if they actually prepare their meals and have a designated cook to do so. Nothing else seems of relevance here, it is just a normal kitchen in an underground settlement. You can simply walk [bold type]South[roman type] to return to the feast room, a large entrance to give space to whoever comes from here carrying large plates of food. It is quite likely that these werewolves eat a lot.[line break]".
+Scent of Lair Of The Lupines Kitchen is "     It smells deliciously in here, most of the times, like good food being cooked by a skillful chef, whenever he is around.".
 
 [---]
 
@@ -222,13 +201,8 @@ Lair Of The Lupines Common Room	"Lair Of The Lupines Common Room"
 
 Lair Of The Lupines Common Room is a room.
 Lair Of The Lupines Common Room is north of Lair Of The Lupines Main Hub.
-Description of Lair Of The Lupines Common Room is "[Lair Of The Lupines Common Room Desc]".
-
-to say Lair Of The Lupines Common Room Desc:
-	say "     This room serves as a common space, some kind of extension to the Main Hub, but a little more personal and quiet, as it is not directly above the pit. There are bookshelves placed next to the walls and seats in here, around a small table, for whoever wants to sit and read a book, something you do not imagine a werewolf brute doing often. You see that this particular area connects to several bedrooms and has a passageway towards the bar, going [bold type]down[roman type], as stairs on one of the sides of the room. You may also walk [bold type]South[roman type] to return to the Main Hub.";
-
-instead of smelling Lair Of The Lupines Common Room:
-	say "     You get a more distinct scent of masculine wolves, as they inhabit this place.";
+Description of Lair Of The Lupines Common Room is "     This room serves as a common space, some kind of extension to the Main Hub, but a little more personal and quiet, as it is not directly above the pit. There are bookshelves placed next to the walls and seats in here, around a small table, for whoever wants to sit and read a book, something you do not imagine a werewolf brute doing often. You see that this particular area connects to several bedrooms and has a passageway towards the bar, going [bold type]down[roman type], as stairs on one of the sides of the room. You may also walk [bold type]South[roman type] to return to the Main Hub.[line break]".
+Scent of Lair Of The Lupines Common Room is "     You get a more distinct scent of masculine wolves, as they inhabit this place.".
 
 [---]
 
@@ -245,8 +219,7 @@ to say Lair Of The Lupines Bar Desc:
 	if Resolution of Discover The Werewolves Den > 0:
 		say "     You also notice that the bar connects directly to the pit, if you walk [bold type]South[roman type] from here.";
 
-instead of smelling Lair Of The Lupines Bar:
-	say "     You get a more distinct scent of masculine wolves, as they inhabit this place.";
+Scent of Lair Of The Lupines Bar is "     You get a more distinct scent of masculine wolves, as they inhabit this place.".
 
 Section 2 - The NPCs
 
@@ -296,12 +269,8 @@ SexuallyExperienced of Rodion is false.
 TwistedCapacity of Rodion is false. [Twisted Characters can take any penetration, no matter the size]
 Sterile of Rodion is true. [steriles can't knock people up]
 MainInfection of Rodion is "Werewolf Brute".
-Description of Rodion is "[Rodiondesc]".
-Conversation of Rodion is { "<This is nothing but a placeholder!>" }.
+Description of Rodion is "     This burly werewolf brute is a timber-colored and fuzzy one with quite a belly, but still has a sturdy and beefy physique that surely shows a lot of strength. He is often wandering around the kitchen preparing meals for the others, with a radiant smile on his face most of the time. Currently, he is only wearing an apron, which already seems a few numbers below what he should be wearing, and with nothing else underneath. It barely manages to cover this quite prominent bulge between his legs, the cloth ending right at the bottom of his generous furred ballsack, leaving little to the imagination. Fortunately, you can tell he does not mind your presence. In fact, the lair's cook happily nods every time you walk inside the kitchen and welcomes you, making him seem quite friendly.[line break]".
 The scent of Rodion is "     Rodion smells really sweet, like cake. This sort of confuses you, but it is quite pleasant.".
-
-to say RodionDesc:
-	say "     This burly werewolf brute is a timber-colored and fuzzy one with quite a belly, but still has a sturdy and beefy physique that surely shows a lot of strength. He is often wandering around the kitchen preparing meals for the others, with a radiant smile on his face most of the time. Currently, he is only wearing an apron, which already seems a few numbers below what he should be wearing, and with nothing else underneath. It barely manages to cover this quite prominent bulge between his legs, the cloth ending right at the bottom of his generous furred ballsack, leaving little to the imagination. Fortunately, you can tell he does not mind your presence. In fact, the lair's cook happily nods every time you walk inside the kitchen and welcomes you, making him seem quite friendly.";
 
 RodionDoneTalking is a truth state that varies.[@Tag:NotSaved]
 
@@ -315,7 +284,6 @@ instead of conversing Rodion:
 to say RodionTalkMenu:
 	now RodionDoneTalking is false;
 	say "     [bold type]What would you like to talk about with Rodion?[roman type][line break]";
-	LineBreak;
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]
@@ -354,16 +322,16 @@ to say RodionTalkMenu:
 			choose row calcnumber in table of fucking options;
 			say "[title entry]: [description entry]?";
 			if Player consents:
-				let nam be title entry;
 				now sextablerun is 1;
-				if (nam is "Himself"):
-					say "[RodionTalkHimself]";
-				else if (nam is "The pack"):
-					say "[RodionTalkPack]";
-				else if (nam is "His sexual preferences"):
-					say "[RodionTalkSex]";
-				else if (nam is "A gift for Jett"):
-					say "[RodionTalkJettGift]";
+				if title entry is:
+					-- "Himself":
+						say "[RodionTalkHimself]";
+					-- "The pack":
+						say "[RodionTalkPack]";
+					-- "His sexual preferences":
+						say "[RodionTalkSex]";
+					-- "A gift for Jett":
+						say "[RodionTalkJettGift]";
 				wait for any key;
 				if RodionDoneTalking is false:
 					say "[RodionTalkMenu]"; [looping back to keep talking with him]
@@ -372,7 +340,7 @@ to say RodionTalkMenu:
 			say "     You excuse yourself as Rodion gives you an understanding nod.";
 			wait for any key;
 		else:
-			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options], or 0 to exit.";
 	clear the screen and hyperlink list;
 
 to say RodionTalkHimself:
@@ -402,8 +370,8 @@ to say RodionTalkSex:
 
 Section 2-2-2 - Rodion Sex
 
-instead of fucking Rodion:
-	say "     << Author's note: This is not possible, yet. Will be added in a future update. >>";
+[instead of fucking Rodion:
+	say "     << Author's note: This is not possible, yet. Will be added in a future update. >>";]
 
 Section 2-3 - Elstan
 
@@ -451,12 +419,8 @@ SexuallyExperienced of Kirnon is false.
 TwistedCapacity of Kirnon is false. [Twisted Characters can take any penetration, no matter the size]
 Sterile of Kirnon is true. [steriles can't knock people up]
 MainInfection of Kirnon is "Werewolf Brute".
-Description of Kirnon is "[Kirnondesc]".
-Conversation of Kirnon is { "<This is nothing but a placeholder!>" }.
+Description of Kirnon is "     This light-colored werewolf has a clear silver fur covering his muscular physique, and he does seem to be another bodybuilder, much like [if PlayerMet of Elstan is true]Elstan[else]the other brute[end if] who he is almost always with, albeit overall smaller. He is also of average height, but his body looks especially fit from his waist down, namely his glutes and thighs, giving him a slightly different figure than most werewolves you can encounter in here. He also wears a loincloth, the standard underwear these werewolves wear, if any at all, and bulging somewhat less than the others. Attitude-wise, he often is focused on his own doings or thoughts and avoids eye contact with everyone.[line break]".
 The scent of Kirnon is "     Kirnon smells masculine and beastlike, like a typical werewolf brute, except it is not a too strong of a scent. You do not feel particularly bothered by it and is, in fact, quite bearable.".
-
-to say KirnonDesc:
-	say "     This light-colored werewolf has a clear silver fur covering his muscular physique, and he does seem to be another bodybuilder, much like [if PlayerMet of Elstan is true]Elstan[else]the other brute[end if] who he is almost always with, albeit overall smaller. He is also of average height, but his body looks especially fit from his waist down, namely his glutes and thighs, giving him a slightly different figure than most werewolves you can encounter in here. He also wears a loincloth, the standard underwear these werewolves wear, if any at all, and bulging somewhat less than the others. Attitude-wise, he often is focused on his own doings or thoughts and avoids eye contact with everyone.";
 
 KirnonDoneTalking is a truth state that varies.[@Tag:NotSaved]
 
@@ -470,7 +434,6 @@ instead of conversing Kirnon:
 to say KirnonTalkMenu:
 	now KirnonDoneTalking is false;
 	say "     [bold type]What would you like to talk about with Kirnon?[roman type][line break]";
-	LineBreak;
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]
@@ -510,16 +473,16 @@ to say KirnonTalkMenu:
 			choose row calcnumber in table of fucking options;
 			say "[title entry]: [description entry]?";
 			if Player consents:
-				let nam be title entry;
 				now sextablerun is 1;
-				if (nam is "Himself"):
-					say "[KirnonTalkHimself]";
-				else if (nam is "The pack"):
-					say "[KirnonTalkPack]";
-				else if (nam is "Elstan"):
-					say "[KirnonTalkElstan]";
-				else if (nam is "His sexual preferences"):
-					say "[KirnonTalkSex]";
+				if title entry is:
+					-- "Himself":
+						say "[KirnonTalkHimself]";
+					-- "The pack":
+						say "[KirnonTalkPack]";
+					-- "Elstan":
+						say "[KirnonTalkElstan]";
+					-- "His sexual preferences":
+						say "[KirnonTalkSex]";
 				wait for any key;
 				if KirnonDoneTalking is false:
 					say "[KirnonTalkMenu]"; [looping back to keep talking with him]
@@ -528,7 +491,7 @@ to say KirnonTalkMenu:
 			say "     You excuse yourself as Elstan immediately starts to mind something else.";
 			wait for any key;
 		else:
-			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options], or 0 to exit.";
 	clear the screen and hyperlink list;
 
 to say KirnonTalkHimself:
@@ -579,27 +542,14 @@ An everyturn rule:
 		WerewolfBruteLairOublietteRoll;
 
 to WerewolfBruteLairOublietteRoll:
-	let randomnumber be a random number from 1 to 2;
-	if randomnumber is:
-		-- 1:
-			say "[WerewolfBruteLairNPCSpecialScenes]";
-		-- 2:
-			say "[WerewolfBruteLairCaptor]";
+	say "[one of][WerewolfBruteLairNPCSpecialScenes][or][WerewolfBruteLairCaptor][purely at random]";
 
 to say WerewolfBruteLairNPCSpecialScenes:
 	if Libido of Elstan > 0 or Libido of Kirnon > 0:
-		let randomnumber be a random number from 1 to 2;
-		if randomnumber is:
-			-- 1:
-				if Libido of Elstan > 0:
-					say "[WerewolfBruteLairElstanWorship]"; [On Elstan's file]
-				else:
-					say "[WerewolfBruteLairNPCSpecialScenes]";
-			-- 2:
-				if Libido of Kirnon > 0:
-					say "[WerewolfBruteLairKirnonAssWorship]";
-				else:
-					say "[WerewolfBruteLairNPCSpecialScenes]";
+		if a random chance of 1 in 2 succeeds:
+			say "[if Libido of Elstan > 0][WerewolfBruteLairElstanWorship][else][WerewolfBruteLairNPCSpecialScenes][end if]";
+		else:
+			say "[if Libido of Kirnon > 0][WerewolfBruteLairKirnonAssWorship][else][WerewolfBruteLairNPCSpecialScenes][end if]";
 	else:
 		WerewolfBruteLairOublietteRoll;
 
@@ -608,11 +558,10 @@ to say WerewolfBruteLairCaptor:
 	say "     'Hrng... I've popped a boner just thinking about what we're gonna do to you...' he comments, as indeed, his red rod has left the fur sheath. 'Hope you can swim, lil['] pup. You've seen how much one of us can cum... heh-heh...' The werewolf ends with a slow smirking chuckle before he throws you over his shoulder, keeping you there as he grabs your butt... To hold you there, of course. And to feel it up, too, as he nonchalantly walks away. Those strong paws of his do actually feel pretty nice against your buttocks as he squeezes them[if Player is not naked] under your clothes[end if], even occasionally sliding a finger in between to rub at [if Player is female]your sex, further ahead[else]your hole[end if]. It looks like he wants you ready for what you are about to experience. It all seems oddly familiar, as well... You begin to realize this might actually be that one werewolf who snatched you the first time. If that is true, then you know exactly what will happen next...";
 	WaitLineBreak;
 	say "     'Hey boys! Fun time, here! Brought a cute one to enjoy myself with, but... the more the merrier, right? Let's fill [ObjectPro] up!' The werewolf then taps your ass as he brings you to the ground[if Player is not naked], hastily removing your clothes and tossing them to the side[end if]. Now, you are lying down on the dirty floor with your body completely exposed to the group of hulking werewolves who eagerly come to your position, soon circling you, all male with the fullest balls and hardest red cocks, eager to get started. They seem to be so excited that you can see them already stroking themselves, tongues out and panting at the idea of ravaging you together. 'I wanna have [PosAdj] mouth!' one exclaims, 'I want [if Player is female][PosAdj] pussy[else][PosAdj] ass[end if]!' another says, 'I'm sure we could make [ObjectPro] take two of us [if Player is female]in both [PosAdj] holes[else]in the same hole[end if]!'";
-	say "     The werewolf who picked you, however, steps up and stops them from going all wild on you. 'Hey, piss off! I'm the one who picked [ObjectPro], so that means I get to call the shots! I'm merely sharing, because I could keep this slave to myself if I wanted to.' The others groan  at this brute's claim over you, but they eventually accept, probably because they are so horny they cannot be bothered to fight over these terms. 'Well, fuck! I just wanna get started! How do you feel about this?' The werewolf asks you as he places his throbbing cock in front of your face, looking down at you with a grin. He is not forcing you to do anything, but the beastly scent, his confident pose and the entire sight just compels you to give it a kiss. Then, a lick. Eventually, you are simply sucking on it, wrapping your lips around the girthy meat and sliding it deeper into your mouth. 'That's it, pup... Teach the boys how it's done. Make them jealous, too...' He ends that last sentence with a slow and mocking chuckle as he turns to the rest of the group from the corner of his eye.";
+	say "     The werewolf who picked you, however, steps up and stops them from going all wild on you. 'Hey, piss off! I'm the one who picked [ObjectPro], so that means I get to call the shots! I'm merely sharing, because I could keep this slave to myself if I wanted to.' The others groan at this brute's claim over you, but they eventually accept, probably because they are so horny they cannot be bothered to fight over these terms. 'Well, fuck! I just wanna get started! How do you feel about this?' The werewolf asks you as he places his throbbing cock in front of your face, looking down at you with a grin. He is not forcing you to do anything, but the beastly scent, his confident pose and the entire sight just compels you to give it a kiss. Then, a lick. Eventually, you are simply sucking on it, wrapping your lips around the girthy meat and sliding it deeper into your mouth. 'That's it, pup... Teach the boys how it's done. Make them jealous, too...' He ends that last sentence with a slow and mocking chuckle as he turns to the rest of the group from the corner of his eye.";
 	WaitLineBreak;
 	say "     As he pumps his rod down your throat, the remaining werewolves stroke their meats while they watch you give your captor a really good sucking, putting on an effort at pleasing the smiling beast. You think he might be getting off more from the fact he is being watched by his mates, receiving a blowjob from the prey he has captured, than from that by itself. 'You're a pretty eager one to please, aren't you, pup?' He pets you like one, caressing your ears as he leans down to look closer at you. 'Wanna share the love with my brothers? Or would you rather keep sucking this cock as they watch? Since you're loving it so much...' He directs you this question and leaves the decision in your hands.";
-	LineBreak;
-	say "     [bold type]Do you wish to continue sucking your captor's cock? Or would you rather have the others join in?[roman type][line break]";
+	say "[line break]     [bold type]Do you wish to continue sucking your captor's cock? Or would you rather have the others join in?[roman type][line break]";
 	say "     ([link]Y[as]y[end link]) - Keep sucking this cock.";
 	say "     ([link]N[as]n[end link]) - Blow the others, as well.";
 	if Player consents:
@@ -683,23 +632,22 @@ to say RodionTalkJettGift:
 		now RodionDoneTalking is true;
 		say "     As you remember one of your conversations with Rodion about Jett, the alpha werewolf, regarding a gift he would like, you decide to ask him more about that. The burly werewolf chuckles and smiles at your question, enthusiasm visible in his eyes. 'Oh, so you do want to make Jett like you, is that right? Hah, well! It is true, I can help you.' He then stops what he is doing and leads you over to a counter in the deepest corner of the kitchen, and you get the feeling you are about to prepare some food with him. However, he only turns to you and begins to talk. 'There is one type of cake that Jett never refuses when presented. I must dare say, it is the only one he cannot resist. Would you please close the door as I make preparations?'";
 		say "     Surely, a cake would require some ingredients to be placed on the counter for use. Though, you are wondering why he did not close the door before moving all the way to this side of the kitchen. Perhaps you should just [bold type]go close the door[roman type]? Or did [bold type]you want to take care of something else[roman type] before committing to this?";
-		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Go close the door.";
 		say "     ([link]N[as]n[end link]) - Excuse yourself and leave.";
 		if Player consents:
 			LineBreak;
-			say "     By his request, you nod to him and let him know that you shall, indeed, be closing the door for him. 'Thank you! This shouldn't take long to set up,' he says, smiling and nodding, as you turn your back and, with several steps, arrive at the door to close it. You do so discretely, as to not alert anyone else outside, just in case. The door is a bit heavy, though, so it takes you a while until you manage to fully close it. It now feels a bit stuck, but you should be able to open it back if you were not trying to be so careful, or just ask Rodion. He is a strong and burly guy, surely a heavy door would be no match for him. Speaking of him, he does not seem to be making a sound. You hear no cabinets nor any movement for a while, but anyway, you are done closing it, now it is time to turn back and...'";
+			say "     By his request, you nod to him and let him know that you shall, indeed, be closing the door for him. 'Thank you! This shouldn't take long to set up,' he says, smiling and nodding, as you turn your back and, with several steps, arrive at the door to close it. You do so discreetly, as to not alert anyone else outside, just in case. The door is a bit heavy, though, so it takes you a while until you manage to fully close it. It now feels a bit stuck, but you should be able to open it back if you were not trying to be so careful, or just ask Rodion. He is a strong and burly guy, surely a heavy door would be no match for him. Speaking of him, he does not seem to be making a sound. You hear no cabinets nor any movement for a while, but anyway, you are done closing it, now it is time to turn back and...'";
 			say "     'Gotta get that door fixed sometime. Sorry about that!' says Rodion as your eyes finally land on him in such an unexpected sight. The burly werewolf brute has one of his legs on top of the counter with his bare and massive furry ass pointed towards you, all spread out and exposing his soft butthole. His fuzzy tail wags happily as he looks at you, holding his head with one hand on the counter as he beckons you to come. 'Thought I'd give you a personal demonstration. Don't be shy! It's alright to come closer...' You are not so sure this is the type of [']cake['] you were expecting, but since the opportunity presents itself... Do you [bold type]wish to go along with this[roman type] or should you just [bold type]tell him you have to be elsewhere?[roman type][line break]";
-			LineBreak;
 			say "     ([link]Y[as]y[end link]) - Go along and approach Rodion's ass.";
 			say "     ([link]N[as]n[end link]) - Maybe you should just leave.";
 			if Player consents:
+				LineBreak;
 				say "     Not minding where this is going, you walk towards Rodion as he answers with another big smile. You can only notice how huge his ass is when you finally get closer, so plump and massive, with each buttcheek popping out like fat bubbles. It is so round and soft, with the consistency of a powerful sizable ass and a perfect blend of muscle and fat. 'This is his favorite. Oh, and don't mind the size of mine, he doesn't discriminate. What counts is the intention, your willingness to provide him with something personal, putting yourself vulnerable for him... And giving him a tasty snack in the process.' You remain there, observing Rodion attentively as he speaks, your eyes following his buttcheeks bouncing up and down as he moves his ass teasingly.";
 				say "     With one hand, he grabs one of his asscheeks and spreads it further to the side, giving you an even clearer view of his hole. It looks very soft and receptive, and it even winks at you. 'He likes a good show too, so make sure you put on a really nice one. For the ladies, or if you just happen to have a pussy on you, just let him see how moist and juicy it is, as he will prefer to go for it. But for those without one, just show him he can own your ass and eat it for as long as he pleases. He has got such a long and nice tongue too, great reach... I got so excited I couldn't stop grinding my butt on his muzzle, wanting more of that skillful tongue in me...' As he continues speaking, his hole begins to throb in need...";
-				LineBreak;
 				say "     ([link]Y[as]y[end link]) - Give him a lick, then [']devour his cake['].";
 				say "     ([link]N[as]n[end link]) - Just thank him for the demonstration.";
 				if Player consents:
+					LineBreak;
 					say "     You respectfully step closer to that marvelous ass, placing one hand atop one of his bubbly buttcheeks to give it a slow and steady rub. This, as a sign that you intend to approach him, makes the werewolf moan softly, and he makes no move to stop you either. Following your initial intention, you lean over your head between his buns, right on that warm area, putting your tongue out to press against his winking hole. Its softness shows how receptive his ass is, and he seems to have great control over it, enough to relax his anal muscles and allow your tongue to dig deeper inside. As you wiggle it, Rodion only moans in pleasure, mindlessly pressing his ass back against your face, as if beckoning you to continue.";
 					say "     Having received such a positive feedback, you carry on eating the burly wolfman's ass out, now fully committed to accept his offering, and place both hands on his buttcheeks. With your head properly tucked in between them, you provide Rodion a full experience of ass worship and rimming that just sets his cravings skyrocketing. His breathing gets immediately more intense as pleasure begins to overtake him, that sensitive pucker of his yearning more and more for your attention, and you do not let him down. By digging your tongue so deep inside him, licking at the inner walls of his butthole and pushing even further ahead, you manage to drive the cook insane with lust. He cannot help but jerk himself off, causing his hole to throb around your tongue as his prostate pulsates.";
 					WaitLineBreak;
@@ -715,11 +663,13 @@ to say RodionTalkJettGift:
 					say "     With the awkwardness out of the way, Rodion returns to his cheerful self. 'Alright, so... I guess you get the idea of what Jett likes the most, yeah? If you do this, then let me know how it goes! I'm sure he'll like it a lot!' Now that the quite hands-on demonstration of what to offer Jett is done, you have absolute certainty of what kind of [']cake['] Rodion meant. Perhaps [bold type]you could try this plan with the alpha werewolf to make him like you more[roman type], but you feel like [bold type]you have actually bonded with the burly werewolf cook[roman type] a little as well[roman type]. Only time will tell how this will develop.";
 					now Resolution of RodionEvents is 1; [Begins Rodion's Events]
 				else:
+					LineBreak;
 					say "     The idea is clear and you get it, so you proceed to politely thank him. Rodion takes a moment to come back to himself as he hears you speak. 'Oh, right! Yeah, that's pretty much it!' he says, getting out of the counter and recomposing himself. 'Uhm... I got a little carried away there, I'll admit! But indeed, it should be everything you need to impress Jett, if you so wish. He loves eating a nice and big cake, yeah!' It seems that, translating what he just said, Jett appreciates a good amount of supple ass. In all honesty, it does not surprise you.";
 					say "     'Well, you seem like you have seen a lot of stuff out there, maybe you'll be successful once you wish to present him a gift like this. That is, if that's your intention, of course.' Perhaps [bold type]you now know how to try to make Jett like you more[roman type]. Rodion seems happy to have helped you in some way, even though his methods were a little excessively visual.";
 					now Resolution of RodionEvents is 99; [Terminates Rodion's Events]
 				now Resolution of JettDominance is 1; [Advances Jett's dominant path]
 			else:
+				LineBreak;
 				say "     You tell him, without the intention to sound rude, that this is not exactly what you had in mind when he spoke of a cake and a gift. 'Oh! I... apologize!' he says, immediately recomposing himself, getting out of the counter and putting his apron back. 'I'm so sorry! I... It seems I've got the wrong message! Well, uh... This is sort of embarrassing, really! I thought you'd like a personal demonstration on how to give Jett what he really likes, but... I, well, t-this is pretty much it, really. He loves eating a nice cake, yeah!' You cannot help but think that Rodion really seems embarrassed that you refused his generous approach, but it seems that, translating what he just said, Jett appreciates a good amount of supple ass. In all honesty, it does not surprise you.";
 				say "     'Well, you seem like you have seen a lot of stuff out there, maybe you'll be successful once you wish to present him a gift like this. That is, if that's your intention, of course.' Perhaps [bold type]you now know how to try to make Jett like you more[roman type], but this whole situation was a little odd. You take note of what you learned and excuse yourself, thanking Rodion in the process... As awkward as it may have been.";
 				now Resolution of RodionEvents is 99; [Terminates Rodion's Events]

@@ -46,19 +46,13 @@ to say losetoMonkeyKing:
 					CreatureSexAftermath "Player" receives "AssFuck" from "Monkey";
 				else:
 					say "     You try to crawl away from him but the smirking monkey jumps on your back. You feel his cock brushing against your thighs and lining with your vagina. 'Relax yourself and bask in pleasure,' the Monkey King whispers in your ear, before forcing himself inside of you. You moan as he fucks you at a quick, steady pace.";
-					if Player is male:
-						say "     Suddenly, the agile primate's feet leave the ground and grab your cock. Having to suddenly support the entire weight of the simian fighter, you fall forward, your shoulders and your head pinned on the ground. The Monkey King hugs your chest tight as he fucks you while his prehensile paws stroke your [cock size desc of Player] penis. The pleasure is really indescribable and you orgasm in a few minutes, your cock spurting its load on the primate's paws. The arrogant monkey on your back lasts a little longer before his body tenses and a warm sensation in your innards signals that he came as well. Satiated, he dismounts you and apply his paws on your face, having you lick them clean, before he takes his leave in a short, taunting victory dance.";
-					else:
-						say "     Suddenly, the agile primate's feet leave the ground and grab on your legs while his arms hug your upper body tight. Riding you like a jockey rides a horse, you stumble forward as the speed and the intensity of his fucking doubles. The deserted halls resonate with your moans and the monkey's grunts. The pleasure is really indescribable and you orgasm in a few minutes, your cunt spasming around the primate's paws. The arrogant monkey on your back lasts a little longer before his body tenses and a warm sensation in your vagina signals that he came as well. Satiated, he dismounts you and takes his leave in a short, taunting victory dance.";
+					say "     Suddenly, the agile primate's feet leave the ground and grab [if Player is male]your cock. Having to suddenly support the entire weight of the simian fighter, you fall forward, your shoulders and your head pinned on the ground. The Monkey King hugs your chest tight as he fucks you while his prehensile paws stroke your [cock size desc of Player] penis. The pleasure is really indescribable and you orgasm in a few minutes, your cock spurting its load on the primate's paws. The arrogant monkey on your back lasts a little longer before his body tenses and a warm sensation in your innards signals that he came as well. Satiated, he dismounts you and apply his paws on your face, having you lick them clean, before he[else]on your legs while his arms hug your upper body tight. Riding you like a jockey rides a horse, you stumble forward as the speed and the intensity of his fucking doubles. The deserted halls resonate with your moans and the monkey's grunts. The pleasure is really indescribable and you orgasm in a few minutes, your cunt spasming around the primate's paws. The arrogant monkey on your back lasts a little longer before his body tenses and a warm sensation in your vagina signals that he came as well. Satiated, he dismounts you and[end if] takes his leave in a short, taunting victory dance.";
 					CreatureSexAftermath "Player" receives "PussyFuck" from "Monkey";
 			else:
 				if Player is female:
 					say "     He sits on you, putting his growing cock against your face. 'Make it hard, servant!' he orders as he pushes the head of his cock in your mouth. You start to protest, but the feeling of a tongue on your clitoris replaces that protest by a moan. The monkey goes to town on your pussy, sucking on your clit and exploring your passage with his tongue while he pistons his hips in your moaning, twitching face. Once he's sated, the rock-hard martial artist sits up and have you sit in his lap. Then, he aligns his member with your opening and spears your [if anallevel is 3]ass[else]cunt[end if] with it. He starts fucking you in a slow, but steady and deep rhythm, making sure the only words coming from your mouth are moans of pleasure. 'Mmm, yes. This sound is music to my ears...' His hands caress your body, focusing on your breasts and your nipples.";
 					say "     Suddenly, you gasp in surprise as the Monkey King folds one of his legs and uses his prehensile foot to play with your[if Player is male]cock, stroking it and playing with its head[else]pleasure button, introducing one or two of his toes in your pussy while doing that[end if]. The new sensation is rapidly too much for you, and your muscles contract around his dick as you climax. Your mate cums shortly after, filling your insides with his sperm. The satisfied monkey takes his leave in a short, taunting victory dance.";
-					if anallevel < 3:
-						CreatureSexAftermath "Player" receives "PussyFuck" from "Monkey";
-					else:
-						CreatureSexAftermath "Player" receives "AssFuck" from "Monkey";
+					CreatureSexAftermath "Player" receives "[if anallevel < 3]Pussy[else]Ass[end if]Fuck" from "Monkey";
 				else:
 					say "     Having you lay on your back, he frots his lithe body against yours. His mouth locks with your own in a sloppy kiss while his hands explore your chest. You feel your cocks quickly grow from arousal and touch each other. After a few minutes, the simian creature breaks the kiss and sits on your lap. 'Now, let's get serious,' says the golden-furred lover as he aligns his ass with your cock and lets himself slowly fall down. He moans loudly. You moan as well, as his insides feel like silk on your [Cock of Player] dick. Then he pushes up, only to let himself fall down on your lap, and so on.";
 					say "     The two of you quickly build a steady rhythm and you even start pushing up against your partner's ass. Suddenly, you muffle in surprise as the flexible creature puts one of his foot against your face, his toes entering your mouth. 'Lick, peasant,' he orders smugly. To his great pleasure, you comply and start to lick the sole of his prehensile foot and suck on his toes.";
@@ -77,27 +71,19 @@ to say beattheMonkeyKing:
 		say "     The beaten fighter falls on the ground, his staff bouncing away with a few loud, woody noises. 'Impossible... How could I, the Great Monkey King, be defeated by the likes of you...'";
 	if Player is not neuter:
 		say "     He lays on the ground, his ripped clothes exposing his nude body.";
-		say "     [bold type]This gives you a few ideas. Are you going to go through with them?[roman type][line break]";
+		say "[line break]     [bold type]This gives you a few ideas. Are you going to go through with them?[roman type][line break]";
 		say "     ([link]Y[as]y[end link]) - Time for some monkey business!";
 		say "     ([link]N[as]n[end link]) - He is not worth your time.";
 		if Player consents:
 			LineBreak;
-			if Loyalty of Wukong is 1 or Loyalty of Wukong is 2:
-				say "     With a smirk, you take off your cloth, then rip off what remains of your opponent's. 'Fair game,' he says, relaxing a little.";
-			else:
-				say "     With a smirk, you take off your cloth, then rip off what remains of your opponent's. 'Wh... What are you doing?' he asks, visibly intimidated.";
-			say "     [bold type]How will you claim him?[roman type][line break]";
-			say "     ([link]Y[as]Gentle[end link]) - Make peace and love; mostly love.";
-			say "     ([link]N[as]Rough[end link]) - Let us teach him a lesson!";
+			say "     With a smirk, you take off your cloth, then rip off what remains of your opponent's. '[if Loyalty of Wukong is 1 or Loyalty of Wukong is 2]Fair game,' he says, relaxing a little[else]Wh... What are you doing?' he asks, visibly intimidated[end if].";
+			say "[line break]     [bold type]How will you claim him?[roman type][line break]";
+			say "     ([link]Gentle[as]y[end link]) - Make peace and love; mostly love.";
+			say "     ([link]Rough[as]n[end link]) - Let us teach him a lesson!";
 			if Player consents:
 				LineBreak;
-				say "     You crawl on your former opponent, intent on teaching him that letting the other one handle the things can also be pleasurable. You kiss him and fondle his body. Your mate is surprised but nonetheless pleased by what happens. After a few minutes kissing and groping, the monkey's prehensile feet give you an idea. Sitting at the opposite of the now erect simian, you apply your feet on his groin and, slowly, you use them to stroke his cock. Visibly aroused, the Monkey King moans; he calms down, lies on his back and lets himself enjoy your footjob. At first a little clumsy, you quickly get the hang of things, even starting to use your toes in the action. The primate's moans become louder and louder as you massage his penis with your foot soles or circle his cock-head with your big toe.";
-				if Player is herm:
-					say "     You do not forget to pleasure yourself as well with your free hands but soon, your partner decide to reciprocate as his feet grab your cock and shows you how it's done, jerking your [Cock of Player] rod with one paw while frotting your [cunt size desc of Player] pussy with the other.";
-				else if Player is male:
-					say "     You do not forget to pleasure yourself as well with your free hands but soon, your partner decide to reciprocate as his feet grab your cock and shows you how it's done, fondling your ballsack and jerking your [Cock of Player] rod.";
-				else:
-					say "     You do not forget to pleasure yourself as well with your free hands but soon, your partner decide to reciprocate and shows you how it's done, frotting against your [cunt size desc of Player] pussy and massaging your clit.";
+				say "     You crawl on your former opponent, intent on teaching him that letting the other one handle the things can also be pleasurable. You kiss him and fondle his body. Your mate is surprised but nonetheless pleased by what happens. After a few minutes kissing and groping, the monkey's prehensile feet give you an idea. Sitting at the opposite of the now erect simian, you apply your feet on his groin and, slowly, you use them to stroke his cock. Visibly aroused, the Monkey King moans; he calms down, lies on his back and lets himself enjoy your footjob. At first a little clumsy, you quickly get the hang of things, even starting to use your toes in the action. The primate's moans become louder and louder as you massage his penis with your foot soles or circle his cockhead with your big toe.";
+				say "     You do not forget to pleasure yourself as well with your free hands but soon, your partner decide to reciprocate [if Player is herm]as his feet grab your cock and shows you how it's done, jerking your [Cock of Player] rod with one paw while frotting your [cunt size desc of Player] pussy with the other[else if Player is male]as his feet grab your cock and shows you how it's done, fondling your ballsack and jerking your [Cock of Player] rod[else]and shows you how it's done, frotting against your [cunt size desc of Player] pussy and massaging your clit[end if].";
 				say "     After several minutes, you both come to a climax, and the monkey's penis launching several ropes of cum in the air. The once-arrogant man is now calmed down and pants. His smile is not arrogant anymore; instead, it feels genuinely thankful. It looks like he learnt the lesson.";
 			else:
 				LineBreak;
@@ -111,10 +97,7 @@ to say beattheMonkeyKing:
 						say "     For such a small monkey, he has a big mouth. It is time to give it a better use! You grab the weakened fighter's head with both hands and force your cock in his mouth. He gags, protests, and tries to push away but your grip his strong, and you pump his mouth, going deeper and deeper until all your cock is in and his face is mashed against your pubis. Too weak to resist, he can do nothing but emit gargled moans as he gags on your member. Several minutes of uninterrupted face-fucking pass, until you reach your limits. With a gargled cry of surprise, the monkey tries to pull out but it's too late and during long, agonizing seconds he is forced to swallow your entire cock as you empty your gonads in him. After you made sure every single drop went in his stomach, you let the Monkey King go. He coughs, looking very tired and visibly humiliated. You complete the humiliation by using his pretty face to clean your cock, smearing saliva and spunk all over it. Satisfied, you leave the panting, spent loser and resume your exploration.";
 						CreatureSexAftermath "Monkey" receives "OralCock" from "Player";
 					else:
-						if Loyalty of Wukong is 2:
-							say "     Without a word, you turn the monkey around and line your cock with his smooth ass. 'Wooh, wait, not so uuung!' The poor chap does not have time to finish his sentence as you push inside of him. His inner walls feel very good, but they are less tight than you thought. This arrogant monkey is quite used to that, isn't he? You make the remark to him, and he blushes, obviously humiliated. 'S... Slow down.' But you do not care. He's no king right now. He's your toy.";
-						else:
-							say "     Without a word, you turn the monkey around and line your cock with his smooth ass. 'Wait... What are you?!' The poor chap does not have time to finish his sentence as you push inside of him. His inner walls feel very good, but they are less tight than you thought. This arrogant monkey is quite used to that, isn't he? You make the remark to him, and he blushes, obviously humiliated. 'S... Stop...' But you do not care. He's no king right now. He's your toy.";
+						say "     Without a word, you turn the monkey around and line your cock with his smooth ass. '[if Loyalty of Wukong is 2]Wooh, wait, not so uuung!' The poor chap does not have time to finish his sentence as you push inside of him. His inner walls feel very good, but they are less tight than you thought. This arrogant monkey is quite used to that, isn't he? You make the remark to him, and he blushes, obviously humiliated. 'S... Slow down.' [else]Wait... What are you?!' The poor chap does not have time to finish his sentence as you push inside of him. His inner walls feel very good, but they are less tight than you thought. This arrogant monkey is quite used to that, isn't he? You make the remark to him, and he blushes, obviously humiliated. 'S... Stop...' [end if]But you do not care. He's no king right now. He's your toy.";
 						say "     You fuck him mercilessly, while your hands play with the now powerless warrior. Once your hand finds his now erect cock, you do not let it go and jack him off until his ass contracts around you and he spills his load on the ground. Pulling out, you finish yourself on the wannabe king and, grunting, you paint his back white with your cum. Worn out, the monkey falls on the ground, drenching his chest with his own cum. Satisfied, you leave the panting, spent loser and resume your exploration.";
 						CreatureSexAftermath "Monkey" receives "AssFuck" from "Player";
 		else:
@@ -122,7 +105,6 @@ to say beattheMonkeyKing:
 			say "     You change your mind and leave the monkey as he is.";
 	else:
 		say "     Teaching this arrogant monkey a lesson was more than enough for you, and you go back on your way.";
-
 
 Section 2 - Creature Insertion
 
@@ -135,7 +117,7 @@ to say PrepCombat_Monkey:
 	choose row MonsterID from the Table of Random Critters;
 	if Player is FemalePreferred:
 		now sex entry is "Female";
-	else if "Herm Preferred" is listed in feats of Player:
+	else if Player is HermPreferred:
 		now sex entry is "Both";
 	else:
 		now sex entry is "Male";
@@ -312,8 +294,6 @@ When Play begins:
 	[Clit Size Adjective is generated by a function and can be used in scenes: very small/small/average/large/very large]
 ]
 
-
-
 Section 3 - Endings
 
 Table of GameEndings (continued)
@@ -323,26 +303,20 @@ Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered
 This is the Monkey Infection rule:
 	if Player has a body of "Monkey":
 		trigger ending "Monkey Infection";
-		if humanity of Player < 10:
-			say "     Losing the remnants of your sanity, you seek out the Monkey King and pledges loyalty to him. You spend the following days with your new leader, training under him and catering to his every whims, many of which are of carnal nature. Eventually, other victims of the Monkey King strain join you, and soon, with the Museum as your base, your gang takes on the other groups in the city, with you as of one the gang's lieutenants.";
-		else:
-			say "     After the evacuation, you use your newly acquired abilities for martial arts to open a dojo in a nearby city. You quickly become famous, and your physique and your skills gets you a big movie studio's attention. Soon, you begin to star in kung-fu movies and monster flicks, and become a worldwide celebrity. Like a King.";
-
+		say "     [if humanity of Player < 10]Losing the remnants of your sanity, you seek out the Monkey King and pledges loyalty to him. You spend the following days with your new leader, training under him and catering to his every whims, many of which are of carnal nature. Eventually, other victims of the Monkey King strain join you, and soon, with the Museum as your base, your gang takes on the other groups in the city, with you as of one the gang's lieutenants[else]After the evacuation, you use your newly acquired abilities for martial arts to open a dojo in a nearby city. You quickly become famous, and your physique and your skills gets you a big movie studio's attention. Soon, you begin to star in kung-fu movies and monster flicks, and become a worldwide celebrity. Like a King[end if].";
 
 Section 4 - Events
 
 [Flaggings and lockings]
 [Every event will be flagged furry and guy, since most events are about Wukong]
 [Variations in event will keep the player from seeing other kind of flagged content]
-when play begins:
-	add Monkey King Service to the BadSpots of FurryList;
+[when play begins:
 	add Crashing the Satyr Party to the BadSpots of FurryList;
 	add Hunt Of Mammoth Proportions to the BadSpots of FurryList;
 	add Take My Royal Word for Granite to the BadSpots of FurryList;
-	add Monkey King Service to the BadSpots of MaleList;
 	add Crashing the Satyr Party to the BadSpots of MaleList;
 	add Hunt Of Mammoth Proportions to the BadSpots of HermList;
-	add Take My Royal Word for Granite to the BadSpots of MaleList;
+	add Take My Royal Word for Granite to the BadSpots of MaleList;]
 
 [Event 1 - quest launcher]
 
@@ -355,13 +329,17 @@ ResolveFunction of Monkey King Service is "[ResolveEvent Monkey King Service]".
 Sarea of Monkey King Service is "Museum".
 The level of Monkey King Service is 3. [event unlocks at lvl 3]
 
+when play begins:
+	add Monkey King Service to the BadSpots of FurryList;
+	add Monkey King Service to the BadSpots of MaleList;
+
 to say ResolveEvent Monkey King Service:
 	if "Monkey" is not listed in EncounteredEnemies of Player:
-		say "     You notice an exposition on imperial China exposition during your exploration of the museum. You decide to give it a look, but there is not much to see. All the art pieces have been looted by someone, and only the fake pagodas and other Chinese decorations remain. 'Good timing!' a booming masculine voice startles you. 'You, peasant! Come over here! I have a mission of upmost importance for you!' Whoever it is, he is thinking very high of himself...";
-		say "     [bold type]Should you follow the voice, and check what he wants?[roman type][line break]";
+		say "     You notice an exposition on Imperial China exposition during your exploration of the museum. You decide to give it a look, but there is not much to see. All the art pieces have been looted by someone, and only the fake pagodas and other Chinese decorations remain. 'Good timing!' a booming masculine voice startles you. 'You, peasant! Come over here! I have a mission of upmost importance for you!' Whoever it is, he is thinking very high of himself...";
+		say "[line break]     [bold type]Should you follow the voice, and check what it wants?[roman type][line break]";
 	else:
-		say "     You notice the exposition on imperial China exposition during your exploration of the museum. You pass the fake Asian-styled gate, to check if this wing's rowdy inhabitant is at home. Considering that he would have already been jumping at you by now, you consider that the coast is clear, and give the room a look-around. However, there is not much to see. All the art pieces have been looted, probably by you-know-who, and only the fake pagodas and other Chinese decorations remain. 'Good timing!' a booming voice startles you. 'You, peasant! Come over here! I have a mission of upmost importance for you!' It seems that the monkey is actually at home, and is still living his [']Journey to the West['] delusion.";
-		say "     [bold type]Should you follow his voice, and check what he wants?[roman type][line break]";
+		say "     You notice the exposition on Imperial China exposition during your exploration of the museum. You pass the fake Asian-styled gate, to check if this wing's rowdy inhabitant is at home. Considering that he would have already been jumping at you by now, you consider that the coast is clear, and give the room a look-around. However, there is not much to see. All the art pieces have been looted, probably by you-know-who, and only the fake pagodas and other Chinese decorations remain. 'Good timing!' a booming voice startles you. 'You, peasant! Come over here! I have a mission of upmost importance for you!' It seems that the monkey is actually at home, and is still living his [']Journey to the West['] delusion.";
+		say "[line break]     [bold type]Should you follow his voice, and check what he wants?[roman type][line break]";
 	say "     ([link]Y[as]y[end link]) - This could lead to some interesting development.";
 	say "     ([link]N[as]n[end link]) - You would rather not deal with him at the moment.";
 	if Player consents:
@@ -375,6 +353,7 @@ to say ResolveEvent Monkey King Service:
 		now Loyalty of Wukong is 1;
 		now Resolution of Monkey King Service is 1; [introductions done]
 	else:
+		LineBreak;
 		say "     You slowly backpedal to the main lobby of the museum. 'I'm still waiting!' the voice clamors. Well, he can wait as long as he wants, you want nothing to do with him!";
 		now Resolution of Monkey King Service is 2; [avoiding him]
 	now Monkey King Service is resolved;
@@ -392,22 +371,24 @@ The Prereq1Resolution of Crashing The Satyr Party is { 1 }.
 Sarea of Crashing The Satyr Party is "Museum".
 The level of Crashing The Satyr Party is 3. [event unlocks at lvl 3]
 
+when play begins:
+	add Crashing the Satyr Party to the BadSpots of FurryList;
+	add Crashing the Satyr Party to the BadSpots of MaleList;
+
 to say ResolveEvent Crashing the Satyr Party:
 	say "     During your patrol, you hear the sound of music, and several rowdy voices. You approach carefully, and stumble upon a group of satyrs and nymphs in the middle of an orgy. Vine cups are passed around, while couples or small groups form here and there, and swap members regularly. You remember the [']task['] that Wukong had charged you with, and you fetch the drug-filled pouch from your backpack. Should you go with it? It could be interesting to have the simian as your ally. The thought of giving the monkey a lesson for treating everyone around him like manure also comes to your mind.";
-	say "[bold type]Decisions, decisions...[roman type][line break]";
+	say "[line break]     [bold type]Decisions, decisions...[roman type][line break]";
 	say "     [link](1)[as]1[end link] - Help Wukong.";
 	say "     [link](2)[as]2[end link] - Sabotage Wukong's plan.";
 	say "     [link](3)[as]3[end link] - Elect to stay out of this.";
 	now calcnumber is 0;
 	while calcnumber < 1 or calcnumber > 3:
-		say "Choice? (1-3)>[run paragraph on]";
+		say "Choice? (1-3)> [run paragraph on]";
 		get a number;
-		if calcnumber is 1 or calcnumber is 2 or calcnumber is 3:
-			break;
-		else:
+		if calcnumber < 1 or calcnumber > 3:
 			say "Invalid choice. Type [link]1[end link] to help Wukong, [link]2[end link] to sabotage Wukong's plan or [link]3[end link] to elect to stay out of this.";
+	LineBreak;
 	if calcnumber is 1:
-		LineBreak;
 		say "     Having made your decision, you make your way towards the amphoras holding the party wine. 'Why, look what we have here?' the satyr that's closest to the containers says when he sees you. 'Too bad you missed the start of the party. But I can give you some consolation, if you want.' You try to tell the goat-man that you are not here for that, but he does not seem to listen. It looks like you have a fight on your hands.";
 		challenge "Satyr";
 		if fightoutcome >= 10 and fightoutcome <= 19:
@@ -424,11 +405,10 @@ to say ResolveEvent Crashing the Satyr Party:
 		else if fightoutcome >= 20 and fightoutcome <= 29:
 			say "     'That was some nice romp,' the satyr says to no one in particular. In the meantime, you roll on your side, and try to stand up, when you feel something powdery under your hand. The pouch that Wukong had given you earlier ripped open during the fight, and its content now spread all over the floor. Your task ending up in failure, you scramble away from the satyr and his gang, before you are subjected to more sexual assault.";
 			now Resolution of Crashing the Satyr Party is 2; [lost while helping Wukong]
-		else:
+		else if fightoutcome >= 30:
 			say "     You take your legs to your neck and run as far as you can from the satyr. In your flight, you realize that you dropped the drug that Wukong had given you. Now they are lost, and there's nothing you can do, except stay away from the monkey for some time, and pray that he would forget what he had asked you to do.";
 			now Resolution of Crashing the Satyr Party is 3; [fled while helping Wukong]
 	else if calcnumber is 2:
-		LineBreak;
 		say "     Time to turn the tables! You wait a little, until the small assembly finished to quench their lust, then walk towards them calmly. 'Why, look what we have here?' one of the satyr says when seeing you. 'Too bad you missed the party. But I can give you some consolation, if you want.' You try to tell the goat-man that you are not here for that, but he does not seem to listen. It looks like you have a fight on your hands.'";
 		challenge "Satyr";
 		if fightoutcome >= 10 and fightoutcome <= 19:
@@ -445,11 +425,10 @@ to say ResolveEvent Crashing the Satyr Party:
 		else if fightoutcome >= 20 and fightoutcome <= 29:
 			say "     'That was some nice romp,' the satyr says to no one in particular. You hear other orgy goers approaching, attracted by the noises of your struggle. Ditching your original plan, you run away to the museum lobby.";
 			now Resolution of Crashing the Satyr Party is 5; [lost sabotaged Wukong]
-		else:
+		else if fightoutcome >= 30:
 			say "     You take your legs to your neck and run as far as you can from the satyr. If they do not want to listen, then screw them!";
 			now Resolution of Crashing the Satyr Party is 6; [fled sabotaged Wukong]
 	else:
-		LineBreak;
 		say "     You decide to not get involved into neighbor disputes, specifically when they involve mythological creatures and talking animals. You throw the pouch away, and settle on peeping on the orgy from afar.";
 		now Resolution of Crashing the Satyr Party is 99; [disinterest]
 	now Crashing the Satyr Party is resolved;
@@ -467,9 +446,14 @@ The Prereq1Resolution of Hunt Of Mammoth Proportions is { 1 }. [must have succes
 Sarea of Hunt Of Mammoth Proportions is "Museum".
 The level of Hunt Of Mammoth Proportions is 8. [event unlocks at lvl 8]
 
+when play begins:
+	add Hunt Of Mammoth Proportions to the BadSpots of FurryList;
+	add Hunt Of Mammoth Proportions to the BadSpots of HermList;
+
 to say ResolveEvent Hunt Of Mammoth Proportions:
 	say "     Your walk into the Museum is interrupted by Wukong saltoing in front of you. 'Ah, if it is not my favorite servant!' The monkey greets you. 'Do you remember what I told you, about my big plans for us? Well, follow me!' Rather than you following him, Wukong grabs your hand and pulls you towards the Paleolithic section of the museum.";
 	say "     He eventually stops, and you with him, behind a rock, and points at a mass of brown fur a dozen meters across. The giant furball actually moves, and you realize that it is a living being: an anthro mammoth, to be precise. Wukong and you dive behind a rock before she can see you, but you had time to notice that [']she['] was a hermaphrodite, and that her private parts were larger than most beings you met in the infected city.";
+	WaitLineBreak;
 	say "     'As you recall from the incident with these goat-men,' Wukong says, 'nobody seems to give me the proper respect, treating me as if I was their [']pal['] and talking to me as if I was a commoner. So, I decided to prove them all that I am worthy of my reputation and my station. To do so, we shall hunt down henceforth the mightiest being in this museum, which is this hideous elephantine thing. Of course, I count on [italic type]you[roman type] to assist me.'";
 	say "     You have the dreadful feeling that despite being an [']assistant['], you will do most of the job. [bold type]Do you help Wukong?[roman type][line break]";
 	say "     ([link]Y[as]y[end link]) - There could be a reward.";
@@ -477,9 +461,7 @@ to say ResolveEvent Hunt Of Mammoth Proportions:
 	if Player consents:
 		LineBreak;
 		say "     'I knew you would not refuse a chance for glory!' Wukong replies, beaming with joy. 'To battle, my friend. May we be victorious!' And on these words, Wukong charges towards the mammoth, who looks surprised and mildly inconvenienced by the interruption. You do not any more time and join the battle.";
-		now inasituation is true;
 		challenge "Mammoth";
-		now inasituation is false;
 		if fightoutcome >= 10 and fightoutcome <= 19:
 			say "     Extenuated, the defeated mammoth falls on her butt. 'We did it!' Wukong exults. 'Look at this beast. It did not stand a chance against the mighty Monkey King. And you, my friend. Now, to celebrate this victory!' Wukong jumps on the mammoth's belly, and swat away her hands as they approached from her massive erection. 'Such a vulgar set of genitals. Let me give them a more proper use.' The monkey lines up his cock with the mammoth's urethra. Under you and the pachyderm's surprised looks, he pushes his dick inside the herm's member, who trumpets her approval. The monkey king wastes no time beginning to pump in and out the oversized urethra.";
 			if Player is male:
@@ -502,7 +484,7 @@ to say ResolveEvent Hunt Of Mammoth Proportions:
 		else if fightoutcome >= 20 and fightoutcome <= 29:
 			say "     'You little scamps!' the mammoth says, as she holds you and Wukong at the level of her eyes. You definitely need a little [']time out['].'";
 			if vorelevel > 1:
-				say "     With this being said, the pachyderm pushes you down to the floor. She drops her massive cock down atop you, making you release an [']Oof!['] as it slams atop you. She starts rubbing her large hands overtop of it and her balls while grinding her growing erection down atop you[if scalevalue of Player is 5]. Once erect, her cock is nearly as large as you are and drools a constant stream of her precum over you[else if scalevalue of Player > 2]. Once erect, her cock is larger than you are and drools a constant flow of precum over you[else]. Even before the fight ended, her cock was probably bigger than you and now it's utterly massive, burying you under its enormous weight and drooling what seems like mouthfuls of precum by the second all over you[end if]. The scent of this starts to cloud your mind, making you rub yourself against it as best you can, working to pleasure the hyper-endowed mammoth.";
+				say "     With this being said, the pachyderm pushes you down to the floor. She drops her massive cock down atop you, making you release an [']Oof!['] as it slams atop you. She starts rubbing her large hands overtop of it and her balls while grinding her growing erection down atop you. [if scalevalue of Player is 5]Once erect, her cock is nearly as large as you are and drools a constant stream of her precum over you[else if scalevalue of Player > 2]Once erect, her cock is larger than you are and drools a constant flow of precum over you[else]Even before the fight ended, her cock was probably bigger than you and now it's utterly massive, burying you under its enormous weight and drooling what seems like mouthfuls of precum by the second all over you[end if]. The scent of this starts to cloud your mind, making you rub yourself against it as best you can, working to pleasure the hyper-endowed mammoth.";
 				say "     In the meantime, she gets a hold of Wukong, and presents him head-first towards her urethra. The monkey protests and struggles, but the larger mammal holds him fast, and squeezes him into her cock. The mammoth trumpets her pleasure, as you feel the body of Wukong press against you on his way down. 'Oh, yes! Such a lively little thing!' The mammoth grabs her cock, and strokes it until the primate reaches the base of his cock, and his silhouette is now imprinted against the skin of her ballsack. 'Now, your turn!'";
 				WaitLineBreak;
 				say "     Slapping her massive meat onto the floor, she moves forward again, charging her yawning cock towards your feet. They pop right into her cumslit as you're taken in up to you [if scalevalue of Player > 3]ankles[else]knees[end if]. With that start, her muscular inner walls squeeze and pull at your legs, drawing you steadily further into her. The floor, already slick with her precum, provides little purchase for you as you slide across the tiles and steadily deeper into the mighty phallus. As more of you is consumed by the pulsating rod, your hips are engulfed[if Cock Count of Player is 1], pressing your shaft firmly against your belly, massaging it until you cry out in orgasm[else if Cock Count of Player > 1], pressing your shafts firmly against your belly, massaging them until you cry out in orgasm[else if Player is female], squeezing your thighs tightly against your aching puss[yfn] until you cry out in orgasm[end if].";
@@ -517,10 +499,10 @@ to say ResolveEvent Hunt Of Mammoth Proportions:
 				say "     You cry out as the large fingers spread your [if Player is female]pussy[else]ass[end if] apart. [if scalevalue of Player > 3]It takes several minutes for your head to pass the tight barrier, not helped in the least by the muscles squeezing you as the mammoth goes through an orgasm[else]your head passes through, followed by your body; midway, your advance is stopped as the inner walls squeeze you while the mammoth orgasms[end if]. Eventually, you fall into her womb. You feel the fur of Wukong, already trapped in there. The pouch stretches to accommodate your arrival, but even then it is a tight fit, and Wukong and you are cramped together. You feel his rock-hard cock slap against your belly. The both of you aroused by the carnal atmosphere. The moistness and the heat reaches new levels, and your arousal peaks as well. You make out with each other, reaching climax at the same time. Afterwards, drowsiness overtakes you; assuming a fetal position, your eyes close, and you pass out.";
 				say "     A churning around you awakens you to a semi-conscious state much later. This builds quickly with a trumpeting cry from beyond the fleshy walls surrounding you. You move quickly back through her deep cunt as she gives [']birth['] to you once again, pushed along by the contractions and the torrents of femcum that comes out with you. You land in a big, sticky mess that stains the floor and wall all around you. Wukong follows you quickly after. While the mammoth walks away satisfied, the both of you lay there for quite some time, overcome by the strange, yet oddly arousing, experience. Eventually, Wukong turns his head in your direction. 'Let us... Never speak of this again,' he asks. You agree. Once you are in a good enough state to stand up, the both of you part ways without a word.";
 			else:
-				say "     The pachyderm pushes you down to the floor. She drops her massive cock down atop you, making you release an [']Oof!['] as it slams atop you. Wukong is then forced to straddle the massive erection. She starts rubbing her large hands around her shaft and her balls, grinding your bodies against her growing erection[if scalevalue of Player is 5]. Once erect, her cock is nearly as large as you are and drools a constant stream of her precum over you[else if scalevalue of Player > 2]. Once erect, her cock is larger than you are and drools a constant flow of precum over you[else]. Even before the fight ended, her cock was probably bigger than you and now it's utterly massive, burying you under its enormous weight and drooling what seems like mouthfuls of precum by the second all over you[end if]. The scent of this starts to cloud your mind, making you rub yourself against it as best you can, working to pleasure the hyper-endowed mammoth. Wukong too gets into the game, and eventually, she trumpets in ecstasy. She pushes Wukong in front of her urethra, and presses her cock down onto you hard before blasting a huge load that paints your bodies and a large chunk of the floor and wall behind you) white with her semen. While the mammoth walks away satisfied, the both of you lay there for quite some time, overcome by the strange, yet oddly arousing, experience. Eventually, Wukong turns his head in your direction. 'Let us... Never speak of this again,' he asks. You agree. Once you are in a good enough state to stand up, the both of you part ways without a word.";
+				say "     The pachyderm pushes you down to the floor. She drops her massive cock down atop you, making you release an [']Oof!['] as it slams atop you. Wukong is then forced to straddle the massive erection. She starts rubbing her large hands around her shaft and her balls, grinding your bodies against her growing erection. [if scalevalue of Player is 5]Once erect, her cock is nearly as large as you are and drools a constant stream of her precum over you[else if scalevalue of Player > 2]Once erect, her cock is larger than you are and drools a constant flow of precum over you[else]Even before the fight ended, her cock was probably bigger than you and now it's utterly massive, burying you under its enormous weight and drooling what seems like mouthfuls of precum by the second all over you[end if]. The scent of this starts to cloud your mind, making you rub yourself against it as best you can, working to pleasure the hyper-endowed mammoth. Wukong too gets into the game, and eventually, she trumpets in ecstasy. She pushes Wukong in front of her urethra, and presses her cock down onto you hard before blasting a huge load that paints your bodies and a large chunk of the floor and wall behind you) white with her semen. While the mammoth walks away satisfied, the both of you lay there for quite some time, overcome by the strange, yet oddly arousing, experience. Eventually, Wukong turns his head in your direction. 'Let us... Never speak of this again,' he asks. You agree. Once you are in a good enough state to stand up, the both of you part ways without a word.";
 			infect "Mammoth";
 			now Resolution of Hunt Of Mammoth Proportions is 2; [fought + lost]
-		else:
+		else if fightoutcome >= 30:
 			say "     You run away as fast as your legs can carry you. 'Wait! Where are you-mmmf!' Wukong's outraged protest is cut short as he is grabbed by the mammoth and bear-hugged against her huge breasts. 'Hng... S-stop.'";
 			say "     'You little scamp. Let me take care of you.'";
 			say "     'Mmmg! C-can't breathe...'";
@@ -547,6 +529,10 @@ The Prereq1Resolution of Take My Royal Word for Granite is { 4 }. [must have suc
 Sarea of Take My Royal Word For Granite is "Museum".
 The level of Take My Royal Word For Granite is 8. [event unlocks at lvl 8]
 
+when play begins:
+	add Take My Royal Word for Granite to the BadSpots of FurryList;
+	add Take My Royal Word for Granite to the BadSpots of MaleList;
+
 to say ResolveEvent Take My Royal Word For Granite:
 	say "     As you are about to leave the reception, Valerie stops you. 'Please, wait a minute. You look strong, and I... We need help.' The sphinx catches up with you and begins to explain. 'You have surely met this [']Wukong['] fellow by now. A little nutty, thinks himself as the Monkey King of Chinese lore. Ever since that incident with the satyrs, he became more and more unhinged, and while he was formerly only a nuisance, he is now a real danger to the inhabitants of the museum. [bold type]Can you help us resolve this issue?[roman type][line break]";
 	say "     ([link]Y[as]y[end link]) - You don't have to hear it twice. You're in.";
@@ -555,9 +541,7 @@ to say ResolveEvent Take My Royal Word For Granite:
 		LineBreak;
 		say "     'A thousand thanks,' Valerie reacts. 'Here is the plan: we will bait Wukong to you. He is sure to come, if we let him [']accidentally eavesdrop['] that there's someone that can threaten his self-appointed authority in this place. Once you knock him down, use this.' The sphinx make a spherical item wrapped in several layers of rags, with a fluo-pink post-it slapped on one side. As you grab it, you realize that it is quite heavy and, feeling the outline, you make out some kind of face under the rags. 'Don't unwrap it now!' Valerie warns. 'And if you do, make it so the small post-it faces away from you. You will find the results to be positively [']stonning['], heh heh...'";
 		say "     On these words, Valerie leaves you to set the bait ready. Ten, then twenty minutes pass without anything happening, until you hear Wukong's shrilling roar of anger as he leaps towards you. 'You will regret having said these words, peasant!' he shouts at you, leaving you wondering what words the sphinx had used to get him this riled up.";
-		now inasituation is true;
 		challenge "Monkey";
-		now inasituation is false;
 		if fightoutcome >= 10 and fightoutcome <= 19:
 			say "     As you send Wukong flying into a showcase, sending shards of glass everywhere, you remember Valerie's instructions. The monkey gets back slowly on his feet. His clothes are in tatters, and he angrily rips his heavily damaged shorts and shirt, showing off his lean and muscled body. Meanwhile you unwrap the item from its package. 'Wh-what are you holding?' Wukong asks. As the rags come off, you unveil the statufied head of a woman with snake hairs; a gorgon. You see the monkey king blink and grimace, as if blinded by the gaze of the statue. 'What is this? Magic?' he groans. Wukong's respiration gets faster, and you see his cock rapidly grow. Then, his fur and his skin begin to turn gray. 'Wh-what is this... Sor... Ce...'";
 			say "     Wukong cannot finish his sentence as he turns into an immobile, erect statue on the spot. 'Great job,' Valerie says, as she walks towards you from her hiding spot. 'This is a little punishment that me and the others thought up. It is not permanent, but he will still come to regret acting like a bully. Come over here.' Intrigued, you approach from the statue. 'The monkey cannot move. Cannot see. Cannot hear either. But his sense of touch is intact. See for yourself, you earned it.' Intrigued, you touch the statue's chest, and begin to caress the firm pectorals. You suddenly feel something drip on your foot. You look down and see precum drool from the tip of the primate's petrified cock. You grin.";
@@ -578,8 +562,9 @@ to say ResolveEvent Take My Royal Word For Granite:
 			say "[bold type]Looking outside, you realize that you spent nearly half a day, stuck as a statue.[roman type][line break]";
 			decrease turns by 4;
 			now Resolution of Take My Royal Word For Granite is 2; [fought + lost]
-		else:
+		else if fightoutcome >= 30:
 			say "     You pitifully beat a hasty retreat, with Wukong on your heels. 'You're right to run, peasant!' you can hear him, a few meters behind you, until you manage to reach the main door of the museum and rushes outside. 'You better not show your dirty face around these parts, scum!' you can hear the Monkey King shout, as a final warning. Distraught by your defeat, you go back to the library.";
+			WaitLineBreak;
 			move player to Grey Abbey Library;
 			now Resolution of Take My Royal Word For Granite is 3; [fought + fled]
 	else:
@@ -592,7 +577,6 @@ Section 5 - Specific Items
 
 [Wukong's staff moved to Core Mechanics/Weapons.i7x]
 
-
 Section 6 - NPC/Pet
 
 [Temporary ally for now, but could be developed into a full-fledge companion?]
@@ -602,14 +586,12 @@ object	name
 Wukong	"Wukong"
 
 Wukong is a person. Wukong is in Nowhere. Description of Wukong is "[wukongDesc]".
-Conversation of Wukong is { "<Monkey>" }.
 
 to say wukongDesc:
 	if Resolution of Monkey Duel is 1:
 		say "     You glance at Wukong, sitting in a corner of the Training Hall. He still wears his collar, as well as a complex network of ropes and knots which bites softly into his fur. [if humanity of Wukong < 3]He is rather restless, fidgeting and absent-mindedly pulling at the squeezing ropes here and there, inadvertently tightening the material's grip elsewhere[else]The formerly turbulent simian seems to have calmed down and gotten used to his shibari. Hanu's training seems to have paid off[end if].";
 	else:
 		say "     Wukong sits on a makeshift throne in the middle of the Monkey House. His position is less than regal, sprawled on his seat, his feet sprawled on both armrests and offered to simian courtesans, and by extension shamelessly exposing the royal crotch to newcomers. The Monkey King returns your gaze as if to remind you that he owns this place.";
-
 
 instead of conversing Wukong:
 	if Resolution of Monkey Duel is 1:
@@ -646,8 +628,9 @@ instead of fucking Wukong:
 		[]
 		choose a blank row in table of fucking options;
 		now title entry is "Assist";
-		now sortorder entry is 6;
+		now sortorder entry is 2;
 		now description entry is "Assist Hanu in his training";
+		[]
 		sort the table of fucking options in sortorder order;
 		repeat with y running from 1 to number of filled rows in table of fucking options:
 			choose row y from the table of fucking options;
@@ -661,24 +644,25 @@ instead of fucking Wukong:
 				choose row calcnumber in table of fucking options;
 				say "[title entry]: [description entry]?";
 				if Player consents:
-					let nam be title entry;
+					LineBreak;
 					now sextablerun is 1;
-					if nam is "Train":
-						say "[WukongTrainingTrain]";
-					if nam is "Assist":
-						say "[WukongTrainingAssist]";
+					if title entry is:
+						-- "Train":
+							say "[WukongTrainingTrain]";
+						-- "Assist":
+							say "[WukongTrainingAssist]";
 					increase humanity of Wukong by 1;
-					wait for any key;
 			else if calcnumber is 0:
+				LineBreak;
 				now sextablerun is 1;
 				say "     You shake your head and politely refuse Hanu's offer. 'A shame. We are on the same boat, here,' the monkey replies. 'In order to retain our sanity, mental fortitude is needed. Come back if you reconsider.'";
-				wait for any key;
 			else:
-				say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
+				say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options], or 0 to exit.";
+		wait for any key;
 		clear the screen and hyperlink list;
 	else:
 		say "     Wukong considers your proposal for a short second, then displays his usual, facetious grin. 'Very well. I cannot refuse an offer for worship, [if Loyalty of Wukong is -1]even if it comes from an unpleasant fellow such as you[else if Loyalty of Wukong < 2]especially if it comes from one my servants[else]especially if it comes from a trusted companion[end if].' The monkey gestures you to kneel in front of his throne, while he extends his leg forward. 'Show me your dedication, my dear.'";
-		say "     [bold type]Do you agree to worship Wukong's body?[roman type][line break]";
+		say "[line break]     [bold type]Do you agree to worship Wukong's body?[roman type][line break]";
 		say "     ([link]Y[as]y[end link]) - Agree.";
 		say "     ([link]N[as]n[end link]) - Out of question.";
 		if Player consents:

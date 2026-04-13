@@ -24,8 +24,7 @@ to say ResolveEvent Pink Furred Scavenger:
 	WaitLineBreak;
 	say "     Through the toppled furniture and debris, you manage to take a glance over what, or more precisely, who, is the cause of this racket. Your eyes widen as you spot a peculiar feminine furry shape topping a quite fit, yet helpless male creature. The scene is rather curious! You identify the male to be one of those very powerful feline men, a leopardman, to be exact, and he is getting absolutely dominated by a fuzzy pink-furred herm, who is clearly more feminine in appearance, were it not for her long pearl pink hair, large breasts, wide hips and extremely powerful looking thighs. She really does look strong, to have put a leopardman on his fours all by herself. Her fur is mostly pink pearl as well, except for her ears, tip of her limbs and tail, which are more of a bubblegum pink. You identify her as some sort of pink fox, and she seems to come equipped with a thick canine dong she is using to absolutely fuck the hell out of that masculine feline.";
 	say "     None of them have noticed you yet, so you could, hypothetically, ignore this scenery and get out of here before you find yourself in a similar fate, or feel forced to fight whoever comes at you... Or, and this is just a thought, you could actually just... watch, if this interests you. It is quite a peculiar event...";
-	LineBreak;
-	say "     [bold type]How shall you proceed?[roman type][line break]";
+	say "[line break]     [bold type]How shall you proceed?[roman type][line break]";
 	say "     ([link]Y[as]y[end link]) - Stay and watch from a safe position.";
 	say "     ([link]N[as]n[end link]) - Just get the hell out of here.";
 	if Player consents: [unlock Cherry events]
@@ -34,8 +33,7 @@ to say ResolveEvent Pink Furred Scavenger:
 		say "     'You did well, but you don't deserve to be my pet. Naughties like you deserve only punishment.' she says, as she dismisses the feline, who can barely crawl away. 'Shoo, now. Hope you learned your lesson.' She has quite a feminine, sexy but sweet, tone in her voice, which tells you she is not just some sex-crazed creature. But before you wonder if you should talk to her, she seems to have noticed you while brushing her fur with her foxy paws. She sighs... 'Ahh, well... A lady can't take a day to do some scavenging without being pestered by opportunists. You know what happened to that one, so don't even try.' While you clearly have been warned, she sees you still standing in the same place, without having attacked her by now. Not like you had time to process any of this, but she lowers her guard as soon as she has a better look at you.";
 		WaitLineBreak;
 		say "     'Oh, pardon me. I thought you were another leopardman. Though I suppose this one enjoyed the outcome of his little audacity, I'm afraid his group wouldn't think the same way.' she approaches you cautiously, but does not seem to be hostile. In fact, she might be one of the friendliest people you have ever encountered in this district. 'My name's Cherry. Delighted to meet you.' she says, extending her hand to greet you in a very ladylike fashion. You play along and greet her accordingly, carefully holding her hand with a gentle shake. 'We must make haste if we don't want to get caught by more of those stinky catmen. A whole group of them would be... problematic. And with the looting I've made, today, I'd rather return with most of my fur intact. Care to accompany me?'";
-		LineBreak;
-		say "     [bold type]She seems to want you to follow her... Do you go?[roman type][line break]";
+		say "[line break]     [bold type]She seems to want you to follow her... Do you go?[roman type][line break]";
 		say "     ([link]Y[as]y[end link]) - She seems nice enough.";
 		say "     ([link]N[as]n[end link]) - Pass, but thank her for the invitation.";
 		if Player consents:
@@ -44,17 +42,16 @@ to say ResolveEvent Pink Furred Scavenger:
 			say "     'This should be far enough. There's no way they could follow us, now.' While she naturally seems to be running away from the group of felines, you do not get why she is having all the extra caution, so you ask her about that. 'This group of felines aren't like your typical unfortunate miscreant who happens to pick a bad time to try and assault you, no. These ones are a gang, and I've had a few... misadventures with some of them. They seem to have taken a special liking in me, or something. To be honest, I couldn't care less. I don't take any personal interest in them.' As she finishes speaking, she starts walking through the corridor, her fluffy tail swinging from one side to another in front of you, and you merely follow her.";
 			WaitLineBreak;
 			say "     'What were you doing, there? Scavenging, too?' she asks you. Seeing no harm in responding back, you tell her that it was indeed what you were trying to do, but had no luck, despite your initial thoughts. 'I've had quite a hard time finding anything there, as well... But eventually I could fill my bag. Hopefully this will last for at least a week.' She pauses as you both continue walking, turning to the right towards the entrance of a building. 'You seem nice. I'm unsure if you'd like to accompany me upstairs, into my apartment, for some tea... but I'd like to have you sometime, if not now.' Cherry says, in the form of an invitation.";
-			LineBreak;
-			say "     [bold type]Would you like to go up with her?[roman type][line break]";
+			say "[line break]     [bold type]Would you like to go up with her?[roman type][line break]";
 			say "     ([link]Y[as]y[end link]) - Yes, accept her invitation.";
 			say "     ([link]N[as]n[end link]) - Thank her, but say you have to refuse due to some urgent matters.";
 			if Player consents:
 				LineBreak;
 				say "     With a nod, you accept her invitation and set yourself on following her. 'Splendid. I live in the third floor, so I hope you don't mind the climbing.' After you two walk up the stairs, Cherry unlocks the door to her modest apartment, which strikes you as quite cozy, with tasteful decoration. 'Take a seat and make yourself at home.'";
-				wait for any key;
 				now Resolution of Pink Furred Scavenger is 2; [accompanied Cherry to her apartment]
-				AddNavPoint Cherry's Apartment;
+				WaitLineBreak;
 				move Player to Cherry's Apartment;
+				AddNavPoint Cherry's Apartment;
 			else:
 				LineBreak;
 				say "     Being invited over is always a pleasure, but you tell her that, unfortunately, you have to take care of a few urgent matters. 'No problem. You now know where I live, so whenever you want to visit me, my doors are open. Not literally, though, as that would be quite stupid, but you can knock. Third floor, to the right.' You see her smile before she goes inside, saying goodbye, and leaving you alone outside. At least, if you ever want to pursue any sort of relationship with Cherry, you now know where to find her.";
@@ -73,23 +70,18 @@ to say ResolveEvent Pink Furred Scavenger:
 
 Section 2 - Rooms
 
+a postimport rule: [bugfixing rules for players that import savegames]
+	if resolution of Pink Furred Scavenger >= 2 and Pink Furred Scavenger is resolved: [event resolved the right way, room not connected yet]
+		AddNavPoint Cherry's Apartment silently;
+
 Table of GameRoomIDs (continued)
 Object	Name
 Cherry's Apartment	"Cherry's Apartment"
 
 Cherry's Apartment is a room. It is a fasttravel. Cherry's Apartment is private.
 The earea of Cherry's Apartment is "High".
-Description of Cherry's Apartment is "[CherryApartmentDesc]".
-
-to say CherryApartmentDesc:
-	say "     It is no luxury place, but the pink fox's apartment is a rather cozy place, despite what the world outside has to offer. Cherry kept things neat and clean in most places, as well as given it a personal feminine touch regarding its decoration. In fact, all you see is an esteemed place that is well cared for its owner. The entrance door leads you immediately to the living room, which has a few couches sorrounding a small table in the center and a carpet underneath, colors matching soft tones of brown, wine red and a bit of gold. There is a kitchen separated only by its counter, as well as a few doors on the opposite side which, you would imagine, lead to either a bedroom or a bathroom.";
-
-a postimport rule: [bugfixing rules for players that import savegames]
-	if resolution of Pink Furred Scavenger >= 2 and Pink Furred Scavenger is resolved: [event resolved the right way, room not connected yet]
-		AddNavPoint Cherry's Apartment;
-
-instead of smelling Cherry's Apartment:
-	say "     It somehow smells very sweet. Cherry must have been lucky enough to get her hands on some air fresheners or essence oils. Or perhaps it is some tea she is making...?";
+Description of Cherry's Apartment is "     It is no luxury place, but the pink fox's apartment is a rather cozy place, despite what the world outside has to offer. Cherry kept things neat and clean in most places, as well as given it a personal feminine touch regarding its decoration. In fact, all you see is an esteemed place that is well cared for its owner. The entrance door leads you immediately to the living room, which has a few couches sorrounding a small table in the center and a carpet underneath, colors matching soft tones of brown, wine red and a bit of gold. There is a kitchen separated only by its counter, as well as a few doors on the opposite side which, you would imagine, lead to either a bedroom or a bathroom.[line break]".
+Scent of Cherry's Apartment is "     It somehow smells very sweet. Cherry must have been lucky enough to get her hands on some air fresheners or essence oils. Or perhaps it is some tea she is making...?".
 
 Section 3 - Cherry NPC
 
@@ -133,12 +125,8 @@ SexuallyExperienced of Cherry is true.
 TwistedCapacity of Cherry is false. [Twisted Characters can take any penetration, no matter the size]
 Sterile of Cherry is true. [steriles can't knock people up. This is temporary for Cherry, until the player accepts being bred by her.]
 MainInfection of Cherry is "Pink Fox".
-Description of Cherry is "[CherryDesc]".
-Conversation of Cherry is { "<This is nothing but a placeholder!>" }.
+Description of Cherry is "     Cherry is a tall fox-like person with overall pink fur, quite fit in appearance and looking very healthy, meaning she takes good care of herself. Carrying a friendly muzzle with sweet pink eyes and an elegant posture, she is wearing a white shirt, black tight slacks and a dark blue longcoat while standing on her bare vulpine feet, looking almost like an executive if she had the full matching set of clothing. Her fuzzy tail slips through a hole in her pants to wave around freely outside, and despite her quite feminine visage, you can spot an undeniable bulge in her front, proof that she is more than a fancy fox lady. She always greets you politely, with a slight smile and a bow with her head.[line break]".
 The scent of Cherry is "     She smells nice, like actual cherry flowers.".
-
-to say CherryDesc:
-	say "     Cherry is a tall fox-like person with overall pink fur, quite fit in appearance and looking very healthy, meaning she takes good care of herself. Carrying a friendly muzzle with sweet pink eyes and an elegant posture, she is wearing a white shirt, black tight slacks and a dark blue longcoat while standing on her bare vulpine feet, looking almost like an executive if she had the full matching set of clothing. Her fuzzy tail slips through a hole in her pants to wave around freely outside, and despite her quite feminine visage, you can spot an undeniable bulge in her front, proof that she is more than a fancy fox lady. She always greets you politely, with a slight smile and a bow with her head.";
 
 [***********************************************************]
 Section 3-1 - Cherry Talk Menu
@@ -159,7 +147,6 @@ instead of conversing Cherry:
 to say CherryTalkMenu:
 	now CherryDoneTalking is false;
 	say "     [bold type]What do you want to talk about with Cherry?[roman type][line break]";
-	LineBreak;
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]
@@ -173,28 +160,28 @@ to say CherryTalkMenu:
 		now title entry is "Pets";
 		now sortorder entry is 2;
 		now description entry is "She mentioned she made some threats her pets... What did she mean with that";
-	[]
+		[]
 		choose a blank row in table of fucking options;
 		now title entry is "Wealth";
-		now sortorder entry is 2;
+		now sortorder entry is 3;
 		now description entry is "Being a CEO means she had a lot of money, indeed... What happened";
 	[]
 	if Energy of Cherry > 1:
 		choose a blank row in table of fucking options;
 		now title entry is "Sex";
-		now sortorder entry is 3;
+		now sortorder entry is 4;
 		now description entry is "Talk about getting more intimate with the pink fox";
 	[]
 	if PlayerFucked of Cherry is true:
 		choose a blank row in table of fucking options;
 		now title entry is "Breeding Fetish";
-		now sortorder entry is 4;
+		now sortorder entry is 5;
 		now description entry is "She seems to be particularly into it. Ask her about that";
 	[]
 	if Energy of Cherry is 3 and Player is not dominant:
 		choose a blank row in table of fucking options;
 		now title entry is "You as her sub";
-		now sortorder entry is 5;
+		now sortorder entry is 6;
 		now description entry is "Talk about the conditions of you as her submissive";
 	[]
 	if Resolution of MeetingClayton is 1:
@@ -216,22 +203,22 @@ to say CherryTalkMenu:
 			choose row calcnumber in table of fucking options;
 			say "[title entry]: [description entry]?";
 			if Player consents:
-				let nam be title entry;
 				now sextablerun is 1;
-				if (nam is "Herself"):
-					say "[CherryTalkHerself]";
-				else if (nam is "Pets"):
-					say "[CherryTalkPets]";
-				else if (nam is "Wealth"):
-					say "[CherryTalkWealth]";
-				else if (nam is "Sex"):
-					say "[CherryTalkSex]";
-				else if (nam is "Breeding Fetish"):
-					say "[CherryTalkBreeding]";
-				else if (nam is "You as her sub"):
-					say "[CherryTalkDomination]";
-				else if (nam is "She seems pensive, ask her"):
-					say "[CherryTalkClayton]"; [on Clayton's file]
+				if title entry is:
+					-- "Herself":
+						say "[CherryTalkHerself]";
+					-- "Pets":
+						say "[CherryTalkPets]";
+					-- "Wealth":
+						say "[CherryTalkWealth]";
+					-- "Sex":
+						say "[CherryTalkSex]";
+					-- "Breeding Fetish":
+						say "[CherryTalkBreeding]";
+					-- "You as her sub":
+						say "[CherryTalkDomination]";
+					-- "She seems pensive, ask her":
+						say "[CherryTalkClayton]"; [on Clayton's file]
 				wait for any key;
 				if CherryDoneTalking is false:
 					say "[CherryTalkMenu]"; [looping back to keep talking with him]
@@ -240,7 +227,7 @@ to say CherryTalkMenu:
 			say "     You excuse yourself as you get up, finishing any pending subjects with Cherry.";
 			wait for any key;
 		else:
-			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options], or 0 to exit.";
 	clear the screen and hyperlink list;
 
 to say CherryTalkHerself:
@@ -287,7 +274,6 @@ to say CherryTalkDomination:
 		say "     Given your last conversation about the subject, you ask Cherry if she would take you as her submissive, before anything else. She smiles and joyfully replies 'Well, I would, of course!' but then changes her tone to a slightly more serious one. 'I would, however, expect you to follow certain rules and accept a few terms. Like I said, I don't take just about anyone who asks... Only those who behave and agree to my conditions, after showing the required eagerness. This does not mean that I'd take advantage of such people in this situation, no. This is a deal between us both, and whenever something makes either of us unhappy or uncomfortable, it should be spoken. I like to keep a clear and transparent relationship with my subs.'";
 		WaitLineBreak;
 		say "     As she ensures that everything has been said, you nod and pay attention to every word. 'Good, so, with that having been explained, I ask... Would you be willing to allow your body to be transformed into something more... Well, like me?' Cherry asks, her fluffy tail swinging around slightly behind her as she awaits your answer.";
-		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Yes, you would allow her to transform you.";
 		say "     ([link]N[as]n[end link]) - No, you are not into that.";
 		if Player consents:
@@ -308,8 +294,7 @@ to say CherryTalkDomination:
 			say "     You know this to be possible due to your sex, so the answer is entirely up to you.";
 		else:
 			say "     You raise an eyebrow at that question, given your lack of sex, and ask her how would that be possible given the circumstances. She immediately responds 'Dear, [']at some point['], I said. Don't think too much about it.'";
-		say "     What say you? Would you be willing to carry Cherry's children inside you?";
-		LineBreak;
+		say "[line break]     [bold type]What say you? Would you be willing to carry Cherry's children inside you?[roman type][line break]";
 		say "     ([link]Y[as]y[end link]) - Yes, you would allow her to impregnate you, at some point.";
 		say "     ([link]N[as]n[end link]) - No, you are definitely not into that.";
 		if Player consents:
@@ -318,7 +303,6 @@ to say CherryTalkDomination:
 			now Sterile of Cherry is false;
 			WaitLineBreak;
 			say "     'Anyway, last question... This one should be easy for you. Do you agree on becoming my submissive and allow me to take you from any entrance I desire?'";
-			LineBreak;
 			say "     ([link]Y[as]y[end link]) - Nod and say you accept ([bold type]This is irreversible and Cherry will always regard you as Submissive, even if you become Dominant at a later point[roman type]).";
 			say "     ([link]N[as]n[end link]) - You actually do not like to bottom that much.";
 			if Player consents:
@@ -335,42 +319,38 @@ to say CherryTalkDomination:
 			now Sterile of Cherry is true;
 	else if Energy of Cherry > 3:
 		say "     You would like to talk to Cherry about your conditions as her submissive. She listens to what you have to say with all the attention. 'Yes, my dear? What is it that you want to discuss?'";
-		LineBreak;
 		say "     [link](1)[as]1[end link] - Transformation during sex.";
 		say "     [link](2)[as]2[end link] - Pregnancy matters.";
 		say "     [link](3)[as]3[end link] - Nothing, actually.";
 		now calcnumber is 0;
 		while calcnumber < 1 or calcnumber > 3:
-			say "Choice? (1-3)>[run paragraph on]";
+			say "Choice? (1-3)> [run paragraph on]";
 			get a number;
-			if calcnumber is 1 or calcnumber is 2 or calcnumber is 3:
-				break;
-			else:
+			if calcnumber < 1 or calcnumber > 3:
 				say "Invalid choice. Type [link]1[end link] to talk about transformation, [link]2[end link] to talk about fertility or [link]3[end link] to quit the conversation.";
+		LineBreak;
 		if calcnumber is 1:
-			LineBreak;
 			if "Transformative Sex" is listed in traits of Cherry:
 				say "     'Certainly! I hope you like the prospective of becoming a lovely pink fox like me? Or do you wish to change your mind?' Currently, sex with Cherry [bold type]will cause you to get the Pink Fox transformation[roman type] effect.";
 			else:
 				say "     'Of course! Do you wish to allow yourself to become a lovely pink fox like me?' Currently, sex with Cherry [bold type]is not causing any transformative effects[roman type] on you.";
-			LineBreak;
 			say "     ([link]Y[as]y[end link]) - Allow transformation.";
 			say "     ([link]N[as]n[end link]) - No transformation.";
 			if Player consents:
+				LineBreak;
 				say "     You say that you are definitely into it and that she could feel free to do so. She nods with a smile and a hint of blush appears on her cheeks, but she tries hard to not show it. 'That is most delightful, my dear... I do appreciate your agreement on that. Although, if you, for some reason, wish to not keep getting transformative effects from our encounters, just let me know.'";
 				say "     Cherry is [bold type]now allowing her infection into you[roman type] and will transform you during sex.";
 				TraitGain "Transformative Sex" for Cherry;
 			else:
+				LineBreak;
 				say "     You apologize, but that is something you would not like to have happening. She gives you an understanding nod. 'That's fine. Thank you for being honest, I truly appreciate you for being truthful with me. If you do change your mind, however, I'll be glad to hear it from you.'";
 				say "     Cherry is [bold type]no longer transforming[roman type] you during sex.";
 				TraitLoss "Transformative Sex" for Cherry;
 		else if calcnumber is 2:
-			LineBreak;
 			if Sterile of Cherry is false:
 				say "     'Oh, of course... What is it, my dear? Is something troubling you?' Currently, Cherry [bold type]is fertile[roman type].";
-			else if Sterile of Cherry is true:
+			else:
 				say "     'Ah, yes! Shall I stop taking the contraceptives, finally? I don't wish to impose too much, but... I did allow this breach in our deal in your consideration.' Currently, Cherry [bold type]is taking contraceptives[roman type].";
-			LineBreak;
 			say "     ([link]Y[as]y[end link]) - Ask her to keep taking contraceptives, for now.";
 			say "     ([link]N[as]n[end link]) - You are okay with getting impregnated by her.";
 			if Player consents:
@@ -387,7 +367,6 @@ to say CherryTalkDomination:
 				say "     Cherry is [bold type]now fertile[roman type] and will impregnate you during sex.";
 				now Sterile of Cherry is false;
 		else if calcnumber is 3:
-			LineBreak;
 			say "     You tell her that it is nothing, actually. She gives you a questioning look, but drops the subject when you do.";
 
 Section 3-2 - Cherry Sex menu
@@ -427,17 +406,15 @@ to say CherrySexMenu:
 					choose row calcnumber in table of fucking options;
 					say "[title entry]: [description entry]?";
 					if Player consents:
-						let nam be title entry;
 						now sextablerun is 1;
-						if (nam is "Bend over for the pink fox"):
+						if title entry is "Bend over for the pink fox":
 							say "[CherryFuck]";
-						wait for any key;
 				else if calcnumber is 0:
 					now sextablerun is 1;
 					say "     You politely excuse yourself, as you have changed your mind. She simply nods.";
-					wait for any key;
 				else:
-					say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
+					say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options], or 0 to exit.";
+			wait for any key;
 			clear the screen and hyperlink list;
 
 to say CherryFuck:
@@ -450,16 +427,13 @@ to say CherryFuck:
 	say "     As she positions herself steadily behind you, grabbing your hips with both hands, she begins to push her length inside you. It's a thick one, a vulpine knotted cock invading your [if Player is female]sex[else]hole[end if] and sending you shivers of pleasure as your body welcomes it, stretching around her girth. Cherry's pulsing erection continues to drill deep inside you as she does not push back, not even once, going all in right until only her knot remains outside. Now as you are properly impaled in her member, she begins to thrust, pulling out and pushing in, fucking you in the only manner she sees most appropriate... Slow and steady at first, but increasing in intensity as she picks up the pace.";
 	say "     'That's it... taking it in like a good little pet. You're doing well...' teases the pink fox, pounding you hard and rhythmically as the sounds of intense fucking spread through her modest residence. As you feel the cock inside you pulse and throb even more, you give in to the situation completely, letting her ram into your [if Player is female]pussy[else]ass[end if] as she sees fit, as hard and as deep as the whim takes her. This goes on for several minutes without cease, her pounding keeping strong and persistent as she keeps you pinned down against her couch and underneath her presence with your [if Player is female]womanhood[else]rear[end if] up. 'Mmh... Maybe I should get ready to fill you up, now...' she says, making only a brief pause as she slows down temporarily...";
 	WaitLineBreak;
-	say "     It seems she is getting close, as her erection throbs compulsively, warm like an incandescent bulb. That is when she decides to push in deeper... Deeper than before, as something even girthier passes through your [if Player is female]lower lips[else]orifice[end if] with relative ease. She lets out a moan as she doesn't let it go fully inside just yet, but the mere sensations around her knotted cock are bringing her closer and closer... 'Ohh... yes... Here it goes...!' Cherry goes fully inside you, knot and everything, as she delivers her generous load into you, spurt after spurt of creamy hot seed coating your [if Player is female]womb[else]fleshy insides[end if] until the very last drop. You, too, feel yourself being brought over the edge, [if Player is male]your own [Cock of Player] dick exploding in a joyful load which ends up landing all over her couch[else]a surge of intense pleasure making you quiver and squirm all over as your own orgasm bursts through you.[end if][line break]";
+	say "     It seems she is getting close, as her erection throbs compulsively, warm like an incandescent bulb. That is when she decides to push in deeper... Deeper than before, as something even girthier passes through your [if Player is female]lower lips[else]orifice[end if] with relative ease. She lets out a moan as she doesn't let it go fully inside just yet, but the mere sensations around her knotted cock are bringing her closer and closer... 'Ohh... yes... Here it goes...!' Cherry goes fully inside you, knot and everything, as she delivers her generous load into you, spurt after spurt of creamy hot seed coating your [if Player is female]womb[else]fleshy insides[end if] until the very last drop. You, too, feel yourself being brought over the edge, [if Player is male]your own [Cock of Player] dick exploding in a joyful load which ends up landing all over her couch[else]a surge of intense pleasure making you quiver and squirm all over as your own orgasm bursts through you[end if].";
 	say "     Once her knot deflates, she is finally able to let you go, leaving your energy completely exhausted after how intense that all was.";
 	if Player is male and Player is submissive:
 		say "     'Oh my... Look at what you've done to my couch...' She exclaims, though not in an angry manner. 'Just shameful. Make sure you lick it clean before you go.' That was not a request, either. It was an order, and she is not letting you go until you lick your own cum off her furniture. You really have no choice but to do it as she overviews your task. It thrills you as your submissive instincts kick in, and suddenly, you are giving your best at licking and slurping all the mess you have done, in hopes to satisfy her. Your tongue picks up on the still warm drops of your own spunk and your lips catch whatever escapes your slick organ's reach, taking some time to finish Cherry's command, but doing it properly. 'Good pet. Keep that up and I'll think about keeping you...'";
 	WaitLineBreak;
 	say "     'Hmm... That was most pleasurable for myself. I hope you enjoyed it, as well?' She asks you, returning to her polite and classy manner as she picks up her own clothes. 'I shall bring you a towel, if you need.' Whatever the case, you have left Cherry pleased and happy.";
-	if Player is female:
-		NPCSexAftermath Player receives "PussyFuck" from Cherry;
-	else:
-		NPCSexAftermath Player receives "AssFuck" from Cherry;
+	NPCSexAftermath Player receives "[if Player is female]Pussy[else]Ass[end if]Fuck" from Cherry;
 	if "Transformative Sex" is listed in traits of Cherry:
 		infect "Pink Fox";
 
@@ -469,26 +443,21 @@ to say CherryDomSex:
 	else:
 		say "     You move towards Cherry with a suggestive look, and she seems receptive to your advances. 'Oh? Is my pet in the mood for some play?' She eyes you from above while she is still sitting on her couch, having you kneel before her as you await her decision regarding what to do with you.";
 		WaitLineBreak;
-		let randomnumber be a random number from 1 to 2; [adjust the latter number for the number of options]
-		if randomnumber is:
-			-- 1: [Cherry Dom Fuck]
-				say "     'How about we put your mouth to work while I consider breeding you? That sounds like a lovely idea, actually...' she asks, but to you, that sounds like an order. As she shifts her position slightly to allow you to approach her, the one thing that jumps to the eye is her cock raising to attention when you just get closer. You nod respectfully before your mistress, who smiles at your obedience, as you begin to wrap your lips around her girthy shaft, slowly hardening even further. With your hands, you jerk it at its base while your tongue circles around the tip, then bury several inches deep in your mouth. 'You like it? It's a treat for being such a good [boygirl]...'";
-				say "     With as much enthusiasm as you can gather, you suck on her cock, but more than that, you worship it. You want her to be satisfied with your efforts when she sees you have made her hard and ready to put it in your [if Player is female]pussy[else]ass, to fuck you until she delivers her babies inside you. Rubbing it, pushing your lips up and down against her member, licking it all over and even tilting your head around to give her everything, Cherry notes your eagerness. The pink fox seems quite pleased with you when you look at her in the eyes, a sweet smile forming across her face like the caring mistress she is, as she forward her hand and strokes your cheek affectionately. 'Good job, pet. I'm ready, now.'";
-				WaitLineBreak;
-				say "     As you hear this, she pulls her cock away from your mouth, with this popping sound as your lips slide across its head. She stands up, with her nine inch cock throbbing and ready to bend you over. But you know what she wants before she says it, and you get on all fours in front of her, arching your back and exposing your rear side to her. 'What a lovely sight...' she says as she squeezes one of your buttcheeks, getting behind you to align her cock with [if Player is female]one of your entrances[else]your anal entrance[end if]. At first, she teases you with it, only rubbing her wet tip against [if Player is female]your wet curls[else]your sensitive pucker[end if], and that makes you want it very badly. You end up mindlessly seeking for it, pushing your rear side backwards, but she stops you, holding you still.";
-				say "     'You're so impatient, my dear... But I'm pleased to see you really want this...' She then begins to press her erection against you, slowly pushing it in as you feel that cock of hers entering you, a delightful sensation of pleasure suddenly striking your entire self. Cherry keeps hold of your hips as she carries on burying her length inside you, pushing inch after inch into your [if Player is female]sex[else]ass[end if]. This causes you to let out a moan as your insides are taken by your mistress, who proceeds to thrust back and forth when her tool finally finds itself fully inserted into you, besides the knot. You feel that pretuberancy bumping against your [if Player is female]vulva[else]hole[end if] as she fucks you, slowly at first, taking her time to feel you up from the inside.";
-				WaitLineBreak;
-				say "     But Cherry is only sweet and slow for a while, until you feel her practically climbing on top of you and picking up the pace. You begin to feel her weight on top of you, her sheer power keeping you pinned down underneath her as she fucks you deep, then harder, making your insides bounce with the forceful impact of her thrusts. 'Relax, my pet... Let me take care of you.' She continues this rhythm, going at it faster and faster without letting go as you are only left there, on all fours, taking it doggy style from the dominant pink fox. For a rather refined lady, she does some really mean thrusts, going at it so hard that the momentum sends you back and forth along the motion.";
-				say "     Her knot begins to want to go inside you, as well, and as you feel her getting close, the pink fox finally pushes in completely, locking herself into you. 'Take it, pet... Take it all...!' she moans out loud, her cock throbbing intensely as her balls begin to send the cum out of her and into your [if Player is female]womb[else]bowels[end if]. You take every single drop from beginning to end, all part of a very generous load Cherry deposits in you, filling you up with warm and creamy jizz that you can already feel sloshing within you. The thrill of getting bred by your mistress also made you climax just right after she did, [if Player is male]your cock releasing your own load on the floor[else]an intense wave of pleasure overtaking you as your bottom half quivers in ecstasy[end if]. She takes a moment to catch her breath, seeing that she is locked into you.";
-				WaitLineBreak;
-				say "     'I'm pleased that you enjoyed yourself as well, pet. We might continue later on. For now...' she trails off in her words as she grabs you from behind, her hands over your torso as you lie down on the groun with her on top of you. 'Let us enjoy each other's embrace until I'm able to pull out. Then, I'll make some tea for us, if you want.' You and Cherry remain there, lying down on the floor and hugging each other as you wait for her cock to soften down while still inside you. Her fur feels really soft against your body, which does cause you to close your eyes, feeling a little drowsy. You both decide to take a little nap together before thinking of getting up.";
-				if Player is female:
-					NPCSexAftermath Player receives "PussyFuck" from Cherry;
-				else:
-					NPCSexAftermath Player receives "AssFuck" from Cherry;
-				if "Transformative Sex" is listed in traits of Cherry:
-					infect "Pink Fox";
-			-- 2: [Cherry Normal Fuck]
-				say "[CherryFuck]";
+		if a random chance of 1 in 2 succeeds: [Cherry Dom Fuck]
+			say "     'How about we put your mouth to work while I consider breeding you? That sounds like a lovely idea, actually...' she asks, but to you, that sounds like an order. As she shifts her position slightly to allow you to approach her, the one thing that jumps to the eye is her cock raising to attention when you just get closer. You nod respectfully before your mistress, who smiles at your obedience, as you begin to wrap your lips around her girthy shaft, slowly hardening even further. With your hands, you jerk it at its base while your tongue circles around the tip, then bury several inches deep in your mouth. 'You like it? It's a treat for being such a good [boygirl]...'";
+			say "     With as much enthusiasm as you can gather, you suck on her cock, but more than that, you worship it. You want her to be satisfied with your efforts when she sees you have made her hard and ready to put it in your [if Player is female]pussy[else]ass, to fuck you until she delivers her babies inside you. Rubbing it, pushing your lips up and down against her member, licking it all over and even tilting your head around to give her everything, Cherry notes your eagerness. The pink fox seems quite pleased with you when you look at her in the eyes, a sweet smile forming across her face like the caring mistress she is, as she forward her hand and strokes your cheek affectionately. 'Good job, pet. I'm ready, now.'";
+			WaitLineBreak;
+			say "     As you hear this, she pulls her cock away from your mouth, with this popping sound as your lips slide across its head. She stands up, with her nine inch cock throbbing and ready to bend you over. But you know what she wants before she says it, and you get on all fours in front of her, arching your back and exposing your rear side to her. 'What a lovely sight...' she says as she squeezes one of your buttcheeks, getting behind you to align her cock with [if Player is female]one of your entrances[else]your anal entrance[end if]. At first, she teases you with it, only rubbing her wet tip against [if Player is female]your wet curls[else]your sensitive pucker[end if], and that makes you want it very badly. You end up mindlessly seeking for it, pushing your rear side backwards, but she stops you, holding you still.";
+			say "     'You're so impatient, my dear... But I'm pleased to see you really want this...' She then begins to press her erection against you, slowly pushing it in as you feel that cock of hers entering you, a delightful sensation of pleasure suddenly striking your entire self. Cherry keeps hold of your hips as she carries on burying her length inside you, pushing inch after inch into your [if Player is female]sex[else]ass[end if]. This causes you to let out a moan as your insides are taken by your mistress, who proceeds to thrust back and forth when her tool finally finds itself fully inserted into you, besides the knot. You feel that pretuberancy bumping against your [if Player is female]vulva[else]hole[end if] as she fucks you, slowly at first, taking her time to feel you up from the inside.";
+			WaitLineBreak;
+			say "     But Cherry is only sweet and slow for a while, until you feel her practically climbing on top of you and picking up the pace. You begin to feel her weight on top of you, her sheer power keeping you pinned down underneath her as she fucks you deep, then harder, making your insides bounce with the forceful impact of her thrusts. 'Relax, my pet... Let me take care of you.' She continues this rhythm, going at it faster and faster without letting go as you are only left there, on all fours, taking it doggy style from the dominant pink fox. For a rather refined lady, she does some really mean thrusts, going at it so hard that the momentum sends you back and forth along the motion.";
+			say "     Her knot begins to want to go inside you, as well, and as you feel her getting close, the pink fox finally pushes in completely, locking herself into you. 'Take it, pet... Take it all...!' she moans out loud, her cock throbbing intensely as her balls begin to send the cum out of her and into your [if Player is female]womb[else]bowels[end if]. You take every single drop from beginning to end, all part of a very generous load Cherry deposits in you, filling you up with warm and creamy jizz that you can already feel sloshing within you. The thrill of getting bred by your mistress also made you climax just right after she did, [if Player is male]your cock releasing your own load on the floor[else]an intense wave of pleasure overtaking you as your bottom half quivers in ecstasy[end if]. She takes a moment to catch her breath, seeing that she is locked into you.";
+			WaitLineBreak;
+			say "     'I'm pleased that you enjoyed yourself as well, pet. We might continue later on. For now...' she trails off in her words as she grabs you from behind, her hands over your torso as you lie down on the groun with her on top of you. 'Let us enjoy each other's embrace until I'm able to pull out. Then, I'll make some tea for us, if you want.' You and Cherry remain there, lying down on the floor and hugging each other as you wait for her cock to soften down while still inside you. Her fur feels really soft against your body, which does cause you to close your eyes, feeling a little drowsy. You both decide to take a little nap together before thinking of getting up.";
+			NPCSexAftermath Player receives "[if Player is female]Pussy[else]Ass[end if]Fuck" from Cherry;
+			if "Transformative Sex" is listed in traits of Cherry:
+				infect "Pink Fox";
+		else: [Cherry Normal Fuck]
+			say "[CherryFuck]";
 
 Cherry ends here.

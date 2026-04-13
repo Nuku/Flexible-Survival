@@ -119,6 +119,13 @@ This is the Rubber Puma Infection rule:
 
 Section 5 - Creature Insertion
 
+[Table of CombatPrep (continued)
+name(text)	PrepFunction(text)
+"Rubber Puma"	"[PrepCombat_Rubber Puma]"
+
+to say PrepCombat_Rubber Puma:
+	setmongender 0;]
+
 [The Rubber Puma is not an enemy proper (yet), but I leave the code there for the infection]
 
 Table of Random Critters (continued)

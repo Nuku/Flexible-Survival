@@ -20,7 +20,7 @@ Sarea of MeetingClayton is "Nowhere".
 to say CherryTalkClayton:
 	say "     Seeing how Cherry seems to be deep in thought, you resolve asking her if everything is fine. She takes a moment to process your words as she pulls herself from the tumultuous daydreaming sea in her head, turning to face you with a slightly surprised expression. 'Oh, it is nothing, my dear. I'm simply... Well, worrying about a few acquaintances of mine, nothing more.' You figure you should ask her a bit more about it, as you may be able to assist her with any trouble. The pink fox smiles at your gesture, happy to see that you cared about her personal issues. 'My apologies. I tend to act all high and mighty, it became a habit due to my job and other struggles in life, but it simply does not make me immune to worry. I am not the cold woman the world wanted me to be, for the better or worse...'";
 	say "     She then recollects herself from this brief distraction and seems keen on telling you what is going on. 'Alright, darling, there is indeed someone that worries me a little, an old friend of mine who used to own a farm in the outskirts of the district, and I would appreciate a moment of your time so I could send you on an errand to assist him. But, of course, it can wait if you have any pending matters. I don't mean to impose.'";
-	LineBreak;
+	WaitLineBreak;
 	say "     Cherry seems to want to ask you a favor, and that means [bold type]you will likely be busy[roman type] for at least the next hours. Knowing this, [bold type]should you accept it[roman type]? You can always return later and speak to her again.";
 	say "     ([link]Y[as]y[end link]) - Assist Cherry.";
 	say "     ([link]N[as]n[end link]) - Not right now.";
@@ -37,7 +37,7 @@ to say CherryTalkClayton:
 		say "     Cherry then walks over to the door as she resumes speaking to you, 'Well, I hope I've informed you on the subject well enough. If you are still willing to assist me, we could be on our way there right now.' Seeing no reason to stall this any further, you nod, readying yourself to travel with Cherry to your target location. 'Splendid. I shall take the lead and guide us through the safest routes, hopefully. And I'm quite sure you'll like to meet Clayton.' Without any further ado, Cherry proceeds to request that you open the door for her, and you do so before following right after her, and after you have made sure you closed it properly.";
 		WaitLineBreak;
 		clear the screen;
-		say "     Safely heading out of the apartment complex, you and Cherry make it to the streets while, hopefully, remaining out of sight from undesired roamers. Also, as the supply box is considerably heavy, you take turns with your pink fox friend, which alleviates your efforts. Fortunately, it does seem like a calm day, so you have little trouble finding discrete enough routes and make steady progress towards your destination. On the way, Cherry explains you how which shortcuts to take in order to make your path safer and quicker, and you easily get a good idea of how to navigate this district and reach her second property. 'It is not too far, but having to cross the entirety of the district towards the outskirts is somewhat of an inconvenience...'";
+		say "     Safely heading out of the apartment complex, you and Cherry make it to the streets while, hopefully, remaining out of sight from undesired roamers. Also, as the supply box is considerably heavy, you take turns with your pink fox friend, which alleviates your efforts. Fortunately, it does seem like a calm day, so you have little trouble finding discreet enough routes and make steady progress towards your destination. On the way, Cherry explains you how which shortcuts to take in order to make your path safer and quicker, and you easily get a good idea of how to navigate this district and reach her second property. 'It is not too far, but having to cross the entirety of the district towards the outskirts is somewhat of an inconvenience...'";
 		say "     Eventually, you safely arrive at your destination. 'Here we are. It is simply a modest house in a quiet neighborhood, a place I mostly went to during the weekends and such. It's a peaceful spot to rest, has a large backyard and an annex, perfect to indulge in outside hobbies. I thought Clayton would fit in well enough, and I hope I wasn't wrong...' she stops before taking a deep breath and turning her face towards yours, 'I haven't seen him in several days, as I've been busy tending to myself... Anyway, we'll see how he's faring.' Indeed, Cherry's second house could be described as modest for someone of her ranking in a corporation, but it is, in fact, very sizable. It features a tall enough surrounding wall for privacy and, as you are able to see once Cherry opens the gate with her spare keys, you see just how big its exterior is. You doubt anyone would not feel comfortable living here.";
 		AddNavPoint Clayton's Front Yard;
 		WaitLineBreak;
@@ -51,8 +51,7 @@ to say CherryTalkClayton:
 		say "     'Oh, I've just come to deliver you a box of supplies I'm sure you would find useful, and... I also came to introduce a friend of mine,' she then beckons you to approach them, and as you step forward, Clayton's eyes wander through your figure from head to feet and back up, as a smirky grin forms across his muzzle. 'Ye're in good company...! Is this som['] wanderer ye've caught in the wil[']?' he asks, and now that you are standing close to the bull, you notice his strong animalistic musk as it fills your nostrils. Almost immediately, you feel significantly aroused, as this scent feels heavily loaded with pheromones that, no matter what you are usually into, manage to trigger your lusts just right. The fact he is standing completely naked strengthens its effectiveness, you feel.";
 		WaitLineBreak;
 		say "     '[SubjectProCap] found me, in fact, while I was in a bit of a pickle. Fortunately, everything went well, and I ended up inviting [ObjectPro] home for some tea,' she explains, though Clayton seems very enthralled by you, for some reason. You have an idea in what way exactly once you catch his enormous meat giving a little twitch. 'Good lookin' [guygal], if I'm to say. I wouldn't mind gettin['] t'know [ObjectPro] myself, always down t'make friends!'. Cherry seems happy to hear this as she replies right after, 'Oh, that is wonderful to hear, my dear! It was with that intention in mind that I've decided to introduce [ObjectPro] to you. I thought you could get along and not feel so lonely all the time. I'm glad to know that I was right.'";
-		LineBreak;
-		say "     'Yeah, y'don['] worry [']bout that, for I'm sure we'll get along jus'fine... Ye're good with yer hands, by any chance?' the bull asks you.";
+		say "     'Yeah, y'don['] worry [']bout that, for I'm sure we'll get along jus['] fine... Ye're good with yer hands, by any chance?' the bull asks you.";
 		say "     ([link]Y[as]y[end link]) - You are confident about your hand skills.";
 		say "     ([link]N[as]n[end link]) - Actually, you tend to be a little clumsy.";
 		if Player consents:
@@ -65,6 +64,7 @@ to say CherryTalkClayton:
 		say "     After the pink fox leaves you alone with the bull, he looks over the box, then back to you. 'Well, then I guess [']tis as good a time as any for introductions, aye? Name's Clayton, used t'be a local farmer before shite hit the fans. If ye're a friend of Cherry's then ye're my friend as well.' He walks up to you and pats your shoulder with a much heavier hand than you could anticipate, then with a gentle squeeze, he pulls away before beckoning you towards the supply box. 'Now, let's see what ol' Cherry brought. She's a really sweet lass for rememberin[']. And y'helped bringin['] this stuff, too?' You nod as he checks the box's contents, and it seems it is mostly food in great condition, most in cans for better preservation, and several bottles of clean water.";
 		WaitLineBreak;
 		say "     'She didn't need to...! There's a lot of stuff here she coul['] make use of too...! Spoilin['] me like this, that woman... Anyway, I'll find a proper place to stash these in later, aye. Y'wanna sit and chat a while?'";
+		WaitLineBreak;
 		move player to Clayton's Backyard Annex;
 		now Resolution of MeetingClayton is 2; [Interactions with the bull unlocked]
 		WaitLineBreak;
@@ -77,7 +77,7 @@ Section 2 - Rooms
 
 a postimport rule: [bugfixing rules for players that import savegames]
 	if resolution of MeetingClayton >= 2: [event resolved the right way, room not connected yet]
-		AddNavPoint Clayton's Front Yard;
+		AddNavPoint Clayton's Front Yard silently;
 
 Table of GameRoomIDs (continued)
 Object	Name
@@ -85,10 +85,7 @@ Clayton's Backyard Annex	"Clayton's Backyard Annex"
 
 Clayton's Backyard Annex is a room.
 Clayton's Backyard Annex is north of Clayton's Backyard Outside.
-Description of Clayton's Backyard Annex is "[ClaytonBackyardAnnexDesc]".
-
-to say ClaytonBackyardAnnexDesc:
-	say "     The insides of the annex are simple, yet function practically as a secondary habitation, and contain a space that seems to serve as a garage, though everything in here is considerably more dusty than the rest of the house. Clayton does what he can to keep it relatively clean. This area is mostly filled with older furniture and only has windows on one of the sides, so during the day, not a lot of light comes in, only enough to provide moderate visibility. It, however, seems to be the place where Clayton spends most of the time, as it is quite wide and tall, with plenty of space for him to walk about and do his things, and there is even a bedroll, which means he must also sleep here. To the [bold type]south[roman type], you could simply walk away into the backyard outside.";
+Description of Clayton's Backyard Annex is "     The insides of the annex are simple, yet function practically as a secondary habitation, and contain a space that seems to serve as a garage, though everything in here is considerably more dusty than the rest of the house. Clayton does what he can to keep it relatively clean. This area is mostly filled with older furniture and only has windows on one of the sides, so during the day, not a lot of light comes in, only enough to provide moderate visibility. It, however, seems to be the place where Clayton spends most of the time, as it is quite wide and tall, with plenty of space for him to walk about and do his things, and there is even a bedroll, which means he must also sleep here. To the [bold type]south[roman type], you could simply walk away into the backyard outside.[line break]".
 
 [---]
 
@@ -98,10 +95,7 @@ Clayton's Backyard Outside	"Clayton's Backyard Outside"
 
 Clayton's Backyard Outside is a room.
 Clayton's Backyard Outside is north of Clayton's House Kitchen.
-Description of Clayton's Backyard Outside is "[ClaytonBackyardOutsideDesc]".
-
-to say ClaytonBackyardOutsideDesc:
-	say "     You are standing in the space between the main house building and the annex, which is mostly a paved backyard with several spots for planters next to the surrounding walls. From here, you can head directly [bold type]north[roman type] into the annex, a wide and somewhat tall construction with a door on one of the sides, a few windows and a garage gate on the other, but that otherwise looks like an extension to the residence, or you can head through the door [bold type]south[roman type] to arrive at the dwelling's kitchen.";
+Description of Clayton's Backyard Outside is "     You are standing in the space between the main house building and the annex, which is mostly a paved backyard with several spots for planters next to the surrounding walls. From here, you can head directly [bold type]north[roman type] into the annex, a wide and somewhat tall construction with a door on one of the sides, a few windows and a garage gate on the other, but that otherwise looks like an extension to the residence, or you can head through the door [bold type]south[roman type] to arrive at the dwelling's kitchen.[line break]".
 
 [---]
 
@@ -111,10 +105,7 @@ Clayton's House Kitchen	"Clayton's House Kitchen"
 
 Clayton's House Kitchen is a room.
 Clayton's House Kitchen is northwest of Clayton's House Main Hall.
-Description of Clayton's House Kitchen is "[ClaytonHouseKitchenDesc]".
-
-to say ClaytonHouseKitchenDesc:
-	say "     The house's kitchen is a modern space with most appliances you would expect to find in such, though apart from the oven, which seems to function with gas, everything else would not work without power, severely limiting the uses of this division. There are nicely-sized windows above the counters which provide good natural illumination during the day, and in the center lies a wooden table with several chairs. Atop it is what seemed to be a fruit bowl, which is now empty. If you head [bold type]north[roman type], you can walk outside into the backyard, and heading [bold type]southeast[roman type] leads into the house's main hall.";
+Description of Clayton's House Kitchen is "     The house's kitchen is a modern space with most appliances you would expect to find in such, though apart from the oven, which seems to function with gas, everything else would not work without power, severely limiting the uses of this division. There are nicely-sized windows above the counters which provide good natural illumination during the day, and in the center lies a wooden table with several chairs. Atop it is what seemed to be a fruit bowl, which is now empty. If you head [bold type]north[roman type], you can walk outside into the backyard, and heading [bold type]southeast[roman type] leads into the house's main hall.[line break]".
 
 [---]
 
@@ -124,10 +115,7 @@ Clayton's House Main Hall	"Clayton's House Main Hall"
 
 Clayton's House Main Hall is a room.
 Clayton's House Main Hall is north of Clayton's Front Yard.
-Description of Clayton's House Main Hall is "[ClaytonHouseMainHallDesc]".
-
-to say ClaytonHouseMainHallDesc:
-	say "     This is the entrance to the house and the division that connects to every room within the ground floor. It is modestly decorated with a chandelier on the ceiling, a carpet on the mosaic floor, a cabinet on the wall and a large mirror above it. There is also a large sized sculpture to the corner, right next to the double-door that serves as entrance. From here, you can see several other doors leading to different parts of the house, including the kitchen's, to the [bold type]northwest[roman type], and some stairs to the side of the wall leading upwards, possibly into the bedrooms (currently unaccessible).";
+Description of Clayton's House Main Hall is "     This is the entrance to the house and the division that connects to every room within the ground floor. It is modestly decorated with a chandelier on the ceiling, a carpet on the mosaic floor, a cabinet on the wall and a large mirror above it. There is also a large sized sculpture to the corner, right next to the double-door that serves as entrance. From here, you can see several other doors leading to different parts of the house, including the kitchen's, to the [bold type]northwest[roman type], and some stairs to the side of the wall leading upwards, possibly into the bedrooms (currently unaccessible).[line break]".
 
 [---]
 
@@ -137,14 +125,11 @@ Clayton's Front Yard	"Clayton's Front Yard"
 
 Clayton's Front Yard is a room. It is a fasttravel. Clayton's Front Yard is private.
 The earea of Clayton's Front Yard is "High".
-Description of Clayton's Front Yard is "[ClaytonFrontYardDesc]".
-
-to say ClaytonFrontYardDesc:
-	say "     The front yard of Clayton's current residence is a large sized garden, which he seems to tend to fairly well. You can see the front side of the house, a modest building with two floors that is in a relatively good state, having seemingly escaped the relentless scavengers. Its walls are close to white, and parts of the construction were made with stone accents of a grey-ish color. Furthermore, this section has a pathway, also made of stone but of a different kind, leading further [bold type]north[roman type] towards the main entrance, a large double-door made of dark wood.";
+Description of Clayton's Front Yard is "     The front yard of Clayton's current residence is a large sized garden, which he seems to tend to fairly well. You can see the front side of the house, a modest building with two floors that is in a relatively good state, having seemingly escaped the relentless scavengers. Its walls are close to white, and parts of the construction were made with stone accents of a grey-ish color. Furthermore, this section has a pathway, also made of stone but of a different kind, leading further [bold type]north[roman type] towards the main entrance, a large double-door made of dark wood.[line break]".
 
 instead of going north from Clayton's Front Yard:
 	say "     You walk up to the house's main door, but Clayton has the habit to keep it locked.";
-	say "     [bold type]Perhaps you could simply walk around the house and check the backyard?[roman type][line break]";
+	say "[line break]     [bold type]Perhaps you could simply walk around the house and check the backyard?[roman type][line break]";
 	say "     ([link]Y[as]y[end link]) - Walk around (leads to the backyard).";
 	say "     ([link]N[as]n[end link]) - Stay where you are.";
 	if Player consents:
@@ -197,27 +182,21 @@ SexuallyExperienced of Clayton is true.
 TwistedCapacity of Clayton is false. [Twisted Characters can take any penetration, no matter the size]
 Sterile of Clayton is false. [steriles can't knock people up]
 MainInfection of Clayton is "Bovine".
-Description of Clayton is "[ClaytonDesc]".
-Conversation of Clayton is { "Moo." }.
-
-to say ClaytonDesc:
-	say "     This sturdy, towering and muscular anthropomorphic bull going by the name [']Clayton['] appears to have been formerly a middle-aged farmer who has attained the appearance of a large and masculine bovine. Somehow, he appears to have attained an exceptionally bulky and incredibly muscular frame, unnaturally so, and his height reaches nearly an impressive nine feet. There is also a pair of large tauric horns atop his bovine head that curve forward, like an actual bull's, and he gave himself a nose ring. Taking a more attentive look at his body, it is completely covered in a light brown, almost golden, short-length fur, which lightens up on the front. His muscles are truly enormous, especially his chest, with each pectoral bulging forward as thick masses of muscle, ending in eye-catching puffy nipples. Resuming at the hips and downwards, he has strong two-jointed legs that end in hooves, while between them dangles a long and monstrously thick human-like cock with a pair of two massive and full balls hanging underneath. Obviously, someone as huge as him would struggle to find proper pieces of clothing to cover himself with, but in his own home, he does not seem to care about concealing any part of his body at all, walking around completely naked even in your presence.";
-
-instead of sniffing Clayton:
-	say "     The massive bull has a strong animalistic musk, loaded with pheromones that immediately fill your nostrils. No matter what you are normally into, his scent arouses you and makes you think of sex.";
+Description of Clayton is "     This sturdy, towering and muscular anthropomorphic bull going by the name [']Clayton['] appears to have been formerly a middle-aged farmer who has attained the appearance of a large and masculine bovine. Somehow, he appears to have attained an exceptionally bulky and incredibly muscular frame, unnaturally so, and his height reaches nearly an impressive nine feet. There is also a pair of large tauric horns atop his bovine head that curve forward, like an actual bull's, and he gave himself a nose ring. Taking a more attentive look at his body, it is completely covered in a light brown, almost golden, short-length fur, which lightens up on the front. His muscles are truly enormous, especially his chest, with each pectoral bulging forward as thick masses of muscle, ending in eye-catching puffy nipples. Resuming at the hips and downwards, he has strong two-jointed legs that end in hooves, while between them dangles a long and monstrously thick human-like cock with a pair of two massive and full balls hanging underneath. Obviously, someone as huge as him would struggle to find proper pieces of clothing to cover himself with, but in his own home, he does not seem to care about concealing any part of his body at all, walking around completely naked even in your presence.[line break]".
+[Conversation of Clayton is { "Moo." }.]
+Scent of Clayton is "     The massive bull has a strong animalistic musk, loaded with pheromones that immediately fill your nostrils. No matter what you are normally into, his scent arouses you and makes you think of sex.".
 
 Section 3-1 - Clayton Talk
 
-ClaytonDoneTalking is a truth state that varies.[@Tag:NotSaved]
+[ClaytonDoneTalking is a truth state that varies.[@Tag:NotSaved]]
 
 instead of conversing Clayton:
 	say "     You sit down with the massive bull, hoping to have a conversation with him. He nods and smiles, happy to talk to you. 'Wantin['] to have a chat with big ol['] me? By all means, be my guest.'";
+	LineBreak;
 	say "[ClaytonTalkMenu]";
 
 to say ClaytonTalkMenu:
-	now ClaytonDoneTalking is false;
 	say "     [bold type]What do you want to talk about with Clayton?[roman type][line break]";
-	LineBreak;
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]
@@ -256,25 +235,24 @@ to say ClaytonTalkMenu:
 			choose row calcnumber in table of fucking options;
 			say "[title entry]: [description entry]?";
 			if Player consents:
-				let nam be title entry;
 				now sextablerun is 1;
-				if (nam is "Himself"):
-					say "[ClaytonTalkHimself]";
-				else if (nam is "Thoughts"):
-					say "[ClaytonTalkThoughts]";
-				else if (nam is "Plans"):
-					say "[ClaytonTalkPlans]";
-				else if (nam is "Sex"):
-					say "[ClaytonTalkSex]";
+				if title entry is:
+					-- "Himself":
+						say "[ClaytonTalkHimself]";
+					-- "Thoughts":
+						say "[ClaytonTalkThoughts]";
+					-- "Plans":
+						say "[ClaytonTalkPlans]";
+					-- "Sex":
+						say "[ClaytonTalkSex]";
 				wait for any key;
-				if ClaytonDoneTalking is false:
-					say "[ClaytonTalkMenu]"; [looping back to keep talking with him]
+				say "[ClaytonTalkMenu]"; [looping back to keep talking with him]
 		else if calcnumber is 0:
 			now sextablerun is 1;
 			say "     You excuse yourself as you prepare to be on your way, finishing any pending subjects with Clayton.";
 			wait for any key;
 		else:
-			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options], or 0 to exit.";
 	clear the screen and hyperlink list;
 
 to say ClaytonTalkHimself:
@@ -317,7 +295,6 @@ Instead of fucking Clayton:
 				say "     'Ye're sure y'wanna... I'd be really happy if... Uh...' he is about to say something, but you can tell the big bull is a bit embarrassed, so you place your hand over the upper side of one of his pecs and tell him everything is fine, then throwing in a compliment about his great physique and really good looks. This is enough to bring a smile on him, and then he continues to speak, 'Aw, ye're really kind... And yer hand feels nice on those... Heh...' He gives you a suggestive look, but you know what you want to do.";
 			else if Libido of Clayton > 1:
 				say "     'Not gonna lie, but after what we did last time, it got me thinkin[']... Y'could maybe touch me somewhere else, too, if y'wanna...' The bull throws a suggestive glance at you, then downwards, before he continues to speak, 'It's these big boys down here... They've been weighin['] a lot all this time without someone to take care of'em... Would ya do the honors?' Feeling more comfortable around you, the bovine simply lets his body do the work as he his boner keeps growing right in front of you, waiting for your move.";
-			LineBreak;
 			say "[ClaytonSexMenu]";
 
 to say ClaytonSexMenu:
@@ -348,19 +325,18 @@ to say ClaytonSexMenu:
 			choose row calcnumber in table of fucking options;
 			say "[title entry]: [description entry]?";
 			if Player consents:
-				let nam be title entry;
 				now sextablerun is 1;
-				if (nam is "Massage his massive pecs"):
-					say "[ClaytonSexPecs]";
-				else if (nam is "Worship his heavy balls"):
-					say "[ClaytonSexBalls]";
-				wait for any key;
+				if title entry is:
+					-- "Massage his massive pecs":
+						say "[ClaytonSexPecs]";
+					-- "Worship his heavy balls":
+						say "[ClaytonSexBalls]";
 		else if calcnumber is 0:
 			now sextablerun is 1;
 			say "     You politely excuse yourself, Clayton eyeing you with visible disappointment 'Aw... Aye, maybe later then?'";
-			wait for any key;
 		else:
-			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
+			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options], or 0 to exit.";
+	wait for any key;
 	clear the screen and hyperlink list;
 
 to say ClaytonSexPecs:

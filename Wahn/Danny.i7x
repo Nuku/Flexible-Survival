@@ -23,7 +23,6 @@ Version 1 of Danny by Wahn begins here.
 [   0: not started yet                                                                 ]
 [ 100: player discouraged him from going out                                           ]
 
-
 Section 1 - Description
 
 Table of GameCharacterIDs (continued)
@@ -69,28 +68,25 @@ Sterile of Danny is false. [steriles can't knock people up]
 MainInfection of Danny is "Mall Rat".
 The icon of Danny is Figure of Danny_clothed_icon.
 Description of Danny is "[DannyDesc]".
-Conversation of Danny is { "Woof." }.
+[Conversation of Danny is { "Woof." }.]
+The scent of Danny is "     Danny smells hip, like the coolest rat ever.".
 
 to say DannyDesc:
 	if debugactive is 1:
 		say "DEBUG -> HP: [HP of Danny], LIBIDO: [Libido of Danny] <- DEBUG[line break]";
 	say "     Danny is a young adult mall rat, wearing his signature sleek and stylish long coat that hangs down to his knees and highlights his slender frame. His face is pretty cute, with a pointy nose and large ears, framed by unruly streaks of green-dyed hair. He usually has a shiny black smartphone in one of his fine-boned hands, using the precious piece of still-working technology to take photos and videos of just about anything he sees.";
 
-The scent of Danny is "     Danny smells hip, like the coolest rat ever.".
-
 Section 2 - Talking
 
 instead of conversing the Danny:
+	project the figure of Danny_face_icon;
 	if HP of Danny is 0:
-		project the figure of Danny_face_icon;
 		say "     As you walk up to the slender mall rat, he raises his smartphone and calls out 'smile', then takes a picture. Sliding the device into his pocket afterwards, the anthro rodent then holds a hand out for you to shake and says, 'Welcome to the mall and nice to meet you. I'm Danny.' The young man is pretty friendly and starts a conversation with you about how things stand outside the mall. He is clearly interested in what new types of beings now live in the city and eagerly shows you some of the pictures he took since the whole trouble with the nanites started. There clearly are quite a few more types of creatures than you had even realized, and those are just the ones peaceful enough to be allowed in the mall. After a while, the topic of conversation swings over to the mall itself and its inhabitants, from Danny's ratty compatriots to the more unique Santa Claws and even the mysterious Nermine. He warns you about the jackaless, saying that strange things go on in her store.";
 		now HP of Danny is 1;
 	else:
 		say "[DannyTalkMenu]";
 
 to say DannyTalkMenu:
-	LineBreak;
-	project the figure of Danny_face_icon;
 	say "What do you want to talk with Danny about?";
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
@@ -119,19 +115,18 @@ to say DannyTalkMenu:
 			choose row calcnumber in table of fucking options;
 			say "[title entry]: [description entry]?";
 			if Player consents:
-				let nam be title entry;
 				now sextablerun is 1;
-				if (nam is "Just chat a bit"):
-					say "[DannyTalk1]";
-				if (nam is "Ask him about taking photographs"):
-					say "[DannyTalk2]";
-				wait for any key;
+				if title entry is:
+					-- "Just chat a bit":
+						say "[DannyTalk1]";
+					-- "Ask him about taking photographs":
+						say "[DannyTalk2]";
 		else if calcnumber is 0:
 			now sextablerun is 1;
 			say "     You step back from the young mall rat, shaking your head slightly as he gives a questioning look.";
-			wait for any key;
 		else:
-			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
+			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options], or 0 to exit.";
+	wait for any key;
 	clear the screen and hyperlink list;
 
 to say DannyTalk1:
@@ -140,8 +135,7 @@ to say DannyTalk1:
 to say DannyTalk2:
 	if Dexterity of Danny is 0:
 		say "     'You know, I saw you when you visited the Christmas village,' Danny says, smiling as you give him a puzzled look. 'Didn't realize I was there, did you? That's all because of this stupid thing.' With that said, he pulls an actual camera - of the old style with chemical film - out of his satchel and holds it up for you to look at. Looks rather plain, a bit scratched up and at least 20 years old. As you raise an inquisitive eyebrow, he goes on to explain, 'I think this thing is magic - or cursed or something. I got it from Nermine. You see...'";
-		say "     [bold type]Do you listen to his tale how he got the old camera?[roman type][line break]";
-		LineBreak;
+		say "[line break]     [bold type]Do you listen to his tale how he got the old camera?[roman type][line break]";
 		say "     ([link]Y[as]y[end link]) - Nod for him to continue telling the story.";
 		say "     ([link]N[as]n[end link]) - Wave him off. Just mentioning Nermine's name tells you that the camera has some weird properties.";
 		if Player consents:
@@ -158,7 +152,6 @@ to say DannyTalk2:
 		say "     'So as you can tell I won't have a university to attend for a while. But I still like to practice recording and taking photographs. I have taken quite a few of the monsters throughout the city. Not to toot my own horn or anything but I'm pretty good. What I really want to do is photograph all the monsters throughout the city, but I'm not strong enough to go outside and survive by myself. This magic camera doesn't make me invisible, just uninteresting, you know.'";
 		LineBreak;
 		say "     Danny's gaze lowers to the floor. Might be a good idea to tag along with you so you can keep him safe while he photographs different monsters. [bold type]'Would you mind helping me?'[roman type] he asks before you get a chance to offer or to even think it through.";
-		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Agree to help him out.";
 		say "     ([link]N[as]n[end link]) - Talk him out of risking a trip out into the city.";
 		if Player consents: [agree]
@@ -172,7 +165,6 @@ to say DannyTalk2:
 			now Dexterity of Danny is 100; [talked out of going into the city]
 	else if Dexterity of Danny is 100: [talked out of going into the city]
 		say "     Bringing up the topic of his photography again puts a smile on the male rodent's face. 'Glad to see you're interested in my art,' he says, then pulls a few photographs out of his satchel and gladly shows them off. There are a number of different creatures there, all of them of the more stable variety of city-dwellers. Who else would get past the wolverine guards after all - all of the pictures are taken inside the mall. 'As you can see, I've made a little bit of progress since we talked about this last time. Of course, going out into the city and actually seeing out interesting creatures would be a lot more fun. In more than one way...' He winks at you as he says that last sentence and suggestively runs a slim paw down the front of his chest. [bold type]Then Danny asks, 'Any chance you've changed your mind about helping me out?'[roman type][line break]";
-		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Agree to help him out.";
 		say "     ([link]N[as]n[end link]) - Talk him out of risking a trip out into the city.";
 		if Player consents:
@@ -199,7 +191,9 @@ to say DannyTalk2:
 			say "     The creature breaks off its charge to 'look' at you, aiming the cum-slit of its phallic head right towards you. Apparently, it must not like what it sees, because it immediately turns around and leaves.[line break](The creature won't fight you if you have the Female Preferred feat.)";
 			say "     Danny comes over to you a moment later. 'Wow, that was exciting!' Danny says with a sparkle in his eyes, 'Thank you for distracting it so I could get away.' You shake your head and wave for him to follow, then start on your trek back to the mall. On the way, you have a word or three with him about not dashing forward without you and getting himself into trouble like with the cock cannon. It remains to be seen if the young rodent will take that to heart....";
 		else:
+			now inasituation is true;
 			challenge "Cock Cannon";
+			now inasituation is false;
 			if fightoutcome >= 20 and fightoutcome <= 29: [lost]
 				say "     As you stumble away, soaked through to your skin with cum and feeling stuffed with all the cum you gulped down, you soon are joined by Danny. He looks at you a bit wide-eyed and says, 'That was... wow! I didn't know those things could do such a thing. It just... slurped you up and went on its way. I followed it in a safe distance for quite a while before it, erm... blasted you out. Looked really strange, but also interesting. Wanna see?' He raises his smartphone and wiggles it a little, indicating that he actually took a video of your experience. Shaking your head at the fact that he apparently just kept filming without trying to help you, you decline and say that being on the receiving end of the creature's attention was enough for you today. No need to relive that right now.";
 				say "     'Okay then,' Danny says with a nod and closes the vid he pulled up with a swipe of his finger. 'I guess that's one recording I won't be showing around, okay? At least not without you saying I can.' You shake your head and wave for him to follow, then start on your trek back to the mall. On the way, you have a word or three with him about not dashing forward without you and getting himself into trouble like with the cock cannon. It remains to be seen if the young rodent will take that to heart...";
@@ -217,8 +211,7 @@ to say DannyTalk2:
 		now Dexterity of Danny is 2; [successfully got through the cock cannon scene]
 	else if Dexterity of Danny is 2:
 		say "     Going back to your little mall rat friend, you ask Danny if he would like any more help with his ambitious photo safari. He gives you a beaming smile and nods quickly, then says in an eager tone, 'Awesome! I've heard that there is a really hot dude roaming around in the zoo. I've wanted to snap his picture ever since I heard about him.' Raising his hands, he paints a broad-shouldered outline in the air, playfully groping the imaginary man's buttocks as he says, 'A zebra man! He's like, really, really hot.'";
-		say "     [bold type]Agree to take Danny to the zoo?[roman type][line break]";
-		LineBreak;
+		say "[line break]     [bold type]Agree to take Danny to the zoo?[roman type][line break]";
 		say "     ([link]Y[as]y[end link]) - Sure thing. You'll go right now!";
 		say "     ([link]N[as]n[end link]) - Not at the moment...";
 		if Player consents:
@@ -229,8 +222,7 @@ to say DannyTalk2:
 			say "     You decide that it is best not to put yourself back in danger for Danny, at least right now. You tell him that you aren't really feeling up for going out and finding the zebra right now. 'Oh,' he replies, clearly disappointed 'Sure. That's chill.' He adds as an afterthought later, trying to sound cheery, but you can tell that he really wanted to go right now. Danny looks down at his feet and starts sliding them across the floor, holding one of his elbows. Is he intentionally trying to make you feel guilty? You tell him that you might help him some other time, just not right now, and he doesn't say anything back as he keeps looking sad. You can swear that you hear a little sniffle but choose not to say anything. Bidding the slender rodent goodbye, you walk away after he gives you a hushed bye.";
 			now Dexterity of Danny is 3; [refused to go meet the zebra]
 	else if Dexterity of Danny is 3:
-		say "     [bold type]Do you tell Danny that you'll now take him to the zoo?[roman type][line break]";
-		LineBreak;
+		say "[line break]     [bold type]Do you tell Danny that you'll now take him to the zoo?[roman type][line break]";
 		say "     ([link]Y[as]y[end link]) - Sure thing. You'll go right now!";
 		say "     ([link]N[as]n[end link]) - Not at the moment...";
 		if Player consents:
@@ -251,17 +243,15 @@ to say PhotoSafari_Zebra:
 	say "     With his camera in his hands, the mall rat wanders left and right a little, getting more and more unruly as his intended target doesn't appear, even after some time. Eventually, his cute face draws into a pout, and he grumbles, 'Okay, Plan B it is then.' The young mall rat starts digging around in the satchel he carries, pulling out a small perfume vaporizer that bears a sticker with a single red exclamation mark on its bottle. 'This one really [italic type]must[roman type] work!' he says with a determined huff, then sprays it at himself - and you, before you have any chance to stop him. Eyebrows drawing together, you ask in a concerned tone what exactly Danny dusted both of you with. 'Oh, it's just a pheromone that makes us smell like we're in heat,' he says totally nonchalantly, dropping the bottle back into his bag. For a second, his impudence leaves you speechless, then you shake your head in disbelief.";
 	WaitLineBreak;
 	say "     Holding back your own frustration at his thoughtless act, you swallow the harsh words that come to mind as you see the look of boundless excitement on his face. It really is just Danny's character to be a bit brash and fast about things, you guess, and right now is not the time to address it anyways, not with you smelling like two sex-hungry sluts! Waiting for the gentle breeze of the wind to carry your scent across the zoo, the two of you stay where you are for several tense minutes before you hear a rustling coming from behind you. Danny turns to look and pats the side of your arm, whispering, 'Hey, we have a problem here.' You glance at what he's pointing at - a tigertaur that is just stepping out of the bushes not too far away, panting heavily, eyes glistening, and sporting a hard on. Danny snaps a quick picture before ducking behind you. This leaves you to deal with the overgrown cat padding towards you with a lust-filled growl.";
+	now inasituation is true; [disables normal pre/post combat messages]
 	challenge "Tigertaur";
 	if fightoutcome >= 10 and fightoutcome <= 19: [won]
 		say "     Having fought off the tigertaur, with her fleeing before you, Danny cheers you on, then tells you what a great job you did. 'Those pheromones really did work quick, didn't they? Now, we just need to wait till our stud appears too,' he adds with a chuckle. Turning back to the mall rat to have a word about putting the both of you in danger like this, you are surprised to see that the zebra stallion that Danny wanted to attract is actually standing behind him, arms crossed in front of his chest and a cocky expression on his face. Grinning broadly, the hunk calls out, 'Now, here I thought that I smelled a few sluts in heat, but all I see is just a twink-boy plus... what? Hired muscle?' Eyes going wide, the mall rat slowly turns around, then proceeds to take in the guy with his gaze wandering from head to hooves. The next thing your ratty companion does is take a quick picture of the stallion's throbbing manhood.";
 		say "     'If you're that into me and smell like a fertile bitch anyways, I'll just add you to my herd. You'll look great in stripes,' the zebra tells Danny in a commanding tone, then steps forward to grab him. You instinctively dart towards the zebra, interposing yourself between him and your friend.";
-		now inasituation is true; [disables normal pre/post combat messages]
 		challenge "Zebra Stallion";
-		now inasituation is false;
 		if fightoutcome >= 10 and fightoutcome <= 19: [won]
 			say "     After one last blow, the zebra stumbles backwards, tripping over a branch lying on the ground and falling onto his ass. You step up to him to prevent any escape attempts, then look back towards Danny, who has been taking photos the entire time. His pants are bulging out in the crotch area, and it seems that he just can't get enough of the stallion. The mall rat is [italic type]really[roman type] into this dude, throwing longing gazes his way.";
-			say "     [bold type]How do you want to deal with Danny's infatuation?[roman type][line break]";
-			LineBreak;
+			say "[line break]     [bold type]How do you want to deal with Danny's infatuation?[roman type][line break]";
 			say "     ([link]Y[as]y[end link]) - Allow the zebra to get up and make use of his mouth. Danny seems to want that, from what you can see.";
 			say "     ([link]N[as]n[end link]) - Just grab your mall rat companion and take him back to the mall. Enough photos for now.";
 			if Player consents:
@@ -279,8 +269,7 @@ to say PhotoSafari_Zebra:
 		else if fightoutcome > 19 and fightoutcome < 30: [lost]
 			say "     You fall to your knees, bested by the virile male. Looking up at the zebra stallion, you see him examine you for a second, then shakes his head before he turns his attention to Danny, and a cocky grin spreads over his muzzle. The slender mall rat is still snapping photos of the two of you, ignorant to the fact that the fight is over, and that his side lost. Standing up straight to his imposing stature, the zebra stallion looks back and forth between Danny and yourself, then says in a suggestive tone, 'You know, fighting me is nothing but a waste of time. Just submit, and you'll soon have a nice time serving as my mares.' Having been defeated and knowing the usual aftermath, you simply nod and prepare yourself while waving your hand to tell Danny that he should hide while the zebra's back is turned. Despite your signal, Danny pays no attention to the intended action and keeps snapping away, capturing more pictures of the strapping stallion.";
 			say "     Chuckling, the zebra addresses you with the teasing words, 'I bet that your little friend over there won't even put up a fight. He looks like he's ready to worship my cock and could make a fine addition to my herd.' With that said, the zebra starts making his way towards Danny. Unphased, the mall rat keeps taking pictures, almost ecstatic as he captures the confident stride of the muscular zebra and the swinging motion of the weighty shaft dangling between his legs. Soon, the zebra stands right in front of your mall rat friend, grinning down at him and saying, 'You won't need that for what comes next, little boy-mare.' Then he reaches out to pull the camera from Danny's hands, laying it down on the ground. You can tell that your slender companion realizes for the first time in just what situation he is in, now that he isn't just thinking of the next picture and a good angle for it. The grinning zebra bends over and whispers something into Danny's ear, causing him to look down at the equine's cock with big eyes.";
-			say "     [bold type]Do you want to watch the zebra make use of Danny's mouth?[roman type][line break]";
-			LineBreak;
+			say "[line break]     [bold type]Do you want to watch the zebra make use of Danny's mouth?[roman type][line break]";
 			say "     ([link]Y[as]y[end link]) - Sure thing.";
 			say "     ([link]N[as]n[end link]) - Look away.";
 			if Player consents:
@@ -314,15 +303,17 @@ to say PhotoSafari_Zebra:
 		say "     The two of you quickly pull open the doors and plop down just on the other side, relieved that you finally made it back to safety. Panting, you look over to Danny, who gives you a disappointed gaze in return. You didn't even get a single photo of the zebra, leaving Danny rather glum and sad. Taking a deep breath, you tell him that you could maybe go back and try another time. You look upon the mall in silence, waiting for Danny to respond. The food court has its usual chaotic air, with countless different species hanging out together, eating and talking together, as well as some who are kissing or even quietly groping one another under the tables. Taking that aspect of the developing shifted society in here in stride, you simply smile and shrug, then look back over towards Danny, who is sitting there with his knees up against his chest, staring down at his camera.";
 		WaitLineBreak;
 		say "     Wrapping an arm around the sad rodent's waist, you pull him closer to you, though he never looks up from his camera as he says, 'It's alright. We don't have to go back. The creatures in the zoo will be roused for some time and be looking for us, I guess.' You tell him that that is likely true, and that there are a lot of other interesting creatures out in the city that the two of you can still seek out. Giving him a squeeze, you then rise back to your feet. Reaching out to Danny, he once again lets you wrap your hand around his, pulling him up to his feet to guide him the rest of the way to his place. After bidding him farewell and promising to come back to visit him soon, as you are walking away, you hear him say, 'Don't forget! There definitely are a ton more photographs that I want to take.'";
+	now inasituation is false;
 	now Dexterity of Danny is 4; [concluded, one way or another]
-
 
 Section 3 - Sex
 
 Instead of fucking the Danny:
 	if HP of Danny is 0: [player never talked to Danny]
+		project the figure of Danny_clothed_icon;
 		say "     The mall is a bit more civilized than the dangerous streets of the city. In general, you should at least speak with someone and introduce yourself before approaching with sex in your mind...";
 	else if Dexterity of Danny < 2 or Dexterity of Danny > 99: [player hasn't done his quest yet]
+		project the figure of Danny_clothed_icon;
 		say "     Danny smiles a little as you make your offer of having sex with him, then slowly shakes his head. 'Thank you, I'm flattered. But... I'm a little busy with my project to take photographs of all the creatures that came into existence in this chaos. I can't go out into the city since it is too dangerous, so hanging around here in the main corridor is my best shot at it. Sometimes you have to put aside your own pleasure for your art, you see?'";
 		say "     Looks like you won't get into his pants that easily - not without helping Danny with his fond desire to become a famous photographer, or possibly bringing a nice and interesting pet along to draw him into some sexy fun...";
 	else: [player did his quest and Danny likes him now]
@@ -330,10 +321,8 @@ Instead of fucking the Danny:
 		say "[DannySexMenu]";
 
 to say DannySexMenu:
-	setmonster "Mall Rat";
 	project the figure of Danny_naked_icon;
 	say "     What do you want to do with the young adult mall rat?";
-	choose row MonsterID from the Table of Random Critters;
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]
@@ -390,29 +379,28 @@ to say DannySexMenu:
 			choose row calcnumber in table of fucking options;
 			say "[title entry]: [description entry]?";
 			if Player consents:
-				let nam be title entry;
 				now sextablerun is 1;
-				if nam is "Suck Danny's cock":
-					say "[DannySex1]";
-				else if (nam is "Have him suck your cock"):
-					say "[DannySex2]";
-				else if (nam is "Have him eat you out"):
-					say "[DannySex3]";
-				else if (nam is "69 with Danny"):
-					say "[DannySex4]";
-				else if (nam is "Let Danny fuck your ass"):
-					say "[DannySex5]";
-				else if (nam is "Take Danny's ass"):
-					say "[DannySex6]";
-				else if (nam is "Let Danny fuck your pussy"):
-					say "[DannySex7]";
-				wait for any key;
+				if title entry is:
+					-- "Suck Danny's cock":
+						say "[DannySex1]";
+					-- "Have him suck your cock":
+						say "[DannySex2]";
+					-- "Have him eat you out":
+						say "[DannySex3]";
+					-- "69 with Danny":
+						say "[DannySex4]";
+					-- "Let Danny fuck your ass":
+						say "[DannySex5]";
+					-- "Take Danny's ass":
+						say "[DannySex6]";
+					-- "Let Danny fuck your pussy":
+						say "[DannySex7]";
 		else if calcnumber is 0:
 			now sextablerun is 1;
 			say "     You step back from the mall rat, shaking your head slightly as he gives a questioning look.";
-			wait for any key;
 		else:
-			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
+			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options], or 0 to exit.";
+	wait for any key;
 	clear the screen and hyperlink list;
 
 to say DannySex1: [BJ for Danny]

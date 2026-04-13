@@ -7,13 +7,11 @@ Version 2 of Nightmare Stablemaster by Gherod begins here.
 
 [The Nightmare Stablemaster lore has also been expanded. To explain his appearance, the Nightmare is now considered an infection of demonic origin. Therefore, the Stablemaster holds supernatural abilities that are reminiscent of devils.]
 
-
 a postimport rule:
 	if Nightmarish Horse Business is resolved and Resolution of Nightmarish Horse Business < 99 and fancyquest < 16:
 		move Stablemaster to Master's Office;
 		change the north exit of Employee Access to Master's Office;
 		change the south exit of Master's Office to Employee Access;
-		now NightmareOfficeRoomConnection is 1; [room connected]
 
 Section 1 - Pre-Event
 
@@ -28,29 +26,25 @@ Sarea of Nightmarish Horse Business is "Stable".
 to say NightmareStablemasterInfection:
 	if Player is MalePreferred: [only male infections]
 		if Player is submissive:
-			infect "Stallionboi";
-			infect "Stallionboi";
+			MultiInfect "Stallionboi" repeats 2;
 		else:
-			infect "Horseman";
-			infect "Horseman";
+			MultiInfect "Horseman" repeats 2;
 	else:
-		infect "Mareslut";
-		infect "Mareslut";
+		MultiInfect "Mareslut" repeats 2;
 
 to say ResolveEvent Nightmarish Horse Business:
 	if Resolution of Nightmarish Horse Business is 0: [Normal state, still unknown to the Stablemaster]
 		say "     As you make your way through The Stables, you spend quite some time trying to look out for anything of interest in this place. Unfortunately, your efforts are in vain, this time, as nothing out of the extraordinary jumps to the eye. However, during this, you pick up an odd feeling, getting under the impression that you are being watched by someone around the corner. Struck by this sense of vulnerability, you seek quick refuge within the hidden areas close to the walls and look around as you hear some loud click-clacking heading your way. Finally, you manage to get a visual on the culprits, and they seem to be a group of horsemen who definitely look like they mean business. It does not take you long to realize these seem to be part of the staff.";
 		say "     It would be wise to keep a distance from them, as you are not exactly allowed to be here, and while most inhabitants of this place would not care, you feel that these definitely would, judging by their inquisitive expressions. However, they seem to be on high alert and looking around for any suspicious movement. Right now, you are hidden, but they will eventually find you if you stay here. Moving quietly and escaping their eyes could be done, provided you are proficient enough with being stealthy, but if not, this could turn into a tricky situation in which you might have to face a physical confrontation. Perhaps it would be wise not to fight a group of strong stallions, especially when you have some idea of what would happen if you lost.";
-		WaitLineBreak;
-		say "     [bold type]Do you wish to attempt to outsmart the horsemen? There are at least three of them looking for a certain intruder...[roman type][line break]";
+		say "[line break]     [bold type]Do you wish to attempt to outsmart the horsemen? There are at least three of them looking for a certain intruder...[roman type][line break]";
 		say "     ([link]Y[as]y[end link]) - Yes, stealth up and escape.";
 		say "     ([link]N[as]n[end link]) - No, you could perhaps convince them everything is fine.";
 		if Player consents:
 			LineBreak;
 			say "     After measuring up your options, you feel like you could have a chance at this whole [']escape unnoticed['] thing. Nevertheless, one can never be too careful, so you wait for the right time to maximize your likelihood of success. So, when the horsemen seem distracted with something else, their eyes gone from the trajectory that would meet your position, you swiftly take your leave and move as quickly, yet as silently, as you possibly can.";
-			let bonus be (( dexterity of player minus 10 ) divided by 2);
+			let bonus be ( dexterity of player minus 10 ) divided by 2;
 			let diceroll be a random number from 1 to 20;
-			say "You roll 1d20([diceroll])+[bonus] = [special-style-1][diceroll + bonus][roman type] vs [special-style-2]13[roman type] (Dexterity Check):[line break]";
+			say "You roll 1d20([diceroll])[if bonus >= 0]+[end if][bonus] = [special-style-1][diceroll + bonus][roman type] vs [special-style-2]13[roman type] (Dexterity Check):[line break]";
 			if diceroll + bonus >= 13:
 				say "     You expertly manage to remain out of sight as you continue to gain more and more distance from the suspecting group of horsemen, and eventually, you lose them. After that, all you need is to remain hidden in a good spot for a while until they are definitely gone. You wait several minutes to confirm your safety and then decide to return to your affairs, hopefully free to explore The Stables once more.";
 			else: [failure]
@@ -79,17 +73,14 @@ to NightmarishHorseBusinessQuestion1:
 	else:
 		LineBreak;
 		say "     You shake your head and tell them you will not go anywhere with them, while bracing yourself for the inevitable fight ahead. 'You'll regret saying that, slut.' These are the last words you hear before the group charges at you. While you manage to defend against the first strikes, you are yet long from finishing this fight...";
-		WaitLineBreak;
 		NightmarishHorseBusinessFight;
 
 to NightmarishHorseBusinessFight:
 	let GroupFightCounter be 0;
 	now fightoutcome is 0; [reset]
 	while fightoutcome < 20 and GroupFightCounter < 3: [runs for 3 times or until the player loses or flees]
-		now inasituation is true;
 		challenge "Horseman";
 		increase GroupFightCounter by 1;
-	now inasituation is false; [reset]
 	if fightoutcome < 20: [won]
 		say "     Your skill in combat proves fruitful as you somehow manage to subdue the three horsemen, a sense of power surging through you as they remain collapsed on the floor and at your feet. 'Fuck! [SubjectProCap]'s tougher than [SubjectPro] looks...! Ow...' the same horseman exclaims, barely able to move his limbs. With this outcome, and while you could further taunt them for your enjoyment, perhaps it would be wiser to get out of here while you can. Who knows if they are the only ones after you...";
 	else if fightoutcome > 19 and fightoutcome < 30: [lost]
@@ -110,7 +101,7 @@ to NightmarishHorseBusinessStablemaster:
 	WaitLineBreak;
 	say "     Already looking at you from above, is an especially tall and powerful-looking equine man. This is not your typical horseman by a mile, as this one seems to be dark colored, with a mane that seems to be perpetually on fire as its flames dance on their own, and bright fiery eyes. He walks up to you while you are still on the floor, only having time to look up at the powerful horseman's burning gaze staring back at you. 'What are you? An attempt at competition... Or someone wanting to join my harem of mares?' To your shock, the second you lay your eyes on him, the dark equine man is fully naked and sporting a long erection, his dark red horse cock pointing forward firmly and throbbing. 'As you might've guessed, I own this place. And I own you now, too, for as long as you remain in it. Now, get up and let me get a good look at you.' You have barely been, literally, thrown into this and, no sooner than that, you are being given orders by a complete stranger horseman who thinks he owns you! Though, for now, you do get up, as hard as it may be with your slightly bruised up body.";
 	say "     As you trace his movements with your eyes attentively, on the fence of whatever he might have planned for you, he simply draws in closer. Something about him unsettles you, as if this horseman had some powerful aura about him that made you think twice before even considering how to act. It is almost fearful and intimidating...";
-	if Player is not male and Player is not female:
+	if Player is neuter:
 		say "     'Oh, I see... A white canvas, almost. No sign of any sexual organ in your body... Only this,' he says as, suddenly, you feel his hand squeezing your buttocks and a finger slipping into the space between them, to rub at your anus. You immediately gasp at his touch, and even more as he pushes a finger inside, wiggling it against your sensitive inner flesh. 'You'd have absolutely no use other than being a fun sex toy, I'm afraid. This entry tends to be way tighter, but I'm sure that after your third horsecock or so it'll get stretched enough. If you're an especially good slut, I might make you exclusive. Or, we could just turn you into a proper mare, as that's the only role you could take besides fuck doll.'";
 	else:
 		if Player is male:
@@ -131,8 +122,7 @@ to NightmarishHorseBusinessStablemaster:
 	WaitLineBreak;
 	say "     Once he is done inspecting you, he abruptly drops any touching gesture, crosses his arms and takes a step back. 'But despite all that you can give me, I'll have to test your resolve. A personality test, if you will. You'll have no use for me if you can't follow simple instructions.' The only thing you see is his cock pulsating in front of you, and even if you tried to look away, your eyes would inevitably stare back at it again. It is oddly alluring with that dim red glow, almost, which reminds you of a heaten up branding iron, visually speaking. The horseman then takes an unlit cigar from his desk and brings it over to his mouth, which surprisingly, lights up as he inhales. There are brief seconds between this and the smoke he blows on your face, which causes you to reflexively close your eyes as you inevitably breathe some of it. It does not smell like you would expect, but you now have an explanation for all this foggy smoke. Its incense-like scent immediately clouds your thoughts as you struggle to keep it together, and judging by his grin, this is what he intended.";
 	say "     'It's true I could just make you do whatever I wanted, but honestly, I've got way too much shit in my hands to be babysitting rebellious sluts, so here's the deal,' he makes a pause before finishing his sentence, 'I want you to suck my cock,' he then orders, pointing directly at it, 'And you can take as long as you wish. Your job is only finished when I'm cumming down your throat. Whatever changes you suffer will help me decide what to make of you,' the horseman makes a pause, as if trying to observing your reaction for a while. 'Were you to refuse this order, I'd kick you immediately and give my men orders to do whatever they want with you whenever they catch you sneaking around. I'm pretty sure I can't stop you from coming back, so... I'd rather give them a potential new toy to play with, since you'd be useless to me.' He then lets you process his words, awaiting an answer. 'So, what's it gonna be? Looking forward to be on my good side? It's a one-time chance... Don't waste it.'";
-	LineBreak;
-	say "     [bold type]What shall you do? You might only have this opportunity to attempt to befriend the Stablemaster...[roman type][line break]";
+	say "[line break]     [bold type]What shall you do? You might only have this opportunity to attempt to befriend the Stablemaster...[roman type][line break]";
 	say "     ([link]Y[as]y[end link]) - Do as he says and blow him (must not have Dominant feat).";
 	say "     ([link]N[as]n[end link]) - Refuse.";
 	if Player consents:
@@ -156,17 +146,14 @@ to NightmarishHorseBusinessStablemaster:
 			WaitLineBreak;
 			if Player is MalePreferred: [only male infections]
 				if Player is submissive:
-					infect "Stallionboi";
-					infect "Stallionboi";
-					say "     'Hm... Signs of a cute and good stallion boy... Yeah, I'd say that fits you. Maybe I should fuck your ass too just to make sure you fully turn into one...'";
+					MultiInfect "Stallionboi" repeats 2;
+					say "[line break]     'Hm... Signs of a cute and good stallion boy... Yeah, I'd say that fits you. Maybe I should fuck your ass too just to make sure you fully turn into one...'";
 				else:
-					infect "Horseman";
-					infect "Horseman";
-					say "     'A hung and strong horseman, huh? You seem like the kind of guy who likes keeping your options open, I see... Well, to me, you're still a little stallion boy...'";
+					MultiInfect "Horseman" repeats 2;
+					say "[line break]     'A hung and strong horseman, huh? You seem like the kind of guy who likes keeping your options open, I see... Well, to me, you're still a little stallion boy...'";
 			else:
-				infect "Mareslut";
-				infect "Mareslut";
-				say "     'Oh, yeah... A lovely sexy mare slut. I knew you were one at heart... Maybe I should breed you just to ensure you fully become one...'";
+				MultiInfect "Mareslut" repeats 2;
+				say "[line break]     'Oh, yeah... A lovely sexy mare slut. I knew you were one at heart... Maybe I should breed you just to ensure you fully become one...'";
 			NPCSexAftermath Player receives "OralCock" from Stablemaster;
 			SanLoss 10;
 			WaitLineBreak;
@@ -190,37 +177,32 @@ Section 1-1 - Pre-Event Alternative
 to NightmarishHorseBusinessAlt:
 	say "     As you make your way through The Stables, you spend quite some time trying to look out for anything of interest in this place. Unfortunately, your efforts are in vain, this time, as nothing out of the extraordinary jumps to the eye. However, during this, you pick up an odd feeling, getting under the impression that you are being watched by someone around the corner. Struck by this sense of vulnerability, you seek quick refuge within the hidden areas close to the walls and look around as you hear some loud click-clacking heading your way. Finally, you manage to get a visual on the culprits, and they seem to be a group of horsemen who definitely look like they mean business. It does not take you long to realize these seem to be part of the staff... Those who have been looking for you.";
 	say "     It would be wise to keep a distance from them, as you are definitely not allowed to remain here, given the way you seem to have offended the Stablemaster. It is also not likely that they would just let you go, given the fact they now have permission to do whatever they wish with you. However, as always, they seem to be on high alert and looking around for any suspicious movement, already expecting you to show up at any point. Right now, you are hidden, but they will eventually find you if you stay here. Moving quietly and escaping their eyes could be done, provided you are proficient enough with being stealthy, but if not, this could turn into a tricky situation in which you might have to face a physical confrontation. Perhaps it would be wise not to fight a group of strong stallions, especially when you have some idea of what would happen if you lost.";
-	WaitLineBreak;
-	say "     [bold type]Do you wish to attempt to outsmart the horsemen? These are the three same ones from before, and you feel it will be tougher to sneak past them now...[roman type][line break]";
+	say "[line break]     [bold type]Do you wish to attempt to outsmart the horsemen? These are the three same ones from before, and you feel it will be tougher to sneak past them now...[roman type][line break]";
 	say "     ([link]Y[as]y[end link]) - Yes, stealth up and escape.";
 	say "     ([link]N[as]n[end link]) - Fight them.";
 	if Player consents:
 		LineBreak;
 		say "     After measuring up your options, you feel like you could have a chance at this whole [']escape unnoticed['] thing. Nevertheless, one can never be too careful, so you wait for the right time to maximize your likelihood of success. So, when the horsemen seem distracted with something else, their eyes gone from the trajectory that would meet your position, you swiftly take your leave and move as quickly, yet as silently, as you possibly can.";
-		let bonus be (( dexterity of player minus 10 ) divided by 2);
+		let bonus be ( dexterity of player minus 10 ) divided by 2;
 		let diceroll be a random number from 1 to 20;
-		say "You roll 1d20([diceroll])+[bonus] = [special-style-1][diceroll + bonus][roman type] vs [special-style-2]15[roman type] (Dexterity Check):[line break]";
-		if diceroll + bonus >= 13:
+		say "You roll 1d20([diceroll])[if bonus >= 0]+[end if][bonus] = [special-style-1][diceroll + bonus][roman type] vs [special-style-2]15[roman type] (Dexterity Check):[line break]";
+		if diceroll + bonus >= 15:
 			say "     You expertly manage to remain out of sight as you continue to gain more and more distance from the suspecting group of horsemen, and eventually, you lose them. After that, all you need is to remain hidden in a good spot for a while until they are definitely gone. You wait several minutes to confirm your safety and then decide to return to your affairs, hopefully free to explore The Stables once more.";
 		else: [failure]
 			say "     You manage to remain out of sight as you make slow progress towards getting them out of your tail, however, as you were so preoccupied with their glances, you really did not get to pay much attention to the floor and where you are stepping on. Unfortunately, you incur in an accident as you step on [one of]a rubber sex toy[or]a rock[or]something very slippery[or]what was probably some food leftover[or]a soap(?!)[at random] and fall prone! The worst part is that you grunted in surprise, a noise that the horsemen have definitely heard. Very few seconds pass as you hear the repeated sound of impact of their hooves against the floor drawing closer and closer, and you are only able to stand on your feet before they manage to surround you.";
 			say "     'Look who it is! I was wondering when we'd see you again!' says one of the horsemen, the tallest of the group. You definitely know who these are, and that means trouble for you if you fail to manage to defend yourself. 'Well, it looks like this time there really is no reason for us to hold back on you, so how about you make this easy for us and submit? Or we'll beat you up until you do... Though that's energy best spent fucking, in my opinion...' They crack their knuckles as all three of them circle around you, their muscular bodies and equine features being the only things you can see at this point.";
-			WaitLineBreak;
 			NightmarishHorseBusinessFightAlt;
 	else:
 		LineBreak;
 		say "     After measuring up your options, your mind stops at one single want, which is to fight them and teach them you are not one to be messed with. As you see them approach, you really do not even think twice about it, and charge ahead ready to kick ass. The horsemen barely have time to react as they see you running towards them, wide-eyed at your audacity, though as you head directly for the tallest horsemen, his two mates are able to deflect your attack. 'Whoa! Bold one, aren't you? If you're looking forward that much to get fucked into submission, you could just kneel and wait!' They crack their knuckles as all three of them circle around you, their muscular bodies and equine features being the only things you can see at this point.";
-		WaitLineBreak;
 		NightmarishHorseBusinessFightAlt;
 
 to NightmarishHorseBusinessFightAlt:
 	let GroupFightCounter be 0;
 	now fightoutcome is 0; [reset]
 	while fightoutcome < 20 and GroupFightCounter < 3: [runs for 3 times or until the player loses or flees]
-		now inasituation is true;
 		challenge "Horseman";
 		increase GroupFightCounter by 1;
-	now inasituation is false; [reset]
 	if fightoutcome < 20: [won]
 		say "     Your skill in combat proves fruitful as you somehow manage to subdue the three horsemen, a sense of power surging through you as they remain collapsed on the floor and at your feet. 'Fuck! [SubjectProCap]'s tougher than [SubjectPro] looks...! Ow...' the same horseman exclaims, barely able to move his limbs. With this outcome, and while you could further taunt them for your enjoyment, perhaps it would be wiser to get out of here while you can. Who knows if they are the only ones after you...";
 	else if fightoutcome > 19 and fightoutcome < 30: [lost]
@@ -298,12 +280,8 @@ SexuallyExperienced of Stablemaster is true.
 TwistedCapacity of Stablemaster is false. [Twisted Characters can take any penetration, no matter the size]
 Sterile of Stablemaster is true. [steriles can't knock people up]
 MainInfection of Stablemaster is "Nightmare".
-Description of Stablemaster is "[Stablemasterdesc]".
-Conversation of Stablemaster is { "<This is nothing but a placeholder!>" }.
+Description of Stablemaster is "     This dark stallion is a powerful anthropomorphic male horse with the build of a strong athlete, towering and intimidating at a mere glance. Though, the most peculiar aspect about him are a group of features that jump to attention besides his black fur, which is his mane. It behaves like flames dancing around constantly like a never-ending fire, running down his entire backside from the very top of his head. This complements his fiery orange gaze that follows your every moment the second you step into his office. Immediately, you think this is not your typical horseman, and may actually be something completely different, but he is also the Stablemaster. There is also this slight fog all over the room, and occasionally, he takes a smoke from a cigar that lights up upon touch.[line break]".
 The scent of Stablemaster is "     The Stablemaster smells like a mixture between a horse and brimstone, though particularly intensely towards neither.".
-
-to say StablemasterDesc:
-	say "     This dark stallion is a powerful anthropomorphic male horse with the build of a strong athlete, towering and intimidating at a mere glance. Though, the most peculiar aspect about him are a group of features that jump to attention besides his black fur, which is his mane. It behaves like flames dancing around constantly like a never-ending fire, running down his entire backside from the very top of his head. This complements his fiery orange gaze that follows your every moment the second you step into his office. Immediately, you think this is not your typical horseman, and may actually be something completely different, but he is also the Stablemaster. There is also this slight fog all over the room, and occasionally, he takes a smoke from a cigar that lights up upon touch.";
 
 Section 2-1 - Stablemaster Talk
 
@@ -318,7 +296,6 @@ instead of conversing Stablemaster:
 to say StablemasterTalkMenu:
 	now StablemasterDoneTalking is false;
 	say "     [bold type]What do you want to talk to the Stablemaster about?[roman type][line break]";
-	LineBreak;
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]
@@ -355,16 +332,16 @@ to say StablemasterTalkMenu:
 			choose row calcnumber in table of fucking options;
 			say "[title entry]: [description entry]?";
 			if Player consents:
-				let nam be title entry;
 				now sextablerun is 1;
-				if (nam is "Himself"):
-					say "[StablemasterTalkHimself]";
-				else if (nam is "The Stables"):
-					say "[StablemasterTalkStables]";
-				else if (nam is "The smoke"):
-					say "[StablemasterTalkSmoke]";
-				else if (nam is "Transformation effects"):
-					say "[StablemasterTalkTransformation]";
+				if title entry is:
+					-- "Himself":
+						say "[StablemasterTalkHimself]";
+					-- "The Stables":
+						say "[StablemasterTalkStables]";
+					-- "The smoke":
+						say "[StablemasterTalkSmoke]";
+					-- "Transformation effects":
+						say "[StablemasterTalkTransformation]";
 				wait for any key;
 				if StablemasterDoneTalking is false:
 					say "[StablemasterTalkMenu]"; [looping back to keep talking with him]
@@ -373,7 +350,7 @@ to say StablemasterTalkMenu:
 			say "     You excuse yourself before the Stablemaster. He eyes you attentively.";
 			wait for any key;
 		else:
-			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options], or 0 to exit.";
 	clear the screen and hyperlink list;
 
 to say StablemasterTalkHimself:
@@ -390,7 +367,7 @@ to say StablemasterTalkSmoke:
 to say StablemasterTalkTransformation:
 	say "     Seeing that every time you get into anything sexual with the horseman your body reflects several changes, you ask him if it really has to be that way. Only after a long silence and gazing directly into your eyes he replies, 'No, not really.' You patiently request that he elaborates a little bit more on that. 'I mean what I said. No, you do not really need to see your features change upon sexually pleasuring me, if that isn't your will. All you must do is let me know, so I won't do it. If you must have a reason for my stance on this... I simply don't think it's a mandatory procedure when no contract has been established between the two of us. Right now, we're simply... acquaintances. Later, though, that might change, and I'll have all the time and will to ensure you attain your best and most appropriate look.'";
 	say "     'I cannot say the same for your mind, however. Most inevitably end up giving themselves over to me... It's just how it is.'";
-	say "     [bold type]How would you prefer things? Do you wish to be transformed at the end of every encounter with the Stablemaster, or would you rather not[roman type]? It does not seem to make a difference for the horseman, to your luck.";
+	say "[line break]     [bold type]How would you prefer things? Do you wish to be transformed at the end of every encounter with the Stablemaster, or would you rather not[roman type]? It does not seem to make a difference for the horseman, to your luck.";
 	say "     ([link]Y[as]y[end link]) - You are fine with the transformations.";
 	say "     ([link]N[as]n[end link]) - Ask him to preserve your features.";
 	if Player consents:
@@ -451,23 +428,22 @@ to say StablemasterSexMenu:
 			choose row calcnumber in table of fucking options;
 			say "[title entry]: [description entry]?";
 			if Player consents:
-				let nam be title entry;
 				now sextablerun is 1;
-				if (nam is "Service his cock"):
-					say "[StablemasterSexBlowjob]";
-				else if (nam is "Give him a body massage"):
-					say "[StablemasterSexMassage]";
-				else if (nam is "Worship his body"):
-					say "[StablemasterSexWorship]";
-				else if (nam is "Request his three horsemen guards"):
-					say "[StablemasterSexHorsemenGrunts]"; [an accessible repeat of the scene in the other outcome]
-				wait for any key;
+				if title entry is:
+					-- "Service his cock":
+						say "[StablemasterSexBlowjob]";
+					-- "Give him a body massage":
+						say "[StablemasterSexMassage]";
+					-- "Worship his body":
+						say "[StablemasterSexWorship]";
+					-- "Request his three horsemen guards":
+						say "[StablemasterSexHorsemenGrunts]"; [an accessible repeat of the scene in the other outcome]
 		else if calcnumber is 0:
 			now sextablerun is 1;
 			say "     You excuse yourself before the Stablemaster. He eyes you attentively.";
-			wait for any key;
 		else:
-			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options], or 0 to exit.";
+	wait for any key;
 	clear the screen and hyperlink list;
 
 to say StablemasterSexBlowjob:
@@ -637,10 +613,9 @@ Sarea of NightmareGruntRelationship is "Nowhere".
 
 NightmareStablemasterEventsTimer is a number that varies. NightmareStablemasterEventsTimer is usually 20000.
 
-instead of going to Master's Office while (Resolution of NightmareStablemasterEvents >= 1 and Stablemaster is in Master's Office and NightmareStablemasterEventsTimer - turns > 16):
+instead of going to Master's Office while Resolution of NightmareStablemasterEvents >= 1 and Stablemaster is in Master's Office and NightmareStablemasterEventsTimer - turns > 16:
 	if Resolution of NightmareStablemasterEvents is 1:
 		say "     As you go about your way to knock on the office's door before entering, you hear someone calling you from behind. 'Hey, you! Aren't you that new face from the other day? Huh, guess boss took a liking to you!' It does not take you long to realize who this is, one of the horsemen grunts the Stablemaster has patrolling The Stables. This time, he seems to be alone. 'Surprising to see you walk around so relaxed, like nothing would trouble you anymore... Are you some kind of protégé now, eh?' The towering horseman crosses his arms as he stands in front of you, almost judging you with his gaze alone. 'Guess you have to thank someone for that, don't you? After all, it was I who decided to throw you in and let boss decide what to do with you. Usually I just kick the bastards out to not bother his ass.'";
-		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Thank him for that, respectfully.";
 		say "     ([link]N[as]n[end link]) - Thank him for that, but sarcastically.";
 		if Player consents:
@@ -654,7 +629,6 @@ instead of going to Master's Office while (Resolution of NightmareStablemasterEv
 		WaitLineBreak;
 		say "     There is enough evidence from past encounters with this grunt that he will fulfill his threats if necessary, as he takes his duty very seriously. Plus, his respect and admiration for the Stablemaster seems to be unshakeable. However, you can see that he did not come here just to threaten you, as he does not seem to be just about to leave, either. 'Though, I came here to ask you something, actually, not just to taunt you, as fun as that'd be...' He then walks up to you, then gets up really close as you find nothing behind you to walk backwards to except a wall, and as this large horseman corners you, he looks at you directly in the eyes, his hand also pressed against the wall behind you and just next to your head...";
 		say "     'You're into us, right? Like... Horsecocks, us, and all that shit, yeah?' He actually waits for you to reply to that...";
-		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Of course you are, why else would you be here?";
 		say "     ([link]N[as]n[end link]) - No, not really, you are not all that much into horsepeople and do not really know why you keep coming back, either.";
 		if Player consents:
@@ -665,7 +639,7 @@ instead of going to Master's Office while (Resolution of NightmareStablemasterEv
 			say "     As soon as you try to deny it, he intercepts your words. 'Piss off. Why would you be here, then? Even if you wanted to mess with us, the second you saw the horseman in that room, you'd never step a hoof in here if that were true. You like it.' He may have a point, but you just let him continue.";
 		say "     'Well, anyway... You could, uh... If you're really into us and all that stuff, could probably ask boss about us. Because, yeah, if he thinks you're so special, I really wanna have a taste of that, as well as my buds, so how about next time you're with boss you ask him to let you have some time with us? We could take good care of you too...' Your eyes widen at the realization of his actual motive for coming to you, as this seems to be almost begging you to have sex with them. With that, you end up asking him if they do not have any other people to fuck around with other than you. 'I mean... Yeah? But it's not, like... For long or anything. Most of them are already fucking gone in the head, and barely anyone trespasses this place. So, uh... I'm asking you.'";
 		say "     His tone has definitely changed, less aggressive and more... tender, if you could call it that. You know this to be short-lived if he is given encouragement. For now, you simply tell him you shall consider, since he has requested it so plainly. 'That'd be really hot if you did, yeah? I mean, imagine three massive horsedicks in you like that... And we've been so fucking horny all the time... We're probably gonna wreck you completely, but that's where the fun's at, right? Heheh...' Definitely noticing his own cock twitching as he talks about this, your eyes shift downwards and back up almost entirely on their own before you realize where you were just looking at.";
-		LineBreak;
+		WaitLineBreak;
 		say "     However, perhaps you could do something here...";
 		say "     ([link]Y[as]y[end link]) - You actually feel bad for the grunt. Go ahead and grab his cock. If he cums, drink it as to not make a mess.";
 		say "     ([link]N[as]n[end link]) - Or not, maybe it is time to bid him goodbye.";

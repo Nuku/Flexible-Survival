@@ -17,6 +17,8 @@ Version 1 of Skunkbeast Lord by Stripes begins here.
 
 Section 1 - Event
 
+skunkbeaststatus is a number that varies.
+
 Table of GameEventIDs (continued)
 Object	Name
 Skunkbeast Battle	"Skunkbeast Battle"
@@ -24,7 +26,6 @@ Skunkbeast Battle	"Skunkbeast Battle"
 Skunkbeast Battle is a situation.
 ResolveFunction of Skunkbeast Battle is "[ResolveEvent Skunkbeast Battle]". The level of Skunkbeast Battle is 15.
 Sarea of Skunkbeast Battle is "Forest".
-skunkbeaststatus is a number that varies.
 
 when play begins:
 	add Skunkbeast Battle to BadSpots of MaleList;
@@ -35,7 +36,7 @@ to say ResolveEvent Skunkbeast Battle:
 	say "     You can hear a great deal of commotion coming from up ahead. You take notice that there's a considerable number of black, gooey patches spread around the area as well as torn remnants of camouflaged clothes. When gunfire breaks out briefly, you duck down and creep forward into the bushes, looking to find out what's happening. Parting some branches at the edge of the next clearing, you can see a raging battle involving numerous of those sexy skunks you've seen around as well as several larger skunk beasts. Looking more carefully, you can see that some of the skunks are actually mostly transformed soldiers, their clothes torn and their bodies being ravaged (much to their increasing delight) by skunkbeasts or teams of the other females. The one still firing the rifle you heard has it torn from her hands by a skunk girl, who tosses it in the nearby creek as two more hold her down to be mounted.";
 	say "     But it is the last soldier standing who is the most successful. While still partially a skunk, he (though well on his way to becoming a she now) has a strange, futuristic gun that fires a stream of green energy at the skunks. The blast from this seems to stun the skunkbeasts and, if held on them long enough, causes them to melt away into goo. She turns towards the largest of the skunkbeasts, more than twice the size of the others as it turns to deal with her. That's when you realize her jacket's not military issue, but instead emblazoned with a stylized Z in a circle: Zephyr. She yells incoherently as she's tackled by several of the skunk girls, including some of her former teammates and the gun is sent flying, landing only a few yards away from your hiding spot.";
 	say "     You eye the strange weapon and the big beast charging towards it. You have but a moment to decide if you'll face the beast so you can turn the gun on it. It is clearly the one in charge and probably the source of all the others. If you could take it down, you may even permanently solve the skunk problem in the forest. Given how well the trained mercenaries fared and all the other skunks around, this could go very badly for you.";
-	Say "[line break]     [bold type]Shall you risk facing this fearsome beast?[roman type] [italic type](Warning: Success will permanently alter your interactions with the skunks in the game.)[roman type][line break]";
+	say "[line break]     [bold type]Shall you risk facing this fearsome beast?[roman type] [italic type](Warning: Success will permanently alter your interactions with the skunks in the game.)[roman type][line break]";
 	say "     ([link]Y[as]y[end link]) - Yes.";
 	say "     ([link]N[as]n[end link]) - No.";
 	if Player consents:
@@ -48,8 +49,8 @@ to say ResolveEvent Skunkbeast Battle:
 			WaitLineBreak;
 			say "     When most of them suddenly start to move back, you moan in disappointment, trying to make a grab for one of those black beauties. Still held by a group of them and too overwhelmed by the intensity of your recent contact, you don't resist as they drag you over to the quivering pile of goo that remains of your melting opponent. Its limbs are barely distinguishable from the central mass which was once its body and rivulets of flowing skunk goo stain the grass around it. Even as your body is changing and becoming more skunk-like, you are pressed into the melting mass of the skunkbeast lord.";
 			say "     The black mess splatters and gives way as you slam into it, melting and flowing around you. Your body is suddenly awash with lustful excitement, feeling the skunkbeast's gooey flesh bonding with you. Even as most of it continues to melt away, much of it flows into you instead, joining with you and transforming you further. But this change is different than before. You can feel an increased power growing inside you, and along with it, lustful, instinctual urges. When the rest of the fallen skunkbeast lord melts away, you emerge, large and powerful in your new, skunkbeast form.";
-			choose row with Name of "Skunk Female" from Table of Random Critters;
-			now non-infectious entry is true; [reg. Skunk infection closed]
+			if "Skunk Female" is a Name listed in Table of Random Critters:
+				now non-infectious entry is true; [reg. Skunk infection closed]
 			setmonster "Skunkbeast Lord";
 			choose row MonsterID from Table of Random Critters;
 			now non-infectious entry is false;
@@ -327,7 +328,7 @@ When Play begins:
 	[Clit Size Adjective is generated by a function and can be used in scenes: very small/small/average/large/very large]
 ]
 
-Section 5 - Infection Controls
+Section 4 - Infection Controls
 
 to sblinfect:
 	setmonster "Skunkbeast Lord";
@@ -340,7 +341,7 @@ to sblinfect:
 		now sex entry is "Male";
 	infect;
 
-Section 6 - Endings for all Skunks
+Section 5 - Endings for all Skunks
 
 Table of GameEndings (continued)
 Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
@@ -363,7 +364,7 @@ This is the Skunk with Frank rule:
 			say "     As they grow up, he leads them on searches through the city, scavenging stores and homes for more comics to add to the store's collection. Mostly passed over by the hordes of lustful creatures, there are plenty to find and the young ones seem to have a talent for sniffing them out. Particular effort is made to find more adult comics, increasing the stock of those shelves greatly, as they are in high demand by the city's new inhabitants. A few, brave explorers of the city act as couriers, bringing outside comics and new releases in trade for the other goods found during these searches.";
 		else:
 			say "     When the military comes through to rescue you, you provide them with information on Frank's hideout in the comic store. He is reluctant to leave his comic store behind, but comes along to be with you. He is not kept with your group at the military facility, so you don't get to see much of him until your release. Once out, you both meet up and celebrate your reunion long into the night.";
-			If Player has a body of "Skunk Taur":
+			if skunknumber is 2:
 				say "     At the military base, there was much interest in you and your conjoined partner among the military scientists. Your lower half was quite playful with them, often making teasing remarks or lewd suggestions. You found yourself always having to act cool and stay collected to try and keep them from thinking you'd succumb and were a threat somehow. Your unusual body prompted them to keep you longer than usual, but eventually they had to release you to deal with more pressing problems. After all that, it is refreshing to be back together with Frank, who lovingly cares for you and your special body-partner. Your conjoined partner is a wonderful font of kinky ideas, often adding to the excitement of your lovemaking with your sexy lover.";
 			say "     You move into a place together with the hefty skunk and enjoy a lustful relationship with the talkative skunk. His passions for comics and roleplaying grow on you over time and you learn enough to join into his conversations and give opinions of your own. When he starts to make forays back into the city to retrieve the contents of his store, you support his decision, knowing the depths of his passion. While sometimes it is hard waiting and worrying for him, he always manages to make it back home safely with another load of backpacks full of books. The celebratory sex after having built up his arousal in the lustful city is always the best: rambunctious, loud and oh so satisfying. These trips also provide the big male with lots of exercise, and while he never loses his cute, pudgy body, he becomes much stronger and a more vigorous lover.";
 			say "     [if skunk kit is tamed]Peppy grows and matures as you care for him, changing as he grows until he becomes a young anthro skunk like his adopted father. [end if]Frank sires several litters of skunk kits with you[if skunknumber is 2]. Some are anthro skunks like their father and others are conjoined skunk taurs like yourself[end if]. The girls are sexy and beautiful like their mother while the boys are strong and hefty like their father. Growing up on comics, they all become avid comic and sci-fi fans, many of them taking their passion into their adulthood and having successful careers in the comic, movie and television industries.";
@@ -376,10 +377,10 @@ This is the Skunk with Frank rule:
 			say "     As they grow up, he leads them on searches through the city, scavenging stores and homes for more comics to add to the store's collection. Mostly passed over by the hordes of lustful creatures, there are plenty to find and the young ones seem to have a talent for sniffing them out. Particular effort is made to find more adult comics, increasing the stock of those shelves greatly, as they are in high demand by the city's new inhabitants. A few, brave explorers of the city act as couriers, bringing outside comics and new releases in trade for the other goods found during these searches.";
 		else:
 			say "     When the military comes through to rescue you, you provide them with information on Frank's hideout in the comic store. He is reluctant to leave his comic store behind, but comes along to be with you. He is not kept with your group at the military facility, so you don't get to see much of him until your release. Once out, you both meet up and celebrate your reunion long into the night.";
-			If Player has a body of "Skunk Taur":
+			if skunknumber is 2:
 				say "     At the military base, there was much interest in you and your conjoined partner among the military scientists. Your lower half was quite playful with them, often making teasing remarks or lewd suggestions. You found yourself always having to act cool and stay collected to try and keep them from thinking you'd succumb and were a threat somehow. Your unusual body prompted them to keep you longer than usual, but eventually they had to release you to deal with more pressing problems. After all that, it is refreshing to be back together with Frank, who lovingly cares for you and your special body-partner. Your conjoined partner is a wonderful font of kinky ideas, often adding to the excitement of your lovemaking with your sexy lover.";
 			say "     You move into a place together with the hefty skunk and enjoy a lustful relationship with the talkative skunk. His passions for comics and roleplaying grow on you over time and you learn enough to join into his conversations and give opinions of your own. When he starts to make forays back into the city to retrieve the contents of his store, you support his decision, knowing the depths of his passion. While sometimes it is hard waiting and worrying for him, he always manages to make it back home safely with another load of backpacks full of books. The celebratory sex after having built up his arousal in the lustful city is always the best: rambunctious, loud and oh so satisfying. These trips also provide the big male with lots of exercise, and while he never loses his cute, pudgy body, he becomes much stronger and a more vigorous lover.";
-			If skunk kit is tamed:
+			if skunk kit is tamed:
 				say "     Peppy grows and matures as you care for him, changing as he grows until he becomes a young anthro skunk like his adopted father. Taking after Frank, he'll happily pound your sexy ass while your mate is off on his collection runs. He keeps you filled and satisfied until then, making the time apart more bearable for you. But the times they share you back and forth are the best, taking turns fucking and filling you over and over again until you're so sore and stuffed that you can hardly move for hours, lost in a haze of blissful afterglow.";
 
 This is the Skunkbeast Lord Fucktoy rule:
@@ -487,7 +488,7 @@ This is the Skunk Infection rule:
 			else:
 				say "     You are rescued from the infected city by the military forces as they move through. At the base, you are subject to a series of tests. Your nature as a male skunk arouses some scientific interest, but you are a skunk like so many others they've rescued and there are much higher priorities than an anomaly like you. Eventually they must be satisfied that you haven't given into your infection, for you are released. You live a quiet life for a while, needing a break after the excitement of the city. But you wake up one morning with an erection that won't go away. You feel the urge, no, the need to mate.";
 				say "     Drawn by a strange impulse, you go to a couple of clubs and bars until you find one with a skunk girl among the clientele. You buy the lovely femme some drinks before inviting her back to your place. There you pounce her and rut her like an animal, much to her delight. You satisfy her instinctual needs as well as your own as you breed her while becoming more and more like the feral skunkbeasts of the woods. She becomes the first of your new mates and lures in others for you to fuck and transform.";
-	if Player has a body of "Skunk Taur":
+	else:
 		if humanity of Player < 10:
 			if Player is female:
 				say "     Surrendering to the infection, you are drawn back to the forest by the alluring scent of the skunkbeasts on the wind. Your lower half urges you on incessantly as you find yourself in a lustful heat. Finding one of the big males, you are rutted repeatedly and made into one of his many mates, bred full of beautiful skunk kits. Being such a large mate, you are his favorite, best able to take his massive cock and bear him large litters[if Player is male]. Your skunk partner coaxes you often to sneak off to grab one of the busty females and slake your male needs on them, siring a few kits of your own behind your master's back[end if].";

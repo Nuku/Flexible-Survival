@@ -383,7 +383,7 @@ this is the FireBallBarrage rule:		[Multiple low damage hits]
 		let dam be ( wdam entry * a random number between ( 45 - ( peppereyes * 4 ) ) and 85 ) / 100;
 		if HardMode is true and a random chance of 1 in ( 10 + peppereyes ) succeeds:
 			now dam is (dam * 150) divided by 100;
-			say "The enemy finds a particular vulnerability in your defense - [italic type]Critical Hit![roman type][line break]";
+			say "The enemy finds a particular vulnerability in your defense - Critical Hit!";
 		say "The [if P is false]first fireball strikes you [one of]in the shoulder[or]squarely in the chest[or]in the leg[at random], causing a searing pain as you try and shake the embers off[else]sprite winds up and launches another fireball[end if]! You take [special-style-2][dam][roman type] damage!";
 		now damagein is dam;
 		say "[normalabsorbancy]";

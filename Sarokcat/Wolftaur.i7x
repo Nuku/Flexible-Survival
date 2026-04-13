@@ -282,7 +282,7 @@ this is the wtaurpounce rule:		[double-damage pouncing]
 	let dam be ( wdam entry times a random number from ( 80 - ( peppereyes * 4 ) ) to 120 ) / 67; [+50% damage]
 	if HardMode is true and a random chance of 1 in ( 10 + peppereyes ) succeeds:
 		now dam is (dam * 150) divided by 100;
-		say "The enemy finds a particular vulnerability in your defense - [italic type]Critical Hit![roman type][line break]";
+		say "The enemy finds a particular vulnerability in your defense - Critical Hit!";
 	say "The [one of][EnemyNameOrTitle][or]wolf[or]lupine taur[or]wolf-creature[purely at random] growls and pounces roughly atop you, [one of]knocking[or]sending[or]slamming[purely at random] you down briefly under it. Its many paws pummel you, trying to knock the resistance out of you while you're surrounded in his strong, musky scent. This [one of]powerful[or]strong[or]devastating[purely at random] assault does [special-style-2][dam][roman type] damage!";
 	now damagein is dam;
 	say "[noshieldabsorbancy]"; [unable to use shield while pinned]

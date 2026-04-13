@@ -18,10 +18,10 @@ to say Cheerleader wins:
 		else: [she's won the right to fuck - now the cheerleader wants to 'score']
 			say "     'I beat you fair and square, so just hold still and let's see what's what,' the hulking cheerleader says, then lays you down on the ground and quickly exposes your crotch.";
 		if Player is female: [what the pussy hunt is all about...]
-			if (gestation of child > 0): [already pregnant]
+			if gestation of child > 0: [already pregnant]
 				say "     She rubs her hand over your pussy lips, then sniffs it. With a bit of a disappointed tone she then says, 'Aww, you're already pregnant - oh, I mean... congratulations! Hope all goes well with the birth. And if it's a girl, why don't you come back here once she's grown.' As the hulking cheerleader moves off, you hear her mumbling to herself, [one of]'A virgin and her MILF would be quite a catch and put me in front of even [randomgirlname] on the list...'[or]'At least with a MILF you know she's fertile and worth the seed...'[or]'Haven't managed to snag a virgin in ages.'[at random]";
 			else:
-				if (Cunt Depth of Player < 4): [far too small]
+				if Cunt Depth of Player < 4: [far too small]
 					say "     She spreads the folds of your pussy, rubbing a finger up and down on the outside, then pushes it into you. 'What's this? I can't even get my finger all the way into you! No way a cock would fit in there.' With a rather disappointed expression she pulls you to your feet, saying 'I'm not a monster and don't want to hurt you. So move along little girl, and come back when you're fully grown.'";
 				else:
 					say "     She spreads the folds of your pussy, rubbing a finger up and down on the outside, then pushes it into you. 'Yeah, looks good and ready to plant some seed.' Fondling your pussy with one hand, her other one moves over your [bodytype of Player] body, caressing you and stroking your nipples. With you soon gasping in need from her treatment and getting very wet around her fingers inside you, you're ready in the cheerleader's eyes and she moves to kneel between your legs. She slaps her massive green cock a few times on your stomach, rubbing it against your skin, then guides its head to your entrance. With a slow but steady push, it pops into your body, spreading your lips wide around its girth.";
@@ -46,11 +46,13 @@ To say Cheerleader loses:
 	else: [lost to a non-cheerleader - which raises her estimation of the player from game piece to player]
 		say "     She steps back a bit, raising both hands to placate you. 'OK, OK - you win. You'd make a pretty good contestant in our game... how about you join the team?' the large green cheerleader says, holding her massive cock out to you with a hopeful expression. Do you want to blow her off?";
 		if Player consents:
+			LineBreak;
 			say "     Stepping closer to the green giant, you grasp her massive erection with both hands and pump them up and down her shaft a few times. Looks like the muscled hulk is very sensitive with her cock, as you have her moaning almost immediately. When a large glistening drop of precum forms at the slit of her cockhead, you lean in and lick it off, then run your tongue along her shaft. Then you return to the head, softly suckling on it while your hands fondle the cheerleader's heavy balls and stroke her dick. It doesn't take too much more of this treatment until you push her over the edge. Her balls and cock pulse under your hands as the first blast of warm cum shoots into your mouth, followed by another and another, and the rest of them landing all over your face and chest as she pulls out of your mouth.";
 			say "     The hulking cheerleader grins, saying 'Swallow what you can and just rub the rest into your skin. Shouldn't take too long to make you one of us from my experience.' Then she waves goodbye and goes to hunt for her next catch, leaving you standing there dripping cum.";
 			CreatureSexAftermath "Player" receives "OralCock" from "Hulking Cheerleader";
 			infect "Hulking Cheerleader";
 		else:
+			LineBreak;
 			say "     You politely decline her offer. As you walk away, you hear her say 'Your loss; it's great fun to play. If you ever change your mind, you know where to find me.'";
 
 to say cheerleaderDesc:
@@ -68,7 +70,6 @@ to say cheerleaderDesc:
 		say "     Stacy roars 'His pussy is MINE!' and comes at you with balled fists.";
 	else: [normal repeats for random cheerleaders]
 		say "     A strongly muscled, more than six feet tall woman steps into your way. She has a beautiful face, light green like the rest of her body, and shoulder-length blond hair. Her ample breasts are barely contained by a white crop top stretched over her large frame, and a very short skirt does almost nothing to hide her crotch. Or his, rather - since you see a quite impressive maleness dangling between those green-skinned legs. 'Here for the pussy hunt? Let's see if you have what it takes,' she intones with a surprisingly girly voice, then cracks her knuckles.";
-
 
 Section 2 - Creature Insertion
 
@@ -246,7 +247,6 @@ When Play begins:
 	now Clit Size entry is 0; [size 1-5, see Clit Size Adjective]
 	[Clit Size Adjective is generated by a function and can be used in scenes: very small/small/average/large/very large]
 ]
-
 
 Section 3 - Endings
 

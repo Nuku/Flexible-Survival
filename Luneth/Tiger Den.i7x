@@ -16,14 +16,12 @@ Table of GameRoomIDs (continued)
 Object	Name
 TDen_Entrance	"TDen_Entrance"
 
-TDen_Entrance is a room. It is fasttravel. TDen_Entrance is not sleepsafe. It is private.
-understand "Tiger Den" as TDen_Entrance.
-understand "Tiger Den Entrance" as TDen_Entrance.
-understand "Tiger's Den" as TDen_Entrance.
-understand "Tiger's Den Entrance" as TDen_Entrance.
+TDen_Entrance is a room. It is fasttravel. It is private.
+understand "Tiger Den Entrance/--" as TDen_Entrance.
+understand "Tiger's Den Entrance/--" as TDen_Entrance.
 RoomID of TDen_Entrance is "TDen_Entrance".
 Printed Name of TDen_Entrance is "Tiger's Den Entrance".
-the scent of TDen_Entrance is "The scent coming through from the gate in front of you smells strongly of tigers.".
+the scent of TDen_Entrance is "     The scent coming through from the gate in front of you smells strongly of tigers.".
 Description of TDen_Entrance is "[TDen_Entrance desc]".
 [TODO]
 [This should be the only fast travel point in the tigers den]
@@ -31,7 +29,6 @@ Description of TDen_Entrance is "[TDen_Entrance desc]".
 [Every time you fast travel here you should have a 1 in 4 chance to get in a fight with a tigertaur that is trying to break in]
 [Tigertaur players should not be allowed in no matter what, and I will either add a bad end or a way to rush players out if they attempt to become one in the den]
 [Players will need proof of who they are to gain entrance, more than likely something simple like a bracelet item or something]
-
 
 to say TDen_Entrance desc:
 	say "     After following the dark passage from the surface, you finally manage to find your way to the thick gate that separates the Tiger's Den from the rest of the zoo. The only guiding light in the tunnel coming from lit torches on either side of the huge fence, casting ominous shadows all around you. Taking a closer look at the metal, you can tell that the gates are made of heavy iron and are already showing signs of rust beginning to form. You're also able to make out a shadow just on the other side of the gate.";
@@ -89,7 +86,7 @@ TDen_FFMainArea	"Tiger Den"
 TDen_FFMainArea is a room. It is private.
 RoomID of TDen_FFMainArea is "TDen_FFMainArea".
 Printed Name of TDen_FFMainArea is "First Floor Main Area".
-the scent of TDen_FFMainArea is "The enclosed basement hideout smells strongly of tigers.".
+the scent of TDen_FFMainArea is "     The enclosed basement hideout smells strongly of tigers.".
 Description of TDen_FFMainArea is "[TDen_FFMainArea desc]".
 
 to say TDen_FFMainArea desc:
@@ -123,7 +120,6 @@ Section 2 - Features
 [sex events would be something like going into the locker room and finding someone fucking either a main NPC or just some of the random tigers]
 [the reason to split it up is some people just don't want certain scenes either sex or story this way they can look for what they are into]
 
-
 Chapter 3 - Locker Room [TDen_LockerRoom]
 [The main reason for the locker room is that it is the one "private" place for them to store their belongings. Most of the items that are kept inside the lockers are things pertaining to their past lives or other things that they hold dear, the player will have a chance to find out what is in these lockers, but depending on how you find out the other people may not be pleased. Since the room is not often used it is also the perfect place to talk discreetly.]
 
@@ -134,13 +130,12 @@ TDen_LockerRoom	"TDen_LockerRoom"
 TDen_LockerRoom is a room. Description of TDen_LockerRoom is "[TDen_LockerRoom desc]".
 RoomID of TDen_LockerRoom is "TDen_LockerRoom".
 Printed Name of TDen_LockerRoom is "Locker Room".
+TDen_LockerRoom is west of TDen_Showers.
 
 to say TDen_LockerRoom desc:
 	say "     The locker room has a pretty standard appearance to it. Looking around the area, you can see six rows of compartments. Stepping down one aisle, you can see that each row has ten full length lockers. The entire room only has a single one of its many ceiling lights working, the random flickering of the bulb casting unnerving shadows around the room. Oddly enough, in the back you can also make out a washer and dryer, but their current state lets you know that at the very least neither have been used recently.";
 	say "     Heading west will take you to the main area.";
 	say "     Heading east will take you to the showers.";
-
-TDen_LockerRoom is west of TDen_Showers.
 
 Section 1 - Events
 
@@ -312,6 +307,10 @@ Book 4 - Tiger Den Acquisition Event
 [the tigertaur sex option should be removed or if that option is chosen chase should just leave you]
 [I will have to see if this event can be tied into the introduction of the tigertaur enemy and give a special exception to whatever that scientists name is that has a tigertaur battle since that battle doesn't even take place anywhere near the zoo]
 
+a postimport rule:
+	if PlayerMet of Chase is true:
+		AddNavPoint TDen_Entrance silently;
+
 Chapter 1 - TigerVSTaur
 [TODO: TigerVSTaur]
 [This needs the gender locks removed since this is meant to be a non sexual scene, the transformation moment for the bad choices are there but the players choice removes accountability]
@@ -327,10 +326,6 @@ Sarea of TigerVSTaur is "Zoo".
 
 Section 1 - Event
 
-a postimport rule:
-	if PlayerMet of Chase is true:
-		now TDen_Entrance is known;
-
 to say ResolveEvent TigerVSTaur:
 	if ScaleValue of Player > 3:
 		say "     Looking at some of the seriously overgrown paths of the zoo ahead of you, it looks like that would be a bit of a hard fit for someone of your size. Maybe you'll want to come back if you get a bit smaller...";
@@ -342,22 +337,19 @@ to say ResolveEvent TigerVSTaur:
 		say "[TigerVSTaur_Intro_Companion_02]";
 		WaitLineBreak;
 		say "     The anthro tiger is definitely on the losing side of this fight and his back is literally up against a wall. The tigertaur however seems amused by the beastman's predicament and appears to be toying with its prey. Stepping forward to get a better look, a twig snaps under your foot, alerting both of the felines to your presence. Time seems to stop for a moment as the three of you stare at each other. The anthro tiger is the first to react, 'Run and get out of here!' Faster than your eyes can follow, the tiger's claws slice into the tigertaur's side, causing a loud roar to erupt from within the injured hybrid's throat. It looks like the anthro tiger's going to try and fight a losing battle to give you the chance to escape...";
-		LineBreak;
-		say "     [bold type]What should you do?[roman type][line break]";
+		say "[line break]     [bold type]What should you do?[roman type][line break]";
 		say "     [link](1)[as]1[end link] - Join the anthro tiger in attempting to fight off the tigertaur!";
 		say "     [link](2)[as]2[end link] - Turn the tables and side with the tigertaur against the anthro tiger!";
 		say "     [link](3)[as]3[end link] - Sit back and watch to see what happens.";
 		say "     [link](4)[as]4[end link] - Run as fast as you can to escape.";
 		now calcnumber is 0;
 		while calcnumber < 1 or calcnumber > 4:
-			say "Choice? (1-4)>[run paragraph on]";
+			say "Choice? (1-4)> [run paragraph on]";
 			get a number;
-			if calcnumber is 1 or calcnumber is 2 or calcnumber is 3 or calcnumber is 4:
-				break;
-			else:
-				say "Invalid choice. Type [link]1[end link] to fight the tigertaur, [link]2[end link] to fight the tiger or [link]3[end link] to watch, or [link]4[end link] to run.";
+			if calcnumber < 1 or calcnumber > 4:
+				say "Invalid choice. Type [link]1[end link] to fight the tigertaur, [link]2[end link] to fight the tiger, [link]3[end link] to watch or [link]4[end link] to run.";
+		LineBreak;
 		if calcnumber is 1: [help chase]
-			LineBreak;
 			say "[TigerVSTaur_Helped_Chase]";
 			now HP of Chase is 1;
 			now PlayerMet of Chase is true;
@@ -365,15 +357,12 @@ to say ResolveEvent TigerVSTaur:
 			AddNavPoint TDen_Entrance;
 			now Resolution of TigerVSTaur is 1;
 		else if calcnumber is 2: [help Kage]
-			LineBreak;
 			say "[TigerVSTaur_Helped_Kage]";
 			now Resolution of TigerVSTaur is 2;
 		else if calcnumber is 3: [watch]
-			LineBreak;
 			say "[TigerVSTaur_Watched]";
 			now Resolution of TigerVSTaur is 99;
-		else if calcnumber is 4: [run]
-			LineBreak;
+		else: [run]
 			say "[TigerVSTaur_Ran]";
 			now Resolution of TigerVSTaur is 99;
 		now TigerVSTaur is resolved;
@@ -441,8 +430,7 @@ to say TigerVSTaur_Helped_Kage:
 	WaitLineBreak;
 	say "     Oddly enough, Kage is now looking at you with a warm almost fond expression, 'You're an unusual person, but I like that. [']Normal['] people tend to be boring and while they live in glass houses they do so love to throw stones, don't they?' The taur's eyes flash for a moment, a hint of sadness can be seen within, but as quickly as it appears, it's gone. 'Anyway, isn't it customary for new friends to share an experience to cement their newfound bond?' The confused expression on your face must be showing as Kage is quick to explain, 'Well I already I have my prize after all, I could allow you to use it, sharing is caring and all that.' Without really thinking about what your saying, you ask the tigertaur if that's really alright? Wouldn't he prefer to keep Alex for himself? 'Haha, you are sweet to think about my perspective but, I have no plans on [']mating['] with this betrayer. I will be quite satisfied with shattering its mind, and while yes forcing myself on him would quicken that process, it would make it far too easy and thus spoil my fun little scheme of vengeance, not to mention I don't particularly want to sully myself by touching him more than needed.'";
 	say "     This is all a bit new to you, most of the people in the city seem to follow the [']fight, fuck, own['] rule. Kage seems to created a new rule just for himself, [']fight, own, break[']. While you are thinking about the implications of this ideal, Kage seems to grow impatient, 'Well? Heads or tails? All I ask is you make it... an experience to be remembered.' A cruel smile forms on the herms muzzle, and shockingly enough you find it infectious, as your own mouth mirrors his.";
-	LineBreak;
-	say "     [bold type]<Writer's Note: Ran out of time to build a full-on sex menu for this fork. It is open for later expansion through polls or commissions. Sorry about this.>[roman type][line break]";
+	say "[line break]     [bold type]<Writer's Note: Ran out of time to build a full-on sex menu for this fork. It is open for later expansion through polls or commissions. Sorry about this.>[roman type][line break]";
 	[LineBreak; [TODO: maybe se this up like a talk menu since this should also reference gender orc and bliss]
 		say "     [bold type]What should you do?[roman type][line break]";
 		say "     [link](1)[as]1[end link] - Tell Kage that you want the tiger's throat.";
@@ -451,7 +439,7 @@ to say TigerVSTaur_Helped_Kage:
 		say "     [link](4)[as]4[end link] - Tell Kage while you're appreciative you just aren't really in the mood.";
 		now calcnumber is 0;
 		while calcnumber < 1 or calcnumber > 3:
-			say "Choice? (1-4)>[run paragraph on]";
+			say "Choice? (1-4)> [run paragraph on]";
 			get a number;
 			if calcnumber is 1 or calcnumber is 2 or calcnumber is 3 or calcnumber is 4:
 				break;
@@ -490,7 +478,7 @@ to say TigerVSTaur_Watched:
 	say "     Not moving a muscle, you simply stare at the two felines. The beastman continues to shout at you to run and escape all while attempting to land attacks on the much larger cat, however after a few moments the taur eventually seems to understand that you are no threat and concentrates on its much smaller prey. While the anthro does manage to get some decent hits in, the battle is decided quickly when the tigertaur simply grabs the beastman by the throat and shakes him roughly for a moment. With the last bit of strength that the tiger has he spits in the taur's smug face, something between a chuckle and a purr reverberates through the large creatures chest, 'Now Alex is that any way to treat an old friend?' You're shocked by how masculine the thing sounds since at least by its appearance it looks to be a more feminine based herm.";
 	say "     The tiger that you now know is called Alex finally speaks, 'Kage we didn't know each other long enough to be friends, besides I don't go by Alex anymore, the names Chase bitchboy!' You can't be sure at first, but something that [']Chase['] says definitely seems to piss the bigger cat off, going by the low growl and the flattening of its ears at least. 'Bitchboy?! Wouldn't that name be more fitting for someone that actually abandoned somebody because they were too scared to act?' The bravado of the anthro dissipates almost instantly at the tigertaur's words, 'Kage... everything was happening so fast, none of us had any idea what was going on and as far as we could tell the world was ending all around us.'";
 	WaitLineBreak;
-	say "     The broken sound in Chase's voice makes you wonder what exactly did happen in those first few days, while things may be chaotic now, it had to be worse when people were still fighting for their humanity. 'You don't think that all of us wish we could go back and change how shit went down?! But it's not too late Kage, I mean your dad is with us st-hhhh' Whatever the anthro was gonna continue saying is cut off by the tightening of the taur's paw around his throat, 'Don't you dare mention that bastard to me!' The pure rage in those words is accompanied by a violent shredding of Chase's basketball shorts, leaving the poor feline completely naked  and the act makes you want to create even more distance between yourself and the large apex predator, but after a few moments of dead silence the creature finally speaks, 'Ya'know Alex, this is a perfect moment of reflection don't you think? You mentioned going back and changing how things turned out, but the truth is that life just doesn't work that way does it? In the real world there are actions and reactions and at the end of the day you have to accept responsibility for your choices, only children think they can do what they want without consequences... time to grow up peter pan.'";
+	say "     The broken sound in Chase's voice makes you wonder what exactly did happen in those first few days, while things may be chaotic now, it had to be worse when people were still fighting for their humanity. 'You don't think that all of us wish we could go back and change how shit went down?! But it's not too late Kage, I mean your dad is with us st-hhhh' Whatever the anthro was gonna continue saying is cut off by the tightening of the taur's paw around his throat, 'Don't you dare mention that bastard to me!' The pure rage in those words is accompanied by a violent shredding of Chase's basketball shorts, leaving the poor feline completely naked and the act makes you want to create even more distance between yourself and the large apex predator, but after a few moments of dead silence the creature finally speaks, 'Ya'know Alex, this is a perfect moment of reflection don't you think? You mentioned going back and changing how things turned out, but the truth is that life just doesn't work that way does it? In the real world there are actions and reactions and at the end of the day you have to accept responsibility for your choices, only children think they can do what they want without consequences... time to grow up peter pan.'";
 	say "     With those final words the tigertaur leans in closer to the terrified anthro's face and forces its long tongue into the struggling beastman's mouth. At first nothing seems to happen, well other than Chase struggling to escape Kage's grip. Then you see it, the anthro's backside seems to being growing larger and takes on the shape of a huge hump. You aren't sure exactly what the nanites are attempting to do to the beastman at first, at least until you see an extra pair of legs slowly begin to push their way out of Chase's still growing butt. That's not the only change though, your eyes darting between the feline's emerging breasts and its sheath being stretched backwards in a mimicry of Kage's.";
 	WaitLineBreak;
 	say "     The transformation happens so fast, eventually you are looking at two tigertaurs. One seemingly proud of itself, while the others eyes are filled with despair. 'There you go Alex, now you have paid for your crimes, but I wonder, will your little bitch friends welcome you back with open arms? Or view you as simply another enemy because of your form? I happen to know for a fact that that arrogant bastard at least will cut you down without a second thought.' A bit of that rage you saw before begins to resurface, but Kage simply shakes its head and continues speaking, 'I suppose I could take you with me, I mean I'm not a heartless monster after all, would you like that kitten?' Chase simply looks at the ground and nods in agreement, although it does look as if their are tears in the freshly made taur's eyes.";
@@ -506,7 +494,7 @@ Part 1 - First Intro Moment
 
 to say TigerVSTaur_Intro_Companion_01: [Reacting to the sounds of a fight]
 	if bee girl is listed in companionList of player: [Honey]
-		say "     Honey looks around the area with a scared look on her face, 'Umm, like maybe we should just get out of here! I mean whatever is making  those sounds definitely isn't friendly!' Reaching over, you slowly rub small circles around the frightened bee girl's back, being careful to avoid her wings, you're rewarded with a sweet smile from your small friend.";
+		say "     Honey looks around the area with a scared look on her face, 'Umm, like maybe we should just get out of here! I mean whatever is making those sounds definitely isn't friendly!' Reaching over, you slowly rub small circles around the frightened bee girl's back, being careful to avoid her wings, you're rewarded with a sweet smile from your small friend.";
 	if gshep is listed in companionList of player and gsd_pet >= 60 and Trucker Bar is not resolved: [Korvin] [confident, past quest not done]
 		say "     Korvin scans the area with furrowed brows, 'Sounds like a fight is going on nearby, maybe we should check it out! You know I'm always down for a little rumble and who knows, maybe we will get to have some fun after, haha!' Rolling your eyes at the German shepherd's one track mind, you can't help but join in his soft laughter.";
 	if demon brute is listed in companionList of player and DBCaptureQuestVar is 5: [Brutus] [controlled, not cleansed]
