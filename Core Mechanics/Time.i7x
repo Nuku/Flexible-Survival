@@ -360,8 +360,7 @@ an everyturn rule:
 		if LastTurnDay is false: [last turn was night]
 			say "[bold type]The sun rises over the city.[roman type][line break]";
 			if Offspring is in bunker and number of filled rows in the Table of PlayerBunkerChildren > 0: [chance for presents!]
-				let PresentChance be 1;
-				increase PresentChance by number of filled rows in Table of PlayerBunkerChildren / 3;
+				let PresentChance be 1 + ( number of filled rows in Table of PlayerBunkerChildren / 3 );
 				if PresentChance > 5, now PresentChance is 5; [maximum 33% at 12 children]
 				if a random chance of PresentChance in 15 succeeds: [got a present]
 					add "offspring present" to invent of Bunker;
@@ -379,7 +378,7 @@ Chapter 5 - Date
 an everyturn rule:
 	if time is pre dawn: [early dawn, 0:00-3:00]
 		increase DateDay by 1;
-		let MonthDays be {31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31}; [number of days in each month]
+		let MonthDays be { 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31 }; [number of days in each month]
 		if DateMonth is 2 and DateYear is 2008, now entry 2 of MonthDays is 29; [leap year]
 		if DateDay > entry DateMonth of MonthDays:
 			now DateDay is 1;

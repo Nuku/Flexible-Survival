@@ -25,7 +25,7 @@ to say ResolveEvent Chance Meeting:
 		if generationConflictFlag is 0 and HP of Erin is 2 and BrennanRelationship > 11 and a random chance of 1 in 3 succeeds:
 			say "[Generation Conflict]";
 		else:
-			if FemaleList is banned or FemaleList is warded or (MaleList is not banned and MaleList is not warded and Player is maleinterested and (Player is not femaleinterested or a random chance of 1 in 2 succeeds)):
+			if FemaleList is banned or FemaleList is warded or (MaleList is not banned and MaleList is not warded and a random chance of 1 in 2 succeeds):
 				say "     You explore the place, only to get jumped by a latex fox.";
 				challenge "Latex Fox";
 			else:

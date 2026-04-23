@@ -34,31 +34,31 @@ Version 1 of Skarnoth-Brutus scenes by Luneth begins here.
 
 Book 1 - Original Events
 
-Section 1 - Royal Incubus Skarnoth and Evil Brutus Events
+Part 1 - Royal Incubus Skarnoth and Evil Brutus Events
 
-Part 1 - Male Brutus
+Chapter 1 - Male Brutus
 [WIP]
 
-Part 2 - Herm Brutus
+Chapter 2 - Herm Brutus
 [WIP]
 
-Part 3 - Female Brutus
+Chapter 3 - Female Brutus
 [WIP]
 
-Section 2 - Master Skarnoth and Evil Brutus Events
+Part 2 - Master Skarnoth and Evil Brutus Events
 
-Part 1 - Male Brutus
+Chapter 1 - Male Brutus
 [WIP]
 
-Part 2 - Herm Brutus
+Chapter 2 - Herm Brutus
 [WIP]
 
-Part 3 - Female Brutus
+Chapter 3 - Female Brutus
 [WIP]
 
-Section 3 - Submissive Skarnoth and Evil Brutus Events
+Part 3 - Submissive Skarnoth and Evil Brutus Events
 
-Part 1 - Male Brutus
+Chapter 1 - Male Brutus
 
 after going to Half-Renovated Room while Skarnoth is booked and SkarnothMasterSlave > 1 and Stamina of Skarnoth is 0 and demon brute is listed in companionList of Player and DBCaptureQuestVar is 5 and DemonBruteStatus is 0 and "Unchained" is listed in Traits of Skarnoth:
 	say "     Note: Once Skarnoth's Master/Slave chain is completed this event will only be encountered if you have sub slave Skarnoth instead of default slave Skarnoth.";
@@ -95,7 +95,7 @@ after going to Half-Renovated Room while Skarnoth is booked and SkarnothMasterSl
 		say "     Breathless, you ask Brutus why he doesn't make use of the subby demon's other hole. 'Good idea, [master]. Its suck-hole is getting loose anyway.' The brute forces Skarnoth's face against his pelvic bone one last time, looking down with a devilish smirk and watching the bitch choke on the cock that is fully encased in the former prince's esophagus. 'You think that this was fun, hell-slut? The best part comes next!' With that, Brutus pushes the subby demon off of his prick, causing him to fall backwards and gasp for breath. Without giving your slave a chance to fully recover, the brute reaches down and grabs one of Skarnoth's legs, pulling it up and moving the former prince into the position he desires.";
 		say "     Being forced to balance on one foot while the other is stretched over Brutus's shoulder, Skarnoth looks more like he is attempting to do the splits across the whole length of the brute's body. You can see him look down at the infernal prince's [if SkarnothThongStatus is 1]fully-exposed hole[else]thong-covered ass, before he quickly adjusts his new toy and yanks the obstructing garment down[end if]. 'This is gonna hurt, princeling! I'm gonna enjoy breaking you!' With that last comment, Brutus slams his ribbed shaft inside of Skarnoth, going balls deep, and then begins to pound into him as hard as he possibly can.";
 		WaitLineBreak;
-		say "     You walk in a slow circle around the two screwing demons, taking in the sight that the pair make. While Brutus appears to be having the time of his life ramming into the demon below him, Skarnoth appears to be either in a state of shock, ecstasy, or agony, you can't be sure which. The infernal prince's brimstone-colored eyes have rolled up into his head, and his long forked tongue is hanging out of his mouth. Finally, he's actually able to focus on you and attempts to plead with you to stop Brutus, '[Master], you have to stop him! His cock is way too thick! At this speed, he's going to destroy me! I can feel my ass breaking!'";
+		say "     You walk in a slow circle around the two screwing demons, taking in the sight that the pair make. While Brutus appears to be having the time of his life ramming into the demon below him, Skarnoth appears to be either in a state of shock, ecstasy or agony, you can't be sure which. The infernal prince's brimstone-colored eyes have rolled up into his head, and his long forked tongue is hanging out of his mouth. Finally, he's actually able to focus on you and attempts to plead with you to stop Brutus, '[Master], you have to stop him! His cock is way too thick! At this speed, he's going to destroy me! I can feel my ass breaking!'";
 		say "     That information is slightly alarming to say the least, and you look to the demon brute for a reply, who simply rolls his crimson-colored eyes. 'I won't break your toy, [master]. We are demons and heal faster than even those little machines make you do. That's why demons are always virgin tight, no matter how much you use them! Ain't that right, you little cum-whore?!' With that, he ups his pounding speed even further, making Skarnoth release a mixture of squeals and unearthly moans. Realizing that Brutus is right, well going by the demons that you have encountered anyway, you walk back up to his side as he continues to punch fuck his cock into Skarnoth's hole, which does look awfully stretched at this point.";
 		WaitLineBreak;
 		say "     Watching as the prince's backside jiggles with each thrust, you can't help the playful side that wants to be let out from within you, and you reach over, spanking the subby demon's ass every time the brute pulls his dick back. This causes Brutus to chuckle, and eventually, it becomes a game between the two of you, each trying to make the other mess up the tempo. You notice what feels like a snake trailing up your leg and look down to see that the brute's dark-purple tail has started to coil around your calf. Glancing at his face, you see that he now refuses to make eye contact and what appears to be a burst of rage passes over his features as the color of his flesh darkens.";
@@ -113,53 +113,53 @@ after going to Half-Renovated Room while Skarnoth is booked and SkarnothMasterSl
 		say "     Slowly, you begin to jerk Brutus off, eliciting a growl from the beast. Stepping further into the demon's personal space, you force him to look you in the eye and bring his face closer to your own. Pressing your mouth against the demon's, you can't help but smirk when his lips pull back, baring his fangs. You slip your tongue out and softly caress one of his sharp canines, and a weird sort of purr then starts to come from the demon's chest. Having had your fun for the moment, you whisper to Brutus, making sure that he understands how both him and his old master belong to you, now and forever. Removing your hand from his dick, you begin to make your way back to the task at hand, with Brutus's essence returning to the amulet.";
 		now Stamina of Skarnoth is 99; [blocking further content]
 
-Part 2 - Herm Brutus
+Chapter 2 - Herm Brutus
 [WIP]
 
-Part 3 - Female Brutus
+Chapter 3 - Female Brutus
 [WIP]
 
-Section 4 - Mind-Broken Skarnoth and Evil Brutus Events
+Part 4 - Mind-Broken Skarnoth and Evil Brutus Events
 
-Part 1 - Male Brutus
+Chapter 1 - Male Brutus
 
 [after going to Half-Renovated Room while (Skarnoth is booked and SkarnothMasterSlave < 1 and demon brute is tamed and demon brute is active companion and DBCaptureQuestVar is 5 and DemonBruteStatus is 0 and "Unchained" is listed in Traits of Skarnoth):
 	say "     Note: Once Skarnoth's Master/Slave chain is completed this event will only be encountered if you have mindbroken slave Skarnoth instead of default slave Skarnoth.";
 	say "     ";]
 
-Part 2 - Herm Brutus
+Chapter 2 - Herm Brutus
 [WIP]
 
-Part 3 - Female Brutus
+Chapter 3 - Female Brutus
 [WIP]
 
 Book 2 - Second Events
 
-Section 1 - Royal Incubus Skarnoth and Evil Brutus Events
+Part 1 - Royal Incubus Skarnoth and Evil Brutus Events
 
-Part 1 - Male Brutus
+Chapter 1 - Male Brutus
 [WIP]
 
-Part 2 - Herm Brutus
+Chapter 2 - Herm Brutus
 [WIP]
 
-Part 3 - Female Brutus
+Chapter 3 - Female Brutus
 [WIP]
 
-Section 2 - Master Skarnoth and Evil Brutus Events
+Part 2 - Master Skarnoth and Evil Brutus Events
 
-Part 1 - Male Brutus
+Chapter 1 - Male Brutus
 [WIP]
 
-Part 2 - Herm Brutus
+Chapter 2 - Herm Brutus
 [WIP]
 
-Part 3 - Female Brutus
+Chapter 3 - Female Brutus
 [WIP]
 
-Section 3 - Submissive Skarnoth and Evil Brutus Events
+Part 3 - Submissive Skarnoth and Evil Brutus Events
 
-Part 1 - Male Brutus
+Chapter 1 - Male Brutus
 
 after going to Maintenance Storeroom while Skarnoth is booked and SkarnothMasterSlave > 1 and Stamina of Skarnoth is 7 and demon brute is listed in companionList of Player and DBCaptureQuestVar is 5 and DemonBruteStatus is 0 and "Soldier" is listed in Traits of demon brute and "Master's Bite" is not listed in Traits of demon brute and HP of Lilith > 0: [12 hours later might need wahn to help with the coding portion for that]
 	say "     Walking back into the storeroom that you've been using as a makeshift bedroom, you are slightly surprised to see your demonic slave prince stretched across the small bed, the glow of the limited lighting in the room casting shadows across the demon's form. You're about to ask Skarnoth what exactly he's doing in your personal room, but stop yourself when you realize that the horned stud is asleep. This is a rare opportunity, usually whenever your gaze falls upon the royal hellspawn, he is either smirking or looking at you with nothing but slutty desire. Right now, you are able to see a different side, softer perhaps, or maybe he just appears that way since he isn't playing a [']role['] at the moment. Softly, you close the door behind you and take a single step further into the room, but you stop in your tracks when you hear a heavy thud from the other side of the now closed door.";
@@ -168,13 +168,13 @@ after going to Maintenance Storeroom while Skarnoth is booked and SkarnothMaster
 	say "     Looking back over towards the bed, you double-check to make sure that your [']guest['] is still asleep and didn't wake up due to the loud arrival of the heavy demon brute. Your eyes take in the tan flesh of the dark prince's chest, which rises and falls with each deep breath the demon takes. Once you are sure that the fallen prince is still slumbering within dreamland, you allow yourself to fully enjoy the sight that Skarnoth makes resting there. Your slave's broad frame is laying on his side with one of his thick biceps under his head while the other is casually draped over the demon's wide hips. Slowly, you make your way over towards the cot, the feeling of a hunter stalking its prey at the forefront of your mind. 'Haha!' The raspy laugh in your head stops you dead in your tracks till you quickly remember that whatever noise Brutus makes can only be heard within your head.";
 	say "     'It might take some time getting used to blocking your thoughts, [master], but... I am enjoying the imagery that you're sending out.' The pleased rumble at the end of the brute's comment excites you. The feeling of doing something naughty, something that you're not supposed to be doing and all the while being encouraged by others to break the rules, it's an adrenaline rush. You continue forward, finally reaching the bed and can't help the feeling of power that courses through your veins as you loom over the unsuspecting Skarnoth. Reaching out, you slowly caress the demon's face and can't believe how innocent he appears while asleep. His long eyelashes flutter slightly in his sleep as your hand creeps even higher up through the silky strands of the incubus's crimson mane. While you've touched the royal's massive horns before, you haven't actually taken the time to examine them closely.";
 	WaitLineBreak;
-	say "     The ebony-colored keratin feels slick under your fingertips, the thick base leading up to the much narrower sharp points of each large piece of bone. A smile creeps across your mouth at the thought of this powerful and handsome being that has completely given himself over to you, well, with a little bit of training, but still. A soft moan escapes the demon's lips as he moves slightly in his sleep, the sound exciting you further and causing your gaze to lower to Skarnoth's crotch. His [if SkarnothThongStatus is 1]exposed cock is standing fully erect and leaking profusely[else]cloth-covered cock is straining at the material, and judging by the wet spot, is leaking profusely[end if]. An erotic hunger fills your thoughts while an almost electric feeling travels down your spine.";
+	say "     The ebony-colored keratin feels slick under your fingertips, the thick base leading up to the much narrower sharp points of each large piece of bone. A smile creeps across your mouth at the thought of this powerful and handsome being that has completely given himself over to you, well, with a little bit of training, but still. A soft moan escapes the demon's lips as he moves slightly in his sleep, the sound exciting you further and causing your gaze to lower to Skarnoth's crotch. His [if SkarnothThongStatus is 1]exposed cock is standing fully erect and[else]cloth-covered cock is straining at the material, and judging by the wet spot, is[end if] leaking profusely. An erotic hunger fills your thoughts while an almost electric feeling travels down your spine.";
 	say "     A slightly dark and perverse idea enters your mind, and you attempt to open your mind to Brutus and ask him the [']full['] extent of his abilities. '[Master], you have seen my abilities first hand. Why not just give me orders, and I will complete them.' You can make out some slight annoyance in the brute's voice and inform him that it isn't about orders. He's the new leader of your hellguard, meaning that he should feel pride with all of your decisions. A rumbling purr extends through the connection that the two of you share, followed by a feeling of warmth. You can't help but wonder if this is Brutus's... happiness, or if perhaps you are simply imagining it. Deciding to share your plan with your dark knight, a boisterous laugh soon erupts inside your head. 'I like the way your twisted mind works, [master]!'";
 	WaitLineBreak;
-	say "     Looking back at the entrance of the room, a glowing dark-purple mist begins to flow from underneath and through the small keyhole of the door. A smile of anticipation forms on your lips as you watch the winding smoke creep ever closer. Once it reaches the large cot, it slowly swirls around the legs of the bed and starts to rise. Watching the entity glide over the sleeping prince, you can almost make out a clawed hand caressing Skarnoth's calf and continues trailing up his thigh. The fiery-maned sub moves around slightly in his sleep as a soft moan can be heard, and by now, the mist has reached his [if SkarnothThongStatus is 1]hard, throbbing cock, fully exposed to whatever may happen[else]hard, throbbing cock, still confined within his black thong[end if].";
+	say "     Looking back at the entrance of the room, a glowing dark-purple mist begins to flow from underneath and through the small keyhole of the door. A smile of anticipation forms on your lips as you watch the winding smoke creep ever closer. Once it reaches the large cot, it slowly swirls around the legs of the bed and starts to rise. Watching the entity glide over the sleeping prince, you can almost make out a clawed hand caressing Skarnoth's calf and continues trailing up his thigh. The fiery-maned sub moves around slightly in his sleep as a soft moan can be heard, and by now, the mist has reached his hard, throbbing cock, [if SkarnothThongStatus is 1]fully exposed to whatever may happen[else]still confined within his black thong[end if].";
 	say "     As the mist tightens around the former royal's body, you are able to see the indentions from Brutus's clawed hands on the supple tan flesh. You move to Skarnoth's side and gently nudge him in an effort to wake the handsome demon, his eyes finally fluttering open as you murmur that it's time for sleeping beauty to awaken. Looking down into the normally magma-like eyes, at the moment, they appear to be closer to a warm amber color, more than likely due to the demon's sleepy state. '[Master]?' The fallen prince's groggy and questioning tone tells you that he's still not fully awake yet. Leaning down, your nose softly bumps into the man below you, and with no other warning, you quickly capture his lips in a searing kiss that tastes like smoke and chocolate. While you focus on where your mouth meets, you feel a sharp claw caress along your side, almost as if Brutus is reminding you that you're not alone.";
 	WaitLineBreak;
-	say "     Drawn out moans can be heard from within Skarnoth's throat, causing you to open your eyes and look down his heaving torso. You attempt to hold in a snicker as you watch the purple smoke [if SkarnothThongStatus is 1]weave around your sub's cock[else]quickly pulls off your sub's black thong and weave around his cock[end if]. The glowing mist alternates from sensually gentle strokes to rough quick ones in an effort to never allow their victim to prepare for what's to come. Reaching up, you give one of Skarnoth's dark nipples a sharp twist and enjoy the squeal of both shock and pleasure that seems to vibrate through the fallen prince's entire body. Pulling your mouth away, you smile when the subby incubus rushes to follow your lips with a needy whine. Looking into his now luminescent hellfire eyes, you softly stroke his cheek, watching as his long eyelashes slowly flutter, almost begging for you to come hither.";
+	say "     Drawn out moans can be heard from within Skarnoth's throat, causing you to open your eyes and look down his heaving torso. You attempt to hold in a snicker as you watch the purple smoke [if SkarnothThongStatus is 1]weave around your sub's[else]quickly pulls off your sub's black thong and weave around his[end if] cock. The glowing mist alternates from sensually gentle strokes to rough quick ones in an effort to never allow their victim to prepare for what's to come. Reaching up, you give one of Skarnoth's dark nipples a sharp twist and enjoy the squeal of both shock and pleasure that seems to vibrate through the fallen prince's entire body. Pulling your mouth away, you smile when the subby incubus rushes to follow your lips with a needy whine. Looking into his now luminescent hellfire eyes, you softly stroke his cheek, watching as his long eyelashes slowly flutter, almost begging for you to come hither.";
 	say "     Whispering into the prince's ear for him to close his eyes, an oddly shy smile spreads across his face as he complies, 'Anything you want, [master]. It feels like you're touching me everywhere, please don't stop!' A dark chuckle reverberates through you as you promise that you have no intention of stopping. Your eyes land on where the incubus's throat meets his shoulder, and without warning, a sudden almost instinctual need rises up within you. Remembering your last encounter with Skarnoth and Brutus, you had the same desire to lay claim to the demon brute The only question is do you really want to give into this instinct? You attempt to think of reasons why this would be a bad idea, but the only thing that keeps popping into your mind is that he is already yours, so why not give him what he needs.";
 	WaitLineBreak;
 	say "     Surging forward, your teeth find purchase, and you bite into the thick meaty flesh before you, feeling his heat and tasting his sweat upon your tongue. A roar erupts from within Skarnoth's chest, sounding more like a feral beast rather than a royal incubus of hell. The demon's hands quickly shoot up and wrap around your neck, holding you in place, not that you need any incentive to continue. Your mind begins to become foggy and even with your eyes closed, you're able to see a vision of a dark castle surrounded by lava and flames.";
@@ -189,7 +189,7 @@ after going to Maintenance Storeroom while Skarnoth is booked and SkarnothMaster
 	say "     A lust-driven smirk crosses your face as you submerge your hand fully into the glowing mist and begin to mimic a jerking off motion. You're not sure if your actions are having an effect on Brutus or if he is simply giving you what you want, but slowly, some of the smoke starts to corporealize before your eyes. You quickly pull your hand back, not wanting it to potentially be trapped within the solidifying mist, and in the wake of your excitement, you are presented with a dark-purple dick floating in mid-air. Oddly enough, the base is still connected to the mist via glowing tendrils. Watching the hardening cock, you can see the foreskin begin to pull back, revealing the hard ridges just underneath the helmet and the protruding bumps forming along the shaft.";
 	WaitLineBreak;
 	say "     Reaching out, you wrap your fingers around the thick piece of meat in front of you. Stroking it slowly, you are rewarded by a deep baritone purr inside of your head. Pearls of precum form at the head of Brutus's prick and begin to overflow, and without paying much attention, they dribble down onto Skarnoth's abs. '[Master], you're being awfully naughty. Ya'know that I don't need lube. My body is always ready for you!' With a hint of mirth in your voice, you explain that you must have forgotten and order him to get into a more [']subservient['] position while reminding him to keep his eyes closed. '[Master], you're so naughty, wanting a powerful guy like me to bow down to you like a horny little bitch!' With a chuckle, you inform him that [if carried of orc pill case > 0]if he's a good boy, you will in fact make him into your personal breeding slut, making sure that he is filled up with so many babies that he will never know what it feels like to not be knocked up[else]he's your personal slut, and it's good for him to always be the answer to your desires[end if].";
-	say "     Skarnoth's only response is to moan and quickly getting on all fours, presenting his huge ass to your gaze, and you can't help but smack it firmly, enjoying the way his muscled rear jiggles. 'Please, [master], [if carried of orc pill case > 0]I want to be bred. I will give you the most powerful offspring you could ever imagine[else]I want my body to be a riddle that only your touch can unravel[end if]!' No sooner do those words leave the incubus's mouth than the demon brute's ghostly hands reach up and spread the royal's ass, exposing his small pink opening. Feeling wicked, you shoot your hand out in an attempt to grab one of Brutus's glowing incorporeal hands, and oddly enough, you're able to grab it as if it were solid. Pulling it back, you're rewarded with a full bodied demon brute forming from within the mist.";
+	say "     Skarnoth's only response is to moan and quickly getting on all fours, presenting his huge ass to your gaze, and you can't help but smack it firmly, enjoying the way his muscled rear jiggles. 'Please, [master], I want [if carried of orc pill case > 0]to be bred. I will give you the most powerful offspring you could ever imagine[else]my body to be a riddle that only your touch can unravel[end if]!' No sooner do those words leave the incubus's mouth than the demon brute's ghostly hands reach up and spread the royal's ass, exposing his small pink opening. Feeling wicked, you shoot your hand out in an attempt to grab one of Brutus's glowing incorporeal hands, and oddly enough, you're able to grab it as if it were solid. Pulling it back, you're rewarded with a full bodied demon brute forming from within the mist.";
 	WaitLineBreak;
 	say "     You had no idea that you could actually grapple the demon from its smoky state. 'Things have changed, [master]. By making me your champion, you have more power over me.' The voice in your mind sounds both amused and proud all at the same time, and you rush your mouth forward to claim his smiling lips, however, before you can fully enjoy the taste of your dark knight, a pleading voice can be heard from the decent-sized cot. '[Master], stop teasing me. Just ram [if Player is male]your cock[else]that toy[end if] in, I need it!' Not sure exactly what Skarnoth is talking about, you peer around the demon's large body and are shocked by what you see. Hotdogging the incubus's ass is Brutus's hard cock. Your eyes follow the tendrils of smoke leading back to the brute's now mist-covered but empty crotch.";
 	say "     A laugh bubbles out of your mouth, which leads to Skarnoth questioning you, '[Master], what's so funny? Is it amusing to push me to my limits and have me begging for it?!' You can hear the hurt in the incubus's voice and inform him that you are simply happy. This seems to do the trick and causes a smile to cross the prince's mouth. Crisis averted, you are about to lean forward and kiss Brutus, only to have the demon hold his hands up in front of you. With a wink of his crimson-slitted eye, the brute's hands fade into smoke and travel over to Skarnoth once again, spreading his ass open and making it easier for his cock to rub up against the royal hole in front of it. 'See, [master], no body needed.' A smirk forms on your lips at seeing this new playful side to the normally rage-engulfed hellspawn.";
@@ -201,9 +201,9 @@ after going to Maintenance Storeroom while Skarnoth is booked and SkarnothMaster
 	say "     The demon just lays there not moving, well, other than the occasional throbbing from his cock in your hand. 'So I can continue if I can say its... his name once?' You nod your head in agreement. 'Fine! Can I continue turning Skarnoth's ass into a cunt?!' His choice of words cause you to laugh out loud, and while it's not exactly what you had in mind, it's progress. You release your grip on the hellspawn's cock, and without any hesitation, he once again begins to pummel Skarnoth's insides. Walking back over to Brutus, you realize that there is no more room on the cot for your form and instead decide to straddle the brute's torso. The demon refuses to look directly into your eyes. You can only assume it's due to embarrassment from your talk, so you lean forward, gently pressing your lips to his own and allowing your tongue to rub and massage one of the demon's sharp canines, causing a rumbling purr to echo throughout the room.";
 	WaitLineBreak;
 	say "     Pulling back, Brutus now looks intently into your eyes, as if he wants to say something, so you wait till he is ready. 'Does this mean that I can still just do whatever I want to the rest of the city?' With a smirk, you explain to the brute that you have no intention of trying to turn him into a being of virtue and that Skarnoth is different than those other toys out in the city who are just waiting to be used and broken. A huge smile spreads across the demon's fanged mouth. 'So I can still grab anything I want out there and destroy its holes, well, other than those that belong to you?!' Smiling at how much he sounds like a kid at Christmas, you lean down and before you capture his lips, you whisper that he had better make sure that those whores' holes never recover from what he does to them.";
-	say "     The demon brute's response is instant, and he passionately begins to kiss you. He must also have gone back to fucking Skarnoth in earnest, well, if the head shape that's hitting your backside is any indicater. You jump a bit when you feel something slick begin to[if Player is female] rub and squirm at your clit[else if Player is male] wrap around your cock[else] put pressure on the mound of flesh where your genitals would be located[end if], causing you to throw your head back and moan in pleasure. Looking at Brutus with desire, you see a line of mist leaving his mouth, and he opens it, revealing that his tongue found other uses. Before you can even adjust to this new feeling, another slick member joins the first, this one probing [if Player is female]your soft nether lips[else]the rim of your ass[end if], invading your inner walls. You catch on to the fact that both Skarnoth and Brutus are both trying to make you feel pleasure and with a breathy moan, you tell them what good boys they are.";
+	say "     The demon brute's response is instant, and he passionately begins to kiss you. He must also have gone back to fucking Skarnoth in earnest, well, if the head shape that's hitting your backside is any indicater. You jump a bit when you feel something slick begin to [if Player is female]rub and squirm at your clit[else if Player is male]wrap around your cock[else]put pressure on the mound of flesh where your genitals would be located[end if], causing you to throw your head back and moan in pleasure. Looking at Brutus with desire, you see a line of mist leaving his mouth, and he opens it, revealing that his tongue found other uses. Before you can even adjust to this new feeling, another slick member joins the first, this one probing [if Player is female]your soft nether lips[else]the rim of your ass[end if], invading your inner walls. You catch on to the fact that both Skarnoth and Brutus are both trying to make you feel pleasure and with a breathy moan, you tell them what good boys they are.";
 	WaitLineBreak;
-	say "     As the two demons continue to stimulate you, your hips grind back and forth, using Skornoth's tongue for penetration and Brutus's for masturbation. From behind, you hear a squeal from the incubus as his face is pushed hard into your backside, and the familiar scent of salty cum begins to fill the room. Not one to be outdone, you quicken your pace, pushing yourself closer to orgasm until it finally tears through your body. With a[if Player is female]high-pitched squeal of your own, your femcum begins flooding onto [else if Player is male]loud bellowing roar, your load shoots out in heavy ropes onto [else]loud bellowing roar, your shapeless mound spasms and leaves you lying on [end if]Brutus's abs. Completely exhausted by the passion that overtook the room, you collapse next to the demon brute, forcing him to lay on his side rather than on his back. With a sleepy glaze over your eyes, you notice that Brutus has [']reconstituted['] himself and looks equally satisfied. Reaching over, you pull the hulking male over, making his head rest on your[if Breast Size of Player > 0] soft, pillowy[else] hard, muscled[end if] chest.";
+	say "     As the two demons continue to stimulate you, your hips grind back and forth, using Skornoth's tongue for penetration and Brutus's for masturbation. From behind, you hear a squeal from the incubus as his face is pushed hard into your backside, and the familiar scent of salty cum begins to fill the room. Not one to be outdone, you quicken your pace, pushing yourself closer to orgasm until it finally tears through your body. With a [if Player is female]high-pitched squeal of your own, your femcum begins flooding onto[else if Player is male]loud bellowing roar, your load shoots out in heavy ropes onto[else]loud bellowing roar, your shapeless mound spasms and leaves you lying on[end if] Brutus's abs. Completely exhausted by the passion that overtook the room, you collapse next to the demon brute, forcing him to lay on his side rather than on his back. With a sleepy glaze over your eyes, you notice that Brutus has [']reconstituted['] himself and looks equally satisfied. Reaching over, you pull the hulking male over, making his head rest on your [if Breast Size of Player > 0]soft, pillowy[else]hard, muscled[end if] chest.";
 	say "     Glancing over with the intention of pulling Skarnoth onto the free side of your body, you are shocked to see the tan adonis huddled in a corner of the cot by himself. Calmly, you ask him why he doesn't come closer and lay with the two of you. 'Why would I come over there? I'm just a cumdump to be used and thrown away, aren't I?' The look of betrayal and sadness in the incubus's lava-like eyes pulls at your heartstrings, and you ask why he feels like that's the case. 'Well, I came here to spend time with you, but instead of what I was hoping for, you had that animal use me!' You can feel one of Brutus's claws tighten at your side either in rage or guilt. You attempt to reach out mentally but can't seem to get a good read, almost as if too many things are overlapping with each other. Not wanting to make Skarnoth any more frustrated than he already is, you inform him that it's a pity that he doesn't want to join because you were looking forward to some cuddle time with him.";
 	WaitLineBreak;
 	say "     With a huff, the incubus finally comes over and lays his head opposite the demon brute. 'Fine, well, here I am.' Wrapping your free arm around the fallen prince, you are surprised when it's Brutus that breaks the silence. 'So... it's me that made you feel that way?' Silence fills the room for a few tense moments. 'I don't see anyone else calling me nothing but an [']it[']? Do you? I mean, we are demons. It's not like we can ever do anything but try to beat down anyone that doesn't own us!' The venom in the incubus's voice is palpable, but you can't help but wonder if this means that Skarnoth didn't actually hear your earlier conversation with the demon brute. You slowly begin to rub the agitated demon's back in an effort to help comfort him, but before you speak your dark knight prevents you. 'Well... that's our past, not our present.'";
@@ -214,25 +214,25 @@ after going to Maintenance Storeroom while Skarnoth is booked and SkarnothMaster
 	add "Master's Bite" to the Traits of demon brute;
 	now energy of The-Voice is turns; [saves the turn when the event happened]
 
-Part 2 - Herm Brutus
+Chapter 2 - Herm Brutus
 [WIP]
 
-Part 3 - Female Brutus
+Chapter 3 - Female Brutus
 [WIP]
 
-Section 4 - Mind-Broken Skarnoth and Evil Brutus Events
+Part 4 - Mind-Broken Skarnoth and Evil Brutus Events
 
-Part 1 - Male Brutus
+Chapter 1 - Male Brutus
 
 [WIP]
 
-Part 2 - Herm Brutus
+Chapter 2 - Herm Brutus
 [WIP]
 
-Part 3 - Female Brutus
+Chapter 3 - Female Brutus
 [WIP]
 
-Section 5 - Notes
+Part 5 - Notes
 
 [Lords of hell
 Player - New Master of Hell

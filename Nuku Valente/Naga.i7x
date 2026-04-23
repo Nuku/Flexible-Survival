@@ -47,8 +47,7 @@ to say LoseToNaga:
 		else:
 			say "     Drained of vitality, you are consumed by the naga, becoming nothing more than another grisly meal for the predatory monster to be digested over the next several days.";
 			now XP of Player is 0;
-			choose row with Name of "Naga" from Table of Random Critters;
-			now non-infectious entry is true; [prevents regular naga infection from occurring]
+			now the non-infectious corresponding to a Name of "Naga" in Table of Random Critters is true; [prevents regular naga infection from occurring]
 			now hunger of Player is 999;
 			now thirst of Player is 999;
 			now battleground is "void";

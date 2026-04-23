@@ -7,7 +7,7 @@ Version 1 of Zephyr Phone by Core Mechanics begins here.
 
 [changes -]
 
-Section 1 - Declarations and variables
+Chapter 0 - Declarations and variables
 
 emap is a number that varies. emap is usually 0.
 [ 0 = Nav Map not enabled ]
@@ -19,7 +19,7 @@ zpc_inzone is a truth state that varies. zpc_inzone is false.
 zpc_Zc is a number that varies.[@Tag:NotSaved] [true if players location is listed on table of Zpc Location reference]
 [zpc_Zf is a figure name that varies.[@Tag:NotSaved] [contains the Icon entry of the figure to be displayed]]
 
-Section 2 - Master Referencing Table
+Chapter 1 - Master Referencing Table
 
 [MALL]
 Table of Zpc Location Reference
@@ -416,7 +416,7 @@ Richard's Room	Figure of emap_PAN_Frat_Richards_Room
 [Table of Zpc Location Reference (continued)
 location	figure_name]
 
-Section 3 - Objects
+Chapter 2 - Objects
 
 Table of Game Objects (continued)
 name	desc	weight	object
@@ -439,7 +439,7 @@ zpc is a grab object. zpc is not temporary.
 understand "zephyr personal communicator" as zpc.
 Usedesc of zpc is "[zpc_use]".
 
-Section 4 - Handling (Internal)
+Chapter 3 - Handling (Internal)
 
 zpcturnon is an action applying to nothing.
 Understand "turn on the/-- zpc" as zpcturnon.
@@ -474,7 +474,7 @@ to say zpc_use:
 			say "Following the ngraphics_blank rule";
 		follow the ngraphics_blank rule; [clear pic after WLB user response]
 
-Section 4.1 - Internal functions
+Section 1 - Internal functions
 
 to zpc_checklocation: [returns Zc value of 1 or 0]
 	if location of Player is a location listed in Table of Zpc Location Reference:
@@ -488,7 +488,7 @@ to zpc_checklocation: [returns Zc value of 1 or 0]
 	else:
 		now zpc_Zf is Figure of pixel;]
 
-Section 5 - Handling (External)
+Chapter 4 - Handling (External)
 
 [Master look override rule]
 this is the zpc_lookoverride rule:
@@ -500,7 +500,7 @@ this is the zpc_lookoverride rule:
 			project the Figure of emap_special_signalnotfound_icon;
 			now zpc_inzone is false;
 
-Section 6 - DEBUG - Not for release
+Chapter 5 - DEBUG - Not for release
 
 [Cheat for enabling variable]
 cheat_emap is an action applying to nothing.

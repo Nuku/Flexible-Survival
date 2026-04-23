@@ -86,7 +86,9 @@ to say ResolveEvent Sword Nest:
 						say "     You take your slime-filled hands and shove them up your waiting cunt[sfn], filling [itthemf] with the sludge.[randomfimpreg][randomfimpreg][randomfimpreg]";
 						if anallevel > 1:
 							say "     You then shove them up your rear, filling it as well.[randommimpreg][randommimpreg][randommimpreg]";
-					else if Player is mpreg_ok:
+						else:
+							say "     You then try to drink all of the slime you can, tasting its deliciously dirty flavor.";
+					else if "MPreg" is listed in feats of Player:
 						say "     You take your slime-filled hands and shove them up your waiting rear, filling it with the sludge.[randommimpreg][randommimpreg][randommimpreg]";
 						say "     You then try to drink all of the slime you can, tasting its deliciously dirty flavor.";
 					else:

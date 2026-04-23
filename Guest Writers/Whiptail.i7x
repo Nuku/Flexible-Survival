@@ -9,22 +9,32 @@ Section 1 - Creature Responses
 WhiptailLossCount is a number that varies. WhiptailLossCount is usually 0.
 
 to say LoseToWhiptail: [Will she find a vagina? If she doesn't, she's disappointed. If she finds one with some unexpected additions... she may be willing to try new things.]
+	setmonster "Whiptail";
 	say "     [if HP of Player > 0]You fall to your knees before the lizard woman, and she kicks you to the ground, cautiously keeping her distance[else]After one blow too many, you sink to the ground in a pile, and the scaled woman approaches your fallen form slowly[end if].";
-	if Player is herm:
+	if Player is herm:			[Maybe penis isn't so bad.]
 		say "     She crouches down to get closer to you before running a hand over your crotch and finds your cock. She sighs, and her hand falls further down, finding your pussy, which draws a surprised gasp from her. 'Now that is interesting. I'd say it's not something you find every day, but times have changed.' She begins undressing you eagerly, tossing your gear and possessions with abandon before stripping down herself.";
-		say "[WhiptailHermTrib]";
+		say "     Stripped bare before each other, you give each other appraising glances. While you remember from bio class that only mammals have breasts, the nanites appear to have compromised, giving the lizard lady palmable, featureless mounds. As you reach to test their firmness, she touches your [cock size desc of Player] cock tentatively a few times, watching it sway. You give her breasts a light squeeze, delighting in the gasp it draws from your captor. A minute passes as the two of you fondle the fascinating objects before each other before your hands are pulled away from her chest and held firmly above your head. The reptilian beauty positions herself between your legs, pinning your arms with disconcerting ease with strong, sure hands, and begins to grind her cunt against your own. You are surprised at how turned on you are by such an act; your cunt is almost immediately moist, and your cock begins leaking soon after. But you don't waste time wondering why it feels so good, surrendering yourself to the feeling.";
+		WaitLineBreak;
+		say "     Waves of pleasure running through you, you don't notice when she removes a hand from pinning you until it touches your dick. With a slow, firm grip, the whiptail pumps your rod hesitantly, as though she's afraid to go too fast. You assure her that she can go faster, and when she does, your moans put a grin on her face. 'I've always been a natural when it comes to women, and I guess having a cock makes no difference!' Her dual assault on both sets of your genitals prevents you from commenting on her performance, but you're sure she understands. You can feel your pleasure reaching its peak, and, desperate to reach it, you begin bucking into her with your need.";
+		say "     You orgasm first, soaking yourself with femcum and spraying the two of you with your seed. The whiptail is caught off guard, but feeling you spasm in pleasure below her drives her quickly to follow you. You lay together for a while in each other's juices, panting from your exertions. Suddenly, she rolls you over and scoots away, grabbing her things at a distance from your prone form. You've just managed to roll onto your back again as she finishes dressing. She gives you a stern look, saying, 'This was fun, but I don't trust you. Stay away if you know what's good for you!' She jogs away, and you begin picking your belongings up from where she scattered them, readying yourself to survive in this new, confusing world.[fimpregchance]";
 	else if Player is male:
 		say "     She crouches down and runs a hand over your crotch, finding your cock. She removes her hand with a sigh and says, 'Do you have [italic type]anything[roman type] useful for me?' She searches the rest of your belongings, taking what she needs before jogging away.";
 		if carried of food > 2:
 			ItemLoss food by 1;
 		if carried of water bottle > 2:
 			ItemLoss water bottle by 1;
-	else if Player is female:
+	else if Player is female:			[Surprisingly, there may be no father at all!]
 		say "     She crouches down and runs a hand over your crotch, finding your cleft. She grins and says, 'Looks like it's my lucky day!' She begins undressing you eagerly, tossing your gear and possessions with abandon before stripping down herself.";
-		say "[WhiptailTrib]";
+		say "     Stripped bare before each other, you give each other appraising glances. While you remember from bio class that only mammals have breasts, the nanites appear to have compromised, giving the lizard lady palmable, featureless mounds. As you reach to test their firmness, she touches your cleft, lightly drawing her fingers over your folds. You give her breasts a light squeeze, delighting in the gasp it draws from your captor. A minute passes as the two of you fondle each other before your hands are pulled away from her chest and held firmly above your head. The reptilian beauty positions herself between your legs, pinning your arms with disconcerting ease with strong, sure hands, and begins to grind her cunt against your own. You are surprised at how turned on you are by such an act; your cunt is almost immediately moist, your juices lubricating the whiptail's efforts. But you don't waste time wondering why it feels so good, surrendering yourself to the feeling.";
+		WaitLineBreak;
+		say "     Waves of pleasure running through you, you don't notice when she removes a hand from pinning you until it touches one of your boobs. With a practiced hand, she teases your nipple, gently squeezing your [breast size desc of Player] breasts. She grins as her ministrations draw moan after moan from your lips. 'I'm a natural when it comes to women, as you can tell!' Her dual assault on your tits and your pussy prevents you from commenting on her performance, but you're sure she understands. You can feel your pleasure reaching its peak, and, desperate to reach it, you begin bucking into her with your need.";
+		say "     You orgasm first, soaking yourself with femcum. The whiptail snorts with lust as she feels your orgasm, and your spasms of pleasure below her drives her quickly to follow you. You lay together for a while in each other's juices, panting from your exertions. Suddenly, she rolls you over and scoots away, grabbing her things at a distance from your prone form. You've just managed to roll onto your back again as she finishes dressing. She gives you a stern look, saying, 'This was fun, but I don't trust you. Stay away if you know what's good for you!' She jogs away, and you begin picking your belongings up from where she scattered them, readying yourself to survive in this new, confusing world.[fimpregchance]";
 	else if Breast Size of Player > 0:
 		say "     She crouches down and runs a hand over your crotch, finding nothing. Giving your [breast size desc of Player] breasts a curious glance, she shrugs and says, 'Good thing that I'm a boob girl.' She begins undressing you, tossing your gear and possessions with abandon before stripping down herself.";
-		say "[WhiptailTrib]";
+		say "     Stripped bare before each other, you give each other appraising glances. While you remember from bio class that only mammals have breasts, the nanites appear to have compromised, giving the lizard lady palmable, featureless mounds. As you reach to test their firmness, she touches the smooth skin between your thighs. You give her breasts a light squeeze, delighting in the gasp it draws from your captor. A minute passes as the two of you fondle each other before your hands are pulled away from her chest and held firmly above your head. The reptilian beauty positions herself between your legs, pinning your arms with disconcerting ease with strong, sure hands, and begins to grind her cunt against your smooth mound. You are surprised at how turned on you are by such an act; your featureless mound sending tingles of sensation throughout your body. But you don't waste time wondering why it feels so good, surrendering yourself to the feeling.";
+		WaitLineBreak;
+		say "     Waves of pleasure running through you, you don't notice when she removes a hand from pinning you until it touches one of your boobs. With a practiced hand, she teases your nipple, gently squeezing your [breast size desc of Player] breasts. She grins as her ministrations draw moan after moan from your lips. 'I'm a natural when it comes to women and, apparently, the feminine-adjacent too, as you can tell!' Her dual assault on your tits and your mound prevents you from commenting on her performance, but you're sure she understands. You can feel your pleasure reaching its peak, and, desperate to reach it, you begin bucking into her with your need.";
+		say "     You orgasm first, letting out a loud cry as you become overwhelmed with feeling, pleasure crashing throughout your body. The whiptail is caught off guard, but feeling you spasm in pleasure below her drives her quickly to follow you. You lay together for a while in a tangle of limbs, panting from your exertions. Suddenly, she rolls you over and scoots away, grabbing her things at a distance from your prone form. You've just managed to roll onto your back again as she finishes dressing. She gives you a stern look, saying, 'This was fun, but I don't trust you. Stay away if you know what's good for you!' She jogs away, and you begin picking your belongings up from where she scattered them, readying yourself to survive in this new, confusing world.[mimpregchance]";
 	else:
 		say "     She crouches down and runs a hand over your crotch, finding nothing. She gives you a bewildered look before saying, 'Well, I hope you have something in your pack for me.' She searches the rest of your belongings, taking what she needs before jogging away.";
 		if carried of food > 2:
@@ -34,10 +44,8 @@ to say LoseToWhiptail: [Will she find a vagina? If she doesn't, she's disappoint
 	if WhiptailLossCount > 2, decrease WhiptailLossCount by 1;
 
 to say BeatTheWhiptail: [Catch her if you can. Beware, she's got no time for penis.]
-	if WhiptailLossCount is 0:
-		say "     The reptilian beauty takes a step back, breathing heavily after your fight. She pivots and takes off running; as you begin to chase after her, you feel a strong tug on your ankles, and you stumble, falling to the ground. Looking behind you, you see a disembodied tail wrapping itself around your legs, realizing that the lizard woman must have detached her tail to stop your pursuit. You eventually disentangle yourself, but by then, the whiptail is long gone.";
-	else if WhiptailLossCount is 1:
-		say "     The reptilian beauty takes a step back, breathing heavily after your fight. She pivots and takes off running, but this time, you're prepared for her trap. Or so you think; while looking down to avoid getting caught, you end up running slightly off course. When you attempt to correct your course, you feel a familiar pressure around your ankles. As the striped, brown back of your foe disappears into the distance, you sigh and begin working your legs out of the tail's hold.";
+	if WhiptailLossCount < 2:
+		say "     The reptilian beauty takes a step back, breathing heavily after your fight. She pivots and takes off running[if WhiptailLossCount is 0]; as you begin to chase after her, you feel a strong tug on your ankles, and you stumble, falling to the ground. Looking behind you, you see a disembodied tail wrapping itself around your legs, realizing that the lizard woman must have detached her tail to stop your pursuit. You eventually disentangle yourself, but by then, the whiptail is long gone[else], but this time, you're prepared for her trap. Or so you think; while looking down to avoid getting caught, you end up running slightly off course. When you attempt to correct your course, you feel a familiar pressure around your ankles. As the striped, brown back of your foe disappears into the distance, you sigh and begin working your legs out of the tail's hold[end if].";
 	else:
 		say "     The reptilian beauty takes a step back, but you're wise to her tricks now, lunging forward to grab her before she takes off.";
 		let bonus be ( Strength of Player minus 10 ) divided by 2;
@@ -49,110 +57,93 @@ to say BeatTheWhiptail: [Catch her if you can. Beware, she's got no time for pen
 		increase diceroll by bonus;
 		if diceroll > 18:
 			say "     You grab her wrist and hold on as she attempts to break your grasp. When she turns to run or perhaps to aim her tail properly, an idea pops into your head, and you leap forward, knocking her down and landing on top of her. In the confusion, you plant yourself solidly on top of her and wait patiently for her to realize that she's the one who's stuck now. What will you do, now that you've caught her at last?";
-			say "[WhiptailVanquishedSexMenu]";
+			now sextablerun is 0;
+			blank out the whole of table of fucking options;
+			[]
+			if Player is herm:
+				choose a blank row in table of fucking options;
+				now title entry is "Herm Oral";
+				now sortorder entry is 1;
+				now description entry is "Have her go down on all of you";
+				[]
+				choose a blank row in table of fucking options;
+				now title entry is "Herm Pussy Fuck";
+				now sortorder entry is 2;
+				now description entry is "Fuck her for full satisfaction";
+			[]
+			if Player is male:
+				choose a blank row in table of fucking options;
+				now title entry is "Blowjob";
+				now sortorder entry is 3;
+				now description entry is "Have her blow you";
+				[]
+				choose a blank row in table of fucking options;
+				now title entry is "Pussy Fuck";
+				now sortorder entry is 4;
+				now description entry is "Fuck her pussy";
+			[]
+			if Player is female:
+				choose a blank row in table of fucking options;
+				now title entry is "Get Cunnilingus";
+				now sortorder entry is 5;
+				now description entry is "Have her go down on you";
+				[]
+				choose a blank row in table of fucking options;
+				now title entry is "69";
+				now sortorder entry is 6;
+				now description entry is "Eat each other out";
+			[]
+			choose a blank row in table of fucking options;
+			now title entry is "Give Cunnilingus";
+			now sortorder entry is 7;
+			now description entry is "Go down on her";
+			[]
+			choose a blank row in table of fucking options;
+			now title entry is "Humping";
+			now sortorder entry is 8;
+			now description entry is "Rub your way to orgasm";
+			[]
+			sort the table of fucking options in sortorder order;
+			repeat with y running from 1 to number of filled rows in table of fucking options:
+				choose row y from the table of fucking options;
+				say "[link][y] - [title entry][as][y][end link][line break]";
+			say "[link]0 - Nevermind[as]0[end link][line break]";
+			while sextablerun is 0:
+				say "Pick the corresponding number> [run paragraph on]";
+				get a number;
+				if calcnumber > 0 and calcnumber <= the number of filled rows in table of fucking options:
+					now current menu selection is calcnumber;
+					choose row calcnumber in table of fucking options;
+					say "[title entry]: [description entry]?";
+					if Player consents:
+						LineBreak;
+						now sextablerun is 1;
+						if title entry is:
+							-- "Herm Oral":
+								say "[Whiptail VanquishedSex1]";
+							-- "Herm Pussy Fuck":
+								say "[Whiptail VanquishedSex2]";
+							-- "Blowjob":
+								say "[Whiptail VanquishedSex3]";
+							-- "Pussy Fuck":
+								say "[Whiptail VanquishedSex4]";
+							-- "Get Cunnilingus":
+								say "[Whiptail VanquishedSex5]";
+							-- "69":
+								say "[Whiptail VanquishedSex6]";
+							-- "Give Cunnilingus":
+								say "[Whiptail VanquishedSex7]";
+							-- "Humping":
+								say "[Whiptail VanquishedSex8]";
+				else if calcnumber is 0:
+					LineBreak;
+					now sextablerun is 1;
+					say "     You stand up and walk away, shaking your head at the thought of what you almost did.";
+				else:
+					say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options], or 0 to exit.";
 		else:
 			say "     You grab her wrist, but she moves her arm in a circular motion and is able to break free. She turns to run, and you get an excellent view of her tail detaching as it flies at your face. Blinded and breathless as her tail constricts your neck, you spend the next few minutes trying to free yourself from its grasp. By the time you do, the whiptail is long gone. Perhaps you'll have better luck next time.";
 	increase WhiptailLossCount by 1;
-
-to say WhiptailVanquishedSexMenu:
-	now sextablerun is 0;
-	blank out the whole of table of fucking options;
-	[]
-	if Player is herm:
-		choose a blank row in table of fucking options;
-		now title entry is "Herm Oral";
-		now sortorder entry is 1;
-		now description entry is "Have her go down on all of you";
-		[]
-		choose a blank row in table of fucking options;
-		now title entry is "Herm Pussy Fuck";
-		now sortorder entry is 2;
-		now description entry is "Fuck her for full satisfaction";
-	[]
-	if Player is male:
-		choose a blank row in table of fucking options;
-		now title entry is "Blowjob";
-		now sortorder entry is 3;
-		now description entry is "Have her blow you";
-		[]
-		choose a blank row in table of fucking options;
-		now title entry is "Pussy Fuck";
-		now sortorder entry is 4;
-		now description entry is "Fuck her pussy";
-	[]
-	if Player is female:
-		choose a blank row in table of fucking options;
-		now title entry is "Get Cunnilingus";
-		now sortorder entry is 5;
-		now description entry is "Have her go down on you";
-		[]
-		choose a blank row in table of fucking options;
-		now title entry is "69";
-		now sortorder entry is 6;
-		now description entry is "Eat each other out";
-	[]
-	choose a blank row in table of fucking options;
-	now title entry is "Give Cunnilingus";
-	now sortorder entry is 7;
-	now description entry is "Go down on her";
-	[]
-	choose a blank row in table of fucking options;
-	now title entry is "Humping";
-	now sortorder entry is 8;
-	now description entry is "Rub your way to orgasm";
-	[]
-	sort the table of fucking options in sortorder order;
-	repeat with y running from 1 to number of filled rows in table of fucking options:
-		choose row y from the table of fucking options;
-		say "[link][y] - [title entry][as][y][end link][line break]";
-	say "[link]0 - Nevermind[as]0[end link][line break]";
-	while sextablerun is 0:
-		say "Pick the corresponding number> [run paragraph on]";
-		get a number;
-		if calcnumber > 0 and calcnumber <= the number of filled rows in table of fucking options:
-			now current menu selection is calcnumber;
-			choose row calcnumber in table of fucking options;
-			say "[title entry]: [description entry]?";
-			if Player consents:
-				LineBreak;
-				now sextablerun is 1;
-				if title entry is:
-					-- "Herm Oral":
-						say "[Whiptail VanquishedSex1]";
-					-- "Herm Pussy Fuck":
-						say "[Whiptail VanquishedSex2]";
-					-- "Blowjob":
-						say "[Whiptail VanquishedSex3]";
-					-- "Pussy Fuck":
-						say "[Whiptail VanquishedSex4]";
-					-- "Get Cunnilingus":
-						say "[Whiptail VanquishedSex5]";
-					-- "69":
-						say "[Whiptail VanquishedSex6]";
-					-- "Give Cunnilingus":
-						say "[Whiptail VanquishedSex7]";
-					-- "Humping":
-						say "[Whiptail VanquishedSex8]";
-		else if calcnumber is 0:
-			LineBreak;
-			now sextablerun is 1;
-			say "     You stand up and walk away, shaking your head at the thought of what you almost did.";
-		else:
-			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options], or 0 to exit.";
-
-to say WhiptailHermTrib:			[Maybe penis isn't so bad.]
-	setmonster "Whiptail";
-	say "     Stripped bare before each other, you give each other appraising glances. While you remember from bio class that only mammals have breasts, the nanites appear to have compromised, giving the lizard lady palmable, featureless mounds. As you reach to test their firmness, she touches your [cock size desc of Player] cock tentatively a few times, watching it sway. You give her breasts a light squeeze, delighting in the gasp it draws from your captor. A minute passes as the two of you fondle the fascinating objects before each other before your hands are pulled away from her chest and held firmly above your head. The reptilian beauty positions herself between your legs, pinning your arms with disconcerting ease with strong, sure hands, and begins to grind her cunt against your own. You are surprised at how turned on you are by such an act; your cunt is almost immediately moist, and your cock begins leaking soon after. But you don't waste time wondering why it feels so good, surrendering yourself to the feeling.";
-	WaitLineBreak;
-	say "     Waves of pleasure running through you, you don't notice when she removes a hand from pinning you until it touches your dick. With a slow, firm grip, the whiptail pumps your rod hesitantly, as though she's afraid to go too fast. You assure her that she can go faster, and when she does, your moans put a grin on her face. 'I've always been a natural when it comes to women, and I guess having a cock makes no difference!' Her dual assault on both sets of your genitals prevents you from commenting on her performance, but you're sure she understands. You can feel your pleasure reaching its peak, and, desperate to reach it, you begin bucking into her with your need.";
-	say "     You orgasm first, soaking yourself with femcum and spraying the two of you with your seed. The whiptail is caught off guard, but feeling you spasm in pleasure below her drives her quickly to follow you. You lay together for a while in each other's juices, panting from your exertions. Suddenly, she rolls you over and scoots away, grabbing her things at a distance from your prone form. You've just managed to roll onto your back again as she finishes dressing. She gives you a stern look, saying, 'This was fun, but I don't trust you. Stay away if you know what's good for you!' She jogs away, and you begin picking your belongings up from where she scattered them, readying yourself to survive in this new, confusing world.[fimpregchance]";
-
-to say WhiptailTrib:			[Surprisingly, there may be no father at all!]
-	setmonster "Whiptail";
-	say "     Stripped bare before each other, you give each other appraising glances. While you remember from bio class that only mammals have breasts, the nanites appear to have compromised, giving the lizard lady palmable, featureless mounds. As you reach to test their firmness, she touches [if Player is female]your cleft, lightly drawing her fingers over your folds[else]the smooth skin between your thighs[end if]. You give her breasts a light squeeze, delighting in the gasp it draws from your captor. A minute passes as the two of you fondle each other before your hands are pulled away from her chest and held firmly above your head. The reptilian beauty positions herself between your legs, pinning your arms with disconcerting ease with strong, sure hands, and begins to grind her cunt against [if Player is female]your own[else]your smooth mound[end if]. You are surprised at how turned on you are by such an act; your [if Player is female]cunt is almost immediately moist, your juices lubricating the whiptail's efforts[else]featureless mound sending tingles of sensation throughout your body[end if]. But you don't waste time wondering why it feels so good, surrendering yourself to the feeling.";
-	WaitLineBreak;
-	say "     Waves of pleasure running through you, you don't notice when she removes a hand from pinning you until it touches one of your boobs. With a practiced hand, she teases your nipple, gently squeezing your [breast size desc of Player] breasts. She grins as her ministrations draw moan after moan from your lips. 'I'm a natural when it comes to women[if Player is not female]and, apparently, the feminine-adjacent too[end if], as you can tell!' Her dual assault on your tits and your [if Player is female]pussy[else]mound[end if] prevents you from commenting on her performance, but you're sure she understands. You can feel your pleasure reaching its peak, and, desperate to reach it, you begin bucking into her with your need.";
-	say "     You orgasm first, [if Player is female]soaking yourself with femcum. The whiptail snorts with lust as she feels your orgasm, and your spasms of[else]letting out a loud cry as you become overwhelmed with feeling, pleasure crashing throughout your body. The whiptail is caught off guard, but feeling you spasm in[end if] pleasure below her drives her quickly to follow you. You lay together for a while in [if Player is female]each other's juices[else]a tangle of limbs[end if], panting from your exertions. Suddenly, she rolls you over and scoots away, grabbing her things at a distance from your prone form. You've just managed to roll onto your back again as she finishes dressing. She gives you a stern look, saying, 'This was fun, but I don't trust you. Stay away if you know what's good for you!' She jogs away, and you begin picking your belongings up from where she scattered them, readying yourself to survive in this new, confusing world.[if Player is female][fimpregchance][else][mimpregchance][end if]";
 
 to say Whiptail VanquishedSex1:			[Two oral scenes for the price of one.]
 	say "     You free your [Cock of Player] dick from its confines, grasping it by the base and smacking it against the whiptail's face. She grimaces as you do so, moving her head out of the way when you try to line up with her mouth. You decide that it's better to attract flies with honey, and suckle on two fingers before shoving them into your snatch. When you feel your juices really flowing, you pull out, shuddering as you do, and hold your fingers under your captive's nose. You see her eyes dilate, and you tell her that if she blows you, she'll get to eat you out. She casts her eyes downwards, but her mouth opens. You sigh as your rod enters her warm mouth and begin to thrust. This stops as you feel her teeth scrape against your prick, and you give her a tersely worded primer on cocksucking before continuing to fuck her face. Thankfully, she's a quick learner, and you're free to enjoy her throat.";

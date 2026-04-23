@@ -9,6 +9,18 @@ Version 4 of Lair Of The Lupines by Gherod begins here.
 [ -- Split Elstan and Wyatt from the main file]
 [ -- Split Jett from the main file]
 
+a postimport rule:
+	if Resolution of Discover The Werewolves Den is 1:
+		now Find The Werewolves Den is resolved;
+		AddNavPoint Hidden Rock Cavern Entrance silently;
+		connect LupinesPit;
+		move Jett to Lair Of The Lupines Main Hub;
+		move Elstan to Lair Of The Lupines Pit;
+		move Kirnon to Lair Of The Lupines Pit;
+		move Rodion to Lair Of The Lupines Kitchen;
+		move Wyatt to Lair Of The Lupines Common Room;
+	now Sterile of Wyatt is false;
+
 Section 1 - The Rooms
 
 Table of GameEventIDs (continued)
@@ -21,18 +33,6 @@ ResolveFunction of Discover The Werewolves Den is "". Sarea of Discover The Were
 to connect LupinesPit:
 	change the north exit of Lair Of The Lupines Pit to Lair Of The Lupines Bar;
 	change the south exit of Lair Of The Lupines Bar to Lair Of The Lupines Pit;
-
-a postimport rule:
-	if Resolution of Discover The Werewolves Den is 1:
-		now Find The Werewolves Den is resolved;
-		AddNavPoint Hidden Rock Cavern Entrance silently;
-		connect LupinesPit;
-		move Jett to Lair Of The Lupines Main Hub;
-		move Elstan to Lair Of The Lupines Pit;
-		move Kirnon to Lair Of The Lupines Pit;
-		move Rodion to Lair Of The Lupines Kitchen;
-		move Wyatt to Lair Of The Lupines Common Room;
-	now Sterile of Wyatt is false;
 
 [---]
 
@@ -154,7 +154,7 @@ instead of going up from Lair Of The Lupines Oubliette:
 	else:
 		say "     You try to jump and hold yourself onto one the trapdoor's metallic bars, and while you succeed at some times, you fail to create the right momentum to swing it open and allow yourself to crawl away. Perhaps because you are too tired, and eventually, the ordeal exhausts you. There is no other choice but to wait it out until you can try again.";
 		follow the turnpass rule;
-		AttemptToWait;
+		WaitLineBreak;
 
 instead of going down from Lair Of The Lupines Pit:
 	if Resolution of Discover The Werewolves Den is 0:

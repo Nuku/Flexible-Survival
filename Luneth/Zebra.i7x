@@ -178,10 +178,10 @@ to say Zebra loses:
 		if xx > 8, now xx is 8;
 		increase bonus by xx;
 		let diceroll be a random number from 1 to 20;
-		say "     You roll 1d20([diceroll])[if bonus >= 0]+[end if][bonus] = [special-style-1][diceroll + bonus][roman type] vs [special-style-2]19[roman type] (Dexterity Check):[line break]";
+		say "     You roll 1d20([diceroll])[if bonus >= 0]+[end if][bonus] = [special-style-1][diceroll + bonus][roman type] vs [special-style-2]19[roman type] (Dexterity Check): ";
 		increase diceroll by bonus;
 		if diceroll > 18:
-			say "     [one of]...hit him in the head[or]...it hits his legs and causes him to stumble[at random]. The zebra stallion goes down, and you're upon him before he can get back up, grabbing his mane to keep him on his knees.";
+			say "[one of]...hit him in the head[or]...it hits his legs and causes him to stumble[at random]. The zebra stallion goes down, and you're upon him before he can get back up, grabbing his mane to keep him on his knees.";
 			project the figure of Zebra_face_icon;
 			if Player is male:
 				say "     Now that you have the upper hand in this, what do you want to with the zebra? Get him to [link](1) blow you[as]1[end link], [link](2) fuck[as]2[end link] his striped ass, claim a [link](3) ride on his pole[as]3[end link] on your own terms or just give him a [link](4) beating[as]4[end link]?";
@@ -241,7 +241,7 @@ to say Zebra loses:
 				say "     Since you don't have genitals that he could please you with, you rough the stallion up a bit before allowing him to crawl away. He might learn not to mess with you out of the beating - maybe...";
 				increase ZebraLossCount by 1;
 		else:
-			say "     ...Miss. Too bad that there's no time for another try, and he's too far gone now. Maybe you should try to improve your aim for next time.";
+			say "...miss. Too bad that there's no time for another try, and he's too far gone now. Maybe you should try to improve your aim for next time.";
 			increase ZebraLossCount by 1;
 
 to say zebrasex_ride:
@@ -326,8 +326,7 @@ to say ZebraDommingPlayerSexMenu:
 						say "[ZebraDommingPlayerSex3]";
 					-- "Mating Rut":
 						say "[ZebraDommingPlayerSex4]";
-			choose row with Name of "Zebra Stallion" from Table of Random Critters;
-			now sex entry is "Male";
+			now the sex corresponding to a Name of "Zebra Stallion" in Table of Random Critters is "Male";
 		else if calcnumber is 0:
 			LineBreak;
 			now sextablerun is 1;

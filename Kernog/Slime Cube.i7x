@@ -226,7 +226,7 @@ to slimeCubeVore:
 			the Player was ended by "Vore by Slime Cube";
 			end the story saying "You were digested by a slime.";
 		else:
-			say "     You float in the middle of a translucent slime. The gelatinous material slowly flows around your body, relentlessly penetrating and stimulating you. Despite its viscosity, you are certain that, with some effort, you may 'swim' your way out. You imagine your only active option is to [bold type]S[roman type]truggle enough until it lets you go, else you can [if obliging is true][bold type]O[roman type]blige[else][bold type]A[roman type]bide[end if] it, or [if boundrecover is true][bold type]R[roman type]ecover from[else][bold type]E[roman type]ndure[end if] these questionable circumstances.";
+			say "     You float in the middle of a translucent slime. The gelatinous material slowly flows around your body, relentlessly penetrating and stimulating you. Despite its viscosity, you are certain that, with some effort, you may 'swim' your way out. You imagine your only active option is to [bold type]S[roman type]truggle enough until it lets you go, else you can [if obliging is true][bold type]O[roman type]blige[else][bold type]A[roman type]bide[end if] it or [if boundrecover is true][bold type]R[roman type]ecover from[else][bold type]E[roman type]ndure[end if] these questionable circumstances.";
 			now enduring is false;
 			say "[bold type]1[roman type] - [link]Struggle[as]1[end link][line break]";
 			say "[bold type]2[roman type] - [link][if obliging is true]Oblige[else]Abide[end if][as]2[end link][line break]";
@@ -244,21 +244,17 @@ to slimeCubeVore:
 			LineBreak;
 			if keychar is "s" or keychar is "1" or keychar is "return" or keychar in lower case matches the text "struggle":
 				increase struggleatt by 1;
-				if struggleatt < 3:
-					say "     You desperately wiggle your limbs and eventually make some progress towards the slime's surface.";
+				if struggleatt < 5:
+					say "     You [if struggleatt < 3]desperately wiggle your limbs and eventually make some progress towards the slime's surface[else]can finally feel your fingers stretch the outer layer of the slime. Liberty is only a few strokes away[end if].";
 					increase lustatt by 7 + (lustadjust * 2);
-				else if struggleatt < 5:
-					say "     You can finally feel your fingers stretch the outer layer of the slime. Liberty is only a few strokes away.";
-					increase lustatt by 7 + (lustadjust * 2);
+					wyvhumanityroll; [aka humanity loss]
+					LineBreak;
+					wait for any key;
 				else:
 					say "     Your arms eventually escape the confines of the slime. The firmer outer skin of the slime acts against it, and gives you additional leeway to push yourself out. You instinctively run as fast as you can away from the much slower slime.";
 					cleanboundmemory;
 					now Trixieexit is true;
 					follow the turnpass rule;
-				if Trixieexit is false:
-					wyvhumanityroll; [aka humanity loss]
-					LineBreak;
-					wait for any key;
 			else if (obliging is true and (keychar is "o" or keychar in lower case matches the text "oblige")) or (obliging is false and (keychar is "a" or keychar in lower case matches the text "abide")) or keychar is "2":
 				if obliging is true:
 					say "     Lost in the sensations procured by the slime, you contort your body inside your living prison, a smile on your face.";

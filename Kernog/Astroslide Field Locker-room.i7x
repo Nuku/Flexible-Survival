@@ -24,12 +24,25 @@ to say FootFieldLockerdesc:
 	say "     Everything that can be done in a locker-room is being done, and at the same time: some players gearing up for play, while others come in from out on the field, drenched in sweat and pumped up from a good game; a lively discussion of tactics is going on in a corner of the room, regularly covered by the sounds of running water and laughing voices, which echo over from the showers. And, of course, there is a wild variety of sexual acts being performed in the midst of everything else: fan-girls and -boys sucking off gorillas or being fucked, but also players pounding each other on the benches or against the rows of lockers. No one is batting an eye at the piles of bodies and the constant cacophony of moans and grunts; instead, the many performers are cheered, sometimes joined in by more oncoming players and visitors.";
 	if "Gorilla Locker-room Tape 1" is not listed in tapes of Player:
 		say "[line break]You spot a cassette tape on one of the benches. Curious what may be on it, you pocket it right away.";
-		say "[bold type]Locker-room Tape has been added to your tape inventory![roman type][line break]";
+		say "     [bold type]Locker-room Tape has been added to your tape inventory![roman type][line break]";
 		add "Gorilla Locker-room Tape 1" to tapes of Player;
 	if Team Captain Roman is in Astroslide Field Locker-room:
 		say "[line break]Roman is also here, tied to one of the benches. From the encrusted cum stains covering his dark fur, you can tell that he has been used aplenty in your absence.";
 	if "rubber sneakers" is listed in the invent of Astroslide Field Locker-room:
 		say "[line break]You notice a pair of odd-looking sneakers, in a corner of the room.";
+
+to say FootballTeamSlice1:
+	say "     You put the tape you found in the football locker-room inside the recorder and press [']play[']. The video starts on a close-up of a black young man's face. 'How do you... Ah. There we go,' he says, before pulling the camera away from his face. It is a rather good-looking young man, clad in football gear. Just as he draws breath to say something else, a hand reaches into the picture to tug on his braids.";
+	say "     'Hey, Zach, is it rolling? Come on, man.' Sighing, Zach turns the camera over, showing another black male looking very much like a younger version of Zach. His naked chest still wet from the shower and a towel on his waist.";
+	WaitLineBreak;
+	say "     'You should get some clothes, Mike,' you can hear Zach say.";
+	say "     'Aw, but I wanted to give a little fan-service for the ladies,' Mike jokes.";
+	say "     'And the boys, too?' Zach asks.";
+	say "     '[italic type]Especially[roman type] the boys, Z,' Zach's brother adds in a softer voice.";
+	WaitLineBreak;
+	say "     'Zach, Mike, what are you doing with the camera?' someone says out of field. The camera turns, showing a strong-looking man in his thirties.";
+	say "     'This camera is for the team's blog. It's not a toy,' the older white-skinned male chastises.";
+	say "     'Sorry, coach Roman,' Zach says. Behind Roman, the locker-room is bristling with activity. Players come and go; some wave to the camera, before the feed stops. You realize that this is the morning before the start of the infection, and that there will not be any blog to upload to.";
 
 [NPCs]
 
@@ -55,7 +68,29 @@ instead of conversing the Gorilla Team-Members:
 		say "     ([link]N[as]n[end link]) - No. You are not this cruel.";
 		if Player consents:
 			LineBreak;
-			say "[RomanHumiliation]";
+			say "     'No way!' 'So that's what he was hiding.' 'So he's got nothing down there?' The former secret makes the rounds of the locker-room quickly, and the gorillas bristle with discontent. 'So that's why he wanted all these girls and outsiders in the team.' 'Ha. Yeah. He deceived us. No, [italic type]she[roman type] deceived us. We'll show her.' 'Yeah!'";
+			say "     You witness silently as a plan is formed to 'show this bitch who are the men here'. One of the gorillas leaves to fetch Roman, while the others prepare an ambush. The player is back a few minutes later, with Roman. 'What's up, boys? Curt tells me that you have something important to tell me.'";
+			say "     'Yeah, Roman. We thought you needed to give you a promotion. To team bitch!'";
+			say "     'What?'";
+			say "     'Get him!'";
+			WaitLineBreak;
+			say "     A dozen or so gorillas pile on Roman and pin him on the ground. 'What the fuck!?' he screams. 'Stop it! Now!' But the apes do not listen. One of them pulls down Roman's shorts. 'N-No!' you can hear him squeal.";
+			say "     'Well, look what we have here. Just as this peepsqueak told us.'";
+			say "     'Peep?...'";
+			say "     Roman's eyes find yours. Disbelief and a feeling of treason are painted on his face. It turns into pain as one of the gorillas slips a finger in his vagina. 'Arg!'";
+			say "     'Looks tight. Haven't used it much, bitch?' The primates press around Roman. Another one slips in a finger, then another. They are quickly half a dozen, prodding his holes, stretching him.";
+			WaitLineBreak;
+			say "     'Unf... Get off me!' Roman says, suddenly putting a desperate resistance. The group wrestles for a moment until Roman is pinned again, this time back on a wooden bench. 'Tie her up!' Roman punches and kicks, but he is alone. His former teammates pick what they can find, which is jerseys and shirts resting on the ground. Roman's arms are pulled under him and trapped under the bench. In the meantime, his legs are pulled against his chest and tied to the feet of the bench to keep them in this position. 'There we go,' one of the players says. 'Now, let's see how many fingers this pussy can hold.' And the sadistic team resumes its collective fingering.";
+			say "     The rest of the room watches the scene unfold, some shocked, some aroused, all unwilling to help, as it often happens in these situations. Roman's howling is quickly muffled as one of the players slams his cock down the former captain's throat. 'If you bite it, we'll take one of the footballs and stretch your cunt with it,' the ape threatens. Roman whimpers and does not bite. On the other side, another gorilla lines up his cock with Roman's hole. 'Bitch is ready to be [']initiated['].' Under the encouragements of the others, he pushes his member into Roman, who howls around the rod in his throat.";
+			say "     'Rmmmf!'";
+			say "     'Oh, fuck! He - no - she's extra tight!'";
+			WaitLineBreak;
+			say "     Minutes pass. The gorillas all take their turn into their former captain, and as the others arrive, see the scene, and learn of the captain's dirty secret, Roman's torment is prolonged for the whole part of an hour, then two. At first, Roman is struggling, but by his third penetration and fourth forced blowjob, a powerful, forced orgasm shakes his body under the cheers of the crowd. After some time, the gorillas all decide to [']get some rest['], though not before defacing Roman's body with a red marker. Now that the gorillas are not around him anymore, Roman's cum-covered body appears in all his glory. His belly is inflated with all the gorilla semen he was forced to intake, and some drips out from his pussy and mouth. Roman pants, tears drying on his face. Your eyes and his meet, but there is nothing but broken lust in his expression. He's broken.";
+			say "     As you start to make your way out, you notice that the door to Roman's room is ajar. You take a look inside and see a black football helmet lying on a small bench. With a shrug, you opportunistically snag the helmet and add it to your possessions.";
+			CreatureSexAftermath "Team Captain Roman" receives "PussyFuck" from "Football Gorilla Male";
+			CreatureSexAftermath "Team Captain Roman" receives "OralCock" from "Football Gorilla Male";
+			say "[line break][bold type]You gain a football helmet![roman type][line break]";
+			ItemGain Roman's stolen football helmet by 1 silently;
 			now HP of Team Captain Roman is 4;
 			move Team Captain Roman to Astroslide Field Locker-room;
 		else:
@@ -63,31 +98,6 @@ instead of conversing the Gorilla Team-Members:
 			say "     No. You are here to have a normal conversation with the other gorillas, or what passes for normal these days. You join the gorilla team-members in their reveling; what you wanted to say or ask is soon forgotten and you find yourself embroiled in [one of]a discussion about new strategies on the field. Despite them having a lot more experience in these matters, your attempts to contribute something worthwhile are readily accepted, making you feel welcomed and almost as part of the team[or]a group of the guys retelling raunchy stories about past conquests. This escalates after a short while, then a gorilla draws an eager fan-girl to his chest from the crowd and proceeds to... demonstrate his technique. Before long, there's a proper little orgy going on as more fans eagerly flock towards the group or the hunky males just pair up with each other[at random].";
 	else:
 		say "     Joining the gorilla team-members in their reveling, what you wanted to say or ask is soon forgotten and you find yourself embroiled in [one of]a discussion about new strategies on the field. Despite them having a lot more experience in these matters, your tries to contribute something worthwhile are readily accepted, making you feel welcomed and almost as part of the team[or]a group of the guys retelling raunchy stories about past conquests. This escalates after a short while, then a gorilla draws an eager fan-girl to his chest from the crowd and proceeds to... demonstrate his technique. Before long, there's a proper little orgy going on as more fans eagerly flock towards the group or the hunky males just pair up with each other[at random].";
-
-to say RomanHumiliation:
-	say "     'No way!' 'So that's what he was hiding.' 'So he's got nothing down there?' The former secret makes the rounds of the locker-room quickly, and the gorillas bristle with discontent. 'So that's why he wanted all these girls and outsiders in the team.' 'Ha. Yeah. He deceived us. No, [italic type]she[roman type] deceived us. We'll show her.' 'Yeah!'";
-	say "     You witness silently as a plan is formed to 'show this bitch who are the men here'. One of the gorillas leaves to fetch Roman, while the others prepare an ambush. The player is back a few minutes later, with Roman. 'What's up, boys? Curt tells me that you have something important to tell me.'";
-	say "     'Yeah, Roman. We thought you needed to give you a promotion. To team bitch!'";
-	say "     'What?'";
-	say "     'Get him!'";
-	WaitLineBreak;
-	say "     A dozen or so gorillas pile on Roman and pin him on the ground. 'What the fuck!?' he screams. 'Stop it! Now!' But the apes do not listen. One of them pulls down Roman's shorts. 'N-No!' you can hear him squeal.";
-	say "     'Well, look what we have here. Just as this peepsqueak told us.'";
-	say "     'Peep?...'";
-	say "     Roman's eyes find yours. Disbelief and a feeling of treason are painted on his face. It turns into pain as one of the gorillas slips a finger in his vagina. 'Arg!'";
-	say "     'Looks tight. Haven't used it much, bitch?' The primates press around Roman. Another one slips in a finger, then another. They are quickly half a dozen, prodding his holes, stretching him.";
-	WaitLineBreak;
-	say "     'Unf... Get off me!' Roman says, suddenly putting a desperate resistance. The group wrestles for a moment until Roman is pinned again, this time back on a wooden bench. 'Tie her up!' Roman punches and kicks, but he is alone. His former teammates pick what they can find, which is jerseys and shirts resting on the ground. Roman's arms are pulled under him and trapped under the bench. In the meantime, his legs are pulled against his chest and tied to the feet of the bench to keep them in this position. 'There we go,' one of the players says. 'Now, let's see how many fingers this pussy can hold.' And the sadistic team resumes its collective fingering.";
-	say "     The rest of the room watches the scene unfold, some shocked, some aroused, all unwilling to help, as it often happens in these situations. Roman's howling is quickly muffled as one of the players slams his cock down the former captain's throat. 'If you bite it, we'll take one of the footballs and stretch your cunt with it,' the ape threatens. Roman whimpers and does not bite. On the other side, another gorilla lines up his cock with Roman's hole. 'Bitch is ready to be [']initiated['].' Under the encouragements of the others, he pushes his member into Roman, who howls around the rod in his throat.";
-	say "     'Rmmmf!'";
-	say "     'Oh, fuck! He - no - she's extra tight!'";
-	WaitLineBreak;
-	say "     Minutes pass. The gorillas all take their turn into their former captain, and as the others arrive, see the scene, and learn of the captain's dirty secret, Roman's torment is prolonged for the whole part of an hour, then two. At first, Roman is struggling, but by his third penetration and fourth forced blowjob, a powerful, forced orgasm shakes his body under the cheers of the crowd. After some time, the gorillas all decide to [']get some rest['], though not before defacing Roman's body with a red marker. Now that the gorillas are not around him anymore, Roman's cum-covered body appears in all his glory. His belly is inflated with all the gorilla semen he was forced to intake, and some drips out from his pussy and mouth. Roman pants, tears drying on his face. Your eyes and his meet, but there is nothing but broken lust in his expression. He's broken.";
-	say "     As you start to make your way out, you notice that the door to Roman's room is ajar. You take a look inside and see a black football helmet lying on a small bench. With a shrug, you opportunistically snag the helmet and add it to your possessions.";
-	CreatureSexAftermath "Team Captain Roman" receives "PussyFuck" from "Football Gorilla Male";
-	CreatureSexAftermath "Team Captain Roman" receives "OralCock" from "Football Gorilla Male";
-	say "[line break][bold type]You gain a football helmet![roman type][line break]";
-	ItemGain Roman's stolen football helmet by 1 silently;
 
 [General Sex menu]
 instead of fucking the Gorilla Team-Members:
@@ -153,10 +163,10 @@ to say GorillaTeamSex1: [bukkake (giving)]
 		now randomnumber is a random number from 1 to 5;
 	else if MaleList is banned or MaleList is warded or (Player is femaleinterested and Player is not maleinterested):
 		now randomnumber is a random number from 6 to 10;
-	if randomnumber > 5:
+	if randomnumber > 5: [female]
 		now tempGorillaGender is 1; [female newbie]
 		setmongender 4;
-	else:
+	else: [male]
 		setmongender 3;
 	let TempGorillaName1 be text;
 	if randomnumber is:
@@ -197,14 +207,14 @@ to say GorillaTeamSex2: [bukkake (receiving)]
 	WaitLineBreak;
 	say "     You can't say how long it takes, with all of your attention focused on the current shaft of man-meat in your mouth, but eventually something seems familiar about the hard cock being held out before you. Looking up, you realize that it's the original primate hunk with whom you started. As his strong hands grasp your head and he starts to face-fuck you with eager grunts, the gorilla soon roars, 'Unnngh - getting really close! Brothers, let's paint this bitch white, inside and out!' After another handful of frenzied thrusts that make his heavy balls smack your chin, the young man suddenly bellows out loud and you can feel his cock pulse inside your throat as spurt after spurt of his seed is pumped directly into your stomach.";
 	say "     Just moment later, the first of all the other guys jerking off on you joins him in orgasm, blasting your body with his white, creamy cum. Another follows before that guy's third shot, then another three at the same time, then more or less all the rest. From the corner of your eye, you see the horseman stud clasp his neighboring gorilla's shoulder tightly as a breathtaking climax rocks his body - turning his proudly flared shaft into almost a garden-hose of cum, drenching your whole front in his mighty load. You don't think there is any part of you that is not drenched in someone's seed - an amazing feeling that sends your own libido into overdrive. Now that they're no longer busy handling one cock after another, your hands fly to your own crotch, [if Player is male]grasping your own manhood and wanking it in a frenzied pace. As wound up as you are, it's only a matter of moments before you reach the point of no return, adding some splashes of your own cum to the large puddle all around you[else if Player is female]sinking your fingers into your pussy and rubbing the little nub of your clit in a frenzy. As wound up as you are, it's only a matter of moments before you reach the point of no return, adding some splashes of your own femcum to the large puddle all around you[else]rubbing your genderless, but quite sensitive crotch in a frenzied pace. As wound up as you are, it's only a matter of moments before you reach the point of no return, trembling all over as an orgasm rocks through your body[end if].";
-	CreatureSexAftermath "Player" receives "OralCock" from "Football Gorilla Male";
-	infect "Football Gorilla Male";
 	WaitLineBreak;
 	say "     'Nice job,' a familiar voice tells you, then you feel the soft touch of a towel wiping at your face. Your original gorilla stud uses it to clean you up - but soon the towel is totally drenched and he gives a resigned chuckle before dropping it. 'Let's get you clean in the showers,' he says a moment later, giving you a hand to help you stand up in the slippery state you are in. You are guided into the shower room next and soon find yourself under a warm spray of water, with your gorilla and two others washing you down, all the while giving you some lusty gropes. The warm and wet fun in the shower continues for a while, without going any further than just touching and rubbing, until you eventually leave the gorillas behind, walking out to dry yourself off and put your clothes back on.";
+	CreatureSexAftermath "Player" receives "OralCock" from "Football Gorilla Male";
+	infect "Football Gorilla Male";
 
 to say GorillaTeamSex3: [chain fuck]
-	let TempGorillaName1 be "[one of]Bradley[or]Brian[or]Gavin[or]Nate[or]Andy[at random]";
-	let TempGorillaName2 be "[one of]Ike[or]Vinny[or]Reid[or]Tom[or]Everett[at random]";
+	let TempGorillaName1 be the substituted form of "[one of]Bradley[or]Brian[or]Gavin[or]Nate[or]Andy[at random]";
+	let TempGorillaName2 be the substituted form of "[one of]Ike[or]Vinny[or]Reid[or]Tom[or]Everett[at random]";
 	say "     Rubbing the bulge in your pants in anticipation of fucking a hot and tight hole, you let your eyes roam through the locker-room, soon finding the perfect target for your lusts. There is a pair of hunky gorillas over there, both naked, with one of them leaning forward against the wall while his buddy is crouched down behind him, lapping at his back door and showing off a very nice and shapely butt to the whole room. As you start moving towards them, the standing gorilla gives a needy moan of, 'Fuck me, [tempGorillaName1]! I'm ready!' - and his buddy is instantly on his feet to rub his hard shaft up and down the waiting primate's crack. You arrive beside them just in time to see him line up his cockhead with the other gorilla's ass and pump his hips forward, thrusting in more than half his length in one quick move.";
 	say "     [tempGorillaName1] gives his friend a moment to get used to the thick piece of man-meat impaling his ass, using the time to put his arms around and play with his nipples, then he slowly pushes in further and further until his crotch is rubbing against the bottoming gorilla's furry ass. 'Man, [tempGorillaName2] - you've really got one of the best asses in the whole team. Soo welcoming and tight - no matter how often it's getting pounded each day!' With that, the young man starts to pull back and slide in again, fucking [tempGorillaName2] in a steady rhythm of deep thrusts that has the bottom whimper and moan in lust.";
 	WaitLineBreak;
@@ -231,6 +241,10 @@ to say GorillaTeamSex3: [chain fuck]
 
 [Events]
 
+a postimport rule: [bugfixing rules for players that import savegames]
+	if PeepingRoman is active and (FurryList is banned or TransList is banned):
+		now PeepingRoman is inactive;
+
 Table of GameEventIDs (continued)
 Object	Name
 PeepingRoman	"PeepingRoman"
@@ -239,11 +253,12 @@ PeepingRoman is a situation.
 ResolveFunction of PeepingRoman is "".
 Sarea of PeepingRoman is "Nowhere".
 
-instead of going to Astroslide Field Locker-room while PeepingRoman is active and PeepingRoman is not resolved and FurryList is not banned and FurryList is not warded and a random chance of 1 in 3 succeeds:
-	move player to Astroslide Field Locker-room;
-	PeepingRomanEvent;
+when play begins:
+	add PeepingRoman to BadSpots of FurryList;
+	add PeepingRoman to BadSpots of TransList;
 
-to PeepingRomanEvent:
+after going to Astroslide Field Locker-room while PeepingRoman is active and PeepingRoman is not resolved and a random chance of 1 in 3 succeeds:
+	try looking;
 	say "     Just as you rest your eyes on the usual mayhem of the locker-room, Roman enters in a hurry, almost bumping into you. 'Sorry, [if Player is male]boy[else]girl[end if],' he says. 'One of the other players just spilled some [']juice['] on me while I was supervising an endurance exercise. Damn Thomas still can't hold it under three minutes of ass pounding.' Keeping with his grunts, Roman disappears into a private room, whose door is marked [']Staff only['].";
 	say "     A pair of fans, who have witnessed the scene like you, start to gossip.";
 	WaitLineBreak;
@@ -267,18 +282,5 @@ to PeepingRomanEvent:
 		LineBreak;
 		say "     Privacy is a rare leisure in this city, much more in this place. You decide to give the team captain some much needed privacy. A couple minutes after, he leaves the changing room with a new pair of shorts, just as bulgy as the previous one. As you wonder why he did not choose a bigger size, you notice a tuft of cotton falling from the pair of pants. Weird.";
 		now Resolution of PeepingRoman is 2; [didn't peep]
-
-to say FootballTeamSlice1:
-	say "     You put the tape you found in the football locker-room inside the recorder and press [']play[']. The video starts on a close-up of a black young man's face. 'How do you... Ah. There we go,' he says, before pulling the camera away from his face. It is a rather good-looking young man, clad in football gear. Just as he draws breath to say something else, a hand reaches into the picture to tug on his braids.";
-	say "     'Hey, Zach, is it rolling? Come on, man.' Sighing, Zach turns the camera over, showing another black male looking very much like a younger version of Zach. His naked chest still wet from the shower and a towel on his waist.";
-	WaitLineBreak;
-	say "     'You should get some clothes, Mike,' you can hear Zach say.";
-	say "     'Aw, but I wanted to give a little fan-service for the ladies,' Mike jokes.";
-	say "     'And the boys, too?' Zach asks.";
-	say "     '[italic type]Especially[roman type] the boys, Z,' Zach's brother adds in a softer voice.";
-	WaitLineBreak;
-	say "     'Zach, Mike, what are you doing with the camera?' someone says out of field. The camera turns, showing a strong-looking man in his thirties.";
-	say "     'This camera is for the team's blog. It's not a toy,' the older white-skinned male chastises.";
-	say "     'Sorry, coach Roman,' Zach says. Behind Roman, the locker-room is bristling with activity. Players come and go; some wave to the camera, before the feed stops. You realize that this is the morning before the start of the infection, and that there will not be any blog to upload to.";
 
 Astroslide Field Locker-room ends here.

@@ -22,8 +22,7 @@ To decide what indexed text is (orig - text) formatted to (len - number) charact
 		replace the regular expression ".{[N - len]}$" in T with "";
 	decide on T;
 
-To keypause:
-	(- KeyPause(); -)
+To keypause: (- KeyPause(); -)
 
 To say a/an (T - text):
 	if T matches the regular expression "^<aeiou>", case insensitively:
@@ -189,6 +188,11 @@ to ItemLoss (ItemObj - a grab object) by (N - number) silence state is (Silence 
 	if carried of ItemObj < 1:
 		now carried of ItemObj is 0;
 		now ItemObj is nowhere;
+	if ItemObj is medkit:
+		if "Expert Medic" is listed in feats of Player:
+			now CurrentMedkitSupplies is 6;
+		else:
+			now CurrentMedkitSupplies is 5;
 
 to PlayerMaxHeal:
 	if HP of Player < MaxHP of Player:
@@ -264,12 +268,12 @@ to LibidoReset:
 
 to ScoreLoss (N - number):
 	if N > 0:
-		say "[line break]     [bold type]Your score has decreased by [N]![roman type][line break]";
+		[say "[line break]     [bold type]Your score has decreased by [N]![roman type][line break]";]
 		decrease the score by N;
 
 to ScoreGain (N - number):
 	if N > 0:
-		say "[line break]     [bold type]Your score has increased by [N]![roman type][line break]";
+		[say "[line break]     [bold type]Your score has increased by [N]![roman type][line break]";]
 		increase the score by N;
 
 to XPGain (N - number):
@@ -1122,8 +1126,6 @@ to wield ( x - a grab object ) silence state is (Silence - a number):
 					say "     [bold type]Trying to use your [x] as a weapon is fairly ridiculous, given your size.[roman type][line break]";
 				-- -4: [4 size categories difference - tiny player (1), size 5 weapon]
 					say "     [bold type]There is simply no way you could use your [x] as a weapon, given your small stature.[roman type][line break]";
-
-Section 2 - Stripping
 
 [
 StripCrotchAction is an action applying to one topic.

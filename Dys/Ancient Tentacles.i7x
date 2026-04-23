@@ -35,18 +35,15 @@ to say TentacleSex:
 		LineBreak;
 		if calcnumber is 1:
 			say "     With a nod, you tell Xaedihr to cast the protective ward on you. He does so without a problem, with a few arcane words and magic gestures, and the spell makes you feel a little funny, though nothing unbearable. You then proceed to summon the tentacle beast, carefully following the tome's instructions.";
-			WaitLineBreak;
 			TentacleFuck;
 		else if calcnumber is 2:
 			say "     With a nod, you tell Xaedihr to cast the reversed version of the ward on you. He shrugs, but does so without a problem, with a few arcane words and magic gestures, and the spell makes you feel a little funny, though nothing unbearable. You then proceed to summon the tentacle beast, carefully following the tome's instructions. This will increase the likelihood of getting egg-filled by the ancient creature.";
-			WaitLineBreak;
 			if a random chance of 3 in 4 succeeds:
 				TentacleBreed;
 			else:
 				TentacleFuck;
 		else if calcnumber is 3:
 			say "     Shaking your head, you tell Xaedihr you won't need the spell, but thank him for the information. He replies with a shrug, ending with, 'Well, it's up to you, then.' You then proceed to summon the tentacle beast, carefully following the tome's instructions. The outcome of this meeting is totally thrown to chance.";
-			WaitLineBreak;
 			if a random chance of 1 in 2 succeeds:
 				TentacleBreed;
 			else:
@@ -60,7 +57,6 @@ to say TentacleSex:
 		if Player consents:
 			LineBreak;
 			say "     With your decision made, you then proceed to summon the tentacle beast, carefully following the tome's instructions. The outcome of this meeting is totally thrown to chance.";
-			WaitLineBreak;
 			if a random chance of 1 in 2 succeeds:
 				TentacleBreed;
 			else:
@@ -70,6 +66,7 @@ to say TentacleSex:
 			say "     Thinking twice, you have decided not to proceed with the ritual, closing the tome and putting it down.";
 
 to TentacleBreed:
+	WaitLineBreak;
 	say "     Knowing what you'll be getting into, [if player is naked]you are already standing naked[else]you take your clothes off, standing naked[end if] so the creature can take you more easily. You can't help but feel the arousal building up in you, from the anticipation, as you go over everything you need to do in order to summon it, each word and gesture indicated by the tome. As you're finished with the chant, it's only a matter of time until the arcane energy takes shape around you, and just a couple of meters away from where you're standing, a rather shy tendril emerges from the ground, exploring its surroundings by flicking around the floor. As it senses your presence, the tentacle directs its tip towards you, and soon, a few more appear, getting thicker as their length increase, already leaving a trail of a slimy blue liquid that covers them, as if excited to see you.";
 	say "     Your heartbeat accelerates, and your own [Cock of Player] manhood hardens as you bite your lips, aware of what's going to happen once you're within the tentacles['] reach. Curiously, they seem to approach you very slowly as you're not moving, only flickering as you put your hand forward to touch one of them that comes closer. Way less aggressively than the first time, they wrap gently around you, albeit firmly and denying you of any chance to escape. One slides around your back, roaming to your chest and placing itself around your neck as the ones lying by the ground wrap themselves around your legs, and some coming for your arms as well. You'd fall if it wasn't for the robust slimy tendril holding your balance, and as more of them reach to touch your body, they lift you off the ground slightly as you begin getting enveloped in their lengthy extensions.";
 	WaitLineBreak;
@@ -84,6 +81,7 @@ to TentacleBreed:
 	increase TentacleInteractions by 1;
 
 to TentacleFuck:
+	WaitLineBreak;
 	say "     Knowing what you'll be getting into, [if player is naked]you are already standing naked[else]you take your clothes off, standing naked[end if] so the creature can take you more easily. You can't help but feel the arousal building up in you, from the anticipation, as you go over everything you need to do in order to summon it, each word and gesture indicated by the tome. As you're finished with the chant, it's only a matter of time until the arcane energy takes shape around you, and just a couple of meters away from where you're standing, a rather shy tendril emerges from the ground, exploring its surroundings by flicking around the floor. As it senses your presence, the tentacle directs its tip towards you, and soon, a few more appear, getting thicker as their lengths increase, already leaving a trail of a slimy blue liquid that covers them, as if excited to see you.";
 	say "     Your heartbeat accelerates, and your own [Cock of Player] manhood hardens as you bite your lips, aware of what's going to happen once you're within the tentacles['] reach. Curiously, they seem to approach you very slowly as you're not moving, only flickering as you put your hand forward to touch one of them that comes closer. Way less aggressively than the first time, they wrap gently around you, albeit firmly and denying you of any chance to escape. One slides around your back, roaming to your chest and placing itself around your neck as the ones lying by the ground wrap themselves around your legs, and some coming for your arms as well. You'd fall if it wasn't for the robust slimy tendril holding your balance, and as more of them reach to touch your body, they lift you off the ground slightly as you begin getting enveloped in their lengthy extensions.";
 	WaitLineBreak;
@@ -116,7 +114,7 @@ to say TentaclesFirstEncounter:
 		say "     With a righteous yell, you charge straight into the mass of tentacles, looking for some sort of central mass so you can kill the thing! However, as you get closer and closer to the origin of the tentacles, you're distraught to see that there's no obvious [']brain['] controlling the mass. They just seem to be coming out of the ground! Realizing your mistake, you try to backpedal away, hoping to escape. You're never given that opportunity, however, as four of the writhing tendrils latch onto each of your limbs, wrapping around them and hoisting you into the air. They pull each limb in a different direction, leaving you completely spread eagle.";
 		say "     A new, slimmer tentacle slips under your shirt, before yanking it off of your body. Another similar tendril slips into the rest of your clothing, pulling that away from your body as well. More of the tentacles caress over your body, leaving slimy trails of blue fluid in their wake. You let out a startled gasp as you feel a new tendril slipping between your ass cheeks before pressing its way into your hole mercilessly. The thing worms its way into you slowly and deliberately, winding around your interior paths, before it begins to pull out.";
 		WaitLineBreak;
-		if Player is mpreg_ok:
+		if "MPreg" is listed in feats of Player:
 			say "     Having found what it was looking for, you soon feel another, wider tentacle pushing its way into you. You open your mouth to let out a gasp of pain from the sudden intrusion, but that too is suddenly filled with a drooling tendril. The new tentacle in your mouth leaks some sort of strange fluid, and you're forced to swallow it down. Your body flushes with heat as the liquid seems to arouse you, despite what's happening to you. Suddenly, the tentacles in each end of your body begin to thrust in and out in sync, pistoning in and out of your holes with determined fervor.";
 			say "     Eventually, their pace picks up, and the one in your mouth crams its way down your throat, forcing itself down your esophagus painfully. The one in your ass pushes further inwards as well, finding the entrance to your hidden womb, before it presses into there as well. With the tips exactly where the monster needs them, the tendrils quiver before you can see several pulsing bulges coming through both of them. At first, you're just expecting them to be this monster's equivalent of cum. This hypothesis is proven incorrect, however, when the first bulge reaches your mouth. It forces its way into you, definitely more solid than you were expecting. It's at this moment that you realize that the bulges aren't cum at all! They're eggs!";
 			WaitLineBreak;

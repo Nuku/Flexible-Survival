@@ -16,9 +16,6 @@ Section 0 - Variables
 
 Section 1 - Location & NPC
 
-a postimport rule: [bugfixing rules for players that import savegames]
-	now Sterile of Azari is false;
-
 Table of GameRoomIDs (continued)
 Object	Name
 Shag Shack Alley	"Shag Shack Alley"
@@ -36,6 +33,9 @@ to say ShagShackAlley_Desc:
 
 to say ShagShackAlley_Scent:
 	say "<placeholder>.";]
+
+a postimport rule: [bugfixing rules for players that import savegames]
+	now Sterile of Azari is false;
 
 Table of GameCharacterIDs (continued)
 object	name
@@ -91,7 +91,47 @@ Section 2 - Scenes
 
 to say Azari_Start:
 	if PlayerMet of Azari is false:
-		say "[Azari_Intro]";
+		say "     As you look around the area, your eyes fall upon a door marked [']Staff Only['] against the rear wall of the store. A piece of paper is taped just below that, a scribbled warning talking about a feral latex fox. Curiosity piqued, you step towards the door, passing several of the shack's patrons and workers. The closer you get, the more you feel like people are watching you. Sure enough, a cursory glance reveals that a fair few people have stopped what they're doing to observe you. Just as you're about to open the door, you hear someone loudly clear their throat. 'I'd be wary of going into Azari's room.'";
+		say "     Turning around, you see Jerome approaching you, a grimace on his face. 'That's what we call him - Azari. He's been there longer than we've been open, and we've only ever had one patron go in there. You should've seen the look on their face when they bolted.' You give a nod at the shark's words and reconsider your course of action.";
+		say "[line break]     [bold type]Do you proceed anyway?[roman type][line break]";
+		say "     ([link]Y[as]y[end link]) - Yes.";
+		say "     ([link]N[as]n[end link]) - No.";
+		if Player consents:
+			LineBreak;
+			[now PlayerMet of Azari is true;] [commented out for now, as the further content does not exist]
+			say "     You shake your head, resolving to stick with your original course of action. With a tug, the door swings open, and you step over the threshold into what appears to be some kind of old storeroom. Boxes are stacked in one corner, seemingly untouched for months. Hazy light filters in through a dust-covered window on the far wall. You take a few more steps, allowing the door to swing closed behind you as you look around for the fox. Nothing really seems to be here.";
+			[The latex fox pounces, except they forgot to write that part of the scene]
+			say "[line break]     [bold type]Surely you're not going to go down this easily. Do you struggle against the fox?[roman type][line break]";
+			say "     ([link]Y[as]y[end link]) - Yes.";
+			say "     ([link]N[as]n[end link]) - No.";
+			if Player consents:
+				LineBreak;
+				if scalevalue of Player < 3:
+					say "     Try as you might, you're just not big enough to get the fox off of you. He grins, and as you struggle, you notice his body becoming larger, before he's the size of a wolf. Eager to use you, the sex-crazed feral grabs your arm in his [one of]rubbery[or]latex[or]squeaky[at random] teeth, yanking you to the side and forcing you to roll over. This seems to be all the invitation he needs, as he quickly begins prodding at your ass with his large rubber cock. The pre dripping from his tip is enough for it to slip between your butt cheeks, and a few rough thrusts later, the tip finds its way into your hole.";
+					say "[Azari_Sex_SmallPlayer]";
+				else if scalevalue of Player is 3:
+					say "     Attempting to use your size to your advantage, you struggle against the beast. Just as you begin to gain some leverage, however, the fox abruptly grows in size until he's slightly larger than a wolf, his new mass enough to keep you held in place. Eager to use you, the vulpine grabs you by the arm with his teeth, and yanks you to the side, causing you to roll over. However, this seems to be exactly what he wanted as he lines his erect, drooling cock up with your ass, roughly thrusting against it a few times before his tip sinks inside.";
+					say "[Azari_Sex_AveragePlayer]";
+				else:
+					say "     Using your [if scalevalue of Player is 4]larger than average[else]massive[end if] size to your advantage, you throw the unruly rubber vulpine off of you, quickly rising to your feet. The fox lets out a startled yelp and you rapidly duck out of the room before he can recover.";
+					say "     Making your way out of the shack, you pass Jerome, who simply raises a brow at your sudden departure and says, 'No refunds'.";
+			else:
+				LineBreak;
+				if scalevalue of Player < 3:
+					say "     Opting to let the larger beast have his way with you, you relax your body, attempting to show your submission. He seems to get the message and gently nuzzles you before he decides to get started. Eager to use you, the sex-crazed feral grabs your arm in his [one of]rubbery[or]latex[or]squeaky[at random] teeth, yanking you to the side and forcing you to roll over. This seems to be all the invitation he needs, as he quickly begins prodding at your ass with his large rubber cock. The pre dripping from his tip is enough for it to slip between your butt cheeks, and a few rough thrusts later, the tip finds its way into your hole.";
+					say "[Azari_Sex_SmallPlayer]";
+				else if scalevalue of Player is 3:
+					say "     You decide that it's probably best to submit to the feral; after all, you did come here for sex. Sensing your submission to him, the fox gives you a quick nuzzle before he decides to get started. Eager to use you, the vulpine grabs you by the arm with his teeth, and yanks you to the side, causing you to roll over. However, this seems to be exactly what he wanted as he lines his erect, drooling cock up with your ass, roughly thrusting against it a few times before his tip sinks inside.";
+					say "[Azari_Sex_AveragePlayer]";
+				else:
+					say "     Even though you could likely overpower the smaller creature, you decide to submit instead, relaxing your muscles and letting out a deep breath. However, the fox doesn't seem to care about that. He growls and swipes across your chest, leaving three bleeding scratches before hopping off of you and returning to his sitting position. It seems the fox has no interest in you after all.";
+					say "     Making your way out of the shack, you pass Jerome, who simply raises a brow at your sudden departure and says, 'No refunds'.";
+			say "[line break]     <Note: Further stages of content do not currently exist for Azari, therefore his scene will repeat for now. If you like the character, he is available for expansion through commissions.>[line break]";
+			wait for any key;
+		else:
+			LineBreak;
+			say "     You nod at the shark, heeding his warning. Entering a tiny room with a crazed feral probably isn't the best idea, anyway.";
+			say "[ShagShackSexMenu]";
 [	else:
 		if Libido of Azari is:
 			--0: [Not corrupted yet. Just sex with the fox.]
@@ -100,52 +140,8 @@ to say Azari_Start:
 			--3: [Even more.]
 			--4: [Final stage.]]
 
-to say Azari_Intro:
-	say "     As you look around the area, your eyes fall upon a door marked [']Staff Only['] against the rear wall of the store. A piece of paper is taped just below that, a scribbled warning talking about a feral latex fox. Curiosity piqued, you step towards the door, passing several of the shack's patrons and workers. The closer you get, the more you feel like people are watching you. Sure enough, a cursory glance reveals that a fair few people have stopped what they're doing to observe you. Just as you're about to open the door, you hear someone loudly clear their throat. 'I'd be wary of going into Azari's room.'";
-	say "     Turning around, you see Jerome approaching you, a grimace on his face. 'That's what we call him - Azari. He's been there longer than we've been open, and we've only ever had one patron go in there. You should've seen the look on their face when they bolted.' You give a nod at the shark's words and reconsider your course of action.";
-	say "[line break]     [bold type]Do you proceed anyway?[roman type][line break]";
-	say "     ([link]Y[as]y[end link]) - Yes.";
-	say "     ([link]N[as]n[end link]) - No.";
-	if Player consents:
-		LineBreak;
-		[now PlayerMet of Azari is true;] [commented out for now, as the further content does not exist]
-		say "     You shake your head, resolving to stick with your original course of action. With a tug, the door swings open, and you step over the threshold into what appears to be some kind of old storeroom. Boxes are stacked in one corner, seemingly untouched for months. Hazy light filters in through a dust-covered window on the far wall. You take a few more steps, allowing the door to swing closed behind you as you look around for the fox. Nothing really seems to be here.";
-		[The latex fox pounces, except they forgot to write that part of the scene]
-		say "[line break]     [bold type]Surely you're not going to go down this easily. Do you struggle against the fox?[roman type][line break]";
-		say "     ([link]Y[as]y[end link]) - Yes.";
-		say "     ([link]N[as]n[end link]) - No.";
-		if Player consents:
-			LineBreak;
-			if scalevalue of Player < 3:
-				say "     Try as you might, you're just not big enough to get the fox off of you. He grins, and as you struggle, you notice his body becoming larger, before he's the size of a wolf. ";
-				say "[Azari_Sex_SmallPlayer]";
-			else if scalevalue of Player is 3:
-				say "     Attempting to use your size to your advantage, you struggle against the beast. Just as you begin to gain some leverage, however, the fox abruptly grows in size until he's slightly larger than a wolf, his new mass enough to keep you held in place. ";
-				say "[Azari_Sex_AveragePlayer]";
-			else:
-				say "     Using your [if scalevalue of Player is 4]larger than average[else]massive[end if] size to your advantage, you throw the unruly rubber vulpine off of you, quickly rising to your feet. The fox lets out a startled yelp and you rapidly duck out of the room before he can recover.";
-				say "     Making your way out of the shack, you pass Jerome, who simply raises a brow at your sudden departure and says, 'No refunds'.";
-		else:
-			LineBreak;
-			if scalevalue of Player < 3:
-				say "     Opting to let the larger beast have his way with you, you relax your body, attempting to show your submission. He seems to get the message and gently nuzzles you before he decides to get started. ";
-				say "[Azari_Sex_SmallPlayer]";
-			else if scalevalue of Player is 3:
-				say "     You decide that it's probably best to submit to the feral; after all, you did come here for sex. Sensing your submission to him, the fox gives you a quick nuzzle before he decides to get started. ";
-				say "[Azari_Sex_AveragePlayer]";
-			else:
-				say "     Even though you could likely overpower the smaller creature, you decide to submit instead, relaxing your muscles and letting out a deep breath. However, the fox doesn't seem to care about that. He growls and swipes across your chest, leaving three bleeding scratches before hopping off of you and returning to his sitting position. It seems the fox has no interest in you after all.";
-				say "     Making your way out of the shack, you pass Jerome, who simply raises a brow at your sudden departure and says, 'No refunds'.";
-		say "[line break]     <Note: Further stages of content do not currently exist for Azari, therefore his scene will repeat for now. If you like the character, he is available for expansion through commissions.>[line break]";
-		wait for any key;
-	else:
-		LineBreak;
-		say "     You nod at the shark, heeding his warning. Entering a tiny room with a crazed feral probably isn't the best idea, anyway.";
-		say "[ShagShackSexMenu]";
-
 to say Azari_Sex_SmallPlayer: [Sex scenes for a small player with the fox]
 	if Player is kinky:
-		say "Eager to use you, the sex-crazed feral grabs your arm in his [one of]rubbery[or]latex[or]squeaky[at random] teeth, yanking you to the side and forcing you to roll over. This seems to be all the invitation he needs, as he quickly begins prodding at your ass with his large rubber cock. The pre dripping from his tip is enough for it to slip between your butt cheeks, and a few rough thrusts later, the tip finds its way into your hole.";
 		say "     With his shaft now inside you, the feral begins to make his body grow, increasing in size until he's larger than a lion, [if scalevalue of Player < 2]completely dwarfing your minuscule body[else]more than large enough to cover your smaller body completely[end if]. After his body finishes growing, his [one of]latex[or]rubber[or]rubbery[at random] cock begins to expand as well, [if scalevalue of Player < 2]the added inch of girth stretching your hole even more, much to your own agony[else]the added girth stretching you out rather painfully[end if]. You're pretty sure it also got a handful of inches longer, too...";
 		WaitLineBreak;
 		say "     The beast doesn't give you any time to adjust to his new size before pressing his larger cock into you further. His goopy precum provides just barely enough lubrication for him to get halfway inside you before he starts encountering resistance from your insides, [if scalevalue of Player < 2]your stomach distending in a very clear silhouette of the fox's cock, pain searing through your ruined passage[else]your stomach bulging outwards heavily, evidence to the huge latex shaft that's stretching you painfully[end if]. Of course, the resistance isn't anywhere near enough to deter the determined vulpine, and he begins to press into you with renewed vigor, fully intent on bottoming out to his knot, regardless of your own well-being or enjoyment.";
@@ -157,7 +153,6 @@ to say Azari_Sex_SmallPlayer: [Sex scenes for a small player with the fox]
 		say "     The torrent of seed has nowhere to go but down your throat and into your stomach. It floods into you, almost instantly bulging you out distinctly. You very quickly begin to look like [if scalevalue of Player < 2]you're nine-months pregnant with twins[else]you're several-months pregnant[end if], and it just keeps flowing. Rope after rope of latex cum fills you, spilling through your stomach and into your bowels, until it comes across the knot. With both ends tightly plugged, the virile cream can do nothing but inflate you more. In the half an hour it takes for the feral's orgasm to end, you become so stuffed that you could easily lay on your stomach alone, needing no support from your arms or legs.";
 		say "     The fox finally elects to pull out of you, after his knot has deflated slightly, and you let out a squeak from the sudden flow of seed that spews from both your ass and your mouth. Lying there, you slowly begin to drift into a state of sleep, simply exhausted from all the strain, pain, and raw pleasure you've been subjugated to.";
 	else:
-		say "Eager to use you, the sex-crazed feral grabs your arm in his [one of]rubbery[or]latex[or]squeaky[at random] teeth, yanking you to the side and forcing you to roll over. This seems to be all the invitation he needs, as he quickly begins prodding at your ass with his large rubber cock. The pre dripping from his tip is enough for it to slip between your butt cheeks, and a few rough thrusts later, the tip finds its way into your hole.";
 		say "     You grit your teeth at the pain caused by the large intrusion, your hole having to stretch considerably to abide it. Of course, the feral doesn't give you any time to adjust, quickly forcing more of his length into you. [if scalevalue of Player < 2]Your tiny body is already being stretched excruciatingly to accept the shaft, and he's only made it halfway in[else]By the time half of his shaft is inside of you, your small body is having to stretch painfully to accommodate its length and girth[end if]. He doesn't show any intent of stopping at this depth either. With much effort on his part, and pain on yours, he manages to push his shaft in, all the way to the top of his bulging knot. Your stomach is [if scalevalue of Player < 2]distended painfully, the silhouette of a fox-cock is visible through your skin[else]bulging outwards, evidence to the big cock inside you[end if]. Despite all the pain you're feeling, you can't help but feel a twinge of pleasure as well.";
 		WaitLineBreak;
 		say "     The feral seems to notice your mounting arousal, and he lets out an amused huff. Deciding you've had enough time to adjust to his size, he pulls his rubber hips back until only the tip of his latex shaft is inside you. Your relief from the pain only lasts a moment, however, before he harshly thrusts back into you. You let out a gasp of pain, but this does the opposite of discouraging him. He begins to thrust in and out of your hole, treating you like his bitch. Somehow, amidst the pain, your cock has hardened and is now leaking pre, betraying your reluctant enjoyment of this.";
@@ -167,7 +162,6 @@ to say Azari_Sex_SmallPlayer: [Sex scenes for a small player with the fox]
 
 to say Azari_Sex_AveragePlayer: [Sex scenes for an average player]
 	if a random chance of 1 in 2 succeeds: [No growth / light cum inflation scene]
-		say "Eager to use you, the vulpine grabs you by the arm with his teeth, and yanks you to the side, causing you to roll over. However, this seems to be exactly what he wanted as he lines his erect, drooling cock up with your ass, roughly thrusting against it a few times before his tip sinks inside.";
 		say "     The [if player is twistcapped]strain[else]pain[end if] from the mostly un-lubricated intrusion causes you to grit your teeth, but this doesn't deter the beast. He keeps pushing and pushing his [one of]rubbery[or]latex[at random] cock deeper and deeper, until his growing knot brushes against your entrance. You let out a groan, seeing the massive vulpine member distending your stomach. Against your will, your cock begins to harden, leaking pre and betraying your arousal. The fox lets out a pleasured growl and pulls back until only a quarter of his [one of]large[or]big[or]long[at random] shaft is left inside you. The sex-crazed feral only gives you a moment of reprieve, however, before he thrusts his tool back in up to the knot. He pulls back much more quickly this time, and thrusts in again. Slowly but surely, the beast picks up the pace, slamming his knot against your strained hole repeatedly. Your own unattended [Cock of Player] penis bobs up and down from his rough thrusting jerking your body.";
 		WaitLineBreak;
 		say "     His thrusts keep getting rougher and faster, before he eventually stops pulling out as far as he has been, only pulling out a few inches now. The fox growls possessively as he batters your hole, and pushes his knot harder and harder against it. Your eyes widen as you realize amidst the [if player is twistcapped]discomfort[else]pain[end if] and pleasure that he's going to try tying you! True to that assumption, he backs up one last time before his softball-sized knot slams into your hole with a vengeance. But unlike the previous thrusts, he doesn't stop pushing after his knot hits you. He pushes harder and harder, determined to impale you with his knot before he finally succeeds, the ball of rubbery flesh slipping into you with a wet squelch, and a yip of pleasure from the rubber vulpine.";
@@ -175,7 +169,6 @@ to say Azari_Sex_AveragePlayer: [Sex scenes for an average player]
 		say "     The vulpine seems to completely disregard you afterwards, returning to the position he was in when you entered. Collecting yourself, you shakily exit the room.";
 	else: [Light growth / moderate inflation, or heavy growth / inflation if Player has "Kinky" feat]
 		if Player is kinky:
-			say "Eager to use you, the vulpine grabs you by the arm with his teeth, and yanks you to the side, causing you to roll over. However, this seems to be exactly what he wanted as he lines his erect, drooling cock up with your ass, roughly thrusting against it a few times before his tip sinks inside.";
 			say "     This doesn't seem to be enough to sate the sex-crazed feral, as he soon begins to grow, both his body and his cock increasing in size. His body keeps getting larger and larger, until he's bigger than a stallion, and his cock grows to be over two feet long and three inches thick! The massive intrusion, despite only being barely inserted is stretching you [if player is twistcapped]uncomfortably, and the strain[else]painfully, and the pain[end if] only increases as the feral vulpine pushes his shaft further into you, its passage barely lubricated by his copious amounts of thick precum. By the time he's impaled you with half of his length, you can already see your stomach bulging outwards. He growls in pleasure from the feeling of your insides resisting his massive latex cock and pushes even further still. Your belly-bulge quickly becomes a massive protrusion as the beast nears its huge knot, but somehow, you're not being ripped apart by it. When the beast finally presses his six-inch knot against your hole, the [if player is twistcapped]pressure is overwhelming[else]pain is excruciating[end if]. However, something else is there with it. You begin to feel a twinge of pleasure amongst the [if player is twistcapped]discomfort[else]pain[end if].";
 			WaitLineBreak;
 			say "     Seeming to sense your mounting arousal, the fox lets out an amused huff before he begins to pull his shaft out of you. Eventually, only his tip remains inside your stretched hole. This isn't the case for long, though, as he quickly pushes all the way back in. The harsh penetration causes you to let out a gasp, and the fox seems to take great enjoyment in eliciting such noises from you. He pulls backward sooner this time, and thrusts back in again. His pacing continues to rise, until soon, he's pounding into you at a feverish speed, battering your hole with his knot. Your own [Cock of Player] cock is hard and throbbing despite the [if player is twistcapped]distress[else]pain[end if] you're in.";
@@ -184,7 +177,6 @@ to say Azari_Sex_AveragePlayer: [Sex scenes for an average player]
 			say "     You instantly climax from the sheer pressure and strain on your prostate, painting the ground with your [Cum Load Size of Player] load. The feral begins climaxing as well, his knot growing to nearly a foot wide, a torrent of thick, rubbery seed spilling into your bowels, almost instantly distending your stomach. The flow keeps coming, and your stomach is now so large that you look like you're nine-months pregnant. His climax doesn't stop there, however, as he continues to spill semen into you, thrusting renewed as well. By the time he stops, and the flow of semen comes to a crawl, you look like you're ready to give birth to quintuplets any day now.";
 			say "     The fox takes no notice of your ruined body, and begins to tug his tool sharply. With it still expanded, it doesn't seem like it's going to come out any time soon, so he shrinks it down just enough for it to pop out of you with a loud, wet squelch. He dismounts you, leaving you on the floor where you eventually pass out from exhaustion.";
 		else:
-			say "Eager to use you, the vulpine grabs you by the arm with his teeth, and yanks you to the side, causing you to roll over. However, this seems to be exactly what he wanted as he lines his erect, drooling cock up with your ass, roughly thrusting against it a few times before his tip sinks inside.";
 			say "     With his shaft inside you, he begins to grow both his body, and his cock. You grit your teeth in pain as the intrusion grows, spreading your ring out wider. The feral's weight also increases, pressing you into the ground with his mass. By the time he's done expanding, his cock is nearly an inch wider, four inches longer, and his body is close to the size of a lion. Despite the increase in size, he's still able to push his rubbery vulpine tool further into your depths, lubricated just enough by his thick precum. After a lot of work on his part, and [if player is twistcapped]strain[else]pain[end if] on yours, he manages to bottom out to his growing knot.";
 			WaitLineBreak;
 			say "     The fox doesn't give you any time to get used to the intrusion, however, as he rapidly pulls it back out till just the tip remains inside you. He thrusts back in, faster this time, and despite everything that's happening, you feel a twinge of pleasure from your prostate, his smooth latex shaft rubbing against it nicely. Seemingly noticing your mounting arousal, the beast lets out an amused huff before picking up the pace even further. This prolonged ritual continues for quite a while, your [Cock of Player] cock growing harder and beginning to drool pre. Of course, this only encourages him further, and he begins to rut much more aggressively against your hole. His massive knot repeatedly brushes against your entrance, and soon enough, he switches to shorter, harder thrusts, determined to tie you to his tool.";

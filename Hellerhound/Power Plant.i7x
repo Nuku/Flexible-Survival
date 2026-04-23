@@ -40,7 +40,7 @@ to say ResolveEvent Generator Parts:
 		say "     You find a small pile of what looks to be parts of a machine. Or quite a few machines actually. There are dozens and dozens of spark plugs in it, as well as some small circuit boards and various other bits that are harder to identify. Some parts have US Army Part ID numbers engraved on their sides, so they were removed from military equipment. It seems that someone is going around ripping essential parts out of any motor and generator they can find. This must be hindering recovery efforts quite a bit, with how dependent civilization is on electricity. Sadly, you have no idea where this all came from, so even if you took some bits, there is little chance it would be of any use.";
 		now foundparts is 1;
 		now Resolution of Generator Parts is 1; [found the pile]
-	else if foundparts is 1:
+	else:
 		say "     You find the pile of gear again and see that it has grown further. Inspecting the collection of spark plugs, metal parts and electronic components, you spot some circuit boards that are ochre in color and seem fairly old. A closer look reveals the inscription 'West Hills Power Plant' on them, which tells you where these belong at least. Just in case they could provide useful if your path brings you to the power plant, you pack the small pieces of electronics in your backpack.";
 		now Generator Parts is resolved;
 		now Resolution of Generator Parts is 2; [grabbed the power plant chips]
@@ -164,12 +164,13 @@ check activating:
 	if Player is not in Control Room, say "Reactivate what?" instead;
 	if findwires is 1:
 		say "The power light for the city blocks holding the library and mall is still off. Maybe there is something wrong with the power lines?" instead;
-	else if findwires is 2 and fixedgens is 3:
+	if findwires is 2 and fixedgens is 3:
 		say "The power for the library and mall is already on and that pulls most of the power of the damaged power plant. Also, there seems to be a lot more damage in the lines leading elsewhere, so this is as good as it is gonna get for now." instead;
-	else if findwires > 0 and fixedgens is 0:
-		say "The power light is still off, and a malfunction light for the generator is on. Looks like you will have to fix it." instead;
-	else if findwires > 0 and fixedgens is 1:
-		say "The malfunction light is on, and you have the missing parts. You'll have to go out on the catwalk to fix it." instead;
+	if findwires > 0:
+		if fixedgens is 0:
+			say "The power light is still off, and a malfunction light for the generator is on. Looks like you will have to fix it." instead;
+		if fixedgens is 1:
+			say "The malfunction light is on, and you have the missing parts. You'll have to go out on the catwalk to fix it." instead;
 
 carry out activating:
 	if findwires is 0:
@@ -179,7 +180,7 @@ carry out activating:
 			say "     You use your superior intelligence to turn off the emergency shutdown.";
 			say "     No matter how hard you try, none of the power lights for the different city areas seem to turn on and after some futile button-pushing, the system falls back into shutdown mode. Maybe there is something wrong with the power lines? Or the generator? It doesn't look too good, but at least you now know how to reactivate the system quickly.";
 			now findwires is 1;
-	else If findwires is 2 and fixedgens is 2: [turning the power on]
+	else if findwires is 2 and fixedgens is 2: [turning the power on]
 		say "     Flipping several switches on the control panel, you manage to get the power light for the part of the city with the library to turn on! Yay! Maybe now the computers there will work again?";
 		now library computer is powered;
 		now fixedgens is 3;
@@ -202,7 +203,7 @@ check towerfixing:
 	if the player is not in power lines, say "Fix what?" instead;
 	if findwires is 0: [haven't tried to turn on the power]
 		say "Why? There is no power anywhere else, so the power station must be busted too. You should start there first." instead;
-	else if findwires is 2: [cables already reconnected]
+	if findwires is 2: [cables already reconnected]
 		say "The power lines are already fixed." instead;
 
 carry out towerfixing:
@@ -213,7 +214,7 @@ carry out towerfixing:
 		say "     The tower top slides into place, and the stress on the wires is released.";
 		now findwires is 2; [cables reconnected]
 		if fixedgens > 1:
-			say "[line break]     A red light on the uppermost tip of the tower blinks a few times, then stays on continuously, indicating power is up and running. Hooray!";
+			say "     A red light on the uppermost tip of the tower blinks a few times, then stays on continuously, indicating power is up and running. Hooray!";
 			increase score by 200;
 			now library computer is powered;
 

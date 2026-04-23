@@ -23,7 +23,7 @@ Version 3 of Andrew by Gherod begins here.
 
 randomcolorlist is a list of text that varies.[@Tag:NotSaved] randomcolorlist is usually { "pink ", "red ", "green ", "blue ", "teal ", "yellow ", "white ", "black ", "purple ", "gray ", "maroon ", "golden ", "cyan ", "peach " }.
 
-Section 1 - Private Booths
+Chapter 1 - Private Booths
 
 Table of GameRoomIDs (continued)
 Object	Name
@@ -32,7 +32,7 @@ Private Booths	"Private Booths"
 Private Booths is a room. Private Booths is east of PALOMINO Dance Club. Description of Private Booths is "     Looking around the shadowy, semi-private booths in this corner of the club, you spot several signs of patrons having used them for some fun. Many of the vinyl padded seats of the booths, and even some of the round tables, have large splatters of cum on them. While the booths themselves look rather new, it's clear that they've suffered a lot of wear recently, with fresh claw marks in the wood and cushions alike from mutated patrons in the throes of lustful passion.[line break]".
 the scent of Private Booths is "     The booths smell strongly of male lust of numerous varieties, though wolf is definitely omnipresent in the air in this area.".
 
-Section 2 - Andrew
+Chapter 2 - Andrew
 
 Table of GameCharacterIDs (continued)
 object	name
@@ -88,13 +88,9 @@ Instead of conversing the Andrew:
 		if Player is male:
 			say "     'So, care to join me in seeking a little relief from the stresses of this crazy city of ours?' he says, eyeing your crotch as he slides his long tongue along the inside of his glass to get the last few drops. He smiles mischievously as his violet eyes watch your reaction to his teasing tonguework.";
 	else if lust of Andrew is 2 or lust of Andrew is 4:
-		if lust of Andrew is 2:
-			say "     The black wolf stretches, running his paws over his body. 'Oh man, that thing we did with your demon was great. Got a little out of hand there, but it was so much fun. Maybe we co...' he starts to say, but stops short when he notices Harold glaring at him from the bar. 'Uhh... I mean, we probably shouldn't do it again though. Several people went feral during the show and had to be thrown out.' He does his best to look contrite until the unicorn turns away, then flops back into his seat with a disappointed sigh.";
-			now lust of Andrew is 3; [repeat forbidden because of possible demonic escalation]
-		else:
-			say "     The black wolf stretches, running his paws over his body. 'Oh man, that thing we did with your demon was great. Lots of audience participation too. Maybe we co...' he starts to say, but stops short when he notices Harold glaring at him from the bar. 'Uhh... I mean, we probably shouldn't do it again though. The cleanup afterwards was quite a bit of work.' He does his best to look contrite until the unicorn turns away, then flops back into his seat with a disappointed sigh.";
-			now lust of Andrew is 5; [repeat forbidden because of too much cleanup]
+		say "     The black wolf stretches, running his paws over his body. 'Oh man, that thing we did with your demon was great. [if lust of Andrew is 2]Got a little out of hand there, but it was so much fun. Maybe we co...' he starts to say, but stops short when he notices Harold glaring at him from the bar. 'Uhh... I mean, we probably shouldn't do it again though. Several people went feral during the show and had to be thrown out[else]Lots of audience participation too. Maybe we co...' he starts to say, but stops short when he notices Harold glaring at him from the bar. 'Uhh... I mean, we probably shouldn't do it again though. The cleanup afterwards was quite a bit of work[end if].' He does his best to look contrite until the unicorn turns away, then flops back into his seat with a disappointed sigh.";
 		say "     'Grumpy over there says he'll cut me off permanently if we try that again. Can you believe him? No more beer! Speaking of...' he adds, reaching for a half-full stein and draining it. 'Seriously though, as fun as that was, I've gotten plenty more requests for my [']personal services['] since the show. Nothing like being the center of an orgy to boost one's popularity,' he says with a happy giggle.";
+		increase lust of Andrew by 1; [repeat forbidden because of possible demonic escalation or too much cleanup]
 	else:
 		say "[randombodypart]";
 		say "     [if Player is male][one of]'Are you having a good time?'[or]'Grab a drink from the bar and let's chat.'[or]'Looking for a little fun, sweetie?' he asks softly.[or]'Looking to snuggle with this big, bad wolf,' he teases, rubbing his crotch.[or]'Need a little stress relief, honey?'[or]'I've been hanging out at this club since before the outbreak and I like it even better now.' He leans a little closer. 'Being able to fuck here in my booth is much more fun.'[or]'Mmm... what's say you snuggle up in here beside me?' he says with his vaguely feminine voice while sliding a finger slowly through one of the sticky puddles of cum on the table before licking it away from his fingertip.[or]'Have you tried the [']Black Wolf Beer[']? I help Harold make it,' he says, rubbing his bulging crotch. 'I highly recommend it.'[or]'Look at the set of buns on that one,' he giggles. 'Mm-Mm-Mmmm...'[or]'So what have you b...' he starts to ask, but trails off as a sexy [bodyselector] with a big cock walks into view.[or]You and the wolf chat, but it constantly devolves into him commenting on the sexual prowess of the various guys around the club as he spots them and waves. Noticing your frustration at his constant distraction, he gives you a hug and a grope. 'I'm sorry, hon. It's just tough being popular sometimes,' he says with an exaggerated sigh, before giving a girlish giggle and nipping you playfully. He becomes more attentive, at least long enough to finish your conversation.[in random order][else][one of]'Are you having a good time?'[or]'Grab a drink from the bar and let's chat.'[or]'I've been hanging out this club since before the outbreak and I like it even better now.' He leans a little closer. 'Being able to fuck here in my booth is much more fun.'[or]'You should head onto the dance floor and have some fun,' he says with his vaguely feminine voice while sliding a finger slowly through the sticky puddles of cum on the table, drawing various dicks before licking the rest from his fingertip.[or]'Have you tried the [']Black Wolf Beer[']? I help Harold make it,' he says, rubbing his bulging crotch. 'I highly recommend it.'[or]'Have you heard this song before?' he asks.[or]'Look at the set of buns on that one,' he giggles. 'Mm-Mm-Mmmm...'[or]'So what have you b...' he starts to ask, but trails off as a sexy [bodyselector] with a big cock walks into view.[or]He mumbles some vague response to you as he leans across the table, eyeing the guys walking around.[or]You and the wolf chat, but it constantly devolves into him commenting on the sexual prowess of the various guys around the club as he spots them and waves. He's clearly very popular.[in random order][end if]";
@@ -180,7 +176,7 @@ to say AndrewTalkFur:
 	say "     Knowing this isn't exactly a request anyone makes, you compliment the sexy wolf's look before following up with your intention. 'Ah, I see... You like the wolf look[if Player is male], yeah? But you could also just blow me and drink my load, instead... It would have the same effect, not to mention it's much more fun... But alright[else], hmm[end if]... I suppose I could hand you some, since it grows back up nearly instantly. Give me a second,' he says, heading somewhere out of view for a couple of minutes, then returning with a tuft of his own fur in his paw. 'Here you go, sweetie. Show me the results later, alright?' he says, handing you the fur as he gives you a wink.";
 	ItemGain black wolf fur by 1;
 
-Section 3 - Sexy Times
+Chapter 3 - Sexy Times
 
 to say sexwithAndrew:
 	project Figure of Andrew_icon;
@@ -455,7 +451,7 @@ to say AndrewSexAnal: [standard anal sex w/Andrew]
 		NPCSexAftermath Player receives "AssFuck" from Andrew;
 		infect "Black Wolf";
 
-Chapter 2 - Demon Show
+Section 1 - Demon Show
 
 to say AndrewDemonShow: [evil Brutus + Andrew]
 	let maletype be a list of text;
@@ -555,7 +551,7 @@ to say AndrewBrutusShow: [cleansed Brutus + Andrew]
 	NPCSexAftermath Andrew receives "AssFuck" from Brutus;
 	now lust of Andrew is 4;
 
-Section 8 - Miscellaneous Subroutines - Not for release
+Chapter 4 - Miscellaneous Subroutines - Not for release
 
 andrewtesting is an action applying to nothing.
 understand "andrewtest" as andrewtesting.
@@ -605,7 +601,7 @@ carry out andrewtesting:
 		say "male3c: [male3c][line break]";
 		say "male4c: [male4c][line break][line break]";
 
-Section 9 - Endings
+Chapter 5 - Endings
 
 Table of GameEndings (continued)
 Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)

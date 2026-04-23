@@ -21,7 +21,7 @@ to say fertilepilluse:
 		say "[line break]     Your pregnant belly feels odd as it expands quickly. Looks like the child will be coming a little sooner.";
 	if inheat is true: [extend heat]
 		decrease turns in heat by 8;
-		say "[line break]     Your [if heatform is 0]cunt[else]anus[end if] seems to be getting even [if heatform is 0]wetter[else]looser[end if], and the heat more intense. Looks like it'll last a bit longer now.";
+		say "[line break]     Your [if heatform is 0]cunt seems to be getting even wetter[else]anus seems to be getting even looser[end if], and the heat more intense. Looks like it'll last a bit longer now.";
 	if fertiletime is 0:
 		if "Fertile" is listed in the feats of Player:
 			now wasfertilef is 1;

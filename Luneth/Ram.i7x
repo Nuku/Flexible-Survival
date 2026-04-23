@@ -35,8 +35,8 @@ to say ram_attack:
 	else if Player is MalePreferred:
 		say "     The beast pushes you down to the ground roughly, pinning you there as he pumps his own cock eagerly. You are forced to watch as his hoof-hands rub at his balls and cock, an impressive set of genitals on the woolly victor, unable to look away even as he starts to pump harder. You groan in defeat as he shoots his sticky seed all over your body, marking you as his. 'Ah, that was good,' the ram says happily as he rubs his cock some more. 'Almost nothing feels as good as defeating a trespasser in my territory,' the ram says as he gets off you, before turning to depart, leaving you to contend with the mess he left in his wake.";
 	else:
-		say "     The beast pushes you down to the ground roughly, pinning you there as he pumps his own cock eagerly. You are forced to watch as his hoof-hands rub at his balls and cock, an impressive set of genitals on the woolly victor, unable to look away even as he starts to pump harder. You groan in defeat as he shoots his sticky seed all over your body, marking you as his. 'Ah that was good,' the ram says happily as he rubs his cock some more. 'Almost nothing feels as good as defeating a trespasser in my territory,' the ram says as he gets off you, before grinning evilly as he looks down at your helpless form. 'Now once you're done transforming into a proper ewe for me, you come find me right away. That's an order from your ram,' the powerful ram says, before chuckling as he heads back into the city. You are left lying there covered in his seed, and with a surprisingly strong desire to hunt him down again, just like he told you to...";
-		if FemaleList is not banned and Player is not MalePreferred:
+		say "     The beast pushes you down to the ground roughly, pinning you there as he pumps his own cock eagerly. You are forced to watch as his hoof-hands rub at his balls and cock, an impressive set of genitals on the woolly victor, unable to look away even as he starts to pump harder. You groan in defeat as he shoots his sticky seed all over your body, marking you as his. 'Ah, that was good,' the ram says happily as he rubs his cock some more. 'Almost nothing feels as good as defeating a trespasser in my territory,' the ram says as he gets off you, before grinning evilly as he looks down at your helpless form. 'Now once you're done transforming into a proper ewe for me, you come find me right away. That's an order from your ram,' the powerful ram says, before chuckling as he heads back into the city. You are left lying there covered in his seed, and with a surprisingly strong desire to hunt him down again, just like he told you to...";
+		if FemaleList is not banned:
 			setmonster "Ewe";
 
 To say ram_loss:
@@ -79,7 +79,13 @@ To say ram_loss:
 				say "     Without the proper equipment, there's not much for you to do with the beaten ram. Helpless as he is, you could [link]ride his cock (Y)[as]y[end link] or [link]leave him be (N)[as]n[end link].";
 				if Player consents:
 					LineBreak;
-					say "[genericramride1]";
+					say "     Having come to a decision, you smirk down at the ram [if Player is dominant]smugly[else]coyly[end if] before pouncing atop his prone form and tell him exactly what you intend to do. The ram bleats in surprise as you reach down and stroke his softening cock back to fullness, [if Player is dominant]giving it a tight squeeze to remind him you're the one in charge[else]giving it special attention[end if] before lining up his cockhead with your backdoor. Exhausted as he is, he makes no effort to force you off of him as you sink his entire length into you, savoring the feel of his cock stretching out your inner walls as you start rocking your body and riding him hard and fast. Bleating and moaning, the two of you keep bucking and thrusting until you both reach a loud, crashing orgasm together, your anal muscles tightening around his pulsing manhood. Catching your breath, you slide off of him and moan at the warm feeling of his warm semen spilling out of your hole. Standing up, you tell him what a good [if Player is dominant]obedient toy[else]lay[end if] he is.";
+					CreatureSexAftermath "Player" receives "AssFuck" from "Ram";
+					if a random chance of 1 in 2 succeeds:
+						if FemaleList is not banned and Player is not MalePreferred:
+							infect "Ewe";
+						else:
+							infect "Ram";
 				else:
 					LineBreak;
 					say "     With a huff, you step back and watch as the ram staggers to his feet in a hurry and scrambles away in relief.";
@@ -98,15 +104,6 @@ to say genericramfuck:
 to say genericramride:
 	say "     [if Player is male]You could fuck him, but you'd much rather ride the ram's cock. [end if]Having come to a decision, you smirk down at the ram [if Player is dominant]smugly[else]coyly[end if] before pouncing atop his prone form and tell him exactly what you intend to do. The ram bleats in surprise as you reach down and stroke his softening cock back to fullness, [if Player is dominant]giving it a tight squeeze to remind him you're the one in charge[else]giving it special attention[end if] before sinking your juicy cunt down onto it with a low moan. Exhausted as he is, he makes no effort to force you off of him as you [if Cunt Depth of Player < 5]try and take as much of his cock into you as you can[else]take his entire length into you[end if] and ride him hard and fast. Bleating and moaning, the two of you keep bucking and thrusting until you both reach a loud, crashing orgasm together[if Player is male], shooting your [Cum Load Size of Player] load over the ram's chest[end if]. Catching your breath, you slide off of him and moan at the warm feeling of his warm semen slipping out of your pussy. Standing up, you tell him what a good [if Player is dominant]obedient toy[else]lay[end if] he is.";
 	CreatureSexAftermath "Player" receives "PussyFuck" from "Ram";
-	if a random chance of 1 in 2 succeeds:
-		if FemaleList is not banned and Player is not MalePreferred:
-			infect "Ewe";
-		else:
-			infect "Ram";
-
-to say genericramride1:
-	say "     Having come to a decision, you smirk down at the ram [if Player is dominant]smugly[else]coyly[end if] before pouncing atop his prone form and tell him exactly what you intend to do. The ram bleats in surprise as you reach down and stroke his softening cock back to fullness, [if Player is dominant]giving it a tight squeeze to remind him you're the one in charge[else]giving it special attention[end if] before lining up his cockhead with your backdoor. Exhausted as he is, he makes no effort to force you off of him as you sink his entire length into you, savoring the feel of his cock stretching out your inner walls as you start rocking your body and riding him hard and fast. Bleating and moaning, the two of you keep bucking and thrusting until you both reach a loud, crashing orgasm together, your anal muscles tightening around his pulsing manhood. Catching your breath, you slide off of him and moan at the warm feeling of his warm semen spilling out of your hole. Standing up, you tell him what a good [if Player is dominant]obedient toy[else]lay[end if] he is.";
-	CreatureSexAftermath "Player" receives "AssFuck" from "Ram";
 	if a random chance of 1 in 2 succeeds:
 		if FemaleList is not banned and Player is not MalePreferred:
 			infect "Ewe";

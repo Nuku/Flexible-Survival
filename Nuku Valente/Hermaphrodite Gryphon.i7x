@@ -17,7 +17,7 @@ To say losetohgryphon:
 	if anallevel > 1:
 		now analchance is 5;
 		if Player is submissive, increase analchance by 2;
-		if Player is mpreg_ok, increase analchance by 2;
+		if "MPreg" is listed in feats of Player, increase analchance by 2;
 		if anallevel is 2, now analchance is ( 2 * analchance ) / 3;
 	if Player is herm:
 		if a random chance of 2 in 3 succeeds:	[fucking the player]

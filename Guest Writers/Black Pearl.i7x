@@ -3,7 +3,7 @@ Version 1 of Black Pearl by Guest Writers begins here.
 [Version 1 - New Event, item and endings interacting with Kyrverth's quest	]
 [Version 2 - moved to Guest Writers]
 
-Section 0 - Event
+Section 1 - Event
 
 Table of GameEventIDs (continued)
 Object	Name
@@ -40,7 +40,7 @@ to say ResolveEvent Curious Pearl:
 		say "     While strolling leisurely along the beach, you feel something call out to you. You can't quite pin what it is or from where it's coming from, but you know that there is something really valuable here. It seems like a hunch, but you don't know where to look. After a few minutes of seemingly aimlessly searching, you give up and continue whatever you were doing before.";
 	ResolveKyrverthItemEvents;
 
-Section 1 - Item definition and usage
+Section 2 - Item definition and usage
 
 Table of Game Objects (continued)
 name	desc	weight	object
@@ -78,7 +78,7 @@ to say blackpearlusing:
 	trigger ending "Leviathan Rising";
 	end the story saying "You have become the Leviathan.";
 
-Section 2 - Endings
+Section 3 - Endings
 
 Table of GameEndings (continued)
 Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
@@ -86,14 +86,10 @@ Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered
 
 This is the Leviathan Rising rule:
 	if ending "Leviathan Rising" is triggered:
-		if location of Player is Public Beach or location of Player is Wild Fringe or location of Player is Rocky Cliff:
-			say "     The Great Leviathan has awakened. How could you have been blind your entire life? You were always destined for greatness and divinity. It just took this magnificent pearl to bring it out of you. Standing on the beach, you squint at the light reflecting in the water. Without a second thought, you slither towards the water, feeling somewhat vulnerable out here. You need to dive down back into the darkness, to grow and establish your rule over the sea again. Back in the sea, you dwell in the deeps, finding refuge within some old ruins. For the years to come, you occasionally come out to hunt for unsuspecting prey to ";
-		else:
-			say "     The Great Leviathan has awakened. How could you have been blind your entire life? You were always destined for greatness and divinity. It just took this magnificent pearl to bring it out of you. Memories of a distant past come flooding to you, giving you a sense of urgency to head back to the beach. There are preparations to be made and the sea does need the presence of its worthy ruler again. Back in the sea, you dwell in the deeps, finding refuge within some old ruins. For the years to come, you occasionally come out to hunt for unsuspecting prey to ";
 		if vorelevel is not 1 and (vorelevel is 3 or Player can vore):
-			say "stuff them down your [if Player is male and CockVoreList is not banned]majestic rod[else]depths[end if]. Once done playing with them, you release them with mind-shattering orgasms. Your prey always finds themselves not only turned into a form similar to yours, but also malleable to your will.";
+			say "     The Great Leviathan has awakened. How could you have been blind your entire life? You were always destined for greatness and divinity. It just took this magnificent pearl to bring it out of you. [if location of Player is Public Beach or location of Player is Wild Fringe or location of Player is Rocky Cliff]Standing on the beach, you squint at the light reflecting in the water. Without a second thought, you slither towards the water, feeling somewhat vulnerable out here. You need to dive down back into the darkness, to grow and establish your rule over the sea[else]Memories of a distant past come flooding to you, giving you a sense of urgency to head back to the beach. There are preparations to be made and the sea does need the presence of its worthy ruler[end if] again. Back in the sea, you dwell in the deeps, finding refuge within some old ruins. For the years to come, you occasionally come out to hunt for unsuspecting prey to stuff them down your [if Player is male and CockVoreList is not banned]majestic rod[else]depths[end if]. Once done playing with them, you release them with mind-shattering orgasms. Your prey always finds themselves not only turned into a form similar to yours, but also malleable to your will.";
 		else:
-			say "constrict them in your coils. The sight of these land dwellers screaming and fighting for air in your coils does feel exhilarating. None can hope to free themselves of your grasp. Nearly all of them find themselves surprised, but also grateful, when you don't drown them in the seemingly infinite depths of the ocean but instead bring them to your sanctuary. Within the ruins, your captives start taking a shape similar to yours, as you end up showing your affections to them daily, making sure that they all mature nicely. This treatment also has your new disciples be very open to your suggestions and commands; many end up devoting themselves to you with the ones who leave you still making others into creatures of the void.";
+			say "     The Great Leviathan has awakened. How could you have been blind your entire life? You were always destined for greatness and divinity. It just took this magnificent pearl to bring it out of you. [if location of Player is Public Beach or location of Player is Wild Fringe or location of Player is Rocky Cliff]Standing on the beach, you squint at the light reflecting in the water. Without a second thought, you slither towards the water, feeling somewhat vulnerable out here. You need to dive down back into the darkness, to grow and establish your rule over the sea[else]Memories of a distant past come flooding to you, giving you a sense of urgency to head back to the beach. There are preparations to be made and the sea does need the presence of its worthy ruler[end if] again. Back in the sea, you dwell in the deeps, finding refuge within some old ruins. For the years to come, you occasionally come out to hunt for unsuspecting prey to constrict them in your coils. The sight of these land dwellers screaming and fighting for air in your coils does feel exhilarating. None can hope to free themselves of your grasp. Nearly all of them find themselves surprised, but also grateful, when you don't drown them in the seemingly infinite depths of the ocean but instead bring them to your sanctuary. Within the ruins, your captives start taking a shape similar to yours, as you end up showing your affections to them daily, making sure that they all mature nicely. This treatment also has your new disciples be very open to your suggestions and commands; many end up devoting themselves to you with the ones who leave you still making others into creatures of the void.";
 		say "     One day, you'll rise from the abyss again and finish what you started years ago, but this time, nobody will be able to stop you.";
 		the Player is gone;
 

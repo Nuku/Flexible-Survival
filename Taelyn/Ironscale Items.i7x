@@ -3,6 +3,7 @@ Version 1 of Ironscale Items by Taelyn begins here.
 Section 1 - Gear
 
 [Gambeson, Plague Doctor Mask, Horseshoes, Scalemail]
+
 Part 1 - Scalemail
 
 Table of Game Objects (continued)

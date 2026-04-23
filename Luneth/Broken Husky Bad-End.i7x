@@ -12,7 +12,6 @@ Version 1 of Broken Husky Bad-End by Luneth begins here.
 [ Brokenhuskyescape - variable for hidden ending                                ]
 [   purely progressive variable for certain answers                             ]
 
-
 [ Brokenhuskydelta - type of husky player becomes                               ]
 [   0: haven't been changed yet                                                 ]
 [   1: good girl/traditional husky                                              ]
@@ -25,7 +24,7 @@ Brokenhuskysluttypuppy is a number that varies.
 Brokenhuskyescape is a number that varies.
 Brokenhuskydelta is a number that varies.
 
-Section 1 - Broken Husky Bad End
+Chapter 1 - Broken Husky Bad End
 [This bad end will trigger if you have the Artemis disciple feat and are fully male genital wise. You must also lose to the alpha that has captured Sarah, it will not activate if you lose to the regular female huskies though since the alpha will then view you as a worthless addition to his pack. WARNING: this will also overwrite the male preferred feat.]
 
 to say BrokenHuskySlutBadend:
@@ -46,42 +45,36 @@ to say BrokenHuskySlutBadend:
 	WaitLineBreak;
 	say "     At this point, you aren't even sure if the well-built husky is even talking to you anymore, or if he is simply talking to himself. The canine finally whips around and is once again crouching next to you, with one paw petting you and the other holding your face, forcing you to look him in the eye. 'The others changed in a matter of hours. I think that was the mistake, they changed too fast, and their pathetic minds couldn't take the strain. With you, I plan on making sure we go nice and slow. Make you become just what I want of you, and when I want you to.'";
 	say "     The expression on his face softens for a bit, allowing you to see through the tears in your eyes that if he wasn't completely batshit crazy, he would definitely be seen as an extremely attractive male. 'Y'know, when I was a kid I always wanted a puppy. Sucks that I had to wait so long to get a proper one.' You aren't able to hold back the sob that breaks through you as he says, 'Welcome to the family, cunt!' With that said, the large male stands up and strolls over to a simple wooden chair, turning it to sit on it backwards and lean on the backrest as he stares at you with an odd gleam in his eyes.";
-	LineBreak;
-	say "     << End of Day 1 >>";
+	say "[line break]     << End of Day 1 >>[line break]";
 	WaitLineBreak;
 	say "     The next time you wake up, it is with a major headache seemingly ready to split your head in two. Opening your eyes, you are once again greeted by nothing but the darkness of the room that you're being held in. Reaching up to hold your throbbing head, you accidentally jostle the chain attached to your collar, causing a fresh rush of pain to spread throughout your throat as the already chafed skin of your neck is pulled on. Alone in the shadows, your mind goes over what feels like hours, or even a day back, when the alpha that has captured you kept you up for an exceedingly long time, ranting and raving about how he was going to be the top dog in the city.";
 	say "     Most of what he said sounded as if he was planning something big, however he didn't give you any details as to what he had in mind, and the rest... well the rest sounded like some lunatic cult leader preaching. He had mentioned rising up above the other alphas, how this nanite infection was a sign that it was his time to ascend as the leader of his canine brethren. As your mind comes back to the present, you're able to hear the rumbling of movement somewhere outside of your room. You know that you can't stay here. If you do, who knows what will happen, not just to your body but also your mind. The only option is to bide your time until an opening presents itself, playing along with the psychotic husky's game.";
 	WaitLineBreak;
 	say "     You feel rage beginning to build up at the thought, but it can't be helped. You will do what is necessary to survive, even if it means debasing yourself in some way. On the flip side however, he may assume you have plans if you don't even attempt to fight back. Also, he seems to appreciate your resistance as something he can 'work on', so who knows what he would do if you didn't meet his expectation. At the end of the day, it is going to come down to how you decide to handle this situation. On one hand, you could attempt to appease him while waiting for your chance to escape, or you could rebel against his desires in the hope that he will tire of you and release you, however there is a third option as well... you could attempt to seduce him to try and win his favor.";
-	say "     With your thoughts racing in an attempt to both calculate how to get out of here and how to cope with what you will have to go through, you don't realize at first that someone has entered your room. It must be night outside of your prison right now, as there wasn't any light to betray the opening of the door. 'How ya feelin['] this mornin['], pretty girl?' You can't control the look of hatred you shoot in the direction of the voice, due to the fact it's pitch black in the room you assume he will not notice. 'Haha, darlin['], you do realize I can see just fine in the dark, Don'tcha?' Closing your eyes, you attempt to calm yourself, slowly counting to ten in your head. 'Aww, don't hide them pretty eyes away. They're part of the reason that I chose you.' Leaning down, the husky grabs your face in his paws and demands that you open your eyes for him. Reluctantly, you do as he asks. 'See, right beautiful they are. You wanna know what I see in you? Look into my eyes for a second!' He must be right in front of you now, as you can feel his breath on your face.";
-	LineBreak;
-	say "     [bold type]What's your gut reaction to this?[roman type][line break]";
+	say "     With your thoughts racing in an attempt to both calculate how to get out of here and how to cope with what you will have to go through, you don't realize at first that someone has entered your room. It must be night outside of your prison right now, as there wasn't any light to betray the opening of the door. 'How ya feelin['] this mornin['], pretty girl?' You can't control the look of hatred you shoot in the direction of the voice, due to the fact it's pitch black in the room you assume he will not notice. 'Haha, darlin['], you do realize I can see just fine in the dark, don'tcha?' Closing your eyes, you attempt to calm yourself, slowly counting to ten in your head. 'Aww, don't hide them pretty eyes away. They're part of the reason that I chose you.' Leaning down, the husky grabs your face in his paws and demands that you open your eyes for him. Reluctantly, you do as he asks. 'See, right beautiful they are. You wanna know what I see in you? Look into my eyes for a second!' He must be right in front of you now, as you can feel his breath on your face.";
+	say "[line break]     [bold type]What's your gut reaction to this?[roman type][line break]";
 	say "     [link](1)[as]1[end link] - Be a good girl.";
 	say "     [link](2)[as]2[end link] - Be a bad bitch.";
 	say "     [link](3)[as]3[end link] - Be a slutty puppy.";
 	now calcnumber is 0;
 	while calcnumber < 1 or calcnumber > 3:
-		say "Choice? (1-3)>[run paragraph on]";
+		say "Choice? (1-3)> [run paragraph on]";
 		get a number;
-		if calcnumber is 1 or calcnumber is 2 or calcnumber is 3:
-			break;
-		else:
-			say "Invalid choice. Type [link]1[end link] good, [link]2[end link] bad or [link]3[end link] slut.";
+		if calcnumber < 1 or calcnumber > 3:
+			say "Invalid choice. Type [link]1[end link] to be good, [link]2[end link] to be bad or [link]3[end link] to be a slut.";
+	LineBreak;
 	if calcnumber is 1:
-		LineBreak;
 		say "     You can't bring yourself to answer him. You know that you should if you want to attempt to make your plan work, but you can't help but loathe the maniac touching you. Giving in and looking at where you hope his eyes are, you know that you're not able to hide the hatred you're feeling, but hopefully the fact that you're doing as he asked will garner you some leniency. One of his furred digits lightly caresses the side of your face, the touch while firm is still gentle. For a moment, you almost allow yourself to be comforted by this simple act of affection, but you know that you have to keep your eye on the prize and push those feelings down. Embracing the idea that he is attempting to trick you, you can't fight the look of betrayal you send his way.";
 		increase Brokenhuskygoodgirl by 2;
 		decrease Brokenhuskybadbitch by 1;
 		decrease Brokenhuskysluttypuppy by 1;
 	else if calcnumber is 2:
-		LineBreak;
 		say "     Knowing that you may not get another chance, you wait and prepare for your opening, feeling the husky taking a deep breath, more than likely taking in your scent, and then you ram your forehead into his muzzle! Unfortunately, while you do hit the canine, it's not enough to do very much damage. Bracing yourself for a hit in return, you are surprised when instead all the alpha does is release a booming laugh. 'Ha, ya definitely have spirit, that's for sure.' Once again, the husky leans down and takes your face in his paws, though this time with a bit more force. You can't help but glare back at what you're sure is probably his smug face.";
 		decrease Brokenhuskygoodgirl by 1;
 		increase Brokenhuskybadbitch by 2;
 		decrease Brokenhuskysluttypuppy by 1;
 		increase Brokenhuskyescape by 1;
 	else:
-		LineBreak;
 		say "     You can't tell if it's the fact that he called your eyes beautiful, or if it's merely the fact that he is so close to you, but you can feel your face begin to heat up. The scent of the powerful male in front of you enters your body, his musk almost intoxicating. Your tongue slips from between your lips wetting them while at the same time one of your hands slowly travels up the length of your naked thigh. In the darkness, you can't see the male before you, but you can hear him take in a deep breath. You're not sure if it's because of the effect he is having on you at the moment, or if he is simply taking in your scent, but it does force a soft moan to escape your throat. 'I see that you know the proper way to appreciate your master, but we will have to save that for later, darlin['].' You feel frustration build up inside of you at being denied, glaring back at what you hope is his muzzle.";
 		decrease Brokenhuskygoodgirl by 1;
 		decrease Brokenhuskybadbitch by 1;
@@ -90,34 +83,29 @@ to say BrokenHuskySlutBadend:
 	WaitLineBreak;
 	say "     Taking in the alpha, you decide to look for anything that could help you in the future. While at first he appears to look just like any other alpha husky with his Adonis-like build and arrogant personality to match, now that you're able to see him clean and without all of the dirt and grime from the city, you quickly notice a major difference: his patterning. It's not that it's different, it's just not there. The closest thing he has to a pattern is a black patch on his forehead and a small patch on his chest. Besides those two small black patches, everything seems to be pointing at the possibility that he may actually be an albino. 'You curious about what your master truly looks like? I guess that I shouldn't be surprised, after all, it's only proper for my pretty girl to wanna see exactly who she's gonna be worshiping.' Finally stepping fully into the light, the husky looks down at you with... one dark-red eye and another that is a warm amber color.";
 	[reaction point concerning commenting on the potential of him being albino]
-	LineBreak;
-	say "     [bold type]What's your gut reaction to this?[roman type][line break]";
+	say "[line break]     [bold type]What's your gut reaction to this?[roman type][line break]";
 	say "     [link](1)[as]1[end link] - Be a good girl.";
 	say "     [link](2)[as]2[end link] - Be a bad bitch.";
 	say "     [link](3)[as]3[end link] - Be a slutty puppy.";
 	now calcnumber is 0;
 	while calcnumber < 1 or calcnumber > 3:
-		say "Choice? (1-3)>[run paragraph on]";
+		say "Choice? (1-3)> [run paragraph on]";
 		get a number;
-		if calcnumber is 1 or calcnumber is 2 or calcnumber is 3:
-			break;
-		else:
-			say "Invalid choice. Type [link]1[end link] good, [link]2[end link] bad or [link]3[end link] slut.";
+		if calcnumber < 1 or calcnumber > 3:
+			say "Invalid choice. Type [link]1[end link] to be good, [link]2[end link] to be bad or [link]3[end link] to be a slut.";
+	LineBreak;
 	if calcnumber is 1:
-		LineBreak;
 		say "     You study the black patches on the husky. The one on his forehead almost looks like a great heptagram while the one on his chest could be a simple tuft, reminding you of some sort of crest. Part of you wants to ask more about whether his markings are real or if he is indeed an albino, but you can only imagine how he would react to that, seeing as most people sadly attribute albinos with sterility, and this alpha doesn't seem like the most learned of males. 'Why are you being so quiet? I know that I'm a perfect specimen of manhood, but as my woman, you should feel safe with confiding in me your thoughts... unless I already broke you.' Faster than your eyes can follow, a furred paw slams into one of the walls of your room, quickly followed by another, until he is pummeling the wall over and over.";
 		increase Brokenhuskygoodgirl by 2;
 		decrease Brokenhuskybadbitch by 1;
 		decrease Brokenhuskysluttypuppy by 1;
 		increase Brokenhuskyescape by 1;
 	else if calcnumber is 2:
-		LineBreak;
 		say "     You study the black patches on the husky. The one on his forehead almost looks like a great heptagram while the one on his chest could be a simple tuft, reminding you of some sort of crest. Not caring how he feels, you ask him if his black marks are real or if he's an albino. Without warning, a fist slams into the wall right next to your face. 'I ain't fucking sterile, you stupid bitch! And my brands are real! They are a sign that I was chosen!' You recoil and attempt to make yourself seem as non-threatening as possible. The alpha pulls away and starts walking around the small room, mumbling under his breath. You can't fully understand what he is saying, but you can tell that it's directed at you by the looks of rage he keeps shooting your way.";
 		decrease Brokenhuskygoodgirl by 1;
 		increase Brokenhuskybadbitch by 2;
 		decrease Brokenhuskysluttypuppy by 1;
 	else:
-		LineBreak;
 		say "     You study the black patches on the husky. The one on his forehead almost looks like a great heptagram while the one on his chest could be a simple tuft, reminding you of some sort of crest. While you know that this is your chance to possibly gain an advantage, you can't help but stare at the little dark crest on his chest and wonder what it would feel like to rake your fingers through it. Your gaze then travels lower to his sheath and then to his full heavy looking balls. Your mouth waters slightly at the thought of seeing this powerful male in all his glory, his proud cock slowly pushing its way out of his sheath, precum leaking from its tapered head as he looks at you with desire. You are pulled from your fantasy by his words, 'God, you smell like a bitch in heat! Great, another useless mindless slut!' Faster than your eyes can follow, a furred paw slams into one of the walls of your room, quickly followed by another, until he is pummeling the wall over and over.";
 		decrease Brokenhuskygoodgirl by 1;
 		decrease Brokenhuskybadbitch by 1;
@@ -128,33 +116,28 @@ to say BrokenHuskySlutBadend:
 	WaitLineBreak;
 	say "     'Here, sugar, this should warm you up. I was gonna give it to you last night, but I got too excited and forgot.' Leaning down, he wraps your quivering form in the soft blanket, making sure to tuck you in and being as gentle as possible while doing so. 'Hmm, somethin['] don't seem right about ya, baby girl. Come on, you can tell me what's wrong.' At first, you aren't sure what to say. You don't want to piss him off and have him take the blanket he just gave you away. Just the thought of it makes you hold on to the pink fabric even tighter. 'Aww come on, darlin['], ya don't need to be so shy about what you want, unless it's not that you're shy at all and that you think I'm some sorta monster that would steal your blanket from ya, haha. That's not it... is it?' His muzzle pulls back, and the husky opens it, baring his fangs and running his tongue over them, with an odd look in his eyes.";
 	[reaction point concerning what you think of him]
-	LineBreak;
-	say "     [bold type]What's your gut reaction to this?[roman type][line break]";
+	say "[line break]     [bold type]What's your gut reaction to this?[roman type][line break]";
 	say "     [link](1)[as]1[end link] - Be a good girl.";
 	say "     [link](2)[as]2[end link] - Be a bad bitch.";
 	say "     [link](3)[as]3[end link] - Be a slutty puppy.";
 	now calcnumber is 0;
 	while calcnumber < 1 or calcnumber > 3:
-		say "Choice? (1-3)>[run paragraph on]";
+		say "Choice? (1-3)> [run paragraph on]";
 		get a number;
-		if calcnumber is 1 or calcnumber is 2 or calcnumber is 3:
-			break;
-		else:
-			say "Invalid choice. Type [link]1[end link] good, [link]2[end link] bad or [link]3[end link] slut.";
+		if calcnumber < 1 or calcnumber > 3:
+			say "Invalid choice. Type [link]1[end link] to be good, [link]2[end link] to be bad or [link]3[end link] to be a slut.";
+	LineBreak;
 	if calcnumber is 1:
-		LineBreak;
 		say "     You quickly stammer out that he isn't a monster and that you're just really shy. 'I thought that's what it was, so why don't you tell me what you want, but remember, only good girls get treats.' You can't stop the chill that goes down your spine at the alpha's words. Looking directly in his eyes, you attempt to be a cutesy as possible. 'Master, I'm hungry and thirsty. Please take care of me. I promise that I will be a really good girl for you!' A huge grin spreads across his muzzle and just like that, he is up and out the door in a flash. You start to think about what had just happened and how you could use this to your advantage. After a while, your [']host['] returns, carrying a tray... with two bowls on it.";
 		increase Brokenhuskygoodgirl by 2;
 		decrease Brokenhuskybadbitch by 1;
 		decrease Brokenhuskysluttypuppy by 1;
 	else if calcnumber is 2:
-		LineBreak;
 		say "     Looking him dead in the eye, you tell the canine exactly what you think about him. From kidnapping you, to the collar, to the abuse, and the starvation that he seems intent forcing on you. The last words you utter to him are that yes, he is nothing but a monster. 'Well, you certainly have some strong opinions, Don'tcha, bitch? But look on the bright side, if you really do think that I'm a monster, then you prolly also know that I will do [']whatever['] I have to if it means gettin['] what I want. Now you think about that long and hard while I go and get your spoiled princess ass some grub.' With that, he casually saunters out of the room. You roll your eyes at his reaction. Who knows, maybe he will be easier to manipulate than you originally thought. After a while, your [']host['] returns, carrying a tray... with two bowls on it.";
 		decrease Brokenhuskygoodgirl by 1;
 		increase Brokenhuskybadbitch by 2;
 		decrease Brokenhuskysluttypuppy by 1;
 	else:
-		LineBreak;
 		say "     Allowing yourself to recline back against the wall, you look directly into his heterochromia eyes and with a slight smirk you ask him if he's sure that he really wants to know what you think. 'Of course I want to know. I wouldn't have asked if I didn't!' Pushing off of the wall slightly, you move forward onto your knees. With a lusty tinge to your voice, you seductively tell him what you think of him, how you see him as a powerful and sexy alpha, his chest instantly puffing up at your praise. One of your fingers softly scrapes across your bottom lip, instantly drawing his attention. Glancing down at his sheath, you also inform him about how hungry you are, playing up to the fact that a strong master should have no problem providing for those under his care. With a last longing look at your body, he saunters out of the room, and you release a shuddering breath of relief that your plan actually worked. After a while, your [']host['] returns, carrying a tray... with two bowls on it.";
 		decrease Brokenhuskygoodgirl by 1;
 		decrease Brokenhuskybadbitch by 1;
@@ -163,21 +146,18 @@ to say BrokenHuskySlutBadend:
 	say "     He places them both on the floor in front of you. Glancing inside, you are met with pools of a white liquid, and you can only assume by the smell that it's his cum. Your heart drops at the prospect of this being your only source of nutrition. 'Oh don't look so glum, darlin[']. That's just the gravy to help you become a sexy bitch like I know you wanna be, here's the rest.' With that, he pours some sort of kibble into the cum-filled bowl and the other with water. You watch as the kibble soaks up the cum and becomes slightly soggy looking. Just looking at the sight makes you feel nauseous. Looking at the facts though, you haven't eaten, and who knows when your next chance will be. You have to try and keep your strength up if you want any chance at escaping.";
 	WaitLineBreak;
 	say "     You are about to lean forward and attempt to eat the only food on hand without getting ill, that is until the canine pulls the bowls back a bit out of your reach. 'Come on, babe, here I am bein['] a good guy, taking care of his woman, and you can't even say thank you first? That's awfully rude, y'know.' You gape like a fish for a moment, both for you being referred to as [']his woman['], and also at the fact that he kidnapped you and is now claiming to be taking care of you! Closing your eyes for a moment, you think of the best way to handle this situation.";
-	LineBreak;
-	say "     [bold type]What's your gut reaction to this?[roman type][line break]";
+	say "[line break]     [bold type]What's your gut reaction to this?[roman type][line break]";
 	say "     [link](1)[as]1[end link] - Be a good girl.";
 	say "     [link](2)[as]2[end link] - Be a bad bitch.";
 	say "     [link](3)[as]3[end link] - Be a slutty puppy.";
 	now calcnumber is 0;
 	while calcnumber < 1 or calcnumber > 3:
-		say "Choice? (1-3)>[run paragraph on]";
+		say "Choice? (1-3)> [run paragraph on]";
 		get a number;
-		if calcnumber is 1 or calcnumber is 2 or calcnumber is 3:
-			break;
-		else:
-			say "Invalid choice. Type [link]1[end link] good, [link]2[end link] bad or [link]3[end link] slut.";
+		if calcnumber < 1 or calcnumber > 3:
+			say "Invalid choice. Type [link]1[end link] to be good, [link]2[end link] to be bad or [link]3[end link] to be a slut.";
+	LineBreak;
 	if calcnumber is 1:
-		LineBreak;
 		say "     Forcing yourself to swallow your pride, you once again go into cutesy mode and tell him [']thank you, daddy['], hoping that it will at least make him happy enough that he pushes the bowls back within reach. Once again, a dopey smile spreads across his muzzle, but he doesn't push the bowls closer to you. 'See, I knew that you were gonna be the best bitch in the house. The other dumb sluts I keep around here kept tryin['] to make it seem like I was spoilin['] ya, but I knew that they were just a bunch of jealous cunts, ain't that right, baby?' You nod back at him somewhat on autopilot, your eyes glued to the food that is so close but just out of your grasp. 'So, princess, let's go over the rules one more time, OK?' You finally look away from the food to meet his different colored gaze, and almost on autopilot, you mutter that [']good girls get treats[']. 'And what else?'";
 		say "     Your stomach decides to choose that exact moment to call out in hunger before you can say a word. Quickly, a fist slams into the floor close to you, almost hitting your body in the process. 'Do you think that I can't tell that you're fucking hungry!? What, think I'm stupid or something? Jeez, here I am praising you for being such a good girl, and all you can do is think of yourself, you ungrateful bitch! I ask for so little and want to give you everything, you would think it would be enough to at least get a li'l bit of respect in return! Is that too much to ask for!?' Even though you've been trying your best to appease the demented canine, it seems that your plan has blown up in your face.";
 		increase Brokenhuskygoodgirl by 2;
@@ -185,19 +165,18 @@ to say BrokenHuskySlutBadend:
 		decrease Brokenhuskysluttypuppy by 1;
 		increase Brokenhuskyescape by 1;
 	else if calcnumber is 2:
-		LineBreak;
 		say "     Steeling your nerves, you tell him with venom in your voice that what's really rude is the fact that he expects you to thank him for forcing you to eat his second-rate cum. Rather than the violence you have come to expect from him, he simply lets out a slightly manic laugh. 'You either got a lot of pride or very li'l brains. I mean, you do realize that you're my property, right? I [']don't['] have ta feed ya. I could always mark ya as a lost cause and just go get a replacement.' Before he can continue, you quickly cut him off, telling him to just do it then, that anything would be better than having to be around him. 'I guess those dumb sluts were right. They told me that I was spoilin['] ya to much. Here I was thinkin that you could be the best bitch in the house, and lo and behold, you proved me wrong! I am the man of this household, and I will not tolerate some fucking cunt making me look bad, do you hear me!?'";
 		say "     Your stomach decides to choose that exact moment to call out in hunger before you can say a word. Before you can even react, one of his large paws backhands you to the floor. 'Do you think that I can't tell you're fucking hungry? What, think I'm stupid or something? Jeez, here I am trying to take care of you, and all you can do is spit on my hospitality! You are nothing but a selfish, ungrateful bitch! All I ask is for you to worship me, as I am meant to be, but apparently that's too much for you, I reckon. I could just leave you to waste away in this room ya'know, just shut the door and lock it forever! So from now on, I expect you to show me some respect. Is that clear, li'l lady?' You don't doubt that he would do exactly what he had just threatened, so you quickly nod your head in agreement. Unfortunately you still have to deal with a very pissed off alpha now.";
 		decrease Brokenhuskygoodgirl by 1;
 		increase Brokenhuskybadbitch by 2;
 		decrease Brokenhuskysluttypuppy by 1;
 	else:
-		LineBreak;
 		say "     Rubbing your hands along the inside of your thighs, you tell him that you would much prefer your treats from the source, all the while your eyes are locked onto his furry sheath. A sultry smile forms on his muzzle at your implications, along with a deep baritone chuckle showing that he obviously enjoys the idea of what's on offer. 'Really now? Well, normally I would definitely give a naughty li'l slut like you a treat, but there is a time and place for that, and right now, I want you to [']tell['] me just how grateful you are.' Wanting to see just how far you can push the alpha, you stay silent with a suggestive smirk on your lips. 'Haha, you are a cocky one, ain't ya? Well how about this, either you give me a proper thank you, or the only treat that you're gonna get is being tied to a post outside and at the mercy of every horny creature out there.' Through every word spoken, the canine retains a happy smile on his muzzle.";
 		say "     Your stomach decides to choose that exact moment to call out in hunger before you can say a word. Quickly, one of his huge paws reaches out, grabbing one of your flat pecs in a firm grip. 'Do you think that I can't tell that you're fucking hungry!? What, think I'm stupid or something? Jeez, here I am trying to teach you the proper way to act, and all ya can do is think with your cunt!' One of his sharp claws scrapes across your nipple, forcing out a hiss of both pain and pleasure from your mouth. 'See that's what I'm talkin['] about! All you had to do is say [']thank you, master['], like a good li'l bitch, but no, instead you think that it would be fun to try and play games while I'm tryin['] to train you!' Wrenching his paw away from your chest, you can't help but tremble in the face of his overwhelming rage.";
 		decrease Brokenhuskygoodgirl by 1;
 		decrease Brokenhuskybadbitch by 1;
 		increase Brokenhuskysluttypuppy by 2;
+	WaitLineBreak;
 	say "     You watch in silence as the husky pulls away from you and begins to pace around the small room, the bowls of food and water now overturned by his fast movements. 'So you think that this is a fucking game then, do ya?! Maybe I have just been going too easy on ya, is that what it is? Maybe I should show you what it would be like to no longer be my special girl! Is that what you fucking want?!' You can't help but shrink away from his shouting and cursing. Thankfully, the canine doesn't make any move to get closer to you, and he eventually calms down. While his form is still visibly shaking in anger, his voice comes out calm but hollow. 'What is the golden rule, bitch?' It takes you a moment to find your voice. In what could be described as barely a whisper, you softly tell him, '[']good girls get treats['].' He then asks, 'And what happens to bad girls?'";
 	say "     You can't stop the sob that erupts from within you. 'That's right, bad girls get punished. Now don't get me wrong, darlin['], I don't want to punish you, but you need to learn how to be a good girl, right?' A soft expression passes over his muzzle, but only for a moment before a cold look overtakes his eyes. 'We only have a li'l over a week before the summit, and if you can't do what's expected, then we're both screwed. So we gotta up the ante. You [']need['] to be better.' You aren't sure what he means exactly by [']what's expected of you['], but you have a feeling that it's nothing good. 'I think that you need some time to think about your future, and frankly, I got more important things that I could be doin['] rather than coddlin['] an ungrateful whore that doesn't realize just how good she has it.'";
 	WaitLineBreak;
@@ -222,7 +201,7 @@ to say BrokenHuskySlutBadend:
 	say "     The alpha's expression goes completely blank, followed by his demeanor softening all of a sudden. Even his voice is slightly different as he says, 'Just answer me one question, did ya do this to yourself?' His voice lacking any sort of emotion, you quickly shake your head in the negative, and just like that, he is out the door, slamming it shut. For a while, all that you can hear is deathly silence, that is until you hear glass breaking from somewhere beyond your door, followed by what sounds like something being thrown against the walls. 'Ya fuckin['] worthless cunt! I told ya what to do, Number Four! What the hell did I say!?' You can't make out the response - well, other than the screams, that is.";
 	say "     'That bitch in there is mine, which means that she is my fuckin['] property, and ya just decided to do what? To defy me? To try and prove that you're above her in the pecking order? Well guess what, slut, I don't need ya anymore, and if I don't need ya, well then, I think ya know what that means, Don'tcha?' Finally, one of Number Four's screams is clear enough for you to make out what she is saying. 'That [']thing['] isn't a girl! It's a guy, a worthless male that will never be of any use to you! But you can use me. Please, master, I'm a real woman, and all that I want is to make you happy!' Everything goes quiet for a minute before the alpha's booming voice can be heard, 'Tryin['] to show off that gaping pussy ya got there for master? Well now I got some fun ideas on how to use it, haha!'";
 	WaitLineBreak;
-	say "     Your blood runs cold at the thought that the psycho alpha and the sadistic female beta might have found some common ground. What if she convinces him to take out all of that aggression on you instead of her? For awhile, the only sound you can make out is your own heartbeat ringing in your ears, but eventually, your door slowly opens. Bracing yourself for whatever is to come, you place your back against the wall and close your eyes. 'Y'all right there, baby girl?' You open your eyes at the soft voice of the alpha, who has a scarily friendly smile on his muzzle, showing just the barest hint of his fangs. 'I know that ya heard that argument, but I don't want ya to worry that pretty li'l head about it, alright?'";
+	say "     Your blood runs cold at the thought that the psycho alpha and the sadistic female beta might have found some common ground. What if she convinces him to take out all of that aggression on you instead of her? For a while, the only sound you can make out is your own heartbeat ringing in your ears, but eventually, your door slowly opens. Bracing yourself for whatever is to come, you place your back against the wall and close your eyes. 'Y'all right there, baby girl?' You open your eyes at the soft voice of the alpha, who has a scarily friendly smile on his muzzle, showing just the barest hint of his fangs. 'I know that ya heard that argument, but I don't want ya to worry that pretty li'l head about it, alright?'";
 	say "     You quickly nod your head as he casually makes his way over to you and leans down. 'How about we get ya all cleaned up, huh? It can't feel very good to be covered in all of that shit, can it? But first, let's get ya free from the wall, huh?' As the alpha husky reaches around your neck to unlock your collar, you notice a small device in one of his paws, and almost as if reading your mind, he comments on it. 'This gadget is tied into that collar, meanin['] I push this here li'l button and zap, it'll take anythin['] down. Apparently some rich guy thought that it would be fun to keep some exotic pets and used this as a failsafe. Didn't help him much, but I have tested it out on a few things around here, and it works wonders for me.' You aren't sure if that was meant to be a threat, or if it was simply him explaining what the device is capable of.";
 	WaitLineBreak;
 	say "     'Not that I don't trust ya to be a good girl, darlin['], but seein['] as you're not officially a member of the pack yet, I'm gonna need ya down on all fours as we make our way to the bathroom. Last thing I need to deal with is any of those other dumb sluts gettin['] uppity, haha.' Feeling excitement welling up in your chest at the prospect of finally getting out of this room, you quickly lower yourself down on your hands and knees without hesitation. As the door to your room is opened, you have to suppress the urge to run, your mind filling with images of you being electrocuted and the punishment that follows keeping you in check. Crawling on the floor behind the alpha, you get your first taste of what the rest of the house looks like.";
@@ -279,7 +258,7 @@ to say BrokenHuskySlutBadend:
 	say "     At that moment, you couldn't care less about what [']pops['] would like and what he wouldn't. Reaching down between your bodies, you take of the husky's throbbing shaft and place it directly at your hole, whispering to him that [']now there won't be any evidence[']. Whether it's from the alpha believing you or simply being too turned on to argue, he slowly begins to penetrate you. 'I don't wanna accidentally knot ya, pretty girl. That could end badly for the both of us.' You can't even bring yourself to correct him that you're a guy as he begins to enter you in shallow thrusts, the whole time alternating between kissing your throat and lips. Finally on one of his downward thrusts, his whole body goes rigid, and you can feel the powerful blasts of his cum shooting deep inside of you.";
 	say "     Once he begins to come down from his orgasm, he softly begins to caress your body. 'Wow, that was awesome, baby. I'm gonna have ta be careful not ta fall for ya after that, haha. Don't worry though, I didn't forget about ya.' His voice has a playful air about it as he gets up and off of your body. At first, you don't know what to expect, until you feel a wet heat wrap around your cock. The feeling of his tongue swiping along your shaft as he deepthroats you has your toes curling and your back arching. The skill of his blowjob shows you that this is not his first time doing this, and while he works fast, he also makes sure to hit every spot right, pushing you closer to the edge with each second.";
 	WaitLineBreak;
-	say "     As you are about unload down Keith's muzzle, you feel one of his clawed digits at your mouth, pushing its way in. Sucking on his finger helps deafen the sound once you hit your peak, it however does nothing to stop the vibrating of your body. The husky finally pulls off of your shaft and chuckles a bit to himself, 'I haven't done that in awhile. Good to know I still got it though haha. Sad ta say, sweet thing, but I prolly should head out. We don't wanna get busted now, do we?' With that, Keith leans in and kisses you deeply and full of passion, almost like a promise for things to come. Upon hearing the door close behind the alpha, you once again close your eyes, this time with a spark of hope for the future.";
+	say "     As you are about unload down Keith's muzzle, you feel one of his clawed digits at your mouth, pushing its way in. Sucking on his finger helps deafen the sound once you hit your peak, it however does nothing to stop the vibrating of your body. The husky finally pulls off of your shaft and chuckles a bit to himself, 'I haven't done that in a while. Good to know I still got it though haha. Sad ta say, sweet thing, but I prolly should head out. We don't wanna get busted now, do we?' With that, Keith leans in and kisses you deeply and full of passion, almost like a promise for things to come. Upon hearing the door close behind the alpha, you once again close your eyes, this time with a spark of hope for the future.";
 	[difference need to be put in place for which form is in the lead]
 	if Brokenhuskygoodgirl > Brokenhuskybadbitch:
 		if Brokenhuskygoodgirl > Brokenhuskysluttypuppy:
@@ -306,11 +285,12 @@ to say BrokenHuskySlutBadend:
 			say "     A burning sensation creeps along the sides of your head as your ears flow and reform, drawing further up your skull and elongating into points. The sound of your shifting and altering bones grates on your nerves, disconcerting cracks and snaps all throughout your body making you cringe and shudder. Once your face begins to elongate, you begin to drool as your mouth attempts to adjust to its new shape. In the current position of your body you feel what seems to be like D-cup sized breasts swaying as you move and contort. Reaching up with a quickly shifting paw, you grab hold of one of your breast in an effort to help ease the sensitivity, however one of your claws rakes across the nub, causing a panting gasp to escape your new muzzle.";
 			say "     With the enhanced hearing of your ears, you can make out movement on the other side of the door. Your head quickly whips up and you catch sight of something in the mirror in the dark room: your eyes... they are glowing! Luminescent violet orbs look back at you from your reflection, that is before the door flies open, blinding you with light. 'Well, well, what do ya know? It looks like I was right to choose ya for my plan after all, my li'l pet!'";
 			now Brokenhuskydelta is 3; [bimbo delta husky]
-	say "     <<End of Week 1>>  ";
+	say "[line break]     <<End of Week 1>>[line break]";
+	wait for any key;
 	trigger ending "Broken Husky Slut";
 	end the story saying "You'll never escape your fate!";
 
-Section 2 - Rough Roadmap
+Chapter 2 - Rough Roadmap
 
 [Week 1: Base training content. The alpha will continue breaking the player's mind and training him to be a good girl. Part of the training will also involve blowjobs and anal sex. These will begin the husky changes as well as starting breast development. Breast size growth will be set to a B cup in this week. As far as the husky transformation goes, they will become a husky hybrid, so mostly husky but not completely.]
 
@@ -323,7 +303,7 @@ Section 2 - Rough Roadmap
 [father-Travis: princess, slut, whore, bitch, cunt, pet]
 [son-Keith: darlin, pretty girl, lady, sweet thing, baby]
 
-Section 3 - Expansion Ideas
+Chapter 3 - Expansion Ideas
 
 [Locations: Option of creating new location and possibly more in the future where the player can explore this exclusive area around them and the alpha's actions will be set up with a timer. This would allow the player to learn more about the content that by normal means they would not.]
 [Submissive & Dominant Feat Repercussions: Either have doms and subs have more limited options or have small flavors added to their content.]
@@ -333,7 +313,7 @@ Section 3 - Expansion Ideas
 [Added Dream: Player has a dream where Artemis condemns them for being weak and not embracing the power of a "real woman".]
 [Repercussions: Add more flavor text to each scene depending on which "route" is in the lead.]
 
-Section 4 - Delta's AKA Husky Queens
+Chapter 4 - Delta's AKA Husky Queens
 
 [A delta is an alpha's equal within the pack, however in a very different way. A simple way to look at the difference is to look at the stereotype between a mother and a father of a family. Most deltas are kept hidden away since the alphas that control them are also the ones that are viewed as the most powerful. A delta form infection is actually very rare to gain; however, it is believed that the easiest way to become a delta husky is how your mind handles the situation while you are being made a regular female husky.]
 
@@ -345,7 +325,7 @@ Alpha Level of Control Over Delta: The amount of overall power the alpha has ove
 Level of Compulsion Over Non-alpha Huskies: The amount of control a delta can exert to make other non-alpha huskies do their bidding.
 ]
 
-Part 1 - Traditional AKA The Espionage Expert
+Section 1 - Traditional AKA The Espionage Expert
 
 [The most common of the delta husky breeds. While she may appear to be nothing more than a much more curvaceous regular female husky, she has her own tricks. Her biggest ability is to lower her own hormone level, this allows her to downgrade herself to a regular female husky to help her avoid alpha detection.]
 
@@ -370,7 +350,7 @@ Alpha Level of Control Over Delta: 5 [extremely high]
 Level of Compulsion Over Non-alpha Huskies: 2 [low]
 ]
 
-Part 2 - Amazon AKA The Wild Bloodlust
+Section 2 - Amazon AKA The Wild Bloodlust
 
 [Standing at a height of seven feet and filled with tight compact muscles the Amazon delta is built to fight. By nature these deltas are incredibly dominant and it take either a powerful alpha to keep them in line or at the least a very manipulative one. The main special ability of this variant is its bloodlust, this can either be a hindrance for their alpha or used to their advantage. With the bloodlust they go insane desiring nothing more than combat, if the warning signs are showing she could be placed in an enemy location and blindly raze them, otherwise she could do the same to her own pack.]
 
@@ -395,7 +375,7 @@ Alpha Level of Control Over Delta: 1 [very low]
 Level of Compulsion Over Non-alpha Huskies: 1 [very low]
 ]
 
-Part 3 - Bimbo AKA The Pleasure Princess
+Section 3 - Bimbo AKA The Pleasure Princess
 
 [At about four feet tall this is the smallest of the delta types. While she has the typical bimbo type body, she also has her own strengths. Her breast milk is extremely addictive and once consumed any husky will do whatever she asks for their next fix, even if they are from a rival pack. She also has two pussies by nature, while some alpha enjoy having two to play with the actual reason for them is so that she can breed as rapidly as possible, while gestating one litter she can also be knocked up with another.]
 
@@ -420,7 +400,7 @@ Alpha Level of Control Over Delta: 3 [average]
 Level of Compulsion Over Non-alpha Huskies: 1-default [very low] 5-if they have fed on her milk [extremely high]
 ]
 
-Part 4 - Cuntboi AKA The Loyal General
+Section 4 - Cuntboi AKA The Loyal General
 
 [The cuntboi delta is an incredibly rare breed and incredibly sought after. The reason for this is because of the special abilities it possesses. Its loyalty is above any other delta and is not built around fear lust or control, but rather a real attachment to the alpha and the pack. This delta while nowhere near as aggressive as the Amazon also enjoys fighting on the front line beside their alpha. Once a cuntboi delta has chosen a specific alpha to serve under the only way they can get pregnant is by that alpha or if the alpha is present, although that may have to do with his pheromones. Outside of battle these deltas also tend to break out into a motherly role with their pack, more so than the controlled deltas.]
 
@@ -445,15 +425,15 @@ Alpha Level of Control Over Delta: 2 [low]
 Level of Compulsion Over Non-alpha Huskies: 4 [high]
 ]
 
-Part 5 - Potential Delta Futa AKA The Latex Dominatrix
+Section 5 - Potential Delta Futa AKA The Latex Dominatrix
 
 [The futa delta has a very special ability that changes with the day cycle. By day they appear no different than the traditional delta, however once night falls their body changes rapidly. Their fur changes into jet black latex and where once they had a normal pussy they now have both a pussy and a large cock. The demeanor of this delta is altered as well, while by day they are submissive, at night their dominance shoots through the roof. For this reason most alphas are very shocked upon the initial transformation, some alphas enjoy this breed as a way to be submissive on occasion, while others detest this breed for attempting to take the alphas dominance. There may be a way to keep this delta in its night form permanently but more research would be required.]
 
-Part 6 - Potential Delta Male AKA The Muscle Bitch
+Section 6 - Potential Delta Male AKA The Muscle Bitch
 
 [Only a couple male delta have been recorded by the alpha summit. It is believed that the formation of this delta is directly tied to the alpha, this breed is brought into being by the alpha desiring both a cock and extreme masculinity in their delta. Of all the delta breeds this one is by far the most feral and while it can walk on two legs it usually will choose to walk on all fours. They are ruled by instinct and tend to also speak in a very simple fashion avoiding large words. One of the perks of this breed is its ability to both knock others up but it also is created with the ability to be knocked up in return. While it may act like a huge muscled puppy it can also just as quickly act like a wild animal.]
 
-Section 5 - Endings
+Chapter 5 - Endings
 
 Table of GameEndings (continued)
 Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
@@ -463,6 +443,5 @@ This is the Broken Husky Slut rule:
 	if ending "Broken Husky Slut" is triggered:
 		say "     The alpha husky that captured you, continued to break down both your mind and body. Eventually, he was able to build you into his perfect submissive partner and the fact that you ended up turning into one of the few precious deltas, well that certainly made his bid to rule the husky packs much more assured..";
 		the Player is enslaved;
-
 
 Broken Husky Bad-End ends here.

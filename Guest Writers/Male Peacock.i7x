@@ -38,9 +38,8 @@ to say peacockvictory:
 	else: [Player gives blowjob to Peacock]
 		say "     You are unable to think clearly anymore. You find yourself standing up and facing the avian, your thoughts jumbled and unfocused. He beckons you to follow him, and you have no choice but to walk with him into the alleyway.";
 		say "     With another flourish of his tail, you drop to your knees in front of him. You can see his growing member emerging from a slit buried in the soft plumage of his crotch. 'I need some relief, so get to it,' he says, rippling those dazzling tailfeathers. Unresisting, you lean in, taking the bird's cock into your mouth. Running your hands over his feathered hips, you work that avian shaft with your lips, tongue, and palate until your efforts are finally rewarded with a hot, sticky mess. The bird groans in orgasmic release as you swallow each pulse, savoring the exotic flavor of his seed.";
-		CreatureSexAftermath "Player" receives "OralCock" from "Peacock";
-		WaitLineBreak;
 		if anallevel > 1 and a random chance of anallevel in 5 succeeds: [EXTRA ANAL]
+			WaitLineBreak;
 			say "     Once drained, the peacock's shaft withdraws, and he gently tilts your head up to look at him and his colorful tail. He gives it a mesmerizing wave, and your mind rapidly drifts away. Enthralled by his enticing display, you don't protest when the presumably spent peafowl guides you up on unsteady footing, his scaly arms steadying your ascent. 'You thought that we were finished?' he inquires teasingly, making your knees tremble as you try to parse the meaning of his words in your sex- and hypnosis-induced haze. Chuckling softly, the resplendent bird guides you up against the coarse brick of the wall, using one of his taloned feet to spread your legs apart.";
 			say "     A moan spills past your lips as the handsome male begins to undress you, pulling down any clothes or equipment obscuring your lower half. You bury your face against the dirty red brick, your eyes fluttering closed. His talon-tipped hands glide over the curve of your rear, taking a moment to admire what's rightfully his. 'Such a fine piece of ass,' the fowl whispers into your ear, curling his thumbs to pry the dark cleft apart. The cool air of your exposure draws a shiver of delight, and you push your rear back with mounting excitement, steeling yourself for the mind-melting pleasure your experienced partner is sure to provide.";
 			WaitLineBreak;
@@ -54,6 +53,7 @@ to say peacockvictory:
 			CreatureSexAftermath "Player" receives "AssFuck" from "Peacock";
 		else: [STANDARD]
 			say "     Once drained, the peacock's shaft withdraws, and he gently tilts your head up to look at him and his colorful tail. He gives it a mesmerizing wave, and your mind rapidly drifts away. 'It will be better for both of us if you don't remember this... Forget... Forget...' he says softly. You start to feel sleepy as you stare into the swaying spots, and you soon slump over, passing out. When you awaken, you find yourself in an alleyway with no memories of how you got there, the encounter completely forgotten.";
+		CreatureSexAftermath "Player" receives "OralCock" from "Peacock";
 		if inafight is 1:
 			choose row with Name of "Peacock" from Table of Random Critters;
 			decrease XP of Player by lev entry / 2; [no XP from forgotten encounter]

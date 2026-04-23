@@ -89,10 +89,8 @@ to say feline def:
 				LineBreak;
 		else:
 			say "     The big cat tries to rake you with his monstrous claws one more time, but you jump back nimbly even as you see him slump down, passing out shortly afterwards.";
-	else if Feline_type is 3:
-		say "     You struggle against the hunting pride, knocking several of them out and sending the rest fleeing in all directions.";
 	else:
-		say "     You are victorious in your hard-fought battle against this would-be usurper. You growl triumphantly as you give him a final kick, sending him tumbling down the hill.";
+		say "     You [if Feline_type is 3]struggle against the hunting pride, knocking several of them out and sending the rest fleeing in all directions[else]are victorious in your hard-fought battle against this would-be usurper. You growl triumphantly as you give him a final kick, sending him tumbling down the hill[end if].";
 	say "[feline cleanup]";
 
 to say feline vict:
@@ -482,9 +480,9 @@ an everyturn rule:
 	if feline_attached > 0:
 		follow the feline nursing rule;
 
-[
-Section 4 - Feline Heat
+Section 5 - Feline Heat
 
+[
 Table of infection heat (continued)
 infect name	heat cycle	heat duration	trigger text	description text	heat start	heat end	inheat
 --	--	--	--	--	--	--	--
@@ -521,7 +519,7 @@ When Play begins:
 	now inheat entry is "[feline heat]";
 ]
 
-Section 5 - Endings
+Section 6 - Endings
 
 Table of GameEndings (continued)
 Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)

@@ -41,7 +41,7 @@ to say ResolveEvent Lost Gear:
 						LineBreak;
 						say "     You restart your search. Time passes as you dig around the store...";
 						follow the turnpass rule;
-						AttemptToWait;
+						WaitLineBreak;
 						say "     Your activity draws the attention of a local mutant!";
 					else:
 						LineBreak;

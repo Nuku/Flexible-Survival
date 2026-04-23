@@ -91,7 +91,7 @@ to say PrepCombat_Ebonflame Dragator:
 	now firebreathready is false;
 	now impregnatevalid is false;
 	if ebneuterswitch is false and ovipreglevel > 1:
-		if (Player is female and Player is fem_vacant) or (Player is male_vacant and ((anallevel is 2 and (Player is kinky or Player is mpreg_ok)) or anallevel is 3)):
+		if (Player is female and Player is fem_vacant) or (Player is male_vacant and ((anallevel is 2 and (Player is kinky or "MPreg" is listed in feats of Player)) or anallevel is 3)):
 			if a random chance of ebgatorcarrying in 4 succeeds:
 				now impregnatevalid is true;
 				now ebgatorcarrying is 1;

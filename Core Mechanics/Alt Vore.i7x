@@ -48,6 +48,15 @@ to decide if the/-- Player can't/cannot UB/unbirth:
 
 Section 1 - Event
 
+a postimport rule: [bugfixing rules for players that import savegames]
+	if Inner Predator is resolved and Resolution of Inner Predator is 0:
+		if Player can vore:
+			now Resolution of Inner Predator is 1;
+		else if MaleList is banned and FemaleList is banned:
+			now Resolution of Inner Predator is 99;
+		else:
+			now Resolution of Inner Predator is 2;
+
 Table of GameEventIDs (continued)
 Object	Name
 Inner Predator	"Inner Predator"
@@ -60,15 +69,6 @@ Sarea of Inner Predator is "Allzones".
 when play begins:
 	add Inner Predator to BadSpots of FurryList;
 	add Inner Predator to BadSpots of VoreList;
-
-a postimport rule: [bugfixing rules for players that import savegames]
-	if Inner Predator is resolved and Resolution of Inner Predator is 0:
-		if Player can vore:
-			now Resolution of Inner Predator is 1;
-		else if MaleList is banned and FemaleList is banned:
-			now Resolution of Inner Predator is 99;
-		else:
-			now Resolution of Inner Predator is 2;
 
 to say ResolveEvent Inner Predator:
 	if MaleList is banned and FemaleList is banned:

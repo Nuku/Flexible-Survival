@@ -290,7 +290,7 @@ A creature has a text called CuntSpeciesName. CuntSpeciesName is usually "Human"
 
 Part 2 - Definitions
 
-Chapter 0 - General
+Chapter 1 - General
 
 A person can be defaultnamed. A person is usually defaultnamed.
 
@@ -304,7 +304,7 @@ Definition: A person (called x) is asleep:
 	if Sleeping of x is true, yes;
 	no;
 
-Chapter 1 - Equipment Based
+Chapter 2 - Equipment Based
 
 Definition: A person (called x) is barefoot:
 	repeat with z running through equipped equipment:
@@ -336,7 +336,7 @@ Definition: A person (called x) is gimpy:
 	else:
 		no;
 
-Chapter 2 - Location Based
+Chapter 3 - Location Based
 
 A person can be collected. A person is usually not collected.
 
@@ -390,7 +390,7 @@ Definition: A person (Called x) is slutstored:
 	if printed name of x is listed in StoredSluts_Other, yes;
 	no;
 
-Chapter 3 - Gender & Sexuality Based
+Chapter 4 - Gender & Sexuality Based
 
 Definition: A person (called x) is male:			[note: this is both male and herm]
 	if Cock Count of x > 0, yes;
@@ -483,7 +483,7 @@ Definition: A person (called x) is CoA:
 	else:
 		no;
 
-Chapter 4 - Infection Based
+Chapter 5 - Infection Based
 
 Definition: A person (called x) is conformist: [follows the infection in all details - new infection system]
 	if "Conformist" is listed in feats of x:

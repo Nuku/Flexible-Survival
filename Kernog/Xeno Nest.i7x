@@ -26,8 +26,9 @@ Resolutions: (for the narration):
 * 1 - Player was captured and impregnated
 * 2 - Player successfully completed an expedition while being cautious
 * 3 - Player successfully completed an expedition while rushing
-
 ]
+
+Section 1 - Event
 
 xenoNestisCautious is a number that varies. xenoNestisCautious is usually 0.
 
@@ -150,7 +151,7 @@ to xenoLoot:
 		ItemGain water bottle by 1;
 	LineBreak;
 
-Section 3 - Bound State
+Section 2 - Bound State
 
 [TODO: Plan variations for lustatt>79]
 
@@ -184,7 +185,7 @@ to xenoNestBoundState:
 		else: [Section of actions possible during the bind.]
 			now enduring is false;
 			say "     You are solidly encased in one of the flesh walls of the alien nest. Organic material covers your arms and your legs, and you are only able to flex your body, as a number of drone-like creatures are attached to your body, each of them linked to the main structure with thick tubes. [if Player is male]An octopus-shaped creature is wrapped around your groin, sucking and massaging your [Cock of Player] cock[smn], and tugging and squeezing your [Ball Size Adjective of Player] [Balls], while a straw-like probe is buried in your cock-slit[smn], awaiting to drink your cum. [end if]Another crab-like drone is wrapped around your crotch. [if Player is female]It is busy pistoning thick tentacle-shaped organs inside each of your lower orifices, while its tiny mouth sucks and plays with your clit. [else if anallevel is 3]It is busy pistoning a thick tentacle-shaped organ inside your ass, drilling all the way up to your stomach then back. [end if][if Player is purefemale and wslevel is 3]There is even a small tendril wiggling and twisting inside your urethra. [end if][if Nipple Count of Player > 0 and Breast Size of Player > 0]Your breasts are trapped under a fleshy breast-plate, which constantly squeezes warm milk into ever-growing, individual reservoirs. [end if]An organic mask blocks your lower face. A thick tentacle extends from it, invading your throat and straining your jaw, air given to you through small slits at nose level.";
-			say "     Your living prison [if lustatt < 75]is relentless in its efforts to bring you to an uninterrupted series of mind-crushing orgasms[else]keeps working on your increasingly agitated body, redoubling its efforts as it feels that you are about to orgasm[end if]. You could try to [bold type]S[roman type]truggle, [if obliging is true][bold type]O[roman type]blige[else][bold type]A[roman type]bide[end if] your predicament, or attempt to [if boundrecover is true][bold type]R[roman type]ecover from[else][bold type]E[roman type]ndure[end if] the relentless motions.";
+			say "     Your living prison [if lustatt < 75]is relentless in its efforts to bring you to an uninterrupted series of mind-crushing orgasms[else]keeps working on your increasingly agitated body, redoubling its efforts as it feels that you are about to orgasm[end if]. You could try to [bold type]S[roman type]truggle, [if obliging is true][bold type]O[roman type]blige[else][bold type]A[roman type]bide[end if] your predicament or attempt to [if boundrecover is true][bold type]R[roman type]ecover from[else][bold type]E[roman type]ndure[end if] the relentless motions.";
 			say "[bold type]1[roman type] - [link]Struggle[as]1[end link][line break]";
 			say "[bold type]2[roman type] - [link][if obliging is true]Oblige[else]Abide[end if][as]2[end link][line break]";
 			say "[bold type]3[roman type] - [link][if boundrecover is false]Endure[else]Recover[end if][as]3[end link][line break]";

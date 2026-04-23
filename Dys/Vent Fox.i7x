@@ -216,6 +216,9 @@ fuckscene of Vent is "[VentFoxSexMenu]".
 The scent of Vent is "     Vent has a sort of chemical aroma to him that reminds you of freshly cured latex. You can pick up faint hints of a foxy musk as well.".
 The linkaction of Vent is "Possible Actions: [link]talk[as]talk vent[end link], [link]smell[as]smell vent[end link], [link]fuck[as]fuck vent[end link][if VentFoxContentLevel > 2], [link]request[as]request vent[end link][end if][line break]".
 
+instead of conversing the Vent:
+	say "     You speak to Vent casually, and he seems to listen attentively, even giving a nod here and there.";
+
 RequestVent is an action applying to nothing.
 Understand "request vent" as RequestVent.
 
@@ -225,9 +228,6 @@ Check RequestVent:
 
 Carry out RequestVent:
 	say "[VentFoxPrefsMenu]";
-
-instead of conversing the Vent:
-	say "     You speak to Vent casually, and he seems to listen attentively, even giving a nod here and there.";
 
 Table of GameRoomIDs (continued)
 Object	Name
@@ -467,12 +467,9 @@ to say SubSexSizeMenu: [Menu for setting Vent's size during submissive sex.]
 	if calcnumber is 1:
 		say "     Vent shakes his head at your request. He seems to be against this idea.";
 		if VentSubSize is not 3, now VentSubSize is 2;
-	else if calcnumber is 2:
-		say "     Vent nods at your request. He'll now be small in size when he is dominated by you.";
-		now VentSubSize is 2;
 	else:
-		say "     Vent nods at your request. He'll now be average in size when he is dominated by you.";
-		now VentSubSize is 3;
+		say "     Vent nods at your request. He'll now be [if calcnumber is 2]small[else]average[end if] in size when he is dominated by you.";
+		now VentSubSize is calcnumber;
 
 to say FluidLevelMenu: [Menu for setting Vent's fluid production levels.]
 	clear the screen and hyperlink list;
@@ -566,22 +563,26 @@ to say VentFoxScavengeFood: [Player helps the fox find some rubber to eat.]
 				LineBreak;
 				let bonus be (perception of Player - 10) / 2;
 				let diceroll be a random number between 1 and 20;
-				say "You roll 1d20([diceroll])[if bonus >= 0]+[end if][bonus] = [special-style-1][diceroll + bonus][roman type] vs [special-style-2]16[roman type] (Perception Check):[line break]";
+				say "     You roll 1d20([diceroll])[if bonus >= 0]+[end if][bonus] = [special-style-1][diceroll + bonus][roman type] vs [special-style-2]16[roman type] (Perception Check): ";
 				if diceroll + bonus >= 16:
-					say "     You see a stray piece of sheet metal leaning up against the rear wall of the shack. Moving it to the side, you can make out a hole just big enough for you to get through. Stepping inside, you look around before your eyes land on a large container of liquid rubber and its catalyzer. That should be perfect for Vent!";
-					say "[VentShedEatScene]";
+					say "You see a stray piece of sheet metal leaning up against the rear wall of the shack. Moving it to the side, you can make out a hole just big enough for you to get through. Stepping inside, you look around before your eyes land on a large container of liquid rubber and its catalyzer. That should be perfect for Vent!";
+					say "     The vulpine comes in after you, and he gives the air a few sniffs before he dashes over to the containers of latex. He lets out a happy yip and looks at you expectantly, an excited gleam in his eyes. You grin and step over towards him, leaning down and unfastening the lids of the containers before tossing them aside. Now that he can get to the material, he extends his tail, forking it into two separate tendrils. Each one dips into each respective container, and you watch as the fluids flow up his tail and into his body. As it gets absorbed into his system, he grows larger. Once he's completely drained the containers, he's near the size of a lion. He gives you a grin as he shrinks his body back down again, before you both make your way back to the vent.";
+					now VentFoxContentLevel is 2;
+					now VentFoxLastFed is turns;
 				else:
-					say "     You look around the building but you're unable to find any obvious entrance. Shaking your head in disappointment, you head back to Vent's vent, the fox seeming rather sad all the while.";
+					say "You look around the building but you're unable to find any obvious entrance. Shaking your head in disappointment, you head back to Vent's vent, the fox seeming rather sad all the while.";
 			else:
 				LineBreak;
 				let bonus be (strength of Player - 10) / 2;
 				let diceroll be a random number between 1 and 20;
-				say "You roll 1d20([diceroll])[if bonus >= 0]+[end if][bonus] = [special-style-1][diceroll + bonus][roman type] vs [special-style-2]16[roman type] (Strength Check):[line break]";
+				say "     You roll 1d20([diceroll])[if bonus >= 0]+[end if][bonus] = [special-style-1][diceroll + bonus][roman type] vs [special-style-2]16[roman type] (Strength Check): ";
 				if diceroll + bonus >= 16:
-					say "     Grasping the lock by its hasp with one hand, and the body with the other, you tug hard. With a fair amount of effort, you feel the locking mechanism shearing and breaking before it finally snaps apart. You drop the two halves to the ground before you push the door open and step through it. Looking around the small space, your eyes eventually land on a large container of liquid latex along with a container of catalyzer. That should be perfect for Vent!";
-					say "[VentShedEatScene]";
+					say "Grasping the lock by its hasp with one hand, and the body with the other, you tug hard. With a fair amount of effort, you feel the locking mechanism shearing and breaking before it finally snaps apart. You drop the two halves to the ground before you push the door open and step through it. Looking around the small space, your eyes eventually land on a large container of liquid latex along with a container of catalyzer. That should be perfect for Vent!";
+					say "     The vulpine comes in after you, and he gives the air a few sniffs before he dashes over to the containers of latex. He lets out a happy yip and looks at you expectantly, an excited gleam in his eyes. You grin and step over towards him, leaning down and unfastening the lids of the containers before tossing them aside. Now that he can get to the material, he extends his tail, forking it into two separate tendrils. Each one dips into each respective container, and you watch as the fluids flow up his tail and into his body. As it gets absorbed into his system, he grows larger. Once he's completely drained the containers, he's near the size of a lion. He gives you a grin as he shrinks his body back down again, before you both make your way back to the vent.";
+					now VentFoxContentLevel is 2;
+					now VentFoxLastFed is turns;
 				else:
-					say "     You try as hard as you can, pulling and tugging on the lock, but you're unable to break it away from the door. Shaking your head in disappointment, you step away, heading back to Vent's hideaway vent. The rubber vulpine walks with you, looking slightly sad.";
+					say "You try as hard as you can, pulling and tugging on the lock, but you're unable to break it away from the door. Shaking your head in disappointment, you step away, heading back to Vent's hideaway vent. The rubber vulpine walks with you, looking slightly sad.";
 		else if VentFoxContentLevel is 2:
 			say "     Vent lets out a happy sound at your suggestion before bounding off ahead of you for once. It seems he's very eager to find something to eat today. Shaking your head in amusement, you follow a few feet behind him watching him prance through the parking lot. He dashes around the deserted cars, every so often disappearing from your eyesight. He hops around an SUV, once more disappearing from view before you hear him let out a yelp. You quickly run to him, skidding around the corner, your eyes falling on Logan, the wolverine guard you've seen around holding the fox up by his rubber tail.";
 			say "     'What have we got here?' he asks rhetorically. 'Looks like a little chew toy found his way past our security...' The guard is facing away from you, and he doesn't seem to have noticed your presence yet. Perhaps you could take him by surprise and help your friend?";
@@ -627,12 +628,6 @@ to say VentFoxScavengeFood: [Player helps the fox find some rubber to eat.]
 			say "     You think about going to find more food for Vent, but he's honestly so big at this point that there's really no point.";
 	else:
 		say "     You make your suggestions to Vent, but he simply shakes his head, still too full from his last meal.";
-
-to say VentShedEatScene:
-	WaitLineBreak;
-	say "     The vulpine comes in after you, and he gives the air a few sniffs before he dashes over to the containers of latex. He lets out a happy yip and looks at you expectantly, an excited gleam in his eyes. You grin and step over towards him, leaning down and unfastening the lids of the containers before tossing them aside. Now that he can get to the material, he extends his tail, forking it into two separate tendrils. Each one dips into each respective container, and you watch as the fluids flow up his tail and into his body. As it gets absorbed into his system, he grows larger. Once he's completely drained the containers, he's near the size of a lion. He gives you a grin as he shrinks his body back down again, before you both make your way back to the vent.";
-	now VentFoxContentLevel is 2;
-	now VentFoxLastFed is turns;
 
 to say VentFoxLastScavScene:
 	say "     Now that the guard has been dealt with, you and your friend continue your search for some easily accessible rubber. Looking around the lot, you eventually see a totaled truck. Upon closer examination, you notice there's a whole bed-full of tires in it! Vent seems to realize this too, as he hops up into the back of the truck, making quick work of the tires. Soon enough, he's devoured them all, and grown in size as well. Your foxy compatriot now stands taller than a horse when at full size. Of course, he doesn't stay that large for long, quickly shrinking back down to a much more manageable size, hopping out of the truck bed. With his hunger sated, the two of you make your way back to his hideout.";
@@ -715,15 +710,9 @@ to say VentFoxFucksPlayer: [Player gets fucked by the fox.]
 	if VentFluidAmount is 0: [Average Fluid]
 		if anallevel is 3: [Player gets rimmed by Vent]
 			if VentDomSize is 3:
-				if scalevalue of Player is 1: [Tiny player]
-					say "     You have to stifle a gasp as you feel his rubbery tongue sliding in between your ass cheeks, lubricated by his saliva. Vent gives a few long, slow licks up from your taint to the top of your crack, coating you in a thin layer of his drool. After a little bit of this, he switches to circling his tongue around your hole, further slickening you. You gasp again when he presses the rubbery organ against your entrance, pushing it into you slowly, stretching your smaller form around his slippery organ. He wiggles it around inside of you for a little bit before he finally relents, letting his tongue slip out of you, a string of saliva connecting the two of you.";
-				else if scalevalue of Player is 2: [Small player]
-					say "     You have to stifle a gasp as you feel his rubbery tongue sliding in between your ass cheeks, lubricated by his saliva. Vent gives a few long, slow licks up from your taint to the top of your crack, coating you in a thin layer of his drool. After a little bit of this, he switches to circling his tongue around your hole, further slickening you. You gasp again when he presses the rubbery organ against your entrance, pushing it into you slowly, stretching you around that writhing organ. He wiggles it around inside you for a little bit before he finally relents, his tongue sliding out of you, a string of latex saliva connecting the two of you.";
-				else if scalevalue of Player is 3: [Average player]
-					say "     You have to stifle a gasp as you feel his rubbery tongue sliding in between your ass cheeks, lubricated by his saliva. Vent gives a few long, slow licks up from your taint to the top of your crack, coating you in a thin layer of his drool. After a little bit of this, he switches to circling his tongue around your hole, further slickening you. You gasp again when he presses the rubbery tongue against your entrance, pushing it into you slowly. He wiggles it around inside you for a little bit before he finally relents, his tongue sliding out of you, a string of latex saliva connecting the two of you.";
-				else if scalevalue of Player is 4: [Large player]
-					say "     Vent rims you.";
-				else: [Giant player]
+				if scalevalue of Player < 4:
+					say "     You have to stifle a gasp as you feel his rubbery tongue sliding in between your ass cheeks, lubricated by his saliva. Vent gives a few long, slow licks up from your taint to the top of your crack, coating you in a thin layer of his drool. After a little bit of this, he switches to circling his tongue around your hole, further slickening you. You gasp again when he presses the rubbery [if scalevalue of Player is 1]organ against your entrance, pushing it into you slowly, stretching your smaller form around his slippery organ. He wiggles it around inside of you for a little bit before he finally relents, letting his tongue slip out of you, a string of[else if scalevalue of Player is 2]organ against your entrance, pushing it into you slowly, stretching you around that writhing organ. He wiggles it around inside you for a little bit before he finally relents, his tongue sliding out of you, a string of latex[else]tongue against your entrance, pushing it into you slowly. He wiggles it around inside you for a little bit before he finally relents, his tongue sliding out of you, a string of latex[end if] saliva connecting the two of you.";
+				else:
 					say "     Vent rims you.";
 			[else if VentDomSize is 4:
 				if scalevalue of Player is 1: [Tiny player]
@@ -751,16 +740,10 @@ to say VentFoxFucksPlayer: [Player gets fucked by the fox.]
 				say "     ERROR! You shouldn't be seeing this. If you are, contact @Dys on the FS Discord with the message: VENTDOMSIZE-[VentDomSize]";
 			WaitLineBreak;
 		else: [Player gets hotdogged by Vent]
-			if VentDomSize is 3:
-				if scalevalue of Player is 1: [tiny player]
-					say "     Vent places a single paw on your upper back, forcing your ass up into the air. He brings his erect vulpine cock up to your ass and begins dragging it up and down, slathering your smaller form in his rubbery pre. With how much smaller your form is, he can't help but to thrust up against your back as well, leaving a slimy trail of fluid there as well. He continues this ritual for a fair bit before he steps back, looking over your slickened form before he gives a huff of approval.";
-				else if scalevalue of Player is 2: [small player]
-					say "     The rubber vulpine places his paws on your upper back, pushing you down with ease, giving him easy access to your ass. You feel that long, latex shaft of his poking at your entrance before he drags it upwards, leaving a trail of slick pre behind. He continues this ritual for a little while, making sure you're thoroughly lubed up before he removes his paws from your back. You can feel his eyes on you as he observes his work, making sure it'll be good enough for what comes next. Apparently satisfied, he chuffs and moves on.";
-				else if scalevalue of Player is 3: [average player]
-					say "     The rubber vulpine places his paws on your lower back, pushing you down gently so that he has easy access to your ass. You feel that long, latex shaft of his poking at your entrance before he drags it upwards, leaving a trail of slick pre behind. He continues this ritual for a little while, making sure you're thoroughly lubed up before he removes his paws from your back. You can feel his eyes on you as he observes his work, making sure it'll be good enough for what comes next. Apparently satisfied, he chuffs and moves on.";
-				else if scalevalue of Player is 4: [large player]
-					say "     Vent hotdogs you.";
-				else: [giant player]
+			if VentDomSize < 4:
+				if scalevalue of Player < 4:
+					say "     [if scalevalue of Player is 1]Vent places a single paw on your upper back, forcing your ass up into the air. He brings his erect vulpine cock up to your ass and begins dragging it up and down, slathering your smaller form in his rubbery pre. With how much smaller your form is, he can't help but to thrust up against your back as well, leaving a slimy trail of fluid there as well. He continues this ritual for a fair bit before he steps back, looking over your slickened form before he gives a huff of approval[else if scalevalue of Player is 2]The rubber vulpine places his paws on your upper back, pushing you down with ease, giving him easy access to your ass. You feel that long, latex shaft of his poking at your entrance before he drags it upwards, leaving a trail of slick pre behind. He continues this ritual for a little while, making sure you're thoroughly lubed up before he removes his paws from your back. You can feel his eyes on you as he observes his work, making sure it'll be good enough for what comes next. Apparently satisfied, he chuffs and moves on[else]The rubber vulpine places his paws on your lower back, pushing you down gently so that he has easy access to your ass. You feel that long, latex shaft of his poking at your entrance before he drags it upwards, leaving a trail of slick pre behind. He continues this ritual for a little while, making sure you're thoroughly lubed up before he removes his paws from your back. You can feel his eyes on you as he observes his work, making sure it'll be good enough for what comes next. Apparently satisfied, he chuffs and moves on[end if].";
+				else:
 					say "     Vent hotdogs you.";
 			[else if VentDomSize is 4:
 				if scalevalue of Player is 1: [tiny player]
@@ -1091,18 +1074,15 @@ to say VentAnalWS:
 			else: [Extreme levels of urine.]
 				say "     Vent takes a leak in your ass, making you look like you're ready to give birth.";
 	else: [No WS.]
-		if VentDomSize is 3 and scalevalue of Player > 2: [Vent is average sized and player is not tiny]
-			say "     With his knot still engorged, your latex fox friend lays down on top of you, snuggling up against you as you both come down from your respective highs. While you wait for the bulb of rubber to shrink, he goes about cleaning your spilled cum, darting his extendable tongue out of his mouth to lap up the mess[if VentFluidAmount > 1], making sure to lick along your swollen belly as well[end if]. After he finishes with that, he simply opts to curl around you, waiting for his body to calm down. You can't help the feeling of safety that washes over you as you relax in his embrace.";
-		else if VentDomSize is 3 and scalevalue of Player <= 2: [Vent is average sized and player is tiny]
-			say "     With your tiny form still stuck on his knot and your belly [if VentFluidAmount is 0]swollen[else if VentFluidAmount is 1]obscenely filled[else if VentFluidAmount is 2]grotesquely stuffed and drooping[else]so filled[end if] with his seed[if VentFluidAmount is 3] that it's more than twice the size of your entire form[end if], Vent places a relatively large paw on your [if VentFluidAmount > 2]chest[else]stomach[end if], holding you gently as the two of you come down from your bliss. He gives you a few gentle licks with his rubbery tongue as you both wait for his knot to shrink. You can't help but relax from the feeling of comfort you get from being with your latex friend.";
-		else if VentDomSize is 4 and scalevalue of Player > 3: [Vent is large and player is not small]
-			say "     Vent lays atop your form, sighing as he comes down from his climax. His tail sways gently behind him.";
-		else if VentDomSize is 4 and scalevalue of Player <= 3: [Vent is large and player is small]
-			say "     With your tiny body still stuck on his knot, Vent holds you close until his knot deflates.";
-		else if scalevalue of Player > 4: [Vent is huge and player is not average]
-			say "     Vent lays atop your form, sighing as he comes down from his climax. His tail sways gently behind him.";
-		else: [Vent is huge and player is average]
-			say "     With your tiny body still stuck on his knot, Vent holds you close until his knot deflates.";
+		if VentDomSize is 3: [Vent is average sized]
+			if scalevalue of Player > 2:
+				say "     With his knot still engorged, your latex fox friend lays down on top of you, snuggling up against you as you both come down from your respective highs. While you wait for the bulb of rubber to shrink, he goes about cleaning your spilled cum, darting his extendable tongue out of his mouth to lap up the mess[if VentFluidAmount > 1], making sure to lick along your swollen belly as well[end if]. After he finishes with that, he simply opts to curl around you, waiting for his body to calm down. You can't help the feeling of safety that washes over you as you relax in his embrace.";
+			else:
+				say "     With your tiny form still stuck on his knot and your belly [if VentFluidAmount is 0]swollen[else if VentFluidAmount is 1]obscenely filled[else if VentFluidAmount is 2]grotesquely stuffed and drooping[else]so filled[end if] with his seed[if VentFluidAmount is 3] that it's more than twice the size of your entire form[end if], Vent places a relatively large paw on your [if VentFluidAmount > 2]chest[else]stomach[end if], holding you gently as the two of you come down from your bliss. He gives you a few gentle licks with his rubbery tongue as you both wait for his knot to shrink. You can't help but relax from the feeling of comfort you get from being with your latex friend.";
+		else if VentDomSize is 4: [Vent is large]
+			say "     [if scalevalue of Player > 3]Vent lays atop your form, sighing as he comes down from his climax. His tail sways gently behind him[else]With your tiny body still stuck on his knot, Vent holds you close until his knot deflates[end if].";
+		else: [Vent is huge]
+			say "     [if scalevalue of Player > 4]Vent lays atop your form, sighing as he comes down from his climax. His tail sways gently behind him[else]With your tiny body still stuck on his knot, Vent holds you close until his knot deflates[end if].";
 
 [to say VentPostSexWS:
 	if (VentWSAmount is 2 and a random chance of 1 in 3 succeeds) or (VentWSAmount is 3):

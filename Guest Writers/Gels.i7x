@@ -131,6 +131,8 @@ to say losetopurplegel: [Loss to Purple Gel.]
 		setmonster "Pink Gel";
 	else if Player is MalePreferred and MaleList is not banned: [Changes target to Blue Gel for infection.]
 		setmonster "Blue Gel";
+	else if HermList is not banned: [Changes target to Purple Gel for infection.]
+		setmonster "Purple Gel";
 
 to say beatthepurplegel: [Victory over Purple Gel.]
 	say "     Defeated, the Purple Gel falls to the ground. Apparently aroused by the fight, she spreads her legs and begins playing with herself.";
@@ -753,7 +755,8 @@ This is the Purple Gel Infection rule:
 			else if Player is female:	[Female Version]
 				say "     ";
 			else: [Neuter Version]
-				say "     ";]
+				say "     ";
+]
 
 Section 4 - Items
 

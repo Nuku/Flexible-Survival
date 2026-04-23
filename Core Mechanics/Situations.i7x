@@ -241,7 +241,6 @@ ResolveFunction of ExampleEvent is "[ResolveEvent ExampleEvent]".
 Sarea of ExampleEvent is "Nowhere". [standard walkins that cannot be hunted for are Nowhere, but walkin events can also be made huntable as an alternate access way]
 
 to say ResolveEvent ExampleEvent:
-
 ]
 
 Situations ends here.

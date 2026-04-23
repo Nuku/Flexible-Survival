@@ -168,8 +168,7 @@ to say ResolveEvent Paleontology Professor:
 	now Paleontology Professor is resolved;
 
 to raptorrelease:
-	choose row with Name of "Wereraptor" from Table of Random Critters;
-	now area entry is "Campus";
+	now the area corresponding to a Name of "Wereraptor" in Table of Random Critters is "Campus";
 	if wrcursestatus is 0, now wrcursestatus is 1;
 
 Chapter 1 - Creature Responses

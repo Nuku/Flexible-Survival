@@ -170,7 +170,6 @@ to say ResolveEvent Large Cave:
 				ItemGain water bottle by 2;
 			else if fightoutcome >= 20 and fightoutcome <= 29:			[Lost to behemoth]
 				say "     Covered in behemoth fluids and recovering from your loss, you remember the food and water still laying on the cave floor, forgotten during your tussle with the beast. At least you had managed to safely stow the lockbox before you were taken away. As you resume your exploring, you wonder if the lockbox truly belongs to the naga hybrid, and if it did, maybe you could strike a bargain with her.";
-				say "     [bold type]You found a Lockbox[roman type][line break]";
 			else if fightoutcome >= 30:			[Fled from behemoth]
 				say "     Managing to get away from the behemoth, you exit the cave, relieved to see that the beast did not care to chase after you. However, you then remember the food and water still laying on the cave floor, forgotten during your tussle with the behemoth. While you are disappointed that you lost some valuable supplies, at least you had managed to safely stow the lockbox before you fled. As you resume your exploring, you wonder if the lockbox truly belongs to the naga hybrid, and if it did, maybe you could strike a bargain with her.";
 		ItemGain Lockbox by 1;
@@ -485,7 +484,7 @@ to SerenityBind:
 			end the story saying "You spent too much time inside of a snake";
 		else:
 			now enduring is false;
-			say "     You're within Serenity's stomach. [one of]The slick walls constantly caress and rub against you[or]You can feel your naga captor use her hands to rub the bulge that you are making in her coils[or]'Having a fun time in there?' the naga teases you[at random]. You can [bold type]S[roman type]truggle to let Serenity know that you want to be let out, [if obliging is true][bold type]O[roman type]blige[else][bold type]A[roman type]bide[end if] the hungry snake's stomach, or [if boundrecover is true][bold type]R[roman type]ecover from[else][bold type]E[roman type]ndure[end if] to try and stay inside of the snake for as long as you can.";
+			say "     You're within Serenity's stomach. [one of]The slick walls constantly caress and rub against you[or]You can feel your naga captor use her hands to rub the bulge that you are making in her coils[or]'Having a fun time in there?' the naga teases you[at random]. You can [bold type]S[roman type]truggle to let Serenity know that you want to be let out, [if obliging is true][bold type]O[roman type]blige[else][bold type]A[roman type]bide[end if] the hungry snake's stomach or [if boundrecover is true][bold type]R[roman type]ecover from[else][bold type]E[roman type]ndure[end if] to try and stay inside of the snake for as long as you can.";
 			say "[bold type]1[roman type] - [link]Struggle[as]1[end link][line break]";
 			say "[bold type]2[roman type] - [link][if obliging is true]Oblige[else]Abide[end if][as]2[end link][line break]";
 			say "[bold type]3[roman type] - [link][if boundrecover is false]Endure[else]Recover[end if][as]3[end link][line break]";

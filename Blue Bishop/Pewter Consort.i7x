@@ -3,11 +3,7 @@ Version 1 of Pewter Consort by Blue Bishop begins here.
 
 "Adds a Pewter Consort creature to Flexible Survival's Wandering Monsters table"
 
-a postimport rule: [bugfixing rules for players that import savegames]
-	choose a row with Name of "Pewter Consort" in Table of Random Critters;
-	now sex entry is "Male"; [infection never had female stats]
-
-Section 0 - Creature Responses
+Section 1 - Creature Responses
 
 consortinsight is a number that varies. [Consort Insight, entails how much the player knows about the Pewter Consort and their perception]
 
@@ -74,7 +70,7 @@ to say losetopewter:
 		say "     Appearing somewhat satisfied by making a mess of you, the creature eventually pulls off of you, leaving you an embarrassing, cum-stained mess. [if showlocale is true]You hear sounds in the distance, no doubt the sordid affair catching some attention, compelling you to gather your things and quickly flee[else]Eventually, you recover enough to gather your things, clean yourself off to the best of your ability, and depart[end if].";
 		CreatureSexAftermath "Player" receives "OralCock" from "Pewter Consort";
 
-Section 1 - Pewter Consort Bind
+Section 2 - Pewter Consort Bind
 
 pewtertorsosuppress is a truth state that varies.
 pewterheadcap is a number that varies. [Dictates, via scale, how many consorts might occupy a body region]
@@ -144,7 +140,7 @@ to pewterbind:
 			end the story saying "You lost your mind while bound!";
 		else:
 			now enduring is false;
-			say "     You are submerged in the writhing flesh of several gray beasts. [one of]You briefly break the surface, gasping for breath before you're pulled back into the sordid depths[or]The sensation of so much movement all around you is disorienting[or]The thick, masculine odor and the loud groans and howls of sex are all that flood your senses[at random]. Presently, you're [pewtercharacterassess]. You imagine your only active option is to [bold type]S[roman type]truggle enough until they let you go, else you can [if obliging is true][bold type]O[roman type]blige[else][bold type]A[roman type]bide[end if] them, or [if boundrecover is true][bold type]R[roman type]ecover from[else][bold type]E[roman type]ndure[end if] these questionable circumstances.";
+			say "     You are submerged in the writhing flesh of several gray beasts. [one of]You briefly break the surface, gasping for breath before you're pulled back into the sordid depths[or]The sensation of so much movement all around you is disorienting[or]The thick, masculine odor and the loud groans and howls of sex are all that flood your senses[at random]. Presently, you're [pewtercharacterassess]. You imagine your only active option is to [bold type]S[roman type]truggle enough until they let you go, else you can [if obliging is true][bold type]O[roman type]blige[else][bold type]A[roman type]bide[end if] them or [if boundrecover is true][bold type]R[roman type]ecover from[else][bold type]E[roman type]ndure[end if] these questionable circumstances.";
 			[say "     Head: [pewterheadocc] Attend: [pewterheadvar1] Dick: [pewterheadvar2] || Torso: [pewterbodyocc] || Genital: Cock: [pewtercockocc] Attend: [pewtercockvar1] Dick: [pewtercockvar2] | Cunt: [pewtercuntocc] Attend: [pewtercuntvar1] Dick: [pewtercuntvar2] | Ass: [pewterassocc] Attend: [pewterassvar1] Dick: [pewterassvar2][line break]";] [Dev tool]
 			say "[bold type]1[roman type] - [link]Struggle[as]1[end link][line break]";
 			say "[bold type]2[roman type] - [link][if obliging is true]Oblige[else]Abide[end if][as]2[end link][line break]";
@@ -531,7 +527,11 @@ to say pewtercharacterassess:
 			else:
 				say "your ass is being [if pewterassvar1 > 0]rimmed[else]pounded[end if] by one of them";
 
-Section 2 - Creature Insertion
+Section 3 - Creature Insertion
+
+a postimport rule: [bugfixing rules for players that import savegames]
+	choose a row with Name of "Pewter Consort" in Table of Random Critters;
+	now sex entry is "Male"; [infection never had female stats]
 
 Table of CombatPrep (continued)
 name(text)	PrepFunction(text)
@@ -740,7 +740,7 @@ to say consortskinentry:
 	else:
 		say "gray, faintly metallic";
 
-Section 3 - Item Drop
+Section 4 - Item Drop
 
 Table of Game Objects (continued)
 name	desc	weight	object
@@ -761,7 +761,7 @@ to say pewter seed use:
 	SanLoss 5;
 	raise Player Libido by 2;
 
-Section 4 - Endings
+Section 5 - Endings
 
 Table of GameEndings (continued)
 Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)

@@ -6,12 +6,12 @@ Version 3 of Snapjaw Beach Camp by Gherod begins here.
 [Version 2 - Scavenge event for Snapjaw added]
 [Version 3 - Made edits to superstrength talk option and added a few passersby events with Snapjaw working out]
 
-Section 1 - Locations and Rooms
-
 a postimport rule:
 	if PlayerMet of Skyler is true:
 		move Skyler to Snapjaw_Beach_Camp;
 		AddNavPoint Snapjaw_Beach_Camp silently;
+
+Section 1 - Locations and Rooms
 
 Table of GameRoomIDs (continued)
 Object	Name

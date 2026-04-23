@@ -2200,7 +2200,7 @@ to say IncubusMotorcycleHelmetTalk: [item selection (level 4)]
 		say "     You put the item back and look over the selection again.";
 		say "[RD_Biker_HelmetsMenu]"; [return to level 3 sub-submenu]
 
-Chapter 2 - Underwear Section
+Chapter 3 - Underwear Section
 
 to say browse_RD_underwear_section: [costume clothing category submenu (level 2 under the costume clothing selector)]
 	say "[line break]     Which type of underwear would you like to check out?";
@@ -2296,7 +2296,7 @@ to say BlackMeshBriefsTalk: [item selection (level 4)]
 		say "     You put the item back and look over the selection again.";
 		say "[RD_BriefsMenu]"; [return to level 3 sub-submenu]
 
-Chapter 3 - Wild West Section
+Chapter 4 - Wild West Section
 
 to say browse_RD_wildwest_section: [costume clothing category submenu (level 2 under the costume clothing selector)]
 	say "[line break]     Which type of wild west would you like to check out?";
@@ -2458,9 +2458,9 @@ to say Cow-printCowgirlBootsTalk: [item selection (level 4)]
 		say "     You put the item back and look over the selection again.";
 		say "[RD_CowboyBootsMenu]"; [return to level 3 sub-submenu]
 
-[
-Chapter 4 - BDSM Section
+Chapter 5 - BDSM Section
 
+[
 to say browse_RD_BDSM_section: [costume clothing category submenu (level 2 under the costume clothing selector)]
 	say "     Which type of BDSM gear would you like to check out?";
 	LineBreak;
@@ -2568,7 +2568,7 @@ to say LatexMouseMaskTalk: [item selection (level 4)]
 		say "[RD_MasksMenu]"; [return to level 3 sub-submenu]
 ]
 
-Chapter 5 - Night Walker Section
+Chapter 6 - Night Walker Section
 
 Book 4 - The Painted Dragon [Store found through Harolds quests]
 

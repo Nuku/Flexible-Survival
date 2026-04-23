@@ -444,7 +444,7 @@ Name(text)	Type(text)
 "DemonFoxInteractions"	"number"
 ["DemonFoxStatus"	"number"]
 "dentedbikecount"	"number"
-"didsubmit"	"number"
+["didsubmit"	"number"]
 "Diegobitched"	"number"
 "DiegoButtSlut"	"number"
 "Diegochanged"	"number"

@@ -42,14 +42,14 @@ to say losetobovine:
 		let antimoo be 16 - Mooing - Cunt Count of Player;
 		if antimoo < 1, now antimoo is 1;
 		if CowBully > 0:
-			if Player is female:
+			if Player is female and (Mooing > 0 or a random chance of 2 in 3 succeeds):
 				say "     The big bull grunts fiercely, breathing hard after his maddened fight. He prods you with his sharp horns until you huddle on all fours. He scrabbles at your rear with his hooves and you have a few moments to wrench your clothes out of the way before you feel the animal's huge member thrust into you, [if Cunt Depth of Player < 28]feeling like it will split you in half. Your cries, when you hear them, sound almost as pitiful as the cow you defeated earlier as you try in vain to brace yourself against the crazed beast's rutting[else]filling your cavernous pussy like few can. Your cries of ecstasy unknowingly echo the pitiful cries of the cow girl you defeated. All of your attention, however, is focused on bracing yourself against the magnificent brute's powerful rutting thrusts[end if]. He bellows as you feel his burning seed pour into you, filling you up[if gestation of child is 0 or gestation of child > 20], and making you look very pregnant[end if]. Finally done with you, calm after his release, he wanders off to graze.";
 				CreatureSexAftermath "Player" receives "PussyDildoFuck" from "Bovine";
 				if Mooing > 0:
 					fimpregchance;
 				infect;
 				now CowBully is 0;
-			else if Player is mpreg_ok:
+			else if "MPreg" is listed in feats of Player and (Mooing > 0 or a random chance of anallevel in 5 succeeds):
 				say "     The huge beast bellows one last time and flies at you, turning away at the last second to your surprise. As he turns around to face you, you see his nostrils flaring; it seems he's scented something about you that's piqued his interest. He knocks you over shoving his face against your rear, and you hear the bull take a big whiff. He snorts and scrabbles at your rear with his hooves. You have a few moments to wrench your clothes down before you feel the beast's huge member thrust into you, [if scalevalue of Player < 4 and player is not twistcapped]feeling like it will split you in half. Your cries, when you hear them, sound almost as pitiful as the cow you defeated earlier as you try in vain to brace yourself against the crazed beast's rutting[else]filling your cavernous depths like few can. Your cries of ecstasy unknowingly echo the pitiful cries of the cow girl you defeated. All of your attention, however, is focused on bracing yourself against the magnificent brute's powerful rutting thrusts[end if]. He bellows as you feel his burning seed pour into you, filling you up[if gestation of child is 0 or gestation of child > 20], and making you look very pregnant[end if]. Finally done with you, calm after his release, he wanders off to graze.";
 				CreatureSexAftermath "Player" receives "AssDildoFuck" from "Bovine";
 				if Mooing > 0:
@@ -78,7 +78,7 @@ to say losetobovine:
 				infect;
 				now mooing is mooing / 2; [increasing milk thirst]
 				now Mooed is 1;
-			else if Player is mpreg_ok:
+			else if "MPreg" is listed in feats of Player:
 				say "     Lifting his nose to the air, the bull catches your scent and you know exactly what scent that is, cow in heat, even if you're not the average cow. Pacing over to you he sniffs at your rear and you feel yourself rising to all fours and presenting your ass to the beast. His weight is suddenly upon you, you struggle to hold him for a moment until you feel his huge member press at your hole. Suddenly nothing seems to matter but having him within you. His bellowing thrusts are [if scalevalue of Player < 5 and player is not twistcapped]softened by your attempts to buck forward with him, trying to avoid being impaled by his gigantic rod. Suddenly his breeding tool seems to swell even bigger, stretching your already taxed anus to the breaking point[else]countered by your own as you rock your hips back against his motion, feeling him deep within you. Suddenly his breeding tool seems to swell even larger, somehow making even your gigantic hole feel full[end if], and explodes with his orgasm, painting every inch of your insides white. Dismounting, he makes a loud whuffing sound and you feel so happy and full of his seed you lay down and rest just a moment, even as you begin to feel thirsty again...";
 				CreatureSexAftermath "Player" receives "AssFuck" from "Bovine";
 				mimpregchance;
@@ -146,8 +146,8 @@ to say BeatTheBovine:
 				say "     ([link]N[as]n[end link]) - Leave the bull alone.";
 				if Player consents:
 					LineBreak;
-					if Player is female and a random chance of 4 in 5 succeeds:
-						say "     You groan as you feel a heat between your legs grow, quickly becoming a fiery need. You shiver and drop to your knees, quickly stripping down and crawling up to the bull creature. Your eyes lock onto the bull's massive[if Mooing > 0]shaft, already erect and leaking pre. You reach forward and take the bull's length in one hand and his giant balls in another, gently stroking his shaft and massaging his balls[else]balls and sheath. You lick your lips and reach forward, taking his balls in one hand and his shaft in another. You begin stroking his shaft and massaging his balls, making the large bull groan as his bovine shaft quickly slides out and swells up[end if]. Soon the large bull's cock is pulsing and leaking a steady flow of pre. You shiver and moan at his scent, your pussy dripping with need. You climb up on top of the large bull and lower your cunt onto his thick shaft, grinding up and down its length.";
+					if Player is female and (Player is fpreg_able or a random chance of 2 in 3 succeeds):
+						say "     You groan as you feel a heat between your legs grow, quickly becoming a fiery need. You shiver and drop to your knees, quickly stripping down and crawling up to the bull creature. Your eyes lock onto the bull's massive [if Mooing > 0]shaft, already erect and leaking pre. You reach forward and take the bull's length in one hand and his giant balls in another, gently stroking his shaft and massaging his balls[else]balls and sheath. You lick your lips and reach forward, taking his balls in one hand and his shaft in another. You begin stroking his shaft and massaging his balls, making the large bull groan as his bovine shaft quickly slides out and swells up[end if]. Soon the large bull's cock is pulsing and leaking a steady flow of pre. You shiver and moan at his scent, your pussy dripping with need. You climb up on top of the large bull and lower your cunt onto his thick shaft, grinding up and down its length.";
 						say "     This makes the bull creature beneath you squirm and groan, bucking his hips as much as his weakened body will let him. You whimper and moo a little, unable to hold back any longer. You grab his shaft and line it up with your pussy before pushing back hard and sliding it deeply into your [bodytype of Player] body. You gasp and groan at the size of it, the way it spreads you wide open and fills you up. It takes some effort to get it in, but the bull beneath you moans out loud, bucking up into you and forcing his shaft in deeper. You gasp and let out a loud moo, quickly recovering from the initial thrust and beginning to ride this bull's huge length. The size of his shaft plus how horny and needy his scent is making you means you won't last long, and soon enough you're cumming hard. This in turn sets off the bull's own massive orgasm. His shaft pulses with each blast of thick fertile cum he pumps into you, emptying his massive balls into your cunt.";
 						WaitLineBreak;
 						say "     You collapse on top of the large bull and just let him fill you up, your belly swelling up so much from all his cum that it looks like you're pregnant. You pant and lie there for a while, too tired to get up. Eventually though, you push yourself up off his shaft and roll off his massive form, cum pouring out of your cunt. You get up and grab your things, looking back one last time at the bull that fucked you so full, still resting on his side and tongue lolling out of his mouth as he lays on the grass, and smile before you head back along the path.";
@@ -155,7 +155,7 @@ to say BeatTheBovine:
 						fimpregchance;
 						fimpregchance;
 						infect;
-					else if Player is mpreg_ok and (Player is mpreg_able or a random chance of anallevel in 4 succeeds):
+					else if "MPreg" is listed in feats of Player and (Player is mpreg_able or a random chance of anallevel in 5 succeeds):
 						say "     You groan as you feel a heat in your butt grow, quickly becoming a fiery need. You shiver and drop to your knees, quickly stripping down and crawling up to the bull creature. Your eyes lock onto the bull's massive [if Mooing > 0]shaft, already erect and leaking pre. You reach forward and take the bull's length in one hand and his giant balls in another, gently stroking his shaft and massaging his balls[else]balls and sheath. You lick your lips and reach forward, taking his balls in one hand and his shaft in another. You begin stroking his shaft and massaging his balls, making the large bull groan as his bovine shaft quickly slides out and swells up[end if]. Soon the large bull's cock is pulsing and leaking a steady flow of pre. You shiver and moan at his scent, your prick dripping with your need. You climb up on top of the large bull and lower your ass onto his thick shaft, grinding up and down its length.";
 						say "     This makes the bull creature beneath you squirm and groan, bucking his hips as much as his weakened body will let him. You whimper and moo a little, unable to hold back any longer. You grab his shaft and line it up with your hole before pushing back hard and sliding it deeply into your [bodytype of Player] body. You gasp and groan at the size of it, the way it spreads you wide open and fills you up. It takes some effort to get it in, but the bull beneath you moans out loud, bucking up into you and forcing his shaft in deeper. You gasp and let out a loud moo, quickly recovering from the initial thrust and beginning to ride this bull's huge length. The size of his shaft plus how horny and needy his scent is making you means you won't last long, and soon enough you're cumming hard. This in turn sets off the bull's own massive orgasm. His shaft pulses with each blast of thick fertile cum he pumps into you, emptying his massive balls into your rear.";
 						WaitLineBreak;
@@ -171,13 +171,15 @@ to say BeatTheBovine:
 						say "     Eventually his orgasm tapers of, his balls empty and your [bodytype of Player] belly stuffed full. You lie back, panting hard and grinning like a fool. You stretch out a bit before getting back up, your belly tingling with warmth. You look back at the bull passed out on his side, tongue lolling out of his mouth, and realize that his cum was probably rather infectious, and taking such a large amount might not have been such a good idea. Shrugging and picking up your stuff you realize that what's done is done and you're just going to have to live with it. You turn around and head back along the path.";
 						CreatureSexAftermath "Player" receives "OralCock" from "Bovine";
 						MultiInfect "Bovine" repeats 2;
+						PlayerEat 3;
+						PlayerDrink 12;
 				else:
 					LineBreak;
 					say "     Shaking your head clear of those thoughts you turn away from the bull and head back along the path.";
 				if VictoryOverDaBull < 3, increase VictoryOverDaBull by 1;
 		else if VictoryOverDaBull is 3:			[Considering what you could do with the beaten bull.]
-			say "     You look at the massive beast sprawled before you, defeated once more. A thought occurs to you as the 'bull' breathes heavily in a heap; what kind of bull can't defend his herd? Maybe this bull doesn't deserve the title anymore. [if Mooing > 10]Perhaps, [italic type]you[roman type] deserve to be the bull. [end if]You turn away from the pathetic creature and walk away, your mind turning over how you could put the so-called bull in his proper place... milk maybe.";
-			increase VictoryOverDaBull by 1;
+			say "     You look at the massive beast sprawled before you, defeated once more. A thought occurs to you as the 'bull' breathes heavily in a heap; what kind of bull can't defend his herd? Maybe this bull doesn't deserve the title anymore[if Mooing > 10]. Perhaps, [italic type]you[roman type] deserve to be the bull[end if]. You turn away from the pathetic creature and walk away, your mind turning over how you could put the so-called bull in his proper place... milk maybe.";
+			now VictoryOverDaBull is 4;
 		[else if (Mooing > 10) and (BodyName of Player is "Bovine") and (FaceName of Player is "Bovine") and (VictoryOverDaBull > 3):			[You're gonna be the bull but beware, it's a full time job.]
 			say "     A.";
 		else if VictoryOverDaBull > 3:			[What are you going to do with the bull?]
@@ -237,9 +239,8 @@ to say bovine attack:
 		if a random chance of 1 in 20 succeeds:
 			say "The cow sprays wildly with milk, drenching you, making you cry out as it seems to soak your clothing. All of a sudden a precise follow up spray hits you in the mouth, the pressure forcing you to swallow or drown in it.";
 			if "Iron Stomach" is not listed in feats of Player:
-				infect;
+				say "[infect][line break]";
 				decrease humanity of Player by 1;
-				LineBreak;
 			say "With a gulp you get a tingling feeling from your belly and are suddenly washed in contentment.[no line break][if Mooing < 5][mooplus][else][CowMilkAddict][end if]";
 		else:
 			say "[one of]The cow reaches up to her chest, squeezing down on a teat expertly, spraying milk at you, hitting your arm, causing it to sting at the pressure[or]The cow reaches up to her chest, squeezing down on a teat expertly, spraying milk at you, hitting your stomach, causing you to become short of breath and bend over wheezing as the focused stream hits[or]Moving in close, she slams her big milk jugs into your face, trying to make you drink, but ends up knocking you back[at random].[no line break]";
@@ -249,11 +250,11 @@ to say bovine attack:
 		else:
 			if monsterHP < HP entry / 4:			[ < 20 for regular play ]
 				say "The bull flicks his tail at you. You have finally annoyed him so much he has moved.[no line break][combat abort]";
-				continue the action;
-			say "[one of]The big bull snorts softly, trying to eat grass and completely ignoring you[or]The bull looks up from his grazing for a moment, making a mooing sound at you, before returning to his meal[at random].";
-			if monsterHP < ( HP entry * 7 ) / 10:		[ < 56 for regular play ]
-				increase monsterHP by 9 + ( HP entry / 5 ); [ +25 HP for regular play ]
-			say "You notice that the big animal is almost completely ignoring your attacks as they fail to pierce his tough hide.[no line break]";
+			else:
+				say "The [one of]big bull snorts softly, trying to eat grass and completely ignoring you[or]bull looks up from his grazing for a moment, making a mooing sound at you, before returning to his meal[at random].";
+				if monsterHP < ( HP entry * 7 ) / 10:		[ < 56 for regular play ]
+					increase monsterHP by 9 + ( HP entry / 5 ); [ +25 HP for regular play ]
+				say "You notice that the big animal is almost completely ignoring your attacks as they fail to pierce his tough hide.[no line break]";
 
 To say mooplus:			[The more you moo, the less you need milk.]
 	if Mooing < 5:

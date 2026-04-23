@@ -18,7 +18,7 @@ to say Sprite attack:
 		say "     You look down to see [(Cunt Depth of Player divided by 4) plus one] sprites working their way into you, one after the other. Despite their forms, they slip in smoothly, wings buzzing inside of you, exciting your tunnel and clit and sensing pleasure pulsing through your form as they slowly penetrate with their tiny forms, making their way towards your waiting womb.";
 		CreatureSexAftermath "Player" receives "PussyFuck" from "City Sprite";
 		WaitLineBreak;
-	else if Player is mpreg_ok and Player is not female and a random chance of 1 in 2 succeeds:
+	else if "MPreg" is listed in feats of Player and Player is not female and a random chance of 1 in 2 succeeds:
 		say "     One of the sprites caresses your rear, nuzzling and kissing at it. 'Mmm... there's something special about this spritely boy, girls. There's a nice, warm womb in him,' she giggles. That said, she starts rubbing at your back passage, working your anus open. You moan softly as she starts squirming her way inside. She's followed by [if scalevalue of Player is 1]another[else][scalevalue of Player]others[end if]. They slip in smoothly, wings buzzing[if Player is male] and fluttering against your prostate[end if] as they slowly penetrate with their tiny forms, making their way towards your waiting womb.";
 		CreatureSexAftermath "Player" receives "AssFuck" from "City Sprite";
 		WaitLineBreak;

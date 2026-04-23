@@ -27,7 +27,7 @@ to say ResolveEvent Hyena Cages:
 		LineBreak;
 		say "     You carefully root through the soggy pile of rags, discovering a badly damaged camera and, in what used to be a pocket, a granola bar still in its package. The camera unfortunately no longer works, but you manage to eject a tape from it.";
 		ItemGain food by 1;
-		say "[line break][bold type]Hyena Breakout Video has been added to your tape inventory![roman type][line break]";
+		say "[line break]     [bold type]Hyena Breakout Video has been added to your tape inventory![roman type][line break]";
 		add "Hyena Breakout Video" to tapes of Player;
 		now resolution of Hyena Cages is 1; [Player Investigated]
 	else:

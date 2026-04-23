@@ -328,7 +328,6 @@ to say enhancedavoidance:		[no longer used, incorporated into avoidance in Alt C
 	else if "Black Belt" is listed in feats of Player and a random chance of 1 in 8 succeeds:
 		say "You nimbly avoid the attack at the last moment!";
 		now avoidance is 1;
-
 ]
 
 Pepperspray ends here.

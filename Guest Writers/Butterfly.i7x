@@ -518,44 +518,15 @@ To say butterfly attack:
 				say "     [italic type]You suddenly feel a strange feeling of achievement in your [Ball Size Adjective of Player] [Balls].[roman type][line break]";
 		follow the ButterflyTummyDesc rule;
 
-to ButterFlyChildBirth:
-	choose a blank row in the Table of PlayerChildren;
-	now BirthTurn entry is turns;
-	now Gender entry is random child gender;
-	now Head entry is HeadName of ButterflyBaby;
-	now Torso entry is TorsoName of ButterflyBaby;
-	now Back entry is BackName of ButterflyBaby;
-	now Arms entry is ArmsName of ButterflyBaby;
-	now Legs entry is LegsName of ButterflyBaby;
-	now Ass entry is AssName of ButterflyBaby;
-	now Tail entry is TailName of ButterflyBaby;
-	now ShowTail entry is false;
-	now ShowLegs entry is true;
-	now Pureblood entry is false;
-	if HeadName of ButterflyBaby is TorsoName of ButterflyBaby:
-		if HeadName of ButterflyBaby is BackName of ButterflyBaby:
-			if HeadName of ButterflyBaby is ArmsName of ButterflyBaby:
-				if HeadName of ButterflyBaby is LegsName of ButterflyBaby:
-					if HeadName of ButterflyBaby is AssName of ButterflyBaby:
-						if HeadName of ButterflyBaby is TailName of ButterflyBaby:
-							now Pureblood entry is true;
-	now Albino entry is false;
-	now Melanism entry is false;
-	now Personality entry is random child personality;
-	now PlayerRelationship entry is "[one of]loving[or]affectionate[at random]";
-	now Feral entry is false;
-	say "[bold type]Please name your ([Personality entry], [Gender entry]) child[roman type]> [run paragraph on]";
-	get typed command as playerinput;
-	now Name of ButterflyBaby is playerinput;
-	now Name entry is Name of ButterflyBaby;
-	now ButterflyBabyGestation is 0;
-	now ButterflyPregnant is False;
-	follow the ButterflyTummyDesc rule;
-	increase perception of Player by 2;
-
 Section 4 - Monster Definition
 
-[]
+Table of GameCharacterIDs (continued)
+object	name
+ButterflyBaby	"ButterflyBaby"
+
+ButterflyBaby is a creature.
+ButterflyBaby is in NPC Nexus. [and there it will stay, as it is just a coding tool]
+The printed name of ButterflyBaby is "butterfly baby".
 
 Section 5 - Monster Endings
 
@@ -593,13 +564,40 @@ This is the Butterfly Infection rule:
 
 Section 6 - Monster Rules
 
-Table of GameCharacterIDs (continued)
-object	name
-ButterflyBaby	"ButterflyBaby"
-
-ButterflyBaby is a creature.
-ButterflyBaby is in NPC Nexus. [and there it will stay, as it is just a coding tool]
-The printed name of ButterflyBaby is "butterfly baby".
+to ButterFlyChildBirth:
+	choose a blank row in the Table of PlayerChildren;
+	now BirthTurn entry is turns;
+	now Gender entry is random child gender;
+	now Head entry is HeadName of ButterflyBaby;
+	now Torso entry is TorsoName of ButterflyBaby;
+	now Back entry is BackName of ButterflyBaby;
+	now Arms entry is ArmsName of ButterflyBaby;
+	now Legs entry is LegsName of ButterflyBaby;
+	now Ass entry is AssName of ButterflyBaby;
+	now Tail entry is TailName of ButterflyBaby;
+	now ShowTail entry is false;
+	now ShowLegs entry is true;
+	now Pureblood entry is false;
+	if HeadName of ButterflyBaby is TorsoName of ButterflyBaby:
+		if HeadName of ButterflyBaby is BackName of ButterflyBaby:
+			if HeadName of ButterflyBaby is ArmsName of ButterflyBaby:
+				if HeadName of ButterflyBaby is LegsName of ButterflyBaby:
+					if HeadName of ButterflyBaby is AssName of ButterflyBaby:
+						if HeadName of ButterflyBaby is TailName of ButterflyBaby:
+							now Pureblood entry is true;
+	now Albino entry is false;
+	now Melanism entry is false;
+	now Personality entry is random child personality;
+	now PlayerRelationship entry is "[one of]loving[or]affectionate[at random]";
+	now Feral entry is false;
+	say "[bold type]Please name your ([Personality entry], [Gender entry]) child[roman type]> [run paragraph on]";
+	get typed command as playerinput;
+	now Name of ButterflyBaby is playerinput;
+	now Name entry is Name of ButterflyBaby;
+	now ButterflyBabyGestation is 0;
+	now ButterflyPregnant is False;
+	follow the ButterflyTummyDesc rule;
+	increase perception of Player by 2;
 
 To impregnatebutterfly:
 	SetInfectionsOf Impregnator to infections of Player;
@@ -767,10 +765,9 @@ to say testosterone pill use:
 		if Cock of Player is not empty:
 			now descr is "[cock size desc of Player] [Cock of Player]";
 		say "     With your body in shock, you feel your bare groin clench as internal changes begin and soon push out of your body to form into a [descr] cock, pulsing in excitement. Some new [Ball Size Adjective of Player] [Balls] [if CockName of Player is listed in infections of InternalCockList]form inside you[else]then pop out underneath your new manhood[end if]. ";
-	if "Breasts" is not listed in feats of Player:
-		if Breast Size of Player > 0:
-			now Breast Size of Player is 0;
-			say "With the feel of a popping balloon, your breasts deflate, leaving you with a flat yet muscular chest. ";
+	if "Breasts" is not listed in feats of Player and Breast Size of Player > 0:
+		now Breast Size of Player is 0;
+		say "With the feel of a popping balloon, your breasts deflate, leaving you with a flat yet muscular chest. ";
 	if gestation of child > 0 and the player is not mpreg_ok:
 		now the child is not born;
 		now the gestation of Child is 0;
@@ -781,7 +778,7 @@ Does the player mean examining the damaged negligee when the damaged negligee is
 Does the player mean examining the pristine negligee when the pristine negligee is owned: it is likely.
 Does the player mean littering the damaged negligee when the damaged negligee is owned: it is very likely.
 Does the player mean littering the pristine negligee when the pristine negligee is owned: it is likely.
-Does the player mean littering the testosterone pill when the testosterone pill is owned: it is likely.
+Does the player mean littering the testosterone pill: it is likely.
 Does the player mean grabbing the pristine negligee: it is very likely.
 
 Section 8 - Monster Locations

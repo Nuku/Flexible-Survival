@@ -62,7 +62,7 @@ to say ResolveEvent Spartan Intimidation:
 			now Resolution of Spartan Intimidation is 3;
 	now Spartan Intimidation is resolved;
 
-Section 2  -  Campus Pool Area
+Section 2 - Campus Pool Area
 
 Table of GameRoomIDs (continued)
 Object	Name
@@ -138,55 +138,60 @@ instead of conversing the Daphne:
 		now HP of Daphne is 4;
 		now Helot Negotiation is active;
 	else:
-		say "     What do you wish to talk about with the stunning swimmer?";
-		now sextablerun is 0;
-		blank out the whole of table of fucking options;
-		[]
-		choose a blank row in table of fucking options;
-		now title entry is "The Spartans";
-		now sortorder entry is 1;
-		now description entry is "Ask how she feels about the warriors";
-		[]
-		choose a blank row in table of fucking options;
-		now title entry is "Daphne's Past";
-		now sortorder entry is 2;
-		now description entry is "Ask her about herself";
-		[]
-		choose a blank row in table of fucking options;
-		now title entry is "Sex With Daphne";
-		now sortorder entry is 3;
-		now description entry is "Ask Daphne how she wants things to go";
-		[]
-		sort the table of fucking options in sortorder order;
-		repeat with y running from 1 to number of filled rows in table of fucking options:
-			choose row y from the table of fucking options;
-			say "[link][y] - [title entry][as][y][end link][line break]";
-		say "[link]0 - Nevermind[as]0[end link][line break]";
-		while sextablerun is 0:
-			say "Pick the corresponding number> [run paragraph on]";
-			get a number;
-			if calcnumber > 0 and calcnumber <= the number of filled rows in table of fucking options:
-				now current menu selection is calcnumber;
-				choose row calcnumber in table of fucking options;
-				say "[title entry]: [description entry]?";
-				if Player consents:
-					LineBreak;
-					now sextablerun is 1;
-					if title entry is:
-						-- "The Spartans":
-							say "[DaphneTalk1]";
-						-- "Daphne's Past":
-							say "[DaphneTalk2]";
-						-- "Sex With Daphne":
-							say "[DaphneTalk3]";
-			else if calcnumber is 0:
+		say "[DaphneTalkMenu]";
+
+to say DaphneTalkMenu:
+	say "     What do you wish to talk about with the stunning swimmer?";
+	now sextablerun is 0;
+	blank out the whole of table of fucking options;
+	[]
+	choose a blank row in table of fucking options;
+	now title entry is "The Spartans";
+	now sortorder entry is 1;
+	now description entry is "Ask how she feels about the warriors";
+	[]
+	choose a blank row in table of fucking options;
+	now title entry is "Daphne's Past";
+	now sortorder entry is 2;
+	now description entry is "Ask her about herself";
+	[]
+	choose a blank row in table of fucking options;
+	now title entry is "Sex With Daphne";
+	now sortorder entry is 3;
+	now description entry is "Ask Daphne how she wants things to go";
+	[]
+	sort the table of fucking options in sortorder order;
+	repeat with y running from 1 to number of filled rows in table of fucking options:
+		choose row y from the table of fucking options;
+		say "[link][y] - [title entry][as][y][end link][line break]";
+	say "[link]0 - Nevermind[as]0[end link][line break]";
+	while sextablerun is 0:
+		say "Pick the corresponding number> [run paragraph on]";
+		get a number;
+		if calcnumber > 0 and calcnumber <= the number of filled rows in table of fucking options:
+			now current menu selection is calcnumber;
+			choose row calcnumber in table of fucking options;
+			say "[title entry]: [description entry]?";
+			if Player consents:
 				LineBreak;
 				now sextablerun is 1;
-				say "     You step back, indicating an end to the conversation. Daphne looks about to say something before shaking her head and stepping back too.";
-			else:
-				say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options], or 0 to exit.";
-		wait for any key;
-		clear the screen and hyperlink list;
+				if title entry is:
+					-- "The Spartans":
+						say "[DaphneTalk1]";
+					-- "Daphne's Past":
+						say "[DaphneTalk2]";
+					-- "Sex With Daphne":
+						say "[DaphneTalk3]";
+				wait for any key;
+				say "[DaphneTalkMenu]";
+		else if calcnumber is 0:
+			LineBreak;
+			now sextablerun is 1;
+			say "     You step back, indicating an end to the conversation. Daphne looks about to say something before shaking her head and stepping back too.";
+			wait for any key;
+		else:
+			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options], or 0 to exit.";
+	clear the screen and hyperlink list;
 
 to say DaphneTalk1:
 	say "     You decide to ask Daphne how she feels about the Spartans patrolling the campus despite knowing that it's likely nothing positive, and right away you can see the naiad getting worked up. 'Ugh, where do I begin with our campus's supposedly loyal protectors? They're a bunch of fuckin['] sexist dirtbags!' she exclaims angrily. 'These pigs all strut around like they own the place and think they're doing us all such a favor and supposedly protecting this place when most of the time they're the ones causing all the damn trouble! In my opinion, they're no better than the ferals outside the campus! I mean, come on, they're a bunch of delusional warriors stuck in the classical era, idiots who struggle with how a phone works that run around punishing students by turning them into slaves! Why do we tolerate them here at all? This is supposed to be a safe place for sane students, not a bunch of insane militaristic men!' Daphne rants for quite some time, expressing an awe-inspiring disdain for the Spartans as she continues to belittle them for, you'd guess, at least around 5 minutes before she finally stops, red in the face and painting with rage. Taking a moment to compose herself, she begins again.";
@@ -208,7 +213,7 @@ to say DaphneSexMenu:
 	else if Daphne & Alyssa Tentacle Fun is not resolved:
 		project Figure of Daphne_clothed_icon;
 		say "     'Look, you seem like a chill guy, but I'm still getting over the incident with the Spartans,' Daphne says, shivering, disgust evident on her face.";
-	else if Daphne & Alyssa Tentacle Fun is resolved and HP of Daphne is 2:
+	else if HP of Daphne is 2:
 		project Figure of Daphne_clothed_icon;
 		say "     'Well, look what the cat dragged in. Come back to spy on me some more? Shoot your cum on the wall, then run away?' Daphne says loudly. Having just exited the pool, she's wet and wearing her swimsuit. The naiad crosses her arms, looking at you expectantly, and you're ashamed to say that before you can even say anything in your defense, your eyes dart down to stare at Daphne's breasts, which she immediately notices. 'Oh, you like looking at those? I bet you got a nice peep at them a while ago, perv!' Daphne yells and glares out at you. Having completely botched your meeting, you're left stammering excuses, blushing and stuttering apologies, which Daphne quickly shuts down. 'Save it, voyeur. I don't wanna hear anything from you!' she shouts, and you're left silent, staring at the ground guiltily as she continues to lambaste you. 'Good. Now ordinarily, I'd beat a bastard like you black and blue for something like that. Ordinarily, that is,' Daphne says, her voice softening, and you allow yourself a bit of hope and look up at her and find that instead of glare, you see her grinning slightly. 'Loosen up. I'm not going to hit you. We're cool, okay? Normally I'd be pissed if someone spied on me like that, but you're not a bad person, I think. You helped me with those Spartans before, and anybody with the balls to do that for a stranger is good in my book.'";
 		say "     Sighing in relief, you meet Daphne's eyes again and let her resume her speech. 'Don't get me wrong, it was shitty of you to spy on me, but I get it, the nanites mess with your head. I mean, that's why I needed Alyssa's help after the Spartan incident. I was in my head a lot and couldn't fuck anybody. It was driving me crazy! So I went to her for help,' the water spirit explains calmly and continues with a lusty smile. 'Besides wouldn't be the first time somebody's watched me, and from the amount you left on the wall, you certainly loved it! I'm flattered. Just ask next time you want to see me in action or maybe get some action,' Daphne ends, whispering flirtatiously and winking at you before going back to the pool to sharpen her skills some more.";

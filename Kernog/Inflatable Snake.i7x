@@ -60,7 +60,7 @@ What snake drug does is decreasing the chances for the player to make any signif
 However, waiting will make them lose precious time for rescuing a certain vixen...
 ]
 
-Section 1.1 - Bound state
+Section 2 - Bound state
 
 to inflatableSnakeVore:
 	psycheeval;
@@ -238,7 +238,7 @@ to inflatableSnakeSanityOrgasm: [Causes sanity to sharply plummet upon orgasm.]
 		increase psycheModifier by 1;
 	SanLoss ((inflatableSnakeBodyParts * 2) + 1 + (psycheadjust * psycheModifier)) / endureadj;
 
-Section 2 - Creature Insertion
+Section 3 - Creature Insertion
 
 Table of CombatPrep (continued)
 name(text)	PrepFunction(text)
@@ -324,13 +324,13 @@ When Play begins:
 	now altcombat entry is "bearhugger60"; [ Row used to designate any special combat features, "default" for standard combat. ]
 	now BannedStatus entry is false;
 
-Section 3 - Alt Combat
+Section 4 - Alt Combat
 
 Table of Critter Combat (continued)
 name	combat (rule)	preattack (rule)	postattack (rule)	altattack1 (rule)	alt1chance (number)	altattack2 (rule)	alt2chance (number)	monmiss (rule)	continuous (rule)	altstrike (rule)
 "bearhugger60"	retaliation rule	--	--	bearhug rule	60	--	--	--	--	--
 
-Section 4 - Endings
+Section 5 - Endings
 
 Table of GameEndings (continued)
 Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
@@ -342,9 +342,6 @@ This is the Inflatable Snake Infection rule:
 		if humanity of Player < 10:
 			say "     Your mind fails you, as you become another specimen of the bizarre fauna of the Bouncy Castle. As the military reclaims the city, you manage to escape. Ever since then, you prawl the beaches of the coastline, pouncing on the swimmers and surfurs bold enough to venture in your territory. Earsay and blurry pictures create an urban legend around your being, but you are too far gone to realize it, or even care.";
 		else:
-			if FaceName of Player is "Inflatable Snake" and SkinName of Player is "Inflatable Snake" and TailName of Player is "Inflatable Snake" and CockName of Player is "Inflatable Snake":
-				say "     The military recue gets you out of the infected city, but you are now too inhuman looking for reintegrating with civilization. Fortunately, your cartoonish snake appearance catches the eye of an audacious producer. [italic type][name of player] the Snake[roman type] quickly becomes a well-liked children show, where you and other unfortunate infected inflatable victims teach kids about counting and the alphabet. Of course, your [italic type]other[roman type] shows, with your adult 'fans' is a well-kept secret.";
-			else:
-				say "     The military rescue gets you out of the infected city, but not unchanged. Having partially become a serpentine pool toy, you have struggle fitting in and finding a decent job. One day, as you stop by a thrift store, you have an epiphany. A few weeks and a couple transactions later, you are the proud owner of a beach and swimming pool equipment store, by the seafront. Your novelty inflatables become rather popular, partly thanks to the fact that you and your employees are inflatable infecteds and give the place its 'charm'. The way you procure the products you sell is a well-kept secret, however...";
+			say "     The military rescue gets you out of the infected city, but [if Player is pure]you are now too inhuman looking for reintegrating with civilization. Fortunately, your cartoonish snake appearance catches the eye of an audacious producer. [italic type][Player name] the Snake[roman type] quickly becomes a well-liked children show, where you and other unfortunate infected inflatable victims teach kids about counting and the alphabet. Of course, your [italic type]other[roman type] shows, with your adult 'fans' is a well-kept secret.[else]not unchanged. Having partially become a serpentine pool toy, you have struggle fitting in and finding a decent job. One day, as you stop by a thrift store, you have an epiphany. A few weeks and a couple transactions later, you are the proud owner of a beach and swimming pool equipment store, by the seafront. Your novelty inflatables become rather popular, partly thanks to the fact that you and your employees are inflatable infecteds and give the place its 'charm'. The way you procure the products you sell is a well-kept secret, however...[end if]";
 
 Inflatable Snake ends here.

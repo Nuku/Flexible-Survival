@@ -54,7 +54,7 @@ to say lizgirl attack:
 
 to say lizgirl defeat:
 	if lizgirlimpreg is 0:
-		say "     [if lizgirlangry is 0]She looks up at you mournfully. 'Oh the things I could've done with you...' she says softly before collapsing[else]Looking at you one last time, she sheds a tear. 'Such a wonderful fighter. How can such a flawed creature be so grand?' before collapsing on the ground[end if].";
+		say "     [if lizgirlangry is 0]She looks up at you mournfully. 'Oh, the things I could've done with you...' she says softly before collapsing[else]Looking at you one last time, she sheds a tear. 'Such a wonderful fighter. How can such a flawed creature be so grand?' before collapsing on the ground[end if].";
 	else:
 		say "     [if lizgirlmarked is 1]'Did you not want this? Was the canvas too flawed?' she murmurs before collapsing on the ground[else]With a whine she says, 'I only wanted what was best for you, now another artist must finish my work,' before collapsing[end if].";
 	if HP of Ronda Mallrat is 4:
@@ -304,8 +304,8 @@ When Play begins:
 	now infect Name entry is "Lizard Girl";
 	now heat cycle entry is 2;
 	now heat duration entry is 2;
-	now heat start entry is "You feel a warming in your belly, the same tingling as when the lizard gave you her seed seems to begin and intensify, leaving you almost panting for breath.[toggle heat flag]";
-	now heat end entry is "The heat, the ache, all fades slowly, leaving you relieved.[toggle heat flag]";
+	now heat start entry is "[toggle heat flag]You feel a warming in your belly, the same tingling as when the lizard gave you her seed seems to begin and intensify, leaving you almost panting for breath.[line break]";
+	now heat end entry is "[toggle heat flag]The heat, the ache, all fades slowly, leaving you relieved.[line break]";
 	now trigger text entry is "";
 	now description text entry is "";
 	now inheat entry is "[liz impreg]"; [The lizard girl's seed effectively internalized the male organs, leaving the poor character impregnating themselves every heat cycle. This will be much more 'fun' once repeated births are in :3 ]

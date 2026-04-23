@@ -4,7 +4,7 @@ Version 3 of Needy Heat by Core Mechanics begins here.
 
 "Addon for adding an 'in heat' Event to infections, designed to work with all monster type infections by default, with the option to be customizable if you want to add specifics for your monster."
 
-Book 1 - Variables
+Part 1 - Variables
 
 heat enabled is a truth state that varies. heat enabled is usually True. [This variable turns the heat mod on an off.]
 animal heat is a truth state that varies. animal heat is usually False. [This variable is used to check to see if you've started an animalistic breeding cycle.]
@@ -27,7 +27,7 @@ mpregheat entry - truth state states if there is an mpreg heat
 mpregtrigger - trigger text for mpreg heat starting
 ]
 
-Book 2 - Logic & Rules
+Part 2 - Logic & Rules
 
 to say defaultheat:
 	[say "You shift uncomfortably, still being driven by the swollen needy heat between your legs.";]
@@ -308,7 +308,7 @@ This is the check heat rule:
 					now inheat is False;
 ]
 
-Book 3 - Debugging Commands - not for release
+Part 3 - Debugging Commands - not for release
 
 showheat is an action applying to nothing.
 understand "show heat" as showheat.

@@ -26,7 +26,7 @@ to say losetoflaminglynx:
 		say "     The flaming lynx sniffs down your [bodydesc of Player] body [if Player is male]and gives a faint rumble of pleasure as he finds your cock [end if]before growling in disdain upon noticing your cunt moments later.";
 		let fllynxanal be 0;
 		if anallevel is 3, increase fllynxanal by 2;
-		if Player is mpreg_ok, increase fllynxanal by 2;
+		if "MPreg" is listed in feats of Player, increase fllynxanal by 2;
 		if a random chance of fllynxanal in 7 succeeds:
 			let lynxfun be 1;
 		else if a random chance of 2 in 5 succeeds:	[40% force oral]
@@ -43,7 +43,7 @@ to say losetoflaminglynx:
 		say "     The flaming lynx sniffs down your [bodydesc of Player] body and purrs in pleasure as he finds your cock. Another wave of colors washing across his fiery back";
 		let fllynxanal be 3;
 		if anallevel is 3, increase fllynxanal by 1;
-		if Player is mpreg_ok, increase fllynxanal by 1;
+		if "MPreg" is listed in feats of Player, increase fllynxanal by 1;
 		if anallevel is 1, decrease fllynxanal by 2;
 		if a random chance of fllynxanal in 7 succeeds:
 			let lynxfun be 1;
@@ -55,7 +55,7 @@ to say losetoflaminglynx:
 		say "     The flaming lynx sniffs down your [bodydesc of Player] body and mewls in confusion upon reaching your bare groin. ";
 		let fllynxanal be 3;
 		if anallevel is 3, increase fllynxanal by 1;
-		if Player is mpreg_ok, increase fllynxanal by 1;
+		if "MPreg" is listed in feats of Player, increase fllynxanal by 1;
 		if anallevel is 1, decrease fllynxanal by 2;
 		if a random chance of fllynxanal in 7 succeeds:
 			let lynxfun be 1;

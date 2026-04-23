@@ -480,7 +480,7 @@ to NumberVariableSave:
 		-- "DemonFoxInteractions": now NumberVarValue entry is DemonFoxInteractions;
 		[-- "DemonFoxStatus": now NumberVarValue entry is DemonFoxStatus;]
 		-- "dentedbikecount": now NumberVarValue entry is dentedbikecount;
-		-- "didsubmit": now NumberVarValue entry is didsubmit;
+		[-- "didsubmit": now NumberVarValue entry is didsubmit;]
 		-- "Diegobitched": now NumberVarValue entry is Diegobitched;
 		-- "DiegoButtSlut": now NumberVarValue entry is DiegoButtSlut;
 		-- "Diegochanged": now NumberVarValue entry is Diegochanged;
@@ -2739,8 +2739,8 @@ to VariableNumberLoad:
 					if DemonFoxStatus is not NumberVarValue entry, now DemonFoxStatus is NumberVarValue entry;]
 				-- "dentedbikecount":
 					if dentedbikecount is not NumberVarValue entry, now dentedbikecount is NumberVarValue entry;
-				-- "didsubmit":
-					if didsubmit is not NumberVarValue entry, now didsubmit is NumberVarValue entry;
+				[-- "didsubmit":
+					if didsubmit is not NumberVarValue entry, now didsubmit is NumberVarValue entry;]
 				-- "Diegobitched":
 					if Diegobitched is not NumberVarValue entry, now Diegobitched is NumberVarValue entry;
 				-- "DiegoButtSlut":

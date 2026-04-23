@@ -13,7 +13,7 @@ to say losetobeaver:
 	now nobeaversex is 0;
 	let analchance be 5;
 	if anallevel is 3, increase analchance by 1;
-	if Player is mpreg_ok, increase analchance by 1;
+	if "MPreg" is listed in feats of Player, increase analchance by 1;
 	if Player is mpreg_able, increase analchance by 1;
 	if Player is neuter, increase analchance by 1;
 	if anallevel is 1, now analchance is analchance / 2;

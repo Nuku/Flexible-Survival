@@ -8,8 +8,7 @@ Version 1 of Giraffe by Stripes begins here.
 nogiraffesex is a number that varies.
 
 a postimport rule: [bugfixing rules for players that import savegames]
-	choose row with Name of "Giraffe" from Table of Random Critters;
-	now area entry is "Stable";
+	now the area corresponding to a Name of "Giraffe" in Table of Random Critters is "Stable";
 
 to say losetogiraffe:
 	project the Figure of GiraffeHerm_hard_icon;
@@ -21,7 +20,7 @@ to say losetogiraffe:
 		now mchance is 4;
 		if Player is submissive, increase mchance by 2;
 		if anallevel is 3, increase mchance by 2;
-		if Player is mpreg_ok, increase mchance by 2;
+		if "MPreg" is listed in feats of Player, increase mchance by 2;
 	if ( Player is not female and a random chance of mchance in 12 succeeds ) or Player is neuter:
 		say "     You are pushed over onto your stomach and something warm and moist prods against your anus. You brace yourself for a pounding from the crazed mutant, but instead what penetrates you moves about inside of you, hitting every little point of pleasure it can find. You dare a look behind you to see the giraffe's muzzle pushed between your legs, her tongue working wonders inside you as it plumbs your very depths. After a while, she pulls her head back, sliding her body up along your backside as a different heat replaces the last one. And as the giraffe's long neck rubs against yours, you realize this is the one you expected before, her massive cock pushing into you and stretching your asshole wide now that she's gotten you ready with her tongue.";
 		say "     With her tongue having prepared you, there's little discomfort and even that fades quickly as she pounds away at you. With a heavy thrust, she spears you on her cock. Vigorous thrusting brings both you and the giraffe quickly to an orgasm. You feel her hot seed spreading throughout your bowels, a gush of fluid from your overstuffed asshole soaking your thighs. Her large output leaves your belly plump and rounded[if Player is male]. Your cock gives a twitch as it sprays the bedding beneath you with ropey streams of your own cum[end if]. Done with you, the giraffe pulls out, a gush of her seed flowing from your distended anus as she strides off in search of more amusement, leaving you behind to recover as best you can.[mimpregchance]";

@@ -17,7 +17,7 @@ the scent of Brookstone Books is "     The store smells of musty tomes mingling 
 Brookstone Books entrance is a door. It is south of Brookstone Books and north of Mall East Wing. The Brookstone Books entrance is open.
 
 Instead of examining the Brookstone Books entrance:
-	say "Through the store front windows and entrance, you make out [the other side of the Brookstone Books entrance].";
+	say "     Through the store front windows and entrance, you make out [the other side of the Brookstone Books entrance].";
 
 Section 2 - Beverly
 
@@ -90,39 +90,33 @@ understand "read books" as browsebooks.
 understand "read a book" as browsebooks.
 
 check browsebooks:
-	If bookshelves is not visible, say "Nani desu ka?" instead;
+	if bookshelves is not visible, say "Nani desu ka?" instead;
 	if lastbookshelves - turns < 8, say "You should really go take care of other stuff instead of spending all your time reading." instead;
 
 carry out browsebooks:
 	say "     In no particular hurry you decide to browse through a few books in the hopes of finding something interesting to read. Who knows, you may end up finding some information that will help you out in the wilds of the city.[paragraph break]";
-	Let X be a random number between 1 and 10;
-	If X is 1:
-		If bevtalk > 1:
+	let X be a random number between 1 and 10;
+	if X is 1:
+		if bevtalk > 1:
 			say "     Not finding anything of interest right now in the bookstore, you walk over to Beverly to see what she is reading. When you approach, she looks up and smiles at you. 'How's it going?' When you ask what she is reading, she giggles softly. 'Just doing a crossword in this magazine of puzzles I found. Want to help?' Nodding, you help her out with the current crossword she is working on. When it's completed you realize, as you yawn and stretch, that the time just flew by. 'Thanks for your help. Some of those clues were pretty tough, weren't they?'";
-			If intelligence of Player < 20:
-				Let bonus be (Intelligence of Player minus 10) divided by 2;
-				Let diceroll be a random number from 1 to 20;
-				say "[line break]You roll 1d20([diceroll])[if bonus >= 0]+[end if][bonus] = [special-style-1][diceroll + bonus][roman type] vs [special-style-2]12[roman type] (Intelligence Check):[line break]";
-				Increase diceroll by bonus;
-				If diceroll >= 12:
-					say "     With a chuckle, you nod in agreement. After helping complete the complex crossword, you feel a little bit more intelligent.";
+			if intelligence of Player < 20:
+				let bonus be (Intelligence of Player minus 10) divided by 2;
+				let diceroll be a random number from 1 to 20;
+				say "[line break]     You roll 1d20([diceroll])[if bonus >= 0]+[end if][bonus] = [special-style-1][diceroll + bonus][roman type] vs [special-style-2]12[roman type] (Intelligence Check): ";
+				increase diceroll by bonus;
+				if diceroll >= 12:
+					say "With a chuckle, you nod in agreement. After helping complete the complex crossword, you feel a little bit more intelligent.";
 					StatChange "intelligence" by 1;
 				else:
-					say "     You nod and chuckle in agreement. Some of the clues seemed to sail right over your head.";
+					say "You nod and chuckle in agreement. Some of the clues seemed to sail right over your head.";
 			else:
 				say "     You admit that there were some tough clues, but nothing the two of you couldn't handle.";
 			now lastbookshelves is turns;
-			Follow the turnpass rule;
+			follow the turnpass rule;
 		else:
 			say "     Walking around the bookstore and browsing the books, nothing is really grabbing your attention right now. But not one to give up, you continue searching the store a little while longer.";
 	else if X is 2:
-		If "Survivalist" is listed in feats of Player:
-			If survfeat is 1:
-				say "     When you see the cover for the Army field survival manual as you pass the table it's on, you pause and think about looking through it once again. Though you're glad that you were able to pick up some survival pointers, the thought of re-reading some of the military lingo makes you cringe. But there might be a few more nuggets of info, you decide, and make a mental note to come back to it later.";
-			else:
-				say "     As you search through a stack of books on a table, you happen across an old Army field survival manual. After pulling it out, you begin to thumb through it to see if there is anything you might pick up that you don't already know. Not finding any new information, you close it and put it to the side before continuing to look through the books.";
-		else:
-			say "[afsm]";
+		say "[afsm]";
 	else if X is 3:
 		say "     With all that is going on in the city right now you decide to head to the humor section to see if you can find a good newspaper comic collection. Finding your favorite, you take it, find a chair to relax in, and begin to read. You don't even notice the time go by as you get a few laughs out of your favorite funnies. Your mood noticeably lightened, you rise from the chair with a smile and put the book back, promising yourself to come back to read it again when you're feeling down.";
 		SanBoost 3;
@@ -131,69 +125,48 @@ carry out browsebooks:
 		else:
 			increase morale of Player by 2;
 		now lastbookshelves is turns;
-		Follow the turnpass rule;
+		follow the turnpass rule;
 	else if X is 4:
-		If "Expert Hunter" is listed in feats of Player:
-			If huntfeat is 1:
-				say "     As you peruse the table where you found [bold type]The Hunter's Almanac[roman type], you find the book and look back through the table of contents to see if there is any other info that catches your eye. Not seeing anything of interest, save for the chapter on setting up a deer stand, you close it and move to another table, making a mental note to come back and read that chapter later if you find nothing else.";
-			else:
-				say "     While looking through a stack of books on a table, you come across a book titled [bold type]The Hunter's Almanac[roman type] by authors Dewey, Ketchum, and Howe. Chuckling to yourself, and thinking it a humor book, you look through it before realizing it's an actual book discussing the finer points of hunting with humor sprinkled about. But finding it's not telling you anything you don't already know, you close it and continue your search.";
-		else:
-			say "[thab]";
+		say "[thab]";
 	else if X is 5:
-		If fsnovel is 1:
+		if fsnovel is 1:
 			say "     While passing a table loaded with children's books you notice one titled [bold type]Boris the Lion's African Adventure[roman type], and not even knowing why, you pause to read it. It's a simple tale, like any preschooler book, about Boris's misadventure of trying to capture Andy the Antelope with no success. But the words at the end manage to inspire you. 'He may be faster. He may be smarter. But I always, always will try harder. One day, one day he will be too slow. One day, one day I will catch him, I know.' You close the book with a smile, your mood lightened.";
 			SanBoost 1;
 			if morale of Player < 20, increase morale of Player by 1;
 		else:
 			say "     When you pass by a table you notice what looks like a large three ring binder. Thinking it's something Beverly has left out accidentally, you pick it up with the intent to ask her when the hand written title catches your eyes, [bold type]Flexible Survival[roman type]. Thumbing through some of the pages, you see that it's a novel made up of short stories, and as you continue reading some of the pages of each story you soon start to wonder that with the way things currently are, is life now imitating art or some gigantic cosmic joke. With a wry smile you close the binder and return it to the pile of books you found it on.";
-			Increase score by 75;
+			increase score by 75;
 			now fsnovel is 1;
 			now lastbookshelves is turns;
-			Follow the turnpass rule;
+			follow the turnpass rule;
 	else if X is 6:
-		If "Weak Psyche" is listed in feats of Player:
-			say "     You come across a self-esteem book while browsing a shelf. Your curiosity getting the best of you, you pull it out and scan through it real quick before putting it back, deciding that it won't help you the way you are now and don't need any advice the book might give.";
-			Stop the action;
-		If "Strong Psyche" is listed in feats of Player:
-			If purfeat is 1:
-				say "     While browsing through the self-improvement shelves for any other books that might help, you happen across [bold type]Maintaining Your Self-esteem[roman type]. Feeling that you've gotten as much advice as you can out of it, you continue to look over the titles of the other books.";
-			else:
-				say "     You come across a self-esteem book while browsing through the self-improvement shelves. Pulling it out, you scan through it real quick before putting it back, deciding that you already feel pretty good about yourself and your inner peace of mind.";
-		else:
-			say "[myse]";
+		say "[myse]";
 	else if X is 7:
-		If FurryList is banned:
+		if FurryList is banned:
 			say "     While browsing through some books on a large table, you happen across an illustrated book discussing in great detail the mating rituals of some of the wild animals of [one of]Africa[or]Asia[or]North America[or]South America[or]Europe[or]Australia[at random]. Not interested in the book, you turn up your nose, push it aside, and continue to look through the pile.";
 		else:
 			say "     While browsing through some books on a large table, you come across a large, highly illustrated book on the mating rituals of some of the wild animals of [one of]Africa[or]Asia[or]North America[or]South America[or]Europe[or]Australia[at random]. Your interest piqued, you turn to see if Beverly is watching and find that she is currently looking through some books in another part of the store. Unable to control yourself, you open the book and browse through it until you are panting softly with arousal. Finding yourself getting too worked up, you snap the book shut with a shiver and quickly turn away from the table.";
 			say "     Even after calming back down so as not to attract the attention of Beverly, you still are feeling a little aroused.";
 			raise Player Libido by 3;
 	else if X is 8:
-		If "Haggler" is listed in feats of Player:
-			If hagfeat is 1:
-				say "     You head back to the business and money section to see if there are any other books that might be of help to you. Seeing the spine for [bold type]How to Find a Good Bargain[roman type], you're tempted to read it once more. But only if there is nothing else good to read, you decide, and continue to browse the titles.";
-			else:
-				say "     While looking through a stack of books on a table, you come across a book titled [bold type]How to Find a Good Bargain [roman type] by author I. M. Weasel. Chuckling to yourself, and thinking it a humor book, you look through it before realizing it's an actual book discussing the finer points of bartering. You manage to pick up a few pointers, but nothing more than that, and close it before continuing your search.";
-		else:
-			say "[hfgb]";
+		say "[hfgb]";
 	else if X is 9:
 		if sdbook is 0 and bevtalk > 1:
 			say "     Beverly points to a set of shelves in one corner of the store. 'There should be a book over there discussing self defense. It might be of help to you.' You thank her and head for the shelf she pointed to. After a minute of searching you find a book titled [bold type]Self Defense 101[roman type]. Taking it, you settle into a chair and look through your recent acquisition. As you suspected when you picked up the book, it's more or less basic defensive tactics, though you do manage to pick up a few pointers on how to parry and dodge attacks.";
 			StatChange "dexterity" by 1;
-			Increase sdbook by 1;
+			now sdbook is 1;
 		else if sdbook is 1:
 			say "     Even though you found the pointers in the self defense book pretty basic, you decide to delve into it some more to see if you can pick up anything else from it. You manage to find a few more pieces of advice, though it's all still pretty basic, on using your opponent's energy against them to counter their attack.";
 			StatChange "dexterity" by 1;
-			Increase sdbook by 1;
+			now sdbook is 2;
 		else:
 			say "     Walking around the bookstore and browsing the books, nothing is really grabbing your attention right now. But not one to give up, you continue searching persistently through the store without success.";
 		now lastbookshelves is turns;
-		Follow the turnpass rule;
+		follow the turnpass rule;
 	else:
 		say "     You head over to the magazine racks and peruse through what magazines there are. Coming across [one of]Car and Driver[or]Equus[or]Wired[or]Equine Wellness[or]Entertainment Weekly[or]Reader's Digest[or]Modern Dog[or]Popular Mechanics[or]Time[or]Cat Fancy[or]Field and Stream[or]Predator Xtreme[or]Macworld[or]PCWorld[or]Shonen Jump[at random], you pull it out of the rack and head over to a chair to sit and read it. After reading an article or three, you decide you want to save the rest of the magazine for later and put it back before heading to browse another part of the store.";
 		now lastbookshelves is turns;
-		Follow the turnpass rule;
+		follow the turnpass rule;
 
 Section 4 - Books
 
@@ -209,10 +182,12 @@ myseread is a number that varies. myseread is usually 255.
 hfgbread is a number that varies. hfgbread is usually 255.
 
 To say afsm:
-	If afsmread - turns < 12 and survfeat is 1:
+	if "Survivalist" is listed in feats of Player:
+		say "     [if survfeat is 1]When you see the cover for the Army field survival manual as you pass the table it's on, you pause and think about looking through it once again. Though you're glad that you were able to pick up some survival pointers, the thought of re-reading some of the military lingo makes you cringe. But there might be a few more nuggets of info, you decide, and make a mental note to come back to it later[else]As you search through a stack of books on a table, you happen across an old Army field survival manual. After pulling it out, you begin to thumb through it to see if there is anything you might pick up that you don't already know. Not finding any new information, you close it and put it to the side before continuing to look through the books[end if].";
+	else if afsmread - turns < 12 and survfeat is 1:
 		say "     Feeling that you are ready for another go at the Army survival manual, you head back to the table you had left it on. Not seeing it immediately, you search through the stack of books and still don't find it. You are about to ask Beverly if she had seen it when you spot a rat sitting in a large chair and reading the book. With a shrug, you figure they will be done with it soon enough and go to the magazine rack to find a magazine to read instead.";
 	else:
-		If survfeat is 1:
+		if survfeat is 1:
 			say "     Feeling that you're ready for another go at the Army field survival manual, you pick it up and continue right where you left off. After a while of reading your eyelids begin to grow heavy, and just as you have about enough of even more of the military acronyms, you reach the end of it. While rubbing your eyes, you sigh in relief and close the book. As you put the manual back onto the pile you found it on, you feel that you gained enough understanding of how you can best survive in the much changed city.";
 			FeatGain "Survivalist";
 		else:
@@ -220,13 +195,15 @@ To say afsm:
 			now afsmread is turns;
 			now survfeat is 1;
 	now lastbookshelves is turns;
-	Follow the turnpass rule;
+	follow the turnpass rule;
 
 To say thab:
-	If thabread - turns < 12 and huntfeat is 1:
+	if "Expert Hunter" is listed in feats of Player:
+		say "     [if huntfeat is 1]As you peruse the table where you found [bold type]The Hunter's Almanac[roman type], you find the book and look back through the table of contents to see if there is any other info that catches your eye. Not seeing anything of interest, save for the chapter on setting up a deer stand, you close it and move to another table, making a mental note to come back and read that chapter later if you find nothing else[else]While looking through a stack of books on a table, you come across a book titled [bold type]The Hunter's Almanac[roman type] by authors Dewey, Ketchum, and Howe. Chuckling to yourself, and thinking it a humor book, you look through it before realizing it's an actual book discussing the finer points of hunting with humor sprinkled about. But finding it's not telling you anything you don't already know, you close it and continue your search[end if].";
+	else if thabread - turns < 12 and huntfeat is 1:
 		say "     Picking [bold type]The Hunter's Almanac[roman type] off of the table you left it on, you head for a chair to settle in and read the chapter on tracking. At least that was the plan. When seeing a humorous illustration of the problems of an inept hunter introducing a chapter you had skipped, you end up reading that chapter instead. Before you know it, time has passed and you are no closer to reading the section on tracking. Done with reading for now, you put the book back, telling yourself that you will read the chapter next time.";
 	else:
-		If huntfeat is 1:
+		if huntfeat is 1:
 			say "     You figure you're ready for another go at [bold type]The Hunter's Almanac[roman type] and decide to skip to the chapter about following your quarry's tracks to read the finer ways of tracking. Even though you intended to just skim it, you find that there's a lot of good points made and find an unoccupied chair to relax in and read. When you're done reading the chapter you snap the book close with a smile, optimistic that whatever you're looking for will now be easier to find.";
 			FeatGain "Expert Hunter";
 		else:
@@ -234,13 +211,17 @@ To say thab:
 			now thabread is turns;
 			now huntfeat is 1;
 	now lastbookshelves is turns;
-	Follow the turnpass rule;
+	follow the turnpass rule;
 
 To say myse:
-	If myseread - turns < 12 and purfeat is 1:
+	if "Weak Psyche" is listed in feats of Player:
+		say "     You come across a self-esteem book while browsing a shelf. Your curiosity getting the best of you, you pull it out and scan through it real quick before putting it back, deciding that it won't help you the way you are now and don't need any advice the book might give.";
+	else if "Strong Psyche" is listed in feats of Player:
+		say "     [if purfeat is 1]While browsing through the self-improvement shelves for any other books that might help, you happen across [bold type]Maintaining Your Self-esteem[roman type]. Feeling that you've gotten as much advice as you can out of it, you continue to look over the titles of the other books[else]You come across a self-esteem book while browsing through the self-improvement shelves. Pulling it out, you scan through it real quick before putting it back, deciding that you already feel pretty good about yourself and your inner peace of mind[end if].";
+	else if myseread - turns < 12 and purfeat is 1:
 		say "     As you wander the bookstore, you find yourself back in the self-improvement section. Since you are here, you decide to pick back up where you left off with [bold type]Maintaining Your Self-esteem[roman type]. You find the book and head to a chair to get comfy before reading. Just like last time, you find the novel informative, but dull. You read for just a little bit more until you can't keep your eyes open. Snapping the book closed you return it to the shelf, telling yourself that you will finish the book no matter what.";
 	else:
-		If purfeat is 1:
+		if purfeat is 1:
 			say "     You head back to the self-improvement section to pull the self-help book off the shelf, find an unoccupied chair to sit in, and pick up where you left off. Only when Beverly comes over to check on you do you look up. After blinking a couple times, you chuckle quietly and tell her you're OK. Spending a little more time with the book, you glean as much info as you can from it until you feel that you have more of a mental grip of your current situation.";
 			FeatGain "Strong Psyche";
 		else:
@@ -248,13 +229,15 @@ To say myse:
 			now myseread is turns;
 			now purfeat is 1;
 	now lastbookshelves is turns;
-	Follow the turnpass rule;
+	follow the turnpass rule;
 
 To say hfgb:
-	If hfgbread - turns < 12 and hagfeat is 1:
+	if "Haggler" is listed in feats of Player:
+		say "     [if hagfeat is 1]You head back to the business and money section to see if there are any other books that might be of help to you. Seeing the spine for [bold type]How to Find a Good Bargain[roman type], you're tempted to read it once more. But only if there is nothing else good to read, you decide, and continue to browse the titles[else]While looking through a stack of books on a table, you come across a book titled [bold type]How to Find a Good Bargain [roman type] by author I. M. Weasel. Chuckling to yourself, and thinking it a humor book, you look through it before realizing it's an actual book discussing the finer points of bartering. You manage to pick up a few pointers, but nothing more than that, and close it before continuing your search[end if].";
+	else if hfgbread - turns < 12 and hagfeat is 1:
 		say "     Your interest in [bold type]How to Find a Good Bargain[roman type] returning, you head back to the shelf where you left it. Not finding it, you spend a few minutes carefully scanning the books to make sure you haven't missed it. Still not finding it, you look around the store to see if maybe one of the rats has it, and find a couple of them sitting at a table reading a book. Wanting to see if it's the one you are looking for, you walk by them, take a glance, and see that it is. Disappointed, you head to the magazine rack to grab a magazine instead to read.";
 	else:
-		If hagfeat is 1:
+		if hagfeat is 1:
 			say "     Deciding that you want to get further into [bold type]How to Find a Good Bargain[roman type], you head back to the shelf to grab it then sit down to read. Before you even realize it, you're finished with the book. Having found it quite informative, you go back to re-read some of the finer points of bargaining. When you are done you put the book back on the shelf, confident that you are able to easily wheel and deal with anyone you come across.";
 			FeatGain "Haggler";
 		else:
@@ -262,6 +245,6 @@ To say hfgb:
 			now hfgbread is turns;
 			now hagfeat is 1;
 	now lastbookshelves is turns;
-	Follow the turnpass rule;
+	follow the turnpass rule;
 
 Brookstone Books ends here.

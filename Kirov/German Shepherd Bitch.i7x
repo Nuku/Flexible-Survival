@@ -21,8 +21,7 @@ gsbKatherine is usually false.
 [ 1 - met				]
 
 a postimport rule: [bugfixing rules for players that import savegames]
-	choose row with Name of "German Shepherd Bitch" from Table of Random Critters;
-	now area entry is "Outside";
+	now the area corresponding to a Name of "German Shepherd Bitch" in Table of Random Critters is "Outside";
 
 Section 1 - Monster Description
 
@@ -58,7 +57,7 @@ to say gsbDefeat:           [Scene for when the player defeats the GSB]
 		if Energy of Katherine > 2:
 			say "     The bitch looks back up at you from the ground, panting heavily in excitement. She's clearly turned on by being beaten by such a strong opponent. She gives you an imploring look as she whines in need, [if Energy of Katherine > 4]expecting you to claim her as your own. 'Please,' she begs in a needy voice. 'I need an Alpha to fuck me!'[else]but says nothing more. Perhaps she's starting to enjoy your victories over her.[end if]";
 		increase Energy of Katherine by 1;
-	say "     The fight with the bitch has gotten you a bit excited. If you wanted to have some fun, you could easily take this opportunity to use her for your own desires. [bold type]Do you take advantage of the fallen shepherd?[roman type][line break]";
+	say "[line break]     The fight with the bitch has gotten you a bit excited. If you wanted to have some fun, you could easily take this opportunity to use her for your own desires. [bold type]Do you take advantage of the fallen shepherd?[roman type][line break]";
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]

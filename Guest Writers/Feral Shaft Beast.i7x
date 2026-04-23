@@ -246,6 +246,8 @@ Section 3 - Miscellaneous
 
 [everyturn rule consolidated with Anthro Shaft Beast]
 
+Section 4 - Endings
+
 Table of GameEndings (continued)
 Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
 "Feral Shaft Beast Infection"	"Infection"	""	Feral Shaft Beast Infection rule	1000	false
@@ -259,6 +261,8 @@ This is the Feral Shaft Beast Infection rule:
 		else:
 			say "     You somehow manage to resist the Broodmother's charm. When the military arrives, you run deep into the wilderness, knowing that you're far too infectious and twisted to be allowed past the quarantine. You spend a long time living alone, far away from the will of the other shaft beasts. The isolation eventually allows you to break the shackles of the Mother's will until your mind is well and truly free.";
 			say "     One day, you're attacked by a massive wolf while scavenging for food. You quickly turn the tables and pin the lupine down, your instincts urging you to fuck and transform them into another of your kind. The experience rekindles your will to spread your strain, and you and your loyal companion set out to convert any and all who enter your territory. In time, you've amassed a small pack of feral monsters like yourself, developing a new neural network to coordinate attacks and share the pleasure of your conquests.";
+
+Section 5 - Drop Item
 
 Table of Game Objects (continued)
 name	desc	weight	object

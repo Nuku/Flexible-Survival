@@ -295,7 +295,6 @@ to salabind:
 					else:
 						say "     Stretched to her absolute limit, all it takes is a little more effort to send the thing flying back in her face. Flung onto her back with an audible snap, she appears to be stunned, leaving you to turn and make a run for it!";
 						cleanboundmemory;
-						now pewtergenitalcap is 0;
 						now Trixieexit is true;
 						follow the turnpass rule;
 				else:

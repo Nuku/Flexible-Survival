@@ -221,10 +221,10 @@ to say medkit use:
 		if CurrentMedkitSupplies < 1:
 			say "[bold type]You have used up the last of the medkit.[roman type][line break]";
 			ItemLoss medkit by 1 silently;
-			if "Expert Medic" is listed in feats of Player:
+			[if "Expert Medic" is listed in feats of Player:
 				now CurrentMedkitSupplies is 6;
 			else:
-				now CurrentMedkitSupplies is 5;
+				now CurrentMedkitSupplies is 5;]
 	else:
 		say "Since you're not hurt at all, you decide to keep your medical supplies intact for later.";
 

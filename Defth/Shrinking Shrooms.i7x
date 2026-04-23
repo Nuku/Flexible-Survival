@@ -24,7 +24,7 @@ to say ResolveEvent Mushroom Cave:
 		if Player consents:
 			LineBreak;
 			say "     You carefully pick some of the mushrooms and put them into your backpack, sighing happily that you didn't shrink while doing so.";
-			ItemGain glowing mushroom by 3 silently;
+			ItemGain glowing mushroom by 3;
 			now Resolution of Mushroom Cave is 1; [picked shrooms #1]
 		else:
 			LineBreak;
@@ -39,7 +39,7 @@ to say ResolveEvent Mushroom Cave:
 		if Player consents:
 			LineBreak;
 			say "     You carefully pick some of the mushrooms and put them into your backpack, sighing happily that you didn't shrink while doing so.";
-			ItemGain Glowing mushroom by 3 silently;
+			ItemGain Glowing mushroom by 3;
 			now Resolution of Mushroom Cave is 3; [picked shrooms]
 		else:
 			LineBreak;
@@ -624,7 +624,7 @@ to say BitchDive:
 		now Resolution of Little Trouble is 10; [shrunk, eaten by bitch, anal way out]
 		now little trouble is resolved;
 
-Section 2 - More Events
+Section 4 - More Events
 
 [By Gherod]
 
@@ -657,35 +657,82 @@ to say ResolveEvent Ballsy Hung Horseman:
 			say "     During your stay at the Stables, you see no lack of fine equine-looking men, women, and even somewhere in between these binary designations of gender, doing their turns and awaiting eager partners to share hot and intimate moments with. You have to be especially wary of those tall and burly horsemen who could definitely pose a threat to your safety, as some of them seem to be guards. But in your mindful stroll across the whorehouse, someone catches your attention as they see you passing by. One none other than, exactly one of those you were trying to avoid, except he does not seem hostile towards you. He has you in his sight, an especially strong looking [bold type]horseman[roman type] with a [bold type]very expansive bulge[roman type] confined in a pair of tight black leather pants, so indiscreet that your eyes are drawn to it in an instinctive reflex.";
 			say "     'My eyes are up here, cute stuff,' he says, and that makes you alert of what you are doing. He gives you a very suggestive smirk, understanding that you were probably enthralled by the size of his equipment. 'Like what you see?' asks the horseman, his ridiculously large bulge bouncing before your gaze, an obscene sight that not even a pair of pants could attenuate. 'I do get a lot of attention anywhere I go, hence why I prefer a more... reclusive corner.' He crosses his arms and examines you once more, almost giving you the feeling he is taking measures of your form with his eyes. 'Tell you what... I'll sate your curiosity if you bring me some of those [bold type]glowing mushrooms[roman type] from that one [bold type]mushroom cave[roman type]... You'll know what I'm talking about, if you've ever been there.'";
 			WaitLineBreak;
-			BHHShrinkingShroom;
+			say "     Knowing that you happen to be carrying at least one of those mushrooms that he mentioned, you are left with a decision to make. You can either mention that you, indeed, have one and would like to proceed with the trade in exchange for what he offers, lie and say you don't have any so you can leave for now, or simply decide to ignore him forever and avoid any further encounters with him.";
+			say "     [link](1)[as]1[end link] - Let him know you have what he asks for.";
+			say "     [link](2)[as]2[end link] - Lie and be on your way, for now.";
+			say "     [link](3)[as]3[end link] - Lie and go away, forever avoiding him for the future.";
+			now calcnumber is 0;
+			while calcnumber < 1 or calcnumber > 3:
+				say "Choice? (1-3)> [run paragraph on]";
+				get a number;
+				if calcnumber < 1 or calcnumber > 3:
+					say "Invalid choice. Type [link]1[end link] to present the mushroom to him, [link]2[end link] to lie and make your leave or [link]3[end link] to simply go away and ignore him forever, for the future.";
+			LineBreak;
+			if calcnumber is 1:
+				say "     You nod, informing him that you, indeed, have glowing mushrooms with you. He then asks you to follow him into a more [']private['] spot...";
+				WaitLineBreak;
+				say "[BHHScene1]";
+			else if calcnumber is 2:
+				say "     You put up your saddest expression and inform him that, sadly, you have none of those special mushrooms with you. 'I see. What a pity... I'll have to look for someone else,' he replies, as you continue on your way, not minding the hung horseman for some time.";
+			else:
+				say "     You put up your saddest expression and inform him that, sadly, you have none of those special mushrooms with you. 'I see. What a pity... I'll have to look for someone else,' he replies, and perhaps, avoiding him would be the best move, you think. From now on, even if you see this horseman, you shall ignore him with the best of your abilities. If you can avoid this area in general, even better! You definitely will not see him again.";
+				now Ballsy Hung Horseman is resolved; [resolves the event, to never appear again]
 	else: [was CV'd by him at least once]
 		say "     During your stay at the Stables, you see no lack of fine equine-looking men, women, and even somewhere in between these binary designations of gender, doing their turns and awaiting eager partners to share hot and intimate moments with. You have to be especially wary of those tall and burly horsemen who could definitely pose a threat to your safety, as some of them seem to be guards. But in your mindful stroll across the whorehouse, someone catches your attention as they see you passing by. One none other than, exactly one of those you were trying to avoid, except he does not seem hostile towards you. He has you in his sight, an especially strong looking [bold type]horseman[roman type] with a [bold type]very expansive bulge[roman type] confined in a pair of tight black leather pants, so indiscreet that your eyes are drawn to it in an instinctive reflex.";
 		say "     'My eyes are up here, cute stuff,' he says, and that makes you alert of what you are doing. He gives you a very suggestive smirk, understanding that you were probably enthralled by the size of his equipment. 'Like what you see?' asks the horseman, his ridiculously large bulge bouncing before your gaze, an obscene sight that not even a pair of pants could attenuate. Though, to your surprise or not, the horseman seems to recognize you. 'Ah! Look who it is! Did you miss me? Or the hot and tight confines of my cum-flooded balls?' he asks, giving the area of his bulge respective to his massive nutsack a good rub as he talks. 'If you want another temporary go, just bring another one of those [bold type]glowing mushrooms[roman type] and I'll let you in again... Perhaps this time you'll want to stay longer...'";
 		WaitLineBreak;
 		say "     'But I suppose we could also do other things, now that we know each other better. We don't always need to use the mushrooms... or, at least, not right away.' The horseman smirks as you think about what to say.";
-		say "[BallsyHungHorsemanSexMenu]";
-
-to BHHShrinkingShroom:
-	say "     Knowing that you happen to be carrying at least one of those mushrooms that he mentioned, you are left with a decision to make. You can either mention that you, indeed, have one, and would like to proceed with the trade in exchange for what he offers, lie and say you don't have any so you can leave for now, or simply decide to ignore him forever and avoid any further encounters with him.";
-	say "     [link](1)[as]1[end link] - Let him know you have what he asks for.";
-	say "     [link](2)[as]2[end link] - Lie and be on your way, for now.";
-	say "     [link](3)[as]3[end link] - Lie and go away, forever avoiding him for the future.";
-	now calcnumber is 0;
-	while calcnumber < 1 or calcnumber > 3:
-		say "Choice? (1-3)> [run paragraph on]";
-		get a number;
-		if calcnumber < 1 or calcnumber > 3:
-			say "Invalid choice. Type [link]1[end link] to present the mushroom to him, [link]2[end link] to lie and make your leave or [link]3[end link] to simply go away and ignore him forever, for the future.";
-	LineBreak;
-	if calcnumber is 1:
-		say "     You nod, informing him that you, indeed, have glowing mushrooms with you. He then asks you to follow him into a more [']private['] spot...";
-		WaitLineBreak;
-		say "[BHHScene1]";
-	else if calcnumber is 2:
-		say "     You put up your saddest expression and inform him that, sadly, you have none of those special mushrooms with you. 'I see. What a pity... I'll have to look for someone else,' he replies, as you continue on your way, not minding the hung horseman for some time.";
-	else:
-		say "     You put up your saddest expression and inform him that, sadly, you have none of those special mushrooms with you. 'I see. What a pity... I'll have to look for someone else,' he replies, and perhaps, avoiding him would be the best move, you think. From now on, even if you see this horseman, you shall ignore him with the best of your abilities. If you can avoid this area in general, even better! You definitely will not see him again.";
-		now Ballsy Hung Horseman is resolved; [resolves the event, to never appear again]
+		say "[line break]     [bold type]How will you handle this situation? Is there anything you want to do with this well-endowed horseman?[roman type][line break]";
+		now sextablerun is 0;
+		blank out the whole of table of fucking options;
+		[]
+		if carried of glowing mushroom > 0:
+			choose a blank row in table of fucking options;
+			now title entry is "Eat a mushroom and get cock vored";
+			now sortorder entry is 1;
+			now description entry is "Just eat another shrinking shroom for his wicked pleasure";
+		[]
+		choose a blank row in table of fucking options;
+		now title entry is "Offer to fist his dick";
+		now sortorder entry is 2;
+		now description entry is "Your arm should be able to fit that urethra, propose him that";
+		[]
+		if Player is male:
+			choose a blank row in table of fucking options;
+			now title entry is "Offer to fuck his cock";
+			now sortorder entry is 3;
+			now description entry is "With a cock smaller than, at least, an arm, you should be able to fuck his, on the slit. Ask him that";
+		[]
+		sort the table of fucking options in sortorder order;
+		repeat with y running from 1 to number of filled rows in table of fucking options:
+			choose row y from the table of fucking options;
+			say "[link][y] - [title entry][as][y][end link][line break]";
+		say "[link]0 - Nevermind[as]0[end link][line break]";
+		while sextablerun is 0:
+			say "Pick the corresponding number> [run paragraph on]";
+			get a number;
+			if calcnumber > 0 and calcnumber <= the number of filled rows in table of fucking options:
+				now current menu selection is calcnumber;
+				choose row calcnumber in table of fucking options;
+				say "[title entry]: [description entry]?";
+				if Player consents:
+					LineBreak;
+					now sextablerun is 1;
+					if title entry is:
+						-- "Eat a mushroom and get cock vored":
+							say "[BHHScene1]";
+						-- "Offer to fist his dick":
+							say "[BHHFistCock]";
+						-- "Offer to fuck his cock":
+							say "[BHHFuckCock]";
+			else if calcnumber is 0:
+				LineBreak;
+				now sextablerun is 1;
+				say "     You have nothing to do with this horseman, so you shall only be on your way. He only shrugs, not stopping you from leaving.";
+			else:
+				say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options], or 0 to exit.";
+		wait for any key;
+		clear the screen and hyperlink list;
 
 to say BHHScene1:
 	if Resolution of Ballsy Hung Horseman is 0: [first time]
@@ -771,59 +818,6 @@ to say BHHScene1:
 			say "     ...But then, you feel your world spinning, that comfortable warmth suddenly disappearing from around you, replaced with a cold breeze and a hard surface. You feel completely exhausted as you open your eyes and glance around you. You are outside the horseman, and on a pile of dirt still near the Stables. All over your body, however, is his cum, already drying up. It looks like you have been here for a while since he came you out of his balls, and back to your original size, no less... [bold type]So that explains why he could not keep you inside any longer[roman type]! Now you have to find yourself a way to clean yourself up. Fortunately, the hung equine had the decency to bring all of your stuff to you once he was done with his trickery.";
 			LibidoBoost 40;
 			SanLoss 30;
-
-to say BallsyHungHorsemanSexMenu:
-	say "[line break]     [bold type]How will you handle this situation? Is there anything you want to do with this well-endowed horseman?[roman type][line break]";
-	now sextablerun is 0;
-	blank out the whole of table of fucking options;
-	[]
-	if carried of glowing mushroom > 0:
-		choose a blank row in table of fucking options;
-		now title entry is "Eat a mushroom and get cock vored";
-		now sortorder entry is 1;
-		now description entry is "Just eat another shrinking shroom for his wicked pleasure";
-	[]
-	choose a blank row in table of fucking options;
-	now title entry is "Offer to fist his dick";
-	now sortorder entry is 2;
-	now description entry is "Your arm should be able to fit that urethra, propose him that";
-	[]
-	if Player is male:
-		choose a blank row in table of fucking options;
-		now title entry is "Offer to fuck his cock";
-		now sortorder entry is 3;
-		now description entry is "With a cock smaller than, at least, an arm, you should be able to fuck his, on the slit. Ask him that";
-	[]
-	sort the table of fucking options in sortorder order;
-	repeat with y running from 1 to number of filled rows in table of fucking options:
-		choose row y from the table of fucking options;
-		say "[link][y] - [title entry][as][y][end link][line break]";
-	say "[link]0 - Nevermind[as]0[end link][line break]";
-	while sextablerun is 0:
-		say "Pick the corresponding number> [run paragraph on]";
-		get a number;
-		if calcnumber > 0 and calcnumber <= the number of filled rows in table of fucking options:
-			now current menu selection is calcnumber;
-			choose row calcnumber in table of fucking options;
-			say "[title entry]: [description entry]?";
-			if Player consents:
-				LineBreak;
-				now sextablerun is 1;
-				if title entry is:
-					-- "Eat a mushroom and get cock vored":
-						say "[BHHScene1]";
-					-- "Offer to fist his dick":
-						say "[BHHFistCock]";
-					-- "Offer to fuck his cock":
-						say "[BHHFuckCock]";
-		else if calcnumber is 0:
-			LineBreak;
-			now sextablerun is 1;
-			say "     You have nothing to do with this horseman, so you shall only be on your way. He only shrugs, not stopping you from leaving.";
-		else:
-			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options], or 0 to exit.";
-	wait for any key;
-	clear the screen and hyperlink list;
 
 to say BHHFistCock:
 	say "     Knowing that the horseman seems open to some other options, you ask him if, instead of going for a mushroom, he would be happy to try something else, perhaps using only your hands.";

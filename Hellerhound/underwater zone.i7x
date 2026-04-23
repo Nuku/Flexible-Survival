@@ -76,11 +76,11 @@ to say sea dragon cum use:
 			LineBreak;
 			say "     You rub the thick stuff into your waiting [if Player is female]cunt[else]asshole[end if], massaging it in. You moan in pleasure as you work the thick cum deep inside you.";
 			if ((Player is MalePreferred or a random chance of one in two succeeds) and MaleList is not banned) or FemaleList is banned:
-				infect "Feral Sea Dragon";
 				impregnate with "Feral Sea Dragon";
+				infect "Feral Sea Dragon";
 			else:
-				infect "Feral Sea Dragoness";
 				impregnate with "Feral Sea Dragoness";
+				infect "Feral Sea Dragoness";
 	else:
 		if ((Player is MalePreferred or a random chance of one in two succeeds) and MaleList is not banned) or FemaleList is banned:
 			infect "Feral Sea Dragon";
@@ -93,19 +93,19 @@ to swimmingfight:
 	let T be a random number between one and 10;
 	if T is 1:
 		if FeralList is banned or MaleList is banned:
-			increase T by 1;
+			increase T by a random number between 1 and 3;
 		else:
 			say "     As you [if rowing is true]row[else]swim[end if], you spot a sleek and streamlined blue form cutting through the water. As the draconic serpent draws closer, you [if rowing is true]row[else]swim[end if] as quickly as you can to a nearby rocky outcropping and prepare to face the fearsome beast.";
 			challenge "Feral Sea Dragon"; [duh case, all three ways]
 	if T is 2:
 		if FeralList is banned or FemaleList is banned:
-			increase T by 1;
+			increase T by a random number between 1 and 2;
 		else:
 			say "     As you [if rowing is true]row[else]swim[end if], you spot a sleek and streamlined blue form cutting through the water. As the draconic serpent draws closer, you [if rowing is true]row[else]swim[end if] as quickly as you can to a nearby rocky outcropping and prepare to face the fearsome beast.";
 			challenge "Feral Sea Dragoness";
 	if T is 3:
 		if FurryList is banned or HermList is banned:
-			increase T by 1;
+			increase T by a random number between 1 and 2;
 		else:
 			challenge "Dolphin Herm";
 	if T is 4:

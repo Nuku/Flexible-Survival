@@ -20,7 +20,7 @@ to say ebwhelpvic:
 		else:
 			now tempnum is 0;
 	else:
-		if Player is not female and Player is male_vacant and ((anallevel is 2 and (Player is kinky or Player is mpreg_ok)) or anallevel is 3) and (a random chance of 3 in 4 succeeds or birthedwhelp is true):
+		if Player is not female and Player is male_vacant and ((anallevel is 2 and (Player is kinky or "MPreg" is listed in feats of Player)) or anallevel is 3) and (a random chance of 3 in 4 succeeds or birthedwhelp is true):
 			now tempnum is 2;
 		else if Player is female and Player is fem_vacant and (a random chance of 3 in 4 succeeds or birthedwhelp is true):
 			now tempnum is 1;

@@ -15,8 +15,10 @@ to say tauruswon:
 	else:
 		say "     The bull sniffs your crotch, but with the lack of any female genitalia, he swiftly loses sexual interest in you. Problem is... if you're not a mate for him, you are competition. Kicking you with a large hoof, he throws you on the grass, and you roll a few times before coming to a rest. Despite the pain, you count yourself lucky to have survived the encounter.";
 
-[to say tauruslost:
-	[Maybe there is a way to bound the bull instead, you could do something with him]]
+[
+to say tauruslost:
+	[Maybe there is a way to bound the bull instead, you could do something with him]
+]
 
 Section 2 - Creature Insertion
 

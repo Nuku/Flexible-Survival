@@ -234,8 +234,7 @@ to say TameTehuantl:
 	WaitLineBreak;
 	move Tehuantl to Grey Abbey 2F;
 	move player to Grey Abbey 2F;
-	choose row with Name of "Jaguar Warrior" from Table of Random Critters;
-	now area entry is "Nowhere";
+	now the area corresponding to a Name of "Jaguar Warrior" in Table of Random Critters is "Nowhere";
 	now Energy of Tehuantl is turns;
 
 Section 2 - Creature Insertion
@@ -456,15 +455,13 @@ to say JaguarHeaddressUse:
 			if BodyName of Player is "Jaguar Warrior":
 				say "[line break]     You drop to a knee as you feel a surge of heat roll through you, your feline physique shifting as the power of the jaguar headdress you're wearing ripples through your feline body, remaking you into a powerful jungle predator.";
 			if Player is not FemalePreferred:
-				choose row with Name of "Jaguar Warrior" from Table of Random Critters;
-				now sex entry is "Both";
+				now the sex corresponding to a Name of "Jaguar Warrior" in Table of Random Critters is "Both";
 			now hoodequipped is true;
 	else if hoodequipped is true:
 		if BodyName of Player is "Jaguar Warrior":
 			say "[line break]     No longer under the influence of the jaguar headdress, you feel your warrior's physique burning away, leaving your feline form lithe and more delicate as the last of its power drains out of you.";
 		if Player is not MalePreferred:
-			choose row with Name of "Jaguar Warrior" from Table of Random Critters;
-			now sex entry is "Female";
+			now the sex corresponding to a Name of "Jaguar Warrior" in Table of Random Critters is "Female";
 		now hoodequipped is false;
 
 An everyturn rule:
@@ -473,16 +470,14 @@ An everyturn rule:
 			if BodyName of Player is "Jaguar Warrior":
 				say "     You drop to a knee as you feel a surge of heat roll through you, your feline physique shifting as the power of the jaguar headdress you're wearing ripples through your feline body, remaking you into a powerful jungle predator.";
 			if Player is not FemalePreferred:
-				choose row with Name of "Jaguar Warrior" from Table of Random Critters;
-				now sex entry is "Both";
+				now the sex corresponding to a Name of "Jaguar Warrior" in Table of Random Critters is "Both";
 			now hoodequipped is true;
 		infect "Jaguar Warrior";
 	else if hoodequipped is true:
 		if BodyName of Player is "Jaguar Warrior":
 			say "     No longer under the influence of the jaguar headdress, you feel your warrior's physique burning away, leaving your feline form lithe and more delicate as the last of its power drains out of you.";
 		if Player is not MalePreferred:
-			choose row with Name of "Jaguar Warrior" from Table of Random Critters;
-			now sex entry is "Female";
+			now the sex corresponding to a Name of "Jaguar Warrior" in Table of Random Critters is "Female";
 		now hoodequipped is false;
 
 Table of Game Objects (continued)

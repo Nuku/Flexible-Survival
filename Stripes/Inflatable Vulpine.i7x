@@ -209,8 +209,7 @@ to say infvulp_reset:
 Section 3 - Everyturn Airhead
 
 an everyturn rule:
-	now tempnum is intelligence of Player + 6;
-	increase tempnum by humanity of Player / 10;
+	now tempnum is intelligence of Player + 6 + ( humanity of Player / 10 );
 	decrease tempnum by Libido of Player / 10;
 	if a random chance of 5 in tempnum succeeds and last_infvulp_airhead - 2 > turns:
 		if FaceName of Player is "Inflatable Vulpine" or BodyName of Player is "Inflatable Vulpine":

@@ -37,7 +37,7 @@ When Play begins:
 	now enemy title entry is ""; [ Name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name. ]
 	now enemy Name entry is ""; [ Specific name of unique enemy. ]
 	now enemy type entry is 0; [ 0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters. ]
-	now attack entry is "[didnotsubmit][one of]One of the vines slaps your thigh, leaving a small bruise[or]A vine makes a downward motion on your head, clubbing you with surprising strength[or]You barely evade one of the vines attempting to grab your arm, leaving instead a shallow cut on your skin[or]One of the vines manages to get around your neck, choking you until you can pull it off and gasp for air[at random]."; [Text used when the monster makes an Attack]
+	now attack entry is "[one of]One of the vines slaps your thigh, leaving a small bruise[or]A vine makes a downward motion on your head, clubbing you with surprising strength[or]You barely evade one of the vines attempting to grab your arm, leaving instead a shallow cut on your skin[or]One of the vines manages to get around your neck, choking you until you can pull it off and gasp for air[at random]."; [Text used when the monster makes an Attack]
 	now defeated entry is "     As you give one last blow to the flower, you watch it ted progressively, a sappy substance escaping from the wounds.[line break]"; [ Text or say command used when Monster is defeated.]
 	now victory entry is "[ManEatingPlantVoreScene]"; [Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block as the demonstration text shows.]
 	now desc entry is "     You attempt to walk around the big trees on your path when movement in the corner of your vision alerts you. Rooted into the bark of one of the trees, a large plant opens its petals, showing a multi-color inner pattern, going deep inside the tree. Vines begin to flail dangerously around you, trying to snatch you. You stay on your guard as you decide what to do with the mutated vegetal.[line break]"; [ Description of the creature when you encounter it.]
@@ -288,7 +288,7 @@ to manEatingPlantVore:
 			the Player was ended by "Vore by Man-eating Plant";
 			end the story saying "You became plant nanite nutriment.";
 		else:
-			say "     You are trapped into the skin-tight confines of a man-eating plant's feeding pod. The silky-soft skin of the pod is keeping you vacuum-sealed inside the pod, preventing you from moving more than a couple of centimeters. The top of the pod is still open, letting a small stream of aphrodisiac-laced air reach your lungs. You imagine your only active option is to [bold type]S[roman type]truggle enough until it lets you go, else you can [if obliging is true][bold type]O[roman type]blige[else][bold type]A[roman type]bide[end if] it, or [if boundrecover is true][bold type]R[roman type]ecover from[else][bold type]E[roman type]ndure[end if] these questionable circumstances.";
+			say "     You are trapped into the skin-tight confines of a man-eating plant's feeding pod. The silky-soft skin of the pod is keeping you vacuum-sealed inside the pod, preventing you from moving more than a couple of centimeters. The top of the pod is still open, letting a small stream of aphrodisiac-laced air reach your lungs. You imagine your only active option is to [bold type]S[roman type]truggle enough until it lets you go, else you can [if obliging is true][bold type]O[roman type]blige[else][bold type]A[roman type]bide[end if] it or [if boundrecover is true][bold type]R[roman type]ecover from[else][bold type]E[roman type]ndure[end if] these questionable circumstances.";
 			now enduring is false;
 			say "[bold type]1[roman type] - [link]Struggle[as]1[end link][line break]";
 			say "[bold type]2[roman type] - [link][if obliging is true]Oblige[else]Abide[end if][as]2[end link][line break]";
@@ -309,7 +309,6 @@ to manEatingPlantVore:
 				say "     [if struggleatt < 3]You push with all your strength against the tight material. Fortunately for you, it is not completely sealed around your body, thanks to the small airhole, and this permits you to use the small leeway to give you more liberty[else if struggleatt is 3]The pod becomes more and more saggy, as you make air reach inside. Having a good feeling, you begin to kick and claw the ways of your prison[else]With a loud ripping sound, the plant's skin gives way under your efforts. A gush of light and fresh air fills your prison and your body flops outside, in a growing puddle of plant sap. Even if the plant seems to have been fatally wounded, you cautiously put as much distance as possible between it and you, and any other suspicious tree for that matter[end if].";
 				if struggleatt > 3:
 					cleanboundmemory;
-					now pewtergenitalcap is 0;
 					now Trixieexit is true;
 					follow the turnpass rule;
 				else:

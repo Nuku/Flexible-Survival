@@ -29,22 +29,22 @@ understand "libidopill [visible person]" as pillgiving.
 check pillgiving someone (called x):
 	if libido pill is not owned:
 		say "It'd be easier to do that if you even had one." instead;
-	else if x is Trixie:
+	if x is Trixie:
 		say "     'Silly, that's not going to work on me. I'm not really here at all,' she says in a wavering voice while waving her arms around mystically. 'OooOOooOOOOooo!'" instead;
-	else if x is Velos:
+	if x is Velos:
 		say "     'Umm... I don't think that'll work on me, given my current state. Besides, I'm kind of disturbed that you'd even offer it to me.'" instead;
-	else if x is Doctor Matt:
+	if x is Doctor Matt:
 		say "     Doctor Matt looks suspiciously at the pill you offer him. He takes a few steps towards the back wall of the room, hovering his hand over the intercom. 'You can't expect me to open my suit and take such a thing? You're not going feral on me, are you? Control yourself, or I'll have to call Orthas!'" instead;
-	else if (x is Elijah and HP of Elijah < 4) or (x is Anastasia and HP of Anastasia < 5) or (x is Solstice and HP of Solstice < 5) or (x is Kristen and HP of Kristen > 10 and HP of Kristen < 16) or (x is Onyx and HP of Onyx is 9):
+	if (x is Elijah and HP of Elijah < 4) or (x is Anastasia and HP of Anastasia < 5) or (x is Solstice and HP of Solstice < 5) or (x is Kristen and HP of Kristen > 10 and HP of Kristen < 16) or (x is Onyx and HP of Onyx is 9):
 		say "Now is probably not a good time for that." instead;
-	else if x is Rod Mallrat and HP of Ronda Mallrat < 100:
+	if x is Rod Mallrat and HP of Ronda Mallrat < 100:
 		say "Rod has no interest in taking those or trading for them." instead;
 	[character specific restrictions, such as when the <lastfuck of x> variable is used for other things, would go here.]
-	else if x is a pet and fuckscene of x is empty:
+	if x is a pet and fuckscene of x is empty:
 		say "There's little point in giving a pill to them." instead;
-	else if lastfuck of the x >= 255:
+	if lastfuck of the x >= 255:
 		say "They're not prepared to take one of those from you at this time." instead;
-	else if lastfuck of the x is 254 or lastfuck of the x - turns >= 24:
+	if lastfuck of the x is 254 or lastfuck of the x - turns >= 24:
 		say "They're as ready as they're going to be." instead;
 
 carry out pillgiving someone (called x):

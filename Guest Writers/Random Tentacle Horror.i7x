@@ -15,7 +15,7 @@ eggplanted is a number that varies.
 thmpregdetect is a truth state that varies. thmpregdetect is usually false.
 
 to say horror victory:
-	if (Player is MalePreferred and (Player is female or Player is not mpreg_ok)) or Player is sterile:
+	if (Player is MalePreferred and (Player is female or "MPreg" is not listed in feats of Player)) or Player is sterile:
 		say "     The many tentacles wrap around you, eager to abuse, when they seem to notice something. Being entirely useless for their needs, the creature hurls you to the ground in disgust, but then leaves you.";
 		now lasttentaclebattleoutcome is 5;
 	else if gestation of child > 0:
@@ -25,7 +25,7 @@ to say horror victory:
 		else:
 			say "     The many tentacles wrap around you, eager to abuse, when they seem to notice something. Being entirely useless for their needs, the creature hurls you to the ground in disgust, but then leaves you.";
 			now lasttentaclebattleoutcome is 5;
-	else if Player is not female and Player is mpreg_ok:
+	else if Player is not female and "MPreg" is listed in feats of Player:
 		if tentaclerape is 0:
 			if HP of Player > 0:
 				say "     As you lie down in a clear sign of submission, the creature approaches you excitedly, extending its many tentacles towards you as it does so. The creature wraps you in its slime-coated appendages and flips you over, handling you like a prized possession. Tentacles crawl over your body and under your clothing before pulling away, ripping the garments from your body. A slimy tentacle probes over your body as the creature draws you closer. As the tendril glides between your ass cheeks, the tentacled monstrosity releases a gurgle of surprised delight upon detecting the secret hidden within your derriere.";
@@ -131,23 +131,23 @@ to say horror victory:
 					now lasttentaclebattleoutcome is 5;
 			if Player is not female:
 				say "     It starts searching your body for certain characteristics. Rubbing across your groin and finding no useful genitals for its purpose, it drops you unceremoniously and starts to drag itself away from you, back into the shadows. All alone, and sexually charged with no easy way of experiencing the release of orgasm, you whimper into the darkness. Hours later, you finally regain enough strength to stand and trudge your aching body out of the basement.";
-				stop the action;
-			say "     A tentacle twice the size of the others forces its way inside of you, filling you [if Cunt Depth of Player < 15 or Cunt Tightness of Player < 12]far beyond your orifice's capacity and stretching you deeper and wider until it is once again the size it had after the last time the monster raped you[else]to your limit[end if]. It pounds within you, battering your cervix, before finally gaining entrance[if Cunt Count of Player > 2]. Other tentacles thrust relentlessly in and out of all of the cunts the extra large appendage isn't stuffed into[else if Cunt Count of Player is 2]. Another tentacle thrusts relentlessly in and out of the cunt the extra large appendage isn't stuffed into[end if].";
-			if Player is male:
-				say "     [if Cock Count of Player is 1]A tentacle brings your cock to full arousal, and wraps around it, jerking your member relentlessly. You quickly climax launching seed across the floor below you[else]The tentacles holding you quickly bring your multiple dicks to erection, wrapping all around them, and forcing them against each other. The creature's appendages quickly jerk around your members for a few moments, then swap to rubbing your cocks against one another, then return to jerking your members off again. The sensations from this, in addition to the feeling of the huge tentacle pounding into you, cause you to quickly explode, launching your seed against the floor. The tentacles continue to jerk against your members long after your balls are empty and a puddle of your seed has collected beneath you[end if].";
-			CreatureSexAftermath "Player" receives "PussyDildoFuck" from "Tentacle Horror";
-			WaitLineBreak;
-			say "     After countless orgasms, your body barely responds to the attentions of the tentacles, your mind lost in a haze of pleasure. However, your eyes go wide as you feel a watermelon-sized bulge traveling up the large tentacle wrapped around your leg and buried in your abused snatch. The bulge reaches your already over-stimulated lips and begins to stretch them far beyond what should be possible, the secretions around the tentacle somehow helping your female gender stretch far more elastically than normal. There's a feeling of surrender as the bulge finally passes its widest point and slips inside of you, coming to rest inside your battered womb.";
-			if a random chance of 95 in 100 succeeds or Cunt Count of Player is 1: [The tentacles in the other cunt(s) might just explode!]
-				say "     As the tentacle removes itself from your body the creature seems to [if HP of Player > 0]hesitate for a moment, then seems to lose interest and sets you down on the ground[else]lose interest and drops you to the ground, leaving you alone to recover[end if], the egg remaining unfertilized.";
-				now eggplanted is 1;
 			else:
-				say "     As the creature starts removing the largest tentacle from you, you [if HP of Player > 0]are saddened that the creature might not fertilize[else]believe it might let you go without fertilizing[end if] the egg this time. But just as you think it's about to remove the other tentacles, you suddenly feel them shudder, widen, and paint your womb with fertility cream and pushing your tired body to the point of yet another orgasm. Your belly swells to the point it looks about four months pregnant, a great deal of the cream flowing out of the pussy where the big tentacle was before.";
-				say "     The creature drops you and slithers off, leaving you to recover in the pool of liquids the assault created. As you regain your strength, you crawl back out of the basement.";
-				impregnate with "Tentacle Horror";
-			if (Cunt Depth of Player < 15 or Cunt Tightness of Player < 12) and "Modest Organs" is not listed in feats of Player:
-				now Cunt Depth of Player is 15;
-				now Cunt Tightness of Player is 12;
+				say "     A tentacle twice the size of the others forces its way inside of you, filling you [if Cunt Depth of Player < 15 or Cunt Tightness of Player < 12]far beyond your orifice's capacity and stretching you deeper and wider until it is once again the size it had after the last time the monster raped you[else]to your limit[end if]. It pounds within you, battering your cervix, before finally gaining entrance[if Cunt Count of Player > 2]. Other tentacles thrust relentlessly in and out of all of the cunts the extra large appendage isn't stuffed into[else if Cunt Count of Player is 2]. Another tentacle thrusts relentlessly in and out of the cunt the extra large appendage isn't stuffed into[end if].";
+				if Player is male:
+					say "     [if Cock Count of Player is 1]A tentacle brings your cock to full arousal, and wraps around it, jerking your member relentlessly. You quickly climax launching seed across the floor below you[else]The tentacles holding you quickly bring your multiple dicks to erection, wrapping all around them, and forcing them against each other. The creature's appendages quickly jerk around your members for a few moments, then swap to rubbing your cocks against one another, then return to jerking your members off again. The sensations from this, in addition to the feeling of the huge tentacle pounding into you, cause you to quickly explode, launching your seed against the floor. The tentacles continue to jerk against your members long after your balls are empty and a puddle of your seed has collected beneath you[end if].";
+				CreatureSexAftermath "Player" receives "PussyDildoFuck" from "Tentacle Horror";
+				WaitLineBreak;
+				say "     After countless orgasms, your body barely responds to the attentions of the tentacles, your mind lost in a haze of pleasure. However, your eyes go wide as you feel a watermelon-sized bulge traveling up the large tentacle wrapped around your leg and buried in your abused snatch. The bulge reaches your already over-stimulated lips and begins to stretch them far beyond what should be possible, the secretions around the tentacle somehow helping your female gender stretch far more elastically than normal. There's a feeling of surrender as the bulge finally passes its widest point and slips inside of you, coming to rest inside your battered womb.";
+				if a random chance of 95 in 100 succeeds or Cunt Count of Player is 1: [The tentacles in the other cunt(s) might just explode!]
+					say "     As the tentacle removes itself from your body the creature seems to [if HP of Player > 0]hesitate for a moment, then seems to lose interest and sets you down on the ground[else]lose interest and drops you to the ground, leaving you alone to recover[end if], the egg remaining unfertilized.";
+					now eggplanted is 1;
+				else:
+					say "     As the creature starts removing the largest tentacle from you, you [if HP of Player > 0]are saddened that the creature might not fertilize[else]believe it might let you go without fertilizing[end if] the egg this time. But just as you think it's about to remove the other tentacles, you suddenly feel them shudder, widen, and paint your womb with fertility cream and pushing your tired body to the point of yet another orgasm. Your belly swells to the point it looks about four months pregnant, a great deal of the cream flowing out of the pussy where the big tentacle was before.";
+					say "     The creature drops you and slithers off, leaving you to recover in the pool of liquids the assault created. As you regain your strength, you crawl back out of the basement.";
+					impregnate with "Tentacle Horror";
+				if (Cunt Depth of Player < 15 or Cunt Tightness of Player < 12) and "Modest Organs" is not listed in feats of Player:
+					now Cunt Depth of Player is 15;
+					now Cunt Tightness of Player is 12;
 		else:
 			if Player is neuter: [implanted and genderless!? ZOMG!]
 				if HP of Player < 1 or Player is MalePreferred: [did not submit]

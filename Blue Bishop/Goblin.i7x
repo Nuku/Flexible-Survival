@@ -210,105 +210,69 @@ to say beatthegoblin:
 		now sextablerun is 0;
 		blank out the whole of table of fucking options;
 		[]
-		if gobgender is 1:	[female goblin]
-			if Player is male and Cock Length of Player < 13:
-				choose a blank row in table of fucking options;
-				now title entry is "Give vaginal";
-				now sortorder entry is 1;
-				now description entry is "Fuck the goblin";
+		if Player is male:
+			if Cock Length of Player < 13:
+				if gobgender is 1:	[female goblin]
+					choose a blank row in table of fucking options;
+					now title entry is "Give vaginal";
+					now sortorder entry is 1;
+					now description entry is "Fuck the goblin";
 				[]
 				choose a blank row in table of fucking options;
 				now title entry is "Give anal";
 				now sortorder entry is 2;
-				now description entry is "Do her in the ass";
-			[]
-			choose a blank row in table of fucking options;
-			now title entry is "Receive oral";
-			now sortorder entry is 3;
-			now description entry is "Enjoy some oral attention from her";
-			[]
-			sort the table of fucking options in sortorder order;
-			repeat with y running from 1 to number of filled rows in table of fucking options:
-				choose row y from the table of fucking options;
-				say "[link][y] - [title entry][as][y][end link][line break]";
-			say "[link]0 - Let her go[as]0[end link][line break]";
-			while sextablerun is 0:
-				say "Pick the corresponding number> [run paragraph on]";
-				get a number;
-				if calcnumber > 0 and calcnumber <= the number of filled rows in table of fucking options:
-					now current menu selection is calcnumber;
-					choose row calcnumber in table of fucking options;
-					say "[title entry]: [description entry]?";
-					if Player consents:
-						LineBreak;
-						now sextablerun is 1;
-						if title entry is:
-							-- "Give vaginal":
-								say "[fgob_vicsex1]";
-							-- "Give anal":
-								say "[fgob_vicsex2]";
-							-- "Receive oral":
-								say "[fgob_vicsex3]";
-				else if calcnumber is 0:
-					LineBreak;
-					now sextablerun is 1;
-					say "[gob_nosex]";
-				else:
-					say "Invalid Option. Pick between 0 and [the number of filled rows in the table of fucking options].";
-		else:	[male goblin]
+				now description entry is "Do [ghim] in the ass";
+		[]
+		if gobgender is 2:	[male goblin]
 			if Player is female:
 				choose a blank row in table of fucking options;
 				now title entry is "Receive vaginal";
 				now sortorder entry is 1;
 				now description entry is "Ride his cock";
 			[]
-			if Player is male:
-				if Cock Length of Player < 13:
-					choose a blank row in table of fucking options;
-					now title entry is "Give anal";
-					now sortorder entry is 2;
-					now description entry is "Do him in the ass";
-				else if Cock Length of Player > 47:
-					choose a blank row in table of fucking options;
-					now title entry is "Fuck his cock";
-					now sortorder entry is 4;
-					now description entry is "Use this small fry for some urethral pleasure";
-			[]
-			choose a blank row in table of fucking options;
-			now title entry is "Receive oral";
-			now sortorder entry is 3;
-			now description entry is "Enjoy some oral attention from him";
-			[]
-			sort the table of fucking options in sortorder order;
-			repeat with y running from 1 to number of filled rows in table of fucking options:
-				choose row y from the table of fucking options;
-				say "[link][y] - [title entry][as][y][end link][line break]";
-			say "[link]0 - Let him go[as]0[end link][line break]";
-			while sextablerun is 0:
-				say "Pick the corresponding number> [run paragraph on]";
-				get a number;
-				if calcnumber > 0 and calcnumber <= the number of filled rows in table of fucking options:
-					now current menu selection is calcnumber;
-					choose row calcnumber in table of fucking options;
-					say "[title entry]: [description entry]?";
-					if Player consents:
-						LineBreak;
-						now sextablerun is 1;
-						if title entry is:
-							-- "Receive vaginal":
-								say "[mgob_vicsex1]";
-							-- "Give anal":
-								say "[mgob_vicsex2]";
-							-- "Receive oral":
-								say "[mgob_vicsex3]";
-							-- "Fuck his cock":
-								say "[mgob_vicsex4]";
-				else if calcnumber is 0:
+			if Player is male and Cock Length of Player > 47:
+				choose a blank row in table of fucking options;
+				now title entry is "Fuck his cock";
+				now sortorder entry is 4;
+				now description entry is "Use this small fry for some urethral pleasure";
+		[]
+		choose a blank row in table of fucking options;
+		now title entry is "Receive oral";
+		now sortorder entry is 3;
+		now description entry is "Enjoy some oral attention from [ghim]";
+		[]
+		sort the table of fucking options in sortorder order;
+		repeat with y running from 1 to number of filled rows in table of fucking options:
+			choose row y from the table of fucking options;
+			say "[link][y] - [title entry][as][y][end link][line break]";
+		say "[link]0 - Let [ghim] go[as]0[end link][line break]";
+		while sextablerun is 0:
+			say "Pick the corresponding number> [run paragraph on]";
+			get a number;
+			if calcnumber > 0 and calcnumber <= the number of filled rows in table of fucking options:
+				now current menu selection is calcnumber;
+				choose row calcnumber in table of fucking options;
+				say "[title entry]: [description entry]?";
+				if Player consents:
 					LineBreak;
 					now sextablerun is 1;
-					say "[gob_nosex]";
-				else:
-					say "Invalid Option. Pick between 0 and [the number of filled rows in the table of fucking options].";
+					if title entry is:
+						-- "Give vaginal":
+							say "[fgob_vicsex1]";
+						-- "Receive vaginal":
+							say "[mgob_vicsex1]";
+						-- "Give anal":
+							say "[if gobgender is 1][fgob_vicsex2][else][mgob_vicsex2][end if]";
+						-- "Receive oral":
+							say "[if gobgender is 1][fgob_vicsex3][else][mgob_vicsex3][end if]";
+						-- "Fuck his cock":
+							say "[mgob_vicsex4]";
+			else if calcnumber is 0:		[let goblin go]
+				LineBreak;
+				now sextablerun is 1;
+				say "     Taking a deep breath, you resist the urge to descend to [ghis] level and instead growl menacingly at the fallen creature. [gche] scrambles away fearfully and makes a run for it, diving through a tight tunnel in one of the mounds of junk. Even if you could squeeze through there, you don't feel there's much point in pursuing [ghim] in there.";
+			else:
+				say "Invalid Option. Pick between 0 and [the number of filled rows in the table of fucking options].";
 
 to say fgob_vicsex1:	[f-gob vaginal sex]
 	say "     While she attempts to recover you move behind her, exposing your cock[smn] and driving [if Cock Count of Player > 1]one of them[else]it[end if] to arousal. Suddenly, you pounce on her, [if scalevalue of Player > 3]lifting her clean off the ground and impaling the poor lass[else]pinning her to the ground as you drill into her hole[end if] with your [cock size desc of Player] dick. She cries out, [if Cock Length of Player > 8]forced to contend with your sizable flesh[else]struggling in vain against your hold[end if].";
@@ -442,9 +406,6 @@ to say mgob_vicsex4:	[m-gob urethral sex]
 		say "     Pleasure twisted into pain, his throbbing dick unintentionally reinvites both his and your own [Cum Load Size of Player] load down his pipe. Writhing about in exhausting ecstasy, you're able to partially observe him as you contend with your orgasm, his balls blatantly bulging with each successive gout of cum, [if Ball Size of Player >= 5]the beleaguered orbs reaching an absurd size in order to contain your excessive release[else]eliciting moaning cries as he contends with a sensation no doubt substantially more intense than what you previously contended with[end if].";
 		say "     Eventually you're able to recover from the ordeal, pulling your dick free of the goblin's. He slowly pulls himself to his feet, cock dripping cum. His [if Ball Size of Player >= 5]struggles to retreat while contending with such an awkwardly large sack is a rather amusing sight to behold[else]endeavors to retreat are slightly hindered by his sore and somewhat bloated sack[end if]. Watching him stagger his way to a goblin tunnel in one of the nearby junk piles, he scrambles to safety, leaving you free to go on your merry way.";
 	CreatureSexAftermath "Goblin" receives "Other" from "Player";
-
-to say gob_nosex:		[let goblin go]
-	say "     Taking a deep breath, you resist the urge to descend to [ghis] level and instead growl menacingly at the fallen creature. [gche] scrambles away fearfully and makes a run for it, diving through a tight tunnel in one of the mounds of junk. Even if you could squeeze through there, you don't feel there's much point in pursuing [ghim] in there.";
 
 to say goblindesc:
 	say "     You encounter what appears to be a [if gobgender is 1]female goblin. Face and ears long and pointed in structure, her skin is leathery brown and green. Nary an inch over four feet in height, the nimble creature's limbs are thin and spindly. Her attire is a crude mish-mash of scraps cobbled from her surroundings, [one of]a pair of goggles on her head[or]a magnifying monocle over one eye[or]an earring strung with a wing nut[or]a leather belt over her shoulder with a pouch on it[at random], tools and metal machinery in her possession, illustrating her tinkering mind. Becoming aware of your presence, she[else]male goblin. Face and ears long and pointed in structure, his skin is leathery brown and green. Nary an inch over four feet in height, the nimble creature's limbs are thin and spindly. His attire is a crude mish-mash of scraps cobbled from his surroundings, [one of]a pair of goggles on his head[or]a magnifying monocle over one eye[or]a boy's baseball cap on his head[or]a leather belt over his shoulder with a pouch on it[at random], tools and metal machinery in his possession - an illustration of his tinkering mind. Becoming aware of your presence, he[end if] slowly moves to approach.";

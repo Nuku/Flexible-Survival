@@ -223,7 +223,7 @@ to pregprotocol:
 						say "Your breasts feel especially tender and you are surprised to find them swelling larger despite being [if Player is male]male[else]a neuter[end if], now [breast size desc of Player] breasts.";
 					else:
 						say "Your breasts feel especially tender, swollen with your condition, now [breast size desc of Player], the mammary flesh stretched lightly.";
-			if gestation of child < 1 and ( Player is female or Player is mpreg_ok ) and skipturnblocker is 0:
+			if gestation of child < 1 and Player is impreg_ok and skipturnblocker is 0:
 				if pregtype is 1 and Player is not female:
 					now pregtype is 2;
 				say "[detailbirth]";
@@ -726,7 +726,7 @@ To Birth:
 	now gestation of Child is 0;
 	now ubpreg is "false";
 
-Chapter 3-1 - Impregnation and Ovi-Impreg Subroutines
+Section 1 - Impregnation and Ovi-Impreg Subroutines
 
 To impregnate with (x - text):
 	if child is born or gestation of child > 0 or "Sterile" is listed in feats of Player or larvaegg is 2 or ( Player is not female and player is not mpreg_ok ):
@@ -836,7 +836,7 @@ To impregnate with (x - text):
 		say "[line break]     You have an odd feeling, a palpable wave of contentment from within your lower belly.";
 		if pregtype is 0, now pregtype is 1; [fpreg]
 
-Chapter 3-2 - Impregchance and Ovichance Routines
+Section 2 - Impregchance and Ovichance Routines
 
 to say impregchance:		[General Pregnancy Routine]
 	impregchance;
@@ -1000,7 +1000,7 @@ to selfovichance:
 		now callovi is false;
 	selfimpregchance;
 
-Chapter 3-3 - Random Impreg Routines
+Section 3 - Random Impreg Routines
 
 to say randomimpreg:		[Use when either would work]
 	randomimpreg;

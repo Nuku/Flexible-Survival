@@ -85,18 +85,18 @@ Instead of examining the Rat Twins Stash:
 	say "[RatTwinsTapeGet]";
 
 to say RatTwinsTapeGet: [TODO: Add in options _not_ to steal the tape, maybe just watching it right there and then put it back]
-	say "     You approach from the pile of cots and clothes[if HP of Erin >= 2] belonging to the twins[end if]. A note that reads 'Back shortly. Keep your hands off our stuff!' is taped on one of the bags. ";
+	say "     You approach from the pile of cots and clothes[if HP of Erin >= 2] belonging to the twins[end if]. A note that reads 'Back shortly. Keep your hands off our stuff!' is taped on one of the bags";
 	if "Rat Twin Tape" is not listed in tapes of Player:
 		if Lost Camera is unresolved:
-			say "You notice a video tape sitting on a corner of the pile of stuff. You pick it up and examine it. It is labeled '1st day together in our new bodies'. If you find a compatible camera, this could prove an interesting watch.";
+			say ". You notice a video tape sitting on a corner of the pile of stuff. You pick it up and examine it. It is labeled '1st day together in our new bodies'. If you find a compatible camera, this could prove an interesting watch.";
 		else:
-			say "You notice a video tape sitting on a corner of the pile of stuff. You pick it up and examine it. It is labeled '1st day together in our new bodies'. It seems compatible with the camera that you [if carried of video camera is 1]carry[else]put somewhere[end if].";
+			say ". You notice a video tape sitting on a corner of the pile of stuff. You pick it up and examine it. It is labeled '1st day together in our new bodies'. It seems compatible with the camera that you [if carried of video camera is 1]carry[else]put somewhere[end if].";
 		say "     You grab the tape while [if HP of Erin >= 2]the twins are distracted by one of the patrons of the restaurant coming to chat with them[else]no one is here to watch you[end if].";
-		say "[line break][bold type]Rat Twin Tape has been added to your tape inventory![roman type][line break]";
+		say "[line break]     [bold type]Rat Twin Tape has been added to your tape inventory![roman type][line break]";
 		add "Rat Twin Tape" to tapes of Player;
 		now Rat Twins Stash is nowhere;
 	else:
-		LineBreak;
+		say ".";
 
 Table of GameRoomIDs (continued)
 Object	Name

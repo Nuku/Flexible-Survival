@@ -5,7 +5,6 @@ Version 3 of Qytat a'th Lundrues by SgtPepper234 begins here.
 [ Version 3 - Rework by SgtPepper234                                 ]
 
 [
-
        R-C-S
         \|/
        T-P-A
@@ -61,7 +60,7 @@ to say ResolveEvent Guard Gryphon:
 				say "     ([link]N[as]n[end link]) - Fight the Guard.";
 				if Player consents:
 					LineBreak;
-					say "     You try to tell the guard that you mean no harm, and fetch the bottle of Gryphon Milk from your inventory, explaining that you too have been a target of the ones they lost to the infection. She seems to lower her guard, giving you a few words. 'That's not enough. If you want to get by me, you'll have to be one like us. Either you accept those terms or you can leave right this moment.' Sounds like she's not open to negotiation, but at least you managed to avoid a fight until now. [bold type]Will you accept her terms, refuse and leave, or charge at her?[roman type][line break]";
+					say "     You try to tell the guard that you mean no harm, and fetch the bottle of Gryphon Milk from your inventory, explaining that you too have been a target of the ones they lost to the infection. She seems to lower her guard, giving you a few words. 'That's not enough. If you want to get by me, you'll have to be one like us. Either you accept those terms or you can leave right this moment.' Sounds like she's not open to negotiation, but at least you managed to avoid a fight until now. [bold type]Will you accept her terms, refuse and leave or charge at her?[roman type][line break]";
 					say "     [link](1)[as]1[end link] - Accept the terms and transform into a hermaphrodite Blue Gryphon.";
 					say "     [link](2)[as]2[end link] - Refuse, but turn back peacefully.";
 					say "     [link](3)[as]3[end link] - Just fight your way in.";

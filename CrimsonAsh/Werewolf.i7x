@@ -6,6 +6,7 @@ Version 1 of Werewolf by CrimsonAsh begins here.
 [   1: submitted                                     ]
 [   2: submitted + bred her                          ]
 [  50: fought and lost                               ]
+[  60: fought and fled                               ]
 [  80: fought off, fucked                            ]
 [  81: fought off, fucked + bred                     ]
 [  90: fought off, not fucked                        ]
@@ -99,7 +100,7 @@ instead of resting while Player is in Urban Forest and WerewolfWatching is true 
 		else if fightoutcome >= 20 and fightoutcome <= 29:
 			say "[LoseToWerewolf]";
 		else if fightoutcome >= 30:
-			now WerewolfRelationship is 91; [fought & fled]
+			now WerewolfRelationship is 60; [fought & fled]
 		now Resolution of Werewolf Surprise is 2; [fought]
 	now Werewolf Surprise is resolved;
 
@@ -173,7 +174,7 @@ to say LoseToWerewolf:
 		WaitLineBreak;
 		say "     When you awake some time later you're alone. Your shoulder and face ache pretty badly but otherwise you're unharmed. It seems she licked your face clean before leaving you here...";
 	CreatureSexAftermath "Player" receives "OralPussy" from "Werewolf";
-	now WerewolfRelationship is 90; [fought & lost]
+	now WerewolfRelationship is 50; [fought & lost]
 
 Section 3 - Creature Insertion
 

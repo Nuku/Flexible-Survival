@@ -7,7 +7,7 @@ Version 1 of Kai by Luneth begins here.
 [ 1 - encountered Kai                                                          ]
 [ 99 - lost Kai                                                                ]
 
-Section 1 - NPC
+Chapter 1 - NPC
 
 Table of GameCharacterIDs (continued)
 object	name
@@ -55,9 +55,9 @@ Description of Kai is "     [one of]Kai is a tall, athletic-looking man with a s
 [Conversation of Kai is { "mew" }.]
 The scent of Kai is "     He has the scent of coconuts and musk from his tanning lotion, however you can still smell the salt from the ocean with an undertone of fish; he is half-shark after all.".
 
-Section 2 - Events
+Chapter 2 - Events
 
-Part 1 - Intro
+Section 1 - Intro
 
 [Update for WalkinEvents table]
 Table of WalkinEvents (continued)
@@ -100,28 +100,21 @@ to say ResolveEvent KaiInitialEncounter:
 		now HP of Kai is 99;
 	now KaiInitialEncounter is resolved;
 
-Section 3 - Location
+Chapter 3 - Location
 
 Table of GameRoomIDs (continued)
 Object	Name
 Kai's Campsite	"Kai's Campsite"
 
 Kai's Campsite is a room. It is a fasttravel. It is private.
-Description of Kai's Campsite is "     Kai has a blue, 2-person dome tent that's set up on the beach. Inside the tent is a queen-sized inflatable mattress, pillows, and blankets. A large gym bag filled with clothes and other accouterments sits on the mattress, along with various surfer magazines to read. There's an area in the sand not too far from the tent that has been dug out several inches for a makeshift fire pit. The wood is stacked in a log cabin kind of arrangement with small twigs and seaweed built up in the middle to help start the fire. If you sit by the firepit, you get an amazing view of the ocean and rocky cliffs that aren't too far from the area. The sounds of the waves in the distance create a sense of calmness here and put you in a meditative state. The little setup is away from the busier parts of the beach, so you have more privacy and solitude to relax. Simple, just the way Kai seems to prefer it.".
+Description of Kai's Campsite is "     Kai has a blue, 2-person dome tent that's set up on the beach. Inside the tent is a queen-sized inflatable mattress, pillows, and blankets. A large gym bag filled with clothes and other accouterments sits on the mattress, along with various surfer magazines to read. There's an area in the sand not too far from the tent that has been dug out several inches for a makeshift fire pit. The wood is stacked in a log cabin kind of arrangement with small twigs and seaweed built up in the middle to help start the fire. If you sit by the firepit, you get an amazing view of the ocean and rocky cliffs that aren't too far from the area. The sounds of the waves in the distance create a sense of calmness here and put you in a meditative state. The little setup is away from the busier parts of the beach, so you have more privacy and solitude to relax. Simple, just the way Kai seems to prefer it.[line break]".
 earea of Kai's Campsite is "Beach".
 Scent of Kai's Campsite is "     It smells like salt and smoke.".
 
-Section 4 - Talk Options
+Chapter 4 - Talk Options
 
 instead of conversing the Kai:
-	if time is afternoon: [5 or -3]
-		say "     The surfer smiles at you while rubbing suntan lotion on his washboard abs. He asks what you would like to talk about.";
-	else if time is early night: [3 or -5]
-		say "     Coming out of the water, the surfer is already smiling wide at you. He places his surfboard in the sand, grabs a towel, and asks what you would like to talk about.";
-	else if time is post midnight: [1 or -2]
-		say "     Sitting by the fire at his set-up, he gives you a warm smile and says he was getting ready to cook something on the barbie, but he does have some time to talk.";
-	else if time is early morning: [7 or -1]
-		say "     Looking up from grabbing his surfboard, he gives a smile and says [']G'Day['] before letting you know he is getting ready to hit the waves.";
+	say "     [if time is afternoon or time is evening]The surfer smiles at you while rubbing suntan lotion on his washboard abs. He asks what you would like to talk about[else if time is early night or time is morning]Coming out of the water, the surfer is already smiling wide at you. He places his surfboard in the sand, grabs a towel, and asks what you would like to talk about[else if time is post midnight or time is pre dawn]Sitting by the fire at his set-up, he gives you a warm smile and says he was getting ready to cook something on the barbie, but he does have some time to talk[else]Looking up from grabbing his surfboard, he gives a smile and says [']G'Day['] before letting you know he is getting ready to hit the waves[end if].";
 	say "[line break][KaiTalkMenu]";
 
 [these need to be ordered by location]

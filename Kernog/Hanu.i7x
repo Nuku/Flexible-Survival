@@ -192,7 +192,7 @@ Object	Name
 Monkey Duel	"Monkey Duel"
 
 Monkey Duel is a situation.
-[ResolveFunction of Monkey Duel is "".]
+ResolveFunction of Monkey Duel is "".
 Monkey Duel is inactive.
 Sarea of Monkey Duel is "Nowhere".
 
@@ -204,7 +204,6 @@ Step 3 - Duel]
 to MonkeyDuel:
 	say "     This 'young monkey' unmistakenly refers to Wukong. You tell your zen interlocutor about your [if Take My Royal Word For Granite is resolved or Hunt Of Mammoth Proportions is resolved]adventures with the self-proclaimed 'Monkey King'[else]unfortunate encounters with the arrogant simian[end if].";
 	say "     'What an interesting story you have, my dear pupil. And worrying too.' He puts a hand to his chin, pensive. 'This [']Wukong['] person seems quite the brash ruffian, and violent too. He is completely misusing his natural talents. And to top it off, it seems that [if Loyalty of Wukong is 2]he encouraged you to follow his ways[else]you had to take responsibility for his actions instead of me[end if]. You did good to bring the existence of this person to my attention.'";
-	WaitLineBreak;
 	say "     'I need to take responsibility as well, and bring him to reason. It is time for me to go on a journey to the Museum. [bold type]Will you accompany me?[roman type]'[line break]";
 	say "     ([link]Y[as]y[end link]) - Yes.";
 	say "     ([link]N[as]n[end link]) - No.";
@@ -410,10 +409,7 @@ to say losetoWukongThugs:
 			say "     You feel something [if a random chance of 1 in 2 succeeds]tight pushing around your cock, signaling that a monkey has lined up [one of]his ass[or]her pussy[at random] with your [cock size desc of Player] cock, and swallows it down the tight, warm hole. Your hear wet noises coming from your groin as crotch meets crotch with increasing speed[else]warm and soft kiss the tip of your cock, signaling that a monkey has their mouth on your [cock size desc of Player] dick. They promptly swallow it down to the hilt, and the air fills with wet noises coming from your groin, with increasing intensity[end if][if Cock Count of Player > 1]. Your other cocks quickly find hungry mouths and dexterous hands to be taken care by[end if].";
 		WaitLineBreak;
 	if Breast Size of Player > 0:
-		if a random chance of 1 in 2 succeeds:
-			say "     Despite the space getting cramped, another simian still finds the place to sit on your tummy and pushes your [breast size desc of Player] breasts together. You feel his cock slip between them as the monkey gives himself a leisurely tit-fuck.";
-		else:
-			say "     Despite the space getting cramped, other simians still find the place to gnaw on your breasts, kneading them[if Nipple Count of Player > 0] and play-biting your nipples[end if], enjoying the high-pitched grunts escaping from between the legs of the monkey fucking your face.";
+		say "     Despite the space getting cramped, [one of]another simian still finds the place to sit on your tummy and pushes your [breast size desc of Player] breasts together. You feel his cock slip between them as the monkey gives himself a leisurely tit-fuck[or]other simians still find the place to gnaw on your breasts, kneading them[if Nipple Count of Player > 0] and play-biting your nipples[end if], enjoying the high-pitched grunts escaping from between the legs of the monkey fucking your face[at random].";
 	say "     Stuck in the middle of the monkey gangbang, you are forced to endure long minutes of being used sexually in every conceivable way. As soon as one of the monkeys finish, another takes their place, until everyone in the gang has had a turn with you. Once they are done, they leave your tired, cum-covered body, laughing and hooting about the good time they just had.";
 
 Section 4 - Monster infections

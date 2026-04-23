@@ -36,12 +36,6 @@ to say Biolizardman Brute Loses:
 		say "     Using your best abilities at seducing the large reptilian, you manage to cause a certain lethargy in his movements as he seems to lose his focus on the battle. At this point, and whenever his loincloth gives way, you notice a large red lizard cock poking out of its protective slit, his cerulean gaze often dawdling over your many attributes. 'It seems you are quite effective with this seduction dance of yours...' he says as he drops to his knees and lowers his head, no longer interested in fighting. 'I concede, you've shown superior abilities. Is there perhaps something I ought to learn from you, o'great charmer? Perhaps I could win future fights without any need for violence...' He places his quarterstaff on the ground and does not resist your approach.";
 	else:
 		say "     Fighting with the best of your abilities, you manage to deliver a final blow that leaves the lizardman stunned. He looks back at you, barely able to stand, and before you can cause him any more damage, he beckons your attention. 'I admit, you are a far better fighter than I've anticipated. My apologies, I shall concede this battle and ask of your mercy,' he says as he drops to his knees and lowers his head, no longer wanting to struggle against you. 'Though, if it is not asking too much, I would request to receive wisdom from you, o'great warrior. Teach me your ways so I can vanquish my foes and better serve my people...' He places his quarterstaff on the ground and does not resist your approach.";
-	say "[BiolizardmanBruteLosesVictorySexMenu]";
-	if Camp Of The Snake is not known and Resolution of CampOfTheSnakeEvent is 0:
-		WaitLineBreak;
-		say "[TravelToCampOfTheSnakeEvent]";
-
-to say BiolizardmanBruteLosesVictorySexMenu:
 	say "[line break]     [bold type]Seeing as the big lizardman chose to submit to your will, how shall you treat him? You could always just leave him be, it is up to you.[roman type][line break]";
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
@@ -75,12 +69,13 @@ to say BiolizardmanBruteLosesVictorySexMenu:
 			say "     You tell him he has much to learn, but that you will not be the one who is going to teach him. Stating that you have other places to be, you bid the lizardman goodbye and walk away. No further words are exchanged between the two of you.";
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options], or 0 to exit.";
+	if Camp Of The Snake is not known and Resolution of CampOfTheSnakeEvent is 0:
+		say "[TravelToCampOfTheSnakeEvent]";
 
 to say BiolizardmanBruteLosesSitOnFace:
 	say "     Wanting to get some pleasure for yourself using one of the characteristics lizardmen are very well known for, you walk up to him and forward your intentions, arguing that his reach may need some practicing. Regarding you as the wiser one for having emerged victorious, he nods and lets you call the shots. In order to get him in the best position possible, you tell him to follow your directions and lie down so that you can get on top of him. Before that, you remove any obstructions that may be between your intimate parts and his face, so that you can finally take a seat on that face of his. He seems a bit surprised at first, but then you tell him what he should do, and he complies. Sooner than you expect, you find a nimble and long tongue prodding your [if Player is female]labia[else]anus[end if] rather pleasantly.";
 	say "     Having done this, you notice the lizardman's cock fully reveals itself from its protective slit in its complete glory, all hard and throbbing with the excitement of this situation. It seems this is something he really is into, and deep down, you are happy to provide and receive an equal amount of satisfaction. He does not let you down at all, with a tongue game that would put a hissing snake to shame, but more than that, he seems to really show that he has a lot of [italic type]reach[roman type]. The large reptilian grabs you by the hips and pulls you to him, only so that you can truly feel how far he gets his tongue in you, licking at your [if Player is female]feminine [end if]insides in such a way that you can only quiver in delight.";
-	LineBreak;
-	say "     As you experience this and see that your formerly-an-opponent has got a considerable erection of his own, do you wish to lean forward and grab his cock for some reciprocal oral sex? Or would you rather continue to feel all the pleasure he is giving you?";
+	say "[line break]     As you experience this and see that your formerly-an-opponent has got a considerable erection of his own, do you wish to lean forward and grab his cock for some reciprocal oral sex? Or would you rather continue to feel all the pleasure he is giving you?";
 	say "     ([link]Y[as]y[end link]) - Turn this into a 69 and pleasure his cock.";
 	say "     ([link]N[as]n[end link]) - Just keep still, you are enjoying riding his face.";
 	if Player consents:
@@ -109,6 +104,7 @@ to say BiolizardmanBruteLosesSitOnFace:
 Section 2 - Camp Of The Snake Pre-Event
 
 to say TravelToCampOfTheSnakeEvent:
+	WaitLineBreak;
 	say "     Though, right before you move away definitely, the lizardman asks you to stop. 'Wait! There is something I forgot to ask...' He then runs to catch up to you, and seeing him rushing prompts you to stop in place and turn towards him. 'Thank you, my apologies for keeping you. I merely wished to ask... Would you like to come with me and meet our tribe?' The sudden request makes you question its purpose, to which the bioluminescent scaled man replies, 'You are no ordinary traveler. You have great strength... And I think you would make a good ally of my people. This, I won't impose on you, though I would humbly request a bit of your time to at least meet our god, Uzial.' He bows when he says his name.";
 	say "     Hearing this, you can only ask if you heard that right, as you were under the impression he called him a god. 'Yes, God Uzial. He is our leader and our protector. If you get in His good graces, you will have protection in our swamps. And if you find Him deserving of your worship, I'm sure He would grant you many boons.' You are not so sure about this god he talks about, but at least you could accept following him into his tribe. There are no signs of this being a trap, at least, so you are pretty confident you will be fine. Or, you can simply tell him this does not interest you and proceed to walk away. You do not think he will insist if you express your will to leave.";
 	say "     ([link]Y[as]y[end link]) - Accept to go with him and meet his tribe.";
@@ -158,7 +154,7 @@ to say TravelToCampOfTheSnakeEvent:
 			LineBreak;
 			say "     As soon as the lizardman turns his back to you, the chance provides itself. You easily sneak out of this place, leaving the camp to disappear in plain sight, and suddenly... You feel lost in the swamp. It takes you some time to find some familiar path and trace your steps back to where you were, but your mind is foggy. What were you doing, just now? Why were you in the swamp? How long have you been here... Confusion lingers for quite a while, and a significant amount of time has passed...";
 			follow the turnpass rule;
-			AttemptToWait;
+			WaitLineBreak;
 			SanLoss 10;
 			now Resolution of CampOfTheSnakeEvent is 98; [Refused after entering the camp]
 	else:
@@ -358,6 +354,8 @@ When Play begins:
 	now Clit Size entry is 2; [size 1-5, see Clit Size Adjective]
 	[Clit Size Adjective is generated by a function and can be used in scenes: very small/small/average/large/very large]
 ]
+
+Section 4 - Drop Item
 
 Table of Game Objects (continued)
 name	desc	weight	object

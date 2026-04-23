@@ -41,7 +41,7 @@ understand "hunt [text]" as HuntAction.
 check HuntAction:
 	if BlindMode is true:
 		say "You're playing in blind-mode, so hunting is not allowed. You'll have to try exploring to find what you seek." instead;
-	else if there is a dangerous door in the Location of Player: [danger door]
+	if there is a dangerous door in the Location of Player: [danger door]
 		let y be a random dangerous door in the Location of Player;
 		now battleground is the marea of y;
 	else if earea of location of Player is not "void": [explore/hunt anywhere]

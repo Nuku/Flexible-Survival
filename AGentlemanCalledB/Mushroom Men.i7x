@@ -244,8 +244,7 @@ this is the sporecloud rule: [Spore aura following spore blast attack]
 			if SporeCloud is 0:
 				say "[line break][one of]With a merciful gust of wind[or]As the battle continues[or]As your fighting begins to move away[at random], the lingering spore cloud finally dissipates.";
 		else:
-			let dam be wdam entry / 4;
-			increase dam by a random number between 0 and 1;
+			let dam be ( wdam entry / 4 ) + a random number between 0 and 1;
 			say "[one of]Breathing heavily as a result of your continued fighting[or]As you try to catch your breath[or]Taking a deep breath[at random], you inhale the lingering airborne spores, causing a [one of]painful fit of coughing[or]warm tingling in your chest[or]powerful sneeze[at random]. You suffer [special-style-2][dam][roman type] damage.";
 			decrease HP of Player by dam;
 			if BodyName of Player is "Mushroom Man":

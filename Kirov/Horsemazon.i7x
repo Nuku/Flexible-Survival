@@ -17,8 +17,7 @@ to say horsemazonVictory:          [Scene for when the Horsemazon defeats the pl
 	if HP of Player > 0:	[ Submitted ]
 		say "     Raising your hands in a friendly gesture of peace, you try to deescalate the situation. So focused on winning the fight, she doesn't seem to notice at first, and for a moment, you think you've made a terrible mistake as she swings her lasso around to strike at you. But just before she throws, she notices your gesture and hesitates. You take the opportunity to speak, putting on a friendly smile. 'I'm not here to fight,' you try to calmly explain. 'And I'm not some crazy mutant.' It appears you were convincing, as she lowers her lasso and crop, bringing her hands to her hips with a disapproving glare.";
 		say "     'Well, you ought to not be wandering the streets like one. Otherwise you might get into trouble with a strong woman like me,' she says a bit jokingly. She stows away her 'weapons' on her belt before striding over to you and holding out her hand in greeting. Seeing as she was so quick to start a fight, you're taken by surprise at the sudden shift in the tone of the situation. She seems to have taken you for your word about being friendly. You reach out and shake her hand, finding her grip unsurprisingly strong and firm. 'I'm Jana, by the way,' she lets you know. The two of you exchange names and pleasantries, and after a little while of chatting, you feel like you've gotten to know Jana a bit. 'Well,' she says. 'It's been nice, but I really ought to head off. Now that I know who you are, you won't have to worry about being jumped. Just make sure you don't go wild on me,' she says with a teasing smile. As she turns to depart, she looks over her shoulder and adds, 'I'd love if you came to stop by and visit me sometime. I've got a room in the Mare's Quarters, down at the Stables Hotel.' Realizing how much time has passed, you wave goodbye and collect yourself before returning to your own explorations.";
-		choose row with Name of "Horsemazon" from Table of Random Critters;
-		now area entry is "Nowhere";
+		now the area corresponding to a Name of "Horsemazon" in Table of Random Critters is "Nowhere";
 		now HP of Jana is 1;
 		change the East exit of Mares Quarters to Janas Bedroom;
 		now Encountering Jana is resolved;
@@ -121,11 +120,7 @@ to say horsemazonGiveOral:
 Section 5 - Monster Insertion
 
 a postimport rule: [bugfixing rules for players that import savegames]
-	choose row with Name of "Horsemazon" from Table of Random Critters;
-	if HP of Jana > 0:
-		now area entry is "Nowhere";
-	else:
-		now area entry is "Plains";
+	now the area corresponding to a Name of "Horsemazon" in Table of Random Critters is the substituted form of "[if HP of Jana > 0]Nowhere[else]Plains[end if]";
 
 Table of CombatPrep (continued)
 name(text)	PrepFunction(text)

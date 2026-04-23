@@ -17,7 +17,7 @@ to say ResolveEvent Secure Area:
 		say "     There is a large sign on the fence surrounding the facility which reads, [']Please be advised: This facility is now closed due to a lack of male content.[']";
 		now secure area is resolved;
 		now Resolution of Secure Area is 100; [content banned]
-		continue the action;
+		stop the action;
 	if a random number between 5 and 20 < Perception of Player:
 		say "     Oh my god. You realize that the doors are made of diamond. What needs that much protection?";
 	say "     Do you wish to get to the door?";

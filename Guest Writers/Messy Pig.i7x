@@ -353,7 +353,7 @@ this is the pigpussy rule:
 		now alt1chance entry is 0;
 		now messypigaltorgasm is true;
 
-Section 5 - Bound State
+Section 4 - Bound State
 
 to MessyPigBind:
 	setmonster "Messy Pig";
@@ -383,7 +383,7 @@ to MessyPigBind:
 			end the story saying "A pig pigged out on you!";
 		else:
 			now enduring is false;
-			say "     You are stuck inside of the female pig's gluttonous gut. [one of]The stifling air smells foul, but at the same time, there's something about it that's making you feel horny[or]A little bit of light filters into the stomach every now and then, revealing the food scraps that the hungry piggy had eaten before you[or]You can feel your prison jostle around as the hog waddles off in search of more food[at random]. Your only options are to [bold type]S[roman type]truggle enough until she lets you go, else you can [if obliging is true][bold type]O[roman type]blige[else][bold type]A[roman type]bide[end if] her, or [if boundrecover is true][bold type]R[roman type]ecover from[else][bold type]E[roman type]ndure[end if] these questionable circumstances.";
+			say "     You are stuck inside of the female pig's gluttonous gut. [one of]The stifling air smells foul, but at the same time, there's something about it that's making you feel horny[or]A little bit of light filters into the stomach every now and then, revealing the food scraps that the hungry piggy had eaten before you[or]You can feel your prison jostle around as the hog waddles off in search of more food[at random]. Your only options are to [bold type]S[roman type]truggle enough until she lets you go, else you can [if obliging is true][bold type]O[roman type]blige[else][bold type]A[roman type]bide[end if] her or [if boundrecover is true][bold type]R[roman type]ecover from[else][bold type]E[roman type]ndure[end if] these questionable circumstances.";
 			say "[bold type]1[roman type] - [link]Struggle[as]1[end link][line break]";
 			say "[bold type]2[roman type] - [link][if obliging is true]Oblige[else]Abide[end if][as]2[end link][line break]";
 			say "[bold type]3[roman type] - [link][if boundrecover is false]Endure[else]Recover[end if][as]3[end link][line break]";
@@ -419,15 +419,14 @@ to MessyPigBind:
 					say "     [one of]As you relax inside of your makeshift prison, you can feel the walls shift and press down on you as the pig flops onto her stomach, using the bulge you're making as a pillow[or]The pig, wanting to have some fun with her unresisting captive, shakes her full stomach with her hands, tossing you about in your prison[at random].";
 					if a random chance of 2 in 5 succeeds:
 						infect;
-					wyvhumanityroll;
 					increase lustatt by 14 + (lustadjust * 4);
 				else:
 					decrease struggleatt by 1;
 					say "     [one of]As you wait inside of the pig's stomach, a shower of [one of]sticky soda[or]chips[or]canned fruit[at random] suddenly rains down upon you[or]You idle around a bit, listening to the pig's oinks and grunts as she searches for food[at random].";
 					if a random chance of 1 in 5 succeeds:
 						infect;
-					wyvhumanityroll;
 					increase lustatt by 7 + (lustadjust * 2);
+				wyvhumanityroll;
 				LineBreak;
 				wait for any key;
 			else if (boundrecover is true and (keychar is "r" or keychar in lower case matches the text "recover")) or (boundrecover is false and (keychar is "e" or keychar in lower case matches the text "endure")) or keychar is "3":
@@ -445,9 +444,8 @@ to MessyPigBind:
 			else:
 				say "Invalid action.";
 
-Section 6 - Endings
+Section 5 - Endings
 
 [See Philip: 'Hungry Boar Man' by Hiccup for endings]
 
-[ Edit this to have the correct name as well]
 Messy Pig ends here.

@@ -6,7 +6,7 @@ Version 2 of Alt Combat by Core Mechanics begins here.
 
 Book 1 - Player Combat
 
-Part 1 - Basic Variables
+Part 0 - Basic Variables
 
 Dam is a number that varies.
 monstercom is a number that varies.		[ This represents the row on the table of Critter Combat to be used in this fight. ]
@@ -92,7 +92,7 @@ title	subtable	description	toggle
 "Submit"	--	"Maybe it isn't so bad?"	submit rule
 "Throw Fight"	--	"Let them think they won."	throw combat rule
 
-Part 2 - Prepping for Combat
+Part 1 - Prepping for Combat
 
 when play begins:
 	if "Human" is not listed in EncounteredEnemies of Player:
@@ -215,9 +215,9 @@ to prepforfight:		[Do all the pre-fight setup, reset values, and then display th
 	if inasituation is false: [regular creature pre and postcombat, might include artwork being shown]
 		say "[bold type]You run into [if enemy type entry is 2][enemy Name entry][else]a [EnemyNameOrTitle][end if].[roman type][line break][desc entry][line break]";
 
-Part 3 - Combat
+Part 2 - Combat
 
-Chapter 0 - Combat Menu
+Chapter 1 - Combat Menu
 
 To Combat Menu:
 	say "[run paragraph on]";
@@ -327,7 +327,7 @@ this is the monster combat mode rule:
 to say combat abort:
 	now combat abort is 1;
 
-Chapter 1 - Player Attack
+Chapter 2 - Player Attack
 
 This is the player attack rule:
 	choose row MonsterID from the Table of Random Critters;
@@ -415,11 +415,9 @@ This is the player attack rule:
 			let numnum be ( ( level of Player * 5 ) / 2 ) + 100;
 			now dam is ( dam times a random number from 105 to numnum ) divided by 100;
 		if weapon type of Player is "Melee":
-			increase dam by ( Strength of Player minus 10 ) divided by 2;
-			increase dam by pldamagebonus;
+			increase dam by ( ( Strength of Player minus 10 ) divided by 2 ) + pldamagebonus;
 		else if weapon type of Player is "Ranged":
-			increase dam by ( Perception of Player minus 10 ) divided by 2;
-			increase dam by pldamagebonus;
+			increase dam by ( ( Perception of Player minus 10 ) divided by 2 ) + pldamagebonus;
 		if a random chance of Morale of Player in 200 succeeds:
 			say "Filled with sudden motivation, your attack scores particularly well! ";
 			increase dam by dam;
@@ -583,7 +581,7 @@ to say EnemyCapNameOrTitle:
 	else:
 		say "[enemy title entry]";
 
-Chapter 2 - Seduce
+Chapter 3 - Seduce
 
 This is the player seduce rule:
 	choose row MonsterID from the Table of Random Critters;
@@ -700,7 +698,7 @@ This is the player seduce rule:
 				follow the continuous entry;
 			if combat abort is 0 and skipretaliate is false, follow the combat entry;
 
-Chapter 3 - Item Use
+Chapter 4 - Item Use
 
 This is the combat item rule:
 	now battleitem is 0;
@@ -763,7 +761,7 @@ object	holding (number)	objname (indexed text)	description (indexed text)
 journal	1	"journal"	"nothing"
 with 24 blank rows.
 
-Chapter 4 - Combat Pass
+Chapter 5 - Combat Pass
 
 This is the combat pass rule:
 	choose row monstercom from table of Critter Combat;
@@ -772,7 +770,7 @@ This is the combat pass rule:
 		follow the continuous entry;
 	if combat abort is 0, follow the combat entry;
 
-Chapter 5 - Submit
+Chapter 6 - Submit
 
 This is the submit rule:
 	choose row MonsterID from the Table of Random Critters;
@@ -781,7 +779,7 @@ This is the submit rule:
 	if Player is submissive, increase XP of Player by ( 2 + lev entry ) / 5;
 	if Player is kinky, increase Morale of Player by 6;
 
-Chapter 6 - Flee
+Chapter 7 - Flee
 
 This is the flee rule:
 	choose row MonsterID from the Table of Random Critters;
@@ -845,7 +843,7 @@ This is the flee rule:
 	if combat abort is 1:
 		follow the ngraphics_blank rule;
 
-Chapter 7 - Throw the Fight
+Chapter 8 - Throw the Fight
 
 This is the throw combat rule:
 	now fightoutcome is 20;
@@ -853,7 +851,7 @@ This is the throw combat rule:
 	say "You allow yourself to be subdued while putting up a token struggle.";
 	Lose;
 
-Chapter 8 - Poison
+Chapter 9 - Poison
 
 this is the playerpoisoned rule:
 	if Playerpoison > 0:

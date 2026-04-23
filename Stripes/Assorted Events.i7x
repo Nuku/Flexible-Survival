@@ -429,7 +429,7 @@ to say ResolveEvent Lovers Bench:
 								let DBAnalScene be a random number from 1 to 10;
 								if Player is submissive:
 									increase DBAnalScene by 2;
-								if Player is mpreg_ok:
+								if "MPreg" is listed in feats of Player:
 									increase DBAnalScene by 1;
 								if DBAnalScene < 5: [player fucks Brutus]
 									say "     When you come back up for air, you stroke your hand down over Brutus's muscle-packed chest and grab his hard shaft, stroking it a few times before stepping back 								and quickly stripping off your clothes and gear. Meanwhile, the aroused demon leans over the bench, presenting his muscular butt to you as he grips the backrest with both 								hands. Moving up behind him, you rub Brutus's well-rounded cheeks, then spread them, revealing his light-purple pucker. Putting your fingers to it, you slide them into his 								opening, making him moan deeply as you rub his insides. Then you hit an especially sensitive spot and he gasps in lust, digging the tips of his claws into the wooden bench 								with a splintering crack.";

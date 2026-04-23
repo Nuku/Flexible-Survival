@@ -262,9 +262,9 @@ to DragonPoolToyBind:		[Modified bound state that does not use lust or sanity]
 			now boundcounter is 0;
 			now struggleatt is 0;
 		if boundsegment is 1:
-			say "     You're stuck inside of the dragon's cunt. A quick glance around shows some hard yellow spots separate from the walls of the faux vagina are starting to form. You'd best act quick if you don't want to end up in some strange egg. You imagine your only active options are to [bold type]S[roman type]truggle enough until it lets you go, or just [if obliging is true][bold type]O[roman type]blige[else][bold type]A[roman type]bide[end if] it.";
+			say "     You're stuck inside of the dragon's cunt. A quick glance around shows some hard yellow spots separate from the walls of the faux vagina are starting to form. You'd best act quick if you don't want to end up in some strange egg. You imagine your only active options are to [bold type]S[roman type]truggle enough until it lets you go or just [if obliging is true][bold type]O[roman type]blige[else][bold type]A[roman type]bide[end if] it.";
 		else:
-			say "     You're completely engulfed by some strange golden egg laid by the dragon pool toy. The plastic is hard but clearly brittle, easy to break through given enough effort. You imagine your only active options are to [bold type]S[roman type]truggle your way out, or just [if obliging is true][bold type]O[roman type]blige[else][bold type]A[roman type]bide[end if] yourself to remain in confinement.";
+			say "     You're completely engulfed by some strange golden egg laid by the dragon pool toy. The plastic is hard but clearly brittle, easy to break through given enough effort. You imagine your only active options are to [bold type]S[roman type]truggle your way out or just [if obliging is true][bold type]O[roman type]blige[else][bold type]A[roman type]bide[end if] yourself to remain in confinement.";
 		now enduring is false;
 		say "[bold type]1[roman type] - [link]Struggle[as]1[end link][line break]";
 		say "[bold type]2[roman type] - [link][if obliging is true]Oblige[else]Abide[end if][as]2[end link][line break]";

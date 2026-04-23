@@ -25,7 +25,7 @@ to say losetoxeno:
 			now mchance is 4;
 			if Player is submissive, increase mchance by 2;
 			if anallevel is 3, increase mchance by 2;
-			if Player is mpreg_ok, increase mchance by 2;
+			if "MPreg" is listed in feats of Player, increase mchance by 2;
 		if Player is not male or a random chance of mchance in 12 succeeds:
 			say "     The xenomorphic creature, as if scenting what it wants, pushes onto all fours with its strong arms and lowers itself down onto you. Hissing again, it slides its strange, phallic probe into you, pushing into your ass and sliding into your bowels. The black flesh pulses and shoots a thick, green goo into your ass, making it slick and easy to penetrate. Its tendrils squirm and rub, teasing your [if Player is male]prostate[else]inner walls[end if] and exciting you despite the horrifying situation. But it doesn't thrust into you, instead staying buried deep inside you and stimulating you from within. As it does so, you feel a much thicker bulge pressing into you as an egg starts to travel up the ovipositor and into you to be deposited into your belly. More eggs follow after the first as your belly is stuffed with as many of the fleshy orbs as you can take[if Player is male]. As these push past your prostate, you can't help but cum, moaning loudly as the alien creature violates you[end if].";
 			say "     After the ovipositor is withdrawn and you're released, you stumble away as best you can being so laden down with eggs. Feeling your belly squirm and seeing the eggs already writhing and shifting inside you, you find somewhere secluded and deposit them, hoping you've managed to get them all out.[movichance]";

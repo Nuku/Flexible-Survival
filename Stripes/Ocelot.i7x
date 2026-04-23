@@ -43,7 +43,7 @@ to say losetoocelot:
 			say "     'Purrrrr... [if Player is ocelotbodied]a cute kitty fucktoy for me to play with[else]There it is. I smell a cute kitty fucktoy inside you, eager to come out and play[end if].' He snuggles you close and takes your cock in his paw. The feline's touch soon has you erect. Eager and excited now, you return the favor to him, even lowering yourself to your knees to lick and suck at his shaft. He purrs happily, rubbing your head as you bob over his six inch cock.";
 			if Player is female and a random chance of 3 in 4 succeeds:	[vaginal]
 				say "[ocelotloss_bt_v1]";
-			else if Player is not female and anallevel > 1 and ( ( a random chance of 1 in 4 succeeds ) or ( anallevel is 3 and a random chance of 1 in 4 succeeds ) or ( Player is submissive and a random chance of 1 in 4 succeeds ) or ( Player is mpreg_ok and a random chance of 1 in 4 succeeds ) ):	[anal]
+			else if Player is not female and anallevel > 1 and ( ( a random chance of 1 in 4 succeeds ) or ( anallevel is 3 and a random chance of 1 in 4 succeeds ) or ( Player is submissive and a random chance of 1 in 4 succeeds ) or ( "MPreg" is listed in feats of Player and a random chance of 1 in 4 succeeds ) ):	[anal]
 				say "[ocelotloss_bt_a1]";
 			else:	[oral]
 				say "[ocelotloss_bt_o1]";
@@ -55,14 +55,14 @@ to say losetoocelot:
 				say "[ocelotloss_bt_o1]";
 		else:
 			say "     'Purrrrr... [if Player is ocelotbodied]you poor kitty fucktoy. Left with nothing for me to play with[else]There it is. I smell a cute kitty fucktoy inside you, eager to come out and play. But he's got no toys to play with[end if],' he adds, groping your bare groin sadly. He snuggles you close and kisses you tenderly, his paws groping your ass while grinding his throbbing cock against your hip. Eager and excited now, you lower yourself to your knees to lick and suck at his shaft. He purrs happily, rubbing your head as you bob over his six inch cock.";
-			if anallevel > 1 and ( ( a random chance of 1 in 4 succeeds ) or ( anallevel is 3 and a random chance of 1 in 4 succeeds ) or ( BodyName of Player is "Ocelot" and a random chance of 1 in 4 succeeds ) or ( Player is mpreg_ok and a random chance of 1 in 4 succeeds ) ):	[anal]
+			if anallevel > 1 and ( ( a random chance of 1 in 4 succeeds ) or ( anallevel is 3 and a random chance of 1 in 4 succeeds ) or ( BodyName of Player is "Ocelot" and a random chance of 1 in 4 succeeds ) or ( "MPreg" is listed in feats of Player and a random chance of 1 in 4 succeeds ) ):	[anal]
 				say "[ocelotloss_bt_a1]";
 			else:	[oral]
 				say "[ocelotloss_bt_o1]";
 	else:		[dom-ocelot chosen]
 		if Player is male:
 			say "     'Purrrrr... [if Player is ocelotbodied]a big, dom kitty to use me right[else]There it is. I smell a big, dom kitty inside you, eager to have his way with a little fucktoy like me[end if].' He snuggles up to you, running his paws down to your cock, stroking you to erection. With you hard, the kitty nuzzles down your chest, giving little licks with his small tongue as he goes until he reaches your throbbing shaft. Sliding his muzzle over it, he starts to lick and suck at your cock, worshiping you pulsing maleness with his mouth[if FaceName of Player is listed in infections of FelineList] while you purr happily[end if].";
-			if anallevel > 1 and ( ( a random chance of 1 in 4 succeeds ) or ( anallevel is 3 and a random chance of 1 in 4 succeeds ) or ( Player is submissive and a random chance of 1 in 4 succeeds ) or ( Player is mpreg_ok and a random chance of 1 in 4 succeeds ) ):	[anal]
+			if anallevel > 1 and ( ( a random chance of 1 in 4 succeeds ) or ( anallevel is 3 and a random chance of 1 in 4 succeeds ) or ( Player is submissive and a random chance of 1 in 4 succeeds ) or ( "MPreg" is listed in feats of Player and a random chance of 1 in 4 succeeds ) ):	[anal]
 				say "[ocelotloss_bt_a2]";
 			else:
 				say "[ocelotloss_bt_o2]";

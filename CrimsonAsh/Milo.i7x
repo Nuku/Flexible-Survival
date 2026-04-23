@@ -83,7 +83,7 @@ to say ResolveEvent Bobcat Encounter:
 		else:
 			LineBreak;
 			say "     Maybe another time, you have more important things to be doing right now you tell yourself as you move on from the marked tree.";
-	else if Resolution of Bobcat Encounter is 98: [talked, rejected sex last time]
+	else: [talked, rejected sex last time]
 		say "     As you are wandering through the forest in an oddly familiar area, you think you recognize a particular tree when there's a cat call behind you. 'Heya, knew you'd be back.' Turning around, you see Milo, the short bobcat fellow who offered you food in exchange for fucking you. Milo blinks at you and puts his paws on his hips. 'Well you are here about my offer, right?'";
 		say "[line break]     [bold type]What's your reply?[roman type][line break]";
 		say "     ([link]Y[as]y[end link]) - Sure, let's have some fun!";
@@ -108,7 +108,6 @@ to say SexWithMilo1:
 		WaitLineBreak;
 		say "     Milo stretches, cracking his neck and wiping his messy cock off over your soft asscheeks. He sighs and begins to make his way back to his hole-home. 'You've definitely earned the chow. Don't eat it all at once now.' He laughs, hopping back into his home and disappearing from sight. A little woozy, you slowly stand, feeling the cat cum dribble out of your sex and down your thighs. Before you can decide on what to do next or what direction you're even going in, you hear Milo's voice echo from inside of his hidey hole. 'Oh! And if you need to find me again, look for the little M's I carved into some of the trees. Should lead you back here!' Well that's useful. If you ever need quick food or a quick fuck, you can try to find one of Milo's trees to follow.";
 		NPCSexAftermath Player receives "PussyFuck" from Milo;
-		infect "Bobcat";
 		now Resolution of Bobcat Encounter is 1; [talked, pussy fuck for food]
 	else:
 		say "     Thinking a moment, you chew your lip, eyeing the catboy up and down until you finally nod slowly, eyes stopping on his hardened member. He claps his paws together and bounces excitedly in place. 'Excellent!' he says anxiously, his malehood throbbing in anticipation. He hands you the can of food, and you store it away in your pack. Turning back to the cat-morph, he grabs hold of his bumpy shaft and begins stroking it before you, licking his sharp incisors while his eyes sparkle with lustful ideas for you. 'Down, on your hands and knees,' he says as a command, humping his hips forward slightly. Blushing at the order, you do as he asks, kicking off what clothing you have until you're butt naked before Milo. You then turn around, bend over, and present your naked ass to your new dom.";
@@ -122,8 +121,8 @@ to say SexWithMilo1:
 		WaitLineBreak;
 		say "     Milo stretches, cracking his neck and wiping his messy cock off over your soft asscheeks. He sighs and begins to make his way back to his hole-home. 'You've definitely earned the chow. Don't eat it all at once now.' He laughs, hopping back into his home and disappearing from sight. A little woozy, you slowly stand, feeling the cat cum dribble out of your ass and down your thighs. Before you can decide on what to do next or what direction you're even going in, you hear Milo's voice echo from inside of his hidey hole. 'Oh! And if you need to find me again, look for the little M's I carved into some of the trees. Should lead you back here!' Well that's useful. If you ever need quick food or a quick fuck, you can try to find one of Milo's trees to follow.";
 		NPCSexAftermath Player receives "AssFuck" from Milo;
-		infect "Bobcat";
 		now Resolution of Bobcat Encounter is 2; [talked, ass fuck for food]
+	infect "Bobcat";
 	ItemGain food by 1;
 
 to say SexWithMilo2:
@@ -197,8 +196,7 @@ to say LostAgainstMilo:
 Section 2 - Infection
 
 a postimport rule: [bugfixing rules for players that import savegames]
-	choose row with Name of "Bobcat" from Table of Random Critters;
-	now non-infectious entry is false;
+	now the non-infectious corresponding to a Name of "Bobcat" in Table of Random Critters is false;
 
 Table of CombatPrep (continued)
 name(text)	PrepFunction(text)

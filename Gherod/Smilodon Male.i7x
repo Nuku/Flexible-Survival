@@ -147,7 +147,7 @@ to say Smilodon Male Desc:
 				LineBreak;
 				say "     You do not see a reason to refuse the big cat's request, so a simple positive reply is all you need to make him smile. 'Oh, that's lovely!' he says, pulling you tightly against him and giving you a big hug. 'I'm sure you won't regret keeping this large feline of love close to you... And he'll make sure to thank you everyday for it.' He then hands you over something, which seems to be a small whistle. 'Just blow it and I'll be able to hear it from miles away, should help me protect you even when I'm away.' You take the whistle and tuck it away in your pockets.";
 				say "     It seems you have made a new companion!";
-				say "[line break]     (Ranfer the Smilodon Bodyguard is now a possible ally! You can make him your active ally by typing [link][bold type]ally Ranfer[roman type][end link] or [link][bold type]ally Smilodon bodyguard[roman type][end link] and initiate sex with him while active by typing [link][bold type]fuck Ranfer[roman type][end link]. You can see all the allies you have with the [link][bold type]allies[roman type][end link] command. Allies will lower the XP you gain from battle, but can gain levels themselves to be more useful in a scrap. Want to get rid of an ally? Use [link][bold type]ally dismiss[roman type][end link], or just [link][bold type]dismiss[roman type][end link])[line break]";
+				say "[line break]     (Ranfer the Smilodon Bodyguard is now a possible ally! You can make him your active ally by typing [link][bold type]ally Ranfer[roman type][end link] or [link][bold type]ally Smilodon bodyguard[roman type][end link] and initiate sex with him while active by typing [link][bold type]fuck Ranfer[roman type][end link]. You can see all the allies you have with the [link][bold type]allies[roman type][end link] command. Allies will lower the XP you gain from battle, but can gain levels themselves to be more useful in a scrap. Want to get rid of an ally? Use [link][bold type]ally dismiss[roman type][end link], or just [link][bold type]dismiss[roman type][end link].)";
 				add "Tamed" to Traits of smilodon bodyguard;
 				now smilodon bodyguard is tamed;
 				move Ranfer to Main & 7th Street;
@@ -212,9 +212,7 @@ The scent of Ranfer is "     He smells like one big cat man, masculine with an a
 to say RanferDesc:
 	say "     In front of you stands a large feline male, with an appearance resembling a Smilodon from the ice age, except this one's standing on two strong legs supporting his bulky furred body, very much like a werebeast. He sports a pair of long fangs coming out of his mouth, menacingly sharp, emphasizing the fierce look in his feline and fuzzy muzzle, and his muscular body is covered in golden fur with brown stripes and spots, only attaining a lighter color around his front torso. He also has a short brown mane coming from behind his head towards his lower back, and on his behind sticks out a small but fuzzy tail, barely moving. His equipment is quite sizable, with a thick sheath and a pair of hanging nuts that would make some males jealous, inevitably drawing your eyes in as he stands before you, with only a loincloth covering it.";
 
-[***********************************************************]
 Section 2-1 - Ranfer as Companion
-[***********************************************************]
 
 Table of GameCharacterIDs (continued)
 object	name
@@ -612,9 +610,7 @@ to say RanferMeetsXaedihr:
 	TraitGain "Met Xaedihr" for Ranfer;
 	TraitGain "Met Ranfer" for Xaedihr;
 
-[***********************************************************]
 Section 5 - Ranfer Routine
-[***********************************************************]
 
 an everyturn rule:
 	if smilodon bodyguard is tamed and smilodon bodyguard is not listed in companionList of Player: [routine only applies if Ranfer is tamed and not summoned]

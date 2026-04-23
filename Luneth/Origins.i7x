@@ -36,7 +36,7 @@ to say ResolveEvent Lost Camera:
 		LineBreak;
 		say "     Deciding that the video camera could come in handy you decide to pocket it and the tape. You glance around the area, wondering what exactly happened here. Now that you have the tape you will be able to find out, it just depends on when you will have the free time to view it.";
 	ItemGain video camera by 1;
-	say "[line break][bold type]Carter's Tape has been added to your tape inventory![roman type][line break]";
+	say "[line break]     [bold type]Carter's Tape has been added to your tape inventory![roman type][line break]";
 	add "Carter's Tape" to tapes of Player;
 	ScoreGain 10;
 	now Lost Camera is resolved;

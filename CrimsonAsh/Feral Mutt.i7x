@@ -189,10 +189,10 @@ to Pet MuttRecruitment:
 			-- "Labrador":
 				now PetMuttDetailedlook is "a sleek and fast [PetMuttColor] [PetMuttBreed]";
 			-- "Mastiff":
-				now PetMuttDetailedlook is "a strong looking [PetMuttColor] [PetMuttBreed]";
+				now PetMuttDetailedlook is "a strong-looking [PetMuttColor] [PetMuttBreed]";
 			-- "Goldador":
 				now PetMuttDetailedlook is "a rugged [PetMuttColor] [PetMuttBreed]";
-			-- "Blood Hound":
+			-- "Bloodhound":
 				now PetMuttDetailedlook is "a well-muscled [PetMuttColor] [PetMuttBreed]";
 			-- "Bulldog":
 				now PetMuttDetailedlook is "a large [PetMuttColor] [PetMuttBreed]";
@@ -218,19 +218,19 @@ to RandomizeFeralMutt:
 		-- 3:
 			now FeralMuttFurColor is the substituted form of "[one of]brown[or]black[purely at random]";
 			now FeralMuttCurrentBreed is "Mastiff";
-			now FeralMuttDetailedLook is "a strong looking [FeralMuttFurColor] [FeralMuttCurrentBreed]";
+			now FeralMuttDetailedLook is "a strong-looking [FeralMuttFurColor] [FeralMuttCurrentBreed]";
 		-- 4:
 			now FeralMuttFurColor is the substituted form of "[one of]brown[or]golden-brown[purely at random]";
 			now FeralMuttCurrentBreed is "Goldador";
 			now FeralMuttDetailedLook is "a stray and rugged [FeralMuttFurColor] [FeralMuttCurrentBreed]";
 		-- 5:
 			now FeralMuttFurColor is the substituted form of "[one of]brown[or]reddish-brown[purely at random]";
-			now FeralMuttCurrentBreed is "Blood Hound";
+			now FeralMuttCurrentBreed is "Bloodhound";
 			now FeralMuttDetailedLook is "a well-muscled [FeralMuttFurColor] [FeralMuttCurrentBreed]";
 		-- 6:
 			now FeralMuttFurColor is the substituted form of "[one of]brown[or]white and brown[purely at random]";
 			now FeralMuttCurrentBreed is "Bulldog";
-			now FeralMuttDetailedLook is "a large snarling [FeralMuttFurColor] [FeralMuttCurrentBreed]";
+			now FeralMuttDetailedLook is "a large, snarling [FeralMuttFurColor] [FeralMuttCurrentBreed]";
 
 Section 2 - Feral Mutt
 

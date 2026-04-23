@@ -510,7 +510,7 @@ To MultiInfect (x - text) repeats (repeatCount - number):
 		while repeatVar < repeatCount:
 			infect;
 			increase repeatVar by 1;
-			if repeatVar < repeatCount and remainder after dividing repeatVar by 3 is 0:
+			if repeatVar < repeatCount and remainder after dividing repeatVar by 3 is 0 and the story has not ended:
 				wait for any key;
 		if remainder after dividing repeatVar by 3 > 0:
 			LineBreak;
@@ -1073,7 +1073,7 @@ to Humanify_Player:
 	now bodytype of Player is "human";
 	now SleepRhythm of Player is 0;
 
-Part 10 - Infection Overview Terminal
+Part 7 - Infection Overview Terminal
 
 Instead of examining the infection terminal:
 	say "     Looking at the terminal, you see a lot of text on its screen. If you want, you can select a category and read it.";

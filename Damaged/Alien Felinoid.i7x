@@ -15,7 +15,7 @@ to say felinoid wins:
 			now mchance is 4;
 			if Player is submissive, increase mchance by 2;
 			if anallevel is 3, increase mchance by 2;
-			if Player is mpreg_ok, increase mchance by 2;
+			if "MPreg" is listed in feats of Player, increase mchance by 2;
 		if ( Player is female and Cunt Depth of Player > 7 ) or ( a random chance of mchance in 12 succeeds and Player is not female ):
 			say "     The great cat, as if accepting your submission, pads up to you and nuzzles against you firmly, his short fur tickling your cheek. Suddenly the feline butts you over onto all fours, purring in anticipation. With his strong and masculine scent filling your senses, you don't resist, wanting to keep the big cat pleased. You gasp as he paces behind you and, reaching a foreleg over your shoulder, leans his weight into you. The feline forces your [bodydesc of Player] chest to lower down into the dirt and licks slowly along your neck, sending shivers down your spine.";
 			say "     He rumbles softly into your ear and you end up raising your rear as he moves to mount you fully, sinking his feline shaft into your [if Player is female]wet pussy[else]tight ass[end if], spreading you open with his feline member. Keeping a paw at your back as a reminder of who's in charge, he starts thrusting, sliding those spines covering his cock along your inner walls. They send waves of pleasure through you as he pounds into you, thrusting harder and faster.";
@@ -42,7 +42,7 @@ to say felinoid wins:
 			say "     Deeper and faster, the barbs on his cock cause the growing friction to alternate between agony and bliss as they scrape and then soothe sensitive parts deep within you. You are panting heavily, unsure if you can take much more. After a few more blissful seconds, he thrusts deep once more and roars above you, finally deigning it the right time to clamp his jaws down on your neck, extending your own orgasm as his seed floods into you. The cat pulls away from you and turns behind to clean your cleft, at his first blissful lick he pulls back and you hear a growl coming from him; without hesitation, and fearing for your life, you grab your things and run as fast as you can.";
 			increase catnum by 1;
 			CreatureSexAftermath "Player" receives "PussyFuck" from "Felinoid";
-		else if Player is submissive or anallevel is 3 or Player is mpreg_ok:
+		else if Player is submissive or anallevel is 3 or "MPreg" is listed in feats of Player:
 			say "     At first he simply nuzzles against you, but pretty soon he begins pushing you around, trying to get you to move. You feel odd, his friendliness making something within you warm up and without thinking, you feel yourself move onto your hands and knees, chest pushing down into the ground. He rips at your clothing, tearing it to shreds. His weight pins you down and you moan out loud, your body ready for what the feline is about to give you. Hips meet yours, grinding against your rear.";
 			say "     As he drives into you, you cry out, feeling yourself filled and stretched around him. He doesn't take it slow, he fucks you as though you were his very own mate. Your needy moans can only agree with him.";
 			WaitLineBreak;
@@ -302,13 +302,13 @@ When Play begins:
 	now infect Name entry is "Felinoid"; [ This should be exactly the same as your monster name in the main table]
 	now heat cycle entry is 5; [ This is the number of days a heat 'cycle' lasts, usually 7 ]
 	now heat duration entry is 2; [ This is how many days of the cycle you are actually in heat. default is 1, set it to the same as cycle for permanently in heat.]
-	now trigger text entry is "His hips connect again and again, pounding into your depths, you feel him bite down on your neck and you are roaring in bliss moments later. Gasping, you shake your head, trying to clear the mental images and scenes that keep replaying over and over. You lift your hand up to your nose and pull it away again quickly, your mind connecting that smell with one thing. 'I'm in heat...' you murmur under your breath and try to hold the images at bay."; [ This is the text that is written to the screen when the player comes into heat]
+	now trigger text entry is "His hips connect again and again, pounding into your depths, you feel him bite down on your neck and you are roaring in bliss moments later. Gasping, you shake your head, trying to clear the mental images and scenes that keep replaying over and over. You lift your hand up to your nose and pull it away again quickly, your mind connecting that smell with one thing. 'I'm in heat...' you murmur under your breath and try to hold the images at bay.[line break]"; [ This is the text that is written to the screen when the player comes into heat]
 	now description text entry is "Swollen and slowly dripping fluids, your entrance aches for a lion to fill it, you find yourself, nose in the air, slowly following a scent before you regain some control and stop."; [ This text is used to describe the monster female anatomy in heat. delete entire line if you don't wish to enter one.]
 	now heat end entry is "[felinoidheat end]";
 	now inheat entry is "[felinoidheat]"; [this final say block is triggered every 3 hours the player is in heat. you can use defaultheat or write your own. defaultheat raises libido value by 5 every 3 hours. ]
 	now fheat entry is true;
 	now mpregheat entry is true;
-	now mpregtrigger entry is "His hips connect again and again, pounding into your depths, you feel him bite down on your neck and find yourself roaring in bliss moments later. Gasping, you shake your head, trying to clear the mental images and scenes that keep replaying over and over. Noticing you were stuffing your ass with a few fingers, you pull them free only to feel a needy quiver from your vacated hole. It longs to be filled again, desiring a powerful felinoid inside it. 'I'm in heat...' you murmur under your breath as your mind tries to cope with the strange state of your [if Player is male]male[else]neuter[end if] body while trying to keep those images at bay.";
+	now mpregtrigger entry is "His hips connect again and again, pounding into your depths, you feel him bite down on your neck and find yourself roaring in bliss moments later. Gasping, you shake your head, trying to clear the mental images and scenes that keep replaying over and over. Noticing you were stuffing your ass with a few fingers, you pull them free only to feel a needy quiver from your vacated hole. It longs to be filled again, desiring a powerful felinoid inside it. 'I'm in heat...' you murmur under your breath as your mind tries to cope with the strange state of your [if Player is male]male[else]neuter[end if] body while trying to keep those images at bay.[line break]";
 
 Section 4 - Drop Item
 

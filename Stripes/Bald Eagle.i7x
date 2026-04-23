@@ -17,7 +17,7 @@ to say losetoeagle:
 	if anallevel > 1:
 		now T is 1;
 		if Player is submissive, increase T by 1;
-		if Player is mpreg_ok, increase T by 1;
+		if "MPreg" is listed in feats of Player, increase T by 1;
 		if anallevel is 3, increase T by 1;
 	say "     Having defeated you, the eagle releases a call of triumph and pushes you down. His cock, poking from his soft feathers, is dripping with pre and eager for use on his captured prey.";
 	if Player is female and a random chance of 2 in 3 succeeds:

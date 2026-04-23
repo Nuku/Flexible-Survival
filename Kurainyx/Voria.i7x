@@ -149,7 +149,7 @@ to say VoriaDesc:
 	else if HP of Voria is 15:	[Checkpoint 2: Eaten Bird]
 		if vorelevel is 1:	[No more growth if vore is turned off]
 			say "     It seems like that Voria is done growing, but something in the back of your mind tells you that things might pick up if your interests change.";
-			say "     [bold type](Vore setting is too low to continue Voria's content)[roman type][line break]";
+			say "     [bold type](Vore setting is too low to continue Voria's content.)[roman type][line break]";
 		else:
 			say "     Voria has grown rapidly and is now the size of a household cat. Two more leaves are starting to grow, adding to the original two Voria has, and thin vines can also be seen poking out from the base of the stem. The plant turns to you when it notices you inspecting it, and to your surprise, the lips of its mouth curve upwards into a faint smile. It is definitely growing in both size and intelligence, which is a bit worrisome, but you're more concerned by a small cluster of feathers on the ground in front of Voria. The feathers belong to a small bird, and there's too many of them lying around for a bird to shed unless they were standing around for a really long time. The clues imply that the bird was engaged in some sort of struggle before it either escaped or fallen prey to whatever predator was here. Given that there's no sign of any other animal having trespassed in the garden, that only leaves one carnivorous being. Looking back at Voria, you ask out loud if it ate the bird. All you get in response is the same smile.";
 			now HP of Voria is 16;
@@ -177,7 +177,7 @@ to say VoriaDesc:
 		say "     You come to a sort of standoff with Voria, and you're sure that if the plant had eyes, you would be in a staring contest with the carnivorous flora. Eventually, Voria slowly extends a thin vine toward you, cautiously creeping it forward until it stops right in front of you. Recognizing the friendly gesture, you reach forward with your hand and allow Voria to wrap the vine around it. A short, gentle tug beckons you toward the plant, and you start moving toward it, albeit with a small bit of trepidation. Thankfully, as you close the distance, Voria keeps its tentacles off you, only letting the same vine guiding you to touch you.";
 		WaitLineBreak;
 		say "     When you finally stand in front of the main part of the plant's body, the vine slips away from your hand, and Voria dips her head to softly rub it against your body. Although it is a bit odd that you're effectively being nuzzled by a giant plant, you're glad to not be next on Voria's menu, and you return the affection by patting it on its large head, eliciting a quiet, but deep purr from it. It seems like you won't have to worry about Voria because it recognizes you as its caretaker and master. You're glad that the abbey now has a new guard to help keep the place safe, and since Voria has the ability to move around, maybe you can even have it follow you around during your exploration.";
-		say "     (Voria the carnivorous plant is now a possible ally!! You can make her your active ally by typing [link][bold type]ally Voria[roman type][end link] or [link][bold type]ally carnivorous plant[roman type][end link]. You can see all the allies you have with the [link][bold type]allies[roman type][end link] command. Allies will lower the XP you gain from battle, but can gain levels themselves to be more useful in a scrap. Want to get rid of an ally? Use [link][bold type]ally dismiss[roman type][end link], or just [link][bold type]dismiss[roman type][end link])[line break]";
+		say "     (Voria the carnivorous plant is now a possible ally! You can make her your active ally by typing [link][bold type]ally Voria[roman type][end link] or [link][bold type]ally carnivorous plant[roman type][end link]. You can see all the allies you have with the [link][bold type]allies[roman type][end link] command. Allies will lower the XP you gain from battle, but can gain levels themselves to be more useful in a scrap. Want to get rid of an ally? Use [link][bold type]ally dismiss[roman type][end link], or just [link][bold type]dismiss[roman type][end link].)";
 		now HP of Voria is 23; [Voria fully grown]
 		now Carnivorous Plant is tamed;
 		add "Tamed" to Traits of Carnivorous Plant;
@@ -216,7 +216,7 @@ Level of Carnivorous Plant is 1.
 Dexterity of Carnivorous Plant is 15.
 Summondesc of Carnivorous Plant is "[CarnivorousPlantSummon]".
 Dismissdesc of Carnivorous Plant is "[CarnivorousPlantDismiss]".
-Assault of Carnivorous Plant is "[one of]Voria whips one of its tentacles at your foe, scoring a direct hit![or]Voria manages to wrap several vines around your opponent, and your foe wastes some of their energy to escape the plant's grasp[or]A tentacle from Voria sweeps at your opponent's legs, tripping them up.[at random]".
+Assault of Carnivorous Plant is "[one of]Voria whips one of its tentacles at your foe, scoring a direct hit![or]Voria manages to wrap several vines around your opponent, and your foe wastes some of their energy to escape the plant's grasp.[or]A tentacle from Voria sweeps at your opponent's legs, tripping them up.[at random]".
 [fuckscene of Carnivorous Plant is "     Scenes not implemented yet.".]
 Scent of Carnivorous Plant is "     Voria has a distinct floral scent mixed with the smell of sex.".
 
