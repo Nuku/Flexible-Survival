@@ -570,6 +570,7 @@ Figure of Lilith_face_icon is the file "Succubus_face.jpg".
 Figure of Lilith_boobs_icon is the file "Succubus_boobs.jpg".
 Figure of Lindsey_hard_icon is the file "Lindsey_hard.jpg".
 Figure of Lindsey_soft_icon is the file "Lindsey_soft.jpg".
+Figure of Lux_icon is the file "Lux.png".
 Figure of Malakhi_icon is the file "Malakhi.jpg".
 Figure of Malik_hard_icon is the file "Malik_hard.jpg".
 Figure of Malik_soft_icon is the file "Malik_soft.jpg".
@@ -1857,6 +1858,7 @@ title	icon(figure name)	artist	backgroundcolor	formatrule
 "Lilith_naked"	Figure of Lilith_naked_icon	"Kupo Klein"	g-white	"normal"
 "Lindsey_hard"	Figure of Lindsey_hard_icon	"Vashaa"	g-white	"normal"
 "Lindsey_soft"	Figure of Lindsey_soft_icon	"Vashaa"	g-white	"normal"
+"Lux"	Figure of Lux_icon	"SteppeCrow"	g-white	"normal"
 "Magic Drake"	Figure of MagicDrake_icon	"Anymouse1968"	g-white	"normal"
 "Malakhi"	Figure of Malakhi_icon	"Jahi"	g-black	"normal"
 "Malakhi & Barnabas"	Figure of Malakhi_Barnabas_icon	"Jahi"	g-black	"normal"
@@ -2823,6 +2825,7 @@ carry out artistcredits:
 	say "     Latex Ermine (creature loss) by Halcy0n @ https://furaffinity.net/user/halcy0n[line break]";
 	say "     Latex Fox by SteppeCrow @ https://furaffinity.net/user/steppecrow[line break]";
 	say "     Leopardman by Vashaa @ https://furaffinity.net/user/vashaa[line break]";
+	say "     Lux by SteppeCrow @ https://furaffinity.net/user/steppecrow[line break]";
 	say "     Magic Drake by Anymouse1968 @ https://furaffinity.net/user/anymouse1968[line break]";
 	say "     Mammoth by Boo3 @ https://furaffinity.net/user/boo3[line break]";
 	say "     Mammoth Pure Succumb by Boo3 @ https://furaffinity.net/user/boo3[line break]";
