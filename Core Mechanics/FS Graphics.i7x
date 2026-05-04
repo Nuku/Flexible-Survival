@@ -2977,7 +2977,7 @@ carry out artistcredits:
 	say "     Hadiya w/Gobby by SandySchreiber @ https://furaffinity.net/user/sandyschreiber[line break]";
 	say "     Helen by Waxraven/WXRVN @ https://waxraven.tumblr.com[line break]";
 	say "     Henry (Adopt) by CastBound @ https://furaffinity.net/user/castbound[line break]";
-	say "     Hermacore Gherod  @ https://x.com/gherodv[line break]";
+	say "     Hermacore by Gherod @ https://x.com/gherodv[line break]";
 	say "     Hayato by Darian821 @ https://x.com/Darian821Jai821[line break]";
 	say "     Harold by Hufnaar @ https://furaffinity.net/user/hufnaar[line break]";
 	say "     Hobo by Conchi @ https://artisticconch.tumblr.com[line break]";
@@ -3026,9 +3026,9 @@ carry out artistcredits:
 	say "     Orthas (face) by SineAlas @ https://furaffinity.net/user/sinealas[line break]";
 	say "     Paula by Kikeri-arts @ https://deviantart.com/kikeri-arts[line break]";
 	say "     Penny by Waxraven/WXRVN @ https://waxraven.tumblr.com[line break]";
-	say "     Priestess_clothed Gherod @ https://x.com/gherodv[line break]";
-	say "     Priestess_hard Gherod @ https://x.com/gherodv[line break]";
-	say "     Priestess_soft Gherod @ https://x.com/gherodv[line break]";
+	say "     Priestess_clothed by Gherod @ https://x.com/gherodv[line break]";
+	say "     Priestess_hard by Gherod @ https://x.com/gherodv[line break]";
+	say "     Priestess_soft by Gherod @ https://x.com/gherodv[line break]";
 	say "     Rachel by o-kemono @ https://furaffinity.net/user/o-kemono[line break]";
 	say "     Ranae by SteppeCrow @ https://furaffinity.net/user/steppecrow[line break]";
 	say "     Rane Headshot by SineAlas @ https://furaffinity.net/user/sinealas[line break]";
@@ -3051,8 +3051,8 @@ carry out artistcredits:
 	say "     Segis by Gherod @ https://x.com/gherodv[line break]";
 	say "     Septus by Feralise @ https://furaffinity.net/user/feralise[line break]";
 	say "     Septus (face) by Cirrusthecloud @ https://furaffinity.net/user/cirrusthecloud[line break]";
-	say "     Seradovah_hard Gherod  @ https://x.com/gherodv[line break]";
-	say "     Seradovah_soft Gherod  @ https://x.com/gherodv[line break]";
+	say "     Seradovah_hard by Gherod @ https://x.com/gherodv[line break]";
+	say "     Seradovah_soft by Gherod @ https://x.com/gherodv[line break]";
 	say "     Sgt Marks by Anyare @ https://furaffinity.net/user/anyare[line break]";
 	say "     Stella by Furball @ https://furaffinity.net/user/furball[line break]";
 	say "     Sidney by Anymouse1968 @ https://furaffinity.net/user/anymouse1968[line break]";

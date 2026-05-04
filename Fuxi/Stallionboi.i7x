@@ -1,5 +1,5 @@
 Version 2 of Stallionboi by Fuxi begins here.
-[ Originally Authored by Sarokcat n Verarh]
+[ Originally Authored by Sarokcat n Verath]
 [ Version 2 - Expansion of defeat scenes by Fuxi. Coding done by Prometheus]
 
 "Adds a Stallionboi to Flexible Survival's Wandering Monsters table, with impreg chance"
