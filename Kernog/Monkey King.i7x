@@ -21,16 +21,16 @@ to say MonkeyKingdesc:
 	if Resolution of Monkey Duel is 1:
 		say "     You are once again in the Asian wing of the Museum, when you hear a meek voice coming from nearby. 'Ah. It's-it's you.' Wukong comes out in the open hesitantly, tugging at his uncomfortable collar. 'S-stay away from me. If the master learns that I fought without his permission again, I will be punished.'";
 	else if Loyalty of Wukong is 1:
-		say "     You find your way to the imperial China exposition, and Wukong is there to greet you, as usual: 'If it is not my favorite servant. You arrive at a good time. I am hard as a rock, and I need someone to take care of this for me,' the monkey says, pointing at the noticeable bulge into his pants. 'And I shall not take no for an answer.'";
+		say "     You find your way to the Imperial China exposition, and Wukong is there to greet you, as usual: 'If it is not my favorite servant. You arrive at a good time. I am hard as a rock, and I need someone to take care of this for me,' the monkey says, pointing at the noticeable bulge into his pants. 'And I shall not take no for an answer.'";
 	else if Loyalty of Wukong is 2:
 		say "     You are once again in the Asian wing of the Museum. 'Oh my, look who has come to visit me.' The Monkey King appears from behind a pillar. Friend or foe? Wukong slaps your shoulder: 'It's good to see you, my friend! Now, let's have some fun together!' You try to interject, but the primate is already taking a fighting stance. 'Let's spar! On your guard, [BodySpeciesName of Player in lower case]!' You sigh. Neither friend, nor foe, Wukong is more like an annoyance by this point.";
 	else if Loyalty of Wukong is -1:
 		say "     You are once again in the Asian wing of the Museum. 'You [BodySpeciesName of Player in lower case] bastard! Stay where you are!' A furious Wukong jumps in your way, intent on taking his revenge. It seems the humiliation from last time was not enough for him...";
 	else:
 		if BodyName of Player is "Monkey":
-			say "     You find your way to [one of]an[or]the[stopping] imperial China exposition. You take a look around the fake Asian decoration, when [one of]an angry[or]a familiar[stopping] voice reverberates on the walls of the in the big room: 'Who dares trespass the kingdom of the mighty Monk... Oh my, that's interesting. The prideful monkey-man startles you as he jumps down from the roof of a plaster pagoda and lands right in front of you. 'Aren't you one of my subjects? Your timing is perfect. Kneel before your King and prepare yourself. I need an outlet,' he says, grinning.";
+			say "     You find your way to [one of]an[or]the[stopping] Imperial China exposition. You take a look around the fake Asian decoration, when [one of]an angry[or]a familiar[stopping] voice reverberates on the walls of the in the big room: 'Who dares trespass the kingdom of the mighty Monk... Oh my, that's interesting. The prideful monkey-man startles you as he jumps down from the roof of a plaster pagoda and lands right in front of you. 'Aren't you one of my subjects? Your timing is perfect. Kneel before your King and prepare yourself. I need an outlet,' he says, grinning.";
 		else:
-			say "     You find your way to [one of]an[or]the[stopping] imperial China exposition. You take a look around the fake Asian decoration, when [one of]an angry[or]a familiar[stopping] voice reverberates on the walls of the in the big room: '[italic type]Halt, peasant![roman type]'. A golden-furred monkey dressed in a martial arts vest and pants jumps in front of you. He wields a wooden staff, and twirls it a few times around his body to show off his skills.";
+			say "     You find your way to [one of]an[or]the[stopping] Imperial China exposition. You take a look around the fake Asian decoration, when [one of]an angry[or]a familiar[stopping] voice reverberates on the walls of the in the big room: '[italic type]Halt, peasant![roman type]'. A golden-furred monkey dressed in a martial arts vest and pants jumps in front of you. He wields a wooden staff, and twirls it a few times around his body to show off his skills.";
 			say "     With an arrogant grin on his face, the kung-fu artist challenges you: 'Low life! You are now graced by the presence of the illustrious, mighty Monkey King! Obey your betters and service me at once! Of course, you can also do that after I whacked you a little with my staff. Actually, do try to resist; claiming you will feel even more pleasurable.'";
 
 to say losetoMonkeyKing:
@@ -310,13 +310,6 @@ Section 4 - Events
 [Flaggings and lockings]
 [Every event will be flagged furry and guy, since most events are about Wukong]
 [Variations in event will keep the player from seeing other kind of flagged content]
-[when play begins:
-	add Crashing the Satyr Party to the BadSpots of FurryList;
-	add Hunt Of Mammoth Proportions to the BadSpots of FurryList;
-	add Take My Royal Word for Granite to the BadSpots of FurryList;
-	add Crashing the Satyr Party to the BadSpots of MaleList;
-	add Hunt Of Mammoth Proportions to the BadSpots of HermList;
-	add Take My Royal Word for Granite to the BadSpots of MaleList;]
 
 [Event 1 - quest launcher]
 
@@ -386,13 +379,13 @@ to say ResolveEvent Crashing the Satyr Party:
 		say "Choice? (1-3)> [run paragraph on]";
 		get a number;
 		if calcnumber < 1 or calcnumber > 3:
-			say "Invalid choice. Type [link]1[end link] to help Wukong, [link]2[end link] to sabotage Wukong's plan or [link]3[end link] to elect to stay out of this.";
+			say "Invalid choice. Type [link]1[end link] to help Wukong, [link]2[end link] to sabotage Wukong's plan or [link]3[end link] to stay out of this.";
 	LineBreak;
 	if calcnumber is 1:
 		say "     Having made your decision, you make your way towards the amphoras holding the party wine. 'Why, look what we have here?' the satyr that's closest to the containers says when he sees you. 'Too bad you missed the start of the party. But I can give you some consolation, if you want.' You try to tell the goat-man that you are not here for that, but he does not seem to listen. It looks like you have a fight on your hands.";
 		challenge "Satyr";
 		if fightoutcome >= 10 and fightoutcome <= 19:
-			say "     You look around, checking if your scuffle has attracted unwanted attention. Everyone else is either fucking, drunk, or both. You hurriedly dump the content of your pouch into the amphoras just as one group approaches to get a refill. You skedaddle to make your report to Wukong. 'Very good,' the monkey says after you returned to the pagoda. 'By the time you came to find me, the drug should have acted. Now, it is time for [italic type]me[roman type] to party.'";
+			say "     You look around, checking if your scuffle has attracted unwanted attention. Everyone else is either fucking, drunk or both. You hurriedly dump the content of your pouch into the amphoras just as one group approaches to get a refill. You skedaddle to make your report to Wukong. 'Very good,' the monkey says after you returned to the pagoda. 'By the time you came to find me, the drug should have acted. Now, it is time for [italic type]me[roman type] to party.'";
 			WaitLineBreak;
 			say "     'Come on, you lowly half-beast! Sex is your domain, is it not?' Wukong asks, as he slams his hips into the satyr one more time.";
 			say "     It had been an impressively quick affair. You accompanied the monkey to the party, where you found all the satyrs in an even more engaged state than before. 'I had you spike their wine with some aphrodisiac,' Wukong explained to you, while you made your way through the painfully rock-hard satyrs and gushing wet nymphs. The both of you singled out the leader, a big, black-haired male with impressive chest hair, who was busy chain-fucking males and females alike, in the hopes to get his massive erection down. 'W-Why doesn't it come down?' you can hear him moan. Wukong made the satyr an elaborated speech, which he had rehearsed to you three times on your way here but still found a way to butch it, and the fight was on. Then, quickly over, as the monkey easily dominated the drugged goat-man, tied his hands together and began to claim his prize.";
@@ -478,7 +471,7 @@ to say ResolveEvent Hunt Of Mammoth Proportions:
 				FeatGain "Natural Armaments";
 			else:
 				StatChange "Dexterity" by 1;
-			say "     You part ways with the monkey king, and in good terms, for once. You hope that it will last.";
+			say "     You part ways with the monkey king, and on good terms, for once. You hope that it will last.";
 			now Loyalty of Wukong is 2;
 			now Resolution of Hunt Of Mammoth Proportions is 1; [fought + won]
 		else if fightoutcome >= 20 and fightoutcome <= 29:
@@ -500,7 +493,7 @@ to say ResolveEvent Hunt Of Mammoth Proportions:
 				say "     A churning around you awakens you to a semi-conscious state much later. This builds quickly with a trumpeting cry from beyond the fleshy walls surrounding you. You move quickly back through her deep cunt as she gives [']birth['] to you once again, pushed along by the contractions and the torrents of femcum that comes out with you. You land in a big, sticky mess that stains the floor and wall all around you. Wukong follows you quickly after. While the mammoth walks away satisfied, the both of you lay there for quite some time, overcome by the strange, yet oddly arousing, experience. Eventually, Wukong turns his head in your direction. 'Let us... Never speak of this again,' he asks. You agree. Once you are in a good enough state to stand up, the both of you part ways without a word.";
 			else:
 				say "     The pachyderm pushes you down to the floor. She drops her massive cock down atop you, making you release an [']Oof!['] as it slams atop you. Wukong is then forced to straddle the massive erection. She starts rubbing her large hands around her shaft and her balls, grinding your bodies against her growing erection. [if scalevalue of Player is 5]Once erect, her cock is nearly as large as you are and drools a constant stream of her precum over you[else if scalevalue of Player > 2]Once erect, her cock is larger than you are and drools a constant flow of precum over you[else]Even before the fight ended, her cock was probably bigger than you and now it's utterly massive, burying you under its enormous weight and drooling what seems like mouthfuls of precum by the second all over you[end if]. The scent of this starts to cloud your mind, making you rub yourself against it as best you can, working to pleasure the hyper-endowed mammoth. Wukong too gets into the game, and eventually, she trumpets in ecstasy. She pushes Wukong in front of her urethra, and presses her cock down onto you hard before blasting a huge load that paints your bodies and a large chunk of the floor and wall behind you) white with her semen. While the mammoth walks away satisfied, the both of you lay there for quite some time, overcome by the strange, yet oddly arousing, experience. Eventually, Wukong turns his head in your direction. 'Let us... Never speak of this again,' he asks. You agree. Once you are in a good enough state to stand up, the both of you part ways without a word.";
-			infect "Mammoth";
+			infect;
 			now Resolution of Hunt Of Mammoth Proportions is 2; [fought + lost]
 		else if fightoutcome >= 30:
 			say "     You run away as fast as your legs can carry you. 'Wait! Where are you-mmmf!' Wukong's outraged protest is cut short as he is grabbed by the mammoth and bear-hugged against her huge breasts. 'Hng... S-stop.'";
@@ -548,8 +541,9 @@ to say ResolveEvent Take My Royal Word For Granite:
 			WaitLineBreak;
 			say "     You take your sweet time, exploring Wukong's statufied body with your hands, taking fun at noticing that doing certain things like tickling his armpits or pinching his rigid nipples earn you additional drops of precum. Eventually, you decide to take care of Wukong's penis directly. You take it into your hand and stroke it slowly. You are quickly rewarded by cum squirting out from the opening and splashing on your arm. He seems to have cum; however his petrified cock was still at full hardness, and vulnerable to more assaults.";
 			say "     You resume your stroking, trying to keep the monkey on the edge as long as you can. Not an easy endeavor as he is perfectly immobile. His stone-like temporary nature allows you to get naughty, such as giving his ballsack some hearty slaps, which makes his member release even more precum, like a leaked faucet. With more touches and, soon after, some licking, you make Wukong cum for a second time.";
+			WaitLineBreak;
 			say "     Just as you got yourself into the game, someone taps on your shoulder. It is one of the satyrs from earlier. It seems that a small assembly has formed behind you, and they too want to harass the Asian primate. You realize that a lot of time had already passed, and all things considered you have other things to do. You leave your spot to the satyr, and begin to walk away. On the way, you notice Wukong's staff. It looks like a sturdy weapon, and so you decide to take it for yourself.";
-			say "[bold type]You gain Wukong's staff![roman type][line break]";
+			say "[line break]     [bold type]You gain Wukong's staff![roman type][line break]";
 			ItemGain wukongStaff by 1 silently;
 			now Resolution of Take My Royal Word For Granite is 1; [fought + won]
 		else if fightoutcome >= 20 and fightoutcome <= 29:
@@ -558,8 +552,9 @@ to say ResolveEvent Take My Royal Word For Granite:
 			WaitLineBreak;
 			say "     Time flows slowly in your stone prison. The hands of Wukong are quickly back on the offense, torturing your defenseless genitals with caresses and strokes. At one point, you even feel his tail [if Cock Count of Player is 1]wrap around your cock and squeeze it[else if Cock Count of Player > 1]wrap around all your cocks and squeeze them together[else if Cunt Count of Player is 1]grind against your pussy[else]grind against your row of pussies[end if]. After some time, you feel like the size of the hands change constantly, as if several other people took their turn playing with you. Your mind sinks into a permanently sex-addled state, and you drift in and out of consciousness regularly.";
 			say "     Time flows slowly in your stone prison. The hands of Wukong are quickly back on the offense, torturing your defenseless genitals with caresses and strokes. At one point, you even feel his tail [if Cock Count of Player is 1]wrap around your cock and squeeze it[else if Cock Count of Player > 1]wrap around all your cocks and squeeze them together[else if Cunt Count of Player is 1]grind against your pussy[else]grind against your row of pussies[end if]. After some time, you feel like the size of the hands change constantly, as if several other people took their turn playing with you. Your mind sinks into a permanently sex-addled state, and you drift in and out of consciousness regularly.";
+			WaitLineBreak;
 			say "     You eventually wake up some time later, with Valerie overlooking your knocked out body. You rise your head with great difficulty, every muscle in your body feeling sore. 'Thank goodness, you are back to your senses,' Valerie says when she notices you have awaken. 'It is fortunate that the effects were only temporary. Still, it must have been quite an ordeal. Are you feeling alright?' You shake your head, not feeling that good. 'Being turned into a living statue has some effects on the body, I guess,' the sphinx replies. 'I am sorry that we dragged you into this. At the very least, eat and drink this, it will make up for all the energy you had to spend.' On these words, she brings you a sandwich and a bottle of water, that you down without second thought. It will not make up for the time lost at being a statue, but it is better than anything.";
-			say "[bold type]Looking outside, you realize that you spent nearly half a day, stuck as a statue.[roman type][line break]";
+			say "     [bold type]Looking outside, you realize that you spent nearly half a day, stuck as a statue.[roman type][line break]";
 			decrease turns by 4;
 			now Resolution of Take My Royal Word For Granite is 2; [fought + lost]
 		else if fightoutcome >= 30:
@@ -569,7 +564,7 @@ to say ResolveEvent Take My Royal Word For Granite:
 			now Resolution of Take My Royal Word For Granite is 3; [fought + fled]
 	else:
 		LineBreak;
-		say "Valerie is understandably disappointed by your decision. 'Very well. I guess that I cannot force our problems on you. I will find a way, eventually...'";
+		say "     Valerie is understandably disappointed by your decision. 'Very well. I guess that I cannot force our problems on you. I will find a way, eventually...'";
 		now Resolution of Take My Royal Word For Granite is 99; [disinterest]
 	now Take My Royal Word For Granite is resolved;
 
@@ -585,7 +580,43 @@ Table of GameCharacterIDs (continued)
 object	name
 Wukong	"Wukong"
 
-Wukong is a person. Wukong is in Nowhere. Description of Wukong is "[wukongDesc]".
+Wukong is a person. Wukong is in Nowhere.
+ScaleValue of Wukong is 3. [human sized]
+Body Weight of Wukong is 3. [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
+Body Definition of Wukong is 7. [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
+[Body Adjective is generated out of the body weight and body definition and can be used in scenes - one word descriptive adjective depending on weight and definition groups: low weight group: skinny/slender/lithe; mid weight group: average/fit/muscled; high weight group: pudgy/husky/jacked]
+Androginity of Wukong is 2. [Gender Adjective is generated out of androginity 1-9: hypermasculine/masculine/somewhat effeminate/effeminate/androgynous/feminine butch/tomboyish/feminine/hyperfeminine]
+Mouth Length of Wukong is 6. [inches deep for face fucking; maximum possible will be double this number (when deep throating)]
+Mouth Circumference of Wukong is 3. [mouth circumference 1-5, "tiny, small, normal, wide, gaping"]
+Tongue Length of Wukong is 6. [length in inches]
+Breast Size of Wukong is 0. [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
+Nipple Count of Wukong is 2. [count of nipples]
+Asshole Depth of Wukong is 8. [inches deep for anal fucking]
+Asshole Tightness of Wukong is 1. [asshole tightness 1-5, "extremely tight, tight, receptive, open, gaping"]
+Cock Count of Wukong is 1. [number of cocks]
+Cock Girth of Wukong is 3. [thickness 1-5, thin/slender/average/thick/monstrous]
+Cock Length of Wukong is 8. [Length in Inches]
+Ball Count of Wukong is 2. [allowed numbers: 1 (uniball), 2 or 4]
+Ball Size of Wukong is 3. [size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"]
+Cunt Count of Wukong is 0. [number of cunts]
+Cunt Depth of Wukong is 0. [penetrable length in inches; some minor stretching allowed, or more with Twisted Capacity]
+Cunt Tightness of Wukong is 0. [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
+Clit Size of Wukong is 0. [size 1-5, very small/small/average/large/very large]
+[Basic Interaction states as of game start]
+PlayerMet of Wukong is false.
+PlayerRomanced of Wukong is false.
+PlayerFriended of Wukong is false.
+PlayerControlled of Wukong is false.
+PlayerFucked of Wukong is false.
+OralVirgin of Wukong is false.
+Virgin of Wukong is true.
+AnalVirgin of Wukong is true.
+PenileVirgin of Wukong is false.
+SexuallyExperienced of Wukong is true.
+TwistedCapacity of Wukong is false. [Twisted Characters can take any penetration, no matter the size]
+Sterile of Wukong is false. [steriles can't knock people up]
+MainInfection of Wukong is "Monkey".
+Description of Wukong is "[wukongDesc]".
 
 to say wukongDesc:
 	if Resolution of Monkey Duel is 1:
@@ -595,21 +626,13 @@ to say wukongDesc:
 
 instead of conversing Wukong:
 	if Resolution of Monkey Duel is 1:
-		if humanity of Wukong is 0:
-			say "     [if Loyalty of Wukong is -1]'You accursed knave! Gnnk!' Wukong pulls at the collar that just sent him a shock. 'Just you wait until I'm out of this bondage.'[else if Loyalty of Wukong is 2]'Is this how you reward me for allowing you in my service? A thousand curses on you!' Wukong says as you inquire about him.[else]'And to say I considered you my friend. Traitor!' the former Monkey King laments, as you attempt to talk to him.[end if]";
-		else if humanity of Wukong is 1:
-			say "     [if Loyalty of Wukong is -1]'Such disgrace. I have nothing to say to you.'[else if Loyalty of Wukong is 2]'You are enjoying seeing your former sovereign in this state, admit it.'[else]'W-Would you at least convince this Hanu to remove these ropes. I'm itching!'[end if]";
-		else if humanity of Wukong is 2:
-			say "     [if Loyalty of Wukong is -1]'I learned my lesson, alright? Release me.'[else if Loyalty of Wukong is 2]'While I do see the point of this treatment, these ropes are over-doing it.'[else]'This Hanu person is not a bad person, but I cannot stand to stay in this bondage.'[end if]";
-		else:
-			say "     [if Loyalty of Wukong is -1]'We do not like each other much, but let's agree to put our past between us.'[else if Loyalty of Wukong is 2]'I realized that I treated my servants badly. I will treat my next ones better!'[else]'This enforced time-out helped clear my mind and realize many things, my friend. Once Hanu releases me, let's walk the Earth, you and I!'[end if]";
+		if humanity of Wukong is:
+		-- 0: say "     '[if Loyalty of Wukong is -1]You accursed knave! Gnnk!' Wukong pulls at the collar that just sent him a shock. 'Just you wait until I'm out of this bondage.'[else if Loyalty of Wukong is 2]Is this how you reward me for allowing you in my service? A thousand curses on you!' Wukong says as you inquire about him.[else]And to say I considered you my friend. Traitor!' the former Monkey King laments, as you attempt to talk to him.[end if]";
+		-- 1: say "     '[if Loyalty of Wukong is -1]Such disgrace. I have nothing to say to you.'[else if Loyalty of Wukong is 2]You are enjoying seeing your former sovereign in this state, admit it.'[else]W-Would you at least convince this Hanu to remove these ropes? I'm itching!'[end if]";
+		-- 2: say "     '[if Loyalty of Wukong is -1]I learned my lesson, alright? Release me[else if Loyalty of Wukong is 2]While I do see the point of this treatment, these ropes are over-doing it[else]This Hanu person is not a bad person, but I cannot stand to stay in this bondage[end if].'";
+		-- otherwise: say "     '[if Loyalty of Wukong is -1]We do not like each other much, but let's agree to put our past behind us.'[else if Loyalty of Wukong is 2]I realized that I treated my servants badly. I will treat my next ones better!'[else]This enforced time-out helped clear my mind and realize many things, my friend. Once Hanu releases me, let's walk the Earth, you and I!'[end if]";
 	else:
-		if Loyalty of Wukong is -1:
-			say "     'If it isn't the knave who had the nerve to entrap me, in that Museum!' Wukong says, a smirk on his face. [one of]'A lower man would not resist the urge to put you in chains like this baboon over here...' He punctuates his words with a couple of small foot slaps on Hanu's head. 'But I am a higher kind of being. A magnanimous lord. So enjoy your stay at my court!'[or]'Unable to resist the splendor of my new place of stay? Or is it my little pet here that interests you?' He punctuates his words by ruffling Hanu's hair with his foot.[stopping]";
-		else if Loyalty of Wukong is 2:
-			say "     'My trusted servant,' Wukong says as you beckon him. [one of]'I shall forgive your cowardice against the furry pachyderm, for I have now a new, entire kingdom to rule. You are welcome to stay here as long as you like. You may even amuse yourself with my pet, if you promise me to give me a good show.' He punctuates his words by grabbing Hanu's collar with one foot, and forcing his defeated rival to look at you in the eyes.[or]'Your visit fills me with joy. What news do you bring me from the city?'[stopping]";
-		else:
-			say "     'Ah, my friend! My dear friend!' Wukong shouts, over-joyed. [one of]Do you like the look of my secondary residence? It may be a little less furnished than the Museum, but I can really claim it as my own.[or]'What extraordinary tales do you bring me from your adventures in the city?'[stopping] [one of]Make yourself at home, and use my little pet as much you like.' He punctuates his words by grabbing Hanu's collar with one foot, and forcing his defeated rival to look at you in the eyes.[or]'We should take a stroll in my museum together, at the occasion. I'm sure my little pet will [italic type]love[roman type] all the interactible exhibits' Wukong's feet condescendingly rubs Hanu's head, as he stresses the last words at his attention.[at random]";
+		say "     '[if Loyalty of Wukong is -1]If it isn't the knave who had the nerve to entrap me, in that Museum!' Wukong says, a smirk on his face. '[one of]A lower man would not resist the urge to put you in chains like this baboon over here...' He punctuates his words with a couple of small foot slaps on Hanu's head. 'But I am a higher kind of being. A magnanimous lord. So enjoy your stay at my court!'[or]Unable to resist the splendor of my new place of stay? Or is it my little pet here that interests you?' He punctuates his words by ruffling Hanu's hair with his foot.[stopping][else if Loyalty of Wukong is 2]My trusted servant,' Wukong says as you beckon him. '[one of]I shall forgive your cowardice against the furry pachyderm, for I have now a new, entire kingdom to rule. You are welcome to stay here as long as you like. You may even amuse yourself with my pet, if you promise me to give me a good show.' He punctuates his words by grabbing Hanu's collar with one foot, and forcing his defeated rival to look at you in the eyes.[or]Your visit fills me with joy. What news do you bring me from the city?'[stopping][else]Ah, my friend! My dear friend!' Wukong shouts, overjoyed. '[one of]Do you like the look of my secondary residence? It may be a little less furnished than the Museum, but I can really claim it as my own.[or]What extraordinary tales do you bring me from your adventures in the city?[stopping] [one of]Make yourself at home, and use my little pet as much you like.' He punctuates his words by grabbing Hanu's collar with one foot, and forcing his defeated rival to look at you in the eyes[or]We should take a stroll in my museum together, at the occasion. I'm sure my little pet will [italic type]love[roman type] all the interactible exhibits.' Wukong's foot condescendingly rubs Hanu's head, as he stresses the last words at his attention[at random].[end if]";
 
 instead of fucking Wukong:
 	if Resolution of Monkey Duel is 1:

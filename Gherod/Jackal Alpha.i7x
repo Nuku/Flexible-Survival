@@ -309,8 +309,6 @@ to say Alpha Jackal Loses:
 				say "     [bold type]Beating the alpha jackal once has released you from his magical influence completely[roman type]. You feel much more like yourself, now!";
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options], or 0 to exit.";
-	wait for any key;
-	clear the screen and hyperlink list;
 
 to say AlphaJLosesCockPlay:
 	say "     Given the fact that he has such an especially large endowment, your mind wonders around the possibility of having some fun with it. Fortunately, the alpha won't be able to resist any of your moves, and you could potentially have your way with his cock free of any problematic situations. As you have made your choice already, you proceed to approach the mystic canine, who just blinks, incredulous at the fact you are coming closer to him with a certain naughty goal in mind. It seems like he can read through you. 'Even after all that, you still want to...?' he asks, not finished his sentence before you pull his legs to yourself, crouching next to him, and sliding your hands over his oversized sheathe, which immediately reacts to your touch, his meaty prick poking out of it and expanding forward with every movement.";

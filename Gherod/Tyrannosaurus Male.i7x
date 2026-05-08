@@ -60,9 +60,6 @@ to say Tyrannosaurus Male Loses:
 	else:
 		say "     After delivering the final strike on the dino man, he grunts in frustration, as he is unable to fight back due to how much you have done to hinder him. 'Grr! How can a little bitch like you do so much...! This time you've won, but the next... I'm gonna make you bend over...!' he taunts you, amidst more grunting, but those are no longer threats you should worry about. After all, you have defeated him, and that means you get to have your way with the anthro tyrannosaurus man.";
 	say "[line break]     [bold type]What do you want to do with him, if anything?[roman type][line break]";
-	say "[TyrannosaurusMaleVictorySexMenu]";
-
-to say TyrannosaurusMaleVictorySexMenu:
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]

@@ -51,12 +51,9 @@ Mall Lockerroom	"Mall Lockerroom"
 
 Mall Lockerroom is a room.
 Mall Lockerroom is southwest of Mall West Wing.
-Description of Mall Lockerroom is "[MallLockerroomDesc]".
+Description of Mall Lockerroom is "     The lockerroom that you're standing in is rather big with simple dark blue walls. Bright red lockers fill the room in rows, some appearing to be open, others closed and locked. There is a variety of empty chip bags and empty water bottles littering the room, showing evidence that people live here. Of course, that's not the only thing that proves that there's life here as you can hardly miss the random sleeping bags placed all throughout the room. While the place is pretty messy, you figure it's a lot better than looking like a ghost town, much like most of the places you've seen before. The [Bold Type]northeast[roman type] leads back to the mall's west wing.[line break]".
 
-to say MallLockerroomDesc:
-	say "     The lockerroom that you're standing in is rather big with simple dark blue walls. Bright red lockers fill the room in rows, some appearing to be open, others closed and locked. There is a variety of empty chip bags and empty water bottles littering the room, showing evidence that people live here. Of course, that's not the only thing that proves that there's life here as you can hardly miss the random sleeping bags placed all throughout the room. While the place is pretty messy, you figure it's a lot better than looking like a ghost town, much like most of the places you've seen before. The [Bold Type]northeast[roman type] leads back to the mall's west wing";
-
-instead of going Southwest from Mall West Wing while (LockerroomTrioRelationship < 2): [guaranteed events 1+2]
+instead of going Southwest from Mall West Wing while LockerroomTrioRelationship < 2: [guaranteed events 1+2]
 	if debugactive is 1:
 		say "     DEBUG: Walk-in Event in the mall lockerroom. LockerroomTrioRelationship: [LockerroomTrioRelationship].[line break]";
 	now LastLockerroomTrioMeet is turns; [saves the last event time]
@@ -66,7 +63,7 @@ instead of going Southwest from Mall West Wing while (LockerroomTrioRelationship
 		LineBreak;
 		say "     It might be worth checking back here sometime later, maybe you can get to know the inhabitants or join them for a game or other interesting past-times...";
 		now LockerroomTrioRelationship is 1; [met the trio once]
-	else if LockerroomTrioRelationship is 1: [second time]
+	else: [second time]
 		say "     You decide to finally go back and check on the trio. When you enter the lockerroom you're kind of surprised to only see two of them, the wolf and the feline. Your entrance is noticed by one of the two, specifically the cat who waves you on over. Intrigued, you make walk closer, reaching the pair in seconds. Upon a closer look, you see that the feline's fur is a bluish gray color and that he has eyes that are quite vividly green. As for the wolf - he has tan fur and a gray muzzle, his eyes a simple brown. The cat chuckles and turns his head to face his roommate. 'Hey, Spike! Looks like we got someone new here,' he says happily. The canine rolls his eyes at his friend. 'I can clearly see that Tomas, I'm not blind,' Spike says exasperatedly. 'Hey, I don't know about that. I mean you did run into that wall that-' Tomas starts before being cut off with a hand to the mouth. Spike glares at his friend, a blush on his cheeks. 'I thought I told you never to speak of that again?' he growls.";
 		say "     The bluish-gray cat just shakes his head with a laugh before removing the hand and turning his face to you. 'Alright, alrighty... Anyhow, who are you? As you've probably heard I'm Tomas and this is Spike,' he says with a smile. You tell the feline that you're just a survivor who wanted to see if the two of them and the mall-rat were there. Seeing the two give a confused look as to how you knew of them, you tell them that you saw them playing cards. That brings recognition to both of their eyes as the wolf lets out a chuckle. 'I remember that! I cleaned both you and Jeremy out real good,' Spike says to Tomas.";
 		WaitLineBreak;
@@ -75,7 +72,7 @@ instead of going Southwest from Mall West Wing while (LockerroomTrioRelationship
 		now LockerroomTrioRelationship is 2; [met the trio twice]
 		move player to Mall Foyer;
 
-instead of going Southwest from Mall West Wing while (LockerroomTrioRelationship > 1 and LockerroomTrioRelationship < 4 and (LastLockerroomTrioMeet - turns > 3)): [event 3 will fire at the earliest 3 turns after the previous one]
+instead of going Southwest from Mall West Wing while LockerroomTrioRelationship > 1 and LockerroomTrioRelationship < 4 and LastLockerroomTrioMeet - turns > 3: [event 3 will fire at the earliest 3 turns after the previous one]
 	if debugactive is 1:
 		say "     DEBUG: Walk-in Event in the mall lockerroom. LockerroomTrioRelationship: [LockerroomTrioRelationship].[line break]";
 	now LastLockerroomTrioMeet is turns; [saves the last event time]
@@ -86,7 +83,7 @@ instead of going Southwest from Mall West Wing while (LockerroomTrioRelationship
 		say "     'You know, the only way I was able to get Jen to even agree to let you go was by saying you'd work at the store you stole from,' he says. The mall-rat doesn't stay cowed for long and puffs himself up in anger. 'You didn't have to help me! I could have dealt with it myself!' he yells. Spike raises his brows, disbelief in his eyes. 'Really? It didn't look like that when you were being man-handled by the guard,' Spike snarks to his friend. That comment ends up making Jeremy look down in embarrassment. Shortly after that Tomas seems to sigh and take pity on the guy. 'Look Jeremy, you know we love you right? It would hurt us to see you in harm's way,' the feline says softly, giving him a kiss on the cheek.";
 		say "     Tomas's gesture appears to relax the mall-rat, his posture slouchy. He turns to Spike and sees the wolf nodding with a smile, making him sigh. 'I know you two do, but sometimes I want to show that I can be independent,' he admits out loud. By the looks on the other two's faces you can tell they understand him. 'Look Jerry, if you want to prove to us you can be independent, then show us you'll take the job seriously,' Spike says. The mall-rat gains a determined glint in his eyes before nodding rapidly and then moving to lean on Spike, Tomas following motion. Seeing that the three are having an intimate moment, you get up to leave, heading out of the lockerroom. The last thought in your mind as you do this is a question on whether or not the three are more than just friends. You'll have to find that out later though.";
 		now LockerroomTrioRelationship is 3; [met the trio three times]
-	else if LockerroomTrioRelationship is 3: [fourth time]
+	else: [fourth time]
 		say "     When you head into the lockerroom you spot Spike and Tomas, instantly heading over, yelling a hello. They turn to you and smile and wave. 'Hey there! It's great to see you again,' the feline says, appearing to be holding a box. When you take a second look, you see that they're moving around various boxes into one of the corners of the lockerroom. You ask them what the boxes are for. 'Oh? These? It's my inventory,' Spike says. Inventory? Tomas nods and expands on what the wolf meant. 'You see, what my friend means, is that he's kind of a merchant.' The cat explains, ignoring the eye roll from the canine. 'I keep telling you I'm nothing that fancy Tomas,' Spike says, pretty adamant about it. This time it is the feline who rolls his eyes. 'Come on, you basically trade your wares to people for other items. That's basically a merchant,' the guy says. But before they can argue even further, someone else comes into the lockerroom. It is a buff female wolverine wearing the 'Wolverine Security' uniform carrying Jeremy by his shirt.";
 		say "     Spike groans when he sees her, putting a box down and sighing. 'What did Jeremy do today Jen?' he asks, as if this was a regular occurrence. Hearing the name Jen makes you instantly realize this must be Jenna, the leader of the Wolverines. When she speaks she seems to have a rather gruff voice. 'Caught the bastard trying to skip on his parole!' she practically snarled. Tomas facepalms and gives Jeremy a disappointed look which causes the mallrat to flinch away. 'Jeremy, I thought you were going to work today?' the feline asks. The guy doesn't respond which prompts Jenna to glare at him and speak in his stead. 'Go on, tell them. Explain to them that I caught you playing hooky and attempting to steal again. Tell them that I basically had to watch you the entire day to prevent you from leaving your job,' she says, sneering at him. It totally seems that the female wolverine doesn't like Jeremy much, that is until her eyes softens and she sets him down.";
 		WaitLineBreak;
@@ -114,11 +111,10 @@ instead of going Southwest from Mall West Wing while JennaRelationship is 2 and 
 	say "     Jenna looks at the cup a few more times before shrugging and deciding to take a drink. By the look on her face it appears that the tea is quite good. This is further evidenced by fact that she quickly drinks the entire thing. 'Thanks, I guess,' the female wolverine says. Nermine nods and is about to say something but a male wolverine rushes over to Jenna, panic in his face. 'Captain! There's been an incident in the [Bold Type]East[roman type] Wing! Somebody's been murdered!' he shouts. 'Murdered?! What?!' she says, shock on her face. Quickly after that, the female wolverine follows her subordinate, both of them running. Nermine however turns to you. 'It's always good to befriend the local constabulary, no?' the jackaless says with a smile before heading back into the shop. Befriending the constabulary? Murder? You might want to check that out sometime soon.";
 	now JennaRelationship is 3; [met, has been seen guarding Nermine's shop]
 
-instead of going Southwest from Mall West Wing while (a random chance of 2 in 3 succeeds): [66% chance for some event]
+instead of going Southwest from Mall West Wing while a random chance of 2 in 3 succeeds: [66% chance for some event]
 	if debugactive is 1:
 		say "     DEBUG: Walk-in Event in the mall lockerroom (random).[line break]";
-	let randomnumber be a random number from 1 to 5;
-	if randomnumber is:
+	if a random number from 1 to 5 is:
 		-- 1:
 			say "[WolfHorseMallSex]"; [leads to the Cory/Jeff events]
 		-- 2:
@@ -135,6 +131,7 @@ instead of going Southwest from Mall West Wing while (a random chance of 2 in 3 
 
 to say Bucketbus:
 	say "     Before you can even reach the lockerroom you hear a loud clang to your left. Turning around you spot a big boobed lady with wings and a tail laid out on the floor before realizing it's a succubus. But what catches your attention is not her body but what's on her head. Covering the entirety of her head is a large metal bucket. From her struggles with it via her hands, you can tell the thing's pretty stuck. You are about to walk over there and offer to help but somebody else seems to move in her direction, an incubus to be specific. He has the succubus hold on to railing that's on the wall as he grabs a hold of the bucket and pulls hard. It takes some force but he manages to dislodge it from her head. Once she's free you can see that it was most likely her horns that got her stuck. Her friend, by the way they seem familiar with each other, asks how she got stuck. She blushes and says something about a mallrat shoving her while she was getting cleaning supplies. Not wanting to listen any longer, you continue on to your original destination.";
+	WaitLineBreak;
 	move player to Mall Lockerroom;
 
 to say ANewFriend:
@@ -150,131 +147,118 @@ to say ANewFriend:
 		say "     Soon enough you're at the food court where he has you sit down at one of the many tables. There he asks you what you want, you tell him to decide. He nods and soon vanishes into the various lines at the food court. While by yourself you muse that Scotty has become pretty outgoing since you agreed to be his friend. You guess that all he needed was that to boost his courage up a bit. Minutes later, the young goat boy comes back with a tray that has two hamburgers on it and some fries. He sets it down and gives you a nervous look. 'I wasn't too sure as to what you'd like so I just got you a hamburger with ketchup,' he says, taking hold of his burger.";
 		WaitLineBreak;
 		say "     You tell him it's fine before picking up yours as well and taking a bite out of it. The hamburger's pretty good, better than eating just chips at least. While you two are eating a conversation takes off. 'So... I'm really grateful that you agreed to be my friend,' he admits out loud. You tell him that it seriously wasn't a problem before joking that you couldn't resist such a cute goat boy like him. That appears to shock him if the fact he starts to choke on a fry says anything. You chuckle at the response, enjoying it a lot. Soon though he manages to recover, but by now a rather sad look is on his face. 'You know, I was pretty lonely before you came along,' Scotty says quietly. You tell him that you know this, that it's because he just moved here. The goat boy shakes his head in disagreement. 'That's not it, even back in Britain I didn't have many friends,' he murmurs sadly.";
-		say "     [bold type]Do you put your hand on his and comfort him?[roman type][line break]";
-		LineBreak;
+		say "[line break]     [bold type]Do you put your hand on his and comfort him?[roman type][line break]";
 		say "     ([link]Y[as]y[end link]) - Of course! You can't stand seeing an adorable goat boy sad.";
-		say "     ([link]Y[as]y[end link]) - No, that might be going a bit too far.";
+		say "     ([link]N[as]n[end link]) - No, that might be going a bit too far.";
 		if Player consents:
 			LineBreak;
 			say "     With a gentle movement, you lay your hand upon Scotty's, surprising him and causing the guy to look at you in confusion. You give him a nice warm smile and tell him that it doesn't matter now, that he has you as a friend now, doesn't he? The goat boy's face appears to brighten up quickly as a matching smile shows up on his face. 'You're right, I do have you now,' he says, turning his hand over to grasp a hold of yours. He squeezes your hand softly, as if to confirm that you're there, that you're real. You don't really know exactly how lonely Scotty must have been back in Britain, but you're here for him now. Shortly after you two finish eating and head back to the lockerroom, the both of you holding hands the entire time. You tell him that you two should do something else next time, spice it up. 'Sure! That'd be fun,' he says with a happy smile. You then say your goodbyes and leave the lockerroom.";
 			now ScottyRelationship is 3; [met, went on lunch date + held hands]
-			PlayerEat 30;
-			move player to Mall West Wing;
 		else:
 			LineBreak;
 			say "     You mentally shake your head, deciding against it. So instead you two sit there quietly, the mood suddenly somber with nothing to talk about. Scotty and you eat your food and then clean up, heading back to the lockerroom shortly after. There he gives you a soft smile and apologizes. 'I'm sorry that our lunch date became a bit awkward,' the goat boy says. You tell him it's fine and say that you should do it again some day. That appears to brighten his smile up as he nods his head. 'Yeah that would be great,' he says before you leave shortly after.";
 			now ScottyRelationship is 2; [met, went on lunch date]
-			PlayerEat 30;
-			move player to Mall West Wing;
-	else if ScottyRelationship is 2: [met, went on lunch date, repeatable]
+		PlayerEat 30;
+		WaitLineBreak;
+		move player to Mall West Wing;
+	else: [met, went on lunch date, repeatable]
 		say "     Deciding now would be a good time to ask Scotty for that lunch date, you enter the lockerroom. The goat boy is in his spot, seemingly reading a book in his pajamas. When you approach him he turns towards you with a smile. 'Hey there, what brings you here?' he asks. You ask him if he's up for a lunch date which prompts him to smile at you and nod eagerly. 'Sure! Just let me get ready,' the guy says, moving to go behind the lockers with clothes in hand to change. Two to three minutes later he returns, dressed in a shirt and jeans. The two of you then head off to the food court where you both get what you had last time. While eating, you notice the same sad smile on Scotty's face from before.";
-		say "     [bold type]Do you comfort the goat boy?[roman type][line break]";
-		LineBreak;
+		say "[line break]     [bold type]Do you comfort the goat boy?[roman type][line break]";
 		say "     ([link]Y[as]y[end link]) - You do feel a bit sorry about not doing so last time, so yes.";
-		say "     ([link]Y[as]y[end link]) - No, you don't think it's your place to do so.";
+		say "     ([link]N[as]n[end link]) - No, you don't think it's your place to do so.";
 		if Player consents:
 			LineBreak;
 			say "     You promptly grab a hold of Scotty's hand and squeeze it softly. This surprises him for a second, him turning a confused look at you. You elaborate, saying that he shouldn't feel sad, after all he has you for a friend. The transition on his face is rather instantaneous. The sad smile instantly vanishes, replaced by a blissful, happy one. '...Thanks for that,' Scotty says warmly. Instead of saying anything, you just smile and nod at him. The two of you sit like that, eating you food and just enjoying the warmth that both of you feel in your chests. When you finish and leave, the two of you can be seen holding hands on your way back to the lockerroom. Once there, the goat boy turns to you, a smile that you're coming to like on his face. 'Maybe next time we could do something different?' he asks you tentatively. You tell him that you'd love to, which appears to make his eyes brighten up in even more joy. The two of you say your goodbyes to each other before you leave the lockerroom.";
 			now ScottyRelationship is 3; [met, went on lunch date + held hands]
-			PlayerEat 30;
-			move player to Mall West Wing;
 		else:
 			LineBreak;
 			say "     You once more decide against it and much like last time, the entire date is filled with and awkward silence and a somber mood. The two of you finish your food and clean up, heading back to the lockeroom when you're done. Scotty once more gives you an apologetic look. 'I'm really sorry that the same thing happened on this date. I just can't stop thinking about what I'd do if I didn't have you,' he murmurs. You don't really know what to say so instead you tell him it's okay. The goat boy just nods and you say goodbye before leaving the lockerroom.";
-			move player to Mall West Wing;
-			PlayerEat 30;
+		PlayerEat 30;
+		WaitLineBreak;
+		move player to Mall West Wing;
 
 to say SheepShaving:
 	if SonnyRelationship is 0 or SonnyRelationship is 1 or SonnyRelationship is 100: [introduction + having refused before]
 		if SonnyRelationship is 0: [introduction]
-			if graphics is true:
-				project the figure of Sonny_halfwool_jeans_icon;
+			project the figure of Sonny_halfwool_jeans_icon;
 			say "     When you enter the lockerroom what catches your sight is a shirtless sheep with very defined muscles standing in front of a mirror. In his hands appears to be a heavy duty razor, something he's using to attempt to shave. By the looks of it, the task isn't going too well. The sheep is unable to reach his back with the razor. However, when you step forward, the sheep appears to hear you as he turns around and stares at you, gaining an embarrassed look in his blue eyes. 'Uh... hi there, I'm Sonny,' he manages to get out. You say hello and the two of you stand there for a little bit. 'Can you help me, please. It's so hard to shave my back and literally I just shaved yesterday, and the day before!' he begs.";
 		else if SonnyRelationship is 1: [shaved his back before]
 			say "     Upon breaching the doorway of the lockerroom you spot the sheep that you shaved standing once again in the mirror. He appears to be struggling to shave his back, his use of the razor very uneasy. Walking forward, you are quickly noticed by Sonny, causing him to gain a happy look in his eyes. The young man turns around and holds out the electric razor in your direction. 'Do you want to help me again?' he asks. Tossing the idea around in your head for a while before quickly coming to a decision, the sheep's hopeful eyes looking right at you.";
-		else if SonnyRelationship is 100: [meeting him again after refusing to help earlier]
+		else: [meeting him again after refusing to help earlier]
 			say "     Entering the lockerroom, you spot Sonny up at the mirror, just like last time. Once again he's trying to shave his back and struggling quite badly. You feel pity pooling in your stomach at seeing such a sad display. The sheep seems to notice you in the mirror and turns around with a nervous look on his face. 'Could you please help me this time. I'm begging you, it's already hard enough shaving my front,' he asks desperately, pleading for you to shave him. With a click he turns of the electric razor and holds out to you, giving you a very extremely hopeful look.";
-		say "     [bold type]Do you want to help Sonny shave?[roman type][line break]";
-		LineBreak;
+		say "[line break]     [bold type]Do you want to help Sonny shave?[roman type][line break]";
 		say "     ([link]Y[as]y[end link]) - Sure, you'd want help if you were in his situation.";
 		say "     ([link]N[as]n[end link]) - Nah, you're not into shaving other people.";
 		if Player consents:
 			LineBreak;
 			say "     Informing the sheep that you're happy to help brings a bright smile to his face. Sonny cheerfully hands you the razor and turns around, presenting his back to you. With the electric razor in hand you take it to the sheep's back, carefully removing the large amount of wool that forms a thick layer there, revealing his actually pretty trim and muscular back. Getting rid of all the extra weight and warmth cheers the male up quite a bit, and you can hear him hum contently as you go along. Minutes go by and more and more wool piles up on the floor, making it look a bit like someone ripped up a pillow. However, soon enough you reach the bottom of the back, just above his pants. You can see that he has a lot of wool on his ass too, if the amount sticking out of his pants says anything. Seeing this, a thought comes up.";
-			say "     [bold type]Do you ask him to drop trousers?[roman type][line break]";
-			LineBreak;
+			say "[line break]     [bold type]Do you ask him to drop trousers?[roman type][line break]";
 			say "     ([link]Y[as]y[end link]) - Of course! You don't want to do shoddy work after all.";
-			say "     ([link]Y[as]y[end link]) - Nah, doing his back is fine enough.";
+			say "     ([link]N[as]n[end link]) - Nah, doing his back is fine enough.";
 			if Player consents:
-				LineBreak;
-				if graphics is true:
-					project the figure of Sonny_shaved_nude_icon;
+				project the figure of Sonny_shaved_nude_icon;
 				say "     You look to the sheep and speak up, asking him to drop his pants and underwear. 'W-w-what?!' Sonny stammers out, giving you a weird look. You then decide to explain that you want to shave his ass. 'O-oh... alright,' he says before fiddling with his pants, causing them to fall, his underwear joining the pants seconds later. Your sight is met with a very fluffy set of ass-cheeks and in the mirror an average-sized cock. With as much diligence as before, you take the electric razor to his butt. It doesn't take long for you to free the man of the excess wool. While you do so, you hold on to his hip and also have to touch him a little bit to get a nice and close shave... which doesn't fail to have an effect on the sheep. His earlier hum lead over to quiet moans in pleasure - at being shaved and... maybe also standing bare-ass naked in front of someone he just met. Could this sheep be a little bit of an exhibitionist? Leaning your head to the side a little, you glance over at his mirror and see that Sonny is indeed sporting an erection! That ends up giving you an idea...";
-				say "     [bold type]Do you wish to grope his ass?[roman type][line break]";
-				LineBreak;
+				say "[line break]     [bold type]Do you wish to grope his ass?[roman type][line break]";
 				say "     ([link]Y[as]y[end link]) - Why not? You've already went this far.";
 				say "     ([link]N[as]n[end link]) - No, shaving his ass is enough for you.";
 				if Player consents:
 					LineBreak;
 					say "     With a grin, you set the razor on the floor and grab a hold of both of his cheeks. Then with a medium amount of pressure, you squeeze. This appears to set Sonny off as he lets out a loud bleat - followed by breathless grunts as rope after rope of cum shoot from his cock and onto the mirror. When the intensity of the orgasm dies off and he stops cumming, the sheep is panting heavily. Shortly after when he breaks out his haze he lets out a yelp of shock. 'A-A-ah! I'm so sorry!' He apologizes. You are sure that if he could blush he would be heavily right now. You wave him off saying it's okay, as you were the one that set him off. 'T-that is true but I should have told you that shaving my ass makes me horny,' he says, putting his underwear and pants on and turning to you. You pick up the razor and then stand up, handing the it to him. With a shy smile, he thanks you for shaving... and taking care of him, bowing his head to you. To avoid prolonging his awkwardness, you head on your way out of the lockerroom - but not without off-handedly saying that you'd be happy to help again if he needs it.";
 					now SonnyRelationship is 3; [met, below the belt shave + groping]
+					WaitLineBreak;
 					move player to Mall West Wing;
 				else:
 					LineBreak;
 					say "     You decide against it, not wanting to make the entire situation even more awkward. Instead you set stand up with the razor in hand and tell him that you're done. Sonny then quickly bends down and pulls both his underwear and pants up, buttoning his trousers. He turns to face you and accepts the razor when you hand it to him. The man thanks you profusely as he puts the device in one of the lockers and shuts it again. You tell him that it's okay and if he ever needs help again just look for you. He smiles and quickly cleans up before leaving himself, walking out into the wide-open mall hallway eager to enjoy himself without a thick pelt of wool for once.";
 					now SonnyRelationship is 2; [met, below the belt shave]
+					WaitLineBreak;
 					move player to Mall Lockerroom;
 			else:
 				LineBreak;
 				say "     You mentally shake your head and instead ask Sonny to turn around. The sheep does so, and you hand him the razor. 'Thanks a lot for helping me, it's always irritating to shave. Especially since I usually have to shave once a day,' he says, shaking his head in exasperation. You tell him that it was no problem, and that if he ever needs it, you can help once more. Sonny smiles at you and thanks you once more, saying that he'll keep that in mind. 'Can you leave so I can shave the rest?' he asks shyly. You nod and say you don't mind, making your way out of the lockerroom.";
 				now SonnyRelationship is 1; [met, above the belt shave]
+				WaitLineBreak;
 				move player to Mall West Wing;
 		else:
 			LineBreak;
 			say "     You shake your head, and the sheep gives you a disappointed look, then goes back to contorting himself as he struggles pitifully to shave his back. Your help would really have been a boon, if it was given. Deciding that you don't want to watch this any longer, you make your way out of the lockerroom, leaving the struggling man behind.";
 			now SonnyRelationship is 100; [met, refused to help]
+			WaitLineBreak;
 			move player to Mall West Wing;
 	else if SonnyRelationship is 2: [repeat shaving, butt-shave before]
 		say "     You enter the lockerroom, hoping that someone's in there. Thankfully there is, a familiar sheep standing in front of the mirror just like before. He's trying to shave his back, waving the razor around, attempting to get at his back. Feeling that Sonny's liable to end up cutting himself if he keeps doing that, you make your way further in. Sonny notices you via the mirror and turns around with a happy look on his face. The sheep clicks off the razor and speaks. 'Can you help me shave again?' he asks kindly and hopefully. Mulling around the idea before deciding, you open your mouth to reply.";
-		say "     [bold type]Do you want to help Sonny shave?[roman type][line break]";
-		LineBreak;
+		say "[line break]     [bold type]Do you want to help Sonny shave?[roman type][line break]";
 		say "     ([link]Y[as]y[end link]) - Sure, you'd want help if you were in his situation.";
 		say "     ([link]N[as]n[end link]) - Nah, you just don't have the time right now.";
 		if Player consents:
-			LineBreak;
-			if graphics is true:
-				project the figure of Sonny_halfwool_nude_icon;
+			project the figure of Sonny_halfwool_nude_icon;
 			say "     When you give your assent to the sheep, he smiles widely at you before handing the razor to you and dropping his trousers and underwear right away. It appears that after having shaved his ass before, he feels quite comfortable with being naked in front of you. That doesn't mean he waves his dick around in front of you though, first covering it with a hand, then turning to keep the front of his body hidden. Of course, this does little to hide his manhood from you, as Sonny is standing in front of a full-length mirror. Seems he has forgotten that, as he looks over his shoulder and smiles at you. Shaking your head, you quickly get to work, turning the razor back on and taking it to his back. Just like the time previously, it doesn't take long before you're done with his back and move on to his ass. The moaning makes a return, as Sonny appears to thoroughly enjoy your work. After a minute, you're finished with his ass but a thought pops up in your head.";
-			say "     [bold type]Do you wish to grope his ass?[roman type][line break]";
-			LineBreak;
+			say "[line break]     [bold type]Do you wish to grope his ass?[roman type][line break]";
 			say "     ([link]Y[as]y[end link]) - Why not? You've already went this far.";
 			say "     ([link]N[as]n[end link]) - No, shaving his ass is enough for you.";
 			if Player consents:
 				LineBreak;
 				say "     Putting down the razor, you bring up both of your hands and move them to his ass. Sonny's face in the mirror gains a confused look before it changes into a look of utter bliss as you squeeze his ass-cheeks firmly. This results in him orgasming rather strongly, several ropes of cum spurting out of his cock and splattering the mirror. It takes some time for the sheep to come down from his orgasm, Sonny's tongue lolling out of his mouth all the while. When he does, his eyes widens and he turns, his dick coming right to in front of your eyes, some of the cum flying off and hitting your face. The sheep sees this and starts apologizing rapidly, clearly embarrassed by the action. You wipe the cum off and use some of the wool to clean your hands before telling him it's alright. It was a consequence of groping him after all. He [']oh[']s before quickly getting dressed. Once he is, he tells you he needs to go, rapidly moving out of the lockerroom.";
 				now SonnyRelationship is 3; [met, below the belt shave + groping]
-				move player to Mall Lockerroom;
 			else: [just the shave, nothing more]
 				LineBreak;
 				say "     When you're done shaving him you stand up, as you had been kneeling to shave his ass. The sheep this time sees that you've stood and understands that you're done. Sonny bends down and puts on his clothing. Once dressed, he stands up and gives you another smile, accepting the razor back. 'Thanks for helping me again! I really do appreciate it,' he says happily. You tell him that it was no problem at all and like you said before, would be happy to help again. 'I'll hold you to that,' he says with a friendly smile before admitting that he has to leave. Heading out of the room, thus leaving you in the lockerroom.";
-				move player to Mall Lockerroom;
+			WaitLineBreak;
+			move player to Mall Lockerroom;
 		else: [no shave this time]
 			LineBreak;
 			say "     You shake your head, and the sheep gives you a disappointed look, then goes back to contorting himself as he struggles pitifully to shave his back. Your help would really have been a boon, if it was given. Deciding that you don't want to watch this any longer, you make your way out of the lockerroom, leaving the struggling man behind.";
+			WaitLineBreak;
 			move player to Mall West Wing;
 	else if SonnyRelationship is 3: [repeat shaving, groped before]
 		say "     Upon entrance to the lockerroom you spot Sonny in his usual place, right at the mirror. Like last time, he has his razor in hand and is trying desperately to shave his back. As soon as you appear in his mirror, his eyes brighten up and he immediately turns to face you, a smile on the sheep's face. 'Do you mind helping me once more?' Sonny asks, holding out the razor in hope. It appears that the guy really liked you shaving him last time, if the eagerness proves anything. Nevertheless, the idea around before soon coming to a decision.";
-		say "     [bold type]Do you want to help Sonny shave?[roman type][line break]";
-		LineBreak;
+		say "[line break]     [bold type]Do you want to help Sonny shave?[roman type][line break]";
 		say "     ([link]Y[as]y[end link]) - Sure, you'd want help if you were in his situation.";
 		say "     ([link]N[as]n[end link]) - Nah, not this time, you're a bit busy.";
 		if Player consents:
-			LineBreak;
-			if graphics is true:
-				project the figure of Sonny_halfwool_nude_icon;
+			project the figure of Sonny_halfwool_nude_icon;
 			say "     Immediately after you say yes, the sheep happily drops his pants and underwear, wiggling his ass at you in an attempt to be seductive. Shaking your head, you chuckle inwardly before getting to work at shaving him. During the process you make sure that the shaving is thorough as shoddy work would probably get you a sad look from the adorable sheep boy. So, the meticulous shaving of Sonny's back takes a while before you're done, the area free of excess wool. When you reach his ass Sonny looks at you with a nervous smile. 'I... uh... I liked what you did last time,' he says, touching his hard cock for emphasis. As warmth pools throughout your body, you get a thought in your head.";
-			say "     [bold type]Do you wish to go even further with the sheep?[roman type][line break]";
-			LineBreak;
+			say "[line break]     [bold type]Do you wish to go even further with the sheep?[roman type][line break]";
 			say "     ([link]Y[as]y[end link]) - Why not? He liked the groping, so he'll love what you want to do next...";
 			say "     ([link]N[as]n[end link]) - No, just shave his butt this time.";
 			if Player consents:
@@ -286,52 +270,51 @@ to say SheepShaving:
 				now SonnyRelationship is 4; [met, BJ]
 				move Sonny to Mall Lockerroom;
 				now HP of Sonny is 1;
+				WaitLineBreak;
 				move player to Mall West Wing;
 			else: [just the butt-shave]
 				LineBreak;
 				say "     Your thought seems a bit much for the shy sheep. Instead you dutifully take the razor to his ass, listening along to his pleasurable moans. Though, this isn't the only thing that Sonny's doing. With a brief look in the mirror you can see in utter surprise that he has his hard cock in hand, masturbating himself as you shave his ass! Mentally you shake your head, as it should be expected since he did cum last time from you groping his ass. So he more than likely feels comfortable with you seeing him do this. Anyhow, by the time you finish shaving his ass, Sonny's masturbating comes to a climax as he lets out a loud bleat and starts cumming hard. His cum goes flying and hits the mirror, staining its reflective surface with his baby batter. You calmly wait for him to come down from his orgasmic bliss and when he does he quickly gets dressed. After that he turns to you and thanks you again for shaving him. You tell him it was no problem before getting up to leave the young sheep to clean up his wool.";
+				WaitLineBreak;
 				move player to Mall Lockerroom;
 		else: [no shave this time]
 			LineBreak;
 			say "     You shake your head, and the sheep gives you a disappointed look, then goes back to contorting himself as he struggles pitifully to shave his back. Your help would really have been a boon, if it was given. Deciding that you don't want to watch this any longer, you make your way out of the lockerroom, leaving the struggling man behind.";
+			WaitLineBreak;
 			move player to Mall West Wing;
-	else if SonnyRelationship is 4: [finding wool - always available random scene]
+	else: [finding wool - always available random scene]
 		if Sonny is in Mall Lockerroom:
 			say "     Upon entering the lockerroom you spot Sonny standing at the mirror. This time it appears he has managed to shave himself. Looking down you spot a piece of his wool on the ground and pick it up, remembering the last time you helped him shave. Sonny appears to notice you, waving at you and smiling. You smile back but mischievously as you hold up the piece of wool and wave it at him. You can tell that he's knows what you're talking about as he sheepishly looks away, making you sure that if he could blush he'd be doing so right now.";
+			WaitLineBreak;
 			move player to Mall Lockerroom;
 		else:
 			say "     You walk in to the lockerroom and see that the sheep guy isn't here at the moment, but a stray piece of his wool is. You pick it up and roll the soft fabric in your hands enjoying the feeling for a while. It brings up thoughts of the Sonny, of him asking you to shave him. An image of him stays in your mind for a while before you shake your head. He's not here and you don't really see anyone in at the moment so you shrug your shoulders and head back to the West Wing.";
+			WaitLineBreak;
 			move player to Mall West Wing;
 
 to say SatyrSonMall:
 	say "     During one of your excursions to the employee lockerroom you spot a unique scene before you. Right in front of your eyes is an adult male satyr worrying over a child satyr boy. Though, the satyr boy is unique compared to the normal satyrs you see. For one, instead of the usual horns, he instead has wolf ears, brown ones that match his messy hair. And for two, he has a fluffy brown wolf tail. The adult appears to sigh, helping the boy into a shirt. 'You know a few months ago if someone told me I'd be helping my son, that I birthed might you add, having a play date with the minotaur boy next door I'd call them crazy,' he says, shaking his head. The satyr's son gives his parent an odd look. 'Mooooom, stop reminiscing, I need to get ready for Ken!' the boy whines. The man chuckled before ruffling his child's hair. 'Alright kiddo, do you have all your toys?' he asks, peering over to the backpack that the boy is holding. Said child rapidly nods his head in an eager movement.";
 	say "     'Good, now what are the rules?' he asks, giving his son a look. The boy appears to have heard this talk quite a lot as he sighs and speaks. 'Don't talk to strangers, don't accept anything from strangers, and be back before eight,' he says tonelessly. The man gives the little one a look before ruffling his hair. 'Good, now go on, have fun,' the parent says, making shooing motions. The boy cheerfully runs off to go find his friend while the satyr mutters to himself. 'Alright, time to head to work, those tacos won't make themselves,' he says, trying to psyche himself up for the day. The man then makes his way out the door, ignoring you as he heads to work.";
+	WaitLineBreak;
 	move player to Mall Lockerroom;
 
 to say WolfHorseMallSex:
 	say "     Directing your steps towards the employee lockerroom now turned temporary quarters of numerous refugees, you pass the usual scenes of a lively mall. Or well, as normal as a post-apocalyptic shopping center could be, with countless types of different species strolling the corridors, talking, playing, eating and doing who knows what. As you start to come close to the door marked 'Employees Only', some noises from a place down a short side corridor do make you listen up. A leaned-to door reading 'Storage' seems to be the source. Given everything that you have lived through in this city already, you easily recognize them as the sounds of an intimate encounter. Despite the fact that sex is everywhere these days, you can't deny that it peaks your curiosity to see who might be there...";
-	say "     [bold type]Do you want to investigate the sounds coming from the room?[roman type][line break]";
-	LineBreak;
+	say "[line break]     [bold type]Do you want to investigate the sounds coming from the room?[roman type][line break]";
 	say "     ([link]Y[as]y[end link]) - Sure, why not?";
 	say "     ([link]N[as]n[end link]) - No, better not interrupt the persons in there. They found a semi-private place for a reason.";
 	if Player consents:
 		LineBreak;
-		let randomnumber be a random number from 1 to 4;
-		if randomnumber is:
-			-- 1:
-				say "[WolfHorseMallBJ1]"; [wolf blows horse]
-			-- 2:
-				say "[WolfHorseMallBJ2]"; [horse blows wolf]
-			-- 3:
-				say "[WolfHorseMallFuck1]"; [wolf fucks horse]
-			-- 4:
-				say "[WolfHorseMallFuck2]"; [horse fucks wolf]
-		wait for any key;
-		move player to Mall Lockerroom;
+		if a random number from 1 to 4 is:
+			-- 1: say "[WolfHorseMallBJ1]"; [wolf blows horse]
+			-- 2: say "[WolfHorseMallBJ2]"; [horse blows wolf]
+			-- 3: say "[WolfHorseMallFuck1]"; [wolf fucks horse]
+			-- 4: say "[WolfHorseMallFuck2]"; [horse fucks wolf]
 	else:
 		LineBreak;
 		say "     With a shrug, you keep going, soon drawing open the door to the lockerroom where you had intended to go. The room is empty of people right now, seems like everyone is out right of this moment.";
-		move player to Mall Lockerroom;
+	WaitLineBreak;
+	move player to Mall Lockerroom;
 
 to say WolfHorseMallBJ1: [wolf blows horse]
 	if WolfHorseMallCouple is 0: [first time seeing the two of them in the sex-room]
@@ -341,7 +324,7 @@ to say WolfHorseMallBJ1: [wolf blows horse]
 		say "     The wolf gulps visibly, his Adam's apple bobbing as he swallows spurt after heavy spurt of equine cum, with hints of the white fluid leaking from the side of his muzzle. He drinks down the stallion's load for about half a minute until his friend's bountiful load eventually starts to ebb off. Then the wolf pulls off of his lover's cock and sets dutifully cleaning the remaining cum off of the stallion's proud manhood. Once the blunt-tipped dickhead is polished and shiny the stallion hops off the crate and pulls his underwear and pants back on. Afterwards, he pulls his still crouching canine friend up to his feet and kisses him again, with the two of them clearly swapping fluids back and forth. Once all the cum is spent between the two, they break the kiss and smile at each other. 'Damn, Cory you taste amazing as always,' the wolf says with a large grin. The stallion, smiling at his lover replies 'And you still give the best blowjobs ever Jeff.' The couple then hop onto the crates and start to snuggle.";
 		say "     Deciding that you've seen enough (as you don't feel like interrupting their post-coitus cuddle session or possibly having them catch you), you do quietly push the door closed again and step back, then stroll away, more interested in gaining some distance than any specific target to go to. Soon, you're standing all the way on the other side of the broad mall hallway, casually glancing back to where you came from, and a minute or two later, the two guys emerge from the room, fully dressed and looking presentable. The stallion gives his boyfriend's ass a stealthy grope after closing the door, then the two of them set off and vanish in the mixed crowd of the mall inhabitants. Seeing your source of entertainment gone, you move on to the lockerroom.";
 		now WolfHorseMallCouple is 1; [player has seen them fuck before]
-	else if WolfHorseMallCouple > 0: [repeat scene]
+	else: [repeat scene]
 		say "     The idea of catching someone in a private tryst definitely intrigues you and draws you in once more, so you decide to sneak closer and take a peek into the storage room. Slowly opening the door a little, you see the room and the crates inside. But that is not all - like before, the same horse and wolf couple are in there... Cory and Jeff having returned to their love-nest to have some private time together. Or not so private - now that you're peeping on them. This time, they seem already well into their foreplay. The anthropomorphic canine currently has his muzzle to the bronco's balls, lapping at them eagerly. After soaking his boyfriend's balls for a while, Jeff presses his nose up to them and inhales deeply. 'Mmm, Cory you smell fucking amazing,' the wolf says with a toothy grin. Cory chuckles at his boyfriend, shaking his head at him. 'God Jeff, you're such a raunchy sex fiend,' the tall equine replies and tousles the crouching wolf's hair.";
 		say "     Widening his grin, the albino anthro wolf trails his tongue up his boyfriend's long shaft, resulting in Jeff shuddering in pleasure, his hooves clopping against the crate he is sitting on. Once the white wolf reaches the flared head of his boyfriend's dick he begins to softly suckle at the tip, causing Cory to moan wantonly. Mere seconds later, you catch a glimpse of the eager fire in Jeff's eyes as he looks up at his lover - and he swallows the horseman's huge cock halfway in one go. The sudden action forces the black horse to grip the crate, making it creak in protest. He doesn't stay this passive for long however, as Cory can't hold back his urges any longer and moves his hands to grip his boyfriend's white head-fur and slams him down the rest of the way onto his cock. 'Fuuuuuck!' Cory groans out as he starts to rapidly throat-fuck Jeff, the horse's heavy balls slapping against his boyfriend's chin. The white canine takes the rough man-handling like a champ, his tongue occasionally darting out of his muzzle, wetting the sections of the cock that isn't already in his mouth.";
 		WaitLineBreak;
@@ -356,7 +339,7 @@ to say WolfHorseMallBJ2: [horse blows wolf]
 		say "     Meanwhile, Cory's Adam's apple is bobbing up and down as the horse seems to be swallowing. It is clear what's going on here - the wolf is currently releasing Cory's well earned meal of wolf cum, to be eagerly gulped down by the anthro horse. Soon, a little bit of the thick white fluid also starts to leaking from Cory's mouth, as he gets overwhelmed by Jeff's volume once or twice. After the wolf finally finishes cumming, the horse pulls back, smacking his lips and cleaning up after Jeff. Jeff then smiles at Cory promptly pulling him into a quick kiss. 'Although, like you said, I'm a cock-hound. I do love it when you change it up,' the white wolf says, a fond tone present in his voice.";
 		say "     The black stallion smiles affectionately at Jeff and replies, 'I mean, aside from my amazing cuddling skills, that is why you're dating me, isn't it?' he asks, pulling Jeff into a cuddle after saying that. Seeing that there's not going to be any more sexy time with these two, rather an increased chance of getting caught, you turn around and walk away. When you reach a spot out of sight, you hear a door open and turn. It turns out to be the couple leaving, with them holding hands and smiling while they disappear into the crowd. Shaking your head and smiling as well, you continue on to the lockerroom.";
 		now WolfHorseMallCouple is 1; [player has seen them fuck before]
-	else if WolfHorseMallCouple > 0: [repeat scene]
+	else: [repeat scene]
 		say "     Your interest gets to you, forcing you to once more peruse the area you've termed as the 'sex pad' in your own mind. When you open up the door enough so you can see, you're met with the sight of Cory, the black stallion, with his hand firmly in Jeff's pants, groping around. The albino wolf seems to be enjoying his boyfriend's ministrations if the tongue-lolling look on his face is anything to go by. Suddenly though, he speaks up, following a groan of pleasure. 'God Cory, if you continue this I'll end up cumming before we can do anything fun,' the wolf says with a huff. His boyfriend gives him a look with a raised brow and then chuckles, shaking his head. 'We don't want that now do we?' Cory says, promptly pulling his hand out. Jeff whines at the loss of attention to his dick but gets cut off as Cory practically yanks down his albino wolf's pants and underwear, revealing Jeff's red cock that is clearly throbbing with need.";
 		say "     Without another word, the black stallion gets to work, tracing his tongue all over his boyfriend's dick, enthusiastically enjoying the sounds that Jeff is making. Cory then moves down to the wolf's furry ballsack, wetting it heavily with his tongue. Around this time, Jeff's knot begins to form which encourages the stallion to move his mouth to the cock's tip, eagerly suckling on the tip of his manhood. By the time that it is quite clear that the white wolf is about to cum, Cory quickly pulls off and squeezes Jeff's knot. This seems to set him off, letting ropes of cum coat Cory's face, with half of it landing in the horse's open mouth. When the intensity of Jeff's orgasm begins to die down, his boyfriend makes an exhibit of showing off the cum pooling in his mouth prior to swallowing it in a single gulp. This quickly sets the wolf off, Jeff pulling the horse to face level, then eagerly using his tongue to gather his own cum in his mouth. He then proceeds to roughly pull Cory into swapping the cum between the two of them.";
 		WaitLineBreak;
@@ -370,7 +353,7 @@ to say WolfHorseMallFuck1: [wolf fucks horse]
 		say "     The sensation of having Jeff's knot tying their bodies together, tugging at his ass from the inside after growing far too big to pass his pucker, drives Cory wild. The black mustang lets out a loud whinny, his load spraying all over the crate beneath him. Meanwhile, Jeff leans over him from behind, embracing his boyfriend's chest as he pumps spurt after spurt of a heavy load into the tall equine. The couple end up stuck in that position for roughly ten to fifteen minutes, sharing kisses while cuddling each other. Once the knot deflates and Jeff's manhood slips out, the load that was deposited in the horse starts leaking a lot more than it did while they were tied together. With a groan, Cory gets into a standing position and begins to put his clothes on, apparently ignoring the fact that the cum would show on his underwear and shorts. His boyfriend follows his lead, quickly getting dressed as well.";
 		say "     Seeing that the lovers are done having sex you quickly move away from the door, making sure that you're not seen at all. Sequestering yourself in a spot you're sure they won't see you from, you turn your attention back to the door. As you expected, the two of them leave the room, looking as if nothing had happened, the only real hint being their semi-ruffled state. However, you revise that thought when you see the couple walk away and look to the horse's shorts. Clear as day, you spot a big wet spot on the ass part of the shorts, showing visible proof of their coitus. With a chuckle you shake your head, promptly making your way to your original destination, the employee lockerroom.";
 		now WolfHorseMallCouple is 1; [player has seen them fuck before]
-	else if WolfHorseMallCouple > 0: [repeat scene]
+	else: [repeat scene]
 		say "     Having already peeped in on this room, you figure it wouldn't hurt to look again. And while you weren't discovered last time, there's still a chance that you can this time. So, you open the door the smallest amount that you can, until you're able to see. The room before you looks just like it did the other time; crates lining the wall, again filled with supplies, judging by the labels. So, nothing has changed. And again what catches your attention is the wolf-horse couple of Jeff and Cory in the near-center of the room. The two of them are clearly naked, their dicks out for anyone to see, both of them making out and groping at each other with vivid enthusiasm. Said excited movements are proven by the way that Cory and Jeff let out moans and gasps among panted breaths, sharing kisses and caresses almost constantly. After about what you guess to be five minutes of eager spit swapping, the horse pulls back, confusing the wolf. With a roguish grin Cory shucks his pants and underwear off, leaning over a crate, his ass clearly on display.";
 		say "     He then wiggles his butt seductively, chuckling at what he perhaps to be even more confusion from his boyfriend. 'Come on Jeff, you've been wanting to have another go at my ass. What's holding you up?' the eager stallion says out loud. From your view at the door you see the wolf's eyes widen along with his mouth forming a wide grin. 'Fuck yes Cory! I actually didn't expect you to offer again anytime soon,' Jeff says, quickly reaching to insert two fingers so as to stretch his partner. 'Wasn't it obvious I loved it last time? Now come on, you know I can take it,' the mustang says quickly. Giving his boyfriend's ass a lewd stare, the albino wolf then lines himself up and quickly thrusts his cock into the pucker in front of him. Cory gasps out in what appears to be both pain and pleasure, gripping the crate. The albino wolf doesn't take his time, going straight to rapid fucking. The sounds of moans and ball-slapping sex fills the room quickly, causing heat to pool in your loins at the display. It isn't for about another five or so minutes that Jeff's knot and locks into Cory's ass.";
 		WaitLineBreak;
@@ -383,9 +366,9 @@ to say WolfHorseMallFuck2: [horse fucks wolf]
 		say "     The horse looks at the wolf and raises a brow. 'Oh? Alright then Jeff, you asked for it,' Cory says with a smirk. Using his impressive strength, the black horse picks Jeff up and carries him over to a piece of wall that surprisingly lacks a crate. He then roughly pushes the wolf against the stone wall, slowly inserting his large flared cock into his boyfriend's hole. 'Ah hah... God, you're tight like always Jeff.' Cory huffs, easing himself into the albino wolf, inch by inch. 'Just... for... you.. babe...' Jeff manages to pant out with a wolfish grin. Once he's fully in, the stallion then quickly pulls out, making Jeff whimper and then gasp out loud as Cory slams back in. He then starts fucking fast, roughly screwing his boyfriend's ass all the while nipping at Jeff's neck. The pace that Jeff sets ends up creating a cacophony of both moans and balls slapping against flesh that echo the room. This continues for a while, with Cory switching to a heavy make-out session with Jeff halfway through. About maybe ten minutes later, you're not really sure, the sex comes to a climax.";
 		WaitLineBreak;
 		say "     With the loudest whinny you've ever heard, Cory slams balls deep into Jeff and at the same time the wolf sprays his load all over the wall. It is clear that the stallion has come as well, by the copious amounts of cum leaking from Jeff's abused hole. Cory, clearly spent, pulls his softening cock out, causing the cum to gush out of Jeff's hole? Shaking his head, the proud stallion walks over to a crate that you didn't notice until now, a towel on top of it. 'You know it's a good thing that I brought this, though it might not be enough,' Cory says, taking the bright piece of fabric and using it to mop up the cum pooled on the ground. Of course, it seems that Jeff isn't paying attention as he's slumped against the wall. Upon further inspection, it seems that he slid down the wall as there's cum covering his face from said wall. With a sigh, Cory takes an unused part of the towel and cleans up the clearly out of it wolf.";
-		say "     Seeing no need to watch any longer you slowly make your way towards your original destination. However, as you reach an out of sight area, or at the very least a spot that won't get you caught, you hear the door open. You turn and see the couple leave, the stallion supporting his boyfriend who still has somewhat of a dazed look on his face. When they vanish into the crowd you turn around and continue onward to the lockerroom.";
+		say "     Seeing no need to watch any longer you slowly make your way towards your original destination. However, as you reach an out-of-sight area, or at the very least a spot that won't get you caught, you hear the door open. You turn and see the couple leave, the stallion supporting his boyfriend who still has somewhat of a dazed look on his face. When they vanish into the crowd you turn around and continue onward to the lockerroom.";
 		now WolfHorseMallCouple is 1; [player has seen them fuck before]
-	else if WolfHorseMallCouple > 0: [repeat scene]
+	else: [repeat scene]
 		say "     To be honest, you are rather curious if the two from before are the ones in there. With budding hope, you crack the door open a fraction. You're quite happy to see the two lovers are laying on a soft blanket, trading soft kisses with each other. Jeff, the white wolf, wants to go a bit further, shown by positioning himself onto his boyfriend's clothed crotch. Cory perks both of his brows, giving his lovely wolf boy a questioning look. 'I thought you just wanted to cuddle today?' he asks, tilting his head. Jeff shakes his head, offering a response. 'I did but I changed my mind now, I wanna ride my pony,' he says, wagging his eyebrows suggestively. 'You want to ride your po- Ooh!' the black mustang starts out before gasping in pleasure as his lover grinds his white furry ass onto the stallion's crotch. Cory apparently gives in, thrusting his hips up to meet Jeff's grinding ass. With a large smile, Jeff moves off Cory's lap, if only for a second, in order to shuck his pants and underwear off and help remove the black stallion's lower clothing as well.";
 		say "     Now that his partner is stark naked, just like himself, Jeff grinds his ass up and down the rapidly hardening length, groaning along with Cory in pleasure. A minute later, the white wolf decides that he's teased both of them enough and positions himself at the stallion's flared tip. Lowering himself, Jeff grunts when the head pops into his hole. The canine doesn't stop there, no, he continues lowering himself until Cory's cock is fully sheathed in his ass. The black horse tries to buck his hips to gain some friction on his manhood but his lover holds firm. 'Come on Jeff! I thought you wanted to ride me!' Cory whines out loud. That ends up making said anthro chuckle before he begins to bounce his ass on the horse's dick.";
 		WaitLineBreak;

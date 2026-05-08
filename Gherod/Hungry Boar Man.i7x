@@ -261,7 +261,7 @@ understand "feed the/-- hungry/-- pig/boar man/--" as pigfeeding.
 check pigfeeding:
 	if Philip is not visible, say "Who?" instead;
 
-Carry out pigfeeding:
+carry out pigfeeding:
 	pigfeed;
 
 [FORCED MUTATION DEACTIVATED]
@@ -397,10 +397,10 @@ understand "wrestle the/-- hungry/-- pig/boar man/--" as Mudwrestling.
 check Mudwrestling:
 	if Philip is not visible, say "Who?" instead;
 
-Carry out Mudwrestling:
+carry out Mudwrestling:
 	Mudwrestle;
 
-To Mudwrestle:
+to Mudwrestle:
 	setmonster "Piggy";
 	choose row MonsterID from the Table of Random Critters;
 	if BodyName of Player is "Piggy":
@@ -697,10 +697,9 @@ to say sexwithphilip:
 	say "     ([link]N[as]n[end link]) - Back away.";
 	if Player consents:
 		LineBreak;
-		let piggymalefun be 8;
+		let piggymalefun be 8 + anallevel;
 		if Player is submissive, increase piggymalefun by 2;
-		if Player is mpreg_ok, increase piggymalefun by 2;
-		increase piggymalefun by anallevel;
+		if "MPreg" is listed in feats of Player, increase piggymalefun by 2;
 		if Player is female:
 			say "     Philip takes you by the hand and gently lays you down on the ground. He massages your tits as he positions his bulk on top of you. His huge gut rests on top of you, pinning you down. When he finally has his huge boar cock in position, he takes a moment to rub the tip against the puffy and moist lips of your pussy. Then, without warning, he thrusts his tool past your [cunt size desc of Player] nether lips and deep into your pussy. You gasp in surprise and pleasure as he begins to gyrate his chubby hips, sending his cock in and out of you. You can feel his huge balls slapping against your inner thighs with each thrust. Philip oinks and squeals as he ruts you and soon you join in. Finally you experience a thundering orgasm and Philip lets out one loud, long squeal then thrusts his cock as far into you as he can, as he spews his hot pig seed into you.";
 			NPCSexAftermath Player receives "PussyFuck" from Philip;
@@ -796,14 +795,14 @@ HayatoPhilip	"HayatoPhilip"
 HayatoPhilip is a situation.
 ResolveFunction of HayatoPhilip is "". Sarea of HayatoPhilip is "Nowhere".
 
-Instead of going to large shed while Resolution of Sweets For The Piggy is 0 and Philip is in large shed and PlayerFucked of Philip is true and a random chance of 1 in 3 succeeds:
+instead of going to large shed while Resolution of Sweets For The Piggy is 0 and Philip is in large shed and PlayerFucked of Philip is true and a random chance of 1 in 3 succeeds:
 	say "     As you walk into Philip, you see that the pigman seems to be munching on something while turned towards a wall, as if doing it on secret. In fact, you would not have even noticed him if you did not happen to look over there, where he is, but the sound of his chomping would probably give away his position. Regardless, you approach him as you normally would. Upon hearing your footsteps, Philip gets startled and chokes, coughing frantically as he sees you. Fortunately, he seems to be able to recover quickly enough from it, but turns to you with his eyes wide open. 'Oh! It's... You! I... this isn't what it looks like...' he says, mouth still full and dirty with what seems to be... chocolate?";
 	say "     You wonder how he got his hands on such a thing, given how rare any kind of uncanned food, especially sweets like that, are. 'I dunno. It was just laying around, so I grabbed it while nobody was looking. Was it yours?' The boar man licks the sides of his mouth as you wonder to yourself what to tell him, but nothing comes to mind. You have no idea where they came from. 'Gotta say, they were some really good chocolate truffles. I haven't had these in so long! Tastes really good. Ah... I'd offer you some, but I ate them all... Sorry.' He does not seem to be sincerely apologizing, but you let it slide. You must know by now how much Philip likes to eat, even if it is just some little snack.";
 	WaitLineBreak;
 	say "     'So, I take it you wanted to talk to me?' he asks, before letting out a belch. 'Ooh, that one really hit the bottom. Hmm... I guess you could get a taste, still...' With that, the pigman pulls you to him, your body squeezed against his pudgy frame and full belly as he wraps his arms around you, and gives you a kiss. You can definitely feel some of the sweet truffle taste in his mouth as your tongues touch one another, wiggling around each other and wrestling for a while, before he lets go of you. 'Good, right? Hehe... Or was it something else you liked?' The pigman winks at you as he rubs his large gut, causing his beefy and fat physique to wobble slightly.";
 	now Resolution of Sweets For The Piggy is 1;
 
-Instead of going to large shed while Resolution of Sweets For The Piggy is 1 and Philip is in large shed and (Xaedihr is in Grey Abbey Library or demonologist is listed in companionList of Player) and a random chance of 1 in 2 succeeds:
+instead of going to large shed while Resolution of Sweets For The Piggy is 1 and Philip is in large shed and (Xaedihr is in Grey Abbey Library or demonologist is listed in companionList of Player) and a random chance of 1 in 2 succeeds:
 	say "     When you arrive at the large shed";
 	if Xaedihr is in Grey Abbey Library:
 		say ", you see not only Philip there, but also Xaedihr, talking to him in a very upset manner";
@@ -816,7 +815,7 @@ Instead of going to large shed while Resolution of Sweets For The Piggy is 1 and
 	say "     'Here I thought you could conjure food out of nowhere... That'd make me like you a lot. I like people who can make food appear in front of me.' The mage rolls his eyes and sighs 'Of course you do.' Philip only carries on finishing his little meal as Xaedihr turns around and walks away. He does not really pay much further attention to you until it is over. 'That redhead's cute and he can make food appear... I like him. Without all that imp stuff, though, that's nasty. Tell him I want my food imp-free!' You tell him you will do what you can just to leave him relieved and in peace.";
 	now Resolution of Sweets For The Piggy is 2;
 
-Instead of going to large shed while (Ranfer is in Main & 7th Street or smilodon bodyguard is listed in companionList of Player) and Philip is in Large Shed and Resolution of RanferPhilip is 0 and a random chance of 1 in 2 succeeds:
+instead of going to large shed while (Ranfer is in Main & 7th Street or smilodon bodyguard is listed in companionList of Player) and Philip is in Large Shed and Resolution of RanferPhilip is 0 and a random chance of 1 in 2 succeeds:
 	say "     When you walk into the large shed";
 	if Ranfer is in Main & 7th Street:
 		say ", you see not only Philip there, but also Ranfer, as they seem to be exchanging something";
@@ -829,7 +828,7 @@ Instead of going to large shed while (Ranfer is in Main & 7th Street or smilodon
 	say "     'Then I suggest you practice. It might take you... several attempts.' The big cat then stands up and proceeds to walk away, past you, with the biggest smug expression you have seen on him. Though, Philip does not seem too bothered by it. You can tell that he probably even liked it. 'Damn, he's your bodyguard?! That dude flipped me like I weighed nothing... And he can find food! That's hot. You really make great friends, you know?' He just remains there, lying down on the ground, not bothering to get up as he gets himself comfortable. 'So, you wanted to talk or something?'";
 	now Resolution of RanferPhilip is 1;
 
-Instead of going to large shed while Hayato is in Darkened Alcove and Philip is in Large Shed and Resolution of HayatoPhilip is 0 and a random chance of 1 in 3 succeeds:
+instead of going to large shed while Hayato is in Darkened Alcove and Philip is in Large Shed and Resolution of HayatoPhilip is 0 and a random chance of 1 in 3 succeeds:
 	say "     As you arrive at the large shed, you notice a large red person talking to Philip, and you quickly can tell this is Hayato, and they seem to be talking. 'Whoa, where did you get this? Tastes fucking good!' says the boar man, excitedly, as he munches on something. 'I've found these noodles that on an abandoned Asian restaurant. You just put hot water on it and it becomes cooked like this. Pretty good, right?' explains Hayato. What Philip seems to be eating is, indeed, a cup of noodles the red oni must have found while scavenging. The boar man seems to love every bit of it, too. 'I really love this! Can you get me more?' he asks, still munching on it all. 'Ah, I guess if I find some, I can share... They're not that common, though, but I heard you liked food, so...'";
 	say "     'So you wanted to be friends with me? Hehe... I'd offer to wrestle in the mud against you, but you're a really big dude, I wouldn't stand a chance and you'd always win. No fun in that!' Hayato laughs at this. 'I could go easy on you, if that'd make you feel better?' 'Nah, it wouldn't. I like earning my victories... Oink!' The red oni leans forward, curious about this. 'But why is that? I thought it'd be just for the fun...' The pig man then replies, 'It just feels better to give the loser what they deserve when you worked for it, yeah? Like you actually get on top of them and pin them down with your moves... But since you're so... huge... It kinda defeats the purpose. But you're cool and give me nice food. I like you!'";
 	WaitLineBreak;

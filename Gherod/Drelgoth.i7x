@@ -4,7 +4,7 @@ Version 1 of Drelgoth by Gherod begins here.
 
 [Version 1 - File Created]
 
-Section 1 - Pre-Event
+Chapter 1 - Pre-Event
 
 Table of GameEventIDs (continued)
 Object	Name
@@ -53,7 +53,7 @@ to say DrelgothSummon:
 		say "     These pages are blank. They do not feature any sort of scribbling, magic or words, and are simply plain white. Strangely, your memory feels hazy as you look at them, as if you sort of remember seeing something in here, but you cannot recall what, exactly. You are, however, quite sure this is the method you used to summon Drelgoth, but you cannot remember anything associated with the ritual. Only you could have done it; would there be a way to reverse it? If there is... you are quite sure you will not find it here on your own. But why would you want to...? ...Why do you keep asking yourself all these questions?";
 		say "     You just close the tome with a loud thump.";
 
-Section 2 - NPC
+Chapter 2 - NPC
 
 Table of GameCharacterIDs (continued)
 object	name
@@ -103,7 +103,7 @@ to say DrelgothDesc:
 	say "     What you see before you is a tall, lean and athletic man of red-ish purple skin, who does little to hide his demonic nature, as his thick beige horns curl atop his head and a spaded-tip tail slowly swings around his strong legs. He also has this really handsome, masculine face with a defined and wide jawline. His eyes gleam with a fiery color and a gaze that draws yours to his, almost mindlessly so, and he definitely knows when you are examining him as his slitted pupils follow you with amusement. The demon is also completely naked, allowing you to have a good look at his entire sculpted body all the way down to his bare feet, every muscle of his toned to perfection. But you cannot ignore the most obvious, which is his thick and long shaft hanging between his legs, accompanied by a set of large balls that surely seem full.";
 	say "     He definitely is aware you are checking him out, and even clears the view for you. It is only when his cock gives a twitch that you return to your senses and stare back at his face, which has a mischievous smile drawn across.";
 
-Section 2-1 - Talk Menu
+Section 1 - Talk Menu
 
 DrelgothDoneTalking is a truth state that varies.[@Tag:NotSaved]
 
@@ -215,7 +215,7 @@ to DrelgothTalkSexConditionsDom:
 	say "     'Not exactly what I had in mind, but I-ooh...! I... do like this...' You do what you want, which is pushing your finger deeper into his ass, and at one point, Drelgoth only moans and asks for more as lust begins to overtake him. However, once you think this is enough to put him in his place, you pull your hand back and give one of his glutes a smack. Having walked out of those pheromones['] influence, or at least you think you did, you ascertain your control over him. He does not look disappointed in the slightest, much the contrary, as he understands you are a dominant and, above all, powerful individual. 'I'm quite pleased to know this about you. Well, let me tell you that I'd love to serve you... Anything you desire, it shall happen. You only have to say it.'";
 	TraitGain "Submissive" for Drelgoth;
 
-Section 2-2 - Sex Menu
+Section 2 - Sex Menu
 
 to say SexWithDrelgoth:
 	if Libido of Drelgoth < 2:

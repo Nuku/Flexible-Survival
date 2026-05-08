@@ -4,9 +4,7 @@ Version 3 of Museum by Sarokcat begins here.
 
 "Adds an adventuring area to Flexible Survival with a Sphinx and some searching."
 
-[**************************************************]
 Section 1 - Museum Environment
-[**************************************************]
 
 Table of GameRoomIDs (continued)
 Object	Name
@@ -32,9 +30,7 @@ Museum interior	"Museum interior"
 Museum interior is a room.
 Museum interior is east of Museum entry.]
 
-[**************************************************]
 Section 1-1 - Museum Environment WEST
-[**************************************************]
 
 Table of GameRoomIDs (continued)
 Object	Name
@@ -56,9 +52,7 @@ The earea of Museum West Hub is "Museum".
 Description of Museum West Hub is "     The western hub is an ample room with several paintings and sculptures from historical origins, which are likely to serve as an introduction to their respective wings. It is a quite silent place, the only thing audible in the entire vicinity being your footsteps as you make your way through the also scentless hub. It seems to link different sections with dedicated themes centered around anthropology, one of them the [bold type]Roman Wing[roman type] located to the [bold type]south[roman type], past a [if Resolution of LarsCenturionHelmet is 0]roman centurion helmet sitting atop a display stand and directly beside the wall, near its grand doors. Perhaps this area is worthy of exploration?[else]display stand beside the wall, where a roman centurion helmet used to be sitting atop, near its grand doors.[end if][line break]".
 Scent of Museum West Hub is "     It smells of old and ancient, still.".
 
-[**************************************************]
 Section 1-2 - Museum Environment NORTH
-[**************************************************]
 
 Table of GameRoomIDs (continued)
 Object	Name
@@ -80,9 +74,7 @@ The earea of Museum North Hub is "Museum".
 Description of Museum North Hub is "     The northern hub leads to a darker section of the museum, probably due to several lamps being blown and not working anymore, the only light being the one barely making it through the closed windows. You would have to open them if you wanted some more visibility, where you decide to go. The air is still and nothing makes a sound in the surrounding vicinity, except for the rooms linked to this hub. Some of the portraits in the walls, from what you can see, suggest this section is dedicated to either mythology or nature... Perhaps both. You could explore this particular area with relative safety, if you were careful to not be surprised by anything strange.[line break]".
 Scent of Museum North Hub is "     It smells of old and ancient, still.".
 
-[**************************************************]
 Section 1-3 - Museum Environment EAST
-[**************************************************]
 
 Table of GameRoomIDs (continued)
 Object	Name
@@ -104,9 +96,7 @@ The earea of Museum East Hub is "Museum".
 Description of Museum East Hub is "     The eastern hub seems broader than the others, due to being comparatively empty. It, however, still leads to a myriad of different adjacent rooms. The few objects in display seem to be old contraptions, devices and other odd antique things that you do not quite understand, suggesting that this section seems to be more directed towards historical science advances and inventions. If you were an expert, you could probably tell which epoch each of these belong to, or which area in science they are supposed to serve. Nothing else here seems particularly interesting or worthy of note, but it could require closer inspection.[line break]".
 Scent of Museum East Hub is "     It smells of old and ancient, still.".
 
-[**************************************************]
 Section 1-4 - Museum Environment SOUTH
-[**************************************************]
 
 Table of GameRoomIDs (continued)
 Object	Name

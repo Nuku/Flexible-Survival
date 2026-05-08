@@ -212,10 +212,10 @@ to say AceSex2: [Ace fucks Izzy and players pussy]
 	say "     Seeing as you won, the osprey begins sliding into you. With how horny and needy you are the anthro bird of prey begins pounding into your slick cunt. His well-trained athleticism means that the hunk is able to fuck you at full force slamming his thick cock deep inside you again and again. You start to orgasm, squirting on his engorged phallus. With you sated, Izzy becomes the focus of Ace's attention. He starts to jackhammer his sub's cunt. In between breaths, he utters, 'Better cum for me quick fuckslut.' The woman on top of you had fucked her partner enough times to start bucking her hips in perfect unison with his thrusts. Looking at the couple's faces you can see both are on the verge of climax. Soon, the well-endowed soldier lets out a bird-like cry as he cums, his cock pulsing as he unloads his virile essence inside the cuckooess. Some of the cum leaking out of Izzy drops out of her pussy and onto you. While you recover from the experience, the two birds grab some handkerchiefs and begin to clean you off.";
 	NPCSexAftermath Player receives "PussyDildoFuck" from Ace;
 
-after navigating Grey Abbey Library while lastfuck of Vanessa - turns >= 8 and HP of Ace > 1 and HP of Vanessa > 4 and VanessaAceInteraction is 0 and CuckList is not banned:
-	[say "[NavCheck Grey Abbey Library]";
+instead of navigating Grey Abbey Library while lastfuck of Vanessa - turns >= 8 and HP of Ace > 1 and HP of Vanessa > 4 and VanessaAceInteraction is 0 and CuckList is not banned:
+	say "[NavCheck Grey Abbey Library]";
 	if NavCheckReturn is false, stop the action;
-	move player to Grey Abbey Library;]
+	move player to Grey Abbey Library, without printing a room description;
 	project Figure of Ace_icon;
 	if debugactive is 1:
 		say "     DEBUG: Vanessa makes a move on Ace - VanessaAceInteraction: [VanessaAceInteraction][line break]";
@@ -244,10 +244,10 @@ after navigating Grey Abbey Library while lastfuck of Vanessa - turns >= 8 and H
 		say "     You ease a bit of the tension in the room by telling Ace that it is not a friendship ruining moment - he didn't start this, after all. With the weight of that off his shoulders, the settlement leader cools down a smidge. Meanwhile, Vanessa stands up, turns to look at him giving him a look at her curvy breasts, then utters, 'Well daredevil, looks like you couldn't commit. It's a shame.' With that, the centaur woman trots away, purposefully lifting her tail to give a look at her wet pussy. When she is gone, Ace apologizes to you and adds, 'Sorry about that, I didn't know that you and her were like that. I won't do anything with her in the future, I don't want to lose a friendship in this city. It's rare to find a [if Player is female]lady[else]man[end if] with your type of style out in the city.'";
 		now VanessaAceInteraction is 100; [stopped things cold]
 
-after navigating Grey Abbey Library while Snow is in Grey Abbey Library and lastfuck of Snow - turns >= 8 and HP of Ace > 1 and SnowAceInteraction is 0 and CuckList is not banned:
-	[say "[NavCheck Grey Abbey Library]";
+instead of navigating Grey Abbey Library while Snow is in Grey Abbey Library and lastfuck of Snow - turns >= 8 and HP of Ace > 1 and SnowAceInteraction is 0 and CuckList is not banned:
+	say "[NavCheck Grey Abbey Library]";
 	if NavCheckReturn is false, stop the action;
-	move player to Grey Abbey Library;]
+	move player to Grey Abbey Library, without printing a room description;
 	project Figure of Snow_icon;
 	if debugactive is 1:
 		say "     DEBUG: Ace bangs Snow - SnowAceInteraction: [SnowAceInteraction][line break]";

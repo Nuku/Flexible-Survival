@@ -5,7 +5,7 @@ Version 2 of Cherry by Gherod begins here.
 [Version 1 - File Created]
 [Version 2 - Added Dominant Fox and Transformative Sex traits for Cherry. Dom Cherry added with one sex scene.]
 
-Section 1 - Intro
+Chapter 1 - Intro
 
 Table of GameEventIDs (continued)
 Object	Name
@@ -68,7 +68,7 @@ to say ResolveEvent Pink Furred Scavenger:
 		say "     On your way back, though, you see a group of leopardmen running past you. They do not see you, but you have got a feeling that the one you found earlier, getting fucked by the pink fox, was not alone. However, it is too late to warn her. You cannot help but wonder if she will make it out of that situation...";
 	now Pink Furred Scavenger is resolved;
 
-Section 2 - Rooms
+Chapter 2 - Rooms
 
 a postimport rule: [bugfixing rules for players that import savegames]
 	if resolution of Pink Furred Scavenger >= 2 and Pink Furred Scavenger is resolved: [event resolved the right way, room not connected yet]
@@ -83,7 +83,7 @@ The earea of Cherry's Apartment is "High".
 Description of Cherry's Apartment is "     It is no luxury place, but the pink fox's apartment is a rather cozy place, despite what the world outside has to offer. Cherry kept things neat and clean in most places, as well as given it a personal feminine touch regarding its decoration. In fact, all you see is an esteemed place that is well cared for its owner. The entrance door leads you immediately to the living room, which has a few couches sorrounding a small table in the center and a carpet underneath, colors matching soft tones of brown, wine red and a bit of gold. There is a kitchen separated only by its counter, as well as a few doors on the opposite side which, you would imagine, lead to either a bedroom or a bathroom.[line break]".
 Scent of Cherry's Apartment is "     It somehow smells very sweet. Cherry must have been lucky enough to get her hands on some air fresheners or essence oils. Or perhaps it is some tea she is making...?".
 
-Section 3 - Cherry NPC
+Chapter 3 - Cherry NPC
 
 Table of GameCharacterIDs (continued)
 object	name
@@ -128,9 +128,7 @@ MainInfection of Cherry is "Pink Fox".
 Description of Cherry is "     Cherry is a tall fox-like person with overall pink fur, quite fit in appearance and looking very healthy, meaning she takes good care of herself. Carrying a friendly muzzle with sweet pink eyes and an elegant posture, she is wearing a white shirt, black tight slacks and a dark blue longcoat while standing on her bare vulpine feet, looking almost like an executive if she had the full matching set of clothing. Her fuzzy tail slips through a hole in her pants to wave around freely outside, and despite her quite feminine visage, you can spot an undeniable bulge in her front, proof that she is more than a fancy fox lady. She always greets you politely, with a slight smile and a bow with her head.[line break]".
 The scent of Cherry is "     She smells nice, like actual cherry flowers.".
 
-[***********************************************************]
-Section 3-1 - Cherry Talk Menu
-[***********************************************************]
+Section 1 - Cherry Talk Menu
 
 CherryDoneTalking is a truth state that varies.[@Tag:NotSaved]
 CherryTea is a number that varies. CherryTea is usually 0.[@Tag:NotSaved]
@@ -369,9 +367,9 @@ to say CherryTalkDomination:
 		else if calcnumber is 3:
 			say "     You tell her that it is nothing, actually. She gives you a questioning look, but drops the subject when you do.";
 
-Section 3-2 - Cherry Sex menu
+Section 2 - Cherry Sex menu
 
-Instead of fucking Cherry:
+instead of fucking Cherry:
 	if "Dominant Fox" is listed in traits of Cherry:
 		say "[CherryDomSex]";
 	else:

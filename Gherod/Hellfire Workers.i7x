@@ -5,9 +5,7 @@ Version 2 of Hellfire Workers by Gherod begins here.
 [Version 1 - File created - Gherod]
 [Version 2 - Exotic Patrons who the player can hire for personal enjoyment were added]
 
-[***********************************************************]
 Section 1 - Arad & Egran
-[***********************************************************]
 
 [ARAD]
 
@@ -51,12 +49,9 @@ SexuallyExperienced of Arad is true.
 TwistedCapacity of Arad is true. [Twisted Characters can take any penetration, no matter the size]
 Sterile of Arad is true. [steriles can't knock people up]
 MainInfection of Arad is "Hellfire Demon".
-Description of Arad is "[Araddesc]".
-Conversation of Arad is { "<This is nothing but a placeholder!>" }.
+Description of Arad is "     Posing with his chest puffed and weapons visible, Arad is always standing next to Egran, his twin brother, by the door. He is very similar to the more common red-skinned Hellfire Demons, except he is overall more robust, looks stronger and his horns seem slightly bigger. His distinguishing feature is a straight scar across the area surrounding his right eye and a nose piercing hugging his left nostril, while also keeping a simple five o'clock shadow compared to his brother. To hold his sharp obsidian short blades, he has a couple of holsters strapped around his legs, which remain visible due to the fact he is only wearing a black leather jockstrap just right for his size, and around his jacked torso, he wears simple black leather harness with shiny steel studs across one of the frontal straps.[line break]".
+fuckscene of Arad is "[SexWithArad]".
 The scent of Arad is "     Arad smells faintly of brimstone, but he has a rather attractive, masculine scent".
-
-to say AradDesc:
-	say "     Posing with his chest puffed and weapons visible, Arad is always standing next to Egran, his twin brother, by the door. He is very similar to the more common red-skinned Hellfire Demons, except he is overall more robust, looks stronger and his horns seem slightly bigger. His distinguishing feature is a straight scar across the area surrounding his right eye and a nose piercing hugging his left nostril, while also keeping a simple five o'clock shadow compared to his brother. To hold his sharp obsidian short blades, he has a couple of holsters strapped around his legs, which remain visible due to the fact he is only wearing a black leather jockstrap just right for his size, and around his jacked torso, he wears simple black leather harness with shiny steel studs across one of the frontal straps.";
 
 [EGRAN]
 
@@ -100,27 +95,20 @@ SexuallyExperienced of Egran is true.
 TwistedCapacity of Egran is true. [Twisted Characters can take any penetration, no matter the size]
 Sterile of Egran is true. [steriles can't knock people up]
 MainInfection of Egran is "Hellfire Demon".
-Description of Egran is "[Egrandesc]".
-Conversation of Egran is { "<This is nothing but a placeholder!>" }.
+Description of Egran is "     Egran stands next to Arad, his twin brother, by the door. He is very similar to the more common red-skinned Hellfire Demons, except he is overall more robust, looks stronger and his horns seem slightly bigger. Regarding his attire, he is more subtle when it comes to show his might, giving only his fingerless gloves a dim fiery gleam that suggests his proficiency at wielding fire, but has a black leather harness and jockstrap set of his own wrapped around his jacked body. His distinguishing features are a full beard, a stud on the bottom of his left ear and two small rings on top. He also has a couple of straps wrapped around his legs, but they are only decorative.[line break]".
+fuckscene of Egran is "[SexWithEgran]".
 The scent of Egran is "     Egran smells faintly of brimstone, but he has a rather attractive, masculine scent".
 
-to say EgranDesc:
-	say "     Egran stands next to Arad, his twin brother, by the door. He is very similar to the more common red-skinned Hellfire Demons, except he is overall more robust, looks stronger and his horns seem slightly bigger. Regarding his attire, he is more subtle when it comes to show his might, giving only his fingerless gloves a dim fiery gleam that suggests his proficiency at wielding fire, but has a black leather harness and jockstrap set of his own wrapped around his jacked body. His distinguishing features are a full beard, a stud on the bottom of his left ear and two small rings on top. He also has a couple of straps wrapped around his legs, but they are only decorative.";
-
-[***********************************************************]
 Section 1-1 - Arad Talk
-[***********************************************************]
 
-AradDoneTalking is a truth state that varies.[@Tag:NotSaved]
+[AradDoneTalking is a truth state that varies.[@Tag:NotSaved]]
 
 instead of conversing Arad:
 	say "     You approach the entrance to the Hellfire Club, more specifically, the two hellfire demons guarding the gate. 'Well, hey there! Have you been enjoying your stay?' says Arad, the scarred one of the demon duo, to whom you wish you talk with.";
-	now AradDoneTalking is false;
-	say "[AradTalkMenu]";
+	say "[line break][AradTalkMenu]";
 
 to say AradTalkMenu:
 	say "     [bold type]What do you want to talk to Arad about?[roman type][line break]";
-	LineBreak;
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]
@@ -134,12 +122,12 @@ to say AradTalkMenu:
 		now title entry is "His brother";
 		now sortorder entry is 2;
 		now description entry is "Ask about his twin brother, Egran";
-	[]
-	if Energy of Arad > 1:
-		choose a blank row in table of fucking options;
-		now title entry is "Sex";
-		now sortorder entry is 3;
-		now description entry is "You kind of fancy him... would there be any chance";
+		[]
+		if Energy of Arad > 1:
+			choose a blank row in table of fucking options;
+			now title entry is "Sex";
+			now sortorder entry is 3;
+			now description entry is "You kind of fancy him... would there be any chance";
 	[]
 	sort the table of fucking options in sortorder order;
 	repeat with y running from 1 to number of filled rows in table of fucking options:
@@ -154,23 +142,23 @@ to say AradTalkMenu:
 			choose row calcnumber in table of fucking options;
 			say "[title entry]: [description entry]?";
 			if Player consents:
-				let nam be title entry;
+				LineBreak;
 				now sextablerun is 1;
-				if (nam is "Himself"):
-					say "[AradTalkHimself]";
-				if (nam is "His brother"):
-					say "[AradTalkEgran]";
-				if (nam is "Sex"):
-					say "[AradTalkSex]";
-				wait for any key;
-				if AradDoneTalking is false:
-					say "[AradTalkMenu]"; [looping back to keep talking with him]
+				if title entry is:
+					-- "Himself":
+						say "[AradTalkHimself]";
+					-- "His brother":
+						say "[AradTalkEgran]";
+					-- "Sex":
+						say "[AradTalkSex]";
+				say "[AradTalkMenu]"; [looping back to keep talking with him]
 		else if calcnumber is 0:
+			LineBreak;
 			now sextablerun is 1;
 			say "     You give Arad a polite bow as you make your leave, which he retributes.";
-			wait for any key;
 		else:
-			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options], or 0 to exit.";
+	wait for any key;
 	clear the screen and hyperlink list;
 
 to say AradTalkHimself:
@@ -190,30 +178,20 @@ to say AradTalkEgran:
 
 to say AradTalkSex:
 	say "     If you are thinking about asking him for some intimate time together, that means you have got to talk to him about that, first. You try to delicately introduce the subject, but any subtle attempts you make are absolutely obliterated as he reads right through you. 'You wanna fuck? Could've just asked.' Well, that was easy, and he seems very receptive to the idea. 'I mean, I'm sure boss wouldn't mind a small break. My brother can cover for my absence. Unless...' he makes a pause, and looks at his sibling to make sure he isn't listening, and leans over to you, whispering 'Unless you're into Egran, too? Heh... You wouldn't be the first we share.' He then stands back up with a mischievous grin on his face. 'Just hit me up and we'll get it done.'";
-	if Libido of Egran > 0:
-		say "     You have already asked Egran, and he has told you the same thing. It seems you can get both twins to join you for some sexy time...";
-	else:
-		say "     It seems you may not only have sex with Arad, you might also be able to get both him and his brother together with you. Now, that sounds quite promising... Perhaps you should talk to Egran, as well?";
+	say "     [if Libido of Egran > 0]You have already asked Egran, and he has told you the same thing. It seems you can get both twins to join you for some sexy time...[else]It seems you may not only have sex with Arad, you might also be able to get both him and his brother together with you. Now, that sounds quite promising... Perhaps you should talk to Egran, as well?[end if]";
 	if Libido of Arad is 0:
 		now Libido of Arad is 1;
 
-[***********************************************************]
 Section 1-2 - Arad Sex
-[***********************************************************]
-
-instead of fucking Arad:
-	say "[SexWithArad]";
 
 to say SexWithArad:
 	if Libido of Arad is 0:
 		say "     You should talk to Arad about that, first.";
-	else if Libido of Arad > 0:
-		if lastfuck of Arad - turns < 6:
-			say "     Now, you have had your fun with the demon guard recently. Surely you are not trying to get Mogdraz to fire him by stealing him constantly from their post to have sex, right? Try giving it some time and ask him again later.";
-		else:
-			say "     You walk towards Arad with a single thing in mind, giving him a suggestive look. He reciprocates, and even puts his muscular red arm around your shoulders as he pulls you closer. 'Seems like you're in the mood for some fun... I sure am.' he says with a wink.";
-			wait for any key;
-			say "[AradSexMenu]";
+	else if lastfuck of Arad - turns < 6:
+		say "     Now, you have had your fun with the demon guard recently. Surely you are not trying to get Mogdraz to fire him by stealing him constantly from their post to have sex, right? Try giving it some time and ask him again later.";
+	else:
+		say "     You walk towards Arad with a single thing in mind, giving him a suggestive look. He reciprocates, and even puts his muscular red arm around your shoulders as he pulls you closer. 'Seems like you're in the mood for some fun... I sure am.' he says with a wink.";
+		say "[line break][AradSexMenu]";
 
 to say AradSexMenu:
 	say "     [bold type]What do you want to do with the scarred demon guard?[roman type][line break]";
@@ -230,7 +208,6 @@ to say AradSexMenu:
 		now title entry is "Ask him for a blowjob";
 		now sortorder entry is 2;
 		now description entry is "He loves some oral action, and he also loves to please. Have him suck your dick";
-	[]
 	else if Player is female:
 		choose a blank row in table of fucking options;
 		now title entry is "Ask him to lick your pussy";
@@ -240,7 +217,7 @@ to say AradSexMenu:
 	if Libido of Egran > 0:
 		choose a blank row in table of fucking options;
 		now title entry is "Get him and his brother";
-		now sortorder entry is 4;
+		now sortorder entry is 3;
 		now description entry is "Go for some twin action";
 	[]
 	sort the table of fucking options in sortorder order;
@@ -256,37 +233,37 @@ to say AradSexMenu:
 			choose row calcnumber in table of fucking options;
 			say "[title entry]: [description entry]?";
 			if Player consents:
-				let nam be title entry;
+				LineBreak;
 				now sextablerun is 1;
-				if (nam is "Give him a blowjob"):
-					say "[AradSexBlowjob]";
-				if (nam is "Ask him for a blowjob"):
-					say "[AradSexGetBlowjob]";
-				if (nam is "Ask him to lick your pussy"):
-					say "[AradSexCunnilingus]";
-				if (nam is "Get him and his brother"):
-					say "[AradEgranTwinSex]";
-				wait for any key;
+				if title entry is:
+					-- "Give him a blowjob":
+						say "[AradSexBlowjob]";
+					-- "Ask him for a blowjob":
+						say "[AradSexGetBlowjob]";
+					-- "Ask him to lick your pussy":
+						say "[AradSexCunnilingus]";
+					-- "Get him and his brother":
+						say "[AradEgranTwinSex]";
 		else if calcnumber is 0:
+			LineBreak;
 			now sextablerun is 1;
 			say "     You excuse yourself as you have to take your leave. Arad smiles to you, though he can't hide the disappointment in seeing you go.";
-			wait for any key;
 		else:
-			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
+			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options], or 0 to exit.";
+	wait for any key;
 	clear the screen and hyperlink list;
 
 to say AradSexBlowjob:
 	say "     You nod, stating your wish to have a good one-on-one time with Arad. He turns to his brother, Egran, who is standing right next to you two. 'Do you mind covering up for me?' he asks his twin, who doesn't really give any answer, but doesn't stop you both from finding a more private room inside the Club, namely his quarters.";
-	WaitLineBreak;
 	say "     Once you arrive at the guards['] resting room, which is a simple one with two beds, closets and other boxes, probably filled with stuff which would be useful for a security role, he leads to you his own bed on the right, which is the one further ahead from when you enter the room. 'So... where were we?' he asks suggestively, as he grabs your head gently and plants a kiss on your neck. You find yourself able to whisper on his ear what you want to do with him, and with a chuckle, he replies 'Oh, yeah? Did someone tell you that's my favorite? Or did you come up with that all by yourself?' Once you feel his large crimson hand grabbing the back of your head, he carefully guides you down his torso, past his chest, abs and waist. Kissing all the way down his treasure trail, your face bumps on his leather jockstrap, bulging considerably.";
+	WaitLineBreak;
 	say "     With eagerness, he removes the only layer that separates his foot and half long of a red demon cock, sliding it down his muscled legs, as his throbbing erection bashes onto your face. His scent strikes you with an odd familiarity, the typical demonic sweetness that is abundant within the Club, coming out raw from the sex of a masculine demon. 'Like what you see? Wait until you taste it...' he teases, grabbing his pulsing rod and having it poke at your lips, its glistening tip leaving thin trails of precum as he moves it around. You feel nearly compelled to open your mouth and let him slide his cock in, but he merely lets it hang there, having you taste the glans with your tongue and softly suck on the tip.";
-	WaitLineBreak;
 	say "     It tastes good, almost too good. Arad pats you in the head gently as he lets you take his dick in deeper. 'Grab my balls, too... Don't leave anything out...' he asks, and to make him happy, you use your hands to massage his big orbs and thick shaft while you slide your lips down on his length more insistently. 'Yeah, that's it... You're doing so good...' his comment reaches your ears in a soft moaning tone as he holds your head between his large hands, carefully leading you over to the edge of the bed as he takes a seat, letting you kneel between his powerful legs to continue to suck him. You seem to be sending him to joyful places as you keep up with your efforts at pleasing him, as you see him leaning his head back and closing his eyes. His big cock throbs and pulses at nearly every second.";
+	WaitLineBreak;
 	say "     Then, you pick up the pace and begin to suck him harder, sliding your lips up and down his veiny shaft while your hands continue to stimulate him on every other place, namely his balls, the base of his dick, and occasionally a rub all over his legs. Giving your best at letting him feel your throat, having his cock hump at the deepest area of your mouth, the blowjob gradually progresses into something more similar to a slow facefuck. Arad does seem to enjoy the soft and gentle manners of practicing love, since he lets you take in all the breath you need before diving back deep onto his sizable dong, all while maintaining that blissful expression on his face. 'Ahh damn, you're so good at this...'";
-	WaitLineBreak;
 	say "     The demon lets out another long moan as you keep worshiping his cock, occasionally feeling him push you in and out as he sees fit, but shifting the control back to you intermittently. During all the licking and sucking, he grunts and bites his lip, trying to keep his whole body from squirming around, grasping at the sheets underneath him with a tight grip... You feel the tentative humps of his hips, his breath deepening, his muscles becoming stiff (which gives you a really nice view of his bulging physique) and his eyes tightly shut, then hear him say 'Fuck, I'm close...' Hearing him say that, you pick up the pace and get ready to give him a powerful and satisfying orgasm.";
-	say "     You stroke him fast, then faster, letting him feel your warm mouth and lips around his cock, until you make him break the point of no return. Then, he is sent into overwhelming ecstasy as his entire load comes out to greet you in the mouth, coating the entirety of it with his hot and sweet load that you either swallow or let slide off your lips, making a sticky mess all over. His climax continues throughout the minute he is still cumming into you, until it finally subsides.";
 	WaitLineBreak;
+	say "     You stroke him fast, then faster, letting him feel your warm mouth and lips around his cock, until you make him break the point of no return. Then, he is sent into overwhelming ecstasy as his entire load comes out to greet you in the mouth, coating the entirety of it with his hot and sweet load that you either swallow or let slide off your lips, making a sticky mess all over. His climax continues throughout the minute he is still cumming into you, until it finally subsides.";
 	say "     'Phew, that was a really fucking good release...' he comments, stroking your cheek in a tender caress. 'Mind giving me another one later? I'll need it, for sure.' he adds, throwing a chuckle in the end. Looking over the mess you both have done, you proceed to clean yourselves up before returning outside.";
 	say "     It seems you have boosted Arad's mood by a lot. He seems to be smiling to everyone as he returns to his post.";
 	if a random chance of 1 in 4 succeeds:
@@ -296,50 +273,46 @@ to say AradSexBlowjob:
 
 to say AradSexGetBlowjob:
 	say "     You nod, stating your wish to have a good one-on-one time with Arad. He turns to his brother, Egran, who is standing right next to you two. 'Do you mind covering up for me?' he asks his twin, who doesn't really give any answer, but doesn't stop you both from finding a more private room inside the Club, namely his quarters.";
-	WaitLineBreak;
 	say "     Once you arrive at the guards['] resting room, which is a simple one with two beds, closets and other boxes, probably filled with stuff which would be useful for a security role, he leads to you his own bed on the right, which is the one further ahead from when you enter the room. 'So... where were we?' he asks suggestively, as he grabs your head gently and plants a kiss on your neck. You find yourself able to whisper on his ear what goes in your mind... and he abruptly stops. 'Wow, wait. You want me to suck your cock?' You reply that is, indeed, what you just said. 'Damn... Really?' He almost sounded disappointed, or at least not believing it, but... you assure him, that is exactly what you want. 'Then get your ass on the bed, you horny [boygirl]. I'll give you what you want.'";
+	WaitLineBreak;
 	say "     Well, he actually didn't say no... It seemed like much the contrary. Eager to oblige, you [if Player is not naked]slide down your lower gear and expose your cock before him[else]look down over your exposed cock, responding in motion[end if] and sit down over the edge of the bed, as he [']requested[']. Then, you see the tall demon walking over to you, kneeling in front of you, grabbing your [cock size desc of player] penis, give it very slow strokes as it hardens in his grasp, all while he looks at you in the eye. This really turns you on, for some reason [if Cock Length of Player < 8]... 'You've got such a cute dick... Mine's really a lot bigger, but... Y'know... Yours is still quite cute.' Did he just mock the size of your dick, or is he trying to be nice? You cannot really say for sure[else if Cock Length of Player >= 8 and Cock Length of Player < 16]... 'Good size. I like it. Not as big as mine, but... Should get the job done about just the same, right?' Is he actually flexing that he is bigger than you, or is he just trying to be nice? You cannot really say for sure[else]... 'Damn! You're carrying a monster! What's this shit, a bat club? It could fucking knock me out with a smack, I bet! Just like mine does, by the way. Bigger is better, eh? I agree.' You have gotten quite confused at his comment, but he seems to like it... and sounds capable of handling your size, at least[end if].";
-	WaitLineBreak;
 	say "     Once he had enough of teasing you, he begins to stroke you a bit more generously, before he wraps his lips around your cock. Cupping your balls with his hand, he massages your orbs with quite the enthusiasm as he gobbles up on your shaft, dealing with any precum you are leaking by now. A soft moan vibrates through your meatlog as he keeps sucking you off, probably a sign that he is enjoying your taste. Arad is surprisingly skillful at this, wiggling his tongue all over your length as he continues to push it in deep into his throat, the tip of your cock brushing against that warm slick tunnel. No choking, no gag reflex, nothing stops the demon from giving you a proper blowjob.";
-	say "     You start feeling very afraid that you will hit your climax too soon, as the sensations he provides you with are beginning to overwhelm you. It feels like his whole mouth gyrates around your dick, while the insides of his cheeks and tongue rub against the whole thing in perfect harmony, moving and touching at just the right sensitive spots of your manhood. It throbs and pulses, seemingly out of your control, and you want to moan loud. One of his hands start to rub at your torso, then all over your chest, and a glimpse at his face shows him shifting his eyes towards yours, greeting you with a cocky wink. He knows he is going to make you cum very soon, fully aware of the effect he is having on you...";
 	WaitLineBreak;
+	say "     You start feeling very afraid that you will hit your climax too soon, as the sensations he provides you with are beginning to overwhelm you. It feels like his whole mouth gyrates around your dick, while the insides of his cheeks and tongue rub against the whole thing in perfect harmony, moving and touching at just the right sensitive spots of your manhood. It throbs and pulses, seemingly out of your control, and you want to moan loud. One of his hands start to rub at your torso, then all over your chest, and a glimpse at his face shows him shifting his eyes towards yours, greeting you with a cocky wink. He knows he is going to make you cum very soon, fully aware of the effect he is having on you...";
 	say "     Even if you wanted him to slow down, that just does not happen. He never lowers the pace nor backs off, and remains ultimately determined to make your cock shoot. It is just too much, you just find yourself desperately wanting to cum, and then it just happens. Your load ends up swallowed by the strong demon until the very last drop, and he continues to stimulate your dick until you have hit the very last second of your climax. 'You wanted a blowjob, there you have it. Hope you enjoyed the fastest cum of your life.' You are not sure you want to either thank him or smack him in the head, but he did make you feel really good... And if he ended up edging you... Well, you bet he would make you suffer for an excruciating amount of time, knowing him a bit now.";
+	WaitLineBreak;
 	say "     You soon return outside, and Arad seems quite happy with himself. Not exactly for the good of others, as his cockiness can be quite irritating to some, especially for his sibling Egran, but you definitely boosted his mood.";
+	NPCSexAftermath Arad receives "OralCock" from Player;
 	if a random chance of 1 in 4 succeeds:
 		if Libido of Mogdraz > 0 and Libido of Mogdraz < 99:
 			increase Lust of Mogdraz by 1; [Mogdraz approves when the player cares for his crew]
-	NPCSexAftermath Arad receives "OralCock" from Player;
 
 to say AradSexCunnilingus:
 	say "     You nod, stating your wish to have a good one-on-one time with Arad. He turns to his brother, Egran, who is standing right next to you two. 'Do you mind covering up for me?' he asks his twin, who doesn't really give any answer, but doesn't stop you both from finding a more private room inside the Club, namely his quarters.";
-	WaitLineBreak;
 	say "     Once you arrive at the guards['] resting room, which is a simple one with two beds, closets and other boxes, probably filled with stuff which would be useful for a security role, he leads to you his own bed on the right, which is the one further ahead from when you enter the room. 'So... where were we?' he asks suggestively, as he grabs your head gently and plants a kiss on your neck. You find yourself able to whisper on his ear what goes in your mind... and he abruptly stops. 'Wow, wait. You want me to lick your pussy?' You reply that is, indeed, what you just said. 'Damn... Really?' He almost sounded disappointed, or at least not believing it, but... you assure him, that is exactly what you want. 'Then get your ass on the bed, you horny [boygirl]. I'll give you what you want.'";
+	WaitLineBreak;
 	say "     Well, he actually didn't say no... It seemed like much the contrary. Eager to oblige, you [if Player is not naked]slide down your lower gear and expose your privates before him[else]look down over your exposed sex[end if] and sit down over the edge of the bed, as he [']requested[']. Then, you see the tall demon walking over to you, kneeling in front of you, grabbing your legs and pull him to you, but his hands do not remain on your legs for long. Once he dives his lips onto your wet lower ones, he reaches for your chest, grabbing both your [breast size desc of player] breasts with each hand. You cannot really say it is rude of him to just grab and squeeze them all he wants, since he is tonguedeep in your cunt right now, and it actually makes you feel really good...";
-	WaitLineBreak;
 	say "     Not really minding the situation, you let him have his way with you. As he plays with your boobs, he gives your eager cooch a good licking, making out with it like a truly skilled demon. He must really like its taste, as he has not stopped trying to slurp your feminine juices and letting those low, soft moans escape his mouth as he continues to lick you. At some point, his tongue really goes deep in there, wiggling and licking at the insides of your pussy like an agitated eel, but what really drives you crazy is his thumbs brushing at your sensitive nipples, all while he rubs and fondles your tits. He does not go hard with it, only teasing your nips with a slight poke and an occasional rub, while his tongue remains very active inside your sex.";
-	say "     You start feeling very afraid that you will hit your climax too soon, as the sensations he provides you with are beginning to overwhelm you. His long demonic tongue going in and out of your cunt feels way better than you could have anticipated, and the way he teases your nipples drives you insane with lust. You find yourself more than once grinding your pussy against the demon's face, which he actually appreciates, as he takes the time to rub your breasts harder... which means you begin to feel even better, and you want to hump his face harder, which in turn makes him start to go really, really hard on your tits, squeezing and rubbing your nipples at a much harder pace, and then you feel like shouting at the top of your lungs as your climax hits you like a truck.";
 	WaitLineBreak;
+	say "     You start feeling very afraid that you will hit your climax too soon, as the sensations he provides you with are beginning to overwhelm you. His long demonic tongue going in and out of your cunt feels way better than you could have anticipated, and the way he teases your nipples drives you insane with lust. You find yourself more than once grinding your pussy against the demon's face, which he actually appreciates, as he takes the time to rub your breasts harder... which means you begin to feel even better, and you want to hump his face harder, which in turn makes him start to go really, really hard on your tits, squeezing and rubbing your nipples at a much harder pace, and then you feel like shouting at the top of your lungs as your climax hits you like a truck.";
 	say "     It overwhelms your senses like a massive thunder strike, and he only stops moving his hands, mouth and tongue once your orgasm reaches its very last second. The devil then pulls out, his whole face soaked in your lady spazzle. 'Was I that good? You really didn't last long... Must have been my skill.' For moments, you think about pulling him back to your cooch and make him stay there for like, an hour or two, but this brief moment really exhausted you. Blissfully defeated, you concede. He is actually quite good. 'Oh, I know. Though if you want more, you gotta keep coming for me and ask... You'll probably get addicted to it, which is fine. That way I'll certainly keep you close.' he adds with a grin, and somehow, the demon makes this sound like it would not be a bad thing.";
+	WaitLineBreak;
 	say "     After you clean up, you return outside, and Arad seems quite happy with himself. Not exactly for the good of others, as his cockiness can be quite irritating to some, especially for his sibling Egran, but you definitely boosted his mood.";
+	NPCSexAftermath Arad receives "OralPussy" from Player;
 	if a random chance of 1 in 4 succeeds:
 		if Libido of Mogdraz > 0 and Libido of Mogdraz < 99:
 			increase Lust of Mogdraz by 1; [Mogdraz approves when the player cares for his crew]
-	NPCSexAftermath Arad receives "OralPussy" from Player;
 
-[***********************************************************]
 Section 1-3 - Egran Talk
-[***********************************************************]
 
-EgranDoneTalking is a truth state that varies.[@Tag:NotSaved]
+[EgranDoneTalking is a truth state that varies.[@Tag:NotSaved]]
 
 instead of conversing Egran:
 	say "     You approach the entrance to the Hellfire Club, more specifically, the two hellfire demons guarding the gate. 'Hopefully the Club has been treating you well?' says Egran, the full bearded one of the demon duo, to whom you wish you talk with.";
-	now EgranDoneTalking is false;
-	say "[EgranTalkMenu]";
+	say "[line break][EgranTalkMenu]";
 
 to say EgranTalkMenu:
 	say "     [bold type]What do you want to talk to Egran about?[roman type][line break]";
-	LineBreak;
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]
@@ -353,12 +326,12 @@ to say EgranTalkMenu:
 		now title entry is "His brother";
 		now sortorder entry is 2;
 		now description entry is "Ask about his twin brother, Arad";
-	[]
-	if Energy of Egran > 1:
-		choose a blank row in table of fucking options;
-		now title entry is "Sex";
-		now sortorder entry is 3;
-		now description entry is "He's a good looking fellow... would there be any chance";
+		[]
+		if Energy of Egran > 1:
+			choose a blank row in table of fucking options;
+			now title entry is "Sex";
+			now sortorder entry is 3;
+			now description entry is "He's a good looking fellow... would there be any chance";
 	[]
 	sort the table of fucking options in sortorder order;
 	repeat with y running from 1 to number of filled rows in table of fucking options:
@@ -373,23 +346,23 @@ to say EgranTalkMenu:
 			choose row calcnumber in table of fucking options;
 			say "[title entry]: [description entry]?";
 			if Player consents:
-				let nam be title entry;
+				LineBreak;
 				now sextablerun is 1;
-				if (nam is "Himself"):
-					say "[EgranTalkHimself]";
-				if (nam is "His brother"):
-					say "[EgranTalkArad]";
-				if (nam is "Sex"):
-					say "[EgranTalkSex]";
-				wait for any key;
-				if EgranDoneTalking is false:
-					say "[EgranTalkMenu]"; [looping back to keep talking with him]
+				if title entry is:
+					-- "Himself":
+						say "[EgranTalkHimself]";
+					-- "His brother":
+						say "[EgranTalkArad]";
+					-- "Sex":
+						say "[EgranTalkSex]";
+				say "[EgranTalkMenu]"; [looping back to keep talking with him]
 		else if calcnumber is 0:
+			LineBreak;
 			now sextablerun is 1;
 			say "     You give Egran a polite bow as you make your leave, which he retributes.";
-			wait for any key;
 		else:
-			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options], or 0 to exit.";
+	wait for any key;
 	clear the screen and hyperlink list;
 
 to say EgranTalkHimself:
@@ -406,31 +379,20 @@ to say EgranTalkArad:
 
 to say EgranTalkSex:
 	say "     Egran is quite the manly and good looking red devil, so it is only natural that someone would feel interested in getting closer to him. For that reason, you decide to ask him about his openness to sex. 'Uh... Is that a proposal? I mean... fuck, sure! I could use some time to relief myself... Standing here all day and night can sure get boring without some diversion on the way. I guess my brother Arad can cover for my absence if I have to head somewhere... else.' he says with a smirk, but then, after making sure his brother is not listening, he leans over to you and starts whispering. 'Although, uh... It would be... pretty fucking hot if you were into my brother, too... We could do some stuff together. You wouldn't be the first we share.'";
-	if Libido of Arad > 0:
-		say "     You have already asked Arad, and he has told you the same thing. It seems you can get both twins to join you for some sexy time...";
-	else:
-		say "     It seems you may not only have sex with Egran, you might also be able to get both him and his brother together with you. Now, that sounds quite promising... Perhaps you should talk to Arad, as well?";
+	say "     [if Libido of Arad > 0]You have already asked Arad, and he has told you the same thing. It seems you can get both twins to join you for some sexy time...[else]It seems you may not only have sex with Egran, you might also be able to get both him and his brother together with you. Now, that sounds quite promising... Perhaps you should talk to Arad, as well?[end if]";
 	if Libido of Egran is 0:
 		now Libido of Egran is 1;
 
-
-[***********************************************************]
 Section 1-4 - Egran Sex
-[***********************************************************]
-
-instead of fucking Egran:
-	say "[SexWithEgran]";
 
 to say SexWithEgran:
 	if Libido of Egran is 0:
 		say "     You should talk to Egran about that, first.";
-	else if Libido of Egran > 0:
-		if lastfuck of Egran - turns < 6:
-			say "     Now, you have had your fun with the demon guard recently. Surely you are not trying to get Mogdraz to fire him by stealing him constantly from their post to have sex, right? Try giving it some time and ask him again later.";
-		else:
-			say "     You walk towards Arad with a single thing in mind, giving him a suggestive look. He reciprocates, and lets you get really close to him as he puts his hand above your butt, pulling you to him. 'You keep giving me those eyes, I'll just have to do you.' he says with a smirk.";
-			wait for any key;
-			say "[EgranSexMenu]";
+	else if lastfuck of Egran - turns < 6:
+		say "     Now, you have had your fun with the demon guard recently. Surely you are not trying to get Mogdraz to fire him by stealing him constantly from their post to have sex, right? Try giving it some time and ask him again later.";
+	else:
+		say "     You walk towards Arad with a single thing in mind, giving him a suggestive look. He reciprocates, and lets you get really close to him as he puts his hand above your butt, pulling you to him. 'You keep giving me those eyes, I'll just have to do you.' he says with a smirk.";
+		say "[line break][EgranSexMenu]";
 
 to say EgranSexMenu:
 	say "     [bold type]What do you want to do with the bearded demon guard?[roman type][line break]";
@@ -442,7 +404,6 @@ to say EgranSexMenu:
 		now title entry is "Give him your pussy";
 		now sortorder entry is 1;
 		now description entry is "Egran loves a tasty cunt and he seems hungry for some. Give him what he wants";
-	[]
 	else if Player is male:
 		choose a blank row in table of fucking options;
 		now title entry is "Give him your ass";
@@ -473,23 +434,24 @@ to say EgranSexMenu:
 			choose row calcnumber in table of fucking options;
 			say "[title entry]: [description entry]?";
 			if Player consents:
-				let nam be title entry;
+				LineBreak;
 				now sextablerun is 1;
-				if (nam is "Give him your pussy"):
-					say "[EgranSexPussyLick]";
-				if (nam is "Give him your ass"):
-					say "[EgranSexAssPlay]";
-				if (nam is "Eat his ass"):
-					say "[EgranSexEatAss]";
-				if (nam is "Get him and his brother"):
-					say "[AradEgranTwinSex]";
-				wait for any key;
+				if title entry is:
+					-- "Give him your pussy":
+						say "[EgranSexPussyLick]";
+					-- "Give him your ass":
+						say "[EgranSexAssPlay]";
+					-- "Eat his ass":
+						say "[EgranSexEatAss]";
+					-- "Get him and his brother":
+						say "[AradEgranTwinSex]";
 		else if calcnumber is 0:
+			LineBreak;
 			now sextablerun is 1;
 			say "     You excuse yourself as you have to take your leave. Egran smiles to you, though he can't hide the disappointment in seeing you go.";
-			wait for any key;
 		else:
-			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
+			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options], or 0 to exit.";
+	wait for any key;
 	clear the screen and hyperlink list;
 
 to say EgranSexPussyLick:
@@ -538,22 +500,19 @@ to say EgranSexEatAss:
 	WaitLineBreak;
 	say "     Falling back, you feel like you are done for now. He looks at you with his cock still half-hard, then smiles. 'Damn. That was pretty good. Wish I could get that done to my ass everyday.' he says, chuckling in the end. 'Make sure you keep offering me these invitations. I'll gladly accept.'";
 	say "     You stay to help him clean up before you return outside, and he definitely seems more content. You probably helped boost his mood, as he seems a lot nicer to everyone else... Including his brother Arad.";
+	NPCSexAftermath Egran receives "Other" from Player;
 	if a random chance of 1 in 4 succeeds:
 		if Libido of Mogdraz > 0 and Libido of Mogdraz < 99:
 			increase Lust of Mogdraz by 1; [Mogdraz approves when the player cares for his crew]
-	NPCSexAftermath Egran receives "Other" from Player;
 
-[***********************************************************]
 Section 1-5 - Twin Sex
-[***********************************************************]
 
 to say AradEgranTwinSex:
 	say "     With both brothers so close to each other, you actually ask both of them if they don't want to take a quick break to hang out with you. 'Oh, you mean both of us? Like, right now?' asks Arad, with a rather suggestive look in his eyes. 'Yeah, well... I guess we could ask Jyneth or Drenraya to keep watch while we're gone.' Egran comments, to which his brother replies 'That's a good idea. You do the talking?' Egran answers with a 'Sure...' and an expression of slight annoyance. 'Cool! Meet us at the quarters once you're done.' Arad adds, before his bearded twin heads over the Storage Room. 'I'm sure that won't take long. Drenraya has a bit of a crush on Egran, so she'll do anything he asks. Anyway, follow me.'";
 	say "     Now with that out of the way, you simply follow Arad towards a more private room inside the Club, namely their quarters. Once you arrive at the guards['] resting room, which is a simple one with two beds, closets and other boxes, probably filled with stuff which would be useful for a security role, he leads to you his own bed on the right, which is the one further ahead from when you enter the room. Then, with a bit of muscle work, he pushes his bed to slam together with Egran's, effectively improvising a double bed. 'We might need the space.' he winks, as he puts his big arm around you and plays gently with your ears, or strokes your cheek. 'Well, I wouldn't like to get started without the grumpy man, so... let's just wait for him.'";
 	WaitLineBreak;
 	say "     A minute later, Egran arrives, and he seemed to be successful at convincing Drenraya to keep guard in their places. 'I'm owing her a favor, now. Hope you're ready to pay it off, Arad.' The scarred demon laughs to this. 'It's not my ass she wants, big guy.' He then gives a generous slap on Egran's buttcheeks, in a very playful manner, which annoys the bearded twin. But nothing will ruin this moment, as Egran approaches you from behind, with Arad coming very close to you on the front... Soon, you find yourself between the tall and muscular twins, who are just starting to feel you up all over with their surprisingly gentle touching. You are made into the center of the attention from now on, and they seem ready to get seriously into the action.";
-	say "     '[bold type]Any fantasy in your mind that you'd like us to make it happen[roman type]?' asks Arad with a naughty grin.";
-	wait for any key;
+	say "[line break]     '[bold type]Any fantasy in your mind that you'd like us to make it happen[roman type]?' asks Arad with a naughty grin.";
 	say "[AradEgranTwinSexMenu]";
 
 to say AradEgranTwinSexMenu:
@@ -578,18 +537,19 @@ to say AradEgranTwinSexMenu:
 			choose row calcnumber in table of fucking options;
 			say "[title entry]: [description entry]?";
 			if Player consents:
-				let nam be title entry;
+				LineBreak;
 				now sextablerun is 1;
-				if (nam is "Get fucked on both ends"):
+				if title entry is "Get fucked on both ends":
 					say "[AradEgranSpitroast]";
 				wait for any key;
 		else if calcnumber is 0:
+			LineBreak;
 			now sextablerun is 1;
 			say "     You didn't go through all this trouble just to leave them hanging now, did you?";
 			wait for any key;
 			say "[AradEgranTwinSexMenu]";
 		else:
-			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
+			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options], or 0 to exit.";
 	clear the screen and hyperlink list;
 
 to say AradEgranSpitroast:
@@ -612,14 +572,9 @@ to say AradEgranSpitroast:
 	WaitLineBreak;
 	say "     After a good while, you get up and clean the mess you have all made before returning outside. Both brothers look extremely content, and they even seem nicer to each other. After all, they do get along pretty well, especially after sharing a willing participant during some steamy sex.";
 	NPCSexAftermath Player receives "OralCock" from Arad;
-	if Player is female:
-		NPCSexAftermath Player receives "PussyFuck" from Egran;
-	else:
-		NPCSexAftermath Player receives "AssFuck" from Egran;
+	NPCSexAftermath Player receives "[if Player is female]Pussy[else]Ass[end if]Fuck" from Egran;
 
-[***********************************************************]
 Section 2 - Jyneth
-[***********************************************************]
 
 Table of GameCharacterIDs (continued)
 object	name
@@ -661,27 +616,19 @@ SexuallyExperienced of Jyneth is true.
 TwistedCapacity of Jyneth is true. [Twisted Characters can take any penetration, no matter the size]
 Sterile of Jyneth is true. [steriles can't knock people up]
 MainInfection of Jyneth is "".
-Description of Jyneth is "[Jynethdesc]".
-Conversation of Jyneth is { "<This is nothing but a placeholder!>" }.
+Description of Jyneth is "     Jyneth is the club's waitress, sonstantly walking from one side to another, either serving drinks or cleaning up tables and the floor off any mess done by the club's customers. The sexy deviless is a tall hellfire demoness with red skin, relatively short black hair and a fiery gaze, sporting a muscled physique with a couple of eye-catching and very sizable breasts tightly held together by a black leather corset. On her bottom, she wears a provocative black silk thong, linked to a pair of dark transparent stockings by a couple of straps on each side of her powerful legs, and walks on black high stiletto heels in perfect balance and style. Her thin demonic tail follows cautiously after her every step.[line break]".
 The scent of Jyneth is "     Jyneth smells faintly of brimstone, but she has a rather attractive, feminine scent".
 
-to say JynethDesc:
-	say "     Jyneth is the club's waitress, sonstantly walking from one side to another, either serving drinks or cleaning up tables and the floor off any mess done by the club's customers. The sexy deviless is a tall hellfire demoness with red skin, relatively short black hair and a fiery gaze, sporting a muscled physique with a couple of eye-catching and very sizable breasts tightly held together by a black leather corset. On her bottom, she wears a provocative black silk thong, linked to a pair of dark transparent stockings by a couple of straps on each side of her powerful legs, and walks on black high stiletto heels in perfect balance and style. Her thin demonic tail follows cautiously after her every step.";
-
-[***********************************************************]
 Section 2-1 - Jyneth Talk
-[***********************************************************]
 
-JynethDoneTalking is a truth state that varies.[@Tag:NotSaved]
+[JynethDoneTalking is a truth state that varies.[@Tag:NotSaved]]
 
 instead of conversing Jyneth:
 	say "     You approach the waitress, who's taking a short break right now. 'Heyy! Came to have a chat with Jyneth, here? Doing good and having fun?' she asks as you greet her.";
-	now JynethDoneTalking is false;
-	say "[JynethTalkMenu]";
+	say "[line break][JynethTalkMenu]";
 
 to say JynethTalkMenu:
 	say "     [bold type]What do you want to talk to Jyneth about?[roman type][line break]";
-	LineBreak;
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]
@@ -695,12 +642,12 @@ to say JynethTalkMenu:
 		now title entry is "Joining the Club";
 		now sortorder entry is 2;
 		now description entry is "Ask how she joined Mogdraz's Club";
-	[]
-	if Energy of Jyneth > 1:
-		choose a blank row in table of fucking options;
-		now title entry is "Others";
-		now sortorder entry is 3;
-		now description entry is "Inquire about her perspective on the others";
+		[]
+		if Energy of Jyneth > 1:
+			choose a blank row in table of fucking options;
+			now title entry is "Others";
+			now sortorder entry is 3;
+			now description entry is "Inquire about her perspective on the others";
 	[]
 	sort the table of fucking options in sortorder order;
 	repeat with y running from 1 to number of filled rows in table of fucking options:
@@ -715,23 +662,23 @@ to say JynethTalkMenu:
 			choose row calcnumber in table of fucking options;
 			say "[title entry]: [description entry]?";
 			if Player consents:
-				let nam be title entry;
+				LineBreak;
 				now sextablerun is 1;
-				if (nam is "Herself"):
-					say "[JynethTalkHerself]";
-				if (nam is "Joining the Club"):
-					say "[JynethTalkClub]";
-				if (nam is "Others"):
-					say "[JynethTalkOthers]";
-				wait for any key;
-				if JynethDoneTalking is false:
-					say "[JynethTalkMenu]"; [looping back to keep talking with him]
+				if title entry is:
+					-- "Herself":
+						say "[JynethTalkHerself]";
+					-- "Joining the Club":
+						say "[JynethTalkClub]";
+					-- "Others":
+						say "[JynethTalkOthers]";
+				say "[JynethTalkMenu]"; [looping back to keep talking with him]
 		else if calcnumber is 0:
+			LineBreak;
 			now sextablerun is 1;
 			say "     You give Jyneth a polite bow as you make your leave, which he retributes.";
-			wait for any key;
 		else:
-			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options], or 0 to exit.";
+	wait for any key;
 	clear the screen and hyperlink list;
 
 to say JynethTalkHerself:
@@ -762,19 +709,15 @@ to say JynethTalkOthers:
 	WaitLineBreak;
 	say "     'Now, regarding boss... He may be a little complicated to get along with at first, but... He's okay. I mean, sure, [bold type]Mogdraz[roman type] does a lot of things demons do, but like... He protects his allies and friends with everything he's got, so he's dependable and loyal to us as well. He cares about us. We couldn't be as safe as we are now without him on the lead, that's for sure. He does a great job at keeping things going, and the Hellfire demons only made it because of him. At this point, if it wasn't for his leadership and cunning, we would've all been assimilated into that idiot's army and our entire kind... gone. I much prefer it this way, even if we have to thrive on mortals[']... er... generosity.' She does an awkward chuckle at the end.";
 
-[***********************************************************]
 Section 2-2 - Jyneth Sex
-[***********************************************************]
 
-Instead of fucking Jyneth:
+[Instead of fucking Jyneth:
 	say "[SexWithJyneth]";
 
 to say SexWithJyneth:
-	say "[bold type]<< Author's Note: This is not possible at the moment. There are no sex scenes for this character, yet. >>[roman type][line break]";
+	say "[bold type]<< Author's Note: This is not possible at the moment. There are no sex scenes for this character, yet. >>[roman type][line break]";]
 
-[***********************************************************]
 Section 3 - Drenraya
-[***********************************************************]
 
 Table of GameCharacterIDs (continued)
 object	name
@@ -817,29 +760,24 @@ TwistedCapacity of Drenraya is true. [Twisted Characters can take any penetratio
 Sterile of Drenraya is true. [steriles can't knock people up]
 MainInfection of Drenraya is "".
 Description of Drenraya is "[Drenrayadesc]".
-Conversation of Drenraya is { "<This is nothing but a placeholder!>" }.
 The scent of Drenraya is "     Drenraya smells faintly of brimstone, but she has a rather attractive, feminine scent".
 
 to say DrenrayaDesc:
 	say "     The shopkeeper of the Hellfire Club is rather unique in appearance. She is a full lizardwoman, is red-skinned, has fiery orange eyes with dark scleras, and has a pair of large obsidian horns that assume a more draconic shape than the typical hellfire demon ones, with a fancy obsidian circlet adorned with a bright merigold gem that falls to her forehead. However, she possesses the might of a demon still, coupled with the power of a dragoness, sporting a quite muscular and strong physique. Around her torso towards her legs, she wears a long harness, with her large breasts and bits barely covered by a set of black silk bra and thong. On her back, an intimidating pair of dark red dragon wings rest relaxed and still.";
 	say "     She seems like a [bold type]shopkeeper[roman type] of some sort, with her merchandise placed behind her counter.";
 
-[***********************************************************]
 Section 3-1 - Drenraya Talk
-[***********************************************************]
 
-DrenrayaDoneTalking is a truth state that varies.[@Tag:NotSaved]
+[DrenrayaDoneTalking is a truth state that varies.[@Tag:NotSaved]]
 DrenrayaAskedToShop is a truth state that varies.[@Tag:NotSaved]
 
 instead of conversing Drenraya:
 	say "     You approach the demon dragoness, who stares back at you with fiery eyes. 'Come to make a purchase? Pick the product and hand over the coins. Best quality assured.' She doesn't seem too friendly, but you could also try talking to her.";
-	now DrenrayaDoneTalking is false;
-	now DrenrayaAskedToShop is false;
-	say "[DrenrayaTalkMenu]";
+	say "[line break][DrenrayaTalkMenu]";
 
 to say DrenrayaTalkMenu:
+	now DrenrayaAskedToShop is false;
 	say "     [bold type]What do you want to ask Drenraya?[roman type][line break]";
-	LineBreak;
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]
@@ -866,60 +804,56 @@ to say DrenrayaTalkMenu:
 			choose row calcnumber in table of fucking options;
 			say "[title entry]: [description entry]?";
 			if Player consents:
-				let nam be title entry;
+				LineBreak;
 				now sextablerun is 1;
-				if (nam is "Shop"):
-					now DrenrayaAskedToShop is true;
-					now DrenrayaDoneTalking is true;
-				if (nam is "Herself"):
-					say "[DrenrayaTalkHerself]";
+				if title entry is:
+					-- "Shop":
+						now DrenrayaAskedToShop is true;
+					-- "Herself":
+						say "[DrenrayaTalkHerself]";
 				wait for any key;
-				if DrenrayaDoneTalking is false:
+				if DrenrayaAskedToShop is false:
 					say "[DrenrayaTalkMenu]"; [looping back to keep talking with him]
 		else if calcnumber is 0:
+			LineBreak;
 			now sextablerun is 1;
 			say "     You excuse yourself as Drenraya returns to her tasks.";
 			wait for any key;
 		else:
-			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options], or 0 to exit.";
 	clear the screen and hyperlink list;
 	if DrenrayaAskedToShop is true:
 		say "[DrenrayaShop]";
 
 to say DrenrayaTalkHerself:
 	if Energy of Drenraya is 0:
-		say "     Despite the first impression you have got from her - which was that she does not seem too inclined to have long conversations with anyone - you try asking her to tell you a bit about herself and how she came to be here. 'Look. I'm not here to do any chit-chat with outsiders. Mogdraz may have allowed you to walk and poke around freely, but I don't trust you. And I'm only letting you buy stuff because he gave the order. Now, if you're not gonna buy anything, then I suggest you piss off and go bother someone else. Like Jyneth! She's the one who loves to talk.'";
+		say "     Despite the first impression you have got from her - which was that she does not seem too inclined to have long conversations with anyone - you try asking her to tell you a bit about herself and how she came to be here. 'Look. I'm not here to do any chitchat with outsiders. Mogdraz may have allowed you to walk and poke around freely, but I don't trust you. And I'm only letting you buy stuff because he gave the order. Now, if you're not gonna buy anything, then I suggest you piss off and go bother someone else. Like Jyneth! She's the one who loves to talk.'";
 		say "     It appears that your first impression was... correct.";
 		now Energy of Drenraya is 1;
 	else if Energy of Drenraya is 1:
 		say "     Your first attempt didn't go too well, so you have decided to try one more time. 'This again?! I won't repeat myself. If you're not here to buy anything, then go away and stop pestering me. I'm not in the mood. And if you're wondering, no, I will never be in the mood, either.'";
 		say "     Perhaps it is only a matter of time until she starts regarding you with less mistrust...? For now, you suppose you can only do business with her without putting your head in risk. Those claws of hers look sharp!";
 
-[***********************************************************]
 Section 3-2 - Drenraya Sex
-[***********************************************************]
 
-Instead of fucking Drenraya:
+[Instead of fucking Drenraya:
 	say "[SexWithDrenraya]";
 
 to say SexWithDrenraya:
-	say "[bold type]<< Author's Note: This is not possible at the moment. There are no sex scenes for this character, yet. >>[roman type][line break]";
+	say "[bold type]<< Author's Note: This is not possible at the moment. There are no sex scenes for this character, yet. >>[roman type][line break]";]
 
-[***********************************************************]
 Section 3-3 - Drenraya Shop
-[***********************************************************]
 
 to say DrenrayaShop:
-	now DrenrayaDoneTalking is true;
 	say "     You ask the demoness to allow you to browse her inventory. 'Sure thing. Shit is still messy, as I just barely set up a list of items that are in any conditions to be sold. I might expand this in the future with more items and organized lists, but for now, you'll have to make do with what I have currently in stock.'";
-	say "     Drenraya has a list of items that you can purchase in exchange for [bold type]Obsidian Coins[roman type], so make sure you have them with you.";
-	say "To buy an item, type buy (name here)";
+	say "[line break]Drenraya has a list of items that you can purchase in exchange for [bold type]Obsidian Coins[roman type], so make sure you have them with you.";
+	say "To buy an item, type [bold type]buy <name>[roman type].";
 	repeat through table of Drenraya Inventory:
 		follow allowed entry;
 		if rule failed:
 			next;
-		say "[link]Buy[as]buy [object entry][end link] ";
-		say "[Name entry] - [price entry] obsidian coin";
+		linkfind "buy [object entry]";
+		say "[set link hyperindex]Buy [Name entry][terminate link] - [price entry] obsidian coins";
 
 Table of Drenraya Inventory
 name	price	object	allowed
@@ -932,9 +866,7 @@ name	price	object	allowed
 "black stiletto heels"	5	black stiletto heels	true rule
 "null essence"	10	null essence	true rule
 
-[***********************************************************]
 Section 3-3-1 - Drenraya Shop's Exclusive Items
-[***********************************************************]
 
 [--- CHEST WEAR ---]
 
@@ -954,7 +886,7 @@ GA of leather harness is 1.
 Traits of leather harness is {"sexy"}.
 Placement of leather harness is "body".
 Descmod of leather harness is "Your upper body is covered by a black leather harness.".
-Slot of leather harness is "chest".
+Slot of leather harness is "back".
 Scent of leather harness is "It just smells like leather...".
 
 Table of Game Objects (continued)
@@ -973,7 +905,7 @@ GA of black silk corset is -1.
 Traits of black silk corset is {"sexy"}.
 Placement of black silk corset is "body".
 Descmod of black silk corset is "Your upper body is covered by a black silk corset.".
-Slot of black silk corset is "chest".
+Slot of black silk corset is "back".
 Scent of black silk corset is "It smells of perfume and has a faint trace of musk from being worn a bit. You have seen worse...".
 
 [--- UNDERWEAR ---]
@@ -992,7 +924,7 @@ AC of leather jockstrap is 0.
 Effectiveness of leather jockstrap is 0.
 GA of leather jockstrap is 1.
 Traits of leather jockstrap is {"sexy"}.
-Placement of leather jockstrap is "crotch".
+Placement of leather jockstrap is "body".
 Descmod of leather jockstrap is "A kinky leather jockstrap holds tightly against your privates.".
 Slot of leather jockstrap is "crotch".
 Scent of leather jockstrap is "Smells like sweet musk... It was worn before, but it is fairly clean.".
@@ -1011,16 +943,14 @@ AC of black silk thong is 0.
 Effectiveness of black silk thong is 0.
 GA of black silk thong is -1.
 Traits of black silk thong is {"sexy", "slutty"}.
-Placement of black silk thong is "crotch".
+Placement of black silk thong is "body".
 Descmod of black silk thong is "A revealing black silk thong hugs your crotch tightly.".
 Slot of black silk thong is "crotch".
 Scent of black silk thong is "Smells like sweet musk... It was worn before, but it is fairly clean.".
 
 [ DUNGEON PRISONERS ]
 
-[***********************************************************]
 Section 4 - Eranyd
-[***********************************************************]
 
 Table of GameCharacterIDs (continued)
 object	name
@@ -1062,27 +992,19 @@ SexuallyExperienced of Eranyd is true.
 TwistedCapacity of Eranyd is true. [Twisted Characters can take any penetration, no matter the size]
 Sterile of Eranyd is true. [steriles can't knock people up]
 MainInfection of Eranyd is "Incubus".
-Description of Eranyd is "[Eranyddesc]".
-Conversation of Eranyd is { "<This is nothing but a placeholder!>" }.
+Description of Eranyd is "     Eranyd is one of the prisoners captured during one of the many conflicts between demons in Red Light. Once a, most certainly, virile incubus, the handsome hellspawn has been turned into a cuntboy and locked in the dungeons for anyone to come and use his holes for their pleasure. Sporting a swimmer's build and a quite messy short red hair, he underwent some changes made by the hellfire demons. While he retained his long and thin tail with a spaded tip and bat-like wings, he also has a pair of short obsidian horns and claws, and his eyes are of a fiery orange, which trail your every movement attentively with quite the inviting gaze. The incubus is laying bare naked and looks too lust-addled to think of anything else other than sex.[line break]".
 The scent of Eranyd is "     Eranyd would smell nicely and sweet, were it not for the reek of sex surrounding his cell and the all too familiar brimstone scent. Still, he has a set of pheromones that can drive anyone wild with eagerness to fuck".
 
-to say EranydDesc:
-	say "     Eranyd is one of the prisoners captured during one of the many conflicts between demons in Red Light. Once a, most certainly, virile incubus, the handsome hellspawn has been turned into a cuntboy and locked in the dungeons for anyone to come and use his holes for their pleasure. Sporting a swimmer's build and a quite messy short red hair, he underwent some changes made by the hellfire demons. While he retained his long and thin tail with a spaded tip and bat-like wings, he also has a pair of short obsidian horns and claws, and his eyes are of a fiery orange, which trail your every movement attentively with quite the inviting gaze. The incubus is laying bare naked and looks too lust-addled to think of anything else other than sex.";
-
-[***********************************************************]
 Section 4-1 - Eranyd Talk
-[***********************************************************]
 
-EranydDoneTalking is a truth state that varies.[@Tag:NotSaved]
+[EranydDoneTalking is a truth state that varies.[@Tag:NotSaved]]
 
 instead of conversing Eranyd:
 	say "     As you walk towards the altered incubus, he eyes you with obvious interest, putting himself on clear view as he makes his whole body very visible to you. 'Hey there... Did you want to have some fun?' You reply that you merely want to speak to him, which has him rolling his eyes in disappointment. 'A talker... how fun. How can I satisfy your curiosity, then?'";
-	now EranydDoneTalking is false;
-	say "[EranydTalkMenu]";
+	say "[line break][EranydTalkMenu]";
 
 to say EranydTalkMenu:
 	say "     [bold type]What do you want to ask the prisoner?[roman type][line break]";
-	LineBreak;
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]
@@ -1096,12 +1018,12 @@ to say EranydTalkMenu:
 		now title entry is "His predicament";
 		now sortorder entry is 2;
 		now description entry is "How come he ended up here";
-	[]
-	if Energy of Eranyd > 1:
-		choose a blank row in table of fucking options;
-		now title entry is "Him being so willing";
-		now sortorder entry is 3;
-		now description entry is "Inquire about his willingness to please, despite him being a prisoner";
+		[]
+		if Energy of Eranyd > 1:
+			choose a blank row in table of fucking options;
+			now title entry is "Him being so willing";
+			now sortorder entry is 3;
+			now description entry is "Inquire about his willingness to please, despite him being a prisoner";
 	[]
 	sort the table of fucking options in sortorder order;
 	repeat with y running from 1 to number of filled rows in table of fucking options:
@@ -1116,23 +1038,23 @@ to say EranydTalkMenu:
 			choose row calcnumber in table of fucking options;
 			say "[title entry]: [description entry]?";
 			if Player consents:
-				let nam be title entry;
+				LineBreak;
 				now sextablerun is 1;
-				if (nam is "Himself"):
-					say "[EranydTalkHimself]";
-				if (nam is "His predicament"):
-					say "[EranydTalkPredicament]";
-				if (nam is "Him being so willing"):
-					say "[EranydTalkPrisoner]";
-				wait for any key;
-				if EranydDoneTalking is false:
-					say "[EranydTalkMenu]"; [looping back to keep talking with him]
+				if title entry is:
+					-- "Himself":
+						say "[EranydTalkHimself]";
+					-- "His predicament":
+						say "[EranydTalkPredicament]";
+					-- "Him being so willing":
+						say "[EranydTalkPrisoner]";
+				say "[EranydTalkMenu]"; [looping back to keep talking with him]
 		else if calcnumber is 0:
+			LineBreak;
 			now sextablerun is 1;
 			say "     You excuse yourself as Eranyd merely watches you go.";
-			wait for any key;
 		else:
-			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options], or 0 to exit.";
+	wait for any key;
 	clear the screen and hyperlink list;
 
 to say EranydTalkHimself:
@@ -1144,7 +1066,6 @@ to say EranydTalkHimself:
 to say EranydTalkPredicament:
 	say "     So, he is a prisoner of the Hellfire Demons, but how did that come to be? You decide to ask him about that. 'Well, you should know about the Combat Zone, right? The Hellfires seem to have a little of an issue with the remaining demons. We were here first but they seem to think they own the District... Well, whatever. I suppose I got too close to a group of horny red devils and they fucked my every hole until I was so full I couldn't walk or fly away. Good technique, if you ask me. At least we all enjoyed our time before I was thrown into this gorgeous room... and got fucked through the next hours by a duo of really handsome twins. What were their names, again...? They had so much synergy together that I felt I was getting doublefucked by the same person. Really hot...'";
 	say "     That does not really explain his physical changes, since the Hellfires do not seem to carry any infectious nanites, and so, are not able to change anyone with their body fluids during sex. Wanting more information on that matter, you press on the subject a little further. 'You mean how I lost my dick and got these horns, claws and eyes...? I don't know. I woke up like this one day. I suppose they used something to change me, but I really don't care. I didn't make much use of my cock either, so I welcome the change. I can get an additional dick inside me, so I suppose that's a win-win situation. Plus, the cosmetic side looks sick... I love it.'";
-	WaitLineBreak;
 	say "     Sounds like Eranyd does not really mind anything that happened to him.";
 	if Energy of Eranyd is 1:
 		now Energy of Eranyd is 2;
@@ -1153,32 +1074,26 @@ to say EranydTalkPrisoner:
 	say "     You already know how he ended up here and who he is, sort of. But one question remains... Did he never actually think about escaping? Eranyd said he really does not mind being here as all his needs are cared for, but what about his freedom? These are all questions you ask him. 'Escaping?! Why would I? I don't actually feel the need to do it. In all honesty, I don't really want to leave.' Oddly enough, you think that is not a strange reaction, but you still try to ask him to explain what he is saying.";
 	say "     'As I've told you, all my needs are satisfied with an almost hourly fuck or two, all of them very, very pleasurable. You could say I am a willing prisoner.' he says.";
 	if Perception of player > 19:
+		say "     [bold type]But you are perceptive enough to notice that something looks odd...[roman type][line break]";
 		WaitLineBreak;
-		say "     [bold type]But you are perceptive enough to notice that something looks odd...[roman type]";
 		say "     You cannot quite put your finger on why, but you feel there is something else to this story. The incubus senses your mistrust in his words and proceeds to give you another explanation. 'Look... It is true, I am willing. I couldn't have put myself under Mogdraz's will without actually wanting to do it. He just has a way with words, I can't really... explain. His power is impressive... Though, for some reason, I can never remember any interaction I had with him to its full extent, there's always something missing... Like a blank in my memory. But I remember feeling so content afterwards... Nothing alike anything I've ever experienced after that meeting.'";
 		say "     So Eranyd is saying he actually had some intimate experience with Mogdraz, you ask... 'Did we...? Perhaps. Maybe that's what he made me forget. I don't really know why, though. Why would he? One would think I'd be spoiled forever, maybe. Perhaps his sex is so good you can't find anything else better than that, and if you forget, you still get to enjoy sex with other people? Who knows...'";
 		say "     One thing is certain, Eranyd likes it here, regardless of everything else that may have happened. But this conversation goes to show how truly influential, and also mysterious, Mogdraz can be...";
 	else:
 		say "     Well, given his consistent answers, you suppose that is all there is to it.";
 
-[***********************************************************]
 Section 4-2 - Eranyd Sex
-[***********************************************************]
 
-Instead of fucking Eranyd:
+[Instead of fucking Eranyd:
 	say "[SexWithEranyd]";
 
 to say SexWithEranyd:
-	say "[bold type]<< Author's Note: This is not possible at the moment. There are no sex scenes for this character, yet. >>[roman type][line break]";
+	say "[bold type]<< Author's Note: This is not possible at the moment. There are no sex scenes for this character, yet. >>[roman type][line break]";]
 
-
-[***********************************************************]
 Section 5 - Exotic Escorts
-[***********************************************************]
 
 to say ToronTalkExoticEscortsMenu:
-	say "     [bold type]'Very well, have a look at the catalog.'[roman type][line break]";
-	LineBreak;
+	say "[line break]     [bold type]'Very well, have a look at the catalog.'[roman type][line break]";
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]
@@ -1216,28 +1131,27 @@ to say ToronTalkExoticEscortsMenu:
 			choose row calcnumber in table of fucking options;
 			say "[title entry]: [description entry]?";
 			if Player consents:
-				let nam be title entry;
+				LineBreak;
 				now sextablerun is 1;
-				if (nam is "Agranoth"):
-					say "[ToronTalkExoticEscortsAgranoth]";
-				else if (nam is "Dirkanor"):
-					say "[ToronTalkExoticEscortsDirkanor]";
-				else if (nam is "Ynisless"):
-					say "[ToronTalkExoticEscortsYnisless]";
-				else if (nam is "Damien"):
-					say "[ToronTalkExoticEscortsDamien]"; [On Damien's file. Special case.]
-				wait for any key;
+				if title entry is:
+					-- "Agranoth":
+						say "[ToronTalkExoticEscortsAgranoth]";
+					-- "Dirkanor":
+						say "[ToronTalkExoticEscortsDirkanor]";
+					-- "Ynisless":
+						say "[ToronTalkExoticEscortsYnisless]";
+					-- "Damien":
+						say "[ToronTalkExoticEscortsDamien]"; [On Damien's file. Special case.]
 		else if calcnumber is 0:
+			LineBreak;
 			now sextablerun is 1;
 			say "     You excuse yourself as you have changed your mind.";
-			wait for any key;
 		else:
-			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options], or 0 to exit.";
+	wait for any key;
 	clear the screen and hyperlink list;
 
-[***********************************************************]
 Section 5-1 - Agranoth
-[***********************************************************]
 
 Table of GameCharacterIDs (continued)
 object	name
@@ -1279,37 +1193,31 @@ SexuallyExperienced of Agranoth is true.
 TwistedCapacity of Agranoth is true. [Twisted Characters can take any penetration, no matter the size]
 Sterile of Agranoth is true. [steriles can't knock people up]
 MainInfection of Agranoth is "".
-Description of Agranoth is "[Agranothdesc]".
-Conversation of Agranoth is { "<This is nothing but a placeholder!>" }.
-The scent of Agranoth is "     ".
+[Description of Agranoth is "[Agranothdesc]".
 
 to say AgranothDesc:
-	say "     ";
+	say "     ";]
 
 to say ToronTalkExoticEscortsAgranoth:
 	say "     'You wish to meet Agranoth? A charming fellow, if I must say. Most of our submissive patrons ask for him every once in a while, others are quite loyal and only ask for him, actually. Mister Agranoth was recruited by Mogdraz, from one of the pocket dimensions within the Void Realm, and is a former wanderer. Such bravery rewarded him with unyielding will and several body modifications, including [bold type]increased body size, multiple limbs and an extremely dominant personality[roman type]. He was, uhm... quite hard to tame, as we're, in fact, speaking of an actual hellspawn, but there are very few things the hellfire seed cannot overcome. Now, he is actually one of the most profitable escorts! Not among our demonic patrons, however. Those prefer pure humans, still.'";
-	LineBreak;
 	say "     'With that said, do you wish to schedule a session with Mister Agranoth?' That will be [bold type]10 Obsidian Coins[roman type] for a full hour.";
 	say "     ([link]Y[as]y[end link]) - Yes, pay to see Agranoth.";
 	say "     ([link]N[as]n[end link]) - No, you are not interested at the moment.";
 	if Player consents:
-		LineBreak;
 		if carried of obsidian coin > 9:
 			ItemLoss obsidian coin by 10;
 			if Libido of Mogdraz > 0 and Libido of Mogdraz < 99:
 				increase Lust of Mogdraz by 1; [Mogdraz approves when the player spends money on his club's services]
 			say "     With a nod, you grab a handful of Obsidian Coins and place them over the counter, so that Toron can collect them. 'Everything appears to be in order, I shall take you to Mister Agranoth's room. Through here.' he says, gesturing towards the Staff door, to where you follow him. The more you visit this side of the club, the more amazed you are at its many pathways and doors, looking bigger at each passing moment. Perhaps you do not truly know the dimensions of this building, but it never ceases to amaze you. Most doors are closed, some silent, some with questionable bump and thud sounds, rarely ever a voice, and you cannot hear anything until you are mere inches away from each entrance.";
 			say "     Agranoth's room seems to be located in a deeper level, which you think you could only find if guided by Toron. This particular level seems like a labyrinth...";
-			WaitLineBreak;
 			say "[ExoticEscortsAgranothSession]";
 		else:
+			LineBreak;
 			say "     You are interested in paying for a session with Agranoth, but unfortunately, you do not seem to have enough obsidian coins. 'That's a shame, indeed! I'm sorry, but I cannot provide you any of these services for free[if Resolution of MogdrazRomance >= 8], no matter your current relationship with Lord Mogdraz[end if]. Once you have the necessary payment, we may talk about this, again.'";
-			WaitLineBreak;
 			say "[ToronTalkExoticEscortsMenu]";
 	else:
 		LineBreak;
 		say "     'Very well, then.' he replies, awaiting further instructions from you.";
-		WaitLineBreak;
 		say "[ToronTalkExoticEscortsMenu]";
 
 to say ExoticEscortsAgranothSession:
@@ -1335,10 +1243,10 @@ to say ExoticEscortsAgranothSession:
 		say "     'Now... what shall we do...?' he wonders to himself as he pulls your head closer to the pair of two feet long cocks, raising to attention as your distance from them grows narrower. Clearly, he is not giving it much thought, as he only stops pulling you once your lips come in contact with one of his shafts, but his hand remains on the back of your skull, keeping you from getting away. Both his cocks harden as you kiss and lick them almost mindlessly. By caressing one dick, then the other, as you bring your hands into play to stroke them, you end up giving the huge demon a combination of blowjob and handjob to both his growing erections. They throb in your grasp and affection while Agranoth merely rubs the back of your head.";
 		say "     'Aren't you a dedicated [boygirl]? Hm... I think I know what we could do, but carry on sucking me off.' he says, and you oblige him. Your head is now between both his rods, hands on each, and your mouth goes from one to the other. The more you rub and stroke them, the harder they throb as the veiny and absolutely monstrous cocks they are. Agranoth grins down at you as he observes you work to please him, watching you kissing, licking and sucking at his members, one at a time. It is not soon after that they begin to leak precum, drops slowly making their way over to your mouth and greeting you in a blissfully sweet taste that makes you yearn for more. Once your tongue slips between the glans of one of his dicks, you get rewarded with a mouthful of the stuff...";
 		WaitLineBreak;
-		say "     ... But unfortunately, his other cock's precum is wasted onto the floor as it hastily oozes out. Nevertheless, the demon does not seem to mind it as he finds himself rock hard and in need of additional stimulation. 'Alright... now that you've got to know the goods... let's do something better.' he says, and as his words barely leave his mouth, you find all his four hands on you, covering your mouth and face, bending you over for him and forcing you on all fours. Agranoth then positions himself behind you and, seconds after, you feel one of his giant dicks slip between your legs as the other climbs over your back, laying heavily on top of you.";
+		say "     ...But unfortunately, his other cock's precum is wasted onto the floor as it hastily oozes out. Nevertheless, the demon does not seem to mind it as he finds himself rock hard and in need of additional stimulation. 'Alright... now that you've got to know the goods... let's do something better.' he says, and as his words barely leave his mouth, you find all his four hands on you, covering your mouth and face, bending you over for him and forcing you on all fours. Agranoth then positions himself behind you and, seconds after, you feel one of his giant dicks slip between your legs as the other climbs over your back, laying heavily on top of you.";
 		say "     He keeps you effectively immobilized with his overwhelming strength, helpless to anything he decides to do to you... 'I'm going in you... And you can't say no.' he informs you in such an ominous tone, and indeed, you cannot resist. Soon enough, you feel one of his large endowments poking at your back entrance, and despite his size, you find yourself capable of taking his meat in you without any pain nor trouble whatsoever, as your body remains relaxed under his care. Such a feat is not without the work of demonic magic, perhaps, as you take the huge demon's dick in its fullest, even feeling it make your belly bulge as he thrusts in deep [if Player is female]. 'I only do anal, hope you don't mind that, cute stuff[end if].";
 		WaitLineBreak;
-		say "     With one of his hands covering your mouth, another keeping your head in place, and his last pair grabbing you by the hips, you are thoroughly fucked by a two foot-long of a cock so hard that you feel your insides getting a whole new arrangement. While this would defy all laws of biology (and any science, really) he finds a way to impale you in his manhood and keep you in pure lusty bliss, and the dick left outside simply drools all over your helpless body, coating you in demonic precum until you are drenched and dripping it. His nuts swing with each of his thrusts, filled to the brim and awaiting their sweet release, which takes a long, long time to arrive...";
+		say "     With one of his hands covering your mouth, another keeping your head in place, and his last pair grabbing you by the hips, you are thoroughly fucked by a two-foot-long of a cock so hard that you feel your insides getting a whole new arrangement. While this would defy all laws of biology (and any science, really) he finds a way to impale you in his manhood and keep you in pure lusty bliss, and the dick left outside simply drools all over your helpless body, coating you in demonic precum until you are drenched and dripping it. His nuts swing with each of his thrusts, filled to the brim and awaiting their sweet release, which takes a long, long time to arrive...";
 		say "     'That's it, little bitch, you're mine now.' Agranoth utterly dominates you, even finding time to swap cocks as the whim strikes him, flipping you around in a myriad of positions that he deems adequate for the occasion. Once you are being fucked in doggy style, then he positions you to take it in missionary, and eventually, you end up riding him while embracing his other dick, all while he keeps that happy grin on his face. One would think he is the one enjoying himself playing with you like a sex toy, going through so many different positions that he effortlessly puts you in that you inevitably lose count, from a certain point onwards... Your hole is stretched beyond what you could imagine possible, and he even takes time to switch dicks, using both and one at a time at various occasions.";
 		WaitLineBreak;
 		say "     For an entire hour, your ass is fucked without mercy, and he only lets you go when he shouts in a demonic moan that makes the whole room tremble, accompanied by his climax. 'Fuck yeah, here's come the special...!' An avalanche of hellish seed finds its way inside you, filling your guts until you look pregnant with all the babies that could fit in your body. But of course, only one of his members is actually inside you when that happens. The other simply coats your skin in several generous blasts of demon cum for what seems like a whole minute.";
@@ -1352,9 +1260,7 @@ to say ExoticEscortsAgranothSession:
 		LineBreak;
 		say "     You were just about to go in, but on second thought, despite the money you have already paid, you decided to return with Toron before he disappeared into the darkness. He eyes you with a frowned eyebrow, but you explain you went back with your decision and simply wish to leave. 'Well, no refunds.' he says, and then you are escorted back to the Lounge.";
 
-[***********************************************************]
 Section 5-2 - Dirkanor
-[***********************************************************]
 
 Table of GameCharacterIDs (continued)
 object	name
@@ -1396,12 +1302,10 @@ SexuallyExperienced of Dirkanor is true.
 TwistedCapacity of Dirkanor is true. [Twisted Characters can take any penetration, no matter the size]
 Sterile of Dirkanor is true. [steriles can't knock people up]
 MainInfection of Dirkanor is "".
-Description of Dirkanor is "[Dirkanordesc]".
-Conversation of Dirkanor is { "<This is nothing but a placeholder!>" }.
-The scent of Dirkanor is "     ".
+[Description of Dirkanor is "[Dirkanordesc]".
 
 to say DirkanorDesc:
-	say "     ";
+	say "     ";]
 
 to say ToronTalkExoticEscortsDirkanor:
 	say "     'Ah, Dirkanor, is it? What is there to say about such a [bold type]well-endowed fellow[roman type]... A niche pick, not exactly for everyone. Dirkanor is of the common hellfire demon kind, but has received several commendations by Mogdraz himself during his time serving in field operations. Currently, he serves as one of our escorts in the [bold type][']Hyper['][roman type] category. He has, indeed, an obscenely massive dong. It really isn't for everyone, but those who pick him generally have no complaints. I suppose it really depends if you are looking for a giant manhood and everything that comes with it. Oh, and [bold type]if you see something moving inside his balls, that might be a patron who paid extra[roman type]. Do not mind them.'";
@@ -1412,14 +1316,11 @@ to say ToronTalkExoticEscortsDirkanor:
 	say "     [link](3)[as]3[end link] - Ask about this [']extra['] payment thing.";
 	now calcnumber is 0;
 	while calcnumber < 1 or calcnumber > 3:
-		say "Choice? (1-3)>[run paragraph on]";
+		say "Choice? (1-3)> [run paragraph on]";
 		get a number;
-		if calcnumber is 1 or calcnumber is 2 or calcnumber is 3:
-			break;
-		else:
+		if calcnumber < 1 or calcnumber > 3:
 			say "Invalid choice. Type [link]1[end link] to say yes, [link]2[end link] to say no or [link]3[end link] to ask about the extra payment.";
 	if calcnumber is 1:
-		LineBreak;
 		if carried of obsidian coin > 9:
 			ItemLoss obsidian coin by 10;
 			if Libido of Mogdraz > 0 and Libido of Mogdraz < 99:
@@ -1429,13 +1330,12 @@ to say ToronTalkExoticEscortsDirkanor:
 			WaitLineBreak;
 			say "[ExoticEscortsDirkanorSession]";
 		else:
+			LineBreak;
 			say "     You are interested in paying for a session with Dirkanor, but unfortunately, you do not seem to have enough obsidian coins. 'That's a shame, indeed! I'm sorry, but I cannot provide you any of these services for free[if Resolution of MogdrazRomance >= 8], no matter your current relationship with Lord Mogdraz[end if]. Once you have the necessary payment, we may talk about this, again.'";
-			WaitLineBreak;
 			say "[ToronTalkExoticEscortsMenu]";
 	else if calcnumber is 2:
 		LineBreak;
 		say "     'Very well, then.' he replies, awaiting further instructions from you.";
-		WaitLineBreak;
 		say "[ToronTalkExoticEscortsMenu]";
 	else if calcnumber is 3:
 		LineBreak;
@@ -1508,8 +1408,8 @@ to say ExoticEscortsDirkanorSession:
 						say "     You would think you were about to be shot out of his nuts, but they really seem to be taking some time... Enough for it to raise up to your nose. You lean your head back so you can continue breathing, and put your body above it so that his cum does not fully take you, pushing against his sack. It is quite a difficult thing to do, as all his insides are slippery, and often you find yourself falling down onto the spunk and accidentally swallowing some of it... Whether this turns you on or not, your life is endangered in this moment as you struggle to keep your face above all that cum flowing into his testicles while he just moans in pleasure...";
 						WaitLineBreak;
 						say "     Though, you feel your surroundings trembling, giving you some hope. His balls are beginning to rise, and it definitely does not take him long to shout like a roaring beast and shoot you right through the door, absolutely covered in his cum. The force is so great that you are knocked out unconscious as you hit your head against something solid...";
-						WaitLineBreak;
 						follow the turnpass rule;
+						WaitLineBreak;
 						say "     'Looks like you've had your fun.' a voice wakes you up. It is Toron, who has brought you into a different room after having cleaned you up. 'This is what happens whenever Dirkanor cock vores someone. I have to do the cleanup. Anyway, hope you've enjoyed, at least. Time to return to the Lounge, if you're finally awake.' Well... he sounds annoyed, but you are clean, fresh and safe, perhaps thanks to the club's amazing bartender. No, most definitely thanks to the club's amazing bartender.";
 						say "     You return to the Lounge a few moments later.";
 						TraitGain "Cock Vored Player" for Dirkanor;
@@ -1542,8 +1442,8 @@ to say ExoticEscortsDirkanorSession:
 					say "     You would think you were about to be shot out of his nuts, but they really seem to be taking some time... Enough for it to raise up to your nose. You lean your head back so you can continue breathing, and put your body above it so that his cum does not fully take you, pushing against his sack. It is quite a difficult thing to do, as all his insides are slippery, and often you find yourself falling down onto the spunk and accidentally swallowing some of it... Whether this turns you on or not, your life is endangered in this moment as you struggle to keep your face above all that cum flowing into his testicles while he just moans in pleasure...";
 					WaitLineBreak;
 					say "     Though, you feel your surroundings trembling, giving you some hope. His balls are beginning to rise, and it definitely does not take him long to shout like a roaring beast and shoot you right through the door, absolutely covered in his cum. The force is so great that you are knocked out unconscious as you hit your head against something solid...";
-					WaitLineBreak;
 					follow the turnpass rule;
+					WaitLineBreak;
 					say "     'What a surprise, got dicked in again.' a voice wakes you up. It is Toron, who has brought you into a different room after having cleaned you up. 'Don't you want to have a permanent stay in some giant demon's balls or something and spare me from... this? I'm sure Mogdraz could work something out.' Obviously, he was being sarcastic. 'I swear, if you had to pay full price to do that every time you come to Dirkanor...!' Well... he definitely sounds annoyed, but you are clean, fresh and safe, perhaps thanks to the club's amazing bartender. No, most definitely thanks to the club's amazing bartender.";
 					say "     You return to the Lounge a few moments later.";
 					increase Strength of Dirkanor by 1; [counting how many times Dirkanor CV'd the player]
@@ -1557,16 +1457,12 @@ to say ExoticEscortsDirkanorSession:
 		LineBreak;
 		say "     You were just about to go in, but on second thought, despite the money you have already paid, you decided to return with Toron before he disappeared into the darkness. He eyes you with a frowned eyebrow, but you explain you went back with your decision and simply wish to leave. 'Well, no refunds.' he says, and then you are escorted back to the Lounge.";
 
-[***********************************************************]
 Section 5-3 - Ynisless
-[***********************************************************]
 
 to say ToronTalkExoticEscortsYnisless:
-	say "     'Do you want to request Lady Ynisless? She is Lady Ynis, for short, and she's a [bold type]psychic[roman type]. With one glance she can put anyone into a trance and lust frenzy. Highly requested for her hypnotic gifts, indeed. On top of that, she comes with some perks, like a [bold type]increased body size, very large breasts, lactation on demand, ample hips, great womb capacity[roman type]...' - Toron brings the catalog closer to his eyes while frowning his eyebrows - '... Uhm... so, there is also [bold type]shapeshifting abilities for gender preference accommodation, illusionary play, telekinesis for remote sex toy control[roman type]... W-well, she fills quite a lot of roles, [bold type]including those of a male[roman type], if one so desires.'";
+	say "     'Do you want to request Lady Ynisless? She is Lady Ynis, for short, and she's a [bold type]psychic[roman type]. With one glance she can put anyone into a trance and lust frenzy. Highly requested for her hypnotic gifts, indeed. On top of that, she comes with some perks, like a [bold type]increased body size, very large breasts, lactation on demand, ample hips, great womb capacity[roman type]...' - Toron brings the catalog closer to his eyes while frowning his eyebrows - '...Uhm... so, there is also [bold type]shapeshifting abilities for gender preference accommodation, illusionary play, telekinesis for remote sex toy control[roman type]... W-well, she fills quite a lot of roles, [bold type]including those of a male[roman type], if one so desires.'";
 	say "     'Ah, though I'm afraid to inform that she is [bold type]unavailable[roman type], sadly. She seems to be booked with many... Stupid man things, as she wrote here, herself... Uhm... Pardon her, patience is not her virtue, for certain. If you wish to schedule a session with her, you will have to wait until she's free.'";
-	WaitLineBreak;
 	say "     << Author's Note: Currently, she has no content available, but that may change in the future! >>";
-	LineBreak;
 	say "[ToronTalkExoticEscortsMenu]";
 
 Hellfire Workers ends here.

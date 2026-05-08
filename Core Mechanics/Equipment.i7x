@@ -1080,9 +1080,9 @@ Chapter 1 - Fedoras
 
 Table of Game Objects (continued)
 name	desc	weight	object
-"white cashmere fedora"	"A white fedora hat with a soft brim and indented crown. Wearing it might make you look like a private detective, a hipster, or just someone with a fondness for the classy yesteryear. Judging by the hat's appearance, it's [']unisex['] and pretty [']stylish[']."	0	white cashmere fedora
-"black wool fedora"	"A black fedora hat with soft brim and indented crown. Wearing it might make you look like a private detective, a hipster, or just someone with a fondness for the classy yesteryear. Judging by the hat's appearance, it's [']unisex['] and pretty [']stylish[']."	0	black wool fedora
-"gray wool fedora"	"A gray fedora hat with soft brim and indented crown. Wearing it might make you look like a private detective, a hipster, or just someone with a fondness for the classy yesteryear. Judging by the hat's appearance, it's [']unisex['] and pretty [']stylish[']."	0	gray wool fedora
+"white cashmere fedora"	"A white fedora hat with a soft brim and indented crown. Wearing it might make you look like a private detective, a hipster or just someone with a fondness for the classy yesteryear. Judging by the hat's appearance, it's [']unisex['] and pretty [']stylish[']."	0	white cashmere fedora
+"black wool fedora"	"A black fedora hat with soft brim and indented crown. Wearing it might make you look like a private detective, a hipster or just someone with a fondness for the classy yesteryear. Judging by the hat's appearance, it's [']unisex['] and pretty [']stylish[']."	0	black wool fedora
+"gray wool fedora"	"A gray fedora hat with soft brim and indented crown. Wearing it might make you look like a private detective, a hipster or just someone with a fondness for the classy yesteryear. Judging by the hat's appearance, it's [']unisex['] and pretty [']stylish[']."	0	gray wool fedora
 
 white cashmere fedora is a grab object.
 white cashmere fedora is equipment.

@@ -153,8 +153,6 @@ to say HellDemon loses:
 			say "     You take a step back and shake your head, denying his offer. 'No? Heh... your loss. Though I'm sure you'll change your mind,' he says, before retreating back into the shadows.";
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options], or 0 to exit.";
-	wait for any key;
-	clear the screen and hyperlink list;
 
 to say HellDemonBJ:
 	project Figure of HellfireDemon_hard_icon;

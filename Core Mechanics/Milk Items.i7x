@@ -3717,6 +3717,19 @@ to say hellfire demon man-milk use:
 
 Table of Game Objects (continued)
 name	desc	weight	object
+"peculiar dragon man-milk"	"[manmilk Strain of peculiar dragon man-milk]"	1	peculiar dragon man-milk
+
+peculiar dragon man-milk is a infectious milky grab object.
+Strain of peculiar dragon man-milk is "Peculiar Dragon".
+Usedesc of peculiar dragon man-milk is "[peculiar dragon man-milk use]".
+Scent of peculiar dragon man-milk is "[breastmilk smell]".
+
+to say peculiar dragon man-milk use:
+	say "     Lifting the plastic bottle to your mouth, you take a drink from it, letting the draconic man-milk run over your tongue and down your throat. Tastes rich and animal-like. Swishing it around in your mouth a little, you finish the bottle off, then stuff it back into your collection of 'empties'.";
+	PlayerDrink 15;
+
+Table of Game Objects (continued)
+name	desc	weight	object
 "retriever man-milk"	"A plastic water bottle filled with what is clearly milk. One could think it was a regular cow's milk, if someone hadn't written 'Retriever Man-Milk' across the label on the bottle. You [italic type]could[roman type] drink it to quench your thirst. Who knows what else it might do to you though..."	1	retriever man-milk
 
 retriever man-milk is a infectious milky grab object.

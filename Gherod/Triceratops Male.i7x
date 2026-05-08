@@ -31,10 +31,7 @@ to say Triceratops Male Wins:
 
 to say Triceratops Male Loses:
 	say "     [if fightoutcome is 11]Having teased the sturdy male in such powerful ways, he drops the fight and begins to rub himself, especially his butt, as his cock raises to a full erection right in front of you. 'Fuck, why are you so... hot?! Come on closer, we gotta fuck! I'm so fucking horny...'[else]With proper battling, you manage to defeat the male triceratops, who looks too bruised to be able to carry on fighting. 'Damn... you're stronger than you look. That's fucking hot... Wanna fuck?' he asks, having gotten an erection by the end of your encounter.[end if]";
-	say "[line break][TriceratopsMaleVictorySexMenu]";
-
-to say TriceratopsMaleVictorySexMenu:
-	say "     [bold type]What do you want to do with him, if anything?[roman type][line break]";
+	say "[line break]     [bold type]What do you want to do with him, if anything?[roman type][line break]";
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]

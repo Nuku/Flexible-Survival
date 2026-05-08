@@ -7,27 +7,20 @@ Version 5 of Yamato Dragoness by Blue Bishop begins here.
 
 Section 1 - Creature Responses
 
-YDSF is a number that varies. [Yamato Dragon Succumb Fate]
 FYDTBMM is a number that varies. [Female Yamato Dragon TBM Memory]
 FYDM is a number that varies. [Female Yamato Dragon Memory]
 
 to ProjectYamatoDragoness_SFW:
 	if YDEnemyColor is:
-		-- 0:
-			project the Figure of YamatoDragoness_red_SFW_icon;
-		-- 1:
-			project the Figure of YamatoDragoness_blue_SFW_icon;
-		-- 2:
-			project the Figure of YamatoDragoness_green_SFW_icon;
+		-- 0: project the Figure of YamatoDragoness_red_SFW_icon;
+		-- 1: project the Figure of YamatoDragoness_blue_SFW_icon;
+		-- 2: project the Figure of YamatoDragoness_green_SFW_icon;
 
 to ProjectYamatoDragoness_NSFW:
 	if YDEnemyColor is:
-		-- 0:
-			project the Figure of YamatoDragoness_red_NSFW_icon;
-		-- 1:
-			project the Figure of YamatoDragoness_blue_NSFW_icon;
-		-- 2:
-			project the Figure of YamatoDragoness_green_NSFW_icon;
+		-- 0: project the Figure of YamatoDragoness_red_NSFW_icon;
+		-- 1: project the Figure of YamatoDragoness_blue_NSFW_icon;
+		-- 2: project the Figure of YamatoDragoness_green_NSFW_icon;
 
 to say Yamato Dragoness vic:
 	ProjectYamatoDragoness_NSFW;
@@ -88,7 +81,7 @@ to say Yamato Dragoness vic:
 			else:
 				say "finally she cries out in orgasm, the [if daytimer is night]night's[else]day's[end if] light replaced with an oppressive blackness, pulled into the depths of her voracious portal in the wake of this bliss.";
 			say "     Such a prison as this, you imagine she could crush you with this grip, pulled deeper with each successive throb, seemingly going on for an eternity before you're finally granted the mercy of her comparatively less overbearing womb, only given a few seconds to appreciate the relief before thought fades from you entirely. Outwardly, [if scalevalue of Player > 3]the dragoness would no doubt look somewhat pregnant with your impressive form, though perhaps this serpentine creature perceives this as a mere trophy, signifying her[else]your captivity would be imperceivable, further punctuating this dragoness's[end if] complete and utter dominance over you.";
-			infect;
+			infect "Yamato Dragoness";
 			WaitLineBreak;
 			if (Player is kinky and a random chance of 1 in 3 succeeds) or ("Horny Bastard" is listed in feats of Player and a random chance of 1 in 3 succeeds) or a random chance of 1 in 6 succeeds:
 				say "     You're gradually roused from unconsciousness by the feel of something slick and scaled writhing against your [bodytype of Player] form. Quickly realizing you're walled off within the translucent confines of an egg, the immediate and much more apparent issue is quickly brought to your attention. Another, much closer to your size, ";
@@ -107,18 +100,18 @@ to say Yamato Dragoness vic:
 								say ". Shifting slightly against this tight prison, you quickly realize how sore and bloated your stomach is from the other occupant's seed, empowered by some unholy libido that's been compelling him to use you for a fair amount of time now.";
 							else:
 								say ". Loud, irreverent groans escaping the beast's scaled lips, he's rather shameless in his need for relief, in spite of these particularly twisted circumstances, grinding his coarse, elongated frame against yours with a blind determination.";
-							say "     Twisted, heated confines filled with the wet sounds of his persisting motion, you're eventually met with a long, exhausted groan by the creature, hot seed flooding your depths before he - finally - goes limp, spent, and loosens up his hold enough for you to break yourself out of the shell. You're a complete, worn out mess by this point, and it takes you some time to find your things and head back from where you came.[impregchance][mimpregchance][line break]";
-							infect;
+							say "     Twisted, heated confines filled with the wet sounds of his persisting motion, you're eventually met with a long, exhausted groan by the creature, hot seed flooding your depths before he - finally - goes limp, spent, and loosens up his hold enough for you to break yourself out of the shell. You're a complete, worn out mess by this point, and it takes you some time to find your things and head back from where you came.[fimpregchance][mimpregchance][line break]";
+							infect "Yamato Dragoness";
 					else:
 						say "     In spite what better judgment you might have, you oblige the serpentine creature's need";
 						if "Horny Bastard" is listed in feats of Player:
 							say ". Shifting slightly against this tight prison, you quickly realize how sore and bloated your stomach is from the other occupant's seed, empowered by some unholy libido that's been compelling him to use you for a fair amount of time now.";
 						else:
 							say ". Loud, irreverent groans escaping the beast's scaled lips, he's rather shameless in his need for relief, in spite of these particularly twisted circumstances, grinding his coarse, elongated frame against yours with a blind determination.";
-						say "     Twisted, heated confines filled with the wet sounds of his persisting motion, you're eventually met with a long, exhausted groan by the creature, hot seed flooding your depths before he - finally - goes limp, spent, and loosens up his hold enough for you to break yourself out of the shell. You're a complete, worn out mess by this point, and it takes you some time to find your things and head back from where you came.[impregchance][mimpregchance][line break]";
-						infect;
+						say "     Twisted, heated confines filled with the wet sounds of his persisting motion, you're eventually met with a long, exhausted groan by the creature, hot seed flooding your depths before he - finally - goes limp, spent, and loosens up his hold enough for you to break yourself out of the shell. You're a complete, worn out mess by this point, and it takes you some time to find your things and head back from where you came.[fimpregchance][mimpregchance][line break]";
+						infect "Yamato Dragoness";
 				else:
-					say "dragoness is wrapped around you. You can only assume that you weren't enough to satisfy your captor's mad need and left you another victim to keep you company. [if Cock Count of Player > 1]You feel blatantly hard, forcibly impaling her with one of your cocks[else if Cock Count of Player is 1]You feel blatantly hard, forcibly impaling her with your cock[else]Having nothing to impale herself with, she shows no restraint in grinding her rough form against you[end if]. Try to free yourself of her?";
+					say "dragoness is wrapped around you. You can only assume that you weren't enough to satisfy your captor's mad need and left you another victim to keep you company. [if Cock Count of Player > 1]You feel blatantly hard, forcibly impaling her with one of your cocks[else if Player is male]You feel blatantly hard, forcibly impaling her with your cock[else]Having nothing to impale herself with, she shows no restraint in grinding her rough form against you[end if]. Try to free yourself of her?";
 					if Player consents:
 						let bonus be ( strength of Player - 10 ) / 2;
 						let target be 14;
@@ -133,7 +126,7 @@ to say Yamato Dragoness vic:
 							else:
 								say ". Loud, irreverent groans escaping the beast's lips, she's rather shameless in her need for relief, in spite of these particularly twisted circumstances, grinding her scaled, elongated frame against yours with a blind determination.";
 							say "     Twisted, heated confines filled with the wet sounds of her persisting motion, you're eventually met with a long, exhausted groan by the creature, hot honey drenching your groin, before she - finally - goes limp, spent, and loosens up her hold enough for you to break yourself out of the shell. You're a complete, worn out mess by this point, and it takes you some time to gather your things and head back out from where you came.";
-							infect;
+							infect "Yamato Dragoness";
 					else:
 						say "     In spite what better judgment you might have, you oblige the serpentine creature's need";
 						if "Horny Bastard" is listed in feats of Player:
@@ -141,7 +134,7 @@ to say Yamato Dragoness vic:
 						else:
 							say ". Loud, irreverent groans escaping the beast's lips, she's rather shameless in her need for relief, in spite of these particularly twisted circumstances, grinding her scaled, elongated frame against yours with a blind determination.";
 						say "     Twisted, heated confines filled with the wet sounds of her persisting motion, you're eventually met with a long, exhausted groan by the creature, hot honey drenching your groin, before she - finally - goes limp, spent, and loosens up her hold enough for you to break yourself out of the shell. You're a complete, worn out mess by this point, and it takes you some time to gather your things and head back out from where you came.";
-						infect;
+						infect "Yamato Dragoness";
 			else:
 				say "     You're gradually roused back from unconsciousness, quickly finding yourself trapped within the tight, translucent confines of an egg, compelling yourself to break free of this hot, moist prison. Exposed to the dry, [if daytimer is night]night[else]day[end if]time air once more, she at least offered the small courtesy of leaving you [if showlocale is true]in the park[else]where you first met[end if]. It takes you some time to find your things and return back from whence you came.";
 		else if BodyName of Player is "Yamato Dragon" or BodyName of Player is "Yamato Dragoness":
@@ -183,12 +176,11 @@ to say Yamato Dragoness vic:
 					if Cock Count of Player > 2 or (Cock Count of Player is 2 and Cock Length of Player > 24):
 						say ", exposed dick[if Cock Count of Player > 3]s[else if Cock Count of Player is 3 and Cock Length of Player > 24]s[end if] wasting your seed impotently across the open air, down to the trees below";
 					say ". Her overwhelming grip is relentless until you're milked dry of every last drop.";
-				say "     Shared fatigue the anchor that pulls you once more to the ground, she finally frees you from her grip, slowly rising once more into the air to depart in silence. Gradually catching your breath, you're left to gradually recover from the creature's powerful influence, [if Cock Length of Player < 24 and FYDM is 0]checking over your exceedingly sore cock[smn] to find that they seem slightly enlarged from the ordeal, though you're not rightly sure if it'll have any lingering effects[else if Cock Length of Player < 24]checking over your exceedingly sore cock[smn] to see that it does indeed appear larger from the ordeal..[run paragraph on][else]your oversized cock[smn] feeling extremely sore from the ordeal[end if].";
+				say "     Shared fatigue the anchor that pulls you once more to the ground, she finally frees you from her grip, slowly rising once more into the air to depart in silence. Gradually catching your breath, you're left to gradually recover from the creature's powerful influence, [if Cock Length of Player < 24 and FYDM is 0]checking over your exceedingly sore cock[smn] to find that they seem slightly enlarged from the ordeal, though you're not rightly sure if it'll have any lingering effects.[else if Cock Length of Player < 24]checking over your exceedingly sore cock[smn] to see that it does indeed appear larger from the ordeal...[else]your oversized cock[smn] feeling extremely sore from the ordeal.[end if]";
 				if FYDM is 0, now FYDM is 1;
 				if "Modest Organs" is not listed in feats of Player and Cock Length of Player < 24:
-					LineBreak;
 					if "Microwaved" is listed in feats of Player:
-						say "WARNING: Cock length change detected! Allow?";
+						say "[line break]WARNING: Cock length change detected! Allow?";
 						if Player consents:
 							if Cock Length of Player < 18:
 								increase Cock Length of Player by 2;
@@ -197,7 +189,8 @@ to say Yamato Dragoness vic:
 							follow the cock descr rule;
 							say "You can see your [if Cock Count of Player is 1][one of]cock[or]penis[or]shaft[or]maleness[at random][else][one of]cocks[or]penises[or]shafts[or]malenesses[at random][end if] [one of]engorge[or]swell[or]throb[at random][smv] as [if Cock Count of Player > 1]they gain[else]it gains[end if] in length, becoming [descr]!";
 						else:
-							say "     It looks like you recover to their original size after treating it.";
+							LineBreak;
+							say "It looks like [ittheym] recover[smv] to [itstheirm] original size after treating [itthemm].";
 					else:
 						if Cock Length of Player < 18:
 							increase Cock Length of Player by 2;
@@ -209,9 +202,9 @@ to say Yamato Dragoness vic:
 				say "     Grabbing you by your hind leg, you find yourself being dragged into the air, now subjected to the blowing wind along your ascent. Exposed before the [if daytimer is night]n[else]br[end if]ight sky, her taloned legs pull your head to her scaled snatch, revealing your imposed [if HP of Player > 0 or Player is submissive]task. Obligingly[else]punishment. Reluctantly[end if], your tongue caresses along its coarse lips, had scaling gradually parting way to reveal her soft flesh, inviting your writhing organ's slick touch.";
 				say "     '[one of]Yes[or]Ah[or]Mm[at random]... [one of]You will learn your place, whelp[or]You have but a taste of what I offer you[or]This is your natural appointment, under me as you are now[at random].' Her remark is punctuated by the feel of her talon";
 				if Player is not neuter:
-					say "[if Cock Count of Player > 2]s, gripping two of your now-hardening, [cock size desc of Player] cocks, putting you in an even more vulnerable position now that her sole hold on you is by your most sensitive organs[else if Cock Count of Player is 2]s, gripping both of your now-hardening, [cock size desc of Player] cocks, putting you in an even more vulnerable position now that her sole hold on you is by your most sensitive organs[else if Cock Count of Player is 1]'s grip, latched onto your now-hardening, [cock size desc of Player] cock, the other holding your similarly serpentine torso in place[else if Cunt Count of Player > 1]'s grip on your diminutive frame, freeing one to briefly tease one of your exposed portals[else]'s grip on your diminutive frame, freeing one to briefly tease your exposed portal[end if]. Eclipsing you in size, you can't help but shudder at the overwhelming sensation of her own tongue's reciprocation across [if Cock Count of Player > 1]one of your cock's length[else if Cock Count of Player is 1]the length of your cock[else]your [bodytype of Player] form[end if].";
+					say "[if Cock Count of Player > 2]s, gripping two of your now-hardening, [cock size desc of Player] cocks, putting you in an even more vulnerable position now that her sole hold on you is by your most sensitive organs[else if Cock Count of Player is 2]s, gripping both of your now-hardening, [cock size desc of Player] cocks, putting you in an even more vulnerable position now that her sole hold on you is by your most sensitive organs[else if Player is male]'s grip, latched onto your now-hardening, [cock size desc of Player] cock, the other holding your similarly serpentine torso in place[else if Cunt Count of Player > 1]'s grip on your diminutive frame, freeing one to briefly tease one of your exposed portals[else]'s grip on your diminutive frame, freeing one to briefly tease your exposed portal[end if]. Eclipsing you in size, you can't help but shudder at the overwhelming sensation of her own tongue's reciprocation across [if Cock Count of Player > 1]one of your cock's length[else if Player is male]the length of your cock[else]your [bodytype of Player] form[end if].";
 					say "     Tight, heated vent inviting you to continue, your lips embrace the dragoness's hungry cunt and, in turn, she rewards your attendance with her own, draconic maw embracing [if Cock Count of Player > 1]one of your dicks, pumping its exposed brother[else if Player is male]your dick[else if Cunt Count of Player > 1]the one of your own cunts[else if Player is female]your own cunt[end if]. The victim half of this twisted ouroboros, ";
-					If Libido of Player > 33:
+					if Libido of Player > 33:
 						say "a muffled cry is quickly forced from your stuffed lips in blissful release, your subjugator[if Player is male] showing no relent in swallowing down your gushing, [Cum Load Size of Player] flood of sexual fluids[else]'s tongue showing no relent in pounding your gushing pussy[end if], [if Cock Count of Player > 2]though gravity decides not to spare you when you're elongated torso is stained with the seed of your unengulfed cocks[else if Cock Count of Player is 2]though gravity decides not to spare you when you're elongated torso is stained with the seed of your unengulfed cock[else if Player is male]greedily milking you of every last drop[else]driving you wild in throes of ecstasy[end if]. In the wake of this, you feel her talons push your head firm against her scaled cunt, tongue assaulted by her throbbing vent and subsequently forcing you to take every drop of her ensuing flood of tainted honey.";
 					else:
 						say "you eventually feel her talons push your head firm against her scaled cunt, tongue assaulted by her throbbing vent and subsequently forcing you to take every drop of her ensuing flood of tainted honey. Shortly, in the wake of this, a muffled cry is forced from your stuffed lips in blissful release, your subjugator[if Player is male]showing no relent in consuming your gushing, [Cum Load Size of Player] flood of sexual fluids[else]'s tongue showing no relent in assaulting your stuffed pussy[end if], [if Cock Count of Player > 2]though gravity decides not to spare you when you're elongated torso is stained with the seed of your exposed cocks[else if Cock Count of Player is 2]though gravity decides not to spare you when you're elongated torso is stained with the seed of your exposed cock[else if Player is male]milking you of every last drop[else]driving you wild in the throes of bliss[end if].";
@@ -248,12 +241,11 @@ to say Yamato Dragoness vic:
 				else:
 					say "[if Cock Count of Player > 2]strained dick unloading its [Cum Load Size of Player] load into her, exposed ones quickly making a mess of the both of you[else if Cock Count of Player is 2]strained dick unloading its [Cum Load Size of Player] load into her, exposed one quickly making a mess of the both of you[else] dick unloading its [Cum Load Size of Player] load into her, strained by the serpent's overwhelming grip[end if].";
 				say "     Your organ[if Cock Count of Player > 1 and Cock Length of Player < 25]s'[else]'s[end if] tight prison is quickly puts even more of a strain on you as you're forced to endure the throes of the monster's own bliss, triggered, no doubt, by yours. Roaring out loudly as her body grinds you ever more firmly against the earth, she squeezes you dry of every last drop you can offer her.";
-				say "     The beast's need finally sated, she eventually stops pinning you down as she pulls free of you. Slowly circling around your exhausted self, the grinning dragoness is doubtlessly amused by you, eventually departing back into the air in silence. Gradually catching your breath, you're left to recover from the creature's powerful influence, [if Cock Length of Player < 24 and FYDM is 0]checking over your exceedingly sore cock[smn] to find that they seem slightly enlarged from the ordeal, though you're not rightly sure if it'll have any lingering effects[else if Cock Length of Player < 24]checking over your exceedingly sore cock[smn] to see that it does indeed appear larger from the ordeal..[run paragraph on][else]your oversized cock[smn] feeling extremely sore from the ordeal[end if].";
+				say "     The beast's need finally sated, she eventually stops pinning you down as she pulls free of you. Slowly circling around your exhausted self, the grinning dragoness is doubtlessly amused by you, eventually departing back into the air in silence. Gradually catching your breath, you're left to recover from the creature's powerful influence, [if Cock Length of Player < 24 and FYDM is 0]checking over your exceedingly sore cock[smn] to find that they seem slightly enlarged from the ordeal, though you're not rightly sure if it'll have any lingering effects.[else if Cock Length of Player < 24]checking over your exceedingly sore cock[smn] to see that it does indeed appear larger from the ordeal...[else]your oversized cock[smn] feeling extremely sore from the ordeal.[end if]";
 				if FYDM is 0, now FYDM is 1;
 				if "Modest Organs" is not listed in feats of Player and Cock Length of Player < 24:
-					LineBreak;
 					if "Microwaved" is listed in feats of Player:
-						say "WARNING: Cock length change detected! Allow?";
+						say "[line break]WARNING: Cock length change detected! Allow?";
 						if Player consents:
 							if Cock Length of Player < 18:
 								increase Cock Length of Player by 2;
@@ -262,7 +254,8 @@ to say Yamato Dragoness vic:
 							follow the cock descr rule;
 							say "You can see your [if Cock Count of Player is 1][one of]cock[or]penis[or]shaft[or]maleness[at random][else][one of]cocks[or]penises[or]shafts[or]malenesses[at random][end if] [one of]engorge[or]swell[or]throb[at random][smv] as [if Cock Count of Player > 1]they gain[else]it gains[end if] in length, becoming [descr]!";
 						else:
-							say "     It looks like you recover to their original size after treating it.";
+							LineBreak;
+							say "It looks like [ittheym] recover[smv] to [itstheirm] original size after treating [itthemm].";
 					else:
 						if Cock Length of Player < 18:
 							increase Cock Length of Player by 2;
@@ -297,17 +290,14 @@ to say ydskinchange:
 	if ydcolor is 3, now ydcolor is 0;
 	say "you find yourself suddenly forced to abide the growth of large, smooth [if ydcolor is 0]red[else if ydcolor is 1]blue[else if ydcolor is 2]green[end if] scales grow upon your back, smaller, coarser yellow scales quickly adorning your front and underside";
 
-
 to say Yamato Dragoness Loss:
 	ProjectYamatoDragoness_NSFW;
 	say "     You successfully manage to fend off the massive dragoness... Or, at least, she seems to yield to you, [one of]perhaps figuring that this fight is going nowhere for her[or]no doubt satisfied with you[stopping]. Pulling back, she glares down at you.";
 	say "     '[one of]Alright[or]Very well[or]I see now[at random], ";
 	if BodyName of Player is "Yamato Dragon" or BodyName of Player is "Yamato Dragoness":
 		say "whelp";
-	else if scalevalue of Player < 4 and a random chance of 1 in 2 succeeds:
-		say "little one";
 	else:
-		say "mortal";
+		say "[if scalevalue of Player < 4 and a random chance of 1 in 2 succeeds]little one[else]mortal[end if]";
 	say ", [one of]I have been bested[or]you have proven your mettle[or]my strength has been matched[or]you are most impressive[or]I am satisfied with your prowess[at random]. [one of]For your victory, I will satisfy you as you see fit.' [or]How may I satisfy you?' [or]You are granted the opportunity to do what you will with me.' [at random]";
 	if Libido of Player < 40 and "Dominant" is not listed in feats of Player: [Incomplete]
 		say "You're not particularly in the mood to make any sort of lewd request, and since you don't need anything else of her you decide to simply send her off, leaving you to go about your business once more.";
@@ -318,37 +308,34 @@ to say Yamato Dragoness Loss:
 		else:
 			say "     You decide against making any lewd request, and since you don't need anything else of her you decide to simply send her off, leaving you to go about your business once more.";
 
-Section 1-2 - Player Victory Sex
+Section 2 - Player Victory Sex
 
 to yamatfemsexmenu:
-	now calcnumber is -1;
-	say "     What will you do?";
-	let Trixieexit be 0;
-	while Trixieexit is 0:
+	say "     What will you do?[paragraph break]";
+	let Trixieexit be false;
+	while Trixieexit is false:
 		say "[bold type]Choices:[roman type][line break]";
 		say "(1) [if Player is male][link]Mount her[as]1[end link][else][italic type]Male-specific interaction[roman type][end if][line break]";
 		say "(2) [if Player is male][link]Mount her anally[as]2[end link][else][italic type]Male-specific interaction[roman type][end if][line break]";
 		say "(3) [if Player is male][link]Have her suck your dick[as]3[end link][else][italic type]Male-specific interaction[roman type][end if][line break]";
 		say "(4) [if Player is female][link]Have her eat your cunt[as]4[end link][else][italic type]Female-specific interaction[roman type][end if][line break]";
 		say "(5) [link]Attend her cunt[as]5[end link][line break]";
-		LineBreak;
-		say "(0) [link]Nevermind.[as]0[end link][line break]";
-		while 1 is 1:
-			say "Choice? (0-5)>[run paragraph on]";
+		say "[line break](0) [link]Nevermind[as]0[end link][line break]";
+		now calcnumber is -1;
+		while calcnumber < 0 or calcnumber > 5:
+			say "Choice? (0-5)> [run paragraph on]";
 			get a number;
-			if calcnumber >= 0 and calcnumber <= 5:
-				break;
-			else:
-				say "Invalid Choice.";
+			if calcnumber < 0 or calcnumber > 5:
+				say "Invalid Choice. Pick from 0 to 5.";
+		LineBreak;
 		if calcnumber is 1:
 			if Player is not male:
-				say "[bracket]Invalid interaction: You don't meet the criteria[close bracket][line break]";
+				say "Invalid interaction: You don't meet the criteria.";
 			else:
 				say "[YamatF_1]"; [Cunt Pitching]
 				if "Modest Organs" is not listed in feats of Player and Cock Length of Player < 24:
-					LineBreak;
 					if "Microwaved" is listed in feats of Player:
-						say "WARNING: Cock length change detected! Allow?";
+						say "[line break]WARNING: Cock length change detected! Allow?";
 						if Player consents:
 							if Cock Length of Player < 18:
 								increase Cock Length of Player by 2;
@@ -356,6 +343,9 @@ to yamatfemsexmenu:
 								increase Cock Length of Player by 1;
 							follow the cock descr rule;
 							say "You can see your [if Cock Count of Player is 1][one of]cock[or]penis[or]shaft[or]maleness[at random][else][one of]cocks[or]penises[or]shafts[or]malenesses[at random][end if] [one of]engorge[or]swell[or]throb[at random][smv] as [if Cock Count of Player > 1]they gain[else]it gains[end if] in length, becoming [descr]!";
+						else:
+							LineBreak;
+							say "It looks like [ittheym] recover[smv] to [itstheirm] original size after treating [itthemm].";
 					else:
 						if Cock Length of Player < 18:
 							increase Cock Length of Player by 2;
@@ -366,16 +356,15 @@ to yamatfemsexmenu:
 				now tempnum is 0;
 				yamatbiasshift;
 				yamatdomshift;
-				now Trixieexit is 1;
+				now Trixieexit is true;
 		else if calcnumber is 2:
 			if Player is not male:
-				say "[bracket]Invalid interaction: You don't meet the criteria[close bracket][line break]";
+				say "Invalid interaction: You don't meet the criteria.";
 			else:
 				say "[YamatF_2]"; [Anal Pitching]
 				if "Modest Organs" is not listed in feats of Player and Cock Length of Player < 24:
-					LineBreak;
 					if "Microwaved" is listed in feats of Player:
-						say "WARNING: Cock length change detected! Allow?";
+						say "[line break]WARNING: Cock length change detected! Allow?";
 						if Player consents:
 							if Cock Length of Player < 18:
 								increase Cock Length of Player by 2;
@@ -383,6 +372,9 @@ to yamatfemsexmenu:
 								increase Cock Length of Player by 1;
 							follow the cock descr rule;
 							say "You can see your [if Cock Count of Player is 1][one of]cock[or]penis[or]shaft[or]maleness[at random][else][one of]cocks[or]penises[or]shafts[or]malenesses[at random][end if] [one of]engorge[or]swell[or]throb[at random][smv] as [if Cock Count of Player > 1]they gain[else]it gains[end if] in length, becoming [descr]!";
+						else:
+							LineBreak;
+							say "It looks like [ittheym] recover[smv] to [itstheirm] original size after treating [itthemm].";
 					else:
 						if Cock Length of Player < 18:
 							increase Cock Length of Player by 2;
@@ -393,35 +385,35 @@ to yamatfemsexmenu:
 				now tempnum is 0;
 				yamatbiasshift;
 				yamatdomshift;
-				now Trixieexit is 1;
+				now Trixieexit is true;
 		else if calcnumber is 3:
 			if Player is not male:
-				say "[bracket]Invalid interaction: You don't meet the criteria[close bracket][line break]";
+				say "Invalid interaction: You don't meet the criteria.";
 			else:
 				say "[YamatF_3]"; [Oral Receiving Cock]
 				now tempnum is 0;
 				yamatbiasshift;
 				yamatdomshift;
-				now Trixieexit is 1;
+				now Trixieexit is true;
 		else if calcnumber is 4:
 			if Player is not female:
-				say "[bracket]Invalid interaction: You don't meet the criteria[close bracket][line break]";
+				say "Invalid interaction: You don't meet the criteria.";
 			else:
 				say "[YamatF_4]"; [Oral Receiving Cunt]
 				now tempnum is 0;
 				yamatbiasshift;
 				yamatdomshift;
-				now Trixieexit is 1;
+				now Trixieexit is true;
 		else if calcnumber is 5:
 			say "[YamatF_5]"; [Oral Giving Cunt]
 			now tempnum is 0;
 			yamatbiasshift;
 			yamatdomshift;
-			now Trixieexit is 1;
+			now Trixieexit is true;
 		else:
 			say "     You have some second thoughts and choose to turn the dragoness down, leaving you to go about your business once more."; [turn down]
-			now Trixieexit is 1;
-
+			now Trixieexit is true;
+		if Trixieexit is false, LineBreak;
 
 to say YamatF_1: [cunt pitching]
 	say "     You decide upon taking the massive serpent for a ride, a request she doesn't seem to mind obliging. Her form slowly descends to meet you more closely.";
@@ -572,6 +564,8 @@ to say YamatF_5: [Oral Giving Cunt]
 			say "     Just as she's no longer able to hold back, you try to put at least a little distance between the monster and her aching geyser. Roaring out loudly, her taut portal aches against the open, the air humid with her intense body heat and the scent of her sweet honey. Once her fervor dies down, you step off and make an effort to clean yourself before the dragoness takes to the air once more.";
 			say "     '[one of]Hmm[or]Yes[or]Mhm[at random], [one of]you are certainly a strange one[or]I hope you enjoyed yourself[or]that was certainly entertaining[at random].' Slowly, the creature flies off into the distance, no doubt satisfied by your endeavors. You gather your things and set off to return from whence you came.";
 
+Section 3 - Creature Insertion
+
 Table of CombatPrep (continued)
 name(text)	PrepFunction(text)
 "Yamato Dragoness"	"[PrepCombat_Yamato Dragoness]"
@@ -581,11 +575,11 @@ to say PrepCombat_Yamato Dragoness:
 	ProjectYamatoDragoness_SFW;
 	setmongender 4; [creature is female]
 	choose row MonsterID from Table of Random Critters;
-	if "Male Preferred" is listed in feats of Player:
+	if Player is MalePreferred:
 		now sex entry is "Male";
-	else if "Female Preferred" is listed in feats of Player:
+	else if Player is FemalePreferred:
 		now sex entry is "Female";
-	else if "Herm Preferred" is listed in feats of Player:
+	else if Player is HermPreferred:
 		now sex entry is "Both";
 	else if Player is herm:
 		now sex entry is "Both";
@@ -594,11 +588,9 @@ to say PrepCombat_Yamato Dragoness:
 	else if Player is female:
 		now sex entry is "Female";
 	else:
-		now sex entry is "nochange";
+		now sex entry is "Nochange";
 	now firebreathcount is 0;
 	now firebreathready is false;
-
-Section 2 - Creature Insertion
 
 Table of Random Critters (continued)
 NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
@@ -613,10 +605,10 @@ When Play begins:
 	add "Yamato Dragoness" to infections of MythologicalList;
 	add "Yamato Dragoness" to infections of FemaleList;
 	add "Yamato Dragoness" to infections of BarbedCockList;
+	add "Yamato Dragoness" to infections of TaperedCockList;
 	add "Yamato Dragoness" to infections of InternalCockList;
 	add "Yamato Dragoness" to infections of InternalBallsList;
 	add "Yamato Dragoness" to infections of QuadrupedalList;
-	add "Yamato Dragoness" to infections of FlightList;
 	add "Yamato Dragoness" to infections of TailList;
 	add "Yamato Dragoness" to infections of OviImpregnatorList;
 	add "Yamato Dragoness" to infections of FirebreathList;
@@ -625,15 +617,15 @@ When Play begins:
 	now enemy title entry is ""; [ Name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name. ]
 	now enemy Name entry is ""; [ Specific name of unique enemy. ]
 	now enemy type entry is 0; [ 0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters. ]
-	now attack entry is "[one of]The serpentine dragoness[or]The Yamato Dragoness[or]It[purely at random] [one of]snaps it's neck forward like a snake to bite at you.[or]whips it's tail around, smacking your body off the ground and through the air before landing roughly onto the ground.[or]slams you with one of its talons.[at random]";
+	now attack entry is "[one of]The serpentine dragoness[or]The Yamato Dragoness[or]It[purely at random] [one of]snaps it's neck forward like a snake to bite at you[or]whips its tail around, smacking your body off the ground and through the air before landing roughly onto the ground[or]slams you with one of its talons[at random].";
 	now defeated entry is "[Yamato Dragoness Loss]";
 	now victory entry is "[Yamato Dragoness Vic]";
 	now desc entry is "[yamato dragoness desc]";
-	now face entry is "distinctly draconic; long-snouted, a pair of curious, lengthy whiskers at its tip, and a stout pair of antlers and a golden mane at the crown, flowing down to your neck";
+	now face entry is "distinctly draconic, long-snouted, a pair of curious, lengthy whiskers at its tip, and a stout pair of antlers and a golden mane at the crown, flowing down to your neck";
 	now body entry is "elongated, serpentine with stout, taloned fore and hind limbs and a fin-like, golden mane across its length";
-	now skin entry is "smooth, [if ydcolor is 0]red[else if ydcolor is 1]blue[else if ydcolor is 2]green[end if]-scaled with a coarse yellow underside adorning your";
+	now skin entry is "smooth, [if ydcolor is 0]red[else if ydcolor is 1]blue[else if ydcolor is 2]green[end if]-scaled[if looknow is true] with a coarse yellow underside adorning your[end if]";
 	now tail entry is "You wield a very long, reptilian tail with an impressive, fin-like mane of golden hair at the end.";
-	now cock entry is "draconic, pink, and [one of]strangely[or]bulbously[at random] ribbed";
+	now cock entry is "draconic, pink and [one of]strangely[or]bulbously[at random] ribbed";
 	now face change entry is "you suddenly feel overwhelmed by a sudden change, face elongating into a proud, draconic snout, a pair of very lengthy whiskers sprouting from its tip. Two short antlers and a mane of golden hair grow out from the back of your head";
 	now body change entry is "you soon double over, frame shifting into something now much more elongated, arms and legs shifting in shape to something much more stout and less equipped to walk around. As you recover, you see that you're quite large, too, though you're likely only a little over two-thirds the size from which this strain originates, and you can't fly - only able to hover with limited efficacy. A golden mane now runs across the entire length of your serpentine torso";
 	now skin change entry is "[ydskinchange]";
@@ -645,7 +637,7 @@ When Play begins:
 	now per entry is 18;
 	now int entry is 20;
 	now cha entry is 10;
-	now sex entry is "nochange";
+	now sex entry is "Nochange";
 	now HP entry is 90;
 	now lev entry is 9;
 	now wdam entry is 20;
@@ -779,21 +771,21 @@ When Play begins:
 	[Clit Size Adjective is generated by a function and can be used in scenes: very small/small/average/large/very large]
 ]
 
-Section 3 - Vore Bound State
+Section 4 - Vore Bound State
 
 to YamatFvore:
 	now lustatt is Libido of Player;
-	now calcnumber is -1;
-	let Trixieexit be 0;
-	while Trixieexit is 0:
-		if clearnomore is 0, clear the screen;
+	let Trixieexit be false;
+	while Trixieexit is false:
+		if clearnomore is 0:
+			clear the screen;
+			LineBreak;
 		if HP of Player > 0 or humanity of Player < 50:
 			now obliging is true;
 		checkboundrecover;
 		if lustatt > 99:
-			say "     Finding yourself overtaken by lust, you are given no choice but to furiously [if Player is male]jerk yourself off[else]fondle yourself[end if], writhing and twisting in these dark, damp confines until you finally find reprieve, [if Player is male]unloading your [Cum Load Size of Player] load against the supple flesh[else if Player is female]cunt throbbing firmly against the supple flesh[else]a particularly trying task given your lack of outlet[end if][if Player is male and Ball Size of Player > 5]. This wasn't a particularly wise task, as you're now made to swim in a pool of your own seed, though it thankfully diminishes over time[end if]. Panting to catch your breath, your mental faculties eventually return to you, leaving you to assess the matter at hand.[line break]";
-			decrease Libido of Player by (Libido of Player / 10) + 1;
-			if Libido of Player < 0, now Libido of Player is 0;
+			say "     Finding yourself overtaken by lust, you are given no choice but to furiously [if Player is male]jerk yourself off[else]fondle yourself[end if], writhing and twisting in these dark, damp confines until you finally find reprieve, [if Player is male]unloading your [Cum Load Size of Player] load against the supple flesh[else if Player is female]cunt throbbing firmly against the supple flesh[else]a particularly trying task given your lack of outlet[end if][if Player is male and Ball Size of Player > 5]. This wasn't a particularly wise task, as you're now made to swim in a pool of your own seed, though it thankfully diminishes over time[end if]. Panting to catch your breath, your mental faculties eventually return to you, leaving you to assess the matter at hand.";
+			lower Player Libido by (Libido of Player / 10) + 1;
 			now lustatt is Libido of Player;
 			if enduring is true:
 				decrease humanity of Player by 8 + (psycheadjust * 2);
@@ -805,20 +797,21 @@ to YamatFvore:
 		if (enduring is true and a random chance of 2 in 5 succeeds) or (enduring is false and a random chance of 4 in 5 succeeds):
 			increase hunger of Player by 1;
 			increase thirst of Player by 2;
-		else if enduring is false or (enduring is true and a random chance of 2 in 3 succeeds):
+		else if enduring is false or a random chance of 2 in 3 succeeds:
 			increase thirst of Player by 1;
-		now enduring is false;
-		say "     Bathed in saliva and utter darkness, you're enveloped by the dragoness's churning, pinkish stomach. [one of]You feel yourself slowly being drained by these twisted confines[or]It churns and groans against its writhing occupant[or]You find it extremely hard to figure up from down in this tainted prison[at random]. You're presently in the monster's [bold type][if boundsegment is 0]first[else if boundsegment is 1]second[else if boundsegment is 2]third[else]fourth[end if][roman type] stomach. You imagine your only active option is to [bold type]S[roman type]truggle enough until they let you go, else you can [if obliging is true][bold type]O[roman type]blige[else][bold type]A[roman type]bide[end if] them, or [if boundrecover is true][bold type]R[roman type]ecover from[else][bold type]E[roman type]ndure[end if] these questionable circumstances.[line break]";
-		say "[bold type]1[roman type] - [link]Struggle[as]1[end link][line break][run paragraph on]";
-		say "[bold type]2[roman type] - [link][if obliging is true]Oblige[else]Abide[end if][as]2[end link][line break][run paragraph on]";
-		say "[bold type]3[roman type] - [link][if boundrecover is false]Endure[else]Recover[end if][as]3[end link][line break][run paragraph on]";
-		say "Sanity: [humanity of Player]/ 100	Lust: [lustatt]/100	Hunger: [hunger of Player]	Thirst: [thirst of Player]	Struggle: [yamatstrugglebar][line break][run paragraph on]";
 		if humanity of Player < 1:
-			now Trixieexit is 1;
+			now Trixieexit is true;
 			trigger ending "Yamato Dragon Vore";
 			the Player was ended by "Vore by Yamato Dragoness";
 			end the story saying "You became a Yamato Dragoness's meal!";
 		else:
+			now enduring is false;
+			say "     Bathed in saliva and utter darkness, you're enveloped by the dragoness's churning, pinkish stomach. [one of]You feel yourself slowly being drained by these twisted confines[or]It churns and groans against its writhing occupant[or]You find it extremely hard to figure up from down in this tainted prison[at random]. You're presently in the monster's [bold type][if boundsegment is 0]first[else if boundsegment is 1]second[else if boundsegment is 2]third[else]fourth[end if][roman type] stomach. You imagine your only active option is to [bold type]S[roman type]truggle enough until they let you go, else you can [if obliging is true][bold type]O[roman type]blige[else][bold type]A[roman type]bide[end if] them or [if boundrecover is true][bold type]R[roman type]ecover from[else][bold type]E[roman type]ndure[end if] these questionable circumstances.";
+			say "[bold type]1[roman type] - [link]Struggle[as]1[end link][line break]";
+			say "[bold type]2[roman type] - [link][if obliging is true]Oblige[else]Abide[end if][as]2[end link][line break]";
+			say "[bold type]3[roman type] - [link][if boundrecover is false]Endure[else]Recover[end if][as]3[end link][line break]";
+			say "Sanity: [humanity of Player]/100  Lust: [lustatt]/100  Hunger: [hunger of Player]  Thirst: [thirst of Player]  Struggle: [yamatstrugglebar][line break]";
+			say "> [run paragraph on]";
 			let k be 0;
 			now keychar is "INVALID";
 			change the text of the player's command to "";
@@ -827,8 +820,8 @@ to YamatFvore:
 				translate k;
 				if the player's command matches "[number]":
 					now keychar is "[number understood]";
-			if keychar in lower case exactly matches the text "s" or keychar in lower case exactly matches the text "1" or keychar in lower case exactly matches the text "return" or keychar in lower case matches the text "struggle":
-				LineBreak;
+			LineBreak;
+			if keychar is "s" or keychar is "1" or keychar is "return" or keychar in lower case matches the text "struggle":
 				increase struggleatt by 1;
 				if (boundsegment < 2 and struggleatt < 2) or (boundsegment > 1 and struggleatt < 3):
 					say "     You struggle to escape these twisted confines, writhing and fighting against the flesh that holds you. The dragoness lowly [one of]growls[or]groans[at random] as her body churns in ill-content towards its disruptive occupant.";
@@ -839,7 +832,7 @@ to YamatFvore:
 						say "     Unable to keep you down any longer, you feel the dragoness loudly begin to hack as you're squeezed out from the stomach's confines and back up through her throat. Quickly flung from her maw, the creature grabs you with one of her talon. Gripping you with disdain, she leers at you before tossing you back down to the earth.";
 						say "     '[one of]Hmpf[or]Ugh[or]Disgusting[at random], [one of]perhaps I shall find a prey that respects its meal[or]you were hardly worth my time anyways[or]you just can't help but be an annoyance, I see now[at random]...' Sneering at you, she floats off into the distance, leaving you to recover. Exhausted and saliva soaked, it takes you a while to find your things and return from whence you came.";
 						cleanboundmemory;
-						now Trixieexit is 1;
+						now Trixieexit is true;
 						follow the turnpass rule;
 					else if boundsegment is 1:
 						now boundmod is 0;
@@ -856,12 +849,10 @@ to YamatFvore:
 						say "     Grabbing you before you can fall to the earth, the beast's grip is nonetheless fairly limp, glaring at you with mild contempt before tossing you to earth once more.";
 						say "     '[one of]Hmpf[or]Ugh[or]Disgusting[at random], [one of]perhaps I shall find a prey that respects its meal[or]I suppose I got all I can from this writhing little worm[or]you just can't help but be an annoyance, I see now[at random]...' Sneering at you, she floats off into the distance, leaving you to recover. Exhausted and saliva soaked, it takes you a while to find your things and return from whence you came.";
 						cleanboundmemory;
-						now Trixieexit is 1;
+						now Trixieexit is true;
 						follow the turnpass rule;
 				wait for any key;
-				next;
-			else if (obliging is true and (keychar in lower case exactly matches the text "o" or keychar in lower case matches the text "oblige")) or (obliging is false and (keychar in lower case exactly matches the text "a" or keychar in lower case matches the text "abide")) or keychar in lower case exactly matches the text "2":
-				LineBreak;
+			else if (obliging is true and (keychar is "o" or keychar in lower case matches the text "oblige")) or (obliging is false and (keychar is "a" or keychar in lower case matches the text "abide")) or keychar is "2":
 				if obliging is true:
 					say "     You're compelled to submit to you tainted prison, [one of]your captor rumbly lowly in approval of her compliant meal[or]the dragoness idly playing with writhing meal as you feel her talon's caress against you from the outside[or]your captor lounging happily as she drains her meal[at random].";
 					if boundsegment is not 3:
@@ -874,9 +865,7 @@ to YamatFvore:
 					increase lustatt by 7 + (lustadjust * 2);
 				wyvhumanityroll;
 				wait for any key;
-				next;
-			else:
-				LineBreak;
+			else if (boundrecover is true and (keychar is "r" or keychar in lower case matches the text "recover")) or (boundrecover is false and (keychar is "e" or keychar in lower case matches the text "endure")) or keychar is "3":
 				now enduring is true;
 				if a random chance of 1 in 3 succeeds and boundsegment is not 3:
 					increase boundmod by 1;
@@ -889,7 +878,7 @@ to YamatFvore:
 				increase lustatt by 4 + lustadjust;
 				wyvhumanityroll;
 				wait for any key;
-				next;
-			say "Invalid action.";
+			else:
+				say "Invalid action.";
 
 Yamato Dragoness ends here.

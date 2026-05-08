@@ -52,13 +52,9 @@ to say beattheFireSprite:
 					now description entry is "Have the sprite stroke you off";
 				else if Cock Length of Player < 14:
 					choose a blank row in table of fucking options;
-					if FireSpritemode is 0: [female sprite]
-						now title entry is "Fuck her";
-						now description entry is "Fuck the sprite's pussy";
-					else: [male sprite]
-						now title entry is "Anal";
-						now description entry is "Fuck the sprite's ass";
+					now title entry is the substituted form of "[if FireSpritemode is 0]Fuck her[else]Anal[end if]";
 					now sortorder entry is 1;
+					now description entry is "Fuck the sprite's [if FireSpritemode is 0]pussy[else]ass[end if]";
 				[]
 				choose a blank row in table of fucking options;
 				now title entry is "Blowjob";

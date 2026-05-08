@@ -42,16 +42,39 @@ Add first ending, add cock/wing/horns tf to description (for later inclusion), a
 [Black Pearl by Lone_Wanderer relies on this file					]
 
 a postimport rule: [bugfixing rules for players that import savegames]
-	if KyrverthStage > 0 and SilverToken is 0 and PlayerFriended of Kyrverth is false and Resolution of Jewel Heist is 0 and Jewel Heist is resolved: [player on the quest, hasn't got the token on them and hasn't handed it in either - so Jewel Heist should be unresolved]
-		now Jewel Heist is not resolved;
-	if KyrverthStage > 0 and Jewel Heist is inactive:
-		now Jewel Heist is active;
+	if KyrverthStage > 0:
+		if SilverToken is 0 and PlayerFriended of Kyrverth is false and Resolution of Jewel Heist is 0 and Jewel Heist is resolved: [player on the quest, hasn't got the token on them and hasn't handed it in either - so Jewel Heist should be unresolved]
+			now Jewel Heist is not resolved;
+		if Jewel Heist is inactive:
+			now Jewel Heist is active;
 	if Resolution of Strange Sighting is 0 and Strange Sighting is active:
 		now Strange Sighting is not resolved;
 	if Strange Sighting is resolved and Resolution of Strange Sighting is 2: [event resolved the right way, room not connected yet]
 		connect Dragons Den;
 
 Section 1 - Basic Setup
+
+[Normal Variables																]
+KyrverthStage is a number that varies. KyrverthStage is usually 0.
+KyrverthQuestGiven is a number that varies. KyrverthQuestGiven is usually 0.
+JewelHeistCaught is a number that varies. JewelHeistCaught is usually 0.
+SilverToken is a number that varies. SilverToken is usually 0.
+KyrverthMaleBoning is a number that varies. KyrverthMaleBoning is usually 0.
+Kyrverthitemget is a number that varies. Kyrverthitemget is usually 0.
+KyrverthItemStealable is a truth state that varies. KyrverthItemStealable is usually false.
+[KyrverthItemTaken is a truth state that varies. KyrverthItemTaken is usually false.]
+KyrverthItemReturned is a number that varies. KyrverthItemReturned is usually 0.
+KyrverthNutGrowth is a number that varies. KyrverthNutGrowth is usually 0. [Scene needed. Desc done. For giving him an item later which grows them]
+KyrverthSpikeGrowth is a number that varies. KyrverthSpikeGrowth is usually 0. [Scene needed. Desc done. 0 - Normal, 1 - Horns, 2 - Horns/Spikes]
+KyrverthWingType is a number that varies. KyrverthWingType is usually 0. [0 - Normal, 1 - Feathers, 2 - Double, 3 - Double Feathers. Only 0/1 Ingame atm]
+KyrverthTimer is a number that varies. KyrverthTimer is usually 10000. [Sexings]
+KyrverthCockType is a number that varies. KyrverthCockType is usually 1. [ 1 - Normal, 2 - Hemipenis (Double), 3 - Horsecock, 4 - Barbed, 5 - Prehensile. Combinations to come in future eg Double Horsecocks.]
+KyrverthLockoutTimer is a number that varies. KyrverthLockoutTimer is usually 10000. [Entry]
+KyrverthEndingTimer is a number that varies. KyrverthEndingTimer is usually 10000.
+KyrverthQuestHairGiven is a truth state that varies. KyrverthQuestHairGiven is usually false.
+KyrverthUsedArtifact is a truth state that varies. KyrverthUsedArtifact is usually false.
+KyrverthBodyChanged is a number that varies. KyrverthBodyChanged is usually 0.
+KyrverthPanicWitnessed is a number that varies. KyrverthPanicWitnessed is usually 0. [0-No, 1-Yes]
 
 Table of GameCharacterIDs (continued)
 object	name
@@ -99,29 +122,7 @@ TwistedCapacity of Kyrverth is false. [Twisted Characters can take any penetrati
 Sterile of Kyrverth is true. [steriles can't knock people up]
 MainInfection of Kyrverth is "".
 Description of Kyrverth is "[KyrverthDesc]".
-Conversation of Kyrverth is { "<This is nothing but a placeholder!>" }.
 The scent of Kyrverth is "[KyrverthSmellDesc]".
-[Normal Variables																]
-KyrverthStage is a number that varies. KyrverthStage is usually 0.
-KyrverthQuestGiven is a number that varies. KyrverthQuestGiven is usually 0.
-JewelHeistCaught is a number that varies. JewelHeistCaught is usually 0.
-SilverToken is a number that varies. SilverToken is usually 0.
-KyrverthMaleBoning is a number that varies. KyrverthMaleBoning is usually 0.
-Kyrverthitemget is a number that varies. Kyrverthitemget is usually 0.
-KyrverthItemStealable is a truth state that varies. KyrverthItemStealable is usually false.
-KyrverthItemTaken is a truth state that varies. KyrverthItemTaken is usually false.
-KyrverthItemReturned is a number that varies. KyrverthItemReturned is usually 0.
-KyrverthNutGrowth is a number that varies. KyrverthNutGrowth is usually 0. [Scene needed. Desc done. For giving him an item later which grows them]
-KyrverthSpikeGrowth is a number that varies. KyrverthSpikeGrowth is usually 0. [Scene needed. Desc done. 0 - Normal, 1 - Horns, 2 - Horns/Spikes]
-KyrverthWingType is a number that varies. KyrverthWingType is usually 0. [0 - Normal, 1 - Feathers, 2 - Double, 3 - Double Feathers. Only 0/1 Ingame atm]
-KyrverthTimer is a number that varies. KyrverthTimer is usually 10000. [Sexings]
-KyrverthCockType is a number that varies. KyrverthCockType is usually 1. [ 1 - Normal, 2 - Hemipenis (Double), 3 - Horsecock, 4 - Barbed, 5 - Prehensile. Combinations to come in future eg Double Horsecocks.]
-KyrverthLockoutTimer is a number that varies. KyrverthLockoutTimer is usually 10000. [Entry]
-KyrverthEndingTimer is a number that varies. KyrverthEndingTimer is usually 10000.
-KyrverthQuestHairGiven is a truth state that varies. KyrverthQuestHairGiven is usually false.
-KyrverthUsedArtifact is a truth state that varies. KyrverthUsedArtifact is usually false.
-KyrverthBodyChanged is a number that varies. KyrverthBodyChanged is usually 0.
-KyrverthPanicWitnessed is a number that varies. KyrverthPanicWitnessed is usually 0. [0-No, 1-Yes]
 
 [Room Declaration]
 Table of GameRoomIDs (continued)
@@ -129,7 +130,7 @@ Object	Name
 Overgrown Street	"Overgrown Street"
 
 West of Entrance to the High Rise District is Overgrown Street.
-Description of Overgrown Street is "[OvergrownStreetDesc]".
+Description of Overgrown Street is "     What used to be a bustling high street in the upmarket end of town now looks like it hasn't been inhabited for years. Buildings with faded paint have smashed windows and vines climbing the walls. The road has cracks running down the length of it and grass pokes through the concrete to grab the sunlight. Towards the end of the street there is an old roundabout with a broken fountain in the center. A tree sprouts from the center of the fountain and shades the area around it. You feel tempted to take a seat under its leaves for a while.[line break]".
 
 [Room Declaration - Dragons Den will go public after first encounter with Kyrverth]
 Table of GameRoomIDs (continued)
@@ -139,19 +140,16 @@ Dragons Den	"Dragons Den"
 Dragons Den is a room.
 Description of Dragons Den is "[DragonsDenDesc]".
 
-to say OvergrownStreetDesc:
-	say "     What used to be a bustling high street in the upmarket end of town now looks like it hasn't been inhabited for years. Buildings with faded paint have smashed windows and vines climbing the walls. The road has cracks running down the length of it and grass pokes through the concrete to grab the sunlight. Towards the end of the street there is an old roundabout with a broken fountain in the center. A tree sprouts from the center of the fountain and shades the area around it. You feel tempted to take a seat under its leaves for a while.";
-
 to say DragonsDenDesc:
-	if KyrverthStage is 0 or KyrverthStage is 1:
+	if KyrverthStage < 2:
 		say "     In the depths of an old bank, Kyrverth has made the vault his home. The door broken from its hinges and laying off to one side, and thick walls around, the room feels cold but safe. In the center of the room he has made a large wide nest from hay and twigs.";
-	else if KyrverthStage is 2 or KyrverthStage is 3:
+	else if KyrverthStage < 4:
 		say "     In the depths of an old bank, Kyrverth has made the vault his home. The door broken from its hinges and laying off to one side, and thick walls around, the room feels safe. What was a cold room is now heated by the dragon residing within.";
 		if KyrverthStage is 2:
 			say "     In the center of the room he has made a large wide nest from hay and twigs. Bits of chainmail are woven into the bits of wood, and glint in the light shining through the vault door. Occasionally you hear the sounds of the infected in the distance, bangs, crashes, sometimes even moans carry over ruined streets, but it is hard to pay them heed when you are in what feels like such a safe place.";
-		else if KyrverthStage is 3:
+		else:
 			say "     In the center of the room the large nest he made has been broken and remade. Now it is a heap of chainmail, and dragon [if KyrverthQuestHairGiven is true]hair[else]scales[end if] that he curls around at night, safe in the knowledge it cannot be taken without waking him. Bits of chainmail and dragon [if KyrverthQuestHairGiven is true]hair[else]scales[end if] are revealed when Kyrverth wakes, and glint in the light shining through the vault door, making patterns on the walls.";
-	else if KyrverthStage >= 4: [Stages 4, 5, or 6.]
+	else: [Stages 4, 5, or 6.]
 		say "     This pile of rubble is all that remains of the [one of]former bank[or]old building[at random]. Larger [one of]pieces[or]chunks[at random] have been pushed out to the edge to create a nest of sorts, and in the center the former vault has had its walls split and pushed out in all directions, then flattened down to be the new floor. A [one of]large[or]shiny[or]valuable[at random] hoard is in the center, containing all that is precious to Kyrverth, but you rarely see it as he spends most of his time curled around the former vault to protect it.";
 
 to connect Dragons Den:
@@ -162,20 +160,26 @@ to say KyrverthDesc:
 	if KyrverthStage is 0:
 		say "     A small red dragon, just under five feet tall. [one of]Tiny[or]Small[or]Little[or]Miniature[or]Minute[at random] red Scales cover him from head to toe and [one of]tiny[or]small[or]little[or]miniature[or]minute[at random] horns peek out from behind a muzzle filled with [one of]tiny[or]small[or]little[or]miniature[or]minute[at random] fangs. His hands are more claws than nails. Talons on his feet grip the ground surely, and scrape lines in the metal floor of the den. A thin tail helps him with balance, which seems to be four feet long. [one of]Tiny[or]Small[or]Little[or]Miniature[at random] wings sprout from his back and twitch and flap occasionally as he goes about his day, but they don't look [one of]large[or]big[at random] enough to be functional...";
 	else if KyrverthStage is 1:
-		say "     As you look at the red dragon, about five and a half feet tall, you see scales cover him from head to toe. Small horns behind a muzzle filled with sharp teeth and his hands are more claws than nails. Talons on his feet grip the ground surely, and scrape lines in the metal floor of the den. A five foot long tail helps balance him, and he seems to be slowly learning to control it in his free time. Scaled red wings twitch and flap occasionally from his back, but you are not sure whether he could fly with them or not. He wears a silver token on a string around his neck and doesn't ever seem to take it off. Kyrverth spends most of his time in the vault, building up his nest. Occasionally he sneaks around the city in search of supplies, which is how you met him.";
+		say "     As you look at the red dragon, about five-and-a-half feet tall, you see scales cover him from head to toe. Small horns behind a muzzle filled with sharp teeth and his hands are more claws than nails. Talons on his feet grip the ground surely, and scrape lines in the metal floor of the den. A five foot long tail helps balance him, and he seems to be slowly learning to control it in his free time. Scaled red wings twitch and flap occasionally from his back, but you are not sure whether he could fly with them or not. He wears a silver token on a string around his neck and doesn't ever seem to take it off. Kyrverth spends most of his time in the vault, building up his nest. Occasionally he sneaks around the city in search of supplies, which is how you met him.";
 	else if KyrverthStage is 2:
 		say "     No longer a weakling, Kyrverth is now just over seven foot tall. The red scaled dragon strikes an intimidating figure, with a large maw containing a scary amount of teeth. He occasionally cleans bits of meat from between them with his claws and talons which are now much larger than before. His wings and tail are fully grown, letting him fly around at will. He occasionally picks up boxes around the room, showing off his newfound strength. His body shape reminds you of a swimmer - Lithe but with obvious muscle. Since you gave him the links of chainmail he has also grown a blond mane that helps to hide the silver token that hangs from a thin chain around his neck, reminding you that somehow this is still the little guy you met not that long ago.";
 	else if KyrverthStage is 3:
 		say "     No longer a weakling, Kyrverth has become a feral [one of]stud[or]beefcake[at random] of a dragon. Just over seven foot tall and built like an athlete, the dragon seems to have reached his final size. He is twelve feet long from head to backside, and a reddish tail extends another eight feet past that. A blond mane sits above a large muzzle with large, expressive blue eyes, which look around constantly for threats to his hoard. A mouth filled with sharp teeth, ready to tear into anything that tries to steal from the dragons den, ensures that whatever he spots, won't get away with the treasure. Wide shoulders conceal massive batlike wings that stretch at times to almost 50 feet wide, you know Kyrverth can fly with them and often see him carrying supplies through the air on his way back to the den. As you look at Kyrverth's long, prehensile tail, you notice something interesting - Two [one of]large[or]ponderous[or]bulging[or]vast[or]generous[or]considerable[or]hefty[or]immense[at random] balls sit behind a bulging vent. You wonder if you could tempt the dragon into playing with you at some point...";
 	else if KyrverthStage is 4:
-		say "     Kyrverth doesn't fit in his building any more, the huge dragon having grown a [one of]bit[or]little[at random] taller than a Wyvern. Curling around the metal bank vault that is all that remains of the building, his gigantic form is immoveable to all but the strongest infections in the city. Huge, thick scales protect his body, and when he moves around the city, he shakes the ground with every step. This paragon of dragonhood would be extremely scary if you didn't know him so well. From the massive talons as big as your leg, to the teeth as big as your arm, to the long spiked tail, you can't help but feel sorry for anything that tries to steal from Kyrverth's hoard.[line break]Once past the powerful offensive and defensive weapons Kyrverth possesses, you see a handsome muzzle, strong neck, gigantic wings, a long tail, and an incredibly well toned and muscled body. Looking down you see a vent that you know contains a tapered, knotted cock [if scalevalue of Player is 1 or scalevalue of Player is 2]larger than[else if scalevalue of Player is 3]as big as[else if scalevalue of Player is 4 or scalevalue of Player is 5]almost as big as[end if] you, and two humongous cum factories stretching the dragons sack taut behind it.[line break] Kyrverth notices your gaze and turns his head, giving you a [if KyrverthMaleBoning is 0 and Cock Count of Player >= 1]smug grin[else]seductive grin, his hand drawing your gaze as it moves backwards and strokes his bulging vent[end if].";
+		say "     Kyrverth doesn't fit in his building anymore, the huge dragon having grown a [one of]bit[or]little[at random] taller than a Wyvern. Curling around the metal bank vault that is all that remains of the building, his gigantic form is immovable to all but the strongest infections in the city. Huge, thick scales protect his body, and when he moves around the city, he shakes the ground with every step. This paragon of dragonhood would be extremely scary if you didn't know him so well. From the massive talons as big as your leg, to the teeth as big as your arm, to the long spiked tail, you can't help but feel sorry for anything that tries to steal from Kyrverth's hoard.";
+		say "     Once past the powerful offensive and defensive weapons Kyrverth possesses, you see a handsome muzzle, strong neck, gigantic wings, a long tail, and an incredibly well toned and muscled body. Looking down you see a vent that you know contains a tapered, knotted cock [if scalevalue of Player is 1 or scalevalue of Player is 2]larger than[else if scalevalue of Player is 3]as big as[else if scalevalue of Player is 4 or scalevalue of Player is 5]almost as big as[end if] you, and two humongous cum factories stretching the dragon's sack taut behind it.";
+		say "     Kyrverth notices your gaze and turns his head, giving you a [if KyrverthMaleBoning is 0 and Cock Count of Player >= 1]smug grin[else]seductive grin, his hand drawing your gaze as it moves backwards and strokes his bulging vent[end if].";
 	else if KyrverthStage is 5:
 		say "     Back to his previous size, Kyrverth is a still a feral [one of]stud[or]beefcake[at random] of a dragon. Just over seven foot tall and built like an athlete, he is twelve feet long from head to backside and a reddish tail extends another eight feet past that. A blond mane sits above a large muzzle with large, expressive blue eyes, which look around constantly for threats to his hoard. A mouth filled with sharp teeth, ready to tear into anything that tries to steal from the dragons den, ensures that whatever he spots, won't get away with the treasure. Wide shoulders conceal massive, batlike wings that stretch at times to almost fifty feet wide, you know Kyrverth can fly with them and often see him carrying supplies through the air on his way back to the den. As you look at Kyrverth's long, prehensile tail, you notice something interesting - Two [one of]large[or]ponderous[or]bulging[or]vast[or]generous[or]considerable[or]hefty[or]immense[at random] balls sit behind a bulging vent. You think about tempting the dragon into playing with you at some point...";
 	else if KyrverthStage is 6:
 		if KyrverthBodyChanged is 0:
-			say "     The huge dragon [one of]has grown back to his previous size and is[or]is once again[at random] a little bit taller than a Wyvern. Curling around his hoard and the rubble that is all that remains of the building, his gigantic form is immoveable to all but the strongest infections in the city. Huge, thick scales protect his body, and when he moves around the city, he shakes the ground with every step. This paragon of dragonhood would be extremely scary if you didn't know him so well. From the massive talons as big as your leg, to the teeth as big as your arm, to the long spiked tail, you can't help but feel sorry for anything that tries to steal from Kyrverth's hoard.[line break]Once past the powerful offensive and defensive weapons Kyrverth possesses, you see a handsome muzzle, strong neck, wide scaled wings, a long tail, and an incredibly well toned and muscled body. Looking down you see a vent that you know contains a tapered, ribbed and knotted cock that's [if scalevalue of Player is 1 or scalevalue of Player is 2]larger than[else if scalevalue of Player is 3]as big as[else if scalevalue of Player is 4]almost as big as[end if][if scalevalue of Player is not 5] you, and[end if][if scalevalue of Player is 5]size seems to be almost too large to fit even for your massive form.[end if] two humongous cum factories stretch the dragons sack taut behind it.[line break] Kyrverth notices your gaze and turns his head, giving you a [if KyrverthMaleBoning is 0 and Cock Count of Player >= 1]smug grin[else]seductive grin, his hand drawing your gaze as it moves backwards and strokes his bulging vent[end if].";
+			say "     The huge dragon [one of]has grown back to his previous size and is[or]is once again[at random] a little bit taller than a Wyvern. Curling around his hoard and the rubble that is all that remains of the building, his gigantic form is immovable to all but the strongest infections in the city. Huge, thick scales protect his body, and when he moves around the city, he shakes the ground with every step. This paragon of dragonhood would be extremely scary if you didn't know him so well. From the massive talons as big as your leg, to the teeth as big as your arm, to the long spiked tail, you can't help but feel sorry for anything that tries to steal from Kyrverth's hoard.";
+			say "     Once past the powerful offensive and defensive weapons Kyrverth possesses, you see a handsome muzzle, strong neck, wide scaled wings, a long tail, and an incredibly well toned and muscled body. Looking down you see a vent that you know contains a tapered, ribbed and knotted cock that [if scalevalue of Player is 1 or scalevalue of Player is 2]is larger than[else if scalevalue of Player is 3]is as big as[else if scalevalue of Player is 4]is almost as big as[end if][if scalevalue of Player < 5] you, and two[else]seems to be almost too large to fit even for your massive form. Two[end if] humongous cum factories stretch the dragon's sack taut behind it.";
+			say "     Kyrverth notices your gaze and turns his head, giving you a [if KyrverthMaleBoning is 0 and Cock Count of Player >= 1]smug grin[else]seductive grin, his hand drawing your gaze as it moves backwards and strokes his bulging vent[end if].";
 		else:
-			say "     The huge dragon [one of]has grown back to his previous size and is[or]is once again[at random] a little bit taller than a Wyvern. Curling around his hoard and the rubble that is all that remains of the building, his [one of]gigantic[or]huge[or]monumental[or]massive[at random] form is [one of]immoveable[or]impervious[at random] to all but the strongest infections in the city. Huge, thick scales protect his body, and when he moves around the city, he shakes the ground with every step. This [one of]paragon of dragonhood[or]huge beast[or]massive creature[at random] would be extremely scary if you didn't know him so well. From the [one of]massive[or]sharp[or]curved[at random] talons as big as your leg, to the teeth as big as your arm, to the long spiked tail, [if KyrverthSpikeGrowth is 1]to the large horns on his head,[else if KyrverthSpikeGrowth is 2]to the large horns on his head and sharp defensive spikes that protrude through the skin down his spine and from his elbows, [end if]you can't help but feel sorry for anything that tries to steal from Kyrverth's hoard.[line break]Once past the powerful offensive and defensive weapons Kyrverth possesses, you see a handsome muzzle, strong neck, wide [if KyrverthWingType is not 1]scaled[else][one of]feathered[or]feathery[at random][end if] wings, a long tail, and an incredibly well toned and muscled body. Looking down you see a vent that you know contains a [if KyrverthCockType is 1]tapered, ribbed and knotted cock[else if KyrverthCockType is 2]pair of tapered, ribbed and knotted cocks[else if KyrverthCockType is 3]blunt, flared horsecock[else if KyrverthCockType is 4]tapered, barbed and knotted cock[else if KyrverthCockType is 5]long, tapered, prehensile and knotted cock[end if] [if scalevalue of Player is 1 or scalevalue of Player is 2]larger than[else if scalevalue of Player is 3]as big as[else if scalevalue of Player is 4]almost as big as[end if][if scalevalue of Player is not 5] you, and[end if][if scalevalue of Player is 5]that's size seems to be almost too large to fit even for your massive form.[end if] [if KyrverthNutGrowth is not 1]two humongous cum factories stretch the dragons sack taut behind it.[else]His balls sit behind it. Their ridiculous size looks out of proportion even on the studly dragon and if that cannon ever blew you know you would be covered from head to toe. Dangling halfway to his knees, they swing and slosh with every step and the red drake seems extremely proud of them.[end if][line break] Kyrverth notices your gaze and turns his head, giving you a [if KyrverthMaleBoning is 0 and Cock Count of Player >= 1]smug grin[else]seductive [one of]grin[or]smile[at random], his [one of]hand[or]claw[or]arm[at random] drawing your gaze as it moves [one of]backwards[or]rearwards[at random] and [one of]strokes[or]caresses[at random] his bulging [one of]vent[or]nethers[at random][end if].";
+			say "     The huge dragon [one of]has grown back to his previous size and is[or]is once again[at random] a little bit taller than a Wyvern. Curling around his hoard and the rubble that is all that remains of the building, his [one of]gigantic[or]huge[or]monumental[or]massive[at random] form is [one of]immovable[or]impervious[at random] to all but the strongest infections in the city. Huge, thick scales protect his body, and when he moves around the city, he shakes the ground with every step. This [one of]paragon of dragonhood[or]huge beast[or]massive creature[at random] would be extremely scary if you didn't know him so well. From the [one of]massive[or]sharp[or]curved[at random] talons as big as your leg, to the teeth as big as your arm, to the long spiked tail, [if KyrverthSpikeGrowth is 1]to the large horns on his head, [else if KyrverthSpikeGrowth is 2]to the large horns on his head and sharp defensive spikes that protrude through the skin down his spine and from his elbows, [end if]you can't help but feel sorry for anything that tries to steal from Kyrverth's hoard.";
+			say "     Once past the powerful offensive and defensive weapons Kyrverth possesses, you see a handsome muzzle, strong neck, wide [if KyrverthWingType is not 1]scaled[else][one of]feathered[or]feathery[at random][end if] wings, a long tail, and an incredibly well toned and muscled body. Looking down you see a vent that you know contains a [if KyrverthCockType is 1]tapered, ribbed and knotted cock[else if KyrverthCockType is 2]pair of tapered, ribbed and knotted cocks[else if KyrverthCockType is 3]blunt, flared horsecock[else if KyrverthCockType is 4]tapered, barbed and knotted cock[else if KyrverthCockType is 5]long, tapered, prehensile and knotted cock[end if] [if scalevalue of Player is 1 or scalevalue of Player is 2]larger than[else if scalevalue of Player is 3]as big as[else if scalevalue of Player is 4]almost as big as[end if][if scalevalue of Player is not 5] you[else] whose size seems to be almost too large to fit even for your massive form[end if], and [if KyrverthNutGrowth is not 1]two humongous cum factories stretch the dragon's sack taut behind it[else]his balls sit behind it. Their ridiculous size looks out of proportion even on the studly dragon and if that cannon ever blew you know you would be covered from head to toe. Dangling halfway to his knees, they swing and slosh with every step and the red drake seems extremely proud of them[end if].";
+			say "     Kyrverth notices your gaze and turns his head, giving you a [if KyrverthMaleBoning is 0 and Cock Count of Player >= 1]smug grin[else]seductive [one of]grin[or]smile[at random], his [one of]hand[or]claw[or]arm[at random] drawing your gaze as it moves [one of]backwards[or]rearwards[at random] and [one of]strokes[or]caresses[at random] his bulging [one of]vent[or]nethers[at random][end if].";
 	else:
 		say "     ERROR - How did you get here? Please report this to the devs on the FS Discord channel along with Kyrverthstage [KyrverthStage].";
 
@@ -186,20 +190,19 @@ to say KyrverthSmellDesc:
 		say "     The dragon has a slight musk, it smells nice but there is a faint tang to the smell and you struggle to place what it is.";
 	else if KyrverthStage is 2:
 		say "     The dragon has a musk to him, it smells nice but there is a tang to the smell and you struggle to place what it is. Something about the smell makes you feel [one of]nice[or]good[at random]...";
-	else if KyrverthStage is 3 or KyrverthStage is 5:
+	else if KyrverthStage is odd:
 		say "     The dragon has a [one of]thick[or]pungent[at random] musk that floods the room with a tang that invades your nostrils and causes your [if Player is male][Cock of Player] cock to engorge[else if Player is female][one of]cunt[or]vagina[or]nether regions[at random] to moisten[else]nether regions to tingle[end if].";
-	else if KyrverthStage is 4 or KyrverthStage is 6:
+	else:
 		say "     The [one of]thick smell[or]pungent vapor[or]intense musk[at random] infiltrates your nose and arouses your [one of]loins[or]nethers[at random]. If it gets much stronger you [one of]aren't sure whether or not[or]wonder if[at random] [one of]Kyrverth[or]the big dragon[at random] might be able to cause [one of]an orgasm[or]orgasms[at random] through smell alone.";
 
 Section 2 - Talk
 
 instead of conversing the Kyrverth: [Catches the talk command]
-		say "[KyrverthTalk]";
+	[say "[KyrverthTalk]";
 
-to say KyrverthTalk: [Quest turnin check]
+to say KyrverthTalk: [Quest turnin check]]
 	[say "Debug: KyrverthStage is [Kyrverthstage], KyrverthQuestGiven is [KyrverthQuestGiven]";]
-	LineBreak;
-	if (SilverToken is 1 and KyrverthStage is 0 and KyrverthQuestGiven is 1): [Quest one end]
+	if SilverToken is 1 and KyrverthStage is 0 and KyrverthQuestGiven is 1: [Quest one end]
 		say "     You walk into the vault to see Kyrverth stacking supplies. He spots you and [one of]heads[or]walks[at random] over. 'Hey there! Did you find anything?' You explain that the shop had been looted and his smile falls, then you mention that you did find a token that had been left behind.";
 		say "     The little dragon eagerly takes the token with a smile and runs a cable through it, turning it into [one of]an amulet[or]a necklace[at random] for him to wear around his neck. As he walks away you could have sworn he grew a bit bigger, his head just a bit closer to the height of your shoulder. His teeth, claws, and muscles seem a bit more pronounced than before.";
 		say "     Dismissing it as a trick of the mind, you get ready to head back out into the city.";
@@ -213,13 +216,11 @@ to say KyrverthTalk: [Quest turnin check]
 		now Asshole Depth of Kyrverth is 8;
 		now Asshole Tightness is 2;
 		now KyrverthTimer is turns;
-	else if (carried of stray links >= 3 and KyrverthStage is 1 and KyrverthQuestGiven is 1): [Quest 2 end]
+	else if carried of stray links >= 3 and KyrverthStage is 1 and KyrverthQuestGiven is 1: [Quest 2 end]
 		say "     [bold type]Aware of the three links of chainmail in your backpack, you [one of]wonder whether to give[or]consider giving[or]think about giving[at random] them to Kyrverth[roman type][line break]";
-		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Yes.";
 		say "     ([link]N[as]n[end link]) - No.";
 		if Player consents:
-			LineBreak;
 			ItemLoss stray links by 3;
 			say "     'You did it!' Kyrverth rushes over and looks at the chainmail you brought back, eyes wide. 'That looks great! Here, let me get you a reward.' He goes to a box and grabs five packets of food. 'My hoard is going to be awesome!' he says as he swaps the chainmail for the food. You almost drop the food as this time he definitely grows as he puts the bits of chainmail in his hoard.";
 			say "     Kyrverth doesn't even seem to notice as his body quickly swells to gain an intimidating [one of]figure[or]size[at random], a little bit taller than you. His wings flap and stretch further and further out from his back, becoming capable of flight. Horns grow through his skin, changing from defensive tools to rather dangerous offensive weapons. While you think about offensive weapons, his claws catch your eye. They twitch and sprout from his hand, now looking like they could rip logs to bits. Kyrverth shivers then gives out a massive roar, revealing a deadly maw full of sharp teeth.";
@@ -241,12 +242,11 @@ to say KyrverthTalk: [Quest turnin check]
 		else:
 			LineBreak;
 			say "[KyrverthNormalChat]";
-	else if ((carried of dragon scale >= 3 or carried of dragon hair >= 5) and KyrverthStage is 2 and KyrverthQuestGiven is 1): [Quest 3 end]
+	else if (carried of dragon scale >= 3 or carried of dragon hair >= 5) and KyrverthStage is 2 and KyrverthQuestGiven is 1: [Quest 3 end]
 		say "     You walk into the Dragon's Den, holding the [if carried of dragon scale >= 3]scales[else]hair[end if] in your hands. A few steps into the room your foot accidentally knocks a box of supplies, making a dull thud. Kyrverth immediately looks up and spots you. Eyeing the [if carried of dragon scale >= 3]scales[else]hair[end if] in your hands, he gives you a big [one of]grin[or]smile[at random] and walks over with some supplies. As he gets to you he hands you the supplies and grabs the [if carried of dragon scale >= 3]scales[else]hair[end if], almost greedily. This time you know better than to look away. You take a few steps back and drop the supplies to the floor, watching Kyrverth closely. Unlike the previous times his hoard grew, this time Kyrverth changes much more drastically. His entire body seems to bulge in size, growing taller and wider at the same time. He also seems to notice this time, and looks down as his physical power increases. The dragons muscles now seem to be much more toned with an athletic look to them. A small gust of air moves past your face as the drake stretches his wings and his head scratches the ceiling as he [one of]touches[or]reaches[at random] ten feet tall.";
 		say "     The changes seem to slow down for a second, but as you stand there and watch they simply change direction. Kyrverth's hands and feet increase in size disproportionately to his body, claws becoming strong and dangerous but at the same time they force him onto four legs. His tail extends longer, helping him to balance, but a few cracks later and Kyrverth is doomed to walk on four legs from now on - not that he seems to mind. Almost seven foot tall at his shoulder and twenty feet long, the feral dragon suddenly roars in pleasure and in surprise looks between his front legs back to his groin. In front of two tiny balls, a black [one of]penis[or]cock[or]rod[at random] grows from a vent between his legs. It grows to its full size, an unimpressive six inches, but doesn't stop there. Both penis and balls surge in size. Each ball grows to stretch his sack [one of]to its limit[or]taut[or]tight[at random], then keeps growing until each one is the size of a baseball, and in his pleasure he begins humping into the air. You watch in amazement as the tapered tip begins to extend out from his vent as his penis grows an inch with every thrust until it is almost two feet long! A [one of]bulbous[or]large[or]wide[at random] knot quickly expands at the base and Kyrverth goes to grab his penis, but in his haze of pleasure, he barely touches it before he explodes, covering the floor below in [one of]semen[or]spunk[or]jizz[at random] from his [one of]massive[or]huge[or]bulging[at random] sack.";
 		WaitLineBreak;
 		say "     The red dragon stays there for a few seconds, his massive [one of]penis[or]cock[at random] dripping on the floor, panting in exertion, before he finally opens his eyes and carefully [one of]moves[or]walks[or]navigates[at random] his new body over to you. His new voice sends [one of]shivers[or]goosebumps[at random] down your spine, a deep rumble from his [one of]massive[or]muscled[or]expansive[or]huge[at random] chest 'I thank you for your assistance, but I believe I can easily expand my hoard by myself from now on. I owe you a debt of gratitude, just let me know what it is you want and I will do my [one of]best[or]utmost[at random] to [one of]provide[or]give[or]produce[or]procure[at random] it.'";
-		WaitLineBreak;
 		ItemGain food by 10;
 		if carried of dragon scale >= 3:
 			ItemLoss dragon scale by 3;
@@ -266,7 +266,6 @@ to say KyrverthTalk: [Quest turnin check]
 		WaitLineBreak;
 	else if Kyrverthitemget is not 0 and KyrverthStage is 3:
 		say "     As you are about to talk to Kyrverth, you are reminded of the [KyrverthItemSay]. [bold type]Should you give it to him?[roman type][line break]";
-		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Yes.";
 		say "     ([link]N[as]n[end link]) - No.";
 		if Player consents:
@@ -338,66 +337,54 @@ to say KyrverthMainChat:
 			say "     'I wish I [one of]was a bigger dragon[or]wasn't so small[at random]'";
 		else if KyrverthStage is 2:
 			say "     'Look at these muscles, this is awesome!' Kyrverth exclaims, flexing to show off his toned muscles.";
-		else if KyrverthStage >= 3:
+		else:
 			say "     'I love being a proper dragon, look at this!' Kyrverth flexes an arm, showing off the massively powerful muscles and terrifyingly large claws that he possesses.";
 	else if randomnumber <= 40:
-		if ((Cock Count of Player >= 1 and KyrverthMaleBoning is 0) or KyrverthStage is not 3):
+		if (Cock Count of Player >= 1 and KyrverthMaleBoning is 0) or KyrverthStage is not 3:
 			say "     'Someday I'll find a mate. Hopefully I will have a big enough hoard to draw them in by then...'";
-		else if (Cock Count of Player >= 1 and KyrverthStage is 3 and KyrverthMaleBoning is 0):
+		else if Cock Count of Player >= 1 and KyrverthStage is 3 and KyrverthMaleBoning is 0:
 			say "     'I've been looking for a mate. Have you seen any dragonesses?'";
-		else if ((Cock Count of Player >= 1 and KyrverthStage is 3 and KyrverthMaleBoning is 1) or Cunt Count of Player >= 1):
+		else if (Cock Count of Player >= 1 and KyrverthStage is 3 and KyrverthMaleBoning is 1) or Cunt Count of Player >= 1:
 			say "     'How about you and I have some fun?' Kyrverth's hand strays toward his vent and strokes it a few times, showing the tip of his massive cock. 'I've been wanting to make some eggs...'";
 	else if randomnumber <= 45:
 		say "     'All my life I've had four limbs. Now I have four limbs and a tail and wings, it can be strange sometimes. I use the limbs almost without thinking, but when I try to use them consciously I'm a lot more clumsy with them.'";
 	else if randomnumber <= 50:
-		if KyrverthStage is not 3:
-			say "     'I wonder what my hoard is worth? And in what currency? Ever since the outbreak money has become a bit useless...'";
-		else:
-			say "     'So as my hoard grows so do I, and the more valuable it is, the more I grow... [one of]What would happen if I had something in my hoard that was priceless[or]Who determines how valuable it is? Is it the value other people would pay for it, or the value that I place on it[at random]?'";
+		say "     '[if KyrverthStage is not 3]I wonder what my hoard is worth? And in what currency? Ever since the outbreak money has become a bit useless...'[else]So as my hoard grows so do I, and the more valuable it is, the more I grow... [one of]What would happen if I had something in my hoard that was priceless[or]Who determines how valuable it is? Is it the value other people would pay for it, or the value that I place on it[at random]?'[end if]";
 	else if randomnumber <= 55:
 		say "     'Kyrverth? It's not my birth name obviously, but I thought it might fit a little better now that I'm a dragon.'";
-	else if randomnumber <= 100: [large chance to see, reminds player about quest]
+	else: [large chance to see, reminds player about quest]
 		if KyrverthStage is 0:
 			say "     [if KyrverthQuestGiven is 1]'Any luck finding some [bold type]Jewels[roman type]?'[else]'Thanks for agreeing to help me out, it's going to be awesome to have a hoard!'[end if]";
 			now Jewel Heist is active;
 		else if KyrverthStage is 1:
-			say "     'Thanks for the help.' He grabs the silver token around his neck and shows it to you 'This is [one of]awesome[or]great[at random]!' [if KyrverthQuestGiven is 1]He [one of]glances[or]looks[or]peers[at random] at your backpack 'Have you [one of]found[or]managed to get[at random] any chainmail? I hate those [one of]so-called[or]damned[at random] [']knights['].'[else][end if]";
+			say "     'Thanks for the help.' He grabs the silver token around his neck and shows it to you 'This is [one of]awesome[or]great[at random][if KyrverthQuestGiven is 1]!' He [one of]glances[or]looks[or]peers[at random] at your backpack. 'Have you [one of]found[or]managed to get[at random] any chainmail? I hate those [one of]so-called[or]damned[at random] [']knights['].[else]![end if]'";
 		else if KyrverthStage is 2:
-			say "     'Have a look at this hoard! It looks [one of]great[or]awesome[at random], and I couldn't have gotten it together without you'";
+			say "     'Have a look at this hoard! It looks [one of]great[or]awesome[at random], and I couldn't have gotten it together without you.'";
 			if KyrverthQuestGiven is 1:
 				say "     'Have you fought any eastern dragons? They need taking down a peg...'";
-		else if KyrverthStage >= 3:
+		else:
 			say "     'This is a great hoard you've given me, I can grow it on my own from now on, but please don't forget that I owe you one.'";
 			if KyrverthItemget is 0:
 				EnableKyrverthItemEvents;
-	else:
-		say "BUG - Please report to the Developers on the FS discord channel and quote: [randomnumber]";
 	if KyrverthStage is 3:
 		EnableKyrverthItemEvents;
 
 to say KyrverthS4Chat:
 	[Final form, player has not stolen the item back yet. Kyrverth is a bit of a dick.]
-	let randomnumber be a random number from 1 to 3;
-	if randomnumber is 1:
-		say "     'I must thank you for your gift. It enabled me to grow to a size I never thought possible...' he pauses for a second, then says flippantly 'I could have grown my hoard this big by myself, but you sped up the process I suppose.'";
-	else if randomnumber is 2:
-		say "     'I suppose you tiny beings do have your uses, do me a favor and look in those tiny alleys would you? Wealth seems to hide in the tiniest spots.'";
-	else if randomnumber is 3:
-		say "     'If you find another item like that, bring it to me right away. If I get another boost like that this area will only be the start. I could dominate the city!'";
-	if (KyrverthTimer - turns >= 8):
+	if a random number from 1 to 3 is:
+		-- 1: say "     'I must thank you for your gift. It enabled me to grow to a size I never thought possible...' he pauses for a second, then says flippantly 'I could have grown my hoard this big by myself, but you sped up the process I suppose.'";
+		-- 2: say "     'I suppose you tiny beings do have your uses, do me a favor and look in those tiny alleys would you? Wealth seems to hide in the tiniest spots.'";
+		-- 3: say "     'If you find another item like that, bring it to me right away. If I get another boost like that this area will only be the start. I could dominate the city!'";
+	if KyrverthTimer - turns >= 8:
 		if a random chance of 1 in 3 succeeds, say "[Line Break]Kyrverth has let his size go to his head recently, and you wonder if you could get your old friend back if you just [bold type]rob the bank[roman type].";
 		now KyrverthItemStealable is true;
 
 to say KyrverthS5Chat:
-	let randomnumber be a random number from 1 to 3;
-	if randomnumber is 1:
-		say "     'If I catch that fucking thief, [one of]it's going to be barbeque time[or]I'm going to get myself some justice[at random].'";
-	else if randomnumber is 2:
-		say "     'It felt so good being so big, I was just able to DO things. At that size making things happen was so easy, and felt so good. Despite the drawbacks, I kinda miss it.'";
-	else if randomnumber is 3:
-		say "     'My head feels clearer now - I didn't realize how much my body was affecting my mind at the time. I still feel urges to get big again, but I've got to admit I'm a little worried how it's going to affect me if I do.'";
-	let randomnumber be a random number from 1 to 4;
-	if randomnumber is 1:
+	if a random number from 1 to 3 is:
+		-- 1: say "     'If I catch that fucking thief, [one of]it's going to be barbecue time[or]I'm going to get myself some justice[at random].'";
+		-- 2: say "     'It felt so good being so big, I was just able to DO things. At that size making things happen was so easy, and felt so good. Despite the drawbacks, I kinda miss it.'";
+		-- 3: say "     'My head feels clearer now - I didn't realize how much my body was affecting my mind at the time. I still feel urges to get big again, but I've got to admit I'm a little worried how it's going to affect me if I do.'";
+	if a random chance of 1 in 4 succeeds:
 		say "     Realizing how [one of]sad and angry Kyrverth is[or]it has affected the dragon[at random] to have lost his favorite item, you [one of]wonder[or]consider[at random] whether you should [bold type]Give it back[roman type].";
 
 to say KyrverthS6Chat:
@@ -409,10 +396,7 @@ to say KyrverthS6Chat:
 	else if randomnumber <= 10:
 		say "     'Why am I not the same as the other dragons around the city? Not sure.'";
 	else if randomnumber <= 15:
-		if a random chance of 1 in 5 succeeds:
-			say "'I used to be a sculptor. People always made fun of me - my height, my looks, but they never made fun of my sculptures. They were the bees knees for a while, I was one of the top sculptors in the city! I was just delivering a sculpture when this all kicked off, and I think it might have affected me. I'm still myself though, so I have to be thankful for that I suppose.'";
-		else:
-			say "     'I used to be a sculptor. People always made fun of me - my height, my looks, but they never made fun of my sculptures. I was just delivering a sculpture when this all kicked off, and I think it might have affected me. I'm still myself though, so I have to be thankful for that I suppose.'";
+		say "     'I used to be a sculptor. People always made fun of me - my height, my looks, but they never made fun of my sculptures. [if a random chance of 1 in 5 succeeds]They were the bees knees for a while, I was one of the top sculptors in the city! [end if]I was just delivering a sculpture when this all kicked off, and I think it might have affected me. I'm still myself though, so I have to be thankful for that I suppose.'";
 		if randomnumber is 19:
 			say "     'Do you think I should pick sculpting back up again? That dragon sculpture took me ages to make but might have been the best one I ever did.'";
 	else if randomnumber <= 20:
@@ -436,30 +420,27 @@ to say KyrverthS6Chat:
 	else if randomnumber <= 65:
 		say "     'Seen any [one of]dragonesses[or]female dragons[at random] around? I was thinking about it earlier and we might have to share hoards otherwise one of us might be a whole lot bigger than the other.'";
 	else if randomnumber <= 70:
-		say "     'Do you think what is happening here is an isolated incident? [one of]What if there are other outbreaks all around the world, will things ever go back to normal again?[or]I'm the only one of my kind in the city - as far as I know, could I be the only one in the world?[at random]'";
+		say "     'Do you think what is happening here is an isolated incident? [one of]What if there are other outbreaks all around the world, will things ever go back to normal again[or]I'm the only one of my kind in the city - as far as I know, could I be the only one in the world[at random]?'";
 	else if randomnumber <= 75:
 		say "     'Things seem bad now, but I really hope that we get some order in the city soon or there won't be much left to scavenge. People are going to start getting hungry. Maybe we should [one of]make[or]set up[at random] some [one of]communal[or]public[at random] gardens or something along those lines?'";
 	else if randomnumber <= 80:
-		say "     'One thing I miss about the old world - Movies! I miss being able to sit down for a few hours and watch a good story unfold. I remember one movie [one of]had a dragon that had minions, all these kobold's to do his bidding and gather a hoard on his behalf. I wonder if I could do that?[or]had a dragon which was so powerful the nearby towns gave him tribute each week, I wonder if I can get that powerful?[or]had a dragon which was so powerful that it defeated an entire dwarf stronghold singlehandedly, and then kept all of their gold![or]had a dragoness that conquered the world with her offspring. Maybe I'll find a [one of]girl[or]mate[or]dragoness[at random] like that one day.[at random]'";
-	else if randomnumber <= 85:
-		say "     'I have [one of]started[or]begun[at random] to [one of]notice[or]realize[or]feel[at random] that I have an ability with [one of]valuables[or]treasure[at random] - [one of]I raided a jewelry store a couple of days ago and I could tell instinctively which gems were natural and which were made in a lab![or]I held a gold bar a few days ago and could tell immediately that it had a lead block inside![or]I found a rock a while ago and could tell there was a gem in the center before I even cracked it open![or]I can look at gems on dresses, necklaces and earrings and tell instantly which ones are glass and which are real[or]I flew around the city and could feel which direction valuables were in. The problem now is that my hoard has a bigger pull than anything else in the city...[at random]'";
+		say "     'One thing I miss about the old world - Movies! I miss being able to sit down for a few hours and watch a good story unfold. I remember one movie [one of]had a dragon that had minions, all these kobold's to do his bidding and gather a hoard on his behalf. I wonder if I could do that?'[or]had a dragon which was so powerful the nearby towns gave him tribute each week, I wonder if I can get that powerful?'[or]had a dragon which was so powerful that it defeated an entire dwarf stronghold singlehandedly, and then kept all of their gold!'[or]had a dragoness that conquered the world with her offspring. Maybe I'll find a [one of]girl[or]mate[or]dragoness[at random] like that one day.'[at random]";
 	else:
-		say "ERROR - Please report to Speedlover or Wahn on the FS discord server and quote: [randomnumber].";
+		say "     'I have [one of]started[or]begun[at random] to [one of]notice[or]realize[or]feel[at random] that I have an ability with [one of]valuables[or]treasure[at random] - [one of]I raided a jewelry store a couple of days ago and I could tell instinctively which gems were natural and which were made in a lab!'[or]I held a gold bar a few days ago and could tell immediately that it had a lead block inside!'[or]I found a rock a while ago and could tell there was a gem in the center before I even cracked it open!'[or]I can look at gems on dresses, necklaces and earrings and tell instantly which ones are glass and which are real.'[or]I flew around the city and could feel which direction valuables were in. The problem now is that my hoard has a bigger pull than anything else in the city...'[at random]";
 
 to BodyModCheck:
 	if KyrverthBodyChanged is 0: [Not modified]
 		now KyrverthBodyChanged is 1; [Potentially Modified, desc will switch to more custom desc depending on what the player does]
-	if (carried of Bunweiser Beer >= 2 or carried of Demon Seed >= 2 or carried of Eagle Feather >= 2 or carried of Cock Pill >= 2 or carried of Dolphin Milk >= 2 or carried of Tiger Patch >= 2 or carried of Zebra Fur >= 2):
+	if carried of Bunweiser Beer >= 2 or carried of Demon Seed >= 2 or carried of Eagle Feather >= 2 or carried of Cock Pill >= 2 or carried of Dolphin Milk >= 2 or carried of Tiger Patch >= 2 or carried of Zebra Fur >= 2:
 		[Must have the items to access changing him.]
 		say "     As you approach the big dragon to chat you think about some of the items in your possession and consider giving them to him. It would almost certainly have an effect on him...";
-		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Change the Dragon.";
 		say "     ([link]N[as]n[end link]) - Just Chat.";
 		if Player consents:
+			LineBreak;
 			say "     You think about the items you have and consider what to give the big dragon to change him:";
-			now calcnumber is -1;
-			let menuexit be 0;
-			while menuexit is 0:
+			let menuexit be false;
+			while menuexit is false:
 				say "[bold type]Choices:[roman type][line break]";
 				say "(1) [link]Bunweiser Beer to enlarge his balls[as]1[end link], Available: [carried of Bunweiser Beer][line break]";
 				say "(2) [link]Demon Seed to give him horns[as]2[end link], Available: [carried of Demon Seed][line break]";
@@ -468,74 +449,73 @@ to BodyModCheck:
 				say "(5) [link]Dolphin Milk to make his cock prehensile[as]5[end link], Available: [carried of Dolphin Milk][line break]";
 				say "(6) [link]Tiger Patch to make his cock barbed[as]6[end link], Available: [carried of Tiger Patch][line break]";
 				say "(7) [link]Zebra Fur to give him a horsecock[as]7[end link], Available: [carried of Zebra Fur][line break]";
-				LineBreak;
-				say "(0) [link]Abort[as]0[end link][line break]";
-				while 1 is 1:
-					say "Choice? (0-7)>[run paragraph on]";
+				say "[line break](0) [link]Abort[as]0[end link][line break]";
+				now calcnumber is -1;
+				while calcnumber < 0 or calcnumber > 7:
+					say "Choice? (0-7)> [run paragraph on]";
 					get a number;
-					if calcnumber >= 0 and calcnumber <= 7:
-						break;
-					else:
+					if calcnumber < 0 or calcnumber > 7:
 						say "Invalid Selection.";
+				LineBreak;
 				if calcnumber is 1:
 					if carried of Bunweiser Beer < 2:
-						say "     You consider giving him Bunweiser Beer but unfortunately you don't have [if carried of Bunweiser Beer is 1]enough[else]any[end if] to give him.[line break]";
+						say "     You consider giving him Bunweiser Beer but unfortunately you don't have [if carried of Bunweiser Beer is 1]enough[else]any[end if] to give him.";
 					else if KyrverthNutGrowth is 1:
-						say "     You consider giving him Bunweiser Beer but his balls are already massive, any bigger and he might not be able to walk![line break]";
+						say "     You consider giving him Bunweiser Beer but his balls are already massive, any bigger and he might not be able to walk!";
 					else:
 						KyrverthBallGrow;
-						now menuexit is 1;
+						now menuexit is true;
 				else if calcnumber is 2:
 					if carried of Demon Seed < 2:
-						say "     You consider giving him Demon Seed but unfortunately you don't have [if carried of Demon Seed is 1]enough[else]any[end if] to give him.[line break]";
+						say "     You consider giving him Demon Seed but unfortunately you don't have [if carried of Demon Seed is 1]enough[else]any[end if] to give him.";
 					else if KyrverthSpikeGrowth is 2:
-						say "     You consider giving him Demon Seed but he is already as horny as a dragon can get.[line break]";
+						say "     You consider giving him Demon Seed but he is already as horny as a dragon can get.";
 					else:
 						KyrverthHornGrow;
-						now menuexit is 1;
+						now menuexit is true;
 				else if calcnumber is 3:
 					if carried of Eagle Feather < 2:
-						say "     You consider giving him Eagle Feathers but unfortunately you don't have [if carried of Eagle Feather is 1]enough[else]any[end if] to give him.[line break]";
+						say "     You consider giving him Eagle Feathers but unfortunately you don't have [if carried of Eagle Feather is 1]enough[else]any[end if] to give him.";
 					else if KyrverthWingType is 1:
-						say "     You consider giving him Eagle Feathers but there wouldn't be much point - his wings are already feathered![line break]";
+						say "     You consider giving him Eagle Feathers but there wouldn't be much point - his wings are already feathered!";
 					else:
 						KyrverthWingChange;
-						now menuexit is 1;
+						now menuexit is true;
 				else if calcnumber is 4:
 					if carried of Cock Pill < 2:
-						say "     You consider giving him Cock Pills but unfortunately you don't have [if carried of Cock Pill is 1]enough[else]any[end if] to give him.[line break]";
+						say "     You consider giving him Cock Pills but unfortunately you don't have [if carried of Cock Pill is 1]enough[else]any[end if] to give him.";
 					else if KyrverthCockType is not 1:
-						say "     You consider giving him Cock Pills but there wouldn't be much point - his cock has already been changed.[line break]";
+						say "     You consider giving him Cock Pills but there wouldn't be much point - his cock has already been changed.";
 					else:
 						KyrverthCockDoubling;
-						now menuexit is 1;
+						now menuexit is true;
 				else if calcnumber is 5:
 					if carried of Dolphin Milk < 2:
-						say "     You consider giving him Dolphin Milk but unfortunately you don't have [if carried of Dolphin Milk is 1]enough[else]any[end if] to give him.[line break]";
+						say "     You consider giving him Dolphin Milk but unfortunately you don't have [if carried of Dolphin Milk is 1]enough[else]any[end if] to give him.";
 					else if KyrverthCockType is not 1:
-						say "     You consider giving him Dolphin Milk but there wouldn't be much point - his cock has already been changed.[line break]";
+						say "     You consider giving him Dolphin Milk but there wouldn't be much point - his cock has already been changed.";
 					else:
 						KyrverthCockPrehensiling;
-						now menuexit is 1;
+						now menuexit is true;
 				else if calcnumber is 6:
 					if carried of Tiger Patch < 2:
-						say "     You consider giving him Tiger Patches but unfortunately you don't have [if carried of Tiger Patch is 1]enough[else]any[end if] to give him.[line break]";
+						say "     You consider giving him Tiger Patches but unfortunately you don't have [if carried of Tiger Patch is 1]enough[else]any[end if] to give him.";
 					else if KyrverthCockType is not 1:
-						say "     You consider giving him Tiger Patches but there wouldn't be much point - his cock has already been changed.[line break]";
+						say "     You consider giving him Tiger Patches but there wouldn't be much point - his cock has already been changed.";
 					else:
 						KyrverthCockBarbing;
-						now menuexit is 1;
+						now menuexit is true;
 				else if calcnumber is 7:
 					if carried of Zebra Fur < 2:
-						say "     You consider giving him Zebra Fur but unfortunately you don't have [if carried of Zebra Fur is 1]enough[else]any[end if] to give him.[line break]";
+						say "     You consider giving him Zebra Fur but unfortunately you don't have [if carried of Zebra Fur is 1]enough[else]any[end if] to give him.";
 					else if KyrverthCockType is not 1:
-						say "     You consider giving him Zebra Fur but there wouldn't be much point - his cock has already been changed.[line break]";
+						say "     You consider giving him Zebra Fur but there wouldn't be much point - his cock has already been changed.";
 					else:
 						KyrverthCockHorsing;
-						now menuexit is 1;
+						now menuexit is true;
 				else:
 					say "     Thinking better of it, you decide you like the dragon how he is.";
-					now menuexit is 1;
+					now menuexit is true;
 		else:
 			say "[KyrverthS6Chat]";
 	else:
@@ -550,25 +530,26 @@ to KyrverthBallGrow:
 to KyrverthHornGrow:
 	if KyrverthSpikeGrowth is 0: [Spikes, either head spikes or head and spine.]
 		now KyrverthSpikeGrowth is 1;
-		say "     'Demons huh, I wonder what it will do?' the dragon says, gesturing for you to pass the vials over. You slowly uncork each one and slowly hand them to him, watching the seed disappear down his [one of]gullet[or]throat[or]neck[at random]. The contents of last vial disappears as quickly as the first and you both take a seat to watch what follows    ...Seemingly nothing at first. You sit there in companionable silence for a few minutes, stillness broken only by the dragon scratching at his head every 30 seconds or so. 'I can't help it' he complains 'it itches'. Your eyes automatically follow his claw when he scratches, and a white patch catches your attention when his hand finishes scratching. You point it out as it begins to bulge against his skin. 'Whoa, what?' he looks around and spots a nearby reflective surface, staring at it as you watch the point break through his skin together. Slowly a point becomes a stub, a stub becomes a little horn, and a little horn grows into two large curved devil horns. Kyrverth swings his head around, testing the new weight. 'I can see these coming in handy, especially if one of those easterns comes knocking, could really do some damage with these...";
+		say "     'Demons huh, I wonder what it will do?' the dragon says, gesturing for you to pass the vials over. You slowly uncork each one and slowly hand them to him, watching the seed disappear down his [one of]gullet[or]throat[or]neck[at random]. The contents of last vial disappear as quickly as the first and you both take a seat to watch what follows.";
+		say "     ...Seemingly nothing at first. You sit there in companionable silence for a few minutes, stillness broken only by the dragon scratching at his head every 30 seconds or so. 'I can't help it,' he complains, 'it itches'. Your eyes automatically follow his claw when he scratches, and a white patch catches your attention when his hand finishes scratching. You point it out as it begins to bulge against his skin. 'Whoa, what?' he looks around and spots a nearby reflective surface, staring at it as you watch the point break through his skin together. Slowly a point becomes a stub, a stub becomes a little horn, and a little horn grows into two large curved devil horns. Kyrverth swings his head around, testing the new weight. 'I can see these coming in handy, especially if one of those easterns comes knocking, could really do some damage with these...'";
 		ItemLoss Demon Seed by 2;
 		if carried of Demon Seed >= 2:
 			say "     You suddenly remember you have a second set of vials in the pocket of your bag, should you mention them to the horny dragon?";
-			LineBreak;
 			say "     ([link]Y[as]y[end link]) - Yes.";
 			say "     ([link]N[as]n[end link]) - No.";
 			if Player consents:
+				LineBreak;
 				say "You grab the vials and hand them to the eager dragon who drinks them down as quickly as he can. The effect is quicker this time 'My back!' he shouts. He twists his body half around to look at himself, giving you a good view of his spine as spikes push through the scales at regular intervals. Kyrverth shakes his back a few times to get used to the weight and inspects one of the ones on his tail. 'Now this could be really helpful if I get ambushed again, help keep them off my back'";
 				now KyrverthSpikeGrowth is 2;
 				ItemLoss Demon Seed by 2;
 			else:
+				LineBreak;
 				say "     Deciding against it, you leave the second set of vials in your bag.";
-		WaitLineBreak;
 	else if KyrverthSpikeGrowth is 1:
 		say "You grab the vials from your pack and hand them to the eager dragon who drinks them down as quickly as he can. The effect is quicker this time 'My back!' he shouts. He twists his body half around to look at himself, giving you a good view of his spine as spikes push through the scales at regular intervals. Kyrverth shakes his back a few times to get used to the weight and inspects one of the ones on his tail. 'Now this could be really helpful if I get ambushed again, help keep them off my back'";
 		now KyrverthSpikeGrowth is 2;
 		ItemLoss Demon Seed by 2;
-		WaitLineBreak;
+	WaitLineBreak;
 
 to KyrverthWingChange:
 	say "     You know you don't want to be anywhere nearby when he begins to change so you leave the feathers in a small bag in the doorway to his den and hide nearby. Worryingly the dragon doesn't return for a while. Quite a while. In fact he takes so long that by time he does return you have started to doze off. What wakes you is an almighty 'ACHOO' and as you look up you see the dragon with feathers in his nostrils - the bag on the ground ripped open and mostly empty. As you watch the feathers don't move at all when the dragon sneezes, and [one of]go flying[or]waft[at random] up his nostrils each time he breathes in. You are worried about the feathers being a breathing hazard and almost step out of your hidey hole but you spot a feather stick to the side of one nostril and melt into his skin. Hoping that the rest of the feathers have done similar you stay in your hiding spot and continue watching. First the dragons wings gain a little fuzz - not a whole lot, certainly not enough for Kyrverth to notice while he is sneezing and pawing at his nose with a paw, but slowly the fuzz becomes more solid and before you can say 'chicken!' full size feathers are growing into place over his wings.";
@@ -580,14 +561,14 @@ to KyrverthWingChange:
 
 to KyrverthCockDoubling:
 	now KyrverthCockType is 2;
-	say "     As you pull the pills out of your pack you hold them out to the dragon, telling him to enjoy. He looks at you and then at the pills, but you have a good bit of trust built between you by this point. They look comically small in his claw but he quickly swallows them and moves to walk away. Two steps is all it takes before he begins to feel something. He stops and you can see from the rear as his sheath begins to enlarge. Your mind immediately goes to his cock and you wonder how much bigger he is going to get – he wasn't exactly small before this. Unexpectedly you see two points emerge from his sheath, and TWO cocks begin to emerge from his sheath and vie for space in the open air. A grumble grabs you attention and you see Kyrverth giving you a perverse look. You know exactly what to do. Walking past his tail you reach forward and place a hand on either one. Amidst his moans of pleasure you squeeze each knot and begin stroking the shafts. Each hand makes its way down to a tip and gathers up a handful of the gushing pre, lubricating each shaft with an eager hand. You push them together and with both hands start jacking him from knot to tip. The red dragon is loving it, he humps a few times and growls in pleasure to let you know you're on the right track. You speed up your jacking, rubbing your chest against his cocks as you go. Spurts of pre fire from each one faster and harder and it isn't long before he's about to blow. His knots expand out to either side and as a finisher you place your arms around his two knots, hugging them together as hard as you are able. Kyrverth roars loud enough to shake the rooftops while burning hot seed pushes its way up both shafts and burts from the tips, spraying all over you.";
+	say "     As you pull the pills out of your pack you hold them out to the dragon, telling him to enjoy. He looks at you and then at the pills, but you have a good bit of trust built between you by this point. They look comically small in his claw but he quickly swallows them and moves to walk away. Two steps is all it takes before he begins to feel something. He stops and you can see from the rear as his sheath begins to enlarge. Your mind immediately goes to his cock and you wonder how much bigger he is going to get - he wasn't exactly small before this. Unexpectedly you see two points emerge from his sheath, and TWO cocks begin to emerge from his sheath and vie for space in the open air. A grumble grabs you attention and you see Kyrverth giving you a perverse look. You know exactly what to do. Walking past his tail you reach forward and place a hand on either one. Amidst his moans of pleasure you squeeze each knot and begin stroking the shafts. Each hand makes its way down to a tip and gathers up a handful of the gushing pre, lubricating each shaft with an eager hand. You push them together and with both hands start jacking him from knot to tip. The red dragon is loving it, he humps a few times and growls in pleasure to let you know you're on the right track. You speed up your jacking, rubbing your chest against his cocks as you go. Spurts of pre fire from each one faster and harder and it isn't long before he's about to blow. His knots expand out to either side and as a finisher you place your arms around his two knots, hugging them together as hard as you are able. Kyrverth roars loud enough to shake the rooftops while burning hot seed pushes its way up both shafts and burts from the tips, spraying all over you.";
 	say "     Slowly your dragon lies down and draws you in next to him, placing a wing over you. Looks like he is pretty happy with the changes and you are [one of]going to take[or]taking[at random] a forced break with him.";
 	ItemLoss Cock Pill by 2;
 	now Cock Count of Kyrverth is 2;
 	WaitLineBreak;
 
 to KyrverthCockPrehensiling:
-	say "     Pulling the vials of milk from your pack and handing them to the dragon, you watch as [one of]the Dolphin Milk is instantly sent on its way down his throat[or]the thirsty dragon drinks the Dolphin Milk first from one vial then from another[at random]. He swallows with a loud 'gulp' and starts walking away but only gets a few steps before he slows to a stop and lets out a loud moan. Quickly his cock extends from his sheath and quickly reaches its full size – and beyond!  The girth of the mighty cock doesn't seem to change, but it lengthens and begins to twitch. 'Wait a minute!' - the cock twitches. 'huh' - the cock twitches again. 'I can control this!' he exclaims.";
+	say "     Pulling the vials of milk from your pack and handing them to the dragon, you watch as [one of]the Dolphin Milk is instantly sent on its way down his throat[or]the thirsty dragon drinks the Dolphin Milk first from one vial then from another[at random]. He swallows with a loud 'gulp' and starts walking away but only gets a few steps before he slows to a stop and lets out a loud moan. Quickly his cock extends from his sheath and quickly reaches its full size - and beyond!  The girth of the mighty cock doesn't seem to change, but it lengthens and begins to twitch. 'Wait a minute!' - the cock twitches. 'huh' - the cock twitches again. 'I can control this!' he exclaims.";
 	say "     His dick now acting more like a tentacle than a cock, he makes it twist and turn in the open air with a giddy kind of joy. Watching intently, you sidle up to him and mention that he could move his cock while... [bold type]inside[roman type] someone. Eyes widen. He freezes. Realization hits.";
 	say "     'I have to try this out!' he shouts, running outside. You give chase but by the time you get outside he is already up in the air and disappearing into the distance.";
 	ItemLoss Dolphin Milk by 2;
@@ -614,17 +595,17 @@ instead of fucking the Kyrverth:
 	if PlayerRomanced of Kyrverth is false:
 		now PlayerRomanced of Kyrverth is true;
 	if KyrverthStage is 3 or KyrverthStage is 5:
-		if KyrverthStage is 3 and (KyrverthTimer - turns < 6): 		[He got fucked in the last 18 hours = 6 turns]
+		if KyrverthStage is 3 and KyrverthTimer - turns < 6: 		[He got fucked in the last 18 hours = 6 turns]
 			say "     'Sorry, but not right now, maybe later?'";
-		else if KyrverthStage is 5 and (KyrverthTimer - turns < 12): 		[He got fucked in the last 18 hours = 6 turns]
+		else if KyrverthStage is 5 and KyrverthTimer - turns < 12: 		[He got fucked in the last 18 hours = 6 turns]
 			say "     'Sorry, but not right now, I need to focus on finding that thief.'";
 		else if Player is male: 				[Male player]
 			if KyrverthMaleBoning is 0:
-				say "     'Sorry [one of]bro[or]dude[at random], I do owe you one, but I'm really into girls...'";
+				say "     'Sorry, [one of]bro[or]dude[at random], I do owe you one, but I'm really into girls...'";
 				say "[KyrverthMaleCheck]";
-			else if KyrverthMaleBoning is 1:
+			else:
 				say "[KyrverthAnalSex]";
-		else if ((scalevalue of Player <= 1 and "Kinky" is not listed in feats of Player) or Cunt Depth of Player < 10): [Too small for sex]
+		else if (scalevalue of Player <= 1 and "Kinky" is not listed in feats of Player) or Cunt Depth of Player < 10: [Too small for sex]
 			say "     As you walk up to Kyrverth, he looks at you closely, then says 'Sorry, you are nice and all, but I doubt it would fit.'";
 			WaitLineBreak;
 		else if Player is female: [Female player that is large enough]
@@ -632,28 +613,27 @@ instead of fucking the Kyrverth:
 		else: [Player has no gender, large enough]
 			if KyrverthMaleBoning is 0:
 				say "     Sorry, I do owe you one, but I'm really into girls, and you don't have those parts...";
-			else if KyrverthMaleBoning is 1:
+			else:
 				say "[KyrverthAnalSex]";
 	else if KyrverthStage is 4:
 		say "     'It wouldn't fit - hell, I doubt that little body could even get me hard.'";
 	else if KyrverthStage is 6:
-		say "     'C'mon [one of]dude[or][if Player is female]girl[else]man[end if][at random], you know it wouldn't fit.'";
+		say "     'C'mon, [one of]dude[or][if Player is female]girl[else]man[end if][at random], you know it wouldn't fit.'";
 	else:
-		say "     'You're nice and all, but I really need to focus on my hoard'";
+		say "     'You're nice and all, but I really need to focus on my hoard.'";
 
 to say KyrverthMaleCheck:
 	if KyrverthMaleBoning is 1:
 		say "[KyrverthAnalSex]";
-	else if KyrverthMaleBoning is 0:
-		say "     [bold type]He doesn't sound [one of]all too sure[or]100% certain[at random] about that, do you want to try to convince him otherwise?[roman type][line break]";
-		LineBreak;
+	else:
+		say "[line break]     [bold type]He doesn't sound [one of]all too sure[or]100% certain[at random] about that, do you want to try to convince him otherwise?[roman type][line break]";
 		say "     ([link]Y[as]y[end link]) - Yes.";
 		say "     ([link]N[as]n[end link]) - No.";
 		if Player consents:
 			LineBreak;
-			Let Randomcharmvar be a random number between 1 and 30;
-			say "     [bold type]Rolling [Randomcharmvar]/30 + Charisma of [charisma of Player] vs 25: [roman type]";
-			if (Randomcharmvar + charisma of Player) < 25:
+			let Randomcharmvar be a random number between 1 and 30;
+			say "     [bold type]Rolling [Randomcharmvar]/30 + Charisma of [charisma of Player] vs 25:[roman type] ";
+			if Randomcharmvar + charisma of Player < 25:
 				say "You try to convince the dragon that [one of]males could be just as fun[or]males are ok too[at random], but he shakes his head, firm in the belief that he is [one of]into females and females only[or]straight as an arrow[at random].";
 			else:
 				now KyrverthMaleBoning is 1;
@@ -663,7 +643,7 @@ to say KyrverthMaleCheck:
 				now KyrverthTimer is turns;
 		else:
 			LineBreak;
-			say "Deciding not to press the issue, you take a step back and leave him be for now.";
+			say "     Deciding not to press the issue, you take a step back and leave him be for now.";
 
 to say KyrverthSex:
 	say "Just a placeholder for Kyrverth sex scenes right now, maybe in a future update?";
@@ -771,10 +751,10 @@ to say KyrverthLargePlayerAnal:
 	KyrverthSexInfect;
 
 to KyrverthSexInfect:
-	if Player is male or Player is herm:
-		infect "Horny Dragon";
-	else if Player is female:
+	if Player is purefemale:
 		infect "Slutty Dragoness";
+	else:
+		infect "Horny Dragon";
 
 Section 4 - Events
 [Strange sighting - Encounter Kyrverth		]
@@ -790,7 +770,7 @@ Valuable Warehouse Artifact	"Valuable Warehouse Artifact"
 Valuable RLD Artifact	"Valuable RLD Artifact"
 Valuable Stables Artifact	"Valuable Stables Artifact"
 
-instead of going south from Overgrown Street while (KyrverthLockoutTimer - turns <= 6):
+instead of going south from Overgrown Street while KyrverthLockoutTimer - turns <= 6:
 	if KyrverthItemReturned is 1:
 		say "Following the road to the Den you come around the corner and see Kyrverth has made a new addition. In your time away the massive dragon has taken a display cage from the museum to hold the [KyrverthItemSay]. You realize that that is only there because of you - preventing you from being able to steal it again.";
 		now KyrverthItemReturned is 3;
@@ -808,7 +788,7 @@ instead of going south from Overgrown Street while (KyrverthLockoutTimer - turns
 
 KyrverthRandomEncounter is a number that varies. KyrverthRandomEncounter is usually 0.
 
-after going to Dragons Den while (KyrverthStage is 6 and a random chance of 1 in 5 succeeds and KyrverthRandomEncounter <= 14):
+after going to Dragons Den while KyrverthStage is 6 and a random chance of 1 in 5 succeeds and KyrverthRandomEncounter <= 14:
 	say "     As you walk towards the Dragons Den you see Kyrverth [one of]coming[or]walking[or]traveling[or]moving[or]padding towards you[or]gliding in[or]jogging[or]strolling[or]wandering[or]entering[at random] from the [one of]other[or]opposite[at random] direction.";
 	if KyrverthRandomEncounter is 0:
 		say "     He is walking backwards while dragging a huge sack with his mouth, you quickly walk over and help him to pull it into his hoard. As he opens it you are dazzled by the color, but almost immediately you burst out laughing. The entire sack is filled to the brim with fools gold.";
@@ -861,8 +841,7 @@ when play begins: [flags for blocking this event]
 
 to say ResolveEvent Strange Sighting: [Very first meeting with the dragon]
 	say "     As you walk down the street you could swear you saw a glimpse of red in a shop window but as you get close all that can be seen through the broken glass is a dark room with overturned or broken tables and chairs.";
-	say "     [bold type]Shall you investigate?[roman type][line break]";
-	LineBreak;
+	say "[line break]     [bold type]Shall you investigate?[roman type][line break]";
 	say "     ([link]Y[as]y[end link]) - Go inside and have a look.";
 	say "     ([link]N[as]n[end link]) - Leave, it's none of your business.";
 	if Player consents:
@@ -901,15 +880,13 @@ when play begins: [flags for blocking this event]
 
 to say ResolveEvent Jewel Heist:
 	say "     Walking down the street you spot a good source of jewels, a jewelry shop! The faded blue shop has two windows with bars behind them. Display cases inside catch your eye but a wolverine standing in front of the only entrance gives you pause. It would not be easy to try and fight your way past him, and he does not look friendly enough to trade with. You think about Kyrverth and resolve that this would be the easiest way to start his hoard.";
-	say "     [bold type]Now if only you could get past the guard at the door... Do you try?[roman type][line break]";
-	LineBreak;
+	say "[line break]     [bold type]Now if only you could get past the guard at the door... Do you try?[roman type][line break]";
 	say "     ([link]Y[as]y[end link]) - Yes.";
 	say "     ([link]N[as]n[end link]) - No.";
 	if Player consents:
 		LineBreak;
 		if JewelHeistCaught is 0:
 			say "As you close in, you notice a back alley, do you want to [bold type]continue with your original plan or explore alternative options?[roman type][line break]";
-			LineBreak;
 			say "     ([link]Y[as]y[end link]) - Fight.";
 			say "     ([link]N[as]n[end link]) - Sneak.";
 			if Player consents:
@@ -924,8 +901,8 @@ to say ResolveEvent Jewel Heist:
 	else:
 		LineBreak;
 		say "     Deciding that discretion is the better part of valor, you return to the library. Maybe try again later?";
-		Let Randomsneakvar be a random number between 1 and 30;
-		if (Randomsneakvar + dexterity of Player) < 25:
+		let Randomsneakvar be a random number between 1 and 30;
+		if Randomsneakvar + dexterity of Player < 25:
 			say "     [bold type]Rolling [Randomsneakvar] + Dexterity of [dexterity of Player] vs 25: [roman type]";
 			say "     The wolverine notices you leaving and chases you down the street, stopping at the end and returning to the store. You get the feeling he will be extra vigilant now he knows the store is a target.";
 			now JewelHeistCaught is 1;
@@ -936,15 +913,14 @@ to say ResolveEvent Jewel Heist:
 
 to say JewelHeistSneak:
 	say "     The wolverine stands by the front door, a permanent scowl on his face. His hand regularly strokes a bat hanging from a loop on his waist. Deciding not to try and fight him you walk around to the next street and go down the alley to the back of the shop. The rear door looks like it might be alarmed with a wire running down to a small box on the side of the door by the handle. If the alarm goes off you know the wolverine will come running.";
-	say "     [bold type]Will you try to disarm it?[roman type][line break]";
-	LineBreak;
+	say "[line break]     [bold type]Will you try to disarm it?[roman type][line break]";
 	say "     ([link]Y[as]y[end link]) - Yes.";
 	say "     ([link]N[as]n[end link]) - No.";
 	if Player consents:
 		LineBreak;
-		Let Randomsneakvar be a random number between 1 and 30;
+		let Randomsneakvar be a random number between 1 and 30;
 		say "     [bold type]Rolling [Randomsneakvar] + Dexterity of [dexterity of Player] vs 25: [roman type]";
-		if (Randomsneakvar + dexterity of Player) < 25:
+		if Randomsneakvar + dexterity of Player < 25:
 			say "Almost immediately an alarm goes off, blaring loudly into the night. The wolverine comes around the corner, and he does NOT look happy.";
 			say "[JewelHeistFight]";
 		else:
@@ -956,7 +932,6 @@ to say JewelHeistSneak:
 	else:
 		LineBreak;
 		say "     You didn't want to disarm the alarmed door. [bold type]Do you want to fight the wolverine or leave?[roman type][line break]";
-		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Fight.";
 		say "     ([link]N[as]n[end link]) - Leave.";
 		if Player consents:
@@ -965,8 +940,8 @@ to say JewelHeistSneak:
 		else:
 			LineBreak;
 			say "     Deciding that discretion is the better part of valor, you return to the library. Maybe try again later?";
-			Let Randomsneakvar be a random number between 1 and 30;
-			if (Randomsneakvar + dexterity of Player) < 25:
+			let Randomsneakvar be a random number between 1 and 30;
+			if Randomsneakvar + dexterity of Player < 25:
 				say "     [bold type]Rolling [Randomsneakvar] + Dexterity of [dexterity of Player] vs 25: [roman type]";
 				say "     The wolverine notices you leaving and chases you down the street, stopping at the end and returning to the store. You get the feeling he will be extra vigilant now he knows the store is a target.";
 				now JewelHeistCaught is 1;
@@ -975,11 +950,10 @@ to say JewelHeistSneak:
 				now Resolution of Jewel Heist is 1; [Player did not do event, may re-encounter later]
 
 to say JewelHeistFight:
-	now inasituation is true;
 	say "As you travel through the streets, you are spotted by a large, muscled beast. Were he not so tall, you would call him stocky, nearly as wide as he is tall, but all muscle. He has a battered security company [one of]jacket on his animalistic body[or]hat on his animalistic head[at random]. He is covered in dark fur with a few lighter patches. His face narrows into a dark muzzle with lighter fur above his brow and at his shoulders. He growls angrily as he watches you. You spot the company logo on his clothing - Wolverine Security.";
 	say "     He is prowling around jewelry shop, his instincts having locked him into aggressively guarding it. You seem to have come too close and set him off. Before you can back away, he charges at you aggressively, powerful paws raised to strike.";
 	challenge "Wolverine Guard";
-	if fightoutcome > 19 and fightoutcome <= 30: [lost or fled]
+	if fightoutcome > 19 and fightoutcome < 30: [lost or fled]
 		say "     The wolverine knocks you to the ground and wraps his hands around your neck. Not long after you black out. You wake up a few blocks down the road and quickly head back to the library. You curse your failure, knowing that he will be extra vigilant now he knows the store is a target.";
 		now JewelHeistCaught is 1;
 		now Resolution of Jewel Heist is 2; [Player did not do event and was spotted by the wolverine guard, may re-encounter later]
@@ -994,7 +968,6 @@ to say JewelHeistFight:
 		now SilverToken is 1;
 		increase score by 10;
 		now Resolution of Jewel Heist is 3; [Player Success, now has SilverToken]
-	now inasituation is false;
 
 to say KyrverthItemSay: [A little bit of trickery to have one lot of description for each form, this is called and fills in the missing word(s)]
 	if Kyrverthitemget is 1:
@@ -1051,7 +1024,6 @@ when play begins: [flags for blocking these events]
 		repeat with y running from 0 to 3:
 			add (entry x of eventlist) to BadSpots of (entry y of badspotlist);]
 
-
 to say ResolveEvent Valuable Museum Artifact:
 	if KyrverthStage is not 3:
 		say "     How did you get here? It shouldn't be possible. Please report this to the developers on the FS discord.";
@@ -1059,7 +1031,6 @@ to say ResolveEvent Valuable Museum Artifact:
 		say "     As you walk down an unexplored hall, a glint from one side catches your eye. A mask sits in the center of a side room, surrounded by Egyptian artefacts. You step closer and examine it in detail.";
 		say "     The mask is shaped like a jackals head and looks like it is mostly made of a blue gem. Inlaid gold lines cover the mask, accentuating the lines that shape the head. A plaque in front doesn't reveal much: 'Mask of Anubis - unknown origins, unknown date of creation. At least 2500 years old. Rumored to be the most sacred artefact of an ancient cult, this was given to the leader to allow them to lead them in times of crisis, supposedly by becoming the embodiment of Anubis.'";
 		say "     You can tell this is extremely valuable, [bold type]maybe Kyrverth would like it?[roman type][line break]";
-		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Steal it.";
 		say "     ([link]N[as]n[end link]) - Leave it as is.";
 		if Player consents:
@@ -1084,9 +1055,7 @@ to say ResolveEvent Valuable Warehouse Artifact:
 	else:
 		say "     As you explore the warehouse district, one in particular catches your eye. Unlike most of the others that have wooden doors and small locks, this particular building has a hand scanner and reinforced metal door. [']Something this beefy couldn't be for something worthless['] you reason - you should get in. A ladder on the next warehouse along looks promising, you climb to one roof and jump the 4ft distance to your targets roof. Walking around the roof, all the windows look to be shut, locked, and tough, but one at the end catches your eye. A crack spiderwebs out from the center, and to one side a rock lays on the ground, the obvious culprit. You walk over and grab it, taking a breath before bringing it down once, twice, three times on the glass. The window has shattered and looks on the brink of dropping. You carefully pick pieces of glass out rather than let it drop and quickly make a hole large enough to fit through. Dropping down to the platform below, you look down to see that the warehouse is full of complex equipment. None of it looks small enough for you to take, assuming that any of it would be of use to you. In the center of the room a wooden crate looks interesting - and out of place.";
 		say "     You drop down to the concrete floor and walk over to it. A label on the top says 'Prototype-0042501x, highly effective, shelved due to cost.'. This looks promising. You pry off the lid and throw it to one side, revealing... a tiger? No, not a tiger, a tiger costume. You shudder to think what this would look like with someone in it. Eight feet tall and heavily muscled like a bodybuilder, large razor sharp claws, and a long thick tail. If you could flip it over, you are sure you would see a fierce visage. Pushing the flap at the back open, you see complex wiring and tech inside. You think this could be worth a pretty penny, and a perfect gift for Kyrverth.";
-		LineBreak;
-		say "     [bold type]Should you take it to him?[roman type][line break]";
-		LineBreak;
+		say "[line break]     [bold type]Should you take it to him?[roman type][line break]";
 		say "     ([link]Y[as]y[end link]) - Steal it.";
 		say "     ([link]N[as]n[end link]) - Leave it as is.";
 		if Player consents:
@@ -1111,8 +1080,7 @@ to say ResolveEvent Valuable RLD Artifact:
 	else:
 		say "     As you walk through the red light district, [one of]a porn shop[or]'adult' shop[at random] catches your eye. Unlike the rest of the city it seems relatively unscathed. You are skeptical of finding anything of use (like food or water) from a porn store, but decide to explore it anyway. Inside the shop all manner of deviant objects catch your eye, from BDSM to the massive variety of sex toys. One wall in particular is especially interesting. Comprised entirely of dildos, it ranges from a tiny black dildo the size of your finger, to a massive one almost two feet long. Next to that you see some shapes you recognize. From a knotted canine dong, to a gigantic flared equine penis, to a barbed feline cock, you even see some strange cocks, like tentacles or mashups of multiple types of penises.";
 		say "     At the end of the row sits your prize, on a plinth and inside a glass box an intricate golden cock draws your eye. The shaft is obviously not human, a knot at the base quickly dispels that illusion. The entire cock is tapered from tip to knot like a tentacle, but from the tip lines emerge and go back a few inches in a cross shape, the purpose unknown. This dildo is solid gold - if the sign in front of it is to be believed.";
-		say "     [bold type]You can tell it's pretty valuable. Maybe Kyrverth would like it?[roman type][line break]";
-		LineBreak;
+		say "[line break]     [bold type]You can tell it's pretty valuable. Maybe Kyrverth would like it?[roman type][line break]";
 		say "     ([link]Y[as]y[end link]) - Steal it.";
 		say "     ([link]N[as]n[end link]) - Leave it be.";
 		if Player consents:
@@ -1136,8 +1104,7 @@ to say ResolveEvent Valuable Stables Artifact:
 		say "     How did you get here? It shouldn't be possible. Please report this to the developers on the FS discord with KyrverthStage: [KyrverthStage].";
 	else:
 		say "     Seeing a light from one side, you investigate and see a small opening you have never seen before. You peek your head inside and see lines of trophies and ribbons along either side and a silvery horseshoe on display in the center of the room. Obviously the stables was pretty successful before the city went crazy. You approach the box and read the plaque on the front: 'This aluminum horseshoe was worn by Winning Brew when she set the record for the fastest horse in the world, recorded over two furlongs, and has since been given to the winner of the stables derby each year.' You get the feeling this could be extremely valuable.";
-		say "     [bold type]Maybe Kyrverth would like it?[roman type][line break]";
-		LineBreak;
+		say "[line break]     [bold type]Maybe Kyrverth would like it?[roman type][line break]";
 		say "     ([link]Y[as]y[end link]) - Steal it.";
 		say "     ([link]N[as]n[end link]) - Leave it be.";
 		if Player consents:
@@ -1176,20 +1143,16 @@ carry out KyrverthSecretDebugCheat:
 KyrverthStealing is an action applying to nothing. [Trying to catch whatever the player puts for stealing the artifact back]
 understand "steal it back" as KyrverthStealing.
 understand "take it back" as KyrverthStealing.
-understand "steal the artifact" as KyrverthStealing.
-understand "steal artifact" as KyrverthStealing.
+understand "steal the/-- artifact" as KyrverthStealing.
 understand "take the artifact" as KyrverthStealing.
-understand "retake artifact" as KyrverthStealing.
-understand "retake the artifact" as KyrverthStealing.
-understand "rob the bank" as KyrverthStealing.
-understand "rob bank" as KyrverthStealing.
+understand "retake the/-- artifact" as KyrverthStealing.
+understand "rob the/-- bank" as KyrverthStealing.
 
 check KyrverthStealing:
 	if KyrverthItemStealable is false or location of Player is not Dragons Den, say "That's not a verb I recognize" instead;
 
 carry out KyrverthStealing:
 	say "     Kyrverth has been a bit of an ass lately, taking this back would definitely shrink him down and help with that ego, but he wouldn't willingly let you take it from him. Are you sure you want to steal it? He might not be very happy if you do.";
-	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Steal it.";
 	say "     ([link]N[as]n[end link]) - Leave it be.";
 	if Player consents:
@@ -1206,8 +1169,7 @@ carry out KyrverthStealing:
 			ItemGain Tiger Suit by 1 silently;
 		else if Kyrverthitemget is 5:
 			ItemGain Black Pearl by 1 silently;
-		LineBreak;
-		say "     [bold type][KyrverthItemSay] Added to Inventory.[roman type][Line Break]";
+		say "[line break]     [bold type][KyrverthItemSay] Added to Inventory.[roman type][Line Break]";
 		now KyrverthItemStealable is False;
 		now ScaleValue of Kyrverth is 4;
 		now Cock Length of Kyrverth is 28;
@@ -1220,8 +1182,8 @@ carry out KyrverthStealing:
 
 KyrverthItemReturn is an action applying to nothing.
 understand "Give it back" as KyrverthItemReturn.
-understand "Give artifact" as KyrverthItemReturn.
-understand "Return the artifact" as KyrverthItemReturn.
+understand "Give the/-- artifact" as KyrverthItemReturn.
+understand "Return the/-- artifact" as KyrverthItemReturn.
 
 check KyrverthItemReturn:
 	if KyrverthStage is not 5 or location of Player is not Dragons Den, say "That's not a verb I recognize" instead;
@@ -1229,26 +1191,23 @@ check KyrverthItemReturn:
 carry out KyrverthItemReturn:
 	if Racing Horseshoe is owned or Racing Horseshoe is present or Anubis Mask is owned or Anubis Mask is present or Golden Sculpture is owned or Golden Sculpture is present or Tiger Suit is owned or Tiger Suit is present or Black Pearl is owned or Black Pearl is present:
 		say "     Looking at the dragon and how this loss has affected him, you are temped to return the [KyrverthItemSay]. It's going to take a fair bit of Charisma to make him think you didn't steal it in the first place though.";
-		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Return the [KyrverthItemSay].";
 		say "     ([link]N[as]n[end link]) - Keep it.";
 		if Player consents:
-			Let RandomCharvar be a random number between 1 and 30;
-			if (RandomCharvar + charisma of player) < 30:
-				say "     [bold type]Rolling [Randomcharvar]/30 + Charisma of [charisma of player] vs 30: Success[roman type]";
+			let RandomCharvar be a random number between 1 and 30;
+			if RandomCharvar + charisma of player < 30:
+				say "     [bold type]Rolling [Randomcharvar]/30 + Charisma of [charisma of player] vs 30: Success[roman type][line break]";
 				say "     'Is that...?' the dragon gasps as you take the Artifact out of your pack. You explain that you managed to recover it in the city and begin to spin a tale of what you did to recover it, but his eyes are laser-focused on the artifact, you doubt he is even listening to you. Cutting the tale of your supposed acts of heroism short you hand it to him and take a good few steps back, aware of what is about to happen.";
 				say "     Kyrverth grabs the item and almost immediately drops it again, the power of having a larger hoard rushing into him much more quickly than before. He shakes from head to toe and his body begins to grow. It starts off as simple growth and a gain in size, but after gaining a few feet it begins to focus more in some areas than others. You take a few steps back as thick defined muscle begins to bulge out of his arms and legs. Slowly it unbalances him and forces him to fall forward. A loud crack announces the fact that once again he is going to walk on all fours from now on as his rear legs change. Paws increase in size and the talons rip large gashes in the floor as his hands tense and relax. His chest slowly begins to burgeon out with new muscle and length, then his head and tail stretch out in opposite directions to increase his overall length. Teeth and horns expand and return to their previous strength before the theft and what comes next showcases his incredible power. The dragon throws open his wings and shows off their new size with a few strong beats that blast air at you and it almost knocks you over. You spot a small smirk on his face while he folds his wings back in, pleased to have impressed you so much. Finally the energy heads to his groin and you stare in amazement as his large cock grows in size from an intimidating proposition to the point where it is [if scalevalue of Player is 1 or scalevalue of Player is 2]larger than[else if scalevalue is 3]as large as[else if scalevalue of Player is 4 or scalevalue of Player is 5]almost as big as[end if]you. The erect cock twitches and the red dragon moans in pleasure. Quickly handing you a newly massive pawful of supplies, he pushes you out of the door and asks for some privacy.";
-				LineBreak;
-				say "     [bold type]You decide to return to the Library, giving him some time to rest.[roman type]";
+				say "[line break]     [bold type]You decide to return to the Library, giving him some time to rest.[roman type][line break]";
 				WaitLineBreak;
 				ItemGain food by 5;
 				ItemGain water bottle by 5;
 				now KyrverthItemReturned is 2;
 			else:
-				say "     [bold type]Rolling [Randomcharvar]/30 + Charisma of [charisma of player] vs 30: Failed[roman type]";
+				say "     [bold type]Rolling [Randomcharvar]/30 + Charisma of [charisma of player] vs 30: Failed[roman type][line break]";
 				say "     You take out the artifact and start to say that you managed to recover it but he sees straight through you. 'You took it didn't you? I thought you were my friend!' He goes as if to hit you, but a quick scream of 'WAIT!' gets you a seconds reprieve. You explain that you took it because of his huge ego, and you are returning it in the hope he can keep his instincts more under control this time. You reach into your pack and manage to pull the [KyrverthItemSay] out without being interrupted this time. His eyes wide Kyrverth grabs it. 'Come back in 24 hours. I need some time - I'll [one of]do my best to[or]attempt to[or]try to[or]consider whether I should[at random] forgive you but this isn't something [one of]one[or]a person[or]a dragon[or]someone[at random] forgets in a hurry.' [one of]Incredulous[or]Stunned[or]Astonished[at random] at your luck you quickly turn around and leave, walking quickly along the street. A loud roar from behind catches you by surprise and you are saddened by not being able to see the growth this time, but you keep walking.";
 				now KyrverthItemReturned is 1;
-			WaitLineBreak;
 			if Kyrverthitemget is 1:
 				ItemLoss Anubis Mask by 1;
 			else if Kyrverthitemget is 2:
@@ -1266,6 +1225,7 @@ carry out KyrverthItemReturn:
 			now Cock Length of Kyrverth is 60;
 			now Ball Size of Kyrverth is 7;
 			increase score by 2;
+			WaitLineBreak;
 			move player to Grey Abbey Library;
 		else:
 			say "     You decide that discretion is the better part of valor and leave the item in your backpack.";
@@ -1279,11 +1239,9 @@ name	desc	weight	object
 "Golden Sculpture"	"A dildo supposedly made out of gold. The shaft is obviously not human - a spade-shaped tapered tip leading to multiple ridges the whole way down and a small knot at the bottom. This item would be extremely valuable to some people."	4	Golden Sculpture
 "Tiger Suit"	"A high tech suit that would make the wearer appear to be a fierce fighting tiger. This item would be extremely valuable to some people."	4	Tiger Suit
 
-
 Anubis Mask is a grab object.
 Usedesc of Anubis Mask is "[anubismaskuse]".
-
-It is temporary.
+Scent of Anubis Mask is "The mask smells of old dust.".
 
 to say anubismaskuse:
 	now KyrverthUsedArtifact is true;
@@ -1300,17 +1258,13 @@ to say anubismaskuse:
 	trigger ending "Kyrverth Jackal King";
 	end the story saying "You have become the Jackal King.";
 
-instead of sniffing Anubis Mask:
-		say "     The mask smells of old dust.";
-
 Racing Horseshoe is a grab object.
 Usedesc of Racing Horseshoe is "[racinghorseshoeuse]".
-
-It is temporary.
+Scent of Racing Horseshoe is "The horseshoe has that telltale smell of horses. It's not a strong smell, but it's definitely there.".
 
 to say racinghorseshoeuse:
 	now KyrverthUsedArtifact is true;
-	say "     You pull the horseshoe out of your pack, holding it in your hands. The first thing you notice is how [one of]light it is[or]little it weighs[at random]; you suppose that's why it's used for racehorses instead of a heavier metal like iron or steel. A sudden urge strikes, and you take off your shoes and hold the metal against your right foot to compare. The horseshoe is almost as long as your foot but one and a half times wider. The problems begin for you when you try to put it back in your pack. The top of the shoe is stuck to the end of your foot, and when you give it a yank, you nearly dislocate a toe. You let go in reflex to the pain, and the connection between it and your foot begins to tingle like crazy. It feels like that your foot is being split apart as you fall onto your backside. The area around the shoe goes black and slowly forms into a large hoof. From the top of the hoof, white hair grows around it from the ankle downwards, and a layer of chestnut fur spreads up from there. Your leg changes shape quickly with a fierce tingling sensation.";
+	say "     You pull the horseshoe out of your pack, holding it in your hands. The first thing you notice is how [one of]light it is[or]little it weighs[at random]; you suppose that's why it's used for racehorses instead of a heavier metal like iron or steel. A sudden urge strikes, and you take off your shoes and hold the metal against your right foot to compare. The horseshoe is almost as long as your foot but one-and-a-half times wider. The problems begin for you when you try to put it back in your pack. The top of the shoe is stuck to the end of your foot, and when you give it a yank, you nearly dislocate a toe. You let go in reflex to the pain, and the connection between it and your foot begins to tingle like crazy. It feels like that your foot is being split apart as you fall onto your backside. The area around the shoe goes black and slowly forms into a large hoof. From the top of the hoof, white hair grows around it from the ankle downwards, and a layer of chestnut fur spreads up from there. Your leg changes shape quickly with a fierce tingling sensation.";
 	say "     From there, it only takes seconds for your body to be covered in fur before the tingling spreads down your left leg, and you watch as your other foot spreads out then goes numb as it becomes a hoof. Shakily, you get to your fe-HOOVES and stumble forwards a few steps. You don't get far, overbalancing and falling on your face. As you stand up, you are distracted by an itch on your rear, but when you go to scratch, you find only hair; looks like your tail is coming in. The long hair grows out from a short stump and goes down almost to the ground. It's nothing fancy, but it balances you out. You try to walk back to the library, but don't get far before the next change hits you. You feel the urge to sneeze, but never actually do, instead your head narrows and lengthens out into an equine muzzle. You continue to walk despite the transformation, but the changes keep coming, and you end up abandoning the walk to look at yourself in a pane of glass. An unfamiliar squarish face looks back at you, slowly rising as your body gets taller.";
 	WaitLineBreak;
 	say "     Slowly, fat [one of]fades[or]melts[at random] away, muscles [one of]get[or]grow[or]become[at random] more toned, and then your legs [one of]expand[or]grow[at random] to almost double their [one of]original[or]previous[at random] size. Though you have no way to be sure, you are pretty sure the changes are finished now. You look at your reflection again. A joke about skipping arm day flits through your head, and you realize that your new body is built almost completely for running. You have two tall, rounded ears, a long, squarish muzzle with a white stripe from nose to mane, a tall, rounded neck with chestnut fur, and a black mane. Your chest and arms are largely unchanged, muscles more toned and covered in chestnut fur, but otherwise about the same as they were. The largest changes are from your waist down. A new tail balances you out, allowing your massively overdeveloped thigh muscles to propel your new hooves to higher speeds. Speaking of your new hooves, they are bordering on disproportionately [one of]large[or]huge[or]massive[at random], to give you as much grip as possible. One leg is barehoof, while the other has the horseshoe that started it all stuck on it. This mismatch of height does make things a bit harder to walk, but you quickly pick it up and begin to make your way through the city.";
@@ -1327,13 +1281,9 @@ to say racinghorseshoeuse:
 	trigger ending "Kyrverth Racehorse";
 	end the story saying "You have become a racehorse for the stables."; [one to two sentences in bold]
 
-instead of sniffing Racing Horseshoe:
-		say "     The horseshoe has that telltale smell of horses. It's not a strong smell, but it's definitely there.";
-
 Golden Sculpture is a grab object.
 Usedesc of Golden Sculpture is "[goldensculptureuse]".
-
-It is temporary.
+Scent of Golden Sculpture is "The cock has a strange smell to it, has this been... used before?".
 
 to say goldensculptureuse:
 	now KyrverthUsedArtifact is true;
@@ -1350,7 +1300,7 @@ to say goldensculptureuse:
 			else if Cock Length of Player >= 17: [too big and multicock]
 				say "     It doesn't look the right size, but you figure you might as well give it a go. Slowly pushing your [one of]cock[or]penis[or]dick[at random] inside, you push down and as inch after inch enters, you expect to reach the limit but to your surprise your entire cock fits in! Is the inside like a black hole? You pull it off but your cock is intact. You place [if Cock Count of Player is 2]both[else if Cock Count of Player is 3]all three[else]all[end if] in the entrance and slide it back on, once again you hilt within it even though it is smaller than your [one of]cock[or]dick[at random].";
 		if Ball Size of Player >= 4: [balls too big]
-			say "     Next you try to fit your balls into the balls of the dildo, [if Cock Length of Player >= 16] just like earlier[end if] your balls are too big to fit, but you give it a go anyway. Placing one ball inside then the other, the [one of]cock[or]dildo[at random] doesn't seem to care about your size, they fit in and the outside gives no indication that it shouldn't fit.";
+			say "     Next you try to fit your balls into the balls of the dildo,[if Cock Length of Player >= 16] just like earlier[end if] your balls are too big to fit, but you give it a go anyway. Placing one ball inside then the other, the [one of]cock[or]dildo[at random] doesn't seem to care about your size, they fit in and the outside gives no indication that it shouldn't fit.";
 		else if Ball Size of Player <= 3: [right size or smaller than required]
 			say "     Next you place your balls inside the balls of the dildo, one at a time it takes them comfortably[if Ball Size of Player <= 2] and even though your balls are nowhere near the size of the dildo, you don't feel any empty space[end if].";
 		[BACK TO NORMAL USE]
@@ -1385,26 +1335,22 @@ to say goldensculptureuse:
 	trigger ending "Kyrverth Golden Dragon";
 	end the story saying "You have become a golden dragon."; [one to two sentences in bold]
 
-instead of sniffing Golden Sculpture:
-		say "     The cock has a strange smell to it, has this been... used before?";
-
 Tiger Suit is a grab object.
 Usedesc of Tiger Suit is "[tigersuituse]".
-
-It is temporary.
+Scent of Tiger Suit is "The tiger suit doesn't really smell of anything, but when you open the suit you can smell a metallic aroma coming from inside.".
 
 to say tigersuituse:
 	now KyrverthUsedArtifact is true;
 	say "     You pull the high tech suit from your backpack, was this worth the trouble? Only one way to find out. You grab the slit in the back and pull to either side, revealing circuits and a blue fleshy material on the inside. Poking your head inside, a slot at the groin makes you realize that it is an 'adult' suit as well as a combat one.";
 	if Player is submissive:
-		say "     Suddenly the suit starts moving by itself! The arms bend backwards unnaturally and grab you, shoving you inside the suit. You [run paragraph on]";
+		say "     Suddenly the suit starts moving by itself! The arms bend backwards unnaturally and grab you, shoving you inside the suit. You ";
 	else:
-		say "     You climb inside and you [run paragraph on]";
-	say "feel the slit at the back close behind you. At first you can't move and all you feel is squishy padding around you, [run paragraph on]";
+		say "     You climb inside and you ";
+	say "feel the slit at the back close behind you. At first you can't move and all you feel is squishy padding around you, ";
 	if Player is submissive:
-		say "but slowly [run paragraph on]";
+		say "but slowly ";
 	else:
-		say "but a strange feeling energy enters the suit and causes it to shiver from its toes to its head. Slowly [run paragraph on]";
+		say "but a strange feeling energy enters the suit and causes it to shiver from its toes to its head. Slowly ";
 	say "feeling returns to you. Being a massive tiger doesn't feel that good at first, you stumble around trying to get your coordination back for an embarrassingly long time before finally realizing that your tail isn't just for show. Once you have your bearings, you look at yourself from head to toe.";
 	say "     8ft tall, your muscled body is a typical tiger, if a bit big. Your feet and paws seem a little too big for your body, but you can't complain for having better weapons in [bold type]this[roman type] city. Something else that seems slightly big is your sheath. Poking out is an ample cock for your body size, its size and spines at the tip are sure to please any future partner.";
 	WaitLineBreak;
@@ -1417,9 +1363,6 @@ to say tigersuituse:
 	now CockName of Player is "Fighting Tiger";
 	trigger ending "Kyrverth Fighting Tiger";
 	end the story saying "You have been consumed by the suit, and are now a fighting tiger."; [one to two sentences in bold]
-
-instead of sniffing Tiger Suit:
-		say "     The tiger suit doesn't really smell of anything, but when you open the suit you can smell a metallic aroma coming from inside.";
 
 Section 5 - Endings [TO BE COMPLETED 		...At some point.]
 
@@ -1526,7 +1469,7 @@ This is the Kyrverth Fighting Tiger rule:
 			say "     The costume has already closed up around you, but hits a snag when your tauric body prevents it from closing completely. The second it has finished changing your main body, you feel a pulse sent backwards and as the pulse passes it makes the hairs on your rear end stand up. Slowly your tauric lower half changes to match your upper half. Looking at yourself, your body looks like one of the Tigertaurs at the zoo - if the Tigertaurs went to the gym. Returning to normal life is a laughable idea, your massive body keeps hitting things by accident and with your changed shape, sitting in an office just isn't an option. The good news is that you don't need to look far to find a new job. The military happily takes you on as you are able to fight like a normal soldier while carrying supplies for the entire group on your back.";
 		else if Player is submissive: [sub ending]
 			say "     Your new body shivers, apparently not done changing. A black leather collar materializes around your neck. A black band with a D ring on the front, apparently your form has changed to match your submissive tendencies. Going back to normal life is all but impossible. Your thoughts almost constantly shift to sex and your form intimidates most normal people, at least when they aren't staring at your neck. While the leather collar isn't stuck to you, every time you leave it behind it finds its way back on to you within a few hours. You would suggest teleportation if you didn't know for sure it was impossible. It's not until a misread map leads you into a rather adult club that you find your true calling. While you are distracted someone sneaks up on you and by the time you feel the tug it's already too late, your new master has you leashed. You find yourself unable to resist commands while they hold the leash and are brought back to their house for a new stress free, submissive life.";
-			say "     After a while you don't even need the leash anymore, your body, or maybe your mind get accustomed to obeying such a dominant person and you obey [bold type]any[roman type] command. You didn't even realize it was possible, but an offhand comment has your cock shrinking and chest bulging. You always return to your base form after a few hours, but your body obeys commands to change just as readily as commands to move. Never having to worry about money, food, or other mundane concerns feels freeing, and you find yourself wishing this experience will never end.";
+			say "     After a while you don't even need the leash anymore, your body, or maybe your mind get accustomed to obeying such a dominant person and you obey [bold type]any[roman type] command. You didn't even realize it was possible, but an offhand comment has your cock shrinking and chest bulging. You always return to your base form after a few hours, but your body obeys commands to change just as readily as commands to move. Never having to worry about money, food or other mundane concerns feels freeing, and you find yourself wishing this experience will never end.";
 		else if Player is Dominant: [Dominant Ending]
 			say "     Your new body shivers, apparently not done changing. A black leather harness materializes around your torso. An X across your chest, apparently your form has changed to match your dominant tendencies. Going back to normal life is all but impossible. Your thoughts almost constantly shift to sex and your form intimidates most normal people. While the leather harness on your chest isn't stuck to you, every time you leave it behind it finds its way back on to you within a few hours. You would suggest teleportation if you didn't know for sure it was impossible. The harness gets you some awkward questions when out and about and it's not until a misread map leads you into a gay bar that you find your true calling. Every week you visit a clients house and utterly dominate them for hours on end. This causes both of you great pleasure and at the end of the weekend they always pay handsomely.";
 		else: [Normal Ending]

@@ -1,16 +1,13 @@
 Misc Scene 5 by Kaleem mcintyre begins here.
 [Several events transferred to Consolidated Outside Events in Song's folder]
 
-
 Section 1 - Helping the Helpless
 
 [Moved to Consolidated Outside Events]
 
-
 Section 2 - The Pack
 
 [Moved to Consolidated Outside Events]
-
 
 Section 3 - Lady Surrounded by Butterflies
 
@@ -28,7 +25,6 @@ to say ResolveEvent Lady Surrounded by Butterflies:
 	increase score by 1;
 	now Lady Surrounded by Butterflies is resolved;
 
-
 Section 4 - The Dorms Part One
 
 Table of GameEventIDs (continued)
@@ -43,7 +39,6 @@ to say ResolveEvent The Dorms part one:
 	say "     Heading through the dormitory area of the college campus, you find yourself coming to a slow halt as you hear the rampant sounds of laughter coming from a slightly open doorway. Curious as to what the joke is you walk over to the slightly parted doorway and then push at the wood barrier carefully with your foot to get a better look inside. What you come to find is a small collective of half changed guys all piled around while playing video games together in front of a big screen TV. The dorm boys don't seem to be bothered by the fact that they are losing their humanity as the two collie boys nudging each another on the couch seem much more interested in whatever game their competing against. Back behind them two other students, a cougar and panther, respectfully, stand tall while pointing, jeering and laughing at their friend's antics. Seeing this you pull yourself away from your position by the door to walk away on down the hall. It feels good to know that some things will never change despite the epidemic going on.";
 	increase score by 1;
 	now The Dorms Part One is Resolved;
-
 
 Section 5 - The Dorms Part Two
 
@@ -64,7 +59,6 @@ to say ResolveEvent The Dorms Part Two:
 	increase score by 1;
 	now The Dorms Part Two is resolved;
 
-
 Section 6 - The Dorms Part Three
 
 Table of GameEventIDs (continued)
@@ -74,7 +68,8 @@ Dorms Part Three	"Dorms Part Three"
 The Dorms Part Three is a situation.
 ResolveFunction of The Dorms Part Three is "[ResolveEvent The Dorms Part Three]".
 Sarea of The Dorms Part Three is "Campus".
-When play begins:
+
+when play begins:
 	Add The Dorms Part Three to BadSpots of FurryList;
 	Add The Dorms Part Three to BadSpots of MaleList;
 	Add The Dorms Part Three to BadSpots of FemaleList;
@@ -82,29 +77,24 @@ When play begins:
 
 to say ResolveEvent The Dorms Part Three:
 	say "     Making your way through the college dorms, you find yourself stumbling over a large fluffy towel lying prone in the middle of the floor. Wondering who had left that there, you turn your head to regard several distinct noises coming out from the huge co-ed washroom on your left - or at least it's been relabeled as co-ed now. Your suspicions on the situation are confirmed after you kick the offending towel and notice that the cotton material is quite sticky with musky goop. Feeling quite curious to check it out, you do pause to wonder if you should have a look inside... for educational purposes of course.";
-	say "     [bold type]Go in?[roman type][line break]";
-	LineBreak;
+	say "[line break]     [bold type]Go in?[roman type][line break]";
 	say "     ([link]Y[as]y[end link]) - Yes.";
 	say "     ([link]N[as]n[end link]) - No.";
 	if Player consents:
-		LineBreak;
 		project the Figure of HuskyAlpha_hard_icon;
 		say "     Deciding that being a bit of a letch won't be the worst thing you've ever done, you tentatively step inside of the bathing/bathroom room to see what's going on.";
-		let bonus be (( Dexterity of Player minus 10 ) divided by 2);
+		let bonus be ( Dexterity of Player minus 10 ) divided by 2;
 		let diceroll be a random number from 1 to 20;
-		say "     You roll 1d20([diceroll])+[bonus]: [diceroll + bonus]: ";
+		say "[line break]You roll 1d20([diceroll])[if bonus >= 0]+[end if][bonus] = [special-style-1][diceroll + bonus][roman type] vs [special-style-2]11[roman type] (Dexterity Check):[line break]";
 		increase diceroll by bonus;
-		if diceroll > 10:
-			say "You duck out of the way just in time to miss getting splattered by an Alpha Husky pumping his cock while masturbating in the middle of the tilted bathroom. The wet and sticky cum that now lines the wall behind you is thick with the pungent musk of dominant canine. Upon lifting your head to blink at the male dog, you wonder why in the hell is his beating off in front of the doorway. You have to gape slightly at what you see happening around you.";
-		else:
-			say "Not seeing it coming, you find yourself getting splattered in the face by hot and musky cum. Spluttering and wiping the goop off before it can get into your mouth or nose, you find yourself glaring angrily as you turn your eyes to the Alpha Husky beating himself off on the floor of washroom. Wondering why the other is doing such a thing there right in front of the door way, you look around and then gape slightly.";
+		say "     [if diceroll > 10]You duck out of the way just in time to miss getting splattered by an Alpha Husky pumping his cock while masturbating in the middle of the tilted bathroom. The wet and sticky cum that now lines the wall behind you is thick with the pungent musk of dominant canine. Upon lifting your head to blink at the male dog, you wonder why in the hell is his beating off in front of the doorway. You have to gape slightly at what you see happening around you[else]Not seeing it coming, you find yourself getting splattered in the face by hot and musky cum. Spluttering and wiping the goop off before it can get into your mouth or nose, you find yourself glaring angrily as you turn your eyes to the Alpha Husky beating himself off on the floor of washroom. Wondering why the other is doing such a thing there right in front of the door way, you look around and then gape slightly[end if].";
 		say "     When you turn your head to see several other campus students pounding and getting pounded by their classmates and friends, you find yourself blushing somewhat at the rampant sight of such sexual promiscuity going on. The veritable orgy going on around you is so hot and wild that you feel yourself getting quite hot as you look at the multiple furry figures standing, sitting and laying around and fucking each other. Moving out of the danger zone of where the Alpha Husky is busy trying to pump another load out of his cock, you move over to get in a better spot to really see what's going on.";
 		WaitLineBreak;
-		say "     By order of closest to the doorway, you note a pair of lions - one male and one herm - going at it hard with the male on his back while the herm deeply shoves her dick inside of him in order to dominate her lover's flexing tailhole. Seeing the other's fat breasts jumping up and down while the hermaphrodite fucks her current lover, you smile somewhat perversely while imagining how full this [']king of beasts['] must be feeling right about now at this slightly strange role reversal. Snickering, you turn your eyes away from the rutting feline pair to the stallion and ocelot couple mating just five feet off to the side. The small cat is sitting on the tiles with his back against the wall while pumping the much larger horse up and down onto his overly long dick with a steady series of pumps of his arms. From what you can see of the horse's foot and a half long piece of male meat, the other is loving being fucked like a mare - if the gushing flared head was any testament to the stallion's feelings. Though it is slightly strange to see the bigger male being taken by the smaller feline, but then again you surmise that size had nothing to do with the want to be the receptive partner. Moving your gaze over to a cheetah and rabbit, both of whom are girls and sixty-nining each other while lying horizontal on the floor, you have to tilt your head to the side to see clearly just how deeply both female's tongues are burying themselves into each other's snatch. And from what you can see, their twosome is going pretty deep into one another. Wet and sticky with their respective honey, both female's legs and faces are drenched in the other's feminine juices. It's only after you turn your head completely to the right that you see the last person in the room standing tall against the wall.";
+		say "     By order of closest to the doorway, you note a pair of lions - one male and one herm - going at it hard with the male on his back while the herm deeply shoves her dick inside of him in order to dominate her lover's flexing tailhole. Seeing the other's fat breasts jumping up and down while the hermaphrodite fucks her current lover, you smile somewhat perversely while imagining how full this [']king of beasts['] must be feeling right about now at this slightly strange role reversal. Snickering, you turn your eyes away from the rutting feline pair to the stallion and ocelot couple mating just five feet off to the side. The small cat is sitting on the tiles with his back against the wall while pumping the much larger horse up and down onto his overly long dick with a steady series of pumps of his arms. From what you can see of the horse's foot-and-a-half long piece of male meat, the other is loving being fucked like a mare - if the gushing flared head was any testament to the stallion's feelings. Though it is slightly strange to see the bigger male being taken by the smaller feline, but then again you surmise that size had nothing to do with the want to be the receptive partner. Moving your gaze over to a cheetah and rabbit, both of whom are girls and sixty-nining each other while lying horizontal on the floor, you have to tilt your head to the side to see clearly just how deeply both female's tongues are burying themselves into each other's snatch. And from what you can see, their twosome is going pretty deep into one another. Wet and sticky with their respective honey, both female's legs and faces are drenched in the other's feminine juices. It's only after you turn your head completely to the right that you see the last person in the room standing tall against the wall.";
 		WaitLineBreak;
 		say "     Interestingly enough, the last character in the former showering-area-turned-brothel is standing by off himself and looking at you with a carefully guarded gaze. Tall, imposing and impossibly muscular, the black bear anthro watches you with a cautious glare as he stands with his arms folded over his chest. Not quite understanding why, or rather how, the other is resisting this smorgasbord of carnal delight, you walk over to talk to him to ask him just that. 'You coming to join the orgy, kid?' The ursine speaks with a voice that clearly has some age behind it. You blink twice before answering back that you were going to ask him the very same question, all the while trying your hardest to figure just how old this guy was. The black bear chuckles at you almost ruefully as watches confusion dance on your face. 'Before this whole thing started, I was a married gym teacher. So unlike the group in front of me, I've got more control over myself.' The bear puffs up proudly, but then flushes some when you give him a [']look[']. The ursine then ducks his head to the side to cough nervously. 'Well that, and my old lady would kill me if I so much as sneezed the wrong way at the students here. She's a lunch lady here, FYI.'";
 		LineBreak;
-		say "Not really understanding, you nod to the bear and then step your way casually around the Alpha Husky, who is now on his umpteenth orgasm of the day, out of them shower room. Heading down the hall, you chuckle to yourself as you think over the black bear's words. Just how scary must someone be to make their spouse so afraid they wouldn't even attempt to try and have sex with a willing, not to mention of legal age, partner during these dark and debased times?";
+		say "     Not really understanding, you nod to the bear and then step your way casually around the Alpha Husky, who is now on his umpteenth orgasm of the day, out of them shower room. Heading down the hall, you chuckle to yourself as you think over the black bear's words. Just how scary must someone be to make their spouse so afraid they wouldn't even attempt to try and have sex with a willing, not to mention of legal age, partner during these dark and debased times?";
 		LibidoBoost 15;
 		increase score by 1;
 		now Resolution of The Dorms Part Three is 1; [went in]
@@ -113,7 +103,6 @@ to say ResolveEvent The Dorms Part Three:
 		say "     Shaking your head, you try not to imagine what's going on as you step over the prone towel in front of you and then go about your way on your business. Some things should just be left well enough alone.";
 		now Resolution of The Dorms Part Three is 99; [disinterest]
 	now The Dorms Part Three is resolved;
-
 
 Section 6 - Training
 
@@ -124,23 +113,22 @@ Training Room	"Training Room"
 Training Room is a situation.
 ResolveFunction of Training Room is "[ResolveEvent Training Room]".
 Sarea of Training Room is "Campus".
-When play begins:
+
+when play begins:
 	Add Training Room to BadSpots of FurryList;
-	Add Training Room to BadSpots of MaleList
+	Add Training Room to BadSpots of MaleList;
 
 to say ResolveEvent Training Room:
 	say "     Finding your way through the campus grounds, you end up making your way downstairs inside of the college's gymnasium after jogging across the slightly sticky grass over to the imposing looking building. The musky smell of sweat and testosterone is heavy here, but surprisingly there is little cum or female juice wafting about on either the walls or the training equipment. Raising an eyebrow at this you figure out why as you notice a large wolverine standing by the door you just entered through. The large and slightly hunched over male is draped in barely any clothing, but from what you can see as you walk next to him he is far from aroused as he looks over the students assembled within the room with a calculating look in his dark eyes. Either this man was once one of the gym teachers before the epidemic and watching out over the place to make sure that it stayed in top shape, or either he had been put here by someone else to do the same thing. Either way, from the look the wolverine gives you as you enter into the room, you can see in his eyes that he won't accept any nonsense from you. Nodding to him while making sure to keep an arm's length of space between the two of you, you go over to have a better look at the gym and its surroundings.";
 	WaitLineBreak;
 	say "     All around you, students strain their bodies to become in greater shape than what their individual mutations have bestowed upon them, and upon seeing this, you give a nod to them for their fortitude. Over by the leftmost side of the room, there are several canids and equines busy hitting a bunch of assorted punching bags hanging from the ceiling. Not far from them are several more canines jogging on treadmills, while next to them several athletic felines use various weight machines to strengthen themselves. Over by the rightmost wall are three students - a rabbit, a lemur, and a collie - who are busy doing pushups, and from the looks of things, they are making a contest of it. Seeing everyone working so hard makes you want to try and do something yourself, but looking at the group around you, you wonder if you should just take over a piece of equipment as you aren't [']technically['] a student.";
-	say "     [bold type]Should you really go for it?[roman type][line break]";
-	LineBreak;
+	say "[line break]     [bold type]Should you really go for it?[roman type][line break]";
 	say "     ([link]Y[as]y[end link]) - Yes.";
 	say "     ([link]N[as]n[end link]) - No.";
 	if Player consents:
 		LineBreak;
 		say "     Figuring that the worst that can happen is that you can make a fool of yourself, you go over in the middle of the gym and then look around for something to use for your own personal training. So many machines are present but only the treadmill and stack machine seem to really call out to you. Both would be good to use for individual muscle growth, but which one to use? You really don't feel like doing both right now, even though you probably could if you put in the extra effort, but that's just not worth the fatigue you know you'll have to deal with after your workout.";
-		say "     [bold type]So in deciding to use one or another, which should you use?[roman type][line break]";
-		LineBreak;
+		say "[line break]     [bold type]So in deciding to use one or another, which should you use?[roman type][line break]";
 		say "     ([link]Y[as]y[end link]) - Treadmill.";
 		say "     ([link]N[as]n[end link]) - Stack Machine.";
 		if Player consents:
@@ -166,7 +154,6 @@ to say ResolveEvent Training Room:
 		now Resolution of Training Room is 99; [disinterest]
 	now Training Room is resolved;
 
-
 Section 7 - Janitor's Closet
 
 Table of GameEventIDs (continued)
@@ -176,10 +163,10 @@ Janitor's Closet	"Janitor's Closet"
 Janitor's Closet is a situation.
 ResolveFunction of Janitor's Closet is "[ResolveEvent Janitor's Closet]".
 Sarea of Janitor's Closet is "Campus".
-When play begins:
-	Add Janitor's Closet to BadSpots of FurryList;
-	Add Janitor's Closet to BadSpots of MaleList
 
+when play begins:
+	Add Janitor's Closet to BadSpots of FurryList;
+	Add Janitor's Closet to BadSpots of MaleList;
 
 to say ResolveEvent Janitor's Closet:
 	say "     Hearing something coming from the closet, you are just now passing you are almost afraid to know what's going on in there, but inquisitiveness makes you step over to the door to place an ear to the flat of the wood. The muffled sounds of someone groaning and whimpering have you tilting your head to the side in curiousness. Wanting to know what's going on and, lacking any thought that you are about to put yourself in danger, you reach a hand out to turn the knob of the door to open it. Pulling the barrier open you find yourself being tackled by a large furry form before you know what's happening. Grunting when your back hits the far wall you shake your head and then blink when you find yourself looking up into the growling, lustful face of a giant wolftaur. Cursing yourself, and wondering if this is what Pandora once felt like, you snarl back at the mutant and then prepare yourself for an inevitable conflict.";
@@ -194,7 +181,6 @@ to say ResolveEvent Janitor's Closet:
 		say "     Getting yourself tossed around like a ragdoll by the larger wolftaur, you barely have the time to see the other jump away from you with a snarl, completely lost in his feral minded haze, as the other runs off down the hallway. Grunting and getting up, you watch as the wolftaur - who was probably the janitor - disappears out of sight before you can blink. You suddenly hope that the other staff here can handle the beast because it looks like the proverbial wolf is on the prowl.";
 		now Resolution of Janitor's Closet is 2; [lost]
 	now Janitor's Closet is resolved;
-
 
 Section 8 - Teachers Lounge
 
@@ -211,7 +197,6 @@ to say ResolveEvent Teachers Lounge:
 	increase score by 1;
 	now Teachers Lounge is resolved;
 
-
 Section 9 - Roof Top
 
 Table of GameEventIDs (continued)
@@ -226,27 +211,16 @@ to say ResolveEvent Campus Rooftop:
 	say "     Trudging up several flights of stairs, you find way up to the uppermost floor of the college's main building and then come upon a metal door marked [']Roof[']. Smirking at the incredulity of someone needing to actually put a sign up on the only door at the top of the highest floor you throw open the barrier and then step outside. What you see when you head onto the roof make you freeze as you spy several students, some dressed in the college's standard issue uniforms, and some not, busying themselves with this or that or the other. From what you can see there are two gorillas are busily making out over by the left side of the roof's fence. One monkey guy is talking to a smiling and chuckling rat girl. A group of four of leather jacket clad wolves is busy playing cards over by the right side of the roof - most of them are growling and baiting each other with snaps of their muzzles. And one lone female feline wearing a black miniskirt is smoking while looking up to the sky. From what you can see everyone is busy trying to either enjoy themselves or just trying to make the day pass by just a little quicker by ignoring the happenings around them. Deciding to do the same, since you are here and all, you unceremoniously walk over to an empty side of the roof and then grab the fence protecting you from stepping out over the edge of the building. Looking down at the world below you stare in awe at the large campus of the college as the wide open space stretching out for almost miles around you dominates your vision.";
 	WaitLineBreak;
 	say "     From what you can see, there is much more to explore than what you could have been shown in any pamphlet. It takes you a second to recall that you did remembering seeing this place once before in a brochure, but you're not exactly sure when that was. Shaking your head you realize that it doesn't matter now. The breathtaking sight and feel of the college makes you shake your head to ward off the meaningless reminiscence as you watch so many anthros moving around down on the ground. Some were in groups. Some were alone. Some were trying to fuck each other and some were just strolling along without a care in the world. While drifting off as you do you don't feel it when someone comes over to brush up against your back. Too busy being enthralled by all of this awesomeness you also don't take notice when said someone kisses you on the cheek and then places something into your backpack. What you do notice is that after thirty minutes of just staring you are more than ready to head out back into the wide and crazy world down below. When you look around you find that almost everyone else has departed, save for the female feline still smoking her cigarette. You smile to the black skirt wearing feline without her seeing you, more out of politeness than infatuation, really, before heading back down into the main building of the college.";
-	say "[special gift]";
+	if a random number between 1 and 7 is:
+		-- 1: ItemGain food by 1;
+		-- 2: ItemGain water bottle by 1;
+		-- 3: ItemGain chocolate milk by 1;
+		-- 4: ItemGain testosterone pill by 1;
+		-- 5: ItemGain birth control pill by 1;
+		-- 6: ItemGain wolf cum by 1;
+		-- 7: ItemGain healing booster by 1;
 	increase score by 1;
 	now Campus Rooftop is resolved;
-
-to say special gift:
-	let T be a random number between 1 and 7;
-	if T is 1:
-		ItemGain food by 1;
-	if T is 2:
-		ItemGain water bottle by 1;
-	if T is 3:
-		ItemGain chocolate milk by 1;
-	if T is 4:
-		ItemGain testosterone pill by 1;
-	if T is 5:
-		ItemGain birth control pill by 1;
-	if T is 6:
-		ItemGain wolf cum by 1;
-	if T is 7:
-		ItemGain healing booster by 1;
-
 
 Section 10 - Dog and Pony Show
 
@@ -257,7 +231,8 @@ DogAndPony Show	"DogAndPony Show"
 DogAndPony Show is a situation.
 ResolveFunction of DogAndPony Show is "[ResolveEvent DogAndPony Show]".
 Sarea of DogAndPony Show is "Campus".
-When play begins:
+
+when play begins:
 	Add DogAndPony Show to BadSpots of FurryList;
 	Add DogAndPony Show to BadSpots of MaleList;
 
@@ -271,6 +246,5 @@ to say ResolveEvent DogAndPony Show:
 	say "     Knowing where this was going, you pull your head back from out of the doorway and then turn to leave about your way. An idle thought shoots through your mind over about what the Doberman meant when he called himself [']meager['] because from what you could see Eric was packing some serious heat in between his thighs. Maybe he's one of those insecure kinda guys, you think as you move along the downstairs area of the campus.";
 	increase score by 1;
 	now DogAndPony Show is resolved;
-
 
 Misc Scene 5 ends here.
