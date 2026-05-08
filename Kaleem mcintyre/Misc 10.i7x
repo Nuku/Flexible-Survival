@@ -22,8 +22,7 @@ to say ResolveEvent Mysterious Stranger:
 	say "     Pocketing the capsules, you hurry off on your way before anything can come from out of the shadows to try and accost you.";
 	ItemGain Capsule by 3;
 	now Mysterious Stranger is resolved;
-	Increase score by 1;
-
+	increase score by 1;
 
 Section 1a - Capsule
 
@@ -43,8 +42,6 @@ to say capsuleuse:
 		StatChange "stamina" by 1;
 	else:
 		say "     Waiting for the results to kick in, you spend almost ten minutes waiting before you find yourself shrugging. Guess the guy was full of bull.";
-
-
 
 Section 2 - Air Drop
 
@@ -67,7 +64,7 @@ to say ResolveEvent Air Drop:
 	ItemGain water bottle by 2;
 	AddNavPoint Abandoned Lot;
 	now Air Drop is resolved;
-	Increase score by 1;
+	increase score by 1;
 ]
 
 Section 3 - Magical Girl
@@ -79,15 +76,15 @@ Magical Girl	"Magical Girl"
 Magical Girl is a situation.
 ResolveFunction of Magical Girl is "[ResolveEvent Magical Girl]".
 Sarea of Magical Girl is "Outside".
-When play begins:
+
+when play begins:
 	Add Magical Girl to BadSpots of HumorousList;
 
 to say ResolveEvent Magical Girl:
 	say "     When out of the blue something falls onto your head, you find yourself wincing and then groaning in pain as you bow from the force of the blow to your skull. Not sure what's this about, but hoping you're not about to be bothered by any weirdo mutants, you blink as you look down to find a... small wand-like object winking up on the ground in front of you. The fact that said object has a small piece of paper tied to it only serves to increase your confusion as you kneel down to pick up the wand thing.";
 	WaitLineBreak;
 	say "     Looking up at the sky in question, as if hoping someone will explain where this thing had just come from, you find yourself gazing up at the [if daytimer is day]azure sky[else]starry skies above[end if] unsurely before shrugging helplessly. Checking out the wand and then looking at the piece of paper tied to it you blink in confusion as the scrawl written down reads 'Sailor Star Power!' The faintest memory of a TV show you had once seen before about magical girls pops through your head like a flash and silently you wonder if this is some kind of joke. Then again, given everything that happened in this town already you wonder if...";
-	say "     [bold type]Maybe you could perhaps shout the phrase out loud just to see what happens?[roman type][line break]";
-	LineBreak;
+	say "[line break]     [bold type]Maybe you could perhaps shout the phrase out loud just to see what happens?[roman type][line break]";
 	say "     ([link]Y[as]y[end link]) - Yes.";
 	say "     ([link]N[as]n[end link]) - No.";
 	if Player consents:
@@ -96,18 +93,16 @@ to say ResolveEvent Magical Girl:
 		say "     Where once before you had been dressed somewhat normally, you now find that you have on a navy blue sailor skirt with a pink ribbon tied onto the back draped onto your waist, a tight fitting white sleeveless shirt hugging your upper body, a pair of arm length white gloves strapped onto your arms, a pair of blue boots covering your feet, and a golden tiara placed neatly onto your head. You'd scream, but you're somewhat afraid of what may come out of the shadows to have a look at what the noise is all about so instead you shakily look for your backpack, which had mysteriously slipped from your shoulders during your transformation, grab said pack when you do find it and then hurry back to the bunker so you can make sense of all of this.";
 		say "     As you run off, you never notice a black cat sitting on the ground watching you as you scamper away in fear. And maybe that's a good thing, because at seeing the casual smirk lining the feline's facial features, your fading resolve might have completely crumbled and you might have had that nervous breakdown after all.";
 		ItemGain Sailor Outfit by 1;
-		AttemptToWait;
 		now Resolution of Magical Girl is 1; [shouted the phrase]
 		now battleground is "void";
+		WaitLineBreak;
 		move player to the Bunker;
-		Increase score by 1;
+		increase score by 1;
 	else:
 		LineBreak;
 		say "     Feeling almost foolish for thinking up something so dumb, you casually toss the wand to the side and then continue off on your way.";
 		now Resolution of Magical Girl is 2; [didn't shout the phrase]
 	now Magical Girl is resolved;
-
-
 
 Section 3a - Sailor Outfit
 
@@ -123,9 +118,7 @@ Traits of Sailor Outfit is {"sexy"}.
 The placement of Sailor Outfit is "body".
 The descmod of Sailor Outfit is "A simple yet magical sailor outfit rests over your body.".
 The slot of Sailor Outfit is "body".
-
-instead of sniffing Sailor Outfit:
-	say "The Sailor Outfit smells like something from out of this world mixed with determination to find your one true love.";
+Scent of Sailor Outfit is "The sailor outfit smells like something from out of this world mixed with determination to find your one true love.".
 
 Section 4 - June Mermaid
 
@@ -142,8 +135,6 @@ to say ResolveEvent June Mermaid:
 	say "     You watch as the otter shakes his head before pulling himself up and away from the mermaid somewhat sorrowfully. You continue to gaze at this sadly romantic scene even as the mermaid nods her head at the mustelid in understanding before diving into the ocean to go off about her way. The otter turns just in time to see a killer whale in a pair of cut-off blue jeans run up to him. The next few seconds are filled with strife between the two water mammals as they argue with each other, but at this point your attention wanes and you go off about your way.";
 	now June Mermaid is resolved;
 
-
-
 Section 5 - Anomaly
 
 Table of GameEventIDs (continued)
@@ -159,8 +150,6 @@ to say ResolveEvent Anomaly:
 	say "     Shrugging, you continue to make your way down the docks to go off to do what you were here to do in the first place while putting the odd occurrence out of your mind. However, had you looked back to check one more time, you would have noticed a pair of faintly glowing yellow eyes radiating from inside of the sea following the path you are taking.";
 	now Anomaly is resolved;
 
-
-
 Section 6 - Free Catch!
 
 Table of GameEventIDs (continued)
@@ -170,15 +159,14 @@ Free Catch	"Free Catch"
 Free Catch is a situation.
 ResolveFunction of Free Catch is "[ResolveEvent Free Catch]".
 Sarea of Free Catch is "Warehouse".
-When play begins:
+
+when play begins:
 	Add Free Catch to BadSpots of FurryList;
 
 to say ResolveEvent Free Catch:
 	say "     'Fresh fish!' The words make you pause even as you think how odd they sound given the limited amount of supplies there are here in the city. Turning to search for the area in which the voice had come from you look to find a black furred otter holding up a fish in one of her webbed hands. Thinking that maybe having a little extra variety in today's meal might be good for your stomach you head over to the otter to ask how much. 'There's no charge dear. I'm giving away what I have to those who don't have much. So here,' the otter hands you two fish, 'take these and take care of yourself.' Nodding to the kind mustelid, you smile as you think about how nice some people can be, despite the craziness going on in the city.";
 	ItemGain Tasty Fish by 2;
 	now Free Catch is resolved;
-
-
 
 Section 7 - Rumors
 
@@ -195,8 +183,6 @@ to say ResolveEvent Rumors:
 	say "     'Strange like what?' the otter asks. 'Well, things like a rash of animal attacks, people going missing, and people reporting seeing strangers moving others['] stuff out of their houses in the dead of night,' the orca mutters. 'So you think that what...?' the hydra inquires suspiciously. 'It could be just a coincidence, but I heard that...' The others move away before you can hear any more.";
 	now Rumors is resolved;
 
-
-
 Section 8 - Diving contest
 
 Table of GameEventIDs (continued)
@@ -211,8 +197,6 @@ to say ResolveEvent Diving Contest:
 	say "     Moving over to the pier and listening to several groups of mutants arguing with each other over who can dive the best you watch as a somewhat bored looking pirate shark comes over and then offers a challenge to the groups. The rules are simply: whoever can show off the best moves while diving gets to put their group's mark on a board at the front of the pier for this week and be named Diving Champs. This sets the respective groups on fire and soon the contest to see who can dive the best gets quickly under way. You don't stay to watch the show, but you do notice how everyone seems to be getting along better now since they have a way to exert some of their pent up aggressions with one another. Maybe this will be a key to helping to figure things out for later, you think before moving on.";
 	now Diving Contest is resolved;
 
-
-
 Section 9 - Lackadaisical
 
 Table of GameEventIDs (continued)
@@ -222,12 +206,12 @@ Lackadaisical	"Lackadaisical"
 Lackadaisical is a situation.
 ResolveFunction of Lackadaisical is "[ResolveEvent Lackadaisical]".
 Sarea of Lackadaisical is "Warehouse".
-When play begins:
+
+when play begins:
 	Add Lackadaisical to BadSpots of FurryList;
 
 to say ResolveEvent Lackadaisical:
 	say "     Watching as several furry mutants cast lines off into the sea from the edge of the pier, you find yourself in awe of how [italic type]comfortable[roman type] everyone seems to be despite their various mutations. Listening as some of the otters chitter and chatter to the taller orcas and sharks currently standing beside them, you laugh to yourself about how lackadaisical others can be even during the midst of a crisis.";
 	now Lackadaisical is resolved;
-
 
 Misc 10 ends here.

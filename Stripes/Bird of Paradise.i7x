@@ -44,14 +44,14 @@ to say bopvictorysex1:
 	now Libido of Player is ( Libido of Player * 2 ) / 5;
 	CreatureSexAftermath "Bird of Paradise" receives "PussyFuck" from "Player";
 
-Section 2 - Creature Insertion
-
 to say birdofparadisedesc:
 	if bopseen is true:
 		say "     Another of the beautifully colorful avians lands in front of you and begins her mating dance. Her exotic motions and vibrant plumage are alluring, drawing your eyes to her lovely breasts and tantalizing pussy. The slender, curvaceous bird uses her lovely call and sexy motions to try and entice you. You find yourself wanting to move with her, to touch those lovely feathers of hers. She swishes her long, colorful tail and you shake your head, trying to pull yourself together before you're drawn in by those large and lovely eyes of hers again.";
 	else:
 		say "     A beautifully colorful avian being comes soaring out of the air and lands in front of you. Making several exotic poses that show off her feminine curves and bright plumage, the bird woman gives a musical song as she dancing towards you. Her slender body is covered in long, stunning feathers of all imaginable colors and hues, making her look like a living rainbow, or perhaps a well-stocked artist's palette. Some of the feathers are exceptionally long and curl upwards at the ends, giving her the appearance of wearing an exquisite technicolor cloak. Her head is crowned with a large, almost unwieldy crest of fluffy feathers that curve forward in a range of autumn colors. Two glassy, translucent eyes peer out from above a thick, curved beak - they're so wide and empty that you feel you could easily lose yourself in the bird of paradise's rather hypnotic gaze. Her body is warm and inviting, with a definite sense of the approachable and perhaps even huggable to her. A lovely pair of wings sprouts from the bird's back, bands upon bands of soft, melding colors forming a living rainbow. She has a pair of grand breasts upon her chest, fluffy and soft with a coat of downy feathers. Her arms are long, slender and firm beneath the colorful array of feathers covering her upper arms and the sheen of golden scales that cover her forearms and hands. Her hands end in long, dexterous fingers, each one tipped with small, pointy talons that look as if they were designed for getting a good grip on various small objects. Her legs are solid and look as if they've some muscle definition to them, which is quite reasonable considering the heavy-looking claws she has on her scaled feet. Her tailfeathers are so long that they sweep the ground as she walks, yet somehow still manage to remain spotless despite that. The feathers themselves are large and broad, starting from a deep violet from within their shafts and gradually warming through all the colors of the rainbow up to the edges. Through glimpses you catch as she does her exotic dance towards you, you catch side of her large, tantalizing pussy with its soft cushion of bright feathers around it.";
 		now bopseen is true;
+
+Section 2 - Creature Insertion
 
 Table of CombatPrep (continued)
 name(text)	PrepFunction(text)

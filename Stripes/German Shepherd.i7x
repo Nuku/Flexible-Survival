@@ -310,12 +310,12 @@ to say losetogsd:
 				say "     Having repeatedly [if HP of Player > 0]accepted your place beneath[else]been put in your place by[end if] this German shepherd, some part of you has come to accept that role. Whenever you meet again, he will be your alpha and you will [bold type]no longer be able to resist him[roman type].";
 
 [
-To gsd_set_male:
+to gsd_set_male:
 	choose row MonsterID in Table of Random Critters;
 	now sex entry is "Male";
 	now Nipple Count entry is 2;
 
-To gsd_unset_male:
+to gsd_unset_male:
 	choose row MonsterID in Table of Random Critters;
 	now sex entry is "Female";
 	now Nipple Count entry is 8;
@@ -718,7 +718,6 @@ to say gsd_special_final_00:
 						say "[gsd_special_final_06]";
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
-	clear the screen and hyperlink list;
 
 to say gsd_special_final_01:
 	if CockName of Player is "German Shepherd Male":

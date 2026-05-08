@@ -21,6 +21,7 @@ Bounty Hunter	"Bounty Hunter"
 Bounty Hunter is a situation.
 ResolveFunction of Bounty Hunter is "[ResolveEvent Bounty Hunter]".
 Sarea of Bounty Hunter is "Red".
+
 when play begins:
 	add Bounty Hunter to BadSpots of FurryList;
 	add Bounty Hunter to BadSpots of MaleList;
@@ -28,14 +29,13 @@ when play begins:
 to say ResolveEvent Bounty Hunter:
 	follow the breast descr rule;
 	if perception of Player > 15 or "Wary Watcher" is listed in feats of Player:
-		say "     Your exploration of the city takes you past a small bar. Noticing no activity, you pause for a moment and peek inside. It's only moments before you were going to be grabbed from behind that you realize that things were actually too quiet. Going back on alert, you're able to dodge the oncoming grapple and roll to the side. Getting up a few feet away, you find it is a tough looking bull-man confronting you. ";
+		say "     Your exploration of the city takes you past a small bar. Noticing no activity, you pause for a moment and peek inside. It's only moments before you were going to be grabbed from behind that you realize that things were actually too quiet. Going back on alert, you're able to dodge the oncoming grapple and roll to the side. Getting up a few feet away, you find it is a tough looking bull-man confronting you. Quick as a whip, the gruff bull pulls a sawed-off shotgun into his hands and points it straight at your chest. This gives you serious pause, during which looks you over with a mean gaze. His eyes look you over up and down, but rather than stop at either your face or your junk, they stop somewhere in between[if Breast Size of Player > 4]. And while they do linger on your [short breast size desc of Player] a little longer, it's not there they stop either[end if]. Eventually he seems satisfied though and lowers the gun, and you heave a large sigh of relief.";
+	else if strength of Player > 18:
+		say "     Your exploration of the city takes you past a small bar. Noticing no activity, you pause for a moment and peek inside. But without warning, you find yourself grappled from behind. He squeezed you in his crushing grip before you break yourself free with your enhanced might ([special-style-1]8[roman type] dmg). Turning, you find it is a tough looking bull man confronting you. Quick as a whip, the gruff bull pulls a sawed-off shotgun into his hands and points it straight at your chest. This gives you serious pause, during which looks you over with a mean gaze. His eyes look you over up and down, but rather than stop at either your face or your junk, they stop somewhere in between[if Breast Size of Player > 4]. And while they do linger on your [short breast size desc of Player] a little longer, it's not there they stop either[end if]. Eventually he seems satisfied though and lowers the gun, and you heave a large sigh of relief.";
+		decrease HP of Player by 8;
 	else:
-		say "     Your exploration of the city takes you past a small bar. Noticing no activity, you pause for a moment and peek inside. But without warning, you find yourself grappled from behind. He squeezed you in his crushing grip [if strength of Player > 18]before you break yourself free with your enhanced might (8 dmg)[else]until you see spots before he tosses you roughly against the wall (16 dmg)[end if]. Turning, you find it is a tough looking bull man confronting you. ";
-		if strength of Player > 18:
-			decrease HP of Player by 8;
-		else:
-			decrease HP of Player by 16;
-	say "Quick as a whip, the gruff bull pulls a sawed-off shotgun into his hands and points it straight at your chest. This gives you serious pause, during which looks you over with a mean gaze. His eyes look you over up and down, but rather than stop at either your face or your junk, they stop somewhere in between[if Breast Size of Player > 4]. And while they do linger on your [short breast size desc of Player] a little longer, it's not there they stop either[end if]. Eventually he seems satisfied though and lowers the gun, and you heave a large sigh of relief.";
+		say "     Your exploration of the city takes you past a small bar. Noticing no activity, you pause for a moment and peek inside. But without warning, you find yourself grappled from behind. He squeezed you in his crushing grip until you see spots before he tosses you roughly against the wall ([special-style-1]16[roman type] dmg). Turning, you find it is a tough looking bull man confronting you. Quick as a whip, the gruff bull pulls a sawed-off shotgun into his hands and points it straight at your chest. This gives you serious pause, during which looks you over with a mean gaze. His eyes look you over up and down, but rather than stop at either your face or your junk, they stop somewhere in between[if Breast Size of Player > 4]. And while they do linger on your [short breast size desc of Player] a little longer, it's not there they stop either[end if]. Eventually he seems satisfied though and lowers the gun, and you heave a large sigh of relief.";
+		decrease HP of Player by 16;
 	say "     'Sorry [']bout that. Thought you might've been someone else,' he says, slipping the shotgun into a leather holster at his hip. 'Tellin['] who's who these days ain't easy.' No longer being held at gunpoint, you're able to relax and take in your would-be assailant. This tough-looking bull-man is decked out in a torn pair of black jeans, an open vest and a gold chain with a bounty hunter's badge attached to it. His clothing has old stains on it in a few places, though the rips are newer, probably stretched out by his transformation. In addition to the holstered shotgun, he's got a large knife on his other hip. Hanging around his thick neck are a pair of binoculars and a string necklace with an assortment of animal teeth on it.";
 	WaitLineBreak;
 	say "     This guy's been transformed into a stocky bull of a man. His bovine head is on a short neck and has its horns protruding from the sides of his temples. His body's bulky with muscle, and while he stands only a little above six feet tall, he looks like he could take on someone much larger with his bare hands. Any boots he may have worn have been discarded, his feet now ending in hardened hooves. His bovine coat is predominantly a russet red, with white on his head, down the center of his chest and at the end of his limbs. You start to ask him what all of that was about, but he waves you off, saying it's none of your business. He gives you another look over. 'You do seem to be keepin['] it together pretty good though. Care to chat for a bit. I got a bit of a business proposition for you.'";
@@ -47,7 +47,6 @@ to say ResolveEvent Bounty Hunter:
 	now HP of Bradford is 1;
 	now Bounty Hunter is resolved;
 
-
 Section 2 - Bradford's Camp
 
 Table of GameRoomIDs (continued)
@@ -55,15 +54,25 @@ Object	Name
 Bradford's Camp	"Bradford's Camp"
 
 Bradford's Camp is a room. It is fasttravel. It is private. It is sleepsafe.
-Description of Bradford's Camp is "[bradfordcampdesc]".
-
-the scent of Bradford's Camp is "The former accountant's office turned temporary stakeout camp smells of Bradford and wood chips overlaid on that of paperwork.".
-
-to say bradfordcampdesc:
-	say "     Tucked away upstairs in a second-story accountant's office is [if HP of Bradford is 0]the bull man's[else]Bradford's[end if] temporary camp. From the scattered supplies, camping stove and sleeping bag, he's been camped out here for at least a few days. Through the lowered blinds, the window gives a good view up and down the street and of the bar across the street. There's a clump of wood shavings piled on the floor near the window. While by no means neat, the place isn't dirty in a disgusting way, just untidy. The bull man typically sits keeping an eye out through the slats of the blinds, binoculars at the ready.";
-
+Description of Bradford's Camp is "     Tucked away upstairs in a second-story accountant's office is [if HP of Bradford is 0]the bull man's[else]Bradford's[end if] temporary camp. From the scattered supplies, camping stove and sleeping bag, he's been camped out here for at least a few days. Through the lowered blinds, the window gives a good view up and down the street and of the bar across the street. There's a clump of wood shavings piled on the floor near the window. While by no means neat, the place isn't dirty in a disgusting way, just untidy. The bull man typically sits keeping an eye out through the slats of the blinds, binoculars at the ready.[line break]".
+the scent of Bradford's Camp is "     The former accountant's office turned temporary stakeout camp smells of Bradford and wood chips overlaid on that of paperwork.".
 
 Section 3 - Bradford
+
+bradfordbounty is a number that varies.
+[bradfordstory is a number that varies.]
+bradfordBountyNum is a number that varies. bradfordBountyNum is usually 0.
+[numOfBountiesLeft is a number that varies. numOfBountiesLeft is usually 6.]
+demonBruteBountyState is a truth state that varies. demonBruteBountyState is usually false.
+twistedPimpBountyState is a truth state that varies. twistedPimpBountyState is usually false.
+saberKittyBountyState is a truth state that varies. saberkittyBountyState is usually false.
+alphaHuskyBountyState is a truth state that varies. alphaHuskyBountyState is usually false.
+latexErmineBountyState is a truth state that varies. latexErmineBountyState is usually false.
+spidergirlBountyState is a truth state that varies. spidergirlBountyState is usually false.
+bradfordstory1 is a truth state that varies. bradfordstory1 is usually false.
+bradfordstory2 is a truth state that varies. bradfordstory2 is usually false.
+bradfordstory3 is a truth state that varies. bradfordstory3 is usually false.
+bradfordstory4 is a truth state that varies. bradfordstory4 is usually false.
 
 Table of GameCharacterIDs (continued)
 object	name
@@ -108,58 +117,43 @@ TwistedCapacity of Bradford is false. [Twisted Characters can take any penetrati
 Sterile of Bradford is true. [steriles can't knock people up]
 MainInfection of Bradford is "".
 Description of Bradford is "[bradforddesc]".
-Conversation of Bradford is { "Moo, mutherfuckah!" }.
-the scent of the Bradford is "The bull man has a somewhat musky scent of sweat, but not overpoweringly so.".
-
-bradfordbounty is a number that varies.
-bradfordstory is a number that varies.
-bradfordBountyNum is a number that varies. bradfordBountyNum is usually 0.
-numOfBountiesLeft is a number that varies. numOfBountiesLeft is usually 6.
-demonBruteBountyState is a truth state that varies. demonBruteBountyState is usually false.
-twistedPimpBountyState is a truth state that varies. twistedPimpBountyState is usually false.
-saberKittyBountyState is a truth state that varies. saberkittyBountyState is usually false.
-alphaHuskyBountyState is a truth state that varies. alphaHuskyBountyState is usually false.
-latexErmineBountyState is a truth state that varies. latexErmineBountyState is usually false.
-spidergirlBountyState is a truth state that varies. spidergirlBountyState is usually false.
-
-bradfordstory1 is a truth state that varies. bradfordstory1 is usually false.
-bradfordstory2 is a truth state that varies. bradfordstory2 is usually false.
-bradfordstory3 is a truth state that varies. bradfordstory3 is usually false.
-bradfordstory4 is a truth state that varies. bradfordstory4 is usually false.
+[Conversation of Bradford is { "Moo, mutherfuckah!" }.]
+the fuckscene of Bradford is "[sexwithBradford]".
+the scent of the Bradford is "     The bull man has a somewhat musky scent of sweat, but not overpoweringly so.".
 
 to say bradforddesc:
-	say "[bradforddebug]";
+	if debugactive is 1:
+		say "DEBUG (Bradford) -> HP: [HP of Bradford] <- DEBUG[line break]";
 	project figure of Bradford_clothed_icon;
 	say "     [if HP of Bradford < 2]This guy's[else]Bradford's[end if] been transformed into a stocky bull of a man standing a little over six feet tall. His bovine head is on a short neck and has its horns protruding from the sides of his temples. He's wearing a pair of torn black jeans and a vest that leaves his chest uncovered, showing off the muscles of his abs and pecs. His clothing has a few old stains on it and shows several newer rips where his transformation's strained the material to fit his bulked-up muscles. He's armed and ready, carrying a sawed-off shotgun in a holster at his side and has a large knife on his other hip. Hanging around his thick neck is a gold chain with a bounty hunter's badge attached to it. Any boots he may have worn have been discarded, his feet now ending in hardened hooves. His bovine coat is predominantly a russet red, with white on his head, down the center of his chest and at the end of his limbs.";
 
-
 Section 4 - Dialog
 
-Instead of conversing the Bradford:
-	say "[bradforddebug]";
+instead of conversing the Bradford:
+	if debugactive is 1:
+		say "DEBUG (Bradford) -> HP: [HP of Bradford] <- DEBUG[line break]";
 	project figure of Bradford_clothed_icon;
 	if HP of Bradford is 0:
 		say "***Unknown error. Adjusting.";
 		now HP of Bradford is 1;
 		now Bounty Hunter is resolved;
 		AddNavPoint Bradford's Camp;
-	else if HP of Bradford is 1:
+	if HP of Bradford is 1:
 		say "     'The name's Bradford,' he says, holding out his hand to shake. 'I didn't mean to start us off on the wrong foot. Like I said - kinda tough to tell who's who out there these days. Makes my job as a bounty hunter all the harder. Which is what I wanted to talk about.' He takes a breath and uses the moment to peek through the blinds, scanning up and down the street. 'Now, as you can prob'bly guess, I'm lookin['] for someone who should be comin['] by here sooner or later. But it's takin['] longer'n expected. With all them monsters about, there's plenty of other work for a guy like me, but I don't want to miss my chance with this guy. Whole reason I came to this God-forsaken city in the first place. Ended up bullified for my troubles. Ain't no way I'm leavin['] without him. But that ain't why I called you up here.'";
-		say "     As he pauses to take another peek out between the blinds, you consider pointing out that his target might not have survived the city at all, let alone be identifiable. Either the bull knows something or he's clinging to some false hope. Either way, best not to risk upsetting him. 'Now, like I said, there's work to be done - not really bounty contracts, more like street-cleaning. No one wants these critters delivered to them or anything, they just wanna to seem them off the streets - roughed up and whatnot, so they crawl into their holes for a while, and maybe learn to not jump regular folks who're out and about. Couple of [']em I've got partially done, having dealt with some of the beasties earlier on. But they ain't comin['] around here much anymore, so if'n you can finish those contracts off for me, I'd be appreciative and cut you in on the bounty. And that's on top of the per-head reward them Zephyr guys are a-givin['].' ";
 		if HumorousList is banned:
-			say "He pulls out a folded printout from his vest pocket and looks it over. 'Hmm... Now ain't that odd. This one's done gone and changed on me. Says the bounty's been closed due to bannin['].' He turns the page towards you so you can see the red [']BANNED['] stamped across the image of a walking phallus creature. 'Guess we're not gettin['] that one no more,' he grumbles.";
+			say "     As he pauses to take another peek out between the blinds, you consider pointing out that his target might not have survived the city at all, let alone be identifiable. Either the bull knows something or he's clinging to some false hope. Either way, best not to risk upsetting him. 'Now, like I said, there's work to be done - not really bounty contracts, more like street-cleaning. No one wants these critters delivered to them or anything, they just wanna to seem them off the streets - roughed up and whatnot, so they crawl into their holes for a while, and maybe learn to not jump regular folks who're out and about. Couple of [']em I've got partially done, having dealt with some of the beasties earlier on. But they ain't comin['] around here much anymore, so if'n you can finish those contracts off for me, I'd be appreciative and cut you in on the bounty. And that's on top of the per-head reward them Zephyr guys are a-givin['].' He pulls out a folded printout from his vest pocket and looks it over. 'Hmm... Now ain't that odd. This one's done gone and changed on me. Says the bounty's been closed due to bannin['].' He turns the page towards you so you can see the red [']BANNED['] stamped across the image of a walking phallus creature. 'Guess we're not gettin['] that one no more,' he grumbles.";
 			WaitLineBreak;
 			say "     Taking another sheet from his vest, he checks that one. 'Okay, this one's still active. It's a little further away though.' You look it over quickly. The top of the page has [']BOUNTY['] printed across it with more details under the grayscale image of a smooth, latex-skinned wolf. Among the details are mentions of [']high viscosity['], [']encasement['] and [']corruptive infection[']. Another odd detail is how it stated the bounty is for eight of them, but there's another printed number marking that there's [bold type]four remaining[roman type] to complete the bounty. 'You take this and see if you can track down a few more of these things. I was able to get a bunch of [']em before I got here. Once you've got to last of th['], come back here and I'll cut you in on the reward.'";
 			now bradfordbounty is 4;
 			now HP of Bradford is 3;
 		else if Player is FemalePreferred:
-			say "He pulls out a folded printout from his vest pocket and looks it over. 'Hmm... Now ain't that odd. This one's done gone and changed on me. Says the bounty's been closed due to gender lockin['].' He turns the page towards you so you can see the red [']CLOSED['] stamped across the image of a walking phallus creature. 'Guess we're not gettin['] that one no more,' he grumbles.";
+			say "     As he pauses to take another peek out between the blinds, you consider pointing out that his target might not have survived the city at all, let alone be identifiable. Either the bull knows something or he's clinging to some false hope. Either way, best not to risk upsetting him. 'Now, like I said, there's work to be done - not really bounty contracts, more like street-cleaning. No one wants these critters delivered to them or anything, they just wanna to seem them off the streets - roughed up and whatnot, so they crawl into their holes for a while, and maybe learn to not jump regular folks who're out and about. Couple of [']em I've got partially done, having dealt with some of the beasties earlier on. But they ain't comin['] around here much anymore, so if'n you can finish those contracts off for me, I'd be appreciative and cut you in on the bounty. And that's on top of the per-head reward them Zephyr guys are a-givin['].' He pulls out a folded printout from his vest pocket and looks it over. 'Hmm... Now ain't that odd. This one's done gone and changed on me. Says the bounty's been closed due to gender lockin['].' He turns the page towards you so you can see the red [']CLOSED['] stamped across the image of a walking phallus creature. 'Guess we're not gettin['] that one no more,' he grumbles.";
 			WaitLineBreak;
 			say "     Taking another sheet from his vest, he checks that one. 'Okay, this one's still active. It's a little further away though - out in the main part of the city.' You look it over quickly. The top of the page has [']BOUNTY['] printed across it with more details under the grayscale image of a smooth, latex-skinned wolf. Among the details are mentions of [']high viscosity['], [']encasement['] and [']corruptive infection[']. Another odd detail is how it states the bounty is for eight of them, but there's another printed number marking that there's [bold type]four remaining[roman type] to complete the bounty. 'You take this and see if you can track down a few more of these things. I was able to get a bunch of [']em before I got here. Once you've got to last of th['], come back here and I'll cut you in on the reward.'";
 			now bradfordbounty is 4;
 			now HP of Bradford is 3;
 		else:
-			say "He pulls out a print-out sheet with a grayscale image of a walking phallus. The top of the page has [']BOUNTY['] across it and more details typed out below the image. Among that is mention of stuff like [']high output['], [']long-range semen launching['] and [']concerns about spreading the infection at a distance[']. Another odd detail is how it stated the bounty is for eight of them, but there's another printed number marking that there's [bold type]three remaining[roman type] to complete the bounty. 'You take this and see if you can track down a few more of these things. I was able to get most of [']em, but I guess they've learned not to come around here. Once you've got to last of [']em, come back here and I'll cut you in on the reward.'";
+			say "     As he pauses to take another peek out between the blinds, you consider pointing out that his target might not have survived the city at all, let alone be identifiable. Either the bull knows something or he's clinging to some false hope. Either way, best not to risk upsetting him. 'Now, like I said, there's work to be done - not really bounty contracts, more like street-cleaning. No one wants these critters delivered to them or anything, they just wanna to seem them off the streets - roughed up and whatnot, so they crawl into their holes for a while, and maybe learn to not jump regular folks who're out and about. Couple of [']em I've got partially done, having dealt with some of the beasties earlier on. But they ain't comin['] around here much anymore, so if'n you can finish those contracts off for me, I'd be appreciative and cut you in on the bounty. And that's on top of the per-head reward them Zephyr guys are a-givin['].' He pulls out a print-out sheet with a grayscale image of a walking phallus. The top of the page has [']BOUNTY['] across it and more details typed out below the image. Among that is mention of stuff like [']high output['], [']long-range semen launching['] and [']concerns about spreading the infection at a distance[']. Another odd detail is how it stated the bounty is for eight of them, but there's another printed number marking that there's [bold type]three remaining[roman type] to complete the bounty. 'You take this and see if you can track down a few more of these things. I was able to get most of [']em, but I guess they've learned not to come around here. Once you've got to last of [']em, come back here and I'll cut you in on the reward.'";
 			now bradfordbounty is 3;
 			now HP of Bradford is 2;
 	else if HP of Bradford is 2 and bradfordbounty <= 0:
@@ -176,7 +170,7 @@ Instead of conversing the Bradford:
 		now bradfordbounty is 4;
 	else if HP of Bradford is 3 and bradfordbounty <= 0:
 		say "     'Good goin['] with those wolf things. Got sent a message when you finished it up. I hope they weren't too much of a hassle. Here's your cut,' he says, tossing you a credit voucher. Checking it, you find it only worth 125 freecred.";
-		let xx be charisma of Player;
+		let xx be charisma of Player + ( level of Player / 5 );
 		if Breast Size of Player > 6:
 			increase xx by 3;
 		else if Breast Size of Player > 3:
@@ -184,16 +178,13 @@ Instead of conversing the Bradford:
 		if Player is female, increase xx by 1;
 		if "Haggler" is listed in feats of Player:
 			increase xx by 3;
-		increase xx by level of Player / 5;
 		let yy be 0;
 		if xx > 17:
-			now yy is xx / 2;
-			now yy is yy * 5; [done to give an even multiple of 5]
+			now yy is ( xx / 2 ) * 5; [done to give an even multiple of 5]
 			if yy > 100, now yy is 100;
-			say "     Feeling that's unfair given the amount of work you've put in, you tell him that you want a bigger cut. The two of you argue over it for a while, but you don't let up. You remind Bradford that he'd not be getting anything at all if you hadn't gone out to finish those contracts for him[if xx > 22]. You're able to wear him down fairly quickly with your arguments[else]. It takes some time for your arguments to sway him[end if][if Breast Size of Player > 3]. Add to that how your hint that you'd been looking forward to some quality time with him goads him into wanting to keep you pleased[end if]. In the end, you negotiate another [yy] freecred, leaving you much more satisfied with your share of the bounty.";
+			say "     Feeling that's unfair given the amount of work you've put in, you tell him that you want a bigger cut. The two of you argue over it for a while, but you don't let up. You remind Bradford that he'd not be getting anything at all if you hadn't gone out to finish those contracts for him. [if xx > 22]You're able to wear him down fairly quickly with your arguments[else]It takes some time for your arguments to sway him[end if][if Breast Size of Player > 3]. Add to that how your hint that you'd been looking forward to some quality time with him goads him into wanting to keep you pleased[end if]. In the end, you negotiate another [yy] freecred, leaving you much more satisfied with your share of the bounty.";
 		else:
-			now yy is xx / 3;
-			now yy is yy * 5; [done to give an even multiple of 5]
+			now yy is ( xx / 3 ) * 5; [done to give an even multiple of 5]
 			if yy > 50, now yy is 50;
 			say "     Feeling that's unfair given the amount of work you've put in, you try to negotiate for a better cut. The two of you argue over it for a while, but you make little headway against the bull-headed steer. In the end, you're only able to get another [yy] freecred out of him, as Bradford claims a lot of his share went to cover the fees and bribes needed to even get the contracts. Still, a little more's better than none.";
 		increase freecred by yy + 125;
@@ -207,17 +198,15 @@ Instead of conversing the Bradford:
 		say "     'This body of mine is like them cows on my da's ranch. Big, dumb Bradfords. Named after [']em and everything. I always hated them and that place. Left as soon as I could. Must be someone's idea of a sick joke, me lookin['] like this.'";
 	else:
 		say "     Walking up to the bull you ask if you could talk to him about something. 'Sure', he grunts, never taking his eyes away from the window. 'What'dya need?'";
-		WaitLineBreak;
 		say "[BradfordTalkMenu]";
 
 to say BradfordTalkMenu:
-	project figure of Bradford_clothed_icon;
-	LineBreak;
+	let TalkDone be false;
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]
 	choose a blank row in table of fucking options;
-	now title entry is "Chit Chat";
+	now title entry is "Chitchat";
 	now sortorder entry is 1;
 	now description entry is "strike up a conversation with the bull";
 	[]
@@ -244,21 +233,27 @@ to say BradfordTalkMenu:
 			choose row calcnumber in table of fucking options;
 			say "[title entry]: Shall you [description entry]?";
 			if Player consents:
-				let nam be title entry;
+				LineBreak;
 				now sextablerun is 1;
-				if nam is "Chit Chat":
-					say "[chitchatwithBradford]";
-				else if nam is "Bounty Board":
-					say "[bountyBoardBradford]";
-				else if nam is "Personal Question":
-					say "[personalQuestionBradford]";
+				if title entry is:
+					-- "Chitchat":
+						say "[chitchatwithBradford]";
+					-- "Bounty Board":
+						say "[bountyBoardBradford]";
+						now TalkDone is true;
+					-- "Personal Question":
+						say "[personalQuestionBradford]";
+						now TalkDone is true;
 				wait for any key;
+				if TalkDone is false:
+					say "[BradfordTalkMenu]";
 		else if calcnumber is 0:
+			LineBreak;
 			now sextablerun is 1;
 			say "     You step back from the bounty hunter, shaking your head slightly as he gives a questioning look.";
 			wait for any key;
 		else:
-			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
+			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options], or 0 to exit.";
 	clear the screen and hyperlink list;
 
 to say chitchatwithBradford: [smalltalk with Bradford]
@@ -271,7 +266,7 @@ to say bountyBoardBradford: [bounties with Bradford]
 	else if bradfordbounty <= 0 and bradfordBountyNum > 0:
 		now bradfordBountyNum is 0;
 		say "     'Good goin['] with those [if bradfordBountyNum is 1]Demon Brutes[else if bradfordBountyNum is 2]Twisted Punks[else if bradfordBountyNum is 3]Saber Kitties[else if bradfordBountyNum is 4]Alpha Huskies[else if bradfordBountyNum is 5]Latex Ermines[else if bradfordBountyNum is 6]Spider Girls[end if][roman type]. Got sent a message when you finished it up. I hope they weren't too much of a hassle. Here's your cut,' he says, tossing you a credit voucher. Checking it, you find it only worth 125 freecred.";
-		let xx be charisma of Player;
+		let xx be charisma of Player + (level of Player / 5);
 		if Breast Size of Player > 6:
 			increase xx by 3;
 		else if Breast Size of Player > 3:
@@ -279,16 +274,13 @@ to say bountyBoardBradford: [bounties with Bradford]
 		if Player is female, increase xx by 1;
 		if "Haggler" is listed in feats of Player:
 			increase xx by 3;
-		increase xx by level of Player / 5;
 		let yy be 0;
 		if xx > 17:
-			now yy is xx / 2;
-			now yy is yy * 5; [done to give an even multiple of 5]
+			now yy is ( xx / 2 ) * 5; [done to give an even multiple of 5]
 			if yy > 100, now yy is 100;
-			say "     Feeling that's unfair given the amount of work you've put in, you tell him that you want a bigger cut. The two of you argue over it for a while, but you don't let up. You remind Bradford that he'd not be getting anything at all if you hadn't gone out to finish those contracts for him[if xx > 22]. You're able to wear him down fairly quickly with your arguments[else]. It takes some time for your arguments to sway him[end if][if Breast Size of Player > 3]. Add to that how your hint that you'd been looking forward to some quality time with him goads him into wanting to keep you pleased[end if]. In the end, you negotiate another [yy] freecred, leaving you much more satisfied with your share of the bounty.";
+			say "     Feeling that's unfair given the amount of work you've put in, you tell him that you want a bigger cut. The two of you argue over it for a while, but you don't let up. You remind Bradford that he'd not be getting anything at all if you hadn't gone out to finish those contracts for him. [if xx > 22]You're able to wear him down fairly quickly with your arguments[else]It takes some time for your arguments to sway him[end if][if Breast Size of Player > 3]. Add to that how your hint that you'd been looking forward to some quality time with him goads him into wanting to keep you pleased[end if]. In the end, you negotiate another [yy] freecred, leaving you much more satisfied with your share of the bounty.";
 		else:
-			now yy is xx / 3;
-			now yy is yy * 5; [done to give an even multiple of 5]
+			now yy is ( xx / 3 ) * 5; [done to give an even multiple of 5]
 			if yy > 50, now yy is 50;
 			say "     Feeling that's unfair given the amount of work you've put in, you try to negotiate for a better cut. The two of you argue over it for a while, but you make little headway against the bull-headed steer. In the end, you're only able to get another [yy] freecred out of him, as Bradford claims a lot of his share went to cover the fees and bribes needed to even get the contracts. Still, a little more's better than none.";
 		increase freecred by yy + 125;
@@ -296,79 +288,74 @@ to say bountyBoardBradford: [bounties with Bradford]
 		extend game by 4;
 	else:
 		say "     'Still lookin['] for bounties huh? Well let's see if we can't find one here...' The bull pads over his backpack and begins shuffling through it, trying to find a contract that needs urgent attention. 'Here's a few that still need doin['].'";
-		say "[BradfordBountyMenu]";
-
-to say BradfordBountyMenu:
-	LineBreak;
-	say "     What kind of beasts do you want to hunt down?";
-	now sextablerun is 0;
-	blank out the whole of table of fucking options;
-	[]
-	choose a blank row in the table of fucking options;
-	now title entry is "Demon Brutes";
-	now sortorder entry is 1;
-	now description entry is "Hunt big purple demons";
-	[]
-	choose a blank row in the table of fucking options;
-	now title entry is "Twisted Pimps";
-	now sortorder entry is 2;
-	now description entry is "Hunt some nasty pimps out on the streets";
-	[]
-	choose a blank row in table of fucking options;
-	now title entry is "Saber Kitties";
-	now sortorder entry is 3;
-	now description entry is "Hunt sabretoothed muscle hulks";
-	[]
-	choose a blank row in table of fucking options;
-	now title entry is "Alpha Huskies";
-	now sortorder entry is 4;
-	now description entry is "Hunt big male huskies";
-	[]
-	choose a blank row in table of fucking options;
-	now title entry is "Latex Ermines";
-	now sortorder entry is 5;
-	now description entry is "Hunt some latex creatures";
-	[]
-	choose a blank row in table of fucking options;
-	now title entry is "Spidergirls";
-	now sortorder entry is 6;
-	now description entry is "Hunt spidergirls in the underground";
-	[]
-	sort the table of fucking options in sortorder order;
-	repeat with y running from 1 to number of filled rows in table of fucking options:
-		choose row y from the table of fucking options;
-		say "[link][y] - [title entry][as][y][end link][line break]";
-	say "[link]0 - Nevermind[as]0[end link][line break]";
-	while sextablerun is 0:
-		say "Pick the corresponding number> [run paragraph on]";
-		get a number;
-		if calcnumber > 0 and calcnumber <= the number of filled rows in table of fucking options:
-			now current menu selection is calcnumber;
-			choose row calcnumber in table of fucking options;
-			say "[title entry]: [description entry]?";
-			if Player consents:
-				let nam be title entry;
+		say "[line break]     What kind of beasts do you want to hunt down?";
+		now sextablerun is 0;
+		blank out the whole of table of fucking options;
+		[]
+		choose a blank row in the table of fucking options;
+		now title entry is "Demon Brutes";
+		now sortorder entry is 1;
+		now description entry is "Hunt big purple demons";
+		[]
+		choose a blank row in the table of fucking options;
+		now title entry is "Twisted Pimps";
+		now sortorder entry is 2;
+		now description entry is "Hunt some nasty pimps out on the streets";
+		[]
+		choose a blank row in table of fucking options;
+		now title entry is "Saber Kitties";
+		now sortorder entry is 3;
+		now description entry is "Hunt sabretoothed muscle hulks";
+		[]
+		choose a blank row in table of fucking options;
+		now title entry is "Alpha Huskies";
+		now sortorder entry is 4;
+		now description entry is "Hunt big male huskies";
+		[]
+		choose a blank row in table of fucking options;
+		now title entry is "Latex Ermines";
+		now sortorder entry is 5;
+		now description entry is "Hunt some latex creatures";
+		[]
+		choose a blank row in table of fucking options;
+		now title entry is "Spidergirls";
+		now sortorder entry is 6;
+		now description entry is "Hunt spidergirls in the underground";
+		[]
+		sort the table of fucking options in sortorder order;
+		repeat with y running from 1 to number of filled rows in table of fucking options:
+			choose row y from the table of fucking options;
+			say "[link][y] - [title entry][as][y][end link][line break]";
+		say "[link]0 - Nevermind[as]0[end link][line break]";
+		while sextablerun is 0:
+			say "Pick the corresponding number> [run paragraph on]";
+			get a number;
+			if calcnumber > 0 and calcnumber <= the number of filled rows in table of fucking options:
+				now current menu selection is calcnumber;
+				choose row calcnumber in table of fucking options;
+				say "[title entry]: [description entry]?";
+				if Player consents:
+					LineBreak;
+					now sextablerun is 1;
+					if title entry is:
+						-- "Demon Brutes":
+							say "[demonBruteBounty]";
+						-- "Twisted Pimps":
+							say "[twistedPimpBounty]";
+						-- "Saber Kitties":
+							say "[saberkittyBounty]";
+						-- "Alpha Huskies":
+							say "[alphaHuskyBounty]";
+						-- "Latex Ermines":
+							say "[latexErmineBounty]";
+						-- "Spidergirls":
+							say "[spidergirlBounty]";
+			else if calcnumber is 0:
+				LineBreak;
 				now sextablerun is 1;
-				if (nam is "Demon Brutes"):
-					say "[demonBruteBounty]";
-				else if (nam is "Twisted Pimps"):
-					say "[twistedPimpBounty]";
-				else if (nam is "Saber Kitties"):
-					say "[saberkittyBounty]";
-				else if (nam is "Alpha Huskies"):
-					say "[alphaHuskyBounty]";
-				else if (nam is "Latex Ermines"):
-					say "[latexErmineBounty]";
-				else if (nam is "Spidergirls"):
-					say "[spidergirlBounty]";
-				wait for any key;
-		else if calcnumber is 0:
-			now sextablerun is 1;
-			say "     You step back from the bounty hunter, shaking your head slightly as he gives a questioning look.";
-			wait for any key;
-		else:
-			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
-	clear the screen and hyperlink list;
+				say "     You step back from the bounty hunter, shaking your head slightly as he gives a questioning look.";
+			else:
+				say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options], or 0 to exit.";
 
 to say demonBruteBounty:
 	say "     'Those big purple demons have been runnin['] amok around the city. But it's been getting worse recently. Folks have been get'in kidnapped to hell knows where. Taking a few out might teach them to leave people alone.'";
@@ -376,9 +363,9 @@ to say demonBruteBounty:
 		now demonBruteBountyState is true;
 		now bradfordBountyNum is 1;
 		now bradfordbounty is 5;
-		say "'Alright, here you go. Says you gotta defeat five of [']em, good luck!'";
+		say "     'Alright, here you go. Says you gotta defeat five of [']em, good luck!'";
 	else:
-		say "'Hmm, looks like you already did this one, sorry. I'll tell you if this ever opens up again.'";
+		say "     'Hmm, looks like you already did this one, sorry. I'll tell you if this ever opens up again.'";
 
 to say twistedPimpBounty:
 	say "     'Zephyr's been gettin['] a lot of reports of some females missing in the Red Light District, only to reappear following these dressed up men. Says they put off some kinda pheromone that make women go crazy. Seems more are showing up, so thinning their numbers would help makes things safer around there.'";
@@ -386,9 +373,9 @@ to say twistedPimpBounty:
 		now twistedPimpBountyState is true;
 		now bradfordBountyNum is 2;
 		now bradfordbounty is 4;
-		say "'Alright, here you go. Says you gotta defeat four of [']em, good luck!'";
+		say "     'Alright, here you go. Says you gotta defeat four of [']em, good luck!'";
 	else:
-		say "'Hmm, looks like you already did this one, sorry. I'll tell you if this ever opens up again.'";
+		say "     'Hmm, looks like you already did this one, sorry. I'll tell you if this ever opens up again.'";
 
 to say saberkittyBounty:
 	say "     'Recently there's been reports around the city of busty sabretoothed felines fucking anything they can get their hands on. Doesn't help that it means their infection is spreadin['] like a wildfire. Much as I'd like to see one myself, maybe takin['] a few out would help slow down the spread.'";
@@ -396,9 +383,9 @@ to say saberkittyBounty:
 		now saberKittyBountyState is true;
 		now bradfordBountyNum is 3;
 		now bradfordbounty is 6;
-		say "'Alright, here you go. Says you gotta defeat six of [']em, good luck!'";
+		say "     'Alright, here you go. Says you gotta defeat six of [']em, good luck!'";
 	else:
-		say "'Hmm, looks like you already did this one, sorry. I'll tell you if this ever opens up again.'";
+		say "     'Hmm, looks like you already did this one, sorry. I'll tell you if this ever opens up again.'";
 
 to say alphaHuskyBounty:
 	say "     'Giant huskies have been goin['] around causin['] havok, forcing people to join their packs whether they like it or not, and after gettin['] infected most do. Puttin['] some in line might help in makin['] [']em all be less bold in the future.'";
@@ -406,9 +393,9 @@ to say alphaHuskyBounty:
 		now alphaHuskyBountyState is true;
 		now bradfordBountyNum is 4;
 		now bradfordbounty is 4;
-		say "'Alright, here you go. Says you gotta defeat four of [']em, good luck!'";
+		say "     'Alright, here you go. Says you gotta defeat four of [']em, good luck!'";
 	else:
-		say "'Hmm, looks like you already did this one, sorry. I'll tell you if this ever opens up again.'";
+		say "     'Hmm, looks like you already did this one, sorry. I'll tell you if this ever opens up again.'";
 
 to say latexErmineBounty:
 	say "     'There's been some trouble reported in the High Rise District recently. Somethin['] about a latex ferret or whatever goin['] around and attacking folks. Well, more fucking than attackin['] really... Though it sounds like it gettin['] out of hand.";
@@ -416,9 +403,9 @@ to say latexErmineBounty:
 		now latexErmineBountyState is true;
 		now bradfordBountyNum is 5;
 		now bradfordbounty is 5;
-		say "'Alright, here you go. Says you gotta defeat five of [']em, good luck!'";
+		say "     'Alright, here you go. Says you gotta defeat five of [']em, good luck!'";
 	else:
-		say "'Hmm, looks like you already did this one, sorry. I'll tell you if this ever opens up again.'";
+		say "     'Hmm, looks like you already did this one, sorry. I'll tell you if this ever opens up again.'";
 
 to say spidergirlBounty:
 	say "     'Mall security's gettin['] tired of losin['] maintenance men down in the sewers. Says they keep gettin['] trapped up by some spiders down there. Might help if you could encourage the creepers to find a new home.";
@@ -426,9 +413,9 @@ to say spidergirlBounty:
 		now spidergirlBountyState is true;
 		now bradfordBountyNum is 6;
 		now bradfordbounty is 7;
-		say "'Alright, here you go. Says you gotta defeat seven of [']em, good luck!'";
+		say "     'Alright, here you go. Says you gotta defeat seven of [']em, good luck!'";
 	else:
-		say "'Hmm, looks like you already did this one, sorry. I'll tell you if this ever opens up again.'";
+		say "     'Hmm, looks like you already did this one, sorry. I'll tell you if this ever opens up again.'";
 
 to say personalQuestionBradford:
 	if HP of bradford > 4 and bradfordstory2 is false:
@@ -446,128 +433,110 @@ to say personalQuestionBradford:
 
 Section 5 - Sex Mechanics
 
-the fuckscene of Bradford is "[sexwithBradford]".
 to say sexwithBradford:
-	say "[bradforddebug]";
+	if debugactive is 1:
+		say "DEBUG (Bradford) -> HP: [HP of Bradford] <- DEBUG[line break]";
 	if HP of Bradford < 4:
+		project figure of Bradford_clothed_icon;
 		say "     'Look. That's [if Breast Size of Player > 3]mighty [end if]temptin['], but I've got business to take care of. You should get back to those [if HP of Bradford is 2]cock cannon[else if HP of Bradford is 3]latex wolf[end if] bounties,' he adds. With that, he turns back to the window, making another scan up and down the street.";
 	else if lastfuck of Bradford - turns < 8:
+		project figure of Bradford_clothed_icon;
 		say "     'As fun as that sounds, I can't let myself get too distracted. [']Sides, I could use a bit of a break after that last go we had,' he adds with a grin.";
-	else if TimekeepingVar is 1 or TimekeepingVar is -7 and HP of Bradford > 6:
+	else if time is post midnight and HP of Bradford > 6:
 		say "[sexwithBradfordMidnight]";
 	else:
+		project figure of Bradford_naked_icon;
 		say "     Though he never takes the binoculars away from his eyes you can see him grin as he continues to look out the window. 'Sure, what'd you have in mind?'";
-		say "[Bradfordsexmenu]";
-		clear the screen and hyperlink list;
-
-to say Bradfordsexmenu:
-	project figure of Bradford_naked_icon;
-	LineBreak;
-	now sextablerun is 0;
-	blank out the whole of table of fucking options;
-	[]
-	choose a blank row in table of fucking options;
-	now title entry is "Fellatio";
-	now sortorder entry is 1;
-	now description entry is "suck on that thick bovine cock";
-	[]
-	choose a blank row in the table of fucking options;
-	now title entry is "Desktop Fuck";
-	now sortorder entry is 2;
-	now description entry is "bend over and take it from behind";
-	[]
-	choose a blank row in table of fucking options;
-	now title entry is "Wall Fuck";
-	now sortorder entry is 3;
-	now description entry is "have Bradford fuck you against a wall";
-	[]
-	if Player is female:
+		now sextablerun is 0;
+		blank out the whole of table of fucking options;
+		[]
 		choose a blank row in table of fucking options;
-		now title entry is "Lap Ride";
-		now sortorder entry is 4;
-		now description entry is "take Bradford's cock for a ride";
-	[]
-	sort the table of fucking options in sortorder order;
-	repeat with y running from 1 to number of filled rows in table of fucking options:
-		choose row y from the table of fucking options;
-		say "[link][y] - [title entry][as][y][end link][line break]";
-	say "[link]0 - Nevermind[as]0[end link][line break]";
-	while sextablerun is 0:
-		say "Pick the corresponding number> [run paragraph on]";
-		get a number;
-		if calcnumber > 0 and calcnumber <= the number of filled rows in table of fucking options:
-			now current menu selection is calcnumber;
-			choose row calcnumber in table of fucking options;
-			say "[title entry]: Shall you [description entry]?";
-			if Player consents:
-				let nam be title entry;
+		now title entry is "Fellatio";
+		now sortorder entry is 1;
+		now description entry is "suck on that thick bovine cock";
+		[]
+		choose a blank row in the table of fucking options;
+		now title entry is "Desktop Fuck";
+		now sortorder entry is 2;
+		now description entry is "bend over and take it from behind";
+		[]
+		choose a blank row in table of fucking options;
+		now title entry is "Wall Fuck";
+		now sortorder entry is 3;
+		now description entry is "have Bradford fuck you against a wall";
+		[]
+		if Player is female:
+			choose a blank row in table of fucking options;
+			now title entry is "Lap Ride";
+			now sortorder entry is 4;
+			now description entry is "take Bradford's cock for a ride";
+		[]
+		sort the table of fucking options in sortorder order;
+		repeat with y running from 1 to number of filled rows in table of fucking options:
+			choose row y from the table of fucking options;
+			say "[link][y] - [title entry][as][y][end link][line break]";
+		say "[link]0 - Nevermind[as]0[end link][line break]";
+		while sextablerun is 0:
+			say "Pick the corresponding number> [run paragraph on]";
+			get a number;
+			if calcnumber > 0 and calcnumber <= the number of filled rows in table of fucking options:
+				now current menu selection is calcnumber;
+				choose row calcnumber in table of fucking options;
+				say "[title entry]: Shall you [description entry]?";
+				if Player consents:
+					LineBreak;
+					now sextablerun is 1;
+					if title entry is:
+						-- "Fellatio":
+							say "[sexwithBradfordOralStart]";
+						-- "Desktop Fuck":
+							say "[sexwithBradfordDesktop]";
+						-- "Wall Fuck":
+							say "[sexwithBradfordWall]";
+						-- "Lap Ride":
+							say "[sexwithBradfordLapride]";
+					now lastfuck of Bradford is turns;
+			else if calcnumber is 0:
+				LineBreak;
 				now sextablerun is 1;
-				if nam is "Fellatio":
-					say "[sexwithBradfordOralStart]";
-				else if nam is "Desktop Fuck":
-					say "[sexwithBradfordDesktop]";
-				else if nam is "Wall Fuck":
-					say "[sexwithBradfordWall]";
-				else if nam is "Lap Ride":
-					say "[sexwithBradfordLapride]";
-				wait for any key;
-		else if calcnumber is 0:
-			now sextablerun is 1;
-			say "     You step back from the bounty hunter, shaking your head slightly as he gives a questioning look.";
-			wait for any key;
-		else:
-			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
-	now lastfuck of Bradford is turns;
-	clear the screen and hyperlink list;
+				say "     You step back from the bounty hunter, shaking your head slightly as he gives a questioning look.";
+			else:
+				say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options], or 0 to exit.";
+		wait for any key;
+		clear the screen and hyperlink list;
 
 Section 6 - Sex Scenes
 
 to say sexwithBradfordOralStart:
-	let randomnumber be a random number from 1 to 2;
-	if randomnumber is:
-		-- 1:
-			say "[sexwithBradfordOral1]";
-		-- 2:
-			say "[sexwithBradfordOral2]";
-
-to say sexwithBradfordOral1: [Fellatio]
-	say "     Bradford smiles at the offer, rubbing his bulging crotch. 'I could certainly use a bit of relief. These big bull balls of mine could use a drainin['].' With that, he unzips his fly and pulls out his plump, bovine cock. It's a girthy ten-inch length of brick-red flesh that's throbbing and ready to go. 'Get on your knees and blow me while I keep watch,' he adds, giving his manhood an enticing shake.";
-	say "     The sight of his meat makes your mouth water. You move between his legs and take a hold of his shaft, stroking and fondling it as you run your tongue up and down it. He gives a soft moan and his cock throbs in your hands as a gooey dollop of precum leaks out. Leaning in, you lick the sticky glob from his glans before opening wide and stuffing his cock into your mouth.";
-	WaitLineBreak;
-	if scalevalue of Player is 1 or scalevalue of Player is 2:
-		say "     [if scalevalue of Player is 1]Your tiny[else if scalevalue of Player is 2]Your below-average[end if] size makes it more difficult to handle his thick cock, but you work at it until the nanites allow your mouth and throat to stretch enough to take him fully in";
-	else if scalevalue of Player is 3:
-		say "     His enhanced size has you briefly taking it slow before, your mouth stuffed full by his cock. You work it over with your mouth and tongue until the nanites allow your throat to stretch enough to take him fully in";
-	else:
-		say "     Your enlarged form means you have no difficulty handling his thick cock. You work it over with your mouth and soon you're taking it down to the base with its end stuffed down your throat";
-	say ". Once you've got that deep red rod completely down to the base, you suck down on it hard while kneading his balls. He groans in pleasure and rubs your head, moaning how good you're making him feel. You smile around his bull meat and suck harder even as you draw your head back. You slide most of the way off his shaft, getting to the point you can fellate across his glans before stuffing it back into your mouth and down your [if scalevalue of Player < 3]tight [end if]throat.";
-	say "     You go to town on his cock while he sits on watch, taking your time as neither of you are in a rush to finish[if Breast Size of Player > 3]. Though when you swap out to a titfuck for a little while, you really get him worked up[end if]. Sensing his climax approaching, you pick up the pace and take him fully into your hungry mouth again. You can feel the powerful throbbing of his oncoming orgasm moments before his eventual release. Hot blasts of thick bull semen shoot into your mouth and pour down your throat. His cum tastes nice, strong with flavor and virility, but with a milkier flavor that encourages to drink down more and more of it until he's spent and you're full of warm spunk.";
-	if mooing > 4:
-		now mooing is ( mooing * 3 ) / 5;
-	else:
-		now mooing is 0;
+	if a random chance of 1 in 2 succeeds: [Fellatio]
+		say "     Bradford smiles at the offer, rubbing his bulging crotch. 'I could certainly use a bit of relief. These big bull balls of mine could use a drainin['].' With that, he unzips his fly and pulls out his plump, bovine cock. It's a girthy ten-inch length of brick-red flesh that's throbbing and ready to go. 'Get on your knees and blow me while I keep watch,' he adds, giving his manhood an enticing shake.";
+		say "     The sight of his meat makes your mouth water. You move between his legs and take a hold of his shaft, stroking and fondling it as you run your tongue up and down it. He gives a soft moan and his cock throbs in your hands as a gooey dollop of precum leaks out. Leaning in, you lick the sticky glob from his glans before opening wide and stuffing his cock into your mouth.";
+		WaitLineBreak;
+		say "     [if scalevalue of Player is 1]Your tiny size makes it more difficult to handle his thick cock, but you work at it until the nanites allow your mouth and throat to stretch enough to take him fully in[else if scalevalue of Player is 2]Your below-average size makes it more difficult to handle his thick cock, but you work at it until the nanites allow your mouth and throat to stretch enough to take him fully in[else if scalevalue of Player is 3]His enhanced size has you briefly taking it slow before, your mouth stuffed full by his cock. You work it over with your mouth and tongue until the nanites allow your throat to stretch enough to take him fully in[else]Your enlarged form means you have no difficulty handling his thick cock. You work it over with your mouth and soon you're taking it down to the base with its end stuffed down your throat[end if]. Once you've got that deep red rod completely down to the base, you suck down on it hard while kneading his balls. He groans in pleasure and rubs your head, moaning how good you're making him feel. You smile around his bull meat and suck harder even as you draw your head back. You slide most of the way off his shaft, getting to the point you can fellate across his glans before stuffing it back into your mouth and down your [if scalevalue of Player < 3]tight [end if]throat.";
+		say "     You go to town on his cock while he sits on watch, taking your time as neither of you are in a rush to finish[if Breast Size of Player > 3]. Though when you swap out to a titfuck for a little while, you really get him worked up[end if]. Sensing his climax approaching, you pick up the pace and take him fully into your hungry mouth again. You can feel the powerful throbbing of his oncoming orgasm moments before his eventual release. Hot blasts of thick bull semen shoot into your mouth and pour down your throat. His cum tastes nice, strong with flavor and virility, but with a milkier flavor that encourages to drink down more and more of it until he's spent and you're full of warm spunk.";
+		if mooing > 4:
+			now mooing is ( mooing * 3 ) / 5;
+		else:
+			now mooing is 0;
+	else: [Fellatio number 2]
+		say "     After listening to your suggestion Bradford lets out a soft and gruff chuckle before setting down his binoculars and turning to face you. 'Was gettin['] to wonder when you'd come around again.' He smiled, eyes filled with restrained lust. 'Now why don't you come on over here and give your favorite bull some attention.' As he takes a seat on a nearby chair his hand reaches down to unzip his pants, letting his bovine cock spill out from the newly opened hole in his pants, already hanging semi-erect. Upon getting a look at his almost footlong shaft you're quick to [if Player is submissive] drop down onto your hands and knees, hips swaying as you crawl over to him, eyes locked on that thick cock in front of you[else]saunter over to him, eager to service his giant shaft[end if].";
+		say "     Kneeling before him you wrap your fingers around his cock, feeling the hot piece of meat pulse gently against your fingertips, a shot of pre spurts out of his shaft at first contact, splattering across your fingers and glancing off the side of your cheek. Eagerly you begin to stroke his length up and down, coating his shaft with his own pre until it's slick and glistening under your digits, only then, when it's twitching at full mast do you press your lips against his tip, and take it inside your mouth.";
+		WaitLineBreak;
+		say "     A low and satisfied sigh escapes the bovine as you start to sink your mouth deeper onto his cock, quickly rewarded with another thick dose of salty pre that coats your tongue and drips down the back of your throat. Grunting softly you begin to gently suck on his girthy shaft, your tongue dancing along his pole until your face is pressed against his crotch and you feel his shaft penetrate deep down your throat. It's not long after that a calloused hand moves to rest against the back of your head, guiding you into a slow bobbing motion that has you pulling back to the tip of his shaft, only to plunge yourself all the way back down	again. 'That's it...' you hear him mumble.";
+		say "     After a good few minutes you notice Bradford's breath start to get a bit more ragged, his other hand having come to join the one already pumping your mouth against his cock. Soon his hips begin to thrust, meeting your lips every time to impale his length deeper into you, until finally with a loud moan he spills his seed, thick and creamy cum filling your mouth as you desperately try to swallow it all. Gulp after gulp you drink down his sticky seed, his prolific load drooling out of the sides of your mouth and down your chin. Once his climax begins to slow down the bull pulls back, letting his cock slip out of your mouth with a satisfying pop before a few more spurts coat your face and neck.";
+		WaitLineBreak;
+		say "     'Thanks, I really needed that.' He grunted, leaning back in his chair with a satisfied smile that only the best of blowjobs could bring out. 'I really was gettin['] blue in the balls before you showed up, now it's good to know I can get some relief now and then.' He takes his time tucking his now flaccid cock back into his pants, before finally turning back to resume his post at the window, leaving you to lick up the cum that had plastered your fingers and prepare to continue your journey. 'Now back to work. Thanks again, swing back around soon y'hear?'";
 	if HP of Bradford < 7, increase HP of Bradford by 1;
 	NPCSexAftermath Player receives "OralCock" from Bradford;
-
-		to say sexwithBradfordOral2: [Fellatio number 2]
-			say "     After listening to your suggestion Bradford lets out a soft and gruff chuckle before setting down his binoculars and turning to face you. 'Was gettin['] to wonder when you'd come around again.' He smiled, eyes filled with restrained lust. 'Now why don't you come on over here and give your favorite bull some attention.' As he takes a seat on a nearby chair his hand reaches down to unzip his pants, letting his bovine cock spill out from the newly opened hole in his pants, already hanging semi-erect. Upon getting a look at his almost foot-long shaft you're quick to [if Player is submissive] drop down onto your hands and knees, hips swaying as you crawl over to him, eyes locked on that thick cock in front of you[else]saunter over to him, eager to service his giant shaft[end if].";
-			say "     Kneeling before him you wrap your fingers around his cock, feeling the hot piece of meat pulse gently against your fingertips, a shot of pre spurts out of his shaft at first contact, splattering across your fingers and glancing off the side of your cheek. Eagerly you begin to stroke his length up and down, coating his shaft with his own pre until it's slick and glistening under your digits, only then, when it's twitching at full mast do you press your lips against his tip, and take it inside your mouth.";
-			WaitLineBreak;
-			say "     A low and satisfied sigh escapes the bovine as you start to sink your mouth deeper onto his cock, quickly rewarded with another thick dose of salty pre that coats your tongue and drips down the back of your throat. Grunting softly you begin to gently suck on his girthy shaft, your tongue dancing along his pole until your face is pressed against his crotch and you feel his shaft penetrate deep down your throat. It's not long after that a calloused hand moves to rest against the back of your head, guiding you into a slow bobbing motion that has you pulling back to the tip of his shaft, only to plunge yourself all the way back down	again. 'That's it...' you hear him mumble.";
-			say "     After a good few minutes you notice Bradford's breath start to get a bit more ragged, his other hand having come to join the one already pumping your mouth against his cock. Soon his hips begin to thrust, meeting your lips every time to impale his length deeper into you, until finally with a loud moan he spills his seed, thick and creamy cum filling your mouth as you desperately try to swallow it all. Gulp after gulp you drink down his sticky seed, his prolific load drooling out of the sides of your mouth and down your chin. Once his climax begins to slow down the bull pulls back, letting his cock slip out of your mouth with a satisfying pop before a few more spurts coat your face and neck.";
-			WaitLineBreak;
-			say "     'Thanks, I really needed that.' He grunted, leaning back in his chair with a satisfied smile that only the best of blowjobs could bring out. 'I really was gettin['] blue in the balls before you showed up, now it's good to know I can get some relief now and then.' He takes his time tucking his now flaccid cock back into his pants, before finally turning back to resume his post at the window, leaving you to lick up the cum that had plastered your fingers and prepare to continue your journey. 'Now back to work. Thanks again, swing back around soon y'hear?'";
-			if HP of Bradford < 7, increase HP of Bradford by 1;
-			NPCSexAftermath Player receives "OralCock" from Bradford;
 
 to say sexwithBradfordDesktop:	[desktop fuck]
 	say "     Bradford just smiles and nods at your suggestion of more sex. You can see that bulge in his crotch strain the material a little further as he looks you over. 'Alright[if Breast Size of Player > 3], sexy[end if]. Bend yourself over that desk and let's do this,' he says, rising from his seat.";
 	say "     As he strides over to join you at the desk, he undoes his fly and pulls out that thick slab of bovine meat he's packing. The brick-red shaft is as big and juicy as you remember, an impressive ten inches of thick bull cock. Seeing it again, and those hefty balls beneath it, makes you all the more eager to have it in you. You strip down quickly and get yourself bent over the desk, waving your rear towards him, offering yourself to the bull stud's manhood.";
 	WaitLineBreak;
 	if Player is female:
-		say "     Moving into position, the studly bull lets his big cock fall across your rear with a meaty slap. You can feel the wet dribble from a spurt of precum as it hits. He rubs his large hands across your buns before gripping them and lining himself up[if Cunt Depth of Player < 4]. Given the small size of your cunt, he has to take his time to start, sinking his pulsing rod very slowly into you. You whimper and chew your lip, enduring the initial ache until it fades and the pleasure rises to replace it. Once you're ready, you moan for him to start fucking you[else if Cunt Depth of Player < 7]. Given the size of his manhood, he has to push his pulsing rod into you gradually. It is deliciously satisfying for the added effort and soon you're moaning for him to start fucking you[else if Cunt Depth of Player > 18]. He eases his big cock into your spacious cunt and you have little difficulty taking the bull's thick shaft. This lets him jump right into action and start fucking you[else]. His enlarged cock stuffs you nice and full, providing a satisfying fit. You wriggle with delight as it sinks into you and you push back onto it, moaning for him to fuck you[end if]. With a leering grin, he pulls back several inches before thrusting sharply into you, pushing another moan out of you. After a few more of these to tease you, he switches to steadily fucking your quivering cunny. And while you enjoy this, you're quite eager to just get screwed senseless by this point and moan for him to pound you.";
+		say "     Moving into position, the studly bull lets his big cock fall across your rear with a meaty slap. You can feel the wet dribble from a spurt of precum as it hits. He rubs his large hands across your buns before gripping them and lining himself up. [if Cunt Depth of Player < 4]Given the small size of your cunt, he has to take his time to start, sinking his pulsing rod very slowly into you. You whimper and chew your lip, enduring the initial ache until it fades and the pleasure rises to replace it. Once you're ready, you moan for him to start fucking[else if Cunt Depth of Player < 7]Given the size of his manhood, he has to push his pulsing rod into you gradually. It is deliciously satisfying for the added effort and soon you're moaning for him to start fucking[else if Cunt Depth of Player > 18]He eases his big cock into your spacious cunt and you have little difficulty taking the bull's thick shaft. This lets him jump right into action and start fucking[else]His enlarged cock stuffs you nice and full, providing a satisfying fit. You wriggle with delight as it sinks into you and you push back onto it, moaning for him to fuck[end if] you. With a leering grin, he pulls back several inches before thrusting sharply into you, pushing another moan out of you. After a few more of these to tease you, he switches to steadily fucking your quivering cunny. And while you enjoy this, you're quite eager to just get screwed senseless by this point and moan for him to pound you.";
 	else:
-		say "     Moving into position, the studly bull spreads some spit across his shaft and onto your asshole. Add to that the precum he's already drooling and at least it's enough to get things started. He grinds his sticky glans against your tight hole, giving it a few test prods, coaxing you to relax your back door before thrusting into it[if Player is twistcapped]. Not that he needs be too concerned given the extraordinary stretching capacity of your asshole. His large cock sinks into you with ease, the two of you sighing in satisfaction upon penetration. Seeing your lack of difficulty, he gets to fucking you right away[else if scalevalue of Player < 3]. Given your [Body Size Adjective of Player] size, getting that enlarged cock into you is a slow and difficult process. His large cock sinks into you small amounts at a time, drawing out the initial penetration painfully, frustratingly long. Eventually though, he manages to get it fully into you and your hole's adjusted to deal with it, allowing him to finally start fucking you[else if scalevalue of Player is 3]. Given the enlarged size of his manhood, getting it into you is not an easy process. His large cock only moves an uncomfortable inch at a time. Eventually though, he has it buried fully inside you and your hole's adjusted to accommodate it, allowing him to start fucking you properly[else if scalevalue of Player is 4]. Given your large size, you're able to accept his enlarged cock a few inches at a time. In short order, he's fully buried inside your snug hole and you've adjusted to deal with it, finding it a satisfying fit once inside. He gives a few grinds against your sensitive insides before to finally starting to fucking you properly[else]. Given your huge size, you're able to accept his enlarged cock fairly easily. After the initial penetration, you just need a moment before your hole's adjusted to deal with it and he's able to start fucking you properly[end if]. And while you appreciate his care, you're quite eager to just get screwed senseless by this point and moan for him to pound you.";
+		say "     Moving into position, the studly bull spreads some spit across his shaft and onto your asshole. Add to that the precum he's already drooling and at least it's enough to get things started. He grinds his sticky glans against your tight hole, giving it a few test prods, coaxing you to relax your back door before thrusting into it. [if Player is twistcapped]Not that he needs be too concerned given the extraordinary stretching capacity of your asshole. His large cock sinks into you with ease, the two of you sighing in satisfaction upon penetration. Seeing your lack of difficulty, he gets to fucking you right away[else if scalevalue of Player < 3]Given your [Body Size Adjective of Player] size, getting that enlarged cock into you is a slow and difficult process. His large cock sinks into you small amounts at a time, drawing out the initial penetration painfully, frustratingly long. Eventually though, he manages to get it fully into you and your hole's adjusted to deal with it, allowing him to finally start fucking you[else if scalevalue of Player is 3]Given the enlarged size of his manhood, getting it into you is not an easy process. His large cock only moves an uncomfortable inch at a time. Eventually though, he has it buried fully inside you and your hole's adjusted to accommodate it, allowing him to start fucking you properly[else if scalevalue of Player is 4]Given your large size, you're able to accept his enlarged cock a few inches at a time. In short order, he's fully buried inside your snug hole and you've adjusted to deal with it, finding it a satisfying fit once inside. He gives a few grinds against your sensitive insides before to finally starting to fucking you properly[else]Given your huge size, you're able to accept his enlarged cock fairly easily. After the initial penetration, you just need a moment before your hole's adjusted to deal with it and he's able to start fucking you properly[end if]. And while you appreciate his care, you're quite eager to just get screwed senseless by this point and moan for him to pound you.";
 	say "     And pound you he does. With a firm grip on your buns, he adds power to his thrusts, driving his shaft with increasing strength into your needy hole. You grip the desk hard and push back into his thrusts, loving the feel of that throbbing cock sawing in and out of you. The heavy bull pants and grunts atop you as he fucks you, those big balls of his slapping [if Player is male and CockName of Player is not listed in infections of InternalCockList]against your own[else if Player is female]your thighs[else]your ass[end if]. In your increasingly lust-addled state, you delight in how that thick rod of his stuffs you [if scalevalue of Player < 4]so full[else]nicely[end if] and how it throbs with virility.";
 	if Breast Size of Player > 3:
 		say "     The stocky bull reaches around you, his strong hands cupping your [short breast size desc of Player] tits. He gropes them, playing with your nipples and caressing the sensitive globes. 'I must say, you've got some [if Breast Size of Player > 6]really [end if]fine tits on you,' he says in your ear. His expert touches add to your delight as he pounds away at you with greater zeal, clearly turned on by having some [if Breast Size of Player > 6]giant[else]big[end if] boobs to play with.";
@@ -578,10 +547,7 @@ to say sexwithBradfordDesktop:	[desktop fuck]
 	else:
 		now mooing is 0;
 	if HP of Bradford < 7, increase HP of Bradford by 1;
-	if Player is female:
-		NPCSexAftermath Player receives "PussyFuck" from Bradford;
-	else:
-		NPCSexAftermath Player receives "AssFuck" from Bradford;
+	NPCSexAftermath Player receives "[if Player is female]Pussy[else]Ass[end if]Fuck" from Bradford;
 
 to say sexwithBradfordWall: [fucked in the ass against a wall]
 	say "     'Ready for another round?' His gruff laugh bounces off the walls of his small hideout as he steps down from his post to look at you. 'Now why don't you get those clothes off so we can have some fun.' A large hand is already at his zipper, the bulge in his pants straining to contain the massive package he has hidden underneath.";
@@ -614,10 +580,7 @@ to say sexwithBradfordMidnight: [night sex with Bradford]
 	say "     At your suggestion, you're surprised to see Bradford close the window he usually has open, setting his binoculars on a nearby table before approaching you. 'Alright, been meanin['] to get some shuteye soon anyhow, nothing much here ever happens at night.' Moving one hand down to unzip his pants, you take that as a sign to get rid of your own, as well as any other article of clothing you may be wearing. He closes in fast, muscular arms wrapping around your side to hold your hips gently in his calloused hands. With the glow of the bright moon serving as your only source of light your vision is encompassed by shadows and bulging abs. He kisses you, his broad tongue finding its way into your willing mouth with more passion than your used to seeing from the bull, his roaming hands mirroring yours as you both fumble to the hard mattress on the ground. By the time you get there his own clothing had disappeared, a breadcrumb trail leading to your sweltering bodies tangled up on the makeshift bed.";
 	say "     Not wasting any time you straddle his hips, feeling his now rigid cock press between your asscheeks, pre already oozing out the tip of his ten-inch dick and slathering against your backdoor pucker. For a moment you both enjoy the hot closeness, your hands on his bare chiseled chest as you both breath raggedly in the dim moonlight.";
 	WaitLineBreak;
-	if Player is purefemale:
-		say "     Hands placed gently on your hips you feel Bradford start to move, shifting his body, guiding yours up so your repositioned on top of his cock, your pussy now pressed against the tip of his oozing shaft, threatening to spread your cunt and thrust into you at any second. But he takes it slow, your weight in his strong arms, teasing his tip against your dripping slit until your hips jerk on their own, a cry of restrained pleasure that you don't remember uttering. But then it slides in, almost too easily, slick with your own fem juices as well as the leaking pre that soon starts to fill your passage. You both let gravity carry you the rest of the way on your simmering descent, the bull easing you with gentle care until you're fully seated on his length, your hips fleshly pressed against his. You moan softly, feeling your pussy stretch around his cock, slowly conforming the fit its girth as you squeeze down, getting a sense of just how good it felt to feel his shaft pulse and throb inside you. In time you start to move, gyrating your hips while riding his cock. Up and down, again and again. With every thrust you feel him drive deeper, your mixed lubricant making each plunge slick and smooth.";
-	else:
-		say "     Hands placed gently on your hips you feel Bradford start to move, shifting his body, guiding you up so that his oozing shaft is precariously pressed against the entrance to your slick ass. Letting some of your weight rest on his cock the tip of his length threatens to spread you open, your own cock standing rigid at attention as you wait for the pleasurable descent you know is coming. Slowly he begins to let you fall, gravity helping as inch after inch gets fed into you. Moaning softly you can't help but buck your hips, a spurt of your own pre splashing onto the bull's chest as he continues your descent, until finally you're sitting flesh against his hips, his cock fully sheathed inside of you. It's only now that you realize how heavy you were breathing, soft pants that led to occasional moans while he shifted his hips, stirring his cock inside you, letting you get used to its girth and heat. You squeeze down, reveling in the raw sensation of his pulsing shaft leaking inside of you. In time you start to move, gyrating your hips while riding his cock. Up and down, again and again. With every thrust you feel him drive deeper, his leaking pre making each plunge slick and smooth. All the while you can't help but use a hand to pump your cock, matching each stroke with the deep sensation of the bull plowing into you.";
+	say "     Hands placed gently on your hips you feel Bradford start to move, shifting his body, guiding [if Player is purefemale]yours up so your repositioned on top of his cock, your pussy now pressed against the tip of his oozing shaft, threatening to spread your cunt and thrust into you at any second. But he takes it slow, your weight in his strong arms, teasing his tip against your dripping slit until your hips jerk on their own, a cry of restrained pleasure that you don't remember uttering. But then it slides in, almost too easily, slick with your own fem juices as well as the leaking pre that soon starts to fill your passage. You both let gravity carry you the rest of the way on your simmering descent, the bull easing you with gentle care until you're fully seated on his length, your hips fleshly pressed against his. You moan softly, feeling your pussy stretch around his cock, slowly conforming the fit its girth as you squeeze down, getting a sense of just how good it felt to feel his shaft pulse and throb inside you. In time you start to move, gyrating your hips while riding his cock. Up and down, again and again. With every thrust you feel him drive deeper, your mixed lubricant making each plunge slick and smooth[else]you up so that his oozing shaft is precariously pressed against the entrance to your slick ass. Letting some of your weight rest on his cock the tip of his length threatens to spread you open, your own cock standing rigid at attention as you wait for the pleasurable descent you know is coming. Slowly he begins to let you fall, gravity helping as inch after inch gets fed into you. Moaning softly you can't help but buck your hips, a spurt of your own pre splashing onto the bull's chest as he continues your descent, until finally you're sitting flesh against his hips, his cock fully sheathed inside of you. It's only now that you realize how heavy you were breathing, soft pants that led to occasional moans while he shifted his hips, stirring his cock inside you, letting you get used to its girth and heat. You squeeze down, reveling in the raw sensation of his pulsing shaft leaking inside of you. In time you start to move, gyrating your hips while riding his cock. Up and down, again and again. With every thrust you feel him drive deeper, his leaking pre making each plunge slick and smooth. All the while you can't help but use a hand to pump your cock, matching each stroke with the deep sensation of the bull plowing into you[end if].";
 	say "     You moan every time you feel him bottom out inside of you, the mounting pleasure only driving you both to into a passionate frenzy that sends you both careening over the edge. Your eyes roll into the back of your head as you arch your back, waves of pure bliss washing over you as you cum hard, [if Player is purefemale]your cunt spasming around Bradford's twitching shaft, milking every last drop of cum out of his balls while he pours spurt after spurt of thick seed into your pussy. His creamy and fertile cum fill your womb and the quantity gushes out between the two of you, staining the mattress beneath you[else]your ass squeezing his cock tight while you cum onto the bull's chest, your seed spilling out while his own fill your ass to max capacity, before drooling out between the two of you to stain the mattress below[end if].";
 	WaitLineBreak;
 	say "     After you finally come down from you high you're left panting heavily on the bull's chest. Shifting to the side he slides you off of him and onto the bed beside him. He tosses the thick fur blanket over you both before wrapping his muscular arms around you once more, drawing you close to body. His cock is still seated deep inside you, pulsing occasionally, staying semi-erect. 'Mmh, that was really somethin['].' His voice rumbles behind you, low and warm. He makes no offer to release you from his grasp, cuddling against you under the blankets, and you make no move to leave. Lulled by the soft sound of the bull's breathing along with the rhythmic feeling of his chest breathing in and out, you slowly drift to sleep, your exhausted body welcoming the dark blanket of unconsciousness.";
@@ -625,19 +588,12 @@ to say sexwithBradfordMidnight: [night sex with Bradford]
 	if HP of Bradford < 8, increase HP of Bradford by 1;
 	follow the turnpass rule;
 	follow the turnpass rule;
-	if Player is purefemale:
-		NPCSexAftermath Player receives "PussyFuck" from Bradford;
-	else:
-		NPCSexAftermath Player receives "AssFuck" from Bradford;
+	NPCSexAftermath Player receives "[if Player is purefemale]Pussy[else]Ass[end if]Fuck" from Bradford;
 
-Section 9 - Endings
+Section 7 - Endings
 
 [ To appear later ]
 
-Section X - Notes & Debugging
-
-to say bradforddebug:
-	if debugactive is 1:
-		say "DEBUG (Bradford) -> HP: [HP of Bradford] <- DEBUG[line break]";
+Section 8 - Notes & Debugging
 
 Bradford ends here.

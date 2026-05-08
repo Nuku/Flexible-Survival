@@ -25,23 +25,20 @@ EnrollmentTokens is a number that varies.
 AzraelRelationship is a number that varies.
 ClassPaymentAccepted is a truth state that varies.
 
-AzraelRoomConnection is a number that varies.[@Tag:NotSaved]
-
-an everyturn rule: [bugfixing rules for players that import savegames]
-	if AzraelRelationship is 2 and AzraelRoomConnection is 0: [event resolved the right way, room not connected yet]
+a postimport rule: [bugfixing rules for players that import savegames]
+	if AzraelRelationship is 2:
 		change northwest exit of Second Floor Male Dorms to Your Dorm Room;
 		change southeast exit of Your Dorm Room to Second Floor Male Dorms;
-		now AzraelRoomConnection is 1; [make sure that it connects the room only once]
 
 Section 1 - Introduction Event
 
-instead of going up from College Administration Building while AzraelRelationship is 0:
+check going up from College Administration Building while AzraelRelationship is 0:
 	say "     When you make your way up the stairs you are suddenly greeted by a demon brute of all people. Bracing yourself for an attack you are surprised when nothing happens. Upon a closer look of the large male you notice he's not the same color as the ones you've ran into before. His skin instead is a pale purple that doesn't scream angry. On top of that you notice his attire. The demon is wearing a rather fancy looking suit and a pair of glasses, something that makes him appear rather educated. Even then so, he's giving you an exasperated look. 'I know you have probably had terrible encounters with my brethren but I am completely different from them,' he says with a sigh before holding out their hand. You shake it tentatively, an action that makes the big guy roll his eyes.";
 	say "     'My name is Theodore, and I am Dean Azrael's assistant. What is your business with him?' You explain to the male that you are new here and have no idea what to do. That appears to garner some recognition in the demon's eyes. 'Oh, then you may wish to follow me,' he tells you. The guy leads you to a door before opening it, revealing an office with, to your utter surprise an angel in a business suit sitting in a chair. Theo informs him that you're a new student, to your confusion before closing the door when he leaves. Azrael, you assume, gets up and walks in front of his desk before sitting on it. 'Welcome to Tenvale College. I am the Dean of the whole college. You wish to enroll?'";
 	WaitLineBreak;
 	say "     You inform him that you really aren't sure at the moment as you were just curious about what was up here. With a sigh the angel crosses his arms. 'Very well, in any case, if you wish to enroll in the future, ask me. Because you're new, I have to take care of it as all of the admissions clerks have... become feral,' he explains with a roll of his eyes. Azrael's posture loosens up quickly though as he smiles at you. 'Although if you wish to just talk with me that's fine... I'm sure we can have some fun too,' he says, winking at you before he gets back to his work.";
 	now AzraelRelationship is 1;
-	move player to Dean's Office;
+	[move player to Dean's Office;]
 	move Azrael to Dean's Office;
 
 Section 2 - Declaring Azrael
@@ -86,23 +83,14 @@ SexuallyExperienced of Azrael is false.
 TwistedCapacity of Azrael is false. [Twisted Characters can take any penetration, no matter the size]
 Sterile of Azrael is true. [steriles can't knock people up]
 MainInfection of Azrael is "".
-Description of Azrael is "[AzraelDesc]".
-Conversation of Azrael is { "<This is nothing but a placeholder>" }.
-The scent of Azrael is "He smells like a summer breeze, interestingly enough. Though you guess you should expect that as he's an angel.".
-
-to say AzraelDesc:
-	say "     The angel is rather clean looking, wearing a fancy suit that clings to his body rather nicely. Upon closer examination you see that it's an Armeowni suit, one of the highest quality if the silky-texture says anything. Detracting your attention from the fancy clothing, you look at his features. Azrael's wings are a bright white, something that you assume to be true twenty-four-seven and are bunched together so that he can fit in the chair. Turning your attention to his face you notice he has bright blue eyes and shoulder-length black hair. When the dean notices that you're looking at him, he smiles at you before gesturing for you to take a seat.";
+Description of Azrael is "     The angel is rather clean looking, wearing a fancy suit that clings to his body rather nicely. Upon closer examination you see that it's an Armeowni suit, one of the highest quality if the silky-texture says anything. Detracting your attention from the fancy clothing, you look at his features. Azrael's wings are a bright white, something that you assume to be true twenty-four-seven and are bunched together so that he can fit in the chair. Turning your attention to his face you notice he has bright blue eyes and shoulder-length black hair. When the dean notices that you're looking at him, he smiles at you before gesturing for you to take a seat.[line break]".
+The scent of Azrael is "     He smells like a summer breeze, interestingly enough. Though you guess you should expect that as he's an angel.".
 
 Section 3 - Talking with Azrael
 
 instead of conversing the Azrael:
 	say "     The winged angel looks at you with an interested look as you approach him. 'What do you need?'";
-	wait for any key;
-	say "[AzraelTalkMenu]";
-
-to say AzraelTalkMenu:
-	LineBreak;
-	say "What do you wish to talk about with Azrael?";
+	say "[line break]     What do you wish to talk about with Azrael?";
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]
@@ -111,18 +99,16 @@ to say AzraelTalkMenu:
 	now sortorder entry is 1;
 	now description entry is "Ask him how and why he's the Dean";
 	[]
+	choose a blank row in table of fucking options;
 	if AzraelRelationship < 2:
-		choose a blank row in table of fucking options;
 		now title entry is "Classes";
-		now sortorder entry is 2;
 		now description entry is "Ask about enrolling in classes";
-	[]
-	if AzraelRelationship > 1:
-		choose a blank row in table of fucking options;
+	else:
 		now title entry is "Enroll";
-		now sortorder entry is 3;
 		now description entry is "Enroll in a class";
+	now sortorder entry is 2;
 	[]
+	sort the table of fucking options in sortorder order;
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
 		say "[link][y] - [title entry][as][y][end link][line break]";
@@ -135,21 +121,22 @@ to say AzraelTalkMenu:
 			choose row calcnumber in table of fucking options;
 			say "[title entry]: [description entry]?";
 			if Player consents:
-				let nam be title entry;
+				LineBreak;
 				now sextablerun is 1;
-				if (nam is "Dean"):
-					say "[AzraelDean]";
-				if (nam is "Classes"):
-					say "[AzraelClasses]";
-				if (nam is "Enroll"):
-					say "[AzraelEnroll]";
-				wait for any key;
+				if title entry is:
+					-- "Dean":
+						say "[AzraelDean]";
+					-- "Classes":
+						say "[AzraelClasses]";
+					-- "Enroll":
+						say "[AzraelEnroll]";
 		else if calcnumber is 0:
+			LineBreak;
 			now sextablerun is 1;
 			say "     You shake your head, which causes the angel to shrug and return to whatever he was working on.";
-			wait for any key;
 		else:
-			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options], or 0 to exit.";
+	wait for any key;
 	clear the screen and hyperlink list;
 
 to say AzraelDean:
@@ -167,60 +154,58 @@ to say AzraelClasses:
 
 to say AzraelEnroll:
 	say "     'Good! Now here's the list of classes we have right now,' the angel says before handing you a list. 'Many courses are booked right now, but with how things are going these days, that might change quickly. And please do remember that you enroll in each class individually, with a new fee for each.'";
-	say "[ClassPaymentOptions]";
-	if ClassPaymentAccepted is true:
-		say "     Once the angel has squared away the payment you've given him he happily hands you a little square of firm paper that bears the well-calligraphed words 'Class Tuition Payment Received - Valid For One Course', as well as a complex sigil. On the flip side there is a little map, showing that you need to go to the north of Lecture Street. It further explains that you'll only be able to get in during the day rather than night, as the classroom will be locked otherwise. You then nod and back away, letting Azrael return to work.";
-		now ClassPaymentAccepted is false;
-		increase EnrollmentTokens by 1;
-		now AzraelRelationship is 3;
-	else:
-		say "     Azrael gives you a sad look before accepting your decision and asking you to return if you change your mind.";
-
-to say ClassPaymentOptions:
-	if (carried of food > 4 and carried of water bottle > 4):
+	if carried of food > 4 and carried of water bottle > 4:
 		say "     [bold type]Aware that you are carrying enough of either option in your backpack, you start thinking what you want to give him.[roman type][line break]";
 		say "     [link](1)[as]1[end link] - The food.";
 		say "     [link](2)[as]2[end link] - The water.";
 		say "     [link](3)[as]3[end link] - Nevermind.";
 		now calcnumber is 0;
 		while calcnumber < 1 or calcnumber > 3:
-			say "Choice? (1-3)>[run paragraph on]";
+			say "Choice? (1-3)> [run paragraph on]";
 			get a number;
-			if calcnumber is 1 or calcnumber is 2 or calcnumber is 3:
-				break;
-			else:
+			if calcnumber < 1 or calcnumber > 3:
 				say "Invalid choice. Type [link]1[end link] to pay with food, [link]2[end link] to pay with water or [link]3[end link] decide against enrolling.";
-		if calcnumber is 1 or calcnumber is 2:
-			LineBreak;
-			if calcnumber is 1:
-				say "     You pull out a pile of food and hand it to the Dean who smiles and accepts it.";
-				ItemLoss food by 5;
-				now ClassPaymentAccepted is true;
-			else if calcnumber is 2:
-				say "     You pull out five bottles of water and hand them over to the Dean who gracefully accepts it.";
-				ItemLoss water bottle by 5;
-				now ClassPaymentAccepted is true;
+		LineBreak;
+		if calcnumber is 1:
+			say "     You pull out a pile of food and hand it to the Dean who smiles and accepts it.";
+			ItemLoss food by 5;
+			now ClassPaymentAccepted is true;
+		else if calcnumber is 2:
+			say "     You pull out five bottles of water and hand them over to the Dean who gracefully accepts it.";
+			ItemLoss water bottle by 5;
+			now ClassPaymentAccepted is true;
 		else:
 			say "     You decide against it and shake your head.";
 	else if carried of food > 4:
 		say "     [bold type]Aware that you are carrying enough food in your backpack, do you want to give it to him?[roman type][line break]";
-		say "     [link]Y[as]y[end link] - Yeah!";
-		say "     [link]N[as]n[end link] - Nah.";
+		say "     ([link]Y[as]y[end link]) - Yeah!";
+		say "     ([link]N[as]n[end link]) - Nah.";
 		if Player consents:
+			LineBreak;
 			say "     You pull out the pile of food from your backpack and hand them over to the Dean who gladly accepts it.";
 			ItemLoss food by 5;
 			now ClassPaymentAccepted is true;
 		else:
+			LineBreak;
 			say "     You shake your head, deciding against it.";
 	else if carried of water bottle > 4:
 		say "     [bold type]Aware that you are carrying enough water in your backpack, do you want to give it to him?[roman type][line break]";
-		say "     [link]Y[as]y[end link] - Yeah!";
-		say "     [link]N[as]n[end link] - Nah.";
+		say "     ([link]Y[as]y[end link]) - Yeah!";
+		say "     ([link]N[as]n[end link]) - Nah.";
 		if Player consents:
+			LineBreak;
 			say "     You pull out the water bottles from your backpack and hand them over to the Dean who gladly accepts it.";
 			ItemLoss water bottle by 5;
 			now ClassPaymentAccepted is true;
 		else:
+			LineBreak;
 			say "     You shake your head, deciding against it.";
+	if ClassPaymentAccepted is true:
+		say "[line break]     Once the angel has squared away the payment you've given him he happily hands you a little square of firm paper that bears the well-calligraphed words 'Class Tuition Payment Received - Valid For One Course', as well as a complex sigil. On the flip side there is a little map, showing that you need to go to the north of Lecture Street. It further explains that you'll only be able to get in during the day rather than night, as the classroom will be locked otherwise. You then nod and back away, letting Azrael return to work.";
+		now ClassPaymentAccepted is false;
+		increase EnrollmentTokens by 1;
+		now AzraelRelationship is 3;
+	else:
+		say "     Azrael gives you a sad look before accepting your decision and asking you to return if you change your mind.";
 
 Azrael ends here.

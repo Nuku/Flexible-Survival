@@ -4,9 +4,7 @@ Version 1 of Museum Roman Wing by Gherod begins here.
 
 [Version 1 - File created]
 
-[**************************************************]
 Section 1 - The Roman Wing
-[**************************************************]
 
 Table of GameRoomIDs (continued)
 Object	Name
@@ -16,21 +14,13 @@ Museum_Roman_Wing is a room.
 Printed name of Museum_Roman_Wing is "Museum Roman Wing".
 RoomID of Museum_Roman_Wing is "Museum_Roman_Wing".
 Museum_Roman_Wing is south of Museum West Hub.
-
 Description of Museum_Roman_Wing is "[Museum_Roman_Wing desc]".
-
-instead of sniffing Museum_Roman_Wing:
-	say "     It smells of old and ancient, still.";
+Scent of Museum_Roman_Wing is "     It smells of old and ancient, still.".
 
 to say Museum_Roman_Wing desc:
 	say "     This expansive section is filled with historical objects of uncalculated value, belonging to the roman era when their empire was predominant. Around the room, there are several display cases filled with many different objects, from trinkets to weapons, pieces of traditional clothing, armor plates, stone carvings, among other things. A few windows are still open, providing some illumination during the day, but if not, the internal lighting still seems to be working.";
 	say "     This wing seems to be rather full of stuff you could check, if you wanted. Objects to note are, for example, an [link]ornate armoire[as]use roman wing ornate armoire[end link] with two doors and several drawers underneath.";
-	if Resolution of LarsAwakened is 0:
-		say "     On one of the corners, a tall [link]statue of a roman soldier[as]use roman wing soldier statue[end link] stands, its stone skin looking weathered by time.";
-	else if Resolution of LarsAwakened > 1 and Resolution of LarsAwakened < 99:
-		say "     The corner where the formerly a roman soldier statue was is now only filled with Lars['] personal objects, as the centurion himself walks around the wing.";
-	else: [is 99, probably]
-		say "     The corner where the statue of a roman soldier was is now empty, nothing else filling the empty space that was once occupied by... whatever that creepy stone thing was.";
+	say "     [if Resolution of LarsAwakened is 0]On one of the corners, a tall [link]statue of a roman soldier[as]use roman wing soldier statue[end link] stands, its stone skin looking weathered by time[else if Resolution of LarsAwakened > 1 and Resolution of LarsAwakened < 99]The corner where formerly a roman soldier statue was is now only filled with Lars['] personal objects, as the centurion himself walks around the wing[else]The corner where the statue of a roman soldier was is now empty, nothing else filling the empty space that was once occupied by... whatever that creepy stone thing was[end if].";
 	say "     There are several [link]eye-catching paintings[as]use roman wing paintings[end link] hanging on the walls to your immediate left, when coming from the entrance.";
 	say "     You could also try to investigate the [link]display cases[as]use roman wing display cases[end link] and see if you can find any object of good use. It might require some key to open them, but you could always apply more forceful tactics.";
 
@@ -109,25 +99,9 @@ ResolveFunction of LarsGladiusAndShield is "". Sarea of LarsGladiusAndShield is 
 [3 - Player has collected the gladius and the shield]
 
 UseRWOrnateArmoire is an action applying to nothing.
-UseRWRomanSoldierStatue is an action applying to nothing.
-UseRWPaintings is an action applying to nothing.
-UseRWDisplayCases is an action applying to nothing.
-
 understand "use roman wing ornate armoire" as UseRWOrnateArmoire.
-understand "use roman wing soldier statue" as UseRWRomanSoldierStatue.
-understand "use roman wing paintings" as UseRWPaintings.
-understand "use roman wing display cases" as UseRWDisplayCases.
 
 check UseRWOrnateArmoire:
-	if Player is not in Museum_Roman_Wing, say "You're not in the Museum Roman Wing at the moment." instead;
-
-check UseRWRomanSoldierStatue:
-	if Player is not in Museum_Roman_Wing, say "You're not in the Museum Roman Wing at the moment." instead;
-
-check UseRWPaintings:
-	if Player is not in Museum_Roman_Wing, say "You're not in the Museum Roman Wing at the moment." instead;
-
-check UseRWDisplayCases:
 	if Player is not in Museum_Roman_Wing, say "You're not in the Museum Roman Wing at the moment." instead;
 
 carry out UseRWOrnateArmoire:
@@ -150,10 +124,8 @@ carry out UseRWOrnateArmoire:
 		else:
 			LineBreak;
 			say "[RWOrnateArmoireDrawers]";
-	else if Lars is in Museum_Roman_Wing:
-		say "     It seems Lars has been using this piece of furniture as a place to store some supplies. The armoire is slowly being filled with bottles of water, food and the occasional trinket he finds. Some of those are... quite odd ones to keep around, but perhaps he likes collecting things.";
 	else:
-		say "     Though, as you have already looked inside and found everything you needed, you really do not see any point in lingering. After, perhaps, admiring the armoire for a while, you step away from it and focus on something else.";
+		say "     [if Lars is in Museum_Roman_Wing]It seems Lars has been using this piece of furniture as a place to store some supplies. The armoire is slowly being filled with bottles of water, food and the occasional trinket he finds. Some of those are... quite odd ones to keep around, but perhaps he likes collecting things[else]Though, as you have already looked inside and found everything you needed, you really do not see any point in lingering. After, perhaps, admiring the armoire for a while, you step away from it and focus on something else[end if].";
 
 to say RWOrnateArmoireDoors:
 	say "     The furniture is old, so when you put your hand on the doors['] handle to open them, they creak all over the place with each inch they move. You do so carefully, as a quite fair bit of dust is sent flying from its interior, which seems empty at first glance. A closer inspection reveals what you feared, as there is nothing to be collected from the armoire except for a [bold type]small key[roman type]. It is made of metal and quite diminutive in size, so it should not belong to this armoire. Perhaps you could try it on the [bold type]display cases[roman type] behind you.";
@@ -162,36 +134,50 @@ to say RWOrnateArmoireDoors:
 to say RWOrnateArmoireDrawers:
 	say "     As you crouch down to inspect the drawers on the lower side of the armoire, you quickly realize that some of them can be opened when you try one of them out, pulling one to you to check its contents and doing so with every other. Unfortunately, you find nothing but dust inside them, except for the last one, to the lower right, that seems to be locked.";
 	if Resolution of LarsRedCape is 1:
-		WaitLineBreak;
 		say "     Knowing you have a key that seems to fit the armoire's aesthetic, you decide to try it out on the drawer, finding out that it, indeed, can be pushed into the lock and rotated, a clicking sound soon following your attempt to unlock the drawer. Inside, it is not as dusty, but your eyes lay on some sort of red cloth covering the entire area. It could, potentially, be a [bold type]red cape[roman type] much alike those the roman soldiers wear. You do not need to collect it, but you know where it is in case you need it.";
 		now Resolution of LarsRedCape is 2;
 	else:
 		say "     Since you have no means to unlock it, you leave it there and take note about this for when you find a way to open it. Perhaps [bold type]there should be a key[roman type], somewhere...";
 
+UseRWDisplayCases is an action applying to nothing.
+understand "use roman wing display cases" as UseRWDisplayCases.
+
+check UseRWDisplayCases:
+	if Player is not in Museum_Roman_Wing, say "You're not in the Museum Roman Wing at the moment." instead;
+
 carry out UseRWDisplayCases:
 	say "     These display cases contain a variety of trinkets, weapons and shields reminiscent of the roman empire era. They are not too vastly different, all having lots of similarities with only its details to make the difference. Unfortunately, most of them are simply decorative and would probably not see any effective use in battle.";
 	if Resolution of RWDisplayCasesKey is 1 and Resolution of LarsGladiusAndShield < 2:
-		WaitLineBreak;
 		say "     You do have a key to open these display cases, but there is no point in doing so, for now. At least, you know you can fetch any of these if the need presents itself.";
 	else if Resolution of RWDisplayCasesKey is 1 and Resolution of LarsGladiusAndShield is 2:
-		WaitLineBreak;
 		say "     You happen to have a key to open these display cases, and according to the painting you have seen, there is indeed a [bold type]gladius and a scutum shield[roman type] that would serve the purpose you are looking to achieve. They are here, within reach, in case you need to bring them over somewhere.";
 		now Resolution of LarsGladiusAndShield is 3;
+
+UseRWPaintings is an action applying to nothing.
+understand "use roman wing paintings" as UseRWPaintings.
+
+check UseRWPaintings:
+	if Player is not in Museum_Roman_Wing, say "You're not in the Museum Roman Wing at the moment." instead;
 
 carry out UseRWPaintings:
 	say "     On this side, there are plenty of paintings featuring important figures of the roman empire, as well as depictures of certain groups, the most prominent being the soldiers and gladiators, some in armies and others alone. These must be quite old, and some show signs of having been recently restored while others have their colors more faded.";
 	if Resolution of LarsGladiusAndShield is 0:
 		say "     Currently, you do not see anything special about them. Perhaps you should check other things, first.";
 	else if Resolution of LarsGladiusAndShield is 1 and Resolution of LarsRedCape is 0:
-		WaitLineBreak;
 		say "     There is one painting that, however, jumps to the eye. As you compare it to the rough sketch you have found behind the statue, you realize it quite looks like this one: A roman centurion proudly standing with his armor, red cape on the back flowing with the wind, holding a gladius and a scutum shield, and with his helmet on, a glorious metal carapace with a fan-shaped clump of red feathers on top. As you come closer to it, you realize that the painting seems to be hanging lightly from the wall, giving you the feeling you could actually move it easily. Curiosity gets the better of you and so you decide to test that theory. To your surprise, there is [bold type]an antique key[roman type] behind it, a pretty detailed one that seems like it belongs to the [bold type]ornate armoire[roman type], and perhaps one of its drawers?";
 		say "     There seems to be more to it, too. This painting might mean something, and you find yourself looking back at the roman soldier statue from before. What would happen if you [bold type]completed it[roman type]? You are pretty sure you can find everything you need within this wing, and [bold type]there is a very similar helmet by the entrance, when you walk outside back to the hub...[roman type][line break]";
 		now Resolution of LarsRedCape is 1;
 		now Resolution of LarsGladiusAndShield is 2;
 
-instead of going north from Museum_Roman_Wing while (Resolution of LarsGladiusAndShield >= 2 and Resolution of LarsCenturionHelmet < 1):
+instead of going north from Museum_Roman_Wing while Resolution of LarsGladiusAndShield >= 2 and Resolution of LarsCenturionHelmet < 1:
 	say "     As you walk out of the Roman Wing, you pass by a [bold type]centurion helmet[roman type] that seems quite like the one you have seen in that painting. Figuring that this would probably be useful, you take it off the display stand without much trouble and bring it over inside, just in case you need it.";
 	now Resolution of LarsCenturionHelmet is 1;
+
+UseRWRomanSoldierStatue is an action applying to nothing.
+understand "use roman wing soldier statue" as UseRWRomanSoldierStatue.
+
+check UseRWRomanSoldierStatue:
+	if Player is not in Museum_Roman_Wing, say "You're not in the Museum Roman Wing at the moment." instead;
 
 carry out UseRWRomanSoldierStatue:
 	if Resolution of LarsAwakened > 0:
@@ -199,7 +185,6 @@ carry out UseRWRomanSoldierStatue:
 	else:
 		say "     This statue represents a muscular and rather handsome roman soldier wearing their typical army armor, which consists of a metal chestplate and armor on top of a red tunic that ends right above the knees, with a pair of sandals as footwear. Something about this sculpture suggests that it is somehow... alive. It is warm to the touch and gives out an ominous aura, as if it was watching you.";
 		if Resolution of LarsGladiusAndShield < 1:
-			WaitLineBreak;
 			say "     Upon inspecting it close enough, you notice a small sheet of paper by its feet. As you kneel to take a closer look, you reach for it with your hand and snatch it from between its sandals. It is a rough sketch of what seems to be a roman centurion, given away by the typical helmet they normally wear along with the army attire, cape and weapons. For some reason, this makes you wonder if any of the [bold type]paintings[roman type] on the other side would be of any relevance...";
 			now Resolution of LarsGladiusAndShield is 1;
 		if Resolution of LarsRedCape is 2:
@@ -211,7 +196,6 @@ carry out UseRWRomanSoldierStatue:
 		if Resolution of LarsRedCape is 2 and Resolution of LarsGladiusAndShield is 3 and Resolution of LarsCenturionHelmet is 1 and Resolution of LarsAwakened is 0:
 			WaitLineBreak;
 			say "     Given that you have everything you require to fulfill the conditions presented by the rough sketch you found, [bold type]would you like to place everything on the statue[roman type] and see what happens? Something could, in fact, take place, though that remains to be seen. A feeling tells you it would do something, but the only way you have to know is if you try.";
-			LineBreak;
 			say "     ([link]Y[as]y[end link]) - Yes, dress up the statue.";
 			say "     ([link]N[as]n[end link]) - No, back away, for now.";
 			if Player consents:
@@ -229,8 +213,7 @@ to say RWRomanSoldierStatueAwakening:
 	WaitLineBreak;
 	say "     This is all so very strange, but it seems the soldier has not moved, at all. Perhaps you are just tired from having to figure out how to... What was really the point of all that, actually? You gave the statue a cape, weapons and a helmet much like you have seen in the portrait, but for what reason? Nothing has changed... Did you really just waste your time? And was the statue smirking before...? Confusion really begins to take hold of you, much like what this museum makes you feel, and you strongly consider just leaving this place before you lose your mind... But you cannot shake away this feeling of uncertainty, questioning your actions that ultimately led to nothing... Just when you were so sure you were solving some sort of puzzle that would lead to, maybe... Riches? Secrets? A pleasurable good time?";
 	say "     In fact, you look at the statue, once more... You inspect its characteristics and features, in hopes of understanding what is going on... Even asking yourself why do you feel so confused about this. You have just placed objects on the statue and nothing came out of it, so should you just leave in disappointment?! That is the only conclusion, right?";
-	LineBreak;
-	say "     However, you still [bold type]feel something...[roman type][line break]";
+	say "[line break]     However, you still [bold type]feel something...[roman type][line break]";
 	say "     ([link]Y[as]y[end link]) - An unexplainable attraction towards the statue.";
 	say "     ([link]N[as]n[end link]) - Creeped out. You really just want to leave.";
 	if Player consents:
@@ -240,8 +223,7 @@ to say RWRomanSoldierStatueAwakening:
 		WaitLineBreak;
 		say "     You [if Player is not naked]begin to remove your clothes and[else]simply[end if] begin to rub your bare body against its frame, and even though its armor is cold against your skin, you feel the warmth of its presence touching you as you embrace it. Only if it was alive... the man could hug you back, rub those strong hands all over you as you shared tongues. Your mind is doing all the work, these feelings being so vivid that it nearly looks like the statue is actually moving and doing all that. It... really feels like you are being rubbed all over, and that its lips and tongue are moving to meet yours... You want more... You [italic type]need[roman type] more. Perhaps you could remove its armor and get it naked?";
 		say "     It is then when you open your eyes, once more, and... Find yourself trapped within the statue's arms, which have somehow moved around you. Looking back at its face, you realize its mouth is frozen still, open and with its tongue in a position that suggested it was twirling around yours as you were kissing it. However, the statue is not moving, anymore. It really does not move an inch, and you watch it carefully from very up close. Just... What is happening?!";
-		LineBreak;
-		say "     Looking at this strange situation, [bold type]what should you do, next?[roman type][line break]";
+		say "[line break]     Looking at this strange situation, [bold type]what should you do, next?[roman type][line break]";
 		say "     ([link]Y[as]y[end link]) - Close your eyes.";
 		say "     ([link]N[as]n[end link]) - This got very weird, now. Leave immediately.";
 		if Player consents:
@@ -259,8 +241,7 @@ to say RWRomanSoldierStatueAwakening:
 			WaitLineBreak;
 			say "     Perhaps you should just nod and smile, and tell him it was no problem. 'And the process... Touching you felt good. I have looked at some rather quaint paintings and sculptures that had people rubbing their bodies together. What is it for? Pleasure? Desire? Bonding? Or... Perhaps a bit of all?' Well, it seems you have a lot of work to do with this man, as he does not seem to know what he was doing, despite him knowing exactly what he was doing. What a paradox... But you end up telling him the basics about it. 'It just felt natural to touch you in such a way, but I wonder how it would feel on me. I [if Player is male]do not seem to have a... what do you call it? That thing you had between your legs that just kept on throbbing in my hand, and then shot something warm and sticky onto me? That, which I have also seen in other depictures of men, much like me[else]do not seem to have any sort of thing between your legs, like those I have seen in in other depictures of men, much like me[end if] I... wonder if that could be changed?'";
 			say "     You will figure something out, for sure, so you assure him that, indeed, something like that could most definitely be arranged. And, perhaps, then you could have some more fun, together. 'That sounds good. Thank you. You are very nice. And you may call me Lars Duccius Gavros. This was the name of my maker, I believe. I would like to honor him. I suppose Lars will suffice.' He then politely bows to you.";
-			WaitLineBreak;
-			say "     [bold type]You have awakened Lars, and he will be staying in the Roman Wing, for the time being[roman type]. Perhaps you should take care of his lack of genitalia and help him get acquainted with the world before you take him anywhere else, if he would agree to join you in your adventures later on.";
+			say "[line break]     [bold type]You have awakened Lars, and he will be staying in the Roman Wing, for the time being[roman type]. Perhaps you should take care of his lack of genitalia and help him get acquainted with the world before you take him anywhere else, if he would agree to join you in your adventures later on.";
 			now Resolution of LarsAwakened is 1;
 			WaitLineBreak;
 			say "     'Oh, and have this, as well. I believe you would find better use for it while I stay in here. And it is a token of gratitude from me,' says Lars as he hands you what seems to be a gladius. It looks like it is in pretty good conditions and could actually see some use in a fight!";
@@ -287,7 +268,7 @@ to say RWRomanSoldierStatueAwakening:
 		ItemGain ancient gladius by 1;
 		now Resolution of LarsAwakened is 99;
 
-instead of going to Museum North Hub while (Resolution of LarsGenitals is 1 or Resolution of LarsGenitals is 2):
+instead of going to Museum North Hub while Resolution of LarsGenitals is 1 or Resolution of LarsGenitals is 2:
 	say "     As you explore the northern hub of the museum, you recall a mental note on your quest to help Lars with gaining some form of manhood. Do you wish to do that right now?";
 	say "     ([link]Y[as]y[end link]) - Yes.";
 	say "     ([link]N[as]n[end link]) - No.";
@@ -298,37 +279,30 @@ instead of going to Museum North Hub while (Resolution of LarsGenitals is 1 or R
 		WaitLineBreak;
 		say "     Despite the actual state of the world outside, you do not think you have seen this many cock-shaped objects together in one single place. They do not look like sex toys, just simply trinkets or artifacts that, you think, would serve some ritualistic purpose. You also see paintings hanging on the walls of, you guessed it, prime examples of penises of various shapes and sizes, drawn to their very last detail in a plethora of different angles. Just being in this wing makes you feel slightly bothered, as the amount of dicks scattered around is almost overwhelming. But you have got a quest to focus on, and you shall do so without letting all these bold masterworks distract you from your goal.";
 		say "     With that said, your eyes do catch a certain... different phallus, standing atop an old-looking cabinet. This one looks pretty much like a stone-crafted sculpture of a realistic human-looking dong, complete with a sack and everything, fully erect and measuring at 8 inches in length. Right beside it, however, is another quaint-looking one, shaped like a sort of tentacle. Perhaps one of these could work? You have absolutely no idea, but these are objects you can bring with you and offer Lars quite easily. The question now is... which one do you want to bring with you and try out first? You suppose you could just leave and ask Lars which one of these he would like better before picking one. After all, he is in the same building and a little walk away from here...";
-		LineBreak;
 		say "     [link](1)[as]1[end link] - Grab the human one.";
 		say "     [link](2)[as]2[end link] - Get the tentacle one.";
 		say "     [link](3)[as]3[end link] - Leave, for now.";
 		now calcnumber is 0;
 		while calcnumber < 1 or calcnumber > 3:
-			say "Choice? (1-4)>[run paragraph on]";
+			say "Choice? (1-3)> [run paragraph on]";
 			get a number;
-			if calcnumber is 1 or calcnumber is 2 or calcnumber is 3:
-				break;
-			else:
+			if calcnumber < 1 or calcnumber > 3:
 				say "Invalid choice. Type [link]1[end link] to grab the human-looking phallus, [link]2[end link] to grab the odd tentacle phallus or [link]3[end link] to leave without grabbing anything.";
+		LineBreak;
 		if calcnumber is 1:
-			LineBreak;
 			say "     Figuring that this would be the safest option, you get your hands on the eight inch-long penis and take it with you. Strangely, the stone feels warm and smooth to the touch, pretty much like how you felt when you laid your fingers on Lars['] skin. This could only mean something good, right?";
 			now Resolution of LarsGenitals is 3;
 		else if calcnumber is 2:
-			LineBreak;
 			say "     You cannot help but be very intrigued by this peculiar tentacle-shaped penis. It is pointy and seems like it would belong to a creature of the deep sea. As to why, you cannot really tell, it is just the feeling you get. Nonetheless, equipping a roman soldier statue with a tentacle between his legs could be quite fun. Hopefully, this one will work.";
 			now Resolution of LarsGenitals is 99;
-		else if calcnumber is 3:
-			LineBreak;
-			say "     ";
+		else:
+			say "     You have decided to leave this for another time.";
 			now Resolution of LarsGenitals is 2;
 	else:
 		LineBreak;
 		say "     You have decided to leave this for another time.";
 
-[**************************************************]
 Section 2 - Completing Lars
-[**************************************************]
 
 Table of GameEventIDs (continued)
 Object	Name
@@ -349,8 +323,7 @@ ResolveFunction of LarsGenitals is "". Sarea of LarsGenitals is "Nowhere".
 to say LarsCompleted:
 	say "     A few moments later, you hear the roman soldier moan from behind you. 'O-oh... T-this feels... interesting...' he states as you are only left to wonder what is happening, right now, but you must remain looking the other way until he tells you to turn back around. 'I... think it worked, I can feel it as my own... I believe you can look, now.' Once he declares that you are now free to observe him, you turn to him and finally are able to witness Lars['] true completion. The cock is now part of him, exactly as it should, standing there throbbing, also like one normally would. His vestments remain laying on the floor, having freed his glorious muscular body, as the man removed them before going through the process of attaching the dick on him.";
 	say "     'So this is how it feels to have one... It's quite distracting. Feels really good to touch it and keep playing with it... How can [if Player is male]you go by your day with this on you all the time? Do you[else]someone go by their days with this on them all the time? Do they[end if] eventually get used to having one, is that it?' You nod, and explain that most people do not really have to deal with that, as they are either born with it or are already used to have sexual desire through their entire life, mentioning, of course, that there could be rare exceptions. Lars cannot stop rubbing it with his hands as he just stares at it, dumbfounded. After a while, he even stops paying attention to you.";
-	WaitLineBreak;
-	say "     Do you think you should help him get acquainted with his new acquisition? Or should you just leave him be, to explore on his own?";
+	say "[line break]     Do you think you should help him get acquainted with his new acquisition? Or should you just leave him be, to explore on his own?";
 	say "     ([link]Y[as]y[end link]) - Give him a handjob.";
 	say "     ([link]N[as]n[end link]) - Leave him alone for a while.";
 	if Player consents:
@@ -372,16 +345,14 @@ to say LarsCorrupted:
 	say "     Your ass becomes filled with a fat tentacle that keeps on pushing inwards[if Player is female], as well as your pussy, which stretches to accommodate a second one[else if Player is male], as a second one wraps itself around your cock, its wet body jerking it slowly[end if]. The other many, many tentacles simply overtake the rest of your body, going for any area that makes you squirm as the creature holds you close to him. Even the lower half of his face is now filled with tentacles, and they are quick to wrap around your head, forcing you to give him a kiss. You feel your face sinking in this mass of tendrils as a tongue, equally long and nimble, fills your mouth, covered in thick and salty saliva.";
 	WaitLineBreak;
 	say "     As the creature continues to pump his organs into you, wiggling and crawling deeper inside your body, you feel extraordinary pleasure, albeit couple with the feeling of great peril. But that, soon, ceases to matter, as your strength begins to leave you. This bliss is the only thing that lasts as everything you once held control of begins to shut down into numbness, your head falling heavy and only held by the creature's powerful grasp. You feel yourself diving into a deep slumber as your body is violated repeatedly by this odd monster, eventually getting a fill of his warm juices as they are deposited in you, a great number of times during your dormant state, until finally, you black out completely.";
-	WaitLineBreak;
+	wait for any key;
 	clear the screen;
 	say "     At some point, you open your eyes as you find yourself lying down on the floor. You are still in the museum and in the roman wing, but you are so dizzy it takes you a long time to get up. Somehow, you feel like your body has been drained of its energy, unable to use its full strength. You feel weaker, even... And as you glance around, there is no sign of Lars. You struggle to remember that exactly happened, but there were... a lot of tentacles. Perhaps you should have given him that normal-looking cock, instead... Anyway, it is too late now. You must try to get up and leave this place, you have wasted enough time here.";
 	statchange "Stamina" by -2;
 	now Resolution of LarsGenitals is 100;
 	now Lars is nowhere;
 
-[**************************************************]
 Section 3 - NPC
-[**************************************************]
 
 Table of GameCharacterIDs (continued)
 object	name
@@ -423,12 +394,8 @@ SexuallyExperienced of Lars is false.
 TwistedCapacity of Lars is false. [Twisted Characters can take any penetration, no matter the size]
 Sterile of Lars is true. [steriles can't knock people up]
 MainInfection of Lars is "".
-Description of Lars is "[Larsdesc]".
-Conversation of Lars is { "<This is nothing but a placeholder!>" }.
+Description of Lars is "     Once merely a statue, Lars somehow came to life as a full human, albeit quite odd in posture and attitude, as if he belonged to another era. He is a tall and muscled man with quite strong roman features on his face, such as the wide jawline, the straight nose, a peachy skintone, dark eyes and short brown hair. He has only a stubble across his chin and jaw, and stands up straight in a quite military fashion. Speaking of his attire, it is reminescent of a roman centurion. His helmet is made of steel with red feathers, shaped like a fan, sitting on top of it, matching the steel plate protecting his torso. His outfit then ends in a sort of a red skirt that leaves his sculptural legs open, much like his arms. He also wears a long red cape tied around his neck and covering his back.[line break]".
 The scent of Lars is "     The roman soldier has a very masculine smell, quite distinguishable from the surrounding scents.".
-
-to say LarsDesc:
-	say "     Once merely a statue, Lars somehow came to life as a full human, albeit quite odd in posture and attitude, as if he belonged to another era. He is a tall and muscled man with quite strong roman features on his face, such as the wide jawline, the straight nose, a peachy skintone, dark eyes and short brown hair. He has only a stubble across his chin and jaw, and stands up straight in a quite military fashion. Speaking of his attire, it is reminescent of a roman centurion. His helmet is made of steel with red feathers, shaped like a fan, sitting on top of it, matching the steel plate protecting his torso. His outfit then ends in a sort of a red skirt that leaves his sculptural legs open, much like his arms. He also wears a long red cape tied around his neck and covering his back.";
 
 LarsDoneTalking is a truth state that varies.[@Tag:NotSaved]
 
@@ -448,12 +415,11 @@ to say TalkToLars:
 		say "[LarsCorrupted]";
 	else:
 		say "     As your intention is to only speak with the roman soldier, you approach him as you consider what subject you wish to discuss with him. He eyes you back as you get closer with a warm smile on his face. 'Oh, hello there. Is there anything you need?' he asks, and lets you follow with whatever you wish to talk about.";
-		say "[LarsTalkMenu]";
+		say "[line break][LarsTalkMenu]";
 
 to say LarsTalkMenu:
 	now LarsDoneTalking is false;
 	say "     [bold type]What do you want to talk to Lars about?[roman type][line break]";
-	LineBreak;
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]
@@ -467,8 +433,7 @@ to say LarsTalkMenu:
 		now title entry is "His lack of genitalia";
 		now sortorder entry is 2;
 		now description entry is "Ask him if anything can be done about it";
-	[]
-	if Resolution of LarsGenitals is 4:
+	else if Resolution of LarsGenitals is 4:
 		choose a blank row in table of fucking options;
 		now title entry is "Changing his cock";
 		now sortorder entry is 2;
@@ -487,23 +452,27 @@ to say LarsTalkMenu:
 			choose row calcnumber in table of fucking options;
 			say "[title entry]: [description entry]?";
 			if Player consents:
-				let nam be title entry;
+				LineBreak;
 				now sextablerun is 1;
-				if (nam is "Himself"):
-					say "[LarsTalkHimself]";
-				else if (nam is "His lack of genitalia"):
-					say "[LarsTalkCockQuest]";
-				else if (nam is "Changing his cock"):
-					say "[LarsTalkCockChange]";
+				if title entry is:
+					-- "Himself":
+						say "[LarsTalkHimself]";
+					-- "His lack of genitalia":
+						say "[LarsTalkCockQuest]";
+						now LarsDoneTalking is true;
+					-- "Changing his cock":
+						say "[LarsTalkCockChange]";
+						now LarsDoneTalking is true;
 				wait for any key;
 				if LarsDoneTalking is false:
 					say "[LarsTalkMenu]"; [looping back to keep talking with him]
 		else if calcnumber is 0:
+			LineBreak;
 			now sextablerun is 1;
 			say "     You give Lars a polite bow as you take your leave, which he retributes.";
 			wait for any key;
 		else:
-			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options], or 0 to exit.";
 	clear the screen and hyperlink list;
 
 to say LarsTalkHimself:
@@ -515,20 +484,17 @@ to say LarsTalkCockQuest:
 		say "     As you recall Lars having this peculiarity about him, you decide to ask him if anything can be done to help him regarding his lack of genitalia. 'I'm not certain it's a problem... You don't have to go out of your way to do anything like that for me, but if you really want to...' - he pauses as he thinks to himself - 'I suppose there's a way. This is a museum, after all... Is there any sort of [bold type]mythological[roman type] room with things related to gods and myths? Who knows, you might be able to find something magical in there that I could use? I'm pretty sure I can interact with magic objects, so... It'd be worth a try if you really want to do this.'";
 		say "     You could [bold type]walk around the Museum[roman type] and see if you can find anything useful to help Lars. Perhaps the [bold type]North Hub[roman type] has a higher chance of containing something of value for this quest?";
 		now Resolution of LarsGenitals is 1;
-	else if Resolution of LarsGenitals is 1:
-		say "     You bring the subject of Lars['] lack of genitalia to the roman soldier himself, still with empty hands. 'Have you tried the [bold type]North Hub[roman type]? I think it connects to several mythological-themed wings... Maybe you could find a god of fertility artifact or something. I just want to avoid touching things I shouldn't, since I'm basically part of the museum and I don't know what would happen...'";
-	else if Resolution of LarsGenitals is 2:
-		say "     You bring the subject of Lars['] lack of genitalia to the roman soldier himself, still with empty hands, but you tell him that you found this room. 'You found it? And there was nothing you could bring?' he asks, and you make a brief description of what was in there, all the phallic-shaped sculptures and whatnot, including the strange tentacle, and he seems pleased to know. 'So there's something in there. Good! Maybe you can bring that plain looking one. I... have a bad feeling about the other. Tentacles are... a bad omen.' You nod as you hear his words.";
+	say "     You bring the subject of Lars['] lack of genitalia to the roman soldier himself, still with empty hands[if Resolution of LarsGenitals is 1]. 'Have you tried the [bold type]North Hub[roman type]? I think it connects to several mythological-themed wings... Maybe you could find a god of fertility artifact or something. I just want to avoid touching things I shouldn't, since I'm basically part of the museum and I don't know what would happen...'[else], but you tell him that you found this room. 'You found it? And there was nothing you could bring?' he asks, and you make a brief description of what was in there, all the phallic-shaped sculptures and whatnot, including the strange tentacle, and he seems pleased to know. 'So there's something in there. Good! Maybe you can bring that plain looking one. I... have a bad feeling about the other. Tentacles are... a bad omen.' You nod as you hear his words.[end if]";
 
 to say LarsTalkCockChange:
 	say "     You happen to mention Lars['] dick to him, shifting his focus to the subject immediately, and ask if it would be possible to change it, somehow. 'Change it? Like shape and size? I suppose it's possible, but I'd like to... get used to its normal state for a while longer, if you don't mind.'";
 	say "     It seems that currently, you are unable to propose any changes to his manhood. Perhaps in the future (once the content gets added)?";
 
-instead of fucking Lars:
+[instead of fucking Lars:
 	say "[SexWithLars]";
 
 to say SexWithLars:
-	say "<<Author's Note: Currently unavailable, to be updated in the future!>>";
+	say "<<Author's Note: Currently unavailable, to be updated in the future!>>";]
 
 to say LarsSexHandjobFirst:
 	say "     You walk up to him, hands free and ready, as the roman soldier's manhood is already throbbing for attention. With a simple touch, you make him moan as your fingers lay on his shaft, so hard that it feels like rock once you start stroking it. He only observes you, barely able to contain himself, until he really does not, as several moans continuously escape his lips. 'Feels... really good... You've got nice hands...' he tells you, as your stroking motions steadily progress into something a little faster, but not too much. You still want him to last, which will not happen if you stroke him too hastily. Lars already has a hard time enduring all the pleasure you are giving him, but the man holds well enough for a while.";
@@ -537,15 +503,8 @@ to say LarsSexHandjobFirst:
 	say "     But touching such an athletic, handsome and statuesque man does not leave you indifferent. Lars is the prime example of masculinity, now with all the extra bits added, having started with a really good size, girth and shape, along with a pair of nuts hanging underneath of satisfactory volume. A temptation surges in your mind when looking at his lips, soft-looking, plump, yet fitting his beautifully manly face just right, and so close to yours. The move is not made by you, though, as both your lips collide. The roman man leans in to kiss you and does not stop, even gives you some tongue in a surprising display of skill. In fact, he does it so well it makes your [if Player is male]own dick harden[else if Player is female]pussy moist[else]libido spike[end if].";
 	say "     Then, even more surprisingly, you find his hand on your body, running down through it towards your crotch. Lars pulls his mouth back briefly, only to say 'It is only fair that I repay you in the same way...' before slowly returning those so smooth lips of his to yours. Kissing him feels delightful, and so does his touch once his fingers [if Player is male]are wrapped around your meat[else if Player is female]are pressing against your vulva[else]are rubbing around your genderless, but still sensitive, groin[end if]. The excitement causes you to stroke him faster, and he quickly picks up the pace, both of you approaching the edge of your climaxes at a very fast pace.";
 	WaitLineBreak;
-	if Player is male:
-		say "     With the way both your cocks point forward, frotting is inevitable, and a little bit too arousing. Lars['] perfect meat is so incredibly smooth, warm and hard that, when it presses against yours, it makes you so rock solid it leaves you only a few strokes away from cumming. He then softly pushes your hand away and takes both your organs, rubbing them together in fervid passion, in a way that even your balls touch. All this full contact eventually causes you both to get past the point of no return, once your gonads begin to rise and pump all the load out through your shafts. You both cum at the same time, coating each others['] manhoods in plenty of thick semen.";
-	else if Player is female:
-		say "     With the way his cock points forward, and given how you are standing right in front of him, it inevitable ends up brushing against your vagina. Lars['] perfect meat is so incredibly smooth, warm and hard that, when he makes it press against your womanhood, it leaves you so very close to bursting in ecstasy right there. Everything you can think of is jumping right on him and let him penetrate you deep, taking that hot cock of his in fervid passion, but the soldier already enjoys himself a little too much feeling your juices on the tip of his penis. You do feel it almost going in, brushing against your lower lips, but with that, comes an intense throbbing, and then, a hot gush of cum against your privates. This sudden splash gets you too, as this wave of pleasure hits you thorough.";
-	else:
-		say "     It only takes several more strokes to cause the soldier to moan, even while kissing you, your hands moving as fast as they can, and soon, your efforts bring Lars past his point of no return, gushing out cum all over your midriff and below as his orgasm hits him right there. You, too, are taken by all the excitement and made to feel a spike of pleasure that makes every area of your body twitch and squirm.";
-	WaitLineBreak;
+	say "     [if Player is male]With the way both your cocks point forward, frotting is inevitable, and a little bit too arousing. Lars['] perfect meat is so incredibly smooth, warm and hard that, when it presses against yours, it makes you so rock solid it leaves you only a few strokes away from cumming. He then softly pushes your hand away and takes both your organs, rubbing them together in fervid passion, in a way that even your balls touch. All this full contact eventually causes you both to get past the point of no return, once your gonads begin to rise and pump all the load out through your shafts. You both cum at the same time, coating each others['] manhoods in plenty of thick semen[else if Player is female]With the way his cock points forward, and given how you are standing right in front of him, it inevitable ends up brushing against your vagina. Lars['] perfect meat is so incredibly smooth, warm and hard that, when he makes it press against your womanhood, it leaves you so very close to bursting in ecstasy right there. Everything you can think of is jumping right on him and let him penetrate you deep, taking that hot cock of his in fervid passion, but the soldier already enjoys himself a little too much feeling your juices on the tip of his penis. You do feel it almost going in, brushing against your lower lips, but with that, comes an intense throbbing, and then, a hot gush of cum against your privates. This sudden splash gets you too, as this wave of pleasure hits you thorough[else]It only takes several more strokes to cause the soldier to moan, even while kissing you, your hands moving as fast as they can, and soon, your efforts bring Lars past his point of no return, gushing out cum all over your midriff and below as his orgasm hits him right there. You, too, are taken by all the excitement and made to feel a spike of pleasure that makes every area of your body twitch and squirm[end if].";
 	say "     With the deed done, the soldier lets go of you, realizing the mess he[if Player is male] and you[end if] made. 'Wow... So this is what it feels like? I... really want to try out more of this!' He then looks around for something that would help you clean the cum, but the roman wing does not really have anything of use. The soldier's abs are still left covered in his own jizz...";
-	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Lick the cum off his abs.";
 	say "     ([link]N[as]n[end link]) - Do nothing. You are sure he will find a way to clean this mess.";
 	if Player consents:

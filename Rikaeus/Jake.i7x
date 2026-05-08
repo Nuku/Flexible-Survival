@@ -12,6 +12,11 @@ Version 1 of Jake by Rikaeus begins here.
 [ 0: Player has not had oral with Jake                     ]
 [ 1: Player has had oral with Jake                         ]
 
+a postimport rule: [bugfixing rules for players that import savegames]
+	if HP of Jake is 4:
+		change east exit of Second Floor Male Dorms to Jake's Room;
+		change west exit of Jake's Room to Second Floor Male Dorms;
+
 Table of GameEventIDs (continued)
 Object	Name
 Panda Inspiration	"Panda Inspiration"
@@ -23,16 +28,8 @@ Sarea of Panda Inspiration is "Campus".
 when play begins:
 	add Panda Inspiration to BadSpots of MaleList;
 
-JakeRoomConnection is a number that varies.[@Tag:NotSaved]
-
-an everyturn rule: [bugfixing rules for players that import savegames]
-	if HP of Jake is 4 and JakeRoomConnection is 0: [event resolved the right way, room not connected yet]
-		change east exit of Second Floor Male Dorms to Jake's Room;
-		change west exit of Jake's Room to Second Floor Male Dorms;
-		now JakeRoomConnection is 1; [make sure that it connects the room only once]
-
-instead of going to Tenvale College Male Dorms while (Panda Inspiration is not resolved and LastCampusWalkin - turns > 0 and HP of Jake is 0 and a random chance of 1 in 3 succeeds):
-	move player to Tenvale College Male Dorms;
+after going to Tenvale College Male Dorms while Panda Inspiration is not resolved and LastCampusWalkin - turns > 0 and HP of Jake is 0 and a random chance of 1 in 3 succeeds:
+	[move player to Tenvale College Male Dorms;]
 	FirstJakeEvent;
 
 to say ResolveEvent Panda Inspiration:
@@ -62,8 +59,8 @@ Sarea of Panda Question is "Campus".
 when play begins:
 	add Panda Question to BadSpots of MaleList;
 
-instead of going to Creative Street while (Panda Question is not resolved and LastCampusWalkin - turns > 0 and HP of Jake is 1 and a random chance of 1 in 3 succeeds):
-	move player to Creative Street;
+after going to Creative Street while Panda Question is not resolved and LastCampusWalkin - turns > 0 and HP of Jake is 1 and a random chance of 1 in 3 succeeds:
+	[move player to Creative Street;]
 	SecondJakeEvent;
 
 to say ResolveEvent Panda Question:
@@ -95,8 +92,8 @@ Sarea of Art Supply Retrieval is "Campus".
 when play begins:
 	add Art Supply Retrieval to BadSpots of FemaleList;
 
-instead of going to Lecture Street while (Art Supply Retrieval is not resolved and LastCampusWalkin - turns > 0 and HP of Jake is 2 and a random chance of 1 in 3 succeeds):
-	move player to Lecture Street;
+after going to Lecture Street while Art Supply Retrieval is not resolved and LastCampusWalkin - turns > 0 and HP of Jake is 2 and a random chance of 1 in 3 succeeds:
+	[move player to Lecture Street;]
 	ThirdJakeEvent;
 
 to say ResolveEvent Art Supply Retrieval:
@@ -152,8 +149,8 @@ Sarea of Grateful Panda is "Campus".
 when play begins:
 	add Grateful Panda to BadSpots of MaleList;
 
-instead of going to Lecture Street while (Grateful Panda is not resolved and LastCampusWalkin - turns > 0 and HP of Jake is 3 and a random chance of 1 in 3 succeeds):
-	move player to Lecture Street;
+after going to Lecture Street while Grateful Panda is not resolved and LastCampusWalkin - turns > 0 and HP of Jake is 3 and a random chance of 1 in 3 succeeds:
+	[move player to Lecture Street;]
 	FourthJakeEvent;
 
 to say ResolveEvent Grateful Panda:
@@ -174,6 +171,7 @@ to FourthJakeEvent:
 	move Jake to Jake's Room;
 	change east exit of Second Floor Male Dorms to Jake's Room;
 	change west exit of Jake's Room to Second Floor Male Dorms;
+	WaitLineBreak;
 	move player to Creative Street;
 
 Table of GameCharacterIDs (continued)
@@ -217,62 +215,57 @@ SexuallyExperienced of Jake is false.
 TwistedCapacity of Jake is false. [Twisted Characters can take any penetration, no matter the size]
 Sterile of Jake is true. [steriles can't knock people up]
 MainInfection of Jake is "".
-Description of Jake is "[JakeDesc]".
-Conversation of Jake is { "<This is nothing but a placeholder!>" }.
+Description of Jake is "     Glancing in the painting panda's direction you take a good look at him. Currently he's wearing a black, ratty, t-shirt and worn jeans which are both splattered with paint. You take a safe assumption and guess that it's clothing that he doesn't care about, hence why wearing it in the first place while working. Other than the clothing, Jake looks like your typical panda, with the black and white fur and the tail sticking out of the butt of his jeans. Taking a closer look at his face you can see he has a blissful expression as he works at his painting.[line break]".
+fuckscene of Jake is "[JakeSexMenu]".
 The scent of Jake is "     Jake gives off a scent of clay and paint oils, which is to be expected with the panda's occupation as an art student.".
-
-to say JakeDesc:
-	say "     Glancing in the painting panda's direction you take a good look at him. Currently he's wearing a black, ratty, t-shirt and worn jeans which are both splattered with paint. You take a safe assumption and guess that it's clothing that he doesn't care about, hence why wearing it in the first place while working. Other than the clothing, Jake looks like your typical panda, with the black and white fur and the tail sticking out of the butt of his jeans. Taking a closer look at his face you can see he has a blissful expression as he works at his painting.";
 
 instead of conversing the Jake:
 	if HP of Jake < 4: [should be not yet available]
 		say "     ERROR: Jake shouldn't be where a player can see him yet, heck you shouldn't even have access to this room yet! Please report to Rikaeus on the FS Discord and quote this tracking number for easier bugfixing: [HP of Jake]";
 	else:
 		say "     Walking up to the well-focused panda, you tap him on the shoulder, causing him to jump a little, thankfully not ruining his painting. He turns in your direction and smiles before speaking. 'Oh, hey there! What do you want?' he asks.";
-		say "[JakeTalkMenu]";
-
-to say JakeTalkMenu:
-	LineBreak;
-	say "What do you wish to talk about with the artistically inclined panda?";
-	now sextablerun is 0;
-	blank out the whole of table of fucking options;
-	[]
-	choose a blank row in table of fucking options;
-	now title entry is "His Art";
-	now sortorder entry is 1;
-	now description entry is "Ask the panda what inspired him to take up art";
-	[]
-	choose a blank row in table of fucking options;
-	now title entry is "His Assignment";
-	now sortorder entry is 2;
-	now description entry is "Ask him why he has to draw someone naked";
-	[]
-	repeat with y running from 1 to number of filled rows in table of fucking options:
-		choose row y from the table of fucking options;
-		say "[link][y] - [title entry][as][y][end link][line break]";
-	say "[link]0 - Nevermind[as]0[end link][line break]";
-	while sextablerun is 0:
-		say "Pick the corresponding number> [run paragraph on]";
-		get a number;
-		if calcnumber > 0 and calcnumber <= the number of filled rows in table of fucking options:
-			now current menu selection is calcnumber;
-			choose row calcnumber in table of fucking options;
-			say "[title entry]: [description entry]?";
-			if Player consents:
-				let nam be title entry;
+		say "[line break]     What do you wish to talk about with the artistically inclined panda?";
+		now sextablerun is 0;
+		blank out the whole of table of fucking options;
+		[]
+		choose a blank row in table of fucking options;
+		now title entry is "His Art";
+		now sortorder entry is 1;
+		now description entry is "Ask the panda what inspired him to take up art";
+		[]
+		choose a blank row in table of fucking options;
+		now title entry is "His Assignment";
+		now sortorder entry is 2;
+		now description entry is "Ask him why he has to draw someone naked";
+		[]
+		sort the table of fucking options in sortorder order;
+		repeat with y running from 1 to number of filled rows in table of fucking options:
+			choose row y from the table of fucking options;
+			say "[link][y] - [title entry][as][y][end link][line break]";
+		say "[link]0 - Nevermind[as]0[end link][line break]";
+		while sextablerun is 0:
+			say "Pick the corresponding number> [run paragraph on]";
+			get a number;
+			if calcnumber > 0 and calcnumber <= the number of filled rows in table of fucking options:
+				now current menu selection is calcnumber;
+				choose row calcnumber in table of fucking options;
+				say "[title entry]: [description entry]?";
+				if Player consents:
+					LineBreak;
+					now sextablerun is 1;
+					if title entry is:
+						-- "His Art":
+							say "[JakeArt]";
+						-- "His Assignment":
+							say "[JakeAssignment]";
+			else if calcnumber is 0:
+				LineBreak;
 				now sextablerun is 1;
-				if (nam is "His Art"):
-					say "[JakeArt]";
-				if (nam is "His Assignment"):
-					say "[JakeAssignment]";
-				wait for any key;
-		else if calcnumber is 0:
-			now sextablerun is 1;
-			say "     You apologize to the panda for interrupting his painting and say you forgot what you were going to say. He chuckles and tells you it's no problem and goes back to work.";
-			wait for any key;
-		else:
-			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
-	clear the screen and hyperlink list;
+				say "     You apologize to the panda for interrupting his painting and say you forgot what you were going to say. He chuckles and tells you it's no problem and goes back to work.";
+			else:
+				say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options], or 0 to exit.";
+		wait for any key;
+		clear the screen and hyperlink list;
 
 to say JakeArt:
 	say "     The panda hums for a second, putting down his paintbrushes to thinking about your question. 'Well, if you want to know why I got into art you'd have to go back to when I was a kid,' Jake says, before gesturing for you to follow him to the left side of the room and onto the couch. Mentally shrugging your shoulders and following him, you join him, taking a seat. 'My mother and father were art professors so they taught me how to draw and paint from a young age,' the panda says, leaning back against the couch. 'Of course I wasn't that interested, as I had wanted to be a doctor growing up,' Jake says with a chuckle. You raise a brow at him, rather surprised, unable to picture the art obsessed panda wanting to be in the medical profession.";
@@ -284,49 +277,44 @@ to say JakeArt:
 to say JakeAssignment:
 	say "     As soon as you mention his nude painting assignment you're pretty sure he'd be blushing if it wasn't for his fur as noted by his embarrassed look. 'W-well, I decided to take a life drawing class and the whole idea of the class is painting or drawing people,' Jake says, stuttering out his answer. You raise a brow and bring about a question, saying don't they usually have models for that? The panda instantly looks at the ground and mumbles something, causing you to ask him to speak louder. 'I said, they wanted us to draw someone from outside the class and I thought you fit the profile,' your friend says. You 'ah' and nod your head, understanding his original reaction to you. Patting him on the shoulder you smile at him before saying that you'll definitely help him find someone worthy of a painting. He returns the facial expression and gives his gratitude. 'Thanks, I appreciate it!' Jake says, before returning to his work.";
 
-instead of fucking Jake:
-	if (lastfuck of Jake - turns < 3): [he got fucked in the last 9 hours = 3 turns]
+to say JakeSexMenu:
+	if lastfuck of Jake - turns < 3: [he got fucked in the last 9 hours = 3 turns]
 		say "     As you approach the panda to grope him, he turns towards you with an apologetic look. 'I'm sorry friend, but I'm still drained from last time,' Jake says to you before returning his work.";
 	else:
 		say "     Walking up to the painting panda you grope at his clothed ass, causing him to yelp and drop his paintbrush. Turning in your direction he looks highly embarrassed but aroused as well, clearly ready for whatever you have planned for him.";
-		wait for any key;
-		say "[JakeSexMenu]";
-
-to say JakeSexMenu:
-	LineBreak;
-	now sextablerun is 0;
-	blank out the whole of table of fucking options;
-	[]
-	choose a blank row in table of fucking options;
-	now title entry is "Oral";
-	now sortorder entry is 1;
-	now description entry is "Give the panda a blowjob";
-	[]
-	sort the table of fucking options in sortorder order;
-	repeat with y running from 1 to number of filled rows in table of fucking options:
-		choose row y from the table of fucking options;
-		say "[link][y] - [title entry][as][y][end link][line break]";
-	say "[link]0 - Nevermind[as]0[end link][line break]";
-	while sextablerun is 0:
-		say "Pick the corresponding number> [run paragraph on]";
-		get a number;
-		if calcnumber > 0 and calcnumber <= the number of filled rows in table of fucking options:
-			now current menu selection is calcnumber;
-			choose row calcnumber in table of fucking options;
-			say "[title entry]: [description entry]?";
-			if Player consents:
-				let nam be title entry;
+		now sextablerun is 0;
+		blank out the whole of table of fucking options;
+		[]
+		choose a blank row in table of fucking options;
+		now title entry is "Oral";
+		now sortorder entry is 1;
+		now description entry is "Give the panda a blowjob";
+		[]
+		sort the table of fucking options in sortorder order;
+		repeat with y running from 1 to number of filled rows in table of fucking options:
+			choose row y from the table of fucking options;
+			say "[link][y] - [title entry][as][y][end link][line break]";
+		say "[link]0 - Nevermind[as]0[end link][line break]";
+		while sextablerun is 0:
+			say "Pick the corresponding number> [run paragraph on]";
+			get a number;
+			if calcnumber > 0 and calcnumber <= the number of filled rows in table of fucking options:
+				now current menu selection is calcnumber;
+				choose row calcnumber in table of fucking options;
+				say "[title entry]: [description entry]?";
+				if Player consents:
+					LineBreak;
+					now sextablerun is 1;
+					if title entry is "Oral":
+						say "[JakeSex1]";
+			else if calcnumber is 0:
+				LineBreak;
 				now sextablerun is 1;
-				if (nam is "Oral"):
-					say "[JakeSex1]";
-				wait for any key;
-		else if calcnumber is 0:
-			now sextablerun is 1;
-			say "     You step away from the panda who gives you a slightly angry look, obviously sexually frustrated from your ass grope.";
-			wait for any key;
-		else:
-			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
-	clear the screen and hyperlink list;
+				say "     You step away from the panda who gives you a slightly angry look, obviously sexually frustrated from your ass grope.";
+			else:
+				say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options], or 0 to exit.";
+		wait for any key;
+		clear the screen and hyperlink list;
 
 to say JakeSex1:
 	say "     Grabbing the panda by the hand you pull him over to his couch before you push him down so that he's sitting. Taking a glance over his body you're sure that you'll enjoy this[if scalevalue of Player < 4] especially if the package matches the body[end if]. Eager to begin you kneel down and begin to unbutton Jake's worn jeans, revealing that he appears to go commando when he's painting, showing [if scalevalue of Player < 4]a rather large sized cock[else if scalevalue of Player is 4]a decently sized cock[else]an average sized cock[end if] that matches the male. Bringing your face to his furry balls you inhale, taking in the underlying musk that hid under the paint oil scent.";
@@ -338,9 +326,9 @@ to say JakeSex1:
 	say "     The effect is rather instantaneous and your mouth is suddenly filled with the salty taste of Jake's cum. You gulp down what you can but a lot of it spills out, leaking down your chin and dripping onto the couch and floor. Thankfully though it's not enough to choke you as the amount soon peters out, allowing you to pull off of the panda's cock, swallowing the last bit of semen that remains in your mouth. Looking up at him you can see that you thoroughly drained him as he's panting rather heavily but has a pleasured expression on his face. 'That was brilliant. I think I might have to rest for a bit before returning to work. Mind joining me up here?' he asks with an interested look. You contemplate it before shrugging.";
 	say "     You hop up onto the couch and cuddle up to the panda, the coarse fur that covers his body not entirely irritating to touch, rather it's actually pleasant. To your shock he pulls you into a kiss, licking off some of the cum that remains around your lips. When he pulls back he smiles with a smug look. 'I taste rather good, don't I?' he asks himself, causing you to groan and slap his shoulder. The two of you lay there and end up falling asleep on top of each other on the couch. About two hours later you're woken up by Jake who's looking at you with a smile. 'I figured I should wake you up, I woke up about an hour ago but I didn't want to disturb you,' he says, helping you off the couch.";
 	WaitLineBreak;
-	if Lust of Jake is 1:
+	if Lust of Jake > 0:
 		say "     You thank him for the help and stand up, stretching and letting the cracks in your back pop. Turning around you glance at the portrait he drew of you while sleeping. You admire it for a few minutes, enjoying the thorough detail that Jake put into it. He even managed to draw himself into the portrait, of course with pants considering the activity you were doing at the time. The fact he could do that surprises you and gives you some respect for his skill as an artist. You hear a chuckle from behind you and turn and see your panda friend. 'I'm glad you enjoy the painting, I consider it one of my finer works,' he says. You nod and give a sound of agreement before letting him return to his work as you should probably get going.";
-	else if Lust of Jake is 0:
+	else:
 		say "     When you stand up and stretch you notice a completed painting sitting on Jake's easel. What's very noticeable is the fact that it's a portrait of you and him sleeping on the couch. Walking up to it, you take a closer look at it. When you do, you're rather surprised to see it's very detailed down to every part of you. What shocks you even more is the fact that the panda drew himself in, which you're pretty sure he had to be awake to do. Your friend walks up from the right and smiles at the portrait. 'I did that while you were sleeping, you were kind of an inspiring subject so I couldn't help but paint you. Though the hardest part was getting me in it,' Jake says with a hum. You turn to him and praise the guy for his art, as you do thoroughly enjoy it. This instantly causes the panda to be embarrassed but clearly happy.";
 		say "     'Thanks! I was thinking of hanging it up over the couch, since that's where it took place,' he says with a contemplative look. You nod your head and say that'd be a perfect place for the portrait. He then gets a determined look on his face and agrees with you. 'Then that's where it'll go!' he says before taking the painting and bringing it over to where the couch. Once there he hangs it on a nail there, nodding at where it is. He returns to you and smiles with an embarrassed look. 'Ah, uh thanks for earlier again...' he says, looking down at the floor a few seconds later. You chuckle and say it wasn't a problem and say that you should get going. He nods and turns to the easel and puts a new canvas up before getting back to work.";
 		now Lust of Jake is 1;

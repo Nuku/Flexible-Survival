@@ -1,6 +1,6 @@
 The-Voice by Luneth begins here.
 
-Book 1 - Character Information
+Chapter 1 - Character Information
 
 Table of GameCharacterIDs (continued)
 object	name
@@ -30,7 +30,7 @@ AnalVirgin of The-Voice is true.
 PenileVirgin of The-Voice is false.
 SexuallyExperienced of The-Voice is true.
 
-Book 2 - Variables
+Chapter 2 - Variables
 
 [base stats of any character]
 [A person has a number called Energy.
@@ -56,6 +56,7 @@ Section 1 - HP [Quest progression]
 [ 99 - refused master of hell quest                                            ]
 
 Section 3 - Morale [Master of Hell Typing]
+
 [Strict choice on what type of Master of Hell you will become: Royal(Manipulator), Commander(Warrior), Tyrant(Destructor).]
 [This will effect the overall appearance of the dark sanctum as well as creating new routes and exclusive content.]
 
@@ -116,7 +117,7 @@ Section 5 - Level [Relationship With The-Voice]
 [ 1 and up - follow orders(stronger boss)                                      ]
 [ -1 and down - rebel(weaker boss)                                             ]
 
-Book 3 - Choices and Effects
+Chapter 3 - Choices and Effects
 
 Section 1 - Dark Sanctum Gender Appearance
 
@@ -200,6 +201,7 @@ to say PlayerDarkSanctumSetting:
 		now calcnumber is -1;
 
 Section 2 - Dark Sanctum First Fetish
+
 [This will serve as the original choice point, the second will be offered once the player has collected the 5 lords of hell, the third will be offered after choosing their 7 seeds of corruption, the final one will be offered after the completion of the entire quest.]
 [After the original choice, a new option will added that will allow players to skip choosing an additional theme if they are happy with the ones they have and don't want anymore.]
 

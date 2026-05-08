@@ -4,24 +4,7 @@ Version 1 of Gargoyle Sentry by Gherod begins here.
 
 [Version 1 - Moved Event to its own file]
 
-[***********************************************************]
-[***********************************************************]
-[***********************************************************]
 Section 1 - Events
-[***********************************************************]
-[***********************************************************]
-[***********************************************************]
-
-Table of GameEventIDs (continued)
-Object	Name
-Gargoyle Sentry	"Gargoyle Sentry"
-
-Gargoyle Sentry is a situation.
-ResolveFunction of Gargoyle Sentry is "[ResolveEvent Gargoyle Sentry]".
-Sarea of Gargoyle Sentry is "Outside".
-When play begins:
-	add Gargoyle Sentry to BadSpots of MaleList;
-	add Gargoyle Sentry to BadSpots of VoreList;
 
 [RESOLUTION STAGES]
 [0 - Never looked into the chest]
@@ -43,6 +26,18 @@ a postimport rule: [fix for having set the event as resolved prematurely in a pr
 	if Resolution of Gargoyle Sentry < 4:
 		now Gargoyle Sentry is not resolved;
 
+Table of GameEventIDs (continued)
+Object	Name
+Gargoyle Sentry	"Gargoyle Sentry"
+
+Gargoyle Sentry is a situation.
+ResolveFunction of Gargoyle Sentry is "[ResolveEvent Gargoyle Sentry]".
+Sarea of Gargoyle Sentry is "Outside".
+
+when play begins:
+	add Gargoyle Sentry to BadSpots of MaleList;
+	add Gargoyle Sentry to BadSpots of VoreList;
+
 to say ResolveEvent Gargoyle Sentry:
 	if GargoyleSentryTracker - turns < 7: [encountered the gargoyle in the current day]
 		say "     It is too early for that. You have already seen the gargoyle sentry today, and he takes time to appear again.";
@@ -52,8 +47,7 @@ to say ResolveEvent Gargoyle Sentry:
 		if glowing mushroom is owned:
 			say "But you do remember that you've collected a few strange looking mushrooms in the past that might be able to do the job.";
 			WaitLineBreak;
-			say "     Looking at one you pulled out of your inventory, you consider your options... [bold type]Would it be worth trying to ingest one of these and walk over the large gargoyle's territory?[roman type]";
-			LineBreak;
+			say "     Looking at one you pulled out of your inventory, you consider your options... [bold type]Would it be worth trying to ingest one of these and walk over the large gargoyle's territory?[roman type][line break]";
 			say "     ([link]Y[as]y[end link]) - Sure, there's no reward without taking risks.";
 			say "     ([link]N[as]n[end link]) - You could, but not now.";
 			if Player consents:
@@ -68,7 +62,7 @@ to say ResolveEvent Gargoyle Sentry:
 			say "     You figure you should look around for something with a [bold type]shrinking effect[roman type] before you return here and attempt to do anything. And your survival instincts tell you to NOT try your luck in going there normally. It would end badly for you, as this gargoyle seems bigger and stronger than any other you've seen if it was able to come to life.";
 	else if resolution of Gargoyle Sentry > 0 and Resolution of Gargoyle Sentry < 4:
 		say "     Amidst your exploration, with no destiny specified, you stumble across a small rubble of stone in the far distance. Upon closer inspection, you realize it's all very familiar to you. It's the place where you found that gargoyle sentry [if resolution of Gargoyle Sentry is 3]who almost crushed you to death after having covered you in his beastly cum [end if]the other day, and you were unable to retrieve anything of value out of it. Unfortunately, it looks like it will remain as such. The gargoyle is nowhere to be found, but neither is his treasures. Without anything else of interest to be done here, with the spot looking clearly abandoned, you erase this place off your notes and proceed further ahead, ignoring this area from now on.";
-		say "     ... But something seems... wrong. Maybe you could keep looking for the [bold type]Gargoyle Sentry[roman type] in the future days. He couldn't have disappeared just like that, no. Something must have surely happened.";
+		say "     ...But something seems... wrong. Maybe you could keep looking for the [bold type]Gargoyle Sentry[roman type] in the future days. He couldn't have disappeared just like that, no. Something must have surely happened.";
 		now Resolution of Gargoyle Sentry is 4;
 	else if Resolution of Gargoyle Sentry > 3 and Resolution of Gargoyle Sentry < 6: [Follow-up]
 		SGargoyleSearch;
@@ -84,7 +78,6 @@ to SGargoyleExplore:
 	say "     You search the inside of the chest thoroughly, but unfortunately... no luck. Seems like your idea to shrink and pass by unnoticed was brilliant in only one way, because you're not able to take anything with you. You could sell these ingots for some creds to anyone interested, only if you could transport them out. A misfortune, but at least you know it's not anything too valuable or worth running the risk of being smashed to death by a big bad manly gargoyle if he ever awakened and saw you as a menace. With disappointment, you figure it's time to leave the inside of the chest, so you make your way back by climbing up through the ingots and onto the edge of the treasure container.";
 	WaitLineBreak;
 	say "     Breathing outside air once more, you take a careful look around you, and towards the gargoyle. He's still dormant, and nothing strange happened while you were here. Pointless as this trip might have been, at least you have the opportunity to admire the work of art this beautiful statue is. Each muscle is flawlessly sculpted, almost as if it was a real organic being, and something about the creature strikes you with sheer power. Then, since you're leaving with your hands empty, an idea comes to mind... Realizing you're able to climb through stuff with ease, and never having seen such a gorgeous sculpture so up close while being as small as you currently are, how about you [bold type]go on a little adventure and explore this gargoyle's body?[roman type][line break]";
-	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Of course! Purely out of curiosity.";
 	say "     ([link]N[as]n[end link]) - Wouldn't that be reckless and dangerous? Better just leave and note the location for future reference.";
 	if Player consents:
@@ -97,7 +90,6 @@ to SGargoyleExplore:
 to SGargoyleScene:
 	say "     If you're careful enough, it won't even notice you're here. So you carefully bypass the chest and head towards the stone pedestal where the gargoyle is sitting on, and readying yourself to climb it up, you stretch your arms once more and give enough balance to jump over, grabbing the edge with both hands and bringing your body onto the top. From here, you can have a very clear view of his large clawed feet, holding against the pedestal firmly. They're not connected to the ground, which confirms your suspicions of this being one of those [']magic['] gargoyles. But looking between the thick thighs has you meeting an enormous manhood, long and smooth, hanging soft between his legs. Its tremendous size is only scarier when you're this small, but you're sure it would still be massive at your normal size! Beneath it, an equally sizable pair of testes hang heavily below, only overshadowed by the legs and the shaft, but they seem rather swollen.";
 	say "     This visage gives you the chills... but you're able to take a good gaze at the masculine gargoyle's virile details, and the rest of his beautiful body, incredibly huge compared to you, from a delicious angle. [bold type]There's even an unexplainable musk coming from his parts, as if it were alive...[roman type][line break]";
-	LineBreak;
 	say "     ([link]Y[as]y[end link]) - This arouses you, so you want to get closer...";
 	say "     ([link]N[as]n[end link]) - Alive... you think?! Something will most definitely happen if you don't leave right now.";
 	if Player consents:
@@ -137,8 +129,7 @@ to SGargoyleSearch: [Player searches for gargoyle sentry...]
 	else:
 		say "     Unfortunately, you are without luck, this time. Perhaps it would be better to pause and return to square one. He could not have gone too far...";
 		if a random chance of 1 in 3 succeeds: [consolation reward]
-			let randomnumber be a random number from 1 to 5;
-			if randomnumber is:
+			if a random number from 1 to 5 is:
 				-- 1:
 					say "     But not everything is bad. You managed to find a [bold type]bottle of clean water[roman type] during your search, lying abandoned in some random area where it could have possibly been dropped by someone, forgotten or both.";
 					ItemGain water bottle by 1 silently;
@@ -163,27 +154,23 @@ to SGargoyleScene2:
 		say "     There would be no other reason to enter here but perhaps using a second chance to explore the statue, although this time it could prove difficult due to his standing position. But even if you were up to the challenge, and because that is also part of the difficulty, you should already know that you would have to be really small, and very careful so that you wouldn't wake him up, else if your intention is to piss him off. Gargoyles do not like to be disturbed.";
 		if glowing mushroom is owned:
 			WaitLineBreak;
-			say "     Looking at one of the mushrooms you pulled out of your inventory, you consider your options... [bold type]Would it be worth trying to ingest one of these for the occasion?[roman type]";
+			say "     Looking at one of the mushrooms you pulled out of your inventory, you consider your options... [bold type]Would it be worth trying to ingest one of these for the occasion?[roman type][line break]";
 			LineBreak;
 			say "     [link](1)[as]1[end link] - You wouldn't waste another chance!";
 			say "     [link](2)[as]2[end link] - Not now, better return later (but you might have to search for him again).";
 			say "     [link](3)[as]3[end link] - You no longer have any interest in him. Leave and forget.";
 			now calcnumber is 0;
 			while calcnumber < 1 or calcnumber > 3:
-				say "Choice? (1-4)>[run paragraph on]";
+				say "Choice? (1-4)> [run paragraph on]";
 				get a number;
-				if calcnumber is 1 or calcnumber is 2 or calcnumber is 3:
-					break;
-				else:
+				if calcnumber < 1 or calcnumber > 3:
 					say "Invalid choice. Type [link]1[end link] to eat a shrinking shroom, [link]2[end link] to leave temporarily or [link]3[end link] to leave for good.";
+			LineBreak;
 			if calcnumber is 1:
-				LineBreak;
 				SGargoyleScene2Explore;
 			else if calcnumber is 2:
-				LineBreak;
 				say "     You decide it is better not, for now. Even if you have to conduct another search to find him, at least then you should be ready.";
 			else if calcnumber is 3:
-				LineBreak;
 				say "     You have had your misadventures with the gargoyle, and have decided that enough is enough. With this said, you simply take your leave and forget about the existence of this chapel. You have a feeling you will never encounter it again, ever.";
 				now Resolution of Gargoyle Sentry is 99;
 				now Gargoyle Sentry is resolved;
@@ -201,12 +188,11 @@ to SGargoyleScene3Choices:
 	say "     [link](4)[as]4[end link] - You no longer have any interest in him. Leave and forget.";
 	now calcnumber is 0;
 	while calcnumber < 1 or calcnumber > 4:
-		say "Choice? (1-4)>[run paragraph on]";
+		say "Choice? (1-4)> [run paragraph on]";
 		get a number;
-		if calcnumber is 1 or calcnumber is 2 or calcnumber is 3 or calcnumber is 4:
-			break;
-		else:
+		if calcnumber < 1 or calcnumber > 4:
 			say "Invalid choice. Type [link]1[end link] to eat a shrinking shroom, [link]2[end link] to try talking to him, [link]3[end link] to leave temporarily or [link]4[end link] to leave for good.";
+	LineBreak;
 	if calcnumber is 1:
 		if glowing mushroom is owned:
 			say "     Noticing you still have mushrooms in your pockets, your decision is made. Taking the item out of your inventory, you prepare yourself for the next steps...";
@@ -232,9 +218,7 @@ to SGargoyleScene2Explore:
 	WaitLineBreak;
 	say "     As you come close to the stone creature, you begin to feel slightly intimidated at his size. Not that you haven't seen him before, but now that you are taking a closer look, you remember how much he overshadows you at your current size. Someone as big as he, comparatively, could effortlessly squash you down like a bug with a single stomp, or do even worse than that with much less endeavor than what anyone would find suitable. Nonetheless, here you are, risking it for a little pleasure and fascination for the enormous gargoyle. Once you have decided to put your thoughts into actions, you begin to stretch your arms and legs as preparation for the climb ahead, which will be a long one, by the looks of it.";
 	say "     After having pushed yourself towards the top of the altar, you slip between his thick toes, watching out for the pointy claws at the end of each, and bring your body above them and his feet, proceeding to grab yourself onto one of his ankles and climbing up through that bulging calf muscle. Once you have made it past the knee area, you use the inclination of his powerful thighs to ascend further, as his legs are slightly bending forward, to your luck. Taking a short rest, you examine your surroundings at this point. To your left, you have the crotch of the gargoyle, his cock at an already good size despite being in its soft state, and jacked torso above you, with a few lumps and bits due to the shape of his muscles that could make your climb doable.";
-	WaitLineBreak;
-	say "     [bold type]Which way would you like to take your exploration to?[roman type]";
-	LineBreak;
+	say "[line break]     [bold type]Which way would you like to take your exploration to?[roman type][line break]";
 	say "     ([link]Y[as]y[end link]) - Up ahead, past his torso.";
 	say "     ([link]N[as]n[end link]) - Shift towards his crotch.";
 	if Player consents:
@@ -251,47 +235,37 @@ to SGargoyleScene2Explore:
 	say "     'There's nothing on you now... Hm... Squishy and fleshy... I think someone like this came to me back when I was guarding that chest... Was it you? I cannot remember, with all honesty...' He keeps asking the questions, all while completely harassing you with daring touching, albeit without hurting you, surprisingly. In fact, you could say the gargoyle is somewhat amused by your tiny presence, although he still seems annoyed that you have woken him up. 'I was in a really bad mood, then. Not so much, right now... Although, I think you deserve a punishment for walking in without permission.' He stops, then brings you really close to his eyes, forcing you to face them.";
 	WaitLineBreak;
 	say "     'I shall let you choose your predicament. Where should I put you... In my mouth, and swallow you whole, or... in my cock, and... swallow you whole all the same?' he asks, showing you a wicked grin that sends shivers down your spine. 'Come on now, pick an option, or you may end up in my ass, instead.'";
-	say "     [bold type]He really is waiting for your answer...[roman type][line break]";
-	LineBreak;
+	say "[line break]     [bold type]He really is waiting for your answer...[roman type][line break]";
 	say "     [link](1)[as]1[end link] - If you have to pick one... choose his mouth.";
 	say "     [link](2)[as]2[end link] - Can he really do that with his dick?";
 	say "     [link](3)[as]3[end link] - He also mentioned his ass... Is there a third option?";
 	say "     [link](4)[as]4[end link] - Choose none! Apologize and beg for mercy!";
 	now calcnumber is 0;
 	while calcnumber < 1 or calcnumber > 4:
-		say "Choice? (1-4)>[run paragraph on]";
+		say "Choice? (1-4)> [run paragraph on]";
 		get a number;
-		if calcnumber is 1 or calcnumber is 2 or calcnumber is 3 or calcnumber is 4:
-			break;
-		else:
+		if calcnumber < 1 or calcnumber > 4:
 			say "Invalid choice. Type [link]1[end link] to choose mouth, [link]2[end link] to choose cock, [link]3[end link] to ask about the ass option or [link]4[end link] to beg for mercy.";
+	LineBreak;
 	if calcnumber is 1: [Oral Vore]
-		LineBreak;
 		say "     After hearing your reply, he proceeds to give you a really long and hard lick through your entire body, leaving you coated in his saliva. 'Mmm... Is that it? Well, then...' his grip around you tightens as he gives you a scary look. 'Into my belly, you go.'";
 		WaitLineBreak;
 		SGargoyleScene2OV;
 	else if calcnumber is 2: [Cock Vore]
-		LineBreak;
 		say "     After hearing your reply, he lets out a chuckle, as one of his hands reaches down for his member, throbbing hard by now, to give it a gentle stroke. It looks like he is really enjoying this. 'Yes...? That is the least you can do, make me enjoy it. Perhaps I might forgive you once you're stuck and held tightly in my balls.'";
 		WaitLineBreak;
 		SGargoyleScene2CV;
 	else if calcnumber is 3: [Anal Vore]
-		LineBreak;
 		say "     Yes, you really have decided to ask him that. His eyes widen, then he lets out a laughter. 'Am I hearing it right? You actually [italic type]want[roman type] to be shoved up my ass?! What a weird one... But that is fine. If that is how you want to be punished... I hope you have a good time being pulled deep inside me.'";
 		WaitLineBreak;
 		SGargoyleScene2AV;
 	else if calcnumber is 4: [He picks one for the player]
-		LineBreak;
 		say "     With all your might and despair, you beg the gargoyle to have mercy on you, apologizing for disturbing him with your unwanted presence. 'How miserable. You fear the consequences of your actions? You should be ashamed. More the reason for me to punish you. And you know what? You don't get to choose anymore.' With that said, the beast makes a decision for you, one that you are not allowed to regret...";
 		WaitLineBreak;
-		let randomnumber be a random number from 1 to 3;
-		if randomnumber is:
-			-- 1:
-				SGargoyleScene2OV;
-			-- 2:
-				SGargoyleScene2CV;
-			-- 3:
-				SGargoyleScene2AV;
+		if a random number from 1 to 3 is:
+			-- 1: SGargoyleScene2OV;
+			-- 2: SGargoyleScene2CV;
+			-- 3: SGargoyleScene2AV;
 	if Resolution of Gargoyle Sentry is 4:
 		now Resolution of Gargoyle Sentry is 5;
 
@@ -302,13 +276,13 @@ to SGargoyleScene2OV:
 	say "     The walls surrounding you squeeze your body almost painfully, though not enough to actually hurt you. Instead, all the momentum they provide makes you feel dizzy and weak, with all that slippering surface rubbing against you as it pushes you lower. Without much effort, you are dropped into the beast's stomach, which is even warmer and so damp that breathing feels pointless. Giving his belly a rub, you feel his insides rumble once you're held inside him, and you can hear him speak through every direction. 'Luckily for you... I'm just a gargoyle, meaning... I don't really to [']eat['] anything for good. But you are going to spend several hours in there... Just because I think you feel really good in there.'";
 	say "     You feel the center of gravity shift, pushing you towards the stomach walls on your back. He keeps rubbing his belly, truly enjoying your presence inside him, as you can't help but wiggle and struggle against all that flesh attempting to smother you. It wouldn't be so unbearable if the gargoyle wasn't trying to absolutely torture you while getting a wank at your expense, but that actually seems to turn him on more. You feel the motions of his body jerking off that long rock solid length as you languish in his belly. There is no telling how long you have been punished by the beast until you lose your senses, all the added up heat, pressure against your body and the sickening motions contributing to a complete blackout.";
 	if Resolution of Gargoyle Sentry > 5: [scene happens when he's befriended]
-		WaitLineBreak;
 		follow the turnpass rule;
+		WaitLineBreak;
 		say "     Hours have passed, and you wake up later, not inside his belly, but actually on top of it, outside. It seems the gargoyle has taken you out, washed you and let you rest with your head leaning on his hard rock abs until you woke up. Oh, that is true, you have returned to your original size, something you only realize a few seconds later. He sees you moving, and suddenly pulls you in for a crushing embrace. Very affectionate, perhaps even cute, but extremely [italic type]painful[roman type]! 'Glad you're awake! I was afraid I was too rough, this time. Sometimes I just wanna keep you inside forever, though...' he says, only realizing that he's choking you once your face is nearly turning purple. 'Oh! Oh no, I'm sorry! I forget I'm too strong, sometimes! Please, pardon me!' shouts the gargoyle in a begging tone as he fans you with his hand, in hopes that it actually helps you catch your breath.";
 		say "     He has his heart in the right place, but you have to assure him you're okay so that he actually lets you recover. 'Good! You have to be strong, too! Uh... And I hope you liked this. It was pretty hot for me, too... and... I would love to do it again... Uh, of course, whenever you feel like it! Just... let me know!' While he clearly took enjoyment on partaking in this activity, you really need some time before you can suggest anything like this again.";
 	else: [continues as per normal]
-		WaitLineBreak;
 		follow the turnpass rule;
+		WaitLineBreak;
 		say "     Hours have passed, and you wake up somewhere else entirely, in the middle of nowhere, hurting all over. When you try to get up, you realize that might be a more difficult task than what you would like to admit, losing balance immediately with your muscles simply refusing to put an effort. He really roughed you up, and you smell like you've been through a very, very nasty trip. Also, you are back to your original size, and your stuff seems to be laying about not too far from your position. At least he was considerate enough to deliver your belongings to you after having completely abused you.";
 		say "     Maybe you could have another go with the [bold type]Gargoyle Sentry[roman type] in the future, or this time just attempt talking to him at your full size, now that it would be impossible for him to have forgotten about you... Probably. Better be wary of his mood, unless you want to be [']punished['] again...";
 
@@ -319,13 +293,13 @@ to SGargoyleScene2CV:
 	say "     You can't help but wiggle your body and flail your arms around at the sudden surprise of lack of breathable air, and that only seems to further please the gargoyle, who just keeps pushing you inside with the help of his fingers, lifting your legs and squeezing you further in. His cock throbs at every extra inch of your body that gets swallowed, only serving as further encouragement for his penis to continue to slurp you in deeper and deeper. The beast lets out a long moan as his glans hit you past the waist, now with just your legs remaining outside. His pulsing flesh around you painfully embraces your entire body, threatening to crush you at any second, which only gets worse as the creature pushes the last bits of your body inside. His slit shuts off once your feet go in, and pushing his cock upwards, he lets gravity help you reach the point where you're simply dropped in his balls.";
 	say "     The air is unbearably hot, and you are forced to raise your knees to your head in a fetal position in order to fit inside one of the gargoyle's balls, which have a lot of even warmer cum inside. Now that you're inside him, he seems to be rubbing his nutsack, pushing his fingers around in order to poke you and make your stay even more torturous. 'You have no idea how good it feels having you in there... I could do this all day...' he says, and you can hear him speak from every direction, all while lumps of flesh caused by his incessant poking reach to touch you, squeezing you inside as your surroundings smother and swing you about. Countless quantities of his seed find their way over to your face, forcing you to swallow some of it, and it only gets worse as his balls begin to fill... You feel utterly suffocated and overwhelmed, so much that you can't take it past a certain point. Once your body becomes fully submerged in hot cum, and the gargoyle's jerking motions become intense, you lose your senses and fall unconscious, with only his grunts of pleasure echoing in your mind.";
 	if Resolution of Gargoyle Sentry > 5: [scene happens when he's befriended]
-		WaitLineBreak;
 		follow the turnpass rule;
+		WaitLineBreak;
 		say "     Hours have passed, and you wake up later, not inside his balls, but actually on top of his belly, outside. It seems the gargoyle has taken you out, washed you and let you rest with your head leaning on his hard rock abs until you woke up. Oh, that is true, you have returned to your original size, something you only realize a few seconds later. He sees you moving, and suddenly pulls you in for a crushing embrace. Very affectionate, perhaps even cute, but extremely [italic type]painful[roman type]! 'Glad you're awake! I was afraid I was too rough, this time. Sometimes I just wanna keep you inside forever, though...' he says, only realizing that he's choking you once your face is nearly turning purple. 'Oh! Oh no, I'm sorry! I forget I'm too strong, sometimes! Please, pardon me!' shouts the gargoyle in a begging tone as he fans you with his hand, in hopes that it actually helps you catch your breath.";
 		say "     He has his heart in the right place, but you have to assure him you're okay so that he actually lets you recover. 'Good! You have to be strong, too! Uh... And I hope you liked this. It was pretty hot for me, too... and... I would love to do it again... Uh, of course, whenever you feel like it! Just... let me know!' While he clearly took enjoyment on partaking in this activity, you really need some time before you can suggest anything like this again.";
 	else: [continues as per normal]
-		WaitLineBreak;
 		follow the turnpass rule;
+		WaitLineBreak;
 		say "     Hours have passed, and you wake up somewhere else entirely, in the middle of nowhere, hurting all over, with this massive pool of cum underneath and all around you, having gone cold by now. When you try to get up, you realize that might be a more difficult task than what you would like to admit, losing balance immediately with your muscles simply refusing to put an effort, falling right back in the thick fluids. He really roughed you up, and you smell like you've been gangbanged by dozens of horny beasts. Also, you are back to your original size, and your stuff seems to be laying about not too far from your position. At least he was considerate enough to deliver your belongings to you after having completely abused you.";
 		say "     Maybe you could have another go with the [bold type]Gargoyle Sentry[roman type] in the future, or this time just attempt talking to him at your full size, now that it would be impossible for him to have forgotten about you... Probably. Better be wary of his mood, unless you want to be [']punished['] again...";
 
@@ -338,29 +312,27 @@ to SGargoyleScene2AV:
 	WaitLineBreak;
 	say "     The tunnel of flesh around you constricts around your body tightly and continues to pull deeper and deeper, the scorching hot walls squeezing and smothering you from all sides. You hear the gargoyle speak from every direction 'It's going to be a problem getting you out, but I suppose you could stay there for a few hours, at least...' finishing with a chuckle, as he leans back and strokes his own member, making his prostate pulse against you. The feeling is so overwhelming and you're smothered so badly that you start feeling dizzy, your senses beginning to shut down at the intense torture he makes you go through. Nearly crushed, forced to breathe in the damp scent in his ass, your surroundings wanting to squeeze the life out of you, quite literally... It is too much, and a blackout inevitably takes you.";
 	if Resolution of Gargoyle Sentry > 5: [scene happens when he's befriended]
-		WaitLineBreak;
 		follow the turnpass rule;
+		WaitLineBreak;
 		say "     Hours have passed, and you wake up later, not inside his ass, but actually on top of his belly, outside. It seems the gargoyle has taken you out, washed you and let you rest with your head leaning on his hard rock abs until you woke up. Oh, that is true, you have returned to your original size, something you only realize a few seconds later. He sees you moving, and suddenly pulls you in for a crushing embrace. Very affectionate, perhaps even cute, but extremely [italic type]painful[roman type]! 'Glad you're awake! I was afraid I was too rough, this time. Sometimes I just wanna keep you inside forever, though...' he says, only realizing that he's choking you once your face is nearly turning purple. 'Oh! Oh no, I'm sorry! I forget I'm too strong, sometimes! Please, pardon me!' shouts the gargoyle in a begging tone as he fans you with his hand, in hopes that it actually helps you catch your breath.";
 		say "     He has his heart in the right place, but you have to assure him you're okay so that he actually lets you recover. 'Good! You have to be strong, too! Uh... And I hope you liked this. It was pretty hot for me, too... and... I would love to do it again... Uh, of course, whenever you feel like it! Just... let me know!' While he clearly took enjoyment on partaking in this activity, you really need some time before you can suggest anything like this again.";
 	else: [continues as per normal]
-		WaitLineBreak;
 		follow the turnpass rule;
+		WaitLineBreak;
 		say "     Hours have passed, and you wake up somewhere else entirely, in the middle of nowhere, hurting all over. When you try to get up, you realize that might be a more difficult task than what you would like to admit, losing balance immediately with your muscles simply refusing to put an effort. He really roughed you up, and you smell like you've been through a very, very nasty trip. Also, you are back to your original size, and your stuff seems to be laying about not too far from your position. At least he was considerate enough to deliver your belongings to you after having completely abused you.";
 		say "     Maybe you could have another go with the [bold type]Gargoyle Sentry[roman type] in the future, or this time just attempt talking to him at your full size, now that it would be impossible for him to have forgotten about you... Probably. Better be wary of his mood, unless you want to be [']punished['] again...";
 
 to SGargoyleScene3:
-	say "     ... But as you are about to touch him, the entrance to the chapel behind you seals shut, and the room becomes pitch dark. You feel a large, stone-made hand wrapped around your neck, its solid surface heating up as it becomes living flesh. You are then violently pinned down on the floor as another cluster of claws slashes against the ground next to your head, and you feel an impossible weight over your legs and arms keeping you from moving. A low growl escapes the gargoyle's mouth as you feel him leaning in closer, his breath eventually tickling at your face. As it takes a whiff of your scent, he then grins, and throws a laughter. 'Oh! Look who it is! A little bigger this time around, eh?'";
+	say "     ...But as you are about to touch him, the entrance to the chapel behind you seals shut, and the room becomes pitch dark. You feel a large, stone-made hand wrapped around your neck, its solid surface heating up as it becomes living flesh. You are then violently pinned down on the floor as another cluster of claws slashes against the ground next to your head, and you feel an impossible weight over your legs and arms keeping you from moving. A low growl escapes the gargoyle's mouth as you feel him leaning in closer, his breath eventually tickling at your face. As it takes a whiff of your scent, he then grins, and throws a laughter. 'Oh! Look who it is! A little bigger this time around, eh?'";
 	say "     He then proceeds to give you a lick on your face as his dense, incredibly heavy body nearly crushes your bones, making you helplessly grunt in pain. 'Ah, sorry about that. I forget I'm heavy.' he says, relieving you of some pressure - though not all, it still hurts - but still effectively holding you down still. 'No matter how much I punish you, you always seem to come back. Why is that? Do you actually enjoy it...?' he asks, with a wicked toothy smile as he rubs the back of his finger down your cheek. 'You're soft... like all fleshy creatures. But I also eat fleshy creatures your size... so that makes me wonder why you thought I would be nicer if you came here without eating one of those funny looking mushrooms.'";
 	WaitLineBreak;
 	say "     Supporting his weight over one of his arms as most of his form maintains pressure over your body, the beast runs his free hand over your body playfully, feeling you up as the whim takes him. Any gear or object you might have is simply pulled, shoved away or plainly removed to keep you fully naked and exposed before him. You remain helpless, unable to offer any worthy resistance, as if something other than his great weight, something [italic type]magical[roman type], even, was keeping you from moving. 'Here, I am God. You serve any purpose I might find suitable for you. Meaning... you are either my food, or my plaything. But... I guess you're just too cute to be food, and you make my dick throb.' he says, as he gives you yet another face lick, this time slower and more tender, as now he shifts both his warms over the sides of each of your sholders, and rubs the top of your head.";
 	say "     'Luckily for you, I am in an even greater mood. So tell me something interesting.' he says to you, as someone who is giving you an order. Your eyes, now accustomed to the little light that still manages to enter the chapel, can see his flaming orange irises staring at your soul from very, very close. His face must be at just a mere few inches of distance from yours.";
-	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Do everything he says.";
 	say "     ([link]N[as]n[end link]) - Try to break free from his hold, if you're strong enough (He might not like that).";
 	if Player consents:
 		LineBreak;
 		say "     Trying to remember something that could interest the gargoyle, you go on about one of your really odd stories while exploring the post-apocalyptic world out there. The beast's eyes widen at your tales, amazed with how crazy that last one went for you. 'Oh... How the world has changed... I could not bear standing still exposed to its new ways... It's harder to find food this way, but much safer and peaceful...' he replies, as he contemplates your words. 'That's fair, I guess I can forgive you for intruding, since you have given me something for your freedom.' The gargoyle simply lifts his weight from your body, giving you enough space to crawl away from underneath him.";
-		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Do that and leave.";
 		say "     ([link]N[as]n[end link]) - Point out the raging hard-on between his legs.";
 		if Player consents:
@@ -374,56 +346,53 @@ to SGargoyleScene3:
 		LineBreak;
 		say "     Within a brink of determination, you have decided that you won't have any more of this. The gargoyle cannot simply pin you down every time he pleases, and you are about to teach him his place. Except... he is quite the heavy beast, and his crushing weight remains solidly above you.";
 		WaitLineBreak;
-		let bonus be (strength of player);
-		say "[bold type]Strength Check[roman type]: [special-style-1][bonus][roman type] vs [special-style-2]20[roman type]";
+		let bonus be strength of player;
+		say "[bold type]Strength Check[roman type]: [special-style-1][bonus][roman type] vs [special-style-2]20[roman type].";
 		if bonus >= 20: [Automatic Success]
 			say "     But your superior might allows you to lift him off you, which surprises the gargoyle. Doing a small turn-around with your body, you manage to get a grip of his horns and wings, flip him to the side as to give yourself some space, and earn your position on top of his stoneflesh figure, instead, sitting right by his back as you lean in between the wings. The beast eyes you from of his shoulder, startled by your sudden maneuver.";
 			SGargoyleScene3Respect;
 		else: [Not a failure yet, but the player is struggling...]
 			say "     Your first attempt at it is not very successful, as the creature is enormously heavy. 'Oh? Trying to break free and ignoring my request?! Sounds like a punishment, for you.' he threats you as he is about to tighten his constriction around you, but bolstering up what remains of your strength, you do one last try...";
 			WaitLineBreak;
-			let bonus be (( strength of player minus 10 ) divided by 2);
+			let bonus be ( strength of player minus 10 ) divided by 2;
 			let diceroll be a random number from 1 to 20;
-			say "You roll 1d20([diceroll])+[bonus] = [special-style-1][diceroll + bonus][roman type] vs [special-style-2]18[roman type] (Strength Check):[line break]";
+			say "You roll 1d20([diceroll])[if bonus >= 0]+[end if][bonus] = [special-style-1][diceroll + bonus][roman type] vs [special-style-2]18[roman type] (Strength Check):[line break]";
 			if diceroll + bonus >= 18: [Player succeeds, barely]
 				say "     Much less effectively than what you desired, but more than you needed it to be, you manage to lift him off you, which surprises the gargoyle. Doing a small turn-around with your body, you manage to get a grip of his horns and wings, flip him to the side as to give yourself some space, and earn your position on top of his stoneflesh figure, instead, sitting right by his back as you lean in between the wings. The beast eyes you from of his shoulder, startled by your sudden maneuver.";
 				SGargoyleScene3Respect;
 			else:
 				say "     Unfortunately, it comes out even worse than the first. He simply laughs at your lack of might and mocks you for the weakling he perceives you as. 'Puny little fleshy playthings, did you really think you could break my grip?' he says, as he thoroughly smothers you against the ground, his rock heavy body nearly grinding you to the floor as he tightens his embrace around you in an almost lethal manner. You cannot even wiggle or kick around, as the immobilization is painfully limiting your movements. He leaves you only the possibility of grunting and moaning in absolute suffering. At some point, you cease to be able to breathe, and your body begins to feel numb. The gargoyle is choking you out until there's not enough oxygen to fuel your conscience.";
-				WaitLineBreak;
 				follow the turnpass rule;
+				WaitLineBreak;
 				say "     Hours have passed, and you wake up somewhere else entirely, in the middle of nowhere, hurting all over. When you try to get up, you realize that might be a more difficult task than what you would like to admit, losing balance immediately with your muscles simply refusing to put an effort. He really roughed you up, and your skin looks bruised and all beat up, sounding like you've been through some nasty places. Well, that went [italic type]terribly[roman type], but you suppose there should be some way of earning his trust... Perhaps if you were stronger, you could show him that you are worthy of respect.";
 
 to SGargoyleScene3Respect:
-	say "     'You are quite a strong one... Impressive! That explains how you keep being able to find this place, again and again...' he says, but you cannot conclude what was the goal of his compliment. Your confusion is evident to him, without the need to say anything. 'Only the ones worthy of being remembered are able to find the Chapel of Abyss. That means those who make a difference and have a distinguishing feature. You seem to be one of them!' The gargoyle keeps sending you cryptic declarations, only leaving more unanswered questions. 'Hah, nevermind. I guess I should drop the act, eh? I don't really like being mean, as you probably have noticed in our last encounters.'";
+	say "     'You are quite a strong one... Impressive! That explains how you keep being able to find this place, again and again...' he says, but you cannot conclude what was the goal of his compliment. Your confusion is evident to him, without the need to say anything. 'Only the ones worthy of being remembered are able to find the Chapel of Abyss. That means those who make a difference and have a distinguishing feature. You seem to be one of them!' The gargoyle keeps sending you cryptic declarations, only leaving more unanswered questions. 'Hah, never mind. I guess I should drop the act, eh? I don't really like being mean, as you probably have noticed in our last encounters.'";
 	say "     Within a moment of distraction, the gargoyle regains the upper hand by lifting himself, only to knock you back, and swiftly repositioning himself above you, one more time. However, he doesn't not pin you down, instead simply standing up straight and looking down in your direction. 'I guess you have earned my respect. Feel free to come over anytime, I'll make it easier for you to find me.' he adds, as he extends a hand to help you get up. You suppose you should just simply take his offer in order to stand back on your feet, facing the towering creature.";
 	WaitLineBreak;
 	say "     Once you're back up, the gargoyle gives you a pat on the back with a smile. 'Also, if you happen to bring some of those shrooms again... We could, uh... You know...' he leaves the suggestion, with the first time you witness the big beast getting embarrassed for suggesting something like that. 'Aye, don't get me wrong! I'm not saying I want to eat you again or anything, but... Ehh... You did feel kinda good... and... I promise I will be more gentle, too! I was just supposed to punish you for intruding, you know? Because I'm a sentinel! I have to be mean to naughty boys, gals and everything in between, fleshy or not!' He gives you another shy smile, hoping you understand his motives.";
 	say "     Well, this took a turn you were not expecting in the beginning, but it seems the gargoyle is letting you come visit under peaceful intentions. 'You can call me Krumirr, by the way. That is the name given by my summoner. A peculiar one in tastes, eh?' he adds, with a chuckle, before he returns to his pedestal and opens the chapel's lights.";
+	WaitLineBreak;
 	move player to Chapel of Abyss;
 	now Resolution of Gargoyle Sentry is 6;
 
 to SGargoyleVisit:
 	say "     Once you've been walking around the region, your mind gives out a tingle once you think of the Gargoyle Sentry. It would be possible for you to look out for the chapel, if you were in the mood to pay your stone beast friend a visit.";
-	say "     Would you like to?";
-	LineBreak;
+	say "[line break]     [bold type]Would you like to?[roman type][line break]";
 	say "     ([link]Y[as]y[end link]) - Yes, visit Krumirr, the Gargoyle Sentry.";
 	say "     ([link]N[as]n[end link]) - No, you have other things in mind.";
 	if Player consents:
+		LineBreak;
 		say "     As if per something supernatural, you suddenly know exactly where to go in order to find the chapel. Without an explanation that could serve to shed some light into this, you find yourself simply following the path that has been imprinted in your brain, with the lack of better words, and bring yourself over to the small chapel that's standing right in the vicinity. A different location than last time, but you were still able to find it without any greater effort. The door opens as soon as you take a step towards it from a close distance, allowing you to walk inside.";
 		say "     Then, the doors close shut behind you, welcoming you in its abyssal darkness.";
-		say "     You have arrived at the [bold type]Chapel of Abyss[roman type][line break]";
+		say "     You have arrived at the [bold type]Chapel of Abyss[roman type].";
+		WaitLineBreak;
 		move player to Chapel Of Abyss;
 	else:
+		LineBreak;
 		say "     You dismiss the thought, returning to your other affairs.";
 
-[***********************************************************]
-[***********************************************************]
-[***********************************************************]
 Section 2 - Gargoyle Sentry as NPC
-[***********************************************************]
-[***********************************************************]
-[***********************************************************]
 
 Table of GameCharacterIDs (continued)
 object	name
@@ -465,28 +434,18 @@ SexuallyExperienced of Krumirr is false.
 TwistedCapacity of Krumirr is false. [Twisted Characters can take any penetration, no matter the size]
 Sterile of Krumirr is true. [steriles can't knock people up]
 MainInfection of Krumirr is "Gargoyle".
-Description of Krumirr is "[Krumirrdesc]".
-Conversation of Krumirr is { "<This is nothing but a placeholder!>" }.
+Description of Krumirr is "     Krumirr is a gargoyle, and a fairly large one, complete with its privates dandling between the thick and muscular legs. Currently, he's standing on a short stone pedestal in a squatting position, with his back slightly leaning forward, and both arms converging towards the center between his clawed feet. His eyes, albeit lifeless looking, are open, featuring a face that looks like a mix between a dragon and a bat, with a pair of small horns on the top of the head. His wings are resting on each side of his body, also hanging still together with his statuesque frame. The now grey hard skin can turn into a dark blue shade of stoneflesh and his eyes lit with fiery orange irises whenever you move to awaken him.[line break]".
 The scent of Krumirr is "     Krumirr's scent is animalistic, despite him being made of stone, or a hybrid between rock and flesh. It is also a very masculine one, and it is unlike most gargoyles".
 
-to say KrumirrDesc:
-	say "     Krumirr is a gargoyle, and a fairly large one, complete with its privates dandling between the thick and muscular legs. Currently, he's standing on a short stone pedestal in a squatting position, with his back slightly leaning forward, and both arms converging towards the center between his clawed feet. His eyes, albeit lifeless looking, are open, featuring a face that looks like a mix between a dragon and a bat, with a pair of small horns on the top of the head. His wings are resting on each side of his body, also hanging still together with his statuesque frame. The now grey hard skin can turn into a dark blue shade of stoneflesh and his eyes lit with fiery orange irises whenever you move to awaken him.";
-
-[***********************************************************]
-[***********************************************************]
-[***********************************************************]
 Section 3 - Krumirr Talk Menu
-[***********************************************************]
-[***********************************************************]
-[***********************************************************]
 
 instead of conversing Krumirr:
 	say "     Approaching the pedestal where the gargoyle is standing still, you awake him with a tender touch. He opens his eyes and gives you warm welcome smile. 'Hey there, friend! Came for a talk with old Krumirr, eh?'";
+	LineBreak;
 	say "[KrumirrTalkMenu]";
 
 to say KrumirrTalkMenu:
 	say "     [bold type]What do you want to talk to Krumirr about?[roman type][line break]";
-	LineBreak;
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]
@@ -529,34 +488,34 @@ to say KrumirrTalkMenu:
 			choose row calcnumber in table of fucking options;
 			say "[title entry]: [description entry]?";
 			if Player consents:
-				let nam be title entry;
 				now sextablerun is 1;
-				if (nam is "Himself"):
-					say "[KrumirrTalkHimself]";
-				if (nam is "The Chapel"):
-					say "[KrumirrTalkChapel]";
-				if (nam is "Sex"):
-					say "[KrumirrTalkSex]";
-				if (nam is "His way of... feeding"):
-					say "[KrumirrTalkVore]";
-				if (nam is "Ask to leave"):
-					say "[KrumirrTalkLeave]";
+				if title entry is:
+					-- "Himself":
+						say "[KrumirrTalkHimself]";
+					-- "The Chapel":
+						say "[KrumirrTalkChapel]";
+					-- "Sex":
+						say "[KrumirrTalkSex]";
+					-- "His way of... feeding":
+						say "[KrumirrTalkVore]";
+					-- "Ask to leave":
+						say "[KrumirrTalkLeave]";
 		else if calcnumber is 0:
 			now sextablerun is 1;
 			say "     You drop whatever subject you had going on with Krumirr to consider your options.";
 			wait for any key;
+			clear the screen and hyperlink list;
 		else:
-			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
-	clear the screen and hyperlink list;
+			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options], or 0 to exit.";
 
 to say KrumirrTalkHimself:
 	say "     Curious about what and who the gargoyle in front of you really is, you proceed to ask him about himself. The beast hums, glance around as if thinking about an answer, and eventually speaks something out. 'Well, aside from being a guardian over all these objects, I... Guess that's it, honestly?' You know there must be more to him, starting with whoever created him. 'Ah, I... Really don't like talking about my, uh... creator. I simply guard their personal treasury. And I say [']they['] because my summoner is genderless. Or at least, it's unknown... I don't know much about them, either, I am merely a gargoyle assigned sentry.' You don't think Krumirr has much else to say, and even have a feeling he doesn't know a whole lot about himself, either.";
-	wait for any key;
+	WaitLineBreak;
 	say "[KrumirrTalkMenu]"; [looping back to keep talking with him]
 
 to say KrumirrTalkChapel:
 	say "     Regarding this little chapel you are in, you have yet to ask the gargoyle what is the mystery behind it. 'This chapel? It is not called Chapel of Abyss for no reason. It changes locations by traveling through the void and back in the physical world. Nobody ever sees it doing that, it often happens when nobody is looking. That is how I keep myself safe, by changing locations around this region.' he explains, turning to the side and glancing all over the room before continuing. 'I would guess... a chaotic place infested with nanites would be the most safe place for a creature and a hold as unique as all of this. Nobody will freak out from seeing a moving gargoyle going for a meal. Although... people going horny from seeing one and begging to be eaten isn't necessarily an improvement, but well, at least they're easy prey.' Sometimes it is easy to forget what this gargoyle feeds on...";
-	wait for any key;
+	WaitLineBreak;
 	say "[KrumirrTalkMenu]"; [looping back to keep talking with him]
 
 to say KrumirrTalkSex:
@@ -567,7 +526,7 @@ to say KrumirrTalkSex:
 			now Libido of Krumirr is 1;
 	else if Libido of Krumirr > 1:
 		say "     After having had your first proper sexual contact with the gargoyle, you decide to bring the subject once more, asking him how he feels about it, now that he had an experience. 'You have... certainly got me curious. The way your hand felt around my cock and, uh... All the touching, it's... different! It's like punishing puny and tiny fleshy creatures!' You better tell him that it's not quite the same, but he is getting there in what comes to being a pleasant activity. Perhaps you should do more different stuff, so you let him know there is more to that than just dominating something with raw strength.";
-	wait for any key;
+	WaitLineBreak;
 	say "[KrumirrTalkMenu]"; [looping back to keep talking with him]
 
 to say KrumirrTalkVore:
@@ -575,31 +534,26 @@ to say KrumirrTalkVore:
 	say "     He then proceeds to make further explanations about how much he can actually grow. With a single metamorphing spell, Krumirr can get as massive as a Giant, an enormous colossus with impossible weight able to crush anything with little effort, and that as a creature who was born through the Void, he hungers as one, desiring to consume both body and soul of whoever dares to cross his path. 'Although, I haven't taken yours, even after all that. Somehow, I felt you were different, so I allowed you to find me whenever you roamed close enough. Turns out that difference was due to the shrinking shroom! But I don't regret having been fooled by it, you have pleasantly surprised me throughout this time.' he adds, before dropping the subject entirely. 'It really can get lonely around here sometimes, though... I wish I could snatch you away and keep you within me forever! But that would have a lot of complications... so I'm happy to just have you visit and occasionally play prey for me.' finishes Krumirr, as he gives you a highly suggestive grin.";
 	if Hunger of Krumirr is 0:
 		now Hunger of Krumirr is 1;
-	wait for any key;
+	WaitLineBreak;
 	say "[KrumirrTalkMenu]"; [looping back to keep talking with him]
 
 to say KrumirrTalkLeave:
 	say "     You are about to ask Krumirr to send you out. Are you sure you want to leave the Chapel of Abyss?";
-	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Yes.";
 	say "     ([link]N[as]n[end link]) - No.";
 	if Player consents:
 		LineBreak;
 		say "     Confirming your intention, you direct the request to Krumirr. 'You wish to go, already? That's fine, you know where to find me, I hope.' he says, before falling into his slumber once more, opening the door to allow you to walk away. With that done, you simply move outside into a foggy area, the chapel eventually fading away from behind you.";
 		say "     Once the fog lifts, you find yourself in the Grey Abbey Library.";
+		WaitLineBreak;
 		move player to Grey Abbey Library;
 	else:
 		LineBreak;
 		say "     You dismiss that thought, for now.";
-	wait for any key;
+		wait for any key;
+		clear the screen and hyperlink list;
 
-[***********************************************************]
-[***********************************************************]
-[***********************************************************]
 Section 4 - Krumirr Sex Menu
-[***********************************************************]
-[***********************************************************]
-[***********************************************************]
 
 instead of fucking Krumirr:
 	if Libido of Krumirr is 0:
@@ -622,7 +576,7 @@ to say KrumirrSexMenu:
 	if glowing mushroom is owned:
 		choose a blank row in table of fucking options;
 		now title entry is "Have some shroom fun";
-		now sortorder entry is 1;
+		now sortorder entry is 2;
 		now description entry is "Shrink for the gargoyle";
 	[]
 	sort the table of fucking options in sortorder order;
@@ -638,20 +592,19 @@ to say KrumirrSexMenu:
 			choose row calcnumber in table of fucking options;
 			say "[title entry]: [description entry]?";
 			if Player consents:
-				let nam be title entry;
 				now sextablerun is 1;
-				if (nam is "Ask to touch"):
-					say "[KrumirrTouch]";
-				if (nam is "Have some shroom fun"):
-					say "[KrumirrShroom]";
-				wait for any key;
+				if title entry is:
+					-- "Ask to touch":
+						say "[KrumirrTouch]";
+					-- "Have some shroom fun":
+						say "[KrumirrShroom]";
 				now lastfuck of Krumirr is turns;
 		else if calcnumber is 0:
 			now sextablerun is 1;
 			say "     You politely excuse yourself as Krumirr gives you an understanding smile.";
-			wait for any key;
 		else:
-			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
+			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options], or 0 to exit.";
+	wait for any key;
 	clear the screen and hyperlink list;
 
 to say KrumirrTouch:
@@ -675,67 +628,46 @@ to say KrumirrShroom:
 	say "     Cleaning his throat, he pretends that you are an intruder, frowning what would be his eyebrows, if he had any. 'Oh! Hm...! Squishy and fleshy...! Just my favorite appetizer!' he says with a more or less dramatic done, while gently caressing your body all over. 'I was in a really bad mood before you showed up! Now I've got a new plaything to spend my next hours with! It goes well with the fact that you deserve a punishment for walking in without permission.' He stops, then brings you just an inch closer to his fiery orange irises.";
 	WaitLineBreak;
 	say "     'I shall let you choose your predicament. Where should I put you... In my mouth, and swallow you whole, or... in my cock, and... swallow you whole all the same?' he asks, showing you a wicked grin that still manages to sends shivers down your spine. 'Come on now, pick an option, or you may end up in my ass, instead.'";
-	say "     [bold type]He waits until you tell him which do you want.[roman type][line break]";
-	LineBreak;
+	say "[line break]     [bold type]He waits until you tell him which do you want.[roman type][line break]";
 	say "     [link](1)[as]1[end link] - Go for some mouth play (Oral Vore).";
 	say "     [link](2)[as]2[end link] - You want to go down his balls (Cock Vore).";
 	say "     [link](3)[as]3[end link] - Let him shove you in his ass (Anal Vore).";
 	say "     [link](4)[as]4[end link] - Pretend to be begging for mercy! And maybe let him pick, instead.";
 	now calcnumber is 0;
 	while calcnumber < 1 or calcnumber > 4:
-		say "Choice? (1-4)>[run paragraph on]";
+		say "Choice? (1-4)> [run paragraph on]";
 		get a number;
-		if calcnumber is 1 or calcnumber is 2 or calcnumber is 3 or calcnumber is 4:
-			break;
-		else:
+		if calcnumber < 1 or calcnumber > 4:
 			say "Invalid choice. Type [link]1[end link] to choose mouth, [link]2[end link] to choose cock, [link]3[end link] to choose ass or [link]4[end link] to show your best dramatic skills while letting him know that he can be the one doing the choosing.";
+	LineBreak;
 	if calcnumber is 1: [Oral Vore]
-		LineBreak;
 		say "     After hearing your reply, he proceeds to give you a really long and hard lick through your entire body, leaving you coated in his saliva. 'Mmm... Is that it? Well, then...' his grip around you tightens as he gives you a scary look. 'Into my belly, you go.'";
 		WaitLineBreak;
 		SGargoyleScene2OV;
 	else if calcnumber is 2: [Cock Vore]
-		LineBreak;
 		say "     After hearing your reply, he lets out a chuckle, as one of his hands reaches down for his member, throbbing hard by now, to give it a gentle stroke. It looks like he is really enjoying this. 'Yes...? That is the least you can do, make me enjoy it. Perhaps I might forgive you once you're stuck and held tightly in my balls.'";
 		WaitLineBreak;
 		SGargoyleScene2CV;
 	else if calcnumber is 3: [Anal Vore]
-		LineBreak;
-		say "     Once you let him know that you want to go in his ass, his cheeks blush (yes, apparently they can do that), then he lets out an exaggerated laughter. 'Am I hearing it right? You actually [italic type]want[roman type] to be shoved up my ass?! What a weird one... But that is fine. If that is how you want to be punished... I hope you have a good time being pulled deep inside me...' he says, but then whispering '... Damn, I wouldn't think I enjoyed that one [italic type]that[roman type] much...";
+		say "     Once you let him know that you want to go in his ass, his cheeks blush (yes, apparently they can do that), then he lets out an exaggerated laughter. 'Am I hearing it right? You actually [italic type]want[roman type] to be shoved up my ass?! What a weird one... But that is fine. If that is how you want to be punished... I hope you have a good time being pulled deep inside me...' he says, but then whispering, '...Damn, I wouldn't think I enjoyed that one [italic type]that[roman type] much...";
 		WaitLineBreak;
 		SGargoyleScene2AV;
 	else if calcnumber is 4: [He picks one for the player]
-		LineBreak;
 		say "     With all your might and fake despair, you beg the gargoyle to have mercy on you, apologizing for disturbing him with your unwanted presence, and shouting out loud something about oh how terrible it would be if he decided your fate. He can't help but let out a chuckle, almost breaking character. 'Hah! How miserable. You fear the consequences of your actions?! You should be ashamed. More the reason for me to punish you. And you know what? You don't get to choose anymore.' With that said, the beast makes a decision for you.";
 		WaitLineBreak;
-		let randomnumber be a random number from 1 to 3;
-		if randomnumber is:
-			-- 1:
-				SGargoyleScene2OV;
-			-- 2:
-				SGargoyleScene2CV;
-			-- 3:
-				SGargoyleScene2AV;
+		if a random number from 1 to 3 is:
+			-- 1: SGargoyleScene2OV;
+			-- 2: SGargoyleScene2CV;
+			-- 3: SGargoyleScene2AV;
 
-[***********************************************************]
-[***********************************************************]
-[***********************************************************]
 Section 5 - Chapel of Abyss
-[***********************************************************]
-[***********************************************************]
-[***********************************************************]
 
 Table of GameRoomIDs (continued)
 Object	Name
 Chapel Of Abyss	"Chapel Of Abyss"
 
-Chapel Of Abyss is a room. It is sleepsafe.
-Description of Chapel Of Abyss is "[ChapelAbyssDesc]".
-
-to say ChapelAbyssDesc:
-	say "     This small chapel is surrounded only by darkness when its doors are closed behind you. Inside, you can see various different mementos, artifacts and talismans of different shapes, sizes and colors, all seemingly related to some sort of cult or religion. The floor is made of polished stone, and there is a pedestal in the center of the furthest wall where the Gargoyle Sentry poses during his dormant slumber. When he lets you in, his bright orange eyes are part of the scenery, no matter in which direction you glance towards.";
-
-instead of smelling Chapel Of Abyss:
-	say "     The scent you get from this place is the same as the Gargoyle's animalistic essence. Besides that, there is a whole feeling of nothingness. Where else would you be able to detect a similar smell...?";
+Chapel Of Abyss is a room.
+Description of Chapel Of Abyss is "     This small chapel is surrounded only by darkness when its doors are closed behind you. Inside, you can see various different mementos, artifacts and talismans of different shapes, sizes and colors, all seemingly related to some sort of cult or religion. The floor is made of polished stone, and there is a pedestal in the center of the furthest wall where the Gargoyle Sentry poses during his dormant slumber. When he lets you in, his bright orange eyes are part of the scenery, no matter in which direction you glance towards.[line break]".
+Scent of Chapel Of Abyss is "     The scent you get from this place is the same as the Gargoyle's animalistic essence. Besides that, there is a whole feeling of nothingness. Where else would you be able to detect a similar smell...?".
 
 Gargoyle Sentry ends here.

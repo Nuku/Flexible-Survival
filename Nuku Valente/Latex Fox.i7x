@@ -43,39 +43,31 @@ to say latexfoxdefeat:
 		add "Straddle him with your pussy (Classic)." to LatexFox_Choices;
 	add "Just drive him off and move on." to LatexFox_Choices;
 	let LatexFox_Choice be what the player chooses from LatexFox_Choices;
+	LineBreak;
 	if LatexFox_Choice is:
 		-- "Facefuck him.":
-			LineBreak;
 			Facefuck_LatexFox;
 		-- "Fuck his ass (New).":
-			LineBreak;
 			AssFuck_LatexFox;
 		-- "Fuck his ass (Classic).":
-			LineBreak;
 			Classic2_LatexFox;
 		-- "Straddle him with your ass.":
-			LineBreak;
 			PussyRide_LatexFox;
 		-- "Suck his cock.":
-			LineBreak;
 			Suck_LatexFox;
 		-- "Straddle him with your pussy (New).":
-			LineBreak;
 			PussyRide_LatexFox;
 		-- "Straddle him with your pussy (Classic).":
-			LineBreak;
 			Classic1_LatexFox;
 		-- "Just drive him off and move on.":
-			LineBreak;
 			Reject_Latexfox;
 
 to Classic1_LatexFox: [player pussy fucked, player pussy eaten after]
-	say "     The critter lays on the ground, his big red knotted cock looking painfully erect. Not wanting to waste such a perfect opportunity, you straddle the fox and slowly ease yourself down. His paws move to your hips, then up to your [bodytype of Player] body as you get into position";
 	if Cunt Depth of Player < 6:
-		say ".";
+		say "     The critter lays on the ground, his big red knotted cock looking painfully erect. Not wanting to waste such a perfect opportunity, you straddle the fox and slowly ease yourself down. His paws move to your hips, then up to your [bodytype of Player] body as you get into position.";
 		say "     As the tip of the fox's shaft reaches[if Cunt Count of Player > 1] one of[end if] your opening[sfn], you realize it is far too big for you to accommodate. Seeing your frustration, the fox lets out a long, hissing sigh and seems to shrink in size. You now easily take him right down to the knot.";
 	else:
-		say ". The fox's [if Cunt Depth of Player < 10]shaft slides into you smoothly as you take him all the way to the knot[else]little erection slides into you easily, a bit too easily for your liking as it seems too small to give you any real pleasure. Seeing your frustration, the fox takes a large breath and seems to grow in size, filling you completely[end if].";
+		say "     The critter lays on the ground, his big red knotted cock looking painfully erect. Not wanting to waste such a perfect opportunity, you straddle the fox and slowly ease yourself down. His paws move to your hips, then up to your [bodytype of Player] body as you get into position. The fox's [if Cunt Depth of Player < 10]shaft slides into you smoothly as you take him all the way to the knot[else]little erection slides into you easily, a bit too easily for your liking as it seems too small to give you any real pleasure. Seeing your frustration, the fox takes a large breath and seems to grow in size, filling you completely[end if].";
 	say "     Resting comfortably on the fox's knot, you start sliding up and down on his red latex shaft, gradually increasing speed. You feel the knot trying to sneak in on every thrust, but it seems like the knot is just too big to tie to you. You start to think it's a lost cause when suddenly a sharp, blinding pain and a yelp from the Fox lets you know that the knot made it inside and you are indeed tied.";
 	say "     As the pain subsides, you are left with an amazing feeling of fullness, gob after gob of thick rubbery jism starting to fill you. The feeling of the thick cum churning inside you is too much and sends you into a screaming orgasm.";
 	say "     Eventually, the swollen knot starts to shrink and the fox's spent member slides out of you. Still not satisfied, you position your moist, swollen pussy over the fox's face and descend slowly, dribbling his own cum onto his face. To your surprise, the fox starts eagerly lapping it up, burying his face in your crotch. Bolts of lightning travel through your body as that rubbery tongue seems to find all the right places to lick you. His bright red nose rubbing against your clit is all it takes to send you into another earth-shattering orgasm, spilling the last of his rubbery canid seed into his waiting mouth.";

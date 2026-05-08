@@ -438,7 +438,7 @@ to say DamienTalkScavenge:
 			LineBreak;
 			say "     Given the harsh ending Damien got with his friend, you suppose he could use a genuinely friendly gesture. You pat his shoulder and give him some encouraging words, which he appreciates, as he turns to you with a slight smile on his face, a rare occasion since you have met him. 'Thanks. You know... You're actually alright. Maybe I shouldn't have judged you so prematurely. I guess... Sorry about that,' he says, and you both continue to chat for a while before you part ways.";
 		follow the turnpass rule;
-		AttemptToWait;
+		WaitLineBreak;
 		say "     You may have had a lot of indications that you should probably inquire [bold type]Mogdraz[roman type] on this guy, but you must continue to [bold type]interact with Damien[roman type] and see where things go. Mentioning him to the Demon Lord could potentially reach Damien's ears, and you probably do not want him to think you are betraying him. A more trusting friendship is in order before you start asking questions.";
 		now Resolution of DamienIntro is 3;
 		now Loyalty of Damien is 1;
@@ -462,7 +462,7 @@ to say DamienTalkScavenge:
 		WaitLineBreak;
 		say "     It takes a while, but the sound eventually stops and Damien returns, having packed his loot. 'Alright, I've got enough to entertain myself for some time now. And you got some water, so I'd call this a success. I'm gonna have to look for food myself, but I've got some other traps set that should take care of that... Those aren't meant to keep intruders away, don't worry,' he states as you make your way out of the strange shop. 'Now, to find a place to stash all of this... I wonder what I can make with it. How about we meet up again tomorrow? Or... whenever you can,' he asks, and you nod, agreeing on considering it depending on how things go on your end. 'Alright, I suppose we can part ways here. Might check out my old shelter and see if it's still in one piece. If not... I'll find some other use for these. Anyway, see you soon. And thanks.'";
 		follow the turnpass rule;
-		AttemptToWait;
+		WaitLineBreak;
 		say "     You both are walking up to the intersection neighboring the Northern Street when Damien heads in another direction, down south. He seemed better today... But you have a feeling this still was not the end of it.";
 		now Resolution of DamienIntro is 4;
 		now DamienScavengingCooldown is turns;
@@ -1217,23 +1217,17 @@ to say ExoticEscortsDamienSession2: [loopable scene with dialogue variations]
 			if Player is submissive:
 				say "     [italic type]This was definitely different, and yet, you cannot stop thinking about it. The way Damien could have his way with you in any manner his twisted mind can come up with is a thought that arouses you immensely, perhaps reinforced due to your already submissive tendencies. But there is definitely something special about being his little [boygirl] toy...[roman type][line break]";
 
-[***********************************************************]
-[***********************************************************]
-[***********************************************************]
 Section X - Dev Cheats
-[***********************************************************]
-[***********************************************************]
-[***********************************************************]
 
 SkipToDamien is an action applying to nothing.
-Understand "GetDamien" as SkipToDamien.
+understand "GetDamien" as SkipToDamien.
 
-Check SkipToDamien:
+check SkipToDamien:
 	if debugactive is 0:
 		say "You aren't currently debugging.";
 		stop the action;
 
-Carry out SkipToDamien:
+carry out SkipToDamien:
 	now Resolution of DamienIntro is 5;
 	say "     Resolved Damien's Intro the necessary way, activating his everyturn rules.";
 	say "     Done.";

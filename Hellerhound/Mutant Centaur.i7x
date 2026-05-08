@@ -71,7 +71,7 @@ to say fresh apple use:
 
 Section 4 - Creature Responses
 
-To say Mutant Centaur Loses:
+to say Mutant Centaur Loses:
 	if Libido of Player < 50 or Player is neuter:
 		say "     The centaur groans, falling onto its face as you strike the final blow. An apple spills out of the pack on its back.";
 		ItemGain fresh apple by 1;
@@ -152,10 +152,10 @@ to say centaur fuck female:
 	if Apple Tree is not resolved:	[Extra infection for event]
 		infect;
 
-To say centaur fuck male:
+to say centaur fuck male:
 	say "     Not wanting to challenge the hulking beast, you lean back and raise your lower half. 'Good boy. Maybe you'll prove to have a use yet.' With that, he saddles up towards you, his equine shaft grinding against your cock as a husky pant escapes his human mouth. 'Guide my cock to your hole,' he orders, your hands all too quick to do as such. You're then met with a slimy length grinding over your hands as the dripping tip nudges your entrance. Glancing at your hands, you realize that his cock is covered in a greenish sap like substance, but before you can question having it inside you, it spears into your depths. You let out a gasp of pain, but it's quickly replaced with a moaning pant.";
 	WaitLineBreak;
-	say "     You don't know why, but the pain of it almost immediately transforms into utter bliss, and almost as soon as your mind starts thinking about the sap, the pleasure spikes through you harder than before. You find yourself unable to think, to process anything of use, or anything of import. And then the movement starts. Your eyes widen as you realize that was just the penetration, and as the mutant beast pulls out to the tip, you realize what you're in for. A loud scream of need and ecstasy escapes your lips. You find yourself almost convulsing at the end of this monster's length, and all you're greeted with is a neigh of utter arrogance. The equine shaft within you hasn't even gotten started yet, and you soon realize this, much to your horror and excitement.";
+	say "     You don't know why, but the pain of it almost immediately transforms into utter bliss, and almost as soon as your mind starts thinking about the sap, the pleasure spikes through you harder than before. You find yourself unable to think, to process anything of use or anything of import. And then the movement starts. Your eyes widen as you realize that was just the penetration, and as the mutant beast pulls out to the tip, you realize what you're in for. A loud scream of need and ecstasy escapes your lips. You find yourself almost convulsing at the end of this monster's length, and all you're greeted with is a neigh of utter arrogance. The equine shaft within you hasn't even gotten started yet, and you soon realize this, much to your horror and excitement.";
 	say "     As the beast's speed picks up, and your ass is pounded, your hole stretches even more and your arms grab at his front legs. All you can do is go along for the ride as that shaft goes in and out, squelching its fluids around inside you as they leak out and fill you more. You can't keep up with anything as your back is dragged back and forth across the mercifully giving ground. You're filled with such pleasure and need that even time escapes you. It feels like just a minute has passed before you cover yourself with fluids, your cock lurching and coating your stomach and chest with more cum than you remember ever having in your balls. Even with the tendrils around your cock, the orgasm sweeps through you. Soon you're completely delirious as the squelching gets louder and the neighing starts.";
 	WaitLineBreak;
 	say "     'Take my gift!' you hear the beast neigh out as he bottoms out within you. Your cock convulses once more, balls completely dry as your length throbs and throbs. A warmth then spreads through your insides, the equine shaft fully inside you as you feel his balls throb against your ass. The centaur pants above you as the warmth keeps on filling you. Soon you feel your stomach stretch as fluids dribble out from around the cock within you. You can't hold it together much longer, and as soon as you feel yourself cum once more, you black out.";
@@ -163,7 +163,7 @@ To say centaur fuck male:
 	CreatureSexAftermath "Player" receives "AssFuck" from "Mutant Centaur";
 	[Vinickus worked on Mutant Centaur X Male Player Character sex scenes.]
 
-To say Mutant Centaur Wins:
+to say Mutant Centaur Wins:
 	if Player is male:
 		say "     The centaur flips you over, then looks you over as you go limp. He snarls at the sight of your cock. 'Little bastard,' he growls, twin green tentacles from his underside reaching out and wrapping around the base of your [Cock of Player] member. They tighten, sealing a ring around the base of your cock almost to the point of pain. 'I'll just have to use another hole.'";
 		say "[centaur fuck male]";

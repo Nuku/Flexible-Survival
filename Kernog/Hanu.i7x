@@ -62,7 +62,7 @@ to say hanuDesc:
 	else:
 		say "Unexpexted Resolution of Monkey Duel: [Resolution of Monkey Duel] Please report this on the FS Discord.";
 
-Instead of going to Monkey House while Resolution of Monkey Duel is 0 and Monkey Duel is inactive:
+instead of going to Monkey House while Resolution of Monkey Duel is 0 and Monkey Duel is inactive:
 	say "     Coming to one of the less exposed areas of the zoo you find yourself coming across a monkey-shifted man sitting quietly on top of a rock, meditating in the lotus position. 'About time you showed up.' The voice of the simian catches you slightly off guard as you find the other speaking to you while keeping his eyes closed. 'Yes, I'm talking to you. Come on over here so we can start training.'";
 	say "     You look at him, intrigued, while his long tail slowly curls around the left side of his body. He gives off an aura of calmness, with his groomed dark brown fur ruffled softly by the wind alongside his long, straight hair, and his slow breathing shifting the abdominals of his trained body. His face beams with a light smirk as he awaits your answer. [bold type]Do you want to train with this strange simian?[roman type][line break]";
 	say "     ([link]Y[as]y[end link]) - Yes.";
@@ -320,7 +320,6 @@ to say beatWukongThugs:
 				now sextablerun is 1;
 			else:
 				say "Invalid Option. Pick between 0 and [the number of filled rows in the table of fucking options], or 0 to exit.";
-		wait for any key;
 	else:
 		say "     They help each other up, but take great care to put some distance between you and them. Eventually, they all limper away, to your satisfaction.";
 

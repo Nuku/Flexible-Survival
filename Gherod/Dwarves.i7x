@@ -6,7 +6,7 @@ Version 3 of Dwarves by Gherod begins here.
 [Version 2 - 1 Submit Scene, Collapsed Tunnel event, Golden Greathammer weapon - Gherod]
 [Version 3 - Wedding Wreckers event, Dwarf Knights - Gherod]
 
-Section 1 - Events
+Chapter 1 - Events
 
 Table of GameEventIDs (continued)
 Object	Name
@@ -196,7 +196,7 @@ to CTunnel3: [player successfully gets past the trap]
 		now Resolution of Collapsed Tunnel is 3; [player didn't take the greathammer, so the scavenger did, eventually]
 		now Collapsed Tunnel is resolved;
 
-Section 1-2 - Wedding Wreckers
+Section 1 - Wedding Wreckers
 
 Table of GameEventIDs (continued)
 Object	Name
@@ -307,7 +307,7 @@ to DwarfQuestQuestion2: [Player is not a dwarf]
 		say "     'Nngh, fuck yeah...! Guess you're about to have your first filling...' he tells you, picking up the pace as he pushes in deep and hard inside your ass, and soon you're feeling his meat pulse and throb inside you as he lets out a long moan, warm dwarf seed coating your insides as he shoots more and more of it... 'Feels so fucking good... Oh yeah...' Enjoying his first climax, the short man leans his head back and takes some time before he resumes the action. 'About to start the round two, now I'll slide in and out even better...' he tease, slapping your buttcheek hard with those powerful dwarf hands of his. He doesn't wait for long, as you feel his cock already moving inside you, back and forth, slowly, and repeats the process, fucking your ass once more.";
 		say "     Your time together lasts for several hours, as the dwarf keeps pounding you, both your ass and mouth in turns, either making you swallow his load or breeding you with it, always with that naughty grin in his bearded face. He surely enjoys fucking you again and again...";
 		follow the turnpass rule;
-		AttemptToWait;
+		WaitLineBreak;
 		say "[DwarfMaleTF]";
 		say "     This really only stops once the dwarf falls over by exhaustion, catching his breath next to you, fully naked and lying down on his back, with his half-hard cock proudly on display. He looks at you with the biggest smile you've ever seen drawn in his expression. 'Look at you, looking so sexy... I could just keep fucking you, but damn, I'm all sore now...' he says, eyeing your entire body and face, now much more similar to his. 'You make a pretty hot dwarf, let me tell you. Should keep that look. You'll find it really fun, trust me.' He wouldn't say otherwise, looking like a dwarf himself. But then this means you're all set to begin your plan! That is... after you've had your well deserved rest. This dwarf is one intense fucker...";
 		say "     Shortly after, the dwarf gets up, and helps you back up while he's at it. Standing really close to him as you are right now makes both your dicks tingle, wanting to start fucking again... but you've been at it for long enough, and there was a goal for all this, in the first place. 'Alright, then. Grab your stuff and come with me. We'll get that greathammer back.' he says, as he turns around and starts getting dressed, and you should do the same. 'By the way, my name's Yogdrak. I suppose you can know that bit about me, since we're partners now.' He trusted you with his name? You must really have connected with each other, right? Who would say, after literal hours of fucking together. Is this the beginning of a new friendship? Or just temporary partnership for the same goal, knowing the likes of this scavenger...? You try not to think all that much about it, for now, but it sure was a great time...";
@@ -648,7 +648,7 @@ to WWEnd:
 				now Resolution of Wedding Wreckers is 6; [good rep]
 	now Wedding Wreckers is resolved;
 
-Section 2 - Creature Responses
+Chapter 2 - Creature Responses
 
 to say Dwarf wins:
 	if HP of Player > 0: [player submits]
@@ -789,8 +789,6 @@ to say DwarfSex:
 			say "     You have done enough to the poor little man, so you decide to leave him alone with his bruises and return to your previous tasks.";
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options], or 0 to exit.";
-	wait for any key;
-	clear the screen and hyperlink list;
 
 to say DwarfBJ:
 	say "     Looking over the defeated dwarf, you find in yourself the whim to take his cock in your mouth, despite his requests to leave him alone. He sees you approaching him with and yet he begs 'Come on... I swear I'll let you be! I won't b-' before he's suddenly interrupted by you caressing his crotch, causing him to release a light moan as he watches you. 'Oh... That feels nice... Uh, if that's all you want from me, I... guess...' he hesitantly replies to your touch, but you can feel him getting harder underneath his pants. With enough care, you undo his thick belt before pulling down his pants, releasing the previously constrained meat out in fresh air, still growing in your hands. The thick nine inch-long of a prick throbs with need as you eye it all over, teasing the dwarf with slow strokings.";
@@ -887,7 +885,7 @@ to say YogdrakRoamingTalk:
 		say "     Well, what can you say. You just want to beat his ass in some friendly fight, so you let him know of your intentions. 'Oh, is that so? Very well, then. I'm gonna beat you up and put you in your place, if you want that so badly.' With that, he readies himself to fight you.";
 		wait for any key;
 
-Section 3 - Creature Insertion
+Chapter 3 - Creature Insertion
 
 Table of CombatPrep (continued)
 name(text)	PrepFunction(text)
@@ -1162,7 +1160,7 @@ When Play begins:
 	now BannedStatus entry is false;
 ]
 
-Section 4-1 - Items
+Section 1 - Items
 
 Table of Game Objects (continued)
 name	desc	weight	object
@@ -1190,10 +1188,10 @@ to say DwarfMaleTF:
 	now CockName of Player is "Dwarf Male";
 	now Cock of Player is "human";
 
-Section 4-2 - Weapons
+Section 2 - Weapons
 
 [golden greathammer moved to Core Mechanics/Weapons.i7x]
 
-Section 5 - Endings
+Chapter 4 - Endings
 
 Dwarves ends here.

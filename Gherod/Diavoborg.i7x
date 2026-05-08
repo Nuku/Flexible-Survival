@@ -33,7 +33,7 @@ Version 6 of Diavoborg by Gherod begins here.
 [ 0 - Doing his usual]
 [ 1 - Open to more vore scenes]
 
-Section 1 - Pre-Events
+Chapter 1 - Pre-Events
 
 Table of GameEventIDs (continued)
 Object	Name
@@ -290,7 +290,7 @@ to FLWBehemothFight:
 		say "     Though, to your luck, your new acquaintance bodyblocks the beast's next attacks and keeps you away from harm, then attempts to tackle the beast once it has to stop in order to recover some stamina. 'Let me take the fight from now on.' he shouts, while he gains an excellent angle in reach of his tail, and within a gleaming shine provided by the sunlight's touch against the razor sharp spike on the tip of his tail, he stings the creature with an incredible speed, releasing a grunt of pain from the enraged monster. The grunt diminishes quickly, and becomes something more prolonged and low, associated with a brief dizziness. Then, it's only moans, as the beast collapses. Dust finally settles down completely, and you can see the red behemoth is victorious, flexing his thick frame on top of the defeated enemy who, by the way, has a massive hard-on throbbing helplessly between its legs.";
 		now Loyalty of Diavoborg is 5;
 
-Section 1.1 - Finding the Cave
+Section 1 - Finding the Cave
 
 Table of GameEventIDs (continued)
 Object	Name
@@ -337,7 +337,7 @@ to say ResolveEvent That Red Cave:
 	AddNavPoint Entrance to Red Rock Lair;
 	now That Red Cave is resolved;
 
-Section 1.2 - Red Rock Lair
+Section 2 - Red Rock Lair
 
 a postimport rule: [bugfixing rules for players that import savegames]
 	if That Red Cave is resolved: [event resolved, room not connected yet]
@@ -399,7 +399,7 @@ to connect Red Rock Wyvern Chamber:
 
 [-----------------------------------------------]
 
-Section 2 - NPC
+Chapter 2 - NPC
 
 Table of GameCharacterIDs (continued)
 object	name
@@ -459,7 +459,7 @@ to say DiavoborgDesc:
 	else if Loyalty of Diavoborg > 29:
 		say "     [italic type]He's not constantly watching your movements anymore, and seems completely relaxed in your presence... which is a good sign.[roman type][line break]";
 
-Section 3 - Diavoborg Talk
+Chapter 3 - Diavoborg Talk
 
 instead of conversing Diavoborg:
 	say "[DiavoborgTalkMenu]";
@@ -637,9 +637,9 @@ to say DiavoborgTalkWP:
 		LineBreak;
 		say "     You let Diavoborg know that you are not looking into doing anything of that sort at the moment, but thank him for listening to you. He nods and lets you drop the subject.";
 
-Section 4 - Diavoborg Sex
+Chapter 4 - Diavoborg Sex
 
-Instead of fucking Diavoborg:
+instead of fucking Diavoborg:
 	if Libido of Diavoborg < 2:
 		say "     You might want to reach this subject with Diavoborg by talking to him, first.";
 	else if lastfuck of Diavoborg - turns < 6:
@@ -821,7 +821,7 @@ to say DiavoborgGrinding:
 				say "     You just know Diavoborg has a wide grin painted across his muzzle, and even his dripping cunt seemed to have responded to your generosity. When you allow him to descend upon you again, he goes all the way down, pressing you deeply below his drooling pussy as he grinds some more. His lower lips touch every corner of your body as they get comfortable around you, stretching wide to accommodate your whole self, soaking you more in his juices as you're brought in between his labia. Not only you can hear, but even feel, the beast grunting and moaning as he pulls every inch of your body inside him, as you are slowly pulled off the ground and sucked inside the welcoming pussy. The warm and squishy walls around you are relentless in providing you all sorts of blissful sensations with each movement the behemoth makes, and as you settle in his womb, Diavoborg just lets an enormously powerful orgasm take over him.";
 				say "     From inside him, it is impossible to see the massive mess he must be making of his cave, and you cannot ignore the urge to cum as well. Quickly, you are brought over the edge by the overwhelming sensations, [if Player is male]covering his insides with your own load[else]a rush of pure pleasure striking your body from the core of your crotch[end if], and finishing your already longer than normal climax even before the behemoth's! He just keeps on roaring with joy for what seems like a full minute or more, before he returns to a heavy breathing as his orgasm subsides. 'Ohhhh... crap crap crap...' you can hear his voice storming from your whole surroundings as you're dazing off. 'Uhh... You have a nap in there, I'll... take you out in a... er... bit... I think... Shit, I made a fucking mess...' These words are the last you hear before you dive into a deep slumber inside the beast.";
 				follow the turnpass rule;
-				AttemptToWait;
+				WaitLineBreak;
 				say "     There is not really a way to tell when, but you do wake up eventually, feeling yourself sliding off the behemoth's pussy and being delivered into open air. He urges to lick you clean from his cunt juices with a big smile on his face. 'Hey hey! Hope you enjoyed your stay... Gave me quite the time to clean the mess I made. I didn't know I could cum that much...' You are only left to wonder how messy of a load this was, since you couldn't see it with your own eyes. 'I guess... unbirthing makes me hornier... But I'm down for a repeat, if you are.' he chuckles, and you decide to take a moment to recover from the ordeal before you are ready to move on to other matters.";
 				if Libido of Diavoborg is 3:
 					now Libido of Diavoborg is 4;
@@ -854,7 +854,7 @@ to say DiavoborgMilking:
 		say "     The salty and warm liquid coats your tongue and the inner walls of your mouth, and it hooks you up in such a way that you cannot bring yourself to stop drinking more and more of it...! By the time his orgasm has started to subside, you are still licking the fat drops from his shaft, sucking it all up as you work hard to get just a bit more in your already swollen stomach. Panting, the beast looks down to watch you feast on the cum banquet he provided you, and lets out a chuckle. 'Phew... Heh, looks like someone's enjoying themselves down there.' You do not really pay much attention to his words, and simply continue to fill yourself to your heart's content. At some point, you feel a heavy paw rubbing against your back, surprisingly delicately, as if encouraging you to feel comfortable in the whole sticky mess he made.";
 		WaitLineBreak;
 		say "     Eventually, though, you are too full to even think about drinking or eating anything else for the next few hours, and just feel like taking a nap. Your body registers this and falls limp as you dive into a deep slumber, cuddling with the giant beast as he holds you safely in his huge arms.";
-		AttemptToWait;
+		WaitLineBreak;
 		follow the turnpass rule;
 		PlayerDrink 24;
 		PlayerEat 16;
@@ -946,7 +946,7 @@ to say DiavoborgOralVore:
 	say "     This almost blissful calm eventually overwhelms you as you swim in Diavoborg's stomach juices, numb and barely awake, until you are no more, losing consciousness for who knows how long...";
 	follow the turnpass rule;
 	follow the turnpass rule;
-	AttemptToWait;
+	WaitLineBreak;
 	say "     Eventually, you find yourself whole and smelling a little funny next to a pile of rocks. Next to you is the beast himself, who had been observing you since... Well, since you were here. 'It's really fascinating seeing you taking shape back from a pile of goop! And it's a strangely similar one to what the wyverns out there spit... Then, your body returns to what it was before! How is that even possible...?' He then takes a step forward and gives you a big lick, then another, and then yet another... Only stopping himself when he realizes he was getting too enthusiastic once more. 'You still taste as well as before, too! Though I should probably stop licking you or I'll end up eating you again... Heh. Hope you enjoyed it, nice to make you my snack without any dangers!'";
 	say "     This was... definitely an experience, and who knows, maybe you could use things like this to train this ability of yours and, perhaps, control it at will.";
 	if Player is male:
@@ -1056,7 +1056,7 @@ to say DiavoborgSexSpecialCV:
 	NPCSexAftermath Player receives "OralCock" from Diavoborg;
 	now Resolution of WPExtBallTF is 3;
 
-Section 5 - Special Items
+Chapter 5 - Special Items
 
 Table of Game Objects (continued)
 name	desc	weight	object
@@ -1076,17 +1076,17 @@ instead of sniffing diavoborg cum:
 	say "You open the lid for a moment and take a sniff. It smells so much like your behemoth friend, and it even made you think about his absurdly massive load that could never make it into this bottle...";
 	LibidoBoost 5;
 
-Section X - Dev Cheats
+Chapter 6 - Dev Cheats
 
 SkipToDiavoborg is an action applying to nothing.
-Understand "GetDiavoborg" as SkipToDiavoborg.
+understand "GetDiavoborg" as SkipToDiavoborg.
 
-Check SkipToDiavoborg:
+check SkipToDiavoborg:
 	if debugactive is 0:
 		say "You aren't currently debugging.";
 		stop the action;
 
-Carry out SkipToDiavoborg:
+carry out SkipToDiavoborg:
 	move Diavoborg to Red Rock Lair Hall;
 	AddNavPoint Entrance to Red Rock Lair;
 	now That Red Cave is resolved;

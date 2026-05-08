@@ -1,6 +1,8 @@
 Version 2 of Misc 7 by Kaleem mcintyre begins here.
 [Version 2.1 - Horse Sense patched to allow avoidance - Stripes]
 
+beauceronmet is a truth state that varies. beauceronmet is usually false.
+
 Table of GameEventIDs (continued)
 Object	Name
 Horse Sense	"Horse Sense"
@@ -8,6 +10,7 @@ Horse Sense	"Horse Sense"
 Horse Sense is a situation.
 ResolveFunction of Horse Sense is "[ResolveEvent Horse Sense]".
 Sarea of Horse Sense is "Plains".
+
 when play begins:
 	add Horse Sense to BadSpots of FurryList;
 	add Horse Sense to BadSpots of HermList;
@@ -16,15 +19,14 @@ to say ResolveEvent Horse Sense:
 	say "     Finding your way through the plains, you let the cool wind blowing across the open grass fields brush over chest and torso, turning your lips up into a smile. With your [BodyType of Player] body relishing in the pure [']feel['] of all that the plains have to offer, you find yourself letting go of yourself so that your spirit can become wrapped up in sensations of listening to the fluttering grass underneath your feet and rumble of the clouding sky above your head. A crack of thunder disturbs you from your mental reprieve, though, and soon you find your eyes fluttering open just as the first few drops of rain trickle over and across your chest and face.";
 	let bonus be ( intelligence of Player + perception of Player - 20 ) / 2;
 	let dice be a random number from 1 to 20;
-	say "     You roll 1d20([dice])+[bonus]: [dice + bonus]: ";
+	say "[line break]You roll 1d20([dice])[if bonus >= 0]+[end if][bonus] = [special-style-1][dice + bonus][roman type] vs [special-style-2]11[roman type] (Intelligence + Perception Check):[line break]";
 	if bonus + dice > 10:
-		say "As the scent of the rain just starting to come down catches your attention, you realize that something is amiss and you shake the swelling thoughts of galloping naked through the rain from your thoughts. You scan the area quickly for shelter and rush to the ruins of a nearby building. Getting there before the horse-scented downpour can kick into full gear, you huddle under a scrap of ceiling that remains standing and wait it out. Thankfully it is very brief. And while you're disappointed to see rain and not be able to enjoy it or gather some for drinking, you can tell even it is not to be trusted. At least you get to enjoy the beautiful lightning across the sky. After the rain passes, the water is quickly soaked up by the parched soil.";
+		say "     As the scent of the rain just starting to come down catches your attention, you realize that something is amiss and you shake the swelling thoughts of galloping naked through the rain from your thoughts. You scan the area quickly for shelter and rush to the ruins of a nearby building. Getting there before the horse-scented downpour can kick into full gear, you huddle under a scrap of ceiling that remains standing and wait it out. Thankfully it is very brief. And while you're disappointed to see rain and not be able to enjoy it or gather some for drinking, you can tell even it is not to be trusted. At least you get to enjoy the beautiful lightning across the sky. After the rain passes, the water is quickly soaked up by the parched soil.";
 		now Resolution of Horse Sense is 1; [avoided the infection]
 	else:
-		say "You bask in the pleasure of the rain falling on you, washing away some of the dust and grime that has built up during this heat wave. Holding your mouth open wide, you try to catch what you can for your [if thirst of Player > 30]parched [end if]throat. As the rainfall picks up, the scent of the rain coupled with the drenching wetness of your clothes matting down across your frame makes you shake your head wildly as the sudden urge to charge across the plains gets you moving before you can stop yourself.";
+		say "     You bask in the pleasure of the rain falling on you, washing away some of the dust and grime that has built up during this heat wave. Holding your mouth open wide, you try to catch what you can for your [if thirst of Player > 30]parched [end if]throat. As the rainfall picks up, the scent of the rain coupled with the drenching wetness of your clothes matting down across your frame makes you shake your head wildly as the sudden urge to charge across the plains gets you moving before you can stop yourself.";
 		say "     Muscles becoming tense with the untamed urge to gallop freely across the plains, you let your sight and sense of smell spread out around you in a rush as the sense of oneness at embracing [italic type]life[roman type] swells inside of your chest until you feel as though you could burst. Throwing your head back and shaking the watery drops of rain off from your face, you let out an unconscious whinny just in time for a crack of thunder to snap above your head. The bolt of lightning that follows darkens the land for a moment, but despite this, you find yourself continuing to run with no particular destination in mind. There's no fear of the dancing electricity above you as you run, momentarily lost in the moment. The rain passes as quickly as it came, but the lingering changes that it brought continue.";
-		infect "Black Equinoid";
-		infect "Black Equinoid";
+		MultiInfect "Black Equinoid" repeats 2;
 		now Resolution of Horse Sense is 2; [got infected]
 		SanLoss 10;
 	increase score by 1;
@@ -37,6 +39,7 @@ Victim	"Victim"
 Victim is a situation.
 ResolveFunction of Victim is "[ResolveEvent Victim]". The level of Victim is 8.
 Sarea of Victim is "Red".
+
 when play begins:
 	add Victim to BadSpots of FurryList;
 	add Victim to BadSpots of HermList;
@@ -82,8 +85,7 @@ to say ResolveEvent Runaway:
 	say "     'I ran away from home and found my way coming here. Why do you ask?' You blink at the freckled youth and then ask him if he has actually noticed what's going on around the city as of late. 'Oh...the stuff with the [']deadly['] outbreak? Yeah everyone on the outside knows about it. That's one of the reasons I came here. Nobody would think to look for me out here.' The young man then lowers his head somewhat to let his long shaggy black mane of hair cover his youthful face. 'My folks found out that I'm gay and got on my case pretty bad about it. Since there's a plague or virus or whatever going on around here I figured that this would be the best place to go to since home has just gotten unbearable. Heh, what better place to come for someone who's [']confused['] about their sexuality, right?' the young man scoffs disdainfully.";
 	WaitLineBreak;
 	say "     It takes you a minute to think about it, but once you do you find yourself shrugging somewhat at the other's cleverness... or insanity. 'Say, what's it like... you know... getting fucked by the mutants running around here?' The youth's question catches you off guard for a second as you really had never thought about it on a personal, introspective level before.";
-	say "     [bold type]But after getting yourself back together mentally, you really come to think about it for a moment.[roman type][line break]";
-	LineBreak;
+	say "[line break]     [bold type]But after getting yourself back together mentally, you really come to think about it for a moment.[roman type][line break]";
 	say "     ([link]Y[as]y[end link]) - Real good.";
 	say "     ([link]N[as]n[end link]) - Bad.";
 	if Player consents:
@@ -105,11 +107,11 @@ Portrait	"Portrait"
 Portrait is a situation.
 ResolveFunction of Portrait is "[ResolveEvent Portrait]". The level of Portrait is 9.
 Sarea of Portrait is "Outside".
+
 when play begins:
 	add Portrait to BadSpots of FurryList;
 	add Portrait to BadSpots of MaleList;
 	add Portrait to BadSpots of HermList;
-
 
 to say ResolveEvent Portrait:
 	say "     Making your way through the somewhat desolate streets of the infected city you find yourself stopping dead in your tracks as you notice someone with latex fox ears waving up on their head sitting in front of a large canvas and painting something or the other with their back turned towards you. Feeling particularly nosy at the moment you make you ease on over to the other to see what's going on here. When you do you find your eyes widening in surprise when you see the other person, who happens to be a foxy - in the literal sense of the word - female with a human-like face wearing thin rimmed glasses, quickly swiping her brush over and along her slowly darkening canvas in an attempt to paint the city around her. From what you can see, despite the ruination that the metropolis is in right now, the foxwoman is recreating a beautiful scene in front of her that speaks nothing of the debauchery and depravity that the city has fallen into.";
@@ -117,7 +119,6 @@ to say ResolveEvent Portrait:
 	challenge "Husky Alpha";
 	challenge "Alpha Wolf";
 	challenge "Smooth Collie Shemale";
-	LineBreak;
 	say "     With the respective group of cano-mutt mutants taken care of, you drop down onto the ground and then sigh as fatigue takes hold of you. A gentle tinkle of laughter makes you whip your head around just in time to see the foxwoman set down her brush and then stand up to stretch. Realizing that the artist has had no idea of what had just taken place, you grumble quietly before looking past the vixen to notice the finished piece of artistry.";
 	say "     What you see captivates you in an almost mesmeric way as the collage of inks and paints have come together to form a picture that astounds you down to your core. Coming to the conclusion that all of your hard work was worth the effort of protecting the other, you say nothing as you slowly get up and then take your leave from the vixen. The sight of the city, and subsequently yourself with your [FaceSpeciesName of Player in lower case] face standing in front of the metropolis looking at the viewer, will probably stay with you for a long, long time to come.";
 	SanBoost 10;
@@ -131,21 +132,20 @@ Hurting	"Hurting"
 Hurting is a situation.
 ResolveFunction of Hurting is "[ResolveEvent Hurting]".
 Sarea of Hurting is "Hospital".
+
 when play begins:
 	add Hurting to BadSpots of FurryList;
 	add Hurting to BadSpots of MaleList;
 
 to say ResolveEvent Hurting:
-	say "     Walking through the halls of the hospital, you find yourself stopping when a sudden loud and anguished whimpering noise catches your attention. On guard, you find yourself looking around and then tracking the helpless sound until you get to a half opened door that leads to an unfamiliar looking room. Cautiously stepping into the small but well-lit area, you creep over to have a look over an overturned desk, only to find someone... or rather something... hiding behind it. Not wanting to startle whoever is there, you make a small sound in the back of your throat and then watch as a head pops up to look at you. The face of one of the weasels that belong in the hospital's psychiatric ward looks at you timidly before ducking back down to whimper fretfully behind his hiding spot.[line break]";
-	say "     [bold type]Should you go over to see if something is wrong with them?[roman type][line break]";
-	LineBreak;
+	say "     Walking through the halls of the hospital, you find yourself stopping when a sudden loud and anguished whimpering noise catches your attention. On guard, you find yourself looking around and then tracking the helpless sound until you get to a half opened door that leads to an unfamiliar looking room. Cautiously stepping into the small but well-lit area, you creep over to have a look over an overturned desk, only to find someone... or rather something... hiding behind it. Not wanting to startle whoever is there, you make a small sound in the back of your throat and then watch as a head pops up to look at you. The face of one of the weasels that belong in the hospital's psychiatric ward looks at you timidly before ducking back down to whimper fretfully behind his hiding spot.";
+	say "[line break]     [bold type]Should you go over to see if something is wrong with them?[roman type][line break]";
 	say "     ([link]Y[as]y[end link]) - Yes.";
 	say "     ([link]N[as]n[end link]) - No.";
 	if Player consents:
 		LineBreak;
 		say "     Going over to stand in front of the psychotic weasel, you find the other rocking back and forth while muttering something about bad mouse and evil nurses. Seeing the poor soul in such distress, you hesitantly kneel down in front of the other, making sure that you can watch it for any signs of aggression, before trying to ask the weasel what's the matter. The other says nothing for a second, but does stop rocking in order to looking up at you. Bright, but off kilter green eyes stare at you and you find yourself backing up just a tick as you look into the face of controlled madness. The weasel doesn't say anything as he stares up at you for several seconds before he slowly lowers his head back down between his knees to start rocking again. Maybe this would be a good time to find someone to come and help the other, but who should you find?";
-		say "     [bold type]The weasel is obviously not too thrilled about the nurses, but would one of the big, burly orderlies be any better?[roman type][line break]";
-		LineBreak;
+		say "[line break]     [bold type]The weasel is obviously not too thrilled about the nurses, but would one of the big, burly orderlies be any better?[roman type][line break]";
 		say "     ([link]Y[as]y[end link]) - Orderly.";
 		say "     ([link]N[as]n[end link]) - Nurse.";
 		if Player consents:
@@ -160,7 +160,6 @@ to say ResolveEvent Hurting:
 			LineBreak;
 			say "     Not really sure if an orderly would be the right one to ask to deal with the (obviously in need of medication) weasel, you go out to search for a vixen instead. Finding one, but only after having searched through multiple rooms and seeing almost all of the lady foxes getting stuffed full by the orderlies on duty, you tell her about the psychotic weasel hiding in one of the other rooms and then lead her back to him. Upon getting into the other room with the nurse the weasel goes ballistic when he sees the female and charges at you as though in desperate need to escape.";
 			challenge "Psycho Weasel";
-			LineBreak;
 			say "     Having fought the other enough to wear him down, the vixen nurse is able to get close enough to inject something into the weasel's arm which sends the wide-eyed mess of fur wrapped in a straight jacket straight into the land of unconsciousness. You watch in disbelief as the mustelid falls down onto the ground and then begins to twitch slightly from whatever is flowing through his system. Not sure if you've made the right decision on this one, you ask the nurse what's going to happen to the other and then balk slightly when you notice that she is nowhere to be found.";
 			increase score by 1;
 			now Resolution of Hurting is 2; [called a Nurse]
@@ -178,7 +177,6 @@ Conchien	"Conchien"
 Conchien is a situation.
 ResolveFunction of Conchien is "[ResolveEvent Conchien]".
 Sarea of Conchien is "Outside".
-beauceronmet is a truth state that varies. beauceronmet is usually false.
 
 when play begins:
 	add Conchien to BadSpots of FurryList;
@@ -188,8 +186,7 @@ to say ResolveEvent Conchien:
 	now beauceronmet is true;
 	say "     Walking along the streets of the city, you find the ground suddenly shaking all of a sudden. Thinking that it's an earthquake you freeze and then whip your head around frantically look around for safe cover to stand upon to wait out the tremor. Before you can do that however, the shaking quickly comes to a halt. Confused as to what's going on you blanch when a large shadow crosses over you and then a large finger taps you lightly onto the shoulder. Gulping thickly you turn hesitantly only to see a nine foot tall Beauceron cuntboy smiling down in your direction almost imploringly. With all the markings that would have made the other look somewhat like a giant Doberman, but not quite because of certain small differences, you find yourself coming to focus on the hot and dripping cunt of the other without really meaning to as the heady scent of canine musk begins to quickly perfume the air. The large folds are leaking a thick, but slow trail of clear honey down onto the ground between the other's feet and you swallow thickly as the scent of the cuntboy begins to get to you.";
 	say "     'Excuse me, have you seen a collie about my size around here anywhere?' You find yourself blinking and then pointing on down the street without thinking. 'Thanks.' The Beauceron places one of his large paws onto his brow and then squints as if trying to look far into the distance. 'Where in the heck did that cousin of mine go to?' the other says and then steps past you to go above to go about his way. The last you see of the other is the slightly curled tail of the Dobie lookalike disappearing down the road with a slight wag offsetting the huge furry appendage.";
-	increase Libido of Player by 17;
-	if Libido of Player > 100, now Libido of Player is 100;
+	raise Player Libido by 17;
 	increase score by 1;
 	now Conchien is resolved;
 
@@ -207,10 +204,8 @@ when play begins:
 	add Chocolate Treat to BadSpots of HermList;
 
 to say ResolveEvent Chocolate Treat:
-	setmonster "Chocolate Lab";
 	say "     Wandering through the high rise district, you find yourself smelling a sweet scent wafting throughout the slightly musky air of the city, the likes of which cause your stomach to grumble. Feeling yourself growing hungry all of a sudden, you end up following the smell all the way until you notice several Chocolate Labs congregating around each other in a small puppy pile behind the back of a dilapidated building. There are numerous chocolate bar wrappers strewn about, the confectionary dogs clearly full and sated for the moment. The unusual dogs lie together, slightly flowing into one another as their liquid bodies seem to have no clear division between themselves and their neighbors. Not wanting to disturb the pack, but feeling slightly ravenous all the same from their scent, you don't notice when one of the flowing, chocolate canines comes up behind you until you feel something brushing up one side of your leg. Flipping your head around, you watch as the other pants happily up at you before lifting its leg slightly, as if knowing what you want. Understanding rushes through you as you find yourself slurping your lips while greedily eyeing the bobbing cock of the obviously horny Lab as it dribbles some white chocolate goo.";
-	say "     [bold type]Should you try and sate you appetite with a small taste?[roman type][line break]";
-	LineBreak;
+	say "[line break]     [bold type]Should you try and sate you appetite with a small taste?[roman type][line break]";
 	say "     ([link]Y[as]y[end link]) - Yes.";
 	say "     ([link]N[as]n[end link]) - No.";
 	if Player consents:
@@ -224,13 +219,11 @@ to say ResolveEvent Chocolate Treat:
 		PlayerDrink 10;
 		if BodyName of Player is "Chocolate Lab" or FaceName of Player is "Chocolate Lab":
 			decrease humanity of Player by a random number between 25 and 35;
-			if "Strong Psyche" is listed in feats of Player, increase humanity of Player by a random number between 5 and 10;
-			if "Weak Psyche" is listed in feats of Player, decrease humanity of Player by a random number between 0 and 5;
 		else:
 			decrease humanity of Player by a random number between 20 and 30;
 			increase hunger of Player by 12;
-			if "Strong Psyche" is listed in feats of Player, increase humanity of Player by a random number between 5 and 10;
-			if "Weak Psyche" is listed in feats of Player, decrease humanity of Player by a random number between 0 and 5;
+		if "Strong Psyche" is listed in feats of Player, increase humanity of Player by a random number between 5 and 10;
+		if "Weak Psyche" is listed in feats of Player, decrease humanity of Player by a random number between 0 and 5;
 		setmonster "Chocolate Lab" silently;
 		turn the Player into a "Chocolate Lab";
 		if hellHoundLevel is 0:
@@ -257,6 +250,5 @@ to say ResolveEvent Chocolate Treat:
 		say "     Thinking it would be better to go without, considering the gleaming look in the canine's eyes is just too devious to be something ordinary, you shake your head at the Chocolate Labrador and then walk right on by it without saying a word to the beast. This doesn't go quite as planned for you because soon the other is barking and chasing you down the street.";
 		now Resolution of Chocolate Treat is 99; [avoided the choc]
 	now Chocolate Treat is resolved;
-
 
 Misc 7 ends here.

@@ -30,10 +30,10 @@ When Play begins:
 	now enemy title entry is ""; [ Name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name. ]
 	now enemy Name entry is ""; [ Specific name of unique enemy. ]
 	now enemy type entry is 0; [ 0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters. ]
-	now attack entry is "";
-	now defeated entry is "";
-	now victory entry is "";
-	now desc entry is "";
+	now attack entry is "[NonCombatError]";
+	now defeated entry is "[NonCombatError]";
+	now victory entry is "[NonCombatError]";
+	now desc entry is "[NonCombatError]";
 	now face entry is "short muzzle filled with sharp teeth set below deep, brilliant rose-red eyes and pointed fox-like ears, all giving you a very elegant and alluring look";
 	now body entry is "tall and fit, with ample curves and powerful thighs. You have fox-like digitigrade legs that end in sharp claws";
 	now skin entry is "fluffy pink pearl fur covering your whole body, gaining a stronger bubblegum pink tone at the extremeties of your limbs and"; [ format as "You have (your text) skin"]

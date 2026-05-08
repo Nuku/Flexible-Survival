@@ -122,8 +122,6 @@ to say beatthegiant:
 				say "     Perhaps it would be best to drop it here. No way to know the risks messing with a slumbering giant could pose to you, and it is better to be safe than sorry.";
 			else:
 				say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options], or 0 to exit.";
-		wait for any key;
-		clear the screen and hyperlink list;
 
 to say GiantLosesCockPlay:
 	say "     The huge man is fully exposed to you, and he won't be able to offer any resistance in this condition, thrown into such a deep slumber. This proves to be a great opportunity to explore his body, but of course, with one thing in mind... That enormous shaft, laying soft across one of his huge thighs, accompanied by a massive, heavy sack with two full orbs dandling inside. Putting thoughts into actions, you make an attempt to climb his legs up, slowly and carefully, reaching for a holding point on his ankle and balancing your body upwards with all your might, lifting one leg over as you bring yourself on top of his foot, or a little before that. Then, you are finally ready to make your way towards his crotch. You can already sense the manly musk coming from his junk as you approach, sending the good kind of shivers down your spine.";
@@ -198,7 +196,7 @@ to SubmitGiantCock:
 		say "     This ordeal continues for hours and hours, his scorching hot semen taking your entire body in as it begins to fill his balls completely once again, threatening to fully submerge you... Eventually, you lose track of time, and you begin to feel your skin seemingly melt and give in to the digestive properties of his warm, hungry cum, that is soon covering you from head to toe... It is then that you lose conscience, blacking out as your senses diminish.";
 		follow the turnpass rule;
 		follow the turnpass rule;
-		AttemptToWait;
+		WaitLineBreak;
 		say "     You wake up hours later, at the shore of a lake nearby, completely naked and accompanied by a massive trail of white jizz. Your body is still whole and you're in good shape, albeit very dizzy and mildly confused towards what happened exactly. By the looks of it, seems like the giant came you out of his balls right before you were turned into his next orgasm, fortunately for you. Walking by for a bit, [if Player is not naked]you're also able to find the gear he stripped away, so you put it back on[else]you see which way to go next[end if] and prepare to leave.";
 		MultiInfect "Human Giant" repeats 2;
 	else:
@@ -234,7 +232,7 @@ to SubmitGiantAssAV:
 	say "     In what seems to be hours, you're left inside his ass, scorching hot flesh clenching constantly against you, making it a living hell for you...";
 	follow the turnpass rule;
 	follow the turnpass rule;
-	AttemptToWait;
+	WaitLineBreak;
 	say "     You wake up hours later, at the shore of a lake nearby, completely naked and accompanied by a massive trail of white jizz. Your body is still whole and you're in good shape, albeit very dizzy and mildly confused towards what happened exactly. By the looks of it, seems like the giant got you out of his ass, and proceeded to give you a cumbath while you were unconscious. Fortunately for you, he didn't actually consume you, or anything worse. Walking by for a bit, [if Player is not naked]you're also able to find the gear he stripped away, so you put it back on[else]you see which way to go next[end if] and prepare to leave.";
 	MultiInfect "Human Giant" repeats 2;
 
@@ -714,15 +712,7 @@ This is the Human Giant Infection rule:
 		trigger ending "Human Giant Infection"; [Here it states, that the ending has been played.]
 		if humanity of Player < 10:
 			say "     As your thoughts grow simpler and slower, you head out into the city and stumble around for a while, hardly noticing as everything gradually gets smaller and smaller. Unable to recognize the fact that you're actually growing, but finding the city increasingly confining, you make your way to the relative openness of the zoo. There you find a giant man being tied to the ground as military teams struggle to lash him down with steel cables. Growling at these pests, you come charging in, swatting them aside by the handful and tearing out the metal cables (which seem only as thick wires to you) to free the other giant. As he gets up, the military calls the retreat, forced to abandon their attempt. As you're helping the giant out of the last of the tangle, you can see groups of the zoo animals moving in on the injured soldiers you've left in your wake. Knowing they'll be taken care of, you turn your attention to the giant.";
-			say "     He's very grateful for the rescue and thanks you for finally coming to help him with the zoo. He claims to have been getting the situation under control until those little soldier people showed up, but is really glad that you're here now to help him with it. You settle down, living there with him, playing around with the animals, getting them back into their cages, giving them the occasional soldier you find as a treat";
-			if Player is herm:
-				say " and dousing much of the nearby area with your hot, sticky cum as your big, strong mate fucks you silly[if Player is impreg_ok]. Your many giant offspring are sent out into the world to find their own fun with all the fun little critters running around to be their toys[end if].";
-			else if Player is male:
-				say " and dousing much of the nearby area with your hot, sticky cum as you and your big, strong mate take turns fucking one another[if Player is mpreg_ok]. Your many giant offspring are sent out into the world to find their own fun with all the fun little critters running around to be their toys[end if].";
-			else if Player is female:
-				say " when not stretching yourself out on one of the many open grazing plains while your big, strong mate fucks you silly[if Player is impreg_ok]. Your many giant offspring are sent out into the world to find their own fun with all the fun little critters running around to be their toys[end if].";
-			else:
-				say " and helping your giant friend use some of the cuter critters around as sextoys when he needs some sticky, messy relief[if Player is mpreg_ok]. Your many giant offspring are sent out into the world to find their own fun with all the fun little critters running around to be their toys[end if].";
+			say "     He's very grateful for the rescue and thanks you for finally coming to help him with the zoo. He claims to have been getting the situation under control until those little soldier people showed up, but is really glad that you're here now to help him with it. You settle down, living there with him, playing around with the animals, getting them back into their cages, giving them the occasional soldier you find as a treat [if Player is herm]and dousing much of the nearby area with your hot, sticky cum as your big, strong mate fucks you silly[else if Player is male]and dousing much of the nearby area with your hot, sticky cum as you and your big, strong mate take turns fucking one another[else if Player is female]when not stretching yourself out on one of the many open grazing plains while your big, strong mate fucks you silly[else]and helping your giant friend use some of the cuter critters around as sextoys when he needs some sticky, messy relief[end if][if Player is impreg_ok]. Your many giant offspring are sent out into the world to find their own fun with all the fun little critters running around to be their toys[end if].";
 		else:
 			say "     Your manage to keep your mind intact and survive until the military rescue can arrive, but your huge size makes extracting you difficult. You are forced to accompany a ground team on their march out of the city. At first, they're very nervous about you, but change their tune after your powerful body helps drive off a mutant attack. From that point on, they're joking and laughing with you, calling you their friendly giant. One teases you about where Rusty and Jerome are, but you don't catch the reference, though he doesn't seem to mind.";
 			say "     Hearing the reports when you get back to the city, the military are very grateful and, with a little coaxing from the other soldiers you've befriended, get you to sign up with the military. This accelerates your process through the processing camp and soon enough you join the unit. No longer having the time or means for proper training, you're given a crash course by your teammates and head back into the city to help them save any others you can.";
