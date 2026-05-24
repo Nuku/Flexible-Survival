@@ -6,6 +6,11 @@ Version 1 of Giving by OrangeHorned begins here.
 
 Section 1 - Giving
 
+a postimport rule: [bugfixing rules for players that import savegames]
+	now SexuallyExperienced of GivingFirbolg is true;
+	now Sterile of GivingFirbolg is false;
+	now MainInfection of GivingFirbolg is "Fathnach";
+
 Table of GameCharacterIDs (continued)
 object	name
 GivingFirbolg	"GivingFirbolg"
@@ -27,10 +32,10 @@ Nipple Count of GivingFirbolg is 2. [count of nipples]
 Asshole Depth of GivingFirbolg is 9. [inches deep for anal fucking]
 Asshole Tightness of GivingFirbolg is 3. [asshole tightness 1-5, "extremely tight, tight, receptive, open, gaping"]
 Cock Count of GivingFirbolg is 1. [number of cocks]
-Cock Girth of GivingFirbolg is 3. [thickness 1-5, thin/slender/average/thick/monstrous]
-Cock Length of GivingFirbolg is 5. [length in inches]
-Ball Count of GivingFirbolg is 0. [allowed numbers: 1 (uniball), 2 or 4]
-Ball Size of GivingFirbolg is 0. [size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"]
+Cock Girth of GivingFirbolg is 4. [thickness 1-5, thin/slender/average/thick/monstrous]
+Cock Length of GivingFirbolg is 15. [length in inches]
+Ball Count of GivingFirbolg is 2. [allowed numbers: 1 (uniball), 2 or 4]
+Ball Size of GivingFirbolg is 6. [size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"]
 Cunt Count of GivingFirbolg is 1. [number of cunts]
 Cunt Depth of GivingFirbolg is 9. [penetrable length in inches; some minor stretching allowed, or more with Twisted Capacity]
 Cunt Tightness of GivingFirbolg is 4. [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
@@ -45,25 +50,27 @@ OralVirgin of GivingFirbolg is false.
 Virgin of GivingFirbolg is false.
 AnalVirgin of GivingFirbolg is false.
 PenileVirgin of GivingFirbolg is false.
-SexuallyExperienced of GivingFirbolg is false.
+SexuallyExperienced of GivingFirbolg is true.
 TwistedCapacity of GivingFirbolg is false. [Twisted Characters can take any penetration, no matter the size]
-Sterile of GivingFirbolg is true. [steriles can't knock people up]
-MainInfection of GivingFirbolg is "".
+Sterile of GivingFirbolg is false. [steriles can't knock people up]
+MainInfection of GivingFirbolg is "Fathnach".
 Description of GivingFirbolg is "[Givingdesc]".
-
+the fuckscene of GivingFirbolg is "[sexwithGiving]".
+icon of GivingFirbolg is Figure of GivingFirbolg_clothed_icon.
 the scent of the GivingFirbolg is "     Giving smells like he's almost drenched in what you could describe as some sort of Irish soap. Very much herbal and sea-salty in all the right ways. It might be from all the sweat caked on his body."
 
 to say Givingdesc:
+	project Figure of GivingFirbolg_clothed_icon;
 	if debugactive is 1:
-		say "     DEBUG -> HP: [HP of GivingFirbolg] <- DEBUG[line break]";
-	say "     What stands in front of you is a hyper masculine giant-kin that easily towers over you around 10 feet, wearing nothing but a baseball cap and a stretched out plastic fishing jumpsuit with dirty boots that have seen brighter days. Their figure barely contained in the plastic as the straps on his shoulders on to dear life to keep his massive man-pecs from jiggling all over the place, along with thick thighs that bulge at their plastic cage. His rugged freckled face looks upon you, seeing your curiosity and flicking his tied up messy hair. He gives a small snort with his cow nose as he gives you an innocent smile.";
+		say "     DEBUG -> HP: [HP of GivingFirbolg], XP: [XP of GivingFirbolg], Lust: [Lust of GivingFirbolg] <- DEBUG[line break]";
+	say "     [if Lust of GivingFirbolg > 8]A giant cowman stands before you, nude and pregnant with a child growing inside of him. His blue cheeks blush as one hand grabs himself as he spots you staring. His muscular thickness jiggles slightly with every small movement he makes. He pulls his hat down to his eyes, nodding a greeting as he sees your hesitance to come closer to such a perfect child-bearing giant[else]What stands in front of you is a hyper masculine giant-kin that easily towers over you around ten feet, wearing nothing but a baseball cap and a stretched out plastic fishing jumpsuit with dirty boots that have seen brighter days. Their figure barely contained in the plastic as the straps on his shoulders on to dear life to keep his massive man-pecs from jiggling all over the place, along with thick thighs that bulge at their plastic cage. His rugged freckled face looks upon you, seeing your curiosity and flicking his tied up messy hair. He gives a small snort with his cow nose as he gives you an innocent smile[end if].";
 
-Instead of conversing the GivingFirbolg:
-	if HP of GivingFirbolg is 1:
-		say "[GivingFirbolgTalkMenu]";
+instead of conversing the GivingFirbolg:
+	project Figure of GivingFirbolg_clothed_icon;
+	say "[GivingFirbolgTalkMenu]";
 
 to say GivingFirbolgTalkMenu:
-	say "[line break]";
+	let TalkDone be false;
 	say "     'I'm a open book, what do you need?' Giving seems to be in a good mood for talking.";
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
@@ -79,16 +86,23 @@ to say GivingFirbolgTalkMenu:
 	now description entry is "Have Giving tell you a little about his time in the city.";
 	[]
 	if HP of GivingFirbolg is 2:
-		choose a blank row in table of fucking options;
-		now title entry is "About Knott";
-		now sortorder entry is 3;
-		now description entry is "Why does he still seem pretty apprehensive?";
-	[]
-	if HP of GivingFirbolg is 2:
+		if Elusive Book is unresolved:
+			choose a blank row in table of fucking options;
+			now title entry is "About Knott";
+			now sortorder entry is 3;
+			now description entry is "Why does he still seem pretty apprehensive?";
+		[]
 		choose a blank row in table of fucking options;
 		now title entry is "What were the sea scouts like?";
 		now sortorder entry is 4;
-		now description entry is "Giving was a sea scout leader, what could it have been like?`";
+		now description entry is "Giving was a sea scout leader, what could it have been like?";
+	[]
+	if XP of GivingFirbolg > 0:
+		choose a blank row in table of fucking options;
+		now title entry is "Offspring";
+		now sortorder entry is 5;
+		now description entry is "Ask him about his kids, if he has any idea where they are or how they're doing." ;
+	[]
 	sort the table of fucking options in sortorder order;
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
@@ -100,31 +114,39 @@ to say GivingFirbolgTalkMenu:
 		if calcnumber > 0 and calcnumber <= the number of filled rows in table of fucking options:
 			now current menu selection is calcnumber;
 			choose row calcnumber in table of fucking options;
-			say "[title entry]: [description entry]?";
+			say "[title entry]: [description entry][line break]";
 			if Player consents:
-				let nam be title entry;
+				LineBreak;
 				now sextablerun is 1;
-				if (nam is "Backstory"):
-					say "[GivingTalk1]";
-				if (nam is "Short Stories"):
-					say "[GivingTalk2]";
-				if (nam is "About Knott"):
-					say "[GivingTalk3]";
-				if (nam is "What were the sea scouts like?"):
-					say "[GivingTalk4]";
+				if title entry is:
+					-- "Backstory":
+						say "[GivingTalk1]";
+					-- "Short Stories":
+						say "[GivingTalk2]";
+					-- "About Knott":
+						say "[GivingTalk3]";
+						now TalkDone is true;
+					-- "What were the sea scouts like?":
+						say "[GivingTalk4]";
+						now TalkDone is true;
+					-- "Offspring":
+						say "[GivingTalk5]";
 				wait for any key;
+				if TalkDone is false:
+					say "[GivingFirbolgTalkMenu]";
 		else if calcnumber is 0:
+			LineBreak;
 			now sextablerun is 1;
-			say "     You shake your head, 'Ah, okay, totally fine' he seems a bit disappointed but nods in understanding.";
+			say "     You shake your head. 'Ah, okay, totally fine.' He seems a bit disappointed but nods in understanding.";
 			wait for any key;
 		else:
-			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options], or 0 to exit.";
 	clear the screen and hyperlink list;
 
 to say GivingTalk1:
-	say "     'Well, as you know, I'm Giving, had a former name but everyone just sorta called me Cappy, A Skipper for a Sea Scout Group near the port. Lotta Family members who were into sea related jobs so it kinda was a given, Apocalypse happened, I single handedly got my troop to a checkpoint to get them to safety, but I couldn't in good conscience leave survivors alone in this place, somehow didn't end up infected for a long time.' The Firbolg flexes his bicep eagerly to show off the gun show, the scars that surround its edges showing a history of rough rides and close calls with not-too-kind strangers. 'Was just near some river in the forest trying to filter the water to drink when I saw this little guy-- which I now know are called Baegs- just all alone, honestly when he confided in me about how much the others were struggling to get by, I felt this... urge you know.'";
+	say "     'Well, as you know, I'm Giving... had a former name but everyone just sorta called me Cappy, a skipper for a sea scout group near the port. Lotta family members who were into sea-related jobs so it kinda was a given. Apocalypse happened- I singlehandedly got my troop to a checkpoint to get them to safety, but I couldn't in good conscience leave survivors alone in this place. Somehow didn't end up infected for a long time.' The Firbolg flexes his bicep eagerly to show off the gun show, the scars that surround its edges showing a history of rough rides and close calls with not-too-kind strangers. 'Was just near some river in the forest trying to filter the water to drink when I saw this little guy- which I now know are called Beags- just all alone. Honestly when he confided in me about how much the others were struggling to get by, I felt this... urge, you know.'";
 	WaitLineBreak;
-	say "     You don't know what he means. 'So I asked him to fuck me, call it an impulse, but its hard to explain, when I turned into this I knew I made the right choice.' There is a slight pause as Giving sighs out 'It was... really just his sweet voice and hearing their backstory that made me cave into this infection. Alongside the possibility I could become a father, although 'Daddy' is all our Fathers technically, it doesn't mean I can't take care of the more less experienced Firbolgs when their just getting over their lusts.'";
+	say "     You don't know what he means. 'So I asked him to fuck me- call it an impulse, but it's hard to explain. When I turned into this I knew I made the right choice.' There is a slight pause as Giving sighs out. 'It was... really just his sweet voice and hearing their backstory that made me cave into this infection. Alongside the possibility I could become a father; although 'Daddy' is all our fathers technically, it doesn't mean I can't take care of the more less-experienced Firbolgs when they're just getting over their lusts.'";
 	now HP of GivingFirbolg is 2;
 
 to say GivingTalk2:
@@ -134,14 +156,17 @@ to say GivingTalk2:
 		-- 2: [Short Story 2]
 			say "     'If you see any green men steer clear of them, I hate how my city scavenging has to always be interrupted when I come across some strays of them plowing some poor people just right out on the streets. A guy can't just grab some toilet paper for the commune without suddenly hearing someone gagging followed by seeing some snow leopard getting spit-roasted by some big fellas. The Worst part is that they really don't care if I'm twice their size, all I wanna do is just step into a room and just intimidate them, but all they see is [']A big breeder with a fat ass['], that two versus one was NOT in their favor. Oh right, the snow leopard guy I think was like half-orc by then, to be honest when you're helping ferals you gotta just keep distance, he looked ready to find his next fuck.'";
 		-- 3: [Short Story 3]
-			say "     'I think on a wholesome note, one of my adventures actually was helping a human get to the commune. A guy was stuck high in a tree and was offering me stuff but I just told him I didn't need anything to save him. He thanked me profusely for giving him some food and water, guided him here and he's been the happiest face around the snowy forest.";
+			say "     'I think on a wholesome note, one of my adventures actually was helping a human get to the commune. A guy was stuck high in a tree and was offering me stuff but I just told him I didn't need anything to save him. He thanked me profusely for giving him some food and water, guided him here and he's been the happiest face around the snowy forest.'";
 		-- 4: [Short Story 4]
 			say "     'Well... uh... I was near the docks and... I saw this poor puppy trying to lick some white stuff, the poor thing was already transforming. I sometimes wonder if I did the right thing, holding that thing in my arms as I tried to feed it something. I did it for a few days, wondering if it would fight the nanites, die or worse... All I know is one day, it wasn't in the place I found it...' Giving looks like he's about to cry before rubbing his eyes. 'You can't save everything, all you can do is your best.'";
 		-- 5: [Short Story 5]
-			say "     Let's see... the commune wanted me to get some sewing kits, since I'm the one who's mostly out and about, I usually know where to get some things. Heading off to the High Rises, I was about to check out one shop I've seen when I passed by only to see a bunch of foot soldiers scramble out of there. Luckily apparently at least some of the troops know that some blue skinned figure sometimes helps them out because they could have pumped me with lead, apparently the fire exit was a no-go and they were just trapped, only thing I asked them for is just confirmation if there's any sewing supplies left inside-- which luckily was a yes.";
+			say "     'Let's see... the commune wanted me to get some sewing kits, since I'm the one who's mostly out and about, I usually know where to get some things. Heading off to the High Rises, I was about to check out one shop I've seen when I passed by only to see a bunch of foot soldiers scramble out of there. Luckily apparently at least some of the troops know that some blue skinned figure sometimes helps them out because they could have pumped me with lead, apparently the fire exit was a no-go and they were just trapped, only thing I asked them for is just confirmation if there's any sewing supplies left inside-- which luckily was a yes.'";
 
 to say GivingTalk3:
-	say "     'Oh Knott? He's a good guy but well, he's kinda still dealing with the infection impulses as well as the fact that he is scared to show himself to the survivor group he was apart of,' Giving scratches the back of his head 'Oh tell you what, I'm in trouble due to transforming him without asking Daddy, so maybe you could grab his old things and bring it to him?' You ask him what could he gather, 'Oh I'm not sure, you gotta ask him yourself, I didn't want to pry so I know the bare minimum.'";
+	say "     'Oh, Knott? He's a good guy but well, he's kinda still dealing with the infection impulses as well as the fact that he is scared to show himself to the survivor group he was a part of.' Giving scratches the back of his head. 'Oh, tell you what, I'm in trouble due to transforming him without asking Daddy, so maybe you could grab his old things and bring them to him?' You ask him what could you gather. 'Oh, I'm not sure, you gotta ask him yourself. I didn't want to pry so I know the bare minimum.'";
+	if Elusive Book is inactive and DemonList is not banned and MaleList is not banned and FurryList is not banned:
+		now Elusive Book is active;
+
 to say GivingTalk4:
 	say "     So what was the sea scouts like? 'Hmm, well I guess it was mostly interesting helping a lot of kiddos get jobs and such, most of them are the type of new legs who are worried about how scary the sea might be, but being alone with a guy like me calms them down well enough,' Giving says, scratching the back of his head. 'I would never let anything happen to them, it doesn't matter what happens, I make sure everyone in my crew gets home. But, I'm saying this like it's the southern sea, in reality at best it's just showing scuba, C.P.R, how boats work, just what you would imagine sea scouts would do. I would love to set out on the water again, but a lot of people here rather stay cooped up in the community camp, which granted, it's safer than all that's happening right now, but I've fought a few infected myself, they're not to hard if you know what your doing...well the truly feral ones anyway.'  You ask him what he wants to do afterwards when all fo this was over, which he takes a moment to ponder, squishing his pecs between his biceps, 'Well... I reckon I'll try to get my job back, or become a sea time mariner. I doubt I'll be able to work around kids looking like this so at best just find something in heavy labor. These muscles feel the best when they're flexin['] anyway!'";
 	WaitLineBreak;
@@ -149,67 +174,85 @@ to say GivingTalk4:
 	WaitLineBreak;
 	say "     Giving pants, fanning his face as tainted sweat down his beefy chest traces the chiseled curves of statuesque abs like shimmering motes of aquamarine. Following their trail, your eyes slowly drift to fetching hybrid's plush cunt as they thoughtlessly lean into your stare, stammering. 'Mmm... I think I gotta go for a sec, but I'll be back!' as he runs off into the camp, with his tail wagging behind him like a needy husky bitch. Shrugging, you have a feeling he's going to be paying Sangre a visit.";
 
+to say GivingTalk5:
+	say "     Asking him, Giving scratches the back of his head. 'They go to Daycare and learn a little about what is expected of them in this commune, and then they go out into the world usually if they're Fathnachs. We have this drive to help out, so most fall into some role around here eventually.' You ask him if he knows where any of his kids are. 'I... don't really know; a lot here just assume care for any kid that needs it, I know some of them are around here but I don't really know where they are, I just know they're being taken care of. That sounds a bit callous, doesn't it?' He scratches the back of his head again as he looks to the ground, almost ashamed of having to tame his new lusts and possibly bringing grief to someone he doesn't know. You have to assure him that likely if they're his kids, they will do just fine. 'Thanks, let's hope our kids are doing good in this world.'";
+
 Section 2 - Sex
 
-the fuckscene of GivingFirbolg is "[sexwithGiving]".
-
 to say sexwithGiving:
-	if Player is Male:
-		say "[GivingSexMenu]";
+	if Player is not male:
+		say "     'Uuuuh, how do I put this? I prefer more... endowed people? And you don't have anything I would want, pal.' Giving points to your crotch, noting your lack of male genitalia. 'I know you don't have anything to offer me, but I just wanted to say that I think you're a really nice person regardless to try to help me with my heat... or at least that's what I hope you meant.'";
+	else if lastfuck of GivingFirbolg - turns < 3:
+		say "     'Hooooh, you're a eager beaver?' Giving rubs at his still drooling clit behind his rubber overalls. 'I might go feral if I don't restrain myself, but come back when I'm more closed, [']cause I still want a piece of what you have... i-if your offering it of course.' Giving has to pull himself back... you're playing with fire if you have sex again so soon- give it time.";
 	else:
-		say "Insert line about it being male exclusive.";
-
-to say GivingSexMenu:
-	LineBreak;
-	now sextablerun is 0;
-	blank out the whole of table of fucking options;
-	[]
-	if Player is Male: [Minor note: sometimes herms can see male scenes, if you want to change the to: if Cock count of Player >= 1 and Cunt Count of Player is 0 that should fix the issue if it pops up.]
-		choose a blank row in table of fucking options;
-		now title entry is "Firbolg Breeding";
-		now sortorder entry is 1;
-		now description entry is "Firbolg Breeding Description"; [<= might wanna tweak this]
-	[]
-	sort the table of fucking options in sortorder order;
-	repeat with y running from 1 to number of filled rows in table of fucking options:
-		choose row y from the table of fucking options;
-		say "[link][y] - [title entry][as][y][end link][line break]";
-	say "[link]0 - Nevermind[as]0[end link][line break]";
-	while sextablerun is 0:
-		say "Pick the corresponding number> [run paragraph on]";
-		get a number;
-		if calcnumber > 0 and calcnumber <= the number of filled rows in table of fucking options:
-			now current menu selection is calcnumber;
-			choose row calcnumber in table of fucking options;
-			say "[title entry]: [description entry]?";
-			if Player consents:
-				let nam be title entry;
+		now sextablerun is 0;
+		blank out the whole of table of fucking options;
+		[]
+		if Player is male: [Minor note: sometimes herms can see male scenes, if you want to change the to: if Cock count of Player >= 1 and Cunt Count of Player is 0 that should fix the issue if it pops up.]
+			choose a blank row in table of fucking options;
+			now title entry is "Firbolg Breeding";
+			now sortorder entry is 1;
+			now description entry is "Help out Giving's 'urges'";
+		[]
+		sort the table of fucking options in sortorder order;
+		repeat with y running from 1 to number of filled rows in table of fucking options:
+			choose row y from the table of fucking options;
+			say "[link][y] - [title entry][as][y][end link][line break]";
+		say "[link]0 - Nevermind[as]0[end link][line break]";
+		while sextablerun is 0:
+			say "Pick the corresponding number> [run paragraph on]";
+			get a number;
+			if calcnumber > 0 and calcnumber <= the number of filled rows in table of fucking options:
+				now current menu selection is calcnumber;
+				choose row calcnumber in table of fucking options;
+				say "[title entry]: [description entry]?";
+				if Player consents:
+					LineBreak;
+					now sextablerun is 1;
+					if title entry is "Firbolg Breeding":
+						say "[GivingSex1]";
+			else if calcnumber is 0:
+				LineBreak;
 				now sextablerun is 1;
-				if (nam is "Firbolg Breeding"):
-					say "[GivingSex1]";
-				wait for any key;
-		else if calcnumber is 0:
-			now sextablerun is 1;
-			say "     You step back from the firbolg, shaking your head slightly as he gives a questioning look.";
-			wait for any key;
-		else:
-			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
-	clear the screen and hyperlink list;
+				say "     You step back from the firbolg, shaking your head slightly as he gives a questioning look.";
+			else:
+				say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options], or 0 to exit.";
+		wait for any key;
+		clear the screen and hyperlink list;
 
 to say GivingSex1: [Firbolg Breeding] [Requires Cock, need something to stop players from fucking them without cock, Firbolg pregancy and infection coming soon]
 	say "     You begin to push yourself into Giving's giant body, rubbing your [CockName of Player] penis into his thigh, telling him that you've noticed how pent up he is all the time. The bovine looks in shock at your sudden depravity. 'Uh, well...' With a fearful snort, he grabs onto his crotch in anticipation. Remembering how hard Knott fucked him, you know that cunt of his must be so hard to please, let alone when he's out all the time far from the cock that helps him satiate the nanites' impulse. 'If I have to admit...' With another long pause, he clicks at his straps letting that perfect fertile mancunt out to the world, 'Watching all these people fucking like animals, really gets your brain wondering how good it really is.' His fat clit-cock throbbed, practically drooling for what it already knew was coming.";
+	wait for any key;
+	project Figure of GivingFirbolg_pussy_icon;
 	say "     Both of you retreat to a nearby forest clearing, the blue-skinned hunk leaning onto a tree with his legs spread out, 'Daddy doesn't like it when we fuck out of the commune, so just keep this between you and me' disrobing yourself, you crawl on fours to push your head between his gracious pillows, frotting your [cock size desc of player] on their flower canal. His chest heaves deeply, 'Fuck... it's just so good pushing them out though... watching my belly just swell with my little brothers['] seed, and now I'm letting an outsider knock me up.' Both of you share an intense kiss as you place your hand behind his, slurping his thick tongue down your throat, but it wasn't because you wanted to kiss him, it was to make sure he didn't let the whole forest hear you insert your [CockName of Player] cock deep into his tight walls. Inch by inch, you watch his eyes shoot up into the sky, your lubed cock getting yet more from his flowery clit-cock spraying slimy femcum on you, Giving's pleasure more than obvious, to the point you have to hold him back from smashing his cunt upwards into your groin. With a surprise, you fully hilt yourself and see him looking down needily for more.";
 	WaitLineBreak;
 	say "     With mouth-sharing breaths, the passionate fuck starts, the heavy smell of brown sugar emanates, the Firbolg sweating a storm just with a few strokes. His tongue is limp in your mouth as all thoughts beyond pleasing his needy pussy vanish, pulling away from his tongue nets you a look at his stuffed pecs rocking with your heavy thrusts, pushing your aroused cock to grow even harder deep within his hole. To his credit, your partner tries his best to keep his moans and whimpers quiet, but rotating your hips in any direction makes him scream silently. You think that was the point when you couldn't care less for the infection as your [bodydesc of Player] explore his bubbly muscles, watching each shake and jiggle like jelly in ecstasy.";
 	say "     'F-fuck, o-oh fuck... fuuuuuuck' your groin is covered in Giving's love, he hasn't stopped orgasming since you first pushed in, no wonder these brutes are strong, if they were weak they would have been getting bred everyday by anyone from the city who knows they're just big guys with needy pussies. 'Please don't stop... Your Big Bro is so haard.. Let me take care of your fat cock~' He sighs lustfully, wrapping his arms around you as he nestles your head near his nipple. Some of the sweat around it gets in your mouth, making you climax immediately deep within his empty womb.";
 	WaitLineBreak;
-	say "     But... your balls aren't empty. Licking around the areola makes you far too energized to think about anything but how good Giving's heat tugs you in. The sweet firbolg begins matching your thrusts- pushing forward to let your cock paint every angle of his insides white. 'Oooooh you're a big [if Player is Male]guy [else if Player is Female]gal [else]one [end if]aren't you~?' You nod in approval, 'Yeah... yeah your definitely... Big... I won't tell if you won't... our little secret~...' Your second climax comes as a shock, your own moans muffled when he smooshes you to his pec again, 'Shhhh... can't let them know you're digging my guts out to stuff me with little ones' all his goading makes you fully ready to bloat him good.";
+	say "     But... your balls aren't empty. Licking around the areola makes you far too energized to think about anything but how good Giving's heat tugs you in. The sweet firbolg begins matching your thrusts- pushing forward to let your cock paint every angle of his insides white. 'Oooooh you're a big [if Player is Male]guy[else if Player is Female]gal[else]one[end if], aren't you~?' You nod in approval, 'Yeah... yeah your definitely... Big... I won't tell if you won't... our little secret~...' Your second climax comes as a shock, your own moans muffled when he smooshes you to his pec again, 'Shhhh... can't let them know you're digging my guts out to stuff me with little ones' all his goading makes you fully ready to bloat him good.";
 	say "     Every time you feel yourself get close, you latch onto the source of his creamy milk, sucking on the engorged pec to muffle your jittering. Giving sometimes looks down at you, grinning ear to ear before you knock him back into another intense climax that makes his entire body shiver. You lost count at some point, forgetting completely what your mission is. This situation makes you think about how after this, Giving is gonna have to walk around and explain who did this, maybe the other Firbolgs do the same to some ferals they like? A bunch of muscular behemoths who jam themselves onto the cock of anything with a pulse, making him swell with such taboo pretenses finally snaps you out enough to look at your handiwork.";
 	WaitLineBreak;
 	say "     His entire belly was distended with cum, your legs and the cold snow between you covered in slime. He tries to mumble a few words, but only manages to mouth them for a while. 'Such a naughty little one~... Big Brother's gonna have to seek you out for a womb filling, all this cum of yours feels sooooooo dang good.";
 	say "     You lay into his warm body, arms wrapped again around him as both of you catch your breath. With a heavy heart, you eventually leave his embrace. Knowing for sure that his womb will catch and make you new sires.";
 	NPCSexAftermath GivingFirbolg receives "PussyFuck" from Player;
+	if Lust of GivingFirbolg is 0 and Player is not sterile:
+		say "     [bold type]There's a sinking feeling inside of you, something about some of your seed implanting itself into the cowman, your heart fluttering to soon see him grow.[roman type][line break]";
+		now Lust of GivingFirbolg is 1;
 
 Section 3 - Events
+
+Section 4 - Pregnancy
+
+an everyturn rule:
+	if Lust of GivingFirbolg > 0:
+		increase Lust of GivingFirbolg by 1;
+		if Lust of GivingFirbolg >= 18 and skipturnblocker is 0:
+			if Player is in Encampment Tree:
+				project Figure of GivingFirbolg_pregnancy_icon;
+				say "[line break]     You see Giving suddenly go to lean on the tree, his navy-blue face flushed with a deep pink as he pants heavily, sturdy body trembling with each breath. His hands on his distended belly, he starts leaking from his vulva, the skin stretched tight over it. He looks up at you with wide eyes, a mixture of fear and excitement in his gaze. 'Hhhh-oh yeah, the boy c-cant wait any longer...' he stammers, his voice barely above a whisper. Some other Fathnachs come over, leaping to watch a birth in action, quickly getting Giving in a proper position to push. With his legs being held up, hands held tightly, and... his pecs being milked. Giving lies with his back to the tree as the big Firbolg grunts. One of the big cowmen rubs his vulva vigorously suggestions: vigorously, making him cum over and over again as each vibration of his inner walls pushes the baby further out. You're left to watch the erotic scene of the nicest man you know get lost in his lust- tongue out of his mouth as his body gets covered in his creamy milk. By the time the baby is out, Giving lies splayed out on the grass, the Fathnachs quickly holding the small man to his father's breast for a few gulps of milk. In a few minutes, he will soon be able to walk and talk on his own, but it seems they have this routine down to the letter. Thus, Giving gives birth to another Firbolg who will join the many cowmen of the commune.";
+			else:
+				say "[line break]As your waiting time with Giving comes to an end, you feel a strong urge to check up on him- you know that he's been acting a little different lately, but you can't quite put your finger on it. You decide to go check on him and see if he's doing alright.";
+			increase XP of GivingFirbolg by 1;
+			now Lust of GivingFirbolg is 0;
 
 Giving ends here.

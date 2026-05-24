@@ -3279,6 +3279,15 @@ to say automaton cum use:
 
 Table of Game Objects (continued)
 name	desc	weight	object
+"beag cum"	"A plastic bottle containing some slimy white fluid. It bears the label 'Beag Cum'."	0	beag cum
+
+beag cum is a infectious cum grab object.
+Strain of beag cum is "Beag".
+Usedesc of beag cum is "[cumjar use]".
+Scent of beag cum is "[cumjar smell]".
+
+Table of Game Objects (continued)
+name	desc	weight	object
 "Champion's cum"	"A plastic water bottle containing a moderate amount of milky white fluid. Almost could be mistaken for some sort of buttermilk, if someone hadn't written 'Champion's Cum' across the label on the bottle. You [italic type]could[roman type] drink it to quench your thirst, or you maybe just do it for fun. Who knows what else it might do to you though..."	1	Champion's cum
 
 Champion's cum is a infectious cum grab object.
