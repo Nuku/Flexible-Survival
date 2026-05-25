@@ -18,11 +18,11 @@ losttoalphahusky is a number that varies.
 MtFHuskyAlphaActive is a truth state that varies.[@Tag:NotSaved]
 
 to say Alpha Husky Desc:
-	if Player is puremale and Resolution of MtFHuskyAlpha < 99 and Player is not MalePreferred and a random chance of 4 in 10 succeeds:
+	if Resolution of MtFHuskyAlpha < 99 and Player is not MalePreferred and a random chance of 4 in 10 succeeds:
 		now MtFHuskyAlphaActive is true;
 		add "Husky Alpha" to infections of VoreExclusion, if absent;
 		add "Husky Alpha" to infections of HardVoreExclusion, if absent;
-		if Resolution of MtFHuskyAlpha is 0: [fully male, not herm, 1st time]
+		if Resolution of MtFHuskyAlpha is 0 or Player is puremale: [fully male, not herm, 1st time]
 			say "[HuskyAlphaMtFdesc1]";
 		else: [fully male, not herm, subsequent times]
 			say "[HuskyAlphaMtFdesc2]";
@@ -183,6 +183,7 @@ to say Alpha Husky attack:
 			say "     You notice that one of your pills seems to be missing. A fertile pill. What would the alpha want with one of those? The mystery has no immediate answers, and you proceed back to safer grounds.";
 			ItemLoss fertile pill by 1;
 			now Husky Gathering is active;
+	setmonster "Husky Alpha";
 
 Table of GameEventIDs (continued)
 Object	Name
