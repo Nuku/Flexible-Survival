@@ -83,10 +83,6 @@ Figure of FrPony_icon is the file "fs_afriendshippony.jpg".
 Figure of Furling_clothed_icon is the file "Furling_clothed.jpg".
 Figure of Furling_naked_icon is the file "Furling_naked.jpg".
 Figure of GooGirl_icon is the file "GooGirl.jpg".
-Figure of GivingFirbolg_clothed_icon is the file "GivingFirbolg_clothed.jpg".
-Figure of GivingFirbolg_naked_cock_icon is the file "GivingFirbolg_naked_cock.jpg".
-Figure of GivingFirbolg_pregnancy_icon is the file "GivingFirbolg_pregnancy.jpg".
-Figure of GivingFirbolg_pussy_icon is the file "GivingFirbolg_pussy.jpg".
 Figure of BlueGryphon_icon is the file "BlueGryphon.jpg".
 Figure of BlueGryphon_face_icon is the file "BlueGryphon_face.jpg".
 Figure of BlueGryphon_hard_icon is the file "Blue Gryphon hard.jpg".
@@ -509,6 +505,10 @@ Figure of Garrett_icon is the file "garrett_ig.jpg".
 Figure of Garth_face_icon is the file "Garth_face.jpg".
 Figure of Gillian_icon is the file "Gillian_ig.jpg".
 Figure of Gina_face_icon is the file "Gina_face.jpg".
+Figure of GivingFirbolg_clothed_icon is the file "GivingFirbolg_clothed.jpg".
+Figure of GivingFirbolg_naked_cock_icon is the file "GivingFirbolg_naked_cock.jpg".
+Figure of GivingFirbolg_pregnancy_icon is the file "GivingFirbolg_pregnancy.jpg".
+Figure of GivingFirbolg_pussy_icon is the file "GivingFirbolg_pussy.jpg".
 Figure of Gobby_icon is the file "gobby_ig.jpg".
 Figure of Grant_face_icon is the file "Grant_face.jpg".
 Figure of Grant_icon is the file "grant_ig.jpg".
@@ -1739,10 +1739,10 @@ title	icon(figure name)	artist	backgroundcolor	formatrule
 "Gina_face"	Figure of Gina_face_icon	"Vashaa"	g-black	"normal"
 "Giraffe Herm hard"	Figure of GiraffeHerm_hard_icon	"Vashaa"	g-white	"normal"
 "Giraffe Herm soft"	Figure of GiraffeHerm_soft_icon	"Vashaa"	g-white	"normal"
-"Giving clothed"	Figure of GivingFirbolg_clothed_icon	"kd_gai"	g-dark-gray	"normal"
-"Giving naked cock"	Figure of GivingFirbolg_naked_cock_icon	"kd_gai"	g-dark-gray	"normal"
-"Giving pregnancy"	Figure of GivingFirbolg_pregnancy_icon	"kd_gai"	g-dark-gray	"normal"
-"Giving pussy"	Figure of GivingFirbolg_pussy_icon	"kd_gai"	g-dark-gray	"normal"
+"Giving clothed"	Figure of GivingFirbolg_clothed_icon	"KD_gai"	g-light-gray	"normal"
+"Giving naked cock"	Figure of GivingFirbolg_naked_cock_icon	"KD_gai"	g-light-gray	"normal"
+"Giving pregnancy"	Figure of GivingFirbolg_pregnancy_icon	"KD_gai"	g-light-gray	"normal"
+"Giving pussy"	Figure of GivingFirbolg_pussy_icon	"KD_gai"	g-light-gray	"normal"
 "Gobby"	Figure of Gobby_icon	"lionsilverwolf"	g-white	"normal"
 "Gorilla_clothed"	Figure of Gorilla_clothed_icon	"Vashaa"	g-white	"normal"
 "Gorilla_hard"	Figure of Gorilla_hard_icon	"Vashaa"	g-white	"normal"

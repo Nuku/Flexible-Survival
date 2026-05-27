@@ -84,6 +84,7 @@ to say AssFuck_Fathnach:
 	else:
 		say "     You make him turn his huge rear around, presenting you with a giant rim of an anus. With a firm slap, his tail flicking around in excitement, you watch him get on his hands and knees to accept your gift. You give his thick anus a deliberately slow licking, your mouth now becoming heavy with the aftertaste of coffee and whiskey mixed together, before you carefully thrust your [Cock of Player] cock inside; the bull-man wildly yelps and throws his body back into yours. 'Yes! Cock! Finally!' Drool splatters onto the floor with Firbolg precum. Despite his Herculean strength, this giant-kin's ability to bounce back from an intensive battle both turns you on as well as disturbs you. With every plap of his wet cheeks, the cowman looks back, his eyes alight with subby glee. With a firm grip on his bouncy body, you lose yourself to the feeling- the Fathnach cumming seven times on the floor as you feel the sensations of excitement begin to overwhelm your head; you don't come down until your balls burst every drop they have stored inside. Your cow partner sighs from his hole getting the seed it was hungry for. The Firbolg lies there with his ass still up in the air, pecs holding him up as he waves his ass around in satisfaction. 'D-dont be a stranger... Come back~' Shrugging, you decide it's best to leave him here before he regains his breath to pin you down.";
 	CreatureSexAftermath "Fathnach" receives "AssFuck" from "Player";
+	infect "Fathnach";
 
 Section 2 - Creature Insertion
 
