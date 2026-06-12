@@ -67,7 +67,7 @@ When Play begins:
 	now sex entry is "Both"; [ Defines which sex the infection will try and make you. current options are 'Male' 'Female' 'Both']
 	now HP entry is 1; [ How many HP has the monster got? She's not too hard- she doesn't want to win so much as not lose]
 	now lev entry is 1; [ Level of the Monster, you get this much HP if you win, or this much HP halved if you loose ]
-	now wdam entry is 1; [Amount of Damage monster Does when attacking. Claws and massive strength]
+	now wdam entry is 30; [Amount of Damage monster Does when attacking. Claws and massive strength]
 	now area entry is "Nowhere"; [ Current options are 'Outside' and 'Mall'. Case sensitive]
 	now Cock Count entry is 1; [ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
 	now Cock Length entry is 24; [ Length infection will make cock grow to if cocks]

@@ -8571,6 +8571,9 @@ to say SCUse:
 	add "Toggle Touched by Madness?" to Codex_section_Choices;
 	add "Switch between dom, sub, and vanilla?" to Codex_section_Choices;
 	add "Ipotane?" to Codex_section_Choices;
+	add "Snuggle Fox?" to Codex_section_Choices;
+	if HP of Mistress Snuggle is 8 or HP of Mistress Snuggle >= 98:
+		add "Fox mods?" to Codex_section_Choices;
 	if "Touched by Madness" is listed in feats of Player:
 		add "Cyn?" to Codex_section_Choices;
 	let Codex_section_Choice be what the player chooses from Codex_section_Choices;
@@ -8590,10 +8593,10 @@ to say SCUse:
 			say "     A follow up of sorts to Only the Lonely, though completing or viewing it is not required, F-list includes F/H, F/F, F/M, preg, taurs, dragons, lactation, involved TF's, TFTG, naga, and light MtF content. Dragon Raider Galaxite is started once the player reaches level fifteen by hunting for the event Holy Moly in the sewers. Assuming the Player saves Galaxite from her tentacular fate, she can be found again via an event in the beach called: Beach reunion where she'll offer the Player a chance to join her on heist of a stricken supply ship, but only after you get her some equiptment first. Before the Player sets out there give the option to potentially fuck her, or aggressively tell her they aren't interested in her. Expressing disinterest will censor her description and prevent the player character from lusting after her, this choice is permanent though. However, if the Player is pregnant, has a pussy, and the dominant feat and chooses to fuck them, they will be turned into unique infection called the Dragon Breeder, which will be covered in the Dragon Breeder section of this guide.";
 			say "     Upon accepting her quest, the Player will be told to hunt for the event Ruined Trawler in the beach area, be warned, the boss fight of the area is quite difficult as the enemies deal unblockable, un-mitigate able damage between rounds, and even high level character will find the fight tough without healing items. Although characters with strength greater than twenty can bypass the fight, this is not recommended as defeating the guards of that place is a great way to win favor with Galaxite's children. Once dealt with, the Player will be rewarded with several gill fruits and unlock the next event, Break Water Heist found in the beach area. Here, the Player can learn a bit more about Galaxite and potentially Drake if they are a pureblooded Margay taur. While pureblooded knights with the touched by madness feat can get their own unique interaction with Galaxite's children.";
 			WaitLineBreak;
-			say "     Once you arrive at the supply the Player will have a second chance to impress Galaxite's brood and perhaps even take one step closer to bed her eldest feral sea dragon son, assuming they have a cunt. As with the prior event, the faux boss fight is rather hard due to the enemy's chip damage, though the encounter can be bypassed with high, Int, Perception, or by sacrificing an eclectic prod found at the zoo. Afterwards, the Player will encounter one final road block in their mighty quest for epic loot that can be resolved with intelligence, charisma, or by letting Galaxite's kids take care of it. Upon completion of this event, the final leg of act one and the current end of her content will open up as Loot Boxes will become active. Discoverable by once more hunting in the beach area, Loot Boxes offers some unique sex scenes for male and intersex Dragontaurs, Margay Taurs, Tiger Taurs, Pather Taurs, and other non equine taurs. In addition, late stage female Margay Taurs and Dragontaurs also have their own special lewds available. Alongside a plethora of gear, items, and a rare chance to become human again, for a price...";
+			say "     Once you arrive at the supply the Player will have a second chance to impress Galaxite's brood and perhaps even take one step closer to bed her eldest feral sea dragon son, assuming they have a cunt. As with the prior event, the faux boss fight is rather hard due to the enemy's chip damage, though the encounter can be bypassed with high, Int, Perception, or by sacrificing an eclectic prod found at the zoo. Afterwards, the Player will encounter one final road block in their mighty quest for epic loot that can be resolved with intelligence, Charisma, or by letting Galaxite's kids take care of it. Upon completion of this event, the final leg of act one and the current end of her content will open up as Loot Boxes will become active. Discoverable by once more hunting in the beach area, Loot Boxes offers some unique sex scenes for male and intersex Dragontaurs, Margay Taurs, Tiger Taurs, Pather Taurs, and other non equine taurs. In addition, late stage female Margay Taurs and Dragontaurs also have their own special lewds available. Alongside a plethora of gear, items, and a rare chance to become human again, for a price...";
 		-- "Dragon Breeder?":
 			say "     A powerful evolving form gained by fucking Galaxite during the beach reunion event while having a pussy, being pregnant, and having the dominant feat. This form has its own special parallel arc from Dragon Raider Galaxite that is advanced via walk-in events which only fire while the Player is a pureblooded Dragon Breeder with pussy. Note: due to the some eldrtich interactions with the preg code, if the player was been knocked any Ebonflame creature, the Snake out in the dry plains, Black Wasp parasite, or any womb hijacking pregancy the TF scene will not fire. In addition, Players with Strong Psyche or Weak Psyche will have special options opened to them. Much like the main story for Dragon Raider Galaxite, the first event Final Event which is started by walking into the wild Fringes section of the beach. Akin to its sister event Ruined Trawler, the Player can either fight or cow the guardians of this place with high strength, yet unlike the other story line its possible to play with the Fruit bats, and later recruit them in act three. While the follow up event Point Nemo can be started upon entering the end of the beach, here Players can choose to breed and recruit several shark herms to become priestess's of their own personal cult.";
-			say "     Doing so also unlocks one of two new mutations based on whether or not the Player has both the Vore Pred and UB Pred feats. Either way another tough, but skippable fight awaits assuming the Player is willing to submit to a growing presence in the back of their mind, or bluff their way out of it with high charisma or perception. Afterwards, the Player will be presented with two choices, continue serving their patron or spurn them and devolve back into a puny human. Should they continue to serve that last section of act one, Just Rewards will activate and can be started by visiting the rocky cliffs area in the beach zone. Here knowledge of their patron can be gained, powerful loot obtained, secrets of their cult uncovered, and a chance to seize godly power for themselves unveiled.";
+			say "     Doing so also unlocks one of two new mutations based on whether or not the Player has both the Vore Pred and UB Pred feats. Either way another tough, but skippable fight awaits assuming the Player is willing to submit to a growing presence in the back of their mind, or bluff their way out of it with high Charisma or perception. Afterwards, the Player will be presented with two choices, continue serving their patron or spurn them and devolve back into a puny human. Should they continue to serve that last section of act one, Just Rewards will activate and can be started by visiting the rocky cliffs area in the beach zone. Here knowledge of their patron can be gained, powerful loot obtained, secrets of their cult uncovered, and a chance to seize godly power for themselves unveiled.";
 		-- "Breeder Cult?":
 			say "     Available solely to Dragon Breeders who have evolved their tail and received their material rewards from Tiamat, the cult along with the Player's temple can be found on Pirate island after a brief visit from the Player's draconic offspring at the Abbey. Note, Pirate island is only discoverable after completing the event Noteinbottle (sic) at the Beach Plaza, speaking to Rod Mallrat in the Smithhaven mall, searching for the event Findingboat (sic) at the beach, and walking between the Quiet Sandbar and Pirate Island tiles. Currently, only the initial sex scenes have and some flavor chat have been added, however repeatedly breeding your followers and Priestess can make it easy to upgrade your temple as new updates come online. Further, there will never be any content available to non-Dragon Breeders or DB's without a pussy. Should you lose your Dragon Breeder form for any reason, simply interacting with the Dragon Pearl will restore your infection.";
 		-- "Hermacore?":
@@ -8714,6 +8717,252 @@ to say SCUse:
 					now Perception of Best Pony is 0;
 				-- "Opps missclicked?":
 					say "     Understandable, have a nice day.";
+		-- "Snuggle Fox?":
+			say "     Found through the fur finder walk-in event on the overgrown street tile of the High Rise district, this moddable vulpine infection is available to females and herm who do not have the sterile trait. Featuring a rather straightforward event chain involving finding pieces of an infectious fur suit that will tempt with you images of vulpine grandeur while twisting you into either a milfy vixen, or amazonian fox woman. Once the body suit is obtained, simply wearing it will cause your character to vivid day dreams followed by sudden TF's. However, what form your TF takes varies based on whether or not your character was pregnant at the time of their changes. If they are, your character will become more cuddly and motherly. Otherwise, they will gain a more athletic build. As time progresses, you'll be given the option to seek out the remaining parts in the warehouse districts, then on Northwest 7th street. Once complete and worn, you'll have the choice to let the suit change you fully, or reject its gifts. Opting to reject the suit will end the story, but leave you with TF inducing fur suit pieces. Meanwhile, merging will earn you a special set of bondage gear that can reinfect you on equip.";
+			say "     Note: only people who have cultivated the milf form of the Snuggle fox, merged with their suit and who have the UB pred + vore predator feats will be able to advance the story any further past the merger. Else, the story ends there, though some minor tweaks to your form of choice can still be made. Kink list: F/H, F/M, F/F, H/H, pregnancy, mutual preg, preg play, lactation, involved TF's, muscle furs, light and optional weight gain, option oral vore, optional UB, optional breast vore, optional cock absorption with the player as the absorber, pet play, sub, dom, paw worship, belly worship, breast worship, TFTG, multi-boob, Human X Anthro, BBW, USSBBW, hyper, and knotting.";
+			WaitLineBreak;
+			say "     TF mod list, read at your own risk.";
+			LineBreak;
+			say "     Wings: large white angelic, massive scalie dragon wings*, tentacles*, tiny bat wings*. Horns: swept back draconic, small demonic, branching deer, Curled goat. Fur colors: reddish-orange, lustrous golden, velvety black, smoky grey, striking silver, sandy yellow, and sapphire blue. Eye color: magenta, emerald green, azure blue, ruby red, phosphorescent pink, luminous gold, and deep brown. Fur markings: Nordic runes, blue lightening, green vines and thorns, and chaotic red scrawl. Ear alts: Fennec ears, large fox ears, and medium fox ears. Tail: can be increased to nine or dropped back down to one. Mods marked with an * are available only to milfy pred Snuggle foxes.";
+		-- "Fox mods?":
+			say "     What part of your infection would you like to modify? Note: none of these have any gameplay or story effects and purely cosmetic outside of niche scenes.";
+			LineBreak;
+			let fox_stuff_Choices be a list of text;
+			add "Number of Tails?" to fox_stuff_Choices;
+			add "Eye shade?" to fox_stuff_Choices;
+			add "Fur color?" to fox_stuff_Choices;
+			add "Pelt markings?" to fox_stuff_Choices;
+			add "Horns?" to fox_stuff_Choices;
+			add "Wings?" to fox_stuff_Choices;
+			add "Ears?" to fox_stuff_Choices;
+			let fox_stuff_Choice be what the player chooses from fox_stuff_Choices;
+			if fox_stuff_Choice is:
+				-- "Number of Tails?":
+					say "How many tails would you like?";
+					LineBreak;
+					let tail_Choices be a list of text;
+					add "One?" to tail_Choices;
+					add "Two?" to tail_Choices;
+					add "Three?" to tail_Choices;
+					add "Four?" to tail_Choices;
+					add "Five?" to tail_Choices;
+					add "Six?" to tail_Choices;
+					add "Seven?" to tail_Choices;
+					add "Eight?" to tail_Choices;
+					add "Nine?" to tail_Choices;
+					add "Nevermind." to tail_Choices;
+					let tail_Choice be what the player chooses from tail_Choices;
+					if tail_Choice is:
+						-- "One?":
+							say "     Rodger-Rodger.";
+							now Charisma of Mistress Snuggle is 0;
+						-- "Two?":
+							say "     Proccessing... Proccessing... Proccessing... Twin tails actived: error tail helicopter function could not load please report this error to your local chaos emerald.";
+							now Charisma of Mistress Snuggle is 1;
+						-- "Three?":
+							say "     Fluffing your tails now.";
+							now Charisma of Mistress Snuggle is 2;
+						-- "Four?":
+							say "     Deploying limbs.";
+							now Charisma of Mistress Snuggle is 3;
+						-- "Five?":
+							say "     Because four tails was too low, and six tails was too many here's five tails. Awoo!";
+							now Charisma of Mistress Snuggle is 4;
+						-- "Six?":
+							say "     Generating limbs.";
+							now Charisma of Mistress Snuggle is 5;
+						-- "Seven?":
+							say "     Setting luck to over 9999... warning integer overflow, function can not complete.";
+							now Charisma of Mistress Snuggle is 6;
+						-- "Eight?":
+							say "     You are now one step from enlightenment.";
+							now Charisma of Mistress Snuggle is 7;
+						-- "Nine?":
+							say "     Inari mode online!";
+							now Charisma of Mistress Snuggle is 8;
+						-- "Nevermind.":
+							say "     Ok.";
+				-- "Eye shade?":
+					say "     What color eyes do you want Miss Fox?";
+					LineBreak;
+					let Eye_Choices be a list of text;
+					add "Magenta?" to Eye_Choices;
+					add "Emerald green?" to Eye_Choices;
+					add "Azure blue?" to Eye_Choices;
+					add "Ruby red?" to Eye_Choices;
+					add "Phosphorescent pink?" to Eye_Choices;
+					add "Luminous gold?" to Eye_Choices;
+					add "Brown?" to Eye_Choices;
+					add "On sceond thought no." to Eye_Choices;
+					let Eye_Choice be what the player chooses from Eye_Choices;
+					if Eye_Choice is:
+						-- "Magenta?":
+							say "     Hue restored.";
+							now Intelligence of Mistress Snuggle is 0;
+						-- "Emerald green?":
+							say "     Dye applied.";
+							now Intelligence of Mistress Snuggle is 1;
+						-- "Azure blue?":
+							say "     Remodulating your eyes.";
+							now Intelligence of Mistress Snuggle is 2;
+						-- "Ruby red":
+							say "     Skrati will like these.";
+							now Intelligence of Mistress Snuggle is 3;
+						-- "Phosphorescent pink?":
+							say "     Pretty guardian mode activated!";
+							now Intelligence of Mistress Snuggle is 4;
+						-- "Luminous gold?":
+							say "    Al approves.";
+							now Intelligence of Mistress Snuggle is 5;
+						-- "Brown?":
+							say "     Don't worry, no one will judge you for being basic.";
+							now Intelligence of Mistress Snuggle is 6;
+						-- "On sceond thought no.":
+							say "     No worries, you're perfect just the way you are.";
+				-- "Fur color?":
+					say "     What color do you desire?";
+					let Fur_Choices be a list of text;
+					add "Reddish-orange?" to Fur_Choices;
+					add "Lustrous golden?" to Fur_Choices;
+					add "Velvty black?" to Fur_Choices;
+					add "Smokey grey?" to Fur_Choices;
+					add "Striking silver?" to Fur_Choices;
+					add "Sandy yellow?" to Fur_Choices;
+					add "Sapphire blue?" to Fur_Choices;
+					add "Actually nevermind." to Fur_Choices;
+					let Fur_Choice be what the player chooses from Fur_Choices;
+					if Fur_Choice is:
+						-- "Reddish-orange?":
+							say "     Rebooting.";
+							now humanity of Mistress Snuggle is 0;
+						-- "Lustrous golden?":
+							say "     Oh, Al will love that.";
+							now humanity of Mistress Snuggle is 1;
+						-- "Velvty black?":
+							say "     Well aren't you a sneaky fox.";
+							now humanity of Mistress Snuggle is 2;
+						-- "Smokey grey?":
+							say "     Somewhere, Cyn takes note of your actions.";
+							now humanity of Mistress Snuggle is 3;
+						-- "Striking silver?":
+							say "     That's one way to become a silver fox!";
+							now humanity of Mistress Snuggle is 4;
+						-- "Sandy yellow?":
+							say "     Ryan would be flattered.";
+							now humanityof Mistress Snuggle is 5;
+						-- "Sapphire blue?":
+							say "     Someone was a sparkle dog once.";
+							now humanity of Mistress Snuggle is 6;
+						-- "Actually nevermind.":
+							say "     Ok, dye jobs are overated.";
+				-- "Pelt markings?":
+					say "     What kind of marking would you like?";
+					let Marking_Choices be a list of text;
+					add "Remove markings?" to Marking_Choices;
+					add "Nordic runes?" to Marking_Choices;
+					add "Blue lightening?" to Marking_Choices;
+					add "Green vines with thorns?" to Marking_Choices;
+					add "Chaotic scrawl?" to Marking_Choices;
+					add "Perhaps not." to Marking_Choices;
+					let Marking_Choice be what the player chooses from Marking_Choices;
+					if Marking_Choice is:
+						-- "Remove markings?":
+							say "     Scrubbing you clean.";
+							now thirst of Mistress Snuggle is 0;
+						-- "Nordic runes?":
+							say "     Loki smiles on you.";
+							now thirst of Mistress Snuggle is 1;
+						-- "Blue lightening?":
+							say "     Wonder if people will start calling you the blue blurr?";
+							now thirst of Mistress Snuggle is 2;
+						-- "Green vines with thorns?":
+							say "     All you're missing is some roses.";
+							now thirst of Mistress Snuggle is 3;
+						-- "Chaotic scrawl?":
+							say "     Ph'nglui mglw'nafh Cthulhu R'lyeh wgah'nagl fhtagn!";
+							now thirst of Mistress Snuggle is 4;
+						-- "Perhaps not.":
+							say "     Cold feet, er paws?";
+				-- "Horns?":
+					say "     Please select your horn type.";
+					let horn_Choices be a list of text;
+					add "Remove horns?" to horn_Choices;
+					add "Dragon horns?" to horn_Choices;
+					add "Demon horns?" to horn_Choices;
+					add "Grow a rack?" to horn_Choices;
+					add "Become the one true fox goat!" to horn_Choices;
+					add "Not interested." to horn_Choices;
+					let horn_Choice be what the player chooses from horn_Choices;
+					if horn_Choice is:
+						-- "Remove horns?":
+							say "     *Sad Book Noises*";
+							now Morale of Mistress Snuggle is 0;
+						-- "Dragon horns?":
+							say "     Clearly you are person of fine taste!";
+							now Morale of Mistress Snuggle is 1;
+						-- "Demon horns?":
+							say "     Well this is one way to let people know you're horny... I'll see myself out.";
+							now Morale of Mistress Snuggle is 2;
+						-- "Grow a rack?":
+							say "     Deer fox online.";
+							now Morale of Mistress Snuggle is 3;
+						-- "Become the one true fox goat!":
+							say "     Fox goat, fox goat, does whatever a fox goat do! Can it swing on a web? No it can't cause its a fox, so look out, its fox goat.";
+							now Morale of Mistress Snuggle is 4;
+						-- "     Not interested.":
+							say "Error 404: damns not found.";
+				-- "Wings?":
+					say "     Opening wing page.";
+					let wing_Choices be a list of text;
+					add "Remove Wings?" to wing_Choices;
+					add "Angel wings?" to wing_Choices;
+					if HP of Mistress Snuggle is 8 or HP of Mistress Snuggle < 97:
+						add "Dragon Wings?" to wing_Choices;
+					if HP of Mistress Snuggle is 8 or HP of Mistress Snuggle < 97:
+						add "Bat Wings?" to wing_Choices;
+					if HP of Mistress Snuggle is 8 or HP of Mistress Snuggle < 97:
+						add "Get you some Tentacles!" to wing_Choices;
+					add "Blow a raspberry at the book." to wing_Choices;
+					let wing_Choice be what the player chooses from wing_Choices;
+					if wing_Choice is:
+						-- "Remove Wings":
+							say "     Snipping your wings.";
+							now depravity of Mistress Snuggle is 0;
+						-- "Angel wings?":
+							say "     Classic.";
+							now Depravity of Mistress Snuggle is 1;
+						-- "Dragon Wings?":
+							say "     You're a fox after my own heart.";
+							now depravity of Mistress Snuggle is 2;
+						-- "Bat Wings?":
+							say "     Perhaps they should start calling you Rouge.";
+							now depravity of Mistress Snuggle is 3;
+						-- "Get you some Tentacles!":
+							say "     You have made the correct choice...";
+							now depravity of Mistress Snuggle is 4;
+						-- "Blow a raspberry at the book.":
+							say "     The book snaps shut on your fingers. Ouch!";
+							PlayerWounded 1;
+				-- "Ears?":
+					say "     How would you like to change your ears?";
+					let ear_Choices be a list of text;
+					add "Large fox ears?" to ear_Choices;
+					add "Modest vulpine ears?" to ear_Choices;
+					add "Fennec ears?" to ear_Choices;
+					add "Maybe not?" to ear_Choices;
+					let ear_Choice be what the player chooses from ear_Choices;
+					if ear_Choice is:
+						-- "Average fox ears?":
+							say "     Resetting your ears.";
+							now Stamina of Mistress Snuggle is 0;
+						-- "Modest vulpine ears?":
+							say "     Deploying shrinking agents.";
+							now Stamina of Mistress Snuggle is 1;
+						-- "Fennec ears?":
+							say "     Embiggening your ears.";
+							now Stamina of Mistress Snuggle is 2;
+						-- "Maybe not?":
+							say "     The books seems to sigh as the page go blank.";
 		-- "Cyn?":
 			say "     Though she is not one of Sundered_Dragon's creations, this glitchy fox herm can be recruited in the Ghost Fair section of the State Fair via walk-in once the Player has reached level 20 and gained the Touched by Madness feat. On arrival to this unusual place, the Player will be assaulted by vulpine Hallucination who, if defeated and fucked several times will join the Player as a potent pet and mobile shopkeeper. Though her little shop of horror may be pricey her services are quite powerful, additionally some of her scenes and items have been Co-authored by Sundered_Dragon. However, should the Player beat her without playing with Cyn too many times, she will become permanently hostile towards them in her own eldritch way.";
 

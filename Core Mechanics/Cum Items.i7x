@@ -3731,6 +3731,22 @@ instead of sniffing skunk cum:
 
 Table of Game Objects (continued)
 name	desc	weight	object
+"Snuggle Fox cum"	"A plastic water bottle containing a moderate amount of milky white fluid. Almost could be mistaken for some sort of buttermilk or off brand creamer, if someone hadn't written 'Snuggle Fox cum' across the label on the bottle. You [italic type]could[roman type] drink it to quench your thirst, or you maybe just do it for fun. Who knows what else it might do to you though..."	1	Snuggle Fox cum
+
+Snuggle Fox cum is a grab object.
+Usedesc of Snuggle Fox cum is "[Snuggle Fox cum use]".
+Scent of Snuggle Fox cum is "[cumjar smell]".
+
+to say Snuggle Fox cum use:
+	say "     Lifting the plastic bottle to your mouth, you take a drink from it, letting the creamy cum run over your tongue and down your throat. Tastes rich and animal-like. Swishing it around in your mouth a little, you finish the bottle off, then stuff it back into your collection of 'empties'.";
+	PlayerDrink 5;
+	if Perception of Mistress Snuggle >= 1:
+		decrease gestation of child by a random number from 3 to 5;
+		if gestation of child < 1, now gestation of Child is 1;
+
+
+Table of Game Objects (continued)
+name	desc	weight	object
 "Limbo Fox Cum"	"A plastic water bottle containing a moderate amount of... Eldrich fox cum ? You [italic type]could[roman type] drink it to qu£nch y0u4 Th14sssssssss- hunger, or you maybe just do it for fun. Who knows what else it might do to you though..."	1	Limbo Fox Cum
 "Glitchy Cum"	"Microwaving it may have purified it of the nanites, but it seems this alteration has broken the Limbo touched code of the milk contained inside the bottle, if the constant blinking between black and white is anything to go by. Drink at your own risk..."	1	Glitchy Cum
 

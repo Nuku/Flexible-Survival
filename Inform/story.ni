@@ -697,6 +697,7 @@ Include Smilodon Male by Gherod.
 Include Snake by Stripes.
 Include Snow Bat by Stripes.
 Include Snow Leopard by Stripes.
+Include Snuggle Fox by Sundered Dragon.
 Include Spartan by Wahn.
 Include Sphinx by Sarokcat.
 Include Spidergirl by Guest Writers.
@@ -959,6 +960,7 @@ Include Meredith by Prometheus.
 Include Micaela by Stripes.
 Include Midnight by Luneth.
 Include Milo by CrimsonAsh.
+Include Mistress Snuggle by Sundered Dragon.
 Include Mogdraz by Gherod.
 Include Monty by Wahn.
 Include Moreau by Wahn.
