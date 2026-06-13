@@ -19,41 +19,35 @@ ZdravkoIntro	"ZdravkoIntro"
 ZdravkoIntro is a situation.
 ResolveFunction of ZdravkoIntro is "". Sarea of ZdravkoIntro is "Nowhere".
 
-instead of going outside from Milking Facility Factory while ( milkingFactoryProductivityUp is 1 and milkingFactorySuitUpgraded is 1 and Resolution of ZdravkoIntro is 0 ):
+instead of going outside from Milking Facility Factory while milkingFactoryProductivityUp is 1 and milkingFactorySuitUpgraded is 1 and Resolution of ZdravkoIntro is 0:
 	say "     You are walking out of the Milking Facility through the main entrance door and about to consider what your next destination will be... But you sense a presence coming towards you, by the approaching sounds of heavy footsteps only augmented by the otherwise surrounding silence. In an instinct, you backtrack towards the building and keep your card in hand, just in case you need a place to ensure your safety. Now, you glance around and towards the source of such sounds, and eventually spot a relatively large figure walking in your direction. At first, they do not seem to have noticed you, however that is soon proven false. This bulky shape looks dangerous for its size, and a closer look reveals something worrying... It is a transformed person, a male anthropomorphic horned bovine who, when he spots you, shows a not so happy expression.";
 	say "     This bull of a man appears to be a surviving scavenger, wearing only a black tank top and pair of jeans, leaving his hooves exposed to the ground. He seems to be carrying a rather large backpack, as well. 'Hey! What the hell are you doing in there?! Where did you get a card?!' he shouts, which... is not the worst thing it could happen. No sex-crazed insane creature would ask you such a thing in that tone or expression, and he is not charging at you with suggestive intent, but he looks pissed. Right after he asks this, he really picks up the pace and starts walking towards you very fast... Well, he is still not charging at you, but you are going to be in trouble if you do not explain yourself... This guy is big.";
-	LineBreak;
-	say "     [bold type]There must be something you can say to calm him down...?[roman type][line break]";
+	say "[line break]     [bold type]There must be something you can say to calm him down...?[roman type][line break]";
 	say "     [link](1)[as]1[end link] - Tell him you just got here with the card and were just exploring.";
 	say "     [link](2)[as]2[end link] - Inform him that you went inside, saw what is in there, and tried to mess with the console to find out more.";
 	say "     [link](3)[as]3[end link] - Explain that you found this facility and admit you were using it for your own interests.";
 	now calcnumber is 0;
 	while calcnumber < 1 or calcnumber > 3:
-		say "Choice? (1-3)>[run paragraph on]";
+		say "Choice? (1-3)> [run paragraph on]";
 		get a number;
-		if calcnumber is 1 or calcnumber is 2 or calcnumber is 3:
-			break;
-		else:
+		if calcnumber < 1 or calcnumber > 3:
 			say "Invalid choice. Type [link]1[end link] to pick the first option, [link]2[end link] to pick the second or [link]3[end link] to pick the third, whichever applies to your case.";
+	LineBreak;
 	if calcnumber is 1:
-		LineBreak;
 		say "     Given how really angry he sounds, you prefer to quickly dismiss any responsibility by stating that you really just got here, very recently. However... You probably forgot that you have the card in your hand, the door is unlocked, you came from the inside and, indeed, have messed with the console... He is not easily fooled. 'Did you really think I would believe that?! You've got the card in your hand, and you just came from the building! I saw you opening the door and walking outside!' he angrily yells, with a really intimidatingly deep voice that feels capable of shaking your soul. 'Have you touched the console? Have you done anything that machine asked of you?!' You cannot really lie, here. As soon as he enters the facility, he will be able to tell that you have interacted with the console, so your only option is to admit that you have messed with it. He then asks you something in almost a whisper. 'Did you... authorize the last order?' Of course, you let him know that you have not, and he seems... somewhat relieved.";
 		now Loyalty of Zdravko is 0;
 	else if calcnumber is 2:
-		LineBreak;
 		say "     Given how really angry he sounds, you should probably give him a very complete explanation of what you did there, so you tell the tale from the beginning. However, as you mention that you have interacted with the console, his face goes red with fury! He growls, pins you against the door and looks directly in your eyes, and just when you were expecting him to shout with that intimidatingly deep voice... he asks you something in almost a whisper. 'Did you... Did you do anything that machine asked of you?' Somehow, this is even more scary, but you really cannot lie, here. As soon as he enters the facility, he will be able to tell that you have interacted with the console, so your only option is to admit that you have messed with it. He then asks you something else. 'Did you... authorize the last order?' Of course, you let him know that you have not, and he lets go off you at that point.";
 		now Loyalty of Zdravko is 1;
 	else if calcnumber is 3:
-		LineBreak;
-		say "     He is already mad at you, so what do you have to lose? You tell him that you have found this facility, found the card in the underground levels of Trevor Labs, entered and found the whole apparatus really interesting, so much in fact that you decided to claim the place and use it for your own needs... And now, you have got the bull [italic type]really[roman type] angry at you. Growling, he pins you against the door and looks directly in your eyes, and and just when you were expecting him to shout with that intimidatingly deep voice... he asks you something in almost a whisper. 'Even if you did mess with the damned console, tell me... Did you authorize the last order?' Of course, you let him know that you have not, and he lets go off you at that point.";
+		say "     He is already mad at you, so what do you have to lose? You tell him that you have found this facility, found the card in the underground levels of Trevor Labs, entered and found the whole apparatus really interesting, so much in fact that you decided to claim the place and use it for your own needs... And now, you have got the bull [italic type]really[roman type] angry at you. Growling, he pins you against the door and looks directly in your eyes, and just when you were expecting him to shout with that intimidatingly deep voice... he asks you something in almost a whisper. 'Even if you did mess with the damned console, tell me... Did you authorize the last order?' Of course, you let him know that you have not, and he lets go off you at that point.";
 		now Loyalty of Zdravko is -1;
 	WaitLineBreak;
 	say "     With things more calm now, the bull takes a breath, a step back and crosses his arms. You get the feeling he is not exactly done with you, but at least he does not look as hostile. 'That last one is a trap. The AI grew more and more apt to trick others into giving themselves to the machine it operates. It shows signs of sentience, but tries to look just like any other simple AI program that only what it is told, or programmed, to do.' That explains the feeling of dread you always got when interacting with the computer... But he has more to say. 'All these people inside the facility are unfortunate explorers, like you, who eventually authorized the last upgrade. Some... more quickly than others. It seems that the AI resets the operations every time the cycle is concluded, so that it could bait another victim.'";
 	say "     Well, that definitely sounds horrific. An AI going rogue definitely sounds like some popular apocalyptic stories which usually end pretty badly... 'I have been trying to figure out its code. While I doubt those people could be saved, at least there should be a way to permanently shut down the AI, reprogram, shackle it, or something...' he informs you, and by the looks of it, this bovine man seems to have an expertise in technological devices, or at least he sounds like he knows what he is talking about. 'I used to be a software developer, in case you are wondering. Anyone else would be hopeless in trying to understand how this AI operates. The son of a bitch is good at keeping me out of its program and frying any remote device I connect with the main computer, which is why I'm still not done with it... But that'll change soon.'";
 	WaitLineBreak;
 	say "     The bull extends his hand towards you, in silence. It takes you a while to understand that he is asking for your card, but he soon follows up with his request verbally formulated. 'Your card, please.'";
-	LineBreak;
-	say "     [bold type]Do you give him your card?[roman type][line break]";
+	say "[line break]     [bold type]Do you give him your card?[roman type][line break]";
 	say "     ([link]Y[as]y[end link]) - Yes, give him the card.";
 	say "     ([link]N[as]n[end link]) - No, use it to open the door yourself.";
 	if Player consents:
@@ -80,25 +74,24 @@ Section 1-1 - Backpack Special
 instead of going south from Milking Facility Operations Room while Resolution of ZdravkoIntro is 3 and ESPP bunker keycard is not owned:
 	say "     Knowing that you are leaving without a keycard is something that worries you, so you instinctively glance around in an attempt to figure out if he left yours somewhere... And amidst your observations, you find Zdravko's backpack still in the Operations Room, relatively distant from him, just lying around on the floor. You suppose you could try to search it quietly, maybe luck would be in your side...";
 	say "     Would you like to attempt to steal back your keycard? If you are [bold type]dexterous[roman type] enough, you may be able to... But if he catches you, he will probably kick you out forever.";
-	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Yes, it is your keycard.";
 	say "     ([link]N[as]n[end link]) - No, you should be fine without it.";
 	if Player consents:
 		LineBreak;
 		say "     Silently approaching his backpack while he is not looking, distracted with his tasks, you slide your hand in the backpack and try to retrieve your keycard...";
-		let bonus be (( dexterity of player minus 10 ) divided by 2);
+		let bonus be ( dexterity of player minus 10 ) divided by 2;
 		let diceroll be a random number from 1 to 20;
-		say "You roll 1d20([diceroll])+[bonus] = [special-style-1][diceroll + bonus][roman type] vs [special-style-2]9[roman type] (Dexterity Roll):[line break]";
+		say "You roll 1d20([diceroll])[if bonus >= 0]+[end if][bonus] = [special-style-1][diceroll + bonus][roman type] vs [special-style-2]9[roman type] (Dexterity Roll):[line break]";
 		if diceroll + bonus >= 9:
 			LineBreak;
-			say "     ... And you were successful! You managed to feel it with your fingertips and immediately pocket the keycard without making any noise. You then take a few steps away from his backpack. He did not even notice you going for it.";
+			say "     ...And you were successful! You managed to feel it with your fingertips and immediately pocket the keycard without making any noise. You then take a few steps away from his backpack. He did not even notice you going for it.";
 			ItemGain ESPP bunker keycard by 1;
 			now Resolution of ZdravkoIntro is 4;
 		else:
 			LineBreak;
-			say "     ... But as you try to feel it inside the backpack, you move your hand around too much and bump it into something hard, which makes a little noise... And, unfortunately, this is enough to alert the bull, who looks at you in a reflex and caughts you in the act. There is not even enough time to blink as he is pointing a [bold type]pistol[roman type] at you, which you had no idea he had!";
+			say "     ...But as you try to feel it inside the backpack, you move your hand around too much and bump it into something hard, which makes a little noise... And, unfortunately, this is enough to alert the bull, who looks at you in a reflex and caughts you in the act. There is not even enough time to blink as he is pointing a [bold type]pistol[roman type] at you, which you had no idea he had!";
 			WaitLineBreak;
-			say "     'Get out! Now!' he shouts, as he walks towards you, furious! You better do as he says, because he definitely has the upper hand, here. Were you to offer any resistance, you could end up with a bullet in  you, as this bull is no ordinary software engineer. He leads you outside, and then locks the facility's door, [bold type]leaving you out for good.[roman type][line break]";
+			say "     'Get out! Now!' he shouts, as he walks towards you, furious! You better do as he says, because he definitely has the upper hand, here. Were you to offer any resistance, you could end up with a bullet in you, as this bull is no ordinary software engineer. He leads you outside, and then locks the facility's door, [bold type]leaving you out for good.[roman type][line break]";
 			say "     Well, this would probably happen anyway if you left without trying to get the keycard back. You have done everything you could.";
 			now Resolution of ZdravkoIntro is 99; [kicked out of the facility]
 			move player to Milking Facility Entrance;
@@ -127,7 +120,7 @@ to say ResolveEvent Documentation on the Milking Facility:
 
 Section 1-4 - Intro Ending
 
-MilkingFacilityZdravkoCooldown is a number that varies. MilkingFacilityZdravkoCooldown is usually 20000. [@Tag:NotSaved]
+MilkingFacilityZdravkoCooldown is a number that varies.[@Tag:NotSaved] MilkingFacilityZdravkoCooldown is usually 20000.
 
 to say ZdravkoIntroResolution:
 	say "     As you return to the facility with your new findings and a way to reset the AI... The doors close right before your eyes with a quick shut, leaving you outside! Fearing the worst, you get your keycard and immediately shove it past the electronic lock, which beeps alarmingly as you continue to slide your card through. Something is [bold type]definitely going on[roman type] in here...";
@@ -151,7 +144,6 @@ to say ZdravkoIntroResolution:
 	LineBreak;
 	say "     You are left with a choice. You could [bold type]accept the AI's terms by assuming ownership of the facility[roman type], keeping the AI and everything else working just as before, while letting it [']neutralize its threats['], which means you would be [bold type]unable to save Zdravko[roman type] from being fully turned into a vinyl bull...";
 	say "     Or you could [bold type]slide the floppy disk into the computer and reset the AI, ending it permanently, and take over the facility under your own terms, saving Zdravko[roman type] before it is too late for him.";
-	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Select [']Confirm['] in the computer and claim the facility alongside the AI, abandoning Zdravko.";
 	say "     ([link]N[as]n[end link]) - Slide the floppy disk and [']reset['] the AI, saving Zdravko but terminating the facility's operations'.";
 	if Player consents:
@@ -165,6 +157,7 @@ to say ZdravkoIntroResolution:
 		WaitLineBreak;
 		say "     Your eyes look at the last option, the one that was supposedly a trap, to see the word [']completed['] in place of [']confirmation needed[']. This reminds you of that bull person you met not long ago, who was still struggling against his inevitable fate. Not anymore, as the AI finalized the last operation it committed to, fully capturing the bull in a custom-made vinyl suit, bound and trapped but, unlike the cows, interactable and at your disposal. 'I am sorry for your friend, but he was a threat to this facility's integrity. He has been neutralized, and as a token of my esteem for my best administrator, I have offered him a customizable vinyl suit for both your dairy and sexual needs.' booms that cryptic voice from before, and ends with 'Thank you for giving me purpose.'";
 		say "     Zdravko can now be found in the [bold type]Milking Facility Factory[roman type] in his new condition. Perhaps you should go take a look...";
+		WaitLineBreak;
 		move Player to Milking Facility Operations Room;
 		move Zdravko to Milking Facility Factory;
 		now Resolution of ZdravkoIntro is 10;
@@ -178,6 +171,7 @@ to say ZdravkoIntroResolution:
 		say "     'Anyway, good job at that, bud. Seems like the AI's gone for good, and we can begin to extract these prisoners from their vinyl cocoons... Though I doubt they will have anything to say once they're out. I don't know how long they have been under the effects of those drugs or... whatever that shit was. Fuck, something even dissolved my clothes, I don't know what the fuck they had in these tubes and contraptions... Though I'll find out and make a report about this to...' he stops there, glancing over you with that look on his face, like he said something he should have held back. 'Yeah, uh... Well, I'm not just an engineer. I'm an agent sent here on an investigation. Can't say much more than that. Thought I'd let you know.'";
 		WaitLineBreak;
 		say "     After a brief moment of silence, he then asks you to leave. 'I gotta clean this mess up. You've done me a great service, and I appreciate it, but... I just need some time, alright? I should be done by tomorrow, if you want to come by.' There really is not any reason to stay here against his will, so you let him know that you will be back later. He nods, as you take your leave through the broken door, walking outside of the Milking Facility.";
+		WaitLineBreak;
 		move Player to Milking Facility Entrance;
 		move Zdravko to Milking Facility Operations Room;
 		now Resolution of ZdravkoIntro is 50;
@@ -188,6 +182,7 @@ Section 1-5 - Intro Post Ending
 
 to say ZdravkoIntroPostEnding:
 	say "     It has been long enough since you left Zdravko alone inside, after defeating the menacing AI holding total control of this Milking Facility, so it should be a good time to go check on him. Bringing your keycard onto the now repaired electronic lock, you swipe it, and the door opens... still a bit clunky, but it does its job. And so, you enter...";
+	WaitLineBreak;
 	move player to Milking Facility Factory;
 	WaitLineBreak;
 	say "     The whole interior does seem way more silent and calm, now, but soon enough, you spot Zdravko near the vinyl cows. Didn't he say he would free the prisoners? Yet, there they are, still stuck in their cow prisons... Walking up to the bull, you greet him as you inquire about the facility's current situation, and of course, on his own personal status.";
@@ -243,7 +238,6 @@ TwistedCapacity of Zdravko is false. [Twisted Characters can take any penetratio
 Sterile of Zdravko is true. [steriles can't knock people up]
 MainInfection of Zdravko is "Bovine".
 Description of Zdravko is "[Zdravkodesc]".
-Conversation of Zdravko is { "<This is nothing but a placeholder!>" }.
 The scent of Zdravko is "     He smells like a bull, with a strong and very animalistic scent.".
 
 to say ZdravkoDesc:
@@ -307,14 +301,14 @@ to say ZdravkoIntroTalkMenu:
 			choose row calcnumber in table of fucking options;
 			say "[title entry]: [description entry]?";
 			if Player consents:
-				let nam be title entry;
 				now sextablerun is 1;
-				if (nam is "Say something nice"):
-					say "[ZdravkoIntroTalkNice]";
-				else if (nam is "Ask for the keycard"):
-					say "[ZdravkoIntroTalkKeycard]";
-				else if (nam is "Offer your help"):
-					say "[ZdravkoIntroTalkHelp]";
+				if title entry is:
+					-- "Say something nice":
+						say "[ZdravkoIntroTalkNice]";
+					-- "Ask for the keycard":
+						say "[ZdravkoIntroTalkKeycard]";
+					-- "Offer your help":
+						say "[ZdravkoIntroTalkHelp]";
 				wait for any key;
 				if ZdravkoDoneTalking is false:
 					say "[ZdravkoIntroTalkMenu]"; [looping back to keep talking with him]
@@ -323,26 +317,24 @@ to say ZdravkoIntroTalkMenu:
 			say "     You excuse yourself as you leave the bull to his tasks.";
 			wait for any key;
 		else:
-			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options], or 0 to exit.";
 	clear the screen and hyperlink list;
 
 to say ZdravkoIntroTalkNice:
 	say "     Since things are still a bit tense between the two of you, maybe trying to be nice to him is not a bad idea, though you feel like you only have one shot at this.";
-	say "     But... [bold type]What exactly do you want to tell him?[roman type][line break]";
 	LineBreak;
+	say "     But... [bold type]What exactly do you want to tell him?[roman type][line break]";
 	say "     [link](1)[as]1[end link] - Apologize for messing with things you should not.";
 	say "     [link](2)[as]2[end link] - Compliment his skills and knowledge.";
 	say "     [link](3)[as]3[end link] - Flirt with him.";
 	now calcnumber is 0;
 	while calcnumber < 1 or calcnumber > 3:
-		say "Choice? (1-3)>[run paragraph on]";
+		say "Choice? (1-3)> [run paragraph on]";
 		get a number;
-		if calcnumber is 1 or calcnumber is 2 or calcnumber is 3:
-			break;
-		else:
+		if calcnumber < 1 or calcnumber > 3:
 			say "Invalid choice. Type [link]1[end link] to say you are sorry, [link]2[end link] to compliment him or [link]3[end link] to flirt with him.";
+	LineBreak;
 	if calcnumber is 1:
-		LineBreak;
 		say "     You suppose that apologies are in order, given the fact this seems to be a delicate subject for him. You really do not know why he is so determined to deal with this machine, but you feel like doing this is the sensible thing to do. So you say you are sorry for messing with all of this without proper caution...";
 		if Loyalty of Zdravko > -1:
 			say "     He hears your words and sighs. Not a disapproving gesture, more like he is considering how to reply to that. 'Yeah... You really shouldn't have...' says the bull, in a sadder tone than what you would expect, but he does not berate you. In his way, you feel like he appreciated your sentiment. 'What's done is done. We've only got the future to look after, and this damned AI won't be part of it.'";
@@ -351,10 +343,8 @@ to say ZdravkoIntroTalkNice:
 			say "     He hears your words, but immediately shuts them down. 'What, now you're sorry? Maybe you should've thought about that before you decided that it'd be fun press fucking [']confirm['] on every occasion! Lucky you that you skipped the last one, right? It would have fucking taught you.' Well... he really did not take that the way you would expect. Actually, you made him more angry.";
 			decrease Loyalty of Zdravko by 1;
 	else if calcnumber is 2:
-		LineBreak;
 		say "     It is obvious that the bull is a great adept of technology, and knows a lot of things when it comes to it. That is a valuable skill when dealing with machinery like this, and definitely quite impressive. You let him know that, and he looks at you with a frowned eyebrow. 'Are you done kissing my ass? I've got a rogue AI to deal with. Why don't you make yourself useful and shut up?' Well, it appears he does not take compliments too well... But at least you think you haven't made him any angrier.";
 	else if calcnumber is 3:
-		LineBreak;
 		say "     This bull is quite the hunk. Large, muscular, with a really round and powerful butt that you can clearly have a look at, with his jeans hugging it so tightly... It just makes you want to flirt with him, so you do! And you might have said all of that out loud, as well. 'Alright, there is one thing you could do for me...' - he says, calmly, and makes a brief pause before continuing - 'Press [']confirm['] on that last option and walk into the main room. That should take care of your urges... permanently.' Yes, that is all he says before completely ignoring you for the next few moments.";
 		say "     Did you really think this was the best moment for that?! Well, he is not even more angry at you, now. He barely considers you a person, at this point.";
 		decrease Loyalty of Zdravko by 2;
@@ -400,7 +390,7 @@ to say ZdravkoTalkMenu:
 		now title entry is "His transformation";
 		now sortorder entry is 2;
 		now description entry is "Surely he was a human before";
-	[]
+		[]
 		choose a blank row in table of fucking options;
 		now title entry is "Sex";
 		now sortorder entry is 3;
@@ -419,14 +409,14 @@ to say ZdravkoTalkMenu:
 			choose row calcnumber in table of fucking options;
 			say "[title entry]: [description entry]?";
 			if Player consents:
-				let nam be title entry;
 				now sextablerun is 1;
-				if (nam is "Himself"):
-					say "[ZdravkoTalkHimself]";
-				else if (nam is "His transformation"):
-					say "[ZdravkoTalkTransformation]";
-				else if (nam is "Sex"):
-					say "[ZdravkoTalkSex]";
+				if title entry is:
+					-- "Himself":
+						say "[ZdravkoTalkHimself]";
+					-- "His transformation":
+						say "[ZdravkoTalkTransformation]";
+					-- "Sex":
+						say "[ZdravkoTalkSex]";
 				wait for any key;
 				if ZdravkoDoneTalking is false:
 					say "[ZdravkoTalkMenu]"; [looping back to keep talking with him]
@@ -435,7 +425,7 @@ to say ZdravkoTalkMenu:
 			say "     You excuse yourself as you leave the bull to his tasks.";
 			wait for any key;
 		else:
-			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options], or 0 to exit.";
 	clear the screen and hyperlink list;
 
 to say ZdravkoTalkHimself:
@@ -512,19 +502,18 @@ to say ZdravkoVinylSexMenu:
 			choose row calcnumber in table of fucking options;
 			say "[title entry]: [description entry]?";
 			if Player consents:
-				let nam be title entry;
 				now sextablerun is 1;
-				if (nam is "Play with his cock"):
-					say "[ZdravkoVinylSexOral]";
-				else if (nam is "Ride the vinyl bull"):
-					say "[ZdravkoVinylSexRiding]";
-				wait for any key;
+				if title entry is:
+					-- "Play with his cock":
+						say "[ZdravkoVinylSexOral]";
+					-- "Ride the vinyl bull":
+						say "[ZdravkoVinylSexRiding]";
 		else if calcnumber is 0:
 			now sextablerun is 1;
 			say "     You back off with your decision.";
-			wait for any key;
 		else:
-			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options], or 0 to exit.";
+	wait for any key;
 	clear the screen and hyperlink list;
 
 to say ZdravkoVinylSexOral:
@@ -535,9 +524,9 @@ to say ZdravkoVinylSexOral:
 	say "     There is no questioning here, you want to swallow it. All of it. Rubbing his balls thoroughly with your hands as you keep his big manhood in your mouth, you prepare for the meal you have been wanting all this time. His moans are... stronger, you can tell, as his climax hits him right on the spot, a generous gush of rich bull cum being delivered right down your throat as you audibly gulp it all down. Seconds pass by and you are still swallowing mouthfuls, like if you were just drinking straight from an open faucet, all while your vinyl servant's muffled grunts continue through the duration of his orgasm.";
 	WaitLineBreak;
 	say "     Once it is over, you are left with a belly full of delicious bovine cum, with your hunger, thirst and sexual drive more sated for the rest of the day. That really is some good manly milk.";
+	NPCSexAftermath Player receives "OralCock" from Zdravko;
 	PlayerDrink 15;
 	PlayerEat 3;
-	NPCSexAftermath Player receives "OralCock" from Zdravko;
 
 to say ZdravkoVinylSexRiding:
 	say "     Looking at your black bull servant, the thought of sitting on his sizable manhood crosses your mind as you see it so obscenely overgrown, just laying on top of his thick thighs. Adjusting the rack to serve your intentions better, you have him just low enough so you can climb over and on top of him while being able to hold yourself there with your [if player is naked]naked[else]now undressed[end if] body. Now, you can finally bring your hands over that huge cock, covered in shiny black vinyl yet feeling as warm and alive as a fleshy one. Just a few touches are enough to bring it to full erection and leaking, in absolute eagerness, as eager as his sexual predisposition, only further reinforced by the chemicals your AI friend so generously enhanced him with. This girthy monstrosity appears to measure at slightly above a full foot in length, drooling thick bull cream as your hands barely stroke it.";
@@ -582,24 +571,23 @@ to say ZdravkoSexMenu:
 			choose row calcnumber in table of fucking options;
 			say "[title entry]: [description entry]?";
 			if Player consents:
-				let nam be title entry;
 				now sextablerun is 1;
-				if (nam is "Offer him a blowjob"):
-					say "[ZdravkoSexOral]";
-				else if (nam is "Bend over for him"):
-					say "[ZdravkoSexGetFucked]";
-				wait for any key;
+				if title entry is:
+					-- "Offer him a blowjob":
+						say "[ZdravkoSexOral]";
+					-- "Bend over for him":
+						say "[ZdravkoSexGetFucked]";
 		else if calcnumber is 0:
 			now sextablerun is 1;
 			say "     You excuse yourself as you leave the bull to his tasks.";
-			wait for any key;
 		else:
-			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options], or 0 to exit.";
+	wait for any key;
 	clear the screen and hyperlink list;
 
 to say ZdravkoSexOral:
 	say "     Having this one thing you want to do with Zdravko going in your thoughts, you make the move yourself and ask him if he would like to have your mouth on his dick, to which he grins at. 'Well, I could definitely use a good cocksucker... Right on their knees... grabbing my big bull cock...' - as he speaks, his hand brushes against your cheek, then to the back of your head - 'Giving it some good stroking... A nice licking all over...' - and as he continues, he leads you to fall to your knees in front of him, slowly parting with his long jacket and revealing his growing erection, raising proud before your eyes - 'Think you can do all that?' You are now at eye level with his penis, throbbing to a full hard-on soon enough, as you are presented with these suggestions.";
-	say "     You figured you might was well do as he said, and so you move your hands over his shaft, stroking it gently and feeling that slightly above a foot-long of a cock throb in your grasp. Then, you join your tongue to the efforts, laying it on top of his meat from the side and licking across its length while jerking him off with firm and fluid movements. 'Following my words, eh? I like one who listens.' he says, giving the back of your skull a gentle rub before he takes the reins, leading you to the tip of his cock. He then starts to push his manhood past your lips, to which you oblige by giving your best at wrapping them tight around his girth. 'Time to suck it good now... hope you like them big and juicy.'";
+	say "     You figured you might was well do as he said, and so you move your hands over his shaft, stroking it gently and feeling that slightly above a footlong of a cock throb in your grasp. Then, you join your tongue to the efforts, laying it on top of his meat from the side and licking across its length while jerking him off with firm and fluid movements. 'Following my words, eh? I like one who listens.' he says, giving the back of your skull a gentle rub before he takes the reins, leading you to the tip of his cock. He then starts to push his manhood past your lips, to which you oblige by giving your best at wrapping them tight around his girth. 'Time to suck it good now... hope you like them big and juicy.'";
 	WaitLineBreak;
 	say "     The taste of his precum strikes you immediately as this really sweet and thick liquid hits your taste buds, delivered as a reward for pleasing the bull well. 'That's it... You're making me leak, already...' he says, and that could not be more true. As you are sucking on his cock, bringing your hands back and forth along his shaft and pulling more of his length towards your throat, you feel each pulsating throb spitting more precum into you, making a blissful mess all over your tongue. He was not kidding about the [']juicy['] part, either, as the more you suck him, the [']juicier['] it gets, his dick leaking out more and more of the sticky juice as you do your best at sliding your wrapped lips along his girthy shaft, eventually letting him hit your throat.";
 	say "     Though as soon as you let him bury a lot of his cock down your mouth, the bull grabs your head properly and begins to thrust into you, going for some facefucking as he leans his head back and enjoys the feeling of your throat tightly wrapped around his member. 'Fuck yeah, take that dick...!' he grunts, picking up the pace with his pounding into your face. You no longer have any control, as he fully takes over the action and has you take his cock as he sees fit, leaving you only to endure the feeling of that sizable meat going in and out of your throat. Figuring that you could at least be of help to the bull's lusts, you bring your hands over his bouncing nuts, big and full, and give them a nice rubbing.";

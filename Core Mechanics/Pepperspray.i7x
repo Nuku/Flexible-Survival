@@ -1,17 +1,18 @@
 Version 3 of Pepperspray by Core Mechanics begins here.
 [version 3.5 - Bonus fixes]
 
-
-battleitem is a number that varies.
-peppereyes is a number that varies.
+battleitem is a number that varies.[@Tag:NotSaved]
+peppereyes is a number that varies.[@Tag:NotSaved]
 
 Table of Game Objects (continued)
 name	desc	weight	object
 "pepperspray"	"A small canister of pepperspray."	1	pepperspray
 
 pepperspray is a grab object. It is fast. It is not temporary.
-
 the scent of the pepperspray is "Smelling the pepperspray canister makes your eyes water.".
+
+to say usepepperspray:
+	select an option from the table of pepperspraychoice;
 
 to say pepperspraydrain:
 	now peppereyes is 3;
@@ -19,15 +20,10 @@ to say pepperspraydrain:
 		say "Uh oh! That used up the last of that can and you drop it to the ground, empty.";
 		ItemLoss pepperspray by 1;
 
-
-to say usepepperspray:
-	select an option from the table of pepperspraychoice;
-
 Table of pepperspraychoice
 title	subtable	description	toggle
 "Spray and Attack"	--	"Spicy Eyes!!!"	peppersprayattack rule
 "Spray and Flee"	--	"Run Away!"	peppersprayflee rule
-
 
 this is the peppersprayflee rule:
 	[Perform an attempt to flee from the weakened enemy]
@@ -45,7 +41,6 @@ this is the peppersprayflee rule:
 	increase monmindbonus by 5;
 	decrease plfleebonus by 3;
 	rule succeeds;
-
 
 this is the peppersprayattack rule:
 	[Perform enhanced double-attack with creature penalized by 5!]
@@ -68,7 +63,7 @@ this is the peppersprayattack rule:
 		say "[line break]Having partially recovered, your enemy attempts to retaliate.";
 		choose row monstercom from table of Critter Combat;
 		if Playerpoison > 0, follow the playerpoisoned rule;
-		if there is a continuous in row monstercom of the table of Critter Combat:
+		if there is a continuous entry:
 			follow the continuous entry;
 		if combat abort is 0 and skipretaliate is false, follow the combat entry;
 	else:
@@ -78,7 +73,6 @@ this is the peppersprayattack rule:
 	increase monhitbonus by 5;
 	increase monmindbonus by 5;
 	rule succeeds;
-
 
 [
 	[Perform an attempt to flee at +4 from the weakened enemy & +5 to dodge (if needed)]
@@ -105,7 +99,6 @@ this is the peppersprayattack rule:
 		follow the retaliation rule;
 	rule succeeds;
 
-
 this is the peppersprayattack rule:
 	[Perform enhanced double-attack +3 to hit & dodge!]
 	now battleitem is 1; [combat item chosen - retaliate to be handled internally]
@@ -124,7 +117,6 @@ this is the peppersprayattack rule:
 		now fightoutcome is 10;
 		win;
 	rule succeeds;
-
 
 to say enhancedattack:
 	choose row MonsterID from the Table of Random Critters;
@@ -277,7 +269,6 @@ to say enhancedattack:
 			else:
 				say "Your [companion] misses!";
 
-
 to say weakretaliate:			[no longer used, incorporated into standardhit in Alt Combat]
 	now avoidance is 0;
 	say "[enhancedavoidance]";
@@ -337,7 +328,6 @@ to say enhancedavoidance:		[no longer used, incorporated into avoidance in Alt C
 	else if "Black Belt" is listed in feats of Player and a random chance of 1 in 8 succeeds:
 		say "You nimbly avoid the attack at the last moment!";
 		now avoidance is 1;
-
 ]
 
 Pepperspray ends here.

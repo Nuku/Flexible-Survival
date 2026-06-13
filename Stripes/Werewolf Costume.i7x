@@ -15,34 +15,31 @@ to say losetomonstercostume:
 		else:
 			say "     You can feel the trapped creature inside you squirming, rubbing himself against your sensitive inner body. This stimulation excites you further and when the costume creature drives its cock into you, you growl in pleasure. Its cock slides into your plush bottom, sliding up into your padded form and it pounds at you hard and fast. You can sense the victim inside you sharing in the sensations of your fucking and that excites you further. You push back into the thrusts of the creature atop you as your rut like a pair of wild beasts until finally its hot seed blasts into you, flowing up into the tight passage inside your padded rear. Your trapped victim cums as he share in the sensations coming from you. You can feel his hot seed soaking your sensitive inner lining even as the werewolf costume fills you with his load. With your rutting complete, you both release those trapped inside you and head your separate ways.[impregchance]";
 	else:
-		say "     The monstrous costume tosses aside your clothes and pack as it runs its limp limbs over you. The creature wraps itself over you and starts pulling you into its empty body through the concealed zipper at the back. Soon, it is wrapped all over you, forcing you to wear it and shifting its size and shape to fit you like a glove. Now filled, it moves around much more easily, taking over your body. As it moves, it rubs itself [if Cock Count of Player > 1]against your cocks[else if Cock Count of Player is 1]against your cock[else]against your wet pussy[end if]. Its soft insides caress against your sensitive flesh, exciting you despite yourself. As it runs around, acting like a haunted house werewolf, you find yourself getting into the role.";
+		say "     The monstrous costume tosses aside your clothes and pack as it runs its limp limbs over you. The creature wraps itself over you and starts pulling you into its empty body through the concealed zipper at the back. Soon, it is wrapped all over you, forcing you to wear it and shifting its size and shape to fit you like a glove. Now filled, it moves around much more easily, taking over your body. As it moves, it rubs itself [if Cock Count of Player > 1]against your cocks[else if Player is male]against your cock[else]against your wet pussy[end if]. Its soft insides caress against your sensitive flesh, exciting you despite yourself. As it runs around, acting like a haunted house werewolf, you find yourself getting into the role.";
 		if FemaleList is not banned:
 			say "     When it pounces one of the strange carnival creatures and drives its cock into her, you share in the sensation of it mating. Like a wild beast, it pounds away at her, driving its hard, knotted shaft into her wet pussy. The pleasure of its rough fucking can be felt in your [if Player is male]cock[smn] trapped inside the costume[else]pussy, which is an unusually arousing mix of sensations[end if]. The victim quickly gets into the [']scene['], pushing into each thrust while being ravaged by a horrifying werewolf. As the costume cums into her, you cum as well, soaking the insides of the suit with your [if Player is male]seed[else]juices[end if]. Sated, the haunted house creature pops its deflating knot free and wanders back to where it found you before disgorging you from its zippered back, your usefulness at an end.";
 		else:
 			say "     When it pounces one of the strange carnival creatures and drives its cock into his mouth, you share in the sensation of its forceful blowjob. Like a wild beast, it pounds away at him, driving its hard, knotted shaft into his mouth. The pleasure of its rough fucking can be felt in your [if Player is male]cock[smn] trapped inside the costume[else]pussy, which is an unusually arousing mix of sensations[end if]. The victim quickly gets into the [']scene['], licking and sucking at the cock while being ravaged by a horrifying werewolf. As the costume cums into him, you cum as well, soaking the insides of the suit with your [if Player is male]seed[else]juices[end if]. Sated, the haunted house creature pops pulls its spent shaft free and wanders back to where it found you before disgorging you from its zippered back, your usefulness at an end.";
 
-
 to say beatthemonstercostume:
-	say "     Your final blow knocks the stuffing out of the costume creature, as it were, and it collapses to the ground in a heap";
 	if werewolfcostumenosex > 2:
-		say ". As with the others of its kind, you leave it alone now that you've taken the fight out of it.";
+		say "     Your final blow knocks the stuffing out of the costume creature, as it were, and it collapses to the ground in a heap. As with the others of its kind, you leave it alone now that you've taken the fight out of it.";
 	else if Player is male and Libido of Player > 25 and werewolfcostumenosex < 3:
-		say ". Feeling a little worked up after your fight, you glance down at the costume creature. It moans softly, struggling to rise again. Despite its costume nature, that head of its does have a mouth you might be able to make use of, if you were so inclined. Shall you go ahead with this plan?";
+		say "     Your final blow knocks the stuffing out of the costume creature, as it were, and it collapses to the ground in a heap. Feeling a little worked up after your fight, you glance down at the costume creature. It moans softly, struggling to rise again. Despite its costume nature, that head of its does have a mouth you might be able to make use of, if you were so inclined. Shall you go ahead with this plan?";
 		if Player consents:
+			LineBreak;
 			now werewolfcostumenosex is 0;
 			say "     Grabbing the costume creature by the head, you press its muzzle to your groin and thrust your hard cock into is open mouth. It goes a weak moan and flops its limp arms, but is too weak to stop you from taking advantage of it. You pound your hips against its padded muzzle, grinning as it starts to respond by licking and sucking at your [Cock of Player] manmeat. As you continue, you can feel its soft paws slide up your legs, but they're no longer struggling, instead rubbing your thighs and gripping your ass so it can better pull its head into your thrusts.";
 			if a random chance of 3 in 5 succeeds:
-				say "     When you cum, you thrust fully into the costume creature, letting your cock pulse as it sends your hot seed into its empty insides[if Ball Size of Player > 6]. Your prodigious output leaves the werewolf suit considerably fuller. It makes wet, sloshing sounds as it shifts around, trying to drag its cum-stuffed body away[else if Ball Size of Player > 5]. Your considerable output leaves the werewolf suit looking somewhat fuller and more padded than before. It makes wet sounds as it slinks off[else]. You pump your load down at the creature's padded throat before pushing it aside[end if].";
+				say "     When you cum, you thrust fully into the costume creature, letting your cock pulse as it sends your hot seed into its empty insides. [if Ball Size of Player > 6]Your prodigious output leaves the werewolf suit considerably fuller. It makes wet, sloshing sounds as it shifts around, trying to drag its cum-stuffed body away[else if Ball Size of Player > 5]Your considerable output leaves the werewolf suit looking somewhat fuller and more padded than before. It makes wet sounds as it slinks off[else]You pump your load down at the creature's padded throat before pushing it aside[end if].";
 			else:
 				say "     Moments before you cum, you push the strange creature's head back and pump your meat frantically, spraying your [if Ball Size of Player > 6]excessive[else if Ball Size of Player > 5]large[else]sticky[end if] load across its muzzle. It holds its mouth wide open and slathers its tongue across its muzzle, trying to lap up as much of it as it can get. Once you're done cumming, you wipe your dick across its furry side and toss it aside. The messy costume creature slinks off, wiping and licking itself as it goes.";
 		else:
+			LineBreak;
 			increase werewolfcostumenosex by 1;
 			say "     Certain you can find a better way to sate your lusts in this wacky city, you leave the strange beast behind.";
 	else:
-		say ".";
-
-to say monstercostumedesc:
-	say "     A strange, wobbly creature approaches you. It seems like the werewolf from a cheap horror movie or a haunted house, but deflated and empty inside. It is like an empty costume moving on its own. The limbs flop around some as it moves, the padded, oversized feet dragging against the ground. The sculpted werewolf face is well-molded and would be quite frightening if it leaped out at you. But having more life than a mere costume, the expression changes as it snarls at you, moving in to strike at you.";
+		say "     Your final blow knocks the stuffing out of the costume creature, as it were, and it collapses to the ground in a heap.";
 
 Section 2 - Creature Insertion
 
@@ -55,7 +52,7 @@ to say PrepCombat_Werewolf Costume:
 	choose row MonsterID from Table of Random Critters;
 	if Player is FemalePreferred:
 		now sex entry is "Female";
-	else if "Herm Preferred" is listed in feats of Player:
+	else if Player is HermPreferred:
 		now sex entry is "Both";
 	else:
 		now sex entry is "Male";
@@ -83,7 +80,7 @@ When Play begins:
 	now attack entry is "[one of]The werewolf costume flails at you with its arms, hard claws scraping you![or]The costume creature throws itself onto you, trying to smother you with its empty body![or]The werewolf mask bites at you![or]The animate costume rubs itself against your groin while its empty limbs wrap around you![at random]"; [ Successful attack message ]
 	now defeated entry is "[beatthemonstercostume]";
 	now victory entry is "[losetomonstercostume]";
-	now desc entry is "[monstercostumedesc]";
+	now desc entry is "     A strange, wobbly creature approaches you. It seems like the werewolf from a cheap horror movie or a haunted house, but deflated and empty inside. It is like an empty costume moving on its own. The limbs flop around some as it moves, the padded, oversized feet dragging against the ground. The sculpted werewolf face is well-molded and would be quite frightening if it leaped out at you. But having more life than a mere costume, the expression changes as it snarls at you, moving in to strike at you.[line break]";
 	now face entry is "like that of a horror movie werewolf. But despite having a fake look, it can move and change expression somewhat as if alive";
 	now body entry is "quite empty and hollow, with floppy and boneless limbs. Your body is padded and shaped to give a powerful form, or it would if it were filled. Even your head feels roomy inside. Your eyes change subtly to allow them to be looked through. As it is, you sag and wobble as you move around. Your hands have become gloves with gnarled fingers ending in sharp claws. Your feet are large, padded costume feet with claws as well. The empty feeling in your body is strange, but you are still able to animate yourself despite your lack of internal content, all your muscles and organs shifting into the padded sections that give your costume body its fearsome shape";
 	now skin entry is "a layer of coarse, dark fur covers your";
@@ -233,8 +230,6 @@ When Play begins:
 	now Clit Size entry is 0; [size 1-5, see Clit Size Adjective]
 	[Clit Size Adjective is generated by a function and can be used in scenes: very small/small/average/large/very large]
 ]
-
-
 
 Section 3 - Endings
 

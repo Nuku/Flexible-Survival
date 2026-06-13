@@ -43,12 +43,9 @@ SexuallyExperienced of Nakoma is true.
 TwistedCapacity of Nakoma is false. [Twisted Characters can take any penetration, no matter the size]
 Sterile of Nakoma is false. [steriles can't knock people up]
 MainInfection of Nakoma is "Black Equinoid".
-Description of Nakoma is "[NakomaDesc]".
-Conversation of Nakoma is { "I like plains." }.
+Description of Nakoma is "     Nakoma is the leader of the equinoid tribe. She is a strikingly beautiful specimen, flaunted a perfectly tended mane and immaculate black fur, the oily hair both rich and lustrous. Wise brown eyes behold you in turn as a welcoming smile creases her muzzle, speaking of intellect beyond that of her kin. Her pert breasts are scarcely concealed by her loose-fitting toga, and her long, muscular legs often show through a part in the fabric. An ornate headdress of carved wood and wire crowns her head, further distinguishing the herm from the rest of her tribe. The only aspect marring her features is a scar on her cheek, although it seems to have healed long ago.[line break]".
+[Conversation of Nakoma is { "I like plains." }.]
 The scent of Nakoma is "     Nakoma smells of grass, milk, and scented oil. A hint of arousal is also present, though it is obfuscated by the other scents which emanate from her fur.".
-
-to say NakomaDesc:
-	say "     Nakoma is the leader of the equinoid tribe. She is a strikingly beautiful specimen, flaunted a perfectly tended mane and immaculate black fur, the oily hair both rich and lustrous. Wise brown eyes behold you in turn as a welcoming smile creases her muzzle, speaking of intellect beyond that of her kin. Her pert breasts are scarcely concealed by her loose-fitting toga, and her long, muscular legs often show through a part in the fabric. An ornate headdress of carved wood and wire crowns her head, further distinguishing the herm from the rest of her tribe. The only aspect marring her features is a scar on her cheek, although it seems to have healed long ago.";
 
 Instead of conversing the Nakoma:
 	say "     You step up to Nakoma and respectfully nod to the tribe's leader, whose muzzle creases in a smile at your reverent approach. 'Hail, [if Player is defaultnamed]warrior[else][name of Player][end if]. What brings you to me?'";
@@ -97,26 +94,28 @@ to say NakomaTalkMenu:
 			choose row calcnumber in table of fucking options;
 			say "[title entry]: [description entry]?";
 			if Player consents:
+				LineBreak;
 				now sextablerun is 1;
-				let nam be title entry;
-				if (nam is "Ask about the tribe's past"):
-					say "[NakomaTalk1]";
-				if (nam is "Ask about her accommodations"):
-					say "[NakomaTalk2]";
-				if (nam is "Ask about Amaryllis"):
-					say "[NakomaTalk3]";
-				if (nam is "Ask about Bryony"):
-					say "[NakomaTalk4]";
-				if (nam is "Volunteer as a guard"):
-					say "[NakomaTalk5]";
+				if title entry is:
+					-- "Ask about the tribe's past":
+						say "[NakomaTalk1]";
+					-- "Ask about her accommodations":
+						say "[NakomaTalk2]";
+					-- "Ask about Amaryllis":
+						say "[NakomaTalk3]";
+					-- "Ask about Bryony":
+						say "[NakomaTalk4]";
+					-- "Volunteer as a guard":
+						say "[NakomaTalk5]";
 				wait for any key;
 				say "[NakomaTalkMenu]";
 		else if calcnumber is 0:
+			LineBreak;
 			now sextablerun is 1;
 			say "     You excuse yourself and step back from Nakoma.";
 			wait for any key;
 		else:
-			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options], or 0 to exit.";
 	clear the screen and hyperlink list;
 
 to say NakomaTalk1:
@@ -136,14 +135,15 @@ to say NakomaTalk4:
 to say NakomaTalk5:
 	if Player is blequinoidbodied:
 		say "     'Ah, so you are interested in doing more than just looking pretty?' the equinoid teases, a playful smile parting her muzzle. 'Mmh, shame, though I won't begrudge you your eagerness. We could always use more guards for the perimeter. In fact, there's a position open right now.' When you ask about the details, Nakoma explains, 'Bryony's old partner was captured during a recent raid on our camp. Since then, she's been guarding the main entrance valiantly, albeit alone. I suggest you provide her some company to help her through these trying times.'";
-		say "     [bold type]Do you accept Nakoma's offer?[roman type][line break]";
-		LineBreak;
+		say "[line break]     [bold type]Do you accept Nakoma's offer?[roman type][line break]";
 		say "     ([link]Y[as]y[end link]) - You look forward to defending the tribe.";
 		say "     ([link]N[as]n[end link]) - You changed your mind and would prefer something else.";
 		if Player consents:
+			LineBreak;
 			say "     You nod in affirmation. Nakoma takes your hands in her own and gives them a gentle squeeze. 'Seeing that you have not yet fully embraced your sisters, I am permitting you the luxury to come and go as you please. I expect you to abide by a more stringent schedule once you cease your wandering ways and settle in with us for good. Please speak with Bryony once you are ready to begin your first shift.'";
 			now HP of Bryony is 1;
 		else:
+			LineBreak;
 			say "     Getting second thoughts, you shake your equine head, much to the tribe leader's amusement. 'Now, now. Not everyone has what it takes for the role. Perhaps you'd be better suited for hunting, or maybe you'd enjoy something more intimate instead?' the gorgeous herm teases, her words making you squirm.";
 	else:
 		say "     'We are not accepting assistance from those who do not look the part,' Nakoma explains. You open your mouth to ask why, but the horse is quick to press a hoof-tipped finger to your lips. The leader leans in close to speak softly into your ear, 'If it appears like we're accepting help from outsiders, then we risk demoralizing our own. This also signals to slaving parties and rival tribes that we're too weak to fend for ourselves, inviting attacks. Best not to risk such a thing,' she explains. You give a gentle nod and drop the subject, reminding yourself to talk to her again later.";

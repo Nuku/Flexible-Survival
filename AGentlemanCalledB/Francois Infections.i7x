@@ -5,35 +5,14 @@ Section 1 - Creature Responses
 
 Cheesecakemode is a number that varies. [1 = slim, 0 = Rubenesque]
 
-to say CheesecakeBodyDesc:
-	if cheesecakemode is 1:
-		say "slim and [if Player is female]feminine[else]girlish[end if], with a tight, attractive figure. A gentle prodding reveals your flesh is soft and malleable, like cheesecake[if Breast Size of Player > 0 and Nipple Count of Player > 0 and player is cheesecakeskinned]. You have a delicious corset made of flaky pastry crust formed tightly around your torso, boosting your breasts up into full view while doing little to protect your decency[else if Player is cheesecakeskinned]. You have a delicious corset made of flaky pastry crust formed tightly around your torso[end if]";
-	else:
-		say "hefty and Rubenesque with a luscious [if Player is female]feminine[else]girlish[end if] figure. A gentle prodding reveals your flesh is soft and malleable, like cheesecake[if Breast Size of Player > 0 and Nipple Count of Player > 0 and player is cheesecakeskinned]. You have a delicious corset made of flaky pastry crust formed tightly around your torso, boosting your breasts up into full view while doing little to protect your decency[else if Player is cheesecakeskinned]. You have a delicious corset made of flaky pastry crust formed tightly around your torso[end if]";
+Section 2 - Creature Insertion
 
-to say CheesecakeBodyTF:
-	if cheesecakemode is 1:
-		say "it becomes soft and malleable, just like cheesecake, shifting to a slender [if Player is female]feminine[else]girlish[end if] form[if Breast Size of Player > 0 and Nipple Count of Player > 0 and player is cheesecakeskinned]. You feel a sudden tightness forming around your body as a tight corset made of flaky pastry forms around you, boosting your breasts up into full view[else if Player is cheesecakeskinned]. You feel a sudden tightness forming around your body as a tight corset made of flaky pastry forms around you[end if]";
-	else:
-		say "it becomes soft and malleable, just like cheesecake. You can't help but moan slightly as your form shifts, becoming plump and curvaceous, leaving you hefty and Rubenesque[if Breast Size of Player > 0 and Nipple Count of Player > 0 and player is cheesecakeskinned]. You feel a sudden tightness forming around your body as a tight corset made of flaky pastry forms around you, boosting your breasts up into full view[else if Player is cheesecakeskinned]. You feel a sudden tightness forming around your body as a tight corset made of flaky pastry forms around you[end if]";
-
-Definition: a person is Cheesecakeskinned:
-	if Player has a skin of "Cheesecake", yes;
-	no;
-
-Definition: a person is Cheesecakebodied:
-	if Player has a body of "Cheesecake", yes;
-	no;
-
-
-Table of CombatPrep (continued)
+[Table of CombatPrep (continued)
 name(text)	PrepFunction(text)
 "Cheesecake"	"[PrepCombat_Cheesecake]"
 
 to say PrepCombat_Cheesecake:
-	say "";
-
-Section 2 - Creature Insertion
+	setmongender 4;]
 
 Table of Random Critters (continued)
 NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
@@ -60,9 +39,9 @@ When Play begins:
 	now skin entry is "smooth, creamy, white and rosy red"; [ Skin. Format as "Looking at yourself, your body is covered in [Skin of Player] skin." ]
 	now tail entry is "[if cheesecakemode is 1]Your petite ass is tight and attractive, yet still soft and grabbable[else]You have a luscious, plump booty[end if]."; [ Ass/Tail. Write as a full sentence (with period) or leave blank for none. ]
 	now cock entry is "strawberry red human"; [ Cock. Format as "You have a 'size' [Cock of Player] cock." ]
-	now face change entry is "it becomes soft and delicate. Your lips become plump and full as they shift to a deep red and thick billows of whipped cream form from the top of your head, framing your face nicely as it descends past your shoulders"; [ Face TF text. Format as "Your face tingles as [face change entry]." ]
+	now face change entry is "it becomes soft and delicate. Your lips become plump and full as they shift to a deep red, and thick billows of whipped cream form from the top of your head, framing your face nicely as it descends past your shoulders"; [ Face TF text. Format as "Your face tingles as [face change entry]." ]
 	now body change entry is "[CheesecakeBodyTF]"; [ Body TF text, format as "Your body tingles as [body change entry]. ]
-	now skin change entry is "it becomes soft and blemish free, shifting to a creamy white with rosy red highlights[if Breast Size of Player > 0 and Nipple Count of Player > 0 and player is cheesecakebodied]. You feel a sudden tightness forming around your body as a tight corset made of flaky pastry forms around you, boosting your breasts up into full view[else if Player is cheesecakebodied]. You feel a sudden tightness forming around your body as a tight corset made of flaky pastry forms around you[end if]"; [ Skin TF text, format as "Your skin tingles as [skin change entry]. ]
+	now skin change entry is "it becomes soft and blemish free, shifting to a creamy white with rosy red highlights[if Breast Size of Player > 0 and player is cheesecakebodied]. You feel a sudden tightness forming around your body as a tight corset made of flaky pastry forms around you, boosting your breasts up into full view[else if Player is cheesecakebodied]. You feel a sudden tightness forming around your body as a tight corset made of flaky pastry forms around you[end if]"; [ Skin TF text, format as "Your skin tingles as [skin change entry]. ]
 	now ass change entry is "it becomes [if cheesecakemode is 1]tight and firm[else]plump and luscious[end if]"; [ Ass/Tail TF text, format as "Your ass tingles as [tail change entry]." ]
 	now cock change entry is "it shifts to a mostly human form, except for the strawberry red color"; [ Cock TF text, format as "Your groin tingles as [cock change entry]." ]
 	now str entry is 12; [ These are now the creature's stats... ]
@@ -93,7 +72,7 @@ When Play begins:
 	now CumItem entry is "cheesecake cum"; [ Item to be given to the player if they have this infection and jerk off. ]
 	now TrophyFunction entry is "-"; [ Function to generate a list of optional loot items, of which the player can choose one after victory. ]
 	now scale entry is 3; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
-	now body descriptor entry is "[if cheesecakemode is 1 and a random chance of 1 in 2 succeeds]slim[else if cheesecakemode is 1]delicate[else if a random chance of 1 in 2 succeeds]plump[else]luscious[end if]"; [ Ex: "plump" "fat" "muscled" "strong" "slimy" "gelatinous" "slender". Use [one of] to vary ]
+	now body descriptor entry is "[if cheesecakemode is 1][one of]slim[or]delicate[at random][else][one of]plump[or]luscious[at random][end if]"; [ Ex: "plump" "fat" "muscled" "strong" "slimy" "gelatinous" "slender". Use [one of] to vary ]
 	now type entry is "cheesecake"; [ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
 	now magic entry is false; [ Is this a magic creature? true/false (normally false) ]
 	now resbypass entry is false; [ Bypasses Researcher bonus? true/false (almost invariably false) ]
@@ -102,43 +81,6 @@ When Play begins:
 	now DayCycle entry is 0; [ 0 = Up at all times; 1 = Diurnal (day encounters only); 2 = Nocturnal (night encounters only);]
 	now altcombat entry is "default";
 	now BannedStatus entry is false;
-
-Table of Game Objects (continued)
-name	desc	weight	object
-"cheesecake milk"	"A plastic water bottle filled with what is clearly milk. One could think it was a regular cow's milk, if someone hadn't written 'Cheesecake Milk' across the label on the bottle. You [italic type]could[roman type] drink it to quench your thirst. Who knows what else it might do to you though..."	1	cheesecake milk
-
-cheesecake milk is a grab object.
-cheesecake milk is milky.
-Purified of cheesecake milk is "distilled milk".
-cheesecake milk is infectious.
-Strain of cheesecake milk is "Cheesecake".
-Usedesc of cheesecake milk is "[cheesecake milk use]".
-
-to say cheesecake milk use:
-	say "     Lifting the plastic bottle to your mouth, you take a drink from it, letting the milk run over your tongue and down your throat. Tastes rich and cream cheese-like. Swishing it around in your mouth a little, you finish the bottle off, then stuff it back into your collection of 'empties'.";
-	PlayerDrink 15;
-
-instead of sniffing cheesecake milk:
-	say "You open the lid for a moment and take a sniff. Smells kinda like any other milk, really.";
-
-Table of Game Objects (continued)
-name	desc	weight	object
-"cheesecake cum"	"A plastic water bottle containing a moderate amount of milky white fluid. Almost could be mistaken for some sort of buttermilk, if someone hadn't written 'Cheesecake Cum' across the label on the bottle. You [italic type]could[roman type] drink it to quench your thirst, or you maybe just do it for fun. Who knows what else it might do to you though..."	1	cheesecake cum
-
-cheesecake cum is a grab object.
-cheesecake cum is cum.
-Purified of cheesecake cum is "distilled cum".
-cheesecake cum is infectious.
-Strain of cheesecake cum is "Cheesecake".
-Usedesc of cheesecake cum is "[cheesecake cum use]".
-
-to say cheesecake cum use:
-	say "     Lifting the plastic bottle to your mouth, you take a drink from it, letting the creamy cum run over your tongue and down your throat. Tastes rich and creamy, with a sweet, cheesy aftertaste. Swishing it around in your mouth a little, you finish the bottle off, then stuff it back into your collection of 'empties'.";
-	PlayerDrink 5;
-	SanLoss 5;
-
-instead of sniffing cheesecake cum:
-	say "You open the lid for a moment and take a sniff. Doesn't smell too bad actually, just kinda sweet.";
 
 [
 Table of New Infection Parts (continued)
@@ -242,6 +184,12 @@ When Play begins:
 	[Clit Size Adjective is generated by a function and can be used in scenes: very small/small/average/large/very large]
 ]
 
+[Table of CombatPrep (continued)
+name(text)	PrepFunction(text)
+"Gingerbread"	"[PrepCombat_Gingerbread]"
+
+to say PrepCombat_Gingerbread:
+	setmongender 3;]
 
 Table of Random Critters (continued)
 NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
@@ -311,43 +259,6 @@ When Play begins:
 	now altcombat entry is "default";
 	now BannedStatus entry is false;
 
-Table of Game Objects (continued)
-name	desc	weight	object
-"gingerbread milk"	"A plastic water bottle filled with what is clearly milk. One could think it was a regular cow's milk, if someone hadn't written 'Gingerbread Milk' across the label on the bottle. You [italic type]could[roman type] drink it to quench your thirst. Who knows what else it might do to you though..."	1	gingerbread milk
-
-gingerbread milk is a grab object.
-gingerbread milk is milky.
-Purified of gingerbread milk is "distilled milk".
-gingerbread milk is infectious.
-Strain of gingerbread milk is "Gingerbread".
-Usedesc of gingerbread milk is "[gingerbread milk use]".
-
-to say gingerbread milk use:
-	say "     Lifting the plastic bottle to your mouth, you take a drink from it, letting the gingerbread milk run over your tongue and down your throat. Tastes rich and sweet, with a gingery aftertaste. Swishing it around in your mouth a little, you finish the bottle off, then stuff it back into your collection of 'empties'.";
-	PlayerDrink 15;
-
-instead of sniffing gingerbread milk:
-	say "You open the lid for a moment and take a sniff. Smells kinda like any other milk, really.";
-
-Table of Game Objects (continued)
-name	desc	weight	object
-"gingerbread cum"	"A plastic water bottle containing a moderate amount of milky white fluid. Almost could be mistaken for some sort of buttermilk, if someone hadn't written 'Gingerbread Cum' across the label on the bottle. You [italic type]could[roman type] drink it to quench your thirst, or you maybe just do it for fun. Who knows what else it might do to you though..."	1	gingerbread cum
-
-gingerbread cum is a grab object.
-gingerbread cum is cum.
-gingerbread cum is infectious.
-Purified of gingerbread cum is "distilled cum".
-Strain of gingerbread cum is "Gingerbread".
-Usedesc of gingerbread cum is "[gingerbread cum use]".
-
-to say gingerbread cum use:
-	say "     Lifting the plastic bottle to your mouth, you take a drink from it, letting the creamy cum run over your tongue and down your throat. Tastes rich and creamy, with a sweet, gingery aftertaste. Swishing it around in your mouth a little, you finish the bottle off, then stuff it back into your collection of 'empties'.";
-	PlayerDrink 5;
-	SanLoss 5;
-
-instead of sniffing gingerbread cum:
-	say "You open the lid for a moment and take a sniff. Doesn't smell too bad actually, just kinda sweet.";
-
 [
 Table of New Infection Parts (continued)
 Species Name	Name	Body Weight	Body Definition	Androginity	Head Change	Head Description	Head Adjective	Head Skin Adjective	Head Color	Head Adornments	Hair Length	Hair Shape	Hair Color	Hair Style	Beard Style	Body Hair Length	Eye Color	Eye Adjective	Mouth Length	Mouth Circumference	Tongue Adjective	Tongue Color	Tongue Length	Torso Change	Torso Description	Torso Adjective	Torso Skin Adjective	Torso Adornments	Torso Color	Torso Pattern	Breast Adjective	Breast Size	Male Breast Size	Nipple Count	Nipple Color	Nipple Shape	Back Change	Back Adornments	Back Skin Adjective	Back Color	Arms Change	Arms Description	Arms Skin Adjective	Arms Color	Locomotion	Legs Change	Legs Description	Legs Skin Adjective	Legs Color	Ass Change	Ass Description	Ass Skin Adjective	Ass Color	Ass Width	Tail Change	Tail Description	tail skin adjective	Tail Color	Asshole Depth	Asshole Tightness	Asshole Color	Cock Change	Cock Description	Cock Adjective	Cock Color	Cock Count	Cock Girth	Cock Length	Ball Description	Ball Count	Ball Size	Cunt Change	Cunt Description	Cunt Adjective	Cunt Color	Cunt Count	Cunt Depth	Cunt Tightness	Clit Size
@@ -450,8 +361,29 @@ When Play begins:
 	[Clit Size Adjective is generated by a function and can be used in scenes: very small/small/average/large/very large]
 ]
 
+to say CheesecakeBodyDesc:
+	if cheesecakemode is 1:
+		say "slim and [if Player is female]feminine[else]girlish[end if], with a tight, attractive figure. A gentle prodding reveals your flesh is soft and malleable, like cheesecake[if Breast Size of Player > 0 and player is cheesecakeskinned]. You have a delicious corset made of flaky pastry crust formed tightly around your torso, boosting your breasts up into full view while doing little to protect your decency[else if Player is cheesecakeskinned]. You have a delicious corset made of flaky pastry crust formed tightly around your torso[end if]";
+	else:
+		say "hefty and Rubenesque with a luscious [if Player is female]feminine[else]girlish[end if] figure. A gentle prodding reveals your flesh is soft and malleable, like cheesecake[if Breast Size of Player > 0 and player is cheesecakeskinned]. You have a delicious corset made of flaky pastry crust formed tightly around your torso, boosting your breasts up into full view while doing little to protect your decency[else if Player is cheesecakeskinned]. You have a delicious corset made of flaky pastry crust formed tightly around your torso[end if]";
 
-Section 3 - Endings
+to say CheesecakeBodyTF:
+	if cheesecakemode is 1:
+		say "it becomes soft and malleable, just like cheesecake, shifting to a slender [if Player is female]feminine[else]girlish[end if] form[if Breast Size of Player > 0 and player is cheesecakeskinned]. You feel a sudden tightness forming around your body as a tight corset made of flaky pastry forms around you, boosting your breasts up into full view[else if Player is cheesecakeskinned]. You feel a sudden tightness forming around your body as a tight corset made of flaky pastry forms around you[end if]";
+	else:
+		say "it becomes soft and malleable, just like cheesecake. You can't help but moan slightly as your form shifts, becoming plump and curvaceous, leaving you hefty and Rubenesque[if Breast Size of Player > 0 and player is cheesecakeskinned]. You feel a sudden tightness forming around your body as a tight corset made of flaky pastry forms around you, boosting your breasts up into full view[else if Player is cheesecakeskinned]. You feel a sudden tightness forming around your body as a tight corset made of flaky pastry forms around you[end if]";
+
+Section 3 - Definitions
+
+Definition: a person is Cheesecakeskinned:
+	if SkinName of Player is "Cheesecake", yes;
+	no;
+
+Definition: a person is Cheesecakebodied:
+	if BodyName of Player is "Cheesecake", yes;
+	no;
+
+Section 4 - Endings
 
 [
 Table of GameEndings (continued)

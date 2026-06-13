@@ -3,7 +3,7 @@ Version 224 of Story Skipper by Core Mechanics begins here.
 [ Version 223.1 - Updated w/Enhanced Chimera material ]
 [ Version 224 - Completely rewritten - Wahn]
 
-Part 0 - Variables
+Chapter 0 - Variables
 
 postimport rules is a rulebook.
 
@@ -33,8 +33,10 @@ The File of NoteSave (owned by another project) is called "FSNoteSave".
 The File of StorageSave (owned by another project) is called "FSStorageSave".
 The File of VialData (owned by another project) is called "FSVialDataSave".
 
+[
 PetList is a list of text that varies.[@Tag:NotSaved] [for stashing the pet objects in the Character Nexus]
-PetList is { "Nullpet", "Latex Vixen", "strange doll", "pink raccoon", "demon brute", "wukong", "human dog", "Retriever Girl", "Rubber Tigress companion", "frost giantess", "Little fox", "skunk kit", "equinoid warrior", "Felinoid Companion", "Cute Crab", "house cat", "Exotic Bird", "helper dog", "Gryphoness", "bee girl", "gshep", "mouse girl", "royal tiger companion", "doberman companion", "demonologist", "Carnivorous Plant", "orc supersized breeder", "Best Wolf", "submissive demonic prince", "White Wolf Zero", "White Wolf One", "White Wolf Two", "White Wolf Three", "White Wolf Four", "White Wolf Five", "White Wolf Six", "White Wolf Seven", "White Wolf Eight", "White Wolf Nine", "White Wolf Ten"};
+PetList is { "Nullpet", "Latex Vixen", "strange doll", "pink raccoon", "demon brute", "wukong", "human dog", "Retriever Girl", "Rubber Tigress companion", "frost giantess", "Little fox", "skunk kit", "equinoid warrior", "Felinoid Companion", "Cute Crab", "house cat", "Exotic Bird", "helper dog", "Gryphoness", "bee girl", "gshep", "mouse girl", "royal tiger companion", "doberman companion", "demonologist", "Carnivorous Plant", "orc supersized breeder", "Best Wolf", "submissive demonic prince", "White Wolf Zero", "White Wolf One", "White Wolf Two", "White Wolf Three", "White Wolf Four", "White Wolf Five", "White Wolf Six", "White Wolf Seven", "White Wolf Eight", "White Wolf Nine", "White Wolf Ten"}.
+]
 
 an everyturn rule:
 	if Player is in NPC Nexus:
@@ -65,6 +67,10 @@ a postimport rule:
 		now CockName of Player is "Skunk Female";
 	if TailName of Player is "Skunk":
 		now TailName of Player is "Skunk Female";
+	[unlock Sinking Swamps for players with City Map feat]
+	if "City Map" is listed in feats of Player:
+		AddNavPoint Sinking Swamps silently;
+		now Strange New Land is resolved;
 	[re-equip weapon wielded during possession import to correct player stats]
 	if weapon object of Player is not journal:
 		repeat with x running through owned armaments:
@@ -81,42 +87,36 @@ a postimport rule:
 [----------------------------------------------------------------------------------]
 
 StashEvent is an action applying to nothing.
-
 understand "StashEvent" as StashEvent.
 
 carry out StashEvent:
 	EventSave;
 
 StashRoom is an action applying to nothing.
-
 understand "StashRoom" as StashRoom.
 
 carry out StashRoom:
 	RoomSave;
 
 StashPossession is an action applying to nothing.
-
 understand "StashPossession" as StashPossession.
 
 carry out StashPossession:
 	PossessionSave;
 
 StashCharacter is an action applying to nothing.
-
 understand "StashCharacter" as StashCharacter.
 
 carry out StashCharacter:
 	CharacterSave;
 
 StashPlayer is an action applying to nothing.
-
 understand "StashPlayer" as StashPlayer.
 
 carry out StashPlayer:
 	PlayerSave;
 
 StashBeast is an action applying to nothing.
-
 understand "StashBeast" as StashBeast.
 
 carry out StashBeast:
@@ -125,55 +125,48 @@ carry out StashBeast:
 [----------------------------------------------------------------------------------]
 
 EventRestoration is an action applying to nothing.
-
 understand "EventLoad" as EventRestoration.
 
 carry out EventRestoration:
 	EventRestore;
 
 RoomRestoration is an action applying to nothing.
-
 understand "RoomLoad" as RoomRestoration.
 
 carry out RoomRestoration:
 	RoomRestore;
 
 PossessionRestoration is an action applying to nothing.
-
 understand "PossessionLoad" as PossessionRestoration.
 
 carry out PossessionRestoration:
 	PossessionRestore;
 
 CharacterRestoration is an action applying to nothing.
-
 understand "CharacterLoad" as CharacterRestoration.
 
 carry out CharacterRestoration:
 	CharacterRestore;
 
 PlayerRestoration is an action applying to nothing.
-
 understand "PlayerRestoration" as PlayerRestoration.
 
 carry out PlayerRestoration:
 	PlayerRestore;
 
 BeastRestoration is an action applying to nothing.
-
 understand "BeastRestoration" as BeastRestoration.
 
 carry out BeastRestoration:
 	BeastRestore;
 
 TraitRestoration is an action applying to nothing.
-
 understand "TraitRestoration" as TraitRestoration.
 
 carry out TraitRestoration:
 	TraitRestore;
 
-Section 1 - Functions
+Chapter 2 - Functions
 
 to EventSave:
 	say "Saving Events...";
@@ -206,12 +199,10 @@ to EventRestore:
 			choose row x in the Table of GameEvents;
 			let EventIdName be Name entry;
 			[bugfixes for renamed events]
-			if EventIdName is "unused tool":
-				now EventIdName is "Unused Tool";
-			if EventIdName is "Destroyed Records":
-				now EventIdName is "Burned Secrets";
-			if EventIdName is "Meeting Orthas":
-				now EventIdName is "Orthas_Meeting";
+			if EventIdName is:
+				-- "unused tool": now EventIdName is "Unused Tool";
+				-- "Destroyed Records": now EventIdName is "Burned Secrets";
+				-- "Meeting Orthas": now EventIdName is "Orthas_Meeting";
 			if there is a name of EventIdName in the Table of GameEventIDs:
 				let EventObject be the object corresponding to a name of EventIdName in the Table of GameEventIDs;
 				if ResolveState entry is "Resolved":
@@ -224,15 +215,13 @@ to EventRestore:
 					if EventObject is active, now EventObject is inactive;
 				if Resolution of EventObject is not Resolution entry, now Resolution of EventObject is Resolution entry;
 				if sarea of EventObject is not SituationArea entry, now sarea of EventObject is SituationArea entry;
-				[bugfix code after re-naming Midway to Fair]
-				if sarea of EventObject is "Midway":
-					now sarea of EventObject is "Fair";
-				[bugfix code for people wrongly assigning "Dry Plains" instead of "Plains"]
-				if sarea of EventObject is "Dry Plains":
-					now sarea of EventObject is "Plains";
-				[bugfix code for people wrongly assigning "Urban Forest" instead of "Forest"]
-				if sarea of EventObject is "Urban Forest":
-					now sarea of EventObject is "Forest";
+				if sarea of EventObject is:
+					-- "Midway": [bugfix code after re-naming Midway to Fair]
+						now sarea of EventObject is "Fair";
+					-- "Dry Plains": [bugfix code for people wrongly assigning "Dry Plains" instead of "Plains"]
+						now sarea of EventObject is "Plains";
+					-- "Urban Forest": [bugfix code for people wrongly assigning "Urban Forest" instead of "Forest"]
+						now sarea of EventObject is "Forest";
 				[
 				if debug is at level 10:
 					say "DEBUG -> [x]: EventIdName: [EventIdName] found and set to: [ResolveState entry], [ActiveState entry], Resolution: [Resolution entry]";
@@ -268,7 +257,7 @@ to RoomSave:
 			now RestSafety entry is "Safe";
 		else:
 			now RestSafety entry is "Unsafe";
-		if the number of entries in Invent of x is not 0:
+		if Invent of x is not empty:
 			repeat with y running from 1 to the number of entries in Invent of x: [rebuilds the table of RoomInventory with current data]
 				choose a blank row in the table of GameRoomInventories;
 				if RoomID of x is "Room": [no specific differing RoomID set -> default to printed name]
@@ -318,12 +307,19 @@ to RoomRestore:
 		read File of RoomInventorySave into the Table of GameRoomInventories;
 		repeat with x running from 1 to the number of filled rows in the Table of GameRoomInventories:
 			choose row x in the Table of GameRoomInventories;
-			if ItemName entry is "Sundered Codex", next; [automatically given on import now, so don't restore it]
+			let ItemIdName be ItemName entry;
+			[some small bugfixes due to items that got renamed]
+			if ItemIdName is:
+				-- "Sundered Codex": next; [automatically given on import now, so don't restore it]
+				-- "sturdy jeans": now ItemIdName is "dark-blue jeans";
+				-- "tenvale gorillas football helmet": now ItemIdName is "tenvale silverbacks football helmet";
+				-- "tenvale gorillas baseball cap": now ItemIdName is "tenvale silverbacks baseball cap";
+				-- "catnip ": now ItemIdName is "catnip";
 			let RoomIdName be RoomName entry;
 			if there is a name of RoomIdName in the Table of GameRoomIDs: [room exists]
 				let RoomObject be the object corresponding to a name of RoomIdName in the Table of GameRoomIDs;
-				if there is a name of ItemName entry in the Table of Game Objects: [item exists]
-					add ItemName entry to Invent of RoomObject;
+				if there is a name of ItemIdName in the Table of Game Objects: [item exists]
+					add ItemIdName to Invent of RoomObject;
 			else:
 				if RoomIdName is not "Lost in the Woods" and RoomIdName is not "Museum interior" and RoomIdName is not "of PAN Frat Second Floor":
 					say "DEBUG -> [x]: RoomIdName: [RoomIdName] not found in Table of GameRoomIDs! Please this message on the FS Discord!";
@@ -335,8 +331,7 @@ to RoomRestore:
 to PossessionSave:
 	say "Saving Possessions...";
 	blank out the whole of Table of GamePossessions; [empty out all old data]
-	repeat with x running from 1 to the number of rows in the Table of Game Objects: [rebuilds the table of GamePossessions with current data]
-		choose row x in the Table of Game Objects;
+	repeat through Table of Game Objects: [rebuilds the table of GamePossessions with current data]
 		let PossessionName be Name entry;
 		let PossessionCarriedNumber be 0;
 		let PossessionStoredNumber be 0;
@@ -375,8 +370,7 @@ to PossessionRestore:
 		now weapon object of Player is pocketknife;
 		unwield pocketknife silently;
 		[wiping out all items from before the import]
-		repeat with x running from 1 to number of filled rows in table of game objects:
-			choose row x from the table of game objects;
+		repeat through Table of Game Objects:
 			if object entry is Equipment:
 				if object entry is equipped, now object entry is not equipped;
 			if carried of object entry > 0, now carried of object entry is 0;
@@ -386,10 +380,12 @@ to PossessionRestore:
 			choose row x in the Table of GamePossessions;
 			let PossessionIdName be Name entry;
 			[some small bugfixes due to items that got renamed]
-			[if PossessionIdName is "earthen seed", now PossessionIdName is "sierrasaur cum";] [never actually renamed]
-			if PossessionIdName is "sturdy jeans", now PossessionIdName is "dark-blue jeans";
-			if PossessionIdName is "tenvale gorillas football helmet", now PossessionIdName is "tenvale silverbacks football helmet";
-			if PossessionIdName is "tenvale gorillas baseball cap", now PossessionIdName is "tenvale silverbacks baseball cap";
+			if PossessionIdName is:
+				[-- "earthen seed": now PossessionIdName is "sierrasaur cum";] [never actually renamed]
+				-- "sturdy jeans": now PossessionIdName is "dark-blue jeans";
+				-- "tenvale gorillas football helmet": now PossessionIdName is "tenvale silverbacks football helmet";
+				-- "tenvale gorillas baseball cap": now PossessionIdName is "tenvale silverbacks baseball cap";
+				-- "catnip ": now PossessionIdName is "catnip";
 			if there is a name of PossessionIdName in the Table of Game Objects:
 				let PossessionObject be the object corresponding to a name of PossessionIdName in the Table of Game Objects;
 				now carried of PossessionObject is CarriedNumber entry;
@@ -518,7 +514,7 @@ to CharacterSave:
 			now SexuallyExperienced entry is SexuallyExperienced of x;
 			now TwistedCapacity entry is TwistedCapacity of x;
 			now Sterile entry is Sterile of x;
-			if the number of entries in Traits of x is not 0:
+			if Traits of x is not empty:
 				repeat with y running from 1 to the number of entries in Traits of x: [rebuilds the table of GameTraits with current data]
 					choose a blank row in the table of GameTraits;
 					now OwnerName entry is CharacterName;
@@ -992,9 +988,8 @@ to TraitRestore:
 	if the File of TraitSave exists:
 		say "Restoring Traits...";
 		read File of TraitSave into the Table of GameTraits;
-		[truncate Feats of Player to 0 entries;]
 		if companionList of Player is not empty, truncate companionList of Player to 0 entries;
-		repeat with y running through persons:[cleaning out the old data]
+		repeat with y running through persons: [cleaning out the old data]
 			if Traits of y is not empty, truncate Traits of y to 0 entries;
 		repeat with x running from 1 to the number of filled rows in the Table of GameTraits:
 			choose row x in the Table of GameTraits;
@@ -1002,13 +997,12 @@ to TraitRestore:
 			if there is a name of TraitOwner in the Table of GameCharacterIDs:
 				let CharacterObject be the object corresponding to a name of TraitOwner in the Table of GameCharacterIDs;
 				if TraitText entry is not listed in Traits of CharacterObject:
-					if TraitText entry is "tamed": [bugfix for the lower case typo]
-						now TraitText entry is "Tamed";
-					add TraitText entry to Traits of CharacterObject;
-					if TraitText entry is "Tamed": [pets]
+					if TraitText entry exactly matches the text "tamed", case insensitively: [pets]
+						now TraitText entry is "Tamed"; [bugfix for the lower case typo]
 						if CharacterObject is not tamed, now CharacterObject is tamed;
-					if TraitText entry is "currentCompanion":
+					else if TraitText entry is "currentCompanion":
 						if CharacterObject is not listed in companionList of Player, add CharacterObject to companionList of Player;
+					add TraitText entry to Traits of CharacterObject;
 					[
 					if debug is at level 10:
 						say "DEBUG -> [x]: Added Trait: '[TraitText entry]' to [TraitOwner].";
@@ -1039,62 +1033,62 @@ to PlayerSave:
 	now Short Breast Size Desc entry is Short Breast Size Desc of Player;
 	now bodydesc entry is bodydesc of Player;
 	now bodytype entry is bodytype of Player;
-	if the number of entries in Tapes of Player is not 0:
+	if Tapes of Player is not empty:
 		repeat with y running from 1 to the number of entries in Tapes of Player:
 			choose a blank row in the table of PlayerLists;
 			now ListName entry is "Tape";
 			now EntryText entry is entry y of Tapes of Player;
-	if the number of entries in Feats of Player is not 0:
+	if Feats of Player is not empty:
 		repeat with y running from 1 to the number of entries in Feats of Player:
 			choose a blank row in the table of PlayerLists;
 			now ListName entry is "Feat";
 			now EntryText entry is entry y of Feats of Player;
-	if the number of entries in OpenQuests of Player is not 0:
+	if OpenQuests of Player is not empty:
 		repeat with y running from 1 to the number of entries in OpenQuests of Player:
 			choose a blank row in the table of PlayerLists;
 			now ListName entry is "OpenQuest";
 			now EntryText entry is entry y of OpenQuests of Player;
-	if the number of entries in CompletedQuests of Player is not 0:
+	if CompletedQuests of Player is not empty:
 		repeat with y running from 1 to the number of entries in CompletedQuests of Player:
 			choose a blank row in the table of PlayerLists;
 			now ListName entry is "CompletedQuest";
 			now EntryText entry is entry y of CompletedQuests of Player;
-	if the number of entries in EncounteredEnemies of Player is not 0:
+	if EncounteredEnemies of Player is not empty:
 		repeat with y running from 1 to the number of entries in EncounteredEnemies of Player:
 			choose a blank row in the table of PlayerLists;
 			now ListName entry is "EncounteredEnemy";
 			now EntryText entry is entry y of EncounteredEnemies of Player;
-	if the number of entries in VirginitiesTaken of Player is not 0:
+	if VirginitiesTaken of Player is not empty:
 		repeat with y running from 1 to the number of entries in VirginitiesTaken of Player:
 			choose a blank row in the table of PlayerLists;
 			now ListName entry is "VirginitiesTaken";
 			now EntryText entry is entry y of VirginitiesTaken of Player;
-	if the number of entries in AnalVirginitiesTaken of Player is not 0:
+	if AnalVirginitiesTaken of Player is not empty:
 		repeat with y running from 1 to the number of entries in AnalVirginitiesTaken of Player:
 			choose a blank row in the table of PlayerLists;
 			now ListName entry is "AnalVirginitiesTaken";
 			now EntryText entry is entry y of AnalVirginitiesTaken of Player;
-	if the number of entries in OralVirginitiesTaken of Player is not 0:
+	if OralVirginitiesTaken of Player is not empty:
 		repeat with y running from 1 to the number of entries in OralVirginitiesTaken of Player:
 			choose a blank row in the table of PlayerLists;
 			now ListName entry is "OralVirginitiesTaken";
 			now EntryText entry is entry y of OralVirginitiesTaken of Player;
-	if the number of entries in PenileVirginitiesTaken of Player is not 0:
+	if PenileVirginitiesTaken of Player is not empty:
 		repeat with y running from 1 to the number of entries in PenileVirginitiesTaken of Player:
 			choose a blank row in the table of PlayerLists;
 			now ListName entry is "PenileVirginitiesTaken";
 			now EntryText entry is entry y of PenileVirginitiesTaken of Player;
-	if the number of entries in BlockList of Player is not 0:
+	if BlockList of Player is not empty:
 		repeat with y running from 1 to the number of entries in BlockList of Player:
 			choose a blank row in the table of PlayerLists;
 			now ListName entry is "BlockList";
 			now EntryText entry is entry y of BlockList of Player;
-	if the number of entries in WardList of Player is not 0:
+	if WardList of Player is not empty:
 		repeat with y running from 1 to the number of entries in WardList of Player:
 			choose a blank row in the table of PlayerLists;
 			now ListName entry is "WardList";
 			now EntryText entry is entry y of WardList of Player;
-	if the number of entries in BanList of Player is not 0:
+	if BanList of Player is not empty:
 		repeat with y running from 1 to the number of entries in BanList of Player:
 			choose a blank row in the table of PlayerLists;
 			now ListName entry is "BanList";
@@ -1294,8 +1288,7 @@ to PlayerRestore:
 			if x is banned, now x is not banned;
 		say "Restoring Player Lists...";
 		read File of PlayerListsSave into the Table of PlayerLists;
-		repeat with y running from 1 to the number of filled rows in the Table of PlayerLists:
-			choose row y in the Table of PlayerLists;
+		repeat through Table of PlayerLists:
 			if ListName entry is:
 				-- "Vial":
 					VialGain EntryText entry by 1 silently;
@@ -1524,8 +1517,7 @@ to BeastSave:
 	blank out the whole of Table of GameBeastVariables; [empty out all old data]
 	if number of rows in Table of Random Critters > number of rows in the Table of GameBeastVariables: [making sure we got enough room for all situations]
 		say "Error! Not enough rows to save all Beasts in the Table of GameBeastVariables. Please report this on the FS Discord.";
-	repeat with x running from 1 to the number of filled rows in the Table of Random Critters: [rebuilds the table of GameBeastVariables with current data]
-		choose row x in the Table of Random Critters;
+	repeat through Table of Random Critters: [rebuilds the table of GameBeastVariables with current data]
 		let BeastName be Name entry;
 		let BeastArea be Area entry;
 		let BeastNonInfect be non-infectious entry;
@@ -1556,22 +1548,21 @@ to BeastRestore:
 			let BeastSex be sex entry;
 			let BeastType be enemy type entry;
 			[some small bugfixes due to renamed creatures]
-			if Beastname is "dullahan", now Beastname is "Dullahan";
-			if Beastname is "Ogre", now Beastname is "Ogre Male";
-			if Beastname is "Elven Hunter", now Beastname is "Elven Male";
-			if Beastname is "rubber tigress", now Beastname is "Rubber Tigress";
-			[if Beastname is "Rubber Tigress", now Beastname is "Rubber Tigress";]
-			if Beastname is "Football Gorilla", now Beastname is "Football Gorilla Male";
-			if Beastname is "Feral Wolf", now Beastname is "Feral Wolf Male";
-			if Beastname is "Skunk", now Beastname is "Skunk Female";
-			if there is a Name of BeastName in the Table of Random Critters:
-				choose row with Name of BeastName in Table of Random Critters;
+			if Beastname in lower case is:
+				-- "dullahan": now Beastname is "Dullahan";
+				-- "ogre": now Beastname is "Ogre Male";
+				-- "elven hunter": now Beastname is "Elven Male";
+				-- "rubber tigress": now Beastname is "Rubber Tigress";
+				-- "football gorilla": now Beastname is "Football Gorilla Male";
+				-- "feral wolf": now Beastname is "Feral Wolf Male";
+				-- "skunk": now Beastname is "Skunk Female";
+			if BeastName is a Name listed in Table of Random Critters:
 				if Area entry is not BeastArea, now Area entry is BeastArea;
-				[bugfix code after re-naming Midway to Fair]
-				if Area entry is "Midway":
-					now Area entry is "Fair";
-				if Area entry is "High Rise": [furbolg content bugfix]
-					now Area entry is "High";
+				if Area entry is:
+					-- "Midway": [bugfix code after re-naming Midway to Fair]
+						now Area entry is "Fair";
+					-- "High Rise": [furbolg content bugfix]
+						now Area entry is "High";
 				if non-infectious entry is not BeastNonInfect, now non-infectious entry is BeastNonInfect;
 				if sex entry is not BeastSex, now sex entry is BeastSex;
 				if enemy type entry is not BeastType, now enemy type entry is BeastType;
@@ -1591,8 +1582,7 @@ to BeastRestore:
 			let BeastArea be Area entry;
 			let BeastNonInfect be non-infectious entry;
 			let BeastSex be sex entry;
-			if there is a Name of BeastName in the Table of Random Critters:
-				choose row with Name of BeastName in Table of Random Critters;
+			if BeastName is a Name listed in Table of Random Critters:
 				if Area entry is not BeastArea, now Area entry is BeastArea;
 				[bugfix code after re-naming Midway to Fair]
 				if Area entry is "Midway":
@@ -1644,8 +1634,7 @@ to BanListRestore:
 	say "Restoring Ban Lists...";
 	if clearnomore is 0, clear the screen;
 	if "Imported" is not listed in WardList of Player or "Imported" is not listed in BanList of Player: [exported from older version]
-		LineBreak;
-		say "     Content banning and warding information wasn't found in the imported data. You can choose to pick new restrictions to remove enemies and events from the game. [bold type]Note that previously banned events have remained banned after import and will be cumulative with any bans you choose now.[roman type][line break]";
+		say "[line break]     Content banning and warding information wasn't found in the imported data. You can choose to pick new restrictions to remove enemies and events from the game. [bold type]Note that previously banned events have remained banned after import and will be cumulative with any bans you choose now.[roman type][line break]";
 		say "     [bold type]Pick content restrictions?[roman type][line break]";
 		if Player consents:
 			if clearnomore is 0, clear the screen;
@@ -1653,15 +1642,14 @@ to BanListRestore:
 	else: [exported from current or later version]
 		remove "Imported" from WardList of Player;
 		remove "Imported" from BanList of Player;
-		if number of entries in WardList of Player > 0:
+		if WardList of Player is not empty:
 			repeat with x running from 1 to number of entries in WardList of Player:
 				oldflagward entry x of WardList of Player; [ward flags/tags that player chose before export]
-		if number of entries in BanList of Player > 0:
+		if BanList of Player is not empty:
 			repeat with x running from 1 to number of entries in BanList of Player:
 				oldflagban entry x of BanList of Player; [ban flags/tags that player chose before export]
 	if number of warded flags > 0 or number of banned flags > 0 or number of warded tags > 0 or number of banned tags > 0:
 		startcreatureban; [re-run the ban action to disable blocked creatures/situations]
-
 
 to RunPostImportRules:
 	say "Running Post Import Rules...";
@@ -1669,17 +1657,16 @@ to RunPostImportRules:
 	if clearnomore is 0, clear the screen;
 	follow the postimport rules;
 
-Section 2 - Trixie
+Chapter 3 - Trixie
 
-understand "export progress" as ProgressExport.
 ProgressExport is an action applying to nothing.
+understand "export progress" as ProgressExport.
 
 Carry out ProgressExport:
 	say "[ProgressionExport]";
 
 To say ProgressionExport:
-	say "     [bold type]Do you really want to start the export process?[roman type][line break]";
-	LineBreak;
+	say "[line break]     [bold type]Do you really want to start the export process?[roman type][line break]";
 	say "     ([link]Y[as]y[end link]) - Sure, I'll wait a minute (or five) to write files containing my progress!";
 	say "     ([link]N[as]n[end link]) - Erh, not right now.";
 	if Player consents:
@@ -1704,12 +1691,11 @@ To SaveEverything:
 	StorageSave;
 	VariableSave;
 
-understand "Import Progress" as ProgressImport.
 ProgressImport is an action applying to nothing.
+understand "Import Progress" as ProgressImport.
 
 Carry out ProgressImport:
-	say "     [bold type]Do you really want to start the import process?[roman type][line break]";
-	LineBreak;
+	say "[line break]     [bold type]Do you really want to start the import process?[roman type][line break]";
 	say "     ([link]Y[as]y[end link]) - Sure, I'll wait a minute (or ten) to reclaim my progress!";
 	say "     ([link]N[as]n[end link]) - Erh, not right now.";
 	if Player consents:
@@ -1732,6 +1718,7 @@ to say ProgressionImport:
 	VariableLoad;
 	BanListRestore;
 	RunPostImportRules;
+	LineBreak;
 	try looking; [start the player off in their new playthrough]
 
 Table of GameCharacterIDs (continued)
@@ -1739,16 +1726,13 @@ object	name
 Trixie	"Trixie"
 
 Trixie is a person. Trixie is in Grey Abbey Library.
-
 The scent of Trixie is "     Trixie smells of broken universes and rewritten fate. How anything can smell like that or how you can even know that smell disturbs you to your very core.".
-
 Description of Trixie is "[Trixiedesc]".
+Conversation of Trixie is { "Hello. I will teach you a magic word. To use it, just stand in front of me after [bold type]starting a new game[roman type] and [link]Import Progress[end link]. This will let you bend time and probability, returning you to the condition you were in when made the magic word... mostly. I will do my best, but my powers are not infinite. Also, I'm [']Out of Character['], so you really don't see me. Confused yet? Good!" }.
 
 to say Trixiedesc:
 	say "     Look, it's Trixie, the story fairy! She's about three inches tall, large for her particular breed. She has bright reddish-purple hair and smooth brown skin. Wielded in her right hand is a relatively large wand of old world oak with a great fancy bauble at the end that looks like a cutely renditioned skunk girl head, grinning at you no matter what angle you view it from. Trixie is well shaped, with, relative to the rest of her mass, B cup breasts and wide hips. Her feet are covered in shimmering gold sandals of sorts. Her chest is covered in a t-shirt that reads 'Support us at: https://patreon.com/FS'[line break]";
 	say "     Trixie's got a button on her t-shirt that says 'Cheaters type [link]iwannacheat[end link]' on it, and a second one that says 'Check out the [link]artwork credits[end link]'. Hmmm.";
 	say "     She's also got a ballcap on that says 'Using [link]Export Progress[end link] will save your progress for transfer to a new game version. [link]Import Progress[end link] should restore everything in the new version.' That's a lot to put on a ballcap that small, but for some reason you're able to read it all easily.";
-
-Conversation of Trixie is { "Hello. I will teach you a magic word. To use it, just stand in front of me after [bold type]starting a new game[roman type] and [link]Import Progress[end link]. This will let you bend time and probability, returning you to the condition you were in when made the magic word... mostly. I will do my best, but my powers are not infinite. Also, I'm [']Out of Character['], so you really don't see me. Confused yet? Good!" }.
 
 Story Skipper ends here.

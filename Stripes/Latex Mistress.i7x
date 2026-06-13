@@ -8,13 +8,13 @@ Section 1 - Creature Responses
 
 to say losetolatexmistress:
 	if a random chance of 1 in 2 succeeds:
-		say "     Having beaten you, this latex mistress pushes you roughly to the ground and grabs your head. Pinching your ear (or the closest equivalent thereof), she forces you between her latex-clad thighs and presses your face to her crotch[if HP of Player > 0]. You need no further direction, but she still twists her fingers painfully and orders you to start licking[else]. Twisting her fingers painfully, she orders you to start licking[end if]. With a close-up view, you can see the that latex kinkwear opens across her mons, but is all part of her flesh. But even her bare pussy isn't normal, having black latex folds and dripping rubbery scented juices. That scent is strangely arousing and you take a deep whiff of it.";
+		say "     Having beaten you, this latex mistress pushes you roughly to the ground and grabs your head. Pinching your ear (or the closest equivalent thereof), she forces you between her latex-clad thighs and presses your face to her crotch. [if HP of Player > 0]You need no further direction, but she still twists her fingers painfully and[else]Twisting her fingers painfully, she[end if] orders you to start licking. With a close-up view, you can see the that latex kinkwear opens across her mons, but is all part of her flesh. But even her bare pussy isn't normal, having black latex folds and dripping rubbery scented juices. That scent is strangely arousing and you take a deep whiff of it.";
 		if wslevel > 1 and a random chance of ( wslevel * wslevel ) in 12 succeeds:
 			say "     Getting whipped for the delay, you groan and start lapping across her clit. You run your tongue up and down those quivering lips and delve into her dark tunnel. Deciding to punish you for your delay, she grabs the back of your head with her free hand and holds you in place as she releases her bladder. You cough and sputter as that acrid fluid soaks your face and flows into your mouth. With another blow, she orders you to drink, so you find yourself licking across her pee hole and drinking her piss. It has a strong aftertaste of latex to it that clings to your tongue.";
 			say "     When the flow stops, she orders you back to licking, which you do eagerly, if for nothing else than to try and get that taste out of your mouth... or perhaps to get more of it, part of your confused mind thinks. As you eat her out, you get struck several more times and ordered to go faster, slower or deeper, or to suck her clit, or any other thing she desires of you. And you obey, moaning softly as the pain and pleasure blur. Eventually, your obedient licking pays off, your mistress flogging you hard as she cries out in orgasmic bliss. When she pushes you away, you tumble onto the ground, too sore from the whipping to rise. She grinds her heel down onto your shoulder, calling you a good slave. Reeking of her scent, you can't help but smile before passing out, having been complimented by your dark mistress.";
 			if FaceName of Player is not "Latex Mistress":		[WS results in face TF]
 				choose row MonsterID from the Table of Random Critters;
-				say " Your face [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [face change entry].";
+				say "[line break]Your face [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [face change entry].";
 				now FaceName of Player is Name entry;
 				now Face of Player is face entry;
 		else:
@@ -28,28 +28,27 @@ to say losetolatexmistress:
 
 to say beatthelatexmistress:
 	let ltxmscene be 0;
-	say "     Your final blow knocks the latex mistress to her knees and causes her to drop her dark whip. She moans softly as you grab onto her by the shoulder and ";
 	if Libido of Player < 25 or ( Player is neuter ):
-		say "push her to the ground. With your foot pressed between this latex woman's shoulders, you growl at her to not mess with you in the future or you'll punish her more severely. You only let her rise once she moans that she's learned her lesson. When you release her, she grabs her latex whip, which was already starting to melt away, and runs off in search of easier prey to dominate.";
+		say "     Your final blow knocks the latex mistress to her knees and causes her to drop her dark whip. She moans softly as you grab onto her by the shoulder and push her to the ground. With your foot pressed between this latex woman's shoulders, you growl at her to not mess with you in the future or you'll punish her more severely. You only let her rise once she moans that she's learned her lesson. When you release her, she grabs her latex whip, which was already starting to melt away, and runs off in search of easier prey to dominate.";
 	else:
-		say "consider your options. It might be fun to dominate the would-be dominatrix. Shall you ";
 		if Player is not male:
-			say "     [bold type]make her lick your pussy or let her go?[roman type][line break]";
-			LineBreak;
-			say "     ([link]Y[as]y[end link]) - Lick your pussy.";
+			say "     Your final blow knocks the latex mistress to her knees and causes her to drop her dark whip. She moans softly as you grab onto her by the shoulder and consider your options. It might be fun to dominate the would-be dominatrix. Shall you make her [link]lick your pussy (Y)[as]y[end link] or [link]let her go (N)[as]n[end link]?";
+			say "     ([link]Y[as]y[end link]) - Make her lick your pussy.";
 			say "     ([link]N[as]n[end link]) - Let her go.";
 			if Player consents:
 				now ltxmscene is 3;
 			else:
 				now ltxmscene is 99;
+			LineBreak;
 		else:
-			say "[link]fuck her (1)[as]1[end link], [link]make her suck you off (2)[as]2[end link] or [link]let her go (3)[as]3[end link]?";
+			say "     Your final blow knocks the latex mistress to her knees and causes her to drop her dark whip. She moans softly as you grab onto her by the shoulder and consider your options. It might be fun to dominate the would-be dominatrix. Shall you [link]fuck her (1)[as]1[end link], [link]make her suck you off (2)[as]2[end link] or [link]let her go (3)[as]3[end link]?";
 			now calcnumber is 0;
 			while calcnumber < 1 or calcnumber > 3:
 				say "Choice? (1-3)>";
 				get a number;
 				if calcnumber < 1 or calcnumber > 3:
 					say "Invalid choice. Pick from 1 to 3.";
+			LineBreak;
 			if calcnumber is 1:
 				now ltxmscene is 1;
 			else if calcnumber is 2:
@@ -62,13 +61,10 @@ to say beatthelatexmistress:
 		say "     Pushing the latex woman to her knees, you press her face to your loins and rub your erection against her smooth latex mask, dribbling streaks of pre across it. Holding her head firmly, you order her to start sucking you like a good slave, which she makes a show of resisting at first, but soon has her mouth eagerly around your shaft and bobbing up and down over it. You continue to treat her like a sex object, much to her obvious delight given the increasing response of her mouth and tongue over your pulsing shaft. When her eager sucking finally pushes you over the edge, you [one of]grab her head tightly and push your cock down her throat, blasting your hot load into her[or]push her head back and spray your hot load across her latex masked face, coating the black material in streaks of semen[purely at random]. Once done, you push her away roughly and send her on her way.";
 	else if ltxmscene is 3:
 		say "     Pushing the latex woman to her knees, you press her face to your loins and rub your wet folds against the smooth, cool latex mask, leaving streaks of your juices across it. Holding her head firmly, you order her to start licking like a good slave, which she makes a show of resisting at first, but soon has her mouth eagerly pressed to your pussy and her adept tongue diving into your cunt. You continue to treat her like a sex object, much to her obvious delight given the increasing zeal of her tonguework. When her eager lapping finally pushes you over the edge, you grab her head tightly and cum hard, soaking her mouth in your hot juices so they flow down her chin and across her smoothly skinned body. Finished with her now, you push her away roughly and send her on her way.";
-	else if ltxmscene is 99:
+	else:
 		say "     You push her to the ground and press your heel between the latex woman's shoulders. With her pinned underheel, you growl at her to not mess with you in the future or you'll punish her more severely. You only let her rise once she moans that she's learned her lesson. When you release her, she grabs her latex whip, which was already starting to melt away, and runs off in search of easier prey to dominate.";
 
 Section 2 - Creature Insertion
-
-to say latexmistressdesc:
-	say "     You are faced with a strange latex-bound person. While looking quite human beneath the black latex suit, this covers her entirely and seems to be bonded to her or may even be completely a part of her flesh. Her head is covered completely in a black mask with only her eyes and mouth visible behind it. Her body, arms and legs are completely covered by the skin-tight latex. Even her hands are covered in claw-tipped gloves and her feet in boots with a six inch platform and a nine inch heel. These, like the rest of the latex seem melded into the suit and part of the seamless whole. The only other openings are those giving access to her wet pussy and tight anus. She looks you over for a moment, rubbing the handle of her whip across her pussy and licking her lips slowly. She then gives the whip a meaningful crack and moves in to attack you.";
 
 Table of CombatPrep (continued)
 name(text)	PrepFunction(text)
@@ -95,7 +91,7 @@ When Play begins:
 	now attack entry is "The [one of]Latex Mistress[or]strange dominatrix[or]latex-clad woman[at random] [one of]strikes you with her whip[or]lashes you with her whip[or]whips around your ankle and pulls you over[or]slashes at you with her small claws when you get too close[at random].";
 	now defeated entry is "[beatthelatexmistress]";
 	now victory entry is "[losetolatexmistress]";
-	now desc entry is "[latexmistressdesc]"; [ Description of the creature when you encounter it.]
+	now desc entry is "     You are faced with a strange latex-bound person. While looking quite human beneath the black latex suit, this covers her entirely and seems to be bonded to her or may even be completely a part of her flesh. Her head is covered completely in a black mask with only her eyes and mouth visible behind it. Her body, arms and legs are completely covered by the skin-tight latex. Even her hands are covered in claw-tipped gloves and her feet in boots with a six inch platform and a nine inch heel. These, like the rest of the latex seem melded into the suit and part of the seamless whole. The only other openings are those giving access to her wet pussy and tight anus. She looks you over for a moment, rubbing the handle of her whip across her pussy and licking her lips slowly. She then gives the whip a meaningful crack and moves in to attack you.[line break]"; [ Description of the creature when you encounter it.]
 	now face entry is "[one of]covered completely[or]completely wrapped[or]concealed[at random] in a black latex mask[if the player is ltxmskinned] that is attached seamlessly to the black latex covering your body[end if]. At the front of your face are solid black eyes that seem to blink even thought they are part of the mask. Your mouth is usually shut, seeming to be part of the mask until it moves, [one of]stretching open[or]opening up[at random] along the mask around it when you talk or eat";
 	now body entry is "human in shape with possessing the build of a strong, powerful female. Your hands and feet are encased in black latex formed into gloves and boots that are a part of you[if Player is ltxmskinned] and blend seamlessly into your latex skinsuit[end if]. These gloves are tipped with small claws at their fingertips and the boots have a high platform and a higher heel, making you seem latter and more imposing";
 	now skin entry is "solid black [one of]rubber[or]latex[at random]";
@@ -246,8 +242,6 @@ When Play begins:
 	[Clit Size Adjective is generated by a function and can be used in scenes: very small/small/average/large/very large]
 ]
 
-
-
 Section 3 - Definitions
 
 Definition: a person is ltxmfaced:
@@ -270,9 +264,9 @@ Definition: a person is ltxmtailed:
 	if TailName of Player is "Latex Mistress", yes;
 	no;
 
-[
 Section 4 - Endings
 
+[
 Table of GameEndings (continued)
 Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
 "Latex Mistress Infection"	"Infection"	""	Latex Mistress Infection rule	1000	false

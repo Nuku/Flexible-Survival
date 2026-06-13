@@ -41,6 +41,7 @@ Hidden Kitty	"Hidden Kitty"
 Hidden Kitty is a situation.
 ResolveFunction of Hidden Kitty is "[ResolveEvent Hidden Kitty]". The level of Hidden Kitty is 5.
 Sarea of Hidden Kitty is "Red".
+
 when play begins:
 	add Hidden Kitty to BadSpots of MaleList;
 	add Hidden Kitty to BadSpots of FurryList;
@@ -49,8 +50,7 @@ to say ResolveEvent Hidden Kitty:
 	now lastSvendrink is turns + 8;
 	say "     While exploring in one of the older residential areas at the edge of this seedy district of town, you spot the flash of white and gray as something dashes down the steps and quickly shuts the basement door behind it. You catch sight of someone nervously glancing out from behind the curtains covering the basement window, watching you. As this is atypical behavior for someone who's succumbed, you're hopeful that this is a survivor. You wave and head cautiously to the door, trying to look non-threatening while remaining at the ready. You knock and assure them that you are still sane and want to help. It takes a while, always unsure if they're even listening as you can't risk yelling and drawing any infected to the house.";
 	say "     Eventually, it seems you are able to convince him and he opens the door to his small, basement apartment. As you look the young man over, he wrings his fluffy tail in his hands. The tail is a snowy white with gray and black leopard spots. He has a pair of feline ears poking out from his long, blond hair. For a tall, well-built fellow, he seems very timid and nervous as he shyly invites you in before quickly glancing around and then closing the door again. He speaks with a noticeable Nordic accent.";
-	wait for any key;
-	LineBreak;
+	WaitLineBreak;
 	move player to Sven's Place;
 	AddNavPoint Sven's Place;
 	now battleground is "void";
@@ -62,22 +62,14 @@ Object	Name
 Sven's Place	"Sven's Place"
 
 Sven's Place is a room. It is fasttravel. It is private.
-Description of Sven's Place is "[SvenPlaceDesc]".
-
-the scent of Sven's Place is "The small basement apartment smells faintly of mold and snow leopard from its [if HP of Sven > 3]former [end if]occupant[if HP of Sven is 99]. The scent of snow leopard sex from the cum is strong[end if].".
-
-to say SvenPlaceDesc:
-	if HP of Sven < 4: [Sven still at home]
-		say "     Hidden beneath one of the many homes in this neighborhood, Sven's basement apartment has avoided scrutiny by the lustful hordes outside for the moment. The rundown place has little furniture and fewer supplies. It seems whatever stores the young man had are almost gone. The apartment is tidy enough, with most of the mess coming from his confinement while hiding and not from slovenliness. The place is made up of a small kitchen, a smaller bathroom and one small bedroom.";
-	else if HP of Sven > 3 and HP of Sven < 99: [Sven left]
-		say "     Hidden beneath one of the many homes in this neighborhood, Sven's basement apartment has been broken into and the door smashed. The rundown place has little furniture and no remaining supplies. It seems he's taken what little stores he had with him. The apartment is tidy enough, with most of the mess coming from his confinement while hiding and not from slovenliness. The place is made up of a small kitchen, a smaller bathroom and one small bedroom.";
-	else if HP of Sven is 99: [Sven was taken]
-		say "     Hidden beneath one of the many homes in this neighborhood, Sven's basement apartment has been broken into and the door smashed. The rundown place has little furniture and no more supplies. The place is quite the mess now, with the two snow leopards using it as a cool place to rut. Their scent is strong in the air and there are cum stains everywhere, especially in the bedroom. There is no longer a reason to come here.";
-	else if HP of Sven is 100: [Sven lost in the city]
-		say "     Hidden beneath one of the many homes in this neighborhood, Sven's basement apartment has avoided scrutiny by the lustful hordes outside for the moment. The rundown place has little furniture and no more supplies. It seems whatever stores the young man had ran out and he went off into the city and hasn't returned. There is no longer a reason to come here.";
-
+Description of Sven's Place is "     Hidden beneath one of the many homes in this neighborhood, Sven's basement apartment has [if HP of Sven < 4]avoided scrutiny by the lustful hordes outside for the moment. The rundown place has little furniture and fewer supplies. It seems whatever stores the young man had are almost gone. The apartment is tidy enough, with most of the mess coming from his confinement while hiding and not from slovenliness. The place is made up of a small kitchen, a smaller bathroom and one small bedroom[else if HP of Sven < 99]been broken into and the door smashed. The rundown place has little furniture and no remaining supplies. It seems he's taken what little stores he had with him. The apartment is tidy enough, with most of the mess coming from his confinement while hiding and not from slovenliness. The place is made up of a small kitchen, a smaller bathroom and one small bedroom[else if HP of Sven is 99]been broken into and the door smashed. The rundown place has little furniture and no more supplies. The place is quite the mess now, with the two snow leopards using it as a cool place to rut. Their scent is strong in the air and there are cum stains everywhere, especially in the bedroom. There is no longer a reason to come here[else]avoided scrutiny by the lustful hordes outside for the moment. The rundown place has little furniture and no more supplies. It seems whatever stores the young man had ran out and he went off into the city and hasn't returned. There is no longer a reason to come here[end if].[line break]".
+the scent of Sven's Place is "     The small basement apartment smells faintly of mold and snow leopard from its [if HP of Sven > 3]former [end if]occupant[if HP of Sven is 99]. The scent of snow leopard sex from the cum is strong[end if].".
 
 Section 2 - Sven the Snowmeow
+
+lastSvendrink is a number that varies. lastSvendrink is usually 555.
+SvenCandyMsg is a number that varies. SvenCandyMsg is usually 0.
+SvenStory1 is a truth state that varies. SvenStory1 is usually false.
 
 Table of GameCharacterIDs (continued)
 object	name
@@ -123,25 +115,23 @@ TwistedCapacity of Sven is false. [Twisted Characters can take any penetration, 
 Sterile of Sven is false. [steriles can't knock people up]
 MainInfection of Sven is "Snow Leopard".
 Description of Sven is "[SvenDesc]".
-Conversation of Sven is { "Mew!" }.
+[Conversation of Sven is { "Mew!" }.]
+the fuckscene of Sven is "[SexWithSven]".
 The scent of Sven is "[SvenScent]".
-lastSvendrink is a number that varies. lastSvendrink is usually 555.
-SvenCandyMsg is a number that varies. SvenCandyMsg is usually 0.
-SvenStory1 is a truth state that varies. SvenStory1 is usually false.
 
 to say SvenScent:
 	if HP of Sven < 5 or HP of Sven is 50: [no sex yet, not fully transformed]
-		say "Sven smells faintly of male snow leopard and growing arousal.";
+		say "     Sven smells faintly of male snow leopard and growing arousal.";
 	else if HP of Sven < 8: [sexed up]
-		say "Sven smells increasingly of male snow leopard and sex.";
+		say "     Sven smells increasingly of male snow leopard and sex.";
 	else if HP of Sven < 30 and lust of Sven is 1: [Sven + Candy]
-		say "Sven smells like a male snow leopard and heavily of sex[if HP of Sven is 8]. Your scent is mixed in with his[else]. Aside from your scent all over him, there's a hint of cotton candy sweetness from his raccoon playmate[end if].";
+		say "     Sven smells like a male snow leopard and heavily of sex. [if HP of Sven is 8]Your scent is mixed in with his[else]Aside from your scent all over him, there's a hint of cotton candy sweetness from his raccoon playmate[end if].";
 	else if HP of Sven < 30 and lust of Sven is 2: [Sven + Candy]
-		say "Sven smells like a male snow leopard and heavily of sex[if HP of Sven is 8]. He is marked quite thoroughly with your scent from all your messy fun with the kitty[else]. Aside from your scent all over him, there's a hint of cotton candy sweetness from his raccoon playmate[end if].";
+		say "     Sven smells like a male snow leopard and heavily of sex. [if HP of Sven is 8]He is marked quite thoroughly with your scent from all your messy fun with the kitty[else]Aside from your scent all over him, there's a hint of cotton candy sweetness from his raccoon playmate[end if].";
 	else if HP of Sven < 50: [transformed]
-		say "Sven smells of male snow leopard and growing arousal.";
+		say "     Sven smells of male snow leopard and growing arousal.";
 	else if HP of Sven is 51: [settling in at the porn store]
-		say "Sven smells faintly of snow leopard, mouse and sex. There's a mix of male and female scents over him, lingering from his fun with Lisa.";
+		say "     Sven smells faintly of snow leopard, mouse and sex. There's a mix of male and female scents over him, lingering from his fun with Lisa.";
 
 to say SvenDesc:
 	if HP of Sven < 4: [still at his place]
@@ -151,7 +141,7 @@ to say SvenDesc:
 	else if HP of Sven is 5: [pet Sven - player fucked him]
 		project the Figure of Sven_tail_icon;
 		say "     Sven has gained a little more fur after his first bout of fun with you. He still has his long, blond hair and blue eyes, though his face is a little more feline in shape. His feline ears poke from his golden hair. He pets and strokes his fluffy, snow leopard tail with furry paws now. He speaks in a soft, shy voice with a Scandinavian accent. He has a light t-shirt and shorts on and seems more comfortable in the much cooler underground bunker now that he's here, though his clothes seem a little looser on him now.";
-	else if HP of Sven is 6 or HP of Sven is 7: [pet Sven - collar quest]
+	else if HP of Sven < 8: [pet Sven - collar quest]
 		project the Figure of Sven_naked_icon;
 		say "     Sven is fully covered in a soft pelt of snow leopard fur. It's clear he's gotten shorter as well, roughly of average height now, though it's hard to tell with the infection throwing off your sense of scale at times. He still has his long, blond hair, blue eyes and a few traces of his human face remaining, but it is mostly feline now. His feline ears poke from his golden hair. Despite his feline muzzle, he still speaks in a soft, shy voice with a Scandinavian accent. It seems he's decided to stop wearing clothes at all now that he's got a coat of fur instead. He grooms it often, keeping it soft and beautiful. He still tries to cover himself up with his tail from time to time, but will give you blushing glances or a flash of his erect cock behind it. You smile to yourself, quite pleased at how your pet is coming along[if HP of Sven is 6]. Looking at him, you are again reminded of your idea to get a collar for him[else if HP of Sven is 7]. Remembering the collar you picked up for him, you find yourself looking forward to presenting it to him[end if].";
 	else if HP of Sven is 8: [pet Sven - collared]
@@ -176,8 +166,7 @@ instead of conversing the Sven:
 		say "     He clutches his tail to his chest, stroking it nervously as he speaks. 'I am Sven. I am attending college here on an international scholarship.' He talks softly and carefully, with a noticeable accent. He tells you that he's been holed up down here since the outbreak, living off what supplies he had. As they began to run low, he headed out into the city and had the misfortune of running into one of the snow leopard men running around. He fidgets a little in his seat, sporting a stiffy in his shorts as he tells you the feline forced itself on him. He tries to hide the bulge with his tail and quickly changes the subject.";
 		say "     'It is getting very hot out now, but I do not want to head out again. Those sexy ki... uhh... I might be spotted again. Do you think someone might come to help us soon?' He tries fanning himself with his tail.";
 		if water bottle is owned:
-			say "     [bold type]'Do you have any fresh water I could have, my friend?'[roman type][line break]";
-			LineBreak;
+			say "[line break]     [bold type]'Do you have any fresh water I could have, my friend?'[roman type][line break]";
 			say "     ([link]Y[as]y[end link]) - Yes.";
 			say "     ([link]N[as]n[end link]) - No.";
 			if Player consents:
@@ -185,9 +174,9 @@ instead of conversing the Sven:
 				say "     You pull out a bottle of water and give it to the poor fellow. He tries his best to drink it down slowly, but soon finishes it off. He seems much better having gotten a much-needed drink.";
 				now lastSvendrink is turns;
 				now HP of Sven is 2;
-				ItemLoss water bottle by 1;
 				increase score by 5;
 				say "     'I should be okay for a little while now, but please come back and visit again. I do not really want to leave here again.' You start to mention moving him to the bunker, but he fidgets nervously in his seat and shakes his head vigorously. He is clearly not ready for such a trek across the city after his unfortunate first attempt outside.";
+				ItemLoss water bottle by 1;
 			else:
 				LineBreak;
 				say "     You tell him you don't have any at the moment, but promise to be on the look out for extra for him. He seems a little disappointed, but nods and continues fanning himself with his tail.";
@@ -198,105 +187,104 @@ instead of conversing the Sven:
 	else if HP of Sven is 1: [asking for water]
 		say "     The poor fellow is clearly having a hard time with the heat and his low supplies. '[one of]Can I get a bottle of water from you, please?'[or]I never thought it would be so hot in this country when I accepted the scholarship.'[or]Do you have any water to spare?'[or]How long do you think we will have to keep waiting before someone comes to help us?'[or]'I am worried what my parents will say when they see me like this. They were finally so proud of me when I got my scholarship.'[or]Do you think they will be able to undo what has been done to us?'[in random order]";
 		if water bottle is owned:
-			say "     [bold type]Do you give the thirsty fellow a drink from your water supply?[roman type][line break]";
-			LineBreak;
+			say "[line break]     [bold type]Do you give the thirsty fellow a drink from your water supply?[roman type][line break]";
 			say "     ([link]Y[as]y[end link]) - Yes.";
 			say "     ([link]N[as]n[end link]) - No.";
 			if Player consents:
 				LineBreak;
 				say "     You pull out a bottle of water and give it to the poor fellow. He is very grateful as he shyly takes it from you. He tries his best to drink it down slowly, but soon finishes it off. He seems much better having gotten a much-needed drink.";
-				ItemLoss water bottle by 1;
 				now lastSvendrink is turns;
 				now HP of Sven is 2;
 				increase score by 5;
 				say "     'I should be okay for a little while now, but please come back and visit again. I do not really want to leave here again.' You start to mention moving him to the bunker, but he fidgets nervously in his seat and shakes his head vigorously. He is clearly not ready for such a trek across the city after his unfortunate first attempt outside.";
-	else if HP of Sven is 2 and lastSvendrink - turns < 8: [just chatting]
-		say "     [one of]The partially feline fellow nervously strokes his new tail as he tries to stay calm.[or]'I am very grateful for your help. I do not know what would have happened if you had not come along.'[or]'I never thought it would be so hot in this country when I accepted the scholarship.'[or]'How long do you think we will have to keep hiding before someone comes to rescue us?'[or]'I am worried what my parents will say when they see me like this. They were finally so proud of me when I got my scholarship.'[or]'Do you think they will be able to undo what has been done to us?'[or]Sven fidgets with his new tail while you speak to him. He doesn't seem to pay much attention and you spot a bulge in his shorts that he's trying to hide with his tail.[in random order]";
-	else if HP of Sven is 2: [more water needed]
-		say "     The poor fellow is clearly suffering from thirst again and having a hard time between the heat and his low supplies. '[one of]Can I get another bottle of water from you, please?'[or]I never thought it would be so hot in this country when I accepted the scholarship.'[or]Do you have any more water to spare?'[or]How long do you think we will have to keep waiting before someone comes to help us?'[or]'I am worried what my parents will say when they see me like this. They were finally so proud of me when I got my scholarship.'[or]Do you think they will be able to undo what has been done to us?'[or]I hate to be a bother, but do you have more water for me?'[in random order]";
-		if water bottle is owned:
-			say "     [bold type]Do you give the thirsty fellow a drink from your water supply?[roman type][line break]";
-			LineBreak;
-			say "     ([link]Y[as]y[end link]) - Yes.";
-			say "     ([link]N[as]n[end link]) - No.";
+				ItemLoss water bottle by 1;
+	else if HP of Sven is 2:
+		if lastSvendrink - turns < 8: [just chatting]
+			say "     [one of]The partially feline fellow nervously strokes his new tail as he tries to stay calm.[or]'I am very grateful for your help. I do not know what would have happened if you had not come along.'[or]'I never thought it would be so hot in this country when I accepted the scholarship.'[or]'How long do you think we will have to keep hiding before someone comes to rescue us?'[or]'I am worried what my parents will say when they see me like this. They were finally so proud of me when I got my scholarship.'[or]'Do you think they will be able to undo what has been done to us?'[or]Sven fidgets with his new tail while you speak to him. He doesn't seem to pay much attention and you spot a bulge in his shorts that he's trying to hide with his tail.[in random order]";
+		else: [more water needed]
+			say "     The poor fellow is clearly suffering from thirst again and having a hard time between the heat and his low supplies. '[one of]Can I get another bottle of water from you, please?'[or]I never thought it would be so hot in this country when I accepted the scholarship.'[or]Do you have any more water to spare?'[or]How long do you think we will have to keep waiting before someone comes to help us?'[or]'I am worried what my parents will say when they see me like this. They were finally so proud of me when I got my scholarship.'[or]Do you think they will be able to undo what has been done to us?'[or]I hate to be a bother, but do you have more water for me?'[in random order]";
+			if water bottle is owned:
+				say "[line break]     [bold type]Do you give the thirsty fellow a drink from your water supply?[roman type][line break]";
+				say "     ([link]Y[as]y[end link]) - Yes.";
+				say "     ([link]N[as]n[end link]) - No.";
+				if Player consents:
+					LineBreak;
+					say "     You pull out a bottle of water and give it to the poor fellow. He is very grateful as he shyly takes it from you. He tries his best to drink it down slowly, but soon finishes it off. He seems much better having gotten a much-needed drink.";
+					now lastSvendrink is turns;
+					now HP of Sven is 3;
+					increase score by 5;
+					say "     'I should be okay for a little while now, but please come back and visit again. I do not really want to leave here again.' You start to mention moving him to the bunker, but shakes his head and wrings his tail nervously. It seems he's still not ready for such a trek across the city after his unfortunate first attempt outside.";
+					ItemLoss water bottle by 1;
+				else:
+					LineBreak;
+					say "     You tell him that you don't have any extra water at the moment, but you assure him you'll keep your eyes open and try to find more for him.";
+	else if HP of Sven is 3:
+		if lastSvendrink - turns < 8: [just chatting 2]
+			say "     [one of]The partially feline fellow nervously strokes his new tail as he tries to stay calm.[or]'I am very grateful for your help. I do not know what would have happened if you had not come along.'[or]'I really appreciate all you have done for me. Please come back and check up on me again.'[or]'I would like to repay you for your help somehow, but I do not really have anything.' He fidgets nervously and presses his tail into his lap, growing quiet again.[or]'I never thought it would be so hot in this country when I accepted the scholarship.'[or]'How long do you think we will have to keep hiding before someone comes to rescue us?'[or]'I am worried what my parents will say when they see me like this. They were finally so proud of me when I got my scholarship.'[or]'Do you think they will undo what has been done to us?'[or]Sven fidgets with his new tail while you speak to him. He doesn't seem to pay much attention and you spot a bulge in his shorts that he's trying to hide with his tail.[in random order]";
+		else: [Snow leopard attack]
+			say "     As you sit with Sven, watching him stroke his tail and nibble at its tip nervously. 'I... umm... do you have any more water I could get? I do not really have anything I can give you for it, but I guess I could... you know...' He squirms in his seat and you spot a bulge in his shorts that he's trying to hide with his tail. You smile politely, trying not to grin and let on you know what's coming when there is a loud growl outside followed by banging at the door that interrupts your conversation.";
+			say "     You grab your weapon and press yourself against the door to help barricade it as whatever is outside charges down the steps again and again to batter against it. The beast's pounding and claw slashes soon weaken the flimsy door too much and it starts to break in. Through the cracks, you can see it is a snow leopard like Sven, but fully transformed and wild, and probably drawn by your friend's scent. The next time it moves back for another charge, you whip open the door and charge it first, pushing it out of the stairwell and into the street.";
+			WaitLineBreak;
+			say "     Finding yourself about to face off against the angry feline, you ready for battle. As the fight is about to begin, you have a moment to size the creature up.";
+			say "[line break]     [bold type]Do you feel you can handle this fight on your own or shall you try to convince Sven to fight back?[roman type][line break]";
+			say "     ([link]Y[as]y[end link]) - Fight on your own.";
+			say "     ([link]N[as]n[end link]) - Convince Sven to fight back.";
 			if Player consents:
 				LineBreak;
-				say "     You pull out a bottle of water and give it to the poor fellow. He is very grateful as he shyly takes it from you. He tries his best to drink it down slowly, but soon finishes it off. He seems much better having gotten a much-needed drink.";
-				ItemLoss water bottle by 1;
-				now lastSvendrink is turns;
-				now HP of Sven is 3;
-				increase score by 5;
-				say "     'I should be okay for a little while now, but please come back and visit again. I do not really want to leave here again.' You start to mention moving him to the bunker, but shakes his head and wrings his tail nervously. It seems he's still not ready for such a trek across the city after his unfortunate first attempt outside.";
+				say "[SvenRescueFight]";
 			else:
 				LineBreak;
-				say "     You tell him that you don't have any extra water at the moment, but you assure him you'll keep your eyes open and try to find more for him.";
-	else if HP of Sven is 3 and lastSvendrink - turns < 8: [just chatting 2]
-		say "     [one of]The partially feline fellow nervously strokes his new tail as he tries to stay calm.[or]'I am very grateful for your help. I do not know what would have happened if you had not come along.'[or]'I really appreciate all you have done for me. Please come back and check up on me again.'[or]'I would like to repay you for your help somehow, but I do not really have anything.' He fidgets nervously and presses his tail into his lap, growing quiet again.[or]'I never thought it would be so hot in this country when I accepted the scholarship.'[or]'How long do you think we will have to keep hiding before someone comes to rescue us?'[or]'I am worried what my parents will say when they see me like this. They were finally so proud of me when I got my scholarship.'[or]'Do you think they will undo what has been done to us?'[or]Sven fidgets with his new tail while you speak to him. He doesn't seem to pay much attention and you spot a bulge in his shorts that he's trying to hide with his tail.[in random order]";
-	else if HP of Sven is 3: [Snow leopard attack]
-		say "     As you sit with Sven, watching him stroke his tail and nibble at its tip nervously. 'I... umm... do you have any more water I could get? I do not really have anything I can give you for it, but I guess I could... you know...' He squirms in his seat and you spot a bulge in his shorts that he's trying to hide with his tail. You smile politely, trying not to grin and let on you know what's coming when there is a loud growl outside followed by banging at the door that interrupts your conversation.";
-		say "     You grab your weapon and press yourself against the door to help barricade it as whatever is outside charges down the steps again and again to batter against it. The beast's pounding and claw slashes soon weaken the flimsy door too much and it starts to break in. Through the cracks, you can see it is a snow leopard like Sven, but fully transformed and wild, and probably drawn by your friend's scent. The next time it moves back for another charge, you whip open the door and charge it first, pushing it out of the stairwell and into the street.";
-		WaitLineBreak;
-		say "     Finding yourself about to face off against the angry feline, you ready for battle. As the fight is about to begin, you have a moment to size the creature up.";
-		say "     [bold type]Do you feel you can handle this fight on your own or shall you try to convince Sven to fight back?[roman type][line break]";
-		LineBreak;
-		say "     ([link]Y[as]y[end link]) - Fight on your own.";
-		say "     ([link]N[as]n[end link]) - Convince Sven to fight back.";
-		if Player consents:
-			LineBreak;
-			say "[SvenRescueFight]";
-		else:
-			LineBreak;
-			let bonus be ( charisma of Player minus 10 ) divided by 2;
-			if HardMode is false, increase bonus by level of Player / 5;
-			if bonus > 8, now bonus is 8;
-			let dice be a random number from 1 to 20;
-			say "You roll 1d20([dice])+[bonus]= [special-style-1][dice + bonus][roman type] vs [special-style-2]12[roman type]:[line break]";
-			if bonus + dice > 11:
-				say "     You call for Sven's help in the fight, [if level of Player < 6]struggling to hold out against the powerful feline as best you can[else if level of Player > 8 and HardMode is false]keeping the feline in check fairly easily while you try to rally him[else]holding your own against the feline while you try to rally him[end if]. It takes [if bonus + dice > 15]some[else]quite a bit of[end if] coaxing, but you manage to get the young man to assist you. Once he joins in the fray, he proves to be quite the asset, using his strength and longer reach to keep the compact feline off balance. The snow leopard, suddenly at the disadvantage, gets taken down [if level of Player < 6]with less struggle, Sven managing to get in the final blow[else if level of Player > 8 and HardMode is false]quite easily, you letting Sven get in the final blow[else]easily enough when Sven strikes the final blow[end if] while you keep it at bay. Staggered, the gray spotted cat is easily pushed to the ground by the two of you.";
-				say "     Grabbing the feline's wrists, you sit upon his chest while Sven plants himself down on the cat's legs. With your foe held down, the two of you pant from the excitement. Looking over your shoulder at him, you can tell that Sven is surprised by what he's accomplished. This creature he feared, once faced, has been defeated with your help - and thus, so has his fear.";
-				WaitLineBreak;
-				say "     And with that fear gone, that arousal he had earlier returns, but now with a newfound confidence to back it up. There is but a brief hesitation before his hand moves to the snow leopard's crotch, fondling is sheath and cock with a quiet, giddy laugh of unrestrained excitement. While the gray shaft had started to go flaccid after the creature's defeat, the touch soon brings it back to full arousal.";
-				say "     Sven gives the snow leopard's shaft several slow strokes with growing ease. His tail-tip twitches, betraying his excitement at handling the object of his desires. 'Hold him down,' he says with an eagerness in his eyes and a grin like the cat who's gotten the cream. Or going to get the cream, in this case. Sliding further back and laying down, he moves his head in to take a closer look at his prize. It soon goes from looking to smelling, nuzzling and licking before finally sucking on the pulsing rod with obvious relish.";
-				WaitLineBreak;
-				let xx be 0;
-				if Player is not neuter:
-					say "     Hearing the cat beneath you give a pleasant rumble, you look down at him. With his head right there between your legs, it would be easy to join in on the fun.";
-					say "     [bold type]Shall you get the pinned kitty to [if Player is male]suck you off[else]eat you out[end if] or just watch the show behind you?[roman type][line break]";
-					LineBreak;
-					say "     ([link]Y[as]y[end link]) - Get the pinned kitty to [if Player is male]suck you off[else]eat you out[end if].";
-					say "     ([link]N[as]n[end link]) - Watch the show.";
-					if Player consents:
-						LineBreak;
-						now xx is 1;
-						if Player is male:
-							say "     Wanting to get in on the action, you grab the snow leopard's head and pull it forward to meet your erection. The cat gives an obstinate snarl, but relents with a moan when Sven pushes himself down onto the feline's cock again. His warm muzzle slides over your [Cock of Player] meat[if Cock Length of Player > 36] with some initial difficulty given your [cock size desc of Player] size[else if Cock Length of Player > 24], stretching his mouth open wide to fit your big manhood[else if Cock Length of Player > 12] with increased desire once he sees your impressive manhood[else] with a lustful hunger in his feral eyes[end if]. His raspy tongue plays across your throbbing meat as he licks and sucks on it while rumbling in delight.";
+				let bonus be ( charisma of Player minus 10 ) divided by 2;
+				if HardMode is false, increase bonus by level of Player / 5;
+				if bonus > 8, now bonus is 8;
+				let dice be a random number from 1 to 20;
+				say "You roll 1d20([dice])[if bonus >= 0]+[end if][bonus] = [special-style-1][dice + bonus][roman type] vs [special-style-2]12[roman type] (Charisma Check):[line break]";
+				if bonus + dice > 11:
+					say "     You call for Sven's help in the fight, [if level of Player < 6]struggling to hold out against the powerful feline as best you can[else if level of Player > 8 and HardMode is false]keeping the feline in check fairly easily while you try to rally him[else]holding your own against the feline while you try to rally him[end if]. It takes [if bonus + dice > 15]some[else]quite a bit of[end if] coaxing, but you manage to get the young man to assist you. Once he joins in the fray, he proves to be quite the asset, using his strength and longer reach to keep the compact feline off balance. The snow leopard, suddenly at the disadvantage, gets taken down [if level of Player < 6]with less struggle, Sven managing to get in the final blow[else if level of Player > 8 and HardMode is false]quite easily, you letting Sven get in the final blow[else]easily enough when Sven strikes the final blow[end if] while you keep it at bay. Staggered, the gray spotted cat is easily pushed to the ground by the two of you.";
+					say "     Grabbing the feline's wrists, you sit upon his chest while Sven plants himself down on the cat's legs. With your foe held down, the two of you pant from the excitement. Looking over your shoulder at him, you can tell that Sven is surprised by what he's accomplished. This creature he feared, once faced, has been defeated with your help - and thus, so has his fear.";
+					WaitLineBreak;
+					say "     And with that fear gone, that arousal he had earlier returns, but now with a newfound confidence to back it up. There is but a brief hesitation before his hand moves to the snow leopard's crotch, fondling is sheath and cock with a quiet, giddy laugh of unrestrained excitement. While the gray shaft had started to go flaccid after the creature's defeat, the touch soon brings it back to full arousal.";
+					say "     Sven gives the snow leopard's shaft several slow strokes with growing ease. His tail-tip twitches, betraying his excitement at handling the object of his desires. 'Hold him down,' he says with an eagerness in his eyes and a grin like the cat who's gotten the cream. Or going to get the cream, in this case. Sliding further back and laying down, he moves his head in to take a closer look at his prize. It soon goes from looking to smelling, nuzzling and licking before finally sucking on the pulsing rod with obvious relish.";
+					WaitLineBreak;
+					let xx be false;
+					if Player is not neuter:
+						say "     Hearing the cat beneath you give a pleasant rumble, you look down at him. With his head right there between your legs, it would be easy to join in on the fun.";
+						say "[line break]     [bold type]Shall you get the pinned kitty to [if Player is male]suck you off[else]eat you out[end if] or just watch the show behind you?[roman type][line break]";
+						say "     ([link]Y[as]y[end link]) - Get the pinned kitty to [if Player is male]suck you off[else]eat you out[end if].";
+						say "     ([link]N[as]n[end link]) - Watch the show.";
+						if Player consents:
+							LineBreak;
+							now xx is true;
+							if Player is male:
+								say "     Wanting to get in on the action, you grab the snow leopard's head and pull it forward to meet your erection. The cat gives an obstinate snarl, but relents with a moan when Sven pushes himself down onto the feline's cock again. His warm muzzle slides over your [Cock of Player] meat[if Cock Length of Player > 36] with some initial difficulty given your [cock size desc of Player] size[else if Cock Length of Player > 24], stretching his mouth open wide to fit your big manhood[else if Cock Length of Player > 12] with increased desire once he sees your impressive manhood[else] with a lustful hunger in his feral eyes[end if]. His raspy tongue plays across your throbbing meat as he licks and sucks on it while rumbling in delight.";
+							else:
+								say "     Wanting to get in on the action, you grab the snow leopard's head and pull it forward to meet your crotch. The cat gives an obstinate snarl, but relents with a moan when Sven pushes himself down onto the feline's cock again. With his nose pressed to your pussy, the scent of it captivates him and soon he's licking at your dripping petals. That raspy tongue feels great sliding across your sensitive folds and clit. After several licks, it delves deeper, lapping inside your quivering cunny while the pinned feline rumbles in delight.";
 						else:
-							say "     Wanting to get in on the action, you grab the snow leopard's head and pull it forward to meet your crotch. The cat gives an obstinate snarl, but relents with a moan when Sven pushes himself down onto the feline's cock again. With his nose pressed to your pussy, the scent of it captivates him and soon he's licking at your dripping petals. That raspy tongue feels great sliding across your sensitive folds and clit. After several licks, it delves deeper, lapping inside your quivering cunny while the pinned feline rumbles in delight.";
-					else:
-						LineBreak;
-						say "     While the snow leopard seems little interested in fighting or struggling at this point, keeping him restrained seems to be the safer course of action. Rather than risk getting too distracted, you keep a firm grip on the feline's arms and watch Sven over your shoulder. Besides, you feel you should let Sven enjoy his moment of personal victory.";
-				WaitLineBreak;
-				say "     Only after thoroughly savoring that gray shaft with his mouth and tongue does Sven pull away. His mouth is more of a muzzle at this point and fluff is spreading from it. His hands (looking increasingly like paws) wrestle his shorts down. You start to warn him about what you're seeing, but he just nods.";
-				say "     'I know. I can feel it. But I suspect it would happen regardless. This way I know it will be on my terms.' And with that, he presses his ass down onto the other male's cock, taking it into his virgin rear with a mrowl of pained delight. The transforming man takes several panting breaths to adjust before starting to ride it with growing satisfaction.";
-				if xx is 1:
-					say "     Turning your attention back to the front, you rub the [if Player is male]sucking[else]licking[end if] snow leopard's fluffy ears. The horny creature rumbles and purrs softly, attempting to get you off with increased vigor. That warm muzzle and lashing tongue of his feel wonderful [if Player is male]upon your throbbing shaft[else]across and inside your quivering mound[end if]. Your excitement continues to build, making you forget your concerns about Sven's transformation and it's only once the young man behind you gives a particularly strong moan do you turn your attention back to him.";
-				WaitLineBreak;
-				say "     Sven continues to ride the pinned feline as his transformation progresses at an increasing rate. Fur spreads across his face as his head becomes more and more that of a snow leopard like the one he's riding. It also creeps up his body and down his legs, probably spreading from his fluffy tail. His cock is not exempt either, the color shifting to a steely gray and gaining several inches. A sheath forms at the base of his erection while white fluff covers his swelling balls.";
-				say "     As the young man's transformation into a snow leopard is reaching completion, so does the feline beneath [if xx is 0]him[else]you both[end if]. With a snarl of climactic release, you know he's pumping his hot load into Sven's bowels. The new feline, clearly loving every delicious moment of this, cums moments later, spraying his load [if xx is 1]across your back and onto his chest. By the time to two felines are spent, you've cum as well, providing the quelled kitty with a tasty treat[else]onto his chest[end if]. Once sated, you help Sven rise and send the other snow leopard on his way.";
-				WaitLineBreak;
-				say "     After your victory against the intruder, the two of you look around quickly to make sure other infected weren't attracted by the commotion before heading back to the basement apartment. Once back inside, he heaves a heavy sigh of relief and slumps against a wall. You give him a moment to collect his thoughts before urging him to get ready to leave. Looking at the destroyed door, he nods affirmatively and rushes about his former haven to gather a few things and the last of his supplies into his backpack. Once ready, he slings his pack over his shoulder and charges up the steps two at a time. Following him up, you suggest that he stay with you in the bunker, to which he agrees readily[if daytimer is day]. The daytime heat is quite oppressive to the fully snow leopard Sven, but he perseveres and eventually makes it to the relative coolness of the bunker[else]. Thankfully, with the sun down, the heat has let up slightly, letting the fully snow leopard Sven make the journey to the relative coolness of the bunker[end if].";
-				now HP of Sven is 30;
-				move Sven to bunker;
-				move player to bunker;
-				increase score by 20;
-			else:
-				say "     Try as you might, you are unable to inspire the young man to stand up for himself. It looks like you'll have to deal with this yourself.";
-				say "[SvenRescueFight]";
+							LineBreak;
+							say "     While the snow leopard seems little interested in fighting or struggling at this point, keeping him restrained seems to be the safer course of action. Rather than risk getting too distracted, you keep a firm grip on the feline's arms and watch Sven over your shoulder. Besides, you feel you should let Sven enjoy his moment of personal victory.";
+					WaitLineBreak;
+					say "     Only after thoroughly savoring that gray shaft with his mouth and tongue does Sven pull away. His mouth is more of a muzzle at this point and fluff is spreading from it. His hands (looking increasingly like paws) wrestle his shorts down. You start to warn him about what you're seeing, but he just nods.";
+					say "     'I know. I can feel it. But I suspect it would happen regardless. This way I know it will be on my terms.' And with that, he presses his ass down onto the other male's cock, taking it into his virgin rear with a mrowl of pained delight. The transforming man takes several panting breaths to adjust before starting to ride it with growing satisfaction.";
+					if xx is true:
+						say "     Turning your attention back to the front, you rub the [if Player is male]sucking[else]licking[end if] snow leopard's fluffy ears. The horny creature rumbles and purrs softly, attempting to get you off with increased vigor. That warm muzzle and lashing tongue of his feel wonderful [if Player is male]upon your throbbing shaft[else]across and inside your quivering mound[end if]. Your excitement continues to build, making you forget your concerns about Sven's transformation and it's only once the young man behind you gives a particularly strong moan do you turn your attention back to him.";
+					WaitLineBreak;
+					say "     Sven continues to ride the pinned feline as his transformation progresses at an increasing rate. Fur spreads across his face as his head becomes more and more that of a snow leopard like the one he's riding. It also creeps up his body and down his legs, probably spreading from his fluffy tail. His cock is not exempt either, the color shifting to a steely gray and gaining several inches. A sheath forms at the base of his erection while white fluff covers his swelling balls.";
+					say "     As the young man's transformation into a snow leopard is reaching completion, so does the feline beneath [if xx is false]him[else]you both[end if]. With a snarl of climactic release, you know he's pumping his hot load into Sven's bowels. The new feline, clearly loving every delicious moment of this, cums moments later, spraying his load [if xx is true]across your back and onto his chest. By the time to two felines are spent, you've cum as well, providing the quelled kitty with a tasty treat[else]onto his chest[end if]. Once sated, you help Sven rise and send the other snow leopard on his way.";
+					WaitLineBreak;
+					say "     After your victory against the intruder, the two of you look around quickly to make sure other infected weren't attracted by the commotion before heading back to the basement apartment. Once back inside, he heaves a heavy sigh of relief and slumps against a wall. You give him a moment to collect his thoughts before urging him to get ready to leave. Looking at the destroyed door, he nods affirmatively and rushes about his former haven to gather a few things and the last of his supplies into his backpack. Once ready, he slings his pack over his shoulder and charges up the steps two at a time. Following him up, you suggest that he stay with you in the bunker, to which he agrees readily. [if daytimer is day]The daytime heat is quite oppressive to the fully snow leopard Sven, but he perseveres and eventually makes it[else]Thankfully, with the sun down, the heat has let up slightly, letting the fully snow leopard Sven make the journey[end if] to the relative coolness of the bunker.";
+					WaitLineBreak;
+					now HP of Sven is 30;
+					move Sven to bunker;
+					move player to bunker;
+					increase score by 20;
+				else:
+					say "     Try as you might, you are unable to inspire the young man to stand up for himself. It looks like you'll have to deal with this yourself.";
+					say "[SvenRescueFight]";
 	else if HP of Sven is 4:
 		say "     [one of]The partially feline fellow strokes his new tail, purring softly.[or]'I am very grateful for your help. I do not know what would have happened if you had not come along. You're so brave, strong and sexy.' He blushes and hides behind his tail after admitting that aloud.[or]'I really appreciate all you've done for me.'[or]'I really want to repay you for your help somehow. I guess I could... maybe...' He fidgets nervously and presses his tail into his lap as his voice trails off.[or]'I never thought it would be so hot in this country when I accepted the scholarship.'[or]'How long do you think we will be waiting before someone comes to rescue us?'[or]'I am worried what my parents will say when they see me like this. They were finally so proud of me when I got my scholarship.'[or]'Do you think they will let me keep my tail? It is so pretty.'[or]Sven fidgets with his new tail while you speak to him. He doesn't seem to pay much attention and you spot a bulge in his shorts that he's trying to hide with his tail.[or]Sven looks at you with admiration and longing as you chat with him for a bit.[or]Sven licks his lips and mumbles something about being thirsty while eyeing your crotch. He then notices what he's said and blushes behind his fluffy tail.[in random order]";
 	else if HP of Sven is 5:
 		say "     [one of]The partially feline fellow strokes his new tail, purring softly.[or]'I am very grateful for your help. I do not know what would have happened if you had not come along. You're so brave, strong and sexy.' He blushes and hides behind his tail after admitting that aloud.[or]'I really appreciate all you've done for me.'[or]'I really want to repay you for your help. I hope you'll let me... maybe...' He blushes and strokes his tail, licking his lips as he remembers the fun you had together earlier.[or]'I never thought it would be so hot in this country when I accepted the scholarship.'[or]'How long do you think we will be waiting before someone comes to rescue us?'[or]'I am worried what my parents will say when they see me like this. They were finally so proud of me when I got my scholarship.'[or]'Do you think they will let me keep my tail? It is so pretty.'[or]Sven fidgets with his new tail while you speak to him. He doesn't seem to pay much attention and you spot a bulge in his shorts that he's trying to hide with his tail.[or]Sven looks at you with admiration and longing as you chat with him for a bit.[or]Sven licks his lips and mumbles something about being thirsty while eyeing your crotch. He then notices what he's said and grins before hiding behind his fluffy tail.[in random order]";
-	else if HP of Sven is 6 or HP of Sven is 7:
+	else if HP of Sven < 8:
 		say "     [one of]The cute snowmeow strokes his new tail, purring softly.[or]'I am very grateful for your help. I do not know what would have happened if you had not come along. You are so brave, strong and sexy.' He blushes and hides behind his tail after admitting that aloud.[or]'I really appreciate all you've done for me.'[or]'I really hope you'll let me [']repay['] you again soon,' he purrs with a wink before hiding behind his tail.[or]'I never thought it would be so hot in this country when I accepted the scholarship.'[or]'How long do you think we will have alone before someone comes to rescue us?'[or]'I hope my parents will like this new me as much as I do. They were finally so proud of me when I got my scholarship.'[or]'Do you think they will let me stay like this? I love being a pretty kitty.'[or]Sven lickgrooms his tail while you speak to him. He listens attentively as he runs a paw over his stiff cock while keeping it only half-hidden under his tail. He blushes when you notice what he's doing.[or]Sven looks at you with admiration and longing as you chat with him for a bit.[or]Sven licks his lips and mumbles something about being thirsty while eyeing your crotch. He grins and blushes before hiding behind his fluffy tail.[in random order]";
 	else if HP of Sven is 8:
 		if Player is male:
@@ -335,72 +323,76 @@ to say SvenRescueFight:
 		say "     After your victory against the intruder, you look around quickly to make sure there aren't any infected coming, then head back to the house to check on Sven. You find him huddled in the stairwell with his head just poking over edge, clearly having crept out to watch the fight from there. He has one hand nervously playing with his tail while the other has slipped into his shorts. He does not appear to be aware he's doing the latter, looking up at you with admiration at your defeat of the beast. As he starts to get up, he notices where his hand has gotten and quickly whips it out, blushing behind his tail.";
 		if Restrained Desire is known:
 			say "     You grin inside, but remember that you have more pressing things to deal with now. Pulling Sven down the stairs, you go through the broken doorway and tell him that he needs to get ready to leave. He wrings his tail and releases a few nervous mewls as he tries to cope with the idea of leaving his home away from home. But you do recall another friend he could stay with who is much closer. It would be faster and easier to move the nervous kitty there than going across the city to the bunker.";
-			say "     [bold type]Do you suggest taking him to stay with Lisa the Mouse instead?[roman type][line break]";
-			LineBreak;
+			say "[line break]     [bold type]Do you suggest taking him to stay with Lisa the Mouse instead?[roman type][line break]";
 			say "     ([link]Y[as]y[end link]) - Yes.";
 			say "     ([link]N[as]n[end link]) - No.";
 			if Player consents:
 				LineBreak;
 				say "     You make the suggestion to him, saying you have a friend who's hiding in a store much closer to here. 'A store near here? That doesn't sound too bad. And I'll be safe there?' You tell him that your mouse friend hasn't had any trouble. 'A... mouse? I... I think I could cope with a mouse. That wouldn't be too scary.' With that decided and a little prompting from you, Sven gathers up a few things and the last of his supplies in his backpack. As you head out with him, he stays at your side, clutching your arm tightly to his chest. He glances nervously over your shoulder, when he's not nuzzling against it, that is. The trek is short and thankfully uneventful.";
+				WaitLineBreak;
 				now HP of Sven is 50;
 				now lastSvendrink is turns;
 				move Sven to Restrained Desire;
 				move player to Restrained Desire;
 				increase score by 20;
+				WaitLineBreak;
 				say "     Upon arriving at the Lisa's, Sven is a little unnerved by the type of store you've brought him to. He blushes behind his tail as he tries not to appear like he's staring at the items on display. When Lisa comes out, Sven fidgets a little and moves behind you. She smiles to you and starts asking about your pointy-eared friend. You explain the situation to her and she seems a little reluctant at first, but eyes the blushing guy while you talk. Eventually, she replies, 'Well, maybe a little game of cat and mouse would be fun. Don't you think, kitty?' she asks Sven, he blushes brighter and hides behind his plush tail, mumbling a soft, 'May I please stay, ma'am?' She smiles and laughs, 'Oh! He's so sweet! And what a lovely accent. I think I will keep him. I'm sure he'll fit right in soon enough,' she chuckles and sidles up to him. The mousetaur runs a paw along his side, then scritches his ear, making him purr a little even as he squirms and reddens further, much to her delight. It seems everything's settled.";
 			else:
 				LineBreak;
 				say "     You decide it would be for the best if you could get the feline infected fellow to the bunker. The porn store may be a little overwhelming for the shy kitty. Besides, the idea of having the snowmeow secluded away for yourself at the bunker is quite appealing. With your plan firmly set in your mind, you give him a little prodding and he gathers up a few things and the last of his supplies in his backpack. As you head out with him, he stays at your side, clutching your arm tightly to his chest. He glances nervously over your shoulder, when he's not nuzzling against it, that is.";
+				WaitLineBreak;
 				now HP of Sven is 4;
 				move Sven to bunker;
 				move player to bunker;
 				increase score by 20;
 		else:
 			say "     You grin inside, but remember that you have more pressing things to deal with now. Pulling Sven down the stairs, you go through the broken doorway and tell him that he needs to get ready to leave. He wrings his tail and releases a few nervous mewls as he tries to cope with the idea of leaving his home away from home. But, with a little prodding from you, he gathers up a few things and the last of his supplies in his backpack. As you head out with him, he stays at your side, clutching your arm tightly to his chest. He glances nervously over your shoulder, when he's not nuzzling against it, that is.";
+			WaitLineBreak;
 			now HP of Sven is 4;
 			move Sven to bunker;
 			move player to bunker;
 			increase score by 20;
 	else if fightoutcome >= 20 and fightoutcome <= 29:
 		say "     After the snow leopard has dealt with you, it catches sight of Sven in the stairwell, mewling softly as he plays with himself in his shorts. Too aroused by the show he received and drawn in by the feline's scent, he doesn't flee as it pads over, switching to move on all fours. He moans softly as it nuzzles and licks his face, pulling off his clothes and mounting him right there. He mewls and moans lustfully as he's taken by the strong male, slowly transforming as their loud rutting continues. Recovering enough to get back up, you can see that the humanity's gone from Sven's eyes and he's succumb to his infection. As there is nothing else you can do for him than to wish him well, you slink away quietly to nurse your wounds and search elsewhere.";
+		WaitLineBreak;
 		now HP of Sven is 99;
 		now Sven is nowhere;
 		move player to Entrance to the Red Light District;
 		decrease score by 20;
-	else:
+	else if fightoutcome >= 30:
 		say "     Unwilling to continue fighting the snow leopard, you turn and flee. But he does not pursue you, instead turning his attention to Sven, who is curled up at the top of the stairwell, watching the battle. Aroused by the sight and scent of the snow leopard, he is fondling himself in his shorts and does not try to run as the creature pads over on all fours. Sven moans softly as it nuzzles and licks his face, pulling off his clothes and mounting him right there. You turn away and continue to make your escape, sure that there will soon be another of those sexy snow leopards prowling the area.";
+		WaitLineBreak;
 		now HP of Sven is 99;
 		now Sven is nowhere;
 		move player to Entrance to the Red Light District;
 		decrease score by 20;
-
 
 An everyturn rule:
 	if HP of Sven > 0 and HP of Sven < 4 and lastSvendrink - turns > 20 and skipturnblocker is 0:
 		now HP of Sven is 100;
 		now Sven is nowhere;
 		say "You briefly remember Sven and have a sinking feeling that something's happened to him.";
-	if HP of Sven is 8 and Candy is in Bunker and lastSvendrink - turns > 11:
+	else if HP of Sven is 8 and Candy is in Bunker and lastSvendrink - turns > 11:
 		now HP of Sven is 9;
 		if Player is in Bunker:
 			say "     While taking your break before heading back into the city, you spot Candy prance on over to Sven's bunk. He sits quite close to the snow leopard and starts chatting with him, as you've seen him do several times before. But there's something subtly different in his approach this time. It seems he's going to make his move now and you'll get to watch the show.";
 			WaitLineBreak;
 			say "     Candy runs his paw through your pet's fur as he talks softly to him. Those nimble fingers glide through the thick pelt, stroking and scritching the kitty as they drift around in it. He snuggles a little closer, nuzzling the snowmeow, who gets a little shy and blushes behind his tail, but doesn't pull away. Next comes a nibble to his ear, something whispered and a paw on the kitty's sheath and emerging cock. Those playful fingers brush teasingly over it, then cup those heavy balls.";
 			say "     Sven makes a quick glance over to you as the pink coon starts stroking the feline's member, but you only grin back. Sven, taking this as permission, relaxes a little. Candy, who caught the glance and your reaction, nibbles Sven's ear again and whispers something to him, making the snowmeow blush a little at the ears, but also slide his tail aside to give you a better view. With the tail out of the way, Candy nuzzles down Sven's chest and waist before reaching his groin. The pink boy-toy starts licking and sucking on Sven's cock, using his ample experience to set the feline moaning and mewling in pleasure in moments.";
-			say "     Sven, having trouble supporting himself in the rush of pleasure, leans back against the wall behind his bunk and runs his paws through Candy's head-fur and pink hair. Candy bobs up and down over the hard, gray cock, working his muzzle and tongue over it while rolling those heavy orbs in his paw[if coonsex > 0]. Having been on the receiving end of one of raccoon's blowjobs, you know just how powerful they are and that the inexperienced kitty won't be able to hold out for long under such expert tongue-work[else]. Clearly the raccoon's expert tongue-work is more than the inexperienced kitty was prepared for and he won't be able to hold out for long[end if]. You watch as Candy slips his free paw behind Sven to grope his ass, then slide it under the tail. When your pet stiffens and mrowls, bucking hard into the coon's muzzle, you grin, knowing Candy's buried at least one finger in the kitty's tight rump. Sven's cock throbs and ballsack twitches, pumping his hefty load down the coon's throat, who moans in pleasure and swallows it all down.";
+			say "     Sven, having trouble supporting himself in the rush of pleasure, leans back against the wall behind his bunk and runs his paws through Candy's head-fur and pink hair. Candy bobs up and down over the hard, gray cock, working his muzzle and tongue over it while rolling those heavy orbs in his paw. [if coonsex > 0]Having been on the receiving end of one of raccoon's blowjobs, you know just how powerful they are and that the inexperienced kitty won't be able to hold out for long under such expert tongue-work[else]Clearly the raccoon's expert tongue-work is more than the inexperienced kitty was prepared for and he won't be able to hold out for long[end if]. You watch as Candy slips his free paw behind Sven to grope his ass, then slide it under the tail. When your pet stiffens and mrowls, bucking hard into the coon's muzzle, you grin, knowing Candy's buried at least one finger in the kitty's tight rump. Sven's cock throbs and ballsack twitches, pumping his hefty load down the coon's throat, who moans in pleasure and swallows it all down.";
 			WaitLineBreak;
 			say "     Lost in the haze of the afterglow, Sven quite passively rolls onto his bunk with his ass up as the coon guides him into position. You briefly consider stopping them, but are enjoying the show too much to do that. Candy spreads the purring kitty's cheeks and presses his muzzle under that fluffy tail, giving his pucker a few licks. Again, that expert tongue gets to work, making the snowmeow moan and mewl. The candy coon strokes his shaft lightly, spreading his sweet precum over it, but resists fully stroking it. He instead moves atop the kitty-boy and gets it lined up with that slick hole. Sven pushes back into that first thrust with another mrowl of satisfaction before Candy starts humping him. The coon's paws roam through the kitty's lovely fur, caressing and teasing him as he enjoys the soft pelt. The coon's tries to pace himself, clearly enjoying his first chance with the snowmeow and his first chance to top in quite some time, but eventually it gets to be too much and the pink boy-toy drives his cock fully into the kitty and drains his balls into that eager ass as Sven unleashes another heavy load onto his messy bunk.";
 			say "     The two pass off into slumber still cuddled atop one another, quite spent from their wild romp. Sven and Candy's fluffy tails intertwine as the coon nuzzles at the snowmeow's shoulder. The coon's semi-hard cock remains buried in the kitty's slick, cum-filled bottom. As you watch them sleep, you are surprised to see a little color start to creep into Sven's monochrome pelt as he takes on a [if lust of Sven is 1]baby blue tint[else if lust of Sven is 2]golden hue[end if] to his spotted markings.";
 			now HP of Sven is 10;
 			increase score by 10;
-	if HP of Sven is 50 and lastSvendrink - turns >= 12:
+	else if HP of Sven is 50 and lastSvendrink - turns >= 12:
 		now HP of Sven is 51;
 		if Player is in Restrained Desire:
 			say "     Waiting around at the porn store while you debate your next move, you notice Lisa come up to Sven. She puts her arms around him and nibbles at his ear. As she does, she whispers something to him and lets a paw wander down to his shorts. You grin as she pulls him gently towards the back room. Having seen this coming and knowing how bashful the kitty is, you pretend to be watching out the window while watching their faint reflections in it. He wrings his tail nervously and fidgets for a bit as she keeps scritching him, but follows her along. From inside, you can half-hear some moan, mewls and squeaks coming from the pair.";
 			say "     When Sven emerges some time later, he blushes considerably as he runs his paws over his new coat of snow leopard fur. He's taken off his shirt now, probably too hot with his plush fur, and adjusts his shorts. His hands are more paw-like and his face has a distinctly feline muzzle. Noticing you looking, he grins shyly before turning away to act busy. When Lisa comes out a few minutes later, she gives his rump a squeeze before taking her usual spot.";
 			increase score by 10;
 		now lastSvendrink is turns;
-	if HP of Sven is 51 and lastSvendrink - turns >= 12:
+	else if HP of Sven is 51 and lastSvendrink - turns >= 12:
 		now HP of Sven is 52;
 		now lust of Sven is 3;
 		if Player is in Restrained Desire:
@@ -417,26 +409,17 @@ after going to Bunker while HP of Sven is 9:
 	say "     You return to find Candy snuggled up beside Sven on the kitty's bunk. He is chatting with the [if lust of Sven is 1]baby blue[else if lust of Sven is 2]golden[end if] snowmeow, tracing over his markings. Waitaminit! It seems that Sven's markings have become colored and it's clearly somehow the pink raccoon's doing. You stride over to them, not really upset with the change since you find it makes your pet even more lovely and unique, but wanting to confirm your suspicions. Sven blushes behind his tail a little, but glances coyly up at you, giving you a flash of his now [if lust of Sven is 1]blue[else if lust of Sven is 2]yellow[end if] cock poking from his sheath.";
 	say "     Candy, as brazen as ever, runs his paw through Sven's chest-fur and smiles up at you. 'Sweet Sven and I were just getting better acquainted. He's such a lovely kitty,' he churrs, scritching under Sven's chin, getting him to purr and relax further. 'I want to thank you so much for finding me such a beautiful playmate to keep me company while you're out. And don't worry, I know he's your special kitty pet, so I'll keep good care of him for you.' He traces over one of Sven's colorful rosettes again. 'He's much prettier with a bit of color now, don't you think?' You have to agree, both because it's true and to set your pet's mind at ease.";
 
-
 Section 3 - Sven the Fuck-Toy
 
-the fuckscene of Sven is "[SexWithSven]".
-
 to say SexWithSven:
-	[puts Snow Leopard as lead monster in case of impregnation]
-	repeat with y running from 1 to number of filled rows in Table of Random Critters:
-		choose row y in Table of Random Critters;
-		if Name entry is "Snow Leopard":
-			now MonsterID is y;
-			break;
+	setmonster "Snow Leopard";
 	if HP of Sven < 4:
 		say "     Sven squirms a little in his seat and blushes as you start to bring up the subject of sex. He nibbles at the end of his tail and mumbles something about how he doesn't think that'd be a good idea. You do spot that telltale bulge in his shorts though, which makes you hopeful you can coax him into some fun once he settles down.";
 	else if Player is neuter:
 		say "     As you presently don't have a gender of your own, you should perhaps seek obtaining one before playing with the Nordic kitty.";
 	else if HP of Sven is 4:
 		say "     Sven squirms a little in his seat and blushes cutely as you bring up having sex with him. He nibbles at the end of his tail and eyes your crotch, mumbling something about suddenly getting thirsty again. A hand drifts to his crotch and rubs the bulge there. 'I... I do not know... I mean, I have not yet,' he says shyly, blushing even redder. 'But if it was with you,' he adds with audible longing and admiration in his quiet voice. You spot a little happy trail of white fur that you don't remember seeing before as he continues to subconsciously fondle himself. You suspect the shy fellow will continue changing if you start playing with him.";
-		say "     [bold type]Do you want to proceed?[roman type][line break]";
-		LineBreak;
+		say "[line break]     [bold type]Do you want to proceed?[roman type][line break]";
 		say "     ([link]Y[as]y[end link]) - Fuck him.";
 		say "     ([link]N[as]n[end link]) - Leave him be.";
 		if Player consents:
@@ -453,77 +436,162 @@ to say SexWithSven:
 		else:
 			LineBreak;
 			say "     Deciding it may be best not to risk it, you ruffle Sven's ears lightly and leave him be. He seems both relieved and disappointed at once. Noticing his wayward hand, he pulls it from his shorts and hides it behind his back.";
-	else if HP of Sven is 5 and lastfuck of Sven - turns < 8:
-		say "     Sven blushes cutely as you bring up sex again, but mumbles something about wanting to think about what happened before going ahead more. You do grin as you he subconsciously fondles himself while saying this, assuring you that the shy fellow will come around soon.";
 	else if HP of Sven is 5:
-		now HP of Sven is 6;
-		now lastfuck of Sven is turns;
-		say "     When you come up to Sven again, you smile as you look over his more feline features. He blushes behind his tail and runs a paw lightly over the front of his shorts. You brush your hand lightly across his muzzle and he nuzzles against it, purring happily. Deciding to follow up on your idea from last time, you lean in and scritch his ear while whispering in the other. 'You are such a pretty kitty. You liked the taste you got before, didn't you, kitty? It was your first time, wasn't it?' He moans softly as you nibble his ear and replies with a soft 'Yes.' You slide a hand stroke his fluffy tail. 'And if you promise to be my good kitty, my special kitty, you can have another taste,' you whisper softly in his ear, drifting your hand from his tail to rub over the very hard bulge in his shorts.";
-		say "     Sven mewls softly and nibbles his lip nervously as he struggles with his shyness for a few moments. You can see in his eyes as the idea starts to set in and soon enough he nuzzles you back, promising to be a good kitty. You smile and guide his head to your crotch, which he happily starts to lick and nuzzle, rumbling loudly as you pet his ears.";
-		if Player is male:
-			say "     With his mouth around your cock, he licks and sucks as if thirsting for your cum while rolling your balls around in one paw[if Player is female]. His other hand is busy at your pussy, stroking and rubbing your female slit[end if]. He's still fumbling around a little, but is quite enthusiastic about his task. And his technique is improving. You rub his ears and whisper what a good kitty he is, what a fine pet he could be for you, while advising him on how to better please you. Eager to please his hero, he listens attentively to all this and takes it all in, changing and improving his technique to make you happy.";
-			say "     You grip the back of the snowmeow's head and start driving your cock into his growing muzzle, grinning at the sight of you further changing this young man into your personal feline play-toy. You can feel his tongue getting rougher and more feline in texture, further stimulating your erection. As you watch, his soft fur spreads further up his forearms and his feet become paws as well, falling out of his shoes. His attention to you soon sends you over the edge and you unleash your hot seed down his throat. He moans lustfully and gulps it all down.";
-			say "     You rub his ears as you guide him off your cock and have him lay back on his cot. He mewls cutely up at you, smiling and licking his lips. You slide down his shorts, uncovering his cock and find it a steely gray like the other snow leopards[']. It is an impressive nine inches with hefty balls below it. You run your fingertips slowly along its underside and speak softly to him again. 'You want to be my pretty kitty, don't you? More than that, you want to be my sexy pet.' You continue teasing his cock as you speak to him, keeping him on the edge, as if only promising his release when he agrees. 'I've seen you looking at me. You want your big, strong hero to protect you and use you. You want to be a slutty kitty for me to fill with cum whenever I please, don't you? Beg to be my slutty pet... I'll make you feel soooo good.'";
-			say "     All the attention on his poor, virgin body soon gets to be too much for him and he nods vigorously, mewling and moaning that he'll be your special kitty, your slutty pet, your sexy fuck-toy. Smiling happily, you kiss his glans. 'Good kitty. You may cum now,' you purr as you wrap your fingers around his cock, pumping firmly over his thick shaft. It throbs in your hand, leaking precum down it and soon enough, he's spraying his seed all across his body as the small patch of white fur spreads across it, covering him entirely in the beautiful coat of a snow leopard. When he's spent and done, you get up slowly, scritch his ears and ponder getting a new collar your feline fuck-toy.";
+		if lastfuck of Sven - turns < 8:
+			say "     Sven blushes cutely as you bring up sex again, but mumbles something about wanting to think about what happened before going ahead more. You do grin as you he subconsciously fondles himself while saying this, assuring you that the shy fellow will come around soon.";
 		else:
-			say "     With his mouth around pressed to your crotch, he licks and sucks at your pussy as if thirsting for your juices while stroking his paws over your ass. His tongue dives into you, slipping as far into your cunt as it can reach to lap up your female cum. He's still fumbling around a little, but is quite enthusiastic about his task. And his technique is improving. You rub his ears and whisper what a good kitty he is, what a fine pet he could be for you, while advising him on how to better please you. Eager to please his hero, he listens attentively to all this and takes it all in, changing and improving his technique to make you happy.";
-			say "     You grip the back of the snowmeow's head and grind your pussy against his growing muzzle, grinning at the sight of you further changing this young man into your personal feline play-toy. You can feel his tongue getting rougher and more feline in texture, further stimulating your sensitive clit. As you watch, his soft fur spreads further up his forearms and his feet become paws as well, falling out of his shoes. His attention to you soon sends you over the edge and your hot juices flow over his tongue and soak his muzzle. He moans lustfully and eagerly laps it up.";
-			say "     You rub his ears as you guide him off your cock and have him lay back on his cot. He mewls cutely up at you, smiling and licking his lips. You slide down his shorts, uncovering his cock and find it a steely gray like the other snow leopards[']. It is an impressive nine inches with hefty balls below it. You run your fingertips slowly along its underside and speak softly to him again. 'You want to be my pretty kitty, don't you? More than that, you want to be my sexy pet.' You continue teasing his cock as you speak to him, keeping him on the edge, as if only promising his release when he agrees. 'I've seen you looking at me. You want your big, strong hero to protect you and use you. You want to be a slutty kitty for me to use as my plaything whenever I please, don't you? Beg to be my slutty pet... I'll make you feel soooo good.'";
-			say "     All the attention on his poor, virgin body soon gets to be too much for him and he nods vigorously, mewling and moaning that he'll be your special kitty, your slutty pet, your sexy fuck-toy. Smiling happily, you kiss his glans. 'Good kitty. You may cum now,' you purr as you wrap your fingers around his cock, pumping firmly over his thick shaft. It throbs in your hand, leaking precum down it and soon enough, he's spraying his seed all across his body as the small patch of white fur spreads across it, covering him entirely in the beautiful coat of a snow leopard. When he's spent and done, you get up slowly, scritch his ears and ponder getting a new collar your feline fuck-toy.";
-	else if ( HP of Sven is 6 or HP of Sven is 7 ) and lastfuck of Sven - turns < 8:
-		say "     The snow leopard stretches out on his bunk, letting his tail only partially hide his cock and ample balls. 'I'm really looking forward to pleasing you again, [if Player is male]master[else]mistress[end if]. I just need to rest up a little more first. This is all so new and wonderful to me. I do not want to spoil it by not being able to give you my best,' he purrs softly in his Nordic accent before blushing and hiding behind his thick tail. You decide not to press the matter, knowing you'll be [if HP of Sven is 6]enjoying your kitty again soon enough[else if HP of Sven is 7]giving your kitty his present soon enough[end if].";
-	else if HP of Sven is 6:
-		now lastfuck of Sven is turns;
-		say "     Deciding another session with your budding pet is in order, you smile and walk on over to him. He blushes a little hides his face behind his tail and gives you a brief flash of his stiff member. He licks his lips and nuzzles into your crotch right away, earning a gentle ear scritching. 'Mmm... that's my good, thirsty kitty. Lick me for your treat.'";
-		if Player is male:
-			say "     Sven's feline tongue plays across your [Cock of Player] cock, licking and teasing it to full erection quickly before taking it into his muzzle. He bobs his head up and down while his tongue and palate work along your throbbing member[if Player is female]. While his muzzle tends to your cock, he slips a paw back to tease and caress your wet folds before slipping a pair of softly furred digits into it[end if]. You release a soft groan; he's quickly getting better at this. You pet his head and ears encouragingly, calling him your playful kitty and your pretty slut[if Cock Length of Player > 6 and Cock Length of Player < 13]. This seems to encourage him further and he pushes your cock fully into his mouth and down his throat. You groan again, louder, at the tighter grip and the increased licking and sucking from your pet snowmeow[else if Cock Length of Player > 12]. This seems to encourage him further and he pushes as much of your huge cock into his mouth and down his throat as he can. You groan again, louder, at the tighter grip and the increased licking and sucking from your pet snowmeow[else]. This seems to encourage him further and he takes your full length into his muzzle to lavish it with attention with his rough tongue. You groan again, louder, at the increased licking and sucking from your pet snowmeow[end if]. As his muzzle works you over, he pumps and strokes at his throbbing, ten inch cock while releasing muffled mewls of pleasure. When your climax comes, he goes off as well, pumping hot feline seed from his ample balls while sucking down your cum. Once finished, he releases your shaft and licks his muzzle, purring contentedly while you scritch his tummy. You are reminded again to look for a collar for your feline pet.";
+			now HP of Sven is 6;
+			now lastfuck of Sven is turns;
+			say "     When you come up to Sven again, you smile as you look over his more feline features. He blushes behind his tail and runs a paw lightly over the front of his shorts. You brush your hand lightly across his muzzle and he nuzzles against it, purring happily. Deciding to follow up on your idea from last time, you lean in and scritch his ear while whispering in the other. 'You are such a pretty kitty. You liked the taste you got before, didn't you, kitty? It was your first time, wasn't it?' He moans softly as you nibble his ear and replies with a soft 'Yes.' You slide a hand stroke his fluffy tail. 'And if you promise to be my good kitty, my special kitty, you can have another taste,' you whisper softly in his ear, drifting your hand from his tail to rub over the very hard bulge in his shorts.";
+			say "     Sven mewls softly and nibbles his lip nervously as he struggles with his shyness for a few moments. You can see in his eyes as the idea starts to set in and soon enough he nuzzles you back, promising to be a good kitty. You smile and guide his head to your crotch, which he happily starts to lick and nuzzle, rumbling loudly as you pet his ears.";
+			if Player is male:
+				say "     With his mouth around your cock, he licks and sucks as if thirsting for your cum while rolling your balls around in one paw[if Player is female]. His other hand is busy at your pussy, stroking and rubbing your female slit[end if]. He's still fumbling around a little, but is quite enthusiastic about his task. And his technique is improving. You rub his ears and whisper what a good kitty he is, what a fine pet he could be for you, while advising him on how to better please you. Eager to please his hero, he listens attentively to all this and takes it all in, changing and improving his technique to make you happy.";
+				say "     You grip the back of the snowmeow's head and start driving your cock into his growing muzzle, grinning at the sight of you further changing this young man into your personal feline play-toy. You can feel his tongue getting rougher and more feline in texture, further stimulating your erection. As you watch, his soft fur spreads further up his forearms and his feet become paws as well, falling out of his shoes. His attention to you soon sends you over the edge and you unleash your hot seed down his throat. He moans lustfully and gulps it all down.";
+				say "     You rub his ears as you guide him off your cock and have him lay back on his cot. He mewls cutely up at you, smiling and licking his lips. You slide down his shorts, uncovering his cock and find it a steely gray like the other snow leopards[']. It is an impressive nine inches with hefty balls below it. You run your fingertips slowly along its underside and speak softly to him again. 'You want to be my pretty kitty, don't you? More than that, you want to be my sexy pet.' You continue teasing his cock as you speak to him, keeping him on the edge, as if only promising his release when he agrees. 'I've seen you looking at me. You want your big, strong hero to protect you and use you. You want to be a slutty kitty for me to fill with cum whenever I please, don't you? Beg to be my slutty pet... I'll make you feel soooo good.'";
+				say "     All the attention on his poor, virgin body soon gets to be too much for him and he nods vigorously, mewling and moaning that he'll be your special kitty, your slutty pet, your sexy fuck-toy. Smiling happily, you kiss his glans. 'Good kitty. You may cum now,' you purr as you wrap your fingers around his cock, pumping firmly over his thick shaft. It throbs in your hand, leaking precum down it and soon enough, he's spraying his seed all across his body as the small patch of white fur spreads across it, covering him entirely in the beautiful coat of a snow leopard. When he's spent and done, you get up slowly, scritch his ears and ponder getting a new collar your feline fuck-toy.";
+			else:
+				say "     With his mouth around pressed to your crotch, he licks and sucks at your pussy as if thirsting for your juices while stroking his paws over your ass. His tongue dives into you, slipping as far into your cunt as it can reach to lap up your female cum. He's still fumbling around a little, but is quite enthusiastic about his task. And his technique is improving. You rub his ears and whisper what a good kitty he is, what a fine pet he could be for you, while advising him on how to better please you. Eager to please his hero, he listens attentively to all this and takes it all in, changing and improving his technique to make you happy.";
+				say "     You grip the back of the snowmeow's head and grind your pussy against his growing muzzle, grinning at the sight of you further changing this young man into your personal feline play-toy. You can feel his tongue getting rougher and more feline in texture, further stimulating your sensitive clit. As you watch, his soft fur spreads further up his forearms and his feet become paws as well, falling out of his shoes. His attention to you soon sends you over the edge and your hot juices flow over his tongue and soak his muzzle. He moans lustfully and eagerly laps it up.";
+				say "     You rub his ears as you guide him off your cock and have him lay back on his cot. He mewls cutely up at you, smiling and licking his lips. You slide down his shorts, uncovering his cock and find it a steely gray like the other snow leopards[']. It is an impressive nine inches with hefty balls below it. You run your fingertips slowly along its underside and speak softly to him again. 'You want to be my pretty kitty, don't you? More than that, you want to be my sexy pet.' You continue teasing his cock as you speak to him, keeping him on the edge, as if only promising his release when he agrees. 'I've seen you looking at me. You want your big, strong hero to protect you and use you. You want to be a slutty kitty for me to use as my plaything whenever I please, don't you? Beg to be my slutty pet... I'll make you feel soooo good.'";
+				say "     All the attention on his poor, virgin body soon gets to be too much for him and he nods vigorously, mewling and moaning that he'll be your special kitty, your slutty pet, your sexy fuck-toy. Smiling happily, you kiss his glans. 'Good kitty. You may cum now,' you purr as you wrap your fingers around his cock, pumping firmly over his thick shaft. It throbs in your hand, leaking precum down it and soon enough, he's spraying his seed all across his body as the small patch of white fur spreads across it, covering him entirely in the beautiful coat of a snow leopard. When he's spent and done, you get up slowly, scritch his ears and ponder getting a new collar your feline fuck-toy.";
+	else if HP of Sven is 6 or HP of Sven is 7:
+		if lastfuck of Sven - turns < 8:
+			say "     The snow leopard stretches out on his bunk, letting his tail only partially hide his cock and ample balls. 'I'm really looking forward to pleasing you again, [if Player is male]master[else]mistress[end if]. I just need to rest up a little more first. This is all so new and wonderful to me. I do not want to spoil it by not being able to give you my best,' he purrs softly in his Nordic accent before blushing and hiding behind his thick tail. You decide not to press the matter, knowing you'll be [if HP of Sven is 6]enjoying your kitty again soon enough[else if HP of Sven is 7]giving your kitty his present soon enough[end if].";
+		else if HP of Sven is 6:
+			now lastfuck of Sven is turns;
+			say "     Deciding another session with your budding pet is in order, you smile and walk on over to him. He blushes a little hides his face behind his tail and gives you a brief flash of his stiff member. He licks his lips and nuzzles into your crotch right away, earning a gentle ear scritching. 'Mmm... that's my good, thirsty kitty. Lick me for your treat.'";
+			if Player is male:
+				say "     Sven's feline tongue plays across your [Cock of Player] cock, licking and teasing it to full erection quickly before taking it into his muzzle. He bobs his head up and down while his tongue and palate work along your throbbing member[if Player is female]. While his muzzle tends to your cock, he slips a paw back to tease and caress your wet folds before slipping a pair of softly furred digits into it[end if]. You release a soft groan; he's quickly getting better at this. You pet his head and ears encouragingly, calling him your playful kitty and your pretty slut. This seems to encourage him further and he [if Cock Length of Player > 6 and Cock Length of Player < 13]pushes your cock fully into his mouth and down his throat. You groan again, louder, at the tighter grip and[else if Cock Length of Player > 12]pushes as much of your huge cock into his mouth and down his throat as he can. You groan again, louder, at the tighter grip and[else]takes your full length into his muzzle to lavish it with attention with his rough tongue. You groan again, louder, at[end if] the increased licking and sucking from your pet snowmeow. As his muzzle works you over, he pumps and strokes at his throbbing, ten inch cock while releasing muffled mewls of pleasure. When your climax comes, he goes off as well, pumping hot feline seed from his ample balls while sucking down your cum. Once finished, he releases your shaft and licks his muzzle, purring contentedly while you scritch his tummy. You are reminded again to look for a collar for your feline pet.";
+			else:
+				say "     Sven's feline tongue plays across your wet folds and dips into your pussy. He runs his soft paws over your thighs before slipping a finger into you to tease your clit. His tongue and teeth tease your sensitive pussy while that softly furred digit strokes your inner walls. You release a soft groan; he's quickly getting better at this. You pet his head and ears encouragingly, calling him your playful kitty and your pretty slut. He inserts a second finger into [if Cunt Tightness of Player > 5]you, and then a third, then slides his whole paw into your wide pussy. Again and again, he stuffs you nicely with the soft touch of his fur over the firm, full feeling of his paw pounding into you. You groan again, louder, at the pleasure of it[else if Cunt Tightness of Player > 2]you and then a third into your ample pussy. Again and again, he stuffs you nicely with the soft touch of his fur over the firm, full feeling of his fingers stroking inside you. You groan again, louder, at the pleasure of them[else]your wet pussy. Again and again, he stuffs you nicely with the soft touch of his fur over the firm, full feeling of his fingers stroking inside you. You groan again, louder, at the pleasure of them[end if] filling you along with the licking and sucking from your pet snowmeow. As his paw and muzzle work at your pussy, lapping up your juices, he pumps and strokes at his throbbing, ten inch cock while releasing muffled mewls of pleasure. When your climax comes, he goes off as well, pumping hot feline seed from his ample balls while drinking down your sweet waters. Once finished, he flops back to lick his muzzle and paw, purring contentedly while you scritch his tummy. You are reminded again to look for a collar for your feline pet.";
 		else:
-			say "     Sven's feline tongue plays across your wet folds and dips into your pussy. He runs his soft paws over your thighs before slipping a finger into you to tease your clit. His tongue and teeth tease your sensitive pussy while that softly furred digit strokes your inner walls. You release a soft groan; he's quickly getting better at this. You pet his head and ears encouragingly, calling him your playful kitty and your pretty slut[if Cunt Tightness of Player > 5]. He inserts a second finger into you, and then a third, then slides his whole paw into your wide pussy. Again and again, he stuffs you nicely with the soft touch of his fur over the firm, full feeling of his paw pounding into you. You groan again, louder, at the pleasure of it filling you along with the licking and sucking from your pet snowmeow[else if Cunt Tightness of Player > 2]. He inserts a second finger into you and then a third into your ample pussy. Again and again, he stuffs you nicely with the soft touch of his fur over the firm, full feeling of his fingers stroking inside you. You groan again, louder, at the pleasure of them filling you along with the licking and sucking from your pet snowmeow[else]. He inserts a second finger into your wet pussy. Again and again, he stuffs you nicely with the soft touch of his fur over the firm, full feeling of his fingers stroking inside you. You groan again, louder, at the pleasure of them filling you along with the licking and sucking from your pet snowmeow[end if]. As his paw and muzzle work at your pussy, lapping up your juices, he pumps and strokes at his throbbing, ten inch cock while releasing muffled mewls of pleasure. When your climax comes, he goes off as well, pumping hot feline seed from his ample balls while drinking down your sweet waters. Once finished, he flops back to lick his muzzle and paw, purring contentedly while you scritch his tummy. You are reminded again to look for a collar for your feline pet.";
-	else if HP of Sven is 7:
-		now HP of Sven is 8;
-		now lastfuck of Sven is turns;
-		if Candy is in Bunker, now lastSvendrink is turns;
-		say "     As you approach Sven this time, he seems to notice something in how you approach him and mewls softly, stretching out on his cot like a lounging feline. Sitting beside him, you rub his tummy and smile as he purrs happily. 'I have something special for you, kitty,' you say softly as you pull out the collar. His eyes lock onto the baby blue strap and he releases a soft mew, almost unheard. He nibbles at his lip a little as you lean in to stroke along the soft fur of his neck.";
-		if Player is herm:
-			say "     As you prepare to give the sexy snowmeow his new collar, you try to decide if you'd prefer to top him or ride him in celebration.";
-			say "     [bold type]You look forward to using your feline in any way you can, but what special reward to give your virgin kitty for his first time?[roman type][line break]";
-			LineBreak;
-			say "     ([link]Y[as]y[end link]) - Top him.";
-			say "     ([link]N[as]n[end link]) - Ride him.";
-			if Player consents:
-				LineBreak;
+			now HP of Sven is 8;
+			now lastfuck of Sven is turns;
+			if Candy is in Bunker, now lastSvendrink is turns;
+			say "     As you approach Sven this time, he seems to notice something in how you approach him and mewls softly, stretching out on his cot like a lounging feline. Sitting beside him, you rub his tummy and smile as he purrs happily. 'I have something special for you, kitty,' you say softly as you pull out the collar. His eyes lock onto the baby blue strap and he releases a soft mew, almost unheard. He nibbles at his lip a little as you lean in to stroke along the soft fur of his neck.";
+			if Player is herm:
+				say "     As you prepare to give the sexy snowmeow his new collar, you try to decide if you'd prefer to top him or ride him in celebration.";
+				say "[line break]     [bold type]You look forward to using your feline in any way you can, but what special reward to give your virgin kitty for his first time?[roman type][line break]";
+				say "     ([link]Y[as]y[end link]) - Top him.";
+				say "     ([link]N[as]n[end link]) - Ride him.";
+				if Player consents:
+					LineBreak;
+					say "[CollarFuck]";
+				else:
+					LineBreak;
+					say "[CollarRide]";
+			else if Player is male:
 				say "[CollarFuck]";
 			else:
-				LineBreak;
 				say "[CollarRide]";
-		else if Player is male:
-			say "[CollarFuck]";
-		else:
-			say "[CollarRide]";
-		say "     [bold type]You find yourself considering giving your kitty a drink to slake his thirst, but a different one than before.[roman type][line break]";
-		LineBreak;
-		say "     ([link]Y[as]y[end link]) - Yes (WS).";
-		say "     ([link]N[as]n[end link]) - No way.";
-		if Player consents:
-			LineBreak;
-			now lust of Sven is 2;
-			if Player is male:
-				say "     Deciding to exert your dominance over your new pet, you motion for him to get on his knees in front of you. When you bring your cock to his muzzle, he takes it into his mouth readily, licking and sucking it clean. Stroking his ears, you hold his head in place and tell him to be a good kitty and to drink it all down. He mewls softly and blushes as you release your bladder, letting your hot urine flow into his muzzle.";
-				say "     Being the thirsty kitty that he is, he can't help but drink it down. His ears dip down submissively and he blushes brightly, but doesn't try to pull away and even starts sucking for more. 'That's my good, thirsty kitty,' you say in a throaty voice, pleased with your pet. When you are almost empty, you release his head and spray the last of your piss across his body. He does not pull away, even purring as you mark him as yours. Once you're done, he leans back against the cot and purrs contentedly, licking his lips as he strokes a paw over his wet fur.";
+			say "[line break]     [bold type]You find yourself considering giving your kitty a drink to slake his thirst, but a different one than before.[roman type][line break]";
+			say "     ([link]Y[as]y[end link]) - Yes (WS).";
+			say "     ([link]N[as]n[end link]) - No way.";
+			if Player consents:
+				LineBreak;
+				now lust of Sven is 2;
+				if Player is male:
+					say "     Deciding to exert your dominance over your new pet, you motion for him to get on his knees in front of you. When you bring your cock to his muzzle, he takes it into his mouth readily, licking and sucking it clean. Stroking his ears, you hold his head in place and tell him to be a good kitty and to drink it all down. He mewls softly and blushes as you release your bladder, letting your hot urine flow into his muzzle.";
+					say "     Being the thirsty kitty that he is, he can't help but drink it down. His ears dip down submissively and he blushes brightly, but doesn't try to pull away and even starts sucking for more. 'That's my good, thirsty kitty,' you say in a throaty voice, pleased with your pet. When you are almost empty, you release his head and spray the last of your piss across his body. He does not pull away, even purring as you mark him as yours. Once you're done, he leans back against the cot and purrs contentedly, licking his lips as he strokes a paw over his wet fur.";
+				else:
+					say "     Deciding to exert your dominance over your new pet, you motion for him to get on his knees in front of you. When you bring your sticky pussy to his muzzle, he presses his muzzle to it readily and starts licking it clean. Stroking his ears, you hold his head in place and tell him to be a good kitty and to drink it all down. He mewls softly and blushes as you release your bladder, letting your hot urine flow across and into his muzzle.";
+					say "     Being the thirsty kitty that he is, he can't help but drink it down. His ears dip down submissively and he blushes brightly, but doesn't try to pull away as most flows down his throat. The rest runs down his neck and chest, marking him as yours. He even licks away the last few drops before you release him. Once you're done, he leans back against the cot and purrs contentedly, licking his lips as he strokes a paw over his wet fur.";
 			else:
-				say "     Deciding to exert your dominance over your new pet, you motion for him to get on his knees in front of you. When you bring your sticky pussy to his muzzle, he presses his muzzle to it readily and starts licking it clean. Stroking his ears, you hold his head in place and tell him to be a good kitty and to drink it all down. He mewls softly and blushes as you release your bladder, letting your hot urine flow across and into his muzzle.";
-				say "     Being the thirsty kitty that he is, he can't help but drink it down. His ears dip down submissively and he blushes brightly, but doesn't try to pull away as most flows down his throat. The rest runs down his neck and chest, marking him as yours. He even licks away the last few drops before you release him. Once you're done, he leans back against the cot and purrs contentedly, licking his lips as he strokes a paw over his wet fur.";
+				LineBreak;
+				now lust of Sven is 1;
+				say "     You put aside those thoughts and focus on the plan at hand of molding the cute fellow into a proper play-toy for your amusement. You gently press him back onto the cot and run your hands up his chest, scritching as you go and making him shiver in delight. When you reach his collar, you trace your fingers along it, then scritch the underside of his muzzle. He purrs loudly at this, eyes closed in feline pleasure. You whisper in his ear again what a sexy kitty he's become and how pleased you are with your new fuck-toy before ending with a promise to play with him again soon. As he drifts off into a contented catnap, you get up and leave him on the cot soaked in the scents of sex.";
+			increase score by 50;
+	else if HP of Sven is 8 or HP of Sven is 10:
+		if lastfuck of Sven - turns < 6:
+			say "     The snow leopard stretches out on his sex-scented bunk, letting his tail only partially hide his cock and ample balls. 'I'm really looking forward to pleasing you again, [if Player is male]master[else]mistress[end if]. I just need to rest up a little more first. This is all so new and wonderful to me. I do not want to spoil it by not being able to give you my best,' he purrs softly in his Nordic accent as he traces a paw across his ample balls and half-hard cock while only half-hiding it with his tail. You decide not to press the matter, knowing he's your kitty to enjoy from now on.";
 		else:
-			LineBreak;
-			now lust of Sven is 1;
-			say "     You put aside those thoughts and focus on the plan at hand of molding the cute fellow into a proper play-toy for your amusement. You gently press him back onto the cot and run your hands up his chest, scritching as you go and making him shiver in delight. When you reach his collar, you trace your fingers along it, then scritch the underside of his muzzle. He purrs loudly at this, eyes closed in feline pleasure. You whisper in his ear again what a sexy kitty he's become and how pleased you are with your new fuck-toy before ending with a promise to play with him again soon. As he drifts off into a contented catnap, you get up and leave him on the cot soaked in the scents of sex.";
-		increase score by 50;
-	else if ( HP of Sven is 8 or HP of Sven is 10 ) and lastfuck of Sven - turns < 6:
-		say "     The snow leopard stretches out on his sex-scented bunk, letting his tail only partially hide his cock and ample balls. 'I'm really looking forward to pleasing you again, [if Player is male]master[else]mistress[end if]. I just need to rest up a little more first. This is all so new and wonderful to me. I do not want to spoil it by not being able to give you my best,' he purrs softly in his Nordic accent as he traces a paw across his ample balls and half-hard cock while only half-hiding it with his tail. You decide not to press the matter, knowing he's your kitty to enjoy from now on.";
+			if HP of Sven is 10 and lastCandyfucked - turns > 5 and SvenCandyMsg is 0:
+				say "     Deciding to have a little fun with your snowmeow pet, you glance over to Candy, wondering if you should invite the coon in on your fun. [if coonsex > 0]It has been a while since you two had some fun together, so he'd probably be up for more[else]You haven't really played around with the coon since getting him here and he'd probably enjoy repaying you for saving him[end if]. The two certainly get along very well and won't become jealous if you were only to play with one of them. But it might be fun to have a little playtime with them both together. It's certainly something worth considering.";
+				now SvenCandyMsg is 1;
+			now sextablerun is 0;
+			blank out the whole of table of fucking options;
+			[]
+			if Player is male:
+				choose a blank row in table of fucking options;
+				now title entry is "Fuck him";
+				now sortorder entry is 1;
+				now description entry is "mount your snowmeow pet";
+				[]
+				choose a blank row in table of fucking options;
+				now title entry is "Lap kitty";
+				now sortorder entry is 2;
+				now description entry is "give the kitty a ride in your lap";
+				[]
+				choose a blank row in table of fucking options;
+				now title entry is "Blowjob";
+				now sortorder entry is 4;
+				now description entry is "have your kitty suck you off";
+			[]
+			if Player is female:
+				choose a blank row in table of fucking options;
+				now title entry is "Ride him (vaginal)";
+				now sortorder entry is 3;
+				now description entry is "get his feline shaft inside you";
+				[]
+				choose a blank row in table of fucking options;
+				now title entry is "Cunnilingus";
+				now sortorder entry is 5;
+				now description entry is "have your kitty eat you out";
+			else:
+				choose a blank row in table of fucking options;
+				now title entry is "Ride him (anal)";
+				now sortorder entry is 3;
+				now description entry is "get his feline shaft inside you";
+			[]
+			if HP of Sven is 10 and lastCandyfucked - turns > 5:
+				choose a blank row in table of fucking options;
+				now title entry is "Threesome w/Candy";
+				now sortorder entry is 6;
+				now description entry is "invite Candy over for a threesome";
+			[]
+			sort the table of fucking options in sortorder order;
+			repeat with y running from 1 to number of filled rows in table of fucking options:
+				choose row y from the table of fucking options;
+				say "[link][y] - [title entry][as][y][end link][line break]";
+			while sextablerun is 0:
+				say "Pick the corresponding number> [run paragraph on]";
+				get a number;
+				if calcnumber > 0 and calcnumber <= the number of filled rows in table of fucking options:
+					now current menu selection is calcnumber;
+					choose row calcnumber in table of fucking options;
+					say "[title entry]: [description entry]?";
+					if Player consents:
+						LineBreak;
+						now sextablerun is 1;
+						if SvenCandyMsg is 1 and title entry is not "Threesome w/Candy":
+							say "     You decide to give Sven some personal attention this time and head on over to him. As you start heading that way, you see Candy take an interest. The pink coon takes a comfortable seat to watch the entertainment.";
+						if title entry is:
+							-- "Fuck him":
+								say "[SoloSvenFuck]";
+							-- "Lap kitty":
+								say "[SoloSvenLapFuck]";
+							-- "Ride him (vaginal)":
+								say "[SoloSvenRide]";
+							-- "Ride him (anal)":
+								say "[SoloSvenRideAnal]";
+							-- "Blowjob":
+								say "[SoloSvenMOral]";
+							-- "Cunnilingus":
+								say "[SoloSvenFOral]";
+							-- "Threesome w/Candy":
+								say "[SvenTrio]";
+								now lastCandyfucked is turns;
+						if SvenCandyMsg is 1 and title entry is not "Threesome w/Candy":
+							say "     Having finished up with your pet snowmeow, you glance over to the pink raccoon. He has been watching the show and is jerking off with churrs of delight as he eyes your well-used, messy kitty. His slender fingers pump over his hot pink cock, working it faster and faster until he finally groans and sprays his seed onto the floor, filling the room with his cotton candy scent.";
+							now SvenCandyMsg is 2;
+						increase level of Sven by 1;
+				else:
+					say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
+			now lastfuck of Sven is turns;
+			wait for any key;
+			clear the screen and hyperlink list;
 	else if HP of Sven is 9:
 		say "ERROR-Sven-9F: You should not be able to fuck me! Exiting and re-entering the bunker should resolve this.";
-	else if HP of Sven is 8 or HP of Sven is 10:
-		say "[SoloSven]";
 	[Confident Sven]
 	else if HP of Sven is 30:
 		say "     While he seems like he'd be quite receptive to the offer, it'd still be best to talk to him first.";
@@ -541,15 +609,79 @@ to say SexWithSven:
 			say "     While your hands slip down to get him out of his shorts, his paws do the same to you, divesting you of your gear and baring your body to him. With his cock freed, you take hold of his gray rod. Within your grip, it rises to full hardness and stands slightly over a foot in length. Similar to the other snow leopards around, Sven's also got an extra-hefty package beneath his hard shaft. The sight and feel of it only excites you all the more.";
 			WaitLineBreak;
 			say "     The feline's paws move to your hips and gently guide you to sit in his lap. Straddling him, you keep his shaft lined up while sinking your hot, wet cunny down onto it. You both moan softly in delight as the thick manhood slides into your cunt. After taking the first few slides up and down several inches of it, you push yourself lower and start riding him in earnest. Your hands move to his shoulders for support as you bounce up and down on the kitty's pulsing pole.";
-			say "     Sven's paws run over your body, purring happily as he does[if Breast Size of Player > 0]. His paws find their way to your bosom to play with your nipples while caressing your [short breast size desc of Player] breasts. Cupping one, he leans in and brings his muzzle to your breast, soon licking and sucking on your hard nip to make you moan in pleasure[else]. His paws eventually find their way to your hips after groping your ass playfully. Holding your hips, he steadies you while encouraging you to ride him harder and faster[end if]. The sound of his purring grows louder as the two of you make love.";
+			say "     Sven's paws run over your body, purring happily as he does. His paws [if Breast Size of Player > 0]find their way to your bosom to play with your nipples while caressing your [short breast size desc of Player] breasts. Cupping one, he leans in and brings his muzzle to your breast, soon licking and sucking on your hard nip to make you moan in pleasure[else]eventually find their way to your hips after groping your ass playfully. Holding your hips, he steadies you while encouraging you to ride him harder and faster[end if]. The sound of his purring grows louder as the two of you make love.";
 			WaitLineBreak;
 			say "     It's not long before the big kitty is pushing his hips up even as you slam down. Eyes clenched shut, he moans and mewls as his shaft throbs and pulses inside you as his climax arrives. Blast after gooey blast of feline seed sprays from his gray cock, splattering against your cervix and flowing into your womb. Feeling him seeding you so heavily is enough to push you over the edge and you cry out in orgasm partway through the snow leopard's release, adding your hot juices to the sticky mess leaking around his pulsing rod. Once spent, Sven sags back onto the mattress, panting heavily with an expression of dazed delight on his muzzle. After allowing the last quivers of your orgasm to pass, you pull off of him and give him a tender kiss before leaving him to recover.[impregchance]";
 		increase HP of Sven by 1;
 		now lastfuck of Sven is turns;
-	else if HP of Sven >= 32 and HP of Sven < 50 and lastfuck of Sven - turns < 6:
-		say "     The snow leopard smiles and stretches out on his sex-scented bunk, letting his tail only partially hide the plump bulge in his crotch. 'While I'm really looking forward to that, I need to rest up a little more first. This is all so new and wonderful to me, but I do not want to spoil it by not being to perform my best,' he purrs softly in his Nordic accent as he traces along his side.";
 	else if HP of Sven >= 32 and HP of Sven < 50:
-		say "[ConfidentSvenSex]";
+		if lastfuck of Sven - turns < 6:
+			say "     The snow leopard smiles and stretches out on his sex-scented bunk, letting his tail only partially hide the plump bulge in his crotch. 'While I'm really looking forward to that, I need to rest up a little more first. This is all so new and wonderful to me, but I do not want to spoil it by not being to perform my best,' he purrs softly in his Nordic accent as he traces along his side.";
+		else:
+			say "     Sven smiles as you start hinting about sex and his tail-tip twitches excitedly. Leaning back on his bunk, the white-furred cat shows off his sexy body and markings. Purrumbling playfully, he hooks his thumbs over the waistband of his shorts, pushing them down. 'What did you have in mind, my friend?'";
+			now sextablerun is 0;
+			blank out the whole of table of fucking options;
+			[]
+			if Player is not neuter:
+				if Player is male:
+					choose a blank row in table of fucking options;
+					now title entry is "Fuck him";
+					now sortorder entry is 1;
+					now description entry is "Pound the big kitty's ass";
+					[]
+					choose a blank row in table of fucking options;
+					now title entry is "Get a blowjob";
+					now sortorder entry is 3;
+					now description entry is "Have the fluffy kitty suck you off";
+					[]
+					choose a blank row in table of fucking options;
+					now title entry is "Give him a blowjob";
+					now sortorder entry is 4;
+					now description entry is "Suck off the fluffy kitty";
+				[]
+				if Player is female:
+					choose a blank row in table of fucking options;
+					now title entry is "Ride him (vaginal)";
+					now sortorder entry is 2;
+					now description entry is "Get his feline shaft inside you";
+				else:
+					choose a blank row in table of fucking options;
+					now title entry is "Ride him (anal)";
+					now sortorder entry is 2;
+					now description entry is "Get his feline shaft inside you";
+			[]
+			sort the table of fucking options in sortorder order;
+			repeat with y running from 1 to number of filled rows in table of fucking options:
+				choose row y from the table of fucking options;
+				say "[link][y] - [title entry][as][y][end link][line break]";
+			while sextablerun is 0:
+				say "Pick the corresponding number> [run paragraph on]";
+				get a number;
+				if calcnumber > 0 and calcnumber <= the number of filled rows in table of fucking options:
+					now current menu selection is calcnumber;
+					choose row calcnumber in table of fucking options;
+					say "[title entry]: [description entry]?";
+					if Player consents:
+						LineBreak;
+						now sextablerun is 1;
+						if SvenCandyMsg is 1 and title entry is not "Threesome w/Candy":
+							say "     You decide to give Sven some personal attention this time and head on over to him. As you start heading that way, you see Candy take an interest. The pink coon takes a comfortable seat to watch the entertainment.";
+						if title entry is:
+							-- "Fuck him":
+								say "[ConfidentSvenSex01]";
+							-- "Ride him (vaginal)":
+								say "[ConfidentSvenSex02]";
+							-- "Ride him (anal)":
+								say "[ConfidentSvenSex03]";
+							-- "Get a blowjob":
+								say "[ConfidentSvenSex04]";
+							-- "Give him a blowjob":
+								say "[ConfidentSvenSex05]";
+				else:
+					say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
+			now lastfuck of Sven is turns;
+			wait for any key;
+			clear the screen and hyperlink list;
 	[Sven at Restrained Desire:]
 	else if HP of Sven is 50:
 		say "     Sven squirms a little in his seat and blushes as you start to bring up the subject of sex. He looks away, but ends up looking at the wares again, and he reddens and hides his face behind his snow leopard tail. He mumbles something about how he doesn't think that'd be a good idea. You do spot that telltale bulge in his shorts though, which makes you hopeful you can coax him into some fun once he settles into his new home.";
@@ -558,7 +690,6 @@ to say SexWithSven:
 	else if HP of Sven > 51:
 		say "ERROR-Sven-52F: You should not be able to proposition me!";
 
-
 to say CollarFuck:
 	say "     You place your hands on his shoulders and roll him over onto all fours. Almost instinctively, he raises his ass and his tail moves out of the way. As you line up your cock with his ass, you nibble his ear and show him the collar again, making certain to he sees the [']FUCKTOY['] label on its tag. As you rub your prick against his back entrance, leaking pre onto his tight tailhole, you say, 'I'm going to make you my special kitty now. My feline fuck-toy. You want it, don't you?' you whisper in his ear as grind your cock even harder, making it clear he'll need to agree to one to get the other.";
 	say "     The snow leopard mewls lustfully and presses his ass back, letting his tailhole spread open a little for your [Cock of Player] cock. 'Yes! Do it! I'll be your pet, your fuck-toy, anything! Just fuck me, please.' Smiling happily, you slide the collar around his neck even as you drive your cock deep inside your virgin kitty, making him mrowl in delight. As soon as you latch it shut, he grinds back against you and you start pounding away.";
@@ -566,92 +697,12 @@ to say CollarFuck:
 	say "     His ass is deliciously tight, a delight to fuck. He kneads his paws at the cot's mattress, mewling and moaning in pleasure. You lick and nibble his ear as you pound away at him, telling him what a good kitty fuck-toy he is while you stroke at his throbbing cock. His inner walls grip around you firmly each time you press into him and his shaft and balls twitch. You try to draw it out as long as you can. But when your pet yowls and starts blasting his ample load onto the fire blanket, his ass grips you so tightly you find yourself pushed over the edge. You send shot after shot into his feline ass, filling him [if Ball Size of Player > 3]enough to make his tummy bulge[else if Ball Size of Player > 3]with enough to stuff his ass fully[else]with your thick cum[end if].";
 	say "     As you ease your cock out of your sexy snowmeow, he moans and pants, clearly a little overheated by all the exertion, but also purring up a storm. As you pat his freshly creamed ass, you are struck by a particularly naughty idea.";
 
-
 to say CollarRide:
 	say "     You place your hands on his shoulders and straddle him. He mewls and blushes as you press your pussy against his cock, sliding it along his throbbing length. Your juices leak out over it, getting him slick as you show him the collar again, making certain to he sees the [']FUCKTOY['] label on its tag. As you rub your damp folds against his prick, you say, 'I'm going to make you my special kitty now. My feline fuck-toy. You want it, don't you?' you whisper in his ear as grind down on his cock even harder, making it clear he'll need to agree to one to get the other.";
 	say "     The snow leopard mewls lustfully and grinds up against you, instinctively thrusting to try to get in that wet cunt he can feel. 'Yes! Do it! I'll be your pet, your fuck-toy, anything! Just fuck me, please.' Smiling happily, you slide the collar around his neck even as you line yourself up with his throbbing shaft and sink his virgin cock deep inside you, making him mrowl in delight. As soon as you latch it shut, he thrusts up into you and you start riding that large, feline cock.";
 	WaitLineBreak;
 	say "     His cock is deliciously large, [if Cunt Tightness of Player > 5]enough to please even your ample pussy[else if Cunt Tightness of Player > 2]a snug fit for your pussy[else]a tight fit for your small pussy, but are able to stretch yourself down onto it with only a little pain and a whole lot of pleasure[end if]. You run your hands through his fluffy chest fur while he moans and mewls in pleasure. You lean in and tell him what a good kitty fuck-toy he is as you nibble his ear, then sit back up and tweak the hard nipples you've found hidden under his thick fluff of fur. You can feel his cock twitch and his balls throb each time you press down onto his lap. You try to draw it out as long as you can. But when your pet yowls and starts blasting his rich seed deep inside you, making your tummy swell a little with his cum, you find yourself pushed over the edge. Your pussy clamps down around him, milking him for enough cum to make your tummy swell with his seed as it stuffs your womb full[if Player is male] while you blast your own seed across his chest and face[end if].[impregchance]";
 	say "     As you ease off your sexy snowmeow's cock, he moans and pants, clearly a little overheated by all the exertion, but also purring up a storm. As you pat his freshly drained balls, you are struck by a particularly naughty idea.";
-
-to say SoloSven:
-	if HP of Sven is 10 and lastCandyfucked - turns > 5 and SvenCandyMsg is 0:
-		say "     Deciding to have a little fun with your snowmeow pet, you glance over to Candy, wondering if you should invite the coon in on your fun[if coonsex > 0]. It has been a while since you two had some fun together, so he'd probably be up for more[else]. You haven't really played around with the coon since getting him here and he'd probably enjoy repaying you for saving him[end if]. The two certainly get along very well and won't become jealous if you were only to play with one of them. But it might be fun to have a little playtime with them both together. It's certainly something worth considering.";
-		now SvenCandyMsg is 1;
-	now sextablerun is 0;
-	blank out the whole of table of fucking options;
-	if Player is male:
-		choose a blank row in table of fucking options;
-		now title entry is "Fuck him";
-		now sortorder entry is 1;
-		now description entry is "mount your snowmeow pet";
-		choose a blank row in table of fucking options;
-		now title entry is "Lap kitty";
-		now sortorder entry is 2;
-		now description entry is "give the kitty a ride in your lap";
-	choose a blank row in table of fucking options;
-	if Player is female:
-		now title entry is "Ride him (vaginal)";
-	else:
-		now title entry is "Ride him (anal)";
-	now sortorder entry is 3;
-	now description entry is "get his feline shaft inside you";
-	if Player is male:
-		choose a blank row in table of fucking options;
-		now title entry is "Blowjob";
-		now sortorder entry is 4;
-		now description entry is "have your kitty suck you off";
-	if Player is female:
-		choose a blank row in table of fucking options;
-		now title entry is "Cunnilingus";
-		now sortorder entry is 5;
-		now description entry is "have your kitty eat you out";
-	if HP of Sven is 10 and lastCandyfucked - turns > 5:
-		choose a blank row in table of fucking options;
-		now title entry is "Threesome w/Candy";
-		now sortorder entry is 6;
-		now description entry is "invite Candy over for a threesome";
-	sort the table of fucking options in sortorder order;
-	repeat with y running from 1 to number of filled rows in table of fucking options:
-		choose row y from the table of fucking options;
-		say "[link][y] - [title entry][as][y][end link][line break]";
-	while sextablerun is 0:
-		say "Pick the corresponding number> ";
-		get a number;
-		if calcnumber > 0 and calcnumber <= the number of filled rows in table of fucking options:
-			now current menu selection is calcnumber;
-			choose row calcnumber in table of fucking options;
-			say "[title entry]: [description entry]?";
-			if Player consents:
-				let nam be title entry;
-				now sextablerun is 1;
-				if SvenCandyMsg is 1 and nam is not "Threesome w/Candy":
-					say "     You decide to give Sven some personal attention this time and head on over to him. As you start heading that way, you see Candy take an interest. The pink coon takes a comfortable seat to watch the entertainment.";
-				if nam is "Fuck him":
-					say "[SoloSvenFuck]";
-				else if nam is "Lap kitty":
-					say "[SoloSvenLapFuck]";
-				else if nam is "Ride him (vaginal)":
-					say "[SoloSvenRide]";
-				else if nam is "Ride him (anal)":
-					say "[SoloSvenRideAnal]";
-				else if nam is "Blowjob":
-					say "[SoloSvenMOral]";
-				else if nam is "Cunnilingus":
-					say "[SoloSvenFOral]";
-				else if nam is "Threesome w/Candy":
-					say "[SvenTrio]";
-					now lastCandyfucked is turns;
-				if SvenCandyMsg is 1 and nam is not "Threesome w/Candy":
-					say "     Having finished up with your pet snowmeow, you glance over to the pink raccoon. He has been watching the show and is jerking off with churrs of delight as he eyes your well-used, messy kitty. His slender fingers pump over his hot pink cock, working it faster and faster until he finally groans and sprays his seed onto the floor, filling the room with his cotton candy scent.";
-					now SvenCandyMsg is 2;
-				increase level of Sven by 1;
-		else:
-			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
-	now lastfuck of Sven is turns;
-	wait for any key;
-	clear the screen and hyperlink list;
-
 
 to say SoloSvenMOral:
 	say "     Attentive to you as you stride over, he is out of his cot and nuzzling at your hips right away, purring happily. You smile and stroke your kitty's ears, telling him he's a good kitty. As he nuzzles and licks at his crotch, you run your fingers through his [if lust of Sven is 2]hair[else]head-fur[end if].";
@@ -694,9 +745,9 @@ to say SoloSvenRideAnal:
 
 to say SvenWS:
 	if Player is male:
-		say "     Grinning down at your kitty, you can't help but feel he needs another drink. As you gently take his head into your hands, he glances up at you and purrs softly, knowing what's to come. He starts licking and sucking softly, readily drinking down your piss as you release your bladder. He swallows it down eagerly, always such a thirsty kitty[if level of Sven / 2 is even]. This time, you decide to pull your cock free before you finish and spray the last of it onto him, marking him as your fuck-toy. He lays on his back, rolling in the wet puddle, lost in a blissful haze while stroking his throbbing cock. He ends up spraying a huge amount of cum from his large balls onto his chest. You leave him like that, sticky with cum and purring like a sexy feline fuck-toy that's been well used[else]. You keep his muzzle wrapped around your cock until you're fully drained this time, filling your lustful snowmeow with every single drop of your hot urine. He smiles up at you, purring happily as he lays back on the cot, stroking his full tummy and licking his lips to enjoy the strong, lingering taste in his mouth. He strokes himself off with his other paw, spraying a huge amount of cum from his large balls onto his chest. You leave him like that, sticky with cum and purring like a sexy feline fuck-toy that's been well used[end if].";
+		say "     Grinning down at your kitty, you can't help but feel he needs another drink. As you gently take his head into your hands, he glances up at you and purrs softly, knowing what's to come. He starts licking and sucking softly, readily drinking down your piss as you release your bladder. He swallows it down eagerly, always such a thirsty kitty. [if level of Sven / 2 is even]This time, you decide to pull your cock free before you finish and spray the last of it onto him, marking him as your fuck-toy. He lays on his back, rolling in the wet puddle, lost in a blissful haze while stroking his throbbing cock. He ends up[else]You keep his muzzle wrapped around your cock until you're fully drained this time, filling your lustful snowmeow with every single drop of your hot urine. He smiles up at you, purring happily as he lays back on the cot, stroking his full tummy and licking his lips to enjoy the strong, lingering taste in his mouth. He strokes himself off with his other paw,[end if] spraying a huge amount of cum from his large balls onto his chest. You leave him like that, sticky with cum and purring like a sexy feline fuck-toy that's been well used.";
 	else:
-		say "     Grinning down at your kitty, you can't help but feel he needs another drink. As you gently take his head into your hands, he glances up at you and purrs softly, knowing what's to come. He starts licking and sucking softly, readily drinking down your piss as you release your bladder. He swallows it down eagerly, always such a thirsty kitty[if level of Sven / 2 is even]. Before you finish, you push his head lower. Holding your pussy open with a pair of fingers, you let the remainder of the hot fluid spray down onto your pet's head. He dips his ears submissively, but purrs all the louder as you mark him as your fuck-toy. He lays on the floor and starts grooming himself, licking your urine from his paw after each swipe while the other pumps at his cock, soon adding a huge amount of snowmeow cum from his large balls that he'll have to lick off[else]. You keep his muzzle pressed to your groin while you piss, letting him lap up every drop he can get. While some does leak down his muzzle to run down his neck, he swallows down every drop of your hot urine he can get. He smiles up at you, purring happily as he lays back on the cot, stroking his full tummy and licking his lips to enjoy the strong, lingering taste in his mouth. He strokes himself off with his other paw, spraying a huge amount of cum from his large balls onto his chest. You leave him like that, sticky with cum and purring like a sexy feline fuck-toy that's been well used[end if].";
+		say "     Grinning down at your kitty, you can't help but feel he needs another drink. As you gently take his head into your hands, he glances up at you and purrs softly, knowing what's to come. He starts licking and sucking softly, readily drinking down your piss as you release your bladder. He swallows it down eagerly, always such a thirsty kitty. [if level of Sven / 2 is even]Before you finish, you push his head lower. Holding your pussy open with a pair of fingers, you let the remainder of the hot fluid spray down onto your pet's head. He dips his ears submissively, but purrs all the louder as you mark him as your fuck-toy. He lays on the floor and starts grooming himself, licking your urine from his paw after each swipe while the other pumps at his cock, soon adding a huge amount of snowmeow cum from his large balls that he'll have to lick off[else]You keep his muzzle pressed to your groin while you piss, letting him lap up every drop he can get. While some does leak down his muzzle to run down his neck, he swallows down every drop of your hot urine he can get. He smiles up at you, purring happily as he lays back on the cot, stroking his full tummy and licking his lips to enjoy the strong, lingering taste in his mouth. He strokes himself off with his other paw, spraying a huge amount of cum from his large balls onto his chest. You leave him like that, sticky with cum and purring like a sexy feline fuck-toy that's been well used[end if].";
 
 to say SvenTrio:
 	say "     With a grin, you walk over to Candy and put your arm around him, resting one hand on his skirted rear and the other taking his paw. He doesn't object and even starts to prance merrily as he sees you steering him towards Sven's bunk. The kitty sits up as you come over, smiling in anticipation of both he and the coon getting to share your company.";
@@ -729,8 +780,7 @@ to say SvenTrio:
 	else:													[results cycle - Sex B]
 		if Player is herm:
 			say "     You snuggle with the two pretty play-toys as run your fingers through their soft fur, nuzzling them each in turn. With such willing partners, you try to decide what you'd like to do with them this time. You slide your hands down to their bottoms, wondering if you'd like to fuck both their adorable asses.";
-			say "     [bold type]Letting your fingers drift around to grab their stiff cocks and stroke them, there's also the possibility of getting some coon cock in you with your pet's help.[roman type][line break]";
-			LineBreak;
+			say "[line break]     [bold type]Letting your fingers drift around to grab their stiff cocks and stroke them, there's also the possibility of getting some coon cock in you with your pet's help.[roman type][line break]";
 			say "     ([link]Y[as]y[end link]) - Fuck them both.";
 			say "     ([link]N[as]n[end link]) - Coon sex.";
 			if Player consents:
@@ -739,23 +789,20 @@ to say SvenTrio:
 			else:
 				LineBreak;
 				say "[SvenTrioCoonSex]";
-		else if Player is male:
-			say "[SvenTrio2fuck]";
 		else:
-			say "[SvenTrioCoonSex]";
+			say "[if Player is male][SvenTrio2fuck][else][SvenTrioCoonSex][end if]";
 
 to say SvenTrio2fuck:
 	say "     Finding yourself in the mood to top the sexy pair, you get them both on the cot on all fours. It's a tight squeeze, but the little guys manage it well enough by snuggling close. With their asses raised in the air, they intertwine their tails and wave the fluffy, colorful mass tantalizingly to show their eagerness. You run your fingers over their bottoms, teasing their tight puckers to hear them moan before picking to start with Sven.";
-	say "     You line up your throbbing member with his back door and ease yourself slowly into him, enjoying the soft moan of pleasure as you do[if Cock Length of Player > 23]. You take your time working your huge cock fully into him getting him good and stuffed with it, making his tummy bulge with your impressive meat filling it[else if Cock Length of Player > 12]. You steadily work your large cock into him, stuffing his tummy nicely with it, making a little bulge show from your large member[else]. You sink your cock into him steadily, working the full length into his eager ass easily[end if]. Once fully in your pet, you thrust away, taking your time to savor the feel of his inner walls gripping around you.";
+	say "     You line up your throbbing member with his back door and ease yourself slowly into him, enjoying the soft moan of pleasure as you do. You [if Cock Length of Player > 23]take your time working your huge cock fully into him getting him good and stuffed with it, making his tummy bulge with your impressive meat filling it[else if Cock Length of Player > 12]steadily work your large cock into him, stuffing his tummy nicely with it, making a little bulge show from your large member[else]sink your cock into him steadily, working the full length into his eager ass easily[end if]. Once fully in your pet, you thrust away, taking your time to savor the feel of his inner walls gripping around you.";
 	say "     You bring a hand to Candy's rear and squeeze it before fingering his tailhole, helping to get him ready for his turn. He and the sexy kitty wrap their arms around one another, nuzzling and kissing as you play with them. After a minute or so in the snow leopard's ass, you switch over to the coon and mount him now. Much like your pet, his ass takes your cock in until you have it fully inside his squeezing, eager rump. You pound away at his ass now, giving him a good, if short, fucking before going back to Sven again.";
 	say "     You alternate like this numerous times, pumping your [if Cock Length of Player > 23]huge [else if Cock Length of Player > 12]large [end if]cock into them for a while before switching to the other. You pump a few fingers into the vacant hole. As you switch, you can see each stroking the other's cock as they take turns sharing your manhood in their needy holes. While taking them both is quite arousing, the constant switching gives you a moment to calm down each time, letting you draw it out so they each get a proper fucking. Eventually, you can feel your climax coming as your aching balls throb with the need to drain.";
-	say "     [bold type]You need to decide quickly who to finish in, Sven or Candy.[roman type][line break]";
-	LineBreak;
+	say "[line break]     [bold type]You need to decide quickly who to finish in, Sven or Candy.[roman type][line break]";
 	say "     ([link]Y[as]y[end link]) - Sven.";
 	say "     ([link]N[as]n[end link]) - Candy.";
 	if Player consents:
 		LineBreak;
-		say "     Deciding on Sven, you drive your cock into him one last time and start pounding away at him hard and fast. You bury your fingers in his soft fur to grip his cute ass tightly. He mrowls and mewls loudly, knowing what's coming and longing for it. Candy, now free to move, slides around quickly and stuffs Sven's large cock into his muzzle. His paws scritches the kitty's ears and gets him to return the favor for the excited coon. You are barely able to hold back long enough to get their 69 going before you moan loudly and drive your cock hard into the snowmeow, unleashing your hot load into him[if Ball Size of Player > 4]. Your hefty balls blast their seed out from your cock, over-stuffing his tummy so much it swells from your huge load[else if Ball Size of Player > 3]. Your big balls pump their seed out from your cock, stuffing his ass fully with your ample load[else]. Your balls throb and your cock pumps out your seed, spraying your seed into his eager bottom[end if]. You can hear the delicious sounds of their wet moans as they swallow down each other's semen. Once your climax passes and you all bask in the afterglow, you snuggle and kiss on the cot for a while before you get up and head off, leaving them to snuggle while you tend to other matters.";
+		say "     Deciding on Sven, you drive your cock into him one last time and start pounding away at him hard and fast. You bury your fingers in his soft fur to grip his cute ass tightly. He mrowls and mewls loudly, knowing what's coming and longing for it. Candy, now free to move, slides around quickly and stuffs Sven's large cock into his muzzle. His paws scritches the kitty's ears and gets him to return the favor for the excited coon. You are barely able to hold back long enough to get their 69 going before you moan loudly and drive your cock hard into the snowmeow, unleashing your hot load into him. Your [if Ball Size of Player > 4]hefty balls blast their seed out from your cock, over-stuffing his tummy so much it swells from your huge load[else if Ball Size of Player > 3]big balls pump their seed out from your cock, stuffing his ass fully with your ample load[else]balls throb and your cock pumps out your seed, spraying your seed into his eager bottom[end if]. You can hear the delicious sounds of their wet moans as they swallow down each other's semen. Once your climax passes and you all bask in the afterglow, you snuggle and kiss on the cot for a while before you get up and head off, leaving them to snuggle while you tend to other matters.";
 	else:
 		LineBreak;
 		say "     Deciding on Candy, you wrap your arms around the pretty coon and lift him to sit upright in your lap, all the while keeping your penis in him. You bounce him on your cock hard and fast, making him moan and churr in delight. Supporting him with one arm, you bring your other hand to his hot pink shaft and pump at it in time to your pounding into him. Sven rolls over onto his back in front of you both, stroking his [if lust of Sven is 1]baby blue[else if lust of Sven is 2]golden[end if] cock while looking up at you both. You nibble along Candy's neck and drive your shaft hard into him one last time before cumming hard, [if Ball Size of Player > 4]over-stuffing his ass enough to make his tummy swell with your excessive cum[else if Ball Size of Player > 3] stuffing his ass completely full with your ample cum[else]painting his inner walls with your thick cum[end if]. As you are filling him, you continue stroking him off until you get him to spray his cotton candy scented load across your pet's soft fur. That whole show and the final climax across his body pushes Sven over the edge and he sprays his ample load across his face and body, getting him even stickier with cum. You pant and lower the spent coon down atop him, then slowly withdraw. You smile happily as you watch them cuddle up together, both smiling back up at you as you all bask in the afterglow. As they start to drift off, you scritch their ears and get up, heading off to take care of other matters.";
@@ -768,69 +815,6 @@ to say SvenTrioCoonSex:
 	say "     Candy and Sven end up snuggled atop you and you put an arm around each of them. You all bask in the afterglow from the wild romp. He coon smiles, nuzzling and kissing you both, showing he's not upset with your little fun for him as he got the hot snowmeow cum in his ass as promised. You all drift off for a brief nap together before eventually you have to get up and get back to other matters.";
 	NPCSexAftermath Player receives "PussyFuck" from Candy;
 	NPCSexAftermath Candy receives "AssFuck" from Sven;
-
-to say ConfidentSvenSex:	[***]
-	say "     Sven smiles as you start hinting about sex and his tail-tip twitches excitedly. Leaning back on his bunk, the white-furred cat shows off his sexy body and markings. Purrumbling playfully, he hooks his thumbs over the waistband of his shorts, pushing them down. 'What did you have in mind, my friend?'";
-	now sextablerun is 0;
-	blank out the whole of table of fucking options;
-	[]
-	if Player is male:
-		choose a blank row in table of fucking options;
-		now title entry is "Fuck him";
-		now sortorder entry is 1;
-		now description entry is "Pound the big kitty's ass";
-	[]
-	if Player is not neuter:
-		choose a blank row in table of fucking options;
-		if Player is female:
-			now title entry is "Ride him (vaginal)";
-		else:
-			now title entry is "Ride him (anal)";
-		now sortorder entry is 2;
-		now description entry is "Get his feline shaft inside you";
-	[]
-	if Player is male:
-		choose a blank row in table of fucking options;
-		now title entry is "Get a blowjob";
-		now sortorder entry is 3;
-		now description entry is "Have the fluffy kitty suck you off";
-	[]
-		choose a blank row in table of fucking options;
-		now title entry is "Give him a blowjob";
-		now sortorder entry is 4;
-		now description entry is "Suck off the fluffy kitty";
-	[]
-	sort the table of fucking options in sortorder order;
-	repeat with y running from 1 to number of filled rows in table of fucking options:
-		choose row y from the table of fucking options;
-		say "[link][y] - [title entry][as][y][end link][line break]";
-	while sextablerun is 0:
-		say "Pick the corresponding number> ";
-		get a number;
-		if calcnumber > 0 and calcnumber <= the number of filled rows in table of fucking options:
-			now current menu selection is calcnumber;
-			choose row calcnumber in table of fucking options;
-			say "[title entry]: [description entry]?";
-			if Player consents:
-				let nam be title entry;
-				now sextablerun is 1;
-				if SvenCandyMsg is 1 and nam is not "Threesome w/Candy":
-					say "     You decide to give Sven some personal attention this time and head on over to him. As you start heading that way, you see Candy take an interest. The pink coon takes a comfortable seat to watch the entertainment.";
-				if nam is "Fuck him":
-					say "[ConfidentSvenSex01]";
-				else if nam is "Ride him (vaginal)":
-					say "[ConfidentSvenSex02]";
-				else if nam is "Ride him (anal)":
-					say "[ConfidentSvenSex03]";
-				else if nam is "Get a blowjob":
-					say "[ConfidentSvenSex04]";
-				else if nam is "Give him a blowjob":
-					say "[ConfidentSvenSex05]";
-		else:
-			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
-	now lastfuck of Sven is turns;
-	wait for any key;
-	clear the screen and hyperlink list;
 
 to say ConfidentSvenSex01:	[Fuck him]
 	say "     Walking up to the young man as he stands before you in very confident nakedness, you slide a hand behind his head and give him a deep kiss. Sven starts a bout of tongue-wrestling by pushing his own into your mouth in friendly exploration, then wiggles it against yours while making out. When the two of you pull apart again after a few quite pleasurable moments, you tell him that you want to fuck him. Sven's tail twitches with excitement and a grin spreads over his muzzle, followed by a loud purr that vibrates through his chest. Running a paw down over your front, he replies, 'How could I say no to a hard cock like this?' Cupping the bulge over your crotch eagerly, the sexy feline feels the hard length of your [Cock of Player] shaft through your clothes, then crouches down in front of you.";
@@ -854,7 +838,7 @@ to say ConfidentSvenSex02:	[Ride him (vaginal)]
 	say "     Both of you are laughing happily as you wrap your arms around the soft-furred form of the snow leopard, at first just holding on to his squirming body as he tries to get away. Yet with both of you naked, wrestling on a bed in full contact with each other's body - including a very hard cock and by now literally dripping wet pussy, it doesn't take long before a whole other kind of game starts. Soon, you're grinding your crotch against his, nether lips sliding against the hot length of his shaft, and you share some breathless kisses between the two of you. 'Can't wait to be inside you,' Sven gasps out in an eager voice, one paw closing around the base of his cock to hold it upright - ready for you to mount him. Beneath the now proudly standing erection, you can see those extra-plump balls of his, heavy with snowmeow semen just waiting for you. The sight - and feel, as you reach out to touch him - of Sven's virile manhood only excites you all the more.";
 	WaitLineBreak;
 	say "     The feline's paws move to your hips and gently guide you to straddle his hips. Moving on top of him, you keep his shaft lined up while sinking your hot, wet cunny down onto it. You both moan softly in delight as the thick manhood nudges apart your pussy lips, then smoothly slides into your cunt. 'Yeah baby!' Sven grunts in arousal, his cock throbbing against your inner walls. You can feel his hands grip your hips a little tighter as the desire to just pull you down on him hard rises in the exchange student, yet he manages to control his urges, leaving you to set your own pace. Of course, you're no less eager to fuck him than Sven is, so he doesn't have to wait long. After taking the first few slides up and down several inches of his cock, you soon push yourself lower and start riding him in earnest. Your hands move to his shoulders for support as you bounce up and down on the kitty's pulsing pole.";
-	say "     Sven's paws run over your body, with the snow leopard purring happily as he does[if Player is male]. He eventually finds his way to your hips after groping your ass playfully. One paw takes hold of your hip and steadies you while the other slips between you to your cock, stroking and caressing your [Cock of Player] shaft[else if Breast Size of Player > 0]. His paws find their way to your bosom to play with your nipples while caressing your [short breast size desc of Player] breasts. Cupping one, he leans in and brings his muzzle to your breast, soon licking and sucking on your hard nip to make you moan in pleasure[else]. His paws eventually find their way to your hips after groping your ass playfully. Holding your hips, he steadies you while encouraging you to ride him harder and faster[end if]. The sound of his purring grows louder as the two of you make love. Soon, it is like his whole body is vibrating under you, including the hard cock buried between your nether lips. In a - very - stimulating emulation of a vibrator, the sexy feline builds your arousal up more and more, quickly driving you to filling the bunker with loud moans.";
+	say "     Sven's paws run over your body, with the snow leopard purring happily as he does. [if Player is male]He eventually finds his way to your hips after groping your ass playfully. One paw takes hold of your hip and steadies you while the other slips between you to your cock, stroking and caressing your [Cock of Player] shaft[else if Breast Size of Player > 0]His paws find their way to your bosom to play with your nipples while caressing your [short breast size desc of Player] breasts. Cupping one, he leans in and brings his muzzle to your breast, soon licking and sucking on your hard nip to make you moan in pleasure[else]His paws eventually find their way to your hips after groping your ass playfully. Holding your hips, he steadies you while encouraging you to ride him harder and faster[end if]. The sound of his purring grows louder as the two of you make love. Soon, it is like his whole body is vibrating under you, including the hard cock buried between your nether lips. In a - very - stimulating emulation of a vibrator, the sexy feline builds your arousal up more and more, quickly driving you to filling the bunker with loud moans.";
 	WaitLineBreak;
 	say "     It's not too long before the big kitty is pushing his hips up even as you slam down. Eyes clenched shut, he moans and mewls as his shaft throbs and pulses inside you as his climax arrives. Blast after gooey blast of feline seed sprays from his gray cock, splattering against your cervix and flowing into your womb. Feeling him seeding you so heavily is enough to push you over the edge as well and you cry out in orgasm partway through the snow leopard's release, adding your hot juices to the sticky mess leaking around his pulsing rod.[fimpregchance]";
 	say "     Once his orgasm eventually ebbs off, Sven sags back onto the mattress, panting heavily with an expression of dazed delight on his muzzle. You yourself are at it a few moments longer, riding out further waves of pleasure with the delightfully full sensation created by his still pretty hard cock and warm load inside you. After allowing the last quivers of your orgasm to pass, you lean down to give the sexy exchange student a tender kiss while gently pulling off his slowly softening cock. There is a little bit of further mess on Sven's crotch as some of his load drips out of your pussy and onto him - but most of his cum is planted deep enough to remain in your well-bred pussy and womb. Something tells you that the sated feline doesn't mind getting a bit dirty with you, so you push yourself up from the bed eventually, leaving Sven to recover while you strut over to the pile of your clothes and get dressed.";
@@ -869,7 +853,7 @@ to say ConfidentSvenSex03:	[Ride him (anal)]
 	say "     A grin spreads over your face, followed by licking the side of his cock, making Sven groan in pleasure. The sexy snowmeow is already quite wound up so you go slow, using a lot of spit as you lap up and down over his hard length, then take it into your mouth and give a gentle suck. 'Fuck yeah, that feels good!' your friend pants out, hands moving to touch your head and pull you a bit closer to his crotch. Taking this in stride, you bob up and down on his erection, using your tongue to tease it as you do so. Beneath the snow leopard's now wet and glistening erection, you can see those extra-plump balls of his, heavy with snowmeow semen just waiting for you. The sight and feel, as you reach out to cup his balls only excites you all the more. Before much longer, the feline's paws pull you off his cock with some urgency. A look at his panting face tells you why - you were just too good at blowing him.";
 	say "     'Nnngghh - I gotta get inside you NOW or I'll just blow in your mouth,' Sven grunts and pulls on you, guiding you to straddle his hips. Moving on top of him, you keep his shaft lined up while sinking your ass down onto it. You both moan softly in delight as the thick manhood nudges against your pucker before your downwards pressure quickly pops his slick dickhead inside to slide into your trembling hole. 'Yeah dude!' Sven grunts in arousal, his cock throbbing against your inner walls. You can feel his hands grip your hips a little tighter as the desire to just pull you down on him hard rises in the exchange student, yet he manages to control his urges, leaving you to set your own pace. Of course, you're no less eager to fuck him than Sven is, so he doesn't have to wait long. After taking the first few slides up and down several inches of his cock, you soon push yourself lower and start riding him in earnest. Your hands move to his shoulders for support as you bounce up and down on the kitty's pulsing pole.";
 	WaitLineBreak;
-	say "     Sven's paws run over your body, with the snow leopard purring happily as he does[if Player is male]. He eventually finds his way to your hips after groping your ass playfully. One paw takes hold of your hip and steadies you while the other slips between you to your cock, stroking and caressing your [Cock of Player] shaft[else if Breast Size of Player > 0]. His paws find their way to your bosom to play with your nipples while caressing your [short breast size desc of Player] breasts. Cupping one, he leans in and brings his muzzle to your breast, soon licking and sucking on your hard nip to make you moan in pleasure[else]. His paws eventually find their way to your hips after groping your ass playfully. Holding your hips, he steadies you while encouraging you to ride him harder and faster[end if]. The sound of his purring grows louder as the two of you make love.";
+	say "     Sven's paws run over your body, with the snow leopard purring happily as he does. [if Player is male]He eventually finds his way to your hips after groping your ass playfully. One paw takes hold of your hip and steadies you while the other slips between you to your cock, stroking and caressing your [Cock of Player] shaft[else if Breast Size of Player > 0]His paws find their way to your bosom to play with your nipples while caressing your [short breast size desc of Player] breasts. Cupping one, he leans in and brings his muzzle to your breast, soon licking and sucking on your hard nip to make you moan in pleasure[else]His paws eventually find their way to your hips after groping your ass playfully. Holding your hips, he steadies you while encouraging you to ride him harder and faster[end if]. The sound of his purring grows louder as the two of you make love.";
 	say "     Soon, it is like his whole body is vibrating under you, including the hard cock buried in your back passage. In a - very - stimulating emulation of a vibrator, the sexy feline builds your arousal up more and more, quickly driving you to filling the bunker with loud moans. It's not too long before the big kitty is pushing his hips up even as you slam down. Eyes clenched shut, he moans and mewls as his shaft throbs and pulses inside you as his climax arrives. Blast after gooey blast of feline seed sprays from his gray cock, splattering your inner walls and soaking your colon with his cum. Feeling him seeding you so heavily is enough to push you over the edge as well and you cry out in orgasm partway through the snow leopard's release, blasting out long strings of [Cock of Player] cream to make Sven's chest-fur a sticky mess.[mimpregchance]";
 	WaitLineBreak;
 	say "     Once his orgasm eventually ebbs off, Sven sags back onto the mattress, panting heavily with an expression of dazed delight on his muzzle. You yourself are at it a few moments longer, spurting a few more shots of seed all over him. After allowing the last quivers of your orgasm to pass, you lean down to give the sexy exchange student a tender kiss while gently pulling off his slowly softening cock. There is a little bit of further mess on Sven's crotch as some of his load drips out of your asshole and onto him - but most of his cum is planted deep enough to remain in your well-bred hole. Something tells you that the sated feline doesn't mind getting a bit dirty with you, so you push yourself up from the bed eventually, leaving Sven to recover while you strut over to the pile of your clothes and get dressed.";
@@ -940,33 +924,29 @@ TwistedCapacity of Svetlana is false. [Twisted Characters can take any penetrati
 Sterile of Svetlana is false. [steriles can't knock people up]
 MainInfection of Svetlana is "Snow Leopard".
 Description of Svetlana is "[SvetlanaDesc]".
-Conversation of Svetlana is { "Mew!" }.
-The scent of the Svetlana is "Svetlana smells of aroused female snow leopard. Lisa's scent clings to her as well.".
+[Conversation of Svetlana is { "Mew!" }.]
+the fuckscene of Svetlana is "[SexWithSvetlana]".
+The scent of the Svetlana is "     Svetlana smells of aroused female snow leopard. Lisa's scent clings to her as well.".
 [uses same variables as Sven for easier saving and restoration.]
 
 to say SvetlanaDesc:
 	if HP of Sven < 53:
 		say "ERROR-Svetlana-52L - You should not be able to find me yet.";
-	if HP of Sven is 53:
-		say "     Sven, or should we say Svetlana, has become a fully snowmeow person, but female as well. It seems that Lisa's influence on the kitty has made her more to the mouse's liking. Svetlana wears a red bathing suit that struggles to contain her ample bosom of six breasts. Her snow leopard marking have become pink in color, as has her much longer pink hair. Even her eyes are a bright pink. Her head is fully that of a feline's and her hands have become paws. Around her neck, she wears a pink collar with a round, silver bell on it. The snow leopard seems a little more quiet and nervous around you, though she certainly seems to be enjoying her new body. She clutches her fluffy tail and strokes it when around you. She still blushes a little at some of the toys wares, but seems eye them longingly as well, as if wondering which her murine mistress will share with her next. At these times, her paws wander over her body, tweaking a sensitive nipples or stroking over her damp crotch. To help her keep from being too overheated in the store, Lisa has taken to helping her kitty pet trim her fur. This keeps her a little cooler and shows off her feminine curves better.";
-	if HP of Sven is 54:
-		say "     Svetlana has become a fully female snowmeow with pink markings on her snow white fur. It seems that Lisa's influence on the kitty has made her more to the mouse's liking. Svetlana wears a red bathing suit that struggles to contain her ample bosom of six breasts. Around her neck, she wears a pink collar with a round, silver bell on it. Her feline head has a pair of bright pink eyes that look at you with admiration. Her hair is long and pink like her markings. She certainly seems to be enjoying her new body, letting her paws freely roam over it to savor her feminine form. She strokes and brushes her plush tail, purring happily, content in her new life here with her mistress. She still blushes a little at some of the toys wares, but seems eye them longingly as well, as if tallying which ones her murine mistress has yet to share with her. At these times, her paws wander over her body, tweaking a sensitive nipples or stroking over her damp crotch. To help her keep from being too overheated in the store, Lisa has taken to helping her kitty pet trim her fur. This keeps her a little cooler and shows off her feminine curves better.";
+	else:
+		say "     [if HP of Sven is 53]Sven, or should we say Svetlana, has become a fully snowmeow person, but female as well. It seems that Lisa's influence on the kitty has made her more to the mouse's liking. Svetlana wears a red bathing suit that struggles to contain her ample bosom of six breasts. Her snow leopard marking have become pink in color, as has her much longer pink hair. Even her eyes are a bright pink. Her head is fully that of a feline's and her hands have become paws. Around her neck, she wears a pink collar with a round, silver bell on it. The snow leopard seems a little more quiet and nervous around you, though she certainly seems to be enjoying her new body. She clutches her fluffy tail and strokes it when around you. She still blushes a little at some of the toys wares, but seems eye them longingly as well, as if wondering which her murine mistress will share with her next[else]Svetlana has become a fully female snowmeow with pink markings on her snow white fur. It seems that Lisa's influence on the kitty has made her more to the mouse's liking. Svetlana wears a red bathing suit that struggles to contain her ample bosom of six breasts. Around her neck, she wears a pink collar with a round, silver bell on it. Her feline head has a pair of bright pink eyes that look at you with admiration. Her hair is long and pink like her markings. She certainly seems to be enjoying her new body, letting her paws freely roam over it to savor her feminine form. She strokes and brushes her plush tail, purring happily, content in her new life here with her mistress. She still blushes a little at some of the toys wares, but seems eye them longingly as well, as if tallying which ones her murine mistress has yet to share with her[end if]. At these times, her paws wander over her body, tweaking a sensitive nipples or stroking over her damp crotch. To help her keep from being too overheated in the store, Lisa has taken to helping her kitty pet trim her fur. This keeps her a little cooler and shows off her feminine curves better.";
 
 instead of conversing the Svetlana:
 	if HP of Sven < 53:
 		say "ERROR-Svetlana-52T - You should not be able to speak to me yet.";
-	if HP of Sven is 53:
+	else if HP of Sven is 53:
 		say "     [one of]The pink snowmeow strokes her fluffy tail, purring softly.[or]'I am very grateful for bringing me to my mistress. I do not know what would have happened if you had not come along. You're so brave, strong and sexy.' She blushes and hides behind her tail after admitting that aloud.[or]'I want to thank you for bringing me here. It was a little overwhelming at the start, but I'm so happy here now.' She fidgets nervously and clutches her tail between her breasts. 'I... I'd really like to show you how much I appreciate it sometime,' she says softly, her voice trailing off as she blushes brighter and brighter at her ears.[or]'I never thought it would be so hot in this country when I accepted the scholarship. I'm glad my mistress has so much milk for her kitty.'[or]'How long do you think we will have together here before someone comes to rescue us?'[or]'Do you think they will let stay this way? My body feels so much nicer now.'[or]Svetlana fidgets with her fluffy tail while you speak to her. She doesn't seem to pay much attention, her eyes having fallen on a large dildo on display. You spot her subconsciously slip a paw to her crotch, fingering her covered pussy and getting herself damp again down there.[or]Svetlana looks at you with admiration and longing as you chat with her for a bit.[or]Svetlana licks her lips and mumbles something about being thirsty while eyeing your crotch. She then notices what she's said and blushes behind her fluffy tail before rushing to the back to get another drink from Lisa's supplies.[or]Lisa stretches as she washes the store's windows, giving you a fine view of her tight ass.[or]'I really want to repay you for your help somehow. I guess I could... maybe...' She fidgets nervously and presses her tail into her lap as her voice trails off.[or]'What do you think of the new me? I... I hope you like it.'[or]'Mistress Lisa found this lovely collar for me,' she purrs, flicking the bell to hear it ring.[in random order]";
-	if HP of Sven is 54:
+	else:
 		say "     [one of]The pink snowmeow strokes her fluffy tail, purring softly.[or]'I am very grateful for bringing me to my mistress. I do not know what would have happened if you had not come along. You're so brave, strong and sexy.' She blushes and hides behind her tail after admitting that aloud.[or]'I want to thank you for helping me get here. I hope you'll let me show you how much I appreciate it again soon,' she says softly while stroking a finger over her damp crotch, remembering her fun with you earlier.[or]'I never thought it would be so hot in this country when I accepted the scholarship. I'm glad my mistress has so much milk for her kitty.'[or]'How long do you think we will have together here before someone comes to rescue us?'[or]'Do you think they will let stay this way? My body feels so much nicer now.'[or]Svetlana fidgets with her fluffy tail while you speak to her. She doesn't seem to pay much attention, her eyes having fallen on a large dildo on display. You spot her subconsciously slip a paw to her crotch, fingering her covered pussy and getting herself damp again down there.[or]Svetlana looks at you with admiration and longing as you chat with her for a bit.[or]Svetlana licks her lips and comments about how she's starting to feel thirsty while eyeing your crotch. She gives you a little wink, then playfully hides behind her tail.[or]Svetlana takes a seat on a soft mat Lisa's put out for her. She stretches her feline body and starts licking and grooming her fluffy fur, smiling shyly at you as she does. Her flexible body lets her lick herself all over, giving you a good view of her legs, thighs, ass and more. Knowing you're watching, she blushes but makes a show of it, taking long, slow licks while showing off her body in her skimpy swimsuit.[or]Svetlana flips through the DVD collection, looking for one to watch with her mistress later.[or]'I really hope you'll let me [']repay['] you again soon,' she purrs with a wink before hiding behind her tail.[or]'Mistress Lisa found this lovely collar for me,' she purrs, flicking the bell to hear it ring.[or]Svetlana snuggles up beside you, stroking your side lightly. 'I'm so glad that you like the new me. I... I hope you'll play with me again soon.'[in random order]";
-
-
-the fuckscene of Svetlana is "[SexWithSvetlana]".
 
 to say SexWithSvetlana:
 	if HP of Sven < 53:
 		say "ERROR-Svetlana-52F - You should not be able to fuck me yet.";
-	if HP of Sven is 53:
+	else if HP of Sven is 53:
 		now HP of Sven is 54;
 		now lastfuck of Sven is turns;
 		increase score by 50;
@@ -975,25 +955,23 @@ to say SexWithSvetlana:
 		if Player is male:
 			say "     After divesting yourselves of clothes, the sexy snowmeow slowly slides a paw between your legs, tentatively touching your cock[smn] before wrapping her paw around your throbbing meat. 'Mmm... I... my mistress has so many lovely toys, but... I...' she trails off, still stroking it as she sinks to her knees and starts nuzzling and licking it. Guessing her meaning, you smile down at the eager kitty and scritch her ears as she takes it into her muzzle. 'You want to try the real thing, don't you kitty?' She moans an uh-huh and nods as she bobs his muzzle over your cock.";
 			WaitLineBreak;
-			say "     She licks and sucks your cock, running her raspy tongue over it. She is a little clumsy at the start, but it seems she's been practicing with the toys and soon gets a rhythm that has you throbbing and leaking pre on her tongue[if Player is female]. While working her muzzle over your cock, she slips a paw to rub your balls and the other back further to your wet pussy. She caresses and strokes those sensitive folds, here showing quite a bit of skill from Lisa's experienced training[else]. While working her muzzle over your cock, she slips a paw to rub your balls as if longing for the creamy seed they hold[end if]. When you can feel that pressure in your balls aching to drain, you ease her off your cock, wanting to save it for the main event.";
+			say "     She licks and sucks your cock, running her raspy tongue over it. She is a little clumsy at the start, but it seems she's been practicing with the toys and soon gets a rhythm that has you throbbing and leaking pre on her tongue. While working her muzzle over your cock, she slips a paw to rub your balls [if Player is female]and the other back further to your wet pussy. She caresses and strokes those sensitive folds, here showing quite a bit of skill from Lisa's experienced training[else]as if longing for the creamy seed they hold[end if]. When you can feel that pressure in your balls aching to drain, you ease her off your cock, wanting to save it for the main event.";
 			WaitLineBreak;
-			say "     Getting the sexy feline to stretch out on the pillows, you climb atop her. She wraps her arms around you, licking and kissing at your face, squirming in anticipation. 'Mistress has me on my pills. She says kittens in the store would be too much trouble right now.' She blushes cutely and looks away. 'So you... you can... please... Fuck me! I need you in me so bad. Give the kitty your cum. Fill me with it,' she moans aloud as her wanton desires come rushing out. She releases such a delicious mrowl of pleasure as you sink your cock into her wet pussy[if Cock Length of Player > 23]. With your penis so massive, you take it slow, letting the kitty stretch to accommodate you, but does seem to do so much more easily than most can, much to your pleasure. Her normally taut tummy stretches around your throbbing rod and she rubs over it, mewling happily at being so well-filled by you[else if Cock Length of Player > 12]. Her cunt stretches to accommodate your large penis, but does so relatively easily, her tummy swelling with the bulge caused by your hefty meat[else]. Her cunt takes your penis in easily, but still grips around it quite firmly, taking your full length into her eager body[end if][if Cock Count of Player > 1]. As you are mounting her, your second cock bumps against the feline's tailhole and she mews and blushes, nodding quickly. With a grin at the wanton need in her gaze, you press it into her back door, fucking both holes at once[end if]. She mewls and moans about how good it feels, how much she's wanted this, wanted you.";
+			say "     Getting the sexy feline to stretch out on the pillows, you climb atop her. She wraps her arms around you, licking and kissing at your face, squirming in anticipation. 'Mistress has me on my pills. She says kittens in the store would be too much trouble right now.' She blushes cutely and looks away. 'So you... you can... please... Fuck me! I need you in me so bad. Give the kitty your cum. Fill me with it,' she moans aloud as her wanton desires come rushing out. She releases such a delicious mrowl of pleasure as you sink your cock into her wet pussy. [if Cock Length of Player > 23]With your penis so massive, you take it slow, letting the kitty stretch to accommodate you, but does seem to do so much more easily than most can, much to your pleasure. Her normally taut tummy stretches around your throbbing rod and she rubs over it, mewling happily at being so well-filled by you[else if Cock Length of Player > 12]Her cunt stretches to accommodate your large penis, but does so relatively easily, her tummy swelling with the bulge caused by your hefty meat[else]Her cunt takes your penis in easily, but still grips around it quite firmly, taking your full length into her eager body[end if][if Cock Count of Player > 1]. As you are mounting her, your second cock bumps against the feline's tailhole and she mews and blushes, nodding quickly. With a grin at the wanton need in her gaze, you press it into her back door, fucking both holes at once[end if]. She mewls and moans about how good it feels, how much she's wanted this, wanted you.";
 			WaitLineBreak;
-			say "     As you pound into her, she [if Breast Size of Player is 0]runs her paws along your sides, squeezing your ass each time you drive your meat into her[else]moves her paws up to your breasts, caressing them while she plays with your nipples. Another thing she would have practiced with Lisa, she's quite adept at making you moan as she runs her paws over your tits[end if]. Her six breasts sway with each hard thrust you make into her beautiful body. Already quite excited from the blowjob, you drive your cock[smn] into her again and again, loving the sound of her lustful moans and mewls as she purrs up a storm. Sensing your climax coming, she wraps her slender legs around you and pulls you deep inside her, taking your full cock as she climaxes, soaking your crotch in her juices moments before your release[if Cock Length of Player > 23]. With the whole of your giant cock inside her, the bulge in her tummy is quite huge and gets larger as you begin to release your hot seed[end if][if Ball Size of Player > 3]. Your thick cum blasts into her again and again, filling her womb and bloating her belly, much to her delight[else if Ball Size of Player > 3]. Your thick cum blasts into her again and again, flowing up into her womb and filling it completely with your semen, much to her delight[else]. Your thick cum blasts into her again and again, flowing up into her womb, much to her delight[end if][if Cock Count of Player > 1]. You send a similar load into her ass, pumping your cream into her bowels[end if]. She smiles up at you, purring like the happy kitty she is and moans 'My hero' softly before drifting off into blissful slumber in your arms.";
+			say "     As you pound into her, she [if Breast Size of Player is 0]runs her paws along your sides, squeezing your ass each time you drive your meat into her[else]moves her paws up to your breasts, caressing them while she plays with your nipples. Another thing she would have practiced with Lisa, she's quite adept at making you moan as she runs her paws over your tits[end if]. Her six breasts sway with each hard thrust you make into her beautiful body. Already quite excited from the blowjob, you drive your cock[smn] into her again and again, loving the sound of her lustful moans and mewls as she purrs up a storm. Sensing your climax coming, she wraps her slender legs around you and pulls you deep inside her, taking your full cock as she climaxes, soaking your crotch in her juices moments before your release[if Cock Length of Player > 23]. With the whole of your giant cock inside her, the bulge in her tummy is quite huge and gets larger as you begin to release your hot seed[end if]. Your thick cum blasts into her again and again, [if Ball Size of Player > 3]filling her womb and bloating her belly[else if Ball Size of Player > 3]flowing up into her womb and filling it completely with your semen[else]flowing up into her womb[end if], much to her delight[if Cock Count of Player > 1]. You send a similar load into her ass, pumping your cream into her bowels[end if]. She smiles up at you, purring like the happy kitty she is and moans 'My hero' softly before drifting off into blissful slumber in your arms.";
 		else:
-			say "     After divesting yourselves of clothes, the sexy snowmeow slowly slides a paw between your legs to touch your puss[yfn]. 'Mmm... my mistress has been teaching me so many wonderful things... so many ways to please the lovely body she's given me. I can't wait to share them with you,' she purrs as she drops to her knees and starts licking at your pussy. Her tongue is quite practiced and very enjoyable, even with only her short tutelage by Lisa. Her fingers and tongue seek out many sensitive spots before she [if Cunt Tightness of Player > 5]slides a pair of fingers, then a third, and then her whole paw into your wide pussy. Again and again she stuffs you nicely with the soft touch of her fur over the firm, full feeling of her paw pounding into you. You groan again, louder, at the pleasure of it filling you along with the licking and sucking from the eager snowmeow[else if Cunt Tightness of Player > 2]. She inserts a second finger into you and then a third into your ample pussy. Again and again, she stuffs you nicely with the soft touch of her fur over the firm, full feeling of her fingers stroking inside you. You groan again, louder, at the pleasure of them filling you along with the licking and sucking from the eager snowmeow[else]. She inserts a second finger into your wet pussy. Again and again, she stuffs you nicely with the soft touch of her fur over the firm, full feeling of her fingers stroking inside you. You groan again, louder, at the pleasure of them filling you along with the licking and sucking from the eager snowmeow[end if]. As her paw and muzzle work at your pussy, lapping up your juices, she busily fingers her own snatch while releasing muffled mewls of pleasure. When your climax comes, she goes off as well, soaking her thighs in her juices while drinking down your sweet waters.";
+			say "     After divesting yourselves of clothes, the sexy snowmeow slowly slides a paw between your legs to touch your puss[yfn]. 'Mmm... my mistress has been teaching me so many wonderful things... so many ways to please the lovely body she's given me. I can't wait to share them with you,' she purrs as she drops to her knees and starts licking at your pussy. Her tongue is quite practiced and very enjoyable, even with only her short tutelage by Lisa. Her fingers and tongue seek out many sensitive spots before she [if Cunt Tightness of Player > 5]slides a pair of fingers, then a third, and then her whole paw into your wide pussy. Again and again she stuffs you nicely with the soft touch of her fur over the firm, full feeling of her paw pounding into you. You groan again, louder, at the pleasure of it[else if Cunt Tightness of Player > 2]inserts a second finger into you and then a third into your ample pussy. Again and again, she stuffs you nicely with the soft touch of her fur over the firm, full feeling of her fingers stroking inside you. You groan again, louder, at the pleasure of them[else]inserts a second finger into your wet pussy. Again and again, she stuffs you nicely with the soft touch of her fur over the firm, full feeling of her fingers stroking inside you. You groan again, louder, at the pleasure of them[end if] filling you along with the licking and sucking from the eager snowmeow. As her paw and muzzle work at your pussy, lapping up your juices, she busily fingers her own snatch while releasing muffled mewls of pleasure. When your climax comes, she goes off as well, soaking her thighs in her juices while drinking down your sweet waters.";
 			WaitLineBreak;
 			say "     Sinking down onto the cushions, she snuggles with you as you both recover a little from your powerful orgasms. She licks and kisses you, purring happily, for quite some time before nuzzling down to your bosom. The sexy feline runs her raspy tongue over your nipples before starting to suckle at them. Another thing that Lisa's shown the once inexperienced feline, her attention to your breasts is quite pleasurable, soon getting you excited and ready for more fun.";
 			WaitLineBreak;
 			say "     And it seems Svetlana's ready as well, sending a paw fishing under the pillows and pulling out a long, purple toy with a grin. Lining up the double-ended dildo with your soaked pussy, she slowly starts to feed it into you. She pumps it in and out with one paw while the other teases your folds after having guided it in. After about a dozen strokes, you moan softly in disappointment as she withdraws the toy from you. She turns it around and blushes a little at her ears as she sinks the end that was in you moments before into her own wet snatch. Guiding the other end into you now, she rides in your lap, moaning and mewling lustfully. The toy feels quite good inside you, sliding around inside you to stimulate your sensitive vaginal walls as the kitty pumps herself over her end. Eventually, you both are driven over the edge again, cumming even harder than before. Nuzzling herself atop you, the kitty purrs happily and rests her head against your bosom as she moans 'My hero' softly before drifting off into blissful slumber in your arms.";
-	else if HP of Sven is 54 and lastfuck of Sven - turns < 8:
+	else if lastfuck of Sven - turns < 8:
 		say "     Svetlana smiles and blushes coyly from behind her tail. 'I'd love to spend time with you again,' she purrs softly, 'but I need to help around the store for a bit. But do come by again soon. I'd love to thank you again for all your help,' she adds with a grin.";
-	else if HP of Sven is 54:
-		say "     Svetlana smiles as you come over and suggest a little time in the back room. She glances over to her mistress ";
+	else:
 		if lastfuck of Lisa - turns > 11 and mousefucked > 0:
-			say "who grins and runs her paws along her sides. 'Perhaps we should share my little pet this time,' he says softly, running a paw over the kitty's ass, making her mewl and squirm.";
-			say "     [bold type]'How about it? Shall we share her?'[roman type][line break]";
-			LineBreak;
+			say "     Svetlana smiles as you come over and suggest a little time in the back room. She glances over to her mistress who grins and runs her paws along her sides. 'Perhaps we should share my little pet this time,' he says softly, running a paw over the kitty's ass, making her mewl and squirm.";
+			say "[line break]     [bold type]'How about it? Shall we share her?'[roman type][line break]";
 			say "     ([link]Y[as]y[end link]) - Yes.";
 			say "     ([link]N[as]n[end link]) - No.";
 			if Player consents:
@@ -1004,8 +982,7 @@ to say SexWithSvetlana:
 				say "     You smile and pat Lisa's hand before sliding it aside so you can grope Svetlana's tight bottom yourself. You tell her that you'd like the kitty all to yourself this time. The mousetaur smiles and kisses her pet, telling her to have a good time before letting you both head into the back. She seems fine with it, but perhaps it would be fun to make it up to her later.";
 				say "[SoloSvetlana]";
 		else:
-			say "who grins and nods, waving you both to head on in. As her pet walks past, Lisa does give her a little swat on the rump, making her mewl cutely. 'You two have fun in there.'";
-			WaitLineBreak;
+			say "     Svetlana smiles as you come over and suggest a little time in the back room. She glances over to her mistress who grins and nods, waving you both to head on in. As her pet walks past, Lisa does give her a little swat on the rump, making her mewl cutely. 'You two have fun in there.'";
 			say "[SoloSvetlana]";
 
 to say SoloSvetlana:
@@ -1013,9 +990,9 @@ to say SoloSvetlana:
 		if level of Sven is even:
 			say "     Svetlana purrs and nuzzles at your neck, licking and nibbling as you run your hands across her body, sliding down her swimsuit. Uncovering her ample bosom, you stroke her breasts, teasing her nipples until she mewls with need. You then drift a hand down to her pussy and start fingering her, teasing her wet folds before sliding a pair into her. Her hips tremble and her pussy quivers around your fingers as she slides a paw to your cock and strokes it. 'Mmm... please...' she moans as she runs her soft paw over your erection.";
 			WaitLineBreak;
-			say "     You ease her down onto the pillows, spreading her legs. As you get lined up, you lick her juices slowly off your fingers, enjoying the taste of the lustful snowmeow. She mrowls in delight as you give her something her mistress can't, a real, live cock filling her[if Cock Count of Player > 1]. With a second cock, you probe at her back door, then start sliding into that tight passage when she blushes and nods[end if][if Cock Length of Player > 23]. With your penis so massive, you take it nice and slow, stretching out her belly as you stuff your huge cock into her. She rubs over the bulge, loving the feel of your massive meat stuffed inside her[else if Cock Length of Player > 12]. Her cunt stretches to accommodate your big penis, but does so relatively easily. Her tummy bulges a bit with your hefty meat inside her[else]. Her cunt takes your penis in easily, but still grips and squeezes around you quite firmly, taking your full length into her eager body[end if]. She arches her back and wriggles in pleasure on the mound of soft pillows as you fuck her good and hard.";
+			say "     You ease her down onto the pillows, spreading her legs. As you get lined up, you lick her juices slowly off your fingers, enjoying the taste of the lustful snowmeow. She mrowls in delight as you give her something her mistress can't, a real, live cock filling her[if Cock Count of Player > 1]. With a second cock, you probe at her back door, then start sliding into that tight passage when she blushes and nods[end if]. [if Cock Length of Player > 23]With your penis so massive, you take it nice and slow, stretching out her belly as you stuff your huge cock into her. She rubs over the bulge, loving the feel of your massive meat stuffed inside her[else if Cock Length of Player > 12]Her cunt stretches to accommodate your big penis, but does so relatively easily. Her tummy bulges a bit with your hefty meat inside her[else]Her cunt takes your penis in easily, but still grips and squeezes around you quite firmly, taking your full length into her eager body[end if]. She arches her back and wriggles in pleasure on the mound of soft pillows as you fuck her good and hard.";
 			WaitLineBreak;
-			say "     As you pound into her, she [if Breast Size of Player is 0]runs her paws along your sides, squeezing your ass each time you drive your meat into her[else]moves her paws up to your breasts, caressing them while she plays with your nipples. Another thing she would have practiced with Lisa, she's quite adept at making you moan as she runs her paws over your tits[end if]. Her six breasts sway with each hard thrust you make into her beautiful body. Already quite excited from the blowjob, you drive your cock[smn] into her again and again, loving the sound of her lustful moans and mewls as she purrs up a storm. Sensing your climax coming, she wraps her slender legs around you and pulls you deep inside her, taking your full cock as she climaxes, soaking your crotch in her juices moments before your release[if Cock Length of Player > 23]. With the whole of your giant cock inside her, the bulge in her tummy is quite huge and gets larger as you begin to release your hot seed[end if][if Ball Size of Player > 3]. Your thick cum blasts into her again and again, filling her womb and bloating her belly, much to her delight[else if Ball Size of Player > 3]. Your thick cum blasts into her again and again, flowing up into her womb and filling it completely with your semen, much to her delight[else]. Your thick cum blasts into her again and again, flowing up into her womb, much to her delight[end if][if Cock Count of Player > 1]. You send a similar load into her ass, pumping your cream into her bowels[end if]. She smiles up at you, purring like the happy kitty she is and moans 'My hero' softly before drifting off into blissful slumber in your arms.";
+			say "     As you pound into her, she [if Breast Size of Player is 0]runs her paws along your sides, squeezing your ass each time you drive your meat into her[else]moves her paws up to your breasts, caressing them while she plays with your nipples. Another thing she would have practiced with Lisa, she's quite adept at making you moan as she runs her paws over your tits[end if]. Her six breasts sway with each hard thrust you make into her beautiful body. Already quite excited from the blowjob, you drive your cock[smn] into her again and again, loving the sound of her lustful moans and mewls as she purrs up a storm. Sensing your climax coming, she wraps her slender legs around you and pulls you deep inside her, taking your full cock as she climaxes, soaking your crotch in her juices moments before your release[if Cock Length of Player > 23]. With the whole of your giant cock inside her, the bulge in her tummy is quite huge and gets larger as you begin to release your hot seed[end if]. Your thick cum blasts into her again and again, [if Ball Size of Player > 3]filling her womb and bloating her belly[else if Ball Size of Player > 3]flowing up into her womb and filling it completely with your semen[else]flowing up into her womb[end if], much to her delight[if Cock Count of Player > 1]. You send a similar load into her ass, pumping your cream into her bowels[end if]. She smiles up at you, purring like the happy kitty she is and moans 'My hero' softly before drifting off into blissful slumber in your arms.";
 		else:
 			say "     Svetlana purrs and nuzzles at your neck, licking and nibbling as you run your hands across her body, sliding down her swimsuit. Uncovering her ample bosom, you stroke her breasts, teasing her nipples until she mewls with need. As your hand drifts down to her pussy, she drops to her knees and starts nuzzling and licking at your crotch, lavishing attention on your cock. You put your hand to her head and start stroking it, rubbing her ears, making her purr. She runs her raspy tongue all over [itthemm], licking every square centimeter from your tip, along your shaft, to the base, to your balls[if Player is female], to your puss[yfn][end if] and back to your asshole.";
 			WaitLineBreak;
@@ -1038,22 +1015,20 @@ to say SoloSvetlana:
 	increase level of Sven by 1;
 	now lastfuck of Sven is turns;
 
-
 to say SvetlanaTrio:
 	if Player is male:
-		say "     Once in the back room, you run your hands over Svetlana's body, slipping her swimsuit off to uncover her ample bosom. Fondling her breasts, you suck at her nipples, making her mewl while she and Lisa help you get undressed. Lisa runs her paws over [if Player is female]you both[else]her pet[end if] and guides you to lay back on the pillows. The snow leopard runs her paws over your cock[smn] and straddles you with her back to you[if Cock Length of Player > 23 and Cock Count of Player > 1]. Lisa helps guide one of your massive cocks into her pink pet's pussy and another into her tight ass. Svetlana moans and pants as your giant penises stretches her belly out considerably to fit them[else if Cock Length of Player > 23]. Lisa helps guide your massive cock into her pink pet's, who moans and pants as your giant penis stretches her belly out to fit it[else if Cock Length of Player > 12 and Cock Count of Player > 1]. Lisa helps guide one of your large cocks into her pink pet's pussy and another into her tight all. Svetlana moans and pants as your big penises are stuffed into her, filling her so much there is a noticeable bulge[else if Cock Length of Player > 12]. Lisa helps guide your large cock into her pink pet. Svetlana moans and pants as your big penis is stuffed into her, forming a small bulge in her tummy[else if Cock Count of Player > 1]. Lisa strokes her pink pet's hips and kisses at your belly as the kitty sinks down onto your cocks, taking one into her wet pussy and another into her tight tailhole with a satisfied moan[else]. Lisa strokes her pink pet's hips and kisses at your belly as the kitty sinks down onto your cock, taking it into her wet pussy with a satisfied moan[end if]. She works herself down your cock[smn] gradually, leaning back as she does until she's resting her back on you.";
+		say "     Once in the back room, you run your hands over Svetlana's body, slipping her swimsuit off to uncover her ample bosom. Fondling her breasts, you suck at her nipples, making her mewl while she and Lisa help you get undressed. Lisa runs her paws over [if Player is female]you both[else]her pet[end if] and guides you to lay back on the pillows. The snow leopard runs her paws over your cock[smn] and straddles you with her back to you. Lisa [if Cock Length of Player > 23 and Cock Count of Player > 1]helps guide one of your massive cocks into her pink pet's pussy and another into her tight ass. Svetlana moans and pants as your giant penises stretches her belly out considerably to fit them[else if Cock Length of Player > 23]helps guide your massive cock into her pink pet's, who moans and pants as your giant penis stretches her belly out to fit it[else if Cock Length of Player > 12 and Cock Count of Player > 1]helps guide one of your large cocks into her pink pet's pussy and another into her tight all. Svetlana moans and pants as your big penises are stuffed into her, filling her so much there is a noticeable bulge[else if Cock Length of Player > 12]helps guide your large cock into her pink pet. Svetlana moans and pants as your big penis is stuffed into her, forming a small bulge in her tummy[else if Cock Count of Player > 1]strokes her pink pet's hips and kisses at your belly as the kitty sinks down onto your cocks, taking one into her wet pussy and another into her tight tailhole with a satisfied moan[else]strokes her pink pet's hips and kisses at your belly as the kitty sinks down onto your cock, taking it into her wet pussy with a satisfied moan[end if]. She works herself down your cock[smn] gradually, leaning back as she does until she's resting her back on you.";
 		WaitLineBreak;
 		say "     You rock your hips and thrust into her softly while the mousetaur moves atop you both, offering her lovely bosom to the pink kitty. As Svetlana switches from one nipple to the next, you spot some dribbles of milk leaking out from the released nipple, showing that the kitty's nursing for her mistress's mouse milk. Excited by the sight of the feeding kitty, you buck harder, pounding your cocks into the mewling kitty. You keep a firm grip on her ass with one hand and keep your other arm around her waist for support.";
 		WaitLineBreak;
 		say "     When she's done feeding her thirsty pet, Lisa turns around and brings her ample pussy over the kitty, who dives in and licks at it eagerly. You nibble on the kitty's ear and watch her slip two, then three fingers into that dripping cunt, teasing and stroking it with the skill of someone quite familiar with pleasing her mistress's every pleasure point. You can feel Lisa rubbing one of your paws at her pet's stuffed pussy as her digits brush around your cock, but focus on pleasing her kitty in return. Unsurprisingly given the amount of stimulation she's receiving, Svetlana is driven to a crashing series of orgasms first, writhing in lustful pleasure atop your cock[smn]. This is more than you can take and you go off next, blasting your hot seed deep into her cunt[if Cock Count of Player > 1] and bowels[end if][if Ball Size of Player > 3], making her belly bulge with your voluminous output of thick cum[else if Ball Size of Player > 3], stuffing her womb full of your thick cum[end if]. Lisa is the last to finish, cumming so hard from Svetlana's well-trained ministrations that she squirts out her female juices across her pet's face and even gets some onto yours, so you can get a taste of them as well. You all snuggle up together on the pillows, resting together to recover after your sexy threesome. Svetlana purrs happily in the arms of her two lovers: her loving mistress and her brave hero.";
 	else:
-		say "     Once in the back room, you run your hands over Svetlana's body, slipping her swimsuit off to uncover her ample bosom. Fondling her breasts, you suck at her nipples, making her mewl while she and Lisa help you get undressed. Lisa runs her paws over [if Player is female]you both[else]her pet[end if] and guides you to lay back on the pillows. The snow leopard runs her paws over your breasts, caressing them as she teases your nipples until they're hard. She and the mousetaur each take a breast and start sucking at your nipples while their paws roam your body, seeking to please their sexy, female friend[if Cunt Count of Player > 1]. You feel paws at your pussies as they each finger you, diving their furry digits into your wet cunts over and over again[else if a random chance of 1 in 2 succeeds]. You feel a paw, probably Lisa's, at your pussy. The playful mouse strokes and teases at your wet folds, tweaking your clit and pushing you to a quick orgasm[else]. You feel a paw, probably Svetlana's, at your pussy. The playful kitty slips a pair of fingers into your wet cunt over and over again, hard and fast, as she pushes you to a quick orgasm[end if].";
+		say "     Once in the back room, you run your hands over Svetlana's body, slipping her swimsuit off to uncover her ample bosom. Fondling her breasts, you suck at her nipples, making her mewl while she and Lisa help you get undressed. Lisa runs her paws over [if Player is female]you both[else]her pet[end if] and guides you to lay back on the pillows. The snow leopard runs her paws over your breasts, caressing them as she teases your nipples until they're hard. She and the mousetaur each take a breast and start sucking at your nipples while their paws roam your body, seeking to please their sexy, female friend. You feel [if Cunt Count of Player > 1]paws at your pussies as they each finger you, diving their furry digits into your wet cunts over and over again, pushing[else if a random chance of 1 in 2 succeeds]a paw, probably Lisa's, at your pussy. The playful mouse strokes and teases at your wet folds, tweaking your clit and pushing[else]a paw, probably Svetlana's, at your pussy. The playful kitty slips a pair of fingers into your wet cunt over and over again, hard and fast, as she pushes[end if] you to a quick orgasm.";
 		WaitLineBreak;
 		say "     As you bask in the afterglow, Lisa pounces atop her pet, burying her in her bosom and getting the kitty to suckle her tits. You moan and tease your over-sensitive puss as you watch the thirsty kitty nursing, suckling out her mistress's mouse milk. You move around behind them and start licking at their pussies, which they've been grinding against one another, lapping up their mixed juices from them. You dive several fingers into them, switching from one pussy to the next until they both cum hard. Then it's you on your back in the pillow mound while they both eat you out. They playfully take turns, pacing themselves until you have a wild, crashing orgasm that leaves you dizzy. You all snuggle up together on the pillows, resting together to recover after your sexy threesome. Svetlana purrs happily in the arms of her two lovers: her loving mistress and her brave heroine.";
 	increase level of Sven by 1;
 	now lastfuck of Lisa is turns;
 	now lastfuck of Sven is turns;
-
 
 Section 5 - Endings
 
@@ -1071,18 +1046,16 @@ This is the Sven's Epilogue rule:
 			else if HP of Sven > 3 and HP of Sven < 8:
 				now SvenEpilogueShown is true;
 				say "     When you succumb to your infection, Sven's loyalty to you makes him waver, but he manages to make his escape from the bunker, running off into the city. What rational thought you have left doesn't think much of his chances and expect he'll end up in the arms of a lustful snow leopard or taken as a fuck-toy by one of the many other creatures out there.";
-			else if HP of Sven < 7 and HP of Sven < 30:		[Sven the fuck-toy]
+			else if HP of Sven > 7:		[Sven the fuck-toy]
 				now SvenEpilogueShown is true;
 				say "     Being the loving and adoring pet that he is, Sven accompanies you after you succumb to your infection. You play lustfully with him often and his humanity fades away more and more, becoming your lustful and loyal servant in your future endeavors. Bound to you, he remains loyally with you, fulfilling your sexual needs as best he can between any other lovers or mates you may have. Having grown attached to your sexy snow leopard, you are always careful not to fuck him so much that he ends up transforming. Despite your instinctual urges, you find his [if HP of Sven is 10]colorful [end if]snow leopard body beautiful and take care to preserve it... a courtesy you don't extend to others you may find.";
 		else:
+			now SvenEpilogueShown is true;
 			if HP of Sven < 8:	[Sven not pet]
-				now SvenEpilogueShown is true;
 				say "     After an uncomfortable period in military holding area, Sven is released with you and the others. The hot and muggy compound provided few chances for relief for the overheated kitty. He spends some recovery time with you before eventually moving back to Europe. He maintains correspondence with you [if Candy is in the bunker]and Candy [end if]and seems to be enjoying his new, partially feline body and his new life. Coming from a well-to-do family, he has few financial worries and instead travels around Northern Europe, enjoying his increased love for the majestic beauty of his native lands[if Candy is in the bunker]. Coming across a letter to Candy that was left out, you do see that the coon's been encouraging him to enjoy his new body to the fullest and this letter includes a rather detailed account of the kitty's encounter with a group of sexy skiers[end if]. When you start to hear of groups of snow leopards popping up across Scandinavia, you aren't surprised and suspect that the snow leopard's anti-infection treatment didn't hold well under the snowy climate. You wish him and his feline lovers well.";
-			else if HP of Sven > 7 and HP of Sven < 30:		[Sven the fuck-toy]
-				now SvenEpilogueShown is true;
+			else:		[Sven the fuck-toy]
 				say "     After an uncomfortable period in military holding area, Sven is released with you and the others. The hot and muggy compound provided few chances for relief for the overheated kitty. You bring him along with you into your new life and help him to recover through long, lustful sessions of lovemaking to satisfy his un-quenched thirst for sexual fluids. Sven becomes a wonderful pet, always eager to satisfy your lusts and any kinky desire you have. The beautiful kitty lounges around your home naked, shyly teasing from behind his tail. His coy playfulness always draws the attention of your visitors, making him a wonderful means to coax them into a three-way. When you become acquainted with a zookeeper, Sven has them playing with him after only a few visits, and after that, you're slipping your pet into the zoo to play with the big cats there. You enjoy watching your pet mount the females and be taken by the males. You even paid for using Sven as a stud on their female snow leopards, though the kitty always seems to be looking forward to having a strong male atop him.";
 			if HP of Sven is 10:							[Addition for Sven and Candy]
-				now SvenEpilogueShown is true;
 				say "     Candy visits often, having grown quite fond of the sexy snowmeow during their shared time in the infected city. While the pink coonboi has his own lovers now, he always has time for your special kitty. Whenever business or other obligations take you away from him, you happily leave Sven with Candy, safe in the knowledge that he'll be cared for and have a good time with the girly coon. And you always enjoy listening to Sven shyly tell you every sordid detail of his visit and how the coon and his myriad lovers made use of your sexy pet's body. These seem to get more elaborate and involved as time goes on, as the coon makes bigger and bigger plans to celebrate the kitty's visit with lustful orgies centered around the exotically colorful snowmeow.";
 	[other Sven the fuck-toy pet interactions]
 	if Sven is in the bunker and HP of Sven < 30 and Player has no non-shifting body of "Siamese Cat":	[Siamese union w/Sven blocks these]

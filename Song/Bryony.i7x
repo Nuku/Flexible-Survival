@@ -44,11 +44,12 @@ TwistedCapacity of Bryony is false. [Twisted Characters can take any penetration
 Sterile of Bryony is false. [steriles can't knock people up]
 MainInfection of Bryony is "Black Equinoid".
 Description of Bryony is "[BryonyDesc]".
-Conversation of Bryony is { "Watch yourself." }.
+[Conversation of Bryony is { "Watch yourself." }.]
+fuckscene of Bryony is "     Bryony [if Player is blequinoidbodied]smirks at your offer. 'Tempting, but I have a job to do. Sex is just another distraction that I cannot afford right now.'[else]scowls at your offer. 'I would [italic type]never[roman type] indulge the thought of having sex with an impure creature like yourself!'[end if][line break]".
 The scent of Bryony is "     Bryony smells distinctly masculine, a strong equine musk wafting from her body. Hints of soap and floral perfume barely mask the scent of her virility.".
 
 The HP of Bryony is usually 0.
-BryonyBearFuckWatched is a number that varies. BryonyBearFuckWatched is usually 0. [A one-use stat. Not using other established variables since it's binary and not relevant to content other than the conclusion.]
+[BryonyBearFuckWatched is a number that varies. BryonyBearFuckWatched is usually 0. [A one-use stat. Not using other established variables since it's binary and not relevant to content other than the conclusion.]]
 
 [	HP of Bryony                                                                  ]
 [ 0 - Needs to speak to Nakoma about guard duty                                 ]
@@ -60,7 +61,7 @@ to say BryonyDesc:
 	say "     Bryony stands guard at the front of the camp. The herm's black mane is kept straight and out of her face, showing off her feminine muzzle and dark brown eyes. The white toga keeping her body modest is free of dirt or stains, showing only minor tears from past confrontations. The spear she wields consists of a simple arrowhead attached to a Bo staff with copper wire, making crude use of salvaged materials. Below, solid black hooves are planted on the ground in a proud, sturdy stance, suggesting she takes her role here very seriously.";
 	say "     Spotting you watching her, Bryony [if Player is blequinoidbodied]gives a nod of acknowledgement. She may not fully trust you yet, but your fully equinoid form puts some of her worries to rest[else]shakes her head and looks away. It seems she's unenthused by an impure creature hanging around the camp[end if].";
 
-Instead of conversing the Bryony:
+instead of conversing the Bryony:
 	if Player is blequinoidbodied:
 		if HP of Bryony > 2:
 			say "     You approach the stoic equinoid, who quickly stands at attention. 'Hail!' she calls. 'What brings you here, [if Player is defaultnamed]warrior[else][name of Player][end if]?'";
@@ -93,17 +94,17 @@ to say BryonyTalkMenu: [Runs only if the player is fully black equinoid. Otherwi
 	else if HP of Bryony is 1:
 		choose a blank row in table of fucking options;
 		now title entry is "Inform Bryony about Nakoma's proposition";
-		now sortorder entry is 4;
+		now sortorder entry is 3;
 		now description entry is "Break the news that Nakoma has elected you to help guard the camp";
 	else if HP of Bryony is 2:
 		choose a blank row in table of fucking options;
 		now title entry is "Offer to help stand guard";
-		now sortorder entry is 5;
+		now sortorder entry is 3;
 		now description entry is "Let Bryony know that you're ready for another shift by her side";
 	else if HP of Bryony is 3:
 		choose a blank row in table of fucking options;
 		now title entry is "Offer to help stand guard again";
-		now sortorder entry is 6;
+		now sortorder entry is 3;
 		now description entry is "Let Bryony know that you're ready for another shift by her side";
 	[]
 	sort the table of fucking options in sortorder order;
@@ -119,33 +120,34 @@ to say BryonyTalkMenu: [Runs only if the player is fully black equinoid. Otherwi
 			choose row calcnumber in table of fucking options;
 			say "[title entry]: [description entry]?";
 			if Player consents:
+				LineBreak;
 				now sextablerun is 1;
-				let nam be title entry;
-				if (nam is "Ask Bryony how her shift is going"):
-					say "[BryonyTalk1]";
-					wait for any key;
-					say "[BryonyTalkMenu]";
-				if (nam is "Ask Bryony about her relationship with Amaryllis"):
-					say "[BryonyTalk2]";
-					wait for any key;
-					say "[BryonyTalkMenu]";
-				if (nam is "Ask Bryony if she would like some company while guarding the camp"):
-					say "[BryonyTalk3]";
-					wait for any key;
-					say "[BryonyTalkMenu]";
-				if (nam is "Inform Bryony about Nakoma's proposition"):
-					say "[BryonyGuard1]";
-				if (nam is "Offer to help stand guard"):
-					say "[BryonyGuard2]";
-				if (nam is "Offer to help stand guard again"):
-					say "[BryonyGuard3]";
-				wait for any key;
+				if title entry is:
+					-- "Ask Bryony how her shift is going":
+						say "[BryonyTalk1]";
+						wait for any key;
+						say "[BryonyTalkMenu]";
+					-- "Ask Bryony about her relationship with Amaryllis":
+						say "[BryonyTalk2]";
+						wait for any key;
+						say "[BryonyTalkMenu]";
+					-- "Ask Bryony if she would like some company while guarding the camp":
+						say "[BryonyTalk3]";
+						wait for any key;
+						say "[BryonyTalkMenu]";
+					-- "Inform Bryony about Nakoma's proposition":
+						say "[BryonyGuard1]";
+					-- "Offer to help stand guard":
+						say "[BryonyGuard2]";
+					-- "Offer to help stand guard again":
+						say "[BryonyGuard3]";
 		else if calcnumber is 0:
+			LineBreak;
 			now sextablerun is 1;
 			say "     You excuse yourself and step back from Bryony.";
-			wait for any key;
 		else:
-			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options], or 0 to exit.";
+	wait for any key;
 	clear the screen and hyperlink list;
 
 to say BryonyTalk1:
@@ -210,32 +212,31 @@ to say BryonyBearOptions:
 			choose row calcnumber in table of fucking options;
 			say "[title entry]: [description entry]?";
 			if Player consents:
+				LineBreak;
 				now sextablerun is 1;
-				let nam be title entry;
-				if (nam is "Incapacitate her"):
-					say "[BryonyBear1]";
-				if (nam is "Fuck her"):
-					say "[BryonyBear2]";
-				if (nam is "Let her go"):
-					say "[BryonyBear3]";
+				if title entry is:
+					-- "Incapacitate her":
+						say "[BryonyBear1]";
+					-- "Fuck her":
+						say "[BryonyBear2]";
+					-- "Let her go":
+						say "[BryonyBear3]";
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
+	wait for any key;
 	clear the screen and hyperlink list;
 
 to say BryonyBear1: [Incapacitate the bear]
 	say "     Bryony looks down at the mutant again. 'Yeah,' she muses in a softer voice, 'that sounds like the only right course of action here.' Reaching back for her spear with one hand, the equinoid holds it high in the air for a moment, then plunges it directly through the bear's abdomen. The creature spasms briefly before going still, her breath slowing down until it stops completely. You cannot determine whether she's unconscious or dead, but she clearly no longer poses a threat.";
 	say "     You wipe your brow and stand up on shaky legs, helping a downtrodden Bryony up after you. 'I just...' she murmurs, shaking her head to herself as the two of you step away from the body. 'I still get sentimental about this kind of shit.' Wishing to comfort her, you open your mouth to say something, but Bryony stomps her hoof and turns away from you, walking back to the center of the camp. You watch the equinoid converse with two other warriors, who stop whatever they were doing to pace after the long and hurried strides of their superior. Seeing the bear's body, they quickly fashion a stretcher out of two wooden poles and a very large hammock, then lift the ursine up to carry her out toward the forest.";
 	say "     Once the pair has departed, Bryony sits down on a patch of grass and closes her eyes. 'You can go now,' she says, although it seems less like an offer and more like a command. Returning your spear to the weapon rack, you give once last sympathetic look towards the equinoid before returning to the center of the camp, not certain if you made the right call in the heat of the moment.";
-	wait for any key;
+	[wait for any key;]
 	now HP of Bryony is 3;
 	follow the turnpass rule;
 
 to say BryonyBear2: [Fuck the bear]
 	say "     'You want to do [italic type]what[roman type]?' Bryony guffaws, so struck with disbelief that she bursts into nervous laughter. 'Are you out of your fucking [italic type]mind[roman type]? Do you want me to drive a spear through [italic type]your[roman type] chest instead?' The equine shakes her head, shuddering with revulsion at the very notion of fucking an impure partner, much less one who has clearly lost their capacity for unambiguous consent. And yet, with the bear trapped beneath you, the cogs in her head seem to clang and grind to a standstill as arousal takes the wheel. The equine's hefty length leaves an increasingly prominent bulge in her toga, lifting the fabric with steady throbs and pulses. 'Oh, no. No fucking way! My dick doesn't speak for me!' she insists.";
 	say "     As if sensing her arousal, the transformed girl beneath her draws a firm, demanding lick across the underside of Bryony's cock. 'Oh, don't even try me,' she warns, though her words break into a nicker as another long sweep stimulates her mottled meat. 'Mnph. That feels... really fucking good...' she admits, slowly sawing her cock back and forth across the relaxing bear's muzzle. A needy moan spills from her maw as her eyes shutter closed in blissful reverie. Seeing the equinoid's readiness, you lean in to press an encouraging kiss to her muzzle, which she accepts and even reciprocates in her lust-fueled lapse of moral high ground.";
-	say "[BryonyBearFuckOptions]";
-
-to say BryonyBearFuckOptions:
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]
@@ -244,8 +245,7 @@ to say BryonyBearFuckOptions:
 		now title entry is "Fuck her pussy";
 		now sortorder entry is 1;
 		now description entry is "Stuff her slit while Bryony takes her mouth";
-	[]
-	if Player is male:
+		[]
 		choose a blank row in table of fucking options;
 		now title entry is "Fuck her mouth";
 		now sortorder entry is 2;
@@ -289,22 +289,23 @@ to say BryonyBearFuckOptions:
 			choose row calcnumber in table of fucking options;
 			say "[title entry]: [description entry]?";
 			if Player consents:
+				LineBreak;
 				now sextablerun is 1;
-				let nam be title entry;
-				if (nam is "Fuck her pussy"):
-					say "[BryonyBearFuck1]";
-				if (nam is "Fuck her mouth"):
-					say "[BryonyBearFuck2]";
-				if (nam is "Ride her face (vaginal)"):
-					say "[BryonyBearFuck3]";
-				if (nam is "Ride her face (anal)"):
-					say "[BryonyBearFuck4]";
-				if (nam is "Eat her out"):
-					say "[BryonyBearFuck5]";
-				if (nam is "Just watch"):
-					say "[BryonyBearFuck6]";
-				if (nam is "Reconsider"):
-					say "[BryonyBearOptions]";
+				if title entry is:
+					-- "Fuck her pussy":
+						say "[BryonyBearFuck1]";
+					-- "Fuck her mouth":
+						say "[BryonyBearFuck2]";
+					-- "Ride her face (vaginal)":
+						say "[BryonyBearFuck3]";
+					-- "Ride her face (anal)":
+						say "[BryonyBearFuck4]";
+					-- "Eat her out":
+						say "[BryonyBearFuck5]";
+					-- "Just watch":
+						say "[BryonyBearFuck6]";
+					-- "Reconsider":
+						say "[BryonyBearOptions]";
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
 	clear the screen and hyperlink list;
@@ -316,7 +317,6 @@ to say BryonyBearFuck1: [Fuck her pussy]
 	WaitLineBreak;
 	say "     Just as you'd hoped, the tainted cum takes its toll on the malleable mutant. The fur near her crotch and head is the first to change, growing dark, sleek and lustrous like your own gorgeous coat. Soon, her head reforms into a beautiful equine muzzle, and after spreading through her torso, the nanites flow down through her limbs and extremities. Her salmon pink slit grows thick and puffy, transforming into a sable-fleshed horse's cunt that perfectly houses your pole. A heavy sack forms above her swollen folds, followed shortly by the arrival of a meaty equine cock, spurting messily across her stomach as it fills out to its full glory. Reaching over, Bryony pumps the herm's swollen cockflesh until she cums all over her stomach and breasts, only adding to the slurry of seed glazing her lovely equine body.";
 	say "     Spent and brutally satisfied, you pull out of the newly anointed horse herm, shuddering to yourself as a cascade of alabaster cream flows from her dark, plump folds. She reaches below to plug your escaping semen with two thick digits, pushing down to the knuckle in her overflowing sex. Bryony slides free afterwards, breathing hotly as she reclines on her forearms with aftershocks of trembling pleasure. The lust-subsumed equine continues to play with her swollen breasts and pussy until she cums one last time, a weakened nicker leaving her muzzle as she stares up at the sky through half-lidded eyes.";
-	WaitLineBreak;
 	say "[BryonyBearFuckConclusion]";
 
 to say BryonyBearFuck2: [Fuck her mouth]
@@ -328,7 +328,6 @@ to say BryonyBearFuck2: [Fuck her mouth]
 	WaitLineBreak;
 	say "     Just as you'd hoped, the tainted cum takes its toll on the malleable mutant. The fur near her crotch and head is the first to change, growing dark, sleek and lustrous like your own gorgeous coat. Soon, her head reforms into a beautiful equine muzzle, and after spreading through her torso, the nanites flow down through her limbs and extremities. Her salmon pink slit grows thick and puffy, transforming into a sable-fleshed horse's cunt that perfectly houses Bryony's pole. A heavy sack forms above her swollen folds, followed shortly by the arrival of a meaty equine cock, spurting messily across her stomach as it fills out to its full glory. Taking hold of her shaft, Bryony pumps the herm's swollen fuckstick until she cums all over her stomach and breasts, only adding to the slurry of seed glazing her lovely equine body.";
 	say "     Spent and brutally satisfied, you pull out of the newly anointed horse herm, shuddering to yourself as a cascade of alabaster cream flows from her altered maw. When Bryony withdraws, the freshly fucked herm reaches below to plug your escaping semen with two thick digits, pushing down to the knuckle in her overflowing sex. Your fellow guard breathes hotly as she reclines on her forearms with aftershocks of trembling pleasure, her glazed gaze affixed to her lover's bloated belly. The lust-subsumed equine continues to play with her swollen breasts and pussy until she cums one last time, a weakened nicker leaving her muzzle as she stares up at the sky through half-lidded eyes.";
-	WaitLineBreak;
 	say "[BryonyBearFuckConclusion]";
 
 to say BryonyBearFuck3: [Ride her face (vaginal)]
@@ -341,7 +340,6 @@ to say BryonyBearFuck3: [Ride her face (vaginal)]
 	WaitLineBreak;
 	say "     Just as you'd hoped, the tainted cum takes its toll on the malleable mutant. The fur near her crotch and head is the first to change, growing dark, sleek and lustrous like your own gorgeous coat. Soon, her head reforms into a beautiful equine muzzle, and after spreading through her torso, the nanites flow down through her limbs and extremities. Her salmon pink slit grows thick and puffy, transforming into a sable-fleshed horse's cunt. A heavy sack forms above her swollen folds, followed shortly by the arrival of a meaty equine cock, spurting messily across her stomach as it fills out to its full glory. Taking hold of her shaft, Bryony pumps the herm's swollen fuckstick until she cums all over her stomach and breasts, only adding to the slurry of seed glazing her lovely equine body.";
 	say "     Spent and brutally satisfied, Bryony pulls out of the equinoid, shuddering to herself as a cascade of alabaster cream flows from her dark, plump folds. The newly anointed horse herm reaches below to plug Bryony's escaping semen with two thick digits, pushing down to the knuckle in her overflowing sex. Giggling at the spectacle, you recline on your forearms with aftershocks of trembling pleasure. Your gaze remains locked to the needy equine as she fingers her pussy until she cums one last time, a weakened nicker leaving her muzzle as she stares up at the sky through half-lidded eyes.";
-	WaitLineBreak;
 	say "[BryonyBearFuckConclusion]";
 
 to say BryonyBearFuck4: [Ride her face (anal)]
@@ -354,7 +352,6 @@ to say BryonyBearFuck4: [Ride her face (anal)]
 	WaitLineBreak;
 	say "     Just as you'd hoped, the tainted cum takes its toll on the malleable mutant. The fur near her crotch is the first to change, growing dark, sleek and lustrous like your own gorgeous coat. Soon, her head reforms into a beautiful equine muzzle, and it spreads through her torso, then onwards to her head, limbs, and extremities. Her salmon pink slit grows thick and puffy, transforming into a sable-fleshed horse's cunt. A heavy sack forms above her swollen folds, followed shortly by the arrival of a meaty equine cock, spurting messily across her stomach as it fills out to its full glory. Taking hold of her length, Bryony pumps the herm's swollen fuckstick until she cums all over her stomach and breasts, only adding to the slurry of seed glazing her lovely equine body.";
 	say "     Spent and brutally satisfied, Bryony pulls out of the equinoid, shuddering to herself as a cascade of alabaster cream flows from her dark, plump folds. The newly anointed horse herm reaches below to plug Bryony's escaping semen with two thick digits, pushing down to the knuckle in her overflowing sex. Giggling at the spectacle, you recline on your forearms while your head buzzes with undirected, sexless pleasure. Your gaze remains locked to the needy equine as she fingers her pussy until she cums one last time, a weakened nicker leaving her muzzle as she stares up at the sky through half-lidded eyes.";
-	WaitLineBreak;
 	say "[BryonyBearFuckConclusion]";
 
 to say BryonyBearFuck5: [Eat her out]
@@ -366,7 +363,6 @@ to say BryonyBearFuck5: [Eat her out]
 	WaitLineBreak;
 	say "     Just as you'd hoped, the tainted cum takes its toll on the malleable mutant. The fur near her head is the first to change, growing dark, sleek and lustrous like your own gorgeous coat. Soon, her head reforms into a beautiful equine muzzle, and after spreading through her torso, the nanites flow down through her limbs and extremities. Her salmon pink slit grows thick and puffy, transforming into a sable-fleshed horse's cunt, whose transformative juices help rekindle your own fully equine appearance. A heavy sack forms above her swollen folds, followed shortly by the arrival of a meaty equine cock, spurting messily across her stomach as it fills out to its full glory. Reaching over, Bryony pumps the herm's swollen cockflesh until she cums all over her stomach and breasts, only adding to the slurry of seed glazing her lovely equine body.";
 	say "     Spent and brutally satisfied, Bryony pulls out of the equinoid, shuddering to herself as a cascade of alabaster cream flows from her dark, plump folds. The newly anointed horse herm moans and whinnies happily as you continue to service her folds, pushing back against your face with each tender lick along her rippling inner walls. You continue to eat out the equine's thick-lipped pussy until she cums one last time, a weakened nicker leaving her muzzle as she stares up at the sky through half-lidded eyes.";
-	WaitLineBreak;
 	say "[BryonyBearFuckConclusion]";
 
 to say BryonyBearFuck6: [Just watch]
@@ -381,48 +377,39 @@ to say BryonyBearFuck6: [Just watch]
 	WaitLineBreak; [Different conclusion for watching than joining]
 	say "     'Ugh...' Bryony groans, groping her heavy tits and staring down at her half-hard cock. 'Was that... really necessary?' she asks. One of the watching warriors chuckles and pats her shoulder. 'No need to be ashamed, Bryony. You put on a great show [if daytimer is day]today[else]tonight[end if]. Come, what do you say we cycle you out with another guard for a while and head to the baths together?' Still somewhat dazed, the group helps the two of them to their feet and guides them into the safety of the camp, paying no mind to the fluids left behind in the wake of their lovemaking. With nothing better to do, you set your spear back in the weapon rack and follow after them.";
 	say "     Once safe and sound, you lower yourself into the warm, scented water to spent some time with the pair. The bath is quite soothing, mostly spent snuggling with the horny new horse herm. You run your hands through her hair while she nuzzles into your neck and shoulder, enjoying the mutual warmth and affection. After a little while, you give her a kiss on the temple goodbye, then climb out of the water to towel off. As you're leaving, you notice Bryony scooching over to nestle in with her new friend, a blush beneath her cheek-fur as the two of them bond over small talk and lazy cuddling. You are pleased by the developments, having neutralized a threat and expanded the herd in the process.";
-	wait for any key;
+	[wait for any key;]
 	now HP of Bryony is 3; [No sanity lost since the player chose to watch instead of partake]
 	follow the turnpass rule;
 
 to say BryonyBearFuckConclusion: [Used in all bearfuck scenes except 'watch']
+	WaitLineBreak;
 	say "     'Ugh...' Bryony groans, groping her heavy tits and staring down at her half-hard cock. 'Was that... really necessary?' she asks. One of the watching warriors chuckles and pats her shoulder. 'No need to be ashamed, Bryony. You put on a great show [if daytimer is day]today[else]tonight[end if]. Come, what do you say we cycle you out with another guard for a while and head to the baths together?' Still somewhat dazed, the group helps the three of you to your feet and guides you back into the safety of the camp, paying no mind to the fluids left behind in the wake of your lovemaking.";
 	say "     Once safe and sound, you're lowered into the warm, scented water together to cleanse your body and mind. The bath is quite soothing, mostly spent snuggling with the horny new horse herm. You run your hands through her hair while she nuzzles into your neck and shoulder, enjoying the mutual warmth and affection. After a little while, you give her a kiss on the temple goodbye, then climb out of the water to towel off. As you're leaving, you notice Bryony scooching over to nestle in with her new friend, a blush beneath her cheek-fur as the two of them bond over small talk and lazy cuddling. Your nanite-riddled mind is pleased by the developments, having neutralized a threat and expanded the herd in the process.";
 	SanLoss 10;
-	wait for any key;
+	[wait for any key;]
 	now HP of Bryony is 3;
 	follow the turnpass rule;
 
 to say BryonyBear3: [Let the bear go]
 	say "     Bryony gives you a questioning look at your answer. 'You sure about that?' she asks, only to shake her head with a gentle sigh. 'I would've put her out of her misery, but I'll trust your judgment on this one.' Counting down to three, the two of you pull away from the bear in unison and grab your weapons, keeping them trained on the feral beast. Frightened for her life, the woman's first instinct is to bolt from her perceived attackers, grunting with every four-legged lope in the direction of the forest.";
 	say "     Relieved to have defused the situation, you wipe your brow and look back at Bryony. The equinoid continues to watch the fleeing bear until it's out sight before turning her attention to you again. 'Well, that went better than I expected,' Bryony admits somewhat sheepishly. 'Good call on letting her go, [if Player is defaultnamed]outsider[else][name of Player][end if]. I'm glad that we didn't have to resort to more extreme measures.' The equinoid shakes her head again. 'I think I need some time alone, now. Feel free to come back later for another shift together.'";
-	wait for any key;
+	[wait for any key;]
 	now HP of Bryony is 3;
 	follow the turnpass rule;
 
-
 to say BryonyGuard3:
 	say "     Bryony gives a respectful nod and directs you to grab a spear from the weapon rack. After doing so, you return to your post on one side and stand guard with the herm. Now that you've proven yourself capable, Bryony is much more conversational, helping fill the dead air with small talk about your experiences in the city. You elaborate on your recent exploits and the various creatures you've encountered, informing her about the districts you've been to and the vastly different stains that dominate them. Your partner proves a good listener, asking for more details about certain subjects and just nodding while you speak about others.";
-	say "     Time seems to fly this time around, the earlier tension replaced with a much more calm and open atmosphere. Hunting parties leave and return with salvage, traders pass by and offer valuable goods, and the [if daytimer is day]warmth of the sun[else]chill of the night[end if] helps soothe your mind and body. You scarcely even notice that several hours have passed by the time that Bryony thanks for you for your service and ";
 	if a random chance of 1 in 2 succeeds:
-		say "hands you a little something to show her appreciation.";
-		LineBreak;
-		let randomnumber be a random number from 1 to 4;
-		if randomnumber is:
-			-- 1:
-				ItemGain food by 1;
-			-- 2:
-				ItemGain water bottle by 1;
-			-- 3:
-				ItemGain chips by 1;
-			-- 4:
-				ItemGain soda by 1;
-		LineBreak;
+		say "     Time seems to fly this time around, the earlier tension replaced with a much more calm and open atmosphere. Hunting parties leave and return with salvage, traders pass by and offer valuable goods, and the [if daytimer is day]warmth of the sun[else]chill of the night[end if] helps soothe your mind and body. You scarcely even notice that several hours have passed by the time that Bryony thanks for you for your service and hands you a little something to show her appreciation.";
+		if a random number from 1 to 4 is:
+			-- 1: ItemGain food by 1;
+			-- 2: ItemGain water bottle by 1;
+			-- 3: ItemGain chips by 1;
+			-- 4: ItemGain soda by 1;
 	else:
-		say "sends you off again, feeling good about helping around the camp.";
+		say "     Time seems to fly this time around, the earlier tension replaced with a much more calm and open atmosphere. Hunting parties leave and return with salvage, traders pass by and offer valuable goods, and the [if daytimer is day]warmth of the sun[else]chill of the night[end if] helps soothe your mind and body. You scarcely even notice that several hours have passed by the time that Bryony thanks for you for your service and sends you off again, feeling good about helping around the camp.";
 	wait for any key;
 	follow the turnpass rule;
-
 
 to say BryonyTalkMenuImpure: [Runs when the player is not fully black equinoid]
 	now sextablerun is 0;
@@ -456,22 +443,24 @@ to say BryonyTalkMenuImpure: [Runs when the player is not fully black equinoid]
 			choose row calcnumber in table of fucking options;
 			say "[title entry]: [description entry]?";
 			if Player consents:
+				LineBreak;
 				now sextablerun is 1;
-				let nam be title entry;
-				if (nam is "Ask about her behavior"):
-					say "[BryonyTalkImpure1]";
-				if (nam is "Ask why she's so wary of outsiders"):
-					say "[BryonyTalkImpure2]";
-				if (nam is "Ask about her opinion on Amaryllis"):
-					say "[BryonyTalkImpure3]";
+				if title entry is:
+					-- "Ask about her behavior":
+						say "[BryonyTalkImpure1]";
+					-- "Ask why she's so wary of outsiders":
+						say "[BryonyTalkImpure2]";
+					-- "Ask about her opinion on Amaryllis":
+						say "[BryonyTalkImpure3]";
 				wait for any key;
 				say "[BryonyTalkMenuImpure]";
 		else if calcnumber is 0:
+			LineBreak;
 			now sextablerun is 1;
 			say "     You step back from Bryony, shaking your head slightly as she narrows her eyes at you.";
 			wait for any key;
 		else:
-			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options], or 0 to exit.";
 	clear the screen and hyperlink list;
 
 to say BryonyTalkImpure1:
@@ -482,12 +471,5 @@ to say BryonyTalkImpure2:
 
 to say BryonyTalkImpure3:
 	say "     'I do not wish Amaryllis harm, for she has committed no crimes and broken no customs. This does not preclude me from finding her stubborn and churlish behavior disrespectful to the tribe. You demonstrate now the dangers of open invitation, for you shirk the advice of our wise leaders and flaunt a foreign form. That who-' Bryony starts, pausing with a frustrated huff before continuing, '-horse, has been nothing but trouble for us. You would do well to heed our leaders['] wishes and cleanse yourself of this contamination.'";
-
-
-Instead of fucking Bryony:
-	if Player is blequinoidbodied:
-		say "     Bryony smirks at your offer. 'Tempting, but I have a job to do. Sex is just another distraction that I cannot afford right now.'";
-	else:
-		say "     Bryony scowls at your offer. 'I would [italic type]never[roman type] indulge the thought of having sex with an impure creature like yourself!'";
 
 Bryony ends here.

@@ -8,17 +8,18 @@ nosnowmeowsex is a number that varies.
 
 to say losetosnowmeow:
 	project Figure of SnowLeopard_hard_icon;
+	setmonster "Snow Leopard";
 	now nosnowmeowsex is 0;
 	say "     The snow leopard gives a throaty purr as your struggles cease. He presses you down to the ground and runs his eyes over you while a paw strokes his stiff shaft. The fight over, you can see it is steely gray with a slightly feline-shaped glans and a pair of ample balls below it. Between the feel of the snowmeow's lovely fur and the heavy scent of his arousal, you find yourself subconsciously licking your lips as a few beads of precum leak down that hard meat.";
 	if Player is male:
 		say "     The snow leopard licks his lips lustfully as he eyes your cock. Turning around, he brings his stiff shaft to your face while his soft paws work your shaft to full erection. His precum drips down onto your lips and your remaining self-control breaks. You open your mouth and guide that tasty meat into your waiting mouth. You lick and suck at it hungrily, moaning with increasing desire as his own lips close around your cock and he starts licking and sucking your throbbing shaft.";
-		say "     His paw plays with your balls and cock incessantly while he licks and sucks your meat, thirsting for your cum[if Ball Size of Player > 4]. And you spray it out onto his tongue again and again as he works to drain your balls for as much of the thick, tasty fluid he can get. Your loads are quite fulfilling and you are rewarded by a hefty blast of snow leopard cum as well, enough to overflow your mouth briefly. You swallow it down with delight in your lustful haze[else if Ball Size of Player > 3]. And you spray it out onto his tongue again and again as he works to drain your balls for as much of the thick, tasty fluid he can get. You give him several sizable loads before running empty and you are rewarded with an impressive serving of snowmeow cum, which you swallow down with delight in your lustful haze[else]. And you spray it out onto his tongue in one, strong series of spurts, giving as much as your balls can. Your small load barely satisfies him and you are rewarded with only a few small spurts of snowmeow cum in return. You swallow this down with delight in your lustful haze, eager for as much or as little as you can get[end if]. Done with you, he pads off to look for others to help slake his lustful thirst.";
+		say "     His paw plays with your balls and cock incessantly while he licks and sucks your meat, thirsting for your cum. And you spray it out onto his tongue [if Ball Size of Player > 4]again and again as he works to drain your balls for as much of the thick, tasty fluid he can get. Your loads are quite fulfilling and you are rewarded by a hefty blast of snow leopard cum as well, enough to overflow your mouth briefly. You swallow it down with delight in your lustful haze[else if Ball Size of Player > 3]again and again as he works to drain your balls for as much of the thick, tasty fluid he can get. You give him several sizable loads before running empty and you are rewarded with an impressive serving of snowmeow cum, which you swallow down with delight in your lustful haze[else]in one, strong series of spurts, giving as much as your balls can. Your small load barely satisfies him and you are rewarded with only a few small spurts of snowmeow cum in return. You swallow this down with delight in your lustful haze, eager for as much or as little as you can get[end if]. Done with you, he pads off to look for others to help slake his lustful thirst.";
 		CreatureSexAftermath "Snow Leopard" receives "OralCock" from "Player";
 		CreatureSexAftermath "Player" receives "OralCock" from "Snow Leopard";
 		if Ball Size of Player > 4:
-			infect "Snow Leopard"; [additional infection from large load]
+			infect; [additional infection from large load]
 			PlayerEat 5;
-	else if ( Player has a body of "Snow Leopard" or Player has a body of "Panther Taur" ):
+	else if Player has a body of "Snow Leopard" or Player has a body of "Panther Taur":
 		if Breast Size of Player > 2 and lastmilking - turns > 7:
 			say "     Taking in your desirable, feline form, the sexy snowmeow licks his lips as he gazes upon your lovely bosom. When a few playful pinches to your nipples brings forth some milk, his eyes widen with lustful thirst at them and has his lips around them almost instantly. You moan and start to purr softly as his fingers run over your body and move to tease your pussy. He strokes your wet folds and spreads them before plunging his cock into you, making your body tremble at the sudden but pleasurable intrusion.";
 			WaitLineBreak;
@@ -30,7 +31,7 @@ to say losetosnowmeow:
 				say "     Your bosom provides a satisfying drink of milk for the thirsty feline, and he climaxes hard inside you towards the end of his meal as a reward. His thick seed pumps into you and you can feel it flow up into your waiting womb, plumping it up a little.";
 				CreatureSexAftermath "Player" receives "PussyFuck" from "Snow Leopard";
 			if Breast Size of Player > 8 or Nipple Count of Player > 4:
-				infect "Snow Leopard"; [additional infection from large load]
+				infect; [additional infection from large load]
 			now lastmilking is turns + 2; [milked, but faster refresh]
 		else if Breast Size of Player < 3:
 			say "     Taking in your desirable, feline form, the sexy snowmeow is disappointed by your unimpressive bosom and decides to move his attention lower. He licks his lips as he eyes your pussy, which is growing wetter as the lustful feline's scent arouses you further. And when his raspy tongue slides over your clit, you release a moaning purr that encourages him to continue. Soon, he is working his tongue into your wet puss, lapping up your sweet waters as you quiver with several small orgasms. His paws play and tease your breasts and nipples all the while. Eventually, he gets up and leaves you there, lost in a lustful haze of satisfaction while he licks your juices from his muzzle fur.";
@@ -40,19 +41,16 @@ to say losetosnowmeow:
 			CreatureSexAftermath "Snow Leopard" receives "OralPussy" from "Player";
 			increase lastmilking by 1;
 	else:
-		say "[kittycheck]";
-		if kittyness is 1:				[Feline body/head, as per High Rise Events]
+		if BodyName of Player is listed in the infections of FelineList or FaceName of Player is listed in infections of FelineList: [Feline body/head, as per High Rise Events]
 			say "     Taking in your desirable, feline attributes, the sexy snowmeow spreads your legs and buries his muzzle between them. He licks his lips as he eyes your pussy, which is growing wetter as the lustful feline's scent arouses you further. And when his raspy tongue slides over your clit, you release a moaning purr that encourages him to continue. Soon, he is working his tongue into your wet puss, lapping up your sweet waters as you quiver with several small orgasms. Eventually, he gets up and leaves you there, lost in a lustful haze of satisfaction while he licks your juices from his muzzle fur.";
 			CreatureSexAftermath "Snow Leopard" receives "OralPussy" from "Player";
 		else:
 			say "     Eager to slake both his lustful and mundane thirsts, the sexy snowmeow spreads your legs and buries his muzzle between them. He licks his lips as he eyes your pussy, which is growing wetter as the lustful feline's scent arouses you further. And when his raspy tongue slides over your clit, you release a moaning purr that encourages him to continue. Soon, he is working his tongue into your wet puss, lapping up your sweet waters as you quiver with several small orgasms. Eventually, he gets up and leaves you there, lost in a lustful haze of satisfaction while he licks your juices from his muzzle fur.";
 			CreatureSexAftermath "Snow Leopard" receives "OralPussy" from "Player";
 	increase thirst of Player by a random number between 2 and 5;
-	increase Libido of Player by a random number from 3 to 8;
-	if "Horny Bastard" is listed in feats of Player, increase Libido of Player by 2;
-	if "Cold Fish" is listed in feats of Player, decrease Libido of Player by 2;
-	if Libido of Player > 100, now Libido of Player is 100;
-
+	raise Player Libido by a random number from 3 to 8;
+	if "Horny Bastard" is listed in feats of Player, raise Player Libido by 2;
+	if "Cold Fish" is listed in feats of Player, lower Player Libido by 2;
 
 to say beatthesnowmeow:
 	project Figure of SnowLeopard_hard_icon;
@@ -60,33 +58,39 @@ to say beatthesnowmeow:
 		say "     The thickly furred feline pants in the heat and staggers back, overheated and unwilling to continue to fight you. He staggers a little as he walks, starting to stumble back into the city. As you watch his alluring, feline body, you debate taking advantage of the poor feline. He certainly looks in no shape to resist you taking advantage of him instead. Tempted, you consider pouncing the kitty before he can get away.";
 		now sextablerun is 0;
 		blank out the whole of table of fucking options;
+		[]
 		if Player is male:
 			choose a blank row in table of fucking options;
 			now title entry is "Top him";
 			now sortorder entry is 1;
 			now description entry is "Screw his fluffy ass";
+		[]
 		choose a blank row in table of fucking options;
 		now title entry is "Suck him off";
 		now sortorder entry is 2;
 		now description entry is "Drain the kitty's balls down your throat";
+		[]
 		choose a blank row in table of fucking options;
 		now title entry is "Ride him";
 		now sortorder entry is 3;
 		now description entry is "Get that cock of his in you";
+		[]
 		if Player is not female and Player is submissive:
 			choose a blank row in table of fucking options;
 			now title entry is "Anal doggy style";
 			now sortorder entry is 4;
 			now description entry is "Let the horny feline mount your ass";
+		[]
 		sort the table of fucking options in sortorder order;
 		repeat with y running from 1 to number of filled rows in table of fucking options:
 			choose row y from the table of fucking options;
 			say "[link][y] - [title entry][as][y][end link][line break]";
 		say "[link]0 - Let him go[as]0[end link][line break]";
 		while sextablerun is 0:
-			say "Pick the corresponding number> ";
+			say "Pick the corresponding number> [run paragraph on]";
 			get a number;
 			if calcnumber is 0:
+				LineBreak;
 				say "     You let the overheated snowmeow leave, instead turning your attention to your own concerns.";
 				increase nosnowmeowsex by 1;
 				now sextablerun is 1;
@@ -95,19 +99,20 @@ to say beatthesnowmeow:
 				choose row calcnumber in table of fucking options;
 				say "[title entry]: [description entry]?";
 				if Player consents:
-					let nam be title entry;
+					LineBreak;
 					now sextablerun is 1;
-					if nam is "Top him":
-						say "[snowmeow_vsex01]";
-					else if nam is "Suck him off":
-						say "[snowmeow_vsex02]";
-					else if nam is "Ride him":
-						say "[snowmeow_vsex03]";
-					else if nam is "Anal doggy style":
-						say "[snowmeow_vsex04]";
+					if title entry is:
+						-- "Top him":
+							say "[snowmeow_vsex01]";
+						-- "Suck him off":
+							say "[snowmeow_vsex02]";
+						-- "Ride him":
+							say "[snowmeow_vsex03]";
+						-- "Anal doggy style":
+							say "[snowmeow_vsex04]";
 					now nosnowmeowsex is 0;
 			else:
-				say "Invalid Option. Pick between 0 and [the number of filled rows in the table of fucking options].";
+				say "Invalid Option. Pick between 0 and [the number of filled rows in the table of fucking options], or 0 to exit.";
 	else if nosnowmeowsex >= 3:
 		say "     The thickly furred feline pants in the heat and staggers back, overheated and unwilling to continue to fight you. He staggers a little as he walks, starting to stumble back into the city. As with the others of his kind you've seen, you opt to let the overheated snowmeow leave and instead turn your attention to your own concerns.";
 		increase nosnowmeowsex by 1;
@@ -136,18 +141,19 @@ to say snowmeow_vsex03:
 	if Player is female:
 		say "     Eyeing that gray cock, close to a foot long, you aim it upwards and straddle the prone feline. With one hand on his chest, more for support than to keep him down at this point, you move into position and get his thick meat lined up [if Cunt Tightness of Player > 4 and Cunt Depth of Player > 10]before slamming yourself down onto him, taking him into your large pussy with ease[else]before lowering yourself down slowly onto his big meat gradually, letting yourself adjust to his girth[end if]. After a few bounces on his cock to find a rhythm that won't let that delicious cock slip free, you slide your hand back to grope his heavy balls. He moans softly and you lick your lips, eager for the equally big load filling them.";
 		WaitLineBreak;
-		say "     You take your time with the sexy feline, enjoying every lustful mewl and moan he makes as you tease him while riding that big, feline shaft of his. You have a few small orgasms from your stuffed cunt that soak his thick crotch fur, but you are careful not to let the snowmeow get off too soon and deprive your growing lust from the full load he can produce[if Cock Count of Player > 1]. His soft paws play with your cocks as you ride him, licking his muzzle as he eyes them with a lustful thirst for your cum[else if Cock Count of Player is 1]. His soft paws play with your cock as you ride him, licking his muzzle as he eyes it with a lustful thirst for your cum[end if].";
-		if Player is male:[If the player is Herm]
-			say "     As you feel your cock[smn] throbbing and your balls churning to overflow, you ride up and down on his big meat, pushing [if Cunt Tightness of Player > 4 and Cunt Depth of Player > 10]the full length down into you and squeezing your inner walls down around it tightly as you climax[else]as much of the large cock into you as you can and squeezing your inner walls down around it tightly as you climax[end if]. This sends your caught lover over the edge and you can feel his large ballsack tighten up as his cock twitches and throbs inside you before unleashing blast after blast of thick, snowmeow cum into your hungry pussy. His ample load flows up into your womb, making your tummy swell with its volume[if Cock Length of Player > 24]. With your lengthy cock within reach, the snow leopard licks and sucks at it, guzzling down your thick cum as you empty your load down his parched throat[else if Cock Count of Player is 1]. Your cock blasts your load across his chest and muzzle and he laps up what he can to slake his lustful thirst a little[else]. Your cocks blast your load across his chest and muzzle and he laps up what he can to slake his lustful thirst a little[end if].[if a random chance of 1 in 2 succeeds][impregchance][end if]"; [additional 50% chance of impreg]
+		say "     You take your time with the sexy feline, enjoying every lustful mewl and moan he makes as you tease him while riding that big, feline shaft of his. You have a few small orgasms from your stuffed cunt that soak his thick crotch fur, but you are careful not to let the snowmeow get off too soon and deprive your growing lust from the full load he can produce[if Cock Count of Player > 1]. His soft paws play with your cocks as you ride him, licking his muzzle as he eyes them with a lustful thirst for your cum[else if Player is male]. His soft paws play with your cock as you ride him, licking his muzzle as he eyes it with a lustful thirst for your cum[end if].";
+		if Player is male:
+			say "     As you feel your cock[smn] throbbing and your balls churning to overflow, you ride up and down on his big meat, pushing [if Cunt Tightness of Player > 4 and Cunt Depth of Player > 10]the full length down into you and squeezing your inner walls down around it tightly as you climax[else]as much of the large cock into you as you can and squeezing your inner walls down around it tightly as you climax[end if]. This sends your caught lover over the edge and you can feel his large ballsack tighten up as his cock twitches and throbs inside you before unleashing blast after blast of thick, snowmeow cum into your hungry pussy. His ample load flows up into your womb, making your tummy swell with its volume. [if Cock Length of Player > 24]With your lengthy cock within reach, the snow leopard licks and sucks at it, guzzling down your thick cum as you empty your load down his parched throat[else if Cock Count of Player is 1]Your cock blasts your load across his chest and muzzle and he laps up what he can to slake his lustful thirst a little[else]Your cocks blast your load across his chest and muzzle and he laps up what he can to slake his lustful thirst a little[end if].[if a random chance of 1 in 2 succeeds][impregchance][end if]"; [additional 50% chance of impreg]
 		else:
 			say "     As you feel your big climax coming, you ride up and down on his big meat, pushing [if Cunt Tightness of Player > 4 and Cunt Depth of Player > 10]the full length down into you and squeezing your inner walls down around it tightly as you climax[else]as much of the large cock into you as you can and squeezing your inner walls down around it tightly as you climax[end if]. This sends your caught lover over the edge and you can feel his large ballsack tighten up as his cock twitches and throbs inside you before unleashing blast after blast of thick, snowmeow cum into your hungry pussy. His ample load flows up into your womb, making your tummy swell with its volume.[if a random chance of 1 in 2 succeeds][impregchance][end if]"; [additional 50% chance of impreg]
 		CreatureSexAftermath "Player" receives "PussyFuck" from "Snow Leopard";
 	else:
 		say "     Eyeing that gray cock, weighing in at a good eleven inches, you aim it upwards and straddle the prone feline. With one hand on his chest, more for support than to keep him down at this point, you move into position and get his thick meat lined up with your back door. You let his dribbling precum wet your pucker before slowly easing yourself down onto it. You take it nice and slow, particularly enjoying the weakened kitty's soft mewls and moans as he's unable to pound his cock into you as he clearly desires. As you take more and more of it into your tight rump, you grope and fondle his heavy balls, eager for the equally big load filling them.";
-		say "     You take your time with the sexy feline, enjoying every lustful sound he makes as you tease him while riding that big, feline shaft of his. Your cock twitches and dribbles precum as his stiff meat rubs against your prostate so deliciously. Despite the pleasure of such a big kitty filling you, you do your best to hold back and take your time, wanting as much from those big balls as he can give[if Cock Count of Player > 1]. His soft paws play with your cocks as you ride him, licking his muzzle as he eyes them with a lustful thirst for your cum[else if Cock Count of Player is 1]. His soft paws play with your cock as you ride him, licking his muzzle as he eyes it with a lustful thirst for your cum[end if].";
+		say "     You take your time with the sexy feline, enjoying every lustful sound he makes as you tease him while riding that big, feline shaft of his. Your cock twitches and dribbles precum as his stiff meat rubs against your prostate so deliciously. Despite the pleasure of such a big kitty filling you, you do your best to hold back and take your time, wanting as much from those big balls as he can give[if Cock Count of Player > 1]. His soft paws play with your cocks as you ride him, licking his muzzle as he eyes them with a lustful thirst for your cum[else if Player is male]. His soft paws play with your cock as you ride him, licking his muzzle as he eyes it with a lustful thirst for your cum[end if].";
 		WaitLineBreak;
-		say "     As you feel your cock[smn] throbbing and your balls churning to overflow, you ride up and down on his big meat, pushing the full length down into your stretched ass and squeezing your inner walls down around it tightly as you climax. This sends your caught lover over the edge and you can feel his large ballsack tighten up as his cock twitches and throbs inside you before unleashing blast after blast of thick, snowmeow cum into your bowels. His ample load flows up into your belly, making your tummy swell with its volume[if Cock Length of Player > 24]. With your lengthy cock within reach, the snow leopard licks and sucks at it, guzzling down your thick cum as you empty your load down his parched throat[else if Cock Count of Player is 1]. Your cock blasts your load across his chest and muzzle and he laps up what he can to slake his lustful thirst a little[else]. Your cocks blast your load across his chest and muzzle and he laps up what he can to slake his lustful thirst a little[end if].[if a random chance of 1 in 2 succeeds][mimpregchance][end if]"; [additional 50% chance of impreg]
+		say "     As you feel your cock[smn] throbbing and your balls churning to overflow, you ride up and down on his big meat, pushing the full length down into your stretched ass and squeezing your inner walls down around it tightly as you climax. This sends your caught lover over the edge and you can feel his large ballsack tighten up as his cock twitches and throbs inside you before unleashing blast after blast of thick, snowmeow cum into your bowels. His ample load flows up into your belly, making your tummy swell with its volume. [if Cock Length of Player > 24]With your lengthy cock within reach, the snow leopard licks and sucks at it, guzzling down your thick cum as you empty your load down his parched throat[else if Cock Count of Player is 1]Your cock blasts your load across his chest and muzzle and he laps up what he can to slake his lustful thirst a little[else]Your cocks blast your load across his chest and muzzle and he laps up what he can to slake his lustful thirst a little[end if].[if a random chance of 1 in 2 succeeds][mimpregchance][end if]"; [additional 50% chance of impreg]
 		CreatureSexAftermath "Player" receives "AssFuck" from "Snow Leopard";
+	WaitLineBreak;
 	say "     When the snow leopard's balls are drained and he passes out, you ease yourself off his softening erection. You smile contentedly as you rub your overfull belly, leaving the spent feline unconscious in the shadows. You finger your [if Player is female]overfull pussy[else]leaking anus[end if] as his thick cum slowly dribbles out and runs down your thighs. You find yourself looking forward to encountering another of these rare felines to play with in the future.";
 
 to say snowmeow_vsex04:
@@ -157,9 +163,6 @@ to say snowmeow_vsex04:
 	CreatureSexAftermath "Player" receives "AssFuck" from "Snow Leopard";
 
 Section 2 - Creature Insertion
-
-to say snowmeowdesc:
-	say "     You have encountered another citizen stricken by the infection, this one having turned into an exotic snow leopard. His five foot tall body is covered with snowy white and ash gray fur marked by coal black spots. The fur is fluffy and thick, especially on his tail which has larger dark patches on it. He eyes you intently with his icy gaze. He seems rather uncomfortable in the summer heat, but the stiff erection he's sporting shows he's quite intent on slaking his lusts as well as his thirst. He strides towards you, growling aggressively in his throat.";
 
 Table of CombatPrep (continued)
 name(text)	PrepFunction(text)
@@ -171,7 +174,7 @@ to say PrepCombat_Snow Leopard:
 	choose row MonsterID from Table of Random Critters;
 	if Player is FemalePreferred:
 		now sex entry is "Female";
-	else if "Herm Preferred" is listed in feats of Player:
+	else if Player is HermPreferred:
 		now sex entry is "Both";
 	else:
 		now sex entry is "Male";
@@ -200,7 +203,7 @@ When Play begins:
 	now attack entry is "[one of]The agile feline slashes at you with his sharp claws![or]The snow leopard tries to bear you down under his weight. You barely scramble free, but are scratched up in the process![or]The snowmeow manages to bite your shoulder![or]The snowmeow knees you firmly in the breadbasket![or]The creature digs his claws into you, but you painfully pull free of its pointy grip![at random]"; [ Successful attack message ]
 	now defeated entry is "[beatthesnowmeow]"; [ Text when monster loses. ]
 	now victory entry is "[losetosnowmeow]"; [ Text when monster wins. ]
-	now desc entry is "[snowmeowdesc]"; [ Description of the creature when you encounter it. ]
+	now desc entry is "     You have encountered another citizen stricken by the infection, this one having turned into an exotic snow leopard. His five foot tall body is covered with snowy white and ash gray fur marked by coal black spots. The fur is fluffy and thick, especially on his tail which has larger dark patches on it. He eyes you intently with his icy gaze. He seems rather uncomfortable in the summer heat, but the stiff erection he's sporting shows he's quite intent on slaking his lusts as well as his thirst. He strides towards you, growling aggressively in his throat.[line break]"; [ Description of the creature when you encounter it. ]
 	now face entry is "feline in form, with leopard-like marking across it"; [ Face description, format as "Your face is [Face of Player]." ]
 	now body entry is "that of a short, but agile feline. Your hands are paw-like, and your fingers end in sharp claws. Your body does not seem well-suited to the hot weather hanging over the city"; [ Body description, format as "Your body is [Body of Player]." ]
 	now skin entry is "thick, fluffy fur. It is a snowy white and ash gray in color, with a leopard-like pattern across it. Your thick coat does not help with the southern sun as your pelt warms your"; [ Skin. Format as "Looking at yourself, your body is covered in [Skin of Player] skin." ]
@@ -210,7 +213,7 @@ When Play begins:
 	now body change entry is "it shifts and changes. You become more feline in form as you become below average in height, about five feet tall. Your hands tingle and throb as they reshape into paw-like hands complete with sharp claws. As you change, you can feel the summer heat of the city bearing down on you even more"; [ Body TF text, format as "Your body tingles as [body change entry]. ]
 	now skin change entry is "you gain a thick coat of luxurious fur. The lovely snow leopard fur covers you, soft and fluffy. It is very warm as well, you notice, making you notice the city's heat all the more"; [ Skin TF text, format as "Your skin tingles as [skin change entry]. ]
 	now ass change entry is "a fluffy, feline tail forms. It is covered in thick, soft fur and takes on the beautiful pattern of a snow leopard"; [ Ass/Tail TF text, format as "Your ass tingles as [tail change entry]." ]
-	now cock change entry is "takes on an even, gray hue. Your glans shifts shape slightly, becoming something between a man and a feline's in shape"; [ Cock TF text, format as "Your groin tingles as [cock change entry]." ]
+	now cock change entry is "it takes on an even, gray hue. Your glans shifts shape slightly, becoming something between a man and a feline's in shape"; [ Cock TF text, format as "Your groin tingles as [cock change entry]." ]
 	now str entry is 15;
 	now dex entry is 20;
 	now sta entry is 14;
@@ -351,14 +354,11 @@ When Play begins:
 	[Clit Size Adjective is generated by a function and can be used in scenes: very small/small/average/large/very large]
 ]
 
-
-
 An everyturn rule:
 	if Player has a body of "Snow Leopard":
 		increase thirst of Player by a random number between 0 and 1;
 	if SkinName of Player is "Snow Leopard":
 		increase thirst of Player by 1;
-
 
 Section 3 - Endings
 
@@ -374,23 +374,20 @@ This is the Snow Leopard Infection rule:
 		else if humanity of Player < 10:
 			if HP of Sven is 0 or HP of Sven > 49:
 				say "     As the city's oppressive heat beats down on you, you feel the last of your humanity boiling away. You moan in a mix of lust and thirst as you set off into the city, roaming aimlessly in search of something to wet your throat and slake your lusts. After ravaging a few of those panthers for their milk, you stumble across another snow leopard. As a pair of lustful snowmeows, you suck and rut one another before being joined by others. Eventually, your lusts wane enough to focus more on your escape as a cooler evening comes.";
-			if HP of Sven > 0 and HP of Sven < 4:
+			else if HP of Sven > 0 and HP of Sven < 4:
 				say "     As the city's oppressive heat beats down on you, you feel the last of your humanity boiling away. You moan in a mix of lust and thirst as you set off into the city, roaming in search of something to wet your throat and slake your lusts. After ravaging a few of those panthers for their milk, you stumble your way to Sven's place. He opens the door readily for you and easily gives in to your arousing, feline body. After a few hours of hot, sweaty sex, his transformation into a sexy snow leopard like you is completed. As a pair of lustful snowmeows, you suck and rut one another before being joined by others. Eventually, your lusts wane enough to focus more on your escape as a cooler evening comes.";
-			if HP of Sven > 3 and HP of Sven < 8:
+			else if HP of Sven > 3 and HP of Sven < 8:
 				say "     As the city's oppressive heat beats down on you, you feel the last of your humanity boiling away. You moan in a mix of lust and thirst as you set off into the city, roaming in search of something to wet your throat and slake your lusts. After ravaging a few of those panthers for their milk, you stumble back to the relative coolness of the bunker and to the sexy kitty you know is waiting there for you. Once inside, you rut the kitty until his transformation into a sexy snow leopard is completed. As a pair of lustful snowmeows, you suck and rut one another, venturing out during the night to gather more of your kind to share in the daily orgies in the bunker. Eventually, your lusts wane enough to focus more on your escape as a cooler evening comes.";
-			if HP of Sven is 8 or HP of Sven is 9:
+			else if HP of Sven is 8 or HP of Sven is 9:
 				say "     As the city's oppressive heat beats down on you, you feel the last of your humanity boiling away. You moan in a mix of lust and thirst as you set off into the city, roaming in search of something to wet your throat and slake your lusts. After ravaging a few of those panthers for their milk, you stumble back to the relative coolness of the bunker and to the feline pet you have waiting there for you. Once inside, you rut the kitty with mindless lust. As a pair of lustful snowmeows, you suck and rut one another, venturing out during the night to gather more of your kind to share in the daily orgies in the bunker. Eventually, your lusts wane enough to focus more on your escape as a cooler evening comes.";
-			if HP of Sven is 10:
+			else if HP of Sven is 10:
 				say "     As the city's oppressive heat beats down on you, you feel the last of your humanity boiling away. You moan in a mix of lust and thirst as you set off into the city, roaming in search of something to wet your throat and slake your lusts. After ravaging a few of those panthers for their milk, you stumble back to the relative coolness of the bunker and to the feline pet you have waiting there for you. Once inside, you rut the kitty with mindless lust. As a pair of lustful snowmeows, you suck and rut one another, venturing out during the night to gather more of your kind to share in the daily orgies in the bunker. Candy, who lingered around because of his attachment to both you and Sven, soon joins in on the fun as more and more sexy males join in. Soon there are snowmeows in a myriad of colors among your group. Eventually, your lusts wane enough to focus more on your escape as a cooler evening comes.";
 			say "     Together, you seek to leave what feels like a sweltering hellhole and come across a breach in the military's lines made by another leopard-like strain. From the half-transformed soldiers left behind, lost in their lustful urges, it seems you aren't far behind them. Wanting to flee before reinforcements move in to close the gap, you move quickly. Falling upon the partial felines, you and your brethren toss them into a personnel truck you commandeer. As you drive away into the night, you all have an enjoyable trip while completing their transformation into lustful snowmeows.";
-			say "     As the day comes, the heat builds and it grows uncomfortable again. Low on gas and unable to fuel up without exposing your weakened group, your band enacts a hasty, clever plan thought up by one of your mates. Using your military truck and a few of your brethren as scouts, you put up an impromptu blockade as a refrigerated milk truck comes along. When the driver stops, your allies are on him quickly and soon the driver is forced to hide the conspicuous felines in his truck[if HP of Sven is not 10]. The clever kitty with the idea gets the pleasure of hiding in the cab and sucking at the driver's cock for the whole ride north into the much cooler mountains. Not that the driver complains much, soon growing to enjoy the lustful snowmeow's attention as he gradually becomes more feline over the course of the trip[else]. Candy eagerly volunteers to ride in the cab to keep an eye on the driver, though mainly by sucking on the driver's cock for the whole ride up into the much cooler mountains. Not that the driver complains at all, overwhelmed by the candy coon's expert blowjobs and gradually becoming more coon-like over the course of the trip. By the time you all reach your destination, he's a sexy coonboi companion for Candy, but in soft, creamy white colors[end if]. The rest of you have a fine trip in cool comfort with the tasty cargo.";
-			if HP of Sven is 10:
-				say "     Candy and his new playmate don't do as well in the cold of the mountains and head off in the truck to move a little lower in the mountains. They visit from time to time, keeping you up to date on what's happening in the world as their colonies of horny coons spread across the base of the mountains. The visits from the colorful raccoons are always a time of celebration for your people, as they are always willing to rut with the sexy snow leopards. Over the years, your colony spreads slowly across the majestic, snowy mountains, snatching the occasional skier, mountaineer or resident from the remote towns to join your numbers. They are always welcomed quite lustfully, with many hard cocks eager to fill a fresh hole.";
-			else:
-				say "     Over the years, your colony spreads slowly across the majestic, snowy mountains, snatching the occasional skier, mountaineer or resident from the remote towns to join your numbers. They are always welcomed quite lustfully, with many hard cocks eager to fill a fresh hole.";
+			say "     As the day comes, the heat builds and it grows uncomfortable again. Low on gas and unable to fuel up without exposing your weakened group, your band enacts a hasty, clever plan thought up by one of your mates. Using your military truck and a few of your brethren as scouts, you put up an impromptu blockade as a refrigerated milk truck comes along. When the driver stops, your allies are on him quickly and soon the driver is forced to hide the conspicuous felines in his truck. [if HP of Sven is not 10]The clever kitty with the idea gets the pleasure of hiding in the cab and sucking at the driver's cock for the whole ride north into the much cooler mountains. Not that the driver complains much, soon growing to enjoy the lustful snowmeow's attention as he gradually becomes more feline over the course of the trip[else]Candy eagerly volunteers to ride in the cab to keep an eye on the driver, though mainly by sucking on the driver's cock for the whole ride up into the much cooler mountains. Not that the driver complains at all, overwhelmed by the candy coon's expert blowjobs and gradually becoming more coon-like over the course of the trip. By the time you all reach your destination, he's a sexy coonboi companion for Candy, but in soft, creamy white colors[end if]. The rest of you have a fine trip in cool comfort with the tasty cargo.";
+			say "     [if HP of Sven is 10]Candy and his new playmate don't do as well in the cold of the mountains and head off in the truck to move a little lower in the mountains. They visit from time to time, keeping you up to date on what's happening in the world as their colonies of horny coons spread across the base of the mountains. The visits from the colorful raccoons are always a time of celebration for your people, as they are always willing to rut with the sexy snow leopards. [end if]Over the years, your colony spreads slowly across the majestic, snowy mountains, snatching the occasional skier, mountaineer or resident from the remote towns to join your numbers. They are always welcomed quite lustfully, with many hard cocks eager to fill a fresh hole.";
 		else:
 			say "     You manage to survive the city's oppressive heat which feels far too strong for your snow leopard body. The time at the military's holding facility is almost unbearable, hot, muggy and boring. The soldiers are on edge and watch for any signs of those rescued of succumbing further to the infection and so you [if Sven is in the bunker]and Sven [end if]can't slake your lustful thirsts on the myriad cocks, pussies and breasts around you. Eventually, you do manage to convince a young soldier of your need and he makes sure you get more water.";
-			say "     During a bad heat wave, he escorts you into the air conditioned buildings, acting as if you're being brought in for more tests. Out of the heat and having had plenty to drink, you can feel another thirst building. With a little coaxing, you [if Sven is in the bunker]and Sven [end if]get the soldier into a bathroom and suck him off, swallowing down his tasty cum. From that point on, [if Sven is in the bunker]you three[else]you and he[end if] sneak off often for a quick blowjob. You grin as you can see some snowy fur appearing around his groin as his cock takes on a lovely, gray tone as your trysts continue[if Player is female]. As his infection progresses, it takes no coaxing to get him to mount you, driving his cock into your needy pussy[else]. As his infection progresses, it takes no coaxing to get him to bend over for you and be mounted[end if].";
+			say "     During a bad heat wave, he escorts you into the air conditioned buildings, acting as if you're being brought in for more tests. Out of the heat and having had plenty to drink, you can feel another thirst building. With a little coaxing, you [if Sven is in the bunker]and Sven [end if]get the soldier into a bathroom and suck him off, swallowing down his tasty cum. From that point on, [if Sven is in the bunker]you three[else]you and he[end if] sneak off often for a quick blowjob. You grin as you can see some snowy fur appearing around his groin as his cock takes on a lovely, gray tone as your trysts continue. As his infection progresses, it takes no coaxing to get him to [if Player is female]mount you, driving his cock into your needy pussy[else]bend over for you and be mounted[end if].";
 			say "     Of course, you are eventually discovered, but not before he is well on his way into becoming a sexy snow leopard male for you[if Sven is in the bunker and HP of Sven < 8] and Sven completes his transformation into a sexy snowmeow[end if]. It all causes a lot of fuss but, in the end, you are able to remain together and are both treated to become non-infectious. He is disciplined for his dereliction of duty, but remains on staff as he can better mingle with the evacuees.";
 			say "     As the camp is broken up, he applies to be reassigned to a post up in the northern mountains and you [if Sven is in the bunker]and Sven [end if]join him. He excels at this arctic training facility, better able to cope with the weather and terrain than his squad mates and is soon promoted to their leader. You are taken on as part of the staff at the outpost and help administer the various groups coming up for arctic climate training with his men[if Sven is in the bunker]. Sven, acting informally as the team mascot, has a lot of fun living up in the snowy mountains[end if]. As the leader and his team grow close, you [if Sven is in the bunker]three[else]both[end if] often give them little [']rewards['] for their service[if Sven is in the bunker]. Sven, despite his shy act, will frequently sneak into the barracks and grab a nap on a bunk while waiting for the lucky soldier to return to find a playtoy for the night[end if]. And when they start to gradually show signs of snow leopardness setting in, nothing is reported.";
 

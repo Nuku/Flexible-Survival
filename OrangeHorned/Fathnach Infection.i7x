@@ -59,14 +59,14 @@ to say beattheFathnach:
 			say "     You tell him to beat it, the Fathnach whimpering with his ears lowered, walking off into the infected city.";
 
 to say Plow_Fathnach:
-	say "     You tell him to turn his cock once again into a cunt, seeing as he clearly wants to be bred so badly. The infected Giant-kin eagerly shifts his nether regions, showing off his tight lower lips for your pleasure. What follows is a quick session of fucking that involves you smashing your head between his moobs, arms wrapped into his love handles as the squelching of his wet cunt drives you deeper into madness.";
-	say "     You completely lose your sense of preservation, licking wildly at his body as his musk overwhelms you. It takes little time before your balls squeeze, filling up your partner with the load he deserves for such an amazing body. 'Hoooh... I'm gonna have strong calves thanks to you... I need to rest here for a bit.' Leaving him on the street, you continue your journey.";
+	say "     You tell him to turn his cock once again into a cunt, seeing as he clearly wants to be bred so badly. The infected Giant-kin claps in response: 'YES! I was hoping you would say that!' shaking his ass towards you, a magical fuzz covers their balls and cock, shifting it into tight- yet leaking- nether lips. His both his mouth and pussy drool as he looms closer. 'Like what you see? They feel even better once you're inside, no one in the city can take it like your Big Brother can.' He lays his back on the ground, spreading his legs in a Y-shape as he holds out his arms, 'Hop on and ride this heifer into manhood!' [if Player is naked]Setting your gear to one side[else]Hastily stripping down[end if], you smash your head between his weighty moobs, arms into his flanks and make his cunt squelch in delight with every deep thrust.";
+	say "     With every slap of your balls into your cunt, you slip deeper into their embrace, milky mountains muffling your hearing as his heartbeat vibrates your body. It gets to the point that it becomes a slip and slide to hold onto them, their sweaty body overproducing to make your lusts go haywire. In mere seconds you forget everything else in your mind but this exact moment, only focusing on how tight this cow-pussy is trying to milk you dry- the cow-man following your rut with sighs of joy from a full pussy in who knows how long? The Fathnach rubs your head saying words your brain couldn't process, currently your too busy losing your sense of caution, licking wildly at his sweaty bod as his musk overwhelms you the sensation of their femcum drip down your hard [CockName of Player]. It doesn't take long for you to finally burst, filling up your partner with the load he deserves for such an amazing body. 'Hoooh... I'm gonna have strong calves thanks to you... I need to rest here for a bit.' The Fathnach rubs their clit as you pull out, squirting over themselves as you Leave to continue your journey.";
 	CreatureSexAftermath "Fathnach" receives "PussyFuck" from "Player";
 	infect "Fathnach";
 
 to say AssFuck_Fathnach:
-	say "     You make them turn his dumptruck globes around, presenting you with a giant donut of an anus. You give it a few licks before jamming your [Cock of Player] cock inside; the bull-man wildly yelps and throws his body back into yours- the spent energy of the battle having no effect on his constantly hyperactive sex drive. He cums three times into the pavement before you're able to finally reach your climax. You leave the Giant-kin on the floor as you continue your journey.";
 	CreatureSexAftermath "Fathnach" receives "AssFuck" from "Player";
+	say "     You make him turn his huge rear around, presenting you with a giant rim of an anus. With a firm slap- his tail flicking around in excitement. You watch him get on his hands and knees to accept your gift. You give his thick anus a deliberately slow licking, your mouth now becoming heavy with the aftertaste of coffee and whiskey mixed together. Before you carefully thrust your [CockName of Player] inside; the bull-man wildly yelps and throws his body back into yours. 'Yes! Cock! Finally!' Drool splatters onto the floor with firbolg precum. Despite his herculean strength, this giant-kin's ability to bounce back from an intensive battle both turns you on as well as disturbs you. With every plap of their wet cheeks, the cow-man looks back, his eyes alight with subby glee. With a firm grip on his bouncy body, you lose yourself to the feeling- the Fathnach cumming seven times on the floor as you feel the sensations of excitement begin to overwhelm your head, you don't cum down until your balls burst every drop they have stored inside. Your cow partner sighs from his hole getting the seed it was hungry for. The Firbolg lays there with his ass still up in the air, pecs holding him up as he waved his ass around in satisfaction 'D-dont be a stranger... Come back~.' Shrugging, you decide it's best to leave them here, before he regains his breath to pin you down.";
 
 Section 2 - Creature Insertion
 
@@ -142,10 +142,10 @@ when play begins:
 	now Cunt Tightness entry is 0; [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping] [ Width of female sex the infection will try to give a Player. ]
 	now SeductionImmune entry is false; [Whether or not the creature is immune to the the "tease" command.]
 	now libido entry is 40; [ Target libido the infection will rise towards. ]
-	now loot entry is "Fathnach Tuft"; [ Dropped item, blank for none. Case sensitive. ]
+	now loot entry is "Fathnach Tuft Hair"; [ Dropped item, blank for none. Case sensitive. ]
 	now lootchance entry is 42; [ Percentage chance of dropping loot, from 0-100. ]
-	now MilkItem entry is "Fathnach Milk"; [Item given when using the "milk yourself" command in game.]
-	now CumItem entry is "Fathnach Cum Pollen"; [Item given when using the "Jerk Off" command in game.]
+	now MilkItem entry is "Fathnach Cum Pollen"; [Item given when using the "milk yourself" command in game.]
+	now CumItem entry is "Fathnach Milk"; [Item given when using the "Jerk Off" command in game.]
 	now TrophyFunction entry is "[GenerateTrophyList_Fathnach]"; [Points to a list of items you can get whe the creature is defeated.]
 	now scale entry is 4; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]muscled[or]beefy[or]muscular[at random]";
@@ -159,7 +159,7 @@ when play begins:
 
 Table of Game Objects (continued)
 name	desc	weight	object
-"fathnach tuft"	"A tuft of fur that looks like it has been pulled out of the coat of a Fathnach. It's nicely soft."	0	fathnach tuft
+"fathnach tuft"	"A tuft of fur that looks like it has been pulled out of the coat of a fathnach. It's nicely soft."	0	fathnach tuft
 
 fathnach tuft is a grab object.
 Usedesc of fathnach tuft is "[FathnachTuftUse]".

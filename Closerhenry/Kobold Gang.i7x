@@ -4,10 +4,8 @@ Version 1 of Kobold Gang by Closerhenry begins here.
 
 Section 1 - Creature Responses
 
-[ Use 'to say xxxxx' for overlong text boxes or complex situations, using '[xxxxx]' (in square brackets) within a say statement to execute them. Typically, these are needed if there are a lot of cock/species/cunt checks. ]
-
 koboldgangmet is a number that varies.
-koboldgangsubs is a number that varies.
+[koboldgangsubs is a number that varies.]
 
 to say koboldgangdesc:
 	if koboldgangmet is 0:
@@ -17,46 +15,43 @@ to say koboldgangdesc:
 		say "     You think you could take the kobolds easily one on one, but facing a horde of them might complicate things. You put up your guard, ready for any of them to attack. You'll be fighting on the defensive, as the kobolds were smart enough to ambush you, [if level of Player < 10]giving them a serious[else]removing your[end if] advantage. You attempt to convince them that you're not worth the trouble, but the kobolds don't seem interested in diplomacy.";
 		WaitLineBreak;
 		say "     'This one will do nicely,' one of the kobolds laughs in a scratchy voice. 'We could always use new recruits,' a second states, making the group's intentions for you clear. 'Ready, boys? Swarm them!' a final kobold orders, and the diminutive creatures rush towards you, intent on overwhelming you with their numbers.";
-		increase koboldgangmet by 1;
+		now koboldgangmet is 1;
 	else if koboldgangmet is 1:
 		say "     You're out in the red light district once again, when you hear the familiar pitter-patter of bare feet on the roads. Knowing what's happening, you make a break for it, not intent on letting the kobolds ambush you once again. Running as fast as your legs can carry you, you eventually stop to take a rest in an ally, hoping you've lost them. When you catch your breath, however, you notice a scaly head looking at you from one end of the alley. You turn to run, only to find another group of kobolds moving towards you. You've run right into their trap!";
 		say "     'Thought you got away, did you? Everyone knows kobolds don't use the same trick twice! But you'll know that more than anyone, my soon-to-be scale-slut!' the apparent leader of the kobolds boasts, and the small reptiles run at you with their clawed hands outstretched.";
-		increase koboldgangmet by 1;
+		now koboldgangmet is 2;
 	else:
 		say "     You hear the familiar sound of bare feet running [one of]all around you[or]from several directions[or]toward you en masse from behind before spreading out[as decreasingly likely outcomes]. You sigh, knowing it's best to just stand your ground and fight against the devious kobolds. They emerge from the shadows, giggling wildly and letting out yips as they surround you, their cocks throbbing with desire.";
 		say "     A dull blue kobold steps forward, crossing his arms as he looks at you. 'We were just looking for you! Come, now, it's time for you to take care of your superiors, our little buttslut,' the kobold says menacingly as the creatures prepare to attack.";
 
 to say losetokoboldgang:
-	if HP of Player > 0:
-		if Player is not male:
-			say "     <Sadly, scenes for a female player surrendering are not yet written for this enemy.>";
+	if HP of Player > 0 and Player is male: [Sadly, scenes for a female player surrendering are not yet written for this enemy]
+		if BodyName of Player is "Kobold" and Player is pure:
+			say "     You surrender to the group of kobolds, your submissive instincts too strong to ignore. The leader of the gang orders the others to cease fighting. 'Glad to know you see how things work around here!' he praises, walking toward you with a smirk on his muzzle. The pale blue kobold begins to undress you, making sure to sensually stroke your sensitive body with every deliberate movement. 'Why do you wear these rags? It is much better to show off your body. You have wonderful assets,' he murmurs, giving your pert rear a lecherous squeeze. You dimly realize that your tail is raising on its own accord when a light breeze tickles your rear. You know you should feel embarrassed, you know you should feel some sense of shame, but you can't help but feel pride in the fact that every kobold in the area's eyes are locked on your needy, submissive body, all of them thinking of different ways to use you.";
+			say "     The kobold gently guides you to your knees, running his claws lightly over your frame. The tips of his fingers send tingles of pleasure down your body, fogging your mind further with lust. 'Oh, yes, you turned out nicely. See what happens when you do what you're told? Yes, you're rewarded nicely...' he murmurs, as he positions himself behind you. The kobold brings his muzzle to your rear, and you feel his warm tongue lapping against your ass. His tapered tongue runs against your anus, moving around its outer edges and working its way inward. Your anus clenches, the sensitive nerves quaking in pleasure at the kobold's expert rimjob. His tongue pushes inward, probing your depths, filling you with the warmth of his tongue. His tongue explores inside of you, both teasing and preparing you. You feel the tip of his tongue reach your prostate, causing you to audibly moan in pleasure. The kobold pulls his tongue out, leaving your ass feeling hollow.";
+			WaitLineBreak;
+			say "     The kobold stands, his cock fully exposed from his genital slit. The tip of his cock pokes at your rear entrance, causing you to whine impatiently. He grips your rear, and begins inserting himself into your aching entrance. Your ass easily takes his length, stretching to accommodate him without any discomfort. His cock feels wonderful in you, as if your ass is shaped exactly to take his draconic shaft. Your sensitive nerves alight with pleasure as you are filled, and your clawed hands dig into the ground below you. Another colorful kobold approaches your front, his twitching cock leaking with pre. Your muzzle opens without effort, allowing him to stick his shaft into your waiting mouth. You close your jaw around his cock, allowing the male to thrust into your long muzzle. Being filled from both ends, you quiver in pleasure as you are fucked hard by the kobolds. Every thrust from behind tickles your prostate, and the musky taste of the cock in your mouth is delicious. You run your tongue over the smooth shaft, enjoying the flavor of his pre.";
+			say "     The other kobolds around begin having their way with each other, as the group devolves into an orgy. The less colorful kobolds submissively accept the erections of the brighter ones, moaning in pleasure as they are filled. The kobold behind you grunts with every thrust, which begin to grow more frequent. He lets out a loud groan as his cock spasms, cumming inside of you. The one in front follows his lead, shooting off his seed into your mouth. You savor the flavor of his warm cum, swallowing every bit that you can. You climax from the sensations, your own cock shooting off below you. Your ass clenches around the kobold's cock, your prostate pulsing with pleasure. The warmth of his seed coating your insides adds to the experience, as you are filled from both ends with the virile seed of the kobolds. You pant as your orgasms ends, but the kobolds do not pull out. Instead, they begin thrusting once again with new vigor. To your surprise, you find that your cock does not soften, but it only seems to grow harder and more desperate!";
+			WaitLineBreak;
+			say "     The kobolds around you begin to climax, but continue fucking. Their yips and moans ring out, as you are lost in a sea of pleasure. The kobolds continue to thrust into you, not content with just one orgasm. It isn't long until they climax once again, filling you with their draconic spunk. You orgasm once again as well, just as hard as the first, your body shaking with pleasure. This pattern repeats itself for what feels like hours, as the orgy rages on. Eventually, the kobolds pull out of you, seed pouring out of your well used hole. You fall onto your side, completely spent from the vigorous sex. You must have cum four, no, five times. The group around you finishes their sex, as all of the kobolds gather together. The leader lays behind you, wrapping his arms around your chest. The others follow suit, all creating a large pile of small reptiles huddling together. The scent of sex and musk causes your cock to remain rigid, and you can feel the leader's cock gently poking your rear, as you all rest together in a post-orgy pile.";
+			say "     Eventually, most of the kobolds fall asleep. You look around, wondering what to do. Your body urges you to stay, to join these reptiles. To become family with them. The instincts inside you beg you to forgo your humanity, but you know you cannot do that. You quietly stand, careful not to awaken the sleeping kobolds. You tiptoe out of the pile, finding your belongings. Redressing, you look back one final time at the draconian beings, before turning back and heading back out into the city.";
 		else:
-			if BodyName of Player is "Kobold" and Player is pure:
-				say "     You surrender to the group of kobolds, your submissive instincts too strong to ignore. The leader of the gang orders the others to cease fighting. 'Glad to know you see how things work around here!' he praises, walking toward you with a smirk on his muzzle. The pale blue kobold begins to undress you, making sure to sensually stroke your sensitive body with every deliberate movement. 'Why do you wear these rags? It is much better to show off your body. You have wonderful assets,' he murmurs, giving your pert rear a lecherous squeeze. You dimly realize that your tail is raising on its own accord when a light breeze tickles your rear. You know you should feel embarrassed, you know you should feel some sense of shame, but you can't help but feel pride in the fact that every kobold in the area's eyes are locked on your needy, submissive body, all of them thinking of different ways to use you.";
-				say "     The kobold gently guides you to your knees, running his claws lightly over your frame. The tips of his fingers send tingles of pleasure down your body, fogging your mind further with lust. 'Oh, yes, you turned out nicely. See what happens when you do what you're told? Yes, you're rewarded nicely...' he murmurs, as he positions himself behind you. The kobold brings his muzzle to your rear, and you feel his warm tongue lapping against your ass. His tapered tongue runs against your anus, moving around its outer edges and working its way inward. Your anus clenches, the sensitive nerves quaking in pleasure at the kobold's expert rimjob. His tongue pushes inward, probing your depths, filling you with the warmth of his tongue. His tongue explores inside of you, both teasing and preparing you. You feel the tip of his tongue reach your prostate, causing you to audibly moan in pleasure. The kobold pulls his tongue out, leaving your ass feeling hollow.";
-				WaitLineBreak;
-				say "     The kobold stands, his cock fully exposed from his genital slit. The tip of his cock pokes at your rear entrance, causing you to whine impatiently. He grips your rear, and begins inserting himself into your aching entrance. Your ass easily takes his length, stretching to accommodate him without any discomfort. His cock feels wonderful in you, as if your ass is shaped exactly to take his draconic shaft. Your sensitive nerves alight with pleasure as you are filled, and your clawed hands dig into the ground below you. Another colorful kobold approaches your front, his twitching cock leaking with pre. Your muzzle opens without effort, allowing him to stick his shaft into your waiting mouth. You close your jaw around his cock, allowing the male to thrust into your long muzzle. Being filled from both ends, you quiver in pleasure as you are fucked hard by the kobolds. Every thrust from behind tickles your prostate, and the musky taste of the cock in your mouth is delicious. You run your tongue over the smooth shaft, enjoying the flavor of his pre.";
-				say "     The other kobolds around begin having their way with each other, as the group devolves into an orgy. The less colorful kobolds submissively accept the erections of the brighter ones, moaning in pleasure as they are filled. The kobold behind you grunts with every thrust, which begin to grow more frequent. He lets out a loud groan as his cock spasms, cumming inside of you. The one in front follows his lead, shooting off his seed into your mouth. You savor the flavor of his warm cum, swallowing every bit that you can. You climax from the sensations, your own cock shooting off below you. Your ass clenches around the kobold's cock, your prostate pulsing with pleasure. The warmth of his seed coating your insides adds to the experience, as you are filled from both ends with the virile seed of the kobolds. You pant as your orgasms ends, but the kobolds do not pull out. Instead, they begin thrusting once again with new vigor. To your surprise, you find that your cock does not soften, but it only seems to grow harder and more desperate!";
-				WaitLineBreak;
-				say "     The kobolds around you begin to climax, but continue fucking. Their yips and moans ring out, as you are lost in a sea of pleasure. The kobolds continue to thrust into you, not content with just one orgasm. It isn't long until they climax once again, filling you with their draconic spunk. You orgasm once again as well, just as hard as the first, your body shaking with pleasure. This pattern repeats itself for what feels like hours, as the orgy rages on. Eventually, the kobolds pull out of you, seed pouring out of your well used hole. You fall onto your side, completely spent from the vigorous sex. You must have cum four, no, five times. The group around you finishes their sex, as all of the kobolds gather together. The leader lays behind you, wrapping his arms around your chest. The others follow suit, all creating a large pile of small reptiles huddling together. The scent of sex and musk causes your cock to remain rigid, and you can feel the leader's cock gently poking your rear, as you all rest together in a post-orgy pile.";
-				say "     Eventually, most of the kobolds fall asleep. You look around, wondering what to do. Your body urges you to stay, to join these reptiles. To become family with them. The instincts inside you beg you to forgo your humanity, but you know you cannot do that. You quietly stand, careful not to awaken the sleeping kobolds. You tiptoe out of the pile, finding your belongings. Redressing, you look back one final time at the draconian beings, before turning back and heading back out into the city.";
-			else:
-				say "     Unable to resist the allure of the small reptiles, you give in to your instincts and surrender to use as they see fit. The leader commands the other kobolds to cease. 'Clearly, you're wise enough to know when to submit. You'll make a fine kobold!' he laughs, and your cheeks burn bright with both shame and arousal. 'Alright boys, let's reward this future scale-slut for making the right decision!' The other kobolds cheer as they run at you. You are quickly stripped naked, your clothes thrown aside, and the kobolds briefly argue about who gets to do what to your proffered body, while you lie naked on the pavement. Their arguing is quickly resolved, and you are surrounded by a group of the slightly more colorful ones, among them a blue-scaled kobold that appears to be their leader. 'Have your way with them, everyone! Make sure you coat them good!' You gulp at his words, fearing that these impish reptiles intend to violate every part of your body.";
-				say "     The kobolds grope and squeeze your curves with lecherous abandon, rubbing their thin hands along your skin, their claws just dull enough to avoid scratching you. While uncomfortable at first, the sensation of being manhandled by all these little creatures begins to grow increasingly enjoyable, and even pleasurable to your battle-battered mind, some small part of you lusting for their contact.";
-				WaitLineBreak;
-				say "     You feel a ticklish warmth caress your pucker. Looking down, you spot the muzzle of a teal-colored kobold dipping between your legs, a mischievous look on his muzzle. He leans in close to nip at your ring before his long, tapering tongue extends, that nimble surface sweeping wetly over the sensitive nerves of your anus. Tender sweeps give way to lustful licking, and before long he's boring that muscle into your depths, colon clenching taut around its spit-slick intruder. Your eyes roll back into your head as that avid creature explores your deepest reaches, probing at your anal lining with ravenous enthusiasm, almost devouring your ass with wanton lasciviousness. You shudder when his focus narrows to your prostate, deftly rubbing and grinding along that gland with practiced precision, eroding your mind with every wanton stroke.";
-				say "     Another kobold, a yellow one, approaches from above and squats down above your face. His draconic cock, bright red and tapered, drapes down across your mouth, its musky scent invading your mind. 'Go on, give it a taste!' he goads. Not given much of a choice, you extend your tongue, lapping at the warm, pre-slick flesh of his bestial length. The kobold rewards your ministrations by angling himself back, coaxing your lips apart with the head of his exotic dick before forcing the entirety into your mouth. The sudden intrusion is anything but comfortable, but your sex-addled mind doesn't seem to care much, the taste of the kobold's cock on your palate washing away any thoughts of resistance. You suck absently on his shaft, his intoxicating flavor reducing you to placid passivity.";
-				say "     All the while, the kobolds around you begin to grow aroused by the display, and have begun pleasuring themselves. A few on the fringes have even taken to fucking each other. Two kobolds, both a dull green, kneel at your sides, jutting out their cocks. You don't even wait for them to command you as your bring your hands to them and begin giving the two a handjob. Their warm cocks fit nicely in your hands, and they are already coated with pre, making them nice and slick.";
-				WaitLineBreak;
-				say "     The teal kobold pulls his tongue out of you, deeming you ready for his member. He lines up his tapered head and rams inside of you. He wastes no time thrusting into you, and the yellow kobold follows suit as he begins to face fuck you. All around you, kobolds are beginning to pleasure each other, and it isn't long before it turns into a full on orgy. Some of the reptiles even find pleasure in grinding their cocks against you. You feel in heaven, the center of attention of all of these horny little beasts. The kobolds you were giving handjobs to begin to thrust into your hands, as you no longer have to do anything but sit back as you are fucked almost everywhere on your body by them. Your ass feels warm and full with the draconic shaft inside of it, and its tapered tip tickles your prostate with every thrust. The cock flows through your ass like silk, with no friction whatsoever. The meat in your mouth tastes of musk, and your tongue enjoys every bit of precum that leaks out of it. The kobolds all yell their encouragement, telling you to take them all like the slut you are, like the little kobold slut you'll soon be.";
-				say "     The kobolds grinding onto you make sure to keep you pleasured. One lays across your chest, his warm, meaty tail laying across your body as he rubs your two dicks together. Other kobolds continue to rub their cocks against your body, and the pre all serves to make your body as slippery as can be. The thrusts of the reptiles begin to grow more frantic, as they all seem to be nearing climax. Their breathing steadily grows more fractured as they continue to fuck every piece of your body. All around you, kobolds pleasure themselves, and they begin to re-center around you. They all pump their cocks toward you, trails of pre falling from their shafts. Then, one of them cums. And then another. One by one, the kobolds all begin to climax, their cocks shooting off ropes of white cum that all land on you and the kobolds fucking you. You can feel yourself tingle as the seed touches you, your body already slowly changing itself, but you couldn't care less.";
-				WaitLineBreak;
-				say "     The kobold throatfucking you finally cums, but he pulls his cock out and sprays his load all over your face. His warm, thick seed spreads all over you as you close your eyes. You finally climax, just in time as the kobold frotting with you does as well, his cum mixing with yours as you contribute to your own cumbath. The kobolds grinding against you cum as well, and spray their seed all over your body. As you cum, your anus clenches around the teal kobold's cock, your prostate throbbing with pleasure. You begin milking the draconic shaft, which sets him off as well. He shoots off loads of cum, painting your insides white with his seed, as everything around you becomes one warm bath of cum. While you are still orgasming, already finished kobolds scurry towards you and begin rubbing the semen into you, making sure you are completely covered. Finally, everything settles down, as the kobold at your rear pulls out of you, causing your anus to leak his cum. Just as you think it's over, one last cock connects with you.";
-				say "     The blue kobold's cock enters your ass as he takes you as sloppy seconds. The other kobolds do not relent, and begin rubbing up against you as much as possible. Even though you just came, your shaft can't help but remain hard, as you feel the warnings of a second climax coming. The blue kobold thrusts into you rapidly, grunting with effort every thrust. It isn't long before he cums, which sets you off once again as your cock throbs with pleasure. It isn't able to add much more to the cum bath you've received, but the pleasure is just as great, your prostate throbbing once again as your ass contracts around the reptile's shaft. The kobold breathes deeply as he pulls out of you. You feel his warm cum pouring out of your well used hole, and simply lie on the ground, exhausted. The kobold gives an order, but you aren't able to hear what, as you slowly pass out in exhaustion.";
-				WaitLineBreak;
-				say "     You eventually wake up, but find yourself not to be in the middle of the street. You are in an empty living room that has been cleared of furniture. You are still naked, and covered in slightly warm cum at every inch of your body. In the corner of the room are your clothes, gear, and a note. You quickly attempt to brush off the cum, but know the damage has already been done. You finally are mostly dry, and grab your clothes, gear, and the note. You read the note to yourself, and find it addressed to you from the apparent leader of the kobolds. He tells you that you are now marked as one of them, and that your calling is with them. He commands you to seek them out once again and to submit to their whims. You crumple up the note, thinking about how the next time you see them, you'll give them a pummeling.";
-			CreatureSexAftermath "Player" receives "AssFuck" from "Kobold";
-			CreatureSexAftermath "Player" receives "OralCock" from "Kobold";
+			say "     Unable to resist the allure of the small reptiles, you give in to your instincts and surrender to use as they see fit. The leader commands the other kobolds to cease. 'Clearly, you're wise enough to know when to submit. You'll make a fine kobold!' he laughs, and your cheeks burn bright with both shame and arousal. 'Alright boys, let's reward this future scale-slut for making the right decision!' The other kobolds cheer as they run at you. You are quickly stripped naked, your clothes thrown aside, and the kobolds briefly argue about who gets to do what to your proffered body, while you lie naked on the pavement. Their arguing is quickly resolved, and you are surrounded by a group of the slightly more colorful ones, among them a blue-scaled kobold that appears to be their leader. 'Have your way with them, everyone! Make sure you coat them good!' You gulp at his words, fearing that these impish reptiles intend to violate every part of your body.";
+			say "     The kobolds grope and squeeze your curves with lecherous abandon, rubbing their thin hands along your skin, their claws just dull enough to avoid scratching you. While uncomfortable at first, the sensation of being manhandled by all these little creatures begins to grow increasingly enjoyable, and even pleasurable to your battle-battered mind, some small part of you lusting for their contact.";
+			WaitLineBreak;
+			say "     You feel a ticklish warmth caress your pucker. Looking down, you spot the muzzle of a teal-colored kobold dipping between your legs, a mischievous look on his muzzle. He leans in close to nip at your ring before his long, tapering tongue extends, that nimble surface sweeping wetly over the sensitive nerves of your anus. Tender sweeps give way to lustful licking, and before long he's boring that muscle into your depths, colon clenching taut around its spit-slick intruder. Your eyes roll back into your head as that avid creature explores your deepest reaches, probing at your anal lining with ravenous enthusiasm, almost devouring your ass with wanton lasciviousness. You shudder when his focus narrows to your prostate, deftly rubbing and grinding along that gland with practiced precision, eroding your mind with every wanton stroke.";
+			say "     Another kobold, a yellow one, approaches from above and squats down above your face. His draconic cock, bright red and tapered, drapes down across your mouth, its musky scent invading your mind. 'Go on, give it a taste!' he goads. Not given much of a choice, you extend your tongue, lapping at the warm, pre-slick flesh of his bestial length. The kobold rewards your ministrations by angling himself back, coaxing your lips apart with the head of his exotic dick before forcing the entirety into your mouth. The sudden intrusion is anything but comfortable, but your sex-addled mind doesn't seem to care much, the taste of the kobold's cock on your palate washing away any thoughts of resistance. You suck absently on his shaft, his intoxicating flavor reducing you to placid passivity.";
+			say "     All the while, the kobolds around you begin to grow aroused by the display, and have begun pleasuring themselves. A few on the fringes have even taken to fucking each other. Two kobolds, both a dull green, kneel at your sides, jutting out their cocks. You don't even wait for them to command you as your bring your hands to them and begin giving the two a handjob. Their warm cocks fit nicely in your hands, and they are already coated with pre, making them nice and slick.";
+			WaitLineBreak;
+			say "     The teal kobold pulls his tongue out of you, deeming you ready for his member. He lines up his tapered head and rams inside of you. He wastes no time thrusting into you, and the yellow kobold follows suit as he begins to face fuck you. All around you, kobolds are beginning to pleasure each other, and it isn't long before it turns into a full on orgy. Some of the reptiles even find pleasure in grinding their cocks against you. You feel in heaven, the center of attention of all of these horny little beasts. The kobolds you were giving handjobs to begin to thrust into your hands, as you no longer have to do anything but sit back as you are fucked almost everywhere on your body by them. Your ass feels warm and full with the draconic shaft inside of it, and its tapered tip tickles your prostate with every thrust. The cock flows through your ass like silk, with no friction whatsoever. The meat in your mouth tastes of musk, and your tongue enjoys every bit of precum that leaks out of it. The kobolds all yell their encouragement, telling you to take them all like the slut you are, like the little kobold slut you'll soon be.";
+			say "     The kobolds grinding onto you make sure to keep you pleasured. One lays across your chest, his warm, meaty tail laying across your body as he rubs your two dicks together. Other kobolds continue to rub their cocks against your body, and the pre all serves to make your body as slippery as can be. The thrusts of the reptiles begin to grow more frantic, as they all seem to be nearing climax. Their breathing steadily grows more fractured as they continue to fuck every piece of your body. All around you, kobolds pleasure themselves, and they begin to re-center around you. They all pump their cocks toward you, trails of pre falling from their shafts. Then, one of them cums. And then another. One by one, the kobolds all begin to climax, their cocks shooting off ropes of white cum that all land on you and the kobolds fucking you. You can feel yourself tingle as the seed touches you, your body already slowly changing itself, but you couldn't care less.";
+			WaitLineBreak;
+			say "     The kobold throatfucking you finally cums, but he pulls his cock out and sprays his load all over your face. His warm, thick seed spreads all over you as you close your eyes. You finally climax, just in time as the kobold frotting with you does as well, his cum mixing with yours as you contribute to your own cumbath. The kobolds grinding against you cum as well, and spray their seed all over your body. As you cum, your anus clenches around the teal kobold's cock, your prostate throbbing with pleasure. You begin milking the draconic shaft, which sets him off as well. He shoots off loads of cum, painting your insides white with his seed, as everything around you becomes one warm bath of cum. While you are still orgasming, already finished kobolds scurry towards you and begin rubbing the semen into you, making sure you are completely covered. Finally, everything settles down, as the kobold at your rear pulls out of you, causing your anus to leak his cum. Just as you think it's over, one last cock connects with you.";
+			say "     The blue kobold's cock enters your ass as he takes you as sloppy seconds. The other kobolds do not relent, and begin rubbing up against you as much as possible. Even though you just came, your shaft can't help but remain hard, as you feel the warnings of a second climax coming. The blue kobold thrusts into you rapidly, grunting with effort every thrust. It isn't long before he cums, which sets you off once again as your cock throbs with pleasure. It isn't able to add much more to the cum bath you've received, but the pleasure is just as great, your prostate throbbing once again as your ass contracts around the reptile's shaft. The kobold breathes deeply as he pulls out of you. You feel his warm cum pouring out of your well used hole, and simply lie on the ground, exhausted. The kobold gives an order, but you aren't able to hear what, as you slowly pass out in exhaustion.";
+			WaitLineBreak;
+			say "     You eventually wake up, but find yourself not to be in the middle of the street. You are in an empty living room that has been cleared of furniture. You are still naked, and covered in slightly warm cum at every inch of your body. In the corner of the room are your clothes, gear, and a note. You quickly attempt to brush off the cum, but know the damage has already been done. You finally are mostly dry, and grab your clothes, gear, and the note. You read the note to yourself, and find it addressed to you from the apparent leader of the kobolds. He tells you that you are now marked as one of them, and that your calling is with them. He commands you to seek them out once again and to submit to their whims. You crumple up the note, thinking about how the next time you see them, you'll give them a pummeling.";
+		CreatureSexAftermath "Player" receives "AssFuck" from "Kobold";
+		CreatureSexAftermath "Player" receives "OralCock" from "Kobold";
 	else:
 		if BodyName of Player is "Kobold" and Player is pure:
 			if Player is herm:
@@ -178,66 +173,58 @@ to say losetokoboldgang:
 to say beatthekoboldgang:
 	if Player is male:
 		say "     The last kobold, the leader with the blue scales, shakes as he falls to the ground on his back. 'This is... inconceivable! We were all beaten by a whelp like... you,' he groans. An idea comes to your head, that maybe you could show their 'leader' his place by taking him right here and now.";
-		say "     [bold type]Do you want to have some fun with the Kobold Gang?[roman type][line break]";
-		LineBreak;
+		say "[line break]     [bold type]Do you want to have some fun with the kobold gang?[roman type][line break]";
 		say "     ([link]Y[as]y[end link]) - Fuck the kobold!";
 		say "     ([link]N[as]n[end link]) - No, this defeat was humiliating enough.";
 		if Player consents:
 			LineBreak;
-			say "[KoboldGangSexMenu]";
+			say "     What shall you do with them?";
+			now sextablerun is 0;
+			blank out the whole of table of fucking options;
+			[]
+			if Player is male:
+				if BodyName of Player is "Kobold" and Player is pure:
+					choose a blank row in table of fucking options;
+					now title entry is "Fuck the Leader";
+					now sortorder entry is 1;
+					now description entry is "Rim and fuck the leader";
+				[]
+				choose a blank row in table of fucking options;
+				now title entry is "Start an Orgy";
+				now sortorder entry is 2;
+				now description entry is "Use seduction to spur the kobolds into a fuck-fest";
+			[]
+			sort the table of fucking options in sortorder order;
+			repeat with y running from 1 to number of filled rows in table of fucking options:
+				choose row y from the table of fucking options;
+				say "[link][y] - [title entry][as][y][end link][line break]";
+			say "[link]0 - Nevermind[as]0[end link][line break]";
+			while sextablerun is 0:
+				say "Pick the corresponding number> [run paragraph on]";
+				get a number;
+				if calcnumber > 0 and calcnumber <= the number of filled rows in table of fucking options:
+					now current menu selection is calcnumber;
+					choose row calcnumber in table of fucking options;
+					say "[title entry]: [description entry]?";
+					if Player consents:
+						LineBreak;
+						now sextablerun is 1;
+						if title entry is:
+							-- "Fuck the Leader":
+								say "[FuckKoboldGangLeader]";
+							-- "Start an Orgy":
+								say "[KoboldGangOrgy]";
+				else if calcnumber is 0:
+					LineBreak;
+					now sextablerun is 1;
+					say "     You back away and shake your head.";
+				else:
+					say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options], or 0 to exit.";
 		else:
 			LineBreak;
 			say "     You shake your head, trying to ignore the deviant thoughts. You make your way out of the mess of defeated kobolds, feeling confident that you aren't just the bottom rung on the ladder.";
 	else:
 		say "     You sigh in relief as the last kobold falls to the ground defeated. Hopefully, this might teach the little bastards not to mess with you, but you feel as though this might only drive them to fight harder. You take care not to accidentally step on any of them as you leave the area, leaving the reptiles behind.";
-
-to say KoboldGangSexMenu:
-	say "     What shall you do with them?";
-	LineBreak;
-	now sextablerun is 0;
-	blank out the whole of table of fucking options;
-	[]
-	if Player is male and BodyName of Player is "Kobold" and Player is pure:
-		choose a blank row in table of fucking options;
-		now title entry is "Fuck the Leader";
-		now sortorder entry is 1;
-		now description entry is "Rim and fuck the leader";
-	[]
-	if Player is male:
-		choose a blank row in table of fucking options;
-		now title entry is "Start an Orgy";
-		now sortorder entry is 3;
-		now description entry is "Use seduction to spur the kobolds into a fuck-fest";
-	[]
-	sort the table of fucking options in sortorder order;
-	repeat with y running from 1 to number of filled rows in table of fucking options:
-		choose row y from the table of fucking options;
-		say "[link][y] - [title entry][as][y][end link][line break]";
-	say "[link]0 - Nevermind[as]0[end link][line break]";
-	while sextablerun is 0:
-		say "Pick the corresponding number> [run paragraph on]";
-		get a number;
-		if calcnumber > 0 and calcnumber <= the number of filled rows in table of fucking options:
-			now current menu selection is calcnumber;
-			choose row calcnumber in table of fucking options;
-			say "[title entry]: [description entry]?";
-			if Player consents:
-				LineBreak;
-				let nam be title entry;
-				now sextablerun is 1;
-				if (nam is "Fuck the Leader"):
-					say "[FuckKoboldGangLeader]";
-				else if (nam is "Start an Orgy"):
-					say "[KoboldGangOrgy]";
-				wait for any key;
-		else if calcnumber is 0:
-			LineBreak;
-			now sextablerun is 1;
-			say "     You back away and shake your head.";
-			wait for any key;
-		else:
-			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
-	clear the screen and hyperlink list;
 
 to say FuckKoboldGangLeader:
 	say "     You let out a soft laugh, as you make your way to the defeated leader. You throw off your clothes and drop your belongings as you look down at the blue kobold. A look of fear grows in his eyes, but the way his tailhole begins clenching and unclenching and his reptilian cock begins emerging from his slit shows how he really feels. You get on your knees, bringing your tongue to his eager, wide hole. You have to make him want this. Just taking him wouldn't mean anything, and it'd just make you as bad as them. Your tapered tongue slides along his tailhole, picking up his musky taste. The leader lets out an involuntary yip as you begin to rim him, but he does nothing to stop you. Your tongue laps around his outer rim, before working its way inward. His hole is easy to enter, and soon your muzzle is buried between his thighs. His insides are easy to navigate, and your warm tongue slides around inside. The way his ass tastes and feels, your own cock is twitching with anticipation.";
@@ -248,22 +235,23 @@ to say FuckKoboldGangLeader:
 	CreatureSexAftermath "Kobold" receives "AssFuck" from "Player";
 
 to say KoboldGangOrgy:
-	say "     Removing your gear, you step forward, hands pinning the blue kobold to the ground as you stare into his eyes. You turn towards the others as they slowly start pushing themselves off of the ground, sore and groaning from their defeat. You call out to them, telling the lizards that you're the new leader. The blue kobold snarls 'Like hell you are!' in defiance. 'I'm the lea-' Having heard enough from him, you [if Player is male]lift him up and stuff your cock into his open mouth to silence him[else]shift forward and press your sex lips against his mouth to silence him[end if].";
-	say "     With the kobold's face pressing against your crotch you seductively coo that you're relieving him of [']the burden of leadership['] and that his mouth is better put to other uses. The blue kobold shivers at your words, his struggles giving way to a meek nod of assent. He takes a moment to draw in your scent before leaning forward and he [if Player is male]starts to slowly suck on your shaft[else]starts pressing his long reptilian tongue into you[end if]. Seeing their leader give in causes the whole gang's energy to change. They drop their aggressive stance as their expressions shift to awe-inspired and lustful as they move closer to you. Pressing [if Player is male]your cock deeper into the blue's mouth[else]your cunt down against the blue's lips[end if], you look over the pre-dripping reptiles and explain to them how this is going to play out. Their once-great-leader's fate is yours to decide, and anyone who tries to ignore you will be denied orgasm by the others.";
+	say "     Removing your gear, you step forward, hands pinning the blue kobold to the ground as you stare into his eyes. You turn towards the others as they slowly start pushing themselves off of the ground, sore and groaning from their defeat. You call out to them, telling the lizards that you're the new leader. The blue kobold snarls 'Like hell you are!' in defiance. 'I'm the lea-' Having heard enough from him, you [if Player is male]lift him up and stuff your cock into his open[else]shift forward and press your sex lips against his[end if] mouth to silence him.";
+	say "     With the kobold's face pressing against your crotch you seductively coo that you're relieving him of [']the burden of leadership['] and that his mouth is better put to other uses. The blue kobold shivers at your words, his struggles giving way to a meek nod of assent. He takes a moment to draw in your scent before leaning forward and he starts [if Player is male]to slowly suck on your shaft[else]pressing his long reptilian tongue into you[end if]. Seeing their leader give in causes the whole gang's energy to change. They drop their aggressive stance as their expressions shift to awe-inspired and lustful as they move closer to you. Pressing your [if Player is male]cock deeper into the blue's mouth[else]cunt down against the blue's lips[end if], you look over the pre-dripping reptiles and explain to them how this is going to play out. Their once-great-leader's fate is yours to decide, and anyone who tries to ignore you will be denied orgasm by the others.";
 	WaitLineBreak;
 	say "     The kobolds all nod, and on your command, the orgy begins. Kobolds tackle and pile onto each other as you pull off of the blue one, freeing his mouth, though you are quick to remind him that if he fights you, he will be denied release as well, but you have plans for him. You lift yourself up, positioning yourself over him before sinking his reptilian cock into your ass. The leader yips at the feeling, though his mouth isn't empty for long. You give one of the others permission to sit on his face, forcing the blue to rim his minion as you start riding his dick. A few kobolds approach you, each one trying to get in on the action. You grab hold of a copper colored kobold's dick, drawing a yip of surprise from him while you start jerking him off.";
 	say "     You beckon a bronze-scaled [']bold with a finger, leading him closer towards you until he is near enough to run your hand along his cheek, feeling his smooth scales before pushing his head slowly towards your awaiting cock. He is all too eager to open up and take your length fully into his warm, moist mouth. His tongue gets to work right away, sliding along the sensitive flesh. The blue groans as he bucks his hips up into you, while the bronze works over your shaft, slurping and licking against the most sensitive areas along your length with practiced skill. You can't hold back a moan as the two work you over, your hand sloppily stroking the copper lizard's tapered length.";
 	WaitLineBreak;
 	say "     The combination of stimuli begins to overwhelm you - pressure building, muscles tightening, before the dazzling feeling of release fills your body. Your cum gushes into the mouth of the eagerly slurping bronze, and not long after, the blue cums as well, painting the inside of your ass with his own seed. Soon after, you find yourself being [']encouraged['] by the others to keep going, pulling you off of the blue and onto your back. The copper, not having cum just yet, aligns himself up with your [if Player is female]so far unused pussy[else]slickened rear entrance[end if] before sinking inside of you and drawing a moan from your lips. Another bronze colored kobold, this one with curved horns, crawls over your face, his reptilian meat just asking to be sucked.";
-	say "     The copper holds tightly to your waist as he begins to hump excitedly into [if Player is female]your needy sex[else]your asshole[end if]. You open your mouth to moan, though once you do, the one with the curved horns takes it as an invitation and gags you with his cock. Despite getting reamed from both ends, you still haven't forgotten the blue, who you gesture to, ordering him to suck your dick while the others work. It isn't long before the two eagerly cum inside of you, though your holes aren't empty for long before they are switched out for another group. The orgy continues for well over another hour, leaving you feeling bloated by the end while the kobolds lay scattered across the ground, exhausted. You stand up, wipe off some of the cum clinging to your body, and pick up your equipment before slipping away from the resting kobolds. You aren't sure if it is all the kobold jizz inside you, but you can't help but think how much fun it would be to become one of them.";
+	say "     The copper holds tightly to your waist as he begins to hump excitedly into your [if Player is female]needy sex[else]asshole[end if]. You open your mouth to moan, though once you do, the one with the curved horns takes it as an invitation and gags you with his cock. Despite getting reamed from both ends, you still haven't forgotten the blue, who you gesture to, ordering him to suck your dick while the others work. It isn't long before the two eagerly cum inside of you, though your holes aren't empty for long before they are switched out for another group. The orgy continues for well over another hour, leaving you feeling bloated by the end while the kobolds lay scattered across the ground, exhausted. You stand up, wipe off some of the cum clinging to your body, and pick up your equipment before slipping away from the resting kobolds. You aren't sure if it is all the kobold jizz inside you, but you can't help but think how much fun it would be to become one of them.";
 	if Player is female:
 		CreatureSexAftermath "Player" receives "PussyFuck" from "Kobold";
 		CreatureSexAftermath "Kobold" receives "OralPussy" from "Player";
 	else if Player is male:
-		CreatureSexAftermath "Player" receives "AssFuck" from "Kobold";
 		CreatureSexAftermath "Kobold" receives "OralCock" from "Player";
 	CreatureSexAftermath "Player" receives "AssFuck" from "Kobold";
 	CreatureSexAftermath "Player" receives "OralCock" from "Kobold";
+
+Section 2 - Creature Insertion
 
 Table of CombatPrep (continued)
 name(text)	PrepFunction(text)
@@ -271,8 +259,6 @@ name(text)	PrepFunction(text)
 
 to say PrepCombat_Kobold:
 	setmongender 13; [creatures are male]
-
-Section 2 - Creature Insertion
 
 Table of Random Critters (continued)
 NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
@@ -292,24 +278,25 @@ When Play begins:
 	add "Kobold" to infections of BipedalList;
 	add "Kobold" to infections of TailList;
 	add "Kobold" to infections of OviImpregnatorList;
+	add "Kobold" to infections of TailweaponList;
 	now Name entry is "Kobold"; [ Infection/Creature name. Capitalized. ]
 	now enemy title entry is "Kobold Gang";
 	now enemy Name entry is ""; [ Specific name of unique enemy. ]
 	now enemy type entry is 0; [ 0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters. ]
-	now attack entry is "[one of]One of the kobolds beans you in the head with a nearby rock![or]One of the kobolds jumps at you from behind, clawing at you![or]The kobolds take turns battering you with rubble![or]One of the kobolds leaps at you in the air, tackling you![at random]"; [ Successful attack message ]
+	now attack entry is "[one of]One of the kobolds beans you in the head with a nearby rock[or]One of the kobolds jumps at you from behind, clawing at you[or]The kobolds take turns battering you with rubble[or]One of the kobolds leaps at you in the air, tackling you[at random]!"; [ Successful attack message ]
 	now defeated entry is "[beatthekoboldgang]";
 	now victory entry is "[losetokoboldgang]";
 	now desc entry is "[koboldgangdesc]";
 	now face entry is "covered in dull scales, with a thin muzzle stretching out. Your reptilian eyes have a slit for a pupil, and your tongue is pointed and agile. An uncontrollable devious look is constantly plastered to your visage";
 	now body entry is "thin and wiry. You are fairly short, standing no more than four feet tall. Your skin clings tightly to your bones and small amount of muscles";
-	now skin entry is "dull, bronze scales. They are smooth to the touch, and you are aroused greatly by being rubbed on your sensitive";
+	now skin entry is "dull, bronze[if looknow is true] scales. They are smooth to the touch, and you are aroused greatly by being rubbed on your sensitive[else]-scaled[end if]";
 	now tail entry is "You have a long, bronze, reptilian tail that waves about. It tends to casually wrap around your leg when not walking, but it instinctively rises to show off your asshole when around a man.";
-	now cock entry is "curved, reptilian cock. It is sensitive to the touch, and you are hard-pressed to not desire someone to rub your";
-	now face change entry is "your nose stretches out of your face, forming a muzzle. You moan as you stroke your emerging reptilian muzzle, enjoying the new sensations coming with your muzzle. Your tongue lengthens and gains a pointed tip as it hangs out of your mouth, a drop of drool hitting the floor. You absentmindedly think about the new length of your mouth is perfect for sucking someone off, but try to shake the dirty thought out of your head";
-	now body change entry is "you slowly begin to shrink. You lose height until you stand at around four foot tall, and your frame thins. Your fingers lengthen, becoming long and gangly with only slightly sharp claws at the tips, perfectly for lightly digging into a lover";
-	now skin change entry is "it feels itchy. You scratch at your skin only to reveal dull bronze scales! You shed your human skin, leaving your new kobold scales. Despite being made of sturdier material, your new scales feel even more sensitive, causing you to crave to be touched by others";
-	now ass change entry is "a pressure forms at the base of your spine. You bring a hand back and feel a small protrusion that slowly expends, as a tail slinks out of you! It is covered in dull bronze scales, and is meaty, unlike the rest of our body. The changes don't stop, as you feel your hole change, desperate to be filled! You can't help yourself as your tail takes over, bending as it shoves itself into your tailhole. It thrusts in and out as you tailfuck yourself, and moan in pleasure as you climax. It appears your new hole is designed to be fucked!";
-	now cock change entry is "your cockhead thins. It becomes tapered, and is sucked back into your body, balls in all. You begin to panic, only to realize a slit forms, and out from it your new reptilian cock emerges, smooth, red, and with a tapered point. You crave to stick it into the tailhole of another slutty kobold, to feel their perfect bottoms contract around your enhanced tool";
+	now cock entry is "curved, reptilian[if looknow is true] cock. It is sensitive to the touch, and you are hard-pressed to not desire someone to rub your[end if]";
+	now face change entry is "your nose stretches out of it, forming a muzzle. You moan as you stroke your emerging reptilian muzzle, enjoying the new sensations coming with it. Your tongue lengthens and gains a pointed tip as it hangs out of your mouth, a drop of drool hitting the floor. You absentmindedly think about how the new length of your mouth is perfect for sucking someone off, but try to shake the dirty thought out of your head";
+	now body change entry is "you slowly begin to shrink. You lose height until you stand at around four feet tall, and your frame thins. Your fingers lengthen, becoming long and gangly with only slightly sharp claws at the tips, perfect for lightly digging into a lover";
+	now skin change entry is "it starts to feel itchy. You scratch at it only to reveal dull bronze scales! You shed your [SkinName of Player in lower case] skin, leaving new kobold scales. Despite being made of sturdier material, your new scales feel even more sensitive, causing you to crave to be touched by others";
+	now ass change entry is "a pressure forms at the base of your spine. You bring a hand back and feel a small protrusion that slowly expands, as a tail slinks out of you! It is covered in dull bronze scales, and is meaty, unlike the rest of your body. The changes don't stop, as you feel your hole change, desperate to be filled! You can't help yourself as your tail takes over, bending as it shoves itself into your tailhole. It thrusts in and out as you tailfuck yourself, and moan in pleasure as you climax. It appears your new hole is designed to be fucked";
+	now cock change entry is "your cockhead thins. It becomes tapered, and is sucked back into your body, balls and all. You begin to panic, only to realize a slit forms, and out from it your new reptilian cock emerges, smooth, red, and with a tapered point. You crave to stick it into the tailhole of another slutty kobold, to feel his perfect bottom contract around your enhanced tool";
 	now str entry is 9; [ These are now the creature's stats... ]
 	now dex entry is 17; [ ...and are only altered onto the player via Shifting or the Mighty Mutation feat ]
 	now sta entry is 12; [ These values may be used as part of alternate combat. ]
@@ -449,7 +436,6 @@ When Play begins:
 	now Clit Size entry is 0; [size 1-5, see Clit Size Adjective]
 	[Clit Size Adjective is generated by a function and can be used in scenes: very small/small/average/large/very large]
 ]
-
 
 Section 3 - Endings
 

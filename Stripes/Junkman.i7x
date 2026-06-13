@@ -2,27 +2,22 @@ Version 1 of Junkman by Stripes begins here.
 
 "Adds a Junkman creature to Flexible Survival's Wandering Monsters table, with impreg chance"
 
-
 Section 1 - Creature Responses
 
 to say losetojunkman:
 	[reset creature stats for next encounter]
-	choose row MonsterID from the Table of Random Critters;
-	now lev entry is 6; [ reset level for random encounter availability ]
+	now the lev corresponding to a Name of "Junkman" in Table of Random Critters is 6; [ reset level for random encounter availability ]
 	say "     Victorious, the scrapyard cyborg raises its arms in the air and emits another grinding groan. After this cry, he grabs you and pushes you down across a [one of]stray car seat[or]old washer[or]rusty engine block[in random order] and moves in behind you.";
 	say "     As you hear an odd whirring sound, you manage to glance back for a moment before you're pushed back down. You catch a glimpse of the panel over his groin folding up, uncovering his blessedly human dick made of pure flesh and blood. As he lines it up with your [if Player is female]wet pussy[else]tight pucker[end if], you [if HP of Player > 0]moan softly in anticipation[else]struggle a little in vain[end if] before he sinks it into you. You grip your improvised seat as he starts thrusting into you repeatedly, quickly making you grow excited and lustful. The feel of his seemingly human penis thrusting into you feels quite enjoyable, making your [if Player is female]pussy[else]asshole[end if] squeeze and tug at it as you long more and more for his hot seed in you.";
 	say "     Thinking of his seed makes you notice that his balls feel strange against [if Player is male]yours[else]you[end if] as they bump into you with each thrust. Reaching back, you grab his sac to fondle him and find [one of]his balls have a plastic cover[or]it protected by what feels like a brass shell[or]it reinforced by several metal plates[or]some hard, rubber tubes leading into it[at random]. The creature atop you releases a grinding moan as you rub over his ballsack, clearly enjoying your touch despite their strange form. You can feel his balls start to throb warmly inside his odd scrotum and you are rewarded moments later by a steady stream of thick, oily cum. His slick seed pumps into you as some internal pump chugs away inside him, sending large amounts of his semen into you. Much of it flows up into your [if Player is female]waiting womb[else]sexy ass[end if] while the rest overflows around his cock to run down your thighs, with more gushing out as he withdraws and paints your ass with his last few spurts. Finished, he gives your sticky rear end a pat and wanders off.[impregchance]";
 
-to say beatthejunkman:
-	say "     You manage to drive off the junk creature, forcing it to flee back into the scrapyard.";
-
-Section 2 - Creature Insertion
-
 to say junkmandesc:
-	choose row with name of "Junkman" from Table of Random Critters;
+	choose row MonsterID from Table of Random Critters;
 	say "     As you round a corner, you catch sight of a strange figure. Looking vaguely human, it has several chunks of junk that have grown from or fused with its body. There are metal pipes, plates of metal, unidentifiable chunks and other assorted bits to replace parts of his skin or body. There is a [one of]plastic guard[or]metal panel[or]steel plate[or]brass globe[at random] placed over his groin to protect his junk. Despite looking like a strange cyborg made of scrap, it moves quite organically. Spotting you, he releases a groan like grinding metal and charges to attack.";
 	if HardMode is false and ( lev entry is 7 or lev entry is 8 ):
 		say "     This particular junkman seems especially powerful and dangerous. Best be careful.";
+
+Section 2 - Creature Insertion
 
 Table of CombatPrep (continued)
 name(text)	PrepFunction(text)
@@ -32,24 +27,24 @@ to say PrepCombat_Junkman:
 	setmongender 3; [creature is male]
 	choose row MonsterID from the Table of Random Critters;
 	let qq be a random number between 4 and 8;
-	let zz be ( a random number between 1 and 6 ) + ( a random number between 1 and 6 );
+	let zz be ( a random number between 1 and 6 ) + a random number between 1 and 6;
 	if HardMode is true and level of Player > 6:		[Heavy Duty Model!]
 		increase qq by level of Player - 7;
-		now HP entry is ( ( ( 13 times qq ) divided by 2 ) + zz + a random number between 0 and qq );
+		now HP entry is ( ( 13 times qq ) divided by 2 ) + zz + a random number between 0 and qq;
 		now monsterHP is HP entry;
 		now wdam entry is 4 + ( qq / 3 );
 		now lev entry is qq;
-		now dex entry is 12 + ( qq / 6 ) + ( square root of qq + 5 ); [faster initial growth, but slows down more]
+		now dex entry is 12 + ( qq / 6 ) + square root of ( qq + 5 ); [faster initial growth, but slows down more]
 	else:								[Standard Model]
-		now HP entry is ( ( ( 13 times qq ) divided by 2 ) plus zz );
+		now HP entry is ( ( 13 times qq ) divided by 2 ) plus zz;
 		if HP entry > 60, now HP entry is 60;
 		now monsterHP is HP entry;
 		now wdam entry is qq;
 		now lev entry is qq;
-		now dex entry is ( qq + 10 + a random number between 0 and 2 );
+		now dex entry is qq + 10 + a random number between 0 and 2;
 	if Player is FemalePreferred:
 		now sex entry is "Female";
-	else if "Herm Preferred" is listed in feats of Player:
+	else if Player is HermPreferred:
 		now sex entry is "Both";
 	else:
 		now sex entry is "Male";
@@ -71,7 +66,7 @@ When Play begins:
 	now enemy Name entry is ""; [ Specific name of unique enemy. ]
 	now enemy type entry is 0; [ 0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters. ]
 	now attack entry is "[one of]The junkman bashes you with a fist covered in metal bits![or]The junkman kicks you with a heavy, metal foot![or]The scrapyard cyborg grabs you and tosses you roughly to the ground![or]The junk cyborg headbutts you with his metal-plated skull![at random]";
-	now defeated entry is "[beatthejunkman]"; [ Text when monster loses. ]
+	now defeated entry is "     You manage to drive off the junk creature, forcing it to flee back into the scrapyard.[line break]"; [ Text when monster loses. ]
 	now victory entry is "[losetojunkman]"; [ Text when monster wins. ]
 	now desc entry is "[junkmandesc]"; [ Description of the creature when you encounter it. ]
 	now face entry is "mostly human, but with a stainless steel panel across one side and under your chin. From the shape of it, you'd guess it belongs on some kind of kitchen appliance. You have three rows of mismatched bolts running over it, almost like a strange mohawk of metal";
@@ -224,7 +219,6 @@ When Play begins:
 	[Clit Size Adjective is generated by a function and can be used in scenes: very small/small/average/large/very large]
 ]
 
-
 Section 3 - Endings
 
 Table of GameEndings (continued)
@@ -242,13 +236,9 @@ This is the Junkman Infection rule:
 			if TailName of Player is "Junkman":
 				say ". You discover early on that plugging yourself in feels very good and provides you with more energy. While you seem able to survive on just food or power, you operate at your best running on some of both. As an extra bonus, after a good, long charge, you are a randy lover with very long endurance, pleasing your partners greatly";
 			say ".";
-			say "     You open what panels you can and replace any frayed wires or corroded tubes you can find with replacements you scavenge from old appliances you collected during your yard sale hunting. While you can't really tell what most of these do, you do start to feel better over time as you make these repairs. While your new form is rather off-putting, you do manage to make some new friends and meet new lovers, who also seem pleased with your body's improved function. By keeping proper maintenance on yourself, you manage to live a long and pleasurable life, surviving several generations of other species. ";
-			if Player is herm and "Sterile" is not listed in feats of Player:
-				say "Over your long life, you give birth to and sire numerous offspring which are junk-cybernetic versions of their other parent. ";
-			else if Player is male:
-				say "Over your long life, you sire numerous offspring which are junk-cybernetic versions of their other parent. ";
-			else:
-				say "Over your long life, you give birth to numerous offspring which are junk-cybernetic versions of their other parent. ";
-			say "You make sure to have as many children as you can with different lovers, ensuring there is a wide variety of them around add a little home-repair flair to their species.";
+			say "     You open what panels you can and replace any frayed wires or corroded tubes you can find with replacements you scavenge from old appliances you collected during your yard sale hunting. While you can't really tell what most of these do, you do start to feel better over time as you make these repairs. While your new form is rather off-putting, you do manage to make some new friends and meet new lovers, who also seem pleased with your body's improved function. By keeping proper maintenance on yourself, you manage to live a long and pleasurable life, surviving several generations of other species";
+			if (Player is not neuter or Player is mpreg_ok) and "Sterile" is not listed in feats of Player:
+				say ". Over your long life, you [if Player is male and Player is impreg_ok]give birth to and sire[else if Player is male]sire[else]give birth to[end if] numerous offspring which are junk-cybernetic versions of their other parent. You make sure to have as many children as you can with different lovers, ensuring there is a wide variety of them around add a little home-repair flair to their species.";
+			say ".";
 
 Junkman ends here.

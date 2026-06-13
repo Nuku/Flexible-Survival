@@ -13,23 +13,20 @@ to say ninjadesc:
 	if "Experienced Scout" is listed in feats of Player, increase featbonus by 1;
 	if "Stealthy" is listed in feats of Player, increase featbonus by 1;
 	if "Wary Watcher" is listed in feats of Player, increase featbonus by 3;
+	let targetnum be 13 + ( ( dex entry - 10 ) / 2 );
 	let dice be a random number from 1 to 20;
-	say "You roll 1d20: [dice]+[bonus]+[featbonus] = [dice + bonus + featbonus][line break]";
-	if dice + bonus + featbonus > 12 + ( ( dex entry - 10 ) / 2 ):
-		if HP of Hayato is 12:	[in Noh Mask fights]
-			say "     As the ninja feline spins to face you, you catch sight of a glint of metal in his paws moments before they're thrown. Dodging swiftly, you are able to evade the trio of flying shuriken. They embed themselves into the wall behind you. When you turn to face the feline, he's already upon you, having pulled an oriental weapon from his black outfit and swinging to strike.";
-		else:
-			say "     As you move down the halls of the museum, you hear a faint sound from behind you and turn around quickly. You are narrowly missed by a triad of flying shuriken that embed themselves into the floor beside you. There is a soft thump as an agile figure in concealing clothes drops to the floor on all fours. Slitted eyes stare out at you from behind the dark mask and pointed, feline ears are trained on you. The ninja feline releases a soft growl and charges, pulling out an oriental weapon and attacking you.";
+	say "You roll 1d20([dice])[if bonus + featbonus >= 0]+[end if][bonus + featbonus] = [special-style-1][dice + bonus + featbonus][roman type] vs [special-style-2][targetnum][roman type] (Perception + Dexterity Check):[line break]";
+	if dice + bonus + featbonus >= targetnum:
+		say "     As [if HP of Hayato is 12]the ninja feline spins to face you, you catch sight of a glint of metal in his paws moments before they're thrown. Dodging swiftly, you are able to evade the trio of flying shuriken. They embed themselves into the wall behind you. When you turn to face the feline, he's already upon you, having pulled an oriental weapon from his black outfit and swinging to strike[else]you move down the halls of the museum, you hear a faint sound from behind you and turn around quickly. You are narrowly missed by a triad of flying shuriken that embed themselves into the floor beside you. There is a soft thump as an agile figure in concealing clothes drops to the floor on all fours. Slitted eyes stare out at you from behind the dark mask and pointed, feline ears are trained on you. The ninja feline releases a soft growl and charges, pulling out an oriental weapon and attacking you[end if].";
 	else:
 		let dammy be 8;
-		if HardMode is true, increase dammy by ( square root of lev entry );
+		if HardMode is true, increase dammy by square root of lev entry;
 		decrease HP of Player by dammy;
-		increase Libido of Player by 10;
-		if Libido of Player > 110, now Libido of Player is 110;
-		if HP of Hayato is 12:	[in Noh Mask fights]
-			say "     When the ninja feline spins to face you, his paw makes a fast motion. Before you can realize what is happening, you are struck by a trio of flying shuriken, taking [dammy] damage. The pain is quickly replaced by a warm rush of lustful excitement. Even as you're pulling the poisoned ninja stars from your chest, the black garbed cat is rushing you. He pulls an oriental weapon from his black outfit and swings to strike.";
+		if Libido of Player < 100:
+			increase Libido of Player by 10;
 		else:
-			say "     As you move down the halls of the museum, you hear the soft whizz of something flying through the air too late, as a pain fills your back, causing [dammy] damage. This is quickly replaced by a warm rush of lustful excitement. You turn quickly to face your attacker as you reach back to pull the trio of poisoned shuriken from your back. There is a soft thump as an agile figure in concealing clothes drops to the floor on all fours. Slitted eyes stare out at you from behind the dark mask and pointed, feline ears are trained on you. The ninja feline releases a soft growl and charges, pulling out an oriental weapon and attacking you.";
+			now Libido of Player is 110;
+		say "     [if HP of Hayato is 12]When the ninja feline spins to face you, his paw makes a fast motion. Before you can realize what is happening, you are struck by a trio of flying shuriken, taking [dammy] damage. The pain is quickly replaced by a warm rush of lustful excitement. Even as you're pulling the poisoned ninja stars from your chest, the black garbed cat is rushing you. He pulls an oriental weapon from his black outfit and swings to strike[else]As you move down the halls of the museum, you hear the soft whizz of something flying through the air too late, as a pain fills your back, causing [dammy] damage. This is quickly replaced by a warm rush of lustful excitement. You turn quickly to face your attacker as you reach back to pull the trio of poisoned shuriken from your back. There is a soft thump as an agile figure in concealing clothes drops to the floor on all fours. Slitted eyes stare out at you from behind the dark mask and pointed, feline ears are trained on you. The ninja feline releases a soft growl and charges, pulling out an oriental weapon and attacking you[end if].";
 
 to say losetoninja:
 	if Player is female and a random chance of 3 in 4 succeeds:
@@ -50,34 +47,21 @@ to say losetoninja:
 	else:
 		say "     The ninja grabs you by the arm as you stop fighting him. He pulls you in close and blows across his palm, sending a cloud of dust into your face. Panting from the fight, you cannot help breathing in the dust and collapse to the floor. When you regain consciousness, the feline ninja is gone and your face is covered in a sticky mess of feline cum.";
 
-to say beattheninja:
-	say "     Your blow causes the ninja to stumble back. He hisses angrily at you and pulls something from his robes. When the smoke bomb goes off at his feet, you lunge forward to grab him before he can escape, but you find yourself clutching a wooden log. You toss it aside in frustration and continue on your way.";
-
 to say ninjaattack:
-[	choose row MonsterID from the Table of Random Critters;
-	if a random chance of 3 in 10 succeeds:
-		say "While making another acrobatic set of leaps and dodges, the ninja slips a shuriken from his robe and tosses it at you. The bladed star stabs into your [one of]shoulder[or]hip[or]side[or]thigh[or]leg[at random]. There is a stab of pain from the strike, followed from a warm heat that flows into you from the wound, causing a surge of lustful desires in you. As these thoughts momentarily distract you, the feline ninja moves in to make his attack.";
-		increase Libido of Player by a random number between 2 and 5;
-		if Libido of Player > 110, now Libido of Player is 110;
-		let dammy be a random number between 2 and 3;
-		if HardMode is true, increase dammy by ( square root of lev entry );
-		decrease HP of Player by dammy;
-		say "You take [dammy] damage from the ninja star.";]
-	let T be a random number between 1 and 6;
-	if T is 1:
-		say "The feline ninja strikes at you with his antique weapon!";
-	if T is 2:
-		say "Growling menacingly, the feline rakes his claws across your chest!";
-	if T is 3:
-		say "With a whirl of his body, the shinobi strikes you with a kick to the side!";
-	if T is 4:
-		say "The cat swings at you with his weapon, but slips a dagger from his robes. The feint succeeds and you are struck in the [one of]thigh[or]arm[or]shoulder[or]side[or]hip[at random] by the small blade. The strike tingles with heat that causes your loins to stir with excitement!";
-		increase Libido of Player by a random number between 2 and 5;
-		if Libido of Player > 110, now Libido of Player is 110;
-	if T is 5:
-		say "The agile cat slips behind you and sinks his claws into your chest while grinding the hard bulge between his legs against your rear. His other paw gropes your groin, making you moan. When you shove him off, he rolls and grabs his dropped weapon, readying it again if you continue to resist him!";
-	if T is 6:
-		say "The ninja leaps from the various items on display and gets behind you. Even as you whirl to face him, his tabi boot strikes you in the side of the head!";
+	if a random number between 1 and 6 is:
+		-- 1:
+			say "The feline ninja strikes at you with his antique weapon![no line break]";
+		-- 2:
+			say "Growling menacingly, the feline rakes his claws across your chest![no line break]";
+		-- 3:
+			say "With a whirl of his body, the shinobi strikes you with a kick to the side![no line break]";
+		-- 4:
+			say "The cat swings at you with his weapon, but slips a dagger from his robes. The feint succeeds and you are struck in the [one of]thigh[or]arm[or]shoulder[or]side[or]hip[at random] by the small blade. The strike tingles with heat that causes your loins to stir with excitement![no line break]";
+			increase Libido of Player by a random number between 2 and 5;
+		-- 5:
+			say "The agile cat slips behind you and sinks his claws into your chest while grinding the hard bulge between his legs against your rear. His other paw gropes your groin, making you moan. When you shove him off, he rolls and grabs his dropped weapon, readying it again if you continue to resist him![no line break]";
+		-- 6:
+			say "The ninja leaps from the various items on display and gets behind you. Even as you whirl to face him, his tabi boot strikes you in the side of the head![no line break]";
 
 Section 2 - Creature Insertion
 
@@ -87,6 +71,13 @@ name(text)	PrepFunction(text)
 
 to say PrepCombat_Ninja Cat:
 	setmongender 3; [creature is male]
+	choose row MonsterID from Table of Random Critters;
+	if Player is MalePreferred:
+		now sex entry is "Male";
+	else if Player is HermPreferred:
+		now sex entry is "Both";
+	else:
+		now sex entry is "Female";
 
 Table of Random Critters (continued)
 NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
@@ -100,7 +91,7 @@ When Play begins:
 	add "Ninja Cat" to infections of FurryList;
 	add "Ninja Cat" to infections of HistoricalList;
 	add "Ninja Cat" to infections of NatureList;
-	add "Ninja Cat" to infections of FemaleList;
+	add "Ninja Cat" to infections of MaleList;
 	add "Ninja Cat" to infections of BarbedCockList;
 	add "Ninja Cat" to infections of SheathedCockList;
 	add "Ninja Cat" to infections of BipedalList;
@@ -110,7 +101,7 @@ When Play begins:
 	now enemy Name entry is ""; [ Specific name of unique enemy. ]
 	now enemy type entry is 0; [ 0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters. ]
 	now attack entry is "[ninjaattack]";
-	now defeated entry is "[beattheninja]";
+	now defeated entry is "     Your blow causes the ninja to stumble back. He hisses angrily at you and pulls something from his robes. When the smoke bomb goes off at his feet, you lunge forward to grab him before he can escape, but you find yourself clutching a wooden log. You toss it aside in frustration and continue on your way.[line break]";
 	now victory entry is "[losetoninja]"; [Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block as the demonstration text shows.]
 	now desc entry is "[ninjadesc]"; [ Description of the creature when you encounter it.]
 	now face entry is "that of a normal cat, with a small muzzle, green eyes and pointed ears"; [ Face description, format as "Your face is [Face of Player]." ]
@@ -263,8 +254,6 @@ When Play begins:
 	[Clit Size Adjective is generated by a function and can be used in scenes: very small/small/average/large/very large]
 ]
 
-
-
 Section 3 - Ninja Star Alt-Attack		[Pre-attack 30% of the time]
 
 Table of Critter Combat (continued)
@@ -280,7 +269,6 @@ this is the ninjastar rule:
 		decrease dex entry by 4;
 		if monsterhit is true:
 			increase Libido of Player by a random number between 2 and 5;
-			if Libido of Player > 110, now Libido of Player is 110;
 			let dammy be a random number between 2 and 3;
 			if HardMode is true, increase dammy by ( square root of lev entry );
 			now damagein is dammy;
@@ -292,7 +280,6 @@ this is the ninjastar rule:
 			increase HP of Player by absorb;
 		else:
 			say "The [one of]feline ninja[or]cat ninja[or]ninja[as decreasingly likely outcomes] [one of]flicks a shuriken at you that narrowly misses[or]pulls a ninja star from his dark robes, but you manage to evade it[or]tries to hit you with a surprise shuriken strike, but you catch the motion of his hand and are ready to dodge[or]throws a ninja star he pulls from his robes, but misses[purely at random]!";
-
 
 Section 4 - Endings
 
@@ -318,9 +305,10 @@ This is the Ninja Cat Infection rule:
 			say "     When the military comes in, you manage to resist the urge to hide from them and instead allow yourself to be taken along with the others they rescue from the fallen city. You wait patiently for your inevitable release, though you do take to slipping into the shadows and exploring the base. You find several containment areas holding more exotic and powerful beings, but are careful not to get too close. You also locate the records room and make a few adjustments to them. The next day, the group you were being held with is cleared with no further processing. They, like yourself, aren't rendered non-infectious, though the records state their group was done the day before. You feel only the briefest concern over having done this, for they were all marked as low-risk species and infection levels.";
 		if humanity of Player > 30:
 			if Player is male:
-				say "     While those in your group are still confused and wondering what to do next after being released and dropped off unprepared, you keep your eyes on one in particular. Among them is a woman with pure-white fur and cat ears whom you find very enticing. Leading her off, your skilled paws soon coax her into sex. As you make love to her with increasing passion, she is converted more fully into a graceful feline. She gains a cat's face and tail";
-				if "One Pair" is not listed in feats of Player, say ", and a second pair of breasts,";
-				say " to complete her conversion.";
+				if "One Pair" is not listed in feats of Player:
+					say "     While those in your group are still confused and wondering what to do next after being released and dropped off unprepared, you keep your eyes on one in particular. Among them is a woman with pure-white fur and cat ears whom you find very enticing. Leading her off, your skilled paws soon coax her into sex. As you make love to her with increasing passion, she is converted more fully into a graceful feline. She gains a cat's face and tail, and a second pair of breasts, to complete her conversion.";
+				else:
+					say "     While those in your group are still confused and wondering what to do next after being released and dropped off unprepared, you keep your eyes on one in particular. Among them is a woman with pure-white fur and cat ears whom you find very enticing. Leading her off, your skilled paws soon coax her into sex. As you make love to her with increasing passion, she is converted more fully into a graceful feline. She gains a cat's face and tail to complete her conversion.";
 				say "     As your lover and mate, she is wonderful and fills your nights with excitement. On the nights when you don't feel like wild sex, you both instead disappear into the night to beat up those who would prey on others within your territory. Your foes are dealt with swiftly and silently with a variety of ninjutsu tricks. And when you get home after a night's prowl, then you both are always in the mood for a wild, feline romp. Once she becomes too advanced in her pregnancy, she can't join you, but you're happy to know that in a few years you'll have your kittens joining you in your nightly excursions.";
 			else:
 				say "     While those in your group are still confused and wondering what to do next after being released and dropped off unprepared, you keep your eyes on one in particular. Among them is a man with black fur, a gray muzzle and a feline tail whom you find very handsome. Leading him off, your skilled paws soon have him hard and filling you. As you make love to him with increasing passion, he is converted more fully into a graceful feline. He gains feline ears and his black fur spreads down over the rest of his body, leaving only his muzzle gray.";
@@ -328,13 +316,8 @@ This is the Ninja Cat Infection rule:
 				if "Sterile" is not listed in feats of Player:
 					say "     Once you become too advanced in your pregnancy, you can't join him out on the town, but you're happy to know that in a few years you'll have your kittens along for your nightly excursions.";
 				else:
-					if HermList is banned:
-						say "     While on a patrol alone a few years later, you spot a feline cat burglar while on your own. Unable to leave such a cliché alone, you test your skill against him, stalking him for a short time before he notices. After a brief fight, you pounce the gray tabby and pin him down on the jewelry store floor. When your mate rejoins you, seeking you after you didn't make your usual rendezvous with him, you are already well on your way to converting the would-be thief into a sexy female ninja by your still-active nanites. Your mate smiles and mounts the gender-shifted male, filling her with his seed and breeding her. After a few nights of sex, she is made into a loyal member of your family and is kept at home to breed more ninja kittens to add to family.";
-					else:
-						say "     While on a patrol alone a few years later, you spot a feline cat burglar while on your own. Unable to leave such a cliché alone, you test your skill against him, stalking him for a short time before he notices. After a brief fight, you pounce the gray tabby and pin him down on the jewelry store floor. When your mate rejoins you, seeking you after you didn't make your usual rendezvous with him, you are already well on your way to converting the would-be thief into a sexy herm ninja by your still-active nanites. Your mate smiles and mounts the gender-shifted male, filling her with his seed and breeding her. After a few nights of sex, she is made into a loyal member of your family and is kept at home to breed more ninja kittens to add to family as well as for your own amusement.";
+					say "     While on a patrol alone a few years later, you spot a feline cat burglar while on your own. Unable to leave such a cliché alone, you test your skill against him, stalking him for a short time before he notices. After a brief fight, you pounce the gray tabby and pin him down on the jewelry store floor. When your mate rejoins you, seeking you after you didn't make your usual rendezvous with him, you are already well on your way to converting the would-be thief into a sexy [if HermList is banned]female[else]herm[end if] ninja by your still-active nanites. Your mate smiles and mounts the gender-shifted male, filling her with his seed and breeding her. After a few nights of sex, she is made into a loyal member of your family and is kept at home to breed more ninja kittens to add to the family[if HermList is not banned] as well as for your own amusement[end if].";
 		else:
 			say "     While those in your group are still confused and wondering what to do next after being released and dropped off unprepared, you take advantage of the situation and convince several of the felines and those with minimal infection to go off with you. With a few ninja tricks and skilled paws, you coax them one by one into being lovers, converting them into feline ninjas like yourself. The females are bred and filled with kittens while the males add to your growing forces. Soon you have a small clan of your own that lurks in the darkness, doing tasks for organizations willing to pay for your shadowy services.";
-
-
 
 Cat Ninjas ends here.

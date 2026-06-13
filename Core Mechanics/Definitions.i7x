@@ -31,5 +31,4 @@ Definition: A person (called x) is PrivateBreeder:
 	if "Private Breeder" is listed in Traits of x, yes;
 	no;
 
-
 Definitions ends here.

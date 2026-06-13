@@ -28,9 +28,7 @@ DetachGrabObs is an action applying to nothing.
 understand "DetachGrabObs" as DetachGrabObs.
 
 check DetachGrabObs:
-	if debugactive is 0:
-		say "You aren't currently debugging.";
-		stop the action;
+	if debugactive is 0, say "You aren't currently debugging." instead;
 
 carry out DetachGrabObs:
 	repeat with x running through grab objects:
@@ -40,9 +38,7 @@ AttachGrabObs is an action applying to nothing.
 understand "AttachGrabObs" as AttachGrabObs.
 
 check AttachGrabObs:
-	if debugactive is 0:
-		say "You aren't currently debugging.";
-		stop the action;
+	if debugactive is 0, say "You aren't currently debugging." instead;
 
 carry out AttachGrabObs:
 	repeat with x running through grab objects:
@@ -52,9 +48,7 @@ AttachInventory is an action applying to nothing.
 understand "AttachInventory" as AttachInventory.
 
 check AttachInventory:
-	if debugactive is 0:
-		say "You aren't currently debugging.";
-		stop the action;
+	if debugactive is 0, say "You aren't currently debugging." instead;
 
 carry out AttachInventory:
 	repeat with x running through owned grab objects:
@@ -64,23 +58,18 @@ ZTeleport is an action applying to one topic.
 understand "ZTeleport [text]" as ZTeleport.
 
 check ZTeleport:
-	if debugactive is 0:
-		say "You aren't currently debugging.";
-		stop the action;
+	if debugactive is 0, say "You aren't currently debugging." instead;
 
 carry out ZTeleport:
 	repeat with x running through rooms:
 		if printed name of x exactly matches the text topic understood, case insensitively:
 			now Player is in x;
 
-
 ZAnalyzeEvent is an action applying to one topic.
 understand "ZAnalyzeEvent [text]" as ZAnalyzeEvent.
 
 check ZAnalyzeEvent:
-	if debugactive is 0:
-		say "You aren't currently debugging.";
-		stop the action;
+	if debugactive is 0, say "You aren't currently debugging." instead;
 
 carry out ZAnalyzeEvent:
 	say "DEBUG -> Analyzing reasons why event '[topic understood]' might not be available.";
@@ -104,15 +93,11 @@ ZCall is an action applying to one topic.
 understand "ZCall [text]" as ZCall.
 
 check ZCall:
-	if debugactive is 0:
-		say "You aren't currently debugging.";
-		stop the action;
+	if debugactive is 0, say "You aren't currently debugging." instead;
 
 carry out ZCall:
 	repeat with x running through persons:
-		if x is a pet:
-			next;
-		if printed name of x exactly matches the text topic understood, case insensitively:
+		if x is not a pet and printed name of x exactly matches the text topic understood, case insensitively:
 			now x is in location of Player;
 
 Chapter 1 - Debug Mode
@@ -168,9 +153,8 @@ to decide if debug is at level ( n - number ): [or higher]
 	decide yes;
 
 an everyturn rule:
-	if debugactive is 1 and debuglevel > 8:
+	if debug is at level 9:
 		say "DEBUG: inasituation state: [inasituation]";
-
 
 Chapter 2 - Information Readouts
 
@@ -178,9 +162,7 @@ ZReadout is an action applying to one topic.
 understand "ZReadout [text]" as ZReadout.
 
 check ZReadout:
-	if debugactive is 0:
-		say "You aren't currently debugging.";
-		stop the action;
+	if debugactive is 0, say "You aren't currently debugging." instead;
 
 carry out ZReadout:
 	repeat with x running through persons:
@@ -202,9 +184,7 @@ understand "zCurrent turn" as turncountdisplay.
 understand "zCurrentturn" as turncountdisplay.
 
 check turncountdisplay:
-	if debugactive is 0:
-		say "You aren't currently debugging.";
-		stop the action;
+	if debugactive is 0, say "You aren't currently debugging." instead;
 
 carry out turncountdisplay:
 	say "DEBUG: CURRENT TURN IS [turns]; Current Turn Count is [turn count]";
@@ -215,9 +195,7 @@ understand "zPregStatus [text]" as PregStatus.
 understand "zPregCheck [text]" as PregStatus.
 
 check PregStatus:
-	if debugactive is 0:
-		say "You aren't currently debugging.";
-		stop the action;
+	if debugactive is 0, say "You aren't currently debugging." instead;
 
 carry out PregStatus:
 	let PregCheckObj be Player;
@@ -225,84 +203,26 @@ carry out PregStatus:
 		repeat with x running through persons:
 			if printed name of x exactly matches the text topic understood, case insensitively:
 				now PregCheckObj is x;
-	say "     DEBUG: Preg Status of [PregCheckObj]:[line break]";
-	say "impreg_ok: ";
-	if PregCheckObj is impreg_ok:
-		say "+";
-	else:
-		say "-";
-	say "[line break]impreg_able: ";
-	if PregCheckObj is impreg_able:
-		say "+";
-	else:
-		say "-";
-	say "[line break]impreg_now: ";
-	if PregCheckObj is impreg_now:
-		say "+";
-	else:
-		say "-";
-	say "[line break]partial_vacant: ";
-	if PregCheckObj is partial_vacant:
-		say "+";
-	else:
-		say "-";
-	say "[line break]total_vacant: ";
-	if PregCheckObj is total_vacant:
-		say "+";
-	else:
-		say "-";
-	LineBreak;
-	say "[line break]fpreg_ok: ";
-	if PregCheckObj is fpreg_ok:
-		say "+";
-	else:
-		say "-";
-	say "[line break]fpreg_able: ";
-	if PregCheckObj is fpreg_able:
-		say "+";
-	else:
-		say "-";
-	say "[line break]fpreg_now: ";
-	if PregCheckObj is fpreg_now:
-		say "+";
-	else:
-		say "-";
-	say "[line break]female_vacant: ";
-	if PregCheckObj is fem_vacant:
-		say "+";
-	else:
-		say "-";
-	LineBreak;
-	say "[line break]mpreg_ok: ";
-	if PregCheckObj is mpreg_ok:
-		say "+";
-	else:
-		say "-";
-	say "[line break]mpreg_able: ";
-	if PregCheckObj is mpreg_able:
-		say "+";
-	else:
-		say "-";
-	say "[line break]mpreg_now: ";
-	if PregCheckObj is mpreg_now:
-		say "+";
-	else:
-		say "-";
-	say "[line break]male_vacant: ";
-	if PregCheckObj is male_vacant:
-		say "+";
-	else:
-		say "-";
-
+	say "Preg Status of [PregCheckObj]:[line break]";
+	say "     impreg_ok: [if PregCheckObj is impreg_ok][special-style-1]+[else][special-style-2]-[end if][roman type][line break]";
+	say "     impreg_able: [if PregCheckObj is impreg_able][special-style-1]+[else][special-style-2]-[end if][roman type][line break]";
+	say "     impreg_now: [if PregCheckObj is impreg_now][special-style-1]+[else][special-style-2]-[end if][roman type][line break]";
+	say "     partial_vacant: [if PregCheckObj is partial_vacant][special-style-1]+[else][special-style-2]-[end if][roman type][line break]";
+	say "     total_vacant: [if PregCheckObj is total_vacant][special-style-1]+[else][special-style-2]-[end if][roman type][paragraph break]";
+	say "     fpreg_ok: [if PregCheckObj is fpreg_ok][special-style-1]+[else][special-style-2]-[end if][roman type][line break]";
+	say "     fpreg_able: [if PregCheckObj is fpreg_able][special-style-1]+[else][special-style-2]-[end if][roman type][line break]";
+	say "     fpreg_now: [if PregCheckObj is fpreg_now][special-style-1]+[else][special-style-2]-[end if][roman type][line break]";
+	say "     female_vacant: [if PregCheckObj is fem_vacant][special-style-1]+[else][special-style-2]-[end if][roman type][paragraph break]";
+	say "     mpreg_ok: [if PregCheckObj is mpreg_ok][special-style-1]+[else][special-style-2]-[end if][roman type][line break]";
+	say "     mpreg_able: [if PregCheckObj is mpreg_able][special-style-1]+[else][special-style-2]-[end if][roman type][line break]";
+	say "     mpreg_now: [if PregCheckObj is mpreg_now][special-style-1]+[else][special-style-2]-[end if][roman type][line break]";
+	say "     male_vacant: [if PregCheckObj is male_vacant][special-style-1]+[else][special-style-2]-[end if][roman type][line break]";
 
 ShowEncounteredEnemies is an action applying to nothing.
-
 understand "ShowEncounteredEnemies" as ShowEncounteredEnemies.
 
 check ShowEncounteredEnemies:
-	if debugactive is 0:
-		say "You aren't currently debugging.";
-		stop the action;
+	if debugactive is 0, say "You aren't currently debugging." instead;
 
 carry out ShowEncounteredEnemies:
 	EncounteredEnemiesList;
@@ -310,18 +230,15 @@ carry out ShowEncounteredEnemies:
 to EncounteredEnemiesList:
 	sort EncounteredEnemies of Player;
 	say "Thinking back to your misadventures in the city so far, you call into memory all the creatures you have encountered and fought:[line break]";
-	say "[EncounteredEnemies of Player][line break]";
+	say "[EncounteredEnemies of Player].";
 
 [TODO: write Infection overview for single infection]
 
 InfectionOverview is an action applying to nothing.
-
 understand "zInfectionOverview" as InfectionOverview.
 
 check InfectionOverview:
-	if debugactive is 0:
-		say "You aren't currently debugging.";
-		stop the action;
+	if debugactive is 0, say "You aren't currently debugging." instead;
 
 carry out InfectionOverview:
 	repeat with y running from 1 to number of filled rows in Table of Random Critters:
@@ -341,7 +258,7 @@ carry out InfectionOverview:
 		LineBreak;
 
 to DescriptionDisplay:
-	now looknow is 1;
+	now looknow is true;
 	let cocktext be "";
 	follow the cock descr rule;
 	if Player is male:
@@ -396,7 +313,7 @@ to DescriptionDisplay:
 		else:
 			say "A private peek shows that you [cocktext]";
 			say " Also, you[cunttext]";
-	else if cunttext is not "":
+	else if cunttext is not empty:
 		say " You[cunttext]";
 	follow the breast descr rule;
 	if Nipple Count of Player > 0:
@@ -410,9 +327,9 @@ to DescriptionDisplay:
 				say "You have two [descr] breasts on your [bodydesc of Player] chest, curving out [Breast Size of Player] inch[if Breast Size of Player is not 1]es[end if] from your chest.";
 	if child is not born and gestation of child > 0:
 		if gestation of child < 10:
-			now looknow is 0;
+			now looknow is false;
 			say "Your [Skin of Player] swollen belly looks ready to spill forth life at any moment.";
-			now looknow is 1;
+			now looknow is true;
 		else if gestation of child < 20:
 			say "You have a noticeable bulge, a soft roundness to your belly that speaks of too many nights with a tub of ice cream, or an incoming child.";
 		else if gestation of child < 30:
@@ -424,12 +341,10 @@ to DescriptionDisplay:
 			say "You are thankfully spared some undo sexual yearning because you've prevented your tainted womb from going into heat.";
 		else if heatlevel is 3 and player is impreg_able and CockName of Player is not "Human":
 			say "Your tainted womb is not troubling you unduly at the moment, though you're unsure when your next intensified heat may strike you.";
-	now looknow is 0;
+	now looknow is false;
 	rule succeeds;
 
-
 DebugCurrentMonsterID is an action applying to nothing.
-
 understand "DebugCurrentMonsterID" as DebugCurrentMonsterID.
 
 check DebugCurrentMonsterID:
@@ -441,7 +356,6 @@ carry out DebugCurrentMonsterID:
 	say "Current Monster: [Name Entry][line break]";
 
 DebugCritterRow is an action applying to one topic.
-
 understand "DebugCritterRow [text]" as DebugCritterRow.
 
 check DebugCritterRow:
@@ -461,7 +375,6 @@ carry out DebugCritterRow:
 		say "Row Number outside of the table!";
 
 DebugPrintCritterRow is an action applying to one topic.
-
 understand "DebugPrintCritterRow [text]" as DebugPrintCritterRow.
 
 check DebugPrintCritterRow:
@@ -476,7 +389,6 @@ carry out DebugPrintCritterRow:
 		say "[current table row]";
 	else:
 		say "Row Number outside of the table!";
-
 
 to PrereqAnalyze (X - situation):
 	if PrereqCompanion of X is not nothing:
@@ -567,13 +479,10 @@ carry out TagListReadout:
 		LineBreak;
 
 EndingTableReadout is an action applying to nothing.
-
 understand "zEndingTableReadout" as EndingTableReadout.
 
 check EndingTableReadout:
-	if debugactive is 0:
-		say "You aren't currently debugging.";
-		stop the action;
+	if debugactive is 0, say "You aren't currently debugging." instead;
 
 carry out EndingTableReadout:
 	let NameCol be "";
@@ -611,132 +520,159 @@ carry out EndingTableReadout:
 TableListing is an action applying to one topic.
 Understand "tlist [text]" as TableListing.
 
-Carry out tablelisting:
+check TableListing:
+	if debugactive is 0, say "You aren't currently debugging." instead;
+
+carry out TableListing:
 	let t be the topic understood;
-	if t in lower case is "object":
-		say "Name,Weight:[line break]";
-		sort table of game objects in object order;
-		repeat with X running from 1 to number of filled rows in table of game objects:
-			choose row X from the table of game objects;
-			if there is a Name entry:
-				say "[Name entry],[weight entry][line break]";
-		say "End of list of objects.";
-		stop the action;
-	else if t in lower case is "creature":
-		say "Name,Level,Area:[line break]";
-		sort Table of Random Critters in lev order;
-		repeat with X running from 1 to number of filled rows in Table of Random Critters:
-			choose row X from the Table of Random Critters;
-			if there is a lev entry:
-				say "[Name entry],[lev entry],[area entry][line break]";
-		say "End of list of random critters.";
-		stop the action;
-	else if t in lower case is "critcombat":
-		say "Critter Combats:[line break]";
-		sort Table of Critter Combat in combat order;
-		repeat with X running from 1 to number of filled rows in Table of Critter Combat:
-			choose row X from the Table of Critter Combat;
-			if there is a Name entry:
-				say "[Name entry][line break]";
-		say "End of list of critter combats.";
-		stop the action;
-	else if t in lower case is "room":
-		say "Rooms:[line break]";
-		repeat with n running through rooms:
-			say "[n][line break]";
-		say "End of list of rooms.";
-		stop the action;
-	else if t in lower case is "npc":
-		say "NPC: [line break]";
-		repeat with n running through person:
-			say "[n][line break]";
-		say "End of list of NonPlayerCharacters.";
-		stop the action;
-	else if t in lower case is "grab":
-		say "Grab Object:[line break]";
-		repeat with n running through Grab Object:
-			say "[n][line break]";
-		say "End of list of Grab Objects.";
-		stop the action;
-	else if t in lower case is "weapon":
-		say "Weapon:[line break]";
-		repeat with n running through A armament:
-			say "[n][line break]";
-		say "End of list of weapons.";
-		stop the action;
-	else if t in lower case is "equipment":
-		say "Equipment:[line break]";
-		repeat with n running through Equipment:
-			say "[n][line break]";
-		say "End of list of Equipment.";
-		stop the action;
-	else if t in lower case is "heat":
-		say "Name, Heat Cycle, Heat Duration, Female Heat, MPreg Heat:[line break]";
-		sort Table of infection heat in infect name order;
-		repeat with X running from 1 to number of filled rows in Table of infection heat:
-			choose row X from the Table of infection heat;
-			if there is a infect Name entry:
-				if there is a fheat entry and there is a mpregheat entry:
-					say "[infect Name entry]: [heat cycle entry],[heat duration entry], F: [if there is a fheat entry and fheat entry is true]Yes[else]No[end if], MPreg: [if there is a mpregheat entry and mpregheat entry is true]Yes[else]No[end if][line break]";
-				else:
-					say "[infect Name entry]: [heat cycle entry],[heat duration entry] - not updated to F/MPreg[line break]";
-		say "End of list of heat.";
-		stop the action;
-	else if t in lower case is "zephyr":
-		say "Zephyr Goods,Price[line break]";
-		sort Table of Zephyr Goods in price order;
-		repeat with X running from 1 to number of filled rows in Table of Zephyr Goods:
-			choose row X from the Table of Zephyr Goods;
-			if there is a price entry:
-				say "[Name entry],[price entry][line break]";
-		say "End of list of Zephyr Goods.";
-		stop the action;
-	else if t in lower case is "biker":
-		say "Biker Destination,Sort Order[line break]";
-		sort Table of Biker Destinations in sortorder order;
-		repeat with X running from 1 to number of filled rows in Table of Biker Destinations:
-			choose row X from the Table of Biker Destinations;
-			if there is a title entry:
-				say "[title entry],[sortorder entry][line break]";
-		say "End of list of Biker Destinations.";
-		stop the action;
-	else if t in lower case is "loot":
-		say "Creature,Loot,Lootchance:[line break]";
-		sort Table of Random Critters in loot order;
-		repeat with X running from 1 to number of filled rows in Table of Random Critters:
-			choose row X from the Table of Random Critters;
-			if there is a loot entry:
-				say "[Name entry],[loot entry],[lootchance entry][line break]";
-		say "End of list of loot.";
-		stop the action;
-	else if t in lower case is "situation":
-		say "Situations:[line break]";
-		repeat with n running through situations:
-			say "[n][line break]";
-		say "End of list of Situations.";
-		stop the action;
-	else if t in lower case is "vore":
-		say "Vore Exclusions:[line break]";
-		sort infections of VoreExclusion;
-		sort infections of HardVoreExclusion;
-		say "Vore: [infections of VoreExclusion][line break][line break]Hard Vore: [infections of HardVoreExclusion][line break]";
-		say "End of list of Vore Exclusions.";
-		stop the action;
-	else:
-		say "nothing to list, try again.";
+	if t in lower case is:
+		-- "object":
+			say "[line break][bold type]Name, Weight:[roman type][line break][fixed letter spacing]";
+			sort Table of Game Objects in sortname order;
+			repeat with X running from 1 to number of filled rows in Table of Game Objects:
+				choose row X from Table of Game Objects;
+				if there is a weight entry:
+					say "[name entry],[weight entry][line break]";
+			say "[variable letter spacing][bold type]End of list of Objects.[roman type][line break]";
+		-- "creature":
+			say "[line break][bold type]Name, Level, Area:[roman type][line break][fixed letter spacing]";
+			sort Table of Random Critters in lev order;
+			repeat with X running from 1 to number of filled rows in Table of Random Critters:
+				choose row X from Table of Random Critters;
+				if there is a lev entry:
+					say "[Name entry],[lev entry],[area entry][line break]";
+			say "[variable letter spacing][bold type]End of list of Random Critters.[roman type][line break]";
+		-- "critcombat":
+			say "[line break][bold type]Critter Combats:[roman type][line break][fixed letter spacing]";
+			sort Table of Critter Combat in combat order;
+			repeat with X running from 1 to number of filled rows in Table of Critter Combat:
+				choose row X from Table of Critter Combat;
+				if there is a name entry:
+					say "[name entry][line break]";
+			say "[variable letter spacing][bold type]End of list of Critter Combats.[roman type][line break]";
+		-- "room":
+			say "[line break][bold type]Rooms:[roman type][line break][fixed letter spacing]";
+			repeat with n running through rooms:
+				say "[n][line break]";
+			say "[variable letter spacing][bold type]End of list of Rooms.[roman type][line break]";
+		-- "npc":
+			say "[line break][bold type]NPCs:[roman type][line break][fixed letter spacing]";
+			repeat with n running through persons:
+				say "[n][line break]";
+			say "[variable letter spacing][bold type]End of list of NPCs.[roman type][line break]";
+		-- "grab":
+			say "[line break][bold type]Grab Objects:[roman type][line break][fixed letter spacing]";
+			repeat with n running through grab objects:
+				say "[n][line break]";
+			say "[variable letter spacing][bold type]End of list of Grab Objects.[roman type][line break]";
+		-- "weapon":
+			say "[line break][bold type]Weapons:[roman type][line break][fixed letter spacing]";
+			repeat with n running through armaments:
+				say "[n][line break]";
+			say "[variable letter spacing][bold type]End of list of Weapons.[roman type][line break]";
+		-- "equipment":
+			say "[line break][bold type]Equipment:[roman type][line break][fixed letter spacing]";
+			repeat with n running through equipment:
+				say "[n][line break]";
+			say "[variable letter spacing][bold type]End of list of Equipment.[roman type][line break]";
+		-- "heat":
+			say "[line break][bold type]Name, Heat Cycle, Heat Duration, Female Heat, MPreg Heat:[roman type][line break][fixed letter spacing]";
+			sort Table of infection heat in infect name order;
+			repeat with X running from 1 to number of filled rows in Table of infection heat:
+				choose row X from Table of infection heat;
+				if there is a infect name entry:
+					if there is a fheat entry and there is a mpregheat entry:
+						say "[infect name entry],[heat cycle entry],[heat duration entry],[if fheat entry is true]Yes[else]No[end if],[if mpregheat entry is true]Yes[else]No[end if][line break]";
+					else:
+						say "[infect name entry],[heat cycle entry],[heat duration entry],(not updated to F/MPreg!)[line break]";
+			say "[variable letter spacing][bold type]End of list of Heat.[roman type][line break]";
+		-- "zephyr":
+			say "[line break][bold type]Zephyr Goods, Price:[roman type][line break][fixed letter spacing]";
+			sort Table of Zephyr Goods in price order;
+			repeat with X running from 1 to number of filled rows in Table of Zephyr Goods:
+				choose row X from Table of Zephyr Goods;
+				if there is a price entry:
+					say "[Name entry],[price entry][line break]";
+			say "[variable letter spacing][bold type]End of list of Zephyr Goods.[roman type][line break]";
+		-- "biker":
+			say "[line break][bold type]Biker Destination, Sort Order:[roman type][line break][fixed letter spacing]";
+			sort Table of Biker Destinations in sortorder order;
+			repeat with X running from 1 to number of filled rows in Table of Biker Destinations:
+				choose row X from Table of Biker Destinations;
+				if there is a title entry:
+					say "[title entry],[sortorder entry][line break]";
+			say "[variable letter spacing][bold type]End of list of Biker Destinations.[roman type][line break]";
+		-- "loot":
+			say "[line break][bold type]Creature, Loot, Chance:[roman type][line break][fixed letter spacing]";
+			sort Table of Random Critters in loot order;
+			repeat with X running from 1 to number of filled rows in Table of Random Critters:
+				choose row X from Table of Random Critters;
+				if there is a loot entry:
+					say "[Name entry],[loot entry],[lootchance entry][line break]";
+			say "[variable letter spacing][bold type]End of list of Loot.[roman type][line break]";
+		-- "situation":
+			say "[line break][bold type]Situations:[roman type][line break][fixed letter spacing]";
+			repeat with n running through situations:
+				say "[n][line break]";
+			say "[variable letter spacing][bold type]End of list of Situations.[roman type][line break]";
+		-- "vore":
+			say "[line break][bold type]Vore Exclusions:[roman type][line break][fixed letter spacing]";
+			sort infections of VoreExclusion;
+			sort infections of HardVoreExclusion;
+			say "Vore: [infections of VoreExclusion][line break]Hard Vore: [infections of HardVoreExclusion][line break]";
+			say "[variable letter spacing][bold type]End of list of Vore Exclusions.[roman type][line break]";
+		-- "prep":
+			say "[line break][bold type]Combat Prep:[roman type][line break][fixed letter spacing]";
+			sort Table of CombatPrep in name order;
+			repeat with X running from 1 to number of filled rows in Table of CombatPrep:
+				choose row X from Table of CombatPrep;
+				if there is a name entry:
+					say "[name entry][line break]";
+			say "[variable letter spacing][bold type]End of list of Combat Prep.[roman type][line break]";
+		-- otherwise:
+			say "Nothing to list, try again.";
+
+DebugInfectText is an action applying to one topic.
+understand "zInfectText [text]" as DebugInfectText.
+
+check DebugInfectText:
+	if debugactive is 0, say "You aren't currently debugging." instead;
+
+carry out DebugInfectText:
+	now looknow is true;
+	repeat through Table of Random Critters:
+		if Name entry exactly matches the text topic understood, case insensitively:
+			say "Your face [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [face change entry].";
+			say "Your [one of][bodytype of Player] [or][bodydesc of Player] [or][bodydesc of Player] [or][bodytype of Player] [or][at random]body [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [body change entry].";
+			say "Your skin [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [skin change entry].";
+			say "Your ass [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [ass change entry].";
+			say "Your groin [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [cock change entry].";
+			say "[line break]Looking at your new form:[line break]";
+			say "Your face is [face entry].";
+			say "Your body is [body entry].";
+			say "Looking at yourself, your body is covered in [skin entry] skin. ";
+			now looknow is false;
+			say "(your [skin entry] [one of]skin[or]hide[or]flesh[at random])[line break]";
+			now looknow is true;
+			if tail entry is not empty:
+				say "[tail entry][line break]";
+			say "A private peek shows that you have a [Cock Size Desc of Player] [Cock Length of Player]-inch-long [cock entry] [one of]cock[or]penis[or]shaft[or]maleness[at random]. ";
+			now looknow is false;
+			say "(your [cock entry] [one of]cock[or]penis[or]shaft[or]maleness[at random])[line break]";
+			break;
+	now looknow is false;
 
 Chapter 3 - Forced Commands
 
 Section 1 - Player Focused Commands
 
-TestMode is an action applying to nothing.
 TestingActive is a truth state that varies.[@Tag:NotSaved]
+
+TestMode is an action applying to nothing.
 understand "iwannatest" as TestMode.
 
 check TestMode:
-	if debugactive is 0:
-		say "You aren't currently debugging.";
-		stop the action;
+	if debugactive is 0, say "You aren't currently debugging." instead;
 	if TestingActive is true, say "You're already in testing mode." instead;
 
 carry out TestMode:
@@ -816,13 +752,10 @@ carry out TestMode:
 	now TestingActive is true;
 
 levelcheat is an action applying to nothing.
-
 understand "zGiveLevel" as levelcheat.
 
 check levelcheat:
-	if debugactive is 0:
-		say "You aren't currently debugging.";
-		stop the action;
+	if debugactive is 0, say "You aren't currently debugging." instead;
 
 carry out levelcheat:
 	now XP of Player is (10 + (level of Player times 10));
@@ -833,13 +766,10 @@ carry out levelcheat:
 
 [Gives the player all pets]
 PetTest is an action applying to nothing.
-
 understand "zAllPetTest" as PetTest.
 
 check PetTest:
-	if debugactive is 0:
-		say "You aren't currently debugging.";
-		stop the action;
+	if debugactive is 0, say "You aren't currently debugging." instead;
 
 carry out PetTest:
 	repeat with x running through pets: [rebuilds the table of GameCharacters with current data]
@@ -856,13 +786,10 @@ understand "zSize Change" as PlayerSizeChange.
 understand "zSizeChange" as PlayerSizeChange.
 
 check PlayerSizeChange:
-	if debugactive is 0:
-		say "You aren't currently debugging.";
-		stop the action;
+	if debugactive is 0, say "You aren't currently debugging." instead;
 
 carry out PlayerSizeChange:
-	LineBreak;
-	say "     [bold type]What size do you want your character to be?[roman type][line break]";
+	say "[line break]     [bold type]What size do you want your character to be?[roman type][line break]";
 	say "     [link](1)[as]1[end link] Tiny.";
 	say "     [link](2)[as]2[end link] Small.";
 	say "     [link](3)[as]3[end link] Average.";
@@ -899,7 +826,7 @@ carry out PlayerSizeChange:
 
 [Sets the size of one of cock, cunt, balls, or breasts. Useful for testing some scenes.]
 SetPlayerGenitals is an action applying to one number.
-understand "zSetGenitals [number]" as SetPlayerGenitals;
+understand "zSetGenitals [number]" as SetPlayerGenitals.
 
 check SetPlayerGenitals:
 	if debugactive is 0, say "You aren't currently debugging." instead;
@@ -907,41 +834,36 @@ check SetPlayerGenitals:
 
 carry out SetPlayerGenitals:
 	now tempnum is number understood;
-	LineBreak;
-	say "     [bold type]Change Genitals[roman type][line break]";
-	say "     (1) [link]Change cock[as]1[end link] (length or count) using [bold type][tempnum][roman type].";
-	say "     (2) [link]Change cunt[as]2[end link] (depth, diameter, or count) using [bold type][tempnum][roman type].";
-	say "     (3) [link]Change balls[as]3[end link] (size only) using [bold type][tempnum][roman type].";
-	say "     (4) [link]Change breasts[as]4[end link] (size or count) using [bold type][tempnum][roman type].";
+	say "[line break][bold type]Change Genitals:[roman type][line break]";
+	say "(1) [link]Change cock[as]1[end link] (length or count) using [bold type][tempnum][roman type].";
+	say "(2) [link]Change cunt[as]2[end link] (depth, diameter, or count) using [bold type][tempnum][roman type].";
+	say "(3) [link]Change balls[as]3[end link] (size only) using [bold type][tempnum][roman type].";
+	say "(4) [link]Change breasts[as]4[end link] (size or count) using [bold type][tempnum][roman type].";
 	now calcnumber is 0;
 	while calcnumber < 1 or calcnumber > 4:
 		say "Choice? (1-4)> [run paragraph on]";
 		get a number;
-		if calcnumber is 1 or calcnumber is 2 or calcnumber is 3 or calcnumber is 4:
-			break;
-		else:
+		if calcnumber < 1 or calcnumber > 4:
 			say "Invalid choice. Pick from 1 to 4.";
 	LineBreak;
 	if calcnumber is 1:
-		say "     [bold type]Changing Cock[roman type][line break]";
-		say "     (1) [link]Change length[as]1[end link] from [Cock Length of Player] to [tempnum].";
-		say "     (2) [link]Change count[as]2[end link] from [Cock Count of Player] to [tempnum].";
+		say "[bold type]Cock Change:[roman type][line break]";
+		say "(1) [link]Change length[as]1[end link] from [Cock Length of Player] to [tempnum].";
+		say "(2) [link]Change count[as]2[end link] from [Cock Count of Player] to [tempnum].";
 		now calcnumber is 0;
 		while calcnumber < 1 or calcnumber > 2:
 			say "Choice? (1-2)> [run paragraph on]";
 			get a number;
-			if calcnumber is 1 or calcnumber is 2:
-				break;
-			else:
+			if calcnumber < 1 or calcnumber > 2:
 				say "Invalid choice. Pick from 1 to 2.";
 		LineBreak;
 		if calcnumber is 1:
 			if tempnum is 0:
-				if Cock Count of Player > 0:
+				if Player is male:
 					say "Cock[smn] removed!";
 					now Cock Count of Player is 0;
 					now Ball Size of Player is 0;
-			else if Cock Count of Player is 0:
+			else if Player is not male:
 				say "Cock added!";
 				now Cock Count of Player is 1;
 				now Ball Size of Player is 2;
@@ -952,33 +874,31 @@ carry out SetPlayerGenitals:
 				say "Cock[smn] removed!";
 				now Cock Length of Player is 0;
 				now Ball Size of Player is 0;
-			else if Cock Count of Player is 0:
+			else if Player is not male:
 				say "Cock[if tempnum > 1]s[end if] added!";
 				now Cock Length of Player is 5;
 				now Ball Size of Player is 2;
 			say "Cock count set to [tempnum].";
 			now Cock Count of Player is tempnum;
 	else if calcnumber is 2:
-		say "     [bold type]Changing Cunt[roman type][line break]";
-		say "     (1) [link]Change depth[as]1[end link] from [Cunt Depth of Player] to [tempnum].";
-		say "     (2) [link]Change diameter[as]2[end link] from [Cunt Tightness of Player] to [tempnum].";
-		say "     (3) [link]Change count[as]3[end link] from [Cunt Count of Player] to [tempnum].";
+		say "[bold type]Cunt Change:[roman type][line break]";
+		say "(1) [link]Change depth[as]1[end link] from [Cunt Depth of Player] to [tempnum].";
+		say "(2) [link]Change diameter[as]2[end link] from [Cunt Tightness of Player] to [tempnum].";
+		say "(3) [link]Change count[as]3[end link] from [Cunt Count of Player] to [tempnum].";
 		now calcnumber is 0;
 		while calcnumber < 1 or calcnumber > 3:
 			say "Choice? (1-3)> [run paragraph on]";
 			get a number;
-			if calcnumber is 1 or calcnumber is 2 or calcnumber is 3:
-				break;
-			else:
+			if calcnumber < 1 or calcnumber > 3:
 				say "Invalid choice. Pick from 1 to 3.";
 		LineBreak;
 		if calcnumber is 1:
 			if tempnum is 0:
-				if Cunt Count of Player > 0:
+				if Player is female:
 					say "Cunt[sfn] removed!";
 					now Cunt Count of Player is 0;
 					now Cunt Tightness of Player is 0;
-			else if Cunt Count of Player is 0:
+			else if Player is not female:
 				say "Cunt added!";
 				now Cunt Count of Player is 1;
 				now Cunt Tightness of Player is 4;
@@ -986,11 +906,11 @@ carry out SetPlayerGenitals:
 			now Cunt Depth of Player is tempnum;
 		else if calcnumber is 2:
 			if tempnum is 0:
-				if Cunt Count of Player > 0:
+				if Player is female:
 					say "Cunt[sfn] removed!";
 					now Cunt Count of Player is 0;
 					now Cunt Depth of Player is 0;
-			else if Cunt Count of Player is 0:
+			else if Player is not female:
 				say "Cunt added!";
 				now Cunt Count of Player is 1;
 				now Cunt Depth of Player is 5;
@@ -1001,7 +921,7 @@ carry out SetPlayerGenitals:
 				say "Cunt[sfn] removed!";
 				now Cunt Depth of Player is 0;
 				now Cunt Tightness of Player is 0;
-			else if Cunt Count of Player is 0:
+			else if Player is not female:
 				say "Cunt[if tempnum > 1]s[end if] added!";
 				now Cunt Depth of Player is 5;
 				now Cunt Tightness of Player is 4;
@@ -1009,40 +929,38 @@ carry out SetPlayerGenitals:
 			now Cunt Count of Player is tempnum;
 	else if calcnumber is 3:
 		if tempnum > 7:
-			say "Maximum ball size is 7.";
+			say "Invalid input. Maximum ball size is 7.";
 			stop the action;
 		if tempnum is 0:
 			say "Cock[smn] removed!";
 			now Cock Count of Player is 0;
 			now Cock Length of Player is 0;
-		else if Cock Count of Player is 0:
+		else if Player is not male:
 			say "Cock added!";
 			now Cock Count of Player is 1;
 			now Cock Length of Player is 5;
 		say "Ball size set to [tempnum].";
 		now Ball Size of Player is tempnum;
 	else if calcnumber is 4:
-		say "     [bold type]Changing Breasts[roman type][line break]";
-		say "     (1) [link]Change size[as]1[end link] from [Breast Size of Player] to [tempnum].";
-		say "     (2) [link]Change count[as]2[end link] from [Nipple Count of Player] to [tempnum].";
+		say "[bold type]Breast Change:[roman type][line break]";
+		say "(1) [link]Change size[as]1[end link] from [Breast Size of Player] to [tempnum].";
+		say "(2) [link]Change count[as]2[end link] from [Nipple Count of Player] to [tempnum].";
 		now calcnumber is 0;
 		while calcnumber < 1 or calcnumber > 2:
 			say "Choice? (1-2)> [run paragraph on]";
 			get a number;
-			if calcnumber is 1 or calcnumber is 2:
-				break;
-			else:
+			if calcnumber < 1 or calcnumber > 2:
 				say "Invalid choice. Pick from 1 to 2.";
 		LineBreak;
 		if calcnumber is 1:
 			if tempnum > 26:
-				say "Maximum breast size is 26.";
+				say "Invalid input. Maximum breast size is 26.";
 				stop the action;
 			say "Breast size set to [tempnum].";
 			now Breast Size of Player is tempnum;
 		else if calcnumber is 2:
 			if tempnum > 8:
-				say "Maximum nipple count is 8.";
+				say "Invalid input. Maximum nipple count is 8.";
 				stop the action;
 			say "Nipple count set to [tempnum].";
 			now Nipple Count of Player is tempnum;
@@ -1053,9 +971,7 @@ understand "zImpreg with [text]" as impregwith.
 understand "zImpreg [text]" as impregwith.
 
 check impregwith:
-	if debugactive is 0:
-		say "You aren't currently debugging.";
-		stop the action;
+	if debugactive is 0, say "You aren't currently debugging." instead;
 
 carry out impregwith:
 	repeat with X running from 1 to number of filled rows in Table of Random Critters:
@@ -1066,15 +982,12 @@ carry out impregwith:
 
 [Infects player with any creature to test infection.]
 DebugInfect is an action applying to one topic.
-
 understand "zInfect with [text]" as DebugInfect.
 understand "zInfect [text]" as DebugInfect.
 understand "DebugInfect [text]" as DebugInfect.
 
 check DebugInfect:
-	if debugactive is 0:
-		say "You aren't currently debugging.";
-		stop the action;
+	if debugactive is 0, say "You aren't currently debugging." instead;
 
 carry out DebugInfect:
 	say "Infecting with [topic understood]:[line break]";
@@ -1082,20 +995,27 @@ carry out DebugInfect:
 
 Section 2 - Feats
 
-RemoveFeat is an action applying to one topic.
+GiveFeat is an action applying to one topic.
+understand "zAddFeat [text]" as GiveFeat.
 
+check GiveFeat:
+	if debugactive is 0, say "You aren't currently debugging." instead;
+	if topic understood is listed in feats of Player:
+		say "[topic understood] is already in Feats of Player!" instead;
+
+carry out GiveFeat:
+	FeatGain topic understood;
+
+RemoveFeat is an action applying to one topic.
 understand "RemoveFeat [text]" as RemoveFeat.
 
 check RemoveFeat:
-	if debugactive is 0:
-		say "You aren't currently debugging.";
-		stop the action;
+	if debugactive is 0, say "You aren't currently debugging." instead;
+	if topic understood is not listed in feats of Player:
+		say "[topic understood] is not in Feats of Player!" instead;
 
 carry out RemoveFeat:
-	if topic understood is listed in feats of Player:
-		remove topic understood from feats of Player;
-	else:
-		say "[topic understood] is not in Feats of Player!";
+	remove topic understood from feats of Player;
 
 [Allows the player to add or remove the "Kinky" feat without leveling. Useful for testing some scenes.]
 AddRemoveKinky is an action applying to nothing.
@@ -1103,9 +1023,7 @@ understand "add kinky" as AddRemoveKinky.
 understand "remove kinky" as AddRemoveKinky.
 
 check AddRemoveKinky:
-	if debugactive is 0:
-		say "You aren't currently debugging.";
-		stop the action;
+	if debugactive is 0, say "You aren't currently debugging." instead;
 
 carry out AddRemoveKinky:
 	if Player is kinky:
@@ -1115,44 +1033,36 @@ carry out AddRemoveKinky:
 		say "DEBUG: Kinky added.";
 		add "Kinky" to feats of Player;
 
-
 SubDomFlip is an action applying to nothing.
 understand "flip janus coin" as SubDomFlip.
 understand "flip sub dom" as SubDomFlip.
 understand "flip subdom" as SubDomFlip.
 
 check SubDomFlip:
-	if debugactive is 0:
-		say "You aren't currently debugging.";
-		stop the action;
+	if debugactive is 0, say "You aren't currently debugging." instead;
 
 carry out SubDomFlip:
-	say "     Summoning a magic coin with the two-faced god Janus on its sides, you look at it for a second, then throw the shiny coin into the air. After watching it turn end over end, ";
 	if Player is submissive:
-		say "you catch it in your hand and smack that on the back of the other one.";
+		say "     Summoning a magic coin with the two-faced god Janus on its sides, you look at it for a second, then throw the shiny coin into the air. After watching it turn end over end, you catch it in your hand and smack that on the back of the other one.";
 		say "     Lifting your upper hand after that, you see the coin resting on your skin, displaying the strong and determined face of its design. Then the piece of metal suddenly feels hot for a moment, not quite enough to burn you, but almost so. Flowing into you, the energy changes your whole outlook of the world!";
 		remove "Submissive" from feats of Player;
-		add "Dominant" to feats of Player;
+		add "Dominant" to feats of Player, if absent;
 	else if Player is dominant:
-		say "you catch it in your hand and smack that on the back of the other one.";
+		say "     Summoning a magic coin with the two-faced god Janus on its sides, you look at it for a second, then throw the shiny coin into the air. After watching it turn end over end, you catch it in your hand and smack that on the back of the other one.";
 		say "     Lifting your upper hand after that, you see the coin resting on your skin, displaying the timid and shy face of its design. Then the piece of metal suddenly feels hot for a moment, not quite enough to burn you, but almost so. Flowing into you, the energy changes your whole outlook of the world!";
 		remove "Dominant" from feats of Player;
-		add "Submissive" to feats of Player;
+		add "Submissive" to feats of Player, if absent;
 	else:
-		say "you catch - no, try to catch it in your hand.";
+		say "     Summoning a magic coin with the two-faced god Janus on its sides, you look at it for a second, then throw the shiny coin into the air. After watching it turn end over end, you catch - no, try to catch it in your hand.";
 		say "     Somehow it slips through your fingers, bouncing off the ground and rolling around a little, until it comes to a sudden standstill. And that is how it remains, just standing on its side, falling over in neither direction. As you pick the little disc of metal off the ground, it is strangely cold between your fingers for a second. Almost seems like it's giving you the cold shoulder since you fit neither of its different faces.";
-
 
 Section 3 - World Manipulation
 
 Spawnmonster is an action applying to one topic.
-
 understand "zSpawn [text]" as spawnmonster.
 
 check spawnmonster:
-	if debugactive is 0:
-		say "You aren't currently debugging.";
-		stop the action;
+	if debugactive is 0, say "You aren't currently debugging." instead;
 
 carry out spawnmonster:
 	repeat with X running from 1 to number of filled rows in Table of Random Critters:
@@ -1163,15 +1073,11 @@ carry out spawnmonster:
 			challenge;
 			break;
 
-
 unresolvecheat is an action applying to one topic.
-
 understand "zUnresolve [text]" as unresolvecheat.
 
 check unresolvecheat:
-	if debugactive is 0:
-		say "You aren't currently debugging.";
-		stop the action;
+	if debugactive is 0, say "You aren't currently debugging." instead;
 
 carry out unresolvecheat:
 	repeat with X running from 1 to number of filled rows in Table of GameEventIDs:
@@ -1182,13 +1088,10 @@ carry out unresolvecheat:
 			break;
 
 activatecheat is an action applying to one topic.
-
 understand "zActivate [text]" as activatecheat.
 
 check activatecheat:
-	if debugactive is 0:
-		say "You aren't currently debugging.";
-		stop the action;
+	if debugactive is 0, say "You aren't currently debugging." instead;
 
 carry out activatecheat:
 	repeat with X running from 1 to number of filled rows in Table of GameEventIDs:
@@ -1196,7 +1099,6 @@ carry out activatecheat:
 		if Name entry exactly matches the text topic understood, case insensitively:
 			now Object entry is active;
 			break;
-
 
 [Allows the spawning of any item in game.]
 itemcheat is an action applying to one topic.
@@ -1230,7 +1132,7 @@ check allitemcheat:
 	if debugactive is 0, say "You aren't currently debugging!" instead;
 
 carry out allitemcheat:
-	say "     You gain one of everything that isn't cum or milk!";
+	say "You gain one of everything that isn't cum or milk!";
 	repeat with x running through grab objects:
 		if x is not cum and x is not milky:
 			ItemGain x by 1 silently;
@@ -1242,7 +1144,7 @@ check allmilkcheat:
 	if debugactive is 0, say "You aren't currently debugging!" instead;
 
 carry out allmilkcheat:
-	say "     You gain one of all milk items!";
+	say "You gain one of all milk items!";
 	repeat with x running through milky grab objects:
 		ItemGain x by 1 silently;
 
@@ -1253,7 +1155,7 @@ check allcumcheat:
 	if debugactive is 0, say "You aren't currently debugging!" instead;
 
 carry out allcumcheat:
-	say "     You gain one of all cum items!";
+	say "You gain one of all cum items!";
 	repeat with x running through cum grab objects:
 		ItemGain x by 1 silently;
 
@@ -1279,8 +1181,7 @@ carry out RoomEmptying:
 	repeat with x running through rooms:
 		truncate Invent of x to 0 entries; [cleaning out the old data]
 
-
-Chapter 4 - Experimental Stuff
+Chapter 4 - Experimental Stuff (Not for release)
 
 Testaction1 is an action applying to nothing.
 understand "Testaction1" as Testaction1.
@@ -1288,6 +1189,5 @@ understand "Testaction1" as Testaction1.
 carry out Testaction1:
 	say "Master Cap: [Master].";
 	say "master noncap: [master]";
-
 
 Debugging Tools ends here.

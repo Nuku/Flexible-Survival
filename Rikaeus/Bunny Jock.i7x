@@ -7,13 +7,10 @@ Section 1 - Creature Responses
 
 bunnyjocknosex is a number that varies.
 
-to say bunnyjockdesc:
-	say "     Before you is a decently sized lapine male standing at six foot tall with bulging muscles and a clear six pack. Beyond that, he is wearing a pair of basketball shorts and a jersey that lists his number at the back. When you direct your attention at the guy's face, you see that he's smiling rather happily at you, making it clear that he's pleased to have found you. 'Hey! You look like you can tussle around. How about we have some fun before I have to get to basketball practice?' he asks, giving you a laidback look. From the large bulge in his shorts, you can tell that the bunny jock wishes to do more than just wrestle with you. However, before you can give a response, he charges at you, intent on starting the fun.";
-
 to say losetobunnyjock:
 	now bunnyjocknosex is 0;
-	if ( Player is female and a random chance of 1 in 4 succeeds ) or ( Cunt Count of Player is 0 and ( a random chance of 2 in 5 succeeds or anallevel is 1 ) ):
-		say "     '[if Player is female]That was great, baby,' he says with a grin. 'Now let's have some fun.' [else]And that's how it's done! Ain't no stoppin['] this bunny!' he says, pointing to himself with a double thumbs-up. 'Do me a solid and help me let off some steam. You worked me up real good,' he adds with a grin. [end if]With that, he reaches into his shorts and pulls out his meaty cock. Having gotten quite hard, it's a massive two and a half feet long with the balls to match. 'Practice starts soon, so can you give me a quick blow?' With a strong paw on your head, he presses his glans to your lips, drooling pre across them. [if HP of Player > 0]You lick the musky fluid from his tip, the taste of it making you all the more aroused[else]Despite your attempt to resist, you end up tasting the musky liquid and start to become aroused[end if].";
+	if ( Player is female and a random chance of 1 in 4 succeeds ) or ( Player is not female and ( a random chance of 2 in 5 succeeds or anallevel is 1 ) ):
+		say "     '[if Player is female]That was great, baby,' he says with a grin. 'Now let's have some fun.' [else]And that's how it's done! Ain't no stoppin['] this bunny!' he says, pointing to himself with a double thumbs-up. 'Do me a solid and help me let off some steam. You worked me up real good,' he adds with a grin. [end if]With that, he reaches into his shorts and pulls out his meaty cock. Having gotten quite hard, it's a massive two-and-a-half feet long with the balls to match. 'Practice starts soon, so can you give me a quick blow?' With a strong paw on your head, he presses his glans to your lips, drooling pre across them. [if HP of Player > 0]You lick the musky fluid from his tip, the taste of it making you all the more aroused[else]Despite your attempt to resist, you end up tasting the musky liquid and start to become aroused[end if].";
 		say "     With the lapine jock keeping a steady grip, he strokes his cock while you lick across his glans. As you get more into it, you open your mouth, trying to work that mighty cock of his past your lips. [if scalevalue of Player < 4]It takes some time to get started, but you somehow manage to stretch your mouth open enough to accept it with the help of the bunny's firm thrusting[else]It's a little slow going at first, but soon enough you're taking it past your lips and into your warm mouth[end if]. You lick and suck at the huge shaft as best you can while the big guy grunts and moans in growing pleasure. As his arousal builds higher, he thrusts harder and faster before eventually cumming with a loud '[one of]Awwwww yeah[or]Slam dunk[or]Suck it harder[at random]!' upon release. Once he's emptied a sloshing amount of bunny cum into your belly, he pops his drooling cock free.";
 		say "     'Damn! I'm late for practice! See ya later bud!' he shouts before quickly tucking his dick back into his basketball shorts and then dashing off towards the athletic side of campus. You however lay there, your stomach gurgling from the lapine cum that was released into you.";
 		CreatureSexAftermath "Player" receives "OralCock" from "Bunny Jock";
@@ -31,13 +28,13 @@ to say losetobunnyjock:
 		CreatureSexAftermath "Player" receives "AssFuck" from "Bunny Jock";
 
 to say beatthebunnyjock:
-	say "     Beaten, the big bunny jock stumbles back and falls onto his rump. [if Player is female]'Hey baby, wanna take your prize?' he asks, wagging his eyebrows at you[else]'You did great dude! How about we have some more fun?' the rabbit asks, gesturing to his crotch[end if].";
+	say "     Beaten, the big bunny jock stumbles back and falls onto his rump. '[if Player is female]Hey, baby, wanna take your prize?' he asks, wagging his eyebrows at you[else]You did great, dude! How about we have some more fun?' the rabbit asks, gesturing to his crotch[end if].";
 	if bunnyjocknosex > 2:
 		say "     You shake your head as you have with the others, causing him to whine before he starts to masturbate himself. With a shrug of your shoulders, you leave the bunny behind.";
 	else if Libido of Player > 40:
 		say "     As his paws wander to his shorts to fondle his big package, you consider having a little fun with that big boy's cock.";
 		if Player is male:
-			say "     [bold type]What now?[roman type][line break]";
+			say "[line break]     [bold type]What now?[roman type][line break]";
 			say "     [link](1)[as]1[end link] - Fuck him.";
 			say "     [link](2)[as]2[end link] - Suck him off.";
 			say "     [link](3)[as]3[end link] - Just leave.";
@@ -45,6 +42,7 @@ to say beatthebunnyjock:
 			while calcnumber < 1 or calcnumber > 3:
 				say "Choice? (1-3)>";
 				get a number;
+			LineBreak;
 			if calcnumber is 1:
 				say "[bjockvicsex01]";
 			else if calcnumber is 2:
@@ -55,8 +53,10 @@ to say beatthebunnyjock:
 		else:
 			say "     Do you want to stroke and suck him off?";
 			if Player consents:
+				LineBreak;
 				say "[bjockvicsex02]";
 			else:
+				LineBreak;
 				increase bunnyjocknosex by 1;
 				say "     Resisting the urge, you turn away and head off before you are tempted further.";
 	else:
@@ -74,15 +74,7 @@ to say bjockvicsex02:
 	CreatureSexAftermath "Player" receives "OralCock" from "Bunny Jock";
 	PlayerDrink 8;
 	PlayerEat 4;
-	increase Libido of Player by 5;
-	if Libido of Player > 100, now Libido of Player is 100;
-
-
-to say bunnyjockattack:
-	if Player is female:
-		say "[one of]The bunny jock grabs you roughly and gropes you![or]The bunny jock grabs your ass and squeezes![or]The muscled bunny grinds his massive crotch against you![or]The strong rabbit pulls you into a big kiss![or]Grabbing you, he presses you to his body in a rather crushing hug![at random]";
-	else:
-		say "[one of]The bunny jock grabs you roughly and gropes you![or]The bunny jock grabs your ass and squeezes![or]The muscled bunny tackles you to the ground, then hops up and cheers himself on.[or]The big jock puts you in a headlock that threatens to crush your skull.[or]The rabbit slams his shoulder against you, pushing you into the wall.[at random]";
+	raise Player Libido by 5;
 
 Section 2 - Creature Insertion
 
@@ -113,10 +105,10 @@ When Play begins:
 	now enemy title entry is ""; [ Name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name. ]
 	now enemy Name entry is ""; [ Specific name of unique enemy. ]
 	now enemy type entry is 0; [ 0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters. ]
-	now attack entry is "[bunnyjockattack]";
+	now attack entry is "[if Player is female][one of]The bunny jock grabs you roughly and gropes you[or]The bunny jock grabs your ass and squeezes[or]The muscled bunny grinds his massive crotch against you[or]The strong rabbit pulls you into a big kiss[or]Grabbing you, he presses you to his body in a rather crushing hug[at random]![else][one of]The bunny jock grabs you roughly and gropes you![or]The bunny jock grabs your ass and squeezes![or]The muscled bunny tackles you to the ground, then hops up and cheers himself on.[or]The big jock puts you in a headlock that threatens to crush your skull.[or]The rabbit slams his shoulder against you, pushing you into the wall.[at random][end if]";
 	now defeated entry is "[beatthebunnyjock]"; [ Text when monster loses. ]
 	now victory entry is "[losetobunnyjock]"; [ Text when monster wins. ]
-	now desc entry is "[bunnyjockdesc]"; [ Description of the creature when you encounter it. ]
+	now desc entry is "     Before you is a decently sized lapine male standing at six foot tall with bulging muscles and a clear six pack. Beyond that, he is wearing a pair of basketball shorts and a jersey that lists his number at the back. When you direct your attention at the guy's face, you see that he's smiling rather happily at you, making it clear that he's pleased to have found you. 'Hey! You look like you can tussle around. How about we have some fun before I have to get to basketball practice?' he asks, giving you a laidback look. From the large bulge in his shorts, you can tell that the bunny jock wishes to do more than just wrestle with you. However, before you can give a response, he charges at you, intent on starting the fun.[line break]"; [ Description of the creature when you encounter it. ]
 	now face entry is "that of a rabbit, with long, fluffy ears and a short muzzle with whiskers and buck teeth";
 	now body entry is "decently muscled, looking nice and powerful. Whenever someone stares at them you feel the urge to pose and show off. Your hands are paw-like with blunted claws and soft, pink pads on them. Your feet are much the same, but elongated and rabbit-like";
 	now skin entry is "gray, furred";
@@ -267,24 +259,23 @@ When Play begins:
 	[Clit Size Adjective is generated by a function and can be used in scenes: very small/small/average/large/very large]
 ]
 
+Section 3 - Drop Item
 
 Table of Game Objects (continued)
 name	desc	weight	object
 "bunweiser beer"	"It's a capped beer bottle with a label declaring it Bunweiser Beer. The logo is a white bunny face winking at you."	1	bunweiser beer
 
 bunweiser beer is a grab object.
+bunweiser beer is infectious. Strain of bunweiser beer is "Bunny Jock".
 Usedesc of bunweiser beer is "[bunweiseruse]".
-
-It is temporary.
+Scent of bunweiser beer is "The drink smells of hops and beer, really what did you expect from an alcoholic beverage?".
 
 to say bunweiseruse:
-	say "You open up the bottle and put it to your mouth. The drink has the taste of cheap beer, the good kind thankfully.";
+	say "     You open up the bottle and put it to your mouth. The drink has the taste of cheap beer, the good kind thankfully.";
 	PlayerDrink 8;
 	addAlcPoints 1;
-	infect "Bunny Jock";
 
-instead of sniffing bunweiser beer:
-	say "The drink smells of hops and beer, really what did you expect from an alcoholic beverage?";
+Section 4 - Alt Combat
 
 Table of Critter Combat (continued)
 name	combat (rule)	preattack (rule)	postattack (rule)	altattack1 (rule)	alt1chance (number)	altattack2 (rule)	alt2chance (number)	monmiss (rule)	continuous (rule)	altstrike (rule)
@@ -292,11 +283,10 @@ name	combat (rule)	preattack (rule)	postattack (rule)	altattack1 (rule)	alt1chan
 
 this is the powerplay rule:
 	choose row MonsterID from the Table of Random Critters;
-	let rangenum be ( 80 - ( peppereyes * 4 ) );
-	let dam be ( ( wdam entry times a random number from rangenum to 120 ) / 50 ); [Double-damage]
+	let dam be ( wdam entry times a random number from ( 80 - ( peppereyes * 4 ) ) to 120 ) / 50; [Double-damage]
 	if HardMode is true and a random chance of 1 in ( 10 + peppereyes ) succeeds:
 		now dam is (dam * 150) divided by 100;
-		say "The enemy finds a particular vulnerability in your defense - Critical Hit![line break]";
+		say "The enemy finds a particular vulnerability in your defense - Critical Hit!";
 	if a random chance of 1 in 2 succeeds:
 		say "'And there was 5 seconds left on the clock in the big game and then Darrell was [']Woosh! Woosh!['] past them and SLAM DUNK!' As he's excitedly re-enacting the play, he grabs you, leaps ten feet in the air with his powerful rabbit legs and dunks you like a ball through an imaginary hoop. 'Dude! That game was awesome!' he yells as your head rings. You take [special-style-2][dam][roman type] damage!";
 	else:
@@ -312,8 +302,7 @@ this is the powerplay rule:
 	follow the player injury rule;
 	say "You are [descr].";
 
-
-Section 4 - Endings
+Section 5 - Endings
 
 Table of GameEndings (continued)
 Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)

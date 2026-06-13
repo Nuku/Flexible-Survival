@@ -6,16 +6,17 @@ Version 1 of Maternity Lamia by Blue Bishop begins here.
 
 Section 1 - Creature Responses
 
-mlamiaboobmash is a truth state that varies.
 mlamiamet is a truth state that varies.
 mlamialoss is a number that varies.				[fights lost]
 mlamiabeaten is a number that varies.			[fights won]
 
 to say lamiadesc:
-	say "     Making your way through the hospital, you encounter [if mlamiamet is false]what appears to be a half-human, half snake creature[else]the lamia creature once more[end if] dressed in a bulging, clearly ill-fitting nurse's outfit[if mlamiamet is false]. It's also apparent how stacked the lamia is, having to re-tailor the attire to fit her bulging,[else], complete with those[end if] six pairs of breasts, barely able to contain themselves within it. Having spotted you, she's very quick to slither her way over, boobs jiggling with each heave of her large, advancing body. Her human skin is flawlessly smooth and her scaled hide is a milky white, a sharp contrast to her raven black hair.";
+	if mlamiamet is false:
+		say "     Making your way through the hospital, you encounter what appears to be a half-human, half snake creature dressed in a bulging, clearly ill-fitting nurse's outfit. It's also apparent how stacked the lamia is, having to re-tailor the attire to fit her bulging, six pairs of breasts, barely able to contain themselves within it. Having spotted you, she's very quick to slither her way over, boobs jiggling with each heave of her large, advancing body. Her human skin is flawlessly smooth and her scaled hide is a milky white, a sharp contrast to her raven black hair.";
+		now mlamiamet is true;
+	else:
+		say "     Making your way through the hospital, you encounter the lamia creature once more, dressed in a bulging, clearly ill-fitting nurse's outfit, complete with those six pairs of breasts, barely able to contain themselves within it. Having spotted you, she's very quick to slither her way over, boobs jiggling with each heave of her large, advancing body. Her human skin is flawlessly smooth and her scaled hide is a milky white, a sharp contrast to her raven black hair.";
 	say "     '[one of]Oh[or]Huh[or]Hey[at random], [one of]what are you doing in here all on your lonesome[or]were you looking for me[or]are you supposed to be here[at random]? [one of]I could use the company[or]I don't think you're supposed to be here[or]Oh well, you look like a fun diversion[at random]...' Reptilian eyes from her otherwise attractive, human face gaze piercingly at you, her intended, [bodytype of Player] victim-to-be before she lurches forward to subdue you!";
-	now mlamiamet is true;
-
 
 to say losetolamia:
 	if HP of Player > 0:
@@ -29,14 +30,15 @@ to say losetolamia:
 		say "     Scaled coils gently constricting you, they caress along your[if scalevalue of Player > 4], larger[end if] [bodytype of Player] form as her grip gradually tightens around you, the half-serpent repositioning herself as her hand moves along to grope at your[if CockName of Player is listed in infections of InternalCockList] partially[end if] exposed, [cock size desc of Player] dick[smn].";
 		say "     '[one of]I really need this[or]This ought to be fun[or]Someone's excited to see me[at random]...' Eager to bring you into full arousal, it doesn't take long for her to get what she wants[if HP of Player <= 0], in spite of your impotent struggles[end if]. Hissing eagerly, her movement finally reveals her[one of][or] familiar,[stopping] triple pussies.";
 		WaitLineBreak;
-		say "     Head forcibly buried within her abundant cleavage again, she gradually sinks the[if Player is blunt] blunt[end if] head of [if Cock Count of Player > 3]three of your cocks[else if Cock Count of Player is 3]all three cocks[else if Cock Count of Player is 2]both your cocks[else]your cock[end if] within her tight, scaled lips. The creature hissing and moaning with twisted glee, she can barely temper any restraint in burying your flesh inside her, and, [if Player is knotted]after forcing her way past your knot[smn][else]once hilting you within her slick depths[end if], so do her coils tighten further to hide her [one of]newfound[or]familiar[stopping] toy from the outside world[if scalevalue of Player > 3] - a feat made somewhat challenging by your size[end if].";
+		say "     Head forcibly buried within her abundant cleavage again, she gradually sinks the[if Player is blunt] blunt[end if] head of [if Cock Count of Player > 3]three of your[else if Cock Count of Player is 3]all three[else if Cock Count of Player is 2]both your[else]your[end if] cock[smn] within her tight, scaled lips. The creature hissing and moaning with twisted glee, she can barely temper any restraint in burying your flesh inside her, and, [if Player is knotted]after forcing her way past your knot[smn][else]once hilting you within her slick depths[end if], so do her coils tighten further to hide her [one of]newfound[or]familiar[stopping] toy from the outside world[if scalevalue of Player > 3] - a feat made somewhat challenging by your size[end if].";
 		say "     '[one of]Calm down[or]Let me take care of this[or]Oh, you feel so nice[at random]...' Writhing, twisting body grinding against you, forced to [if HP of Player > 0]abide[else]endure[end if] the creature's strength as her whole form clenches rhythmically, practically intent on squeezing your bliss from you. As her tainted need grows, your face is made slick with her dribbling teats, [if HP of Player > 0]driven[else]made[end if] to taste her sweet fluid in the heat of the moment.";
+		WaitLineBreak;
 		if Libido of Player > 33:
 			say "     It's not long before you're finally overtaken, letting out a muffled cry in the darkness as you pump her hole[smn] full of your [Cum Load Size of Player] load[if Ball Size of Player > 5], until she can take no more and it begins to squirt between the crevices of her tightly-gripping coils[end if]. The wet sounds of her continued motions filling the air, she finally hisses out loudly as she's brought to bliss as well, being barely able to breathe against her near-crushing hold as you're milked dry.";
 		else:
 			say "     After what seems like an eternity her continued, wet-sounding efforts eventually bring her to bliss, hissing out loudly as her hold tightens to a near-crushing extent, making it difficult to breathe and more than enough to force your own out of you. Letting out a muffled, feeble cry, you pump her hole[smn] full of your [Cum Load Size of Player] load[if Ball Size of Player > 5], until she can take no more and it begins to squirt between the crevices of her tightly-gripping coils[end if].";
-			WaitLineBreak;
 			say "     Once things eventually die down and she catches her breath, she uncoils from you and sets you down on a nearby bench. She seems to check and fuss over you a bit before being satisfied, the softer gesture betrayed by her prior abuse.";
+			WaitLineBreak;
 			say "     '[one of]You sure look tuckered out[or]That was fun[or]That was great[at random]! [one of]I'll be back in a bit[or]Be sure to stick around[or]I'd love to have some more fun with you later[at random]...' Making her parting remark, she wanders off - perhaps compelled by some twisted sense of duty to 'attend' to another victim. In any case, it takes you a while to recover from being left so sore, going back on your way once again.";
 		CreatureSexAftermath "Lamia" receives "PussyFuck" from "Player";
 	else:
@@ -44,26 +46,22 @@ to say losetolamia:
 		say "     Her milk flows readily, flowing across your tongue. It is warm, rich and creamy, the flavor so good that you want more. Nursing from her is soothing and you relax more fully, her snug coils around you feeling more like a hug to you than a prison. The wet nurse gently caresses your head as she rocks you gently as she hums a soothing tune.";
 		WaitLineBreak;
 		if Libido of Player > 33 and Player is not neuter:
-			if Player is male:
-				say "     You grow aroused as you nurse, a fact that doesn't go unnoticed by the multi-breasted beauty. Feeling your erection[smn] pressing firmly against her hugging tail, she shifts against [itthemm], making you throb all the harder. 'Mmm... such an eager boy,' she coos, separating her coils at your groin so she can reach down and take hold of your [cock size desc of Player] manhood. She continues to have you suckle from her, shifting your head to a fresh breast while she plays with your cock[smn]. Her practiced hand teases your [Cock of Player] penis[esmn] until finally you cum hard, spraying your white load even as her many breasts squirt streams of milk over you. Tired now that you've got a full belly of warm milk and are in the haze of your afterglow, you start to drift off for a nap. You're sleepily aware of the lamia singing a soft lullaby as she tucks you in before leaving you to digest your meal.";
-			else:
-				say "     You grow aroused as you nurse, a fact that doesn't go unnoticed by the multi-breasted beauty. Feeling your increasingly heated puss[yfn] leaking their juices across her smooth scales, she shifts against [itthemf], making you moan with desire. 'Mmm... such a cute girl,' she coos, separating her coils at your groin so she can reach down and play with your cunn[yfn]. She continues to have you suckle from her, shifting your head to a fresh breast while she plays with your folds and clit[sfn]. Her practiced hand teases your cunt[sfn] until finally you cum hard, soaking her playful fingers with your femcum even as her many breasts squirt streams of milk over you. Tired now that you've got a full belly of warm milk and are in the haze of your afterglow, you start to drift off for a nap. You're sleepily aware of the lamia singing a soft lullaby as she tucks you in before leaving you to digest your meal.";
+			say "     You grow aroused as you nurse, a fact that doesn't go unnoticed by the multi-breasted beauty. Feeling your [if Player is male]erection[smn] pressing firmly against her hugging tail, she shifts against [itthemm], making you throb all the harder. 'Mmm... such an eager boy,' she coos, separating her coils at your groin so she can reach down and take hold of your [cock size desc of Player] manhood. She continues to have you suckle from her, shifting your head to a fresh breast while she plays with your cock[smn]. Her practiced hand teases your [Cock of Player] penis[esmn] until finally you cum hard, spraying your white load[else]increasingly heated puss[yfn] leaking their juices across her smooth scales, she shifts against [itthemf], making you moan with desire. 'Mmm... such a cute girl,' she coos, separating her coils at your groin so she can reach down and play with your cunn[yfn]. She continues to have you suckle from her, shifting your head to a fresh breast while she plays with your folds and clit[sfn]. Her practiced hand teases your cunt[sfn] until finally you cum hard, soaking her playful fingers with your femcum[end if] even as her many breasts squirt streams of milk over you. Tired now that you've got a full belly of warm milk and are in the haze of your afterglow, you start to drift off for a nap. You're sleepily aware of the lamia singing a soft lullaby as she tucks you in before leaving you to digest your meal.";
 		else:
 			say "     You moan softly as you suckle from the caring wet nurse, your mind clouded with affection for her. She lets you drink your fill, shifting you from one breast to the next when the flow starts to taper off even a little. You nurse happily, thinking of little more than the delicious milk you're getting and your growing love for the maternal lamia feeding you. Eventually, she decides you've had your fill, or at least more than your fair share, and pulls you away from her bosom, giving you a milky kiss instead. Having a belly full of warm milk has made you tired and so you start to drift off for a nap. You're sleepily aware of the lamia singing a soft lullaby as she tucks you in before leaving you to digest your meal.";
-			increase Libido of Player by 10;
+			raise Player Libido by 10;
 		say "     You awaken some time later, thankfully having been left undisturbed during your short nap. You weren't moved far, having been put on a nearby [one of]bed[or]gurney[or]examination table[at random] under a [one of]milk-stained sheet[or]milk-stained blanket[or]cum-stained blanket[or]slightly torn sheet[or]white sheet[or]small blanket[or]few towels[at random]. Moving cautiously, you go recover your gear and head off with a lingering affection for your milk mother.";
 		PlayerDrink 12;
 		PlayerEat 3;
 		SanLoss 10;
 		if "Strong Psyche" is listed in feats of Player, increase humanity of Player by a random number between 1 and 3;
 		if "Weak Psyche" is listed in feats of Player, decrease humanity of Player by a random number between 1 and 3;
-		if "Iron Stomach" is not listed in feats of Player, infect;
+		if "Iron Stomach" is not listed in feats of Player, infect "Lamia";
 	increase mlamialoss by 1;
-
 
 to say beatthelamia:
 	say "     With that final blow, you're able to drive the strange lamia back. She hisses angrily. '[one of]Oh, you're acting like a spoiled child[or]OWwww! That's no fun! You shouldn't be so mean. I just want a hug[or]Well, all you had to say was [']No['][or]If you're going to be like that, you shouldn't have come on to me in the first place[or]Fine! I'm sure I can find someone else who's hungry for all this,' she says, running her hands over her ill-covered breasts. 'Too bad for you[or]Hrumph! I need to get back to the maternity ward anyhow[at random],' the alabaster snake-woman grumbles as she turns about and slithers away in a huff.";
-	say "     Part of you is tempted to not let her off so easily[one of][or] this time[stopping]. Shall you allow yourself to catch her so you can indulge in some fun?";
+	say "[line break]     Part of you is tempted to not let her off so easily[one of][or] this time[stopping]. Shall you allow yourself to catch her so you can indulge in some fun?";
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]
@@ -72,12 +70,13 @@ to say beatthelamia:
 		now title entry is "Fuck her";
 		now sortorder entry is 1;
 		now description entry is "screw the voluptuous viper";
-	[]
-[		if Cock Length of Player > xxx:
+		[
+		if Cock Length of Player > xxx:
 			choose a blank row in table of fucking options;
 			now title entry is "Titty fuck";
 			now sortorder entry is 2;
-			now description entry is "nestle your cock between those milky melons"; ]
+			now description entry is "nestle your cock between those milky melons";
+		]
 	[]
 	if Player is female:
 		choose a blank row in table of fucking options;
@@ -104,44 +103,36 @@ to say beatthelamia:
 			say "[title entry]: Shall you [description entry]?";
 			if Player consents:
 				LineBreak;
-				let nam be title entry;
 				now sextablerun is 1;
-				if nam is "Fuck her":
-					say "[mlamiavsex01]";
-				else if nam is "Titty fuck":
-					say "[mlamiavsex02]";
-				else if nam is "Receive cunnilingus":
-					say "[mlamiavsex03]";
-				else if nam is "Breastfeeding":
-					say "[mlamiavsex04]";
-				wait for any key;
+				if title entry is:
+					-- "Fuck her":
+						say "[mlamiavsex01]";
+					[-- "Titty fuck":
+						say "[mlamiavsex02]";]
+					-- "Receive cunnilingus":
+						say "[mlamiavsex03]";
+					-- "Breastfeeding":
+						say "[mlamiavsex04]";
 		else if calcnumber is 0:
 			LineBreak;
 			now sextablerun is 1;
 			say "     Not wanting to get involved any further, you let the lamia depart and return to your own business.";
-			wait for any key;
 	increase mlamiabeaten by 1;
 
 to say mlamiavsex01:
-	say "     Wanting some relief in exchange for your troubles, you stride over to the serpent woman as she slithers away and grab her arm. She struggles momentarily in her surprise, but when it becomes clear what you want, she relents rather than fight further. '[one of]Oh, you're such a willful one[or]Such a naughty boy[or]If you really wanted to play, you should have just said so[or][if Cock Count of Player >= 3]It'll be nice to have a playmate able to fully satisfy me for a change,' she says, eyeing your multiple cocks. 'Let's see what you've got[else if Cock Count of Player is 2]Well, maybe you can come close to satisfying me with both of those,' she says, eyeing your twin cocks. 'I guess we can give it a try[else]Alright then, if you insist[end if][or]Come on. Take it easy. I was just funning. Alright, let's do this[or]Well, maybe a little fun before I head back to work[at random].' And with that, the lamia allows you to push her onto her back, thereby giving you access to her three wet pussies. The sight of those alabaster folds and their pink interiors, all wet and juicy gets you rock hard and ready. Rather than delay any longer, you move atop her and get your cock[smn] lined up before sinking [if Cock Count of Player > 3]three of them [else if Cock Count of Player is 3]all three of them [else if Cock Count of Player is 2]both of them [end if]into her. She releases a long, hissing moan as you penetrate her.";
-	say "     You rock your hips, thrusting steadily into the milk-white lamia";
+	say "     Wanting some relief in exchange for your troubles, you stride over to the serpent woman as she slithers away and grab her arm. She struggles momentarily in her surprise, but when it becomes clear what you want, she relents rather than fight further. '[one of]Oh, you're such a willful one[or]Such a naughty boy[or]If you really wanted to play, you should have just said so[or][if Cock Count of Player > 2]It'll be nice to have a playmate able to fully satisfy me for a change,' she says, eyeing your multiple cocks. 'Let's see what you've got[else if Cock Count of Player is 2]Well, maybe you can come close to satisfying me with both of those,' she says, eyeing your twin cocks. 'I guess we can give it a try[else]Alright then, if you insist[end if][or]Come on. Take it easy. I was just funning. Alright, let's do this[or]Well, maybe a little fun before I head back to work[at random].' And with that, the lamia allows you to push her onto her back, thereby giving you access to her three wet pussies. The sight of those alabaster folds and their pink interiors, all wet and juicy gets you rock hard and ready. Rather than delay any longer, you move atop her and get your cock[smn] lined up before sinking [if Cock Count of Player > 3]three of them [else if Cock Count of Player is 3]all three of them [else if Cock Count of Player is 2]both of them [end if]into her. She releases a long, hissing moan as you penetrate her.";
 	if Cock Count of Player > 3:
-		say ". Having more cocks than even she has holes, you alternate between them on occasion. This draws out your enjoyment while making sure you're going to be fully satisfied. With your [Cock of Player] penises thrusting into her slick, squeezing cunts, you're awash in pleasure[if anallevel is 3]. You even push one into the tighter hole of her anus just a little lower than the others. She hisses in surprise at this, but quickly starts to enjoy the additional anal stimulation[end if]. Certainly the lamia seems to be quite pleased with your lovemaking, probably rarely getting to be so thoroughly fucked by a lover";
-	else if Cock Count of Player is 3:
-		say ". Having a trio of cocks for her trio of pussies, you're given a rare opportunity to use all three at once. With them pumping into her slick, squeezing cunts, you're awash in pleasure. Certainly the lamia seems to be quite pleased with your lovemaking, probably rarely getting to be so thoroughly fucked by a lover";
-	else if Cock Count of Player is 2:
-		say ". Having a pair of cocks for her trio of pussies, you pick the lower two and leave her to finger and tease the last of them. The sight of her playing with herself while your twin rods pound into her makes it all the more exciting. The lamia certainly seems to be enjoying herself as well, moaning and hissing as you stuff two of her needy cunts";
+		say "     You rock your hips, thrusting steadily into the milk-white lamia. Having more cocks than even she has holes, you alternate between them on occasion. This draws out your enjoyment while making sure you're going to be fully satisfied. With your [Cock of Player] penises thrusting into her slick, squeezing cunts, you're awash in pleasure[if anallevel is 3]. You even push one into the tighter hole of her anus just a little lower than the others. She hisses in surprise at this, but quickly starts to enjoy the additional anal stimulation[end if]. Certainly the lamia seems to be quite pleased with your lovemaking, probably rarely getting to be so thoroughly fucked by a lover. Once you've settled into a good position and rhythm, you move your hands up to her plump breasts and start playing with a pair of them. Teasing her nipples gets them squirting milk, the rest of her cream-filled tits leaking in response.";
 	else:
-		say ". Having a trio of pussies to pick from, you alternate between them early on before settling on fucking her lowermost cunny. This leaves the lamia able to play with her unoccupied cunts, the sight of which makes it all the more exciting. And while the half-serpent clearly wants more, she's still certainly enjoying herself immensely, moaning and hissing as you fuck her while she fingers her other needy cunts";
-	say ". Once you've settled into a good position and rhythm, you move your hands up to her plump breasts and start playing with a pair of them. Teasing her nipples gets them squirting milk, the rest of her cream-filled tits leaking in response.";
+		say "     You rock your hips, thrusting steadily into the milk-white lamia. Having a [if Cock Count of Player is 3]trio of cocks for her trio of pussies, you're given a rare opportunity to use all three at once. With them pumping into her slick, squeezing cunts, you're awash in pleasure. Certainly the lamia seems to be quite pleased with your lovemaking, probably rarely getting to be so thoroughly fucked by a lover[else if Cock Count of Player is 2]pair of cocks for her trio of pussies, you pick the lower two and leave her to finger and tease the last of them. The sight of her playing with herself while your twin rods pound into her makes it all the more exciting. The lamia certainly seems to be enjoying herself as well, moaning and hissing as you stuff two of her needy cunts[else]trio of pussies to pick from, you alternate between them early on before settling on fucking her lowermost cunny. This leaves the lamia able to play with her unoccupied cunts, the sight of which makes it all the more exciting. And while the half-serpent clearly wants more, she's still certainly enjoying herself immensely, moaning and hissing as you fuck her while she fingers her other needy cunts[end if]. Once you've settled into a good position and rhythm, you move your hands up to her plump breasts and start playing with a pair of them. Teasing her nipples gets them squirting milk, the rest of her cream-filled tits leaking in response.";
 	WaitLineBreak;
-	say "     The pair of you go at it like this for a while, losing yourselves in the lust of sex. When your climax comes, it is [if Cock Count of Player >= 3]a powerful one that pumps your hot seed into all of the lamia's needy holes[else]a strong one that pumps your hot seed into the lamia's squeezing cunt[smn] while she vigorously fingers her unfilled one[smv][end if]. The half-serpent woman cries out in orgasm as you fill her, her vagina[smn] clamping and rippling around you like the coils of a constrictor, squeezing every last drop she can get from you. The milky flow from her breasts increases as her orgasm overwhelms her. She's left panting with a happy smile on her face when you finally pull out of her, leaving her to slither off, leaving a trail of milk and sexual fluids as she goes.";
+	say "     The pair of you go at it like this for a while, losing yourselves in the lust of sex. When your climax comes, it is a [if Cock Count of Player >= 3]powerful one that pumps your hot seed into all of the lamia's needy holes[else]strong one that pumps your hot seed into the lamia's squeezing cunt[smn] while she vigorously fingers her unfilled one[smv][end if]. The half-serpent woman cries out in orgasm as you fill her, her vagina[smn] clamping and rippling around you like the coils of a constrictor, squeezing every last drop she can get from you. The milky flow from her breasts increases as her orgasm overwhelms her. She's left panting with a happy smile on her face when you finally pull out of her, leaving her to slither off, leaving a trail of milk and sexual fluids as she goes.";
 	CreatureSexAftermath "Lamia" receives "PussyFuck" from "Player";
 	if Cock Count of Player > 3:
 		CreatureSexAftermath "Lamia" receives "AssFuck" from "Player";
 
-to say mlamiavsex02:
-	say "***titty fuck.";
+[to say mlamiavsex02:
+	say "***titty fuck.";]
 
 to say mlamiavsex03:
 	say "     Feeling you deserve some relief in exchange for your troubles, you stride over to the serpent woman as she slithers away and grab her by the shoulders. She struggles momentarily in surprise, but relents easily enough rather than continue fighting you. You press the creature to the ground like the serpent she is. Getting on your knees in front of her, you press her pretty human face between your legs and against your wet puss[yfn]. '[one of]Such a naughty girl[or]Oh, you're such a willful one[or]If you really wanted to play, you should have just said so[or]Alright then, if you insist[or]Mmm... Is someone hot and bothered now? Let's see what we can do about that[at random],' she says teasingly as you grind your dripping crotch against her.";
@@ -158,7 +149,9 @@ to say mlamiavsex04:
 	SanLoss 5;
 	if "Strong Psyche" is listed in feats of Player, increase humanity of Player by a random number between 0 and 1;
 	if "Weak Psyche" is listed in feats of Player, decrease humanity of Player by a random number between 0 and 1;
-	if "Iron Stomach" is not listed in feats of Player, infect;
+	if "Iron Stomach" is not listed in feats of Player, infect "Lamia";
+
+Section 2 - Creature Insertion
 
 Table of CombatPrep (continued)
 name(text)	PrepFunction(text)
@@ -166,9 +159,7 @@ name(text)	PrepFunction(text)
 
 to say PrepCombat_Lamia:
 	setmongender 4; [creature is female]
-
-
-Section 2 - Creature Insertion
+	now mlamiaboobmash is false;
 
 Table of Random Critters (continued)
 NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
@@ -182,9 +173,9 @@ When Play begins:
 	add "Lamia" to infections of FurryList;
 	add "Lamia" to infections of MythologicalList;
 	add "Lamia" to infections of FemaleList;
-	add "Lamia" to infections of TaperedCockList;
 	add "Lamia" to infections of InternalCockList;
 	add "Lamia" to infections of InternalBallsList;
+	add "Lamia" to infections of NoLegList;
 	add "Lamia" to infections of SerpentineList;
 	add "Lamia" to infections of TailList;
 	add "Lamia" to infections of OviImpregnatorList;
@@ -198,13 +189,13 @@ When Play begins:
 	now victory entry is "[losetolamia]"; [ Text when monster wins. ]
 	now desc entry is "[lamiadesc]"; [ Description of the creature when you encounter it. ]
 	now face entry is "rather attractive and human-looking, though sporting reptilian eyes and a snake's tongue"; [ Face description, format as "Your face is [Face of Player]." ]
-	now body entry is "a slender human's down to the waist, with the lower half being that of a snake's, long and scaly"; [ Body description, format as "Your body is [Body of Player]." ]
+	now body entry is "a slender human's down to the waist, with the lower half being that of a snake, long and scaly"; [ Body description, format as "Your body is [Body of Player]." ]
 	now skin entry is "[one of]soft[or]supple[or]half-scaled[at random]"; [ Skin. Format as "Looking at yourself, your body is covered in [Skin of Player] skin." ]
 	now tail entry is ""; [ Ass/Tail. Write as a full sentence (with period) or leave blank for none. ]
 	now cock entry is "[one of]human[or]normal[at random]"; [ Cock. Format as "You have a 'size' [Cock of Player] cock." ]
-	now face change entry is "it begins to tingle all over. Briefly dizzy and confused, you check your face to find that it is now of an attractive human's, though sporting dark, reptilian eyes. Your tongue flicks out almost involuntarily, now the long, forked tongue of a snake's"; [ Face TF text. Format as "Your face tingles as [face change entry]." ]
+	now face change entry is "it begins to shift and change. Briefly dizzy and confused, you check your face to find that it is now of an attractive human's, though sporting dark, reptilian eyes. Your tongue flicks out almost involuntarily, now the long, forked tongue of a snake"; [ Face TF text. Format as "Your face tingles as [face change entry]." ]
 	now body change entry is "your legs meld into one, elongating into the body of a snake, with your torso being that of a human's. It takes a while to adjust to moving with these powerful coils, but you eventually get the hang of it"; [ Body TF text, format as "Your body tingles as [body change entry]. ]
-	now skin change entry is "your torso tingles, being a pale, supple flesh. Everything below the waist, however, grows an array of milky white, glimmering scales"; [ Skin TF text, format as "Your skin tingles as [skin change entry]. ]
+	now skin change entry is "your torso transforms, being a pale, supple flesh. Everything below the waist, however, grows an array of milky white, glimmering scales"; [ Skin TF text, format as "Your skin tingles as [skin change entry]. ]
 	now ass change entry is "you feel something settle in your lower torso, but nothing physically changes that you can see"; [ Ass/Tail TF text, format as "Your ass tingles as [tail change entry]." ]
 	now cock change entry is "it succumbs to some transformative effect. Checking yourself, it appears distinctly human-looking"; [ Cock TF text, format as "Your groin tingles as [cock change entry]." ]
 	now str entry is 16; [ These are now the creature's stats... ]
@@ -349,17 +340,17 @@ When Play begins:
 
 Section 3 - Alt Combat
 
+mlamiaboobmash is a truth state that varies.[@Tag:NotSaved]
+
 Table of Critter Combat (continued)
 name	combat (rule)	preattack (rule)	postattack (rule)	altattack1 (rule)	alt1chance (number)	altattack2 (rule)	alt2chance (number)	monmiss (rule)	continuous (rule)	altstrike (rule)
 "matlamia"	retaliation rule	lamiaboobinc rule	--	lamiaboob rule	12	--	--	--	--	--
-
 
 this is the lamiaboobinc rule:			[increasing likelihood of alt attack]
 	choose row monstercom from the table of critter combat;
 	if mlamiaboobmash is false or a random chance of 2 in 3 succeeds:		[slower increase if she's already booby-mashed]
 		increase alt1chance entry by a random number between 1 and 5;
 	if alt1chance entry > 40, now alt1chance entry is 40;
-
 
 this is the lamiaboob rule:	[***]
 	choose row monstercom from the table of critter combat;
@@ -382,7 +373,7 @@ this is the lamiaboob rule:	[***]
 		let dam be ( wdam entry times a random number from 80 to 120 ) divided by 125; [80% dmg this round]
 		say "Her coils ensnare your limbs, trapping them within her body's grip. You can feel the warm, wet touch of her leaking slits as well as she slides across your thighs even as she wraps herself around you tighter. You take [special-style-2][dam][roman type] damage from the constriction. Even as you continue to resist, she mashes your face into her extra-ample bosom.";
 		if HP of Player <= 0 or Libido of Player >= 110:
-			say "That's enough to take the last of the fight out of you. She continues to have her way with you and you can only put up a token amount of resistance.";
+			say "[line break]That's enough to take the last of the fight out of you. She continues to have her way with you and you can only put up a token amount of resistance.[paragraph break]";
 			now matlamiacaught is 2; [unable to continue fighting]
 	if matlamiacaught is 1:
 		WaitLineBreak;
@@ -392,18 +383,18 @@ this is the lamiaboob rule:	[***]
 		let playernum be a random number between 20 and playernum;
 		let matlamianum be a random number between 20 and matlamianum;
 		say "[special-style-1][playernum][roman type] vs [special-style-2][matlamianum][roman type]: ";
-	if matlamiacaught is 1 and playernum >= matlamianum:
-		say "You twist and squirm in her grip, doing your best to keep from suffocating amid her fleshy fun-pillows. Eventually, she tosses you aside in frustration. '[one of]Oh, why don't you want to have fun[or]Aren't these good enough for you[or]What? Don't you like hugs[at random]?' she asks, giving a pair of her tits a jiggle, jostling around the rest of the rows as well.";
-		now matlamiacaught is 0;
-	else if matlamiacaught > 0:
+		if playernum >= matlamianum:
+			say "You twist and squirm in her grip, doing your best to keep from suffocating amid her fleshy fun-pillows. Eventually, she tosses you aside in frustration. '[one of]Oh, why don't you want to have fun[or]Aren't these good enough for you[or]What? Don't you like hugs[at random]?' she asks, giving a pair of her tits a jiggle, jostling around the rest of the rows as well.";
+			now matlamiacaught is 0;
+	if matlamiacaught > 0:
 		let dam be ( wdam entry times a random number from 80 to 120 ) divided by 125; [80% dmg this round]
 		decrease HP of Player by dam;
 		increase Libido of Player by a random number between 4 and 6;
 		if "Cold Fish" is listed in feats of Player, decrease Libido of Player by a random number between 0 and 1;
 		if "Horny Bastard" is listed in feats of Player, increase Libido of Player by a random number between 0 and 1;
-		say "With your face buried in her fleshy fun-pillows, you have trouble breathing, the only air you can get heavily laced with the milky scent of her multi-bosom, dulling your wits even as you grow aroused. And it gets even harder for your poor brain to remain oxygenated when her tail tightens further around your chest. This forced exhalation results in you motorboating those jugs of hers, to her giggling delight. '[one of]Oh! I always love that[or]Tee hee! That tickles[or]Oooo! That's more like it[at random][if matlamiacaught is not 2]!' The experience weakens you, causing [special-style-2][dam][roman type] damage even as you grow more aroused.[else]!'[end if]";
+		say "[if matlamiacaught is 2]     [end if]With your face buried in her fleshy fun-pillows, you have trouble breathing, the only air you can get heavily laced with the milky scent of her multi-bosom, dulling your wits even as you grow aroused. And it gets even harder for your poor brain to remain oxygenated when her tail tightens further around your chest. This forced exhalation results in you motorboating those jugs of hers, to her giggling delight. '[one of]Oh! I always love that[or]Tee hee! That tickles[or]Oooo! That's more like it[at random][if matlamiacaught is not 2]!' The experience weakens you, causing [special-style-2][dam][roman type] damage even as you grow more aroused.[else]!'[end if]";
 		if HP of Player <= 0 or Libido of Player >= 110 and matlamiacaught is 1:
-			say "With your will to fight pretty much gone, she continues to have her way with you as you put up only some token resistance.";
+			say "[line break]With your will to fight pretty much gone, she continues to have her way with you as you put up only some token resistance.[paragraph break]";
 			now matlamiacaught is 2; [unable to continue fighting]
 	if matlamiacaught is 1:
 		WaitLineBreak;
@@ -413,18 +404,18 @@ this is the lamiaboob rule:	[***]
 		let playernum be a random number between 10 and playernum;
 		let matlamianum be a random number between 10 and matlamianum;
 		say "[special-style-1][playernum][roman type] vs [special-style-2][matlamianum][roman type]: ";
-	if matlamiacaught is 1 and playernum >= matlamianum:
-		say "Sensing her grip relax as she laughs, you re-focus yourself on trying to escape. With a strong push, you're able to break free of her coils. She's disappointed at your behavior, but giggles all the more. '[one of]I guess I'll just have to catch you again[or]Now, don't be like that? I can tell you were having fun, too[or]Too rough? Well, come here and I'll give you a hug to make it up to you[at random].'";
-		now matlamiacaught is 0;
-	else if matlamiacaught > 0:
+		if playernum >= matlamianum:
+			say "Sensing her grip relax as she laughs, you re-focus yourself on trying to escape. With a strong push, you're able to break free of her coils. She's disappointed at your behavior, but giggles all the more. '[one of]I guess I'll just have to catch you again[or]Now, don't be like that? I can tell you were having fun, too[or]Too rough? Well, come here and I'll give you a hug to make it up to you[at random].'";
+			now matlamiacaught is 0;
+	if matlamiacaught > 0:
 		let dam be ( wdam entry times a random number from 80 to 120 ) divided by 110; [90% dmg this round]
 		decrease HP of Player by dam;
 		increase Libido of Player by a random number between 5 and 8;
 		if "Cold Fish" is listed in feats of Player, decrease Libido of Player by a random number between 0 and 1;
 		if "Horny Bastard" is listed in feats of Player, increase Libido of Player by a random number between 0 and 1;
-		say "Her grip eases a little as she laughs and your immediate response is to gasp for air, but all you get is another lungful of her arousing scent followed by a mouthful of nipple. You end up sucking down on her hard nip before you realize what you're doing. Your resistance fades further and you become all the more aroused[if Player is herm]. Your cock[smn] stiffen[smv] and grind[smv] against the firm, muscular tail pressed around it, causing an excess of your feminine juices to leak from your cunt[sfn][else if Player is male]. Your cock[smn] stiffen[smv] and grind[smv] against the firm, muscular tail pressed around it[else if Player is female]. You grind your hips and try to wiggle your legs as fresh feminine juices leak from your cunt[sfn][end if][if matlamiacaught is not 2]. It becomes harder to hold out as you take another [special-style-2][dam][roman type] damage and become further aroused[end if].";
+		say "[if matlamiacaught is 2]     [end if]Her grip eases a little as she laughs and your immediate response is to gasp for air, but all you get is another lungful of her arousing scent followed by a mouthful of nipple. You end up sucking down on her hard nip before you realize what you're doing. Your resistance fades further and you become all the more aroused[if Player is herm]. Your cock[smn] stiffen[smv] and grind[smv] against the firm, muscular tail pressed around it, causing an excess of your feminine juices to leak from your cunt[sfn][else if Player is male]. Your cock[smn] stiffen[smv] and grind[smv] against the firm, muscular tail pressed around it[else if Player is female]. You grind your hips and try to wiggle your legs as fresh feminine juices leak from your cunt[sfn][end if][if matlamiacaught is not 2]. It becomes harder to hold out as you take another [special-style-2][dam][roman type] damage and become further aroused[end if].";
 		if HP of Player <= 0 or Libido of Player >= 110 and matlamiacaught is 1:
-			say "With your will to fight pretty much gone, she continues to have her way with you as you put up only some token resistance.";
+			say "[line break]With your will to fight pretty much gone, she continues to have her way with you as you put up only some token resistance.[paragraph break]";
 			now matlamiacaught is 2; [unable to continue fighting]
 	if matlamiacaught is 1:
 		WaitLineBreak;
@@ -434,10 +425,10 @@ this is the lamiaboob rule:	[***]
 		let playernum be a random number between 1 and playernum;
 		let matlamianum be a random number between 1 and matlamianum;
 		say "[special-style-1][playernum][roman type] vs [special-style-2][matlamianum][roman type]: ";
-	if matlamiacaught is 1 and playernum >= matlamianum:
-		say "The taste of her milk shocks you into the realization of what's going on. Spitting it out across her breast, you push yourself away from her grip. Thankfully, she'd relaxed further when you started nursing, so you're able to squirm free before she can stop you.";
-		now matlamiacaught is 0;
-	else if matlamiacaught > 0:
+		if playernum >= matlamianum:
+			say "The taste of her milk shocks you into the realization of what's going on. Spitting it out across her breast, you push yourself away from her grip. Thankfully, she'd relaxed further when you started nursing, so you're able to squirm free before she can stop you.";
+			now matlamiacaught is 0;
+	if matlamiacaught > 0:
 		let dam be ( wdam entry times a random number from 80 to 120 ) divided by 100; [100% dmg this round]
 		decrease HP of Player by dam;
 		increase Libido of Player by a random number between 8 and 12;
@@ -446,12 +437,11 @@ this is the lamiaboob rule:	[***]
 		decrease humanity of Player by a random number between 2 and 5;
 		if "Strong Psyche" is listed in feats of Player, increase Humanity of Player by 1;
 		if "Weak Psyche" is listed in feats of Player, decrease humanity of Player by 1;
-		say "Not realizing the danger, you suckle from the lamia's milky nipple. You drink down her creamy milk while she cuddles you in her tender embrace. The nurse coos softly and caresses your head, encouraging you to keep going[if Player is not neuter]. The heat in your loins grows and you grind eagerly against the wet touch of her leaking pussies[else]. You grind eagerly against the wet touch of her leaking pussies[end if] as you suckle. Your thoughts are further muddled and your arousal climbs higher as the infected milk seeks to corrupt you[if matlamiacaught is not 2]. You suffer [special-style-2][dam][roman type] damage as your resistance wanes further and your arousal climbs[end if].";
-		LineBreak;
-		if "Iron Stomach" is not listed in feats of Player, say "[infect][line break]";
-		say "After this taste of her bounty, she releases you with a happy sigh. '[one of]There. Feeling better now[or]Are you ready to snuggle up for a proper meal now[or]Are you ready for some real fun[or]Has that gotten you ready for feeding time[at random][if scalevalue of Player < 4], little one[end if]?' she coos, slithering around you with a sensual sway.";
+		say "[if matlamiacaught is 2]     [end if]Not realizing the danger, you suckle from the lamia's milky nipple. You drink down her creamy milk while she cuddles you in her tender embrace. The nurse coos softly and caresses your head, encouraging you to keep going. [if Player is not neuter]The heat in your loins grows and you[else]You[end if] grind eagerly against the wet touch of her leaking pussies as you suckle. Your thoughts are further muddled and your arousal climbs higher as the infected milk seeks to corrupt you[if matlamiacaught is not 2]. You suffer [special-style-2][dam][roman type] damage as your resistance wanes further and your arousal climbs[end if].";
+		if "Iron Stomach" is not listed in feats of Player, infect;
+		say "[if matlamiacaught is 2]     [end if]After this taste of her bounty, she releases you with a happy sigh. '[one of]There. Feeling better now[or]Are you ready to snuggle up for a proper meal now[or]Are you ready for some real fun[or]Has that gotten you ready for feeding time[at random][if scalevalue of Player < 4], little one[end if]?' she coos, slithering around you with a sensual sway.";
 		if HP of Player <= 0 or Libido of Player >= 110:
-			say "The whole of this has left you weakened and aroused, your willpower too expended to continue resisting at this point.";
+			say "[line break]The whole of this has left you weakened and aroused, your willpower too expended to continue resisting at this point.";
 			now matlamiacaught is 2;
 		choose row monstercom from the table of critter combat;
 		now alt1chance entry is 0;
@@ -462,7 +452,6 @@ this is the lamiaboob rule:	[***]
 [ 0 = broke free                 ]
 [ 1 = still struggling           ]
 [ 2 = defeated before escaping   ]
-
 
 Section 4 - Endings
 
@@ -479,10 +468,9 @@ This is the Lamia Infection rule:
 		else:
 			say "     Eventually taken in by the military and processed, you're brought through with relatively little difficulty, in spite of your rather strange state.";
 			say "     Finding a job as an infected that doesn't involve the sex trade is particularly difficult, especially when you're a giant snake-person. Your strain compels you to work in a maternity ward, but social stigmas mean you'd never be hired for an uninfected ward, and the infected don't produce offspring in such a way that there's ever any need for one.";
-			say "     You eventually concede to a more scandalous job of merely 'playing' one for particularly deviant suitors, infected or otherwise";
 			if "Horny Bastard" is listed in feats of Player or Player is kinky:
-				say ". It pays well, and you find yourself rather fond of these twisted games...";
+				say "     You eventually concede to a more scandalous job of merely 'playing' one for particularly deviant suitors, infected or otherwise. It pays well, and you find yourself rather fond of these twisted games...";
 			else:
-				say ". As well as it pays, you feel the whole thing to be somewhat beneath your dignity...";
+				say "     You eventually concede to a more scandalous job of merely 'playing' one for particularly deviant suitors, infected or otherwise. As well as it pays, you feel the whole thing to be somewhat beneath your dignity...";
 
 Maternity Lamia ends here.

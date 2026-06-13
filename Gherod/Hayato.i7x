@@ -6,7 +6,6 @@ Version 4 of Hayato by Gherod begins here.
 [Version 3.1 - Character relocation - Luneth]
 [Version 4 - Updated Hayato's menu and story progression. Moved to Gherod's folder]
 
-
 [ Energy of Hayato]
 [ 0 = Help not started        ]
 [ 1 = Help began              ]
@@ -57,16 +56,13 @@ Version 4 of Hayato by Gherod begins here.
 [ 0 = Youkai Lair not known   ]
 [ 1 = Youkai Lair Quest on    ]
 
-an everyturn rule: [bugfix code to update saves which had the event erroneously resolved]
-	if HP of Hayato < 14 and Noh Mask is resolved:
-		now Noh Mask is not resolved;
-
 a postimport rule: [to rollback the Oni Lair progress from previous saves]
-	if HP of Hayato > 18 and Strength of Hayato is 0: [Strength will be increased in the reworked Youkai Lair, blocking this postimport rule from happening again, and resetting Hayato to pre-Oni Lair stage]
+	if HP of Hayato < 14 and Noh Mask is resolved: [bugfix code to update saves which had the event erroneously resolved]
+		now Noh Mask is not resolved;
+	else if HP of Hayato > 18 and Strength of Hayato is 0: [Strength will be increased in the reworked Youkai Lair, blocking this postimport rule from happening again, and resetting Hayato to pre-Oni Lair stage]
 		now HP of Hayato is 18;
 		now Oni Lair is not resolved;
 		now Oni Lair is inactive;
-
 
 Section 1 - Event
 
@@ -77,6 +73,7 @@ Garage Demon	"Garage Demon"
 Garage Demon is a situation.
 ResolveFunction of Garage Demon is "[ResolveEvent Garage Demon]".
 Sarea of Garage Demon is "Capitol".
+
 when play begins:
 	add Garage Demon to BadSpots of MaleList;
 	add Garage Demon to BadSpots of DemonList;
@@ -96,15 +93,16 @@ to say ResolveEvent Garage Demon:
 	say ". Shall you risk approaching to [link]talk (1)[as]1[end link], [link]attack (2)[as]2[end link] while you have the element of surprise or [link]leave (3)[as]3[end link] before you are noticed?";
 	now calcnumber is 0;
 	while calcnumber < 1 or calcnumber > 3:
-		say "Choice? (1-3)>";
+		say "Choice? (1-3)> [run paragraph on]";
 		get a number;
-		if calcnumber is 1:
-			say "[haleventtalk]";
-		else if calcnumber is 2:
-			say "[haleventfight]";
-		else if calcnumber is 3:
-			say "     Deciding that it is not worth the risk of getting too close to his massive club, you slip away quietly. You make a mental note to give the area around here plenty of clearance to avoid accidentally running into him.";
-			now Garage Demon is resolved;
+	LineBreak;
+	if calcnumber is 1:
+		say "[haleventtalk]";
+	else if calcnumber is 2:
+		say "[haleventfight]";
+	else if calcnumber is 3:
+		say "     Deciding that it is not worth the risk of getting too close to his massive club, you slip away quietly. You make a mental note to give the area around here plenty of clearance to avoid accidentally running into him.";
+		now Garage Demon is resolved;
 
 to say haleventtalk:
 	say "     Approaching the imposing figure[if HP of Hayato > 0] again[end if], you try to intice him to conversation. He gets up with a sigh before growling at you to go away as he reaches for his menacing club. He glares at you with his yellow eyes. You try your best to calm him down.";
@@ -112,8 +110,8 @@ to say haleventtalk:
 		let bonus be ( Charisma of Player minus 10 ) divided by 2;
 		increase bonus by HP of Hayato;
 		let diceroll be a random number from 1 to 20;
-		say "You roll 1d20([diceroll])+[bonus] = [special-style-1][diceroll + bonus][roman type] vs [special-style-2]14[roman type] (Charisma Check):[line break]";
-		if (diceroll + bonus) >= 14:
+		say "You roll 1d20([diceroll])[if bonus >= 0]+[end if][bonus] = [special-style-1][diceroll + bonus][roman type] vs [special-style-2]14[roman type] (Charisma Check):[line break]";
+		if diceroll + bonus >= 14:
 			now HP of Hayato is 6;
 			say "     You continue being friendly, trying to reassure him that you only want to talk (despite whatever other motives you may have). Though unwilling to talk at first, you soon get him to relent. 'Fine. If it'll make you go away. It'd be for your own good; I don't want to hurt you,' he adds, sounding more cautionary than threatening.";
 			say "[halhistory]";
@@ -129,7 +127,6 @@ to say haleventtalk:
 		now Resolution of Garage Demon is 2; [Player successfully talked to Hayato second try]
 		now Garage Demon is resolved;
 
-
 to say haleventfight:
 	say "     You charge forward, weapon drawn, moving in to attack the horned man. Noticing you at the last moment, he gives a startled growl and stumbles to his feet while grabbing his club. 'Stay back or I'll crush you,' he growls, bashing his into the wall of the garage while attempting to ready it. Pressing your advantage, you move in to strike while he's still trapped inside. His mighty muscles raise the club again, this time putting it through the wall before swinging it wildly. It goes wide and cracks into the other side of the garage door, but you're forced to step back.";
 	say "     'I don't want to hurt you, but you leave me no choice,' he growls, raising his club high enough to break a channel through the roof. Rubble falls from the ceiling as he brings the iron club down, cracking the pavement in front of you with his strike. Despite neither of you having struck a blow yet, your overconfidence causes you to only take a few steps back from the devastating swing before pressing forward again.";
@@ -142,7 +139,6 @@ to say haleventfight:
 	now Resolution of Garage Demon is 3; [Tried to fight Hayato]
 	now Garage Demon is resolved;
 
-
 to say halhistory:
 	say "     The large figure gestures for you to have a seat on a couple of tires. 'I should perhaps introduce myself. My name is Hayato, though you can call me Hal if you prefer. As you can see, I am now an oni - a Japanese demon ogre,' he growls with a sigh. He pauses for a bit in his introduction, passing you a small pack of cookies, which you [if hunger of Player < 30]quietly munch on while he talks[else]quickly scarf down[end if]. 'I am too large to comfortably live in a home, so this,' he gestures to the garage, 'has become my cave.'";
 	say "     'During that horrible night, it was chaos. The dwindling survivors ran everywhere, trying in vain to get away from the monsters that seemed to only become more numerous. Soot and smoke filled the air, burning the eyes and making it hard to spot the creatures before they were upon you. My attempt to flee was cut off when an oni broke through the wall of a building. It reveled in the destruction and began to attack and rape the people around it. We tried to get away, but it caught up to us easily, swatting us to the ground with bone-breaking blows from its hand or club. I fell to the street hard, head striking the slick pavement and all became blackness. When I awoke, I found I had landed in a pool of the ogre's cum and had been transformed into a monster like it because of it.'";
@@ -150,7 +146,6 @@ to say halhistory:
 	say "     Despite his fearsome face and gruff voice, there's a sadness to them as well. As you grow used to his appearance and his voice, it becomes a little easier to read the true emotions beneath them. 'You should perhaps go now. I thank you for the company; it is good to speak to someone again. But now I need to meditate.' You consider trying to talk to him longer, but decide to leave as he's requested. Perhaps he'll be feeling more sociable if you return to this [bold type]disused garage[roman type] later.";
 	PlayerEat 6;
 	AddNavPoint Disused Garage;
-
 
 Section 2 - Location
 
@@ -161,7 +156,7 @@ Disused Garage	"Disused Garage"
 Disused Garage is a room. It is fasttravel. It is private.
 Description of Disused Garage is "[disusedgaragedesc]".
 
-the scent of Disused Garage is "There is a lingering scent of oil hanging around the building.".
+the scent of Disused Garage is "     There is a lingering scent of oil hanging around the building.".
 
 to say disusedgaragedesc:
 	say "     The old, single bay garage is build of cinder blocks and has seen better days. While some of the damage is recent, it's clear that the place had fallen on hard times even before the outbreak. Hayato's cleared out much of the space to make room for him in his makeshift living quarters. Packed against the back wall are some cardboard boxes representing the oni's personal supplies.";
@@ -175,6 +170,7 @@ object	name
 Hayato	"Hayato"
 
 Hayato is a man. Hayato is in Disused Garage.
+understand "Hal" as Hayato.
 ScaleValue of Hayato is 4. [DB sized]
 Body Weight of Hayato is 9. [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
 Body Definition of Hayato is 9. [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
@@ -212,13 +208,9 @@ Sterile of Hayato is false. [steriles can't knock people up]
 MainInfection of Hayato is "Red Oni".
 Description of Hayato is "[halonidesc]".
 The icon of Hayato is Figure of Hayato_icon.
-Conversation of Hayato is { "Hai!" }.
+[Conversation of Hayato is { "Hai!" }.]
 The scent of Hayato is "     There is a strong, masculine scent to your large oni friend.".
-
-understand "Hal" as Hayato.
-
 the fuckscene of Hayato is "[sexwithHayato]".
-
 HayatoHunger is a number that varies.
 
 Section 1 - Description
@@ -242,12 +234,12 @@ to say halonidesc:
 		say "     Hayato is a hulking red oni roughly ten feet tall. He has a hefty, muscled build with only a tiger-skin loincloth tied with rope to cover himself. A playful peek under the hide shows his semi-hard manhood. It is over a foot long and deliciously thick, with ponderous balls full of cum after his long self-denial. His cockflesh is bright red like the rest of him, only darkening to a near-black at the glans. At first glance, his face is quite demonic, with a pair of large horns pointing up, an exaggerated brow and chin, yellow eyes and large, protruding fangs. Atop his head is a thick mane of blonde hair that flows down to his shoulders, matching nicely with his bright red skin. His voice is rough and deep, fitting for his demon ogre form. Having gotten to know him a little, you know this appearance to be external, with him a friendly person beneath his terrible exterior. Freeing him from the restraint (and the resulting sex) has cheered him up considerably, allowing him to enjoy the increased sexual pleasures of his transformed body. You enjoy the looks of lust he gives you and how he's eager for whatever fun you desire to sate his needs and yours.";
 		say "     He seems to have settled in well, having found a comfortable spot at one of the reading desks tucked away on the upper floor of the library. It's a fairly private spot and has enough open space for him to leave a few piles of books he's reading through and his small collection of supplies. He is often resting against a wall reading or casually stroking his impressive manhood. Always nearby is a gigantic spiked club of iron that is nearly as tall as he is.";
 
-
 Section 2 - Conversation
 
 HayatoDoneTalking is a truth state that varies.[@Tag:NotSaved]
 
-Instead of conversing the Hayato:
+instead of conversing the Hayato:
+	project Figure of Hayato_icon;
 	if HP of Hayato < 6:
 		say "ERROR-Hayato-[HP of Hayato]T: You should not be able to talk to me.";
 	else:
@@ -256,8 +248,7 @@ Instead of conversing the Hayato:
 to say HayatoTalkMenu:
 	say "     The red oni gives you a fearsome smile that shows off his large fangs, but seems cheerful enough. 'Welcome back. I hope you have been well. Have a seat,' he says, gesturing to the tire seat.";
 	now HayatoDoneTalking is false;
-	say "     [bold type]What do you want to talk about with Hayato?[roman type][line break]";
-	LineBreak;
+	say "[line break]     [bold type]What do you want to talk about with Hayato?[roman type][line break]";
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]
@@ -274,28 +265,25 @@ to say HayatoTalkMenu:
 	if Energy of Hayato is 0:
 		choose a blank row in table of fucking options;
 		now title entry is "See how you can help him";
-		now sortorder entry is 98;
+		now sortorder entry is 95;
 		now description entry is "The oni looks troubled... Perhaps you should offer your help";
-	[]
-	if Energy of Hayato is 1 or Energy of Hayato is 3:
+	else if Energy of Hayato is 1 or Energy of Hayato is 3:
 		choose a blank row in table of fucking options;
 		now title entry is "Do some trust work";
-		now sortorder entry is 98;
+		now sortorder entry is 96;
 		now description entry is "Try to bond with the oni";
 	[]
 	if HP of Hayato is 15:
 		choose a blank row in table of fucking options;
 		now title entry is "Free the oni";
-		now sortorder entry is 98;
+		now sortorder entry is 97;
 		now description entry is "Is it time";
-	[]
-	if HP of Hayato is 17 or HP of Hayato is 18:
+	else if HP of Hayato is 17 or HP of Hayato is 18:
 		choose a blank row in table of fucking options;
 		now title entry is "Mention the Red Onis you have encountered";
-		now sortorder entry is 99;
+		now sortorder entry is 98;
 		now description entry is "Speak with Hayato about the wild red onis";
-	[]
-	if HP of Hayato is 19:
+	else if HP of Hayato is 19:
 		choose a blank row in table of fucking options;
 		now title entry is "Analyse your contacts with Hayato";
 		now sortorder entry is 99;
@@ -314,22 +302,22 @@ to say HayatoTalkMenu:
 			choose row calcnumber in table of fucking options;
 			say "[title entry]: [description entry]?";
 			if Player consents:
-				let nam be title entry;
 				now sextablerun is 1;
-				if (nam is "Talk with Hayato"):
-					say "[HayatoChitChat]";
-				else if (nam is "His history"):
-					say "[HayatoHistory]";
-				else if (nam is "See how you can help him"):
-					say "[HayatoTalkHelp]";
-				else if (nam is "Do some trust work"):
-					say "[HayatoBond]";
-				else if (nam is "Free the oni"):
-					say "[HayatoBeltUnlock]";
-				else if (nam is "Mention the Red Onis you have encountered"):
-					say "[HayatoRedOnis]";
-				else if (nam is "Analyse your contacts with Hayato"):
-					say "[HayatoDiscussLair]";
+				if title entry is:
+					-- "Talk with Hayato":
+						say "[HayatoChitChat]";
+					-- "His history":
+						say "[HayatoHistory]";
+					-- "See how you can help him":
+						say "[HayatoTalkHelp]";
+					-- "Do some trust work":
+						say "[HayatoBond]";
+					-- "Free the oni":
+						say "[HayatoBeltUnlock]";
+					-- "Mention the Red Onis you have encountered":
+						say "[HayatoRedOnis]";
+					-- "Analyse your contacts with Hayato":
+						say "[HayatoDiscussLair]";
 				wait for any key;
 				if HayatoDoneTalking is false:
 					say "[HayatoTalkMenu]"; [looping back to keep talking with him]
@@ -338,7 +326,7 @@ to say HayatoTalkMenu:
 			say "     You excuse yourself as you take your leave. Hayato nods as you go.";
 			wait for any key;
 		else:
-			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options], or 0 to exit.";
 	clear the screen and hyperlink list;
 
 to say HayatoChitChat:
@@ -352,7 +340,7 @@ to say HayatoChitChat:
 	else if HP of Hayato is 15:
 		say "     [one of]'My grandmother used to tell me tales of the fearsome oni. To be cursed to become such a creature...'[or]'Do you see this club?' he says, holding up the massive, spiked pillar of iron in one hand. 'I have tried to get rid of it many times, but it is always there again when I awake.'[or]'Most everyone in this city is free to satisfy their needs. Why did I choose this when there are so many fine partners out there?' he says, eyeing you with desire.[or]The chastity device helps keep me from giving into my moments of lust, but the wretched thing also keeps me from getting any relief... or enjoying the company of friends,' he says with a longing, lustful look.[or]'I do not wish to become a monster like the rampaging oni I encountered. Perhaps a little relief would help quell that,' he says, shifting uneasily in his seat.[or]'I must contain my urges, lest I fully become a monster and harm others.'[or]'I am far too big to comfortably live in a house. I must now live in this, my oni cave,' he says with a sad sigh.[or]As you chat with him, the oni gives your body many an appreciative glance as the unfocused arousal he's been trying to contain becomes increasingly focused on you.[or]'The shop where I got the medieval chastity belt was quite mysterious. When I stumbled through the doorway, I was out in the city, but upon leaving it, I was inside a shopping mall filled with cheerful rat people.'[or]'The jackal woman running the mysterious shop was quite strange. All she wanted in payment for the chastity belt was some little trinket.'[at random]";
 	else if HP of Hayato >= 16:
-		say "[one of]'My grandmother used to tell me tales of the fearsome oni. You have made my being cursed to be one less terrible.'[or]'Do you see this club?' he says, holding up the massive, spiked pillar of iron in one hand. 'I have tried to get rid of it many times, but it is always there again when I awake.'[or]'Most everyone in this city is overrun with a mad lust, but it seems it does not have to as I once thought. The chastity device helped me gain control of it, but now it is good to be free of the infernal thing,' he says, a hand rubbing his groin with a lustful grin.[or]'I do not wish to become a monster like the rampaging oni I encountered. I hope you'll continue to help me deal with this transformation,' he says with a lustful grin, loincloth brushed aside to stroke his cock meaningfully.[or]'I was trying so hard to contain my urges when I should have just found someone to help me let them out in a controlled manner.'[or]'I am glad to be away from that [']cave['] of mine. It is easier to feel that some of me is still human in a place like this,' he says, looking around the bookshelves.[or]'That shop where I found the medieval chastity belt is quite mysterious. Be careful what deals you make in there. If what you say is true, I might have ended up sold off to anyone who'd bought the key. Thankfully, you are the one who [']bought['] me,' he says with a playful grin.[or][if ( the number of booked people + number of bunkered people ) is 2]'I prefer staying up here out of the way. That way, I don't upset your friend with my appearance[else if ( the number of booked people + the number of bunkered people ) > 2]'I prefer staying up here out of the way. That way, I don't upset the others with my appearance[else]'I prefer staying up here out of the way. That way I can be out of the way and read in peace[end if]. It also means I'm free to relax and get some relief if I need it,' he adds with a grin and a stroke across his semi-hard cock.[at random]";
+		say "[one of]'My grandmother used to tell me tales of the fearsome oni. You have made my being cursed to be one less terrible.'[or]'Do you see this club?' he says, holding up the massive, spiked pillar of iron in one hand. 'I have tried to get rid of it many times, but it is always there again when I awake.'[or]'Most everyone in this city is overrun with a mad lust, but it seems it does not have to as I once thought. The chastity device helped me gain control of it, but now it is good to be free of the infernal thing,' he says, a hand rubbing his groin with a lustful grin.[or]'I do not wish to become a monster like the rampaging oni I encountered. I hope you'll continue to help me deal with this transformation,' he says with a lustful grin, loincloth brushed aside to stroke his cock meaningfully.[or]'I was trying so hard to contain my urges when I should have just found someone to help me let them out in a controlled manner.'[or]'I am glad to be away from that [']cave['] of mine. It is easier to feel that some of me is still human in a place like this,' he says, looking around the bookshelves.[or]'That shop where I found the medieval chastity belt is quite mysterious. Be careful what deals you make in there. If what you say is true, I might have ended up sold off to anyone who'd bought the key. Thankfully, you are the one who [']bought['] me,' he says with a playful grin.[or][if number of collected people is 2]'I prefer staying up here out of the way. That way, I don't upset your friend with my appearance[else if number of collected people > 2]'I prefer staying up here out of the way. That way, I don't upset the others with my appearance[else]'I prefer staying up here out of the way. That way I can be out of the way and read in peace[end if]. It also means I'm free to relax and get some relief if I need it,' he adds with a grin and a stroke across his semi-hard cock.[at random]";
 
 to say HayatoHistory:
 	say "     You ask the red oni to remind you of how he came to be this fearsome demon ogre he is now, and while he is not thrilled to tell you about it again, he does you the favor.";
@@ -431,6 +419,7 @@ to say HayatoBond:
 Section 4 - SEX PATH I Can Haz Sexy Oni?
 
 to say sexwithHayato:
+	project Figure of Hayato_icon;
 	if HP of Hayato < 6:
 		say "ERROR-Hayato-[HP of Hayato]F: You shouldn't be able to find me.";
 	else if HP of Hayato is 6:
@@ -438,7 +427,6 @@ to say sexwithHayato:
 	else if HP of Hayato < 10:
 		if HP of Hayato is 7 and Energy of Hayato is 1:
 			say "     You are about to proceed with the seduction path, which will lock you into attempting to introduce the oni to sex on your own terms. Do you wish to proceed?";
-			LineBreak;
 			say "     ([link]Y[as]y[end link]) - Yes, you want to get sexual with him.";
 			say "     ([link]N[as]n[end link]) - No, you want to think about it some more.";
 			if Player consents:
@@ -463,18 +451,21 @@ to say sexwithHayato:
 		if HP of Hayato is 10:
 			say "     Tempted by your continued advances, Hayato makes no attempt to stop you this time. There's visible signs of arousal on the oni, a growing lust in his eyes and his nipples getting hard. You move sensually to arouse him, but take care not to rush it, lest he realize what is going on. You move in beside him, resting your body gently against his. You slide an arm along his strong back and snuggle up beside him, your other hand moving in on your target.";
 			say "     You slip your fingers under the tiger-skin fur, reaching for his groin. But rather than the feel of hard, phallic meat, you're met with hard, blocky metal instead. Surprised, your subtlety fails you and you start groping at it, trying to understand what you're feeling. Noticing your activity, he flips up his loincloth, showing that his loins have been girded in some form of chastity device. It seems quite ancient, a crudely mechanical thing of forged iron with a large lock built into it. It is held on by a tightened metal band around his waist and there is a block of metal with drainage holes on it placed tightly over his loins. Another band runs between his legs and his butt cheeks with only a saw-toothed channel cut into it for waste to pass through, but clearly unusable for penetration from the other direction.";
+			WaitLineBreak;
 			say "     'As I've said, I've taken steps to ensure that I could not give in to my lusts and attack others. Since I've transformed, I've felt the urges to sate my lusts on those around me. As I struggled to rein in my monstrous libido, I came across a strange doorway and found myself in a mysterious shop on the other side. The strange jackal woman who ran the shop gave me this, saying she had it among her relics and that it would help me. It has been... difficult... at times, but it has helped me to keep my desires in check. And before you ask, I did not take the key so I could not be tempted to free myself of it. It would be so good to be allowed some relief though,' he adds shifting uncomfortably.";
 			say "     Listening to him, you are surprised by the lengths he's gone to fight his lusts. Having checked him over thoroughly, you can tell he's been locked up tight. The device, despite its age, seems surprisingly resilient. Having gotten your hopes up for a romp with the big, strong oni, you find yourself tempted to find a way to get him out of that so you can have the fun you've been denied. You'll need to [if NermineTalk is 0]track down this [bold type]mysterious shop[roman type] and talk to this jackal he mentioned[else]visit Nermine again and see what she has to say about this[end if].";
-		else if (diceroll + bonus) >= targetnum:
-			say "You roll 1d20([diceroll])+[bonus] = [special-style-1][diceroll + bonus][roman type] vs [special-style-2][targetnum][roman type] (Charisma Check):[line break]";
-			say "As you see signs of arousal on the oni, a growing lust in his eyes and his nipples getting hard, you slip a little closer. You move sensually to arouse him, but take care not to rush it, lest he realize what is going on. While it doesn't take but a few moments in reality, it seems so much longer before you manage to move in next to him. You slide an arm along his strong back and snuggle up beside him, your other hand moving in on your target.";
+		else if diceroll + bonus >= targetnum:
+			say "You roll 1d20([diceroll])[if bonus >= 0]+[end if][bonus] = [special-style-1][diceroll + bonus][roman type] vs [special-style-2][targetnum][roman type] (Charisma Check):[line break]";
+			say "     As you see signs of arousal on the oni, a growing lust in his eyes and his nipples getting hard, you slip a little closer. You move sensually to arouse him, but take care not to rush it, lest he realize what is going on. While it doesn't take but a few moments in reality, it seems so much longer before you manage to move in next to him. You slide an arm along his strong back and snuggle up beside him, your other hand moving in on your target.";
 			say "     You slip your fingers under the tiger-skin fur, reaching for his groin. But rather than the feel of hard, phallic meat, you're met with hard, blocky metal instead. Surprised, your subtlety fails you and you start groping at it, trying to understand what you're feeling. Noticing your activity, he flips up his loincloth, showing that his loins have been girded in some form of chastity device. It seems quite ancient, a crudely mechanical thing of forged iron with a large lock built into it. It is held on by a tightened metal band around his waist and there is a block of metal with drainage holes on it placed tightly over his loins. Another band runs between his legs and his butt cheeks with only a saw-toothed channel cut into it for waste to pass through, but clearly unusable for penetration from the other direction.";
+			WaitLineBreak;
 			say "     'As I've said, I've taken steps to ensure that I could not give in to my lusts and attack others. Since I've transformed, I've felt the urges to sate my lusts on those around me. As I struggled to rein in my monstrous libido, I came across a strange doorway and found myself in a mysterious shop on the other side. The strange jackal woman who ran the shop gave me this, saying she had it among her relics and that it would help me. It has been... difficult... at times, but it has helped me to keep my desires in check. And before you ask, I did not take the key so I could not be tempted to free myself of it. It would be so good to be allowed some relief though,' he adds shifting uncomfortably.";
 			say "     Listening to him, you are surprised by the lengths he's gone to fight his lusts. Having checked him over thoroughly, you can tell he's been locked up tight. The device, despite its age, seems surprisingly resilient. Having gotten your hopes up for a romp with the big, strong oni, you find yourself tempted to find a way to get him out of that so you can have the fun you've been denied. You'll need to [if NermineTalk is 0]track down this [bold type]mysterious shop[roman type] and talk to this jackal he mentioned[else]visit Nermine again and see what she has to say about this[end if].";
 			now HP of Hayato is 10;
 		else:
-			say "You roll 1d20([diceroll])+[bonus] = [special-style-1][diceroll + bonus][roman type] vs [special-style-2][targetnum][roman type] (Charisma Check):[line break]";
-			say "You try to be subtle in your approach, wanting to get the red oni turned on without him becoming suspicious. At first, it seems to be working, but either you move too quickly or say something too obvious and he notices you reaching out to grope him. He pushes you back firmly, knocking you on your ass. 'You should leave now,' he growls. 'Return when you're able to control yourself better.' Given his mood, you decide to head off for now, planning to return later. Part of you feels sorry for trying to get him worked up, but the larger part of you hopes you'll be successful next time. Certainly, he was getting turned on. Perhaps you'll be able to convince him next time.";
+			say "You roll 1d20([diceroll])[if bonus >= 0]+[end if][bonus] = [special-style-1][diceroll + bonus][roman type] vs [special-style-2][targetnum][roman type] (Charisma Check):[line break]";
+			say "     You try to be subtle in your approach, wanting to get the red oni turned on without him becoming suspicious. At first, it seems to be working, but either you move too quickly or say something too obvious and he notices you reaching out to grope him. He pushes you back firmly, knocking you on your ass. 'You should leave now,' he growls. 'Return when you're able to control yourself better.' Given his mood, you decide to head off for now, planning to return later. Part of you feels sorry for trying to get him worked up, but the larger part of you hopes you'll be successful next time. Certainly, he was getting turned on. Perhaps you'll be able to convince him next time.";
+			WaitLineBreak;
 			move player to Rusty Walkways;
 	else if HP of Hayato is 10:
 		say "     You eye Hayato and his strong, muscular body, but there's little chance of having fun with him until the chastity belt is removed. You should [if NermineTalk is 0]search for this [bold type]mysterious shop[roman type] where he got the[else]talk to Nermine and see what she has to say about this[end if] restraint if you want to help the poor fellow out of it.";
@@ -492,7 +483,6 @@ Section 5 - Belt Unlock
 to say HayatoBeltUnlock:
 	now HayatoDoneTalking is true;
 	say "     With the key in your hand, you are now able to free the oni from his chastity belt. With a smile, you tell Hayato that you have made it, and got the key from Nermine. 'You have it with you?!' he asks, and you show it to him, holding it between your fingers in plain view of his big eyes. 'Well, things get real, now...' he responds, and for a moment, he seems to show fear of what is to come. 'I... know I agreed on having you help me take this belt off, but seeing the key and being so close to the idea of having it off me...' he does not finish his sentence, but you have an idea of how he is feeling, right now. Perhaps you should comfort him, in some way before proceeding any further with this.";
-	LineBreak;
 	say "     ([link]Y[as]y[end link]) - In fact, you also had another goal in mind when doing this. Make a move on the big oni.";
 	say "     ([link]N[as]n[end link]) - Pat on his shoulder and talk to him.";
 	if Player consents:
@@ -515,6 +505,7 @@ to say HayatoBeltUnlock:
 			NPCSexAftermath Player receives "PussyFuck" from Hayato;
 		else:
 			NPCSexAftermath Player receives "AssFuck" from Hayato;
+		WaitLineBreak;
 		move Hayato to Darkened Alcove;
 		move player to Darkened Alcove;
 		now HP of Hayato is 16;
@@ -529,11 +520,17 @@ to say HayatoBeltUnlock:
 		say "     Seeing the oni in such an awkward situation, you decide to brush it off and even throw a joke or two into the conversation. Somehow, you make him feel better about all this, and he begins to calm down. A safe place, he asked? Well, you happen to have one, and perhaps it is time to forward the invitation at once. After all, you did not got through all this trouble just to have him run into anything dangerous.";
 		WaitLineBreak;
 		say "     He seems surprised, as he was not expecting such a thing. 'Wait, you're inviting me to your shelter? But... I'm still a demonic ogre, are you sure that's a good idea?' he asks, and once again, you find yourself in the position to reassure him that everything will, again, be completely and absolutely fine. Even more, you remind him that he should have listened to you in the first place when he questioned you, but all in a playful fashion. 'Ah, well, in that case... I guess it'll be fine, right? Anything is better than this hole...' he replies, and seems to actually be very eager at the prospect of living with you, as you proved to be quite good of a company during these days. 'Uh, my only concern is whether I'll even fit inside. Is it a big place?' While you are helping him up, you pat his shoulder and tell him not to worry, that you can probably squeeze him in somewhere.";
+		WaitLineBreak;
 		move Hayato to Darkened Alcove;
 		move player to Darkened Alcove;
 		now HP of Hayato is 16;
 		increase score by 25;
 		unleashredoni;
+
+to unleashredoni:
+	if "Red Oni" is a Name listed in Table of Random Critters:
+		now area entry is "Capitol";
+		now non-infectious entry is false;
 
 Section 6 - Sex with Hayato
 
@@ -581,7 +578,7 @@ to say hayatosexmenu:
 			choose row y from the table of fucking options;
 			say "[link][y] - [title entry][as][y][end link][line break]";
 		while sextablerun is 0:
-			say "Pick the corresponding number> ";
+			say "Pick the corresponding number> [run paragraph on]";
 			get a number;
 			if calcnumber > 0 and calcnumber <= the number of filled rows in table of fucking options:
 				now current menu selection is calcnumber;
@@ -617,14 +614,14 @@ to say hayatosex1:
 	NPCSexAftermath Player receives "OralCock" from Hayato;
 
 to say hayatosex2:
-	say "     Wanting some relief, you look over at the docile oni and grin. Noticing you pulling out your [cock size desc of Player] cock, his own manhood stirs. Offering it to the sitting fellow, he licks his thick lips with his bright red tongue, but hesitates. Running a hand through his coarse hair, you tell him that you know he wants it and to just be a good cockslut and get to work. The next pass of his tongue has it slide across your glans before he assents and opens his mouth to take it in[if Cock Length of Player > 36]. It takes quite a bit of effort even for the muscular oni to push his maw and throat over your massive meat, but he continues with growing enthusiasm until he's managed to stretch himself around it all[else if Cock Length of Player > 24]. It takes him some effort to him to get your enlarged meat into his maw and down his throat, but he does so with growing enthusiasm until he's succeeded[else if Cock Length of Player > 12]. He works the full length of your meat into his maw and throat with growing enthusiasm until it's all in there[else]. He takes the full length of your meat into his maw with a growing enthusiasm[end if].";
+	say "     Wanting some relief, you look over at the docile oni and grin. Noticing you pulling out your [cock size desc of Player] cock, his own manhood stirs. Offering it to the sitting fellow, he licks his thick lips with his bright red tongue, but hesitates. Running a hand through his coarse hair, you tell him that you know he wants it and to just be a good cockslut and get to work. The next pass of his tongue has it slide across your glans before he assents and opens his mouth to take it in. [if Cock Length of Player > 36]It takes quite a bit of effort even for the muscular oni to push his maw and throat over your massive meat, but he continues with growing enthusiasm until he's managed to stretch himself around it all[else if Cock Length of Player > 24]It takes him some effort to him to get your enlarged meat into his maw and down his throat, but he does so with growing enthusiasm until he's succeeded[else if Cock Length of Player > 12]He works the full length of your meat into his maw and throat with growing enthusiasm until it's all in there[else]He takes the full length of your meat into his maw with a growing enthusiasm[end if].";
 	say "     While working his mouth and tongue over your [Cock of Player] shaft, the red oni [one of]pants and moans around your cock while busily pumping his own hard and fast[or][if CockName of Player is not listed in infections of InternalCockList]eagerly rubs your [Ball Size Adjective of Player] [Balls] in his strong hand[else if Player is female]stuffs a thick finger into your cunny and works it in and out[else if anallevel is 3]teases a finger at your anus before stuffing it into your tight hole[else]kneads your ass with his strong hand[end if][or]grabs your ass and moans, clearly wanting you to fuck his face[or]has an expression of lustful delight on his otherwise fearsome face[at random]. You rub your hands through his rough hair and over those horns of his. When your own excitement crests, you grab onto those horns and pull him into each thrust you make, having your way with the muscular demon ogre's mouth until you cum a [Cum Load Size of Player] load of gooey semen down his throat. As he's swallowing down your seed, he pumps his own red pillar until his jizz splatters everywhere. Sated now, you push his head away and leave the big guy in an orgasmic daze while some of your excess seed leaks from the corner of his mouth.";
 	NPCSexAftermath Hayato receives "OralCock" from Player;
 
 to say hayatosex3:
 	if lust of hayato is even:
 		say "     Deciding you want another ride on the oni's thick pole, you climb up into his lap facing him and pull his loincloth up, giving you free access to his impressive manhood. With it hard and throbbing between your legs, you [if scalevalue of Player < 3]nuzzle at the oni's manly chest[else if scalevalue of Player is 3]nuzzle at his strong shoulders and neck[else]press your [bodydesc of Player] body against his mighty chest and kiss his fearsome face[end if], enjoying the soft moan he gives as you do. 'Oh, I want you so bad. Please, let me fuck you,' he pants. His cock pulses with obvious need as it dribbles precum against your ass as you grind against it.";
-		say "     [one of]After some more teasing grinding against his cock that has him clawing at the floor and begging you to be let in[or]After tantalizing him with several passes of your pussy along his shaft[or]After faking changing your mind and moving to pull away[at random], you guide his cock to your dripping folds and ease yourself down onto it. You work your pussy lips slowly down over his cock, taking his thick meat into your vagina gradually[if Cunt Tightness of Player < 8 or Cunt Depth of Player < 13]. It is slow going at first given its size, but you eventually manage to get it all stuffed into you somehow[else]. Your [cunt size desc of Player] cunt is able to take his impressive shaft with relative ease, leaving you free to enjoy taking it inch by inch[end if]. Your slow progress turns the muscled oni into putty in your hands, the buff guy moaning and panting as his red rocket throbs and spurts precum into you.";
+		say "     [one of]After some more teasing grinding against his cock that has him clawing at the floor and begging you to be let in[or]After tantalizing him with several passes of your pussy along his shaft[or]After faking changing your mind and moving to pull away[at random], you guide his cock to your dripping folds and ease yourself down onto it. You work your pussy lips slowly down over his cock, taking his thick meat into your vagina gradually. [if Cunt Tightness of Player < 8 or Cunt Depth of Player < 13]It is slow going at first given its size, but you eventually manage to get it all stuffed into you somehow[else]Your [cunt size desc of Player] cunt is able to take his impressive shaft with relative ease, leaving you free to enjoy taking it inch by inch[end if]. Your slow progress turns the muscled oni into putty in your hands, the buff guy moaning and panting as his red rocket throbs and spurts precum into you.";
 		say "     You ride up and down in his lap, pushing yourself down onto his cock with increasing gusto. The feel of that thick pillar of red meat pulsing inside you as it slides in and out sending waves of delight through you. You find having your way with the oni's shaft very pleasurable; his big, virile cock so delightfully responsive. And having the strong, muscled oni moaning loudly as you take what you want from him makes it all the better.";
 		say "     And speaking of taking what you want, as you [one of]give his balls a firm squeeze[or]plunge fully down onto his cock again[or]gyrate your hips and squeeze your inner walls around his cock[at random], he groans deeply and blasts thick bursts of cum from his throbbing manhood. You can feel each large blast shoot inside you, splattering against your cervix before being forced inside by the pressure of the next blast. His heavy flow easily fills your vagina to the brim and flows into your womb, working to fill it with his virile seed, though a considerable amount overflows around his shaft as well, staining his red flesh with streaks of white. His cum is quite thick, likely a result of his long build-up. And certainly there's plenty of it as well, allowing you to enjoy a womb-filling load of sloshing, hot cum. Once his long climax comes to an end, you rise off his softening shaft, a heavy flow of his seed running down your legs. You make a show of bending over, giving the dazed, grinning oni a clear view of your well-fucked hole before leaving him to recover his wits.";
 	else:
@@ -638,7 +635,7 @@ to say hayatosex3:
 to say hayatosex4:
 	if Libido of hayato is even:
 		say "     Deciding you want another ride on the oni's thick pole, you climb up into his lap facing him and pull his loincloth up, giving you free access to his impressive manhood. With it hard and throbbing between your legs, you [if scalevalue of Player < 3]nuzzle at the oni's manly chest[else if scalevalue of Player is 3]nuzzle at his strong shoulders and neck[else]press your [bodydesc of Player] body against his mighty chest and kiss his fearsome face[end if], enjoying the soft moan he gives as you do. 'Oh, I want you so bad. Please, let me fuck you,' he pants. His cock pulses with obvious need as it dribbles precum against your ass as you grind against it.";
-		say "     [one of]After some more teasing grinding against his cock that has him clawing at the floor and begging you to be let in[or]After tantalizing him with several passes of your pucker across his tip[or]After faking changing your mind and moving to pull away[at random], you guide his cock to your crinkled hole and ease yourself down onto it. You work your asshole slowly down over his cock, taking his thick meat into your back passage gradually[if scalevalue of Player < 4 and the player is not twistcapped]. It is slow going at first given its size, but you eventually manage to get it all stuffed into you somehow[else if Player is twistcapped]. Your stretchable insides are able to take his impressive shaft with relative ease, leaving you free to enjoy taking it inch by inch[else]. Your enlarged body is able to take his impressive shaft with relative ease, leaving you free to enjoy taking it inch by inch[end if]. Your slow progress turns the muscled oni into putty in your hands, the buff guy moaning and panting as his red rocket throbs and spurts precum into you.";
+		say "     [one of]After some more teasing grinding against his cock that has him clawing at the floor and begging you to be let in[or]After tantalizing him with several passes of your pucker across his tip[or]After faking changing your mind and moving to pull away[at random], you guide his cock to your crinkled hole and ease yourself down onto it. You work your asshole slowly down over his cock, taking his thick meat into your back passage gradually. [if scalevalue of Player < 4 and the player is not twistcapped]It is slow going at first given its size, but you eventually manage to get it all stuffed into you somehow[else if Player is twistcapped]Your stretchable insides are able to take his impressive shaft with relative ease, leaving you free to enjoy taking it inch by inch[else]Your enlarged body is able to take his impressive shaft with relative ease, leaving you free to enjoy taking it inch by inch[end if]. Your slow progress turns the muscled oni into putty in your hands, the buff guy moaning and panting as his red rocket throbs and spurts precum into you.";
 		say "     You ride up and down in his lap, pushing yourself down onto his cock with increasing gusto. The feel of that thick pillar of red meat pulsing inside you as it slides in and out sending waves of delight through you. You find having your way with the oni's shaft very pleasurable; his big, virile cock so delightfully responsive. And having the strong, muscled oni moaning loudly as you take what you want from him makes it all the better.";
 		say "     And speaking of taking what you want, as you [one of]give his balls a firm squeeze[or]plunge fully down onto his cock again[or]gyrate your hips and squeeze your inner walls around his cock[at random], he groans deeply and blasts thick bursts of cum from his throbbing manhood. You can feel each large blast shoot inside you, splattering hard against your prostate before being forced deep inside by the pressure of the next blast. His heavy flow easily fills your bowels to the brim, filling you with his virile seed, though a considerable amount overflows around his shaft as well, staining his red flesh with streaks of white. His cum is quite thick, likely a result of his long build-up. And certainly there's plenty of it as well, allowing you to enjoy a belly-stuffing load of sloshing, hot cum. Once his long climax comes to an end, you rise off his softening shaft, a heavy flow of his seed running down your legs. You make a show of bending over, giving the dazed, grinning oni a clear view of your well-fucked hole before leaving him to recover his wits.";
 	else:
@@ -660,8 +657,6 @@ to say hayatosex5:
 	NPCSexAftermath Hayato receives "AssFuck" from Player;
 
 to say hayatosex6:
-	setmonster "Red Oni";
-	choose row MonsterID from the Table of Random Critters;
 	say "     Suddenly however you're shoved against the nearest wall, proving that the oni is not compliant at all. 'So, remember how I said I'd like to take charge during some of our... sessions?' He growls, brushing his manly features against your [bodydesc of Player] body. You definitely recall this, as you had been fighting other mutants like him at the time. While you're thinking back, the big guy in front of you is leaning over you and practically brushing his cock against your [if scalevalue of Player < 3]chest, the size difference forcing him to wrap his big arms around you to keep you in his grasp and against the wall. The oni smirking down at you, shivers going down your spine[else if scalevalue of Player is 3]waist, allowing him to pin you against the wall and give you a fierce grin[else]own crotch leaving the two of you face to face, causing him to give you quite the feral grin[end if]. Before you can even react, you're flipped around and bent against the wall, your face pushed flat.";
 	say "     Whatever clothing you're wearing, if any is quickly removed in a rapid fashion by the horny oni, as his clawed hands grip at your [if scalevalue of Player > 3]rather plump ass cheeks, spreading them apart and teasing your puckered hole with his cock, the tip pushing in easily but not all the way[else if scalevalue of Player < 4 and the player is not twistcapped]small ass cheeks, spreading them apart to poke at your wrinkled hole with his cock. It takes some effort to push the tip in due to the size difference but he manages, however, he doesn't shove in all the way[else if Player is twistcapped]small ass cheeks, separating them from each other to put his tip at your hole. Surprisingly he easily pushes in rather easily but doesn't go in all the way[end if]. Not feeling the full length of it in you causes you to give out a groan of need which in turn makes Hayato chuckle at you. 'How about you beg for it slut?' The oni demands, turning the tone he used on the others onto you. Rather instantly your face flushes with emotions, most of it you're sure is lust, but none the less what he says gets to you.";
 	WaitLineBreak;
@@ -694,6 +689,7 @@ Noh Mask	"Noh Mask"
 Noh Mask is a situation.
 ResolveFunction of Noh Mask is "[ResolveEvent Noh Mask]". Noh Mask is inactive. The level of Noh Mask is 9.
 Sarea of Noh Mask is "Campus".
+
 when play begins:
 	add Noh Mask to BadSpots of FurryList;
 	add Noh Mask to BadSpots of MaleList;
@@ -703,25 +699,27 @@ to say ResolveEvent Noh Mask:
 	if HP of Hayato is 11:
 		say "     Recalling Nermine's mention of the noh mask she wants, you search around some likely possibilities for where it may be. You fortunately find it hanging on the wall of the Japanese Language professor's office. Unfortunately though, that office is busily occupied by a trio of felines in ninja outfits with a humanoid female pinned to the desk beneath them. The woman's clothing is torn, exposing much of her exaggeratedly proportioned body. Her eyes are very large and visible through her overhanging bangs of blue hair. As the ninjas run their greedy paws over her smooth skin and grope her breasts, she moans and squirms. 'Ecchi! No, bad kitties!' she says before breaking down into a long moan as one of them slips a pair of fingers into her wet pussy.";
 		say "     It looks like they'll be here for a while, so you'll have to deal with them if you want to get the mask.";
-		say "     [bold type]Shall you attack the ninjas?[roman type][line break]";
-		LineBreak;
+		say "[line break]     [bold type]Shall you attack the ninjas?[roman type][line break]";
 		say "     ([link]Y[as]y[end link]) - Yes.";
 		say "     ([link]N[as]n[end link]) - No.";
 		if Player consents:
+			LineBreak;
 			say "[nohmaskninja]";
 		else:
+			LineBreak;
 			say "     You decide to postpone getting the mask, at least for now. Hayato will have to wait a little longer.";
 			now HP of Hayato is 12; [didn't fight]
 	else if HP of Hayato is 12: [lost or didn't fight]
 		say "     Returning in search of the Japanese noh mask, you find them still going at it with the anime babe. She's pinned down onto the desk by one of them as he pounds into her. The others are [one of]groping her large boobs[or]taking turns getting blowjobs[or]recovering after fucking her[at random].";
 		say "     It looks like they'll be here for a while, so you'll have to deal with them if you want to get the mask.";
-		say "     [bold type]Shall you attack the ninjas?[roman type][line break]";
-		LineBreak;
+		say "[line break]     [bold type]Shall you attack the ninjas?[roman type][line break]";
 		say "     ([link]Y[as]y[end link]) - Yes.";
 		say "     ([link]N[as]n[end link]) - No.";
 		if Player consents:
+			LineBreak;
 			say "[nohmaskninja]";
 		else:
+			LineBreak;
 			say "     You decide to postpone getting the mask, at least for now. Hayato will have to wait a little longer.";
 			now HP of Hayato is 13;
 	else if HP of Hayato is 13:
@@ -730,7 +728,6 @@ to say ResolveEvent Noh Mask:
 	else:
 		say "ERROR-Hayato-[HP of Hayato]E: This event (Noh Mask) should not be available.";
 		now Noh Mask is resolved;
-
 
 to say nohmaskninja:
 	say "     As you advance of the group, one of the ninjas notices you with a flick of his ear, turning quickly to face you. The others continue to molest the pinned woman, leaving you to their comrade while they rape the squirming, moaning female.";
@@ -752,7 +749,6 @@ to say nohmaskninja:
 		say "     Fleeing from the shadowy feline, you dash back down the hall. As you run, you can hear the giggling cries of the anime babe. 'Oh no! Please don't touch me there. Yes, just like that.' You decide it would be best to try again later.";
 		if HP of Hayato < 12:
 			now HP of Hayato is 12; [lost]
-
 
 to say nohmaskanimebabe:
 	challenge "Anime Babe";
@@ -868,22 +864,19 @@ to say XaedihrTalkYokLair:
 	WaitLineBreak;
 	say "     'Hm... It's not about that, I see.' he makes a pause, as he now takes a seat. You have arranged a neat talking spot with a few chairs around a table that you could put together, though Hayato can only sit on the floor due to his size... 'Alright, what is this all about?' Now that you've got the sorcerer's full attention, Hayato begins to explain everything from the beginning. How he was turned, how did he meet you and how things evolved from there, to when you reported sightings of wild red onis and after you both came to the conclusion that some sort of lair should exist around here, where all the onis are coming from. He mentions the particular detail that he was turned by a specific oni, an even larger one than himself. 'And you are telling me this because...?' he asks, expecting a quick follow-up.";
 	say "     You intervene here, claiming you thought that, due to his unique abilities, he might be able to help you locate this place and do something about it, to keep the onis from assaulting the city. You explain that you suspect they are raising an army of onis inside, by assaulting their victims and turning them into more and more red onis. Things wouldn't look good if this got out of hand. He lets out another sigh. 'Now you know why I hate most demons... They only cause trouble when they lose the notion of limits. Anyway... You want me to help you locate this place, and then what? You want to go in there, make your own justice...? What is this all about?' he asks you. As you look back to Hayato, you consider an answer...";
-	LineBreak;
-	say "     [bold type]What drives you to locate this dangerous demon lair[roman type]? You get a feeling the sorcerer expects you to have a reason he considers valid...";
+	say "[line break]     [bold type]What drives you to locate this dangerous demon lair[roman type]? You get a feeling the sorcerer expects you to have a reason he considers valid...";
 	say "     [link](1)[as]1[end link] - For revenge. You want to teach whoever did this to Hayato a lesson.";
 	say "     [link](2)[as]2[end link] - For fun. It should be a blast kicking some oni ass.";
 	say "     [link](3)[as]3[end link] - To protect the city. These demons are a danger to everyone.";
 	say "     [link](4)[as]4[end link] - To help Hayato. Do you really need a reason other than to offer him closure?";
 	now calcnumber is 0;
 	while calcnumber < 1 or calcnumber > 4:
-		say "Choice? (1-4)>[run paragraph on]";
+		say "Choice? (1-4)> [run paragraph on]";
 		get a number;
-		if calcnumber is 1 or calcnumber is 2 or calcnumber is 3 or calcnumber is 4:
-			break;
-		else:
+		if calcnumber < 1 or calcnumber > 4:
 			say "Invalid choice. Type [link]1[end link] if your motives are centered around revenge, [link]2[end link] if it is just for fun, [link]3[end link] if it is to protect the city or [link]4[end link] if you want to say you simply intend to help Hayato solve this matter.";
+	LineBreak;
 	if calcnumber is 1:
-		LineBreak;
 		say "     You answer that you simply intend to avenge Hayato. You want to show that oni who turned him into one of them that he should mind his business and get back to where he belongs... You want him to regret having done what he did to him and all those people he assaulted. Xaedihr, however, does not seem too impressed by your response. 'I figured. This is just a personal vendetta, isn't it? Forget it, then. I'm not allowing yourselves to get killed. Or worse, to join them.' Hal steps forward and intervenes 'What? No, please! You've got to help us find that place! They're dangerous! We can't just let them roam freely, we've got to do something...!'";
 		say "     The sorcerer closes his eyes and shakes his head. 'Not with your impulsive actions. I might look into this lair myself, and if I find it, I will seal it away. Until then, I suggest you forget about it. Consider your quest resolved.' He says nothing more, and closes the subject definitely.";
 		WaitLineBreak;
@@ -891,18 +884,15 @@ to say XaedihrTalkYokLair:
 		say "     It seems you have failed to convince Xaedihr to help you, but there are more people who might assist you. Perhaps [bold type]other powerful demons, or a knowledgeable sorceress[roman type]... You do know one, right? In the [bold type]mall[roman type] tending to a shop?";
 		now Resolution of YokLairXaedihr is 99; [failed to earn his assistance]
 	else if calcnumber is 2:
-		LineBreak;
 		say "     Do you really even need a reason other than just wanting to get there and kick some demon ass by yourself? You think it would just be fun messing with these creatures and teaching them their place. Now, you do make Xaedihr laugh with your statement. 'Oh, you're funny... I'm sure the demons would also find you funny if you told them that. You want to enter their territory and just kick them in the balls like it's all a breeze? By all means, go on ahead!' - he then shifts his tone to a much more serious one - 'Just not with my help, though. Find someone else to get yourselves killed. End of discussion.' He breaks the conversation and abandons any further interaction with you and Hal.";
 		WaitLineBreak;
 		say "     You look back at the red oni, and he cannot hide the disappointment in his face. 'What kind of reply was that? Do you really want to just...?' he sighs, without finishing his sentence. 'Ah, well... Maybe we can find another way? I'm sure [bold type]someone else might be able to help us[roman type] locate that damned place...'";
 		say "     It seems you have failed to convince Xaedihr to help you, but there are more people who might assist you. Perhaps [bold type]other powerful demons, or a knowledgeable sorceress[roman type]... You do know one, right?";
 		now Resolution of YokLairXaedihr is 99; [failed to earn his assistance]
 	else if calcnumber is 3:
-		LineBreak;
 		say "     Of course, the only valid reason you can see is that you want to protect the city against this menace. In no way you could leave this matter unattended knowing the danger it poses to everyone else. Xaedihr seems to like this response, and compliments you with a smile. 'Wise, my friend. That is a good enough reason to take things into your own hands. But I must warn you, places like this are very, very dangerous. You might lose your soul as soon as you enter, and the same goes for your friend... If you want to do this, you have to be absolutely sure you bring enough firepower to face those powerful demons in case things go wrong.' Both you and Hayato pay close attention to his words as he explains things in detail.";
 		YoukaiLairXaedihrPath1;
 	else if calcnumber is 4:
-		LineBreak;
 		say "     Do you really need any reason other than wanting to help Hayato solve this issue once and for all? You wish to provide him the closure he deserves and get rid of this menace. For his sake and for the sake of others who might face the same fate as him, or even worse. Xaedihr, however, does not seem too thrilled by your motivations. 'A stubborn motive, and a quite dangerous one to have, as well. You wish to bring your friend closure by putting you both in danger, and that also means you have no aim other than just getting it done. You might end up having a bad time there, not to mention how powerful these demons can be if you go unprepared... But I can't help but feel sympathetic for your reasons.'";
 		say "     The sorcerer makes a pause, considering this matter carefully. 'Anyway, you are not being a total moron about it, so... I guess I'll help you. Under one condition, though. You must prepare. Bring enough firepower to face your enemies in case things go wrong, and remember there are people who would appreciate your success. This is not just about closure, this is about all the people who are under the threat of an imminent demon invasion.' With that said, now both you and Hayato pay close attention to his words as he explains things in detail.";
 		YoukaiLairXaedihrPath1;
@@ -913,7 +903,6 @@ to YoukaiLairXaedihrPath1:
 	say "     'First of all, you have to look like you are one of them. This could be achieved in many different ways... But... right now you only have one possible way.' He takes a couple of seconds to read something on his book, and then turn to you. 'By utilizing a [bold type]visage[roman type] that I am, fortunately, able to craft. You will look like one of them without the need to become transformed the way Hayato was. This would also solve the next problem I am going to refer to. Your [bold type]essence[roman type], which is something your friend lacks despite his appearance and, which in turn, you would lack as well, will be a dead giveaway to them. This visage will provide that and more, given that you acquire what I need.' He then turns to Hayato, looks at him from head to feet, then back at you. 'It's not like your friend is a fully fake oni, by any means. It's just that the essence he carries through the transformation is negligible. It can be enhanced, however. Safely. And I do happen to know how without having to send you into a regretfully painful errand.'";
 	WaitLineBreak;
 	say "     Xaedihr then takes a moment to breathe, and follows up with a sigh... 'Anyway... I will have to extract some semen from the red oni.' Hayato's eyes widen at those words, as they were quite unexpected coming from a person like the dark mage himself. But before he can say anything, the half-demon continues 'I would of course use a technique that would make short of his stamina. I understand if you don't agree with this procedure, but it is the only option.'";
-	LineBreak;
 	say "     With the half-demon's proposition in the air, you only have to consider if either you want it or not. 'So, shall I begin?' When you turn to Hayato, he lets you know he is fine with it, and actually seems a little curious.";
 	say "     ([link]Y[as]y[end link]) - Let Xaedihr extract Hayato's [']essence['] using that quite pleasurable technique.";
 	say "     ([link]N[as]n[end link]) - You don't agree with this. Do not allow things to proceed.";
@@ -970,6 +959,7 @@ to say MogdrazTalkYokLair:
 		ItemGain visage red oni by 1 silently;
 		WaitLineBreak;
 		say "     With the deal having been finalized, you are escorted out of Mogdraz's Chambers and outside the Club. Hayato follows after you, and while he did not notice anything... off, specifically, he still thinks it is quite odd that Mogdraz did not ask anything in return. 'So, what sort of deal did you have with him? He was so friendly... It gave the me chills, I think I'd prefer if he wasn't! Are, by any chance...?' He does not finish that question, but you do give him the sign that you have [']something['] going with him. Hayato cannot help but chuckle to himself. 'Alright, alright... Guess you are into the big demons a lot, huh...!' With a nod, you let the red oni return to the library as you consider your next steps.";
+		WaitLineBreak;
 		move player to Hellfire Club;
 		now Resolution of YokLairMogdraz is 2; [Youkai Lair unlocked through Mogdraz's Path]
 		now Resolution of YokLairXaedihr is 99;
@@ -984,13 +974,11 @@ to say MogdrazTalkYokLair:
 		say "     A soul contract, he says. Hayato's expression shows that he really does not like the idea. 'Either you or your friend, if you care so much for that little thing you carry inside you. I would be, however, willing to take just a portion of your soul, but if your friend prefers to volunteer, I would require its entirety, instead. A mere token of loyalty, as I have previously stated. You shall be provided your freedom as long as your life is allowed to take its natural course. It's as if nothing changed, and you might even live a more... comfortable life. But once death takes you... Well. At least you'll know your fate. Any soul of mine, once it has left its shell... stays with me.'";
 		WaitLineBreak;
 		say "     'The reason I need this is that the dangers lying in that place are far more concerning than what your minds can even fathom. Your failure would pose a risk to me, and this way, I can have some control over the situation in case things go wrong. We can never be too careful, you know... Having them hold control of either of you could prove catastrophic to my people's safety, as you know of this location... and so would they. This will ensure they won't know. Like I said, a mere token of loyalty.' As Mogdraz is finished with the explanation, he prompts you with a question. 'So, are we doing a soul contract, or... should we dismiss this reunion right away?' he asks, and you are expected to answer now. Your red oni friend clearly disagrees with this deal, but he will let you do what you think is best. He won't agree on giving out his own soul, however, unless you find a way to persuade him.";
-		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Accept the deal and choose a procedure[bold type]. Warning[roman type]: there is no way back once you accept it.";
 		say "     ([link]N[as]n[end link]) - You would rather keep your souls intact.";
 		if Player consents:
 			LineBreak;
 			say "     You feel Mogdraz's joy hearing your words of acceptance, as he enthusiastically replies 'Splendid! Now, you just made my day...!' He then invokes a sheet of paper out of thin air with a set of quill and ink, as it was once done in older times, but before he hands it over, he looks at both you and Hayato before throwing you another question. 'Very well, then, which one of you shall I claim? Or... partially claim.' A grin draws itself across his face, one that would send shivers down your spine by just looking at it. Your oni friend really does not like this, and if you intended on providing his soul, you will still need to persuade him.";
-			LineBreak;
 			say "     ([link]Y[as]y[end link]) - Let Mogdraz claim ownership of a portion of your soul.";
 			say "     ([link]N[as]n[end link]) - [bold type](Charisma Roll) [roman type]Convince Hayato to hand his soul over to the Demon Lord.";
 			if Player consents:
@@ -1000,9 +988,9 @@ to say MogdrazTalkYokLair:
 				LineBreak;
 				say "     Turning to Hayato, you politely ask him if he would be keen on giving out his soul to the Demon Lord. 'Wait, what?! You're not seriously suggesting that I...?' You stop him there, and explain things carefully, that it actually won't matter much as long as he's living, that this is merely a token of loyalty which he does not need to fear.";
 				WaitLineBreak;
-				let bonus be (( charisma of player minus 10 ) divided by 2);
+				let bonus be ( charisma of player minus 10 ) divided by 2;
 				let diceroll be a random number from 1 to 20;
-				say "You roll 1d20([diceroll])+[bonus] = [special-style-1][diceroll + bonus][roman type] vs [special-style-2]13[roman type] (Charisma Check):[line break]";
+				say "You roll 1d20([diceroll])[if bonus >= 0]+[end if][bonus] = [special-style-1][diceroll + bonus][roman type] vs [special-style-2]13[roman type] (Charisma Check):[line break]";
 				if diceroll + bonus >= 13:
 					say "     Your words are well received, fortunately. Hayato seems more at ease, now that you have reassured him. 'I... I still don't like it, but... I guess if there's not much harm in that, after all... Uh... well... Where do I have to sign, then...?'";
 					say "     'Down here, if you may.' says Mogdraz, pointing at the right location and handing him the quill. You see only demonic characters written on the contract, ones that you cannot understand, but it seems Hayato is able to read it just fine. After he has gone through the whole document, he writes his own name, which to you is also unreadable, and as soon as he is done, the paper simply disappears in thin air after flames... But you both know the contract has been sealed. 'Very well, now that business is over, I shall repay what I'm owed. Gladly.' says Mogdraz, smiling at you in an almost too friendly manner. It still sends you shivers.";
@@ -1045,6 +1033,7 @@ to YoukaiLairMogdrazPath2:
 	ItemGain visage red oni by 1 silently;
 	WaitLineBreak;
 	say "     With the deal having been finalized, you are escorted out of Mogdraz's Chambers and outside the Club. Hayato follows after you, and he cannot hide his concern... 'I really hope this was worth it, you know... I get the feeling this was a price too high to pay for whatever he gave us... But I could be wrong... I suppose...' With an understanding nod, you let the red oni return to the library as you consider your next steps.";
+	WaitLineBreak;
 	move player to Hellfire Club;
 	now Resolution of YokLairMogdraz is 2; [Youkai Lair unlocked through Mogdraz's Path]
 	now Resolution of YokLairXaedihr is 99;
@@ -1064,7 +1053,6 @@ to say LilithTalkYokLair:
 	WaitLineBreak;
 	say "     You explain the situation as briefly as possible, as you know best to not waste much of her time. 'Oh, my... You're saying... That you want to find this place and breach it, just like that? Well, but that would require a large amount of effort, wouldn't it? And large efforts need to be well paid... How about you let me turn your mighty oni friend into a full subservient demon? Wouldn't that be delightful...' Hayato frowns his eyebrows, and gives you a creeped out look. There is no way you would also agree with that, right? But then, she continues to speak, after giggling a bit. 'You should have seen the look on his face, just now... Oh, it would make such good use of that big and strong body of his, but I suppose... I do have another request.' You listen attentively to her next words, as they might be the only exchange you can make happen.";
 	say "     'As you may know, there is... A problem in this district. They're also big and red, but they're far from being as charming as your companion. Yes, you do know who I'm talking about, don't you? Those so called hellfire demons have been a nuisance since they moved in, and they've been causing me and my children a lot of needless trouble. Now, would you do me a big favor and retrieve something for me? Something that has been stolen by them, right under my nose. Thinking I wouldn't see them, those idiots... But that's besides the point. I need that particular object back, and they should learn their place, so... It's a double win.' An object, she says, yet she is not being clear about what kind of object it is. Perhaps you should question her in order to understand what you would be getting into?";
-	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Question what kind of object is that.";
 	say "     ([link]N[as]n[end link]) - Just let her continue.";
 	if Player consents:
@@ -1076,7 +1064,6 @@ to say LilithTalkYokLair:
 		say "     Perhaps not. You know she would not like it, so you let her proceed uninterrupted, instead.";
 		WaitLineBreak;
 	say "     'I shall provide you the location of this trinket of mine, and you will simply grab it and return it to me. Understood?' Well, that does not seem like much of an explanation, but it seems she is demanding an answer right now.";
-	LineBreak;
 	say "     ([link]Y[as]y[end link]) - You understand, and shall do whatever she asks.";
 	say "     ([link]N[as]n[end link]) - No, you don't want to do this for her and get involved with the Hellfire Demons.";
 	if Player consents:
@@ -1090,9 +1077,9 @@ to say LilithTalkYokLair:
 		say "     To your surprise, you see a single red deviless, who you can identify as a hellfire demoness, taking a turn into one of the dark alleys to the south. She seems to be carrying something enveloped in cloth, and looks like she is sneaking her way through. 'How odd is that? Looks like someone just stole it again...' says your friend, as you both see the ring starting to diminish the more she gets away from you. Knowing that this is your target, you proceed to stalk her immediately, before she gets out of your sight. Hayato lets you go in the front as he tries his best to not make the ground shake with each step, which inevitable has him have to stay back at some distance from you. He simply signals you to keep going...";
 		say "     So you do, and walk in the same alley as the deviless. Expecting a fight, you keep your guard up as you attempt to track her down through the desolate path, and at some point, you cannot even see Hayato anymore. Still, the ring glows, and you try your best to not lose your lead. Then, you turn to the side, and follow through another alley that is seemingly silent and empty...";
 		WaitLineBreak;
-		let bonus be (( perception of player minus 10 ) divided by 2);
+		let bonus be ( perception of player minus 10 ) divided by 2;
 		let diceroll be a random number from 1 to 20;
-		say "You roll 1d20([diceroll])+[bonus] = [special-style-1][diceroll + bonus][roman type] vs [special-style-2]12[roman type] (Perception Check):[line break]";
+		say "You roll 1d20([diceroll])[if bonus >= 0]+[end if][bonus] = [special-style-1][diceroll + bonus][roman type] vs [special-style-2]12[roman type] (Perception Check):[line break]";
 		if diceroll + bonus >= 12:
 			say "     Suddenly, a shadow leaps behind you, and attempts to push you against the wall, but you saw that coming. With a swift strike, you manage to disarm the attacker and gain the upper hand, escaping the imminent danger of her sharp blade. 'Curse you!' she mutters as she stands up, backing away from you. It appears that she dropped the trinket and ran away as soon as she realized you could retaliate effectively. Well, that was quite easy! All you have to do is to return to Hayato with the trinket in your hands. He is nearby, and seems glad to see you are doing fine with the objective accomplished.";
 		else:
@@ -1131,7 +1118,7 @@ HellfireLetterYokLairLilith is a situation.
 ResolveFunction of HellfireLetterYokLairLilith is "".
 Sarea of HellfireLetterYokLairLilith is "Nowhere".
 
-instead of going up from Grey Abbey Library while (Resolution of YokLairLilith > 2 and Resolution of YokLairLilith < 99 and HellfireLetterYokLairLilith is not resolved):
+instead of going up from Grey Abbey Library while Resolution of YokLairLilith > 2 and Resolution of YokLairLilith < 99 and HellfireLetterYokLairLilith is not resolved:
 	move player to Grey Abbey Library;
 	if debugactive is 1:
 		say "     DEBUG: HELLFIRE LETTER FROM ASSISTING LILITH DURING THE YOUKAI LAIR PRE-EVENT[line break]";
@@ -1151,9 +1138,7 @@ to say NermineTalkYokLair:
 		WaitLineBreak;
 		say "     When both of you arrive at her shop, the jackaless seems to sense your distress. 'Nermine sees the visitor is happy with purchase, so much that the customer has properly befriended the oni.' Right... You never mentioned Hayato that the shopkeeper was actually putting him on sale, and he seems very confused by her observation... But you urge to move on, and proceed to mention that you may require her help in finding this sort of lair where all the onis seem to be coming from. 'Nermine knows of this. The [bold type]Youkai Lair[roman type] is what the dear customer seeks, but a deal is required, as not all things are to be offered for free. There is a trinket that belongs to her, which was lost in that realm. If the dear visitor agrees on retriving this item for her upon arriving its location, Nermine will gladly offer her assistance.'";
 		say "     It appears that the jackal woman will only offer her aid if you agree on bringing this object back to her once you make it to the Lair, which means you will have [bold type]one additional objective[roman type] while inside, and you may not leave until that is completed.";
-		WaitLineBreak;
-		say "     [bold type]Do you wish to accept Nermine's offer and follow through her path to gain access to the Youkai Lair[roman type]? If you refuse, you will be able to explore other options, and if none suit your preferences, you may come back to accept the jackaless['] help, instead.";
-		LineBreak;
+		say "[line break]     [bold type]Do you wish to accept Nermine's offer and follow through her path to gain access to the Youkai Lair[roman type]? If you refuse, you will be able to explore other options, and if none suit your preferences, you may come back to accept the jackaless['] help, instead.";
 		say "     ([link]Y[as]y[end link]) - Yes, accept Nermine's offer.";
 		say "     ([link]N[as]n[end link]) - No, for now.";
 		if Player consents:
@@ -1167,8 +1152,7 @@ to say NermineTalkYokLair:
 		say "     Before you bring this subject back to Nermine, you arrange for a proper meeting with you and Hayato, as you want to have your oni friend present when discussing matters like these...";
 		WaitLineBreak;
 		say "     When both of you arrive at her shop, the jackaless welcomes you. 'Nermine's dear customer has returned, hopefully having reconsidered her offer?' she asks, and you are, obviously, expected to answer her question.";
-		say "     [bold type]Do you wish to accept Nermine's offer and follow through her path to gain access to the Youkai Lair[roman type]? If you refuse, you will be able to explore other options, and if none suit your preferences, you may come back to accept the jackaless['] help, instead.";
-		LineBreak;
+		say "[line break]     [bold type]Do you wish to accept Nermine's offer and follow through her path to gain access to the Youkai Lair[roman type]? If you refuse, you will be able to explore other options, and if none suit your preferences, you may come back to accept the jackaless['] help, instead.";
 		say "     ([link]Y[as]y[end link]) - Yes, accept Nermine's offer.";
 		say "     ([link]N[as]n[end link]) - No, for now.";
 		if Player consents:
@@ -1209,15 +1193,11 @@ name	desc	weight	object
 "visage red oni"	"This is the Visage Of The Red Oni, a mask that will allow you to travel through the Youkai Lair disguised as a Red Oni. "	0	visage red oni
 
 visage red oni is a grab object. it is not temporary.
-Usedesc of visage red oni is "[VisageRedOni use]";
+Usedesc of visage red oni is "[VisageRedOni use]".
+Scent of visage red oni is "Unsurprisingly, when you smell the mask, it does have a demonic scent to it. It almost feels like it belongs to a real red oni, which probably explains why it is so effective.".
 
 to say VisageRedOni use:
 	say "     You could put on the mask, but it would be fairly useless in here. Just make sure you are carrying it with you when you pay the Youkai Lair a visit.";
-
-instead of sniffing visage red oni:
-	say "Unsurprisingly, when you smell the mask, it does have a demonic scent to it. It almost feels like it belongs to a real red oni, which probably explains why it is so effective.";
-
-
 
 Section 8 - DELETED CONTENT
 
@@ -1243,7 +1223,6 @@ move player to Darkened Alcove;
 now HP of Hayato is 16;
 increase score by 25;
 unleashredoni;
-
 
 	else if HP of Hayato is 21 and Player is not neuter and a random chance of 1 in 3 succeeds:
 		say "     As you chat with Hayato, your thoughts return to the problem of the Oni Lair you discovered.";
@@ -1291,6 +1270,7 @@ Oni Lair	"Oni Lair"
 Oni Lair is a situation.
 ResolveFunction of Oni Lair is "[ResolveEvent Oni Lair]". Oni Lair is inactive. The level of Oni Lair is 9.
 Sarea of Oni Lair is "Nowhere".
+
 when play begins:
 	add Oni Lair to BadSpots of MaleList;
 	add Oni Lair to BadSpots of DemonList;
@@ -1302,7 +1282,7 @@ to say ResolveEvent Oni Lair:
 		say "     As your exploration takes you towards a collapsed office tower, you notice several odd things about it. The building has fallen onto its side and is largely ruin, having taken out several other buildings during its fall. This isn't too strange in and of itself, as several skyscrapers in this area were similarly knocked down during the eruption and quake, but the first few floor are mostly intact... you think. It is difficult to be certain, as it appears that concrete rubble has been piled up in front of the windows. Whether this was done to fortify the building or to block outside scrutiny is unclear, but it definitely would have taken an exceptional feat of strength to do so.";
 		say "     Since the building fell forward, the front entrance is blocked and buried by the tower's rubble. Knowing there has to be a way in since it's sealed up from the inside, you start to circle around the building in search of it. As you move around the back, a disturbing sight comes into view. The parking garage ramp has been converted into a gruesome entrance, lined with skulls (human and otherwise) on poles and littered with scraps of bones and cloth. The yawning mouth into darkness is like the cave of some monster's lair. Realizing what you've found is probably the lair of the oni creatures, you start to back away quickly, hoping you can get away unnoticed.";
 		WaitLineBreak;
-		let bonus be (( perception of Player minus 10 ) divided by 2 );
+		let bonus be ( perception of Player minus 10 ) divided by 2;
 		let fbonus be 0;
 		if "Bad Luck" is listed in feats of Player, decrease fbonus by 2;
 		if "Curious" is listed in feats of Player, decrease fbonus by 1;
@@ -1310,13 +1290,13 @@ to say ResolveEvent Oni Lair:
 		if "Stealthy" is listed in feats of Player, increase fbonus by 1;
 		if "Experienced Scout" is listed in feats of Player, increase fbonus by 1;
 		let diceroll be a random number from 1 to 20;
-		say "You roll 1d20([diceroll])+[bonus] = [special-style-1][diceroll + bonus + fbonus][roman type] vs [special-style-2]15[roman type] (Perception Check):[line break]";
-		if bonus + diceroll > 15:
-			say "As you're slipping away from the building, your suspicions are confirmed when you look behind you to see one of the red ogres emerging from an alleyway. Taking cover among the rubble, you wait for it to move past and descend into its lair before making your escape.";
+		say "You roll 1d20([diceroll])[if bonus + fbonus >= 0]+[end if][bonus + fbonus] = [special-style-1][diceroll + bonus + fbonus][roman type] vs [special-style-2]15[roman type] (Perception Check):[line break]";
+		if bonus + diceroll > 14:
+			say "     As you're slipping away from the building, your suspicions are confirmed when you look behind you to see one of the red ogres emerging from an alleyway. Taking cover among the rubble, you wait for it to move past and descend into its lair before making your escape.";
 			increase score by 10;
 			increase morale of Player by 1;
 		else:
-			say "As you're slipping away from the building, you are too focused on the cavernous entrance. You end up moving into full view of a red oni emerging from an alleyway on its way back to the lair. The demon ogre grins evilly at the prospect of one last victim before returning to its cave-like lair.";
+			say "     As you're slipping away from the building, you are too focused on the cavernous entrance. You end up moving into full view of a red oni emerging from an alleyway on its way back to the lair. The demon ogre grins evilly at the prospect of one last victim before returning to its cave-like lair.";
 		challenge "Red Oni";
 		if fightoutcome >= 10 and fightoutcome <= 19:				[WIN]
 			say "     Defeating the oni sends it back into its lair, snarling angrily. Knowing this will bring the wrath of its brethren upon you, you make haste to get away from here as quickly as possible. Now that you know where their lair is, you should probably talk to Hayato about it.";
@@ -1324,13 +1304,14 @@ to say ResolveEvent Oni Lair:
 			say "     After the red oni is done with you, he drags you to the entrance of the lair. At first, you fear (anticipate?) being dragged inside and assaulted by the whole of oni tribe, but are instead tied up to a large piece of rubble just outside. Your sticky, messy body is left there for its brethren to use as they return and as a warning to others who get too curious about the ruins. Once your captor is out of sight inside, you struggle against your bonds and are thankfully able to free yourself before any more of those creatures come home and find you there.";
 		else:													[FLEE]
 			say "     You manage to slip past the red oni and make a break for it. It snarls angrily at you, but rather than pursue you, it turns and rushes towards the ruins. It calls for its brethren to take up the hunt as you reach the alley and push yourself all the harder to get away. You don't stop running until you get all the way back to the area around those rusty walkways.";
+			WaitLineBreak;
 			move player to Rusty Walkways;
 		now HP of Hayato is 20;
 	else:
 		say "ERROR-Hayato-[HP of Hayato]E: This event (Oni Lair) should be closed at this time!";
 	now Oni Lair is resolved;
 
-to say onilairassault:
+[to say onilairassault:
 	now inasituation is true;
 	say "     Your journey back to the devastated area around the Capitol building is thankfully peaceful, probably having the formidable oni by your side has encouraged the other creatures to keep their distance. As you walk with Hayato, you try to talk with him to encourage him along, but he remains nervous. It is clear that he's still worried about his self-control. Knowing that he will need to be braver if this is to succeed, you tell him to man up and just draw strength from his new body. Continuing to hide from it won't help him now and that he'll need to fight them - oni to oni. He grumbles a little at this, but nods. With further encouragement, he does his best to stand tall by your side as you march up to the gates of the oni lair.";
 	say "     The entrance to the oni lair is foreboding, with the grisly signs of the creature's warning totems on display before it. But added to that are a pair of muscled oni just inside. Clearly standing guard, they snarl and march out as you both arrive. They growl and laugh roughly as they emerge.";
@@ -1343,14 +1324,13 @@ to say onilairassault:
 	[***]
 	say "     'It's too bad the Great Oni and the rest of the clan are out on a picnic. Still, we can more than kick your asses.' 'Yeah!'";
 	say "[bracket]Full version of Oni Lair to come later. Enjoy step 1 for now. - the Mgmt[close bracket][line break]";
-	WaitLineBreak;
 	now HP of Hayato is 97;
 	challenge "Red Oni";
 	if fightoutcome >= 10 and fightoutcome <= 19:				[WIN]
 		say "     Your final blow causes your foe to stumble back, slumping against one of the boulders of rubble. Knocking its head against the concrete, it falls unconscious. Looking over to check on your companion, you find Hayato having already beaten his foe. Not stopping there, Hayato has the defeated oni pinned with his face to the ground and his meaty ass in the air. He's giving the guard a thorough plowing, driving his throbbing rod into his ass again and again. The creature growls angrily, but he's also quite hard and panting as that thick, crimson cock fucks him hard.";
 		say "     Seeing you done with your foe, your companion slaps the oni's ass. 'Nggg. Get over here and [if Player is male]stuff this fool's mouth[else]put this fool's mouth to use[end if].' The sight of Hayato allowing himself to let loose and take a dominant role is quite arousing.";
-		say "     [bold type]Shall you join him in teaching this brute a hard lesson?[roman type][line break]";
 		LineBreak;
+		say "     [bold type]Shall you join him in teaching this brute a hard lesson?[roman type][line break]";
 		say "     ([link]Y[as]y[end link]) - Yes.";
 		say "     ([link]N[as]n[end link]) - No.";
 		if Player consents:
@@ -1396,19 +1376,12 @@ to say onilairlost1:
 		follow the sex change rule;
 		follow the sex change rule;
 	if Libido of Player < libido entry, now Libido of Player is libido entry;
-	WaitLineBreak;
+	wait for any key;
 	end the story saying "Reduced to wild oni, you join the Great Oni's clan.";
 	now battleground is "void";
-	WaitLineBreak;
+	wait for any key;
 	now skipturnblocker is 1;
 	follow the turnpass rule;
-	stop the action;
-
-to unleashredoni:
-	setmonster "Red Oni";
-	choose row MonsterID from the Table of Random Critters;
-	if Name entry is "Red Oni":
-		now area entry is "Capitol";
-		now non-infectious entry is false;
+	stop the action;]
 
 Hayato ends here.

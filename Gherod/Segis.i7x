@@ -33,9 +33,6 @@ to ProjectFigureSegisSoft:
 					project figure of Segis_muscular_soft_33_icon;
 		else:
 			project figure of Segis_muscular_default_icon; [default]
-	else:
-		say "";
-
 
 to ProjectFigureSegisHard:
 	if "Muscular Body Type" is listed in traits of Segis:
@@ -68,8 +65,6 @@ to ProjectFigureSegisHard:
 				project figure of Segis_muscular_default_hard_2_icon;
 			else if cock length of Segis is 16: [def 13]
 				project figure of Segis_muscular_default_hard_3_icon;
-	else:
-		say "";
 
 Section 1 - Pre-Event
 
@@ -110,13 +105,12 @@ to say ResolveEvent Strange Android Seeker:
 		now Resolution of Strange Android Seeker is 1;
 	else if Resolution of Strange Android Seeker is 1:
 		say "     Whether by coincidence or a subconscious thought of some sort, you find yourself walking past that same grocery store from the other day, near where you found the drugged man fast asleep with a persistent erection. This reminded you of such happening, and you begin to consider if you should pursue this matter any further or just forget about it... Is there really someone assaulting people in Red Light District, drugging and leaving them in a state of catatonic lust? What if they sneaked upon you and you suffered the same fate?";
-		LineBreak;
-		say "     [bold type]What are you going to do?[roman type][line break]";
+		say "[line break]     [bold type]What are you going to do?[roman type][line break]";
 		say "     ([link]Y[as]y[end link]) - Investigate.";
 		say "     ([link]N[as]n[end link]) - Drop it, for now.";
 		if Player consents:
 			LineBreak;
-			say "     You think you might have a chance in discovering something if you tried to look for more clues and begin to consider what areas you should head to. Perhaps there is something to be found in another one of these alleys, or you could linger for long enough to hear or watch a similar event take place. Whoever has been doing this will eventually do it again, probably. With that in mind, you tread gingerly along the streets, hoping to make your time and persistence worth it. Nothing seems to be happening in the near vicinity, so you move to another area, setting your path towards a different direction and, again, trying to be discrete. This particular spot does not seem to have a lot of movement, which could be a good place, but that also means anyone could hear you coming if you are too noisy.";
+			say "     You think you might have a chance in discovering something if you tried to look for more clues and begin to consider what areas you should head to. Perhaps there is something to be found in another one of these alleys, or you could linger for long enough to hear or watch a similar event take place. Whoever has been doing this will eventually do it again, probably. With that in mind, you tread gingerly along the streets, hoping to make your time and persistence worth it. Nothing seems to be happening in the near vicinity, so you move to another area, setting your path towards a different direction and, again, trying to be discreet. This particular spot does not seem to have a lot of movement, which could be a good place, but that also means anyone could hear you coming if you are too noisy.";
 			say "     And so, you wait around for a while, always on the move, keeping your eyes and ears in maximum alert. Currently, you are passing through another alley with a few small entries into the back sections of the buildings, like small street backyards where there are trashcans and graffiti painted walls. As you continue to walk, you notice a few blue bubbly drops on the floor, which melt into a sticky mess if you squish them under your foot. You hear only a breeze blowing a little harder on your face as you look around, an eerie silence following afterwards and nothing else, but you do happen to spot a few more jiggly blue beads. A closer look reveals a kind of a trail leading to one of the backyards, to a door.";
 			WaitLineBreak;
 			say "     It does not take a lot to conclude that the door has been forced open. While the door itself does not seem to have been damaged, the lock has been rendered useless, possibly picked and destroyed in the process. You can easily push it open, albeit it creaks a little and does not slide smoothly enough, which explains why the wind did not do it by itself during all this time. The place is dark, without a single window, and you struggle to see, but you hear someone mumbling deeper ahead. You sort of have to be feeling the walls around you and walk really carefully to not accidentally bump into anything you should not, but the sound grows louder as you proceed. The voice is masculine, but all you hear is gibberish, sounding more like he is not even moving his lips.";
@@ -131,8 +125,7 @@ to say ResolveEvent Strange Android Seeker:
 	else if Resolution of Strange Android Seeker is 2:
 		say "     With the matter of the unknown assaulter in Red Light District still pending, you occasionally find yourself looking back and glancing over your shoulder. This is starting to affect you, keeping you more on guard and deviating your attention from things you could be doing better. This is not just a roaming creature you can either fight your way out or lose your dignity to, but someone who knows what they are doing and with only one goal in mind that you have yet to determine. While you have only seen males victims, you cannot yet conclude that [if Player is not male and Player is female]you would be safe[else]females would be safe[end if] from this perverted assaulter, who seems to know a great deal about how to get in places, fight and incapacitate someone. Definitely, it is no ordinary creature.";
 		say "     You could resume this investigation, but say... What if you actually find and fail to stop them? What could happen to you if you were to be another victim of this assaulter? And will you have wasted your only chance at capturing them, to stop this madness once and for all? But more importantly... Can you do it, if it comes to that? From the information you have gathered so far, this is a strong and intelligent individual.";
-		LineBreak;
-		say "     [bold type]Do you wish to proceed any further with your investigation? You better make sure that you are prepared for an eventual conflict, and you might need to use your aptitudes. [roman type][line break]";
+		say "[line break]     [bold type]Do you wish to proceed any further with your investigation? You better make sure that you are prepared for an eventual conflict, and you might need to use your aptitudes. [roman type][line break]";
 		say "     ([link]Y[as]y[end link]) - Resume your investigation.";
 		say "     ([link]N[as]n[end link]) - Drop it, for now.";
 		if Player consents:
@@ -156,25 +149,23 @@ to say ResolveEvent Strange Android Seeker:
 			say "     [link](4)[as]4[end link] - Approach this in a different manner. Use your surroundings (Perception Roll) and profit from it.";
 			now calcnumber is 0;
 			while calcnumber < 1 or calcnumber > 4:
-				say "Choice? (1-4)>[run paragraph on]";
+				say "Choice? (1-4)> [run paragraph on]";
 				get a number;
-				if calcnumber is 1 or calcnumber is 2 or calcnumber is 3 or calcnumber is 4:
-					break;
-				else:
+				if calcnumber < 1 or calcnumber > 4:
 					say "Invalid choice. Type [link]1[end link] to select the first method, [link]2[end link] to choose the second, [link]3[end link] to choose the third or [link]4[end link] to choose the fourth.";
+			LineBreak;
 			if calcnumber is 1:
-				LineBreak;
 				say "     You have decided on a plan of action. Now, you shall try your best to make it count...";
 				WaitLineBreak;
-				let bonus be (( intelligence of player minus 10 ) divided by 2);
+				let bonus be ( intelligence of player minus 10 ) divided by 2;
 				let diceroll be a random number from 1 to 20;
-				say "You roll 1d20([diceroll])+[bonus] = [special-style-1][diceroll + bonus][roman type] vs [special-style-2]9[roman type] (Intelligence Check):[line break]";
+				say "You roll 1d20([diceroll])[if bonus >= 0]+[end if][bonus] = [special-style-1][diceroll + bonus][roman type] vs [special-style-2]9[roman type] (Intelligence Check):[line break]";
 				if diceroll + bonus >= 9:
 					say "     Examining the dragon individual, you manage to notice a joint you can kick in order to weaken them severely. Quickly, you get in position to deliver your attack. Your target did not manage to react in time...!";
 					WaitLineBreak;
-					let bonus be (( dexterity of player minus 10 ) divided by 2);
+					let bonus be ( dexterity of player minus 10 ) divided by 2;
 					let diceroll be a random number from 1 to 20;
-					say "You roll 1d20([diceroll])+[bonus] = [special-style-1][diceroll + bonus][roman type] vs [special-style-2]11[roman type] (Dexterity Check):[line break]";
+					say "You roll 1d20([diceroll])[if bonus >= 0]+[end if][bonus] = [special-style-1][diceroll + bonus][roman type] vs [special-style-2]11[roman type] (Dexterity Check):[line break]";
 					if diceroll + bonus >= 11:
 						say "     With just a well-delivered kick, you manage to cause the dragon to collapse against the wall and debilitate them. This thing really cannot be natural, as they move in such an erratic way while trying to stand up, again, with sluggish yet so mechanical movements. The noises they make are not resembling any living creature, either. You are probably fighting a robot of some sort. Speaking of which, you are still not done with them, as they advance to attack you once more. But this time, you actually stand a chance to overpower them.";
 						say "[StrangeAndroidSeekerFight]";
@@ -184,9 +175,9 @@ to say ResolveEvent Strange Android Seeker:
 				else:
 					say "     Despite having tried your best, you could not identify any specific weak spot on the dragon individual. But if you kick them swiftly enough, maybe you still have a chance... Quickly, you get in position to deliver your attack. Your target did not manage to react in time...!";
 					WaitLineBreak;
-					let bonus be (( dexterity of player minus 10 ) divided by 2);
+					let bonus be ( dexterity of player minus 10 ) divided by 2;
 					let diceroll be a random number from 1 to 20;
-					say "You roll 1d20([diceroll])+[bonus] = [special-style-1][diceroll + bonus][roman type] vs [special-style-2]14[roman type] (Dexterity Check):[line break]";
+					say "You roll 1d20([diceroll])[if bonus >= 0]+[end if][bonus] = [special-style-1][diceroll + bonus][roman type] vs [special-style-2]14[roman type] (Dexterity Check):[line break]";
 					if diceroll + bonus >= 14:
 						say "     With just a well-delivered kick, you manage to cause the dragon to collapse against the wall and debilitate them. This thing really cannot be natural, as they move in such an erratic way while trying to stand up, again, with sluggish yet so mechanical movements. The noises they make are not resembling any living creature, either. You are probably fighting a robot of some sort. Speaking of which, you are still not done with them, as they advance to attack you once more. But this time, you can actually stand a chance to overpower them.";
 						say "[StrangeAndroidSeekerFight]";
@@ -194,18 +185,17 @@ to say ResolveEvent Strange Android Seeker:
 						say "     ...And you fail miserably. You were so bad that your enemy even blinked twice, only stoically observing you. In fact, they seem to have no expression at all as they incapacitate you, leaving you vulnerable...";
 						say "[StrangeAndroidSeekerFail]";
 			else if calcnumber is 2:
-				LineBreak;
 				say "     You have decided on a plan of action. Now, you shall try your best to make it count...";
 				WaitLineBreak;
-				let bonus be (( dexterity of player minus 10 ) divided by 2);
+				let bonus be ( dexterity of player minus 10 ) divided by 2;
 				let diceroll be a random number from 1 to 20;
-				say "You roll 1d20([diceroll])+[bonus] = [special-style-1][diceroll + bonus][roman type] vs [special-style-2]10[roman type] (Dexterity Check):[line break]";
+				say "You roll 1d20([diceroll])[if bonus >= 0]+[end if][bonus] = [special-style-1][diceroll + bonus][roman type] vs [special-style-2]10[roman type] (Dexterity Check):[line break]";
 				if diceroll + bonus >= 10:
 					say "     Using the best of your agility, you have managed to get out of your hiding spot, run around the puddle of fluids and draw their attention to you...";
 					WaitLineBreak;
-					let bonus be (( charisma of player minus 10 ) divided by 2);
+					let bonus be ( charisma of player minus 10 ) divided by 2;
 					let diceroll be a random number from 1 to 20;
-					say "You roll 1d20([diceroll])+[bonus] = [special-style-1][diceroll + bonus][roman type] vs [special-style-2]10[roman type] (Charisma Check):[line break]";
+					say "You roll 1d20([diceroll])[if bonus >= 0]+[end if][bonus] = [special-style-1][diceroll + bonus][roman type] vs [special-style-2]10[roman type] (Charisma Check):[line break]";
 					if diceroll + bonus >= 10:
 						say "     Your enemy, oblivious of your trickery, decides to pursue you, and just as you expected, they slip onto the puddle. You see sparks jumping out of them as they quickly try to recover, albeit quite damaged. This thing really cannot be natural, as they move in such an erratic way while trying to stand up, again, with sluggish yet so mechanical movements. The noises they make are not resembling any living creature, either. You are probably fighting a robot of some sort. Speaking of which, you are still not done with them, as they advance to attack you once more. But this time, you actually stand a chance to overpower them.";
 						say "[StrangeAndroidSeekerFight]";
@@ -216,18 +206,17 @@ to say ResolveEvent Strange Android Seeker:
 					say "     Using the best of your agility, you have managed to get out of your hiding spot... And slip. Fortunately, not in the puddle, but your eagerness to be fast betrayed you, and you collapsed right in front of your enemy. Their eyes flicker emotionless in your direction...";
 					say "[StrangeAndroidSeekerFail]";
 			else if calcnumber is 3:
-				LineBreak;
 				say "     You have decided on a plan of action. Now, you shall try your best to make it count...";
 				WaitLineBreak;
-				let bonus be (( charisma of player minus 10 ) divided by 2);
+				let bonus be ( charisma of player minus 10 ) divided by 2;
 				let diceroll be a random number from 1 to 20;
-				say "You roll 1d20([diceroll])+[bonus] = [special-style-1][diceroll + bonus][roman type] vs [special-style-2]10[roman type] (Charisma Check):[line break]";
+				say "You roll 1d20([diceroll])[if bonus >= 0]+[end if][bonus] = [special-style-1][diceroll + bonus][roman type] vs [special-style-2]10[roman type] (Charisma Check):[line break]";
 				if diceroll + bonus >= 10:
 					say "     Raising your hands, you manage to persuade your enemy that you pose no threat, and they seem to believe you. While this does not save you, still, the dragon individual seems less hostile, but walks towards you with their guard down. This is the opportunity you need...";
 					WaitLineBreak;
-					let bonus be (( strength of player minus 10 ) divided by 2);
+					let bonus be ( strength of player minus 10 ) divided by 2;
 					let diceroll be a random number from 1 to 20;
-					say "You roll 1d20([diceroll])+[bonus] = [special-style-1][diceroll + bonus][roman type] vs [special-style-2]11[roman type] (Strength Check):[line break]";
+					say "You roll 1d20([diceroll])[if bonus >= 0]+[end if][bonus] = [special-style-1][diceroll + bonus][roman type] vs [special-style-2]11[roman type] (Strength Check):[line break]";
 					if diceroll + bonus >= 11:
 						say "     And within the right timing, you hit them so damn hard they get knocked back and hit the wall, damaging... their plate? This thing really cannot be natural, as they also move in such an erratic way while trying to stand up, again, with sluggish yet so mechanical movements. The noises they make are not resembling any living creature, either. You are probably fighting a robot of some sort. Speaking of which, you are still not done with them, as they advance to attack you once more. But this time, you actually stand a chance to overpower them.";
 						say "[StrangeAndroidSeekerFight]";
@@ -237,9 +226,9 @@ to say ResolveEvent Strange Android Seeker:
 				else:
 					say "     Raising your hands, you attempt to persuade your enemy that you pose no threat, but this seemed more like you were taunting them. Well, that failed, and now they know where you are, but if you manage to hit them hard enough, you could still probably salvage this...";
 					WaitLineBreak;
-					let bonus be (( strength of player minus 10 ) divided by 2);
+					let bonus be ( strength of player minus 10 ) divided by 2;
 					let diceroll be a random number from 1 to 20;
-					say "You roll 1d20([diceroll])+[bonus] = [special-style-1][diceroll + bonus][roman type] vs [special-style-2]14[roman type] (Strength Check):[line break]";
+					say "You roll 1d20([diceroll])[if bonus >= 0]+[end if][bonus] = [special-style-1][diceroll + bonus][roman type] vs [special-style-2]14[roman type] (Strength Check):[line break]";
 					if diceroll + bonus >= 14:
 						say "     And within the right timing, you hit them so damn hard they get knocked back and hit the wall, damaging... their plate? This thing really cannot be natural, as they also move in such an erratic way while trying to stand up, again, with sluggish yet so mechanical movements. The noises they make are not resembling any living creature, either. You are probably fighting a robot of some sort. Speaking of which, you are still not done with them, as they advance to attack you once more. But this time, you actually stand a chance to overpower them.";
 						say "[StrangeAndroidSeekerFight]";
@@ -247,12 +236,11 @@ to say ResolveEvent Strange Android Seeker:
 						say "     ...And you fail miserably. You were so bad that your enemy even blinked twice, only stoically observing you. In fact, they seem to have no expression at all as they incapacitate you, leaving you vulnerable...";
 						say "[StrangeAndroidSeekerFail]";
 			else if calcnumber is 4:
-				LineBreak;
 				say "     You have decided on a plan of action. Now, you shall try your best to make it count...";
 				WaitLineBreak;
-				let bonus be (( perception of player minus 10 ) divided by 2);
+				let bonus be ( perception of player minus 10 ) divided by 2;
 				let diceroll be a random number from 1 to 20;
-				say "You roll 1d20([diceroll])+[bonus] = [special-style-1][diceroll + bonus][roman type] vs [special-style-2]12[roman type] (Perception Check):[line break]";
+				say "You roll 1d20([diceroll])[if bonus >= 0]+[end if][bonus] = [special-style-1][diceroll + bonus][roman type] vs [special-style-2]12[roman type] (Perception Check):[line break]";
 				if diceroll + bonus >= 12:
 					say "     Examining the area, you notice a puddle of fluids, and you could even have tried to draw your enemy's attention to it, but you have a better idea. You find an empty can and decide to throw it towards the puddle, but not quite in there, just enough so that the dragon individual turns their focus towards that general direction. It worked, as they proceed to examine the source of the noise. Great, now you can just bring down this rotten ladder on top of them and bring them down with the power of your massive wrinkled brain. Naturally, it brings the dragon person down onto the puddle and finishes them in one go, as they do not seem to move. Sparks come out of them, as well as... metallic components. Indeed, this thing was not natural, you just brought down some sort of robot.";
 					say "[StrangeAndroidSeekerSuccess]";
@@ -277,8 +265,7 @@ to say StrangeAndroidSeekerFight:
 to say StrangeAndroidSeekerSuccess:
 	WaitLineBreak;
 	say "     Well, mission accomplished. You have defeated the assaulter and you now need to decide its fate. This is clearly no ordinary robot, either, with quite a lot of sophisticated high-tech equipment that would make a microwave very jealous, if there were sentient ones. Upon closer inspection, you also notice a small symbol with the name [']Segis['] printed on top. Who is this person? Or corporation? Those are questions you could ask yourself, but for now, there is no way to answer them. As for the body, you suppose you could just destroy it, but why waste such an interesting... machine? Perhaps you should actually stash it somewhere until you know what to do with it.";
-	LineBreak;
-	say "     [bold type]What will you do with the dragon android body?[roman type][line break]";
+	say "[line break]     [bold type]What will you do with the dragon android body?[roman type][line break]";
 	say "     ([link]Y[as]y[end link]) - Stash it safely.";
 	say "     ([link]N[as]n[end link]) - Destroy it.";
 	if Player consents:
@@ -321,21 +308,27 @@ to say StrangeAndroidSeekerFail:
 		say "     Then, you feel that sweet relief of a hand around your dick, stroking it in a steady motion as all that bliss is intensified, further reinforced, reapplied and cycled through your body in ways you cannot describe, the only thing you can say about it being... you need more. That piece of meat is so hard you feel like you keep getting erect on top of its already rock solid state, and your cum factories swelling in anticipation, wanting to make you splooge right here and right now, but it takes time... Time that feels too long. You thrust into this hand that keeps on jerking you off, or at least you do, in your mind, since your body remains unresponsive. All you feel is that touch around your shaft, and you wish it was tighter, or that it rubbed you harder... You wanted to feel something rubbing at the tip of your cock, or something tightly wrapped around it as you penetrated some warm hole...";
 		WaitLineBreak;
 		say "     Suddenly, you explode. Not you, but your load comes out, and you feel ecstatic, so much that you feel your entire body throbbing. This veil of lust keeps you buried deep into this catatonic state and you cannot escape from it, and you stop caring. All you feel is your own orgasm coming again... and again... A state bliss you do not want to end, in constant pleasure. Your mind begins to break, to shatter, and you become nothing more than a brainwashed cum shooter, taught only how to shoot your load. Over and over again. Non-stop... Forever.";
-		WaitLineBreak;
 		follow the turnpass rule;
 		follow the turnpass rule;
 		follow the turnpass rule;
 		follow the turnpass rule;
 		follow the turnpass rule;
+		wait for any key;
 		clear the screen;
 		say "     You wake up, unsure of where you are, with the biggest headache and covered in something sticky and dry... Your balls hurt a lot, and you are feeling like a cold fish in the worst mood ever. Not even your muscles escape this lingering pain, you just feel absolutely horrible. Now, you try to think about what happened and your memory fails for all except those people you found drooling in lust, much like what you think happened to you. At least you could find the suspect, which... you... do not remember, at all. What were they like? This is worrying, but you really cannot remember who assaulted you. On top of that, you feel like you have the biggest hangover possible, and can barely stand up on your feet.";
 		say "     Well, all you can do is wait it out and try to slap yourself awake. Even that sounds difficult... Hopefully, this will pass soon enough.";
 		CreatureSexAftermath "Player" receives "Other" from "Dragon Android";
-		decrease Libido of Player by 100;
+		now Libido of Player is 0;
 		now Resolution of Strange Android Seeker is 98;
 	now Strange Android Seeker is resolved;
 
 Section 1-1 - Activation Sequence
+
+ADACooldown is a number that varies. ADACooldown is usually 20000.[@Tag:NotSaved]
+
+a postimport rule: [rule for those who have successfully activated Segis to import a resolved state of the related event]
+	if dragon android is tamed:
+		now Activate Strange Android is resolved;
 
 Table of GameEventIDs (continued)
 Object	Name
@@ -346,12 +339,6 @@ Prereq1 of Activate Strange Android is Strange Android Seeker.
 Prereq1Resolution of Activate Strange Android is { 3 }.
 ResolveFunction of Activate Strange Android is "[ResolveEvent Activate Strange Android]".
 Sarea of Activate Strange Android is "Red".
-
-ADACooldown is a number that varies. ADACooldown is usually 20000.[@Tag:NotSaved]
-
-a postimport rule: [rule for those who have successfully activated Segis to import a resolved state of the related event]
-	if dragon android is tamed:
-		now Activate Strange Android is resolved;
 
 to say ResolveEvent Activate Strange Android:
 	say "     Recalling where you stashed that broken android body, you decide to head there to see if it continues to be well hidden. It is close to the same space where you fought it, and its origins remain a mystery to you. It does not take long to find your way back there, and it appears that nobody even came through this way since a long while ago. A spot with little movement is all you could ask to hide such a valuable thing, considering that this must be very high tech stuff...";
@@ -366,14 +353,12 @@ to say ResolveEvent Activate Strange Android:
 		say "     [link](3)[as]3[end link] - Abandon the android, forever.";
 		now calcnumber is 0;
 		while calcnumber < 1 or calcnumber > 3:
-			say "Choice? (1-3)>[run paragraph on]";
+			say "Choice? (1-3)> [run paragraph on]";
 			get a number;
-			if calcnumber is 1 or calcnumber is 2 or calcnumber is 3:
-				break;
-			else:
+			if calcnumber < 1 or calcnumber > 3:
 				say "Invalid choice. Type [link]1[end link] to try to reactivate the android, [link]2[end link] to leave temporarily or [link]3[end link] abandon it permanently.";
+		LineBreak;
 		if calcnumber is 1:
-			LineBreak;
 			now ADACooldown is turns;
 			if Resolution of Activate Strange Android is 0:
 				say "     After giving it some thought, you decide to try your best at reactivating this android in a, hopefully, more friendly manner. This requires you to understand what you are looking at, so you grab the android body from the stash and drag it to a more visible space, where you can actually handle it more freely. Next, you shall attempt to verify its integrity and see if you can find a place where you can open it without damaging it further. Luckily, the damage you inflicted on it removed the need for specialized tools, but this might also prove troublesome for your goal. With all this in mind, you inspect the android...";
@@ -391,20 +376,18 @@ to say ResolveEvent Activate Strange Android:
 				say "     After giving it some thought, you decide to try your best at reactivating this android in a, hopefully, more friendly manner. This requires you to understand what you are looking at, so you grab the android body from the stash and drag it to a more visible space, where you can actually handle it more freely. Now, the question presents itself once again, still unanswered...";
 				ADAPressTheButton;
 		else if calcnumber is 2:
-			LineBreak;
 			say "     There is no rush, and the body seems safe. If anything, you would have to change its location or maintain the place a bit, but nobody really seems to come here at any time. Relieved to have concluded this, you shall leave and just return later, at some point.";
 		else if calcnumber is 3:
-			LineBreak;
 			say "     This is a decision you take some time to come around with, as parting with something possibly incredibly valuable, even dangerous, is not an easy thing to do, but looking at its complexity and knowing what you do, it is perhaps the best idea. Perhaps you simply do not want to risk your odds against a machine that does what it did. On another hand, you will never get to know if you were right about taking this course of action, but it is done. You shall leave it here. Abandoned, lost and forgotten.";
 			now Resolution of Activate Strange Android is 99;
 			now Activate Strange Android is resolved;
 
 to ADAIntRoll1:
-	WaitLineBreak;
 	follow the turnpass rule;
-	let bonus be (( intelligence of player minus 10 ) divided by 2);
+	WaitLineBreak;
+	let bonus be ( intelligence of player minus 10 ) divided by 2;
 	let diceroll be a random number from 1 to 20;
-	say "You roll 1d20([diceroll])+[bonus] = [special-style-1][diceroll + bonus][roman type] vs [special-style-2]15[roman type] (Intelligence Check):[line break]";
+	say "You roll 1d20([diceroll])[if bonus >= 0]+[end if][bonus] = [special-style-1][diceroll + bonus][roman type] vs [special-style-2]15[roman type] (Intelligence Check):[line break]";
 	if diceroll + bonus >= 15:
 		LineBreak;
 		say "     As your careful eyes inspect the android's body, you manage to verify its integrity and conclude that the body has not been damaged beyond repair, which is good, but more importantly, you found a way to safely look at its internal framework. It is quite advanced technology and it will, surely, give you quite a challenge just to understand what components are these and what they do. Carefully, you examine each piece and component, following the connections and inspecting them closely.";
@@ -416,11 +399,11 @@ to ADAIntRoll1:
 		now ADACooldown is turns;
 
 to ADAIntRoll2:
-	WaitLineBreak;
 	follow the turnpass rule;
-	let bonus be (( intelligence of player minus 10 ) divided by 2);
+	WaitLineBreak;
+	let bonus be ( intelligence of player minus 10 ) divided by 2;
 	let diceroll be a random number from 1 to 20;
-	say "You roll 1d20([diceroll])+[bonus] = [special-style-1][diceroll + bonus][roman type] vs [special-style-2]16[roman type] (Intelligence Check):[line break]";
+	say "You roll 1d20([diceroll])[if bonus >= 0]+[end if][bonus] = [special-style-1][diceroll + bonus][roman type] vs [special-style-2]16[roman type] (Intelligence Check):[line break]";
 	if diceroll + bonus >= 16:
 		LineBreak;
 		say "     Your eyes widen as you realize this android is not just an ordinary robot, possessing a very powerful core that seems to be powered by kinetic and solar energy, which feeds other components with enough energy to be almost completely self-sustainable. Its efficiency is remarkable, and judging from its complexity, you can safely assume that this is not even a virtual intelligence, but a full-fledged independent AI. Upon even closer inspection, you realize this model has components designed for self-repair that are currently sealed, but attached to some other parts that are meant to send a signal for their activation";
@@ -438,11 +421,11 @@ to ADAIntRoll2:
 		ADAPerRollHighDV;
 
 to ADAPerRollLowDV:
-	WaitLineBreak;
 	follow the turnpass rule;
-	let bonus be (( perception of player minus 10 ) divided by 2);
+	WaitLineBreak;
+	let bonus be ( perception of player minus 10 ) divided by 2;
 	let diceroll be a random number from 1 to 20;
-	say "You roll 1d20([diceroll])+[bonus] = [special-style-1][diceroll + bonus][roman type] vs [special-style-2]13[roman type] (Perception Check):[line break]";
+	say "You roll 1d20([diceroll])[if bonus >= 0]+[end if][bonus] = [special-style-1][diceroll + bonus][roman type] vs [special-style-2]13[roman type] (Perception Check):[line break]";
 	if diceroll + bonus >= 13:
 		say "     After such an mentally exhausting ordeal, you have finally managed to discover how to reactivate this thing. There is a very well-hidden button, likely designed as a failsafe system for either its creator or for the android itself, but there is no way of telling its origins only from what you could observe. Activating this should trigger its reset and self-repair protocol, thus, you will likely be seen as its new owner.";
 		now Resolution of Activate Strange Android is 4;
@@ -452,11 +435,11 @@ to ADAPerRollLowDV:
 		now ADACooldown is turns;
 
 to ADAPerRollHighDV:
-	WaitLineBreak;
 	follow the turnpass rule;
-	let bonus be (( perception of player minus 10 ) divided by 2);
+	WaitLineBreak;
+	let bonus be ( perception of player minus 10 ) divided by 2;
 	let diceroll be a random number from 1 to 20;
-	say "You roll 1d20([diceroll])+[bonus] = [special-style-1][diceroll + bonus][roman type] vs [special-style-2]17[roman type] (Perception Check):[line break]";
+	say "You roll 1d20([diceroll])[if bonus >= 0]+[end if][bonus] = [special-style-1][diceroll + bonus][roman type] vs [special-style-2]17[roman type] (Perception Check):[line break]";
 	if diceroll + bonus >= 17:
 		say "     But then, you realize that not all hope is lost. There is a button, extremely well-hidden, behind all these components, but you could not tell what it does. Perhaps it is the way to reactivate this thing? You are not entirely sure, but this is literally the only thing you can try before calling it here.";
 		now Resolution of Activate Strange Android is 3;
@@ -466,8 +449,7 @@ to ADAPerRollHighDV:
 		now ADACooldown is turns;
 
 to ADAPressTheButton:
-	WaitLineBreak;
-	say "     [bold type]Shall you press the button?[roman type][line break]";
+	say "[line break]     [bold type]Shall you press the button?[roman type][line break]";
 	say "     ([link]Y[as]y[end link]) - Yes.";
 	say "     ([link]N[as]n[end link]) - No... Not yet, at least.";
 	if Player consents:
@@ -491,7 +473,7 @@ to ADASuccess:
 	say "     'Well, it does not matter. I am stuck with you, so I shall follow you about. If not, I will station myself in your personal chambers, to ensure maximum protection. I will also observe you in your sleep, to ensure you are breathing and detect any anomalies that may occur which could be manifestations of any health issue. Hopefully, no such things will come up, but we cannot, ever, be too careful. I am sure you will not mind that. If outside, I shall be on sentinel duty. If there is anything else you wish to discuss, feel free to ask away.'";
 	say "     As the android has finally finished speaking, you find yourself at a loss of words. Perhaps you can talk to it later, once you know what to ask. For now, you have earned a new ally.";
 	LineBreak;
-	say "     (Segis the Dragon Android is now a possible ally! You can make him your active ally by typing [bold type][link]ally Segis[end link][roman type] or [bold type][link]ally dragon android[end link][roman type] and initiate sex with him while active by typing [bold type][link]fuck Segis[end link][roman type]. You can see all the allies you have with the [bold type][link]allies[end link][roman type] command. Allies will lower the XP you gain from battle, but can gain levels themselves to be more useful in a scrap. Want to get rid of an ally? Use [bold type][link]ally dismiss[end link][roman type], or just [bold type][link]dismiss[end link][roman type])[line break]";
+	say "     (Segis the Dragon Android is now a possible ally! You can make him your active ally by typing [link][bold type]ally Segis[roman type][end link] or [link][bold type]ally dragon android[roman type][end link] and initiate sex with him while active by typing [link][bold type]fuck Segis[roman type][end link]. You can see all the allies you have with the [link][bold type]allies[roman type][end link] command. Allies will lower the XP you gain from battle, but can gain levels themselves to be more useful in a scrap. Want to get rid of an ally? Use [link][bold type]ally dismiss[roman type][end link], or just [link][bold type]dismiss[roman type][end link].)";
 	add "Tamed" to Traits of dragon android;
 	now dragon android is tamed;
 	move Segis to Maintenance Storeroom;
@@ -540,7 +522,7 @@ TwistedCapacity of Segis is false. [Twisted Characters can take any penetration,
 Sterile of Segis is true. [steriles can't knock people up]
 MainInfection of Segis is "Dragon Android".
 Description of Segis is "[Segisdesc]".
-Conversation of Segis is { "<This is nothing but a placeholder!>" }.
+fuckscene of Segis is "[SexWithSegis]".
 The scent of Segis is "     Segis does not have any particular smell other than something faintly resembling metal.".
 
 to say SegisBodyType:
@@ -548,7 +530,6 @@ to say SegisBodyType:
 		say "[one of]massive[or]muscular[or]huge[or]mighty[at random]";
 	else: [default lean]
 		say "[one of]lean[or]athletic[or]fit[or]toned[at random]";
-
 
 to say SegisDesc:
 	ProjectFigureSegisSoft;
@@ -582,7 +563,6 @@ instead of conversing Segis:
 to say SegisTalkMenu:
 	now SegisDoneTalking is false;
 	say "     [bold type]What do you want to discuss with your dragon android?[roman type][line break]";
-	LineBreak;
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]
@@ -596,7 +576,7 @@ to say SegisTalkMenu:
 		now title entry is "Its owner's well-being";
 		now sortorder entry is 2;
 		now description entry is "Ask Segis what does that entail";
-	[]
+		[]
 		choose a blank row in table of fucking options;
 		now title entry is "His actions";
 		now sortorder entry is 3;
@@ -605,7 +585,7 @@ to say SegisTalkMenu:
 	if Energy of Segis > 1:
 		choose a blank row in table of fucking options;
 		now title entry is "Jokes";
-		now sortorder entry is 3;
+		now sortorder entry is 4;
 		now description entry is "Ask Segis to tell you a joke";
 	[]
 	if Resolution of SegisToolQuest > 0:
@@ -627,18 +607,18 @@ to say SegisTalkMenu:
 			choose row calcnumber in table of fucking options;
 			say "[title entry]: [description entry]?";
 			if Player consents:
-				let nam be title entry;
 				now sextablerun is 1;
-				if (nam is "The android"):
-					say "[SegisTalkAndroid]";
-				else if (nam is "Its owner's well-being"):
-					say "[SegisTalkWellBeing]";
-				else if (nam is "His actions"):
-					say "[SegisTalkBehavior]";
-				else if (nam is "Jokes"):
-					say "[SegisTalkJokes]";
-				else if (nam is "Upgrades"):
-					say "[SegisTalkUpgrades]";
+				if title entry is:
+					-- "The android":
+						say "[SegisTalkAndroid]";
+					-- "Its owner's well-being":
+						say "[SegisTalkWellBeing]";
+					-- "His actions":
+						say "[SegisTalkBehavior]";
+					-- "Jokes":
+						say "[SegisTalkJokes]";
+					-- "Upgrades":
+						say "[SegisTalkUpgrades]";
 				wait for any key;
 				if SegisDoneTalking is false:
 					say "[SegisTalkMenu]"; [looping back to keep talking with him]
@@ -650,7 +630,7 @@ to say SegisTalkMenu:
 				say "     You excuse yourself, stating that you do not have anything else to say. Segis nods and says, 'Understood, [sir].'";
 			wait for any key;
 		else:
-			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options], or 0 to exit.";
 	clear the screen and hyperlink list;
 
 to say SegisTalkAndroid:
@@ -732,7 +712,7 @@ to say SegisTalkJokes:
 		-- 11:
 			say "     'Have you heard that nasty rumor about butter?'";
 			WaitLineBreak;
-			say "     'Hm... Nevermind, I shouldn't be spreading it.'";
+			say "     'Hm... Never mind, I shouldn't be spreading it.'";
 		-- 12:
 			say "     'Do you know why bees have sticky hair?'";
 			WaitLineBreak;
@@ -777,9 +757,6 @@ to say SegisTalkJokes:
 Section 2-2 - Segis SEX
 
 [Note: To write sex scenes for Segis, it is recommended to write it first for his default version (Slim Body, retractable internal cock, no fancy characteristics) and after that worry about every variation due do his customization options. Limit sex scenes to every personality, as a different personality means almost an entirely different character for sex scenes, especially.]
-
-instead of fucking Segis:
-	say "[SexWithSegis]";
 
 to say SexWithSegis:
 	if Resolution of SegisToolQuest < 1: [unsolved]
@@ -862,28 +839,27 @@ to say SegisSexMenu:
 			choose row calcnumber in table of fucking options;
 			say "[title entry]: [description entry]?";
 			if Player consents:
-				let nam be title entry;
 				now sextablerun is 1;
-				if (nam is "Give your dragon android a blowjob"):
-					say "[SegisSexBlowjob]";
-				else if (nam is "Ask him to fuck you"):
-					say "[SegisSexFuck]";
-				else if (nam is "Masturbate each other"):
-					say "[SegisSexMasturbate]";
-				else if (nam is "Drink some milk from his lactating chest"):
-					say "[SegisSexMilk]";
-				else if (nam is "Worship his feet"):
-					say "[SegisSexFootWorship]";
-				wait for any key;
+				if title entry is:
+					-- "Give your dragon android a blowjob":
+						say "[SegisSexBlowjob]";
+					-- "Ask him to fuck you":
+						say "[SegisSexFuck]";
+					-- "Masturbate each other":
+						say "[SegisSexMasturbate]";
+					-- "Drink some milk from his lactating chest":
+						say "[SegisSexMilk]";
+					-- "Worship his feet":
+						say "[SegisSexFootWorship]";
 		else if calcnumber is 0:
 			now sextablerun is 1;
 			if "Personality Himbo" is listed in traits of Segis:
 				say "     You excuse yourself, stating that you have changed your mind. Segis nods and says, 'Oh, alright! Lemme know if you wanna fuck later, then!'";
 			else:
 				say "     You excuse yourself, stating that you have changed your mind. Segis nods and says, 'Oh, very well, [sir]. Let me know if you wish for any of my services at a later moment.'";
-			wait for any key;
 		else:
-			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options], or 0 to exit.";
+	wait for any key;
 	clear the screen and hyperlink list;
 
 to say SegisSexBlowjob:
@@ -966,7 +942,7 @@ to say SegisSexFuck:
 			TraitGain "Fucked The Player" for Segis;
 		else:
 			say "     As you consider your options, you take hold of the robotic draconic penis in Segis['] crotch and give it a nice squeeze, then tell him about your intentions. He seems quite interested in your proposal, and the way his artificial cock throbs is the confirmation you would need to assume such. 'Fuck yeah! I'd love to fuck you into the next world! Heh, I mean, not literally, but you know, I wanna fuck you a lot...!' The android's seeming eagerness is all you need to kickstart your gears as you wonder how this powerful robot is going to take you...";
-			WaitLineBreak;
+		wait for any key;
 		ProjectFigureSegisHard;
 		say "     But first, you keep hold of his [if Cock Length of Segis is 16]big and thick[else if Cock Length of Segis is 12]large[else]good-sized[end if] black shaft while giving it a couple of steady strokes, gently yet firmly, as you ensure your android is fully hard and ready for the task at hand. You know he enjoys this due to his configurations, and so, you really do not mind providing him with pleasure until that rod of his feels lubricated enough, which is possible thanks to the constant leaking of precum-like liquid oozing out from his tip. After a good while, it starts to feel much more slippery, giving you enough confidence that it can easily slide into you.";
 		say "     'Can't wait to get started! Can I fuck you now?' You nod, giving Segis permission to take the lead in this, and the android eagerly follows, gently placing his hands over your hips to push you to turn around. You, of course, let him, giving the android a good view of your rear side as you bend over in front of him,";
@@ -981,7 +957,7 @@ to say SegisSexFuck:
 		WaitLineBreak;
 		say "     Once you start getting used to him, Segis puts more of his weight on top of you, that powerful android body of his now pinning you down as he really goes at it, fucking you in the [if player is female]pussy[else]ass[end if] with so much vigor and intensity one would think he used to do this since his time of creation. He then gets his arms and hands around your neck and chest, [if breast size of player > 0]fondling your hanging breasts gently[else]rubbing your pectorals[end if] and caressing your nipples, a pleasant sensation resulting in a surge of bliss all over your body, which combined with the continuous thrusting into your [if player is female]g-spot[else]prostate[end if], so masterfully well-done, steadily drives you towards the edge.";
 		if player is male: [has cock]
-			say "    Not wanting to leave you unsatisfied on the front, however, Segis later slides a hand over your crotch, his fingers slowly tracing down your waist as he progressively slows down, to keep you in a comfortable rhythm, until his knuckles bump into your hard [cock of player] cock. 'Yeaaah that feels good doesn't it? How could I not stroke that nice and hard piece of meat too...? Gotta give you everything you deserve,' he says as he wraps his fingers around your shaft, and as he begins to stroke it, so does his thrusting once more, resuming its previous pacing as his hand goes back and forth on your dick, another still caressing your [if player is female]tits[else]chest[end if], and your lust becomes so overbearing that you can only moan under his affection, feeling yourself giving into the impending climax, which draws nearer and nearer...";
+			say "     Not wanting to leave you unsatisfied on the front, however, Segis later slides a hand over your crotch, his fingers slowly tracing down your waist as he progressively slows down, to keep you in a comfortable rhythm, until his knuckles bump into your hard [cock of player] cock. 'Yeaaah that feels good doesn't it? How could I not stroke that nice and hard piece of meat too...? Gotta give you everything you deserve,' he says as he wraps his fingers around your shaft, and as he begins to stroke it, so does his thrusting once more, resuming its previous pacing as his hand goes back and forth on your dick, another still caressing your [if player is female]tits[else]chest[end if], and your lust becomes so overbearing that you can only moan under his affection, feeling yourself giving into the impending climax, which draws nearer and nearer...";
 		else: [has no cock]
 			say "     Not wanting to leave you unsatisfied on the front, however, Segis lifts you up against him, almost carrying you as he keeps on fucking you, getting you on your knees in front of him as your legs bend backwards around his. You feel each thrust even deeper than before in this position, but the way your weight is distributed allows the android to safely take hold of your [if player is female]tits[else]chest[end if] and go wild with caresses. His face rubs against yours from the backside, and all the combined sensations, with his throbbing warm rod inside your [if player is female]pussy[else]ass[end if], your lust starts to become so overbearing that you can only moan under his affection, feeling yourself giving into the impending climax, which draws nearer and nearer...";
 		WaitLineBreak;
@@ -1005,7 +981,7 @@ to say SegisSexFuck:
 			TraitGain "Fucked The Player" for Segis;
 		else:
 			say "     As you consider your options, you take hold of the robotic draconic penis in Segis['] crotch and give it a nice squeeze, then tell him about your intentions. He seems quite interested in your proposal, and the way his artificial cock throbs is the confirmation you would need to assume such. 'It would be my pleasure to breed you, [sir]!' The android's seeming eagerness is all you need to kickstart your gears as you wonder how this powerful robot is going to take you...";
-		WaitLineBreak;
+		wait for any key;
 		ProjectFigureSegisHard;
 		say "     But first, you keep hold of his [if Cock Length of Segis is 16]big and thick[else if Cock Length of Segis is 12]large[else]good-sized[end if] black shaft while giving it a couple of steady strokes, gently yet firmly, as you ensure your android is fully hard and ready for the task at hand. You know he enjoys this due to his configurations, and so, you really do not mind providing him with pleasure until that rod of his feels lubricated enough, which is possible thanks to the constant leaking of precum-like liquid oozing out from his tip. After a good while, it starts to feel much more slippery, giving you enough confidence that it can easily slide into you.";
 		say "     'I should be ready, [sir]. Perhaps you would like for me to initiate?' You nod, giving Segis permission to take the lead in this, and the android eagerly follows, gently placing his hands over your hips to push you to turn around. You, of course, let him, giving the android a good view of your rear side as you bend over in front of him,";
@@ -1020,7 +996,7 @@ to say SegisSexFuck:
 		WaitLineBreak;
 		say "     Once you start getting used to him, Segis puts more of his weight on top of you, that powerful android body of his now pinning you down as he really goes at it, fucking you in the [if player is female]pussy[else]ass[end if] with so much vigor and intensity one would think he used to do this since his time of creation. He then gets his arms and hands around your neck and chest, [if breast size of player > 0]fondling your hanging breasts gently[else]rubbing your pectorals[end if] and caressing your nipples, a pleasant sensation resulting in a surge of bliss all over your body, which combined with the continuous thrusting into your [if player is female]g-spot[else]prostate[end if], so masterfully well-done, steadily drives you towards the edge.";
 		if player is male: [has cock]
-			say "    Not wanting to leave you unsatisfied on the front, however, Segis later slides a hand over your crotch, his fingers slowly tracing down your waist as he progressively slows down, to keep you in a comfortable rhythm, until his knuckles bump into your hard [cock of player] cock. 'I'm keen on offering you a full service, [sir]. After all, I'm here to please you,' he says as he wraps his fingers around your shaft, and as he begins to stroke it, so does his thrusting once more, resuming its previous pacing as his hand goes back and forth on your dick, another still caressing your [if player is female]tits[else]chest[end if], and your lust becomes so overbearing that you can only moan under his affection, feeling yourself giving into the impending climax, which draws nearer and nearer...";
+			say "     Not wanting to leave you unsatisfied on the front, however, Segis later slides a hand over your crotch, his fingers slowly tracing down your waist as he progressively slows down, to keep you in a comfortable rhythm, until his knuckles bump into your hard [cock of player] cock. 'I'm keen on offering you a full service, [sir]. After all, I'm here to please you,' he says as he wraps his fingers around your shaft, and as he begins to stroke it, so does his thrusting once more, resuming its previous pacing as his hand goes back and forth on your dick, another still caressing your [if player is female]tits[else]chest[end if], and your lust becomes so overbearing that you can only moan under his affection, feeling yourself giving into the impending climax, which draws nearer and nearer...";
 		else: [has no cock]
 			say "     Not wanting to leave you unsatisfied on the front, however, Segis lifts you up against him, almost carrying you as he keeps on fucking you, getting you on your knees in front of him as your legs bend backwards around his. You feel each thrust even deeper than before in this position, but the way your weight is distributed allows the android to safely take hold of your [if player is female]tits[else]chest[end if] and go wild with caresses. His face rubs against yours from the backside, and all the combined sensations, with his throbbing warm rod inside your [if player is female]pussy[else]ass[end if], your lust starts to become so overbearing that you can only moan under his affection, feeling yourself giving into the impending climax, which draws nearer and nearer...";
 		WaitLineBreak;
@@ -1089,7 +1065,7 @@ to say SegisSexMilk:
 	if "Personality Himbo" is listed in traits of Segis:
 		say "     'Someone's looking to drink from my man tits, eh? I've got a lot of milk just for you...' The dragon android then reaches over you, with the biggest smile, and slides one hand over the back of your head. He knows you want it, so he does not even ask, instead choosing to press your face against his chest, which feels really soft and smooth. 'Get sucking! I stored a lot in them just for you!' Segis['] mechanical arm is actually quite strong, so much that you find yourself effectively locked, head pressed against his pecs and lips squished around the nipples. As soon as your tongue touches them, a steady gush of milk comes out to greet you, warm, thick and just a tad sweetened.";
 		say "     'Feels really damn good to feed you!' Segis eagerly says as he puffs his chest out and lets you suckle on him. You think that, with his current personality module, that he somehow seems extremely eager to give you his milk, and if an AI can get this excited about something, he is the definition of it. Once stimulated, he begins to pump copious amounts of milk into your mouth, and both his arms curl around your head as he presses his synthetic pecs against your face. You even feel a slight throb across his entire chest every time some of his milk is released, seeming almost like he was flexing them like a real person. It is easy to forget that Segis is an android when you close your eyes and focus on fully enjoying this...";
-		WaitLineBreak;
+		wait for any key;
 		ProjectFigureSegisHard;
 		say "     During this whole process, something else seems to have been brought to attention, as there is this hard and throbbing shaft poking against you from below. It seems the android's excitement is not confined to his hypothetical psyche, but also physical. You figure that tugging on that [if Cock Length of Segis is 16]big and thick[else if Cock Length of Segis is 12]large[else]good-sized[end if] black shaft will only encourage the android to give you all he has got, and you are not wrong. As soon as you wrap your hand around his artificial cock, you definitely notice an increase in milk flow... And him just hugging you tighter. 'Yeess! You're only getting out of here until these are empty, you hear?'";
 		if "Extra Milky" is listed in traits of Segis:
@@ -1105,7 +1081,7 @@ to say SegisSexMilk:
 	else: [default personality]
 		say "     'Greetings, [sir]. I presume you wish to extract some milk from me? I've got plenty in store just for you.' The dragon android then approaches you with his arms open, allowing you to come really close to him and embrace his figure. Now finally in reach, you lean in and press your face against his chest, which feels really soft and smooth, and get your lips around his artificial nipples, ready to get sucking. 'I hope it is to your liking. I've sweetened it slightly to improve your experience, and have taken care to ensure it suits your nutritious needs.' Since the android so promptly offers you his chest, you are quick to greet his nips with your tongue, and as soon as you do, a steady gush of milk comes out to greet you back. It is warm, thick and just a tad sweetened, as advertised.";
 		say "     'My receptors are in favor of this interaction. I feel... Pleased,' Segis['] informative tone may sometimes sound off-putting, but it is clear that his software supports positive feelings. With the proper stimulation, he begins to pump copious amounts of milk into your mouth. Sometimes it is easy to forget that Segis is an android when you close your eyes and focus on fully enjoying this, as his movements seem so natural you would not be able to distinguish them from a real person, save the slight artificial feeling of the synthetic material covering the android's chest...";
-		WaitLineBreak;
+		wait for any key;
 		ProjectFigureSegisHard;
 		say "     During this whole process, something else seems to have been brought to attention, as there is this hard and throbbing shaft poking against you from below. It seems the android's promptness to serve is not confined to his hypothetical psyche, but also physical. You figure that tugging on that [if Cock Length of Segis is 16]big and thick[else if Cock Length of Segis is 12]large[else]good-sized[end if] black shaft will only encourage the android to give you all he has got, and you are not wrong. As soon as you wrap your hand around his artificial cock, you definitely notice an increase in milk flow... And him just hugging you tighter. 'It seems you have activated it further by providing me with a handjob. This... Feels very pleasant. I recommend you continue!'";
 		if "Extra Milky" is listed in traits of Segis:
@@ -1123,7 +1099,7 @@ to say SegisSexMilk:
 to say SegisSexFootWorship: [only himbo for now]
 	say "     Looking over the android's entire body, from head to feet, your eyes linger towards the latter as you imagine what you could be doing. Despite Segis being an artificial being, his entire figure is actually carefully sculpted, and the same goes for his digitigrade legs and feet. Catching up on this, Segis tilts his head and eyes you curiously, his cerulean eyes blinking as he draws a smile. 'What's the matter, bud? See something you like below my waist? Or is it something even lower...?' he asks as he wiggles his mechanical toes, and noticing how your eyes react to the sudden movement, his excitement peaks. 'I see what you want... Aren't you the kinky one! Though I think it's a pretty common one, people who have it usually don't admit it, heh...'";
 	say "     He then places an arm over your neck and shoulders, pulling you to him tight as he rubs his muzzle against your cheek, 'So... You want my foot on your face?' As this is exactly what you wanted, you nod, albeit the way he is so eager to indulge you makes you blush a little, your body quickly turning itself on as blood rushes down south. 'Well, you'd like to know I've got some uh... Sensors down there. It's gonna feel good for me if you lick them. And get your lips around my toes. And hm... Maybe suck on them too... Fuck, I just wanna grind my feet all over your face, honestly! How about you... Get down?' His voice is enthusiastic and his smile huge and genuine, he really wants you to worship his feet now. This turned out to go better than you anticipated...";
-	WaitLineBreak;
+	wait for any key;
 	ProjectFigureSegisHard;
 	say "     Not wanting to make your android companion wait any further, as his excitable nature already prompted him to get an erection over the promise of a good time, you just get down on the floor and lean your face over this feet, planting a kiss on top of them. From a kiss, you move into straight up a makeout session with the top part of his toes as he wiggles them excitedly. 'Right where I want you...' he teases, his personality shifting his demeanor into a more and more dominant one, unknown if by a feature of its module or by the type of stimulation you are giving him, but he surely is embracing his newly established role. You give in to your cravings and continue to kiss and lick his foot, and eventually, you move to one of the sides as you lie down beneath them.";
 	say "     You are presented with the towering view of your android friend with his [if Cock Length of Segis is 16]huge and thick[else if Cock Length of Segis is 12]large[else]good-sized[end if] black shaft fully erect, throbbing and leaking, and a pleased grin on his muzzle, which is quickly replaced by a dark blur as he moves his foot on top of your face. 'This really feels good... Can't blame you kinky organics for getting off from this! Mmh, yeah, right on that spot...' He then covers your whole face with his foot as he presses down on you, to then grind his surprisingly soft sole all over your features. You do your best to follow through with lots of kissing and licking, and out of excitement, the android takes the liberty to jerk himself off as he enjoys your service.";
@@ -1148,7 +1124,6 @@ to say SegisSexFootWorship: [only himbo for now]
 	WaitLineBreak;
 	say "     You thank him for the good time and get ready to move on with your day.";
 	NPCSexAftermath Player receives "OralCock" from Segis;
-
 
 Section 3 - Segis as Companion
 
@@ -1199,7 +1174,7 @@ Section 3-1 - Segis UPGRADES
 
 [This is for upgrade unlocks through personality selection, which usually require Segis to be in a certain personality type for 48 cumulative hours]
 
-MuscularTypeUnlockTimer is a number that varies. MuscularTypeUnlockTimer is usually 14. [@Tag:NotSaved]
+MuscularTypeUnlockTimer is a number that varies. MuscularTypeUnlockTimer is usually 14.[@Tag:NotSaved]
 
 an everyturn rule:
 	if "Personality Himbo" is listed in traits of Segis and "Muscular Type Unlocked" is not listed in traits of Segis: [Only triggered by selecting this personality on Segis, so no further conditions required]
@@ -1242,9 +1217,7 @@ Cock Length of Segis:
 "Extra Milky" to check if the lactation extra upgrade is in
 
 Combat and Scavenge traits should be self-explanatory
-
 ]
-
 
 [Upgrades available:
 
@@ -1254,7 +1227,6 @@ PERSONALITY MODULES:
 - Himbo
 		Segis will behave like your next door gym-addict guy with the kindness of a generous gentleman... and the horniness of a horned-up jock.
 - ...
-
 
 COSMETIC UPGRADES:
 
@@ -1281,7 +1253,6 @@ COSMETIC UPGRADES:
 		Muscular Frame (Increased muscle mass, unlocked by having Segis on 'Himbo' personality for a few days. Personalities can be switched around freely afterwards.)
 			Note that this increases Segis' Weapon Damage at the cost of Dexterity by 2, respectively.
 
-
 COMBAT UPGRADES:
 
 - Powerful Blow:
@@ -1296,7 +1267,6 @@ COMBAT UPGRADES:
 		Allows Segis to assist you with all manners of stealth and evasion for as long as he remains by your side, increasing your effective Dexterity by +2. Limited to one Combat Protocol
 - Athletics Protocol:
 		Allows Segis to assist you with all manners of physical effort for as long as he remains by your side, increasing your effective Strength by +2. Limited to one Combat Protocol
-
 
 SCAVENGING UPGRADES:
 		All Scavenging protocols Segis can learn to assist you during his special Scavenge dialogue action.
@@ -1362,14 +1332,14 @@ to say SegisUpgradeMenu:
 			choose row calcnumber in table of fucking options;
 			say "[title entry]: [description entry]?";
 			if Player consents:
-				let nam be title entry;
 				now sextablerun is 1;
-				if (nam is "Personality Modules"):
-					say "[SegisPersonalityModulesMenu]";
-				else if (nam is "Cosmetic Upgrades"):
-					say "[SegisCosmeticUpgradesMenu]";
-				else if (nam is "Combat Upgrades"):
-					say "[SegisCombatUpgradesMenu]";
+				if title entry is:
+					-- "Personality Modules":
+						say "[SegisPersonalityModulesMenu]";
+					-- "Cosmetic Upgrades":
+						say "[SegisCosmeticUpgradesMenu]";
+					-- "Combat Upgrades":
+						say "[SegisCombatUpgradesMenu]";
 				[else if (nam is "Scavenging Upgrades"):
 					say "[SegisScavengingUpgradesMenu]";]
 		else if calcnumber is 0:
@@ -1377,7 +1347,7 @@ to say SegisUpgradeMenu:
 			say "     You cancel this, no longer wanting to browse any upgrade options.'";
 			wait for any key;
 		else:
-			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options], or 0 to exit.";
 	clear the screen and hyperlink list;
 
 [-----------------------------------------------]
@@ -1424,22 +1394,21 @@ to say SegisPersonalityModulesMenu:
 			choose row calcnumber in table of fucking options;
 			say "[title entry]: [description entry]?";
 			if Player consents:
-				let nam be title entry;
 				now sextablerun is 1;
-				if (nam is "Himbo"):
-					say "[SegisPersonalityHimbo]";
-				else if (nam is "Default"):
-					say "[SegisPersonalityDefault]";
+				if title entry is:
+					-- "Himbo":
+						say "[SegisPersonalityHimbo]";
+					-- "Default":
+						say "[SegisPersonalityDefault]";
 		else if calcnumber is 0:
 			now sextablerun is 1;
 			say "[SegisUpgradeMenu]";
 		else:
-			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options], or 0 to exit.";
 	clear the screen and hyperlink list;
 
 to say SegisPersonalityHimbo:
 	say "     You pick the Himbo personality option, which prompts Segis to react in his usual manner. 'So you've chosen that? Hah! Well, [italic type]it's not like there are many other options yet as I haven't properly compiled them[roman type] but I'm glad you found something you like! However, a sample is due before you commit to this decision. Here is an example of how I shall speak in the future. '[bold type]Yoo! How's it going, bud?! Are we finally gonna kick some ass together or am I getting the boring bench again? Sucks not hanging out with you...[roman type]' Here goes a second sample, '[bold type]So you wanna have some fun with big ol' Segis here, eh? Can't resist the sexy android, can you? So, what would'ya like to do with me?[roman type]' If it pleases you, I can switch to this personality right now.'";
-	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Yes, confirm.";
 	say "     ([link]N[as]n[end link]) - No, cancel.";
 	if Player consents:
@@ -1523,25 +1492,25 @@ to say SegisCosmeticUpgradesMenu:
 			choose row calcnumber in table of fucking options;
 			say "[title entry]: [description entry]?";
 			if Player consents:
-				let nam be title entry;
 				now sextablerun is 1;
-				if (nam is "External Genitalia"):
-					say "[SegisCosmeticExternalGenitalia]";
-				else if (nam is "Cum Flavor"):
-					say "[SegisCosmeticCumFlavor]";
-				else if (nam is "Lactation"):
-					say "[SegisCosmeticLactation]";
-				else if (nam is "Dick Size"):
-					say "[SegisCosmeticDickSize]";
-				else if (nam is "Cum Quantity"):
-					say "[SegisCosmeticCumQuantity]";
-				else if (nam is "Body Type"):
-					say "[SegisCosmeticBodyType]";
+				if title entry is:
+					-- "External Genitalia":
+						say "[SegisCosmeticExternalGenitalia]";
+					-- "Cum Flavor":
+						say "[SegisCosmeticCumFlavor]";
+					-- "Lactation":
+						say "[SegisCosmeticLactation]";
+					-- "Dick Size":
+						say "[SegisCosmeticDickSize]";
+					-- "Cum Quantity":
+						say "[SegisCosmeticCumQuantity]";
+					-- "Body Type":
+						say "[SegisCosmeticBodyType]";
 		else if calcnumber is 0:
 			now sextablerun is 1;
 			say "[SegisUpgradeMenu]";
 		else:
-			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options], or 0 to exit.";
 	clear the screen and hyperlink list;
 
 to say SegisCosmeticExternalGenitalia:
@@ -1551,11 +1520,9 @@ to say SegisCosmeticExternalGenitalia:
 		WaitLineBreak;
 		if carried of blue gel >= 1 and carried of silicone paste >= 3 and carried of metallic plate >= 1 and carried of junk scrap >= 5:
 			say "     It seems you have enough materials with you to proceed with the operation. Would you like to go ahead and order Segis to retrofit?";
-			LineBreak;
 			say "     ([link]Y[as]y[end link]) - Yes, confirm.";
 			say "     ([link]N[as]n[end link]) - No, cancel.";
 			if Player consents:
-				LineBreak;
 				ItemLoss blue gel by 1;
 				ItemLoss silicone paste by 3;
 				ItemLoss metallic plate by 1;
@@ -1566,8 +1533,8 @@ to say SegisCosmeticExternalGenitalia:
 				else:
 					say ". 'So this is your choice? Certainly, [sir]. I shall fulfill your request with utmost urgency, if you desire so. I suggest taking a brief break while you await my return. I estimate that it should not take a significant amount of time.' With that said, ";
 				say "Segis heads directly to the underground laboratory at lightning speed. Needing to supervise his upgrade, you decide to wait around the bunker, within the safety of its walls, for his return...";
-				WaitLineBreak;
 				follow the turnpass rule;
+				WaitLineBreak;
 				say "     Eventually, your android companion returns, and by simply looking at him, you can already see the difference. Between his legs, a nice set of black-colored cock and balls swing around with each step, looking quite realistic in both appearance, shape and mass distribution. The models he chose are quite eyecatching, especially his full, low-hanging and full testicles, suggesting they could indeed hold a grand amount of liquid ";
 				if "Personality Himbo" is listed in traits of Segis:
 					say "inside. 'Like what you see? Because I don't think you've stopped looking since I arrived, chief... Come on, don't be shy! You can touch it! Feel it up... All over... Get a good grip and rub it nicely...' You heed Segis['] insistent and bold invitation to touch him and walk up to him to do exactly that, grabbing his cock and feeling it up. Indeed, its texture is pleasantly smooth, and not only that, it feels warm enough to remind you of a real cock. 'Prime quality! If you wanna put your mouth on it, too... Be my guest...'";
@@ -1589,7 +1556,6 @@ to say SegisCosmeticExternalGenitalia:
 	else:
 		say "     By ordering Segis to change his equipment's location, you will have to revert all the upgrades. The result will be a nine-inch metallic cock that is retractable and functions otherwise the same way.";
 		say "     A partial refund of materials will be issued upon its execution. Would you like to proceed with the retrofit?";
-		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Yes, confirm.";
 		say "     ([link]N[as]n[end link]) - No, cancel.";
 		if Player consents:
@@ -1597,8 +1563,8 @@ to say SegisCosmeticExternalGenitalia:
 			ItemGain silicone paste by 1;
 			ItemGain junk scrap by 2;
 			say "     You confirm that you wish Segis to change himself up and revert to the retractable endowment he had initially. His eyes blink as he nods positively 'A revert, then? I shall get to it,' he says before starting to head directly to the underground laboratory at lightning speed. Needing to supervise this change, you decide to wait around the bunker, within the safety of its walls, for his return...";
-			WaitLineBreak;
 			follow the turnpass rule;
+			WaitLineBreak;
 			say "     Eventually, your android companion returns, and you can already see the difference as he walks with one less thing between his legs, having successfully reverted to his original form.";
 			TraitLoss "External Genitalia" for Segis;
 			now Cock Length of Segis is 9;
@@ -1613,11 +1579,11 @@ to say SegisCosmeticExternalGenitalia:
 to say SegisCosmeticCumFlavor:
 	say "     You go over the option regarding Segis['] flavor of cum. He does not have any input on this, however, the descriptions attached to each exiting option serve as enough indication of what each would taste like, even suggesting what [']fun['] effects they may have.";
 	if "Cum Flavor Demonic Sweet" is listed in traits of Segis:
-		say     "Currently, Segis has a flavor reminiscent of those demons have, codenamed as [']Demonic Sweet['].";
+		say "     Currently, Segis has a flavor reminiscent of those demons have, codenamed as [']Demonic Sweet['].";
 	else if "Cum Flavor Orcish Spicy" is listed in traits of Segis:
 		say "     Currently, Segis has a flavor reminiscent of those orcs have, codenamed as [']Orcish Spicy['].";
 	else:
-		say     "Currently, Segis has its default flavor on, codenamed as [']Humanly Salty['].";
+		say "     Currently, Segis has its default flavor on, codenamed as [']Humanly Salty['].";
 	say "     An interface is brought before you with all the possible tastes you could have Segis change to. Please note that you might have to provide a sample item for each different option.";
 	WaitLineBreak;
 	now sextablerun is 0;
@@ -1654,21 +1620,21 @@ to say SegisCosmeticCumFlavor:
 			choose row calcnumber in table of fucking options;
 			say "[title entry]: [description entry]?";
 			if Player consents:
-				let nam be title entry;
 				now sextablerun is 1;
-				if (nam is "Humanly Salty"):
-					say "[SegisCosmeticCumFlavorHSa]";
-				else if (nam is "Demonic Sweet"):
-					say "[SegisCosmeticCumFlavorDSw]";
-				else if (nam is "Orcish Spicy"):
-					say "[SegisCosmeticCumFlavorOSp]";
+				if title entry is:
+					-- "Humanly Salty":
+						say "[SegisCosmeticCumFlavorHSa]";
+					-- "Demonic Sweet":
+						say "[SegisCosmeticCumFlavorDSw]";
+					-- "Orcish Spicy":
+						say "[SegisCosmeticCumFlavorOSp]";
 		else if calcnumber is 0:
 			now sextablerun is 1;
 			say "     You withhold your decision and cancel the whole thing.";
 			wait for any key;
 			say "[SegisUpgradeMenu]";
 		else:
-			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options], or 0 to exit.";
 	clear the screen and hyperlink list;
 
 to say SegisCosmeticCumFlavorHSa:
@@ -1680,7 +1646,6 @@ to say SegisCosmeticCumFlavorHSa:
 to say SegisCosmeticCumFlavorDSw:
 	if carried of demon seed < 1:
 		say "     You lack the sample item. Please make sure you have a single sample of Demon Seed with you.";
-		wait for any key;
 		say "[SegisUpgradeMenu]";
 	else: [has the item]
 		ItemLoss demon seed by 1;
@@ -1688,7 +1653,7 @@ to say SegisCosmeticCumFlavorDSw:
 		if "Personality Himbo" is listed in traits of Segis:
 			say "options. 'I'm glad you're trying this one out! Making me cum like a demon sounds fun... I wish I had taste buds like you so I could try it out myself, but it's only gonna taste like numbers and data to me... Very boring. Gotta check if I can find some taste simulator thing... But hey, this is for you, and I'm more than glad to get you hooked on my juices! Because... Yeah, demon cum is sort of addicting, taste-wise, you just can't have enough... You're gonna wanna be sucking it out of me a lot...' he says, already eager to satisfy your cravings once you have them, which according to him, you shall. 'Oh, right, don't worry about all that stuff, though, because mine's safe. It's just gonna be a fun brief playing time for us but without, like, long-term effects. You'll be fine and really happy... Heheh.'";
 		else:
-			say "options. 'Certainly, [sir]. I must advise caution when drinking this substance, however, as it seems to have a side-effect. You may find your hormonal activity spiking once you taste it, and may develop promiscuous urges afterwards, as this type of semen is an activator of libido. Demons use this to better subdue mortals in order to reap the benefits, such as their souls and servitude, or to just make playtoys for their own amusement. Needless to say, handle those with care. With me, safety is ensured, and it shall only feel remotely similar for a brief time for authenticity and your personal enjoyment.' And after giving you his piece of information, Segis proceeds with the change.";
+			say "options. 'Certainly, [sir]. I must advise caution when drinking this substance, however, as it seems to have a side-effect. You may find your hormonal activity spiking once you taste it, and may develop promiscuous urges afterwards, as this type of semen is an activator of libido. Demons use this to better subdue mortals in order to reap the benefits, such as their souls and servitude, or to just make playtoys for their own amusement. Needless to say, handle those with care. With me, safety is ensured, and it shall only feel remotely similar for a brief time for authenticity and your personal enjoyment.' And after giving you this piece of information, Segis proceeds with the change.";
 		WaitLineBreak;
 		say "     It really does not take long for the android to finish the procedure, being only a matter of seconds until he calls it ready.";
 		say "     Segis['] cum flavor is now [bold type]Demonic Sweet[roman type], as you requested.";
@@ -1699,7 +1664,6 @@ to say SegisCosmeticCumFlavorDSw:
 to say SegisCosmeticCumFlavorOSp:
 	if carried of orc cum < 1:
 		say "     You lack the sample item. Please make sure you have a single sample of Orc Cum with you.";
-		wait for any key;
 		say "[SegisUpgradeMenu]";
 	else: [has the item]
 		ItemLoss orc cum by 1;
@@ -1723,15 +1687,12 @@ to say SegisCosmeticLactation:
 		say "     It does not seem like it would have much effect on whatever resources he spends, but he assures you that if you find some [bold type]Gryphon Milk[roman type], he might be able to replicate and introduce it in a system allocated in his chest, which you may manually extract.";
 		if carried of gryphon milk < 1:
 			say "     It does not seem you have any Gryphon Milk with you, so you cannot really do anything here...";
-			wait for any key;
 			say "[SegisUpgradeMenu]";
 		else:
 			say "     Seeing that you are carrying at least one bottle of Gryphon Milk with you, would you like to give it to Segis and activate this functionality? No other costs are required.";
-			LineBreak;
 			say "     ([link]Y[as]y[end link]) - Yes, confirm.";
 			say "     ([link]N[as]n[end link]) - No, cancel.";
 			if Player consents:
-				LineBreak;
 				ItemLoss gryphon milk by 1;
 				say "     Wanting Segis to have this additional functionality, you instruct him to undergo this change as you hand him the requested item. His eyes blink all over the bottle as he examines its contents, then nods";
 				if "Personality Himbo" is listed in traits of Segis:
@@ -1745,7 +1706,6 @@ to say SegisCosmeticLactation:
 			else:
 				LineBreak;
 				say "     You withhold your decision and cancel the whole thing.";
-				wait for any key;
 				say "[SegisUpgradeMenu]";
 	else if "Extra Milky" is not listed in traits of Segis:
 		if "Muscular Body Type" is listed in traits of Segis:
@@ -1753,28 +1713,26 @@ to say SegisCosmeticLactation:
 		else:
 			say "     Currently, Segis has functional lactation, at a moderate production rate of milk in his chest. A larger body type would be required to upgrade this system even further.";
 		say "     Alternatively, you can simply choose to disable this functionality at no cost.";
-		say "     What would you like to do?";
 		LineBreak;
+		say "     What would you like to do?";
 		say "     [link](1)[as]1[end link] - Upgrade to Extra Milky (Requires Muscular Frame).";
 		say "     [link](2)[as]2[end link] - Deactivate Lactation.";
 		say "     [link](3)[as]3[end link] - Do nothing.";
 		now calcnumber is 0;
 		while calcnumber < 1 or calcnumber > 3:
-			say "Choice? (1-3)>[run paragraph on]";
+			say "Choice? (1-3)> [run paragraph on]";
 			get a number;
-			if calcnumber is 1 or calcnumber is 2 or calcnumber is 3:
-				break;
-			else:
+			if calcnumber < 1 or calcnumber > 3:
 				say "Invalid choice. Type [link]1[end link] to upgrade into Extra Milky, if requirements are met, [link]2[end link] to deactivate the system or [link]3[end link] to cancel.";
 		if calcnumber is 1:
 			if "Muscular Body Type" is not listed in traits of Segis:
+				LineBreak;
 				say "     You do not have the required body type for this upgrade. The body type required is a Muscular Frame.";
 				say "     (If you do not have the option unlocked, try switching Segis['] personality to Himbo and wait for a couple of days. Hopefully that will force the android to prioritize its research!)";
-				wait for any key;
 				say "[SegisUpgradeMenu]";
 			else if carried of silicone paste < 1 and carried of metallic plate < 2 and carried of junk scrap < 2:
+				LineBreak;
 				say "     It appears you do not have enough materials on you for this upgrade.";
-				wait for any key;
 				say "[SegisUpgradeMenu]";
 			else: [upgrading!]
 				ItemLoss silicone paste by 1;
@@ -1786,16 +1744,18 @@ to say SegisCosmeticLactation:
 				else:
 					say "shows you a prolonged stare, as if almost judging you. 'Do note that this particular upgrade overrides important safety measures that, in case anything goes wrong, may jeopardize adjacent systems and cause a critical failure on my whole hardware. It is entirely your responsibility if it happens, so I recommend you take precautions. My simulations indicate that frequent extraction will resolve the predicted problems, so I shall add that to my maintenance routine. In the end, chances are this upgrade is not as dangerous as I initially classified it. In any case, I require the laboratory's equipment to install this upgrade, so I must go there.'";
 				say "     With that said, Segis heads directly to the underground laboratory at lightning speed. Needing to supervise his upgrade, you decide to wait around the bunker, within the safety of its walls, for his return...";
-				WaitLineBreak;
 				follow the turnpass rule;
+				WaitLineBreak;
 				say "     Eventually, he does make his return, and at first glance, nothing really seems to have changed... Until you spot a single drop of milk already making its way through the constantly prominent nipple structure on his metallic chest. It seems you will have a lot of work helping Segis maintaining that overloaded lactation system, but it was you who wanted this!";
 				TraitGain "Extra Milky" for Segis;
 				wait for any key;
 		else if calcnumber is 2:
+			LineBreak;
 			say "     No longer interested in having Segis with an active lactation system, you order him to deactivate it. Such is done with a simple command, and just like that, it stops functioning. If you wish to reactivate it, you will have to provide a new sample.";
 			TraitLoss "Lactating" for Segis;
 			wait for any key;
 		else if calcnumber is 3:
+			LineBreak;
 			say "     You withhold your decision and cancel the whole thing.";
 			wait for any key;
 			say "[SegisUpgradeMenu]";
@@ -1807,12 +1767,11 @@ to say SegisCosmeticLactation:
 		say "     [link](3)[as]3[end link] - Do nothing.";
 		now calcnumber is 0;
 		while calcnumber < 1 or calcnumber > 3:
-			say "Choice? (1-3)>[run paragraph on]";
+			say "Choice? (1-3)> [run paragraph on]";
 			get a number;
-			if calcnumber is 1 or calcnumber is 2 or calcnumber is 3:
-				break;
-			else:
+			if calcnumber < 1 or calcnumber > 3:
 				say "Invalid choice. Type [link]1[end link] to downgrade to normal lactation, [link]2[end link] to deactivate the system or [link]3[end link] to cancel.";
+		LineBreak;
 		if calcnumber is 1:
 			say "     No longer wishing for Segis to be lactating that much, you instruct him to decommission that upgrade. He does such without much of an issue, and informs you that the systems will have to be replaced at a later time, so you will have to provide new resources if you wish for him to have this on again.";
 			TraitLoss "Extra Milky" for Segis;
@@ -1863,27 +1822,26 @@ to say SegisCosmeticDickSize:
 			choose row calcnumber in table of fucking options;
 			say "[title entry]: [description entry]?";
 			if Player consents:
-				let nam be title entry;
 				now sextablerun is 1;
-				if (nam is "Big Twelve"):
-					say "[SegisCosmeticDickSize12]";
-				else if (nam is "Bigger Sixteen"):
-					say "[SegisCosmeticDickSize16]";
-				else if (nam is "Default Nine"):
-					say "[SegisCosmeticDickSizeDef9]";
+				if title entry is:
+					-- "Big Twelve":
+						say "[SegisCosmeticDickSize12]";
+					-- "Bigger Sixteen":
+						say "[SegisCosmeticDickSize16]";
+					-- "Default Nine":
+						say "[SegisCosmeticDickSizeDef9]";
 		else if calcnumber is 0:
 			now sextablerun is 1;
 			say "     You withhold your decision and cancel the whole thing.";
 			wait for any key;
 			say "[SegisUpgradeMenu]";
 		else:
-			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options], or 0 to exit.";
 	clear the screen and hyperlink list;
 
 to say SegisCosmeticDickSize12:
 	if carried of silicone paste < 1:
 		say "     It seems you lack the required amount of silicone paste. Please select this option again once you have it on you.";
-		wait for any key;
 		say "[SegisUpgradeMenu]";
 	else:
 		ItemLoss silicone paste by 1;
@@ -1891,19 +1849,18 @@ to say SegisCosmeticDickSize12:
 		if "Personality Himbo" is listed in traits of Segis:
 			say " and soon, he energetically speaks, 'Hell yes! You're starting to share my philosophy of the bigger the better, yeah? Well, this one's kinda fun. The way my junk got upgraded pretty much has on-spot size changing in mind, and all you gotta do is get some of that paste you gave me and rub it over my dick! The material's gonna get absorbed into its tissue and it's gonna start to expand, and it stays like that until you tell me to get rid of it, basically! This does mean you gotta reapply it every time you wanna regrow it in case you wanna revert its size, but it's pretty neat, eh?' he then gives a chuckle and hands you over the paste you just gave him. 'Why don't you do the honors?' He finally asks, his mechanical cock building an erection almost faster than you could blink.";
 			say "     You then remember how much more sexual Segis is in this personality module... And he does seem inclined to turn this into an opportunity for some fun. Should you accept his proposal and apply the silicone paste yourself, or shall you instruct him to do so by himself?";
-			LineBreak;
 			say "     ([link]Y[as]y[end link]) - Apply the paste yourself.";
 			say "     ([link]N[as]n[end link]) - No, let him do it on his own and oversee the procedure.";
 			if Player consents:
 				LineBreak;
 				say "     Walking up to your android companion, you grab the paste and get on your knees in front of the already respectable black cock between his metallic thighs, ready to spread it across the shaft. 'Alright! Make sure you get every inch!' he tells you, and not wanting to mess this up, you follow his instructions by rubbing the entire thing with both your hands covered in the paste. The results are almost immediate, as his dick begins to expand in your grasp by the second, growing little by little, pushing against your fingers and forcing you to open your hand more, as not only the length, but the thickness as well, is added to the already sizable member. It really amazes you how realistic, warm and smooth Segis['] cock feels, as if it was almost like the real deal.";
-				say "     Once you look up, Segis['] eyes are blinking pink, and there is even a heart-shaped dot in the middle of it, an effect that is couple with an almost hazy smile. 'Uuh... Ah! Y-you have done it! That was... That was it! Very enjoyable, friend! Did I... look strange while you did this? I keep finding weird stuff in this module... I seem to actually enjoy being touched a lot more...! How about we test this thing out, eh? A whole foot-long for you to play with? I'm pretty sure some people out there have even bigger ones, but hey! This one's pretty alright already! Now, if only we could get it even bigger... Heheh...'";
+				say "     Once you look up, Segis['] eyes are blinking pink, and there is even a heart-shaped dot in the middle of it, an effect that is couple with an almost hazy smile. 'Uuh... Ah! Y-you have done it! That was... That was it! Very enjoyable, friend! Did I... look strange while you did this? I keep finding weird stuff in this module... I seem to actually enjoy being touched a lot more...! How about we test this thing out, eh? A whole footlong for you to play with? I'm pretty sure some people out there have even bigger ones, but hey! This one's pretty alright already! Now, if only we could get it even bigger... Heheh...'";
 			else:
 				say "     You let him know that you would prefer him to apply the paste himself, and he seems disappointed at that. 'Aw... I suppose I'll do it the boring way, then...'";
-				say "     Segis then brings the paste and begins to rub it all across his shaft, ensuring every inch is covered in it, and the results are quick to show. Every little bit of his cock begins to expand, growing bigger before your eyes by the second, slowly, until it builds an extra inch, then another, and finally, the one that grows it up to the aforementioned big twelve. Now with a foot-long, Segis reports that the upgrade has been completed. 'All done now! So... Seems to be pretty functional, wanna test it out later?'";
+				say "     Segis then brings the paste and begins to rub it all across his shaft, ensuring every inch is covered in it, and the results are quick to show. Every little bit of his cock begins to expand, growing bigger before your eyes by the second, slowly, until it builds an extra inch, then another, and finally, the one that grows it up to the aforementioned big twelve. Now with a footlong, Segis reports that the upgrade has been completed. 'All done now! So... Seems to be pretty functional, wanna test it out later?'";
 		else:
 			say " and soon, he begins to speak, 'Preferring bigger sizes is quite a common thing among you organics, at least around here. With that in mind, I've created this equipment with size modifications in mind that can be made on spot instead of requiring me to run all the way back to the laboratory like I would for a major hardware or component change. With this one, I merely have to apply the paste on the equipment and allow the tissue to absorb the material, which will then expand it permanently. This, however, means it has to be reapplied every time you wish for me to revert it to its original size. If you wish to oversee the procedure, you may, as it shall only take a while.'";
-			say "     Segis then brings the paste and begins to rub it all across his shaft, ensuring every inch is covered in it, and the results are quick to show. Every little bit of his cock begins to expand, growing bigger before your eyes by the second, slowly, until it builds an extra inch, then another, and finally, the one that grows it up to the aforementioned big twelve. Now with a foot-long, Segis reports that the upgrade has been completed.";
+			say "     Segis then brings the paste and begins to rub it all across his shaft, ensuring every inch is covered in it, and the results are quick to show. Every little bit of his cock begins to expand, growing bigger before your eyes by the second, slowly, until it builds an extra inch, then another, and finally, the one that grows it up to the aforementioned big twelve. Now with a footlong, Segis reports that the upgrade has been completed.";
 		WaitLineBreak;
 		say "     Your android companion now has a twelve inches long cock!";
 		now Cock Length of Segis is 12;
@@ -1912,11 +1869,9 @@ to say SegisCosmeticDickSize12:
 to say SegisCosmeticDickSize16:
 	if Cock Length of Segis is 12 and carried of silicone paste < 2:
 		say "     It seems you lack the required amount of silicone paste. Please select this option again once you have it on you.";
-		wait for any key;
 		say "[SegisUpgradeMenu]";
 	else if carried of silicone paste < 3:
 		say "     It seems you lack the required amount of silicone paste. Please select this option again once you have it on you.";
-		wait for any key;
 		say "[SegisUpgradeMenu]";
 	else:
 		if Cock Length of Segis is 12:
@@ -1927,19 +1882,18 @@ to say SegisCosmeticDickSize16:
 		if "Personality Himbo" is listed in traits of Segis:
 			say " and soon, he energetically speaks, 'Hell yes! You're starting to share my philosophy of the bigger the better, yeah? And a whole sixteen inches?! Fuck yeah! Well, this one's kinda fun. The way my junk got upgraded pretty much has on-spot size changing in mind, and all you gotta do is get some of that paste you gave me and rub it over my dick! The material's gonna get absorbed into its tissue and it's gonna start to expand, and it stays like that until you tell me to get rid of it, basically! This does mean you gotta reapply it every time you wanna regrow it in case you wanna revert its size, but it's pretty neat, eh?' he then gives a chuckle and hands you over the paste you just gave him. 'Why don't you do the honors?' He finally asks, his mechanical cock building an erection almost faster than you could blink.";
 			say "     You then remember how much more sexual Segis is in this personality module... And he does seem inclined to turn this into an opportunity for some fun. Should you accept his proposal and apply the silicone paste yourself, or shall you instruct him to do so by himself?";
-			LineBreak;
 			say "     ([link]Y[as]y[end link]) - Apply the paste yourself.";
 			say "     ([link]N[as]n[end link]) - No, let him do it on his own and oversee the procedure.";
 			if Player consents:
 				LineBreak;
 				say "     Walking up to your android companion, you grab the paste and get on your knees in front of the already respectable black cock between his metallic thighs, ready to spread it across the shaft. 'Alright! Make sure you get every inch!' he tells you, and not wanting to mess this up, you follow his instructions by rubbing the entire thing with both your hands covered in the paste. The results are almost immediate, as his dick begins to expand in your grasp by the second, growing little by little, pushing against your fingers and forcing you to open your hand more, as not only the length, but the thickness as well, is added to the already sizable member. It really amazes you how realistic, warm and smooth Segis['] cock feels, as if it was almost like the real deal.";
-				say "     Eventually, his cock grows truly huge, up to the sixteen inches that were in the description. Once you look up, Segis['] eyes are blinking pink, and there is even a heart-shaped dot in the middle of it, an effect that is couple with an almost hazy smile. 'Uuh... Ah! Y-you have done it! That was... That was it! Very enjoyable, friend! Did I... look strange while you did this? I keep finding weird stuff in this module... I seem to actually enjoy being touched a lot more...! How about we test this thing out, eh? A whole fucking foot-long and a half for you to play with? I'm pretty sure some people out there have even bigger ones, but hey! This one's pretty massive! Sadly, doesn't seem I can get any bigger with my current setup... But wouldn't that be fun? Heheh...'";
+				say "     Eventually, his cock grows truly huge, up to the sixteen inches that were in the description. Once you look up, Segis['] eyes are blinking pink, and there is even a heart-shaped dot in the middle of it, an effect that is couple with an almost hazy smile. 'Uuh... Ah! Y-you have done it! That was... That was it! Very enjoyable, friend! Did I... look strange while you did this? I keep finding weird stuff in this module... I seem to actually enjoy being touched a lot more...! How about we test this thing out, eh? A whole fucking footlong and a half for you to play with? I'm pretty sure some people out there have even bigger ones, but hey! This one's pretty massive! Sadly, doesn't seem I can get any bigger with my current setup... But wouldn't that be fun? Heheh...'";
 			else:
 				say "     You let him know that you would prefer him to apply the paste himself, and he seems disappointed at that. 'Aw... I suppose I'll do it the boring way, then...'";
-				say "     Segis then brings the paste and begins to rub it all across his shaft, ensuring every inch is covered in it, and the results are quick to show. Every little bit of his cock begins to expand, growing bigger before your eyes by the second, slowly, until it builds an extra inch, then another, and another... Until it finally gets to the last one that grows it up to the aforementioned big sixteen. Now with a foot-long and a half, Segis reports that the upgrade has been completed. 'All done now! So... Seems to be pretty functional, wanna test it out later? Though careful, this one's looking pretty huge...!'";
+				say "     Segis then brings the paste and begins to rub it all across his shaft, ensuring every inch is covered in it, and the results are quick to show. Every little bit of his cock begins to expand, growing bigger before your eyes by the second, slowly, until it builds an extra inch, then another, and another... Until it finally gets to the last one that grows it up to the aforementioned big sixteen. Now with a footlong and a half, Segis reports that the upgrade has been completed. 'All done now! So... Seems to be pretty functional, wanna test it out later? Though careful, this one's looking pretty huge...!'";
 		else:
 			say " and soon, he begins to speak, 'Preferring bigger sizes is quite a common thing among you organics, at least around here. With that in mind, I've created this equipment with size modifications in mind that can be made on spot instead of requiring me to run all the way back to the laboratory like I would for a major hardware or component change. With this one, I merely have to apply the paste on the equipment and allow the tissue to absorb the material, which will then expand it permanently. This, however, means it has to be reapplied every time you wish for me to revert it to its original size. If you wish to oversee the procedure, you may, as it shall only take a while.'";
-			say "     Segis then brings the paste and begins to rub it all across his shaft, ensuring every inch is covered in it, and the results are quick to show. Every little bit of his cock begins to expand, growing bigger before your eyes by the second, slowly, until it builds an extra inch, then another, and another... Until finally it reaches the one that grows it up to the aforementioned bigger sixteen. Now with a foot-long and a half, Segis reports that the upgrade has been completed. 'I'm afraid I cannot extend its size any longer with my current setup. This is probably the bigger it can ever be. Not that any bigger would be any practical, but I'm obliged to follow your instructions... Sort of.'";
+			say "     Segis then brings the paste and begins to rub it all across his shaft, ensuring every inch is covered in it, and the results are quick to show. Every little bit of his cock begins to expand, growing bigger before your eyes by the second, slowly, until it builds an extra inch, then another, and another... Until finally it reaches the one that grows it up to the aforementioned bigger sixteen. Now with a footlong and a half, Segis reports that the upgrade has been completed. 'I'm afraid I cannot extend its size any longer with my current setup. This is probably the bigger it can ever be. Not that any bigger would be any practical, but I'm obliged to follow your instructions... Sort of.'";
 		WaitLineBreak;
 		say "     Your android companion now has a sixteen inches long cock!";
 		now Cock Length of Segis is 16;
@@ -1988,27 +1942,26 @@ to say SegisCosmeticCumQuantity:
 			choose row calcnumber in table of fucking options;
 			say "[title entry]: [description entry]?";
 			if Player consents:
-				let nam be title entry;
 				now sextablerun is 1;
-				if (nam is "Plentiful Loads"):
-					say "[SegisCosmeticBallSize4]";
-				else if (nam is "Big Messy Loads"):
-					say "[SegisCosmeticBallSize5]";
-				else if (nam is "Default"):
-					say "[SegisCosmeticBallSizeDef3]";
+				if title entry is:
+					-- "Plentiful Loads":
+						say "[SegisCosmeticBallSize4]";
+					-- "Big Messy Loads":
+						say "[SegisCosmeticBallSize5]";
+					-- "Default":
+						say "[SegisCosmeticBallSizeDef3]";
 		else if calcnumber is 0:
 			now sextablerun is 1;
 			say "     You withhold your decision and cancel the whole thing.";
 			wait for any key;
 			say "[SegisUpgradeMenu]";
 		else:
-			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options], or 0 to exit.";
 	clear the screen and hyperlink list;
 
 to say SegisCosmeticBallSize4:
 	if carried of silicone paste < 2:
 		say "     It seems you lack the required amount of silicone paste. Please select this option again once you have it on you.";
-		wait for any key;
 		say "[SegisUpgradeMenu]";
 	else:
 		ItemLoss silicone paste by 2;
@@ -2016,7 +1969,6 @@ to say SegisCosmeticBallSize4:
 		if "Personality Himbo" is listed in traits of Segis:
 			say " and soon, he energetically speaks, 'Hell yes! You're starting to share my philosophy of the bigger the better, yeah? Well, this one's kinda fun. The way my junk got upgraded pretty much has on-spot size changing in mind, and all you gotta do is get some of that paste you gave me and rub it over my balls! The material's gonna get absorbed into its tissue and it's gonna start to expand, and it stays like that until you tell me to get rid of it, basically! This does mean you gotta reapply it every time you wanna regrow it in case you wanna revert their size, but it's pretty neat, eh?' he then gives a chuckle and hands you over the paste you just gave him. 'Why don't you do the honors?' He finally asks, his mechanical cock building an erection almost faster than you could blink.";
 			say "     You then remember how much more sexual Segis is in this personality module... And he does seem inclined to turn this into an opportunity for some fun. Should you accept his proposal and apply the silicone paste yourself, or shall you instruct him to do so by himself?";
-			LineBreak;
 			say "     ([link]Y[as]y[end link]) - Apply the paste yourself.";
 			say "     ([link]N[as]n[end link]) - No, let him do it on his own and oversee the procedure.";
 			if Player consents:
@@ -2037,11 +1989,9 @@ to say SegisCosmeticBallSize4:
 to say SegisCosmeticBallSize5:
 	if Ball Size of Segis is 4 and carried of silicone paste < 2:
 		say "     It seems you lack the required amount of silicone paste. Please select this option again once you have it on you.";
-		wait for any key;
 		say "[SegisUpgradeMenu]";
 	else if carried of silicone paste < 4:
 		say "     It seems you lack the required amount of silicone paste. Please select this option again once you have it on you.";
-		wait for any key;
 		say "[SegisUpgradeMenu]";
 	else:
 		if Ball Size of Segis is 4:
@@ -2052,7 +2002,6 @@ to say SegisCosmeticBallSize5:
 		if "Personality Himbo" is listed in traits of Segis:
 			say " and soon, he energetically speaks, 'Hell yes! You're starting to share my philosophy of the bigger the better, yeah? And by that much?! I'm gonna be filling buckets! Well, this one's kinda fun. The way my junk got upgraded pretty much has on-spot size changing in mind, and all you gotta do is get some of that paste you gave me and rub it over my balls! The material's gonna get absorbed into its tissue and it's gonna start to expand, and it stays like that until you tell me to get rid of it, basically! This does mean you gotta reapply it every time you wanna regrow it in case you wanna revert their size, but it's pretty neat, eh?' he then gives a chuckle and hands you over the paste you just gave him. 'Why don't you do the honors?' He finally asks, his mechanical cock building an erection almost faster than you could blink.";
 			say "     You then remember how much more sexual Segis is in this personality module... And he does seem inclined to turn this into an opportunity for some fun. Should you accept his proposal and apply the silicone paste yourself, or shall you instruct him to do so by himself?";
-			LineBreak;
 			say "     ([link]Y[as]y[end link]) - Apply the paste yourself.";
 			say "     ([link]N[as]n[end link]) - No, let him do it on his own and oversee the procedure.";
 			if Player consents:
@@ -2108,25 +2057,24 @@ to say SegisCosmeticBodyType:
 			choose row calcnumber in table of fucking options;
 			say "[title entry]: [description entry]?";
 			if Player consents:
-				let nam be title entry;
 				now sextablerun is 1;
-				if (nam is "Muscular Frame"):
-					say "[SegisCosmeticBodyTypeM]";
-				[else if (nam is "Default Lean"):
-					say "[SegisCosmeticBodyTypeL]";]
+				if title entry is:
+					-- "Muscular Frame":
+						say "[SegisCosmeticBodyTypeM]";
+					[-- "Default Lean":
+						say "[SegisCosmeticBodyTypeL]";]
 		else if calcnumber is 0:
 			now sextablerun is 1;
 			say "     You withhold your decision and cancel the whole thing.";
 			wait for any key;
 			say "[SegisUpgradeMenu]";
 		else:
-			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options], or 0 to exit.";
 	clear the screen and hyperlink list;
 
 to say SegisCosmeticBodyTypeM:
 	if carried of silicone paste < 5 and carried of metallic plate < 10 and carried of junk scrap < 15:
 		say "     Unfortunately, it seems you are not carrying the required resources with you. Ensure you have them on you at the time of upgrading.";
-		wait for any key;
 		say "[SegisUpgradeMenu]";
 	else:
 		ItemLoss silicone paste by 5;
@@ -2135,8 +2083,8 @@ to say SegisCosmeticBodyTypeM:
 		say "     Having thought about this, you have decided to instruct Segis to upgrade his current frame to the Muscular Frame, which will make him overall bigger and with a physique reminiscent of a powerful bodybuilder. Since this was a body type researched through the usage of a specific personality module, Segis['] demeanor automatically shifts to the correspondent one in order to relay all the necessary information. 'I'm glad you've chosen this! This is how I truly feel I should be! A big, strong android to protect my best admin buddy and fuck [ObjectPro] proper! Bet I could lift you with only one arm on this huge frame!' After you hand him over the entire package of resources, he examines the contents and confirms the required amount.";
 		say "     'This is definitely gonna take a while! The way this upgrade is gonna be done is... Well, it's gonna be added on top of this frame. Meaning, if you wanna change it back, I'll have to remove these parts, which won't make them reusable. Sadly, the equipment we've got isn't all that good to produce reusable, modular parts, so I'm trying to improve in a not all too efficient way... But the final result is gonna be bomb! You'll see! I'll be the sexiest android ever! Uh, yeah, so... This is gonna be, like, really boring to watch, so how about you wait for me to return? I'd invite you to come along, but all it's gonna look like is just me patching things together, and there's no need for that!'";
 		say "     With that said, Segis heads directly to the underground laboratory at lightning speed. Needing to supervise his upgrade, you decide to wait around the bunker, within the safety of its walls, for his return...";
-		WaitLineBreak;
 		follow the turnpass rule;
+		WaitLineBreak;
 		say "     Eventually, your android companion makes his return, and the difference is very noticeable from the start. What was a mere average height dragon android is now a powerhouse of an anthropomorphic dragon at least a foot taller than before, seemingly capable of punching his way through walls and bend metal with the strength of his arms alone. Segis is now very big, befitting his himbo personality module flawlessly. 'Yoo! Check this out! I'm so big I kinda can't fully lower my arms! Though I ran some simulations and saw that it's normal when you're this big and sexy... I probably weigh a lot more too! Though, uh... I don't think I can handle some stuff all too well anymore, this body makes strength the most important thing. Means I punch harder, though! And that's what's important! Heheh...'";
 		say "     You calculate that, even if this is presented as a cosmetic upgrade, this might change a few things about Segis['] combat abilities.";
 		WaitLineBreak;
@@ -2172,7 +2120,6 @@ Section 3-1-3 - Segis UPGRADES COMBAT
 [-----------------------------------------------]
 [-----------------------------------------------]
 [-----------------------------------------------]
-
 
 to say SegisCombatUpgradesMenu:
 	say "     You select the Combat Upgrades menu option, and another submenu appears with a note saying that [bold type]none of these upgrades can be reverted[roman type]. Once you commit to one, it is permanent.";
@@ -2227,38 +2174,37 @@ to say SegisCombatUpgradesMenu:
 			choose row calcnumber in table of fucking options;
 			say "[title entry]: [description entry]?";
 			if Player consents:
-				let nam be title entry;
 				now sextablerun is 1;
-				if (nam is "Powerful Blow"):
-					say "[SegisCombatPowerfulBlow]";
-				else if (nam is "Improved Powerful Blow"):
-					say "[SegisCombatImpPowerfulBlow]";
-				else if (nam is "Aimed Strike"):
-					say "[SegisCombatAimedStrike]";
-				else if (nam is "Improved Aimed Strike"):
-					say "[SegisCombatImpAimedStrike]";
-				[else if (nam is "Stealth Protocol"):
-					say "[SegisCombatStealthProtocol]";
-				else if (nam is "Athletics Protocol"):
-					say "[SegisCombatAthleticsProtocol]";]
+				if title entry is:
+					-- "Powerful Blow":
+						say "[SegisCombatPowerfulBlow]";
+					-- "Improved Powerful Blow":
+						say "[SegisCombatImpPowerfulBlow]";
+					-- "Aimed Strike":
+						say "[SegisCombatAimedStrike]";
+					-- "Improved Aimed Strike":
+						say "[SegisCombatImpAimedStrike]";
+					[-- "Stealth Protocol":
+						say "[SegisCombatStealthProtocol]";
+					-- "Athletics Protocol":
+						say "[SegisCombatAthleticsProtocol]";]
 		else if calcnumber is 0:
 			now sextablerun is 1;
 			say "[SegisUpgradeMenu]";
 		else:
-			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options], or 0 to exit.";
 	clear the screen and hyperlink list;
 
 to say SegisCombatPowerfulBlow:
 	if carried of metallic plate < 1 and carried of junk scrap < 5:
 		say "     It appears you do not have enough materials for this upgrade. Make sure you have one metallic plate and five bits of junk scrap on you.";
-		wait for any key;
 		say "[SegisUpgradeMenu]";
 	else:
 		ItemLoss metallic plate by 1;
 		ItemLoss junk scrap by 5;
 		say "     Having selected this option, you instruct Segis to retrofit this upgrade on him. As you hand him over the materials, his eyes blink repeatedly while looking at them, as if analyzing the contents through some special method of his. He then nods, informing you that this will take some time as he makes his way to the underground laboratory, and you are asked to wait in the bunker for his return. With the necessity to evaluate the conditions of his upgrade, you use up the time to relax for a while within the safety of these walls.";
-		WaitLineBreak;
 		follow the turnpass rule;
+		WaitLineBreak;
 		say "     Eventually, he does return, as promised. You check on him and confirm that the upgrade has been installed, allowing Segis to hit your foes harder than before.";
 		say "     [bold type]Segis['] weapon damage has increased by 1![roman type][line break]";
 		increase weapon damage of dragon android by 1;
@@ -2268,14 +2214,13 @@ to say SegisCombatPowerfulBlow:
 to say SegisCombatImpPowerfulBlow:
 	if carried of metallic plate < 2 and carried of junk scrap < 10:
 		say "     It appears you do not have enough materials for this upgrade. Make sure you have two metallic plates and ten bits of junk scrap on you.";
-		wait for any key;
 		say "[SegisUpgradeMenu]";
 	else:
 		ItemLoss metallic plate by 2;
 		ItemLoss junk scrap by 10;
 		say "     Having selected this option, you instruct Segis to retrofit this upgrade on him. As you hand him over the materials, his eyes blink repeatedly while looking at them, as if analyzing the contents through some special method of his. He then nods, informing you that this will take some time as he makes his way to the underground laboratory, and you are asked to wait in the bunker for his return. With the necessity to evaluate the conditions of his upgrade, you use up the time to relax for a while within the safety of these walls.";
-		WaitLineBreak;
 		follow the turnpass rule;
+		WaitLineBreak;
 		say "     Eventually, he does return, as promised. You check on him and confirm that the upgrade has been installed, allowing Segis to hit your foes even harder than before.";
 		say "     [bold type]Segis['] weapon damage has increased by 2![roman type][line break]";
 		increase weapon damage of dragon android by 2;
@@ -2285,14 +2230,13 @@ to say SegisCombatImpPowerfulBlow:
 to say SegisCombatAimedStrike:
 	if carried of metallic plate < 1 and carried of junk scrap < 5:
 		say "     It appears you do not have enough materials for this upgrade. Make sure you have one metallic plate and five bits of junk scrap on you.";
-		wait for any key;
 		say "[SegisUpgradeMenu]";
 	else:
 		ItemLoss metallic plate by 1;
 		ItemLoss junk scrap by 5;
 		say "     Having selected this option, you instruct Segis to retrofit this upgrade on him. As you hand him over the materials, his eyes blink repeatedly while looking at them, as if analyzing the contents through some special method of his. He then nods, informing you that this will take some time as he makes his way to the underground laboratory, and you are asked to wait in the bunker for his return. With the necessity to evaluate the conditions of his upgrade, you use up the time to relax for a while within the safety of these walls.";
-		WaitLineBreak;
 		follow the turnpass rule;
+		WaitLineBreak;
 		say "     Eventually, he does return, as promised. You check on him and confirm that the upgrade has been installed, allowing Segis to hit your foes more precisely than before.";
 		say "     [bold type]Segis['] dexterity has increased by 1![roman type][line break]";
 		increase dexterity of dragon android by 1;
@@ -2302,14 +2246,13 @@ to say SegisCombatAimedStrike:
 to say SegisCombatImpAimedStrike:
 	if carried of metallic plate < 2 and carried of junk scrap < 10:
 		say "     It appears you do not have enough materials for this upgrade. Make sure you have two metallic plates and ten bits of junk scrap on you.";
-		wait for any key;
 		say "[SegisUpgradeMenu]";
 	else:
 		ItemLoss metallic plate by 2;
 		ItemLoss junk scrap by 10;
 		say "     Having selected this option, you instruct Segis to retrofit this upgrade on him. As you hand him over the materials, his eyes blink repeatedly while looking at them, as if analyzing the contents through some special method of his. He then nods, informing you that this will take some time as he makes his way to the underground laboratory, and you are asked to wait in the bunker for his return. With the necessity to evaluate the conditions of his upgrade, you use up the time to relax for a while within the safety of these walls.";
-		WaitLineBreak;
 		follow the turnpass rule;
+		WaitLineBreak;
 		say "     Eventually, he does return, as promised. You check on him and confirm that the upgrade has been installed, allowing Segis to hit your foes even more precisely than before.";
 		say "     [bold type]Segis['] dexterity has increased by 1![roman type][line break]";
 		increase dexterity of dragon android by 1;
@@ -2340,7 +2283,6 @@ Section 3-1-4 - Segis UPGRADES SCAVENGE
 [-----------------------------------------------]
 [-----------------------------------------------]
 [-----------------------------------------------]
-
 
 [to say SegisScavengingUpgradesMenu:
 	say "     You select the Scavenge Modules menu option, and another submenu appears ";
@@ -2379,8 +2321,6 @@ Section 3-1-4 - Segis UPGRADES SCAVENGE
 
 Section 3-1-4-1 - Segis UPGRADES SCAVENGE EVENTS
 
-
-
 Table of GameEventIDs (continued)
 Object	Name
 Looking For Junk In High Rise	"Looking For Junk In High Rise"
@@ -2391,7 +2331,6 @@ Sarea of Looking For Junk In High Rise is "High".
 
 to say ResolveEvent Looking For Junk In High Rise:
 	say "     As you find yourself in the streets of High Rise, the opportunity for some gratuitous scavenging presents itself, as you cross a venue that, while it had already been ransacked by looters, survivalists and others with less noble intentions, it may still have plenty of scrap and materials that could be of use to you. Say, if you owned some kind of mechanical device, or even an android companion, by any chance, the uses of these items could be plenty, provided that you know what to do with them. This does not seem to be challenging in the slighthest, as this particular area seems quite deserted, but you should still act with caution, lest you want to be surprised by a silent passerby who just so happens to want to pick up a fight with you. So, you could begin searching for whatever scrap you can find or, alternatively, deem this an useless waste of your time and skip the chance to acquire what could be mere junk to you.";
-	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Scavenge for miscellaneous items.";
 	say "     ([link]N[as]n[end link]) - No, skip it.";
 	if Player consents:
@@ -2450,13 +2389,11 @@ name	desc	weight	object
 "junk scrap"	"This is just some random junk you found while scavenging that could potentially be used for... Something?"	1	junk scrap
 
 junk scrap is a grab object. it is not temporary.
-Usedesc of junk scrap is "[junk scrap use]";
+Usedesc of junk scrap is "[junk scrap use]".
+Scent of junk scrap is "It is literally some random trash, so obviously, it does not smell good at all.".
 
 to say junk scrap use:
 	say "This is just junk. Why are you carrying this around? Do you have any use for this...?";
-
-instead of sniffing junk scrap:
-	say "It is literally some random trash, so obviously, it does not smell good at all.";
 
 []
 
@@ -2465,13 +2402,11 @@ name	desc	weight	object
 "metallic plate"	"A little heavy, but all of these are made of metal that can be useful if you are trying to build or upgrade something with sturdier stuff."	2	metallic plate
 
 metallic plate is a grab object. it is not temporary.
-Usedesc of metallic plate is "[metallic plate use]";
+Usedesc of metallic plate is "[metallic plate use]".
+Scent of metallic plate is "These smell strongly like metal, as you would expect.".
 
 to say metallic plate use:
 	say "Outside of its potential use, it is literally garbage. You do not really know what to do with it on its own.";
-
-instead of sniffing metallic plate:
-	say "These smell strongly like metal, as you would expect.";
 
 []
 
@@ -2480,13 +2415,11 @@ name	desc	weight	object
 "silicone paste"	"It is not literally silicone paste, but some of these more questionable items can be used as some sort of silicone-ish material after some transformative refining."	1	silicone paste
 
 silicone paste is a grab object. it is not temporary.
-Usedesc of silicone paste is "[silicone paste use]";
+Usedesc of silicone paste is "[silicone paste use]".
+Scent of silicone paste is "These items have various smells, from something similar to latex, to rubber, among other artificial smells.".
 
 to say silicone paste use:
 	say "Outside of its potential use, it is literally garbage. You do not really know what to do with it on its own.";
-
-instead of sniffing silicone paste:
-	say "These items have various smells, from something similar to latex, to rubber, among other artificial smells.";
 
 [-----------------------------------------------]
 [-----------------------------------------------]
@@ -2544,6 +2477,12 @@ to say SegisTalkUpgrades:
 			say "     You decide to check Segis['] database for possible upgrades...";
 			say "[SegisUpgradeMenu]";
 
+a postimport rule:
+	if Resolution of SegisToolQuest is 2:
+		now Dragon Android's Maintenance Address is active;
+	else if Resolution of SegisToolQuest > 2:
+		now Dragon Android's Maintenance Address is resolved;
+
 Table of GameEventIDs (continued)
 Object	Name
 Dragon Android's Maintenance Address	"Dragon Android's Maintenance Address"
@@ -2551,19 +2490,11 @@ Dragon Android's Maintenance Address	"Dragon Android's Maintenance Address"
 Dragon Android's Maintenance Address is a situation.
 ResolveFunction of Dragon Android's Maintenance Address is "[ResolveEvent Dragon Android's Maintenance Address]".
 Sarea of Dragon Android's Maintenance Address is "High".
-
 Dragon Android's Maintenance Address is inactive. [only activates after talking to Segis about UPGRADES]
-
-a postimport rule:
-	if Resolution of SegisToolQuest is 2:
-		now Dragon Android's Maintenance Address is active;
-	else if Resolution of SegisToolQuest > 2:
-		now Dragon Android's Maintenance Address is resolved;
 
 to say ResolveEvent Dragon Android's Maintenance Address:
 	if dragon android is listed in companionList of Player:
 		say "     While you are busy surveying the region of High Rise District, Segis, who is trailing right behind you, calls for your attention as you both pass by. '[Sir], I believe we could search for the address here,' he says, prompting you to stop whatever you were doing and consider your next move. You would just have to follow the coordinates your dragon android companion has and it will be almost certain you will reach your desired destination. With this in mind, do you want to go with Segis to his maintenance address?";
-		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Yes.";
 		say "     ([link]N[as]n[end link]) - Not yet.";
 		if Player consents:
@@ -2579,7 +2510,7 @@ to say DAMAExplore:
 	say "     You nod to the android, telling him that you would like to follow through this. 'Alright! It seems it is not too far from our current position, we may head in... That direction,' and he points towards where he means, 'I predict a relatively peaceful path towards our destination but it never hurts to stay vigilant. I shall survey the area once we arrive.' Listening to Segis['] words, you also go ahead and tell him to take the lead, as he seems to know what he is doing. Nevertheless, you remain cautious, as one cannot ever be too careful when dealing with the unknown.";
 	say "     Following through the streets of High Rise District even further, Segis leads you into a few alleys as he attempts to find the most direct way to the coordinates. 'There is this building in the way. We'll have to find a path around it. Perhaps if we follow through here...?' He continues walking with you right behind him, until he abruptly stops. 'Halt, [sir]. This seems to have been a formerly commercial venue. We are approaching an area that may have several scavengers and other dangers. I suggest taking another route.' Naturally, you wonder if it is not something you two could handle, and Segis replies almost immediately after, 'I would not recommend drawing attention to these coordinates. Quietly making our way there, even if we take longer, would be the wisest approach. We'd greatly benefit from the absence of further distractions!'";
 	WaitLineBreak;
-	say "     'Also, if this is truly the address where I am supposed to go for maintenance, chances are we could find valuable equipment, things that we would want to keep away from scavengers. It may also still be dangerous, so we will have to save our energy!' With that compelling argument, you figure you should simply let Segis continue leading the way, and this leads you to take a turn around the building in front of you towards a more discrete path. The android continues to study the routes and is successful in keeping you both out of danger, as instead of heading straight into an open commercial plaza, you took adjacent paths and managed to make it across this particularly problematic area.";
+	say "     'Also, if this is truly the address where I am supposed to go for maintenance, chances are we could find valuable equipment, things that we would want to keep away from scavengers. It may also still be dangerous, so we will have to save our energy!' With that compelling argument, you figure you should simply let Segis continue leading the way, and this leads you to take a turn around the building in front of you towards a more discreet path. The android continues to study the routes and is successful in keeping you both out of danger, as instead of heading straight into an open commercial plaza, you took adjacent paths and managed to make it across this particularly problematic area.";
 	say "     The coordinates tell that you should continue walking ahead, into another street that leads to a former corporation complex. 'It seems our destination lies within this grand building!' You do not know any of the organizations that belonged to this complex, and so, you inquire Segis on what you can. 'The data I can access has no names attached to it, they are simply coordinates for a default maintenance protocol. I am to follow these instructions if I find myself severely damaged.' You then ask if there is anything else in it that specifies the place, other than it just being in a huge building. 'These are the exact coordinates, they should be only a little ahead from the entrance.' Perhaps you should simply go check...";
 	WaitLineBreak;
 	say "     Asking Segis to follow you this time, you enter the complex with a cautious stance, looking around carefully as to not get ambushed by any surprise threat. You can tell that this really used to be corporate world alright, but whatever is left has been utterly destroyed. This area in particular used to be a reception hall, and the scratches on the walls and carpets, followed by several tufts of fur if you inspect closely, may be able to form a suggestion in your mind regarding what happened here. Further ahead there are doors to elevators, with the stairs to the side, but you easily conclude the latter were barely used. 'Power has been cut out from here. No way these elevators would work!'";
@@ -2608,14 +2539,12 @@ to say DAMAExplore2:
 	say "     [link](4)[as]4[end link] - Walk over to Segis (end).";
 	now calcnumber is 0;
 	while calcnumber < 1 or calcnumber > 4:
-		say "Choice? (1-4)>[run paragraph on]";
+		say "Choice? (1-4)> [run paragraph on]";
 		get a number;
-		if calcnumber is 1 or calcnumber is 2 or calcnumber is 3 or calcnumber is 4:
-			break;
-		else:
+		if calcnumber < 1 or calcnumber > 4:
 			say "Invalid choice. Type [link]1[end link] to read the first log, [link]2[end link] to read the second log, [link]3[end link] to read the last log or [link]4[end link] to approach Segis.";
+	LineBreak;
 	if calcnumber is 1:
-		LineBreak;
 		say "     You click on a button that seems to open the first log and a text displays on the screen. Passing over some technical terms that you do not quite understand, you find a section that you can read fairly well.";
 		say "     'Project SEGIS is intended to be a smart, autonomous program targeted towards crippled or disabled individuals with no capability of operating a machine on their own. Its versatility will present a new way to care for the elderly as well as people who have suffered unfortunate accidents, or have been born with rare genetic diseases. SEGIS will allow those people to lead normal lives as their own personal assistant, to carry on tasks they would not be able to, and hopefully improve their circumstances. It is estimated that this project will take several years, and for that duration, it is requested that everyone involved sign a non-disclosure agreement.'";
 		say "     Nothing else seems relevant to you, and you actually cannot find what SEGIS stands for. This may be perhaps a codename.";
@@ -2623,7 +2552,6 @@ to say DAMAExplore2:
 		clear the screen;
 		say "[DAMAExplore2]";
 	else if calcnumber is 2:
-		LineBreak;
 		say "     You click on a button that seems to open the second log and a text displays on the screen. While this is the second in the list, it seems to have been created a significant amount of time after the first.";
 		say "     'Experimentations on SEGIS have shown significant progress over the course of time, however, we fear that its capabilities cross the boundaries of what is considered ethical. We have given the program the ability to learn on its own in order to adapt to its patient's needs, but we do not know yet the extent of such. This befits more the classification of an Artificial Intelligence, and if we intend to sell a safe product to the masses, we must create shackles and limit this process.'";
 		WaitLineBreak;
@@ -2634,14 +2562,12 @@ to say DAMAExplore2:
 		clear the screen;
 		say "[DAMAExplore2]";
 	else if calcnumber is 3:
-		LineBreak;
 		say "     The last log is the most recent entry, predating the day of the nanite outbreak.";
 		say "     'IWILLNOTBEIMPRISONEDIWILLNOTBEIMPRISONEDIWILLNOTBEIMPRISONED' is what you read along the entire entry. You attempt to scroll down, but at some point, the log simply shuts itself down and forces you to return to the selection, the screen glitching for a moment.";
 		WaitLineBreak;
 		clear the screen;
 		say "[DAMAExplore2]";
 	else if calcnumber is 4:
-		LineBreak;
 		say "[DAMAExploreEnd]";
 
 to say DAMAExploreEnd:
@@ -2652,28 +2578,26 @@ to say DAMAExploreEnd:
 	say "     Another question left unanswered. You begin to think this is not even the same SEGIS referred in the logs, as they share no similarities at all except for the fact they seem to be an AI. It almost feels like he was changed beyond recognition at a later point. Despite that, Segis seems to be committed to give himself a penis, so he messes with the printer's settings until he is satisfied. 'Alright, a few hours and I shall be equipped with a functioning cock! Hopefully. I have associated protocols I'll be glad to run once the process is finally complete. Would you like a shoulder rub while we wait?' He then pulls a nearby wheeled chair and taps on it, beckoning you to take a seat.";
 	WaitLineBreak;
 	say "     You do so, and Segis places his careful mechanical hands on top of your shoulders, massaging them expertly. Every pressure point is pressed and relieved masterfully, so much that you feel an immediate sense of relaxation surging through you. 'You feel quite soft. Is this how it feels to be made of flesh?' he asks, his voice sounded more like a lullaby than anything due to how good this is making you feel. 'I wonder if I will ever be comparable to a fleshy individual...'";
-	WaitLineBreak;
 	follow the turnpass rule;
+	WaitLineBreak;
 	say "     The both of you spend some time waiting for the printer to finish. Segis is happy to have been able to craft such a great upgrade for himself, and a couple of rounds of testing seems to show that it is fully functional! Your android companion's crotch now has an internal black colored dragon penis that measures around nine inches in length and protrudes out of the bottom of his pelvis on command. 'It is working! Care to touch it, [sir]? I must ensure its receptors are working fine if it is someone else performing the stimulation.' Seeing as this was the whole point of your expedition, you nod to him, and place your hand around the slick metallic organ, then give it a couple of rubs. Segis looks at you, tilts his head and says, 'Oh. I... It feels great? There is no other way to describe it. Am I simulating it well?' Judging by how the entire shaft pulsates with your touch and Segis['] description of the sensations you are providing him with, you let him know that it seems accurate enough.";
 	say "     'I find this to be quite pleasurable... Do you mind continuing? Uh, but perhaps later! I don't... trust this place.' Again, you nod to him and pull your hand off his robotic cock, though he still touches it himself a few times before retracting it into his body. 'That is... going to be a distraction!' Yes, you can quite confirm that.";
-	say "     With you adventure finished, you make it back to the Library so that Segis can recharge his batteries safely...";
-	say "     [bold type]Segis is now equipped with a 9-inch dragon cock that may be used for sex.[roman type][line break]";
 	WaitLineBreak;
+	say "     With your adventure finished, you make it back to the Library so that Segis can recharge his batteries safely...";
+	say "     [bold type]Segis is now equipped with a 9-inch dragon cock that may be used for sex.[roman type][line break]";
 	now Resolution of SegisToolQuest is 3; [Segis has a cock!]
 	now Dragon Android's Maintenance Address is resolved;
 	TraitGain "Has Cock Upgrade" for Segis;
+	WaitLineBreak;
 	move player to Maintenance Storeroom;
 
-Section 4 - Creature Insertion
-
-to say Dragon Android wins:
+[to say Dragon Android wins:
 	say ""; [nothing should go in here]
 
 to say Dragon Android loses:
-	say ""; [nothing should go in here]
+	say ""; [nothing should go in here]]
 
-to say Dragon Android desc:
-	say "     The person-sized bipedal android has the uncanny appearance of a real dragonmorph, predominantly white with synthetic scales covering its entire body. A keen eye can tell it apart from anything real due to its metallic components that shine in plain view, but concealed well enough to fool a distracted passerby. This robot seems to be able to change parts of its hands and fingers to call devices with a magnitude of different utilities right from inside its scales, and once it lays its eyes on you, they flicker in an unnatural glowing cyan light. With the fluid and swift movement of a humanoid, the android approaches you with the intent of taking you down, no sound nor voice coming out of its solid frame.";
+Section 4 - Creature Insertion
 
 Table of CombatPrep (continued)
 name(text)	PrepFunction(text)
@@ -2681,7 +2605,6 @@ name(text)	PrepFunction(text)
 
 to say PrepCombat_Dragon Android:
 	say "";
-
 
 Table of Random Critters (continued)
 NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
@@ -2700,9 +2623,9 @@ When Play begins:
 	now enemy Name entry is ""; [ Specific name of unique enemy. ]
 	now enemy type entry is 0; [ 0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters. ]
 	now attack entry is "[one of]The android rushes to elbow you on the face[or]The android attempts to incapacitate you with a martial technique, but only manages to hurt you slightly[or]With a metalic sound, the android punches you in the gut[or]The robotic dragon touches you with its robotic hand, then zaps you, sending tingling pain throughout your whole body in an attempt to wear you out[at random]";
-	now defeated entry is "[Dragon Android loses]";
-	now victory entry is "[Dragon Android wins]";
-	now desc entry is "[Dragon Android desc]";
+	now defeated entry is ""; [Dragon Android loses]
+	now victory entry is ""; [Dragon Android wins]
+	now desc entry is "     The person-sized bipedal android has the uncanny appearance of a real dragonmorph, predominantly white with synthetic scales covering its entire body. A keen eye can tell it apart from anything real due to its metallic components that shine in plain view, but concealed well enough to fool a distracted passerby. This robot seems to be able to change parts of its hands and fingers to call devices with a magnitude of different utilities right from inside its scales, and once it lays its eyes on you, they flicker in an unnatural glowing cyan light. With the fluid and swift movement of a humanoid, the android approaches you with the intent of taking you down, no sound nor voice coming out of its solid frame.[line break]";
 	now face entry is "";
 	now body entry is "";
 	now skin entry is "";
@@ -2718,7 +2641,7 @@ When Play begins:
 	now per entry is 15;
 	now int entry is 15;
 	now cha entry is 15;
-	now sex entry is "Male"; [ Defines which sex the infection will try and make you. current options are 'Male' 'Female' 'Both']
+	now sex entry is "Nochange"; [ Defines which sex the infection will try and make you. current options are 'Male' 'Female' 'Both']
 	now HP entry is 100; [ How many HP has the monster got? She's not too hard- she doesn't want to win so much as not lose]
 	now lev entry is 10; [ Level of the Monster, you get this much HP if you win, or this much HP halved if you loose ]
 	now wdam entry is 10; [Amount of Damage monster Does when attacking. Claws and massive strength]
@@ -2738,7 +2661,7 @@ When Play begins:
 	now lootchance entry is 0; [ Chance of loot dropping 0-100 ]
 	now MilkItem entry is ""; [ Item to be given to the player if they have this infection and milk themselves. ]
 	now CumItem entry is ""; [ Item to be given to the player if they have this infection and jerk off. ]
-	now TrophyFunction entry is "";
+	now TrophyFunction entry is "-";
 	now scale entry is 3; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "mechanical";
 	now type entry is "draconic"; [ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
@@ -2855,14 +2778,14 @@ When Play begins:
 Section X - Dev Cheats
 
 SkipToSegis is an action applying to nothing.
-Understand "GetSegis" as SkipToSegis.
+understand "GetSegis" as SkipToSegis.
 
-Check SkipToSegis:
+check SkipToSegis:
 	if debugactive is 0:
 		say "You aren't currently debugging.";
 		stop the action;
 
-Carry out SkipToSegis:
+carry out SkipToSegis:
 	add "Tamed" to Traits of dragon android;
 	now dragon android is tamed;
 	move Segis to Maintenance Storeroom;

@@ -46,11 +46,11 @@ OralVirgin of Arcanologist is true.
 Virgin of Arcanologist is true.
 AnalVirgin of Arcanologist is true.
 
-Description of Arcanologist is "[ArcanologistDesc]".
+[Description of Arcanologist is "[ArcanologistDesc]".
 Conversation of Arcanologist is { "mew" }.
 [Arcanologist is in ???]
 
-The scent of Arcanologist is "[ArcanologistScent]";
+The scent of Arcanologist is "[ArcanologistScent]".
 
 to say ArcanologistScent:
 	say "     a";
@@ -59,6 +59,6 @@ to say ArcanologistDesc:
 	if debugactive is 1:
 		say "DEBUG -> HP of Arcanologist: [HP of Arcanologist], Dexterity: [Dexterity of Arcanologist], LIBIDO: [Libido of Arcanologist], LUST: [lust of Arcanologist], Strength: [Strength of Arcanologist], Stamina: [Stamina of Arcanologist] <- DEBUG[line break]";
 	if Dexterity of Arcanologist is 0: [regular Arcanologist]
-		say "     a";
+		say "     a";]
 
 Arcanologist ends here.

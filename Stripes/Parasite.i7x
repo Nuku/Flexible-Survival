@@ -8,9 +8,9 @@ larvacounter is a number that varies.	[counts time for the various stages]
 larvaegg is a number that varies.		[0 = no eggs, 1 = unfertilized, 2 = fertilized]
 larvalaid is a number that varies.		[how many times a player's laid eggs]
 larvaexpel is a number that varies.		[how many times a player's expelled unfertilized eggs in a row]
-libidomemory is a number that varies.	[remembers pre-fight libido]
+libidomemory is a number that varies.[@Tag:NotSaved]	[remembers pre-fight libido]
 
-Section 1 - Insect Hive Event
+Part 1 - Insect Hive Event
 
 Table of GameEventIDs (continued)
 Object	Name
@@ -19,6 +19,7 @@ Insect Hive	"Insect Hive"
 Insect Hive is a situation.
 ResolveFunction of Insect Hive is "[ResolveEvent Insect Hive]".
 Sarea of Insect Hive is "High".
+
 when play begins:
 	add Insect Hive to BadSpots of FurryList;
 	add Insect Hive to BadSpots of FeralList;
@@ -26,9 +27,7 @@ when play begins:
 
 to say ResolveEvent Insect Hive:
 	say "     Searching through the high rise district, you start along a shadowy alley between two towers. You slow as you spot something unusual here. Scattered in clusters along the side are sticky orbs. They have a rather gelatinous appearance and are split open with trails of sticky slime leading from them further into the alley. All of this gives you strong reason to pause, unsure if you want to continue forward.";
-	say "[bracket]Extreme content warning.[close bracket][line break]";
-	say "     [bold type]Shall you proceed?[roman type][line break]";
-	LineBreak;
+	say "[line break]     [special-style-2][bracket]Extreme content warning.[close bracket][bold type]Shall you proceed?[roman type][line break]";
 	say "     ([link]Y[as]y[end link]) - Yes.";
 	say "     ([link]N[as]n[end link]) - No.";
 	if Player consents:
@@ -42,7 +41,7 @@ to say ResolveEvent Insect Hive:
 		say "     You turn to run, but find more of them have already moved to block the alleyway. Trapped here with them, they buzz around you and do not approach further. As if they were waiting for it, the scent grows stronger in the air and you take conscious notice of it, breathing it in deeply and becoming aroused by it. Your mind grows hazy and your arms drop to your sides, losing the will to resist the bugs. There are simply too many to fight, you tell yourself.";
 		say "     As if sensing your acquiescence, several fly over and surround you. Your clothes and pack are pulled from your [bodytype of Player] body by their agile little claws, largely undamaged by this as they take care not to harm their prize. As they do so, their insectile legs run over your [bodydesc of Player] body, touching you in ways you find increasingly arousing. Turned on despite yourself, the attention gets you quite [if Player is male]hard[else if Player is female]aroused[else]hot[end if] as their mandibles part and long, wet tongues start sliding over your face and body. As one of these passes across your lips, you moan and suck it in, soon deep throating the slick proboscis. Another of these passes across your [if Player is female]pussy[else]asshole[end if] and pushes its way in[if Player is male] while another plays over your [cock size desc of Player] [Cock of Player] cock[end if], making you moan around your sweet mouthful.";
 		WaitLineBreak;
-		say "     But just before you can find release, the wasps withdraw their tongues, making you moan in disappointment[if scalevalue of Player is 1]. One of the insects grabs you in its small, clawed feet and lifts your tiny body easily by your limbs, flying you into the open loading dock[else if scalevalue of Player < 5]. Several of the insects grab you in their small, clawed feet and lift you by your limbs and fly you into the open loading dock[else]. Several of the insects grab you in their tiny, clawed feet and try to lift you, flapping their wings as hard as they can. Your huge body is difficult for them to move until more of them grab you all over and they manage to half-carry, half-drag you up into the open loading dock[end if]. Deposited inside the hive, several things are noticeable at once. First and foremost is the large queen insect inside. While the rest of her body is only somewhat larger than the others, her abdomen is huge, many times the size of her followers. It is white and fleshy, undulating with the promise of life for the hive. The arousing scent is much stronger here and appears to be coming from her, her pheromones to control her hive also a mind-numbing aphrodisiac.";
+		say "     But just before you can find release, the wasps withdraw their tongues, making you moan in disappointment. [if scalevalue of Player is 1]One of the insects grabs you in its small, clawed feet and lifts your tiny body easily by your limbs, flying you[else if scalevalue of Player < 5]Several of the insects grab you in their small, clawed feet and lift you by your limbs and fly you[else]Several of the insects grab you in their tiny, clawed feet and try to lift you, flapping their wings as hard as they can. Your huge body is difficult for them to move until more of them grab you all over and they manage to half-carry, half-drag you up[end if] into the open loading dock. Deposited inside the hive, several things are noticeable at once. First and foremost is the large queen insect inside. While the rest of her body is only somewhat larger than the others, her abdomen is huge, many times the size of her followers. It is white and fleshy, undulating with the promise of life for the hive. The arousing scent is much stronger here and appears to be coming from her, her pheromones to control her hive also a mind-numbing aphrodisiac.";
 		say "     Past her you can see several creatures, many of them humanoid and partially recognizable as having strains you've seen out in the city. They are partially insectile now, with chitinous skin, additional insect legs growing from their segmented bodies, partially insectile heads or other such features. They have more of the gray material trapping them into becoming part of the hive. Some are suspended from the ceiling by their arms and with their legs spread. Others are held on all fours and some are even built into the wall, facing it. All have expressions of mindless lust and have their bloated bellies and hips free of the binding mass. Beneath them are sticky piles of eggs with more of the slime coating their thighs.";
 		WaitLineBreak;
 		say "     As you are taking this all in, the wasps pull you towards the queen and you try to struggle briefly, but can't seem to find the strength to fight them for long. Grabbed by the queen, she turns onto her side and holds you with four legs while the middle pair tease over your [bodytype of Player] body. Your arousal from earlier returns stronger than ever in the presence of her pheromones and soon she no longer has to restrain you, leaving all her limbs free to pleasure you.";
@@ -50,15 +49,13 @@ to say ResolveEvent Insect Hive:
 		WaitLineBreak;
 		say "     Her pale abdomen undulates as she fucks your needy body and you start to see a bulge traveling along it, moving towards the stinger. But this mass is not passively moved, but squirms with a life of its own. Realizing this, you start to struggle but, as if expecting such a reaction, the queen's legs have you restrained almost instantly. You cannot help but watch as this larva moves closer, then is pushed through the queen's phallic stinger into your [if Player is female]womb[else]belly[end if]. You can feel it moving around inside you, torn between being horrified and strangely aroused by having this living thing, this parasite, living inside you. But, regardless of how you may think of it, your body responds with a powerful climax.";
 		say "     Fully expecting to be trapped as part of the hive now, you are surprised when the queen releases you, gently running her feet across your squirming belly. Soon the squirming subsides as the larva settles in, attaching itself [if Player is female]to your uterine wall[else]somewhere deep inside your belly[end if]. Several of the wasps come over and nuzzle at your belly as they push you from the hive, allowing you to grab your gear and leave this place. You are confused, but don't question your good fortune and quickly leave this bizarre hive, though a small corner of your mind can't help but think about how happy all those trapped there appeared.";
-		CreatureSexAftermath "Player" receives "[if Player is female]PussyDildoFuck[else]AssDildoFuck[end if]" from "Black Wasp";
+		CreatureSexAftermath "Player" receives "[if Player is female]Pussy[else]Ass[end if]DildoFuck" from "Black Wasp";
 		now insectlarva is true;
 		now preghijack is true;
 		now mpreghijack is true;
-		repeat with y running from 1 to number of filled rows in Table of Random Critters:
-			choose row y in Table of Random Critters;
-			if Name entry is "Black Wasp":
-				now area entry is "High";
-				now non-infectious entry is false;
+		choose row with Name of "Black Wasp" from Table of Random Critters;
+		now area entry is "High";
+		now non-infectious entry is false;
 		now Resolution of Insect Hive is 1; [wasps unlocked]
 	else:
 		LineBreak;
@@ -66,11 +63,11 @@ to say ResolveEvent Insect Hive:
 		now Resolution of Insect Hive is 99; [disinterest]
 	now Insect Hive is resolved;
 
-Section 2 - Parasite
+Part 2 - Parasite
 
 an everyturn rule:
 	if insectlarva is true and skipturnblocker is 0:
-		increase Libido of Player by a random number between 0 and 3;
+		raise Player Libido by a random number between 0 and 3;
 		if larvaegg is 0:
 			increase larvacounter by 1;
 			if Player is female and a random chance of 1 in 3 succeeds, increase larvacounter by 1;
@@ -78,17 +75,17 @@ an everyturn rule:
 			if "Maternal" is listed in feats of Player and a random chance of 1 in 3 succeeds, increase larvacounter by 1;
 			if larvacounter >= 12 and gestation of Child is 0:
 				say "     You can feel some activity inside your belly as the parasite inside you squirms about. You would be disturbed by this were it not strangely arousing. Your [if Player is female]womb[else]bowels[end if] feel warm as something rubs and pulses against your inner walls, spraying thick goo inside you. You find yourself longing to see those black wasps again. Noticing their enticing scent in the air, you soon realize that the smell is coming from you[if larvalaid > 2]. You realize that more unfertilized eggs have been laid inside you and the wasps will come looking to breed you again[else if larvalaid is 1 or larvalaid is 2] and realize the scent will draw the wasps again[end if].";
-				increase Libido of Player by 6;
+				raise Player Libido by 6;
 				now larvacounter is 0;
 				now larvaegg is 1;
 			else if larvacounter is odd and a random chance of 2 in 5 succeeds:
 				say "[one of]You stifle a moan of pleasure as you feel the insect creature inside you move about.[or]Your insides churn as you feel the larva inside you squirm around and reposition itself.[or]There is a bulge that moves across your belly momentarily.[or]You feel the parasite inside you rubbing against your inner walls in a strangely pleasurable manner.[or]You feel a stinging sensation of painful pleasure as the parasite inside you stabs something into you. You feel a rush of arousal a few moments later.[or]The larva shifts around again, showing briefly as a bulge across your belly before settling down again.[or]You continue to feel activity from the creature inside you from time to time, but have begun to grow used to its activity.[stopping]";
-				increase Libido of Player by 3;
+				raise Player Libido by 3;
 		else if larvaegg is 1 and gestation of Child is 0:
-			increase Libido of Player by 2;
+			raise Player Libido by 2;
 			if a random chance of 1 in 3 succeeds, decrease humanity of Player by 1;
 			increase larvacounter by 1;
-			if larvacounter >= ( 12 + larvalaid ) and gestation of Child is 0:
+			if larvacounter >= 12 + larvalaid and gestation of Child is 0:
 				if humanity of Player - Libido of Player > 20:
 					increase larvaexpel by 1;
 					if larvaexpel < 3:
@@ -96,7 +93,7 @@ an everyturn rule:
 						now larvacounter is -5;
 						now larvaegg is 0;
 						SanBoost 3;
-						decrease Libido of Player by 12;
+						lower Player Libido by 12;
 					if larvaexpel is 3:
 						say "     After enduring the squirming of the larva inside you and the strange, twisted urges you've been feeling because of it, you feel a painful jab and an uncomfortable weight in your [if Player is female]womb[else]bowels[end if]. Making your way somewhere private, you groan in pain as your body pushes to expel the lump inside you. Finally, you manage to push it out and are surprised to find not only more [if larvalaid < 2]thick goo[else]egg goo[end if], but the parasite itself. With it dead now after being prevented from fulfilling its life cycle repeatedly, you have managed to push it out, freeing you from its strange, parasitic hold. It is a pale creature, looking much like a bloated, insect larva with several tiny legs and phallic back end from which you suspect it released the [if larvalaid < 2]slimy goo[else]egg slime[end if] into you. While you'd rather have nothing more to do with the creature, you dispose of the larva in case the wasps would be drawn to its scent.";
 						now insectlarva is false;
@@ -106,12 +103,9 @@ an everyturn rule:
 						now larvaegg is 0;
 						SanBoost 10;
 						now Libido of Player is Libido of Player / 2;
-						repeat with y running from 1 to number of filled rows in Table of Random Critters:
-							choose row y in Table of Random Critters;
-							if Name entry is "Black Wasp":
-								now area entry is "Nowhere";
-								now non-infectious entry is true; [Wasps locked again]
-								break;
+						choose row with Name of "Black Wasp" from Table of Random Critters;
+						now area entry is "Nowhere";
+						now non-infectious entry is true; [Wasps locked again]
 				else:
 					if HP of Player < 1, now HP of Player is 1;
 					say "     The larva's activity inside you becomes too much for you and following some strange instinct, you head off alone briefly and find an elevated, open spot and wait. Soon enough, one of the black wasps is drawn in by your scent. Feeling strangely aroused and having no more will to resist it, you readily give yourself up to the large insect with a lustful moan.";
@@ -119,7 +113,7 @@ an everyturn rule:
 			else if larvacounter is odd and a random chance of 1 in 2 succeeds:
 				say "[one of]You stifle a moan of pleasure as the larva inside you squirms.[or]Your insides feel strangely warm and needy and you find your mind wandering to those black wasps.[or]You feel an emptiness inside which you long for one of those wasps to fill.[or]You feel a warm splash of more goo across your insides. This unusual sensation only arouses you further.[or]You feel a painful sting inside you that is soon replaced by the warm rush of arousal. The scent of the hive grows stronger around you.[or]The larva rubs itself against your inner walls, resulting in a strangely pleasurable sensation, but one that also makes you long for something larger to fill you.[in random order]";
 		else if larvaegg is 2:
-			decrease Libido of Player by 6;
+			lower Player Libido by 6;
 			increase larvacounter by 1;
 			if Player is female and a random chance of 1 in 3 succeeds, increase larvacounter by 1;
 			if "Fertile" is listed in feats of Player and a random chance of 1 in 2 succeeds, increase larvacounter by 1;
@@ -147,23 +141,16 @@ an everyturn rule:
 				say "The larva inside you shifts about inside your occupied womb as if impatient for its current occupant to leave so it may resume its life cycle.";
 				decrease gestation of child by 2;
 				if gestation of child < 1, now gestation of Child is 1;
-	if Libido of Player < 0, now Libido of Player is 0;
-	if Libido of Player > 100, now Libido of Player is 100;
 
-
-Section 3 - Black Wasp creature
+Part 3 - Black Wasp creature
 
 Chapter 1 - Creature Responses
 
-to say blackwaspdesc:
-	say "     As you travel along, you hear a growing buzzing sound, looking up in time to see one of the black wasps [if larvaegg is 1 and gestation of Child is 0]drawn to you by your scent[else]coming in towards you[end if]. The giant insect is nearly as long as an average person's height. Shaped much like a yellowjacket but completely black, this wasp has large, oval eyes, three pairs of legs ending in small, clawed feet and a large, segmented abdomen. Looking at its abdomen, you can see its rather phallic stinger is out and dripping fluid. It is much like their queen's knotted one, though somewhat smaller. Your belly squirms as a wave of arousal washes through you, the larva inside you pumping something into you, making you increasingly aroused and eager to submit to this insect.";
-
 to say losetoblackwasp:
 	if HP of Player > 0:
-		say "     Giving into the urges coming from your [if Player is female]womb[else]belly[end if] and the parasite within, you moan lustfully and bare yourself to the creature, dropping to your knees. The insect buzzes happily and moves atop you, running its insectile legs over your [bodytype of Player] body. Soon, it brings its abdomen into position and drives its stinger-cock into your [if Player is female]cunt[else]ass[end if] and starts fucking you wildly. ";
+		say "     Giving into the urges coming from your [if Player is female]womb[else]belly[end if] and the parasite within, you moan lustfully and bare yourself to the creature, dropping to your knees. The insect buzzes happily and moves atop you, running its insectile legs over your [bodytype of Player] body. Soon, it brings its abdomen into position and drives its stinger-cock into your [if Player is female]cunt[else]ass[end if] and starts fucking you wildly. As it does, it gently nibbles at you with its mandibles before opening them and letting its tongue slide across your [if scalevalue is 4 or scalevalue is 5]back and shoulders[else]neck and cheek[end if]. Despite your lover's strange nature, or perhaps even because of it, you lustfully push back into its thrust and cum loudly as its knot pushes fully into you and blasts its thick seed into you. ";
 	else:
-		say "     Battered by the insect until you can no longer resist, your exhausted body is pinned down by it. Its insectile legs run over your [bodydesc of Player] form, pulling off your pack and clothes quickly. It does seem to take care in doing so though, perhaps trying not to damage you further, and pushes you onto all fours. Lacking the strength to continue to struggle, you can only wait as it brings its abdomen into position and drives its stinger-cock into your [if Player is female]cunt[else]ass[end if] and starts fucking you wildly. ";
-	say "As it does, it gently nibbles at you with its mandibles before opening them and letting its tongue slide across your [if scalevalue is 4 or scalevalue is 5]back and shoulders[else]neck and cheek[end if]. Despite your lover's strange nature, or perhaps even because of it, you lustfully push back into its thrust and cum loudly as its knot pushes fully into you and blasts its thick seed into you. ";
+		say "     Battered by the insect until you can no longer resist, your exhausted body is pinned down by it. Its insectile legs run over your [bodydesc of Player] form, pulling off your pack and clothes quickly. It does seem to take care in doing so though, perhaps trying not to damage you further, and pushes you onto all fours. Lacking the strength to continue to struggle, you can only wait as it brings its abdomen into position and drives its stinger-cock into your [if Player is female]cunt[else]ass[end if] and starts fucking you wildly. As it does, it gently nibbles at you with its mandibles before opening them and letting its tongue slide across your [if scalevalue is 4 or scalevalue is 5]back and shoulders[else]neck and cheek[end if]. Despite your lover's strange nature, or perhaps even because of it, you lustfully push back into its thrust and cum loudly as its knot pushes fully into you and blasts its thick seed into you. ";
 	if larvaegg is 1 and gestation of Child is 0:
 		say "Your [if Player is female]womb[else]belly[end if] is filled with a satisfying warmth as its seed flows into you[if larvalaid >= 2], fertilizing the insect eggs deposited inside you[end if].";
 		WaitLineBreak;
@@ -174,7 +161,7 @@ to say losetoblackwasp:
 	else:
 		say "Your [if Player is female]womb[else]belly[end if] is filled with a satisfying warmth as its seed flows into you, causing the larva inside you to squirm excitedly.";
 		now Libido of Player is ( Libido of Player + libidomemory + libidomemory ) / 3;
-	CreatureSexAftermath "Player" receives "[if Player is female]PussyDildoFuck[else]AssDildoFuck[end if]" from "Black Wasp";
+	CreatureSexAftermath "Player" receives "[if Player is female]Pussy[else]Ass[end if]DildoFuck" from "Black Wasp";
 
 to say beattheblackwasp:
 	say "     You manage to resist the urge to give in to the wasp throughout the fight. Battering the big bug, you eventually manage to drive the creature off, too injured to continue seeking to mate with you for the moment. Your intense arousal drops somewhat as the big insect leaves the area and the larva's movements subside for now.";
@@ -216,7 +203,7 @@ When Play begins:
 	now attack entry is "[one of]The wasp grabs at you with its insect legs, trying to shove you down![or]The black insect jabs its phallic stinger against you several times, leaking precum onto you![or]The bug nips at you with its mandibles![or][if scalevalue of Player < 4]The insect grabs you and flies up several feat before tossing you to the ground[else]The insect grabs onto your arm and flies frantically. While not able to lift you, it does drag you around, pulling you into something nearby[end if]![or]The wasp buzzes angrily and bashes its chitinous body against yours![or]The insect's numerous feet scratch at you with their little claws![at random]";
 	now defeated entry is "[beattheblackwasp]"; [ Text when monster loses. ]
 	now victory entry is "[losetoblackwasp]"; [ Text when monster wins. ]
-	now desc entry is "[blackwaspdesc]"; [ Description of the creature when you encounter it. ]
+	now desc entry is "     As you travel along, you hear a growing buzzing sound, looking up in time to see one of the black wasps [if larvaegg is 1 and gestation of Child is 0]drawn to you by your scent[else]coming in towards you[end if]. The giant insect is nearly as long as an average person's height. Shaped much like a yellowjacket but completely black, this wasp has large, oval eyes, three pairs of legs ending in small, clawed feet and a large, segmented abdomen. Looking at its abdomen, you can see its rather phallic stinger is out and dripping fluid. It is much like their queen's knotted one, though somewhat smaller. Your belly squirms as a wave of arousal washes through you, the larva inside you pumping something into you, making you increasingly aroused and eager to submit to this insect.[line break]"; [ Description of the creature when you encounter it. ]
 	now face entry is "insectile in appearance, with large, segmented eyes and a pair of antenna on your head";
 	now body entry is "has become segmented like that of an insect. Your arms and legs become partially insectile, with clawed digits and inhuman joints. You also possess an additional pair of vestigial insect legs pulled up against your sides. They twitch occasionally, and you can make them move if you concentrate, but they are still too weak and hard to control for proper use yet";
 	now skin entry is "plated chitin that is quite sensitive despite its hard appearance. It has an insectile appearance, is a glossy black and covers your";
@@ -233,7 +220,7 @@ When Play begins:
 	now per entry is 15;
 	now int entry is 8;
 	now cha entry is 6;
-	now sex entry is "nochange"; [ Infection will move the player towards this gender. Current: 'Male' 'Female' 'Both' ]
+	now sex entry is "Nochange"; [ Infection will move the player towards this gender. Current: 'Male' 'Female' 'Both' ]
 	now HP entry is 40; [ The monster's starting HP. ]
 	now lev entry is 4; [ Monster level. (Level x 2) XP for victory. (Level / 2) XP for losing. ]
 	now wdam entry is 4; [ Monster's average damage when attacking. ]
@@ -367,6 +354,7 @@ When Play begins:
 	[Clit Size Adjective is generated by a function and can be used in scenes: very small/small/average/large/very large]
 ]
 
+Chapter 3 - Alt Combat
 
 Table of Critter Combat (continued)
 name	combat (rule)	preattack (rule)	postattack (rule)	altattack1 (rule)	alt1chance (number)	altattack2 (rule)	alt2chance (number)	monmiss (rule)	continuous (rule)	altstrike (rule)
@@ -379,8 +367,7 @@ this is the waspparasite rule:
 	if "Horny Bastard" is listed in feats of Player, increase Libido of Player by 1;
 	if "Cold Fish" is listed in feats of Player, decrease Libido of Player by 1;
 
-
-Section 4 - Endings
+Part 4 - Endings
 
 Table of GameEndings (continued)
 Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)

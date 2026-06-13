@@ -14,12 +14,10 @@ to say losetovixentaur:
 		say "     Having defeated you, the vixentaur giggles excitedly and presses you to the ground. She murrs in your ear about how [one of]much fun she's going to have with you[or]she's been looking for some fun[at random]. You are beyond resisting her advances at this point, wrapping your arms around her and burying your face in her bosom. You kiss and licks at her many nipples, drawing excited yips from the vulpine.";
 		say "     She grinds her hips down onto you, rubbing her wet, dripping pussy against your [Skin of Player] flesh. Her paws rub and knead over you, [if Player is herm]one of them wrapping around your [cock size desc of Player] cock while the other goes for your juicy pussy[else if Player is male]one of them wrapping around your [cock size desc of Player] [Cock of Player] cock[else if Player is female]one of them slipping between your legs to tease your [cunt size desc of Player] pussy[else]teasing every sensitive spot they can find[end if]. She presses your face to her breast, coaxing you to start suckling from her, drinking down her tasty, perfumy milk. She continues to rub against you until she finally cums, soaking you in her juices. Having had her fun, she gets up with a giggle, presses her sticky crotch into your face and trots off merrily.";
 
-
 to say beatthevixentaur:
-	if a random number between 1 and 100 < vixentaurcatch and ( Player is not neuter):
+	if a random number between 1 and 100 < vixentaurcatch and Player is not neuter:
 		say "     The beaten vixentaur backs away from you, stumbling somewhat from her wounds. Like the others, she prepares to shove you back, but you move in time to grab her and push her to the ground. With her caught, you consider having some fun with her.";
-		say "     [bold type]Shall you go ahead with that plan?[roman type][line break]";
-		LineBreak;
+		say "[line break]     [bold type]Shall you go ahead with that plan?[roman type][line break]";
 		say "     ([link]Y[as]y[end link]) - Yes.";
 		say "     ([link]N[as]n[end link]) - No.";
 		if Player consents:
@@ -28,7 +26,7 @@ to say beatthevixentaur:
 				say "     Keeping the defeated vixen pinned beneath you, you move around so you're laying across her back. Pushing her tail up, you get your cock into position and slide it across her wet folds. She vixen moans and fidgets beneath you with growing excitement. '[one of]Oh, you do want to play with me[or]Hurry up and give it to me[or]Come on! Fuck that naughty vixen[or]Breed me, you [bodytype of Player] stud[at random]!' she says excitedly. Grabbing her sexy bottom, you drive your cock into her and start fucking, pounding the slutty fox's juicy hole.";
 				say "     The vixentaur giggles, yips and moans as you fuck her. Her cunt squeezes and rubs over your thrusting shaft in strange and delightful ways, the taur's vagina clearly made for pleasing any male that mounts her. Reaching around, your grab her plump breasts and play with her nipples, getting her to dribble milk in a growing pool on the ground while enjoying the sounds of delight she makes at this. When you finally cum, you drive hard into her and unleash your [if Ball Size of Player > 6]huge[else]large[end if] load while she cries out in ecstasy. When you're through, you pull out, wipe your cock on her fluffy ass and give her a playful swat. She bounds off, happily filled with your virile seed.";
 			else:
-				say "     Keeping a grip on the vixen, you move around in front of her. Grabbing her head, you push her face between your legs so her muzzle's squarely at your pussy. Finding herself face to cunt with you, she stops resisting and giggles happily. [one of]'Oh, you do want to play with me!'[or]'Let me take care of that for you,'[or]'I'm sorry for being such a naughty vixen earlier. Let me make it up to you,'[or]'Ooo! This looks serious! Lemme kiss it and make it aaallllll better,'[at random] she says excitedly. And with that, the pink vulpine sets to work licking and lapping at your cunt.";
+				say "     Keeping a grip on the vixen, you move around in front of her. Grabbing her head, you push her face between your legs so her muzzle's squarely at your pussy. Finding herself face to cunt with you, she stops resisting and giggles happily. [one of]'Oh, you do want to play with me!' [or]'Let me take care of that for you,' [or]'I'm sorry for being such a naughty vixen earlier. Let me make it up to you,' [or]'Ooo! This looks serious! Lemme kiss it and make it aaallllll better,' [at random]she says excitedly. And with that, the pink vulpine sets to work licking and lapping at your cunt.";
 				say "     Her tongue is quite adept at the task, working hard to please you and able to reach so many delightfully sensitive spots inside you with ease. Despite your attempts to remain quiet, you can't help but moan and cry out as she expertly eats you out. She eagerly laps up your flowing juices as she works that flexible appendage around inside you. You run your hands over her ears and through her hair. After a few small orgasms, she works you up to a large, crashing one that leaves your head spinning as her tongue goes wild inside your spasming vagina. When you finally manage to push the eager vixen's muzzle back, her tongue pops out with a wet slurp. She grins at you, licks her muzzle and dashes off with a happy giggle.";
 		else:
 			LineBreak;
@@ -39,11 +37,11 @@ to say beatthevixentaur:
 		increase vixentaurcatch by 33;
 		if vixentaurcatch > 90, now vixentaurcatch is 90;
 
-Section 2 - Creature Insertion
-
 to say vixentaurdesc:
 	say "     Before you is a vulpine taur creature, definitely one of Sam's many descendants. The creature's vulpine head has a sexy smile on its long, slender muzzle and fox ears. It has long lashes, pretty coral eyes and long, flowing cerise hair. Its upper body is generally human in form, but covered in pink fur and with a painted claws on its fingertips. It's quite curvaceous, with a lovely bosom, slender waist and round hips blending into its tauric lower half.";
 	say "     Its lower body is fully vulpine, a slender creature with shapely legs and cute paws. Its pink fur becomes a very light shade at its chest and underbelly, as does the tip of its tail. What would normally be the black of its socks is a deep pink. Beneath its lower body hang several more breasts and under its tail waits its wet, pink pussy. It drips with her juices as her fluffy tail spreads the arousing scent coming from it.";
+
+Section 2 - Creature Insertion
 
 Table of CombatPrep (continued)
 name(text)	PrepFunction(text)
@@ -85,7 +83,7 @@ When Play begins:
 	now body change entry is "your body shifts and bends unnaturally into two sections. The upper half reforms into an alluring and feminine body with sexy curves. The lower section becomes that of a four-legged fox with a sleek frame and soft paws for feet. Your hands are a cross between these and normal hands. Finding yourself with a vixentaur body like Sam's, your mind quickly adjusts to compensate for your new quadrupedal form";
 	now skin change entry is "your skin prickles as thick and fluffy pink fur spreads across your entire body";
 	now ass change entry is "strange twinges run up and down your spine. Each time these tingles run down, they seem to travel further and further down until the growth of your new, vulpine tail is complete";
-	now cock change entry is "pulses and throbs with need. As you watch, it changes shape and becomes more vulpine in shape and forms a fluffy sheath to house it when not in use. A knot forms at the base of your cock to tie with your lovers until you're done. You find yourself looking forward to putting your new tool to use";
+	now cock change entry is "it pulses and throbs with need. As you watch, it changes shape and becomes more vulpine in shape and forms a fluffy sheath to house it when not in use. A knot forms at the base of your cock to tie with your lovers until you're done. You find yourself looking forward to putting your new tool to use";
 	now str entry is 14; [ These are now the creature's stats... ]
 	now dex entry is 21; [ ...and are only altered onto the player via Shifting or the Mighty Mutation feat ]
 	now sta entry is 13; [ These values may be used as part of alternate combat.]
@@ -226,7 +224,6 @@ When Play begins:
 	[Clit Size Adjective is generated by a function and can be used in scenes: very small/small/average/large/very large]
 ]
 
-
 Section 3 - Alt Combat
 
 Table of Critter Combat (continued)
@@ -235,12 +232,11 @@ name	combat (rule)	preattack (rule)	postattack (rule)	altattack1 (rule)	alt1chan
 
 this is the vxntaurpounce rule:		[damage+arousing pounce]
 	choose row MonsterID from the Table of Random Critters;
-	let rangenum be ( 80 - ( peppereyes * 4 ) );
-	let dam be ( ( wdam entry times a random number from rangenum to 120 ) / 66 ); [+50% damage]
+	let dam be ( wdam entry times a random number from ( 80 - ( peppereyes * 4 ) ) to 120 ) / 66; [+50% damage]
 	if HardMode is true and a random chance of 1 in ( 10 + peppereyes ) succeeds:
 		now dam is (dam * 150) divided by 100;
-		say "The enemy finds a particular vulnerability in your defense - Critical Hit![line break]";
-	say "The [one of][Name entry][of]vulpine[or]vixentaur[or]fox creature[or]vixen[purely at random] growls and pounces atop you, [one of]knocking[or]pushing[or]shoving[purely at random] you down briefly. Her many talons claw at you while she giggles and presses her many breasts down atop you while giggling happily. This [one of]painfully[or]viciously[or]devastatingly[purely at random] [one of]arousing[or]sexy[purely at random] assault does [special-style-2][dam][roman type] damage and aroused you further!";
+		say "The enemy finds a particular vulnerability in your defense - Critical Hit!";
+	say "The [one of][EnemyNameOrTitle][of]vulpine[or]vixentaur[or]fox creature[or]vixen[purely at random] growls and pounces atop you, [one of]knocking[or]pushing[or]shoving[purely at random] you down briefly. Her many talons claw at you while she giggles and presses her many breasts down atop you while giggling happily. This [one of]painfully[or]viciously[or]devastatingly[purely at random] [one of]arousing[or]sexy[purely at random] assault does [special-style-2][dam][roman type] damage and aroused you further!";
 	now damagein is dam;
 	say "[noshieldabsorbancy]"; [unable to use shield while pinned]
 	if absorb > dam:
@@ -272,12 +268,12 @@ this is the vixentaurscent rule:
 		increase Libido of Player by a random number from 1 to 4;
 		if "Horny Bastard" is listed in feats of Player, increase Libido of Player by a random number between 0 and 1;
 		if "Cold Fish" is listed in feats of Player, decrease Libido of Player by a random number between 0 and 1;
-		LineBreak;
-		if HP of Player < 1:
-			if HP of Player <= 0, now fightoutcome is 20;
-			if Libido of Player >= 110, now fightoutcome is 21;
+		if HP of Player < 1 or Libido of Player > 109:
+			if HP of Player <= 0:
+				now fightoutcome is 20;
+			else:
+				now fightoutcome is 21;
 			lose;
-
 
 Section 4 - Endings
 
@@ -288,31 +284,20 @@ Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered
 This is the Vixentaur Infection rule:
 	if Player has a body of "Vixentaur":
 		if humanity of Player < 10:
-			if HP of Sam >= 10 and HP of Sam <= 29:
-				say "***Succumb w/Sam as Dragontaur. Should not be possible.";
-			else if HP of Sam >= 30 and HP of Sam <= 49:
-				if Player is herm:
-					say "     As you lose your humanity to your increasingly vixentaur nature, you feel your lustful heat growing stronger. You and Sam pair up as a couple of increasingly feral vixentaurs. While Sam does maintain more of her old self than you do in the end, she's more than happy to stay in the city and turn the library into her personal den. You breed her often, filling her plump with kits most of the time. You do make forays with her out into the city as well, allowing the sexy males and herms you find out there to breed you as well as breeding kits in many a juicy pussy as well. With you both breeding alluring, vulpine offspring, the numbers of vixentaurs in the area quickly grow.";
-				else if Player is female:
-					say "     As you lose your humanity to your increasingly vixentaur nature, you feel your lustful heat growing stronger. You and Sam pair up as a couple of increasingly feral vixentaurs. While Sam does maintain more of her old self than you do in the end, she's more than happy to stay in the city and turn the library into her personal den. You make numerous forays with her out into the city as well, allowing the sexy males and herms you find out there to breed you. With you both breeding alluring, vulpine offspring, the numbers of vixentaurs in the area quickly grow.";
-				else if Player is male:
-					say "     As you lose your humanity to your increasingly vixentaur nature, you feel your lustful desires growing stronger. You and Sam pair up as a couple of increasingly feral vixentaurs. While Sam does maintain more of her old self than you do in the end, she's more than happy to stay in the city and turn the library into her personal den. You breed her often, filling her plump with kits most of the time. You do make forays with her out into the city as well, with you breeding fresh holes while Sam goes for any cock she can get. With you both breeding alluring, vulpine offspring, the numbers of vixentaurs in the area quickly grow.";
-				else:
-					say "     As you lose your humanity to your increasingly vixentaur nature, you feel your lustful heat growing stronger. You and Sam pair up as a couple of increasingly feral vixentaurs. While Sam does maintain more of her old self than you do in the end, she's more than happy to stay in the city and turn the library into her personal den. Lacking any defined gender of your own, you often babysit and play with her quickly maturing offspring while the vixentaur is out. You also enjoy the role of servicing the alluring female, particularly enjoying to lick her leaking pussy clean after returning from an expedition into the city to be bred by the males she finds out there. With the alluring vixentaur's efforts out there, the number of her vulpine progeny grow steadily.";
+			[if HP of Sam >= 10 and HP of Sam <= 29:
+				say "***Succumb w/Sam as Dragontaur. Should not be possible.";]
+			if HP of Sam >= 30 and HP of Sam <= 49:
+				say "     As you lose your humanity to your increasingly vixentaur nature, you feel your lustful [if Player is herm]heat growing stronger. You and Sam pair up as a couple of increasingly feral vixentaurs. While Sam does maintain more of her old self than you do in the end, she's more than happy to stay in the city and turn the library into her personal den. You breed her often, filling her plump with kits most of the time. You do make forays with her out into the city as well, allowing the sexy males and herms you find out there to breed you as well as breeding kits in many a juicy pussy as well. With you both breeding alluring, vulpine offspring, the numbers of vixentaurs in the area quickly grow[else if Player is female]heat growing stronger. You and Sam pair up as a couple of increasingly feral vixentaurs. While Sam does maintain more of her old self than you do in the end, she's more than happy to stay in the city and turn the library into her personal den. You make numerous forays with her out into the city as well, allowing the sexy males and herms you find out there to breed you. With you both breeding alluring, vulpine offspring, the numbers of vixentaurs in the area quickly grow[else if Player is male]desires growing stronger. You and Sam pair up as a couple of increasingly feral vixentaurs. While Sam does maintain more of her old self than you do in the end, she's more than happy to stay in the city and turn the library into her personal den. You breed her often, filling her plump with kits most of the time. You do make forays with her out into the city as well, with you breeding fresh holes while Sam goes for any cock she can get. With you both breeding alluring, vulpine offspring, the numbers of vixentaurs in the area quickly grow[else]heat growing stronger. You and Sam pair up as a couple of increasingly feral vixentaurs. While Sam does maintain more of her old self than you do in the end, she's more than happy to stay in the city and turn the library into her personal den. Lacking any defined gender of your own, you often babysit and play with her quickly maturing offspring while the vixentaur is out. You also enjoy the role of servicing the alluring female, particularly enjoying to lick her leaking pussy clean after returning from an expedition into the city to be bred by the males she finds out there. With the alluring vixentaur's efforts out there, the number of her vulpine progeny grow steadily[end if].";
 			else if HP of Sam >= 50 and HP of Sam <= 69:
-				if Player is herm:
-					say "     As you lose your humanity to your increasingly vixentaur nature, you feel your lustful heat growing stronger. You and Sam pair up as a couple of increasingly feral, herm taurs. While Sam does maintain more of her old self than you do in the end, she's more than happy to stay in the city and turn the library into her personal lair. You breed with the dracovixentaur often, swapping roles as top or bottom to ensure you're both well bred. You do make forays with her out into the city often, siring plenty of offspring of your own in the many sexy females and herms you find out there. While Sam's offspring are a collection of dragontaurs, vixentaurs and dracovixentaurs, the number of vixentaurs in the area grow to be the most frequent of the three.";
-				else if Player is female:
-					say "     As you lose your humanity to your increasingly vixentaur nature, you feel your lustful heat growing stronger. You and Sam pair up as a couple of increasingly feral taurs. While Sam does maintain more of her old self than you do in the end, she's more than happy to stay in the city and turn the library into her personal lair. You are bred by the dracovixentaur often, filling you plump with numerous kits most of the time. You do make forays with her out into the city often, getting mounted by other males while Sam partakes in the females. While Sam's offspring are a collection of dragontaurs, vixentaurs and dracovixentaurs, the number of vixentaurs in the area grow to be the most frequent of the three.";
-				else if Player is male:
-					say "     As you lose your humanity to your increasingly vixentaur nature, you feel your lustful heat growing stronger. You and Sam pair up as a couple of increasingly feral, herm taurs. While Sam does maintain more of her old self than you do in the end, she's more than happy to stay in the city and turn the library into her personal lair. She allows you to mount her and breed her often, keeping her heavy with kits most of the time. You do make forays with her out into the city often, enjoying mounting and breeding many of the females you find with her. While Sam's offspring are a collection of dragontaurs, vixentaurs and dracovixentaurs, the number of vixentaurs in the area grow to be the most frequent of the three.";
+				if Player is not neuter:
+					say "     As you lose your humanity to your increasingly vixentaur nature, you feel your lustful heat growing stronger. You and Sam pair up as a couple of increasingly feral[if Player is herm], herm taurs. While Sam does maintain more of her old self than you do in the end, she's more than happy to stay in the city and turn the library into her personal lair. You breed with the dracovixentaur often, swapping roles as top or bottom to ensure you're both well bred. You do make forays with her out into the city often, siring plenty of offspring of your own in the many sexy females and herms you find out there[else if Player is female] taurs. While Sam does maintain more of her old self than you do in the end, she's more than happy to stay in the city and turn the library into her personal lair. You are bred by the dracovixentaur often, filling you plump with numerous kits most of the time. You do make forays with her out into the city often, getting mounted by other males while Sam partakes in the females[else], herm taurs. While Sam does maintain more of her old self than you do in the end, she's more than happy to stay in the city and turn the library into her personal lair. She allows you to mount her and breed her often, keeping her heavy with kits most of the time. You do make forays with her out into the city often, enjoying mounting and breeding many of the females you find with her[end if]. While Sam's offspring are a collection of dragontaurs, vixentaurs and dracovixentaurs, the number of vixentaurs in the area grow to be the most frequent of the three.";
 				else:
 					say "     As you lose your humanity to your increasingly vixentaur nature, you feel your lustful urges growing stronger. You and Sam pair up as a couple of increasingly feral, herm taurs. While Sam does maintain more of her old self than you do in the end, she's more than happy to stay in the city and turn the library into her personal lair. Lacking any defined gender of your own, you often babysit and play with her quickly maturing offspring while the vixentaur is out. You also enjoy the role of servicing the powerful herm, particularly enjoying to lick her clean after returning from an expedition into the city, sucking her cock or licking the leaking cum from her well-used pussy. While Sam's offspring are a collection of dragontaurs, vixentaurs and dracovixentaurs, the number of dragontaurs in the area grow to be the most frequent of the three.";
 			else if HP of Sam is 99:
 				say "     Shortly after you lose your humanity, you are found by Sam the Vixentaur, who takes you in to be her personal sex toy. She greatly enjoys using you to satisfy her sexual desires. Her ample bosom is pressed to your face and you're forced to nurse until you're nothing but an obedient slut to lick your mistress's cunt[if Player is male]. She rarely permits you to breed her, preferring to deny you that pleasure by forcing you to watch others breed her instead[end if]. She'll share you often with her offspring or take you with her on her forays into the city, offering you up as a plaything for any creature she desires. She barters the use of your mouth[if Player is male], cock[end if][if Player is female], cunt[end if] or ass at times to bribe a potential new lover on occasion. A duty you're more than happy to perform. With the alluring vixentaur's efforts out there, the number of her vulpine progeny grow steadily.";
 		else:
 			if HP of Sam >= 10 and HP of Sam <= 29:
-				say "***Survive w/Sam as Dragontaur. Should not be possible.";
+				[say "***Survive w/Sam as Dragontaur. Should not be possible.";]
 				say "     You are able, through the strong connection Sam shares with you, to convince the dragontaur to leave the city with you once the military forces move in to extract the survivors. There is some interest over your unusual forms, but Sam's university's connections to RSX keep you from too much unwanted scrutiny. There is also much interest over the data Sam's managed to collect in his time in the city, [if hospquest is 13 and HP of Doctor Matt >= 12]which you do arrange to quietly share with Dr. Matt to assist in his research efforts[else if hospquest > 13]which you do manage to slip a copy of to Dr. Mouse before departing[else]but RSX's pull is able to keep it from being confiscated[end if]. The reward you earn for this is quite sizable, more than Sam had originally been anticipating, having gained Rick's share and more due to the exceptional success of his rather enthusiastic work.";
 				say "     You and Sam continue his work, entering other infected hot spots to collect samples and classify the creatures within, all while getting to enjoy their myriad variety. Your collective strength and experience make you able to deal with most anything you find while exploring. And if clutches of dragontaurs and litters of vixentaurs start popping up in those areas as well, then all the better[if Player is female]. As Sam's mate, you enjoy siring several clutches and litters in her as well, helping the spread of the strong dragontaurs and sexy vixentaurs wherever you go[end if].";
 			else if HP of Sam >= 30 and HP of Sam <= 49:
@@ -324,6 +309,5 @@ This is the Vixentaur Infection rule:
 			else if HP of Sam is 99:
 				say "     When the military arrive to rescue you and the others, you feel somewhat disappointed about not being able to patch things up with Sam, but hope she's enjoying her new life out in the city. There is considerable interest over your new form and you are subject to a battery of tests by the military scientists before finally being released. You visit the university which sponsored Sam's work upon you're release, informing them (in general terms) what happened to their researchers and of the loss of their data. They provide you with a reward for this information. It is unfortunately quite small[if Player is male], but the human secretary your seduced and banged while there more than makes it worth your time. Being unprepared for the virility of those transformed, she's left bred full of vixentaurs[else], but is enough to make it worth your time[end if].";
 				say "     Being an alluring and sexy creature, you seduce people of wealth or influence to make a living. Sometimes they provide gifts or accommodations to take care of you while you're with them. Other times you simply collect secrets from their loose lips after sex, which can then be sold for the things you want. And while this sort of life is not without its risks, your sultry physique keeps you from getting into too much trouble (except when you want to be). This also allows you to entice and seduce many a prospective lover into sex with you[if Player is female], bearing many a litter of kits which you leave behind to spread in your wake as you travel the countryside[else if Player is male], breeding many a litter of kits in your wake as you travel the countryside[end if].";
-
 
 Vixentaur ends here.

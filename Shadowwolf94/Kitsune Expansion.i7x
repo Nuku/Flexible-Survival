@@ -62,9 +62,8 @@ to say Kitsune_NewMaleDomScenes:
 			choose row calcnumber from table of fucking options;
 			say "[title entry]: [description entry]?";
 			if Player consents:
-				let nam be title entry;
 				now sextablerun is 1;
-				if nam is:
+				if title entry is:
 					-- "Service him orally":
 						say "[Kitsune_ServiceOrally]";
 					-- "Let the fox mount you (anal)":
@@ -77,13 +76,12 @@ to say Kitsune_NewMaleDomScenes:
 						say "[Kitsune_PowerBottom]";
 					-- "Have the fox tend to your shaft":
 						say "[Kitsune_OralDom]";
-				wait for any key;
 		else if calcnumber is 0:
 			say "     Kitsune is wagging his tails with a sly smile.";
 			now sextablerun is 1;
-			wait for any key;
 		else:
 			say "Invalid selection made. Please pick an option from 0 to [the number of filled rows in the table of fucking options].";
+	wait for any key;
 	clear the screen and hyperlink list;
 
 Section 2.1 - Individual Scenes
@@ -118,7 +116,6 @@ to say Kitsune_ServiceOrally:
 	NPCSexAftermath Player receives "OralCock" from Kitsune;
 	Kitsune_FuckFinish;
 
-
 to say Kitsune_RideCockAnal:
 	setmonster "Kitsune";
 	say "     The silver vulpine smirks and wiggles his tails seductively, eyes running over your [if Player is FeralBodied]feral form[else]attractive body[end if], drinking in every detail. He gives a playful growl, walking around you slowly, his tails caressing against your form, making you shiver with desire under their teasing touch. All too soo, the treatment ends, and your left watching as he lies on his back, his body slowly shifting into his quadrupedal form. Once his change is complete, he looks at you with that same look as before, gesturing with his tails, inviting you to climb atop him. [if Player is FeralBodied]You do your best to avoid putting too much weight on his, careful footfalls going around the silver fox as you position yourself above his larger body, your chest rubbing against his own fluffy form[else]Not wanting to keep your lovely companion waiting, you clamber atop his larger form, positioning your rear just above his sheath, feeling his soft fur against you[end if].";
@@ -138,7 +135,6 @@ to say Kitsune_RideCockAnal:
 	say "     ";
 	Kitsune_FuckFinish;]
 
-
 to say Kitsune_PowerBottom:
 	setmonster "Kitsune";
 	say "     Grinning and pressing up against the silver vulpine, you slide your hand down his stomach and across his crotch, taking hold of his balls as you gently roll them about in your palm. The Kitsune lets out a gasp as you tease and play with him, his shaft quickly swelling and leaking pre. Nibbling along his neck, you continue to work him up, taking hold of his shaft as it swells and gently stoking it, his strong scent filling the air. You whisper into his ear about how badly you want his cock, about how good it's going to feel when he's fucking you good and hard. You hear him let out a needy growl as he reaches around you to take hold of your ass, pulling you close.";
@@ -150,7 +146,6 @@ to say Kitsune_PowerBottom:
 	say "     He grinds and presses his body against yours as he ties you, desperately trying to push deeper in as your walls squeeze and hold him still. 'Just a little longer. I want to feel you squirming on top of me,' you say as he huffs and growls, trying to get that last bit of stimulation he needs to cum. Deciding he's earned his reward, you relax your muscles for a moment before clenching down as hard as you can on his knot. He howls out above you as his knot and shaft suddenly swell with cum, his length pulsing and throbbing inside you as you feel the warm tingle of his seed inside you, your [if Player is male]own seed staining the sheets beneath you as you reach climax[else if Player is female]feminine juices staining the sheets beneath you as you reach your own climax[else]body shaking in pleasure as you reach your own climax[end if]. Collapsing onto the sheets you smile to yourself as you feel his knot still twitching inside, the occasional spurt of cum making you shiver as you both wait for his knot to come down. Closing your eyes you lay there in bliss.";
 	NPCSexAftermath Player receives "AssFuck" from Kitsune;
 	Kitsune_FuckFinish;
-
 
 to say Kitsune_OralDom:
 	say "     You watch as the silver vulpine's gaze wanders down to your crotch, his tongue licking across his lips as he lets out a soft growl. Running his paws over your hips, he leans forward and nibbles at your neck playfully, slowly guiding you back towards the bed. You shiver in anticipation as one of his paws brushes across your [if Player is female]moistening folds and [end if]swelling shaft. You let out a whimper as you feel the edge of the bed pressing into the back of your legs, his body pushing up against yours as his paw begins to caress your shaft[if Player is female] and tease your pussy[end if]. With a soft push, you fall back onto the bed and watch helplessly as he takes hold of your legs, slowly spreading them apart with a mischievous grin.";

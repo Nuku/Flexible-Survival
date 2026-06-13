@@ -11,11 +11,39 @@ snakehijack is a number that varies. [Snake TBM Hijacking check, Causes the snak
 snakecap is a number that varies. snakecap is usually 0.
 snakeocc is a number that varies. snakeocc is usually 0.
 snakehijacktimer is a number that varies. snakehijacktimer is usually 300.
-fsnakevalid is a truth state that varies. fsnakevalid is usually false.
-msnakevalid is a truth state that varies. msnakevalid is usually false.
+fsnakevalid is a truth state that varies.[@Tag:NotSaved] fsnakevalid is usually false.
+msnakevalid is a truth state that varies.[@Tag:NotSaved] msnakevalid is usually false.
 
 to say losetosnake:
-	theserpentchecks;
+	if debugactive is 1:  [Invocation of validation for TBM scene]
+		say "     DEBUG -> Starting Serpent Calculations <- DEBUG[line break]";
+	if Player is female or scalevalue of Player > 2 or player is twistcapped: [Quantify Capacity]
+		if scalevalue of Player < 3:
+			now snakecap is 1;
+		else:
+			now snakecap is scalevalue of Player - 1;
+	else:
+		now snakecap is 0;
+	if debugactive is 1:
+		say "     DEBUG -> snakecap: [snakecap], snakeocc: [snakeocc] <- DEBUG[line break]";
+	if snakecap > snakeocc: [Quantify Roll Chance]
+		now tempnum is 3;
+		if Player is kinky, increase tempnum by 1;
+		increase tempnum by snakeocc;
+	else:
+		now tempnum is 0;
+	if debugactive is 1:
+		say "     DEBUG -> tempnum: [tempnum], snakehijacktimer: [snakehijacktimer], [if player is total_vacant]: player is total_vacant, [end if] <- DEBUG[line break]";
+	if "Touched by Madness" is listed in feats of Player and a random chance of tempnum in 10 succeeds and snakehijacktimer - turns >= 16:
+		if Player is female and (Player is fem_vacant or snakeocc > 0):
+			now fsnakevalid is true;
+		else if Player is not female and (Player is male_vacant or snakeocc > 0) and "MPreg" is listed in feats of Player:
+			now msnakevalid is true;
+	if debugactive is 1:
+		if fsnakevalid is true or msnakevalid is true:
+			say "     DEBUG -> Player qualifies for [if fsnakevalid is true]female[else]male[end if] snake unbirthing <- DEBUG[line break]";
+		else:
+			say "     DEBUG -> Player does not qualify for male/female snake unbirthing <- DEBUG[line break]";
 	if HP of Player > 0:
 		say "     You choose to surrender to the large serpent, lowering yourself in submission to its will. It slithers around you cautiously, not fully trusting this gesture, [if snakedomm is 0]and not rightly sure what it has in store for you[else]though no doubt nonetheless eager to have its hunger sated[end if]. ";
 	else:
@@ -46,17 +74,14 @@ to say losetosnake:
 			now AssSpeciesName of Child is "Snake";
 			now TailSpeciesName of Child is "Snake";
 			now preghijack is true;
-			choose row MonsterID from the Table of Random Critters;
-			now Name entry is "Snake";
-			impregnate with Name entry;
+			impregnate with "Snake";
 			now gestation of Child is 5;
 			now snakeocc is 1;
 		else:
 			now gestation of Child is 5;
 			increase snakeocc by 1;
 		now snakedomm is 2;
-		increase Libido of Player by 5;
-		if Libido of Player > 100, now Libido of Player is 100;
+		raise Player Libido by 5;
 	else if msnakevalid is true: [Touched by Madness MPreg scene]
 		say "Forcibly exposed before it, the snake suddenly stops in its tracks for a second, stricken by a[if snakedomm > 1]n all too familiar[end if] thought... A few seconds pass before it begins its affection, forked tongue's caress across your anal ring, very much insistent on this twisted preparation";
 		if snakeocc > 0:
@@ -69,36 +94,31 @@ to say losetosnake:
 		if snakeocc is 0:
 			now snakehijack is 2;
 			now mpreghijack is true;
-			choose row MonsterID from the Table of Random Critters;
-			impregnate with Name entry;
+			impregnate with "Snake";
 			now gestation of Child is 5;
 			now snakeocc is 1;
 		else:
 			now gestation of Child is 5;
 			increase snakeocc by 1;
 		now snakedomm is 2;
-		increase Libido of Player by 5;
-		if Libido of Player > 100, now Libido of Player is 100;
+		raise Player Libido by 5;
 	else if (a random chance of 2 in 5 succeeds or (Player is kinky and a random chance of 1 in 5 succeeds)) and inasituation is false:
 		say "Determining its prey as now defenseless, the serpent quickly winds its body around you, squeezing you with its coils. As it constricts you, it weakens you further by nipping and biting at you, seeping venom into your wounds. You grow warm and woozy, and strangely aroused. You start to moan as the snake's squeezing starts to feel more enjoyable and pleasing, so much so that you don't notice at first its mouth unhinging to open unnaturally wide as it prepares to satisfy a more literal hunger.";
 		if scalevalue of Player < 4: [man-sized or less]
-			say "     It is not until the snake's head is down over yours, its tongue sliding across your cheek as it tastes its prey, that you realize your true predicament. But it feels so good, so warm and tingly, that you find it hard to focus on struggling at all. With your arms pinned to your sides and its coils crushing down on your limbs, there's little you can do to fight the inevitable. Its throat slides over your head, gulping down around you as it starts to pull you inwards. Those strong muscles slide over your shoulders as its mouth closes around your body, fangs biting into your rear, causing you to moan [if Cock Count of Player > 1]as your cocks throb against the snake's palate[else if Cock Count of Player is 1]as your cock throbs against the snake's palate[end if][if Player is herm] [end if][if Player is female]while its tongue dives into your cunt, lapping up your juices[end if]. As the snake's esophagus continues its inexorable work of pulling you inwards, the squeezing and the warmth grow more intense until you finally cum before passing out. Full and well fed, the snake [if daytimer is day]stretches out in the warm sun[else]curls up under the night sky[end if] to rest and digest its meal.";
-		else if scalevalue of Player > 3: [large]
-			say "     It is not until the snake's head is down over yours, mouth stretching wide to try and consume a creature larger than itself, that you realize your true predicament. But it feels so good, so warm and tingly, that you find it hard to focus on struggling at all. With your arms pinned to your sides and its coils crushing down on your limbs, you try to squirm, but the snake's got you too tightly and you are too weak from the venom to put up much more of a fight. Even with your added size, it has you as its prey and won't let you go. Its throat slides over your head, gulping down around you as it starts to pull you inwards. With a pop of its jaw dislocating entirely, those strong muscles slide over your shoulders as its mouth closes around your body, fangs biting into your rear, causing you to moan [if Cock Count of Player > 1]as your cocks throb against the snake's palate[else if Cock Count of Player is 1]as your cock throbs against the snake's palate[end if][if Player is herm] [end if][if Player is female]while its tongue dives into your cunt, lapping up your juices[end if]. As the snake's esophagus continues its inexorable work of pulling your large mass inwards, the squeezing and the warmth grow more intense until you finally cum before passing out. Full and very well fed, the snake [if daytimer is day]stretches out in the warm sun[else]curls up under the night sky[end if] to rest and digest its oversized meal.";
-		LineBreak;
+			say "     It is not until the snake's head is down over yours, its tongue sliding across your cheek as it tastes its prey, that you realize your true predicament. But it feels so good, so warm and tingly, that you find it hard to focus on struggling at all. With your arms pinned to your sides and its coils crushing down on your limbs, there's little you can do to fight the inevitable. Its throat slides over your head, gulping down around you as it starts to pull you inwards. Those strong muscles slide over your shoulders as its mouth closes around your body, fangs biting into your rear, causing you to moan [if Cock Count of Player > 1]as your cocks throb against the snake's palate[else if Player is male]as your cock throbs against the snake's palate[end if][if Player is herm] [end if][if Player is female]while its tongue dives into your cunt, lapping up your juices[end if]. As the snake's esophagus continues its inexorable work of pulling you inwards, the squeezing and the warmth grow more intense until you finally cum before passing out. Full and well fed, the snake [if daytimer is day]stretches out in the warm sun[else]curls up under the night sky[end if] to rest and digest its meal.";
+		else: [large]
+			say "     It is not until the snake's head is down over yours, mouth stretching wide to try and consume a creature larger than itself, that you realize your true predicament. But it feels so good, so warm and tingly, that you find it hard to focus on struggling at all. With your arms pinned to your sides and its coils crushing down on your limbs, you try to squirm, but the snake's got you too tightly and you are too weak from the venom to put up much more of a fight. Even with your added size, it has you as its prey and won't let you go. Its throat slides over your head, gulping down around you as it starts to pull you inwards. With a pop of its jaw dislocating entirely, those strong muscles slide over your shoulders as its mouth closes around your body, fangs biting into your rear, causing you to moan [if Cock Count of Player > 1]as your cocks throb against the snake's palate[else if Player is male]as your cock throbs against the snake's palate[end if][if Player is herm] [end if][if Player is female]while its tongue dives into your cunt, lapping up your juices[end if]. As the snake's esophagus continues its inexorable work of pulling your large mass inwards, the squeezing and the warmth grow more intense until you finally cum before passing out. Full and very well fed, the snake [if daytimer is day]stretches out in the warm sun[else]curls up under the night sky[end if] to rest and digest its oversized meal.";
 		say "     You wake up some time later covered in clear, sticky goo. You are weak, emaciated and unsure how you ended up here or if you even want to know how you did. You stagger weakly to your feet, feeling very hungry and thirsty after your very draining experience as the nanites in your body try to speed your recovery.";
 		increase thirst of Player by 15;
 		increase hunger of Player by 10;
 	else if Player is not neuter:
 		if Breast Size of Player > 0: [Breast-particular Prelude]
 			say "Forked tongue meeting with your [if HP of Player > 0]offered[else]vulnerable[end if], [bodydesc of Player] form, its inquisitive caress teases one of your exposed, [breast size desc of Player] breasts. Satisfied with what you might offer it, the serpent [if scalevalue of Player > 4]partially [end if]entwines itself around you, [if scalevalue of Player < 4]its heavy weight keeping you pinned to dissuade protest[else]ensuring that you can't struggle against its endeavors[end if] - not that you [if HP of Player > 0]are of any immediate desire to do so[else]could even if you wanted to, given the venom's effect[end if] - before its scaled lips meet your supple teat.";
-			say "     Tainted body feeding the snake as it forcibly nurses from you, its grip on you tightens, inch by inch, as though it thinks it can do this to squeeze every last drop of your cream from you. Once finished with the first, it moves onto the second[if Nipple Count of Player > 2], repeating this ritual for all the others[end if], until there is naught you might offer it. ";
 			if (Breast Size of Player / 2) * Nipple Count of Player > 10:
-				say "Given the sheer, substantive measure of milk you provision it with, the bloated creature eventually slumps off you, no doubt a fair bit dizzy with its contents. Having reaped its share, it slowly slithers off into the distance, content and off to find some rest. [if HP of Player > 0]You eventually recover from the whole ordeal[else]The venom eventually wears off[end if], allowing you to get back to your feet and go about your business freely, a fair bit aroused and addled by the whole affair.";
-				increase Libido of Player by 5;
-				if Libido of Player > 100, now Libido of Player is 99;
+				say "     Tainted body feeding the snake as it forcibly nurses from you, its grip on you tightens, inch by inch, as though it thinks it can do this to squeeze every last drop of your cream from you. Once finished with the first, it moves onto the second[if Nipple Count of Player > 2], repeating this ritual for all the others[end if], until there is naught you might offer it. Given the sheer, substantive measure of milk you provision it with, the bloated creature eventually slumps off you, no doubt a fair bit dizzy with its contents. Having reaped its share, it slowly slithers off into the distance, content and off to find some rest. [if HP of Player > 0]You eventually recover from the whole ordeal[else]The venom eventually wears off[end if], allowing you to get back to your feet and go about your business freely, a fair bit aroused and addled by the whole affair.";
+				raise Player Libido by 5;
 			else:
-				say "Satisfied though it might be from this particular offering, it doesn't seem quite finished with its[if HP of Player > 0] willing[end if] victim just yet. Head shifting around you, its coils following suit, you're met with that same forked tongue against your ";
+				say "     Tainted body feeding the snake as it forcibly nurses from you, its grip on you tightens, inch by inch, as though it thinks it can do this to squeeze every last drop of your cream from you. Once finished with the first, it moves onto the second[if Nipple Count of Player > 2], repeating this ritual for all the others[end if], until there is naught you might offer it. Satisfied though it might be from this particular offering, it doesn't seem quite finished with its[if HP of Player > 0] willing[end if] victim just yet. Head shifting around you, its coils following suit, you're met with that same forked tongue against your ";
 				snakecoresex;
 		else:
 			say "Eyeing its [if HP of Player > 0]potential offering[else]new victim[end if] up for a moment, the serpent [if scalevalue of Player > 4]partially [end if]wraps around you, [if scalevalue of Player < 4]its heavy weight keeping you pinned to dissuade protest[else]ensuring that you can't struggle against its endeavors[end if] - not that you [if HP of Player > 0]are of any immediate desire to do so[else]could even if you wanted to, given the venom's effect[end if] - before its curious, forked tongue tastes your ";
@@ -110,28 +130,17 @@ to snakecoresex:
 		if Cock Length of Player < 21:
 			say "[if Cock Count of Player > 2]two of them[else if Cock Count of Player is 2]both of them[else]the tool[end if] with little restraint or difficulty";
 		else:
-			say "[if Cock Count of Player > 1]one of them[else]the tool[end if] with little restraint or difficulty";
-		if (Cock Count of Player is 2 and Cock Length of Player > 14) or Cock Length of Player > 18:
-			say ", its elongated body visibly bulging to contain such a sizable measure of flesh";
-		say ".";
+			say "[if Cock Count of Player > 1]one of them[else]the tool[end if] with little restraint or difficulty[if (Cock Count of Player is 2 and Cock Length of Player > 14) or Cock Length of Player > 18], its elongated body visibly bulging to contain such a sizable measure of flesh[end if].";
 		say "     Tight, slick confines massaging your engulfed cock[if Cock Length of Player < 21 and Cock Count of Player > 1]s[end if], the serpent's grip tightens more and more around you, as if to try and squeeze you into bliss. Its prolonged, audibly wet endeavors [if Libido of Player > 20]quickly[else]eventually[end if] forces you to cry out, constrained tool[if Cock Length of Player < 21 and Cock Count of Player > 1]s[end if] spurting gouts of [if Cock Length of Player < 21 and Cock Count of Player > 1]their[else]its[end if] [Cum Load Size of Player] load into its slick, voracious maw";
-		if (Cock Count of Player > 1 and Cock Length of Player > 20) or Cock Count of Player > 2:
-			say ", scaled frame stained with the seed of ";
-			if Cock Count of Player > 1 and Cock Length of Player > 20:
-				say "its exposed brother[if Cock Count of Player > 2]s[end if]";
-			else:
-				say "their exposed brother[if Cock Count of Player > 3]s[end if]";
-		if Ball Size of Player > 5:
-			say ". Very quickly, the beast visibly bloats to contain your load, each successive jism flooding its depths more and more, until it can abide not a drop more.";
-		else:
-			say ". The beast seems to have no issue contending with your offering, greedily milking you of every last drop offered.";
+		if Cock Count of Player > 1 and Cock Length of Player > 20:
+			say ", scaled frame stained with the seed of its exposed brother[if Cock Count of Player > 2]s[end if]";
+		else if Cock Count of Player > 2:
+			say ", scaled frame stained with the seed of their exposed brother[if Cock Count of Player > 3]s[end if]";
+		say ". [if Ball Size of Player > 5]Very quickly, the beast visibly bloats to contain your load, each successive jism flooding its depths more and more, until it can abide not a drop more[else]The beast seems to have no issue contending with your offering, greedily milking you of every last drop offered[end if].";
 		if Ball Size of Player < 6 and Breast Size of Player is 0:
 			WaitLineBreak;
 			say "     However, it doesn't seem inclined to relent, and in mere seconds following your climax its elastic gullet begins to massage your beleaguered dick[if Cock Length of Player < 20 and Cock Count of Player > 1]s[end if] once more. Clearly, the snake wasn't satisfied with your offering, and after several long minutes of being subjected to its[if HP of Player < 1] imposed[end if] influence you're forced to orgasm a second time.";
-		say "     Satisfied, the serpent [if Ball Size of Player < 6 and Breast Size of Player is 0] finally[end if] frees itself of you, leaving you an exhausted and[if Ball Size of Player < 6 and Breast Size of Player is 0] significantly[end if] spent mess";
-		if Ball Size of Player > 5:
-			say ". Given the way the creature dizzily departs, substantially bloated, it's clear its hunger will be sated for a good while";
-		say ". Eventually, [if HP of Player > 0]you recover from the whole ordeal[else]the venom wears off[end if], allowing you to get back to your feet and go about your business freely[if HP of Player < 1], no doubt a bit addled by the whole ordeal[end if].";
+		say "     Satisfied, the serpent[if Ball Size of Player < 6 and Breast Size of Player is 0] finally[end if] frees itself of you, leaving you an exhausted and[if Ball Size of Player < 6 and Breast Size of Player is 0] significantly[end if] spent mess[if Ball Size of Player > 5]. Given the way the creature dizzily departs, substantially bloated, it's clear its hunger will be sated for a good while[end if]. Eventually, [if HP of Player > 0]you recover from the whole ordeal[else]the venom wears off[end if], allowing you to get back to your feet and go about your business freely[if HP of Player < 1], no doubt a bit addled by the whole ordeal[end if].";
 		CreatureSexAftermath "Snake" receives "OralCock" from "Player";
 	else if Player is female:
 		say "[cunt size desc of Player] cunt[sfn], [if Breast Size of Player > 0]already quite aroused after its prior ritual[else if HP of Player > 0]quickly made dripping and eager by the beast's affection[else]the beast's tainted infection leaving you dripping and eager[end if]. Satisfied, and with almost no restraint, it forces its slender head past the supple folds of [if Cunt Count of Player > 1]one of your pussies[else]your pussy[end if][if Cunt Depth of Player < 13], its substantial girth stretching you to your limits[end if]. Coiling slightly around you, [if scalevalue of Player < 4]its heavy weight keeps you pinned to prevent you from struggling[else]it ensures that you can't struggle against its endeavor[end if][if HP of Player > 0], not that you have presented yourself in such a manner to give that sort of impression[end if].";
@@ -139,58 +148,17 @@ to snakecoresex:
 		if Breast Size of Player is 0:
 			WaitLineBreak;
 			say "     However, it doesn't seem inclined to relent, and in mere seconds following your release its slender frame assails your beleaguered cunt once more. Clearly, the snake wasn't satisfied with your offering, and after several long minutes of being subjected to its[if HP of Player < 1] imposed[end if] influence you're forced to orgasm a second time.";
-		say "     Satisfied, the serpent [if Breast Size of Player is 0] finally[end if] frees itself of you, leaving you an exhausted and[if Breast Size of Player is 0] significantly[end if] spent mess. [if HP of Player > 0]You eventually recover from the whole ordeal[else]The venom eventually wears off[end if], allowing you to get back to your feet and go about your business freely[if HP of Player < 1], no doubt a bit addled by the whole ordeal[end if].";
+		say "     Satisfied, the serpent[if Breast Size of Player is 0] finally[end if] frees itself of you, leaving you an exhausted and[if Breast Size of Player is 0] significantly[end if] spent mess. [if HP of Player > 0]You eventually recover from the whole ordeal[else]The venom eventually wears off[end if], allowing you to get back to your feet and go about your business freely[if HP of Player < 1], no doubt a bit addled by the whole ordeal[end if].";
 		CreatureSexAftermath "Snake" receives "OralPussy" from "Player";
 	else: [Note, this fallback is for neuters; if we implement a Vore Adjustment System and we need something to give neuters when they receive no vore content.]
 		say "     The two-tone snake winds its body around yours, squeezing and constricting. It nips and bites at you, seeping venom into your wounds. You grow warm and woozy, and strangely aroused. You start to moan as the snake's squeezing starts to feel more enjoyable and pleasing, though it's hard to say if it is squeezing you less or your perception of those clenching coils has changed. As the venom continues to excite you, you cum hard before the serpent releases you and slithers away.";
-		increase Libido of Player by 5;
-		if Libido of Player > 100, now Libido of Player is 99;
+		raise Player Libido by 5;
 	if snakedomm is 0, now snakedomm is 1;
-
-to theserpentchecks: [Invocation of validation for TBM scene]
-	if debugactive is 1:
-		say "     DEBUG -> Starting Serpent Calculations <- DEBUG[line break]";
-	if Player is female or (scalevalue of Player > 2 or player is twistcapped): [Quantify Capacity]
-		now snakecap is 1;
-		if scalevalue of Player > 2:
-			increase snakecap by 1;
-		if scalevalue of Player > 3:
-			increase snakecap by 1;
-		if scalevalue of Player > 4:
-			increase snakecap by 1;
-	else:
-		now snakecap is 0;
-	if debugactive is 1:
-		say "     DEBUG -> snakecap: [snakecap], snakeocc: [snakeocc] <- DEBUG[line break]";
-	if snakecap > snakeocc: [Quantify Roll Chance]
-		now tempnum is 3;
-		if Player is kinky, increase tempnum by 1;
-		increase tempnum by snakeocc;
-	else:
-		now tempnum is 0;
-	if debugactive is 1:
-		say "     DEBUG -> tempnum: [tempnum], snakehijacktimer: [snakehijacktimer], [if player is total_vacant]: player is total_vacant, [end if] <- DEBUG[line break]";
-	if "Touched by Madness" is listed in feats of Player and (Player is fem_vacant or snakeocc > 0) and Player is female and a random chance of tempnum in 10 succeeds and snakehijacktimer - turns >= 16:
-		now fsnakevalid is true;
-		now msnakevalid is false;
-		if debugactive is 1:
-			say "     DEBUG -> Player qualifies for female snake unbirthing <- DEBUG[line break]";
-	else if "Touched by Madness" is listed in feats of Player and (Player is male_vacant or snakeocc > 0) and Cunt Count of Player is 0 and Player is mpreg_ok and a random chance of tempnum in 10 succeeds and snakehijacktimer - turns >= 16:
-		now msnakevalid is true;
-		now fsnakevalid is false;
-		if debugactive is 1:
-			say "     DEBUG -> Player qualifies for male snake unbirthing <- DEBUG[line break]";
-	else:
-		now fsnakevalid is false;
-		now msnakevalid is false;
-		if debugactive is 1:
-			say "     DEBUG -> Player does not qualify for male/female snake unbirthing <- DEBUG[line break]";
 
 to say beatthesnake:
 	if snakesubm is 0:
 		say "     The snake's down for the count, too weak to contend your will.";
-		say "     [bold type]It's a curious thing, should you inspect it more closely?[roman type][line break]";
-		LineBreak;
+		say "[line break]     [bold type]It's a curious thing, should you inspect it more closely?[roman type][line break]";
 		say "     ([link]Y[as]y[end link]) - Yes.";
 		say "     ([link]N[as]n[end link]) - No.";
 		if Player consents:
@@ -203,15 +171,7 @@ to say beatthesnake:
 	else:
 		say "     Beaten, the snake pulls away, tail twisting into a corkscrew so that its rich orange underside might mesh together as a warning sign, not that it's in a position to be of any further threat to you. Leaving it at that, the snake retreats fully, hissing in departure.";
 
-
 Section 2 - Creature Insertion
-
-to say snakedesc:
-	if showlocale is true:
-		say "     As you travel across the plains, there is a rustle in the grass beside you. Turning quickly, you spot";
-	else:
-		say "     Suddenly, you're assailed by";
-	say " what would be a common ring-necked snake, were it not for its great size. This serpent has grown to the size of a boa and is almost two meters in length. This one has silvery scales across its body with bright yellow-orange along the underbelly. Its dark gray head has an orange band at its neck and a pale yellow jaw, which blends into the brighter underside. The enlarged snake hisses at you and attacks.";
 
 Table of CombatPrep (continued)
 name(text)	PrepFunction(text)
@@ -220,7 +180,7 @@ name(text)	PrepFunction(text)
 to say PrepCombat_Snake:
 	setmongender 0; [creature is neuter-X]
 	choose row MonsterID from the Table of Random Critters;
-	if "Herm Preferred" is listed in feats of Player:
+	if Player is HermPreferred:
 		now sex entry is "Both";
 	else if Player is MalePreferred:
 		now sex entry is "Male";
@@ -233,12 +193,14 @@ to say PrepCombat_Snake:
 	else if Player is female:
 		now sex entry is "Female";
 	else:
-		now sex entry is "nochange";
+		now sex entry is "Nochange";
 	[set all size values to match existing so only number of cocks/cunts may change]
 	now Cock Length entry is Cock Length of Player;
 	now Ball Size entry is Ball Size of Player;
 	now Cunt Depth entry is Cunt Depth of Player;
 	now Cunt Tightness entry is Cunt Tightness of Player;
+	now fsnakevalid is false;
+	now msnakevalid is false;
 
 Table of Random Critters (continued)
 NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
@@ -255,6 +217,7 @@ When Play begins:
 	add "Snake" to infections of TaperedCockList;
 	add "Snake" to infections of InternalCockList;
 	add "Snake" to infections of InternalBallsList;
+	add "Snake" to infections of NoLegList;
 	add "Snake" to infections of SerpentineList;
 	add "Snake" to infections of FeralmindList;
 	add "Snake" to infections of TailList;
@@ -267,7 +230,7 @@ When Play begins:
 	now attack entry is "[one of]The snake winds itself around your leg, squeezing as it tries to scale your body[or]The ring-necked snake snaps at your arm as you try to attack it[or]The ring-neck hisses and snaps at your leg[or]As you attack, the snake whips its tail around your arms and latches on, squeezing them powerfully[at random]!";
 	now defeated entry is "[beatthesnake]";
 	now victory entry is "[losetosnake]";
-	now desc entry is "[snakedesc]";
+	now desc entry is "     [if showlocale is true]As you travel across the plains, there is a rustle in the grass beside you. Turning quickly, you spot[else]Suddenly, you're assailed by[end if] what would be a common ring-necked snake, were it not for its great size. This serpent has grown to the size of a boa and is almost two meters in length. This one has silvery scales across its body with bright yellow-orange along the underbelly. Its dark gray head has an orange band at its neck and a pale yellow jaw, which blends into the brighter underside. The enlarged snake hisses at you and attacks.[line break]";
 	now face entry is "now a snake's head, with beady eyes and a forked tongue slipping from your jaws to sniff the air";
 	now body entry is "a strange mix of man and serpent, having a slender, flexible body capable of slithering across the ground, but you still retain your arms and legs. They are slender and flexible as well, ending in clawed digits. You have a slit which automatically conceals your genitals when you begin to slither, but leaves them out and exposed otherwise";
 	now skin entry is "smooth, silver-gray scales across your back and sides. Your chest and inner thighs are a bright, caution-yellow with droplets of black bleeding into the colorful, scaly";
@@ -284,7 +247,7 @@ When Play begins:
 	now per entry is 15;
 	now int entry is 12;
 	now cha entry is 16;
-	now sex entry is "nochange"; [ Invalid sex entry value, resulting in no changes to gender ]
+	now sex entry is "Nochange"; [ Invalid sex entry value, resulting in no changes to gender ]
 	now HP entry is 20; [ The monster's starting HP. ]
 	now lev entry is 2; [ Monster level. (Level x 2) XP for victory. (Level / 2) XP for losing. ]
 	now wdam entry is 5; [ Monster's average damage when attacking. ]
@@ -418,7 +381,6 @@ When Play begins:
 	[Clit Size Adjective is generated by a function and can be used in scenes: very small/small/average/large/very large]
 ]
 
-
 Section 3 - Alt Combat
 
 Table of Critter Combat (continued)
@@ -433,8 +395,7 @@ this is the snakebiteinc rule:
 
 this is the snakebite rule:
 	choose row MonsterID from the Table of Random Critters;
-	let rangenum be ( 80 - ( peppereyes * 4 ) );
-	let dam be ( ( wdam entry times a random number from rangenum to 120 ) / 75 ); [+33% damage]
+	let dam be ( wdam entry times a random number from ( 80 - ( peppereyes * 4 ) ) to 120 ) / 75; [+33% damage]
 	if HardMode is true and a random chance of 1 in ( 10 + peppereyes ) succeeds:
 		now dam is (dam * 150) divided by 100;
 	if Playerpoison is 0:
@@ -442,8 +403,8 @@ this is the snakebite rule:
 		decrease plhitbonus by 2;
 	else:
 		increase playerpoison by 1 + ( lev entry / 10 );
-		if Playerpoison < ( 2 + ( lev entry / 5 ) ), now playerpoison is 2 + ( lev entry / 5 );
-	say "The [one of][Name entry][or]serpent[or]snake creature[or]monstrous snake[or]reptilian creature[as decreasingly likely outcomes] manages a solid bite on your [one of]arm[or]leg[or]side[or]thigh[or]hip[at random], sinking its fangs deeply into your flesh. The wound burns with pain and your vision blurs, warning you of the venom coursing through your system. You'll need to hope your nanites can purge the poison from your system or you're able to defeat your foe so you can treat the wound properly. You take [special-style-2][dam][roman type] damage!";
+		if Playerpoison < 2 + ( lev entry / 5 ), now playerpoison is 2 + ( lev entry / 5 );
+	say "The [one of][EnemyNameOrTitle][or]serpent[or]snake creature[or]monstrous snake[or]reptilian creature[as decreasingly likely outcomes] manages a solid bite on your [one of]arm[or]leg[or]side[or]thigh[or]hip[at random], sinking its fangs deeply into your flesh. The wound burns with pain and your vision blurs, warning you of the venom coursing through your system. You'll need to hope your nanites can purge the poison from your system or you're able to defeat your foe so you can treat the wound properly. You take [special-style-2][dam][roman type] damage!";
 	now damagein is dam;
 	say "[bodyabsorbancy]"; [attack directed to Body of Player]
 	if absorb > dam:
@@ -456,7 +417,6 @@ this is the snakebite rule:
 	say "You are [descr].";
 	choose row monstercom from the table of critter combat;
 	now alt1chance entry is 12;
-
 
 Section 4 - Endings
 
@@ -471,18 +431,11 @@ This is the Snake Infection rule:
 			say "     As your serpent instincts take over as your humanity fades away, you travel back to the grassy plains at the edge of the city. There you set up a nest in a burrow you made among the cluster of trees. There a many of the enlarged snakes around and they make fine lovers when you cannot capture larger prey to sate your lusts before sating your hunger";
 			if FaceName of Player is "Snake":
 				say ". Your venom is quite powerful and arousing, getting your victims so aroused they cannot help but mate you vigorously before you finish them off";
-			if Player is male:
-				say ". You do release a few of the females and herms after properly fucking them, somehow knowing they'll grow full of large eggs which will hatch into new snakes";
-			if Player is female and "Sterile" is not listed in feats of Player:
-				say ". Your temporary lovers fill you with their seed, filling you with clutches of eggs which will hatch and grow into more enlarged serpents";
-			say ".";
+			say "[if Player is male]. You do release a few of the females and herms after properly fucking them, somehow knowing they'll grow full of large eggs which will hatch into new snakes[end if][if Player is fpreg_ok]. Your temporary lovers fill you with their seed, filling you with clutches of eggs which will hatch and grow into more enlarged serpents[end if].";
 		else:
 			if FaceName of Player is "Snake" and SkinName of Player is "Snake" and TailName of Player is "Snake" and CockName of Player is "Snake":
 				say "     The military rescue gets you out of the infected city and back to civilization. But you don't suit civilization very well anymore. You manage to get a job at a large firm which specializes at buying out smaller companies and selling them off. You particularly enjoy the idea of you capturing and then crushing each like smaller prey. While this makes you quite successful at your job, you make few friends.";
-				say "     Outside of work, your predatory nature makes you lustful and aggressive. You often travel the night streets in search of prey to slake your wild lusts upon. Your arousing venom quickly gets them so horny that they willingly mate with you lustfully before you finally leave them there in a daze from your venom and the afterglow. Your bite is very effective and your lovemaking so effective that you never hear word of any of them ever reporting the event or considering pressing charges at all[if Player is male], even those who grow full with eggs[end if], as a shady detective you hire informs you";
-				if Player is female and "Sterile" is not listed in feats of Player:
-					say ". You gain a few clutches of eggs from these nocturnal lovers you pick. Much like snakes in the wild, you feel no affection for these young serpents and ship them off to boarding schools at a very young age";
-				say ".";
+				say "     Outside of work, your predatory nature makes you lustful and aggressive. You often travel the night streets in search of prey to slake your wild lusts upon. Your arousing venom quickly gets them so horny that they willingly mate with you lustfully before you finally leave them there in a daze from your venom and the afterglow. Your bite is very effective and your lovemaking so effective that you never hear word of any of them ever reporting the event or considering pressing charges at all[if Player is male], even those who grow full with eggs[end if], as a shady detective you hire informs you[if Player is fpreg_ok]. You gain a few clutches of eggs from these nocturnal lovers you pick. Much like snakes in the wild, you feel no affection for these young serpents and ship them off to boarding schools at a very young age[end if].";
 			else:
 				say "     The military rescue gets you out of the infected city, but not unchanged. Having partially become a snake, you don't fit in well and have trouble finding a place for yourself. Buying out a small pawn shop, you do fairly well. Your strange appearance is helpful when dealing with some of your shadier customers, for you are not at all above fencing their [']found['] items for a small cut. As well, being infected, you are a natural person for other infected people to deal with, and with raided items from the infected city providing a good source of cheap wares, you are able to make a good living.";
 

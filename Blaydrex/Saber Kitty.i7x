@@ -8,10 +8,10 @@ Version 1 of Saber Kitty by Blaydrex begins here.
 Section 1 - Creature Responses
 
 to say saber_wins:
-	project the Figure of Saber_Kitty_icon;
 	if Player is male:
 		say "     The saber kitty swipes at you one more time, ripping your clothes and knocking you down onto your butt. When you stay down she smiles that toothy smile, drawing extra attention to those pearly white fangs of hers. 'Finally, a male to play with,' she says as she saunters over to you, her pussy dripping audibly onto the floor with her desperate, heat-filled need. She frowns when she notices you aren't hard. She pushes your chest, making you lay down, and then straddles your face, keeping her pussy just barely out of reach of your face as she begins to lick your cock. She fondles your cock as she continues licking you. Her breasts rub on your stomach.";
 		say "     It isn't long before you begin to smell her heat. The scent starts to fog your mind and you begin to breathe deeply, taking in more and more of her scent. It isn't long before her scent and teasing brings you to a painfully hard erection. The second you are hard, she purrs loudly in delight and wastes no time in turning around and impaling herself on your rod. She begins to ride you with reckless abandon, a rather large puddle of her juices rapidly forming under you.";
+		WaitLineBreak;
 		say "     It doesn't take long before she orgasms on your cock, sending you over the edge. When you finally stop filling her tight cunt she gets up. She smiles her toothy smile again. 'Open wide, love,' she says, placing her pussy over your face, letting some of your combined juices drip all over your face. She then reaches down and lifts your balls before licking under them. 'Ooooh. I can't wait for you to join me in this bliss,' she says before sauntering off, leaving a trail of her juices dripping onto the ground.";
 		CreatureSexAftermath "Saber Kitty" receives "PussyFuck" from "Player";
 	else if Player is female:
@@ -24,31 +24,28 @@ to say saber_wins:
 		CreatureSexAftermath "Player" receives "OralPussy" from "Saber Kitty";
 
 to say saber_loses:
-	project the Figure of Saber_Kitty_icon;
 	if Player is male:
-		say "     She staggers back as you deal the final blow. After recovering she purrs happily at finding someone so strong. She approaches you with her toothy smile, drawing extra attention to her pearly white fangs. She gently rubs herself against you, the scent of her heat filling the air. 'Wanna play with the saber kitty, love?' she asks, mewling. It's hard to think. Do you take her up on the offer or do you run before it is too late? You might risk infection if you give in...";
+		say "     She staggers back as you deal the final blow. After recovering she purrs happily at finding someone so strong. She approaches you with her toothy smile, drawing extra attention to her pearly white fangs. She gently rubs herself against you, the scent of her heat filling the air. 'Wanna play with the saber kitty, love?' she asks, mewling. It's hard to think. Do you [link]take her up (Y)[as]y[end link] on the offer, or do you [link]run (N)[as]n[end link] before it is too late? [italic type]You might risk infection if you give in...[roman type][line break]";
 		if Player consents:
 			LineBreak;
 			say "     The scent of her heat is just too unbearable for you. Sensing your wavering judgment she smirks and purrs loudly in your ear. She reaches down and begins fondling your balls as she nuzzles your cheek, her sharp fangs brushing against your cheek. You can't take much more and throw her to the ground. You begin to violently fuck her, wanting nothing more than to breed this sexy saber kitty. She moans loudly, her pussy juices forming a puddle under her.";
 			say "     It doesn't take long before you blow your load into her, causing her to purr. 'Thanks, love. How about you clean me out a bit?' she entices. Who could say no to such a sexy kitty? You pull out and put your face next to her pussy. Before you have a chance to react she grabs your head and forces you into her cunt. 'Open wide, love. I want you to get every bit of it so you can become a sexy saber kitty like me!' she says, before pushing out all the cum in her cunt into your mouth as well as a bunch of her own juices. You have no choice but to swallow it all. 'Good, slut. Keep it up and you will have such a wonderful time,' she mewls before sauntering off, leaving a trail of her dripping juices on the ground.";
 			CreatureSexAftermath "Saber Kitty" receives "PussyFuck" from "Player";
 			CreatureSexAftermath "Player" receives "OralPussy" from "Saber Kitty";
-			infect;
+			infect "Saber Kitty";
 		else:
 			LineBreak;
 			say "     You realize she might have some ulterior motive and push her away. She frowns and sighs. 'Alright, maybe next time, love,' she says before sauntering off, leaving a trail of her dripping juices on the ground.";
 	else:
 		say "     She smiles, realizing you are not male. Something about this just doesn't seem right. 'Don't worry, love. You're already on your way to becoming a sexy saber kitty slut like me. Have fun,' she says before sauntering off leaving a trail of her dripping juices on the ground.";
 	if bradfordBountyNum is 3:
-		LineBreak;
 		if bradfordbounty > 0:
 			decrease bradfordbounty by 1;
-			say "     You hear a soft [if bradfordbounty is 0]double-[end if]ding from your pack. Reminded of your deal with the bounty hunter, Bradford, you pull out the contract he's splitting with you. Looking at it, you can see that the printed value denoting the number remaining has gone down to [bold type][bradfordbounty][roman type]. You can't discern how this was accomplished; the paper and the printing on it seem entirely ordinary[if bradfordbounty is 0]. Seeing how that's completed it, you should be able to see him about getting your cut of the reward[end if].";
+			say "[line break]     You hear a soft [if bradfordbounty is 0]double-[end if]ding from your pack. Reminded of your deal with the bounty hunter Bradford, you pull out the contract he's splitting with you. Looking at it, you can see that the printed value denoting the number remaining has gone down to [bold type][bradfordbounty][roman type]. You can't discern how this was accomplished; the paper and the printing on it seem entirely ordinary[if bradfordbounty is 0]. Seeing how that's completed it, you should be able to see him about getting your cut of the reward[end if].";
 		else:
-			say "     This encounter reminds you of your deal with the bounty hunter, Bradford. You should go see him about getting your share of the reward.";
+			say "[line break]     This encounter reminds you of your deal with the bounty hunter Bradford. You should go see him about getting your share of the reward.";
 
-to say SaberKittyDesc:
-	say "     As you're walking you hear a faint dripping on the ground behind you. You rapidly spin around to see a sexy anthro saber-toothed tiger in front of you. It doesn't take long to find the source of the dripping sound as you look down to see her red, swollen pussy dripping copious amounts of fluids onto the ground. She is obviously in heat, and the smell hits you hard in seconds. Her body is beautiful and athletic, with abs and faint but powerful muscles. 'Don't worry, love. You'll learn to enjoy the heat and being knocked up,' she adds before pouncing.";
+Section 2 - Creature Insertion
 
 Table of CombatPrep (continued)
 name(text)	PrepFunction(text)
@@ -57,8 +54,6 @@ name(text)	PrepFunction(text)
 to say PrepCombat_Saber Kitty:
 	setmongender 4;
 	project the Figure of Saber_Kitty_icon;
-
-Section 2 - Creature Insertion
 
 Table of Random Critters (continued)
 NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
@@ -83,16 +78,16 @@ When Play begins:
 	now attack entry is "[one of]The sexy saber kitty pounces on you and bites into your shoulder, sinking her large fangs in. She eventually lets go, but it hurt a lot[or]She swipes at you with her claws, scratching you. Hopefully that won't leave a mark[or]She smirks and grinds her body against yours. At first nothing seems suspicious, but then she slashes your side with her claw, leaving a gash as she jumps away[at random]."; [ Successful attack message ]
 	now defeated entry is "[saber_loses]";
 	now victory entry is "[saber_wins]";
-	now desc entry is "[SaberKittyDesc]";
+	now desc entry is "     As you're walking you hear a faint dripping on the ground behind you. You rapidly spin around to see a sexy anthro saber-toothed tiger in front of you. It doesn't take long to find the source of the dripping sound as you look down to see her red, swollen pussy dripping copious amounts of fluids onto the ground. She is obviously in heat, and the smell hits you hard in seconds. Her body is beautiful and athletic, with abs and faint but powerful muscles. 'Don't worry, love. You'll learn to enjoy the heat and being knocked up,' she adds before pouncing.[line break]";
 	now face entry is "feline, that of a beautiful female Smilodon, with two sexy fangs showing at all times"; [ Face description, format as "Your face is [Face of Player]." ]
-	now body entry is "feminine, with curves to your body that are to die for and some sexy abs. Your arms have muscles that barely show, but show enough to show that you are indeed stronger than it would seem and end in clawed paws that still can grip things. Your legs have strong thighs for leaping and pouncing on your prey but are shapely and attractive as well as muscled and end in digitigrade feet";
-	now skin entry is "covered in a soft beige fur that turns white on the front of your torso and the inside of your ass cheeks over your";
-	now tail entry is "You have a short saber kitty tail that is covered in fur. It is adorable and seems to wag like a dog tail when you get too excited."; [ Tail description, write a whole Sentence or leave blank. ]
+	now body entry is "feminine, with curves that are to die for and some sexy abs. Your arms have muscles that barely show, but show enough to see that you are indeed stronger than it would seem and end in clawed paws that still can grip things. Your legs have strong thighs for leaping and pouncing on your prey but are shapely and attractive as well as muscled and end in digitigrade feet";
+	now skin entry is "[if looknow is true]a soft beige fur, turning white on the front of your torso and the inside of your ass cheeks, over your[else]soft, beige-furred[end if]";
+	now tail entry is "You have a short saber kitty tail that is covered in fur. It is adorable and seems to wag like a dog's tail when you get too excited."; [ Tail description, write a whole Sentence or leave blank. ]
 	now cock entry is "barbed and knotted saber"; [ Cock Description, format as you have a 'size' (your text) cock]
 	now face change entry is "you feel your ears tingle and move to the top of your head and arch up in a feline fashion. You watch in horror and fascination as your face pushes out into a cute feline muzzle. Your top canine teeth begin to ache as they grow and push their way out so they are always showing"; [ Face change text, format as "Your face feels funny as [face change entry]." ]
-	now body change entry is "your body aches pleasurably as all excess fat dissipates and it takes on an athletic and feminine appearance. Your legs creak as they become digitigrade. Your arms become sleek and yet slightly muscular ending in pawed hands that are fully usable and have claws"; [ Body change text, format as "Your body feels funny as [body change entry]." ]
+	now body change entry is "it aches pleasurably as all excess fat dissipates and it takes on an athletic and feminine appearance. Your legs creak as they become digitigrade. Your arms become sleek and yet slightly muscular, ending in pawed hands that are fully usable and have claws"; [ Body change text, format as "Your body feels funny as [body change entry]." ]
 	now skin change entry is "soft, short beige fur sprouts all over your body except on the front of your torso and the inside of your legs and butt where it is white"; [ Skin change text, format as "Your skin feels funny as [skin change entry]." ]
-	now ass change entry is "it pushes out into a shapely, feminine, yet muscular ass. You can't help but moan as a tail begins to push out. It is short and covered in fur, but adorable"; [ Ass/tail change text, format as "Your ass feels funny as [ass change entry]." ]
+	now ass change entry is "it pushes out into a shapely, feminine yet muscular ass. You can't help but moan as a tail begins to push out. It is short and covered in fur, but adorable"; [ Ass/tail change text, format as "Your ass feels funny as [ass change entry]." ]
 	now cock change entry is "you fall to your knees, humping the air. The end tapers and grows feline-like barbs. The base begins to form a large knot, like that of a canine. As the transformation ends the cock retreats into a newly formed sheath"; [ cock change text. format as "Your cock feels funny as (your text)." ]
 	now str entry is 10; [ These are now the creature's stats... ]
 	now dex entry is 15; [ ...and are only altered onto the player via Shifting or the Mighty Mutation feat ]
@@ -234,22 +229,23 @@ When Play begins:
 	[Clit Size Adjective is generated by a function and can be used in scenes: very small/small/average/large/very large]
 ]
 
+Section 3 - Drop Item
 
 Table of Game Objects (continued)
 name	desc	weight	object
 "smilodon cum"	"A small amount of Smilodon cum you've gathered. You just collect everything, don't you?"	1	smilodon cum
 
-instead of sniffing smilodon cum:
-	say "The cum has a strong, somewhat nutty scent.";
-
 smilodon cum is a grab object. smilodon cum is cum.
 smilodon cum is infectious. Strain of smilodon cum is "Saber Kitty".
 Usedesc of smilodon cum is "[smilodon cum use]".
+Scent of smilodon cum is "The cum has a strong, somewhat nutty scent.".
 
 to say smilodon cum use:
 	say "     Taking out the small bottle you keep your Smilodon cum in, you put it to your lips and chug down the creamy liquid. Tasty, and somehow you feel the need for more of it...";
+	PlayerDrink 5;
+	SanLoss 5;
 
-Section 3 - Endings
+Section 4 - Endings
 
 Table of GameEndings (continued)
 Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)

@@ -61,14 +61,7 @@ Version 6 of Mogdraz by Gherod begins here.
 [ 98 - Stopped Mogdraz at the end of 3rd Stroll, severing the bond irreversibly ]
 [ 99 - Failed Romance ]
 
-
-[***********************************************************]
-[***********************************************************]
-[***********************************************************]
 Section 1 - Mogdraz NPC
-[***********************************************************]
-[***********************************************************]
-[***********************************************************]
 
 Table of GameCharacterIDs (continued)
 object	name
@@ -111,7 +104,6 @@ TwistedCapacity of Mogdraz is true. [Twisted Characters can take any penetration
 Sterile of Mogdraz is true. [steriles can't knock people up]
 MainInfection of Mogdraz is "Hellfire Demon".
 Description of Mogdraz is "[Mogdrazdesc]".
-Conversation of Mogdraz is { "<This is nothing but a placeholder!>" }.
 The scent of Mogdraz is "     Mogdraz smells faintly of brimstone, but he has a rather attractive, masculine scent. Being near him makes you feel more [if Player is submissive]submissive, your knees weakening in his presence[else if player is dominant]dominant, empowered by his mighty presence[else if Player is kinky]kinky, your mind contemplating all the possibilities[else]prone to sexual debauchery[end if]".
 
 to say MogdrazDesc:
@@ -122,9 +114,7 @@ to say MogdrazDesc:
 	else if Perception of Player >= 15:
 		say "     [bold type]Perception Bonus (15)[roman type]: [italic type]You cannot quite put your finger on why, but it seems there is a greater power contained within him...[roman type][line break]";
 
-[***********************************************************]
 Section 3 - Mogdraz Talk Menu
-[***********************************************************]
 
 MogdrazDoneTalking is a truth state that varies.[@Tag:NotSaved]
 
@@ -142,7 +132,6 @@ instead of conversing Mogdraz:
 
 to say MogdrazTalkMenu:
 	say "     [bold type]What do you want to talk to Mogdraz about?[roman type][line break]";
-	LineBreak;
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]
@@ -180,31 +169,28 @@ to say MogdrazTalkMenu:
 			choose row calcnumber in table of fucking options;
 			say "[title entry]: [description entry]?";
 			if Player consents:
-				let nam be title entry;
 				now sextablerun is 1;
-				if (nam is "Jobs"):
-					say "[MogdrazTalkMenuJobs]";
-				else if (nam is "Chat"):
-					say "[MogdrazTalkMenuConversation]";
-				else if (nam is "Quests and People"):
-					say "[MogdrazTalkMenuQuests]";
-				else if (nam is "Romance"):
-					say "[MogdrazTalkMenuRomance]";
+				if title entry is:
+					-- "Jobs":
+						say "[MogdrazTalkMenuJobs]";
+					-- "Chat":
+						say "[MogdrazTalkMenuConversation]";
+					-- "Quests and People":
+						say "[MogdrazTalkMenuQuests]";
+					-- "Romance":
+						say "[MogdrazTalkMenuRomance]";
 		else if calcnumber is 0:
 			now sextablerun is 1;
 			say "     You give Mogdraz a polite bow as you take your leave, which he retributes.";
 			wait for any key;
 		else:
-			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options], or 0 to exit.";
 	clear the screen and hyperlink list;
 
-[***********************************************************]
 Section 3-1 - Mogdraz Talk Menu JOBS
-[***********************************************************]
 
 to say MogdrazTalkMenuJobs:
 	say "     [bold type]What jobs do you want to take?[roman type][line break]";
-	LineBreak;
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]
@@ -226,9 +212,8 @@ to say MogdrazTalkMenuJobs:
 			choose row calcnumber in table of fucking options;
 			say "[title entry]: [description entry]?";
 			if Player consents:
-				let nam be title entry;
 				now sextablerun is 1;
-				if (nam is "Escort Services"):
+				if title entry is "Escort Services":
 					say "[MogdrazTalkJobsEscort]";
 				wait for any key;
 				if MogdrazDoneTalking is false:
@@ -238,7 +223,7 @@ to say MogdrazTalkMenuJobs:
 			say "     You give Mogdraz a polite bow as you take your leave, which he retributes.";
 			wait for any key;
 		else:
-			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options], or 0 to exit.";
 	clear the screen and hyperlink list;
 
 to say MogdrazTalkJobsEscort:
@@ -257,13 +242,10 @@ to say MogdrazTalkJobsEscort:
 		WaitLineBreak;
 		say "[HellfireClubEscort]"; [Continues on Hellfire Club file]
 
-[***********************************************************]
 Section 3-2 - Mogdraz Talk Menu CONVERSATION
-[***********************************************************]
 
 to say MogdrazTalkMenuConversation:
 	say "     [bold type]What subject do you want to breach?[roman type][line break]";
-	LineBreak;
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]
@@ -307,18 +289,18 @@ to say MogdrazTalkMenuConversation:
 			choose row calcnumber in table of fucking options;
 			say "[title entry]: [description entry]?";
 			if Player consents:
-				let nam be title entry;
 				now sextablerun is 1;
-				if (nam is "Himself"):
-					say "[MogdrazTalkHimself]";
-				else if (nam is "His demon lackeys"):
-					say "[MogdrazTalkHisDemons]";
-				else if (nam is "Information on nanites"):
-					say "[MogdrazTalkNanites]";
-				else if (nam is "His business"):
-					say "[MogdrazTalkBusiness]";
-				else if (nam is "Sex"):
-					say "[MogdrazTalkSex]";
+				if title entry is:
+					-- "Himself":
+						say "[MogdrazTalkHimself]";
+					-- "His demon lackeys":
+						say "[MogdrazTalkHisDemons]";
+					-- "Information on nanites":
+						say "[MogdrazTalkNanites]";
+					-- "His business":
+						say "[MogdrazTalkBusiness]";
+					-- "Sex":
+						say "[MogdrazTalkSex]";
 				wait for any key;
 				if MogdrazDoneTalking is false:
 					say "[MogdrazTalkMenu]"; [looping back to keep talking with him]
@@ -327,7 +309,7 @@ to say MogdrazTalkMenuConversation:
 			say "     You give Mogdraz a polite bow as you make your leave, which he retributes.";
 			wait for any key;
 		else:
-			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options], or 0 to exit.";
 	clear the screen and hyperlink list;
 
 to say MogdrazTalkHimself:
@@ -359,13 +341,10 @@ to say MogdrazTalkSex:
 		if Libido of Mogdraz is 0:
 			now Libido of Mogdraz is 1; [player showed interest in pursuing sex with Mogdraz]
 
-[***********************************************************]
 Section 3-3 - Mogdraz Talk Menu QUESTS AND PEOPLE
-[***********************************************************]
 
 to say MogdrazTalkMenuQuests:
 	say "     [bold type]What matter do you wish to discuss?[roman type][line break]";
-	LineBreak;
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]
@@ -384,7 +363,7 @@ to say MogdrazTalkMenuQuests:
 	if HP of Araqiel is 3 and Resolution of Ambush The Purifier is 5:
 		choose a blank row in table of fucking options;
 		now title entry is "Ask about the Purifier";
-		now sortorder entry is 99;
+		now sortorder entry is 98;
 		now description entry is "Try to know more about their most recent capture";
 	[]
 	if Resolution of YokLairMogdraz is 1:
@@ -406,16 +385,16 @@ to say MogdrazTalkMenuQuests:
 			choose row calcnumber in table of fucking options;
 			say "[title entry]: [description entry]?";
 			if Player consents:
-				let nam be title entry;
 				now sextablerun is 1;
-				if (nam is "His situation with Xaedihr"):
-					say "[MogdrazTalkXaedihr]";
-				else if (nam is "His story with Araqiel"):
-					say "[MogdrazTalkAraqiel]";
-				else if (nam is "Ask about the Purifier"):
-					say "[MogdrazTalkPurifier]"; [in Araqiel file]
-				else if (nam is "Ask for his help in finding the onis"):
-					say "[MogdrazTalkYokLair]"; [in Hayato file]
+				if title entry is:
+					-- "His situation with Xaedihr":
+						say "[MogdrazTalkXaedihr]";
+					-- "His story with Araqiel":
+						say "[MogdrazTalkAraqiel]";
+					-- "Ask about the Purifier":
+						say "[MogdrazTalkPurifier]"; [in Araqiel file]
+					-- "Ask for his help in finding the onis":
+						say "[MogdrazTalkYokLair]"; [in Hayato file]
 				wait for any key;
 				if MogdrazDoneTalking is false:
 					say "[MogdrazTalkMenu]"; [looping back to keep talking with him]
@@ -424,7 +403,7 @@ to say MogdrazTalkMenuQuests:
 			say "     You give Mogdraz a polite bow as you make your leave, which he retributes.";
 			wait for any key;
 		else:
-			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options], or 0 to exit.";
 	clear the screen and hyperlink list;
 
 to say MogdrazTalkXaedihr:
@@ -436,17 +415,14 @@ to say MogdrazTalkAraqiel:
 	say "     You can't push away the idea that Mogdraz is actually assigning you as the angel's babysitter, instead...";
 	WaitLineBreak;
 	if purifier seraphim is not tamed:
-		say "     (Araqiel the Purifier Seraphim is now a possible ally! You can make him your active ally by typing [bold type][link]ally Araqiel[end link][roman type] or [bold type][link]ally seraphim purifier[end link][roman type] and initiate sex with him while active by typing [bold type][link]fuck Araqiel[end link][roman type]. You can see all the allies you have with the [bold type][link]allies[end link][roman type] command. Allies will lower the XP you gain from battle, but can gain levels themselves to be more useful in a scrap. Want to get rid of an ally? Use [bold type][link]ally dismiss[end link][roman type], or just [bold type][link]dismiss[end link][roman type])[line break]";
+		say "     (Araqiel the Purifier Seraphim is now a possible ally! You can make him your active ally by typing [link][bold type]ally Araqiel[roman type][end link] or [link][bold type]ally seraphim purifier[roman type][end link] and initiate sex with him while active by typing [link][bold type]fuck Araqiel[roman type][end link]. You can see all the allies you have with the [link][bold type]allies[roman type][end link] command. Allies will lower the XP you gain from battle, but can gain levels themselves to be more useful in a scrap. Want to get rid of an ally? Use [link][bold type]ally dismiss[roman type][end link], or just [link][bold type]dismiss[roman type][end link].)";
 		add "Tamed" to Traits of purifier seraphim;
 		now purifier seraphim is tamed;
 
-[***********************************************************]
 Section 3-4 - Mogdraz Talk Menu ROMANCE
-[***********************************************************]
 
 to say MogdrazTalkMenuRomance:
 	say "     [bold type]So you wish to attempt to date Mogdraz? Or just talk about a more steamy subject?[roman type][line break]";
-	LineBreak;
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]
@@ -479,14 +455,14 @@ to say MogdrazTalkMenuRomance:
 			choose row calcnumber in table of fucking options;
 			say "[title entry]: [description entry]?";
 			if Player consents:
-				let nam be title entry;
 				now sextablerun is 1;
-				if (nam is "His sexual interests"):
-					say "[MogdrazTalkSexualInterests]";
-				else if (nam is "His opinion on you"):
-					say "[MogdrazTalkOpinion]";
-				else if (nam is "Go for a stroll"):
-					say "[MogdrazTalkStroll]";
+				if title entry is:
+					-- "His sexual interests":
+						say "[MogdrazTalkSexualInterests]";
+					-- "His opinion on you":
+						say "[MogdrazTalkOpinion]";
+					-- "Go for a stroll":
+						say "[MogdrazTalkStroll]";
 				wait for any key;
 				if MogdrazDoneTalking is false:
 					say "[MogdrazTalkMenu]"; [looping back to keep talking with him]
@@ -495,7 +471,7 @@ to say MogdrazTalkMenuRomance:
 			say "     You give Mogdraz a polite bow as you make your leave, which he retributes.";
 			wait for any key;
 		else:
-			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options], or 0 to exit.";
 	clear the screen and hyperlink list;
 
 [ - - - NECESSARY EVENTS AND VARIABLES - - - ]
@@ -516,11 +492,11 @@ MogdrazStrollTwins is a situation.
 ResolveFunction of MogdrazStrollTwins is "".
 Sarea of MogdrazStrollTwins is "Nowhere".
 
-MogdrazStrollCooldown is a number that varies. MogdrazStrollCooldown is usually 20000. [@Tag:NotSaved]
+MogdrazStrollCooldown is a number that varies. MogdrazStrollCooldown is usually 20000.[@Tag:NotSaved]
 
 [ - - - - - - - - - - - - - - - - - - - - - - ]
 
-instead of going inside from Hellfire Club while (Lust of Mogdraz >= 10 and Libido of Mogdraz > 0 and Resolution of MogdrazRomance is 0):
+instead of going inside from Hellfire Club while Lust of Mogdraz >= 10 and Libido of Mogdraz > 0 and Resolution of MogdrazRomance is 0:
 	say "     As you arrive at the club and greet the twin hellfire demons by the door, one of them, Arad specifically, beckons you to wait and come closer. 'Hey [if Player is male]handsome[else]cute stuff[end if]. The [bold type]boss[roman type] told us to let you know he'd like to see you. Just head over the [bold type]VIP floor[roman type] and talk to him whenever you get the chance. Best not keep him waiting!' he says, and you nod as you proceed further inside.";
 	say "     Seems like [bold type]Mogdraz wants to speak to you[roman type], for reasons unknown.";
 	now Resolution of MogdrazRomance is 1; [just to keep the message from repeating itself]
@@ -541,60 +517,49 @@ to say MogdrazRomanceMeeting:
 	say "     [link](4)[as]4[end link] - Your reason is nothing in specific, at all. You're just passing time.";
 	now calcnumber is 0;
 	while calcnumber < 1 or calcnumber > 4:
-		say "Choice? (1-4)>[run paragraph on]";
+		say "Choice? (1-4)> [run paragraph on]";
 		get a number;
-		if calcnumber is 1 or calcnumber is 2 or calcnumber is 3 or calcnumber is 4:
-			break;
-		else:
+		if calcnumber < 1 or calcnumber > 4:
 			say "Invalid choice. Type [link]1[end link] to say you simply enjoy spending time in the club, [link]2[end link] to tell Mogdraz it's because you're interested in someone, [link]3[end link] to say it's just to exchange favors or [link]4[end link] to deny any specific reason for your actions.";
+	LineBreak;
 	if calcnumber is 1:
-		LineBreak;
 		say "     After thinking about your answer, you let Mogdraz know that it is all simply because his business is well executed, and you find yourself enjoying your time spent in here. You tell him about all the friendships you've made and how much fun you can have in a single night. You have a feeling the Demon Lord takes joy in hearing your words. 'I am delighted to hear that. Indeed, this is all thanks to my hard work and eye for loyalty, modesty aside. My employees happen to be quite good at what I assigned them to do. Though, obviously, I shall not underestimate their dedication. The club wouldn't work without them.' he continues, feeling up his dark beard as he speaks.";
 		now Resolution of MogdrazRomance is 2; [he seems pleased enough]
 	else if calcnumber is 2:
-		LineBreak;
 		say "     After thinking about your answer, you let Mogdraz know that there is someone in the club who has captured your interest, and you found yourself coming back to see and talk to them. While you do not specify who this person is, exactly, the Demon Lord does not attempt to pry. In fact, you get a feeling that he knows who they are, and the look in his face suggests that he is simply confirming his suspicions, though he never admits to it, verbally. 'Well, then I assume your encounters have been satisfying? You do keep coming back for them, so that means you have some... hope. Or perhaps you are simply driven by a promise of a well-spent time in which your desire flares irresistibly. I have to admit, mortals like you are... fascinating.'";
 		say "     Mogdraz speaks as he feels up his dark beard, looking at you with his fiery orange eyes capable of piercing through your delicate soul. You think this is the first time he stared at you in such a way, and you cannot help but feel slightly bothered. It is as if you could feel him, from a distance, reaching over and leaving you helpless to his mercy, a very odd sensation you cannot quite understand. Your body does things you could not foresee, a chill running down your spine as your cheeks blush, cold sweat running down your forehead as you suddenly feel like you are in the middle of a hot summer day, all just because of that look he gave you, seemingly reading you over like an open book.";
-		WaitLineBreak;
-		say "     [bold type]Is the Demon Lord Mogdraz the one person you are most interested in?[roman type][line break]";
+		say "[line break]     [bold type]Is the Demon Lord Mogdraz the one person you are most interested in?[roman type][line break]";
 		say "     [link](1)[as]1[end link] - Yes! Completely!";
 		say "     [link](2)[as]2[end link] - Maybe... Just a little? A tiny... little bit? So, the answer is, kind of, yes...?";
 		say "     [link](3)[as]3[end link] - Preposterous! Never that big, strong, powerful, insufferably attractive... wait, what was the question, again?";
 		say "     [link](4)[as]4[end link] - No. It is someone else, entirely.";
 		now calcnumber is 0;
 		while calcnumber < 1 or calcnumber > 4:
-			say "Choice? (1-4)>[run paragraph on]";
+			say "Choice? (1-4)> [run paragraph on]";
 			get a number;
-			if calcnumber is 1 or calcnumber is 2 or calcnumber is 3 or calcnumber is 4:
-				break;
-			else:
+			if calcnumber < 1 or calcnumber > 4:
 				say "Invalid choice. Type [link]1[end link] to say yes, [link]2[end link] to say kinda yes, [link]3[end link] to lie to yourself or [link]4[end link] if your answer is negative.";
+		LineBreak;
 		if calcnumber is 1:
-			LineBreak;
 			say "     You've had your eye on the Demon Lord since the first time you saw him. You desire him in more ways than just one, which you do not even fully realize. Your heart races as it beats at a faster rate, threatening to jump out of your chest, none of your actions or movements seeming like your own, for a second. After this brief but extremely odd moment, Mogdraz only gives you a quite confident grin and a chuckle. 'Hm, in fact, I've had my eye on someone, too, as of recently. I suppose you can imagine who.' he boldly says, and given your feelings for him, this gives you a good amount of joy.";
 			now Resolution of MogdrazRomance is 3; [he very much likes this]
 		else if calcnumber is 2:
-			LineBreak;
 			say "     You have a hard time fully admitting to your feelings, but you've had your eye on the Demon Lord for a while. This helpless sensation you feel is a desire for him that you cannot control, in more ways than one, which you do not even fully realize. Your heart races as it beats at a faster rate, threatening to jump out of your chest, none of your actions or movements seeming like your own, for a second. After this brief but extremely odd moment, Mogdraz only gives you a quite confident grin and a chuckle. 'Hm, in fact, I've had my eye on someone, too, as of recently. I suppose you can imagine who.' he boldly says, and given the wat you see him, this gives you a slight amount of joy.";
 			now Resolution of MogdrazRomance is 3; [he very much likes this]
 		else if calcnumber is 3:
-			LineBreak;
 			say "     You have lost yourself in thought. During this moment, you only think of all sorts of fantasies you would like to bring to reality with the Demon Lord, ones that are so wicked you even begin to question your own sanity, at this point. Your heart races and your arousal rises, and before you know it, Mogdraz is throwing a laughter that leaves you absolutely terrified. You don't even know why you feel that way. 'I apologize, I often forget that my gaze frequently puts others at such an unease, even if for mere seconds.' The way he sounds so amused does not help your comfort, at all, but then, he continues speaking. 'Though those... were quite delightful thoughts. If you must know... I've done even worse.'";
 			say "     Your reaction is to blink a couple of times, then a couple more. What the [italic type]HELL[roman type] just happened, here?!";
 			now Resolution of MogdrazRomance is 3; [he very much likes this]
 		else if calcnumber is 4:
-			LineBreak;
 			say "     Perhaps there was a misunderstanding, here... You really are not interested in Mogdraz, it is someone else from the club. Though, at that second, he just nods and smiles. 'I do wish you and this person get along well. You have my... how do you say it in mortal language... blessing? Though I'm not the kind to give any sort of blessings, that's probably more of an angelic thing. Seal of approval it is, then!' It is good to know that the Demon Lord supports your involvement with his employees and patrons, apparently, though you cannot shake away that feeling you might have missed something, here...";
 			if Loyalty of Mogdraz < 1:
 				now Loyalty of Mogdraz is 1;
 			now Resolution of MogdrazRomance is 99; [this makes him lose interest]
 			now Libido of Mogdraz is 99;
 	else if calcnumber is 3:
-		LineBreak;
 		say "     After thinking about your answer, you let Mogdraz know that, since the club has done a lot for you, you thought you could do something for it, as well. You were just repaying the favors by doing something for the club in exchange for all the benefits it gives you. While this does not seem to cause any sort of reaction on the Demon Lord, you have a feeling he is [']okay['] with your explanation. 'I suppose that's reasonable. I wouldn't expect less from a stranger I hand-picked myself. Any less than that would be, indeed, a disappointment. Though, perhaps you haven't been around for as long as you needed to really enjoy this environment? Because, of course, while repaying favors is nice and all, one has to learn when to take a rest and let things happen.'";
 		now Resolution of MogdrazRomance is 2; [he seems pleased enough]
 	else if calcnumber is 4:
-		LineBreak;
 		say "     After thinking about your answer, you let Mogdraz know that, in fact, it is not for any reason, in specific. You are simply passing your time, and the club happens to help with that. You do not think the Demon Lord is satisfied with this explanation, but he does not insist, either. 'Very well, then. I suppose some of us have different ways to live our different lives. Being driven for no reason at all is a valid reason in itself, though quite uninteresting, I have to confess.'";
 		now Resolution of MogdrazRomance is 99; [this makes him lose interest]
 		now Libido of Mogdraz is 99;
@@ -700,7 +665,6 @@ to say MogdrazRomanceStroll:
 
 to say MogdrazRomanceStroll1:
 	say "     Within this area of Red Light District you find nothing and nobody along your path, leaving you to be able to talk in plain peace. 'Looks like the twins actually did a good job. How surprising is that...' During your time with the Demon Lord, he seems more relaxed than usual, and you definitely feel that energy about him. 'Thanks for this.' It's good to be out here and not have to think about anything, for a while. I rarely ever get a distraction.' Days are usually more calm around here, as well, though things change quickly as you make it closer to the center. 'So... [bold type]How has the Red Light District been treating you[roman type]? Hopefully not as bad as it treats most unaware visitors?'";
-	LineBreak;
 	say "     ([link]Y[as]y[end link]) - You manage to defend yourself alright from all the threats.";
 	say "     ([link]N[as]n[end link]) - You keep getting into trouble with the locals.";
 	if Player consents:
@@ -713,7 +677,6 @@ to say MogdrazRomanceStroll1:
 	WaitLineBreak;
 	say "     And just as if to help support his claims, you take a glimpse at a scene happening in front of you, an incubus having what seems to be an orgy with a group of gel creatures, right out there in the middle of a road. There is at least one of each color, the blue gel being clearly male in appearance, a purple one who seems to be a herm with a feminine appearance, and a pink one who is completely female. This handsome devil seems to be fucking the pink gel while getting double penetrated by the blue and purple, one lying down under him while the blue is on top, both their slime cocks shoved deep inside the incubus['] asshole. As both Mogdraz's eyes and yours spot this, the demon in action becomes aware of your presence and merely gives you both a wink, in an invitation to join them.";
 	say "     'And then, there's this... Those who just want to have as much sex as they can. Odd hobby, if I must comment. Not a fan of such light practices, I prefer something more substantial.'";
-	LineBreak;
 	say "     ([link]Y[as]y[end link]) - You think it would be fun to join them.";
 	say "     ([link]N[as]n[end link]) - Nah, you agree with Mogdraz. It wouldn't be fun at all.";
 	if Player consents:
@@ -722,8 +685,8 @@ to say MogdrazRomanceStroll1:
 	else:
 		LineBreak;
 		say "     It's a big crowd, maybe, or you are simply not in the mood to even consider it, so you simply nod to what the Demon Lord said. 'Well, you don't need to agree with me. It's not like I wouldn't find it [italic type]any[roman type] fun, but I'm in rather good company, right now. I'd prefer to enjoy that to the fullest, rather than spend the next hour screwing around with wild creatures and an incubus I probably shouldn't even dare to touch. We all know where those come from...'";
-	WaitLineBreak;
 	follow the turnpass rule;
+	WaitLineBreak;
 	say "     Once you are done with your stay by this slightly more populated area, you take a turn in order to get back to the northern area of the district, as you pass by an alleyway towards the Crimson Street. 'Hm... Red Light District really isn't too exciting...' Mogdraz says as you start to enter this isolated area. You think this is the first time you have been completely and truly alone with the red devil, and such a thought makes you feel quite uneasy, for some reason. Such things happen in ways you cannot predict nor act upon, which are, by themselves, very odd in nature, making you question if you truly know yourself as well as you think. This is not like going to his office, nor like being in a room division with him. You are outside, with nobody around to hear you, even.";
 	say "     'Is something the matter?' he asks, you both having stopped for a while as he sensed your distress. In fact, you do not even know why you are distressed, but you have cold sweat running down your forehead. 'Oh... I understand. We should call it a day, then.' That's it, that's all he says, leaving you lingering in thoughts and questions without any answers. You have never felt an aura nor presence like this, it is such a powerful feeling that comes out as raw as it could, and it disturbs you all the way back to the Club, where it begins to subside. In any way he tries to explain what happened to you, just now... But you know better than to just ask him, as he is clearly avoiding the subject.";
 	WaitLineBreak;
@@ -732,7 +695,6 @@ to say MogdrazRomanceStroll1:
 	say "     For the next few moments, you are left to enjoy your drink. However, that was definitely not the ending you were expecting from your first day out with Mogdraz...";
 	WaitLineBreak;
 	say "     Should you ask Toron about it? He is right on the other side of the counter, cleaning glasses and polishing bottles.";
-	LineBreak;
 	say "     ([link]Y[as]y[end link]) - You trust him, ask the question you want to ask.";
 	say "     ([link]N[as]n[end link]) - No, it should be Mogdraz telling you.";
 	if Player consents:
@@ -749,34 +711,28 @@ to say MogdrazRomanceStroll2:
 	say "     'This is something that you should know.' he begins to speak, as you keep on walking. 'We, the Hellfires, are not only made after might, but also possess strong mental abilities, and we are more tricksters than fighters, as you could have already observed. The ones that are especially high in the hierarchy, such as me, at the very top... Have this sort of aura, which... directly influences the minds of those around us. It can go as far as... allowing for total mind control.' He makes a pause to let you process all of this, before continuing. 'And it so happens that, sometimes, this aura also reflects our own emotions at the time... towards those whom we have a stronger connection with.'";
 	WaitLineBreak;
 	say "     This means that when you felt at such unease when you were passing through that alley, he either made you feel that way on purpose, or... he was the one feeling like that. 'It is... embarrassing to admit, but... you might have experienced involuntary empathy, and I apologize for that.' So, it was the latter, as he finally gives you the answer you sought. 'Usually, I keep it under control, but... I may have dropped my guard, there, and once it triggers, it's quite hard to stop. I understand if this changes your perspective on things, as they are now.' You definitely have had a taste of what Mogdraz can do with a mere look, read personalities and thoughts like he did when you first met, but there was never any sign of direct influence in your mind...";
-	LineBreak;
-	say "     [bold type]How do you feel regarding Mogdraz's ability to influence emotions and actions of others? Does it change anything for you?[roman type][line break]";
+	say "[line break]     [bold type]How do you feel regarding Mogdraz's ability to influence emotions and actions of others? Does it change anything for you?[roman type][line break]";
 	say "     [link](1)[as]1[end link] - You happen to think that it is a pretty awesome ability, and it makes you even more interested in him!";
 	say "     [link](2)[as]2[end link] - You accept him the way he is, without any strings attached, and trust him enough to not use this ability in any abusive way.";
 	say "     [link](3)[as]3[end link] - You are unsure. Time will tell if this will be an obstacle or not, depending on how things go.";
 	say "     [link](4)[as]4[end link] - This is a deal breaker to you. He could mind control you and influence your thoughts, opinions and other things if he so pleased, and that is just too much for you.";
 	now calcnumber is 0;
 	while calcnumber < 1 or calcnumber > 4:
-		say "Choice? (1-4)>[run paragraph on]";
+		say "Choice? (1-4)> [run paragraph on]";
 		get a number;
-		if calcnumber is 1 or calcnumber is 2 or calcnumber is 3 or calcnumber is 4:
-			break;
-		else:
+		if calcnumber < 1 or calcnumber > 4:
 			say "Invalid choice. Type [link]1[end link] if you think his ability is amazing, [link]2[end link] to state that you will accept him the way he is, [link]3[end link] to express uncertainty towards this or [link]4[end link] if you think this is enough for you to stop seeing him like this.";
+	LineBreak;
 	if calcnumber is 1:
-		LineBreak;
 		say "     You do not think Mogdraz was expecting you to actually be excited about this, with the way you complimented his skills leaving him flabbergasted. 'I... Uh... appreciate the sentiment. I was thinking this would scare you away or something of similar magnitude. Though I'm... not entirely sure if that is the most appropriate way to treat this matter... I'd still like to ask you to be considerate about anything strange you might feel due to my presence.' Right, he has a point, and you acknowledge it, but other than that, the mood seems to have lighten up. The Demon Lord definitely feels more at ease having talked to you about it.";
 		MogdrazRomanceStroll2Continued;
 	else if calcnumber is 2:
-		LineBreak;
 		say "     Seeing someone requires you to treat them the way they are without any sort of prejudice, and this is what you let the Demon Lord know. It does not matter to you that he has such a powerful ability, it only matters the way he uses it. As you look in his eyes, you definitely feel that this is the answer he wanted to hear, and your reward is a genuine smile (no, not any of those demonic grins, this time). 'Thank you, that was... Very considerate of you.' Neither of you have noticed, but Mogdraz's tail betrays his usual strict composure and comes rub against your legs with quite an apparent affection. His eyes widen as he realizes what he is doing, and pulls it back immediately. 'That... didn't happen,' he quickly says, and continues speaking, after such a quick recovery.";
 		MogdrazRomanceStroll2Continued;
 	else if calcnumber is 3:
-		LineBreak;
 		say "     Quite frankly, this is a big revelation, and you have no idea how to process this. Though, you do not want to say [']no['] right away, and perhaps it would be reasonable to give it some time and see where things go from now on. Mogdraz seems to think this is a quite wise approach, and commends you for it. 'I would not expect any less from you. Indeed, that is what I'd do in your position, and it's a quite reasonable one. I shall make sure that this... condition of mine is not a threat to your integrity in any shape or form. And thank you for being so honest.' In any case, this seems to have lighten up the mood between you and the Demon Lord, and you are glad to have spoken your mind.";
 		MogdrazRomanceStroll2Continued;
 	else if calcnumber is 4:
-		LineBreak;
 		say "     All of this is just a big [italic type]nope[roman type] for you. There is no way you would date someone with such a power, and you feel quite threatened by its presence. You simply inform Mogdraz that you cannot continue with this, as it does not leave you comfortable. He is about to say something, but as you continue to explain your motives, he holds it back and waits for you to finish. Only when you do, he speaks. 'I understand. Business only, then, as usual. Do you... wish to return to the Club with me or should I leave you alone, for the time being?'";
 		say "     The way this went was shockingly harsh, and you cannot help but wonder if you have actually hurt Mogdraz, in any way. Though, you do not feel nor sense anything from him, and his expression is as neutral as ever. You take some time to give him an answer, and that causes him to change his mind, in the meantime. 'Indeed, it seems best that I return on my own. We haven't gone far, anyway, so... See you.'";
 		WaitLineBreak;
@@ -794,16 +750,14 @@ to MogdrazRomanceStroll2Continued:
 	WaitLineBreak;
 	say "     However, before you can consider even answering his question, a black mist appears behind Mogdraz, with a shape slowly being formed into a familiar silhouette just about... now. 'Sir, I'm afraid I've got an urgent matter in hands that requires your immediate attention.' says Toron, the bartender, who just materialized next to the both of you. Apparently he can do that... 'Ugh, Toron... Really? Now?' replies the Demon Lord, in quite a lot of annoyance. 'It cannot wait,' is Toron's response as he hands Mogdraz a small letter, then takes his leave. The red devil turns his attention to what is written in there, reading it carefully. 'Hm... Well, there is good and bad news.' You look at him, waiting for him to continue.";
 	say "     'The good news is, we can still go for a walk. The bad news is... It's going to be a boring one. I've got to head over to the Dry Plains and meet a contact of mine who demands my presence, as apparently they don't trust even the likes of my bartender... If this wasn't of any importance at all, I'd tell them to shove it, but unfortunately this is something I have to take care of. I suppose you could accompany me, if you would like? No hard feelings if you don't.' Mogdraz puts down the letter into one of his back pockets and awaits your response.";
-	LineBreak;
+	WaitLineBreak;
 	say "     [bold type]Would you like to accompany Mogdraz to the Dry Plains[roman type]? This will take several hours of your time.";
 	say "     If you do not wish to, you can always reschedule your stroll to do something else with the Demon Lord the next day, but you will miss this event.";
-	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Yes, accompany him to the Dry Plains.";
 	say "     ([link]N[as]n[end link]) - You shall pass this one.";
 	if Player consents:
 		LineBreak;
 		say "     Following a period of consideration, you eventually accept his invitation and let him know that you shall accompany him. 'I'm glad to have you as a traveling partner. This may take a while, so I hope you had nothing else to take care of for the remainder of the day. Oh, and... I apologize if this looks... strange.' he says, and you do not know what he means with his last words, but you are soon to find out. First thing you see is his whole crimson demonic form being set ablaze, with an intense warmth coming from it, until it dissipates, revealing the Demon Lord as... appearing human. It looks just like his usual self, but without the horns and the red skin, nor the claws and pointy ears, just pink fleshed human. 'There. It is my human form. Convincing enough? Hm, actually, I suppose I could think of a furred one, too, given the amount of those roaming every place. Or a scaly one, perhaps? Don't you think I would make a great anthro shark?'";
-		LineBreak;
 		say "     ([link]Y[as]y[end link]) - He would make a really sexy anthro shark.";
 		say "     ([link]N[as]n[end link]) - Maybe he should reconsider that.";
 		if Player consents:
@@ -816,7 +770,6 @@ to MogdrazRomanceStroll2Continued:
 		WaitLineBreak;
 		say "     During your travel, you cannot help but notice how different Mogdraz is when not assuming his demon boss status. He is actually pretty laid back, tells great jokes and is quite playful, goofy at times, even. It is quite a contrast from the respectable Demon Lord he is supposed to be, and it proves to be such an entertaining time that you completely forget about how much longer you have to walk.";
 		say "     'So, when little young me found out about this shapeshifting ability, I just started to imagine what things I could do with it! I had this plan of assuming my mentor's shape, once, and trick all his pupils at my class into stripping naked. Oh, I know, childish play, we were still young devils at the time, but would you be surprised to know that actually worked? They were eager, and an orgy began right at the classroom! All of them were quite attractive hunks and gals, with barely enough time to enjoy each other... And of course, our mentor was furious and I was given a severe punishment for impersonating him. Had to clean the whole academy by my own everyday, it was tragic! Though I later knew that he was actually pretty impressed I could do something like that at such a young age. He was the first person to ever tell me I would become a Demon Lord of exceptional skill.' he tells you all this while a little too proud of himself.";
-		LineBreak;
 		say "     ([link]Y[as]y[end link]) - That sounded hot. Kind of makes you wish you were there.";
 		say "     ([link]N[as]n[end link]) - Really? Baiting his classmates into an orgy by superior order? You think that's shameful.";
 		if Player consents:
@@ -851,6 +804,7 @@ to MogdrazRomanceStroll2Continued:
 		say "     At some point, he is quite done teasing you, or at least you think so. 'Anyway, I would hate to hang out with a pristine virgin with a clear lack of libido, so you are doing pretty well, yourself. No shame in being how you are. I may actually secretly enjoy it, but you don't know that. So, pretend you don't.' he says, chuckling in the end as you focus on the paths ahead.";
 		say "     It takes you a while until you make it there...";
 		follow the turnpass rule;
+		WaitLineBreak;
 		say "     To the Dry Plains, finally ahead of you!";
 		say "     This vast area of nothing but tall grass and nearly nothing else offers close to no cover, but fortunately for you, your partner happens to be a Demon Lord with a natural troublemaker repellant. 'Very well... So, my contact is, in fact... the discoverer of a quite peculiar fruit, or so it appears. Don't you happen to know anything about it, or heard of any story?' He might be on to something, but you ask him to explain a bit more. 'This is a sort of an apple that causes mutation, especially effective on males. Hm, that reminds me... If it were to be consumed by one of the local centaurs, I imagine the consequences would have been quite... interesting. Hopefully that didn't happen.'";
 		WaitLineBreak;
@@ -865,7 +819,6 @@ to MogdrazRomanceStroll2Continued:
 		say "     With explanations out of the way, Mogdraz reveals what he truly wants from all this. 'I wish to procure an actual seed so I can grow these trees myself. They could have several uses, but unfortunately, what little information we have on them is not enough to seek this route. This is why my contact appears to demand secrecy, because they think they are in possession of a method to grow these trees without tainting any living creature. If that fell in the wrong hands, you can imagine the dimension this blight would gain.' But why wouldn't Mogdraz simply order a consistent harvest from the Dry Plains, you ask. 'I would rather not have to send a convoy of imps every now and then to gather these fruits and go through all those risks, no. Besides, that would draw a lot of attention! I prefer to grow them, myself.'";
 		WaitLineBreak;
 		say "     So, eventually, you go meet this contact with the Demon Lord, and you both wait at the assigned location. Mogdraz brings out an intense fireball from within the palms of his hands and releases it into the sky, providing the same effects as a flare. 'Who needs those red guns. These have the advantage of being magical, meaning you choose who sees them. Handy, isn't it?' he comments, bragging proudly about his special abilities. Good thing he can actually choose who is able to see those, or he would have alerted literally everyone in the vicinity of your presence, by now, including undesirable inhabitants. 'Aff... This is really not what I had in mind for our day. It hasn't been all that fun, has it?'";
-		LineBreak;
 		say "     ([link]Y[as]y[end link]) - You have enjoyed yourself, actually.";
 		say "     ([link]N[as]n[end link]) - Not the most fun you had, to be honest.";
 		if Player consents:
@@ -886,16 +839,17 @@ to MogdrazRomanceStroll2Continued:
 		say "     Could he not just use a portal to get you back to the Club the same way? He quickly answers that. 'No. Sadly, I'm not in the possession of a Crimson Ruby. That would make travels a lot easier, indeed.'";
 		if Resolution of Hellish Introduction >= 2:
 			say "     [italic type]'Though I suppose you could borrow it from your sorcerer friend, no? Do you think he would mind?' he asks with an obvious ironic tone, followed by a chuckle.[roman type][line break]";
-		WaitLineBreak;
 		follow the turnpass rule;
+		WaitLineBreak;
 		say "     Your stroll comes to an end once you follow through all your way back to the Club. On the way, you both talk about a variety of subjects, and you also learn that he is quite an intellectual individual, one who takes interest in many scientific matters and progresses made by humans during their research efforts. He also showed a fascination for space, and wonders if he could find a way to travel to other planets with the use of magic and dimensional travel alone, though it would seem quite unlikely due to how much energy it would be necessary to travel lightyears of distance with a reasonable time window. It does not seem like his world had a lot of people seeking scientific knowledge, however, which may explain why he took such an interest for yours.";
-		say "     'Home, at last. Now I'll have to converse with Toron about our recent acquisition. Come see me tomorrow, perhaps? And, of course... Be discrete about this matter. It is a secret both you and I share, and it must not leave our mouths in any way. Do you understand?' You nod, and promise him to keep quiet. 'Very well. See you, then, and thank you for accompanying me.'";
+		say "     'Home, at last. Now I'll have to converse with Toron about our recent acquisition. Come see me tomorrow, perhaps? And, of course... Be discreet about this matter. It is a secret both you and I share, and it must not leave our mouths in any way. Do you understand?' You nod, and promise him to keep quiet. 'Very well. See you, then, and thank you for accompanying me.'";
 		WaitLineBreak;
 		say "     Mogdraz heads over to Toron and both seem to go to a more private section of the Club, afterwards, and they do not take long. You are now free to do whatever you want, as you have officially returned from your stroll with the Demon Lord.";
 		now Resolution of MogdrazRomance is 7;
 	else:
 		LineBreak;
 		say "     You let him know that you would prefer to let him take care of his business affairs and reschedule your stroll. He understands your decision. 'Very well, then. My apologies for this small disturbance to our potentially fun time. We shall see each other again later, I hope.' Following up with a polite bow, he resumes walking his way out on his own after you say your goodbyes.'";
+		WaitLineBreak;
 		move player to Crimson Street;
 		now Mogdraz is nowhere;
 		now Resolution of MogdrazRomance is 5; [didn't go with him to the Dry Plains]
@@ -914,7 +868,6 @@ to say MogdrazRomanceStroll3:
 	HungerReset;
 	PlayerDrink 12;
 	say "     Though, you have to ask... Why do they keep human food around if they are demons? Can they actually eat it? The red devil is happy to answer. 'We amass several supplies to use for trading purposes, and of course for our patrons. It's not like we can't consume any of these, there's just not much of a point in doing so, most of the times. Demons feed from life force, after all.' Right, he manages a business in which many of his clients are, or were previously, humans. 'However, who doesn't just drink a glass of some good beverage for its taste alone? We do the same thing and process whatever we consume the same way you mortals do, apart from some natural differences, I'd assume. Does that sate your curiosity on demon physiology, or do you require a visual demonstration?'";
-	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Why not? Some would think that's kinky.";
 	say "     ([link]N[as]n[end link]) - A visual demonstration on how demons piss and poop? Whatever that is, you think it's probably nasty.";
 	if Player consents:
@@ -927,7 +880,6 @@ to say MogdrazRomanceStroll3:
 	say "     'A-aye aye! M-Mister Toron says he managed to get, uh... h-he said to say a phrase, w-what was it...?' You think Mogdraz is about to incinerate the imp with his eyes as the little thing finally remembers what he was supposed to tell him. 'Ah! It was something like... Y-your request has been planted successfully! Wait, no, not [']request['], it was another word... P-Plan? No, no... Or was it not [']planted['] that he meant?' You begin to feel very sorry for the imp as Mogdraz raises his hand, slowly, as the tiny devil speaks, then the last thing you see before it is sent flying out through the window is a swipe of his hand, ending in an explosive thud that leaves a bit of smoke hanging in the air. The imp screeches as he disappears out of view.";
 	WaitLineBreak;
 	say "     'I must profoundly apologize for this interruption! That imp is going to get a punishment of a lifetime! How inconsiderate!'";
-	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Tell him there is no need to punish him, since he delivered his message... kind of.";
 	say "     ([link]N[as]n[end link]) - Indeed, what an insolent rat, you think. Deserves all punishment!";
 	if Player consents:
@@ -943,16 +895,14 @@ to say MogdrazRomanceStroll3:
 	WaitLineBreak;
 	say "     By the time you are taking a turn to walk into the section at the entrance of the Club, just as you were conversing, Mogdraz seems to take advantage of your distraction and grabs you by the wrist, pulling you gently into a nearby alley. There are lots of alleys in the Red Light District, but you are in this one, right now, in front of the almighty Lord of the Hellfires, mere inches away from him as the devil slowly closes in the distance between you. The air around you heats up as he presses his body against yours, very tenderly, grabbing your hand with his, with all your fingers intertwining. You feel your heart wanting to make a run for it out of excitement, which feels slightly alien to you, then you remember as the demon speaks. 'You can feel it, too... I've been careless, again, it seems...'";
 	say "     His voice is already unusually deep, as it is of demonic nature, but when he speaks this low, it causes a sweet rumble on you in such a velvety way. You know this feeling is not just yours, but it is his as well. While Mogdraz sounds apologetic, his advances show quite the opposite. He seems to want you to feel it, as genuine as it is, bonding with your mind as both begin to set in perfect harmony. As this all happens, only a single question prompts in your thoughts...";
-	say "     [bold type]Do you surrender yourself to the Demon Lord?[roman type][line break]";
-	LineBreak;
+	say "[line break]     [bold type]Do you surrender yourself to the Demon Lord?[roman type][line break]";
 	say "     ([link]Y[as]y[end link]) - Yes. Completely.";
 	say "     ([link]N[as]n[end link]) - No, you cannot do this.";
 	if Player consents:
 		LineBreak;
 		say "     Your face is flushed, and as his strong hand strokes your cheek, you feel his impressive musculature pressing against you, this time not in a shy manner, at all. You are definitely feeling his body surrounding yours as he takes you in for a warm embrace, leaning his face over, grabbing yours delicately by the jaw with his index and thumb, and you close your eyes... Before you feel his lips touch yours, evolving into a slow but passionate kiss. They feel like a scorching flame, burning delightfully, as your tongues meet in between to caress at each other, rubbing and twirling around, with his being much longer and nimbler, almost like a dragon's with a pointy tip.";
 		say "     Mogdraz's arms slide onto your back as he brings one of his hands over to the back of your skull, the other remaining on the side of your waist. For a moment, you forget about the world around you, as all it matters is the demon's touch, your bodies rubbing and brushing against one another, this heat overtaking you as your lust raises above what cannot be ignored any longer. Much the same happens to the devil, whose erection threatens to tear through his dark leather pants and keeps on throbbing against you. Yet, you continue to make out with each other, your minds connected and sharing the pleasure among the both of you, something you have never experienced the same way as you do with him.";
-		LineBreak;
-		say "     [bold type]Should you address the issue under his pants?[roman type][line break]";
+		say "[line break]     [bold type]Should you address the issue under his pants?[roman type][line break]";
 		say "     ([link]Y[as]y[end link]) - Take good care of him and drop to your knees (Sex).";
 		say "     ([link]N[as]n[end link]) - Maybe... just not here, and not right now (Skip).";
 		if Player consents:
@@ -961,7 +911,7 @@ to say MogdrazRomanceStroll3:
 			WaitLineBreak;
 			say "     So, with your eyes, you make a silent suggestion of what you want to do for him. His fiery eyes look like tiny sparkling flames as he realizes what you mean, and by something so simple surges a great amount of eagerness from the devil. 'I would be the luckiest demon ever... to receive such a... gift, from you.' At this point, you do not even sugarcoat it. You want to drop down and suck his dick right here, right now, give him the best blowjob you can possibly manage, get a huge load from him and send him happy back to the Club, just the way he deserves for having been such a nice company for you. Naturally, hearing you say all that makes him throb even more. He bites his underlip, locks gaze on you, brings his hand over your cheek once more... 'You have no fucking idea how much I'd love that, right now.'";
 			say "     Now that his desire is well known, you let yourself sink low enough to take a hold of his monstrous bulge, realizing that he must be sporting quite a lot of meat in here, about a full eighteen inches long of a cock begging for freedom. There is no way you can leave it here, pulsing and yearning for a friendly touch, so you being to undo his belt. He observes your actions, aroused more at the anticipation of it than anything else until now, so you figure you should take your time, slowly pulling the tip of the strap out of the buckle, removing the prong from the hole, sliding the frame through the strap and finally freeing its hold. Once this is done, there is nothing keeping you from unbuttoning the top of his pants, pulling the zipper down, and slide the leather down...";
-			WaitLineBreak;
+			wait for any key;
 			project figure of Mogdraz_nakedhard_icon;
 			say "     You were expecting a big one to jump right off its confinements, but the view is even greater than that. A long and thick red cock, dribbling precum like mad as it still rises to a now free and solid hardness, just as you merely lay a slight touch on it. His sack does not disappoint, either, with a pair of orbs as big as lemons, hanging heavily underneath his dick and looking fuller by the second, and with such a soft dark red skin hugging them, you really feel they look inviting and proceed to feel them up. With this, you learn that the Demon Lord loves having his balls played with, once you get your hands on them and fondle them gently, nearly making the devil moan as a few generous drops of precum come dribbling down his shaft.";
 			say "     With such a wonderful piece of meat, you cannot resist it for much longer. Your mind keeps screaming at you to take it and lay your lips on that throbbing penis, and soon, you are gobbling up on the by now rock hard demonic cock with veins pulsing as blood flows through the whole cavernous body, only making that dick feel and look even bigger. All Mogdraz does is stand there, feeling your warm mouth overtaking his meatlog, almost crying out of pleasure as his so desired love interest kisses, licks and sucks his cock, having built up so much lust that not even he can confidently withstand. There are copious amounts of precum coating your lips and mouth by now, so much that you feel obliged to swallow some of it, and it tastes so sweet that you definitely do not mind gulping down some more.";
@@ -971,17 +921,16 @@ to say MogdrazRomanceStroll3:
 			WaitLineBreak;
 			say "     You think you may have unleashed the beast, as you look up and see him grinning. 'If you want it that badly... Allow me to provide.' And just like that, his hands get a good grip of your whole skull, and he makes you look at him. Your eyes are locked onto each others, once more, and he begins to slide his member deeper in your mouth. 'Hands on the balls, now. You'll want to feel them unload, trust me.' he orders, and that really is one devilish grin that sends you heart skipping a beat. Nothing else comes to warn you of what follows next, and that is your throat being wrecked over by a massive demonic cock that comes ramming right down through it as you are held in place.";
 			say "     Either you regret provoking him or not is up to you, but it definitely will not be enough to stop the fury of a horny Demon Lord who decides to fuck your face as if you were his personal fleshlight. 'You want to be naughty, again...?' he teases you, chuckling as he fills your mouth with so much cock you feel your jaw will break at any given point, and continues to thrust into you like a battering ram. And very soon, you being to feel his balls rise right under your hands, his whole manhood shaking with anticipation, building up for that powerful first shot... 'Well, guess what that's earned you...' Mogdraz really makes his deep voice sound menacing and intimidating as his load comes very, very close to burst through...";
+			NPCSexAftermath Player receives "OralCock" from Mogdraz;
 			WaitLineBreak;
 			clear the screen;
 			project figure of Mogdraz_face_icon;
-			NPCSexAftermath Player receives "OralCock" from Mogdraz;
 			say "     You wake up with a lingering headache on the back of your skull, disoriented, with blurry vision and a massive amount of dizziness. It takes you a while to realize you are on top of a bed with the most silky of sheets, and the air around you is perfumed with a soft and quite pleasant incense scent... What just happened?";
 			WaitLineBreak;
 			say "     As you try to bring yourself up to sit straight, you make yet another realization... that your body feels heavy. Very, very heavy, in fact, and a look over to your belly reveals why. It is bloated and so full that it looks like you have just came out of a banquet with little self control over your gluttony. This is when Mogdraz comes rushing to you with the most worried expression you have ever seen in him. 'I-I can explain,' he urges to say, and quite frankly, you are so confused that you have no idea of anything, right now. 'Look, it has been... a while since I've done anything like that! And... I... may have... well, when I came, I believe the force was so strong that it made you hit your head really, really hard on the wall behind you.'";
 			say "     'Last thing I knew, you were unconscious with your head just hanging on top of my dick. And I was thinking you were being such a champ swallowing my entire load to its very last drop without even flinching! Turns out it was just going straight down your throat and into your stomach, and since you weren't feeling a thing, I ended up overfilling it... You were leaking it through your nose, even. I-I really am sorry. I just brought you here as a safety measure. This is... my bedroom and, well, my... bed. Where I dive into a slumber, whenever I need.' Now that was a finale you were not expecting, and it seems you have missed his climax because of such a painful accident...! The back of your head still hurts, but you think it shall heal, soon.";
 			WaitLineBreak;
 			say "     As for all the cum in your belly, you figure your body will take care of it. But... One thing comes to mind. Mogdraz is not titanic in size. Sure, he is big, but not [italic type]that[roman type] big, how in the world could he manage to fill you up so much like this?! He senses your inquisitive look, however. 'Are you... alright?' he asks, and might as well question him about it, in all honesty. 'Uh... Maybe uh... Hm... Well... How about we just forget what happened? I'm sure we can have more pleasant times together with less accidents occuring.' It seems he is evading the subject...";
-			LineBreak;
 			say "     ([link]Y[as]y[end link]) - Insist.";
 			say "     ([link]N[as]n[end link]) - Maybe some things are meant to not be known?";
 			if Player consents:
@@ -992,10 +941,12 @@ to say MogdrazRomanceStroll3:
 				say "     He clearly seems uncomfortable with that subject, so you shall just drop it and move on to the future that expects you.";
 			say "     'Anyway, feel free to take a rest and return to your affairs whenever you are able. I hope we get to hang out together in the future, some more, And... Of course, thank you for spending time with me. You are really a great company.' He leans over to give you one last kiss before you finally part ways... or, at least, until he does, since you have got a bellyful of cum to digest, still.";
 			follow the turnpass rule;
+			WaitLineBreak;
 		else:
 			LineBreak;
 			say "     This pleasant moment lasts for a few minutes, until the Demon Lord lets go of you and thinks it is probably enough kissing. 'I just wanted to tell you that... I really like having you around. I hope we get to hang out together more, in the future, and... of course, thank you for spending time with me. You really are a great company.' He leans over to give you one last kiss before he gestures you to follow after him, back to the Club. The Demon Lord seems happy, with a genuine smile on his face as you walk past the twins, who look at you both with a quite peculiar expression.";
 		follow the turnpass rule;
+		WaitLineBreak;
 		now Resolution of MogdrazRomance is 8;
 		if Hunger of Mogdraz > 0:
 			say "     [italic type]A strange feeling overtakes you, as if a shackle shattered from your very being and let you be free, once more. Did Mogdraz just lift the soul contract he had on you? Well, it seems you have your soul fully back to yourself![roman type][line break]";
@@ -1011,6 +962,7 @@ to say MogdrazRomanceStroll3:
 		say "     Nobody can answer your questions, not even Mogdraz himself. But was he really...?";
 		say "     There is no use thinking of it. Any romantic advances you have accomplished with the Demon Lord were for naught, and your connection is over. This was your last private encounter, and now it is business... as usual.";
 		follow the turnpass rule;
+		WaitLineBreak;
 		now Resolution of MogdrazRomance is 98;
 		now Libido of Mogdraz is 99;
 
@@ -1020,9 +972,7 @@ An everyturn rule:
 			now Mogdraz is in Hellfire VIP Floor;
 			now Resolution of MogdrazRomance is 6; [he has returned]
 
-[***********************************************************]
 Section 3-4-1 - Mogdraz Stroll Loop
-[***********************************************************]
 
 to say MogdrazRomanceStrollChoice:
 	say "     Once you both are midway towards the Red Light District's exit, there comes the time to decide where you will actually be taking the Demon Lord for the day. He also turns to you and asks 'So, where shall we be going? Hopefully you have some ideas? If not, there are a few places I'd like to go to with you, so I'd happily pick one... But, of course, you invited me, so you get to decide. It is only fair.' He expectantly awaits your answer regarding the destination of your stroll.";
@@ -1053,19 +1003,18 @@ to say MogdrazRomanceStrollChoice:
 			choose row calcnumber in table of fucking options;
 			say "[title entry]: [description entry]?";
 			if Player consents:
-				let nam be title entry;
 				now sextablerun is 1;
-				if (nam is "To the Dry Plains"):
-					say "[MogdrazRomanceStrollDryPlainsPick]";
-				else if (nam is "To the Museum"):
-					say "[MogdrazRomanceStrollMuseumPick]";
-				wait for any key;
+				if title entry is:
+					-- "To the Dry Plains":
+						say "[MogdrazRomanceStrollDryPlainsPick]";
+					-- "To the Museum":
+						say "[MogdrazRomanceStrollMuseumPick]";
 		else if calcnumber is 0:
 			now sextablerun is 1;
 			say "[MogdrazRomanceStrollRandomPick]";
-			wait for any key;
 		else:
-			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options], or 0 to exit.";
+	wait for any key;
 	clear the screen and hyperlink list;
 
 to say MogdrazRomanceStrollRandomPick:
@@ -1106,30 +1055,25 @@ to say MogdrazRomanceStrollDryPlains:
 	say "     [link](3)[as]3[end link] - Search for a corrupted apple.";
 	say "     [link](4)[as]4[end link] - Allow Mogdraz to pick.";
 	now calcnumber is 0;
-	while calcnumber < 1 or calcnumber > 3:
-		say "Choice? (1-3)>[run paragraph on]";
+	while calcnumber < 1 or calcnumber > 4:
+		say "Choice? (1-4)> [run paragraph on]";
 		get a number;
-		if calcnumber is 1 or calcnumber is 2 or calcnumber is 3:
-			break;
-		else:
+		if calcnumber < 1 or calcnumber > 4:
 			say "Invalid choice. Type [link]1[end link] to hunt for a centaur stallion, [link]2[end link] to hunt for a centaur mare, [link]3[end link] to search for a corrupted apple or [link]4[end link] let Mogdraz pick, instead.";
+	LineBreak;
 	if calcnumber is 1:
-		LineBreak;
 		say "     For this time, you would prefer to hunt a centaur stallion with Mogdraz, so you let him know of your suggestion. He replies with an eager smile, 'Yes! Looks like a great idea! Maybe I can get a good grip on one of those and wrestle them down while you grab him by his face and shove it down your crotch! Or... Do you think he'd be less hostile if you grabbed him by the dick? Just how susceptible are they to seduction attempts? Maybe you should slide under him, instead. Hah, this is gonna be fun!' As the devil brainstorms several possible plans, you both begin to walk around and be on the watch for one of those male centaurs.";
 		WaitLineBreak;
 		say "[MogdrazRomanceStrollDryPlainsCentaurStallion]";
 	else if calcnumber is 2:
-		LineBreak;
 		say "     For this time, you would prefer to hunt a centaur mare with Mogdraz, so you let him know of your suggestion. He replies with an eager smile, 'Interesting choice... I do love myself a womanly centaur, occasionally. They have impressive tits and posture, so it is all the most satisfying to bring them down and subdue them. Oh, I can feel my blood pumping, already! Have you ever brought one down by yourself? They certainly put up a fight, and they aren't as susceptible to seduction attempts as the males. Figures, dicks always have a mind of their own, right? Pussies... not so much. Only when you whisper to them.' As the devil brainstorms several possible plans, you both begin to walk around and be on the watch for one of those female centaurs.";
 		WaitLineBreak;
 		say "[MogdrazRomanceStrollDryPlainsCentaurMare]";
 	else if calcnumber is 3:
-		LineBreak;
 		say "     For this time, you would like to look for one of those strange apples that grow in the Dry Plains, and you know it is possible to do so according to Mogdraz. He replies with an eager smile, 'I've been thinking about that, too. Those fruits are dangerous... but really fun, if one manages to get their hands on one of them and eat! And who else would keep me better company than you for such a delightful experiment? Personally... I can't wait.' As the devil says this, you both begin to walk around and be on the lookout for any suspicious trees.";
 		WaitLineBreak;
 		say "[MogdrazRomanceStrollDryPlainsCorruptedApple]";
 	else if calcnumber is 4:
-		LineBreak;
 		say "     For this time, you would like to have the devil pick the activity you shall be doing together.";
 		WaitLineBreak;
 		let randomnumber be a random number from 1 to 3;
@@ -1142,7 +1086,7 @@ to say MogdrazRomanceStrollDryPlains:
 				say "     'Is that so? Hm... Then I suggest going for one of those female centaurs. They do not seem as strong as the males, but they're big! And have a really amazing pair of tits...' he says, laughing in anticipation and with a bit of mischief in mind. 'I do love myself a womanly centaur, occasionally. They have impressive tits and posture, so it is all the most satisfying to bring them down and subdue them. Oh, I can feel my blood pumping, already! Have you ever brought one down by yourself? They certainly put up a fight, and they aren't as susceptible to seduction attempts as the males. Figures, dicks always have a mind of their own, right? Pussies... not so much. Only when you whisper to them.' As the devil brainstorms several possible plans, you both begin to walk around and be on the watch for one of those female centaurs.";
 				WaitLineBreak;
 				say "[MogdrazRomanceStrollDryPlainsCentaurMare]";
-			-- 3 :
+			-- 3:
 				say "     'Oh really? Well... I've been thinking about grabbing one of those special apples. I know just where to find and how to acquire them without falling into a root trap. Just you wait until you see what they do once eaten...' he says, laughing in anticipation and with a bit of mischief in mind. 'I've been thinking about it. Those fruits are dangerous... but really fun, if one manages to get their hands on one of them and eat! And who else would keep me better company than you for such a delightful experiment? Personally... I can't wait.' As the devil says this, you both begin to walk around and be on the lookout for any suspicious trees.'";
 				WaitLineBreak;
 				say "[MogdrazRomanceStrollDryPlainsCorruptedApple]";
@@ -1155,7 +1099,6 @@ to say MogdrazRomanceStrollDryPlains:
 to say MogdrazRomanceStrollDryPlainsCentaurStallion:
 	say "     It does not take long until you see one, as they are fairly common around here. This proud male is a perfect example of his kind, with that muscular torso of his glistening under the warm sunlight, while he seems to be enjoying the day, feeling the soft breeze caress his chest as he so nonchalantly walks about on his hooves... A peaceful day that you two are about to ruin. 'Almost makes me feel bad for interrupting his stroll, but... these are the kind of men who can fully take me, heh...!' Mogdraz whispers to you, chuckling at himself in the end, 'Might be a fun one to wrestle down. Wanna go first?' he now asks, tapping your butt as a form of encouragement. 'C'mon, now... If you do well, I might save some energy for you, later...'";
 	say "     And how could you argue with that? Putting it simply, you cannot, as the Demon Lord gives you his confident look and smirk while sliding his hand over the back of your head. You just feel invigorated by his presence, unable to explain why, but you most definitely enjoy the sensation. For some reason, you feel like you could take on anything, and have little to no hesitation in making your way towards the centaur stallion as the devil follows you. Once he spots you coming, the centaur just looks back, startled by your sudden arrival, but immediately takes a defensive stance to attempt to fend off your attack. With your demon lover's support, you charge in...";
-	WaitLineBreak;
 	now inasituation is true;
 	challenge "Centaur Stallion";
 	now inasituation is false;
@@ -1178,7 +1121,6 @@ to say MogdrazRomanceStrollDryPlainsCentaurStallion:
 to say MogdrazRomanceStrollDryPlainsCentaurMare:
 	say "     It does not take long until you see one, as they are fairly common around here. This gorgeous female is a perfect example of her kind, with those perky tits of hers glistening under the warm sunlight, while she seems to be enjoying the day, feeling the gentle breeze caress her breasts as she so nonchalantly walks about on her hooves, her long hair flowing back softly... A peaceful day that you two are about to ruin. 'Almost makes me feel bad for interrupting her stroll, but... Have you seen her size? Damn... I love myself some strong women...' Mogdraz whispers to you, chuckling at himself in the end, 'Might be a fun one to wrestle down. Wanna go first?' he now asks, tapping your butt as a form of encouragement. 'C'mon, now... If you do well, I might save some energy for you, later...'";
 	say "     And how could you argue with that? Putting it simply, you cannot, as the Demon Lord gives you his confident look and smirk while sliding his hand over the back of your head. You just feel invigorated by his presence, unable to explain why, but you most definitely enjoy the sensation. For some reason, you feel like you could take on anything, and have little to no hesitation in making your way towards the centaur mare as the devil follows you. Once she spots you coming, the centaur just looks back, startled by your sudden arrival, but immediately takes a defensive stance to attempt to fend off your attack. With your demon lover's support, you charge in...";
-	WaitLineBreak;
 	now inasituation is true;
 	challenge "Centaur Mare";
 	now inasituation is false;
@@ -1199,7 +1141,7 @@ to say MogdrazRomanceStrollDryPlainsCentaurMare:
 		say "[MogdrazRomanceStrollDryPlainsCentaurMareLoss]";
 
 to say MogdrazRomanceStrollDryPlainsCentaurStallionWin:
-	if Player is not male and Player is not female: [can't do win scene without genitals]
+	if Player is neuter: [can't do win scene without genitals]
 		say "[MogdrazRomanceStrollDryPlainsCentaurStallionLoss]";
 	else:
 		say "     Without any further ado, you both get ready to use the centaur stallion by his two ends, as Mogdraz positions himself behind his equine rear and you happen to stand in front of the collapsed centaur. While his muscular torso sits on a horse body, his structure allows him to remain in an almost completely horizontal position, so his face hangs easily by your crotch level. With such easy access to his face, you ";
@@ -1226,6 +1168,7 @@ to say MogdrazRomanceStrollDryPlainsCentaurStallionWin:
 		CreatureSexAftermath "Centaur Stallion" receives "AssFuck" from "Mogdraz";
 		follow the turnpass rule;
 		follow the turnpass rule;
+		WaitLineBreak;
 
 to say MogdrazRomanceStrollDryPlainsCentaurStallionLoss:
 	say "     Without any further ado, you both get ready to pleasure the centaur stallion from two ends, as Mogdraz positions himself behind his equine rear and you happen to slide under that massive horsecock, leaking and throbbing by the time you get to it. Your opponent does not even flinch at this, despite having won the fight, as the overbearing lust from the Demon Lord's flames takes him into a wild ride of lustful desire in which nothing else matters but blissful pleasure. Naturally, you immediately get your face coated in precum as you get under his more than two feet-long meat, he even rising it just enough for you to slide underneath and embrace the equine dong with all your love and dedication. With that glistening tip now on your face, you wrap your lips around that juicy cock and start sucking on it, putting your hands around his long shaft to stroke it deeply.";
@@ -1245,9 +1188,10 @@ to say MogdrazRomanceStrollDryPlainsCentaurStallionLoss:
 	CreatureSexAftermath "Centaur Stallion" receives "AssFuck" from "Mogdraz";
 	follow the turnpass rule;
 	follow the turnpass rule;
+	WaitLineBreak;
 
 to say MogdrazRomanceStrollDryPlainsCentaurMareWin:
-	if Player is not male and Player is not female: [can't do win scene without genitals]
+	if Player is neuter: [can't do win scene without genitals]
 		say "[MogdrazRomanceStrollDryPlainsCentaurMareLoss]";
 	else:
 		say "     Without any further ado, you both get ready to use the centaur mare by her two ends, as Mogdraz positions himself behind her equine rear and you happen to stand in front of the collapsed centaur. While her fit torso sits on a horse body, her structure allows her to remain in an almost completely horizontal position, so her face hangs easily by your crotch level. With such easy access to her face, you ";
@@ -1274,6 +1218,7 @@ to say MogdrazRomanceStrollDryPlainsCentaurMareWin:
 		CreatureSexAftermath "Centaur Mare" receives "PussyFuck" from "Mogdraz";
 		follow the turnpass rule;
 		follow the turnpass rule;
+		WaitLineBreak;
 
 to say MogdrazRomanceStrollDryPlainsCentaurMareLoss:
 	say "     Without any further ado, you both get ready to pleasure the centaur mare from two ends, as Mogdraz positions himself behind her equine rear and you happen to slide under that wet cunt, lower lips engorged and dripping by the time you get to it. Your opponent does not even flinch at this, despite having won the fight, as the overbearing lust from the Demon Lord's flames takes her into a wild ride of lustful desire in which nothing else matters but blissful pleasure. Naturally, you immediately get your face coated in lady juice as you get under her sex, ready to eat her out with all your love and dedication. With that moist womanhood on your face, you press your tongue past her labia and begin to wiggle it inside of her.";
@@ -1294,6 +1239,7 @@ to say MogdrazRomanceStrollDryPlainsCentaurMareLoss:
 	CreatureSexAftermath "Centaur Mare" receives "PussyFuck" from "Mogdraz";
 	follow the turnpass rule;
 	follow the turnpass rule;
+	WaitLineBreak;
 
 to say MogdrazRomanceStrollDryPlainsCorruptedApple:
 	say "     Finding this corrupted fruit is not actually an easy task, given the grand dimensions of the plains and little to no reference of your geographical whereabouts, but you see Mogdraz conjure a sort of device in his hands. He then turns towards you to show it. It is kind of archaic, in appearance, a little rustic, if you could call it that, but it seems to glow with an ominous energy you cannot quite identify. It is also rather strange, in a way that you have never seen anything like it. There is a globe with glowing points that remain in the same position at all times, pretty much like a compass, and is perhaps meant to locate things, though you really cannot tell how you are supposed to tell what you want to seek.";
@@ -1304,7 +1250,6 @@ to say MogdrazRomanceStrollDryPlainsCorruptedApple:
 	WaitLineBreak;
 	say "     'Look at how beautiful its fruits are. A perfect way to lure hungry passersby, isn't it? But we know best... And I know you shouldn't eat it. I, on the other hand...' says Mogdraz as he approaches the tree, seemingly not caring about any of its traps and dreadful attempts at baiting a person naive enough to fall for its tricks, and continues by saying 'Am not really affected by any of its cursed effects. Well, at least, in irreversible ways. You see, one who masters the art of shapeshifting is never truly bound by the laws of other transformative effects, because you are able to hold full control of your shape. Thus, when such a thing is introduced into my system, it is actually fueling my ability to change my form, and these new possibilities are significantly affected by what type of transformative effect they carry.'";
 	say "     As he continues to explain, he slides a hand over one of its large and great looking apples, then plucks one away from the branches. You flinch, expecting something bad to happen, but nothing does. 'I would not be so careless to remove a fruit and expect to be caught in a trap I overlooked. You should worry less...' he says, chuckling. 'Although, if you would prefer and now that I have one of these apples, we may relax somewhere and enjoy the peaceful breeze of the plains. Or... We can see what happens if I eat this. Both would be splendid ways to spend time together. What say you?' he asks you, awaiting your answer to make a decision based of it.";
-	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Have Mogdraz eat the corrupted apple.";
 	say "     ([link]N[as]n[end link]) - You would prefer to relax with him, instead.";
 	if Player consents:
@@ -1313,7 +1258,6 @@ to say MogdrazRomanceStrollDryPlainsCorruptedApple:
 		say "     Naturally, being too close to trees that can be trapped or throw you into a predicament for too long is not recommended, especially when you want to try things out, whatever they are. In this case, you want to see what happens to Mogdraz once he eats one of these apples, and he seems eager to try it out. Without any further ado, he brings it to his mouth and takes a generous bite with a crunch. You watch him chew that piece for a while, looking expectantly at him while he focuses on the fruit's taste. 'Hmm... It is... not bad. Though I find it quite peculiar that it hasn't triggered anything in me. Do you see anything different?' he asks you, and after you have taken a look over his entire frame, from head to feet, you find nothing different about him.";
 		WaitLineBreak;
 		say "     'Perhaps I need additional stimulation. My body needs to feel the need to transform... Hm...' he wonders, looking over to the side as he thinks about something. Then, he turns to you, once more. 'Would you mind holding my cock?' asks Mogdraz, just like that, no build-up or anything similar. A simple question, you must admit, albeit quite unexpected coming from him and in the current circumstances. 'I don't want you to think of this too weirdly, but I'm finding this rather strange. It is fine if you are not in the mood for such things, however, and we can simply spend the rest of our time relaxing elsewhere.' You suppose you could still choose to only relax with Mogdraz, if you so desired, lest you do not mind going along the Demon Lord's request.";
-		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Do as he has requested and hold his dick.";
 		say "     ([link]N[as]n[end link]) - Perhaps you should really just relax together.";
 		if Player consents:
@@ -1328,9 +1272,7 @@ to say MogdrazRomanceStrollDryPlainsCorruptedApple:
 			say "     Nevertheless, your focus remains on his cocks, and giving them all their deserved share of attention is only made easier by the fact they belong to the same person, but at the same time, they seem to have minds of their own. One is constantly poking at your cheek whenever you are busy with another, almost as if they were competing for the limited space in your mouth. All this makes the devil breathe in and exhale in evident pleasure. But as the Demon Lord finishes the apple, you feel several more snake-like bodies wrapping themselves around your legs, as it seems he has made at least three more appear... 'Don't stop what you're doing... I'd just like to feel more of you...'";
 			WaitLineBreak;
 			say "     Paying no mind to the remaining cocks, you resume pleasuring the three already in your grasp and reach, although you begin to feel your body tingling as the other trio of cocks seek to rub against your crotch and ass. You discover soon that he has made not just three, but five new ones, the last pair just happened to arrive later, but as eager as the others, to embrace you. These wrap themselves around your chest, and you can feel their entire shafts throbbing as they sort of constrict you, just hard enough to hold themselves in place and give your erogenous areas some well-appreciated friction. Your [if Player is female]holes are[else]hole is[end if] being pressed by one or two of them, and you just know Mogdraz wants to take you... From every entrance he can find to put his cocks in.";
-			LineBreak;
 			say "     You hear a voice in your mind, his, asking for consent. You are likely to be thoroughly tentacle-fucked by the Demon Lord if you accept this deal...";
-			LineBreak;
 			say "     ([link]Y[as]y[end link]) - You agree.";
 			say "     ([link]N[as]n[end link]) - Refuse. You wish to be in control.";
 			if Player consents: [wild tentacle fuck]
@@ -1353,7 +1295,7 @@ to say MogdrazRomanceStrollDryPlainsCorruptedApple:
 				LineBreak;
 				say "     Your will is strong enough to resist giving full control to the Demon Lord, though it is obvious for the both of you that you are roleplaying this, as the greedy demon and his prey who is too strong-willed to give in to his delicious deal. Instead, you keep hold of the situation and decide to keep Mogdraz on edge, only giving what you want to his... eight cocks, by now? And the pent-up lust they hold becomes very evident the more you delight yourself with all of those who come to seek the pleasures of your mouth. Not all of them do, some just helplessly rubbing them against your crotch and butt, forbidden from entering, yet so desperate to. This is an intoxicating feeling of power you begin to feel, for some reason... Mogdraz is letting you take charge, and it just feels incredible.";
 				say "     It just feels like you own his body... And you wish to use it. They only get as much stroking as you deem deserved. The devil has his eyes closed, like if he dug himself deep into a trance, only biting his lips and letting out lustful exhalations as he lets you do what you want. Soon, interesting things begin to happen as his arousal steadily builds up, all his cocks thickening and dripping a fluid alike his demonic precum, so sweet it leaves a lingering taste in your tongue that makes you crave for more. It does not stop here, however, as even Mogdraz's balls begin to grow fuller and fuller the more you continue to stimulate his cocks.";
-				LineBreak;
+				WaitLineBreak;
 				say "     'They're only going to grow more and more if you don't make me cum... It might get really messy if that doesn't happen soon...' he warns you, but lets you make the choice.";
 				say "     ([link]Y[as]y[end link]) - Make him cum now.";
 				say "     ([link]N[as]n[end link]) - Keep edging him.";
@@ -1409,7 +1351,6 @@ to say MogdrazRomanceStrollMuseum:
 	WaitLineBreak;
 	say "     As you walk up the stairs and enter through the grand doors, you finally find yourselves inside. The whole atmosphere changes into a complete silence where every sound you make causes an echo in the long, dark corridors. Even during the day, the windows block most of the light, but Mogdraz's hovering flame between his horns gives out a dim light that helps you see your immediate surroundings. The Demon Lord keeps his voice low, almost to a whisper, as he speaks to you. 'Not the most vibrant of places, I must admit, but there is a lot to discover, I'm sure. Perhaps a glorious beast? Or something else that wants to rob us of our possessions and perhaps dignity? Obviously none would match my might, but it's fun when they try. Unfortunately, my own aura does not seem to be working in here, so they won't get spooked by my sheer presence, thus, we remain vulnerable to everything I just said.'";
 	say "     'Though, I'm also certain we can turn this into a learning experience, provided that we find something... else, other than danger. Only one way to find out, eh?' As the devil speaks only the truth, you nod as you both proceed further into the hall. There is nothing out of the ordinary during the time you are traversing the first, only some general pictures, paintings or sculptures that are mere suggestions of themes that you could find by walking in this direction. Your adventure begins when you start randomly taking turns without any significant indication of where you are going, but your companion seems to be fine with that. In fact, he is smiling all the time. You are only left to wonder what will come next...";
-	WaitLineBreak;
 	if a random chance of 4 in 10 succeeds: [Random Encounter]
 		say "[MogdrazRomanceStrollMuseumCerberus]";
 	else:
@@ -1425,31 +1366,28 @@ to say MogdrazRomanceStrollMuseum:
 [RANDOM ENCOUNTER SECTION]
 
 to say MogdrazRomanceStrollMuseumCerberus:
-	say "     ... Something happens during the time you travel through the main halls of the Museum.";
+	WaitLineBreak;
+	say "     ...Something happens during the time you travel through the main halls of the Museum.";
 	say "     You and Mogdraz hear heavy footsteps echoing through the halls, then a low roar as a large beast approaches your position. The devil turns to you, whispering, 'Oh, my... Looks like something big is heading our way. We can hide or fight it, your choice. I'm good with either.'";
-	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Hide.";
 	say "     ([link]N[as]n[end link]) - Wait for it and attack.";
 	if Player consents:
 		LineBreak;
 		say "     Deciding that hiding would best suit your preferences, you make the best use of your stealth capabilities and go hide in a room nearby. Then, you try to stay as still as possible...";
-		let bonus be (( dexterity of player minus 10 ) divided by 2);
+		let bonus be ( dexterity of player minus 10 ) divided by 2;
 		let diceroll be a random number from 1 to 20;
-		say "You roll 1d20([diceroll])+[bonus] = [special-style-1][diceroll + bonus][roman type] vs [special-style-2]12[roman type] (Dexterity Check):[line break]";
+		say "You roll 1d20([diceroll])[if bonus >= 0]+[end if][bonus] = [special-style-1][diceroll + bonus][roman type] vs [special-style-2]13[roman type] (Dexterity Check):[line break]";
 		if diceroll + bonus >= 13:
 			say "     You wait... the footsteps get louder for brief moments, then you hear them fading away in the distance until completely silence reigns your surroundings, once again. 'Looks like we've done it! Our path is clear again.' Now, you are free to continue your exploration without any additional interruptions, hopefully.";
-			WaitLineBreak;
 			say "[MogdrazRomanceStrollMuseumExplore]";
 		else:
 			say "     You wait... the footsteps get louder, and louder... You hear the creature sniffing around the door, and suddenly, it is kicked open. Both you and Mogdraz immediately stand up as you are now facing a large three-headed beast.";
 			say "     'Would you look at that! Such a grand beast! Oh, this really gets me going, can't wait to tame it! C'mon, be the bait! I'll have something ready for it by the time it kicks your ass!' he tells you, laughing in the end. Then, Mogdraz begins to cast some sort of spell as you are thrown into the fight against a Cerberus.";
-			WaitLineBreak;
 			MogdrazRomanceStrollMuseumCerberusFight;
 	else:
 		LineBreak;
 		say "     You decide against hiding and, instead, face the beast head on as you begin to walk directly towards it. The devil looks pumped up to face this creature, and even more once the large three-headed beast reveals itself.";
 		say "     'Would you look at that! Such a grand beast! Oh, this really gets me going, can't wait to tame it! C'mon, be the bait! I'll have something ready for it by the time it kicks your ass!' he tells you, laughing in the end. Then, Mogdraz begins to cast some sort of spell as you are thrown into the fight against a Cerberus.";
-		WaitLineBreak;
 		MogdrazRomanceStrollMuseumCerberusFight;
 
 to MogdrazRomanceStrollMuseumCerberusFight:
@@ -1459,13 +1397,12 @@ to MogdrazRomanceStrollMuseumCerberusFight:
 	if fightoutcome < 20: [won]
 		say "     With your expertise in combat, you manage to defeat the creature, forcing Mogdraz interrupts his cast. The cerberus lies down, too weak to fight, and eventually crashes down, fast asleep. 'Aw, look at what you've done! Now it's too tired to do anything! What a shame...' says the Demon Lord, clearly disappointed by this. You try telling him that you merely defended yourself, arguing that he should actually be happy that you managed to do that all by yourself while he only started chanting a few odd words. He frowns his eyebrows and looks directly in your eyes, making your soul shake. 'It wasn't a chant! It was an enchantment! Different things! And now I can't use it on the beast because you wore it down like that! Oh well...'";
 		say "     As nothing remains to be done here, you both turns your backs on the collapsed beast and start walking the other way together. It looks like Mogdraz had a plan for the cerberus, but you were too competent at fighting it off. He is not unhappy about that, and eventually shrugs it off. 'I guess we'll have another chance at it, eventually. Consider letting the beast do what it wants to you, on the next time, and trust me. It'll be fun, I promise!' You hear his words and nod, telling him that at least, you will consider.";
-		WaitLineBreak;
 		say "[MogdrazRomanceStrollMuseumExplore]";
 	else if fightoutcome > 19 and fightoutcome < 30: [lost]
 		say "     During the confrontation with the three-headed beast, you begin to feel weary and too exhausted to continue, finally collapsing on the ground. But before the beast can properly pin you down under them, Mogdraz unleashes his spell on the creature, which causes the cerberus to stop moving and lock a distant gaze onto the Demon Lord's eyes. 'Perfect, just the right amount of time for me to be able to do this. Now... Give me your paw!' he commands the beast, and they obey, extending one of their front paws towards Mogdraz. The devil grabs it, and it is a very large one, with both his hands and praises the creature. 'Good girl! Or... Boy? Do you even have a gender? Well, it doesn't matter. I accept you the way you are! Whatever that is...'";
 		say "     The cerberus beings to wag their tail excitedly as they hear this, having now walked almost entirely above you as you remain under the creature's powerful and huge body. 'Seeing how you're such a good er... herm? Hm, I'll have to find a better word for this. But, yes, as I was saying, I think you deserve a treat! How about a [if Player is female]tight little pussy[else]supple butt with a tight little hole[end if] for your impressive tailcock? Does that sound like something you'd like?' The three heads eagerly bark as Mogdraz just offered them your [if Player is female]womanhood[else]ass[end if]. Before you even have a chance to protest, if you wanted to, the fat tip of the cerberus tail is already slipping between your [if Player is not naked]asscheeks, against your clothing[else]bare asscheeks[end if]. This entire situation forces you to be on all fours under the cerberus and in front of the Demon Lord.";
 		WaitLineBreak;
-		say "     Your eyes widen at this sudden intrusion as you look at Mogdraz, who looks back at you with quite a devilish grin. 'Why are you looking at me like that? You lost, so you get your loser's punishment! This game won't have different rules just because you're with me!' He then proceeds to laugh, though you notice he is also quite aroused at the prospective of making this cerberus take you, judging by the prominent and large bulge in his pants. Eventually, [if Player is not naked]you are made to free your butt from any clothing and,[end if] as the creature's tailcock grinds against you, Mogdraz unzips his pants and lets his red cock out, heavily hanging above two very full orbs contained in that sack of his. He is still looking back at you while he does this before he sits down in front of you.";
+		say "     Your eyes widen at this sudden intrusion as you look at Mogdraz, who looks back at you with quite a devilish grin. 'Why are you looking at me like that? You lost, so you get your loser's punishment! This game won't have different rules just because you're with me!' He then proceeds to laugh, though you notice he is also quite aroused at the prospective of making this cerberus take you, judging by the prominent and large bulge in his pants. Eventually, [if Player is not naked]you are made to free your butt from any clothing and, [end if]as the creature's tailcock grinds against you, Mogdraz unzips his pants and lets his red cock out, heavily hanging above two very full orbs contained in that sack of his. He is still looking back at you while he does this before he sits down in front of you.";
 		say "     'Now that we're all properly set up, I guess you can have some from this end, as well...' says the devil, pointing his girthy rod at your lips while the cerberus finally decides to bury his tailcock past your [if Player is female]wet curls[else]anal ring[end if], causing you a sudden shiver of pleasure with every inch being shoved inside you. Mogdraz goes on and pushes his cock into your mouth as you let it open for a second, the hot taste of a devil's wet manhood presenting itself atop your tongue, filling your oral space with all that veiny meat that keeps heading towards your throat. With a thrust, then another, the beast carries on fucking you with their tail while you nearly gurgle on Mogdraz's large cock, leaking madly into your mouth.";
 		WaitLineBreak;
 		say "     Then, the demon takes hold of your head and keeps you sucking on his meat while the beast pounds your [if Player is female]pussy[else]ass[end if] like the wild animal they are. By then, the demon's balls are swollen and filling up even more with each time your mouth hits the base of his shaft, somehow not triggering any gag reflex on you despite the fact you are feeling it bulge from within your neck. For the next moments, you are properly double-tagged by two horny, yet very different, beasts, the three-headed canine panting without cease as they continue to fuck you, and Mogdraz moaning in bliss as you suck on his shaft. None of them give you any room for free movement as you feel both their cocks throbbing inside you.";
@@ -1473,14 +1410,10 @@ to MogdrazRomanceStrollMuseumCerberusFight:
 		WaitLineBreak;
 		say "     For what seems to be almost a minute, you are given a filling of cum from both sides as every drop of their loads is deposited in you. This mixture of sensations is enough to also get you there, [if Player is male]cumming on spot[else]hitting your climax[end if] as your entire body quivers in ecstasy. Then, suddenly, you feel yourself being pulled from underneath the beast and into Mogdraz's arms as the cerberus falls on the floor, fast asleep. This, unfortunately, happens during the demon's orgasm, so as he makes this quick move, his cock pops out of your mouth and paints your face with several strands of cum that were still being shot into your stomach. 'Fuck...! Phew... It's not pleasant to do a quick reaction while I'm still in the middle of cumming...!'";
 		say "     You hold his penis as the last drops leave through, just as you realize you have earned yourself a swollen belly. 'My plan was getting you under the beast, not smothered by it. But I guess we get to cuddle, now! Are you alright?' he asks, swiping your face clean with his fingers and feeding the cum back into your mouth. You barely had any time to realize how sweet and creamy it is, almost at an intoxicating level. 'Ah, at least you seem to be enjoying my treat. Feel free to carry on savoring it while we take a moment to catch our breaths. I seem to have missed a lot of it! What a mess...!' These several minutes you spend on each other's arms pass by while Mogdraz helps you clean up, licking up his load's leftovers.";
-		if Player is female:
-			CreatureSexAftermath "Player" receives "PussyFuck" from "Cerberus";
-		else:
-			CreatureSexAftermath "Player" receives "AssFuck" from "Cerberus";
-		NPCSexAftermath Player receives "OralCock" from Mogdraz;
 		WaitLineBreak;
 		say "     Once you are finally ready to go, Mogdraz helps you up and he, too, stands up besides you. 'That was fun. I should probably get a pet like this for myself... It's quite a wonderful creature! Anyway, even after this diversion, we still have time. I'd like to walk around a little longer, if that's fine by you?' With the cerberus still asleep and no more threats in the immediate vicinity, you are now free to continue your exploration, hopefully without too much trouble. Nodding at the Demon Lord, you then proceed into the halls of the Museum, once more...";
-		WaitLineBreak;
+		CreatureSexAftermath "Player" receives "[if Player is female]Pussy[else]Ass[end if]Fuck" from "Cerberus";
+		NPCSexAftermath Player receives "OralCock" from Mogdraz;
 		say "[MogdrazRomanceStrollMuseumExplore]";
 	else if fightoutcome is 30: [fled]
 		say "     You did manage to evade the cerberus, but Mogdraz stops you from getting away. 'What are you doing?! Get back on the fight, you wimp!' His voice sounds very commanding[if Player is submissive][italic type], and it even sort of turns you on hearing him talk to you like that[roman type][end if]...";
@@ -1520,12 +1453,11 @@ Sarea of MogdrazxAstronomy is "Nowhere".
 [---]
 
 to say MogdrazRomanceStrollMuseumExplore:
-	let randomnumber be a random number from 1 to 3;
-	if randomnumber is:
+	WaitLineBreak;
+	if a random number from 1 to 3 is:
 		-- 1:
 			if Lars is in Museum_Roman_Wing:
 				say "     Due to your subsequent visits, you happen to remember how to get to a specific destination from here, namely, the Roman Wing, where a friendly acquaintance, Lars, the roman soldier, should be in. Given that you get the chance to do so, would you like to lead Mogdraz there?";
-				LineBreak;
 				say "     ([link]Y[as]y[end link]) - Yes, lead him to the Roman Wing.";
 				say "     ([link]N[as]n[end link]) - No, explore elsewhere.";
 				if Player consents:
@@ -1536,18 +1468,11 @@ to say MogdrazRomanceStrollMuseumExplore:
 					say "[MogdrazRomanceStrollMuseumExploreReroll]";
 			else:
 				say "[MogdrazRomanceStrollMuseumExploreReroll]";
-		-- 2:
-			say "[MogdrazRomanceStrollMuseumExploreDemonicMyths]";
-		-- 3:
-			say "[MogdrazRomanceStrollMuseumExploreAstronomy]";
+		-- 2: say "[MogdrazRomanceStrollMuseumExploreDemonicMyths]";
+		-- 3: say "[MogdrazRomanceStrollMuseumExploreAstronomy]";
 
 to say MogdrazRomanceStrollMuseumExploreReroll:
-	let randomnumber be a random number from 1 to 2;
-	if randomnumber is:
-		-- 1:
-			say "[MogdrazRomanceStrollMuseumExploreDemonicMyths]";
-		-- 2:
-			say "[MogdrazRomanceStrollMuseumExploreAstronomy]";
+	say "[one of][MogdrazRomanceStrollMuseumExploreDemonicMyths][or][MogdrazRomanceStrollMuseumExploreAstronomy][at random]";
 
 to say MogdrazRomanceStrollMuseumExploreRomanWing:
 	say "     As you begin to take a notion of where you are within the museum's halls, you let Mogdraz know that there is a place nearby you could go to, more specifically, the roman wing";
@@ -1595,11 +1520,9 @@ to say MogdrazRomanceStrollMuseumExploreAstronomy:
 	say "     Time flies, and eventually, you have to take your leave. Mogdraz seems content to have found and spent time in this room, but you see that he seems contemplative during most of the time you spend together. 'It was quite a good day, definitely different than usual. We should return to this place in the future, there is so much to learn from here... Although, sadly for now, we have to return to the Club. I've had quite a pleasant time, thanks to you.' As this smile persists in the devil's face, you make your way out of the museum and proceed to travel back to the Red Light District.";
 	now Resolution of MogdrazxAstronomy is 1;
 
-[***********************************************************]
 Section 4 - Mogdraz Sex Menu
-[***********************************************************]
 
-Instead of fucking Mogdraz:
+instead of fucking Mogdraz:
 	if Resolution of MogdrazRomance is 0 or Resolution of MogdrazRomance >= 98:
 		say "     That would be extremely inappropriate to do, at this point. You would most likely get glared down and sent on your way.";
 	else if Resolution of MogdrazRomance < 8:
@@ -1645,27 +1568,26 @@ to say MogdrazSexMenu:
 			choose row calcnumber in table of fucking options;
 			say "[title entry]: [description entry]?";
 			if Player consents:
-				let nam be title entry;
 				now sextablerun is 1;
-				if (nam is "Give him a handjob"):
-					say "[MogdrazHandjob]";
-				else if (nam is "Offer him a blowjob"):
-					say "[MogdrazBlowjob]";
-				else if (nam is "Worship his body"):
-					say "[MogdrazBodyWorship]";
-				wait for any key;
+				if title entry is:
+					-- "Give him a handjob":
+						say "[MogdrazHandjob]";
+					-- "Offer him a blowjob":
+						say "[MogdrazBlowjob]";
+					-- "Worship his body":
+						say "[MogdrazBodyWorship]";
 		else if calcnumber is 0:
 			now sextablerun is 1;
 			say "     You politely excuse yourself as Mogdraz gives you an understanding smile.";
-			wait for any key;
 		else:
-			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
+			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options], or 0 to exit.";
+	wait for any key;
 	clear the screen and hyperlink list;
 
 to say MogdrazHandjob:
 	say "     It is somewhat difficult to speak when a powerful demon such as Mogdraz eyes you from head to feet, who expects your answer patiently, but you manage to tell him that you would like to, perhaps, use your hands on him. He says nothing more, replying only with a smile and a gesture, beckoning you to come closer. Once you are withing his reach, he pulls you gently and lets you sit by his right side on the expansive velvet red sofa. Then, he slides his powerful arm around your shoulders and embraces you to lean for a kiss. The Demon Lord is simply making out with you right here, out in the open, and everyone who cared would be able to see you two exchanging tongues. This whole scene makes your heart beat harder, getting you all hot and bothered.";
 	say "     He pulls his lips from yours after a while, taking a moment to stroke your cheek and bring his hand to your face from around your shoulder. His muscular leg is bumping against yours, and [if scalevalue of Player < 4]as there is a considerable size difference between you and him, you feel completely overtaken by the large devil's heat against your skin[else]you feel his heat against your body[end if], a sign of desire and arousal pulsing through him as an obvious erection forms underneath his dark leather pants. 'Of course I'd let you touch me...' says the devil as he takes you for another kiss. Your tongues mingle together for some more before he lets you take a breath, whispering in a deep and velvety tone 'You deserve that much...' With this said, he actually encourages you by bringing your hand over to his hairy pecs, adorned by a black leather harness, from where you can start moving your touch lower...";
-	WaitLineBreak;
+	wait for any key;
 	project figure of Mogdraz_nakedhard_icon;
 	say "     You catch Mogdraz breathing deeply as your fingers follow the trail from between his rippling abs to just above the pants. He takes things into his own hands from here, undoing its buttons and sliding that fat and red monstrous cock to the outside. The fine piece of meat is still hardening before your eyes, getting bigger and thicker by the second. He looks down at you, caressing your ear affectionately, and finally, he asks you, 'Hold it...' in an almost whispering tone. Your fingers had remained at just a mere few inches from touching his member, which is by now fully engorged and ready for action, and now with his request made, you can move your hand over his shaft to then wrap your fingers around it.'";
 	say "     Shifting his gaze between your eyes and your hand, Mogdraz takes enjoyment in observing you working his proud manhood by jerking it up and down, slowly and steadily, providing him with the occasional thumb running around his humid glans, a seemingly very sensitive spot for the devil that always manages to make him exhale with lust. 'That's it, no rush... Just take your time...' His affectionate caressing across your cheek is a great encouragement for you as you continue to jerk him off, also feeling up his great sized balls that keep on generously filling up. Sliding your index finger underneath his entire sack, you bring the rest of your palm to cup one of his orbs, which is already enough to fill a hand. They are so plump that you can definitely tell he is holding one massive load...";
@@ -1699,11 +1621,11 @@ to say MogdrazBlowjob:
 to say MogdrazBodyWorship:
 	say "     Looking at the Demon Lord's impressive physique, you cannot help but have a desire to admire and worship every muscle of his, a thought further fueled by the visage you get as you stare at Mogdraz himself, who usually wears only a harness that practically shows off his entire torso. You only know for certain that his demonic strength must be appreciated, an urge that fires up your lust the more you picture yourself touching and feeling up those great demonic muscles. The crimson devil obviously notices your interest in his body and is the first to speak, in spite of your intention to do so before you got distracted. 'Is something troubling you? I couldn't help but notice you standing in obvious silence as your eyes took in my figure. Surely it must not be because you find such view alluring?'";
 	say "     You admit to him that you were thinking about offering yourself to give his muscles a bit of worship, seeing how great they look and how much he would probably enjoy having such a great deal of attention given to them. Chuckling, Mogdraz then retributes with a smile before your generous offer, one that he is pleased to receive. 'Well, it's certainly different. And pleasant, might I add, that someone would want to simply show my physique some love and care. I mostly find it peculiar myself since this is merely one of my many forms, but nonetheless... It feels great.' It is then that Mogdraz brings his hands over his harness and proceeds to slowly undo its belts, his fiery eyes now locked in a gaze with yours as you turn your full attention to what you are seeing.";
-	WaitLineBreak;
+	wait for any key;
 	project figure of Mogdraz_noharness_icon;
 	say "     Once the whole thing is finally undone, Mogdraz throws the harness to the side in order to fully reveal his muscular torso, flexing every muscle in a way that seems to make each and every single one of them more pronounced and bigger in volume. In fact, you do not think that is how muscles work normally, but a powerful demon such as him would certainly have something in mind to put on a good gun show. 'Well, then... You might approach me, and I promise I won't smother you... much.' Despite the devilish smirk on Mogdraz's face, you trust him to make this a pleasant experience for the both of you, and so, you approach him. With one step after the other, you slowly make your way to just about a few inches of distance from the Demon Lord, who then extends his arms to reach you and pull you to him.";
 	say "     'Didn't you want to feel these muscles? Don't be shy now... I've got plenty of those to satisfy your cravings...' With this said, Mogdraz further pulls your head towards him until he manages to plant your face atop one of his pecs, your lips directly aligned to his pierced nipple that is already perked up and yearning for attention. Then, he grabs one of your hands and places it on his abs, after letting go of it to leave it free to explore, or so it highly suggests that. 'That's a good place to focus your attention... Wrap your lips around that meaty nub and roll your tongue all over it, you'll make this demon very happy.' As you feel up the sides of this muscular torso, you heed Mogdraz's request by immediately rolling your tongue around his dumbbell piercings and nipple, trying to find a good room to suck on it.";
-	WaitLineBreak;
+	wait for any key;
 	project figure of Mogdraz_nakedhard_icon;
 	say "     'Mmh, that's it...' He then embraces you, taking both his big arms and wrapping them around your body in a tight hug, his biceps bulging all nicely as you feel at least one of them across the side of your head. Those pecs, which are covered in a pleasant amount of body hair, feel huge and soft against your face when he is not flexing them, and hard and even bigger when he does. You only care about suckling on that meaty nub as well as you can while your hands squeeze, rub and caress his muscular back and sides. All this caressing leads to Mogdraz popping a boner, as expected, and before you know it, he has his huge red cock out of his pants. 'You might have to take care of something down there, too... If you don't mind...'";
 	say "     Not wanting to leave any part of the Demon Lord unattended, you once more do as he requests and take one of your hands to grab his manhood by his shaft, then proceed to rub it as you continue tugging on his nipples with your mouth, changing from one to another after spending a considerable amount of time on each. By keeping this stimulation fresh and letting those sensations cool down, you manage to keep Mogdraz pleased, and most importantly, throbbing quite hard down there. You decide to bring your other hand over his shoulder and rub him there as well, causing the devil to lean his head backwards and let out a moan from all the pleasure combined. With the handjob you are also now giving him, you cause him to approach his edging point significantly faster...";

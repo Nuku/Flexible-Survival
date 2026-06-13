@@ -7,28 +7,31 @@ Section 0 - Monster Variables, Flags and Markers
 
 Section 1 - Monster Description
 
+to say LatexBobcatDesc:
+	say "     You hear an odd sound coming from nearby, kind of a low buzzing rumble. Looking around warily, you soon spot its source - a strange creature that is now approaching you. The thing is feline in shape, but coated in a layer of light brown latex with speckled markings. The five-and-a-half foot tall creature has limbs with seams and joints that slide over one another, yet it moves in a smooth manner. Between its legs is a very dildo-like erection that buzzes softly, mixing with the living sextoy kitty's purring motor to make the sound you heard. On its back are a pair of rubber-padded handles, likely for use when enjoying its shapely bubble-butt.";
+	say "     The living sex toy's head is reminiscent of a bobcat's, but with several features that catch your eye. Like the rest of him, the cheekruffs and ears are also cast in latex, with the former shaped for comfortable gripping while one is using its suggestively rounded open muzzle. Meanwhile, the kitty toy's ears are pointed and hold metal grills inside them over what must be audio receptors. Its eyes are plastic shells like one would find on plush toys with cat-slit pupils painted on, though they do look around and blink as normal.";
+	say "     '[one of]I come with variable speed settings to meet your every need,' it states[or]Do you need relief? Scanning... Relief [if Libido of Player > 75]required[else if Libido of Player > 25]recommended[else]unnecessary. Administering regardless[end if],' it announces[or]My batteries are fully charged. Increase power,' it states[or]Subject located. Beginning arousal protocol,' it announces[at random]. The creature moves its paw-like hands to its nipples and turns them like knobs, adjusting the speed and intensity of its buzzing dildo cock. And while the living sextoy has no visible balls, lubricated precum starts to dribble from its tip in preparation of fulfilling your needs, whether you want it to or not.";
+
 Section 2 - Monster Victory
 
 to say LoseToLatexBobcat:
-	say "     [if HP of Player > 0]Rather than keep fighting, you allow the latex-covered feline to push you to the ground beneath it[else]Unable to keep fighting, the latex-covered feline manages to push you to the ground beneath it[end if]. It's motor gives a happy, purr-like rumble as it runs its smoothly padded paws over your body. After shedding your gear, it looks you over one last time before ";
 	if Player is female and ( anallevel < 3 or a random chance of 3 in 4 succeeds ):
-		say "getting you on your back and moving atop you. The vibrating dildo at its crotch slides across your pussy, the sensation getting you wet[if HP of Player <= 0] despite yourself[end if] and a small moan escapes your lips.";
-		say "     Your moan only grows louder as the bobcat pushes that rumbling shaft into your cunt. Your hips raise up and tremble a little at the delight his manhood gives[if Cunt Depth of Player > 15] despite its comparatively small size[end if][if HP of Player > 0]. You grab onto the sexbot's hips, urging to fuck you, which it readily responds by doing[else]. You try to push the sexbot's hips away, but it has no trouble continuing in its task to fuck you[end if]. As the sextoy creature picks up the pace and intensifies its vibrator functions, your [if HP of Player > 0]attempts to think are[else]desire to resist is[end if] driven from your mind as the delight the sex toy provides overwhelms you.";
+		say "     [if HP of Player > 0]Rather than keep fighting, you allow the latex-covered feline to push you to the ground beneath it[else]Unable to keep fighting, the latex-covered feline manages to push you to the ground beneath it[end if]. It's motor gives a happy, purr-like rumble as it runs its smoothly padded paws over your body. After shedding your gear, it looks you over one last time before getting you on your back and moving atop you. The vibrating dildo at its crotch slides across your pussy, the sensation getting you wet[if HP of Player <= 0] despite yourself[end if] and a small moan escapes your lips.";
+		say "     Your moan only grows louder as the bobcat pushes that rumbling shaft into your cunt. Your hips raise up and tremble a little at the delight his manhood gives[if Cunt Depth of Player > 15] despite its comparatively small size[end if]. You [if HP of Player > 0]grab onto the sexbot's hips, urging to fuck you, which it readily responds by doing[else]try to push the sexbot's hips away, but it has no trouble continuing in its task to fuck you[end if]. As the sextoy creature picks up the pace and intensifies its vibrator functions, your [if HP of Player > 0]attempts to think are[else]desire to resist is[end if] driven from your mind as the delight the sex toy provides overwhelms you.";
 		WaitLineBreak;
 		say "     The sextoy creature seems like an ideal lover, adjusting the pace, depth and strength of its thrusts to suit your needs through a long and eventually satisfying lovemaking session. It also tweaks the speed and intensity of its rumbling dildo often, raising or lowering them as needed to provide you with the most delight and to build you up to a powerful orgasm. And when you do climax, it is a powerful one that has you crying out while your hips grind up onto that thrusting vibe. Only when you cum does it trigger its own, pumping a hot rush of latex semen into your quivering cunt. And once you're sated, the creature quietly pulls out and sanitizes itself while you bask in the blissful haze of the afterglow.";
 		CreatureSexAftermath "Player" receives "PussyFuck" from "Latex Bobcat";
 	else:
-		say "moving you onto all fours and getting behind you. The vibrating dildo at his crotch slides between your cheeks as the more lube leaks from its tip. Knowing [if HP of Player > 0]what's desired of you, you[else]what's coming, you reluctantly[end if] raise your hips further.";
+		say "     [if HP of Player > 0]Rather than keep fighting, you allow the latex-covered feline to push you to the ground beneath it[else]Unable to keep fighting, the latex-covered feline manages to push you to the ground beneath it[end if]. It's motor gives a happy, purr-like rumble as it runs its smoothly padded paws over your body. After shedding your gear, it looks you over one last time before moving you onto all fours and getting behind you. The vibrating dildo at his crotch slides between your cheeks as the more lube leaks from its tip. Knowing [if HP of Player > 0]what's desired of you, you[else]what's coming, you reluctantly[end if] raise your hips further.";
 		say "     The bobcat starts slowly, easing its rumbling shaft into your tight asshole. The lube and the vibration certainly help, but the sextoy creature seems to know just how much to move and when. The process is largely a pleasant one as your body rapidly adjusts to the intruder. As it goes on, it starts to feel better and better, your body responding to getting butt-fucked with increasing arousal[if HP of Player <= 0] despite your attempts to resist at first[end if]. Soon you're moaning and panting as the sexbot's latex cock buggers your increasingly needy ass. As the bobcat picks up the pace and intensifies its vibrator functions, your [if HP of Player > 0]attempts to think are[else]desire to resist is[end if] driven from your mind as the delight this walking sex toy provides overwhelms you.";
 		WaitLineBreak;
 		say "     The sextoy creature seems like an ideal lover, adjusting the pace, depth and strength of its thrusts to suit your needs through a long and eventually satisfying ass-fucking session. It also tweaks the speed and intensity of its rumbling dildo often, raising or lowering them as needed to provide you with the most delight and to build you up to a powerful orgasm. And when you do climax, it is a powerful one that has you crying out while you push your ass back onto that thrusting vibe. Only when you cum does it trigger its own, pumping a hot rush of latex semen into your clenching asshole. And once you're sated, the creature quietly pulls out and sanitizes itself while you bask in the blissful haze of the afterglow.";
 		CreatureSexAftermath "Player" receives "AssFuck" from "Latex Bobcat";
 
-
 Section 3 - Player Victory
 
 to say BeatTheLatexBobcat:
-	say "     With only a few blows, you're able to defeat the strange creature. It stumbles back and drops to the ground. It doesn't seem particularly injured, but relents and offers its body to you[if Libido of Player > 66]. Feeling very aroused, the opportunity to sate your urges is quite strong[else if Libido of Player > 33]. Feeling pretty aroused, [else]. While not feeling particularly aroused, the opportunity is there should you want to take it[end if]. Shall you make use of this living sextoy for some quick relief?";
+	say "     With only a few blows, you're able to defeat the strange creature. It stumbles back and drops to the ground. It doesn't seem particularly injured, but relents and offers its body to you. [if Libido of Player > 66]Feeling very aroused, the opportunity to sate your urges is quite strong[else if Libido of Player > 33]Feeling pretty aroused, you look forward to the opportunity to sate your urges[else]While not feeling particularly aroused, the opportunity is there should you want to take it[end if]. Shall you make use of this living sextoy for some quick relief?";
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]
@@ -42,52 +45,54 @@ to say BeatTheLatexBobcat:
 		now title entry is "Blowjob";
 		now sortorder entry is 2;
 		now description entry is "Use its cock-sucking muzzle";
-	[]
-	if Player is purefemale:
+	else if Player is female:
 		choose a blank row in table of fucking options;
 		now title entry is "Cunnilingus";
-		now sortorder entry is 3;
+		now sortorder entry is 1;
 		now description entry is "Make it lap your pussy";
 	[]
 	choose a blank row in table of fucking options;
 	now title entry is "Ride it";
-	now sortorder entry is 4;
+	now sortorder entry is 3;
 	now description entry is "Ride its vibrating dick";
 	[]
 	choose a blank row in table of fucking options;
 	now title entry is "Milk it for cum";
-	now sortorder entry is 5;
+	now sortorder entry is 4;
 	now description entry is "Milk the vibrating dick into a bottle";
 	[]
+	sort the table of fucking options in sortorder order;
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
 		say "[link][y] - [title entry][as][y][end link][line break]";
 	say "[link][0] - Let it go[as]0[end link][line break]";
 	while sextablerun is 0:
-		say "Pick the corresponding number> ";
+		say "Pick the corresponding number> [run paragraph on]";
 		get a number;
 		if calcnumber > 0 and calcnumber <= the number of filled rows in table of fucking options:
 			now current menu selection is calcnumber;
 			choose row calcnumber in table of fucking options;
 			say "Shall you [description entry]?";
 			if Player consents:
-				let nam be title entry;
+				LineBreak;
 				now sextablerun is 1;
-				if nam is "Fuck its ass":
-					say "[LatexBobcat_pvsex01]";
-				else if nam is "Blowjob":
-					say "[LatexBobcat_pvsex02]";
-				else if nam is "Cunnilingus":
-					say "[LatexBobcat_Cunni]";
-				else if nam is "Ride it":
-					say "[LatexBobcat_pvsex03]";
-				else if nam is "Milk it for cum":
-					say "[LatexBobcat_Milking]";
+				if title entry is:
+					-- "Fuck its ass":
+						say "[LatexBobcat_pvsex01]";
+					-- "Blowjob":
+						say "[LatexBobcat_pvsex02]";
+					-- "Cunnilingus":
+						say "[LatexBobcat_Cunni]";
+					-- "Ride it":
+						say "[LatexBobcat_pvsex03]";
+					-- "Milk it for cum":
+						say "[LatexBobcat_Milking]";
 		else if calcnumber is 0:
+			LineBreak;
 			say "     The bobcat creature seems disappointed that you don't want to make use of its many features. It gets up and pads off in search of another potential playmate.";
 			now sextablerun is 1;
 		else:
-			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
+			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options], or 0 to exit.";
 
 to say LatexBobcat_pvsex01:
 	say "     Grabbing the feline sextoy by its back handles, you push it down onto all fours. It accepts this demand without further struggle, raising its padded ass and offering you its latex fuckhole. You line yourself up and thrust into that yielding hole[if Cock Length of Player > 24]; it smoothly stretches to accept your [cock size desc of Player] shaft[end if]. It grips and squeezes around your [Cock of Player] cock, lightly milking at it. There's also a soft echo from the its rumbling dildo cock to add to your stimulation.";
@@ -97,7 +102,7 @@ to say LatexBobcat_pvsex01:
 	CreatureSexAftermath "Latex Bobcat" receives "AssFuck" from "Player";
 
 to say LatexBobcat_pvsex02:
-	say "     Taking the feline sextoy by the head, you bring its muzzle to your prick. It gives a rumbling purr and welcomes your [Cock of Player] cock into its open and accommodating muzzle[if Cock Length of Player > 30]. Despite your considerable size, the opening stretches steadily as you thrust into it, accepting your [cock size desc of Player] shaft even as it stretches out the feline's body to do so[else if Cock Length of Player > 15]. Despite your comparatively large size, the opening stretches steadily as you thrust into it, accepting your impressive shaft[else if Cock Length of Player > 7]. Perhaps given your above-average size, the feline eagerly accepts your impressive shaft into its soft muzzle[else]. Your shaft slides easily into its soft muzzle[end if]. With a hand on either side of the latex kitty's head, your fingers slide comfortable into position. Your fingers are so perfectly placed upon cheekruffs that are sized and shaped for your digits that you don't even notice how good the fit is - it just seems right.";
+	say "     Taking the feline sextoy by the head, you bring its muzzle to your prick. It gives a rumbling purr and welcomes your [Cock of Player] cock into its open and accommodating muzzle. [if Cock Length of Player > 30]Despite your considerable size, the opening stretches steadily as you thrust into it, accepting your [cock size desc of Player] shaft even as it stretches out the feline's body to do so[else if Cock Length of Player > 15]Despite your comparatively large size, the opening stretches steadily as you thrust into it, accepting your impressive shaft[else if Cock Length of Player > 7]Perhaps given your above-average size, the feline eagerly accepts your impressive shaft into its soft muzzle[else]Your shaft slides easily into its soft muzzle[end if]. With a hand on either side of the latex kitty's head, your fingers slide comfortable into position. Your fingers are so perfectly placed upon cheekruffs that are sized and shaped for your digits that you don't even notice how good the fit is - it just seems right.";
 	say "     Thus, comfortably gripping the living sextoy's head, you start to thrust and bob the cat's muzzle over your cock. The latex passage is slick and soft, snug but yielding, providing plenty of delightful stimulation. There's also a short, but broad and textured tongue in there to further delight you. Finding the creature's oral fuckhole very enjoyable indeed, you make the most of enjoying it. This kitty's obviously made to be used and is clearly loving being used, so you have no problem doing so. The rumble of the creature's excited dildo cock increases as it tweaks its nipples, sending faint sympathetic vibrations through its mouth and throat.";
 	WaitLineBreak;
 	say "     You work that delightful muzzle back and forth over your [Cock of Player] shaft, sometimes turning its head a little one way or another to shift the points of greatest stimulation. And while you'd love to play with this pleasure-bot much longer, you can only hold out so long being subjected to its expertly designed cocksucking muzzle. As you reach your peak, you pull the bobcat's head forward, driving your full length into it and unleashing your hot, gooey load into the sextoy's [if Ball Size of Player > 5]stretching [end if]belly. After draining your balls, you push its head away and release the creature to walk off happily, molded paws rubbing its [if Ball Size of Player > 5]overstuffed[else if Ball Size of Player > 4]stuffed[else]well-fed[end if] tummy.";
@@ -118,15 +123,14 @@ to say LatexBobcat_Cunni:
 	CreatureSexAftermath "Latex Bobcat" receives "OralPussy" from "Player";
 
 to say LatexBobcat_pvsex03:
-	say "     You roll the defeated feline onto its back and straddle the latex creature. It makes no attempt to oppose you, moving as your hands direct it. With its vibrating dildo cock pointed upwards, you line yourself up and let it tease your waiting hole. ";
 	if Player is female:
-		say "The soft buzz against your wet petals and clit have you moan and excite you all the more. You ease yourself down slowly, letting the rumbling shaft slide into your welcoming cunny.";
+		say "     You roll the defeated feline onto its back and straddle the latex creature. It makes no attempt to oppose you, moving as your hands direct it. With its vibrating dildo cock pointed upwards, you line yourself up and let it tease your waiting hole. The soft buzz against your wet petals and clit have you moan and excite you all the more. You ease yourself down slowly, letting the rumbling shaft slide into your welcoming cunny.";
 		say "     You bounce yourself on the feline sextoy's pole, enjoying the warm pleasure it spreads through your entire crotch thanks to its vibrations. As you settle into a good rhythm, your hands slide over its smooth latex chest. Brushing over its nipples turns them slightly, changing the speed and tempo. You moan in surprise and soon you're tweaking the nip-like knobs this way and that. You adjust the settings up and down as you desire while adjusting your position to suit your shifting needs for stimulation.";
 		WaitLineBreak;
 		say "     Being in control, you're able to take as much time as you feel you can safely spare, drawing out your enjoyment of the pleasure-bot. Eventually though, you're bouncing on its pole hard and fast while revving the speed and intensity of the vibe up and down quickly as you push yourself to a powerful climax. You wriggle your hips as you ride it, making sure you get that delicious buzz right on your g-spot. Your hot juices soak the sextoy's shaft and crotch as you cry out in orgasmic release[if Player is male] and fire thick volleys of cum across the latex feline's body[end if]. Only when you cum does it trigger the bobcat's own release, its motor rumbling and purring loudly as several spurts of latex semen into your quivering cunt. You ease the vibrators controls down as you ride out the last moments of your orgasm and the warm bliss of the afterglow of your powerful orgasm sets in. You flop onto the ground beside the sexbot, which sanitizes itself and departs quietly now that its role is complete.";
 		CreatureSexAftermath "Player" receives "PussyFuck" from "Latex Bobcat";
 	else:
-		say "The soft buzz against your crinkled hole excites you all the more even as it helps your anus relax. There comes a spurt of lubricating fluid as you ease yourself down slowly, gliding the rumbling shaft into your spreading ring.";
+		say "     You roll the defeated feline onto its back and straddle the latex creature. It makes no attempt to oppose you, moving as your hands direct it. With its vibrating dildo cock pointed upwards, you line yourself up and let it tease your waiting hole. The soft buzz against your crinkled hole excites you all the more even as it helps your anus relax. There comes a spurt of lubricating fluid as you ease yourself down slowly, gliding the rumbling shaft into your spreading ring.";
 		say "     You slide yourself up and down on the feline sextoy's pole slowly, enjoying the warm pleasure it spreads through your entire crotch thanks to its vibrations. Over time, you adjust and pick up the pace, soon settling into a good rhythm. As you do, your hands slide over its smooth latex chest and brush over its nipples. Turning them slightly causes a change in the speed and tempo of the vibrations, sending a shiver of delight through your ass[if Player is male] and upon your prostate[end if]. You moan in surprise and soon you're tweaking the nip-like knobs this way and that. You adjust the settings up and down as you desire while adjusting your position to suit your shifting needs for stimulation.";
 		WaitLineBreak;
 		say "     Being in control, you're able to take as much time as you feel you can safely spare, drawing out your enjoyment of the pleasure-bot. Eventually though, you're bouncing on its pole hard and fast while revving the speed and intensity of the vibe up and down quickly as you push yourself to a powerful climax[if Player is male]. You grind down hard every time you lower yourself down to feel that intense buzz against your prostate[end if]. Your asshole clenches hard around the sextoy's shaft as you cry out in orgasmic release[if Player is male]. You fire thick volleys of cum across the latex feline's body[end if]. Only when you cum does it trigger the bobcat's own release, its motor rumbling and purring loudly as several spurts of latex semen into your squeezing rear. You ease the vibrators controls down as you ride out the last moments of your orgasm and the warm bliss of the afterglow of your powerful orgasm sets in. You flop onto the ground beside the sexbot, which sanitizes itself and departs quietly now that its role is complete.";
@@ -142,11 +146,6 @@ to say LatexBobcat_Milking:
 	ItemGain latex bobcat cum by 1;
 
 Section 4 - Monster Stats and Infection Data
-
-to say LatexBobcatDesc:
-	say "     You hear an odd sound coming from nearby, kind of a low buzzing rumble. Looking around warily, you soon spot its source - a strange creature that is now approaching you. The thing is feline in shape, but coated in a layer of light brown latex with speckled markings. The five-and-a-half foot tall creature has limbs with seams and joints that slide over one another, yet it moves in a smooth manner. Between its legs is a very dildo-like erection that buzzes softly, mixing with the living sextoy kitty's purring motor to make the sound you heard. On its back are a pair of rubber-padded handles, likely for use when enjoying its shapely bubble-butt.";
-	say "     The living sex toy's head is reminiscent of a bobcat's, but with several features that catch your eye. Like the rest of him, the cheekruffs and ears are also cast in latex, with the former shaped for comfortable gripping while one is using its suggestively rounded open muzzle. Meanwhile, the kitty toy's ears are pointed and hold metal grills inside them over what must be audio receptors. Its eyes are plastic shells like one would find on plush toys with cat-slit pupils painted on, though they do look around and blink as normal.";
-	say "     '[one of]I come with variable speed settings to meet your every need,' it states[or]Do you need relief? Scanning[if Libido of Player > 75]. Relief required[else if Libido of Player > 25]. Relief recommended[else]. Relief unnecessary. Administering regardless[end if],' it announces[or]My batteries are fully charged. Increase power,' it states[or]Subject located. Beginning arousal protocol,' it announces[at random]. The creature moves its paw-like hands to its nipples and turns them like knobs, adjusting the speed and intensity of its buzzing dildo cock. And while the living sextoy has no visible balls, lubricated precum starts to dribble from its tip in preparation of fulfilling your needs, whether you want it to or not.";
 
 Table of CombatPrep (continued)
 name(text)	PrepFunction(text)
@@ -178,12 +177,12 @@ When Play begins:
 	now victory entry is "[LoseToLatexBobcat]"; [ Text when monster wins. ]
 	now desc entry is "[LatexBobcatDesc]"; [ Description of the creature when you encounter it. ]
 	now face entry is "altered to have the muzzle, ears and cheekruffs of a bobcat[if SkinName of Player is listed in infections of LatexList]. The latter are formed of latex and are shaped for comfortable gripping when someone is holding your head[end if]. Unless talking or consciously trying to hold it shut, your muzzle is normally open in a rounded shape. Your tongue and the inside of your mouth are firm yet pliant[if SkinName of Player is listed in infections of LatexList] latex[end if] and lightly textured, making your mouth enjoyably suitable for providing blowjobs";
-	now body entry is "altered inside and out. You're now only about five and a half feet tall and have a decidedly feline build with paws instead of hands and feet. But the greater changes are the internal ones, with your insides feeling more like they're artificial and now made of latex and mechanical parts rather than living flesh. Rather than having a normal heartbeat, your heart sounds more like a motor softly purring away. Upon your back at the shoulders, you have a set of handle loops made of padded rubber, perfect for holding onto you from behind";
+	now body entry is "altered inside and out. You're now only about five-and-a-half feet tall and have a decidedly feline build with paws instead of hands and feet. But the greater changes are the internal ones, with your insides feeling more like they're artificial and now made of latex and mechanical parts rather than living flesh. Rather than having a normal heartbeat, your heart sounds more like a motor softly purring away. Upon your back at the shoulders, you have a set of handle loops made of padded rubber, perfect for holding onto you from behind";
 	now skin entry is "a layer of spotted brown latex that has replaced your";
 	now tail entry is "You have a short, stubby tail make of semi-firm latex at the base of your spine. Under this tail, you've got a bubble butt with a latex fuckhole between your cheeks.";
 	now cock entry is "[one of]latex[or]smooth[or]dildo-like[or]vibrating[or]vibe[as decreasingly likely outcomes]";
 	now face change entry is "it becomes decidedly feline in form. As your head turns into that of a bobcat, you gain pointed ears and cheek ruffs[if SkinName of Player is listed in infections of LatexList] made of latex textured for comfortable gripping[end if]. Your tongue and the inside of your mouth feel funny as they become lightly textured and your muzzle opens in a rounded, welcoming manner. Your sense of hearing is momentarily thrown off as your inner ears are replaced with audio receptors behind metal grills";
-	now body change entry is "strange alternations occur both inside and out. Your body changes shape, gaining rounded paws instead of hands and feet. Your size changes as well, [if scalevalue of Player < 3]growing to about five and a half feet tall[else if scalevalue of Player is 3]adjusting to about five and a half feet tall[else]shrinking down to about five and a half feet tall[end if]. Your insides shift and change as you become more latex and mechanical parts instead of flesh and bones under your skin. Everything still seems to work roughly the same, though your heartbeat sounds more like motor softly purring now. Uncomfortable bumps form at your shoulders, growing larger until they push up into handle loops made of padded rubber";
+	now body change entry is "strange alternations occur both inside and out. Your body changes shape, gaining rounded paws instead of hands and feet. Your size changes as well, [if scalevalue of Player < 3]growing to about five-and-a-half feet tall[else if scalevalue of Player is 3]adjusting to about five-and-a-half feet tall[else]shrinking down to about five-and-a-half feet tall[end if]. Your insides shift and change as you become more latex and mechanical parts instead of flesh and bones under your skin. Everything still seems to work roughly the same, though your heartbeat sounds more like motor softly purring now. Uncomfortable bumps form at your shoulders, growing larger until they push up into handle loops made of padded rubber";
 	now skin change entry is "light brown latex replaces your skin. You can't help but watch as it spreads until you're left with a smooth coating of it that is lightly speckled with dime-sized darker markings. Your new skin has seams at your joints that smoothly slide over one another";
 	now ass change entry is "short, stubby tail made of latex sticks from the base of your spine. Your ass gets round, firm and fuckable even as your tailhole alters as well, becoming a snug, padded latex hole that's clearly designed for others to fill";
 	now cock change entry is "its flesh alters into smooth latex. It rumbles briefly like a vibrator before settling down for the moment";
@@ -193,7 +192,7 @@ When Play begins:
 	now per entry is 10;
 	now int entry is 8;
 	now cha entry is 14;
-	now sex entry is "nochange"; [ Infection will move the player towards this gender. Current: 'Male' 'Female' 'Both' ]
+	now sex entry is "Nochange"; [ Infection will move the player towards this gender. Current: 'Male' 'Female' 'Both' ]
 	now HP entry is 32; [ The monster's starting HP. ]
 	now lev entry is 3; [ Monster level. (Level x 2) XP for victory. (Level / 2) XP for losing. ]
 	now wdam entry is 7; [ Monster's average damage when attacking. ]
@@ -327,8 +326,6 @@ When Play begins:
 	[Clit Size Adjective is generated by a function and can be used in scenes: very small/small/average/large/very large]
 ]
 
-
-
 Section 5 - Heat Table
 
 Table of infection heat (continued)
@@ -340,57 +337,60 @@ When Play begins:
 	now infect Name entry is "Latex Bobcat";
 	now heat cycle entry is 4;
 	now heat duration entry is 2;
-	now trigger text entry is "You feel a quiver in your loins [if Player is male]as your sextoy cock starts to rumble faintly. Your cunny clenches and grows increasingly slick, becoming ready for use at any moment as well[else]as your cunny clenches and grows increasingly slick, becoming ready for use at any moment[end if][if Player is mpreg_able or anallevel is 3]. Your mouth and asshole also feel... disappointingly empty[else]. Your mouth also feels... disappointingly empty[end if]. You can't help but ponder the wide array of people and creatures you've seen out in the city. Wouldn't it be fun to go out and find one to play with for a while?";
+	now trigger text entry is "You feel a quiver in your loins as your [if Player is male]sextoy cock starts to rumble faintly. Your cunny clenches and grows increasingly slick, becoming ready for use at any moment as well[else]cunny clenches and grows increasingly slick, becoming ready for use at any moment[end if]. Your mouth [if Player is mpreg_able or anallevel is 3]and asshole also feel[else]also feels[end if]... disappointingly empty. You can't help but ponder the wide array of people and creatures you've seen out in the city. Wouldn't it be fun to go out and find one to play with for a while?[line break]";
 	now description text entry is "";
 	now heat start entry is "[bobcatheatstart]";
 	now heat end entry is "[bobcatheatend]";
 	now inheat entry is "[bobcatinheat]";
 	now fheat entry is true;
 	now mpregheat entry is true;
-	now mpregtrigger entry is "You feel a quiver in your loins [if Player is male]as your sextoy cock starts to rumble faintly. Your mouth and asshole feel... disappointingly empty[else]as your mouth and asshole feel... disappointingly empty[end if]. You can't help but ponder the wide array of people and creatures you've seen out in the city. Wouldn't it be fun to go out and find one to play with for a while?";
+	now mpregtrigger entry is "You feel a quiver in your loins as your [if Player is male]sextoy cock starts to rumble faintly. Your [end if]mouth and asshole feel... disappointingly empty. You can't help but ponder the wide array of people and creatures you've seen out in the city. Wouldn't it be fun to go out and find one to play with for a while?[line break]";
 
 to say bobcatheatstart:
 	if Libido of Player < 25:
 		now Libido of Player is ( 50 + Libido of Player ) / 3;
 	else:
-		increase Libido of Player by 5;
+		raise Player Libido by 5;
 
 to say bobcatheatend:
 	say "You release a soft mrowl as your heat passes, the empty ache in your [if Player is female]loins[else]anus[end if] subsiding somewhat and you feel able to hold back your desires for random sex.";
 	now Libido of Player is ( Libido of Player * 9 ) / 10;
-	decrease slutfucked by 2;
-	if slutfucked < 0, now slutfucked is 0;
-	if slutfucked > 6, now slutfucked is 6;
+	if slutfucked > 6:
+		now slutfucked is 6;
+	else if slutfucked > 1:
+		decrease slutfucked by 2;
+	else:
+		now slutfucked is 0;
 
 to say bobcatinheat:
-	increase Libido of Player by 5;
-	if Libido of Player > 99, now Libido of Player is 99;
-	if Libido of Player > 80 and slutfucked > 8 and ( location of Player is not sleepsafe or location of Player is fasttravel ):
-		say "[line break]     A passerby catches your eye and you approach them before you realize what you're doing. Soon you're offering yourself up for sex to them, an offer they accept.";
-		let randombobcatfun be { 1 }; [blowjob]
-		if Player is male and ( FemaleList is not banned or HermList is not banned ):
-			add { 2 } to randombobcatfun; [give vag]
-			if anallevel > 2, add { 3 } to randombobcatfun; [give anal]
-		if Player is female:
-			add { 4, 4 } to randombobcatfun; [rec vag]
-		if Player is mpreg_able:
-			add { 5, 5 } to randombobcatfun; [rec anal]
-		else if anallevel > 1:
-			add { 5 } to randombobcatfun; [rec anal]
-		sort randombobcatfun in random order;
-		if entry 1 of randombobcatfun is 1, say "[bobcatheatsex1]";
-		if entry 1 of randombobcatfun is 2, say "[bobcatheatsex2]";
-		if entry 1 of randombobcatfun is 3, say "[bobcatheatsex3]";
-		if entry 1 of randombobcatfun is 4, say "[bobcatheatsex4]";
-		if entry 1 of randombobcatfun is 5, say "[bobcatheatsex5]";
-		now Libido of Player is 65;
-		now slutfucked is slutfucked / 2;
-		if slutfucked > 6, now slutfucked is 6;
-	else if Libido of Player > 80:
-		increase slutfucked by 1;
-		if a random chance of 1 in 3 succeeds:
-			say "[line break][one of]You moan softly as you feel a strong, compelling urge to be played with[or]Your orifices feel empty and unused; you're tempted to find someone to satisfy your craving[or]You pant and moan as a wave of need passes through your [if Player is female and anallevel > 1]cunny and asshole[else if Player is female]cunny[else]asshole[end if], making you long for someone to fuck you[or]You feel a rush of heat to your sextoy loins and you long to find someone to use them[or]Thoughts of bending over for the next horny mutant you see become increasingly tempting[purely at random].";
-
+	raise Player Libido by 5;
+	if Libido of Player > 80:
+		if slutfucked > 8 and ( there is a dangerous door in location of Player or location of Player is fasttravel or earea of location of Player is not "void" ) and location of Player is not sleepsafe:
+			say "     A passerby catches your eye and you approach them before you realize what you're doing. Soon you're offering yourself up for sex to them, an offer they accept.";
+			let randombobcatfun be { 1 }; [blowjob]
+			if Player is male and ( FemaleList is not banned or HermList is not banned ):
+				add 2 to randombobcatfun; [give vag]
+				if anallevel > 2, add 3 to randombobcatfun; [give anal]
+			if Player is female:
+				add { 4, 4 } to randombobcatfun; [rec vag]
+			if Player is mpreg_able:
+				add { 5, 5 } to randombobcatfun; [rec anal]
+			else if anallevel > 1:
+				add 5 to randombobcatfun; [rec anal]
+			sort randombobcatfun in random order;
+			if entry 1 of randombobcatfun is:
+				-- 1: say "[bobcatheatsex1]";
+				-- 2: say "[bobcatheatsex2]";
+				-- 3: say "[bobcatheatsex3]";
+				-- 4: say "[bobcatheatsex4]";
+				-- 5: say "[bobcatheatsex5]";
+			now Libido of Player is 65;
+			now slutfucked is slutfucked / 2;
+			if slutfucked > 6, now slutfucked is 6;
+		else:
+			increase slutfucked by 1;
+			if a random chance of 1 in 3 succeeds:
+				say "[one of]You moan softly as you feel a strong, compelling urge to be played with[or]Your orifices feel empty and unused; you're tempted to find someone to satisfy your craving[or]You pant and moan as a wave of need passes through your [if Player is female and anallevel > 1]cunny and asshole[else if Player is female]cunny[else]asshole[end if], making you long for someone to fuck you[or]You feel a rush of heat to your sextoy loins and you long to find someone to use them[or]Thoughts of bending over for the next horny mutant you see become increasingly tempting[purely at random].";
 
 to say bobcatheatsex1:		[blowjob]
 	say "[randombodypart]"; [yields 'bodyselector' - see Stripes/Mismatched Chimera.i7x]
@@ -404,10 +404,7 @@ to say bobcatheatsex1:		[blowjob]
 		now colorpick is entry 1 of randomcolorList;
 		rotate randomcolorList;
 	if a random chance of 1 in 10 succeeds, sort randomcolorlist in random order; [10% chance to re-randomize each time]
-	say "     Your lover of the moment is a [if mongender of currentmonster is 3]male[else if mongender of currentmonster is 5]herm[else if mongender of currentmonster is 6]shemale[else if mongender is 7]maleherm[end if] [bodyselector]";
-	if colorpick is not "":
-		say " with a [colorpick] coat";
-	say ". [gche] decides to have a go at your mouth, sliding his cock past your lips. You moan softly and start sucking on it happily. You lick and suck on it as [ghe] grips your head and thrust into your mouth until [ghe] finally cums. You gulp down shot after shot of the hot semen satisfaction at having pleased the [bodyselector] like the horny plaything you feel yourself to happily be right now. The sated [if mongender of currentmonster is 3]male[else if mongender of currentmonster is 5]herm[else if mongender of currentmonster is 6]shemale[else if mongender of currentmonster is 7]maleherm[end if] thanks you for the blowjob and continues on [ghis] way.";
+	say "     Your lover of the moment is a [if mongender of currentmonster is 3]male[else if mongender of currentmonster is 5]herm[else if mongender of currentmonster is 6]shemale[else if mongender is 7]maleherm[end if] [bodyselector][if colorpick is not empty] with a [colorpick] coat[end if]. [gche] decides to have a go at your mouth, sliding his cock past your lips. You moan softly and start sucking on it happily. You lick and suck on it as [ghe] grips your head and thrust into your mouth until [ghe] finally cums. You gulp down shot after shot of the hot semen satisfaction at having pleased the [bodyselector] like the horny plaything you feel yourself to happily be right now. The sated [if mongender of currentmonster is 3]male[else if mongender of currentmonster is 5]herm[else if mongender of currentmonster is 6]shemale[else if mongender of currentmonster is 7]maleherm[end if] thanks you for the blowjob and continues on [ghis] way.";
 
 to say bobcatheatsex2:		[give vaginal]
 	say "[randombodypart]"; [yields 'bodyselector' - see Stripes/Mismatched Chimera.i7x]
@@ -424,10 +421,7 @@ to say bobcatheatsex2:		[give vaginal]
 		now colorpick is entry 1 of randomcolorList;
 		rotate randomcolorList;
 	if a random chance of 1 in 10 succeeds, sort randomcolorlist in random order; [10% chance to re-randomize each time]
-	say "     Your lover of the moment is a [if mongender of currentmonster is 4]female[else if mongender of currentmonster is 5]herm[else if mongender of currentmonster is 7]maleherm[else]cuntboy[end if] [bodyselector]";
-	if colorpick is not "":
-		say " with a [colorpick] coat";
-	say ". Looking you over, [ghe] decides to enjoy your dildo-like cock. You end up straddled and ridden by [ghim], your penis vibrating and rumbling like the sextoy it is, much to [ghis] delight. [gchis] cunt squeezes and quivers around your [cock size desc of Player] rod as the [bodyselector] works [ghis] hips up and down. You're ridden until [ghe] has a long and satisfying orgasm [if currentmonster is cocked]that soaks your crotch and splatters your body with [ghis] semen[else]that leaves your crotch soaked with [ghis] juices[end if]. You cum as well, feeding your hot load to [ghis] hungry cunt as [ghe] rides out [ghis] orgasm before finally pulling off. You're thanked for the ride and left there to recover, feeling like a well-used sex toy and loving it.";
+	say "     Your lover of the moment is a [if mongender of currentmonster is 4]female[else if mongender of currentmonster is 5]herm[else if mongender of currentmonster is 7]maleherm[else]cuntboy[end if] [bodyselector][if colorpick is not empty] with a [colorpick] coat[end if]. Looking you over, [ghe] decides to enjoy your dildo-like cock. You end up straddled and ridden by [ghim], your penis vibrating and rumbling like the sextoy it is, much to [ghis] delight. [gchis] cunt squeezes and quivers around your [cock size desc of Player] rod as the [bodyselector] works [ghis] hips up and down. You're ridden until [ghe] has a long and satisfying orgasm [if currentmonster is cocked]that soaks your crotch and splatters your body with [ghis] semen[else]that leaves your crotch soaked with [ghis] juices[end if]. You cum as well, feeding your hot load to [ghis] hungry cunt as [ghe] rides out [ghis] orgasm before finally pulling off. You're thanked for the ride and left there to recover, feeling like a well-used sex toy and loving it.";
 
 to say bobcatheatsex3:		[give anal]
 	say "[randombodypart]"; [yields 'bodyselector' - see Stripes/Mismatched Chimera.i7x]
@@ -444,10 +438,7 @@ to say bobcatheatsex3:		[give anal]
 		now colorpick is entry 1 of randomcolorList;
 		rotate randomcolorList;
 	if a random chance of 1 in 10 succeeds, sort randomcolorlist in random order; [10% chance to re-randomize each time]
-	say "     Your lover of the moment is a [if mongender of currentmonster is 3]male[else if mongender of currentmonster is 4]female[else if mongender of currentmonster is 5]herm[else if mongender of currentmonster is 6]shemale[else if mongender of currentmonster is 7]maleherm[else]cuntboy[end if] [bodyselector]";
-	if colorpick is not "":
-		say " with a [colorpick] coat";
-	say ". Looking you over, [ghe] decides to enjoy your dildo-like cock[if currentmonster is cunted], but opts to take it in the butt rather than in [ghis] cunt[end if]. You end up straddled and ridden by [ghim], your penis vibrating and rumbling like the sextoy it is, much to [ghis] delight. [gchis] hot, tight asshole clenches and squeezes upon your [cock size desc of Player] rod as the [bodyselector] relishes the anal fucking [ghe][']s getting. You're ridden until [ghe] has a powerful orgasm that has [ghis] back passage clamp down tightly around you while [ghe] [if currentmonster is cocked]splatters your chest with [ghis] semen[else]soaks your crotch with [ghis] hot vaginal juices as they run down [ghis] crotch onto yours[end if]. You cum as well, pumping your hot load into [ghis] well-fucked hole as [ghe] rides out [ghis] orgasm before finally pulling off. You're thanked for the ride and left there to recover, feeling like a well-used sex toy and loving it.";
+	say "     Your lover of the moment is a [if mongender of currentmonster is 3]male[else if mongender of currentmonster is 4]female[else if mongender of currentmonster is 5]herm[else if mongender of currentmonster is 6]shemale[else if mongender of currentmonster is 7]maleherm[else]cuntboy[end if] [bodyselector][if colorpick is not empty] with a [colorpick] coat[end if]. Looking you over, [ghe] decides to enjoy your dildo-like cock[if currentmonster is cunted], but opts to take it in the butt rather than in [ghis] cunt[end if]. You end up straddled and ridden by [ghim], your penis vibrating and rumbling like the sextoy it is, much to [ghis] delight. [gchis] hot, tight asshole clenches and squeezes upon your [cock size desc of Player] rod as the [bodyselector] relishes the anal fucking [ghe][']s getting. You're ridden until [ghe] has a powerful orgasm that has [ghis] back passage clamp down tightly around you while [ghe] [if currentmonster is cocked]splatters your chest with [ghis] semen[else]soaks your crotch with [ghis] hot vaginal juices as they run down [ghis] crotch onto yours[end if]. You cum as well, pumping your hot load into [ghis] well-fucked hole as [ghe] rides out [ghis] orgasm before finally pulling off. You're thanked for the ride and left there to recover, feeling like a well-used sex toy and loving it.";
 
 to say bobcatheatsex4:		[receive vag]
 	say "[randombodypart]"; [yields 'bodyselector' - see Stripes/Mismatched Chimera.i7x]
@@ -461,16 +452,13 @@ to say bobcatheatsex4:		[receive vag]
 		now colorpick is entry 1 of randomcolorList;
 		rotate randomcolorList;
 	if a random chance of 1 in 10 succeeds, sort randomcolorlist in random order; [10% chance to re-randomize each time]
-	let baby be 0;
-	if child is born or gestation of Child is not 0, now baby is 1;
-	say "     Your lover of the moment is a [if mongender of currentmonster is 3]male[else if mongender of currentmonster is 5]herm[else if mongender of currentmonster is 6]shemale[else]maleherm[end if] [bodyselector]";
-	if colorpick is not "":
-		say " with a [colorpick] coat";
-	say ". Intent on your slick cunt, you're moved onto all fours and mounted";
+	let baby be false;
+	if child is born or gestation of Child is not 0, now baby is true;
+	say "     Your lover of the moment is a [if mongender of currentmonster is 3]male[else if mongender of currentmonster is 5]herm[else if mongender of currentmonster is 6]shemale[else]maleherm[end if] [bodyselector][if colorpick is not empty] with a [colorpick] coat[end if]. Intent on your slick cunt, you're moved onto all fours and mounted";
 	if BodyName of Player is "Latex Bobcat":
 		say ". It feels good to gripped by your back handles and pounded by a horny stud";
-	say ". The [bodyselector] drills [ghis] cock into you over and over again, stuffing your needy cunny with throbbing meat. Your hot tunnel squeezes and milks at the thrusting shaft as you strive to please [ghim] with your body. You're pounded until [ghe] has a strong orgasm, pushing deep into you and unloading shot after shot of hot, gooey seed into your vagina to flow into your heat-stricken womb. You cum as well, adding to the sticky mess being made as you're seeded by the horny [if mongender of currentmonster is 3]male[else if mongender of currentmonster is 5]herm[else if mongender of currentmonster is 6]shemale[else]maleherm[end if]. Once spent, [ghe] pulls out and wipes [ghis] cock across one cheek while giving the other a light slap, thanking you for the fuck. The feeling of the stranger's [bodyselector] semen pooled inside you makes you feel so delightfully used.[impregchance]";
-	if baby is 0 and gestation of Child is not 0:
+	say ". The [bodyselector] drills [ghis] cock into you over and over again, stuffing your needy cunny with throbbing meat. Your hot tunnel squeezes and milks at the thrusting shaft as you strive to please [ghim] with your body. You're pounded until [ghe] has a strong orgasm, pushing deep into you and unloading shot after shot of hot, gooey seed into your vagina to flow into your heat-stricken womb. You cum as well, adding to the sticky mess being made as you're seeded by the horny [if mongender of currentmonster is 3]male[else if mongender of currentmonster is 5]herm[else if mongender of currentmonster is 6]shemale[else]maleherm[end if]. Once spent, [ghe] pulls out and wipes [ghis] cock across one cheek while giving the other a light slap, thanking you for the fuck. The feeling of the stranger's [bodyselector] semen pooled inside you makes you feel so delightfully used.[fimpregchance]";
+	if baby is false and gestation of Child is not 0:
 		now FaceName of Child is "[bodyselector]";
 		now BodyName of Child is "[bodyselector]";
 		now SkinName of Child is "[bodyselector]";
@@ -487,20 +475,16 @@ to say bobcatheatsex5:		[receive anal]
 		now colorpick is entry 1 of randomcolorList;
 		rotate randomcolorList;
 	if a random chance of 1 in 10 succeeds, sort randomcolorlist in random order; [10% chance to re-randomize each time]
-	let baby be 0;
-	if child is born or gestation of Child is not 0, now baby is 1;
-	say "     Your lover of the moment is a [if mongender of currentmonster is 3]male[else if mongender of currentmonster is 5]herm[else if mongender of currentmonster is 6]shemale[else]maleherm[end if] [bodyselector]";
-	if colorpick is not "":
-		say " with a [colorpick] coat";
-	say ". Intent on your sexy ass[if Player is female] over your heat-stricken cunt[end if], you're moved onto all fours and mounted";
+	let baby be false;
+	if child is born or gestation of Child is not 0, now baby is true;
+	say "     Your lover of the moment is a [if mongender of currentmonster is 3]male[else if mongender of currentmonster is 5]herm[else if mongender of currentmonster is 6]shemale[else]maleherm[end if] [bodyselector][if colorpick is not empty] with a [colorpick] coat[end if]. Intent on your sexy ass[if Player is female] over your heat-stricken cunt[end if], you're moved onto all fours and mounted";
 	if BodyName of Player is "Latex Bobcat":
 		say ". It feels good to gripped by your back handles and pounded by a horny stud";
 	say ". The [bodyselector] sinks [ghis] cock into your rectum over and over again, stuffing welcoming ass with throbbing meat. Your hot tunnel squeezes and clenches around the thrusting shaft as you strive to please [ghim] with your body. You're pounded until [ghe] has a strong orgasm, pushing deep into you and unloading shot after shot of hot, gooey seed into your bowels. You cum as well, adding to the sticky mess being made as you're seeded by the horny [if mongender of currentmonster is 3]male[else if mongender of currentmonster is 5]herm[else if mongender of currentmonster is 6]shemale[else]maleherm[end if]. Once spent, [ghe] slides [ghis] sticky shaft from your creamy ass and wipes it across your buttcheeks and thanking you for the fuck. The feeling of the stranger's [bodyselector] semen pooled inside you makes you feel so delightfully used.[mimpregchance]";
-	if baby is 0 and gestation of Child is not 0:
+	if baby is false and gestation of Child is not 0:
 		now FaceName of Child is "[bodyselector]";
 		now BodyName of Child is "[bodyselector]";
 		now SkinName of Child is "[bodyselector]";
-
 
 Section 6 - Endings
 

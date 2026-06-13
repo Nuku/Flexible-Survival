@@ -9,49 +9,39 @@ DVtaurcatch is a number that varies. DVtaurcatch is usually -40.
 to say losetoDVtaur0:
 	if Player is herm:		[HERM]
 		let T be a random number between 1 and 6;
-		if T is 1 or T is 2:
+		if T < 3: [1-2]
 			say "[losetoDVtaur1]";
-		else if T is 3 or T is 4:
+		else if T < 5: [3-4]
 			say "[losetoDVtaur2]";
-		else if T is 5:
+		else if T is 5: [5]
 			say "[losetoDVtaur3]";
-		else if T is 6:
+		else: [6]
 			say "[losetoDVtaur4]";
 	else if Player is male:				[MALE]
-		let range be 4;
-		increase range by anallevel;
-		let T be a random number between 1 and range;
-		if T is 1 or T is 2 or T is 3:
+		let T be a random number between 1 and (4 + anallevel);
+		if T < 4: [1-3]
 			say "[losetoDVtaur2]";
-		else if T is 4:
+		else if T is 4: [4]
 			say "[losetoDVtaur3]";
-		else if T is 5:
+		else if T is 5: [5]
 			say "[losetoDVtaur4]";
-		else if T is 6 or T is 7:
+		else: [6-7]
 			say "[losetoDVtaur1]";
 	else if Player is female:				[FEMALE]
 		let T be a random number between 1 and 5;
-		if T is 1 or T is 2 or T is 3:
+		if T < 4: [1-3]
 			say "[losetoDVtaur1]";
-		else if T is 4:
+		else if T is 4: [4]
 			say "[losetoDVtaur3]";
-		else if T is 5:
+		else: [5]
 			say "[losetoDVtaur4]";
 	else:								[NEUTER]
-		let T be a random number between 1 and 2;
-		if T is 1:
-			say "[losetoDVtaur3]";
-		else if T is 2:
-			say "[losetoDVtaur4]";
-
+		say "[one of][losetoDVtaur3][or][losetoDVtaur4][purely at random]";
 
 to say losetoDVtaur1:	[DV fucks]
 	say "     Having defeated you, the dracovixentaur roars triumphantly and presses you to the ground. She rumbles in your ear as she moves to mount you about how [if Player is female]she's going to breed you full of whelps and kits[else][one of]she will pound you until you're overflowing with cum[or]she's been looking for some fun[at random][end if] and thrusts into you with little preamble. Her tapered tip is designed for prying open reluctant holes and pushes its way into your [if Player is female][cunt size desc of Player] pussy with ease[else]tight anus[end if]. The draconic cock thickens as it pushes further into you, each of those ridges on it acting as delightfully pleasurable markers of just how much meat the powerful taur is stuffing inside you.";
 	say "     The dracovixen fucks you with lustful zeal, pounding you until you're nearly insensate with lust before finally pushing her knot into you and tying with you. She releases a triumphant growl as she finally climaxes. She blasts shot after shot of her creamy load into your wanton hole, bloating your [if Player is female]womb[else]belly[end if] with her prodigious output. Finished and tied together, she has an enjoyable time groping and fondling you until the knot has finally shrunk down enough to pop out. After she pulls out, she leaves you on the ground, leaking her cum from your overstuffed and gaping [if Player is female]pussy[else]asshole[end if].[DVimpregchance]";
-	if Player is female:
-		CreatureSexAftermath "Player" receives "PussyFuck" from "Dracovixentaur";
-	else:
-		CreatureSexAftermath "Player" receives "AssFuck" from "Dracovixentaur";
+	CreatureSexAftermath "Player" receives "[if Player is female]Pussy[else]Ass[end if]Fuck" from "Dracovixentaur";
 
 to say losetoDVtaur2:	[DV rides]
 	say "     Having defeated you, the dracovixentaur rumbles excitedly and presses you to the ground. She murrs in your ear about how [one of]she wants you to breed some kits in her[or]much fun she's going to have with you[or]she's been looking for some fun[at random]. You are beyond resisting her advances at this point, wrapping your arms around her and burying your face in her bosom. You kiss and licks at her many nipples, drawing excited yips from the vulpine.";
@@ -71,7 +61,7 @@ to say losetoDVtaur4:	[DV blowjob]
 to say beattheDVtaur:
 	if HP of Sam is 15:
 		say "     You manage to knock Sam down, having beaten the fight out of him.";
-	else if a random number between 1 and 100 < DVtaurcatch and ( Player is not neuter):
+	else if a random number between 1 and 100 < DVtaurcatch and Player is not neuter:
 		say "     The beaten dracovixentaur backs away from you, stumbling somewhat from her injuries. Like the others, she prepares to release a blast of flame to allow her escape, but you rush forward and clamp her muzzle shut in an arm lock. She thrashes briefly before exhaling a cloud of smoke as the flames fail. You press her to the ground and pin down her wings. With her caught, you consider having some fun with her.";
 		if Player is male:
 			say "     You could [link]fuck her (1)[as]1[end link], [link]ride her (2)[as]2[end link], get a [link]blowjob (3)[as]3[end link] or just [link]let her go (0)[as]0[end link].";
@@ -79,6 +69,7 @@ to say beattheDVtaur:
 			while calcnumber < 0 or calcnumber > 3:
 				say "Choice? (0-3)>";
 				get a number;
+			LineBreak;
 			if calcnumber is 1:
 				say "[beatDVtaur1]";
 			else if calcnumber is 2:
@@ -93,11 +84,12 @@ to say beattheDVtaur:
 			while calcnumber < 0 or calcnumber > 2:
 				say "Choice? (0-2)>";
 				get a number;
+			LineBreak;
 			if calcnumber is 1:
 				say "[beatDVtaur2]";
 			else if calcnumber is 2:
 				say "[beatDVtaur4]";
-			else if calcnumber is 0:
+			else:
 				say "[beatDVtaur0]";
 	else:
 		say "     The beaten dracovixentaur backs away from you, stumbling somewhat from its injuries. It opens its maw wide and releases its fire in a wide wave, forcing you back. It takes this opportunity to make its retreat and take to the air. It does not fly steadily, but is able to stay airborne and make its escape.";
@@ -113,10 +105,7 @@ to say beatDVtaur2:
 	say "     Deciding that you might indeed want to have some fun with the hybrid, but on your own terms, you push the fallen taur over onto her side and grab her cock. While it had been softening and receding after her defeat, it quickly rises back to its full glory as you stroke it. She tries to rise so she can mount you, but you push her back down firmly and instead straddle her. With her rear turned over and the rest of her on her side you're able to position yourself overtop of her cock and guide it into your [if Player is female]wet cunt[else]tight pucker[end if]. Her tapered glans slips easily into you, spreading you open for her thickening length below it.";
 	say "     You run your hands through her soft fur and play with her many breasts as you sink more and more of his ridged shaft into you. Each of those ridges provide delightful pleasure to you as they slide across your [if Player is female]pussy lips[else]anal ring[end if] and inner walls. Her hips try to buck and thrust into you, but to little avail. You're the one setting the pace this time and, having gotten very aroused by this point, intent to make the most of it. You vary your pace and position several times[if Player is female], riding through several small orgasms[else], working the pulsing, textured rod against your prostate[end if] while always building yourself higher and not letting the dracovixen get off. And when your massive orgasm finally comes crashing over your in waves of ecstasy, you quickly slam down onto her knot. Forcing that meaty bulge into your [if Player is female]stuffed pussy[else]stretched anus[end if] pushes the hybrid over the edge as well. She roars loudly and cums hard, blasting thick dracovixencum deep inside you, filling your [if Player is female]womb[else]belly[end if] with her virile seed[if Player is male] while you spray your own load across her furry chest[end if].[DVimpregchance]";
 	say "     As you wait for her balls to drain into you and her knot to go down, you turn your attention back to her numerous breasts. You stroke over the large and lovely melons, enjoying their soft, lilac fur and perky, lavender nipples. As you tease and pinch those purple nips, the hybrid's milk starts to flow while yips and rumbles of pleasure come from her. Feeling her knot having shrunk enough to free yourself, you pop off of her with a wet, sticky sound and a flow of cum down your thighs. Once she's gotten up, you give her rear a playful swat and send her on her way.";
-	if Player is female:
-		CreatureSexAftermath "Player" receives "PussyFuck" from "Dracovixentaur";
-	else:
-		CreatureSexAftermath "Player" receives "AssFuck" from "Dracovixentaur";
+	CreatureSexAftermath "Player" receives "[if Player is female]Pussy[else]Ass[end if]Fuck" from "Dracovixentaur";
 
 to say beatDVtaur3:
 	say "     Deciding that you might indeed want to have some fun with the hybrid, but on your own terms, you keep a grip on the dracovixen and move around in front of her. Grabbing her horns, you pull her face between your legs so her muzzle's squarely at your cock. Finding herself face to penis with you, she becomes more accommodating and gives your cock a few slow licks. Eager for more, you pull her head forward and order her to get sucking. The powerful herm accepts her punishment for being beaten with little reluctance, opening her draconic muzzle and accepting your [Cock of Player] cock into its warm embrace.";
@@ -131,11 +120,11 @@ to say beatDVtaur4:
 to say beatDVtaur0:
 	say "     Not in the mood to play with the purple dracovixentaur, you give her ass a hard swat and warn her not to get in your way again. She yips at the swat and slinks a few feet away before taking to the air and flying off.";
 
-Section 2 - Creature Insertion
-
 to say DVtaurdesc:
 	say "     Before you is a hybrid taur creature, definitely one of Sam's many descendants. The creature's draconic head has a slender, pointed muzzle with a foxish look on it. Its lavender scales change to lilac fur at the back of its head as they approach the base of the ivory horns which jut from the back of its head. Aside from the pair at the top, there are three smaller horns on each side. Behind those are a pair of vulpine ears and flowing hair, both lilac in color. Its upper body is generally human in shape, but covered in more lilac fur over the shoulders and the front and in lavender scales protecting the rest. It is quite curvaceous, with an ample bosom, slender waist and round hips blending into its tauric lower half. But you can also see hidden strength in it as well, toned muscles and abs under those scales and fur.";
 	say "     Its lower body is a similar mix of dragon and fox, a sleek but powerful beast with shapely limbs and a powerful frame to support its weight. Similarly covered in a mix of scales and fur, most of its body is armored in scales with fur at its underside and covering its taloned, vulpine paws. Atop the back of its tauric body are a pair of draconic wings that are folded alongside its sides at the moment. Its fluffy fox tail ends in a spaded tip, warning you there's a powerful, draconic tail lurking beneath that fluff. Beneath that tail is her damp pussy and plump sheath and balls, the arousing scent of which is being wafted around by her fluffy tail. Its ridged cock has started to emerge from that furry sheath, growing hard in anticipation of some lustful fun with its current prey. Along her underbelly, she has three pairs of smaller breasts with perky, lavender nipples.";
+
+Section 2 - Creature Insertion
 
 Table of CombatPrep (continued)
 name(text)	PrepFunction(text)
@@ -182,7 +171,7 @@ When Play begins:
 	now body change entry is "your body shifts and bends unnaturally into two sections. The upper half reforms into a feminine body with sexy curves and a fit physique. The lower section becomes that of a four-legged creature with a powerful frame and taloned paws for feet. Your hands are a cross between these and normal hands. Finding yourself with a dracovixentaur body like Sam's, your mind quickly adjusts to compensate for your new quadrupedal form";
 	now skin change entry is "your skin grows thick and hard in places, forming heavy blue scales across limbs, back and sides. Across your chest[if BodyName of Player is listed in infections of TaurList], underbelly[end if], shoulders, hands and feet";
 	now ass change entry is "strange twinges run up and down your spine. Each time these tingles run down, they seem to travel further and further down until the growth of your new, dracovulpine tail is complete";
-	now cock change entry is "pulses and throbs with need. As you watch, it changes shape and becomes more tapered and gains a pointed, conical glans for pushing into its prey. Ridges form along the length of your cock for added stimulation as a knot swells at its base. Below your knot, your flesh reshapes itself to form a furry sheath to house your maleness. You find yourself looking forward to putting your new tool to use";
+	now cock change entry is "it pulses and throbs with need. As you watch, it changes shape and becomes more tapered and gains a pointed, conical glans for pushing into its prey. Ridges form along the length of your cock for added stimulation as a knot swells at its base. Below your knot, your flesh reshapes itself to form a furry sheath to house your maleness. You find yourself looking forward to putting your new tool to use";
 	now str entry is 16; [ These are now the creature's stats... ]
 	now dex entry is 20; [ ...and are only altered onto the player via Shifting or the Mighty Mutation feat ]
 	now sta entry is 14; [ These values may be used as part of alternate combat.]
@@ -323,8 +312,6 @@ When Play begins:
 	[Clit Size Adjective is generated by a function and can be used in scenes: very small/small/average/large/very large]
 ]
 
-
-
 Section 3 - Alt Combat
 
 Table of Critter Combat (continued)
@@ -333,11 +320,10 @@ name	combat (rule)	preattack (rule)	postattack (rule)	altattack1 (rule)	alt1chan
 
 this is the DVtaurpounce rule:		[double-damage pouncing]
 	choose row MonsterID from the Table of Random Critters;
-	let rangenum be ( 80 - ( peppereyes * 4 ) );
-	let dam be ( ( wdam entry times a random number from rangenum to 120 ) / 57 ); [+75% damage]
+	let dam be ( wdam entry times a random number from ( 80 - ( peppereyes * 4 ) ) to 120 ) / 57; [+75% damage]
 	if HardMode is true and a random chance of 1 in ( 10 + peppereyes ) succeeds:
 		now dam is (dam * 150) divided by 100;
-		say "The enemy finds a particular vulnerability in your defense - Critical Hit![line break]";
+		say "The enemy finds a particular vulnerability in your defense - [bold type]italic Hit![roman type][line break]";
 	say "The [one of]dracovixen[or]dracovixentaur[or]hybrid creature[purely at random] growls and pounces atop you, [one of]knocking[or]pushing[or]shoving[purely at random] you down briefly. Its many talons claw at you while she giggles and presses her many breasts down atop you while roaring playfully. This [one of]painfully[or]viciously[or]devastatingly[purely at random] [one of]arousing[or]sexy[purely at random] assault does [special-style-2][dam][roman type] damage and aroused you further!";
 	now damagein is dam;
 	say "[noshieldabsorbancy]"; [unable to use shield while pinned]
@@ -352,7 +338,6 @@ this is the DVtaurpounce rule:		[double-damage pouncing]
 	if "Horny Bastard" is listed in feats of Player, increase Libido of Player by 1;
 	if "Cold Fish" is listed in feats of Player, decrease Libido of Player by 1;
 	say "You are [descr].";
-
 
 this is the DVtaurscent rule:
 	choose row MonsterID from the Table of Random Critters;
@@ -371,12 +356,12 @@ this is the DVtaurscent rule:
 		increase Libido of Player by a random number from 1 to 4;
 		if "Horny Bastard" is listed in feats of Player, increase Libido of Player by a random number between 0 and 1;
 		if "Cold Fish" is listed in feats of Player, decrease Libido of Player by a random number between 0 and 1;
-		LineBreak;
-		if HP of Player < 1:
-			if HP of Player <= 0, now fightoutcome is 20;
-			if Libido of Player >= 110, now fightoutcome is 21;
+		if HP of Player < 1 or Libido of Player > 109:
+			if HP of Player <= 0:
+				now fightoutcome is 20;
+			else:
+				now fightoutcome is 21;
 			lose;
-
 
 Section 4 - Endings
 
@@ -387,11 +372,11 @@ Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered
 This is the Dracovixentaur Infection rule:
 	if Player has a body of "Dracovixentaur":
 		if humanity of Player < 10:
-			if HP of Sam >= 10 and HP of Sam <= 29:
+			[if HP of Sam >= 10 and HP of Sam <= 29:
 				say "***Succumb w/Sam as Dragontaur. Should not be possible.";
 			else if HP of Sam >= 30 and HP of Sam <= 49:
-				say "***Succumb w/Sam as Vixentaur. Should not be possible.";
-			else if HP of Sam >= 50 and HP of Sam <= 69:
+				say "***Succumb w/Sam as Vixentaur. Should not be possible.";]
+			if HP of Sam >= 50 and HP of Sam <= 69:
 				if Player is herm:
 					say "     As you lose your humanity to your increasingly dracovixentaur nature, you feel your lustful drive to breed grows stronger. You and Sam pair up as a couple of increasingly feral hybrids. While Sam does maintain more of her old self than you do in the end, she's more than happy to stay in the city and turn the library into her personal lair. You breed with the dracovixentaur often, swapping roles as top or bottom to ensure you're both well bred. You do make forays with her out into the city often, siring plenty of offspring of your own in the many sexy females and herms you find out there. While the many offspring you both have are a collection of dragontaurs, vixentaurs and dracovixentaurs, the number of dracovixentaurs in the area grow to be the most frequent of the three.";
 				else if Player is female:
@@ -412,6 +397,5 @@ This is the Dracovixentaur Infection rule:
 			else if HP of Sam >= 50 and HP of Sam <= 69:
 				say "     You are able, through the strong connection Sam shares with you, to convince the dracovixentaur to leave the city with you once the military forces move in to extract the survivors. There is some interest over your unusual forms, but Sam's university's connections to RSX keep you from too much unwanted scrutiny. There is also much interest over the data Sam's managed to collect in her time in the city, [if hospquest is 13 and HP of Doctor Matt >= 12]which you do arrange to quietly share with Dr. Matt to assist in his research efforts[else if hospquest > 13]which you do manage to slip a copy of to Dr. Mouse before departing[else]but RSX's pull is able to keep it from being confiscated[end if]. The reward you earn for this is quite sizable, more than Sam had originally been anticipating, having gained Rick's share and more due to the exceptional success of her rather enthusiastic work.";
 				say "     You and Sam continue her work, entering other infected hot spots to collect samples and classify the creatures within, all while getting to enjoy their myriad variety. Your collective strength and experience make you able to deal with most anything you find while exploring. And if clutches of dragontaurs, litters of vixentaurs and broods of dracovixentaurs start popping up in those areas as well, then all the better[if Player is herm]. As Sam's mate, you enjoy siring several offspring in her as well as having her breed you with them, helping the spread of the strong dragontaurs, sexy vixentaurs and herm dracovixentaurs wherever you go[else if Player is male]. As Sam's mate, you enjoy siring several clutches and litters in her as well, helping the spread of the strong dragontaurs, sexy vixentaurs and herm dracovixentaurs wherever you go[else if Player is female]. As Sam's mate, you enjoy getting bred with many of her offspring as well, helping the spread of the strong dragontaurs, sexy vixentaurs and herm dracovixentaurs wherever you go[end if].";
-
 
 Dracovixentaur ends here.

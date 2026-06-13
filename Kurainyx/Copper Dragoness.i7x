@@ -5,9 +5,6 @@ Version 2 of Copper Dragoness by Kurainyx begins here.
 
 Section 1 - Creature Responses
 
-to say CopperDragonessDesc:
-	say "     Loud rustling is the only warning you get before a truck-sized dragon bursts through a nearby thicket of trees. Its scales are a reddish-brown, having a metallic sheen that makes them look like copper while two horns jut out from the top of its head with frills adorning the sides. Noting the curves and sleek form of the beast, you realize that the dragon is a dragoness, a dragoness who is leering at you with a hungry glint in her eyes as she unfurls her wings to charge toward you.";
-
 to say LoseToCopperDragoness:
 	if a random chance of 1 in 2 succeeds:	[unbirth]
 		if scalevalue of Player > 4:	[Too big for unbirth]
@@ -54,29 +51,28 @@ to say BeatCopperDragoness:
 			choose row calcnumber in table of fucking options;
 			say "[title entry]: [description entry]?";
 			if Player consents:
-				let nam be title entry;
+				LineBreak;
 				now sextablerun is 1;
-				if nam is "Tend to the dragoness's cunt":
-					say "[CopperDragonessVictoryCunt]";
-				if nam is "Play with the dragoness's ass":
-					say "[CopperDragonessVictoryAss]";
-			wait for any key;
+				if title entry is:
+					-- "Tend to the dragoness's cunt":
+						say "[CopperDragonessVictoryCunt]";
+					-- "Play with the dragoness's ass":
+						say "[CopperDragonessVictoryAss]";
 		else if calcnumber is 0:
+			LineBreak;
 			now sextablerun is 1;
 			say "     The dragoness whines in disappointment when you turn to leave, but she doesn't make a move to follow you. After a bit of walking, you don't see any sign of her, and you resume your exploration.";
-			wait for any key;
 		else:
-			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
-	clear the screen and hyperlink list;
+			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options], or 0 to exit.";
 
 to say CopperDragonessVictoryCunt:
 	say "     It takes a few moments, but the dragoness eventually understands your gestures to lay on her back. The scaly female obeys without a fuss, although you're pretty sure that it's not just because you bested her in combat, given the glint of lust you see in her eyes. You slowly approach the dragoness and straddle her tail, offering you a front row seat of her gaping pussy. Up close, you can see that her cunt is already drenched, the pulsating pink walls almost begging you for your touch, and the arousing scent of her sex stirs a heat within you. Enticed by the promising pussy, you mash your face up against her lower lips, the dragoness rumbling softly in satisfaction as your tongue reaches inside of her. As you lick the velvety folds, you taste an odd yet enjoyable mix of sweet, salty, and spicy, and it only drives you to probe for more. However, the dragoness whines needily, your ministrations only arousing her further.";
 	say "     Realizing that your tongue is woefully insufficient to please the larger female, you withdraw your face and sink your arms inside of the slit, going all the way up to your elbows and eliciting an audible growl of delight from the dragoness. As you pump your arms in and out of the dragoness's slit, you suddenly freeze when one of her claws brushes across your back. The claw then begins nudging you gently, and you realize that she is simply encouraging your ministrations. However, soon after you resume moving your arms, her pushing becomes more incessant, urging you for more. With your arms inside of the dragoness, you are both literally and figuratively in too deep to give up now.";
 	if scalevalue of Player > 4:	[Size 5 can only do fisting scene]
+		WaitLineBreak;
 		say "[CopperDragonessFistCunt]";
 	else:
-		say "     [bold type]You can either continue using your arms, or you could try going into the dragoness and pleasure her from within.[roman type][line break]";
-		LineBreak;
+		say "[line break]     [bold type]You can either continue using your arms, or you could try going into the dragoness and pleasure her from within.[roman type][line break]";
 		say "     ([link]Y[as]y[end link]) - Get even more hands-on with the dragoness.";
 		say "     ([link]N[as]n[end link]) - Delve into the dragoness to please her.";
 		if Player consents:
@@ -84,16 +80,19 @@ to say CopperDragonessVictoryCunt:
 			say "[CopperDragonessFistCunt]";
 		else:
 			LineBreak;
-			say "[CopperDragonessEnterCunt]";
+			say "     Thrusting your hands deep inside of the slit, you slowly part the pliable walls as you push forward, and the dragoness's moans of pleasure grow louder and louder as you crawl inside of her. You power through the contracting muscles, venturing deeper into the living tunnel until you're sure that you won't easily slip out before your intended work is done. With barely any light coming from where you came from, your other senses sharpen as they take in the twisted environment you willingly entered. The intoxicating musk of the dragoness's sex hits you full blast now that you're right in the source of it, and the strong yet spongy flesh of her inner walls presses into you from all sides. The warmth and comforting caresses of your surroundings almost make you want to relax into the dragoness's embrace, but you remind yourself that you came in here for a reason.";
+			say "     The surrounding flesh hugs you tightly yet still offers enough freedom for you to wiggle around, allowing you to rub your whole body into the dragoness's inner walls. The large female moans in delight while you act as a vibrating dildo, pleasuring her from the inside with your movements. Every now and then, you make sure to concentrate your efforts on a different part of the beast's depths, listening to her howls of delight so that you can find her erogenous zones. All the while, the chamber gets warmer, and more of her arousal leaks from the walls, slickening your movements while also stoking the fires of your own lust.";
+			say "     Sensing the dragoness nearing her peak, as well as feeling your own, you grind your [if Player is male]cock[smn][else if Player is female]cunt[sfn][else]crotch[end if] against her most sensitive spot, and you achieve your climax just as the dragoness does. While you're writhing in the throes of your own orgasm, the walls tightly clench down on your pleasure-wracked body, and you can hear the dragoness roar in ecstasy right before you are swiftly ejected from her cunt in a torrent of draconian femcum. You fall to the ground and are unable to get up for a few moments as a waterfall of her juices rains down on you, soaking every inch of you in her heady arousal. When the shower of lust finally ends, you shakily get back up on your feet. The dragoness's head approaches your soaked form and begins licking you affectionately, both as a sign of appreciation as well as helping to clean you of her juices. When you're sufficiently cleaned, the satisfied dragoness walks away, leaving you to resume your explorations.";
+			LibidoLoss 40;
 
 to say CopperDragonessVictoryAss:
 	say "     Wanting to play with some draconic booty, you start walking around the larger female, the dragoness watching you with a mix of wariness and curiosity. When you come face to face with her butt, you detect a faint but alluring scent emanating from her rump, and combined with the lovely sight of her curvaceous, ample ass, you find yourself drawn to the scaly derriere. The dragoness rumbles in satisfaction when you place your hands on her rear and lean your face forward to begin licking around her asshole. As you trace your tongue along the edge of her sphincter, a musky flavor lingers on your taste buds, making you want more as you eagerly lavish the dragoness with your oral attention. However, even though you are quite content with rimming the titanic ass, the dragoness begins to whine needily, your small tongue giving her little relief and actually only making her more horny.";
 	say "     Rethinking your plan to service the dragoness, you pull your face back and reach forward with one hand, carefully inserting it into the beast's hole. Taut muscles snugly hug your arm as you slowly slip it inside, and the lusty reptile growls in approval from the larger insertion. It takes a bit of effort to power through the tight hole, but you eventually manage to get a pistoning motion going with your arm as you start fisting the dragoness's ass with gusto. Amidst the larger female's moans of pleasure, you catch the smoldering gaze that she is giving you, urging you to give her more and sate her lust. With your arms inside of the dragoness, you are both literally and figuratively in too deep to give up now.";
 	if scalevalue of Player > 4:	[Size 5 can only do fisting scene]
+		WaitLineBreak;
 		say "[CopperDragonessFistAss]";
 	else:
-		say "     [bold type]You can either add your other hand into the mix, or you can try pushing your entire body inside of her.[roman type][line break]";
-		LineBreak;
+		say "[line break]     [bold type]You can either add your other hand into the mix, or you can try pushing your entire body inside of her.[roman type][line break]";
 		say "     ([link]Y[as]y[end link]) - Get even more hands-on with the dragoness.";
 		say "     ([link]N[as]n[end link]) - Delve into the dragoness to please her.";
 		if Player consents:
@@ -101,31 +100,20 @@ to say CopperDragonessVictoryAss:
 			say "[CopperDragonessFistAss]";
 		else:
 			LineBreak;
-			say "[CopperDragonessEnterAss]";
-
+			say "     Using both of your hands, you push apart the rim of the dragoness's asshole and stick your head inside of the heated tunnel. The musk is more potent at its source, urging you to continue pushing forward. As the ring of the puckered hole reaches your shoulders, you find yourself having some trouble pushing in, that is until you feel the dragoness's claw on your lower half, gently pushing you in as she croons blissfully. Once your shoulders finally slip into the tight hole, the dragoness's claw leaves you as the clenching muscles of her rear take over and slowly draw in the rest of your body. Slick, firm flesh ferries you deeper, and with your movements limited by the hot, living tube, you briefly wonder if you were perhaps a bit overzealous in your attempts to please the dragoness.";
+			say "     Fortunately, the ride soon comes to a stop, and you're not too deep into the bowels of the beast, even though barely any light filters in from where you came in. The warmth surrounding you along with the pulsating walls caressing your body tempts you to relax, but you remind yourself that you came in here for a reason. Despite the tight tube of muscles squeezing down on you, there is just enough give for you to wriggle about. Even though your movements are restricted, you do your best to rub yourself along every inch of your surroundings, and before long, you can hear the dragoness rumble in pleasure from your squirming. The heat and musk intensifies in the tight confines, driving your own lust, and you begin grinding your [if Player is male]cock[smn][else if Player is female]cunt[sfn][else]crotch[end if] against the surrounding supple flesh.";
+			say "     With the air thick with horny draconic musk, you achieve your climax first, but the dragoness is close behind. You practically feel her climax when the walls tightly clench down on your pleasure-wracked body, the dragoness roaring in ecstasy. The feeling of being squeezed and smothered from all sides by supple flesh is oddly pleasant as you ride out the dragoness's orgasm. When the horny female comes down from her high, the surrounding walls relax as you are slowly pushed out. You eventually emerge from the beast's rear and are unceremoniously dumped onto the ground, exhausted from your ordeal. After a few moments for you, as well as the dragoness, to recover, you shakily get back up, and the dragoness moves her snout toward you, giving you a lick of affection before she goes on her way and leaves you to resume your exploration.";
+			LibidoLoss 40;
 
 to say CopperDragonessFistCunt:
 	say "     Redoubling your efforts, you thrust your arms even deeper into the dragoness's cunt until your shoulders are rubbing against her outer lips, and the velvety, slick walls of her humid depths squeeze down on your limbs, welcoming your touch. The scaly female croons with delight as you relentlessly pound into her, the heady scent of her sex growing more potent and egging you on. The giant pussy gets even wetter thanks to your efforts, slickening your arms and making it even easier for them to go in and out of her quim. As the dragoness starts moaning loudly and quivering with her approaching climax, you give one final push, plunging your arms deep inside of her, and in your fervor, part of your upper body also slips inside of the hot, pink tunnel.";
 	say "     The walls within tightly clench down, trapping half of your body within the pussy, but it only lasts for a moment before you hear the dragoness roar in pleasure, and you are sent flying backwards onto the ground when a torrent of femcum gushes out of her cunt. You are unable to get up for a few moments as a waterfall of her juices rains down on you, soaking every inch of you in her heady arousal. When the shower of lust finally ends, you shakily get back up on your feet. The dragoness's head approaches your soaked form and begins licking you affectionately, both as a sign of appreciation as well as helping to clean you of her juices. When you're sufficiently cleaned, the satisfied dragoness walks away, leaving you to resume your explorations.";
 	LibidoBoost 20;
 
-to say CopperDragonessEnterCunt:
-	say "     Thrusting your hands deep inside of the slit, you slowly part the pliable walls as you push forward, and the dragoness's moans of pleasure grow louder and louder as you crawl inside of her. You power through the contracting muscles, venturing deeper into the living tunnel until you're sure that you won't easily slip out before your intended work is done. With barely any light coming from where you came from, your other senses sharpen as they take in the twisted environment you willingly entered. The intoxicating musk of the dragoness's sex hits you full blast now that you're right in the source of it, and the strong yet spongy flesh of her inner walls presses into you from all sides. The warmth and comforting caresses of your surroundings almost make you want to relax into the dragoness's embrace, but you remind yourself that you came in here for a reason.";
-	say "     The surrounding flesh hugs you tightly yet still offers enough freedom for you to wiggle around, allowing you to rub your whole body into the dragoness's inner walls. The large female moans in delight while you act as a vibrating dildo, pleasuring her from the inside with your movements. Every now and then, you make sure to concentrate your efforts on a different part of the beast's depths, listening to her howls of delight so that you can find her erogenous zones. All the while, the chamber gets warmer, and more of her arousal leaks from the walls, slickening your movements while also stoking the fires of your own lust.";
-	say "     Sensing the dragoness nearing her peak, as well as feeling your own, you grind your [if Player is male]cock[smn][else if Player is female]cunt[sfn][else]crotch[end if] against her most sensitive spot, and you achieve your climax just as the dragoness does. While you're writhing in the throes of your own orgasm, the walls tightly clench down on your pleasure-wracked body, and you can hear the dragoness roar in ecstasy right before you are swiftly ejected from her cunt in a torrent of draconian femcum. You fall to the ground and are unable to get up for a few moments as a waterfall of her juices rains down on you, soaking every inch of you in her heady arousal. When the shower of lust finally ends, you shakily get back up on your feet. The dragoness's head approaches your soaked form and begins licking you affectionately, both as a sign of appreciation as well as helping to clean you of her juices. When you're sufficiently cleaned, the satisfied dragoness walks away, leaving you to resume your explorations.";
-	LibidoLoss 40;
-
 to say CopperDragonessFistAss:
 	say "     With a bit of shifting around, you manage to shove your other arm into the puckered hole, the tight tunnel eagerly accepting your offering as it squeezes down on both of your limbs. It takes a bit more time than before to start fisting the dragoness, but once you do, the delighted moans you hear are worth the extra work. One arm pulls out of the dragoness's sphincter, all the way to your wrist, while the other plunges deeper into the beast's bowels. By alternating the movements of your arms, you create a constant pumping motion that massages and kneads the inner walls of the winged reptile. If the lustful pants that the dragoness is making don't make it obvious enough that your ministrations are being well-received, her nearby tail is also flicking around in ecstasy. Fortunately, her thrashing tail is far enough to let you concentrate on servicing the larger female, the heat of her rear tunnel growing hotter by the second as her peak rapidly approaches.";
 	say "     Sensing the upcoming climax, you start moving both arms in sync, pistoning them in and out at the same time, before giving it your all in one final deep thrust that sinks your arms all the way up to your shoulders. The dragoness roars in pleasure, and the muscles in her rear clench down on your arms, trapping you, while your body is smooshed by her bodacious booty clenching down on you from both sides. You relish the divine feeling of being smothered by soft scales and plushy draconic ass, but all too soon, the relieved dragoness comes down from her orgasm, and you are released when her rear stops clenching. However, with how tiring the ordeal was, your arms being trapped in her ass was the only thing holding you up, so when your arms involuntary slip out of the tight tunnel, you flop backwards onto the ground with exhaustion. After a few moments for you, as well as the dragoness, to recover, you shakily get back up, and the dragoness moves her snout toward you, giving you a lick of affection before she goes on her way and leaves you to resume your exploration.";
 	LibidoBoost 20;
-
-to say CopperDragonessEnterAss:
-	say "     Using both of your hands, you push apart the rim of the dragoness's asshole and stick your head inside of the heated tunnel. The musk is more potent at its source, urging you to continue pushing forward. As the ring of the puckered hole reaches your shoulders, you find yourself having some trouble pushing in, that is until you feel the dragoness's claw on your lower half, gently pushing you in as she croons blissfully. Once your shoulders finally slip into the tight hole, the dragoness's claw leaves you as the clenching muscles of her rear take over and slowly draw in the rest of your body. Slick, firm flesh ferries you deeper, and with your movements limited by the hot, living tube, you briefly wonder if you were perhaps a bit overzealous in your attempts to please the dragoness.";
-	say "     Fortunately, the ride soon comes to a stop, and you're not too deep into the bowels of the beast, even though barely any light filters in from where you came in. The warmth surrounding you along with the pulsating walls caressing your body tempts you to relax, but you remind yourself that you came in here for a reason. Despite the tight tube of muscles squeezing down on you, there is just enough give for you to wriggle about. Even though your movements are restricted, you do your best to rub yourself along every inch of your surroundings, and before long, you can hear the dragoness rumble in pleasure from your squirming. The heat and musk intensifies in the tight confines, driving your own lust, and you begin grinding your [if Player is male]cock[smn][else if Player is female]cunt[sfn][else]crotch[end if] against the surrounding supple flesh.";
-	say "     With the air thick with horny draconic musk, you achieve your climax first, but the dragoness is close behind. You practically feel her climax when the walls tightly clench down on your pleasure-wracked body, the dragoness roaring in ecstasy. The feeling of being squeezed and smothered from all sides by supple flesh is oddly pleasant as you ride out the dragoness's orgasm. When the horny female comes down from her high, the surrounding walls relax as you are slowly pushed out. You eventually emerge from the beast's rear and are unceremoniously dumped onto the ground, exhausted from your ordeal. After a few moments for you, as well as the dragoness, to recover, you shakily get back up, and the dragoness moves her snout toward you, giving you a lick of affection before she goes on her way and leaves you to resume your exploration.";
-	LibidoLoss 40;
-
 
 Section 2 - Creature Insertion
 
@@ -162,7 +150,7 @@ When Play begins:
 	now attack entry is "[one of]The dragoness bowls you over and grinds her crotch on your prone form[or]A powerful beat of the dragoness's wings creates a gust of wind that knocks you down[or]With surprising speed, the dragoness whirls around, her tail whipping around and slamming into you[at random]."; [ Successful attack message ]
 	now defeated entry is "[BeatCopperDragoness]"; [ Text when monster loses. Change 'Behemoth' as above. ]
 	now victory entry is "[LoseToCopperDragoness]"; [ Text when monster wins. Change 'Behemoth' as above. ]
-	now desc entry is "[CopperDragonessDesc]"; [ Description of the creature when you encounter it. ]
+	now desc entry is "     Loud rustling is the only warning you get before a truck-sized dragon bursts through a nearby thicket of trees. Its scales are a reddish-brown, having a metallic sheen that makes them look like copper while two horns jut out from the top of its head with frills adorning the sides. Noting the curves and sleek form of the beast, you realize that the dragon is a dragoness, a dragoness who is leering at you with a hungry glint in her eyes as she unfurls her wings to charge toward you.[line break]"; [ Description of the creature when you encounter it. ]
 	now face entry is ""; [ Face description, format as "Your face is [Face of Player]." ]
 	now body entry is ""; [ Body description, format as "Your body is [Body of Player]." ]
 	now skin entry is ""; [ Skin. Format as "Looking at yourself, your body is covered in [Skin of Player] skin." ]
@@ -197,7 +185,7 @@ When Play begins:
 	now libido entry is 60; [ Target libido the infection will rise towards. ]
 	now loot entry is ""; [ Dropped item, blank for none. Case sensitive. ]
 	now lootchance entry is 0; [ Percentage chance of dropping loot, from 0-100. ]
-	now MilkItem entry is "copper dragoness milk"; [ Item to be given to the player if they have this infection and milk themselves. ]
+	now MilkItem entry is ""; [ Item to be given to the player if they have this infection and milk themselves. ]
 	now CumItem entry is ""; [ Item to be given to the player if they have this infection and jerk off. ]
 	now TrophyFunction entry is "-"; [ Function to generate a list of optional loot items, of which the player can choose one after victory. ]
 	now scale entry is 5; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
@@ -312,6 +300,5 @@ When Play begins:
 	now Clit Size entry is 0; [size 1-5, see Clit Size Adjective]
 	[Clit Size Adjective is generated by a function and can be used in scenes: very small/small/average/large/very large]
 ]
-
 
 Copper Dragoness ends here.

@@ -4,40 +4,14 @@ Version 1 of Piggy by Stripes begins here.
 
 Section 1 - Creature Responses
 
-to say losetopiggy:
-	say "     You were beaten by the creature.";
-	if Player is male:
-		say "     Additional paragraph for a male/herm player.";
-	else:
-		say "     Additional paragraph for a female player.";
-
-to say beatthepiggy:
-	say "     You were victorious over the creature.";
-	if Libido of Player > 40:
-		say "     Additional paragraph for a player with a libido greater than 40. Do they want sex?";
-		if Player consents:
-			say "     The player agreed to sex. Fun times begin.";
-			if Player is female:
-				say "     The Player is female/herm, so sex goes like this for her.";
-			else:
-				say "     The player must be male, so sex goes like this for him.";
-		else:
-			say "     Awww! The player refused the sex. Party pooper.";
-
-
-to say piggydesc:
-	say "     Monster description paragraph 1.";
-	say "     Monster description paragraph 2.";
-
-
 Section 2 - Creature Insertion
 
-Table of CombatPrep (continued)
+[Table of CombatPrep (continued)
 name(text)	PrepFunction(text)
 "Piggy"	"[PrepCombat_Piggy]"
 
 to say PrepCombat_Piggy:
-	say "";
+	setmongender 0;]
 
 Table of Random Critters (continued)
 NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
@@ -66,7 +40,7 @@ When Play begins:
 	now skin entry is "pink and piggy";
 	now tail entry is "You have a short and curly pig tail above your ass.";
 	now cock entry is "[one of]musky[or]pink[or]boar[as decreasingly likely outcomes]";
-	now face change entry is "pain briefly flares across it. As your nose bulges and pushes outwards, all the hair on your head falls out as your ears stretch out and then flop downwards. Your aching nose pushes forward and flattens out into a cute, piggy snout. Your cheeks and face are plump up with fat";
+	now face change entry is "pain briefly flares across it. As your nose bulges and pushes outwards, all the hair on your head falls out as your ears stretch out and then flop downwards. Your aching nose pushes forward and flattens out into a cute, piggy snout. Your cheeks and face are plumped up with fat";
 	now body change entry is "an itchiness starts at your feet. Looking down, you see them begin to change, forming in piggish hooves. Even as this transformation is taking place, your body plumps up, gaining weight rapidly and quickly blocking your view of your changing feet. You are left with a very pudgy, piggish body that feels so good that you just want to wallow somewhere and enjoy it";
 	now skin change entry is "a strong, dirty smell exudes from your skin as it becomes a bright, fleshy pink with short, pale hairs. Scratching an itch, you find yourself wanting to roll in some mud";
 	now ass change entry is "your lower spine changes to form a small, curly tail just like that of a pig";
@@ -77,7 +51,7 @@ When Play begins:
 	now per entry is 10;
 	now int entry is 9;
 	now cha entry is 6;
-	now sex entry is "nochange"; [ Infection will move the player towards this gender. Current: 'Male' 'Female' 'Both' ]
+	now sex entry is "Nochange"; [ Infection will move the player towards this gender. Current: 'Male' 'Female' 'Both' ]
 	now HP entry is 24; [ The monster's starting HP. ]
 	now lev entry is 1; [ Monster level. (Level x 2) XP for victory. (Level / 2) XP for losing. ]
 	now wdam entry is 4; [ Monster's average damage when attacking. ]
@@ -218,19 +192,16 @@ name	desc	weight	object
 "piggy fur"	"A tuft of short pink fur that looks like it has been pulled out of the coat of a pig. It's nicely soft."	0	piggy fur
 
 piggy fur is a grab object.
-It is temporary.
-Usedesc of piggy fur is "[piggy fur use]";
+Usedesc of piggy fur is "[piggy fur use]".
+Scent of piggy fur is "The fur has a pleasing, not too strong, animal-like scent.".
 
 to say piggy fur use:
-	say "Holding the tuft of fur between your fingers, you stroke over it, delighted in its softness. Strangely, the hair disintegrates after a while, becoming a cloud of fine particles that are absorbed into your skin.";
-	infect "Piggy".
+	say "     Holding the tuft of fur between your fingers, you stroke over it, delighted in its softness. Strangely, the hair disintegrates after a while, becoming a cloud of fine particles that are absorbed into your skin.";
+	infect "Piggy";
 
-instead of sniffing piggy fur:
-	say "The fur has a pleasing, not too strong, animal-like scent.";
-
-[
 Section 4 - Endings
 
+[
 Table of GameEndings (continued)
 Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
 "Piggy Infection"	"Infection"	""	Piggy Infection rule	1000	false

@@ -8,34 +8,41 @@ Version 1 of Campus Couple NPC by Closerhenry begins here.
 [   1: Have learned where the couple's room                             ]
 [   100: Permanently locked out of the two                              ]
 
-CampusCoupleRelationship is a number that varies.
-
-An everyturn rule:
-	if CampusCoupleRelationship > 0:
-		if daytimer is day and (Jadako is in Jadako's Room or Joseph is in Jadako's Room):
+a postimport rule: [bugfixing rules for players that import savegames]
+	if CampusCoupleRelationship is 1: [event resolved the right way, room not connected yet]
+		connect Jadako's Room;
+		if daytimer is day:
 			now Jadako is nowhere;
 			now Joseph is nowhere;
-		else if daytimer is night and (Jadako is not in Jadako's Room or Joseph is not in Jadako's Room):
+		else:
 			move Jadako to Jadako's Room;
 			move Joseph to Jadako's Room;
+	now Sterile of Jadako is false;
+	now MainInfection of Jadako is "Feline";
+	now Sterile of Joseph is false;
 
 Section 1 - Declaring the Room
-
-[Room Declaration]
 
 Table of GameRoomIDs (continued)
 Object	Name
 Jadako's Room	"Jadako's Room"
 
 Jadako's Room is a room.
-Description of Jadako's Room is "[jadakoroomdesc]".
-
-To say jadakoroomdesc:
-	say "     Jadako's room is a standard college dorm room. It's got different video game and anime posters hanging throughout, most depicting buff male characters. A television sits on a table with a collection of different DVDs, all of some anime or movie. A large, open glass window is on the other end of the room. Atop its windowsill is a collection of exotic sex toys, all proudly on display. The sheets to Jadako's bed are thrown about, suggesting he doesn't do a great job of staying tidy.";
+Description of Jadako's Room is "     Jadako's room is a standard college dorm room. It's got different video game and anime posters hanging throughout, most depicting buff male characters. A television sits on a table with a collection of different DVDs, all of some anime or movie. A large, open glass window is on the other end of the room. Atop its windowsill is a collection of exotic sex toys, all proudly on display. The sheets to Jadako's bed are thrown about, suggesting he doesn't do a great job of staying tidy.[line break]".
 
 to connect Jadako's Room:
 	change the south exit of Jadako's Room to Tenvale College Male Dorms;
 	change the north exit of Tenvale College Male Dorms to Jadako's Room;
+
+An everyturn rule:
+	if CampusCoupleRelationship > 0:
+		if daytimer is day:
+			if Jadako is in Jadako's Room or Joseph is in Jadako's Room:
+				now Jadako is nowhere;
+				now Joseph is nowhere;
+		else if Jadako is not in Jadako's Room or Joseph is not in Jadako's Room:
+			move Jadako to Jadako's Room;
+			move Joseph to Jadako's Room;
 
 Section 2 - Declaring Jadako and Joseph
 
@@ -77,14 +84,10 @@ AnalVirgin of Jadako is false.
 PenileVirgin of Jadako is false.
 SexuallyExperienced of Jadako is true.
 TwistedCapacity of Jadako is false. [Twisted Characters can take any penetration, no matter the size]
-Sterile of Jadako is true. [steriles can't knock people up]
-MainInfection of Jadako is "".
-Description of Jadako is "[jadakodesc]".
-Conversation of Jadako is { "<This is nothing but a placeholder!>" }.
-Scent of Jadako is "The lithe feline smells of exotic cologne, covering a heavy scent of sex and sweat.".
-
-To say jadakodesc:
-	say "     Jadako is an anthro feline. His fur has a variety of different colors, mostly oranges, blacks, and whites. His large cat ears stand straight up, with a single piercing in his left ear. His frame is thin and wiry, but not without muscle. He wears no clothes, displaying his sheathed cock and long tail. You can't currently see it, but you know it is a bright red shaft, humanoid looking but covered in smooth barbs. His golfball sized testicles hang below the sheath, covered in his orange fur. Jadako notices you checking him out, as he flexes and performs a couple of poses to show off his body more. He lets out a smooth purr, clearly enjoying the attention.";
+Sterile of Jadako is false. [steriles can't knock people up]
+MainInfection of Jadako is "Feline".
+Description of Jadako is "     Jadako is an anthro feline. His fur has a variety of different colors, mostly oranges, blacks, and whites. His large cat ears stand straight up, with a single piercing in his left ear. His frame is thin and wiry, but not without muscle. He wears no clothes, displaying his sheathed cock and long tail. You can't currently see it, but you know it is a bright red shaft, humanoid looking but covered in smooth barbs. His golfball sized testicles hang below the sheath, covered in his orange fur. Jadako notices you checking him out, as he flexes and performs a couple of poses to show off his body more. He lets out a smooth purr, clearly enjoying the attention.[line break]".
+Scent of Jadako is "     The lithe feline smells of exotic cologne, covering a heavy scent of sex and sweat.".
 
 Table of GameCharacterIDs (continued)
 object	name
@@ -124,14 +127,10 @@ AnalVirgin of Joseph is false.
 PenileVirgin of Joseph is false.
 SexuallyExperienced of Joseph is true.
 TwistedCapacity of Joseph is false. [Twisted Characters can take any penetration, no matter the size]
-Sterile of Joseph is true. [steriles can't knock people up]
+Sterile of Joseph is false. [steriles can't knock people up]
 MainInfection of Joseph is "".
-Description of Joseph is "[josephdesc]".
-Conversation of Joseph is { "<This is nothing but a placeholder!>" }.
-Scent of Joseph is "The bulky canine smells of sweat and potent male musk.".
-
-To say josephdesc:
-	say "     Joseph is an anthro canine. He has shaggy brown fur covering his body, uniform in color. Stemming from the sides of his head are floppy canine ears. The man is muscular and bulky, without a single hint of fat. His thighs are thick with muscle, showing how much he works out. The coach wears his official jacket, colored a bright green with gold colored cuffs, zipper collar, and a gold [']W['] on the back, most likely standing for Weber. He also wears a pair of short, black athletic shorts which go down a little more than halfway down his thighs. A small hole is cut in the back for Joseph's fluffy tail. You can see a large bulge in his shorts however, which seems to occasionally twitch. Looking up, you see Joseph staring at Jadako's bare ass, tail raised up. Joseph sees that you notice, and looks away with embarrassment.";
+Description of Joseph is "     Joseph is an anthro canine. He has shaggy brown fur covering his body, uniform in color. Stemming from the sides of his head are floppy canine ears. The man is muscular and bulky, without a single hint of fat. His thighs are thick with muscle, showing how much he works out. The coach wears his official jacket, colored a bright green with gold colored cuffs, zipper collar, and a gold [']W['] on the back, most likely standing for Weber. He also wears a pair of short, black athletic shorts which go down a little more than halfway down his thighs. A small hole is cut in the back for Joseph's fluffy tail. You can see a large bulge in his shorts however, which seems to occasionally twitch. Looking up, you see Joseph staring at Jadako's bare ass, tail raised up. Joseph sees that you notice, and looks away with embarrassment.[line break]".
+Scent of Joseph is "     The bulky canine smells of sweat and potent male musk.".
 
 Section 3 - Talking to the Couple
 
@@ -140,11 +139,10 @@ Instead of conversing the Jadako:
 		say "     ERROR: Jadako shouldn't be where a player can see him yet and said player should not be able to be in the Jadako's Room! Please report to Closerhenry on the FS Discord and quote this tracking number for easier bugfixing: [CampusCoupleRelationship]";
 	else:
 		say "     You approach the colorful feline, who places his hand on his hip and stands waiting.";
-		AttemptToWait;
-		say "[JadakoTalkMenu]";
+		say "[line break][JadakoTalkMenu]";
 
 to say JadakoTalkMenu:
-	say "What do you want to talk with Jadako about?";
+	say "     What do you want to talk with Jadako about?";
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]
@@ -163,7 +161,7 @@ to say JadakoTalkMenu:
 	now sortorder entry is 3;
 	now description entry is "Ask him what sport he plays";
 	[]
-	Sort the table of fucking options in sortorder order;
+	sort the table of fucking options in sortorder order;
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
 		say "[link][y] - [title entry][as][y][end link][line break]";
@@ -177,22 +175,23 @@ to say JadakoTalkMenu:
 			say "[title entry]: [description entry]?";
 			if Player consents:
 				LineBreak;
-				let nam be title entry;
 				now sextablerun is 1;
-				if (nam is "Himself"):
-					say "[JadakoTalk1]";
-				else if (nam is "Coach Weber"):
-					say "[JadakoTalk2]";
-				else if (nam is "Sports"):
-					say "[JadakoTalk3]";
+				if title entry is:
+					-- "Himself":
+						say "[JadakoTalk1]";
+					-- "Coach Weber":
+						say "[JadakoTalk2]";
+					-- "Sports":
+						say "[JadakoTalk3]";
 				wait for any key;
+				say "[JadakoTalkMenu]";
 		else if calcnumber is 0:
 			LineBreak;
 			now sextablerun is 1;
-			say "     You step back from Jadako, who looks at you a little funny. 'OK, nevermind, I guess?' he questions.";
+			say "     You step back from Jadako, who looks at you a little funny. 'OK, never mind, I guess?' he questions.";
 			wait for any key;
 		else:
-			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options], or 0 to exit.";
 	clear the screen and hyperlink list;
 
 to say JadakoTalk1:
@@ -209,11 +208,10 @@ Instead of conversing the Joseph:
 		say "     ERROR: Joseph shouldn't be where a player can see him yet and said player should not be able to be in the Jadako's Room! Please report to Closerhenry on the FS Discord and quote this tracking number for easier bugfixing: [CampusCoupleRelationship]";
 	else:
 		say "     You approach the muscular canine, who looks at you warmly. 'Is there something you want to talk about?'";
-		AttemptToWait;
-		say "[JosephTalkMenu]";
+		say "[line break][JosephTalkMenu]";
 
 to say JosephTalkMenu:
-	say "What do you want to talk with Joseph about?";
+	say "     What do you want to talk with Joseph about?";
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]
@@ -232,7 +230,7 @@ to say JosephTalkMenu:
 	now sortorder entry is 3;
 	now description entry is "Ask him what sport he teaches";
 	[]
-	Sort the table of fucking options in sortorder order;
+	sort the table of fucking options in sortorder order;
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
 		say "[link][y] - [title entry][as][y][end link][line break]";
@@ -246,22 +244,23 @@ to say JosephTalkMenu:
 			say "[title entry]: [description entry]?";
 			if Player consents:
 				LineBreak;
-				let nam be title entry;
 				now sextablerun is 1;
-				if (nam is "Himself"):
-					say "[JosephTalk1]";
-				else if (nam is "Jadako"):
-					say "[JosephTalk2]";
-				else if (nam is "Sports"):
-					say "[JosephTalk3]";
+				if title entry is:
+					-- "Himself":
+						say "[JosephTalk1]";
+					-- "Jadako":
+						say "[JosephTalk2]";
+					-- "Sports":
+						say "[JosephTalk3]";
 				wait for any key;
+				say "[JosephTalkMenu]";
 		else if calcnumber is 0:
 			LineBreak;
 			now sextablerun is 1;
 			say "     You step back from Joseph. He gives you a humorous look, before saying, 'If there's anything you need to talk about, I'm all ears.'";
 			wait for any key;
 		else:
-			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options], or 0 to exit.";
 	clear the screen and hyperlink list;
 
 to say JosephTalk1:
@@ -276,19 +275,17 @@ to say JosephTalk3:
 Section 4 - Fucking the Couple
 
 Instead of fucking the Jadako:
-	if (lastfuck of Jadako - turns < 3): [he got fucked in the last 9 hours = three turns]
+	if lastfuck of Jadako - turns < 3: [he got fucked in the last 9 hours = three turns]
 		say "     'Hey, sorry to be a bummer, but I'm not really up to it right now... maybe later? Sorry, I'm still a bit worn out from last time,' Jadako sighs.";
 	else:
 		say "     You ask Jadako how he and Joseph feel about going for a round, who both agree they're up for it.";
-		AttemptToWait;
 		say "[CampusCoupleSexMenu]";
 
 Instead of fucking the Joseph:
-	if (lastfuck of Joseph - turns < 3): [he got fucked in the last 9 hours = three turns]
+	if lastfuck of Joseph - turns < 3: [he got fucked in the last 9 hours = three turns]
 		say "     'Sorry to disappoint, but Jadako is still recovering. You can wait until he's ready, right?' he asks, turning you down.";
 	else:
 		say "     You ask Joseph how he and Jadako feel about going for a round, who both agree they're up for it.";
-		AttemptToWait;
 		say "[CampusCoupleSexMenu]";
 
 to say CampusCoupleSexMenu:
@@ -311,7 +308,7 @@ to say CampusCoupleSexMenu:
 	now sortorder entry is 3;
 	now description entry is "Take care of both of their cocks";
 	[]
-	Sort the table of fucking options in sortorder order;
+	sort the table of fucking options in sortorder order;
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
 		say "[link][y] - [title entry][as][y][end link][line break]";
@@ -325,26 +322,25 @@ to say CampusCoupleSexMenu:
 			say "[title entry]: [description entry]?";
 			if Player consents:
 				LineBreak;
-				let nam be title entry;
 				now sextablerun is 1;
-				if (nam is "Be Spitroasted"):
-					say "[CampusCoupleSex1]";
-				else if (nam is "Spitroast Jadako"):
-					say "[CampusCoupleSex2]";
-				else if (nam is "Cockworship"):
-					say "[CampusCoupleSex3]";
-				wait for any key;
+				if title entry is:
+					-- "Be Spitroasted":
+						say "[CampusCoupleSex1]";
+					-- "Spitroast Jadako":
+						say "[CampusCoupleSex2]";
+					-- "Cockworship":
+						say "[CampusCoupleSex3]";
 		else if calcnumber is 0:
 			LineBreak;
 			now sextablerun is 1;
 			say "     You change your mind, deciding now isn't a good time. The two understand, since they can always fuck each other later.";
-			wait for any key;
 		else:
-			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options], or 0 to exit.";
+	wait for any key;
 	clear the screen and hyperlink list;
 
 to say CampusCoupleSex1:
-	say "     You suggest that the two lovers take you in between them. Jadako agrees eagerly, happily exclaiming, 'Sounds good to me! Isn't everyday I get to top.' Jadako reaches down, lightly stroking his already hard feline cock. [if Player is female]'OK, but I'll just let you know I'm an ass-man,'[else]'Sounds good to me. I'll take a piece of that ass,'[end if] Joseph chuckles as he walks around behind you, squeezing your ass. You and the coach both strip bare, while Jadako lets out a little laugh. 'You both really should just go au naturel. It's way easier,' he suggests sultrily. Joseph lets out a sarcastic laugh, but you can't help but think you wouldn't mind seeing more of the coach naked. Jadako opens a nearby cabinet and pulls out a bottle of lube, which he tosses to the canine behind you. Coach Weber catches the bottle, but looks at it closely. 'I thought you kept the lube in that cabinet,' the muscular anthro wonders. 'Oh, I do. I also keep some in this cabinet. And the nightstand, and the dresser, and the closet...' Jadako lists.";
+	say "     You suggest that the two lovers take you in between them. Jadako agrees eagerly, happily exclaiming, 'Sounds good to me! Isn't everyday I get to top.' Jadako reaches down, lightly stroking his already hard feline cock. '[if Player is female]OK, but I'll just let you know I'm an ass man[else]Sounds good to me. I'll take a piece of that ass[end if],' Joseph chuckles as he walks around behind you, squeezing your ass. You and the coach both strip bare, while Jadako lets out a little laugh. 'You both really should just go au naturel. It's way easier,' he suggests sultrily. Joseph lets out a sarcastic laugh, but you can't help but think you wouldn't mind seeing more of the coach naked. Jadako opens a nearby cabinet and pulls out a bottle of lube, which he tosses to the canine behind you. Coach Weber catches the bottle, but looks at it closely. 'I thought you kept the lube in that cabinet,' the muscular anthro wonders. 'Oh, I do. I also keep some in this cabinet. And the nightstand, and the dresser, and the closet...' Jadako lists.";
 	say "     The room is silent for a moment as you (and most likely Joseph as well) consider why Jadako has so much lube. 'Okaaaaaay...' Joseph says as he uncaps the bottle of lube and gets a healthy amount on his hands. 'You should probably get on your knees now on the coffee table,' Joseph instructs. You comply to the coach as he rubs the lube over his cock, getting his shaft nice and slippery. The coffee table has a nice pillowtop, protecting your knees from the hard wood. Jadako stands in front of you, his cock dangling only a few inches from your face. It twitches ever so often, obviously excited to go in a hole for once. A drop of drool falls from your open mouth, which causes the feline to let out a little chuckle. 'And I thought I was the cock slut... Obviously I have a lot to learn from you,' he purrs as he gives his cock a single pump. Behind you, the sound of a cap closing reveals that Joseph is all lubed up now.";
 	WaitLineBreak;
 	say "     From behind you feel the coach's head rub up against your hole, sending shivers of pleasure down your body. He simply teases you for a little, which both lubes your hole slightly and relaxes your back entrance. Jadako moves forward and lays his dick across your face, its musky scent driving you wild. The frisky feline grinds his dick along your face, the barbs lightly tickling it. 'I'm going in now, don't let me surprise you,' Joseph announces, giving you a couple seconds to prepare yourself. It's also just enough time for Jadako to pull his cock off your face and position himself in front of your mouth. You open wide, making sure to exhale a slow, hot breath onto the cat's head. With a swift motion, Joseph pushes into your back hole, causing you to gasp. Jadako takes his opportunity and shoves into your open mouth, filling your other end. Your tongue wraps around the sexy cat's man meat, savoring its musky flavor. The canine coach behind you pushes further in, until you feel his knot bump into your backside.";
@@ -359,8 +355,7 @@ to say CampusCoupleSex1:
 
 to say CampusCoupleSex2:
 	say "     You ask Joseph if he would be okay with sharing his boy toy, Jadako. He murmurs his approval, asking which side you want to take.";
-	say "     [bold type]Which side of Jadako do you take?[roman type][line break]";
-	LineBreak;
+	say "[line break]     [bold type]Which side of Jadako do you take?[roman type][line break]";
 	say "     ([link]Y[as]y[end link]) - Give Jadako a good old face-fuck.";
 	say "     ([link]N[as]n[end link]) - Take Jadako's back hole for yourself.";
 	if Player consents:

@@ -48,18 +48,6 @@ to decide if the/-- Player can't/cannot UB/unbirth:
 
 Section 1 - Event
 
-Table of GameEventIDs (continued)
-Object	Name
-Inner Predator	"Inner Predator"
-
-Inner Predator is a scavevent.
-ResolveFunction of Inner Predator is "[ResolveEvent Inner Predator]".
-The level of Inner Predator is 4.
-Sarea of Inner Predator is "Allzones".
-when play begins:
-	add Inner Predator to BadSpots of FurryList;
-	add Inner Predator to BadSpots of VoreList;
-
 a postimport rule: [bugfixing rules for players that import savegames]
 	if Inner Predator is resolved and Resolution of Inner Predator is 0:
 		if Player can vore:
@@ -69,10 +57,23 @@ a postimport rule: [bugfixing rules for players that import savegames]
 		else:
 			now Resolution of Inner Predator is 2;
 
+Table of GameEventIDs (continued)
+Object	Name
+Inner Predator	"Inner Predator"
+
+Inner Predator is a scavevent.
+ResolveFunction of Inner Predator is "[ResolveEvent Inner Predator]".
+The level of Inner Predator is 4.
+Sarea of Inner Predator is "Allzones".
+
+when play begins:
+	add Inner Predator to BadSpots of FurryList;
+	add Inner Predator to BadSpots of VoreList;
+
 to say ResolveEvent Inner Predator:
 	if MaleList is banned and FemaleList is banned:
 		say "     Picking your way between several immobile and abandoned cars, you spot an all too familiar sight in the road ahead. Piles of clothing, ripped and covered in various fluids, along with the personal items of whomever (or whatever) used to be in those clothes. Among the shredded clothes and scattered items, one specific thing catches your eye - a sealed briefcase. Polished and very official looking, with its clasp broken from the evident scuffle that had taken place here, it rests atop a torn lab coat. Curious, and hoping to find something you might be able to use, you crack the case open slowly. Sadly, it is empty, someone clearly having gotten here first and emptied it.";
-		say "(This event is closed if both males and females are banned.)";
+		say "[line break](This event is closed if both males and females are banned.)";
 		now Resolution of Inner Predator is 99; [event closed because both males and females are banned]
 		now Inner Predator is resolved;
 		continue the action;
@@ -88,7 +89,7 @@ to say ResolveEvent Inner Predator:
 		say "     Wrapping the candy bar back up, you replace it in your pack and begin to gather your things to leave, slightly perturbed by these events. Hopefully whatever you just drank out of that vial does not come back to bite you later... relatively speaking.";
 		ItemGain chips by 1;
 		WaitLineBreak;
-		if FemaleList is not banned:
+		if FemaleList is not banned and (Player is not MalePreferred or MaleList is banned):
 			say "     As you're turning to leave, a female husky, looking rather worse for wear, spots you and charges in to attack. Already weakened, a quick blow sends her tumbling and a few more put her to the ground for good. It is a quick fight and thankfully one of the easiest you've faced since this mess began.";
 			say "     As your defeated foe collapses in a heap before you, your body is struck with another wave of intense hunger. You look down upon your beaten foe as a new, predatory instinct arises in your mind. Before you can even think about it, you kneel next to the husky, hands reaching out for its exhausted body. She lifts her head to look at you, fearful about what you intend to do, but a swift strike from your palm to her head renders her unconscious. Now, practically unable to control your own body, you are forced to watch what unfolds.";
 			WaitLineBreak;
@@ -100,8 +101,7 @@ to say ResolveEvent Inner Predator:
 			WaitLineBreak;
 			say "     A smile crosses your face as you pat your shrinking belly. You feel... content now, as if consuming the defeated creature has fulfilled some deep purpose in your infected body. Plus, you shouldn't have to worry about food for a while. Pulling yourself back up and retrieving all your gear, you head back out into the infested city with a surprising bounce in your step.";
 			say "     Maybe this isn't such a bad thing after all...?";
-			LineBreak;
-			say "     You have the [bold type]Vore Predator[roman type] feat, increasing your hunger growth dramatically. The higher your hunger (and the more often you do it), the more likely you'll be tempted to consume your enemies whole to sate your hunger while also infecting you. You may adjust some vore related settings via the [bold type]vore menu[roman type].";
+			say "[line break]     You have the [bold type]Vore Predator[roman type] feat, increasing your hunger growth dramatically. The higher your hunger (and the more often you do it), the more likely you'll be tempted to consume your enemies whole to sate your hunger while also infecting you. You may adjust some vore related settings via the [bold type]vore menu[roman type].";
 			if "Automatic Survival" is listed in feats of Player:
 				say "     [special-style-1]NOTE:[roman type] [bold type]Automatic Survival detected:[roman type] Your hunger will not increase and you'll instead be given a base chance of 25% for vore before other factors.";
 			PlayerEat 25;
@@ -109,7 +109,6 @@ to say ResolveEvent Inner Predator:
 			now researchbypass is 1;
 			infect "Husky Bitch";
 			now researchbypass is 0;
-			increase score by 20;
 		else:
 			say "     As you're turning to leave, a latex fox, looking rather worse for wear, spots you and charges in to attack. Already weakened, a quick blow sends him tumbling and a few more put him to the ground for good. It is a quick fight and thankfully one of the easiest you've faced since this mess began.";
 			say "     As your defeated foe collapses in a heap before you, your body is struck with another wave of intense hunger. You look down upon your beaten foe as a new, predatory instinct arises in your mind. Before you can even think about it, you kneel next to the latex fox, hands reaching out for its exhausted body. He lifts his head to look at you, fearful about what you intend to do, but a swift strike from your palm to his head renders him unconscious. Now, practically unable to control your own body, you are forced to watch what unfolds.";
@@ -122,8 +121,7 @@ to say ResolveEvent Inner Predator:
 			WaitLineBreak;
 			say "     A smile crosses your face as you pat your shrinking belly. You feel... content now, as if consuming the defeated creature has fulfilled some deep purpose in your infected body. Plus, you shouldn't have to worry about food for a while. Pulling yourself back up and retrieving all your gear, you head back out into the infested city with a surprising bounce in your step.";
 			say "     Maybe this isn't such a bad thing after all...?";
-			LineBreak;
-			say "     You have the [bold type]Vore Predator[roman type] feat, increasing your hunger growth dramatically. The higher your hunger (and the more often you do it), the more likely you'll be tempted to consume your enemies whole to sate your hunger while also infecting you. You may adjust some vore related settings via the [bold type]vore menu[roman type].";
+			say "[line break]     You have the [bold type]Vore Predator[roman type] feat, increasing your hunger growth dramatically. The higher your hunger (and the more often you do it), the more likely you'll be tempted to consume your enemies whole to sate your hunger while also infecting you. You may adjust some vore related settings via the [bold type]vore menu[roman type].";
 			if "Automatic Survival" is listed in feats of Player:
 				say "     [special-style-1]NOTE:[roman type] [bold type]Automatic Survival detected:[roman type] Your hunger will not increase and you'll instead be given a base chance of 25% for vore before other factors.";
 			PlayerEat 25;
@@ -131,31 +129,29 @@ to say ResolveEvent Inner Predator:
 			now researchbypass is 1;
 			infect "Latex Fox";
 			now researchbypass is 0;
-			increase score by 20;
+		increase score by 20;
 		FeatGain "Vore Predator";
 		increase vorecount by 1;
 		now Resolution of Inner Predator is 1; [player drank the vial]
 	else:
 		LineBreak;
-		say "     Deciding that ingesting anything found in a mysterious briefcase is probably a very bad idea you opt to instead try and figure out what it is that you're holding. After storing the vial safely in your pack and pocketing the candy bar you begin to scan over some of the documents. Most of it is beyond your understanding, mostly medical lingo, some test results and other foreign terms, but a warning in particular caught your eye: 'Warning: Do not test the effects of application to the vaginal region'. It would seem that one of the documents talks about some abnormal effects if applied in such a manner, but much of it refers to a lot of medical language and anatomical terms you do not understand. You decide after pondering for a moment that you should [if PlayerMet of Medea is true]check in with Doctor Medea and see if she[else]go find someone, perhaps a doctor or specialist in gynecology and see if they[end if] might be able to decipher the document.";
+		say "     Deciding that ingesting anything found in a mysterious briefcase is probably a very bad idea you opt to instead try and figure out what it is that you're holding. After storing the vial safely in your pack and pocketing the candy bar you begin to scan over some of the documents. Most of it is beyond your understanding, mostly medical lingo, some test results and other foreign terms, but a warning in particular caught your eye: 'Warning: Do not test the effects of application to the vaginal region'. It would seem that one of the documents talks about some abnormal effects if applied in such a manner, but much of it refers to a lot of medical language and anatomical terms you do not understand. You decide after pondering for a moment that you should [if PlayerMet of Doctor Medea is true]check in with Doctor Medea and see if she[else]go find someone, perhaps a doctor or specialist in gynecology and see if they[end if] might be able to decipher the document.";
 		ItemGain chips by 1;
 		increase score by 5;
 		now Resolution of Inner Predator is 2; [player didn't drink the vial]
-	LineBreak;
-	say "     As you are about to leave, a piece of paper sliding out of the briefcase catches your attention. It seems to be a detailed map [if Island Pier is known]to Vohr Island[else]to a small island off the coast, known as Vohr Island[end if], possibly linked to these experiments. It seems reachable from the beach, if you [if boatfound is 2 or boatfound is 3]use your boat[else]hunt for a boat there[end if].";
+	say "[line break]     As you are about to leave, a piece of paper sliding out of the briefcase catches your attention. It seems to be a detailed map [if Island Pier is known]to Vohr Island[else]to a small island off the coast, known as Vohr Island[end if], possibly linked to these experiments. It seems reachable from the beach, if you [if boatfound is 2 or boatfound is 3]use your boat[else]hunt for a boat there[end if].";
 	if boatfound <= 1:
 		now boatfound is 4;
-	else if boatfound is 2 or boatfound is 3:
+	else if boatfound < 4:
 		AddNavPoint Island Pier;
 	now Inner Predator is resolved;
-
 
 Section 2 - General Vore by Player
 
 to vorebyplayer:
 	choose row MonsterID from the Table of Random Critters;
 	let hvorechance be hvorelevel * hvorelevel;
-	if hvorelevel > 1 and ( a random chance of hvorechance in 16 succeeds ) and Name entry is not listed in infections of HardVoreExclusion:
+	if hvorelevel > 1 and a random chance of hvorechance in 16 succeeds and Name entry is not listed in infections of HardVoreExclusion:
 		say "[hvorebyplayer00]"; [Master hard vore scene]
 		decrease humanity of Player by 2; [Additional humanity loss]
 	else:
@@ -163,66 +159,45 @@ to vorebyplayer:
 	let powerchance be 4;
 	if "Bestial Power" is listed in feats of Player, increase powerchance by 2;
 	if a random chance of powerchance in 20 succeeds:
-		let vc be 0; [ setting up which stats are valid choices for the stat increase ]
-		let vstr be -1;
-		if strength of Player < str entry and str entry >= ( 12 + level of Player ):
-			increase vc by 1;
-			now vstr is vc;
-		let vint be -1;
-		if Intelligence of Player < int entry and int entry >= ( 12 + level of Player ):
-			increase vc by 1;
-			now vint is vc;
-		let vdex be -1;
-		if dexterity of Player < dex entry and dex entry >= ( 12 + level of Player ):
-			increase vc by 1;
-			now vdex is vc;
-		let vsta be -1;
-		if stamina of Player < sta entry and sta entry >= ( 12 + level of Player ):
-			increase vc by 1;
-			now vsta is vc;
-		let vper be -1;
-		if perception of Player < per entry and per entry >= ( 12 + level of Player ):
-			increase vc by 1;
-			now vper is vc;
-		let vcha be -1;
-		if charisma of Player < cha entry and cha entry >= ( 12 + level of Player ):
-			increase vc by 1;
-			now vcha is vc;
-		[ now all numbers from 1 to vc are indicative of a stat which can be increased ]
-		let vz be 1;
-		if vc is 0, now vz is 0; [ since I don't know what happens when you ask for a random number between 1 and 0, this is here as a safety precaution ]
-		let vv be a random number between vz and vc;
-		if vv is vstr:
-			if strength of Player < str entry and str entry >= ( 12 + level of Player ):
-				say "     By consuming your foe, you have managed to absorb some of them to empower yourself. You feel your muscles swelling with [EnemyNameOrTitle] [one of]strength[or]physique[or]power[at random].";
-				StatChange "Strength" by 1;
-		if vv is vint:
-			say "     By consuming your foe, you have managed to absorb some of them to empower yourself. You feel your mind swelling with [EnemyNameOrTitle] [one of]intelligence[or]wit[or]complexity[at random].";
-			StatChange "Intelligence" by 1;
-		if vv is vdex:
-			say "     By consuming your foe, you have managed to absorb some of them to empower yourself. You feel your hand-eye coordination improving with [EnemyNameOrTitle] [one of]dexterity[or]physique[or]accuracy[at random].";
-			StatChange "Dexterity" by 1;
-		if vv is vsta:
-			say "     By consuming your foe, you have managed to absorb some of them to empower yourself. You feel your body toughening with [EnemyNameOrTitle] [one of]stamina[or]physique[or]endurance[at random].";
-			StatChange "Stamina" by 1;
-		if vv is vper:
-			say "     By consuming your foe, you have managed to absorb some of them to empower yourself. You feel your senses being heightened with [EnemyNameOrTitle] [one of]perception[or]aptitude[or]feral attention[at random].";
-			StatChange "Perception" by 1;
-		if vv is vcha:
-			say "     By consuming your foe, you have managed to absorb some of them to empower yourself. You feel your social sense improving with [EnemyNameOrTitle] [one of]charisma[or]natural charm[or]pheromones[at random].";
-			StatChange "Charisma" by 1;
+		let vc be a list of numbers; [ setting up which stats are valid choices for the stat increase ]
+		if strength of Player < str entry and str entry >= 12 + level of Player, add 1 to vc;
+		if Intelligence of Player < int entry and int entry >= 12 + level of Player, add 2 to vc;
+		if dexterity of Player < dex entry and dex entry >= 12 + level of Player, add 3 to vc;
+		if stamina of Player < sta entry and sta entry >= 12 + level of Player, add 4 to vc;
+		if perception of Player < per entry and per entry >= 12 + level of Player, add 5 to vc;
+		if charisma of Player < cha entry and cha entry >= 12 + level of Player, add 6 to vc;
+		[ now all numbers in vc are indicative of a stat which can be increased ]
+		if vc is not empty:
+			sort vc in random order;
+			if entry 1 of vc is:
+				-- 1:
+					say "     By consuming your foe, you have managed to absorb some of them to empower yourself. You feel your muscles swelling with [EnemyNameOrTitle] [one of]strength[or]physique[or]power[at random].";
+					StatChange "Strength" by 1;
+				-- 2:
+					say "     By consuming your foe, you have managed to absorb some of them to empower yourself. You feel your mind swelling with [EnemyNameOrTitle] [one of]intelligence[or]wit[or]complexity[at random].";
+					StatChange "Intelligence" by 1;
+				-- 3:
+					say "     By consuming your foe, you have managed to absorb some of them to empower yourself. You feel your hand-eye coordination improving with [EnemyNameOrTitle] [one of]dexterity[or]precision[or]accuracy[at random].";
+					StatChange "Dexterity" by 1;
+				-- 4:
+					say "     By consuming your foe, you have managed to absorb some of them to empower yourself. You feel your body toughening with [EnemyNameOrTitle] [one of]stamina[or]endurance[or]vitality[at random].";
+					StatChange "Stamina" by 1;
+				-- 5:
+					say "     By consuming your foe, you have managed to absorb some of them to empower yourself. You feel your senses being heightened with [EnemyNameOrTitle] [one of]perception[or]aptitude[or]feral attention[at random].";
+					StatChange "Perception" by 1;
+				-- 6:
+					say "     By consuming your foe, you have managed to absorb some of them to empower yourself. You feel your social sense improving with [EnemyNameOrTitle] [one of]charisma[or]natural charm[or]pheromones[at random].";
+					StatChange "Charisma" by 1;
 	if "Safe Appetite" is not listed in feats of Player:
 		say "     Indulging in this monstrous act has further weakened your grip on your own humanity even as you feel the nanites from your prey flooding your system as your belly quickly seeks to consume them. Your hunger, satisfied for now, is decreased dramatically.";
 		now researchbypass is 1;
 		infect;
 		now researchbypass is 0;
-	decrease hunger of Player by ( 4 * ( 5 + scale entry - scalevalue of Player ) ) + a random number between 8 and 16;
-	if hunger of Player < 0, now hunger of Player is 0;
+	PlayerEat ( 4 * ( 5 + scale entry - scalevalue of Player ) ) + a random number between 8 and 16 silently;
 	decrease humanity of Player by 3;
 	increase vorecount by 1;
 
-
-Chapter 3 - Vore Scenes
+Section 3 - Vore Scenes
 
 to say vorebyplayer00:	[master list to decide scenes]
 	choose row MonsterID from the Table of Random Critters;
@@ -244,20 +219,19 @@ to say vorebyplayer00:	[master list to decide scenes]
 		say "[vbp_elk]";
 	else if Name entry is "Messy Pig" and vorespecial1 is true and Player is not neuter and a random chance of 3 in 5 succeeds:
 		say "[vbp_messypig]";
-	else if vorespecial1 is true and (the remainder after dividing vorecount by 3 is 0) and Name entry is not "Snake" and Name entry is not "Naga":
+	else if vorespecial1 is true and the remainder after dividing vorecount by 3 is 0 and Name entry is not "Snake" and Name entry is not "Naga":
 		say "[one of][vorebyplayer04][or][vorebyplayer05][cycling]";
-	else if vorecount > 5 and Name entry is not "Mannequin" and scalevalue of Player >= ( scale entry + 2 ) and a random chance of 3 in 5 succeeds:
+	else if vorecount > 5 and Name entry is not "Mannequin" and scalevalue of Player >= scale entry + 2 and a random chance of 3 in 5 succeeds:
 		say "[vorebyplayer06]";
 	else if vorecount is even:
 		say "[vorebyplayer01]";
-	else if vorecount is odd:
+	else:
 		say "[vorebyplayer02]";
-
 
 to say vorebyplayer01:		[basic - head first]
 	choose row MonsterID from the Table of Random Critters;
-	say "     Following the dark impulses coming from your roiling stomach, you jump upon your fallen foe and pin them down. Too weak to put up much of a fight, you are able to restrain the [EnemyNameOrTitle]. At first, expecting sex, they don't fully resist when you manhandle them roughly[if scalevalue of Player > (scale entry + 1)]. Being much smaller than you, it's easy enough to get a tight grip on them and pull them towards your lips[else if scalevalue of Player > scale entry]. Being a little smaller than you, it doesn't take you long to get a tight grip on them and pull them towards your lips[else]. Being about as big as you, it takes a little while before you're satisfied that you've got a tight grip on them before pulling them towards your lips[end if]. Expecting a kiss at first, they prepare for this, only to have your mouth open very wide, unhinging or stretching as necessary as you stuff their head into your mouth.";
-	say "     As you push the struggling [EnemyNameOrTitle] into your throat, you moan in delight, your perverse hunger taking pleasure in feeling their struggles. They squirm delightfully as they're pulled inexorably down your throat as you push more and more of the [type entry] creature into your gaping maw. Your tongue laps over them, tasting the treat you're stuffing yourself with, teasing and tantalizing them with your licks to give them a final thrill before they are gone. They slide down your throat in a delightfully pleasant descent and end up balled up in your squeezing, churning stomach. Your belly bulges [if scalevalue of Player is scale entry]hugely[else if scalevalue of Player is (scale entry + 1)]considerably[else]outwards[end if] with your rapidly consumed foe. You need to take a moment, rubbing your tummy as you feel your opponent's struggles weaken before stopping entirely. Soon afterwards, your belly starts to go down as you consume their body to satisfy your unnatural hunger.";
+	say "     Following the dark impulses coming from your roiling stomach, you jump upon your fallen foe and pin them down. Too weak to put up much of a fight, you are able to restrain the [EnemyNameOrTitle]. At first, expecting sex, they don't fully resist when you manhandle them roughly. Being [if scalevalue of Player > scale entry + 1]much smaller than you, it's easy enough to get a tight grip on them and pull[else if scalevalue of Player > scale entry]a little smaller than you, it doesn't take you long to get a tight grip on them and pull[else]about as big as you, it takes a little while before you're satisfied that you've got a tight grip on them before pulling[end if] them towards your lips. Expecting a kiss at first, they prepare for this, only to have your mouth open very wide, unhinging or stretching as necessary as you stuff their head into your mouth.";
+	say "     As you push the struggling [EnemyNameOrTitle] into your throat, you moan in delight, your perverse hunger taking pleasure in feeling their struggles. They squirm delightfully as they're pulled inexorably down your throat as you push more and more of the [type entry] creature into your gaping maw. Your tongue laps over them, tasting the treat you're stuffing yourself with, teasing and tantalizing them with your licks to give them a final thrill before they are gone. They slide down your throat in a delightfully pleasant descent and end up balled up in your squeezing, churning stomach. Your belly bulges [if scalevalue of Player is scale entry]hugely[else if scalevalue of Player is scale entry + 1]considerably[else]outwards[end if] with your rapidly consumed foe. You need to take a moment, rubbing your tummy as you feel your opponent's struggles weaken before stopping entirely. Soon afterwards, your belly starts to go down as you consume their body to satisfy your unnatural hunger.";
 
 to say vorebyplayer02:		[extended basic - head first]
 	choose row MonsterID from the Table of Random Critters;
@@ -318,7 +292,7 @@ to say vbp_hawkman:
 	say "     [one of]'Stop! What're you doing! Don't d-' [or]'He's going to eat me! Oh my gawwwwwwwd!!!' [or]'Please, don't do it [if Player is male]man[else]babe[end if]. I've... uh... I've got a hen and chicks! Five, no, six of [']em! Sto-' [or]'Ohpleaseohpleaseohpleaseohpleaseohpl-' [at random]the frightened hawk cries before being cut off as you stuff his beaked head into your mouth. In your mouth and pressed into your stretchy throat, his squawking becomes thankfully muffled. You lick and drool over your prey, saliva soaking into his feathers as you ease him towards your belly.";
 	say "     This avian's body is quite light, being built for flight, making him easy to lift and manhandle into your maw. You feed him down into you several inches at every gulp. Your extra-wide mouth and throat struggle briefly as you start on his torso, but eventually you get his shoulders going down your esophagus. It gets even easier once his wings and arms are enough in that your hands are freed.";
 	WaitLineBreak;
-	say "     Keeping a grip on one of his kicking legs, your other hand is free to move to your crotch[if Player is herm]. You start to masturbate, rubbing your hard cock[smn] and fingering your juicy puss[yfn], having gotten considerably aroused by the whole process[else if Player is male]. You start to masturbate, rubbing your hard cock[smn], having gotten considerably aroused by the whole process[else if Player is female]. You start to masturbate, fingering your juicy puss[yfn], having gotten considerably aroused by the whole process[else]. You rub at your genderless crotch, aroused by the whole process but unable to do much about it[end if]. When your tongue gets within reach of the hawkman's cock, you lick and suck down on it. It's particularly enjoyable as it gets pressed against your throat, squeezed and rubbed by your swallowing until he cums despite himself[if Player is not neuter]. The perverseness of this is enough to have you cum as well[end if]. Your pace of swallowing increases in response and he slips from thighs, knees, shins and finally feet pulled into your mouth and down your esophagus.";
+	say "     Keeping a grip on one of his kicking legs, your other hand is free to move to your crotch. You [if Player is herm]start to masturbate, rubbing your hard cock[smn] and fingering your juicy puss[yfn], having gotten considerably aroused by the whole process[else if Player is male]start to masturbate, rubbing your hard cock[smn], having gotten considerably aroused by the whole process[else if Player is female]start to masturbate, fingering your juicy puss[yfn], having gotten considerably aroused by the whole process[else]rub at your genderless crotch, aroused by the whole process but unable to do much about it[end if]. When your tongue gets within reach of the hawkman's cock, you lick and suck down on it. It's particularly enjoyable as it gets pressed against your throat, squeezed and rubbed by your swallowing until he cums despite himself[if Player is not neuter]. The perverseness of this is enough to have you cum as well[end if]. Your pace of swallowing increases in response and he slips from thighs, knees, shins and finally feet pulled into your mouth and down your esophagus.";
 	say "     It's not long after that the last of him ends up stuffed and bundled in your warm belly. He struggles feebly to escape, imprints of his taloned paws and his beak pressing out from your stretched tummy. But the effort of this quickly expends the last of his waning strength and soon it's just soft pushes and feeble rubbing before stopping entirely. You lean back and massage your bird-filled belly, the sensation of being so delightfully full wonderful while it lasts. In time, the excess bulge of your meal goes down and you're ready to move on, sated [if hunger of Player > 30]somewhat [end if]for the moment.";
 
 to say vbp_gazelle:
@@ -344,13 +318,13 @@ to say vbp_messypig:		[written by Wolfwing, edited by Stripes]
 		WaitLineBreak;
 		say "     As she is now up to her hips in your throat, your licking over her pussy and plump belly keeps her distracted a little bit. She does try to struggle to see, but this just adds to your pleasure. You have to fight to widen your mouth further to get her fat belly past your lips and end up orgasming upon your success. You spurt your seed into her snout and fill it up as she coughs slightly. She hits her own climax from your licking and from her arousal at your shooting cock in her snout.";
 		say "     While she's still distracted by both yours and her climax, you pull at her even more in earnest as you sit up a bit more. This has your penis pop out from her snout and she starts to realize what's actually going on. But by this point, she's in up to her topmost row of breasts within your mouth as you lick over them and her belly, savoring her flavor.";
+		CreatureSexAftermath "Messy Pig" receives "OralCock" from "Player";
+		CreatureSexAftermath "Player" receives "OralPussy" from "Messy Pig";
 		WaitLineBreak;
 		say "     Starting to panic, she tries to bat at you. 'Stop, what are you doing... I just wanted to suck on you...' she squeals, to which you reply, 'And I just want to suck on you... all the way down.' Your tongue probes over her as you stand up a bit and let gravity begin to pull her wide body down your throat more and more as her feet start to enter your stomach.";
 		say "     Feeling herself slide in more, she tries unsuccessfully to grip at the edges of your mouth. With your mouth slick with drool, her blunt little fingers are unable get a safe grip on anything. She slowly slides more into your mouth as her head and then hands disappear in until there is nothing more than one last hand grasping at the air before descending into you.";
 		WaitLineBreak;
 		say "     With a final few gulps, you drag her further down into your body and into your stomach, where you can see her struggling and even hear a couple of muffled pleas before finally succumbing to your stomach. Your belly churns away and soon begins to dwindle away, abating your hunger a little for the moment.";
-		CreatureSexAftermath "Messy Pig" receives "OralCock" from "Player";
-		CreatureSexAftermath "Player" receives "OralPussy" from "Messy Pig";
 	else:
 		say "     Having beaten down the messy pig, you begin to feel that rather familiar hunger for some food - and this time it's bacon. You lick your mouth hungrily and pounce on her as the pig attempts to escape, pinning her to the ground with your [bodydesc of Player] form. You rub your cunny against hers and bring down your fingers to play with it before rolling off of her and onto your back.";
 		say "     The sow rather quickly gets the idea and moves over towards you, laying down between your legs with her snout pressed against your belly sniffing at it. She snuffles quickly down towards your cunny before finally taking a big whiff that causes the skin to goosebump from the sensation.";
@@ -372,12 +346,9 @@ to say vbp_messypig:		[written by Wolfwing, edited by Stripes]
 		say "     As the last of her goes into your mouth, you lick over her hooves and then gulp her down the last few times into your stomach. You're left with a [if scalevalue of Player is 3]hefty[else if scalevalue of Player is 4]large[else]minimal[end if] belly as you pat it. You savor feeling her struggles slowly begin to die down and then finally end as your nanites work to slowly digest her and break her down.";
 
 to say vbp_hermgryph:
-	if Player is male:
-		say "     With the gryphon herm sufficiently weakened, she cannot resist as you grab her and push her onto the ground. Pressing her beak to your loins, you order her to start licking. Her tongue slides across your manhood before she takes it into her warm mouth. You're hungry and look forward to consuming your meal, but you're not above playing with your food first. Especially when they do such a fine job at it. You rock your hips firmly, thrusting your [Cock of Player] cock into the gryphon's mouth. As you're nearing your peak, you pull out and stroke yourself to climax, spraying your messy load across her face and beak.";
-	else:
-		say "     With the gryphon herm sufficiently weakened, she cannot resist as you grab her and push her onto the ground. Pressing her beak to your loins, you order her to start licking. Her tongue brushes across your folds before sliding into your hot tunnel. She can't delve far because of her beak, but the rubbing of that hard nose against your clit more than makes up for it. You're hungry and look forward to consuming your meal, but you're not above playing with your food first. Especially when they do such a fine job at it. You rock your hips firmly, grinding your pussy against her beak and tongue. When you cum, it is a juicy orgasm that leaks your femcum across the gryphon's face and beak.";
-		CreatureSexAftermath "Blue Gryphon Herm" receives "OralPussy" from "Player";
+	say "     With the gryphon herm sufficiently weakened, she cannot resist as you grab her and push her onto the ground. Pressing her beak to your loins, you order her to start licking. Her tongue [if Player is male]slides across your manhood before she takes it into her warm mouth. You're hungry and look forward to consuming your meal, but you're not above playing with your food first. Especially when they do such a fine job at it. You rock your hips firmly, thrusting your [Cock of Player] cock into the gryphon's mouth. As you're nearing your peak, you pull out and stroke yourself to climax, spraying your messy load across her[else]brushes across your folds before sliding into your hot tunnel. She can't delve far because of her beak, but the rubbing of that hard nose against your clit more than makes up for it. You're hungry and look forward to consuming your meal, but you're not above playing with your food first. Especially when they do such a fine job at it. You rock your hips firmly, grinding your pussy against her beak and tongue. When you cum, it is a juicy orgasm that leaks your femcum across the gryphon's[end if] face and beak.";
 	say "     Having basted the bird with your [if Player is male]semen[else]juices[end if], your hunger rises anew. Leaning down towards her, she thinks you're coming in for a sloppy thank-you kiss and tilts her head up with her eyes closed. You grin and open your mouth wide, taking her beak and part of her head right into your gaping maw instead. By the time she realizes the extent of her mistake, it's too late and you're pushing her head into your throat.";
+	CreatureSexAftermath "Blue Gryphon Herm" receives "Oral[if Player is male]Cock[else]Pussy[end if]" from "Player";
 	WaitLineBreak;
 	say "     As you're licking at her blue breasts, she tries to resist, but you've got her wings pinned over her arms. With her struggling, it takes some effort to get your jaw and then your throat stretched over her shoulders, breasts and wings, but eventually you manage it. From then on, it is much easier going.";
 	say "     With the worst of the struggle with your meal over, you're better able to enjoy it. She proves to be quite tasty, having a mix of avian and animal flavors. There's something exotic and special to her taste that you can't quite pin down, like a spice you've never had before or a fruit you've never eaten. And those lingering traces of your sexual fluids further season her.";
@@ -400,8 +371,7 @@ to say vbp_elk:
 	say "     By the time you're forcing his hands in alongside his waist, he realizes too late what you're doing. He gives a bugling cry of surprise and struggles in vain against your swallowing throat and squeezing esophagus. The peristaltic pull draws him ever deeper, you licking at his pecs now. [one of]'Whaaughhh!' he screams incoherently[or]He wheezes out faint bleats and moans with what little air his constricted lungs can pull in[or]'Don't! Please don't!' he pleads in vain[or]'Nnnggh! Lemme have one more rut before I go! Just one more!' he groans with mad lust[or]'One of my sons will avenge me,' he snarls[or]'It's not hunting season yet. It's not hunting sea-' he tries to exclaim[at random]. You press his muzzle shut and angle his head down, forcing it down your throat. With your lips about to enclose his head, you lick and suck at the base of his antlers while pulling on them. Somehow his rack pulls free, leaving you able to safely swallow him the rest of the way down.";
 	say "     With the large elk stuffed in your belly, you're left quite full. You [if scalevalue of Player is 3]waddle your overloaded tummy[else if scalevalue of Player is 4]stagger your bulging tummy[else]rub your rounded belly and walk slowly[end if] to a quiet spot to sit and digest. You enjoy the musky taste of venison still lingering in your mouth as your stomach sets to digesting and absorbing your meaty meal[if a random chance of 1 in 3 succeeds or (hvorelevel > 1 and a random chance of 1 in 2 succeeds)] while gnawing on the fallen antlers[end if].";
 
-
-Chapter 4 - Hard Vore by Player
+Section 4 - Hard Vore by Player
 
 to say hvorebyplayer00:	[master list to decide scenes]
 	choose row MonsterID from the Table of Random Critters;
@@ -429,11 +399,9 @@ to say hvorebyplayer00:	[master list to decide scenes]
 		say "[hvorebyplayer03]";
 	if hvorecount is not 0, increase hvorecount by 1;
 
-
 to say hvorebyplayer01:
 	choose row MonsterID from the Table of Random Critters;
-	say "     You pin the [EnemyNameOrTitle] on [ghis] back. Not understanding the intent behind the hungry look in your eyes, [ghe] acquiesces, expecting sex. For the moment, you don't correct [ghis] misconception and place a hand at [ghis] crotch and start [if currentmonster is cocked]fondling [ghis] dick[else if currentmonster is cunted]fingering [ghis] pussy[else]rubbing [ghis] bare groin[end if]. You're prepared to play with your food for a bit, but your hunger grows more ravenous. A strange sensation can be felt in your mouth and a pass of your tongue tells you your teeth are growing longer and sharper. You start to drool, wanting to tear right into your hapless victim. Shall you do so?";
-	say "[bracket]Yes = Hard Vore, No = Soft Vore[close bracket][line break]";
+	say "     You pin the [EnemyNameOrTitle] on [ghis] back. Not understanding the intent behind the hungry look in your eyes, [ghe] acquiesces, expecting sex. For the moment, you don't correct [ghis] misconception and place a hand at [ghis] crotch and start [if currentmonster is cocked]fondling [ghis] dick[else if currentmonster is cunted]fingering [ghis] pussy[else]rubbing [ghis] bare groin[end if]. You're prepared to play with your food for a bit, but your hunger grows more ravenous. A strange sensation can be felt in your mouth and a pass of your tongue tells you your teeth are growing longer and sharper. You start to drool, wanting to tear right into your hapless victim. Shall you do so? (Y=Hard Vore, N=Soft Vore)[line break]";
 	if Player consents:
 		LineBreak;
 		say "     Rather than risk over-complicating the first of such meals for you, you muffle your foe's mouth and push [ghis] head upwards, baring [ghis] neck. You lick along [ghis] throat slowly, taking a final taste before lunging at the [EnemyNameOrTitle]. Your new, pointed teeth dig into [ghis] neck easily, chomping through flesh and cartilage as you tear out the creature's throat. [gche] makes some wet, gurgling noises, but [ghis] fate is sealed. You continue to dine upon the [EnemyNameOrTitle], biting several meaty chunks from your fallen foe even as [ghis] final struggles fade and end.";
@@ -458,7 +426,7 @@ to say hvorebyplayer02:
 	say "     The [type entry] creature squirms and struggles while you tease the poor thing briefly. You're unable and unwilling to hold back your hunger for more than a few licks though before lunging right into [ghim] by sinking your teeth into the [EnemyNameOrTitle][']s belly. You chew up a big mouthful of [ghis] viscera while clamping [ghis] mouth shut to muffle the pained cries. You dig deeper and higher up with each following bite, chewing into the cavity you're making in your struggling meal. Reaching [ghis] frantically beating heart, you sink your teeth into your meaty prize, tearing it out of your former foe's chest.";
 	say "     With [ghis] struggles over, you're free to savor your meaty mouthful, chewing it up with your sharp teeth. The blood it holds pours down your throat, washing down several gory bits of the creature's heart as well. After finishing it, you dig back into [ghis] chest cavity, eating several more mouthfuls of meat and organs.";
 	WaitLineBreak;
-	say "     While you're tempted to enjoy your remaining meal bite by bite, the worst of your hunger for flesh has been satisfied. Rather than risk being interrupted mid-meal, you grab the eviscerated body and open your mouth extra-wide. In goes the lifeless head, soon followed by the remains of the upper body[if hvorecount > 5 and a random chance of 1 in 3 succeeds]. Being picked up by the shoulders is too much for the damaged midsection and the lower half of the body falls away from the rest. You pause to fully swallow down the first half, letting it settle into your belly. Having used the opportunity to gather up the torn remains of the creature's organs into its belly, you move onto eating the second half, letting those bits pour down your throat as you up-end the shredded belly into your maw before taking it into your mouth[else]. Barely holding together with the first half, you lift the mutilated lower body into your maw while swallowing the first part down[end if]. Soon enough, you're stuffing the legs into your mouth and down your throat, finishing by licking your fingers clean. You suck the last of the bloody mess from them one at a time.";
+	say "     While you're tempted to enjoy your remaining meal bite by bite, the worst of your hunger for flesh has been satisfied. Rather than risk being interrupted mid-meal, you grab the eviscerated body and open your mouth extra-wide. In goes the lifeless head, soon followed by the remains of the upper body. [if hvorecount > 5 and a random chance of 1 in 3 succeeds]Being picked up by the shoulders is too much for the damaged midsection and the lower half of the body falls away from the rest. You pause to fully swallow down the first half, letting it settle into your belly. Having used the opportunity to gather up the torn remains of the creature's organs into its belly, you move onto eating the second half, letting those bits pour down your throat as you up-end the shredded belly into your maw before taking it into your mouth[else]Barely holding together with the first half, you lift the mutilated lower body into your maw while swallowing the first part down[end if]. Soon enough, you're stuffing the legs into your mouth and down your throat, finishing by licking your fingers clean. You suck the last of the bloody mess from them one at a time.";
 	say "     Getting up, you do what you can to clean the bloody mess off yourself using some rags. You don't worry about the stain you've left behind - it's just one like many others the monsters of the city have made. You release a meaty belch and pat your rounded tummy as your ravenous nanites set to breaking down your meal to sustain you.";
 
 to say hvorebyplayer03:
@@ -471,93 +439,91 @@ to say hvorebyplayer03:
 
 to say hvorebyplayer04:
 	choose row MonsterID from the Table of Random Critters;
-	say "     You feel your dark hunger rising, but along with it comes a rush of arousal. Shall you play with your food first or get right to your meal? ([link]Y=fuck them[as]y[end link], [link]N=consume[as]n[end link])[line break]";
+	say "     You feel your dark hunger rising, but along with it comes a rush of arousal. Shall you play with your food first or get right to your meal? (Y=Fuck them, N=Consume)[line break]";
 	if Player consents:
 		LineBreak;
 		say "     Pushing the creature over, you get [ghim] into position and drive your hard cock into [ghis] [if currentmonster is cunted]juicy cunt[else]tight asshole[end if] with a satisfied grunt. You grope and fondle your prey, keeping [ghim] distracted as your jaw unhinges and your teeth elongate into sharp spikes. You can't help but salivate over your unaware meal as you thrust into that [if currentmonster is cunted]wet cunny[else]clenching butt[end if] of [ghishers]. Drool drips from your dangling tongue down onto the back of the [EnemyNameOrTitle][']s neck and shoulders.";
 		say "     After achieving a quick orgasm and dumping your [Cum Load Size of Player] load into [ghis] [if currentmonster is cunted]womb[else]bowels[end if], you are done playing and it is time to feed. The [EnemyNameOrTitle], dazed from the fucking, is easy prey at this point. You extend your jaws around [ghis] head and bite it clean off. There is only the briefest moment of realization on your meal's part before you chomp down and it is too late. You give [ghis] head a few bites to spill its contents across your tongue before moving on to meatier fare.";
+		CreatureSexAftermath Name entry receives "[if currentmonster is cunted]Pussy[else]Ass[end if]Fuck" from "Player";
+		WaitLineBreak;
 		say "     You take a few licks at the severed and bleeding stump of [ghis] neck before proceeding to stuff the rest of [ghim] into your mouth. You're ravenous at this point, only taking the occasional bite as you shove [ghis] [type entry] body and then legs down your throat. By the time you're done, all that's left is a bloody stain splattered with some cum from your earlier fun. Your carnivorous nanites work rapidly to break down your meaty meal, absorbing your fallen foe to sustain you.";
-		CreatureSexAftermath "[Name entry]" receives "[if currentmonster is cunted]PussyFuck[else]AssFuck[end if]" from "Player";
 	else:
 		LineBreak;
 		say "     Not wanting to delay your feast, you grab your foe's head and pull it toward yours. What might at first be misconstrued as a kiss is quickly revealed to be far more horrifying as your jaw opens unnaturally wide and your teeth extend into a serration of spikes. The [EnemyNameOrTitle] tries to cry out, but it gets muffled and then cut off as you shove [ghis] whole head into your toothy maw and bite down. You let the decapitated body fall to the ground while you chomp on the [type entry] head, chewing it into crunchy chunks of brains and bone.";
 		say "     While tasty, the meatier fare of the [EnemyNameOrTitle][']s body looks much more appetizing, so you move onto it instead. You start by taking a few licks at the severed and bleeding stump of [ghis] neck before biting several chunks out of the shoulders. Doing so frees the arms, which you finish off with several crunchy bites. You move on to the torso, biting several large chunks out of it and chewing them up as you eat your way down.";
+		WaitLineBreak;
 		say "     Reaching the abdomen, the guts threaten to spill out, so you up-end their intestines and viscera into your mouth and start feeding [ghis] lower body and legs into your maw. With your hunger partially sated, you're able to savor the taste of the creature's crotch before polishing off [ghis] hips and then sending [ghis] legs down into your belly. You're left full and sated, your belly stuffed with [EnemyNameOrTitle] meat that your carnivorous nanites rapidly digest to absorb into your body to sustain you.";
 
 to say hvorebyplayer05:
 	choose row MonsterID from the Table of Random Critters;
-	say "     You feel your dark hunger rising, but along with it comes a rush of arousal. Shall you give your food a final chance to fuck before eating or do you want to get right to your meal? ([link]Y=ride them[as]y[end link], [link]N=consume[as]n[end link])[line break]";
+	say "     You feel your dark hunger rising, but along with it comes a rush of arousal. Shall you give your food a final chance to fuck before eating or do you want to get right to your meal? (Y=Ride them, N=Consume)[line break]";
 	if Player consents:
 		LineBreak;
 		say "     Pinning the creature on [ghis] back, you move atop [ghim] and start grinding down onto [ghis] manhood. The [type entry] cock throbs against your [if Player is female]juicy folds[else]butt[end if] while you grin menacingly down at [ghim]. After sinking yourself down onto the [EnemyNameOrTitle][']s pole, [ghe] starts fucking you with considerable zeal. Perhaps, seeing your sharpened teeth and drooling tongue, [ghe] fears what will happen if you are satisfied or maybe even knows this is [ghis] last chance to fuck anything. Hard and fast works for you, not wanting to delay your feast too long.";
-		say "     Keeping a grip on the [EnemyNameOrTitle], you lean forward while continuing to ride. You slide your elongated tongue across [ghis] chest, neck and face, getting a taste of your meal. The tinge of fear only improves the flavor, exciting you further. Your [if Player is female]vaginal muscles[else]anal walls[end if] squeeze and pull at the creature's cock, seeking to pull [ghis] final orgasm from it[if Player is herm]. Your efforts are soon rewarded, the [EnemyNameOrTitle] crying out as hot seed blasts from [ghis] shaft and flows into your hungry womb. You pant and moan through an orgasm of your own, firing a basting of your own seed onto the frightened, orgasming [EnemyNameOrTitle][else if Player is female]. Your efforts are soon rewarded, the [EnemyNameOrTitle] crying out as hot semen blasts from [ghis] shaft and flows into your hungry womb. You pant and moan through an orgasm of your own while more drool drips onto the frightened, orgasming [EnemyNameOrTitle][else if Player is male]. Your efforts are soon rewarded, the [EnemyNameOrTitle] groaning in orgasm as [ghis] shaft pulses and throbs inside you as [ghis] hot seed shoots into your clutching bowels. Feeling this coupled with the grinding against your prostate sends you over the edge and you cum as well, splattering the frightened, orgasming [EnemyNameOrTitle] with a gooey basting of your own semen[else]. Your efforts are soon rewarded, the [EnemyNameOrTitle] groaning in orgasm as [ghis] shaft pulses and throbs inside you as [ghis] hot seed shoots into your clutching bowels. Feeling this coupled with the grinding against your sensitive inner walls sends waves of unfocused pleasure through you while you drool messily onto the frightened, orgasming [EnemyNameOrTitle][end if].";
+		say "     Keeping a grip on the [EnemyNameOrTitle], you lean forward while continuing to ride. You slide your elongated tongue across [ghis] chest, neck and face, getting a taste of your meal. The tinge of fear only improves the flavor, exciting you further. Your [if Player is female]vaginal muscles[else]anal walls[end if] squeeze and pull at the creature's cock, seeking to pull [ghis] final orgasm from it. Your efforts are soon rewarded, the [EnemyNameOrTitle] [if Player is herm]crying out as hot seed blasts from [ghis] shaft and flows into your hungry womb. You pant and moan through an orgasm of your own, firing a basting of your own seed onto the frightened, orgasming [EnemyNameOrTitle][else if Player is female]crying out as hot semen blasts from [ghis] shaft and flows into your hungry womb. You pant and moan through an orgasm of your own while more drool drips onto the frightened, orgasming [EnemyNameOrTitle][else if Player is male]groaning in orgasm as [ghis] shaft pulses and throbs inside you as [ghis] hot seed shoots into your clutching bowels. Feeling this coupled with the grinding against your prostate sends you over the edge and you cum as well, splattering the frightened, orgasming [EnemyNameOrTitle] with a gooey basting of your own semen[else]groaning in orgasm as [ghis] shaft pulses and throbs inside you as [ghis] hot seed shoots into your clutching bowels. Feeling this coupled with the grinding against your sensitive inner walls sends waves of unfocused pleasure through you while you drool messily onto the frightened, orgasming [EnemyNameOrTitle][end if].";
+		CreatureSexAftermath "Player" receives "[if Player is female]Pussy[else]Ass[end if]Fuck" from Name entry;
 		WaitLineBreak;
 		say "     With the [EnemyNameOrTitle] still in a daze after [ghis] powerful orgasm, you decide to go a little easy on [ghim] as a reward for the fine job fucking you. Pulling [ghis] head to yours, you open your toothy maw wide and stuff it in your mouth. There's only the briefest moment of realization on your meal's part before you chomp down and bite it clean off. You give the severed head a few bites to spill its contents across your tongue before moving on to meatier fare.";
 		say "     You take a few licks at the severed and bleeding stump of [ghis] neck before proceeding to stuff the rest of [ghim] into your mouth. You're ravenous at this point, only taking the occasional bite as you shove [ghis] [type entry] body and then legs down your throat. By the time you're done, all that's left is a bloody stain splattered with some cum from your earlier fun. Your carnivorous nanites work rapidly to break down your meaty meal, absorbing your fallen foe to sustain you.";
-		CreatureSexAftermath "Player" receives "[if Player is female]PussyFuck[else]AssFuck[end if]" from "[Name entry]";
 	else:
 		LineBreak;
 		say "     Not wanting to delay your feast, you grab your foe's head and pull it toward yours. What might at first be misconstrued as a kiss is quickly revealed to be far more horrifying as your jaw opens unnaturally wide and your teeth extend into a serration of spikes. The [EnemyNameOrTitle] tries to cry out, but it gets muffled and then cut off as you shove [ghis] whole head into your toothy maw and bite down. You let the decapitated body fall to the ground while you chomp on the [type entry] head, chewing it into crunchy chunks of brains and bone.";
 		say "     While tasty, the meatier fare of the [EnemyNameOrTitle][']s body looks much more appetizing, so you move onto it instead. You start by taking a few licks at the severed and bleeding stump of [ghis] neck before biting several chunks out of the shoulders. Doing so frees the arms, which you finish off with several crunchy bites. You move on to the torso, biting several large chunks out of it and chewing them up as you eat your way down.";
+		WaitLineBreak;
 		say "     Reaching the abdomen, the guts threaten to spill out, so you up-end their intestines and viscera into your mouth and start feeding [ghis] lower body and legs into your maw. With your hunger partially sated, you're able to savor the taste of the creature's crotch before polishing off [ghis] hips and then sending [ghis] legs down into your belly. You're left full and sated, your belly stuffed with [EnemyNameOrTitle] meat that your carnivorous nanites rapidly digest to absorb into your body to sustain you.";
-
 
 to say hvbp_ram:
 	say "     You grab the rambunctious ram by the horns and wrestle him to the ground, slamming his face hard into the dirt. 'Mmm... mutton,' you say teasingly in his ear while giving his plush ass a squeeze. He bleats angrily at this and squirms, but to no avail. Exhausted from the fight, he has too little strength left.";
 	let wolfcheck be false;
-	if FaceName of Player matches the text "wolf", case insensitively:
+	if FaceName of Player matches the text "Wolf", case insensitively:
 		say "     'Poor little lost lamb. Where's your shepherd to protect you from the Big. Bad. Wolf?' You punctuate each final word with a lick across his cheek, sending a shiver up the ram's spine. You can feel him trembling beneath you, eyes locked on your lupine teeth.";
 		now wolfcheck is true;
-	else if BodyName of Player matches the text "wolf", case insensitively:
+	else if BodyName of Player matches the text "Wolf", case insensitively:
 		say "     'Poor little lost lamb. Where's your shepherd to protect you from the Big. Bad. Wolf?' You punctuate each final word by smacking his face against the ground by pushing and pulling at his horn. You can feel him trembling beneath you, pinned under your strong, lupine body.";
 		now wolfcheck is true;
 	else:
 		say "     'Foolish little lamb. Not so arrogant now, are you?' you ask, grinding his face against the ground by tugging his horn this way and that.";
-	say "     '[one of]I'm sorry. I'm sorry[if wolfcheck is true and Cunt Count of Player is 0], Mr. Wolf[else if wolfcheck is true], Mrs. Wolf[end if],' he bleats fearfully[or]I ain't scared of the likes of you[if wolfcheck is true and Cunt Count of Player is 0], wolf[else if wolfcheck is true], you bitch[end if],' he bleats arrogantly, though there is a quaver in his voice[or][if Player is male]Go on, you pervert. I can take it,' he snaps, raising his rear defiantly[else]Don't be so smug. You'll be part of my flock sooner or later,' he boasts[end if][or]Come on... c-c-can't you take a joke,' he says with a forced laugh[at random].";
+	say "     '[one of]I'm sorry. I'm sorry[if wolfcheck is true and Player is not female], Mr. Wolf[else if wolfcheck is true], Mrs. Wolf[end if],' he bleats fearfully[or]I ain't scared of the likes of you[if wolfcheck is true and Player is not female], wolf[else if wolfcheck is true], you bitch[end if],' he bleats arrogantly, though there is a quaver in his voice[or][if Player is male]Go on, you pervert. I can take it,' he snaps, raising his rear defiantly[else]Don't be so smug. You'll be part of my flock sooner or later,' he boasts[end if][or]Come on... c-c-can't you take a joke,' he says with a forced laugh[at random].";
 	WaitLineBreak;
 	say "     You let him struggle until he's panting heavily and thoroughly worn out. Keeping a firm grip on his ankles, you pull his hooves to your open maw. 'I think I'll start with some leg of lamb,' you tease before stuffing his lower legs into your mouth. Gripping him by the hips, you let your throat pull him in steadily deeper with every gulp. With your lips around his thighs you pause and give his balls some teasing licks, making him moan and squirm feebly. He's been wide-eyed and panting heavily with fear as you've been gulping him down, but this gets him hard.";
 	say "     Reaching forward, you clamp his muzzle shut before you bite down. Your sharp teeth chomp right through both his legs, filling your mouth with the taste of blood and fresh mutton. The ram screams into your hand, the noise muffled. He swings at you wildly, but you shrug off his feeble blows. He's too weak and getting weaker rapidly as his lifeblood flows out.";
+	WaitLineBreak;
 	say "     After chomping down a few times on the severed legs, you swallow them down so you can turn your attention to your remaining meal. You give his bloody hips a few licks before biting down again, this time into his loins. He screams again and passes out, putting an end to his annoying struggles. You take your time with the next several mouthfuls, consuming his lower torso chunk after delicious chunk. By this point, your bloodlust feels sated, so you stuff the rest of him, arms, head and upper body down your throat, providing a satisfyingly heavy weight in your belly. Your ravenous nanites kick in, digesting the remains of the ram to sustain you. In the end, there is nothing left but some tufts of blood-soaked wool and a crimson stain to commemorate your grisly deed.";
 	if wolfcheck is true:
-		if FaceName of Player matches the text "wolf", case insensitively:
+		if FaceName of Player matches the text "Wolf", case insensitively:
 			setmonster "[FaceName of Player]";
 		else:
 			setmonster "[BodyName of Player]";
-		choose row MonsterID from the Table of Random Critters;
 	else if ( Player is FemalePreferred or BodyName of Player is "Ewe" or Player is purefemale ) and FemaleList is not banned:
 		setmonster "Ewe";
-		choose row MonsterID from the Table of Random Critters;
-
 
 to say hvbp_ewe:
-	say "     You grab the over-eager ewe and push her down onto her back, pinning her to the ground. 'Mmm... mutton,' you say teasingly in her ear while squeezing her plush bosom. She baaaas softly and squirms a little at the rough handling[if Player is male]. Seeing your cock[smn] though, she spreads her legs invitingly. Rather than turn down the opportunity, you grind your manhood against her wet woolen snatch[else]. Still lustful, she spreads her legs invitingly[end if].";
+	say "     You grab the over-eager ewe and push her down onto her back, pinning her to the ground. 'Mmm... mutton,' you say teasingly in her ear while squeezing her plush bosom. She baaaas softly and squirms a little at the rough handling. [if Player is male]Seeing your cock[smn] though, she spreads her legs invitingly. Rather than turn down the opportunity, you grind your manhood against her wet woolen snatch[else]Still lustful, she spreads her legs invitingly[end if].";
 	let wolfcheck be false;
-	if FaceName of Player matches the text "wolf", case insensitively:
+	if FaceName of Player matches the text "Wolf", case insensitively:
 		say "     'Poor little lost lamb. Where's your shepherd to protect you from the Big. Bad. Wolf?' You punctuate each final word with a lick across her cheek, sending shivers up the ewe's spine. You can feel her trembling beneath you, eyes locked on your lupine teeth.";
 		now wolfcheck is true;
-	else if BodyName of Player matches the text "wolf", case insensitively:
+	else if BodyName of Player matches the text "Wolf", case insensitively:
 		say "     'Poor little lost lamb. Where's your shepherd to protect you from the Big. Bad. Wolf?' You punctuate each final word with another possessive squeeze of her breast. You can feel her trembling beneath you, pinned under your strong, lupine body.";
 		now wolfcheck is true;
 	else:
 		say "     'You look pretty tasty, my little lamb chop,' you say, continuing to grope and manhandle her.";
-	say "     '[one of]Please. Please. I'm just so lonely and horny,' she bleats[or][if Player is male]I just need it so bad. Please won't you fuck me?' she moans with need[else]I... I... I didn't mean it. I was just so horny,' she bleats[end if][or]I'm sorry[if wolfcheck is true and Cunt Count of Player is 0], Mr. Wolf[else if wolfcheck is true], Mrs. Wolf[end if]. I didn't mean to upset you. I'll j-j-just be going now,' she whimpers[or][if wolfcheck is false]Please. I just need someone for a little while,' she moans, grinding her hips up[else]No-no-no-no,' she bleats fearfully, your lupine aggression frightening her[end if][if Player is male and wolfcheck is true]I j-j-just need a fuck so bad. Even one from a w-w-wolf,' she bleats, torn between her fear and her need[else if wolfcheck is true]I j-j-just need to get off so bad. Even with a w-w-wolf,' she bleats, torn between her fear and her need[else if Player is male]I just need a fuck so bad. Aren't I pretty enough to fuck?' she bleats, sexily rubbing her hands over her fluffy body[else]I just need to get off so bad. Please, let's just cuddle for a little while,' she bleats, sexily rubbing her hands over her fluffy body[end if][at random].";
+	say "     '[one of]Please. Please. I'm just so lonely and horny,' she bleats[or][if Player is male]I just need it so bad. Please won't you fuck me?' she moans with need[else]I... I... I didn't mean it. I was just so horny,' she bleats[end if][or]I'm sorry[if wolfcheck is true and Player is not female], Mr. Wolf[else if wolfcheck is true], Mrs. Wolf[end if]. I didn't mean to upset you. I'll j-j-just be going now,' she whimpers[or][if wolfcheck is false]Please. I just need someone for a little while,' she moans, grinding her hips up[else]No-no-no-no,' she bleats fearfully, your lupine aggression frightening her[end if][or]I [if Player is male and wolfcheck is true]j-j-just need a fuck so bad. Even one from a w-w-wolf,' she bleats, torn between her fear and her need[else if wolfcheck is true]j-j-just need to get off so bad. Even with a w-w-wolf,' she bleats, torn between her fear and her need[else if Player is male]just need a fuck so bad. Aren't I pretty enough to fuck?' she bleats, sexily rubbing her hands over her fluffy body[else]just need to get off so bad. Please, let's just cuddle for a little while,' she bleats, sexily rubbing her hands over her fluffy body[end if][at random].";
 	WaitLineBreak;
 	if Player is male:
 		say "     Having grown aroused, you sink your [Cock of Player] cock into her mutton muff, drawing a baaing moan of delight and relief. Your hunger won't be denied long, but a little fun before your meal seems acceptable. You pant heavily and start thrusting, pounding her juicy snatch. Still fondling her breasts, you lean in and start licking at them and sucking on her nipples. Her cunny quivers around your shaft as it slides into that hot, wet tunnel of hers over and over again.";
 	else:
 		say "     Having gotten aroused, you stuff a pair of fingers into her mutton muff and start finger-fucking her. This draws a baaing moan of delight from the ewe. Your hunger won't be denied long, but a little fun before your meal seems acceptable. Still fondling her breasts with your other hand, you lean in and start licking at them and sucking on her nipples. Her cunny quivers as you finger that hot, wet tunnel of hers.";
 	say "     After a couple of minutes of this fun, your hunger won't be denied any longer. You give her breasts another long lick. 'Mmm... what a delicious rack of lamb, you have. I could just eat you up,' you say coldly. Your grin flashes your elongated, pointy teeth and you clamp a hand over her muzzle before she can cry out. Her eyes go wide with fear [if wolfcheck is true]as she realizes just how far the big bad wolf is willing to take this[else]and she shakes her head from side to side[end if]. Her cunt clamps down around your [if Player is male]shaft deliciously tightly[else]fingers[end if] as she's struck with terror. You open your mouth wide and chomp down onto her breast, biting through it and into her chest. She squeals into your hand and feebly tries to push free, but cannot dislodge you. You chew up the tasty mouthful and tear out another morsel as your meal.";
+	WaitLineBreak;
 	say "     She grows weaker with every bite until she passes out and you continue eating her. By the time you've eaten out most of her chest cavity, the worst of your bloodlust is sated, so you stuff the remaining chunks of her - arms, legs and then the head - down your throat. They provide a satisfyingly full and heavy weight in your belly. Your ravenous nanites kick in, digesting the remains of the ram to sustain you. In the end, there is nothing left but some tufts of blood-soaked wool and a crimson stain to commemorate your grisly deed.";
 	if wolfcheck is true:
-		if FaceName of Player matches the text "wolf", case insensitively:
+		if FaceName of Player matches the text "Wolf", case insensitively:
 			setmonster "[FaceName of Player]";
 		else:
 			setmonster "[BodyName of Player]";
-		choose row MonsterID from the Table of Random Critters;
 	else if ( Player is MalePreferred or BodyName of Player is "Ram" or Player is puremale ) and MaleList is not banned:
 		setmonster "Ram";
-		choose row MonsterID from the Table of Random Critters;
-
 
 to say hvbp_succubus:
 	say "     Knocked to the ground, the succubus puts on a sultry display. She swoons a little such that her seductive body is shown off in a final attempt to lure you into sex. But trying to tempt you with the pleasures of the flesh only accentuates a different hunger for flesh. You lick your lips and eye her alluring body hungrily.";
@@ -577,7 +543,6 @@ to say hvbp_incubus:
 	say "     You take your time with your meal, savoring every bite into him. After you [one of]have consumed his tail bite by bite[or]have consumed both his meaty buns[or]have moved on from his butt to the adjacent thigh[or]made a crunchy side dish of his little demon wings before getting back to his rump[at random], he raises his head and starts licking at your [if Player is herm]dual-gendered loins[else if Player is male]cock[smn][else if Player is female]cunt[sfn][else]bare groin[end if]. He slips an arm under himself and reaches down to his groin so he can jerk off even as you continue biting more chunks out of him. Despite his wounds and the ensuing blood loss, he manages to keep it up even as he's starting to lose consciousness. He manages a final orgasm, giving a long moan that fades into silence as he shoots his load onto the ground before collapsing into the mess and expiring.";
 	say "     With him dead, the fun's gone out of your meal. To finish sating your hunger, you consume the rest of him rather quickly. When you get to eating the front of his body, the added seasoning of his semen provides extra flavor. His need for sexual release and ability to find even being consumed alive sexually exciting reveals just how powerfully the infection can drive some creatures['] lusts and corrupt their minds. This one will definitely be a meal you'll not soon forget and you're tempted to find another of his kind to eat the next time your hunger awakens.";
 
-
 to say hvbp_feralwolf:
 	say "     You watch the feral wolf drop to the ground in defeat, slumped over on his side. You realize that this fearsome predator is completely at your mercy... and it makes your mouth water. The thought of savagely consuming this beast is an exciting (and appetizing) prospect. You gaze upon your fallen foe with a cold hunger in your eyes.";
 	say "     The wolf, as if sensing your predatory intent, [one of]whimpers and tries to crawl back[or]growls weakly in an effort to deter you[or][if wslevel is 3]pisses a little in fear[else]curls his tail between his legs[end if][or]shivers and feebly tries to stand back up and look menacing[or]snaps at you a few times, trying to ward you off[or]whimpers a little. 'Puh. Pleh. P-please no,' he finally says hoarsely, managing to dredge up the ability to speak[at random]. Your response is to grin wider, showing your serrated maw of teeth. He bares his teeth back at you and growls, but can do little else. You circle around him slowly, enjoying watching his reactions as you draw this final moment of the hunt just a little longer.";
@@ -585,7 +550,6 @@ to say hvbp_feralwolf:
 	say "     When you strike, you leap at him quickly. Your widened jaws go for his soft belly while you grab his head by the underside of the muzzle. He growls and tries to bite at you even as you sink your teeth into him, but you keep his muzzle pushed up and away. His legs kick and scratch at you, but you ignore this.";
 	say "     Your first bite tears into his belly, tearing out a chunk of abdominal muscle along with some fur and skin. You swallow it down, hardly chewing, and keep eating. You dig into his guts, eating the forest predator alive as his wild kin might do to a felled deer. Mouthful after mouthful, you tear into his tender underbelly and consume him. Blood and torn organs spill out as you savage this once-fearsome hunter.";
 	say "     [if a random chance of 1 in 3 succeeds][one of]'My pack will avenge me,' the beast manages to growl[or]'This... is my last hunt,' the beast laments[or]'Just remember - someday, sooner or later, it will be your turn to be the prey. And I will laugh,' the beast wheezes[or]'My alpha will find you and END you!' the beast growls[at random][else][one of]The beast releases a long and ululating howl, a final sad farewell to a cruel world[or]The beast continues to growl and snarl as you feast upon his entrails[or]The beast foams pink at the mouth as he tries in vain to bite at you[or]The beast whimpers in pain as he spasms and twitches uncontrollably[at random]. You keep on eating, taking a chunk of his liver next. The wolf's strength continues to wane and soon he gives his last gurgling breath. You enjoy feasting upon the wolf's warm corpse, hollowing out his torso to sate your grisly hunger. As the body starts to cool, you move on to eating the rest of him, taking big bites that crunch bone. In the end, you're left stuffed full of wolf chunks that churn away in your nanite-laden stomach.";
-
 
 to say hvbp_dolphin:
 	say "     You hit the blue dolphinoid human over the head with a final blow, and she floats in the water, unmoving. She's floating in such a way that you can see the tempting prize of her juicy cunt, but you are more interested in the strong creature as a whole at the moment. You can feel your hunger welling up stronger and the thought of consuming the deceitful creature draws you towards her. As you approach, you catch the sight of her sly grin and know she's about to unleash her final sonic attack.";
@@ -600,7 +564,6 @@ to say hvbp_dolphin:
 	WaitLineBreak;
 	say "     The dolphin, once cruel and arrogant, whimpers for mercy even as she tries to paddle away. You easily swim circles around her, toying with her before lunging at her bloodied hips. You start biting into her lower body, eating pelvis, groin and belly. At some point during this, her life ends with her entrails dangling out into the briny waters.";
 	say "     As you eat your fill of the cetacean's remains, you notice a couple of those piratical sharks in the water around you, likely drawn by the taste of blood in the water. They don't seem aggressive towards you and aren't put off by your vicious consumption of the dolphin either. Exchanging a look, you get a sense of mutual understanding. Having had your fun and your meal, you leave the rest of the bobbing corpse for them, knowing they'll finish it off and leave no evidence of your grisly deed.";
-
 
 [ *** temp ref
 to malepronouns:
@@ -628,8 +591,7 @@ to femalepronouns:
 	now gmasculine is "feminine";
 ]
 
-
-Chapter 5 - UB by Player
+Section 5 - UB by Player
 
 to ubbyplayer:
 	choose row MonsterID from the Table of Random Critters;
@@ -651,24 +613,23 @@ to ubbyplayer:
 	[All Child parts are the unbirthed creature - might be overwritten by the player having "They have your Eyes" during birth]
 	SetInfectionsOf Child to Name entry;
 
-Chapter 6 - UB Scenes
+Section 6 - UB Scenes
 
 to say ubbyplayer00:	[master list to decide scenes]
 	choose row MonsterID from the Table of Random Critters;
 	if ubcount >= 5 and Name entry is not "Mannequin" and Name entry is not "Snake" and Name entry is not "Naga" and ubspecial1 is false:
 		say "[ubbyplayer03]";
-	else if ubspecial1 is true and (the remainder after dividing ubcount by 5 is 0) and Name entry is not "Snake" and Name entry is not "Naga":
+	else if ubspecial1 is true and the remainder after dividing ubcount by 5 is 0 and Name entry is not "Snake" and Name entry is not "Naga":
 		say "[ubbyplayer04]";
 	else if ubcount is even:
 		say "[ubbyplayer01]";
-	else if ubcount is odd:
+	else:
 		say "[ubbyplayer02]";
-
 
 to say ubbyplayer01:			[basic - head first]
 	choose row MonsterID from the Table of Random Critters;
-	say "     Following the strong impulses coming from your vacant womb, you jump upon the [EnemyNameOrTitle] and restrain them. With them too weak to put up much of a fight at this point, you guide their face to your dripping snatch. At first, thinking that you are simply in search of oral sex, they begin licking and lapping at your folds, unwittingly exciting you further and making your hungry pussy quiver all the more[if scalevalue of Player > (scale entry + 1)]. Being much smaller than you, it is easy for you to force their head forward[else if scalevalue of Player > scale entry]. Being a little smaller than you, it is not difficult for you to force their head forward[else]. Being about as big as you, it takes a little while before you're satisfied that you've got a tight grip on them before driving your hips forward while you pull on their head[end if], driving it right into your expanding cunt before they realize what's happening.";
-	say "     As you continue to pull the struggling [EnemyNameOrTitle] into your vaginal passage, you moan in orgasmic effort, your perverse need to have your womb filled taking pleasure as they are drawn inexorably into you. They squirm delightfully inside your cunt, bringing you pleasure as your enhanced inner muscles keep a tight grip on them and drag them in inch by delicious inch. Your pussy positively flows with your juices, soaking your prey as your ravenous hole steadily engulfs them. Your belly bulging [if scalevalue of Player is scale entry]hugely[else if scalevalue of Player is (scale entry + 1)]considerably[else]outwards[end if] as your rapidly unbirthed foe is drawn into your womb. You have to lower yourself to the ground as you pull the last of them into you with another orgasmic cry. You need to take a moment, rubbing your tummy as you savor that full and fulfilled sensation coming from your now occupied womb.";
+	say "     Following the strong impulses coming from your vacant womb, you jump upon the [EnemyNameOrTitle] and restrain them. With them too weak to put up much of a fight at this point, you guide their face to your dripping snatch. At first, thinking that you are simply in search of oral sex, they begin licking and lapping at your folds, unwittingly exciting you further and making your hungry pussy quiver all the more. Being [if scalevalue of Player > scale entry + 1]much smaller than you, it is easy for you to force their head forward[else if scalevalue of Player > scale entry]a little smaller than you, it is not difficult for you to force their head forward[else]about as big as you, it takes a little while before you're satisfied that you've got a tight grip on them before driving your hips forward while you pull on their head[end if], driving it right into your expanding cunt before they realize what's happening.";
+	say "     As you continue to pull the struggling [EnemyNameOrTitle] into your vaginal passage, you moan in orgasmic effort, your perverse need to have your womb filled taking pleasure as they are drawn inexorably into you. They squirm delightfully inside your cunt, bringing you pleasure as your enhanced inner muscles keep a tight grip on them and drag them in inch by delicious inch. Your pussy positively flows with your juices, soaking your prey as your ravenous hole steadily engulfs them. Your belly bulging [if scalevalue of Player is scale entry]hugely[else if scalevalue of Player is scale entry + 1]considerably[else]outwards[end if] as your rapidly unbirthed foe is drawn into your womb. You have to lower yourself to the ground as you pull the last of them into you with another orgasmic cry. You need to take a moment, rubbing your tummy as you savor that full and fulfilled sensation coming from your now occupied womb.";
 
 to say ubbyplayer02:			[basic 2 - head first]
 	choose row MonsterID from the Table of Random Critters;
@@ -679,7 +640,7 @@ to say ubbyplayer02:			[basic 2 - head first]
 to say ubbyplayer03:		[special 1 - first time feet first, involuntary prey]
 	choose row MonsterID from the Table of Random Critters;
 	say "     With the increasingly familiar need building in your heated womb, you rub your groin with one hand and grab the [EnemyNameOrTitle] by the leg with the other. Spreading your pussy lips wide, you pull their foot to your gaping hole and shove it in. Feeling your hot, wet flesh gripping around their limb and drawing them in, they try to struggle, but you grab their other ankle and hold them tight. They try to pull themselves away with their hands, but they're too weak after the fight to resist the inexorable pull of your cunt. Bringing their other foot to your wet folds, you slurp it up as well and now have both legs making their pleasant trek into your ravenous vagina.";
-	say "     Seeing what's happening and knowing full well from your grin the extent of your lustful plans, the [if scale entry is 1]tiny creature[else if scale entry is 2]small creature[else if scale entry is 3][EnemyNameOrTitle][else if scale entry is 4]large creature[else if scale entry is 5]huge creature[end if] keeps trying to resist. These struggles only add to your pleasure as its legs squirm around inside your tight passage, pushing you to the point of orgasm. From their reaction as well, you can tell that part of them is enjoying this even if they are still resisting it. Wanting some added fun and feeling a need to reassure your soon-to-be offspring, you grab their other limbs and keep them pinned with one hand while your other gropes their crotch. You fondle them, pleasuring their loins and exciting them further despite their attempts to resist. You keep this up until their hips pass between your juicy folds. You move to reassuring them by stroking their face and cooing softly to them.";
+	say "     Seeing what's happening and knowing full well from your grin the extent of your lustful plans, the [if scale entry is 1]tiny creature[else if scale entry is 2]small creature[else if scale entry is 3][EnemyNameOrTitle][else if scale entry is 4]large creature[else]huge creature[end if] keeps trying to resist. These struggles only add to your pleasure as its legs squirm around inside your tight passage, pushing you to the point of orgasm. From their reaction as well, you can tell that part of them is enjoying this even if they are still resisting it. Wanting some added fun and feeling a need to reassure your soon-to-be offspring, you grab their other limbs and keep them pinned with one hand while your other gropes their crotch. You fondle them, pleasuring their loins and exciting them further despite their attempts to resist. You keep this up until their hips pass between your juicy folds. You move to reassuring them by stroking their face and cooing softly to them.";
 	say "     More tired than anything else, their struggles grow weaker but never stop, even after you've fed their upper limbs and body to your hungry cunny. You continue to caress and stroke their head soothingly. 'What a willful child you are, but I'll love you all the same,' you whisper to them before pressing firmly on the top of their skull and push them the rest of the way into your quivering cunt. You orgasm again, your inner walls squeezing and rippling over them. The [EnemyNameOrTitle] moans in return, orgasming despite its attempts to hold out. By the time your climax is coming to an end, they've found themselves deposited fully in your uterus. You feel them jostling around inside you, at first struggling but soon just settling into position, curling up to slumber until they're ready to be reborn.";
 	now Libido of Player is ( Libido of Player * 3 ) / 4;
 	now ubspecial1 is true;
@@ -690,8 +651,7 @@ to say ubbyplayer04:		[feet first]
 	say "     As your folds stretch wider as you're getting ready to engulf their hips, they give up at pulling away and instead try to strike at you. Too worn from the earlier battle, they aren't able to do much damage and only end up giving you a chance to grapple their upper limbs and [one of]pin them to their sides[or]pull them across their chest[or]stuff them into your juicy cunny[at random]. This both cuts off their ability to fight back and gets them ready to go the rest of the way into you. With a quick orgasm that soaks them with your juices, you pull their waist into your vagina while more of them moves into your womb.";
 	say "     Keeping their limbs pinned down, you pull them in further, inch after inch of the [EnemyNameOrTitle] disappearing into your sopping wet pussy. Your belly stretches and bulges more and more as they get stuffed into you. No longer needing your hands at this point to hold their limbs, you cover their mouth to silence their cries and caress their head soothingly with the other, telling them how much happier they'll be as part of your family. You then move your hand to their shoulder and pull them inwards while your cunt struggles to stretch wider to take their shoulders. The [EnemyNameOrTitle] shakes their head, but ends up moaning in ecstasy as your rippling inner walls and arousing scent makes the unbirthing process quite pleasurable for them as well. Once around their shoulders, their head follows quickly and soon you're left with only that delightfully full sensation of having a fresh occupant curling up in your womb to await its rebirth. You sit up and run your hands over your [bodytype of Player] body as a final orgasm hits and you feel them connecting with you as your newest pregnancy.";
 
-
-Chapter 7 - Vore Settings Menu
+Section 7 - Vore Settings Menu
 
 [Moved to Settings Menus file]
 

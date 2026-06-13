@@ -44,7 +44,8 @@ TwistedCapacity of Amaryllis is false. [Twisted Characters can take any penetrat
 Sterile of Amaryllis is false. [steriles can't knock people up]
 MainInfection of Amaryllis is "Black Equinoid".
 Description of Amaryllis is "[AmaryllisDesc]".
-Conversation of Amaryllis is { "I choose you, playerchu!" }.
+[Conversation of Amaryllis is { "I choose you, playerchu!" }.]
+fuckscene of Amaryllis is "[AmaryllisSexMenu]".
 The scent of Amaryllis is "     Amaryllis smells like clean fur and grassy fields with a hint of equine arousal.".
 
 to say AmaryllisDesc:
@@ -97,26 +98,28 @@ to say AmaryllisTalkMenu:
 			choose row calcnumber in table of fucking options;
 			say "[title entry]: [description entry]?";
 			if Player consents:
+				LineBreak;
 				now sextablerun is 1;
-				let nam be title entry;
-				if (nam is "Just talk"):
-					say "[AmaryllisTalk1]";
-				if (nam is "Ask how she met the tribe"):
-					say "[AmaryllisTalk2]";
-				if (nam is "Ask how she likes the tribe"):
-					say "[AmaryllisTalk3]";
-				if (nam is "Ask if she has any errands to run"):
-					say "[AmaryllisTalk4]";
-				if (nam is "Ask Amaryllis about her relationship with Bryony"):
-					say "[AmaryllisTalk5]";
+				if title entry is:
+					-- "Just talk":
+						say "[AmaryllisTalk1]";
+					-- "Ask how she met the tribe":
+						say "[AmaryllisTalk2]";
+					-- "Ask how she likes the tribe":
+						say "[AmaryllisTalk3]";
+					-- "Ask if she has any errands to run":
+						say "[AmaryllisTalk4]";
+					-- "Ask Amaryllis about her relationship with Bryony":
+						say "[AmaryllisTalk5]";
 				wait for any key;
 				say "[AmaryllisTalkMenu]";
 		else if calcnumber is 0:
+			LineBreak;
 			now sextablerun is 1;
 			say "     You excuse yourself and step back from Amaryllis.";
 			wait for any key;
 		else:
-			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options], or 0 to exit.";
 	clear the screen and hyperlink list;
 
 to say AmaryllisTalk1:
@@ -134,66 +137,63 @@ to say AmaryllisTalk4:
 to say AmaryllisTalk5:
 	say "     'Oh, her?' Amaryllis asks, pointing to the other horse with a gentle laugh. 'She's just a stick in the mud. No real beef between us,' she explains. 'Not that I'd mind a piece of her meat,' the equinoid murmurs in a quiet aside. You pretend you didn't hear that and ask for more detail. 'Oh, Bryony's been around forever. She's one of camp's best warriors, though she thinks that I'm in over my head just because I want to explore and recruit some new life.' The smaller herm shakes her head. 'No sense of passion or adventure. It's a shame, too, [']cause she'd be incredibly hot if she wasn't so stuffy.' Amaryllis either doesn't realize what she just said or doesn't care, her eyes glazing over as she watches Bryony with obvious longing. You decide to drop the subject.";
 
-
-Instead of fucking Amaryllis:
+to say AmaryllisSexMenu:
 	if lastfuck of Amaryllis - turns < 4:
 		say "     'I'd love to, but I'm still a little exhausted after a last session together. Maybe a little later?' Amaryllis offers suggestively.";
 	else if Player is blequinoidbodied:
 		say "     Amaryllis perks up at your offer. 'You mean it?' she asks, flirtatiously. When you nod in affirmation, the equinoid presses her voluptuous body flush to your chest, her hands slipping around your rear for a firm, possessive squeeze. 'I just knew you'd want some more of me. What kind of fun did you have in mind?'";
-		say "[AmaryllisSexMenu]";
+		now sextablerun is 0;
+		blank out the whole of table of fucking options;
+		[]
+		if Player is male:
+			choose a blank row in table of fucking options;
+			now title entry is "Fuck her";
+			now sortorder entry is 1;
+			now description entry is "Pin the herm to the ground and fuck her pussy";
+		[]
+		if Player is female:
+			choose a blank row in table of fucking options;
+			now title entry is "Vaginal ride";
+			now sortorder entry is 2;
+			now description entry is "Slide that heavy cock into your folds and ride her";
+		[]
+		choose a blank row in the table of fucking options;
+		now title entry is "Anal ride";
+		now sortorder entry is 3;
+		now description entry is "Stretch your ass around that massive log of meat";
+		[]
+		sort the table of fucking options in sortorder order;
+		repeat with y running from 1 to number of filled rows in table of fucking options:
+			choose row y from the table of fucking options;
+			say "[link][y] - [title entry][as][y][end link][line break]";
+		say "[link]0 - Nevermind[as]0[end link][line break]";
+		while sextablerun is 0:
+			say "Pick the corresponding number> [run paragraph on]";
+			get a number;
+			if calcnumber > 0 and calcnumber <= the number of filled rows in table of fucking options:
+				now current menu selection is calcnumber;
+				choose row calcnumber in table of fucking options;
+				say "[title entry]: [description entry]?";
+				if Player consents:
+					LineBreak;
+					now sextablerun is 1;
+					if title entry is:
+						-- "Fuck her":
+							say "[AmaryllisSex1]";
+						-- "Vaginal ride":
+							say "[AmaryllisSex2]";
+						-- "Anal ride":
+							say "[AmaryllisSex3]";
+			else if calcnumber is 0:
+				LineBreak;
+				now sextablerun is 1;
+				say "     You step back from Amaryllis, shaking your head slightly as she gives a questioning look.";
+			else:
+				say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options], or 0 to exit.";
+		wait for any key;
+		clear the screen and hyperlink list;
 	else:
 		say "     Amaryllis looks away at your offer. 'I'd love to, but...' she trails off, going quiet for a moment before locking her gaze with yours again. 'Look, the elders told me not to have fun with non-equinoids anymore - their ruling, not my choice. If you want to be my playmate, why not let the herd help you become more like us again?' she offers helpfully. 'Or you could just boink Liliana instead,' she adds, glancing jealously at your companion.";
-
-to say AmaryllisSexMenu:
-	setmonster "Black Equinoid";
-	now sextablerun is 0;
-	blank out the whole of table of fucking options;
-	[]
-	if Player is male:
-		choose a blank row in table of fucking options;
-		now title entry is "Fuck her";
-		now sortorder entry is 1;
-		now description entry is "Pin the herm to the ground and fuck her pussy";
-	[]
-	if Player is female:
-		choose a blank row in table of fucking options;
-		now title entry is "Vaginal ride";
-		now sortorder entry is 2;
-		now description entry is "Slide that heavy cock into your folds and ride her";
-	[]
-	choose a blank row in the table of fucking options;
-	now title entry is "Anal ride";
-	now sortorder entry is 3;
-	now description entry is "Stretch your ass around that massive log of meat";
-	[]
-	sort the table of fucking options in sortorder order;
-	repeat with y running from 1 to number of filled rows in table of fucking options:
-		choose row y from the table of fucking options;
-		say "[link][y] - [title entry][as][y][end link][line break]";
-	say "[link]0 - Nevermind[as]0[end link][line break]";
-	while sextablerun is 0:
-		say "Pick the corresponding number> [run paragraph on]";
-		get a number;
-		if calcnumber > 0 and calcnumber <= the number of filled rows in table of fucking options:
-			now current menu selection is calcnumber;
-			choose row calcnumber in table of fucking options;
-			say "[title entry]: [description entry]?";
-			if Player consents:
-				now sextablerun is 1;
-				let nam be title entry;
-				if (nam is "Fuck her"):
-					say "[AmaryllisSex1]";
-				if (nam is "Vaginal ride"):
-					say "[AmaryllisSex2]";
-				if (nam is "Anal ride"):
-					say "[AmaryllisSex3]";
-		else if calcnumber is 0:
-			now sextablerun is 1;
-			say "     You step back from Amaryllis, shaking your head slightly as she gives a questioning look.";
-		else:
-			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
-	wait for any key;
-	clear the screen and hyperlink list;
 
 to say AmaryllisSex1: [Fuck her]
 	say "     You tell Amaryllis that you've been searching for a warm, wet sheath for your hard equine cock. The equinoid shudders lustfully at your words, her own length throbbing against your lustrous coat of hair. 'Mmh. Don't tease me with it, then. Make me yours,' she says. Turning around, the voluptuous equinoid brushes her tail across your sheath, then slyly sashays that broad, well-toned ass for your enjoyment. With a smoldering look over her shoulder, the once-proud warrior lowers herself to all fours on the grass and hikes her tail over her back, proudly presenting her dark, puffy asshole and the damp, thick-lipped folds resting just below it. The scent of her fertility wafts from her equine cunt, her clear nectar trickling down over her perineum and heavy sack. 'Well, what are you waiting for?' the equinoid teases, hiking up her generous ass to be claimed.";
@@ -201,6 +201,7 @@ to say AmaryllisSex1: [Fuck her]
 	WaitLineBreak;
 	say "     You begin to saw back and forth within the equinoid's deliciously squeezing cunt, your breath beating hot against the nape of your neck as you mate with her. Your lovemaking draws the attention of some of the other warriors, who pause their day-to-day activities to cheer or stroke themselves while watching the spectacle. The herd's encouragement only increases your arousal, and soon your initial steady thrusts give way to rough and wild rutting, pounding into your lover's exquisitely textured folds with grunts and moans of savage delight. In time, the equinoid is grinding back against you lustfully, her soaked channel splattering wetness over the earth as you claim her, each piston into her dark-fleshed folds driving you ever-closer to your inevitable peaks.";
 	say "     Eventually you can hold back no longer and thrust deep into Amaryllis one last time, your flare swelling within her rippling passage. With a triumphant whinny, you release blast after blast of thick, equine seed into the herm's sweltering depths, filling her womb with your rich, virile cum. What isn't locked in place by the bulging crown of your member squirts out against your crotch in alabaster waves, tainting your fur with the deluge. Amaryllis cries out as she reaches a hard and messy climax, shuddering with pleasure as strained spurts of seed splatter across the ground beneath her. Spent and brutally satisfied, you relax against the curvy equinoid, basking in the pleasant warmth of the afterglow. Your lover continues to moan and nicker softly as you stroke over her breasts and stomach, delicately caressing her curves. Once the last few spurts taper to an end, you withdraw from the equinoid's dark-fleshed pussy, a rush of warm seed spilling down her thighs and across the ground below. Amaryllis sighs happily at the feeling before rolling over onto her back, simply relaxing under the [if daytimer is day]warmth of the sun[else]starry canopy of night[end if] while running a hand along her subtly distended belly.";
+	NPCSexAftermath Amaryllis receives "PussyFuck" from Player;
 	infect "Black Equinoid";
 	now lastfuck of Amaryllis is turns;
 
@@ -213,7 +214,8 @@ to say AmaryllisSex2: [Vaginal ride]
 	say "     The sex that follows is acutely felt, yet hazy in details. Every buck into your sordid snatch erodes your thoughts and inhibitions further until you're whinnying like a mare in heat. At points, Amaryllis pounds into your hungry tunnel with such animalistic zeal that it feels like you're being ravaged by a feral horse, slickened squelches sounding out on every rugged impact. The herm pauses at just the right moments to edge and let your lusts simmer, keeping you constantly aroused, soon begging to be filled with her seed. The rough, bestial mating is almost overwhelming, reducing your already hazy thoughts to fantasies of being a slutty, well-fucked breeding mare for the herd's powerful warriors.";
 	WaitLineBreak;
 	say "     At last, Amaryllis can't hold back any longer. The horse-hung warrior cinches you firm to her curvaceous form, fingers splaying to grip into your hide. Her head cranes to the [if daytimer is day]sky[else]starry sky above[end if] as she unleashes thick, heavy ropes of seed into your waiting womb, filling you with powerful blasts of cum that swell your dark-furred stomach. Groaning with need, you clamp down hard around her cock as orgasm takes hold, squirting messily around that twitching, pulsing pillar[if Player is male] while your own, neglected length[smn] spurt[smv] all over the ground before you[end if]. Your lucky voyeurs are pushed past their limits as well, adding to the pervasive scent of sex and arousal that permeates the area.";
-	say "     With raspy breaths, you lean back into the warrior's sumptuous breasts, letting the afterglow wash over you in a blanket of mind-numbing tingles. The spreading warmth relaxes your racing mind, and you gradually come down from that satisfying high with a weary, wavering sigh. Once you return to some semblance of normal thought, Amaryllis loosens her grip and lowers you down onto the dry grass below. You are cushioned by its long, supple fibers, and you nicker in delight as the herm nestles in with you, a softly furred hand caressing your belly while the other tickles your cum-sullied slit. After basking in her arms for a while, you give the equinoid an appreciative kiss and stand up on wobbly footing, that nagging need slaked and mind free of worry.[impregchance]";
+	say "     With raspy breaths, you lean back into the warrior's sumptuous breasts, letting the afterglow wash over you in a blanket of mind-numbing tingles. The spreading warmth relaxes your racing mind, and you gradually come down from that satisfying high with a weary, wavering sigh. Once you return to some semblance of normal thought, Amaryllis loosens her grip and lowers you down onto the dry grass below. You are cushioned by its long, supple fibers, and you nicker in delight as the herm nestles in with you, a softly furred hand caressing your belly while the other tickles your cum-sullied slit. After basking in her arms for a while, you give the equinoid an appreciative kiss and stand up on wobbly footing, that nagging need slaked and mind free of worry.";
+	NPCSexAftermath Player receives "PussyFuck" from Amaryllis;
 	infect "Black Equinoid";
 	now lastfuck of equinoid warrior is turns;
 
@@ -227,7 +229,8 @@ to say AmaryllisSex3: [Anal ride]
 	say "     In time, the equinoid's motions become more rigorous, transitioning from those first few cautionary thrusts to rough, rapid bucking over the course of several minutes. Your distended colon ripples from the overwhelming stimulation, struggling to squeeze around her cock, your battered tract growing more and more slack with every probe of that thick, throbbing pillar. Eventually, all you can do is accept the steady barrage of mind-numbing thrusts as she fucks you with the zeal of a feral, heedless beast, pillaging your sordid depths and milking you of your pleasure. [if Player is male]The direct stimulation of your prostate drives you to orgasm several times as she breeds your slickened asshole, not even pausing to allow you to recover from your most recent high before driving you to another messy climax, chaining your peaks in a haze of undulating bliss. [end if]The miasma of sex increasingly clouds your mind, stripping away your humanity with each throb and thrust into your quivering, unresisting bowels.";
 	WaitLineBreak;
 	say "     Nearing orgasm, Amaryllis's thrusts slow in speed but gain in force, splitting you open upon her rock-hard horsecock. You groan and do your best to clench your weakened ring around her, focusing on the concerto of slick squelches that emanate from your passionate joining. Digging her fingers into your flanks, the stallion-mare cinches you tight against her groin and cranes her head to the sky, a hard, final throb heralding a maelstrom of hot and sticky horse cum. You pull your legs tight and try to wring as many of those sticky ropes of seed as you can from her, cherishing the billowing heat that slathers your bowels and flows into your [if Player is mpreg_ok]hidden male womb[else]intestines[end if]. Your stomach distends a little from the sheer volume of semen within you, her hot spunk sealed by her fat, pulsing flare. What doesn't stuff you squirts out against her waist, dripping down to form a quickly cooling puddle on the grassy earth below. You're held like this for the better half of a minute, [if Player is male]your cock twitching and spurting in time with your lover's heavy throbs[else]simply shuddering and savoring the bliss of being filled[end if]. In your lustful reverie, all that matters is her rippling rod within you and the warmth of her seed in your belly.";
-	say "     Spent and satisfied, Amaryllis lowers you down into the seed-streaked grass below, her weight pressing atop you in a warm, comforting blanket[if Player is male] as she frots your softening lengths together[end if]. You cherish your time with the herm, sharing adoring little kisses while basking in the compliments of the crowd that's formed around you. You find yourself tempted to just lie here forever as the equinoid fingers your cum-sullied hole, pushing her fingers to the knuckle past your loose, weary ring[if Player is male] and rubbing your thrumming prostate[end if]. Nickering softly, you give Amaryllis one last deep, affectionate kiss before rising up on unsteady footing, thick rivers of seed still tricking down your thighs.[mimpregchance]";
+	say "     Spent and satisfied, Amaryllis lowers you down into the seed-streaked grass below, her weight pressing atop you in a warm, comforting blanket[if Player is male] as she frots your softening lengths together[end if]. You cherish your time with the herm, sharing adoring little kisses while basking in the compliments of the crowd that's formed around you. You find yourself tempted to just lie here forever as the equinoid fingers your cum-sullied hole, pushing her fingers to the knuckle past your loose, weary ring[if Player is male] and rubbing your thrumming prostate[end if]. Nickering softly, you give Amaryllis one last deep, affectionate kiss before rising up on unsteady footing, thick rivers of seed still tricking down your thighs.";
+	NPCSexAftermath Player receives "AssFuck" from Amaryllis;
 	infect "Black Equinoid";
 	now lastfuck of equinoid warrior is turns;
 

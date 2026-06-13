@@ -5,6 +5,7 @@ Version 1 of Storage Locker by Core Mechanics begins here.
 Section 1 - Storage Locker Setup
 
 There is a storage locker in Bunker. It is fixed in place. It has a description "[stlockerdesc]".
+
 understand "use [storage locker]" as examining.
 
 instead of examining the storage locker, say stlockerdesc.
@@ -18,12 +19,11 @@ to say stlockerdesc:
 	say "[link](4) Retrieve everything[as]4[end link][line break]";
 	say "[link](5) Command list[as]5[end link][line break]";
 	say "[link](0) Exit[as]0[end link][line break]";
-	while 1 is 1:
+	now calcnumber is -1;
+	while calcnumber < 0 or calcnumber > 5:
 		say "Choice? (0-5)> [run paragraph on]";
 		get a number;
-		if calcnumber >= 0 and calcnumber <= 5:
-			break;
-		else:
+		if calcnumber < 0 or calcnumber > 5:
 			say "Invalid choice. Pick from 0 to 5.";
 	if calcnumber is 1:
 		displayplinv;
@@ -40,13 +40,11 @@ to say stlockerdesc:
 	else:
 		say "[line break]You close the storage locker.";
 
-
 instead of using storage locker:
 	say "[stlockerdesc]";
 
 instead of opening storage locker:
 	say "[stlockerdesc]";
-
 
 Section 2 - Displaying Contents
 
@@ -55,8 +53,7 @@ to displayplinv:
 		say "There is nothing currently in your inventory.";
 	else:
 		say "Your backpack contains:[line break]";
-		say "Type [bold type]stash <name>[roman type] to [bold type][bracket]S[close bracket][roman type]tash an item or [bold type]stashall <name>[roman type] to Stash [bold type][bracket]A[close bracket][roman type]ll of an item.";
-		LineBreak;
+		say "Type [bold type]stash <name>[roman type] to [bold type][bracket]S[close bracket][roman type]tash an item or [bold type]stashall <name>[roman type] to Stash [bold type][bracket]A[close bracket][roman type]ll of an item.[paragraph break]";
 		let L be a list of grab objects;
 		repeat with x running through all owned grab objects:
 			add x to L, if absent;
@@ -72,10 +69,7 @@ to displayplinv:
 					say "[set link hyperindex][bracket][entry 1 of linktext][close bracket][terminate link] ";
 			say "[x] x[carried of x]";
 			if y < number of entries in L:
-				if the remainder after dividing y by invcolumns is 0:
-					LineBreak;
-				else:
-					say "  ||  ";
+				say "[if the remainder after dividing y by invcolumns is 0][line break][else]  --  ";
 		LineBreak;
 
 to displaystorage:
@@ -83,8 +77,7 @@ to displaystorage:
 		say "There is nothing currently in the storage locker.";
 	else:
 		say "The storage locker contains:[line break]";
-		say "Type [bold type]retrieve <name>[roman type] to [bold type][bracket]R[close bracket][roman type]etrieve an item or [bold type]retrieveall <name>[roman type] to Retrieve [bold type][bracket]A[close bracket][roman type]ll of an item.";
-		LineBreak;
+		say "Type [bold type]retrieve <name>[roman type] to [bold type][bracket]R[close bracket][roman type]etrieve an item or [bold type]retrieveall <name>[roman type] to Retrieve [bold type][bracket]A[close bracket][roman type]ll of an item.[paragraph break]";
 		let L be a list of grab objects;
 		repeat with x running through all stored grab objects:
 			add x to L, if absent;
@@ -100,10 +93,7 @@ to displaystorage:
 					say "[set link hyperindex][bracket][entry 1 of linktext][close bracket][terminate link] ";
 			say "[x] x[stashed of x]";
 			if y < number of entries in L:
-				if the remainder after dividing y by invcolumns is 0:
-					LineBreak;
-				else:
-					say "  ||  ";
+				say "[if the remainder after dividing y by invcolumns is 0][line break][else]  --  ";
 		LineBreak;
 
 Section 3 - Commands
@@ -117,20 +107,8 @@ to say stlockercom:
 	say "[bold type]retrieveall <object>[roman type] - Take all copies of the named object from the locker.";
 	say "[bold type]massretrieve[roman type] - Take everything from the locker.";
 
-
 Stashing is an action applying to one thing.
-Retrieving is an action applying to one thing.
-Allstashing is an action applying to one thing.
-Allretrieving is an action applying to one thing.
-Massstashing is an action applying to nothing.
-Massretrieving is an action applying to nothing.
-
 understand "stash [grab object]" as stashing.
-understand "stashall [grab object]" as allstashing.
-understand "massstash" as massstashing.
-understand "retrieve [grab object]" as retrieving.
-understand "retrieveall [grab object]" as allretrieving.
-understand "massretrieve" as massretrieving.
 
 Check stashing a grab object (called x):
 	if storage locker is not visible, say "Stash it where?" instead;
@@ -143,6 +121,9 @@ Carry out stashing a grab object (called x):
 	increase stashed of x by 1;
 	say "You put [x] into the locker for storage.";
 
+Retrieving is an action applying to one thing.
+understand "retrieve [grab object]" as retrieving.
+
 Check retrieving a grab object (called x):
 	if storage locker is not visible, say "Retrieve from where?" instead;
 	if stashed of x <= 0, say "There doesn't seem to be any [x] in the storage locker right now." instead;
@@ -152,6 +133,8 @@ Carry out retrieving a grab object (called x):
 	ItemGain x by 1 silently;
 	say "You take [x] from the storage locker.";
 
+Allstashing is an action applying to one thing.
+understand "stashall [grab object]" as allstashing.
 
 Check allstashing a grab object (called x):
 	if storage locker is not visible, say "Stash them where?" instead;
@@ -165,6 +148,9 @@ Carry out allstashing a grab object (called x):
 	ItemLoss all x silently;
 	say "You put [num] of [x] into the locker for storage.";
 
+Allretrieving is an action applying to one thing.
+understand "retrieveall [grab object]" as allretrieving.
+
 Check allretrieving a grab object (called x):
 	if storage locker is not visible, say "Stash them where?" instead;
 	if stashed of x <= 0, say "There doesn't seem to be any [x] in the storage locker right now" instead;
@@ -175,6 +161,9 @@ Carry out allretrieving a grab object (called x):
 	now stashed of x is 0;
 	say "You take [num] of [x] from the storage locker.";
 
+Massstashing is an action applying to nothing.
+understand "massstash" as massstashing.
+
 Check massstashing:
 	if storage locker is not visible, say "Stash them where?" instead;
 
@@ -182,17 +171,15 @@ Carry out massstashing:
 	let yy be 0;
 	let zz be 0;
 	repeat with x running through all owned grab objects:
-		if x is journal or x is equipped or x is wielded:
-			next;
-		else:
+		if x is not journal and x is not equipped and x is not wielded:
 			increase yy by 1;
 			increase zz by carried of x;
 			increase stashed of x by carried of x;
 			ItemLoss all x silently;
-	if zz is 0:
-		say "You have nothing you can store.";
-	else:
-		say "You stash [zz] things ([yy] different objects) in the storage locker.";
+	say "[if zz is 0]You have nothing you can store[else]You stash [zz] things ([yy] different objects) in the storage locker[end if].";
+
+Massretrieving is an action applying to nothing.
+understand "massretrieve" as massretrieving.
 
 check massretrieving:
 	if storage locker is not visible, say "Stash them where?" instead;
@@ -205,11 +192,6 @@ carry out massretrieving:
 		increase zz by stashed of x;
 		ItemGain x by stashed of x silently;
 		now stashed of x is 0;
-	if zz is 0:
-		say "The storage locker is already empty.";
-	else:
-		say "You retrieve [zz] things ([yy] different objects) from the storage locker.";
-
-
+	say "[if zz is 0]The storage locker is already empty[else]You retrieve [zz] things ([yy] different objects) from the storage locker[end if].";
 
 Storage Locker ends here.

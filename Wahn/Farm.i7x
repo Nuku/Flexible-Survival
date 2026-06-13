@@ -10,7 +10,6 @@ Version 1 of Farm by Wahn begins here.
 
 "Adds a farm and NPC, or alternatively a Cowboy to Flexible Survival's Wandering Monsters table."
 
-
 Section 1 - Farm Rooms
 
 Table of GameRoomIDs (continued)
@@ -20,8 +19,7 @@ McDermott Farm Entrance	"McDermott Farm Entrance"
 McDermott Farm Entrance is a room. It is a fasttravel. It is private.
 Description of McDermott Farm Entrance is "     You're standing at entrance of a mid-sized farm, on the cracked asphalt that's left of a road leading here. Seems almost like the nanites enhanced grass to actively seek out and grow into and through human works to destroy them. Or at least try to - things on the other side of the long fence dividing the farm from the rest of the plains look pretty intact - which might have something to do with the two anthro horses with scythes you see working their way along, cutting down any sign of encroaching creeping grass. A sign on the archway over the road tells you that this is the 'McDermott Farm', in existence since 1792.".
 
-Instead of sniffing McDermott Farm Entrance:
-	say "     The scent of freshly cut grass hangs in the air.";
+Scent of McDermott Farm Entrance is "     The scent of freshly cut grass hangs in the air.".
 
 after looking while player is in McDermott Farm Entrance:
 	project the Figure of Map_Farm_6_icon;
@@ -67,8 +65,7 @@ Farmhouse Main Room is a room.
 Farmhouse Main Room is northwest of Central Farm Square.
 Description of Farmhouse Main Room is "     You're in the main room on the ground floor of the farmhouse, which is pretty big and includes a living and dining area, with the kitchen visible through an open archway in the back. This place has a certain rustic charm, with wooden walls and old but well-made looking furniture. Several comfy leather couches stand around a coffee table in the front half of the room, angled towards a fireplace and a large plasma television on the adjoining wall.".
 
-Instead of sniffing Farmhouse Main Room:
-	say "     The comfortable scents of wood and the leather couches hang in the air.";
+Scent of Farmhouse Main Room is "     The comfortable scents of wood and the leather couches hang in the air.".
 
 after looking while player is in Farmhouse Main Room:
 	project the Figure of Map_Farm_4_icon;
@@ -179,7 +176,7 @@ Sheep Meadow SE is southeast of Sheep Meadow NW.
 Sheep Meadow NW is north of Sheep Meadow SW.
 
 The Barn Door is a door.
-Description of Barn Door is "The barn has a big set of wooden double doors, which don't even have a lock or anything, just a latch to hold them closed.".
+Description of Barn Door is "     The barn has a big set of wooden double doors, which don't even have a lock or anything, just a latch to hold them closed.[line break]".
 understand "door" as the Barn Door.
 Central Farm Square is east of Barn Door.
 McDermott Barn is west of Barn Door.
@@ -222,25 +219,23 @@ after looking while player is in Mustang Paddock:
 	project the Figure of Map_Farm_8_icon;
 
 The Mustang Paddock Gate is a door.
-Description of Mustang Paddock Gate is "     The large gate leading to the paddock with the mustang and his harem looks pretty sturdy - and it and the adjoining fence have had an electrified wire running strung over their top added not too long ago from the looks of it. Finally, there is a padlock holding the gate closed. Its key hangs from a short chain beside it, but still... seems like someone really doesn't want those horses to get out.".
+Description of Mustang Paddock Gate is "     The large gate leading to the paddock with the mustang and his harem looks pretty sturdy - and it and the adjoining fence have had an electrified wire running strung over their top added not too long ago from the looks of it. Finally, there is a padlock holding the gate closed. Its key hangs from a short chain beside it, but still... seems like someone really doesn't want those horses to get out.[line break]".
 understand "gate" as the Mustang Paddock Gate.
 Central Farm Square is south of Mustang Paddock Gate.
 Mustang Paddock is north of Mustang Paddock Gate.
 
-
-instead of going north from Central Farm Square while (HP of Lucifer is 0):
+instead of going north from Central Farm Square while HP of Lucifer is 0:
 	move player to Mustang Paddock;
 	wait for any key;
 	challenge "Feral Mustang Stallion";
 
-instead of going north from Central Farm Square while (HP of Lucifer is 1 and Dexterity of Lucifer is 0):
+instead of going north from Central Farm Square while HP of Lucifer is 1 and Dexterity of Lucifer is 0:
 	say "     As you move to open the gate to the horse paddock, someone calls out to you, making you turn and look. It is a horseman, clearly one of the farm workers, who casually strolls over to you with a bundle of... something on his shoulder, consisting of lots of sturdy leather straps and buckles. Soon, he comes to stand before you on his broad hooves and gives you a calculating grin. 'Hey there, partner. Name's Lee. I saw you making all buddy buddy with Lucifer in there. You're a brave one, that I have to admit. Lots of others tried and ended up as mares right quick. There's a betting pool how long you'll last, just you know.' Looking you up and down as if to evaluate your body's willingness to transform, the horseman gives a knowing nod, then focuses back on your face. 'Anyhow, I got a proposition for you. Since you're so friendly with the big bad stallion, I'll offer you this thing for a low, low price. Hell, I'll even play pit crew if you need me to,' Lee explains, pulling the leather harness from under his arm and spreading it out for you to see.";
 	say "     It looks like... a sex sling, with a sturdy leather pad on which to lie, plus very long leather straps, arranged so they can fit a broad barrel shape. You study the arrangement for a few seconds, then your eyes go wide in realization and you glance to the horses out on the paddock's green grass. 'Exactly,' the farmhand says, smiling broadly. 'You see, we had a... horse enthusiast, coming over sometimes before everything went to hell like this. At night, or when the boss was off for a few days, you know. For the right price, me and a few of the guys allowed him to have his fun, strapped him in. The guy had been waiting for a chance to try the new stud, but with everything going on...' Lee waves at his own horseman body and the entrance of the farm, beyond which you can see the creeping grass move in waves that have nothing at all to do with wind.";
 	WaitLineBreak;
 	say "     Lee goes on to say, 'I don't think he'll be back. So here I got this harness, and you could be the one to use it now... if you catch my drift. Come on, we both know you wanna get it on with Lucifer. Won't even have to pay me much for the harness and my help. Cash's useless anyways these days, so I'll do it if you get me something. Strands of hair from a centaur mare. I - got plans for that stuff.' Glancing over towards the barracks and barn, a lewd smile plays over Lee's face, then he pats your shoulder and says, 'Think about it, will ya? I'll keep an eye out and you just wave me over if you're in the paddock and wanna get your fun on with this baby.' He pats the harness and tucks it under his arm, then strolls off, leaving you to enter the paddock on your own.";
 	move player to Mustang Paddock;
 	now Dexterity of Lucifer is 1;
-
 
 [
 Section 4 - Endings

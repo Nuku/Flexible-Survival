@@ -9,7 +9,6 @@ Version 2 of Consolidated Park Events by Song begins here.
 
 "Consolidates a collection of simple and background events to clear up the Park area."
 
-
 Section 1 - Strange Sight (by Kaleem)
 
 Table of GameEventIDs (continued)
@@ -27,7 +26,6 @@ to say ResolveEvent Strange Sight:
 	increase score by 1;
 	now Strange Sight is resolved;
 
-
 Section 2 - Anxious Soldiers (by Kaleem)
 
 Table of GameEventIDs (continued)
@@ -41,7 +39,6 @@ Sarea of Anxious Soldiers is "Park".
 to say ResolveEvent Anxious Soldiers:
 	say "     Seeing a group of soldiers patrolling the park, you find your spirits lifting and run over to them to ask for help. You quickly realize that this was a mistake. The moment they catch sight of you, the armed humans raise the barrels of their guns while yelling at you to halt. Skidding to an immediate stop, you find yourself somewhat confused as the uniformed men and women glare at you before turning their heads to talk to one another. The conversation between the assembled group of soldiers has your stomach knotting with butterflies while your heart freezes inside of your chest, the words [italic type]contaminated[roman type] and [italic type]neutralize[roman type] coming up far too many times for comfort. Given that there are five of them in total, you don't think that it would be wise to try and test your luck against them. Deciding that it's time to get lost, you flip your head to the left and then gasp and wave one of your hands around frantically while shouting [italic type]monster[roman type]. The five soldiers instantly swing their guns in the direction you're pointing toward and start firing wildly. You quickly run away before they can realize that they've been tricked.";
 	now Anxious Soldiers is resolved;
-
 
 Section 3 - Mysterious Girl (by Kaleem)
 
@@ -58,7 +55,6 @@ to say ResolveEvent Mysterious Girl:
 	say "     Interestingly enough, your answer comes when one of the wolves, a shaggy, brown-furred thing that looks as though it hadn't seen water in days, shuffles itself up and over so that it can dip its snout under one of the female's prone hands. Said hand slowly starts to pet the beast's snout, and you feel as though there's something very [italic type]off[roman type] about this kid. When bleary eyes open with several sleepy blinks, you feel your blood freeze as crimson eyes turn to regard you with a somewhat confused look. There's just too much age and wisdom in those orbs for the girl to be human, and you quickly feel the need to leave. Swallowing thickly, you nod to the teenager, who stares at you impassively, then back away so that you can turn and run. Moving away on fast feet, you're left wonder who or what that young girl was.";
 	now Mysterious Girl is resolved;
 
-
 Section 4 - Fox Hunt (by Kaleem)
 
 Table of GameEventIDs (continued)
@@ -72,7 +68,6 @@ Sarea of Groundskeepers Cabin is "Park".
 to say ResolveEvent Groundskeepers Cabin:
 	say "     While traveling through the park, you come across a small, locked building set back in the vegetation. Closer investigation reveals a small sign that someone knocked over, declaring it to be one of the park buildings and for employees only. Deciding that you don't really care about the employees only rule in these circumstances, you search around the small building to try to find a way in, only to be frustrated at the way the building is locked up tight. Sighing, you are eventually forced to go on your way, but maybe you will be back to try again later.";
 	now Groundskeepers Cabin is resolved;
-
 
 Section 6 - Badger Sighting (by Sarokcat)
 
@@ -89,7 +84,6 @@ to say ResolveEvent Badger Sighting:
 	say "     After scaring the bear off, the creature begins to scent the air and look around - he must be looking for you! You recall that badgers are one of the most dangerous and possessive burrowing creatures around, and you realize that if he gets his hands on you, he likely won't let you go. You turn and flee into the park before he can track you down.";
 	now Badger Sighting is resolved;
 
-
 Section 7 - Empty Jeep (by Sarokcat)
 
 Table of GameEventIDs (continued)
@@ -104,7 +98,6 @@ to say ResolveEvent Empty Jeep:
 	say "     While traveling through the park, you come across what is obviously a caretaker's jeep. The off-road vehicle is sitting in the middle of a grassy area with the driver-side door hanging wide open. Moving closer to investigate, you notice that a strange and powerful smell is coming from within the jeep, and you realize with a sinking feeling that whoever was inside probably got sprayed by one of those wandering skunks and been transformed into another sex-crazed beast. Sadly, you realize that whether the jeep works or not is irrelevant, as the powerful and lingering musk would probably change you into a skunk before you got very far. Sighing, you continue on your way.";
 	increase the score by 1;
 	now Empty Jeep is resolved;
-
 
 Section 8 - Small Fire (by Sarokcat)
 
@@ -121,7 +114,6 @@ to say ResolveEvent Small Fire:
 	increase the score by 1;
 	now Small Fire is resolved;
 
-
 Section 9 - Torn Vegetation (by Sarokcat)
 
 Table of GameEventIDs (continued)
@@ -136,7 +128,6 @@ to say ResolveEvent Torn Vegetation:
 	say "     While traveling through the park, you come across an area where the vegetation is ripped and torn, and the ground is churned up and tossed around. You look around cautiously, but you can't see anything that could cause this level of devastation - at least not nearby. Determining that it seems safe for now, you move closer to the damaged area and try to figure out what might have happened. From what little you can tell as an inexperienced observer, there seem to be two different types of rather large claw marks, and it seems likely that two of the infected beasts ended up fighting each other here. Observing the amount of damage they made, you shudder for a minute and hurry on your way. Surviving until the rescue seems harder every day...";
 	increase the score by 1;
 	now Torn Vegetation is resolved;
-
 
 Section 10 - Abandoned Picnic (by Sarokcat)
 
@@ -153,6 +144,5 @@ to say ResolveEvent Abandoned Picnic:
 	ItemGain chips by 1;
 	increase the score by 5;
 	now Abandoned Picnic is resolved;
-
 
 Consolidated Park Events ends here.

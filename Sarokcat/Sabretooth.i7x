@@ -22,15 +22,7 @@ to say Sabretooth wins:
 		say "     The large beast seems proud of his victory over another male in his territory, and roars out his dominance for the rest of the museum to hear. He then focuses on you, using his large paws to bat you around like a toy for a minute, before turning around and leaving to seek a more suitable mate. You can't help but feel slightly lucky to have survived the encounter, as you carefully crawl away.";
 	infect "Sabretooth";
 
-
-To say Sabretooth loses:
-	project figure of Sabretooth_soft_icon;
-	say "     The large prehistoric beast falls back from your forceful assault, slowly backing down the museum corridors as you watch it warily, until it turns and darts down a side passageway. You relax as the creature has obviously gone off somewhere to lick its wounds, and revel in your victory over one of the greatest large predators of the past.";
-
 Section 2 - Creature Insertion
-
-to say Sabretooth Desc:
-	say "     You hear something softly moving behind you, and turn around to see a large sabre-toothed cat slowly stalking down the halls toward you on its wide paws. Its large feral body covered in golden striped fur as it draws closer, though you find your eyes locked to its more intimidating large teeth, as the large cat's muscles tense, and it pounces at you!";
 
 Table of CombatPrep (continued)
 name(text)	PrepFunction(text)
@@ -63,15 +55,15 @@ When Play begins:
 	now enemy Name entry is ""; [ Specific name of unique enemy. ]
 	now enemy type entry is 0; [ 0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters. ]
 	now attack entry is "[one of]The large cat pounces at you, its large form knocking you back as it rams into you.[or]The large beast snaps its teeth at you, its signature fangs leaving bloody wounds in your side.[or]The sabretooth bats at you with one of its large paws.[or]The prehistoric cat launches itself up on its hind legs, as its front paws bat at your head.[or]The beast bounds towards you, its large body twisting and pressing on you as it tries to wrestle you to the ground.[or]You gasp in surprise as the beast turns and sprays the area with its scent, the male musk filling your open mouth and making your body twitch in response.[or]The large cat pauses for a moment, its feline eyes catching your own as you find yourself locked into a staring contest with the large beast; after several seconds you find your mind growing slightly duller, as your eyes are forced downward under the dominant cat's gaze.[at random]";
-	now defeated entry is "[Sabretooth loses]";
+	now defeated entry is "     The large prehistoric beast falls back from your forceful assault, slowly backing down the museum corridors as you watch it warily, until it turns and darts down a side passageway. You relax as the creature has obviously gone off somewhere to lick its wounds, and revel in your victory over one of the greatest large predators of the past.[line break]";
 	now victory entry is "[Sabretooth wins]";
-	now desc entry is "[Sabretooth Desc]";
+	now desc entry is "     You hear something softly moving behind you, and turn around to see a large sabre-toothed cat slowly stalking down the halls toward you on its wide paws. Its large feral body covered in golden striped fur as it draws closer, though you find your eyes locked to its more intimidating large teeth, as the large cat's muscles tense, and it pounces at you![line break]";
 	now face entry is "that of a large cat. The two large fangs extending from your jaws, however, mark your face as that of one of the most deadly prehistoric hunters, a sabretooth's"; [ Face description, format as "Your face is [Face of Player]." ]
 	now body entry is "long, large and powerfully muscled. You find yourself resting easily on four large feline paws, each toe equipped with a sharp claw, your changed body feeling comfortable in its new quadrupedal stance. Your neck muscles have shifted along with the rest of your body, allowing your head to face forward properly on its new, fully feline form, the figure of one of the most powerful and dangerous predators of the prehistoric era"; [ Body Description, format as "Your Body is [Body of Player]." ]
 	now skin entry is "[one of]golden furred[or]feline[or]softly furred[or]golden striped[or]thick, golden furred[at random]"; [ Skin Description, format as "Looking at yourself, your body is covered in [Skin of Player] skin." ]
 	now tail entry is "You have a long feline tail, slowly lashing behind your tightly muscled hindquarters, its feline length seeming to sway softly in an invitation to anyone passing behind you."; [ Tail description, write a whole Sentence or leave blank. ]
 	now cock entry is "[one of]feline[or]bestial[or]sabretooth[or]barbed[at random]"; [ Cock Description, format as you have a 'size' (your text) cock]
-	now face change entry is "Your face seems to tingle and go numb, as several bones in your face crack and begin to reshape themselves, your mouth pushing forward as your jaws change and fill with sharp feline teeth, your nose seeming to flatten out and merge into your newly forming muzzle. Your vision seems to blur as your eyes shift position on your head slightly, while your ears seem to move back to the rear of your head, even as they shift into a more rounded feline shape. Your vision sharpens again, and you find yourself staring out at the world from above a predatory feline muzzle, your head already coming to resemble that of a large cat. You find your new muzzle stretching out in a powerful yawn, as the two distinctive large fangs of a sabretooth begin to grow downwards from your jaw, until finally you snap your jaw closed, and you run your new feline tongue over your new teeth a few times as you get used to your new fully changed face"; [ Face change text, format as "Your face feels funny as [face change entry]." ]
+	now face change entry is "several bones in your face crack and begin to reshape themselves, your mouth pushing forward as your jaws change and fill with sharp feline teeth, your nose seeming to flatten out and merge into your newly forming muzzle. Your vision seems to blur as your eyes shift position on your head slightly, while your ears seem to move back to the rear of your head, even as they shift into a more rounded feline shape. Your vision sharpens again, and you find yourself staring out at the world from above a predatory feline muzzle, your head already coming to resemble that of a large cat. You find your new muzzle stretching out in a powerful yawn, as the two distinctive large fangs of a sabretooth begin to grow downwards from your jaw, until finally you snap your jaw closed, and you run your new feline tongue over your new teeth a few times as you get used to your new fully changed face"; [ Face change text, format as "Your face feels funny as [face change entry]." ]
 	now body change entry is "your muscles shift and rearrange themselves, you find yourself falling forward and catch yourself with your hands, as your legs shift and change into a fully digitigrade stance. You try to stand erect for a second, only to fall back down again onto your changing hands, your fingers drawing back up into proper paws, barely able to grip anything as they like your new hindpaws become more suited to a true four legged stance. You find yourself gasping as you look down your new longer, and larger feline body, as the muscles finish settling into a more powerful arrangement more suited for the body of the prehistoric cat you now possess"; [ Body change text, format as "Your body feels funny as [body change entry]." ]
 	now skin change entry is "it is covered in soft golden fur, the thick shaggy fur slowly covering your entire body, as soft striped patterns of a lighter golden color begin to appear throughout the new coat of fur"; [ Skin change text, format as "Your skin feels funny as [skin change entry]." ]
 	now ass change entry is "a long feline tail stretches out from your rear, your ass changing and tightening with feline muscles as your tail finishes growing out to lash slowly behind you"; [ Ass/tail change text, format as "Your ass feels funny as [ass change entry]." ]
@@ -216,24 +208,19 @@ When Play begins:
 	[Clit Size Adjective is generated by a function and can be used in scenes: very small/small/average/large/very large]
 ]
 
-
 Section 3 - Chipped Tooth
 
 Table of Game Objects (continued)
 name	desc	weight	object
 "Chipped tooth"	"A rather large chipped piece of tooth, obviously knocked off of something with tremendous fangs."	1	Chipped tooth
 
-Chipped tooth is a grab object. Understand "tooth" and "chipped" as Chipped tooth. [Chipped tooth is infectious. Strain of Chipped tooth is "Sabretooth".]
-
+Chipped tooth is a grab object. Understand "tooth" and "chipped" as Chipped tooth.
 Usedesc of Chipped tooth is "[Chipped tooth use]".
+Scent of Chipped tooth is "The large fang somehow smells quite old despite looking rather new.".
 
 to say Chipped tooth use:
-	say "Looking at the small chipped piece of tooth, you find yourself rubbing it between your hands slightly, enjoying the feel of its strange texture. Suddenly, you let out a small yelp as the sharp part of the tooth cuts you, and you drop the piece of tooth as you rub the small cut. Looking around, you can't see where the bit of tooth ended up, and sigh as you give up on your trophy and continue on your way.";
+	say "     Looking at the small chipped piece of tooth, you find yourself rubbing it between your hands slightly, enjoying the feel of its strange texture. Suddenly, you let out a small yelp as the sharp part of the tooth cuts you, and you drop the piece of tooth as you rub the small cut. Looking around, you can't see where the bit of tooth ended up, and sigh as you give up on your trophy and continue on your way.";
 	infect "Sabretooth";
-
-instead of sniffing Chipped tooth:
-	say "The large fang somehow smells quite old despite looking rather new.";
-
 
 Section 4 - Endings
 

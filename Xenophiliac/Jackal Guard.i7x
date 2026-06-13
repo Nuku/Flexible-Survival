@@ -4,17 +4,6 @@ Jackal Guard by Xenophiliac begins here.
 
 Section 1 - Creature Responses
 
-to say stoneguardiandesc:
-	say "     The beast standing before you is composed completely of stone, animated through some unseen force. It looks like a human man from the neck down; none of its body has any clothing carved into it, except for an Egyptian-style skirt shielding it down to its knees. The statue's head, however, is that of an Egyptian jackal, a very canine-esque face staring at you with stone eyes. Raising his massive metal sword, the statue marches purposefully forwards, intent on preventing your desecration of the altar. From the way these beasts are shambling forward, you're pretty sure that they are only animated guardians, not at all interested in sex.";
-
-
-to say losetostoneguardian:
-	say "     With one massive punch to your chest, the beast sends you flying backwards sprawling on the ground outside. Barely conscious and coughing up blood, your concussed mind registers that the guardians have reclaimed the regal sword and sealed the shrine.";
-
-to say beatthestoneguardian:
-	say "     Landing one heavy blow on the stone guardian's head, you send it stumbling back, wounded and disoriented. Cracks streak across the guardian's stone figure as small chunks of rock fall off of the awakened warrior. With one last step backwards, the beast crumbles into rubble, his sword clanging noisily to the ground.";
-
-
 Section 2 - Creature Insertion
 
 Table of CombatPrep (continued)
@@ -22,7 +11,7 @@ name(text)	PrepFunction(text)
 "Jackal Guard"	"[PrepCombat_Jackal Guard]"
 
 to say PrepCombat_Jackal Guard:
-	setmongender 3; [creature is male]
+	setmongender 1; [creature is neuter-X]
 
 Table of Random Critters (continued)
 NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
@@ -43,27 +32,27 @@ When Play begins:
 	now enemy title entry is ""; [ Name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name. ]
 	now enemy Name entry is ""; [ Specific name of unique enemy. ]
 	now enemy type entry is 0; [ 0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters. ]
-	now attack entry is "[one of]Slamming his solid stone fist straight into your chest and knocking the breath out of you, you think that the guardian may have broken a few of your ribs[or]Slashing a deep gash across your chest, you're not even sure if you're going to survive this encounter[or]You're almost knocked out when the stone guardian hits you with his entire weight[at random].";
-	now defeated entry is "[beatthestoneguardian]";
-	now victory entry is "[losetostoneguardian]";
-	now desc entry is "[stoneguardiandesc]";
-	now face entry is "Impossible - Jackal Guard Error";
-	now body entry is "Impossible - Jackal Guard Error";
-	now skin entry is "Impossible - Jackal Guard Error";
-	now tail entry is "Impossible - Jackal Guard Error";
-	now cock entry is "Impossible - Jackal Guard Error";
-	now face change entry is "Impossible - Jackal Guard Error";
-	now body change entry is "Impossible - Jackal Guard Error";
-	now skin change entry is "Impossible - Jackal Guard Error";
-	now ass change entry is "Impossible - Jackal Guard Error";
-	now cock change entry is "Impossible - Jackal Guard Error";
+	now attack entry is "[one of]Slamming its solid stone fist straight into your chest and knocking the breath out of you, you think that the guardian may have broken a few of your ribs[or]Slashing a deep gash across your chest, you're not even sure if you're going to survive this encounter[or]You're almost knocked out when the stone guardian hits you with its entire weight[at random].";
+	now defeated entry is "     Landing one heavy blow on the stone guardian's head, you send it stumbling back, wounded and disoriented. Cracks streak across the guardian's stone figure as small chunks of rock fall off of the awakened warrior. With one last step backwards, the beast crumbles into rubble, its sword clanging noisily to the ground.[line break]";
+	now victory entry is "     With one massive punch to your chest, the beast sends you flying backwards sprawling on the ground outside. Barely conscious and coughing up blood, your concussed mind registers that the guardians have reclaimed the regal sword and sealed the shrine.[line break]";
+	now desc entry is "     The beast standing before you is composed completely of stone, animated through some unseen force. It looks like a human man from the neck down; none of its body has any clothing carved into it, except for an Egyptian-style skirt shielding it down to its knees. The statue's head, however, is that of an Egyptian jackal, a very canine-esque face staring at you with stone eyes. Raising its massive metal sword, the statue marches purposefully forwards, intent on preventing your desecration of the altar. From the way these beasts are shambling forward, you're pretty sure that they are only animated guardians, not at all interested in sex.[line break]";
+	now face entry is "";
+	now body entry is "";
+	now skin entry is "";
+	now tail entry is "";
+	now cock entry is "";
+	now face change entry is "";
+	now body change entry is "";
+	now skin change entry is "";
+	now ass change entry is "";
+	now cock change entry is "";
 	now str entry is 12;
 	now dex entry is 16;
 	now sta entry is 12;
 	now per entry is 12;
 	now int entry is 12;
 	now cha entry is 12;
-	now sex entry is "No Change";
+	now sex entry is "Nochange";
 	now HP entry is 75;
 	now lev entry is 15;
 	now wdam entry is 13;
@@ -81,7 +70,7 @@ When Play begins:
 	now libido entry is 0;
 	now loot entry is "";
 	now lootchance entry is 0;
-	now MilkItem entry is "jackal guard milk"; [ Item to be given to the player if they have this infection and milk themselves. ]
+	now MilkItem entry is ""; [ Item to be given to the player if they have this infection and milk themselves. ]
 	now CumItem entry is ""; [ Item to be given to the player if they have this infection and jerk off. ]
 	now TrophyFunction entry is "-"; [ Function to generate a list of optional loot items, of which the player can choose one after victory. ]
 	now scale entry is 3;
@@ -196,6 +185,5 @@ When Play begins:
 	now Clit Size entry is 0; [size 1-5, see Clit Size Adjective]
 	[Clit Size Adjective is generated by a function and can be used in scenes: very small/small/average/large/very large]
 ]
-
 
 Jackal Guard ends here.

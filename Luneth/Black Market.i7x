@@ -18,20 +18,14 @@ Version 1 of Black Market by Luneth begins here.
 [   4: Player has agreed to be Barrett's paramore                               ]
 [ 100: Player has decided that Barrett's preferences are wrong (sex lock-out)   ]
 
-
-
-
 Section 1 - Location
 
 Table of GameRoomIDs (continued)
 Object	Name
 Zephyr Storeroom	"Zephyr Storeroom"
 
+Zephyr Storeroom is a room. Description of Zephyr Storeroom is "     Entering the storeroom you can see boxes going all the way up to the ceiling. Along the walls in black paint someone has also done measurements, going by those, the room tops out at around twenty feet. The containers are grey and massive, obviously they must have a forklift stashed away somewhere in here as well. Color wise the room is a mixture of grey, white, and... off white, a very drab look to be sure. Off to the side in the back is a single desk with mountains of paperwork covering it, you can only assume that this mess belongs to Barret.[line break]".
 West of Zephyr Lobby is Zephyr Storeroom.
-Zephyr Storeroom is a room. Description of Zephyr Storeroom is "[zephyrstoreroom desc]".
-
-to say zephyrstoreroom desc:
-	say "     Entering the storeroom you can see boxes going all the way up to the ceiling. Along the walls in black paint someone has also done measurements, going by those, the room tops out at around twenty feet. The containers are grey and massive, obviously they must have a forklift stashed away somewhere in here as well. Color wise the room is a mixture of grey, white, and... off white, a very drab look to be sure. Off to the side in the back is a single desk with mountains of paperwork covering it, you can only assume that this mess belongs to Barret.";
 
 Section 2 - NPC
 
@@ -40,20 +34,12 @@ object	name
 Barrett	"Barrett"
 
 Barrett is a man. He is in Zephyr Storeroom. The HP of Barrett is usually 0.
-Description of Barrett is "[BarrettDesc]".
-Conversation of Barrett is { "Arrg" }.
-
-to say BarrettDesc:
-	say "     Barret is a Hispanic man that appears to be in his early to mid forties. He is around 6[']3' with a large build that at first glance could be confused as heavyset, however upon further inspection he appears incredibly muscular. His green eyes compliment his darker complexion giving him a slightly exotic look and his jet black hair is styled in a crew cut with a trimmed goatee to match. At the moment he is wearing a white tank top that shows off his massive arms and round belly, with a pair of black cargo pants that showcase his stockier legs and huge behind. A pair of silver dog tags hang from around his neck, in all honesty he looks more like a soldier or a mercenary than a guy that deals in stock taking.";
-
+Description of Barrett is "     Barret is a Hispanic man that appears to be in his early to mid forties. He is around 6[']3' with a large build that at first glance could be confused as heavyset, however upon further inspection he appears incredibly muscular. His green eyes compliment his darker complexion giving him a slightly exotic look and his jet black hair is styled in a crew cut with a trimmed goatee to match. At the moment he is wearing a white tank top that shows off his massive arms and round belly, with a pair of black cargo pants that showcase his stockier legs and huge behind. A pair of silver dog tags hang from around his neck, in all honesty he looks more like a soldier or a mercenary than a guy that deals in stock taking.[line break]".
+[Conversation of Barrett is { "Arrg" }.]
 The scent of Barrett is "     Barret smells of clean sweat with a hint of cologne.".
 
 instead of conversing the Barrett:
-	say "[BarrettTalkMenu]";
-
-to say BarrettTalkMenu:
 	say "     What do you want to talk to Barrett about?";
-	LineBreak;
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]
@@ -66,7 +52,7 @@ to say BarrettTalkMenu:
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
 		say "[link][y] - [title entry][as][y][end link][line break]";
-	say "[link]100 - Nevermind[as]100[end link][line break]";
+	say "[link]0 - Nevermind[as]0[end link][line break]";
 	while sextablerun is 0:
 		say "Pick the corresponding number> [run paragraph on]";
 		get a number;
@@ -75,21 +61,18 @@ to say BarrettTalkMenu:
 			choose row calcnumber in table of fucking options;
 			say "[title entry]: [description entry]?";
 			if Player consents:
-				let nam be title entry;
+				LineBreak;
 				now sextablerun is 1;
-				if (nam is "Chat a bit"):
-					say "[BarrettTalk1]";
-				wait for any key;
-		else if calcnumber is 100:
+				if title entry is "Chat a bit":
+					say "     'Look, if you want something just check the damn case.'";
+		else if calcnumber is 0:
+			LineBreak;
 			now sextablerun is 1;
 			say "     You step back from the gruff man, shaking your head slightly as he gives a questioning look.";
-			wait for any key;
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
+	wait for any key;
 	clear the screen and hyperlink list;
-
-to say BarrettTalk1:
-	say "     'Look, if you want something just check the damn case.'";
 
 Section 3 - Events
 

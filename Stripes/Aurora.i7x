@@ -14,6 +14,7 @@ Giant's Frozen Yogurt is a situation.
 ResolveFunction of Giant's Frozen Yogurt is "[ResolveEvent Giant's Frozen Yogurt]".
 Sarea of Giant's Frozen Yogurt is "Capitol".
 the level of Giant's Frozen Yogurt is 5.
+
 when play begins:
 	add Giant's Frozen Yogurt to BadSpots of FemaleList;
 
@@ -28,15 +29,16 @@ to say ResolveEvent Giant's Frozen Yogurt:
 		say "     Looking around, you can see that a couple of fissures and lava streams come together around the parking lot of the trendy yogurt stand, effectively encircling it in flowing magma. While some spots are narrow enough that she might jump across them, that's too deadly a risk. Should the ground break on either side or her strength and speed waver in the heat, she'd end up in the lava.";
 		say "     You do spot a damaged section of wall near a narrower section of the molten moat. If you could knock it down, Aurora might be able to cross there. But should you even try? It won't be easy and the giantess certainly looks powerful. If she turns on you or becomes a rampaging sex monster like the others around, that would be a definite problem. It might be safer for everyone to leave her here until the military can deal with her. Shall you make the attempt?";
 		if Player consents:
+			LineBreak;
 			say "[freeing_aurora]";
 		else:
+			LineBreak;
 			say "     You take a few steps back from the moat of lava and tell her that you don't know how to get her across. You tell her to go back into the yogurt shop and wait for the military rescue. She nods, seeming a little cheered to hear that a rescue will come. She thanks you for trying and staggers her way back inside. You wipe your sweaty brow, glad you've managed to avoid possible trouble.";
 			now Resolution of Giant's Frozen Yogurt is 99; [Did not help Aurora]
 			now Giant's Frozen Yogurt is resolved;
 	else:
 		say "     You manage to make your way back to the molten moat encircling Aurora and the trendy yogurt shop she's been trapped in. Calling out to her, she emerges and waves happily to you. You head back over to the broken section of wall to make another attempt at knocking it over to make a bridge.";
 		say "[freeing_aurora]";
-
 
 to say freeing_aurora:
 	let aurorafreed be false;
@@ -60,16 +62,12 @@ to say freeing_aurora:
 		let sizebonus be ( scalevalue of Player * 2 ) - 6;
 		let dice be a random number from 1 to 20;
 		let total be dice + bonus + toolbonus + sizebonus + stbackbonus + HP of frost giantess;
-		say "You roll 1d20([dice])+[bonus]+[toolbonus + sizebonus + stbackbonus + HP of frost giantess] = [total] vs 16: ";
+		say "[line break]You roll 1d20([dice])[if total - dice >= 0]+[end if][total - dice] = [special-style-1][total][roman type] vs [special-style-2]16[roman type] (Strength Check):[line break]";
 		if total > 15:
-			say "You quickly examine the fractured wall, trying to find a way to topple it across the lava flow[if toolbonus > 0]. Assessing your available tools and equipment, you get started[end if][if claw hammer is owned]. You start with your hammer, trying to continue the breaks along the bottom, chipping away where you can, helping a little[end if][if crowbar is owned]. Jamming your crowbar into one of the cracks, you pry at the wall, further destabilizing it[else if bo staff is owned]. Jamming your bo staff into one of the cracks, you use it for added leverage[else if trident is owned]. Jamming the shaft of your trident into one of the cracks, you use it for added leverage[else if spear is owned]. Jamming the shaft of your spear into one of the cracks, you use it for added leverage[end if][if sizebonus > 0]. Your [Body Size Adjective of Player] body is of added advantage, adding greater weight to your push against it[else if sizebonus < 0]. Your [Body Size Adjective of Player] body doesn't help, but you throw what weight you can behind it[end if][if stbackbonus > 0]. You throw your strong back into it as it starts to lean over, your mighty legs, shoulders and back muscles all pushing hard as it starts to go down[end if]. In the end, you put all your might into it with a final attempt that sets it falling.";
+			say "     You quickly examine the fractured wall, trying to find a way to topple it across the lava flow[if toolbonus > 0]. Assessing your available tools and equipment, you get started[end if][if claw hammer is owned]. You start with your hammer, trying to continue the breaks along the bottom, chipping away where you can, helping a little[end if][if crowbar is owned]. Jamming your crowbar into one of the cracks, you pry at the wall, further destabilizing it[else if bo staff is owned]. Jamming your bo staff into one of the cracks, you use it for added leverage[else if trident is owned]. Jamming the shaft of your trident into one of the cracks, you use it for added leverage[else if spear is owned]. Jamming the shaft of your spear into one of the cracks, you use it for added leverage[end if][if sizebonus > 0]. Your [Body Size Adjective of Player] body is of added advantage, adding greater weight to your push against it[else if sizebonus < 0]. Your [Body Size Adjective of Player] body doesn't help, but you throw what weight you can behind it[end if][if stbackbonus > 0]. You throw your strong back into it as it starts to lean over, your mighty legs, shoulders and back muscles all pushing hard as it starts to go down[end if]. In the end, you put all your might into it with a final attempt that sets it falling.";
 			now aurorafreed is true;
 		else:
-			say "You quickly examine the fractured wall, trying to find a way to topple it across the lava flow[if sizebonus > 0]. Your [Body Size Adjective of Player] body is of added advantage, adding greater weight to your push against it[else if sizebonus < 0]. Your [Body Size Adjective of Player] body doesn't help though, your decreased weight making the task more difficult for you[end if]. Unfortunately, ";
-			if toolbonus > 0:
-				say "even with the tools and equipment you have available, you are unable to topple the wall before the heat and fumes become too much for you and you have to withdraw for now. Aurora thanks you for the attempt and asks you to keep looking for a way to help her.";
-			else:
-				say "you are unable to topple the wall before the heat and fumes become too much for you and you have to withdraw for now. Aurora thanks you for the attempt and asks you to keep looking for a way to free her.";
+			say "     You quickly examine the fractured wall, trying to find a way to topple it across the lava flow[if sizebonus > 0]. Your [Body Size Adjective of Player] body is of added advantage, adding greater weight to your push against it[else if sizebonus < 0]. Your [Body Size Adjective of Player] body doesn't help though, your decreased weight making the task more difficult for you[end if]. Unfortunately, [if toolbonus > 0]even with the tools and equipment you have available, you are unable to topple the wall before the heat and fumes become too much for you and you have to withdraw for now. Aurora thanks you for the attempt and asks you to keep looking for a way to help[else]you are unable to topple the wall before the heat and fumes become too much for you and you have to withdraw for now. Aurora thanks you for the attempt and asks you to keep looking for a way to free[end if] her.";
 			now HP of frost giantess is 1;
 			now Resolution of Giant's Frozen Yogurt is 2; [Tried and failed to help Aurora]
 	if aurorafreed is true:
@@ -81,18 +79,12 @@ to say freeing_aurora:
 		now frost giantess is tamed;
 		add "Tamed" to Traits of frost giantess;
 		move Aurora to Breakroom;
-		say "     (Aurora the frost giantess is now a possible ally!! You can make her your active ally by typing [bold type][link]ally Aurora[end link][roman type] or [bold type][link]ally frost giantess[end link][roman type] and initiate sex with her while active by typing [bold type][link]fuck Aurora[end link][roman type]. You can see all the allies you have with the [bold type][link]allies[end link][roman type] command. Allies will lower the XP you gain from battle, but can gain levels themselves to be more useful in a scrap. Want to get rid of an ally? Use [bold type][link]ally dismiss[end link][roman type], or just [bold type][link]dismiss[end link][roman type])[line break]";
+		say "[line break]     (Aurora the frost giantess is now a possible ally! You can make her your active ally by typing [link][bold type]ally Aurora[roman type][end link] or [link][bold type]ally frost giantess[roman type][end link] and initiate sex with her while active by typing [link][bold type]fuck Aurora[roman type][end link]. You can see all the allies you have with the [link][bold type]allies[roman type][end link] command. Allies will lower the XP you gain from battle, but can gain levels themselves to be more useful in a scrap. Want to get rid of an ally? Use [link][bold type]ally dismiss[roman type][end link], or just [link][bold type]dismiss[roman type][end link].)";
 		increase score by 10;
 		now Resolution of Giant's Frozen Yogurt is 1; [Recruited Aurora]
 		now Giant's Frozen Yogurt is resolved;
 
-
 Section 2 - Pet Data
-
-the linkaction of Aurora is "[auroralinkaction]".
-
-to say auroralinkaction:
-	say "Possible Actions: [link]talk[as]talk Aurora[end link], [link]smell[as]smell Aurora[end link], [link]fuck[as]fuck Aurora[end link][line break]";
 
 Table of GameCharacterIDs (continued)
 object	name
@@ -107,31 +99,18 @@ Description of frost giantess is "[AuroraDesc]".
 Weapon Damage of frost giantess is 20.
 The level of frost giantess is 1.
 Dexterity of frost giantess is 5.
-The summondesc of frost giantess is "[SummonAurora]".
+The summondesc of frost giantess is "     Hearing your call, Aurora the frost giantess comes over to join you at your side. She flexes her arms, adjusts her freezer backpack and gives you a merry slap on the back that [if scalevalue of Player < 4]nearly knocks you over[else]makes you stumble momentarily[end if].[line break]".
 The dismissdesc of frost giantess is "[DismissAurora]".
 The assault of frost giantess is "[aurora_attack]".
 the fuckscene of frost giantess is "[SexWithAurora]".
-
-
-to say SummonAurora:
-	if Aurora is visible: [summoning while standing next to her]
-		say "     Hearing your call, Aurora the frost giantess comes over to join you at your side. She flexes her arms, adjusts her freezer backpack and gives you a merry slap on the back that [if scalevalue of Player < 4]nearly knocks you over[else]makes you stumble momentarily[end if].";
-	else: [regular summoning]
-		say "     Hearing your call, Aurora the frost giantess comes over to join you at your side. She flexes her arms, adjusts her freezer backpack and gives you a merry slap on the back that [if scalevalue of Player < 4]nearly knocks you over[else]makes you stumble momentarily[end if].";
+Scent of frost giantess is "     The giantess smells pleasantly of frozen yogurt. There's also a light scent of the sweat from exertion, but not unpleasantly so.".
 
 to say DismissAurora:
 	move Aurora to Breakroom;
-	if Player is not in Breakroom: [regular dismiss]
-		say "";
-	else: [dismissing her in the abbey]
-		say "";
 
 Table of GameCharacterIDs (continued)
 object	name
 Aurora	"Aurora"
-
-Aurora is a woman.
-Description of Aurora is "[AuroraDesc]".
 
 Aurora is a woman.
 ScaleValue of Aurora is 5. [giant sized]
@@ -171,29 +150,19 @@ TwistedCapacity of Aurora is false. [Twisted Characters can take any penetration
 Sterile of Aurora is true. [steriles can't knock people up]
 MainInfection of Aurora is "".
 Description of Aurora is "[AuroraDesc]".
-
-instead of sniffing Aurora:
-	say "[AuroraScent]";
-
-instead of fucking Aurora:
-	say "[SexWithAurora]";
-
-instead of sniffing frost giantess:
-	say "[AuroraScent]";
-
-to say AuroraScent:
-	say "     The giantess smells pleasantly of frozen yogurt. There's also a light scent of the sweat from exertion, but not unpleasantly so.";
+fuckscene of Aurora is "[SexWithAurora]".
+icon of Aurora is Figure of Aurora_clothed_icon.
+Scent of Aurora is "     The giantess smells pleasantly of frozen yogurt. There's also a light scent of the sweat from exertion, but not unpleasantly so.".
 
 to say AuroraDesc:
-	project the Figure of Aurora_clothed_icon;
-	say "     Aurora the frost giantess is about 10 and a half feet tall and has a strong build with some obvious muscle to it. While not toned to body-builder level, her muscles do have obvious definition as if from regular exercise. Added to her overall size, this makes her quite physically powerful. Her skin is pale blue in color and she has darker blue hair. Her eyes are purple, as are her lips and nipples. These last you can partially see through the stretched material of her torn shirt trying to cope with her enlarged body and bosom. Were she of normal height, they'd be nice C-cups; being as large as she is, they're something more like big F-cup tits. Her pants, now stretched to their limit around her hips, are now tight shorts on her large frame, hugging her strong hips and toned buttocks.";
+	say "     Aurora the frost giantess is about ten-and-a-half feet tall and has a strong build with some obvious muscle to it. While not toned to body-builder level, her muscles do have obvious definition as if from regular exercise. Added to her overall size, this makes her quite physically powerful. Her skin is pale blue in color and she has darker blue hair. Her eyes are purple, as are her lips and nipples. These last you can partially see through the stretched material of her torn shirt trying to cope with her enlarged body and bosom. Were she of normal height, they'd be nice C-cups; being as large as she is, they're something more like big F-cup tits. Her pants, now stretched to their limit around her hips, are now tight shorts on her large frame, hugging her strong hips and toned buttocks.";
 	say "     She's friendly and eager to help you, willing to even come along and fight by your side. While no trained warrior, her punches hit like a ton of bricks. The heat of the city does wear on her, which is why she's carries a small retail ice cream freezer like a backpack. It's full of frozen yogurt and somehow is always cold despite not even being plugged in. Fighting will eventually tire her out and overheat her, but she'll keep fighting as long as you do out of loyalty.";
 	if frost giantess is listed in companionList of Player:
 		say "     [bold type]She is currently following you as your battle companion.[roman type][line break]";
 
 to say aurora_attack:
 	choose row MonsterID from the Table of Random Critters;
-	say "[one of]Grabbing a large chunk of rubble, the giantess hurls it into your opponent[or]One of the giantess's wild blows strikes your foe, knocking them back[or]Aurora [if scale entry < 3]stomps on the much smaller foe[else]gives your opponent kick with her massive foot[end if][or]The giantess's meaty fist bashes into your opponent[or]Balling both fists together, Aurora swings them down onto the [Name entry][at random]![run paragraph on]";
+	say "[one of]Grabbing a large chunk of rubble, the giantess hurls it into your opponent[or]One of the giantess's wild blows strikes your foe, knocking them back[or]Aurora [if scale entry < 3]stomps on the much smaller foe[else]gives your opponent kick with her massive foot[end if][or]The giantess's meaty fist bashes into your opponent[or]Balling both fists together, Aurora swings them down onto the [Name entry in lower case][at random]![no line break]";
 
 instead of conversing frost giantess:
 	if frost giantess is not tamed:
@@ -208,15 +177,15 @@ instead of conversing frost giantess:
 
 to say AuroraTalkMenu:
 	project the Figure of Aurora_clothed_icon;
-	LineBreak;
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]
 	choose a blank row in table of fucking options;
-	now title entry is "Chit Chat";
+	now title entry is "Chitchat";
 	now sortorder entry is 1;
-	now description entry is "Just have some simple chit chat";
+	now description entry is "Just have some simple chitchat";
 	[]
+	sort the table of fucking options in sortorder order;
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
 		say "[link][y] - [title entry][as][y][end link][line break]";
@@ -229,27 +198,21 @@ to say AuroraTalkMenu:
 			choose row calcnumber in table of fucking options;
 			say "[title entry]: [description entry]?";
 			if Player consents:
-				let nam be title entry;
+				LineBreak;
 				now sextablerun is 1;
-				if (nam is "Chit Chat"):
+				if title entry is "Chitchat":
 					say "[AuroraTalk1]";
-				wait for any key;
 		else if calcnumber is 0:
+			LineBreak;
 			now sextablerun is 1;
 			say "     You step back from the frost giantess, shaking your head slightly as she gives a questioning look.";
-			wait for any key;
 		else:
-			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options], or 0 to exit.";
+	wait for any key;
 	clear the screen and hyperlink list;
 
 to say AuroraTalk1:
-	let randomnumber be a random number from 1 to 2;
-	if randomnumber is:
-		-- 1:
-			say "     'Geez! This is heat is killin me... hopefully we can find a place with a cooler temp eventually!'";
-		-- 2:
-			say "     I have a question? How did I end up as the go to chick for frozen yogurt here?";
-
+	say "     '[one of]Geez! This is heat is killin me... hopefully we can find a place with a cooler temp eventually!'[or]I have a question? How did I end up as the go-to chick for frozen yogurt here?'[at random]";
 
 Section 3 - Sex w/Aurora
 
@@ -271,16 +234,12 @@ to say SexWithAurora:
 			say "     As your excitement builds, you switch to thrusting harder and faster into the moaning giantess. Your hands [if scalevalue of Player < 3]stretch forward to reach her large breasts and plump nipples[else if scalevalue of Player < 5]reach forward to grab her large breasts and plump nipples[else]move to her breasts and her plump nipples[end if]. You savor her moans and panting as you squeeze and tease those purple nips of hers. In the end, this drives her to orgasm, causing her mighty pussy to clamp down around you with the same strength the giantess always displays. Your cock is squeezed and milked hard, causing it to erupt with semen. You pump your [Cum Load Size of Player] load into the panting giantess, her great bosom heaving with every moaning breath until you're both spent and satisfied.";
 			NPCSexAftermath Aurora receives "PussyFuck" from Player;
 		else:
-			if Player is male:		[small male start]
-				say "     The blue-skinned giantess lays back on the ground and spreads her legs, only to close them as you pull out your [cock size desc of Player] cock. 'No slight against you, hon, but I'm a really big girl now. I don't think it'd really work out that great for either of us like that. How about you come on down here and give me a lick instead?' She spreads her legs again and uses her hand to hold her large pussy open. Her folds and cunny are the same soft purple as her lips and nipples, matching nicely with the powder blue color of her skin. The sight of that big pussy makes you all the more excited and you lick your lips eagerly.";
-			else:
-				say "     The blue-skinned giantess lays back on the ground and spreads her legs. She then parts her labial lips with her fingers, putting herself on tantalizing display for you. 'How about you come on down her and give me a lick?' You move up between those powerful thighs, your eyes focused on the giantess's wet pussy. Her folds and cunny are the same soft purple as her lips and nipples, matching nicely with the powder blue color of her skin. The sight of that big pussy makes you all the more excited and you lick your lips eagerly.";
+			say "     The blue-skinned giantess lays back on the ground and spreads her legs[if Player is male], only to close them as you pull out your [cock size desc of Player] cock. 'No slight against you, hon, but I'm a really big girl now. I don't think it'd really work out that great for either of us like that. How about you come on down here and give me a lick instead?' She spreads her legs again and uses her hand to hold her large pussy open[else]. She then parts her labial lips with her fingers, putting herself on tantalizing display for you. 'How about you come on down her and give me a lick?' You move up between those powerful thighs, your eyes focused on the giantess's wet pussy[end if]. Her folds and cunny are the same soft purple as her lips and nipples, matching nicely with the powder blue color of her skin. The sight of that big pussy makes you all the more excited and you lick your lips eagerly.";
 			say "     Aurora smiles up at you as you get into position, kneeling between her powerful thighs. You start by running [if scalevalue of Player < 3]a hand[else]your fingers[end if] across those wet petals. Her flesh is cool to the touch, pleasantly soothing without being cold or clammy. As your fingers start to explore across and then into her large cunt, you lean forward and give her a lick. Her juices have a soft, sweet taste to them that has you coming back for more.";
 			say "     '[if scalevalue of Player < 3]Come on, squirt. Let's see what you've got,' she teases with a friendly smile. She puts a big hand on the back of your head, easily grabbing the whole of it in its surprisingly gentle grip. You're dwarfed by the massive woman, but there's something exciting about being able to please such a large lover[else if scalevalue of Player < 5]That's it, hon. Keep it up,' she moans with a friendly smile. She rubs a giant hand at the back of your head, grabbing you gently with its large grip. The larger woman is impressive in her size and strength, but shows more gentleness than she usual displays[else]Ah yeah! It's nice to have big lover more my own size,' she moans happily. She places a meaty hand at the back of your head, gently caressing you[end if].";
 			say "     As you eat the giant pussy out, your [if scalevalue of Player < 3]whole hand pumps[else]fingers pump[end if] into her wide tunnel. Your free hand finds that enlarged button of her clit and rubs at it. This draws delightful moans and panting from your excited lover. You savor these sounds of delight as you tantalize her with licks, nibbles, kisses and fingering. In the end, you drive her to a loud orgasm, causing her mighty pussy to clamp down around your [if scalevalue of Player < 3]hand[else]fingers[end if] with the same strength the giantess always displays. You tug and push as best you can in this tight, wet grip as if thrusting into the delighted female. You lap up her cool juices [if scalevalue of Player < 3]as they soak your face and flood your mouth[else if scalevalue of Player < 5]as they wet your face and flow across your tongue[else]as they wet your lips and tongue[end if], finding them sweet and refreshing. As her orgasm is waning, pull your digits free and [if Player is male]grab your [cock size desc of Player] cock and pump at it eagerly. After a quick bout of masturbating to finish yourself off, you fire your [Cum Load Size of Player] load across the giant woman's soaked crotch and still-quivering pussy[else if Player is female]stuff them into your needy cunt, fingering yourself frantically. Soon you're crying out in your own orgasmic release while the giant woman watches on[else]bring them to your mouth. You make a sensual display of licking and sucking on them while the giant woman watches on[end if].";
 			NPCSexAftermath Player receives "OralPussy" from Aurora;
 		now lastfuck of frost giantess is turns;
-
 
 Section 4 - Endings
 

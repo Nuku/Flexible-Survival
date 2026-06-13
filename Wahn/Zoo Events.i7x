@@ -36,18 +36,14 @@ when play begins:
 to say ResolveEvent Circle of Life:
 	say "     While exploring the large expanse of the zoo, wandering along the walkways and even through the (usually breached) enclosures where the main way is blocked, you suddenly hear a not too distant roar, followed by frightened cries from a number of female voices. In the subsequent moments, the sound of hooves on asphalt comes closer rapidly as you decide to duck out of sight until you know more about what is going on. Hidden behind a bush, you see a whole group of anthro gazelles sprint past in full flight - Panicked, one of the group members actually runs the wrong way at a fork just a short distance ahead. She is about two dozen feet down when she notices that something is up as she takes in the lack of her kin around her. Stopping in a scrape of hooves upon stone, the separated gazelle heavily pants as she looks back the way she came.";
 	say "     The anthro girl looks around frantically as her muscles tighten, she is about to backtrack and try to get back to the herd - but then her eyes fall upon yourself and widen, causing her to freeze mid-step. Gaze jumping from left to right, she takes in all the possibilities of escape from every angle. Unfortunately for her, before she is able to make a clear decision, her time is up. A satisfied roar sounds from the site of the now long-gone herd, prompting the gazelle to take action as she runs straight ahead. A moment later, the powerful form of a male lion flashes past you. Although being part anthro, the large feline chooses to bound after her on all fours with neck breaking speed.";
-	LineBreak;
-	say "     [bold type]Just having explored that fork of the way a short while ago, you remember that it soon ends in a tunnel blocked by some sort of hardened goop. There is no escape for the fleeing gazelle that way![roman type][line break]";
-	LineBreak;
+	say "[line break]     [bold type]Just having explored that fork of the way a short while ago, you remember that it soon ends in a tunnel blocked by some sort of hardened goop. There is no escape for the fleeing gazelle that way![roman type][line break]";
 	say "     ([link]Y[as]y[end link]) - Run after the two of them. You want to see how this turns out - or maybe do something...";
 	say "     ([link]N[as]n[end link]) - Get out of here while the lion still busy. You don't want to be his next prey after her.";
 	if Player consents: [go after them]
 		LineBreak;
 		say "     Hurrying after the gazelle and lion, you're just in time to see him corner her at the blocked tunnel end, pouncing on the helpless anthro. The muscular lion is on top of her in a second, pinning the lithe woman to the ground and giving her a very wide smile with his tooth-filled muzzle. 'P-please don't eat me!' she whimpers in fright, futilely struggling against his strong paw-hands that hold her. The lion chuckles in a deep voice, then brings his head down to her neck, opening his muzzle wider and wider... only to follow that up with just a playful lick before pushing himself up again. 'Never said I was gonna - but I might eat you out if you're a good girl,' the feline predator tells his captive.";
 		say "     Pulling the gazelle's arms above her head, he holds her wrists with one hand, freeing the other to cup her petite breasts. 'Oh. Ooooohhhh!' comes the reply of the young woman, surprise audible in her voice as she realizes that her captor isn't the bloodthirsty type after all. As he licks her breasts and gives the lightest of nips to one nipple, then the other, her panic melts away, the herbivore no longer trembling in fear under the bulk of the lion. Soon, the gazelle loses her will to escape as her body clearly can't help but respond with arousal to the licks and caresses he gives her. The lion, seeing this, soon lets go of her wrists, shifting his focus from holding his prize and more towards passionately pleasing her.";
-		LineBreak;
-		say "     [bold type]Well, this situation doesn't seem as dire as you first thought. Given what else is going on all over the city, the thought rises in your mind that you shouldn't try to interfere in this 'chase with a happy ending'. Playing sex police is a fool's errand anyways. After a moment, you decide to:[roman type][line break]";
-		LineBreak;
+		say "[line break]     [bold type]Well, this situation doesn't seem as dire as you first thought. Given what else is going on all over the city, the thought rises in your mind that you shouldn't try to interfere in this 'chase with a happy ending'. Playing sex police is a fool's errand anyways. After a moment, you decide to:[roman type][line break]";
 		say "     ([link]Y[as]y[end link]) - Watch what happens next. A large, muscular lion mating a pretty female gazelle, that's something you don't see every day...";
 		say "     ([link]N[as]n[end link]) - Get out of here.";
 		if Player consents: [watch]
@@ -89,22 +85,18 @@ Sarea of Jungle Chase is "Zoo".
 
 to say ResolveEvent Jungle Chase:
 	say "     Walking along the pathways of the zoo, you find yourself in an area overgrown by a lot of tropical plants. Between the towering trees, broad-leafed bushes and plants, colorful flowers, countless ferns and even vines hanging down from above, you get the feeling that you're walking through a jungle and not simply a footpath in the middle of a large city. The zoo really is quite expansive, and if there weren't some glimpses of buildings between the greenery here or there, you could almost believe you were somewhere in the Indian rain-forest right now. Admiring the diverse environment around you, a loud and angry roar suddenly shakes you out of your reverie - it sounds fairly close too, and is quickly getting louder! Your eyes frantically search the area before you see that the path you're on forks about a dozen feet ahead, one way soon ending at the thoroughly barricaded door of a zoo building, the other being where the noise is coming from.";
-	LineBreak;
-	say "     [bold type]What do you do now?[roman type][line break]";
+	say "[line break]     [bold type]What do you do now?[roman type][line break]";
 	say "     [link](1)[as]1[end link] - Get ready for a fight!";
 	say "     [link](2)[as]2[end link] - Hide in the bushes!";
 	say "     [link](3)[as]3[end link] - Run away!";
 	now calcnumber is 0;
 	while calcnumber < 1 or calcnumber > 3:
-		say "Choice? (1-3)>[run paragraph on]";
+		say "Choice? (1-3)> [run paragraph on]";
 		get a number;
-		if calcnumber is 1 or calcnumber is 2 or calcnumber is 3:
-			break;
-		else:
+		if calcnumber < 1 or calcnumber > 3:
 			say "Invalid choice. Type [link]1[end link] to fight, [link]2[end link] to hide or [link]3[end link] to flee.";
 	if calcnumber is 1:
 		project the Figure of Malakhi_icon;
-		LineBreak;
 		say "     You prepare yourself for whatever angry beast is on its way, but before the noisy creature arrives, you hear the rapid patter of naked feet on the cobblestones of the pathway. Moments later, an interesting sight appears: a completely naked young human dashes past, angling his steps towards the barricaded building. At first glance he almost seems a boy, being of a quite slender and lean physique, but one look at the clearly adult manhood dangling between his legs dispels that impression quickly. Eyes glued to the scene, you realize that he isn't fully human, either. While having a human body, cute features and long black hair, as well as sun-bronzed skin, the young man's fingers and toes end in somewhat elongated claw-like nails, and a fuzzy black tail stretches out from the small of his back. In close pursuit of the boy, a large tigertaur comes into view, spitting in obvious anger as she bares her fangs.";
 		WaitLineBreak;
 		say "     After glancing your way in a fleeting moment of casual interest, she turns her attention upon her intended prey and advances menacingly upon him. You have barely had a chance to begin wondering if you should do something about the situation when the hybrid youngster snatches up a liana hanging from above and starts to climb. Shimmying his way up the rope-like plant, he reaches one of the wide-spreading branches of a large tree within seconds. The tail on his body obviously is a great help as he then dashes along the branch, with it waving back and forth over his tight ass, assisting in his balance. Several quick steps later, he takes a forward leap from the tree, catching the edge of a high-up opening in the wall of the building. Looks like it was once covered by a ventilation grate and is fairly small in size. Yet before your unbelieving eyes, the young man contorts his body to actually fit through an opening not much more than a foot square.";
@@ -113,7 +105,6 @@ to say ResolveEvent Jungle Chase:
 		now Resolution of Jungle Chase is 1; [got ready to fight]
 	else if calcnumber is 2:
 		project the Figure of Malakhi_icon;
-		LineBreak;
 		say "     Throwing yourself into the bushes and hiding behind their large leaves, but even before the noisy creature does arrive, you hear the rapid patter of naked feet on the cobblestones of the pathway. Moments later, an interesting sight appears: a completely naked young human dashes past, angling his steps towards the barricaded building. At first glance he almost seems a boy, being of a quite slender and lean physique, but one glimpse of the clearly adult manhood dangling between his legs dispels that impression quickly. Upon taking an even closer look, but you realize that he isn't [italic type]completely[roman type] human either - while having a human body, cute features and long black hair as well as sun-bronzed skin, the young man's fingers and toes end in somewhat elongated claw-like nails, and he has a black tail growing out of the small of his back. In close pursuit of the boy, a large tigertaur comes into view, spitting in obvious anger as she bares her fangs.";
 		WaitLineBreak;
 		say "     You have barely had a chance to begin wondering if you should do something about the situation when the hybrid youngster snatches up a liana hanging from above and starts to climb. Shimmying his way up the rope-like plant, he reaches one of the wide-spreading branches of a large tree within seconds. The tail on his body obviously is a great help as he then dashes along the branch, with it waving back and forth over his tight ass, as it assists in his balance. Several quick steps later, he takes a forward leap from the tree, catching the edge of a high-up opening in the wall of the building. Looks like it was once covered by a ventilation grate and is fairly small in size. Yet before your unbelieving eyes, the young man contorts his body to actually fit through an opening not much more than a foot square.";
@@ -141,19 +132,16 @@ to say ResolveEvent Meeting Malakhi:
 	project the Figure of Malakhi_icon;
 	say "     As you walk along one of the many cobblestone paths through the expansive zoo, your way once again leads you into the section that seems almost like a primeval jungle. Tropical plants, up to and including colossal trees with widely branching tops are all around you, creating a beautiful image of greens and bright splashes of color added by large flowers. Everything feels very [italic type]alive[roman type] here and you actually just stand still for a moment to take in the beauty of your surroundings. Then a rustling sound breaks you out of the peaceful moment, making you remember that jungles may be pretty, but also are home to countless predators... like tigers, for example. Preparing yourself for a fight as soon as that thought shoots through your head, you focus on the bushes which are emitting the rustling noise and... laugh out loud as a small pot-bellied pig comes rushing out between them, looks at you and runs off with a squeal.";
 	say "     But you are not the only one laughing - a young man's amused chuckle joins yours, followed by the words, 'Hey there. You're new!' Startled, you glance up and see a boyish human face with a mane of black hair surrounding it look at you. The owner of the attractive, sun-browned visage is a naked human-panther hybrid, his legs hooked over a branch as he hangs upside down and smiles at you. Your eyes wander a bit all of their own, taking in his mostly human body, lithe and flexible as it is, plus the fact that he has a long black tail and claws on his hands and feet. 'Welcome! I'm Malakhi,' he adds with a friendly and enthusiastic wave of his hands, then goes on to say, 'So, we don't get many visitors to the zoo these days. What brings you here? Let me guess! You're... on a sex safari and wanna fuck animals from every continent?!'";
-	LineBreak;
-	say "     [bold type]What is your reply?[roman type][line break]";
+	say "[line break]     [bold type]What is your reply?[roman type][line break]";
 	say "     [link](1)[as]1[end link] - Ask if he's offering some fun.";
 	say "     [link](2)[as]2[end link] - Say you're actually just out scavenging.";
 	say "     [link](3)[as]3[end link] - Explain that you want to rescue survivors.";
 	say "     [link](4)[as]4[end link] - Slave-hunting, that's your business here!";
 	now calcnumber is 0;
 	while calcnumber < 1 or calcnumber > 4:
-		say "Choice? (1-4)>[run paragraph on]";
+		say "Choice? (1-4)> [run paragraph on]";
 		get a number;
-		if calcnumber is 1 or calcnumber is 2 or calcnumber is 3 or calcnumber is 4:
-			break;
-		else:
+		if calcnumber < 1 or calcnumber > 4:
 			say "Invalid choice. Type [link]1[end link] to offer him sex, [link]2[end link] to say you are scavenging, [link]3[end link] to offer rescue or [link]4[end link] to say you're out for slaves.";
 	if calcnumber is 1:
 		LineBreak;
@@ -191,19 +179,16 @@ to say ResolveEvent Tiger Trick:
 	project the Figure of Malakhi_icon;
 	say "     Walking through the zoo along one of the many cobblestone pathways winding their way through its expansive acreage, you hear the sounds of many wild beasts all around you. The loudest at the moment are the roars and rhythmic growls of some sort of large creature, fairly close to your current position. Somehow, you can't help but feel curious about what exactly it might actually be. Eager to find out, you quickly follow one path leading in the right direction, soon reaching a bend that brings you into sight of the source of all this noise. There is a female tigertaur not too far ahead, pinning a hunky male zebra to the grass on a small meadow between tropical trees. She is holding him down while at the same time pumping her rear end up and down on his equine member. Even a fleeting glance to the striped guy's face tells you that he is far from sorry about being captured by her.";
 	say "     Interestingly, you are not the only one watching the two of them in their lewd and public copulation. On a low-bending branch of a nearby tree, Malakhi is sitting, his slender legs and tail dangling down to just about head height for you. As usual, the panther-hybrid is completely naked, presenting himself in nothing but sun-bronzed skin. He is watching the striped predator make use of her captive with eager eyes, though the look on his face is one of amusement rather than arousal.";
-	LineBreak;
-	say "     [bold type]What do you want to do now?[roman type][line break]";
+	say "[line break]     [bold type]What do you want to do now?[roman type][line break]";
 	say "     [link](1)[as]1[end link] - Just watch the couple fucking.";
 	say "     [link](2)[as]2[end link] - Stroll over to Malakhi and say hello.";
 	say "     [link](3)[as]3[end link] - Sneak over to Malakhi and pull him off the branch.";
 	say "     [link](4)[as]4[end link] - Just turn around and leave.";
 	now calcnumber is 0;
 	while calcnumber < 1 or calcnumber > 4:
-		say "Choice? (1-4)>[run paragraph on]";
+		say "Choice? (1-4)> [run paragraph on]";
 		get a number;
-		if calcnumber is 1 or calcnumber is 2 or calcnumber is 3 or calcnumber is 4:
-			break;
-		else:
+		if calcnumber < 1 or calcnumber > 4:
 			say "Invalid choice. Type [link]1[end link] to watch the action, [link]2[end link] to say you hello, [link]3[end link] to snatch Malakhi or [link]4[end link] to leave.";
 	if calcnumber is 1: [watch]
 		LineBreak;
@@ -259,19 +244,16 @@ to say ResolveEvent Zookeepers at Work:
 			say "gives you a short and friendly wave. ";
 		say "After that, he grabs his wheelbarrow again and wheels it off, only stopping when he's next to a big pile of wildebeest droppings and starting to clean them up. Looking at the slender guy working, you completely miss the fact that the anthro panther has finished feeding the animals. Only when he comes up to the other side of the fence and calls out to greet you do you register his approach.";
 		say "     'Hello there and welcome to the City Zoo. My name is Barnabas. Can I help you with anything? I fear the guided tours are on hold indefinitely, but if you have any questions, feel free to ask,' the muscular male says to you, giving you a friendly smile and tapping the side of the visor on his zookeeper's cap. For a second, you blink at such a 'normal' greeting in the midst of the nanite apocalypse, then gather your thoughts again.";
-		LineBreak;
-		say "     [bold type]What is your reply?[roman type][line break]";
+		say "[line break]     [bold type]What is your reply?[roman type][line break]";
 		say "     [link](1)[as]1[end link] - Ask what he is doing in there.";
 		say "     [link](2)[as]2[end link] - Ask for some sexy fun time with him.";
 		say "     [link](3)[as]3[end link] - Ask if you can fuck Malakhi.";
 		say "     [link](4)[as]4[end link] - Just turn around and leave.";
 		now calcnumber is 0;
 		while calcnumber < 1 or calcnumber > 4:
-			say "Choice? (1-4)>[run paragraph on]";
+			say "Choice? (1-4)> [run paragraph on]";
 			get a number;
-			if calcnumber is 1 or calcnumber is 2 or calcnumber is 3 or calcnumber is 4:
-				break;
-			else:
+			if calcnumber < 1 or calcnumber > 4:
 				say "Invalid choice. Type [link]1[end link] to ask about him and the animals, [link]2[end link] to request sex with him, [link]3[end link] to ask for fun times with Malakhi or [link]4[end link] to leave.";
 		if calcnumber is 1: [talk]
 			LineBreak;
@@ -325,14 +307,11 @@ to say ResolveEvent Zookeepers at Play:
 	say "     Malakhi is next, the mostly human young man moving into the spray of obviously cold water, judging from the sounds he makes as it splashes his sun-bronzed skin and runs down over his slender form. Soaping himself up with frantic haste, he emerges soon after, dripping wet and shivering. 'Let's get you dry, my boy,' Barnabas tells him in a caring tone, shaking out a large towel and wrapping it (and his arms) around the younger male, rubbing Malakhi dry from head to toe. The panther-hybrid very clearly enjoys the zookeeper's hands on his body, leaning into his touch and putting a hand on Barnabas shoulder as the man crouches down to dry his legs. 'Ooh, that feels really nice,' he sighs in pleasure, fingers stroking the back of his anthro panther's neck. You can see that the young man's cock has hardened and is now sticking straight out.";
 	WaitLineBreak;
 	say "     Finishing up with patting the underside of Malakhi's slender feet dry, lifting them one by one with his black-furred hands, Barnabas starts to look up to his charge. Of course, his gaze passes over the human erection sticking out so very prominently towards him, putting a grin on the panther's face as he meets Malakhi's eyes. The panther-boy pulls his partner up lightly and Barnabas rises to his full height in response, finding himself embraced by the naked young man, with Malakhi nuzzling his chest-fur. 'I still can't quite believe we're doing this,' the anthro zookeeper says in a loud voice, 'What did I do to deserve you, teaching this old panther such breathtaking new tricks?' Malakhi rises on tiptoe with an impish grin on his face, kissing the larger man's muzzle and replying, 'You're a very good man, mister. Of course you deserve a lot of love. Also, I thought you were hot right from the day we met. I like hairy men, like you were even before the change...' With that said, he takes Barnabas hand-paw and moves it down, to rest on his buttocks.";
-	LineBreak;
-	say "     [bold type]Things are quickly heating up. Do you wanna watch them go at it?[roman type][line break]";
-	LineBreak;
+	say "[line break]     [bold type]Things are quickly heating up. Do you wanna watch them go at it?[roman type][line break]";
 	say "     ([link]Y[as]y[end link]) - Hell yeah!";
 	say "     ([link]N[as]n[end link]) - Turn around and move on.";
 	if Player consents:
 		project the Figure of Malakhi_Barnabas_icon;
-		LineBreak;
 		say "     A lusty growl escapes the broad chest of the male panther and he bends down to kiss Malakhi fully on the lips, making out with the naked youngster while at the same time squeezing his butt. Entwined with each other, they make out and share caresses, providing a sweet show to you and the jaguarundi, who watches from up in his tree. Soon, just stroking his feline partner isn't enough for Malakhi, and the slender young man wraps his arms around Barnabas's shoulders and pulls himself up on him in a move worthy of a gymnastics show. Lithe legs wrap around the black-furred male, hooking over each other as Malakhi positions himself to cling to his trainer - or maybe trainee, in this case. He kisses the top of the older man's muzzle and says in a playfully exaggerated voice, 'Okay then, students. Today's lesson is... the 'Hanging Garden' sex position!'";
 		say "     Barnabas chuckles loudly and bends his head to lick the panther-boy's neck and earlobe, nibbling on him while Malakhi goes on to say, 'First of all, one needs a very eager and willing partner, the lighter and flexible the better.' As if to underline this, he grinds himself against the black panther's abs, rubbing his cock on the furred man. 'Then you take a good, strong hold of your boy-toy's ass,' Malakhi goes on to explain, and his trainee happily follows the instructions, squeezing his firm buns and spreading them. 'Now let me just show you the rest,' the young man then adds, bending backwards a little to reach for the panther's erection and lining it up to slide his pucker down on it. Sharing a loud moan and a satisfied grunt, the two of them just stand like that for a moment, savoring Barnabas being inside his partner and stretching his tight chute around his hard shaft.";
 		WaitLineBreak;
@@ -377,9 +356,7 @@ to say ResolveEvent Meerkat Patrol:
 
 to MeerkatPatrolEvent: [Meerkats returning from an excursion to the city]
 	say "     As you walk along the path, you notice an upright meerkat, alert for threats. It hasn't noticed you yet, which is surprising, but this gives you time to observe. It is a lot larger than a normal meerkat, about four feet tall, suggesting that it used to be a human but has now transformed. Casting your gaze around, you notice a procession of other meerkats approaching, bearing food, water, and basic medical items such as medkits and several syringes. With a loud cry, the sentry notices you. 'You there. Yes, I see you. Identify yourself and state your intent.' At the sound of his shout, the group falls into a defensive formation, guarding their spoils and the weaker members. 'If you do not answer, you will be treated as a threat,' the stern meerkat barks.";
-	LineBreak;
-	say "     [bold type]Are your intentions towards the meerkats benevolent or hostile?[roman type][line break]";
-	LineBreak;
+	say "[line break]     [bold type]Are your intentions towards the meerkats benevolent or hostile?[roman type][line break]";
 	say "     ([link]Y[as]y[end link]) - You do not intend the meerkats any harm.";
 	say "     ([link]N[as]n[end link]) - They look like that they have enough spoils to share. Try and make the meerkats hand some over.";
 	if Player consents: [Benevolent]
@@ -468,7 +445,6 @@ to say ResolveEvent Panda Shepherd:
 	say "     Some rustling in the bushes close to your hiding spot makes you decide that it might be a good time to move on, so you leave the mixed couple to their post-coital bliss... or possibly round two.";
 	now Panda Shepherd is resolved;
 
-
 Table of GameEventIDs (continued)
 Object	Name
 Elven Mount	"Elven Mount"
@@ -502,9 +478,7 @@ Sarea of Cheetah Trade is "Zoo".
 to say ResolveEvent Cheetah Trade:
 	say "     While searching for useful gear in the area you enter one of the cheetah habitats. The enclosure seems abandoned at first glance and sadly there doesn't seem to be anything useful here either, but just as you are about to leave again, you notice a dotted tail hanging down out of the crown of a tree not too far from you. Glancing up, you see a feral cheetah stretched out on a larger branch! She appears to be gnawing on the corner of a medkit wedged into a split in the branches. As you start considering whether it's worth the trouble or not to challenge the big cat for her prize, she turns her head towards you and focuses slitted eyes in a wary glance. Opening her feline maw to speak, she calls out 'Want toy? Earn it!' Glancing back towards her hindquarters, the big cat twitches her tail and you realize that she's requesting a sexual favor from you.";
 	say "     By sheer coincidence, a little gust of wind flaring up in that very moment sends the musky scent of her feline heat wafting into your nose. You can tell the female feral is wet with lust and desperate need. Her striped tail waves beckoningly at you, calling up thoughts of mating with the feral in your mind.";
-	LineBreak;
-	say "     [bold type]What do you do now?[roman type][line break]";
-	LineBreak;
+	say "[line break]     [bold type]What do you do now?[roman type][line break]";
 	say "     ([link]Y[as]y[end link]) - Satisfy her needs. The medkit will make for a nice reward.";
 	say "     ([link]N[as]n[end link]) - Pass on the offer and leave before she decides to take her pleasure by force.";
 	if Player consents:
@@ -526,7 +500,6 @@ to say ResolveEvent Cheetah Trade:
 		now Resolution of Cheetah Trade is 2; [didn't go for the trade]
 	now Cheetah Trade is resolved;
 
-
 Table of GameEventIDs (continued)
 Object	Name
 Bird Masturbation	"Bird Masturbation"
@@ -541,8 +514,7 @@ when play begins:
 
 to say ResolveEvent Bird Masturbation:
 	say "     Deciding to rest against the side of a gift shop for a few moments, you lean against it and tilt your head up to rest against the wall. At first you think it's just some decoration on the roof of the building across from you, but as your eyes set upon it, you realize that it's a woman - a bird of paradise, to be exact. She's covered in a rainbow of lovely colored feathers, with a pair of just as lovely wings that sprout from her back, which would explain her being on a roof. Additionally, one of her long, talon-tipped fingers is slowly moving in and out between her legs. She moves a finger slowly into her cloaca-like pussy, her head tilted down, focused on her work.";
-	say "     [bold type]Do you want to continue watching her go at it?[roman type][line break]";
-	LineBreak;
+	say "[line break]     [bold type]Do you want to continue watching her go at it?[roman type][line break]";
 	say "     ([link]Y[as]y[end link]) - Sure thing.";
 	say "     ([link]N[as]n[end link]) - Nah.";
 	if Player consents:

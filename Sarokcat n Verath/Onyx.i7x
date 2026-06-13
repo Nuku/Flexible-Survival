@@ -59,7 +59,6 @@ just freed
 onyxtalk = 2
 onyxquest = 1
 
-
 	Path B - opt to make him leave
 	XP of onyx is 4
 talked to Daisy - opt to make him leave
@@ -93,12 +92,9 @@ HP of Onyx = 3
 onyxquest = 4 (stallion-locked)
 		END PATH B1
 
-
 		Path B2 - Onyx mare (free)
 	XP of onyx is 30 (30 - 49)
 Path does not exist yet, but slot should be prepared
-
-
 
 	Path A - opt to make him stay
 
@@ -127,10 +123,6 @@ onyxquest = 5
 
 	END PATH A
 
-
-
-
-
 	XP of onyx is 100
 Ban locked - cleared and reset upon reloading (for fresh reminder)
 
@@ -140,7 +132,6 @@ Ban locked - cleared and reset upon reloading (for fresh reminder)
 [ 2 = just freed ]
 [ ... ]
 [ 100 = Ban locked ]
-
 
 [ Onyxquest ]
 [ 0 = trapped ]
@@ -157,7 +148,6 @@ Ban locked - cleared and reset upon reloading (for fresh reminder)
 [ 0 = not talked ]
 [ 1 = keys avail. (talked once) ]
 [ 2 = got keys ]
-
 
 [ Onyxfucked ]
 [ onyxdma ]
@@ -189,6 +179,7 @@ object	name
 Onyx	"Onyx"
 
 Onyx is a man.
+Onyx is in Holding Pens.
 ScaleValue of Onyx is 3. [human sized]
 SleepRhythm of Onyx is 0. [0 - awake at all times, 1 - day active, 2 - night active]
 Body Weight of Onyx is 4. [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
@@ -226,7 +217,7 @@ TwistedCapacity of Onyx is false. [Twisted Characters can take any penetration, 
 Sterile of Onyx is false. [steriles can't knock people up]
 MainInfection of Onyx is "Horseman".
 Description of Onyx is "[onyxappearance]".
-Conversation of Onyx is { "Help me!" }.
+[Conversation of Onyx is { "Help me!" }.]
 
 instead of sniffing Onyx:		[results for currently uncoded outcomes included]
 	if XP of Onyx < 3 or XP of Onyx is 100:
@@ -240,7 +231,7 @@ instead of sniffing Onyx:		[results for currently uncoded outcomes included]
 	else if XP of Onyx >= 80 and XP of Onyx <= 99:
 		say "     The slutty mare smells strongly of arousal and equine sex.";
 
-To say onyxappearance:[his description at each stage, comments on what each stage is linked to will be in these brackets]
+To say onyxappearance: [his description at each stage, comments on what each stage is linked to will be in these brackets]
 	if XP of Onyx < 3 or XP of Onyx is 100:		[onyx trapped]
 		say "     Standing behind the barred door to his room is a teenage boy of about the right age to be a college freshman. His body already beginning to show the signs of his equine transformation. The young man is wearing nothing but a tight black thong that easily contains his obviously shrinking manhood. His face is slightly pushed out into a growing equine muzzle and his ears have elongated into points and have started moving to the top of his head. You can see that his legs are becoming longer and thinner, and his ankles have shifted upwards on them, forcing him to stand on the balls of his changing feet, his toes already starting to merge to form a rather equine hoof. The half fear half lust crazed look in his eyes makes you shudder slightly as you realize how easily that could have been you behind those bars, and possibly could still be.";
 	else if ( XP of Onyx >= 3 and XP of Onyx <= 5 ) or XP of Onyx is 50 or XP of Onyx is 51:	[onyx free - leave or stay?]
@@ -288,6 +279,9 @@ To say onyxappearance:[his description at each stage, comments on what each stag
 	else if XP of Onyx >= 80 and XP of Onyx <= 99:		[Onyx staying as mare]
 		say "     The transforming boy has finally become a proper mare, and certainly lives up to her new name now. Onyx has become a pure black mare, her lithe equine body seems perfectly proportioned for pleasure as she shifts her weight from hoof to hoof teasingly. She seems to have stopped worrying about anything other than being a properly slutty mare now, and from the looks she is shooting you from time to time, she is more than interested in letting you take her for a ride...";
 
+a postimport rule: [bugfixing rules for players that import savegames]
+	if XP of Onyx > 5:
+		now the vmusings of Onyx is "[onyxmusing]";
 
 Section 2 - Conversation Tree
 
@@ -327,6 +321,7 @@ instead of conversing the Onyx:
 		say "     Sighing, Onyx admits that he is pretty sure that he can't actually bring himself to fight any of the more dominant equines right now, and with some persuasion agrees to follow you out of the Stables. It takes a bit of work for you to distract the two guards outside, but you manage to keep their attention long enough for Onyx to slip out unnoticed. Once free of the Stables, you lead your new and slightly unhappy new equine companion back to the safest place you know if in this crazy city, breathing a soft sigh of relief as the library comes into sight and you can both rest and relax for a bit.";
 		now XP of Onyx is 6;
 		now the vmusings of Onyx is "[onyxmusing]";
+		WaitLineBreak;
 		now Onyx is in Back Of The Library;
 		move player to Back Of The Library;
 	else if XP of Onyx is 6:
@@ -337,8 +332,10 @@ instead of conversing the Onyx:
 		if femonyxq is 1:
 			say "     Shall you tell Onyx about the Palomino?";
 			if Player consents:
+				LineBreak;
 				say "     You talk to Onyx about the possibility of leaving to work at the bar.";
 				say "     'Oh, huh... I'm not sure, will I be safe there?' You attempt to reassure him, stating that there are others like him there that can help. 'Well... if you think it's a good idea, I'm certain it's probably for the best.' And with that he gathers what little he has and lets you lead him back to the Palomino.";
+				WaitLineBreak;
 				now Onyx is in Topless Lounge;
 				move player to Topless Lounge;
 				now the vmusings of Onyx is "";
@@ -347,6 +344,7 @@ instead of conversing the Onyx:
 				now femonyxq is 2;
 				now lastfuck of onyx is turns;
 			else:
+				LineBreak;
 				say "     [one of][if XP of Onyx is 7]'This is all very confusing. It's getting hard to cope with these urges, but I don't want to risk getting sex-crazed either.'[else]'I'm still pretty uncertain as to what I'm going to do about all this. But I do feel a little relieved that I didn't lose it after what you did. Thanks for showing me that I can still have some fun.'[end if][or]'Here I am with a cock the size of which most any man would envy and I'm too nervous to risk using it. Funny, eh?' he says, giving a weak laugh.[or]'It's too bad we weren't able to save Diana, but at least I know she's happy there.'[or]'I need to try and hang on to what little I have left of the old Oscar, though there's quite a lot more of Onyx now.'[or]'I still wish I knew how to fit in properly though now. Everything is just so confusing, and I still am not sure if I am going to end up a stallion or a mare when all this is over.'[or]'Do you think anyone can truly recover from all... This?'[or]'So how do you cope with everything that's going on out there?'[or]'At least it's pretty peaceful here at the library. I can focus more on my... dilemma... with fewer distractions.' A quick glance shows he's looking over more books on horses.[or]'The old me wants me to try staying a man while all my training at the Stables makes being a mare sound really appealing too.'[at random]";
 		else:
 			say "     [one of][if XP of Onyx is 7]'This is all very confusing. It's getting hard to cope with these urges, but I don't want to risk getting sex-crazed either.'[else]'I'm still pretty uncertain as to what I'm going to do about all this. But I do feel a little relieved that I didn't lose it after what you did. Thanks for showing me that I can still have some fun.'[end if][or]'Here I am with a cock the size of which most any man would envy and I'm too nervous to risk using it. Funny, eh?' he says, giving a weak laugh.[or]'It's too bad we weren't able to save Diana, but at least I know she's happy there.'[or]'I need to try and hang on to what little I have left of the old Oscar, though there's quite a lot more of Onyx now.'[or]'I still wish I knew how to fit in properly though now. Everything is just so confusing, and I still am not sure if I am going to end up a stallion or a mare when all this is over.'[or]'Do you think anyone can truly recover from all... This?'[or]'So how do you cope with everything that's going on out there?'[or]'At least it's pretty peaceful here at the library. I can focus more on my... dilemma... with fewer distractions.' A quick glance shows he's looking over more books on horses.[or]'The old me wants me to try staying a man while all my training at the Stables makes being a mare sound really appealing too.'[at random]";
@@ -419,12 +417,6 @@ instead of conversing the Onyx:
 Section 3 - Sexy Times
 
 Instead of fucking the Onyx:
-	if MaleList is not banned:		[Default to Horseman]
-		setmonster "Horseman";
-		choose row MonsterID from the Table of Random Critters;
-	else:				[Using Mareslut in case MaleList is banned]
-		setmonster "Mareslut";
-		choose row MonsterID from the Table of Random Critters;
 	if Player is neuter:
 		say "     You consider offering to have sex with Onyx, but recall that you currently have no gender and are unable to satisfy the horse in such a manner.";
 	else if XP of Onyx is 9:
@@ -439,7 +431,174 @@ Instead of fucking the Onyx:
 		if XP of Onyx is 6:
 			say "     Given what he's been through, you should probably at least talk to him before making the moves on him.";
 		else:
-			say "[onyxbunkersex]";
+			if XP of Onyx is 7:
+				say "     You approach Onyx as he paces around the library, expression tinged with slight discontent after his departure from the Stables. You make an offer for sex, to which he seems reluctant.";
+				say "     'Er, well... I don't know. After all that, I'm not sure if I should. After what happened to Diana... I don't know if I want to end up like that, you know?'";
+				say "     Given his current position, you're fairly certain you can offer him oral sex as a means to ease him into the prospect. Should you?";
+				if Player consents:
+					LineBreak;
+					say "[onyxboral0]";
+					now lastfuck of Onyx is turns;
+				else:
+					LineBreak;
+					say "     You decide that now isn't the best time for this, nodding to him and letting him return to his own troubles.";
+			else if XP of onyx is 8:
+				if the player is dominant:
+					say "     Seeing how Onyx has started to become more accepting of sex and his equine form, you think it might be good to coax him into taking a more submissive role with you. Shall you [link]take charge (Y)[as]y[end link] and steer him in that direction or let things with the stallion unfold with him being [link]more dominant (N)[as]n[end link]?";
+					if Player consents:
+						LineBreak;
+						say "[onyxbsuboral0]";
+					else:
+						LineBreak;
+						say "[onyxboral1]";
+				else:
+					say "[onyxboral1]";
+				now lastfuck of Onyx is turns;
+			else if XP of onyx >= 10 and XP of Onyx <= 19:
+				let recanal_skip be false;
+				let analchance be 5;
+				let recanalchance be 5;
+				if anallevel is 1:
+					now analchance is 0;
+					now recanalchance is 0;
+				else:
+					if anallevel is 3:
+						increase analchance by 2;
+						increase recanalchance by 2;
+					if Player is submissive, increase analchance by 1;
+					if Player is mpreg_ok, increase analchance by 2;
+				if onyxdmra is -1, now recanalchance is 0; [will not ask if refused on first offer]
+				if Player is male and player is dominant and ( onyxdma > 0 or onyxdmc > 0 ) and a random chance of recanalchance in 25 succeeds:
+					if onyxdmra is 0:		[First time making the offer]
+						say "     Onyx runs his strong hands over your body, holding you close. 'Mmm... You've been such a good slut for me. Now, I know you usually prefer being the one in charge, and your big stud appreciates you giving that up for him. So I've going to let you take a turn on top,' he says, running his strong hand along your throbbing member. 'I received quite a bit of training at the Stables and I thought it might be nice to put it to practical use. You've helped me out so much, I think you deserve a big reward,' he says, stretching out across a table. Laying on his side, he reaches back and holds his ass cheeks apart, giving you a tantalizing view of his ebon pucker - ready, waiting and even pre-lubed.";
+						say "     Shall you take him up on his offer and take a turn fucking the stallion stud?";
+						if Player consents:
+							LineBreak;
+							now recanal_skip is true;
+							say "[onyxbrecanal]";
+						else:						[did not accept reciprocal anal]
+							LineBreak;
+							now onyxdmra is -1; [reciprocal anal now locked out]
+							say "     The big stallion seems a little disappointed when you don't take him up on his offer and slowly gets up off the table. 'If that's how you'd like it, who am I to complain?' he says. 'I'm the big, sexy stud after all.' You tell him that you'd much rather let the strong stallion have his way with you. He smiles at this and strides forward with confidence, eager to have fun with his slutty friend.";
+					else:				[Subsequent offers]
+						now recanal_skip is true;
+						say "[onyxbrecanal]";
+				if recanal_skip is false:
+					if Player is herm:	[HERM]
+						if anallevel is 3 and a random chance of analchance in 25 succeeds:
+							say "[onyxbanal]";
+						else if a random chance of 2 in 3 succeeds:
+							say "[onyxbvag]";
+						else:
+							say "[onyxboral2]";
+					else if Player is male:							[MALE]
+						if a random chance of analchance in 15 succeeds:
+							say "[onyxbanal]";
+						else:
+							say "[onyxboral2]";
+					else if Player is female:							[FEMALE]
+						if anallevel is 3 and a random chance of analchance in 32 succeeds:
+							say "[onyxbanal]";
+						else if a random chance of 2 in 3 succeeds:
+							say "[onyxbvag]";
+						else:
+							say "[onyxboral2]";
+				now lastfuck of Onyx is turns;
+			else if XP of onyx is 20:
+				if Player is male:
+					say "[onyxbsubanal0]";
+				else:
+					say "[onyxbsubvag0]";
+			else if XP of Onyx >= 21 and XP of Onyx <= 29:
+				now sextablerun is 0;
+				blank out the whole of table of fucking options;
+				[]
+				if Player is male:
+					choose a blank row in table of fucking options;
+					now title entry is "Fuck him";
+					now sortorder entry is 1;
+					now description entry is "Bend him over a table and fuck the stallion";
+					[]
+					choose a blank row in table of fucking options;
+					now title entry is "Receive fellatio";
+					now sortorder entry is 5;
+					now description entry is "Have him suck you off";
+					[]
+					choose a blank row in table of fucking options;
+					now title entry is "Rough facefuck";
+					now sortorder entry is 8;
+					now description entry is "Get rougher and facefuck him";
+				[]
+				if Player is female:
+					choose a blank row in table of fucking options;
+					now title entry is "Vaginal sex";
+					now sortorder entry is 2;
+					now description entry is "Treat yourself to a horsey ride";
+					[]
+					choose a blank row in table of fucking options;
+					now title entry is "Receive cunnilingus";
+					now sortorder entry is 6;
+					now description entry is "Treat yourself to a horsey ride";
+				[]
+				if ( ( Player is female and onyxsmrv is true ) or ( Player is not female and onyxsmra is true ) ) and onyxsmro is true:
+					choose a blank row in table of fucking options;
+					now title entry is "Onyx takes charge";
+					now sortorder entry is 4;
+					now description entry is "Reward Onyx by letting him do as he pleases";
+				[]
+				choose a blank row in table of fucking options;
+				now title entry is "Anal ride";
+				now sortorder entry is 3;
+				now description entry is "Ride the horsey with your ass";
+				[]
+				choose a blank row in table of fucking options;
+				now title entry is "Give fellatio";
+				now sortorder entry is 7;
+				now description entry is "Suck that horsey cock";
+				[]
+				choose a blank row in table of fucking options;
+				now title entry is "Bondage edging";
+				now sortorder entry is 9;
+				now description entry is "Tie him up and edge the stallion";
+				[]
+				sort the table of fucking options in sortorder order;
+				repeat with y running from 1 to number of filled rows in table of fucking options:
+					choose row y from the table of fucking options;
+					say "[link][y] - [title entry][as][y][end link][line break]";
+				while sextablerun is 0:
+					say "Pick the corresponding number> [run paragraph on]";
+					get a number;
+					if calcnumber > 0 and calcnumber <= the number of filled rows in table of fucking options:
+						now current menu selection is calcnumber;
+						choose row calcnumber in table of fucking options;
+						say "[title entry]: [description entry]?";
+						if Player consents:
+							LineBreak;
+							now sextablerun is 1;
+							if title entry is:
+								-- "Fuck him":
+									say "[onyxbsubanal1]";
+								-- "Vaginal sex":
+									say "[onyxbsubvag1]";
+								-- "Anal ride":
+									say "[onyxbsubanalride1]";
+								-- "Receive fellatio":
+									say "[onyxbsubmoral1]";
+								-- "Receive cunnilingus":
+									say "[onyxbsubforal1]";
+								-- "Give fellatio":
+									say "[onyxbsubcocksuck1]";
+								-- "Onyx takes charge":
+									say "[onyxbsubincharge1]";
+								-- "Rough facefuck":
+									say "[onyxbsubfacefuck1]";
+								-- "Bondage edging":
+									say "[onyxbsubedging1]";
+						now lastfuck of Onyx is turns;
+					else:
+						say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
+				wait for any key;
+				clear the screen and hyperlink list;
 [		say "'Sorry friend,' Onyx says with a shy smile as he moves the pictures of horses around in front of him. 'But I haven't yet figured out what I should be yet, and I figure actually giving in and having sex would kind of make the decision for me... so I think I should pass for now...' he says with a sigh as he goes back to looking at the pictures, and you wonder if maybe there isn't something out there in the city you could find which would help him make the choice you want him to... perhaps in the red light district or one of the clubs in town..."; ]
 [		say "***INSERT NEW CONTENT HERE"; ]
 	else if XP of Onyx is 31 and Player is male and Cock Length of Player <= 15 and a random chance of 3 in 5 succeeds:
@@ -449,11 +608,50 @@ Instead of fucking the Onyx:
 		now XP of Onyx is 32;
 	else if XP of Onyx >= 30 and XP of Onyx <= 49:		[at Palomino]
 		now lastfuck of onyx is turns;
-		femonyxsex;
+		say "     Gesturing to Onyx, the equine moves from another patron she was talking to before making her way over to you.";
+		say "     'Looking for a good time, sweetie? I know a place less noisy...' Guiding you, you're led to a section more out of the way, the beating thrum of the music muffled.";
+		if Player is male:
+			say "     Eager to oblige your need, Onyx is already lowering herself[if scalevalue of Player > 3] under you[end if] to more easily access your assets, eager digits parting any obstruction in her way to expose your [cock size desc of Player] dick[smn] before her curious gaze.";
+			say "     '[one of]Oh[or]Hm[or]Ah[at random], [if Cock Length of Player > 12][one of]somebody's been eating their vegetables[or]don't think you'll be able to keep this much from me, honey[or]I wonder if it'll even fit[at random][else][one of]somebody's eager to see me[or]looks like you're all ready for a bit of fun[or]lets get this party started[at random][end if]!' Grinning, her tongue caresses along [if Cock Count of Player > 2]the length of two of them[else if Cock Count of Player is 2]the length of both of them[else]its length[end if], eagerly oozing by her touch as [if Cock Count of Player > 1]they're[else]it's[end if] driven to full arousal.";
+			let Trixieexit be false;
+			while Trixieexit is false:
+				say "     [bold type]Choices:[roman type][line break]";
+				say "(1) [link]Continue Oral[as]1[end link][line break]";
+				say "(2) [link]Fuck her[as]2[end link][if Cock Length of Player > 15] [italic type]- Too large![roman type][end if][line break]";
+				say "(3) [link]Fuck her anally[as]3[end link][if Cock Length of Player > 15] [italic type]- Too large![roman type][end if][line break]";
+				if XP of Onyx >= 32:
+					say "(4) [link]Lap dance[as]4[end link][if Cock Length of Player > 15] [italic type]- Too large![roman type][end if][line break]";
+				while 1 is 1:
+					say "Choice? (1-[if XP of Onyx < 32]3[else]4[end if])> [run paragraph on]";
+					get a number;
+					if (calcnumber >= 1 and calcnumber <= 3) or (XP of Onyx >= 32 and calcnumber is 4):
+						break;
+					say "Invalid entry.";
+				if calcnumber is 1:
+					femonyxsex1;
+					now Trixieexit is true;
+				else if calcnumber is 2:
+					if Cock Length of Player > 15:
+						say "[bracket]Invalid interaction: You're too large[close bracket][line break]";
+					else:
+						femonyxsex2;
+						now Trixieexit is true;
+				else if calcnumber is 3:
+					if Cock Length of Player > 15:
+						say "[bracket]Invalid interaction: You're too large[close bracket][line break]";
+					else:
+						femonyxsex3;
+						now Trixieexit is true;
+				else:
+					femonyxsex4;
+					now Trixieexit is true;
+		else:
+			femonyxsex4;
 	else if XP of Onyx is 51:
 		now lastfuck of onyx is turns;
 		say "     'Oh hey, you want to have some fun with me?' Onyx says with a smile as you approach the changing equine with obvious sexual intent. 'Of course if I am going to be sexy little horse I need to have lots and lots of sex, and you should too so you can be just as sexy a horse as me...' the black equine says with a teasing smile as he draws closer to you, rubbing his softly furred equine body up against your own teasingly, his scent seeming increasingly arousing as the transforming male pulls you close and whispers in your ear. 'Why don't I show you some of the tricks the stallions told me about, and teach you how much fun it is to be saddled up and ridden?' he says teasingly, while his arousing scent makes your head swim with desire, and your body warms up in response to his touch. Do you give in to your building desires and the increasingly arousing touch of the horseboy?'";
 		if Player consents:
+			LineBreak;
 			say "     You find yourself nodding almost automatically in response to Onyx's surprisingly forceful words, though you don't have much time to think about that as Onyx grins happily at your surrender, and quickly presses your unresisting body up against the wall of the hallway.";
 			if Player is male:
 				if Player is female:
@@ -465,13 +663,11 @@ Instead of fucking the Onyx:
 			else:
 				say "     'Good slut,' you hear Onyx mutter into your ear as he runs his hands over your body teasingly, his large equine fingers stroking your body, before venturing down to your already damp and needy pussy. 'Looks your already wet and ready for me, just like a good little mareslut should be... what your body needs is a real stallions meat in you isn't it?' Onyx says teasingly, as he rubs your damp passage, his touch making you whimper with desire even as you arch your body forward at his touch, unable to deny his statement as your body responds to your increasingly stallionlike captor. 'A nice thick stallionhood like this,' he says, as he pushes your head down until his thick blunt equine cock is right in front of your face, one hand still holding your hands pinned, while his other strokes his surprisingly large changed cock teasingly. Your attention is quickly focused on his large equine member, even as the aroused musk of the dominant stallion fills your mind, your body responding almost automatically like a good little mares as your sex burns with desire, your body aching to be split open by his thick equine rod. Your eyes fixed on his hooftipped hand as it strokes over his sexy and powerful rod, which now shows no sign of the shrinking you noticed earlier, indeed it seems to have grown drastically, and is still growing to be on par with that of any of the stallions wandering the halls!";
 				say "     You find yourself panting with arousal at every sexy pump of his hand up that thick meat, and if you weren't so helpless and restrained you think you wouldn't be able to keep your hands from stroking the sexy equine meat in front of you as well. Soon enough though, Onyx grunts loudly above you, and the tip of his equine member erupts, spilling his thick stallionseed all over your helpless form. You moan with increased arousal and find yourself feeling increasingly needy and surprisingly happy to be covered in the cum of a powerful equine, the feel of it sinking into your skin and changing you is absolutely amazing, and somehow being held in place by the powerful stallion while it happens just makes everything better as well. Eventually he lets you go, and when you look up at the stallion that dominated you so easily, you are somewhat surprised to see that his changes have finished completely, and a powerful black stallion stands where the weak slutboi once stood, the sight of his large proud equine form making you feel even more submissive and horny just by looking at him.";
-			if FemaleList is not banned and ( Player is not MalePreferred or MaleList is banned ):
-				infect "Mareslut";
-				infect "Mareslut";
+			if ( Player is FemalePreferred or FemaleList is not banned ) and ( Player is not MalePreferred or MaleList is banned ):
+				MultiInfect "Mareslut" repeats 2;
 				now Onyxmareslut is 1;
 			else:
-				infect "Stallionboi";
-				infect "Stallionboi";
+				MultiInfect "Stallionboi" repeats 2;
 				now Onyxboislut is 1;
 			now XP of Onyx is 60;
 			now Body Weight of Onyx is 5;
@@ -484,10 +680,7 @@ Instead of fucking the Onyx:
 			now Cock Girth of Onyx is 4;
 			now Cock Length of Onyx is 20;
 			now Ball Size of Onyx is 4;
-			if fancyquest > 0:
-				increase score by 0; [do nothing action]
-			else:
-				now fancyaroused is 1;
+			if fancyquest < 1, now fancyaroused is 1;
 		else:
 			if Player is male:
 				say "     You shake your head slightly to clear it as you push the surprised Onyx back up against the wall, the changing equine surprised and helpless to react as you take charge of the situation. Onyx moans helplessly as your hands roam his already aroused and needy body teasingly, your cock growing increasingly excited as you stroke his soft black fur, even as his cock seems to shrink and vanish as you watch. As your hands rub over his almost completely flat crotch, you can feel his skin part under your touch and a small gush of wetness soaks his panties as a new feminine slit forms, even as her chest begins to swell slightly with newly budding breasts. You can feel yourself grinning eagerly as the new mare's heat-filled scent fills your head, the new mare moaning with arousal as she responds to your dominant touch with increasing submissiveness, the instincts of a mare in heat obviously already taking over as his body continues to change under your sexual assault. The sight of Onyx becoming a proper mare only serves to excite you and increase your arousal amazingly, your stiff [Cock of Player] cock rubbing up against her soft body even as one of your hands slowly tugs her soaked thong out of the way, exposing her lovely winking maresex for the first time.";
@@ -517,12 +710,9 @@ Instead of fucking the Onyx:
 			now Clit Size of Onyx is 3;
 			now MainInfection of Onyx is "Mareslut";
 			now lastfuck of onyx is turns;
-			if fancyquest > 0:
-				increase score by 0; [do nothing action]
-			else:
-				now fancyaroused is 1;
+			if fancyquest < 1, now fancyaroused is 1;
 	else if XP of Onyx >= 60 and XP of Onyx <= 79:
-		if ( Onyxmareslut is 2 and Player is female ) or ( Onyxboislut is 2 and Cunt Count of Player is 0 ):
+		if ( Onyxmareslut is 2 and Player is female ) or ( Onyxboislut is 2 and Player is not female ):
 			now lastfuck of onyx is turns;
 			if Player is female:	[FEMALE SUCCUMB]
 				say "     'Ah! I knew my slut would return to her stallion soon enough. You just can't help but lust after my rod, now can you?' Onyx says with a smirk on his equine muzzle as he reaches out and strokes your body with his hand teasingly, making you moan almost automatically as your well-trained body responds submissively to his touch. 'Now it's time for the real fun though, isn't it slut?' he says teasingly as he rubs your already damp pussy with his powerful hands, making you moan with desire at your stallion's touch, the scent of his heady musk filling your head, and reminding you of just how good it feels to submit and let him have his way with you. Your head swimming with lust, you pant eagerly as he slowly pulls you into the room he once occupied, and pushes you down onto the bed. Your thoughts already filling with images of the handsome black stallion fucking your increasingly eager body, you spread yourself for him eagerly as he climbs up onto the bed on top of you. His hands gather yours up and pin them above your head as his thick black and pink rod rubs up against your thighs. 'What a good little slutty mare you make. You want my cock so bad don't you, little mare?' he says teasingly as he shifts his weight above you, and you find yourself moaning and nodding eagerly, your damp pussy feeling horribly empty and needy as you stare down at his amazingly sexy stallionhood.";
@@ -559,7 +749,7 @@ Instead of fucking the Onyx:
 			if Player is female:
 				say "     'I knew you would be back soon,' Onyx says with a teasing grin as the new and powerful stallion stretches his black furred form teasingly, the sight of his body and the scent of an aroused stallion making your own body respond automatically. You moan as Onyx draws closer to you, your pussy clenching with desire as your body heats up at his soft touch. You swear you can see the increasingly dominant seeming stallion grin as he presses you into one of the open rooms, his powerful body pressed against yours as he guides you over to the bed, before pushing you down on your back. You barely have time to think before the large equine male is on top of you, his form you down underneath him, even as his thick equine cock rubs up between your legs. Helpless to resist the large equine on top of you, either physically or emotionally, you surrender to the moment and the sensations of being pinned underneath the large male, while the blunt tip of his cock strokes the outside of your feminine lips teasingly. You moan in need as he continues to tease you for several minutes with his soft equine lips and hands, and teasing strokes of his equine stallionhood, even as your body burns with increasingly equine heat, your empty slit begging to be filled by the strong powerful male above you. Eventually Onyx grins and you realize you have started begging him out loud for him to fill you, you have little time to think about it however, as the large black stud grunts and buries his thick rod inside of you.";
 				say "     The feeling of his warm equine rod filling you up is amazing, and you melt in the stallions arms as he continues to thrust himself into you, feeling increasingly submissive and helpless as the powerful male thrusts into your body. As you clutch Onyx close you find his presence makes you feel increasingly safe and sexy, like you were meant to be a slutty little mare for this powerful stallion, to have him hold you, fuck you, and make you his forever. You groan with pleasure as images of playing the mare for your stallion fill your head, though soon you groan for another reason, as your body explodes with pleasure as the powerful black stud above you lets out a loud whinny, and you feel his thick seed fill your body. You lie there limply as the pleasure washes through you, his cock twitching inside you and filling you up as he kisses and nibbles at your neck teasingly with his equine lips, before pulling himself off of you. Hauling yourself up, you barely manage to stagger out into the hallway after Onyx as he saunters out, the black equine giving you an amused grin as you realize your thighs are still coated in his seed, the realization making you blush, but feeling surprisingly good as well, and as Onyx gives you a knowing wink, you realize you will be back to visit your newfound stud again soon enough...[impregchance]";
-				if FemaleList is not banned and ( Player is not MalePreferred or MaleList is banned ):
+				if ( Player is FemalePreferred or FemaleList is not banned ) and ( Player is not MalePreferred or MaleList is banned ):
 					infect "Mareslut";
 					if a random chance of 1 in 3 succeeds:
 						increase onyxmareslut by 1;
@@ -569,7 +759,7 @@ Instead of fucking the Onyx:
 				say "     'Back again? And still not even the slightest bit mare-like,' he chuckles as he feels you up between the legs. You moan in response to this, finding yourself unable and even unwilling to resist the sexy stallion. 'You certainly act like a needy mare though, don't you? You're just a horny mare at heart, aren't you? Well come on, mare. It's time to service your stud,' he says with a big grin, pushing you around to face the wall while he grinds his big stallionhood against your backside.";
 				say "     Feeling it there, you moan in desire and push your hips back, grinding your rear right back against his maleness. He grins and lets you ride back against his cock for a while before grabbing your hips firmly and letting his cock slowly slide down into position, leaving a trail of precum as it goes that makes you tingle with lustful desire. He nuzzles at the back of your neck and nips lightly as he presses his large, flared glans against your back door. 'Mmm... that's a good slut. You were always meant to take a real stud's cock inside you, weren't you, my dear?' he says as he pushes his dribbling tip against your pucker. You nod emphatically, starting to beg him to stuff it in you, to fuck you like the slutty manwhorse you are.";
 				say "     He must be pleased with your response because he thrusts hard, popping his large glans past your pucker and diving several inches of his wonderful maleness inside you. Your cock quivers with lustful need and you rock yourself back against his thrusts as soon as you recover from the entrance of that wide, flared tip. Your body responds quickly, pressing back to take more and more of the big stud's cock inside you until you feel so full and warm from it that you know he must have it all buried inside your needy ass. He continues to tell you what a good slut you are until finally he cums hard, blasting his hot load deep inside your ass and filling you with his cum.[mimpregchance]";
-				if FemaleList is not banned and ( Player is not MalePreferred or MaleList is banned ):
+				if ( Player is FemalePreferred or FemaleList is not banned ) and ( Player is not MalePreferred or MaleList is banned ):
 					infect "Mareslut";
 				else:
 					infect "Stallionboi";
@@ -578,7 +768,7 @@ Instead of fucking the Onyx:
 			else:								[MALE V2]
 				say "     'Back again? And still not even the slightest bit mare-like,' he chuckles as he feels you up between the legs. You moan in response to this, finding yourself unable and even unwilling to resist the sexy stallion. 'You certainly act like a needy mare though, don't you? You're just a horny mare at heart, aren't you? Well come on, mare. It's time to service your stud,' he says with a big grin, pushing you down onto your knees and holding his long, equine cock in front of your face.";
 				say "     You moan in desire at the sight of it and lean forward, giving it a few slow licks at first. You slide your tongue across its flared glans, pleased to hear him nicker in response. You lavish attention upon his maleness for some time with your tongue, tasting its whole length before finally opening your mouth so you can take it in and suck it eagerly. He runs a hand over your [FaceSpeciesName of Player in lower case] face and thrusts gently into your mouth. 'Mmm... that's a good slut. You were always meant to please a real stud, weren't you, my dear?' he says as he pushes his lengthy cock forward, forcing you to deep-throat him impressive meat. You eager do your best, playing with his nuts and sucking lustfully until finally your stallion blows his load, pumping his thick seed down your throat.";
-				if FemaleList is not banned and ( Player is not MalePreferred or MaleList is banned ):
+				if ( Player is FemalePreferred or FemaleList is not banned ) and ( Player is not MalePreferred or MaleList is banned ):
 					infect "Mareslut";
 				else:
 					infect "Stallionboi";
@@ -589,183 +779,17 @@ Instead of fucking the Onyx:
 		if Player is male:
 			say "     Onyx smiles happily and whinnies in greeting as you approach, seemingly unable to speak as she stares with desire at your erect [Cock of Player] rod. Her obvious need making you grin as she runs her hands over her sleek black mare's body, already anticipating the fun to come as she leans back against the wall with her legs widely spread for you. Her submissive actions make you feel increasingly powerful and dominant as you pin her to the wall, your stiff cock already probing at her damp passage even as she moans happily underneath you. You waste no time in burying yourself inside her new pussy, enjoying every submissive squeak and whinny of pleasure as you pound into her amazingly soft and sensual pussy. Soon you are gripping the little mareslut's hips tightly as she wraps her legs around you, her soft thighs pressing up against your body as you continue to fuck her needy body properly.";
 			say "     It isn't long though before her amazing passage has you crying out with pleasure as your body stiffens and you shoot your load into her waiting womb. Your new mare squeals with happiness as she shudders with orgasm as well as she receives your seed. Her needy pussy milks your cock of every last drop of cum as you hold her tight. Eventually though, you are both spent and unable to cum any more, and you reluctantly let your fun new plaything slump to the ground against the wall again, while you gather your stuff up and try to recover from your exertions. Glancing back at the happy and slutty little mare though, you make a note to come back here again once you have recovered, to give your newest mare another lovely taste of the meat she seems to like so much...";
-			if MaleList is not banned and ( Player is not FemalePreferred or FemaleList is banned ):
+			if ( Player is MalePreferred or MaleList is not banned ) and ( Player is not FemalePreferred or FemaleList is banned ):
 				infect "Horseman";
 			else:
 				infect "Mareslut";
 		else:
 			say "Onyx squeals happily, seemingly unable to speak with excitement as you stroke your hands over her new sensitive black body, and you can smell her intense arousal as she rubs her new form up against you teasingly. Her submissive actions making you feel increasingly dominant as well as horny, and you can feel yourself smirking with amusement as you decide to put the slutty mares new equine muzzle to good use. She seems mildly surprised at first as you push her down to her knees in front of you, only to grin happily as she scents your female arousal, eagerly burying her equine muzzle in your crotch like a good little sexpet. You moan with pleasure at the feel of her velvety equine muzzle nuzzling at your damp feminine sex, her soft lips rubbing over your lips teasingly, as you bury your hands in her soft short mane.";
 			say "     Onyx doesn't tease you with her soft touches for long though, being just as eager to please her new mistress as you are to play with this new sexy pet you made. You gasp happily as her flexible equine tongue probes your damp folds, her teasing licks are tentative at first, but soon she is lapping at your sex eagerly, the pleasure growing and building with every amazing pass of that soft equine tongue. Before you know it you are rewarding the slutty mare with a gush of your juices as you cry out in orgasm, coating her muzzle and making her moan happily underneath you as she does her best to lick every drop of your wonderful flavor up. Eventually you gather your wits about you and step back slightly, though Onyx stays there on her hands and knees looking up at you with a happy expression on her muzzle as she smiles at you. You find yourself grinning slightly at the erotic sight as you gather your equipment up, before preparing to continue your journey, leaving the slutty new mare there on her knees behind you like a good little pet...";
-			if MaleList is not banned and ( Player is not FemalePreferred or FemaleList is banned ):
+			if ( Player is MalePreferred or MaleList is not banned ) and ( Player is not FemalePreferred or FemaleList is banned ):
 				infect "Horseman";
 			else:
 				infect "Mareslut";
-
-
-to say onyxbunkersex:
-	if XP of Onyx is 7:
-		say "     You approach Onyx as he paces around the library, expression tinged with slight discontent after his departure from the Stables. You make an offer for sex, to which he seems reluctant.";
-		say "     'Er, well... I don't know. After all that, I'm not sure if I should. After what happened to Diana... I don't know if I want to end up like that, you know?'";
-		say "     Given his current position, you're fairly certain you can offer him oral sex as a means to ease him into the prospect. Should you?";
-		if Player consents:
-			say "[onyxboral0]";
-			now lastfuck of Onyx is turns;
-		else:
-			say "     You decide that now isn't the best time for this, nodding to him and letting him return to his own troubles.";
-	else if XP of onyx is 8:
-		if the player is dominant:
-			say "     Seeing how Onyx has started to become more accepting of sex and his equine form, you think it might be good to coax him into taking a more submissive role with you. Shall you [link]take charge (y)[as]y[end link] and steer him in that direction or let things with the stallion unfold with him being [link]more dominant (n)[as]n[end link]?";
-			if Player consents:
-				say "[onyxbsuboral0]";
-			else:
-				say "[onyxboral1]";
-		else:
-			say "[onyxboral1]";
-		now lastfuck of Onyx is turns;
-	else if XP of onyx >= 10 and XP of Onyx <= 19:
-		let recanal_skip be 0;
-		let analchance be 5;
-		let recanalchance be 5;
-		if anallevel is 3:
-			increase analchance by 2;
-			increase recanalchance by 2;
-		if Player is submissive, increase analchance by 1;
-		if Player is mpreg_ok, increase analchance by 2;
-		if anallevel is 1:
-			now analchance is 0;
-			now recanalchance is 0;
-		if onyxdmra is -1, now recanalchance is 0; [will not ask if refused on first offer]
-		if Player is male and player is dominant and ( onyxdma > 0 or onyxdmc > 0 ) and a random chance of recanalchance in 25 succeeds:
-			if onyxdmra is 0:		[First time making the offer]
-				say "     Onyx runs his strong hands over your body, holding you close. 'Mmm... You've been such a good slut for me. Now, I know you usually prefer being the one in charge, and your big stud appreciates you giving that up for him. So I've going to let you take a turn on top,' he says, running his strong hand along your throbbing member. 'I received quite a bit of training at the Stables and I thought it might be nice to put it to practical use. You've helped me out so much, I think you deserve a big reward,' he says, stretching out across a table. Laying on his side, he reaches back and holds his ass cheeks apart, giving you a tantalizing view of his ebon pucker - ready, waiting and even pre-lubed.";
-				say "     Shall you take him up on his offer and take a turn fucking the stallion stud?";
-				if Player consents:
-					now recanal_skip is 1;
-					say "[onyxbrecanal]";
-				else:						[did not accept reciprocal anal]
-					now onyxdmra is -1; [reciprocal anal now locked out]
-					say "     The big stallion seems a little disappointed when you don't take him up on his offer and slowly gets up off the table. 'If that's how you'd like it, who am I to complain?' he says. 'I'm the big, sexy stud after all.' You tell him that you'd much rather let the strong stallion have his way with you. He smiles at this and strides forward with confidence, eager to have fun with his slutty friend.";
-			else:				[Subsequent offers]
-				now recanal_skip is 1;
-				say "[onyxbrecanal]";
-		if recanal_skip is 1:
-			increase score by 0; [do nothing - skip regular scene]
-		else if Player is herm:	[HERM]
-			if anallevel is 3 and a random chance of analchance in 25 succeeds:
-				say "[onyxbanal]";
-			else if a random chance of 2 in 3 succeeds:
-				say "[onyxbvag]";
-			else:
-				say "[onyxboral2]";
-		else if Player is male:							[MALE]
-			if a random chance of analchance in 15 succeeds:
-				say "[onyxbanal]";
-			else:
-				say "[onyxboral2]";
-		else if Player is female:							[FEMALE]
-			if anallevel is 3 and a random chance of analchance in 32 succeeds:
-				say "[onyxbanal]";
-			else if a random chance of 2 in 3 succeeds:
-				say "[onyxbvag]";
-			else:
-				say "[onyxboral2]";
-		now lastfuck of Onyx is turns;
-	else if XP of onyx is 20:
-		if Player is male:
-			say "[onyxbsubanal0]";
-		else:
-			say "[onyxbsubvag0]";
-	else if XP of Onyx >= 21 and XP of Onyx <= 29:
-		say "[onyxbsubtable]";
-
-to say onyxbsubtable:
-	now sextablerun is 0;
-	blank out the whole of table of fucking options;
-	if Player is male:
-		choose a blank row in table of fucking options;
-		now title entry is "Fuck him";
-		now sortorder entry is 1;
-		now description entry is "bend him over a table and fuck the stallion";
-		[]
-		choose a blank row in table of fucking options;
-		now title entry is "Receive fellatio";
-		now sortorder entry is 7;
-		now description entry is "have him suck you off";
-		[]
-		choose a blank row in table of fucking options;
-		now title entry is "Rough Facefuck";
-		now sortorder entry is 10;
-		now description entry is "get rougher and facefuck him";
-		[]
-	if Player is female:
-		choose a blank row in table of fucking options;
-		now title entry is "Vaginal sex";
-		now sortorder entry is 3;
-		now description entry is "treat yourself to a horsey ride";
-		[]
-		choose a blank row in table of fucking options;
-		now title entry is "Receive cunnilingus";
-		now sortorder entry is 8;
-		now description entry is "treat yourself to a horsey ride";
-		[]
-	if ( ( Player is female and onyxsmrv is true ) or ( Cunt Count of Player is 0 and onyxsmra is true ) ) and onyxsmro is true:
-		choose a blank row in table of fucking options;
-		now title entry is "Onyx takes charge";
-		now sortorder entry is 6;
-		now description entry is "reward Onyx by letting him do as he pleases";
-		[]
-	choose a blank row in table of fucking options;
-	now title entry is "Anal ride";
-	now sortorder entry is 5;
-	now description entry is "ride the horsey with your ass";
-	[]
-	choose a blank row in table of fucking options;
-	now title entry is "Give fellatio";
-	now sortorder entry is 9;
-	now description entry is "suck that horsey cock";
-	[]
-	choose a blank row in table of fucking options;
-	now title entry is "Bondage Edging";
-	now sortorder entry is 11;
-	now description entry is "tie him up and edge the stallion";
-	[]
-	repeat with y running from 1 to number of filled rows in table of fucking options:
-		choose row y from the table of fucking options;
-		say "[link][y] - [title entry][as][y][end link][line break]";
-	while sextablerun is 0:
-		say "Pick the corresponding number> [run paragraph on]";
-		get a number;
-		if calcnumber > 0 and calcnumber <= the number of filled rows in table of fucking options:
-			now current menu selection is calcnumber;
-			choose row calcnumber in table of fucking options;
-			say "[title entry]: [description entry]?";
-			if Player consents:
-				let nam be title entry;
-				now sextablerun is 1;
-				if nam is "Fuck him":
-					say "[onyxbsubanal1]";
-				else if nam is "Vaginal sex":
-					say "[onyxbsubvag1]";
-				else if nam is "Anal ride":
-					say "[onyxbsubanalride1]";
-				else if nam is "Receive fellatio":
-					say "[onyxbsubmoral1]";
-				else if nam is "Receive cunnilingus":
-					say "[onyxbsubforal1]";
-				else if nam is "Give fellatio":
-					say "[onyxbsubcocksuck1]";
-				else if nam is "Onyx takes charge":
-					say "[onyxbsubincharge1]";
-				else if nam is "Rough Facefuck":
-					say "[onyxbsubfacefuck1]";
-				else if nam is "Bondage Edging":
-					say "[onyxbsubedging1]";
-			now lastfuck of Onyx is turns;
-		else:
-			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
-	wait for any key;
-	clear the screen and hyperlink list;
-
 
 Section 4 - Rescued Sex Pool
 
@@ -778,8 +802,7 @@ to say onyxboral0:
 	say "     [if scalevalue of Player < 4]You eventually manage to get his rod somewhat far down your throat, and it doesn't look it has any plans to come back out if its increasingly flared cockhead has anything to say about it[else]He grips you tightly, the intense sensation of his cock wholly engulfed within your expansive hole driving him wild, feeling his cockhead flare with imminent release[end if]. With a beleaguered whinny, you quickly feel his thick cum flooding your gullet, [if scalevalue of Player < 3]and by the second or third successive spurt your stuffed mouth is forced to spray out around your lips until his sexual fluids are dripping down your chin[else if scalevalue of Player > 3]and with each successive spurt you swallow down his sizable load with a lascivious fervency, until not a drop of his sexual fluids remains[else]and you find yourself ill-equipped to contend with his expansive load, especially after only being able to engulf about half of his organ, as his sexual fluids soon oozes free of your strained mouth[end if].";
 	say "     Eventually, you [if scalevalue of Player < 4]slowly struggle to free yourself of his cock, tongue making a token effort to clean his cock until he allays your need to satisfy him[else]gradually relinquish his cock from your hold, tongue cleaning his cock until you're satisfied with your job[end if]. Still panting, it takes him a moment to recover, but he soon slowly gets up off from the bookshelf and puts his attire back on.";
 	say "     'Ah, thank you...' You're about to move on and do your own thing before he stops you. 'Wait... I really do mean it, I feel a lot better now.' You nod to him, expression tinged with a slight smile, before departing proper; he does seem to be in a brighter mood than when you started talking to him.";
-	increase Libido of Player by 10;
-	if Libido of Player > 100, now Libido of Player is 100;
+	raise Player Libido by 10;
 	now XP of onyx is 8;
 	now Body Weight of Onyx is 5;
 	now Body Definition of Onyx is 5;
@@ -801,9 +824,8 @@ to say onyxboral1:
 	say "     [if scalevalue of Player < 4]You eventually manage to push most of his rod down your throat, and it doesn't look it has any plans to come back out if its increasingly flared cockhead has anything to say about it[else]He grips you tightly, the intense sensation of his cock wholly engulfed within your expansive hole driving him wild, and you feel his cockhead flare with imminent release[end if]. In due time you feel his whole form go rigid, soon followed by a thick flood of his cum, [if scalevalue of Player < 4]and though you're a bit more equipped to handle him by the fifth spurt or so it has nowhere to go except all over his crotch and the floor[else if scalevalue of Player > 3]and with each successive spurt you swallow down his sizable load with a lascivious fervor, until not a drop of his sexual fluids remains[end if].";
 	say "     Eventually, you [if scalevalue of Player < 4]slowly pry his cock free from you, tongue endeavoring to clean his cock until he looks satisfied[else]gradually relinquish his cock from your hold, tongue cleaning his cock, leaving only a thin veneer of saliva in its wake[end if]. He seems to recover more quickly, pulling his thong back on, though it's a bit of a struggle to contend with his still somewhat hard cock, and concedes to just leaving it hang out.";
 	say "     'Thank you, I feel a lot better right now!' Grinning at you, his form seems to have shifted more into a dominant male. As you turn around to depart, your behind is given a firm slap, further inferring his progressive change.";
-	increase Libido of Player by 10;
+	raise Player Libido by 10;
 	if a random chance of 1 in 3 succeeds or the player is dominant:
-		if Libido of Player > 100, now Libido of Player is 100;
 		now XP of Onyx is 10;
 		now Body Weight of Onyx is 5;
 		now Body Definition of Onyx is 7;
@@ -822,10 +844,8 @@ to say onyxboral2:
 	say "     [if scalevalue of Player < 3]Small as you might be, you prove size to be quite deceptive as by now you can manage his comparatively massive cock with relative ease, engulfing the thick tool deep within your abyss of a mouth. As you continue, you free a hand and dive under his taut thong to feel[else if scalevalue of Player > 4]The stallion seems particularly fond of his comparatively larger consort, perhaps because your scale is so well-suited in handling his sizable cock, easily engulfing his dick within your abyssal maw. As you hilt him, your thick tongue escapes your lips to invade his thong, soaking it in saliva as you taste[else if scalevalue of Player > 3]The stallion seems particularly fond of his slightly larger consort, perhaps because your scale is well-suited in handling his sizable cock, though you prior ease is slightly challenged now that he's grown to his proper size once it's fully engulfed within your maw. As you hilt him, your thick tongue escapes your lips to invade his thong, soaking it in saliva as you taste[else]Slowly, you move to engulf his cockhead into your maw. Much in spite its impressive thickness, you've grown fairly adept at engulfing it within your beleaguered orifice, and with a little effort you manage to disappear the entire thing inside your seemingly bottomless hole. As you continue, you free a hand and dive under his taut thong to feel[end if] his hefty ballsack. Softly nickering, he's grown quite attached to using you as his own personal toy, hands freely caressing along your neck and[if scalevalue of Player < 5]back[else]head[end if].";
 	say "     [if scalevalue of Player < 4]Dizzied by a deprivation of air, your effort's reward seems imminent as you feel his cockhead flaring blatantly within you[else]He grips you tightly, the intense sensation of his cock wholly engulfed within your expansive hole pushing him close to the edge, and you soon feel his cockhead flare with imminent release[end if]. As Onyx lets out one final gasp, your gullet is flooded by a torrent of his virile cum, [if scalevalue of Player < 4]and you only struggle briefly to contend with his load, managing to avoid any serious mess[else if scalevalue of Player > 3]and though his load is very impressive you show little difficulty in downing each successive spurt[end if].";
 	say "     Eventually, you [if scalevalue of Player < 4]slowly pry his cock free from you, the stallion preventing you from leaving until you've sufficiently cleaned him[else]gradually relinquish his cock from your hold, tongue cleaning his cock, leaving only a thin veneer of saliva in its wake[end if]. Getting back up, he [if scalevalue of Player > 3]takes a moment to clean his thong of your saliva[else]quickly re-adjusts his thong[end if], leaving his large and still-dripping cock to hang free in the open air.";
-	say "     'That's a good [if scalevalue of Player < 4]little[end if] pet, off you go!' He chuckles, giving your rear a playful smack as he lets you off.";
-	increase Libido of Player by 20;
-	if Libido of Player > 100, now Libido of Player is 100;
-
+	say "     'That's a good [if scalevalue of Player < 4]little [end if]pet, off you go!' He chuckles, giving your rear a playful smack as he lets you off.";
+	raise Player Libido by 20;
 
 to say onyxbanal:
 	if onyxdma is 0:
@@ -834,16 +854,15 @@ to say onyxbanal:
 		if scalevalue of Player < 4:
 			say "     You're not rightly sure how he intends to fit something that big back there, but your uncertainty only fuels his wicked plans further, and you soon feel his blunted tip press teasingly against your exposed pucker. You're given a small mercy as he makes a slow effort of sinking his cock into your hole, quickly strained as you're considerably stretched to accommodate his expansive girth.";
 			say "     [if Cock Count of Player > 1]Your own [cock size desc of Player] cocks driven hard[else if Player is male]Your own [cock size desc of Player] cock driven hard[else if Player is female]Blatantly aroused[else]Writhing weakly[end if] as his flesh floods your bowels, he appears singularly intent on sating his fiery lust, even as you [if scalevalue of Player < 2]begin to see the outline of dick bulge out from your belly[else]strain to remain clear-minded under such a considerable sensation[end if]. Regardless, you're quickly forced to acclimate to his thick intrusion before he begins to fuck you in earnest.";
-			If Libido of Player > 49:
+			if Libido of Player > 49:
 				if Player is male:
-					say "     Prostate so thoroughly ravaged by his assault, strained gouts of hot cum spurt from your cock[smn] in a staggered [if Ball Size of Player > 4]and quite messy[end if] orgasm, forcing Onyx to taunt you.";
-					say "     'Aw, my little fucktoy is so sensitive, how adorable!' You can only help but blush in a mix of pleasure and embarrassment as you sully yourself with [if Ball Size of Player > 4]numerous[end if] strings of your sexual fluids a mess across your [bodydesc of Player] torso.";
+					say "     Prostate so thoroughly ravaged by his assault, strained gouts of hot cum spurt from your cock[smn] in a staggered [if Ball Size of Player > 4]and quite messy [end if]orgasm, forcing Onyx to taunt you.";
+					say "     'Aw, my little fucktoy is so sensitive, how adorable!' You can only help but blush in a mix of pleasure and embarrassment as you sully yourself with [if Ball Size of Player > 4]numerous [end if]strings of your sexual fluids a mess across your [bodydesc of Player] torso.";
 				else if Player is female:
 					say "     So thoroughly ravaged by his assault, you are overwhelmed with waves of ecstasy as you're wracked with the sensation of your orgasm, your writhes in pleasure becoming more deliberate as your neglected [if Cunt Count of Player > 1]pussies drip[else]pussy drips[end if] with sexual frustration. You try to fondle yourself, but Onyx pulls your arms away.";
 					say "     'Aw, my little fucktoy is so sensitive, how adorable!' He nips at you playfully, no doubt amused by your apparent torment.";
 				say "     Your strained behind eventually finds reprieve as the equine is struck with bliss, first made apparent by the feel of his virile seed flooding the depths of your bowels, [if scalevalue of Player < 3]belly bloating almost immediately to accommodate the sizable load, and even then still ill-suited to contain any more, forcing each subsequent throb of his thick cock to spill more of his fluids across the floor[else]body bloating slightly to maintain such a virile load, further exacerbating the strain on your beleaguered form until you feel his flow decline[end if]. For a while he's relegated to resting his sweat-slicked form against your own, panting for air as you feel his dick slowly deflate inside you. He eventually pulls himself free of you, a [if scalevalue of Player < 3]flood[else]trail[end if] of his sexual fluids following in its wake.";
 				decrease Libido of Player by 25;
-				if Libido of Player < 0, now Libido of Player is 0;
 			else:
 				say "     Your behind is strained under his seemingly endless assault until the equine is finally struck with bliss, first made apparent by the feel of his virile seed flooding the depths of your bowels, [if scalevalue of Player < 3]belly bloating almost immediately to accommodate the sizable load, and even then still ill-suited to contain any more, forcing each subsequent throb of his thick cock to spill more of his fluids across the floor[else]body bloating slightly to maintain such a virile load, further exacerbating the strain on your beleaguered form until you feel his flow decline[end if]. For a while he's relegated to resting his sweat-slicked form against your own, panting for air as you feel his dick slowly deflate inside you. He eventually pulls himself free of you, a [if scalevalue of Player < 3]flood[else]trail[end if] of his sexual fluids following in its wake.";
 				increase Libido of Player by 20;
@@ -851,7 +870,7 @@ to say onyxbanal:
 		else:
 			say "     Clearly interested in having his way with you, you're fairly certain you're large enough to handle his impressive rod, though there's no doubt he seems sure of this as well which means he'll give you no mercy, a sentiment he makes transparent when you feel the blunted tip of his cock thrust firmly into your exposed pucker.";
 			say "     His wanton assault [if Cock Count of Player > 1]quickly driving your own, [cock size desc of Player] cocks erect[else if Player is male]quickly driving your own, [cock size desc of Player] cock erect[else if Player is female]rapidly driving you wet with arousal[else]compelling you to watch as he goes on[end if], his impressive cock certainly enough to inflict pangs of impish pleasure across your [if scalevalue of Player > 4]massive[else]large[end if] frame, and once he's satisfied with the leeway of your anal ring he begins fuck you in earnest.";
-			If Libido of Player > 69:
+			if Libido of Player > 69:
 				say "     You find yourself more influenced by the smaller individual than you'd want to admit, though you're soon betrayed by your own lust when you cry out, ";
 				if Player is male:
 					say "[if Cock Count of Player > 1]cocks exploding with their[else if Player is male]cock exploding with its[end if] [if Ball Size of Player > 5]massive [end if]load over your naked, [bodydesc of Player] torso, much to Onyx's amusement.";
@@ -873,10 +892,10 @@ to say onyxbanal:
 		if scalevalue of Player < 4:
 			say "     Bracing yourself, you prepare for the inevitable assault he has planned for you, and you soon feel his blunted tip press teasingly against your exposed pucker. By now you're sufficiently acclimated to him, and you're able to accommodate his expansive girth with minimal discomfort, though this only compels him to be more reckless in forcing it down your hole.";
 			say "[if Cock Count of Player > 1]Your own, [cock size desc of Player] cocks driven hard[else if Player is male]Your own [cock size desc of Player] cock driven hard[else if Player is female]Blatantly aroused[else]Shifting to best suit him[end if] as his flesh floods your bowels, he appears singularly intent on sating his fiery lust, even as you [if scalevalue of Player < 2]begin to see his dick protrude out from your belly[else]struggle to abide his expansive girth[end if]. It takes a little effort, but he finds immense pleasure in hilting his thick intrusion inside you.";
-			If Libido of Player > 49:
+			if Libido of Player > 49:
 				if Player is male:
-					say "     Prostate so thoroughly ravaged by his assault, strained gouts of hot cum spurt from your cock[smn] in a staggered [if Ball Size of Player > 4]and quite messy[end if] orgasm, forcing Onyx to taunt you.";
-					say "     'Aw, my little fucktoy is so sensitive, how adorable!' You can only help but blush in a mix of pleasure and embarrassment as you sully yourself with [if Ball Size of Player > 4]numerous[end if] strings of your sexual fluids a mess across your [bodydesc of Player] torso.";
+					say "     Prostate so thoroughly ravaged by his assault, strained gouts of hot cum spurt from your cock[smn] in a staggered [if Ball Size of Player > 4]and quite messy [end if]orgasm, forcing Onyx to taunt you.";
+					say "     'Aw, my little fucktoy is so sensitive, how adorable!' You can only help but blush in a mix of pleasure and embarrassment as you sully yourself with [if Ball Size of Player > 4]numerous [end if]strings of your sexual fluids a mess across your [bodydesc of Player] torso.";
 				else:
 					say "     So thoroughly ravaged by his assault, you are overwhelmed with waves of ecstasy as you're wracked with the sensation of your orgasm, your writhes in pleasure becoming more deliberate as your neglected [if Cunt Count of Player > 1]pussies drip[else]pussy drips[end if] with sexual frustration. You try to fondle yourself, but Onyx pulls your arms away.";
 					say "     'Aw, my little fucktoy is so sensitive, how adorable!' He nips at you playfully, no doubt amused by your apparent torment.";
@@ -887,7 +906,7 @@ to say onyxbanal:
 			say "     'You're quite the tight fit, love! Er... You might want to clean yourself off, though.' He helps you to your feet, offering a reasonably clean towel he scrounged up and leaving you to clean up after yourself.[mimpregchance]";
 		else:
 			say "     Bracing yourself, there's no doubt that your accommodating size will be his excuse to use you recklessly, and regardless of your [if scalevalue of Player > 4]massive[else]larger[end if] scale he's certainly adept at making an entrance when you feel the blunted tip of his impressive cock thrust firmly into your exposed pucker. His wanton assault [if Cock Count of Player > 1]quickly driving your own, [cock size desc of Player] cocks erect[else if Player is male]quickly driving your own, [cock size desc of Player] cock erect[else if Player is female]rapidly driving you wet with arousal[else]compelling you to watch as he goes on[end if], you derive a delightful pleasure in the occupancy of his flesh, and once he's satisfied with the leeway of your anal ring he begins fuck you in earnest.";
-			If Libido of Player > 69:
+			if Libido of Player > 69:
 				say "     Driven by your overwhelming lust, you're soon forced to cry out, ";
 				if Player is male:
 					say "[if Cock Count of Player > 1]cocks exploding with their[else if Player is male]cock exploding with its[end if] [if Ball Size of Player > 5]massive [end if]load over your naked, [bodydesc of Player] torso, much to Onyx's amusement.";
@@ -901,13 +920,10 @@ to say onyxbanal:
 				say "     You're eventually offered the equine's virile seed as he too finds bliss, your bowels more than happy to accept as it floods their depths. He doesn't let up until he is fully drained within the confines of your ever-so-accommodating hole, inevitably collapsing against you, sweat slicked form panting as he slowly gathers his breath. In due time, he pulls his softened cock free of you, wiping himself clean against your ample behind.";
 				say "     'Geez, you're like a black hole. I don't even phase you, do I?' He remarks incredulously as you straighten yourself out before he lets you off. Admittedly, you're fair bit more aroused from being used like that.[mimpregchance]";
 				increase Libido of Player by 25;
-	if Libido of Player > 100, now Libido of Player is 100;
-	if Libido of Player < 0, now Libido of Player is 0;
-
 
 to say onyxbvag:
 	if onyxdmc is 0:
-		If scalevalue of Player < 4:
+		if scalevalue of Player < 4:
 			say "     'Hm... I think it's only fair that I treat you proper, this time.' Onyx regards your offer in such a manner, moving to grab a seat as you disrobe for him. Abruptly, he [if scalevalue of Player < 3]picks you up and places you on[else]pulls you onto[end if] his lap, forcing your behind to straddle his already-hardening cock.";
 			say "     Your affections are relatively brief before the equine is satisfied, pulling you up and repositioning his organ before your relegated to lowering yourself onto it";
 			if Cunt Tightness of Player < 4:
@@ -916,7 +932,7 @@ to say onyxbvag:
 				say ". It requires a fair bit of effort for him to embed the blunt head of his dick, brief struggles and a bit of straining on your part is necessary before the folds of your flesh envelop it";
 			else:
 				say ". Soft groans elicited from him, he seems to take a particular joy in the ease at which he can penetrate [if Cunt Count of Player > 1] one of your [cunt size desc of Player] holes[else]your [cunt size desc of Player] hole[end if], folds of your flesh parting to make way for his thick dick";
-			If Cunt Depth of Player < 7:
+			if Cunt Depth of Player < 7:
 				say ". He makes some effort in engulfing the length of rod within you before he's abruptly stopped. No more than a third of the way into you and you're already filled. It would appear you can contain no more of his sizable malehood. Tinged by slight frustration, you're briefly forced to endure him trying to thrust himself deeper into you before he concedes to making the most of the little inside you.";
 			else if Cunt Depth of Player < 11:
 				say ". He makes some effort in engulfing the length of rod within you before he's abruptly stopped. No more than half-sheathed within you, it would appear you can contain no more of his sizable malehood. Tinged by slight frustration, you're briefly forced to contend with him trying to thrust himself deeper into you before he concedes to making the most of what he's got.";
@@ -929,17 +945,17 @@ to say onyxbvag:
 			say "     'I hope you enjoyed your ride as much as I did[if Cunt Tightness of Player < 4] - even though you're such a tight fit[end if][if Cock Count of Player > 2]. Now, if you excuse me, I have to find some way to clean off this mess you made.' He gestures to his cum-stained torso before letting you off to attend to his own needs[else].' He lets you off, readjusting his stark attire before returning to his own business[end if]. You stay flopped on the floor for a while, enjoying the lingering afterglow of your horsey ride.";
 		else:
 			say "     'Hm... I think it's only fair that I treat my big friend proper, this time.' He gestures to follow him to an open area before having you lay on your back, exposing yourself before him. Your offer is rewarded when he walks between your splayed legs, [if scalevalue of Player > 4]vision obscured by your large form you're [end if]met with brief caresses across your [bodytype of Player] thighs before you [if scalevalue of Player > 4]feel[else]watch as[end if] his hardening cock grind against your nether lips";
-			If Cunt Tightness of Player < 4:
+			if Cunt Tightness of Player < 4:
 				say ". As he forces the head of his blunt dick into [if Cunt Count of Player > 1]one of your cunts[else]your cunt[end if], his struggle elicits a chain of strained grunts. Relegated to contending with your paradoxically small hole, it takes quite a bit of effort for him squeeze it in, wracking you with pangs of sharp pleasure[if Player is male] and driving you hard in the process[end if].";
 			else if Cunt Tightness of Player < 7:
 				say ". The head of his blunt dick parting [if Cunt Count of Player > 1]one of your cunts['][else]your cunt's[end if] flesh, you're rapidly forced to contend with his impressive girth. This seems to [if scalevalue of Player > 4]audibly[else]visibly[end if] impress the equine, pleased that he can influence someone [if scalevalue of Player > 4]much [end if]larger than he so readily[if Player is male], quickly driving you hard in the process[end if].";
 			else:
 				say ". Thrusting the head of his blunt dick into [if Cunt Count of Player > 1]one of your cunts[else]your cunt[end if], your flesh envelops his with zero difficulty. His initial probing only brief - no doubt driven to make more reckless use of you - he shows no restraint in ramping up his pace[if Player is male], quickly driving you hard in the process[end if].";
-			say "     Onyx's hands firmly gripped around your [if scalevalue of Player is 4]large, [bodydesc of Player] frame[else]thighs[end if], he rides you with a quickly rising fervor, rapidly driving you into a lustful haze[if Cock Count of Player > 1]. Your cocks ooze precum in visible illustration of the same, enough so that he shares the pleasure by opting to stroke one of them in turn[else if Player is male]. Your cock oozing precum in visible illustration of the same, enough so that he shares the pleasure by opting to stroke it in turn[else]. His thrusts are made increasingly, audibly wet in illustration of the same[end if]. It requires only a moment further before he makes a concluding thrust, forcing his dick [if Cunt Depth of Player < 20]as far as he can[else]all the way[end if] into you, flooding your womb with his virile seed and eliciting your own release, [if Cock Count of Player > 1]cocks exploding with their load across your [bodytype of Player] torso[else if Player is male]cock exploding with its load across your [bodytype of Player] torso[else]hungry portal tightening around his throbbing rod, milking him of every last drop[end if]. In due time, his flow diminishes, and he inevitably concedes to freeing his now-softened organ from you.[impregchance]";
-			say "     '[if Cunt Tightness of Player < 4]Geez, you'd expect someone as big as you wouldn't be so tight..[run paragraph on][else if Player is male]Oh, hey now, you've gone and made a mess of yourself[else]Heh, I can't say I don't enjoy such a large ride[end if].' He gives your behind a parting smack before letting you off, leaving you to [if Player is male]clean up the mix of sexual fluids across your form[else]straighten yourself up in the wake of that wonderful ordeal[end if].";
+			say "     Onyx's hands firmly gripped around your [if scalevalue of Player is 4]large, [bodydesc of Player] frame[else]thighs[end if], he rides you with a quickly rising fervor, rapidly driving you into a lustful haze. [if Cock Count of Player > 1]Your cocks ooze precum in visible illustration of the same, enough so that he shares the pleasure by opting to stroke one of them in turn[else if Player is male]Your cock oozing precum in visible illustration of the same, enough so that he shares the pleasure by opting to stroke it in turn[else]His thrusts are made increasingly, audibly wet in illustration of the same[end if]. It requires only a moment further before he makes a concluding thrust, forcing his dick [if Cunt Depth of Player < 20]as far as he can[else]all the way[end if] into you, flooding your womb with his virile seed and eliciting your own release, [if Cock Count of Player > 1]cocks exploding with their load across your [bodytype of Player] torso[else if Player is male]cock exploding with its load across your [bodytype of Player] torso[else]hungry portal tightening around his throbbing rod, milking him of every last drop[end if]. In due time, his flow diminishes, and he inevitably concedes to freeing his now-softened organ from you.[impregchance]";
+			say "     '[if Cunt Tightness of Player < 4]Geez, you'd expect someone as big as you wouldn't be so tight..[no line break][else if Player is male]Oh, hey now, you've gone and made a mess of yourself[else]Heh, I can't say I don't enjoy such a large ride[end if].' He gives your behind a parting smack before letting you off, leaving you to [if Player is male]clean up the mix of sexual fluids across your form[else]straighten yourself up in the wake of that wonderful ordeal[end if].";
 		now onyxdmc is 1;
 	else if onyxdmc is 1:
-		If scalevalue of Player < 4:
+		if scalevalue of Player < 4:
 			say "     'Oh, I think somebody wants some time on their favorite ride!' Onyx regards your offer in such a manner, moving to grab a seat as you disrobe for him. Once you are ready, he [if scalevalue of Player < 3]picks you up and places you on[else]pulls you onto[end if] his lap, forcing your behind to straddle his already-hardening cock.";
 			say "     Your affections are relatively brief before the equine is satisfied, pulling you up and repositioning his organ before your relegated to lowering yourself onto it";
 			if Cunt Tightness of Player < 4:
@@ -961,36 +977,33 @@ to say onyxbvag:
 			say "     '[if Cunt Tightness of Player < 4]Always the tight fit, as you are[else]I keep dishing it out and you always keep coming back. Impressive[end if][if Cock Count of Player > 2]! Now, if you excuse me, I have to find some way to clean off this mess you made.' He gestures to his cum-stained torso before letting you off to attend to his own needs[else].' He lets you off, readjusting his stark attire before returning to his own business[end if]. You stay flopped on the floor for a while, enjoying the lingering afterglow of your horsey ride.[impregchance]";
 		else:
 			say "     'Heh, not so big that you're too good for the li'l stallion, I see.' He gestures to follow him to an open area before having you lay on your back, exposing yourself before him. Your offer is rewarded when he walks between your splayed legs, [if scalevalue of Player > 4]vision obscured by your large form you're [end if]met with brief caresses across your [bodytype of Player] thighs before you [if scalevalue of Player > 4]feel[else]watch as[end if] his hardening cock grind against your nether lips.";
-			If Cunt Tightness of Player < 4:
+			if Cunt Tightness of Player < 4:
 				say "     Only briefly forced to contend with [if Cunt Count of Player > 1]one of your paradoxically ill-fitting cunts[else]your paradoxically ill-fitting cunt[end if], it's only a matter of time before the folds of your flesh envelop the head of his blunt dick[if Player is male], driving you hard in the process[end if]. You cry out in a mix of surprise, discomfort and pleasure.";
 			else if Cunt Tightness of Player < 7:
-				say "     The head of his blunt dick parting [if Cunt Count of Player > 1]one of your cunts['][else]your cunt's[end if] flesh, you're rapidly forced to contend with his impressive girth. This seems to [if scalevalue of Player < 4]audibly[else]visibly[end if] impress the equine, pleased that he can influence someone [if scalevalue of Player < 4]much[end if] larger than he so readily[if Player is male], quickly driving you hard in the process[end if].";
+				say "     The head of his blunt dick parting [if Cunt Count of Player > 1]one of your cunts['][else]your cunt's[end if] flesh, you're rapidly forced to contend with his impressive girth. This seems to [if scalevalue of Player < 4]audibly[else]visibly[end if] impress the equine, pleased that he can influence someone [if scalevalue of Player < 4]much [end if]larger than he so readily[if Player is male], quickly driving you hard in the process[end if].";
 			else:
 				say "     Thrusting the head of his blunt dick into [if Cunt Count of Player > 1]one of your cunts[else]your cunt[end if], your flesh envelops his with zero difficulty. His initial probing only brief - no doubt driven to make more reckless use of you - he showz no restraint in ramping up his pace[if Player is male], quickly driving you hard in the process[end if].";
-			say "     Onyx's hands firmly gripped around your [if scalevalue of Player is 4]large, [bodydesc of Player] frame[else]thighs[end if], he rides you with a quickly rising fervor, rapidly driving you into a lustful haze[if Cock Count of Player > 1]. Your cocks ooze precum in visible illustration of the same, enough so that he shares the pleasure by opting to stroke one of them in turn[else if Player is male]. Your cock oozing precum in visible illustration of the same, enough so that he shares the pleasure by opting to stoke it in turn[else]. His thrusts are made increasingly, audibly wet in illustration of the same[end if]. It requires only a moment further before he makes a concluding thrust, forcing his dick [if Cunt Depth of Player < 20]as far as he can[else]all the way[end if] into you, flooding your womb with his virile seed and eliciting your own release, [if Cock Count of Player > 1]cocks exploding with their load across your [bodytype of Player] torso[else if Player is male]cock exploding with its load across your [bodytype of Player] torso[else]hungry portal tightening around his throbbing rod, milking him of every last drop[end if]. In due time, his flow diminishes, and he inevitably concedes to freeing his now-softened organ from you.[impregchance]";
-			say "     '[if Cunt Tightness of Player < 4]I'm not even going to ask how someone as big as you can remain so tight like that![run paragraph on][else if Player is male]Oh, hey now, you've gone and made a mess of yourself![run paragraph on][else]Heh, the bigger the better, wouldn't you agree?[run paragraph on][end if]' He gives your behind a parting smack before letting you off, leaving you to [if Player is male]clean up the mix of sexual fluids across your form[else]clean yourself off in the wake of that wonderful ordeal[end if].";
-	decrease Libido of Player by 25;
-	if Libido of Player < 0, now Libido of Player is 0;
-
+			say "     Onyx's hands firmly gripped around your [if scalevalue of Player is 4]large, [bodydesc of Player] frame[else]thighs[end if], he rides you with a quickly rising fervor, rapidly driving you into a lustful haze. [if Cock Count of Player > 1]Your cocks ooze precum in visible illustration of the same, enough so that he shares the pleasure by opting to stroke one of them in turn[else if Player is male]Your cock oozing precum in visible illustration of the same, enough so that he shares the pleasure by opting to stoke it in turn[else]His thrusts are made increasingly, audibly wet in illustration of the same[end if]. It requires only a moment further before he makes a concluding thrust, forcing his dick [if Cunt Depth of Player < 20]as far as he can[else]all the way[end if] into you, flooding your womb with his virile seed and eliciting your own release, [if Cock Count of Player > 1]cocks exploding with their load across your [bodytype of Player] torso[else if Player is male]cock exploding with its load across your [bodytype of Player] torso[else]hungry portal tightening around his throbbing rod, milking him of every last drop[end if]. In due time, his flow diminishes, and he inevitably concedes to freeing his now-softened organ from you.[impregchance]";
+			say "     '[if Cunt Tightness of Player < 4]I'm not even going to ask how someone as big as you can remain so tight like that![no line break][else if Player is male]Oh, hey now, you've gone and made a mess of yourself![no line break][else]Heh, the bigger the better, wouldn't you agree?[no line break][end if]' He gives your behind a parting smack before letting you off, leaving you to [if Player is male]clean up the mix of sexual fluids across your form[else]clean yourself off in the wake of that wonderful ordeal[end if].";
+	lower Player Libido by 25;
 
 to say onyxbrecanal:		[Onyx reciprocates w/anal]
 	if the remainder after dividing onyxdmra by 3 is 0:
 		if onyxdmra is not 0:
 			say "     Onyx poses sexily for you again, turning around to present his rear to you as he flicks his tail up. 'I figured I'd offer you another shot at taking a turn on top. Fair's fair and all.' The black stallion makes for a very tantalizing sight with his strong muscles and sexy ass end, and you can't help but run your eyes over him lustfully. 'Come now, I know you want in on this again,' he says, spreading out on the table with his cheeks spread and his ebon pucker again ready and waiting for you. 'Your stallion master orders you to pony up and mount his sexy ass.'";
 		say "     Finding yourself rock hard at the tempting sight of the stallion stud's asshole, you move in behind him and grab that meaty, toned ass of his. Hotdogging your cock between those dark cheeks, you take a few slow thrusts to savor your mutual anticipation of what is to come. The horse's tail flicks as he shifts his position a little, putting himself on wanton display as you kiss your cockhead against his lubed anal ring. You ease yourself into him, drawing a [if onyxdmra is 0]whimpering [end if]moan from the big stud. 'Oh man, that's nice[if Cock Length of Player > 12] and big[end if],' he nickers, grinding back into you thrust, to which you give him a teasing swat on the rear.";
-		say "     You settle into a steady rhythm, pounding away at the big stud's meaty ass[if onyxdmra is 0]. His equine pucker grips and squeezes at your cock deliciously, obviously retaining some of the coaching he'd picked up from all the lewd stallions preparing him to be a mare slut. And while he's too confident and accepting of his new form to become a subby mare by this point,[else]. His equine pucker squeezes and grips at your cock deliciously as he takes your [cock size desc of Player] manhood over and over again. The confident horseman smiles back at you, showing[end if] he's still quite able to enjoy a turn on bottom with his friend who saved him. And enjoy it he clearly is, his equine shaft engorged and leaking pre. As you give his plump nuts a fondle and thrust particularly firmly into him, his big stud cock twitches, slapping against the table, sending a spurt of precum halfway across it. Reaching forward, you take a hold of it and start stroking it for him, seeking to service your stallion stud even as you screw him.";
+		say "     You settle into a steady rhythm, pounding away at the big stud's meaty ass. His equine pucker [if onyxdmra is 0]grips and squeezes at your cock deliciously, obviously retaining some of the coaching he'd picked up from all the lewd stallions preparing him to be a mare slut. And while he's too confident and accepting of his new form to become a subby mare by this point,[else]squeezes and grips at your cock deliciously as he takes your [cock size desc of Player] manhood over and over again. The confident horseman smiles back at you, showing[end if] he's still quite able to enjoy a turn on bottom with his friend who saved him. And enjoy it he clearly is, his equine shaft engorged and leaking pre. As you give his plump nuts a fondle and thrust particularly firmly into him, his big stud cock twitches, slapping against the table, sending a spurt of precum halfway across it. Reaching forward, you take a hold of it and start stroking it for him, seeking to service your stallion stud even as you screw him.";
 		say "     The two of you go at it for quite some time. Tempted though you are to pound him hard and fast, you enjoy drawing it out all the more, wanting to enjoy this opportunity fucking the stud for as long as you can manage. And he's quite pleased to take it, giving you a grin that tells you you'll be getting it in kind soon enough from him - an exquisite thought that almost has you cum then and there. Eventually, the aching need for release does get to be too much for you both and, at his urging, you pick up the pace and fuck him hard and fast. Panting and nickering with excitement, his spurts of precum become gushes of semen as he's pushed over the edge. His anal muscles clamp down around you, milking you hard with a need that sends you over the edge just a few thrusts later. You paint his bowels with your [Cum Load Size of Player] load as he drains his ample load across the wooden tabletop.";
 		say "     Easing your spent shaft from his sticky, leaking rear, you flop down onto the table alongside him. He puts his strong arms around you and hugs you tight, his hands gripping you tightly to his sweaty body. The two of you lay there for some time, needing to recover after that good, long fuck.";
 	else if the remainder after dividing onyxdmra by 3 is 1:
 		say "     Onyx poses sexily for you again, turning around to present his rear to you as he flicks his tail up. 'I figured I'd offer you another shot at taking a turn on top. Fair's fair and all.' The black stallion makes for a very tantalizing sight with his strong muscles and sexy ass end, and you can't help but run your eyes over him lustfully. 'Come now, I know you want in on this again,' he says, spreading out on the table with his cheeks spread and his ebon pucker again ready and waiting for you. 'Your stallion master orders you to pony up and mount his sexy ass.'";
 		say "     In the mood to be a little more dominant this time, you mount him with little preamble. He stifles a groan at this, but his meaty cock twitches and slaps the table, a sure sign of how good it felt. Getting a good grip on his toned ass, you pound away at him, taking [one of]spaced out, hard thrusts[or]rapid, firm thrusts[or]grinding, full length thrusts[in random order] into the big stud. He pants and nickers, the lingering remnants of his earlier training allowing him to best respond to this with the motion of his hips and inner muscles. And while a glance back of his promises you'll get the same or even more from him soon, you're the one on top right now and you intend to make the most of it. Giving his ass a hard swat draws a delightful moan from the usually dominant stallion, making your grin grow wider and your cock even harder.";
-		say "     Once you've gotten him good and riled up and you can feel your own orgasm approaching, you shift positions slightly. Now pounding right against the stallion's prostate, his nickering grows louder and his precum drools into a big pool around his ebon shaft. Knowing he can't take much more, you fondle his ballsack firmly";
 		if onyxdmra is 1:
-			say ".";
+			say "     Once you've gotten him good and riled up and you can feel your own orgasm approaching, you shift positions slightly. Now pounding right against the stallion's prostate, his nickering grows louder and his precum drools into a big pool around his ebon shaft. Knowing he can't take much more, you fondle his ballsack firmly.";
 			say "     'Who taught a big stud like you to take it up the ass like a slut,' you pant as you pound away at him.";
 			say "     'Any proper stallion should take their turn on bottom and be confident enough to stay a dominant stud. You taught me that,' he replies. 'And I look forward to *ungh* showing you what a dominant stud I can beeeeee,' he cries out, cumming powerfully as he's finally driven to orgasm";
 		else:
-			say " and pant that he's quite the ass slut for a stallion stud. This last bit of teasing pushes him over the edge, causing him to cum powerfully";
+			say "     Once you've gotten him good and riled up and you can feel your own orgasm approaching, you shift positions slightly. Now pounding right against the stallion's prostate, his nickering grows louder and his precum drools into a big pool around his ebon shaft. Knowing he can't take much more, you fondle his ballsack firmly and pant that he's quite the ass slut for a stallion stud. This last bit of teasing pushes him over the edge, causing him to cum powerfully";
 		say ". With his anus clenching down around you and the musky scent of stallion cum heavy in the air from his many sticky splatters, you're pushed to climax as well. You unload your balls into the equine stud, blast after blast of your rich seed soaking his insides.";
 		say "     When you're finished, you keep your cock buried in him, grinding your hips to his. You reach around and stroke his meaty, half-hard rod, milking a few last spurts from it. Wiping them up with your fingertips, you give him a taste to suck off of them. You gather up another and this time savor it for yourself. You continue like that, nuzzling his strong shoulder and taking turns sampling the stud's virile seed, until there's nothing but drying streaks of white left staining the table.";
 	else:
@@ -1053,7 +1066,7 @@ to say onyxbsubvag1:
 	say "     Putting Onyx onto his back, you straddle the submissive stud and grind down onto his equine pole. Rising quickly for his dominant friend, he moans happily you take hold of it and get lined up. With a gentle squeeze of his balls to remind him of who's in charge, you can't help but moan a little as you sink [if Cunt Count of Player > 1]one of your cunts[else]your cunt[end if] down onto his satisfyingly large cock. It pulses and throbs inside you with virility, further exciting you. You run your hands over his strong chest and order him to start thrusting. With permission given, the obedient stallion grabs your hips and presses his hips up rhythmically. Each thrust draws a pleasured shiver from you[if Player is male], making your cock[smn] twitch and throb[end if] as your cunt gets increasingly wet with arousal.";
 	say "     You work your hips and squeeze your vaginal walls down around his meat, thoroughly enjoying taking a ride on it. Having his equine shaft buried inside you, knowing it is yours to do with as you wish, is a very satisfying feeling. He's become such a fine, strong stallion, but also an obedient and submissive lover. Having such a big, virile male as your sub to play with as you will is invigorating, adding to the thrill of getting vigorously pounded by him.";
 	WaitLineBreak;
-	say "     You take a long, enjoyable ride on the stallion's rod and only permit him to cum after you've given him permission when you achieve a screaming orgasm. By that point, he's built up quite the load and blasts shot after shot of gooey horse semen into your cunt and on into your womb. The hot rush of it flooding into you causes your orgasmic delight to resurge, making you cry out again[if Player is male]. You splatter the slutty stallion with your [Cum Load Size of Player] load[else]. You soak the slutty stallion's crotch with your orgasmic juices[end if], ensuring he'll carry your musky scent. Your vagina squeezes and milks at the horse's rod, drawing out all your playmate can give. When done, you [one of]get him to eat you out, swallowing down his own load as he cleans up the excess semen flowing out of your thoroughly fucked cunny[or]rise off of him slowly and stretch, letting his excess semen leak back out onto his spent shaft and drained balls[or]slide up to his chest and grind your hips across his manly torso, letting his excess semen leak out onto his pecs and abs as a sticky, musky mess[cycling].[fimpregchance]";
+	say "     You take a long, enjoyable ride on the stallion's rod and only permit him to cum after you've given him permission when you achieve a screaming orgasm. By that point, he's built up quite the load and blasts shot after shot of gooey horse semen into your cunt and on into your womb. The hot rush of it flooding into you causes your orgasmic delight to resurge, making you cry out again. You [if Player is male]splatter the slutty stallion with your [Cum Load Size of Player] load[else]soak the slutty stallion's crotch with your orgasmic juices[end if], ensuring he'll carry your musky scent. Your vagina squeezes and milks at the horse's rod, drawing out all your playmate can give. When done, you [one of]get him to eat you out, swallowing down his own load as he cleans up the excess semen flowing out of your thoroughly fucked cunny[or]rise off of him slowly and stretch, letting his excess semen leak back out onto his spent shaft and drained balls[or]slide up to his chest and grind your hips across his manly torso, letting his excess semen leak out onto his pecs and abs as a sticky, musky mess[cycling].[fimpregchance]";
 	now onyxsmrv is true;
 
 to say onyxbsubanalride1:
@@ -1062,16 +1075,18 @@ to say onyxbsubanalride1:
 	say "     Putting Onyx onto his back, you straddle the submissive stud and grind down onto his equine pole. Rising quickly for his dominant friend, he moans happily you take hold of it and get lined up. With a gentle squeeze of his balls to remind him of who's in charge, you can't help but moan a little as you sink your ass down onto his satisfyingly large cock. It pulses and throbs inside you with virility, further exciting you. You run your hands over his strong chest and order him to start thrusting. With permission given, the obedient stallion grabs your hips and presses his hips up rhythmically. Each thrust draws a pleasured shiver from you[if Player is male], making your cock[smn] twitch and throb[else if Player is female], making your cunt wet with arousal[end if].";
 	say "     You work your hips and squeeze your anal walls down around his meat, thoroughly enjoying taking a ride on it. Having his equine shaft buried inside your ass, knowing it is yours to do with as you wish, is a very satisfying feeling. He's become such a fine, strong stallion, but also an obedient and submissive lover. Having such a big, virile male as your sub to play with as you will is invigorating, adding to the thrill of getting vigorously pounded by him.";
 	WaitLineBreak;
-	say "     You take a long, enjoyable ride on the stallion's rod and only permit him to cum after you've reached your own orgasm. By that point, he's built up quite the load and blasts shot after shot of gooey horse semen into your rectum and on into your bowels. The hot rush of it flooding into you causes your orgasmic delight to resurge, making you cum harder[if Player is male]. You splatter the slutty stallion with your [Cum Load Size of Player] load[else]. You soak the slutty stallion's crotch with your orgasmic juices[end if], ensuring he'll carry your musky scent. Your anus squeezes and milks at the horse's rod, drawing out all your playmate can give. When done, you [if anallevel is 3 and a random chance of 1 in 3 succeeds]get him to lick your asshole, cleaning away his own load as the excess semen leaks out of your thoroughly fucked hole[else if a random chance of 1 in 2 succeeds]grind atop his spent shaft and balls as you stretch, letting his excess semen leak back out onto them[else if Player is male]bring your [Cock of Player] cock to his muzzle, giving him to lick it clean[else]bring your [cunt size desc of Player] cunt to his muzzle, getting him to lick it clean[end if] before leaving him in a sticky haze.[mimpregchance]";
+	say "     You take a long, enjoyable ride on the stallion's rod and only permit him to cum after you've reached your own orgasm. By that point, he's built up quite the load and blasts shot after shot of gooey horse semen into your rectum and on into your bowels. The hot rush of it flooding into you causes your orgasmic delight to resurge, making you cum harder. You [if Player is male]splatter the slutty stallion with your [Cum Load Size of Player] load[else]soak the slutty stallion's crotch with your orgasmic juices[end if], ensuring he'll carry your musky scent. Your anus squeezes and milks at the horse's rod, drawing out all your playmate can give. When done, you [if anallevel is 3 and a random chance of 1 in 3 succeeds]get him to lick your asshole, cleaning away his own load as the excess semen leaks out of your thoroughly fucked hole[else if a random chance of 1 in 2 succeeds]grind atop his spent shaft and balls as you stretch, letting his excess semen leak back out onto them[else if Player is male]bring your [Cock of Player] cock to his muzzle, giving him to lick it clean[else]bring your [cunt size desc of Player] cunt to his muzzle, getting him to lick it clean[end if] before leaving him in a sticky haze.[mimpregchance]";
 	now onyxsmra is true;
 
 to say onyxbsubmoral1:
+	increase onyxfinale by 1;
 	say "     Presenting Onyx with your cock, all it takes is a motion for him to get on his knees before he's down and licking it over. You rub his head and [if CockName of Player is not listed in infections of InternalCockList]instruct him to lick your balls as well[else if Player is female]instruct him to get your pussy as well[else]remind him to get every inch of it[end if]. He does so obediently, his tongue working hard to please you. Satisfied with his oral attention, you take hold of your rod and order him to get sucking.";
 	say "     The black stallion's muzzle engulfs your [cock size desc of Player] shaft eagerly. The hot, wet tunnel of his [if Cock Length of Player > 7]throat[else]mouth[end if] slides across your sensitive flesh as he fellates you eagerly. He works his lips and tongue along your shaft with every bob of his head, [if Cock Length of Player > 30]taking as much of it as he can[else]taking it all in[end if]. You can't help but moan, adding a teasing compliment about how he's turning into a fine cocksucker. This brings a smile to the corners of his lips and gets him to suck down all the harder.";
 	WaitLineBreak;
 	say "     With the manly stud working over your cock like a slut, you build up to a strong orgasm that has you blast your sticky load into his long muzzle[if Ball Size of Player >= 5]. Your massive load shoots down into his belly, bloating it with your semen to the point of overflowing a little[else if Ball Size of Player >= 4]. Your massive load shoots down into his belly, bloating it with your semen[end if]. He gulps it all down eagerly, sucking you to get every last drop he can manage. Once he's done, he moves his head back slowly, letting his broad tongue and ebon lips slurp you clean as you slide free. Having enjoyed the blowjob, you [if remainder after dividing onyxfinale by 3 is 0]cap it off with a sexy show of the subby stallion jerking himself off all across his muscular body[else if remainder after dividing onyxfinale by 3 is 1]treat him to a handjob that has the subby stallion spray long streaks of his seed across the floor, which he then licks up[else]reward the obedient stallion by sucking him off in return, enjoying the gooey load from your subby friend[end if].";
 
 to say onyxbsubforal1:
+	increase onyxfinale by 1;
 	say "     Widening your stance, you present your dripping snatch[esfn] to Onyx. All it then takes is a motion for him to get on his knees and bury his face between your legs. He runs his broad tongue over [itthemf], licking across and into your puss[yfn]. Rubbing his ears and mane, you [if Player is male]let your [Cock of Player] cock[smn] lay across his equine muzzle[else if Cunt Count of Player > 1]grind your multiple cunts across his equine muzzle[else]pull him more firmly to your crotch[end if]. He accepts this manhandling happily, his submissive training yielding to your dominant behavior.";
 	say "     The black stallion works his thick tongue deeper into your [cunt size desc of Player] cunt, lapping up your juices as your excitement builds. Your hot tunnel squeezes down around that wriggling appendage, especially when he finds a particularly good spot to stimulate. You can't help but moan, adding a teasing compliment about how eager to please he is. This brings a smile to his face as he licks all the faster[if Cunt Count of Player > 1]. He swaps between your pussies when instructed, making sure you're thoroughly slathered by that hardworking tongue.";
 	WaitLineBreak;
@@ -1120,7 +1135,6 @@ to say onyxbsubfacefuck1:
 		say "not so considerable size of your manhood, his long equine muzzle lets him take you ballsdeep without any issue, but he doesn't just wait still as you fuck his mouth. Instead, his tongue works all over your shaft as you reach in as deep as you can in the insides of his mouth. His efforts don't end here, as he reaches for your balls with his hands at the same time he's tilting his head to provide you with more friction, giving them a soft and loving squeeze, and you can't help but want to thrust harder against his lips.";
 		WaitLineBreak;
 		say "     Feeling your own climax bulding up in your loins, you slow down, giving yourself enough time to delay it. The sensations provided by the equine stud's warm mouth all over your glans and shaft, rubbing against its length with increased intensity, have turned you on so much that you feel your cock throbbing each time you give it a slow stroke before shoving it back in. Your moves are much slower and deeper now, as you want to enjoy this as much as you can, keeping the horsey boy busy for several minutes more until you feel like you can't hold back any longer. With you so close to blast your entire load on Onyx, you stop completely, with your manhood buried inside his mouth, cum practically on the verge of surging through, with a choice to make. [bold type]Do you want to make him swallow it, or just cover his face with your jizz?[roman type][line break]";
-		LineBreak;
 		onyxbsubfacefuckclimax;
 
 to onyxbsubfacefuck2: [Player's dick is bigger than 1 ft]
@@ -1161,168 +1175,125 @@ to say onyxbsubedging1:
 
 Part 2 - Female Onyx @ Palomino
 
-to femonyxsex:
-	say "     Gesturing to Onyx, the equine moves from another patron she was talking to before making her way over to you.";
-	say "     'Looking for a good time, sweetie? I know a place less noisy...' Guiding you, you're led to a section more out of the way, the beating thrum of the music muffled.";
-	if Player is male:
-		say "     Eager to oblige your need, Onyx is already lowering herself[if scalevalue of Player > 3] under you[end if] to more easily access your assets, eager digits parting any obstruction in her way to expose your [cock size desc of Player] dick[smn] before her curious gaze.";
-		say "     '[one of]Oh[or]Hm[or]Ah[at random], [if Cock Length of Player > 12][one of]somebody's been eating their vegetables[or]don't think you'll be able to keep this much from me, honey[or]I wonder if it'll even fit[at random][else][one of]somebody's eager to see me[or]looks like you're all ready for a bit of fun[or]lets get this party started[at random][end if]!' Grinning, her tongue caresses along [if Cock Count of Player > 2]the length of two of them[else if Cock Count of Player is 2]the length of both of them[else]its length[end if], eagerly oozing by her touch as [if Cock Count of Player > 1]they're[else]it's[end if] driven to full arousal.";
-		now calcnumber is -1;
-		let Trixieexit be 0;
-		while Trixieexit is 0:
-			say "[bold type]Choices:[roman type][line break]";
-			say "(1) [link]Continue Oral[as]1[end link][line break]";
-			say "(2) [link]Fuck her[as]2[end link] [if Cock Length of Player > 15][italic type]- Too large![roman type][end if][line break]";
-			say "(3) [link]Fuck her anally[as]3[end link][if Cock Length of Player > 15][italic type]- Too large![roman type][end if][line break]";
-			if XP of Onyx >= 32:
-				say "(4) [link]Lap dance[as]4[end link][if Cock Length of Player > 15][italic type]- Too large![roman type][end if][line break]";
-			while 1 is 1:
-				if XP of Onyx < 32:
-					say "Choice? (1-3)>[run paragraph on]";
-					get a number;
-					if calcnumber >= 1 and calcnumber <= 3:
-						break;
-					else:
-						say "Invalid entry.";
-				else:
-					say "Choice? (1-4)>[run paragraph on]";
-					get a number;
-					if calcnumber >= 1 and calcnumber <= 4:
-						break;
-					else:
-						say "Invalid entry.";
-			if calcnumber is 1:
-				femonyxsex1;
-				now Trixieexit is 1;
-			else if calcnumber is 2:
-				if Cock Length of Player > 15:
-					say "[bracket]Invalid interaction: You're too large[close bracket][line break]";
-				else:
-					femonyxsex2;
-					now Trixieexit is 1;
-			else if calcnumber is 3:
-				if Cock Length of Player > 15:
-					say "[bracket]Invalid interaction: You're too large[close bracket][line break]";
-				else:
-					femonyxsex3;
-					now Trixieexit is 1;
-			else:
-				femonyxsex4;
-				now Trixieexit is 1;
-	else:
-		femonyxsex4;
-
 to femonyxsex1:
 	say "     The equine continues to tease your for a while longer before she starts attending to your need directly, forcing the[if CockName of Player is listed in infections of EquineList] blunt[end if] head[if Cock Count of Player > 1] of one of them[end if] past her lips[if Cock Length of Player > 12], no doubt wrestling to force your substantive girth past her supple lips[end if]. With a [if Cock Length of Player > 12]fair[else]little[end if] bit of work she manages to engulf the length of your throbbing organ down her slick, clenching portal, briefly acclimating before she begins to bob against it.";
 	say "     Soft moans vibrating against her flesh, the lady can't help but idly fondle herself as she attends to your need, slick, writhing tongue worming around your precum-sputtering cock. Your breath becomes increasingly shallow as you're progressively wracked by the throes of your imminent bliss, as does her voracious need to see it becomes more dire. Shall you attempt to pull yourself free at the last second?";
 	if Player consents:
-		say "     Unable to hold back any longer, you wrench your tool free of the equine's[one of] surprised[or][stopping] hole before you're set off. Your [Cum Load Size of Player] load exploding from your dick[smn], [if Cock Count of Player > 1]they stain[else]it stains[end if] Onyx's face and torso[if Ball Size of Player > 4] until she's utterly drenched in the fluid[end if]. Obliging this embarrassing relegation, she idly licks clean along the length of your softening organ once your bliss starts dying down.";
-		say "     '[one of]Tsk[or]Hmpf[or]Oh[at random], [one of]now I'm going to have to go and clean myself up[or]you just had to make a mess[or]you sneaky little imp[at random]";
+		LineBreak;
+		say "     Unable to hold back any longer, you wrench your tool free of the equine's[first time] surprised[only] hole before you're set off. Your [Cum Load Size of Player] load exploding from your dick[smn], [if Cock Count of Player > 1]they stain[else]it stains[end if] Onyx's face and torso[if Ball Size of Player > 4] until she's utterly drenched in the fluid[end if]. Obliging this embarrassing relegation, she idly licks clean along the length of your softening organ once your bliss starts dying down.";
+		say "     '[one of]Tsk[or]Hmpf[or]Oh[at random], [one of]now I'm going to have to go and clean myself up[or]you just had to make a mess[or]you sneaky little imp[at random]!' Grinning, she takes a moment to help you clean yourself off before she moves to take care of herself and the room. Stepping out, back into the main area, it's only a few minutes before she leaves as well, cleaned up and ready to attend the customers";
 	else:
-		say "     Wet sounds of her persistent, deliberate attendance lingering for only a little while longer, it's more than enough to set you off, the equine plummeting the tool down her hole one last time[if Player is knotted], up to the knot[end if]. Your [Cum Load Size of Player] exploding from your dick[smn], [if Cock Count of Player > 2]its brothers staining her torso as [else if Cock Count of Player is 2]its brother staining her torso as [else if Ball Size of Player > 4]the substantial volume quickly sputtering from her lips as [end if]she swallows your release with slow, deliberate gulps, until your bliss finally dies down and Onyx pulls herself free of your softening organ.";
-		say "     '[one of]Ah[or]Mmm[or]Hm[at random], [one of]I hope you had as much fun as I did, sweetie[or]hopefully that'll keep your urges at bay[or]I can see you were very eager to see me[at random]";
-	say "!' Grinning, she takes a moment to help you clean yourself off before she moves to take care of herself and the room. Stepping out, back into the main area, it's only a few minutes before she leaves as well, cleaned up and ready to attend the customers";
+		LineBreak;
+		say "     Wet sounds of her persistent, deliberate attendance lingering for only a little while longer, it's more than enough to set you off, the equine plummeting the tool down her hole one last time[if Player is knotted], up to the knot[end if]. Your [Cum Load Size of Player] load exploding from your dick[smn], [if Cock Count of Player > 2]its brothers staining her torso as [else if Cock Count of Player is 2]its brother staining her torso as [else if Ball Size of Player > 4]the substantial volume quickly sputtering from her lips as [end if]she swallows your release with slow, deliberate gulps, until your bliss finally dies down and Onyx pulls herself free of your softening organ.";
+		say "     '[one of]Ah[or]Mmm[or]Hm[at random], [one of]I hope you had as much fun as I did, sweetie[or]hopefully that'll keep your urges at bay[or]I can see you were very eager to see me[at random]!' Grinning, she takes a moment to help you clean yourself off before she moves to take care of herself and the room. Stepping out, back into the main area, it's only a few minutes before she leaves as well, cleaned up and ready to attend the customers";
 
 to femonyxsex2:
 	if fonyxvagcount is 0 or a random chance of 2 in 3 succeeds:
-		say "     Ready for her, the equine wheels around to allow you easy access to her exposed, dripping nethers";
 		if Cock Count of Player > 1:
-			say ". You imagine you can use [if Cock Count of Player > 2]two[else]both[end if] of your dicks on her[if Cock Length of Player > 10], though you're large enough that you'll have to plug both holes[end if]. Shall you?";
+			say "     Ready for her, the equine wheels around to allow you easy access to her exposed, dripping nethers. You imagine you can use [if Cock Count of Player > 2]two[else]both[end if] of your dicks on her[if Cock Length of Player > 10], though you're large enough that you'll have to plug both holes[end if]. Shall you?";
 			if Player consents:
+				LineBreak;
 				if Cock Length of Player < 11:
 					say "     Shall you fit both in her cunt? Otherwise, you'll plug both holes.";
 					if Player consents:
 						now tempnum is 1;
 					else:
 						now tempnum is 2;
+					LineBreak;
 				else:
 					now tempnum is 2;
 			else:
+				LineBreak;
 				now tempnum is 0;
 		else:
-			say ".";
+			say "     Ready for her, the equine wheels around to allow you easy access to her exposed, dripping nethers.";
 			now tempnum is 0;
 		say "     '[one of]Don't hold back[or]Knock yourself out[or]Go crazy[at random], [one of]love[or]stud[or]honey[at random].' Eager to get started, you plunge the[if Player is blunt] blunt[end if] head of[if tempnum > 0 and Cock Count of Player > 2] two of[else if tempnum > 0] both of[end if] your dick[if tempnum > 0]s[end if] down her inviting hole[if tempnum is 2]s[end if], causing Onyx to moan out in eager bliss, reveling in being railed by you as you quickly build a tempo of pounding her ass, pinning the equine firmly against a wall.";
 		say "     Cunt [if Cock Length of Player > 12 and tempnum is 2]and anal ring strained to contain your substantial flesh[else if Cock Length of Player > 12 or tempnum is 1]strained to contain your substantial flesh[else if tempnum is 2]and anal ring easily abiding your rigid flesh[else]easily abiding your rigid flesh[end if], your motion slicked by a mix of her juices and your precum, the heat of your shared fervor coats your bodies in a veneer of sweat. Onyx is particularly loud as she's being rammed[if scalevalue of Player > 3] by her much larger partner[end if], too lost in the throes of your own need to concern yourself about whether the commotion is drawing attention to the two of you. You probably can't take much more of this, shall you pull out at the last second?";
 		if Player consents:
+			LineBreak;
 			say "     Right on the brink of bliss you pull your [cock size desc of Player] tool[if tempnum > 0]s[end if] free of Onyx's oozing hole, grinding yourself against her for a second longer before finally crying out, [Cum Load Size of Player] load painting her back and ass[if Ball Size of Player > 4] until it's utterly drenched[end if]. Idly fondling herself, the equine can only whinny loudly in ecstasy as she's made a mess of, staining the floor further with her own juices. It takes a moment afterwards for things to wind down and for the two of you to catch your breath.";
 			say "     'Whew! [one of]It's going to take me a while to clean all this up[or]What a mess[or]Somebody was feeling a little impish[or]Never a dull moment for you[at random]!' Grinning, she takes a moment to help you clean yourself off before she moves to take care of herself and the room. Stepping out, back into the main area, it's only a few minutes before she leaves as well, cleaned up and ready to attend the customers.";
 		else:
+			LineBreak;
 			if Libido of Player > 40:
 				say "     You can't hold back for much longer, finally crying out in bliss and [if Player is knotted]tying[else]hilting[end if] yourself as you flood the equine's womb with your [Cum Load Size of Player] load[if Ball Size of Player > 4 and tempnum is 2] until it starts to sputter from her stuffed holes[else if Ball Size of Player > 4] until it starts to sputter from her stuffed hole[end if]. More than enough to set her off she whinnies out loudly, [if tempnum is 2]ass[else]pussy[end if] squeezing you sputtering dick[if tempnum > 0]s[end if] tightly";
-				if (tempnum > 0 and Cock Count of Player > 3) or Cock Count of Player > 2:
-					say ", your unattended cocks staining her thighs.";
-				else if (tempnum > 0 and Cock Count of Player > 2) or Cock Count of Player > 1:
-					say ", your unattended cock staining her thighs.";
+				if (tempnum > 0 and Cock Count of Player > 3) or (tempnum is 0 and Cock Count of Player > 2):
+					say ", your unattended cocks staining her thighs";
+				else if (tempnum > 0 and Cock Count of Player > 2) or (tempnum is 0 and Cock Count of Player > 1):
+					say ", your unattended cock staining her thighs";
 			else:
 				say "     It's clear the equine can't hold back any longer, whinnying out loudly as her [if tempnum is 2]ass[else]pussy[end if] tightly squeezes your throbbing dick[if tempnum > 0]s[end if]. More than enough to set your off, you finally cry out in bliss and [if Player is knotted]tying[else]hilting[end if] yourself as you flood the equine's womb with your [Cum Load Size of Player] load[if Ball Size of Player > 4 and tempnum is 2] until it starts to sputter from her stuffed holes[else if Ball Size of Player > 4] until it starts to sputter from her stuffed hole[end if]";
-				if (tempnum > 0 and Cock Count of Player > 3) or Cock Count of Player > 2:
-					say ", your unattended dicks staining her thighs.";
-				else if (tempnum > 0 and Cock Count of Player > 2) or Cock Count of Player > 1:
-					say ", your unattended dick staining her thighs.";
+				if (tempnum > 0 and Cock Count of Player > 3) or (tempnum is 0 and Cock Count of Player > 2):
+					say ", your unattended dicks staining her thighs";
+				else if (tempnum > 0 and Cock Count of Player > 2) or (tempnum is 0 and Cock Count of Player > 1):
+					say ", your unattended dick staining her thighs";
+			say ".";
 			say "     As things begin to wind down and the two of you begin catch your breath you pull yourself free of Onyx's now-oozing hole[if tempnum > 0]s[end if].";
 			say "     'Whew! [one of]That was fun[or]What a mess[or]I needed that[or]Never a dull moment for you[at random]!' Grinning, she takes a moment to help you clean yourself off before she moves to take care of herself. Stepping out, back into the main area, it's only a few minutes before she leaves as well, cleaned up and ready to attend the customers.";
 	else:
 		say "     With your decision made, you motion for Onyx to get down on all fours. She does so eagerly, raising her ass in the air and giving her long tail a flick up. The delectable sight of her sexy ass with her juicy muff ready and waiting for you is a beautiful one. Resting your cock between her cheeks, you make it a point of telling her what a fine mare she's become before thrusting into her slick cunny. Her response is lost in a nickering moan as you mount her and start fucking her.";
 		if Cock Count of Player > 2:
-			say "     Leaving your extra cocks to hang between her thighs, they slide across her ebony fur[if Cock Length of Player > 12] and slap against her belly[end if] as you thrust into her. ";
+			say "     Leaving your extra cocks to hang between her thighs, they slide across her ebony fur[if Cock Length of Player > 12] and slap against her belly[end if] as you thrust into her. Her cunny squeezes and tugs at your manhood as you thrust it into her, her body clearly longing for a good fucking. And you're more than happy to give it to the lovely mare. Moving overtop of her, you cup one of her breasts in your hand while supporting yourself with the other arm. She gives a soft neigh as you tweak her nipple and you can feel her cunt spasm around you in delighted response.";
 		else if Cock Count of Player is 2:
-			say "     Leaving your extra cock to hang between her thighs, it slides across her ebony fur[if Cock Length of Player > 12] and slap against her belly[end if] as you thrust into her. ";
+			say "     Leaving your extra cock to hang between her thighs, it slides across her ebony fur[if Cock Length of Player > 12] and slaps against her belly[end if] as you thrust into her. Her cunny squeezes and tugs at your manhood as you thrust it into her, her body clearly longing for a good fucking. And you're more than happy to give it to the lovely mare. Moving overtop of her, you cup one of her breasts in your hand while supporting yourself with the other arm. She gives a soft neigh as you tweak her nipple and you can feel her cunt spasm around you in delighted response.";
 		else:
-			say "     ";
-		say "Her cunny squeezes and tugs at your manhood as you thrust it into her, her body clearly longing for a good fucking. And you're more than happy to give it to the lovely mare. Moving overtop of her, you cup one of her breasts in your hand while supporting yourself with the other arm. She gives a soft neigh as you tweak her nipple and you can feel her cunt spasm around you in delighted response.";
+			say "     Her cunny squeezes and tugs at your manhood as you thrust it into her, her body clearly longing for a good fucking. And you're more than happy to give it to the lovely mare. Moving overtop of her, you cup one of her breasts in your hand while supporting yourself with the other arm. She gives a soft neigh as you tweak her nipple and you can feel her cunt spasm around you in delighted response.";
 		say "     As you fuck her, she moans about how you make her such a happy mare when you fuck her. 'I wouldn't even be a happy mmmm-mare if it weren't for you. I'd be some -nggg- brainless slut, getting fucked by anyone they told -ohhh yeah- told me to bang. Here I get to be banged by anyone [bold type]I[roman type] like. And I like being banged by you soooo much,' she neighs, grinding back against you harder as her vaginal walls tremble around you on the edge of orgasm. Smiling at how well things have worked out, your pace quickens and you unleash your hot [Cum Load Size of Player] load into the black beauty beneath you moments after her own climax hits. You nuzzle and nip at her neck as you send shot after shot into her[if Cock Count of Player > 1] and across her thighs and belly[end if] until your balls are drained. You slip your softening member from her pussy and makes sure to lick it clean before letting you return to the club. She follows you out soon after, having made sure the room's ready for the next stripper girl who needs a private space.";
 	if XP of Onyx is 30, now XP of Onyx is 31;
 	increase fonyxvagcount by 1;
 
 to femonyxsex3:
 	if fonyxanalcount is 0 or a random chance of 2 in 3 succeeds:
-		say "     Ready for her, the equine wheels around to allow you easy access to her exposed, dripping nethers";
 		if Cock Count of Player > 1:
-			say ". You imagine you can use [if Cock Count of Player > 2]two[else]both[end if] of your dicks on her[if Cock Length of Player > 10], though you're large enough that you'll have to plug both holes[end if]. Shall you?";
+			say "     Ready for her, the equine wheels around to allow you easy access to her exposed, dripping nethers. You imagine you can use [if Cock Count of Player > 2]two[else]both[end if] of your dicks on her[if Cock Length of Player > 10], though you're large enough that you'll have to plug both holes[end if]. Shall you?";
 			if Player consents:
+				LineBreak;
 				if Cock Length of Player < 11:
 					say "     Shall you fit both in her ass? Otherwise, you'll plug both holes.";
 					if Player consents:
 						now tempnum is 1;
 					else:
 						now tempnum is 2;
+					LineBreak;
 				else:
 					now tempnum is 2;
 			else:
+				LineBreak;
 				now tempnum is 0;
 		else:
-			say ".";
+			say "     Ready for her, the equine wheels around to allow you easy access to her exposed, dripping nethers.";
 			now tempnum is 0;
 		say "     '[one of]Don't hold back[or]Knock yourself out[or]Go crazy[at random], [one of]love[or]stud[or]honey[at random].' Eager to get started, you plunge the[if Player is blunt] blunt[end if] head of[if tempnum > 0 and Cock Count of Player > 2] two of[else if tempnum > 0] both of[end if] your dick[if tempnum > 0]s[end if] down her inviting hole[if tempnum is 2]s[end if], causing Onyx to moan out in eager bliss, reveling in being railed by you as you quickly build a tempo of pounding her ass, pinning the equine firmly against a wall.";
 		say "     Anal ring [if Cock Length of Player > 12 and tempnum is 2]and cunt strained to contain your substantial flesh[else if Cock Length of Player > 12 or tempnum is 1]strained to contain your substantial flesh[else if tempnum is 2]and cunt easily abiding your rigid flesh[else]easily abiding your rigid flesh[end if], your motion slicked by[if tempnum is 2] a mix of her juices and[end if] your precum, the heat of your shared fervor coats your bodies in a veneer of sweat. Onyx is particularly loud as she's being rammed[if scalevalue of Player > 3] by her much larger partner[end if], too lost in the throes of your own need to concern yourself about whether the commotion is drawing attention to the two of you. You probably can't take much more of this, shall you pull out at the last second?";
 		if Player consents:
+			LineBreak;
 			say "     Right on the brink of bliss you pull your [cock size desc of Player] tool[if tempnum > 0]s[end if] free of Onyx's oozing hole, grinding yourself against her for a second longer before finally crying out, [Cum Load Size of Player] load painting her back and ass[if Ball Size of Player > 4] until it's utterly drenched[end if]. Idly fondling herself, the equine can only whinny loudly in ecstasy as she's made a mess of, staining the floor further with her own juices. It takes a moment afterwards for things to wind down and for the two of you to catch your breath.";
 			say "     'Oh my! [one of]It's going to take me a while to clean all this up[or]What a mess[or]Somebody was feeling a little impish[or]Never a dull moment for you[at random]!' Grinning, she takes a moment to help you clean yourself off before she moves to take care of herself and the room. Stepping out, back into the main area, it's only a few minutes before she leaves as well, cleaned up and ready to attend the customers.";
 		else:
+			LineBreak;
 			if Libido of Player > 40:
 				say "     You can't hold back for much longer, finally crying out in bliss and [if Player is knotted]tying[else]hilting[end if] yourself as you flood the equine's bowels with your [Cum Load Size of Player] load[if Ball Size of Player > 4 and tempnum is 2] until it starts to sputter from her stuffed holes[else if Ball Size of Player > 4] until it starts to sputter from her stuffed hole[end if]. More than enough to set her off she whinnies out loudly, ass squeezing you sputtering dick[if tempnum > 0]s[end if] tightly";
-				if (tempnum > 0 and Cock Count of Player > 3) or Cock Count of Player > 2:
+				if (tempnum > 0 and Cock Count of Player > 3) or (tempnum is 0 and Cock Count of Player > 2):
 					say ", your unattended cocks staining her thighs.";
-				else if (tempnum > 0 and Cock Count of Player > 2) or Cock Count of Player > 1:
+				else if (tempnum > 0 and Cock Count of Player > 2) or (tempnum is 0 and Cock Count of Player > 1):
 					say ", your unattended cock staining her thighs.";
 			else:
 				say "     It's clear the equine can't hold back any longer, whinnying out loudly as her ass tightly squeezes your throbbing dick[if tempnum > 0]s[end if]. More than enough to set your off, you finally cry out in bliss and [if Player is knotted]tying[else]hilting[end if] yourself as you flood the equine's bowels with your [Cum Load Size of Player] load[if Ball Size of Player > 4 and tempnum is 2] until it starts to sputter from her stuffed holes[else if Ball Size of Player > 4] until it starts to sputter from her stuffed hole[end if]";
-				if (tempnum > 0 and Cock Count of Player > 3) or Cock Count of Player > 2:
+				if (tempnum > 0 and Cock Count of Player > 3) or (tempnum is 0 and Cock Count of Player > 2):
 					say ", your unattended dicks staining her thighs.";
-				else if (tempnum > 0 and Cock Count of Player > 2) or Cock Count of Player > 1:
+				else if (tempnum > 0 and Cock Count of Player > 2) or (tempnum is 0 and Cock Count of Player > 1):
 					say ", your unattended dick staining her thighs.";
 			say "     As things begin to wind down and the two of you begin catch your breath you pull yourself free of Onyx's now-oozing hole[if tempnum > 0]s[end if].";
 			say "     'Whew! [one of]That was fun[or]What a mess[or]I needed that[or]Never a dull moment for you[at random]!' Grinning, she takes a moment to help you clean yourself off before she moves to take care of herself. Stepping out, back into the main area, it's only a few minutes before she leaves as well, cleaned up and ready to attend the customers.";
 	else:
 		say "     With your decision made, you motion for Onyx to get down on all fours. She does so eagerly, raising her ass in the air and giving her long tail a flick up. The delectable sight of her sexy ass with her juicy muff and tight tailhole ready and waiting for you is a beautiful one. Resting your cock between her cheeks, you make it a point of telling her what a fine mare she's become before easing into her tight anus. Her response is lost in a nickering moan as you mount her and start fucking her.";
 		if Cock Count of Player > 2:
-			say "     Leaving your extra cocks to rest between her cheeks, they hotdog her ebony ass[if Cock Length of Player > 12] and dribble onto her lower back[end if] as you thrust into her. ";
+			say "     Leaving your extra cocks to rest between her cheeks, they hotdog her ebony ass[if Cock Length of Player > 12] and dribble onto her lower back[end if] as you thrust into her. Her anal muscles squeezes and tugs at your manhood as you thrust it into her, her body clearly longing for a good buggering. And you're more than happy to give it to the lovely mare. Moving overtop of her, you cup one of her breasts in your hand while supporting yourself with the other arm. She gives a soft neigh as you tweak her nipple and you can feel rectum clench down around you in delighted response. After playing with her tits for a while, you move your hand back between her legs to finger her clit and stuff her cunny with a few probing digits.";
 		else if Cock Count of Player is 2:
-			say "     Leaving your extra cock to rest between her cheeks, it hotdogs her ebony ass[if Cock Length of Player > 12] and dribble onto her lower back[end if] as you thrust into her. ";
+			say "     Leaving your extra cock to rest between her cheeks, it hotdogs her ebony ass[if Cock Length of Player > 12] and dribble onto her lower back[end if] as you thrust into her. Her anal muscles squeezes and tugs at your manhood as you thrust it into her, her body clearly longing for a good buggering. And you're more than happy to give it to the lovely mare. Moving overtop of her, you cup one of her breasts in your hand while supporting yourself with the other arm. She gives a soft neigh as you tweak her nipple and you can feel rectum clench down around you in delighted response. After playing with her tits for a while, you move your hand back between her legs to finger her clit and stuff her cunny with a few probing digits.";
 		else:
-			say "     ";
-		say "Her anal muscles squeezes and tugs at your manhood as you thrust it into her, her body clearly longing for a good buggering. And you're more than happy to give it to the lovely mare. Moving overtop of her, you cup one of her breasts in your hand while supporting yourself with the other arm. She gives a soft neigh as you tweak her nipple and you can feel rectum clench down around you in delighted response. After playing with her tits for a while, you move your hand back between her legs to finger her clit and stuff her cunny with a few probing digits.";
+			say "     Her anal muscles squeezes and tugs at your manhood as you thrust it into her, her body clearly longing for a good buggering. And you're more than happy to give it to the lovely mare. Moving overtop of her, you cup one of her breasts in your hand while supporting yourself with the other arm. She gives a soft neigh as you tweak her nipple and you can feel rectum clench down around you in delighted response. After playing with her tits for a while, you move your hand back between her legs to finger her clit and stuff her cunny with a few probing digits.";
 		say "     As you fuck her, she moans about how much she loves being a naughty mare and getting it up the ass. 'I've been having so mmm-much kinky fun since I've gotten here. If it weren't for you-oooo! and the girls here helping me, I'd be missing -ohhh- out on all this fun. So go ahead, baby. Pound that ass of mine!' she neighs, grinding back against you harder as you can feel the quiver of her cunt around your fingers on the edge of orgasm. Smiling at how well things have worked out, your pace quickens and you unleash your hot [Cum Load Size of Player] load into the black beauty beneath you moments after her own climax hits. You nuzzle and nip at her neck as you send shot after shot into her bowels[if Cock Count of Player > 1] and across her ass and back[end if] until your balls are drained. You slip your softening member from her pussy and makes sure to wipe it clean before letting you return to the club. She follows you out soon after, having made sure the room's ready for the next stripper girl who needs a private space.";
 	increase fonyxanalcount by 1;
 
@@ -1330,34 +1301,27 @@ to femonyxsex4:
 	say "     Eagerly obliging your request, Onyx is already lowering herself[if scalevalue of Player > 3] under you[end if] to more easily access your assets, eager digits parting any obstruction in her way to expose your [cunt size desc of Player] cunt[sfn] before her curious gaze.";
 	say "     '[one of]Oh[or]Hm[or]Ah[at random], [one of]somebody's eager to see me[or]looks like you're all ready for a bit of fun[or]lets get this party started[at random]!' Grinning, a digit caresses along the entrance of[if Cunt Count of Player > 1] one of[end if] your portal[sfn], slowly sinking it past your supple lips and making you writhe with every irreverent twitch until you're made nice and wet for her.";
 	say "     The equine continues to tease your for a while longer before she starts attending to your need directly, closing in to let her tongue take the place of the finger. Her lips embracing your nethers, her thick tongue only briefly tests your ability to accommodate it before she plunges the writhing organ as far as she can, soon building a method of firmly tonguing you.";
-	say "     Soft moans vibrating against her flesh, the lady can't help but idly fondle herself as she attends to your need, slick, worming tongue grinding itself against your passage. Your breath becomes increasingly shallow as you're progressively wracked by the throes of your imminent bliss, as does her voracious need to see it becomes more dire.";
 	if Player is male:
-		say ". Shall you attempt to pull yourself free and cum on her at the last second?";
+		say "     Soft moans vibrating against her flesh, the lady can't help but idly fondle herself as she attends to your need, slick, worming tongue grinding itself against your passage. Your breath becomes increasingly shallow as you're progressively wracked by the throes of your imminent bliss, as does her voracious need to see it becomes more dire. Shall you attempt to pull yourself free and cum on her at the last second?";
 		if Player consents:
-			say "     Unable to hold back any longer, you wrench yourself free of the equine's[one of] surprised[or][stopping] lips and aiming your [cock size desc of Player] dick[smn] to her face before you're set off. Your [Cum Load Size of Player] exploding from your previously unattended cock[smn], [if Cock Count of Player > 1]they stain[else]it stains[end if] Onyx's face and torso[if Ball Size of Player > 4] until she's utterly drenched in the fluid[end if]. Obliging this embarrassing relegation, she idly licks clean along the length of your softening organ once your bliss starts dying down.";
-			say "     '[one of]Tsk[or]Hmpf[or]Oh[at random], [one of]now I'm going to have to go and clean myself up[or]you just had to make a mess[or]you sneaky little imp[at random]";
+			LineBreak;
+			say "     Unable to hold back any longer, you wrench yourself free of the equine's[first time] surprised[only] lips and aiming your [cock size desc of Player] dick[smn] to her face before you're set off. Your [Cum Load Size of Player] load exploding from your previously unattended cock[smn], [if Cock Count of Player > 1]they stain[else]it stains[end if] Onyx's face and torso[if Ball Size of Player > 4] until she's utterly drenched in the fluid[end if]. Obliging this embarrassing relegation, she idly licks clean along the length of your softening organ once your bliss starts dying down.";
+			say "     '[one of]Tsk[or]Hmpf[or]Oh[at random], [one of]now I'm going to have to go and clean myself up[or]you just had to make a mess[or]you sneaky little imp[at random]!' Grinning, she takes a moment to help you clean yourself off before she moves to take care of herself and the room. Stepping out, back into the main area, it's only a few minutes before she leaves as well, cleaned up and ready to attend the customers";
 		else:
-			say "     Wet sounds of her persistent, deliberate attendance lingering for only a little while longer, it's more than enough to set you off, the equine loudly sucking you clean of your juices as her lips tightly embraces your cunt. Your [Cum Load Size of Player] load exploding from your previously unattended dick[smn], [if Cock Count of Player > 1]they[else]it[end if] waste[smv] your release on the floor. Onyx manages to prolong your bliss for a little while longer until it finally dies down and she pulls herself free of you.";
-			say "     '[one of]Ah[or]Mmm[or]Hm[at random], [one of]I hope you had as much fun as I did, sweetie[or]hopefully that'll keep your urges at bay[or]I can see you were very eager to see me[at random]";
+			LineBreak;
+			say "     Wet sounds of her persistent, deliberate attendance lingering for only a little while longer, it's more than enough to set you off, the equine loudly sucking you clean of your juices as her lips tightly embraces your cunt. Your [Cum Load Size of Player] load exploding from your previously unattended dick[smn], [ittheym] waste[smv] your release on the floor. Onyx manages to prolong your bliss for a little while longer until it finally dies down and she pulls herself free of you.";
+			say "     '[one of]Ah[or]Mmm[or]Hm[at random], [one of]I hope you had as much fun as I did, sweetie[or]hopefully that'll keep your urges at bay[or]I can see you were very eager to see me[at random]!' Grinning, she takes a moment to help you clean yourself off before she moves to take care of herself and the room. Stepping out, back into the main area, it's only a few minutes before she leaves as well, cleaned up and ready to attend the customers";
 	else:
-		say "     Wet sounds of her persistent, deliberate attendance lingering for only a little while longer, it's more than enough to set you off, the equine loudly sucking you clean of your juices as her lips tightly embraces your cunt";
-		if Player is male:
-			say ". Your [Cum Load Size of Player] load exploding from your previously unattended dick[smn], [if Cock Count of Player > 1]they[else]it[end if] waste[smv] your release on the floor";
-		say ". Onyx manages to prolong your bliss for a little while longer until it finally dies down and she pulls herself free of you.";
-		say "     '[one of]Ah[or]Mmm[or]Hm[at random], [one of]I hope you had as much fun as I did, sweetie[or]hopefully that'll keep your urges at bay[or]I can see you were very eager to see me[at random]";
-	say "!' Grinning, she takes a moment to help you clean yourself off before she moves to take care of herself and the room. Stepping out, back into the main area, it's only a few minutes before she leaves as well, cleaned up and ready to attend the customers";
+		say "     Soft moans vibrating against her flesh, the lady can't help but idly fondle herself as she attends to your need, slick, worming tongue grinding itself against your passage. Your breath becomes increasingly shallow as you're progressively wracked by the throes of your imminent bliss, as does her voracious need to see it becomes more dire.";
+		say "     Wet sounds of her persistent, deliberate attendance lingering for only a little while longer, it's more than enough to set you off, the equine loudly sucking you clean of your juices as her lips tightly embraces your cunt[if Player is male]. Your [Cum Load Size of Player] load exploding from your previously unattended dick[smn], [ittheym] waste[smv] your release on the floor. Onyx manages to prolong your bliss for a little while longer until it finally dies down and she pulls herself free of you.";
+		say "     '[one of]Ah[or]Mmm[or]Hm[at random], [one of]I hope you had as much fun as I did, sweetie[or]hopefully that'll keep your urges at bay[or]I can see you were very eager to see me[at random]!' Grinning, she takes a moment to help you clean yourself off before she moves to take care of herself and the room. Stepping out, back into the main area, it's only a few minutes before she leaves as well, cleaned up and ready to attend the customers";
 
 to femonyxsex5:
 	say "     After that very sexy warm-up, Onyx cuddles up close to you, running her hands over your [bodydesc of Player] body. She nuzzles your ear and nibbles softly with her flat teeth. '[if XP of Onyx is 31]Here, let me show you one of the fun things I've learned from the other girls,' she whispers tantalizingly[else]And I think you were asking for another dance, weren't you, sexy?' she whispers teasingly[end if] as she gently presses you down into a seat. Sliding into your lap, she grinds her shapely buttocks down onto your manhood. You stiffen quickly as she continues to slide and grind down onto you.";
-	say "     As she gives you the lap dance, she stretches and sways her equine body in lovely ways. Sometimes she even raising up one leg in a very flexible stretch that puts her on erotic display for you. You're also treated to the tantalizingly lewd display of her shaking her breasts in front of your face[if XP of Onyx is 31]. You come to realize that her movements are partly in time to the music, making a dance out of this lap dance for her special patron. And while the timing's by no means perfect and her doesn't always match the rhythm, it is a profoundly arousing display nonetheless[else]. As before, she's doing her best to make a dance out of this lap dance for her special patron. She's gotten a little better at it as well, though this routine is still by no means completely refined[end if].";
-	say "     She goes like this through a couple of songs, getting you good and rile up. And from the hot, wet juices dripping onto you, you can tell it's having a similar effect on her";
-	if onyxlapdance is even:
-		say ". And when she can't take any more, she drops to her knees between your legs just as the bass drops on the techno tune being played and plunges your [Cock of Player] meat into her equine muzzle. She sucks you to a moaning climax that blasts shot after shot down her throat while she fingers herself to orgasm. She makes sure to suck all your seed down and lick you clean before getting up and giving you a tongue-filled kiss.";
-	else:
-		say ". And when you can't take it any longer, you grab her hips just as another song is starting and plunge your [Cock of Player] meat into her heated cunt. She gives a neighing moan, squirming in delight in your lap as you bounce her vigorously. You cum hard, blasting shot after shot into her clenching tunnel, feeding your [Cum Load Size of Player] load into her equine belly. The feel of you seeding her sets her off and she gives a wild neigh of orgasmic release. You fuck her through her climax before finally sagging back in your seat. She gives you a tongue-filled kiss as she slowly, reluctantly, slips off your spent shaft.";
+	say "     As she gives you the lap dance, she stretches and sways her equine body in lovely ways. Sometimes she even raising up one leg in a very flexible stretch that puts her on erotic display for you. You're also treated to the tantalizingly lewd display of her shaking her breasts in front of your face. [if XP of Onyx is 31]You come to realize that her movements are partly in time to the music, making a dance out of this lap dance for her special patron. And while the timing's by no means perfect and her doesn't always match the rhythm, it is a profoundly arousing display nonetheless[else]As before, she's doing her best to make a dance out of this lap dance for her special patron. She's gotten a little better at it as well, though this routine is still by no means completely refined[end if].";
+	say "     She goes like this through a couple of songs, getting you good and rile up. And from the hot, wet juices dripping onto you, you can tell it's having a similar effect on her. And when [if onyxlapdance is even]she can't take any more, she drops to her knees between your legs just as the bass drops on the techno tune being played and plunges your [Cock of Player] meat into her equine muzzle. She sucks you to a moaning climax that blasts shot after shot down her throat while she fingers herself to orgasm. She makes sure to suck all your seed down and lick you clean before getting up and giving you a tongue-filled kiss[else]you can't take it any longer, you grab her hips just as another song is starting and plunge your [Cock of Player] meat into her heated cunt. She gives a neighing moan, squirming in delight in your lap as you bounce her vigorously. You cum hard, blasting shot after shot into her clenching tunnel, feeding your [Cum Load Size of Player] load into her equine belly. The feel of you seeding her sets her off and she gives a wild neigh of orgasmic release. You fuck her through her climax before finally sagging back in your seat. She gives you a tongue-filled kiss as she slowly, reluctantly, slips off your spent shaft[end if].";
 	say "     After getting you cleaned up and dressed again, she sends you off to the main club area while she tidies up the room for the next to use it. She comes out a few minutes later back in her skimpy outfit and tantalizing the other patrons with her shapely body.";
 	increase onyxlapdance by 1;
-
 
 Section 5 - Endings
 
@@ -1366,12 +1330,8 @@ Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered
 "Onyx['] Epilogue"	"NPC"	""	Onyx' Epilogue rule	900	false
 
 This is the Onyx' Epilogue rule:
-	if Onyxmareslut is 3:
+	if Onyxmareslut is 3 or Onyxboislut is 3:
 		trigger ending "Onyx['] Epilogue";
-		say "     Your time at the Stables has been surprisingly pleasant, once you stopped fighting your purpose and your captivity, you came to really enjoy being bound and helpless for all the stallions to use. And use you they did! You had many visitors at first from among the stallions, though your favorite was the big black stallion who captured you in the first place. It wasn't long before you begin responding to your new name, 'Obsidian', and loving your equally sexy new black furred mares body, and once the training was over and you are finally released from the training stall, you make sure to thank Onyx very personally for his help in making you such a sexy little mare. So much so that he had trouble walking for several days afterwards, much to the amusement of his fellow stallions. Eventually though you settle down to your new life as a rather powerful and sexy mareslut, and with your enhanced submissiveness you find you have a real strong client base among those who like to dominate their partners and tie them up. Of course eventually you are shifted over to work with some of the breeding mares more often, and you look back on that time fondly as you sit with your many black foals gathered around you and grin at just how many of them look like that handsome young stallion that still visits you often... and recall how glad you are that you convinced him to stay in the Stables like a good horsey, and how glad you are that he did the same to you as well!";
-	else if Onyxboislut is 3:
-		trigger ending "Onyx['] Epilogue";
-		say "     Your time at the Stables has been surprisingly pleasant, once you stopped fighting your purpose and your captivity, you came to really enjoy being bound and helpless for all the stallions to use. And use you they did! You had many visitors at first from among the stallions, though your favorite was the big black stallion who captured you in the first place. It wasn't long before you begin responding to your new name, 'Obsidian', and loving your equally sexy new black furred stallionboi body. And once the training was over and you are finally released from the training stall, you make sure to thank Onyx very personally for his help in making you such a sexy little manwhorse. So much so that you have trouble walking for several days afterwards, much to the amusement of his fellow stallions. Eventually though, you settle down to your new life as a rather girly and sex-hungry stallionboi. And with your enhanced submissiveness, you find you have a real strong client base among those who like to dominate their male partners and tie them up. Of course, eventually you are shifted over to work with many of the other stallionbois and eagerly take your position as one of the most sub among them, letting them play at being studs by fucking you until you pass out, overflowing with the cum from all your loving friends. Your big, handsome young stallion still visits you often to remind you that you still belong to him. At these times more than any other, you recall how glad you are that you convinced him to stay in the Stables like a good horsey, and how glad you are that he did the same to you as well!";
-
+		say "     Your time at the Stables has been surprisingly pleasant; once you stop fighting your purpose and your captivity, you come to really enjoy being bound and helpless for all the stallions to use. And use you they do! You had many visitors at first from among the stallions, though your favorite was the big black stallion who captured you in the first place. It wasn't long before you began responding to your new name, 'Obsidian', and loving your equally sexy new black-furred [if Onyxmareslut is 3]mare body, and once the training is over and you are finally released from the training stall, you make sure to thank Onyx very personally for his help in making you such a sexy little mare. So much so that he had trouble walking for several days afterwards, much to the amusement of his fellow stallions. Eventually though you settle down to your new life as a rather powerful and sexy mareslut, and with your enhanced submissiveness you find you have a real strong client base among those who like to dominate their partners and tie them up. Of course eventually you are shifted over to work with some of the breeding mares more often, and you look back on that time fondly as you sit with your many black foals gathered around you and grin at just how many of them look like that handsome young stallion that still visits you often... and[else]stallionboi body. And once the training was over and you are finally released from the training stall, you make sure to thank Onyx very personally for his help in making you such a sexy little manwhorse. So much so that you have trouble walking for several days afterwards, much to the amusement of his fellow stallions. Eventually though, you settle down to your new life as a rather girly and sex-hungry stallionboi. And with your enhanced submissiveness, you find you have a real strong client base among those who like to dominate their male partners and tie them up. Of course, eventually you are shifted over to work with many of the other stallionbois and eagerly take your position as one of the most sub among them, letting them play at being studs by fucking you until you pass out, overflowing with the cum from all your loving friends. Your big, handsome young stallion still visits you often to remind you that you still belong to him. At these times more than any other, you[end if] recall how glad you are that you convinced him to stay in the Stables like a good horsey, and how glad you are that he did the same to you as well!";
 
 Onyx ends here.

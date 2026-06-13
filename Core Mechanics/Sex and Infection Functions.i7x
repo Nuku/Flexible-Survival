@@ -58,10 +58,10 @@ to decide if (x - a person) has a skin of (i - a text):
 to decide which text is GetSpeciesName from (N - a text):
 	if N is not "" and there is a Name of N in the Table of Random Critters:
 		choose a row with Name of N in the Table of Random Critters;
-		if Species Name entry is not "":
+		if Species Name entry is not empty:
 			decide on Species Name entry;
 		else:
-			decide on N;
+			decide on Name entry;
 	decide on ""; [Name not found or N is empty - Return "" as a failsafe]
 
 to remove manhood from ( x - a person ):

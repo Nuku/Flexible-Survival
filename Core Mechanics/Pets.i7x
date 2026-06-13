@@ -40,36 +40,32 @@ Chapter 1 - Maximum Companions
 MaxCompanions is a number that varies.[@Tag:NotSaved] MaxCompanions is usually 1.
 
 to CalcMaxCompanions:
-	now MaxCompanions is 1;
 	if "Double Team" is listed in feats of Player:
-		increase MaxCompanions by 1;
+		now MaxCompanions is 2;
+	else:
+		now MaxCompanions is 1;
 
 an everyturn rule:
 	CalcMaxCompanions;
 	if number of entries in companionList of Player > MaxCompanions:
 		repeat with CurrentPet running through companionList of Player:
-			let DismissName be "";
-			now DismissName is printed name of CurrentPet;
 			if "Feral" is listed in Traits of CurrentPet:
-				if Player is booked or Player is bunkered:
-					say "     [bold type]As your party seems a bit big right now, you decide to send your companion home.[roman type][line break]";
-					DismissFunction DismissName;
+				if Player is collected:
+					say "[bold type]As your party seems a bit big right now, you decide to send your companion home.[roman type][line break]";
+					DismissFunction printed name of CurrentPet;
 					break;
-				else:
-					next;
 			else:
-				say "     [bold type]As your party seems a bit big right now, you decide to send your companion home.[roman type][line break]";
-				DismissFunction DismissName;
+				say "[bold type]As your party seems a bit big right now, you decide to send your companion home.[roman type][line break]";
+				DismissFunction printed name of CurrentPet;
 				break;
 
 Chapter 2 - Adding Combat Companions
 
-AddCompanion is an action applying to one topic.
+SummonFailure is a truth state that varies.[@Tag:NotSaved] SummonFailure is usually false.
 
+AddCompanion is an action applying to one topic.
 understand "pet [text]" as AddCompanion.
 understand "ally [text]" as AddCompanion.
-
-SummonFailure is a truth state that varies.[@Tag:NotSaved] SummonFailure is usually false.
 
 carry out AddCompanion:
 	let InputName be the topic understood;
@@ -82,17 +78,14 @@ to AddCompanionFunction (NewCompanion - a text):
 			now AddPet is Z;
 			break;
 	if AddPet is NullPet:
-		say "     You have no ally called [NewCompanion in title case]!";
+		say "You have no ally called [NewCompanion in title case]!";
 	else:
-		let MaxCompanions be 1;
-		if "Double Team" is listed in feats of Player:
-			increase MaxCompanions by 1;
+		CalcMaxCompanions;
 		if AddPet is listed in companionList of Player:
-			say "     [AddPet] is already following you!";
+			say "[AddPet] is already following you!";
 		else:
-			let y be number of entries in companionList of Player;
-			if y >= MaxCompanions:
-				say "     You cannot have any more allies following you right now! If you want to choose [AddPet], you'll have to send someone else away!";
+			if number of entries in companionList of Player >= MaxCompanions:
+				say "You cannot have any more allies following you right now! If you want to choose [AddPet], you'll have to send someone else away!";
 			else:
 				say "[summondesc of AddPet]";
 				if SummonFailure is false: [pet summon successful]
@@ -115,22 +108,20 @@ Chapter 3 - Removing Combat Companions
 
 DismissFailure is a truth state that varies.[@Tag:NotSaved] DismissFailure is usually false.
 
-understand "dismiss [text]" as DismissCompanion.
-
 DismissCompanion is an action applying to one topic.
+understand "dismiss [text]" as DismissCompanion.
 
 carry out DismissCompanion:
 	let InputName be the topic understood;
 	DismissFunction InputName;
 
+DismissFirstCompanion is an action applying to nothing.
 understand "dismiss" as DismissFirstCompanion.
 understand "ally dismiss" as DismissFirstCompanion.
 understand "pet dismiss" as DismissFirstCompanion.
 
-DismissFirstCompanion is an action applying to nothing.
-
 check DismissFirstCompanion:
-	if number of entries in CompanionList of Player is 0, say "     You don't have any allies following you right now!" instead;
+	if CompanionList of Player is empty, say "You don't have any allies following you right now!" instead;
 
 carry out DismissFirstCompanion:
 	let DismissName be printed name of entry 1 of companionList of Player;
@@ -143,9 +134,9 @@ to DismissFunction (InputName - a text):
 			now DismissPet is Z;
 			break;
 	if DismissPet is NullPet:
-		say "     You have no ally called [InputName in title case]!";
+		say "You have no ally called [InputName in title case]!";
 	else if DismissPet is not listed in companionList of Player:
-		say "     [DismissPet] is not following you!";
+		say "[DismissPet] is not following you!";
 	else:
 		say "[dismissdesc of DismissPet]";
 		if DismissFailure is false:
@@ -187,17 +178,16 @@ Carry out CountPlayerPets:
 				say " [set link hyperindex][Pet][terminate link]";
 		else:
 			say " [PetList]";
-	LineBreak;
 	if companionList of Player is empty:
-		say "Active Ally: None";
+		say "[line break]Active Ally: None";
 	else:
-		say "Active [if number of entries in CompanionList of Player is 1]Ally[else]Allies[end if]:";
+		say "[line break]Active [if number of entries in CompanionList of Player is 1]Ally[else]Allies[end if]:";
 		repeat with z running through CompanionList of Player:
 			say " [link][z][as]look [z][end link]";
-	say "[line break][line break]Ally Commands:[line break]";
-	say "[bold type]ally <name>[roman type] - Make the named ally your active one.";
-	say "[link][bold type]ally dismiss[roman type][end link] - Send away your ally (for now).";
-	say "[link][bold type]ally overview[roman type][end link] - Display a table with the stats of all currently available allies.";
+	say "[line break]Commands:[line break]";
+	say "     [bold type]ally <name>[roman type] - Make the named ally your active one.";
+	say "     [link][bold type]ally dismiss[roman type][end link] - Send away your ally (for now).";
+	say "     [link][bold type]ally overview[roman type][end link] - Display a table with the stats of all currently available allies.";
 
 Chapter 5 - Companion Overview Table
 
@@ -223,7 +213,7 @@ carry out PetOverview:
 		now Dex Entry is Dexterity of Pet;
 		increase PetNumber by 1;
 	if PetNumber is 0:
-		say "     You have no allies!";
+		say "You have no allies!";
 	else:
 		sort the Table of PetOverviewList in Name order;
 		let PetOverviewName be "";
@@ -233,8 +223,7 @@ carry out PetOverview:
 		say "[fixed letter spacing]";
 		say "Name                 | Lvl | Dmg | Dex |[line break]";
 		say "---------------------|-----|-----|-----|[line break]";
-		repeat with N running from 1 to the number of filled rows in the Table of PetOverviewList:
-			choose row N in the Table of PetOverviewList;
+		repeat through Table of PetOverviewList:
 			now PetOverviewName is "[Name Entry]";
 			now PetOverviewLvl is "[Lvl Entry]";
 			now PetOverviewDmg is "[Dmg Entry]";

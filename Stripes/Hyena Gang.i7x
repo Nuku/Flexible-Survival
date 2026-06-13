@@ -1,7 +1,9 @@
 Hyena Gang by Stripes begins here.
 [- Originally Authored By: Sarokcat -]
 
-Section 1 - Meeting Event & Recruitment
+Part 1 - Meeting Event & Recruitment
+
+HYG is a number that varies.
 
 Table of GameEventIDs (continued)
 Object	Name
@@ -9,11 +11,10 @@ Hyena Gang	"Hyena Gang"
 
 Hyena Gang is a situation.
 ResolveFunction of Hyena Gang is "[ResolveEvent Hyena Gang]".
+
 when play begins:
 	add Hyena Gang to BadSpots of HermList;
 	add Hyena Gang to BadSpots of FurryList;
-
-HYG is a number that varies.
 
 to say ResolveEvent Hyena Gang:
 	if hyg is 0:
@@ -26,29 +27,32 @@ to say ResolveEvent Hyena Gang:
 		now hyg is 2;
 	else if hyg is 2:
 		say "     As you are out searching the city, you once more encounter the same hyena graffiti that you found in several other locations in the area. Turning to leave before you run into trouble, you are surprised to see a hyena come sauntering out into the street behind you and quickly prepare for a fight, only to realize it doesn't show any signs of attacking as it approaches, its hands held out to the side in a nonthreatening manner.";
-		say "     'Hey don't worry,' the hyena says as she draws closer, making you nervous. 'I'm not here for a fight, but we've noticed you near our turf and looking at our signage before,' she says with a gesture at the graffiti. 'So I thought I'd come over and offer you a chance to join on up. ";
 		if BodyName of Player is "Hyena Herm":
-			say "Besides, it looks like you would fit right in around here already,' the hyena says as she eyes your hyena-like frame. 'What do you say to giving us a try?'";
+			say "     'Hey don't worry,' the hyena says as she draws closer, making you nervous. 'I'm not here for a fight, but we've noticed you near our turf and looking at our signage before,' she says with a gesture at the graffiti. 'So I thought I'd come over and offer you a chance to join on up. Besides, it looks like you would fit right in around here already,' the hyena says as she eyes your hyena-like frame. 'What do you say to giving us a try?'";
 			if Player consents:
+				LineBreak;
 				say "     'Great! I'll just go and let the others know to keep an eye out for you! You should come back in a little bit,' she says with a toothy smile. 'But first,' she says, right before she pulls you into her arms for a crushing hug, causing you to open your mouth to protest, only to find yourself being sloppily kissed as her rough tongue darts into your mouth, her sharp teeth brushing up against your face. Before you can react, she puts you back down and gives you a big grin, before heading back towards the hyena territory. Glancing over her shoulder, she calls back, 'Just a little something to remember me by!' before vanishing around the corner";
 				now Resolution of Hyena Gang is 3; [herm hyena player talked to gina and agreed]
 				hyenaify;
 				now hyg is 3;
 			else:
+				LineBreak;
 				say "     'That's too bad,' she says as crosses her arms under her exposed breasts, pushing them upwards for a second. 'It ain't no life for a hyena out there all alone,' she continues as she runs her paw-like hand down her soft fur, posing for you, before fondling her large crotch for a second and winking. 'If you ever change your mind, you know where to find us, hun. Just follow your instincts.'";
 				now Resolution of Hyena Gang is 4; [herm hyena player talked to gina and said no]
 		else:
-			say "Membership comes with some benefits, though you'll end up with a few changes as well,' the hyena says as she looks you up and down. 'Though trust me hun, the changes really are all for the better, and you should probably join while you can, since we might not be asking people nicely for long.'";
+			say "     'Hey don't worry,' the hyena says as she draws closer, making you nervous. 'I'm not here for a fight, but we've noticed you near our turf and looking at our signage before,' she says with a gesture at the graffiti. 'So I thought I'd come over and offer you a chance to join on up. Membership comes with some benefits, though you'll end up with a few changes as well,' the hyena says as she looks you up and down. 'Though trust me hun, the changes really are all for the better, and you should probably join while you can, since we might not be asking people nicely for long.'";
 			if Player consents:
+				LineBreak;
 				say "     'Great! I'll just go and let the others know to keep an eye out for you! You should come back in a little bit,' she says with a toothy smile, looking you over again. 'But first, I think you will need to fit in a bit more,' she says, right before she pulls your startled body into her arms for a crushing hug, causing you to open your mouth to protest, only to find yourself being sloppily kissed as her rough tongue darts into your mouth, her sharp teeth brushing up against your face. Before you can react, she puts you back down and gives you a big grin, before heading back towards the hyena territory. Glancing over her shoulder, she calls back, 'Just a little something to remember me by! I look forward to seeing how the changes look on you!' before she vanishes around the corner, your body shuddering as it begins to change.";
 				now Resolution of Hyena Gang is 5; [player talked to gina and agreed]
 				hyenaify;
 				hyenaify;
 				now hyg is 3;
 			else:
+				LineBreak;
 				say "     'That's too bad,' she says as crosses her arms under her exposed breasts, pushing them upwards for a second. 'You have no idea what you're missing out on,' she continues as she runs her paw-like hand down her soft fur, posing for you, before fondling her large crotch for a second and winking. 'If you ever change your mind, you know where to find us, hun.'";
 				now Resolution of Hyena Gang is 5; [player talked to gina and said no]
-	else if hyg is 3:
+	else:
 		say "     Wandering the city again, you come across one of the areas claimed by that strange gang of hyenas, causing you to recall your last encounter with the strange hyena recruiter. As if summoned by your thoughts of her, you see a familiar-looking hyena coming towards you from down a side street, a large grin on her muzzle. Before you can decide what to do about it, you are quickly enveloped once more in a large and enthusiastic hug.";
 		say "     'I thought I scented you!' the large hyena herm exclaims, still hugging you tightly, 'I knew you'd come back to join us. You said you would, after all,' she says as she releases you, causing you to stagger for a minute, before she grabs your hand and starts dragging you down the street, heading deeper into what the graffiti tags proclaim to be hyena territory. 'You must be pretty special to have survived out here this long on your own, but you don't have to worry about that anymore,' the hyena says as you are led through a bewildering maze of side streets and partially wrecked buildings to one of the warehouse districts. 'You have a whole gang on your side now, or pack, whatever you want to call it. You got our back, we got yours. Speaking of which,' she says as she stops in the middle of the street, facing a row of shipment warehouses. 'The name's Gina, and I guess I'm your sponsor for now, so let me know if anyone bothers ya or if you need anything,' the newly introduced Gina says with a grin.";
 		say "     'Course, first we have to make sure you smell like you belong to me...' she says, giving you an evil look. Before you can protest, she has you pinned to the ground underneath her as she rubs her softly furred body against yours. The sensation and sudden pouncing cause you to gasp in surprise, and she takes advantage of your open mouth to once more give you a deep kiss, exploring your mouth with her surprisingly flexible tongue and filling you with her almost addictive personal flavor. Gina breaks the kiss, leaving your mouth open and panting as she continues to rub herself all over you, her hyenalike musk coating you in its arousing scent. You find it hard to think straight as she rubs her nipples across your face, letting you lick them and toy with them for a minute, before she backs off of you and hauls you unsteadily back up to your feet, still aroused and needy.";
@@ -56,13 +60,14 @@ to say ResolveEvent Hyena Gang:
 		hyenaify;
 		now hyg is 4;
 		LibidoBoost 30;
+		WaitLineBreak;
 		move player to Hyena Hideout;
 		AddNavPoint Hyena Hideout;
 		now Resolution of Hyena Gang is 6; [hyena hideout known]
 		now hyena gang is resolved;
 		now battleground is "void";
 
-Section 2 - Hyena Hideout Location
+Part 2 - Hyena Hideout Location
 
 Table of GameRoomIDs (continued)
 Object	Name
@@ -70,16 +75,10 @@ Hyena Hideout	"Hyena Hideout"
 
 Hyena Hideout is a room. It is fasttravel. It is private.
 earea of Hyena Hideout is "Outside".
+Description of Hyena Hideout is "     This large open building was obviously once a warehouse at one point, though much of whatever was once stored in here has long since been cleared out to make room for the hyena gang to set up shop. There are still several large crates and cargo containers scattered throughout the area, mostly used to divide the large space up into several smaller areas and semi private rooms. The open space hasn't been left empty however, and numerous couches, mattresses, and rough tables scatter the area, most having obviously seen better days and looted to make the area more comfortable. The heady musk of numerous hyenas and sex permeates the area with its own unique perfume, making you feel both excited and strangely comfortable just from breathing it in. Though obviously the large building could hold a large number of hyenas, you only see a moderate number of gang members here, most of the rest obviously wandering the city looking for new converts in their continuing membership drive.[line break]".
+Scent of Hyena Hideout is "     This place smells strongly of hyenas. There have been many through here, much more than those you can see here right now.".
 
-Description of Hyena Hideout is "[HyenaHideoutRoomDesc]".
-
-to say HyenaHideoutRoomDesc:
-	say "     This large open building was obviously once a warehouse at one point, though much of whatever was once stored in here has long since been cleared out to make room for the hyena gang to set up shop. There are still several large crates and cargo containers scattered throughout the area, mostly used to divide the large space up into several smaller areas and semi private rooms. The open space hasn't been left empty however, and numerous couches, mattresses, and rough tables scatter the area, most having obviously seen better days and looted to make the area more comfortable. The heady musk of numerous hyenas and sex permeates the area with its own unique perfume, making you feel both excited and strangely comfortable just from breathing it in. Though obviously the large building could hold a large number of hyenas, you only see a moderate number of gang members here, most of the rest obviously wandering the city looking for new converts in their continuing membership drive.";
-
-instead of sniffing Hyena Hideout:
-	say "     This place smells strongly of hyenas. There have been many through here, much more than those you can see here right now.";
-
-Section 3 - NPC
+Part 3 - NPC
 
 Chapter 1 - Gang Member Group NPC
 
@@ -125,11 +124,9 @@ SexuallyExperienced of Gang members is false.
 TwistedCapacity of Gang members is false. [Twisted Characters can take any penetration, no matter the size]
 Sterile of Gang members is true. [steriles can't knock people up]
 MainInfection of Gang members is "".
-Description of Gang members is "A number of hyena gang members are lounging around the large open area, some of them lounging on the couches or the mattresses, while others move around chatting or showing off their hyena fur patterns. Several of the gang members have obviously gone mostly feral though, and their cackling laughter from the other rooms provides an almost comforting background to the noise of the area.".
-Conversation of gang members is { "Yap!" }.
-
-instead of sniffing Gang members:
-	say "The gang members smell like hyenas[if matriarchdefeated > 0 and matriarchowned is 0]. Their strong, dominant scents make you want to submit to them[end if].";
+Description of Gang members is "     A number of hyena gang members are lounging around the large open area, some of them lounging on the couches or the mattresses, while others move around chatting or showing off their hyena fur patterns. Several of the gang members have obviously gone mostly feral though, and their cackling laughter from the other rooms provides an almost comforting background to the noise of the area.[line break]".
+[Conversation of gang members is { "Yap!" }.]
+Scent of Gang members is "     The gang members smell like hyenas[if matriarchdefeated > 0 and matriarchowned is 0]. Their strong, dominant scents make you want to submit to them[end if].".
 
 instead of conversing the gang members:
 	if matriarchowned is 1:
@@ -153,12 +150,11 @@ instead of fucking the gang members:
 		else if Player is submissive and a random chance of 3 in 5 succeeds:
 			now lastfuck of Gang Members is turns;
 			say "     While you may be the strong matriarch of the gang, your submissive tendencies still exist and urge you to let the others have their way with you. In the mood for a good fuck, you move over to a pack of the gang members that Gina reports have been particularly useful of late and offer them a proper reward for their efforts. Eager, the group laughs and pats one another on the back even as they start stroking their cocks, knowing what you have in mind. Grinning at their eagerness, you give your hips a swish and order them to follow you.";
-			say "     Allowed entrance to your chambers, they move in around you and start lavishing attention upon you, competing for the opportunity to be the first to earn your favor. Eventually you pick a particularly [one of]dashing[or]well-hung[or]horny[or]aggressive[at random] one while the others start pairing up into groups of two or three while they wait their turn";
 			if Player is female:
-				say ". After the hyena's lavished sufficient attention upon you, you move onto all fours and put your juicy cunt on display for your chosen suitor.";
+				say "     Allowed entrance to your chambers, they move in around you and start lavishing attention upon you, competing for the opportunity to be the first to earn your favor. Eventually you pick a particularly [one of]dashing[or]well-hung[or]horny[or]aggressive[at random] one while the others start pairing up into groups of two or three while they wait their turn. After the hyena's lavished sufficient attention upon you, you move onto all fours and put your juicy cunt on display for your chosen suitor.";
 				say "     Surprised at such good fortune, the hyena's atop you within moments, driving her cock into your needy cunt and fucking you wildly. While this is going on, you moan for the others to come and you swap between sucking a pair of them off while they're fucked from behind. Giving yourself over to several of the hyenas at once helps satisfy your more submissive tendencies while maintaining control of the gang[if Player is male]. And after all this has gotten you really aroused and worked up, you move on to fucking several of them, filling their wombs with your dominant seed to breed more strong members for your gang[end if]. Once you're satisfied, you have them sent away and head back out into the main area yourself a little later.[impregchance]";
 			else:
-				say ". After the hyena's lavished sufficient attention upon you, grab another member of the group and pull them roughly onto your bed. Driving your throbbing cock into her cunt, you shake your ass and tell your chosen suitor to stick her cock in you while you fuck the others.";
+				say "     Allowed entrance to your chambers, they move in around you and start lavishing attention upon you, competing for the opportunity to be the first to earn your favor. Eventually you pick a particularly [one of]dashing[or]well-hung[or]horny[or]aggressive[at random] one while the others start pairing up into groups of two or three while they wait their turn. After the hyena's lavished sufficient attention upon you, grab another member of the group and pull them roughly onto your bed. Driving your throbbing cock into her cunt, you shake your ass and tell your chosen suitor to stick her cock in you while you fuck the others.";
 				say "     A little surprised, but not one to waste such an opportunity, she moves in behind you. After a [if anallevel is 3]good, long rimming that has her tongue playing around in your asshole[else]quick rimming[end if], you feel that pulsing meat at your asshole and pushing into you. Still wanting more, you moan for the others to come and you swap between sucking a pair of them off while they're fucked from behind. Giving yourself over to several of the hyenas at once helps satisfy your more submissive tendencies while maintaining control of the gang. And after a creamy load in your ass has gotten you really aroused and worked up, you move on to fucking several of them while you're getting fucked in the ass, filling their wombs with your dominant seed to breed more strong members for your gang. And to make sure your suitor doesn't get any ideas, you finish off the fun by fucking her as well[if anallevel is 3] while others lick the leaking cum from your sticky asshole[end if]. Once you're satisfied, you have them sent away and head back out into the main area yourself a little later.[mimpregchance]";
 			hyenaify;
 			hyenaify;
@@ -170,13 +166,12 @@ instead of fucking the gang members:
 		now lastfuck of Gang Members is turns;
 		say "     'Hey, it's our favorite slut!' one of the hyenas calls out as you approach, making you flush as they quickly surround you, their obvious intentions causing your body to clench in anticipation as you automatically drop down on all fours. The surrounding gang members waste no time in taking advantage of your obvious invitation, as they begin to grope and molest your all to eager body. Soon a cock is presented in front of your muzzle and you need no encouragement to open wide and begin licking and sucking it with abandon. You moan as you give yourself up to the pleasure of being used by all the hyenas around you.";
 		if Player is submissive and a random chance of 3 in 5 succeeds:
-			say "     As the hyenas continue to use and abuse you, your submissive instincts have you moaning for more, wanting all that they can give[if Player is male]. Felt unwanted and undeserving of use by both you and the gang members, your cum is left to spray out onto the ground or onto yourself as the lustful hyenas pound away at you[end if]. You're sucking cocks, eating pussies and getting cum upon while they fuck you over and over";
 			if Cunt Count of Player > 1:
-				say ". Having several juicy cunts for them to fill only lets more of them share you at once as your pussies[if anallevel > 1] and stretched asshole[end if] are filled over and over again. Whenever a hole is freed, there's another hyena eager and ready to fill it. Your mind, a haze of submissive hyena instincts, wants nothing more than to fulfill your purpose as a breeding bitch for the gang. These instincts tell you that you're meant to be fucked and bred full of fresh pups for the gang to help it grow stronger. These stronger, dominant hyenas deserve a reward for their work for the gang and fucking you is that reward. Lost in your lustful state, that's all you feel you are - a breeding slut, a reward, a prize to be shared.";
-			else if Cunt Count of Player is 1:
-				say ". Even as your dripping pussy is being stuffed with hyena cock, you're crying out for more. At times, your cries are silenced by a fresh cock being stuffed into your mouth[if anallevel > 1] and into your asshole[end if], but sometimes another of the well-hung members will push his cock in alongside his compatriot's, wedging a second cock into your abused hole[if Cunt Tightness of Player < 6]. And while this may be rather painful the first few times it happens, it also feels wonderful to your needy hole[else if Cunt Tightness of Player < 10]. Your accommodating cunt takes this double-fucking with only a little added stretching, but also feels wonderful to your needy hole[else]. Your wide cunt, built to take bigger lovers, welcomes the additional meat filling you, wanting more hyena cum in it faster[end if]. Your mind, a haze of submissive hyena instincts, wants nothing more than to fulfill your purpose as a breeding bitch for the gang. These instincts tell you that you're meant to be fucked and bred full of fresh pups for the gang to help it grow stronger. These stronger, dominant hyenas deserve a reward for their work for the gang and fucking you is that reward. Lost in your lustful state, that's all you feel you are - a breeding slut, a reward, a prize to be shared.";
+				say "     As the hyenas continue to use and abuse you, your submissive instincts have you moaning for more, wanting all that they can give[if Player is male]. Felt unwanted and undeserving of use by both you and the gang members, your cum is left to spray out onto the ground or onto yourself as the lustful hyenas pound away at you[end if]. You're sucking cocks, eating pussies and getting cum upon while they fuck you over and over. Having several juicy cunts for them to fill only lets more of them share you at once as your pussies[if anallevel > 1] and stretched asshole[end if] are filled over and over again. Whenever a hole is freed, there's another hyena eager and ready to fill it. Your mind, a haze of submissive hyena instincts, wants nothing more than to fulfill your purpose as a breeding bitch for the gang. These instincts tell you that you're meant to be fucked and bred full of fresh pups for the gang to help it grow stronger. These stronger, dominant hyenas deserve a reward for their work for the gang and fucking you is that reward. Lost in your lustful state, that's all you feel you are - a breeding slut, a reward, a prize to be shared.";
+			else if Player is female:
+				say "     As the hyenas continue to use and abuse you, your submissive instincts have you moaning for more, wanting all that they can give[if Player is male]. Felt unwanted and undeserving of use by both you and the gang members, your cum is left to spray out onto the ground or onto yourself as the lustful hyenas pound away at you[end if]. You're sucking cocks, eating pussies and getting cum upon while they fuck you over and over. Even as your dripping pussy is being stuffed with hyena cock, you're crying out for more. At times, your cries are silenced by a fresh cock being stuffed into your mouth[if anallevel > 1] and into your asshole[end if], but sometimes another of the well-hung members will push his cock in alongside his compatriot's, wedging a second cock into your abused hole. [if Cunt Tightness of Player < 6]And while this may be rather painful the first few times it happens, it also feels wonderful to your needy hole[else if Cunt Tightness of Player < 10]Your accommodating cunt takes this double-fucking with only a little added stretching, but also feels wonderful to your needy hole[else]Your wide cunt, built to take bigger lovers, welcomes the additional meat filling you, wanting more hyena cum in it faster[end if]. Your mind, a haze of submissive hyena instincts, wants nothing more than to fulfill your purpose as a breeding bitch for the gang. These instincts tell you that you're meant to be fucked and bred full of fresh pups for the gang to help it grow stronger. These stronger, dominant hyenas deserve a reward for their work for the gang and fucking you is that reward. Lost in your lustful state, that's all you feel you are - a breeding slut, a reward, a prize to be shared.";
 			else:
-				say ". While some of the gang members are disappointed that you don't have a proper breeding hole for them, they're not one to pass up an opportunity to fuck one of the gang's prize bitches either. Whenever either end if freed, there's another hyena eager and ready to fill it. With you always moaning for more, eventually some of them laugh and decide to give it to you. Holding you up between them, a pair of sexy hyena herms drive their thick, bestial rods into your abused hole at the same time. Bouncing up and down on these twin shafts, you moan, pant and whimper as the rough treatment, your slutty nature loving it. When one of them finishes, another hyena replaces them in your stretched out, creamy hole to plug you right up again. You lose track of how many take you in this manner, but eventually the group tires of that fun and drop you back down to the ground on the puddle of cum that's been leaking out of you. From there, it's right back to taking cocks from both ends, though a few ambitious pairs move in to share you side by side to double-stuff you.";
+				say "     As the hyenas continue to use and abuse you, your submissive instincts have you moaning for more, wanting all that they can give[if Player is male]. Felt unwanted and undeserving of use by both you and the gang members, your cum is left to spray out onto the ground or onto yourself as the lustful hyenas pound away at you[end if]. You're sucking cocks, eating pussies and getting cum upon while they fuck you over and over. While some of the gang members are disappointed that you don't have a proper breeding hole for them, they're not one to pass up an opportunity to fuck one of the gang's prize bitches either. Whenever either end if freed, there's another hyena eager and ready to fill it. With you always moaning for more, eventually some of them laugh and decide to give it to you. Holding you up between them, a pair of sexy hyena herms drive their thick, bestial rods into your abused hole at the same time. Bouncing up and down on these twin shafts, you moan, pant and whimper as the rough treatment, your slutty nature loving it. When one of them finishes, another hyena replaces them in your stretched out, creamy hole to plug you right up again. You lose track of how many take you in this manner, but eventually the group tires of that fun and drop you back down to the ground on the puddle of cum that's been leaking out of you. From there, it's right back to taking cocks from both ends, though a few ambitious pairs move in to share you side by side to double-stuff you.";
 				say "     Throughout all this, your mind is a haze of submissive hyena instincts, wanting nothing more than to fulfill your purpose as a fucktoy bitch for the gang. These instincts tell you that you're meant to be fucked [if Player is mpreg_ok]and bred full of fresh pups for the gang to help it grow stronger[else]by your betters and you give as much of yourself as you can[end if]. These stronger, dominant hyenas deserve a reward for their work for the gang and fucking you is that reward. Lost in your lustful state, that's all you feel you are - a [if Player is mpreg_ok]breeding[else]fucktoy[end if] slut, a reward, a prize to be shared.";
 			say "     And shared you are. Swapping positions or swapping out, you are filled again and again from both ends and in every hole. Much to your delight, it just seems to go on and on, more gang members appearing as others finally finish up, spreading the word that you're at the center of a slutty fucking binge. They continue to use you, cumming onto and into you until your stretched, overused holes can't hold in their semen and it's running out of you each time more is pumped into you. And even then, you keep moaning weakly for more. It doesn't stop until you pass out, and even then, you can't be sure if they don't keep using your unconscious body. Certainly when you awaken later, you find yourself in a large, sticky pool of hyena cum that clings to your body, marking you all over the myriad scents of the gang, further reinforcing the fact that you are the property of them all.[impregchance][impregchance][impregchance]";
 			hyenaify;
@@ -220,17 +215,20 @@ instead of fucking the gang members:
 
 Chapter 2 - Gina the Recruiter
 
+GinaDoneTalking is a truth state that varies.[@Tag:NotSaved]
+Ginatalk is a number that varies.
+Ginaslut is a number that varies.
+[ginafucked is a number that varies. ginafucked is usually 0.]
+
 Table of GameCharacterIDs (continued)
 object	name
 Gina	"Gina"
 
 Gina is a woman.
-Description of Gina is "The hyena who recruited you into the gang is lounging around on a pile of cushions nearby, you think her name was Gina.".
-Conversation of Gina is { "Stare!" }.
 Gina is in Hyena hideout.
-
-instead of sniffing Gina:
-	say "Gina smells like a strong, confident hyena herm. Her musky scent is quite arousing[if matriarchdefeated is 2], making you want to submit to her like the bitch you are deep inside[end if].";
+Description of Gina is "     The hyena who recruited you into the gang is lounging around on a pile of cushions nearby, you think her name was Gina.[line break]".
+[Conversation of Gina is { "Stare!" }.]
+Scent of Gina is "     Gina smells like a strong, confident hyena herm. Her musky scent is quite arousing[if matriarchdefeated is 2], making you want to submit to her like the bitch you are deep inside[end if].".
 
 instead of conversing the Gina:
 	project the Figure of Gina_face_icon;
@@ -248,14 +246,11 @@ instead of conversing the Gina:
 		say "     [one of]'If ya need any help around here, just let me know,' she says with a wink.[or]'Better steer clear of the capitol building if ya head back out there. Even we aren't crazy enough to get involved in whatever is going on over there.'[or]'Wonder what's going on with people outside the city, I'd love to get my old family in the gang.'[or]'Saw a couple deer over near the park earlier, I know they used to be people to, but damn it made me hungry watching [']em prance around.'[or]'Did ya know regular hyenas aren't fully functional with both sets of equipment?' Gina says as she strokes herself slowly, 'Dunno why we're different, but I sure ain't complaining.'[or]'Their still fighting it out over who's more dominant, should have a matriarch soon though.'[or]'Careful if you go near the Trevor labs building, there's a dragoness in there that's pretty tough. Won't let anyone in to loot the place, kinda makes you wonder what she's hidin['].'[or]'Life as a hyena is just so much better than anything else, don't you agree?'[or]'There are some crazy things wandering around out there,' Gina says with a thoughtful look. 'I've seen latex dolls, giant cocks, and some of the others have even reported living stuffed animals out there. Makes me glad I ended up a hyena,' she finishes with a cackling laugh. 'We at least know how to have fun.'[at random]";
 	WaitLineBreak;
 	say "     You then tell Gina you would like to speak to her about something, and she turns her full attention to you, 'Oh, yeah, shoot it hun. What did ya wanna ask?' she replies with a confident smile on her muzzle.";
-	say "[GinaTalkMenu]";
-
-GinaDoneTalking is a truth state that varies.[@Tag:NotSaved]
+	say "[line break][GinaTalkMenu]";
 
 to say GinaTalkMenu:
 	now GinaDoneTalking is false;
 	say "     [bold type]What do you want to talk about with Gina?[roman type][line break]";
-	LineBreak;
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]
@@ -294,25 +289,27 @@ to say GinaTalkMenu:
 			choose row calcnumber in table of fucking options;
 			say "[title entry]: [description entry]?";
 			if Player consents:
-				let nam be title entry;
+				LineBreak;
 				now sextablerun is 1;
-				if (nam is "Herself"):
-					say "[GinaTalkHerself]";
-				else if (nam is "Sex"):
-					say "[GinaTalkSex]";
-				else if (nam is "Hyena Bikers"):
-					say "[GinaTalkBikers]";
-				else if (nam is "Matriarch"):
-					say "[GinaTalkMatriarch]";
+				if title entry is:
+					-- "Herself":
+						say "[GinaTalkHerself]";
+					-- "Sex":
+						say "[GinaTalkSex]";
+					-- "Hyena Bikers":
+						say "[GinaTalkBikers]";
+					-- "Matriarch":
+						say "[GinaTalkMatriarch]";
 				wait for any key;
 				if GinaDoneTalking is false:
 					say "[GinaTalkMenu]"; [looping back to keep talking with him]
 		else if calcnumber is 0:
+			LineBreak;
 			now sextablerun is 1;
 			say "     You excuse yourself as you get up, finishing any pending subjects with Gina.";
 			wait for any key;
 		else:
-			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options], or 0 to exit.";
 	clear the screen and hyperlink list;
 
 to say GinaTalkHerself:
@@ -337,6 +334,7 @@ to say GinaTalkMatriarch:
 		say "     You decide to ask Gina about this new matriarch she was talking about before, wondering what this is all about. 'Oh yeah! So, as ya prolly know, things back there were pretty chaotic without some sort of iron fist, and after plenty of [']negotiations['], someone finally stepped up. Now we got a matriarch, and in order to show her might and power, she's inviting anyone to challenge her in a fight. Course ya got to defeat a few of her guards first to prove yourself worth and all, still the winner would automatically become the new boss, so that's a pretty big incentive there.' Gina seems a bit impressed at the thought, before shaking herself slightly. 'Not for me though, I'm pretty happy where I'm at, but maybe someone else would like to give it a shot?' she makes the suggestion as her eyes glance back at you.";
 		say "     'What d'ya think? Wanna try to challenge her?' she asks, looking at you expectantly, almost as if encouraging you.";
 		if Player consents:
+			LineBreak;
 			if Player is male:
 				now GinaDoneTalking is true;
 				say "     You tell her you would like to, and her eyes widen excitedly for a second, but her expression then shifts into one of slight worry. 'Well, okay hun... If you're sure you want to give it a try. Be careful though,' she warns you as she begins to lead you back into the deeper part of the warehouse. 'She didn't get to be where she is by being anything but the most dominant hyena around, and losing could really set you low on the pecking order.' Seeing your determined expression, she leads you to a curtained area with several other hyenas lounging around nearby, and announces your challenge to the area in general. As word spreads and gang members from all over the warehouse run over to watch, you hear a dominant voice growl out from behind the curtain 'Challenge accepted!' You have a second to reconsider as the largest hyena you have yet seen emerges from the curtain, her posture and musk reeking with dominance, before one of her hyena guards barrels into you and the fight is on!";
@@ -349,10 +347,12 @@ to say GinaTalkMatriarch:
 			else:
 				say "     You want to, and voice your intention, but Gina stops herself from continuing as she gestures at your crotch, 'Oh, sorry hun, you... Kind of lack the equipment for that sort of challenge right now. Maybe you should hang out with us hyenas a bit more, hmm?'";
 		else:
+			LineBreak;
 			say "     You tell her you would rather not, at least right now. The hopeful gleam in her eyes vanishes as her expression returns to one of understanding. 'Alright, that's probably for the best, hun,' Gina says with a nod of her furry head. 'Things are a bit touchy right now with the new matriarch and all, and if you lost, she would probably end up making an example out of you anyway.'";
 	else if matriarchdefeated is 1:
 		say "     You decide to ask Gina about the matriarch, accounting for the fact that you have lost to her once already, 'Things are going pretty well under the new matriarch,' Gina says as you settle down to chat, 'There are still few mutters, but most of us think we got a pretty good thing going on right now, even heard she has some kind of plan to deal with the military when they come.' Gina grins at that thought. 'They won't know what hit [']em,' she says, her grin turning positively feral. '[']Course the matriarch is still accepting challengers if anyone wants to give it a shot, but after what happened with you, it doesn't look like anyone else is eager to step up,' she says, shooting you a sidelong look. 'Still looks like anyone can step up and try, even you could try taking her on again if you really wanted. But you wouldn't be crazy enough to try challenging her again, now would ya?' Gina says with a smirk.";
 		if Player consents:
+			LineBreak;
 			if Player is male:
 				now GinaDoneTalking is true;
 				say "     You tell her you would like to, even against all odds. 'You would?' Gina says with surprise. 'Well, if you're sure you want to try again, I won't stop you from trying,' Gina says as she leads you back once more to the matriarchs den. 'Be careful though, much more of the matriarch's brand of submissiveness training, and I doubt you would be able to be dominant to pretty much anyone here anymore,' she finishes before you once more find yourself before the curtained area with the crowd gathering. You brace yourself this time as one of the guards charges you and the fight is on again.";
@@ -368,14 +368,10 @@ to say GinaTalkMatriarch:
 			else:
 				say "     You want to, and voice your intention, but Gina stops herself from continuing as she gestures at your crotch, 'Oh, sorry hun, you... Kind of lack the equipment for that sort of challenge right now. Maybe you should hang out with us hyenas a bit more, hmm?'";
 		else:
+			LineBreak;
 			say "     You tell her you would rather not, at least right now, since things have not gone well for you last time you attempted to challenge her. 'That's probably for the best hun,' Gina says with a nod of her furry head. 'After your last showing, if you ended up losing to her again you could be in deep trouble, unless of course you want to be a submissive little pet hyena,' Gina says as she cocks her head to look you over carefully, 'And if that's the case you can just let me know and Gina here will take good care of you,' she says with a leer";
 	else if matriarchdefeated is 2:
 		say "     You decide to ask Gina about the matriarch, and after your second defeat, it is doubtful that you could have another chance at challenging her. 'How are ya doing now? After your last couple showings the matriarch won't fight you again, and I can't really say I blame her after your last showing. The rest of the gang probably wouldn't stand for it either, not when you've proven yourself to be such a good submissive breeder for the gang. You should probably just give up and accept your place from now on, especially given how much you seemed to enjoy it,' Gina says with a bit of a leer. 'Though I think we could still have some fun together if you want, and the rest of the gang certainly wouldn't mind a few rounds with one of their favorite breeding sluts. But at least it looks like you've found your place here from now on,' Gina finishes up, causing you to blush as you remember your wanton and submissive actions underneath the matriarch.";
-
-
-Ginatalk is a number that varies.
-Ginaslut is a number that varies.
-ginafucked is a number that varies. ginafucked is usually 0.
 
 instead of fucking Gina:
 	project the Figure of Gina_face_icon;
@@ -384,63 +380,60 @@ instead of fucking Gina:
 	else if lastfuck of Gina - turns < 8:
 		say "     You make a suggestive approach towards the hyena, making your intentions clear with her as you let her know how you would like to have some fun with her. She smiles back at you, even laughs, but you can tell she is not in the mood for it right now. 'Sorry, hun. Still recovering from our last little romp,' she says with a wink.";
 	else:
-		say "     You make a suggestive approach towards the hyena, making your intentions clear with her as you let her know how you would like to have some fun with her";
 		if matriarchowned is 1:
-			say ". Gina smiles as you approach, before leading you back to the matriarchs quarters. 'I was wondering when you'd come ask me for some fun again,' she says as she lies back on the cushions, awaiting you.";
+			say "     You make a suggestive approach towards the hyena, making your intentions clear with her as you let her know how you would like to have some fun with her. Gina smiles as you approach, before leading you back to the matriarchs quarters. 'I was wondering when you'd come ask me for some fun again,' she says as she lies back on the cushions, awaiting you.";
 		else if matriarchdefeated is 2:
-			say ". 'Look who stopped by,' Gina says as you approach, grinning as she notes your obvious desires, 'And it looks like you need a little help from your old friend Gina,' she says as she reaches out and roughly drags you down onto the mattress beside her.";
+			say "     You make a suggestive approach towards the hyena, making your intentions clear with her as you let her know how you would like to have some fun with her. 'Look who stopped by,' Gina says as you approach, grinning as she notes your obvious desires, 'And it looks like you need a little help from your old friend Gina,' she says as she reaches out and roughly drags you down onto the mattress beside her.";
 		else if ginaslut is 3:
-			say ". She gives you a lewd grin and, before you can react, she reaches out and hauls you down onto the mattress beside her, 'Oh good,' she says with a feral grin on her muzzle. 'This news of a new matriarch has been making me so damn horny lately. I was hoping you would stop by.'";
+			say "     You make a suggestive approach towards the hyena, making your intentions clear with her as you let her know how you would like to have some fun with her. She gives you a lewd grin and, before you can react, she reaches out and hauls you down onto the mattress beside her, 'Oh good,' she says with a feral grin on her muzzle. 'This news of a new matriarch has been making me so damn horny lately. I was hoping you would stop by.'";
 		else:
-			say ". She gives you a lewd grin and, before you can react, she reaches out and hauls you down onto the mattress beside her. 'And I was just thinking the same.'";
-		say "     [bold type]What would you like to do with Gina?[roman type][line break]";
-		say "[GinaSexMenu]";
-
-to say GinaSexMenu:
-	now sextablerun is 0;
-	blank out the whole of table of fucking options;
-	[]
-	if player is male and matriarchdefeated < 2:
+			say "     You make a suggestive approach towards the hyena, making your intentions clear with her as you let her know how you would like to have some fun with her. She gives you a lewd grin and, before you can react, she reaches out and hauls you down onto the mattress beside her. 'And I was just thinking the same.'";
+		say "[line break]     [bold type]What would you like to do with Gina?[roman type][line break]";
+		now sextablerun is 0;
+		blank out the whole of table of fucking options;
+		[]
+		if player is male and matriarchdefeated < 2:
+			choose a blank row in table of fucking options;
+			now title entry is "Fuck her pussy";
+			now sortorder entry is 1;
+			now description entry is "Offer to fuck her";
+		[]
 		choose a blank row in table of fucking options;
-		now title entry is "Fuck her pussy";
-		now sortorder entry is 1;
-		now description entry is "Offer to fuck her";
-	[]
-	choose a blank row in table of fucking options;
-	now title entry is "Get fucked";
-	now sortorder entry is 2;
-	now description entry is "Tell her you would like her cock inside you";
-	[]
-	sort the table of fucking options in sortorder order;
-	repeat with y running from 1 to number of filled rows in table of fucking options:
-		choose row y from the table of fucking options;
-		say "[link][y] - [title entry][as][y][end link][line break]";
-	say "[link]0 - Nevermind[as]0[end link][line break]";
-	while sextablerun is 0:
-		say "Pick the corresponding number> [run paragraph on]";
-		get a number;
-		if calcnumber > 0 and calcnumber <= the number of filled rows in table of fucking options:
-			now current menu selection is calcnumber;
-			choose row calcnumber in table of fucking options;
-			say "[title entry]: [description entry]?";
-			if Player consents:
-				let nam be title entry;
+		now title entry is "Get fucked";
+		now sortorder entry is 2;
+		now description entry is "Tell her you would like her cock inside you";
+		[]
+		sort the table of fucking options in sortorder order;
+		repeat with y running from 1 to number of filled rows in table of fucking options:
+			choose row y from the table of fucking options;
+			say "[link][y] - [title entry][as][y][end link][line break]";
+		say "[link]0 - Nevermind[as]0[end link][line break]";
+		while sextablerun is 0:
+			say "Pick the corresponding number> [run paragraph on]";
+			get a number;
+			if calcnumber > 0 and calcnumber <= the number of filled rows in table of fucking options:
+				now current menu selection is calcnumber;
+				choose row calcnumber in table of fucking options;
+				say "[title entry]: [description entry]?";
+				if Player consents:
+					LineBreak;
+					now sextablerun is 1;
+					if title entry is:
+						-- "Fuck her pussy":
+							say "[GinaSexFuck]";
+						-- "Get fucked":
+							say "[GinaSexGetFucked]";
+			else if calcnumber is 0:
+				LineBreak;
 				now sextablerun is 1;
-				if (nam is "Fuck her pussy"):
-					say "[GinaSexFuck]";
-				else if (nam is "Get fucked"):
-					say "[GinaSexGetFucked]";
-				wait for any key;
-		else if calcnumber is 0:
-			now sextablerun is 1;
-			say "     You politely excuse yourself, as you have changed your mind. She simply nods.";
-			wait for any key;
-		else:
-			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
-	clear the screen and hyperlink list;
+				say "     You politely excuse yourself, as you have changed your mind. She simply nods.";
+			else:
+				say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options], or 0 to exit.";
+		wait for any key;
+		clear the screen and hyperlink list;
 
 to say GinaSexFuck:
-	say "     You have only one thing in your mind as you give your own parts a stroke, your [cock of player] hardening at the mere thought of being inside her. She grins as she gets the hint, reaching down to caress your stiffening manhood right then. 'Mhm... I too know what I want,' she mutters as she pushes your back into the mattress and climbs over you. one paw reaching behind your head and pulling you into a deep wet kiss, rough but intense, passionate almost, while her other slowly guides your cock into her hot folds. You take it she is not one for a lot of foreplay, and as soon as you feel her warm sex touching yours, your cock throbs with the anticipation. However, as soon as you think she is about to sit on it, she merely begins to rub her lower lips against your shaft in a tease. 'Ya didn't think I'd wanna get it done so fast, did ya?'";
+	say "     You have only one thing in your mind as you give your own parts a stroke, your [cock of player] hardening at the mere thought of being inside her. She grins as she gets the hint, reaching down to caress your stiffening manhood right then. 'Mhm... I too know what I want,' she mutters as she pushes your back into the mattress and climbs over you, one paw reaching behind your head and pulling you into a deep wet kiss, rough but intense, passionate almost, while her other slowly guides your cock into her hot folds. You take it she is not one for a lot of foreplay, and as soon as you feel her warm sex touching yours, your cock throbs with the anticipation. However, as soon as you think she is about to sit on it, she merely begins to rub her lower lips against your shaft in a tease. 'Ya didn't think I'd wanna get it done so fast, did ya?'";
 	say "     As she laughs, the teasing continues, only further hardening your meaty length until you are leaking, desperate to feel something warm and tight around it. Her expert movements are enough to make you want to beg for it, but instead, your hands tighten around her hips as you hold your entire will to thrust into her hard and deep, saving it for when you can actually do it. Sensing this impending desire overcoming you, she finally raises her bottom and rubs her curls against the wet tip of your cock, looking down at your eyes as you look back at hers. Before you can take any initiative on your own, she holds you down, her muscular body and weight enough to keep you in place as she takes her time... 'Need ya as hard as y'can be... And I mean it.' The pent-up lust compels you to bite your own lip as your heartbeat intensifies, threatening to jump off your chest.";
 	WaitLineBreak;
 	say "     What she is doing is definitely working on you, as you feel yourself becoming more and more feral and primal in mind. What was merely a lustful thought is now a necessity, you must take her and fill her up with all you have got. She says nothing more, her grin being the only words you need as she begins to descend on you, her wet labia wrapping around your shaft as her sex welcomes yours with a pleasant tightness. Soon, you can feel her cunt massaging your cock, and the deeper you go, the more blissful it feels. Your view is also complemented by the sight of her powerful body and a large throbbing cock that bounces up and down as she grinds herself on you, [if cock length of player > 12]taking as much of your sizable manhood as she can inside her[else]taking your entire manhood, down to the base of your shaft, inside her[end if].";
@@ -448,7 +441,6 @@ to say GinaSexFuck:
 	WaitLineBreak;
 	say "     The muscular hyena feels this, and as expected, she does not let go. Instead, she intensifies it, putting her upper body's weight on you as he holds you down by the chest and really puts in the additional effort to milk you with her pussy. 'What are ya waiting for?' she asks teasingly, still grinning as her boobs hover just above your face. The sensations prove to be too much for your aching body and, within a matter of seconds, you quiver and squirm in pleasure as you start shooting inside the hyena's cunt, filling her with your seed. Each spurt causes a surge of joyful bliss to overtake your senses. While your climax endures, she straightens herself up and takes a hold of her own shaft, to then drive herself to the already close edging point.";
 	say "     She looks down at you with a happy smile, waiting for your orgasm to subside with a hint of amusement in her muzzle. 'Where d'ya want mine?' she asks, giving herself slow strokes around the tip of her cock, awaiting an answer from you.";
-	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Swallow her cum.";
 	say "     ([link]N[as]n[end link]) - Let her cum all over you.";
 	if Player consents:
@@ -462,12 +454,10 @@ to say GinaSexFuck:
 	increase ginaslut by 1;
 
 to say GinaSexGetFucked:
-	say "     You have only one thing in your mind as you give her crotch an obvious glance, one that she immediately catches. 'I see what ya want, I was thinking of the same thing";
 	if matriarchdefeated is 2:
-		if player is male:
-			say "... Besides, this little playtoy is pretty useless now, isn't it?' she says with a hyena-like grin as she pokes your flaccid member. 'After all, little breeding hyenas don't get to spread their submissive little seed.'";
-		else:
-			say "... Besides, don't ya just like being a little playtoy for the bigger, stronger hyenas around here? Bet ya can't stop thinking about it... Always wanting a big cock inside ya...'";
+		say "     You have only one thing in your mind as you give her crotch an obvious glance, one that she immediately catches. 'I see what ya want, I was thinking of the same thing... Besides, [if player is male]this little playtoy is pretty useless now, isn't it?' she says with a hyena-like grin as she pokes your flaccid member. 'After all, little breeding hyenas don't get to spread their submissive little seed.'[else]don't ya just like being a little playtoy for the bigger, stronger hyenas around here? Bet ya can't stop thinking about it... Always wanting a big cock inside ya...'[end if]";
+	else:
+		say "     You have only one thing in your mind as you give her crotch an obvious glance, one that she immediately catches. 'I see what ya want, I was thinking of the same thing...'";
 	if Player is female:
 		say "     As she says this, she grins before making the move to flip you over and making you lie down beneath her with one rough, domineering gesture. 'Now that you've found out what you are good for around here,' Gina says as she drags you underneath her on the mattress, 'We should put your slutty body to work. After all, it's not like ya're good for anything else,' she says as she positions herself above you, her words causing your body to flush and if anything, causes your need to grow even greater. Ready to take you, she slides her already throbbing erection between your legs and presses against your folds, your body opening itself up with yearn, as you moan in pleasure.";
 		say "     'That's it, ya good [boygirl]...' Gina teases as she leans into your ear, continuing to thrust into you, 'Ya love it, don't ya? Being my little slut, getting fucked hard and deep... This is what ya're good for,' she growls out her words in between thrusts, her dirty words exciting you even more in conjunction with her forceful thrusts as she takes possession of your body. There is nothing else but the primal desire to fuck, and she takes the lead masterfully, her cock pulsating inside your cunt as it drills you deep, penetrating you relentlessly.";
@@ -484,7 +474,6 @@ to say GinaSexGetFucked:
 		NPCSexAftermath Player receives "AssFuck" from Gina;
 	hyenaify;
 	increase ginaslut by 1;
-
 
 [now lastfuck of Gina is turns;
 if matriarchowned is 1:
@@ -530,7 +519,6 @@ else:
 	hyenaify;
 	increase ginaslut by 1;]
 
-Section 4 - Quest Pieces
-
+Part 4 - Quest Pieces
 
 Hyena Gang ends here.

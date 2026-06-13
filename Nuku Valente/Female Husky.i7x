@@ -8,28 +8,10 @@ Version 3 of Female Husky by Nuku Valente begins here.
 
 "Places the original Female Husky creature in a separate file for updated use."
 
-to say GenerateTrophyList_Husky_Bitch:
-	[ Reminder: LootBonus can be +35 at maximum - 10 for Magpie Eyes, 15 for Mugger and 10 from Player Perception]
-	if a random chance of (80 + LootBonus) in 100 succeeds: [common drop]
-		add "husky bitch fur" to CombatTrophyList;
-	if a random chance of (50 + LootBonus) in 100 succeeds: [common drop]
-		add "dirty water" to CombatTrophyList;
-	if a random chance of (30 + LootBonus) in 100 succeeds: [uncommon drop]
-		add "food" to CombatTrophyList;
-	if a random chance of (20 + LootBonus) in 100 succeeds: [uncommon drop]
-		add "soda" to CombatTrophyList;
-	if a random chance of (10 + LootBonus) in 100 succeeds: [rare drop]
-		add "clean bandages" to CombatTrophyList;
-	if a random chance of (10 + LootBonus) in 100 succeeds: [rare drop]
-		add "tennis ball" to CombatTrophyList;
-	if Debug is at level 10:
-		say "DEBUG: Trophy List: [CombatTrophyList].";
-
 Section 1 - Creature Responses
 
 to say femalehuskydesc:
-	let RandomizedHuskyBitch be a random number from 1 to 5;
-	if RandomizedHuskyBitch is:
+	if a random number from 1 to 5 is:
 		-- 1: [mindless whore]
 			say "     You run into a beautiful anthro canine covered in soft, snowy fur. She has a slim, feminine muzzle and perky, overly large ears, along with a large, fluffy husky tail. Her chest bears two firm and grope-able C cup breasts along with two B cup pairs of breasts underneath them, all of them oozing small droplets of milk. The female dog's cream-colored tummy is slightly swollen as if she is barely pregnant, though that will probably change soon if the aching need oozing from her swollen slit is anything to judge by. It's obvious that she's become nothing more than a needy whore, happy to be full of pups and eager to be bred again and again.";
 		-- 2: [flirty]
@@ -77,48 +59,35 @@ to say fhuskywinner:
 		CreatureSexAftermath "Player" receives "OralPussy" from "Husky Bitch";
 
 to say fhuskybeaten:
-	let RandomizedHuskybitch be a random number from 1 to 3;
-	if RandomizedHuskybitch is:
-		-- 1:
-			say "     The husky bitch whimpers as you rebuff her advances yet again, exhaustedly swaying on her paws. Your fight really took it out of her. 'I'm sorry! Didn't mean to make you angry,' she calls out and starts to turn around, wanting to run, but somehow simply stumbles over her own paws. Falling onto the ground, she looks up at you fearfully, her wide, doe-like eyes glistening with terror. With a sniff, she adds in a trembling voice, 'Don't hurt me! I can be a good girl for you...' The way her legs spread a little, presenting the wet slit of her canine pussy, leaves little to the imagination of what she is offering right now";
-		-- 2:
-			say "     Exhausted, the husky bitch slumps against you, now simply trying to keep standing on very shaky legs. Your fight really took it out of her and there are tears streaming along her furry cheeks. 'I shouldn't have been so pushy, sorry! The urges are just so strong,' she whimpers, fearfully glancing up at your face. 'Should have known that I can't make someone like you do anything they don't want. Can, - can I just be a good girl for you instead? Please, I need it!' She starts brushing her paw-hands at you gently, trying to offer sex as an apology";
-		-- 3:
-			say "     Exhausted, the husky bitch slumps against you, now simply trying to keep standing on very shaky legs. Your fight really took it out of her and there are tears streaming along her furry cheeks. The sounds she makes aren't even words, simply submissive whimpers as she fearfully glances up at your face. Seems like she's realized that you're too strong for her to beat. She starts brushing her paw-hands at you gently, touching and licking your skin in an apologetic gesture";
-	let domtempting be false;
-	if HP of Dominick >= 60 and HP of Dominick < 100 and Player is female and ( BodyName of Player is "Breederslut" or FaceName of Player is "Breederslut" ) and inasituation is false:
-		now domtempting is true;
-		say ". The sight of her sends a tingle of excitement through your cunt. This cute husky girl might make a good breeder pet for Dominick. The prospect of pleasing him ends a second shiver of lust through you";
-		if Player is male:
-			say ". [bold type]You could prepare her to become another slutty pet for the alpha stud, though perhaps you might just having some fun of your own.[roman type][line break]";
-		else:
-			say ". [bold type]You could prepare her to become another slutty pet for the alpha stud or just let her go.[roman type][line break]";
-	else if Player is male:
-		say ". You find yourself considering having some fun with the anthro husky's shapely body. [bold type]Do you take advantage of the situation and her to sate your lusts?[roman type][line break]";
+	say "     [one of]The husky bitch whimpers as you rebuff her advances yet again, exhaustedly swaying on her paws. Your fight really took it out of her. 'I'm sorry! Didn't mean to make you angry,' she calls out and starts to turn around, wanting to run, but somehow simply stumbles over her own paws. Falling onto the ground, she looks up at you fearfully, her wide, doe-like eyes glistening with terror. With a sniff, she adds in a trembling voice, 'Don't hurt me! I can be a good girl for you...' The way her legs spread a little, presenting the wet slit of her canine pussy, leaves little to the imagination of what she is offering right now[or]Exhausted, the husky bitch slumps against you, now simply trying to keep standing on very shaky legs. Your fight really took it out of her and there are tears streaming along her furry cheeks. 'I shouldn't have been so pushy, sorry! The urges are just so strong,' she whimpers, fearfully glancing up at your face. 'Should have known that I can't make someone like you do anything they don't want. Can, - can I just be a good girl for you instead? Please, I need it!' She starts brushing her paw-hands at you gently, trying to offer sex as an apology[or]Exhausted, the husky bitch slumps against you, now simply trying to keep standing on very shaky legs. Your fight really took it out of her and there are tears streaming along her furry cheeks. The sounds she makes aren't even words, simply submissive whimpers as she fearfully glances up at your face. Seems like she's realized that you're too strong for her to beat. She starts brushing her paw-hands at you gently, touching and licking your skin in an apologetic gesture[at random]";
+	if HP of Dominick >= 10 and HP of Dominick < 20 and Player is female and ( BodyName of Player is "Breederslut" or FaceName of Player is "Breederslut" ) and inasituation is false:
+		say ". The sight of her sends a tingle of excitement through your cunt. This cute husky girl might make a good breeder pet for Dominick. The prospect of pleasing him ends a second shiver of lust through you. [bold type]You could prepare her to become another slutty pet for the alpha stud[if Player is male], though perhaps you might just have some fun of your own[else] or just let her go[end if].[roman type][line break]";
 	else:
-		say ". [bold type]You find yourself considering having some fun with the anthro husky's shapely body, but can't really decide what to do at this time.[roman type][line break]";
+		say ". You find yourself considering having some fun with the anthro husky's shapely body. [bold type]Do you take advantage of the situation and her to sate your lusts?[roman type][line break]";
+	[else:
+		say ". [bold type]You find yourself considering having some fun with the anthro husky's shapely body, but can't really decide what to do at this time.[roman type][line break]";]
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]
-	if domtempting is true:
-		choose a blank row in table of fucking options;
-		now title entry is "Recruit for Dominick";
-		now sortorder entry is 1;
-		now description entry is "Send the lust-crazed husky to Dom to be bred";
-	[]
-	if "Dominant" is listed in feats of Player and Player is male and Cock Length of Player > 5 and player is knotted:
-		choose a blank row in table of fucking options;
-		now title entry is "Dominate and tie";
-		now sortorder entry is 2;
-		now description entry is "Take what you want and knot the husky bitch's hot cunt";
-	[]
 	if Player is male:
+		if "Dominant" is listed in feats of Player and Cock Length of Player > 5 and player is knotted:
+			choose a blank row in table of fucking options;
+			now title entry is "Dominate and tie";
+			now sortorder entry is 2;
+			now description entry is "Take what you want and knot the husky bitch's hot cunt";
+		[]
 		choose a blank row in table of fucking options;
 		now title entry is "Fuck her";
 		now sortorder entry is 3;
 		now description entry is "Get your rocks off by fucking the husky bitch";
 	[]
 	if Player is female:
+		if HP of Dominick >= 10 and HP of Dominick < 20 and ( BodyName of Player is "Breederslut" or FaceName of Player is "Breederslut" ) and inasituation is false:
+			choose a blank row in table of fucking options;
+			now title entry is "Recruit for Dominick";
+			now sortorder entry is 1;
+			now description entry is "Send the lust-crazed husky to Dom to be bred";
+		[]
 		choose a blank row in table of fucking options;
 		now title entry is "Lesbian licking";
 		now sortorder entry is 4;
@@ -126,9 +95,10 @@ to say fhuskybeaten:
 	[]
 	choose a blank row in table of fucking options;
 	now title entry is "Lick her cunt";
-	now sortorder entry is 9;
+	now sortorder entry is 5;
 	now description entry is "Eat out that juicy canine muff";
 	[]
+	sort the table of fucking options in sortorder order;
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
 		say "[link][y] - [title entry][as][y][end link][line break]";
@@ -142,37 +112,35 @@ to say fhuskybeaten:
 			choose row calcnumber in table of fucking options;
 			say "[title entry]: [description entry]?";
 			if Player consents:
-				let nam be title entry;
+				LineBreak;
 				now sextablerun is 1;
-				if nam is "Fuck her":
-					say "[fhuskybeaten_01]";
-				else if nam is "Recruit for Dominick":
-					say "[fhuskybeaten_dom]";
-				else if nam is "Dominate and tie":
-					say "[fhuskybeaten_02]";
-				else if nam is "Lesbian licking":
-					say "[fhuskybeaten_03]";
-				else if nam is "Lick her cunt":
-					say "[fhuskybeaten_04]";
-				wait for any key;
+				if title entry is:
+					-- "Fuck her":
+						say "[fhuskybeaten_01]";
+					-- "Recruit for Dominick":
+						say "[fhuskybeaten_dom]";
+					-- "Dominate and tie":
+						say "[fhuskybeaten_02]";
+					-- "Lesbian licking":
+						say "[fhuskybeaten_03]";
+					-- "Lick her cunt":
+						say "[fhuskybeaten_04]";
 		else if calcnumber is 0:
+			LineBreak;
 			say "     Having fought off her wild advances and driven her back, you see little in continuing to hurt the poor creature. You simply push her away and decide against harming her further, simply leaving her there.";
 			now sextablerun is 1;
-	clear the screen and hyperlink list;
+		else:
+			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options], or 0 to exit.";
 
 to say fhuskybeaten_01:
 	say "     Deciding on enjoying yourself with the now oh so plyable anthro, you push her down onto the ground. She automatically adopts a position on all fours, head lowered while her ass is raised high, offering her holes under a stiff, raised tail. Eager to taste the fruits of your victory, you [SelfStripCrotch], step up behind her. Reaching out, you grab the needy bitch by the ass and her ears perk up a little. As you go on to stroke over her furred ass and thighs, enjoying the feeling of touching the tick, soft coat, she calms down a little, finding herself in a familiar position of submitting to a dominant partner. The husky braces herself and her tail starts to wag a little bit as she looks back over her shoulder.";
-	say "     Presented with such a tempting offer, you can't hold back. Leaning forward, you reach between the woman's legs and rub her sex, feeling her wetness on your fingers before ";
-	if Player is sheathed:
-		say "dropping on all fours as well. The motion suits your sheath-enclosed member, which slides through the soft tube of furred flesh, triggering a rush of pleasure as you mount the husky, pressing your [one of]dribbling[or]precum-leaking[at random] tip against the dog's snatch. Then, with little need to prepare the hot and ready bitch, you thrust and bury yourself in her welcoming pussy, drawing a pleased sigh as you give the aroused woman what she craves. She pushes back eagerly as your slick shaft spears in, spreading her folds around the girth of your erection. Wrapping your arms around her chest and beginning to thrust, you pant loudly as the well-rounded female dog's inner walls envelop your [Cock of Player] shaft and squeeze it enticingly. Now literally having a bitch in heat moaning beneath you as you hump into her, you feel on top of the world!";
-	else:
-		say "crouching down. Taking hold of the base of your already hard [Cock of Player] shaft and rubbing the pre-dribbling tip against her sex, your attention is drawn to the sheen of wetness on your shaft as you pull back a moment later. She's wet and ready for you to take her! With a grin on your face, you then push in, your breath coming a little quicker as her folds open around your slick shaft. Gripping the sides of her hips, you push further and further into the quite eager husky, reveling in the lustful groan escaping her muzzle as you bottom out and grind your crotch against her buttocks. As you begin to thrust, pistoning in and out of the needy slut, you can feel her clench around you and push back to meet your hips. Literally having a bitch in heat moaning beneath you as you hump into her, you feel on top of the world!";
+	say "     Presented with such a tempting offer, you can't hold back. Leaning forward, you reach between the woman's legs and rub her sex, feeling her wetness on your fingers before [if Player is sheathed]dropping on all fours as well. The motion suits your sheath-enclosed member, which slides through the soft tube of furred flesh, triggering a rush of pleasure as you mount the husky, pressing your [one of]dribbling[or]precum-leaking[at random] tip against the dog's snatch. Then, with little need to prepare the hot and ready bitch, you thrust and bury yourself in her welcoming pussy, drawing a pleased sigh as you give the aroused woman what she craves. She pushes back eagerly as your slick shaft spears in, spreading her folds around the girth of your erection. Wrapping your arms around her chest and beginning to thrust, you pant loudly as the well-rounded female dog's inner walls envelop your [Cock of Player] shaft and squeeze it enticingly. Now literally[else]crouching down. Taking hold of the base of your already hard [Cock of Player] shaft and rubbing the pre-dribbling tip against her sex, your attention is drawn to the sheen of wetness on your shaft as you pull back a moment later. She's wet and ready for you to take her! With a grin on your face, you then push in, your breath coming a little quicker as her folds open around your slick shaft. Gripping the sides of her hips, you push further and further into the quite eager husky, reveling in the lustful groan escaping her muzzle as you bottom out and grind your crotch against her buttocks. As you begin to thrust, pistoning in and out of the needy slut, you can feel her clench around you and push back to meet your hips. Literally[end if] having a bitch in heat moaning beneath you as you hump into her, you feel on top of the world!";
 	WaitLineBreak;
 	if Player is knotted:
 		say "     Fucking a sexy female in the literal doggy-style position somehow seems to resonate very well with your [CockName of Player in lower case] manhood, and you can feel the bulge at its base start to throb. Popping it past the opening of your canine partner makes each thrust all the more enjoyable for both of you, with her quickly picking up on the fact that she's about to be bred 'properly' by a cock that's just right for her canine snatch. Hammering into the dog as she moans and barks in arousal, you feel the your climax rush towards you faster than you'd think was possible. With a loud howl of pure lust, you feel your knot swell and bulge, locking you within the canine as your shaft starts to throb and pulse... a long, continual climax, for as long as you remain swollen and tied to the bitch. After the first two or three blasts of your seed into her, the husky lets out a breathless and quite high-pitched howl as she orgasms, driven over the edge by the sensations of being bred.";
 		say "     After you don't know (or really care) how long of shuddering, wanton bliss and holding on to the warm form of the canine beneath you, the swollen bulge of your knot eventually starts to soften inside your freshly-bred bitch. Resting inside her with your manhood buried balls-deep, with the soft fur of her coat against your skin and the warm, squishy feeling of a cum-filled pussy around your shaft, you almost want to stay like this forever. The anthro husky doesn't seem to mind either, relaxedly standing on all fours and with her bent-aside tail twitching a bit. No doubt, she'd be wagging it in a show of pleasure if you weren't pinning it between you. Sadly though, there are the concerns of surviving in the chaos of the city to consider, so after a little longer, you let out a soft sigh and pull free with a wet slurp. The grey and white-furred woman sinks to the ground and rolls over, spreading her legs to offer a good view of her cum-smeared snatch. Content and satisfied, she smiles at you, then sinks back to stretch out and rest while you continue on your way.";
 	else:
-		say "     Humping the sexy female in a half-standing crouch that allows you to put some force into each thrust, you really enjoy making use of your former opponent, reveling in the moans of  pleasure that escape her muzzle again and again. As you fuck the panting dog wildly, the sensation of an oncoming climax rushes towards you faster than you'd think was possible, startling you into a lustful shout as you feel your erection throb and pulse, your seed erupting into the husky's welcoming pussy in thick blasts. After the first two or three blasts of your seed into her, the husky lets out a breathless and quite high-pitched howl as she orgasms, driven over the edge by the sensations of being bred. The flexing of her inner muscles around your [Cock of Player] shaft prolongs your orgasm quite nicely, and you enjoy it to its utmost before eventually pulling free of her freshly bred pussy with a wet slurp. The grey and white-furred woman sinks to the ground and rolls over, spreading her legs to offer a good view of her cum-smeared snatch. Content and satisfied, she smiles at you, then sinks back to stretch out and rest while you continue on your way.";
+		say "     Humping the sexy female in a half-standing crouch that allows you to put some force into each thrust, you really enjoy making use of your former opponent, reveling in the moans of pleasure that escape her muzzle again and again. As you fuck the panting dog wildly, the sensation of an oncoming climax rushes towards you faster than you'd think was possible, startling you into a lustful shout as you feel your erection throb and pulse, your seed erupting into the husky's welcoming pussy in thick blasts. After the first two or three blasts of your seed into her, the husky lets out a breathless and quite high-pitched howl as she orgasms, driven over the edge by the sensations of being bred. The flexing of her inner muscles around your [Cock of Player] shaft prolongs your orgasm quite nicely, and you enjoy it to its utmost before eventually pulling free of her freshly bred pussy with a wet slurp. The grey and white-furred woman sinks to the ground and rolls over, spreading her legs to offer a good view of her cum-smeared snatch. Content and satisfied, she smiles at you, then sinks back to stretch out and rest while you continue on your way.";
 	CreatureSexAftermath "Husky Bitch" receives "PussyFuck" from "Player";
 
 to say fhuskybeaten_02:
@@ -203,8 +171,7 @@ to say fhuskybeaten_dom:
 	say "     After a few minutes of teasing and several small orgasms that increase her need rather than relieve it, you expect she's quite ready now[if Player is male]. You grind your shaft[smn] against her hip, but take it no further, using [itthemm] to tantalize her all the more[end if]. You nibble her ear and whisper what a horny girl she is and how you can just tell she needs a good, hard fucking. She moans about how much she needs it[if Player is male] and tries to push back onto your cock, but[else], and so[end if] you tell her where she can find a true husky stud to screw her. Quite suggestible at this point, you [one of]say that he's waiting for her[or]describe his studly physique and sexual prowess to her[or]go on about his ideal stud status as a top-ranked husky breeder[or]describe his hard, throbbing cock in lurid detail[at random].";
 	say "     Given the vapid nature of these husky girls, you know she'll have a better chance of staying on track long enough to reach the kennel if her addled mind is fully focused on wanting him to breed her. To ensure this, you assault her a final series of licks, caresses and touches. At this peak of arousal, you tell her once again that the stud is ready and waiting to give her the fucking she needs, eager to breed her full of beautiful pedigree pups. With your description and directions in her mind, you release her on her way, her lust-addled mind locked on this idealized stud to mate her. She dashes off, her body aching for the relief her new master will bring, and you can't help but be pleased with your success.";
 	now Libido of Dominick is 1;
-	increase XP of Dominick by 1
-
+	increase XP of Dominick by 1;
 
 Section 2 - Creature Insertion
 
@@ -215,6 +182,23 @@ name(text)	PrepFunction(text)
 to say PrepCombat_Husky Bitch:
 	setmongender 4; [creature is female]
 	project Figure of Husky_Bitch_icon;
+
+to say GenerateTrophyList_Husky_Bitch:
+	[ Reminder: LootBonus can be +35 at maximum - 10 for Magpie Eyes, 15 for Mugger and 10 from Player Perception]
+	if a random chance of (80 + LootBonus) in 100 succeeds: [common drop]
+		add "husky bitch fur" to CombatTrophyList;
+	if a random chance of (50 + LootBonus) in 100 succeeds: [common drop]
+		add "dirty water" to CombatTrophyList;
+	if a random chance of (30 + LootBonus) in 100 succeeds: [uncommon drop]
+		add "food" to CombatTrophyList;
+	if a random chance of (20 + LootBonus) in 100 succeeds: [uncommon drop]
+		add "soda" to CombatTrophyList;
+	if a random chance of (10 + LootBonus) in 100 succeeds: [rare drop]
+		add "clean bandages" to CombatTrophyList;
+	if a random chance of (10 + LootBonus) in 100 succeeds: [rare drop]
+		add "tennis ball" to CombatTrophyList;
+	if Debug is at level 10:
+		say "DEBUG: Trophy List: [CombatTrophyList].";
 
 Table of Random Critters (continued)
 NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
@@ -391,60 +375,21 @@ When Play begins:
 	[Clit Size Adjective is generated by a function and can be used in scenes: very small/small/average/large/very large]
 ]
 
+Section 3 - Drop item
+
 Table of Game Objects (continued)
 name	desc	weight	object
 "husky bitch fur"	"A tuft of grey and white fur that looks like it has been pulled out of the coat of a husky. It's nicely soft."	0	husky bitch fur
 
 husky bitch fur is a grab object.
 Usedesc of husky bitch fur is "[HuskyBitchFurUse]".
-
-It is temporary.
+Scent of husky bitch fur is "The fur has a pleasing, not too strong, animal-like scent.".
 
 to say HuskyBitchFurUse:
-	say "Holding the tuft of fur between your fingers, you stroke over it, delighted in its softness. Strangely, the hair disintegrates after a while, becoming a cloud of fine particles that are absorbed into your skin.";
+	say "     Holding the tuft of fur between your fingers, you stroke over it, delighted in its softness. Strangely, the hair disintegrates after a while, becoming a cloud of fine particles that are absorbed into your skin.";
 	infect "Husky Bitch";
 
-instead of sniffing husky bitch fur:
-	say "The fur has a pleasing, not too strong, animal-like scent.";
-
-
-Table of Game Objects (continued)
-name	desc	weight	object
-"husky bitch cum"	"A plastic water bottle containing a moderate amount of milky white fluid. Almost could be mistaken for some sort of buttermilk, if someone hadn't written 'Husky Bitch Cum' across the label on the bottle. You [italic type]could[roman type] drink it to quench your thirst, or you maybe just do it for fun. Who knows what else it might do to you though..."	1	husky bitch cum
-
-husky bitch cum is a grab object.
-husky bitch cum is cum.
-husky bitch cum is infectious.
-Strain of husky bitch cum is "Husky Alpha".
-Usedesc of husky bitch cum is "[husky bitch cum use]";
-
-to say husky bitch cum use:
-	say "Lifting the plastic bottle to your mouth, you take a drink from it, letting the creamy cum run over your tongue and down your throat. Tastes rich and animal-like. Swishing it around in your mouth a little, you finish the bottle off, then stuff it back into your collection of 'empties'.";
-	PlayerDrink 5;
-	SanLoss 5;
-
-Table of Game Objects (continued)
-name	desc	weight	object
-"husky bitch milk"	"A plastic water bottle filled with what is clearly milk. One could think it was a regular cow's milk, if someone hadn't written 'Husky Bitch Milk' across the label on the bottle. You [italic type]could[roman type] drink it to quench your thirst. Who knows what else it might do to you though..."	1	husky bitch milk
-
-instead of sniffing husky bitch cum:
-	say "You open the lid for a moment and take a sniff. Doesn't smell too bad actually, just kinda nutty.";
-
-husky bitch milk is a grab object.
-husky bitch milk is milky.
-Purified of husky bitch milk is "distilled milk".
-husky bitch milk is infectious.
-Strain of husky bitch milk is "Husky Bitch".
-Usedesc of husky bitch milk is "[husky bitch milk use]";
-
-to say husky bitch milk use:
-	say "Lifting the plastic bottle to your mouth, you take a drink from it, letting the canine milk run over your tongue and down your throat. Tastes rich and animal-like. Swishing it around in your mouth a little, you finish the bottle off, then stuff it back into your collection of 'empties'.";
-	PlayerDrink 15;
-
-instead of sniffing husky bitch milk:
-	say "You open the lid for a moment and take a sniff. Smells kinda like any other milk, really.";
-
-Section 3 - Endings
+Section 4 - Endings
 
 Table of GameEndings (continued)
 Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)

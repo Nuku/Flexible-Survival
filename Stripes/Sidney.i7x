@@ -540,9 +540,9 @@ an everyturn rule:
 			now lust of Sidney is 0;
 
 
-[
 Section 8 - Endings
 
+[
 Table of GameEndings (continued)
 Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
 "Sidney's Epilogue"	"NPC"	""	Sidney's Epilogue rule	900	false

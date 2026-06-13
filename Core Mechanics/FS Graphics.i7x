@@ -188,7 +188,6 @@ Figure of Satyr_soft_icon is the file "Satyr_soft.jpg".
 Figure of Satyress_naked_icon is the file "Satyress.jpg".
 Figure of ShadowBeast_icon is the file "ShadowBeast.jpg".
 Figure of Pewter_Consort_icon is the file "Pewter_Consort.jpg".
-Figure of PirateShark_icon is the file "sharkpirate.png".
 Figure of Ram_naked_icon is the file "Ram_naked.jpg".
 Figure of Saber_Kitty_icon is the file "Saber Kitty.jpg".
 Figure of Sabretooth_soft_icon is the file "Sabretooth_soft.jpg".
@@ -505,6 +504,8 @@ Figure of Gobby_icon is the file "gobby_ig.jpg".
 Figure of Grant_face_icon is the file "Grant_face.jpg".
 Figure of Grant_icon is the file "grant_ig.jpg".
 Figure of Grant2_icon is the file "grant_ig2.jpg".
+Figure of Gwen_clothed_icon is the file "Gwen_clothed.png".
+Figure of Gwen_naked_icon is the file "Gwen_naked.png".
 Figure of Hadiya_0_icon is the file "hadiya_0_ig.jpg".
 Figure of Hadiya_icon is the file "Hadiya_ig.jpg".
 Figure of Hayato_icon is the file "Hayato_reading.jpg".
@@ -569,6 +570,7 @@ Figure of Lilith_face_icon is the file "Succubus_face.jpg".
 Figure of Lilith_boobs_icon is the file "Succubus_boobs.jpg".
 Figure of Lindsey_hard_icon is the file "Lindsey_hard.jpg".
 Figure of Lindsey_soft_icon is the file "Lindsey_soft.jpg".
+Figure of Lux_icon is the file "Lux.png".
 Figure of Malakhi_icon is the file "Malakhi.jpg".
 Figure of Malik_hard_icon is the file "Malik_hard.jpg".
 Figure of Malik_soft_icon is the file "Malik_soft.jpg".
@@ -624,6 +626,8 @@ Figure of Orbul_naked_icon is the file "Orbul_naked.jpg".
 Figure of Orthas_face_icon is the file "Orthas_face.jpg".
 Figure of Paula_icon is the file "Paula_ig.jpg".
 Figure of Penny_icon is the file "Penny.jpg".
+Figure of Pirate_Shark_Herm_hard_icon is the file "Pirate_Shark_Herm_hard.png".
+Figure of Pirate_Shark_Herm_soft_icon is the file "Pirate_Shark_Herm_soft.png".
 Figure of Priestess_clothed_icon is the file "Priestess_clothed.jpg".
 Figure of Priestess_hard_icon is the file "Priestess_hard.jpg".
 Figure of Priestess_soft_icon is the file "Priestess_soft.jpg".
@@ -1320,7 +1324,6 @@ Figure of emap_PAN_Frat_East_Hallway is the file "emap_PAN_Frat_East_Hallway.png
 Figure of emap_PAN_Frat_West_Hallway is the file "emap_PAN_Frat_West_Hallway.png".
 Figure of emap_PAN_Frat_South_Hallway is the file "emap_PAN_Frat_South_Hallway.png".
 
-
 before examining a thing (called t):
 	if the icon of t is figure of pixel:
 		continue the action;
@@ -1420,7 +1423,6 @@ to project (x - a figure name):
 			if icon entry is x and artist entry is not listed in BlockList of Player:
 				display x;
 				break;]
-
 
 Table of game art
 title	icon(figure name)	artist	backgroundcolor	formatrule
@@ -1727,6 +1729,8 @@ title	icon(figure name)	artist	backgroundcolor	formatrule
 "Grant"	Figure of Grant_icon	"Uniformvixen"	g-white	"normal"
 "Grant2"	Figure of Grant2_icon	"Familliar"	g-light-gray	"normal"
 "Gunbunny"	Figure of Gunbunny_icon	"HBruton"	g-white	"normal"
+"Gwen_clothed"	Figure of Gwen_clothed_icon	"SteppeCrow"	g-white	"normal"
+"Gwen_naked"	Figure of Gwen_naked_icon	"SteppeCrow"	g-white	"normal"
 "Friendship Pony"	Figure of FrPony_icon	"Anymouse1968"	g-white	"normal"
 "Goo Girl"	Figure of GooGirl_icon	"Rastear"	g-black	"normal"
 "Hadiya"	Figure of Hadiya_0_icon	"lionsilverwolf"	g-white	"normal"
@@ -1854,6 +1858,7 @@ title	icon(figure name)	artist	backgroundcolor	formatrule
 "Lilith_naked"	Figure of Lilith_naked_icon	"Kupo Klein"	g-white	"normal"
 "Lindsey_hard"	Figure of Lindsey_hard_icon	"Vashaa"	g-white	"normal"
 "Lindsey_soft"	Figure of Lindsey_soft_icon	"Vashaa"	g-white	"normal"
+"Lux"	Figure of Lux_icon	"SteppeCrow"	g-white	"normal"
 "Magic Drake"	Figure of MagicDrake_icon	"Anymouse1968"	g-white	"normal"
 "Malakhi"	Figure of Malakhi_icon	"Jahi"	g-black	"normal"
 "Malakhi & Barnabas"	Figure of Malakhi_Barnabas_icon	"Jahi"	g-black	"normal"
@@ -1949,10 +1954,12 @@ title	icon(figure name)	artist	backgroundcolor	formatrule
 "Pink Gel"	Figure of PinkGel_icon	"Rastear"	g-black	"normal"
 "Pink Poodle"	Figure of PinkPoodle_icon	"Anymouse1968"	g-white	"normal"
 "Pewter Consort"	Figure of Pewter_Consort_icon	"Xilrayne"	g-black	"normal"
+"Pirate_Shark_Herm_hard"	Figure of Pirate_Shark_Herm_hard_icon	"Gherod"	g-dark-gray	"normal"
+"Pirate_Shark_Herm_soft"	Figure of Pirate_Shark_Herm_soft_icon	"Gherod"	g-dark-gray	"normal"
 "Priestess_clothed"	Figure of Priestess_clothed_icon	"Gherod"	g-dark-gray	"normal"
 "Priestess_hard"	Figure of Priestess_hard_icon	"Gherod"	g-dark-gray	"normal"
 "Priestess_soft"	Figure of Priestess_soft_icon	"Gherod"	g-dark-gray	"normal"
-"Shark Herm"	Figure of PirateShark_icon	"Zealot"	g-white	"normal"
+["Shark Herm"	Figure of PirateShark_icon	"Zealot"	g-white	"normal"]
 "Queen Bee"	Figure of QueenBee_icon	"Caltroplay"	g-white	"normal"
 "Rachel"	Figure of Rachel_icon	"o-kemono"	g-white	"normal"
 "Ram_hunk"	Figure of Ram_naked_icon	"Vashaa"	g-white	"normal"
@@ -1973,8 +1980,8 @@ title	icon(figure name)	artist	backgroundcolor	formatrule
 "Richard_satyr_hard"	Figure of Richard_satyr_hard_icon	"SteppeCrow"	g-White	"normal"
 "Richard_satyr_soft"	Figure of Richard_satyr_soft_icon	"SteppeCrow"	g-White	"normal"
 "Rod"	Figure of Rod_icon	"Ticl"	g-black	"normal"
-"Roman"	Figure of Roman_clothed_icon	"SteppeCrow"	g-White	"normal"
-"Roman"	Figure of Roman_naked_icon	"SteppeCrow"	g-White	"normal"
+"Roman_clothed"	Figure of Roman_clothed_icon	"SteppeCrow"	g-White	"normal"
+"Roman_naked"	Figure of Roman_naked_icon	"SteppeCrow"	g-White	"normal"
 "Ronda"	Figure of Ronda_icon	"Ticl"	g-black	"normal"
 "RondaSR"	Figure of RondaSR_icon	"Uniformvixen"	g-black	"normal"
 "Ruby_naked"	Figure of Ruby_naked_icon	"Watsup"	g-white	"normal"
@@ -2735,7 +2742,6 @@ title	icon(figure name)	artist	backgroundcolor	formatrule
 "emap - PAN Frat Richards Room"	Figure of emap_PAN_Frat_Richards_Room	"Wolfram Rolf"	g-black	"normal"
 
 artistcredits is an action applying to nothing.
-
 understand "artwork credits" as artistcredits.
 understand "artworkcredits" as artistcredits.
 understand "art credits" as artistcredits.
@@ -2745,8 +2751,7 @@ understand "artcred" as artistcredits.
 
 carry out artistcredits:
 	say "[bold type]Artwork Credits for Flexible Survival:[roman type][line break]";
-	LineBreak;
-	say "[bold type]Infections:[roman type][line break]";
+	say "[line break][bold type]Infections:[roman type][line break]";
 	say "     Ace by Waxraven/WXRVN @ https://waxraven.tumblr.com[line break]";
 	say "     Alpha Wolf by Vashaa @ https://furaffinity.net/user/vashaa[line break]";
 	say "     Amazon by Waxraven/WXRVN @ https://waxraven.tumblr.com[line break]";
@@ -2820,6 +2825,7 @@ carry out artistcredits:
 	say "     Latex Ermine (creature loss) by Halcy0n @ https://furaffinity.net/user/halcy0n[line break]";
 	say "     Latex Fox by SteppeCrow @ https://furaffinity.net/user/steppecrow[line break]";
 	say "     Leopardman by Vashaa @ https://furaffinity.net/user/vashaa[line break]";
+	say "     Lux by SteppeCrow @ https://furaffinity.net/user/steppecrow[line break]";
 	say "     Magic Drake by Anymouse1968 @ https://furaffinity.net/user/anymouse1968[line break]";
 	say "     Mammoth by Boo3 @ https://furaffinity.net/user/boo3[line break]";
 	say "     Mammoth Pure Succumb by Boo3 @ https://furaffinity.net/user/boo3[line break]";
@@ -2887,8 +2893,7 @@ carry out artistcredits:
 	say "     Yamato Dragoness by Vashaa @ https://furaffinity.net/user/vashaa[line break]";
 	say "     Yuppie Mink by Anymouse1968 @ https://furaffinity.net/user/anymouse1968[line break]";
 	say "     Zebra by Purplepardus @ https://furaffinity.net/user/purplepardus[line break]";
-	LineBreak;
-	say "[bold type]NPCs:[roman type][line break]";
+	say "[line break][bold type]NPCs:[roman type][line break]";
 	say "     Alexandra by Lyttathebug @ https://deviantart.com/lyttathebug[line break]";
 	say "     Amy by Sususmiles @ https://furaffinity.net/user/sususmiles[line break]";
 	say "     Andrew by Rukis @ https://furaffinity.net/user/rukis[line break]";
@@ -2972,7 +2977,7 @@ carry out artistcredits:
 	say "     Hadiya w/Gobby by SandySchreiber @ https://furaffinity.net/user/sandyschreiber[line break]";
 	say "     Helen by Waxraven/WXRVN @ https://waxraven.tumblr.com[line break]";
 	say "     Henry (Adopt) by CastBound @ https://furaffinity.net/user/castbound[line break]";
-	say "     Hermacore Gherod  @ https://x.com/gherodv[line break]";
+	say "     Hermacore by Gherod @ https://x.com/gherodv[line break]";
 	say "     Hayato by Darian821 @ https://x.com/Darian821Jai821[line break]";
 	say "     Harold by Hufnaar @ https://furaffinity.net/user/hufnaar[line break]";
 	say "     Hobo by Conchi @ https://artisticconch.tumblr.com[line break]";
@@ -3021,9 +3026,9 @@ carry out artistcredits:
 	say "     Orthas (face) by SineAlas @ https://furaffinity.net/user/sinealas[line break]";
 	say "     Paula by Kikeri-arts @ https://deviantart.com/kikeri-arts[line break]";
 	say "     Penny by Waxraven/WXRVN @ https://waxraven.tumblr.com[line break]";
-	say "     Priestess_clothed Gherod @ https://x.com/gherodv[line break]";
-	say "     Priestess_hard Gherod @ https://x.com/gherodv[line break]";
-	say "     Priestess_soft Gherod @ https://x.com/gherodv[line break]";
+	say "     Priestess_clothed by Gherod @ https://x.com/gherodv[line break]";
+	say "     Priestess_hard by Gherod @ https://x.com/gherodv[line break]";
+	say "     Priestess_soft by Gherod @ https://x.com/gherodv[line break]";
 	say "     Rachel by o-kemono @ https://furaffinity.net/user/o-kemono[line break]";
 	say "     Ranae by SteppeCrow @ https://furaffinity.net/user/steppecrow[line break]";
 	say "     Rane Headshot by SineAlas @ https://furaffinity.net/user/sinealas[line break]";
@@ -3046,8 +3051,8 @@ carry out artistcredits:
 	say "     Segis by Gherod @ https://x.com/gherodv[line break]";
 	say "     Septus by Feralise @ https://furaffinity.net/user/feralise[line break]";
 	say "     Septus (face) by Cirrusthecloud @ https://furaffinity.net/user/cirrusthecloud[line break]";
-	say "     Seradovah_hard Gherod  @ https://x.com/gherodv[line break]";
-	say "     Seradovah_soft Gherod  @ https://x.com/gherodv[line break]";
+	say "     Seradovah_hard by Gherod @ https://x.com/gherodv[line break]";
+	say "     Seradovah_soft by Gherod @ https://x.com/gherodv[line break]";
 	say "     Sgt Marks by Anyare @ https://furaffinity.net/user/anyare[line break]";
 	say "     Stella by Furball @ https://furaffinity.net/user/furball[line break]";
 	say "     Sidney by Anymouse1968 @ https://furaffinity.net/user/anymouse1968[line break]";
@@ -3081,8 +3086,7 @@ carry out artistcredits:
 	say "     Yolanda by SandySchreiber @ https://furaffinity.net/user/sandyschreiber[line break]";
 	say "     Zigor by AugurMew @ https://furaffinity.net/user/augurmew[line break]";
 	say "     Zoe Headshot by SineAlas @ https://furaffinity.net/user/sinealas[line break]";
-	LineBreak;
-	say "[bold type]Scenes:[roman type][line break]";
+	say "[line break][bold type]Scenes:[roman type][line break]";
 	say "     Bottlenose Trapped by Anymouse1968 @ https://furaffinity.net/user/anymouse1968[line break]";
 	say "     Brutus & David by Rocketman @ (Dead Link) https://rocketmenstudio.tumblr.com[line break]";
 	say "     Boy to Fox Shampoo by Watsup @ https://furaffinity.net/user/watsup[line break]";
@@ -3104,8 +3108,7 @@ carry out artistcredits:
 	say "     Spidertaur by CrashBurnDraw @ https://furaffinity.net/user/demicrash[line break]";
 	say "     Talov & Kerr by Kupo Klein @ https://kupo-klein.tumblr.com[line break]";
 	say "     Title Screen by SonikkuDashu @ https://deviantart.com/s-dash[line break]";
-	LineBreak;
-	say "[bold type]Maps:[roman type][line break]";
+	say "[line break][bold type]Maps:[roman type][line break]";
 	say "     Mall Map by Anonymous[line break]";
 	say "     Beach Map by Goncalo @ https://artstation.com/beepe[line break]";
 	say "     City Map by Goncalo @ https://artstation.com/beepe[line break]";
@@ -3113,7 +3116,6 @@ carry out artistcredits:
 	say "     Red Light District Maps by Goncalo @ https://artstation.com/beepe[line break]";
 
 ArtistBanning is an action applying to nothing.
-
 understand "artist block/ban/disable" as ArtistBanning.
 understand "artistblocking" as ArtistBanning.
 understand "artistsblocking" as ArtistBanning.
@@ -3133,8 +3135,8 @@ to artistbanmenu: [more compact version]
 	let artistlist be {"Anonymous", "Anyare", "Anymouse1968", "Aosuka", "Astro", "AugurMew", "Banni", "BeaverTyan", "Bix707", "Bludwing", "Boo3", "Brun69", "BushyCat", "Buzzybub", "Caltroplay", "Candy", "canned", "CastBound", "Catmonkshiro", "Cirrusthecloud", "Conchi", "ConnyChiwa", "Cooper", "Corbee", "CrashBurnDraw", "Damdidoo", "Darian821", "dbd", "Demon-Man", "dhstein", "Dolphpup", "DragonFlayer", "Dragonpunk", "Eevachu", "EmieChii", "Enaya-TheWhiteWolfen", "executaball", "Familliar", "FaroreNightclaw", "Feralise", "Furball", "FsMaverick", "Geir", "Genelightfoot", "Gherod", "Goncalo", "HBruton", "Hioshiru", "Hufnaar", "Inkydemon", "Jahi", "JaxxBlackFox", "Kadel", "Kattzie", "Keitaro87", "Kien-Biu", "Kikeri-arts", "Kupo Klein", "KV1NN4", "Laylo", "lionsilverwolf", "LocksTO", "Luneth", "Lyttathebug", "MadTurtle", "Moirah", "MoT", "Nokturnalkittie", "Obieblu", "Otterbits", "o-kemono", "Padunk", "Purplepardus", "Rastear", "Reaper3d", "RedCoatCat", "Redragon", "Rocketman", "Rosali", "Rukis", "SandySchreiber", "Seija", "Sharei", "SineAlas", "SonikkuDashu", "Soryane", "SparklePens", "SteppeCrow", "Strype", "Sususmiles", "Sokan", "Ticl", "The_Negative", "TheRedAngel", "TheWhiteWolfen", "TylerAz", "Uniformvixen", "Unknown", "ValdericBlackstag", "Valen", "Vashaa", "Visage48", "Wahn", "Watsup", "Waxraven/WXRVN", "Wemt", "Wolfram Rolf", "Xenotropos", "Xilrayne", "Yora", "Zealot"};
 	now calcnumber is -1;
 	let countnumber be 1;
-	let abmexit be 0;
-	while abmexit is 0:
+	let abmexit be false;
+	while abmexit is false:
 		say "[bold type]Artists:[roman type][line break]";
 		while countnumber <= number of entries in artistlist:
 			linkfind "[countnumber]";
@@ -3154,8 +3156,8 @@ to artistbanmenu: [more compact version]
 				say "Invalid Entry. Pick from 0 to [number of entries in artistlist].";
 		LineBreak;
 		if calcnumber is 0:
-			now abmexit is 1;
-		else if calcnumber >= 1 and calcnumber <= number of entries in artistlist:
+			now abmexit is true;
+		else:
 			artistbanswitch entry calcnumber of artistList;
 
 to BlockCheck (x - text):
@@ -3171,7 +3173,7 @@ to artistbanswitch (name - text):
 			clear the screen;
 		else:
 			say "[name] Blocked!";
-	else if name is listed in Blocklist of Player:
+	else:
 		remove name from Blocklist of Player;
 		if clearnomore is 0:
 			clear the screen;
@@ -3179,7 +3181,6 @@ to artistbanswitch (name - text):
 			say "[name] Unblocked!";
 	if clearnomore is not 0:
 		wait for any key;
-
 
 ArtworkTest is an action applying to nothing.
 understand "art test" as ArtworkTest.

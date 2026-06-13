@@ -4,14 +4,6 @@ Version 1 of Hentai Fan by Stripes begins here.
 
 Section 1 - Creature Responses
 
-to say losetohentaifan:
-	say "     Having beaten you, the tentacled creature grabs you and pulls you fully into the room and pushes you down in front of the television.";
-
-to say beatthehentaifan:
-	say "     Your final blow leaves the tentacled creature stunned, swirls in his eyes.";
-
-Section 2 - Creature Insertion
-
 to say hentaifandesc:
 	say "     The young man before you has become a strange, mutated creature, possibly because of his exposure to the contents of the anime being shown. Like the girls, his proportions are a little cartoonishly skewed and his eyes are unusually large. Similarly, his skin unnaturally smooth and even in tone, though a paler shade of pink than the girls. Unlike them, this guy would have much difficulty passing himself off as human even at a glance thanks to the foursome of fleshy tentacles growing from his back. Phallic-tipped and dripping with precum as they undulate, they move towards you with obvious intent, an intent echoed by the horny fellow's stiff 9 inch cock.";
 	if BodyName of Player is "Anime Babe":
@@ -21,6 +13,8 @@ to say hentaifandesc:
 		decrease plmindbonus by 4;
 		now HP of Player is ( 3 * HP of Player ) / 4;
 		now Libido of Player is ( 100 + Libido of Player + Libido of Player + Libido of Player ) / 4;
+
+Section 2 - Creature Insertion
 
 Table of CombatPrep (continued)
 name(text)	PrepFunction(text)
@@ -43,27 +37,27 @@ When Play begins:
 	now enemy title entry is ""; [ Name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name. ]
 	now enemy Name entry is ""; [ Specific name of unique enemy. ]
 	now enemy type entry is 1; [ 0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters. ]
-	now attack entry is "[one of]The tentacle creature[or]The tentacled young man[or]The tentacled student[or]The mutant fanboy[or]The grabby otaku[at random] [one of]strikes at you with his sticky tentacles[or]slides a tentacle across your loins[or]manages to pinch your ass while his tentacles are assaulting you[or]drones on incessantly about anime and manga, muddling your mind[or]fakes you out with his tentacles to instead punch you[at random].";
-	now defeated entry is "[beatthehentaifan]";
-	now victory entry is "[losetohentaifan]";
+	now attack entry is "The [one of]tentacle creature[or]tentacled young man[or]tentacled student[or]mutant fanboy[or]grabby otaku[at random] [one of]strikes at you with his sticky tentacles[or]slides a tentacle across your loins[or]manages to pinch your ass while his tentacles are assaulting you[or]drones on incessantly about anime and manga, muddling your mind[or]fakes you out with his tentacles to instead punch you[at random].";
+	now defeated entry is "     Your final blow leaves the tentacled creature stunned, swirls in his eyes.[line break]";
+	now victory entry is "     Having beaten you, the tentacled creature grabs you and pulls you fully into the room and pushes you down in front of the television.[line break]";
 	now desc entry is "[hentaifandesc]";
-	now face entry is "not applicable";
-	now body entry is "not applicable";
-	now skin entry is "not applicable";
-	now tail entry is "not applicable";
-	now cock entry is "not applicable";
-	now face change entry is "not applicable";
-	now body change entry is "not applicable";
-	now skin change entry is "not applicable";
-	now ass change entry is "not applicable";
-	now cock change entry is "not applicable";
+	now face entry is "";
+	now body entry is "";
+	now skin entry is "";
+	now tail entry is "";
+	now cock entry is "";
+	now face change entry is "";
+	now body change entry is "";
+	now skin change entry is "";
+	now ass change entry is "";
+	now cock change entry is "";
 	now str entry is 10; [ These are now the creature's stats... ]
 	now dex entry is 18; [ ...and are only altered onto the player via Shifting or the Mighty Mutation feat ]
 	now sta entry is 11; [ These values may be used as part of alternate combat.]
 	now per entry is 16;
 	now int entry is 14;
 	now cha entry is 9;
-	now sex entry is "nochange"; [ Infection will move the player towards this gender. Current: 'Male' 'Female' 'Both' ]
+	now sex entry is "Nochange"; [ Infection will move the player towards this gender. Current: 'Male' 'Female' 'Both' ]
 	now HP entry is 80; [ The monster's starting HP. ]
 	now lev entry is 12; [ Monster level. (Level x 2) XP for victory. (Level / 2) XP for losing. ]
 	now wdam entry is 12; [ Monster's average damage when attacking. ]
@@ -81,7 +75,7 @@ When Play begins:
 	now libido entry is 85; [ Target libido the infection will rise towards. ]
 	now loot entry is ""; [ Dropped item, blank for none. Case sensitive. ]
 	now lootchance entry is 0; [ Percentage chance of dropping loot, from 0-100. ]
-	now MilkItem entry is "hentai fan milk"; [ Item to be given to the player if they have this infection and milk themselves. ]
+	now MilkItem entry is ""; [ Item to be given to the player if they have this infection and milk themselves. ]
 	now CumItem entry is ""; [ Item to be given to the player if they have this infection and jerk off. ]
 	now TrophyFunction entry is "-"; [ Function to generate a list of optional loot items, of which the player can choose one after victory. ]
 	now scale entry is 3; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
@@ -197,10 +191,9 @@ When Play begins:
 	[Clit Size Adjective is generated by a function and can be used in scenes: very small/small/average/large/very large]
 ]
 
-
-[
 Section 3 - Endings
 
+[
 Table of GameEndings (continued)
 Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
 "Hentai Fan Infection"	"Infection"	""	Hentai Fan Infection rule	1000	false

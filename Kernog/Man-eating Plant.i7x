@@ -4,12 +4,11 @@ Version 1 of Man-eating Plant by Kernog begins here.
 
 Section 1 - Creature Responses
 
-to say beattheplant:
-	say "     As you give one last blow to the flower, you watch it ted progressively, a sappy substance escaping from the wounds.";
-
-
-to say ManEatingPlantDesc:
-	say "     You attempt to walk around the big trees on your path, when movement in the corner of your vision alerts you. Rooted into the bark of one of the trees, a large plant opens its petals, showing a multi-color inner pattern, going deep inside the tree. Vines begin to flail dangerously around you, trying to snatch you. You stay on your guard, as you decide what to do with the mutated vegetal.";
+[Plays on loss]
+to say ManEatingPlantVoreScene:
+	say "     [if fightoutcome is 22]You let the vines coil around you, and throw you legs-first into the plant's gullet. The vegetal swallows you[else]Vines coil around your knocked-out body and pushes you into the plant's gullet[end if], little by little, until only your neck remains. Another muscle spasm, and you slide down completely inside, while the plant closes shut after you. In complete darkness, you slide down the skin-tight feeding tube. The air coming from outside is now damp, and laden with a spicy smell which begins to make you excited. You eventually slide down to a small pouch, which stretches to welcome your body, before vacuuming around you, leaving only a small layer of drug-filled air for you to breathe. [if fightoutcome is 22]A small voice in your brain urges you to get out of this dangerous situation[else]Your brain urges you to push or claw your way out, before it is too late[end if].";
+	wait for any key;
+	manEatingPlantVore;
 
 Section 2 - Creature Insertion
 
@@ -18,7 +17,7 @@ name(text)	PrepFunction(text)
 "Man-eating Plant"	"[PrepCombat_Man-eating Plant]"
 
 to say PrepCombat_Man-eating Plant:
-	say "";
+	setmongender 0; [creature is neuter-X]
 
 Table of Random Critters (continued)
 NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
@@ -30,27 +29,27 @@ When Play begins:
 	now Species Name entry is "Man-eating Plant"; [ Name of the overall species of the infection, used so a "male x" and "female x" have "pureblood X" children. ]
 	add "Man-eating Plant" to infections of PlantList;
 	add "Man-eating Plant" to infections of NatureList;
-	add "Man-eating Plant" to infections of HermList;
 	add "Man-eating Plant" to infections of TentacleCockList;
 	add "Man-eating Plant" to infections of BipedalList;
 	add "Man-eating Plant" to infections of TailList;
+	add "Man-eating Plant" to infections of TailweaponList;
 	now Name entry is "Man-eating Plant";
 	now enemy title entry is ""; [ Name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name. ]
 	now enemy Name entry is ""; [ Specific name of unique enemy. ]
 	now enemy type entry is 0; [ 0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters. ]
-	now attack entry is "[didnotsubmit][one of]One of the vines slap your thigh, leaving a small bruise.[or]A vine makes a downward motion on your head, clubbering you with surprising strength.[or]You barely evade one of the vines attempting to grab your arm, leaving instead a shallow cut on your skin.[or]One of the vines manages to get around your neck, choking you until you can pull it off and gasp for air.[at random]"; [Text used when the monster makes an Attack]
-	now defeated entry is "[beattheplant]"; [ Text or say command used when Monster is defeated.]
+	now attack entry is "[one of]One of the vines slaps your thigh, leaving a small bruise[or]A vine makes a downward motion on your head, clubbing you with surprising strength[or]You barely evade one of the vines attempting to grab your arm, leaving instead a shallow cut on your skin[or]One of the vines manages to get around your neck, choking you until you can pull it off and gasp for air[at random]."; [Text used when the monster makes an Attack]
+	now defeated entry is "     As you give one last blow to the flower, you watch it ted progressively, a sappy substance escaping from the wounds.[line break]"; [ Text or say command used when Monster is defeated.]
 	now victory entry is "[ManEatingPlantVoreScene]"; [Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block as the demonstration text shows.]
-	now desc entry is "[ManEatingPlantDesc]"; [ Description of the creature when you encounter it.]
-	now face entry is "androgynous face with surrounded with petals, and with a small orifice replacing your mouth, which can turn into a gaping maw"; [ Face description, format as "Your face is [Face of Player]." ]
-	now body entry is "smooth and flexible, its pores emiting a sweet, aluring fragrance"; [ Body Description, format as "Your Body is [Body of Player]." ]
-	now skin entry is "green plant-like"; [ Skin Description, format as "Looking at yourself, your body is covered in [Skin of Player] skin." ]
-	now tail entry is "A long, arm-thick vine extends from your lower back, wiggling slowly, and involuntarily latching on objects and people brushing past it."; [ Tail description, write a whole Sentence or leave blank. ]
-	now cock entry is "[if looknow is 1]tentacle[else][one of]vine-like[or]tentacle[or]green tendril[at random][end if]"; [ Cock Description, format as you have a 'size' (your text) cock]
-	now face change entry is "your hair coalesce together, and turn into petals of many colors. Your nose disappears, and a strange sensation spreads through your mouth as it seals up and your teeth disappear. It is replaced by a small hole, which stretches to an unbelievable size as you try to open your mouth and shout. It feels moist with various fluids, which drool on your chin."; [ Face change text, format as "Your face feels funny as [face change entry]." ]
-	now body change entry is "a sudden surge of vines and roots spread like an infection through your body from a seed hidden inside of you. Your legs become root-like vines that dig into the ground if you stay in one place for too long, while the rest of your body shifts. Your start to sweat constantly, and your body is quickly surrounded by a small mist of sweet, enticing pheromones."; [ Body change text, format as "Your body feels funny as [body change entry]." ]
-	now skin change entry is "your skin turns into a plant-like green color!"; [ Skin change text, format as "Your skin feels funny as [skin change entry]." ]
-	now ass change entry is "a very strange sensation spreads around your waist and your spine seems to stretch almost painfully! Reaching back you find it has expanded into a two-meter long vine, as thick as your arm. It suddenly wraps and squeezes around a nearby object. It seems that this new limb retains the vestigal reflexes of its original species!"; [ Ass/tail change text, format as "Your ass feels funny as [ass change entry]." ]
+	now desc entry is "     You attempt to walk around the big trees on your path when movement in the corner of your vision alerts you. Rooted into the bark of one of the trees, a large plant opens its petals, showing a multi-color inner pattern, going deep inside the tree. Vines begin to flail dangerously around you, trying to snatch you. You stay on your guard as you decide what to do with the mutated vegetal.[line break]"; [ Description of the creature when you encounter it.]
+	now face entry is "androgynous, surrounded with petals, and with a small orifice replacing your mouth, which can turn into a gaping maw"; [ Face description, format as "Your face is [Face of Player]." ]
+	now body entry is "smooth and flexible, its pores emiting a sweet, alluring fragrance"; [ Body Description, format as "Your Body is [Body of Player]." ]
+	now skin entry is "green, plant-like"; [ Skin Description, format as "Looking at yourself, your body is covered in [Skin of Player] skin." ]
+	now tail entry is "A long, arm-thick vine extends from your lower back, wiggling slowly, and involuntarily latching onto objects and people brushing past it."; [ Tail description, write a whole Sentence or leave blank. ]
+	now cock entry is "[if looknow is true]tentacle[else][one of]vine-like[or]tentacle[or]green tendril[at random][end if]"; [ Cock Description, format as you have a 'size' (your text) cock]
+	now face change entry is "your hair coalesces together, and turns into petals of many colors. Your nose disappears, and a strange sensation spreads through your mouth as it seals up and your teeth disappear. It is replaced by a small hole, which stretches to an unbelievable size as you try to open your mouth and shout. It feels moist with various fluids, which drool on your chin"; [ Face change text, format as "Your face feels funny as [face change entry]." ]
+	now body change entry is "a sudden surge of vines and roots spread like an infection through your body from a seed hidden inside of you. Your legs become root-like vines that dig into the ground if you stay in one place for too long, while the rest of your body shifts. You start to sweat constantly, and your body is quickly surrounded by a small mist of sweet, enticing pheromones"; [ Body change text, format as "Your body feels funny as [body change entry]." ]
+	now skin change entry is "it turns into a plant-like green color"; [ Skin change text, format as "Your skin feels funny as [skin change entry]." ]
+	now ass change entry is "a very strange sensation spreads around your waist and your spine seems to stretch almost painfully! Reaching back you find it has expanded into a two-meter long vine, as thick as your arm. It suddenly wraps and squeezes around a nearby object. It seems that this new limb retains the vestigal reflexes of its original species"; [ Ass/tail change text, format as "Your ass feels funny as [ass change entry]." ]
 	now cock change entry is "it swells into an odd, bulb-like shape and turns a green, plant-like color, while small green tendrils spread over your groin like roots"; [ cock change text. format as "Your cock feels funny as (your text)." ]
 	now str entry is 12;
 	now dex entry is 16;
@@ -87,7 +86,7 @@ When Play begins:
 	now non-infectious entry is true; [ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
 	now Cross-Infection entry is ""; [ Infection that this infection will give the player when they lose; can be left empty if they infect with the monster's own strain. ]
 	now DayCycle entry is 0; [ 0 = Up at all times; 1 = Diurnal (day encounters only); 2 = Nocturnal (night encounters only);]
-	now altcombat entry is "default";
+	now altcombat entry is "maneatingPlantReel";
 	now BannedStatus entry is false;
 
 [
@@ -192,14 +191,13 @@ When Play begins:
 	[Clit Size Adjective is generated by a function and can be used in scenes: very small/small/average/large/very large]
 ]
 
-
 Section 3 - Alt Combat
 
 [Plant has a messy pig-based alt attack, in which it captures the player. The player has five chances to escape, otherwise it is an instant loss]
 
 Table of Critter Combat (continued)
 name	combat (rule)	preattack (rule)	postattack (rule)	altattack1 (rule)	alt1chance (number)	altattack2 (rule)	alt2chance (number)	monmiss (rule)	continuous (rule)	altstrike (rule)
-"maneatingPlantReel"	--	maneatingPlantCaptureInc rule	--	maneatingPlantCapture rule	10	--	--	--	--	--
+"maneatingPlantReel"	retaliation rule	maneatingPlantCaptureInc rule	--	maneatingPlantCapture rule	10	--	--	--	--	--
 
 this is the maneatingPlantCaptureInc rule:			[increasing likelihood of alt attack]
 	choose row monstercom from the table of critter combat;
@@ -210,73 +208,67 @@ this is the maneatingPlantCapture rule:			[player capture alternative attack]
 	now alt1chance entry is 10; [resets alt attack probability]
 	choose row MonsterID from Table of Random Critters;
 	let playernum be 150 + dexterity of Player - Libido of Player + ( level of Player * 2 );
-	say "     One of the vines manage to coil around your arm. The plant begins to pull you towards its main body.";
-	if tempnum is 1, decrease playernum by 30;
-	let maneatingPlantcaught be 1;
+	say "One of the vines manages to coil around your arm. The plant begins to pull you towards its main body!";
+	[if tempnum is 1, decrease playernum by 30;]
+	let maneatingPlantcaught be true;
 	let maneatingPlantnum be 200 + ( lev entry * 2 ) + dex entry;
-	if maneatingPlantcaught is 1:
-		let playernum be a random number between 50 and playernum;
-		let maneatingPlantnum be a random number between 50 and maneatingPlantnum;
-		say "[special-style-1][playernum][roman type] vs [special-style-2][maneatingPlantnum][roman type]: ";
-	if maneatingPlantcaught is 1 and playernum >= maneatingPlantnum:		[caught / escape attempt]
-		say "     With a quick torsion of the wrist, you manage to disentangle yourself. You promptly jump back out of reach.";
-		now maneatingPlantcaught is 0;
-	else if maneatingPlantcaught is 1:													[still caught]
-		say "     The man-eating plant forces you to take several steps forward, putting you in reach of more of its limbs. Your arm is caught by another vine, and the plant and you are engaged in a contest of strength.";
-	if maneatingPlantcaught is 1:							[second attempt]
+	let playernum be a random number between 50 and playernum;
+	let maneatingPlantnum be a random number between 50 and maneatingPlantnum;
+	say "[special-style-1][playernum][roman type] vs [special-style-2][maneatingPlantnum][roman type]: ";
+	if playernum >= maneatingPlantnum:		[caught / escape attempt]
+		say "With a quick torsion of the wrist, you manage to disentangle yourself. You promptly jump back out of reach.";
+		now maneatingPlantcaught is false;
+	else:													[still caught]
+		say "The man-eating plant forces you to take several steps forward, putting you in reach of more of its limbs. Your arm is caught by another vine, and the plant and you are engaged in a contest of strength.";
+	if maneatingPlantcaught is true:							[second attempt]
 		let playernum be a random number between 25 and playernum;
 		let maneatingPlantnum be a random number between 25 and maneatingPlantnum;
 		say "[special-style-1][playernum][roman type] vs [special-style-2][maneatingPlantnum][roman type]: ";
-	if maneatingPlantcaught is 1 and playernum >= maneatingPlantnum:		[caught / escape attempt]
-		say "     Powering through, you take step after step backwards, until a strong pull forces the vine to give up, less they break under the strain.";
-		now maneatingPlantcaught is 0;
-	else if maneatingPlantcaught is 1:													[still caught]
-		say "     With surprising power, the plant reels you in, like a fisherman. You lose your footing, and vines quickly take advantage to tie up your legs. Your legs are pulled into the plant's hole, and you feel the wet and squishy touch of its inner walls.";
-	if maneatingPlantcaught is 1 and HP of Player > 0 and Libido of Player < 110:							[third attempt. -10 malus on playernum applies]
-		let playernum be a random number between 10 and playernum;
-		let maneatingPlantnum be a random number between 10 and maneatingPlantnum;
-		say "[special-style-1][playernum - 10][roman type] vs [special-style-2][maneatingPlantnum][roman type]: ";
-	if maneatingPlantcaught is 1 and playernum - 10 >= maneatingPlantnum:		[caught / escape attempt]
-		say "     In desperation, your legs kick frantically inside the plant. Your efforts pay off when the plant, under your struggle, decide to spit you out and weaken you a little more before attempting to swallow you.";
-		now maneatingPlantcaught is 0;
-	else if maneatingPlantcaught is 1:													[still caught]
-		say "     The plant's body wiggles and contracts around your lower limbs, taking you further in. Soon, your waist is trapped into the plant. You feel the plant [if Player is male]squeeze your cock[else]grind against your pussy[end if], involuntarily exciting you. Your time runs short.";
-	if maneatingPlantcaught is 1 and HP of Player > 0 and Libido of Player < 110:							[caught and fighting. -20 malus on playernum applies]
-	[		say "TEST: [playernum] vs [maneatingPlantnum]:[line break]"; ]
-		let playernum be a random number between 1 and playernum;
-		let maneatingPlantnum be a random number between 1 and maneatingPlantnum;
-		say "[special-style-1][playernum - 20][roman type] vs [special-style-2][maneatingPlantnum][roman type]: ";
-	if maneatingPlantcaught is 1 and playernum - 20 >= maneatingPlantnum:		[final escape attempt]
-		say "     In desperation, your legs kick frantically inside the plant. Your efforts pay off when the plant, under your struggle, decide to spit you out and weaken you a little more before attempting to swallow you.";
-		now maneatingPlantcaught is 0;
-	else if maneatingPlantcaught is 1:													[still caught]
-		say "     With one powerful contraction, the plant swallows your torso. [if Breast Size of Player is 0]Your flat chest quickly follows[else if Breast Size of Player <= 3]It takes the plant another suction to squeeze your [breast size desc of Player] mammaries inside, squeezing them against your chest[else]It takes the plant several more suctions to squeeze your [breast size desc of Player] inside, squeezing them against your chest[end if], and leaving only your neck free.";
-		say "     Another muscle spasm, and you slide down completely inside, while the plant closes shut after you. In complete darkness, you slide down the skin-tight feeding tube. The air coming from outside is now damp, and laden with a spicy smell which begins to make you excited. You eventually slide down to a small pouch, which stretches to welcome your body, before vacuuming around you, leaving only a small layer of drug-filled air for you to breathe. Your brain urges you to push or claw your way out, before it is too late.";
-		now fightoutcome is 23;
-		Lose;
+		if playernum >= maneatingPlantnum:		[caught / escape attempt]
+			say "Powering through, you take step after step backwards, until a strong pull forces the vine to give up, lest they break under the strain.";
+			now maneatingPlantcaught is false;
+		else:													[still caught]
+			say "With surprising power, the plant reels you in, like a fisherman. You lose your footing, and vines quickly take advantage to tie up your legs. Your legs are pulled into the plant's hole, and you feel the wet and squishy touch of its inner walls.";
+			decrease humanity of Player by 3;
+	if HP of Player > 0 and Libido of Player < 110:
+		if maneatingPlantcaught is true:							[third attempt. -10 malus on playernum applies]
+			let playernum be a random number between 10 and playernum;
+			let maneatingPlantnum be a random number between 10 and maneatingPlantnum;
+			say "[special-style-1][playernum - 10][roman type] vs [special-style-2][maneatingPlantnum][roman type]: ";
+			if playernum - 10 >= maneatingPlantnum:		[caught / escape attempt]
+				say "In desperation, your legs kick frantically inside the plant. Your efforts pay off when the plant, under your struggle, decides to spit you out and weaken you a little more before attempting to swallow you.";
+				now maneatingPlantcaught is false;
+			else:													[still caught]
+				say "The plant's body wiggles and contracts around your lower limbs, taking you further in. Soon, your waist is trapped into the plant. You feel the plant [if Player is male]squeeze your cock[else]grind against your pussy[end if], involuntarily exciting you. Your time runs short.";
+	if HP of Player > 0 and Libido of Player < 110:
+		if maneatingPlantcaught is true:							[caught and fighting. -20 malus on playernum applies]
+[			say "TEST: [playernum] vs [maneatingPlantnum]:[line break]"; ]
+			let playernum be a random number between 1 and playernum;
+			let maneatingPlantnum be a random number between 1 and maneatingPlantnum;
+			say "[special-style-1][playernum - 20][roman type] vs [special-style-2][maneatingPlantnum][roman type]: ";
+			if playernum - 20 >= maneatingPlantnum:		[final escape attempt]
+				say "In desperation, your legs kick frantically inside the plant. Your efforts pay off when the plant, under your struggle, decide to spit you out and weaken you a little more before attempting to swallow you.";
+				now maneatingPlantcaught is false;
+			else:													[still caught]
+				say "With one powerful contraction, the plant swallows your torso. [if Breast Size of Player is 0]Your flat chest quickly follows[else if Breast Size of Player <= 3]It takes the plant another suction to squeeze your [breast size desc of Player] mammaries inside, squeezing them against your chest[else]It takes the plant several more suctions to squeeze your [breast size desc of Player] inside, squeezing them against your chest[end if], and leaving only your neck free.";
+				say "Another muscle spasm, and you slide down completely inside, while the plant closes shut after you. In complete darkness, you slide down the skin-tight feeding tube. The air coming from outside is now damp, and laden with a spicy smell which begins to make you excited. You eventually slide down to a small pouch, which stretches to welcome your body, before vacuuming around you, leaving only a small layer of drug-filled air for you to breathe. Your brain urges you to push or claw your way out, before it is too late.";
+				now fightoutcome is 23;
+				Lose;
 
 Section 4 - Vore Bound state
 
-[Plays on loss]
-to say ManEatingPlantVoreScene:
-	if fightoutcome is 20:
-		say "     Vines coil around your knocked-out body and pushes you into the plant's gullet, little by little, until only your neck remains. Another muscle spasm, and you slide down completely inside, while the plant closes shut after you. In complete darkness, you slide down the skin-tight feeding tube. The air coming from outside is now damp, and laden with a spicy smell which begins to make you excited. You eventually slide down to a small pouch, which stretches to welcome your body, before vacuuming around you, leaving only a small layer of drug-filled air for you to breathe. Your brain urges you to push or claw your way out, before it is too late.";
-	if fightoutcome is 22:
-		say "     You let the vines coil around you, and throw you legs-first into the plant's gullet. The vegetal swallows you, little by little, until only your neck remains. Another muscle spasm, and you slide down completely inside, while the plant closes shut after you. In complete darkness, you slide down the skin-tight feeding tube. The air coming from outside is now damp, and laden with a spicy smell which begins to make you excited. You eventually slide down to a small pouch, which stretches to welcome your body, before vacuuming around you, leaving only a small layer of drug-filled air for you to breathe. A small voice in your brain urges you to get out of this dangerous situation.";
-	WaitLineBreak;
-	manEatingPlantVore;
-
 to manEatingPlantVore:
 	now lustatt is Libido of Player;
-	now calcnumber is -1;
-	let Trixieexit be 0;
-	while Trixieexit is 0:
-		if clearnomore is 0, clear the screen;
+	let Trixieexit be false;
+	while Trixieexit is false:
+		if clearnomore is 0:
+			clear the screen;
+			LineBreak;
 		if HP of Player > 0 or humanity of Player < 50:
 			now obliging is true;
 		checkboundrecover;
 		if lustatt > 99:
-			say "     The silky touch of the plant's sack and the heavy pheromones in the air pushes you into a powerful climax. Your body, suspended into the vacuum-tight confines of the pod, is overtaken by several spasms, as you soak your prison with your [if Player is herm]various sexual fluids[else if Player is male][Cum Load Size of Player] discharge[else]vaginal juices[end if]. The fluids slowly pool down the pod, to be absorbed by the plant. You struggle to catch your breath, as you feel your sanity fade away.";
+			say "     The silky touch of the plant's sack and the heavy pheromones in the air pushes you into a powerful climax. Your body, suspended into the vacuum-tight confines of the pod, is overtaken by several spasms, as you soak your prison with your [if Player is herm]various sexual fluids[else if Player is male][Cum Load Size of Player] discharge[else]vaginal juices[end if]. The fluids slowly pool down the pod, to be absorbed by the plant. You struggle to catch your breath, as you feel your sanity fade away.[paragraph break]";
 			if Libido of Player > 25, decrease Libido of Player by (Libido of Player / 10) + 1;
 			now lustatt is Libido of Player;
 			if struggleatt is 1, now struggleatt is 0;
@@ -288,20 +280,21 @@ to manEatingPlantVore:
 		if (enduring is true and a random chance of 2 in 5 succeeds) or (enduring is false and a random chance of 4 in 5 succeeds):
 			increase hunger of Player by 1;
 			increase thirst of Player by 2;
-		else if enduring is false or (enduring is true and a random chance of 2 in 3 succeeds):
+		else if enduring is false or a random chance of 2 in 3 succeeds:
 			increase thirst of Player by 1;
-		say "     You are trapped into the skin-tight confines of a man-eating plant's feeding pod. The silky-soft skin of the pod is keeping you vacuum-sealed inside the pod, preventing you from moving more than a couple of centimeters. The top of the pod is still open, letting a small stream of aphrodisiac-laced air reach your lungs. You imagine your only active option is to [bold type]S[roman type]truggle enough until they let you go, else you can [if obliging is true][bold type]O[roman type]blige[else][bold type]A[roman type]bide[end if] them, or [if boundrecover is true][bold type]R[roman type]ecover from[else][bold type]E[roman type]ndure[end if] these questionable circumstances.[line break]";
-		now enduring is false;
-		say "[bold type]1[roman type] - [link]Struggle[as]1[end link][line break][run paragraph on]";
-		say "[bold type]2[roman type] - [link][if obliging is true]Oblige[else]Abide[end if][as]2[end link][line break][run paragraph on]";
-		say "[bold type]3[roman type] - [link][if boundrecover is false]Endure[else]Recover[end if][as]3[end link][line break][run paragraph on]";
-		say "Sanity: [humanity of Player]/ 100	Lust: [lustatt]/100	Hunger: [hunger of Player]	Thirst: [thirst of Player]	Struggle: [maneatingPlantStruggleBar][line break][run paragraph on]";
 		if humanity of Player < 1:
-			now Trixieexit is 1;
+			now Trixieexit is true;
 			trigger ending "Man-eating Plant Vore";
 			the Player was ended by "Vore by Man-eating Plant";
-			end the story saying "Became plant nanite nutriment";
+			end the story saying "You became plant nanite nutriment.";
 		else:
+			say "     You are trapped into the skin-tight confines of a man-eating plant's feeding pod. The silky-soft skin of the pod is keeping you vacuum-sealed inside the pod, preventing you from moving more than a couple of centimeters. The top of the pod is still open, letting a small stream of aphrodisiac-laced air reach your lungs. You imagine your only active option is to [bold type]S[roman type]truggle enough until it lets you go, else you can [if obliging is true][bold type]O[roman type]blige[else][bold type]A[roman type]bide[end if] it or [if boundrecover is true][bold type]R[roman type]ecover from[else][bold type]E[roman type]ndure[end if] these questionable circumstances.";
+			now enduring is false;
+			say "[bold type]1[roman type] - [link]Struggle[as]1[end link][line break]";
+			say "[bold type]2[roman type] - [link][if obliging is true]Oblige[else]Abide[end if][as]2[end link][line break]";
+			say "[bold type]3[roman type] - [link][if boundrecover is false]Endure[else]Recover[end if][as]3[end link][line break]";
+			say "Sanity: [humanity of Player]/100  Lust: [lustatt]/100  Hunger: [hunger of Player]  Thirst: [thirst of Player]  Struggle: < [italic type][bracket]-[if struggleatt is 1]---[bold type]X[roman type][else if struggleatt is 2]--[bold type]XX[roman type][else if struggleatt is 3]-[bold type]XXX[roman type][else]-[bold type]XXXX[roman type][line break]";
+			say "> [run paragraph on]";
 			let k be 0;
 			now keychar is "INVALID";
 			change the text of the player's command to "";
@@ -310,28 +303,20 @@ to manEatingPlantVore:
 				translate k;
 				if the player's command matches "[number]":
 					now keychar is "[number understood]";
-			if keychar in lower case exactly matches the text "s" or keychar in lower case exactly matches the text "1" or keychar in lower case exactly matches the text "return" or keychar in lower case matches the text "struggle":
-				LineBreak;
+			LineBreak;
+			if keychar is "s" or keychar is "1" or keychar is "return" or keychar in lower case matches the text "struggle":
 				increase struggleatt by 1;
-				if struggleatt < 3:
-					say "     You push with all your strength against the tight material. Fortunately for you, it is not completely sealed around your body, thanks to the small airhole, and this permits you to use the small leeway to give you more liberty.";
-					increase lustatt by 7 + (lustadjust * 2);
-					wyvhumanityroll; [aka humanity loss]
-					wait for any key;
-				else if struggleatt is 3:
-					say "     The pod becomes more and more saggy, as you make air reach inside. Having a good feeling, you begin to kick and claw the ways of your prison.";
-					increase lustatt by 7 + (lustadjust * 2);
-					wyvhumanityroll; [aka humanity loss]
-					wait for any key;
-				else:
-					say "     With a loud ripping sound, the plant's skin gives way under your efforts. A gush of light and fresh air fills your prison and your body flops outside, in a growing puddle of plant sap. Even if the plant seems to have been fatally wounded, you cautiously put as much distance as possible between it and you, and any other suspicious tree for that matter.";
+				say "     [if struggleatt < 3]You push with all your strength against the tight material. Fortunately for you, it is not completely sealed around your body, thanks to the small airhole, and this permits you to use the small leeway to give you more liberty[else if struggleatt is 3]The pod becomes more and more saggy, as you make air reach inside. Having a good feeling, you begin to kick and claw the ways of your prison[else]With a loud ripping sound, the plant's skin gives way under your efforts. A gush of light and fresh air fills your prison and your body flops outside, in a growing puddle of plant sap. Even if the plant seems to have been fatally wounded, you cautiously put as much distance as possible between it and you, and any other suspicious tree for that matter[end if].";
+				if struggleatt > 3:
 					cleanboundmemory;
-					now pewtergenitalcap is 0;
-					now Trixieexit is 1;
+					now Trixieexit is true;
 					follow the turnpass rule;
-				next;
-			else if (obliging is true and (keychar in lower case exactly matches the text "o" or keychar in lower case matches the text "oblige")) or (obliging is false and (keychar in lower case exactly matches the text "a" or keychar in lower case matches the text "abide")) or keychar in lower case exactly matches the text "2":
-				LineBreak;
+				else:
+					LineBreak;
+					increase lustatt by 7 + (lustadjust * 2);
+					wyvhumanityroll; [aka humanity loss]
+					wait for any key;
+			else if (obliging is true and (keychar is "o" or keychar in lower case matches the text "oblige")) or (obliging is false and (keychar is "a" or keychar in lower case matches the text "abide")) or keychar is "2":
 				if obliging is true:
 					say "     Basking in the pleasurable sensation of the vacuum seal over your skin, you grind your [if Player is male]cock[else]pussy[end if] against your prison, while taking big breathes of the pleasure-inducing air circulating inside the plant.";
 					increase lustatt by 14 + (lustadjust * 4);
@@ -341,9 +326,7 @@ to manEatingPlantVore:
 				LineBreak;
 				wyvhumanityroll;
 				wait for any key;
-				next;
-			else:
-				LineBreak;
+			else if (boundrecover is true and (keychar is "r" or keychar in lower case matches the text "recover")) or (boundrecover is false and (keychar is "e" or keychar in lower case matches the text "endure")) or keychar is "3":
 				now enduring is true;
 				if boundrecover is true:
 					say "     With a brief flash of insight, you're able to find a glimpse of mental clarity within these confines, recovering a small portion of your lost humanity.";
@@ -355,12 +338,8 @@ to manEatingPlantVore:
 				increase lustatt by 3 + lustadjust;
 				wyvhumanityroll;
 				wait for any key;
-				next;
-			say "Invalid action.";
-
-to say maneatingPlantStruggleBar:
-	say "< [italic type][bracket]-[if struggleatt is 1]---[bold type]X[roman type][else if struggleatt is 2]--[bold type]XX[roman type][else if struggleatt is 3]-[bold type]XXX[roman type][else]-[bold type]XXXX[roman type]";
-
+			else:
+				say "Invalid action.";
 
 Section 5 - Endings
 
@@ -381,9 +360,7 @@ name	desc	weight	object
 
 man-eating flower seed is a grab object.
 man-eating flower seed has a Usedesc "[man-eating flower seed use]".
-
-instead of sniffing man-eating flower seed:
-	say "As you take a sniff of the seed, you feel a sudden pang of hunger in your stomach. The effect leaves as quickly as it came.";
+Scent of man-eating flower seed is "As you take a sniff of the seed, you feel a sudden pang of hunger in your stomach. The effect leaves as quickly as it came.".
 
 to say man-eating flower seed use:
 	if Player cannot vore:
@@ -392,7 +369,6 @@ to say man-eating flower seed use:
 		FeatGain "Vore Predator";
 		increase vorecount by 1;
 	else:
-		say "You gulp down the seed. It does not seem to have an effect on the present you.";
-
+		say "     You gulp down the seed. It does not seem to have an effect on the present you.";
 
 Man-eating Plant ends here.

@@ -4,9 +4,9 @@ Bound State Universals by Core Mechanics begins here.
 boundsegment is a number that varies.	[represents the stages of being bound or restricted, ie when gradually being enveloped]
 boundmod is a number that varies.
 boundcounter is a number that varies.
+boundmod2 is a number that varies.
 
-
-lustatt is a number that varies. lustatt is usually 0.[lustatt is a temporary libido variable to be modified and used for deciding when the player reaches orgasm so that player libido doesn't change or wind up increasing uncontrollably at the end of the bound state. it is usually set to the players libido before the bound loop begins and after orgasm. At the end of the loop, authors can decide how actual player libido should be affected.]
+lustatt is a number that varies. lustatt is usually 0. [lustatt is a temporary libido variable to be modified and used for deciding when the player reaches orgasm so that player libido doesn't change or wind up increasing uncontrollably at the end of the bound state. it is usually set to the players libido before the bound loop begins and after orgasm. At the end of the loop, authors can decide how actual player libido should be affected.]
 struggleatt is a number that varies. struggleatt is usually 0. [represents the amount the player has struggled, which can be compared to determine if freedom should be obtained]
 bsextimer is a number that varies. bsextimer is usually 0.
 boundstate is a truth state that varies. boundstate is usually false.
@@ -20,14 +20,13 @@ obliging is a truth state that varies. obliging is usually false.
 
 Section 1 - Routines
 
-
 [When called on each code loop, this Routine has a chance of setting boundrecover to true that increases each time it is called, then resets when it finally turns true. The next two loops are gaurunteed to false unless boundrecover hasn't been set to false yet before this routune was called. This routine can be useful when the author wants to have a chance of recovering in some way during the bound state, usually for sanity. It is also useful for toggling between displaying the endure option and the recover option in the menu of some bound states. ]
 to checkboundrecover:
 	if boundrecover is false, increase recoverchance by 1;
 	if a random chance of recoverchance in 9 succeeds:
 		now boundrecover is true;
 		now recoverchance is -1;
-	if "Sanity Saver" is listed in the feats of Player, now humanity of Player is 100;[NOTE: Why is this here? makes this feat provide immunity to sanity loss durring bound states, and can be used to increase sanity to max by entering a bound state voluntarily.]
+	if "Sanity Saver" is listed in the feats of Player, now humanity of Player is 100; [NOTE: Why is this here? makes this feat provide immunity to sanity loss durring bound states, and can be used to increase sanity to max by entering a bound state voluntarily.]
 
 to cleanboundmemory: [Zeroes out all variables used in bound states]
 	now boundstate is false;
@@ -65,6 +64,7 @@ to cleanboundmemory: [Zeroes out all variables used in bound states]
 	now bsextimer is 0;
 	now boundcounter is 0;
 	now boundmod is 0;
+	now boundmod2 is 0;
 	now obliging is false;
 	now boundrecover is false;
 	now recoverchance is -1;
@@ -106,7 +106,6 @@ to boundstatename:
 			else:
 				if struggleatt > 0, decrease struggleatt by 1;
 				decrease humanity of Player by 15 + (psycheadjust * 5);
-
 
 		now enduring is false; [resets enduring so the player can choose to continue doing so in the menu]
 		[a situational scene goes here, describing the player's current predicament and bound state. this can vary using [one of]x[or]y[at random] embedded code, or author created variables that change based on options available to the player or other factors the author creates.]

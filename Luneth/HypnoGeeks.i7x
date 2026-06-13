@@ -16,18 +16,18 @@ Version 1 of HypnoGeeks by Luneth begins here.
 
 HG_Flashback_Turns is a number that varies. HG_Flashback_Turns is usually -1. [inactive]
 
-Section 1 - Character Information
+Chapter 1 - Character Information
 
-Part 1 - Arthur
+Section 1 - Arthur
 [For Arthur information check Arthur file in Luneth folder.]
 
-Part 2 - Reece
+Section 2 - Reece
 [For Reece information check Reece file in Luneth folder.]
 
-Part 3 - Landon
+Section 3 - Landon
 [For Landon information check Landon file in Luneth folder.]
 
-Section 2 - Intro Event
+Chapter 2 - Intro Event
 
 Table of GameEventIDs (continued)
 Object	Name
@@ -44,9 +44,7 @@ when play begins: [flags for blocking this event]
 
 to say ResolveEvent HypnoGeeks:
 	say "     Making your way through the campus grounds isn't as difficult as the rest of the city, but you make sure to keep your guard up. A couple of half-dressed stags stumble out of a nearby building, antlers locking together as they wrestle for dominance and move onto the front lawn. It's a situation that isn't exactly strange these days, but two bucks in rut is still something that you'd rather avoid. Crossing the street, you plan to keep moving forward, but you pause when you hear a loud yelp and a short scuffle. Something's going on around the back side of the building, and unless the collectively sixteen points of buck back there lose interest in each other long enough to hear what's going on, you're the only one that might be able to help.";
-	LineBreak;
-	say "     [bold type]Someone could be in serious danger. Do you want to investigate?[roman type][line break]";
-	LineBreak;
+	say "[line break]     [bold type]Someone could be in serious danger. Do you want to investigate?[roman type][line break]";
 	say "     ([link]Y[as]y[end link]) - Take a look and see if there's anything you can do to help.";
 	say "     ([link]N[as]n[end link]) - Stay on the safe side. They're probably too far gone already.";
 	if Player consents: [INVESTIGATE]
@@ -62,9 +60,7 @@ to say ResolveEvent HypnoGeeks:
 		WaitLineBreak;
 		say "     Something seems off though about the way that Landon is talking, almost as if he was just repeating a script, his voice having no inflection to it. 'Did ya like watching me naked and wet, lil['] dude? How is this any different? Why don't you touch yourself like you used to whenever you watched me?' The spectacled mouse can't help but moan at this and gives in to lust, his own hand diving into his slacks. 'Landon, I couldn't help myself. That charming face and all of those muscles!' Arthur quickly grabs the retriever's bone and begins to excitedly jerk the dog off. Surprisingly, despite the apparent signs of him being lost in pleasure, the jock looks to be barely conscious, lazily staring into the distance, drool dripping from his panting muzzle. These mice must have drugged the poor retriever, which explains why he didn't do more damage to the much smaller rodents.";
 		say "     With Arthur busy jerking off the muscled hunk and Reece busy jerking off himself, you could rush in there and take them both by surprise, freeing the hunk and allowing him to shake off whatever influence he is under. Or, thinking about it, if you stayed back and afterwards followed them back to their hideout, you might be able to obtain whatever it is that they are using for your own ends, not to mention that you'd get the benefit of watching these two nerds finish doing their thing.";
-		LineBreak;
-		say "     [bold type]Do you rescue the golden retriever jock, or let the nerdy mice continue and follow them afterwards?[roman type][line break]";
-		LineBreak;
+		say "[line break]     [bold type]Do you rescue the golden retriever jock, or let the nerdy mice continue and follow them afterwards?[roman type][line break]";
 		say "     ([link]Y[as]y[end link]) - Be a hero and save the dog!";
 		say "     ([link]N[as]n[end link]) - Watch the show and follow the mice to their hole.";
 		if Player consents: [SAVE]
@@ -72,17 +68,14 @@ to say ResolveEvent HypnoGeeks:
 			let GroupFightCounter be 0;
 			now fightoutcome is 0; [reset]
 			while fightoutcome < 20 and GroupFightCounter < 2: [runs for 2 times or until the player loses or flees]
-				now inasituation is true; [suppresses the standard texts for the creature - be sure to set that up in the creature file too]
 				challenge "Nerdy Mouse";
 				increase GroupFightCounter by 1;
-			now inasituation is false; [back to standard scenes]
 			if fightoutcome < 20: [player won]
 				say "     You stand triumphantly over the two mice, which isn't exactly saying much. [if HP of Player > MaxHP of Player / 2]For all of the effort that they pulled, you're not even winded. [end if]You step over their bodies and move to the retriever's side. Being careful not to get the jock's drool on you, you give him a few slaps on the face to wake him up. Thankfully, the big lug soon blinks a couple of times and sits up, startled and confused. Looking down to find his pants at his ankles and his dick hard, with you leaning over him, the muscular dog's brows draw together, and his lips pull back from his sharp teeth, so you throw your hands up in a consoling gesture and explain what happened. A couple more blinks and some glances to the unconscious mice, and he nods his head, believing your story. He does however seem startled when told the names of the mice. 'That's crazy, bro. Did you get a load of whatever they used to make me all dumb?'";
 				say "     Resisting the urge to joke about 'making' him dumb, you quickly scan the scene of the fight. Meanwhile, Landon gets to his feet and wanders after you as if to help looking. It doesn't take long to spot the device that Reece was holding before your surprise attack. You walk over and pick it up, giving it a quick inspection. The black box features a cracked lens at one end and a small button keypad on the other. You push a couple of buttons to test it and are rewarded with a loud spark and plume of black smoke in your face. Yeah, you think that you aren't getting anything out of that. It must have broken in the fight, but at least the mice won't be able to use it either, once they finally wake up. However, it might come in handy to hold onto it. You never know if you could find a way to repair it.";
 				WaitLineBreak;
 				say "     'Killer, dude! Can't believe these dumb losers have stuff like this,' the canine you saved says as he steps up beside you and looks down at the broken device in your hands. He laughs and puts his arm around your shoulders. 'Who knows what they would've have done to me had you not showed up. My girl would've probably been really mad if they were making me screw other chicks.' He stops and gets a horrified look on his face, prompting you to ask what he's thinking. 'Aw, man, just... what if they wanted me to screw other bros? Do you think 'No Homo' counts when you're bein['] brainwashed or whatever? That is not what Landon does.' The jock shudders before he lets go of you. You make a mental note that Landon has yet to zip up his pants, nor has his raging erection subsided since your rescue, but you don't say anything, letting him continue, 'Anyways, bro, you helped me out, so I'll help you out. I got some supplies that I can share with ya to show my thanks.' He collects a bottle of water and a packet of food from a nearby dropped backpack that apparently is his, which you graciously accept.";
 				say "     Landon stands close to you as you pack the reward for his rescue away. You don't see when the mice scamper off, but sure enough, as soon as you lift your head, the nerds have vanished. Your saved muscled hunk also starts to walk off, but he turns around and gives you a wink. 'Maybe I'll see you around, bro?' You nod, and have to wonder if maybe that little box did more damage than he realizes. Either way, you pack the supplies away and make your way back onto the road where you entered. Out of curiosity, you look back to where those stags were fighting before, but all you see is a single cum-stained varsity jacket, lying forgotten on the lawn. Must have gotten hot and heavy. You shrug and continue onwards, happy that you could help at least one person out in this crazy mouse-zap-dog world.";
-				LineBreak;
 				now Stamina of Landon is 1;
 				ItemGain defective device by 1 silently;
 				ItemGain food by 1;
@@ -90,10 +83,8 @@ to say ResolveEvent HypnoGeeks:
 				now Resolution of HypnoGeeks is 1; [saved the dog, saved the world]
 			else if fightoutcome > 19 and fightoutcome < 30: [lost]
 				say "     With one last blow, you crumple backwards next to the very retriever that you meant to save. You look up and see the bare-assed hunk, his pants still at his ankles ever since you interrupted the nerds['] fun. Refusing to become their next plaything, you struggle to push yourself up, but pause when you come face to face with the hunk's rock hard cock. You're surprised to find it still holding strong and leaking precum profusely while you were fighting for his honor. Taking advantage of your distraction, a small foot plants into your battered side, and, without any energy to resist, you collapse on your side, staring up at the winners of the fight. Looking up into Arthur's face, the mouse says, 'Look at this little twerp! Did you actually think that you could beat [']me[']? I'm way too high a level for some crappy noob like you to beat!' Reece picks this moment to also pipe up, 'Guess we're superior to them in mind [italic type]and[roman type] in body!'";
-				say "     That gets a laugh out of his companion, but before you can come up with a witty retort, the other one, Arthur, hushes you. There's a glint of unbridled lust and maybe something worse, unhinged even, in his eyes as the geek leans in close. 'Don't worry, you'll be nice and obedient like our other pet over here.' Spotting a moment to get in a jab, you spit in the mouse's face, blood and saliva globbing into his short whiskers. Arthur's smile is wiped from his face and replaced with a cruel smirk as he straightens back up and looks to the mouse with the black box. 'Reese, hit this loser with the ray. I'm tired of it being able to think.' With a worried expression on his snout, the spectacled mouse quickly nods to Arthur and points the box at you, allowing you to see the lens rotating as it focuses on your defiant sneer, and with a --";
-				LineBreak;
-				LineBreak;
-				say "     [bold type][italic type]FLASH![roman type][line break]";
+				say "     That gets a laugh out of his companion, but before you can come up with a witty retort, the other one, Arthur, hushes you. There's a glint of unbridled lust and maybe something worse, unhinged even, in his eyes as the geek leans in close. 'Don't worry, you'll be nice and obedient like our other pet over here.' Spotting a moment to get in a jab, you spit in the mouse's face, blood and saliva globbing into his short whiskers. Arthur's smile is wiped from his face and replaced with a cruel smirk as he straightens back up and looks to the mouse with the black box. 'Reese, hit this loser with the ray. I'm tired of it being able to think.' With a worried expression on his snout, the spectacled mouse quickly nods to Arthur and points the box at you, allowing you to see the lens rotating as it focuses on your defiant sneer, and with a --[line break]";
+				say "[line break]     [bold type][italic type]FLASH![roman type][line break]";
 				WaitLineBreak;
 				say "     ...Your eyes flutter open. That... was odd. You aren't sure what happened, but you're lying, groggily, on some grassy field just outside of the dorms, a thick string of drool connecting the corner of your mouth to the ground below. Wiping it off with the back of your hand, you stand up and that's when you notice a wet sensation between your [if Player is female]thighs[else]buttocks[end if]. Looking around and seeing no immediate witnesses, you reach back and feel around, encountering something sticky leaking out of your hole. Bringing your hand around to look at some of the goop, you see its creamy white appearance. Even as your mind reels to remember how that cum got there, your hand subconsciously keeps moving, bringing the finger closer and closer to your face. As soon as the rich, musky smell of semen hits your nostrils, you can't help but pop it into your mouth, savoring the mousey taste. Then you freeze. What the hell are you doing? Thinking right now is like swimming through a murky jello. Remembering how exposed you are, you quickly grab your gear and do your best to scurry back to safety.";
 				now HG_Flashback_Turns is a random number between 5 and 10;
@@ -121,56 +112,49 @@ to say ResolveEvent HypnoGeeks:
 		now Resolution of HypnoGeeks is 100; [player ignored them]
 	now HypnoGeeks is resolved;
 
-Section 3 - Flashback Events
+Chapter 3 - Flashback Events
 
 an everyturn rule:
 	if HG_Flashback_Turns > 0:
 		decrease HG_Flashback_Turns by 1;
-	else if HG_Flashback_Turns is 0:
+	else:
 		if Resolution of HypnoGeeks is 70: [player got zapped]
 			say "     As you continue to make your way through the city, your head erupts in stinging pain from one moment to the next. You grab the sides of your skull in an effort to dull the throbbing that you feel, however rather than the pain dulling, instead it begins to get worse. From behind your scrunched up eyelids, you see flashes of images. They go by far too fast for you to track them, and all you can clearly see is two brown mice laughing, but you honestly can't remember where you could have seen them. Is your mind trying to remember something, or could you simply be starting to lose it after all of your experiences inside this city?";
-			LineBreak;
-			say "     [bold type]Do you want to attempt to remember whatever you may have forgotten?[roman type][line break]";
+			say "[line break]     [bold type]Do you want to attempt to remember whatever you may have forgotten?[roman type][line break]";
 			say "     ([link]Y[as]y[end link]) - Yes, if you have forgotten something then it should be faced head on.";
 			say "     ([link]N[as]n[end link]) - No, whatever this is, it's not real and should be suppressed.";
 			if Player consents: [remember it]
-				say "     Deciding that it's better to try and remember, you close your eyes and focus in an attempt to bring the memories forward. While everything does go by as if it were on fast forward, you can see an incredibly buff anthro golden retriever laying against a wall, his eyes looking seriously messed up, almost as if he's drunk. From behind your own eyes, you see yourself lunge forward, initiating a fight with the two brown mice, only to be knocked to the floor. The rodents then look down at you laying on the ground and then raise some sort of device, aiming it directly at you.";
 				LineBreak;
-				say "     [bold type][italic type]FLASH![roman type][line break]";
+				say "     Deciding that it's better to try and remember, you close your eyes and focus in an attempt to bring the memories forward. While everything does go by as if it were on fast forward, you can see an incredibly buff anthro golden retriever laying against a wall, his eyes looking seriously messed up, almost as if he's drunk. From behind your own eyes, you see yourself lunge forward, initiating a fight with the two brown mice, only to be knocked to the floor. The rodents then look down at you laying on the ground and then raise some sort of device, aiming it directly at you.";
+				say "[line break]     [bold type][italic type]FLASH![roman type][line break]";
 				say "     While still wrapped within the memory, time starts to slow down all around you. Whatever that bright light was, it must be the catalyst for whatever it is that you may have forgotten. Still trapped inside of your own mind, you can't move any part of your body, almost as if they had somehow paralyzed you. The small brown mice watch you intently and finally one of them begins to casually walk up to you, however the mouse still holding the device seems wary. 'Wait, Arthur, are you sure that it's safe? I mean Landon was pretty stupid already, so it was easier to break him, but we don't really know anything about this one.' The one you now know to be Arthur turns his head to look back at the mouse wearing glasses. 'Don't worry so much, Reese. Compared to us, they're all pretty much neanderthals, right?'";
 				say "     As you watch the two rodents interact, you are now able to make a few assumptions about their dynamic. Arthur seems to be the one that is in charge and has the braver personality while Reese on the other hand appears to be the complete opposite. Just going by appearances, the only way that you can tell the difference between the two mice is by what they are wearing. Reese has a slightly worn little suit and glasses that keep falling down his snout, and Arthur has a graphic tee showcasing some sort of giant robot destroying a city with baggy jeans covering his lower half. While you attempt to take in every detail that you can, you have to keep telling yourself that none of this is really happening. Instead of being like a normal memory, all of this feels as if you're really here, even up to the scents and the feel of the breeze on your face.";
 				WaitLineBreak;
-				say "     Finally, Reese gives a tentative nod in response to Arthur's question while pushing his thick framed glasses back up his snout. 'I guess that's true, just... be careful, okay?' As soon as Arthur's face turns back towards you, he rolls his eyes in annoyance, before a sadistic smile forms on his lips. ";
 				if "PlayerHypnoIntro_Naked" is listed in Traits of Reese: [player was naked in the first meeting]
-					say "Sauntering over to you, Arthur allows his clawed hand to graze across your bare arm. 'The best part about you coming along is that you're already naked. No unnecessary wait time on undressing needed, haha!' While Arthur looks thrilled and takes in every inch of your body that he can, Reece looks slightly embarrassed and strains to look you in the eyes rather than indulging in your form. 'Not bad, but still could use some work... which we'll do on you soon. Yeah you're gonna be perfect! Now, why don't you turn around and bend over and show off that ass for your new master?' The last bit is whispered, almost as if Arthur didn't want the other mouse to overhear.";
+					say "     Finally, Reese gives a tentative nod in response to Arthur's question while pushing his thick framed glasses back up his snout. 'I guess that's true, just... be careful, okay?' As soon as Arthur's face turns back towards you, he rolls his eyes in annoyance, before a sadistic smile forms on his lips. Sauntering over to you, Arthur allows his clawed hand to graze across your bare arm. 'The best part about you coming along is that you're already naked. No unnecessary wait time on undressing needed, haha!' While Arthur looks thrilled and takes in every inch of your body that he can, Reece looks slightly embarrassed and strains to look you in the eyes rather than indulging in your form. 'Not bad, but still could use some work... which we'll do on you soon. Yeah you're gonna be perfect! Now, why don't you turn around and bend over and show off that ass for your new master?' The last bit is whispered, almost as if Arthur didn't want the other mouse to overhear.";
 				else if "PlayerHypnoIntro_Clothed" is listed in Traits of Reese: [player was dressed in the first meeting]
-					say "Sauntering over to you, Arthur allows his clawed hand to graze across the fabric of your clothes. 'Alright, slave, take this stuff off. I shouldn't have to be bothered undressing you myself, now should I?' Having no control over your own body, you slowly begin to remove your clothing piece by piece. You [Selfstripcrotch]. Eventually you are naked and on full display for both of the brown mice. While Arthur looks thrilled and takes in every inch of your body that he can, Reece looks slightly embarrassed and strains to look you in the eyes rather than indulging in your form. 'Not bad, but still could use some work... which we'll do on you soon. Yeah you're gonna be perfect! Now, why don't you turn around and bend over and show off that ass for your new master?' The last bit is whispered, almost as if Arthur didn't want the other mouse to overhear.";
-				LineBreak;
-				say "     [bold type][italic type]FLASH![roman type][line break]";
-				if Player is naked: [in the present]
-					say "     Without warning, you are suddenly ripped out of the memory. Still feeling naked and embarrassed, you quickly check yourself out. While still naked, you can't feel Arthur's tiny claws on your body anymore. Calming down, you attempt to come to grips with what you had just experienced. Taking a deep breath, you decide that there is no point in freaking out over what happened. The only thing to do is wait and see if any other memories will crop up.";
-				else: [clothed in the present]
-					say "     Without warning, you are suddenly ripped out of the memory. Still feeling naked and embarrassed, you quickly check yourself out, making sure that you're still clothed. Calming down, you attempt to come to grips with what you had just experienced. Taking a deep breath, you decide that there is no point in freaking out over what happened. The only thing to do is wait and see if any other memories will crop up.";
+					say "     Finally, Reese gives a tentative nod in response to Arthur's question while pushing his thick framed glasses back up his snout. 'I guess that's true, just... be careful, okay?' As soon as Arthur's face turns back towards you, he rolls his eyes in annoyance, before a sadistic smile forms on his lips. Sauntering over to you, Arthur allows his clawed hand to graze across the fabric of your clothes. 'Alright, slave, take this stuff off. I shouldn't have to be bothered undressing you myself, now should I?' Having no control over your own body, you slowly begin to remove your clothing piece by piece. You [Selfstripcrotch]. Eventually you are naked and on full display for both of the brown mice. While Arthur looks thrilled and takes in every inch of your body that he can, Reece looks slightly embarrassed and strains to look you in the eyes rather than indulging in your form. 'Not bad, but still could use some work... which we'll do on you soon. Yeah you're gonna be perfect! Now, why don't you turn around and bend over and show off that ass for your new master?' The last bit is whispered, almost as if Arthur didn't want the other mouse to overhear.";
+				say "[line break]     [bold type][italic type]FLASH![roman type][line break]";
+				say "     Without warning, you are suddenly ripped out of the memory. Still feeling naked and embarrassed, you quickly check yourself out[if Player is naked]. While still naked, you can't feel Arthur's tiny claws on your body anymore[else], making sure that you're still clothed[end if]. Calming down, you attempt to come to grips with what you had just experienced. Taking a deep breath, you decide that there is no point in freaking out over what happened. The only thing to do is wait and see if any other memories will crop up.";
 				SanLoss 5;
 				now Resolution of HypnoGeeks is 71; [first flashback remembered]
 				now HG_Flashback_Turns is a random number between 5 and 10;
 			else: [suppress it]
+				LineBreak;
 				say "     Holding your head even tighter, you attempt to fight off whatever it is trying to enter your thoughts. As a last ditch effort, you slap yourself across the face in the hopes that it will pull you out of the moment, and thankfully, it does. Shaking your head quickly, you straighten your back and decide to try and forget whatever you had just experienced. No matter what it was, all it could have done is further damage your psyche.";
 				SanBoost 15;
 				now Resolution of HypnoGeeks is 99; [something happened, player doesn't want to know, break off for the chain]
 		else if Resolution of HypnoGeeks is 71: [second flashback time]
 			say "     As you continue to make your way through the city, your head suddenly erupts in an all too familiar burst of pain. You grab the sides of your skull in an effort to dull the throbbing that you feel, however rather than the pain fading, instead it begins to get worse.";
-			LineBreak;
-			say "     [bold type][italic type]FLASH![roman type][line break]";
+			say "[line break]     [bold type][italic type]FLASH![roman type][line break]";
 			say "     Opening your eyes, you see Arthur look down at you with a manic smile on his face. 'Ready to play a fun little game, hypnoslut?' As quickly as the mouse's face enters your vision, his image begins to fade back into the real world. Once again, your memories are attempting to resurface, but the real question is, [italic type]do you want them to[roman type]?";
-			LineBreak;
-			say "     [bold type]Do you want to find out what happened next with the two mice?[roman type][line break]";
+			say "[line break]     [bold type]Do you want to find out what happened next with the two mice?[roman type][line break]";
 			say "     ([link]Y[as]y[end link]) - Yes, you deserve to know exactly what happened to you!";
 			say "     ([link]N[as]n[end link]) - No, after what you observed before, you don't want any part of those memories!";
 			if Player consents: [remember it]
-				say "     Deciding to face the truth, the world almost seems to melt away, leaving the appearance of everything around you looking like a bleeding watercolor painting.";
 				LineBreak;
-				say "     [bold type][italic type]FLASH![roman type][line break]";
+				say "     Deciding to face the truth, the world almost seems to melt away, leaving the appearance of everything around you looking like a bleeding watercolor painting.";
+				say "[line break]     [bold type][italic type]FLASH![roman type][line break]";
 				say "     Blinking the glare from the light out of your eyes, the first thing you see is Arthur's smile and just beyond him, Reece's curious gaze. The mouse in the graphic tee begins to walk in circles around your bent over form, chuckling to himself as he strokes your head as if you're some sort of pet. It's the spectacled mouse that speaks up first, 'Arthur, what are you doing? Shouldn't we just grab Landon and go? I mean, they don't have anything to do with this!' With his back still to his brother, Arthur rolls his eyes in agitation, but quickly plasters a fake smile on his snout. 'Bro, this is one of that mutt's friends that were making fun of you! I thought that you wanted revenge for being bullied, and here you are wanting to let one of them go?'";
 				say "     Reece stops for a moment, apparently in thought. 'Well, I suppose that makes sense, but I'm just not sure...' The dominate mouse then steps away from you with a dark chuckle and walks over to his brother. Pulling a water bottle out of the back pocket of his baggy jeans, Arthur offers it to Reece. 'Here, why don't you take a drink? You know that you always think clearer when hydrated.' The suited rodent smiles at the other, thanking him before swiftly chugging the water bottle. At first, nothing happens, but eventually, Reece takes off his glasses and pinches the bridge of his snout. 'Thank you, Arthur. I think that I needed that. I can already feel one of my headaches creeping up.'";
 				WaitLineBreak;
@@ -181,52 +165,45 @@ an everyturn rule:
 				say "     Arthur groans at your response. 'Alright, Reece, try and choke this bitch with your lil['] dick!' The mouse in front of your mouth stops for a moment, and you can only assume that he reacting to what his brother just said. 'Fuck you, Arthur! We both know that my dick's bigger than the one you're wielding, haha.' Going by how brutal the one behind you begins to pummel your insides, he is none to pleased by what he was just told, but you hardly have time to think on that before a rock-hard cock is rammed down your throat. While you don't have any control over your body, your body still has natural functions, and your eyes begin to water. Tears begin to fall down your face from the assault that you're receiving from both ends.";
 				WaitLineBreak;
 				say "     This goes on for a while, your body being abused by both murids with no end in sight. Eventually, the brothers switch places, laughing and making degrading comments towards you. Arthur finishes first, filling your mouth with his salty load before pulling his prick out of your stretched lips and pushing your head to the ground. From this angle, you have a clear view of the golden retriever. He's just sitting there with his tongue lolling out of his mouth, a vacant expression on his muzzle. With one final slam, Reece begins to release his seed deep inside of your [if Player is female]pussy[else]ass[end if], before also pulling out. You are left there feeling dirty and used, and Arthur comes over to grab you by the jaw, forcing you to look him in the eye. 'Oh, have I got plans for you, bitch...'";
-				LineBreak;
-				say "     [bold type][italic type]FLASH![roman type][line break]";
+				say "[line break]     [bold type][italic type]FLASH![roman type][line break]";
 				say "     Without warning, you are suddenly ripped out of the memory. Still feeling naked and embarrassed, you quickly check yourself out. You can't feel the brothers' cum anywhere on your body anymore. Calming down, you attempt to come to grips with what you had just experienced. Taking a deep breath, you decide that there is no point in freaking out over what happened. The only thing to do is wait and see if any other memories will crop up.";
 				SanLoss 5;
 				now Resolution of HypnoGeeks is 72; [second flashback remembered]
 				now HG_Flashback_Turns is a random number between 5 and 10;
 			else: [suppress it]
+				LineBreak;
 				say "     Holding your head even tighter, you attempt to fight off any thoughts involving the two mice. As a last ditch effort, you slap yourself across the face in the hopes that it will pull you out of the moment, and thankfully, it does. Shaking your head quickly, you straighten your back and decide to try and forget all about whatever it is that those weirdos did to you.";
 				SanBoost 15;
 				now Resolution of HypnoGeeks is 99; [something happened, player doesn't want to know, break off for the chain]
 		else if Resolution of HypnoGeeks is 72: [third time]
 			say "     As you continue to make your way through the city, out of nowhere your head erupts in an all too familiar burst of pain. You grab the sides of your skull in an effort to dull the throbbing that you feel, however rather than the pain fading, instead it begins to get worse.";
-			LineBreak;
-			say "     [bold type][italic type]FLASH![roman type][line break]";
+			say "[line break]     [bold type][italic type]FLASH![roman type][line break]";
 			say "     Opening your eyes, you're face to face with the geeky mouse Arthur. 'Oh, have I got plans for you, bitch...' Watching as his golden eyes begin to dilate, a shudder of dread goes through your whole body. As the mouse's face enters your vision, his image doesn't fade like it has before. Perhaps your mind has begun to accept the fact that you want to know the truth and no longer feels the need to protect you.";
 			WaitLineBreak;
 			say "     Arthur lets your head fall to the ground as he gets up. Walking back over to where the machine that you were zapped with was set down, Arthur picks it up, and with a swagger in his step, he comes back toward you. From behind, you're able to hear what you can only assume is Reece vomiting. 'Arthur, I don't feel so good. Are you sure that water was okay?' A snicker escapes Arthur's throat. 'Yeah, the water was fine, bro. You prolly just ate something that didn't agree with ya. Why don't you go puke somewhere else? The sight of you right now is gonna make [']me['] sick!' After a few moments, the mouse in front of you grabs hold of your cum-stained face, forcing you to look him in the eye once more. With a mocking smile on his snout, he points the device at your face once more.";
-			LineBreak;
-			say "     [bold type][italic type]FLASH![roman type][line break]";
-			LineBreak;
-			say "     [bold type][italic type]FLASH![roman type][line break]";
+			say "[line break]     [bold type][italic type]FLASH![roman type][line break]";
+			say "[line break]     [bold type][italic type]FLASH![roman type][line break]";
 			WaitLineBreak;
 			say "     After the two quick bursts of light, your vision is starting to feel blurred, almost as if your equilibrium is just completely shot. 'Alright, why don't we have a lil['] chat now that my lame-ass brother isn't around, huh? The fact of the matter is that I've decided that I'm going to be the king of this city. I mean, it shouldn't be that hard. If you saw how good I am at [']FlexCity['], you would know that I was born for this, haha. But anyway, back on point, every king needs serfs that will serve under him, and I'm thinking that you would be a decent match-up for me.' As the geeky mouse says this, he starts to smear the cum further, making sure that your whole face is covered.";
 			say "     'Now I'm gonna tell you how to find me again, but you will only remember it when I think that you would be ready to be of use.' Leaning in close, you can hear Arthur whispering something to you, but it sounds garbled, like how things sound when you're underwater. 'There, that should do it. Now you just have to remember two numbers, two and three. I know that prolly seems like a lot of work for someone as inferior as you, but trust me, you can do it, haha. Oh, and one more thing, don't you even dare try to tell my brother about any little secrets you think that you may have learned. I mean, accidents can happen to anyone, ya'know.' Arthur gives you a simple wink before everything turns black.";
+			WaitLineBreak;
 			move Player to Tenvale College Male Dorms;
 			say "     As the memory fades, you actually find yourself laying on the ground in the college dormitory without any memory how you got here. You look around and see nothing but closed doors... each with a number on them.";
 			SanLoss 15;
 			now Resolution of HypnoGeeks is 73; [third flashback remembered]
 
-Section 4 - Items
+Chapter 4 - Items
 
 Table of Game Objects (continued)
 name	desc	weight	object
 "defective device"	"The strange device that those weird mice had, unfortunately now damaged. While for the most part it appears to be a black camera of some sort, it has a strange wheel around the lens that has wires and crystals in a spiral pattern. Upon closer inspection, the crystals are cracked and the wires that are weaved into them and the camera portion are all burnt. You can't say for sure what this devices purpose really was, but if you could find a way to repair it then you might get some answers."	1	defective device
 
+defective device is a grab object. defective device is not temporary.
+Usedesc of defective device is "     You attempt to make use of the device, pushing some buttons. Sadly, the only result is a bit of a burned smell and a strange sound from inside the box.[line break]".
 the scent of defective device is "The device smells like burnt metal.".
 
-defective device is a grab object. defective device is not temporary.
-Usedesc of defective device is "[DefectiveDeviceUse]";
-
-to say DefectiveDeviceUse:
-		say "     You attempt to make use of the device, pushing some buttons. Sadly, the only result is a bit of a burned smell and a strange sound from inside the box.";
-
-Section 5 - Notes&Comments
+Chapter 5 - Notes&Comments
 [WARNING SPOILERS!]
-
 
 [Expansion Plans:
 
@@ -255,9 +232,6 @@ Big Mistake- The player ends up trying to free Landon from the brothers way to e
 Large and in charge- the player romances/friendzones Reece and in secret hypnotizes both Arthur and Landon into their toys. A good way to look at this combination would be as follows from the above list. The player did not give in to Arthur, did romance/friendzone Reece, and did connect with Landon but didn't free him.
 
 Hypnoking- Player turns all three into hypnoslaves. A good way to look at this combination would be as follows from the above list. The player did not give in to Arthur, did not romance/friendzone Reece, and did not bother to connect with Landon or free him.
-
 ]
-
-
 
 HypnoGeeks ends here.

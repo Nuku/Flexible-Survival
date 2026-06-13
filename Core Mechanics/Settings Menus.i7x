@@ -2,11 +2,11 @@ Version 3 of Settings Menus by Core Mechanics begins here.
 [Version 3.3 - Inventory columns option added]
 [- Originally Authored By: Stripes -]
 
-Section 1 - Trixie's Setting and Cheat Menu
+Part 1 - Trixie's Setting and Cheat Menu
 
-Trixiecheating is an action applying to nothing.
 weakwilled is a truth state that varies.
 
+Trixiecheating is an action applying to nothing.
 understand "Trixiecheat" as Trixiecheating.
 understand "iwannacheat" as Trixiecheating.
 understand "i wanna cheat" as Trixiecheating.
@@ -20,10 +20,9 @@ carry out Trixiecheating:
 	let Open World be "Open World";
 	let Lil Better be "Lil Better";
 	let Remove Carry Limits be "Remove Carry Limits";
-	say "     'Now, this stuff here is outright cheating, but if you really want to do it, I can help you out with that. It doesn't come for free though. You'll take a knock to your score, though I'll give half that back if you turn the cheat off later.'";
-	LineBreak;
-	let Trixieexit be 0;
-	while Trixieexit is 0:
+	say "     'Now, this stuff here is outright cheating, but if you really want to do it, I can help you out with that. It doesn't come for free though. You'll take a knock to your score, though I'll give half that back if you turn the cheat off later.'[paragraph break]";
+	let Trixieexit be false;
+	while Trixieexit is false:
 		say "[bold type]Unerring Hunter[roman type] will let you automatically succeed while hunting as long as your target exists in the area. You'll also be able to call up lists of all local enemies and active situations. [bold type]Automatic Survival[roman type] removes your need for food and water. [bold type]Open World[roman type] grants you access to all nav points which aren't private (locked by event or NPC). [bold type]Lil Better[roman type] gives +1 to all stats. [bold type]Booster Feats[roman type] gives you one additional basic and fun feat. [bold type]Play On[roman type] removes the time limit to the game. [bold type]Weak-Willed[roman type] makes you prone to spontaneously surrendering during combat. [bold type]Insomniac[roman type] removes your need for rest. [bold type]Remove Carry Limits[roman type] allows you to carry as many things as you want. You can also set your [bold type]humanity[roman type] or [bold type]libido[roman type] to any number from 0 to 100.";
 		say "[line break][bold type]Cheats:[roman type][line break]";
 		say "(1) [link]Unerring Hunter[as]1[end link] - [if Unerring Hunter is listed in feats of Player]Active[else]Inactive[end if][line break]";
@@ -42,16 +41,15 @@ carry out Trixiecheating:
 		say "(13) [link]Set watersports (WS) content level[as]13[end link] - Currently: [bold type][if WSlevel is 1]No WS[else if WSlevel is 2]Standard[else]Full WS[end if][roman type][line break]";
 		say "(14) [link]Access the vore menu[as]14[end link] - Player victim: [bold type][if vorelevel is 1]No Vore[else if vorelevel is 2]Standard[else]More Vore[end if][roman type] & [bold type][if UBlevel is 1]No UB[else if UBlevel is 2]Standard[else]Full UB[end if][roman type][line break]";
 		if Player can vore or Player can UB:
-			say "-- Player predator: [bold type][if vorechoice is 0]Player choice vore[else if vorechoice is 1]Automatic vore[else]Never vore[end if][roman type] w/Hard Vore frequency: [bold type][if hvorelevel is 1]None[else if hvorelevel is 2]Basic (25%)[else if hvorelevel is 3]High (56%)[end if][roman type] & [bold type][if Player cannot UB]Inactive UB[else if ubchoice is 0]Player choice UB[else if ubchoice is 1]Automatic UB[else]Never UB[end if][roman type][line break]";
+			say "     - Player predator: [bold type][if vorechoice is 0]Player choice vore[else if vorechoice is 1]Automatic vore[else]Never vore[end if][roman type] w/Hard Vore frequency: [bold type][if hvorelevel is 1]None[else if hvorelevel is 2]Basic (25%)[else]High (56%)[end if][roman type] & [bold type][if Player cannot UB]Inactive UB[else if ubchoice is 0]Player choice UB[else if ubchoice is 1]Automatic UB[else]Never UB[end if][roman type][line break]";
 		say "(15) [link]Set egg-pregnancy (ovi) content level[as]15[end link] - Currently: [bold type][if ovipreglevel is 1]No Ovi[else if ovipreglevel is 2]Standard[else]Always Ovi[end if][roman type][line break]";
 		[say "[link](16) Adjust flags[as]16[end link] - View/change warding settings[line break]";]
 		say "[line break](0) [link]Abort[as]0[end link][line break]";
-		while 1 is 1:
+		now calcnumber is -1;
+		while calcnumber < 0 or calcnumber > 15:
 			say "Choice? (0-15)> [run paragraph on]";
 			get a number;
-			if calcnumber >= 0 and calcnumber <= 15:
-				break;
-			else:
+			if calcnumber < 0 or calcnumber > 15:
 				say "Invalid choice. Pick from 0 to 15.";
 		LineBreak;
 		if calcnumber is:
@@ -143,7 +141,7 @@ carry out Trixiecheating:
 					say "You have gained the 'Weak-Willed' flaw, but are rewarded 250 points.";
 					say "You now will find yourself increasingly tempted to spontaneously submit during fights as your libido increases.";
 			-- 8:
-				say "Set your humanity (1-100 or 0 to abort)> [run paragraph on]";
+				say "Set your humanity (1-100, or 0 to abort)> [run paragraph on]";
 				get a number;
 				LineBreak;
 				if calcnumber > 0 and calcnumber <= 100:
@@ -153,10 +151,10 @@ carry out Trixiecheating:
 				else:
 					say "[if calcnumber is not 0]Invalid choice - [end if]Returning to menu.";
 			-- 9:
-				say "Set your libido (1-100 or 0 to abort)> [run paragraph on]";
+				say "Set your libido (1-110, or 0 to abort)> [run paragraph on]";
 				get a number;
 				LineBreak;
-				if calcnumber > 0 and calcnumber <= 100:
+				if calcnumber > 0 and calcnumber <= 110:
 					now Libido of Player is calcnumber;
 					say "Libido adjusted. Score penalized by 50.";
 					decrease score by 50;
@@ -206,14 +204,13 @@ carry out Trixiecheating:
 			]
 			-- 0:
 				say "Exiting menu.";
-				now Trixieexit is 1;
+				now Trixieexit is true;
 		wait for any key;
 		clear the screen and hyperlink list;
 
 Chapter 1 - AnalLevel Adjustment
 
 analadjusting is an action applying to nothing.
-
 understand "adjust anal" as analadjusting.
 understand "adjustanal" as analadjusting.
 understand "anal adjust" as analadjusting.
@@ -235,25 +232,24 @@ carry out analadjusting:
 	if calcnumber is 1:
 		say "You are now set to receive Less Anal.";
 		now anallevel is 1;
-		if "More Anal" is listed in feats of Player, remove "More Anal" from feats of Player;
-		if "Less Anal" is not listed in feats of Player, add "Less Anal" to feats of Player;
+		remove "More Anal" from feats of Player, if present;
+		add "Less Anal" to feats of Player, if absent;
 	else if calcnumber is 2:
 		say "You are now set to receive the standard amount of anal sex.";
 		now anallevel is 2;
-		if "More Anal" is listed in feats of Player, remove "More Anal" from feats of Player;
-		if "Less Anal" is listed in feats of Player, remove "Less Anal" from feats of Player;
+		remove "More Anal" from feats of Player, if present;
+		remove "Less Anal" from feats of Player, if present;
 	else if calcnumber is 3:
 		say "You are now set to receive More Anal.";
 		now anallevel is 3;
-		if "Less Anal" is listed in feats of Player, remove "Less Anal" from feats of Player;
-		if "More Anal" is not listed in feats of Player, add "More Anal" to feats of Player;
+		remove "Less Anal" from feats of Player, if present;
+		add "More Anal" to feats of Player, if absent;
 	else:
 		say "Exiting menu.";
 
 Chapter 2 - WSLevel Adjustment
 
 WSadjusting is an action applying to nothing.
-
 understand "adjust WS" as WSadjusting.
 understand "adjustWS" as WSadjusting.
 understand "WS adjust" as WSadjusting.
@@ -287,7 +283,6 @@ carry out WSadjusting:
 Chapter 3 - VoreLevel Adjustment
 
 voremenuing is an action applying to nothing.
-
 understand "voremenu" as voremenuing.
 understand "vore menu" as voremenuing.
 
@@ -295,8 +290,8 @@ understand "vore menu" as voremenuing.
 	if Player cannot vore, say "Your character is currently incapable of such actions.";]
 
 carry out voremenuing:
-	let voreexit be 0;
-	while voreexit is 0:
+	let voreexit be false;
+	while voreexit is false:
 		if clearnomore is 0, clear the screen;
 		say "     You have accessed the [bold type]vore menu[roman type]. It is here that you may adjust some settings related to vore content in the game. Options 1-3 deal with the frequency the player may be subject to vore by others, typically monsters. While rare in the game at present, this will tell the game to bias for or against it in situations where it might occur. Your selection may not apply in certain situations, especially when dealing with special, scripted scenes. Options 4-6 are similar, but apply to unbirthing (UB) content.";
 		say "     Option 7 through 9 deal with vore and UB by the player, and are only available options should those abilities be gained within the game. [bold type]Choice to vore[roman type] will designate whether your character will automatically choose vore whenever it is presented, whether your character will automatically refuse (stopping voring, but not the hunger), or whether you'll be give the option to accept or refuse. [bold type]Choice for UB[roman type] will designate the same for unbirthing. For both, this selection process will cycle through the options. Additionally, you'll be able to adjust the frequency at which you'll get hard vore (gory) scenes over getting soft vore (swallowing) scenes.";
@@ -322,12 +317,11 @@ carry out voremenuing:
 		else:
 			say "(9) UB by player - Inactive.";
 		say "[line break](0) [link]Exit[as]0[end link]: Leave this menu.";
-		while 1 is 1:
+		now calcnumber is -1;
+		while calcnumber < 0 or calcnumber > 9:
 			say "Choice? (0-9)> [run paragraph on]";
 			get a number;
-			if calcnumber >= 0 and calcnumber <= 9:
-				break;
-			else:
+			if calcnumber < 0 or calcnumber > 9:
 				say "Invalid choice. Pick from 0 to 9.";
 		LineBreak;
 		if calcnumber is 1:
@@ -388,15 +382,14 @@ carry out voremenuing:
 			else:
 				now ubchoice is 0;
 				say "The option to use your unbirthing ability has been reset to 'Player choice'.";
-		else if calcnumber is 0:
+		else:
 			say "Exiting menu.";
-			now voreexit is 1;
-		if voreexit is 0, AttemptToWait;
+			now voreexit is true;
+		if voreexit is false, wait for any key;
 
 Chapter 4 - OviPregLevel Adjustment
 
 oviadjusting is an action applying to nothing.
-
 understand "adjust ovi" as oviadjusting.
 understand "adjustovi" as oviadjusting.
 understand "ovi adjust" as oviadjusting.
@@ -435,7 +428,6 @@ carry out oviadjusting:
 Chapter 5 - Ban/Ward Flag Adjustment
 
 Flagadjusting is an action applying to nothing.
-
 understand "adjust flags" as Flagadjusting.
 understand "adjustflags" as Flagadjusting.
 understand "flagsadjust" as Flagadjusting.
@@ -447,11 +439,11 @@ understand "flag adjust" as Flagadjusting.
 
 check Flagadjusting:
 	if number of not banned flags is 0 or (number of not banned flags is 1 and HumanoidList is not banned):
-		say "     All flags have been banned. Now that the game has started, you cannot change whether something is banned outright." instead;
+		say "All flags have been banned. Now that the game has started, you cannot change whether something is banned outright." instead;
 
 carry out Flagadjusting:
-	let flagexit be 0;
-	while flagexit is 0:
+	let flagexit be false;
+	while flagexit is false:
 		if clearnomore is 0, clear the screen;
 		say "     This menu will allow you to adjust whether certain categories of content will be warded or not now that the game has started. Warded content will not appear unless it is specifically hunted for or is called upon by events or quests. If a creature has multiple gender forms, which gender will appear may be adjusted based on the warded flags. Now that the game has started, you cannot change whether something is banned outright.";
 		let x be 0;
@@ -467,8 +459,9 @@ carry out Flagadjusting:
 		while calcnumber < 0 or calcnumber > x:
 			say "Choice? (0-[x])> [run paragraph on]";
 			get a number;
+		LineBreak;
 		if calcnumber is 0:
-			now flagexit is 1;
+			now flagexit is true;
 		else:
 			let y be 0;
 			repeat with Q running through not banned flags:
@@ -478,7 +471,7 @@ carry out Flagadjusting:
 					if Q is warded:
 						now Q is not warded;
 					else if Q is banned:
-						say "Error occurred, choice [printed name of Q] is banned.";
+						say "Error occurred, choice ['][printed name of Q]['] is banned.";
 						wait for any key;
 					else:
 						now Q is warded;
@@ -507,7 +500,7 @@ understand "waits off" as WaitHateCommand.
 understand "i hate to wait" as WaitHateCommand. [old command, keep for time being, eventually remove?]
 
 carry out WaitHateCommand:
-	if waiterhater is 0, say "The text rarely waits for you to press a key...[line break]... before continuing.";
+	if waiterhater is 0, say "The text rarely waits for you to press a key...[paragraph break]...before continuing.";
 	now waiterhater is 1; [yes, you do hate to wait]
 
 WaitLoveCommand is an action applying to nothing.

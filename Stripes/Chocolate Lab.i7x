@@ -11,7 +11,6 @@ labtimerB is a number that varies. labtimerB is usually 0. [tracks how long most
 Section 1 - Creature Responses
 
 to say losetolab:
-	choose row MonsterID from the Table of Random Critters;
 	let labnum be 0;
 	if FaceName of Player is "Chocolate Lab", increase labnum by 1;
 	if BodyName of Player is "Chocolate Lab", increase labnum by 1;
@@ -22,31 +21,27 @@ to say losetolab:
 		if labhost is 2:
 			if a random chance of 1 in 5 succeeds:
 				say "     Bested by yet another lab, all you can do is groan weakly as the confectionary canine pushes you to the ground. With two labs already inside you working excitedly, the third is already sinking into your softening body by the time you're on the ground. Once the third lab has disappeared inside you, you feel their chocolate forms churning throughout your body. You are helpless to resist with the three labs now making up the majority of your chocolaty body as they begin reshaping your entire form. Your features melt away, replaced by the visage of a flowing chocolate dog. Your mind, however, does not give way as easily. Focusing entirely on what remains of yourself, you manage to block out most of the dogs['] influence, locking the war for your mind in a stalemate.";
-				WaitLineBreak;
 				say "     However, their attacks are undaunted by your resistance. They continue putting everything they have against you, focusing all their thoughts on the singular goal of breaking you. Before long it no longer feels like three individuals pushing against you, but a single combined force as if their thoughts have begun to flow together in a single collective consciousness. Suddenly, fear. Panic. Terror. You feel the emotions of the labs rolling though you as they come to the same realization as you do. In their combined effort their own minds have begun to merge together under the immense pressure. Caught in the turmoil of the panicking labs your concentration begins slipping, and you find yourself being dragged down with the labs, all four of you melting away into each other as you become one.";
 				WaitLineBreak;
 				say "     You awaken sometime later, pulling your chocolate body together as you rise to all fours. You flow into the shape of a giant chocolate dog, easily over six feet tall. With a wet bark you set out into the city, eager to sate your powerful canine appetite for chocolate and sex.";
-				setmonster "Chocolate Lab" silently;
 				turn the Player into a "Chocolate Lab" silently; [NOTE: Avoid attributeinfect output in a game over (@Stadler#3007)]
 				now scalevalue of Player is 4;
 				now Body of Player is "that of a large quadrupedal canine. Standing over six feet tall, you are a jumbo-sized chocolate lab, with a flowing, shifting chocolate body. Your skin flows and runs like melting chocolate and you carry an overwhelming but alluring scent of cocoa.";
 				now labhost is 4;
 				now humanity of Player is 0;
 				now battleground is "void";
-				WaitLineBreak;
+				wait for any key;
 				end the story saying "Your mind melted away into the chocolate dogs, leaving you one of them.";
 				stop the action;
 			else:
 				say "     Bested by yet another lab, all you can do is groan weakly as the confectionary canine pushes you to the ground. With two labs already inside you working excitedly, the third is already sinking into your softening body by the time you're on the ground. Once the third lab has disappeared inside your body, you feel their chocolate forms churning throughout your body. You are helpless to resist with the three labs now making up the majority of your chocolaty body as they begin reshaping your entire form. Your features melt away, replaced by the visage of a flowing chocolate dog. Your struggle to hold onto yourself against the will of the three labs is a short one, their combined consciousness quickly overwhelming you, leaving the labs to reshape your mind just as easily as they did your body. You feel the last of your human thoughts and desires melt away, quickly replaced by the simple needs of your benefactors.";
-				WaitLineBreak;
 				say "     With your mind and body fully reshaped into that of a chocolate lab, you bark with excitement as the others separate themselves from your new body, leaving you panting happily as they grin and give you slobbery, chocolaty licks and nuzzles, welcoming you into the pack.";
-				setmonster "Chocolate Lab" silently;
 				turn the Player into a "Chocolate Lab" silently; [NOTE: Avoid attributeinfect output in a game over (@Stadler#3007)]
 				now scalevalue of Player is 4;
 				now labhost is 3;
 				now humanity of Player is 0;
 				now battleground is "void";
-				WaitLineBreak;
+				wait for any key;
 				end the story saying "Your mind melted away into the chocolate dogs, leaving you one of them.";
 				stop the action;
 		else if labhost is 1:
@@ -55,11 +50,10 @@ to say losetolab:
 			now labtimerB is 21;
 		else if labhost is 0:
 			say "     As you are pushed to the ground the chocolate canine looks over your confectionary body, panting happily as it takes in your sweet cocoa aroma. Stepping back momentarily the lab releases one happy bark before burying its muzzle in your groin. You can't help but moan softly as the lab begins [if Player is herm]alternating between licking at your increasingly firm maleness and lapping at your womanly folds, quickly coating your crotch in its warm syrupy saliva[else if Player is female]lapping at your womanly folds, driving its warm sticky canine tongue into your depths[else if Player is male]licking at your increasingly firm maleness, soon coating your entire erect length in its warm syrupy saliva[else]lapping at your featureless groin[end if]. As the chocolate canine continues to pleasure you and your mind slips into the haze of your arousal, you begin to lose focus on maintaining cohesion of your confectionary body, and apparently this is exactly what your attacker wants.";
-			WaitLineBreak;
 			say "     Confused for a moment as the attention at your groin suddenly stops you look up to see the lab stepping backwards, releasing a few happy yips before crouching down and leaping towards you. Before you can react the chocolate dog lands squarely on your chest, licking your face happily as you try and push it off. It is at this point that your realize the dog is not standing on you, but IN you! You begin to panic as the lab begins to sink deeper into your body, thrashing about wildly as you attempt to separate yourself from the canine, however this only seams to make matters worse, quickening the pace of the sinking lab. You can only watch in horror as the last of the chocolaty canine disappears into your body, giving you one last bark before submerging completely. With little choice and a heavy sigh you rise to a stand on uneasy feet, already feeling the chocolate of your unwanted passenger churning and mingling with your own. You can hear its happy barking in the back of your mind, but with no way to separate yourself from the chocolate canine all you can do is gather your equipment and your resolve before making your way to a safer location.";
 			if Player is female:
 				CreatureSexAftermath "Chocolate Lab" receives "OralPussy" from "Player";
-			if Player is male:
+			else if Player is male:
 				CreatureSexAftermath "Chocolate Lab" receives "OralCock" from "Player";
 			now labhost is 1;
 			now labtimerA is 21;
@@ -68,16 +62,14 @@ to say losetolab:
 			say "     You are pushed onto your back as the dog climbs atop you, flowing its molten chocolate body over you. You can feel the firm press of its body at your puss[yfn] and asshole, spreading you open with a cock of hard chocolate for each. Its body also grips around your cock[smn] with a soft, wet pussy[if Cock Count of Player > 1] for each[end if]. Its fluid form flows and ripples, rubbing all over your body and teasing your nipples. The amorous confection stimulates you inside and out until finally it shoots its white chocolate cream into every hole and you pump your hot cum into it in return.";
 		else if Player is female:	[female]
 			say "     You are pushed onto your back as the dog climbs atop you, flowing its molten chocolate body over you. You can feel the firm press of its body at your puss[yfn] and asshole, spreading you open with a cock of hard chocolate for each. Its fluid form flows and ripples, rubbing all over your body and teasing your nipples. The amorous confection stimulates you inside and out until finally it shoots its white chocolate cream into every hole.";
-			if Player is female:
-				CreatureSexAftermath "Player" receives "PussyFuck" from "Chocolate Lab";
-			if Player is male:
-				CreatureSexAftermath "Player" receives "AssFuck" from "Chocolate Lab";
-				CreatureSexAftermath "Chocolate Lab" receives "PussyFuck" from "Player";
 		else:	[male]
 			say "     You are pushed onto your back as the dog climbs atop you, flowing its molten chocolate body over you. You can feel the firm press of its body at your asshole, spreading you open with a cock of hard chocolate. Its body also grips around your cock[smn] with a soft, wet pussy[if Cock Count of Player > 1] for each[end if]. Its fluid form flows and ripples, rubbing all over your body and teasing your nipples. The amorous confection stimulates you inside and out until finally it shoots its white chocolate cream into your mouth and rear, and you pump your hot cum into it in return.";
+		say "     Once it's done, it flows off of you slowly, splatters of white chocolate landing on your chest. It flows out of your body, but leaves you with a warm mess of white, creamy filling inside. You pant as you try to catch your breath after the brief, but intensely body-wide, sex you've just had.";
+		if Player is female:
+			CreatureSexAftermath "Player" receives "PussyFuck" from "Chocolate Lab";
+		if Player is male:
 			CreatureSexAftermath "Player" receives "AssFuck" from "Chocolate Lab";
 			CreatureSexAftermath "Chocolate Lab" receives "PussyFuck" from "Player";
-		say "     Once it's done, it flows off of you slowly, splatters of white chocolate landing on your chest. It flows out of your body, but leaves you with a warm mess of white, creamy filling inside. You pant as you try to catch your breath after the brief, but intensely body-wide, sex you've just had.";
 		PlayerEat 12;
 		say "[chococheck]";
 
@@ -89,47 +81,43 @@ to say beatthelab:
 		PlayerEat 12;
 		say "[chococheck]";
 		infect "Chocolate Lab";
-		increase Libido of Player by 10;
-		if Libido of Player > 100:
-			now Libido of Player is 100;
+		raise Player Libido by 10;
 	else:
-		say "     Will you accept that offer? ([link]y[as]y[end link]/[link]n[as]n[end link])";
+		say "     Will you accept that offer? ([link]Y[as]y[end link]/[link]N[as]n[end link])[line break]";
 		if Player consents:
+			LineBreak;
 			if Player is male:		[m/h - fuck the Lab]
 				say "     There is just something enticing about the canine's submissive display and arousing scent that gets you excited. You decide that you and the semi-fluid dog can relieve each other's itch. You take the dog's ever-melting hind legs in your hands and line up your hard cock with its pussy. It releases a wet bark of pleasure as you sink your [cock size desc of Player] [Cock of Player] cock into its malleable body. It reforms its pussy around you, [if Cock Count of Player > 1]forming a deliciously snug vagina for each of your cocks[else]making itself deliciously snug for your cock[end if] and flowing all over [itthemm] to continually stimulate you.";
-				say "     The dog's thick tongue lolls from its mouth, drooling chocolate as you fuck it. White, chocolate cream leaks from its cock and from its nipples as your thrusts send ripples through its gooey body. As you shoot your hot seed inside it, splatters of thick cream blast from its cock and make a mess of the ground below. Finished, the chocolate Lab sags back, losing a little more cohesion, but smiles up at you with a doggy grin. You lean forward and enjoy some slobbery doggy kisses before getting up and heading off.";
+				say "     The dog's thick tongue lolls from its mouth, drooling chocolate as you fuck it. White, chocolate cream leaks from its cock and from its nipples as your thrusts send ripples through its gooey body. As you shoot your hot seed inside it, splatters of thick cream blast from its cock and make a mess of the ground below. Finished, the chocolate lab sags back, losing a little more cohesion, but smiles up at you with a doggy grin. You lean forward and enjoy some slobbery doggy kisses before getting up and heading off.";
 				CreatureSexAftermath "Chocolate Lab" receives "PussyFuck" from "Player";
 			else:					[f - ride the Lab]
 				say "     There is just something enticing about the canine's submissive display and arousing scent that gets you excited. You decide that you and the semi-fluid dog can relieve each other's itch. Taking hold of the brown, canine cock, you point it upwards as you move your pussy into position overtop of it. As you ride that chocolate rod, it shifts and changes, [if Cunt Count of Player > 1]forming one for each of your holes and each [end if]becoming the perfect fit for your vagina. You moan in delight at the clever dog's trick and start to play with its nipples, coaxing more of its white, creamy chocolate to flow from them.";
 				say "     The dog's thick tongue lolls from its mouth, drooling chocolate as you ride it. Your motions atop it send ripples through its gooey body. As your puss[yfn] clamp[sfv] down around it in climax, you squeeze a rush of warm, creamy chocolate from the canine, blasting it deep inside you. Finished, the dog sags back, losing a little more cohesion, but smiles up at you with a doggy grin. You lean forward and enjoy some slobbery doggy kisses before getting up and heading off.";
 				CreatureSexAftermath "Player" receives "PussyFuck" from "Chocolate Lab";
 			say "[chococheck]";
-			decrease Libido of Player by 5;
-			if Libido of Player < 0:
-				now Libido of Player is 0;
+			lower Player Libido by 5;
 		else if labhost > 0 and a random chance of 1 in 3 succeeds:
-			say "     As you look over the fallen lab, you feel a familiar churning build up inside you. You fall to your knees and clutch your belly with a groan as your canine passenger twists around in your stomach. ";
+			LineBreak;
 			if BodyName of Player is "Chocolate Lab":
-				say "You feel the lab's movement begin to focus at a single point in your chest, and watch as a canine muzzle slowly pushes through your chocolate flesh. Slowly but surely the lab drags itself out of your body in much the same way as it forced itself in.";
+				say "     As you look over the fallen lab, you feel a familiar churning build up inside you. You fall to your knees and clutch your belly with a groan as your canine passenger twists around in your stomach. You feel the lab's movement begin to focus at a single point in your chest, and watch as a canine muzzle slowly pushes through your chocolate flesh. Slowly but surely the lab drags itself out of your body in much the same way as it forced itself in.";
 			else:
-				say "The rumbling only gets worse and you begin to feel sick, gagging slightly as a thick, warm mass begins moving up your throat. Your mouth is forced open as the mass of chocolate spills out of you, slowly taking the shape of a chocolate canine as more of it emerges from your body. It is a bizarre sight, the head and torso of the lab emerging from your mouth, bracing its front paws on your shoulders as it drags the rest of its body out with a wet slurp.";
+				say "     As you look over the fallen lab, you feel a familiar churning build up inside you. You fall to your knees and clutch your belly with a groan as your canine passenger twists around in your stomach. The rumbling only gets worse and you begin to feel sick, gagging slightly as a thick, warm mass begins moving up your throat. Your mouth is forced open as the mass of chocolate spills out of you, slowly taking the shape of a chocolate canine as more of it emerges from your body. It is a bizarre sight, the head and torso of the lab emerging from your mouth, bracing its front paws on your shoulders as it drags the rest of its body out with a wet slurp.";
 			say "     As your guest finally separates itself from you completely it wastes no time in padding over to the other fallen lab, licking and nuzzling its face with a whimper. Despite your still upset stomach you realize this is your best chance to escape the lab, and stagger away as quickly as you can before it can change its mind, or worse yet, try to bring its new friend along for the ride.";
 			decrease labhost by 1;
 			now labtimerA is labtimerB;
 			now labtimerB is 0;
 		else:
+			LineBreak;
 			say "     You leave as it struggles to regain enough cohesion to get away.";
 
 to say chococheck:
 	if BodyName of Player is "Chocolate Lab" or FaceName of Player is "Chocolate Lab":
+		WaitLineBreak;
 		say "     During the course of the sex with the fluidic dog, you could feel some of your chocolate being intermingle with that of the dog. You feel a little more canine and a hunger for more chocolate. Or more sex. Or better yet, more chocolate sex.";
 		SanLoss 8;
 		increase hunger of Player by 5;
 
 Section 2 - Creature Insertion
-
-to say choclabdesc:
-	say "     Before you is a bizarre creature. At first glance, it seems like a normal dog, a brown Labrador. But it's soon apparent that it's quite unusual. This chocolate Lab is flowing and shifting, leaving brown pawprints as it walks. It seems to be quite literally a [italic type]chocolate[roman type] Lab. Its skin flows and runs like melting chocolate and you can smell the sweet, alluring scent of cocoa as it bounds closer. The creature has a gooey, brown tongue that drips chocolaty syrup. Its eyes are solid black, like pure, dark chocolate.";
 
 Table of CombatPrep (continued)
 name(text)	PrepFunction(text)
@@ -161,11 +149,11 @@ When Play begins:
 	now enemy title entry is ""; [ Name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name. ]
 	now enemy Name entry is ""; [ Specific name of unique enemy. ]
 	now enemy type entry is 0; [ 0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters. ]
-	now attack entry is "The [one of]milk chocolate creature knocks itself into you, trying to push you down[or]semi-fluid canine slashes its forepaws at you, suddenly making them hard and leaving chocolate scraps across your skin[or]The gooey Labrador bites at your wrist, leaking some of its thick, chocolate saliva onto you[or]malleable dog flows around your leg, gripping it firmly. You pull frantically as it starts to flow up over it. You manage to pull free, but wrench your knee in the process[or]chocolate lab snaps at you as you try to fend it off, but you end up splattered with chocolaty syrup. The scent of it makes your head dizzy, draining your will to resist the sweet smelling beast[or]flowing dog pounces at you, trying to push you down, partially collapsing into a wave of chocolate that you have to pull free from[or]milk chocolate dog swipes its paws at you, leaving thick streaks of chocolate across your body. The scent of it weakens your resolve to keep fighting[or]chocolate Lab pounces onto you, covering your face in slobbery, chocolate kisses that weaken your resolve to continue resisting[at random]!";
+	now attack entry is "The [one of]milk chocolate creature knocks itself into you, trying to push you down[or]semi-fluid canine slashes its forepaws at you, suddenly making them hard and leaving chocolate scraps across your skin[or]gooey Labrador bites at your wrist, leaking some of its thick, chocolate saliva onto you[or]malleable dog flows around your leg, gripping it firmly. You pull frantically as it starts to flow up over it. You manage to pull free, but wrench your knee in the process[or]chocolate lab snaps at you as you try to fend it off, but you end up splattered with chocolaty syrup. The scent of it makes your head dizzy, draining your will to resist the sweet smelling beast[or]flowing dog pounces at you, trying to push you down, partially collapsing into a wave of chocolate that you have to pull free from[or]milk chocolate dog swipes its paws at you, leaving thick streaks of chocolate across your body. The scent of it weakens your resolve to keep fighting[or]chocolate lab pounces onto you, covering your face in slobbery, chocolate kisses that weaken your resolve to continue resisting[at random]!";
 	now defeated entry is "[beatthelab]";
 	now victory entry is "[losetolab]"; [Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block as the demonstration text shows.]
-	now desc entry is "[choclabdesc]"; [ Description of the creature when you encounter it.]
-	now face entry is "dog's head, a smooth, rich brown and somehow made of chocolate. You have a long, slobbery tongue and drool chocolate syrup. Your eyes are a solid, dark black, as if made of dark chocolate, but still able to see. As if being constantly remolded instead of moving flesh and bone, your expression seems to shift the shape of your face"; [ Face description, format as "Your face is [Face of Player]." ]
+	now desc entry is "     Before you is a bizarre creature. At first glance, it seems like a normal dog, a brown Labrador. But it's soon apparent that it's quite unusual. This chocolate lab is flowing and shifting, leaving brown pawprints as it walks. It seems to be quite literally a [italic type]chocolate[roman type] lab. Its skin flows and runs like melting chocolate and you can smell the sweet, alluring scent of cocoa as it bounds closer. The creature has a gooey, brown tongue that drips chocolaty syrup. Its eyes are solid black, like pure, dark chocolate.[line break]"; [ Description of the creature when you encounter it.]
+	now face entry is "on a dog's head, a smooth, rich brown and somehow made of chocolate. You have a long, slobbery tongue and drool chocolate syrup. Your eyes are a solid, dark black, as if made of dark chocolate, but still able to see. As if being constantly remolded instead of moving flesh and bone, your expression seems to shift the shape of your face"; [ Face description, format as "Your face is [Face of Player]." ]
 	now body entry is "that of an anthropomorphic canine, strangely somehow chocolate in color and composition. Your body is covered in a confectionary imitation of [SkinSpeciesName of Player in lower case] flesh. Your body has become like soft chocolate, bending and reshaping itself to move instead of having any actual bones or muscles[if labhost > 0]. Occasionally, an extra chocolaty tail, or the head of another chocolate lab pushes out of your chocolate form, barking or drooling its thick chocolate saliva as it pants happily, making the presence of your unwanted passenger clear[end if]. The scent of cocoa lingers pleasantly around you. When teased, you leak white chocolate syrup from your nipples"; [ Body Description, format as "Your Body is [Body of Player]." ]
 	now skin entry is "a soft layer of milk-chocolate in the place of regular"; [ Skin Description, format as "Looking at yourself, your body is covered in [Skin of Player] skin." ]
 	now tail entry is "You have a slender, canine tail made of chocolate that wags happily."; [ Tail description, write a whole Sentence or leave blank. ]
@@ -199,7 +187,7 @@ When Play begins:
 	now libido entry is 30; [ Set to zero in this monster to control elsewhere ]
 	now loot entry is "chocolate milk"; [ Dropped item. Key will be used later ]
 	now lootchance entry is 25; [ Chance of loot dropping 0-100 ]
-	now MilkItem entry is "chocolate lab milk";
+	now MilkItem entry is "chocolate milk";
 	now CumItem entry is "chocolate lab cum"; [ Item to be given to the player if they have this infection and jerk off. ]
 	now TrophyFunction entry is "-"; [ Function to generate a list of optional loot items, of which the player can choose one after victory. ]
 	now scale entry is 2; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
@@ -315,8 +303,6 @@ When Play begins:
 	[Clit Size Adjective is generated by a function and can be used in scenes: very small/small/average/large/very large]
 ]
 
-
-
 Section 3 - Piggybacking Labs
 
 an everyturn rule:
@@ -331,7 +317,7 @@ this is the Choclab piggyback rule:
 	if SkinName of Player is "Chocolate Lab", increase labnum by 1;
 	if TailName of Player is "Chocolate Lab", increase labnum by 1;
 	if CockName of Player is "Chocolate Lab", increase labnum by 1;
-	if labhost is 2, now labnum is labnum * labhost;
+	if labhost is 2, now labnum is labnum * 2;
 	if Playernum is 12 or labnum is 0:
 		say "     You pause for a moment as you feel a rather powerful rumbling in your belly. Slowly but surely the churning feeling begins to intensify as the lab[if labhost is 2]s continue their efforts[else] continues its effort[end if] to infect you further. You groan as the rolling in your stomach reaches a new peak, but strangely enough you don't feel the familiar tingling sensation of the infection taking root. As if just as confused by this development as you are, you feel the lab's activity slowly begin to calm until it's almost completely dormant again. Then there is another sudden audible rumbling from your belly, but this time it feels quite different and you realize it's you, not the unwanted passenger.";
 		if a random chance of 1 in 4 succeeds:
@@ -357,17 +343,14 @@ this is the Choclab piggyback rule:
 			say "     While traveling, you find your body filling with a warm tingling sensation. [one of]You begin panting heavily[or]Your tummy begins rumbling[or]You begin licking your lips[at random] and you [one of]have a sudden craving for chocolate[or]find yourself becoming quite aroused[or]have a sudden hunger for chocolate... and sex[at random].";
 			if humanity of Player > 4:
 				say "     As your mind continues to wander, the warm sensation intensifies, but a [one of]sudden sound[or]loud bang[or]scream[or]cry of ecstasy[at random] in the distance breaks the haze and you finally you catch yourself, realizing you're being influenced by the chocolate lab[if labhost is 2]s[end if] trapped in your body. You resolve to stay more focused in the future, but deep down you know you've already lost some small part of yourself as a result of this lapse.";
-		let rbchance be 2 + labhost;
-		if a random chance of rbchance in 5 succeeds, now researchbypass is 1;
+		if a random chance of (2 + labhost) in 5 succeeds, now researchbypass is 1;
 		infect "Chocolate Lab";
 		now researchbypass is 0;
 		decrease humanity of Player by 4;
 		increase hunger of Player by 2;
 		if Libido of Player < 70, increase Libido of Player by 5;
 		if humanity of Player < 1 and BodyName of Player is "Chocolate Lab":
-			say "     Subject to the constant influence of the chocolate lab[if labhost is 2]s[end if] infesting your body, your mind slowly begins to melt away, leaving it and your body to be freely reshaped by the chocolate canine[if labhost is 2]s[end if]. The last of your resistance fades and you slowly sink to the ground, melting into a gooey chocolate mess. You feel the [if labhost is 2]labs rejoice as they set about finishing their[else]lab rejoice as it sets about finishing its[end if] work. Sometime later your [if labhost is 2]pack[else]companion[end if] finally separates from your body, waiting eagerly as you pull yourself together, taking the shape of another flowing, chocolate dog. You happily lick and nuzzle your [if labhost is 2]new pack[else]companion[end if] as they return the love, finally welcoming you into the pack properly. With a wet bark they bound off into the city, and you follow behind eagerly, marking the beginning of your simple new life as a chocolate lab.";
-			[puts Chocolate Lab as lead monster for infection and impregnation]
-			setmonster "Chocolate Lab" silently;
+			say "     Subject to the constant influence of the chocolate lab[if labhost is 2]s[end if] infesting your body, your mind slowly begins to melt away, leaving it and your body to be freely reshaped by the chocolate canine[if labhost is 2]s[end if]. The last of your resistance fades and you slowly sink to the ground, melting into a gooey chocolate mess. You feel the [if labhost is 2]labs rejoice as they set about finishing their work. Sometime later your pack[else]lab rejoice as it sets about finishing its work. Sometime later your companion[end if] finally separates from your body, waiting eagerly as you pull yourself together, taking the shape of another flowing, chocolate dog. You happily lick and nuzzle your [if labhost is 2]new pack[else]companion[end if] as they return the love, finally welcoming you into the pack properly. With a wet bark they bound off into the city, and you follow behind eagerly, marking the beginning of your simple new life as a chocolate lab.";
 			turn the Player into a "Chocolate Lab" silently; [NOTE: Avoid attributeinfect output in a game over (@Stadler#3007)]
 			now humanity of Player is 0;
 			now battleground is "void";
@@ -399,7 +382,23 @@ this is the Choclab piggyback rule:
 		now labtimerB is 0;
 		decrease labhost by 1;
 
-Section 4 - Endings
+Section 4 - Chocolate Milk
+
+Table of Game Objects (continued)
+name	desc	weight	object
+"chocolate milk"	"Creamy milk with a white chocolate taste."	1	chocolate milk
+
+[chocolate milk is a grab object.] [defined in Milk Items to prevent name conflicts]
+Understand "milk" as chocolate milk. chocolate milk is infectious. Strain of chocolate milk is "Chocolate Lab". chocolate milk is milky.
+the scent of chocolate milk is "The chocolate milk smells of fine, white chocolate.".
+Usedesc of chocolate milk is "[chocolate milk use]".
+
+to say chocolate milk use:
+	say "     Lifting the plastic bottle to your mouth, you take a drink from it, letting the milk run over your tongue and down your throat. Tastes rich and animal-like. Swishing it around in your mouth a little, you finish the bottle off, then stuff it back into your collection of 'empties'.";
+	PlayerEat 5;
+	SanLoss 5;
+
+Section 5 - Endings
 
 Table of GameEndings (continued)
 Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
@@ -418,7 +417,7 @@ This is the Chocolate Lab Infection rule:
 				if labhost is 3: [lost to three labs; pack ending, or any other pack ending.]
 					say "     You and your new pack wander the streets, drawn by your noses to seek out chocolate, which you ingest ravenously wherever found. Soon, your nose has you cross paths with another small group of confectionary canines and, after a very sticky romp where you thrust and melt into one another, you follow them back to a chocolate maker's shop at the edge of the high rise district.";
 				else if labhost is 2 or labhost is 1: [succumb through standard means while carrying one or more labs]
-					say "     Subject to the constant influence of the chocolate lab[if labhost is 2]s[end if] infesting your body, your mind slowly begins to melt away, leaving it and your body to be freely reshaped by the chocolate canine[if labhost is 2]s[end if]. As the last of your resistance fades you slowly sink to the ground, melting into a gooey chocolate mess. You feel the lab[if labhost is 2]s rejoice as they set about finishing their[else] rejoice as it sets about finishing its[end if] work. Some time later, your [if labhost is 2]pack[else]companion[end if] finally separates from your body, waiting eagerly as you pull yourself together, taking the shape of another flowing, chocolate dog. You happily lick and nuzzle your [if labhost is 2]new pack[else]companion[end if] as they return the love, finally welcoming you into the pack properly before they lead you back to a chocolate maker's shop at the edge of the high rise district.";
+					say "     Subject to the constant influence of the chocolate lab[if labhost is 2]s[end if] infesting your body, your mind slowly begins to melt away, leaving it and your body to be freely reshaped by the chocolate canine[if labhost is 2]s[end if]. As the last of your resistance fades you slowly sink to the ground, melting into a gooey chocolate mess. You feel the lab[if labhost is 2]s rejoice as they set about finishing their work. Some time later, your pack[else] rejoice as it sets about finishing its work. Some time later, your companion[end if] finally separates from your body, waiting eagerly as you pull yourself together, taking the shape of another flowing, chocolate dog. You happily lick and nuzzle your [if labhost is 2]new pack[else]companion[end if] as they return the love, finally welcoming you into the pack properly before they lead you back to a chocolate maker's shop at the edge of the high rise district.";
 				else: [normal succumb ending.]
 					say "     Strain of trying to keep a cohesive hold on your body eventually becomes too much. You collapse onto all fours and melt into a more fluid, gooey chocolate Labrador. You wander the streets, drawn by your nose to seek out chocolate, which you ingest ravenously wherever found. Soon, your nose has you cross paths with one of those confectionary canines and, after a very sticky romp where you thrust and melt into one another, you follow it back to a chocolate maker's shop at the edge of the high rise district.";
 				say "     You and the others live there, mating and roaming around in search of more chocolate. When you and the other canines mate, you both lose cohesion and melt in with your lover. When you separate, you lose more and more of who you used to be, though the pack grows smarter and more united as well.";
@@ -426,7 +425,7 @@ This is the Chocolate Lab Infection rule:
 				if intelligence of Player > 16:
 					say "     Having grown clever enough, your pack manages to get the gas running to the large chocolate melting pot. You all add your gathered chocolate, as well as each of you putting in your own individual cream to it. When the resulting mix is poured out, you create new chocolate dogs to join your pack, greatly increasing your numbers and the area in which you are able to scavenge more chocolate and playmates. With your swollen numbers, you are able to control a substantial portion of the city despite not being as powerful as some other creatures out there.";
 			if hellHoundLevel > 0: [Hellhound while swarmed into conversion]
-				say "[line break]     Lost to your lustful hungers with the other chocolate labs, you forget about your deal with the hellhound, troubled only by the occasional, unremembered dream. But he does not forget. Having given in to a life of debauchery and sin, your foul contract was only delayed to better prepare you for your coming, unending fate.";
+				say "     Lost to your lustful hungers with the other chocolate labs, you forget about your deal with the hellhound, troubled only by the occasional, unremembered dream. But he does not forget. Having given in to a life of debauchery and sin, your foul contract was only delayed to better prepare you for your coming, unending fate.";
 				say "     When that times comes, you are pulled into the pits of Hades and given a life of eternal servitude as a sexual treat to the countless foul hellhounds who guard the gates of Hell. Your confectionary body is fucked over and over again while you are milked for your white chocolate cream. Some even take to biting at you, eating away at your flowing body. This is strangely painful and yet pleasurable to you, feeling part of your eternal soul torn away to be consumed by the demonic hound. This damage never lasts as your chocolate body continually reforms, eager to feed the lusts of the countless horde.";
 				say "     The fel beasts breed you incessantly, filling your womb with litters of their spawn. Your pups are twisted, flowing creatures like yourself, but made of lava and flame encased in ashen crusts. They nurse from your teats and grow strong, eventually joining the others in mating you until the ends of time. Their piss and cum are like molten lava, yet somehow wonderfully warm and exciting to you but torture to their other victims among the damned.";
 		else:
@@ -444,16 +443,13 @@ This is the Chocolate Lab Infection rule:
 			if humanity of Player < 25: [...and then going completely mad]
 				say "     After a few years, you are struck with the sudden idea for your most daring and elaborate project yet. With the help of all your apprentices over several uninterrupted days, you are milked for as much white chocolate syrup as you'll give over and over. During this time, you're fed only a diet of pure, white chocolate by your assistants who slowly change, becoming chocolate Labs like you. You insist on only using your own chocolate on this project though, despite many volunteering to give as well.";
 				say "     The chocolate is prepared and heated, then poured into the elaborate, segmented mold you had specially commissioned for this project. When it cools, your team opens it carefully, releasing the large, white chocolate figure. It is a solid, white chocolate version of the creature you met in the city so long ago. You nervously nibble the ends off your fingers as you watch and wait, elated when it starts to move.";
-				say "     The white chocolate Lab is in your arms as soon as it can walk and fucking you moments after that. The flowing, ivory creature you've created becomes your mate and is capable of changing others into chocolate canines like yourself.";
-				if Player is female and "Sterile" is not listed in feats of Player: [BREEDABLE+H-SIRING]
-					say "     A few days later, while the creamy filling of his pups swirls with life in your womb[if Player is male] and your mate's womb similarly filled[end if], you head back to the kitchen to help your assistants create mates of their own. Meanwhile, your mate is in your office, vigorously screwing your distributor. She had come by to talk to you about wasting time on projects instead of sales. When you left, the canine was well on his way to making her into chocolate Lab like you, giving her a much greater appreciation for the creative vision you would soon share with the world.";
-				else if Player is male: [SIRING ONLY]
-					say "     A few days later, while a creamy filling of your pups swirls with life in your mate's womb, you head back to the kitchen to help your assistants create mates of their own. Meanwhile, your mate is in your office, vigorously screwing your distributor. She had come by to talk to you about wasting time on projects instead of sales. When you left, the canine was well on his way to making her into chocolate Lab like you, giving her a much greater appreciation for the creative vision you would soon share with the world.";
-				else: [NO BREEDING]
-					say "     A few days later, you head back to the kitchen to help your assistants create mates of their own. Meanwhile, your mate is in your office, vigorously screwing your distributor. She had come by to talk to you about wasting time on projects instead of sales. When you left, the canine was well on his way to making her into chocolate Lab like you, giving her a much greater appreciation for the creative vision you would soon share with the world.";
+				say "     The white chocolate lab is in your arms as soon as it can walk and fucking you moments after that. The flowing, ivory creature you've created becomes your mate and is capable of changing others into chocolate canines like yourself.";
+				if Player is impreg_ok: [BREEDABLE+H-SIRING]
+					say "     A few days later, while the creamy filling of his pups swirls with life in your womb[if Player is male] and your mate's womb similarly filled[end if], you head back to the kitchen to help your assistants create mates of their own. Meanwhile, your mate is in your office, vigorously screwing your distributor. She had come by to talk to you about wasting time on projects instead of sales. When you left, the canine was well on his way to making her into chocolate lab like you, giving her a much greater appreciation for the creative vision you would soon share with the world.";
+				else: [SIRING ONLY]
+					say "     A few days later[if Player is male], while a creamy filling of your pups swirls with life in your mate's womb[end if], you head back to the kitchen to help your assistants create mates of their own. Meanwhile, your mate is in your office, vigorously screwing your distributor. She had come by to talk to you about wasting time on projects instead of sales. When you left, the canine was well on his way to making her into chocolate lab like you, giving her a much greater appreciation for the creative vision you would soon share with the world.";
 	else:
 		if labhost > 0:
 			say "     Trapped inside your new [BodyType of Player] form, the chocolate lab[if labhost is 2]s[end if] infesting your body are eventually overwhelmed by your own body, slowly absorbed into your form until one day you realize [if labhost is 2]their[else]its[end if] presence has disappeared entirely. While you show no outward signs of the labs influence, you find you have a powerful craving for chocolate from that day onward.";
-
 
 Chocolate Lab ends here.

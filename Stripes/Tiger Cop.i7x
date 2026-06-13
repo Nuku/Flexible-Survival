@@ -4,7 +4,7 @@ Version 4 of Tiger Cop by Stripes begins here.
 
 Section 1 - Key Hunt Quest
 
-keycollection is a number that varies.
+[keycollection is a number that varies.]
 mqstatus is a number that varies.
 mqcountdown is a number that varies. mqcountdown is usually 99.
 nsgained is a number that varies.
@@ -12,17 +12,9 @@ mqpickup is a number that varies.
 tcopfight is a number that varies.
 pquest is a number that varies.
 
-when play begins:
-	add Policeman to BadSpots of MaleList;
-	add Policeman to BadSpots of HermList;
-	add Policeman to BadSpots of FurryList;
-
-TigerCopRoomConnection is a number that varies.[@Tag:NotSaved]
-
-an everyturn rule:
-	if pquest > 0 and TigerCopRoomConnection is 0:
+a postimport rule: [bugfixing rules for players that import savegames]
+	if pquest > 0:
 		change the Northwest exit of (Entrance to the Red Light District) to Abandoned Storefront;
-		now TigerCopRoomConnection is 1; [room connected]
 
 [	mqstatus            ]
 [	0 new				]
@@ -53,6 +45,11 @@ Policeman is a situation.
 ResolveFunction of Policeman is "[ResolveEvent Policeman]".
 Sarea of Policeman is "High".
 
+when play begins:
+	add Policeman to BadSpots of MaleList;
+	add Policeman to BadSpots of HermList;
+	add Policeman to BadSpots of FurryList;
+
 to say ResolveEvent Policeman:
 	project Figure of SgtMarks_clothed_icon;
 	if mqstatus is 0:
@@ -60,10 +57,8 @@ to say ResolveEvent Policeman:
 		say "     The cop walks up to you purposefully, pulling out his nightstick and slapping his palm with it a couple of times while sizing you up. Watching your reactions, he notices that you're not a mindless monster (yet) and relaxes only slightly. 'Hold it right there. What are you doin['] roamin['] the streets during a crisis? All citizens were advised to stay at home and in shelters before all communications dropped,' he growls with authority.";
 		if scenario is "Researcher":
 			say "     You quickly explain to him that you are actually a researcher sent in to gather data. You tell him that you have been inoculated to be resistant and have been searching throughout the city for samples. You tell him a little about what you've seen, leaving out some details for the moment. You wouldn't want to incriminate yourself. The cop keeps a stern eye on you while you talk, making a few notes and taking down your personal information.";
-		else if HP of Doctor Matt > 0 and HP of Doctor Matt < 100:
-			say "     You quickly explain to him that you were in a shelter, but were running out of supplies and had to risk leaving. You tell him a little bit about what you've seen, leaving out some details for the moment. You wouldn't want to incriminate yourself. You even add in the fact that you're working with a scientist who's investigating the cause of the outbreak. The cop keeps a stern eye on you while you talk, making a few notes and taking down your personal information.";
-		else:
-			say "     You quickly explain to him that you were in a shelter, but were running out of supplies and had to risk leaving. You tell him a little bit about what you've seen, leaving out some details for the moment. You wouldn't want to incriminate yourself. The cop keeps a stern eye on you while you talk, making a few notes and taking down your personal information.";
+		else :
+			say "     You quickly explain to him that you were in a shelter, but were running out of supplies and had to risk leaving. You tell him a little bit about what you've seen, leaving out some details for the moment. You wouldn't want to incriminate yourself[if HP of Doctor Matt > 0 and HP of Doctor Matt < 100]. You even add in the fact that you're working with a scientist who's investigating the cause of the outbreak[end if]. The cop keeps a stern eye on you while you talk, making a few notes and taking down your personal information.";
 		WaitLineBreak;
 		say "     'Well, it sounds like you've been able to take care of yourself fairly well to this point. I've been continuin['] my patrols, but this city's pretty much gone to the dogs. Quite literally with a lot of people. I've been tryin['] to keep some order by knockin['] a few heads. Takin['] a few liberties, as well,' he adds with a smug smirk.";
 		if scenario is "Researcher":
@@ -71,12 +66,11 @@ to say ResolveEvent Policeman:
 		else:
 			say "     'Now, since you seem like a competent [if Player is female]gal[else]guy[end if], I think I can see myself bein['] able to overlook your...' he taps his nightstick on your backpack, '...supply gatherin[']. That is, providin['] you'd be willin['] to do your civic duty and help a police officer.'";
 		WaitLineBreak;
-		say "     'There's this small pack of tigresses that have been showing up in the seedy part of town, peddling themselves and infecting others[if stiffedpayment is 1]. I can smell their scent on you. It don't pay to try to stiff a whore on her pay, my friend. Perhaps you'd like a little payback?'[line break][else if tigresswinner is 1]. I can smell some of their scent on you. It seems like you've already put one in her place.'[else if tigressfucked is 1]. I can smell some of their scent on you. It seems she's had her way with you. Perhaps you'd like a little payback?'[line break][else if tigressclient is 1]. I can smell their scent on you. It seems you've already sampled their services. You won't need to worry about [']em taking your stuff if you'd be willin['] to help me out.'[else].'[end if]";
+		say "     'There's this small pack of tigresses that have been showing up in the seedy part of town, peddling themselves and infecting others[if stiffedpayment is 1]. I can smell their scent on you. It don't pay to try to stiff a whore on her pay, my friend. Perhaps you'd like a little payback?'[else if tigresswinner is 1]. I can smell some of their scent on you. It seems like you've already put one in her place.'[else if tigressfucked is 1]. I can smell some of their scent on you. It seems she's had her way with you. Perhaps you'd like a little payback?'[else if tigressclient is 1]. I can smell their scent on you. It seems you've already sampled their services. You won't need to worry about [']em taking your stuff if you'd be willin['] to help me out.'[else].'[end if]";
 		say "     'I want to, you know, get [']em under control before things get out of hand. They seem to be based in a cheap motel in that part of town. I could use a bit more muscle to deal with [']em. If I'm goin['] to clear the place out, I need to be able to get in and lay down the law. If you can get some more keys for their motel, I'll be able to deal with [']em properly. I want a handful more so I can access all the rooms and get the whole lot of [']em.'";
 		WaitLineBreak;
 		say "     'So, you tell me: Have I found a concerned citizen who's willin['] to help the police or another punk looter?' he asks, slapping his nightstick in his paw meaningfully.";
-		say "     [bold type]Do you agree to help the tiger cop?[roman type][line break]";
-		LineBreak;
+		say "[line break]     [bold type]Do you agree to help the tiger cop?[roman type][line break]";
 		say "     ([link]Y[as]y[end link]) - Yes.";
 		say "     ([link]N[as]n[end link]) - No.";
 		if Player consents:			[quest becomes active]
@@ -87,24 +81,19 @@ to say ResolveEvent Policeman:
 		else:					[quest refused / tiger cop now enemy]
 			LineBreak;
 			now mqstatus is 98;
-			say "[line break]     With almost no warning, the officer swings his nightstick hard and fast at your head!";
-			let the bonus be (( Dexterity of Player minus 10 ) divided by 2);
+			say "     With almost no warning, the officer swings his nightstick hard and fast at your head!";
+			let the bonus be ( Dexterity of Player minus 10 ) divided by 2;
 			let the dice be a random number from 1 to 20;
-			say "You roll 1d20([dice])+[bonus] -- [dice plus bonus] vs 16: ";
+			say "[line break]     You roll 1d20([dice])[if bonus >= 0]+[end if][bonus] = [special-style-1][dice + bonus][roman type] vs [special-style-2]17[roman type] (Dexterity Check): ";
 			if dice plus bonus > 16:
-				say "     You narrowly dodge out of the way of the vicious blow. ";
+				say "You narrowly dodge out of the way of the vicious blow.";
 			else:
 				decrease HP of Player by 15;
-				say "     You are struck firmly across the jaw by the hard club. (15 dmg)";
-			say "[line break]     'And here I thought you were smarter than that, but I guess you're just another stupid, punk looter? I guess I'll have to teach you a hard lesson,' the tiger cop growls, readying to strike again if you get up.";
-			wait for any key;
-			repeat with y running from 1 to number of filled rows in Table of Random Critters:
-				choose row y in Table of Random Critters;
-				if Name entry is "Malayan Tiger Male":
-					now MonsterID is y;
-					break;
-			now area entry is "High"; [activates Tiger Cop as a wandering monster]
+				say "You are struck firmly across the jaw by the hard club. ([special-style-2]15[roman type] dmg)[line break]";
+			say "     'And here I thought you were smarter than that, but I guess you're just another stupid, punk looter? I guess I'll have to teach you a hard lesson,' the tiger cop growls, readying to strike again if you get up.";
+			now the area corresponding to a Name of "Malayan Tiger Male" in Table of Random Critters is "High"; [activates Tiger Cop as a wandering monster]
 			if HP of Player < 1:
+				WaitLineBreak;
 				say "     That blow was too much for you and you are sent sprawling to the ground, unable to retaliate or flee.";
 				say "[losetotigercop]";
 			else:
@@ -113,26 +102,39 @@ to say ResolveEvent Policeman:
 			now Resolution of Policeman is 99; [refused the quest]
 			now Policeman is resolved;
 	else:
-		let T be a random number between one and four;
-		if T is 1:
-			say "     While passing through the city again, you catch sight of Sergeant Marks again. He's been standing in the shadows of a building archway and only steps out when you spot him. He comes over to you, giving you a look-over. 'I've been waitin['] for you to turn up. I hope you've had some success with your little mission, deputy,' he says with a chuckle.";
-		if T is 2:
-			say "     While looking through a small courtyard between several of the high-rises, you are met by the tiger cop. He is coming out of one of the trendy restaurants with a small satchel over his shoulder. Sgt Marks seems quite pleased with himself until he spots you looking at him. He growls sternly at you, 'Hey! How's your [']community service work['] comin[']?'";
-		if T is 3:
-			say "     As you travel through the city, you hear the pained yip of one of the husky females. Heading over cautiously to investigate, you come face to chest with Sgt Marks as he steps out of an alley. He is zipping up his fly and you can hear the sound of someone rushing away down the alley. 'Damn bitches,' he grumbles. 'Barely worth the time to fuck, eh?' he comments. 'But forget her. How is your project comin['] along? You got some good news for me?'";
-		if T is 4:
-			say "     After some fruitless searching through the city, you run into the tiger policeman again. Sgt Marks is sitting on the roof of a car. Somehow, even in this city gone mad, he's managed to find a bag of store-bought doughnuts. He's got his claws sunk into several of the sugar-covered things and is stuffing them down his muzzle. He looks over at you, wolfs the last of them down without concern for your possible hunger, and then dusts the sugar grains from his paws. 'Did you have any luck yet? We can't wait for this forever.'";
+		if a random number between one and four is:
+			-- 1: say "     While passing through the city again, you catch sight of Sergeant Marks again. He's been standing in the shadows of a building archway and only steps out when you spot him. He comes over to you, giving you a look-over. 'I've been waitin['] for you to turn up. I hope you've had some success with your little mission, deputy,' he says with a chuckle.";
+			-- 2: say "     While looking through a small courtyard between several of the high-rises, you are met by the tiger cop. He is coming out of one of the trendy restaurants with a small satchel over his shoulder. Sgt Marks seems quite pleased with himself until he spots you looking at him. He growls sternly at you, 'Hey! How's your [']community service work['] comin[']?'";
+			-- 3: say "     As you travel through the city, you hear the pained yip of one of the husky females. Heading over cautiously to investigate, you come face to chest with Sgt Marks as he steps out of an alley. He is zipping up his fly and you can hear the sound of someone rushing away down the alley. 'Damn bitches,' he grumbles. 'Barely worth the time to fuck, eh?' he comments. 'But forget her. How is your project comin['] along? You got some good news for me?'";
+			-- 4: say "     After some fruitless searching through the city, you run into the tiger policeman again. Sgt Marks is sitting on the roof of a car. Somehow, even in this city gone mad, he's managed to find a bag of store-bought doughnuts. He's got his claws sunk into several of the sugar-covered things and is stuffing them down his muzzle. He looks over at you, wolfs the last of them down without concern for your possible hunger, and then dusts the sugar grains from his paws. 'Did you have any luck yet? We can't wait for this forever.'";
 		say "[motelkeycheck]";
 
 to say motelkeycheck:
-	say "     Taking a quiet tally in your head, you have collected [carried of motel key] key[if carried of motel key is not 1]s[end if].";
+	say "     Taking a quiet tally in your head, you have collected [carried of motel key in words] key[if carried of motel key is not 1]s[end if].";
 	if carried of motel key > 4:			[5 or more keys to proceed]
-		say "     [bold type]Do you tell him you have found enough keys?[roman type][line break]";
-		LineBreak;
+		say "[line break]     [bold type]Do you tell him you have found enough keys?[roman type][line break]";
 		say "     ([link]Y[as]y[end link]) - Yes.";
 		say "     ([link]N[as]n[end link]) - No.";
 		if Player consents:
-			say "[line break][givekeys]";
+			LineBreak;
+			say "     You dig into your bag, fishing out the motel keys from where they've settled at the bottom. He flips through them, checking the room numbers. He stuffs them into one of his pockets and smiles to you. 'Good goin['], deputy,' he jokes with a firm punch on your shoulder. 'That covers all the rooms now. They can't keep us out anymore.'";
+			say "     'Us?' you ask as the big tiger motions for you to follow him. 'Yeah, now come along. I've got somethin['] for ya,' he says as he heads down a side street. He talks with you as you both weave through the city for several blocks. 'Like I was sayin['], you've been right helpful on this and I'm willing to cut you in on a little of the action if you're up for one last tussle with those pussies. I want to go in and deal with [']em, teach [']em who's boss around here. And cleaning that place up'd be a lot easier with some extra muscle.'";
+			ItemLoss motel key by 5;
+			WaitLineBreak;
+			say "     'Now we've got a little time to get ready for this, so I want you to listen up,' he says sternly, pausing for a moment to give you a hard poke in the chest to emphasize his point. 'You've got to be smarter about your supply huntin['] and watch what you say if you run into any of those soldiers out there. Soldiers'll shoot looters. Them military guys'll be nosin['] into your gear, but they'll be on the lookout for weapons or stuff that could spread the infection. With everyone they'll find, they won't have much time for twenty questions unless you say somethin['] stupid. You keep quiet and keep it light and you'll do alright, I think.'";
+			say "     The rest of the walk is conducted in silence. His words have left you much to think about for the future. He leads you to an intersection with a cluster of cars. One of them, a police car, is hemmed in by crashed cars on either side.";
+			WaitLineBreak;
+			now mqstatus is 2;
+			AddNavPoint Police Car;
+			now the player is in Police Car;
+			now mqcountdown is 0;
+			now Policeman is resolved;
+			increase score by 40;
+			increase XP of Player by 10;
+			WaitLineBreak;
+			say "     The feline policeman opens the car and digs around in what appears to be the torn remains of a cop's uniform in the passenger's seat. 'Here, take this. You're gonna need it,' he says meaningfully as he passes you a nightstick. 'If you've got any last minute stuff to take care of or an equipment stash wherever you're holed up, you go get your gear and be back here pronto. I want you to come along on this, but I'm only willin['] to wait 24 hours before I move out. And if somethin['] holds you up, there'll be a key in the lip of the bumper. I should be able to leave somethin['] for ya in the trunk and I'll get in touch after the heat dies down.'";
+			ItemGain nightstick by 1;
+			now Resolution of Policeman is 2; [Gave Sgt Marks the keys]
 		else:
 			LineBreak;
 			say "     You shake your head and tell him you don't have the motel keys for him yet. He growls softly and points off towards the seedier part of town with his nightstick. 'Just you do your work and get them for me. Hop to it.'";
@@ -140,26 +142,9 @@ to say motelkeycheck:
 		say "     You shake your head and tell him you don't have the motel keys for him yet. He growls softly and points off towards the seedier part of town with his nightstick. 'Just you do your work and get them for me. Hop to it.'";
 		now Resolution of Policeman is 1; [quest started]
 
-
-to say givekeys:
-	ItemLoss motel key by 5;
-	say "     You dig into your bag, fishing out the motel keys from where they've settled at the bottom. He flips through them, checking the room numbers. He stuffs them into one of his pockets and smiles to you. 'Good goin['], deputy,' he jokes with a firm punch on your shoulder. 'That covers all the rooms now. They can't keep us out anymore.'";
-	say "     'Us?' you ask as the big tiger motions for you to follow him. 'Yeah, now come along. I've got somethin['] for ya,' he says as he heads down a side street. He talks with you as you both weave through the city for several blocks. 'Like I was sayin['], you've been right helpful on this and I'm willing to cut you in on a little of the action if you're up for one last tussle with those pussies. I want to go in and deal with [']em, teach [']em who's boss around here. And cleaning that place up'd be a lot easier with some extra muscle.'";
-	say "     'Now we've got a little time to get ready for this, so I want you to listen up,' he says sternly, pausing for a moment to give you a hard poke in the chest to emphasize his point. 'You've got to be smarter about your supply huntin['] and watch what you say if you run into any of those soldiers out there. Soldiers'll shoot looters. Them military guys'll be nosin['] into your gear, but they'll be on the lookout for weapons or stuff that could spread the infection. With everyone they'll find, they won't have much time for twenty questions unless you say somethin['] stupid. You keep quiet and keep it light and you'll do alright, I think.'";
-	say "     The rest of the walk is conducted in silence. His words have left you much to think about for the future. He leads you to an intersection with a cluster of cars. One of them, a police car, is hemmed in by crashed cars on either side.";
-	now mqstatus is 2;
-	AddNavPoint Police Car;
-	now the player is in Police Car;
-	now mqcountdown is 0;
-	now Policeman is resolved;
-	increase score by 40;
-	increase XP of Player by 10;
-	say "     The feline policeman opens the car and digs around in what appears to be the torn remains of a cop's uniform in the passenger's seat. 'Here, take this. You're gonna need it,' he says meaningfully as he passes you a nightstick. 'If you've got any last minute stuff to take care of or an equipment stash wherever you're holed up, you go get your gear and be back here pronto. I want you to come along on this, but I'm only willin['] to wait 24 hours before I move out. And if somethin['] holds you up, there'll be a key in the lip of the bumper. I should be able to leave somethin['] for ya in the trunk and I'll get in touch after the heat dies down.'";
-	ItemGain nightstick by 1;
-	now Resolution of Policeman is 2; [Gave Sgt Marks the keys]
-
-
 Section 2 - Tiger Cop character and Police Car location
+
+sgtmarkstalk is a number that varies.
 
 Table of GameRoomIDs (continued)
 Object	Name
@@ -167,8 +152,7 @@ Police Car	"Police Car"
 
 Police Car is a room. It is private. It is fasttravel.
 Description of Police Car is "[policecardesc]".
-
-the scent of the Police Car is "This area smells faintly of gasoline and sun-heated cars, as well as dried patches of old cum.".
+the scent of the Police Car is "     This area smells faintly of gasoline and sun-heated cars, as well as dried patches of old cum.".
 
 to say policecardesc:
 	if Sgt Marks is in Police Car:
@@ -176,7 +160,7 @@ to say policecardesc:
 	else:
 		say "     This intersection seems to be the sight of a major crash, which must have happened as the chaos was reaching its peak. There are several cars smashed into a cluster, many with doors open and messy stains in their interiors. There are scattered clothes and more of these old stains littering the intersection and the cars. In one of the streets leading to this mess is a cop car sideways in the street with streak marks from its sudden stop. More cars are blocking the street behind it, penning it in. Like most of the streets, this spot is impassable by vehicle now. The tiger cop who was once here is gone, presumably to deal with the motel he spoke of, wherever that is.";
 		if mqpickup is 0:
-			say "[line break]     Taking the key from its hiding place, you unlock the car's trunk. Inside is a note that simply says 'Catch you later' with two cans of police pepperspray on top of it. Those should come in quite handy.";
+			say "     Taking the key from its hiding place, you unlock the car's trunk. Inside is a note that simply says 'Catch you later' with two cans of police pepperspray on top of it. Those should come in quite handy.";
 			ItemGain pepperspray by 2;
 			increase score by 10;
 			now mqpickup is 1;
@@ -186,11 +170,11 @@ object	name
 Sgt Marks	"Sgt Marks"
 
 Sgt Marks is a man.
+Sgt Marks is in Police Car.
 understand "tiger" as Sgt Marks.
 understand "Sergeant Marks" as Sgt Marks.
 understand "cop" as Sgt Marks.
 understand "policeman" as Sgt Marks.
-Sgt Marks is in Police Car.
 ScaleValue of Sgt Marks is 4. [7 foot]
 SleepRhythm of Sgt Marks is 0. [0 - awake at all times, 1 - day active, 2 - night active]
 Body Weight of Sgt Marks is 6. [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
@@ -227,16 +211,13 @@ SexuallyExperienced of Sgt Marks is true.
 TwistedCapacity of Sgt Marks is false. [Twisted Characters can take any penetration, no matter the size]
 Sterile of Sgt Marks is false. [steriles can't knock people up]
 MainInfection of Sgt Marks is "Malayan Tiger Male".
-Description of Sgt Marks is "[SgtMarks_Desc]".
-Conversation of Sgt Marks is { "WhoresWhoresWhoresWhores!" }.
-The scent of the Sgt Marks is "The tiger cop growls and pushes you away as you come up to sniff him.".
-sgtmarkstalk is a number that varies.
+Description of Sgt Marks is "     The tiger cop is quite large and impressively strong looking. His police jacket hangs open, unable to close around his broad, striped chest. His pants mostly fit, though the bottom of the legs are torn open and leave the bottom third of his legs uncovered. To be able to fit his seven foot frame, he was probably a portly man before his transformation into the tall and muscled orange beast. His tail thrashes about with barely contained excitement as he checks over his equipment and supplies as he gets ready to enact his plan.[line break]".
+[Conversation of Sgt Marks is { "WhoresWhoresWhoresWhores!" }.]
+the fuckscene of Sgt Marks is "     'Smarten up and save it for those fine pussies. They'll be all ours once this is over.'[line break]".
+The scent of the Sgt Marks is "     The tiger cop growls and pushes you away as you come up to sniff him.".
+icon of Sgt Marks is Figure of SgtMarks_clothed_icon.
 
-to say SgtMarks_Desc:
-	project Figure of SgtMarks_clothed_icon;
-	say "     The tiger cop is quite large and impressively strong looking. His police jacket hangs open, unable to close around his broad, striped chest. His pants mostly fit, though the bottom of the legs are torn open and leave the bottom third of his legs uncovered. To be able to fit his seven foot frame, he was probably a portly man before his transformation into the tall and muscled orange beast. His tail thrashes about with barely contained excitement as he checks over his equipment and supplies as he gets ready to enact his plan.";
-
-Instead of conversing the Sgt Marks:
+instead of conversing the Sgt Marks:
 	project Figure of SgtMarks_clothed_icon;
 	if sgtmarkstalk is 0:
 		say "     The feline cop looks up from the pack he's stocking. 'This is my cruiser here. Been comin['] back here from time to time to get stuff or store stuff. Just gear, mind you. Never leave anything incriminatin['] where it can be found and connected to you. Cop 101, that is. Most of the gear's already used up or lost dealin['] with the craziness out there.'";
@@ -246,30 +227,24 @@ Instead of conversing the Sgt Marks:
 		now sgtmarkstalk is 1;
 	else:
 		say "     'I'm looking forward to dealing with those pussies and showin['] [']em who's boss. I've been wanting to deal with those girls for a while now. Get my hands on those tight asses of theirs and really give it to [']em. Mmm... such fine asses they've got. Such lovely fur. Been wantin['] some of that for a long time.'";
-	say "     [bold type]'But now it's time to put those kitties in their place. Are you ready to head out?' [roman type](NOTE: Consenting can lead to end of game situations.)[line break]";
-	LineBreak;
+	say "[line break]     [bold type]'But now it's time to put those kitties in their place. Are you ready to head out?'[roman type] (NOTE: Consenting can lead to end of game situations.)";
 	say "     ([link]Y[as]y[end link]) - Yes.";
 	say "     ([link]N[as]n[end link]) - No.";
 	if Player consents:
-		now Sgt Marks is nowhere;
-		say "[line break][motelquest]";
-	else if mqcountdown < 8:
 		LineBreak;
-		say "     'The offer's still open a little longer. I'm moving out in [ ( 9 - mqcountdown ) times 3 ] hours, with or without you.'";
+		now Sgt Marks is nowhere;
+		say "[motelquest]";
 	else:
 		LineBreak;
-		say "     'It's now or never. I'll be moving out real soon now.'";
+		say "     '[if mqcountdown < 8]The offer's still open a little longer. I'm moving out in [ ( 9 - mqcountdown ) times 3 ] hours, with or without you[else]It's now or never. I'll be moving out real soon now[end if].'";
 
 An everyturn rule:
 	if mqstatus is 2 and mqcountdown < 10:
 		increase mqcountdown by 1;
 		if mqcountdown is 9:
 			now Sgt Marks is nowhere;
-			say "[line break]     [bold type]Your 24 hours are up. Sgt Marks has left without you.[roman type][line break]";
+			say "[line break][bold type]Your 24 hours are up. Sgt Marks has left without you.[roman type][line break]";
 			now mqcountdown is 10;
-
-the fuckscene of Sgt Marks is "     'Smarten up and save it for those fine pussies. They'll be all ours once this is over.'";
-
 
 Section 3 - Motel Quest
 
@@ -288,9 +263,8 @@ to say motelquest:
 		increase score by 20;
 	else:
 		say "     You head over to the tigress, acting as if you intend to be a client until you get close to her, then engage her in combat. While you fight the tigress, you can see Sergeant Marks head to the nearest room on the ground floor.";
-		LineBreak;
-		now inasituation is true;
 		say "     The lovely tigress is quite upset at the intruder to her motel home. She growls angrily and readies to deal with you soundly so she can have her way with you and put you in your place. Under her.";
+		now inasituation is true;
 		challenge "Malayan Tiger Herm";
 		now inasituation is false;
 		if fightoutcome < 20: [player won]
@@ -305,8 +279,8 @@ to say motelquest:
 	say "     You dash up the stairs and onto the second floor balcony. You burst through the first door, weapon raised, but find it empty. Well, good. Fewer for you to deal with. You move to the next and find it empty as well. Two for two.";
 	say "     At the third, your luck runs out. There is a tigress sprawled across the bed, pumping a large dildo she's picked up somewhere while working a paw over her thick, feline cock. With her filled, stuffed pussy facing right at you, you are stopped short in shock. Seeing you at the door, she glances from you to the sextoy a few times, then yanks the plastic thing out, eyeing the live toy that's come to play.";
 	LineBreak;
-	now inasituation is true;
 	say "     The lovely tigress is quite upset at the intruder to her motel home. She growls angrily and readies to deal with you soundly so she can have her way with you and put you in your place. Under her.";
+	now inasituation is true;
 	challenge "Malayan Tiger Herm";
 	now inasituation is false;
 	if fightoutcome < 20: [player won]
@@ -320,9 +294,8 @@ to say motelquest:
 	WaitLineBreak;
 	say "     You open the door to the next room, number 10, and find another female tigress on the bed. This one has what you presume is, or was, a client in bed with her. On the bed is a strange mouse-tiger hybrid with a collar around her neck and a leash tied to the bedpost. The hybrid has blue fur, but tiger stripes and has rather feline features, though the ears and tail are still mouse-like. Under the mouse's balls is a small, wet snatch. Presumably the feline lured this john back to her room and has been using him like her playtoy while making another tigress herm of him.";
 	say "     The tigress growls at the interruption, pulling her cock from the striped mouse's muzzle, then pushes her back as she climbs off the bed to deal with you for interrupting her playtime. The hybrid on the bed only mewls and squeaks, reaching out imploringly from the end of her leash to either of you in lustful need, fingering herself as you both fight.";
-	LineBreak;
-	now inasituation is true;
 	say "     The lovely tigress is quite upset at the intruder to her motel home. She growls angrily and readies to deal with you soundly so she can have her way with you and put you in your place. Under her.";
+	now inasituation is true;
 	challenge "Malayan Tiger Herm";
 	now inasituation is false;
 	if fightoutcome < 20: [player won]
@@ -338,19 +311,17 @@ to say motelquest:
 	say "     With images of that playing out in your mind, you go in the final room on the upper floor. In there, your hopes of getting back to room 10 are dashed. Seated on the large bed in what was once the motel's luxury suite, is a tigress much larger than any of the others. This strong looking woman has a good foot more height on any of her girls. She's loosely wearing a silk robe over her ample bosom. Poking from it is her large, twelve inch ebon member, which is being attended to by a blonde-haired tigress. Another tigress is spread out on the floor, with one of the large tigress's feet rubbing her sticky cock. Others are sprawled out on the bed or snuggling in the corner.";
 	say "     All feline eyes in the room lock on you and narrow into tight slits. Several of the girls start to get up, but their matron motions for them to wait as she gets up instead, ready to deal with this upstart intruder, this rude interruption, this new toy.";
 	now mqstatus is 6;
-	LineBreak;
-	now inasituation is true;
+	WaitLineBreak;
 	say "     The tigress matron of the motel is a larger and more impressive female. She's got an extra foot of height on any of her girls and a much fuller rack as well. Her long, flowing orange hair swishes as she pulls off the bathrobe she was wearing, baring her strong and sensual body to you. She looks at you with a strange expression, clearly not pleased that you've burst in here after hurting several of her girls, but eager to put you in your place. Her dark nipples and cock are hard with her anticipation of enjoying a new plaything.";
+	now inasituation is true;
 	challenge "Malayan Tiger Herm"; [mqstatus 6 will adjust stats to Matron level]
 	now inasituation is false;
 	if fightoutcome < 20: [player won]
 		say "[mqsuccess]";
 	else if fightoutcome > 19 and fightoutcome < 30: [lost]
 		say "[mqlostfight]";
-		stop the action;
 	else if fightoutcome is 30: [fled]
 		say "[mqranaway]";
-		stop the action;
 
 to say mqranaway:
 	say "     Fleeing the motel, you hear the alarm sound as you get to safety in a nearby building. From the shadows, you see the mob of tigresses from the top floor spill down to the ground floor, charging to tackle the cop as he tries to get away while the alarm is sounded. They bear him down by sheer numbers and tear the clothes from him as he screams your name in anger at your betrayal.";
@@ -367,22 +338,12 @@ to say mqlostfight:
 	WaitLineBreak;
 	say "     There is some commotion at the door which you hardly notice before you feel a painful shock run through you as the matron stiffens atop you. She is pushed aside by the cop, who smiles down at you. You start to get up, drawn between thanking him for the rescue and lusting for your hero. His pants are open and his stiff rod is slick with cum and juices, drawing your lustful gaze to it as he holsters his stun gun. From the sticky juices coating his meat, it seems he's already shown a few of them who's in charge.";
 	say "     'I knew you'd make a fine distraction for [']em,' he chuckles. He pushes you down overtop of the stunned matron. Grabbing your ass, he slowly sinks his cock into you, making you moan in satisfaction at being filled once again. He thrusts several times before withdrawing and pushing his thick meat into the tigress below you, who has started to come of out of her daze. Her hard shaft is pressed between you both as the cop alternates fucking each of you, turning you both into sexy feline whores.";
+	WaitLineBreak;
 	say "     Around you, the other tigresses fawn over the tiger cop, their new master, while pleasuring themselves. When he's finally cum in the ex-matron, he switches to pounding you exclusively. While that hard, feline meat pounds into you, you lap his seed from the new tigress hooker and suck her cock, getting a hot load in both your mouth and your [if Player is female]pussy[else]ass[end if].";
 	say "     Through the night this orgy continues, always welcoming any returning girls in kind. Your new master fucks the horny felines over and over to assert his dominance while you and the other tigresses play with each other while awaiting your next turn with him. Somehow you both seem to have boundless stamina that night, fueled by your lust and ignited by your infection.";
-	WaitLineBreak;
-	say "[totalTH]"; [systematically change all body parts and names to Tigress Hooker, with gender exclusions for feats.]
-	say "[THpostchange]";
-	decrease score by 25;
-	now humanity of Player is 0;
-	follow the turnpass rule;
-	end the story saying "You become another whore for the corrupt cop.";
-	now battleground is "void";
-
-
-to say totalTH:
 	if Libido of Player < 70:
 		now Libido of Player is 70;
-	turn the Player into a "Malayan Tiger Herm";
+	turn the Player into a "Malayan Tiger Herm" silently; [systematically change all body parts and names to Tigress Hooker, with gender exclusions for feats.]
 	if Player is MalePreferred:
 [		say "(Male Preferred, locked results)";]
 		if Player is not male:			[Minimum of TH standard or greater]
@@ -402,28 +363,13 @@ to say totalTH:
 		now Nipple Count of Player is 2;
 		if Breast Size of Player < 4:
 			now Breast Size of Player is 4;
-	else if "One Way" is listed in feats of Player:
-[		say "(One Way, locked results)";]
-		if Player is not male:			[Minimum of TH standard or greater]
-			now Cock Count of Player is 1;
-		if Cock Length of Player < 9:
-			now Cock Length of Player is 9;
-		if Ball Size of Player < 5:
-			now Ball Size of Player is 5;
-		if Player is not female:
-			now Cunt Count of Player is 1;
-		if Cunt Depth of Player < 12:
-			now Cunt Depth of Player is 12;
-		if Cunt Depth of Player < 4:
-			now Cunt Tightness of Player is 4;
-		if Nipple Count of Player < 2:
-			now Nipple Count of Player is 2;
-		if Breast Size of Player < 4:
-			now Breast Size of Player is 4;
 	else:
-		now Cunt Count of Player is 1;
-		now Cock Count of Player is 1;
-		now Nipple Count of Player is 2;
+		if Player is not female or "All The Things" is not listed in feats of Player:
+			now Cunt Count of Player is 1;
+		if Player is not male or "All The Things" is not listed in feats of Player:
+			now Cock Count of Player is 1;
+		if Nipple Count of Player < 2 or "Bouncy Bouncy" is not listed in feats of Player:
+			now Nipple Count of Player is 2;
 		if Cock Length of Player < 9:			[Minimum of TH standard or greater]
 			now Cock Length of Player is 9;
 		if Ball Size of Player < 5:
@@ -434,16 +380,15 @@ to say totalTH:
 			now Cunt Tightness of Player is 4;
 		if Breast Size of Player < 4:
 			now Breast Size of Player is 4;
-
-to say THpostchange:
-	if Player is herm:		[herm]
-		say "     As the orgy continues, your form changes to best suit your new role with these fine girls and your boss. Your body becomes that of a sexy tigress herm like the others. You are a raven-haired beauty with white fur and dark stripes. Your scent, which started like exotic perfume, fades to the cheap and tawdry one. Your wet pussy and throbbing cock ache with a need to be played with, but for a price.";
-	else if Player is male:				[male]
-		say "     As the orgy continues, your form changes to best suit your new role with these fine girls and your boss. Your body becomes that of a sexy tiger. You are a raven-haired beauty with white fur and dark stripes. Your scent, which started like exotic perfume, fades to the cheap and tawdry one. Your throbbing cock aches with a need to be played with, but for a price.";
-	else:								[female]
-		say "     As the orgy continues, your form changes to best suit your new role with these fine girls and your boss. Your body becomes that of a sexy tigress femme. You are a raven-haired beauty with white fur and dark stripes. Your scent, which started like exotic perfume, fades to the cheap and tawdry one. Your wet pussy aches with a need to be played with, but for a price.";
+	WaitLineBreak;
+	say "     As the orgy continues, your form changes to best suit your new role with these fine girls and your boss. Your body becomes that of a sexy [if Player is herm]tigress herm like the others. You are a raven-haired beauty with white fur and dark stripes. Your scent, which started like exotic perfume, fades to the cheap and tawdry one. Your wet pussy and throbbing cock ache[else if Player is male]tiger. You are a raven-haired beauty with white fur and dark stripes. Your scent, which started like exotic perfume, fades to the cheap and tawdry one. Your throbbing cock aches[else]tigress femme. You are a raven-haired beauty with white fur and dark stripes. Your scent, which started like exotic perfume, fades to the cheap and tawdry one. Your wet pussy aches[end if] with a need to be played with, but for a price.";
 	say "     That is, except for your master. For you are his to play with, to use, sell or share as he sees fit. The girls are all his now and you all take turns working the streets while he is out making arrangements for when you will all leave this shabby motel behind and move to greener pastures out of the city. You and the others keep each other entertained while he is away, but always eagerly offer yourselves to him when he returns.";
-
+	decrease score by 25;
+	now humanity of Player is 0;
+	follow the turnpass rule;
+	wait for any key;
+	end the story saying "You become another whore for the corrupt cop.";
+	now battleground is "void";
 
 Section 5 - Won at Motel
 
@@ -453,17 +398,6 @@ to say mqsuccess:
 	say "     As you eye all the lusty felines before you, the cop comes in, dragging another pair of felines in by the scruff while the others he's brought wait submissively by the door. His pants are open and his stiff rod is slick with cum and juices. It seems he's already shown a few of them who's in charge.";
 	say "     'Good work, deputy,' he chuckles as he pushes the two tigresses onto some of the others. He steps up to the deposed matron, intent on having his way with her.";
 	WaitLineBreak;
-	say "[MQvictory]";
-	say "[BTchangeover]";
-	WaitLineBreak;
-	say "[BTpostchange]";
-	increase score by 100;
-	follow the turnpass rule;
-	WaitLineBreak;
-	end the story saying "You become the muscled guard for the tigresses.";
-	now battleground is "void";
-
-to say MQvictory:						[Victory]
 	if Player is herm:		[herm]
 		say "     You set yourself on a cute pair of tigresses, pounding one while the other fingerfucks your pussy. You motion for another pair to tend to your breasts with those rough tongues of theirs. Eager to please their new masters, they work extra hard, giving you a wonderfully long and pleasurable fuck. While you're pounding away, you're treated to the show of watching the cop screwing the matron hard and fast while several of the other girls fawn over both of them. As you watch, the ex-matron quickly becomes another small, mewling tigress like the others.";
 		say "     When you're done with your first pair, you push them aside and pull another up from the bed. You press her to the wall and pound into her tight cunt. Her inner walls grip and squeeze around you like a pro, building you back to climax quickly. Not wanting to let her take control that way, you pull out of her and sink into her tailhole. She mrowls in surprise and cums heavily onto the wall before you fill her butt with your seed and move on to the next one.";
@@ -477,82 +411,53 @@ to say MQvictory:						[Victory]
 		say "     You grab one of the females sitting by the bed, pulling her face between your legs, ordering her to eat you out. She sets herself to the task eagerly, running her raspy tongue over your wet folds until you soak her muzzle with your juices. During your oral stimulation, you order another pair of tigresses to your breast, licking and suckling your nipples and a third to your asshole. While you're enjoying those rough tongues on your erogenous zones, you're treated to the show of watching the cop screwing the matron hard and fast while several of the other girls fawn over both of them. As you watch, the ex-matron quickly becomes another small, mewling tigress like the others.";
 		say "     When you're done with your first set of kitties, you push them aside and pull another up from the bed. You press her to the wall and start pumping your fingers into her tight cunt. Her inner walls squeeze around you, tugging at them for more. You get her good and worked up, then pull out before she can climax. You toss her back onto the bed and straddle her cock, taking it deep inside you. You ride her hard and fast, making her cum with a loud mrowl of delight. You're on to the next in moments, riding that cock while stroking two others onto the tigress you're riding.";
 		say "     Through the night this orgy continues, always welcoming any returning girls in kind. You and Marks fuck them over and over to assert your dominance. Somehow you both seem to have boundless stamina that night, fueled by your lust and ignited by your infection.";
-
-to say BTchangeover:
 	[systematically change all body parts and names to Big Tiger / Big Tigress, with gender exclusions for feats.]
 	if Libido of Player < 50:
 		now Libido of Player is 50;
 	if Player is FemalePreferred:
 		[if multi-cock, reduce to 1. Cannot become less female.]
-		if Cock Count of Player > 1:
+		if Cock Count of Player > 1 and "All The Things" is not listed in feats of Player:
 			now Cock Count of Player is 1;
-	else if "One Way" is listed in feats of Player:
-		[player can't become less female, but can increase in maleness]
-		if Player is not male:
-			now Cock Count of Player is 1;
-		if Cock Length of Player < 12:
-			now Cock Length of Player is 12;
-		if Ball Size of Player < 6:
-			now Ball Size of Player is 6;
-	else if Player is MalePreferred:
-		[Player can't diminish in maleness. Pussy, if any is eliminated]
-		if Player is not male:
-			now Cock Count of Player is 1;
-		if Cock Length of Player < 12:
-			now Cock Length of Player is 12;
-		if Ball Size of Player < 6:
-			now Ball Size of Player is 6;
-		if Player is female:
-			now Cunt Count of Player is 0;
-			now Cunt Depth of Player is 0;
-			now Cunt Tightness of Player is 0;
-			now Nipple Count of Player is 0;
-			now Breast Size of Player is 0;
 	else:
 		[Player freely becomes pure male]
-		now Cock Count of Player is 1;
+		if Player is not male or (Player is not MalePreferred and "All The Things" is not listed in feats of Player):
+			now Cock Count of Player is 1;
 		if Cock Length of Player < 12:
 			now Cock Length of Player is 12;
 		if Ball Size of Player < 6:
 			now Ball Size of Player is 6;
-		if Player is female:
-			now Cunt Count of Player is 0;
-			now Cunt Depth of Player is 0;
-			now Cunt Tightness of Player is 0;
-			now Nipple Count of Player is 0;
-			now Breast Size of Player is 0;
+		if Player is female and "One Way" is not listed in feats of Player:
+			if "Always A Pussy" is not listed in feats of Player:
+				now Cunt Count of Player is 0;
+				now Cunt Depth of Player is 0;
+				now Cunt Tightness of Player is 0;
+			if "Breasts" is not listed in feats of Player:
+				now Nipple Count of Player is 0;
+				now Breast Size of Player is 0;
 	if Player is female:
 		now TailName of Player is "Big Tigress"; [TODO: Add a Table of Random Critters entry for "Big Tigress" (@Stadler#3007)]
 		now FaceName of Player is "Big Tigress";
 		now SkinName of Player is "Big Tigress";
 		now BodyName of Player is "Big Tigress";
 		now CockName of Player is "Big Tigress";
-		now scalevalue of Player is 4;
-		now bodydesc of Player is "powerful";
-		now bodytype of Player is "feline";
-		now SleepRhythm of Player is 0;
-		now tail of Player is "From your muscled rear emerges a long, white tail with black stripes banding the fur. It flicks behind you with excitement.";
-		now Face of Player is "a feminine tiger face and long, flowing hair. Your hair is raven black and curls lightly at the ends as it drapes across your shoulders, framing your steely-blue eyes";
-		now Skin of Player is "ivory white fur streaked with tiger stripes that covers your";
+		now Face of Player is "a feminine tigeress['] with long, flowing hair. Your hair is raven black and curls lightly at the ends as it drapes across your shoulders, framing your steely blue eyes";
 		now Body of Player is "powerfully built with a feminine flair and feline fluidity of motion. Your body moves sensually with every step, but with hidden power. Your hands are human in shape, but with feline claws, pawpads and fur";
-		now Cock of Player is "ebon feline";
 	else:
 		now TailName of Player is "Big Tiger"; [TODO: Add a Table of Random Critters entry for "Big Tiger" (@Stadler#3007)]
 		now FaceName of Player is "Big Tiger";
 		now SkinName of Player is "Big Tiger";
 		now BodyName of Player is "Big Tiger";
 		now CockName of Player is "Big Tiger";
-		now scalevalue of Player is 4;
-		now bodydesc of Player is "powerful";
-		now bodytype of Player is "feline";
-		now SleepRhythm of Player is 0;
-		now tail of Player is "From your muscled rear emerges a long, white tail with black stripes banding the fur. It flicks behind you with excitement.";
 		now Face of Player is "a male tiger head with a strong jaw and a predatory gaze. With a fully feline head, you have fur, stripes and whiskers covering your stern muzzle";
-		now Skin of Player is "ivory white fur streaked with tiger stripes that covers your";
 		now Body of Player is "a powerfully built, masculine form. You move with predatory strength and confidence, as well as a feline's smooth grace. Your hands are human in shape, but with feline claws, pawpads and fur";
-		now Cock of Player is "ebon feline";
-
-to say BTpostchange:						[New BT form]
+	now scalevalue of Player is 4;
+	now bodydesc of Player is "powerful";
+	now bodytype of Player is "feline";
+	now SleepRhythm of Player is 0;
+	now tail of Player is "From your muscled rear emerges a long, white tail with black stripes banding the fur. It flicks behind you with excitement.";
+	now Skin of Player is "ivory white fur streaked with tiger stripes that covers your";
+	now Cock of Player is "ebon feline";
+	WaitLineBreak;
 	if Player is herm:		[herm]
 		say "     As the orgy continues, your form changes to best suit your new role with these fine girls and your boss. Your body becomes that of a strong, powerful tigress herm. You are muscled, yet voluptuous to keep all these girls in line. With your strength, you can easily pin down any recalcitrant girl and fuck her or ride her into lustful obedience as you see fit. Your white fur is like the snow and its stripes like the night. You are much larger now, almost as big as your boss, Marks.";
 		say "     The girls look to you for protection as their guard now while he is out making arrangements for when you will all leave this shabby motel behind and move to greener pastures out of the city.";
@@ -562,7 +467,11 @@ to say BTpostchange:						[New BT form]
 	else:								[female]
 		say "     As the orgy continues, your form changes to best suit your new role with these fine girls and your boss. Your body becomes that of a strong, powerful tigress femme. You are muscled, yet voluptuous to keep all these girls in line. With your strength, you can easily pin down any recalcitrant girl and ride her into lustful obedience. Your white fur is like the snow and its stripes like the night. You are much larger now, almost as big as your boss, Marks.";
 		say "     The girls look to you for protection as their guard now while he is out making arrangements for when you will all leave this shabby motel behind and move to greener pastures out of the city.";
-
+	increase score by 100;
+	follow the turnpass rule;
+	wait for any key;
+	end the story saying "You become the muscled guard for the tigresses.";
+	now battleground is "void";
 
 Section 6 - Nightstick
 
@@ -582,23 +491,25 @@ Description of Abandoned Storefront is "     If you're seeing this, something we
 instead of going to Abandoned Storefront:
 	say "     [bold type]Are you ready to go undercover as a whore for Sergeant Marks?[roman type][line break]";
 	if Player consents:
+		LineBreak;
 		say "     When you enter the abandoned storefront, the first thing you see is Sergeant Marks leaning back in a chair, his feet propped up on the counter in front of him. He looks up at you, and his bored expression quickly becomes a wild grin. 'If it isn't my favorite whore. Now that you're here, it's time for you to get to work.' He slowly gets to his feet, and takes a few steps closer to you. 'I've got your [if pquest is 1]first[else]next[end if] client in the back. We shouldn't keep [if pquest is 2]them[else]him[end if] waiting. And remember, play along, or it's all for nothing.' He grins, at odds with his words, and [if pquest is 4]looks at you expectantly[else]leads you through a door into another room[end if].";
 		WaitLineBreak;
 		if pquest is 4:
 			say "     Before you head in, you take a moment to think about what you're doing. You haven't heard anything from the tiger cop about his investigation, and at this point, you're starting to suspect there may not even be one. If he has been lying, then you've been whoring yourself to gang members for no good reason, and even worse, you've started to enjoy it more than you'd care to admit. You can't go through that door if you want to hold on to any of your former dignity. The only thing you can do is leave, otherwise you'll be resigning yourself to working as a whore for no other reason than the fact you enjoy it.";
-			say "     [bold type]Do you back out, or embrace being a whore?[roman type][line break]";
-			LineBreak;
+			say "[line break]     [bold type]Do you back out, or embrace being a whore?[roman type][line break]";
 			say "     ([link]Y[as]y[end link]) - Flee";
 			say "     ([link]N[as]n[end link]) - Get to work";
-			LineBreak;
 			if Player consents:
+				LineBreak;
 				say "     You turn around and leave the storefront, unwilling to face what lies in the back room, and what would drive you to go back there. Maybe you'll come to terms with this one way or another, but not right now. You ignore Marks calling out to you, and find yourself standing back out in the entrance to the Red Light District.";
 			else:
+				LineBreak;
 				say "     You decide that you enjoy being a whore for these gangsters far too much to stop, and head into the back room along with Marks once again, this time with no hesitation.";
 				say "[turning tricks]";
 		else:
 			say "[turning tricks]";
 	else:
+		LineBreak;
 		say "     You decide against it for the moment, and return to the main street of the Red Light District.";
 
 to say turning tricks:
@@ -608,7 +519,7 @@ to say turning tricks:
 		WaitLineBreak;
 		say "     You try your hardest to suppress your nerves, and to do your best impression of a prostitute. You know that it isn't true, but you have to make sure that this client believes it is. Mentally, you brace yourself, before attempting your best seductive voice, and asking him how he wants to do this. 'I don't have too much time, so we'll keep it simple. Get on your knees and suck my cock, whore.' He leans back a bit further, leaving his almost-hard member easily accessible. You get on your knees in front of him, and prepare to swallow both your pride and his dick. Slowly, you get to work, taking a hold of his shaft in one hand, slowly stroking it to full hardness. Soon enough the canine cock is standing at the ready, mere inches before you. Rather than hesitate any longer, you lean forward and let the tip enter your mouth.";
 		say "     Without prompting, you start to sink deeper onto the canine hardness, slowly starting to bob up and down. Your efforts get results quickly, as the gangster starts very quickly panting and moaning. Emboldened by his pleasure, you start increasing your speed, attempting to add more variety to your technique. His reactions show that your attempts to bring him to a climax are rapidly approaching completion. Finally he gives in, and just as his cock starts throbbing in your mouth, he pulls you off, causing the jets of seed to cover your face instead of fill your mouth. Before you can completely process the change, the criminal lets out a sigh of relief, before standing up, and grinning at you. 'That wasn't half bad, for a fresh whore.' He starts to walk towards the door, his shaft softening, but he pauses right before he leaves. 'By the way, that's a good look for you. You should keep it - consider it a tip.' After everything that happened, it takes you a while to collect yourself, as well as what remains of your dignity.";
-		increase pquest by 1;
+		now pquest is 2;
 		CreatureSexAftermath "Player" receives "OralCock" from "German Shepherd Male";
 	else if pquest is 2:
 		say "     This time when you are led into the back room, instead of the German shepherd gang member, there are two new faces. Despite how degrading you know this is going to be, you're feeling distinctly less nervous about acting the part of a whore in the back room. You know it's for a good cause, and even more than that, you have a bit of practice under your belt. Shaking yourself from your thoughts, you look more closely at the new clients you'll be servicing. The first thing you notice is that both of them are wearing ornate jackets, much like that of your previous client, likely some sort of uniform. The first of the two is a bear-man, larger than average, with thick brown fur covering his entire frame. Apart from the jacket, he wears a simple pair of torn shorts, a poorly concealed bulge in the front. The second is much smaller, and seems to be a mall rat, though he looks somehow shiftier than any of the others you've seen. The jacket is his only clothing, leaving his partially hard member visible.";
@@ -617,7 +528,7 @@ to say turning tricks:
 		say "     Wasting no time, you lower your head down to his shaft and begin bobbing up and down, putting your ever-growing oral skills to use. You stay that way for a while, simply working on the ursine member, occasionally using a free hand to massage his large balls as well. However, before you make too much progress on pleasing Bruce, he speaks up. 'Hey, Mikey, no need for you to wait around like that, join in! I don't think this slut minds, do you?' You pull back off his dick, and shake your head. 'See? Now get back there, buddy. And you, maybe focus on my balls a little more, eh?' You do your duty and comply, moving down the shaft, and burying your face in his sack. You lick and suck at them as the mall rat, Mikey, moves around behind you. You feel the tip of his shaft lay across your ass, for a moment, before it slides closer to your entrance. Knowing what's coming, you brace yourself.";
 		say "     Even when you were expecting it, the sensation of his cock splitting you open is jarring, causing you to gasp. Unperturbed, the bear in front of you pulls your face back up against his balls, and at the same time the rat behind you starts to pump in and out slowly. They continue to work you over, rocking you back and forth between the two gangsters. They take their pleasure from you at both ends, leaving you little control. Behind you, Mikey continues to thrust, picking up his pace gradually as time goes on, the sound of his hips slapping against your ass getting louder and more frequent. In the front, you're made to serve the bear cock lavishly, alternating your focus between the balls and the shaft.";
 		say "     Finally, it seems the two have started to have enough, as they both start to moan and grunt more loudly than before. The mall rat starts to thrust wildly, losing his pace, and the bear starts jerking his hips unevenly, leaving you gagging slightly on his shaft. Then, at last, it happens. The dick buried in your rear starts throbbing, and you feel a warmth start filling you. Moments after that climax, the larger of the cocks releases, starting to unleash much more forceful jets of cum down your throat. You swallow as best as you can, but just as you're starting to be overwhelmed by the amount, he pulls back, letting the last few spurts land across your face and hair instead. His friend matches him, pulling out of you right after, followed by a feeling of several more strings of gooey substance landing across your back. The two both pull fully away from you, leaving you panting on the ground, and then head for the door, sharing a high five as they leave. As you're left to clean yourself up, you feel a lot less like an undercover agent then you did a few minutes ago, and a lot more like a whore.";
-		increase pquest by 1;
+		now pquest is 3;
 		CreatureSexAftermath "Player" receives "OralCock" from "Grizzly Bear";
 		CreatureSexAftermath "Player" receives "AssFuck" from "Mall Rat";
 	else if pquest is 3:
@@ -629,7 +540,7 @@ to say turning tricks:
 		WaitLineBreak;
 		say "     The equine rests the tip of his large cock against your rear, and then starts sliding it in far sooner than you expected. The sensation is completely different from the last time, with his shaft stretching you out far more than the mall rat did, leaving you feeling completely full as it slowly penetrates you. Once he hilts fully into you, you close your eyes, and just take in the sensations that being stuffed with this much dick cause. However, you aren't given much time to appreciate it before the gangster starts to pump in and out, causing the pleasure to skyrocket, and as he thrusts faster and harder, you just keep climbing higher and higher. Finally, he slams into you one last time, his hips slamming against your ass, and you can feel his member start to throb and twitch, unloading surge after surge of cum into you. This causes you to finally peak yourself, leaving you to bask in the pleasure as he pulls out of you.";
 		say "     You can see him put his clothes back on and leave the room, while you remain on the floor, dripping cum, and feeling far less sure of yourself. After all, these have been some of the most intense moments you've ever felt, and all of them happened when you were being treated as nothing more than a whore. When you finally clean yourself up and go to leave, you comfort yourself with the fact that this is all for a reason. You're not doing this because you like being a whore, just because it's for a good cause. Right?";
-		increase pquest by 1;
+		now pquest is 4;
 		CreatureSexAftermath "Player" receives "AssFuck" from "Horseman";
 	else if pquest is 4:
 		say "     When you enter the back room alongside Marks, you're surprised by the newest client. Unlike the rather more common infections of the previous gang members, this one seems to be some sort of draconic creature, and is larger than even the bear. When he sees that you and Marks have walked in, he grins widely and genuinely, though it looks slightly out of place on his scaly visage. 'So I finally get the chance to try out the new whore all my boys have been talking about, hmm? You really know how to treat a guy, Marks!' The tiger cop smiles back, though with an expression closer to his usual smirk than the dragon's open smile. 'Well, nothing less than the best for my good buddy. I'll leave you to it, then. Have fun!' He gives a quick wave of his hand, and starts to turn away before he's interrupted by the client. 'Hey, why don't you stick around? There's no better way to bond than to fuck a whore into the ground together, after all. What do you say we seal the deal?'";
@@ -637,26 +548,17 @@ to say turning tricks:
 		WaitLineBreak;
 		say "     The spitroast you're in the middle of continues to grow more intense, with both of your current partners changing up their methods. Sometimes they go faster, sometimes harder, always just different enough that you can never get used to it before they change again. They're treating you like a whore to be used as they please, and nothing could make you happier. Eventually they start to lose the careful pacing they had kept the entire time, beginning to hammer in and out of you at a feverish pace, Marks grabbing your hips for extra force as he does so. You just bask in the feeling of being stuffed with cock repeatedly as they use you, doing what you can to make it feel even better for them.";
 		say "     At last, the two shafts start throbbing, and you know your time is almost up, something that's almost saddening. The tiger cock in your ass is the first to erupt, spraying your rear passage with several jets of his release, leaving you feeling somewhat more satisfied. Shortly after, the draconic cock in your mouth also starts to climax, the larger member also unleashing a significantly larger load, flooding your mouth and throat with his seed. You swallow as much as you can, but some of the cum trickles out the edges of your mouth regardless, until finally the tide abates. Marks and the client both high five above you before pulling out completely, leaving you to lie on the floor, full of cum from both ends. The two walk out the door, arms over each other's shoulders, chatting amicably, ignoring you. As you rest there, recovering from the ordeal, you realize this is exactly where you want to be.";
-		increase pquest by 1;
+		now pquest is 5;
 		NPCSexAftermath Player receives "AssFuck" from Sgt Marks;
 		CreatureSexAftermath "Player" receives "OralCock" from "Dragon";
-	else if pquest is 5: [Eventually Random chance to see one of several plain prostitution scenes]
+	else: [Eventually Random chance to see one of several plain prostitution scenes]
 		say "     You put yourself to work servicing clients for Marks once more.";
 		if anallevel > 1 and a random chance of 1 in 2 succeeds:
 			CreatureSexAftermath "Player" receives "AssFuck" from "[if a random chance of 1 in 3 succeeds]Horseman[else]Mall Rat[end if]";
 		else:
 			CreatureSexAftermath "Player" receives "OralCock" from "[if a random chance of 1 in 3 succeeds]Grizzly Bear[else]German Shepherd Male[end if]";
 
-
-
 Section 8 - Monster Desc for Tiger Cop
-
-to say tigercopdesc:
-	if mqstatus is 98:
-		say "     The feline policeman growls as he looms over you, ready to take another swing. The large tigerman appears to be done with talking and is quite intent on fighting. You dodge back a step and ready your weapon to try and deal with the animalistic cop. Unlike your other foes, he's not fallen into being an instinctual creature of lust, so you're unsure what to expect.";
-	else:
-		say "     As you travel through the city, you come across the corrupted cop once again. His open police jacket cannot contain his broad chest and his seven foot height leaves his pants covering only two-thirds of his legs. He growls at the back of his throat as he moves up quickly and raises his nightstick. The corrupted cop, enhanced with the strength and agility of a predator, but still sane, is a force to be reckoned with. [one of]'I was wonderin['] when I'd find you again, punk. Time for a little police brutality.'[or]'I will teach you to respect my authority here, punk.'[or]'I was just thinkin['] I could use a little [']stress relief[']. Come're, little toy.'[or]'I am the law here, punk.'[at random]";
-
 
 to say losetotigercop:
 	project Figure of SgtMarks_hard_icon;
@@ -673,17 +575,14 @@ to say losetotigercop:
 		say "     'Somebody needs to figure out what they're up to and stop [']em, and that's me. There's no way they'd just let a cop in, so I need to go in undercover, and that means convincin['] them that I'm just their kinda lowlife. They're the kind who deal in everything, drugs, sex, the works, so I'm gonna act like I'm in the same kinds of business. And unlike most of the punks around here, these guys prefer all of their fun to be with willing partners - usually whores, which is where you come in. If you play the part of my whore, we could work our way into their plans, and shut [']em down. You'd be doing a good thing for once, punk. Are you in?'";
 		say "     [bold type]Will you volunteer to go undercover as a whore?[roman type][line break]";
 		if Player consents:
+			LineBreak;
 			say "     Despite some reservations, you decide to help the tiger cop with his mission. When you tell him, he grins broadly. 'Great. I thought it would be right up your alley, and I guess I was right.' His grin seems to grow more predatory, and he wastes no time before continuing. 'Well, now I've got to go and start gettin['] things ready, so we'll have to start your new job later. When you're ready, come meet me down in the [bold type]Red Light District[roman type], and I'll have a place set up.' The cop starts walking away, but looks over his shoulder at you before he leaves. 'By the way, I'm Sergeant Marks. Make sure you come prepared to be the best whore you can be.'";
 			now pquest is 1;
 			change the Northwest exit of (Entrance to the Red Light District) to Abandoned Storefront;
 			[now Abandoned Storefront is west of Entrance to the Red Light District;]
-			repeat with y running from 1 to number of filled rows in Table of Random Critters:
-				choose row y in Table of Random Critters;
-				if Name entry is "Malayan Tiger Male":
-					now MonsterID is y;
-					break;
-			now area entry is "Nowhere"; [deactivates Tiger Cop as a wandering monster]
+			now the area corresponding to a Name of "Malayan Tiger Male" in Table of Random Critters is "Nowhere"; [deactivates Tiger Cop as a wandering monster]
 		else:
+			LineBreak;
 			say "     'Bah, I knew you were a no good punk.' The tiger cop shakes his head, seeming almost disappointed. 'Just leave, away from my turf. I won't be so nice the next time, so you better watch your back.' Not one to question your luck, you leave while you have the chance, wary of encountering the cop again.";
 			now pquest is 99;
 	else:
@@ -691,71 +590,66 @@ to say losetotigercop:
 			say "     'It looks like you need another lesson in why you shouldn't mess with me,' he says as he grabs you roughly and shoves you face down onto a mound of rubble. 'Punks like you are nothin['] but trouble. Should've gotten a good, hard spankin['] from your dad to beat some respect into you.' With you pinned down, the tiger holds you down with one paw and bares your ass with the other.";
 			if Player is female:
 				say "     He runs his nightstick across your bare bottom and gives a solid slap with it across your rear, making you cry out in surprise and pain. After another stinging slap, he runs his nightstick across your cheek before moving it back. As he grips you tightly, you can feel the cool touch of his nightstick against your pussy, making you shiver. He works it across your folds, sliding it back and forth, getting you wet despite yourself. Shifting its position, he thrusts it into your cunt, making you groan at the sudden, hard intrusion. The tiger cop pounds you hard and fast with it, making your [bodydesc of Player] body shudder until you finally cum. Laughing at this, the tiger sprays his seed across your ass before removing the weapon from your aching pussy.";
-				NPCSexAftermath Player receives "PussyDildoFuck" from Sgt Marks;
 				say "     Wiping the slick rod across your ass, he gives you another hard swat, making you cry out. 'Get your dumb ass out of here. I might not go so easy on you next time,' he growls.";
+				NPCSexAftermath Player receives "PussyDildoFuck" from Sgt Marks;
 			else:
 				say "     He runs his nightstick across your bare bottom and gives a solid slap with it across your rear, making you cry out in surprise and pain. After another stinging slap, he runs his nightstick across your cheek before moving it back. As he grips you tightly, you can feel the cool touch of his nightstick against your asshole, making you shiver. He rubs it against your pucker and you try your best to relax before he drives it into you with only a little spit as lube. You groan at the sudden, hard intrusion as it thrusts into you and starts sliding back and forth[if Player is male and Player is submissive], getting you hard despite yourself[end if]. The tiger cop pounds you hard and fast with it, making your [bodydesc of Player] body shudder[if Player is male and Player is submissive] until you finally cum[end if]. Laughing at this, the tiger sprays his seed across your ass before removing the weapon from your aching asshole.";
-				NPCSexAftermath Player receives "AssDildoFuck" from Sgt Marks;
 				say "     Wiping the warm rod across your ass, he gives you another hard swat, making you cry out. 'Get your dumb ass out of here. I might not go so easy on you next time,' he growls.";
+				NPCSexAftermath Player receives "AssDildoFuck" from Sgt Marks;
+			WaitLineBreak;
 		if Player is female:
-			[puts Tigress Hooker as lead monster in case of impregnation]
-			repeat with y running from 1 to number of filled rows in Table of Random Critters:
-				choose row y in Table of Random Critters;
-				if Name entry is "Malayan Tiger Herm":
-					now MonsterID is y;
-					break;
+			setmonster "Malayan Tiger Herm";
 			say "     Unable to stand up to the large tiger any longer, he grabs you and shoves you down onto a nearby car. Pressing your face to the dirty hood, he growls in your ear. 'I warned you what would happen if I caught you,' he rumbles. With a strong paw firmly at your neck, the other bares your bottom and moves you into position.";
 			say "     You hear him unzip, then there's the feel of a large, hard cock against your bottom. He grinds against you a few times, getting fully hard before sinking it firmly into you. Your [bodydesc of Player] body shudders from the sudden intrusion, but he pays your discomfort no mind, only pounding you hard and fast.";
-			say "     You start to moan and grind against him as the powerful male fucks you, losing yourself in the sex. 'That's a good slut,' he rumbles. 'Take it, you whore.' Your pussy squeezes and clenches around his thick, foot-long member until he finally unleashes his hot seed deep within you, painting your pussy with his sperm.[impregchance]";
+			say "     You start to moan and grind against him as the powerful male fucks you, losing yourself in the sex. 'That's a good slut,' he rumbles. 'Take it, you whore.' Your pussy squeezes and clenches around his thick, footlong member until he finally unleashes his hot seed deep within you, painting your pussy with his sperm.[impregchance]";
 			NPCSexAftermath Player receives "PussyDildoFuck" from Sgt Marks;
+			WaitLineBreak;
 			say "     Finished with you, he pulls his cock from you roughly and shoves you on your way.";
 		else:
-			let mchance be 4;
-			if Player is submissive, increase mchance by 2;
-			if anallevel is 3, increase mchance by 2;
-			if Player is mpreg_ok, increase mchance by 2;
-			if anallevel is 1, now mchance is 0;
+			let mchance be 0;
+			if anallevel > 1:
+				now mchance is 4;
+				if Player is submissive, increase mchance by 2;
+				if anallevel is 3, increase mchance by 2;
+				if "MPreg" is listed in feats of Player, increase mchance by 2;
 			if a random chance of mchance in 12 succeeds:
 				say "     The victorious tiger grabs you roughly and tosses you to the ground at his feet. He puts a heavy paw at your shoulder, pushing you to the ground. 'I warned you what would happen if I caught you,' he rumbles. Above you, you can hear the sound of him unzipping his pants.";
-				say "     Reaching down, he grabs you with his paws and pushes you onto all fours. One paw then holds you firmly by the neck while the other bares your bottom to him";
 				if TailName of Player is "Malayan Tiger Herm" or TailName of Player is "Tiger" or TailName of Player is "Tigertaur":
-					say ". He grabs you by your striped tail and raises your rear up. 'Here you've got this sexy tail and no juicy pussy to go with it. It just ain't right,' he grumbles, giving your ass a hard swat before getting his cock lined up with your rear.";
+					say "     Reaching down, he grabs you with his paws and pushes you onto all fours. One paw then holds you firmly by the neck while the other bares your bottom to him. He grabs you by your striped tail and raises your rear up. 'Here you've got this sexy tail and no juicy pussy to go with it. It just ain't right,' he grumbles, giving your ass a hard swat before getting his cock lined up with your rear.";
 				else:
-					say ". He gives your rear a firm swat and lines up his cock with your rear.";
+					say "     Reaching down, he grabs you with his paws and pushes you onto all fours. One paw then holds you firmly by the neck while the other bares your bottom to him. He gives your rear a firm swat and lines up his cock with your rear.";
 				say "     Gripping your cheeks with both paws, claws out and poking into your tender flesh, he drives his feline cock into your [bodydesc of Player] body, making you yowl for him. The tiger cop pays your discomfort no mind, only pounding away at you hard and fast. His throbbing member pulses and leaks precum into your abused passage.";
-				say "     As he fucks your ass, you start to moan and grind against him as the powerful male fucks you, losing yourself in the sex. 'That's a good slut,' he rumbles. 'Take it, you man whore.' Your anus squeezes and clenches around his thick, foot-long member until he finally unleashes his hot seed deep within you, painting your inner walls with his sperm.";
-				NPCSexAftermath Player receives "AssFuck" from Sgt Marks;
+				WaitLineBreak;
+				say "     As he fucks your ass, you start to moan and grind against him as the powerful male fucks you, losing yourself in the sex. 'That's a good slut,' he rumbles. 'Take it, you man whore.' Your anus squeezes and clenches around his thick, footlong member until he finally unleashes his hot seed deep within you, painting your inner walls with his sperm.";
 				say "     Finished with you, he pulls his cock from you roughly, wipes it across your rear and shoves you on your way.";
+				NPCSexAftermath Player receives "AssFuck" from Sgt Marks;
 			else:
 				say "     Unable to stand up to the large tiger any longer, he grabs you and shoves you down to your knees. He wraps his strong paw around your jaw, holding you there while he growls down at you. 'I warned you what would happen if I caught you,' he rumbles.";
 				say "     As you watch, his other paw opens his uniform pants and pulls out his large, hard cock. His shaft is a full foot long and human-like in form, though a deeper red in color. Holding your head firmly, he strokes his cock against your face until it's fully hard and leaking pre onto you.";
 				say "     Soon you are licking at that throbbing shaft, then taking it into your eager mouth. You lick and suck on it, moaning around the tiger's large cock. With a firm hold on you, he fucks your face hard and fast, pushing his throbbing cock down your throat again and again.";
-				say "     You start to moan and fondle his ballsack as the powerful male fucks you, losing yourself in the sex. 'That's a good slut,' he rumbles. 'Take it, you whore.' Your lips slide over his thick, foot-long member until he finally unleashes his hot seed into your mouth and floods your throat with his sperm.";
-				NPCSexAftermath Player receives "OralCock" from Sgt Marks;
+				WaitLineBreak;
+				say "     You start to moan and fondle his ballsack as the powerful male fucks you, losing yourself in the sex. 'That's a good slut,' he rumbles. 'Take it, you whore.' Your lips slide over his thick, footlong member until he finally unleashes his hot seed into your mouth and floods your throat with his sperm.";
 				say "     Finished with you, he pulls his cock from you roughly and shoves you on your way.";
+				NPCSexAftermath Player receives "OralCock" from Sgt Marks;
 	infect "Malayan Tiger Herm";
 	if tcopfight < 4:
 		increase tcopfight by 1;
 
-
-To say beattigercop:
+to say beattigercop:
 	if tcopfight is 4 and pquest is 0:
 		project Figure of SgtMarks_clothed_icon;
 		say "     With the tiger cop reeling from the fight, you're caught by surprise when he holds his hands out in a gesture of surrender. 'Hey, maybe we got off on the wrong foot here. Maby we could still work together, yeah? What do you say about helping out an officer of the law? I have somethin['] that would work a lot better with someone like you.' With you in control of the situation, you see no reason not to at least hear him out. 'You see, there's this gang of criminals we've been after for a long time, and it turns out they're still operatin['] out in the city, even after all of this. To make it worse, they're some of the ones who haven't completely lost their minds, so they're as dangerous as ever.'";
 		say "     'Somebody needs to figure out what they're up to and stop [']em, and that's me. There's no way they'd just let a cop in, so I need to go in undercover, and that means convincin['] them that I'm just their kinda lowlife. They're the kind who deal in everything, drugs, sex, the works, so I'm gonna act like I'm in the same kinds of business. And unlike most of the punks around here, these guys prefer all of their fun to be with willing partners - usually whores, which is where you come in. If you play the part of my whore, we could work our way into their plans, and shut [']em down. You'd be doing a good thing for once, punk. Are you in?'";
 		say "     [bold type]Will you volunteer to go undercover as a whore?[roman type][line break]";
 		if Player consents:
+			LineBreak;
 			say "     Despite some reservations, you decide to help the tiger cop with his mission. When you tell him, he grins broadly. 'Great. I thought it would be right up your alley, and I guess I was right.' His grin seems to grow more predatory, and he wastes no time before continuing. 'Well, now I've got to go and start gettin['] things ready, so we'll have to start your new job later. When you're ready, come meet me down in the [bold type]Red Light District[roman type], and I'll have a place set up.' The cop starts walking away, but looks over his shoulder at you before he leaves. 'By the way, I'm Sergeant Marks. Make sure you come prepared to be the best whore you can be.'";
 			now pquest is 1;
 			change the Northwest exit of (Entrance to the Red Light District) to Abandoned Storefront;
 			[now Abandoned Storefront is west of Entrance to the Red Light District;]
-			repeat with y running from 1 to number of filled rows in Table of Random Critters:
-				choose row y in Table of Random Critters;
-				if Name entry is "Malayan Tiger Male":
-					now MonsterID is y;
-					break;
-			now area entry is "Nowhere"; [deactivates Tiger Cop as a wandering monster]
+			now the area corresponding to a Name of "Malayan Tiger Male" in Table of Random Critters is "Nowhere"; [deactivates Tiger Cop as a wandering monster]
 		else:
+			LineBreak;
 			say "     The cop looks surprised that you turned down his offer, and perhaps even disappointed, but he quickly regains his composure. 'I guess you were just a useless, good for nothing punk, no matter how good you are in a scrap. That's the last time I try being nice.' Before you have a chance to be fully alert again, the cop spins on his heel and sprints away, managing to get out of sight. You doubt he'll be any friendlier the next time you run into him.";
 			now pquest is 99;
 	else:
@@ -806,13 +700,13 @@ When Play begins:
 	add "Malayan Tiger Male" to infections of BipedalList;
 	add "Malayan Tiger Male" to infections of TailList;
 	now Name entry is "Malayan Tiger Male";
-	now enemy title entry is "Malayan Tiger Male"; [ Name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name. ]
+	now enemy title entry is "Malayan Tiger"; [ Name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name. ]
 	now enemy Name entry is "Sgt Marks"; [ Specific name of unique enemy. ]
 	now enemy type entry is 2; [ 0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters. ]
 	now attack entry is "[one of]The feline cop jabs the nightstick into your gut, causing you to double over. This sets you up for a big knee to the face![or]He cracks the nightstick hard against your upper arm, forcing you to stagger back![or]As the tiger readies another swing of his nightstick, you start to dodge, only to step into a punch from his left paw instead![or]He sends a heavy kick to your chest, sending you to the ground![or]The large tiger grabs at your arm, sinking his sharp claws into it before you manage to pull free![at random]";
 	now defeated entry is "[beattigercop]";
 	now victory entry is "[losetotigercop]"; [Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block as the demonstration text shows.]
-	now desc entry is "[tigercopdesc]"; [ Description of the creature when you encounter it.]
+	now desc entry is "     [if mqstatus is 98]The feline policeman growls as he looms over you, ready to take another swing. The large tigerman appears to be done with talking and is quite intent on fighting. You dodge back a step and ready your weapon to try and deal with the animalistic cop. Unlike your other foes, he's not fallen into being an instinctual creature of lust, so you're unsure what to expect[else]As you travel through the city, you come across the corrupted cop once again. His open police jacket cannot contain his broad chest and his seven foot height leaves his pants covering only two-thirds of his legs. He growls at the back of his throat as he moves up quickly and raises his nightstick. The corrupted cop, enhanced with the strength and agility of a predator, but still sane, is a force to be reckoned with. [one of]'I was wonderin['] when I'd find you again, punk. Time for a little police brutality.'[or]'I will teach you to respect my authority here, punk.'[or]'I was just thinkin['] I could use a little [']stress relief[']. Come're, little toy.'[or]'I am the law here, punk.'[at random][end if][line break]"; [ Description of the creature when you encounter it.]
 	now face entry is "that of a beautiful tiger-like appearance, its short muzzle and feline eyes giving your features an exotic predatory cast, and your slightly rounded tiger ears complete the look, making it seem like almost the perfect blend of tiger features and human features"; [ Face description, format as "Your face is [Face of Player]." ]
 	now body entry is "lean and lined with corded muscle, giving you a somewhat exotic look, as you balance easily on your digitigrade tiger paws, your human-like hands with their tiger-like claws tipping your fingers complete the look"; [ Body Description, format as "Your Body is [Body of Player]." ]
 	now skin entry is "[one of]tiger striped[or]tiger furred[or]soft furred[or]orange and black striped[at random]"; [ Skin Description, format as "Looking at yourself, your body is covered in [Skin of Player] skin." ]
@@ -963,8 +857,6 @@ When Play begins:
 	[Clit Size Adjective is generated by a function and can be used in scenes: very small/small/average/large/very large]
 ]
 
-
-
 Section 10 - Endings
 
 Table of GameEndings (continued)
@@ -986,49 +878,62 @@ This is the Tiger Cop Endings rule: [TODO: Reorganize this mess later on (@Stadl
 		now CockName of Player is "Malayan Tiger Herm";
 	if mqstatus is 0 or mqstatus is 1:				[no motel quest / incomplete]
 		if Player has a non-shifting body of "Malayan Tiger Herm":
-			if humanity of Player < 10:
-				say "[THendingC]";
+			if humanity of Player < 10:		[standard succumb]
+				say "     Surrendering to your new desires, you wander the streets of the fallen city, turning tricks for whatever reward you can get, or just for the fun of it. You don't really have a fixed location, just wandering the city and soliciting several of those you encounter. Your path takes you back through one the seedier neighborhoods one day and you encounter another tigress. She takes you into her alley and you share a long, sensual romp with her before she takes you back to her home at a cheap motel. You find it occupied by many other tigress streetwalkers and you're soon properly inducted into the group.";
 			else:
 				say "[THendingA]";
-	if mqstatus is 99:						[refused the motel key hunt]
+	else if mqstatus is 99:						[refused the motel key hunt]
 		if humanity of Player > 9:				[all survivors get a standard add-on]
-			say "[THending_refusal][line break]";
+			say "     After your rescue, you remain apprehensive for some time. You find yourself edgy with any police or the rare tiger you see, expecting the tiger cop to show up. You try to keep a low profile for a while, though you eventually relax. You have to conclude he was either taken down when he went it alone, or has more to deal with than one defiant looter he met in that fallen city.";
 		if Player has a non-shifting body of "Malayan Tiger Herm":
-			if humanity of Player < 10:
-				say "[THendingD]";
+			if humanity of Player < 10:		[succumb after quest refusal]
+				say "     Surrendering to your new desires, you wander the streets of the fallen city, turning tricks for whatever reward you can get, or just for the fun of it. You don't really have a fixed location, just wandering the city and soliciting several of those you encounter. Eventually, you come across a big, male tiger in a uniform. There is something about him that draws you to him and also urges you to run. Something... familiar, but it's so hard to remember.";
+				say "     He comes up and grabs a hold of you, pulling you up against his strong chest. He is rough with you at first, putting you in your place, but soon you're rewarded with his sexy cock in your muzzle. He smiles down at you. 'I like you much better like this. A good, obedient slut.' You purr happily.";
+				say "     When the military rolls in, he uses his influence as a police officer to get you out with him. He moves to a new city, letting you peddle yourself on his beat, taking most of the proceeds of your instinctual lusts. He makes contact with a shady transformee strip-club and you join their whores while he comes on as a silent partner, acting as their corrupt police contact while getting his own cut. You are happy to be so useful to your master and love your new duties.";
 			else:
 				say "[THendingA]";
-	if mqstatus is 2:							[gave keys, did not accompany]
+	else if mqstatus is 2:							[gave keys, did not accompany]
 		if humanity of Player > 9:				[all survivors get a standard add-on]
-			say "[THending_helper][line break]";
+			say "     Mindful of Sgt Marks['] advise, you have kept your eyes open while searching through the city. You sew a false bottom to your backpack, stowing several thousand dollars in there. You also take a few choice pieces of jewelry, but just what you can wear on your person and could be claimed as being your own. You go for value over volume with them. You add an advanced laptop, finding means to power it long enough to personalize it against a cursory check.";
+			say "     Unable to pass off a pack full of cell phones or other items, you are selective in what you claim as being yours before the military comes through. Even so, you do have to slip a ring here, a few hundred there[if Player is female], or shake your caboose[end if] to make sure it goes smoothly. In the end, it certainly doesn't make you rich, but it definitely helps you get your new life on the go.";
+			say "     A few weeks after you've cleared from quarantine, you are contacted by Sgt Marks. He lets you know he's got the girls [']well under control['] and invites you to come by in way of thanks for all your help. He has set them up in a private brothel in a new city, protected by some corrupt contacts. You don't ask for details, instead enjoying the company of his girls from time to time, quite discreetly.";
 		if Player has a non-shifting body of "Malayan Tiger Herm":
-			if humanity of Player < 10:
-				say "[THendingE]";
+			if humanity of Player < 10:		[succumb after helped w/keys]
+				say "     Surrendering to your new desires, you wander the streets of the fallen city, turning tricks for whatever reward you can get, or just for the fun of it. You don't really have a fixed location, just wandering the city and soliciting several of those you encounter. Your path takes you back through one of the seedier neighborhoods and you come across several empty alleys, still strong with the scents of felines and sex. You remain in them for a time, but are drawn to continue from one to the next. Eventually, you find yourself outside an old motel. You aren't sure why, but you feel like you should be here. The lingering scent of other felines, tigresses, reinforces this.";
+				say "     You wander from room to room, as if looking for someone who appears to no longer be there. You drop onto the bed in the deluxe suite at the top, mewling mournfully. Something... someone is missing from your life.";
+				say "     You end up spending your days sleeping at the motel despite how sad it feels, kept there by your instincts and the lingering scents. Your evenings are spent in the fallen city's streets, turning tricks and giving in to your lusts.";
+				say "     One early morning, as you make your way back, you spot a girl duck between two houses. A human girl. Something snaps inside you and you prowl the area, following her in feline silence. When she unlocks the door to the small basement apartment, you are there, pouncing her and bursting in.";
+				say "     You find four largely unchanged women inside. They have small ears or muzzles showing, but little else. Confronted directly by a [if Player is male]virile[else]lustful[end if] feline after trying to contain their growing urges for so long, they soon succumb to you. You make fine tigress herms out of all of them and take them back to your motel, finding it a less lonely place now.";
+				say "     With their help, a few of those soldiers are lured in and soon you have a bustling motel of playful kitties to serve you. As you add to your harem, you grow larger, feeling contented in your new role as their matron. You have filled that empty feeling within yourself by taking the place of the one you longed for.";
 			else if TailName of Player is "Malayan Tiger Herm" and FaceName of Player is "Malayan Tiger Herm" and SkinName of Player is "Malayan Tiger Herm":			[visibly fully tigress]
 				say "[THendingB]";
 			else:
 				say "[THendingA]";
-	if mqstatus is 4:							[fled from motel hunt]
+	else if mqstatus is 4:							[fled from motel hunt]
 		if Player has a non-shifting body of "Malayan Tiger Herm":
-			if humanity of Player < 10:
-				say "[THendingF]";
+			if humanity of Player < 10:		[succumb after fleeing]
+				say "     Surrendering to your new desires, you are drawn back to familiar streets and come to a motel. You aren't sure why it's familiar, but it feels like you should be here. The scent of other felines, tigresses at that, only reinforces this feeling. Spotted by the herm tigress on watch, she takes your paw and leads you upstairs to where the matron - your matron - is. She has another tigress with her, who she's just finished filling.";
+				say "     There is something familiar about her as well. 'That's [ObjectPro of Player], Matron Jackie,' she exclaims ecstatically. 'The one I told you about. Oh, [SubjectPro of Player][']s here. I'm so happy.' She takes you in her arms, purring happily as she nuzzles you. Her hard cock presses against your body. She tells you how happy she is to see you and how nice it is you've come to join her. She loves it here so much, and so will you.";
+				say "     Watching you both snuggle, the matron grows hard again and mounts you, welcoming you among her girls. You and the lovely Miss Marks remain a couple of playmates, eager to please one another and your matron. Once a pair who tried to seize her girls, you have both been reduced to her special slaves, to be fucked whenever she wants[if Player is impreg_ok]. In time, you both grow heavy with your matron's cubs, breeding more sexy tigresses[end if].";
 			else if TailName of Player is "Malayan Tiger Herm" and FaceName of Player is "Malayan Tiger Herm" and SkinName of Player is "Malayan Tiger Herm":			[visibly fully tigress]
 				say "[THendingB]";
 			else:
 				say "[THendingA]";
-	if mqstatus is 5:							[failed at motel hunt]
-		say "[THBadEnd1]";
-	if mqstatus is 50:						[succeeded at motel hunt]
-		say "[THGoodEnd]";
-
-
-to say THending_refusal:
-	say "     After your rescue, you remain apprehensive for some time. You find yourself edgy with any police or the rare tiger you see, expecting the tiger cop to show up. You try to keep a low profile for a while, though you eventually relax. You have to conclude he was either taken down when he went it alone, or has more to deal with than one defiant looter he met in that fallen city.[line break]";
-
-to say THending_helper:
-	say "     Mindful of Sgt Marks['] advise, you have kept your eyes open while searching through the city. You sew a false bottom to your backpack, stowing several thousand dollars in there. You also take a few choice pieces of jewelry, but just what you can wear on your person and could be claimed as being your own. You go for value over volume with them. You add an advanced laptop, finding means to power it long enough to personalize it against a cursory check.";
-	say "     Unable to pass off a pack full of cell phones or other items, you are selective in what you claim as being yours before the military comes through. Even so, you do have to slip a ring here, a few hundred there[if Player is female], or shake your caboose[end if] to make sure it goes smoothly. In the end, it certainly doesn't make you rich, but it definitely helps you get your new life on the go.";
-	say "     A few weeks after you've cleared from quarantine, you are contacted by Sgt Marks. He lets you know he's got the girls [']well under control['] and invites you to come by in way of thanks for all your help. He has set them up in a private brothel in a new city, protected by some corrupt contacts. You don't ask for details, instead enjoying the company of his girls from time to time, quite discreetly.";
+	else if mqstatus is 5:							[failed at motel hunt]
+		say "     When the military starts to move in, your master is ready. You have trouble following everything that is going on, but you are all kept together. You all follow his orders as best you can. He was quite stern about it, so you all obey, restraining your urges when others are examining you. Once you've all been rendered non-infectious, you are all moved again with the help of several of your master's friends.";
+		say "     You are all moved to a lovely new home in another city, where you live and work as whores in his private club. His harem of tigresses tend to his needs and peddle themselves for his benefit. Always grateful for your assistance, you become a favorite of his and it is a happy life for a slut like yourself. His corrupt contacts keep the law off your backs (except when it's as a bribe to keep a corrupt official happy).";
+		say "     As the only [if Player is herm]white tigress sextoy in the brothel, you are a special item and you get a set of regulars who come in looking for time with you. You bring in a lot for your strong, virile master and you are always happy when he rewards your service by fucking your addled brains out. Being his special plaything, he doesn't allow the other tigresses to fuck you, though they are happy to play with you in other ways[else if Player is female]purely female sextoy in the brothel, as well as the only white tigress, you have a special set of regulars who enjoy partaking in your beautiful body. You bring in a lot for your strong, virile master and you are always happy when he rewards your service by fucking your addled brains out. Being his special plaything, he doesn't allow the other tigresses to fuck you, though they are happy to play with you in other ways[else]male sextoy in the brothel, as well as the only white tiger, you have a special set of regulars who enjoy pounding that sweet ass of yours. The feel of their hot cream in you always feels wonderful and there are always a few who come in looking to be filled by the sexy tiger. Which is good for you as your master doesn't allow you to fuck the other whores, though they will happily suck you off or fuck you. And you know your master has a special place for you any time he pounds you and fills your stripey ass[end if].";
+		if Player is impreg_ok:	[Non-sterile female/herm addition]
+			say "     When your heat comes, he takes you out of trade for a few days, exclusively breeding you over and over again until he's sure his seed has taken and you'll bear his cubs. As you rub your growing belly, you smile contentedly, so happy you decided to help him back in the infected city.";
+		if hellHoundLevel > 0:
+			say "     Lost in the lustful decadence of the whorehouse, you forget about your deal with the hellhound, troubled only be the occasional, unremembered dream. But he does not forget. Having given in to a life of debauchery and sin, your foul contract was only delayed to better prepare you for your coming, unending fate.";
+			say "     When that times comes, you are pulled into the pits of Hades and given a life of eternal servitude as a sexual slave tiger to the countless foul hellhounds who guard the gates of Hell. Your experience at the tiger's whorehouse has served you well in preparing you for this unending task as the lustful slave to the demonic hounds. Your body is used in every foul, deviant act imaginable and responds lustfully to their every dark need or twisted whim[if Player is female]. The fel beasts breed you incessantly, filling your womb with litters of their spawn. Your pups are tiger-striped, but otherwise pure hellspawn like their brethren. They nurse from your breasts and grow strong, eventually joining the others in mating you until the ends of time[end if].";
+	else if mqstatus is 50:						[succeeded at motel hunt]
+		say "     When the military starts to move in, your boss is ready. He makes contact with a small scout team he'd met during the scouting missions. Being a police officer, they are inclined to believe him when he says he's been able to protect a motel full of tigresses. He leverages a few of his other shady contacts and he soon has you all discreetly moved out of the city. Once the treatment to render you all non-infectious is done, your group is simply lost in the paperwork and no one is the wiser.";
+		say "     Your boss gets his girls set up in a private brothel in a new city, protected by some of his corrupt contacts. With Sgt Marks still acting as a police officer, you watch over the girls for him. You act as the muscle to defend his whores. You have the run of the girls whenever you like while you manage the whorehouse he's set up. His influence keeps the local law off your back and you both enjoy breeding the horny kitties whenever you want and you live well off the proceeds of their lusts.";
+		if hellHoundLevel > 0:
+			say "     Lost in the lustful decadence of the whorehouse, you forget about your deal with the hellhound, troubled only be the occasional, unremembered dream. But he does not forget. Having given in to a life of debauchery and sin, your foul contract was only delayed to better prepare you for your coming, unending fate.";
+			say "     When that times comes, you are pulled into the pits of Hades and given a life of eternal servitude as a sexual slave tiger to the countless foul hellhounds who guard the gates of Hell. Your experience at the tiger's whorehouse has served you well in preparing you for this unending task as the lustful slave to the demonic hounds. Your body is used in every foul, deviant act imaginable. It is quite rough at first, a torment to go from the sex master to the sex slave, but your corrupted soul serves them regardless of your desires. At times, they take particular sport in mocking you. They also take twisted joy in reproducing particularly cruel acts you perpetrated at the brothel, casting you in the role of the victim now[if Player is female]. The fel beasts breed you incessantly, filling your womb with litters of their spawn. Your pups are tiger-striped, but otherwise pure hellspawn like their brethren. They nurse from your breasts and grow strong, eventually joining the others in mating you until the ends of time[end if].";
 
 to say THendingA:		[standard survive]
 	say "     As the military forces come through, rescuing those they can, they come across you and help you escape the degenerating city. You are very friendly with your rescuers and some soon accept your [']gratitude['] as soon as you are properly treated and declared non-infectious. Enjoying your romp with the soldiers, you flop around with a few of them, repaying them with sex.";
@@ -1038,54 +943,5 @@ to say THendingB:		[visibly pure Tigress Hooker survive w/helper or fled]
 	say "     Once you've cleared the military cordon and are declared non-infectious, you set forth on your plan, inspired to ambition by the tiger you met. You trade on your small fame as the [']bunker survivor['] and carefully embellish your tale to leave out a few [']minor details['] to make you look all the better. Your lovely, pure [if Player is female]tigress[else]tiger[end if] form and white fur make you an attractive hero for the media.";
 	say "     You ride the crest of fame well, manipulating it like a lover and use your hyper-sexualized body to start dating a famous [if Player is female]actor[else]actress[end if]. You are with them for a time, then move on to others in Hollywood. As a socialite, you are seen with actors, actresses and directors. Your sexy, feline body turns many heads and gets you what you want. You are showered with gifts and fame, along with lots of sex to sate your body's needs. You even get a few small roles in films, which are just another gift to bring you money.";
 	say "     Later life brings you a quick marriage and a quicker divorce, and long, drawn out alimony. You do a little charity work to advance transformee causes, but only appearances and endorsements to keep your fame up. Certainly your visible presence has made transformees more socially acceptable, though you care little for that, only desiring what it brings to you. You pass from lover to lover, enjoying them for a time until you tire of them and seek a new one to play with.";
-
-to say THendingC:		[standard succumb]
-	say "     Surrendering to your new desires, you wander the streets of the fallen city, turning tricks for whatever reward you can get, or just for the fun of it. You don't really have a fixed location, just wandering the city and soliciting several of those you encounter. Your path takes you back through one the seedier neighborhoods one day and you encounter another tigress. She takes you into her alley and you share a long, sensual romp with her before she takes you back to her home at a cheap motel. You find it occupied by many other tigress streetwalkers and you're soon properly inducted into the group.";
-
-to say THendingD:		[succumb after quest refusal]
-	say "     Surrendering to your new desires, you wander the streets of the fallen city, turning tricks for whatever reward you can get, or just for the fun of it. You don't really have a fixed location, just wandering the city and soliciting several of those you encounter. Eventually, you come across a big, male tiger in a uniform. There is something about him that draws you to him and also urges you to run. Something... familiar, but it's so hard to remember.";
-	say "     He comes up and grabs a hold of you, pulling you up against his strong chest. He is rough with you at first, putting you in your place, but soon you're rewarded with his sexy cock in your muzzle. He smiles down at you. 'I like you much better like this. A good, obedient slut.' You purr happily.";
-	say "     When the military rolls in, he uses his influence as a police officer to get you out with him. He moves to a new city, letting you peddle yourself on his beat, taking most of the proceeds of your instinctual lusts. He makes contact with a shady transformee strip-club and you join their whores while he comes on as a silent partner, acting as their corrupt police contact while getting his own cut. You are happy to be so useful to your master and love your new duties.";
-
-to say THendingE:		[succumb after helped w/keys]
-	say "     Surrendering to your new desires, you wander the streets of the fallen city, turning tricks for whatever reward you can get, or just for the fun of it. You don't really have a fixed location, just wandering the city and soliciting several of those you encounter. Your path takes you back through one of the seedier neighborhoods and you come across several empty alleys, still strong with the scents of felines and sex. You remain in them for a time, but are drawn to continue from one to the next. Eventually, you find yourself outside an old motel. You aren't sure why, but you feel like you should be here. The lingering scent of other felines, tigresses, reinforces this.";
-	say "     You wander from room to room, as if looking for someone who appears to no longer be there. You drop onto the bed in the deluxe suite at the top, mewling mournfully. Something... someone is missing from your life.";
-	say "     You end up spending your days sleeping at the motel despite how sad it feels, kept there by your instincts and the lingering scents. Your evenings are spent in the fallen city's streets, turning tricks and giving in to your lusts.";
-	say "     One early morning, as you make your way back, you spot a girl duck between two houses. A human girl. Something snaps inside you and you prowl the area, following her in feline silence. When she unlocks the door to the small basement apartment, you are there, pouncing her and bursting in.";
-	say "     You find four largely unchanged women inside. They have small ears or muzzles showing, but little else. Confronted directly by a [if Player is male]virile[else]lustful[end if] feline after trying to contain their growing urges for so long, they soon succumb to you. You make fine tigress herms out of all of them and take them back to your motel, finding it a less lonely place now.";
-	say "     With their help, a few of those soldiers are lured in and soon you have a bustling motel of playful kitties to serve you. As you add to your harem, you grow larger, feeling contented in your new role as their matron. You have filled that empty feeling within yourself by taking the place of the one you longed for.";
-
-to say THendingF:		[succumb after fleeing]
-	say "     Surrendering to your new desires, you are drawn back to familiar streets and come to a motel. You aren't sure why it's familiar, but it feels like you should be here. The scent of other felines, tigresses at that, only reinforces this feeling. Spotted by the herm tigress on watch, she takes your paw and leads you upstairs to where the matron - your matron - is. She has another tigress with her, who she's just finished filling.";
-	say "     There is something familiar about her as well. 'That's [ObjectPro of Player], Matron Jackie,' she exclaims ecstatically. 'The one I told you about. Oh, [SubjectPro of Player][']s here. I'm so happy.' She takes you in her arms, purring happily as she nuzzles you. Her hard cock presses against your body. She tells you how happy she is to see you and how nice it is you've come to join her. She loves it here so much, and so will you.";
-	if Player is fpreg_ok or Player is mpreg_ok:	[BREEDABLE]
-		say "     Watching you both snuggle, the matron grows hard again and mounts you, welcoming you among her girls. You and the lovely Miss Marks remain a couple of playmates, eager to please one another and your matron. Once a pair who tried to seize her girls, you have both been reduced to her special slaves, to be fucked whenever she wants. In time, you both grow heavy with your matron's cubs, breeding more sexy tigresses.";
-	else:											[NON-BREEDABLE]
-		say "     Watching you both snuggle, the matron grows hard again and mounts you, welcoming you among her girls. You and the lovely Miss Marks remain a couple of playmates, eager to please one another and your matron. Once a pair who tried to seize her girls, you have both been reduced to her special slaves, to be fucked whenever she wants.";
-
-to say THBadEnd1:		[succumb after failing at motel hunt]
-	say "     When the military starts to move in, your master is ready. You have trouble following everything that is going on, but you are all kept together. You all follow his orders as best you can. He was quite stern about it, so you all obey, restraining your urges when others are examining you. Once you've all been rendered non-infectious, you are all moved again with the help of several of your master's friends.";
-	say "     You are all moved to a lovely new home in another city, where you live and work as whores in his private club. His harem of tigresses tend to his needs and peddle themselves for his benefit. Always grateful for your assistance, you become a favorite of his and it is a happy life for a slut like yourself. His corrupt contacts keep the law off your backs (except when it's as a bribe to keep a corrupt official happy).";
-	if Player is herm:					[HERM PART]
-		say "     As the only white tigress sextoy in the brothel, you are a special item and you get a set of regulars who come in looking for time with you. You bring in a lot for your strong, virile master and you are always happy when he rewards your service by fucking your addled brains out. Being his special plaything, he doesn't allow the other tigresses to fuck you, though they are happy to play with you in other ways.";
-	else if Player is female:							[FEMALE PART]
-		say "     As the only purely female sextoy in the brothel, as well as the only white tigress, you have a special set of regulars who enjoy partaking in your beautiful body. You bring in a lot for your strong, virile master and you are always happy when he rewards your service by fucking your addled brains out. Being his special plaything, he doesn't allow the other tigresses to fuck you, though they are happy to play with you in other ways.";
-	else:											[MALE PART]
-		say "     As the only male sextoy in the brothel, as well as the only white tiger, you have a special set of regulars who enjoy pounding that sweet ass of yours. The feel of their hot cream in you always feels wonderful and there are always a few who come in looking to be filled by the sexy tiger. Which is good for you as your master doesn't allow you to fuck the other whores, though they will happily suck you off or fuck you. And you know your master has a special place for you any time he pounds you and fills your stripey ass.";
-[Non-sterile female/herm addition]
-	if Player is fpreg_ok or Player is mpreg_ok:	[BREEDABLE]
-		say "     When your heat comes, he takes you out of trade for a few days, exclusively breeding you over and over again until he's sure his seed has taken and you'll bear his cubs. As you rub your growing belly, you smile contentedly, so happy you decided to help him back in the infected city.";
-	if hellHoundLevel > 0:
-		LineBreak;
-		say "     Lost in the lustful decadence of the whorehouse, you forget about your deal with the hellhound, troubled only be the occasional, unremembered dream. But he does not forget. Having given in to a life of debauchery and sin, your foul contract was only delayed to better prepare you for your coming, unending fate.";
-		say "     When that times comes, you are pulled into the pits of Hades and given a life of eternal servitude as a sexual slave tiger to the countless foul hellhounds who guard the gates of Hell. Your experience at the tiger's whorehouse has served you well in preparing you for this unending task as the lustful slave to the demonic hounds. Your body is used in every foul, deviant act imaginable and responds lustfully to their every dark need or twisted whim[if Player is female]. The fel beasts breed you incessantly, filling your womb with litters of their spawn. Your pups are tiger-striped, but otherwise pure hellspawn like their brethren. They nurse from your breasts and grow strong, eventually joining the others in mating you until the ends of time[end if].";
-
-to say THGoodEnd:		[succumb? after succeeding at motel hunt]
-	say "     When the military starts to move in, your boss is ready. He makes contact with a small scout team he'd met during the scouting missions. Being a police officer, they are inclined to believe him when he says he's been able to protect a motel full of tigresses. He leverages a few of his other shady contacts and he soon has you all discreetly moved out of the city. Once the treatment to render you all non-infectious is done, your group is simply lost in the paperwork and no one is the wiser.";
-	say "     Your boss gets his girls set up in a private brothel in a new city, protected by some of his corrupt contacts. With Sgt Marks still acting as a police officer, you watch over the girls for him. You act as the muscle to defend his whores. You have the run of the girls whenever you like while you manage the whorehouse he's set up. His influence keeps the local law off your back and you both enjoy breeding the horny kitties whenever you want and you live well off the proceeds of their lusts.";
-	if hellHoundLevel > 0:
-		LineBreak;
-		say "     Lost in the lustful decadence of the whorehouse, you forget about your deal with the hellhound, troubled only be the occasional, unremembered dream. But he does not forget. Having given in to a life of debauchery and sin, your foul contract was only delayed to better prepare you for your coming, unending fate.";
-		say "     When that times comes, you are pulled into the pits of Hades and given a life of eternal servitude as a sexual slave tiger to the countless foul hellhounds who guard the gates of Hell. Your experience at the tiger's whorehouse has served you well in preparing you for this unending task as the lustful slave to the demonic hounds. Your body is used in every foul, deviant act imaginable. It is quite rough at first, a torment to go from the sex master to the sex slave, but your corrupted soul serves them regardless of your desires. At times, they take particular sport in mocking you. They also take twisted joy in reproducing particularly cruel acts you perpetrated at the brothel, casting you in the role of the victim now[if Player is female]. The fel beasts breed you incessantly, filling your womb with litters of their spawn. Your pups are tiger-striped, but otherwise pure hellspawn like their brethren. They nurse from your breasts and grow strong, eventually joining the others in mating you until the ends of time[end if].";
 
 Tiger Cop ends here.

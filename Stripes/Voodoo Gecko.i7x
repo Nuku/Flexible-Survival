@@ -11,12 +11,9 @@ vgeckobeaten is a number that varies.		[fights won]
 vgeckoboost is a truth state that varies. vgeckoboost is usually false.	[repeated gecko victory power boost]
 
 to say losetovoodoogecko:
+	setmonster "Voodoo Gecko";
 	choose row MonsterID from the Table of Random Critters;
-	if HP of Player > 0:
-		say "     Unwilling to continue resisting her, you drop to your knees";
-	else:
-		say "     You stumble to your knees as you can resist her dark power no longer";
-	say ". She grabs your head and starts a new chant, taking some hair, scales or blood from you and pushes it between the seams of her voodoo doll. As her chant reaches its climax, the shaman points her doll at you and dark purple mists burst forth from it and streams towards you. It seems to grab onto you and then sink down into you, seeping into your body until you can feel her tight grip squeezing around your chest as she clutches the doll.";
+	say "     [if HP of Player > 0]Unwilling to continue resisting her, you drop to your knees[else]You stumble to your knees as you can resist her dark power no longer[end if]. She grabs your head and starts a new chant, taking some hair, scales or blood from you and pushes it between the seams of her voodoo doll. As her chant reaches its climax, the shaman points her doll at you and dark purple mists burst forth from it and streams towards you. It seems to grab onto you and then sink down into you, seeping into your body until you can feel her tight grip squeezing around your chest as she clutches the doll.";
 	if vgeckoloss is 0 or ( vgeckoloss > 2 and a random chance of 1 in 5 succeeds ):				[first loss - fingering]
 		if Player is female:
 			say "     Finding it difficult to move, you can't resist as she pushes you down onto your back with her foot. Holding you like that, she grabs the doll and brushes her scaly finger across the hole at its crotch. The sensation of this echoes through your pussy. Soon she's pressed her finger, with its enlarged fingertip, into the doll, causing you to feel that relatively thick digit stuffed inside you. Being the size of a small teddy bear, it feels like you've got a giant stuffing its finger into you and rubbing along your inner walls. She doesn't relent there and pushes a second finger into the voodoo doll, making you groan loudly as your pussy is stuffed even further. Soon another digit follows that, and then another, your body quivering as you feel so incredibly stretched out by those questing fingers rubbing inside the voodoo doll. In a mix of discomfort and pleasure, you cum repeatedly, your body quivering weakly as you pass out. By the time you awaken, the shaman is gone and you're left feeling the lingering traces of your connection.";
@@ -24,15 +21,15 @@ to say losetovoodoogecko:
 			say "     Finding it difficult to move, you can't resist as she pushes you down onto your back with her foot. Holding you like that, she grabs the doll and brushes her scaly finger across the hole at its crotch. The sensation of this sends echoes through your anus. Soon she's pressed her finger, with its enlarged fingertip, into the doll, causing you to feel that relatively thick digit stuffed inside you. It feels like you've got a giant stuffing its finger into you and rubbing along your inner walls. She doesn't relent there and pushes a second finger into the voodoo doll, making you groan loudly as your ass is stuffed even further. Soon another digit follows that, and then another, your body quivering as you feel so incredibly stretched out by those questing fingers rubbing inside the voodoo doll. In a mix of discomfort and pleasure, you [if Player is male]cum[else]cry out[end if] repeatedly, your body quivering weakly as you pass out. By the time you awaken, the shaman is gone and you're left feeling the lingering traces of your connection.";
 	else if vgeckoloss is 1 or ( vgeckoloss > 2 and a random chance of 2 in 5 succeeds ):			[second loss - oral]
 		say "     Finding it difficult to move, you can't resist as she pushes you down onto your back with her foot. Holding you like that, she grabs the doll and presses her glans to its mouth hole. Her cock, as you can see well from your current position, is about eight inches. While this is larger than average, it seems massive in comparison to the doll and you can feel it as so huge in your mouth and throat as she sleeves her shemale cock in the voodoo doll of you. Given that the doll's sewn body is barely large enough to hold her cock, it feels like your whole body is being crammed full of that pillar of meat. The sensation of every thrust she makes rocks through you. You can only moan and pant weakly, your [bodydesc of Player] body quivering as you're mystically face-fucked with a pulsating penis by proxy.";
-		say "     After several minutes of this abuse, she groans and cums loudly, shooting her load into the doll. She cums quite profusely, bloating the doll's belly with her output, a response that is echoed in you. Your belly swells and bloats round like a balloon and gecko cum spills from your mouth[if Player is not neuter]. You end up cumming with a gurgling moan, the sensations overwhelming you despite the twisted nature of the experience[else]. All you can do is moan and gurgle wetly as the sensations of this twisted experience overwhelm you[end if]. Left overstuffed and drooling violet-streaked gecko cum that slowly melts away into purple mist, you pass out. When you finally regain consciousness, still quite full, but drained enough to move, the shaman is nowhere to be found and you're left with the lingering traces of your connection.";
+		say "     After several minutes of this abuse, she groans and cums loudly, shooting her load into the doll. She cums quite profusely, bloating the doll's belly with her output, a response that is echoed in you. Your belly swells and bloats round like a balloon and gecko cum spills from your mouth. [if Player is not neuter]You end up cumming with a gurgling moan, the sensations overwhelming you despite the twisted nature of the experience[else]All you can do is moan and gurgle wetly as the sensations of this twisted experience overwhelm you[end if]. Left overstuffed and drooling violet-streaked gecko cum that slowly melts away into purple mist, you pass out. When you finally regain consciousness, still quite full, but drained enough to move, the shaman is nowhere to be found and you're left with the lingering traces of your connection.";
 		let yy be 15;
 		if "Magpie Eyes" is listed in feats of Player, now yy is 20;
 		if a random chance of yy in 100 succeeds:
-			say "     You manage to collect some of the mystical gecko cum in a container before it evaporates away.";
+			say "[line break]     You manage to collect some of the mystical gecko cum in a container before it evaporates away.";
 			ItemGain gecko cum by 1 silently;
-	else if vgeckoloss > 4 and Player is male and ( ( vgeckoanal > 3 and anallevel > 1 ) or ( Player is female and Cunt Depth of Player >= ( Cock Length of Player / 3 ) ) ) and Cock Length of Player < 25 and a random chance of 2 in 7 succeeds:
+	else if vgeckoloss > 4 and Player is male and ( ( vgeckoanal > 3 and anallevel > 1 ) or ( Player is female and Cunt Depth of Player >= Cock Length of Player / 3 ) ) and Cock Length of Player < 25 and a random chance of 2 in 7 succeeds:
 		let analorvag be 0; [0 = anal, 1 = vag - controls scene delivery and selfimpreg]
-		if Player is female and Cunt Depth of Player >= ( Cock Length of Player / 3 ), now analorvag is 1;
+		if Player is female and Cunt Depth of Player >= Cock Length of Player / 3, now analorvag is 1;
 		say "     As before, you find it difficult to move and are unable to resist as she pushes onto your back with her foot. This gecko is in the mood to toy with you further and takes your [cock size desc of Player] [Cock of Player] cock in hand, teasing it to erection while licking at the voodoo doll's crotch hole. The sensation of this echoes in your [if analorvag is 1]cunt[else]anus[end if], feeling her bloated tongue working around inside you. This quickly has you moaning as your arousal increases[if HP of Player <= 0], overcoming your waning resistance[end if].";
 		say "     When she finally withdraws her tongue from the toy, your [if analorvag is 1]pussy[else]asshole[end if] is left feeling stretched and slobbery. Expecting her to drive her meaty rod into the doll, you are unprepared for her pushing it down over your own [if Cock Length of Player > 12]oversized [end if]shaft. You cry out at the conflicting sensation of thrusting into a tight, [if analorvag is 1]slick[else]warm[end if] hole and having what seems like your enlarged phallus forcing itself into you.";
 		say "     The gecko grins in perverse delight at your predicament and pumps the voodoo doll of yourself over your throbbing shaft[if Cock Length of Player > 16]. Given the great size of your cock, it feels incredibly massive inside you, bulging your belly to cope with it[end if]. As you adjust to the amplified penetration of yourself via the magical connection, you increasingly lose yourself to the escalating pleasure and feedback of pounding your own [if analorvag is 1]pussy[else]ass[end if][if Cock Length of Player > 16] beyond all reasonable limits[end if]. Losing any semblance of self-control, you start thrusting into the doll even as the gecko pushes it down. When the lizard offers you her cock directly, you eagerly accept it into your mouth and gulp down her musky load. You groan weakly and cum hard, pumping your load into the doll, resulting in your belly being filled by a proportionally magnified load of purple-streaked cum. You are left bloated and [if Ball Size of Player > 4]gushing[else if Ball Size of Player > 3]pouring[else]drooling[end if] cum from your abused [if analorvag is 1]vagina[else]rectum[end if] [if Ball Size of Player > 4]and overflowing from your mouth [end if]as you pass out. By the time you recover from this mindblowing orgasm, the gecko is gone and you've been left soaking in a [if Ball Size of Player > 4]pool[else]puddle[end if] of your own tainted semen.[if analorvag is 1 or player is mpreg_able][selfimpregchance][end if]";
@@ -69,11 +66,10 @@ to say losetovoodoogecko:
 		let yy be 15;
 		if "Magpie Eyes" is listed in feats of Player, now yy is 20;
 		if a random chance of yy in 100 succeeds:
-			say "     You manage to collect some of the mystical gecko cum in a container before it evaporates away.";
+			say "[line break]     You manage to collect some of the mystical gecko cum in a container before it evaporates away.";
 			ItemGain gecko cum by 1 silently;
 	increase vgeckoloss by 1;
 	if vgeckoloss is 3, increase wdam entry by 1;
-
 
 to say beatthevoodoogecko:
 	increase vgeckobeaten by 1;
@@ -83,40 +79,49 @@ to say beatthevoodoogecko:
 		say "     Striking the gecko shemale again, you knock her down and send her voodoo doll tumbling across the ground. She groans weakly, too battered to pull herself back to her feet to continue fighting. With her unable to use the doll's power against you, you find yourself tempted to take advantage of the situation and consider the various ways you could have fun with your fallen foe.";
 		now sextablerun is 0;
 		blank out the whole of table of fucking options;
-		if Player is male and vgeckoloss > 0:
-			choose a blank row in table of fucking options;
-			now title entry is "Voodoo doll";
-			now sortorder entry is 1;
-			now description entry is "give her a taste of her own dark medicine";
+		[]
 		if Player is male:
+			if vgeckoloss > 0:
+				choose a blank row in table of fucking options;
+				now title entry is "Voodoo doll";
+				now sortorder entry is 1;
+				now description entry is "give her a taste of her own dark medicine";
+			[]
 			choose a blank row in table of fucking options;
 			now title entry is "Fuck her";
 			now sortorder entry is 2;
 			now description entry is "fuck her shemale ass";
-[			choose a blank row in table of fucking options;
+			[
+			choose a blank row in table of fucking options;
 			now title entry is "Blowjob";
 			now sortorder entry is 5;
-			now description entry is "make her suck you off";]
+			now description entry is "make her suck you off";
+			]
+		[]
 		if Player is female:
 			choose a blank row in table of fucking options;
 			now title entry is "Ride her (vaginal)";
 			now sortorder entry is 3;
 			now description entry is "stuff your cunt with the shemale's cock";
-[			choose a blank row in table of fucking options;
+			[
+			choose a blank row in table of fucking options;
 			now title entry is "Cunnilingus";
 			now sortorder entry is 6;
-			now description entry is "make her eat your pussy";]
+			now description entry is "make her eat your pussy";
+			]
+		[]
 		choose a blank row in table of fucking options;
 		now title entry is "Ride her (anal)";
 		now sortorder entry is 4;
 		now description entry is "stuff your ass with the shemale's cock";
+		[]
 		sort the table of fucking options in sortorder order;
 		repeat with y running from 1 to number of filled rows in table of fucking options:
 			choose row y from the table of fucking options;
 			say "[link][y] - [title entry][as][y][end link][line break]";
 		say "[link]0 - Let her go[as][0][end link][line break]";
 		while sextablerun is 0:
-			say "Pick the corresponding number> ";
+			say "Pick the corresponding number> [run paragraph on]";
 			get a number;
 			if calcnumber is 0:
 				say "     Having beaten her and in no mood for stooping to her level, you give her a hard boot to the rear and send her scrambling away. She snatches up her doll and hisses angrily as she makes her escape.";
@@ -126,33 +131,33 @@ to say beatthevoodoogecko:
 				choose row calcnumber in table of fucking options;
 				say "[title entry]: [description entry]?";
 				if Player consents:
-					let num be sortorder entry;
+					LineBreak;
 					now sextablerun is 1;
-					if num is 1:
-						say "[vgeckosex_01]";
-					else if num is 2:
-						say "[vgeckosex_02]";
-					else if num is 3:
-						say "[vgeckosex_03]";
-					else if num is 4:
-						say "[vgeckosex_04]";
-					else if num is 5:
-						say "[vgeckosex_05]";
-					else if num is 6:
-						say "[vgeckosex_06]";
+					if title entry is:
+						-- "Voodoo doll":
+							say "[vgeckosex_01]";
+						-- "Fuck her":
+							say "[vgeckosex_02]";
+						-- "Ride her (vaginal)":
+							say "[vgeckosex_03]";
+						-- "Ride her (anal)":
+							say "[vgeckosex_04]";
+						[-- "Blowjob":
+							say "[vgeckosex_05]";
+						-- "Cunnilingus":
+							say "[vgeckosex_06]";]
 			else:
-				say "Invalid Option. Pick between 0 and [the number of filled rows in the table of fucking options].";
-
+				say "Invalid Option. Pick between 0 and [the number of filled rows in the table of fucking options], or 0 to exit.";
 
 to say vgeckosex_01:
 	say "     Stepping over her as she tries to crawl towards her doll, you snatch it up. Pulling a few strands of her indigo hair from her head, you stuff them into the voodoo doll. You then grab her tightly in one arm, groping one of those plump breasts of hers. As you do so, you press the doll to her face and order her say the words. She is reluctant at first, but when you manhandle her breast and tug on her nipple ring a few times, she moans and relents, chanting the incantation to bind her and the doll in a burst of purple smoke. And with that done, now the fun can begin.";
 	if Player is male:
 		say "     You push the gecko over onto her back and quickly push the voodoo doll down over her erection, causing her to cry out loudly. Getting fucked by what feels like a massive version of her own cock while thrusting into the doll has the shemale squirming from the sensory overload. Her throbbing manhood twitches and throbs inside the doll, resulting in spasms as the sensations of those movements feel relatively so much larger when echoed back to herself. Something about how her tummy ripples and stretches each time you push the doll down around her shaft and it presses against the inside of the fabric sends a dark thrill through you. It feels sinisterly satisfying to turn the tables on her.";
-		say "     Feeling a rush of excitement yourself, you move overtop of her so your crotch is in her face while you watch that glowing cock of her being stuffed over and over into the voodoo doll of herself. You thrust your [Cock of Player] penis into her mouth, fucking her face and forcing her to fellate you even as you make her to indirectly fuck herself. She has difficulty focusing on your dick as you work the doll over her pulsing rod, so you rock your hips and thrust into her mouth instead[if anallevel is 3]. With your eyes right at her crotch, you get to enjoy every detail of her driving into the doll as well as the way her stretched anus quivers and clenches around the invisible log of cock that fills her in response. You are able to peer into her yawning passage and see its attempts to contract or tug with every motion of the doll[else]. With your eyes right at her crotch, you're able to enjoy every detail of her driving her cock into the doll and watch her respond whenever you squeeze or move it over her pulsating rod[end if].";
+		say "     Feeling a rush of excitement yourself, you move overtop of her so your crotch is in her face while you watch that glowing cock of her being stuffed over and over into the voodoo doll of herself. You thrust your [Cock of Player] penis into her mouth, fucking her face and forcing her to fellate you even as you make her to indirectly fuck herself. She has difficulty focusing on your dick as you work the doll over her pulsing rod, so you rock your hips and thrust into her mouth instead. With your eyes right at her crotch, [if anallevel is 3]you get to enjoy every detail of her driving into the doll as well as the way her stretched anus quivers and clenches around the invisible log of cock that fills her in response. You are able to peer into her yawning passage and see its attempts to contract or tug with every motion of the doll[else]you're able to enjoy every detail of her driving her cock into the doll and watch her respond whenever you squeeze or move it over her pulsating rod[end if].";
 		say "     Being so thoroughly used and abused all at once, the moaning creature finally cries out and cums hard, pumping her messy load into the doll and thereby filling her ass as well. And as she's starting to grow round from the torrential flow filling her from her ass, you cry out in orgasmic relief and add your [Cum Load Size of Player] load shooting down her throat to further add to the sticky mess building up somewhere in the middle. Soon she's bloated and rounded with violet-streaked semen leaking from her ass. Unable to get up she's so full, all she can do it rub her overstuffed belly and groan as the gecko cum slowly drains out to evaporate into purple mist.";
 	else:
 		say "     You push the gecko over onto her back and quickly push the voodoo doll down over her erection, causing her to cry out loudly. Getting fucked by what feels like a massive version of her own cock while thrusting into the doll has the shemale squirming from the sensory overload. Her throbbing manhood twitches and throbs inside the doll, resulting in spasms as the sensations of those movements feel relatively so much larger when echoed back to herself. Something about how her tummy ripples and stretches each time you push the doll down around her shaft and it presses against the inside of the fabric sends a dark thrill through you. It feels sinisterly satisfying to turn the tables on her.";
-		say "     Feeling a rush of excitement yourself, you move overtop of her so your crotch is in her face while you watch that glowing cock of her being stuffed over and over into the voodoo doll of herself. You press your pussy to her face and order her to start licking with a firm squeeze of the doll around her manhood. Soon you have her struggling to eat you out even as you force her to indirectly fuck herself. She has difficulty focusing on your pussy as you work the doll over her pulsing rod, so you grind your pussy down and hump her face[if anallevel is 3]. With your eyes right at her crotch, you get to enjoy every detail of her driving into the doll as well as the way her stretched anus quivers and clenches around the invisible log of cock that fills her in response. You are able to peer into her yawning passage and see its attempts to contract or tug with every motion of the doll[else]. With your eyes right at her crotch, you're able to enjoy every detail of her driving her cock into the doll and watch her respond whenever you squeeze or move it over her pulsating rod[end if].";
+		say "     Feeling a rush of excitement yourself, you move overtop of her so your crotch is in her face while you watch that glowing cock of her being stuffed over and over into the voodoo doll of herself. You press your pussy to her face and order her to start licking with a firm squeeze of the doll around her manhood. Soon you have her struggling to eat you out even as you force her to indirectly fuck herself. She has difficulty focusing on your pussy as you work the doll over her pulsing rod, so you grind your pussy down and hump her face. With your eyes right at her crotch, [if anallevel is 3]you get to enjoy every detail of her driving into the doll as well as the way her stretched anus quivers and clenches around the invisible log of cock that fills her in response. You are able to peer into her yawning passage and see its attempts to contract or tug with every motion of the doll[else]you're able to enjoy every detail of her driving her cock into the doll and watch her respond whenever you squeeze or move it over her pulsating rod[end if].";
 		say "     Being so thoroughly used and abused all at once, the moaning creature finally cries out and cums hard, pumping her messy load into the doll and thereby filling her ass as well. And as she's starting to grow round from the torrential flow filling her from her ass, you cry out in orgasmic relief and coat her face in your female juices. Soon she's bloated and rounded with violet-streaked semen leaking from her ass. Unable to get up she's so full, all she can do it rub her overstuffed belly and groan as the gecko cum slowly drains out to evaporate into purple mist.";
 
 to say vgeckosex_02:
@@ -167,21 +172,19 @@ to say vgeckosex_03:		[vag]
 to say vgeckosex_04:		[anal]
 	say "     Stepping over her as she tries to crawl towards her doll, you kick it away and shove her onto her back. While pressing a hand down on her chest, you grab her semi-turgid cock in the other and stroke it back to full erection[if Player is female]. Forgoing your cunt in favor of an ass fucking, you[else]You[end if] straddle the gecko and lower your tight anus down onto her throbbing erection with a sigh of delight. Her eight inch rod [if scalevalue of Player > 4 or the player is twistcapped]is taken into your [Body Size Adjective of Player] ass with little difficulty, but you[else if scalevalue of Player > 2]feels quite satisfying inside your ass, making you[else]feels quite big inside your [Body Size Adjective of Player] ass, causing you to whimper and[end if] moan in pleasure as you make sure it rubs all the right spots inside you.";
 	say "     By the time you've slid up and down her pole a few times she's stopped her struggles, so you're free to move your hands to her soccer ball-sized tits, manhandling them. She whimpers and groans in pleasure as you tease her roughly, especially when tug at her nipple rings. The sight of her squirming beneath you as you give them a hard twist [if Player is male]makes your cock throb and drool pre with excitement[else if Player is female]gets you all the wetter[end if].";
-	say "     Sensing your approaching climax, you start riding her shemale rod all the harder and give [if Player is male]those big breasts of hers a squeeze while her cock pounds against your prostate[else]one of her big breasts a squeeze while frigging your puss[yfn] wildly with your other hand[end if]. The gecko releases a hissing cry of orgasmic delight and cums hard, shooting her purple-stained cum into your rectum. Feeling those hot blasts inside you is enough to push you over the edge and you cry out as well, clenching your ass firmly around her rod for all it will give[if Player is male]. Your cock[smn] spray[smv] your semen across her body, painting her face and tits with your [Cum Load Size of Player] load[else]. Your puss[yfn] quiver[sfv] in delight and your hot female juices run down your thighs to soak her crotch and further lube her spurting cock[end if]. You ride her past the point she's stopped cumming and grind over her oversensitive shaft until your own orgasm is completely over. Satisfied, you get off of her and give her a firm boot, forcing her up and sending her scrambling away. She snatches up her doll and hisses angrily as she makes her escape.[movichance]";
+	say "     Sensing your approaching climax, you start riding her shemale rod all the harder and give [if Player is male]those big breasts of hers a squeeze while her cock pounds against your prostate[else]one of her big breasts a squeeze while frigging your puss[yfn] wildly with your other hand[end if]. The gecko releases a hissing cry of orgasmic delight and cums hard, shooting her purple-stained cum into your rectum. Feeling those hot blasts inside you is enough to push you over the edge and you cry out as well, clenching your ass firmly around her rod for all it will give. Your [if Player is male]cock[smn] spray[smv] your semen across her body, painting her face and tits with your [Cum Load Size of Player] load[else]puss[yfn] quiver[sfv] in delight and your hot female juices run down your thighs to soak her crotch and further lube her spurting cock[end if]. You ride her past the point she's stopped cumming and grind over her oversensitive shaft until your own orgasm is completely over. Satisfied, you get off of her and give her a firm boot, forcing her up and sending her scrambling away. She snatches up her doll and hisses angrily as she makes her escape.[movichance]";
 
-to say vgeckosex_05:		[oral - cock]
+[to say vgeckosex_05:		[oral - cock]
 	say "***tba";
 
 to say vgeckosex_06:		[oral - pussy]
-	say "***tba";
-
-
-Section 2 - Creature Insertion
+	say "***tba";]
 
 to say voodoogeckodesc:
 	say "     You find yourself faced with a lizard-like creature in strange garb. Guessing from its appearance, with its wide-tipped digits and broad head, you'd say it's been infected by some kind of gecko. Its scales are a bright green with purple swirls and squiggles in ornate, almost ritualistic patterns. It has a long, whip-like tail covered in the same markings. It moves in quick, jerking motions that show a lot of flexibility. Atop her wide-mouthed, broad head she has a ragged shock of indigo hair.";
 	say "     The gecko is garbed in skimpy, colorful rags that are accented with small bones, feathers and little skulls. In one hand, she holds a large, poorly-stitched doll with mismatched button eyes and several pins in it. Unlike other voodoo dolls you've seen in photos or memorabilia, this one is more anatomical with holes at the mouth and crotch that have become sticky with white goo[if vgeckoloss > 3]. Even as she draws near, the doll seems to shift its shape to better resemble you. Having been affected by these totems before has only made you more susceptible to them, it seems[end if]. While she has very prominent breasts with nipple rings in them, she's also clearly got an eight inch cock rising up from her loincloth with no signs of a pussy beneath it, nor a visible ballsack for that matter. That cock has the same violet swirls on it, which start to glow as she starts to chant and shake her body. As the shemale shaman's chanting grows louder, so do the eyes of the voodoo doll.";
 
+Section 2 - Creature Insertion
 
 Table of CombatPrep (continued)
 name(text)	PrepFunction(text)
@@ -192,7 +195,7 @@ to say PrepCombat_Voodoo Gecko:
 	choose row MonsterID from the Table of Random Critters;
 	if Player is FemalePreferred:
 		now sex entry is "Female";
-	else if "Herm Preferred" is listed in feats of Player:
+	else if Player is HermPreferred:
 		now sex entry is "Both";
 	else:
 		now sex entry is "Male";
@@ -233,8 +236,8 @@ When Play begins:
 	now face change entry is "your vision blurs with a purple haze washing across your eyes as they grow larger and displace sideways. You can barely hear what sounds like wild chanting in the distance as your ears change, disappearing to just small holes at the side of your changing head. Your jaw broadens as your skull flattens out, leaving you with the head of a gecko as the haze and chanting fade";
 	now body change entry is "it stretches and shifts, gaining a strange flexibility as a purple haze seeps from and flows around your body. In your confusion, you hear chanting voices and see bony hands and skulls swirling in the mists. Your arms and legs change, gaining long digits with broadened, gripping fingers and toes. As you look, tiny claws emerge from the tips of your digits, painted violet. Sections of your skin sag and stretch as colorful rags and creepy bone jewelry form";
 	now skin change entry is "patches of purple light spread across your body. As these grow and spread from tiny points into ornate swirls and ritualistic patterns, the whole of you is covered in scales. As the light from these dim, you are left with green lizard skin painted with purple markings";
-	now ass change entry is "hips twitch and your tailbone cracks and pops. With a deathly wailing and a burst of purple mist, a thin lizard tail bursts from your ass";
-	now cock change entry is "pulses and throbs as purple splotches start to appear across it, glowing brightly. While roughly human in shape, its flesh is discolored green and left covered in purple swirls and patterns that grow brighter as you become aroused";
+	now ass change entry is "your hips twitch and your tailbone cracks and pops. With a deathly wailing and a burst of purple mist, a thin lizard tail bursts from your ass";
+	now cock change entry is "it pulses and throbs as purple splotches start to appear across it, glowing brightly. While roughly human in shape, its flesh is discolored green and left covered in purple swirls and patterns that grow brighter as you become aroused";
 	now str entry is 10; [ These are now the creature's stats... ]
 	now dex entry is 20; [ ...and are only altered onto the player via Shifting or the Mighty Mutation feat ]
 	now sta entry is 9; [ These values may be used as part of alternate combat.]
@@ -375,31 +378,27 @@ When Play begins:
 	[Clit Size Adjective is generated by a function and can be used in scenes: very small/small/average/large/very large]
 ]
 
-
-
 Section 3 - Drop Item - Gecko Cum
 
 Table of Game Objects (continued)
 name	desc	weight	object
 "gecko cum"	"A sample of gecko cum in a sealed container. It contains faintly glowing swirls and streaks of purple flowing through it."	1	gecko cum
 
-gecko cum is a grab object. gecko cum is temporary. gecko cum is cum.
-
-Usedesc of gecko cum is "[drinkgeckocum]";
+gecko cum is a grab object. gecko cum is cum.
+gecko cum is infectious. Strain of gecko cum is "Voodoo Gecko".
+Usedesc of gecko cum is "[drinkgeckocum]".
 
 to say drinkgeckocum:
+	if "Iron Stomach" is not listed in feats of Player:
+		choose row with Name of "Voodoo Gecko" from Table of Random Critters;
+		if Player is FemalePreferred:
+			now sex entry is "Female";
+		else if Player is HermPreferred:
+			now sex entry is "Both";
+		else:
+			now sex entry is "Male";
 	say "     Feeling drawn to the dark power, you quickly open the container of semen and gulp it down before it can dissipate. You moan softly and exhale a puff of violet mist that leaves a musky scent in the air as a rush of arousal wells up inside you. Even as you feel the cum in your belly start to tingle with infected nanites and strange magicks, you can't help but smile darkly at the rush of excitement you experience.";
-	increase Libido of Player by 5;
-	setmonster "Voodoo Gecko";
-	choose row MonsterID from the Table of Random Critters;
-	if Player is FemalePreferred:
-		now sex entry is "Female";
-	else if "Herm Preferred" is listed in feats of Player:
-		now sex entry is "Both";
-	else:
-		now sex entry is "Male";
-	infect;
-
+	raise Player Libido by 5;
 
 Section 4 - Endings
 
@@ -413,7 +412,7 @@ This is the Voodoo Gecko Infection rule:
 		if humanity of Player < 10:
 			say "     As the voodoo chanting in your mind grows louder, your human personality is twisted and subsumed. Heeding the call, you search the fairgrounds until drawn to one of the haunted houses. With a heavy voodoo theme to it, you know it is where you belong. As if sensing your arrival, several gecko shaman step out to greet you.";
 			if Player is pure:
-				if vgeckobeaten >= 4 and vgeckobeaten >= ( ( vgeckoloss * 125 ) / 100 ):	[25% more wins than losses]
+				if vgeckobeaten >= 4 and vgeckobeaten >= ( vgeckoloss * 125 ) / 100:	[25% more wins than losses]
 					say "     It is not a warm welcome, the head voodoo priestess striding forward to face you as she calls up her nanite-infused magicks. Only starting to feel the rush of your own power flowing through you, you struggle at first to stand up to her. But you learned much in dealing with the others before her and manage to hold your own for a while, even unleashing dark magicks of your own. Eventually, you connect with some dark power inside you and twist one of the high priestess's attacks back on herself. As the purple mists claw and grope her roughly while fucking her with cloudy tentacles, you wrench her skull-laden staff from her hands, stealing her power and becoming the new shaman [if Player is purefemale]mistress[else]master[end if] of the voodoo coven. As the most powerful of them, you take your place as their leader, forcing their obedience through your power.";
 					say "     It is amusing for a time for your people to molest the creatures wandering the fairgrounds who cross their path, occasionally turning them into zombie sex-slaves drained of will or infecting them to add to your numbers. As the voodoo [if Player is purefemale]mistress[else]master[end if], the enslaved possessed by your followers are all freely yours to enjoy. It is only when the military moves into the city and tries to suppress its denizens that your might and wrath is fully unleashed. A few soldiers are captured and brought back to you. These have their wills sucked from them and turned into your puppet slaves. Their bellies stuffed with magic-infused gecko semen, they are returned to the enemy lines. Save for the faint mists of purple floating across their eyes, they have no outward signs of infection and so are accepted back into their encampments. There the ticking time bombs of infection are let loose as the magicks spew forth from them in clouds of dark, lustful mists that corrupt and infect those around them, sewing chaos through the ranks. Many of those tainted by this attack are drawn back to you, becoming a horde of enslaved sex toys for your people to enjoy in any dark manner you like. The sex slaves are infected, cross-bred or kept human as is their individual master's lustful whims, resulting in a varied multitude of puppet lovers for you to enjoy whenever you like.";
 				else if vgeckobeaten > vgeckoloss / 2:						[won at least half as many as lost]
@@ -425,16 +424,15 @@ This is the Voodoo Gecko Infection rule:
 			else:
 				say "     It is not a warm welcome, as you are tied down by the voodoo geckos on a ritual table in a large hall. Under the oversight of what must be their high priestess, several of them call forth their dark magicks and drain you of your will. Reduced to a zombie state, alive but without mind or will - only lust, you become another slave for one of the shemales. You, alongside the other slaves in her collection, are used to slake her dark, twisted desires. At times, you're even used by their leader, who has claim over all sex slaves in her little domain. At one point, you faintly notice a swelling in the ranks of the enslaved as many human and partially-human slaves are added to their prizes.";
 		else:
-			say "     Managing to keep your mind at least partially intact until rescue, you exit the city with the military rescue forces. Your altered body is viewed with suspicion by the soldiers, but you are taken along regardless. The military scientist who looks into your case, unable to accept the existence of the forces that have touched you, views you simply as slightly confused by your infection and has you remanded to a short series of counselling sessions before your full release";
-			if humanity of Player < 40 and vgeckobeaten > vgeckoloss / 2 and Player is pure:
-				say ". Growing tired of the psychobabble by the third session as she tries to tell you that magic doesn't actually exist, something in you clicks into place and purple swirls in your eyes. Drawing upon some innate power you can now connect to, you blast a wave of tangible purple mist from your hands. The magicks that the shrink tried to tell you wasn't real overwhelms her, enslaving her will to yours. After slaking your pent-up lusts upon her body, you have her present you with a clean bill of mental health, accelerating your release.";
-				say "     Once you're released back into society, you continue to maintain your control over the psychiatrist. She makes for a very useful tool as the military has her perform sessions with numerous cases of rescued citizens. Many of those she assesses to be of weaker will or with submissive tendencies as a result of their infection are directed to you as part of their [']rehabilitation[']. This results in you easily collecting a wide array of sex slaves of all types, enslaved to your will by your powers, as they are delivered right to your door. And once the military clean-up of the city is over and your pet shrink is no longer working for them, you [if Player is male]breed her into becoming your gecko apprentice and lover[else if Player is female]transform her into your gecko apprentice and lesbian lover[else]transform her into your gecko apprentice and lover[end if].";
-			else if Player is pure:
-				say ". Growing tired of the psychobabble, you eventually relent and fake gradually accepting that the magic was all in your head or the result of nanites. But deep inside you know those dark powers there, even if you cannot quite connect with them. You still have to go through several more sessions, but you are eventually cleared.";
-				say "     Once you're released back into society, you follow leads and rumors of magic. In the wake of events, signs of magicks both new and old become more prevalent. It doesn't take you too long to learn some tricks from others and eventually start to tap into those dark powers inside you. You become the apprentice to a witch woman, helping her in her spells and rituals. It is mostly drudgework, though there's the occasional highlight when she's feeling horny or a customer is made to pay for her services with sexual favors.";
+			if Player is pure:
+				if humanity of Player < 40 and vgeckobeaten > vgeckoloss / 2:
+					say "     Managing to keep your mind at least partially intact until rescue, you exit the city with the military rescue forces. Your altered body is viewed with suspicion by the soldiers, but you are taken along regardless. The military scientist who looks into your case, unable to accept the existence of the forces that have touched you, views you simply as slightly confused by your infection and has you remanded to a short series of counselling sessions before your full release. Growing tired of the psychobabble by the third session as she tries to tell you that magic doesn't actually exist, something in you clicks into place and purple swirls in your eyes. Drawing upon some innate power you can now connect to, you blast a wave of tangible purple mist from your hands. The magicks that the shrink tried to tell you wasn't real overwhelms her, enslaving her will to yours. After slaking your pent-up lusts upon her body, you have her present you with a clean bill of mental health, accelerating your release.";
+					say "     Once you're released back into society, you continue to maintain your control over the psychiatrist. She makes for a very useful tool as the military has her perform sessions with numerous cases of rescued citizens. Many of those she assesses to be of weaker will or with submissive tendencies as a result of their infection are directed to you as part of their [']rehabilitation[']. This results in you easily collecting a wide array of sex slaves of all types, enslaved to your will by your powers, as they are delivered right to your door. And once the military clean-up of the city is over and your pet shrink is no longer working for them, you [if Player is male]breed her into becoming your gecko apprentice and lover[else if Player is female]transform her into your gecko apprentice and lesbian lover[else]transform her into your gecko apprentice and lover[end if].";
+				else:
+					say "     Managing to keep your mind at least partially intact until rescue, you exit the city with the military rescue forces. Your altered body is viewed with suspicion by the soldiers, but you are taken along regardless. The military scientist who looks into your case, unable to accept the existence of the forces that have touched you, views you simply as slightly confused by your infection and has you remanded to a short series of counselling sessions before your full release. Growing tired of the psychobabble, you eventually relent and fake gradually accepting that the magic was all in your head or the result of nanites. But deep inside you know those dark powers there, even if you cannot quite connect with them. You still have to go through several more sessions, but you are eventually cleared.";
+					say "     Once you're released back into society, you follow leads and rumors of magic. In the wake of events, signs of magicks both new and old become more prevalent. It doesn't take you too long to learn some tricks from others and eventually start to tap into those dark powers inside you. You become the apprentice to a witch woman, helping her in her spells and rituals. It is mostly drudgework, though there's the occasional highlight when she's feeling horny or a customer is made to pay for her services with sexual favors.";
 			else:
-				say ". You endure the psychobabble and eventually admit that what you experienced could have been simply in your head or the result of nanites. You don't believe this, but saying so makes it easier for you to get the shrink to okay you for release. You felt those powers and were touched by them - albeit in very strange, perverse ways.";
-				say "     Once you're released back into society, you follow leads and rumors of magic. In the wake of events, signs of magicks both new and old become more prevalent and people with experience in dealing with them are needed. Learning what you can, you become a paranormal expert and are eventually hired on by a subsidiary of Zephyr Inc. to deal with such matters[if level of Player > 14]. You are very successful at this, averting or mitigating several crises to prevent loss to company or customers holdings - in that order of priority[else if level of Player > 7]. You do well enough at this, averting a few crises or at least buying your company and customers - in that order of priority - the time to pull out[else]. You fumble along as best you can at your chosen vocation, providing your company and customers - in that order of priority - with at least some assistance with such crises[end if]. One particular mission turns out rather well as you end up rescuing a small time sorceress from a demon cult. She ends up becoming your lover[if Player is male] and mother to several of your magically-inclined children[end if].";
-
+				say "     Managing to keep your mind at least partially intact until rescue, you exit the city with the military rescue forces. Your altered body is viewed with suspicion by the soldiers, but you are taken along regardless. The military scientist who looks into your case, unable to accept the existence of the forces that have touched you, views you simply as slightly confused by your infection and has you remanded to a short series of counselling sessions before your full release. You endure the psychobabble and eventually admit that what you experienced could have been simply in your head or the result of nanites. You don't believe this, but saying so makes it easier for you to get the shrink to okay you for release. You felt those powers and were touched by them - albeit in very strange, perverse ways.";
+				say "     Once you're released back into society, you follow leads and rumors of magic. In the wake of events, signs of magicks both new and old become more prevalent and people with experience in dealing with them are needed. Learning what you can, you become a paranormal expert and are eventually hired on by a subsidiary of Zephyr Inc. to deal with such matters. You [if level of Player > 14]are very successful at this, averting or mitigating several crises to prevent loss to company or customers holdings - in that order of priority[else if level of Player > 7]do well enough at this, averting a few crises or at least buying your company and customers - in that order of priority - the time to pull out[else]fumble along as best you can at your chosen vocation, providing your company and customers - in that order of priority - with at least some assistance with such crises[end if]. One particular mission turns out rather well as you end up rescuing a small time sorceress from a demon cult. She ends up becoming your lover[if Player is male] and mother to several of your magically-inclined children[end if].";
 
 Voodoo Gecko ends here.

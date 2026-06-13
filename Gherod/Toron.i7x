@@ -12,9 +12,7 @@ postimport rule:
 	if Player is in Hellfire Corridor or player is in Hellfire Unknown or player is in Hellfire Dungeon or player is in Hellfire Cell One:
 		connect Hellfire Corridor;
 
-[***********************************************************]
 Section 1 - Toron NPC
-[***********************************************************]
 
 ToronDoneTalking is a truth state that varies.[@Tag:NotSaved]
 
@@ -46,7 +44,6 @@ PenileVirgin of Toron is false.
 SexuallyExperienced of Toron is true.
 MainInfection of Toron is "".
 Description of Toron is "[ToronDesc]".
-Conversation of Toron is { "<This is nothing but a placeholder!>" }.
 The scent of Toron is "     Toron smells... like nothing. He's completely odorless. You can't help but think there's something quite odd about this fellow.".
 
 to say ToronDesc:
@@ -54,9 +51,7 @@ to say ToronDesc:
 	if perception of player >= 19:
 		say "     [bold type]Perception Bonus (19)[roman type]: [italic type]His shape dims like a very thick liquid when you look at him attentively for a long time. You try not to do that often, however, as his counter gaze almost seems to petrify you.[roman type][line break]";
 
-[***********************************************************]
 Section 2 - Toron Talk Menu
-[***********************************************************]
 
 instead of conversing Toron:
 	say "     You come close to the bar counter, as Toron immediately turns his attention to you. 'Fancy a drink? Guaranteed to do wonders for your performance...' he says, his voice clear and low as if caressing your ears. He surely is charming.";
@@ -65,7 +60,6 @@ instead of conversing Toron:
 to say ToronTalkMenu:
 	now ToronDoneTalking is false;
 	say "     [bold type]Is there something you want from the Hellfire Club's bartender?[roman type][line break]";
-	LineBreak;
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]
@@ -76,80 +70,80 @@ to say ToronTalkMenu:
 	[]
 	choose a blank row in table of fucking options;
 	now title entry is "Order a tonic";
-	now sortorder entry is 1;
+	now sortorder entry is 2;
 	now description entry is "Have Toron craft a special tonic for you";
 	[]
 	choose a blank row in table of fucking options;
 	now title entry is "Request an exotic escort";
-	now sortorder entry is 1;
+	now sortorder entry is 3;
 	now description entry is "Browse the exotic escorts catalog";
 	[]
 	choose a blank row in table of fucking options;
 	now title entry is "Recent events";
-	now sortorder entry is 2;
+	now sortorder entry is 4;
 	now description entry is "Request an update on what's going on";
 	[]
 	choose a blank row in table of fucking options;
 	now title entry is "Himself";
-	now sortorder entry is 3;
+	now sortorder entry is 5;
 	now description entry is "Ask Toron to tell you more about himself";
 	[]
 	choose a blank row in table of fucking options;
 	now title entry is "His work";
-	now sortorder entry is 4;
+	now sortorder entry is 6;
 	now description entry is "Inquire him about his work";
 	[]
 	choose a blank row in table of fucking options;
 	now title entry is "Void Realm";
-	now sortorder entry is 5;
+	now sortorder entry is 7;
 	now description entry is "Ask about the void travelers";
 	[]
 	if Energy of Toron > 0:
 		choose a blank row in table of fucking options;
 		now title entry is "Sex";
-		now sortorder entry is 6;
+		now sortorder entry is 8;
 		now description entry is "Bring up the obvious subject";
 		[]
 	if Energy of Toron > 0:
 		choose a blank row in table of fucking options;
 		now title entry is "History with Mogdraz";
-		now sortorder entry is 7;
+		now sortorder entry is 9;
 		now description entry is "Ask him about his relationship with Mogdraz";
 	[]
 	if resolution of Hellish Introduction > 1:
 		choose a blank row in table of fucking options;
 		now title entry is "About Xaedihr";
-		now sortorder entry is 8;
+		now sortorder entry is 10;
 		now description entry is "Ask if he knows Xaedihr";
 	[]
 	if Resolution of DamienIntro >= 5:
 		choose a blank row in table of fucking options;
 		now title entry is "About Damien";
-		now sortorder entry is 8;
+		now sortorder entry is 11;
 		now description entry is "Ask Toron about some details regarding the scavenger you met";
 	[]
 	if resolution of Ambush The Purifier < 99 and HP of Araqiel is 1 or HP of Araqiel is 2:
 		choose a blank row in table of fucking options;
 		now title entry is "About that odd Angel...";
-		now sortorder entry is 9;
+		now sortorder entry is 12;
 		now description entry is "He might like to know about the angel you've seen fucking demons";
 	[]
 	if Resolution of Ambush The Purifier > 7 and Resolution of Ambush The Purifier < 49:
 		choose a blank row in table of fucking options;
 		now title entry is "Mogdraz and Araqiel";
-		now sortorder entry is 10;
+		now sortorder entry is 13;
 		now description entry is "Ask Toron what he knows about the relationship between these two";
 	[]
 	if VRDarkTyrantTracker > -1:
 		choose a blank row in table of fucking options;
 		now title entry is "About what you unleashed in the Void";
-		now sortorder entry is 11;
+		now sortorder entry is 14;
 		now description entry is "He's not going to be happy about it... but maybe he can help you";
 	[]
 	if abyssal remnant is owned:
 		choose a blank row in table of fucking options;
 		now title entry is "Restore Abyssal Remnant";
-		now sortorder entry is 12;
+		now sortorder entry is 15;
 		now description entry is "Show Toron what is left of the sword you found in the Void Realm and hope for a restore";
 	[]
 	sort the table of fucking options in sortorder order;
@@ -165,41 +159,41 @@ to say ToronTalkMenu:
 			choose row calcnumber in table of fucking options;
 			say "[title entry]: [description entry]?";
 			if Player consents:
-				let nam be title entry;
 				now sextablerun is 1;
-				if (nam is "Order a drink"):
-					say "[ToronTalkDrinks]";
-				else if (nam is "Order a tonic"):
-					say "[ToronTalkTonic]";
-					now ToronDoneTalking is true;
-				else if (nam is "Request an exotic escort"):
-					say "[ToronTalkExoticEscortsMenu]"; [on Hellfire Workers file]
-					now ToronDoneTalking is true;
-				else if (nam is "Recent events"):
-					say "[ToronTalkNews]";
-					now ToronDoneTalking is true;
-				else if (nam is "Himself"):
-					say "[ToronTalkHimself]";
-				else if (nam is "His work"):
-					say "[ToronTalkWork]";
-				else if (nam is "Void Realm"):
-					say "[ToronTalkVR]";
-				else if (nam is "Sex"):
-					say "[ToronTalkSex]";
-				else if (nam is "History with Mogdraz"):
-					say "[ToronTalkMogdraz]";
-				else if (nam is "About Xaedihr"):
-					say "[ToronTalkXaedihr]";
-				else if (nam is "About Damien"):
-					say "[ToronTalkDamien]"; [on Damien file]
-				else if (nam is "About that odd Angel..."):
-					say "[ToronTalkPurifier]"; [on Araqiel file]
-				else if (nam is "Mogdraz and Araqiel"):
-					say "[ToronTalkMogdrazAraqiel]"; [on Araqiel file]
-				else if (nam is "About what you unleashed in the Void"):
-					say "[ToronTalkDarkTyrant]"; [on Fallen King file]
-				else if (nam is "Restore Abyssal Remnant"):
-					say "[ToronTalkAE]";
+				if title entry is:
+					-- "Order a drink":
+						say "[ToronTalkDrinks]";
+					-- "Order a tonic":
+						say "[ToronTalkTonic]";
+						now ToronDoneTalking is true;
+					-- "Request an exotic escort":
+						say "[ToronTalkExoticEscortsMenu]"; [on Hellfire Workers file]
+						now ToronDoneTalking is true;
+					-- "Recent events":
+						say "[ToronTalkNews]";
+						now ToronDoneTalking is true;
+					-- "Himself":
+						say "[ToronTalkHimself]";
+					-- "His work":
+						say "[ToronTalkWork]";
+					-- "Void Realm":
+						say "[ToronTalkVR]";
+					-- "Sex":
+						say "[ToronTalkSex]";
+					-- "History with Mogdraz":
+						say "[ToronTalkMogdraz]";
+					-- "About Xaedihr":
+						say "[ToronTalkXaedihr]";
+					-- "About Damien":
+						say "[ToronTalkDamien]"; [on Damien file]
+					-- "About that odd Angel...":
+						say "[ToronTalkPurifier]"; [on Araqiel file]
+					-- "Mogdraz and Araqiel":
+						say "[ToronTalkMogdrazAraqiel]"; [on Araqiel file]
+					-- "About what you unleashed in the Void":
+						say "[ToronTalkDarkTyrant]"; [on Fallen King file]
+					-- "Restore Abyssal Remnant":
+						say "[ToronTalkAE]";
 				wait for any key;
 				if ToronDoneTalking is false:
 					say "[ToronTalkMenu]"; [looping back to keep talking with him]
@@ -208,33 +202,32 @@ to say ToronTalkMenu:
 			say "     You excuse yourself as the bartender continues his tasks.";
 			wait for any key;
 		else:
-			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options], or 0 to exit.";
 	clear the screen and hyperlink list;
 
 to say ToronTalkDrinks:
 	now ToronDoneTalking is true;
 	if HellfireDrinkTimer > 0 and "Created Sparkling Water" is not listed in traits of Toron:
 		say "     You can't have another drink while the effects of the previous one persists. Try again later.";
-		wait for any key;
+		LineBreak;
 		say "[ToronTalkMenu]";
 	else if HellfireDrinkTimer > 0 and "Created Sparkling Water" is listed in traits of Toron:
 		say "     You can't have another drink while the effects of the previous one persists, but you can have a Sparkling Water to cleanse the effects. Would you like that?";
-		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Yes, drink some Sparkling Water.";
 		say "     ([link]N[as]n[end link]) - No, you're fine as you are.";
 		if Player consents:
 			LineBreak;
 			say "[DrinkSparklingWater]";
-			wait for any key;
+			WaitLineBreak;
 			say "[HellfireClubDrinksMenu]";
 		else:
 			LineBreak;
 			say "     If that is so, then you will have to try again later if you want to order another drink.";
-			wait for any key;
+			LineBreak;
 			say "[ToronTalkMenu]";
 	else:
 		say "     You ask Toron for a drink at the bar. 'Very well. As you should know, drinks here are special. Their effects last [bold type]24 hours[roman type] and you cannot consume any other until it leaves your system, or it could potentially overload your body and cause addiction, uncontrollable sexual urges and possibly a significant decrease in your immunity system's effectiveness. A very nasty problem... The effects may be a physical or mental boost, depending on which drink you order, on top of alcohol, but I made in a way so that the drinks['] base effects metabolize more slowly. Just keep that in mind.";
-		wait for any key;
+		WaitLineBreak;
 		say "[HellfireClubDrinksMenu]";
 
 to say ToronTalkTonic:
@@ -288,13 +281,12 @@ to say ToronTalkMogdraz:
 
 to say ToronTalkXaedihr:
 	say "     Now that Xaedihr is known around the club, you figure you could ask Toron if he knows him, too. 'Xaedihr... Yes, I know him well. Too well. I'm not sure if he's told you that, but he is the heir of the Demon Lord in our world. His only son, who saw his father falling into a deeper greed for power, and actually becoming powerful enough to defy Hell itself. Poor kid has seen things... He's not even fully demon, his mother was a human who died giving him birth, as his father is quite an unimaginably strong entity. Never shed a tear for his lover, he was more interested in training Xaedihr to become his successor, and even fused him with an aspect of darkness, leaving him with permanent marks. The tattoo on his shoulder and arm... That's it. And this aspect can be summoned at will, as he has mastered it. Otherwise, the aspect would have taken control of his mind, and possibly to become the Lord's underling. Quite sad if that were to happen.'";
-	say "     Seems like Toron knows a lot more about Xaedihr than even the half-demon himself. 'You saw how he brought down two of Mogdraz's best hellfire demons so easily? You've got a powerful companion on your side... and with a very delicate heart. His tough shell is merely for self-protection. Gain his trust, and you'll have a friend for life, but hurt him, and you'll... be having a bad time.' You thank Toron for sharing this information with you, to which he nods. 'Just keep it discrete. Secrets are not cheap.'";
+	say "     Seems like Toron knows a lot more about Xaedihr than even the half-demon himself. 'You saw how he brought down two of Mogdraz's best hellfire demons so easily? You've got a powerful companion on your side... and with a very delicate heart. His tough shell is merely for self-protection. Gain his trust, and you'll have a friend for life, but hurt him, and you'll... be having a bad time.' You thank Toron for sharing this information with you, to which he nods. 'Just keep it discreet. Secrets are not cheap.'";
 
 to say ToronTalkAE:
 	say "     Given the extremely poor condition of the sword you pulled back in the Void Realm, you ask Toron if he knows what it is and if he can do something about it. 'Yes, I could restore the [']what you shouldn't have pulled from a completely and utterly isolated part of the Void Realm['] to its former glory. Not that I should, but whatever, what's done is done. Do you have null essences?' You suppose you've seen some already, but you have to ask how many he would need.";
 	say "     'I would need around... [bold type]25 Null Essences[roman type] to restore this. Yes, that should be enough.'";
 	if carried of null essence > 24:
-		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Yes, you have what you need.";
 		say "     ([link]N[as]n[end link]) - You are not ready to do this, yet.";
 		if Player consents:
@@ -317,19 +309,17 @@ to say ToronTalkAE:
 		say "     A whole twenty five?! You don't have that many... 'Well, if you don't have them, I suppose I can't help you. We will be helpless against that beast, since you need the sword to actually have a chance at destroying him. Whatever you do, don't ever feed him any essences. Don't make him stronger... The world would fall, and that would be on you.' With that said, he returns to his duties.";
 		say "     Was he referring to the Dark Tyrant being some sort of doombringer? If that's so, it would be a good idea to fix this as soon as possible, right?";
 
-HellfireDrinkTimer is a number that varies. HellfireDrinkTimer is usually 0. [@Tag:NotSaved]
-HellfireOrcBrewTimer is a number that varies. HellfireOrcBrewTimer is usually 20000. [@Tag:NotSaved]
-HellfireBlackAleTimer is a number that varies. HellfireBlackAleTimer is usually 20000. [@Tag:NotSaved]
-HellfireSparklingWaterTimer is a number that varies. HellfireSparklingWaterTimer is usually 20000. [@Tag:NotSaved]
-HellfireTentacularSlushieTimer is a number that varies. HellfireTentacularSlushieTimer is usually 20000. [@Tag:NotSaved]
-HellfirePeculiarLiqueurTimer is a number that varies. HellfirePeculiarLiqueurTimer is usually 20000. [@Tag:NotSaved]
-
-HellfireMSTonicTimer is a number that varies. HellfireMSTonicTimer is usually 20000. [@Tag:NotSaved]
+HellfireDrinkTimer is a number that varies. HellfireDrinkTimer is usually 0.[@Tag:NotSaved]
+HellfireOrcBrewTimer is a number that varies. HellfireOrcBrewTimer is usually 20000.[@Tag:NotSaved]
+HellfireBlackAleTimer is a number that varies. HellfireBlackAleTimer is usually 20000.[@Tag:NotSaved]
+HellfireSparklingWaterTimer is a number that varies. HellfireSparklingWaterTimer is usually 20000.[@Tag:NotSaved]
+HellfireTentacularSlushieTimer is a number that varies. HellfireTentacularSlushieTimer is usually 20000.[@Tag:NotSaved]
+HellfirePeculiarLiqueurTimer is a number that varies. HellfirePeculiarLiqueurTimer is usually 20000.[@Tag:NotSaved]
+HellfireMSTonicTimer is a number that varies. HellfireMSTonicTimer is usually 20000.[@Tag:NotSaved]
 
 to say HellfireClubDrinksMenu:
 	say "     Toron hands you a list with the drinks he has on stock. 'This is what I have right now, for a modest amount of [bold type]Obsidian Coins[roman type], of course...'";
 	say "     Select which drink you want. Keep in mind that [bold type]most are alcoholic drinks, so their base effects will be applied together with your drunkiness state.[roman type][line break]";
-	LineBreak;
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]
@@ -341,67 +331,67 @@ to say HellfireClubDrinksMenu:
 	if "Created Orcish Bomber" is listed in traits of Toron:
 		choose a blank row in table of fucking options;
 		now title entry is "Order an Orcish Bomber";
-		now sortorder entry is 1;
+		now sortorder entry is 2;
 		now description entry is "A drink that substantially increases your might, at the cost of accuracy (+3 strength, -1 dexterity), and it is a strong alcoholic drink. Costs [bold type]3 Obsidian Coin[roman type] to order";
 	[]
 	if "Created Heaven's Kiss" is listed in traits of Toron:
 		choose a blank row in table of fucking options;
 		now title entry is "Order a Heaven's Kiss";
-		now sortorder entry is 1;
+		now sortorder entry is 3;
 		now description entry is "A drink that substantially increases your charisma (+3 charisma), and it is alcoholic. Costs [bold type]3 Obsidian Coin[roman type] to order";
 	[]
 	if "Created Black Ale" is listed in traits of Toron:
 		choose a blank row in table of fucking options;
 		now title entry is "Order a Black Ale";
-		now sortorder entry is 1;
+		now sortorder entry is 4;
 		now description entry is "A drink that increases your physical stats at the cost of the mental ones (+2 strength, +2 dexterity, +2 stamina, -2 intelligence, -2 charisma, -2 perception), and it is a strong alcoholic drink. Costs [bold type]5 Obsidian Coin[roman type] to order";
 	[]
 	if "Created Tentacular Slushie" is listed in traits of Toron:
 		choose a blank row in table of fucking options;
 		now title entry is "Order a Tentacular Slushie";
-		now sortorder entry is 1;
+		now sortorder entry is 5;
 		now description entry is "A drink that significantly increases your dexterity, but takes a moderate toll on your social skills (+5 dexterity, -2 intelligence, -2 charisma), and it has a negligible amount of alcohol. Costs [bold type]5 Obsidian Coin[roman type] to order";
 	[]
 	if "Created Peculiar Liqueur" is listed in traits of Toron:
 		choose a blank row in table of fucking options;
 		now title entry is "Order a Peculiar Liqueur";
-		now sortorder entry is 1;
+		now sortorder entry is 6;
 		now description entry is "A drink that boosts your intellect significantly, but takes a moderate toll on your physical endurance (+4 intelligence, -2 strength, -2 stamina), and it is alcoholic. Costs [bold type]5 Obsidian Coin[roman type] to order";
 	[]
 	if "Created Sparkling Water" is listed in traits of Toron:
 		choose a blank row in table of fucking options;
 		now title entry is "Order a Sparkling Water";
-		now sortorder entry is 1;
+		now sortorder entry is 7;
 		now description entry is "A drink that is really good at quenching your thirst. It also eliminates any other drink effects and gets rid of alcohol in your system. Costs [bold type]1 Obsidian Coin[roman type] to order";
 	[]
 	if orc brew is owned and "Created Orcish Bomber" is not listed in traits of Toron and HellfireOrcBrewTimer is 20000:
 		choose a blank row in table of fucking options;
 		now title entry is "Show him the orc brew";
-		now sortorder entry is 2;
+		now sortorder entry is 8;
 		now description entry is "He might be interested in the orc brew";
 	[]
 	if sharp black tusk is owned and "Created Black Ale" is not listed in traits of Toron and HellfireBlackAleTimer is 20000:
 		choose a blank row in table of fucking options;
 		now title entry is "Show him the sharp black tusk";
-		now sortorder entry is 2;
+		now sortorder entry is 9;
 		now description entry is "He might be interested in the sharp black tusk";
 	[]
 	if null essence is owned and "Created Sparkling Water" is not listed in traits of Toron and HellfireSparklingWaterTimer is 20000:
 		choose a blank row in table of fucking options;
 		now title entry is "Show him the null essence";
-		now sortorder entry is 2;
+		now sortorder entry is 10;
 		now description entry is "He might be interested in the null essence";
 	[]
 	if loose tentacle is owned and "Created Tentacular Slushie" is not listed in traits of Toron and HellfireTentacularSlushieTimer is 20000:
 		choose a blank row in table of fucking options;
 		now title entry is "Show him the loose tentacle";
-		now sortorder entry is 2;
+		now sortorder entry is 11;
 		now description entry is "He might be interested in the loose tentacle";
 	[]
 	if strange-colored bean is owned and "Created Peculiar Liqueur" is not listed in traits of Toron and HellfirePeculiarLiqueurTimer is 20000:
 		choose a blank row in table of fucking options;
 		now title entry is "Show him the strange-colored bean";
-		now sortorder entry is 2;
+		now sortorder entry is 12;
 		now description entry is "He might be interested in the odd bean";
 	[]
 	sort the table of fucking options in sortorder order;
@@ -417,39 +407,38 @@ to say HellfireClubDrinksMenu:
 			choose row calcnumber in table of fucking options;
 			say "[title entry]: [description entry]?";
 			if Player consents:
-				let nam be title entry;
 				now sextablerun is 1;
-				if (nam is "Order a Hellfire Swizzle"):
-					say "[DrinkHellfireSwizzle]";
-				if (nam is "Order an Orcish Bomber"):
-					say "[DrinkOrcishBomber]";
-				if (nam is "Order a Heaven's Kiss"):
-					say "[DrinkHeavensKiss]";
-				if (nam is "Order a Black Ale"):
-					say "[DrinkBlackAle]";
-				if (nam is "Order a Tentacular Slushie"):
-					say "[DrinkTentacularSlushie]";
-				if (nam is "Order a Peculiar Liqueur"):
-					say "[DrinkPeculiarLiqueur]";
-				if (nam is "Order a Sparkling Water"):
-					say "[DrinkSparklingWater]";
-				if (nam is "Show him the orc brew"):
-					say "[GiveToronOrcBrew]";
-				if (nam is "Show him the sharp black tusk"):
-					say "[GiveToronSharpBlackTusk]";
-				if (nam is "Show him the null essence"):
-					say "[GiveToronNullEssence]";
-				if (nam is "Show him the loose tentacle"):
-					say "[GiveToronLooseTentacle]";
-				if (nam is "Show him the strange-colored bean"):
-					say "[GiveToronStrangeBean]";
-				wait for any key;
+				if title entry is:
+					-- "Order a Hellfire Swizzle":
+						say "[DrinkHellfireSwizzle]";
+					-- "Order an Orcish Bomber":
+						say "[DrinkOrcishBomber]";
+					-- "Order a Heaven's Kiss":
+						say "[DrinkHeavensKiss]";
+					-- "Order a Black Ale":
+						say "[DrinkBlackAle]";
+					-- "Order a Tentacular Slushie":
+						say "[DrinkTentacularSlushie]";
+					-- "Order a Peculiar Liqueur":
+						say "[DrinkPeculiarLiqueur]";
+					-- "Order a Sparkling Water":
+						say "[DrinkSparklingWater]";
+					-- "Show him the orc brew":
+						say "[GiveToronOrcBrew]";
+					-- "Show him the sharp black tusk":
+						say "[GiveToronSharpBlackTusk]";
+					-- "Show him the null essence":
+						say "[GiveToronNullEssence]";
+					-- "Show him the loose tentacle":
+						say "[GiveToronLooseTentacle]";
+					-- "Show him the strange-colored bean":
+						say "[GiveToronStrangeBean]";
 		else if calcnumber is 0:
 			now sextablerun is 1;
 			say "     You excuse yourself as the bartender continues his tasks.";
-			wait for any key;
 		else:
-			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options], or 0 to exit.";
+	wait for any key;
 	clear the screen and hyperlink list;
 
 to say DrinkHellfireSwizzle:
@@ -557,6 +546,7 @@ to say DrinkSparklingWater:
 		PlayerDrink 15;
 		now Energy of Player is 0;
 		follow the turnpass rule;
+		WaitLineBreak;
 		say "     Any effects from other drinks at the club have been removed.";
 
 an everyturn rule:
@@ -640,7 +630,6 @@ to say GiveToronOrcBrew:
 	WaitLineBreak;
 	if orc cum is owned:
 		say "     Knowing that you have at least one bottle of Orc Cum in your inventory...";
-		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Hand him some.";
 		say "     ([link]N[as]n[end link]) - Better not, for now.";
 		if Player consents:
@@ -649,16 +638,16 @@ to say GiveToronOrcBrew:
 			ItemLoss orc cum by 1;
 			ItemLoss orc brew by 1;
 			now HellfireOrcBrewTimer is turns;
-			wait for any key;
+			WaitLineBreak;
 			say "[HellfireClubDrinksMenu]";
 		else:
 			LineBreak;
 			say "     You shake your head, telling him that you don't have one available at the moment. 'Ah, I see... Then have the brew back, I can't do anything with it without this specific ingredient. Though feel free to come back to me with it whenever you get some orc cum. I might just be able to improve this brew...'";
-			wait for any key;
+			WaitLineBreak;
 			say "[HellfireClubDrinksMenu]";
 	else:
 		say "     You shake your head, telling him that you don't have one available at the moment. 'Ah, I see... Then have the brew back, I can't do anything with it without this specific ingredient. Though feel free to come back to me with it whenever you get some orc cum. I might just be able to improve this brew...'";
-		wait for any key;
+		WaitLineBreak;
 		say "[HellfireClubDrinksMenu]";
 
 to say GiveToronSharpBlackTusk:
@@ -666,7 +655,7 @@ to say GiveToronSharpBlackTusk:
 	say "     This also means that your hard earned tusk got lost forever... But at least you will have a new drink! And hopefully a good one...";
 	ItemLoss sharp black tusk by 1;
 	now HellfireBlackAleTimer is turns;
-	wait for any key;
+	WaitLineBreak;
 	say "[HellfireClubDrinksMenu]";
 
 to say GiveToronNullEssence:
@@ -675,7 +664,7 @@ to say GiveToronNullEssence:
 	say "     Null essences make Sparkling Water when mixed with water... now that's something...";
 	ItemLoss null essence by 1;
 	now HellfireSparklingWaterTimer is turns;
-	wait for any key;
+	WaitLineBreak;
 	say "[HellfireClubDrinksMenu]";
 
 to say GiveToronLooseTentacle:
@@ -683,7 +672,7 @@ to say GiveToronLooseTentacle:
 	say "     Immediately after, he tells you to just come back later, as he will have to experiment with the mixture until he can achieve [']just the right tone of taste[']. His words.";
 	ItemLoss loose tentacle by 1;
 	now HellfireTentacularSlushieTimer is turns;
-	wait for any key;
+	WaitLineBreak;
 	say "[HellfireClubDrinksMenu]";
 
 to say GiveToronStrangeBean:
@@ -691,7 +680,7 @@ to say GiveToronStrangeBean:
 	say "     It appears he is actually happy with this ingredient. How peculiar...";
 	ItemLoss strange-colored bean by 1;
 	now HellfirePeculiarLiqueurTimer is turns;
-	wait for any key;
+	WaitLineBreak;
 	say "[HellfireClubDrinksMenu]";
 
 [TONICS]
@@ -721,24 +710,21 @@ to say HellfireClubTonicCraft:
 			choose row calcnumber in table of fucking options;
 			say "[title entry]: [description entry]?";
 			if Player consents:
-				let nam be title entry;
 				now sextablerun is 1;
-				if (nam is "Tonic of Mountainous Strength"):
+				if title entry is "Tonic of Mountainous Strength":
 					say "[HellfireClubMSTonic]";
-				wait for any key;
 		else if calcnumber is 0:
 			now sextablerun is 1;
 			say "     You excuse yourself as the bartender continues his tasks.";
-			wait for any key;
 		else:
-			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options], or 0 to exit.";
+	wait for any key;
 	clear the screen and hyperlink list;
 
 to say HellfireClubMSTonic:
 	if giant essence is owned and orc brew is owned and testosterone pill is owned:
 		say "     Having all the items in your inventory, you proceed to present them to Toron. 'Ah, you have gathered them all? I can proceed with the mixing at any time you want.'";
-		say "     [bold type]Do you wish to craft a Tonic of Mountainous Strength?";
-		LineBreak;
+		say "[line break]     [bold type]Do you wish to craft a Tonic of Mountainous Strength?";
 		say "     ([link]Y[as]y[end link]) - Yes.";
 		say "     ([link]N[as]n[end link]) - No.";
 		if Player consents:
@@ -759,15 +745,13 @@ to say HellfireClubMSTonic:
 		WaitLineBreak;
 		say "     [bold type]One bottle of Giant Essence[roman type], gathered from the precum of a male giant-sized creature's penis during its maximum arousal state, preferably as human-looking a possible. 'The zookeeper would be your best chance, here.'";
 		say "     [bold type]One Orc Brew[roman type] for the main composition of the tonic. 'Orcs are good at making these, hence the name. It has valuable strength properties that, if properly mixed, are not infectious while still providing all the desired effects. I've heard about a bunch of orc warriors roaming around the Warehouse District looking for slaves. Who knows if you would be lucky enough to snatch one of these from them.'";
-		say "     [bold type]A single pill of Testosterone[roman type] in fairly pristine conditions, to bring out the fortifying properties. 'Without this, the tonic won't do much. Zephyr stores have a collection of these, one for 100 freecreds. There might be some still left at the hospital or some other place, but Zephyr is your best bet.'";
+		say "     [bold type]A single pill of Testosterone[roman type] in fairly pristine conditions, to bring out the fortifying properties. 'Without this, the tonic won't do much. Zephyr stores have a collection of these, one for 100 freecred. There might be some still left at the hospital or some other place, but Zephyr is your best bet.'";
 		WaitLineBreak;
 		say "     Taking notes of everything you need, you then thank Toron and move onto something else.";
 
-[***********************************************************]
 Section 3 - Toron Sex Menu
-[***********************************************************]
 
-Instead of fucking Toron:
+instead of fucking Toron:
 	if Libido of Toron is 0:
 		say "     Maybe you should talk to him about sex before you jump right into it...";
 	else if Libido of Toron > 0:
@@ -791,7 +775,7 @@ Instead of fucking Toron:
 				if Player is male:
 					choose a blank row in table of fucking options;
 					now title entry is "Fuck his ass";
-					now sortorder entry is 1;
+					now sortorder entry is 2;
 					now description entry is "Grab his ass and give him some hard pounding right here... at your own risk";
 			[]
 			sort the table of fucking options in sortorder order;
@@ -807,23 +791,22 @@ Instead of fucking Toron:
 					choose row calcnumber in table of fucking options;
 					say "[title entry]: [description entry]?";
 					if Player consents:
-						let nam be title entry;
 						now sextablerun is 1;
-						if (nam is "Rim and finger his ass"):
-							say "[ToronNightAssPlay]";
-						if (nam is "Fuck his ass"):
-							say "[ToronDayAssFuck]";
-						wait for any key;
+						if title entry is:
+							-- "Rim and finger his ass":
+								say "[ToronNightAssPlay]";
+							-- "Fuck his ass":
+								say "[ToronDayAssFuck]";
 				else if calcnumber is 0:
 					now sextablerun is 1;
 					say "     You politely excuse yourself as Toron continues his duties.";
-					wait for any key;
 				else:
-					say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
+					say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options], or 0 to exit.";
+			wait for any key;
 			clear the screen and hyperlink list;
 
 to say ToronNightAssPlay:
-	say "     You lean towards Toron in order to whisper into his ear, letting him know what you want to do to him once you discretely go around the counter and get on his side. He agrees to this with a mischievous grin, and continue his duties as if nothing was happening. You duck behind the counter so nobody can see you quietly approaching the bartender, who is actually not wearing anything from his waist down, something that is impossible to observe from the other side of the counter. Occasionally, a shadowy tentacle can be seen taking form from his back, stretching towards a distant bottle or some other ingredient, though he maintains a pair of completely normal humanoid legs to sustain his weight, and with that, a magnificent bubblebutt waiting to get grabbed by you. As you take some time to admire his dark glutes, a soft, warm tendril brushes against the back of your head, encouraging you to lean closer...";
+	say "     You lean towards Toron in order to whisper into his ear, letting him know what you want to do to him once you discreetly go around the counter and get on his side. He agrees to this with a mischievous grin, and continue his duties as if nothing was happening. You duck behind the counter so nobody can see you quietly approaching the bartender, who is actually not wearing anything from his waist down, something that is impossible to observe from the other side of the counter. Occasionally, a shadowy tentacle can be seen taking form from his back, stretching towards a distant bottle or some other ingredient, though he maintains a pair of completely normal humanoid legs to sustain his weight, and with that, a magnificent bubblebutt waiting to get grabbed by you. As you take some time to admire his dark glutes, a soft, warm tendril brushes against the back of your head, encouraging you to lean closer...";
 	say "     Offering no resistance to this invitation, you position yourself around his legs, sliding your hands over his thighs from the backside, then around his glutes. His black skin is really soft, and his buttcheeks are so plump and bubbly that you could just stay here feeling them up for hours... and for just a second, Toron seems briefly distracted by your touch, showing signs of arousal, before he returns to his usual expression while serving drinks. You don't want to rush anything here, so first, you feel up his ass cheeks some more, because they feel really good on your palms, bouncing nicely and firmly with each movement he makes. The bartender archs his back a little, letting you take a better look at his pucker. It's shaped like a plump and soft donut hole, twitching along with your touch, looking so inviting that it sends your heart into a fast, eager beat.";
 	WaitLineBreak;
 	say "     As you are getting acquainted with his marvelous butt, each plump glute clenching and bouncing with your caressing, you slide in a single finger right between his cheeks to feel that warm and accommodating hole, feeling almost too silky. You see the demon taking a deep breath, as he turns his head downwards to have a brief look at you, then back smiling to possibly an approaching client - you can't really see what is going on from your angle - while you have your own fun. It feels amazing just rubbing his anus, it's incredibly warm and welcoming, and a plethora of ideas just pop up in your mind... Only if you could do anything you wanted to his ass right here, right now... Though perhaps you can give it a good lick. His tentacle keeps pushing your head from behind, which is a clear invitation to this.";
@@ -836,7 +819,7 @@ to say ToronNightAssPlay:
 	say "     [bold type]Something definitely feels odd about this...[roman type][line break]";
 	say "     Not only you are absolutely violated by an impossibly large number of shadow tentacles swarming your body from all sides, slipping inside your holes and fondling your crotch faster than you can even blink, you are accidentally impaling Toron on half your entire arm, or rather, his enormous ass that seemed to have outgrown your expectations, quite literally. And it is not satisfied yet, you feel him try to pull more of it, clenching around your arm so hungrily that you find it appropriate to move it around and thrust inwards in order to sate it. But your body is soon overwhelmed by a myriad of sensations as you feel your mind dive into darkness, your last pleasures echoing intensely as you hit your climax, ecstasy repeating itself over and over...";
 	WaitLineBreak;
-	say "     Before you collapse, Toron lets go of you, his shape having returned to normal by now. You find yourself lying down on his side of the counter with the lounge music, as well as your senses, slowly coming back to you. Several tentacles begin to pull you up and help you stand, and before he lets you go, he turns to you. His eyes are at mere inches from his, and you are surprised by a kiss. 'You were delightful. Your mind is a soothing place... and you're not so bad with your tongue. Hit me up for more next time.' he says, as he taps your hip - this time with his hand - with a demonic grin. Shivers run down your spine, but you retribute with your best smile and discretely leave him to return to his shift undisturbed.";
+	say "     Before you collapse, Toron lets go of you, his shape having returned to normal by now. You find yourself lying down on his side of the counter with the lounge music, as well as your senses, slowly coming back to you. Several tentacles begin to pull you up and help you stand, and before he lets you go, he turns to you. His eyes are at mere inches from his, and you are surprised by a kiss. 'You were delightful. Your mind is a soothing place... and you're not so bad with your tongue. Hit me up for more next time.' he says, as he taps your hip - this time with his hand - with a demonic grin. Shivers run down your spine, but you retribute with your best smile and discreetly leave him to return to his shift undisturbed.";
 	if a random chance of 1 in 3 succeeds:
 		if Libido of Mogdraz > 0 and Libido of Mogdraz < 99:
 			increase Lust of Mogdraz by 1; [Mogdraz approves when the player cares for his crew, especially Toron, whom he holds in high regard.]
@@ -865,11 +848,9 @@ Table of Game Objects (continued)
 name	desc	weight	object
 "tonic of mountainous strength"	"A tiny flask with a small cork stopper that keeps its contents from sloshing out. The yellow-green fluid inside does look kinda like orc brew, still, and pretty much like beer."	1	tonic of mountainous strength
 
-instead of sniffing tonic of mountainous strength:
-say "You open the flask for a moment and take a sniff. Then, you are wishing you wouldn't have done that, because the smell is so strong and concentrated in an alcohol-like scent that you begin to cough immediately, in much pain. And you are supposed to drink this?";
-
 tonic of mountainous strength is a grab object.
-Usedesc of tonic of mountainous strength is "[tonic of mountainous strength use]";
+Usedesc of tonic of mountainous strength is "[tonic of mountainous strength use]".
+Scent of tonic of mountainous strength is "You open the flask for a moment and take a sniff. Then you are wishing you wouldn't have done that, because the smell is so strong and concentrated in an alcohol-like scent that you begin to cough immediately, in much pain. And you are supposed to drink this?".
 
 to say tonic of mountainous strength use:
 	if HellfireDrinkTimer > 0:

@@ -7,7 +7,8 @@ Version 1 of Corota by Stripes begins here.
 Section 1 - Creature Responses
 
 to say losetocorota:
-	choose row MonsterID from the Table of Random Critters;
+	setmonster "Corota";
+	choose row MonsterID from Table of Random Critters;
 	if a random chance of 3 in 5 succeeds:
 		if Player is male:
 			say "     The corota brings you to the ground with a rough sweep of their tail, staring down at your broken and bruised form. Sniffing at the air with nose and tongue, the serpent creature smiles down at you in a way only a feral can. 'Yes, strong mate. Deserving mate,' she hisses, going between your legs and working your length with her forked tongue. Whether it turns you on or you merely struggle, suddenly there is a painful sensation in the base of your cock as the corota appears to have bitten into you with their fangs. Bringing their head up to smile at you, again with that feral look, you can see a venom of a different color than normal dripping from their fangs.";
@@ -35,14 +36,11 @@ to say losetocorota:
 		say "     Out of breath, and needing a breather, you try to pull back from the fight with the corota to regain your breath. For a moment, it looks like the corota is going to allow you to do so, turning their back on you and beginning to walk away. Then you notice the small cloud of dust forming between their wings, too late to get out of the way or close your mouth before the corota sends the dust cloud straight into your open mouth with a quick flap of their wings. Gasping now in pain as the particles cling to your throat and insides of your breathing organs, you haven't the environmental awareness to notice them repeating the action again and again. Face going blue, you pass out to wake up some time later covered in the ochre dust, throat raw and demanding a drink soon.";
 		increase thirst of Player by 5;
 
-to say beatthecorota:
-	say "     Your final blow causes the twin-headed creature to stumble back and hiss angrily. It uses its four arms to block further blows as it retreats a few steps. 'Good fight,' it hisses respectfully. 'I give... for now.' With that, it turns and flaps it wings, taking to the air in a burst of dusty air. You cover your mouth and back away, waiting for the air to clear as it flies off in search of sport elsewhere.";
-
-Section 2 - Creature Insertion
-
 to say corotadesc:
 	say "     This strange, serpentine creature is covered in ocher, darkly veined flesh. Her head is snakelike, set above a long neck. Two vicious horns jut through her brow, while her fangs are longer than expected for a snake her size. Most notable is her ability to split her head down its center, forming two crude but functioning half heads each with their own neck half. Her body is lean and has a pair of leathery wings spread from her back, golden brown dust hazing around her. She has two petite breasts on her chest. Her arms are human in shape, but she is gifted with two too many. Her legs are leonine, intimidating in shape. Her tight, rump-less ass is hidden beneath a pair of tails. Each limb looks to be prehensile, nearly as long as she is tall and ending in a spiked knob. Beneath those tails is a wide, female cleft of ocher flesh.";
 	say "     As it approaches you, it waves its wings, sending a wave of that dust at you. It fills the air and stings your eyes and lungs, making it difficult to breathe. Coughing a little, you prepare to fight it off. Periodically, the creature waves its wings again, ensuring the dusty cloud remains.";
+
+Section 2 - Creature Insertion
 
 Table of CombatPrep (continued)
 name(text)	PrepFunction(text)
@@ -53,7 +51,7 @@ to say PrepCombat_Corota:
 	choose row MonsterID from Table of Random Critters;
 	if Player is MalePreferred:
 		now sex entry is "Male";
-	else if "Herm Preferred" is listed in feats of Player:
+	else if Player is HermPreferred:
 		now sex entry is "Both";
 	else:
 		now sex entry is "Female";
@@ -80,7 +78,7 @@ When Play begins:
 	now enemy Name entry is ""; [ Specific name of unique enemy. ]
 	now enemy type entry is 0; [ 0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters. ]
 	now attack entry is "[one of]The corota[or]She[or]The serpent-hybrid[or]The bifurcated creature[as decreasingly likely outcomes] [one of]sweeps your feet out from under your with a pass of its powerful tails[or]bashes its thick tails against you[or]moves its head in to bite, splitting them at the last moment to avoid your block and bite you from two sides[or]sinks its fangs into your side[or]slashes at you with its claws, rending at your flesh[at random]";
-	now defeated entry is "[beatthecorota]";
+	now defeated entry is "     Your final blow causes the twin-headed creature to stumble back and hiss angrily. It uses its four arms to block further blows as it retreats a few steps. 'Good fight,' it hisses respectfully. 'I give... for now.' With that, it turns and flaps it wings, taking to the air in a burst of dusty air. You cover your mouth and back away, waiting for the air to clear as it flies off in search of sport elsewhere.[line break]";
 	now victory entry is "[losetocorota]";
 	now desc entry is "[corotadesc]";
 	now face entry is "snake-like, set above a long neck. Two [one of]large[or]vicious[or]curved[at random] horns jut through your brow, while your fangs are longer than expected for a snake your size. Most notable is your ability to split your head down its center, forming two crude but functioning half heads each with their own neck half. It is most disconcerting that doing so does not feel strange to you at all";
@@ -233,7 +231,6 @@ When Play begins:
 	[Clit Size Adjective is generated by a function and can be used in scenes: very small/small/average/large/very large]
 ]
 
-
 Section 3 - Alt Attack - Corota Dust
 
 Table of Critter Combat (continued)
@@ -251,14 +248,16 @@ this is the corotadust rule:		[draining cloud]
 	if Playernum > corotanum:
 		say "You cough a little, but fight on unhindered for the moment.";
 	else:
-		let dam be ( ( wdam entry times a random number from 80 to 120 ) / 250 ); [40% damage]
+		let dam be ( wdam entry times a random number from 80 to 120 ) / 250; [40% damage]
 		if face mask is equipped, decrease dam by 1;
 		say "You cough violently as you're forced to breathe in more of the dust. You take [special-style-2][dam][roman type] damage!";
 		LineBreak;
 		decrease HP of Player by dam;
-		if HP of Player < 1:
-			if HP of Player <= 0, now fightoutcome is 20;
-			if Libido of Player >= 110, now fightoutcome is 21;
+		if HP of Player < 1 or Libido of Player > 109:
+			if HP of Player <= 0:
+				now fightoutcome is 20;
+			else:
+				now fightoutcome is 21;
 			lose;
 
 Section 4 - Drop Item - Corota Venom
@@ -268,18 +267,24 @@ name	desc	weight	object
 "corota venom"	"Some toxic, ochre yellow liquid that you've preserved in a jar... for some reason."	1	corota venom
 
 corota venom is a grab object. corota venom is infectious. Strain of corota venom is "Corota".
+the scent of corota venom is "The snake venom has a strong, stinging scent that reminds you slightly of the creature's dusty powder.".
 Usedesc of corota venom is "[corotavenomuse]".
 
 to say corotavenomuse:
+	if "Iron Stomach" is not listed in feats of Player:
+		choose row with Name of "Corota" from Table of Random Critters;
+		if Player is MalePreferred:
+			now sex entry is "Male";
+		else if Player is HermPreferred:
+			now sex entry is "Both";
+		else:
+			now sex entry is "Female";
 	say "     Feeling brave or foolish, you try drinking down the snake venom. It stings as it goes down, making you weak in the knees and cough as it starts to burn at your throat and stomach. You curl up in a ball of pain as the heat spreads, setting off something inside you.";
 	decrease HP of Player by 10;
 
-the scent of corota venom is "The snake venom has a strong, stinging scent that reminds you slightly of the creature's dusty powder.".
-
-
-[
 Section 5 - Endings
 
+[
 Table of GameEndings (continued)
 Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
 "Corota Infection"	"Infection"	""	Corota Infection rule	1000	false

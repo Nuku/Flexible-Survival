@@ -23,13 +23,7 @@ Version 8 of Demonologist by Gherod begins here.
 [ 5 - Submitted to Xaedihr once ]
 [ 6 - Talked to Xaedihr after having submitted to him once. Unlocks more scenes. ]
 
-[***********************************************************]
-[***********************************************************]
-[***********************************************************]
 Section 1 - Hellish Trashpile
-[***********************************************************]
-[***********************************************************]
-[***********************************************************]
 
 [ Resolution stages                          ]
 [   0: Player first encountered the event    ]
@@ -49,7 +43,7 @@ Sarea of Hellish Trashpile is "Warehouse".
 when play begins:
 	add Hellish Trashpile to BadSpots of DemonList;
 
-LastTrashSearchTurn is a number that varies. [@Tag:NotSaved]
+LastTrashSearchTurn is a number that varies.
 LastTrashSearchTurn is usually 20000.
 
 to say ResolveEvent Hellish Trashpile:
@@ -81,21 +75,18 @@ to HellTrashEvent:
 	say "     [link](4)[as]4[end link] - Take your leave and avoid this place from now on.";
 	now calcnumber is 0;
 	while calcnumber < 1 or calcnumber > 4:
-		say "Choice? (1-4)>[run paragraph on]";
+		say "Choice? (1-4)> [run paragraph on]";
 		get a number;
-		if calcnumber is 1 or calcnumber is 2 or calcnumber is 3 or calcnumber is 4:
-			break;
-		else:
+		if calcnumber < 1 or calcnumber > 4:
 			say "Invalid choice. Type [link]1[end link] to wait for the imp to leave, [link]2[end link] to fight him after drawing his attention, [link]3[end link] to leave this place or [link]4[end link] to leave for good.";
+	LineBreak;
 	if calcnumber is 1: [wait for the imp to leave]
-		LineBreak;
 		say "     Hidden behind the wall, you wait until the imp finishes his task. 'Finally! I think this is everything! There's still that bloody hall to clean up before...' His speech is cut out as the portal closes behind him. This is your chance to investigate the pile without any disturbances.";
 		if Resolution of Hellish Trashpile < 2:
 			DemonicRitualTapeGet;
 		else:
 			DemonicItemGet;
 	else if calcnumber is 2: [fight the imp]
-		LineBreak;
 		say "     Hidden behind the wall, you grab a nearby rock and throw it into the alleyway. It ricochets off the walls, making a loud impact sound that echoes through the narrow pathways. 'Huh?! What was this?! Is someone there?! Answer!' Your strategy worked, as the imp is now walking away from the portal and towards your position. Now's your chance to take him down!";
 		say "[FightTrashImp]";
 		if Resolution of Hellish Trashpile < 2:
@@ -103,28 +94,25 @@ to HellTrashEvent:
 		else:
 			DemonicItemGet;
 	else if calcnumber is 3: [leave]
-		LineBreak;
 		say "     Right now, you have no interest in the trashpile, so you simply turn your back and walk away, hoping to return some other time. Carefully making your way out of the narrow pathways, you're soon through the wide roads and back to the main area of the Warehouse District.";
 	else if calcnumber is 4: [leave for good]
-		LineBreak;
 		say "     Deciding you don't want to encounter the imp ever again, you turn your back and walk away. Carefully making your way out of the narrow pathways, you're soon through the wide roads and back to the main area of the Warehouse District. You also take note of this route, so you don't come back here by accident on your future explorations.";
 		now resolution of Hellish Trashpile is 99;
 
 to say FightTrashImp:
 	say "     A rapid flutter of wings draws your attention to an incoming threat in the shape of a small, red-skinned creature about a foot in height! The slender being has a pair of bat-like wings on his back, a spade-tipped tail, and its relatively handsome face is crowned by an unruly mop of black hair out of which two curved horns poke out of. Wearing nothing but a thin, skimpy loincloth that sways from side to side with every motion, there is little doubt that this tiny demon, who goes by the name of Krokleet, is male.";
-	say "     Swooping down on you, the imp gives you an angry frown before clearing his throat and booms out in his strangely high pitched tone. 'How dare you intrude during my duties! Isn't it enough hassle as it is, I'll have to deal with unpleasantries like yourself?!' His voice just makes it look all a bit funny, [if Libido of Skarnoth > 0]nothing like the imps you've encountered before,[end if] and you can't quite suppress a snort at how almost comical he sounds, drawing you a hateful glare from the imp. 'We'll see who's laughing after I give you a well-deserved thrashing, whelp!' he shouts and raises a hand, forming a ball of fire above his palm about an inch in diameter.";
+	say "     Swooping down on you, the imp gives you an angry frown before clearing his throat and booms out in his strangely high pitched tone. 'How dare you intrude during my duties! Isn't it enough hassle as it is, I'll have to deal with unpleasantries like yourself?!' His voice just makes it look all a bit funny, [if Libido of Skarnoth > 0]nothing like the imps you've encountered before, [end if]and you can't quite suppress a snort at how almost comical he sounds, drawing you a hateful glare from the imp. 'We'll see who's laughing after I give you a well-deserved thrashing, whelp!' he shouts and raises a hand, forming a ball of fire above his palm about an inch in diameter.";
 	challenge "Imp Male";
 	if fightoutcome < 20: [player won]
 		say "     Taking hold of the slender little demon, you grab his head and give it a sharp twist, breaking his neck. He scowls at the pain, but then surprisingly gives a toothy smile. 'Can't kill a demon, you idiot. I'll just end up in hell and find my way back...' he croaks out as the life fades from him. Then as the body goes still, it seems to melt between your fingers, becoming a puff of red smoke that is scattered by the wind.";
 	else if fightoutcome > 19 and fightoutcome < 30: [lost]
-		if HP of Player > 0:[player submits]
-			say "     As you submit to the little demon, the imp lowers his guard, perplexed with your change of attitude. 'What?! You interrupt my work and nearly hit me with a rock... for this?! While he clearly sounds like he's annoyed with your intrusion, the slowly building protrusion beneath his loincloth gives him away. 'At least you know your place as the pathetic mortal you are! Yeah, that's right! I'm the superior race, here! His too-broad mouth pulls into a wide grin showing off a whole row of sharp teeth as he flies over to you. 'Now you'll have to make up for my wasted time! Strip naked, slave!' The hell minion puffs up his chest as he caresses his throbbing shaft, observing you taking off your gear and clothes, dropping them to the ground one by one. Fluttering around your exposed body, he demands that you take some lewd poses to show off - like shaking and spreading your ass or air-humping with your crotch - until he commands you to lie down on your back. he lands on your chest a moment later, placing tiny hooves to stand on your breastbone.";
-		else:[player loses]
+		if HP of Player > 0: [player submits]
+			say "     As you submit to the little demon, the imp lowers his guard, perplexed with your change of attitude. 'What?! You interrupt my work and nearly hit me with a rock... for this?! While he clearly sounds like he's annoyed with your intrusion, the slowly building protrusion beneath his loincloth gives him away. 'At least you know your place as the pathetic mortal you are! Yeah, that's right! I'm the superior race, here! His too-broad mouth pulls into a wide grin showing off a whole row of sharp teeth as he flies over to you. 'Now you'll have to make up for my wasted time! Strip naked, slave!' The hell minion puffs up his chest as he caresses his throbbing shaft, observing you taking off your gear and clothes, dropping them to the ground one by one. Fluttering around your exposed body, he demands that you take some lewd poses to show off - like shaking and spreading your ass or air-humping with your crotch - until he commands you to lie down on your back. He lands on your chest a moment later, placing tiny hooves to stand on your breastbone.";
+		else: [player loses]
 			say "     You are left swaying badly after the last hit of the little demon and the imp gives an evil chuckle as he flies right up to your face in a flutter of wings. With his too-broad mouth pulling into a wide grin showing off a whole row of sharp teeth, he reaches out to poke your forehead with one finger, then gives a small shove - enough to make you keel over backwards. 'What were you thinking?! You should have realized that you're no match for me! I'm a demon, dumb-fuck! And I am working! Now you'll have to make up for my wasted time!' With those words, the foot-tall being lands on your chest, placing tiny hooves to stand on your breastbone.";
 		say "     'I won't go easy on you, bitch! You'll be my fucktoy until I'm done screwing the hell out of you! Hah!' the red-skinned humanoid gleefully says as he taps his right hoof on your chest and rubs his crotch. Wearing nothing but a threadbare loincloth, it is painfully obvious that the demon is hard as a rock - his well-sized cock (for the small body-size) standing straight out under the fabric and tenting it. He clearly gets off on ordering others around. With the flick of a clawed hand, your little captor pulls aside the loincloth a moment later, revealing his bright red shaft and starting to jerk it off with gleeful intensity.";
-		WaitLineBreak;
+		wait for any key;
 		project the figure of Imp_naked_icon;
-		WaitLineBreak;
 		say "     'You're nothing but a weak little mortal brought down by my might and power, are you? Go on - say it!' he demands from you while beating off, and given your current position you've got little choice but to obey. This arouses the imp even more, prompting him to play with his balls - squeezing them while giving his shaft a few pulls and swings. 'Let's put that mouth to good use! Yeah, you heard me! I want you to suck my dick like the good fucktoy you are!' His erection throbs even more as he leans over to your face, placing his little hands on both sides of your face and pulling your head with surprising strength. Your lips soon meet the gleaming head of his demon cock, already soaked in precum as it continuously oozes from the slit. With a quick push, your mouth is forced open to take the yet generously sized shaft inside, barely managing to hit your throat as the small imp eagerly thrusts his hips forward.";
 		say "     By holding himself half above your face, given how little he weighs, the short demon manages to effectively facefuck you, his erection pulsing with growing lust as he increases the pace. 'That's it, slave! Who's a good fucktoy?' he giggles as he pulls his cock from you with a loud 'pop' sound, stroking it faster and faster as he puts your tongue to work on his red ballsack. You do your best to lick them thoroughly, running your tongue all over his nuts. Soon, the groans and grunts of his weirdly high pitched voice build to a half-shouted roar, and he bucks his hips against the hand gripping his cock. You feel his balls retracting slightly and pulsing in your mouth as he sprays long blasts of cum all over your hair and forehead. The sheer volume of demonic seed he puts out is almost admirable, and you feel every spurt of it being forced out of his sac. Eventually you're forced to close your eyes tightly as a splashed line of cum runs down your eyebrow.";
 		WaitLineBreak;
@@ -141,26 +129,22 @@ to HellTrashEvent2:
 	say "     [link](3)[as]3[end link] - Leave for now.";
 	now calcnumber is 0;
 	while calcnumber < 1 or calcnumber > 3:
-		say "Choice? (1-3)>[run paragraph on]";
+		say "Choice? (1-3)> [run paragraph on]";
 		get a number;
-		if calcnumber is 1 or calcnumber is 2 or calcnumber is 3:
-			break;
-		else:
+		if calcnumber < 1 or calcnumber > 3:
 			say "Invalid choice. Type [link]1[end link] to wait for the imp to leave, [link]2[end link] to fight him after drawing his attention or [link]3[end link] to leave this place.";
+	LineBreak;
 	if calcnumber is 1: [wait for the imp to leave]
-		LineBreak;
 		say "     Hidden behind the wall, you wait until the imp finishes his task. 'Finally! I think this is everything! There's still that bloody hall to clean up before...' His speech is cut out as the portal closes behind him. This is your chance to investigate the pile without any disturbances.";
 		if Resolution of Hellish Trashpile < 2:
 			DemonicRitualTapeGet;
 		else:
 			DemonicItemGet;
 	else if calcnumber is 2: [fight the imp]
-		LineBreak;
 		say "     Hidden behind the wall, you grab a nearby rock and throw it into the alleyway. It ricochets off the walls, making a loud impact sound that echoes through the narrow pathways. 'Huh?! What was this?! Is someone there?! Answer!' Your strategy worked, as the imp is now walking away from the portal and towards your position. Now's your chance to take him down!";
 		say "[FightTrashImp]";
 		DemonicItemGet;
 	else if calcnumber is 3: [leave]
-		LineBreak;
 		say "     Right now, you have no interest in the trashpile, so you simply turn your back and walk away, hoping to return some other time. Carefully making your way out of the narrow pathways, you're soon through the wide roads and back to the main area of the Warehouse District.";
 
 to DemonicRitualTapeGet:
@@ -173,8 +157,7 @@ to DemonicRitualTapeGet:
 to DemonicItemGet:
 	say "     With a quick dash, you approach the pile and get your hands down on the pile of torn boxes, empty cans, ragged clothes, and you're careful enough not to touch any of those odd stains you detect in the fabrics. Your efforts reward you with an assorted amount of useless trash, well-worn pieces of clothing that are completely unusable anymore, objects burned beyond recognition, and even what seems to be... hair? Nonetheless, you're not yet ready to give up, as there's more of the pile you haven't searched through, yet.";
 	LineBreak;
-	let randomnumber be a random number from 1 to 3;
-	if randomnumber is:
+	if a random number from 1 to 3 is:
 		-- 1:
 			say "     After some time, you manage to get your hands on a bottle of [bold type]Demon Seed[roman type]. Either they don't see any use for this kind of thing anymore, or the demons are really into storing their own stuff in bottles and release them into the surface world, hoping some rather bizarre creature or person would drink this. It smells really sweet, and it does have an odd color, flowing strangely inside at a very warm temperature. Still, you decide to tuck it away in your inventory and call this search done, as there's little left that you haven't rummaged through already.";
 			ItemGain demon seed by 1 silently;
@@ -185,13 +168,7 @@ to DemonicItemGet:
 			say "     Sadly, your efforts are in vain. There's nothing of use that you can bring with you. Your only option is to hope for another chance at catching the imp and have another go at the next trash pile he makes.";
 	now LastTrashSearchTurn is turns;
 
-[***********************************************************]
-[***********************************************************]
-[***********************************************************]
 Section 2 - Tape - Demonic Ritual
-[***********************************************************]
-[***********************************************************]
-[***********************************************************]
 
 to say DemonicRitualTape:
 	say "     At the beginning of the tape, you see plain darkness, only the cracking steps on dry wood echo through the walls of this yet unknown place. Only then, a faint light reveals the presence of a man, holding a flashlight in the lens['] direction. He glances around with the luminous source as he searches for a way to keep the room illuminated, finally deciding to place it on a nearby table. By the time he makes it back to the camera, an odd feeling of familiarity strikes you as the bookshelves can now be seen surrounding the place. Then, a clear and deep voice sounds from behind the perspective as the camera starts moving. 'There, this should do it. Might only require a few additional items.' You see his hand throwing the contents of some strange vials into a red pentagram drawn on the ground. He does this while holding the camera, and when he points downwards, you see a strange, old looking book by his feet.";
@@ -216,7 +193,7 @@ to say DemonicRitualTape:
 	if resolution of Hellish Trashpile < 3:
 		now Resolution of Hellish Trashpile is 3;
 
-after going to Darkened Alcove while (Resolution of Hellish Trashpile is 3 and ancient tome is not owned):
+after going to Darkened Alcove while Resolution of Hellish Trashpile is 3 and ancient tome is not owned:
 	say "     Determined to find that grimoire you saw on the tape, you decide to rummage through most bookshelves you can find in the Library, in hopes that you stumble across the tome somehow.";
 	say "     As you walk through what previously seemed to be a very peaceful corner, full of books and knowledge waiting to be read and had, which is now a silent, desolate room with barely anything noteworthy except for its obvious abandoned state, a cracked window and a rotten wooden chair, you find nothing but the remains of what was once a grand library... and disappointment. The book continues to elude you, no matter how thorough your search is. You begin to think that, perhaps, this is a waste of time... Maybe someone already came here and looted the tome, leaving with it to a far, far away place...";
 	say "     Perhaps you would never find this tome here...";
@@ -229,13 +206,7 @@ after going to Darkened Alcove while (Resolution of Hellish Trashpile is 3 and a
 	now Resolution of Hellish Trashpile is 4;
 	ItemGain ancient tome by 1;
 
-[***********************************************************]
-[***********************************************************]
-[***********************************************************]
 Section 3 - Hell Realm
-[***********************************************************]
-[***********************************************************]
-[***********************************************************]
 
 Table of GameEventIDs (continued)
 Object	Name
@@ -249,7 +220,6 @@ to say HellRealmRitual:
 	say "     After analyzing the tome, you managed to find the pages regarding the ritual you saw being performed in the tape. By drawing a pentagram on the floor, illuminated by candles, you only need to speak the ancient words written in the book in order to call a portal leading into a realm of Hell. Then, you should expect a crimson wormhole, large enough to allow you through, to take shape in front of you. The way you have to select which realm you end up traveling to is by changing a few words, and to deepen the connection, you need to throw something into the pentagram. A good mix is a bottle of [bold type]Demon Seed[roman type] and a dissolved [bold type]Libido Pill[roman type]. After acquiring these two items, you're all set for an attempt.";
 	if carried of demon seed > 0 and carried of libido pill > 0:
 		say "     Knowing that you're carrying the necessary items, would you like to perform this Demonic Ritual and travel to Hell? Beware, as it may be a dangerous trip.";
-		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Perform the Demonic Ritual.";
 		say "     ([link]N[as]n[end link]) - Close the tome for now.";
 		if Player consents:
@@ -270,22 +240,18 @@ to HellRealmEvent:
 	say "     [link](3)[as]3[end link] - What if...";
 	now calcnumber is 0;
 	while calcnumber < 1 or calcnumber > 3:
-		say "Choice? (1-3)>[run paragraph on]";
+		say "Choice? (1-3)> [run paragraph on]";
 		get a number;
-		if calcnumber is 1 or calcnumber is 2 or calcnumber is 3:
-			break;
-		else:
+		if calcnumber < 1 or calcnumber > 3:
 			say "Invalid choice. Type [link]1[end link] to fight the demon, [link]2[end link] to submit or [link]3[end link] to do something else.";
+	LineBreak;
 	if calcnumber is 1:
-		LineBreak;
 		say "     You didn't come this far to end up enslaved by demonic fiends like the previous fool who dared to mess with them. You're not that fool. If there's a plan, you follow it, and that plan is teaching the demons a lesson! Assuming an aggressive stance, the demon taunts you and challenges you to make the first move.";
 		HellRealmBruteFight;
 	else if calcnumber is 2:
-		LineBreak;
 		say "     No matter how hard you attempt to resist, you can't beat this demon, and you can't even think about facing the others, if there are any. Maybe the ritualist submitted on purpose to gain entry, and you resolve suggests you do the same. On your knees in front of the brute, you're about to discover if this was the right move...";
 		HellRealmBadEnd1;
 	else if calcnumber is 3:
-		LineBreak;
 		if demon brute is listed in companionList of Player and DemonBruteStatus is 0:
 			if DBCaptureQuestVar is 6 or DBCaptureQuestVar is 7:
 				say "     It is clear that you have no escape, as the demon stands ready to knock you down, and he probably has some friends on their way, judging from what you saw in the tape. Taking this into account, you look at Brutus, and you look back at the demon at the portal, and within a fraction of seconds, you start pretending you're your pet's captured victim. It takes a while until your demonic companion understands what you're trying to do - which seemed obvious, as you're literally calling him 'Master' and reminding him of an 'exclusivity deal' he made with you - but as soon as he understands the plan, he grins back at the demon brute, grabs you and puts you by his shoulder as if you were a sack of something, accidentally exposing your ass to the enemy.";
@@ -322,8 +288,8 @@ to HellRealmBruteFight:
 to HellRealm3BrutesFight:
 	let GroupFightCounter be 0;
 	now fightoutcome is 0; [reset]
+	now inasituation is true;
 	while fightoutcome < 20 and GroupFightCounter < 3: [runs for 3 times or until the player loses or flees]
-		now inasituation is true;
 		challenge "Demon Brute";
 		increase GroupFightCounter by 1;
 	now inasituation is false; [reset]
@@ -343,51 +309,43 @@ to HellRealmTheGrid:
 	say "     The first trial you find is some sort of labyrinth, with multiple paths and directions to follow. Here you hear loud screams and moans, but disturbingly so, they're not of pain or despair, but sound empty and devoid of anything resembling humanity. You haven't yet seen any of these prisoners, but there is a chance you could find the ritualist here. As you walk through the horrific corridor, you see the cells. Like any prison you laid your eyes on already, there are bars on each cell, and inside, you find all sorts of sexual punishments that go beyond your imagination. Some are humans, others were at some point, and the rest of the cells are empty, though you have a feeling they weren't too long ago. These perverted tortures are made with automatized contraptions, and their prisoners were altered to produce extra sexual juices. That's right, each one of these cells hold milking machines to optimize their hosts towards cum and milk production!";
 	WaitLineBreak;
 	say "     No matter if they were male, female or hermaphrodites, what interests the demons is how much they can milk out of a body. You see some prisoners with impossibly massive boobs hooked up into sucking tubes as all their holes are filled with monster dildos, while their balls, the biggest you've ever seen, and dicks of gigantic proportions are milked thorough by large penis pumping devices. There's a continuous stream of sexual fluids being pulled to be delivered somewhere else in this freak division, and you're sure these prisoners are being injected with something. Even if you were to free them, you doubt they'd be able to walk away from here, as their enormous disproportions would render any movement attempt useless, not to mention being stuck in there for so long certainly hasn't done any good to their muscles.";
-	say "     [bold type]You could try to know more about this procedure, or just continue on your way to try to find the ritualist.[roman type][line break]";
-	LineBreak;
+	say "[line break]     [bold type]You could try to know more about this procedure, or just continue on your way to try to find the ritualist.[roman type][line break]";
 	say "     ([link]Y[as]y[end link]) - Try to know more about this procedure.";
 	say "     ([link]N[as]n[end link]) - This is dreadful, just finish your task as fast as possible.";
 	if Player consents:
 		LineBreak;
 		say "     It is difficult to approach the cells without stumbling on wires and tubes on the outside, but a close analysis reveals that these are all connected to a bigger machine. Luckily, they form a trail along the corridors, so it's easy to follow. Without further ado, you step through and around the corners where the tubes lead, passing by several more cells occupied by these unfortunate souls. At the end of the final corridor, there is an half-open door where the tubes are passing through, into a room with some slightly flickering lights and mechanical noises. This is probably the main installment that allows these contraptions to run, and simultaneously, the source of energy! There doesn't seem to be anyone either around or behind you, but you don't know what you'll find on the other side of the door of steel. [bold type]Do you go in?[roman type][line break]";
-		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Push the door open and go inside.";
 		say "     ([link]N[as]n[end link]) - This already went too far. Just return to your main quest.";
 		if Player consents:
 			LineBreak;
 			say "     You can't shake the curiosity out of you, and having reached this far, you decide turning back right now would make all your efforts in vain. With this said, you carefully push the steel door open and pay attention to the tubes by your feet. Pushing it made it crank loudly, however, and whatever could be inside would probably have heard you. Still, you try to be as sneaky as possible. But a familiar voice strikes your ears with a screeching annoying tone. 'What?! You again?! What are you doing here?!' Looks like it's Krooklet, the imp you found before dumping trash in one of the alleys in the Warehouse District. You remember he's some sort of employee, or better said, slave to the demons, and he's probably in charge of doing the prisoner cells['] maintenance. It explains the type of junk he was throwing out before. 'How did you get here?! Answer me!' Looks like you really don't have much choice but to deal with him first. [bold type]You need to react quickly![roman type][line break]";
-			LineBreak;
 			say "     [link](1)[as]1[end link] - Charge at him!";
 			say "     [link](2)[as]2[end link] - Attempt to run away.";
 			say "     [link](3)[as]3[end link] - Evaluate other options.";
 			now calcnumber is 0;
 			while calcnumber < 1 or calcnumber > 3:
-				say "Choice? (1-3)>[run paragraph on]";
+				say "Choice? (1-3)> [run paragraph on]";
 				get a number;
-				if calcnumber is 1 or calcnumber is 2 or calcnumber is 3:
-					break;
-				else:
+				if calcnumber < 1 or calcnumber > 3:
 					say "Invalid choice. Type [link]1[end link] to charge at the imp, [link]2[end link] to try to run away or [link]3[end link] to do something else.";
+			LineBreak;
 			if calcnumber is 1:
-				LineBreak;
-				say "     Let's say you don't really think too much about your next move, but something in your line of thinking made you assume it was a good idea to lunge yourself towards a flying foot-long demon, who is faster and smaller than you. Obviously, [bold type]you just hurt yourself, as the imp counterattacked with a fireball, leaving you slightly singed and collapsed on the floor.[roman type] 'Hah! Is that everything you've got?! Stupid mortals really don't know their places! I'm going to warn the masters, you're done!' With this said, the imp storms away through the door you just opened, his angry mumbling echoing across the corridors. This doesn't sound good, and [bold type]may actually complicate things.[roman type] Well, for now the imp is out of the way, so you're free to investigate this room.";
+				say "     Let's say you don't really think too much about your next move, but something in your line of thinking made you assume it was a good idea to lunge yourself towards a flying footlong demon, who is faster and smaller than you. Obviously, [bold type]you just hurt yourself, as the imp counterattacked with a fireball, leaving you slightly singed and collapsed on the floor.[roman type] 'Hah! Is that everything you've got?! Stupid mortals really don't know their places! I'm going to warn the masters, you're done!' With this said, the imp storms away through the door you just opened, his angry mumbling echoing across the corridors. This doesn't sound good, and [bold type]may actually complicate things.[roman type] Well, for now the imp is out of the way, so you're free to investigate this room.";
 				if HP of Player > 10:
 					decrease HP of Player by 10;
-				Now Resolution of Hell Realm is 1; [Krooklet warned the Masters]
+				now Resolution of Hell Realm is 1; [Krooklet warned the Masters]
 			else if calcnumber is 2:
-				LineBreak;
 				say "     Running away sounds about right. You excuse yourself and get ready to run, but as soon as you give a step towards the door, the imp yells and blasts a fireball in your direction, which passes by you and stalls you on spot. 'Not so fast! Who said you could leave?! Now you'll have to present yourself to the masters! That's right! They'll know what to do with you! Maybe hook you up on the machines! For eternity! HAH!' his screeching voice keeps making your ears want to cry, but as he talks, he gets closer to you... There's an opportunity, and you take it. You smash the imp's head with a closed fist using all your strength, and he collapses on the ground. That was surprisingly easy! Well, now with the imp out of the way, you're free to investigate the room.";
 			else if calcnumber is 3:
 				if demon brute is listed in companionList of Player and DemonBruteStatus is 0 and (DBCaptureQuestVar is 6 or DBCaptureQuestVar is 7):
-					LineBreak;
 					say "     You turn to your demon companion, and to the imp, the gesture itself being suggestive enough regarding what you're thinking. The brute nods with a grin as he looks at the little fiend, whose expression changes abruptly when he realizes the big brute is walking towards him. 'Wait, no! Not you! Not another! My quarrel is with that stupid mortal! Why are you even following a surfacer, either way?! WEAK!' yells the imp, but Brutus shows a deaf ear to whatever he says. The tiny demon tries to escape the large purple hand reaching over him, but no matter how hard he tries, your companion is large enough to reach him with little effort.";
 					say "     'Gah! Put me down! Let me go! Don't-... mmph!' Despite the imp's pleads for mercy, Brutus grabs his head, engulfing it entirely with his palm, and everything else you hear is just a whimpering, muffled high pitched voice. As you watch, the demon brute turns to you with a hopeful glare, as if awaiting new instructions. [bold type]You suppose you could let your loyal follower have his way with the imp, or just have him find a way to silence the annoying fiend for the time being.[roman type][line break]";
-					LineBreak;
 					say "     ([link]Y[as]y[end link]) - Allow Brutus to have his way with the imp.";
 					say "     ([link]N[as]n[end link]) - Order him to knock the imp out.";
 					if Player consents:
 						LineBreak;
-						say "     Eager to get started, Brutus nods at you with a delighted grin on his face, as he turns to the imp once again. The size difference between one another is more than obvious, and what you see after that is actually what one would expect from such a couple. Seeing your demon friend's raging erection, it is clear on how he plans to use it. With his large hand still covering the little fiend's head, the demon brute slides his precum leaking cock across the little imp, keeping the poor creature trapped under that meaty log. Things get more interesting as Brutus wraps the minion's arms and legs around his thick shaft and begins thrusting, effectively rubbing his enormous length against the little red demon. Amidst his sexual grunts and the useless muffled whimpers released by the imp, the brute mercilessly uses the foot-long fiend for his pleasure in the only way he finds doable.";
+						say "     Eager to get started, Brutus nods at you with a delighted grin on his face, as he turns to the imp once again. The size difference between one another is more than obvious, and what you see after that is actually what one would expect from such a couple. Seeing your demon friend's raging erection, it is clear on how he plans to use it. With his large hand still covering the little fiend's head, the demon brute slides his precum leaking cock across the little imp, keeping the poor creature trapped under that meaty log. Things get more interesting as Brutus wraps the minion's arms and legs around his thick shaft and begins thrusting, effectively rubbing his enormous length against the little red demon. Amidst his sexual grunts and the useless muffled whimpers released by the imp, the brute mercilessly uses the footlong fiend for his pleasure in the only way he finds doable.";
 						say "     Not shortly after, your demon companion is thrusting faster and in shorter motions, and you almost can't believe how horny he is! Within a matter of seconds, the brute releases the imp's head momentarily, but before the little fucker can say anything, a huge amount of thick demon cum is blasted on his face, all the whimpering ending up instead as gurgling sounds. It doesn't stop there, as Brutus keeps shooting it hard, giving the imp a literal cum bath. You can't even see the hellish minion anymore, only a large pool of jizz as your demon companion admires his deed. He pokes the imp one or two times, but he isn't moving. Maybe that was too intense for the poor thing.";
 						WaitLineBreak;
 						say "     Feeling satisfied with the outcome, Brutus stands up and walks over to you with his still half-hard member dandling between his muscle-bound legs, realizing you were watching the entire thing wide-eyed. 'Huh... That felt good. He was really tiny.' he says with a shameless smile, showing those sharp teeth of his clearly proud of himself. Well, you suppose now the imp is out of the way for a long time thanks to your demon friend, so you're free to proceed with your investigation.";
@@ -395,7 +353,6 @@ to HellRealmTheGrid:
 						LineBreak;
 						say "     Shaking off your head, you tell him to simply knock him out and be done with it, with emphasis on the 'out' word. Disappointed, Brutus follows your order without questioning, smacking the imp unconscious. He then leaves the little demon lying down on a corner, completely blacked out, and returns to you as you direct your efforts into investigating this room.";
 				else:
-					LineBreak;
 					say "     There's no time for that! With all the hesitation, the imp loses his patience and hits you with a fireball, [bold type]leaving you singed and in pain, despite your attempts at blocking it.[roman type] 'You don't want to answer me?! Fine! Whatever! The Masters will know what to do with you when I present you to them. That's right! Maybe hook you up on the machines! For eternity! HAH!' his screeching voice keeps making your ears want to cry, but as he talks, he gets closer to you... There's an opportunity, and you take it. You smash the imp's head with a closed fist using all your strength, and he collapses on the ground. That was surprisingly easy! Well, now with the imp out of the way, you're free to investigate the room.";
 					if HP of Player > 10:
 						decrease HP of Player by 10;
@@ -405,35 +362,30 @@ to HellRealmTheGrid:
 			WaitLineBreak;
 			say "     You get a grip of yourself moments before you realize you've gotten strangely aroused just from looking at the thing, but a perverted thought involuntarily makes its way into your mind. It wouldn't be so bad, would it? Just giving in to such an exotic contraption, to dive into a slumber of sex and pleasure provided by multiple tentacle-cocks invading all your body holes. You do have the means to hook yourself up, it would be very easy to replicate the solution and arm an injection mechanism with it. All the suffering and pain would end right here, replaced by only the feeling of orgasming over and over again...";
 			say "     Or you could just drop that temptation, as oddly sweet as it sounds, and [bold type]mess with the mechanisms to ensure this little demonic scheme is ruined for good.[roman type][line break]";
-			LineBreak;
 			say "     [link](1)[as]1[end link] - Drop the liquids in the mechanical parts.";
 			say "     [link](2)[as]2[end link] - Just leave them be. It's not your problem, anyway.";
 			say "     [link](3)[as]3[end link] - Become a demon slave and hook yourself up in the machine. Forever.";
 			now calcnumber is 0;
 			while calcnumber < 1 or calcnumber > 3:
-				say "Choice? (1-3)>[run paragraph on]";
+				say "Choice? (1-3)> [run paragraph on]";
 				get a number;
-				if calcnumber is 1 or calcnumber is 2 or calcnumber is 3:
-					break;
-				else:
+				if calcnumber < 1 or calcnumber > 3:
 					say "Invalid choice. Type [link]1[end link] to permanently damage the mechanisms, [link]2[end link] to just leave or [link]3[end link] to make the worst mistake of your life.";
+			LineBreak;
 			if calcnumber is 1:
-				LineBreak;
 				say "     This place is getting to your head, so you decide to give it a taste of its own medicine... more or less. Quickly stepping back towards the supply boxes, you grab anything that's liquid and put it in a big flask, unaware of what you're even mixing in there. Then, you walk over the power core, facing the electric system that keeps this mechanical ordeal chugging. Savoring the moment where you get to outsmart a demonic horde that was collecting mortals for this sick purpose, your blood pumps vigorously with adrenaline, as you think of how mad those fiends will be when they find out their precious little plan have been ruined by an ordinary person just like you! Smiling to yourself, you finally drop the strange mixture in there.";
 				say "     The result is rather violent. Either you dropped it too fast or that was really effective, as it even shoots sparks in your direction! Fortunately, you backed away in time, but the lights are flickering like mad, and the machines are making the weirdest cranking noises, not to mention that you're actually feeling the ground shaking. You have a feeling you should probably leave this place as soon as possible. Following your intuition, you quickly run through the rooms and outside, closing the door behind you and sealing it shut. And what a good thing you did, as you hear a very loud bang coming from inside. A strange white fluid seems to be leaking out through the small opening underneath the steel door... Uh oh. Did you accidentally create an explosive of some sort? Either way, [bold type]the sound could probably have alerted someone, so you'll have to be on your guard.[roman type] But at the same time, you feel like you did the right thing.";
 				WaitLineBreak;
 				say "     Taking a deep breath, you focus on your main task and proceed to continue your search. The machines seem to have stopped, which proves that your actions had the intended results. With this in mind, you walk through the remaining corridors, looking for any signs of the robed man from the tape. You don't seem to be able to encounter anything resembling the figure you saw in the tape, and though that could be a very bad sign - that he got hooked up into one of those and was changed beyond recognition - it is still very early to give up. Accelerating your pace, you search for the next exit, which you find with relative ease. Leaving the image of the sex-inducing milking machines and their prisoners behind, you proceed into the next section of this hellish realm.";
-				if Resolution of Hell Realm is 1:[Krooklet warned the masters]
-					now Resolution of Hell Realm is 2;[Krooklet warned the masters and player destroyed the Grid]
+				if Resolution of Hell Realm is 1: [Krooklet warned the masters]
+					now Resolution of Hell Realm is 2; [Krooklet warned the masters and player destroyed the Grid]
 				else:
-					now Resolution of Hell Realm is 3;[Krooklet was left knocked out and player destroyed the Grid]
+					now Resolution of Hell Realm is 3; [Krooklet was left knocked out and player destroyed the Grid]
 				HellRealmMasters;
 			else if calcnumber is 2:
-				LineBreak;
-				say "     Messing with something you don't know can be dangerous, so you decide to simply step away from everything and return to your task at hand. [if resolution of Hell Realm < 1]Krooklet is still knocked out on the floor, but to ensure you don't find any other surprises, you close the door behind you and seal it shut.[else]You walk through the room and back outside, closing the door behind you and sealing it shut.[end if] Walking through the remaining corridors, you look for any sings of the robed man from the tape. However, you don't seem to be able to encounter anything resembling the figure you saw in the tape, and though that could be a very bad sign - that he got hooked up into one of those and was changed beyond recognition - it is still very early to give up. Accelerating your pace, you search for the next exit, which you find with relative ease. Leaving the image of the sex-inducing milking machines and their prisoners behind, you proceed into the next section of this hellish realm.";
+				say "     Messing with something you don't know can be dangerous, so you decide to simply step away from everything and return to your task at hand. [if resolution of Hell Realm < 1]Krooklet is still knocked out on the floor, but to ensure you don't find any other surprises, you close the door behind you and seal it shut[else]You walk through the room and back outside, closing the door behind you and sealing it shut[end if]. Walking through the remaining corridors, you look for any signs of the robed man from the tape. However, you don't seem to be able to encounter anything resembling the figure you saw in the tape, and though that could be a very bad sign - that he got hooked up into one of those and was changed beyond recognition - it is still very early to give up. Accelerating your pace, you search for the next exit, which you find with relative ease. Leaving the image of the sex-inducing milking machines and their prisoners behind, you proceed into the next section of this hellish realm.";
 				HellRealmMasters;
 			else if calcnumber is 3:
-				LineBreak;
 				HellRealmBadEnd3;
 		else:
 			LineBreak;
@@ -449,8 +401,8 @@ to HellRealmMasters:
 	say "     Making it out of the corridor, you find yourself in some sort of hall, intersecting the room you came from and the next. There are some sorts of dark red plantoid pods hanging all over the place, and these things look alive, as you can hear something like a heartbeat sound coming out of them, and their undulating stalks that seem to be transporting something over to them. Perhaps it's how they're fed, but what's inside remains a mystery. There's no way of knowing, as the pods are completely opaque, protected by what looks like chitin plates. It's somewhat disturbing to think that maybe there's a person in there, provided the sort of spectacles you found before, but it could very well be a fact. These demons' minds are more perverted than anything, after all.";
 	WaitLineBreak;
 	if Resolution of Hell Realm > 0 and Resolution of Hell Realm < 4:
-		say "     However, your peaceful observation ends here, as you're caught by surprise when you feel a strange presence. [if Resolution of Hell Realm is 1]You start hearing that annoying screeching tone again mumbling in the distance, but you also hear steps. That can't be the imp Krooklet alone. 'There! The intruder! As I said!' yells the foot-long minion.[else if Resolution of Hell Realm is 2]You start hearing that annoying screeching tone again mumbling in the distance, but you also hear steps. That can't be the imp Krooklet alone. 'There! The intruder! As I said! And he must be the one who destroyed the Grid, as well!' yells the foot-long minion.[else if Resolution of Hell Realm is 3]You start hearing steps coming from up ahead, and stand ready to face what's about to come.[end if] Two tall and slender figures, of opposite genders, glare at you with a sultry and provocative look. 'Oh my! A fully fleshed mortal! It's the second to have come here voluntarily! Well, the first was half-mortal, but still, quite the luck!' speaks the attractive woman, with a voice as sensual as her slim and sexy body, her demon tail wiggling behind her feminine legs. 'We thank you for saving us the trouble to hunt you down but, you see, you can't just freely roam around as if this was your home.' says her male counterpart, lean and fit with an equally handsome face, his wings moving a bit restlessly. 'Come, let us find you an appropriate place for your delicious body to lay down and rest...'";
-		say "     It looks clear that you're facing the masters of this place, a succubus and an incubus. They look awfully like the common demons of lust you can find outside, which is odd, but you don't give it much thought. They are demanding you to submit. Looks like you have no choice but to comply or to defeat them in combat. [if Resolution of Hell realm > 0 and Resolution of Hell Realm < 3]Luckily you won't have to deal with Krooklet, as he cowardly flew past you in a rush.[end if]";
+		say "     However, your peaceful observation ends here, as you're caught by surprise when you feel a strange presence. [if Resolution of Hell Realm is 1]You start hearing that annoying screeching tone again mumbling in the distance, but you also hear steps. That can't be the imp Krooklet alone. 'There! The intruder! As I said!' yells the footlong minion[else if Resolution of Hell Realm is 2]You start hearing that annoying screeching tone again mumbling in the distance, but you also hear steps. That can't be the imp Krooklet alone. 'There! The intruder! As I said! And he must be the one who destroyed the Grid, as well!' yells the footlong minion[else if Resolution of Hell Realm is 3]You start hearing steps coming from up ahead, and stand ready to face what's about to come[end if]. Two tall and slender figures, of opposite genders, glare at you with a sultry and provocative look. 'Oh my! A fully fleshed mortal! It's the second to have come here voluntarily! Well, the first was half-mortal, but still, quite the luck!' speaks the attractive woman, with a voice as sensual as her slim and sexy body, her demon tail wiggling behind her feminine legs. 'We thank you for saving us the trouble to hunt you down but, you see, you can't just freely roam around as if this was your home,' says her male counterpart, lean and fit with an equally handsome face, his wings moving a bit restlessly. 'Come, let us find you an appropriate place for your delicious body to lay down and rest...'";
+		say "     It looks clear that you're facing the masters of this place, a succubus and an incubus. They look awfully like the common demons of lust you can find outside, which is odd, but you don't give it much thought. They are demanding you to submit. Looks like you have no choice but to comply or to defeat them in combat[if Resolution of Hell realm > 0 and Resolution of Hell Realm < 3]. Luckily you won't have to deal with Krooklet, as he cowardly flew past you in a rush[end if].";
 		HellRealmSuccubusMaster;
 	else:
 		say "     Without further ado, you continue walking through the strange hall, hoping to find another batch of prisoners, or signs of your target. You head deeper into the dungeons, leaving the hellish plantoid pods behind.";
@@ -488,8 +440,8 @@ to HellRealmCells:
 	say "     You investigate each one of the cells to the last, at the end of the corridor, and find one strange red haired man who looks a little different than the others. He's currently naked, with only a collar on his neck, sitting on the ground with his head turned down, supported above his knees. Looking fairly human in appearance, the man actually has toned muscles adorning his pale body, and some odd tattoos of a darkish tint on his shoulder and left arm. In an attempt to call for his attention, you hit the prison bars and make your presence obvious, but he remains in the same position, ignoring you. Even so, you insist, asking him if they've heard of a human who voluntarily came here and ended up captured, though unsure of how exactly he looked like.";
 	WaitLineBreak;
 	say "     Your words made the man lift his head to face you, giving you a good sight at his face. It was strangely flawless, a perfect symmetry only achieved in fantasy depictions of beautiful men, except this one was right in front of you. His eyes were lime green, so bright that they make you feel uneasy. To your surprise, the man raises an eyebrow at you, the expression people make when they're finding something you said very strange. But as you have a good look at him, a familiarity feeling strikes the back of your mind. A clear, masculine but velvety voice reaches your ears as the man ask you a question. 'Who are you?'";
-	say "     But before you have the chance to answer, you hear some angry steps coming from the distance, as a distinctive woman shouts from afar. 'You can't run far, mortal! You're ours, now!' [if Resolution of Hell Realm > 0 and Resolution of Hell Realm < 4]You have just barely dealt with them a while ago...[else]It's a couple, an incubus and a succubus, who are probably the masters of this place.[end if] But they're not alone, something you conclude by looking past them, laying your eyes on a massive group of demon brutes following them. And all of them look equally mad. 'It's time for you to give up. You've already caused enough trouble by stepping in here.' says the incubus as they being marching towards you. They outnumber you by a lot, and even though you had the stamina left, you very much doubt you could take all of them at once... Looks like you'll have to submit, after all.";
-	WaitLineBreak;
+	say "     But before you have the chance to answer, you hear some angry steps coming from the distance, as a distinctive woman shouts from afar. 'You can't run far, mortal! You're ours, now!' [if Resolution of Hell Realm > 0 and Resolution of Hell Realm < 4]You have just barely dealt with them a while ago..[no line break][else]It's a couple, an incubus and a succubus, who are probably the masters of this place[end if]. But they're not alone, something you conclude by looking past them, laying your eyes on a massive group of demon brutes following them. And all of them look equally mad. 'It's time for you to give up. You've already caused enough trouble by stepping in here,' says the incubus as they being marching towards you. They outnumber you by a lot, and even though you had the stamina left, you very much doubt you could take all of them at once... Looks like you'll have to submit, after all.";
+	wait for any key;
 	project Figure of Xaedihr_FullNoRuby_icon;
 	say "     'Not so fast, 'masters'. I believe you still have something I want.' The strange man suddenly speaks with an eloquence you never thought he had, standing up behind the prison bars. You peripheral vision barely catches a glimpse at something unusually big dandling between his legs, but you have no way to confirm that as a crimson light envelops him. Suddenly, he's just besides you, fully dressed in some dark robes, pants and boots. Well, looks like you found the ritualist, but you certainly weren't expecting him to look so human, after all this time. You do doubt calling him human is right, judging by what he just did. With an angry snarl, the once beautiful and flirty succubus now looks like an evil madwoman, stopping the march as she yells at him. 'I always knew you weren't for real! I can't believe I let you deceive us!";
 	say "     Though the mage gives only one rather long response. 'What, you think I'd willingly consent - excuse me the redundancy - to a fucking messy gangbang provided by four extremely sloppy brutes who don't even know how to tell apart the holes they are so apparently acquainted with, if I didn't have a strong reason for that?! Oh my, your intelligence surely is lacking. All mortals are sluts, is that what you think?! Review your theories, you're clearly in need to reminisce about basic human behavior. That is, if your little brains can achieve that much.' He's mad, that's for sure, but the show isn't over. The ritualist lifts his hand with a peculiar gesture, and you can even feel his focus amidst a moment of intense silence.";
@@ -501,7 +453,6 @@ to HellRealmCells:
 
 to HellRealmRubyChamber:
 	say "     With another dimensional voyage, you disappointingly land on another section of this Hell realm. He did save your life, however, so it isn't all that bad. The place you end up in is a very odd one, a large rocky corridor where you can see some sort of gem at the end, gleaming with an intense red light, connected to several fleshy stalks resembling neurons that pulse in the rhythm of a heartbeat. Hugging the walls, there are some nasty looking phallic tentacles coming from holes as big as someone of your size. 'I don't know what you did, but you managed to wash out all the security those bastards had put in this chamber, giving me the chance to steal what I came for. We have to be quick about this. With your help, we might be successful.' It doesn't look like he's asking for your assistance. Sounds more like he's demanding it.";
-	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Tell him you'll help, thanking him for saving your life.";
 	say "     ([link]N[as]n[end link]) - You come here to rescue him and he demands your help? Tell him to fuck off.";
 	if Player consents:
@@ -522,7 +473,6 @@ to HellRealmRubyChamber:
 	WaitLineBreak;
 	say "     Glancing around, you then extend your arm and grab the crimson gem, which feels oddly warm to the touch. You can feel the power within it, unlike anything you ever saw. After getting a good grip of it, you pull it out of the wiring network, watching them all being ripped out of the gem with a loud snap, like stretched rubber bands that were abruptly set loose. However, as you do this, you seem to have triggered a nasty reaction from the tentacles on the walls, as they immediately sense your presence. Xaedihr's spell doesn't seem to be having any effect as of now, and you're left at the end of the corridor without a way to go back.";
 	say "     [bold type]'Don't move an inch![roman type] I'll come to you!' he shouted from the other side, but to your horror, the tentacles are waving around restlessly, slowly approaching you. They're oozing that liquid again, reminding you of plenty of horny precum leaking cocks reaching for you... and [bold type]they're not stopping![roman type] What should you do?";
-	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Don't move, don't breathe and don't blink.";
 	say "     ([link]N[as]n[end link]) - To 'Hell' with it! Get out of there!";
 	if Player consents:
@@ -547,7 +497,7 @@ to HellRealmBadEnd1: [player is fucked by a single demon and wakes up later hook
 	say "     Deciding that he's well lubricated for now, the demon brute violently pushes you back and turns you around, grabbing you by the hips as he prepares you to be used by him. Unable to struggle, as the brute keeps you pinned down on the floor with his massive muscular body, you feel [if Player is female]your pussy[else]your ass[end if] being painfully stretched around his dick. He doesn't intend to take long, as he's already pounding you with no care for your pleasure, forcing as much of his throbbing erection as he can inside you. Within just a few minutes of non-stop fucking, the demon releases a roar as you begin to feel his cum invading your insides, filling you up with the seed of Hell which bulges out of your stomach. He repeats the process, over and over, as if his stamina had no end, until you black out in his grasp.";
 	WaitLineBreak;
 	say "     There's no way for you to calculate how much time has passed since you were taken by the demon brute, but you don't really care anymore. When you wake up, you barely have any will to open your eyes given the pleasure you're receiving. You're stuck on some kind of machine that's milking your oversized parts ceaselessly, and there's tubes injecting a strange white liquid inside you that makes you feel completely mindless. There's no way out of this, you're condemned to be forever milked in Hell for the pleasure of the demons... But at least, they make you enjoy it.";
-	now battleground is "Void";
+	now battleground is "void";
 	trigger ending "Hell Prisoner";
 	end the story saying "You're stuck in Hell - there's no coming back from that!";
 
@@ -556,16 +506,16 @@ to HellRealmBadEnd2: [player is gangbanged by the remaining 3 demons and wakes u
 	say "     Another brute places himself underneath you, reaching your chest with his meaty hand and forearm while the other grabs the back of your head, as the other demon stands in front of you, playing with his equally sizable erection bouncing around at just a few centimeters away from your mouth. They plan to take all your holes at once, and that becomes evident as soon as their dicks invade your body in all the ways possible, painfully stretching your insides as they fuck you with no care for your own pleasure. Between hard pounds, grunts and roars, you're mercilessly taken by the group of demon brutes as they fill you up with the seed of Hell over and over again, until your senses go numb and you black out in their grasp.";
 	WaitLineBreak;
 	say "     There's no way for you to calculate how much time has passed since you were taken by the demon brutes, but you don't really care anymore. When you wake up, you barely have any will to open your eyes given the pleasure you're receiving. You're stuck on some kind of machine that's milking your oversized parts ceaselessly, and there's tubes injecting a strange white liquid inside you that makes you feel completely mindless. There's no way out of this, you're condemned to be forever milked in Hell for the pleasure of the demons... But at least, they make you enjoy it.";
-	now battleground is "Void";
+	now battleground is "void";
 	trigger ending "Hell Prisoner";
 	end the story saying "You're stuck in Hell - there's no coming back from that!";
 
 to HellRealmBadEnd3: [player hooks themselves up on the tentacle machine, losing themselves forever to the sinful pleasures of being milked for eternity as a demon slave]
 	say "     You can't resist the calling in your mind. It's not your own thoughts anymore, there's something in your brain telling you to do this, to embrace the touch of darkness as it fills your heart and soul for the pleasure of these mysterious creatures. With your recently acquired knowledge, you set up the machine with the addicting mixture and prepare the easy, constant injections that will make you feel wonderfully. Thinking about it makes your blood rush, and preparing the whole thing feels like an eternity of time, but it'll all be worth it.";
-	say "     When everything is done, [if Player is not naked]you remove your gear, standing completely naked,[end if] and walk over to your new eternal seat, finally giving yourself in to the embrace of the strange purple tendrils as they gladly take you, enveloping your body and caressing you in every sensitive corner of your body, a pleasure completely out of this world. Everything they do is careful and gentle, circling around your chest and claiming your genital area to perpetually stimulate you, and it feels incredible. Eventually, you close your eyes and relax, letting them take control of your mind and body, forever...";
+	say "     When everything is done, [if Player is not naked]you remove your gear, standing completely naked, [end if]and walk over to your new eternal seat, finally giving yourself in to the embrace of the strange purple tendrils as they gladly take you, enveloping your body and caressing you in every sensitive corner of your body, a pleasure completely out of this world. Everything they do is careful and gentle, circling around your chest and claiming your genital area to perpetually stimulate you, and it feels incredible. Eventually, you close your eyes and relax, letting them take control of your mind and body, forever...";
 	WaitLineBreak;
 	say "     Time becomes irrelevant, and you're changed beyond recognition. Your body adapted to the constant milking made by the tentacles, with oversized tits, balls and cock constantly guzzling as much milk and cum as possible. You're not even stationed in the same place as before, though you could barely notice given your current state. Nothing else matters but how good it feels to keep orgasming endlessly, without any care for the world outside, and the white mixture keeps you well drugged and addicted to it. There's no way out of this, you're condemned to be forever milked in Hell for the pleasure of the demons... But at least, you found a way to enjoy it.";
-	now battleground is "Void";
+	now battleground is "void";
 	trigger ending "Hell Prisoner";
 	end the story saying "You're stuck in Hell - and you deserved it.";
 
@@ -573,11 +523,11 @@ to HellRealmBadEnd4: [player is fucked by the incubus and the succubus, then tur
 	say "     Your energy fails as the demons of lust gain the upper hand and bring you down on the floor, proving to be too much for you. 'I am seriously questioning how you've got this far! As weak as you are, you shouldn't be able to pass through our demon brutes... What a resourceful little mortal you must be! Still, you're done for good.' says the succubus as she walks towards you, followed by the incubus as he taunts you once more 'How pathetic! Clearly you shouldn't have come here. But since you are, how about you compensate us for the hassle you've caused?' When you realize, both the demons are next to you, the male stroking his hardening nine-inch cock as the succubus caresses her sizable, perfect breasts. 'I know a few ways [SubjectPro] could do that...' she adds before crouching down next to you, stroking your face with the back of her hand.";
 	say "     Though her gentle manners suddenly shift into a rough grabbing of your head, pulling it to face the incubus eager erection pointing at you. 'I'm sure you'll enjoy this as much as I will.' he says as he takes hold of your chin, gently but forcibly pulling you to kiss the tip, to which you involuntarily open your mouth and rub it around with your tongue. A sudden burst of desire hits you, and before you realize, you're nearly deepthroating the demon while you fondle his balls, causing him to moan at your caressing. 'Now that's working like a charm, isn't it? We'll be able to enslave all of them with this new enchantment...' adds the succubus, though you have no idea what she's talking about. The taste of the incubus['] precum is just too good to care about anything else, and you find in yourself an urge to please him...";
 	WaitLineBreak;
-	say "     As you're blowing him, his female counterpart is constantly caressing your whole body from behind, and she eventually [if Player is male]takes hold of your already throbbing and leaking member, stroking it with as much vigor as you're sucking the one in your mouth[else] slips a finger inside your already moist and leaking womanhood, rubbing your clit and feeling you up with as much vigor as you're sucking the dick in your mouth.[end if] '[SubjectProCap] is such a good [boygirl], isn't [SubjectPro]? Maybe we could keep [ObjectPro] as your personal slave, hm?' suggests the incubus, amidst lustful moaning, as his partner responds 'I'm not opposed to that idea! We already have plenty of them in the Grid. A little toy for us to play with more... permanently, would be great.' Even as they freely discuss your fate, you can't help but to eagerly continue the given task. Stroking, sucking and licking the incubus['] meat log with utmost dedication, you soon bring him to orgasm.";
+	say "     As you're blowing him, his female counterpart is constantly caressing your whole body from behind, and she eventually [if Player is male]takes hold of your already throbbing and leaking member, stroking it with as much vigor as you're sucking the one in your mouth[else] slips a finger inside your already moist and leaking womanhood, rubbing your clit and feeling you up with as much vigor as you're sucking the dick in your mouth[end if]. '[SubjectProCap] is such a good [boygirl], isn't [SubjectPro]? Maybe we could keep [ObjectPro] as your personal slave, hm?' suggests the incubus, amidst lustful moaning, as his partner responds 'I'm not opposed to that idea! We already have plenty of them in the Grid. A little toy for us to play with more... permanently, would be great.' Even as they freely discuss your fate, you can't help but to eagerly continue the given task. Stroking, sucking and licking the incubus['] meat log with utmost dedication, you soon bring him to orgasm.";
 	say "     It is when the thick, virile and sweet cum bursts down your throat, forcing you to gulp down every single drop, that you feel properly owned by the demons. Spurt after spurt, you do your best to slurp his entire load right into your stomach, as the incubus thrusts into your mouth in response to your eagerness to swallow his seed. 'Ahh! Yes!! We're definitely keeping [ObjectPro]! It's been so long since I had a release like this, for Asmodeus['] sake!' he moans, as he squeezes the still aplenty leaking jizz out of his cock, shaking it off right into your lips, which you eagerly lick. 'All [SubjectPro] needs now is a collar. Let's bring [ObjectPro] to our chambers and complete [PosAdj] transformation, I can't wait to use [ObjectPro] for the next hours!' adds the succubus as both grab you and take you to somewhere else...";
 	WaitLineBreak;
 	say "     You don't even notice time passing by you with your new days serving the Masters. As their lair prospers, you spend your feeble existence pleasing your almighty Lord and Mistress, doing everything they say, making sure they praise you in the end with a little sexual relief. You get plenty of use when they're especially happy with your efforts, and eventually, they even let you roam freely knowing you'll always be back for your duties! The problems of the past are long gone, and at each day, the demons get closer to world domination... Soon, everyone will have the pleasure to serve them as you do, knowing they'll be working for someone greater than themselves...";
-	now battleground is "Void";
+	now battleground is "void";
 	trigger ending "Hell Prisoner";
 	end the story saying "You're stuck in Hell - there's no coming back from that!";
 
@@ -587,18 +537,12 @@ to HellRealmBadEnd5: [player is dragged by the tentacle traps and eaten alive]
 	WaitLineBreak;
 	say "     Though this luxurious treatment doesn't come without a consequence. As you're stripped off your freedom of action and thoughts, reduced to a plaything for a demonic tentacle beast, there's no way to escape your inevitable fate. While you're being pulled deeper into the darkness of Hell, your begin losing your senses. Its members are much wider here, enough for you to fit in. It doesn't take too long as you feel something viscous and slimy sliding by your head over to your neck, as you're feeling yourself being pulled deeper into one enormous pulsing fleshy tunnel. You struggle to realize what's happening to you as your entire body is taken by the beast, having slurped you down to your torso, then to your legs, until only your feet remained outside.";
 	say "     Making one hungry last throb, the giant tentacle sucks you in to the last inch, sending you into its bowels, where you're left sinking in the inner juices of the demonic creature. You fall into an eternal slumber as you feel yourself melting away, and the most disturbing part is that it's the best thing you ever felt in your now ending life.";
-	now battleground is "Void";
+	now battleground is "void";
 	the Player was ended by "Hell's meal";
 	trigger ending "Player has died";
 	end the story saying "Your body and soul have been devoured by an hellish beast.";
 
-[***********************************************************]
-[***********************************************************]
-[***********************************************************]
 Section 4 - Strange Sorcerer
-[***********************************************************]
-[***********************************************************]
-[***********************************************************]
 
 Table of GameEventIDs (continued)
 Object	Name
@@ -608,26 +552,23 @@ Strange Sorcerer is a situation.
 ResolveFunction of Strange Sorcerer is "".
 Sarea of Strange Sorcerer is "Nowhere".
 
-instead of navigating Grey Abbey Library while (Strange Sorcerer is active and Strange Sorcerer is not resolved and Resolution of Hell Realm > 3):
+instead of navigating Grey Abbey Library while Strange Sorcerer is active and Strange Sorcerer is not resolved and Resolution of Hell Realm > 3:
 	say "[NavCheck Grey Abbey Library]";
 	if NavCheckReturn is false, stop the action; [can't nav from the player's location, or already there - so we stop this cold]
-	move player to Grey Abbey Library;
+	move player to Grey Abbey Library, without printing a room description;
 	project Figure of Xaedihr_FullNoRuby_icon;
 	say "     Back from another day in the wasteland, you arrive at the Grey Abbey Library. You're walking up the stairs at the entrance when you see an intense crimson light bursting out of the cracked windows. To make sure something strange inside didn't blow up the entire place while you were gone, you quickly push the doors open and run inside, but the light is so powerful that you're forced to shelter your eyes. When the energy subsides, you're able to look around and spot a dark-robed figure kneeling on the ground, said light merely gleaming from a gem in its possession. Could it be...?";
 	say "     You approach the mysterious shape carefully, to make sure it's not another foe ready to jump on you. 'Are you okay? Hopefully the... Huh? Wait, how did you end up there? How the... How long has it been?!' Turns out you know this voice. It's the man you found in Hell! So he's real after all, as well as what you've been through while in there. You rush to help him up and explain what happened, from when you woke up to this moment. 'It has been that long? That's a considerable delay... Must have been a temporal-spatial distortion, something ended up separating us during the dimensional travel. This only confirms that this world is growing highly unstable, just like how mine started to degenerate...";
-	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Ask him about what he means by 'degenerate'?";
 	say "     ([link]N[as]n[end link]) - Just offer him to stay at the Bunker while he recovers.";
 	if Player consents:
 		LineBreak;
 		say "     You question him about this degeneration he's talking about, to which he urges you to pay attention. 'It's no child's play. Your world is getting more vulnerable to demonic presence, and that's just how everything began on mine. This ruby we recovered could be the key to stop the demons, either by stalling them or by allowing us to balance things. Having a gem this powerful in our possession may scare some of them. In fact, I'd go as far as to say that having taken the Crimson Ruby from Hell might have been your world's temporary salvation.' he replies with some concern visible in his expressions.";
-		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Inquire him on what this 'Crimson Ruby' does, exactly?";
 		say "     ([link]N[as]n[end link]) - You're all out of questions. Invite him to stay at the Bunker while he recovers.";
 		if Player consents:
 			LineBreak;
 			say "     After he mentioned this gem you recovered, you further question him about it. 'Well, you saw it yourself. It allows its owner to cross dimensions and teleport around, so it's a very powerful gem. Although overusing it has great costs, and you do need to understand magic and wield an extraordinary amount of energy within yourself, like most sorcerers do. Fortunately magic is a talent I always have possessed, and have always been great at it. However even I have to be careful handling such a thing. Each usage tires me more than I'd like to admit.' he answers as he shows off the gleaming red ruby in his hands, spinning it around with his fingers.";
-			LineBreak;
 			say "     ([link]Y[as]y[end link]) - Ask about the contraptions they used in the prison.";
 			say "     ([link]N[as]n[end link]) - You're all out of questions. Invite him to stay at the Bunker while he recovers.";
 			if Player consents:
@@ -637,14 +578,12 @@ instead of navigating Grey Abbey Library while (Strange Sorcerer is active and S
 					say "     Adding to this, you explain the question by telling him you destroyed that area by permanently damaging the machines. Xaedihr throws a laughter. 'Oh! You did? That's amazing! The demons are going to be set back for a very long time thanks to that! Nothing they didn't deserve, anyway.'";
 					say "     [bold type]Xaedihr greatly approved of your actions.[roman type][line break]";
 					increase Loyalty of Xaedihr by 5;
-				LineBreak;
 				say "     ([link]Y[as]y[end link]) - What about the pods you saw in that strange hall? Ask about them.";
 				say "     ([link]N[as]n[end link]) - You're all out of questions. Invite him to stay at the Bunker while he recovers.";
 				if Player consents:
 					LineBreak;
 					say "     Besides everything you've seen, you tell Xaedihr that before you found him in those cells, you encountered a few strange pods with plant-like features, except they were all red and pulsing. 'Ugh, those. The demons were trying to breed new kinds of demons. Their research is focused on species['] improvement, anything that can make them more powerful, basically. If they succeed, they might be able to evolve... so it's in our best interest that they fail no matter what. Demons can be fascinating in their beauty, I'll give them that, but the beasts they breed? Horrendous.' he says in reply to your report, clearly worried about whatever the demons are planning. You suppose those pods can only mean bad news.";
 					say "     'Anyway... This dimensional voyage made me a little dizzy... I'll have to take some time to recover. It's nice seeing that you're doing okay, at least.' he says as he starts walking towards the library's exit. He's kind of limping, however, moving very slowly with his head low. [bold type]Are you going to let him leave like that?[roman type][line break]" ;
-					LineBreak;
 					say "     ([link]Y[as]y[end link]) - Invite him to stay at the Bunker while he recovers.";
 					say "     ([link]N[as]n[end link]) - Say your goodbyes. Xaedihr will continue on his quest and never return.";
 					if Player consents:
@@ -652,10 +591,10 @@ instead of navigating Grey Abbey Library while (Strange Sorcerer is active and S
 						say "     Given his dizzy state, which you clearly observe in his lack of balance, you decide to offer him a free stay in the bunker for as long as he needs. 'Thank you. I might have to accept that, I don't know enough about this world to walk around freely, and the library was always a good base.' Carefully, you help Xaedihr walk through and introduce him to his new bed. He gladly takes the time to rest for a while. 'Hey, I know you had no obligation in letting me stay, but I should thank you again for everything. Here, have this, in case we get separated again.' He hands you some sort of trinket, a small pin with a tiny red gem in the middle. He tells you a couple of strange words which make it glow. 'Works like a summon call. When I get better, I'll be able to aid you outside. Just let me know.'";
 						say "     The sorcerer needs some rest, so you leave him be for the moment. Eventually, he'll able to get up and occupy himself with some books in the library.";
 						LineBreak;
-						say "     (Xaedihr the demonologist is now a possible ally! You can make him your active ally by typing [bold type][link]ally Xaedihr[end link][roman type] or [bold type][link]ally demonologist[end link][roman type] and initiate sex with him while active by typing [bold type][link]fuck Xaedihr[end link][roman type]. You can see all the allies you have with the [bold type][link]allies[end link][roman type] command. Allies will lower the XP you gain from battle, but can gain levels themselves to be more useful in a scrap. Want to get rid of an ally? Use [bold type][link]ally dismiss[end link][roman type], or just [bold type][link]dismiss[end link][roman type])[line break]";
+						say "     (Xaedihr the demonologist is now a possible ally! You can make him your active ally by typing [link][bold type]ally Xaedihr[roman type][end link] or [link][bold type]ally demonologist[roman type][end link] and initiate sex with him while active by typing [link][bold type]fuck Xaedihr[roman type][end link]. You can see all the allies you have with the [link][bold type]allies[roman type][end link] command. Allies will lower the XP you gain from battle, but can gain levels themselves to be more useful in a scrap. Want to get rid of an ally? Use [link][bold type]ally dismiss[roman type][end link], or just [link][bold type]dismiss[roman type][end link].)";
 						Move Xaedihr to Grey Abbey Library;
 						add "Tamed" to Traits of demonologist;
-						Now demonologist is tamed;
+						now demonologist is tamed;
 					else:
 						LineBreak;
 						say "     Slightly concerned with his physical state, you decide to at least approach him and accompany him outside. 'Thank you for everything you've done. Thanks you to, there might still be hope... I'll do my best to save your world and mine from this plague.' he says with a determined look in his eyes before he continues on his path, eventually disappearing in the horizon. However, something in your gut tells you that you'll never see him again, and you're not sure if that's a good or a bad thing...";
@@ -673,29 +612,23 @@ instead of navigating Grey Abbey Library while (Strange Sorcerer is active and S
 		say "     Given his dizzy state, which you clearly observe in his lack of balance, you decide to offer him a free stay in the bunker for as long as he needs. 'Thank you. I might have to accept that, I don't know enough about this world to walk around freely, and the library was always a good base.' Carefully, you help Xaedihr walk through and introduce him to his new bed. He gladly takes the time to rest for a while. 'Hey, I know you had no obligation in letting me stay, but I should thank you again for everything. Here, have this, in case we get separated again.' He hands you some sort of trinket, a small pin with a tiny red gem in the middle. He tells you a couple of strange words which make it glow. 'Works like a summon call. When I get better, I'll be able to aid you outside. Just let me know.'";
 		say "     The sorcerer needs some rest, so you leave him be for the moment. Eventually, he'll able to get up and occupy himself with some books in the library.";
 		LineBreak;
-		say "     (Xaedihr the demonologist is now a possible ally! You can make him your active ally by typing [bold type][link]ally Xaedihr[end link][roman type] or [bold type][link]ally demonologist[end link][roman type] and initiate sex with him while active by typing [bold type][link]fuck Xaedihr[end link][roman type]. You can see all the allies you have with the [bold type][link]allies[end link][roman type] command. Allies will lower the XP you gain from battle, but can gain levels themselves to be more useful in a scrap. Want to get rid of an ally? Use [bold type][link]ally dismiss[end link][roman type], or just [bold type][link]dismiss[end link][roman type])[line break]";
+		say "     (Xaedihr the demonologist is now a possible ally! You can make him your active ally by typing [link][bold type]ally Xaedihr[roman type][end link] or [link][bold type]ally demonologist[roman type][end link] and initiate sex with him while active by typing [link][bold type]fuck Xaedihr[roman type][end link]. You can see all the allies you have with the [link][bold type]allies[roman type][end link] command. Allies will lower the XP you gain from battle, but can gain levels themselves to be more useful in a scrap. Want to get rid of an ally? Use [link][bold type]ally dismiss[roman type][end link], or just [link][bold type]dismiss[roman type][end link].)";
 		Move Xaedihr to Grey Abbey Library;
 		add "Tamed" to Traits of demonologist;
-		Now demonologist is tamed;
-	Now Strange Sorcerer is resolved;
+		now demonologist is tamed;
+	now Strange Sorcerer is resolved;
 
 to SSOutOfQuestions:
 	say "     You have no more questions to ask Xaedihr right now, so you proceed to invite him to stay at the bunker, given his dizzy state, which you clearly observe in his lack of balance. 'Thank you. I might have to accept that, I don't know enough about this world to walk around freely, and the library was always a good base.' Carefully, you help Xaedihr walk through and introduce him to his new bed. He gladly takes the time to rest for a while. 'Hey, I know you had no obligation in letting me stay, but I should thank you again for everything. Here, have this, in case we get separated again.' He hands you some sort of trinket, a small pin with a tiny red gem in the middle. He tells you a couple of strange words which make it glow. 'Works like a summon call. When I get better, I'll be able to aid you outside. Just let me know.'";
 	say "     The sorcerer needs some rest, so you leave him be for the moment. Eventually, he'll able to get up and occupy himself with some books in the library.";
 	LineBreak;
-	say "     (Xaedihr the demonologist is now a possible ally! You can make him your active ally by typing [bold type][link]ally Xaedihr[end link][roman type] or [bold type][link]ally demonologist[end link][roman type] and initiate sex with him while active by typing [bold type][link]fuck Xaedihr[end link][roman type]. You can see all the allies you have with the [bold type][link]allies[end link][roman type] command. Allies will lower the XP you gain from battle, but can gain levels themselves to be more useful in a scrap. Want to get rid of an ally? Use [bold type][link]ally dismiss[end link][roman type], or just [bold type][link]dismiss[end link][roman type])[line break]";
+	say "     (Xaedihr the demonologist is now a possible ally! You can make him your active ally by typing [link][bold type]ally Xaedihr[roman type][end link] or [link][bold type]ally demonologist[roman type][end link] and initiate sex with him while active by typing [link][bold type]fuck Xaedihr[roman type][end link]. You can see all the allies you have with the [link][bold type]allies[roman type][end link] command. Allies will lower the XP you gain from battle, but can gain levels themselves to be more useful in a scrap. Want to get rid of an ally? Use [link][bold type]ally dismiss[roman type][end link], or just [link][bold type]dismiss[roman type][end link].)";
 	Move Xaedihr to Grey Abbey Library;
 	add "Tamed" to Traits of demonologist;
-	Now demonologist is tamed;
-	Now Strange Sorcerer is resolved;
+	now demonologist is tamed;
+	now Strange Sorcerer is resolved;
 
-[***********************************************************]
-[***********************************************************]
-[***********************************************************]
 Section 5 - NPC
-[***********************************************************]
-[***********************************************************]
-[***********************************************************]
 
 Table of GameCharacterIDs (continued)
 object	name
@@ -738,18 +671,16 @@ TwistedCapacity of Xaedihr is false. [Twisted Characters can take any penetratio
 Sterile of Xaedihr is true. [steriles can't knock people up]
 MainInfection of Xaedihr is "Incubus".
 Description of Xaedihr is "[Xaedihrdesc]".
-Conversation of Xaedihr is { "<This is nothing but a placeholder!>" }.
+fuckscene of Xaedihr is "[SexWithXaedihr]".
+icon of Xaedihr is Figure of Xaedihr_Full_icon.
 The scent of Xaedihr is "     Xaedihr smells fresh and masculine, giving out the idea he's using cologne, though you never saw him spraying himself with such a thing. Whatever it is, it kind of makes you want more, somehow. Is it a spell?".
 
 to say XaedihrDesc:
-	project Figure of Xaedihr_Full_icon;
 	say "     The mystic sorcerer you encountered in one of the many Hell realms is, in fact, an half-demon. Nothing gives it away except his looks and aura, a little too out of this world to suggest he's only a human. Xaedihr is a pale redhead with flawless skin, has a short hair styled to his right side, some of it laying softly above his forehead, lime green eyes, a beard to complement his chiseled jawline, and a purple-ish tattoo around his left eye. He's fairly muscular and somewhat bulky even, filling up his clothes just nicely. He wears nothing under his long dark leather jacket, only a pair of tight black pants that gives away his considerable bulge, and some combat boots to complete his edgy look. He wears an earstud on his left ear, and hanging around his neck is a pendant with the Crimson Ruby, gleaming with a mystical energy.";
 	if demonologist is listed in companionList of Player:
 		say "     [bold type]He is currently following you as your battle companion.[roman type][line break]";
 
-[***********************************************************]
 Section 5-1 - As Companion
-[***********************************************************]
 
 Table of GameCharacterIDs (continued)
 object	name
@@ -782,18 +713,15 @@ to say DismissXaedihr:
 		say "     You tell Xaedihr that you don't need him right now. 'Huh, I see. Very well, then! I'll just walk around and collect a few more samples for my studies. See you back at the library or... you know, just use the trinket.' With that said, Xaedihr walks away, disappearing out of sight.";
 	move Xaedihr to Grey Abbey Library;
 
-[***********************************************************]
 Section 5-2 - Talk Menu
-[***********************************************************]
 
 instead of conversing Xaedihr:
 	project Figure of Xaedihr_Portrait_icon;
-	say "     As soon as you approach him, Xaedihr notices your presence. 'Came for a chit-chat? I suppose I can indulge you.' says the sorcerer as he crosses his arms, giving you his signature smirk.";
+	say "     As soon as you approach him, Xaedihr notices your presence. 'Came for a chitchat? I suppose I can indulge you.' says the sorcerer as he crosses his arms, giving you his signature smirk.";
 	say "[XaedihrTalkMenu]";
 
 to say XaedihrTalkMenu:
 	say "     [bold type]What do you want to talk to Xaedihr about?[roman type][line break]";
-	LineBreak;
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]
@@ -805,47 +733,47 @@ to say XaedihrTalkMenu:
 		[]
 		choose a blank row in table of fucking options;
 		now title entry is "ENCHANTING";
-		now sortorder entry is 1;
+		now sortorder entry is 2;
 		now description entry is "Ask Xaedihr to enchant something for you";
 	[]
 	choose a blank row in table of fucking options;
 	now title entry is "Himself";
-	now sortorder entry is 2;
+	now sortorder entry is 3;
 	now description entry is "Ask Xaedihr to tell you more about himself";
 	[]
 	choose a blank row in table of fucking options;
 	now title entry is "How did he get here";
-	now sortorder entry is 3;
+	now sortorder entry is 4;
 	now description entry is "Inquire him about how he ended up in this world";
 	[]
 	choose a blank row in table of fucking options;
 	now title entry is "His affinity with magic";
-	now sortorder entry is 4;
+	now sortorder entry is 5;
 	now description entry is "Question about his familiarity with magic";
 	[]
 	choose a blank row in table of fucking options;
 	now title entry is "His goals";
-	now sortorder entry is 5;
+	now sortorder entry is 6;
 	now description entry is "Let him know that you'd like to hear about his goals";
 	[]
 	choose a blank row in table of fucking options;
 	now title entry is "The Crimson Ruby";
-	now sortorder entry is 6;
+	now sortorder entry is 7;
 	now description entry is "Tell him you'd like to know more about the Demonic Ruby";
 	[]
 	choose a blank row in table of fucking options;
 	now title entry is "The Ancient Tome";
-	now sortorder entry is 7;
+	now sortorder entry is 8;
 	now description entry is "Ask him more about the Ancient Tome";
 	[]
 	choose a blank row in table of fucking options;
 	now title entry is "Sex Talk";
-	now sortorder entry is 8;
+	now sortorder entry is 9;
 	now description entry is "Bring up the subject of sex";
 	[]
 	choose a blank row in table of fucking options;
 	now title entry is "His opinion on you";
-	now sortorder entry is 9;
+	now sortorder entry is 10;
 	now description entry is "Request that he tells what he thinks of you";
 	[]
 	if "Met Hayato" is not listed in traits of Xaedihr and Hayato is in Darkened Alcove:
@@ -860,7 +788,7 @@ to say XaedihrTalkMenu:
 		now sortorder entry is 99;
 		now description entry is "He is one of your best options, so just try asking him";
 	[
-	If loyalty of Xaedihr > 29;
+	if loyalty of Xaedihr > 29;
 	choose a blank row in table of fucking options;
 	now title entry is "What he's going to do next";
 	now sortorder entry is 9;
@@ -879,32 +807,32 @@ to say XaedihrTalkMenu:
 			choose row calcnumber in table of fucking options;
 			say "[title entry]: [description entry]?";
 			if Player consents:
-				let nam be title entry;
 				now sextablerun is 1;
-				if (nam is "SPELLS"):
-					say "[XaedihrTalkSpells]";
-				else if (nam is "ENCHANTING"):
-					say "[XaedihrTalkEnchanting]";
-				else if (nam is "Himself"):
-					say "[XaedihrTalkHimself]";
-				else if (nam is "How did he get here"):
-					say "[XaedihrTalkReason]";
-				else if (nam is "His affinity with magic"):
-					say "[XaedihrTalkMagic]";
-				else if (nam is "His goals"):
-					say "[XaedihrTalkGoals]";
-				else if (nam is "The Crimson Ruby"):
-					say "[XaedihrTalkRuby]";
-				else if (nam is "The Ancient Tome"):
-					say "[XaedihrTalkTome]";
-				else if (nam is "Sex Talk"):
-					say "[XaedihrTalkSex]";
-				else if (nam is "His opinion on you"):
-					say "[XaedihrTalkOpinion]";
-				else if (nam is "Introduce Hayato"):
-					say "[XaedihrTalkHayato]";
-				else if (nam is "Ask Xaedihr for his help in finding the onis"):
-					say "[XaedihrTalkYokLair]"; [On Hayato's file]
+				if title entry is:
+					-- "SPELLS":
+						say "[XaedihrTalkSpells]";
+					-- "ENCHANTING":
+						say "[XaedihrTalkEnchanting]";
+					-- "Himself":
+						say "[XaedihrTalkHimself]";
+					-- "How did he get here":
+						say "[XaedihrTalkReason]";
+					-- "His affinity with magic":
+						say "[XaedihrTalkMagic]";
+					-- "His goals":
+						say "[XaedihrTalkGoals]";
+					-- "The Crimson Ruby":
+						say "[XaedihrTalkRuby]";
+					-- "The Ancient Tome":
+						say "[XaedihrTalkTome]";
+					-- "Sex Talk":
+						say "[XaedihrTalkSex]";
+					-- "His opinion on you":
+						say "[XaedihrTalkOpinion]";
+					-- "Introduce Hayato":
+						say "[XaedihrTalkHayato]";
+					-- "Ask Xaedihr for his help in finding the onis":
+						say "[XaedihrTalkYokLair]"; [On Hayato's file]
 				wait for any key;
 				say "[XaedihrTalkMenu]"; [looping back to keep talking with him]
 		else if calcnumber is 0:
@@ -912,7 +840,7 @@ to say XaedihrTalkMenu:
 			say "     You step back from the sorcerer, shaking your head slightly as he gives a questioning look.";
 			wait for any key;
 		else:
-			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options], or 0 to exit.";
 	clear the screen and hyperlink list;
 
 to say XaedihrTalkSpells:
@@ -951,24 +879,20 @@ to say XaedihrTalkHimself: [Himself]
 			say "     [link](3)[as]3[end link] - Honestly, he should have gone with the flow and learn how to be a proper demon. He'd be much stronger by now, with his world at his feet, and he wouldn't be having these difficulties if he could keep his mind untouched.";
 			now calcnumber is 0;
 			while calcnumber < 1 or calcnumber > 3:
-				say "Choice? (1-3)>[run paragraph on]";
+				say "Choice? (1-3)> [run paragraph on]";
 				get a number;
-				if calcnumber is 1 or calcnumber is 2 or calcnumber is 3:
-					break;
-				else:
+				if calcnumber < 1 or calcnumber > 3:
 					say "Invalid choice. Type [link]1[end link] to fight the demon, [link]2[end link] to submit or [link]3[end link] to do something else.";
+			LineBreak;
 			if calcnumber is 1:
-				LineBreak;
 				say "     You tell him what you think about the situation with his father and his doomed world, that you understand the hesitation given the fact they had a story together. 'So you don't think I was weak? I mean... It's the first time I've told this to someone. I always only had my own opinion about it, which is that I was too naive in thinking he wouldn't do the world any harm. But I was clearly mistaken.' he replies, looking in the direction of the window by your side. 'So this is a human thing? Feeling empathy for someone else... Is this what drives you? Being able to put yourself in someone else's place? That's some great quality I wish I could have. It'd help me to better understand the human kind.'";
 				say "     Noticing the half-demon's melancholic expression and contemplative tone of his voice, you decide to give him some words of comfort before leaving him to his thoughts. 'Thanks for the conversation. It was a good talk, and I was needing it. Obviously, if you ever need me, I also have good ears... sometimes. Though I'll definitely try harder with you, promise!' he adds with a smile. Though Xaedihr can be quite the difficult person, it seems you managed to get through his hard shell. You get the feeling he'll be more empathic when dealing with situations of conflict.";
 				now Energy of Xaedihr is 10; [human and empathic approach]
 			else if calcnumber is 2:
-				LineBreak;
-				say "     You tell him what you think about the situation with his father and his doomed world, that he's right to feel like this. He could have kept all this from happening by acting right away instead of being weak. Tough words, but it's the harsh truth he brought himself into. 'Heck, you're absolutely right. I was naive and inexperienced at the time. I could have just finished him off instead of hoping he wouldn't do the world any harm. Clearly, I was mistaken, and now everyone's paying the price. I should've known better. he replies as he clenches his fists, looking down at them with a fierce expression. 'Sometimes you have to be ruthless and unforgiving. That's the way I learned with the demons.'";
+				say "     You tell him what you think about the situation with his father and his doomed world, that he's right to feel like this. He could have kept all this from happening by acting right away instead of being weak. Tough words, but it's the harsh truth he brought himself into. 'Heck, you're absolutely right. I was naive and inexperienced at the time. I could have just finished him off instead of hoping he wouldn't do the world any harm. Clearly, I was mistaken, and now everyone's paying the price. I should've known better,' he replies as he clenches his fists, looking down at them with a fierce expression. 'Sometimes you have to be ruthless and unforgiving. That's the way I learned with the demons.'";
 				say "     It seems you should give him some words of comfort before you drop the subject, as Xaedihr looks like he's about to go try to break something with his bare hands. 'Thanks for the conversation. It was the first time I told someone else about this. I needed to hear that.' he adds while looking in your eyes, though with an expression of melancholy. You managed to get through his hard shell, but you found a devastated person inside... You get the feeling he will be much harsher when dealing with demons.";
 				now Energy of Xaedihr is 20; [human and ruthless approach]
 			else if calcnumber is 3:
-				LineBreak;
 				say "     You tell him what you think about the situation with his father and his doomed world, that he could have used the opportunity to learn more about the demons and become powerful like them, even if that meant he had to fake his way. 'What?! Becoming one of them?! You didn't just suggest that I... embraced my demonic nature, did you?' he questions you, incredulous with what you said. But you think he immediately gives it a second thought. 'Well, you're right in a way. Maybe that would be an effective way to comprehend them. It's also my demon side that allows me to fight them, so if I fully embraced it, I'd be even more powerful. Hm... Tough choice, but it makes sense.' he adds while looking down at his hands, contemplating this new perspective.";
 				say "     It seems it's a good time to leave him thinking about it, but before you can drop the subject, he resumes talking. 'Thanks for the conversation. It was the first time I told someone else about this. At the beginning, I thought what you said was ridiculous, but now... It could actually be a functional plan, wouldn't it? My will is strong, I could resist the corruption. I have an objective... I'll need to formulate a plan. Thanks again!' he ends as he grabs his book and starts looking for something. It seems you did manage to cheer him up, but you wonder if this was the right thing to say. Even so, you managed to get through his hard shell! Now only time will tell how he's going to process everything you said...";
 				now Energy of Xaedihr is 30; [embracing his demonic nature]
@@ -977,10 +901,9 @@ to say XaedihrTalkHimself: [Himself]
 		else if Energy of Xaedihr > 0:
 			say "     Facing him, you ask if there is any chance Xaedihr will tell a little more about himself. Between what he already told you about him being an half-demon, son of an High Incubus and the villain of his story, which is an evolved form of the normal Incubus, and everything else that happened in his doomed world where demons have taken over, he actually takes the time to have a deep talk with you, venting about his issues and questions he finds in his mind. Though it has been a long process, you managed to crack his hard shell, and he seems to be able to talk to you fairly easily. In the end, he thanks you for the conversation and returns to his studies."; [looping deep conversation]
 
-
 to say XaedihrTalkReason: [How did he get here]
 	say "     When asked about on how he was still sent here, Xaedihr lowers his head and brings his index finger and thumb over his forehead, scratching his eyebrow as if trying to think. 'As I told you before, it was the ruby. When I teleported you back here, some sort of spatial-temporal distortion must have happened, explaining this delay between the moment you returned and when I appeared. It all looked like mere seconds to me.' - he pauses before continuing - 'I found a way to enter your world through a rift in mine. As the place had a good deal of destruction already, there are dimensional holes just about anywhere. Then I heard that the demonic force is way weaker here, giving me the chance to seek an artifact I needed, a ticket home as well. Even so, I can't seem to use the ruby to return. I'm not sure what happened... I might have to do some more research.'";
-	say "     You suppose that you could help him with this. [if loyalty of Xaedihr < 10]However, even if you wanted, he just doesn't seem receptive of any assistance you could provide. Maybe if he trusted you more? Right now, he doesn't have a good impression of you.[else if loyalty of Xaedihr < 30 and loyalty of Xaedihr > 9]However, even if you wanted, he just doesn't seem receptive of any assistance you could provide. Maybe if he trusted you more? Right now, he isn't completely fond of you yet.[else]Maybe you could discuss his future plans and find a way to assist him.[end if]";
+	say "     You suppose that you could help him with this. [if loyalty of Xaedihr < 10]However, even if you wanted, he just doesn't seem receptive of any assistance you could provide. Maybe if he trusted you more? Right now, he doesn't have a good impression of you[else if loyalty of Xaedihr < 30 and loyalty of Xaedihr > 9]However, even if you wanted, he just doesn't seem receptive of any assistance you could provide. Maybe if he trusted you more? Right now, he isn't completely fond of you yet[else]Maybe you could discuss his future plans and find a way to assist him[end if].";
 
 to say XaedihrTalkMagic: [His affinity with magic]
 	if loyalty of Xaedihr < 10: [NOT a good impression of player-neutral]
@@ -993,7 +916,7 @@ to say XaedihrTalkMagic: [His affinity with magic]
 		say "     'Don't worry, that doesn't leave a stain and it's actually good for the skin. You know how they can get to be used to go in places...' he laughs a bit more, clearly enjoying teasing you. 'The tendrils are also connected to the neural sensors in the brain related to sexual pleasure. So yes, I feel everything they touch as if they were... an extension of myself.' You have a feeling of exactly what he means by that. 'But that's, of course, not all I can do. I'm a natural expert of demonology and know my way around dark magic. All those shadowy spheres of energy or fiery purple flames are all part of a dark conjuring process. On collision with the enemy, they pretty much hurt. Anyway, I think I've bored you for long enough. Did you need anything else?' he asks as he returns to his book.";
 		if Intelligence of Xaedihr is 0:
 			WaitLineBreak;
-			say "     'Oh, I probably forgot to mention something.' he says, returning his gaze at you. 'Well, I did forget to mention this. Anyway, uh... Since you are so keen in getting into trouble, I may be able to provide you with [bold type]Invoke Dream[roman type] spells.' Invoke Dream spells? What are those? Better ask him. He's not happy that you had to ask what it was. 'Dear Lords, isn't the name itself suggestive enough?! It invokes dreams! That's all it does. And since you can experience them as if they were real, perhaps that would keep you away from, you know, sticky situations with big bad monsters? ... No? Well it's something to consider.' he sighs in some visible annoyance, but continues to speak 'I can't really say when or how will I learn how to acquire them, but it can happen in some situations where I am also present, so be sure to bring me around over dangerous areas if that's what you want.";
+			say "     'Oh, I probably forgot to mention something.' he says, returning his gaze at you. 'Well, I did forget to mention this. Anyway, uh... Since you are so keen in getting into trouble, I may be able to provide you with [bold type]Invoke Dream[roman type] spells.' Invoke Dream spells? What are those? Better ask him. He's not happy that you had to ask what it was. 'Dear Lords, isn't the name itself suggestive enough?! It invokes dreams! That's all it does. And since you can experience them as if they were real, perhaps that would keep you away from, you know, sticky situations with big bad monsters? ...No? Well it's something to consider.' he sighs in some visible annoyance, but continues to speak 'I can't really say when or how will I learn how to acquire them, but it can happen in some situations where I am also present, so be sure to bring me around over dangerous areas if that's what you want.";
 			now Intelligence of Xaedihr is 1;
 
 to say XaedihrTalkGoals:
@@ -1056,25 +979,21 @@ to DomXaedihr1:
 	say "     [link](3)[as]3[end link] - There's no certainty in your mind, right now...";
 	now calcnumber is 0;
 	while calcnumber < 1 or calcnumber > 3:
-		say "Choice? (1-3)>[run paragraph on]";
+		say "Choice? (1-3)> [run paragraph on]";
 		get a number;
-		if calcnumber is 1 or calcnumber is 2 or calcnumber is 3:
-			break;
-		else:
+		if calcnumber < 1 or calcnumber > 3:
 			say "Invalid choice. Type [link]1[end link] to tell him you want to submit to him, [link]2[end link] to cut this short or [link]3[end link] to express your uncertainty.";
+	LineBreak;
 	if calcnumber is 1:
-		LineBreak;
 		say "     You barely finish speaking as his tongue finds a way deep in your mouth. Xaedihr is kissing you like he never had before, taking everything he can as he owned you already. 'Mmh... Fuck... You have no idea how much that turns me on, hearing you say it...' Standing there, tugged within his embrace, you look back into his gaze and feel a tremendous sense of safety. 'There's this thing I wanted to try with you, but it might be a little more... hardcore than what our usual stuff. If you're up for it, let me know whenever you're ready to give it a go... alright?' he lets you know, respecting your pacing and letting you decide how far you're willing to submit to him. All you've got to do now is bring it up when you approach him for sex.";
 		if loyalty of Xaedihr < 20:
 			say "     [bold type]Your new status with the sorcerer earned his respect significantly[roman type][line break]";
 			now loyalty of Xaedihr is 20;
 		now libido of Xaedihr is 3; [unlocked 1st Dom X sex scene]
 	else if calcnumber is 2:
-		LineBreak;
 		say "     Even though this display was hot, you can't lie to him. Having a tendency to be submissive doesn't mean you want to be someone's bitch all the time, and you have your limits, so you let him know that in response. 'Oh. Uh... I see.' Xaedihr lets go of you gently, and you can't help but have the feeling you just killed his boner. 'That's okay. What we have right now is good, too, so... No need to push you into doing anything you don't want to do, right?' he reassures, giving you a slight smile in an attempt to hide his disappointment. 'Anyway, as per usual, if you need, or want anything, let me know. I'll go back to my studies.' he finishes, pulling away from you as he returns to his usual corner.";
 		now libido of Xaedihr is 99; [nothing else will happen]
 	else if calcnumber is 3:
-		LineBreak;
 		say "     With hesitation, you try telling him that you're really not very sure about this, but he then stops you immediately. 'Don't worry, it isn't anything definitive... We don't have to do it if you don't want to. But in any case, there's this thing I wanted to try with you, however it might be a little more... hardcore than what our usual stuff. If you're up for it, let me know whenever you're ready to give it a go... alright? No rush,' he lets you know, respecting your pacing and letting you decide how far you're willing to submit to him. All you've got to do now is bring it up when you approach him for sex, if you're willing to give it a try.";
 		now libido of Xaedihr is 4; [unlocked 1st Dom scene, but player is uncertain]
 
@@ -1083,37 +1002,34 @@ to DomXaedihr2:
 	say "     'Submitting to a magic expert has its perks, you know... I could entrance you, enhance your sensory receptors... and I could even control your mind. Nothing a few arcane words won't do... But I suppose we've got enough to entertain ourselves, for now. Perhaps later I may use you, again.' He gazes into your eyes, which seem to gleam with a sort of dim purple glow, and you suddenly feel a surge of hot desire taking over your body as lustful images of your favorite sorcerer and you pass by your mind. Definitely, you felt compelled to consider him your favorite.";
 	WaitLineBreak;
 	say "     [bold type]You have unlocked the Dominant Xaedihr route[roman type]. This means that you will be able to submit to Xaedihr in a variety of ways from his sex menu, and if you keep in good terms, any additional dominant sex scene added in the future will be immediately available.";
-	increase Libido of Player by 20;
+	raise Player Libido by 20;
 	now libido of Xaedihr is 6;
 
 to DomXaedihr3:
 	say "     You decide to approach Xaedihr with the subject of sex in mind, and you both talk about your past experiences with one another. Things seem to be going very fine, though he definitely likes turning you on at every opportunity he gets.";
-	increase Libido of Player by 5;
+	raise Player Libido by 5;
 
 to say XaedihrTalkOpinion:
 	if loyalty of Xaedihr < 0: [negative impression]
 		say "     Wondering what the sorcerer thinks of you in general, you decide to ask him directly about it. He raises an eyebrow at your question, and doesn't respond right away. 'Eh... What can I say? I've had better mates. You know, ones with actual good sense. I mean, you're sure you need to be asking? That alone only proves that you clearly have no idea about anything. Though not everyone's without redemption. I think.' he replies with a sarcastic tone, turning away from you and back to his studies. Whatever you've been saying or doing, he clearly doesn't like you as of now.";
-	else if loyalty of Xaedihr > -1 and loyalty of Xaedihr < 10: [neutral]
+	else if loyalty of Xaedihr < 10: [neutral]
 		say "     Wondering what the sorcerer thinks of you in general, you decide to ask him directly about it. He shows no expression when facing you, acting as if it was an usual question. 'I can't tell much. It hasn't been too long since I met you, nor had seen enough of you to reach to a conclusion. You might be a lovely person, or an incredibly reckless and ignorant one. Or both, though in that case I'd have you psychologically evaluated, as they're ever rarely found together.' With this said, Xaedihr returns to his book, turning away from you. It seems he doesn't hold any particular impression of you right now, so his opinion of you might stand on a fairly neutral ground.";
-	else if loyalty of Xaedihr > 9 and loyalty of Xaedihr < 20: [good impression]
+	else if loyalty of Xaedihr < 20: [good impression]
 		say "     Wondering what the sorcerer thinks of you in general, you decide to ask him directly about it. He faces you with an interested look, scratching his chin with a slight grin. 'Seeking my approval, aren't we?' - he replies, teasing you a bit - 'Well, you're not being a total jackass. I like our talks and our moments, and that makes you a tad higher on my list of things I like. Although I wouldn't get too confident! I might change my mind if you start behaving like a savage, so please don't do that.' he adds, chuckling as he finishes speaking. With this said, he returns to his studies, turning away from you. Whatever you've been saying or doing, Xaedihr seems to be approving you.";
-	else if loyalty of Xaedihr > 19 and loyalty of Xaedihr < 30: [likes you]
+	else if loyalty of Xaedihr < 30: [likes you]
 		say "     Wondering what the sorcerer thinks of you in general, you decide to ask him directly about it. He turns his head to face you, showing a rather shy smile as he focuses his gaze on your eyes. 'You know, I'm actually starting to like you. You're not like most people, so selfish and too self-centered for their own good. I see you caring about those around you, no matter their conditions, and that's a relief to see. Makes my time here easier to pass by while I try to solve these magic mysteries.' he answers as he nods at you, returning to his studies afterwards. It seems Xaedihr is taking a liking on you because of the way you've been acting around him. You feel like he's closer to trusting you.";
-	else if loyalty of Xaedihr > 29 and loyalty of Xaedihr < 40: [trusts you enough, open for Demonologist Questline continuation]
+	else if loyalty of Xaedihr < 40: [trusts you enough, open for Demonologist Questline continuation]
 		say "     Wondering what the sorcerer thinks of you in general, you decide to ask him directly about it. Going over his book a few more times, he puts it down and walks towards you. 'You're fine. Really fine, for someone I met in both my and your world. Actually, I know I can trust you, which is something I value. I know you won't backstab me like many others have attempted, and failed.' he replies, with some hatred in his eyes, probably remembering some past event. 'I hope you think the same way of me. I believe a good friendship between us could prosper, given the right circumstances, don't you agree?' he adds as he winks at you, followed by his charming grin as he returns to his studies. You're definitely getting into his good graces, and he'll even trust you with his own affairs.";
-	else if loyalty of Xaedihr > 39 and loyalty of Xaedihr < 50: [he considers you a friend]
+	else if loyalty of Xaedihr < 50: [he considers you a friend]
 		say "     Wondering what the sorcerer thinks of you in general, you decide to ask him directly about it. Going over his book one more time, he puts it down and walks towards you, placing his arm around your shoulders. 'You're a great definition of friend with benefits, obviously. Probably the best I've had in some time.' he replies as he shows a shameless grin at you. 'I think I was pretty damn lucky that it was you who found that tape. I'm not sure I'd like a different person. Well, maybe I would, but I'm not an easy person and you probably already concluded that. Still, uh... Thanks for the patience. I mean it.' he finishes as he gives you a more serious look, a sign that he really means what he just said. You're definitely gaining his loyalty, and Xaedihr has no issues in saying that to you.";
-	else if loyalty of Xaedihr > 49: [earned his true loyalty]
+	else: [earned his true loyalty]
 		say "     Wondering what the sorcerer thinks of you in general, you decide to ask him directly about it. He immediately puts his book down when he hears your question, walking towards you and placing his arm around your shoulders. 'I couldn't ask for a better partner. You and I are unstoppable, but that's not what really makes me enjoy your company. Besides all the sex, you're great to talk to, and you've done more for me that anyone in your world and mine together. I think you're an amazing person to be with, and I'd go as far to giving my life for you, if it came to that. Let's hope it won't, or I'll actually have to do it now!' he laughs as he finishes speaking. 'Thank you, sincerely. For everything.'";
 		say "     It seems you've learned Xaedihr's total loyalty, and he's not afraid of letting you know it. In fact, he's more than happy to tell you that.";
 
-[***********************************************************]
 Section 5-2-1 - Spells Menu
-[***********************************************************]
 
 to say XaedihrSpellsMenu:
 	say "     [bold type]What spell do you want?[roman type][line break]";
-	LineBreak;
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]
@@ -1136,17 +1052,15 @@ to say XaedihrSpellsMenu:
 			choose row calcnumber in table of fucking options;
 			say "[title entry]: [description entry]?";
 			if Player consents:
-				let nam be title entry;
 				now sextablerun is 1;
-				if (nam is "Invoke Dream - Void Serpent I"):
+				if title entry is "Invoke Dream - Void Serpent I":
 					say "[XaedihrSpellsIDVoidSerpentI]";
-				wait for any key;
 		else if calcnumber is 0:
 			now sextablerun is 1;
 			say "     You step back from the sorcerer, shaking your head slightly as he gives a questioning look.";
-			wait for any key;
 		else:
-			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options], or 0 to exit.";
+	wait for any key;
 	clear the screen and hyperlink list;
 
 to say XaedihrSpellsIDVoidSerpentI:
@@ -1158,13 +1072,10 @@ to say XaedihrSpellsIDVoidSerpentI:
 	WaitLineBreak;
 	say "     With a snap of fingers, Xaedihr wakes you up and you open your eyes. 'Welcome back. I hope you enjoyed it... If not, I don't accept complaints, either.' he says as you thank him for the effort.";
 
-[***********************************************************]
 Section 5-2-2 - Enchantments Menu
-[***********************************************************]
 
 to say XaedihrEnchantMenu:
 	say "     [bold type]What enchantment do you want?[roman type][line break]";
-	LineBreak;
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]
@@ -1192,19 +1103,18 @@ to say XaedihrEnchantMenu:
 			choose row calcnumber in table of fucking options;
 			say "[title entry]: [description entry]?";
 			if Player consents:
-				let nam be title entry;
 				now sextablerun is 1;
-				if (nam is "Enchant Xaedihr's Tome"):
-					say "[XaedihrEnchantTome]";
-				else if (nam is "Enchant Abyssal Edge"):
-					say "[XaedihrEnchantAE]";
-				wait for any key;
+				if title entry is:
+					-- "Enchant Xaedihr's Tome":
+						say "[XaedihrEnchantTome]";
+					-- "Enchant Abyssal Edge":
+						say "[XaedihrEnchantAE]";
 		else if calcnumber is 0:
 			now sextablerun is 1;
 			say "     You step back from the sorcerer, shaking your head slightly as he gives a questioning look.";
-			wait for any key;
 		else:
-			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options], or 0 to exit.";
+	wait for any key;
 	clear the screen and hyperlink list;
 
 to say XaedihrEnchantTome:
@@ -1236,15 +1146,11 @@ to say XaedihrEnchantAE:
 		increase weapon damage of abyssal edge by 1;
 		increase Resolution of AbyssEdgeEnchantLevel by 1;
 
-[***********************************************************]
 Section 5-3 - Sex Menu
-[***********************************************************]
-
-Instead of fucking Xaedihr:
-	say "[SexWithXaedihr]";
 
 to say SexWithXaedihr:
-	if (lastfuck of Xaedihr - turns < 5):
+	project Figure of Xaedihr_Full_icon;
+	if lastfuck of Xaedihr - turns < 5:
 		say "     Xaedihr gives you a nearly wicked grin as he hears about you wanting to have sex with him. 'A little too horny, aren't we? If we keep fucking all day, I won't be able to get anything else done. Maybe another time?'";
 	else if libido of Xaedihr is 0:
 		say "     As sexy as your half-demon buddy is, you can't just make advances on him without bringing up the subject first! Try talking to him about the possibility of engaging in sex before proposing some fun.";
@@ -1309,40 +1215,39 @@ to say XaedihrSexMenu:
 			choose row calcnumber in table of fucking options;
 			say "[title entry]: [description entry]?";
 			if Player consents:
-				let nam be title entry;
 				now sextablerun is 1;
-				if (nam is "Give him a handjob"):
-					say "[XaedihrHandjob]";
-				else if (nam is "Suck his cock"):
-					say "[XaedihrBlow]";
-				else if (nam is "Get a blowjob"):
-					say "[XaedihrGetBlown]";
-				else if (nam is "Have him fuck your ass"):
-					say "[XaedihrAssFucked]";
-				else if (nam is "Try to get in his rear"):
-					say "[XaedihrFuck]";
-				else if (nam is "Have the sorcerer dominate you"):
-					say "[XaedihrSubmit]";
-				else if (nam is "Propose a threesome with Brutus"):
-					say "[XaedihrBrutus]";
-				wait for any key;
+				if title entry is:
+					-- "Give him a handjob":
+						say "[XaedihrHandjob]";
+					-- "Suck his cock":
+						say "[XaedihrBlow]";
+					-- "Get a blowjob":
+						say "[XaedihrGetBlown]";
+					-- "Have him fuck your ass":
+						say "[XaedihrAssFucked]";
+					-- "Try to get in his rear":
+						say "[XaedihrFuck]";
+					-- "Have the sorcerer dominate you":
+						say "[XaedihrSubmit]";
+					-- "Propose a threesome with Brutus":
+						say "[XaedihrBrutus]";
 		else if calcnumber is 0:
 			now sextablerun is 1;
 			say "     You step back from the half-demon, shaking your head slightly as he gives a questioning look.";
-			wait for any key;
 		else:
-			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
+			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options], or 0 to exit.";
+	wait for any key;
 	clear the screen and hyperlink list;
 
 to say XaedihrHandjob:
 	say "     Giving the half-demon a suggestive glance downwards and an all but subtle smile, you place your hand over the side of his waist and lean closer to him, looking in his eyes as your lips nearly meet his. His gaze strikes back at you with an intrigued, yet pleased look in his face, knowing you want to get naughty with him. 'Someone's horny, huh?' he teases, grabbing your wrist and leading your hand over the increasing bulge in his tight black pants. You feel his next words whispered onto your ear 'Want to feel this getting harder as you stroke it?' as he further encourages you to feel his crotch, guiding you to slip your hand under his underwear. He embraces you with his powerful arms, reaching around your waist and pulling you for a deep kiss, a masterful tongueplay that leaves you panting.";
-	say "     Carefully, you wrap your fingers around his thick meat, begging to be released out of the constraining clothing as it gets engorged with pumped blood, hardening more and more with each movement you make. 'Gotta get rid of these...' says the sorcerer as he undoes the zip in his pants, which your wrist appreciates, giving you a much wider angle to handle his tool. Inevitably, the considerably sized prick leave his underwear, though you can still only see half of it. 'Damn, you're definitely not bad for a short lifespan mortal...' he comments as you keep stroking his half-hard member, running your fingers up and down through his shaft and teasing him around the tip. Xaedihr bites his lip as you do that. 'Fuck yes! Damn... I think you deserve to see the whole thing...' he adds before completely sliding his pants and underwear downwards, a foot-long of a cock bouncing in freedom, along with a large pair of balls hanging underneath.";
-	WaitLineBreak;
+	say "     Carefully, you wrap your fingers around his thick meat, begging to be released out of the constraining clothing as it gets engorged with pumped blood, hardening more and more with each movement you make. 'Gotta get rid of these...' says the sorcerer as he undoes the zip in his pants, which your wrist appreciates, giving you a much wider angle to handle his tool. Inevitably, the considerably sized prick leave his underwear, though you can still only see half of it. 'Damn, you're definitely not bad for a short lifespan mortal...' he comments as you keep stroking his half-hard member, running your fingers up and down through his shaft and teasing him around the tip. Xaedihr bites his lip as you do that. 'Fuck yes! Damn... I think you deserve to see the whole thing...' he adds before completely sliding his pants and underwear downwards, a footlong of a cock bouncing in freedom, along with a large pair of balls hanging underneath.";
+	wait for any key;
 	project Figure of Xaedihr_NudeHard_icon;
 	say "     'You better work hard, he's demanding...' he winks at you with a teasing grin, clearly speaking of his now throbbing, rock hard dick, urging you to keep stroking it. 'Oh, and don't forget the balls. I love a good tug...'. His pale skin is actually incredibly smooth to the touch, feeling almost like silk, and it's no different down there, making it all more pleasant for you. With a gentle pull, you grab his big nuts with one hand as he asked, to which he lets out a moan in response, and grab his meat by the shaft with the other. You feel it pulsing even harder in your grasp as you keep playing with his balls, pulling and caressing them gently as you rub his cock up and down. 'You have no idea how much I like that...' he even chuckles as he leans his head backwards over the bookshelves, focusing on the pleasure you're giving him.";
 	say "     You get serious with the stroking, vigorously bringing your hand from the base of his shaft to the glistening tip, give it a nice squeeze with your thumb, and back down, covering his entire length with your consistent motions. He wasn't kidding, all the rubbing brings you to a sweat until he's giving signs of getting closer to orgasm. 'Oh yeah, that's it... I'm getting there... Don't you dare to stop now...!' he says amidst heavy breathing, almost in a demanding tone, though you have no problem in fulfilling his request. His balls being to retract as you jerk the half-demon's cock faster, with both your hands now. Within moments, you barely need to do any stroking by yourself, as Xaedihr is nearly literally fucking the space between your palms.";
 	WaitLineBreak;
-	say "     'Aah... Keep going...! Fuck yes! I'm cumming!' he almost shouts, his thick foot-long manhood starting to harden to its peak and throbbing with anticipation. You know it's going to be a huge load as you see the significant first signs of cum oozing out of his slit, sliding down to your fingers. 'Fuuuuck yeah! Take it!' he moans, as loud as he's to shoot hard, and within moments, a great deal of jizz lands right on you with surprising force. He keeps going, thick and generous spurts of cum, one after the other, covering your chest and even your face while his long orgasm lasts. He's not even looking, his eyes are closed and he's biting his lips as he unknowingly covers you in his half-demon seed.";
+	say "     'Aah... Keep going...! Fuck yes! I'm cumming!' he almost shouts, his thick footlong manhood starting to harden to its peak and throbbing with anticipation. You know it's going to be a huge load as you see the significant first signs of cum oozing out of his slit, sliding down to your fingers. 'Fuuuuck yeah! Take it!' he moans, as loud as he's to shoot hard, and within moments, a great deal of jizz lands right on you with surprising force. He keeps going, thick and generous spurts of cum, one after the other, covering your chest and even your face while his long orgasm lasts. He's not even looking, his eyes are closed and he's biting his lips as he unknowingly covers you in his half-demon seed.";
 	say "     'Oh, fuck... Fuck...! Damn! Wow! That... was a HELL of a release!' he exclaims as he opens his eyes to look at you, all drenched in his sex juice, 'Uh... Oops, I guess I... gave you a cum bath. These demon genetics are something else, huh?' You can't help but smile back at him, glad that he enjoyed your treat. 'Just imagine how full you'd be if this entire load ended up inside you... Just a thought.' he teases, winking and grinning at you, wiping out a single drop of cum from your face and licking it off his thumb. 'Hm, still tasty. You should try it. It'd be a fun way to clean yourself. I'd help you, but I must return to my studies. Maybe we can catch up with that little idea later?' With this, the sorcerer gives you one last smile before he returns to his books, leaving you soaked with his sperm. Something tells you he actually did that on purpose.";
 	if a random chance of 3 in 4 succeeds and loyalty of Xaedihr < 30:
 		say "     [bold type]The time you've spent with Xaedihr made him open up more to you.[roman type][line break]";
@@ -1352,14 +1257,13 @@ to say XaedihrHandjob:
 
 to say XaedihrBlow:
 	say "     Giving the half-demon a suggestive glance downwards and an all but subtle smile, you place your hand over the side of his waist and lean closer to him, looking in his eyes as your lips nearly meet his. His gaze strikes back at you with an intrigued, yet pleased look in his face, knowing you want to get naughty with him. 'Someone's horny, huh?' he teases, grabbing your wrist and leading your hand over the increasing bulge in his tight black pants. You feel his next words whispered onto your ear 'So, how's it going to be... Your mouth on my cock?' as he further encourages you to feel his crotch, guiding you to slip your hand under his underwear. He embraces you with his powerful arms, reaching around your waist and pulling you for a deep kiss, a masterful tongueplay that leaves you panting.";
-	say "     Carefully, you wrap your fingers around his thick meat, begging to be released out of the constraining clothing as it gets engorged with pumped blood, hardening more and more with each movement you make. You decide it's time to give it some fresh air, so you get down on your knees and start undoing the zip in his pants, to pull them down together with his underwear. His foot-long of a schlong nearly jumps out when released, only to harden to its fullest as you grab it with one hand and his balls with the other, giving the latter a gentle tug. 'Ooh, yeah that's it... though it'd feel even better if you used your mouth on them...' he suggests, glancing over you with a playful smile as he grabs your head and pulls you gently towards them.";
-	WaitLineBreak;
+	say "     Carefully, you wrap your fingers around his thick meat, begging to be released out of the constraining clothing as it gets engorged with pumped blood, hardening more and more with each movement you make. You decide it's time to give it some fresh air, so you get down on your knees and start undoing the zip in his pants, to pull them down together with his underwear. His footlong of a schlong nearly jumps out when released, only to harden to its fullest as you grab it with one hand and his balls with the other, giving the latter a gentle tug. 'Ooh, yeah that's it... though it'd feel even better if you used your mouth on them...' he suggests, glancing over you with a playful smile as he grabs your head and pulls you gently towards them.";
+	wait for any key;
 	project Figure of Xaedihr_NudeHard_icon;
 	say "     While stroking his cock, you reach over his testes with your tongue, sliding it all around them before you tug them between your lips. As you suck on them gently, then a little harder, the mage lets out a moan as he caresses the back of your head, encouraging you to continue. 'I really fucking love that...!' He must really like getting his balls played with, but after some time spent there, you think it's time to get back to the main course. With this in mind, you lift your lips away from the half-demons soft nuts and tease him with a lick that goes from the base of his shaft to the glistening tip, feeling a potent sweet sensation once our tongue slips past the slit. 'You're a fucking tease...'";
 	say "     You have no intention in making the half-demon wait, so you get your lips wrapped around his thick erection, heading down as deep as you can while your hands are busy fondling and tugging on his balls, knowing what effect that has in him. The sorcerer takes a deep breath, but you can tell he never stops looking at what you're doing. There's further encouragement in his gesture, a slight pressure on the back of your head as you take his length in your mouth, not forcing you, just guiding you to perform exactly how he likes. 'Damn, you have some skill... I could have you do this all day...' he comments amidst a few low moans, now with both his hands on your head as he starts going a little rougher.";
 	WaitLineBreak;
-	say "     His hips aid your motions as he begins thrusting into your throat, keeping a tight grasp of your head, making any resistance of your part futile. Not that you mind it, as he's actually very careful in not overpushing your limits. 'Your throat surely feels good... Fuck...!' You both keep going at it for a while, your jaw eventually starting to ache, as taking a foot-long thick cock for such a long time is no easy feat. However, the half-demon's inhuman stamina is starting to give in. As your fingers are still caressing his gonads, you feel them beginning to retract, a sign that he's approaching climax. 'I'm getting close... It's gonna be a big one...!' His grip over your head is released, and you find yourself in the chance of deciding [bold type]how you want to finish this.[roman type][line break]";
-	LineBreak;
+	say "     His hips aid your motions as he begins thrusting into your throat, keeping a tight grasp of your head, making any resistance of your part futile. Not that you mind it, as he's actually very careful in not overpushing your limits. 'Your throat surely feels good... Fuck...!' You both keep going at it for a while, your jaw eventually starting to ache, as taking a footlong thick cock for such a long time is no easy feat. However, the half-demon's inhuman stamina is starting to give in. As your fingers are still caressing his gonads, you feel them beginning to retract, a sign that he's approaching climax. 'I'm getting close... It's gonna be a big one...!' His grip over your head is released, and you find yourself in the chance of deciding [bold type]how you want to finish this.[roman type][line break]";
 	say "     ([link]Y[as]y[end link]) - Try to swallow his entire load.";
 	say "     ([link]N[as]n[end link]) - Have him cover your face in cum.";
 	if Player consents:
@@ -1368,7 +1272,7 @@ to say XaedihrBlow:
 		say "     'Damn! Wow! That... was a HELL of a release!' he exclaims as he opens his eyes to look at you, gasping for air. 'Gave you a little neck workout, huh?' You can't help but smile back at him, glad that he enjoyed your treat. 'Don't worry, you'll be fine and ready for another, I'm sure. There's always more where that came from...' he teases, winking and grinning at you, wiping out a single drop of cum that escaped by your lip and licking it off his thumb. 'Hm, still tasty, isn't it? I mean, most of it went down your throat, but you surely tasted some of it, right? Anyway, I must return to my studies. Hope you enjoyed the meal.' With this, the sorcerer gives you one last smile before he returns to his books.";
 	else:
 		LineBreak;
-		say "     With your decision made, you pull his cock out of your mouth, as you jerk the half-demon's cock faster, with both your hands now. Within moments, you barely need to do any stroking by yourself, as Xaedihr is nearly literally fucking the space between your palms. 'Don't stop, now... Fuck yes! I'm cumming!' he almost shouts, his thick foot-long manhood starting to harden to its peak and throbbing with anticipation. He moans, as loud as he's to shoot hard, and within moments, a great deal of jizz lands right on you with surprising force. He keeps going, thick and generous spurts of cum, one after the other, covering your chest and even your face while his long orgasm lasts. He's not even looking, his eyes are closed and he's biting his lips as he covers you in his half-demon seed.";
+		say "     With your decision made, you pull his cock out of your mouth, as you jerk the half-demon's cock faster, with both your hands now. Within moments, you barely need to do any stroking by yourself, as Xaedihr is nearly literally fucking the space between your palms. 'Don't stop, now... Fuck yes! I'm cumming!' he almost shouts, his thick footlong manhood starting to harden to its peak and throbbing with anticipation. He moans, as loud as he's to shoot hard, and within moments, a great deal of jizz lands right on you with surprising force. He keeps going, thick and generous spurts of cum, one after the other, covering your chest and even your face while his long orgasm lasts. He's not even looking, his eyes are closed and he's biting his lips as he covers you in his half-demon seed.";
 		say "     'Oh, fuck... Fuck...! Damn! Wow! That... was a HELL of a release!' he exclaims as he opens his eyes to look at you, all drenched in his sex juice, 'Uh... Oops, I guess I... gave you a cum bath. Told you it was gonna be big.' You can't help but smile back at him, glad that he enjoyed your treat. 'Just imagine how full you'd be if this entire load ended up inside you... Just a thought.' he teases, winking and grinning at you, wiping out a single drop of cum from your face and licking it off his thumb. 'Hm, still tasty. You should try it. It'd be a fun way to clean yourself. I'd help you, but I must return to my studies. Maybe we can catch up with that little idea later?' With this, the sorcerer gives you one last smile before he returns to his books, leaving you soaked with his sperm.";
 	if a random chance of 3 in 4 succeeds and loyalty of Xaedihr < 30:
 		say "     [bold type]The time you've spent with Xaedihr made him open up more to you.[roman type][line break]";
@@ -1380,14 +1284,14 @@ to say XaedihrBlow:
 to say XaedihrGetBlown:
 	project Figure of Xaedihr_Underwear_icon;
 	say "     Giving the half-demon a suggestive glance downwards and an all but subtle smile, you place your hand over the side of his waist and lean closer to him, looking in his eyes as your lips nearly meet his. His gaze strikes back at you with an intrigued, yet pleased look in his face, knowing you want to get naughty with him. 'Someone's horny, huh?' he teases, grabbing your wrist and leading your hand over the increasing bulge in his tight black pants. But you want something different this time, and you tell Xaedihr what's on your mind. 'So you want to get some head, instead? Well... I guess you can take it as a reference for when you're blowing me.' he responds, winking at you, starting by kissing his way towards down below [if Player is not naked]while removing your clothes[else]before your naked body.[end if]";
-	say "     The half-demon only drops his long jacket to the floor, and doesn't worry about anything else but your hardening length. When he gropes your cock with his hands, you immediately feel your erection throbbing with his masterful touch, quickly learning your sweet spots before going for the blowjob. [if Cock Length of Player < 12 or Cock Length of Player is 12]'Take notes while I'm deepthroating you, alright? And try not to cum right away...' he teases you just as he's wrapping his lips around the tip of your dick, letting it slowly sink deeper in his mouth. Xaedihr manages to do this without a problem, you almost can't believe how your cock is fully submerged in his throat, feeling like every inch of your shaft is being rubbed across a warm fleshy tunnel. He makes eye contact with you, his provocative lime green gaze telling you how easily he's deepthroating your cock, and it feels incredible...[else if Cock Length of Player > 12]'Well, I can make miracles happen, but not this big. Don't worry, I'll show you an equally effective technique.' he teases you just as he's wrapping his lips around the tip of your dick, having his tongue licking your sensitive glans all over like a wiggling snake. To further excite you, he uses his hands, feeling like soft silk rubbing across your shaft as he does his best to cover your entire manhood. He then focuses on the head, taking as much of it as possible inside and giving it some generous caressing.[end if]";
+	say "     The half-demon only drops his long jacket to the floor, and doesn't worry about anything else but your hardening length. When he gropes your cock with his hands, you immediately feel your erection throbbing with his masterful touch, quickly learning your sweet spots before going for the blowjob. [if Cock Length of Player < 13]'Take notes while I'm deepthroating you, alright? And try not to cum right away...' he teases you just as he's wrapping his lips around the tip of your dick, letting it slowly sink deeper in his mouth. Xaedihr manages to do this without a problem, you almost can't believe how your cock is fully submerged in his throat, feeling like every inch of your shaft is being rubbed across a warm fleshy tunnel. He makes eye contact with you, his provocative lime green gaze telling you how easily he's deepthroating your cock, and it feels incredible...[else if Cock Length of Player > 12]'Well, I can make miracles happen, but not this big. Don't worry, I'll show you an equally effective technique,' he teases you just as he's wrapping his lips around the tip of your dick, having his tongue licking your sensitive glans all over like a wiggling snake. To further excite you, he uses his hands, feeling like soft silk rubbing across your shaft as he does his best to cover your entire manhood. He then focuses on the head, taking as much of it as possible inside and giving it some generous caressing.[end if]";
 	WaitLineBreak;
 	say "     Of course, the sex expert doesn't leave your balls off the play. He shares a little of his most preferred oral thing by tugging on your balls and gently wiggling his tongue all over them, while feeling them up with one hand. All this pleasure is driving you crazy, rarely you find someone so good and confident about providing others a good time, and he certainly keeps reminding you of that. The sorcerer then places both his hands around your shaft and strokes you softly at first, then going faster and faster. Eventually you're feeling yourself nearing orgasm, and you can't help but start jerking your hips, to which he grins and teases you more.";
 	if a random chance of 1 in 2 succeeds: [he swallows]
 		say "     'I wonder what your cum tastes like... Might as well give it a try and see!' The half-demon gets his mouth into position as he keeps wanking you off. There's no describing how soft his hands are, your cock simply feels so good in his grasp that you don't want this to be over so soon. When he makes you hit the edge, it's like he heard your thoughts, as he decelerates his motions, now very carefully rubbing across the tip of your cock and over your cum slit. The mage is edging you on purpose, and you stand stiff like a rock, holding for as long as you can. 'Sounds like you really took what I said literally, huh? It's actually cute seeing you wanting to cum so bad but trying to hold it off so hard...' At some point, he stops altogether, with his firm grasp feeling your cock pulsing like mad.";
 		WaitLineBreak;
 		say "     You can't stand the urge to cum anymore as he kisses your cock softly, opening his mouth around the tip as he starts stroking it again. He jerks it faster... and faster... then he's waiting for your load with his tongue out and looking in your eyes. The image is so hot that you don't even realize you're about to shoot, but he rapidly reacts by taking your outcoming torrents of jizz completely inside his mouth. Milking you out through the entire climax, your body spasms near your abdominal area and standing on your feet becomes a challenge. Never you thought you'd cum so hard at the hands - and mouth - of an half-demon. When it finally begins to subside, Xaedihr pulls your cock out of his mouth, licking off any drop of cum still left around his lips.";
-		say "     'Now that was a nice load. Knew this would be worth it. I'm impressed, actually! Though of course you owe it all to my skill, but you don't need to thank me. Hope you enjoyed yourself and have learned with this. he says as he stands up, giving you a pat on your shoulder. 'You owe me a blowjob when you catch your breath, so make sure you come pay later.' Winking at you with a chuckle, Xaedihr leaves to return to his studies. Like always, you're left to clean up the mess on your own... But you get the feeling he enjoys seeing you do that.";
+		say "     'Now that was a nice load. Knew this would be worth it. I'm impressed, actually! Though of course you owe it all to my skill, but you don't need to thank me. Hope you enjoyed yourself and have learned with this,' he says as he stands up, giving you a pat on your shoulder. 'You owe me a blowjob when you catch your breath, so make sure you come pay later.' Winking at you with a chuckle, Xaedihr leaves to return to his studies. Like always, you're left to clean up the mess on your own... But you get the feeling he enjoys seeing you do that.";
 	else: [he checks how far your shoot]
 		say "     'I wonder how far you can shoot... Might as well give it a try and see!' says the half-demon as he keeps wanking you off. There's no describing how soft his hands are, your cock simply feels so good in his grasp that you don't want this to be over so soon. When he makes you hit the edge, it's like he heard your thoughts, as he decelerates his motions, now very carefully rubbing across the tip of your cock and over your cum slit. The mage is edging you on purpose, and you stand stiff like a rock, holding for as long as you can. 'Sounds like you really took what I said literally, huh? It's actually cute seeing you wanting to cum so bad but trying to hold it off so hard...' At some point, he stops altogether, with his firm grasp feeling your cock pulsing like mad.";
 		WaitLineBreak;
@@ -1402,13 +1306,13 @@ to say XaedihrGetBlown:
 
 to say XaedihrAssFucked:
 	say "     Giving the half-demon a suggestive glance downwards and an all but subtle smile, you place your hand over the side of his waist and lean closer to him, looking in his eyes as your lips nearly meet his. His gaze strikes back at you with an intrigued, yet pleased look in his face, knowing you want to get naughty with him. 'Someone's horny, huh?' he teases, grabbing your wrist and leading your hand over the increasing bulge in his tight black pants. You feel his next words whispered onto your ear 'So, how's it going to be... Wanna feel my cock grow?' as he further encourages you to feel his crotch, guiding you to slip your hand under his underwear. He embraces you with his powerful arms, reaching around your waist and pulling you for a deep kiss, a masterful tongueplay that leaves you panting. You use the chance to guide him over your rear, suggesting that you're wanting something different this time. 'Oh...! I know what you want... And you'll get it. You definitely will.'";
-	say "     He's still kissing you when he slips behind you, his lips close to your neck before heading back to your ear. 'If you wanted me to fuck your ass, you could have just asked. I'd take you any day.' His masculine voice sends shivers down your spine as the sexy redhead feels up your butt. You can feel the bump in his pants rubbing against your backside, growing bigger by the second.[if player is naked]In a tease, he slips his bulge between your cheeks, giving you a slight thrust forward before beginning to strip.[else]With his lust increasing, Xaedihr slowly strips you off your gear, kissing his way over as, if by a tease, he slips his bulge between your cheeks, giving you a slight thrust forward before beginning to take his own clothes off.[end if] You feel the redhead crouching down behind you as his soft hands gently slide over your body, and that's when you feel his lips slowly kissing their way across your back. 'If you're going to take me, you'll need to be well prepared. But I can help you with that.'";
-	WaitLineBreak;
+	say "     He's still kissing you when he slips behind you, his lips close to your neck before heading back to your ear. 'If you wanted me to fuck your ass, you could have just asked. I'd take you any day.' His masculine voice sends shivers down your spine as the sexy redhead feels up your butt. You can feel the bump in his pants rubbing against your backside, growing bigger by the second. [if player is naked]In a tease, he slips his bulge between your cheeks, giving you a slight thrust forward before beginning to strip[else]With his lust increasing, Xaedihr slowly strips you of your gear, kissing his way over as, if by a tease, he slips his bulge between your cheeks, giving you a slight thrust forward before beginning to take his own clothes off[end if]. You feel the redhead crouching down behind you as his soft hands gently slide over your body, and that's when you feel his lips slowly kissing their way across your back. 'If you're going to take me, you'll need to be well prepared. But I can help you with that.'";
+	wait for any key;
 	project Figure of Xaedihr_NudeHard_icon;
 	say "     Not long after, you feel a warm tongue sliding in between your ass cheeks, to which you immediately shift your legs to allow Xaedihr a deeper licking. You can hear - and feel - him chuckling as you give yourself in to his care. His tongueplay is incredible, wiggling around and inside your anus so fluidly that it reminds you he's not completely human. Whatever he's doing is making you feel so good that you let out a moan without knowing. Though this is just the beginning of what he has planned for you. While your mind is distracted enjoying that sweet sensation, you barely notice him getting up, holding you from the back of your neck, and forcing you on fours. 'Ready to take it in the ass like a good [boygirl]? I hope you are.'";
-	say "     While he tends to be a tease, Xaedihr doesn't make you wait long for his foot-long to invade your anus. Going in slowly at first, you feel the tip stretching your hole before he slides in the rest. Getting a good grip of your hips, the mage pushes his entire length inside you, or at least, what you can take. Contrary to what it could have seemed, he's being rather gentle with you. 'Your ass feels so good... I fucking love it.' He starts to pound you, [if Player is male]feeling your prostate[else]your pleasure center[end if] stimulated with each thrust, and he surely puts just the right amount of force into it, showing that he really knows what he's doing. At some point, he's fucking you harder, grabbing you by the hips and pulling you to him with each thrust, as you feel his sizable balls against your perineum.";
+	say "     While he tends to be a tease, Xaedihr doesn't make you wait long for his footlong to invade your anus. Going in slowly at first, you feel the tip stretching your hole before he slides in the rest. Getting a good grip of your hips, the mage pushes his entire length inside you, or at least, what you can take. Contrary to what it could have seemed, he's being rather gentle with you. 'Your ass feels so good... I fucking love it.' He starts to pound you, [if Player is male]feeling your prostate[else]your pleasure center[end if] stimulated with each thrust, and he surely puts just the right amount of force into it, showing that he really knows what he's doing. At some point, he's fucking you harder, grabbing you by the hips and pulling you to him with each thrust, as you feel his sizable balls against your perineum.";
 	WaitLineBreak;
-	say "     You recall the half-demon having a good amount of stamina, and that's more evident than ever here. He fucks you for a really good while before he's panting and feeling his load wanting to leave. 'Fuck... It's coming closer... Hope you don't mind me cumming inside...' he says, not really caring about your answer as he picks up the pace and fucks you harder, powerful thrusts that make the skin on skin clashing loud like slaps. Eventually, he leans over you, and you can feel his entire body holding you tight from behind as he's about to cum. Soon, you feel his large meat pulsing inside you, and followed by a grunt of pleasure, he unleashes his half-demonic seed in you. Spurt by spurt you're filled by him, and you too inevitably hit past the edge, [if Player is male]leaving a trail of cum on the floor as you shoot[else]your body shaking in an intense wave of pleasure.[end if][line break]";
+	say "     You recall the half-demon having a good amount of stamina, and that's more evident than ever here. He fucks you for a really good while before he's panting and feeling his load wanting to leave. 'Fuck... It's coming closer... Hope you don't mind me cumming inside...' he says, not really caring about your answer as he picks up the pace and fucks you harder, powerful thrusts that make the skin on skin clashing loud like slaps. Eventually, he leans over you, and you can feel his entire body holding you tight from behind as he's about to cum. Soon, you feel his large meat pulsing inside you, and followed by a grunt of pleasure, he unleashes his half-demonic seed in you. Spurt by spurt you're filled by him, and you too inevitably hit past the edge, [if Player is male]leaving a trail of cum on the floor as you shoot[else]your body shaking in an intense wave of pleasure[end if].";
 	say "     While you both take a time to catch your breaths, Xaedihr pulls out as his seed leaks out of your hole. 'Damn! Wow! That... was a HELL of a release!' he exclaims as he opens his eyes to look at you, creampied by his efforts. 'You're gonna be full for a while, hope I didn't cause you a bellyache.' he teases, winking and grinning at you as you gaze at him from under your shoulder. 'It's a really nice ass you've got, you know? Maybe when this is all over, I can have you as my servant. You know, to take care of any itches I might have during my future researches. No promises, though.' With this, he leaves you to return to his studies, savoring the view of your tired body and cum leaking hole from a distance. The man sure is naughty.";
 	if a random chance of 3 in 4 succeeds and loyalty of Xaedihr < 30:
 		say "     [bold type]The time you've spent with Xaedihr made him open up more to you.[roman type][line break]";
@@ -1419,8 +1323,8 @@ to say XaedihrAssFucked:
 
 to say XaedihrFuck:
 	say "     Giving the half-demon a suggestive glance downwards and an all but subtle smile, you place your hand over the side of his waist and lean closer to him, looking in his eyes as your lips nearly meet his. His gaze strikes back at you with an intrigued, yet pleased look in his face, knowing you want to get naughty with him. 'Someone's horny, huh?' he teases, grabbing your wrist and leading your hand over the increasing bulge in his tight black pants. You feel his next words whispered onto your ear 'So, how's it going to be... Wanna feel my cock grow?' as he further encourages you to feel his crotch, guiding you to slip your hand under his underwear. He embraces you with his powerful arms, reaching around your waist and pulling you for a deep kiss, a masterful tongueplay that leaves you panting. You use the chance to reach over his rear, feeling up his firm bubbly glutes under your palm. 'Aren't you pushing it a little now? At least request permission first!' he responds, but doesn't feel particularly bothered. He lets you continue, guiding your other hand over and letting you slip them under his pants.";
-	say "     'If you want this ass so bad, then... We'll do this my way.' With this said, Xaedihr drops his long jacket to the floor and begins undoing the zip in his pants. [if Player is not naked]You also begin removing your gear in front of him, as he eyes you from head to toe while removing his last piece of clothing.[else]As you're already standing naked in front of him, he eyes you from head to toe while he removes his last piece of clothing.[end if] He proceeds to walk up to you, and you can't help but notice his foot-long of a cock already rock hard, feeling it throbbing against your belly as he gives you another kiss. Now you're free to grope his ass once again before he whispers 'Lie down for me. I need to get my hole wet...' Following his request, you do as he says, sitting back on the floor as observes. 'Heh, you look hot from this angle. Should have done this more often.'";
-	WaitLineBreak;
+	say "     'If you want this ass so bad, then... We'll do this my way.' With this said, Xaedihr drops his long jacket to the floor and begins undoing the zip in his pants. [if Player is not naked]You also begin removing your gear in front of him, as he eyes you from head to toe while removing his last piece of clothing[else]As you're already standing naked in front of him, he eyes you from head to toe while he removes his last piece of clothing[end if]. He proceeds to walk up to you, and you can't help but notice his footlong of a cock already rock hard, feeling it throbbing against your belly as he gives you another kiss. Now you're free to grope his ass once again before he whispers 'Lie down for me. I need to get my hole wet...' Following his request, you do as he says, sitting back on the floor as observes. 'Heh, you look hot from this angle. Should have done this more often.'";
+	wait for any key;
 	project Figure of Xaedihr_NudeHard_icon;
 	say "     Following the tease, Xaedihr places himself above you, his legs on each side of you as he crouches down on your face. Getting on his knees, he spreads his smooth buttcheeks only centimeters away of your mouth, allowing you to reach his hole with your tongue. 'Ohh... yeah, that's it... Feels fucking great...!' The more he moans, the more he lowers his ass over your face, and he's eventually sitting on you while you rim his anus. Making out with the moist and squishy opening in your brief world of darkness, you can hear the mage moaning, crazy in lust as you slip your tongue in deeper. 'You really like ass, huh? I could have you down there all day...' To your surprise, he presses his butt down softly and grinds over your face, enough to make you unable to breathe for a few seconds, then getting up as he turns around to face you.";
 	if Cock Length of Player <= 12: [Xaedihr takes the whole thing]
@@ -1450,18 +1354,17 @@ to say XaedihrBrutus:
 	say "     Accompanied by your demon brute companion, you shift your gaze from one to the other and ask Xaedihr if he'd be into some threeway fun. He's clearly intrigued at your proposal, but Brutus instantly agrees when you finish speaking. 'Well, I guess now it's a good time as any to join in some group sex. I'm fond of musclebound dudes, as well...' he responds while glancing around the demon's jacked physique. You could tell he's really enjoying the eyecandy. 'Big guys can take me with ease, which is I like best. Surely that won't be a problem for your friend?' - he asks while passing by you, while Brutus stares attentively at the sorcerer - 'I'll let you get behind me, in that case. I've got plenty on the front already.' With the situation planned, Xaedihr grabs your arm, pulling you with him as he approaches the big brute.";
 	say "     Usually Xaedihr is not fond of demons, but seeing Brutus['] purified gaze seems to set him at ease. You're standing behind the mage as he slips a hand over your hellish friend's solid chest, from which you hear a low, deep growl of pleasure. 'I wonder what they feed these guys back in Hell... To have them grow so big!' a comment followed by moving his touch lower, across the ripped abs and just above his demonic junk. You distract yourself watching this interaction, only to get aroused by watching the growing interest between both. 'Are you going to keep staring at us, or should we finally get started?' he asks, looking back at you from his shoulder.";
 	WaitLineBreak;
-	say "     Seeing the half-demon redhead so eager to begin having fun, throwing his long jacket off to the floor in the process and undoing his pants, revealing his also in great shape back muscles, [if Player is not naked]you also decide to strip to your gear and get naked with them.[else]soon to be naked as you are.[end if] Xaedihr has got this pale bubble ass that would be any top's dream, absolutely flawless smooth skin and a great posture that manages to bring the dirtiest fantasies out of the depths of your mind. You see him getting on his knees, with his legs spread apart as he grabs the big demon's cock, which stands erect as soon as his fingers lay on the shaft. The mage looks back at you once more, inviting you to slip your head between his legs for a good time between his cheeks.";
+	say "     Seeing the half-demon redhead so eager to begin having fun, throwing his long jacket off to the floor in the process and undoing his pants, revealing his also in great shape back muscles, [if Player is not naked]you also decide to strip your gear and get naked with him[else]soon to be naked as you are[end if]. Xaedihr has got this pale bubble ass that would be any top's dream, absolutely flawless smooth skin and a great posture that manages to bring the dirtiest fantasies out of the depths of your mind. You see him getting on his knees, with his legs spread apart as he grabs the big demon's cock, which stands erect as soon as his fingers lay on the shaft. The mage looks back at you once more, inviting you to slip your head between his legs for a good time between his cheeks.";
 	say "     Giving Brutus a treat of his own, the sorcerer slips his tongue all over the thick throbbing length in a way only he knows, quickly learning about all his sweet spots and nearly driving the brute crazy, something you can conclude by the way he's grunting. Though there's something odd about it, as he seems to patiently allow Xaedihr to do what he wants. He must be really enjoying it! Although he's not the only one grunting when you surprise the half-demon with your tongue in his ass, wiggling it across his tasty hole as you feel it relaxing around it. This mere feeling makes your dick harder and more eager to trade places with your mouth, but you won't be done licking his ass until he's begging you for the fuck. It's rather hot hearing his own moans muffled by a demon brute's cock, but you know that's soon to change.";
 	WaitLineBreak;
 	say "     You hear a popping sound from above as Xaedihr leans back, taking a deep breath but absolutely smothering your face under his bubble cheeks. He takes these brief seconds to let out a 'Fuck yes!' as you struggle to breathe. Though the mage soon ends your torture as he lifts his ass a bit, ordering Brutus to turn around. 'Treat's over, bud. Now I want a piece of that ass...' he says in a commanding tone, and the brute obeys him with no reluctance, even bending over for him, revealing that massive muscular butt of his, each glute bigger than the sorcerer's face. He gets in position to give Brutus some anal preparation, a rimjob he won't soon forget, as masterful as an real incubus would do. You're left to do the same with Xaedihr's ass still, albeit having to reach a little higher to tonguefuck that hungry hole. He's so relaxed that you think he could take anything in him right now.";
-	say "     The demon brute sure likes having his ass rimmed by an expert in sex - and demonology! - something you can hear by his almost animalistic moaning. While you have this smooth skinned ass grinding over your face, begging your tongue to keep squirming inside, a peek would show you - besides that foot-long of a dick nearly obscuring the entirety of your vision - a big muscle butt taking nearly half of Xaedihr's face between the cheeks! Brutus sure is big, but that means he will take the sorcerer's cock, which would be an issue for a normal-sized human, without a problem. You leave his hole to rest and give him a treat by tugging his balls between your lips for a bit, and that has the half-demon grabbing your head by the back with incredible lust, encouraging you to continue while you slip a finger in his ass. He doesn't say anything, his mouth being too busy preparing a hole for the hard fuck that's about to happen, though you can tell he's as horny as you are to get started with the pounding.";
+	say "     The demon brute sure likes having his ass rimmed by an expert in sex - and demonology! - something you can hear by his almost animalistic moaning. While you have this smooth skinned ass grinding over your face, begging your tongue to keep squirming inside, a peek would show you - besides that footlong of a dick nearly obscuring the entirety of your vision - a big muscle butt taking nearly half of Xaedihr's face between the cheeks! Brutus sure is big, but that means he will take the sorcerer's cock, which would be an issue for a normal-sized human, without a problem. You leave his hole to rest and give him a treat by tugging his balls between your lips for a bit, and that has the half-demon grabbing your head by the back with incredible lust, encouraging you to continue while you slip a finger in his ass. He doesn't say anything, his mouth being too busy preparing a hole for the hard fuck that's about to happen, though you can tell he's as horny as you are to get started with the pounding.";
 	WaitLineBreak;
 	say "     As you look up, you see the demonologist standing above you seconds before you roll over to get behind him. With a loud slap, Xaedihr spreads the brute's ass cheeks before he rubs the hole with the tip of his dong, while pulling you to himself for an embrace. He urges you to watch his dick getting buried inside the demon's muscular butt, and you can't help but get yours between the sorcerer's glutes. 'You like that, don't you? Feeling my ass around your cock just before I let you in...' he whispers to you, arching his body to tease you further while leaning over the brute's backside. From within a certain angle, you're able to look at Xaedihr's manhood slowly entering Brutus['] ass, and you really can't wait to do the same to the sexy redhead still teasing your cock. 'Go ahead... Do it... I know you want to. And so do I...' he asks, as the rest of his length is put inside, causing the demon to grunt in pleasure.";
 	say "     The sorcerer's dirty talking only further arouses you, and with a thrust, you start shoving your [Cock of Player] inside him, feeling his soft and smooth hole slowly stretching around the tip. You hold the redhead in your arms from behind as you thrust in deeper, both of you ballsdeep in the asses in front of you. 'Oh, this feels incredible...!' Looks like he loves being in the middle of the trainfuck, getting penetrated from behind while shoving his dick in the oddly submissive brute. With coordination, you're able to make it work, and letting the mage do most of the movement gives you enough window to thrust when his butt moves back. Soon your motions are harder and deeper, your member reaching further inside the sorcerer's rear with every push. Eventually, he lets you rest your cock fully inside him as you conduct the fuck, having Brutus receiving the half-demon's length the way you give it to him.";
 	WaitLineBreak;
 	if "Kinky" is listed in feats of player:
 		say "     Amidst the intensity of fucking, you feel a sudden pull from Xaedihr as he whispers something onto your ear. 'I could make this even more interesting, if you want... just let me know.' You suppose this has something to do with his magical powers. [bold type]Do you give him the green light?[roman type][line break]";
-		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Yes.";
 		say "     ([link]N[as]n[end link]) - Keep it 'vanilla'.";
 		if Player consents: [add tentacle fun!]
@@ -1498,14 +1401,11 @@ to XaedihrBrutusTrainFuckVanilla:
 	now PlayerFucked of Xaedihr is true; [he had a sexual encounter with the player]
 	now lastfuck of Xaedihr is turns;
 
-[***********************************************************]
 Section 5-3-1 - Sex Menu - Dom Xaedihr scenes
-[***********************************************************]
 
 to say XaedihrSubmit:
 	if libido of Xaedihr is 4: [player was uncertain, this will solve that]
 		say "     With the previous sex talk you both had, the possibility of submitting to him clearly lingered in your mind, but the response you gave him was uncertain, and he takes note of that from your body language, hesitating in whatever you should say or do when approaching the matter. 'What's wrong? Is it still about that talk we had?' he asks, approaching you gently and taking you in his embrace. 'As I've told you before, it's nothing you have to do if you don't want to. But of course, I'd be... more than happy if you'd let me be in control... You don't have to worry, I'll take good care of you.' says the half-demon as he shows a slight mischievous smile, though keeping his nice gestures. 'I just don't want to tell you what we'll be doing because I want it to be a surprise, but I'm sure you'll like it.'";
-		LineBreak;
 		say "     His voice sounds reassuring in your head, and his intentions seem to be both his pleasure and yours. You'll have to make up your mind now... [bold type]How is it going to be?[roman type][line break]";
 		say "     ([link]Y[as]y[end link]) - Let's do it. He makes it sound like it'll feel very good.";
 		say "     ([link]N[as]n[end link]) - Just cut it here. You're not interested in this.";
@@ -1562,27 +1462,26 @@ to say XaedihrDomSexMenu:
 			choose row calcnumber in table of fucking options;
 			say "[title entry]: [description entry]?";
 			if Player consents:
-				let nam be title entry;
 				now sextablerun is 1;
-				if (nam is "Have him edge you with his magic tentacles"):
-					say "[XSubmitTentacleEdging]";
-				else if (nam is "Worship his body and make him feel appreciated"):
-					say "[XSubmitBodyWorship]";
-				else if (nam is "Get him to facefuck you"):
-					say "[XSubmitFacefuck]";
-				wait for any key;
+				if title entry is:
+					-- "Have him edge you with his magic tentacles":
+						say "[XSubmitTentacleEdging]";
+					-- "Worship his body and make him feel appreciated":
+						say "[XSubmitBodyWorship]";
+					-- "Get him to facefuck you":
+						say "[XSubmitFacefuck]";
 		else if calcnumber is 0:
 			now sextablerun is 1;
 			say "     You step back from the half-demon, shaking your head slightly as he gives a questioning look.";
-			wait for any key;
 		else:
-			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
+			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options], or 0 to exit.";
+	wait for any key;
 	clear the screen and hyperlink list;
 
 to say XSubmitTentacleEdging:
 	say "     With the talking out of the way and ready to proceed into the fun, you let the half-demon know that[if libido of Xaedihr > 2 and libido of Xaedihr < 5] you're ready for what he has in mind[else if libido of Xaedihr > 4] you're left craving for some more of that special edging he does so well[end if] Without any further ado, the sorcerer simply leans in for a deep kiss, his hands heading directly for your butt as he gives it a hard squeeze. He practically gives your mouth a full licking with his nimble tongue, taking as much time as he wants. He pulls his lips away after a good while, and while he's grabbing your head, his tongue finds its way across your cheek, slowly sliding upwards and leaving a subtle trail of saliva behind. With a grin, he gets some distance between you both, pushing you back gently.";
-	say "     [if Player is not naked]'Take off your clothes, now. And you better put on a show for me, too[else]'Now, show off that sexy body for me[end if].' he orders, and you do as he says. Standing naked in front of the mage, you make sure you do your best at teasing him with your good looks, showing off your [bodydesc of Player][bodytype of player] body and rubbing it all over sensually. Xaedihr also strips as he watches you, unable to hide his arousal, so you turn around and allow him to have a good look at your backside. Putting one hand under one of your glutes, you then give it a slap and turn around again to face the sorcerer, who's already naked with his foot-long of a cock rising to attention. His eyes run through your body from head to toe before he signs you to come closer.";
-	WaitLineBreak;
+	say "     [if Player is not naked]'Take off your clothes, now. And you better put on a show for me, too[else]'Now, show off that sexy body for me[end if],' he orders, and you do as he says. Standing naked in front of the mage, you make sure you do your best at teasing him with your good looks, showing off your [bodydesc of Player][bodytype of player] body and rubbing it all over sensually. Xaedihr also strips as he watches you, unable to hide his arousal, so you turn around and allow him to have a good look at your backside. Putting one hand under one of your glutes, you then give it a slap and turn around again to face the sorcerer, who's already naked with his footlong of a cock rising to attention. His eyes run through your body from head to toe before he signs you to come closer.";
+	wait for any key;
 	project Figure of Xaedihr_NudeHard_icon;
 	say "     Obliging his command, you walk towards the muscular half-demon, who's already biting his lower lip and giving his manhood a few unaware strokes. Once you're within his reach, he pulls you to him, both your warm bodies rubbing against each other as he plants another passionate kiss on your mouth. As your tongues playfully wrestle against each other, you start feeling two rather slimy and wet tendrils circling around your ankles and calves. Xaedihr's holding you in place, lips attached to yours, all while his magical extensions take a good grasp of your legs and arms, pulling them open and denying you any freedom of movement. Restrained as you are, you find yourself at the sorcerer's complete mercy, who keeps himself at a very short distance from you, now rubbing your body all over with one of his hands as the other is still gently stroking his meat.";
 	say "     Somehow his touch feels almost overwhelmingly good, and you can't help but whimper at his caresses. 'If you're already so worked out with this, I can't wait to see you squirm around, begging me to make you cum.' he teases, his words only making your [if Player is male][Cock of Player] penis twitch[else if Player is female]womanhood leak[else]sensitive crotch tingle[end if] with desire. Your only option at getting off is by his actions, as the dark tendrils are holding you still with impressive strength. Now that his intentions are well noted, ";
@@ -1599,7 +1498,6 @@ to say XSubmitTentacleEdging:
 		WaitLineBreak;
 		say "     I've got you there... So close...' he murmurs softly as he does his best to rub all your sensitive areas, only to stop abruptly once you reach the edge again. He keeps doing this over and over again, only making you wiggle and squirm, whimpering for more. 'Mmh... That's hot... So desperate for pleasure, aren't you?' he teases you, then goes back to edging you, fondling your sexless crotch for a moment, then stopping again, leading you to frustration. You let out a cry, but it only gets worse as one of Xaedihr's tendrils decides to shove itself between your buttocks, rubbing against your hole, and you swear you won't be able to endure such overwhelming amount of pleasure for much longer!";
 	say "     This ordeal continues for several minutes, to what seems to be about half an hour. Continuous teasing and caressing, all stopping just before you cross the point of no return, only to resume at its fullest, over and over again... Your mind feels frail as your body can only squirm around, your whimpering just making the sorcerer grin in satisfaction as he continues his torture on you unbothered. He leans over to kiss your neck briefly, then shifts his kissing around your ear, using the chance to whisper 'If you're a good [boygirl], you'll know how to beg.' His words have an almost immediate effect, but only you ultimately decide what to do next. If you beg him, he might let you cum, but if you refuse, who knows what he'll have in store for you...";
-	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Beg him to let you orgasm!";
 	say "     ([link]N[as]n[end link]) - Be a bad [boygirl].";
 	if Player consents: [player begs and gets to cum the good way]
@@ -1642,22 +1540,21 @@ to say XSubmitTentacleEdging:
 		NPCSexAftermath Player receives "AssDildoFuck" from Xaedihr;
 
 to say XSubmitBodyWorship:
+	project Figure of Xaedihr_Underwear_icon;
 	say "     Having a good look at the half-demon's great physique, despite him being quite a bookworm, you let him know that it would be proper if you gave his muscles loads of attention, which they deserve. You start by complimenting them, especially his arms and chest, all well-built with a lot of muscle mass to love. It makes one wonder how such a person can maintain a body like this when all they do is read and cast spells... Xaedihr chuckles, then gently grabs you by the chin and makes you look into his eyes. 'Being half a demon has its perks... Big brain, big muscles...' He seems to have stopped there, but you know exactly what else is big, too. But, right now, you would prefer to feel up his body, and the sorcerer clearly does not stop you.";
 	say "     As you place your hands over the middle opening on his jacket, you begin to feel up his pecs as you push the rest to the sides, the dark leather resting on top of your hands until, suddenly, they are not. It falls on the floor, leaving Xaedihr's torso bare. 'You like big muscles, huh,' he comments with a grin, following your movements without interfering. It looks like he is letting you choose where you want to go for, while observing your efforts.";
-	project Figure of Xaedihr_Underwear_icon;
-	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Kiss his pecs.";
 	say "     ([link]N[as]n[end link]) - Go for his biceps and armpits.";
 	if Player consents: [pecs]
 		LineBreak;
-		say "     With such a marvelous pair of pectorals right in front of you, there is no need to think twice. Immediately, you lean your head over his chest and let your lips collide with the muscly pec, to then kiss it around underneath and towards his nipple. As you even, barely, touch them with your mouth, the mage lets out a hesitant moan, quite as if he was trying to contain it. Noticing that he has failed, the sorcerer exclaims, 'Well... Fuck. They're really sensitive. And most definitely hotwired to my dick, somehow.' You have not been licking around his now hard nipples for long until you hear the mage unzip his pants, having placed his foot-long outside while mindlessly jerking it to an easy full erection.";
+		say "     With such a marvelous pair of pectorals right in front of you, there is no need to think twice. Immediately, you lean your head over his chest and let your lips collide with the muscly pec, to then kiss it around underneath and towards his nipple. As you even, barely, touch them with your mouth, the mage lets out a hesitant moan, quite as if he was trying to contain it. Noticing that he has failed, the sorcerer exclaims, 'Well... Fuck. They're really sensitive. And most definitely hotwired to my dick, somehow.' You have not been licking around his now hard nipples for long until you hear the mage unzip his pants, having placed his footlong outside while mindlessly jerking it to an easy full erection.";
 		say "     'I really like you there, you know...' His tone seems unsurprised, perhaps because he has considered letting you play with his chest, once. What comes next, however, catches you off guard, as his arm comes around your head and begins to smother your face against his pec. 'Work it with your tongue some more... Yes...' His voice seems to be slowly giving in to his lusts, and you can feel his arm moving to stroke his member while you make out with his pecs. He occasionally allows you to go for the other, but always keeping his hand on the back of your skull. 'Fuck, this is hot... Like nursing on my pecs like a good little [boygirl]? Well, shit, I definitely do love you doing just that... Just... keep sucking on them...'";
 	else: [biceps and pits]
 		LineBreak;
 		say "     Xaedihr is really strong-looking in his upper torso, especially his bulging arms. But, for some reason, you find yourself drawn to his biceps, which seem to eat your eyes back, yearning for attention. The mage notices you staring at them, and it takes you a while to realize he was flexing them for you. 'Love at first sight? I'm sure they'd love you back,' he teases you, bringing one of his arms to your face as he uses his other hand to push your head onto it. 'Don't be shy, give it a kiss!' Your lips are simply smothered against the hard surface surrounding his flexed bicep, forcing them open until your tongue is inevitably licking at it. The sorcerer even flexes in your mouth, having you feel it throb while making out with it.";
 		say "     'Bet you like that, too...' He says, while you are stuck and forced to worship his arm, but slowly sliding down on it. Soon, you find your face planted against his armpit, instead, and he makes sure it remains really buried in it. 'Know what else demon genes give me?' He asks, and he does not need an answer. The pheromonal scent hits you right then as an overbearing lust strikes you, making you almost hunger for that pit, turning your whole body on with burning desire as you kiss and lick under his arm. While you cannot see him, you just know he is grinning. 'That's right, my [boygirl] slut... Lick my pits like the bitch you are. Don't bother fighting your urges... That'd please me the most.'";
+	wait for any key;
 	project Figure of Xaedihr_NudeHard_icon;
-	WaitLineBreak;
 	say "     After you spend what feels like several minutes simply worshiping the sorcerer as he sees fit, amidst him stroking his sizable cock and enjoying your dedication thoroughly, he finally decides to pull you away from him slightly, turning your face to his, with his torso very, very close to you, still. Your chin is almost resting in the space between his pecs. 'You know... Maybe you do deserve a reward,' he says, as he brushes your head in sweet affection, 'and I am a mage, after all... Summoning tentacles to fuck your every hole is not the only thing I can do...' As he says this, both his arms embrace you tighter against his pecs, and your face is brought to darkness once he tucks it between his bulging chest.";
 	say "     It did not seem like there was this much space in between, before. Your face is definitely engulfed by his pecs, and as his arms hug the rest of you, they also begin to smother you as he pulls you against him. You move yours across his body, but find out that he seems... bigger. And bigger... Every muscle in his body increasing in size as you also feel him getting warmer and heavier. 'Feels fucking good... Unghh... Yeah... like that?' He asks with a chuckle, leaning over on top of you as you are pushed against some surface, pinned down under him as he continues to grow. The pressure of his growing muscles begins to really threaten to crush you, and that is not the only thing that grows... Amidst all this, his previously only twelve inches of cock must have doubled in size as this now bigger than a bodybuilder Xaedihr grinds his whole self against you.";
 	WaitLineBreak;
@@ -1675,12 +1572,12 @@ to say XSubmitBodyWorship:
 to say XSubmitFacefuck:
 	say "     As you wonder about the many possibilities that could be proposed to the mage, you happen to become increasingly more interested in one that involves oral sex. Although, you do not want to simply blow him. To explain what you mean, you tell him that you would like Xaedihr to own your throat and fuck it like he would fuck any other tight hole where his cock could fit. Putting it simply, you desire a good old fashioned facefuck. He nods and seems to be thinking about it for a second before delivering a reply. 'So... No magic play at all, it is? I don't think we need magic for something so simple, unless there is a way to make things more interesting, though I fail to conclude what. Perhaps we should, indeed, keep it simple.'";
 	say "     Simple it is. Xaedihr refrains from using any magic on this particular request and simply proceeds to push you onto an elevated surface where you can lie down with your face up, right at the edge, enough for him to keep standing up, place both his legs on each side of your head and have his crotch hover above you. He does not fully commit to this position, yet, as you are still readjusting yourself. You start becoming aroused at the mere thought of it, especially as you see him remove his clothes from such an angle, until he is completely naked. You rarely get to see his penis soft as it is, which is still a great and thick dandling meat that is probably still bigger than most average human men when hard. A warm scent immediately reaches your nose as that mixture of demonic and masculine musk makes itself evident, with the half-mage's privates so close to your face.";
+	wait for any key;
 	project Figure of Xaedihr_NudeSoft_icon;
-	WaitLineBreak;
 	say "     Almost immediately, a rush runs through you, like an urge to please him as you beckon the sorcerer to bring the goods down on your face. He slowly does so, placing his balls right on top of your lips as you attempt to take one of them in at a time, your tongue welcoming the orbs with licking and wiggling all around them, which leaves the half-demon pleased. He pats your cheek on one of the sides with a hand and calls you 'Good [boygirl]...' before leaving himself to fully enjoy your caresses. Those cum factories are full and heavy, generously filling your mouth due to their great size, showing just how much of a load he can carry in those, a thought that crosses your mind and bathes you in eagerness to serve.";
 	say "     It does not take long for him to become hard from your work on his balls, that large meat of his thickening and reaching its fully erect state in about several seconds. Xaedihr does appreciate this and encourages your efforts with a tender stroke across your jaw that extends towards your chest, only to bring both his hands back up and behind your skull as he begins to adjust his position. He jerks himself for a while, gently pulling his sack from your mouth with a popping sound as you keep your lips wrapped around his nuts until the end, and smiles at you, happy with your dedication. All you see is that huge cock in front of you and the rest of him from his waist up, and the mage then gives you a playful cockslap or two as he realizes you are looking back at him.";
+	wait for any key;
 	project Figure of Xaedihr_NudeHard_icon;
-	WaitLineBreak;
 	say "     His dick surely feels heavy hitting your face like that, and he is not even applying a lot of force on it, but it enough to make you recoil slightly. 'So... are you still certain you want this cock down your throat? Fucked without mercy? No magic to help you...? Taking this entire thing all the way down to my balls over and over again...?' The more he questions you, the more sure you are that you want this, so you eagerly nod at every segment of his sentences. He does not look surprised that you merely confirmed your wishes, and instead smiles before turning around. His ass comes into view before he takes a step back, then he tenderly places one hand under your jaw, as if telling you to open your mouth, and begins to slide his meat past your lips, which you wrap around his shaft the first chance you get.";
 	say "     From this angle, his cock can go straight towards your throat and has plenty of space available, which he makes sure to use. 'So eager to please...! Fine, I'll go slow at first...' The demonologist keeps his promise by slowly thrusting down your throat, his cock stretching it from the inside as you feel it bulge through your neck. The fact that he is doing it at this pace actually lets you get used to his one foot long of a dick, which would be quite a challenge to endure, otherwise. He actually has got just the right angle to freely push it in and out of your throat with minimal effort, holding your head by the back of your skull with one hand so that you can keep it in position more easily.";
 	WaitLineBreak;
@@ -1696,17 +1593,9 @@ to say XSubmitFacefuck:
 	say "     He then holds his half-hard dick in front of you with a smile on his face, knowing that you took everything in. 'That was good... You managed. Seems like when you want to be a good [boygirl], you actually perform very decently. I'm glad... This means we can keep doing it.' Once you both take a moment to catch your breath, he helps you up. 'Get some rest now. I've got some notes I want to organize on a study I was performing. Hm... maybe sometime I should let you suck me off while I analyze my books. I think that could make the task slightly less... dull,' he says, before turning away to return to his usual affairs.";
 	NPCSexAftermath Player receives "OralCock" from Xaedihr;
 
-[***********************************************************]
-[***********************************************************]
-[***********************************************************]
 Section 6 - Library Interactions
-[***********************************************************]
-[***********************************************************]
-[***********************************************************]
 
-[***********************************************************]
 Section 6-1 - Xaedihr Experiments
-[***********************************************************]
 
 Table of GameEventIDs (continued)
 Object	Name
@@ -1716,21 +1605,18 @@ Xaedihr Experiments is a situation.
 ResolveFunction of Xaedihr Experiments is "".
 Sarea of Xaedihr Experiments is "Nowhere".
 
-[***********************************************************]
 Section 6-1-1 - Incubus Experiment
-[***********************************************************]
 
-instead of navigating Grey Abbey Library while (Xaedihr is in Grey Abbey Library and resolution of Xaedihr Experiments is 0 and a random chance of 1 in 10 succeeds):
+instead of navigating Grey Abbey Library while Xaedihr is in Grey Abbey Library and resolution of Xaedihr Experiments is 0 and a random chance of 1 in 10 succeeds:
 	say "[NavCheck Grey Abbey Library]";
 	if NavCheckReturn is false, stop the action; [can't nav from the player's location, or already there - so we stop this cold]
-	move player to Grey Abbey Library;
+	move player to Grey Abbey Library, without printing a room description;
 	say "     When you arrive back at the Grey Abbey Library, you happen to glance towards where Xaedihr usually is. He's usually sitting there by the corner, surrounded by all kinds of books and papers, writing frantically as he speaks to himself about all the nonsensical magic theories that only the most ancients of the supernatural entities could grasp. Except that now, for some reason, he isn't there. How odd is that, given the fact he spends literally all day browsing all the shelves - and even containers - for more material for his research? Maybe he went for a field exploration, but he usually tells you every time he leaves the premises. You decide to bring up the summoning trinket, but as soon as you touch it, an immediate certainty tells you that he's still in the library. These magic things are really useful.";
 	say "     But your curiosity persists, so you decide to sneak around the library in hopes to find him doing something, hopefully not anything dangerous that causes irreversible damage. You do a thorough search around the ground level and the upper floor, but he's nowhere to be found in the main edifice! That only leaves the bunker left, but why would he go there? Questioning yourself will make you no good if you're going to stay still wondering, so you go look for the half-demon in there. Quietly so you don't startle the sorcerer, you go over every corner... until you eventually find him in one of the rooms. The one with the master bed, no less! Why in the world would he be there? You're about to know.";
-	WaitLineBreak;
+	wait for any key;
 	project Figure of Xaedihr_Full_icon;
 	say "     As soon as you enter, Xaedihr immediately notices your presence. 'Oh, hello there. Hope you don't mind me utilizing your space for some personal experimentation? It would benefit us both, I assure you.' he says, with absolute no shame nor hesitation, while there's a fully naked incubus tied up in the bed, enveloped by those strange purple tendrils your mage friend loves bragging about. They're currently wiggling around the demon's body, covering every sensitive spot of his, with one shoved right down his mouth, another in his ass, and a last one sounding the nine inch penis that is typical of his species. The poor thing can't even move an inch, as the tendrils are tightly holding his arms and legs against the mattress, together with the rope attaching his hands to the bed's bars. You do remember Xaedihr telling you these extensions of himself were wired to the pleasure areas of his brain, yet he remains completely unbothered by the tentacle work happening there.";
 	say "     There he stands, completely focused on whatever he's writing on that notepad of his and barely paying you any attention. Of course, you eventually ask what this is all about. He takes several seconds to shift his gaze towards you. 'I'm analyzing brain activity on a typically lusty demon when they receive sexual estimulation. This would allow me to understand what motivates their promiscuous behavior. An interesting subject. [bold type]Do you want to observe with me?[roman type][line break]";
-	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Sure, you want to know the end to this.";
 	say "     ([link]N[as]n[end link]) - Leave him to his strange affairs.";
 	if Player consents:
@@ -1754,14 +1640,12 @@ instead of navigating Grey Abbey Library while (Xaedihr is in Grey Abbey Library
 		say "     As interesting as it may sound, maybe you shouldn't bother the mage too much with whatever he's doing. You just tell him to make sure he cleans up after he's done with his strange experiment without breaking or damaging anything. 'Who do you take me for? Of course I'll leave the place clean after I use it. What kind of odd people have you been hanging out with? Oh... Wait, don't answer that. Rest assured.' With this, he returns his focus on what he's doing and you leave him there, returning to the entrance of the Library as if nothing happened. Though one can't help but wonder what in the world is he up to...";
 		now resolution of Xaedihr Experiments is 1; [player left]
 
-[***********************************************************]
 Section 6-1-2 - Demon Brute Experiment
-[***********************************************************]
 
-instead of navigating Grey Abbey Library while (Xaedihr is in Grey Abbey Library and resolution of Xaedihr Experiments > 0 and resolution of Xaedihr Experiments < 3 and a random chance of 1 in 5 succeeds):
+instead of navigating Grey Abbey Library while Xaedihr is in Grey Abbey Library and resolution of Xaedihr Experiments > 0 and resolution of Xaedihr Experiments < 3 and a random chance of 1 in 5 succeeds:
 	say "[NavCheck Grey Abbey Library]";
 	if NavCheckReturn is false, stop the action; [can't nav from the player's location, or already there - so we stop this cold]
-	move player to Grey Abbey Library;
+	move player to Grey Abbey Library, without printing a room description;
 	say "     Coming back from another day outside to the Grey Abbey Library, you happen to glance towards Xaedihr's usual spot, only to find him away once again. Just as a safety measure, you still look around the main edifice before heading into the bunker, where he's probably conducting [if resolution of Xaedihr experiments is 1]another one of those strange experiments you caught him on the other time[else]his next experiment that he mentioned before. Could it be that he actually captured a demon brute all by himself from the mall? You'll have to see it by yourself[end if]. Carefully making your way to the room in question, you're actually surprised by a strange noise of something [bold type]breaking[roman type]! And then a loud smashing sound, followed by heavy footsteps and an enraged grunt! You told Xaedihr to be careful, but that seems to have been a fruitless effort.";
 	say "     Though the chaos is not over yet. Before you can make it halfway, the door slams open, and an enraged demon brute rushes towards you. 'Damn it! Careful! Watch out for the beast!'";
 	now inasituation is true;
@@ -1776,16 +1660,14 @@ instead of navigating Grey Abbey Library while (Xaedihr is in Grey Abbey Library
 		say "     Unfortunately for you, the brute manages to knock you out of the way, leaving your bruised body collapsed on the floor. Now, fortunately for you, Xaedihr hasn't given up yet! 'Your kind sure is problematic! Have some of this!' he shouts, followed by a crimson bolt that hits the brute with an immense fiery flash, confounding the demon's senses. He follows up with a powerful shadow sphere spell which smacks the brute's head, knocking him down unconscious. The sorcerer then rushes to you and helps you get up.";
 	else if fightoutcome is 30: [fled]
 		say "     Thanks to your skill at evading, you manage to get out of the demon's way before he throws himself at you, giving Xaedihr enough opportunity window to strike. 'Your kind sure is problematic! Have some of this!' he shouts, followed by a crimson bolt that hits the brute with an immense fiery flash, confounding the demon's senses. He follows up with a powerful shadow sphere spell which smacks the brute's head, knocking him down unconscious. The sorcerer then rushes to you, wiping a sweat drop off his forehead.";
-	WaitLineBreak;
+	wait for any key;
 	project Figure of Xaedihr_Full_icon;
 	say "     'I know, I know. I'm sorry. I tried to tame a Demon Brute by myself. It... didn't go well.' he admits, giving the back of his head a rather unsubtle scratch as he tries to hide his embarrassment. You're definitely not used to see such a confident magician like him admit defeat. 'These ones are way more aggressive than the incubi... I will never be able to get his attention to test my theory. This was a bad idea, I need to look for another means to understand what makes the pain in demons... Like, it just doesn't make sense, if they're controlled by lust then they shouldn't feel pain. Ugh! I'll never get to the bottom of this by just rambling about it.' Though he clearly seems frustrated, you remind him of that certain detail you told him about before which somehow seemed to have escaped him...";
 	say "     'Uuuuh... Right... Not breaking anything... Heh...' he turns his face away from you, but suddenly, his expression goes from shame to something similar of a face that a mad scientist makes when they bump into a breakthrough. 'Breaking! Yes! You're a genius! That's it! Thank you so much for your help!' He even grabs your head and gives you a kiss on the forehead, as if blessing your existence, before storming towards the brute.";
 	say "     Maybe it's best to leave him focus on whatever he has discovered thanks to your advertation. You simply dismiss yourself and head back to the Library's main area. Xaedihr doesn't even see you go.";
 	now resolution of Xaedihr Experiments is 3;
 
-[***********************************************************]
 Section 6-2 - NPC interactions
-[***********************************************************]
 
 Table of GameEventIDs (continued)
 Object	Name
@@ -1803,11 +1685,9 @@ XaedihrRane is a situation.
 ResolveFunction of XaedihrRane is "".
 Sarea of XaedihrRane is "Nowhere".
 
-[***********************************************************]
 Section 6-2-A - Xaedihr & Atticus
-[***********************************************************]
 
-after going to Burned-Out Chapel while (resolution of XaedihrAtticus is 0 and Player is male and Atticus is in Burned-Out Chapel and demonologist is listed in companionList of Player and PlayerMet of Atticus is true and Incubus Offspring Meeting is resolved and Elijah is not in Burned-Out Chapel): [Player has a cock (for now a required condition), Atticus is there, with all his checks, Elijah not in there (too complex), first contact between Xaedihr and Atticus]
+after going to Burned-Out Chapel while resolution of XaedihrAtticus is 0 and Player is male and Atticus is in Burned-Out Chapel and demonologist is listed in companionList of Player and PlayerMet of Atticus is true and Incubus Offspring Meeting is resolved and Elijah is not in Burned-Out Chapel: [Player has a cock (for now a required condition), Atticus is there, with all his checks, Elijah not in there (too complex), first contact between Xaedihr and Atticus]
 	say "     As you step in the chapel with Xaedihr following you around, a glance over your shoulder shows the half-demon quite entertained with the building's architecture, or what's left of it. 'What relationship do you really have with this place? You keep coming back here and I'm still not fully aware of why.' he asks, not looking back at you, but instead fixating his gaze on all the structure's details. 'A shame this burned down. Must have been quite the view... Now it's a house of lust.' finishes the sorcerer with a sarcastic tone as he turns around and walks back to you. 'Have you actually gotten involved with the succubus currently owning this place?'";
 	WaitLineBreak;
 	say "     It doesn't take long for you both to be welcomed by a young and attractive demon, who instantly spots you by the entrance. His naked body, illuminated by the delicate lights of the candles scattered all around the altar, stands visible to you and at very few steps away. Your half-demon companion follows up with a concluding statement 'Well, of course you did. Why was I hoping for a different turn of events...' as he looks at you with his eyebrow frowned. Seems like the sorcerer was perceptive enough to conclude Atticus is your demon son. With a rather cocky grin on his handsome face, the young demon is to almost open his mouth to greet you, but remains rather surprised at Xaedihr's intense glare. 'Daddy brought a friend this time, I see! Though why does he stare at me like that? Do I look that good?' he boldly strikes a few words towards the mage, who immediately squints his eyes at the incubus.";
@@ -1825,6 +1705,7 @@ after going to Burned-Out Chapel while (resolution of XaedihrAtticus is 0 and Pl
 		else if Charisma of Atticus is 99: [their relationship is merely sexual]
 			say "     Putting your shoulder in front of Xaedihr and grabbing his arm, you stop him from walking away, explaining that Atticus is an offspring of your relationship with Lilith and you see no harm in having a little fun. 'Oh sure! I guess! Just have a son with a powerful succubus and fuck him as well! That's totally okay, isn't it?!' He looks more shocked, rather than angry. Your demonic son grows a little impatient and follows up with an expected observation 'So are you going to introduce us to the fun or what?' while eyeing you with an eager smirk. This question caught the mage's attention immediately.";
 		say "     'Oh, are we serious now? You can't possibly be suggesting throwing me into a threesome with you both!' exclaims the half-demon, looking at both you and Atticus. 'What's the matter with you? Too afraid to be taking this in you, is that it? Bet you make some funny sounds. Daddy must know!' replies the young demon, pointing to his by now throbbing manhood, and that seems to infuriate the sorcerer. 'Listen here, you little pr...' - he stops himself, taking a deep breath before continuing - 'The only one here who's going to make funny sounds is you, choking and gurgling, when I'm ballsdeep in your sorry throat.' Atticus immediately replies, his teeth shining as bright as his cocky smile 'Oh yeah? Fantasizing with me already? You must be eager to get it, aren't you?' while his index finger visibly slides from the base of his shaft to the tip, by the underline, in an obvious show-off.";
+		WaitLineBreak;
 		say "     'I've changed my mind. I'm going to fuck this little bitch until he begs me for mercy. Hold my tome.' says Xaedihr as he hands you his personal grimoire. [bold type]If you don't stop this here, things will certainly get dirty...[roman type][line break]";
 		say "     ([link]Y[as]y[end link]) - Cease this, you don't want them getting involved any further.";
 		say "     ([link]N[as]n[end link]) - Why stop them? It's getting pretty interesting!";
@@ -1834,7 +1715,7 @@ after going to Burned-Out Chapel while (resolution of XaedihrAtticus is 0 and Pl
 			now resolution of XaedihrAtticus is 99;
 		else: [you allowed it to continue...]
 			LineBreak;
-			say "     While holding his tome, you see Xaedihr drop his black long jacket to the floor, revealing his fit and muscular torso, right side adorned with arcane tattoos, to the incubus. They both proudly stand in front of each other, the sorcerer with his chest puffed out while the young demon gives him the naughty looks. Nothing wipes out the grin in Atticus['] face, not even as the half-demon aggressively grabs his hair and pulls his face down against the mage's crotch. 'You better lick that good, you hear me?! Let's see who you'll be calling daddy after I'm done with you!' He doesn't even let the young demon reply, as he pops his proud erection out of his dark pants and shoves it right inside the incubus['] mouth. He's not gentle about it either, as he doesn't waste any time burying his entire foot-long cock down your demon son's throat.";
+			say "     While holding his tome, you see Xaedihr drop his black long jacket to the floor, revealing his fit and muscular torso, right side adorned with arcane tattoos, to the incubus. They both proudly stand in front of each other, the sorcerer with his chest puffed out while the young demon gives him the naughty looks. Nothing wipes out the grin in Atticus['] face, not even as the half-demon aggressively grabs his hair and pulls his face down against the mage's crotch. 'You better lick that good, you hear me?! Let's see who you'll be calling daddy after I'm done with you!' He doesn't even let the young demon reply, as he pops his proud erection out of his dark pants and shoves it right inside the incubus['] mouth. He's not gentle about it either, as he doesn't waste any time burying his entire footlong cock down your demon son's throat.";
 			say "     Your eyes widen, as you've never seen Xaedihr so lust-crazed and aggressively forcing himself on anyone until this day. Knowing Atticus, he has probably gotten the half-demon under a spell of his own, or he simply managed to piss him off so bad that he ended up earning the facefuck of a lifetime. The sorcerer doesn't even let him breathe, making the young demon swallow his cock whole without a complaint. He thrusts back and forth so hard you're afraid he'll dislocate his jaw, and this whole display starts getting you horny as well. 'Look at ME, bitch! I want to see those eyes as you swallow my cock!' he shouts, moving his leg slightly to the side, allowing him to pound Atticus['] face even harder as your offspring can only remain on his knees. Your own [Cock of Player] penis hardens [if player is naked]for anyone to see[else]under your clothes[end if], and you think it's time to join the fun.";
 			WaitLineBreak;
 			say "     Placing yourself just behind the young demon, [if player is naked]you grab your by now throbbing meat[else]you lose your gear, grab your by now throbbing meat[end if] and rub it across the incubus['] exposed ass cheeks, while his tail wraps around your leg in what seems to be a show of affection. Xaedihr doesn't even see you coming, as he's too focused on keeping the handsome devil's mouth full. 'You have all that cocky attitude, but in the end you're just a slut, aren't you?' he taunts and chuckles, doing his best at not allowing Atticus to reply with his lips firmly wrapped around the half-demon's shaft. You figure it's time to start pressing the tip of your dick against the alluring demon's pucker, and with a shove, it slides in with little effort, as if he was welcoming you in his back entrance.";
@@ -1843,7 +1724,7 @@ after going to Burned-Out Chapel while (resolution of XaedihrAtticus is 0 and Pl
 			say "     'You're really a fucking prick, aren't you?!' you hear the mage replying to the provocation, fucking the incubus['] face so hard that you even feel it on your side. Sliding your hands across the young devil's back as you lean forward a bit, you shove your cock in as deep as you can, and you think you hear him moan as your pounding gets more intense. The half-demon looks at you with a smirk, and as if you could read his mind, you know exactly what's going to follow when you feel yourself getting closer to the point of no return. 'To show you how much of a bitch you are, we're going to double breed you! Though you must be already used to that.' taunts the sorcerer yet again, and by the look in his face, he should be getting close too.";
 			say "     Deciding that it would be better to match his pace, you slow down as you feel yourself roaming around the edge too dangerously, and wait until he hits his climax. 'Fuck... Here it comes!' He leans his head back, eyes closed, and lets out an almost beastly grunt that echoes through the entire chapel. You feel yourself needing to get a release too, and that comes by just as the cum leaves you, a torrent of seed being delivered right inside the incubus['] ass until the very last drop. Gulping sounds are loudly audible from the other side, as Xaedihr pumps out his own load, generous as ever, while Atticus seems to be struggling with swallowing everything, though you know how dedicated he is when pushed to the right ways. Both of your orgasms last for an unusual amount of time, until you can finally catch a breath as your throbbing dicks rest still inside the demon boy.";
 			WaitLineBreak;
-			say "     Exhausted and surprisingly sore, you pull your cock out of his ass, followed by a splooge of your own cum running down Atticus['] butt. 'Fuck, I... Wow. I don't know what got into me.' says the sorcerer as he comes back to his sobriety. He steps back, allowing the incubus to sit back and look at you both. 'Tired already?' - he provokes with a giggle - 'Knew you couldn't resist me! Though it'd feel great if you retributed the favor.' he continues, and you notice his own foot-long of a demon cock still pulsing like the horny lusty demon he is. 'My tome, please.' requests Xaedihr as he extends his hand to you. Taking some time to remember where you put it, you go get it for him from a corner where you left it, handling over the grimoire with care.";
+			say "     Exhausted and surprisingly sore, you pull your cock out of his ass, followed by a splooge of your own cum running down Atticus['] butt. 'Fuck, I... Wow. I don't know what got into me.' says the sorcerer as he comes back to his sobriety. He steps back, allowing the incubus to sit back and look at you both. 'Tired already?' - he provokes with a giggle - 'Knew you couldn't resist me! Though it'd feel great if you retributed the favor.' he continues, and you notice his own footlong of a demon cock still pulsing like the horny lusty demon he is. 'My tome, please.' requests Xaedihr as he extends his hand to you. Taking some time to remember where you put it, you go get it for him from a corner where you left it, handling over the grimoire with care.";
 			say "     'Hope you won't regret saying that.' warns the mage, as he opens his tome and several pages flick on their own. His arcane tattoos glow in a purple gleam as he makes a few gestures. Both you and Atticus look at him with great curiosity, without a clue of what he's up to, until plenty of dark tendrils spawn around the young demon. 'Oh! Ooh! You can do that?! Fuck yes!' shouts the devil with eagerness, as he allows his body to get completely enveloped by the countless restless tentacle-like extensions of Xaedihr surging from the ground. Each member wraps itself around a sensitive spot, like his chest, cock and balls, a few even finding their way back in his ass. He's held in place by others that go around his legs, arms and torso, and your demon son stands immobilized as yet another tendril takes hold of his dick, carefully sliding itself in the slit. He's made to cum, the tendril getting hungrily fed from it, continuing to stimulate Atticus in every way possible.";
 			WaitLineBreak;
 			say "     The tendrils continue their work as Xaedihr turns to you. 'There, that should keep him entertained for a while. Though I must say, this was really fun. Maybe we can come visit more often?' he says to you with a smile on his face, as Atticus['] grunts and moans are heard in the background. 'Don't worry, I won't steal your spot as his daddy. He'll have to come up with a different title for me.' he continues, throwing a chuckle as you both watch the incubus happily cumming over and over again thanks to Xaedihr's spell. 'I do find it a little... odd that his mother just merely observed without saying a word. But I can get over that.' he finishes, as he glances over Lilith, who's watching back with a seductive gaze and a smile on her face. With little else to add, you both grab your stuff back, since fun is over... for now.";
@@ -1854,11 +1735,9 @@ after going to Burned-Out Chapel while (resolution of XaedihrAtticus is 0 and Pl
 			NPCSexAftermath Atticus receives "OralCock" from Xaedihr;
 			now resolution of XaedihrAtticus is 1; [first scene completed]
 
-[***********************************************************]
 Section 6-2-R - Xaedihr & Rane
-[***********************************************************]
 
-instead of going up from Grey Abbey Library while ((demonologist is listed in companionList of Player or Xaedihr is in Grey Abbey Library) and loyalty of Xaedihr > 9 and Rane is in Sitting Area and Resolution of XaedihrRane is 0):
+instead of going up from Grey Abbey Library while (demonologist is listed in companionList of Player or Xaedihr is in Grey Abbey Library) and loyalty of Xaedihr > 9 and Rane is in Sitting Area and Resolution of XaedihrRane is 0:
 	move player to Grey Abbey Library;
 	if debugactive is 1:
 		say "     DEBUG: XAEDIHR / RANE MEETING[line break]";
@@ -1866,16 +1745,16 @@ instead of going up from Grey Abbey Library while ((demonologist is listed in co
 
 to say XaedihrMeetsRane:
 	project Figure of Xaedihr_Full_icon;
-	say "     As you walk up the stairs and head further in the upper floor, a glance has your eyes meet with a rather tall and broad shape, standing next to a window. You can easily see it's Rane, thanks to his identifying oni features and atypical blue skin, just looking outside for a while. Before you can approach him, however, Xaedihr surprises you, coming from behind a bookshelf and walking in front of you. 'Since when you have [italic type]yōkai[roman type] living with you?' He asks, and all you can do is stare back at him. 'This is an Oni! They are extremely evasive... and especially almighty. Though unlike demons, they're not inherently evil or controlled by a bigger entity. They're just... themselves. Some have fought through medieval times, attempting to survive humans['] greed and all that. Sad stories... Maybe for another time.' You're kind of still staring at him, expecting him to request something. 'Well, I'd like to ask you if you could introduce us? He looks like an interesting fellow...'";
+	say "     As you walk up the stairs and head further in the upper floor, a glance has your eyes meet with a rather tall and broad shape, standing next to a window. You can easily see it's Rane, thanks to his identifying oni features and atypical blue skin, just looking outside for a while. Before you can approach him, however, Xaedihr surprises you, coming from behind a bookshelf and walking in front of you. 'Since when you have [italic type]yōkai[roman type] living with you?' he asks, and all you can do is stare back at him. 'This is an oni! They are extremely evasive... and especially almighty. Though unlike demons, they're not inherently evil or controlled by a bigger entity. They're just... themselves. Some have fought through medieval times, attempting to survive humans['] greed and all that. Sad stories... Maybe for another time.' You're kind of still staring at him, expecting him to request something. 'Well, I'd like to ask you if you could introduce us? He looks like an interesting fellow...'";
 	say "     Following the sorcerer's request, will you introduce him to Rane, or would you prefer if they never spoke to each other?";
 	say "     ([link]Y[as]y[end link]) - Make the introductions.";
 	say "     ([link]N[as]n[end link]) - Don't have them talk to each other.";
 	if Player consents:
 		LineBreak;
-		say "     Nodding at the sorcerer, you guide him towards Rane, who has already caught you in the corner of the eye by now. Xaedihr doesn't seem like the shy kind of guy, but he really curls his shoulders forward when you both walk up to the oni. 'Uh...' he hesitates, suddenly forgetting how to greet a person. Rane raises his eyebrows in amusement, and a smirk forms in his lips as he eyes the half-demon from head to feet. 'Now, isn't that interesting... Aren't you that cute looking redhead who's always with his head buried in the books, down there? I see you a lot of times!' Rane anticipates the talking, throwing a chuckle in what you think it's a genuine attempt at making Xaedihr more comfortable. 'I-It's just... I'm a massive fan of your kind! I've studied the likes of you for years! All the myths and legends, species, from kitsunes to tengus, the entire folklore of your origins, and the onis are my favorites because they come closer to... I... I'm probably babbling a lot, aren't I?' Rane gives you a glare, and with a careful movement of his arm, gives the half-demon a friendly pat on the shoulder. 'How about we have a drink?' asks the oni, clearly entertained by Xaedihr's burst of enthusiasm.";
-		say "     'Uhm... I'll have to refuse for now. I just came here to meet you in person. I'm still getting used to this place, familiarizing myself with every bit and corner of the library, but don't want to get too distracted from my research. My apologies.' the sorcerer replies, and he gives you a subtle signal asking you to accompany him out. Rane doesn't insist, aware that this might be a hard case of social ineptitude. 'It's alright, you now know where to find me. The offer is still up, if you change your mind.' he follows with a wink, and Xaedihr excuses himself with a slight bow, though you can see his face is flushed. Once again, the oni gives you an amused look before you have to return to the half-demon's side and hear him out, after he got so intimidated by this encounter.";
+		say "     Nodding at the sorcerer, you guide him towards Rane, who has already caught you in the corner of his eye by now. Xaedihr doesn't seem like the shy kind of guy, but he really curls his shoulders forward when you both walk up to the oni. 'Uh...' he hesitates, suddenly forgetting how to greet a person. Rane raises his eyebrows in amusement, and a smirk forms in his lips as he eyes the half-demon from head to feet. 'Now, isn't that interesting... Aren't you that cute looking redhead who's always with his head buried in the books, down there? I see you a lot of times!' Rane anticipates the talking, throwing a chuckle in what you think is a genuine attempt at making Xaedihr more comfortable. 'I-It's just... I'm a massive fan of your kind! I've studied the likes of you for years! All the myths and legends, species, from kitsunes to tengus, the entire folklore of your origins, and the onis are my favorites because they come closer to... I... I'm probably babbling a lot, aren't I?' Rane gives you a glare, and with a careful movement of his arm, gives the half-demon a friendly pat on the shoulder. 'How about we have a drink?' asks the oni, clearly entertained by Xaedihr's burst of enthusiasm.";
+		say "     'Uhm... I'll have to refuse for now. I just came here to meet you in person. I'm still getting used to this place, familiarizing myself with every bit and corner of the library, but don't want to get too distracted from my research. My apologies,' the sorcerer replies, and he gives you a subtle signal asking you to accompany him out. Rane doesn't insist, aware that this might be a hard case of social ineptitude. 'It's alright, you now know where to find me. The offer is still up, if you change your mind,' he follows with a wink, and Xaedihr excuses himself with a slight bow, though you can see his face is flushed. Once again, the oni gives you an amused look before you have to return to the half-demon's side and hear him out, after he got so intimidated by this encounter.";
 		WaitLineBreak;
-		say "     'He's... so big. Do you think he noticed I was staring at his crotch all the time?' Well, that was obvious, since his head was lying low during the entire meeting, but you don't really want to make him more nervous, so you just shrug it off. 'You know I'm mostly a top, but when you see a guy like that, you start wondering things... Then I started to pop a boner as these images went in my mind... I'm definitely not used to this. I'm usually a cold prick, but I've been looking at... Rane, was it...? For quite some time before... And I didn't have the courage to walk up to him alone.' It's not everyday Xaedihr admits a weakness, or in this case, a little crush. 'But enough of this talk. I have to focus on important matters and... Well, maybe sometime I'll accept his invitation. No promises, though.' he adds, before you both make your final leave.";
+		say "     'He's... so big. Do you think he noticed I was staring at his crotch all the time?' Well, that was obvious, since his head was lying low during the entire meeting, but you don't really want to make him more nervous, so you just shrug it off. 'You know I'm mostly a top, but when you see a guy like that, you start wondering things... Then I started to pop a boner as these images went in my mind... I'm definitely not used to this. I'm usually a cold prick, but I've been looking at... Rane, was it...? For quite some time before... And I didn't have the courage to walk up to him alone.' It's not everyday Xaedihr admits a weakness, or in this case, a little crush. 'But enough of this talk. I have to focus on important matters and... Well, maybe sometime I'll accept his invitation. No promises, though,' he adds, before you both make your final leave.";
 		if loyalty of Xaedihr < 27:
 			say "     [bold type]Xaedihr is very grateful for the time you took to help him.[roman type][line break]";
 			increase loyalty of Xaedihr by 3;
@@ -1890,11 +1769,9 @@ to say XaedihrMeetsRane:
 			decrease loyalty of Xaedihr by 5;
 		now resolution of XaedihrRane is 99; [you chose to have them not speak to each other]
 
-[***********************************************************]
 Section 6-2-H - Xaedihr & Hayato
-[***********************************************************]
 
-instead of going up from Grey Abbey Library while ((demonologist is listed in companionList of Player or Xaedihr is in Grey Abbey Library) and Hayato is in Darkened Alcove and "Met Hayato" is not listed in traits of Xaedihr):
+instead of going up from Grey Abbey Library while (demonologist is listed in companionList of Player or Xaedihr is in Grey Abbey Library) and Hayato is in Darkened Alcove and "Met Hayato" is not listed in traits of Xaedihr:
 	move player to Grey Abbey Library;
 	if debugactive is 1:
 		say "     DEBUG: XAEDIHR / HAYATO MEETING[line break]";
@@ -1902,23 +1779,20 @@ instead of going up from Grey Abbey Library while ((demonologist is listed in co
 
 to say XaedihrMeetsHayato:
 	say "     Immediately as you arrive at the library, Xaedihr comes rushing at you with a sense of urgency, tome in hand and dark particles surrounding his fingers. 'Careful! We've got an intruder. Some savage oni managed to slip inside our shelter. The kind that eats people! I'll need backup in case it goes on a rampage.' You cannot help but be confused at this sudden act, as the half-demon urges you to stay behind him while you approach the darkened alcove. 'Red onis are extremely dangerous. One wrong step and your skull will serve as a mug of blood. These savages cannot be allowed to walk freely.' Oh, so he means Hayato. Well, you are much more relieved now. All you need to do is explain Xaedihr who Hayato is and, possibly, introduce them.";
-	say "     ... But before you manage to do that, he storms inside, running towards the red oni with the pages of his tome flickering frantically. 'Stay right where you are, creature!' he shouts, and suddenly, a myriad of purple tendrils emerge from the ground, wrapping themselves around Hayato's legs and arms. The huge oni looks at you both, his eyes wide open in surprise, confused, as Xaedihr just caught him off guard. However, not even the supernatural strength of his magic tendrils is enough to hinder a mighty demon ogre such as the mighty Hayato, who breaks free from his binds without too much of a trouble. He then shouts 'I'm not a savage! No need for any of this!' as he waves his arms towards you.";
+	say "     ...But before you manage to do that, he storms inside, running towards the red oni with the pages of his tome flickering frantically. 'Stay right where you are, creature!' he shouts, and suddenly, a myriad of purple tendrils emerge from the ground, wrapping themselves around Hayato's legs and arms. The huge oni looks at you both, his eyes wide open in surprise, confused, as Xaedihr just caught him off guard. However, not even the supernatural strength of his magic tendrils is enough to hinder a mighty demon ogre such as the mighty Hayato, who breaks free from his binds without too much of a trouble. He then shouts, 'I'm not a savage! No need for any of this!' as he waves his arms towards you.";
 	WaitLineBreak;
 	say "     'Preposterous! I can see how you look! I can sense your...! Wait... No, I cannot sense your demonic essence. What trickery is this?! Reveal your secrets to me, now!' the sorcerer demands, this time charging a dark fire ball in his hand which grows by the second. You figure that you should probably intervene before things go very wrong, so you step in front of Xaedihr and beckon him to stop and listen. Then, you tell everything about his background, his story, how he came to be... Every single detail, within the time you have available before he bursts out of impatience. The half-demon looks convinced enough, fortunately. 'That explains it... he doesn't stink like a demon... Definitely doesn't behave like one... If he was an actual red oni, I don't think anyone around here would still be living. He would have just eaten everyone right about now.'";
-	say "     Misunderstandings solved, Xaedihr lowers his guard and approaches Hayato in a much different manner. 'Apologies, mister. We can never be too careful in this wretched land. The name's Xaedihr.' he says, extending his hand towards the oni. 'I'm Hayato, but you can call me [']Hal[']. You're a... sorcerer?' he asks, while retributing the mage's gesture. 'Indeed, I am. An expert demonologist, as well. I've seen many things, including an all-out attack of savage red onis into villages of poor and innocent people during my travels. That was ugly... I have seen many aggressive demons, but none like those... They looked like the embodiment of gluttony and wrath combined. That explains why I was so quick to subdue you once I realized you were here. But since you are not a real red oni, I suppose we could have a chat, once in a while.'";
+	say "     Misunderstandings solved, Xaedihr lowers his guard and approaches Hayato in a much different manner. 'Apologies, mister. We can never be too careful in this wretched land. The name's Xaedihr,' he says, extending his hand towards the oni. 'I'm Hayato, but you can call me [']Hal[']. You're a... sorcerer?' he asks, while retributing the mage's gesture. 'Indeed, I am. An expert demonologist, as well. I've seen many things, including an all-out attack of savage red onis into villages of poor and innocent people during my travels. That was ugly... I have seen many aggressive demons, but none like those... They looked like the embodiment of gluttony and wrath combined. That explains why I was so quick to subdue you once I realized you were here. But since you are not a real red oni, I suppose we could have a chat, once in a while.'";
 	WaitLineBreak;
 	say "     Well, it seems they ended up conversing rather peacefully, so it is best to just leave them at it as they get to know each other. You really cannot tell Xaedihr what to do, either way, you know he will just have his way regardless of what you have to say added with the most snarky remarks, but perhaps this friendship between both him and Hayato will prove to be fruitful, one day...";
 	add "Met Hayato" to traits of Xaedihr;
 
 to say XaedihrTalkHayato:
-	say "     Seeing that Hayato is, in one way, a demonic creature, you figured Xaedihr would take an interest in him... Or that, at least, you should warn the sorcerer you have befriended a demon he should not mind, as he is not an enemy. Calling the redhead over, you do just that, introducing the red oni to the half-demon. 'Now, that's... peculiar. Seeing one of your kind so calm and contained... Definitely not a true red oni, I must assure you. My name's Xaedihr.' he says, extending his hand towards the oni. 'I'm Hayato, but you can call me [']Hal[']. You're a... sorcerer?' he asks, while retributing the mage's gesture. 'Indeed, I am. An expert demonologist, as well. I've seen many things, including an all-out attack of savage red onis into villages of poor and innocent people during my travels. That was ugly... I have seen many aggressive demons, but none like those... They looked like the embodiment of gluttony and wrath combined. If you hadn't been introduced to me right now, I would most certainly have attempted to subdue you at first sight.'";
+	say "     Seeing that Hayato is, in one way, a demonic creature, you figured Xaedihr would take an interest in him... Or that, at least, you should warn the sorcerer you have befriended a demon he should not mind, as he is not an enemy. Calling the redhead over, you do just that, introducing the red oni to the half-demon. 'Now, that's... peculiar. Seeing one of your kind so calm and contained... Definitely not a true red oni, I must assure you. My name's Xaedihr,' he says, extending his hand towards the oni. 'I'm Hayato, but you can call me [']Hal[']. You're a... sorcerer?' he asks, while retributing the mage's gesture. 'Indeed, I am. An expert demonologist, as well. I've seen many things, including an all-out attack of savage red onis into villages of poor and innocent people during my travels. That was ugly... I have seen many aggressive demons, but none like those... They looked like the embodiment of gluttony and wrath combined. If you hadn't been introduced to me right now, I would most certainly have attempted to subdue you at first sight.'";
 	say "     Looks like you did the right thing. It seems they ended up conversing rather peacefully, so it is best to just leave them at it as they get to know each other. You really cannot tell Xaedihr what to do, either way, you know he will just have his way regardless of what you have to say added with the most snarky remarks, but perhaps this friendship between both him and Hayato will prove to be fruitful, one day...";
 	add "Met Hayato" to traits of Xaedihr;
 
-
-[***********************************************************]
 Section 7 - Demonic Summoning
-[***********************************************************]
 
 Table of GameEventIDs (continued)
 Object	Name
@@ -1937,20 +1811,18 @@ when play begins:
 [   2: Player is having strange dreams       ]
 [   3: Done through first dream              ]
 
-after resting while (resolution of Corruption of Dreams is 2 and carried of ancient tome is 1):
+after resting while resolution of Corruption of Dreams is 2 and carried of ancient tome is 1:
 	say "     You happen to doze off while you're resting, and amidst your sleep, something strange occurs...";
-	say "     Opening your eyes, there's nothing but a pitch black scenario enveloping you, the absence of gravity allowing you to float about with no sense of direction, devoid of any piece of clothing. You are lucid, yet feeling trapped in nothingness. Not even a noise bursts out of the thick shell of silence provided by an overwhelming darkness, and you feel vulnerable, as if your mind was an open fortress, inviting anyone to come in... any force evil or not, granted free permission to dwelve around your conscience. This is what happens when you're dreaming... and you sense a powerful, intimidating presence lurking nearby, watching you. You don't know who, or what exactly, but there's this feeling that you are being attentively watched.";
+	say "     Opening your eyes, there's nothing but a pitch black scenario enveloping you, the absence of gravity allowing you to float about with no sense of direction, devoid of any piece of clothing. You are lucid, yet feeling trapped in nothingness. Not even a noise bursts out of the thick shell of silence provided by an overwhelming darkness, and you feel vulnerable, as if your mind was an open fortress, inviting anyone to come in... any force evil or not, granted free permission to delve around your subconscious. This is what happens when you're dreaming... and you sense a powerful, intimidating presence lurking nearby, watching you. You don't know who, or what exactly, but there's this feeling that you are being attentively watched.";
 	WaitLineBreak;
 	say "     Your heart bursts into a quick beating and you're starting to sweat, the air around you turning scorching hot for a moment. There's a strong pressure being exerted against your body, and only then you realize that you're in movement. Something is grabbing you, a large crimson hand with dark claws, impossibly large in dimension, holding you in its palm with little effort as you stand trapped within its strong fingers. The body of what seems to be a very huge demon forms in front of you, though you're unable to see its face - only bright yellow eyes pierce through the darkness, looming over you with great interest. 'So... this is you. How quaint...' a voice impossibly deep, painfully echoing through every direction, directs these words towards you.";
-	say "     Wiggling your body around, you attempt to break free of this giant's grasp, to no avail. He keeps you locked tight, not saying any other word. His menacing gaze merely observes you for what seems to be a very long time, and inexplicably, a strange arousal starts building up in you. There's images of the worst  kinds of debaucheries involving demons and sex running through your mind, and you can't help but feel strangely attracted to it. As if there is a calling inside you, guiding towards this way of living. You even start wondering what it's like to be one of them... And your mind is no longer yours. Between enslaving mortals and practicing the evil, you're left with your inner desire to please your Lord. To satisfy his every whim and command and give your soul to Him...";
+	say "     Wiggling your body around, you attempt to break free of this giant's grasp, to no avail. He keeps you locked tight, not saying any other word. His menacing gaze merely observes you for what seems to be a very long time, and inexplicably, a strange arousal starts building up in you. There's images of the worst kinds of debaucheries involving demons and sex running through your mind, and you can't help but feel strangely attracted to it. As if there is a calling inside you, guiding towards this way of living. You even start wondering what it's like to be one of them... And your mind is no longer yours. Between enslaving mortals and practicing the evil, you're left with your inner desire to please your Lord. To satisfy his every whim and command and give your soul to Him...";
 	say "     The one you gave your only soul to...";
 	WaitLineBreak;
 	say "     And just with a bright flash before your eyes, you wake up. Instinctively, you raise your body to a sitting position, panting and sweating. Everything seems to be as you left before you fell asleep. Though there's this insecure feeling overwhelming your mind, like an anxiety spike taking over you. Looking at the ancient tome in your possession seems to bring you an unsettling sense of comfort, as if it brought you safety, somehow. Nonetheless, you can't afford to be stuck with your thoughts about this strange dream, so you stand up and get ready to be on your way.";
 	now resolution of Corruption of Dreams is 3; [odd number]
 
-[***********************************************************]
 Section 7-1 - DS-The Dullahan Knight
-[***********************************************************]
 
 Table of GameEventIDs (continued)
 Object	Name
@@ -1967,14 +1839,7 @@ when play begins:
 	[   0: The ritual remains unknown            ]
 	[   1: Ritual is now known in Ancient Tome   ]
 
-
-[***********************************************************]
-[***********************************************************]
-[***********************************************************]
 Section 8 - Endings
-[***********************************************************]
-[***********************************************************]
-[***********************************************************]
 
 Table of GameEndings (continued)
 Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
@@ -1985,25 +1850,17 @@ This is the Hell Prisoner rule:
 		say "     You have delved in far too deep into the demonic realm. Hell has taken you and imprisoned your soul for all eternity. Now you serve only to satisfy the demons['] every whim of any kind, your will broken facing an inevitable fate. There's no hope... nor salvation.";
 		the Player is imprisoned;
 
-
-
-[***********************************************************]
-[***********************************************************]
-[***********************************************************]
 Section X - Dev Cheats
-[***********************************************************]
-[***********************************************************]
-[***********************************************************]
 
 SkipToXaedihr is an action applying to nothing.
-Understand "GetXaedihr" as SkipToXaedihr.
+understand "GetXaedihr" as SkipToXaedihr.
 
-Check SkipToXaedihr:
+check SkipToXaedihr:
 	if debugactive is 0:
 		say "You aren't currently debugging.";
 		stop the action;
 
-Carry out SkipToXaedihr:
+carry out SkipToXaedihr:
 	move Xaedihr to Grey Abbey Library;
 	say "     Xaedihr is now in the Grey Abbey Library.";
 	add "Tamed" to Traits of demonologist;

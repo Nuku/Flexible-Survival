@@ -6,38 +6,14 @@ Version 2 of Black Wolf by Stripes begins here.
 
 Section 1 - Creature Responses
 
-to say losetoblackwolf:
-	say "     You were beaten by the creature.";
-	if Player is male:
-		say "     Additional paragraph for a male/herm player.";
-	else:
-		say "     Additional paragraph for a female player.";
-
-to say beattheblackwolf:
-	say "     You were victorious over the creature.";
-	if Libido of Player > 40:
-		say "     Additional paragraph for a player with a libido greater than 40. Do they want sex?";
-		if Player consents:
-			say "     The player agreed to sex. Fun times begin.";
-			if Player is female:
-				say "     The Player is female/herm, so sex goes like this for her.";
-			else:
-				say "     The player must be male, so sex goes like this for him.";
-		else:
-			say "     Awww! The player refused the sex. Party pooper.";
-
-to say blackwolfdesc:
-	say "     Monster description paragraph 1.";
-	say "     Monster description paragraph 2.";
-
 Section 2 - Creature Insertion
 
-Table of CombatPrep (continued)
+[Table of CombatPrep (continued)
 name(text)	PrepFunction(text)
 "Black Wolf"	"[PrepCombat_Black Wolf]"
 
 to say PrepCombat_Black Wolf:
-	say "";
+	setmongender 3;]
 
 Table of Random Critters (continued)
 NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
@@ -61,15 +37,15 @@ When Play begins:
 	now enemy Name entry is "Andrew";
 	now enemy type entry is 1; [ 0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters. ]
 	now attack entry is "Andrew's a lover, not a fighter."; [ Successful attack message ]
-	now defeated entry is "[beattheblackwolf]"; [ Text when monster loses. ]
-	now victory entry is "[losetoblackwolf]"; [ Text when monster wins. ]
-	now desc entry is "[blackwolfdesc]"; [ Description of the creature when you encounter it. ]
+	now defeated entry is "[NonCombatError]"; [ Text when monster loses. ]
+	now victory entry is "[NonCombatError]"; [ Text when monster wins. ]
+	now desc entry is "[NonCombatError]"; [ Description of the creature when you encounter it. ]
 	now face entry is "rather lupine in form, with an elongated muzzle, pointed ears and a wolfish face. Your features are rather soft and friendly though, even somewhat sexy. You have rather pretty, violet eyes";
 	now body entry is "altered to have paw-like hands and digitigrade feet to go along with its otherwise rather normal build. It does possess a rather attractive, even sexy quality to it that's hard to pin down to anything specific though";
-	now skin entry is "black furred";
+	now skin entry is "black-furred";
 	now tail entry is "You have a bushy, lupine tail covered in dark fur with a purple streak along its underside.";
 	now cock entry is "[one of]lupine[or]knotted[or]thick[or]purple[purely at random]";
-	now face change entry is "vision blurs and a dark bulge pushes out below your nose. As your altered eyes come back into focus, you can see you've grown a lupine muzzle";
+	now face change entry is "your vision blurs and a dark bulge pushes out below your nose. As your altered eyes come back into focus, you can see you've grown a lupine muzzle";
 	now body change entry is "your hands and feet feel like soft clay. They shift, stretch and bulge, remolding themselves to become more paw-like. As this change is subsiding, you notice that your body's changed as well, though less dramatically. You now have a rather normal looking body with an average build";
 	now skin change entry is "it feels like ripples are running over it. As these pass across you, short, dark hairs are pushed out that extend further each time the wave moves across them. In time, you are covered in a thick pelt of black fur, turning to purple at your groin";
 	now ass change entry is "the end of your spine forms into a black, lupine tail with a streak of purple along its underside";
@@ -221,19 +197,16 @@ name	desc	weight	object
 "black wolf fur"	"A tuft of black fur that looks like it has been pulled out of the coat of a wolf. It's nicely soft."	0	black wolf fur
 
 black wolf fur is a grab object.
-It is temporary.
-Usedesc of black wolf fur is "[black wolf fur use]";
+Usedesc of black wolf fur is "[black wolf fur use]".
+Scent of black wolf fur is "The fur has a pleasing, not too strong, animal-like scent.".
 
 to say black wolf fur use:
-	say "Holding the tuft of fur between your fingers, you stroke over it, delighted in its softness. Strangely, the hair disintegrates after a while, becoming a cloud of fine particles that are absorbed into your skin.";
+	say "     Holding the tuft of fur between your fingers, you stroke over it, delighted in its softness. Strangely, the hair disintegrates after a while, becoming a cloud of fine particles that are absorbed into your skin.";
 	infect "Black Wolf";
 
-instead of sniffing black wolf fur:
-	say "The fur has a pleasing, not too strong, animal-like scent.";
+Section 4 - Endings
 
 [
-Section 3 - Endings
-
 Table of GameEndings (continued)
 Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
 "Black Wolf Infection"	"Infection"	""	Black Wolf Infection rule	1000	false

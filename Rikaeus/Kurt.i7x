@@ -8,13 +8,11 @@ Version 1 of Kurt by Rikaeus begins here.
 
 KurtRelationship is a number that varies.
 KurtEvent is a number that varies.
-KurtRoomConnection is a number that varies.[@Tag:NotSaved]
 
-an everyturn rule: [bugfixing rules for players that import savegames]
-	if Predator's Lunch is resolved and KurtRoomConnection is 0: [event resolved the right way, room not connected yet]
+a postimport rule: [bugfixing rules for players that import savegames]
+	if Predator's Lunch is resolved:
 		change east exit of Atlantis City Residential to Kurt's Abode;
 		change west exit of Kurt's Abode to Atlantis City Residential;
-		now KurtRoomConnection is 1; [make sure that it connects the room only once]
 
 Table of GameEventIDs (continued)
 Object	Name
@@ -28,7 +26,7 @@ when play begins:
 	add Surprise Shark Encounter to BadSpots of MaleList;
 	add Surprise Shark Encounter to BadSpots of FurryList;
 
-after going to Atlantis City Center while (Surprise Shark Encounter is active and Surprise Shark Encounter is not resolved and KurtRelationship is 1):
+after going to Atlantis City Center while Surprise Shark Encounter is active and Surprise Shark Encounter is not resolved and KurtRelationship is 1:
 	FirstKurtEvent;
 
 to say ResolveEvent Surprise Shark Encounter:
@@ -44,7 +42,8 @@ to FirstKurtEvent:
 	now Surprise Shark Encounter is resolved;
 	now Predator's Lunch is active;
 	now KurtEvent is turns;
-	move player to Atlantis City Center;
+	[WaitLineBreak;
+	move player to Atlantis City Center;]
 
 Table of GameEventIDs (continued)
 Object	Name
@@ -60,7 +59,7 @@ when play begins:
 	add Predator's Lunch to BadSpots of MaleList;
 	add Predator's Lunch to BadSpots of FurryList;
 
-after going to Atlantis City Market while (Predator's Lunch is active and Predator's Lunch is not resolved and KurtRelationship is 2 and KurtEvent - turns > 2): [Event has happened within the last 3 hours]
+after going to Atlantis City Market while Predator's Lunch is active and Predator's Lunch is not resolved and KurtRelationship is 2 and KurtEvent - turns > 2: [Event has happened within the last 3 hours]
 	SecondKurtEvent;
 
 to say ResolveEvent Predator's Lunch:
@@ -78,8 +77,9 @@ to SecondKurtEvent:
 	PlayerEat 30;
 	change east exit of Atlantis City Residential to Kurt's Abode;
 	change west exit of Kurt's Abode to Atlantis City Residential;
+	[WaitLineBreak;]
 	move Kurt to Kurt's Abode;
-	move player to Atlantis City Market;
+	[move player to Atlantis City Market;]
 	now Predator's Club Night is active;
 
 Table of GameEventIDs (continued)
@@ -96,7 +96,7 @@ when play begins:
 	add Predator's Club Night to BadSpots of MaleList;
 	add Predator's Club Night to BadSpots of FurryList;
 
-after going to Atlantis City Entrance while (Predator's Club Night is active and PlayerFucked of Kurt is true and KurtRelationship is 3 and KurtEvent - turns > 2 and PALOMINO Dance Club is known):
+after going to Atlantis City Entrance while Predator's Club Night is active and PlayerFucked of Kurt is true and KurtRelationship is 3 and KurtEvent - turns > 2 and PALOMINO Dance Club is known:
 	ThirdKurtEvent;
 
 to say ResolveEvent Predator's Club Night:
@@ -120,7 +120,7 @@ to ThirdKurtEvent:
 	say "     After that he leads you down to where Brooke is who is just chuckling at you two. 'That was an interesting end to the show, not that any of us minded it.' He says, causing Kurt to get embarrassed. Though the otter doesn't hold that topic for long before turning to your shark friend. 'That was great! I'm sure everyone would love to have you here again, Harold said he wouldn't mind it either,' he said, gesturing over to the unicorn bartender who lazily waved at them when they looked his way. Your shark friend smiles at this and nods happily. 'I'd love to come back here sometime!' He says, clearly enjoying the idea. 'Great! You know how to contact me, now be safe out there,' Brook says, seeing the two of you guys off.";
 	WaitLineBreak;
 	say "     You guys then leave the Palomino, making your way back to Atlantis. On the way there, Kurt slips his hand into yours, so that the two of you are holding hands. It's a little sweet but enjoyable nonetheless. It also comes in handy when you guys reach the beach and dive into the waters below, as your shark friend is able to pull you along, making the swim to the underwater city much faster than it was upwards. Minutes later, you guys arrive at the gates where the guards let you in and Kurt pulls you aside to a nearby stand. The stand holds towels meant for people to use to dry off if they want to, your shark friend hands you one of them and takes one for himself. You both dry yourselves off and then make your way for his place.";
-	say "     When you get there, the both of you sit down. 'So... about the kiss.' The shark says, trailing off. You nod, wondering what it was about, though not entirely minding. 'Well, through the time we've spent together... I've developed feelings for you. I, uh, like you.' Kurt manages to stutter out. You chuckle at his nervousness, as it's kind of adorable and you can tell by it that he's never really asked anyone out, that you say as much. 'Yeah, I've always been the one asked out due to my... popularity. and the relationships never went well,' he says, with a wince. Your face makes the same expression, imagining how it went. 'But... if you do like me then, we can go further than... what we've been doing.' You nod and tell him you'll think about it. He smiles at that before thanking you for joining him on his trip and then seeing you out of his house.";
+	say "     When you get there, the both of you sit down. 'So... about the kiss.' The shark says, trailing off. You nod, wondering what it was about, though not entirely minding. 'Well, through the time we've spent together... I've developed feelings for you. I, uh, like you.' Kurt manages to stutter out. You chuckle at his nervousness, as it's kind of adorable and you can tell by it that he's never really asked anyone out, that you say as much. 'Yeah, I've always been the one asked out due to my... popularity, and the relationships never went well,' he says, with a wince. Your face makes the same expression, imagining how it went. 'But... if you do like me then, we can go further than... what we've been doing.' You nod and tell him you'll think about it. He smiles at that before thanking you for joining him on his trip and then seeing you out of his house.";
 	now KurtRelationship is 4;
 	now Predator's Club Night is resolved;
 	SanBoost 30;
@@ -168,12 +168,9 @@ SexuallyExperienced of Kurt is false.
 TwistedCapacity of Kurt is false. [Twisted Characters can take any penetration, no matter the size]
 Sterile of Kurt is true. [steriles can't knock people up]
 MainInfection of Kurt is "".
-Description of Kurt is "[KurtDesc]".
-Conversation of Kurt is { "<This is nothing but a placeholder!>" }.
+Description of Kurt is "     Your musician friend stands at a tall six foot four, which you guess makes sense for a shark-morph, though you expected him to be much taller for a great white shark. Beyond his height he has subtle bulging muscles that while they aren't the steroid-crazy type that you've seen many others out there with, it does say that he could probably do considerable damage to you. Outfit-wise the male is wearing just a simple pair of palm tree swim trunks and a black muscle shirt rather than anything fancy. Though you do know the reason for this, as you did ask him during your little lunch date earlier, so you draw your eyes upwards and notice Kurt's rather striking green eyes before taking another once-over glance. Overall your friend is a rather remarkable specimen that would catch anybody's eye.[line break]".
+fuckscene of Kurt is "[KurtSexMenu]".
 The scent of Kurt is "     The shark-morph smells like a variety of spices, foods, varnished wood and water. You kind of expected the variety of smells from the fact he hangs out in the market area playing his guitar. But you inwardly shrug, guessing it fits him.".
-
-to say KurtDesc:
-	say "     Your musician friend stands at a tall six foot four, which you guess makes sense for a shark-morph, though you expected him to be much taller for a great white shark. Beyond his height he has subtle bulging muscles that while they aren't the steroid-crazy type that you've seen many others out there with, it does say that he could probably do considerable damage to you. Outfit-wise the male is wearing just a simple pair of palm tree swim trunks and a black muscle shirt rather than anything fancy. Though you do know the reason for this, as you did ask him during your little lunch date earlier, so you draw your eyes upwards and notice Kurt's rather striking green eyes before taking another once-over glance. Overall your friend is a rather remarkable specimen that would catch anybody's eye.";
 
 Section 2 - Talking with Kurt
 
@@ -182,50 +179,48 @@ instead of conversing the Kurt:
 		say "     ERROR: Kurt shouldn't be where a player can see him yet, heck you shouldn't even have access to this room yet! Please report to Rikaeus on the FS Discord and quote this tracking number for easier bugfixing: [KurtRelationship]";
 	else:
 		say "     As you walk up to Kurt, who has been lounging on the couch, playing his guitar, a soothing tune coming out, he smiles at you. 'What do you want my friend?' he asks, a wide toothy smile aimed at you.";
-		say "[KurtTalkMenu]";
-
-to say KurtTalkMenu:
-	LineBreak;
-	say "What do you wish to talk about with the shark-morph?";
-	now sextablerun is 0;
-	blank out the whole of table of fucking options;
-	[]
-	choose a blank row in table of fucking options;
-	now title entry is "Life in Atlantis";
-	now sortorder entry is 1;
-	now description entry is "Ask him how he came to live in Atlantis";
-	[]
-	choose a blank row in table of fucking options;
-	now title entry is "His Interest in Music";
-	now sortorder entry is 2;
-	now description entry is "Ask him how he came to be interested in music";
-	[]
-	repeat with y running from 1 to number of filled rows in table of fucking options:
-		choose row y from the table of fucking options;
-		say "[link][y] - [title entry][as][y][end link][line break]";
-	say "[link]0 - Nevermind[as]0[end link][line break]";
-	while sextablerun is 0:
-		say "Pick the corresponding number> [run paragraph on]";
-		get a number;
-		if calcnumber > 0 and calcnumber <= the number of filled rows in table of fucking options:
-			now current menu selection is calcnumber;
-			choose row calcnumber in table of fucking options;
-			say "[title entry]: [description entry]?";
-			if Player consents:
-				let nam be title entry;
+		say "[line break]     What do you wish to talk about with the shark-morph?";
+		now sextablerun is 0;
+		blank out the whole of table of fucking options;
+		[]
+		choose a blank row in table of fucking options;
+		now title entry is "Life in Atlantis";
+		now sortorder entry is 1;
+		now description entry is "Ask him how he came to live in Atlantis";
+		[]
+		choose a blank row in table of fucking options;
+		now title entry is "His Interest in Music";
+		now sortorder entry is 2;
+		now description entry is "Ask him how he came to be interested in music";
+		[]
+		sort the table of fucking options in sortorder order;
+		repeat with y running from 1 to number of filled rows in table of fucking options:
+			choose row y from the table of fucking options;
+			say "[link][y] - [title entry][as][y][end link][line break]";
+		say "[link]0 - Nevermind[as]0[end link][line break]";
+		while sextablerun is 0:
+			say "Pick the corresponding number> [run paragraph on]";
+			get a number;
+			if calcnumber > 0 and calcnumber <= the number of filled rows in table of fucking options:
+				now current menu selection is calcnumber;
+				choose row calcnumber in table of fucking options;
+				say "[title entry]: [description entry]?";
+				if Player consents:
+					LineBreak;
+					now sextablerun is 1;
+					if title entry is:
+						-- "Life in Atlantis":
+							say "[KurtAtlantis]";
+						-- "His Interest in Music":
+							say "[KurtMusic]";
+			else if calcnumber is 0:
+				LineBreak;
 				now sextablerun is 1;
-				if (nam is "Life in Atlantis"):
-					say "[KurtAtlantis]";
-				if (nam is "His Interest in Music"):
-					say "[KurtMusic]";
-				wait for any key;
-		else if calcnumber is 0:
-			now sextablerun is 1;
-			say "     You apologize and tell him you that you don't have anything to say. He raises a brow but gets back to what he was doing.";
-			wait for any key;
-		else:
-			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
-	clear the screen and hyperlink list;
+				say "     You apologize and tell him you that you don't have anything to say. He raises a brow but gets back to what he was doing.";
+			else:
+				say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options], or 0 to exit.";
+		wait for any key;
+		clear the screen and hyperlink list;
 
 to say KurtAtlantis:
 	say "     Curious about how the shark-morph came to live here you ask out loud the question on your mind. 'Oh? Well, I guess it is kind of obvious that I didn't live here initially,' Kurt says, humming out loud as he sets his guitar to the side. You nod, as you're pretty sure you've seen his kind of infection before outside of Atlantis, so it was kind of safe to assume that he hadn't been a part of the city when it first resurfaced. 'Well, it wasn't long after I got these changes of mine that I spotted one of the mermaids leaving the city. I asked around and was directed to here,' he continues. Sounds a lot like how you found the city... though yours was a bit weirder than his, and not a story you're sure you want to share just yet with other people.";
@@ -237,57 +232,53 @@ to say KurtMusic:
 
 Section 3 - Sex
 
-instead of fucking Kurt:
-	if (lastfuck of Kurt - turns < 3): [he got fucked in the last 9 hours = 3 turns]
+to say KurtSexMenu:
+	if lastfuck of Kurt - turns < 3: [he got fucked in the last 9 hours = 3 turns]
 		say "     The shark-morph lets out a laugh and shakes his head. 'My randy friend, I do need a break every now and then,' he says, before returning to his guitar.";
 	else:
 		say "     Seeing the musician sitting on his couch, strumming his guitar, an idea comes to mind. But the question is, what is that idea?";
-		wait for any key;
-		say "[KurtSexMenu]";
-
-to say KurtSexMenu:
-	LineBreak;
-	now sextablerun is 0;
-	blank out the whole of table of fucking options;
-	[]
-	choose a blank row in table of fucking options;
-	now title entry is "Suck Kurt off"; [anyone can suck him off]
-	now sortorder entry is 1;
-	now description entry is "Take Kurt for a ride with your lips";
-	[]
-	if KurtRelationship > 3:
+		now sextablerun is 0;
+		blank out the whole of table of fucking options;
+		[]
 		choose a blank row in table of fucking options;
-		now title entry is "Take Kurt Anally";
-		now sortorder entry is 2;
-		now description entry is "Take Kurt's dicks in your hole";
-	[]
-	Sort the table of fucking options in sortorder order;
-	repeat with y running from 1 to number of filled rows in table of fucking options:
-		choose row y from the table of fucking options;
-		say "[link][y] - [title entry][as][y][end link][line break]";
-	say "[link]0 - Nevermind[as]0[end link][line break]";
-	while sextablerun is 0:
-		say "Pick the corresponding number> [run paragraph on]";
-		get a number;
-		if calcnumber > 0 and calcnumber <= the number of filled rows in table of fucking options:
-			now current menu selection is calcnumber;
-			choose row calcnumber in table of fucking options;
-			say "[title entry]: [description entry]?";
-			if Player consents:
-				let nam be title entry;
+		now title entry is "Suck Kurt off"; [anyone can suck him off]
+		now sortorder entry is 1;
+		now description entry is "Take Kurt for a ride with your lips";
+		[]
+		if KurtRelationship > 3:
+			choose a blank row in table of fucking options;
+			now title entry is "Take Kurt Anally";
+			now sortorder entry is 2;
+			now description entry is "Take Kurt's dicks in your hole";
+		[]
+		sort the table of fucking options in sortorder order;
+		repeat with y running from 1 to number of filled rows in table of fucking options:
+			choose row y from the table of fucking options;
+			say "[link][y] - [title entry][as][y][end link][line break]";
+		say "[link]0 - Nevermind[as]0[end link][line break]";
+		while sextablerun is 0:
+			say "Pick the corresponding number> [run paragraph on]";
+			get a number;
+			if calcnumber > 0 and calcnumber <= the number of filled rows in table of fucking options:
+				now current menu selection is calcnumber;
+				choose row calcnumber in table of fucking options;
+				say "[title entry]: [description entry]?";
+				if Player consents:
+					LineBreak;
+					now sextablerun is 1;
+					if title entry is:
+						-- "Suck Kurt off":
+							say "[KurtSex1]";
+						-- "Take Kurt Anally":
+							say "[KurtSex2]";
+			else if calcnumber is 0:
+				LineBreak;
 				now sextablerun is 1;
-				if (nam is "Suck Kurt off"):
-					say "[KurtSex1]";
-				if (nam is "Take Kurt Anally"):
-					say "[KurtSex2]";
-				wait for any key;
-		else if calcnumber is 0:
-			now sextablerun is 1;
-			say "     You take a second to think and then decide against doing something sexy with your shark friend.";
-			wait for any key;
-		else:
-			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
-	clear the screen and hyperlink list;
+				say "     You take a second to think and then decide against doing something sexy with your shark friend.";
+			else:
+				say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options], or 0 to exit.";
+		wait for any key;
+		clear the screen and hyperlink list;
 
 to say KurtSex1:
 	say "     Interested in getting a taste of the shark-morph you move on over to him while he's playing his guitar and kneel down in front of his crotch. This causes the male to raise a brow at you, clearly intrigued by your actions. 'Someone's a little horny, aren't they?' Kurt asks, a toothy grin following that question. You respond in kind by raising a hand to his bulge, and when it touches you realize you can feel two hardening lengths. Though to be completely honest you should have expected this, as your friend is a shark, who have two dicks. 'Why don't you take both of them out to have a better look, help you get more interested,' he says, his grin now a smirk as he takes his own hand and moves it to yours to guide them to the button of his pants.";
@@ -303,10 +294,11 @@ to say KurtSex1:
 to say KurtSex2:
 	if loyalty of Kurt is 0:
 		say "     You clear your throat to get Kurt's attention, which causes him to look at you with a curious stare. 'What is it?' He asks. You tell him that you wish to talk about what you two discussed before, causing him to perk up. 'Have you made your decision?' He asks, causing you to think about it.";
-		say "     [bold type]Have you decided to further your relationship with Kurt yet?[roman type][line break]";
-		say "     [link]Y[as]y[end link] - Yeah, he's a nice guy!";
-		say "     [link]N[as]n[end link] - No, I need more time to think.";
+		say "[line break]     [bold type]Have you decided to further your relationship with Kurt yet?[roman type][line break]";
+		say "     ([link]Y[as]y[end link]) - Yeah, he's a nice guy!";
+		say "     ([link]N[as]n[end link]) - No, I need more time to think.";
 		if Player consents:
+			LineBreak;
 			say "     You nod your head and say that you'd love to take this relationship further, taking a step forward towards him before taking his guitar and placing it on the ground. You take your hand and run it up his shoulder, causing him to let out a rumble of pleasure. Getting closer, you climb on top of his lap and then lean forward, taking his lips with yours. Kurt happily accepts your kiss and slips his tongue into your mouth. Instead of fighting him for dominance you just let him win, allowing him to push his against your own tongue. The two of you start moaning into the kiss, enjoying the make-out session.";
 			say "     While enjoying the shark's lips, you start grinding onto his lap, which ends up getting a response from Kurt as he lets out a groan into the kiss. You can feel his cocks hardening against your rump, something that gets you yourself all heated up as well. Deciding to take this a step further, you grab at his shirt and pull it off him, revealing the muscles underneath. Quickly after you roam your hands all over him, feeling at his skin, enjoying the sensation of it under your touch. All the while this is happening your shark friend is clearly enjoying it all as he is moaning and writhing.";
 			WaitLineBreak;
@@ -323,8 +315,9 @@ to say KurtSex2:
 			now loyalty of Kurt is 1;
 			now lastfuck of Kurt is turns;
 		else:
+			LineBreak;
 			say "     You shake your head and tell him that you need more time to think, he says that he understands and asks that when you do have your decision to tell him.";
-	else if loyalty of Kurt is 1:
+	else:
 		say "     You walk your way to the shark before grabbing his guitar and putting it on the ground. 'Oh? Do you want something?' He asks with a curious and slightly lusty look. You nod, sliding yourself onto his lap before you push your lips onto his. Kurt gladly accepts this kiss, such that he slips his own tongue into your mouth, greedily exploring it, something that you gladly let him. You on the other hand, while moaning into the kiss, focus on roaming your hands all over his body, enjoying the tactile sensations of his muscles under his shirt and his arms as well.";
 		say "     While enjoying the shark's lips, you start grinding onto his lap, which ends up getting a response from Kurt as he lets out a groan into the kiss. You can feel his cocks hardening against your rump, something that gets you yourself all heated up as well. Deciding to take this a step further, you grab at his shirt and pull it off him, revealing the muscles underneath. Quickly after you roam your hands all over him, feeling at his skin, enjoying the sensation of it under your touch. All the while this is happening your shark friend is clearly enjoying it all as he is moaning and writhing.";
 		WaitLineBreak;
@@ -339,7 +332,6 @@ to say KurtSex2:
 		WaitLineBreak;
 		say "     You breathe heavily and lean against Kurt's chest, the two of you resting and cuddling for a bit before he lifts you off his cocks. He smiles at you and then gets up and heads to another room. He appears to comeback with towels and cleans the both of you off. 'That was great!' He says, his facial expression changing to a grin, you matching it with your own as you nod in agreement. He then starts to get dressed, to which you grab whatever you took off, if anything and put it back on. 'You know, I'm glad you decided to go further in our relationship,' the shark says, smiling at you. You reply in return that you're glad as well. 'Well, if you want to have some fun again sometime, then just let me know.' Kurt says before picking back up his guitar.";
 		now lastfuck of Kurt is turns;
-
 
 testkurt is an action applying to nothing.
 understand "kurt test" as testkurt.

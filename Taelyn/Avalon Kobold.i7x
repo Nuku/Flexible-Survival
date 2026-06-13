@@ -1,12 +1,12 @@
 Avalon Kobold by Taelyn begins here.
 [ Version 1.0 - by Taelyn         ]
 
-Table of CombatPrep (continued)
+[Table of CombatPrep (continued)
 name(text)	PrepFunction(text)
 "Avalon Kobold"	"[PrepCombat_Avalon Kobold]"
 
 to say PrepCombat_Avalon Kobold:
-	say "";
+	setmongender 3;]
 
 Table of Random Critters (continued)
 NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
@@ -34,8 +34,8 @@ When Play begins:
 	now victory entry is "[NonCombatError]";
 	now desc entry is "[NonCombatError]";
 	now face entry is "reptilian in shape and crowned with two small horns. Your wide, [Eye Color of Player] eyes are surprisingly keen, even while in the dark. Small but sharp teeth and a pointed tongue complete your draconic visage";
-	now body entry is "lithe but surprisingly strong. It looks and feels perfect for a cave dwelling Kobold. [if Player is female]Besides that, there is also a bit of a feminine curve to your hips, making them somewhat wider for egg laying. [end if]Your legs are digitigrade and end in three-toed feet, while your arms sport four fingered hands, each tipped with a small claw";
-	now skin entry is "[if KoboldScaleColor is 1][one of]crimson[or]red[or]rose-red[at random][else if KoboldScaleColor is 2][one of]azure[or]blue[or]sea-blue[at random][else if KoboldScaleColor is 3][one of]verdant[or]green[or]forest-green[at random][else if KoboldScaleColor is 4][one of]obsidian[or]black[or]charcoal-black[at random][else if KoboldScaleColor is 5][one of]alabaster[or]white[or]snow-white[at random][else](Error, value invalid. Please report this issue to the FS Discord Server with KoboldScaleColor: [KoboldScaleColor].)[end if] scales. Despite their protective nature, you can still feel everything just fine through your now draconic";
+	now body entry is "lithe but surprisingly strong. It looks and feels perfect for a cave dwelling kobold[if Player is female]. Besides that, there is also a bit of a feminine curve to your hips, making them somewhat wider for egg laying[end if]. Your legs are digitigrade and end in three-toed feet, while your arms sport four fingered hands, each tipped with a small claw";
+	now skin entry is "[if KoboldScaleColor is 1][one of]crimson[or]red[or]rose-red[at random][else if KoboldScaleColor is 2][one of]azure[or]blue[or]sea-blue[at random][else if KoboldScaleColor is 3][one of]verdant[or]green[or]forest-green[at random][else if KoboldScaleColor is 4][one of]obsidian[or]black[or]charcoal-black[at random][else if KoboldScaleColor is 5][one of]alabaster[or]white[or]snow-white[at random][else](Error, value invalid. Please report this issue to the FS Discord Server with KoboldScaleColor: [KoboldScaleColor])[end if] scales. Despite their protective nature, you can still feel everything just fine through your now draconic";
 	now tail entry is "A long and agile reptilian tail sways behind you, adjusting to your every movement to help you keep balance. It is surprisingly dexterous and you are able to control your tail as well as any other limb. It seems to wiggle at times when you are happy.";
 	now cock entry is "[one of]reptilian[or]draconic[or]taperd[or]kobold[at random]";
 	now face change entry is "";
@@ -49,7 +49,7 @@ When Play begins:
 	now per entry is 22;
 	now int entry is 16;
 	now cha entry is 20;
-	now sex entry is "None"; [ Infection will move the player towards this gender. Current: 'Male' 'Female' 'Both' ]
+	now sex entry is "Nochange"; [ Infection will move the player towards this gender. Current: 'Male' 'Female' 'Both' ]
 	now HP entry is 66; [ The monster's starting HP. ]
 	now lev entry is 1; [ Monster level. (Level x 2) XP for victory. (Level / 2) XP for losing. ]
 	now wdam entry is 15; [ Monster's average damage when attacking. ]

@@ -5,11 +5,7 @@ Dmitri the Peacock by Aureas Gigas begins here.
 [  1: first event (sexual massage) completed                       ]
 [ 99: stopped the charmer cold                                     ]
 
-a postimport rule: [this adds the newly named navpoint]
-	if Peacocked > 7 and Peacocked < 98: [values set this way to future proof it after changing teh room name in code. Please use values above 98 for content that SHOULDNT link this area.]
-		AddNavPoint Argos's Antiques;
-	move Dmitri to Argos's Antiques;
-	now OralVirgin of Dmitri is false;
+Peacocked is a number that varies. Peacocked is usually 0.
 
 Table of GameEventIDs (continued)
 Object	Name
@@ -18,7 +14,6 @@ Captivating Plumage	"Captivating Plumage"
 Captivating Plumage is a situation.
 ResolveFunction of Captivating Plumage is "[ResolveEvent Captivating Plumage]".
 Sarea of Captivating Plumage is "High".
-Peacocked is a number that varies. Peacocked is usually 0.
 
 when play begins:
 	add Captivating Plumage to BadSpots of MaleList;
@@ -36,9 +31,7 @@ to say ResolveEvent Captivating Plumage:
 		project Figure of Dmitri_clothed_icon;
 		say "     As he glances towards you, it becomes apparent that the purloiner is an anthropomorphic male peacock. Covered in shimmering blue and green feathers, he stands in a striking pose. As he looks you over, his eyes focus intently, like he has found something very valuable. If beaks could smile, then he would wear a broad and satisfied one right now. Then the peacock burglar starts to fan his tail. The feathers are quite eye catching indeed. With a very calm and soothing voice he says, 'Hello there. It's been a while since I've seen another sane person, let alone one so [if Player is female]beautiful[else]attractive[end if].'";
 		say "     Managing to wrench your gaze away from the bird, you focus on the dazed wolverine instead. Without a doubt, something the peacock did put the guard out of commission, so you prepare to be wary towards the avian. As if to address this, the resplendent peafowl states, 'I was simply walking down the street and got too close to this store when the guard started to attack me.' Skeptically, you raise an eyebrow - something about the location of the guard and the empty display cases pokes holes in his testimony. But after a couple of waves of his tail feathers, somehow... you just want to let him continue... 'I don't mean you any harm. Let me prove it to you. I can give a dynamite massage,' the sleek male says in a calming and inviting tone. With all the chaos going in the city, it might be good for him to help you relax a little bit... Wait! Some small, analytical part of your mind feels very wary of his intentions. Are you really going to allow him to work his magic on you?";
-		WaitLineBreak;
-		say "     [bold type]Something about the way the avian moves seems incredibly inviting... yet also potentially dangerous. Will you allow the stunning peacock to help you relax, or will you warn the fowl to back off and not try anything funny?[roman type][line break]";
-		LineBreak;
+		say "[line break]     [bold type]Something about the way the avian moves seems incredibly inviting... yet also potentially dangerous. Will you allow the stunning peacock to help you relax, or will you warn the fowl to back off and not try anything funny?[roman type][line break]";
 		say "     ([link]Y[as]y[end link]) - Let the bird give you a soothing massage.";
 		say "     ([link]N[as]n[end link]) - Tell the bird off and walk away.";
 		if Player consents:
@@ -52,16 +45,14 @@ to say ResolveEvent Captivating Plumage:
 				say "     As you start to come to some time later, you see the peacock with his arms embracing you. His body warmth and smooth feathers provide a comforting touch for your skin. The mannish avian traces a hand all along your body. Whispering in your ear, the tall and slender fowl repeats the phrase, 'You came because you were a good girl... Good girls want to please me... You want to please me...' To your surprise, you can see your lips moving as if to repeat the phrase. Noticing that you are coming to, the captivating stud gives a throaty chuckle and declares, 'You seem a lot more relaxed. I hope that has shown just how skilled I am at helping people let go of their worries. You seem like the sort of lady who could... regularly need some help alleviating stress. Come find me at the Argos Antique Store. Knock three times on the back entrance. I hope to see you later, beautiful.' Grabbing the bag of loot, the avian heads out the door. You smile and think that perhaps you may pay this charmer and his [bold type]captivating plumage[roman type] a visit again.";
 				NPCSexAftermath Player receives "PussyDildoFuck" from Dmitri;
 			else:
-				say "     Running his hands up and down your crotch[if Player is male] and playing with the tip of your cock[end if], the peacock leans in and begins to nibble on your neck. You try to say something but are quickly hushed by the avian placing a feathered finger up to your mouth and saying, 'Let's put that mouth to better use...' He brings his face closer to yours and looks directly in your eyes, his gaze as captivating as the eye-spots on his tail. His tongue then darts into your mouth and begins to play with your own, the feathered male skilled at using that muscle to enrapture you. [if Player is male]His hand runs up and down your shaft, making your cock rise. Between passionately making out with you, the fowl runs a finger around your cock-head, playfully saying, 'Let's have you think with this head instead.' [end if]As the sensual kissing and groping by the dominant male goes on, all you can think of is the pleasure he gives you. The urge to climax grows steadily until all you can do is beg for release. 'Cum...' whispers the peacock, and you lose yourself in pleasure.";
+				say "     Running his hands up and down your crotch[if Player is male] and playing with the tip of your cock[end if], the peacock leans in and begins to nibble on your neck. You try to say something but are quickly hushed by the avian placing a feathered finger up to your mouth and saying, 'Let's put that mouth to better use...' He brings his face closer to yours and looks directly in your eyes, his gaze as captivating as the eye-spots on his tail. His tongue then darts into your mouth and begins to play with your own, the feathered male skilled at using that muscle to enrapture you. [if Player is male]His hand runs up and down your shaft, making your cock rise. Between passionately making out with you, the fowl runs a finger around your cockhead, playfully saying, 'Let's have you think with this head instead.' [end if]As the sensual kissing and groping by the dominant male goes on, all you can think of is the pleasure he gives you. The urge to climax grows steadily until all you can do is beg for release. 'Cum...' whispers the peacock, and you lose yourself in pleasure.";
 				say "     As you start to come to some time later, you see the peacock with his arms embracing you. His body warmth and smooth feathers provide a comforting touch for your skin. The mannish avian traces a hand all along your body. Whispering in your ear, the tall and slender fowl repeats the phrase, 'You came because you were a good person... Good people want to please me... You want to please me...' To your surprise, you can see your lips moving as if to repeat the phrase. Noticing that you are coming to, the captivating stud gives a throaty chuckle and declares, 'You seem a lot more relaxed. I hope that has shown just how skilled I am at helping people let go of their worries. You seem like the sort of person who could... regularly need some help alleviating stress. Come find me at the Argos Antique Store. Knock three times on the back entrance. I hope to see you later, sexy.' Grabbing the bag of loot, the avian heads out the door. You smile and think that perhaps you may pay this charmer and his [bold type]captivating plumage[roman type] a visit again.";
 				NPCSexAftermath Player receives "Stroking" from Dmitri;
 			now Peacocked is 1; [sexual massage completed]
-			now Resolution of Captivating Plumage is 1;
 		else: [refuse his offer]
 			LineBreak;
 			say "     Something about this deceptive bird strikes you as very duplicitous. You yell at the bird to stay away and not do anything funny. With a glum look on his face, the avian runs out the back entrance with his bag of loot, muttering about how you were too strong willed. Somehow you get the feeling that this particular peacock will not cross paths with you again.";
 			now Peacocked is 99; [stopped the peacock cold]
-			now Resolution of Captivating Plumage is 99;
 			now Captivating Plumage is resolved;
 	else if Peacocked is 1: [previously had a sexual massage]
 		project Figure of Dmitri_clothed_icon;
@@ -78,7 +69,6 @@ to say ResolveEvent Captivating Plumage:
 		say "     Regaining your faculties some time later, you find yourself sitting in an overstuffed armchair, an old quilted blanket wrapped around you. Despite only getting an hour of sleep at most, you feel like you've had a full night's rest. Sitting on a large leather chair, the peacock notices you come to and says, 'Look who is awake. You did an amazing job making me happy. You should really be proud of just how instinctively your body seeks pleasure and relaxation. If you are wound up too tight, you won't be able to notice an ambush or attack. Another individual I met refused my offer and got pounced on by a leopardman only seconds later. I really do hope you come back another time.' With that said, he gently tugs the blanket off you, then ushers you out the door. As much as it pains you to admit it, you do feel a lot better. Hopefully next time you will have more control on how the situation pans out. But then again... the [bold type]captivating plumage[roman type] of your avian friend is so hard to resist.";
 		NPCSexAftermath Dmitri receives "Stroking" from Player;
 		now Peacocked is 2; [handjob completed]
-		now Resolution of Captivating Plumage is 2;
 	else if Peacocked is 2: [previously gave Dmitri a handjob]
 		project Figure of Dmitri_clothed_icon;
 		say "     As you walk through the streets of the high-rise district, you somehow find yourself heading back to the antique store. Remembering how you lost volition of your hand the last time, you wonder just how much control you had in arriving at this place. Despite your wariness, you can't help but knock on the back door. You hear the sounds of taloned footsteps on hardwood floor, then the clanks of the chains unlocking the door. Beckoning you inside, the peacock guides you to a pair of soft leather chairs and invites you to sit in one. The chair squeaks as you take a seat. Opening a small oaken chest, the blue and green feathered shopkeeper grabs a small water bottle inside and hands it to you. Taking a seat on the chair facing you, the avian states, 'I've just realized that despite our... interactions, I still haven't introduced myself. My name's Dmitri, welcome to my humble shop. It looks a lot better since you came around...'";
@@ -92,7 +82,6 @@ to say ResolveEvent Captivating Plumage:
 		say "     With a small groan, the avian asserts his control over you by placing his fingers on the back of your head and gently guiding your face forward. As good as the tip tasted, the shaft carries even more of that heady flavor. As his tail feathers unfurl to provide a glamorous backdrop for the elegant male, your tongue coats his cock in a thick layer of saliva, allowing him to press even deeper into your mouth until his tapered, pre-dribbling tip rests partway down your throat. Pulling one hand off of the back of your head, the fowl uses his free hand to close your eyelids, softly saying, 'Close your eyes, focus only on pleasing me...' Complying with the avian's request, you keep your eyes closed and focus only on the rod currently inside your mouth. Savoring the experience, you focus only on how to give the best blowjob you can, bobbing your head at an increasingly rapid pace.";
 		say "     After nearly ten full minutes of fellating the male, you hear the sound of one of Dmitri's toe talons sliding across the hardwood floor. A vein bulges in the shopkeeper's girthy avian cock, and you soon learn the reason why when the peafowl unleashes his load inside your mouth. The back of your mouth and throat are soon covered in a thick layer of semen, his intoxicating essence filling your mind with subservient pleasure. With a confident look on his face, the enthralling male seductively says, 'Don't let a single drop touch the floor. I'd hate for you to have to clean up again.' Swallowing his ample load, your tongue soon licks over every square centimeter of his phallus. Pulling his dick from your face, the blue and green bird places his hand against your cheek and caresses it. 'I'm lucky to have met such a good [if Player is female]lady[else]guy[end if] like yourself. If you keep showing up at this store, I've got a plan which could use some help to complete. I think you'll find the reward and plan very fulfilling...' You try to learn more, but he waves you off for now and guides you to the exit.";
 		NPCSexAftermath Player receives "OralCock" from Dmitri;
-		now Resolution of Captivating Plumage is 3;
 		now Peacocked is 3; [blowjob completed]
 	else if Peacocked is 3: [gave the peacock a BJ before]
 		project Figure of Dmitri_clothed_icon;
@@ -107,8 +96,6 @@ to say ResolveEvent Captivating Plumage:
 			say "     Sliding one hand up your right calf muscle and around your booty, the peafowl strokes your ass in circular movements, then delivers a small swat. Playfully, the bird-like man hints at his desires by saying, 'This pussy is incredible. I've never had a cunt this tight... You are a special one. The only way this would feel better is if you move your hips in tune with mine...' As if following a command, your hips begin moving in sync with the pace of the avian's thrusts. Despite a tiny fraction of your mind urging you to run for the front door while still in control, your body can't stop. While startling at first, soon the pleasant sensation overrides any desires to leave, instead simply focusing on how good it feels to get nailed by the handsome bird. The urge to cum rises, and soon you feel Dmitri's cock tense and shoot a great load right into your pussy. Serving the avian provides an orgasmic feeling that soon overloads your system, and you become lost to a haze of sexual delight.";
 			say "     As you come to from your state of absolute pleasure, you see Dmitri wiping you down with a damp cloth. With a twinkle in his eyes, the avian articulates feelings of contentment and accomplishment, 'That fine display showed just how ready you are to take part in my plan.' He then organizes the various pieces of information strewn about by the hard fucking you received on the table. Pointing a finger at a picture of a Ming vase, the elegant shopkeeper states, 'This Ming vase was the last piece made by a renowned artisan from that era. It was set to be on exhibit at a nearby art gallery. Unfortunately, the nanite infection hit and left the piece locked in a storage room.' He then points at the blueprints and continues, 'I have a plan set up for getting the vase to a safer location, and you will know when I'm ready for your assistance.' You start to wonder how the bird will let you know and worry it might have something to do with how he programmed your mind. You leave the store again, nervous about your own level of control over your body.";
 			NPCSexAftermath Player receives "PussyFuck" from Dmitri;
-			now Peacocked is 4;
-			now Resolution of Captivating Plumage is 4;
 		else: [Males and neuters]
 			say "     Wanting to get your tight pucker ready before stuffing his shaft inside you, the avian walks over to a small dresser drawer and pulls out a small canister of lubricant. Chuckling softly, Dmitri amusedly states, 'You'd be surprised what people forget to remove when they sell.' He squeezes out a decent dollop from the tube of lubricant onto two of his fingers. Smearing a hearty amount around the rim of your sphincter, the glamorous bird coats his sizable rod with a coating from tip to base. Prodding your eagerly awaiting tailstar with his tapered tip, the confident shopkeep teases you to make the anticipation unbearable. 'Say you want it, sexy,' he commands, and to your surprise your mouth blurts out, 'Please fuck my ass sir!'";
 			say "     Before you can even react to what your mouth did involuntarily, Dmitri presses his rod deeply within your awaiting hole. The sudden penetration causes you to moan sharply, your entire body going tense as he throbs within you. A small chortle escapes the dominant fowl's beak as he says, 'Not expecting it that quickly, were you?' Nodding your head in response, the playful shopowner jokingly says, 'Well, I'd hate to keep a cutie like you waiting too long.' He then starts to move his hips at a solid pace. Using one of his hands, the resplendent plumed male caresses and playfully spanks your shapely booty. Biting your lip, your fingers grip the wooden table tightly and your anal passage squeezes with much greater force on the meaty rod inside you.";
@@ -116,11 +103,10 @@ to say ResolveEvent Captivating Plumage:
 			say "     A grunt of satisfaction erupts from the colorful bird as he says between breaths, 'Damn, this hole is super tight.' Now that he mentioned it, your anal muscles do seem stronger than normal. Perhaps something Dmitri did in changing your mind subconsciously affected your muscles as well. Before you can dwell on this thought for too long, the peacock male begins to thrust with vigorous force. The avian places both of his hands on the oaken table in order to balance himself and hold a steady place. With your anal muscles wrapped so tightly around his girthy cock, you can feel as the veins begin to bulge. A sharp scratch of talon against wood is heard before the enchanting shopkeep unleashes a massive load of cum in your ass. A mixture of pleasurable sensations from all the cum inside you and pleasing the avian causes you to lose your consciousness to a haze of pleasure.";
 			say "     As you come to from your state of absolute pleasure, you see Dmitri wiping you down with a damp cloth. With a twinkle in his eyes, the avian articulates feelings of contentment and accomplishment, 'That fine display showed just how ready you are to take part in my plan.' He then organizes the various pieces of information strewn about by the hard fucking you received on the table. Pointing a finger at a picture of a Ming vase, the elegant shopkeeper states, 'This Ming vase was the last piece made by a renowned artisan from that era. It was set to be on exhibit at a nearby art gallery. Unfortunately, the nanite infection hit and left the piece locked in a storage room.' He points at his blueprints and continues, 'I have a plan set up for getting the vase to a safer location, and you will know when I'm ready for your assistance.' You start to wonder how the bird will let you know and worry it might have something to do with how he programmed your mind. You leave the store again, nervous about your own level of control over your body.";
 			NPCSexAftermath Player receives "AssFuck" from Dmitri;
-			now Peacocked is 4;
-			now Resolution of Captivating Plumage is 4;
+		now Peacocked is 4;
 	else if Peacocked is 4:
 		project Figure of Dmitri_clothed_icon;
-		say "     For some strange reason you have the urge to check in on how Dmitri's heist is progressing. Knocking on the back door, you don't hear the sound of taloned feet this time. Opening the unlocked door, you see Dmitri examining an ancient Greek costume, muttering under his breath, 'I hope it [if Player is female and scalevalue of Player > 5]is not too small for her[else if Player is female and scalevalue of Player < 5]is not too large for her[else if Player is male and scalevalue of Player > 5]is not undersized for him[else if Player is male and scalevalue of Player < 5]is not too big for the guy[else]fits them correctly[end if].' You greet the bird while he is lost deep in thought. Startled, he jumps a little bit, but he quickly regains his composure. Softly chuckling, the shopkeep says, 'I guess a small part of both of us knew that we're ready for step one. Would you kindly put on the outfit laid out in front of us?'";
+		say "     For some strange reason you have the urge to check in on how Dmitri's heist is progressing. Knocking on the back door, you don't hear the sound of taloned feet this time. Opening the unlocked door, you see Dmitri examining an ancient Greek costume, muttering under his breath, 'I hope it [if Player is female and scalevalue of Player > 3]is not too small for her[else if Player is female and scalevalue of Player < 3]is not too large for her[else if Player is male and scalevalue of Player > 3]is not undersized for him[else if Player is male and scalevalue of Player < 3]is not too big for the guy[else]fits them correctly[end if].' You greet the bird while he is lost deep in thought. Startled, he jumps a little bit, but he quickly regains his composure. Softly chuckling, the shopkeep says, 'I guess a small part of both of us knew that we're ready for step one. Would you kindly put on the outfit laid out in front of us?'";
 		say "     Without any hesitation, you start to strip off any clothing or gear from your body. Somehow you know that all of your stuff will be taken care of in this fine establishment. The outfit's cloth is made of an elastic fabric which seems to comply with any possible shape that the nanites could have given your body. Examining your curves with interest, the avian says in a satisfied tone, 'I knew you could rock this outfit.' Placing a laurel branch on your head to put a flourishing touch on the attire, Dmitri begins to explain, 'If we are going to go grab the vase, we need to know just how many people are in that neck of the woods. There's a gang of infected that frequently hang out nearby. The best way to get their attention is to bring around a sexy [if Player is female]girl[else]piece of ass[end if] like you.' Patting your head, the colorful fowl says confidently, 'Now let's do a little marketing.'";
 		WaitLineBreak;
 		say "     Walking down the streets of the high-rise district, you begin to notice just how thin the fabric you are wearing is. While pliant and flexible enough to fit your form, you can see your skin underneath the cloth. A small breeze also makes you notice that the outfit does a poor job of covering your ass. Strolling down the sidewalk, you begin to see some infected individuals peering through the windows in a red brick apartment complex. An anthro tomcat with silver and black striped fur opens a window, then sharply whistles and shouts, 'Damn sexy, you going to a toga party? I got some beer and other stuff right here.' The barbed tip of his feline cock starts to emerge from its sheath. Embarrassed, you blush and look down at the cracked pavement in front of you. Placing one of his hands in your palm while the other guides your gaze to his face, Dmitri says in a soothing and seductive tone, 'Calm down, everything will be okay.' You start to feel a lot more relaxed and follow your bird-like companion.";
@@ -132,8 +118,13 @@ to say ResolveEvent Captivating Plumage:
 		say "     You get down on your hands and knees and crawl slowly to the brown-furred gang leader. She lifts one of her legs up and brings a rabbit-like paw close to your face. As if by second nature, your hand reaches up to stroke and massage her velvety fur. With a rumbly moan, she turns to speak to the peacock and says, 'Damn, you got this little thing well trained,' sounding impressed with your skill. The avian playfully replies, 'They are quite the quick learner.' She wraps both of her feet behind your head and pulls you closer to her fully engorged cock, retorting, 'Let's see just how quick.' Like metal attracted to a magnet, your hands feel drawn towards Clover's large rod. One hand wraps around her shaft and begins to stroke it while the other fondles the hefty orbs that obscure her womanhood. Patting your head, the lapine encourages you to pick up the pace. Receptive to her orders, you pleasure her at a quick but steady pace, and soon, you feel the herm's balls tense up before her veiny dick spurts thick ropes of cum across your face.";
 		say "     You sit down on the ground while globs of her cum drip down your face. As soon as Dmitri hands you a small towel, you feel volition return to your body. As you are busy cleaning off, the avian and the lapine start conversing. 'I assume that you're content with this method of payment?' the cocky male teases with a glint in his eye. The sated herm replies, 'It'll do, but the gang's gonna need more than just this to pay for our services.' Chuckling softly, the avian says, 'That shouldn't be a problem,' while rubbing your right shoulder. Looking up at him, you feel like a marionette puppet, which strangely only seems to excite you further. Your companion leans in close to whisper in your ear, 'These negotiations are going to take a while. Go ahead and leave.' Sensing that he's right, you change back into your clothes, head out the front door, and return to the streets of the high-rise district. After a quick stop at the antique store to pick up your gear, you're ready for whatever happens next.";
 		[CreatureSexAftermath "Player" receives "OralCock" from Clover;] [TODO: make placeholder infection for Clover sex/preg?]
+		if OralVirgin of Player is true:
+			now OralVirgin of Player is false;
+			say "     [bold type]You have lost your oral virginity to Clover![roman type][line break]";
+			now FirstOralPartner of Player is "Clover";
+			now SexuallyExperienced of Player is true;
+		increase OralCockTaken of Player by 1;
 		now Peacocked is 5;
-		now Resolution of Captivating Plumage is 5;
 	else if Peacocked is 5:
 		project Figure of Dmitri_clothed_icon;
 		say "     As you walk through the increasingly familiar streets of the high-rise district, a strong urge compels you to check on the peacock's progress. Entering the store, you notice Dmitri looking over a map of the high-rise district. Wooden chess pieces dot the board to mark ideal surveillance spots, and hasty scribbles mark those points which have been removed or omitted. When you greet the birdlike man, he turns to look at you and says, 'We're going back to the March Hares['] hideout again. Their assistance is going to be vital for the plan, but you don't need to think about that right now. Just relax...' Beginning to sing a calming tune, the enchanting male picks up a black strip of cloth. The avian begins to spread his tail feathers wide to completely envelop your view. Enthralled by the colorful eyespots on his feathers, you don't object when the improvised blindfold is wrapped around your head. You shudder as Dmitri removes any clothing or gear from your body, his delicate touch as soothing as it is arousing.";
@@ -149,7 +140,6 @@ to say ResolveEvent Captivating Plumage:
 		CreatureSexAftermath "Player" receives "OralPussy" from "Gunbunny";
 		CreatureSexAftermath "Player" receives "OralCock" from "German Shepherd Male";
 		now Peacocked is 6;
-		now Resolution of Captivating Plumage is 6;
 	else if Peacocked is 6:
 		project Figure of Dmitri_clothed_icon;
 		say "     Traveling through the high-rise district, you come across the familiar street that the antique store is located on. Curious to see if the avian has made any progress in his plan to acquire the rare vase, you knock on the back door three times, adding a small flourish to the last knock. You hear the clacking of talons against the floor grow closer with great speed. Opening the door with a cheerful attitude, the peacock ushers you in, uttering spiritedly, 'You came at a perfect time... please take a seat.' Guiding you towards a position by the desk where he has been planning the vase's acquisition, the brightly feathered shopkeep begins to explain the first step of his plan. 'The vase is located in a secure room that has a sturdy lock, and the only way to get inside is to have a key. Luckily, I was friends with the locksmith, so I know where the key is located. It's good to have you around in case there are any complications.' The two of you begin to head outside the shop to the locksmith's place.";
@@ -160,9 +150,9 @@ to say ResolveEvent Captivating Plumage:
 		WaitLineBreak;
 		say "     While the two of you stroll down the cracked pavement roads of the high-rise district, Dmitri regales you with a story of how he had to help his locksmith friend unlock an alderman out of a complicated pair of antique handcuffs after some kinky roleplay. Suddenly, a female husky jumps out from behind a ruined car and says, 'Oooh, pretty bird! My alpha's gonna love you!' She then pounces on your feathered companion. Not the most athletic individual, your slender companion has trouble escaping the clutches of the lusty bitch. To rescue your avian partner, you deliver a swift strike that sends the canine lady to the ground. The defeated slut begins to run away with her tail between her legs.";
 		say "     Taking a second to catch his breath, the recuperating fowl says in between short breaths, 'Thanks, I was never the most physically adept. It's part of the reason why I wanted someone as capable as you to have my back.' Appreciatively, the peacock states, 'You've done an awesome job helping me out.'";
+		WaitLineBreak;
 		say "     The peacock's chuckles end when he sees a female yuppie mink waiting outside the rear entrance of the antique store. Tapping one paw-like foot impatiently, the huffy murine aristocrat arrogantly proclaims, 'Are you the owner of this shop? I've been waiting here for ten minutes!' Courteously, the avian replies, 'Please excuse my absence, madame. Unfortunately, with the way the world is, asset acquisition has to be done in person.' Motioning for both of you to follow him into his store, he then states, 'Please do come in and take a seat, my fair lady. Can I offer you a drink? Perhaps a nice port?' Sitting down on a cushioned chair, the rodent yuppie's sneer softens as she states, 'That would be nice. Keep this up and perhaps I won't ruin your reputation.' Ignoring this threat, Dmitri begins to pour the glass of wine and unfurl his tail feathers. Knowing he's going to give the snooty mustelid some comeuppance, you give the bird a smirk and a knowing wink as you leave.";
 		now Peacocked is 7;
-		now Resolution of Captivating Plumage is 7;
 	else if Peacocked is 7:
 		project Figure of Dmitri_clothed_icon;
 		say "     Walking down the streets in the high-rise district, you suddenly get the sense that Dmitri needs you. Heading to the back entrance of the store, you notice two lagomorph males with a smattering of equine features standing guard by the doorway. Sharing a glance at you, the two watchmen give a knowing nod and open the door for you. Heading inside the shop, you see Dmitri and Clover at a table looking over the map of the district, discussing strategy and proper placement of the gang members. Some of the other March Hares are spread out throughout the shop. A couple of them are looking over the weapons, while others are busy reading some vintage novels. One of them, a burly equine-lagomorph male, is seated on a plush leather chair and getting his dick sucked. Looking at the one giving him fellatio, you realize that it's the huffy mink girl, only now she's completely naked. Noticing your arrival, the peacock and the gang leader motion you to come closer.";
@@ -176,13 +166,19 @@ to say ResolveEvent Captivating Plumage:
 		say "     Once the two of you reach the back entrance, the two lagomorph guardians perk up and hold the door open for you. You see Clover lounging on a fainting couch with the mink massaging her feet. With a sly grin, the gang leader asks, 'So I take it you got what you were looking for?' After placing the vase in a glass case, Dmitri responds, 'With the exception of a leopardman taking a catnap in the storage area, our trip was hassle free. I must compliment your gang's skill at keeping our route clear. Hopefully this is the beginning of a beautiful partnership.' With a soft chuckle, the herm remarks, 'I've got a couple of ideas in mind for the future. I could also send some people who might be interested in your services if you convince the masseuse here to join the Hares.' With an avaricious look in his eyes, the colorful anthro bird fans out his tailfeathers and whispers into the formerly haughty mustelid's ears. While your partner murmurs words into the yuppie's ear, her eyes glaze over and she begins to pant in an aroused manner. A few seconds after the avian finishes, the hypnotized girl begins to beg and plead for the gang leader to let her join. Clover gives the two of you a wink as she takes her new initiate's hand, then heads for the door with the Hares in tow.";
 		WaitLineBreak;
 		say "     After all the rowdy rabbits have left the store, Dmitri takes a seat on a leather chair and exhales loudly, as if a massive weight has just been taken off his chest. With a contented sigh, the peacock says, 'It's finally over, all that time and effort finally paid off.' You take a seat close by, feeling much more relaxed now that your little heist is out of the way. The avian looks deeply into your eyes and says in a tone that echoes through your nerves, 'You did a wonderful job. Feel free to come by anytime, and I'll make sure you feel good.' Somehow, a part of your mind feels like you've gained back a small modicum of control. You are now able to visit Argos Antiques whenever you want.";
-		AttemptToWait;
-		move player to Argos's Antiques;
 		AddNavPoint Argos's Antiques;
+		WaitLineBreak;
+		move player to Argos's Antiques;
 		now battleground is "void";
 		now peacocked is 8;
-		now Resolution of Captivating Plumage is 8;
 		now Captivating Plumage is resolved;
+	now Resolution of Captivating Plumage is Peacocked;
+
+a postimport rule: [this adds the newly named navpoint]
+	if Peacocked > 7 and Peacocked < 98: [values set this way to future proof it after changing teh room name in code. Please use values above 98 for content that SHOULDNT link this area.]
+		AddNavPoint Argos's Antiques silently;
+	move Dmitri to Argos's Antiques;
+	now OralVirgin of Dmitri is false;
 
 Table of GameRoomIDs (continued)
 Object	Name
@@ -190,11 +186,8 @@ Argos's Antiques	"Argos Antiques"
 Argos's Antiques	"Argos's Antiques"
 
 Argos's Antiques is a room. It is fasttravel. It is private. It is sleepsafe.
-Description of Argos's Antiques is "[argosantdesc]".
-the scent of Argos's Antiques is "The antique store smells of aged wood and soft fragrances.".
-
-to say argosantdesc:
-	say "     The peacock's antique store is in surprisingly well-kept condition. With the exception of the barricaded windows and front door, everything else seems to be neatly organized. A suit of medieval steel armor, colored black and wielding a halberd, guards the entrance. Display cases show a veritable cornucopia of antique and valuable items. On a weapon rack hanging on the wall are various arms from the nineteenth century like repeaters, pistols, nunchucks, and sabers. Dmitri stands close by, eyeing your form with a fond look in his eye.";
+Description of Argos's Antiques is "     The peacock's antique store is in surprisingly well-kept condition. With the exception of the barricaded windows and front door, everything else seems to be neatly organized. A suit of medieval steel armor, colored black and wielding a halberd, guards the entrance. Display cases show a veritable cornucopia of antique and valuable items. On a weapon rack hanging on the wall are various arms from the nineteenth century like repeaters, pistols, nunchucks, and sabers. Dmitri stands close by, eyeing your form with a fond look in his eye.[line break]".
+the scent of Argos's Antiques is "     The antique store smells of aged wood and soft fragrances.".
 
 Table of GameCharacterIDs (continued)
 object	name
@@ -236,102 +229,88 @@ SexuallyExperienced of Dmitri is true.
 TwistedCapacity of Dmitri is false. [Twisted Characters can take any penetration, no matter the size]
 Sterile of Dmitri is false. [steriles can't knock people up]
 MainInfection of Dmitri is "Peacock".
-Description of Dmitri is "[dmitridesc]".
-Conversation of Dmitri is { "Fanout!" }.
-the scent of Dmitri is "The avian has a rather enticing scent of jasmine and sage that makes him seem all the more entrancing.".
-
-to say dmitridesc:
-	say "[dmitridebug]";
-
-to say dmitridebug:
-	if debugactive is 1:
-		say "DEBUG (Dmitri) -> peacocked: <- DEBUG[line break]";
-	project Figure of Dmitri_clothed_icon;
-	say "     The slender anthro peacock stands with graceful poise. With the avian wearing nothing but a ripped pair of white shorts, you have a great view of his lithe figure. Blue and green colored feathers cover his slender frame, while piercing green eyes gaze at your form. His nude body provides a great view of his curved avian cock, which can reach nine inches when fully erect.";
+Description of Dmitri is "     The slender anthro peacock stands with graceful poise. With the avian wearing nothing but a ripped pair of white shorts, you have a great view of his lithe figure. Blue and green colored feathers cover his slender frame, while piercing green eyes gaze at your form. His nude body provides a great view of his curved avian cock, which can reach nine inches when fully erect.[line break]".
+[Conversation of Dmitri is { "Fanout!" }.]
+fuckscene of Dmitri is "[DmitriSexMenu]".
+Icon of Dmitri is Figure of Dmitri_clothed_icon.
+the scent of Dmitri is "     The avian has a rather enticing scent of jasmine and sage that makes him seem all the more entrancing.".
 
 Instead of conversing the Dmitri:
 	project Figure of Dmitri_clothed_icon;
-	say "     [one of]'I wish there were less ferals in this neighborhood. It discourages potential customers,' he grumbles angrily.[or]'I wonder how Bain is doing right now. The batty guy's probably cooped up in his mansion,' he muses while staring at the suit of armor.[or]'Shame there isn't more wine anywhere in the city,' he says, staring at an empty wine glass.[or]'I hope this all gets sorted out soon,' he says. 'Business has been too slow.'[or]'Collecting these antiques has helped me keep my sanity in these trying times.'[or]'So did you see the new museum exhibit that opened this summer?' he asks. Not even waiting for you to respond, he elaborates upon his view of the pieces at the exhibit and their financial worth.[at random]";
+	say "     '[one of]I wish there were less ferals in this neighborhood. It discourages potential customers,' he grumbles angrily.[or]I wonder how Bain is doing right now. The batty guy's probably cooped up in his mansion,' he muses while staring at the suit of armor.[or]Shame there isn't more wine anywhere in the city,' he says, staring at an empty wine glass.[or]I hope this all gets sorted out soon,' he says. 'Business has been too slow.'[or]Collecting these antiques has helped me keep my sanity in these trying times.'[or]So did you see the new museum exhibit that opened this summer?' he asks. Not even waiting for you to respond, he elaborates upon his view of the pieces at the exhibit and their financial worth.[at random]";
 
-Instead of fucking the Dmitri:
-	if (lastfuck of Dmitri - turns < 6):
+to say DmitriSexMenu:
+	if lastfuck of Dmitri - turns < 6:
+		project Figure of Dmitri_clothed_icon;
 		say "     Chuckling softly, the peacock states, 'I know you're enthusiastic to have some more fun with me, but I'd rather you wait a little while so that we can savor the experience.'";
 	else: [ready for sex]
 		project Figure of Dmitri_naked_icon;
 		say "     As you walk up to Dmitri, he smiles and asks, 'I wonder what you are thinking about...'";
-		WaitLineBreak;
-		say "[DmitriSexMenu]";
-
-to say DmitriSexMenu:
-	now sextablerun is 0;
-	blank out the whole of table of fucking options;
-	[]
-	if Player is male: [only males and herms can get a blowjob]
+		now sextablerun is 0;
+		blank out the whole of table of fucking options;
+		[]
+		if Player is male: [only males and herms can get a blowjob]
+			choose a blank row in table of fucking options;
+			now title entry is "Get a blowjob";
+			now sortorder entry is 1;
+			now description entry is "Let the amorous bird suck you off";
+			[
+			choose a blank row in table of fucking options;
+			now title entry is "Fuck the captivating bird";
+			now sortorder entry is 3;
+			now description entry is "Take Dmitri's ass for a ride";
+			]
+		[]
 		choose a blank row in table of fucking options;
-		now title entry is "Get a blowjob";
-		now sortorder entry is 1;
-		now description entry is "Let the amorous bird suck you off";
-	[]
-	choose a blank row in table of fucking options;
-	now title entry is "Suck Dmitri off"; [anyone can blow him]
-	now sortorder entry is 2;
-	now description entry is "Wrap your lips around the peacock's avian rod";
-	[]
-[
-	if Player is male:
+		now title entry is "Suck Dmitri off"; [anyone can blow him]
+		now sortorder entry is 2;
+		now description entry is "Wrap your lips around the peacock's avian rod";
+		[]
+		if Player is female: [only females and herms can take him in the pussy]
+			choose a blank row in table of fucking options;
+			now title entry is "Take Dmitri's shaft in your pussy";
+			now sortorder entry is 4;
+			now description entry is "Offer sex to the entrancing anthro bird";
+		[]
 		choose a blank row in table of fucking options;
-		now title entry is "Fuck the captivating bird";
-		now sortorder entry is 3;
-		now description entry is "Take Dmitri's ass for a ride";
-]
-[ The above content is commented out until written to prevent frustrating placeholder text. ]
-	[]
-	if Player is female: [only females and herms can take him in the pussy]
-		choose a blank row in table of fucking options;
-		now title entry is "Take Dmitri's shaft in your pussy";
-		now sortorder entry is 4;
-		now description entry is "Offer sex to the entrancing anthro bird";
-	[]
-	choose a blank row in table of fucking options;
-	now title entry is "Take Dmitri's shaft in your ass";
-	now sortorder entry is 5;
-	now description entry is "Offer your butt to the lusty peacock";
-	[]
-	sort the table of fucking options in sortorder order;
-	repeat with y running from 1 to number of filled rows in table of fucking options:
-		choose row y from the table of fucking options;
-		say "[link][y] - [title entry][as][y][end link][line break]";
-	say "[link]0 - Nevermind[as]0[end link][line break]";
-	while sextablerun is 0:
-		say "Pick the corresponding number> [run paragraph on]";
-		get a number;
-		if calcnumber > 0 and calcnumber <= the number of filled rows in table of fucking options:
-			now current menu selection is calcnumber;
-			choose row calcnumber in table of fucking options;
-			say "[title entry]: [description entry]?";
-			if Player consents:
+		now title entry is "Take Dmitri's shaft in your ass";
+		now sortorder entry is 5;
+		now description entry is "Offer your butt to the lusty peacock";
+		[]
+		sort the table of fucking options in sortorder order;
+		repeat with y running from 1 to number of filled rows in table of fucking options:
+			choose row y from the table of fucking options;
+			say "[link][y] - [title entry][as][y][end link][line break]";
+		say "[link]0 - Nevermind[as]0[end link][line break]";
+		while sextablerun is 0:
+			say "Pick the corresponding number> [run paragraph on]";
+			get a number;
+			if calcnumber > 0 and calcnumber <= the number of filled rows in table of fucking options:
+				now current menu selection is calcnumber;
+				choose row calcnumber in table of fucking options;
+				say "[title entry]: [description entry]?";
+				if Player consents:
+					LineBreak;
+					now sextablerun is 1;
+					if title entry is:
+						-- "Get a blowjob":
+							say "[DmitriSex1]";
+						-- "Suck Dmitri off":
+							say "[DmitriSex2]";
+						[-- "Fuck the captivating bird":
+							say "[DmitriSex3]";]
+						-- "Take Dmitri's shaft in your pussy":
+							say "[DmitriSex4]";
+						-- "Take Dmitri's shaft in your ass":
+							say "[DmitriSex5]";
+			else if calcnumber is 0:
 				LineBreak;
-				let nam be title entry;
 				now sextablerun is 1;
-				if (nam is "Get a blowjob"):
-					say "[DmitriSex1]";
-				else if (nam is "Suck Dmitri off"):
-					say "[DmitriSex2]";
-				else if (nam is "Fuck the captivating bird"):
-					say "[DmitriSex3]";
-				else if (nam is "Take Dmitri's shaft in your pussy"):
-					say "[DmitriSex4]";
-				else if (nam is "Take Dmitri's shaft in your ass"):
-					say "[DmitriSex5]";
-				wait for any key;
-		else if calcnumber is 0:
-			LineBreak;
-			now sextablerun is 1;
-			say "     You step back from the anthro bird, shaking your head slightly as he gives a questioning look.";
-			wait for any key;
-		else:
-			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
-	clear the screen and hyperlink list;
+				say "     You step back from the anthro bird, shaking your head slightly as he gives a questioning look.";
+			else:
+				say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options], or 0 to exit.";
+		wait for any key;
+		clear the screen and hyperlink list;
 
 to say DmitriSex1: [oral on the player]
 	say "     With a randy look in your eye, you ask Dmitri in a flirtatious manner if he could [']examine your spear[']. The peacock pauses for a second before getting on his knees, temptingly saying, 'That all depends on the quality of the item.' He begins to remove any clothing or equipment obscuring your crotch until your semi-hard cock is exposed to him, pulsing with arousal. The avian traces along the underside of your shaft with a taloned hand. 'Quite an impressive specimen, but further oral examination is necessary to determine its worth.' The colorful anthro bird opens his beak and begins to swirl his tongue around the tip of your cock. He moans softly and utters quietly, 'Delicious.' One of his hands moves to gently cup your balls, while the other begins to stroke the shaft.";
@@ -349,8 +328,8 @@ to say DmitriSex2: [oral on Dmitri]
 	say "     Having caught your breath, you swiftly wrap your mouth around the hunk's awaiting dick. Redoubling your efforts, you go hard and deep on the shopkeep's shaft, saliva and precum leaking out the sides of your lips and trickling down your torso. Meanwhile, your tongue frantically massages both the top and underside of his penis. Soon you feel both of Dmitri's hands placed on the back of your head. Feeling well-attuned to the girth of the domineering fowl, you can tell that he is going to spill his seed soon. With a singsong-like cry, the stud pushes your mouth as far down on his cock as you can manage, then vigorously cums. His semen flows down your throat while a sense of euphoria courses through your system, leaving you lost in the fog of pleasure for a short while. When you become fully conscious again, you see the peacock cradling you in his arms, praising you for a job well done.";
 	NPCSexAftermath Player receives "OralCock" from Dmitri;
 
-to say DmitriSex3: [non-virgin Dmitri fucked]
-	say "     (<WIP: Please be patient while further content for this character is being prepared. There is more to come soon>";
+[to say DmitriSex3: [non-virgin Dmitri fucked]
+	say "     (<WIP: Please be patient while further content for this character is being prepared. There is more to come soon>";]
 
 to say DmitriSex4: [Dmitri fucks player pussy]
 	say "     A curious idea pops into your head of wanting to feel the shopowner's cock in your pussy. Given how many times Dmitri has conditioned your mind, a minuscule part of you wonders whether this thought was even inspired by your own volition. Regardless, the desire to be filled outweighs any other option. With a needy look in your eyes, you approach the peacock and beg for him to press his cock in you. Raising an eyebrow, then uttering an amused laugh, the captivating gentleman commands, 'Strip off anything covering your needy cunt, then lie down with your torso on the arm of the divan.' You begin to seductively remove any clothing or equipment off of your body, putting on a quasi-burlesque show for your appreciative host. Emboldened by your display, the slender stud begins to sing a lyricless tune which helps to increase the sway of your hips. Once completely nude, you sit on the comfy divan and spread your cheeks wide, offering a tempting target for the trim anthro bird.";

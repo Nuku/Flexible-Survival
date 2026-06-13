@@ -4,10 +4,11 @@ Version 1 of Help Book by Prometheus begins here.
 [ 0 - Present                 ]
 [ 1 - Removed                 ]
 
-an everyturn rule:
+a postimport rule: [bugfixing rules for players that import savegames]
 	if HP of Help Book is 0:
-		if Help Book is not in Grey Abbey Library:
-			move Help Book to Grey Abbey Library;
+		move Help Book to Grey Abbey Library;
+	else:
+		now Help Book is nowhere;
 
 Section 1 - NPC
 
@@ -53,7 +54,8 @@ TwistedCapacity of Help Book is false. [Twisted Characters can take any penetrat
 Sterile of Help Book is true. [steriles can't knock people up]
 MainInfection of Help Book is "".
 Description of Help Book is "[HelpBookDesc]".
-Conversation of Help Book is { "Words, words, words." }.
+[Conversation of Help Book is { "Words, words, words." }.]
+fuckscene of Help Book is "     You decide that perhaps that isn't a good idea. You wouldn't want a paper cut. Letters shift around on the page until it says, 'Horny mutants and their deviant ways'. You are sure that the book is mocking you.[line break]".
 The scent of Help Book is "     The book smells of knowledge and a desire to help. Somehow.".
 
 to say HelpBookDesc:
@@ -62,17 +64,18 @@ to say HelpBookDesc:
 	say "     The book looks like a normal book with the title 'Prometheus['] Guide to Surviving the Apocalypse'. It seems to emit an aura of comfort as though it wants to help those in need and you get the impression that it doesn't much care for the rules of this reality.";
 
 HelpBookLookup is an action applying to nothing.
-
 understand "HelpBookLookup" as HelpBookLookup.
 
 carry out HelpBookLookup:
 	say "     You pull out a copy of 'Prometheus['] Guide to Surviving the Apocalypse'. It seems to emit an aura of comfort as though it wants to help those in need and you get the impression that it doesn't much care for the rules of this reality.";
+	LineBreak;
 	say "[HelpBookTalkMenu]";
 
 Section 2 - Talking with Help Book
 
 Instead of conversing the Help Book:
 	say "     You open the book and decide what you wish to know about.";
+	LineBreak;
 	say "[HelpBookTalkMenu]";
 
 to say HelpBookTalkMenu:
@@ -120,30 +123,31 @@ to say HelpBookTalkMenu:
 			say "[title entry]: [description entry]?";
 			if Player consents:
 				LineBreak;
-				let nam be title entry;
 				now sextablerun is 1;
-				if (nam is "Basic Needs"):
-					say "[HelpBookTalk1]";
-				else if (nam is "Stats"):
-					say "[HelpBookTalk2]";
-				else if (nam is "Combat"):
-					say "[HelpBookTalk3]";
-				else if (nam is "Commands"):
-					say "[HelpBookTalk4]";
-				else if (nam is "Remove Book"):
-					say "[HelpBookTalk5]";
-				WaitLineBreak;
+				if title entry is:
+					-- "Basic Needs":
+						say "[HelpBookTalk1]";
+					-- "Stats":
+						say "[HelpBookTalk2]";
+					-- "Combat":
+						say "[HelpBookTalk3]";
+					-- "Commands":
+						say "[HelpBookTalk4]";
+					-- "Remove Book":
+						say "[HelpBookTalk5]";
+				wait for any key;
+				say "[HelpBookTalkMenu]";
 		else if calcnumber is 0:
 			LineBreak;
 			now sextablerun is 1;
 			say "     You close the book again, ready to get on with your adventure.";
-			WaitLineBreak;
+			wait for any key;
 		else:
-			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options], or 0 to exit.";
 	clear the screen and hyperlink list;
 
 to say HelpBookTalk1: [Needs]
-	say "     For you to survive you will need to find food and water to stave off rising hunger and thirst. This can be found by [bold type]scavenging[roman type] around the city. Hunger can be sated using [bold type]food[roman type] or [bold type]chips[roman type]. Thirst can be sated by [bold type]water bottles[roman type], [bold type]soda[roman type], or [bold type]dirty water[roman type]. While dirty water will reduce your thirst, it may also transform you. Food and water may occasionally also be found while [bold type]exploring[roman type], which is the main way of discovering areas of the city. Once you are more familiar with the city, you may be able to [bold type]navigate[roman type] back to places you are familiar with. Over time, your character will get tired which will eventually lower your stats until you sleep. To counteract this, you need to [bold type]rest[roman type], usually on the cot that you can find [if Player is booked or Player is bunkered]here[else]in the bunker[end if]. While the library is safe, if you sleep out in the city you may be attacked by creatures, so be cautious and try to find a safe area first unless you are willing to risk your rest being interrupted. You may also notice your [bold type]libido[roman type] rising as you explore the city. Should you not sate your lusts with either a partner or a smutty magazine, you may find yourself submitting to a wandering beast. Lastly, the pressure and trauma of life in the city may cause you to lose touch with your [bold type]humanity[roman type], also known as sanity. This deterioration can be easily reversed by writing in your [bold type]journal[roman type], something that you should be carrying with you at all times.";
+	say "     For you to survive you will need to find food and water to stave off rising hunger and thirst. This can be found by [bold type]scavenging[roman type] around the city. Hunger can be sated using [bold type]food[roman type] or [bold type]chips[roman type]. Thirst can be sated by [bold type]water bottles[roman type], [bold type]soda[roman type], or [bold type]dirty water[roman type]. While dirty water will reduce your thirst, it may also transform you. Food and water may occasionally also be found while [bold type]exploring[roman type], which is the main way of discovering areas of the city. Once you are more familiar with the city, you may be able to [bold type]navigate[roman type] back to places you are familiar with. Over time, your character will get tired which will eventually lower your stats until you sleep. To counteract this, you need to [bold type]rest[roman type], usually on the cot that you can find [if Player is collected]here[else]in the bunker[end if]. While the library is safe, if you sleep out in the city you may be attacked by creatures, so be cautious and try to find a safe area first unless you are willing to risk your rest being interrupted. You may also notice your [bold type]libido[roman type] rising as you explore the city. Should you not sate your lusts with either a partner or a smutty magazine, you may find yourself submitting to a wandering beast. Lastly, the pressure and trauma of life in the city may cause you to lose touch with your [bold type]humanity[roman type], also known as sanity. This deterioration can be easily reversed by writing in your [bold type]journal[roman type], something that you should be carrying with you at all times.";
 
 to say HelpBookTalk2: [Stats]
 	say "     Your main stats are [bold type]Strength, Dexterity, Stamina, Charisma, Intelligence, and Perception[roman type]. Simply put, [bold type]Strength[roman type] increases melee damage dealt as well as carry capacity, [bold type]Dexterity[roman type] increases your chance to hit and chance to dodge, [bold type]Stamina[roman type] increases your health, [bold type]Charisma[roman type] is used for social interactions with others, [bold type]Intelligence[roman type] increases health recovered by medkits, chance of vial collection, and success chance of fleeing from combat, and [bold type]Perception[roman type] increases your success while scavenging, hunting, and damage with ranged weapons. Success or failure in the city may often rely on these stats. As you defeat enemies you will gain [bold type]experience[roman type] that is used to level up. Every two levels will give you a chance to boost a stat, and every five levels will give a you a chance to choose a feat.";
@@ -158,10 +162,5 @@ to say HelpBookTalk5: [Remove Book]
 	say "     As you decide that you don't need the book anymore, it crumbles to dust in your hands before blowing away on a nonexistent wind. You get the impression that it has gone on to help the next person that needs it and won't be back again.";
 	now Help Book is nowhere;
 	now HP of Help Book is 1;
-
-Section 3 - Sex
-
-Instead of fucking the Help Book:
-	say "     You decide that perhaps that isn't a good idea. You wouldn't want a paper cut. Letters shift around on the page until it says, 'Horny mutants and their deviant ways'. You are sure that the book is mocking you.";
 
 Help Book ends here.

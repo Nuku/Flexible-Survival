@@ -6,23 +6,23 @@ Version 2 of Bald Eagle by Stripes begins here.
 
 "Adds a Bald Eagle creature to Flexible Survival's Wandering Monsters table"
 
-
 Section 1 - Creature Responses
 
-eagledefeatnum is a number that varies.
-noeaglesex is a number that varies.
+[eagledefeatnum is a number that varies.]
+[noeaglesex is a number that varies.]
 
 to say losetoeagle:
-	now noeaglesex is 0;
-	let T be 1;
-	if Player is submissive, increase T by 1;
-	if Player is mpreg_ok, increase T by 1;
-	if anallevel is 3, increase T by 1;
-	if anallevel is 1, now T is 0;
+	[now noeaglesex is 0;]
+	let T be 0;
+	if anallevel > 1:
+		now T is 1;
+		if Player is submissive, increase T by 1;
+		if "MPreg" is listed in feats of Player, increase T by 1;
+		if anallevel is 3, increase T by 1;
 	say "     Having defeated you, the eagle releases a call of triumph and pushes you down. His cock, poking from his soft feathers, is dripping with pre and eager for use on his captured prey.";
 	if Player is female and a random chance of 2 in 3 succeeds:
 		if Player is impreg_able and a random chance of 2 in 3 succeeds:
-			say "     He roughly turns you over onto all fours and climbs atop you. As he grinds his slick cock against your pussy's wet lips, you can't help but moan a little, your needy cunt suddenly feeling empty. He nips at your shoulder and chuckles. 'Mmm... it sounds like someone's in need of a clutch in her,' he says, rubbing a taloned hand across your tummy. Before you can respond, he shifts his position enough to get his penis lined up and drives his foot-long erection into you, drawing another moan from your trembling body.";
+			say "     He roughly turns you over onto all fours and climbs atop you. As he grinds his slick cock against your pussy's wet lips, you can't help but moan a little, your needy cunt suddenly feeling empty. He nips at your shoulder and chuckles. 'Mmm... it sounds like someone's in need of a clutch in her,' he says, rubbing a taloned hand across your tummy. Before you can respond, he shifts his position enough to get his penis lined up and drives his footlong erection into you, drawing another moan from your trembling body.";
 			say "     As he mates you, he continues to nip and nuzzle at your neck and shoulders, reinforcing his dominance over you even as they feel relaxing and pleasurable. Your inner walls quiver and your honeyed juices start to flow as your excitement builds. Your vagina squeezes and pulls at his meaty rod and, after several minutes of steady pounding, is rewarded with the hot rush of the eagle's semen. As he climaxes, he drives hard into you repeatedly, blasting spurt after spurt of thick semen into you. Once spent, he rubs your belly meaningfully once again before taking flight, leaving you panting and leaking his tainted seed.";
 		else:
 			say "     He roughly turns you over onto all fours and climbs atop you, sinking his slick cock into your pussy. You moan and quickly grow excited despite yourself as his soft feathers slide over your body while his hard rod drives into you. Your inner walls quiver and your honeyed juices start to flow as your excitement builds. He nips at your shoulder and neck with his pointed beak while mating you. After a few minutes of steady pounding, he drives hard into you repeatedly, blasting spurt after spurt of thick semen into you. Even as you're cumming, he pushes you off his spent cock and onto the ground before soaring away.";
@@ -36,35 +36,30 @@ to say losetoeagle:
 
 to say beattheeagle:
 	say "     The eagle seems to recognize that battling you is a lost cause, and his head whips to the side, searching for his best way out of here.";
-	say "     [bold type]If you want to do something, now's your chance...[roman type][line break]";
+	say "[line break]     [bold type]If you want to do something, now's your chance...[roman type][line break]";
 	let Eagle_Choices be a list of text;
-	if Player is Male or Player is Herm:
+	if Player is Male:
 		add "Jerk off and cum all over him." to Eagle_Choices;
 		add "Fuck his ass." to Eagle_Choices;
 		add "Ride his cock anally." to Eagle_Choices;
-	if Player is purefemale:
+	else if Player is female:
 		add "Ride his cock vaginally." to Eagle_Choices;
 	add "Milk the eagle for some cum." to Eagle_Choices;
 	add "Just let him go. Driving him off is enough." to Eagle_Choices;
 	let Eagle_Choice be what the player chooses from Eagle_Choices;
+	LineBreak;
 	if Eagle_Choice is:
 		-- "Jerk off and cum all over him.":
-			LineBreak;
 			say "[CumOn_BaldEagle]";
 		-- "Fuck his ass.":
-			LineBreak;
 			say "[AssFuck_BaldEagle]";
 		-- "Ride his cock anally.":
-			LineBreak;
 			say "[AssRide_BaldEagle]";
 		-- "Ride his cock vaginally.":
-			LineBreak;
 			say "[PussyRide_BaldEagle]";
 		-- "Milk the eagle for some cum.":
-			LineBreak;
 			say "[Milking_BaldEagle]";
-		-- "Just let him go. Driving him off is enough..":
-			LineBreak;
+		-- "Just let him go. Driving him off is enough.":
 			say "     You make no effort to stop its escape, instead waving your arms at it to shoo the annoying creature away. Defeated, the eagle shrieks angrily and soars off to nurse his wounds.";
 
 to say CumOn_BaldEagle:
@@ -101,7 +96,7 @@ to say AssFuck_BaldEagle:
 	say "     You launch yourself at the bald eagle, your weight a sudden, crushing force that drives him to the ground before he can escape. Brown and white feathers erupt around you in a chaotic burst as his powerful wings splay out, unable to prevent the impact. He lets out a furious screech, a sound that vibrates through the earth, but your grip is firm, pinning him to the ground. Ignoring his continued struggles - a desperate, powerful thrashing- you run a hand over his sleek chest, feeling the hard ridge of his ribs beneath the soft, downy feathers. His heart hammers a frantic rhythm against your palm, a potent mixture of fear and burgeoning arousal, a thrilling combination that sends a jolt of anticipation through you.";
 	say "     You lean down, your voice a low growl in his ear, claiming him with the simple, potent statement that his ass is now yours. His intelligent eyes flash with defiance, a fleeting moment of resistance, before settling into a defeated squawk, a sound that signals his acceptance of your dominance. With a decisive movement, you spread your defeated opponent's legs, revealing the smooth, pale skin of his crotch above his neatly kept tail feathers. The delicate pink of his cloaca, a tight, alluring rosebud, is nestled between the dark plumage. His musky scent fills the air, a heady blend of wildness and vulnerability. You spit onto the opening, a generous amount of saliva, and then rub it in with your finger, preparing the way for your invasion.";
 	WaitLineBreak;
-	say "     You align your [Cock of Player] shaft, your dickhead pressing against the sensitive entrance, and begin your invasion with a slow, deliberate push. A sharp gasp escapes the anthro bird's beak, a stifled sound that is quickly swallowed by the surrounding environment. His body, however, quickly relaxes into the rhythm you establish, the initial resistance melting away under the inexorable pressure of your advance. His powerful thighs tense, his sharp talons digging into the ground, a silent testament to his submission. You feel the heat of his body, the incredible strength of his anal muscles clenching around you, a powerful, gripping embrace that is both exhilarating and intense. With each thrust, his form shudders, a low moan vibrating in his chest – a sound that is both protest and a grudging acceptance of your dominance. His own cock, previously limp with defeat, soon throbs against his feathered belly.";
+	say "     You align your [Cock of Player] shaft, your dickhead pressing against the sensitive entrance, and begin your invasion with a slow, deliberate push. A sharp gasp escapes the anthro bird's beak, a stifled sound that is quickly swallowed by the surrounding environment. His body, however, quickly relaxes into the rhythm you establish, the initial resistance melting away under the inexorable pressure of your advance. His powerful thighs tense, his sharp talons digging into the ground, a silent testament to his submission. You feel the heat of his body, the incredible strength of his anal muscles clenching around you, a powerful, gripping embrace that is both exhilarating and intense. With each thrust, his form shudders, a low moan vibrating in his chest - a sound that is both protest and a grudging acceptance of your dominance. His own cock, previously limp with defeat, soon throbs against his feathered belly.";
 	say "     The intensity of your coupling builds, a slow burn that ignites into a raging fire. You feel the eagle's body shudder with growing pleasure, his breath hitching in ragged gasps. He arches his back, attempting to meet your rhythm, his hips bucking slightly against your movements, a subtle but undeniable response to the pleasure you are inflicting. You continue, pushing to your own limit, focusing on the intense pleasure of dominating this magnificent beast. The tension in his body is palpable, his entire form a coiled spring of suppressed energy, held captive by your actions. You feel his muscles tightening around you, the anticipation of release building, a wave that threatens to overwhelm both of you.";
 	WaitLineBreak;
 	say "     Pleasure rages inside you, a wave threatening to consume you entirely. You push deeper, feeling the incredible tightness of his asshole gripping you. The pressure is unbearable, so very good around your thrusting cock, filling your whole body with the desire to mark the anthro bird as yours. After a barrage of hip-thrusts that grind your crotch against him in a climactic effort, you then finally ram yourself home one last time. Your cock throbs hard inside him, cum spurting into the bald eagle's gripping asshole - a hot, thick rush that leaves you breathless, a feeling of utter satisfaction and dominance. His body convulses, his entire form trembling under you. Now that you've had your pleasure, you relent and wrap your fingers around his own shaft, throbbing and more than ready for release. It doesn't take much, just a few pumps of your hand up and down along his tapering avian cock, before the bird-man erupts, shooting long streaks of cum all over his chest-plumage.";
@@ -114,14 +109,11 @@ to say Milking_BaldEagle:
 	say "     Ignoring the eagle's continued, muffled protests - a guttural rumbling in his chest - you reach down, your fingers closing around the base of your avian fucktoy's cock. The shaft is surprisingly thick, tapering to a more slender tip. It's already stiff with arousal, throbbing with barely contained energy; the musky scent of his pre-cum is strong, filling your senses. You begin to stroke the transformed man's cock with a practiced hand, a steady, rhythmic motion that quickly intensifies as the creature beneath you tenses and shudders. You can feel the pulsing of his veins beneath your touch, a tangible expression of his powerful vitality, the raw power of his body reacting to your touch. The eagle's involuntary shudders intensify with each stroke, small moans escaping him despite his obvious efforts to remain stoic. You see the anticipation in his eyes, a potent mix of frustration and pleasure that only serves to heighten your own arousal. The heat of his body radiates against your hand; the potent energy is almost palpable. You are completely focused on the task at hand, your movements precise and deliberate, your attention undivided; your goal is clear.";
 	WaitLineBreak;
 	say "     The pressure within the bald eagle's cock builds to a crescendo, and you can feel it throbbing beneath your fingers. You grip the shaft firmly, preparing to collect your prize. The first spurts of cum are thick and viscous, quickly coating your fingers; you can feel the intense heat of his ejaculate, the raw potency of his release. You quickly guide the now-pouring stream into an empty plastic bottle you had prepared in advance, the smooth plastic a cool contrast to the heat of his ejaculate. The steady flow of the eagle's cum is thick and milky, a potent, steady stream that fills the bottle - clear evidence of his virility and your prowess. You continue milking your defeated opponent, your movements steady and expert, your focus unwavering, until the flow finally ceases, leaving you holding a bottle filled with the evidence of your dominance. The silence is punctuated only by the sound of the cum hitting the plastic, a rhythmic sound that echoes the rhythm of your strokes.";
-	say "     Having harvested your prize, you carefully cap the plastic bottle, securing your trophy. You take a moment to survey the scene – the defeated eagle, still pinned beneath your knee, his plumage ruffled and his eyes wide with a mixture of shock and bewilderment. The scent of his cum is still strong, lingering in the air. With a marker, you label the bottle, clearly writing 'bald eagle' on the side. After a final look at the creature, now undeniably satisfied for having been milked, you release your hold completely. He struggles to his feet, clearly bewildered about what he just endured, his expression a mixture of shock and grudging acceptance. With a confused squawk, the bald eagle launches himself into the air and disappears into the sky, leaving you alone with your prize.";
+	say "     Having harvested your prize, you carefully cap the plastic bottle, securing your trophy. You take a moment to survey the scene - the defeated eagle, still pinned beneath your knee, his plumage ruffled and his eyes wide with a mixture of shock and bewilderment. The scent of his cum is still strong, lingering in the air. With a marker, you label the bottle, clearly writing 'bald eagle' on the side. After a final look at the creature, now undeniably satisfied for having been milked, you release your hold completely. He struggles to his feet, clearly bewildered about what he just endured, his expression a mixture of shock and grudging acceptance. With a confused squawk, the bald eagle launches himself into the air and disappears into the sky, leaving you alone with your prize.";
 	CreatureSexAftermath "Bald Eagle" receives "Stroking" from "Player";
 	ItemGain bald eagle cum by 1;
 
 Section 2 - Creature Insertion
-
-to say eagledesc:
-	say "     Your searching is interrupted by a sharp screech from overhead and you spot a large avian swooping down at you, talons grabbing for you. You barely dodge this first swipe as the eagle man screeches in again, this time in anger at missing. [one of]'I'll get you,' he cries[or]'You won't get away,' he cries[or]'You'll be mine, prey,' he snaps[at random] as he swoops around for another pass at you. This humanoid avian has a bald eagle, with dark brown feathers over his body and wings and a bright white over his head and neck. His wings are long and broad, formed into part of his arms. His small, taloned hands are at the midpoint of his wings['] leading edge, able to be used when the not fully extended. His feet end in the bird feet with sharp claws. His beak also looks quite sharp and dangerous.";
 
 Table of CombatPrep (continued)
 name(text)	PrepFunction(text)
@@ -131,7 +123,7 @@ to say PrepCombat_Bald Eagle:
 	choose row MonsterID from Table of Random Critters;
 	if Player is FemalePreferred:
 		now sex entry is "Female";
-	else if "Herm Preferred" is listed in feats of Player:
+	else if Player is HermPreferred:
 		now sex entry is "Both";
 	else:
 		now sex entry is "Male";
@@ -152,6 +144,7 @@ When Play begins:
 	add "Bald Eagle" to infections of MaleList;
 	add "Bald Eagle" to infections of TaperedCockList;
 	add "Bald Eagle" to infections of InternalCockList;
+	add "Bald Eagle" to infections of InternalBallsList;
 	add "Bald Eagle" to infections of BipedalList;
 	add "Bald Eagle" to infections of FlightList;
 	add "Bald Eagle" to infections of TailList;
@@ -163,7 +156,7 @@ When Play begins:
 	now attack entry is "[one of]The bald eagle swoops in and slashes you with his talons![or]The bird man's pointed beak snaps at you, biting into you![or]The eagle grabs you with his wing hands and grinds his cock against you![or]The eagle man digs his claws deep into your shoulder![at random]";
 	now defeated entry is "[beattheeagle]";
 	now victory entry is "[losetoeagle]";
-	now desc entry is "[eagledesc]";
+	now desc entry is "     Your searching is interrupted by a sharp screech from overhead and you spot a large avian swooping down at you, talons grabbing for you. You barely dodge this first swipe as the eagle man screeches again, this time in anger at missing. '[one of]I'll get you,' he cries[or]You won't get away,' he cries[or]You'll be mine, prey,' he snaps[at random] as he swoops around for another pass at you. This humanoid avian is a bald eagle, with dark brown feathers over his body and wings and a bright white over his head and neck. His wings are long and broad, formed into part of his arms. His small, taloned hands are at the midpoint of his wings['] leading edge, able to be used when the wings are not fully extended. His legs end in bird feet with sharp claws. His beak also looks quite sharp and dangerous.[line break]";
 	now face entry is "now that of a bald eagle, having a long, yellow beak and piercing eyes on a snow white head";
 	now body entry is "partially avian, with wings built into your arms and a light, powerful frame. Your hands are small and taloned, placed at the midpoint of the leading edge of your wing, allowing them to be used by partially folding in the wing. Your legs are like a bird's, ending in sharp talons on your four grasping toes";
 	now skin entry is "dark brown feathers across your body, covering your";
@@ -173,7 +166,7 @@ When Play begins:
 	now body change entry is "you gain a light, powerful frame with strong shoulders. These changes spread down your arms, forcing the bones to shift and grow long and thin. As your hand bends and extends out, growing into a wing, a second, smaller hand with taloned claws forms at your wrist. Your legs change into those of a bird with sharp talons on your four grasping toes. You are left panting and sweating after such extensive changes, but get up feeling lighter after you recover";
 	now skin change entry is "ripples flow across your skin in waves. As these waves pass, small points first rise, then small tufts pop up from them. They surge and grow with each passing ripple, extending out to form a downy coat of dark brown feathers";
 	now ass change entry is "you gain a short tail of feathers"; [ Ass/Tail TF text, format as "Your ass tingles as [tail change entry]." ]
-	now cock change entry is "becomes slick and smooth, sliding into a slit in your groin when not in use";
+	now cock change entry is "it becomes slick and smooth, sliding into a slit in your groin when not in use";
 	now str entry is 14;
 	now dex entry is 18;
 	now sta entry is 12;
@@ -314,21 +307,28 @@ When Play begins:
 	[Clit Size Adjective is generated by a function and can be used in scenes: very small/small/average/large/very large]
 ]
 
-
+Section 3 - Drop Item
 
 Table of Game Objects (continued)
 name	desc	weight	object
 "eagle feather"	"Exactly what it sounds like."	0	eagle feather
 
-eagle feather is a grab object. eagle feather is infectious. Strain of eagle feather is "Bald Eagle".
-
-Usedesc of eagle feather is "[useeaglefeather]";
+eagle feather is a grab object.
+Usedesc of eagle feather is "[useeaglefeather]".
 
 to say useeaglefeather:
+	setmonster "Bald Eagle";
+	choose row MonsterID from Table of Random Critters;
+	if Player is FemalePreferred:
+		now sex entry is "Female";
+	else if Player is HermPreferred:
+		now sex entry is "Both";
+	else:
+		now sex entry is "Male";
 	say "     After twirling the feather around by the quill, you decide to start brushing is along your face. The soft feel of it brushing against you feels very nice. You continue this for a while until finally noticing that the feather has shrunk away and been absorbed into you.";
+	infect;
 
-
-Section 3 - Endings
+Section 4 - Endings
 
 Table of GameEndings (continued)
 Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)

@@ -8,30 +8,23 @@ Section 1 - Creature Responses
 
 nagawarning is a truth state that varies. nagawarning is usually false.
 
-to say NagaDesc:
-	say "     A creature consisting of human and snake blended together in an intimidating mixture slithers into sight ahead of you. It is a naga - a male one, judging from what you see as he raises his human-like upper body to have a good look at you in turn. He has [one of]brown and black[or]bright-red and yellow[or]gray and tan[at random] scales, fine and soft looking. Two muscular arms are his only limbs, if one discounts the great tail that makes up most of the male naga's long body. Clenched in his right hand is a pipe, a crude, but likely effective, makeshift weapon. Of course, he also has great jaws that likely contain sharp, possibly venomous, fangs. His human torso is well-muscled, sleek, and lacking any blemish. The naga's head and face are entirely that of a huge snake, staring unblinkingly and tasting the air with a flickering forked tongue. The moment of mutual examination ends as the naga hisses. 'SSsssubmit - or don't... it will sssatisfy me either way, prey.' With that, he rushes towards you, sliding over the ground quickly with sinuous twists of his snake-body.";
-
 to say LoseToNaga:
-	choose row MonsterID from the Table of Random Critters;
-	let xx be vorelevel * vorelevel;
 	if Player is purehuman and nagawarning is false:
 		say "     Your opponent makes a dry hiss, almost as if he was laughing, as he moves over your defeated form, his tongue flicking. Grabbed roughly by the serpentine creature, your arm is twisted behind your back, and you are held tightly from behind. That forked tongue flicks across your cheek as he hisses in your ear. 'You ssshould leave thisss place, human. Your kind is finished in thisss city. Remember it - or you will be punissshed fresh.' He bares his fangs as an added warning before shoving you away, laughing as you stumble off."; [Keeping for thematic value]
 		now nagawarning is true;
-	else if anallevel > 1 and (Cunt Count of Player is 0 or anallevel is 3) and (a random chance of 2 in 5 succeeds or (a random chance of 1 in 4 succeeds and anallevel is 3)):
+	else if anallevel > 1 and (Player is not female or anallevel is 3) and (a random chance of 2 in 5 succeeds or (a random chance of 1 in 4 succeeds and anallevel is 3)):
 		if Player is submissive:
 			say "     With a cruel sounding laugh, the naga grabs you and throws you over a coil, wrenching free your clothes to expose your bottom to him. He coils about you, warm and trapping, and becomes visibly aroused - twice so - with two thick, reptilian shafts sliding free of some internal sheath. Intent on punishment over breeding, he grabs you to pull you back as he thrusts one of his cocks firmly into your back door, lancing you on the thick tool and rocking without concern for your comfort. Being so fully in the power of another being arouses you to no end, making you gasp and moan at being used for his pleasure. The naga laughs at your eagerness to be taken and 'punished' by him as he uses his coils to keep your wriggling form under control while pounding eagerly at your [bodytype of Player] form. Soon, the shaft within you swells, then starts to pulse rhythmically with spurt after spurt of cum, filling your bowels with thick gouts of snake seed. Meanwhile, the snake-creature's second cock sprays his load all over your back, leaving you wet and sticky. Satisfied, the naga rolls you off of himself to the ground and slithers away.";
-			CreatureSexAftermath "Player" receives "AssFuck" from "Naga";
 		else:
 			say "     With a cruel sounding laugh, the naga grabs you and throws you over a coil, wrenching free your clothes to expose your bottom to him. He coils about you, warm and trapping, and becomes visibly aroused - twice so - with two thick, reptilian shafts sliding free of some internal sheath. Intent on punishment over breeding, he grabs you to pull you back as he thrusts one of his cocks firmly into your back door, lancing you on the thick tool and rocking without concern for your comfort. Your ass sends guilty pangs of pain and pleasure through you as the snake-man uses his coils to keep your wriggling form under control, pounding eagerly at your [bodytype of Player] form. Soon, the shaft within you swells, then starts to pulse rhythmically with spurt after spurt of cum, filling your bowels with thick gouts of snake seed. Meanwhile, the snake-creature's second cock sprays his load all over your back, leaving you wet and sticky. Satisfied, the naga rolls you off of himself to the ground and slithers away.";
-			CreatureSexAftermath "Player" receives "AssFuck" from "Naga";
+		CreatureSexAftermath "Player" receives "AssFuck" from "Naga";
 	else if Player is female and a random chance of 1 in 2 succeeds:
 		if Player is submissive:
 			say "     With a cruel sounding laugh, the naga grabs you and throws you over a coil, wrenching free your clothes to expose your bottom to him. He coils about you, warm and trapping, and becomes visibly aroused - twice so - with two thick reptilian shafts sliding free of some internal sheath. Intent on punishment over breeding, he grabs you to pull you back as he thrusts one of his cocks firmly into[if Cunt Count of Player > 1] one of[end if] your cunt[sfn], lancing you on the thick tool and rocking without concern for your comfort. Being so fully in the power of another being arouses you to no end, making you gasp and moan at being used for his pleasure. The naga laughs at your eagerness to be taken and 'punished' by him as he uses his coils to keep your wriggling form under control while pounding eagerly at your [bodytype of Player] form. Soon, the shaft within you swells, then starts to pulse rhythmically with spurt after spurt of cum, filling your womb with thick gouts of snake seed. Meanwhile, the snake-creature's second cock sprays his load all over your back, leaving you wet and sticky. Satisfied, the naga rolls you off of himself to the ground and slithers away.";
-			CreatureSexAftermath "Player" receives "PussyFuck" from "Naga";
 		else:
 			say "     With a cruel sounding laugh, the naga grabs you and throws you over a coil, wrenching free your clothes to expose your bottom to him. He coils about you, warm and trapping, and becomes visibly aroused - twice so - with two thick reptilian shafts sliding free of some internal sheath. Intent on punishment over breeding, he grabs you to pull you back as he thrusts one of his cocks firmly into[if Cunt Count of Player > 1] one of[end if] your cunt[sfn], lancing you on the thick tool and rocking without concern for your comfort. Your ass sends guilty pangs of pain and pleasure through you as the snake-man uses his coils to keep your wriggling form under control, pounding eagerly at your [bodytype of Player] form. Soon, the shaft within you swells, then starts to pulse rhythmically with spurt after spurt of cum, filling your womb with thick gouts of snake seed. Meanwhile, the snake-creature's second cock sprays his load all over your back, leaving you wet and sticky. Satisfied, the naga rolls you off of himself to the ground and slithers away.";
-			CreatureSexAftermath "Player" receives "PussyFuck" from "Naga";
-	else if vorelevel is not 1 and a random chance of xx in 20 succeeds:
+		CreatureSexAftermath "Player" receives "PussyFuck" from "Naga";
+	else if vorelevel is not 1 and a random chance of (vorelevel * vorelevel) in 20 succeeds:
 		say "     Your opponent makes a dry hiss, almost as if he was laughing, and winds himself tightly around your defeated form, divesting you of your gear and clothing. His serpentine tongue slithers across your cheek and grins with dark amusement. The male naga throws his coils about you in a warm, soft embrace. While initially the sliding of his scaly hide across your flesh is pleasant, his strong coils continue to tighten around you harder and harder. It becomes increasingly difficult to breathe, and you try to push free, but your [bodydesc of Player] body [if HP of Player > 0]can't get enough leverage[else]is too worn from the fight[end if] to fight against his powerful tail muscles. 'Look at you - nothing but weak prey. And prey,' he hisses in your ear, 'isss nothing but food.' You cry out at this and struggle all the harder, but that [if HP of Player > 0]sudden rush[else]final surge[end if] of adrenaline isn't enough to free you, and soon, your sore body is even weaker than before.";
 		if Player is male:
 			say "     Your cock[smn] throb[smv] painfully hard, engorged with the blood squeezed from your crushed body. Despite your perilous situation, the brush of the snake-man's scaly hide across your aroused loins is very pleasurable. You can also feel his twin serpentine cocks grinding against your thigh and leaking precum against it, the naga quite aroused at the prospect of consuming his prey. Your vision becomes increasingly blurry as the constriction continues, leaving you barely able to see the naga's head approach with his mouth stretched open. Your head is pressed into that wide, gaping maw, and you are engulfed in a hot, humid heat. Sticky saliva clings to your head and shoulders as you are slowly forced into the creature's throat. You squirm with your little remaining strength, but his esophagus squeezes you with strong muscles. The naga seems to chuckle at your struggles and rubs his hands along his throat. His reptilian cocks grind against you all the harder, and you feel a fresh splatter of precum, the monster clearly enjoying your feeble resistance.";
@@ -54,12 +47,12 @@ to say LoseToNaga:
 		else:
 			say "     Drained of vitality, you are consumed by the naga, becoming nothing more than another grisly meal for the predatory monster to be digested over the next several days.";
 			now XP of Player is 0;
-			now non-infectious entry is true; [prevents regular naga infection from occurring]
+			now the non-infectious corresponding to a Name of "Naga" in Table of Random Critters is true; [prevents regular naga infection from occurring]
 			now hunger of Player is 999;
 			now thirst of Player is 999;
 			now battleground is "void";
 			now combat abort is 1;
-			WaitLineBreak;
+			wait for any key;
 			end the story saying "You have been eaten and digested by a naga.";
 			stop the action;
 	else if a random chance of 2 in 3 succeeds:
@@ -71,25 +64,15 @@ to say LoseToNaga:
 		CreatureSexAftermath "Player" receives "OralCock" from "Naga";
 	else:		[constriction into unconsciousness]
 		say "     Your opponent makes a dry hiss, almost as if he was laughing, and winds himself tightly around your defeated form while divesting you of your gear. The male naga throws his coils about you in a warm, soft embrace. While initially the sliding of his scaly hide across your flesh is pleasant, his strong coils continue to tighten around you harder and harder until it becomes painful. As it gets increasingly difficult to breathe, you try to push against them, but your [bodydesc of Player] body [if HP of Player > 0]can't get enough leverage[else]is too worn from the fight[end if] to fight against his powerful tail muscles.";
-		if Cock Count of Player > 1:
-			say "     'Look at you - nothing but weak prey. Thisss world ssshall belong to the ssstrong,' he hisses, tightening his grip even further. Spots dance before your eyes as you struggle to remain conscious. Strangely, your cocks are painfully rock hard against those squeezing coils, as if all of your blood is getting squeezed into them. It may be the infection or perhaps the oxygen deprivation, but this perilous situation is somehow also quite arousing despite the fear and pain you feel. You can even feel the naga's twin reptilian shafts grinding against your own, the monster turned on by the act of crushing the life out of his prey.";
-		else if Cock Count of Player is 1:
-			say "     'Look at you - nothing but weak prey. Thisss world ssshall belong to the ssstrong,' he hisses, tightening his grip even further. Spots dance before your eyes as you struggle to remain conscious. Strangely, your cock is painfully rock hard against those squeezing coils, as if all of your blood is getting squeezed into it. It may be the infection or perhaps the oxygen deprivation, but this perilous situation is somehow also quite arousing despite the fear and pain you feel. You can even feel the naga's twin reptilian shafts grinding against your own, the monster turned on by the act of crushing the life out of his prey.";
-		else if Player is female:
-			say "     'Look at you - nothing but weak prey. Thisss world ssshall belong to the ssstrong,' he hisses, tightening his grip even further. Spots dance before your eyes as you struggle to remain conscious. Strangely, your crotch feels flush with heat, as if your blood is being forced to your loins and filling them with a hot need until your puss[yfn] drip[sfv] with juices. It may be the infection or perhaps the oxygen deprivation, but this perilous situation is somehow also quite arousing despite the fear and pain you feel. You can even feel the naga's twin reptilian shafts grinding against your thigh, the monster turned on by the act of crushing the life out of his prey.";
-		else:
-			say "     'Look at you - nothing but weak prey. Thisss world ssshall belong to the ssstrong,' he hisses, tightening his grip even further. Spots dance before your eyes as you struggle to remain conscious. Strangely, your bare crotch feels flush with heat, as if your blood is being forced to your loins and filling you with a hot need that cannot be fulfilled in your neutered state. It may be the infection or perhaps the oxygen deprivation, but this perilous situation is somehow also quite arousing despite the fear and pain you feel. You can even feel the naga's twin reptilian shafts grinding against your thigh, the monster turned on by the act of crushing the life out of his prey.";
+		say "     'Look at you - nothing but weak prey. Thisss world ssshall belong to the ssstrong,' he hisses, tightening his grip even further. Spots dance before your eyes as you struggle to remain conscious. Strangely, your [if Cock Count of Player > 1]cocks are painfully rock hard against those squeezing coils, as if all of your blood is getting squeezed into them. It may be the infection or perhaps the oxygen deprivation, but this perilous situation is somehow also quite arousing despite the fear and pain you feel. You can even feel the naga's twin reptilian shafts grinding against your own[else if Player is male]cock is painfully rock hard against those squeezing coils, as if all of your blood is getting squeezed into it. It may be the infection or perhaps the oxygen deprivation, but this perilous situation is somehow also quite arousing despite the fear and pain you feel. You can even feel the naga's twin reptilian shafts grinding against your own[else if Player is female]crotch feels flush with heat, as if your blood is being forced to your loins and filling them with a hot need until your puss[yfn] drip[sfv] with juices. It may be the infection or perhaps the oxygen deprivation, but this perilous situation is somehow also quite arousing despite the fear and pain you feel. You can even feel the naga's twin reptilian shafts grinding against your thigh[else]bare crotch feels flush with heat, as if your blood is being forced to your loins and filling you with a hot need that cannot be fulfilled in your neutered state. It may be the infection or perhaps the oxygen deprivation, but this perilous situation is somehow also quite arousing despite the fear and pain you feel. You can even feel the naga's twin reptilian shafts grinding against your thigh[end if], the monster turned on by the act of crushing the life out of his prey.";
 		say "     Your vision becomes increasingly blurry as the constriction continues. You weakly try to push against the inexorable grip of the naga's tail, but you have nearly no strength left. Gasping for breath, you can still hear the naga's hissing laugh in your pounding ears, a flick of his tongue along one telling you his head's right beside yours and enjoying every moment. You feel pops, cracks, and crunches as the pain in your chest grows. You feel your ribs start to break before you finally fall unconsciousness.";
 		WaitLineBreak;
 		say "     Surprisingly, you eventually awaken, your [bodytype of Player] body battered and sore. Your chest is particularly painful, the nanites doing their best to mend your broken ribs and bruised body. You conclude that the naga must have released you once you'd passed out, after having wrung every last moment of fun out of his struggling prey. It takes you a few minutes to gather the strength to collect your scattered gear, stagger to your feet, and stumble back towards safety to recover.";
 		now HP of Player is 1;
 
-
-
 to say WinOverNaga:
 	say "     [one of]The naga staggers from his many wounds and collapses to the ground. [or]Your last blow draws a shuddering hiss before the naga falls to the ground and ceases fighting. [at random]Even though you can literally see his body mend rapidly as the nanites infused within him do their work, he won't be ready for another fight for a while.";
-	say "[bold type]This is your chance to have some fun with the snake-creature. Do you want to?[roman type][line break]";
-	LineBreak;
+	say "[line break]     [bold type]This is your chance to have some fun with the snake-creature. Do you want to?[roman type][line break]";
 	say "     ([link]Y[as]y[end link]) - Get the naga to use his long, dexterous tongue.";
 	say "     ([link]N[as]n[end link]) - No, not right now.";
 	if Player consents:
@@ -113,8 +96,8 @@ to say WinOverNaga:
 			say "     Arousal quickly mounting higher and higher from your partner's gentle touch, it doesn't take all that much longer until your pants get quicker, and the need to come becomes almost unbearable. You moan that you're close, which only has the snake-person speed up more, and moments later, a feeling of bliss floods your body, and you shake in orgasm. He continues pleasing you until your climax abates, then pulls away. 'That was - sssatisfactory,' he says, then slithers away without looking back";
 			CreatureSexAftermath "Player" receives "Stroking" from "Naga";
 	else:
+		LineBreak;
 		say "     As you're currently not interested in having carnal relations with a half-man-half-snake creature, you just walk away, leaving him to pick himself up later.";
-
 
 Section 2 - Creature Insertion
 
@@ -127,7 +110,7 @@ to say PrepCombat_Naga:
 	choose row MonsterID from Table of Random Critters;
 	if Player is FemalePreferred:
 		now sex entry is "Female";
-	else if "Herm Preferred" is listed in feats of Player:
+	else if Player is HermPreferred:
 		now sex entry is "Both";
 	else:
 		now sex entry is "Male";
@@ -147,6 +130,7 @@ When Play begins:
 	add "Naga" to infections of TaperedCockList;
 	add "Naga" to infections of InternalCockList;
 	add "Naga" to infections of InternalBallsList;
+	add "Naga" to infections of NoLegList;
 	add "Naga" to infections of SerpentineList;
 	add "Naga" to infections of TailList;
 	add "Naga" to infections of OviImpregnatorList;
@@ -158,7 +142,7 @@ When Play begins:
 	now attack entry is "[one of]The naga swipes at you with his pipe with alarming accuracy[or]With a loud hiss, the male naga lashes at you, sinking his fangs painfully into your [bodydesc of Player] body[or]The naga lashes out with its tail, striking you solidly with the heavy mass[at random].";
 	now defeated entry is "[WinOverNaga]";
 	now victory entry is "[LoseToNaga]";
-	now desc entry is "[NagaDesc]";
+	now desc entry is "     A creature consisting of human and snake blended together in an intimidating mixture slithers into sight ahead of you. It is a naga - a male one, judging from what you see as he raises his human-like upper body to have a good look at you in turn. He has [one of]brown and black[or]bright-red and yellow[or]gray and tan[at random] scales, fine and soft looking. Two muscular arms are his only limbs, if one discounts the great tail that makes up most of the male naga's long body. Clenched in his right hand is a pipe, a crude, but likely effective, makeshift weapon. Of course, he also has great jaws that likely contain sharp, possibly venomous, fangs. His human torso is well-muscled, sleek, and lacking any blemish. The naga's head and face are entirely that of a huge snake, staring unblinkingly and tasting the air with a flickering forked tongue. The moment of mutual examination ends as the naga hisses. 'SSsssubmit - or don't... it will sssatisfy me either way, prey.' With that, he rushes towards you, sliding over the ground quickly with sinuous twists of his snake-body.[line break]";
 	now face entry is "a snake's head, with unblinking eyes and huge venomous fangs. Your [SkinSpeciesName of Player in lower case] hide is sleek across your majestic hood, flaring wide when excited or worked up, and framing your head from behind your face"; [ Face description, format as "Your face is [Face of Player]." ]
 	now body entry is "extremely long. You can feel the powerful rings of your muscles drawing you forward quietly across the ground. It almost feels like you're floating along, moving with a sublime confidence in your snake-like body"; [ Body description, format as "Your body is [Body of Player]." ]
 	now skin entry is "[one of]scaly[or]softly-scaled[or]scaled[at random]"; [ Skin. Format as "Looking at yourself, your body is covered in [Skin of Player] skin." ]
@@ -309,7 +293,6 @@ When Play begins:
 	[Clit Size Adjective is generated by a function and can be used in scenes: very small/small/average/large/very large]
 ]
 
-
 Section 3 - Endings
 
 Table of GameEndings (continued)
@@ -326,7 +309,7 @@ This is the Naga Infection rule:
 			if Player is male:
 				say "     Curling around the other with your long, serpentine form, you inject your venom into the struggling male - his whimpers and pleas annoying you to no end - and then breed your increasingly complacent victim for days to come. Flushing out his humanity with your continuous mating, you find your efforts bearing fruit as, almost a week later, the former soldier's skin begins to harden as his incoming scales push out from his once flabby skin.";
 			else if Player is female:
-				say "     It takes a few injections of your venom to subdue the other, but once the soldier had become complacent, you spend the next few weeks getting yourself stuffed full by the punch-drunk male as you constantly force him to fill up your achingly empty vent[if Player is impreg_ok]. It takes time, but soon you find yourself heavy with a large clutch of eggs, but by that time your new naga mate doesn't need any coercion to continue filling you with his seed[else]. The soldier's seed never takes, but soon, it doesn't matter as you and your new naga mate spend hours into the day curled around each other as he stuffs you full with his thick, serpentine seed[end if].";
+				say "     It takes a few injections of your venom to subdue the other, but once the soldier had become complacent, you spend the next few weeks getting yourself stuffed full by the punch-drunk male as you constantly force him to fill up your achingly empty vent. [if Player is impreg_ok]It takes time, but soon you find yourself heavy with a large clutch of eggs, but by that time your new naga mate doesn't need any coercion to continue filling you with his seed[else]The soldier's seed never takes, but soon, it doesn't matter as you and your new naga mate spend hours into the day curled around each other as he stuffs you full with his thick, serpentine seed[end if].";
 			else:
 				say "     Curling around the other with your long, serpentine form, you inject your venom into the struggling male - his whimpers and pleas annoying you to no end - and then have your increasingly complacent victim breed your anal vent for days to come. Flushing out his humanity with your continuous contact, you find your efforts bearing fruit as, almost a week later, the former soldier's skin begins to harden as his incoming scales push out from his once flabby skin.";
 			say "     Once the rest of the military comes through the city to clean up, you and your fellow naga make your way from your home to wait for soldiers to leave and then return to reclaim your rightful den once they do[if a random chance of 1 in 2 succeeds]. During your period of hiding, your mate manages to snag a confused soldier left behind by his unit for the two of you to play with, making a delightful prize to celebrate the return to your den[end if].";

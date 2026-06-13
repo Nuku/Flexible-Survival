@@ -9,55 +9,41 @@ to say losetocougar:
 	say "     Falling to your knees in front of the cougar herm, she growls triumphantly and climbs atop you. Her strong body holds you down as she rubs herself against you. Her soft fur and lovely breasts slide against your chest, and you can feel the firm press of her throbbing cock on your skin.";
 	if wslevel is 3 and a random chance of 2 in 5 succeeds:
 		say "     She rubs herself against you as she moves forward, bringing her crotch to your face. Sitting up with her legs across your arms, she slaps your cheek with her dark brown cock. Expecting her to want you to suck her off, you open your mouth. But instead of a mouthful of cock, you get a mouthful of her hot piss as she releases her bladder with a chuckle. Coughing and sputtering at the acrid surprise, she sprays more across your face before forcing her penis into your mouth to empty the rest down your throat. After your hot drink is done, she moves on to satisfying her lusts.";
+		WaitLineBreak;
 	else if a random chance of 1 in 3 succeeds:
-		say "     She rubs herself against you as she moves forward, bringing her crotch to your face. Sitting up with her legs across your arms, she slaps your cheek with her dark brown cock. Knowing what's expected of you and [if HP of Player > 0]accepting that you must satisfy the feline's needs[else]seeing little point in resisting further[end if], you open your mouth and take her throbbing cock into it. You lick and suck at the dribbling member while she rumbles and purrs in pleasure. After a few minutes of having you suck her off for foreplay, she moves on to satisfying her lusts more actively.";
-	if Player is puremale:
-		say "[cougarride]";
-	else if Player is purefemale:
-		say "[cougartop]";
+		say "     She rubs herself against you as she moves forward, bringing her crotch to your face. Sitting up with her legs across your arms, she slaps your cheek with her dark brown cock. Knowing what's expected of you and [if fightoutcome is 22]accepting that you must satisfy the feline's needs[else]seeing little point in resisting further[end if], you open your mouth and take her throbbing cock into it. You lick and suck at the dribbling member while she rumbles and purrs in pleasure. After a few minutes of having you suck her off for foreplay, she moves on to satisfying her lusts more actively.";
+		WaitLineBreak;
+	if Player is male and (anallevel is 1 or a random chance of 2 in 3 succeeds) and (Player is not female or a random chance of 1 in 2 succeeds):
+		say "     Placing her paws on your shoulders to pin you down, she grinds her wet pussy against your cock, getting you hard before mounting it. She mrowls as she rides your shaft, gripping her inner walls around it. This feline wildwoman rides your cock hard and fast until finally you cum, shooting your hot seed into her womb. She leaves you spent and panting as she pads off on all fours, cum dripping out behind her.";
+		CreatureSexAftermath "Cougar" receives "PussyFuck" from "Player";
 	else:
-		if a random chance of 1 in 2 succeeds:
-			say "[cougarride]";
-		else:
-			say "[cougartop]";
-
-to say cougarride:
-	say "     Placing her paws on your shoulders to pin you down, she grinds her wet pussy against your cock, getting you hard before mounting it. She mrowls as she rides your shaft, gripping her inner walls around it. This feline wildwoman rides your cock hard and fast until finally you cum, shooting your hot seed into her womb. She leaves you spent and panting as she pads off on all fours, cum dripping out behind her.";
-	CreatureSexAftermath "Cougar" receives "PussyFuck" from "Player";
-
-to say cougartop:
-		say "     Placing her paws on your shoulders to pin you down, she grinds her hard shaft between your thighs, lining it up with your pussy before sinking it into you. She mrowls as she thrusts into you again and again, sliding those feline barbs along your vaginal walls, stimulating you deep inside. This feline wildwoman pounds away at you hard and fast until she finally cums, shooting her hot seed into your womb. She leaves you spent and pads off on all fours.";
-		CreatureSexAftermath "Player" receives "PussyFuck" from "Cougar";
+		say "     Placing her paws on your shoulders to pin you down, she grinds her hard shaft between your thighs, lining it up with your [if Player is female]pussy[else]asshole[end if] before sinking it into you. She mrowls as she thrusts into you again and again, sliding those feline barbs along your [if Player is female]vaginal[else]inner[end if] walls, stimulating you deep inside. This feline wildwoman pounds away at you hard and fast until she finally cums, shooting her hot seed into your [if Player is female]womb[else]bowels[end if]. She leaves you spent and pads off on all fours.";
+		CreatureSexAftermath "Player" receives "[if Player is female]Pussy[else]Ass[end if]Fuck" from "Cougar";
 
 to say beatthecougar:
 	project Figure of Cougar_naked_icon;
-	say "     Managing to beat the cougar herm, you stand over her slumped, panting form. The fight has gone out of her, but she still looks quite aroused. ";
 	if a random number between 30 and 125 < Libido of Player:
-		say "You ponder having a little fun with the aroused feline, now that she's calmed down a little.";
-		say "     [bold type]Will you sex up the poor, aroused puma?[roman type][line break]";
-		LineBreak;
+		say "     Managing to beat the cougar herm, you stand over her slumped, panting form. The fight has gone out of her, but she still looks quite aroused. You ponder having a little fun with the aroused feline, now that she's calmed down a little.";
+		say "[line break]     [bold type]Will you sex up the poor, aroused puma?[roman type][line break]";
 		say "     ([link]Y[as]y[end link]) - Yes.";
 		say "     ([link]N[as]n[end link]) - No.";
 		if Player consents:
+			LineBreak;
 			say "     Feeling in the mood for some feline fun, you grab the exhausted kitty and push her into position. She mewls softly, wary of you hurting her further, yet hopeful for some sexual relief for her lustful urges.";
 			if Player is male:
 				say "     You push her onto her back and line up your cock with her pussy, making her mrowl in delight. You fondle her breasts and pound away at her. You tweak and tease her nipples while watching her hard cock bounce against her tummy with each thrust you make. Her precum soaks the soft, cream fur there as you drive into her. Her horny mewls get louder as she digs her paws into the ground and climaxes. Her hot pussy clamps down firmly, milking your cock for all you'll give as you cum moments later. Her own thick seed sprays across her chest and muzzle, leaving white streaks all across her body and face. When done, you get her to lick your cock clean before leaving her panting on the ground and leaking your cum.";
 				CreatureSexAftermath "Cougar" receives "PussyFuck" from "Player";
 			else:
 				say "     You push her back and take her throbbing shaft in your hand, making her mrowl in delight. You stroke it a few times before climbing atop her and sinking down onto that hard meat. Its soft, feline barbs stimulate your inner walls as they slide in and out. You fondle her breasts and bounce in her lap, tweaking and teasing her nipples. Her cock throbs and pulses inside you as her excitement builds until finally she mrowls lustfully and sprays her hot cum deep inside you, painting your insides with her virile seed. You squeeze down around her, loving the hot flow into your [if Player is female]womb[else]bowels[end if]. Waiting until she's drained her balls into you, you get off her slowly. You guide her muzzle between your legs, getting her to lick your leaking [if Player is female]pussy[else]asshole[end if] clean before leaving her panting on the ground, reeking of sex.";
-				if Player is female:
-					CreatureSexAftermath "Player" receives "PussyFuck" from "Cougar";
-				else:
-					CreatureSexAftermath "Player" receives "AssFuck" from "Cougar";
+				CreatureSexAftermath "Player" receives "[if Player is female]Pussy[else]Ass[end if]Fuck" from "Cougar";
 		else:
+			LineBreak;
 			say "     Deciding to head off while you can, you leave her to her own devices. Which is just what she does, stroking her cock needfully while fingering herself. You can hear her lustful yowls as you walk off.";
 	else:
-		say "Deciding to head off while you can, you leave her to her own devices. Which is just what she does, stroking her cock needfully while fingering herself. You can hear her lustful yowls as you walk off.";
+		say "     Managing to beat the cougar herm, you stand over her slumped, panting form. The fight has gone out of her, but she still looks quite aroused.";
+		say "     Deciding to head off while you can, you leave her to her own devices. Which is just what she does, stroking her cock needfully while fingering herself. You can hear her lustful yowls as you walk off.";
 
 Section 2 - Creature Insertion
-
-to say cougardesc:
-	say "     Before you is a powerful looking feline, with golden brown fur and piercing eyes. She looks at you with cold intent, claws unsheathed and teeth bared. This puma herm has two, C-cup breasts on her athletic body and a hefty cock and set of balls waiting to be used. Her cock is a deep brown and human in shape, but with stimulating barbs as well. She drops to all fours and pads slowly around you, emitting an animalistic growl before charging.";
 
 Table of CombatPrep (continued)
 name(text)	PrepFunction(text)
@@ -90,7 +76,7 @@ When Play begins:
 	now attack entry is "[one of]The tough feline slashes at you with her sharp claws![or]The puma tries to bear you down under her weight. You get away, but not without several scratches![or]The cougar's teeth dig into your side![or]The mountain lion kicks you in the leg![or]The creature grabs you with one paw and digs her claws in while the other moves to grope you![or]Grabbing your wrists, the big cat pushes your arms away so she can grind her body against yours. You can feel her firm breasts and throbbing cock pressed against you![at random]"; [ Successful attack message ]
 	now defeated entry is "[beatthecougar]";
 	now victory entry is "[losetocougar]";
-	now desc entry is "[cougardesc]";
+	now desc entry is "     Before you is a powerful looking feline, with golden brown fur and piercing eyes. She looks at you with cold intent, claws unsheathed and teeth bared. This puma herm has two, C-cup breasts on her athletic body and a hefty cock and set of balls waiting to be used. Her cock is a deep brown and human in shape, but with stimulating barbs as well. She drops to all fours and pads slowly around you, emitting an animalistic growl before charging.[line break]";
 	now face entry is "feline in form, with a short muzzle and yellow, feline eyes. The sides of your muzzle are darker and there are marks above your eyes, but otherwise, it lacks any markings"; [ Face description, format as "Your face is [Face of Player]." ]
 	now body entry is "athletic and firmly muscled, with a vaguely feline form and large paws for hands. Your body and limbs are shaped such that you can comfortably switch to going upright or on all fours, and find yourself changing between these postures naturally when the need arises"; [ Body description, format as "Your body is [Body of Player]." ]
 	now skin entry is "golden brown fur with a creamy belly"; [ Skin. Format as "Looking at yourself, your body is covered in [Skin of Player] skin." ]
@@ -241,7 +227,6 @@ When Play begins:
 	[Clit Size Adjective is generated by a function and can be used in scenes: very small/small/average/large/very large]
 ]
 
-
 Section 3 - Endings
 
 Table of GameEndings (continued)
@@ -256,6 +241,5 @@ This is the Cougar Infection rule:
 			say "     While the busload of pumas celebrate lustfully, the orgy is sadly brief. As the military will eventually track the bus that got through, you start dropping off cougars in pairs as you go, letting them slip into the woods to escape on foot or to gain other means of transport. You and the driver are the last to go, commandeering a car and making its driver and passenger into the first of your new set of lovers. The cougars, having spread out from across a stretch of a hundred miles, cannot be contained and many small towns become puma colonies.";
 		else:
 			say "     Managing to keep yourself alive and relatively sane throughout the outbreak, you are rescued by the military forces as they sweep through the city. You endure the time in the military camp until you are finally released. You manage to get a few jobs as you adjust to being a feline with some animalistic urges. You eventually manage to find employment at a high school, becoming a phys ed teacher for their infected students as part of an [']innovative initiative['] some politician cooked up. Given the variety of strains, many of your students have different skills or needs, but you cope well enough. Barred from participating in events with [']regular kids['], it provides a good outlet for them. And if many come by to visit you after moving on to college, no one needs to be the wiser about you giving them a little sex ed, too.";
-
 
 Cougar ends here.

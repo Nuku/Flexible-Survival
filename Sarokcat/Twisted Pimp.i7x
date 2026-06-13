@@ -3,7 +3,6 @@ Version 2 of Twisted Pimp by Sarokcat begins here.
 
 "Adds a pimp to Flexible Survival's Wandering Monsters table"
 
-
 Section 1 - Creature Responses
 
 twpimpbeaten is a number that varies.
@@ -17,7 +16,7 @@ to say pimp attack:
 		say "     You are so lost in the surreal fog of pleasure and servitude, as your master uses you for his own pleasure, that you are completely surprised when his cock finally begins to shoot its seed into your cunt. His first few spurts are so large and sudden that some of his seed leaks out around his meat before you realize what's happening. You arch up your hips and milk your cunny down around him tighter, working to pull his load past your cervix. You feel a strong need to have as much of that wonderful transformative sperm inside your womb, regardless of the consequences. When his load is finally spent, he leaves his shaft stuffed inside you for a while, letting his semen seep into you, staking his claim on your womb with his musky load. And when he does pull out, you feel such an emptiness that you whimper, nearly crying from your need to have him back inside you.";
 		say "     It is several minutes before your lust-fogged brain starts working again. 'That's a good little whore. You performed like the fine slut that you are. I almost think I should keep you,' the pimp says with a laugh, his other whores laughing along and making you groan slightly and turn your head away in embarrassment as you realize just how much like a whore you were acting. 'Still not quite ready for that? It's OK, I'm sure you will be begging me to be my whore soon enough. I'm looking forward to next time already, you slut, so be sure to come back soon,' the pimp says with amusement. With a wave of his ring-encrusted hand, his entourage clusters around him, fawning over their pimp master as he saunters away. You remain laying there with a few fingers stuffed in your cunt; it is all you can do to resist the urge to follow him and you can't bear the thought of risking his precious load from leaking out of you.";
 		CreatureSexAftermath "Player" receives "PussyFuck" from "Human Hybrid";
-	else if ( HP of Player > 0 or Player is submissive ) and anallevel > 1 and Cunt Count of Player is 0 and a random chance of anallevel in 6 succeeds:		[anal - submit/sub only]
+	else if ( HP of Player > 0 or Player is submissive ) and anallevel > 1 and Player is not female and a random chance of anallevel in 6 succeeds:		[anal - submit/sub only]
 		say "     [if Player is submissive]No longer resisting the pimp creature, your submissive tendencies kick in and drop yourself to the ground. You moan lustfully while running[else]Rather than fighting the pimp creature, you drop yourself to the ground and run[end if] your hands over yourself in a wanton display. The mutant male chuckles at this. 'Well, lookie here. It seems I was right about you; nothing but another whore deep down.' He motions for his girls to grab you and they giggle as they push you over onto all fours. 'And whores need to get fucked,' he says firmly, slapping his [one of]pointed[or]knotted[or]barbed[or]reptilian[or]goat-like[at random] cock across your ass. You [if the Player is submissive]moan wantonly at this, your rear arching up in response[else]yelp and squirm at this, but are held firmly in place by the infected girls around you[end if]. The strange scent of his arousal hangs in the air as he pumps his meat, drooling precum onto your pucker. The smell fills your head and makes you tremble with need. You grind your ass back against his pole and release a soft whimper despite yourself, getting another chuckle from the pimp.";
 		say "     'Oh yeah, such a bitch. Well, Bitch, it's time to train you to be a proper whore for me,' he says even as he pushes the first few inches of his cock into your back passage. 'Let's see how good of a whore you are and maybe I'll even keep you around,' he adds with an amused chuckle. His girls giggle and stroke your helpless body and, while you know you should resist, you find yourself pushing your hips back into his thrusts instead. He pounds away at you enthusiastically, his exotic musk clouding your mind and igniting all your deliciously submissive urges. Each push of his cock into your ass makes you moan with increasing pleasure as you realize that the thought of being a whore for him starts to excite you. The idea of being a lusty little harlot or man-slut offering up your ass to any man or beast that wants you fills you with a strange sense of arousal, the thoughts seeming right and proper to your lust-fogged mind. Soon your eyes drift closed as you fall into a dream-like state where your whole world narrows to focus on your wonderful male master and his powerful cock pounding into your slutty butthole. You grind and squeeze your ass around his meaty rod, something about the entire situation seeming so very right to you, even as soft female hands stroke your body. His other whores whisper soft words of encouragement to you, telling you how good it is to be a whore, and what a fine slut you will make for your master.";
 		WaitLineBreak;
@@ -42,25 +41,23 @@ To say pimp loss:
 	if Player is male and twpimpbeaten > 2:
 		say "     Having beaten another of these twisted pimps, you pull him from his band of slutty whores before they can drag him to safety. With him in your clutches, shall you turn the tables on him and make him your bitch for a while?";
 		if Player consents:
-			say "[twpimpbeaten_01]";
+			LineBreak;
+			say "     Wanting some relief and looking to give him a taste of his own medicine, you push him over onto all fours. Tearing aside his gaudy clothes, you bare his [one of]toned[or]furry[or]scaly[or]smooth-skinned[at random] ass and line your cock up with his pucker. He groans and whimpers as you force your throbbing cock into his asshole and start pounding away at him. His virgin-tight hole feels wonderful around your shaft and adds to the pleasure you're taking in breaking in the pimp's ass.";
+			say "     At first, he tries to squirm free, but soon his body starts to betray him and his anus squeezes and milks around your [Cock of Player] manhood. And a little later, he's rocking back into your thrusts, panting with arousal despite himself. You can't help but laugh at this and make a show of [one of]spanking his ass[or]calling him a bitch[or]suggesting he take up turning tricks himself[or]getting him to moan louder by thrusting extra hard into him[at random] for his gaggle of girls watching nervously from a safe distance amongst the rubble.";
+			say "     By the time you're done with him and have left your [Cum Load Size of Player] load inside him, he's cummed as well from the ass-fucking. You wipe your cock slowly across his ass cheeks and then kick him aside. He scrambles off to rejoin his pack of slave girls, which you're happy to see has lost a few members thanks to their pimp's humiliating defeat.";
+			CreatureSexAftermath "Human Hybrid" receives "AssFuck" from "Player";
 		else:
+			LineBreak;
 			say "     Not wanting to waste any more of your time on this wretched bastard, you give him a few extra slaps across the face and toss him to the ground, leaving his collection of women to carry him away once you've safely left.";
 	else:
 		say "     Whimpering like the true coward the little slime is, the pimp quickly withdraws, several of his women glaring at you evilly as they cluster around their master and help him to stagger away.";
 	increase twpimpbeaten by 1;
 	if bradfordBountyNum is 2:
 		if bradfordbounty > 0:
-			LineBreak;
 			decrease bradfordbounty by 1;
-			say "     You hear a soft [if bradfordbounty is 0]double-[end if]ding from your pack. Reminded of your deal with the bounty hunter, Bradford, you pull out the contract he's splitting with you. Looking at it, you can see that the printed value denoting the number remaining has gone down to [bold type][bradfordbounty][roman type]. You can't discern how this was accomplished; the paper and the printing on it seem entirely ordinary[if bradfordbounty is 0]. Seeing how that's completed it, you should be able to see him about getting your cut of the reward[end if].";
+			say "[line break]     You hear a soft [if bradfordbounty is 0]double-[end if]ding from your pack. Reminded of your deal with the bounty hunter Bradford, you pull out the contract he's splitting with you. Looking at it, you can see that the printed value denoting the number remaining has gone down to [bold type][bradfordbounty][roman type]. You can't discern how this was accomplished; the paper and the printing on it seem entirely ordinary[if bradfordbounty is 0]. Seeing how that's completed it, you should be able to see him about getting your cut of the reward[end if].";
 		else:
-			say "     This encounter reminds you of your deal with the bounty hunter, Bradford. You should go see him about getting your share of the reward.";
-
-to say twpimpbeaten_01:
-	say "     Wanting some relief and looking to give him a taste of his own medicine, you push him over onto all fours. Tearing aside his gaudy clothes, you bare his [one of]toned[or]furry[or]scaly[or]smooth-skinned[at random] ass and line your cock up with his pucker. He groans and whimpers as you force your throbbing cock into his asshole and start pounding away at him. His virgin-tight hole feels wonderful around your shaft and adds to the pleasure you're taking in breaking in the pimp's ass.";
-	say "     At first, he tries to squirm free, but soon his body starts to betray him and his anus squeezes and milks around your [Cock of Player] manhood. And a little later, he's rocking back into your thrusts, panting with arousal despite himself. You can't help but laugh at this and make a show of [one of]spanking his ass[or]calling him a bitch[or]suggesting he take up turning tricks himself[or]getting him to moan louder by thrusting extra hard into him[at random] for his gaggle of girls watching nervously from a safe distance amongst the rubble.";
-	say "     By the time you're done with him and have left your [Cum Load Size of Player] load inside him, he's cummed as well from the ass-fucking. You wipe your cock slowly across his ass cheeks and then kick him aside. He scrambles off to rejoin his pack of slave girls, which you're happy to see has lost a few members thanks to their pimp's humiliating defeat.";
-	CreatureSexAftermath "Human Hybrid" receives "AssFuck" from "Player";
+			say "[line break]     This encounter reminds you of your deal with the bounty hunter Bradford. You should go see him about getting your share of the reward.";
 
 Section 2 - Creature Insertion
 
@@ -244,19 +241,27 @@ When Play begins:
 	[Clit Size Adjective is generated by a function and can be used in scenes: very small/small/average/large/very large]
 ]
 
-
-
 Section 3 - Estrogen Pill
 
 Table of Game Objects (continued)
 name	desc	weight	object
 "estrogen pill"	"This small potent looking object has a heart symbol, subdivided by a plus."	1	estrogen pill
 
-estrogen pill is a grab object. It is temporary.
+estrogen pill is a grab object.
+Usedesc of estrogen pill is "[estrogen pill use]".
 
-Usedesc of estrogen pill is "[estrogen pill use]";
+check using a estrogen pill:
+	if Player is male:
+		say "[line break]     As you move to slip the pill in your mouth, you feel an uneasy twinge run through your cock[smn]. Are you sure to still want to use it?";
+		if Player consents:
+			LineBreak;
+			if Player is MalePreferred or Player is HermPreferred or "One Way" is listed in feats of Player or "Always Cocky" is listed in feats of Player:
+				say "     Your feats will not allow this to work." instead;
+		else:
+			LineBreak;
+			say "     You decide against using the pill and pop it back into your backpack." instead;
 
-before using a grab object (called x):
+[before using a grab object (called x):
 	if x is estrogen pill:
 		LineBreak;
 		if Player is male:
@@ -268,43 +273,36 @@ before using a grab object (called x):
 				continue the action;
 			else:
 				say "You decide against using the pill and pop it back into your backpack.";
-				stop the action;
+				stop the action;]
 
 to say estrogen pill use:
+	now Cock Count of Player is 0;
+	now Ball Size of Player is 0;
+	now Cock Length of Player is 0;
 	if Player is herm:		[HERM]
-		now Cock Count of Player is 0;
-		now Ball Size of Player is 0;
-		now Cock Length of Player is 0;
-		say "With a burst of intense pain, you feel your cock[smn] rapidly recede[smv] and your balls withering away. Within moments, nothing remains of your former masculinity[run paragraph on]";
+		say "[run paragraph on]";
 		increase Cunt Depth of Player by 2;
 		increase Cunt Tightness of Player by 2;
 		follow the cunt descr rule;
-		say ". You can also see your puss[if Cunt Count of Player > 1]ies['][else]y's[end if] lips puff up as your cunt[sfn] enlarge[sfv] and deepen[sfv], becoming [descr][run paragraph on]";
+		say "     With a burst of intense pain, you feel your cock[smn] rapidly recede[smv] and your balls withering away. Within moments, nothing remains of your former masculinity. You can also see your puss[if Cunt Count of Player > 1]ies['][else]y's[end if] lips puff up as your cunt[sfn] enlarge[sfv] and deepen[sfv], becoming [descr][run paragraph on]";
 	else if Player is female:				[FEMALE]
-		now Cock Count of Player is 0;
-		now Ball Size of Player is 0;
-		now Cock Length of Player is 0;
+		say "[run paragraph on]";
 		increase Cunt Depth of Player by 2;
 		increase Cunt Tightness of Player by 2;
 		follow the cunt descr rule;
-		say "You feel a rush of warmth to your loins as you watch your puss[if Cunt Count of Player > 1]ies['][else]y's[end if] lips puff up as your cunt[sfn] enlarge[sfv] and deepen[sfv], becoming [descr][run paragraph on]";
+		say "     You feel a rush of warmth to your loins as you watch your puss[if Cunt Count of Player > 1]ies['][else]y's[end if] lips puff up as your cunt[sfn] enlarge[sfv] and deepen[sfv], becoming [descr][run paragraph on]";
 	else if Player is male:				[MALE]
-		now Cock Count of Player is 0;
-		now Ball Size of Player is 0;
-		now Cock Length of Player is 0;
+		say "[run paragraph on]";
 		now Cunt Count of Player is 1;
 		now Cunt Depth of Player is 6;
 		now Cunt Tightness of Player is 4;
 		follow the cunt descr rule;
-		say "With your body in shock, you feel your cock[smn] rapidly recede[smv] and your balls getting drawn into your lower belly. As your cock[smn] form[smv] into a clit and a small, dripping pussy forms underneath it, you feel your testicles changing inside you as they become the ovaries for your newly formed womb[run paragraph on]";
+		say "     With your body in shock, you feel your cock[smn] rapidly recede[smv] and your balls getting drawn into your lower belly. As your cock[smn] form[smv] into a clit and a small, dripping pussy forms underneath it, you feel your testicles changing inside you as they become the ovaries for your newly formed womb[run paragraph on]";
 	else:								[NEUTER]
-		now Cock Count of Player is 0;
-		now Ball Size of Player is 0;
-		now Cock Length of Player is 0;
 		now Cunt Count of Player is 1;
 		now Cunt Depth of Player is 6;
 		now Cunt Tightness of Player is 4;
-		say "With your body in shock, you feel your bare groin clench as internal changes begin. Soon you feel a pulling sensation as a wet passage opens and flesh folds form around it. Within moments, you have a wet pussy and needy little cunt between your legs[run paragraph on]";
+		say "     With your body in shock, you feel your bare groin clench as internal changes begin. Soon you feel a pulling sensation as a wet passage opens and flesh folds form around it. Within moments, you have a wet pussy and needy little cunt between your legs[run paragraph on]";
 	if "Flat Chested" is not listed in feats of Player:
 		if Nipple Count of Player is 0:
 			now Nipple Count of Player is 2;
@@ -314,12 +312,14 @@ to say estrogen pill use:
 			now Breast Size of Player is 2;
 			say ". With a feeling of tightness at your chest, you see a pair of breasts form on your chest, concluding your sudden gender shift.";
 		else:
-			increase Breast Size of Player by 1;
-			if Breast Size of Player > 10, increase Breast Size of Player by 1;
-			if Breast Size of Player > 26, now Breast Size of Player is 26;
+			if Breast Size of Player > 24:
+				now Breast Size of Player is 26;
+			else if Breast Size of Player > 9:
+				increase Breast Size of Player by 2;
+			else:
+				increase Breast Size of Player by 1;
 			follow the breast descr rule;
 			say ". With a feeling of tightness and a flush of warmth at your chest, you see your breasts inflating, giving you a set of [descr] tits.";
-
 
 Section 4 - Endings
 
@@ -337,7 +337,7 @@ This is the Human Hybrid Infection rule:
 					say "     Returning to the red light district, it isn't long before your instincts lead you back to where a pimp is waiting for you, and you smile happily as you go down to your knees in front of him and beg for him to make you a good little whore like the rest of his women are. The pimp seems amused, and pets you on the head as he agrees, the touch of your master making you squeal slightly with glee, as he gives you a new name and lets you join his group of eager followers. Your pimp trains you well, the other whores helping you learn how to be a proper slut for anything and everything he wants you to fuck, and happily your owner finds plenty of randy little beasts for you to fuck on a daily basis! Your new life as a slutty little whore seeming so much better to you than you ever realized it could be, with all those lovely cocks and pussies for you to fuck and suck and lick, you are never left unsatisfied for long, the other whores or your pimp playing with you on the few occasions a customer isn't forthcoming right away. You just love how many different types of sex you get to experience now, all sorts of beasts renting you from your pimp when they need release, your body serving their desires eagerly, and while you do acquire several small traits from all the beasts and creatures you fuck, you always maintain the slutty sexy female form your master gave you when he made you his whore. You find yourself thinking that your life couldn't be any better, only to learn from some of the other whores that your pimp is considering loaning several of you out as breeders as well as just sluts, and the thought of finding a new way to please your owner makes you smile happily as you envision a long and fulfilling life as a well used whore and possibly a breeder in this strange infected city you live in now...";
 				else:
 					say "     You are almost to the red light district, when you spot some beasts stalking you eagerly, and you are unable to help yourself; giving in to your new whorish instincts you stop and pose to let them catch up, showing off your lovely slutty body for them like a proper whore should. As they draw closer, you find yourself cooing happily at the sight of several sexy [one of]wolves[or]hyenas[or]felines[or]horses[or]leopardmen[at random] approaching you, their erect cocks showing you just how good a whore you are being to have them so excited already! Not being good at negotiating a price, you try to talk to them for a minute, only to find yourself moaning and agreeing happily to whatever they want as they rub up against your hyper-sexualized body, your strong submissive instincts coming to the fore as you submit to them again and again in as many different positions as possible. You appear to have impressed the beasts, as once you are finally worn out, they take you back to their lair, where they and all their fellow beasts can use you like a proper whore whenever they want. You smile as you serve your new handsome furry masters, as you realize what a lucky whore you are to have so many owners willing to use you and fill your pussy up with their seed again and again, and from the swell in your belly, you are sure you will give your nice new owners some new whores for them to play with soon too!";
-			else if ( Player is submissive and anallevel > 1 and twpimploss >= 3 and twpimpbeaten < twpimploss ) or Cock Count of Player is 0:	[Neuter _or_ Submissive w/fewer wins than losses]
+			else if ( Player is submissive and anallevel > 1 and twpimploss >= 3 and twpimpbeaten < twpimploss ) or Player is not male:	[Neuter _or_ Submissive w/fewer wins than losses]
 				say "     Succumbing to your body's needs, your mind fills with images of the lovely pimp, and all his lusty little whores, and you smile happily as you finally realize your true purpose in life. 'I'm a bitch-whore...' you mutter with a happy smile on your face, before giggling in amusement, wondering how you could have not realized such a simple truth sooner. Your thoughts turning towards the strange pimp again, you moan in pleasure as you realize just how good an owner the obviously experienced pimp would make. After all, every slutty little whore like yourself needs an owner to take care of them right? Giggling rather ditzily again, you quickly begin to saunter back towards the red light district, where you are sure to find a proper owner who will find lots of handsome beasts to rent you out to so they can fill your empty ass over and over again.";
 				if a random chance of 1 in 2 succeeds:
 					say "     Returning to the red light district, it isn't long before your instincts lead you back to where a pimp is waiting for you. You smile happily as you go down to your knees in front of him and beg for him to make you a good little whore like the rest of his women are. The pimp seems amused, and pets you on the head as he agrees, the touch of your master making you squeal slightly with glee as he gives you a new name and lets you join his group of eager followers. Your pimp trains you well to be his special male whore for his collection. You are taught to be a proper slut for anything and everything he wants to fuck you. And while his other girls are more popular among his clientele, happily your owner always manages to find a few randy little beasts looking to fuck your ass on a daily basis!";

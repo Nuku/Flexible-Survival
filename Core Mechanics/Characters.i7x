@@ -3,11 +3,12 @@ Version 1 of Characters by Core Mechanics begins here.
 
 Part 0 - Variables
 
-Things have a text called scent.
-Lusting is a text that varies. [used in the brain description rule]
+internalcockbypass is a truth state that varies. internalcockbypass is usually false.
+internalBallsBypass is a truth state that varies. internalBallsBypass is usually false.
+[Lusting is a text that varies. [used in the brain description rule]]
 descr is a text that varies. [usually filled with various description snippets in all sorts of situations]
 sh-descr is a text that varies.
-cupsize is an indexed text that varies. Cupsize is "ABCDEFGHIJKLMNOPQRSTUVWXYZ".
+[cupsize is an indexed text that varies.] Cupsize is always "ABCDEFGHIJKLMNOPQRSTUVWXYZ".
 
 Part 1 - Declarations
 
@@ -73,9 +74,8 @@ A person has a number called Clit Size. Clit Size is usually 3.
 A person has a number called Asshole Depth. Asshole Depth is usually 9.
 A person has a number called Asshole Tightness. Asshole Tightness is usually 2.
 
-A person has a text called linkaction.
 A person has a text called MainInfection. MainInfection is usually "Human". [just to have something valid in this, the variable should be overwritten for every NPC]
-A person has a text called ImpregFunction. ImpregFunction is usually "".[@Tag:NotSaved][just to have something valid in this, the variable should be overwritten for every NPC]
+A person has a text called ImpregFunction. ImpregFunction is usually "".[@Tag:NotSaved] [just to have something valid in this, the variable should be overwritten for every NPC]
 A person has a text called LastSexualPartner.[@Tag:NotSaved]
 A person has a text called FirstAnalPartner.
 A person has a text called FirstVaginalPartner.
@@ -97,7 +97,6 @@ A person has a text called PlayerOriginalgender. PlayerOriginalGender is usually
 A person has a text called PlayerLastGender. PlayerLastGender is usually "Undefined". [gender of the player during the last meeting]
 A person has a text called PlayerLastBodytype. PlayerLastBodytype is usually "Undefined". [bodytype of the player during the last meeting]
 
-
 A person has a truth state called OralVirgin. OralVirgin is usually true.
 A person has a truth state called Virgin. Virgin is usually true.
 A person has a truth state called AnalVirgin. AnalVirgin is usually true.
@@ -112,27 +111,25 @@ A person has a list of text called Traits. [list of traits/memories, invisible t
 
 A person can be a trader.
 
-
-
 Chapter 2 - The Player Object
 
 [ Player is predefined in Inform7, we're giving it more variables here ]
 
 Section 1 - Basics
 
+The player is in Bunker.
+[The invent of Player is { "journal" }. [starting item]]
+The player is wearing a backpack. Description of the backpack is "A backpack, full of stuff. To look inside, type [bold type]item[roman type] To look at an item, type [bold type]look (item name)[roman type] To use an item, type [bold type]use (item name)[roman type]. Do you see something in the room you want to take with you? Type [bold type]grab (item name)[roman type] to snatch it up.".
+The player is wearing a watch.
+
+instead of examining a watch:
+	say "Time Remaining: [( turns minus targetturns ) divided by 8] days, [( remainder after dividing ( turns minus targetturns ) by 8 ) times 3] hours. It is currently [time of day].";
+
 Player has text called name. The name of Player is usually "Player".
 
 Player has a text called weapon. Weapon is usually "[one of]your quick wit[or]your fists[or]a quick kick[or]your body[or]some impromptu wrestling[or]an unarmed strike[at random]".
 Player has a text called weapon type. Weapon type is usually "Melee".
 Player has a grab object called weapon object. A weapon object is usually journal.
-The invent of Player is { "journal" }. [starting item]
-
-The player is wearing a backpack. Description of the backpack is "A backpack, full of stuff. To look inside, type [bold type]item[roman type] To look at an item, type [bold type]look (item name)[roman type] To use an item, type [bold type]use (item name)[roman type]. Do you see something in the room you want to take with you? Type [bold type]grab (item name)[roman type] to snatch it up.".
-
-The player is wearing a watch.
-
-instead of examining a watch:
-	say "Time Remaining: [( turns minus targetturns ) divided by 8] days, [(remainder after dividing ( turns minus targetturns ) by 8 ) times 3] hours. It is currently [time of day].";
 
 Player has a list of text called Feats. [list of feats, visible to Player]
 Player has a list of text called EncounteredEnemies. [running list of all creatures encountered]
@@ -163,9 +160,9 @@ Player has a number called BehaviorCount_Vore.
 
 to say Player name:
 	if name of Player is "Player":
-		say("Alias D");
+		say "Alias D";
 	else:
-		say("[name of Player]");
+		say "[name of Player]";
 
 Section 2 - Body Parts
 
@@ -291,10 +288,9 @@ A creature has a text called TailSpeciesName. TailSpeciesName is usually "Human"
 A creature has a text called CockSpeciesName. CockSpeciesName is usually "Human".
 A creature has a text called CuntSpeciesName. CuntSpeciesName is usually "Human".
 
-
 Part 2 - Definitions
 
-Chapter 0 - General
+Chapter 1 - General
 
 A person can be defaultnamed. A person is usually defaultnamed.
 
@@ -308,7 +304,7 @@ Definition: A person (called x) is asleep:
 	if Sleeping of x is true, yes;
 	no;
 
-Chapter 1 - Equipment Based
+Chapter 2 - Equipment Based
 
 Definition: A person (called x) is barefoot:
 	repeat with z running through equipped equipment:
@@ -340,19 +336,19 @@ Definition: A person (called x) is gimpy:
 	else:
 		no;
 
-Chapter 2 - Location Based
+Chapter 3 - Location Based
 
 A person can be collected. A person is usually not collected.
 
 Definition: A person (Called x) is collected:
-	If x is booked, yes;
+	if x is booked, yes;
 	if x is bunkered, yes;
 	no;
 
 A person can be booked. A person is usually not booked.
 
 Definition: A person (Called x) is booked:
-	If x is Trixie, no;
+	if x is Trixie, no;
 	if x is Velos, no;
 	if x is Help Book, no;
 	if the location of x is Grey Abbey Library, yes;
@@ -377,7 +373,7 @@ Definition: A person (Called x) is booked:
 A person can be bunkered. A person is usually not bunkered.
 
 Definition: A person (Called x) is bunkered:
-	If x is Trixie, no;
+	if x is Trixie, no;
 	if x is Velos, no;
 	if x is Help Book, no;
 	if the location of x is Bunker, yes;
@@ -394,7 +390,7 @@ Definition: A person (Called x) is slutstored:
 	if printed name of x is listed in StoredSluts_Other, yes;
 	no;
 
-Chapter 3 - Gender & Sexuality Based
+Chapter 4 - Gender & Sexuality Based
 
 Definition: A person (called x) is male:			[note: this is both male and herm]
 	if Cock Count of x > 0, yes;
@@ -487,7 +483,7 @@ Definition: A person (called x) is CoA:
 	else:
 		no;
 
-Chapter 4 - Infection Based
+Chapter 5 - Infection Based
 
 Definition: A person (called x) is conformist: [follows the infection in all details - new infection system]
 	if "Conformist" is listed in feats of x:
@@ -614,20 +610,20 @@ Definition: A person (called x) is purehuman:
 		no;
 
 Definition: A person (called x) is perminfected:
-	if ( JackalManTF > 0 or JackalBoyTF > 0 ) or nightmaretf > 0 or HellHoundlevel > 0 or ( wrcursestatus >= 7 and wrcursestatus < 100 ), yes;
+	if (JackalManTF > 0 and JackalManTF < 5) or JackalBoyTF > 0, yes;
+	if nightmaretf > 0, yes;
+	if HellHoundlevel > 0 and isHellhound is true, yes;
+	if wrcursestatus >= 7 and wrcursestatus < 100, yes;
+	if "Ceryneian Blessed - Anthro" is listed in traits of Player or "Ceryneian Blessed - Feral" is listed in traits of Player or "Ceryneian Blessed - Taur" is listed in traits of Player, yes;
 	no;
 
 A person can be internalcock. A person is usually not internalcock.
-
-internalcockbypass is a truth state that varies. internalcockbypass is usually false.
 
 Definition: A person (called x) is internalcock:
 	if CockName of x is listed in infections of InternalCockList and internalcockbypass is false, yes;
 	no;
 
 A person can be internalBalls. A person is usually not internalBalls.
-
-internalBallsBypass is a truth state that varies. internalBallsBypass is usually false.
 
 Definition: A person (called x) is internalBalls:
 	if CockName of x is listed in infections of InternalBallsList and internalBallsBypass is false, yes;
@@ -808,7 +804,6 @@ Definition: A person (called x) is TorsoSkinned:
 	if x is TorsoFurred, no;
 	yes;
 
-
 A person can be ArmsFurred. A person is usually not ArmsFurred.
 
 Definition: A person (called x) is ArmsFurred:
@@ -904,7 +899,6 @@ Definition: A person (called x) is LegsSkinned:
 	if x is LegsFeathered, no;
 	if x is LegsFurred, no;
 	yes;
-
 
 A person can be AssFurred. A person is usually not AssFurred.
 
@@ -1104,7 +1098,6 @@ Definition: A person (called x) is HasLegsSkinAdjective:
 	if Legs Skin Adjective of x is not "", yes;
 	no;
 
-
 A person can be HasAssSkinAdjective. A person is usually not HasAssSkinAdjective.
 
 Definition: A person (called x) is HasAssSkinAdjective:
@@ -1154,7 +1147,6 @@ Definition: A person (called x) is sliding:
 	no;
 
 Part 3 - Descriptive Elements
-
 
 to say Body Size Adjective of ( x - a person ):
 	if scalevalue of x is 1: [~3 ft in height or less]
@@ -1276,67 +1268,41 @@ to say Ass Shape Adjective of ( x - a person ):
 
 to say Ass Width Adjective of ( x - a person ):
 	if Ass Width of X is:
-		-- 1:
-			say "dainty";
-		-- 2:
-			say "small";
-		-- 3:
-			say "round";
-		-- 4:
-			say "huge";
-		-- 5:
-			say "enormous";
+		-- 1: say "dainty";
+		-- 2: say "small";
+		-- 3: say "round";
+		-- 4: say "huge";
+		-- 5: say "enormous";
 
 to say Gender Adjective of ( x - a person ):
 	if Androginity of x is:
-		-- 1:
-			say "hypermasculine";
-		-- 2:
-			say "[one of]masculine[or]manly[at random]";
-		-- 3:
-			say "somewhat effeminate";
-		-- 4:
-			say "effeminate";
-		-- 5:
-			say "androgynous";
-		-- 6:
-			say "feminine butch";
-		-- 7:
-			say "tomboyish";
-		-- 8:
-			say "[one of]feminine[or]womanly[or]ladylike[at random]";
-		-- 9:
-			say "hyperfeminine";
+		-- 1: say "hypermasculine";
+		-- 2: say "[one of]masculine[or]manly[at random]";
+		-- 3: say "somewhat effeminate";
+		-- 4: say "effeminate";
+		-- 5: say "androgynous";
+		-- 6: say "feminine butch";
+		-- 7: say "tomboyish";
+		-- 8: say "[one of]feminine[or]womanly[or]ladylike[at random]";
+		-- 9: say "hyperfeminine";
 
 to say Body Hair Adjective of ( x - a person ): [used in "He touches your [Body Hair Adjective of Player] chest."]
 	if Body Hair Length of x is:
-		-- 0:
-			say "nonexistent";
-		-- 1:
-			say "smooth";
-		-- 2:
-			say "[one of]slightly hairy[or]lightly fuzzed[at random]";
-		-- 3:
-			say "[one of]somewhat hairy[or]moderately hairy[at random]";
-		-- 4:
-			say "[one of]hairy[or]thickly fuzzed[at random]";
-		-- 5:
-			say "[one of]very hairy[or]almost furry[at random]";
+		-- 0: say "nonexistent";
+		-- 1: say "smooth";
+		-- 2: say "[one of]slightly hairy[or]lightly fuzzed[at random]";
+		-- 3: say "[one of]somewhat hairy[or]moderately hairy[at random]";
+		-- 4: say "[one of]hairy[or]thickly fuzzed[at random]";
+		-- 5: say "[one of]very hairy[or]almost furry[at random]";
 
 to say Body Hair Description of ( x - a person ): [used in "You have a broad, [Torso Color of Player] chest with [Body Hair Description]."]
 	if Body Hair Length of x is:
-		-- 0:
-			say "ERROR: This infection should not show a body hair description! Please report how you saw this on the FS Discord.";
-		-- 1:
-			say "smooth skin";
-		-- 2:
-			say "[one of]light body hair[or]a light fuzz of hair[or]a little body hair[at random]";
-		-- 3:
-			say "[one of]moderate body hair[or]a moderate fuzz of hair[or]a moderate amount of body hair[at random]";
-		-- 4:
-			say "[one of]heavy body hair[or]thick body hair[or]a large amount of body hair[at random]";
-		-- 5:
-			say "[one of]furry body hair[or]a whole lot of body hair[or]a fur-like amount of hair[at random]";
+		-- 0: say "ERROR: This infection should not show a body hair description! Please report how you saw this on the FS Discord.";
+		-- 1: say "smooth skin";
+		-- 2: say "[one of]light body hair[or]a light fuzz of hair[or]a little body hair[at random]";
+		-- 3: say "[one of]moderate body hair[or]a moderate fuzz of hair[or]a moderate amount of body hair[at random]";
+		-- 4: say "[one of]heavy body hair[or]thick body hair[or]a large amount of body hair[at random]";
+		-- 5: say "[one of]furry body hair[or]a whole lot of body hair[or]a fur-like amount of hair[at random]";
 
 to say Limbs Adjective of ( x - a person ):
 	if Body Weight of x < 4: [low weight group]
@@ -1361,7 +1327,6 @@ to say Limbs Adjective of ( x - a person ):
 		else: [high muscle group]
 			say "rippling";
 
-
 [ TODO - Coding Idea: Body changes at high noon]
 [ Hunger < 20: -1 weight; Hunger > 80: +1 weight]
 [ Definition - Working out at the fitness studio]
@@ -1380,59 +1345,34 @@ to say Mouth Length Adjective of ( x - a person ):
 
 to say Mouth Circumference Adjective of ( x - a person ):
 	if Mouth Circumference of x is:
-		-- 1:
-			say "thin";
-		-- 2:
-			say "small";
-		-- 3:
-			say "normal";
-		-- 4:
-			say "wide";
-		-- 5:
-			say "gaping";
+		-- 1: say "thin";
+		-- 2: say "small";
+		-- 3: say "normal";
+		-- 4: say "wide";
+		-- 5: say "gaping";
 
 to say Breast Size Description of ( x - a person ):
 	if Breast Size of x is:
-		-- 0:
-			say "flat";
-		-- 1:
-			say "A cup";
-		-- 2:
-			say "B cup";
-		-- 3:
-			say "C cup";
-		-- 4:
-			say "D cup";
-		-- 5:
-			say "DD cup";
-		-- 6:
-			say "DDD cup";
-		-- 7:
-			say "DDDD cup";
-		-- 8:
-			say "H cup";
-		-- 9:
-			say "I cup";
-		-- 10:
-			say "J cup";
-		-- 11:
-			say "K cup";
-		-- 12:
-			say "L cup";
-		-- 13:
-			say "M cup";
-		-- 14:
-			say "N cup";
-		-- 15:
-			say "O cup";
-		-- 16:
-			say "P cup";
-		-- 17:
-			say "Q cup";
-		-- 18:
-			say "R cup";
-		-- 19:
-			say "S cup";
+		-- 0: say "flat";
+		-- 1: say "A cup";
+		-- 2: say "B cup";
+		-- 3: say "C cup";
+		-- 4: say "D cup";
+		-- 5: say "DD cup";
+		-- 6: say "DDD cup";
+		-- 7: say "DDDD cup";
+		-- 8: say "H cup";
+		-- 9: say "I cup";
+		-- 10: say "J cup";
+		-- 11: say "K cup";
+		-- 12: say "L cup";
+		-- 13: say "M cup";
+		-- 14: say "N cup";
+		-- 15: say "O cup";
+		-- 16: say "P cup";
+		-- 17: say "Q cup";
+		-- 18: say "R cup";
+		-- 19: say "S cup";
 
 to say Asshole Depth Adjective of ( x - a person ):
 	if Asshole Depth of x < 3: [inches deep]
@@ -1448,48 +1388,30 @@ to say Asshole Depth Adjective of ( x - a person ):
 
 to say Asshole Tightness Adjective of ( x - a person ):
 	if Asshole Tightness of x is:
-		-- 1:
-			say "extremely tight";
-		-- 2:
-			say "tight";
-		-- 3:
-			say "receptive";
-		-- 4:
-			say "open";
-		-- 5:
-			say "gaping";
+		-- 1: say "extremely tight";
+		-- 2: say "tight";
+		-- 3: say "receptive";
+		-- 4: say "open";
+		-- 5: say "gaping";
 
 to say Cock Girth Adjective of ( x - a person ):
 	if Cock Girth of x is:
-		-- 1:
-			say "thin";
-		-- 2:
-			say "slender";
-		-- 3:
-			say "average";
-		-- 4:
-			say "thick";
-		-- 5:
-			say "monstrous";
+		-- 1: say "thin";
+		-- 2: say "slender";
+		-- 3: say "average";
+		-- 4: say "thick";
+		-- 5: say "monstrous";
 
 to say Ball Size Adjective of ( x - a person ):
 	if Ball Size of x is:
-		-- 0:
-			say "nonexistent";
-		-- 1:
-			say "[one of]acorn-sized[or]gumball-sized[at random]";
-		-- 2:
-			say "dove egg-sized";
-		-- 3:
-			say "chicken egg-sized";
-		-- 4:
-			say "goose-egg sized";
-		-- 5:
-			say "ostrich-egg sized";
-		-- 6:
-			say "basketball-sized";
-		-- 7:
-			say "beachball-sized";
+		-- 0: say "nonexistent";
+		-- 1: say "[one of]acorn-sized[or]gumball-sized[at random]";
+		-- 2: say "dove egg-sized";
+		-- 3: say "chicken egg-sized";
+		-- 4: say "goose egg-sized";
+		-- 5: say "ostrich egg-sized";
+		-- 6: say "basketball-sized";
+		-- 7: say "beachball-sized";
 
 to say Cunt Tightness Adjective of ( x - a person ):
 	if Cunt Tightness of x < 4: [inches circumference]
@@ -1505,21 +1427,22 @@ to say Cunt Tightness Adjective of ( x - a person ):
 
 to say Clit Size Adjective of ( x - a person ):
 	if Clit Size of x is:
-		-- 0:
-			say "nonexistent";
-		-- 1:
-			say "[one of]very small[or]tiny[at random]";
-		-- 2:
-			say "small";
-		-- 3:
-			say "[one of]average[or]mid-sized[or]well sized[at random]";
-		-- 4:
-			say "[one of]large[or]big[or]above average[at random]";
-		-- 5:
-			say "[one of]very large[or]very big[or]huge[at random]";
-
+		-- 0: say "nonexistent";
+		-- 1: say "[one of]very small[or]tiny[at random]";
+		-- 2: say "small";
+		-- 3: say "[one of]average[or]mid-sized[or]well sized[at random]";
+		-- 4: say "[one of]large[or]big[or]above average[at random]";
+		-- 5: say "[one of]very large[or]very big[or]huge[at random]";
 
 This is the brain descr rule:
+	let lusting be " thoughts.";
+	if Libido of Player > 80:
+		let RandomCreature be a random number from 1 to number of entries in EncounteredEnemies of Player;
+		now lusting is " thoughts. You are almost entirely subsumed with a random thought of [one of]fucking[or]being fucked by[at random] [a entry RandomCreature of EncounteredEnemies of Player in lower case] [one of]wildly[or]slowly[or]for hours[or]forever[or]until you pass out[at random], the daydream distracting you for half an hour.";
+	else if Libido of Player > 40:
+		now lusting is " thoughts. You are [one of]distracted by doodling a big breasted monster[or]distracted by doodling a big cocked monster[or]distracted by taking a moment to rub at yourself[at random].";
+	else if Libido of Player > 20:
+		now lusting is " thoughts. You are riddled with occasionally dirty lapses.";
 	if humanity of Player > 90:
 		now descr is "[one of]clean[or]pristine[or]perfectly normal[at random][lusting]";
 	else if humanity of Player > 70:
@@ -1539,14 +1462,6 @@ This is the brain descr rule:
 			now descr is "increasingly corrupted perspective[lusting]";
 	else:
 		now descr is "almost entirely subsumed[lusting]";
-	if Libido of Player < 21, now lusting is " thoughts.";
-	if Libido of Player > 80:
-		let RandomCreature be a random number from 1 to number of entries in EncounteredEnemies of Player;
-		now lusting is " thoughts. You are almost entirely subsumed with a random thought of [one of]fucking[or]being fucked by[at random] [a entry RandomCreature of EncounteredEnemies of Player in lower case] [one of]wildly[or]slowly[or]for hours[or]forever[or]until you pass out[at random], the daydream distracting you for half an hour.";
-	else if Libido of Player > 40:
-		now lusting is " thoughts. You are [one of]distracted by doodling a big breasted monster[or]distracted by doodling a big cocked monster[or]distracted by taking a moment to rub at yourself[at random].";
-	else if Libido of Player > 20:
-		now lusting is " thoughts. You are riddled with occasionally dirty lapses.";
 
 This is the breast descr rule:
 	if Breast Size of Player < 1:
@@ -1584,15 +1499,15 @@ This is the cock descr rule:
 	if Cock Length of Player < 3:
 		now descr is "[one of]tiny[or]very small[or]puny[at random]";
 	else if Cock Length of Player < 6:
-		now descr is "[one of]smaller than average[or]small[or]below average[at random]";
+		now descr is "[one of]smaller than average[or]small[or]below-average[at random]";
 	else if Cock Length of Player < 8:
-		now descr is "[one of]average in size[or]normal-sized[at random]";
+		now descr is "[one of]average-in-size[or]normal-sized[at random]";
 	else if Cock Length of Player < 12:
-		now descr is "[one of]large[or]sizable[or]well-built[or]longer than average[at random]";
-	else if Cock Length of Player is 12:
-		now descr is "foot long";
+		now descr is "[one of]large[or]sizable[or]well-built[or]above-average[at random]";
+	else if Cock Length of Player < 14:
+		now descr is "footlong";
 	else if Cock Length of Player < 18:
-		now descr is "[one of]huge[or]heavy[or]ponderous[or]massive[or]forearm length[at random]";
+		now descr is "[one of]huge[or]heavy[or]ponderous[or]massive[or]forearm-length[at random]";
 	else if Cock Length of Player < 25:
 		now descr is "[one of]giant[or]hulking[or]hypertrophied[or]elephantine[or]monstrous[or]towering[at random]";
 	else:
@@ -1604,21 +1519,14 @@ to say Balls:
 	say "[one of]balls[or]testicles[or]gonads[at random]";
 
 to say Cum Load Size of ( x - a person ):
-	if Ball Size of x > 0:
-		if Ball Size of x is 1:
-			say "[one of]piddling[or]tiny[or]minuscule[or]feeble[or]small[or]meager[at random]";
-		else if Ball Size of x is 2:
-			say "[one of]average[or]normal-sized[or]fair-sized[or]moderate[or]adequate[or]regular-sized[at random]";
-		else if Ball Size of x is 3:
-			say "[one of]triple-dose[or]half-cup[or]cupful[or]ample[or]above-average[or]generous[or]sizable[at random]";
-		else if Ball Size of x is 4:
-			say "[one of]half-liter[or]considerable[or]impressive[or]pint-full[or]copious[or]substantial[or]large[or]abundant[or]plentiful[at random]";
-		else if Ball Size of x is 5:
-			say "[one of]one-liter[or]flowing[or]heavy[or]quart-sized[or]drenching[or]jumbo[or]whopping[at random]";
-		else if Ball Size of x is 6:
-			say "[one of]two-liter[or]half-gallon[or]giant[or]huge[or]blasting[or]enormous[or]immense[at random]";
-		else if Ball Size of x > 6:
-			say "[one of]overflowing[or]bucket-filling[or]excessive[or]gushing[or]massive[at random]";
+	if Ball Size of x is:
+		-- 1: say "[one of]piddling[or]tiny[or]minuscule[or]feeble[or]small[or]meager[at random]";
+		-- 2: say "[one of]average[or]normal-sized[or]fair-sized[or]moderate[or]adequate[or]regular-sized[at random]";
+		-- 3: say "[one of]triple-dose[or]half-cup[or]cupful[or]ample[or]above-average[or]generous[or]sizable[at random]";
+		-- 4: say "[one of]half-liter[or]considerable[or]impressive[or]pint-full[or]copious[or]substantial[or]large[or]abundant[or]plentiful[at random]";
+		-- 5: say "[one of]one-liter[or]flowing[or]heavy[or]quart-sized[or]drenching[or]jumbo[or]whopping[at random]";
+		-- 6: say "[one of]two-liter[or]half-gallon[or]giant[or]huge[or]blasting[or]enormous[or]immense[at random]";
+		-- 7: say "[one of]overflowing[or]bucket-filling[or]excessive[or]gushing[or]massive[at random]";
 
 This is the cunt descr rule:
 	if Cunt Depth of Player < 3:
@@ -1630,7 +1538,7 @@ This is the cunt descr rule:
 	else if Cunt Depth of Player < 12:
 		now descr is "[one of]large[or]thick-lipped[or]above average[at random]";
 	else if Cunt Depth of Player < 18:
-		now descr is "[one of]belly bulgingly huge[or]inhumanly deep[or]forearm length[at random]";
+		now descr is "[one of]belly-bulgingly huge[or]inhumanly deep[or]forearm-sized[at random]";
 	else if Cunt Depth of Player < 25:
 		now descr is "[one of]titanic[or]astonishingly deep[or]elephantine[at random]";
 	else:
@@ -1641,20 +1549,18 @@ This is the cunt descr rule:
 Part 4 - Actions
 
 [This is generally not used and bypassed by an "instead of conversing" - talk menus are more useful]
+Conversing is an action applying to one thing.
 understand "talk to/with/-- [person]" as conversing.
 understand "chat with/-- [person]" as conversing.
 
-Conversing is an action applying to one thing.
-
 Check Conversing:
 	if the noun is the player, say "I know this is stressful, but talking to yourself will not help." instead;
-	if the number of entries in conversation of noun is 0, say "They have nothing to say." instead.
+	if conversation of noun is empty, say "They have nothing to say." instead;
 
 carry out conversing:
+	if icon of noun is not Figure of pixel:
+		project icon of noun;
 	sort conversation of the noun in random order;
-	repeat with comment running through conversation of the noun:
-		say "     [Noun] says, '[Comment]'[line break]";
-		break;
-
+	say "     [Noun] says, '[entry 1 of conversation of noun]'[line break]";
 
 Characters ends here.

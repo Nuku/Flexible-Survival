@@ -9,23 +9,33 @@ Section 1 - Creature Responses
 
 dronevict is a number that varies.
 
+to say losetodrone:
+	if a random chance of 1 in 3 succeeds:
+		say "     The drone pins you down to the ground and grins, forcing your lips against her sex as she rubs her small mound against you. She moans softly as you're forced to pleasure her, lapping along her slick honeypot until she finally cums. Satisfied, the wasp giggles to herself and flies off as quickly as she came.";
+		CreatureSexAftermath "Player" receives "OralPussy" from "Drone Wasp";
+	else:
+		say "     The drone [one of]slips her lips onto yours, kissing deeply as she lets a small amount of honey in her mouth slip into your own[or]flies around happily before fluttering off to brag to her sisters[at random].";
+
 to say beatthedrone:
-	if dronevict > 2 and Libido of Player > 33 and a random chance of dronevict in 5 succeeds and ( Player is not neuter ):
-		say "     Having knocked down the wasp girl, you make a grab for her before she can get away. Now that you've caught this cute little thing, you need to decide what you'll do with her. Shall you put her honeyed lips to work or just let her go?";
+	if dronevict > 2 and Libido of Player > 33 and a random chance of dronevict in 5 succeeds and Player is not neuter:
+		say "     Having knocked down the wasp girl, you make a grab for her before she can get away. Now that you've caught this cute little thing, you need to decide what you'll do with her. Shall you put her [link]honeyed lips to work (Y)[as]y[end link] or just [link]let her go (N)[as]n[end link]?";
 		if Player consents:
+			LineBreak;
 			if Player is male:
-				say "     Pulling out your stiffening cock, you bring her head forward. While she was worried at first, she grins at the sight of your [Cock of Player] erection and brings her soft lips to kiss and suck at it[if Cock Length of Player > 17]. The girlish wasp has trouble dealing with your [cock size desc of Player] member, contenting herself with stroking, licking and kissing at it until you cum all over her face. She swallows down as much of your load as she can before fluttering off with[else]. The girlish wasp strokes, kisses and licks at your [cock size desc of Player] cock before sliding her sweet lips down over it. She sucks it greedily until you cum, shooting your load down her throat. After getting your tasty treat, she flutters off with[end if] [if Ball Size of Player > 4]her tummy so bloated with your excessive semen that she can hardly fly[else]a full tummy[end if].";
-				increase Libido of Player by 8;
-				decrease dronevict by 1;
+				say "     Pulling out your stiffening cock, you bring her head forward. While she was worried at first, she grins at the sight of your [Cock of Player] erection and brings her soft lips to kiss and suck at it. The girlish wasp [if Cock Length of Player > 17]has trouble dealing with your [cock size desc of Player] member, contenting herself with stroking, licking and kissing at it until you cum all over her face. She swallows down as much of your load as she can before fluttering[else]strokes, kisses and licks at your [cock size desc of Player] cock before sliding her sweet lips down over it. She sucks it greedily until you cum, shooting your load down her throat. After getting your tasty treat, she flutters[end if] off with [if Ball Size of Player > 4]her tummy so bloated with your excessive semen that she can hardly fly[else]a full tummy[end if].";
+				if Cock Length of Player < 18:
+					CreatureSexAftermath "Drone Wasp" receives "OralCock" from "Player";
 			else:
 				say "     Rubbing your hand over your wet pussy, you bring her head forward. While she was worried at first, she smiles at the sight of your juicy flower and brings her soft lips to lick and kiss at it. The girlish wasp lavishes attention on you, clearly having had lots of practice with her hive sisters. You stroke her hair and enjoy the delightful attention before finally cumming, soaking her face and your thighs in your juices. She laps as much of your feminine cum as she can get before fluttering off with a happy buzz.";
-				increase Libido of Player by 8;
-				decrease dronevict by 1;
+				CreatureSexAftermath "Drone Wasp" receives "OralPussy" from "Player";
+			lower Player Libido by 8;
+			decrease dronevict by 1;
 		else:
+			LineBreak;
 			say "     Deciding it'd be best to send the little pest on her way, you lift her wasp-like abdomen, give her a spank on the ass and send her fluttering off. She sniffles like a punished little girl as she buzzes away.";
 			now dronevict is 0;
 	else:
-		say "[one of]The drone flutters off with a tattered wing, crying as she flies away, leaving you with a slight sense of guilt.[or]The drone falls to the ground and begins to cry. Hearing buzzing nearby, you quickly run away before another wasp catches wind of you.[at random]";
+		say "     The drone [one of]flutters off with a tattered wing, crying as she flies away, leaving you with a slight sense of guilt[or]falls to the ground and begins to cry. Hearing buzzing nearby, you quickly run away before another wasp catches wind of you[at random].";
 		if dronevict < 5, increase dronevict by 1;
 
 Section 2 - Creature Insertion
@@ -51,6 +61,7 @@ When Play begins:
 	add "Drone Wasp" to infections of FemaleList;
 	add "Drone Wasp" to infections of TaperedCockList;
 	add "Drone Wasp" to infections of InternalCockList;
+	add "Drone Wasp" to infections of InternalBallsList;
 	add "Drone Wasp" to infections of BipedalList;
 	add "Drone Wasp" to infections of FlightList;
 	add "Drone Wasp" to infections of TailList;
@@ -60,17 +71,17 @@ When Play begins:
 	now enemy title entry is ""; [ Name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name. ]
 	now enemy Name entry is ""; [ Specific name of unique enemy. ]
 	now enemy type entry is 0; [ 0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters. ]
-	now attack entry is "[one of]The drone attacks with its small claws, leaving tiny furrows that sting slightly.[or]The drone dive bombs through the air with its stinger at the ready, spreading its venom into your body, causing you to shudder in pain and lust.[or]The drone flies in close and hugs you, not harming you but seeming to gaze longingly into your eyes.[at random]";
+	now attack entry is "The drone [one of]attacks with her small claws, leaving tiny furrows that sting slightly[or]dive bombs through the air with her stinger at the ready, spreading her venom into your body, causing you to shudder in pain and lust[or]flies in close and hugs you, not harming you but seeming to gaze longingly into your eyes[at random].";
 	now defeated entry is "[beatthedrone]";
-	now victory entry is "[one of]The drone slips her lips onto yours, kissing deeply as she lets a small amount of honey in her mouth slip into your own.[or]The drone flies around happily before fluttering off to brag to her sisters.[or]The drone pins you down to the ground and grins, forcing your lips against her sex as she rubs her small mound against you. She moans softly as you're forced to pleasure her, lapping along her slick honeypot until she finally cums. Satisfied, the wasp giggles to herself and flies off as quickly as she came.[at random]";
-	now desc entry is "     A small, shy of four feet, wasp-like girl with delicate, buzzing wings on her back. Her skin is yellow with brown markings and a short, soft layer of fuzz. Her hands have only three fingers and small claws at the end of each digit. Out of her rear extends her wasp-like abdomen with a small stinger on the end. Her face is mostly human with cute, short, brown/blond hair. She looks at you with a soft smile on her lips, buzzing left and right.";
+	now victory entry is "[losetodrone]";
+	now desc entry is "     A small, shy of four feet, wasp-like girl with delicate, buzzing wings on her back. Her skin is yellow with brown markings and a short, soft layer of fuzz. Her hands have only three fingers and small claws at the end of each digit. Out of her rear extends her wasp-like abdomen with a small stinger on the end. Her face is mostly human with cute, short, brown/blond hair. She looks at you with a soft smile on her lips, buzzing left and right.[line break]";
 	now face entry is "charmingly human"; [ Face description, format as "Your face is [Face of Player]." ]
 	now body entry is "largely human, except for the new abdomen protruding from your rump, sporting a new stinger. You are also a lot shorter, shy of four feet at best"; [ Body description, format as "Your body is [Body of Player]." ]
 	now skin entry is "black and brown striped"; [ Skin. Format as "Looking at yourself, your body is covered in [Skin of Player] skin." ]
 	now tail entry is ""; [ Ass/Tail. Write as a full sentence (with period) or leave blank for none. ]
 	now cock entry is "normal"; [ Cock. Format as "You have a 'size' [Cock of Player] cock." ]
-	now face change entry is "your face tingles softly, but not much physically changes from the human norm, except that it is now cute and female looking"; [ Face TF text. Format as "Your face tingles as [face change entry]." ]
-	now body change entry is "you feel a bulging from your bottom that expands out to a whole new segment of body, a stinger slipping free"; [ Body TF text, format as "Your body tingles as [body change entry]. ]
+	now face change entry is "it shifts, but not much physically changes from the human norm, except that it is now cute and female looking"; [ Face TF text. Format as "Your face tingles as [face change entry]." ]
+	now body change entry is "you feel a bulging from your bottom that expands out to a whole new segment of your body, a stinger slipping free"; [ Body TF text, format as "Your body tingles as [body change entry]. ]
 	now skin change entry is "your skin changes color, changing to yellow and brown, the striped markings covering your body"; [ Skin TF text, format as "Your skin tingles as [skin change entry]. ]
 	now ass change entry is "you feel something internal shifting around"; [ Ass/Tail TF text, format as "Your ass tingles as [tail change entry]." ]
 	now cock change entry is "you feel something internal shifting around"; [ Cock TF text, format as "Your groin tingles as [cock change entry]." ]
@@ -214,9 +225,6 @@ When Play begins:
 	[Clit Size Adjective is generated by a function and can be used in scenes: very small/small/average/large/very large]
 ]
 
-
-
-
 Section 3 - Endings
 
 Table of GameEndings (continued)
@@ -231,12 +239,11 @@ This is the Drone Wasp Infection rule:
 				make no decision;
 			say "     Hearing a faint buzzing in your mind, you are drawn back to the park. There you meet up with several others from the wasp nest and join them, lustfully giving yourself over to the pleasure of your insectile bodies. You go along with them, following the buzzing sound you're sensing back to the nest which has been set up in one of the park maintenance buildings. There you enjoy a pleasant life of work and sex with the other beautiful wasps.";
 		else:
-			say "     Your unusual body is analyzed by the military scientists, but you are given little concern. You do happen to befriend a helicopter pilot, chatting with him while you're in a waiting area, and he's come in with reports after another extraction. He chats with you for a while and even visits you a few times at the compound where you're being held with a large group of others";
-			if Player is female:
-				say ". Claiming that you've been called over for consulting on some of the areas you witnessed in the city, he manages to get some alone time with you in his chopper one evening. There he makes sweet love to you, a wonderfully exciting time with the risk of being caught looming over you to make it all the more invigorating.";
+			if Player is female or "MPreg" is listed in feats of Player:
+				say "     Your unusual body is analyzed by the military scientists, but you are given little concern. You do happen to befriend a helicopter pilot, chatting with him while you're in a waiting area, and he's come in with reports after another extraction. He chats with you for a while and even visits you a few times at the compound where you're being held with a large group of others. Claiming that you've been called over for consulting on some of the areas you witnessed in the city, he manages to get some alone time with you in his chopper one evening. There he makes sweet love to you, a wonderfully exciting time with the risk of being caught looming over you to make it all the more invigorating.";
 				say "     But at the moment of climax, you instinctively sting him. You apologize profusely, and after his initial anger wears off, he kisses you and promises he'll not tell anyone. He quickly makes up a plan to claim he'd gotten stung on his next mission. Keeping his helmet on over his growing antennae and his fatigues over the chitin covering his legs, he returns you to the compound.";
-				say "     When he does not return from his next mission, fallen prey to the drone wasps drawn to his altered body, you are heartbroken. The only solace you can find is that he joined the wasps he found so sexy and is probably very happy with them. To assuage your guilt, you join the military's air force, training to be a helicopter pilot to replace the one you cost them through your foolishness. You are much more cautious in the future, and even after being rendered non-infectious, you make sure to get regular treatments to prevent it from ever happening again. The child he gave you that one night grows up to become a lovely wasp girl who turns the heads of all the boys at the military academy.";
+				say "     When he does not return from his next mission, fallen prey to the drone wasps drawn to his altered body, you are heartbroken. The only solace you can find is that he joined the wasps he found so sexy and is probably very happy with them. To assuage your guilt, you join the military's air force, training to be a helicopter pilot to replace the one you cost them through your foolishness. You are much more cautious in the future, and even after being rendered non-infectious, you make sure to get regular treatments to prevent it from ever happening again[if Player is not sterile]. The child he gave you that one night grows up to become a lovely wasp girl who turns the heads of all the boys at the military academy[end if].";
 			else:
-				say ". You become fast friends and he convinces you to join the military. Becoming a gunner, you join his helicopter crew, helping to defend your friend on his missions into infected zones.";
+				say "     Your unusual body is analyzed by the military scientists, but you are given little concern. You do happen to befriend a helicopter pilot, chatting with him while you're in a waiting area, and he's come in with reports after another extraction. He chats with you for a while and even visits you a few times at the compound where you're being held with a large group of others. You become fast friends and he convinces you to join the military. Becoming a gunner, you join his helicopter crew, helping to defend your friend on his missions into infected zones.";
 
 Drone Wasp ends here.

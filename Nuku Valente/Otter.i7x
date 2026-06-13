@@ -5,7 +5,7 @@ Version 2 of Otter by Nuku Valente begins here.
 
 Section 1 - Creature Responses
 
-Otterdefeat is a number that varies.
+[Otterdefeat is a number that varies.]
 Otterconsent is a number that varies.
 
 [Summary of the dancing around the flags:
@@ -19,35 +19,33 @@ If both guy and girl are banned, then they will show as normal during combat.
 If both guy and FemaleList is banned, a special case is reached, with a unique herm otter coming in for the sex.
 If guy, girl and hermaphrodite are banned, the player will be punished.]
 
-to say otterdesc:
-	say "     Not one, but a group of playful looking otters. They spot you and move to intercept you swiftly, swimming all around you with their athletic forms rubbing amorously against your own. Your fingers can't help but brush against their aroused bodies in the rush before one grins at you, 'You want to play with us?'";
-
 to say otterstrike:
 	if MaleList is banned and FemaleList is banned and HermList is banned:
 		say "The otters, shocked by your banning of all genders, join hands in a circle around you and yell 'WTF!' This sonic attack is devastating, crushing your bones into jelly.";
+		now dam is 1000;
 		decrease HP of Player by 1000;
 	else if MaleList is banned and FemaleList is not banned:
-		say "[one of]An otter grabs you around the midsection, her pussy grinding against your hip as she hauls you underwater for a moment of panic.[or]An otter leaps from the water just to land on you, plunging you into the depths. You learn that it is as she as her slender breasts press against you even as you struggle for breath.[or]Two otters grab either of your hands and play tug o war with you, arguing over who gets to play first.[or]Even as you try to defend yourself, you feel something warm descend on your groin, lapping at you eagerly and unexpectedly. You squeak in surprise, but hands grab at you and pull you beneath the waves.[at random]";
+		say "[one of]An otter grabs you around the midsection, her pussy grinding against your hip as she hauls you underwater for a moment of panic[or]An otter leaps from the water just to land on you, plunging you into the depths. You learn that it is a she as her slender breasts press against you even as you struggle for breath[or]Two otters grab both of your hands and play tug o war with you, arguing over who gets to play first[or]Even as you try to defend yourself, you feel something warm descend on your groin, lapping at you eagerly and unexpectedly. You squeak in surprise, but hands grab at you and pull you beneath the waves[at random].[no line break]";
 	else if FemaleList is banned and MaleList is not banned:
-		say "[one of]An otter grabs you around the midsection, his long cock poking between your cheeks as he hauls you underwater for a moment of panic.[or]An otter leaps from the water just to land on you, plunging you into the depths. The eager male gropes and fondles your body even as you struggle for breath.[or]Two otters grab either of your hands and play tug o war with you, arguing over who gets to play first.[or]Even as you try to defend yourself, you feel something warm descend on your groin, lapping at you eagerly and unexpectedly. You squeak in surprise, but hands grab at you and pull you beneath the waves.[at random]";
+		say "[one of]An otter grabs you around the midsection, his long cock poking between your cheeks as he hauls you underwater for a moment of panic[or]An otter leaps from the water just to land on you, plunging you into the depths. The eager male gropes and fondles your body even as you struggle for breath[or]Two otters grab both of your hands and play tug o war with you, arguing over who gets to play first[or]Even as you try to defend yourself, you feel something warm descend on your groin, lapping at you eagerly and unexpectedly. You squeak in surprise, but hands grab at you and pull you beneath the waves[at random].[no line break]";
 	else:
-		say "[one of]An otter grabs you around the midsection, his long cock poking between your cheeks as he hauls you underwater for a moment of panic.[or]An otter leaps from the water just to land on you, plunging you into the depths. You learn that it is as she as her slender breasts press against you even as you struggle for breath.[or]Two otters grab either of your hands and play tug o war with you, arguing over who gets to play first.[or]Even as you try to defend yourself, you feel something warm descend on your groin, lapping at you eagerly and unexpectedly. You squeak in surprise, but hands grab at you and pull you beneath the waves.[at random]";
+		say "[one of]An otter grabs you around the midsection, his long cock poking between your cheeks as he hauls you underwater for a moment of panic[or]An otter leaps from the water just to land on you, plunging you into the depths. You learn that it is a she as her slender breasts press against you even as you struggle for breath[or]Two otters grab both of your hands and play tug o war with you, arguing over who gets to play first[or]Even as you try to defend yourself, you feel something warm descend on your groin, lapping at you eagerly and unexpectedly. You squeak in surprise, but hands grab at you and pull you beneath the waves[at random].[no line break]";
 
 to say Otter attack:
+	setmonster "Sea Otter";
+	choose row MonsterID from the Table of Random Critters;
 	if HP of Player > 0:
 		say "     When you stop struggling, the otters squeal with joy, pressing in warmly from all directions and holding you in their loving, if lecherous, arms. You are passed from one otter to the next, sniffed at and licked across the face and chest along the way. Only when you've been passed to each in turn do they push you into the center, all smiling, and move to begin play in earnest.";
 		now otterconsent is 1;
-		WaitLineBreak;
 	if MaleList is banned and FemaleList is banned and HermList is banned:		[HUH! All banned! Madness!]
 		say "     The otters, so confused that you're even here at all, collectively throw up their hands and leave. Floating like a boneless jellyfish, you eventually wash up on shore.";
-		wait for any key;
 	else if MaleList is banned and FemaleList is banned:					[in herm only mode - special case]
-		choose row MonsterID from the Table of Random Critters;
 		now sex entry is "Both";
 		say "     As the otters swim around you excitedly, they seem to sense something about you and back off as a group, letting a lone member of the raft move up to you. You notice immediately that this member is special, being both male and female in one. Around her neck is a short pendant with pink and periwinkle colored scallop shells. Her small bosom, dainty handfuls, seems perfect on her swimmer's frame, letting her move through the water with grace. She moves up to you, running her paws across your chest as her smooth body swims around you, examining you intently.";
-		if ( player is puremale ) or ( Player is male and a random chance of 1 in 2 succeeds ):
-			say "     She runs her paws down your body, taking your cock in her webbed paws and starts deftly strokes your cock to get you hard. Her soft touch gets you hard faster than any vigorous stroking ever has, your body responding to her immediately. She seems to smile and cups your balls in one paw and you moan, feeling them grow heavy and churn with the need to release the seed you can feel filling them. Sensing your readiness, she presses her chest to yours, rubbing her bosom and hard prick against you. But it is not her cock that needs attention, but her pussy, which she brings into position over your shaft before sinking down onto it. Feeling her pussy sliding over you, you can't help but moan loudly. With her arms around your chest, she starts riding your cock slowly, letting you enjoy every sensual moment.";
-			say "     The other otters around you help support you in the water, but don't interfere in any way, leaving you for what must be their leader and priestess. As you grow more in sync with the beautiful herm atop you, you become aware that must be what she is. Your leader and holy figure. She must be divine to make you feel this wonderful. You both continue your mating, kissing and nuzzling at one another as you grow more and more enraptured with her. When your release finally comes, you blast your heavy load, emptying your overfilled balls into her. She clenches her pussy down firmly around you, keeping all of your cum inside, letting it fill her with your heat even as a strange heat grows in your loins in response. When you are spent, she eases hirself off of you and nibbles your ear lightly before swimming away.";
+		WaitLineBreak;
+		if player is puremale or ( Player is male and a random chance of 1 in 2 succeeds ):
+			say "     She runs her paws down your body, taking your cock in her webbed paws and starts deftly stroking your cock to get you hard. Her soft touch gets you hard faster than any vigorous stroking ever has, your body responding to her immediately. She seems to smile and cups your balls in one paw and you moan, feeling them grow heavy and churn with the need to release the seed you can feel filling them. Sensing your readiness, she presses her chest to yours, rubbing her bosom and hard prick against you. But it is not her cock that needs attention, but her pussy, which she brings into position over your shaft before sinking down onto it. Feeling her pussy sliding over you, you can't help but moan loudly. With her arms around your chest, she starts riding your cock slowly, letting you enjoy every sensual moment.";
+			say "     The other otters around you help support you in the water, but don't interfere in any way, leaving you for what must be their leader and priestess. As you grow more in sync with the beautiful herm atop you, you become aware that must be what she is. Your leader and holy figure. She must be divine to make you feel this wonderful. You both continue your mating, kissing and nuzzling at one another as you grow more and more enraptured with her. When your release finally comes, you blast your heavy load, emptying your overfilled balls into her. She clenches her pussy down firmly around you, keeping all of your cum inside, letting it fill her with your heat even as a strange heat grows in your loins in response. When you are spent, she eases herself off of you and nibbles your ear lightly before swimming away.";
 			CreatureSexAftermath "Sea Otter" receives "PussyFuck" from "Player";
 		else:
 			say "     She runs her paws down your body, moving to your thighs and then between them to caress your pussy, deftly playing with your folds. Her soft touch gets you wet and dripping juices into the water, your body responding to her immediately. She seems to smile and slips a pair of fingers into you, making your body shiver in delight, feeling so good you have a quick orgasm that sends tingles up into your belly, warmth filling your womb. Sensing your readiness, she presses her chest to yours, rubbing her bosom and hard prick against you. You want to feel that cock in you so badly and she happily obliges, bringing her shaft into position before sinking it slowly into you. Feeling her hard member sliding into you, you can't help but moan loudly. With her arms around your chest, she starts thrusting into you slowly, letting you enjoy every sensual moment.";
@@ -60,73 +58,55 @@ to say Otter attack:
 		decrease humanity of Player by a random number between 1 and 6;
 		if "Strong Psyche" is listed in feats of Player, increase humanity of Player by 2;
 		if "Weak Psyche" is listed in feats of Player, decrease humanity of Player by 2;
-		wait for any key;
-		infect "Sea Otter"; [powerful, extra infection]
+		infect; [powerful, extra infection]
 	else:
 		if FemaleList is banned:
 			say "     As the otters swim around you excitedly, the females move off, sensing something about you. They instead swim on watch to prevent any interruption of your time with the male members of the raft.";
-		if MaleList is banned:
+		else if MaleList is banned:
 			say "     As the otters swim around you excitedly, the males move off, sensing something about you. They instead swim on watch to prevent any interruption of your time with the female members of the raft.";
 		if MaleList is not banned and ( a random chance of 1 in 2 succeeds or ( a random chance of 1 in 2 succeeds and FemaleList is banned ) ) and anallevel > 1:
 			say "     An otter swims up behind you and grabs you at the sides, pulling you back against a stiff shaft. He nuzzles into your left ear, then right, as he snuggles up against your back and works the pointed tip of his bestial member into your back door, slowly working it into your body as his friends bark and cheer their encouragement. He pulls you back firmly, sinking several inches more of himself into you, the pain giving way to nanite induced pleasure that echoes outwards from where he stretches you lustfully. His slick, throbbing cock feels increasingly pleasurable inside you, finally peaking when his hot semen floods your bowels.";
-			CreatureSexAftermath "Player" receives "AssFuck" from "Sea Otter";
 			WaitLineBreak;
 		else if ( a random chance of 1 in 2 succeeds or ( a random chance of 1 in 2 succeeds and FemaleList is banned ) ) and anallevel is 3:
 			let randomog be 1; [male]
 			if MaleList is banned or ( FemaleList is not banned and a random chance of 1 in 4 succeeds ), now randomog is 2; [female]
 			say "     An otter swims up behind you and nuzzles at your rear, tickling at your bottom with [if randomog is 1]his[else]her[end if] whiskered face. [if randomog is 1]He[else]She[end if] nuzzles between your cheeks and starts licking at your pucker, making you squirm in response. Soon [if randomog is 1]his[else]her[end if] tongue's pressing past your anal ring and sliding into you through your back door. [if randomog is 1]His[else]Her[end if] webbed paws knead at your bottom as the playful lutrine licks your asshole, a sensation that grows increasingly pleasant as [if randomog is 1]he[else]she[end if] and the other otters play with you.";
+			WaitLineBreak;
 		if MaleList is not banned and Player is female and ( a random chance of 1 in 2 succeeds or ( a random chance of 1 in 2 succeeds and FemaleList is banned ) ):
 			say "     An otter nuzzles into your throat as he presses himself against your front for a moment. He grabs for your hips, then leans back, pressing his eager pointed tool against your nethers, easing it into you with a few sharp thrusts. He begins to piston against you like a machine, eyes closed and chest heaving with heavy gulps of air as he makes wild love. The rough loving is painful only for the first moment, giving way to erotic waves of tingling pleasure that run up and down your belly, centered on your ecstatic cunt, trembling tightly around the penetrating pole of that eager creature.";
 			say "     The playful otter strokes his webbed paws across your hips as he thrusts into you before finally emptying his load into your trembling pussy. Sated, he moves back, only to be replaced by another. They continue to take turns with you, seeding you again and again.";
-			CreatureSexAftermath "Player" receives "PussyFuck" from "Sea Otter";
 			WaitLineBreak;
 		if a random chance of 1 in 2 succeeds or ( a random chance of 1 in 2 succeeds and ( MaleList is banned or FemaleList is banned ) ):
 			if FemaleList is not banned and ( a random chance of 3 in 4 succeeds or MaleList is banned ):
-				say "     An otter suddenly clambers up on top of you, somehow avoiding plunging you into the waves as it settles down on your head and perches. It turns out to be a she, the heated scent of her aroused cunt close to your nose as she curls to look down at you from above, grinning";
+				say "     An otter suddenly clambers up on top of you, somehow avoiding plunging you into the waves as it settles down on your head and perches. It turns out to be a she, the heated scent of her aroused cunt close to your nose as she curls to look down at you from above, grinning. The otter on your head leans back a little, balancing quite well as she begins to pleasure herself with throaty groans and loud barks, sharing in the pleasure of the moment.";
 			else if MaleList is not banned:
-				say "     Soft pricks are felt as otter paws grab you and pull you down. Narrowly avoiding plunging you, an otter scales you and perches on your head with a happy bark, his balls draping over your face to obscure your vision for a moment before he laughs and moves a bit";
-			say ". The otter on your head leans back a little, balancing quite well as they begin to pleasure themselves with throaty groans and loud barks, sharing in the pleasure of the moment.";
+				say "     Soft pricks are felt as otter paws grab you and pull you down. Narrowly avoiding plunging you into the waves, an otter scales you and perches on your head with a happy bark, his balls draping over your face to obscure your vision for a moment before he laughs and moves a bit. The otter on your head leans back a little, balancing quite well as he begins to pleasure himself with throaty groans and loud barks, sharing in the pleasure of the moment.";
 		if Player is male and FemaleList is not banned and ( a random chance of 1 in 2 succeeds or ( a random chance of 1 in 2 succeeds and MaleList is banned ) ):
 			if Cock Length of Player > 12:
 				say "     Too large for her to ride the traditional way, one of the females goes for the alternative, grabbing at your huge length and grinding her entire front along it, stroking it with her slender breasts and thick waterproofed hide. Her arms warp around it as she works you closer to climax.";
-				CreatureSexAftermath "Player" receives "Stroking" from "Sea Otter";
 				if Cock Count of Player > 1:
 					say "     Not to let your other organs go to waste, her tail snags around another, loosely stroking at it in time with her energetic body massage against your primary dick, coaxing you towards a wild release.";
-				WaitLineBreak;
+				CreatureSexAftermath "Player" receives "Stroking" from "Sea Otter";
 			else:
-				say "     A sleek female otter moves up against you, grabbing for your [Cock of Player] dick and squeezing lightly as she looks into your eyes. She slips in closer, guiding your cock into her needy sex, sinking wetly into the snug passage as she presses her groin down to consume it entirely. She thrusts in rapid little motions that thrashes the water with bubbles swirling around you in the motions. Strange warmth builds in your cock as it plunges deeper and deeper into her willing passage, pleasure building in your body in the motions.";
+				say "     A sleek female otter moves up against you, grabbing for your [Cock of Player] dick and squeezing lightly as she looks into your eyes. She slips in closer, guiding your cock into her needy sex, sinking wetly into the snug passage as she presses her groin down to consume it entirely. She thrusts in rapid little motions that thrashes the water with bubbles swirling around you. Strange warmth builds in your cock as it plunges deeper and deeper into her willing passage, pleasure building in your body in the motions of the otters around you.";
+				if Cock Count of Player > 1:
+					say "     Noticing you have extra male meat, another female swims up, one to a cock. It becomes quite crowded as they [if Cock Count of Player is 2]both[else]all[end if] press in tight to work your cocks deep into their sopping wet cunts, but they seem up for the challenge as they pile in together to work at you and bleed you of every drop of cum you can produce.";
 				CreatureSexAftermath "Sea Otter" receives "PussyFuck" from "Player";
-				if Cock Count of Player > 1:
-					say "     Noticing you have extra male meat, another female swims up, one to a cock. It becomes quite crowded as they all press in tight to work your cocks deep into their sopping wet cunts, but they seem up for the challenge as they pile in together to work at you and bleed you of every drop of cum you can produce.";
+			WaitLineBreak;
 		else if Player is male and MaleList is not banned and ( a random chance of 1 in 2 succeeds or ( a random chance of 1 in 2 succeeds and FemaleList is banned ) ) and anallevel > 1:
-			say "     You can feel the soft, webbed paws of one of the otter's on your cock and you glance down to see a slender, young male grabbing and stroking your cock. He seems to almost grin as he nuzzles his softly-furred face against it";
 			if Cock Length of Player > 12:
-				say ". Too large for him to take, he continues to work his paws over your big cock. His digits move to fondle your balls as well as he worships your impressive member. His brown eyes are locked on it, staring at it lustfully";
-				if Cock Count of Player > 1:
-					say ". Not to let your other organs go to waste, his upper body rubs against them, sliding his waterproof fur across them while lavishing attention on the one in his paws. This energetic body massage to your cocks gets you really worked up, coaxing you towards a wild release.";
-				else:
-					say ".";
-				WaitLineBreak;
+				say "     You can feel the soft, webbed paws of one of the otters on your cock and you glance down to see a slender, young male grabbing and stroking your cock. He seems to almost grin as he nuzzles his softly-furred face against it. Too large for him to take, he continues to work his paws over your big cock. His digits move to fondle your balls as well as he worships your impressive member. His brown eyes are locked on it, staring at it lustfully[if Cock Count of Player > 1]. Not to let your other organs go to waste, his upper body rubs against them, sliding his waterproof fur across them while lavishing attention on the one in his paws. This energetic body massage to your cocks gets you really worked up, coaxing you towards a wild release[end if].";
 			else:
-				say ". After worshiping your cock and gotten you quite hard and eager, the male slides his body across yours, running his waterproof fur across your chest. The eager fellow slides his tail across your legs and presses down onto your shaft, taking it into his rear easily. He grinds and wriggles atop it, making your cock throb with need. A strange warmth builds in your cock as it plunges hard and fast into the otter male's rump, pleasure building in your body in the motion of the otters around you.";
+				say "     You can feel the soft, webbed paws of one of the otters on your cock and you glance down to see a slender, young male grabbing and stroking your cock. He seems to almost grin as he nuzzles his softly-furred face against it. After worshiping your cock and getting you quite hard and eager, the male slides his body across yours, running his waterproof fur across your chest. The eager fellow slides his tail across your legs and presses down onto your shaft, taking it into his rear easily. He grinds and wriggles atop it, making your cock throb with need. A strange warmth builds in your cock as it plunges hard and fast into the otter male's rump, pleasure building in your body in the motion of the otters around you.";
 				if Cock Count of Player > 1:
-					if FemaleList is not banned:
-						say "     Not to be left out, the females swim up, intent on your extra male meat. The flexible otters wriggle into position, the females taking turns with your additional maleness. The feel of their pussies around your cock is different from the male riding your cock, but both are equally enjoyable in their own ways.";
-					else:
-						say "     Noticing you have extra male meat, another male swims up, one to a cock. It becomes quite crowded as they all press in tight to work your cocks deep into their tight rears, but they seem up for the challenge as they pile in together to work at you and bleed you of every drop of cum you can produce.";
-				WaitLineBreak;
+					say "     [if FemaleList is not banned and (Player is femaleinterested or Player is not maleinterested)]Not to be left out, the females swim up, intent on your extra male meat. The flexible otters wriggle into position, the females taking turns with your additional maleness. The feel of their pussies around your cock is different from the male riding your cock, but both are equally enjoyable in their own ways[else]Noticing you have extra male meat, another male swims up, one to a cock. It becomes quite crowded as they all press in tight to work your cocks deep into their tight rears, but they seem up for the challenge as they pile in together to work at you and bleed you of every drop of cum you can produce[end if].";
+			WaitLineBreak;
 		say "     Time is lost as the otters have their way with you. Frantic acts of filling and being filled eventually spill over to all members of the raft have their turn reaching their complete satisfaction, taking you along for the ride. By the time it is over, you are soaked in sweat and several other fluids, and are left on the sandy beach to recover, sore, but still buzzing with a wicked afterglow.";
 		CreatureSexAftermath "Player" receives "AssFuck" from "Sea Otter";
 		if Player is Male:
 			CreatureSexAftermath "Sea Otter" receives "AssFuck" from "Player";
 		if Player is Female:
 			CreatureSexAftermath "Player" receives "PussyFuck" from "Sea Otter";
-		wait for any key;
-
-[ [Otter loss] ]
-To say Otter loss:
-	say "     Defeated, the group of otters backs away from you with sad expressions. '[one of]We just wanted to play.'[or]Don't be so stuck up. We could have so much fun together!'[or]Come back when you change your mind, we'll save you some fish!'[at random]";
-
 
 Section 2 - Creature Insertion
 
@@ -138,13 +118,11 @@ to say PrepCombat_Sea Otter:
 	choose row MonsterID from Table of Random Critters;
 	if Player is FemalePreferred:
 		now sex entry is "Female";
-	else if "Herm Preferred" is listed in feats of Player:
+	else if Player is HermPreferred:
 		now sex entry is "Both";
 	else:
 		now sex entry is "Male";
-	if MaleList is banned and FemaleList is banned and HermList is banned:
-		setmongender 19; [creatures are mixed/variable]
-	else if MaleList is banned and FemaleList is not banned:
+	if MaleList is banned and FemaleList is not banned:
 		setmongender 14; [creatures are female]
 	else if FemaleList is banned and MaleList is not banned:
 		setmongender 13; [creatures are male]
@@ -162,9 +140,6 @@ When Play begins:
 	add "Sea Otter" to infections of MustelidList;
 	add "Sea Otter" to infections of FurryList;
 	add "Sea Otter" to infections of NatureList;
-	add "Sea Otter" to infections of FemaleList;
-	add "Sea Otter" to infections of HermList;
-	add "Sea Otter" to infections of MaleList;
 	add "Sea Otter" to infections of TaperedCockList;
 	add "Sea Otter" to infections of SheathedCockList;
 	add "Sea Otter" to infections of BipedalList;
@@ -175,15 +150,15 @@ When Play begins:
 	now enemy Name entry is ""; [ Specific name of unique enemy. ]
 	now enemy type entry is 0; [ 0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters. ]
 	now attack entry is "[otterstrike]"; [Text used when the monster makes an Attack]
-	now defeated entry is "[Otter loss]"; [ Text or say command used when Monster is defeated.]
+	now defeated entry is "     Defeated, the group of otters backs away from you with sad expressions. '[one of]We just wanted to play.'[or]Don't be so stuck up. We could have so much fun together!'[or]Come back when you change your mind, we'll save you some fish!'[at random][line break]"; [ Text or say command used when Monster is defeated.]
 	now victory entry is "[Otter attack]"; [ Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block as the demonstration text shows.]
-	now desc entry is "[otterdesc]"; [ Description of the creature when you encounter it.]
+	now desc entry is "     Not one, but a group of playful looking otters. They spot you and move to intercept you swiftly, swimming all around you with their athletic forms rubbing amorously against your own. Your fingers can't help but brush against their aroused bodies in the rush before one grins at you, 'You want to play with us?'[line break]"; [ Description of the creature when you encounter it.]
 	now face entry is "blunt nose of an otter, with small round ears set over your cute face"; [ Face description, format as "Your face is [Face of Player]." ]
-	now body entry is "sleek and athletic. Almost androgynous in a way, with the curves subsumed in the trim musculature of a born swimmer. Your hands and feet are webbed with flaps of skins between fingers and toes that are quite ticklish when touched by another"; [ Body Description, format as "Your Body is [Body of Player]." ]
+	now body entry is "sleek and athletic, almost androgynous in a way, with the curves subsumed in the trim musculature of a born swimmer. Your hands and feet are webbed with flaps of skins between fingers and toes that are quite ticklish when touched by another"; [ Body Description, format as "Your Body is [Body of Player]." ]
 	now skin entry is "[one of]sleek pelted[or]smooth furred[or]waterproofed[at random]"; [ Skin Description, format as "Looking at yourself, your body is covered in [Skin of Player] skin." ]
 	now tail entry is "You have a thick rudder of a tail, [Skin of Player] and swaying lightly behind you. It could help a lot while swimming."; [ Tail description, write a whole Sentence or leave blank. ]
 	now cock entry is "otter"; [ Cock Description, format as you have a 'size' (your text) cock]
-	now face change entry is "your face reforms as you gain a short otterish snout and round [Skin of Player] ears"; [ Face change text, format as "Your face feels funny as [face change entry]." ]
+	now face change entry is "you gain a short otterish snout and round [Skin of Player] ears"; [ Face change text, format as "Your face feels funny as [face change entry]." ]
 	now body change entry is "you get the urge to stretch, reaching for the heavens as your body becomes slimmer and more streamlined. Your outspread fingers tickle fiercely as new flesh grows between each of them and short sharp claws sprout. Below, your feet become animal like paws, lifting partially from the ground even as your toes gain that same sensitive webbing"; [ Body change text, format as "Your body feels funny as [body change entry]." ]
 	now skin change entry is "an oily sensation runs across your entire body, followed shortly by a dense layer of waterproof fur that coats your body perfectly"; [ Skin change text, format as "Your skin feels funny as [skin change entry]." ]
 	now ass change entry is "a thick limb bursts from your back end, forcing you to lean back for a moment as [Skin of Player] flesh covers it. You peek over your shoulder to see it slowly swaying, your sense of balance returning"; [ Ass/tail change text, format as "Your ass feels funny as [ass change entry]." ]
@@ -328,24 +303,19 @@ When Play begins:
 	[Clit Size Adjective is generated by a function and can be used in scenes: very small/small/average/large/very large]
 ]
 
-
+Section 3 - Drop Item
 
 Table of Game Objects (continued)
 name	desc	weight	object
 "Tasty Fish"	"A fish. It could be a big fish or a small fish, but it has scales on it. A sniff of it oddly reminds you of otters."	1	Tasty Fish
 
 Tasty Fish is a grab object.
-
 Tasty Fish is infectious. Strain of Tasty Fish is "Sea Otter".
-Usedesc of Tasty Fish is "[Fish]".
-Purified of Tasty Fish is "food".
+Usedesc of Tasty Fish is "[Tasty Fish]".
+Scent of Tasty Fish is "It smells like a fish, somehow still fresh if a little odd... strangely reminding you of otters.".
 
 To say Tasty Fish:
 	PlayerEat 15;
-
-instead of sniffing Tasty Fish:
-	say "It smells like a fish, somehow still fresh if a little odd... strangely reminding you of otters.";
-
 
 Section 4 - Endings
 
@@ -357,14 +327,8 @@ This is the Sea Otter Infection rule:
 	if Player has a body of "Sea Otter":
 		trigger ending "Sea Otter Infection"; [Here it states, that the ending has been played.]
 		if humanity of Player < 10:
-			if Otterconsent is 1:
-				say "     You return to the raft of otters that dominates your thoughts, throwing yourself into the water and swimming out into their eager grasps. Without further worry for the world, you live with them, fucking, being fucked, hunting for tasty fishes and clams. You find you have little complaint over your new, simple life.";
-			else:
-				say "     You feel an overwhelming desire to enter water, but try to resist against it. You end up at the mall, shivering and cold. The rats take you inside, and feed you, but as soon as you spot their fountain, you dive in. You become something of a permanent fixture there, but they don't really seem to mind your presence. You become a sort of mascot for them, not to mention a desperation date whenever a rat is feeling particularly lonely.";
+			say "     You [if Otterconsent is 1]return to the raft of otters that dominates your thoughts, throwing yourself into the water and swimming out into their eager grasps. Without further worry for the world, you live with them, fucking, being fucked, hunting for tasty fishes and clams. You find you have little complaint over your new, simple life[else]feel an overwhelming desire to enter water, but try to resist against it. You end up at the mall, shivering and cold. The rats take you inside, and feed you, but as soon as you spot their fountain, you dive in. You become something of a permanent fixture there, but they don't really seem to mind your presence. You become a sort of mascot for them, not to mention a desperation date whenever a rat is feeling particularly lonely[end if].";
 		else:
-			if Otterconsent is 1:
-				say "     As the rescue arrives, you direct the military back out to the beach. With eager waves, you coax your friends up and all get rescued together, despite some initial misgivings by your raft mates. In time, the otters grow accustomed to civilized living, mostly, working as life guards for a wide strip of beach. After hours, you fill the waves with the sounds of lust and love.";
-			else:
-				say "     You are taken back to civilization, but find that, as an otter, you have a base need to be around water. You secure a job working at a city pool, where your aquatic skills come in handy, for rescues and training. You become a swim instructor for the city and remain so for the rest of your days, eagerly pressing your smooth form through the water.";
+			say "     [if Otterconsent is 1]As the rescue arrives, you direct the military back out to the beach. With eager waves, you coax your friends up and all get rescued together, despite some initial misgivings by your raft mates. In time, the otters grow accustomed to civilized living, mostly, working as life guards for a wide strip of beach. After hours, you fill the waves with the sounds of lust and love[else]You are taken back to civilization, but find that, as an otter, you have a base need to be around water. You secure a job working at a city pool, where your aquatic skills come in handy, for rescues and training. You become a swim instructor for the city and remain so for the rest of your days, eagerly pressing your smooth form through the water[end if].";
 
 Otter ends here.

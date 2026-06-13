@@ -9,15 +9,7 @@ weaselcount is a number that varies.
 weaselcolor is a text that varies.[@Tag:NotSaved] weaselcolor is usually "tan".
 
 to say psychoweaseldesc:
-	setmongender 3; [creature is male]
 	increase weaselcount by 1;
-	let T be a random number between 1 and 3;
-	if T is 1:
-		now weaselcolor is "tan";
-	else if T is 2:
-		now weaselcolor is "brown";
-	else if T is 3:
-		now weaselcolor is "black";
 	say "     Before you is a wild-eyed weasel person in an unsecured straightjacket. Despite his rather cartoonish figure and expression, he is clearly made of flesh and blood, covered in fur and quite real. His fur is a [weaselcolor] color and he is unclothed save for the loose restraint. He has a crazed expression on his slathering face and pumps at his cock as best he can with the long sleeves overflowing his arms. Their straps jangle as he charges at you, letting you see the swirls in his eyes as he [one of]giggles madly[or]gibbers on about people shooting voodoo into his noodle[or]blathers on about artificial flavors in t-shirts[or]screams incoherently[or]mumbles how you can't trust the garden gnomes[or]mumbles quotes from [']Rain Man['][or]yells that you stole all his blue[or]growls like a beast[in random order].";
 
 to say losetopsychoweasel:
@@ -27,8 +19,7 @@ to say losetopsychoweasel:
 		say "     The crazed weasel continues to screw you, sliding his throbbing meat into you again and again. Your cunt grips and squeezes at his hard rod as he fucks you like a madman. Leaning overtop you, he takes the back of your neck into his muzzle and drives himself hard into you. You ball your hands into fists and groan in pleasure as you feel the hot rush of his semen flowing into you, filling your womb. Your vaginal walls clamp down around him, milking his cock as you cum as well.[impregchance]";
 	else:
 		say "     It's clear that he's going to have his way with you, one way or another.";
-		say "     [bold type]Will you quickly start sucking his cock or move into position to let him mount you?[roman type][line break]";
-		LineBreak;
+		say "[line break]     [bold type]Will you quickly [link]start sucking his cock (Y)[as]y[end link] or move into position to [link]let him mount you (N)[as]n[end link]?[roman type][line break]";
 		say "     ([link]Y[as]y[end link]) - Suck his cock.";
 		say "     ([link]N[as]n[end link]) - Let him mount you.";
 		if Player consents:
@@ -48,22 +39,18 @@ to say losetopsychoweasel:
 	if "Strong Psyche" is listed in feats of Player, increase humanity of Player by a random number between 0 and 1;
 	if "Weak Psyche" is listed in feats of Player, decrease humanity of Player by a random number between 0 and 1;
 
-
 to say beatthepsychoweasel:
 	say "     Having knocked down the weasel with your final blow, he curls up in a ball and starts rocking in place, mumbling about the bad [BodySpeciesName of Player in lower case]. He wraps one cloth-covered paw around his throbbing cock and gnaws intermittently at the other.";
 	if Libido of Player > 29 or "Dominant" is listed in feats of Player:
 		say "     You prepare to continue on your way, but your arousal stops you long enough to wonder if you might take advantage of the weasel to satisfy your needs.";
-		say "     [bold type]Shall you sate your lusts?[roman type][line break]";
-		LineBreak;
+		say "[line break]     [bold type]Shall you sate your lusts?[roman type][line break]";
 		say "     ([link]Y[as]y[end link]) - Yes.";
 		say "     ([link]N[as]n[end link]) - No.";
 		if Player consents:
 			LineBreak;
 			say "     With your decision made, you move quickly up to the weasel and run your hands over his head, then down to his arms. He whimpers a little, but seems to calm down as you start securing his straightjacket. Restrained, he whimpers more, but now clearly at his inability to reach his throbbing cock, which has gotten even harder and is dripping with precum. When you take his erection in hand and stroke it, he moans softly and settles down, mumbling about [one of]rainbows and pretty, horny fairies[or]sunrises and vixen nurses[or]sponge baths and happy pills[or]fluffy owl down pillows[in random order].";
 			if Player is male:
-				say "     ";
-				say "     [bold type]Shall you fuck the horny weasel or ride his hard cock now that you have him safely strapped up?[roman type][line break]";
-				LineBreak;
+				say "[line break]     [bold type]Shall you [link]fuck the horny weasel (Y)[as]y[end link] or [link]ride his hard cock (N)[as]n[end link] now that you have him safely strapped up?[roman type][line break]";
 				say "     ([link]Y[as]y[end link]) - Fuck the horny weasel.";
 				say "     ([link]N[as]n[end link]) - Ride his hard cock.";
 				if Player consents:
@@ -83,7 +70,6 @@ to say beatthepsychoweasel:
 	else:
 		say "     Deciding it'd be best to get away while you can, you make a run for it.";
 
-
 Section 2 - Creature Insertion
 
 Table of CombatPrep (continued)
@@ -91,7 +77,8 @@ name(text)	PrepFunction(text)
 "Psycho Weasel"	"[PrepCombat_Psycho Weasel]"
 
 to say PrepCombat_Psycho Weasel:
-	say "";
+	setmongender 3; [creature is male]
+	now weaselcolor is the substituted form of "[one of]tan[or]brown[or]black[purely at random]";
 
 Table of Random Critters (continued)
 NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
@@ -267,15 +254,12 @@ When Play begins:
 	[Clit Size Adjective is generated by a function and can be used in scenes: very small/small/average/large/very large]
 ]
 
-
-Section 4 - Endings
+Section 3 - Endings
 
 Table of GameEndings (continued)
 Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
 "Psycho Weasel Infection"	"Infection"	""	Psycho Weasel Infection rule	1000	false
 
-[A sample structure for succumbing/surviving messages at the end of the game.]
-[Numerous other examples can be found in existing creature files.]
 This is the Psycho Weasel Infection rule:
 	if Player has a body of "Psycho Weasel":
 		trigger ending "Psycho Weasel Infection"; [Here it states, that the ending has been played.]
@@ -283,15 +267,14 @@ This is the Psycho Weasel Infection rule:
 			say "     As your experiences in this strange city gone mad overwhelm you, you do the only sane thing... you go insane as well. Released from the bonds of sanity, you feel so much better and run wild through the city. Overflowing with the strangeness you've witnessed, you start to babble wildly about it all, letting it loose in an incoherent stream of consciousness tirade. As you do this, you wander the city as if aimlessly, though somehow you find yourself at the city hospital. Inside, you are soon met by a friendly nurse and some strong orderlies who fit you in your very own snug straightjacket. Held in the psychiatric ward, you are tended to by several of the vixens and watched over by the big jaguars. They are nice to you, keeping bound up tight for your own good, but often willing to play with you when you'd been a good boy. Occasionally you get the urge to go wander the halls for fun and sneak out to play for a while before being brought back.";
 		else:
 			say "     You manage to survive your time in the city, but it's definitely taken its toll on your mind. You keep it together when the soldiers come through to rescue you, but end up breaking down while their experts try to debrief you. It takes you some time and [if humanity of Player < 40]lots of [else if humanity of Player < 75]some [end if]meds to calm down.";
-			if humanity of Player > 50 and intelligence of Player > 16:
-				say "     Once you get a hold of yourself, you manage to make it through the rest of the holding period fairly well with the help of the meds. Shaken by the powerful event you've lived through, you push yourself to become a psychologist to help others similarly affected. With effort, you earn your degree and do your best to help others. Part of your practice deals with helping the infected simply cope with their changes and their new urges, while other times you must help those who've had their minds shaken by the chaotic world around them. For a brain that begins to fall apart from what it witnesses is prime ground for the infection to take hold, pushing to overwrite it fully into feral madness.";
-				say "     And with so many patients coming to you with sexual instincts and urges, you get the added reward of [']helping['] many of your patients find [']healthy outlets['] for their sex drive with you. Being a typical practice of post-infection psychiatry, you enjoy a wide variety of lovers and playmates from your regular patient visits.";
-			else if humanity of Player > 50:
-				say "     Once you get a hold of yourself, you manage to make it through the rest of the holding period fairly well with the help of the meds. Shaken by the powerful event you've lived through, but still sane, you throw yourself into [one of]abstract[or]neo-dadaist[or]expressionist[at random] artwork to deal with the tumultuous thoughts filling you. You do well enough at this despite the sharp decrease in demand for artwork in this chaotic world. But there's just something about your pieces that speaks to your patrons and the few galleries still open, allowing you to make a living off of your attempts to express yourself in this topsy-turvy world.";
-				say "     There is also the added benefit of enjoying the attention from various other artists and art students who come to see your works. Your popularity has many of them eager for a chance to [']get to know you better['], allowing you a wide variety of lovers to satisfy your lustful needs.";
-			else if humanity of Player > 30:
-				say "     Once you get a hold of yourself, you manage to make it through the rest of the holding period with only a few minor incidents with the help of the meds. Shaken by the powerful event you lived through, but still mostly sane, you go through several menial jobs. Suffering from post-traumatic stress disorder, you can never seem to hold one down for more than a year or two. You do manage to get by somehow though, partially thanks to help from your friends.";
+			if humanity of Player > 50:
+				if intelligence of Player > 16:
+					say "     Once you get a hold of yourself, you manage to make it through the rest of the holding period fairly well with the help of the meds. Shaken by the powerful event you've lived through, you push yourself to become a psychologist to help others similarly affected. With effort, you earn your degree and do your best to help others. Part of your practice deals with helping the infected simply cope with their changes and their new urges, while other times you must help those who've had their minds shaken by the chaotic world around them. For a brain that begins to fall apart from what it witnesses is prime ground for the infection to take hold, pushing to overwrite it fully into feral madness.";
+					say "     And with so many patients coming to you with sexual instincts and urges, you get the added reward of [']helping['] many of your patients find [']healthy outlets['] for their sex drive with you. Being a typical practice of post-infection psychiatry, you enjoy a wide variety of lovers and playmates from your regular patient visits.";
+				else:
+					say "     Once you get a hold of yourself, you manage to make it through the rest of the holding period fairly well with the help of the meds. Shaken by the powerful event you've lived through, but still sane, you throw yourself into [one of]abstract[or]neo-dadaist[or]expressionist[at random] artwork to deal with the tumultuous thoughts filling you. You do well enough at this despite the sharp decrease in demand for artwork in this chaotic world. But there's just something about your pieces that speaks to your patrons and the few galleries still open, allowing you to make a living off of your attempts to express yourself in this topsy-turvy world.";
+					say "     There is also the added benefit of enjoying the attention from various other artists and art students who come to see your works. Your popularity has many of them eager for a chance to [']get to know you better['], allowing you a wide variety of lovers to satisfy your lustful needs.";
 			else:
-				say "     Once you get a hold of yourself, it doesn't last. You have breakdowns every couple of days, barely managing to keep it together enough to convince them that you've not actually succumbed to the nanites. You end up institutionalized for a few months, which you mostly spend in a blissful, medicated haze. There is a nice mouse nurse there who is more than happy to visit you in your room for a bit of fun from time to time. Eventually, you get released and take odd jobs from time to time, but can't really hold down anything substantial. You do manage to get by somehow though, partially thanks to help from your friends.";
+				say "     Once you get a hold of yourself, [if humanity of Player > 30]you manage to make it through the rest of the holding period with only a few minor incidents with the help of the meds. Shaken by the powerful event you lived through, but still mostly sane, you go through several menial jobs. Suffering from post-traumatic stress disorder, you can never seem to hold one down for more than a year or two[else]Once you get a hold of yourself, it doesn't last. You have breakdowns every couple of days, barely managing to keep it together enough to convince them that you've not actually succumbed to the nanites. You end up institutionalized for a few months, which you mostly spend in a blissful, medicated haze. There is a nice mouse nurse there who is more than happy to visit you in your room for a bit of fun from time to time. Eventually, you get released and take odd jobs from time to time, but can't really hold down anything substantial[end if]. You do manage to get by somehow though, partially thanks to help from your friends.";
 
 Psycho Weasel ends here.

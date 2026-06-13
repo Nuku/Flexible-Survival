@@ -1,7 +1,6 @@
 Version 1 of Milo by CrimsonAsh begins here.
 [Version 1 - New file]
 
-
 Section 1 - Events
 
 Table of GameEventIDs (continued)
@@ -20,8 +19,7 @@ to say ResolveEvent Bobcat Encounter:
 	if Resolution of Bobcat Encounter is 0: [first time]
 		say "     As you walk along a narrow dirt trail through the forest that a fair bit of the inner city turned into, you let your eyes roam over your surroundings, looking for anything of even remote significance or value. While doing so, your gaze falls upon a small furry figure a little distance ahead. The creature appears to be a bobcat, slightly taller than three feet high and covered in short orange fur with black and white stripes. Small cat ears atop the head rotate to take in the sounds of your approach, and the little feline's tail moves left and right in urgent twitches. Fumbling with a large carrying bag on the ground, the bobcat then shoves it into the crevice of a large tree that it is standing in front of. Shoving with all the might of its small body, the bobcat manages to force the bag inside before you come anywhere close, vanishing after it into the thick trunk's insides.";
 		say "     Curiosity draws you towards the tree, and soon you're standing a few yards away, looking into the small crevice on its side. Keeping a little distance just in case the inhabitant is aggressive, you call out a greeting and wait for a reply. A minute passes, then two, and as you are about ready to call it quits and move on, an anthropomorphic bobcat's head, then body, pops out of the crevice. The feline has a lithe but fit body, covered in moderately thick fur that makes it a bit hard to tell if you're looking at a male or female. Large amber eyes stare up at you cautiously, and the cat says, 'What?' The tone of voice reveals that your new acquaintance is a male, as does a casual glance down at his nether regions, now that he's standing up straight enough to make out the outline of his soft dick in the surrounding fur.";
-		LineBreak;
-		say "     [bold type]What do you want to do with the shortstack feline?[roman type][line break]";
+		say "[line break]     [bold type]What do you want to do with the shortstack feline?[roman type][line break]";
 		say "     [link](1)[as]1[end link] - Greet him and start a conversation.";
 		say "     [link](2)[as]2[end link] - Snatch the kitty and have some fun!";
 		say "     [link](3)[as]3[end link] - Nothing really, you just wanted to get a closer look. That's it.";
@@ -29,20 +27,16 @@ to say ResolveEvent Bobcat Encounter:
 		while calcnumber < 1 or calcnumber > 3:
 			say "Choice? (1-3)> [run paragraph on]";
 			get a number;
-			if calcnumber is 1 or calcnumber is 2 or calcnumber is 3:
-				break;
-			else:
+			if calcnumber < 1 or calcnumber > 3:
 				say "Invalid choice. Type [link]1[end link] to chat, [link]2[end link] to attack or [link]3[end link] to leave.";
 		LineBreak;
 		if calcnumber is 1:
-			say "     Greeting the feline creature with a wave and smile, you tell him your name and how you were passing by until you got curious about him. 'Curious, huh?' he asks a little cautiously. He slowly lifts himself from his little hovel and brushes himself off, putting soft paws on his hips while eyeing you up. 'Well, for curiosity's sake, I'm Milo,' he says, nodding. You nod in turn and examine him in more detail, now that he's right before you. He's completely naked for one, no shirt, no shoes, and certainly no underwear, leaving his flaccid, eight inch cat-cock dangling between his legs for all to see.";
-			say "     The creature himself looks to be about three and a half feet tall, covered in orange and black fur with furry digitigrade legs ending in cat paws and tipped with sharp, if not short claws. His hands are similar, although his fingers are longer and also end in the same claws. His cute face is fitted with the sharp incisors of a feline, which a long, rough tongue flicks across as you stare. Large amber eyes with cat-like slits bore into your own while his short little tail gently bobs to and fro behind him.";
+			say "     Greeting the feline creature with a wave and smile, you tell him your name and how you were passing by until you got curious about him. 'Curious, huh?' he asks a little cautiously. He slowly lifts himself from his little hovel and brushes himself off, putting soft paws on his hips while eyeing you up. 'Well, for curiosity's sake, I'm Milo,' he says, nodding. You nod in turn and examine him in more detail, now that he's right before you. He's completely naked for one, no shirt, no shoes, and certainly no underwear, leaving his flaccid, eight inch cat cock dangling between his legs for all to see.";
+			say "     The creature himself looks to be about three-and-a-half feet tall, covered in orange and black fur with furry digitigrade legs ending in cat paws and tipped with sharp, if not short claws. His hands are similar, although his fingers are longer and also end in the same claws. His cute face is fitted with the sharp incisors of a feline, which a long, rough tongue flicks across as you stare. Large amber eyes with cat-like slits bore into your own while his short little tail gently bobs to and fro behind him.";
 			WaitLineBreak;
 			say "     After a moment of eyeing each other up, you open your mouth again to start to speak, only to stop when the cat turns around and leans into the hovel he had popped out of. He gives you a nice view of his exposed ass as he does, the tight butt winking at you while his tail swishes left and right. After a second of fumbling in the hole, he pulls out a can of food and turns around to present it to you. It's also worth noting that after turning back around, his male-hood has grown to half mast, now pointing right at you. The bobcat then flashes you a telling smile and presents the can to you.";
 			say "     'Now that you're not curious anymore, how about you help with my own? I like the look of you stranger. Can make it worth your time too if you're interested. Although,' he says, shaking the can in his paw before grinning widely, flashing sharp incisors and licking over his lips and then continuing, 'I'm sure that after I'm done with you, you won't even care about the free food.' He gives a hearty if not cocky laugh, putting a paw on his hip and bringing out the other one with the food in it to present to you. 'So how about it, stranger, up for some fun? Fair warning though, I'm the top.' As he finishes, you notice that his member now bobs between his legs at its full eight inch mast, clearly eager to hear your answer.";
-			WaitLineBreak;
-			say "     [bold type]What's your reply?[roman type][line break]";
-			LineBreak;
+			say "[line break]     [bold type]What's your reply?[roman type][line break]";
 			say "     ([link]Y[as]y[end link]) - Sure, let's have some fun!";
 			say "     ([link]N[as]n[end link]) - No, reject the bobcat's advances.";
 			if Player consents:
@@ -59,25 +53,25 @@ to say ResolveEvent Bobcat Encounter:
 				say "[WonAgainstMilo]";
 			else if fightoutcome > 19 and fightoutcome < 30: [lost]
 				say "[LostAgainstMilo]";
+				infect "Bobcat";
 			else if fightoutcome is 30: [fled]
-				say "[FledFromMilo]";
+				say "     You decide that running is the better part of bravery and book it out of the cat's territory until you lose sight of the creature. You hear yells of anger thrown at you during your retreat, but the feline doesn't pursue you very far. You doubt that you'll be able to find the creature's home again in these forests.";
+				now Resolution of Bobcat Encounter is 26; [fought, ran]
 			now Bobcat Encounter is resolved;
 		else:
 			say "     You stare at the cat for a minute, scratching the back of your neck awkwardly as you think of what to say. You were curious maybe? The feline creature huffs in impatience while you think, putting his paws on his lithe, furry hips. 'Well that's a fine how-do-ya-do, didn't your mother ever teach you it's impolite to stare?' He gives an indignant huff, before he drops back down the hole, disappearing from sight. You stare down the dark, deep hole a moment before backing up, looking around at your surroundings and then turning around. 'Come back when you've learned to greet properly!' you hear echoed out from the inside of the tree. With a shrug, you walk away and try to remember some of the landmarks near the tree, to make sure that you don't run into him again for another embarrassing encounter.";
 			now Resolution of Bobcat Encounter is 99; [disinterest]
 			now Bobcat Encounter is resolved;
-	else if Resolution of Bobcat Encounter is 1 or Resolution of Bobcat Encounter is 2: [got fucked once before]
+	else if Resolution of Bobcat Encounter < 3: [got fucked once before]
 		say "     As you are wandering through the lively forest, you notice a small [']M['] on a tree you pass. Remembering that little cat-morph that you had submitted to before, you think that you can follow these tree signs back to Milo's home. Whether for free food or a quick fuck, or both given how you get them, it should be easy to find Milo.";
-		say "     [bold type]Do you want to search out the bobcat?[roman type][line break]";
-		LineBreak;
+		say "[line break]     [bold type]Do you want to search out the bobcat?[roman type][line break]";
 		say "     ([link]Y[as]y[end link]) - Sure, let's have some fun!";
 		say "     ([link]N[as]n[end link]) - No, not right now.";
 		if Player consents:
 			LineBreak;
 			say "     Well... the cat was pretty good the last time you two fucked, may as well give a repeat visit. Following the tree markings for a few minutes, you eventually come across Milo and his hidey-hole. Milo's currently out of the hovel and is digging in the ground a few yards away from it. He then pulls out an acorn and drops it in before pushing dirt back over it. As you approach, his ears perk up and he looks over to you. At first, caution appears on Milo's face, but it relaxes as recognition runs across it. 'Ahh, heyo there, Kit! Long time no see and all,' he says, skipping up to you. 'Come back for another round? I think that I got some more food if you're up for the trade?'";
 			say "     He pauses to snicker to himself. 'I bet that you don't even need the food. Sex that good, huh?' He gives you a cocky smirk and places his paw on his hip. You roll your eyes but nod your head. Free food and free sex sound pretty good to you. Milo then gives himself a little fist pump and jumps in place enthusiastically. 'Fantastic, Kit!' He then moves over to his hole-home and fishes out another can of food and hands it to you gingerly. 'Now, beautiful, assume the position!' he says, trying to sound authoritative but is lessened by his playful laugh.";
-			say "     [bold type]What position will you assume?[roman type][line break]";
-			LineBreak;
+			say "[line break]     [bold type]What position will you assume?[roman type][line break]";
 			say "     ([link]Y[as]y[end link]) - Bend over and present yourself for fucking.";
 			say "     ([link]N[as]n[end link]) - Move up to him and blow the bobcat.";
 			if Player consents:
@@ -89,10 +83,9 @@ to say ResolveEvent Bobcat Encounter:
 		else:
 			LineBreak;
 			say "     Maybe another time, you have more important things to be doing right now you tell yourself as you move on from the marked tree.";
-	else if Resolution of Bobcat Encounter is 98: [talked, rejected sex last time]
+	else: [talked, rejected sex last time]
 		say "     As you are wandering through the forest in an oddly familiar area, you think you recognize a particular tree when there's a cat call behind you. 'Heya, knew you'd be back.' Turning around, you see Milo, the short bobcat fellow who offered you food in exchange for fucking you. Milo blinks at you and puts his paws on his hips. 'Well you are here about my offer, right?'";
-		say "     [bold type]What's your reply?[roman type][line break]";
-		LineBreak;
+		say "[line break]     [bold type]What's your reply?[roman type][line break]";
 		say "     ([link]Y[as]y[end link]) - Sure, let's have some fun!";
 		say "     ([link]N[as]n[end link]) - No, reject the bobcat's advances.";
 		if Player consents:
@@ -110,7 +103,7 @@ to say SexWithMilo1:
 		say "     Milo brings you close, but holds off right before your climax. He withdraws his face and tongue from your spit-lathered crotch with a loud slurp and a pleasant smirk. 'Not bad at all, but time for the real deal now,' he says as he strokes himself off behind you, scooting up till his erection is pressing right up against the entrance of your sex. You wiggle your hips, pressing him into you half an inch before he pulls back with a groan. 'Easy there, girl!' He laughs, giving your cheek another softer slap. 'Don't worry, you'll get what you want.' He grins widely, not that you can see on your hands, preparing yourself for a good fucking.";
 		say "     After a little more teasing of your now soaking wet cunny, Milo, without warning, thrusts into your waiting sex. You throw your head back and groan as the bumpy, barbed member files into you, filling you with all eight inches in a single motion. Milo [']mrowls['] lowly, emanating a light purr while he holds himself inside of you. You feel soft, furry paws kneading your tender skin when he starts to pull out of you, only for him to slam back into your cunt, nearly sending you face first into the ground. Milo starts his lust-fueled rut into you, pulling out and pushing in with ever increasing speed.";
 		WaitLineBreak;
-		say "     Your moans grow wild, much like his erratic movements that send shockwaves of pleasure through you. After a series of impressive thrusts and a final slap of your tail end, you find yourself brought to a screaming climax, orgasming around his cat-cock, squeezing it tightly and squirting girl cum all over and around Milo's crotch. [if Player is male]Meanwhile a little lower, your manhood[smn] shoot[smv] [itstheirm] load onto the soft dirt below, staining it gooey white. [end if]Your vice-like grip around him triggers his own, and with a groan and a rather cute [']meowl['], Milo explodes into you.";
+		say "     Your moans grow wild, much like his erratic movements that send shockwaves of pleasure through you. After a series of impressive thrusts and a final slap of your tail end, you find yourself brought to a screaming climax, orgasming around his cat cock, squeezing it tightly and squirting girl cum all over and around Milo's crotch. [if Player is male]Meanwhile a little lower, your manhood[smn] shoot[smv] [itstheirm] load onto the soft dirt below, staining it gooey white. [end if]Your vice-like grip around him triggers his own, and with a groan and a rather cute [']meowl['], Milo explodes into you.";
 		say "     A torrent of cat seed fills your shaking tunnel, painting your womb white as Milo humps inside of you fully. Pushing back against him, you grind as much pleasure from him as possible until he slowly disconnects himself from you. His paws stay on your ass however, squeezing and groping possessively as he takes a moment to appreciate your well-fucked form, utterly submitted to him and leaking his seed. You hear him lick his lips loudly and stand up. 'That was a good little romp I'd say, Kit. If I didn't have food to replace, I might just be up for round two, buuut for now, let's call it. Do visit again though, I'd love to see this beautiful ass again, raised and ready for a fucking,' he says, giving your butt one last squeeze.";
 		WaitLineBreak;
 		say "     Milo stretches, cracking his neck and wiping his messy cock off over your soft asscheeks. He sighs and begins to make his way back to his hole-home. 'You've definitely earned the chow. Don't eat it all at once now.' He laughs, hopping back into his home and disappearing from sight. A little woozy, you slowly stand, feeling the cat cum dribble out of your sex and down your thighs. Before you can decide on what to do next or what direction you're even going in, you hear Milo's voice echo from inside of his hidey hole. 'Oh! And if you need to find me again, look for the little M's I carved into some of the trees. Should lead you back here!' Well that's useful. If you ever need quick food or a quick fuck, you can try to find one of Milo's trees to follow.";
@@ -129,20 +122,20 @@ to say SexWithMilo1:
 		say "     Milo stretches, cracking his neck and wiping his messy cock off over your soft asscheeks. He sighs and begins to make his way back to his hole-home. 'You've definitely earned the chow. Don't eat it all at once now.' He laughs, hopping back into his home and disappearing from sight. A little woozy, you slowly stand, feeling the cat cum dribble out of your ass and down your thighs. Before you can decide on what to do next or what direction you're even going in, you hear Milo's voice echo from inside of his hidey hole. 'Oh! And if you need to find me again, look for the little M's I carved into some of the trees. Should lead you back here!' Well that's useful. If you ever need quick food or a quick fuck, you can try to find one of Milo's trees to follow.";
 		NPCSexAftermath Player receives "AssFuck" from Milo;
 		now Resolution of Bobcat Encounter is 2; [talked, ass fuck for food]
-	LineBreak;
+	infect "Bobcat";
 	ItemGain food by 1;
 
 to say SexWithMilo2:
 	say "     You drop to your knees before Milo and lean forward, ducking low. Milo coos as he sees your plan in motion and sits back, leaning against a tree while he watches you with delight. You press your face against his groin and drag your tongue along his slowly hardening cat phallus, glad that Milo doesn't wear clothes, as your hands form around his tasty cock, stroking and squeezing him to full mast. Milo moans and groans above you, lightly pushing forward into your face whenever he can. For yourself, you're just enjoying his wild musky taste while Milo's paws brush into your scalp, petting you affectionately as you start to swallow his feline member.";
 	say "     Your lips fold around Milo and start sucking, tongue lashing out and twirling around his fuck pole buried in your salivating mouth. You bring one hand up to gently caress his sack while the other works the base of his shaft, and your mouth swallows down the rest. Milo coos more in pleasure and perhaps slight awe at your technique as both of his paws press into your head to hold you firmly, or perhaps to give Milo something to hold onto while he has you suck him dry. You moan around his member, reverberating it through him and causing Milo to shudder as you do. Removing your hand from his shaft, it moves to join your other in gently playing with his furry nuts as your head drops down fully, engulfing all of him inside.";
 	WaitLineBreak;
-	say "     Surrounded by wet warmth, Milo humps and spasms wildly, seizing your head in his paws when he does. His paws start to work your lips for you, moving your head up and down his bumpy cat-shaft. Slowly at first, but it soon turns into swift downward humps into your throat. You gag slightly but moan more around him as he uses your mouth for his own pleasure, the bumps and ridges of his member tickling your throat while he moves you up and down. It gets to the point where you hardly have to do anything, as the cat-morph simply controls your head as if you were a personal sex toy for him.";
+	say "     Surrounded by wet warmth, Milo humps and spasms wildly, seizing your head in his paws when he does. His paws start to work your lips for you, moving your head up and down his bumpy cat shaft. Slowly at first, but it soon turns into swift downward humps into your throat. You gag slightly but moan more around him as he uses your mouth for his own pleasure, the bumps and ridges of his member tickling your throat while he moves you up and down. It gets to the point where you hardly have to do anything, as the cat-morph simply controls your head as if you were a personal sex toy for him.";
 	say "     This continues for a fair while, Milo controlling your head as he takes his time with you. Whenever he feels himself approaching climax too fast, he slows down to cool himself off before doing it again, and again. He continues this for nearly twenty minutes, edging himself to the point of blowing but stopping before he pops. On your side of things, you barely have time to breathe, and when you do, it's only Milo's musky cock that you can inhale. Which works just fine for you, salivating around his cock like a cheap whore. And suddenly you're deep throating the cat boy, his cock lodged inside of your throat as Milo pulls his head back and finally finishes down your gullet.";
 	WaitLineBreak;
 	say "     Jets of tasty cat cum fill your throat and spill out and around your mouth, dribbling down your chin and around his humping member. You obediently suck down every drop of seed he offers up and even then you're still sucking him clean. He mewls at your enthusiasm but has to pull himself away from your heavenly mouth still trying to suck his dry cock clean. 'Whoa, wow, you're pretty damn good at that. You definitely earned your reward, I'd say.' He laughs, wobbling a little on shaky feet. 'Damn, I might have to keep you if you stay this good,' he says, smiling down at you in good humor. Although you can't help but get just a little excited at the prospect of being fully owned by Milo.";
 	say "     You lick your lips clean of his seed and swallow what remains in your mouth, as well as scooping up any lost droplets that had run down your chin and slurping them down too. Milo chirps approvingly at the sight, his member twitching again briefly. Standing up, you thank Milo for both meals, causing him to burst out laughing. 'Hah! Pretty good. I'll definitely be seeing you around, Kit. Stop on by anytime you're feeling up for it.' He finishes by sitting down again and leaning against his tree, both hands behind his head with a blissed out expression on his cute, feline face. Smiling and sighing, you pocket the food you've rightfully earned and turn back around to get back to the nanite apocalypse.";
 	NPCSexAftermath Player receives "OralCock" from Milo;
-	LineBreak;
+	infect "Bobcat";
 	ItemGain food by 1;
 
 to say WonAgainstMilo:
@@ -164,12 +157,11 @@ to say WonAgainstMilo:
 		now Resolution of Bobcat Encounter is 22; [fought, rode him]
 	else:
 		say "     You shove the cat to the ground and bare your naked, sexless crotch to the cat. He looks up in confusion and a little fear. 'W-what a-' you cut him off and plant your genderless crotch onto his face. A sensitive shudder runs up your spine and you command him to get licking. He struggles under you for a few moments, shouting incoherent babble into your crotch, only serving to send more pleasurable shudders up your body. But only after a moment of this does he resign himself to your crotch, extending his rough feeling tongue on running over your sensitive skin. Letting out a moan of satisfaction you start to grind yourself into this cat, all the while he serves you with his tongue.";
-		say "     You put the cat to work for the next while, your hands work his soft cat ears while his tongue works your crotch. It gets to the point where your entire lower half is numb with sensitivity and your head is thrown back, your hands anchoring you only barely. You have the cat serve you for the next while, simply grinding down into his face, making him lather your entire crotch in his saliva and ignoring anything else all together. Eventually you have to get back to survival and you slowly stand from the cat who has been literally ridden into the dirt under you. Smiling down at him he closes his eyes in apparent shame and groans lowly.";
+		say "     You put the cat to work for the next while, your hands work his soft cat ears while his tongue works your crotch. It gets to the point where your entire lower half is numb with sensitivity and your head is thrown back, your hands anchoring you only barely. You have the cat serve you for the next while, simply grinding down into his face, making him lather your entire crotch in his saliva and ignoring anything else altogether. Eventually you have to get back to survival and you slowly stand from the cat who has been literally ridden into the dirt under you. Smiling down at him he closes his eyes in apparent shame and groans lowly.";
 		WaitLineBreak;
 		say "     You gather your things and go to examine the hole the cat had greeted you from. Kneeling down and examining it you reach in and grip something metal. Pulling it out you find it's a can of food! You reach down and retrieve two more before putting all three in your pack. You then quickly leave both the strange, fucked-silly bobcat and his home behind.";
 		NPCSexAftermath Player receives "Other" from Milo;
 		now Resolution of Bobcat Encounter is 23; [fought, used his tongue]
-	LineBreak;
 	ItemGain food by 3;
 
 to say LostAgainstMilo:
@@ -195,26 +187,16 @@ to say LostAgainstMilo:
 		say "     Overwhelmed by the smell and the sensation of having your face buried in this creature's sex, you again, maybe unconsciously, open your lips in a gasp. He takes advantage and draws his nuts into your mouth while your traitorous tongue, overwhelmed by hormones, reaches out to caress those furry orbs. He gasps a little as your tongue begins working his sack. 'Ooh, a real ball slut, huh?' he says, laughing rather adorably. 'Good,' he adds before pressing the rest of his crotch into your face, silencing any answer that you may have had.";
 		WaitLineBreak;
 		say "     After a few moments of indulging himself on your tongue, gently stroking himself off, he backs up suddenly and thrusts forward without warning. He buries his entire length into your salivating maw and mewls in pleasure as he does. Now both hands on your head, he begins to throat fuck you. Slowly at first then faster as he leans forward, now on all fours and leaning his entire body over your head as he humps downwards. His claws brace himself on the dirt below as he hilts himself over and over again in your throat. Tiny jets of pre shoot forward every thrust or so to cover your tongue and throat in his flavor.";
-		say "     It gets to the point where he's fucking your throat so vigorously that your vision is starting to blur. The dark fur pressing into your face grows darker and darker as his thrusting grows deeper and longer, giving you little time to breathe. Right before you start to fade from consciousness, you can feel the cat boy press every inch of his barbed cock into your throat and hold it there. A split second later, a torrent of feline cum spills forth and directly into your cock hungry stomach. It spills out and into your mouth, then around your lips and chin, right before your eyes close and everything goes silent.";
+		say "     It gets to the point where he's fucking your throat so vigorously that your vision is starting to blur. The dark fur pressing into your face grows darker and darker as his thrusting grows deeper and longer, giving you little time to breathe. Right before you start to fade from consciousness, you can feel the cat boy press every inch of his barbed cock into your throat and hold it there. A split second later, a torrent of feline cum spills forth and directly into your cock-hungry stomach. It spills out and into your mouth, then around your lips and chin, right before your eyes close and everything goes silent.";
 		WaitLineBreak;
 		say "     Waking up some unknown time later, you wake up, coughing up seed that had piled up in the back of your throat. Your entire face is covered in dried cat cum and much of it also seems to have slid down your neck and chest. You rub at your sore throat and slowly stand to look around you. You're still in the forest but definitely in a different location, as the tree with the little hole in the base of it is gone. You must have been dragged off so that you couldn't find his home again...";
 		NPCSexAftermath Player receives "OralCock" from Milo;
 		now Resolution of Bobcat Encounter is 25; [fought, lost, got face-fucked (male)]
 
-to say FledFromMilo:
-	say "     You decide that running is the better part of bravery and book it out of the cat's territory until you lose sight of the creature. You hear yells of anger thrown at you during your retreat, but the feline doesn't pursue you very far. You doubt that you'll be able to find the creature's home again in these forests.";
-	now Resolution of Bobcat Encounter is 26; [fought, ran]
-
 Section 2 - Infection
 
-to say BeatMilo:
-	say ""; [nothing in here so far, only one event fight]
-
-to say LoseToMilo:
-	say ""; [nothing in here so far, only one event fight]
-
-to say MiloDesc:
-	say ""; [nothing in here so far, only one event fight]
+a postimport rule: [bugfixing rules for players that import savegames]
+	now the non-infectious corresponding to a Name of "Bobcat" in Table of Random Critters is false;
 
 Table of CombatPrep (continued)
 name(text)	PrepFunction(text)
@@ -222,8 +204,6 @@ name(text)	PrepFunction(text)
 
 to say PrepCombat_Bobcat:
 	setmongender 3; [creature is male]
-
-Section 2 - Creature Insertion
 
 Table of Random Critters (continued)
 NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
@@ -234,23 +214,31 @@ When Play begins:
 	now NewTypeInfection entry is false;
 	now Species Name entry is "Bobcat"; [ Name of the overall species of the infection, used so a "male x" and "female x" have "pureblood X" children. ]
 	now Name entry is "Bobcat";
-	now enemy title entry is "Male Bobcat";
+	add "Bobcat" to infections of FelineList;
+	add "Bobcat" to infections of FurryList;
+	add "Bobcat" to infections of NatureList;
+	add "Bobcat" to infections of MaleList;
+	add "Bobcat" to infections of BarbedCockList;
+	add "Bobcat" to infections of SheathedCockList;
+	add "Bobcat" to infections of BipedalList;
+	add "Bobcat" to infections of TailList;
+	now enemy title entry is "";
 	now enemy Name entry is "Milo";
 	now enemy type entry is 1; [ 0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters. ]
 	now attack entry is "[one of]The feline claws at you with razor-sharp paws![or]The bobcat swipes at your feet with his back-paws.[or]The cat rams into you shoulder first![at random]";
-	now defeated entry is "[BeatMilo]";
-	now victory entry is "[LoseToMilo]";
-	now desc entry is "[MiloDesc]";
-	now face entry is "small and feline, with a short cat muzzle that has two incisors poking out of your bottom lip. You have two large feline eyes painted a light-golden color that seem to glow in the dark. Your cat ears flick atop your head a moment as they detect some noise off in the distance";
-	now body entry is "short and lithe but with powerful lean muscles and covered with orange fur. Your digitigrade legs end in clawed feet and your hands in clawed cat-paws";
-	now skin entry is "a soft amber-orange fur over your"; [ Skin Description, format as "Looking at yourself, your body is covered in [Skin of Player] skin." ]
-	now tail entry is "You have a short nearly one foot long furry tail that protrudes from your well-rounded backside.";
+	now defeated entry is "[WonAgainstMilo]";
+	now victory entry is "[LostAgainstMilo]";
+	now desc entry is "";
+	now face entry is "small and feline, with a short cat muzzle that has two incisors poking out of your bottom lip. You have two large feline eyes painted a light golden color that seem to glow in the dark. Your cat ears flick atop your head a moment as they detect some noise off in the distance";
+	now body entry is "short and lithe but with powerful lean muscles and covered with orange fur. Your digitigrade legs end in clawed feet and your hands in clawed cat paws";
+	now skin entry is "[if looknow is true]a soft amber-orange fur over your[else]soft, amber-orange furred[end if]"; [ Skin Description, format as "Looking at yourself, your body is covered in [Skin of Player] skin." ]
+	now tail entry is "You have a short, nearly one-foot-long furry tail that protrudes from your well-rounded backside.";
 	now cock entry is "dark pink, tapered"; [ Cock. Format as "You have a 'size' [Cock of Player] cock."]
 	now face change entry is "it starts to smoosh in on itself and reform in a rather uncomfortable manner into the form of a small feline head. You feel yourself over and can feel a new muzzle that has grown on your now furry face. You feel your head and can feel new furry cat ears protruding from the top"; [ Face change text, format as "Your face feels funny as [face change entry]." ]
-	now body change entry is "it remakes itself into that of a three foot tall anthro bobcat with digitigrade legs ending in sharp paws, along with your hands which end in wicked claws"; [ Body change text, format as "Your body feels funny as [body change entry]." ]
+	now body change entry is "it remakes itself into that of a three-foot-tall anthro bobcat with digitigrade legs ending in sharp paws, along with your hands which end in wicked claws"; [ Body change text, format as "Your body feels funny as [body change entry]." ]
 	now skin change entry is "it starts to tickle, then itch, and when you move to scratch the irritated area, you notice a patch of amber-orange fur sprout up from your skin. Then it starts to spread until your whole body is itching, and you're left squirming in place. After a moment of scratching and writhing in discomfort, you stand to find yourself fully covered in this short orange fur"; [ Skin change text, format as "Your skin feels funny as [skin change entry]." ]
-	now ass change entry is "your backside begins to hurt a moment, and then you hear a faint [']pop['] sound that causes you to swivel around and look behind you and down to the source. There atop your well-rounded ass is a short, foot long cat tail, covered in orange fur"; [ ass change text. format as "Your ass feels funny as (your text)." ]
-	now cock change entry is "your groin begins to ache and burn, forcing you to your knees as you struggle to free your sex and examine the pained area. As you grab hold of where your sex once was, there is now a newly formed cat-cock, covered in little ridges and soft barbs, and a new sack of testicles sits below that, covered in a dark-orange pelt"; [ cock change text. format as "Your cock feels funny as (your text)." ]
+	now ass change entry is "your backside begins to hurt a moment, and then you hear a faint [']pop['] sound that causes you to swivel around and look behind you and down to the source. There atop your well-rounded ass is a short, footlong cat tail, covered in orange fur"; [ ass change text. format as "Your ass feels funny as (your text)." ]
+	now cock change entry is "it begins to ache and burn, forcing you to your knees as you struggle to free your sex and examine the pained area. As you grab hold of where your sex once was, there is now a newly formed cat cock, covered in little ridges and soft barbs, and a new sack of testicles sits below that, covered in a dark orange pelt"; [ cock change text. format as "Your cock feels funny as (your text)." ]
 	now str entry is 10;
 	now dex entry is 20;
 	now sta entry is 14;
@@ -283,7 +271,7 @@ When Play begins:
 	now type entry is "feline";
 	now magic entry is false;
 	now resbypass entry is false;
-	now non-infectious entry is true;
+	now non-infectious entry is false;
 	now Cross-Infection entry is ""; [ Infection that this infection will give the player when they lose; can be left empty if they infect with the monster's own strain. ]
 	now DayCycle entry is 0; [ 0 = Up at all times; 1 = Diurnal (day encounters only); 2 = Nocturnal (night encounters only);]
 	now altcombat entry is "default";
@@ -391,6 +379,7 @@ When Play begins:
 	[Clit Size Adjective is generated by a function and can be used in scenes: very small/small/average/large/very large]
 ]
 
+Section 3 - NPC
 
 Table of GameCharacterIDs (continued)
 object	name
@@ -432,10 +421,10 @@ SexuallyExperienced of Milo is true.
 TwistedCapacity of Milo is false. [Twisted Characters can take any penetration, no matter the size]
 Sterile of Milo is false. [steriles can't knock people up]
 MainInfection of Milo is "Bobcat".
-Description of Milo is "[Milodesc]".
+[Description of Milo is "[Milodesc]".
 Conversation of Milo is { "Meep!" }.
 
 to say Milodesc:
-	say "<Bobcat>";
+	say "<Bobcat>";]
 
 Milo ends here.

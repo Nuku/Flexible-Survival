@@ -11,7 +11,7 @@ Section 0 - Variables
 
 lastsnakebeat is a number that varies. lastsnakebeat is usually 255.
 snakeDrugCounter is a number that varies. snakeDrugCounter is usually 0.
-snakeDrugCounterCap is a number that varies. snakeDrugCounterCap is usually 6. [I define the cap here to allow easy modification for balance]
+[snakeDrugCounterCap is a number that varies. snakeDrugCounterCap is usually 6. [I define the cap here to allow easy modification for balance]]
 snakeDrugTimer is a number that varies. snakeDrugTimer is usually 3.
 snakeDrugTempTimer is a number that varies. snakeDrugTempTimer is usually 3.
 inflatableSnakeBodyParts is a number that varies. inflatableSnakeBodyParts is usually 0.
@@ -19,16 +19,13 @@ inflatableSnakeBodyParts is a number that varies. inflatableSnakeBodyParts is us
 Section 1 - Monster Responses
 
 to say beattheinflatablesnake:
-	say "     After your last hit, you hear the distinctive [italic type]pffft![roman type] of a balloon deflating. The inflatable snake crawls away as fast he could, while you search for it in the ball pit. But you do not find any trace of the inflatable. Did he escape through a hidden crevice? Does he rest at the bottom of the ball pit in a flattened and inoffensive state?";
+	say "     After your last hit, you hear the distinctive [italic type]pffft![roman type] of a balloon deflating. The inflatable snake crawls away as fast he can, while you search for it in the ball pit. But you do not find any trace of the inflatable. Did he escape through a hidden crevice? Does he rest at the bottom of the ball pit in a flattened and inoffensive state?";
 	say "     At the very least, it looks like the feral pool toy will leave you alone until it recovers.";
 	now lastsnakebeat is turns;
 
 to say losetoinflatablesnake:
-	if HP of Player > 0:
-		say "     You give up under the relentless attacks of the inflatable snake, too bothered to muster more resistance.";
-	else:
-		say "     Hurt and tired, your legs buckle and you fall on your butt among the multi-colored balls.";
-	say "     The snake coils one more time around your body. You feel its lukewarm and smooth body loop around you and squeeze, pinning your arms against your [Body Size Adjective of Player] form. It squeezes tighter every time you reflexively struggle against the binding coils, until you remain obediently motionless. The creature's cartoonish head crawls towards your waist and [StripCrotch]. You feel its plastic tongue flail and lick the [SkinName of player] skin of your genitals.";
+	say "     [if HP of Player > 0]You give up under the relentless attacks of the inflatable snake, too bothered to muster more resistance[else]Hurt and tired, your legs buckle and you fall on your butt among the multi-colored balls[end if].";
+	say "     The snake coils one more time around your body. You feel its lukewarm and smooth body loop around you and squeeze, pinning your arms against your [Body Size Adjective of Player] form. It squeezes tighter every time you reflexively struggle against the binding coils, until you remain obediently motionless. The creature's cartoonish head crawls towards your waist and [StripCrotch]. You feel its plastic tongue flail and lick the [SkinName of player in lower case] skin of your genitals.";
 	WaitLineBreak;
 	if anallevel is 3 or Player is neuter:
 		say "     You suddenly feel the snake's head press against your ass. You shudder as you doubt the creature will fit, but the inflatable surprises you by deflating until it is able to squeeze through, then reinflating to stretch you to your limit. A loud moan escapes your lips, quickly muffled when the inflatable snake's tail coils around your neck then rams into your [FaceName of player] mouth. Your teeth sink harmlessly on the appendage without piercing it, while it hisses and inflates until it is thick enough to stretch your cheeks.";
@@ -43,10 +40,10 @@ to say losetoinflatablesnake:
 	if vorelevel > 1:
 		say "     As you bask in the afterglow of your orgasm, you let your guard down for a moment. This is more than the snake needs to open its toothless jaws wide and clamp them on your head. You start struggling in a panic, but the plastic coils of the pool toy squeeze tight on you, cutting your breath and your strength. The inflatable snake swallows your [Body Size Adjective of Player] body [if scalevalue of Player <= 2]without any difficulty[else]stretching its skin effortlessly to accommodate your size[end if]. Your exhausted body slowly travels down towards the inflatable's articial stomach. It is hot, damp, and cramped. The only thing you can see and feel are the smooth blue and semi-transparent walls of the reptile's inner body.";
 		say "     Your descent stops eventually. You are squeezed from all directions by the snake's body. There is no doubt that your [BodyName of player] shape, including [if Breast Size of Player > 0]your [breast size desc of player] breasts[else if Player is male] your [cock size desc of player] cock[smn][else]gasping face[end if], are plainly visible from the outside. You feel the snake's stomach fluids coat you head to toe and, while they do not burn, you cannot shake a bad feeling about your predicament. It is at this moment that you start feeling shivers, and that your brain begins to fog. You only need a couple of encouragements from the snake's contractions and rumbling to make your [if Player is herm]cock[smn] rock hard, and your cunt[sfn] moist[else if Player is male]cock[smn] rock hard[else if Player is female]your cunt[sfn] moist[else]body suffer through the woes of arousal[end if]. The danger of your situation quickly becomes clear to you.";
-		WaitLineBreak;
+		wait for any key;
 		inflatableSnakeVore;
 	else:
-		say "     Before releasing you, the inflatable snake suddenly bites your face. Or rather, it clumps down its fangless mouth against your face, and forces you to breath a pink gas for several seconds. You feel your body get hot, your head dizzy, and your sanity slipping as strange thoughts work together with the nanites to relieve you of your humanity.";
+		say "     Before releasing you, the inflatable snake suddenly bites your face. Or rather, it clamps down its fangless mouth against your face, and forces you to breathe a pink gas for several seconds. You feel your body get hot, your head dizzy, and your sanity slipping as strange thoughts work together with the nanites to relieve you of your humanity.";
 
 [TODO: inflatableSnakeVore 's capture state]
 [Works as is:
@@ -63,7 +60,7 @@ What snake drug does is decreasing the chances for the player to make any signif
 However, waiting will make them lose precious time for rescuing a certain vixen...
 ]
 
-Section 1.1 - Bound state
+Section 2 - Bound state
 
 to inflatableSnakeVore:
 	psycheeval;
@@ -79,27 +76,27 @@ to inflatableSnakeVore:
 	now snakeDrugTempTimer is snakeDrugTimer;
 	increaseSnakeDrugCap; [Applying initial stack of snake drug]
 	[End of specific variables]
-	now calcnumber is -1;
-	let Trixieexit be 0;
-	while Trixieexit is 0:
+	let Trixieexit be false;
+	while Trixieexit is false:
 		now lustatt is Libido of Player;
 		if HP of Player > 0 or humanity of Player < 50:
 			now obliging is true;
 		checkboundrecover;
-		if clearnomore is 0, clear the screen;
+		if clearnomore is 0:
+			clear the screen;
+			LineBreak;
 		if lustatt > 99: [lustatt is short for 'lust attribute'. When reaching 100, the player orgasms. This check uses > 99 to force orgasm even if lustatt is somehow above 100]
-			inflatableSnakeVoreOrgasm; [Calls the function defined later on]
+			say "     The near constant squeezing and massaging of the inflatable snake gets to you and pushes you over the edge[one of].[or] once more.[stopping] Your mind blanks while your confined body shudders and erupts, [if Player is herm]squirting a [Cum Load Size of Player] mix of vaginal fluid and cum[else if Player is male]ejecting a [Cum Load Size of Player] load of cum[else]squirting a [Cum Load Size of Player] volume of fem-cum[end if], which ends up mixing with the snake's fluid in which you are slowly macerating.";
 			increaseSnakeDrugCap;
 			inflatableSnakeSanityOrgasm;
 			LibidoReset;
 			if BodyName of player is "Inflatable Snake" and Player is pure:
 				say "You have been completely turned into a inflatable snake. You hazily wiggle your new inflatable serpentine body, while the chemicals of your 'progenitor' finish brainwashing you into a happy reptilian pool toy.";
-			else if inflatableSnakeBodyParts is 0:
-				say "The nanites are hard a work to cope with your weakened state. In doing so, they start converting you into an inflatable snake.";
 			else:
-				say "The nanites keep their desperate and losing fight to keep you safe and sane, and by doing so infect you further with the inflatable snake straib.";
+				say "The nanites [if inflatableSnakeBodyParts is 0]are hard a work to cope with your weakened state. In doing so, they start converting you into an inflatable snake[else]keep their desperate and losing fight to keep you safe and sane, and by doing so infect you further with the inflatable snake strain[end if].";
 			infect "Inflatable Snake";
 			setBodyPartCounter;
+			LineBreak;
 		now enduring is false;
 		if humanity of player < 1:
 			say "     As you lose the last remnants of your sanity, you also lose consciousness. You enter into a half-orgasmic, half-comatose transe, while your body slowly finishes turning into a duplicate inflatable snake, filling the original creature's entire body like a second skin.";
@@ -108,13 +105,14 @@ to inflatableSnakeVore:
 			now humanity of Player is 0;
 			trigger ending "Inflatable Snake Infection";
 			end the story saying "You have become a new inflatable snake, prowling the bouncy castle and the nearby waters in search of preys to 'eat'.";
-			now Trixieexit is 1;
+			now Trixieexit is true;
 		else:
-			say "[inflatableSnakeVoreDesc]";
-			say "[bold type]1[roman type] - [link]Struggle[as]1[end link][line break][run paragraph on]";
-			say "[bold type]2[roman type] - [link][if obliging is true]Oblige[else]Abide[end if][as]2[end link][line break][run paragraph on]";
-			say "[bold type]3[roman type] - [link][if boundrecover is false]Endure[else]Recover[end if][as]3[end link][line break][run paragraph on]";
-			say "Sanity: [humanity of Player]/ 100	Lust: [lustatt]/100	Struggle: [orcastrugglebar][line break][run paragraph on]";
+			say "     The inflatable snake has swallowed you whole. You are now stuck inside the plastic monster's stomach, a dark [Body Size Adjective of Player] bulge slightly visible through the serpent's transparent 'skin'. Your [BodyName of player] body is soaked in the snake's artificial stomach juices seeping from the inner walls. While they are fortunately harmless on your skin, they make your skin extra sensitive, and erode your will to escape your predicament. The snake's body gurgles and squeezes against you, slowly stimulating your body with an arousing massage. You need to dig your way out of this rubber snake before you lose either the will or the stamina to do so!";
+			say "[bold type]1[roman type] - [link]Struggle[as]1[end link][line break]";
+			say "[bold type]2[roman type] - [link][if obliging is true]Oblige[else]Abide[end if][as]2[end link][line break]";
+			say "[bold type]3[roman type] - [link][if boundrecover is false]Endure[else]Recover[end if][as]3[end link][line break]";
+			say "Sanity: [humanity of Player]/100  Lust: [lustatt]/100  Struggle: [close bracket]-[if struggleatt > 2]X[else]-[end if][if struggleatt > 1]X[else]-[end if][if struggleatt > 0]X[else]-[end if][bracket][line break]";
+			say "> [run paragraph on]";
 			decrease snakeDrugTempTimer by 1;
 			if snakeDrugTempTimer is 0:
 				increaseSnakeDrugCap;
@@ -127,81 +125,71 @@ to inflatableSnakeVore:
 				translate k;
 				if the player's command matches "[number]":
 					now keychar is "[number understood]";
-			if keychar in lower case exactly matches the text "s" or keychar in lower case exactly matches the text "1" or keychar in lower case exactly matches the text "return" or keychar in lower case matches the text "struggle": [player picked struggle]
-				LineBreak;
+			LineBreak;
+			if keychar is "s" or keychar is "1" or keychar is "return" or keychar in lower case matches the text "struggle": [player picked struggle]
 				if a random chance of 1 in snakeDrugCounter succeeds:
 					increase struggleatt by 1;
 					if struggleatt < 3: [Determines if the cumulative "struggle attribute" < or equal to bound stage. If equal to, the player escapes. Each orgasm will remove a tick of struggleatt.]
-						inflatableSnakeVoreStruggle;
-						WaitLineBreak;
+						say "     [one of]You stretch your arms and your legs against the snake's elastic skin... And make some progress! You stretch the synthetic reptile's stomach in all directions, and feel the material creak under your efforts.[or]You try to muster your will and struggle again... And focus the efforts of all your limbs into a single spot. Whether by making it gag or by ripping your way out, you [italic type]are[roman type] getting out of this stomach![or]You fight against the squeezing embrace and the unbearable heat of the rubber snake's stomach... You fight staunchly against the fake digestive organ's contractions, until it is unable to squeeze around you. You feel its inner walls weaken.[at random]";
 					else: [player escapes the bind]
-						inflatableSnakeVoreEscape;
-						LineBreak;
+						say "     Your hands suddenly pierce through the inflatable snake's body. You feel the creature deflate loudly and lose its strength. You hurriedly pull yourself out before the now flapping plastic smothers you. While your escape is bloodless, you are still liberally covered, head-to-toe, with the creature's mind-addling 'digestive' fluids. You crawl out of the ball pit in a hurry, but the creature seems to concede your victory. As you look back, you see the now flattened snake slither back in its hideout, probably to rest until the [BodyName of player] gaping hole in its stomach is healed.";
 						cleanboundmemory;
 						now lastsnakebeat is turns;
-						now Trixieexit is 1;
-						WaitLineBreak;
-						next;
+						now Trixieexit is true;
 				else:
-					inflatableSnakeVoreStruggleFail;
-					WaitLineBreak;
+					say "     [one of]You stretch your arms and your legs against the snake's elastic skin... Only to be interrupted by an intense tingling provoked by the rubbing of your skin against the plastic reptile's stomach walls. Your limbs instantly lose their strength[or]You try to muster your will and struggle again... But your mind is constantly distracted by the sensual contractions of the inflatable snake's stomach. You are unable to put up a coordinated effort.[or]You fight against the squeezing embrace and the unbearable heat of the plastic snake's stomach... Only to be defeated and immobilized by the snake's growling organ contracting tightly and temporarily squeezing you into an even more cramped space.[at random].";
 					inflatableSnakeLust;
 					inflatableSnakeSanityPassive;
+				if Trixieexit is false:
+					inflatableSnakeLust;
+					inflatableSnakeSanityPassive;
+					LineBreak;
+					wait for any key;
+			else if (obliging is true and (keychar is "o" or keychar in lower case matches the text "oblige")) or (obliging is false and (keychar is "a" or keychar in lower case matches the text "abide")) or keychar is "2": [player picked oblige/abide]
+				if obliging is true: [oblige]
+					say "     You eagerly accept your fate, and let the inflatable snake's stomach quickly erode your body and your mind.";
+					now obliging is false;
+				else: [abide]
+					say "     You bathe in the corruptive drugs of the inflatable snake's digestive fluids, an eager and stupid smile on your face.";
+					now obliging is true;
 				inflatableSnakeLust;
 				inflatableSnakeSanityPassive;
-			else if (obliging is true and (keychar in lower case exactly matches the text "o" or keychar in lower case matches the text "oblige")) or (obliging is false and (keychar in lower case exactly matches the text "a" or keychar in lower case matches the text "abide")) or keychar in lower case exactly matches the text "2": [player picked oblige/abide]
 				LineBreak;
-				if obliging is true: [oblige]
-					say "You eagerly accept your fate, and let the inflatable snake's stomach quickly erode your body and your mind.";
-					WaitLineBreak;
-					inflatableSnakeLust;
-					now obliging is false;
-					inflatableSnakeSanityPassive;
-				else: [abide]
-					say "you bathe in the corruptive drugs of the inflatable snake's digestive fluids, an eager and stupid smile on your face.";
-					inflatableSnakeLust;
-					WaitLineBreak;
-					now obliging is true;
-					inflatableSnakeSanityPassive;
-			else: [player picked endure/recover]
+				wait for any key;
+			else if (boundrecover is true and (keychar is "r" or keychar in lower case matches the text "recover")) or (boundrecover is false and (keychar is "e" or keychar in lower case matches the text "endure")) or keychar is "3": [player picked endure/recover]
 				now enduring is true;
-				LineBreak;
 				if boundrecover is true: [recover]
 					SanBoost inflatableSnakeBodyParts + 1;
 					say "     With a brief flash of insight, you're able to find a glimpse of mental clarity, recovering a small portion of your lost humanity.";
-					WaitLineBreak;
 					decrease snakeDrugTempTimer by 1;
 					recoverSnakeDrugCap;
-					inflatableSnakeLust;
 					now boundrecover is false;
 				else: [endure]
 					say "     You attempt to steer your mind and resist the inflatable snake's corruption.";
-					WaitLineBreak;
-					inflatableSnakeLust;
 					inflatableSnakeSanityPassive;
+				inflatableSnakeLust;
+				LineBreak;
+				wait for any key;
+			else:
+				say "Invalid action.";
 
 to increaseSnakeDrugCap:
 	now snakeDrugTempTimer is snakeDrugTimer;
-	if snakeDrugCounter < snakeDrugCounterCap:
+	if snakeDrugCounter < 6:
 		increase snakeDrugCounter by 1;
 		say "[one of]Your mental state worsens as your body absorb more of the inflatable snake's toxin[or]More of the inflatable snake's stomach fluids enter your body, eating at your mental resistance[or]You feel yourself grow weaker in both body and mind as you macerate in the inflatable snake's fluids[at random].";
 
 to recoverSnakeDrugCap:
-	let x be 0;
-	let adj be "";
+	let x be 3;
 	if intelligence of player <= 10:
 		now x is 1;
-		now adj is "a little";
 	else if intelligence of player <= 14:
 		now x is 2;
-		now adj is "some";
+	if snakeDrugCounter > x:
+		decrease snakeDrugCounter by x;
 	else:
-		now x is 3;
-		now adj is "a lot";
-	decrease snakeDrugCounter by x;
-	if snakeDrugCounter < 0:
 		now snakeDrugCounter is 0;
-	say "Your efforts at keeping your composure allows you to shrug off [adj] of the effects of the inflatable snake's chemicals.";
+	say "     Your efforts at keeping your composure allow you to shrug off [if x is 1]a little[else if x is 2]some[else]a lot[end if] of the effects of the inflatable snake's chemicals.";
 
 every turn when snakeDrugCounter > 0:
 	decrease snakeDrugCounter by 1;
@@ -217,24 +205,6 @@ to setBodyPartCounter:
 	if TailName of player is "Inflatable Snake":
 		increase inflatableSnakeBodyParts by 1;
 
-to say inflatableSnakeVoreDesc:
-	say "The inflatable snake has swallowed you whole. You are now stuck inside the plastic monster's stomach, a dark [Body Size Adjective of Player] bulge slightly visible through the serpent's transparent 'skin'. Your [BodyName of player] body is soaked in the snake's artificial stomach juices seeping from the inner walls. While they are fortunately harmless on your skin, they make your skin extra sensitive, and erode your will to escape your predicament. The snake's body gurgles and squeezes against you, slowly stimulating your body with an arousing massage. You need to dig your way out of this rubber snake before you lose either the will or the stamina to do so!";
-
-to inflatableSnakeVoreOrgasm: [Orgasm description and damage calculation.]
-	say "The near constant squeezing and massaging of the inflatable snake gets to you and pushes you over the edge[one of].[or] once more.[stopping] Your mind blanks while your confined body shudders and erupts, [if Player is herm]squirting a [Cum Load Size of Player] mix of vaginal fluid and cum[else if Player is male]ejecting a [Cum Load Size of Player] load of cum[else]squirting a [Cum Load Size of Player] volume of fem-cum[end if], which ends up mixing with the snake's fluid in which you are slowly macerating.";
-
-to inflatableSnakeVoreStruggle: [Orgasm description and damage calculation.]
-	say "[one of]You stretch your arms and your legs against the snake's elastic skin... And make some progress! You stretch the synthetic reptile's stomach in all directions, and feel the material creak under your efforts.[or]You try to muster your will and struggle again... And focus the efforts of all your limbs into a single spot. Whether by making it gag or by ripping your way out, you [italic type]are[roman type] getting out of this stomach![or]You fight against the squeezing embrace and the unbearable heat of the rubber snake's stomach... You fight staunchly against the fake digestive organ's contractions, until it is unable to squeeze around you. You feel its inner walls weaken.[at random]";
-
-to inflatableSnakeVoreStruggleFail: [Struggle action failed because of the drugs]
-	say "[one of]You stretch your arms and your legs against the snake's elastic skin... Only to be interrupted by an intense tingling provoked by the rubbing of your skin against the plastic reptile's stomach walls. Your limbs instantly lose their strength[or]You try to muster your will and struggle again... But your mind is constantly distracted by the sensual contractions of the inflatable snake's stomach. You are unable to put up a coordinated effort.[or]You fight against the squeezing embrace and the unbearable heat of the plastic snake's stomach... Only to be defeated and immobilized by the snake's growling organ contracting tightly and temporarily squeezing you into an even more cramped space.[at random].";
-
-to inflatableSnakeVoreEscape:
-	say "Your hands suddenly pierce through the inflatable snake's body. You feel the creature deflate loudly and lose its strength. You hurriedly pull yourself out before the now flapping plastic smothers you. While your escape is bloodless, you are still liberally covered, head-to-toe, with the creature's mind-addling 'digestive' fluids. You crawl out of the ball pit in a hurry, but the creature seems to concede your victory. As you look back, you see the now flattened snake slither back in its hideout, probably to rest until the [BodyName of player] gaping hole in its stomach is healed.";
-
-to say inflatedSnakeStruggleBar: [Displays struggle bar. The amount of struggle turns necessary to escape is always equal to the bound segment.]
-	say "[close bracket]-[if struggleatt > 1]X[else]-[end if][if struggleatt > 0]X[else]-[end if][bracket]";
-
 to inflatableSnakeLust: [Passively increases the player's lust attribute. Infected body parts increase the per-turn lust gain.]
 	let obladj be 1;
 	if obliging is true:
@@ -247,18 +217,16 @@ to inflatableSnakeLust: [Passively increases the player's lust attribute. Infect
 		increase lustAdjustModifier by 1;
 	if inflatableSnakeBodyParts > 3:
 		increase lustAdjustModifier by 1;
-	LibidoBoost( (10 + (inflatableSnakeBodyParts * 2) + (lustadjust * lustAdjustModifier)) * obladj) / endureadj;
+	LibidoBoost ((10 + (inflatableSnakeBodyParts * 2) + (lustadjust * lustAdjustModifier)) * obladj) / endureadj;
 
 to inflatableSnakeSanityPassive: [Passively decreases the player's sanity attribute. Infected body parts increase the per-turn lust gain.]
 	let endureadj be 1;
 	if enduring is true:
 		now endureadj is 2; [Value to divide sanity loss by if enduring.]
-	if inflatableSnakeBodyParts is 0 and ((enduring is false and a random chance of 1 in 2 succeeds) or (enduring is true and a random chance of 1 in 4 succeeds)):
-		SanLoss(1);
-	if  inflatableSnakeBodyParts is 1 and (enduring is false or (enduring is true and a random chance of 1 in 2 succeeds)):
-		SanLoss(1);
+	if (inflatableSnakeBodyParts is 0 and ((enduring is false and a random chance of 1 in 2 succeeds) or (enduring is true and a random chance of 1 in 4 succeeds))) or (inflatableSnakeBodyParts is 1 and (enduring is false or a random chance of 1 in 2 succeeds)):
+		SanLoss 1;
 	else:
-		SanLoss((inflatableSnakeBodyParts + 1 + psycheadjust) / endureadj);
+		SanLoss (inflatableSnakeBodyParts + 1 + psycheadjust) / endureadj;
 
 to inflatableSnakeSanityOrgasm: [Causes sanity to sharply plummet upon orgasm.]
 	let endureadj be 1;
@@ -268,16 +236,16 @@ to inflatableSnakeSanityOrgasm: [Causes sanity to sharply plummet upon orgasm.]
 	let psycheModifier be 1;
 	if inflatableSnakeBodyParts > 2:
 		increase psycheModifier by 1;
-	SanLoss((inflatableSnakeBodyParts * 2 + 1 + psycheadjust * psycheModifier) / endureadj);
+	SanLoss ((inflatableSnakeBodyParts * 2) + 1 + (psycheadjust * psycheModifier)) / endureadj;
 
-Section 2 - Creature Insertion
+Section 3 - Creature Insertion
 
 Table of CombatPrep (continued)
 name(text)	PrepFunction(text)
 "Inflatable Snake"	"[PrepCombat_Inflatable Snake]"
 
 to say PrepCombat_Inflatable Snake:
-	say "";
+	setmongender 0; [creature is neuter-X]
 
 Table of Random Critters (continued)
 NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
@@ -294,6 +262,7 @@ When Play begins:
 	add "Inflatable Snake" to infections of InternalCockList;
 	add "Inflatable Snake" to infections of InternalBallsList;
 	add "Inflatable Snake" to infections of TailList;
+	add "Inflatable Snake" to infections of NoLegList;
 	add "Inflatable Snake" to infections of SerpentineList;
 	add "Inflatable Snake" to infections of NotBreathingList;
 	add "Inflatable Snake" to infections of FeralmindList;
@@ -306,7 +275,7 @@ When Play begins:
 	now attack entry is "The [one of]snake winds itself around your leg, squeezing as it tries to scale your body[or]transparent snake snaps at your arm as you try to attack it[or]As you attack, the snake whips its tail around your arms and latches on, squeezing them powerfully[at random]!";
 	now defeated entry is "[beattheinflatablesnake]";
 	now victory entry is "[losetoinflatablesnake]";
-	now desc entry is "     The Inflatable Snake circles around you, like a shark smelling blood in the water. Judging by the length of the trail, the creature is as large as an adult anaconda, if not more. It seems to aim to knot around your body, and squeeze you its squeaky coils."; [ Description of the creature when you encounter it. ]
+	now desc entry is "     The Inflatable Snake circles around you, like a shark smelling blood in the water. Judging by the length of the trail, the creature is as large as an adult anaconda, if not more. It seems to aim to knot around your body, and squeeze you its squeaky coils.[line break]"; [ Description of the creature when you encounter it. ]
 	now face entry is "now a cartoonish snake's head, with big beady eyes and a forked tongue slipping from your ever-smiling jaws to sniff the air";
 	now body entry is "a strange mix of man, serpent, and pool toy, a squeaky, flexible, and slightly bloated body that feels filled with air rather than flesh and bones, capable of slithering across the ground and float on water. You still retain your arms and legs, but they are in the same state as your body, and ending in blunt clawed digits. You have a slit which automatically conceals your genitals when you begin to slither, but leaves them out and exposed otherwise";
 	now skin entry is "translucent and squeaky, like a pool toy. It has a bright green colored, with stripes of an equally vivid yellow. Your skin is smooth to the touch.";
@@ -323,7 +292,7 @@ When Play begins:
 	now per entry is 15;
 	now int entry is 12;
 	now cha entry is 16;
-	now sex entry is "nochange"; [ Invalid sex entry value, resulting in no changes to gender ]
+	now sex entry is "Nochange"; [ Invalid sex entry value, resulting in no changes to gender ]
 	now HP entry is 20; [ The monster's starting HP. ]
 	now lev entry is 5; [ Monster level. (Level x 2) XP for victory. (Level / 2) XP for losing. ]
 	now wdam entry is 10; [ Monster's average damage when attacking. ]
@@ -355,12 +324,13 @@ When Play begins:
 	now altcombat entry is "bearhugger60"; [ Row used to designate any special combat features, "default" for standard combat. ]
 	now BannedStatus entry is false;
 
+Section 4 - Alt Combat
 
 Table of Critter Combat (continued)
 name	combat (rule)	preattack (rule)	postattack (rule)	altattack1 (rule)	alt1chance (number)	altattack2 (rule)	alt2chance (number)	monmiss (rule)	continuous (rule)	altstrike (rule)
 "bearhugger60"	retaliation rule	--	--	bearhug rule	60	--	--	--	--	--
 
-Section 4 - Endings
+Section 5 - Endings
 
 Table of GameEndings (continued)
 Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
@@ -372,10 +342,6 @@ This is the Inflatable Snake Infection rule:
 		if humanity of Player < 10:
 			say "     Your mind fails you, as you become another specimen of the bizarre fauna of the Bouncy Castle. As the military reclaims the city, you manage to escape. Ever since then, you prawl the beaches of the coastline, pouncing on the swimmers and surfurs bold enough to venture in your territory. Earsay and blurry pictures create an urban legend around your being, but you are too far gone to realize it, or even care.";
 		else:
-			if FaceName of Player is "Inflatable Snake" and SkinName of Player is "Inflatable Snake" and TailName of Player is "Inflatable Snake" and CockName of Player is "Inflatable Snake":
-				say "     The military recue gets you out of the infected city, but you are now too inhuman looking for reintegrating with civilization. Fortunately, your cartoonish snake appearance catches the eye of an audacious producer. [italic type][name of player] the Snake[roman type] quickly becomes a well-liked children show, where you and other unfortunate infected inflatable victims teach kids about counting and the alphabet. Of course, your [italic type]other[roman type] shows, with your adult 'fans' is a well-kept secret.";
-			else:
-				say "     The military rescue gets you out of the infected city, but not unchanged. Having partially become a serpentine pool toy, you have struggle fitting in and finding a decent job. One day, as you stop by a thrift store, you have an epiphany. A few weeks and a couple transactions later, you are the proud owner of a beach and swimming pool equipment store, by the seafront. Your novelty inflatables become rather popular, partly thanks to the fact that you and your employees are inflatable infecteds and give the place its 'charm'. The way you procure the products you sell is a well-kept secret, however...";
-
+			say "     The military rescue gets you out of the infected city, but [if Player is pure]you are now too inhuman looking for reintegrating with civilization. Fortunately, your cartoonish snake appearance catches the eye of an audacious producer. [italic type][Player name] the Snake[roman type] quickly becomes a well-liked children show, where you and other unfortunate infected inflatable victims teach kids about counting and the alphabet. Of course, your [italic type]other[roman type] shows, with your adult 'fans' is a well-kept secret.[else]not unchanged. Having partially become a serpentine pool toy, you have struggle fitting in and finding a decent job. One day, as you stop by a thrift store, you have an epiphany. A few weeks and a couple transactions later, you are the proud owner of a beach and swimming pool equipment store, by the seafront. Your novelty inflatables become rather popular, partly thanks to the fact that you and your employees are inflatable infecteds and give the place its 'charm'. The way you procure the products you sell is a well-kept secret, however...[end if]";
 
 Inflatable Snake ends here.

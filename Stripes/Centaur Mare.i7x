@@ -25,39 +25,37 @@ to say losetocentaurmare:
 		CreatureSexAftermath "Player" receives "OralPussy" from "Centaur Mare";
 	decrease HP of Player by 10;
 	if Player is MalePreferred and MaleList is not banned:		[change target to Stallion for infection]
-		repeat with y running from 1 to number of filled rows in Table of Random Critters:
-			choose row y in Table of Random Critters;
-			if Name entry is "Centaur Stallion":
-				now MonsterID is y;
-				break;
+		setmonster "Centaur Mare"; [Cross-Infection entry is "Centaur Stallion"]
+	else:
+		setmonster "Centaur Stallion"; [Cross-Infection entry is "Centaur Mare"]
 
 to say beatthecentaurmare:
 	project the Figure of CentaurMare_icon;
 	if Player is male:
-		say "     With the centaur mare beaten, your cock throbs from the excitement. Spotting her wet, winking pussy, you leap onto her equine body and drive your cock into position. Unable to resist, the mare moans and whinnies as you fuck her[if Cock Length of Player < 15]. Her pussy is very large and, while pleasant for you, your cock does little for the needy mare you've caught. Grunting, you hilt yourself fully into her and pound away at her. Able to control your pace, you take the time to enjoy it as much as you can, and when you finally cum, you fill her equine cunt with your seed. The poor mare, still unsatisfied, whinnies and moans, unable to reach back to finish satisfying her needs while you walk away[else if Cock Length of Player <= 30]. Her pussy is very large and able to take your large cock fully. Feeling your big [Cock of Player] meat inside her, she moans and stamps her hooves excitedly at the prospect of a satisfying mating. Grunting, you hilt yourself fully into her and pound away at her. Able to control your pace, you take the time to enjoy it as much as you can, and when you finally cum, you fill her equine cunt with your seed. The needy mare whinnies and moans as you drive her to orgasm and her juices soak your spurting cock. When you're done, you pull your cock free and give her ass a swat, making her giggle as she trots off[else]. Her pussy is quite large, but even it can't take your [cock size desc of Player] fully. Still, having as much of your big [Cock of Player] meat inside her as she can take has her moaning and stamping her hooves excitedly at the prospect of a very satisfying mating. Grunting, you bury as much of your rod as you can into her and pound away. Able to control your pace, you take the time to enjoy it as much as you can, and when you finally cum, you fill her equine cunt with your seed. The needy mare whinnies and moans as you drive her to orgasm and her juices soak your spurting cock. When you're done, you pull your cock free and give her ass a swat, making her giggle as she trots off[end if].";
+		say "     With the centaur mare beaten, your cock throbs from the excitement. Spotting her wet, winking pussy, you leap onto her equine body and drive your cock into position. Unable to resist, the mare moans and whinnies as you fuck her. Her pussy is [if Cock Length of Player < 15]very large and, while pleasant for you, your cock does little for the needy mare you've caught. Grunting, you hilt yourself fully into her and pound away at her. Able to control your pace, you take the time to enjoy it as much as you can, and when you finally cum, you fill her equine cunt with your seed. The poor mare, still unsatisfied, whinnies and moans, unable to reach back to finish satisfying her needs while you walk away[else if Cock Length of Player <= 30]very large and able to take your large cock fully. Feeling your big [Cock of Player] meat inside her, she moans and stamps her hooves excitedly at the prospect of a satisfying mating. Grunting, you hilt yourself fully into her and pound away at her. Able to control your pace, you take the time to enjoy it as much as you can, and when you finally cum, you fill her equine cunt with your seed. The needy mare whinnies and moans as you drive her to orgasm and her juices soak your spurting cock. When you're done, you pull your cock free and give her ass a swat, making her giggle as she trots off[else]quite large, but even it can't take your [cock size desc of Player] fully. Still, having as much of your big [Cock of Player] meat inside her as she can take has her moaning and stamping her hooves excitedly at the prospect of a very satisfying mating. Grunting, you bury as much of your rod as you can into her and pound away. Able to control your pace, you take the time to enjoy it as much as you can, and when you finally cum, you fill her equine cunt with your seed. The needy mare whinnies and moans as you drive her to orgasm and her juices soak your spurting cock. When you're done, you pull your cock free and give her ass a swat, making her giggle as she trots off[end if].";
 		CreatureSexAftermath "Centaur Mare" receives "PussyFuck" from "Player";
 	else:
 		say "     With the centaur mare beaten, you give her equine ass a hard swat, sending her galloping off.";
 
 to say CentaurMareWomb:
 	say "     You wake up later to the sound of grunting and the annoyed voice of the mare. Muffled as it is, you think that she's trying to get you out of her now, but... it is comfy in here.";
-	say "     [bold type]Should you stay inside of the centaur a little longer?[roman type][line break]";
-	LineBreak;
+	say "[line break]     [bold type]Should you stay inside of the centaur a little longer?[roman type][line break]";
 	say "     ([link]Y[as]y[end link]) - Relax in the womb.";
 	say "     ([link]N[as]n[end link]) - Get out of the mare.";
 	if Player consents:			[Loops until player chooses to get out. Infects each loop]
 		LineBreak;
 		say "     Seeing no reason to help her out, you remain still and comfy in the womb of your... mother. Yeah, mother sounds right. After a while, she stops straining herself, and your fleshy chamber compresses a little as she sits down, the ground below pressing you upwards. You start to nuzzle at the walls and get a few clenches and moans for your efforts, only to slowly nod off again.";
-		infect;
+		if Player is MalePreferred and MaleList is not banned:		[change target to Stallion for infection]
+			infect "Centaur Stallion";
+		else:
+			infect "Centaur Mare";
+		WaitLineBreak;
 		say "[CentaurMareWomb]";
 	else:
 		LineBreak;
 		say "     Deciding that this odd situation has gone on long enough, you fumble in the wet, dark pit of the centaur's womb before finally finding the exit, and you push gently to help ease it open, trying not to tear the centaur apart. With time, she slowly dilates, and you can feel yourself sliding down the lubricated channel inch by inch once it has a hold of you. Eventually, your face pokes out into the cold outside air, and with an outburst of fluids, you slide onto the grass of the Plains, the centaur panting. 'I-I don't know what that was... b-but...' She looks understandably embarrassed and shakily canters away, leaving you to lay there and recover from the experience. A small part of you wonders what would have happened if you'd stayed longer. Pushing the thoughts aside, you find that the centaur hadn't gone too far from where you had dropped stuff, and you head out after drying off.";
 
 Section 2 - Creature Insertion
-
-to say centaurmaredesc:
-	say "     A centaur approaches you, galloping across the plains and unslinging her bow. Her body is covered in tan, human flesh from the waist up. From the waist down, everything is covered in the short, brown hairs of a horse. Her head is mostly that of a human female at first glance, but with a broad flaring nose and pointed ears. Her upper body is human and leanly athletic. Slender and tapered at the waist, it sensually evokes the female form. She has a pair of small breasts bound in a strip of clothe, probably to keep them in check while galloping. Her arms are slender but muscular, and very human in appearance. Being a centaur, her legs are replaced in their entirety from the waist down by the body of a horse. Her muscled, equine body has slender legs leading to a set of four shiny black hooves. A long flowing tail trails behind.";
 
 Table of CombatPrep (continued)
 name(text)	PrepFunction(text)
@@ -91,10 +89,10 @@ When Play begins:
 	now attack entry is "[one of]The centaur mare fires her bow at you, piercing your side with an arrow![or]The centaur mare charges at you, knocking you to the ground roughly![or]The centaur rears up and manages to land a heavy hoof on your shoulder![or]The centaur swings a punch at you, bashing you in the jaw![or]The mare turns around and whinnies, flicking her tail and winking her equine pussy at you tantalizingly![at random]";
 	now defeated entry is "[beatthecentaurmare]";
 	now victory entry is "[losetocentaurmare]";
-	now desc entry is "[centaurmaredesc]";
+	now desc entry is "     A centaur approaches you, galloping across the plains and unslinging her bow. Her body is covered in tan, human flesh from the waist up. From the waist down, everything is covered in the short, brown hairs of a horse. Her head is mostly that of a human female at first glance, but with a broad flaring nose and pointed ears. Her upper body is human and leanly athletic. Slender and tapered at the waist, it sensually evokes the female form. She has a pair of small breasts bound in a strip of clothe, probably to keep them in check while galloping. Her arms are slender but muscular, and very human in appearance. Being a centaur, her legs are replaced in their entirety from the waist down by the body of a horse. Her muscled, equine body has slender legs leading to a set of four shiny black hooves. A long flowing tail trails behind.[line break]";
 	now face entry is "mostly human at first glance, but with a broad flaring nose and pointed ears. It has a female cast to it";
 	now body entry is "that of a centaur, with a human and leanly athletic upper torso. Slender and tapered at the waist, it sensually evokes the female form. Your arms are slender but muscular, and very human in appearance. Your lower body is that of a horse, with a muscular equine form and slender legs leading to a set of shiny black hooves";
-	now skin entry is "tanned human flesh from the waist up. From the waist down, everything is covered in the short brown hairs of horse over your";
+	now skin entry is "tanned human flesh from the waist up. From the waist down, everything is covered in the short brown hairs of horse over the";
 	now tail entry is "You have a long, flowing tail like a horse coming from just above your behind. It flicks and swishes from time to time.";
 	now cock entry is "[one of]black, equine[or]flared, equine[or]sheathed, equine[or]horse-like[at random]";
 	now face change entry is "it takes on a human appearance with soft, feminine features. As the changes continue to progress, your nose flares wide and your ears taper up into points";
@@ -241,7 +239,6 @@ When Play begins:
 	now Clit Size entry is 0; [size 1-5, see Clit Size Adjective]
 	[Clit Size Adjective is generated by a function and can be used in scenes: very small/small/average/large/very large]
 ]
-
 
 Section 3 - Endings
 

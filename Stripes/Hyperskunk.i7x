@@ -4,23 +4,14 @@ Version 1 of Hyperskunk by Stripes begins here.
 
 Section 1 - Creature Responses
 
-to say losetohyperskunk:
-	say "No combat.";
-
-to say beatthehyperskunk:
-	say "No combat.";
-
-to say hyperskunkdesc:
-	say "No combat.";
-
 Section 2 - Creature Insertion
 
-Table of CombatPrep (continued)
+[Table of CombatPrep (continued)
 name(text)	PrepFunction(text)
 "Hyperskunk"	"[PrepCombat_Hyperskunk]"
 
 to say PrepCombat_Hyperskunk:
-	say "";
+	setmongender 6;]
 
 Table of Random Critters (continued)
 NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
@@ -40,20 +31,20 @@ When Play begins:
 	now enemy title entry is ""; [ Name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name. ]
 	now enemy Name entry is ""; [ Specific name of unique enemy. ]
 	now enemy type entry is 0; [ 0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters. ]
-	now attack entry is "[one of]The template attacks you in some abstract manner![or]The template leaves you greater understanding, thereby lowering your resistance to it![or]The template batters you with examples![or]The template firmly makes its point![at random]"; [ Successful attack message ]
-	now defeated entry is "[beatthehyperskunk]"; [ Text when monster loses. ]
-	now victory entry is "[losetohyperskunk]"; [ Text when monster wins. ]
-	now desc entry is "[hyperskunkdesc]"; [ Description of the creature when you encounter it. ]
+	now attack entry is "[NonCombatError]"; [ Successful attack message ]
+	now defeated entry is "[NonCombatError]"; [ Text when monster loses. ]
+	now victory entry is "[NonCombatError]"; [ Text when monster wins. ]
+	now desc entry is "[NonCombatError]"; [ Description of the creature when you encounter it. ]
 	now face entry is "lovely skunk head with feminine lines. You have pretty, gray eyes"; [ Face description, format as "Your face is [Face of Player]." ]
 	now body entry is "that of a sexy, wide-hipped skunk"; [ Body description, format as "Your body is [Body of Player]." ]
 	now skin entry is "fluffy fur in a skunk pattern of black and white over your";
 	now tail entry is "You have a big, fluffy striped tail like a skunk."; [ Ass/Tail. Write as a full sentence (with period) or leave blank for none. ]
 	now cock entry is "slate gray"; [ Cock. Format as "You have a 'size' [Cock of Player] cock." ]
 	now face change entry is "your vision goes briefly blurry. Your jaw pops and shifts as your new head takes shape with a very skunk-like appearance";
-	now body change entry is "starts to shift and change starting at your hips. These widen, giving you a large and sexy bottom with wide birthing hips. Your thighs thicken as well to match. As the changes spread further down your legs, your feet become more paw-like, though still largely resemble normal feet. As this continues, spreading upward now, your waist grows fuller. It's not enough to call you fat, but you're not slender either and definitely have a few inches to pinch or for someone to wrap their arms around. Your upper body becomes shapely and sexy and your hands remain mostly human, though with slight traces of the skunk infection you've picked up like small claws instead of fingernails";
+	now body change entry is "it starts to shift and change starting at your hips. These widen, giving you a large and sexy bottom with wide birthing hips. Your thighs thicken as well to match. As the changes spread further down your legs, your feet become more paw-like, though still largely resemble normal feet. As this continues, spreading upward now, your waist grows fuller. It's not enough to call you fat, but you're not slender either and definitely have a few inches to pinch or for someone to wrap their arms around. Your upper body becomes shapely and sexy and your hands remain mostly human, though with slight traces of the skunk infection you've picked up like small claws instead of fingernails";
 	now skin change entry is "you gain a thick and fluffy coat of skunk patterned fur"; [ Skin TF text, format as "Your skin tingles as [skin change entry]. ]
 	now ass change entry is "you get a nice, wide bottom with an even wider skunk tail, large and fluffy, to go with it"; [ Ass/Tail TF text, format as "Your ass tingles as [tail change entry]." ]
-	now cock change entry is "becomes thick and meat as it pulses with arousal, shooting spurts of semen. As the changes subside, you can see that aside from its new, slate gray color, it looks rather like a normal, if thick, human dick";
+	now cock change entry is "it becomes thick and meat as it pulses with arousal, shooting spurts of semen. As the changes subside, you can see that aside from its new, slate gray color, it looks rather like a normal, if thick, human dick";
 	now str entry is 12; [ These are now the creature's stats... ]
 	now dex entry is 12; [ ...and are only altered onto the player via Shifting or the Mighty Mutation feat ]
 	now sta entry is 16; [ These values may be used as part of alternate combat.]
@@ -194,15 +185,12 @@ When Play begins:
 	[Clit Size Adjective is generated by a function and can be used in scenes: very small/small/average/large/very large]
 ]
 
-
 Section 3 - Endings
 
 Table of GameEndings (continued)
 Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
 "Hyperskunk Infection"	"Infection"	""	Hyperskunk Infection rule	1000	false
 
-[A sample structure for succumbing/surviving messages at the end of the game.]
-[Numerous other examples can be found in existing creature files.]
 This is the Hyperskunk Infection rule:
 	if Player has a body of "Hyperskunk":
 		trigger ending "Hyperskunk Infection"; [Here it states, that the ending has been played.]

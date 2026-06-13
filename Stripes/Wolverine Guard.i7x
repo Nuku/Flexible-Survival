@@ -8,44 +8,8 @@ Section 1 - Creature Responses
 wolvloc is a text that varies.
 
 to say wolverinedesc:
-	say "[wolverinelocation]";
 	say "     As you travel through the streets, you are spotted by a large, muscled beast. Were he not so tall, you would call him stocky, nearly as wide as he is tall, but all muscle. He has a battered security company [one of]jacket on his animalistic body[or]hat on his animalistic head[at random]. He is covered in dark fur with a few lighter patches. His face narrows into a dark muzzle with lighter fur above his brow and at his shoulders. He growls angrily as he watches you. You spot the company logo on his clothing - Wolverine Security.";
 	say "     He is prowling around a [wolvloc], his instincts having locked him into aggressively guarding it. You seem to have come too close and set him off. Before you can back away, he charges at you aggressively, powerful paws raised to strike.";
-
-to say wolverinelocation:							[sets random location for the wolverine]
-	let T be a random number between 1 and 16;
-	if T is 1:
-		now wolvloc is "cluster of cars";
-	else if T is 2:
-		now wolvloc is "fire hydrant";
-	else if T is 3:
-		now wolvloc is "hotel lobby";
-	else if T is 4:
-		now wolvloc is "condo high-rise";
-	else if T is 5:
-		now wolvloc is "small store";
-	else if T is 6:
-		now wolvloc is "burned-out restaurant";
-	else if T is 7:
-		now wolvloc is "small office building";
-	else if T is 8:
-		now wolvloc is "women's boutique";
-	else if T is 9:
-		now wolvloc is "bank truck, overturned and empty";
-	else if T is 10:
-		now wolvloc is "modern sculpture in a small plaza";
-	else if T is 11:
-		now wolvloc is "phone booth";
-	else if T is 12:
-		now wolvloc is "newspaper stand";
-	else if T is 13:
-		now wolvloc is "chip wagon";
-	else if T is 14:
-		now wolvloc is "sausage stand";
-	else if T is 15:
-		now wolvloc is "bus shelter";
-	else if T is 16:
-		now wolvloc is "parking garage";
 
 to say losetowolverine:
 	if Player is female:
@@ -73,8 +37,7 @@ to say wolv_oral:
 to say beatthewolverine:
 	if Player is female and Libido of Player > 39 and BodyName of Player is "Wolverine Guard":
 		say "     Having managed to beat the wolverine until you finally knocked him down, you look over the powerful male and you feel a yearning inside you. The excitement of the fight has gotten your wolverine body quite aroused. Your eyes wander down to the hefty package between his legs and you see that his cock is half-hard as well, aroused by the scent of a strong female.";
-		say "     [bold type]Do you give in to your urges and ride that thick monster?[roman type][line break]";
-		LineBreak;
+		say "[line break]     [bold type]Do you give in to your urges and ride that thick monster?[roman type][line break]";
 		say "     ([link]Y[as]y[end link]) - Yes.";
 		say "     ([link]N[as]n[end link]) - No.";
 		if Player consents:
@@ -91,6 +54,25 @@ to say beatthewolverine:
 	else:
 		say "     Having managed to beat the wolverine until you finally knocked him down, you give him a final blow to put him unconscious. You move past him to look at the [wolvloc] was guarding. You search around carefully, but can't seem to find anything to warrant the aggressive defense of this location. Any food around here has already been consumed by the mad creature and there is nothing of material interest for you to use. You shake your head at the poor fellow, driven by strange instincts to uselessly guard this spot.";
 
+to say wolverinelocation:							[sets random location for the wolverine]
+	if a random number between 1 and 16 is:
+		-- 1: now wolvloc is "cluster of cars";
+		-- 2: now wolvloc is "fire hydrant";
+		-- 3: now wolvloc is "hotel lobby";
+		-- 4: now wolvloc is "condo high-rise";
+		-- 5: now wolvloc is "small store";
+		-- 6: now wolvloc is "burned-out restaurant";
+		-- 7: now wolvloc is "small office building";
+		-- 8: now wolvloc is "women's boutique";
+		-- 9: now wolvloc is "bank truck, overturned and empty";
+		-- 10: now wolvloc is "modern sculpture in a small plaza";
+		-- 11: now wolvloc is "phone booth";
+		-- 12: now wolvloc is "newspaper stand";
+		-- 13: now wolvloc is "chip wagon";
+		-- 14: now wolvloc is "sausage stand";
+		-- 15: now wolvloc is "bus shelter";
+		-- 16: now wolvloc is "parking garage";
+
 Section 2 - Creature Insertion
 
 Table of CombatPrep (continued)
@@ -99,6 +81,7 @@ name(text)	PrepFunction(text)
 
 to say PrepCombat_Wolverine Guard:
 	setmongender 3; [creature is male]
+	say "[wolverinelocation]";
 
 Table of Random Critters (continued)
 NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
@@ -273,7 +256,6 @@ When Play begins:
 	[Clit Size Adjective is generated by a function and can be used in scenes: very small/small/average/large/very large]
 ]
 
-
 Section 3 - Endings
 
 Table of GameEndings (continued)
@@ -291,14 +273,7 @@ This is the Wolverine Guard Infection rule:
 		else:
 			if centrallib is 5:
 				say "     When the military enters the city and rescues you and the other survivors, you recall another wolverine you met. Telling them about James, you give them information on how to take him calmly, with a soldier disguised in a company jacket and a call from the security company's headquarters relayed through the military network, they convince him to switch assignments. He joins you in one of the military staging camps, happy to see a friendly face[if Player is female]. You share a good romp with him that evening[end if].";
-				say "     The security company, now involved, helps to get you both cleared. Your idea was able to rescue several of their employees and they offer to hire you on as well. You and James get partnered with ";
-				if Player is herm:
-					say "a female wolverine and are stationed to guard a nuclear power plant. You don't have to deal with the general public, only the plant regulars, so your appearance isn't much of an issue. If anything, it's another strong deterrent for any unwanted visitors. Your trio makes a fine partnership, with the off-duty pair eager to spend time with one another. ";
-				else if Player is not female:
-					say "a female wolverine and are stationed to guard a nuclear power plant. You don't have to deal with the general public, only the plant regulars, so your appearance isn't much of an issue. If anything, it's another strong deterrent for any unwanted visitors. Your trio makes a fine partnership, with the female eager to spend time with either of you when off duty. ";
-				else:
-					say "another female wolverine and are stationed to guard a nuclear power plant. You don't have to deal with the general public, only the plant regulars, so your appearance isn't much of an issue. If anything, it's another strong deterrent for any unwanted visitors. Your trio makes a fine partnership, with James eager to spend time with either of you when off duty. ";
-				say "Your wild romps get rather loud and vicious sounding at times, so eventually the guardhouse you all share as home gets soundproofed.";
+				say "     The security company, now involved, helps to get you both cleared. Your idea was able to rescue several of their employees and they offer to hire you on as well. You and James get partnered with [if Player is herm]a female wolverine and are stationed to guard a nuclear power plant. You don't have to deal with the general public, only the plant regulars, so your appearance isn't much of an issue. If anything, it's another strong deterrent for any unwanted visitors. Your trio makes a fine partnership, with the off-duty pair eager to spend time with one another[else if Player is not female]a female wolverine and are stationed to guard a nuclear power plant. You don't have to deal with the general public, only the plant regulars, so your appearance isn't much of an issue. If anything, it's another strong deterrent for any unwanted visitors. Your trio makes a fine partnership, with the female eager to spend time with either of you when off duty[else]another female wolverine and are stationed to guard a nuclear power plant. You don't have to deal with the general public, only the plant regulars, so your appearance isn't much of an issue. If anything, it's another strong deterrent for any unwanted visitors. Your trio makes a fine partnership, with James eager to spend time with either of you when off duty. Your wild romps get rather loud and vicious sounding at times, so eventually the guardhouse you all share as home gets soundproofed.";
 			else if HP of Doctor Matt <= 100:
 				say "     You hold out until the rescue comes and you are taken in by the military. You wait impatiently for your release, always on edge and feeling that there's something you should be doing. You are eventually moved into the care of Dr. Matt, who has you alternate with Orthas as his personal guard at the research station the military sets him up at to combat the spreading infection. While on duty, you are tireless in your vigil, protecting your post and feeling a sense of fulfillment from doing so.";
 			else:

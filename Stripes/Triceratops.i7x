@@ -2,12 +2,7 @@ Version 1 of Triceratops by Stripes begins here.
 [Version 1.1 - touch-ups]
 "Adds a Triceratops creature to Flexible Survival's Wandering Monsters table"
 
-
 Section 1 - Creature Responses
-
-to say tricdesc:
-	say "     Before you is a stunning dichotomy of anachronism! The female dinosaur woman, a triceratops with horns and a broad frill, is dressed as a disco maven. Her brown and green scaled body is only barely covered by the red disco dress she wears, exposing most of her bosom. It is made of smooth satin with rhinestones around bell-bottom-like wide ankles and pleated waves over her shoulders. The large afro behind her armored frill, the big sunglasses and high platform shoes complete the look. This double blast-from-the-past strikes a pose and strides to the beat, ready to mop the dance floor with you.";
-
 
 to say losetotric:
 	if dinonest is 1:
@@ -18,30 +13,24 @@ to say losetotric:
 	else:
 		say "     The dinosaur woman growls angrily and knocks you to the ground with a swipe of her heavy tail. She then strides overtop of you as she slides out of her disco dress. She reaches down and grabs your head roughly with one of her large, saurian hands, jamming it between her thighs. The scent of her wet pussy fills your nose and soon you are compelled to lick at it. As you lap at her dripping folds, she rocks her body with a quickening rhythm. Her hot juices flow out over your face as she cries out 'Ah yeah, baby!' in climax. Finished with you, she pushes you roughly away, slamming your head against the floor, making lights swirl in your eyes. When you come to, you are elsewhere, she is gone and you are left aroused and unsatisfied.";
 		CreatureSexAftermath "Player" receives "OralPussy" from "Triceratops";
-		increase Libido of Player by 10;
-		if Libido of Player > 100:
-			now Libido of Player is 100;
+		raise Player Libido by 10;
 
 to say beatthetric:
 	if dinonest is 1:
 		say "     Having bested the triceratops woman, you can finish searching her nest in the hopes of finding something to satisfy the mouse doctor. You dig around in her collection of old stuff, but don't see anything for some time. Eventually, you instead smell something and soon track the scent to a lava lamp. Unplugged, the glass lamp is off its stand and is coated in a wet sheen of fluids. Guessing the strange creature has been using it for some improvised fun, you wrap it in a paisley shirt and pack it away.";
-		say "     Lava lamp collected.";
+		[say "     Lava lamp collected.";]
 		ItemGain lava lamp by 1;
 		increase score by 10;
 		now Dinosaur Nest is resolved;
 	else if Player is male and Libido of Player > 24 and (CockName of Player is "Triceratops" or CockName of Player is "Triceratops Male"):
 		say "     After the struggle with the powerful female, you look down at her, feeling a stirring in your loins. It feels as if you haven't had sex in 65 million years and it's time to get funky! Your balls start to ache for it and soon you are atop her with a growl, lining up your shaft with her dripping pussy. She is quite aroused, excited by the rich scent of a mate to breed her, and has pulled open her dress, unveiling her scaled body for you.";
 		[follow the sex change rule;]
-		LineBreak;
 		say "     You bury your [cock size desc of Player] saurian shaft into the funky lady, intent on showing her your moves now. She moans beneath you as you set the beat and drive your shaft into her again and again, having her moan the tempo. You tease her nipples as you dance the oldest dance with her. You can feel her inner walls squeeze and tug at your cock, while your hearts pound like bass drums. In time, the passionate thump of your bodies against one another becomes too much and you drive deep inside her, shooting your hot load into her eager body, making her moan loudly and writhe beneath you. You both pant as you catch your breath, then kiss before parting, your mating dance over.";
 		CreatureSexAftermath "Triceratops" receives "PussyFuck" from "Player";
 		decrease Libido of Player by 25;
-		if Libido of Player < 0:
-			now Libido of Player is 0;
 	else if Player is male and Libido of Player > 49:
 		say "     The strong female falls to her knees, no longer able to keep fighting. With a moan, she runs her paws over her body and slides open her dress, exposing her large bosom to you.";
-		say "     [bold type]She coos softly as she sways her body, tempting you to finish your dance with her.[roman type][line break]";
-		LineBreak;
+		say "[line break]     [bold type]She coos softly as she sways her body, tempting you to finish your dance with her.[roman type][line break]";
 		say "     ([link]Y[as]y[end link]) - Yes.";
 		say "     ([link]N[as]n[end link]) - No.";
 		if Player consents:
@@ -54,7 +43,6 @@ to say beatthetric:
 			say "     You leave the Cretaceous beauty and continue on your way.";
 	else:
 		say "     The strong female falls to her knees, no longer able to keep fighting. With a moan, she runs her paws over her body and slides open her dress. You can hear her continue to moan with lustful desire, but you are already walking away.";
-
 
 Section 2 - Creature Insertion
 
@@ -92,14 +80,14 @@ When Play begins:
 	now attack entry is "[one of]The powerful female, after a flourish of quick steps, strikes you with a heavily armored punch![or]The dinosaur strides towards you, stepping to an unheard beat. She slashes her claws across your arm, leaving bloody scrapes![or]The triceratops waves her arms to the sides as she swings her hips, then turns suddenly and bashes your side with her tail while flashing her ass at you![or]With a flourish of funkability, the dinosaur thrusts her large horns at you. You manage to grab them to save yourself from being gored, but are sent tumbling![or]The dinosaur does a dancing spin and strikes you square in the jaw with her platform shoes, filling your eyes with visions of goldfish for a moment![or]The triceratops charges suddenly at you. Unable to dodge in time, you try to grab her horns, but she drops and slides on her knees. One horn jabs into your side![or]The dinosaur woman manages to grab your head and headbutts you with her bony skull, crying 'Oh yeah, baby!' as she does![at random]";
 	now defeated entry is "[beatthetric]";
 	now victory entry is "[losetotric]"; [Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block as the demonstration text shows.]
-	now desc entry is "[tricdesc]"; [ Description of the creature when you encounter it.]
+	now desc entry is "     Before you is a stunning dichotomy of anachronism! The female dinosaur woman, a triceratops with horns and a broad frill, is dressed as a disco maven. Her brown and green scaled body is only barely covered by the red disco dress she wears, exposing most of her bosom. It is made of smooth satin with rhinestones around bell-bottom-like wide ankles and pleated waves over her shoulders. The large afro behind her armored frill, the big sunglasses and high platform shoes complete the look. This double blast-from-the-past strikes a pose and strides to the beat, ready to mop the dance floor with you.[line break]"; [ Description of the creature when you encounter it.]
 	now face entry is "changed to have a jutting muzzle adorned with a large horn. Two other horns grow from your brow, facing forward. You have a broad, bony frill protruding from the back of your saurian head"; [ Face description, format as "Your face is [Face of Player]." ]
 	now body entry is "strong and sturdy, but always itching to sway and dance to a beat you can't quite hear. Your hands and feet are clawed, saurian ones, but still nimble and graceful"; [ Body Description, format as "Your Body is [Body of Player]." ]
 	now skin entry is "a mix of brown and green scales adorn your"; [ skin Description, format as "your body is covered in (your text) skin."]
 	now tail entry is "You have a thick, scaled tail which sways behind you like a metronome, making your hips sway with rhythm. Your ass is firmly toned, like a professional dancer's."; [ Tail description, write a whole Sentence or leave blank. ]
 	now cock entry is "ridged saurian"; [ Cock Description, format as you have a 'size' (your text) cock.]
 	now face change entry is "it stretches forward into a large, pointed muzzle. A hard, bony horn grows atop your nose. A bony frill and another pair of horns grow onto your head"; [ Face change text, format as "Your face feels funny as [face change entry]." ]
-	now body change entry is "becomes strong, yet flexible. Your hands and feet change, becoming clawed and saurian in shape, but still nimble and graceful"; [ Body change text, format as "Your body feels funny as [body change entry]." ]
+	now body change entry is "it becomes strong, yet flexible. Your hands and feet change, becoming clawed and saurian in shape, but still nimble and graceful"; [ Body change text, format as "Your body feels funny as [body change entry]." ]
 	now skin change entry is "toughened scales spread across your body, richly green with soft brown accents in key spots"; [ Skin change text, format as "Your skin feels funny as [skin change entry]." ]
 	now ass change entry is "a strong, saurian tail forms behind you, swaying rhythmically"; [ Ass/tail change text, format as "Your ass feels funny as [ass change entry]." ]
 	now cock change entry is "it grows sensual ridges and takes on an animalistic, saurian shape"; [ cock change text. format as "Your cock feels funny as (your text)." ]
@@ -243,7 +231,6 @@ When Play begins:
 	[Clit Size Adjective is generated by a function and can be used in scenes: very small/small/average/large/very large]
 ]
 
-
 Section 3 - Endings
 
 Table of GameEndings (continued)
@@ -255,12 +242,12 @@ This is the Triceratops Infection rule:
 		trigger ending "Triceratops Infection"; [Here it states, that the ending has been played.]
 		if humanity of Player < 10:
 			say "     You can feel a growing rhythm in your mind, almost like music. You start to follow that funky beat, drawing you through the city. As you travel, you spot a clothing store display and break into it, wanting the clothes on display. With your change in attire, you continue on, eventually coming to the museum, striding in with confidence. You snap your fingers and stride to the beat playing in your mind. Your platform shoes echo in the antechamber as you start to dance. The sphinx at the front desk watches you with an inscrutable expression, but it is not for her you are dancing. When the rhythm of your steps is matched by that of another, the female triceratops striding into the room from one of the museum halls, then your dance can begin in earnest with your partner.";
-			say "     You stride meaningfully across the room towards her, stepping to the rhythm. She dances tantalizingly as you come over to her. With your arms around her, you both start to dance with energy, kissing and touching each other between the moves of your passionate mating dance[if Player is male]. Your funky, lime-green bellbottoms rock to the motion of your hips while your tail sways behind you. Half-open over your chest is a large-collared shirt, resplendent in colors and patterns to draw the female's eye and she is clearly pleased with your bright, vibrant plumage. You strike a pose, swaying your hips and pointing, indicating to head further into the museum. With a grin, she strides off, her shoes still tapping out the beat while you move in time after her, following her to her nest, soon to be the love nest of you both[else]. Resplendent in your lime-green wrap dress, you sway your hips while your tail moves behind you. You have sets of hoop earrings that you've turned into golden rings to adorn your upper horns. You strike a pose and the other female moves up beside you, without exchanging a glance, you both dance and stride down the museum halls in search of dance partners so you may fill your shared nest with eggs[end if].";
+			say "     You stride meaningfully across the room towards her, stepping to the rhythm. She dances tantalizingly as you come over to her. With your arms around her, you both start to dance with energy, kissing and touching each other between the moves of your passionate mating dance. [if Player is male]Your funky, lime-green bellbottoms rock to the motion of your hips while your tail sways behind you. Half-open over your chest is a large-collared shirt, resplendent in colors and patterns to draw the female's eye and she is clearly pleased with your bright, vibrant plumage. You strike a pose, swaying your hips and pointing, indicating to head further into the museum. With a grin, she strides off, her shoes still tapping out the beat while you move in time after her, following her to her nest, soon to be the love nest of you both[else]Resplendent in your lime-green wrap dress, you sway your hips while your tail moves behind you. You have sets of hoop earrings that you've turned into golden rings to adorn your upper horns. You strike a pose and the other female moves up beside you, without exchanging a glance, you both dance and stride down the museum halls in search of dance partners so you may fill your shared nest with eggs[end if].";
 		else:
 			say "     After leaving military custody, you settle into a rather boring daytime life of office work. It fills your day and earns you money, but you have no passion for it. You continue like this for a time, until one evening you hear music faintly from the corner of your ear. You follow it, coming to a small club off the beaten path. You would have completely missed it had not someone exited at that moment to free the sound. You go in and are met with music, lights and sights that breathe life into you, filling you with energy. Your style, always seeming outdated to the rest of the world, fits right in here. You stride out onto the flashing dance floor under the disco ball and take center stage, stealing the show with your moves and rhythm. Despite your altered appearance, your disco dancing breaks down all barriers and you are a star.";
 			if Player is male and (Player is femaleinterested or Player is not maleinterested): [MALE/HERM]
 				say "     You dance with lady after lady that night, and every night after that, always having boundless energy to return every evening. The retro disco hall is your mating grounds and the women are always captivated by your dance, giving you countless lovers[if Player is not sterile]. When a few grow heavy and eventually bear eggs, despite not being saurian, you can only smile and dance all the more, filled with the dance of life[end if].";
-			else if Player is fpreg_ok or Player is mpreg_ok: [F-BREEDABLE]
+			else if Player is impreg_ok: [F-BREEDABLE]
 				say "     You dance with man after man that night, and every night after that, always having boundless energy to return every evening. The retro disco hall is your mating grounds and the guys are always captivated by your dance, giving you countless lovers. When you eventually grow heavy with eggs, you have to stop dancing for a time, but instead work the club and play with your many lovers between their sets.";
 			else: [F-STERILE]
 				say "     You dance with man after man that night, and every night after that, always having boundless energy to return every evening. The retro disco hall is your mating grounds and the guys are always captivated by your dance, giving you countless lovers.";

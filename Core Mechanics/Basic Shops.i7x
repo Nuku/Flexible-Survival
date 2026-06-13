@@ -1,8 +1,8 @@
 Version 1 of Basic Shops by Core Mechanics begins here.
 
 understand the command "buy" as something new.
-BuyingAction is an action applying to one topic.
 
+BuyingAction is an action applying to one topic.
 Understand "buy [text]" as BuyingAction.
 
 Check BuyingAction:
@@ -12,11 +12,7 @@ Carry out BuyingAction:
 	let SoughtItem be "";
 	now SoughtItem is topic understood;
 	if the medicine case is visible: [Black Market in Zephyr Storeroom/Library Shop; see file Black Market.i7x]
-		if SoughtItem is a name listed in the table of zephyr black market medicine case:
-			if price entry > freecred:
-				say "You can't afford the [Name entry], it costs [price entry] freecred.";
-				continue the action;
-		else if SoughtItem is a name listed in the Table of Zephyr Black Market Outfitters Rack:
+		if SoughtItem is a name listed in the table of zephyr black market medicine case or SoughtItem is a name listed in the Table of Zephyr Black Market Outfitters Rack:
 			if price entry > freecred:
 				say "You can't afford the [Name entry], it costs [price entry] freecred.";
 				continue the action;

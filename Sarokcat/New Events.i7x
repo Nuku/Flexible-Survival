@@ -3,8 +3,9 @@ New Events by Sarokcat begins here.
 
 "Adds a series of random events to Flexible Survival with several different outcomes."
 
-
 Section 1 - Military presence
+
+MTP is a number that varies.
 
 Table of GameEventIDs (continued)
 Object	Name
@@ -13,7 +14,6 @@ Military Presence	"Military Presence"
 
 Military Presence is a situation.
 ResolveFunction of Military Presence is "[ResolveEvent Military Presence]".
-MTP is a number that varies.
 
 to say ResolveEvent Military Presence:
 	if mtp is 0:
@@ -21,9 +21,9 @@ to say ResolveEvent Military Presence:
 		now mtp is 1;
 	else if mtp is 1:
 		say "     While traveling through the deserted city, a sudden glint of light catches your eye on one of the nearby rooftops. Hoping to find signs of another survivor, you start moving to get a better view of the roof, straining your eyes to see what it might have been.";
-		let bonus be (( Perception of Player minus 10 ) divided by 2);
+		let bonus be ( Perception of Player minus 10 ) divided by 2;
 		let diceroll be a random number from 1 to 20;
-		say "     You roll 1d20([diceroll])+[bonus]: [diceroll + bonus], ";
+		say "[line break]You roll 1d20([diceroll])[if bonus >= 0]+[end if][bonus] = [special-style-1][diceroll + bonus][roman type] vs [special-style-2]11[roman type] (Perception Check):[line break]";
 		increase diceroll by bonus;
 		if diceroll > 10:
 			project Figure of BlueGryphon_hard_icon;
@@ -31,11 +31,10 @@ to say ResolveEvent Military Presence:
 			say "     You swiftly begin running across the street to the building, hoping to arrive in time to help whoever is on the roof. Drawing close to the building, you can hear the signs of a struggle from the roof. However, as you arrive at the building, you can hear the sounds go silent for a minute, before moans and other sounds of a more intimate nature begin coming from above. Hoping there might still be something left to talk to up above, you quickly search around the building for a way up, eventually finding a fire escape ladder within easy reach of the ground. After climbing up the fire escape, with the moans and squealing getting louder with every step, you prepare yourself for combat as you peek up onto the rooftop. Just as you do, there is a loud beating of wings as two gryphons take off from the roof, dancing and flirting with each other in the air as they fly to parts unknown.";
 			WaitLineBreak;
 			say "     Sighing, you continue to investigate the rooftop, stepping carefully to avoid the copious amounts of cum and milk spread all over from the gryphon's copulating. You find several scraps of what was obviously a military uniform scattered around the area, as well as a pair of dog tags lying in the middle of a pool of cum. The only other object of note up here appears to be the military issue binoculars, with several useful attachments and a nice case. This was obviously the item you saw glinting on the roof as their former owner scanned the area. Shrugging, you string the nice pair of binoculars around your own neck, as obviously the former owner won't be needing them anymore. Climbing down the fire escape and back into the city, you can already see the binoculars helping out your perception, though you still have more questions than answers about what the person was doing here.";
-			LineBreak;
 			StatChange "perception" by 2;
 			now mtp is 2;
 		else:
-			say "Sadly, no matter how hard you search, you can't seem to figure out where the glint of light came from, nor can you determine what exactly it was from the little you saw of it. Chalking it up as just another of the strange events going on in the city, you continue about your way.";
+			say "     Sadly, no matter how hard you search, you can't seem to figure out where the glint of light came from, nor can you determine what exactly it was from the little you saw of it. Chalking it up as just another of the strange events going on in the city, you continue about your way.";
 	else if mtp is 2:
 		say "     Traveling through the streets again, you hear a distant sound in the air for a minute. Looking up and all around, you can only barely make out a jet trail high in the sky. Wondering why someone would be traveling that high, you are about to turn away and continue about your business when you notice a small speck drifting in the sky. You pull out your newly acquired binoculars and try to focus in on the speck to see what it is. Surprisingly, as you focus in the binoculars, the speck resolves itself into several people in urban camouflage falling through the sky! As you watch breathlessly, their parachutes open and they straighten up to land, though a sudden swirl of wind from over near the capitol building scatters their neat formation, blowing several of them to entirely different parts of the city. Shaking your head as the figures fall out of sight and into the city itself, you can't help but wonder what this means for the city and your hopes of rescue.";
 		extend game by 12;
@@ -49,7 +48,7 @@ to say ResolveEvent Military Presence:
 		ItemGain food by 2;
 		LibidoBoost 30;
 		now mtp is 4;
-	else if mtp is 4:
+	else:
 		say "     Traveling through the city, you come upon a strange sight on one of the roads that eventually leads out of the city. You find a large, flatbed truck overturned on the road, with several jeeps abandoned next to it. Curiosity getting the better of you, you move closer to investigate the strange sight. Arriving at the overturned flatbed, you find that it appears to have been rigged to carry something relatively large, and from the way the straps and tie downs were burst open, alive. Moving around the truck to examine the jeeps, you discover that the jeeps and the area are covered in some kind of hardened goop, and sitting in the middle of the stuff are what appear to be several almost man-sized eggs.";
 		say "     Wondering what happened here, you spy a bit of some military camo worked into the lining of one of the eggs. Closer investigation shows sign of a struggle, with several empty shell casings and even a thoroughly gummed up and useless military sidearm lying around. Recalling some of your earlier encounters and sightings with the wyverns in the city, you realize that it looks like they were trying to transport a couple of the beasts to some other location, probably for study like in that camp you saw earlier. Things obviously didn't go as planned again. As you look around at the numerous eggs that likely hold the transforming soldiers, you can't help but wonder what the military's interest in all of this is and why they aren't already in the city in force to help the survivors.";
 		say "     You are startled out of your thoughts by one of the eggs shaking a bit as you stare at it and a small crack in the shell forming. Realizing that the eggs will probably start hatching soon, and that you are surrounded by quite a number of eggs indeed, you give a shudder as you hurry on your way, though you pause to take a sample of the goop surrounding the area.";
@@ -57,16 +56,13 @@ to say ResolveEvent Military Presence:
 		extend game by 8;
 		now Military presence is resolved;
 
-
 Section 2 - Cream truck
 
 [Moved to Consolidated Outside Events]
 
-
 Section 3 - Wyvern Flight
 
 [Moved to Consolidated Outside Events]
-
 
 Section 4 - Abandonedplayer
 
@@ -82,13 +78,9 @@ to say ResolveEvent Abandonedplayer:
 	say "     As you search the deserted streets of the area close to the waterfront, you hear some noise coming from a nearby alley. Cautiously following it, you prepare for combat as you move closer. Gripping your makeshift weapon tightly, you duck around the corner and come face to face with... an abandoned CD player. Sighing, you lower you weapon again before looking around sheepishly. Fortunately, there was no one around to see that. Checking the music player, you decide to leave the instrument of your ridicule where it lies to spare yourself from an embarrassing reminder.";
 	now Abandonedplayer is resolved;
 
-
 Section 5 - Hyena Gang
 
 [Moved to new Hyena Gang file]
-
-
-
 
 Section 7 - Transformed Seals
 
@@ -98,12 +90,11 @@ Transformed Seals	"Transformed Seals"
 
 Transformed Seals is a situation.
 ResolveFunction of Transformed Seals is "[ResolveEvent Transformed Seals]".
-Sarea of Transformed Seals is "Beach";
+Sarea of Transformed Seals is "Beach".
 
 to say ResolveEvent Transformed Seals:
 	say "     While walking along the beach, you come across a shiny object half-buried in the sand, and dreams of treasure come over you as you as you quickly uncover it. You are surprised to find just a couple thin pieces of metal, but closer examination reveals that they're a pair of navy seal dog tags. Looking around more carefully, you notice the remains of several stretched and torn wet suits in the surf and a few other telltale signs of a struggle. Quickly brushing the sand off your hands, you move on down the beach before whatever happened to them happens to you.";
 	now Transformed Seals is resolved;
-
 
 Section 8 - Wrecked ships
 
@@ -120,7 +111,6 @@ to say ResolveEvent Wrecked ships:
 	say "     You come across the wreckage of several smashed sailboats. It looks like they were broken apart by something trying to get at the people inside. You decide that maybe coming out here alone wasn't your best idea ever and quickly hurry on your way.";
 	now Wrecked Ships is resolved;
 
-
 Section 9 - Dolphin lotion
 
 Table of GameEventIDs (continued)
@@ -132,11 +122,9 @@ Dolphin Lotion is a situation.
 ResolveFunction of Dolphin Lotion is "[ResolveEvent Dolphin Lotion]".
 Sarea of Dolphin Lotion is "Beach".
 
-
 to say ResolveEvent Dolphin Lotion:
 	say "     Traveling along the beach, you come across a large blanket set up on the sand next to an overturned beach umbrella. Moving closer, you find no sign of the occupant, though you do spy a pair of sunglasses and some sunblock lying in the sand. Deciding some extra protection couldn't hurt, you bend over to take the sunblock, only to notice what from this position looks like something was dragged along the sand to the water. Looking closer at the bottle of sunblock, you notice it is called [']Happy Dolphin['] suntan lotion and shows the picture of a grinning dolphin woman on the front, her large tail resting on the sand behind her. Deciding that on second thought you don't need any sun protection right now, you leave the tainted lotion behind and hurry along.";
 	now Dolphin Lotion is resolved;
-
 
 Section 10 - Broken fountain
 
@@ -154,7 +142,6 @@ to say ResolveEvent Broken Fountain:
 	ItemGain dirty water by 1;
 	now Broken Fountain is resolved;
 
-
 Section 11 - Scenic View
 
 Table of GameEventIDs (continued)
@@ -170,7 +157,6 @@ to say ResolveEvent Scenic View:
 	SanBoost 10;
 	now Scenic View is resolved;
 
-
 Section 12 - Twisted grove
 
 Table of GameEventIDs (continued)
@@ -181,6 +167,7 @@ Twisted Grove	"Twisted Grove"
 Twisted Grove is a situation.
 ResolveFunction of Twisted Grove is "[ResolveEvent Twisted Grove]".
 Sarea of Twisted Grove is "Park".
+
 when play begins:
 	add Twisted Grove to BadSpots of FemaleList;
 	add Twisted Grove to BadSpots of FurryList;
@@ -188,7 +175,6 @@ when play begins:
 to say ResolveEvent Twisted Grove:
 	say "     Exploring the park trails, you hear muffled sounds from a distance. Deciding to investigate, you creep up over a small hill, only to stare in astonishment as what seems to be a small grove of animated plants violate a skunk-like woman, holding her suspended off the ground like some obscene fruit. As you watch, more and more cum drips off of her onto the ground as she is pounded by several vines into orgasm again and again. Your eye is quickly drawn to the patch of earth where some of the cum fell, the grass seeming to writhe and twitch and start to grow in obscene shapes as well. As there is nothing you can do for the skunkwoman against the growing grove of twisted plants, you decide to move on quickly before you end up joining her.";
 	now Twisted Grove is resolved;
-
 
 Section 13 - Ominous hole
 
@@ -222,7 +208,6 @@ to say ResolveEvent Squatters Den:
 	ItemGain food by 1;
 	now Squatters Den is resolved;
 
-
 Section 15 - Leaking pipe
 
 Table of GameEventIDs (continued)
@@ -239,8 +224,9 @@ to say ResolveEvent Leaking Pipe:
 	ItemGain dirty water by 2;
 	now Leaking Pipe is resolved;
 
-
 Section 16 - Library Visitor
+
+libvis is a number that varies.
 
 Table of GameEventIDs (continued)
 Object	Name
@@ -249,7 +235,6 @@ Library Visitor	"Library Visitor"
 
 Library Visitor is a situation.
 ResolveFunction of Library Visitor is "[ResolveEvent Library Visitor]".
-libvis is a number that varies.
 
 to say ResolveEvent Library Visitor:
 	if libvis is 0:
@@ -271,7 +256,7 @@ to say ResolveEvent Library Visitor:
 		say "     Returning to the library, you open the door and are shocked when you find that you had a visitor again, only this time they somehow made their way inside. You look around near the library entrance and the books knocked over and the obvious signs of someone or something searching the place, probably for you. Checking carefully, you determine that whatever it was and however it got in here, at least now it seems to be long gone. Following what you can of its trail, you sigh in relief as it doesn't seem to have found the entry to the bunker in its searching. Of course, you still haven't figured out how it found its way in to begin with...";
 		now Resolution of Library Visitor is 4; [fourth encounter]
 		now libvis is 4;
-	else if libvis is 4:
+	else:
 		say "     After another long day searching the abandoned city, you are happy to return to the library for some hard earned rest. As you go to unlock the door, you remember your unwanted visitor from before and are thus careful when you open it, just in case. Your caution seems warranted, as the moment you begin to swing the door open, something inside barrels out and attacks you directly! From a glimpse of more movement from inside heading this way, apparently it isn't alone this time!";
 		fight;
 		say "     Dealing with your first opponent, you barely have time to take a breath before another creature that had been hiding outside around the corner moves in on you!";
@@ -285,7 +270,6 @@ to say ResolveEvent Library Visitor:
 		increase score by 10;
 		now Resolution of Library Visitor is 5; [fifth encounter]
 		now Library Visitor is resolved;
-
 
 Section 17 - ruined supplies
 
@@ -301,26 +285,25 @@ Sarea of Ruined Supplies is "Mall".
 to say ResolveEvent Ruined Supplies:
 	say "     Searching the area under the mall again, you find a small pallet of food supplies, obviously intended for use above at the food court. Unfortunately, you were not the first person to find these supplies, as someone has been here before you and made a pig out of themselves. Boxes are ripped open, food was obviously messily consumed, and almost all of the drinks have been opened, leaving the area strewn with wrappers and empty bottles. Eyeing the mess dubiously, you wonder if it is even worth searching through it all to see if there is anything left. Do you?";
 	if Player consents:
+		LineBreak;
 		say "     Tossing the supplies and boxes to the side, you realize that tossing things around as you look through the remains of the supplies is actually kind of fun. You find small bits of food and a few mouthfuls of drink left over and continue searching for more. You quickly stuff them in your face, enjoying this strange type of edible scavenger hunt you have embarked on. Before you know it, you look up and realize that you have spread the mess around an even larger area than before and that you have been rooting around in the remains like some sort of pig yourself. As you stand up to leave, you hesitate to leave such an enjoyable bit of fun, and you are sure there are still some crumbs left behind. Thinking this, you begin to turn back to the mess of wrappers and boxes, only to catch a glimpse of yourself in one of the shiny wrappers and realize that you really have started to become rather pig-like yourself from your messy endeavors! Realizing that staying here any longer, however tempting it may be, would almost certainly result in your becoming totally porcine, you quickly hurry away, darting a few longing looks over your shoulder at the remains of the supplies before managing to get a hold of yourself.";
 		piggyify;
 		piggyify;
 		HungerReset;
 		ThirstReset;
 		now Resolution of ruined supplies is 1; [become a pig]
-		now Ruined Supplies is resolved;
 	else:
+		LineBreak;
 		say "     Deciding it's perhaps best not to get involved in such a total mess on the off chance you might find something useful left in the remains, you continue along your way, doing your best to forget the horrible carnage you are leaving behind.";
-		now Resolution of ruined supplies is 1; [avoided becoming a piglet]
-		now Ruined Supplies is resolved;
+		now Resolution of ruined supplies is 2; [avoided becoming a piglet]
+	now Ruined Supplies is resolved;
 
+to piggyify:
+	Infect "Messy Pig";
 
 Section 18 - Strange preacher
 
 [Moved to Consolidated Outside Events]
-
-
-to piggyify:
-	Infect "Messy Pig";
 
 to hyenaify:
 	Infect "Hyena Herm";

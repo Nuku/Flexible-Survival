@@ -22,11 +22,8 @@ Phoenix Rebirth Spa Lobby	"Phoenix Rebirth Spa Lobby"
 
 Phoenix Rebirth Spa Lobby is a room.
 Phoenix Rebirth Spa Lobby is northeast of Atlantis City Market.
-Description of Phoenix Rebirth Spa Lobby is "[PhoenixRebirthLobby]".
+Description of Phoenix Rebirth Spa Lobby is "     When you look around the lobby of the spa you don't exactly see anything extravagant. It's a rather simple room, with dark red walls and dark blue carpet. Lining both the left and right walls are waiting room-esque chairs that sit in from of coffee tables. On top of the coffee tables are different magazines that are more than likely there for people to read while waiting. At the end of the room is a counter with papers and different knick-knacks and Serafino sitting in a chair writing on the documents. Behind the phoenix is a set of four doors that you have no clue as to where they lead.[line break]".
 earea of Phoenix Rebirth Spa Lobby is "Atlantis".
-
-to say PhoenixRebirthLobby:
-	say "     When you look around the lobby of the spa you don't exactly see anything extravagant. It's a rather simple room, with dark red walls and dark blue carpet. Lining both the left and right walls are waiting room-esque chairs that sit in from of coffee tables. On top of the coffee tables are different magazines that are more than likely there for people to read while waiting. At the end of the room is a counter with papers and different knick-knacks and Serafino sitting in a chair writing on the documents. Behind the phoenix is a set of four doors that you have no clue as to where they lead.";
 
 Section 3 - Npc
 
@@ -72,20 +69,13 @@ SexuallyExperienced of Serafino is true.
 TwistedCapacity of Serafino is false. [Twisted Characters can take any penetration, no matter the size]
 Sterile of Serafino is true. [steriles can't knock people up]
 MainInfection of Serafino is "".
-Description of Serafino is "[SerafinoDesc]".
-Conversation of Serafino is { "<This is nothing but a placeholder!>" }.
+Description of Serafino is "     Looking over at the phoenix the first thing you notice are his vermilion colored feathers which stand out brightly alongside his blue eyes in the spa lobby. Next to that is his outfit, which is rather... mundane for a noble. Serafino is wearing a black tank top that doesn't seem to exactly fit him, as it quite tightly hug his figure. Paired with his shirt is a set of form-fitting cargo pants revealing his legs and ass shape to the world, as if he doesn't care that everyone sees his figure. All you're getting from looking at him, is that you are pretty sure he's an exhibitionist. Though the phoenix does seem to notice you staring and winks in your direction[line break]".
+fuckscene of Serafino is "[SerafinoSexMenu]".
 The scent of Serafino is "     The phoenix gives off a smell that reminds you of a rough mixture of flames, oils and ashes.".
-
-to say SerafinoDesc:
-	say "     Looking over at the phoenix the first thing you notice are his vermilion colored feathers which stand out brightly alongside his blue eyes in the spa lobby. Next to that is his outfit, which is rather... mundane for a noble. Serafino is wearing a black tank top that doesn't seem to exactly fit him, as it quite tightly hug his figure. Paired with his shirt is a set of form-fitting cargo pants revealing his legs and ass shape to the world, as if he doesn't care that everyone sees his figure. All you're getting from looking at him, is that you are pretty sure he's an exhibitionist. Though the phoenix does seem to notice you staring and winks in your direction";
 
 instead of conversing the Serafino:
 	say "     Making your way up to where Serafino is writing on papers, you cough, getting his attention. 'Oh? Do you want something my friend?' He asks with a curious tone.";
-	say "[SerafinoTalkMenu]";
-
-to say SerafinoTalkMenu:
-	LineBreak;
-	say "What do you want to talk with Serafino about?";
+	say "[line break]     What do you want to talk with Serafino about?";
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]
@@ -112,20 +102,20 @@ to say SerafinoTalkMenu:
 			choose row calcnumber in table of fucking options;
 			say "[title entry]: [description entry]?";
 			if Player consents:
-				let nam be title entry;
+				LineBreak;
 				now sextablerun is 1;
-				if nam is:
-				-- "Four Lords":
-					say "[SerafinoTalk1]";
-				-- "Back Massage":
-					say "[SerafinoMassage1]";
-				WaitLineBreak;
+				if title entry is:
+					-- "Four Lords":
+						say "[SerafinoTalk1]";
+					-- "Back Massage":
+						say "[SerafinoMassage1]";
 		else if calcnumber is 0:
+			LineBreak;
 			now sextablerun is 1;
 			say "     You step back from the white tiger who just scoffs at you before getting back to work.";
-			wait for any key;
 		else:
-			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options], or 0 to exit.";
+	wait for any key;
 	clear the screen and hyperlink list;
 
 to say SerafinoTalk1:
@@ -136,48 +126,44 @@ to say SerafinoTalk1:
 
 Section 4 - Sex
 
-instead of fucking Serafino:
-	if (lastfuck of Serafino - turns < 3): [You sexed the phoenix in the last 9 hours]
+to say SerafinoSexMenu:
+	if lastfuck of Serafino - turns < 3: [You sexed the phoenix in the last 9 hours]
 		say "     As soon as you suggest sex, the phoenix chuckles. 'I know I'm randy but I do need some recovery time, come back in a bit and then we'll see,' he says, waving you off before returning to his work.";
 	else:
 		say "     Walking up to the phoenix you give him a sultry wink which causes him to raise a brow and then hum before speaking. 'What to do with you, what to do?' He thinks out loud.";
-		say "[SerafinoSexMenu]";
-
-to say SerafinoSexMenu:
-	LineBreak;
-	now sextablerun is 0;
-	blank out the whole of table of fucking options;
-	[]
-	choose a blank row in table of fucking options;
-	now title entry is "Under Counter Blowjob";
-	now sortorder entry is 1;
-	now description entry is "Blow him under the counter";
-	[]
-	sort the table of fucking options in sortorder order;
-	repeat with y running from 1 to number of filled rows in table of fucking options:
-		choose row y from the table of fucking options;
-		say "[link][y] - [title entry][as][y][end link][line break]";
-	say "[link]0 - Nevermind[as]0[end link][line break]";
-	while sextablerun is 0:
-		say "Pick the corresponding number> [run paragraph on]";
-		get a number;
-		if calcnumber > 0 and calcnumber <= the number of filled rows in table of fucking options:
-			now current menu selection is calcnumber;
-			choose row calcnumber in table of fucking options;
-			say "[title entry]: [description entry]?";
-			if Player consents:
-				let nam be title entry;
+		now sextablerun is 0;
+		blank out the whole of table of fucking options;
+		[]
+		choose a blank row in table of fucking options;
+		now title entry is "Under Counter Blowjob";
+		now sortorder entry is 1;
+		now description entry is "Blow him under the counter";
+		[]
+		sort the table of fucking options in sortorder order;
+		repeat with y running from 1 to number of filled rows in table of fucking options:
+			choose row y from the table of fucking options;
+			say "[link][y] - [title entry][as][y][end link][line break]";
+		say "[link]0 - Nevermind[as]0[end link][line break]";
+		while sextablerun is 0:
+			say "Pick the corresponding number> [run paragraph on]";
+			get a number;
+			if calcnumber > 0 and calcnumber <= the number of filled rows in table of fucking options:
+				now current menu selection is calcnumber;
+				choose row calcnumber in table of fucking options;
+				say "[title entry]: [description entry]?";
+				if Player consents:
+					LineBreak;
+					now sextablerun is 1;
+					if title entry is "Under Counter Blowjob":
+						say "[SerafinoSex1]";
+			else if calcnumber is 0:
+				LineBreak;
 				now sextablerun is 1;
-				if (nam is "Under Counter Blowjob"):
-					say "[SerafinoSex1]";
-				wait for any key;
-		else if calcnumber is 0:
-			now sextablerun is 1;
-			say "     You shake your head and say you actually don't have anything in mind, which just causes the bird to chuckle and return to his work.";
-			wait for any key;
-		else:
-			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
-	clear the screen and hyperlink list;
+				say "     You shake your head and say you actually don't have anything in mind, which just causes the bird to chuckle and return to his work.";
+			else:
+				say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options], or 0 to exit.";
+		wait for any key;
+		clear the screen and hyperlink list;
 
 to say SerafinoSex1:
 	say "     Serafino appears to get an idea right away, gesturing for you to come behind the counter. Curious, you do as he asks, and he promptly scoots his chair back. 'How about you take care of me under here?' He asks with a wink, causing you to get an embarrassed look. You ask him about what about any customers coming in? 'Well, then just be sure not to make any noise,' the phoenix says with a chuckle. Sighing and shrugging your shoulders, you get down and crawl under the counter before turning so that you're face to face with the bird's crotch. 'Perfect! Now for us to have some fun!' Serafino said with a smile.";
@@ -195,10 +181,11 @@ to say SerafinoSex1:
 to say SerafinoMassage1:
 	say "     You tell the phoenix that you wish to schedule a back massage, which causes him to perk up happily. 'Oh? That's perfect! Well I'm actually free right now, so if you can pay the price I can get you in right now,' Serafino says with a smile. Nodding, you ask him what the price is for it? 'Well, for the back massage, it's two blue gel,' he explains. You ask why specifically that kind of item. 'I've found that it's good for the back and can help relieve pain in the muscles back there. Of course you don't have to worry about any changes to your body due to it, as I use my magic to neutralize the nanites, so do you have any?' Serafino asks.";
 	if carried of blue gel > 1:
-		say "     [bold type]Aware that you are carrying enough jars of blue gel, do you want to give it to him?[roman type][line break]";
-		say "     [link]Y[as]y[end link] - Yeah!";
-		say "     [link]N[as]n[end link] - Nah.";
+		say "[line break]     [bold type]Aware that you are carrying enough jars of blue gel, do you want to give it to him?[roman type][line break]";
+		say "     ([link]Y[as]y[end link]) - Yeah!";
+		say "     ([link]N[as]n[end link]) - Nah.";
 		if Player consents:
+			LineBreak;
 			say "     Passing the jars over to the phoenix he happily accepts them before standing up. 'Alrighty then! Come on then!' He says with a cheerful smile, leading you through the door directly behind his counter. It leads into a hallways that leads into a room with a full body length table. Once you're in here you remove anything that would get in the way of the massage and wait for Serafino who chuckles. 'Oh, you don't have to wait, get on the table my friend,' he says with a smile, gesturing to the area. You nod and climb on top, laying chest down and exposing your back to him so that he can take care of you.";
 			say "     While you're on your stomach you hear the phoenix moving some jars around, clearly opening a few. 'I think you'll love this massage,' he says with a chuckle. Seconds later you feel a cool sensation on your back before pressure is applied to a specific section. A pleasurable sensation shoots through you as a knot is undone, causing you to moan out loud. The hands on you move to another section and push again, causing more good feelings to reverberate through your body. As Serafino continuously undoes knots in your back you can't help but think this is definitely something you needed.";
 			WaitLineBreak;
@@ -212,6 +199,7 @@ to say SerafinoMassage1:
 			now lastfuck of Serafino is turns;
 			increase humanity of Player by 20;
 		else:
+			LineBreak;
 			say "     You shake your head, telling him that you've decided against the massage today even though you have the gel. The phoenix chuckles at you and waves it off. 'Don't worry! Just come back when you want one,' he says, his voice telling you that it's perfectly fine. After he finishes speaking he returns to work and you alone in the center of the lobby.";
 	else:
 		say "     You apologize to the phoenix, telling him that you don't have any blue gel at the moment. This causes Serafino to chuckle and wave it off. 'Don't worry! Just come back when you have enough to pay and I'll give you an appointment,' he says his voice assuring you that he's telling the truth. After he finishes, he returns to work and you're alone in the center of the lobby.";

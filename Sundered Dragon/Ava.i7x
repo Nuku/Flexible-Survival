@@ -8748,7 +8748,7 @@ to say SCUse:
 					add "Five?" to tail_Choices;
 					add "Six?" to tail_Choices;
 					add "Seven?" to tail_Choices;
-					add "Eight?" to tail_Choices;
+					add "eight?" to tail_Choices;
 					add "Nine?" to tail_Choices;
 					add "Nevermind." to tail_Choices;
 					let tail_Choice be what the player chooses from tail_Choices;
@@ -8834,25 +8834,25 @@ to say SCUse:
 					if Fur_Choice is:
 						-- "Reddish-orange?":
 							say "     Rebooting.";
-							now humanity of Mistress Snuggle is 0;
+							now Intelligence of Mistress Snuggle is 0;
 						-- "Lustrous golden?":
 							say "     Oh, Al will love that.";
-							now humanity of Mistress Snuggle is 1;
+							now Intelligence of Mistress Snuggle is 1;
 						-- "Velvty black?":
 							say "     Well aren't you a sneaky fox.";
-							now humanity of Mistress Snuggle is 2;
+							now Intelligence of Mistress Snuggle is 2;
 						-- "Smokey grey?":
 							say "     Somewhere, Cyn takes note of your actions.";
-							now humanity of Mistress Snuggle is 3;
+							now Intelligence of Mistress Snuggle is 3;
 						-- "Striking silver?":
 							say "     That's one way to become a silver fox!";
-							now humanity of Mistress Snuggle is 4;
+							now Intelligence of Mistress Snuggle is 4;
 						-- "Sandy yellow?":
 							say "     Ryan would be flattered.";
-							now humanityof Mistress Snuggle is 5;
+							now Intelligence of Mistress Snuggle is 5;
 						-- "Sapphire blue?":
 							say "     Someone was a sparkle dog once.";
-							now humanity of Mistress Snuggle is 6;
+							now Intelligence of Mistress Snuggle is 6;
 						-- "Actually nevermind.":
 							say "     Ok, dye jobs are overated.";
 				-- "Pelt markings?":
@@ -8876,7 +8876,7 @@ to say SCUse:
 							say "     Wonder if people will start calling you the blue blurr?";
 							now thirst of Mistress Snuggle is 2;
 						-- "Green vines with thorns?":
-							say "     All you're missing is some roses.";
+							say "     All your missing is some roses.";
 							now thirst of Mistress Snuggle is 3;
 						-- "Chaotic scrawl?":
 							say "     Ph'nglui mglw'nafh Cthulhu R'lyeh wgah'nagl fhtagn!";

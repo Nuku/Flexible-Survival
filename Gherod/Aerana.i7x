@@ -17,7 +17,7 @@ Version 2 of Aerana by Gherod begins here.
 [ Increments of 1 - Counting her sex interactions ]
 [ ... ]
 
-Section 1 - Pre-event
+Chapter 1 - Pre-event
 
 [Update for WalkinEvents table]
 Table of NavInEvents (continued)
@@ -29,7 +29,7 @@ Priority	Name	EventObject	EventConditions	EventRoom	LastEncounterTurn	CoolDownTu
 2	"Succubus Offspring Meeting"	Succubus Offspring Meeting	"[EventConditions_Succubus_Offspring_Meeting]"	Burned-Out Chapel	2500	2	100
 
 to say EventConditions_Succubus_Offspring_Meeting:
-	if (Incubus Offspring Meeting is resolved and "Succubus Daughter Born" is listed in Traits of Lilith) and Elijah is not in Burned-Out Chapel: [Aerana exists, hasn't met the player, Atticus' intro is sorted, Elijah not in there (too complex)]
+	if Incubus Offspring Meeting is resolved and "Succubus Daughter Born" is listed in Traits of Lilith and Elijah is not in Burned-Out Chapel: [Aerana exists, hasn't met the player, Atticus' intro is sorted, Elijah not in there (too complex)]
 		now CurrentWalkinEvent_ConditionsMet is true;
 
 Table of GameEventIDs (continued)
@@ -44,10 +44,6 @@ when play begins:
 	add Succubus Offspring Meeting to BadSpots of FemaleList;
 	add Succubus Offspring Meeting to BadSpots of IncestList;
 
-to say LilithTalkAerana:
-	say "     With all due respect for the lady demoness['] hard work at giving birth to her offspring, you ask if it would be possible to bring a female child out to the world, if you kept on providing the [italic type]required deposits[roman type]. Lilith chuckles at your words, as if she was amused by your request, but eventually gives out a reply. 'We are vastly more complex than your definitions of gender, but I understand the meaning of your request.' she says, leaving a smile across her flawless face. 'Very well, you may have a daughter the next time we bed together. Though I hope you know what you are asking.' she finishes speaking, leaving a quite cryptic warning in the end that you will only understand when you see it. Probably.";
-	TraitGain "Succubus Daughter Wanted" for Lilith;
-
 to say ResolveEvent Succubus Offspring Meeting:
 	if Player is not male:
 		say "     (Note: Even though you might not have a dick right now, you are still the person who fathered Aerana. That's why she will continue to call you dad throughout all content.)";
@@ -57,19 +53,17 @@ to say ResolveEvent Succubus Offspring Meeting:
 	say "     This fully naked succubus demoness must be the daughter Lilith promised you. She notices your presence, but rather than greeting you directly, she simply makes sure you see her and waits for you to approach, twirling strands of her silky hair around her fingers while eyeing you seductively. When you come close, within reach, after having slowly walked towards her, she shows you a smile, flickering her long eyelashes across her purple eyes, which gaze is locked on yours. 'Hello, daddy. Mother already told me everything about you... I knew you'd be looking forward to meet me, so I made sure you could see your favorite new daughter in all the splendor she deserves.' she says, her soft pitched voice stroking your ears like a gentle breeze, yet sounding as seductive as you would expect from a demoness of lust.";
 	WaitLineBreak;
 	say "     Something about her just captures you in ways you would not foresee as possible. She is truly and remarkably beautiful, flaunting her breasts of just the right size, D-cups that are neither too small nor too big, complementing her sensual curves in near perfection. With how close you are standing to her, you have a feeling you could touch her... But she never lets you, snapping your hand away if she has to. 'Now that you've seen me, I'm sure you're ready to do everything I want, right? Me being your special daughter and all...' says the young woman as she bites her lip, clearly with mischief in mind. You have a feeling that she will require special attention at all times, and it will only get worse if you give in.";
-	LineBreak;
-	say "     [bold type]How do you want to deal with her approach?[roman type][line break]";
+	say "[line break]     [bold type]How do you want to deal with her approach?[roman type][line break]";
 	say "     [link](1)[as]1[end link] - Promise to spoil her with anything she wants.";
 	say "     [link](2)[as]2[end link] - Hug and tell the succubus you will care for her as your beloved daughter.";
 	say "     [link](3)[as]3[end link] - Berate her for trying to manipulate you like a spoiled brat.";
 	now calcnumber is 0;
 	while calcnumber < 1 or calcnumber > 3:
-		say "Choice? (1-3)>[run paragraph on]";
+		say "Choice? (1-3)> [run paragraph on]";
 		get a number;
-		if calcnumber is 1 or calcnumber is 2 or calcnumber is 3:
-			break;
-		else:
+		if calcnumber < 1 or calcnumber > 3:
 			say "Invalid choice. Type [link]1[end link] to assure her she will get whatever she wants, [link]2[end link] to hug her lovingly or [link]3[end link] to disapprove of her behavior.";
+	LineBreak;
 	if calcnumber is 1:
 		say "     You nod in absolute concordance, that you will do everything she asks and will give her the best time she could ever ask for, anytime, anywhere... 'Oh, really...? What an eager and attentive daddy... I'll like you a lot, I can tell!' she replies, obviously pleased with your reaction. She even reaches for your hand and pulls it to her body, letting you feel her up all you want for a few seconds before she gently pushes you away from her. 'My name is Aerana. Looking forward to spending time with you, daddy. There'll be plenty of fun moments, I'm sure...!' your demoness daughter finishes speaking and continues to tease you with enticing smiles.";
 		now Loyalty of Aerana is 50; [She will try every chance to have the player do whatever she pleases - DOMINANT]
@@ -77,12 +71,12 @@ to say ResolveEvent Succubus Offspring Meeting:
 		say "     Moving closer to the attractive young demoness, you go on ahead and draw her into a fatherly embrace. Taking care to just lay your arms around her chest and shoulders without touching her in any sexual way, you hold her tight and tell your new daughter that she will be well taken care of by you, and you will love spending time with her. She lets out a surprised interjection and remains frozen in place, unsure of what to do. 'I, uh... That was... unexpected!' she exclaims, after you let go off her seconds later. 'My... I have quite a loving daddy, don't I? How lucky I am! I... totally expected a different outcome, but I'm quite liking you, so far!' It seems your actions have quite pleased the succubus, who looks quite happy that you have approached her in such a way, though she does not drop her sensual posing and movements, still keen on visually teasing you.";
 		say "     'Maybe we could get to know each other a little better. I'm Aerana, by the way. Looking forward for our times together, daddy.' she finishes, smiling at you.";
 		now Loyalty of Aerana is 1; [She won't be overly manipulative nor distant - ONLY OPPORTUNITY - NEUTRAL]
-	else if calcnumber is 3:
+	else:
 		say "     You are not very pleased with what she just said, and you let her know that. She is the one who is supposed to respect you and do as you say, you tell her, and the succubus really does not like hearing that. 'So you're one of those. What a turn-off...' she replies, flipping her hair and turning her face away in annoyance, dropping any form of sensuality and teasing right there. It seems she completely lost her interest in you. 'My name's Aerana, by the way. Thought you should know that, at least.' your demoness daughter finishes speaking as she simply walks away from you.";
 		now Loyalty of Aerana is 99; [She won't be interested in the player and will always seem distant - COLD]
 	now Succubus Offspring Meeting is resolved;
 
-Section 2 - Aerana NPC
+Chapter 2 - Aerana NPC
 
 Table of GameCharacterIDs (continued)
 object	name
@@ -119,45 +113,37 @@ PlayerFucked of Aerana is false.
 OralVirgin of Aerana is false.
 Virgin of Aerana is false.
 AnalVirgin of Aerana is false.
-PenileVirgin of Aerana is false.
+PenileVirgin of Aerana is true.
 SexuallyExperienced of Aerana is true.
 TwistedCapacity of Aerana is false. [Twisted Characters can take any penetration, no matter the size]
 Sterile of Aerana is false. [steriles can't knock people up]
 MainInfection of Aerana is "Succubus".
 Description of Aerana is "[AeranaDesc]".
-Conversation of Aerana is { "<This is nothing but a placeholder!>" }.
+icon of Aerana is Figure of Aerana_naked_icon.
 The scent of Aerana is "     She has as sweet and feminine scent to her body, with a demonic essence that draws those nearby in an almost hypnotic way.".
 
 to say AeranaDesc:
 	if debugactive is 1:
 		say "DEBUG -> Loyalty of Aerana: [Loyalty of Aerana] <- DEBUG[line break]";
-	project figure of Aerana_naked_icon;
 	say "     Aerana looks like an eighteen-year old young woman with quite a supermodel body, wearing nothing to hide her sensual nudity from outside eyes. She has a long and silky black hair falling down through her shoulders and back, and her beautiful facial features are complemented by a pair of small and sharp horns curving up from her forehead. Her wings are vast, bat-like and dark red, half-unfolded and moving slightly as she walks about. A long and thin tail with a spaded tip swings between her legs like a cautious snake, completing the image of an attractive succubus.";
-	if Loyalty of Aerana > 0 and Loyalty of Aerana < 50: [neutral]
-		say "     As she notices you approaching, her purple eyes turn towards you and flicker with interest as she gives you a joyful smile.";
-	else if Loyalty of Aerana > 49 and Loyalty of Aerana < 99: [dominant]
-		say "     As she notices you approaching, her purple eyes turn towards you subtly as she becomes aware of your presence, beginning to entice you by playing with her hair and making sure you get a good view of her sexy body.";
-	else if Loyalty of Aerana > 98: [cold]
-		say "     As she notices you approaching, her purple eyes avert their gaze from you as she turns her attention to something else in clear uninterest for your presence.";
+	if Loyalty of Aerana > 0:
+		say "     As she notices you approaching, her purple eyes [if Loyalty of Aerana < 50]turn towards you and flicker with interest as she gives you a joyful smile[else if Loyalty of Aerana < 99]turn towards you subtly as she becomes aware of your presence, beginning to entice you by playing with her hair and making sure you get a good view of her sexy body[else]avert their gaze from you as she turns her attention to something else in clear uninterest for your presence[end if].";
 
-Section 2-1 - Aerana Talk Menu
+to say LilithTalkAerana:
+	say "     With all due respect for the lady demoness['] hard work at giving birth to her offspring, you ask if it would be possible to bring a female child out to the world, if you kept on providing the [italic type]required deposits[roman type]. Lilith chuckles at your words, as if she was amused by your request, but eventually gives out a reply. 'We are vastly more complex than your definitions of gender, but I understand the meaning of your request.' she says, leaving a smile across her flawless face. 'Very well, you may have a daughter the next time we bed together. Though I hope you know what you are asking.' she finishes speaking, leaving a quite cryptic warning in the end that you will only understand when you see it. Probably.";
+	TraitGain "Succubus Daughter Wanted" for Lilith;
 
-AeranaDoneTalking is a truth state that varies.[@Tag:NotSaved]
+Section 1 - Aerana Talk Menu
 
 instead of conversing Aerana:
 	say "     Approaching your succubus daughter with the intention to converse with her, she acknowledges your presence and turns towards you before you even have to announce yourself.";
-	if Loyalty of Aerana > 0 and Loyalty of Aerana < 50: [neutral]
-		say "     'My favorite dad! Came for a little chat?' she asks with a broad and sweet smile on her beautiful face.";
-	else if Loyalty of Aerana > 49 and Loyalty of Aerana < 99: [dominant]
-		say "     'I hope daddy brought me a gift. I see no other reason for coming to talk to me.' she says, followed by a mischievous giggle.";
-	else if Loyalty of Aerana > 98: [cold]
-		say "     'What do you want? I have other important things to do.' she says, with the coldest tone she could muster.";
+	if Loyalty of Aerana > 0:
+		say "     '[if Loyalty of Aerana < 50]My favorite dad! Came for a little chat?' she asks with a broad and sweet smile on her beautiful face[else if Loyalty of Aerana < 99]I hope daddy brought me a gift. I see no other reason for coming to talk to me.' she says, followed by a mischievous giggle[else]What do you want? I have other important things to do.' she says, with the coldest tone she could muster[end if].";
+	project figure of Aerana_naked_icon;
 	say "[AeranaTalkMenu]";
 
 to say AeranaTalkMenu:
-	now AeranaDoneTalking is false;
 	say "     [bold type]What do you want to talk about with Aerana?[roman type][line break]";
-	LineBreak;
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]
@@ -189,173 +175,151 @@ to say AeranaTalkMenu:
 			choose row calcnumber in table of fucking options;
 			say "[title entry]: [description entry]?";
 			if Player consents:
-				let nam be title entry;
+				LineBreak;
 				now sextablerun is 1;
-				if (nam is "Herself"):
-					say "[AeranaTalkHerself]";
-				else if (nam is "Lilith"):
-					say "[AeranaTalkLilith]";
-				else if (nam is "Atticus"):
-					say "[AeranaTalkAtticus]";
+				if title entry is:
+					-- "Herself":
+						say "[AeranaTalkHerself]";
+					-- "Lilith":
+						say "[AeranaTalkLilith]";
+					-- "Atticus":
+						say "[AeranaTalkAtticus]";
 				wait for any key;
-				if AeranaDoneTalking is false:
-					say "[AeranaTalkMenu]"; [looping back to keep talking with him]
+				say "[AeranaTalkMenu]"; [looping back to keep talking with him]
 		else if calcnumber is 0:
+			LineBreak;
 			now sextablerun is 1;
 			say "     You excuse yourself as you take your leave, finishing any pending subjects with Aerana.";
 			wait for any key;
 		else:
-			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options], or 0 to exit.";
 	clear the screen and hyperlink list;
 
 to say AeranaTalkHerself:
-	say "     Aerana looks over to you as you ask her about herself, all while she twirls her finger around several trands of silky black hair, tilting her head to the side and shifting her gaze away, as if thinking of what to say";
 	if Loyalty of Aerana > 98: [cold]
-		say ". 'Hm... Wouldn't you like to know...' she replies, but leaves you hanging as her attention turns to something else. You get a feeling she does not like you much.";
+		say "     Aerana looks over to you as you ask her about herself, all while she twirls her finger around several trands of silky black hair, tilting her head to the side and shifting her gaze away, as if thinking of what to say. 'Hm... Wouldn't you like to know...' she replies, but leaves you hanging as her attention turns to something else. You get a feeling she does not like you much.";
 	else:
-		say ". 'Oh...! Wouldn't you like to know...!' she replies, making a pause as she gestures you to come closer to her. 'Well, there's always something to do in this world... Mother taught me many ways to corrupt it just a little more. It's quite fun to see the chaos we can do with just a little teasing... or magic...'";
+		say "     Aerana looks over to you as you ask her about herself, all while she twirls her finger around several trands of silky black hair, tilting her head to the side and shifting her gaze away, as if thinking of what to say. 'Oh...! Wouldn't you like to know...!' she replies, making a pause as she gestures you to come closer to her. 'Well, there's always something to do in this world... Mother taught me many ways to corrupt it just a little more. It's quite fun to see the chaos we can do with just a little teasing... or magic...'";
 		if Loyalty of Aerana > 49 and Loyalty of Aerana < 98: [dominant]
 			say "     Her hand brushes against yours before she pulls it to her, bringing your body really close to hers. You can even feel the warmth of her presence, and everything else seems to draw you in ways unfamiliar to you. 'Would love to show my daddy more of what I can do...' says your demon daughter as she grins with mischief, pushing you away all too early, leaving you with a sensation of loss and frustration. 'I promise it's all fun if you spoil me well...' Her words end here, followed by a giggle.";
 		else if Loyalty of Aerana > 0 and Loyalty of Aerana < 50: [neutral]
-			say "     [one of]'Have you ever had a bunch of hulking brutes fighting each other to see who could have you? That is the most delightful feeling, their wrath and lust taking over as all they see in their minds is me and the privilege to serve their demon queen. I love messing with especially brawny males who are all more muscle and cock, rather than brain. I can get them to do anything I want so easily[or]'I dream of commanding an army of demons, just like my mother. She is absolutely gorgeous, isn't she? Such a great succubus with so much power... I yearn to learn more from her[or]'Did you know there is a way to control the minds of others? I really want that spell. Would you let me use it on you? Hah... Just kidding! I'd never do that... Or would I? Hm, maybe on Atticus, perhaps, so he gets to do all the chores for me[or]'My... have you met the Hellfires? Mother really dislikes them, and I can see why. Their Lord holds great power, and that is one scary thought. Imagine living close to someone who can compete with you! What a nightmare, having to fight for servants and territory... Though I have to admit, they'd make good slaves, themselves[or]'I've seen quite an odd angel lurking around... He was really big, too! I didn't know they made them that large in Heaven. Maybe it isn't such a bad place, after all? Love my men big and subservient[at random]'. She then regales you with a quite graphic description of her adventures and desires, clearly enjoying herself a lot as she lays it all out for you.";
+			say "     '[one of]Have you ever had a bunch of hulking brutes fighting each other to see who could have you? That is the most delightful feeling, their wrath and lust taking over as all they see in their minds is me and the privilege to serve their demon queen. I love messing with especially brawny males who are all more muscle and cock, rather than brain. I can get them to do anything I want so easily[or]I dream of commanding an army of demons, just like my mother. She is absolutely gorgeous, isn't she? Such a great succubus with so much power... I yearn to learn more from her[or]Did you know there is a way to control the minds of others? I really want that spell. Would you let me use it on you? Hah... Just kidding! I'd never do that... Or would I? Hm, maybe on Atticus, perhaps, so he gets to do all the chores for me[or]My... have you met the Hellfires? Mother really dislikes them, and I can see why. Their Lord holds great power, and that is one scary thought. Imagine living close to someone who can compete with you! What a nightmare, having to fight for servants and territory... Though I have to admit, they'd make good slaves, themselves[or]I've seen quite an odd angel lurking around... He was really big, too! I didn't know they made them that large in Heaven. Maybe it isn't such a bad place, after all? Love my men big and subservient[at random].' She then regales you with a quite graphic description of her adventures and desires, clearly enjoying herself a lot as she lays it all out for you.";
 
 to say AeranaTalkLilith:
 	say "     Clearly noticing her close relationship with Lilith, you ask her what she thinks of her own mother, to which she does not hesitate in replying. 'I think that she's amazing and the best. Like, ever. That is the only opinion I accept about her, because that's the absolute truth.'";
-	if Loyalty of Aerana > 0 and Loyalty of Aerana < 50: [neutral]
-		say "     Though she doesn't end it there. 'She teaches me a lot of cool stuff, and she knows so much about the world! While my dear brother focuses more on fucking everything he sees, I'd rather understand how things work around me... And exploit them, if possible. Nonetheless, she's a great teacher and invaluable to me. Anyone who dares to cross her, and yes that includes you, daddy... Well, won't have me on their side, that is certain.'";
-	else if Loyalty of Aerana > 49 and Loyalty of Aerana < 99: [dominant]
-		say "     She then adds 'I know what you saw in her. You like letting powerful women in charge, isn't that right, daddy?' followed by a teasing giggle. 'One day I'll be just like her, and I shall take you as my personal servant. Wouldn't it be lovely?'";
-	else if Loyalty of Aerana > 98: [cold]
-		say "     She then adds 'Unlike someone else, here.' before she turns her face away.";
+	if Loyalty of Aerana > 0:
+		say "     [if Loyalty of Aerana < 50]Though she doesn't end it there. 'She teaches me a lot of cool stuff, and she knows so much about the world! While my dear brother focuses more on fucking everything he sees, I'd rather understand how things work around me... And exploit them, if possible. Nonetheless, she's a great teacher and invaluable to me. Anyone who dares to cross her, and yes that includes you, daddy... Well, won't have me on their side, that is certain.'[else if Loyalty of Aerana < 99]She then adds 'I know what you saw in her. You like letting powerful women in charge, isn't that right, daddy?' followed by a teasing giggle. 'One day I'll be just like her, and I shall take you as my personal servant. Wouldn't it be lovely?'[else]She then adds 'Unlike someone else, here.' before she turns her face away.[end if]";
 
 to say AeranaTalkAtticus:
 	say "     She being the young sibling, born after Atticus, you decide to ask Aerana how she feels about him and if they get along, at all. 'Oh, sure we do. Wonderfully. Why wouldn't we?' she answers, though her eyes hint at something more than what she just said.";
-	if Loyalty of Aerana > 0 and Loyalty of Aerana < 50: [neutral]
-		say "     'We couldn't be any more different than each other. While he takes a sexual interest over everything, even oysters, apparently... I prefer to learn and amass as much knowledge as I possibly can. One day, I shall follow my mother's footsteps into world corruption and domination, and guess who she's going to pick as her successor? Well, it better not be him, or I'll be kicking him into the void.' Though, after saying that, she seems to get a few second thoughts. 'Oh, well... I suppose I do like him. A little bit. Don't tell him I said that, though, or he'll never shut up about it.'";
-	else if Loyalty of Aerana > 49 and Loyalty of Aerana < 99: [dominant]
-		say "     'What's funny is... you and him share several similarities. Sure, Atticus is very unruly, but when you promise him a good time, he just tends to do what he's told without questioning it too much. You both have that in common...'";
-	else if Loyalty of Aerana > 98: [cold]
-		say "     'He's as unruly as you. A big turn-off, I don't even know how mother can put up with it.'";
+	if Loyalty of Aerana > 0:
+		say "     '[if Loyalty of Aerana < 50]We couldn't be any more different than each other. While he takes a sexual interest over everything, even oysters, apparently... I prefer to learn and amass as much knowledge as I possibly can. One day, I shall follow my mother's footsteps into world corruption and domination, and guess who she's going to pick as her successor? Well, it better not be him, or I'll be kicking him into the void.' Though, after saying that, she seems to get a few second thoughts. 'Oh, well... I suppose I do like him. A little bit. Don't tell him I said that, though, or he'll never shut up about it.'[else if Loyalty of Aerana < 99]What's funny is... you and him share several similarities. Sure, Atticus is very unruly, but when you promise him a good time, he just tends to do what he's told without questioning it too much. You both have that in common...'[else]He's as unruly as you. A big turn-off, I don't even know how mother can put up with it.'[end if]";
 
-Section 2-2 - Aerana Sex Menu
+Section 2 - Aerana Sex Menu
 
 instead of fucking Aerana:
 	if Player is not male:
-		say "<< AUTHOR'S NOTE: You need to at least have a cock in order to have sex with Aerana, for now. May change in the future. >>";
-		stop the action;
-	if Loyalty of Aerana > 0 and Loyalty of Aerana < 50: [neutral]
-		if lastfuck of Aerana - turns < 4:
-			say "     As you approach your succubus daughter, she gives you a look as if she knew what you were coming for. 'Oh, you know I love you, dad... But it hasn't been long since our last time and I've got other things I want to get done. Maybe later, if you're still around?' she replies with a chuckle.";
-		else:
-			say "     As you approach your succubus daughter, she gives you a look as if she knew what you were coming for. 'Hm... I'm sensing that you're looking for some intimate time with your best daughter... Why don't you tell me all about it?' says Aerana as she pulls you to her, gently.";
-			say "[AeranaSexMenu]";
-	else if Loyalty of Aerana > 49 and Loyalty of Aerana < 99: [dominant]
-		if lastfuck of Aerana - turns < 6:
-			say "     As you approach your succubus daughter, she gives you a look as if she knew what you were coming for. 'Oh, daddy... I appreciate your subservience, but sadly, I'm not in the mood, right now... Why don't you come back later?' she replies with a mischievous giggle.";
-		else:
-			say "     As you approach your succubus daughter, she gives you a look as if she knew what you were coming for. 'You really can't resist a good time with your favorite daughter, isn't that right? Hm... So many options... what shall I do to you?' she replies, giggling to herself as she considers what ways she has to use you for her own pleasure.";
-			say "[AeranaDomSexRoll]";
-	else if Loyalty of Aerana > 98: [cold]
-		if lastfuck of Aerana - turns < 8:
-			say "     As you approach your succubus daughter, she gives you a very cold look. 'Don't even think about it. I'm definitely not in the mood.' she replies, dismissing you entirely.";
-		else:
-			say "     As you approach your succubus daughter, she gives you a very cold look. 'What's this? You dare to disrespect your lovely daughter and expect her to want to get close to you?! You mortals are all the same...' she exclaims, though part of her seems slightly interested in this, as she is still observing you from the corner of her eye. 'You're a terrible dad. I think you'd have to try really hard to make up for it.'";
-			LineBreak;
-			say "     ([link]Y[as]y[end link]) - Deeply apologize to her and do whatever she asks.";
-			say "     ([link]N[as]n[end link]) - There's no way you'll take this behavior from her.";
-			if Player consents:
-				now Loyalty of Aerana is 50; [back to DOMINANT]
-				say "     Swallowing all your pride, and perhaps your dignity, you fall to your knees and beg her to forgive you for your transgressions, admitting that you have been a terrible dad to her and that you want to make it all better. A slight grin begins to form at the corner of her mouth while she hears and sees you. 'Is that all because you want to have sex with me? Oh, my... I almost feel pity for you. Actually, I do feel pity.' she replies, though not without using the opportunity that you are already on your knees, placing her foot in front of your face. 'Maybe... There is a way.'";
-				WaitLineBreak;
-				say "[AeranaSexApology]";
-			else:
-				say "     You decide to tell her off from being a selfish and manipulative demoness, and you do not tolerate any disrespect towards you, either. She seems to feel very indifferent towards your words. 'It's your loss, [italic type]daddy[roman type]. There's enough people who like it around this world, I don't need you at all.' she replies, and does not listen to anything else you say.";
-				say "     Things between you two are not going too well, are they?";
-				now lastfuck of Aerana is turns;
-
-to say AeranaSexApology:
-	say "     As she says this, you feel her push you to the ground as you fall on your back, facing the demoness as she walks forward, looking down on you. 'I just have to remind you of how you should treat your favorite daughter...' her words are followed by her foot on your face, as she demands you to worship her. 'Now, be a good daddy and worship me... As you should have from the beginning.' A smile forms across her beautiful face, of amusement, perhaps, as she enjoys the sight of you under her feet. You give her nothing but a good and obedient kiss across her sole as your lips rub along the sides of her soft-skinned foot. She gives you a look of approval while moving her foot herself, slowly leaning it towards your mouth before pushing her toes into it, slowly.";
-	say "     You welcome them with your tongue, licking them all over, one by one, as she silently but quite obviously directs. 'Hm... you're really putting on the effort, aren't you daddy?' she teases you, giggling with mischief as she continues to press it down onto your face. By now, you are practically sucking on her foot, rubbing and massaging it all over with both your hands, as well, and the succubus looks very pleased. Though, enough is enough, and she pulls it away once she is satisfied with your work.";
-	WaitLineBreak;
-	say "     'That's enough.' she says as she walks away from you, though still facing your direction. 'I hope this gave you enough to think about. Come back to me later to pay your tribute... I mean, to spoil your lovely daughter with more fatherly love, of course!' she finishes speaking, giggling at the end of it all. You are then left to yourself as she turns her attention to other matters.";
-	NPCSexAftermath Player receives "Other" from Aerana;
-
-to say AeranaDomSexRoll:
-	let randomnumber be a random number from 1 to 3;
-	if randomnumber is:
-		-- 1:
-			say "     She thinks... and then seems to be decided on something. 'You know what... I'm feeling very generous today, and I've decided that I should show my daddy how much I love him, hm? What do you say, wanna see how a demoness handles a cock properly? Bet you do, daddy...' Her feminine and seductive voice almost echoes in your ears as she utters these words, leaving you in a near trance of lust. One caress on your crotch is enough to turn you on and stay ready for it.";
-			WaitLineBreak; [For this one, WaitLineBreak is necessary]
-			AeranaSexOralCock;
-		-- 2:
-			if a random chance of 1 in 2 succeeds:
-				say "     She thinks... and then seems to be decided on something. 'Hm, I'm feeling quite lazy today. Why don't we just hug and fuck? I'm sure you'd love that.' Her feminine and seductive voice almost echoes in your ears as she utters these words, leaving you in a near trance of lust. One caress on your crotch is enough to turn you on and stay ready for it.";
-				AeranaSexFuckMissionary;
-			else:
-				say "     She thinks... and then seems to be decided on something. 'Hm, how about you lie down and let me take the lead? You must like the idea of having me ride you, I bet...' Her feminine and seductive voice almost echoes in your ears as she utters these words, leaving you in a near trance of lust. One caress on your crotch is enough to turn you on and stay ready for it.";
-				AeranaSexFuckRiding;
-		-- 3:
-			say "     She thinks... and then seems to be decided on something. 'I feel like edging my daddy, this time. Gotta make sure they know their place... Isn't that right?' Her feminine and seductive voice almost echoes in your ears as she utters these words, leaving you in a near trance of lust. One caress on your crotch is enough to turn you on and stay ready for it.";
-			let randomnumber be a random number from 1 to 3;
-			if randomnumber is:
-				-- 1:
-					AeranaSexEdgingHandjob;
-				-- 2:
-					AeranaSexEdgingFootjob;
-				-- 3:
-					AeranaSexEdgingTailjob;
-
-to say AeranaSexMenu: [only open when Aerana's personality is NEUTRAL]
-	say "     [bold type]What would you like to do with Aerana?[roman type][line break]";
-	LineBreak;
-	now sextablerun is 0;
-	blank out the whole of table of fucking options;
-	[]
-	if Player is male:
-		choose a blank row in table of fucking options;
-		now title entry is "Have her give you a blowjob";
-		now sortorder entry is 1;
-		now description entry is "Offer her some treat of your own";
-		[]
-		choose a blank row in table of fucking options;
-		now title entry is "Make love with her";
-		now sortorder entry is 2;
-		now description entry is "Offer to fuck her lovingly";
-		[]
-		choose a blank row in table of fucking options;
-		now title entry is "Offer yourself for an edging session";
-		now sortorder entry is 3;
-		now description entry is "Let her edge you how she sees fit";
-		[]
-	sort the table of fucking options in sortorder order;
-	repeat with y running from 1 to number of filled rows in table of fucking options:
-		choose row y from the table of fucking options;
-		say "[link][y] - [title entry][as][y][end link][line break]";
-	say "[link]0 - Nevermind[as]0[end link][line break]";
-	while sextablerun is 0:
-		say "Pick the corresponding number> [run paragraph on]";
-		get a number;
-		if calcnumber > 0 and calcnumber <= the number of filled rows in table of fucking options:
-			now current menu selection is calcnumber;
-			choose row calcnumber in table of fucking options;
-			say "[title entry]: [description entry]?";
-			if Player consents:
-				let nam be title entry;
-				now sextablerun is 1;
-				if (nam is "Have her give you a blowjob"):
-					say "[AeranaSexBlowjob]";
-				else if (nam is "Make love with her"):
-					say "[AeranaSexFuck]";
-				else if (nam is "Offer yourself for an edging session"):
-					say "[AeranaSexEdging]";
+		say "<< AUTHOR'S NOTE: You need to at least have a cock in order to have sex with Aerana, for now. May change in the future. >>[line break]";
+	else if Loyalty of Aerana > 0:
+		project figure of Aerana_naked_icon;
+		if Loyalty of Aerana < 50: [neutral]
+			if lastfuck of Aerana - turns < 4:
+				say "     As you approach your succubus daughter, she gives you a look as if she knew what you were coming for. 'Oh, you know I love you, dad... But it hasn't been long since our last time and I've got other things I want to get done. Maybe later, if you're still around?' she replies with a chuckle.";
+			else: [only open when Aerana's personality is NEUTRAL]
+				say "     As you approach your succubus daughter, she gives you a look as if she knew what you were coming for. 'Hm... I'm sensing that you're looking for some intimate time with your best daughter... Why don't you tell me all about it?' says Aerana as she pulls you to her, gently.";
+				say "[line break]     [bold type]What would you like to do with Aerana?[roman type][line break]";
+				now sextablerun is 0;
+				blank out the whole of table of fucking options;
+				[]
+				choose a blank row in table of fucking options;
+				now title entry is "Have her give you a blowjob";
+				now sortorder entry is 1;
+				now description entry is "Offer her some treat of your own";
+				[]
+				choose a blank row in table of fucking options;
+				now title entry is "Make love with her";
+				now sortorder entry is 2;
+				now description entry is "Offer to fuck her lovingly";
+				[]
+				choose a blank row in table of fucking options;
+				now title entry is "Offer yourself for an edging session";
+				now sortorder entry is 3;
+				now description entry is "Let her edge you how she sees fit";
+				[]
+				sort the table of fucking options in sortorder order;
+				repeat with y running from 1 to number of filled rows in table of fucking options:
+					choose row y from the table of fucking options;
+					say "[link][y] - [title entry][as][y][end link][line break]";
+				say "[link]0 - Nevermind[as]0[end link][line break]";
+				while sextablerun is 0:
+					say "Pick the corresponding number> [run paragraph on]";
+					get a number;
+					if calcnumber > 0 and calcnumber <= the number of filled rows in table of fucking options:
+						now current menu selection is calcnumber;
+						choose row calcnumber in table of fucking options;
+						say "[title entry]: [description entry]?";
+						if Player consents:
+							LineBreak;
+							now sextablerun is 1;
+							if title entry is:
+								-- "Have her give you a blowjob":
+									say "[AeranaSexBlowjob]";
+								-- "Make love with her":
+									say "[AeranaSexFuck]";
+								-- "Offer yourself for an edging session":
+									say "[AeranaSexEdging]";
+					else if calcnumber is 0:
+						LineBreak;
+						now sextablerun is 1;
+						say "     You step back from the young succubus, shaking your head slightly as she gives a questioning look.";
+					else:
+						say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options], or 0 to exit.";
 				wait for any key;
-		else if calcnumber is 0:
-			now sextablerun is 1;
-			say "     You step back from the young succubus, shaking your head slightly as she gives a questioning look.";
-			wait for any key;
-		else:
-			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
-	clear the screen and hyperlink list;
+				clear the screen and hyperlink list;
+		else if Loyalty of Aerana < 99: [dominant]
+			if lastfuck of Aerana - turns < 6:
+				say "     As you approach your succubus daughter, she gives you a look as if she knew what you were coming for. 'Oh, daddy... I appreciate your subservience, but sadly, I'm not in the mood, right now... Why don't you come back later?' she replies with a mischievous giggle.";
+			else:
+				say "     As you approach your succubus daughter, she gives you a look as if she knew what you were coming for. 'You really can't resist a good time with your favorite daughter, isn't that right? Hm... So many options... what shall I do to you?' she replies, giggling to herself as she considers what ways she has to use you for her own pleasure.";
+				if a random number from 1 to 3 is:
+					-- 1:
+						say "     She thinks... and then seems to be decided on something. 'You know what... I'm feeling very generous today, and I've decided that I should show my daddy how much I love him, hm? What do you say, wanna see how a demoness handles a cock properly? Bet you do, daddy...' Her feminine and seductive voice almost echoes in your ears as she utters these words, leaving you in a near trance of lust. One caress on your crotch is enough to turn you on and stay ready for it.";
+						WaitLineBreak; [For this one, WaitLineBreak is necessary]
+						AeranaSexOralCock;
+					-- 2:
+						if a random chance of 1 in 2 succeeds:
+							say "     She thinks... and then seems to be decided on something. 'Hm, I'm feeling quite lazy today. Why don't we just hug and fuck? I'm sure you'd love that.' Her feminine and seductive voice almost echoes in your ears as she utters these words, leaving you in a near trance of lust. One caress on your crotch is enough to turn you on and stay ready for it.";
+							AeranaSexFuckMissionary;
+						else:
+							say "     She thinks... and then seems to be decided on something. 'Hm, how about you lie down and let me take the lead? You must like the idea of having me ride you, I bet...' Her feminine and seductive voice almost echoes in your ears as she utters these words, leaving you in a near trance of lust. One caress on your crotch is enough to turn you on and stay ready for it.";
+							AeranaSexFuckRiding;
+					-- 3:
+						say "     She thinks... and then seems to be decided on something. 'I feel like edging my daddy, this time. Gotta make sure they know their place... Isn't that right?' Her feminine and seductive voice almost echoes in your ears as she utters these words, leaving you in a near trance of lust. One caress on your crotch is enough to turn you on and stay ready for it.";
+						if a random number from 1 to 3 is:
+							-- 1: AeranaSexEdgingHandjob;
+							-- 2: AeranaSexEdgingFootjob;
+							-- 3: AeranaSexEdgingTailjob;
+		else: [cold]
+			if lastfuck of Aerana - turns < 8:
+				say "     As you approach your succubus daughter, she gives you a very cold look. 'Don't even think about it. I'm definitely not in the mood.' she replies, dismissing you entirely.";
+			else:
+				say "     As you approach your succubus daughter, she gives you a very cold look. 'What's this? You dare to disrespect your lovely daughter and expect her to want to get close to you?! You mortals are all the same...' she exclaims, though part of her seems slightly interested in this, as she is still observing you from the corner of her eye. 'You're a terrible dad. I think you'd have to try really hard to make up for it.'";
+				say "     ([link]Y[as]y[end link]) - Deeply apologize to her and do whatever she asks.";
+				say "     ([link]N[as]n[end link]) - There's no way you'll take this behavior from her.";
+				if Player consents:
+					LineBreak;
+					now Loyalty of Aerana is 50; [back to DOMINANT]
+					say "     Swallowing all your pride, and perhaps your dignity, you fall to your knees and beg her to forgive you for your transgressions, admitting that you have been a terrible dad to her and that you want to make it all better. A slight grin begins to form at the corner of her mouth while she hears and sees you. 'Is that all because you want to have sex with me? Oh, my... I almost feel pity for you. Actually, I do feel pity.' she replies, though not without using the opportunity that you are already on your knees, placing her foot in front of your face. 'Maybe... There is a way.'";
+					say "     As she says this, you feel her push you to the ground as you fall on your back, facing the demoness as she walks forward, looking down on you. 'I just have to remind you of how you should treat your favorite daughter...' her words are followed by her foot on your face, as she demands you to worship her. 'Now, be a good daddy and worship me... As you should have from the beginning.' A smile forms across her beautiful face, of amusement, perhaps, as she enjoys the sight of you under her feet. You give her nothing but a good and obedient kiss across her sole as your lips rub along the sides of her soft-skinned foot. She gives you a look of approval while moving her foot herself, slowly leaning it towards your mouth before pushing her toes into it, slowly.";
+					WaitLineBreak;
+					say "     You welcome them with your tongue, licking them all over, one by one, as she silently but quite obviously directs. 'Hm... you're really putting on the effort, aren't you daddy?' she teases you, giggling with mischief as she continues to press it down onto your face. By now, you are practically sucking on her foot, rubbing and massaging it all over with both your hands, as well, and the succubus looks very pleased. Though, enough is enough, and she pulls it away once she is satisfied with your work.";
+					say "     'That's enough,' she says as she walks away from you, though still facing your direction. 'I hope this gave you enough to think about. Come back to me later to pay your tribute... I mean, to spoil your lovely daughter with more fatherly love, of course!' she finishes speaking, giggling at the end of it all. You are then left to yourself as she turns her attention to other matters.";
+					NPCSexAftermath Player receives "Other" from Aerana;
+				else:
+					LineBreak;
+					say "     You decide to tell her off from being a selfish and manipulative demoness, and you do not tolerate any disrespect towards you, either. She seems to feel very indifferent towards your words. 'It's your loss, [italic type]daddy[roman type]. There's enough people who like it around this world, I don't need you at all.' she replies, and does not listen to anything else you say.";
+					say "     Things between you two are not going too well, are they?";
+					now lastfuck of Aerana is turns;
 
 to say AeranaSexBlowjob: [a standard blowjob]
 	say "     Thinking about spending a good time with your succubus offspring, you decide to ask her if she would mind taking care of her daddy in that one way, gently brushing her silky hair as the young demoness eyes you with an amused expression. 'Such a daring request...! You're some devil, yourself.' she replies, giggling as her hands run over your chest and lower, her mere touch feeling like a tease that sends sweet shivers down your spine and blood flowing south. 'I happen to be in a good mood, today, so I definitely wouldn't mind showing my dear daddy how much I love him.' Her feminine and seductive voice almost echoes in your ears as she utters these words, leaving you in a near trance of lust.";
@@ -373,26 +337,24 @@ to AeranaSexOralCock:
 
 to say AeranaSexFuck: [let her pick or suggest, missionary or riding]
 	say "     Thinking about spending a good time with your succubus offspring, you decide to ask her if she would mind bending over of her daddy, gently brushing her silky hair as the young demoness eyes you with an amused expression. 'Such a daring request...! You're some devil, yourself.' she replies, giggling as her hands run over your chest and lower, her mere touch feeling like a tease that sends sweet shivers down your spine and blood flowing south. 'And did you have anything in mind, or are you letting your beloved daughter pick whatever she likes?' she asks, putting an obvious emphasis on the last part of her question, which leads you to believe she really wants to pick something, but the decision is ultimately yours... You think.";
-	LineBreak;
-	say "     [bold type]How do you want to fuck her?[roman type][line break]";
+	say "[line break]     [bold type]How do you want to fuck her?[roman type][line break]";
 	say "     [link](1)[as]1[end link] - Go for a loving missionary sex.";
 	say "     [link](2)[as]2[end link] - Have her ride you.";
 	say "     [link](3)[as]3[end link] - Let her pick.";
 	now calcnumber is 0;
 	while calcnumber < 1 or calcnumber > 3:
-		say "Choice? (1-3)>[run paragraph on]";
+		say "Choice? (1-3)> [run paragraph on]";
 		get a number;
-		if calcnumber is 1 or calcnumber is 2 or calcnumber is 3:
-			break;
-		else:
+		if calcnumber < 1 or calcnumber > 3:
 			say "Invalid choice. Type [link]1[end link] to fuck her in missionary, [link]2[end link] to have her ride you or [link]3[end link] to let her pick whatever she wants.";
+	LineBreak;
 	if calcnumber is 1:
 		say "     After considering your possibilities, you inform the young succubus that you would love to fuck her yourself in the old missionary style. She gives it some thought, but then joyfully replies. 'I happen to be in a good mood, today, so I definitely wouldn't mind showing my dear daddy how much I love him by doing what he wants, this time.' Her feminine and seductive voice almost echoes in your ears as she utters these words, leaving you in a near trance of lust.";
 		AeranaSexFuckMissionary;
 	else if calcnumber is 2:
 		say "     After considering your possibilities, you inform the young succubus that you would love to have her on top of you, riding your dick as she sees fit. She gives it some thought, but then joyfully replies. 'I happen to be in a good mood, today, so I definitely wouldn't mind showing my dear daddy how much I love him by doing what he wants, this time.' Her feminine and seductive voice almost echoes in your ears as she utters these words, leaving you in a near trance of lust.";
 		AeranaSexFuckRiding;
-	else if calcnumber is 3:
+	else:
 		say "     You let her know that you would prefer to have her pick whatever she wants, and the succubus gives you an immediate glare of joy. 'I'm so glad daddy's trusting his girl to pick the best option!' she replies, giggling to herself.";
 		if a random chance of 1 in 2 succeeds:
 			say "     'Let's put your hips to work, then. I want to feel how hard you can fuck me...' Her feminine and seductive voice almost echoes in your ears as she utters these words, leaving you in a near trance of lust.";
@@ -431,20 +393,18 @@ to AeranaSexFuckRiding:
 
 to say AeranaSexEdging: [let her pick or suggest, 'hand/foot/tail'job]
 	say "     Thinking about spending a good time with your succubus offspring, you decide to ask her if she would to take the lead and have some fun with you for an edging session. She loves hearing this and her eyes shine with joy. 'My, that's one lovely idea! So many possibilities... Do you have any preference, daddy?' she asks, giggling as her hands run over your chest and lower, her mere touch feeling like a tease that sends sweet shivers down your spine and blood flowing south.'";
-	LineBreak;
-	say "     [bold type]How would you prefer to have her edging you?[roman type][line break]";
+	say "[line break]     [bold type]How would you prefer to have her edging you?[roman type][line break]";
 	say "     [link](1)[as]1[end link] - Handjob.";
 	say "     [link](2)[as]2[end link] - Footjob!";
 	say "     [link](3)[as]3[end link] - Tailjob?";
 	say "     [link](4)[as]4[end link] - Let her pick.";
 	now calcnumber is 0;
-	while calcnumber < 1 or calcnumber > 3:
-		say "Choice? (1-3)>[run paragraph on]";
+	while calcnumber < 1 or calcnumber > 4:
+		say "Choice? (1-4)> [run paragraph on]";
 		get a number;
-		if calcnumber is 1 or calcnumber is 2 or calcnumber is 3:
-			break;
-		else:
-			say "Invalid choice. Type [link]1[end link] to let her edge you with her hands, [link]2[end link] to have use her feet, [link]3[end link] to allow her to get her tail around your member or [link]4[end link] to simply let her pick";
+		if calcnumber < 1 or calcnumber > 4:
+			say "Invalid choice. Type [link]1[end link] to let her edge you with her hands, [link]2[end link] to have her use her feet, [link]3[end link] to allow her to get her tail around your member or [link]4[end link] to simply let her pick.";
+	LineBreak;
 	if calcnumber is 1:
 		say "     You let her know that you would love to see her use her hands alone to keep you on edge. While it seems like something quite ordinary, the young succubus is not opposed to the suggestion. 'Very well, then! I do have soft hands and a masterful touch... it should be easy to torture you- I mean... Give you all the pleasure you never asked for.' she replies with a mischievous giggle, ready to put her hands on you.";
 		AeranaSexEdgingHandjob;
@@ -454,16 +414,12 @@ to say AeranaSexEdging: [let her pick or suggest, 'hand/foot/tail'job]
 	else if calcnumber is 3:
 		say "     You let her know that you would love to see her use her tail alone to keep you on edge. It is a very quaint request, but one she does not shy away from. 'I can do a lot of things with my tail, and that is one of them, definitely... I like the way you think, daddy.' she replies with a mischievous giggle, ready to put her deviless['] special to work on you.";
 		AeranaSexEdgingTailjob;
-	else if calcnumber is 4:
+	else:
 		say "     You let her know that you would like her to pick, and she loves to receive the power of making decisions for you. 'That's alright, then... Let's leave it as a surprise. I won't have to tell you about it once you see what I'm doing to you, right?' she replies with a mischievous giggle, ready to get to work on you.";
-		let randomnumber be a random number from 1 to 2;
-		if randomnumber is:
-			-- 1:
-				AeranaSexEdgingHandjob;
-			-- 2:
-				AeranaSexEdgingFootjob;
-			-- 3:
-				AeranaSexEdgingTailjob;
+		if a random number from 1 to 3 is:
+			-- 1: AeranaSexEdgingHandjob;
+			-- 2: AeranaSexEdgingFootjob;
+			-- 3: AeranaSexEdgingTailjob;
 
 to AeranaSexEdgingHandjob:
 	WaitLineBreak;
@@ -525,7 +481,7 @@ to AeranaSexEdgingTailjob:
 		say "     It takes almost a minute until you can regain control of your movements completely.";
 	NPCSexAftermath Player receives "Other" from Aerana;
 
-Section 3 - Aerana Events
+Chapter 3 - Aerana Events
 
 [Update for WalkinEvents table]
 Table of NavInEvents (continued)
@@ -537,7 +493,7 @@ Priority	Name	EventObject	EventConditions	EventRoom	LastEncounterTurn	CoolDownTu
 3	"AAHellfire"	AAHellfire	"[EventConditions_AAHellfire]"	Burned-Out Chapel	2500	2	100
 
 to say EventConditions_AAHellfire:
-	if (Succubus Offspring Meeting is resolved and Incubus Offspring Meeting is resolved and Loyalty of Aerana > 0 and Loyalty of Aerana < 50 and Loyalty of Atticus > 0 and Loyalty of Atticus < 99 and Hellfire Club is known and Player is male): [Aerana and Atticus must have both been introduced and present in the game, be on good terms with the Player and Hellfire Club must be unlocked, player must be male]
+	if Succubus Offspring Meeting is resolved and Incubus Offspring Meeting is resolved and Loyalty of Aerana > 0 and Loyalty of Aerana < 50 and Loyalty of Atticus > 0 and Loyalty of Atticus < 99 and Hellfire Club is known and Player is male: [Aerana and Atticus must have both been introduced and present in the game, be on good terms with the Player and Hellfire Club must be unlocked, player must be male]
 		now CurrentWalkinEvent_ConditionsMet is true;
 
 Table of GameEventIDs (continued)
@@ -568,8 +524,7 @@ to say ResolveEvent AAHellfire:
 	WaitLineBreak;
 	say "     'Aaargghh! All you think about is sex! What about our legacy?! Since the Hellfires arrived, we have lost a lot of influence! Our corruption growth rates have decreased! How are we supposed to dominate the world by fucking the enemy?! We should be fucking mortals, instead! Corrupting them into good obedient demon slaves! And the crimson bastards should be put in their places!' Aerana snaps at Atticus at this point, to which he calmly replies back. 'But of course I care about our legacy! And I wouldn't want it to be one full of oppression and only mindless obedience! Look at all the fun you could be having if you simply allowed yourself to enjoy the bliss of carnal pleasures, sis! Show everyone how fun it is and they'd worship you within the blink of an eye! Willingly! Isn't that much better than forcefully breaking their will?'";
 	say "     As your daughter goes to part her lips to speak in response, she finds herself at a lack of words. It is quite surprising, given her former determination to enslave the crimson demon. However, she does not seem to have been convinced. Instead, you get the feeling she is merely containing her anger, thinking her perspective is not being supported by either of you.";
-	say "     [bold type]Should you intervene?[roman type][line break]";
-	LineBreak;
+	say "[line break]     [bold type]Should you intervene?[roman type][line break]";
 	say "     [link](1)[as]1[end link] - Reassure Aerana and side with her. She is absolutely right about wanting to exert dominance over the Hellfires. They should learn their place.";
 	say "     [link](2)[as]2[end link] - Comfort Aerana, but try explaining to her that Atticus does have a point in what he is saying. The Hellfires should not be provoked that way.";
 	say "     [link](3)[as]3[end link] - Agree with Atticus, but try calling his attention for some things that Aerana has said. You must not let your legacy be overshadowed by another demonic faction.";
@@ -577,43 +532,34 @@ to say ResolveEvent AAHellfire:
 	say "     [link](5)[as]5[end link] - You want nothing to do with this. Leave them arguing over it.";
 	now calcnumber is 0;
 	while calcnumber < 1 or calcnumber > 5:
-		say "Choice? (1-5)>[run paragraph on]";
+		say "Choice? (1-5)> [run paragraph on]";
 		get a number;
-		if calcnumber is 1 or calcnumber is 2 or calcnumber is 3 or calcnumber is 4 or calcnumber is 5:
-			break;
-		else:
+		if calcnumber < 1 or calcnumber > 5:
 			say "Invalid choice. Type [link]1[end link] to side completely with Aerana, [link]2[end link] to side with Aerana but point out important facts on Atticus['] argument, [link]3[end link] to side with Atticus but persuade him that Aerana also has a point, [link]4[end link] to side completely with Atticus or [link]5[end link] to simply leave your children be and retreat.";
+	LineBreak;
 	if calcnumber is 1: [Atticus leaves]
-		LineBreak;
 		say "     Your opinion is as simple as it can get. In agreement with your daughter, you reinforce what she just said. In order to keep your legacy living up to its standards, you must show who is the ruler of this district, and that means asserting your dominance over those who oppose you. The Hellfires must bow before you and your children. 'See? Daddy agrees with me. This proves that I'm right.' says Aerana, smirking at her brother while holding onto your arm very close to you. 'No, it doesn't, but... Aw, well, if that's your take, then I shall let you live with the consequences. I guess you're all allowed to have your wrong opinions. In the meantime, I'm gonna be having some real fun while I watch all the hellfire demons getting angry at you.'";
 		say "     Despite Atticus['] snarky response, he is not too good in hiding his disappointment regarding your position. 'Whatever, I'll share my demon with daddy, it's gonna just be some father and daughter time! So we'll have a lot of fun as well!' replies Aerana, to which your son simply rolls his eyes and takes his leave, annoyed at it all. This, however, left your daughter very excited about the opportunity to spend some quality time with you and her new prize. 'His loss, right?' she continues, now looking ready to begin.";
-		WaitLineBreak;
 		say "[AeranaHellfireDemonScene]";
 	else if calcnumber is 2: [Atticus stays]
-		LineBreak;
 		say "     You do understand Aerana's position and you move on to comfort her, but you also cannot ignore what Atticus just said. While it is in your and your legacy's interest to preserve your higher status among the demons in the Red Light District, it is also important to not so blindly provoke those who stand in a different faction. While she rolls her eyes at this, refusing to admit that you or Atticus might be right, she does not express any disagreement nor tries to leave. 'Sis... You really should learn to relax, sometimes! Dominating others isn't the only way to have fun!' he says, to which your daughter replies 'How else are you supposed to enjoy yourself if you can't have slaves to do things for you?! That's boring!'";
 		say "     The handsome incubus comes closer to both of you with a smirk on his face, ready to put his arms around you two as he slips in between. 'Well, since we're all here together, why don't we share our big guy? Look at him! So neglected there with his dick hard and throbbing, looking at us... I suppose it's as good a time as any to bond together as a little family!' While Aerana does not look too thrilled about it, she does let her guard down and seems more willing than not to give it a go. 'Fine... I suppose he's enough for all us three,' she answers, looking ready to begin.";
-		WaitLineBreak;
 		say "[AeranaAtticusHellfireDemonScene]";
 	else if calcnumber is 3: [Atticus leaves]
-		LineBreak;
 		say "     Perhaps your demon son is right in wanting to make friends with the hellfire demons, but you still think he should consider what Aerana said. While his idea could work, you should preserve your faction's supremacy. Whatever part of his argument you happened to agree on seems to be irrelevant to him, however, as he delivers his reply. 'What supremacy? I honestly just think mother's afraid of competition. That's nothing to be valued... But I supposed we'll have to agree to disagree. I'll leave you guys be, I don't wanna be near you when you anger the hellfire demons.' The incubus is already taking his leave when he says his last words, and you are left with Aerana and the captured devil.";
 		say "     'Ugh, what a brat. He just can't accept that I may be right, after all! Although... You kind of agreed with him, anyway? Did you really think he had a point?' your daughter asks, and you explain that, indeed, perhaps at least a conditional alliance would be in order. 'An alliance with conditions... Hm... Doesn't sound as ridiculous as what my dear brother suggested. I suppose that'd still allow us to keep them in their places without totally angering them.... Fine, maybe he does have a tiny little point...' she admits, and a few moments of silence follow until she speaks again. 'Well, I guess I get to keep this guy. How about we share him, daddy? Are you in the mood for some fun?' she finally asks, seeming ready to begin.";
-		WaitLineBreak;
 		say "[AeranaHellfireDemonScene]";
 	else if calcnumber is 4: [Atticus stays]
-		LineBreak;
 		say "     You believe that what Atticus said is, indeed, the most proper way to handle your current dilemma. Making love with the other demonic faction just solves about every problem you could have, besides being all fun for everyone. Aerana does not look happy with your take on the situation. 'Are you insane?! You too?! Daddy, that doesn't make any sense! What are we supposed to do, share all our efforts and build a demonic society based on friendliness and cooperation? Yuck!' she replies while your handsome son walks up to you both with a big smile on his face. 'Why's that, sis? Doesn't sound so ridiculous to me when you can actually show them how they should worship you the fun way. Best way to learn is by doing it, right?'";
-		say "     Oddly enough, your demoness daughter seems inclined to agree. 'Maybe you aren't as dumb as I thought. And, just maybe, you may have a point, this time.' - she says, pointing her finger at him - 'With that said, and if you are so keen on following with your word, I may have the demon for myself, then!' she continues, and Atticus slips in between you both, putting his arms around your shoulders and Aerana's with a smirk on his face. 'We can all enjoy him, actually! I think this is a great opportunity to bond together as a little family!' While she does not sound too thrilled about having to share, she does not fight it. 'Fine... I suppose he's enough for all us three.' she answers, looking ready to begin.";
-		WaitLineBreak;
+		say "     Oddly enough, your demoness daughter seems inclined to agree. 'Maybe you aren't as dumb as I thought. And, just maybe, you may have a point, this time,' she says, pointing her finger at him. 'With that said, and if you are so keen on following with your word, I may have the demon for myself, then!' she continues, and Atticus slips in between you both, putting his arms around your shoulders and Aerana's with a smirk on his face. 'We can all enjoy him, actually! I think this is a great opportunity to bond together as a little family!' While she does not sound too thrilled about having to share, she does not fight it. 'Fine... I suppose he's enough for all us three,' she answers, looking ready to begin.";
 		say "[AeranaAtticusHellfireDemonScene]";
-	else if calcnumber is 5: [Skips scene entirely]
-		LineBreak;
+	else: [Skips scene entirely]
 		say "     Thinking twice, you really do not want to partake in this discussion, so you bid both your children goodbye and allow them to sort themselves out on their own. 'Well, if that's so, it looks like we can solve this in a duel,' says Aerana to Atticus, and before you get dragged into this again, you take your leave. They seem to be arguing, still, but at least you will not get a headache out of it.";
 		now Resolution of AAHellfire is 99;
 	now AAHellfire is resolved;
 
 to say AeranaHellfireDemonScene:
+	WaitLineBreak;
 	say "     'But first, let us remove the hood. I need him to see who's in charge.' she says, walking up to him and pulling it off his head. The revelation is mildly shocking, but not entirely surprising, as the hellfire demon winks at you when he has a clear view of you. 'Oh, hey there! Nice to be able to breathe freely, again!' he speaks, and this handsome crimson devil is, in fact, Arad, one of the twins who guard the Hellfire Club. 'Wait, you two know each other?' she asks, and you have to say that, indeed, you do. 'Well, I really couldn't forget about such a cute face... It's always a welcome sight when [SubjectPro] walks into the Club.' says Arad as he looks at you. The succubus blinks a few times, but then returns to the priority at hand.";
 	say "     'Well, if you like my daddy so much...' - she moves in closer, placing her foot above his already erect penis, locking her gaze on his - 'I'm sure you'll do a fine job in servicing the both of us, if daddy's fine with it...' she directs the question to you, and you suppose you could [bold type]just watch her dominate Arad[roman type] or [bold type]join in for the fun[roman type]. As a third option, you could always just [bold type]choose to leave[roman type] your daughter with her new... slave.";
 	LineBreak;
@@ -622,14 +568,12 @@ to say AeranaHellfireDemonScene:
 	say "     [link](3)[as]3[end link] - Leave.";
 	now calcnumber is 0;
 	while calcnumber < 1 or calcnumber > 3:
-		say "Choice? (1-3)>[run paragraph on]";
+		say "Choice? (1-3)> [run paragraph on]";
 		get a number;
-		if calcnumber is 1 or calcnumber is 2 or calcnumber is 3:
-			break;
-		else:
+		if calcnumber < 1 or calcnumber > 3:
 			say "Invalid choice. Type [link]1[end link] to join Aerana, [link]2[end link] to just watch or [link]3[end link] to leave.";
+	LineBreak;
 	if calcnumber is 1:
-		LineBreak;
 		say "     You tell her that you would be glad to share this devil with her, and you can see that even Arad seems to be looking forward to it. 'It seems our guest is quite eager to get started...' she says, pressing her foot against his cock even harder as he lets out a soft moan. 'You like that, big boy? Getting jacked off by a succubus using only her feet, bound and helpless... You'd make such a great slave!' Aerana continues to tease the devil as she rubs his sixteen incher, throbbing under her soles. 'Fuck... this side's really fun...!' exclaims the red devil, and as you observe them, you figure that you could use Arad's mouth for your own pleasure. With this, you move over his face and bring your [Cock of Player] dick into your hands, then you grab Arad by his horns and lead him over to it. The demon is quick to take your length past his lips, twirling his long tongue all over your sensitive shaft.";
 		say "     'How pathetic... for such a mighty looking grunt to submit so easily.' says your demoness daughter as she continues to rub her feet against Arad's very hard member, now as she hovers above him with her wings stretched open, having placed his shaft between both her soles. She occasionaly slides one of her feet over his balls, pressing against them only enough to have him release a groan, which you can feel on your cock. 'You better leave my daddy satisfied, or you'll be sorry.' she adds, giggling as she uses this opportunity to slightly stomp on his orbs, though judging by how his rod continues to throb, he must really enjoy it. Definitely, Arad does not disappoint with his oral skills as he properly stimulates every sensitive spot of your manhood with both his lips and tongue, sucking it deep and appreciating every inch you have to offer.";
 		WaitLineBreak;
@@ -638,13 +582,12 @@ to say AeranaHellfireDemonScene:
 		WaitLineBreak;
 		say "     'Mmhh... Yes...! I really like this slave...!' she says in a lusty tone as she recovers from this. You, too, take some time to breathe as you pull your dick off his mouth, leaving with it a big smile on Arad's face. 'Fuck yeah! Can we repeat this? It was fucking fun!' he eagerly exclaims, but Aerana thinks this is not quite over. 'I see you're eager to please us some more, but for now... Just clean the mess you've made all over my beautiful toes, you insolent imp.' She then walks over to him and [']forces['] her cum-soaked toes into Arad's mouth. The red devil is happy to suck on them and swallow his own jizz down, leaving both her feet pristine clean, one at a time.";
 		say "     She pays him no further mind as she begins speaking to you. 'This was quite fun, daddy... I think I may... Want to use this slave for a bit longer.' she says, and you cannot help but notice she seems to be blushing a little. 'I shall... speak to Atticus, afterwards. Perhaps I was... a little too harsh with him. Don't worry about him, I'll make sure he doesn't hold any hard feelings on you. We love you, daddy.' Your demoness daughter leans towards you to give you a kiss on the lips, all while the red devil underneath her is left to watch. 'Damn, that's hot.' he says, which quite interrupts your quiet moment. Though, she puts on a little bit of a show as she brings your hands over her sexy body, feeling her up right in front of him. You think he has got another boner as he stared at you two getting steamy with one another.";
-		NPCSexAftermath Arad receives "OralCock" from Player;
-		NPCSexAftermath Arad receives "Other" from Aerana;
 		WaitLineBreak;
 		say "     'See you later, daddy! And thank you for joining me.' You both part ways as Aerana brings Arad to a more secluded location, possibly to continue her... fun.";
+		NPCSexAftermath Arad receives "OralCock" from Player;
+		NPCSexAftermath Arad receives "Other" from Aerana;
 		now Resolution of AAHellfire is 1;
 	else if calcnumber is 2:
-		LineBreak;
 		say "     You tell her that you would be glad to just watch her, and you can see that even Arad seems to be looking forward to it. 'That's fine, daddy. It seems our guest is quite eager to get started, either way...' she says, pressing her foot against his cock even harder as he lets out a soft moan. 'You like that, big boy? Getting jacked off by a succubus using only her feet, bound and helpless... You'd make such a great slave!' Aerana continues to tease the devil as she rubs his sixteen incher, throbbing under her soles. 'Fuck... this side's really fun...!' exclaims the red devil, leaning his head back as he continues to have his dick jerked off.";
 		say "     'How pathetic... for such a mighty looking grunt to submit so easily.' says your demoness daughter as she resumes rubbing her feet against Arad's very hard member, now as she hovers above him with her wings stretched open, having placed his shaft between both her soles. She occasionaly slides one of her feet over his balls, pressing against them only enough to have him release a groan. 'Nngh... s-so soft... f-feels so good...!' he says amidst several moans, and the succubus giggles as she uses this opportunity to slightly stomp on his orbs, though judging by how his rod continues to throb, he must really enjoy it. Definitely, Arad does not seem to mind being used by another demon, in fact only getting harder as time passes by.";
 		WaitLineBreak;
@@ -652,17 +595,17 @@ to say AeranaHellfireDemonScene:
 		say "     'Mmhh... Yes...! I really like this slave...!' she says in a lusty tone as she recovers from this. Having had such a show for yourself left you a little hot and bothered, but you are happy to see that your daughter has enjoyed herself with her new slave friend. 'Fuck yeah! Can we repeat this? It was fucking fun!' he eagerly exclaims, but Aerana thinks this is not quite over. 'I see you're eager to please me some more, but for now... Just clean the mess you've made all over my beautiful toes, you insolent imp.' She then walks over to him and [']forces['] her cum-soaked toes into Arad's mouth. The red devil is happy to suck on them and swallow his own jizz down, leaving both her feet pristine clean, one at a time.";
 		WaitLineBreak;
 		say "     She pays him no further mind as she begins speaking to you. 'Daddy...' - she begins, a little embarrassed - 'I think I may... Want to use this slave for a bit longer.' she says, and you cannot help but notice she seems to be blushing a little, indeed. 'I shall... speak to Atticus, afterwards. Perhaps I was... a little too harsh with him. Don't worry about him, I'll make sure he doesn't hold any hard feelings on you. We love you, daddy.' Your demoness daughter leans towards you to give you a kiss on the lips, all while the red devil underneath her is left to watch. 'Damn, that's hot.' he says, which quite interrupts your quiet moment. Though, she puts on a little bit of a show as she brings your hands over her sexy body, feeling her up right in front of him. You think he has got another boner as he stared at you two getting steamy with one another.";
-		NPCSexAftermath Arad receives "Other" from Aerana;
 		WaitLineBreak;
 		say "     'See you later, daddy! And thank you for joining me.' You both part ways as Aerana brings Arad to a more secluded location, possibly to continue her... fun.";
+		NPCSexAftermath Arad receives "Other" from Aerana;
 		now Resolution of AAHellfire is 1;
-	else if calcnumber is 3:
-		LineBreak;
+	else:
 		say "     You thank her for the offer, but since the discussion is now solved, you tell her that you would prefer to leave her alone with the [']guest['], as you have places to be and things to do. 'Oh, is that so? Well, then... I shall get busy training my new slave... At least for the next moments. See you later, daddy.'";
 		say "     She retreats to a more secluded place with Arad while you take your leave. It should not be long until he is liberated.";
 		now Resolution of AAHellfire is 3;
 
 to say AeranaAtticusHellfireDemonScene:
+	WaitLineBreak;
 	say "     'But first, let us remove the hood. I need him to see who's in charge.' says Aerana as she walks up to him and pulls it off his head. The revelation is mildly shocking, but not entirely surprising, as the hellfire demon winks at you when he has a clear view of you. 'Oh, hey there! Nice to be able to breathe freely, again!' he speaks, and this handsome crimson devil is, in fact, Arad, one of the twins who guard the Hellfire Club. 'Oh, it looks like daddy has been scoring already, indeed!' Atticus comments as he throws a chuckle. 'You two know each other?' your daughter asks, and you have to say that, indeed, you do. 'Well, I really couldn't forget about such a cute face... It's always a welcome sight when [SubjectPro] walks into the Club,' says Arad as he looks at you. The succubus blinks a few times, but then urges you both to return to the priority at hand.";
 	say "     'Well, if you like my daddy so much...' - she moves in closer, placing her foot above his already erect penis, locking her gaze on his - 'I'm sure you'll do a fine job in servicing the three of us, if everyone's fine with that.' she directs the question to Atticus and you. The young incubus promptly says 'I can't wait to get started!' as you are left with the decision to [bold type]only watch them[roman type] or [bold type]join in for the fun.[roman type][line break]";
 	LineBreak;
@@ -671,14 +614,12 @@ to say AeranaAtticusHellfireDemonScene:
 	say "     [link](3)[as]3[end link] - Leave.";
 	now calcnumber is 0;
 	while calcnumber < 1 or calcnumber > 3:
-		say "Choice? (1-3)>[run paragraph on]";
+		say "Choice? (1-3)> [run paragraph on]";
 		get a number;
-		if calcnumber is 1 or calcnumber is 2 or calcnumber is 3:
-			break;
-		else:
+		if calcnumber < 1 or calcnumber > 3:
 			say "Invalid choice. Type [link]1[end link] to join Atticus and Aerana, [link]2[end link] to just watch or [link]3[end link] to leave.";
+	LineBreak;
 	if calcnumber is 1:
-		LineBreak;
 		say "     You suppose you could choose between only watching them or joining in, but the prospect of sharing a nice moment with both your son and daughter is so rare that it might seem like a good idea to enjoy this opportunity. And, of course, the fact that you are already getting hard at the idea of your three using Arad's cock and every hole to pleasure yourselves helps a lot.";
 		WaitLineBreak;
 		say "     With this in mind, you tell your daughter and son that you would be delighted to join them in this, and they are, of course, happy to hear. Arad seems to really be looking forward to it, once he knows you will also be part of the action. 'It seems our guest is quite eager to get started...' she says, pressing her foot against his cock even harder as he lets out a soft moan. 'You like that, big boy? Getting jacked off by a succubus using only her feet, bound and helpless... You'd make such a great boy toy!' Aerana continues to tease the devil as she rubs his sixteen incher, throbbing under her sole. Atticus moves on to his face with an erection of his own, and grabbing Arad by the horns, he sticks his own manhood past the red devil's lips as the latter eagerly takes it all in. 'Hope you like sucking dick as much as I do...!' he teases him with a wink.";
@@ -692,11 +633,11 @@ to say AeranaAtticusHellfireDemonScene:
 		WaitLineBreak;
 		say "     With the party close to be over, you take a few minutes to catch your breaths. Aerana gets out of Arad's cock, which is still unbelievably hard, and Atticus pulls out of his mouth. You do the same, standing up before a still eager hellfire demon, despite the mess you have done on him. 'This was... uhm... Interesting.' Aerana comments, which causes Atticus to burst in a laughter. 'Interesting?! Wow, sis... You came really hard on that one, let me tell you. I think you don't get enough dick, at all!' Her face turns red at these words, and she seems quite bothered at this, not because she feels insulted, but actually quite embarrassed. 'I just... don't find proper candidates that often, that's all. Though I... Admit that daddy's... friend was quite... adequate.'";
 		say "     'Look who's a size queen! Well, can't blame you. Big dicks are fun! Should take him for a ride myself, sometime.' - says Atticus before he turns to you - 'And daddy, thanks for joining us! Though I suppose we should, uhm... liberate our guest in a safer location before parting ways. See you around, we love you!' Aerana gives you a smile and a nod, making those her words as well. 'It was quite pleasant. We should... do it again, some other time.'";
+		WaitLineBreak;
+		say "     It is time to retreat and leave your demonic offspring to their duties, as your job here is done.";
 		NPCSexAftermath Arad receives "OralCock" from Atticus;
 		NPCSexAftermath Aerana receives "PussyFuck" from Arad;
 		NPCSexAftermath Arad receives "AssFuck" from Player;
-		WaitLineBreak;
-		say "     It is time to retreat and leave your demonic offspring to their duties, as your job here is done.";
 		now Resolution of AAHellfire is 2;
 	else if calcnumber is 2:
 		say "     After giving it some thought, maybe you should just let them have their fun while you simply stay and watch, keeping them company while they enjoy themselves. Besides, Arad seems to really be looking forward to giving himself to the whims and lusts of two other young demons, who happen to be your daughter and son. 'Suit yourself, daddy. I'm sure you'll enjoy the show!' your son says, while Aerana keeps pressing her foot against the crimson devil's cock even harder. 'And it seems our guest is quite eager to get started... Maybe he likes putting on a show for others, after all.' She continues this, teasing the hellfire demon as she rubs his sixteen incher, throbbing under her sole. 'You like that, big boy? Getting jacked off by a succubus using only her feet, bound and helpless... You'd make such a great boy toy!' Atticus moves on to his face with an erection of his own, and grabbing Arad by the horns, he sticks his own manhood past the red devil's lips as the latter eagerly takes it all in. 'Hope you like sucking dick as much as I do...!' he teases him with a wink.";
@@ -707,13 +648,12 @@ to say AeranaAtticusHellfireDemonScene:
 		WaitLineBreak;
 		say "     With the party close to be over, they take a few minutes to catch their breaths. Aerana gets out of Arad's cock, which is still unbelievably hard, and Atticus pulls out of his mouth. You simply stand up before a still eager hellfire demon, despite the mess your demonic offspring have done on him. 'This was... uhm... Interesting.' Aerana comments, which causes Atticus to burst in a laughter. 'Interesting?! Wow, sis... You came really hard on that one, let me tell you. I think you don't get enough dick, at all!' Her face turns red at these words, and she seems quite bothered at this, not because she feels insulted, but actually quite embarrassed. 'I just... don't find proper candidates that often, that's all. Though I admit that daddy's... friend was quite... adequate.'";
 		say "     'Look who's a size queen! Well, can't blame you. Big dicks are fun! Should take him for a ride myself, sometime.' - says Atticus before he turns to you - 'And daddy, thanks for keeping us company! You should join us next time, though! But for now, I suppose we should, uhm... liberate our guest in a safer location before parting ways. See you around, we love you!' Aerana gives you a smile and a nod, making those her words as well. 'It was quite pleasant. We should... do it again, some other time.'";
-		NPCSexAftermath Arad receives "OralCock" from Atticus;
-		NPCSexAftermath Aerana receives "PussyFuck" from Arad;
 		WaitLineBreak;
 		say "     It is time to retreat and leave your demonic offspring to their duties, as your job here is done.";
+		NPCSexAftermath Arad receives "OralCock" from Atticus;
+		NPCSexAftermath Aerana receives "PussyFuck" from Arad;
 		now Resolution of AAHellfire is 2;
-	else if calcnumber is 3:
-		LineBreak;
+	else:
 		say "     You thank them for the offer, but since the discussion is now solved, you tell your children that you would prefer to leave them alone with the [']guest['], as you have places to be and things to do. 'Oh, is that so?' Replied Aerana, followed by Atticus 'Aw... That's a shame. I was really looking forward to this, but alright. See you later, daddy! We'll make sure to tire him out before we send him away!'";
 		say "     They retreat to a more secluded place with Arad while you take your leave. It should not be long until he is liberated.";
 		now Resolution of AAHellfire is 4;

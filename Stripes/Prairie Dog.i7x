@@ -2,35 +2,25 @@ Version 1 of Prairie Dog by Stripes begins here.
 
 "Adds a Prairie Dog creature to Flexible Survival's Wandering Monsters table, with impreg chance"
 
-
 Section 1 - Creature Responses
 
 to say losetoprairiedog:
 	say "     Beaten, the prairie dogs swarm over you, pulling you to the dusty ground. They grope, fondle and tease you all over, rubbing their furry bodies over yours. One pushes her human-sized cock into your mouth while others start stroking and pumping at theirs. ";
 	if Cock Count of Player > 1: [male, herm]
 		say "The horny burrowers push and scuffle with one another over your multiple cocks, unable to consider riding one without making it too hard for the others to enjoy the other(s). In the end, they end up licking, kissing and nipping at them, making you moan and quiver. ";
-	else if Cock Count of Player is 1: [male, herm]
-		if Cock Length of Player < 7:
-			say "Another of the burrowers finds her way over to your erection and sinks her wet cunt down onto it with a barking moan. ";
-		else if Cock Length of Player < 10:
-			say "Another of the burrowers finds her way to your erection and struggles to take your proportionally huge cock into her wet cunt, eventually releasing a loud, barking moan as she manages to sink down onto it. ";
-		else: [giant cocks]
-			say "Your cock, incredibly huge to them is lavished attention on by a pair of the burrowers, who rub their furred breasts against your hard length as they lick, kiss and nip at it, making you moan and quiver. ";
+	else if Player is male: [male, herm]
+		say "[if Cock Length of Player < 7]Another of the burrowers finds her way over to your erection and sinks her wet cunt down onto it with a barking moan[else if Cock Length of Player < 10]Another of the burrowers finds her way to your erection and struggles to take your proportionally huge cock into her wet cunt, eventually releasing a loud, barking moan as she manages to sink down onto it[else]Your cock, incredibly huge to them is lavished attention on by a pair of the burrowers, who rub their furred breasts against your hard length as they lick, kiss and nip at it, making you moan and quiver[end if]. ";
 	if Player is female:
 		say "There is a bit of an argument over who will get to enjoy your cunt, but in the end, one emerges victorious and stabs her throbbing member into you. She pounds away at you roughly, quite worked up by his scuffle over breeding rights with the others. ";
 	else if anallevel > 1:
 		say "There is another argument over who will get to enjoy your ass, but in the end, one emerges victorious and stabs her throbbing member into you. ";
-	if Nipple Count of Player > 2:
-		say "Having multiple sets of breasts, you are able to accommodate many of them, who each take one to fondle and grope while suckling from your hard nipple. ";
-	else if Nipple Count of Player is 2:
-		say "A pair of them get lucky and are able to claim your breasts, groping and fondling one each while their suckle from your hard nipple. ";
+	if Nipple Count of Player > 1:
+		say "[if Nipple Count of Player > 2]Having multiple sets of breasts, you are able to accommodate many of them, who each take one to fondle and grope while suckling[else]A pair of them get lucky and are able to claim your breasts, groping and fondling one each while their suckle[end if] from your hard nipple. ";
 	say "They continue this wild orgy, cumming onto and into you until you are sticky with their seed and cumming hard yourself. Satisfied, the rodents scurry back down into their holes, which close up behind them as if they had never been.";
 	if Cock Count of Player > 1: [male, herm]
 		CreatureSexAftermath "Prairie Dog" receives "OralCock" from "Player";
-	else if Cock Count of Player is 1: [male, herm]
-		if Cock Length of Player < 7:
-			CreatureSexAftermath "Prairie Dog" receives "PussyFuck" from "Player";
-		else if Cock Length of Player < 10:
+	else if Player is male: [male, herm]
+		if Cock Length of Player < 10:
 			CreatureSexAftermath "Prairie Dog" receives "PussyFuck" from "Player";
 		else: [giant cocks]
 			CreatureSexAftermath "Prairie Dog" receives "OralCock" from "Player";
@@ -50,6 +40,7 @@ to say beattheprairiedog:
 		add "Catch one and let them fuck your pussy." to Prairie_Dog_Choices;
 	add "Let them run away." to Prairie_Dog_Choices;
 	let Prairie_Dog_Choice be what the player chooses from Prairie_Dog_Choices;
+	LineBreak;
 	if Prairie_Dog_Choice is:
 		-- "Catch one and fuck them in the ass.":
 			say "     After smacking around the prairie dog horde, the small rodents eventually have enough, retreating back underground as quickly as they emerged. Their wounded are dragged into closing holes, the earth sealing behind them as if they had never been. Yet, one prairie dog finds itself unlucky. Your hand shoots out, snatching a small, furry body before it can vanish into the earth. It thrashes, a frantic squeak escaping its throat, claws scratching at your arm. Suddenly, the struggles cease, the small body goes limp. 'Wow, wow - calm down fella. We just wanted to have some fun, no need to be nasty about it!' the captured prairie dog squeaks, its voice surprisingly clear despite the earlier ferocity.";
@@ -96,9 +87,6 @@ to say beattheprairiedog:
 
 Section 2 - Creature Insertion
 
-to say prairiedogdesc:
-	say "     You hear a squeaking, barking sound coming from behind you and turn around, but find nothing there. Soon there are others all around you as the call is answered. Still seeing nothing, you try to continue on only to have your legs sink into a hole in the ground. More holes open up around you as prairie dog creatures emerge from the earth. The sandy, brown rodents are larger than normal and are about three feet tall and walk on their hind legs. Some have found toy hard hats, bandanas or small shovels to use, but most are nude save for their fur. Their breasts seem quite large on their small bodies, as do their swollen sheaths and balls. As you are pulling yourself out of the hole, they charge to attack you!";
-
 Table of CombatPrep (continued)
 name(text)	PrepFunction(text)
 "Prairie Dog"	"[PrepCombat_Prairie Dog]"
@@ -127,7 +115,7 @@ When Play begins:
 	now attack entry is "[one of]The prairie dogs bite and nip at your legs![or]The burrowing rodents swing at you with sticks and toy shovels from all sides![or]A team of the rodents charge at you, latching onto your legs and trying to pull you down![or]As you try to ward off the blows from those closest to you, four at the back take another by the arms and legs, swinging and launching her to land in your face. She pounds at your head while grinding her earthy-smelling ballsack in your face![or]One of the prairie dogs rides on the shoulders of another and climbs onto your back to nip and scratch at you while the others keep at you from all sides![or]Your legs and hips are scratched and clawed from the horde around you![at random]";
 	now defeated entry is "[beattheprairiedog]";
 	now victory entry is "[losetoprairiedog]";
-	now desc entry is "[prairiedogdesc]";
+	now desc entry is "     You hear a squeaking, barking sound coming from behind you and turn around, but find nothing there. Soon there are others all around you as the call is answered. Still seeing nothing, you try to continue on only to have your legs sink into a hole in the ground. More holes open up around you as prairie dog creatures emerge from the earth. The sandy, brown rodents are larger than normal and are about three feet tall and walk on their hind legs. Some have found toy hard hats, bandanas or small shovels to use, but most are nude save for their fur. Their breasts seem quite large on their small bodies, as do their swollen sheaths and balls. As you are pulling yourself out of the hole, they charge to attack you![line break]";
 	now face entry is "now that of a prairie dog, a burrowing rodent with small nose, sharp teeth and a sleek profile for sliding through tight tunnels";
 	now body entry is "short and a little plump looking, though able to stretch and wriggle through tight spaces. You have short arms and legs ending in little paws with small, clawed fingers";
 	now skin entry is "dirty brown fur";
@@ -136,8 +124,8 @@ When Play begins:
 	now face change entry is "it shifts and changes shape, growing a small, broad muzzle with a little nose. Your ears move up and back, turning into round little ears that are held flat to your rodent-like head";
 	now body change entry is "you become shorter and a little stockier. Your arms and legs tingle and throb as they reshape themselves into short limbs ending in small paws with clawed digits. You have a growing urge to dig through some soft, sandy dirt";
 	now skin change entry is "you gain a coat of sandy brown fur";
-	now ass change entry is "ass shifts and grows into a plump bottom. Even as your ass is changing, a small tail extends from your behind";
-	now cock change entry is "becomes pink and human-like";
+	now ass change entry is "your ass shifts and grows into a plump bottom. Even as your ass is changing, a small tail extends from your behind";
+	now cock change entry is "it becomes pink and human-like";
 	now str entry is 8;
 	now dex entry is 16;
 	now sta entry is 12;
@@ -278,8 +266,6 @@ When Play begins:
 	[Clit Size Adjective is generated by a function and can be used in scenes: very small/small/average/large/very large]
 ]
 
-
-
 Section 3 - Endings
 
 Table of GameEndings (continued)
@@ -292,10 +278,7 @@ This is the Prairie Dog Infection rule:
 		if humanity of Player < 10:
 			say "     As your new instincts take over, your body shrinks down further, becoming smaller and end up about three feet tall, though your sexual organs remain unchanged in size. You head back to the dry plains and wander them. As you go, you can see the dry grasses continuing to slowly spread over the ruined buildings, making it much more beautiful, you feel. Coming to what appears to be a grassy spot like all others, you can read the subtle signs now and start to dig. You burrow through the soft earth with ease, enjoying the feel of it against your paws as you tunnel down. You only have to go a few feet to find the underground tunnels of the other prairie dogs and scurry through along them to find the warren.";
 			say "     Joining the others, you have a wonderful romp to welcome you among them before its back to work. You and the others continue your tunnels and the demolition of the last few buildings. As some soldiers are sent to investigate the plains, they are quickly surrounded by burrowing rodents emerging all around them. They are pounced and mated by the coterie until they are prairie dogs themselves and pulled down into the tunnels.";
-			if centaurmate is 1 or centaurmate is 2:
-				say "     In an effort to seal off the plains area, the military starts with electric fences, then moving on to a wide ditch and high concrete wall to keep the mutated centaurs contained. This barrier proves to be of little consequence to your people, who simply dig a long, secret tunnel past it, emerging far from their lines. Most are happy to stay in the great grasslands that have been created, but some long to spread out, escaping and traveling out to other prairies and farmlands at the heart of the continent to create new warrens there.";
-			else:
-				say "     The military's containment efforts, while sufficient for dealing with the centaurs and other creatures of the plains, are easily ignored by your people. For those few who wish to leave this beautiful, dry grassland that has been created, they need only take a secret escape tunnel dug by the coterie. Those who leave make their way to other prairies and farmlands at the heart of the continent to create new warrens there.";
+			say "     [if centaurmate > 0]In an effort to seal off the plains area, the military starts with electric fences, then moving on to a wide ditch and high concrete wall to keep the mutated centaurs contained. This barrier proves to be of little consequence to your people, who simply dig a long, secret tunnel past it, emerging far from their lines. Most are happy to stay in the great grasslands that have been created, but some long to spread out, escaping and traveling out[else]The military's containment efforts, while sufficient for dealing with the centaurs and other creatures of the plains, are easily ignored by your people. For those few who wish to leave this beautiful, dry grassland that has been created, they need only take a secret escape tunnel dug by the coterie. Those who leave make their way[end if] to other prairies and farmlands at the heart of the continent to create new warrens there.";
 		else:
 			say "     You survive your experience in the infected city, but don't escape unscathed. With your stature reduced and your body much like that of an overgrown prairie dog, you don't fit in well with humanity at large. After some odd jobs, you buy yourself an empty plot of land in the country and build a small home for yourself above ground with a much more extensive burrow underneath. This work comes to you quite easily, having an affinity for the earth and tunneling. The burrow you create is quite modern, with pipes and electrical sent down from the small entryway building, allowing you modern conveniences in a warm, dry den.";
 			say "     Word of your ingenious construction spreads and your home is bought by a mole man for a sizable sum. With the funds, you build yourself a new place and set up a construction firm to create other. You specialize in building and digging modern burrows for underground dwelling infected people. After only a few years, you are quite successful and make a final, grand burrow for yourself. This one is larger both above and below ground, being on a much larger plot of land. The upper rooms are mainly for your guests, friends and lovers who prefer such living quarters while the ultra-modern burrow below with its throw rugs, pillows and HDTV is cozier for you.";

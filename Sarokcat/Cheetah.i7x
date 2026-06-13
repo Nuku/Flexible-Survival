@@ -27,16 +27,15 @@ to say CheetahWomanWins:
 		say "     Before you know it, the two of you are orgasming together, your highly aroused bodies shuddering in pleasure as they rub against each other. Eventually she pulls herself off you as you lie your head back on the ground, the taste of her arousal filling your mouth still. 'That was so good,' the cheetah woman moans as she stretches, and you nod weakly in agreement. 'Maybe next time we can find a male for us both,' she says, lowering her muzzle to you and giving you a swift kiss, before standing up and sauntering away. You find your gaze fixed on her lashing tail, the taste of your juices from her mouth mixing with her strong feline taste on your tongue as you wonder about her last comment...";
 		CreatureSexAftermath "Player" receives "OralPussy" from "Cheetah Woman";
 		CreatureSexAftermath "Cheetah Woman" receives "OralPussy" from "Player";
-	infect "Cheetah Woman";
-
+	[infect "Cheetah Woman";]
 
 To say CheetahWomanLoses:
 	if (Player is male and Cock Length of Player <= 18) or Player is female:
 		say "     You find yourself considering having some fun with the cheetah woman. [bold type]Do you take advantage of the situation and use her to sate your lusts?[roman type][line break]";
-		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Yes.";
 		say "     ([link]N[as]n[end link]) - No.";
 		if Player consents:
+			LineBreak;
 			if Player is male: [Male]
 				say "     Moving to restrain her before she can get away you force her down on to her knees, holding her up by her arms. After you are sure that she will not try to run or attack you again you let go of her arms, force her onto all fours[if Player is not barecrotch] and [one of]hurredly[or]quickly[or]hastily[at random] remove your clothes, exposing your [Cock of Player] [one of]dick[or]cock[or]penis[at random][end if]. You tear away at the tattered remains of her clothes and stare down at her lustfully. She has by now returned the same stare and presents herself for your use. Her tail swaying with delight. You thrust your [one of]dick[or]member[or]cock[at random] into her feline [one of]pussy[or]slit[or]twat[at random] and pound into her furiously. Her body quickly joins the rhythm of your thrusts and her [one of]large[or]small[or]pert[at random]breasts sway up and down on her chest. As the two of you continue to fuck you soon reach orgasm and she quickly follows. The two of you are tired and worn out and she is clearly half conscious. Deciding that you have had your fun you collect yourself and leave the cheetah woman to collect herself or be fucked before she can escape.";
 				CreatureSexAftermath "Cheetah Woman" receives "PussyFuck" from "Player";
@@ -44,15 +43,13 @@ To say CheetahWomanLoses:
 				say "     The Cheetah woman falls to her knees in defeat and you grab hold of her arms and push her to the ground and sit on top of her ensuring she can't escape. You interlock your lips with her [one of]muzzle[or]mouth[at random]. She quickly gives in to her own lust and personality returns the kiss, you let go of her arms and she quickly wraps them around you. Refusing to let go th two of you passionately embrace one another, your lust takes over and soon the both of you are on the floor kissing passionately and rubbing at each others [one of]pussies[or]cunts[at random]";
 				say "     The both of you are brought to orgasm almost simultaneously, you are lost in bliss and it feels as if an eternity has passed. You look to your partner and smile, satisfied that you have had your pleasure you gather your things and make on your way, leaving the cheetah woman to whatever fate awaits her";
 		else: [Milking]
+			LineBreak;
 			say "     Moving to restrain her before she can get away, you force her down onto the ground with her [one of]muzzle[or]face[or]snout[at random] pressed against the earth. You [one of]pick up a glass bottle from the ground[or]pull a glass bottle from your bag[or]pick up a plastic bottle from the ground[or]pull a plastic bottle from your bag[at random] and place the container under her [one of]right breast[or]left breast[at random], then begin to stimulate her nipples. Her breathing starts to get heavy as the stimulation to her tits intensifies. Soon she is moaning and purring as milk shoots out her tits and into the container. After you are done with her, you move her slumping body to the side and put a cap on the bottle of cheetah milk, then go on your merry way.";
 			ItemGain cheetah milk by 1;
 	else: [Milking]
 		say "     Moving to restrain her before she can get away, you force her down onto the ground with her [one of]muzzle[or]face[or]snout[at random] pressed against the earth. You [one of]pick up a glass bottle from the ground[or]pull a glass bottle from your bag[or]pick up a plastic bottle from the ground[or]pull a plastic bottle from your bag[at random] and place the container under her [one of]right breast[or]left breast[at random], then begin to stimulate her nipples. Her breathing starts to get heavy as the stimulation to her tits intensifies. Soon she is moaning and purring as milk shoots out her tits and into the container. After you are done with her, you move her slumping body to the side and put a cap on the bottle of cheetah milk, then go on your merry way.";
 
 Section 2 - Creature Insertion
-
-to say CheetahWomanDesc:
-	say "     As you wander around the deserted paths of the zoo, you spot a blur for a second, and turning towards it you find yourself staring straight into the eyes of an almost feral-like cheetah woman. She is adorned with [one of]the tattered remains of a dress[or]the tattered remains of a zookeepers uniform[or]the tattered remains of some jeans and a shirt[or]nothing[at random], her long lean body resting on narrow paws and a long cheetah tail lashing behind her as she focuses her gaze directly on you. [one of]'Why don't you run? I love the chase,' [or]'Hmmm, not a gazelle, but you look almost as fun,' [or]'Oooo, something to chase!' [or]'Oh good, I was feeling bored,' [or]'I was feeling kind of lonely here. Maybe you can help?' [or]'Finally someone to pounce!' [at random]she says with a soft grin, her pert breasts standing out from her body as she takes a deep breath in anticipation and slips into a runner's stance, her eyes locked on her newest prey... you.";
 
 Table of CombatPrep (continued)
 name(text)	PrepFunction(text)
@@ -84,16 +81,16 @@ When Play begins:
 	now attack entry is "[one of]She darts forward quickly, sideswiping you with her body.[or]Swiftly racing forward and to the side, she slashes at you as she passes.[or]Her front paw flashes out faster than the eye can follow, leaving a painful set of claw marks on you.[or]Lashing her tail in anticipation, the cheetah woman purrs as she stares deep into your eyes, her sinuous movements almost hypnotically appealing.[or]Charging forward with no warning whatsoever, she pounces and knocks you to the ground.[or]She bunches her powerful hind legs up and leaps directly at you![or]She grins at you, baring her sharp feline teeth, before leaping forward and snapping them at you.[at random]";
 	now defeated entry is "[CheetahWomanLoses]";
 	now victory entry is "[CheetahWomanWins]";
-	now desc entry is "[CheetahWomanDesc]";
+	now desc entry is "     As you wander around the deserted paths of the zoo, you spot a blur for a second, and turning towards it you find yourself staring straight into the eyes of an almost feral-like cheetah woman. She is adorned with [one of]the tattered remains of a dress[or]the tattered remains of a zookeepers uniform[or]the tattered remains of some jeans and a shirt[or]nothing[at random], her long lean body resting on narrow paws and a long cheetah tail lashing behind her as she focuses her gaze directly on you. [one of]'Why don't you run? I love the chase,' [or]'Hmmm, not a gazelle, but you look almost as fun,' [or]'Oooo, something to chase!' [or]'Oh good, I was feeling bored,' [or]'I was feeling kind of lonely here. Maybe you can help?' [or]'Finally someone to pounce!' [at random]she says with a soft grin, her pert breasts standing out from her body as she takes a deep breath in anticipation and slips into a runner's stance, her eyes locked on her newest prey... you.[line break]";
 	now face entry is "sleek and cheetah-like, with a short muzzle, soft whiskers, and small, rounded ears resting on top of your new head"; [ Face description, format as "Your face is [Face of Player]." ]
-	now body entry is "Slim and sleek, with not an ounce of wasted fat anywhere you can spot, its strong tight muscles made for running. You balance easily on your new, pawlike feet, gripping the ground tightly. You find yourself leaning forward slightly as you walk, as if you were always ready to spring into action"; [ Body Description, format as "Your Body is [Body of Player]." ]
-	now skin entry is "[one of]cheetah spotted[or]cheetah furred[or]black and yellow spotted[or]sleek furred[or]short fur covered[at random]"; [ skin Description, format as "Your body is covered in (your text) skin."]
+	now body entry is "slim and sleek, with not an ounce of wasted fat anywhere you can spot, its strong tight muscles made for running. You balance easily on your new, pawlike feet, gripping the ground tightly. You find yourself leaning forward slightly as you walk, as if you were always ready to spring into action"; [ Body Description, format as "Your Body is [Body of Player]." ]
+	now skin entry is "[one of]cheetah-spotted[or]cheetah-furred[or]black and yellow-spotted[or]sleek-furred[or]short fur-covered[at random]"; [ skin Description, format as "Your body is covered in (your text) skin."]
 	now tail entry is "You have a long, thin feline tail stretching out behind you, constantly lashing and curling around from side to side as if it is always eager to be moving. It is covered in [Skin of Player] skin and provides an excellent counterbalance to swift movement."; [ Tail description, write a whole Sentence or leave blank. ]
 	now cock entry is "[one of]feline[or]cheetah[or]barbed[or]pointed[at random]"; [ Cock Description, format as you have a 'size' (your text) cock]
 	now face change entry is "your mouth pushes out into a slim muzzle, your ears moving to the top of your head as your nose shrinks and becomes part of your new muzzle. Your vision blurs for a minute as your eyes water, then it clears, and the world comes into a new, sharper focus before your now-predatory eyes as many new sharp, enticing scents fill your feline nose"; [ Face change text, format as "Your face feels funny as [face change entry]." ]
 	now body change entry is "it grows slim and sleek, your legs shifting forward and growing corded with tight muscles, soft paws forming on your feet for better traction when running. Your hands grow slender and sleek as well, with thick pads forming on the paws, though your fingers are still just as dexterous as ever, if not more so"; [ Body change text, format as "Your body feels funny as [body change entry]." ]
 	now skin change entry is "a slick layer of short spotted fur begins to cover your body, the fur itches for a second, before lying down close to your skin, making you look sleek, dangerous, and cheetah like"; [ Skin change text, format as "Your skin feels funny as [skin change entry]." ]
-	now ass change entry is "A long thin spotted tail begins to form behind you, the end growing a small white tip of fur as it lashes behind you as if eager to be on the move"; [ Ass/tail change text, format as "Your ass feels funny as [ass change entry]." ]
+	now ass change entry is "a long thin spotted tail begins to form behind you, the end growing a small white tip of fur as it lashes behind you as if eager to be on the move"; [ Ass/tail change text, format as "Your ass feels funny as [ass change entry]." ]
 	now cock change entry is "it is drawn up closer to your body by a feline sheath forming around it, your cock itself continues to stretch and change as well, becoming pointed and small barbs growing out of it, both for your feline mates pleasure and your own"; [ cock change text. format as "Your cock feels funny as (your text)." ]
 	now str entry is 14;
 	now dex entry is 24;
@@ -235,25 +232,23 @@ When Play begins:
 	[Clit Size Adjective is generated by a function and can be used in scenes: very small/small/average/large/very large]
 ]
 
-
+Section 3 - Drop Item
 
 Table of Game Objects (continued)
 name	desc	weight	object
 "cheetah milk"	"The creamy milk collected from a Cheetah. It has a potent smell to it, yet it's slightly enticing."	1	cheetah milk
 
-cheetah milk is a grab object. It is milky. It is temporary. Understand "milk" as cheetah milk. cheetah milk is infectious. Strain of cheetah milk is "Cheetah Woman".
-
-Usedesc of cheetah milk is "[drinkcheetahmilk]";
+cheetah milk is a grab object. It is milky. Understand "milk" as cheetah milk. cheetah milk is infectious. Strain of cheetah milk is "Cheetah Woman".
+the scent of cheetah milk is "The milk has a strongly feline scent that's rather enticing.".
+Usedesc of cheetah milk is "[drinkcheetahmilk]".
 
 to say drinkcheetahmilk:
 	say "     You drink down the cheetah milk. It has a strangely pleasant taste and it helps quench your thirst a little. You feel a little more lustful and excited.";
 	if BodyName of Player is "Cheetah Woman" and inheat is true, increase slutfucked by 1;
 	PlayerDrink 10;
-	increase Libido of Player by 5;
+	raise Player Libido by 5;
 
-the scent of cheetah milk is "The milk has a strongly feline scent that's rather enticing.".
-
-Section 3 - Heat Table
+Section 4 - Heat Table
 
 Table of infection heat (continued)
 infect name	heat cycle	heat duration	trigger text	description text	heat start	heat end	inheat	fheat (truth state)	mpregheat (truth state)	mpregtrigger
@@ -273,70 +268,69 @@ When Play begins:
 	now mpregheat entry is true;
 	now mpregtrigger entry is "Feeling a needy throb deep in your abdomen as a quiver of excitement runs through your bowels, you grab your ass and squeeze it firmly. You unleash a very feline yowl as your cheetah ass goes into heat. Enticing pheromones fill the air as your back passage becomes heated. Even the scent of them makes you more excited. You find yourself thinking of the many sexy felines you've seen around, feeling an urge to play with them.";
 
-
 to say cheetahwomanheatstart:
 	if Libido of Player < 30:
 		now Libido of Player is ( 60 + Libido of Player ) / 3;
 	else:
-		increase Libido of Player by 6;
+		raise Player Libido by 6;
 
 to say cheetahwomanheatend:
 	say "You release a soft mrowl as your heat passes, the ache in your [if Player is female]loins[else]anus[end if] subsiding somewhat.";
 	now Libido of Player is ( Libido of Player * 9 ) / 10;
-	decrease slutfucked by 2;
-	if slutfucked < 0, now slutfucked is 0;
-	if slutfucked > 6, now slutfucked is 6;
+	if slutfucked > 7:
+		now slutfucked is 6;
+	else if slutfucked > 2:
+		decrease slutfucked by 2;
+	else:
+		now slutfucked is 0;
 
 to say cheetahwomaninheat:
-	increase Libido of Player by 5;
-	if Libido of Player > 99, now Libido of Player is 99;
-	if Libido of Player > 90 and slutfucked > 8:
-		if there are no dangerous doors in the Location of Player:
-			if location of Player is fasttravel:
-				now battleground is "Outside";
+	raise Player Libido by 5;
+	if Libido of Player > 90:
+		if slutfucked > 8:
+			if there are no dangerous doors in the Location of Player:
+				if location of Player is fasttravel:
+					now battleground is "Outside";
+				else:
+					say "You prowl around uneasily, your body urging you to go somewhere and find some sexy feline to play with you.";
+					increase slutfucked by 1;
+					now battleground is "void";
 			else:
-				say "You prowl around uneasily, your body urging you to go somewhere and find some sexy feline to play with you.";
-				increase slutfucked by 1;
-				now battleground is "void";
-		else:
-			let y be a random dangerous door in the Location of Player;
-			now battleground is marea of y;
-		if battleground is not "void":
-			let cmonlist be a list of numbers;
-			repeat with X running from 1 to number of filled rows in Table of Random Critters:	[scans for all felines in the area]
-				choose row X from the Table of Random Critters;
-				if there is no area entry, next;
-				if there is no Name entry, next;
-				if area entry is battleground:
-					if Name entry is listed in infections of FelineList:
+				let y be a random dangerous door in the Location of Player;
+				if y is not nothing, now battleground is marea of y;
+			if battleground is not "void":
+				let cmonlist be a list of numbers;
+				repeat with X running from 1 to number of filled rows in Table of Random Critters:	[scans for all felines in the area]
+					choose row X from the Table of Random Critters;
+					if there is a area entry and area entry is battleground and Name entry is listed in infections of FelineList:
 						add X to cmonList;
-			let cheetahchance be 40 + ( perception of Player ) * 2;
-			if cheetahchance > 90, now cheetahchance is 90;
-			if cmonlist is not empty and a random chance of cheetahchance in 100 succeeds:
-				now slutfucked is 0;
-				sort cmonlist in random order;
-				now MonsterID is entry 1 of cmonList;
-				choose row MonsterID from the Table of Random Critters;
-				say "Catching the scent of a feline on the air, your heat-driven instincts take over and you follow it in search of relief. You find the [Name entry] soon enough, your pheromones having caught its nose. Immediately upon seeing the creature, you submit yourself, offering your [bodytype of Player] body freely in the hopes of satisfying your lustful, heat-fueled needs.";
-				WaitLineBreak;
-				follow the cock descr rule;
-				follow the cunt descr rule;
-				follow the breast descr rule;
-				say "[victory entry]";
-				infect;
-				decrease score by 5;
-				decrease morale of Player by 3;
-				if Player is kinky, increase Morale of Player by 6;
-			else:
-				say "As your feline heat courses through you, you sniff the air, trying to catch the scent of a nearby feline, but are unsuccessful[if cmonlist is empty]. Perhaps you'd best head somewhere you know there are more kitties to play with, your heat-filled mind decides[end if].";
-				increase slutfucked by 1;
-	else if Libido of Player > 90:
-		increase slutfucked by 1;
-		if heatform is 0:
-			say "[one of]You mewl softly as a fresh flow of heat juices run down your thighs[or]Stuffing some fingers between your legs, you try in vain to relieve the ache in your loins[or]You pant and moan as wave of need quiver through your cunny, your feline cunt wanting satisfaction[or]You yowl like a cat in heat - which you are, at least in part[or]You mrowl and squeeze your thighs together as the heat in your loins makes you hornier and hornier[or]The waves of hot lust filling your cunt make you moan as you try to focus[purely at random][one of]. You start to imagine yourself submitting to some of the well-hung felines you've been seeing[or]. You sniff the air, hoping to find some kitty to play with[or]. You want to head back out into the city right away and find some kitty to scratch your special itch[or]. Thoughts of bending over for the next feline you see becomes increasingly tempting[or]. The thought of getting some tom to fill you full of kittens is delightfully exciting[purely at random].";
+				let cheetahchance be 40 + ( perception of Player * 2 );
+				if cheetahchance > 90, now cheetahchance is 90;
+				if cmonlist is not empty and a random chance of cheetahchance in 100 succeeds:
+					now slutfucked is 0;
+					sort cmonlist in random order;
+					now MonsterID is entry 1 of cmonList;
+					choose row MonsterID from the Table of Random Critters;
+					say "     Catching the scent of a feline on the air, your heat-driven instincts take over and you follow it in search of relief. You find the [Name entry in lower case] soon enough, your pheromones having caught its nose. Immediately upon seeing the creature, you submit yourself, offering your [bodytype of Player] body freely in the hopes of satisfying your lustful, heat-fueled needs.";
+					say "[run paragraph on]";
+					follow the cock descr rule;
+					follow the cunt descr rule;
+					follow the breast descr rule;
+					WaitLineBreak;
+					say "[victory entry]";
+					infect;
+					decrease score by 5;
+					decrease morale of Player by 3;
+					if Player is kinky, increase Morale of Player by 6;
+				else:
+					say "As your feline heat courses through you, you sniff the air, trying to catch the scent of a nearby feline, but are unsuccessful[if cmonlist is empty]. Perhaps you'd best head somewhere you know there are more kitties to play with, your heat-filled mind decides[end if].";
+					increase slutfucked by 1;
 		else:
-			say "[one of]You mewl softly as a fresh wave of pheromones waft from your heated body[or]Stuffing some fingers between your cheeks, you try in vain to relieve the aching void you feel there[or]You pant and moan as wave of need quiver through your ass, your feline male womb wanting satisfaction[or]You yowl like a cat in heat - which you are, at least in part[or]You mrowl and squeeze your thighs together as the heat in your bowels makes you hornier and hornier[or]The waves of hot lust filling your ass make you moan as you try to focus[purely at random][one of]. You start to imagine yourself submitting to some of the well-hung felines you've been seeing[or]. You sniff the air, hoping to find some kitty to play with[or]. You want to head back out into the city right away and find some kitty to scratch your special itch[or]. Thoughts of bending over for the next feline you see becomes increasingly tempting[or]. The thought of getting some tom to fill you full of kittens is delightfully exciting[purely at random].";
-
+			increase slutfucked by 1;
+			if heatform is 0:
+				say "[one of]You mewl softly as a fresh flow of heat juices run down your thighs[or]Stuffing some fingers between your legs, you try in vain to relieve the ache in your loins[or]You pant and moan as wave of need quiver through your cunny, your feline cunt wanting satisfaction[or]You yowl like a cat in heat - which you are, at least in part[or]You mrowl and squeeze your thighs together as the heat in your loins makes you hornier and hornier[or]The waves of hot lust filling your cunt make you moan as you try to focus[purely at random][one of]. You start to imagine yourself submitting to some of the well-hung felines you've been seeing[or]. You sniff the air, hoping to find some kitty to play with[or]. You want to head back out into the city right away and find some kitty to scratch your special itch[or]. Thoughts of bending over for the next feline you see becomes increasingly tempting[or]. The thought of getting some tom to fill you full of kittens is delightfully exciting[purely at random].";
+			else:
+				say "[one of]You mewl softly as a fresh wave of pheromones waft from your heated body[or]Stuffing some fingers between your cheeks, you try in vain to relieve the aching void you feel there[or]You pant and moan as wave of need quiver through your ass, your feline male womb wanting satisfaction[or]You yowl like a cat in heat - which you are, at least in part[or]You mrowl and squeeze your thighs together as the heat in your bowels makes you hornier and hornier[or]The waves of hot lust filling your ass make you moan as you try to focus[purely at random][one of]. You start to imagine yourself submitting to some of the well-hung felines you've been seeing[or]. You sniff the air, hoping to find some kitty to play with[or]. You want to head back out into the city right away and find some kitty to scratch your special itch[or]. Thoughts of bending over for the next feline you see becomes increasingly tempting[or]. The thought of getting some tom to fill you full of kittens is delightfully exciting[purely at random].";
 
 Section 4 - Endings
 

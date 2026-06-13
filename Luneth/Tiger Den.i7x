@@ -6,9 +6,11 @@ Version 1 of Tiger Den by Luneth begins here.
 "Adds a tiger den to Flexible Survival with a few anthro tigers, and some small quests vs the tigertaurs..."
 
 Book 1 - Default Tiger Den Environment [Regular Chase Route]
+
 [The effects of change for the tiger's den under the default route will be more about balancing out lust and community. These changes will often be seen as practical and survival based.]
 
-Chapter 1 - Tiger's Den Entrance [TDen_Entrance]
+Part 1 - Tiger's Den Entrance [TDen_Entrance]
+
 [This should be the only current way to enter the tiger den and should be the fast travel point, but should not be sleepsafe since its basically the gates to the area. I would also like to show a progression here with helping Chase, basically helping him is also making the place more fortified.]
 [The entrance will need to have the huge gate that separates the underground part of the zoo from the above ground part. This area will not be sleep safe and will be the fast travel point. A one in three chance will always go into effect when you fast travel to the gate whether or not a tigertaur will attempt to break in leading to a fight(this may end up changed later on in the content depending on how things go with the tigertaurs). Tigertaur players will not also not be allowed through the gate.]
 
@@ -16,14 +18,12 @@ Table of GameRoomIDs (continued)
 Object	Name
 TDen_Entrance	"TDen_Entrance"
 
-TDen_Entrance is a room. It is fasttravel. TDen_Entrance is not sleepsafe. It is private.
-understand "Tiger Den" as TDen_Entrance.
-understand "Tiger Den Entrance" as TDen_Entrance.
-understand "Tiger's Den" as TDen_Entrance.
-understand "Tiger's Den Entrance" as TDen_Entrance.
+TDen_Entrance is a room. It is fasttravel. It is private.
+understand "Tiger Den Entrance/--" as TDen_Entrance.
+understand "Tiger's Den Entrance/--" as TDen_Entrance.
 RoomID of TDen_Entrance is "TDen_Entrance".
 Printed Name of TDen_Entrance is "Tiger's Den Entrance".
-the scent of TDen_Entrance is "The scent coming through from the gate in front of you smells strongly of tigers.".
+the scent of TDen_Entrance is "     The scent coming through from the gate in front of you smells strongly of tigers.".
 Description of TDen_Entrance is "[TDen_Entrance desc]".
 [TODO]
 [This should be the only fast travel point in the tigers den]
@@ -32,15 +32,16 @@ Description of TDen_Entrance is "[TDen_Entrance desc]".
 [Tigertaur players should not be allowed in no matter what, and I will either add a bad end or a way to rush players out if they attempt to become one in the den]
 [Players will need proof of who they are to gain entrance, more than likely something simple like a bracelet item or something]
 
-
 to say TDen_Entrance desc:
 	say "     After following the dark passage from the surface, you finally manage to find your way to the thick gate that separates the Tiger's Den from the rest of the zoo. The only guiding light in the tunnel coming from lit torches on either side of the huge fence, casting ominous shadows all around you. Taking a closer look at the metal, you can tell that the gates are made of heavy iron and are already showing signs of rust beginning to form. You're also able to make out a shadow just on the other side of the gate.";
 	say "     Heading north will lead you right up to the gate and then into the main area of the Tiger's Den.";
 
-Section 1 - Events
+Chapter 1 - Events
+
 [This will cover the events of this location.]
 
-Part 1 - Attempting to enter the Tiger's Den event
+Section 1 - Attempting to enter the Tiger's Den event
+
 [This should be a quick simple event that will showcase whether the player is able to enter the Tiger's Den. It should trigger when you attempt to enter the first floor main area from the entrance.]
 [I would also eventually like to create more variations that will deal with Kano's and other characters corruption levels.]
 [after going to First Floor Main Area:
@@ -62,10 +63,12 @@ Part 1 - Attempting to enter the Tiger's Den event
 		else if player is the leader of the dens mate: [TODO: At this point the bangle and your shape won't matter anymore in terms of entering]
 			say "     ...";]
 
-Section 2 - Features
+Chapter 2 - Features
+
 [This will cover special features of this location.]
 
-Part 1 - Random battle scene
+Section 1 - Random battle scene
+
 [A quick scene that has a 1/4 chance to trigger where a tigertaur will attempt to break into the Tiger's Den, but is more than willing to go through you. This will have the chance to trigger whenever you fast travel to the entrance, but may be a removed feature later depending on how you deal with the tigertaurs.]
 [I would also like add in a part for Kano to help the player battle if the tigertaur is his son, this won't replace the current pet but would need flavor text as well as some damage done each turn.]
 [I would also like to create a variation ending to the scene based on if you simply beat the tigertaur or if you fuck it.]
@@ -78,7 +81,8 @@ Part 1 - Random battle scene
 		battle tigertaur;
 		say "     Having finally bested the predator and causing it to retreat, you slowly begin to catch your breath. From behind you Kano speaks up, 'Hey not bad kid, with moves like that should be able to really help out around here, well if you got the stuff to get inside that is.' Turning back towards the gate you can see that the large tigerman waiting for you to show him the bangle that will gain you entrance to the Tiger Den.";]
 
-Chapter 2 - First Floor Main Area [TDen_FFMainArea]
+Part 2 - First Floor Main Area [TDen_FFMainArea]
+
 [What we now see as the tigers den will be the new first floor main area. The main pat of the room will be made up of the tigers laying on cots with some supplies and a staircase leading upstairs to where the zoo vets had their offices. The new aspect I want to add here is the upgrade system, this will allow players to offer up certain items to the community. This will also lead to the cots possibly becoming beds, the fabric separating their room becoming something a bit more private and so on.]
 
 Table of GameRoomIDs (continued)
@@ -89,7 +93,7 @@ TDen_FFMainArea	"Tiger Den"
 TDen_FFMainArea is a room. It is private.
 RoomID of TDen_FFMainArea is "TDen_FFMainArea".
 Printed Name of TDen_FFMainArea is "First Floor Main Area".
-the scent of TDen_FFMainArea is "The enclosed basement hideout smells strongly of tigers.".
+the scent of TDen_FFMainArea is "     The enclosed basement hideout smells strongly of tigers.".
 Description of TDen_FFMainArea is "[TDen_FFMainArea desc]".
 
 to say TDen_FFMainArea desc:
@@ -110,9 +114,10 @@ TDen_SupplyCloset is northwest of TDen_FFMainArea.
 TDen_Garage is north of TDen_FFMainArea.
 TDen_SFMainArea is above TDen_FFMainArea.
 
-Section 1 - Events
+Chapter 1 - Events
 
-Section 2 - Features
+Chapter 2 - Features
+
 [I think I will attempt to create a new type of object/npc that the player can click on to see random events rather than use walk in events for everything since that can get quite annoying when you just don't wanna see them.]
 [TODO:For if Wahn works on this with me.]
 [When you enter the location Chase will be listed in the objects of the room and this object will be listed next to him]
@@ -123,8 +128,8 @@ Section 2 - Features
 [sex events would be something like going into the locker room and finding someone fucking either a main NPC or just some of the random tigers]
 [the reason to split it up is some people just don't want certain scenes either sex or story this way they can look for what they are into]
 
+Part 3 - Locker Room [TDen_LockerRoom]
 
-Chapter 3 - Locker Room [TDen_LockerRoom]
 [The main reason for the locker room is that it is the one "private" place for them to store their belongings. Most of the items that are kept inside the lockers are things pertaining to their past lives or other things that they hold dear, the player will have a chance to find out what is in these lockers, but depending on how you find out the other people may not be pleased. Since the room is not often used it is also the perfect place to talk discreetly.]
 
 Table of GameRoomIDs (continued)
@@ -134,19 +139,19 @@ TDen_LockerRoom	"TDen_LockerRoom"
 TDen_LockerRoom is a room. Description of TDen_LockerRoom is "[TDen_LockerRoom desc]".
 RoomID of TDen_LockerRoom is "TDen_LockerRoom".
 Printed Name of TDen_LockerRoom is "Locker Room".
+TDen_LockerRoom is west of TDen_Showers.
 
 to say TDen_LockerRoom desc:
 	say "     The locker room has a pretty standard appearance to it. Looking around the area, you can see six rows of compartments. Stepping down one aisle, you can see that each row has ten full length lockers. The entire room only has a single one of its many ceiling lights working, the random flickering of the bulb casting unnerving shadows around the room. Oddly enough, in the back you can also make out a washer and dryer, but their current state lets you know that at the very least neither have been used recently.";
 	say "     Heading west will take you to the main area.";
 	say "     Heading east will take you to the showers.";
 
-TDen_LockerRoom is west of TDen_Showers.
+Chapter 1 - Events
 
-Section 1 - Events
+Chapter 2 - Features
 
-Section 2 - Features
+Part 4 - Bathroom [TDen_Bathroom]
 
-Chapter 4 - Bathroom [TDen_Bathroom]
 [This area is really simple, I basically just wanted a room that could do two things, one serve as a place for the watersport content, and two also offer the possibility for glory hole content.]
 
 Table of GameRoomIDs (continued)
@@ -164,11 +169,12 @@ to say TDen_Bathroom desc:
 
 [say "     Just a simple employee bathroom. Inspecting the room you can make out the usual things you would expect of a washroom. Three [repaired bathroom]toilet stalls[else]destroyed toilet stalls[end if] line one side of the room, while on the opposite side a huge mirror takes up most of the upper wall. Underneath the large mirror are a pair of sinks for washing your hands. [repaired bathroom and water returned to tigers den]Straight back from the entrance of the washroom however is a much larger stall with its door slightly ajar, it must have been at one time the handicap stall, looking further you can see a hole in one of the sides, could it be a... glory hole.[else bathroom is repaired but water is not on]The room smells disgusting, mixed with how unhygienic it must be you can't help but want to run out of here as fast as you can.[end]";]
 
-Section 1 - Events
+Chapter 1 - Events
 
-Section 2 - Features
+Chapter 2 - Features
 
-Chapter 5 - Showers [TDen_Showers]
+Part 5 - Showers [TDen_Showers]
+
 [Another easy area that I wanted to serve as a place to spy on some of the characters bathing. This can mean just bathing or masturbating, or even sexy shower fun with the player.]
 
 Table of GameRoomIDs (continued)
@@ -185,11 +191,12 @@ to say TDen_Showers desc:
 
 [A decent sized shower room that more than likely was used for when people were on their way home from work, but didn't want to leave while covered in the grime of the day. Inspecting the room you can see that the floors as well as the walls are both covered in whitish-blue tiles and all around the room are ten showerheads for bathing. [got the water working for the tigers den]The whole room has a clean feeling to it now that the water is working, not to mention that you can feel your body covered in moisture just by entering the room[else]The room reeks of stale water with a hint of mildew, to be honest you are a little shocked that the room hasn't been blocked off due to the unhygienic atmosphere of the showers[end if].]
 
-Section 1 - Events
+Chapter 1 - Events
 
-Section 2 - Features
+Chapter 2 - Features
 
-Chapter 6 - Supply Closet [TDen_SupplyCloset]
+Part 6 - Supply Closet [TDen_SupplyCloset]
+
 [This will be the location that the player will be able to deliver supplies to the Tiger's Den.]
 
 Table of GameRoomIDs (continued)
@@ -204,11 +211,12 @@ to say TDen_SupplyCloset desc:
 	say "     The decent sized room has crates along each of its walls, more than likely filled with supplies. One crate however stands by itself in the center of the room with the words 'Donations Welcome!' painted on a sheet of paper that has been taped onto the box. Other than that, the room is by far pretty unimpressive.";
 	say "     Heading southeast will take you to the main area.";
 
-Section 1 - Events
+Chapter 1 - Events
 
-Section 2 - Features
+Chapter 2 - Features
 
-Chapter 7 - Clinic [TDen_Clinic]
+Part 7 - Clinic [TDen_Clinic]
+
 [This area will be mostly for Kimani, but it will also have some events to help showcase some of the other inhabitants medical needs.]
 
 Table of GameRoomIDs (continued)
@@ -223,11 +231,12 @@ to say TDen_Clinic desc:
 	say "     What was once an examination room for the zoo, has now been converted into a makeshift clinic. There are vials of chemicals along the walls and the counterspace is covered in different medical equipment, the only area free of clutter is the examination table for potential patients. There is also what looks to be a fridge or freezer in one corner more than likely used to keep samples fresh.";
 	say "     Heading southwest will take you to the main area.";
 
-Section 1 - Events
+Chapter 1 - Events
 
-Section 2 - Features
+Chapter 2 - Features
 
-Chapter 8 - Garage [TDen_Garage]
+Part 8 - Garage [TDen_Garage]
+
 [This area will be for the most part pretty vacant, well at least until you're able to capture your very own tigertaur.]
 
 Table of GameRoomIDs (continued)
@@ -242,11 +251,12 @@ to say TDen_Garage desc:
 	say "     While the garage is actually a pretty decent size, there is only a single run down jeep that by the looks of it has been scrapped for most of its parts. A few spare tires are off to the right hand side of the room and the smell of gasoline is still thick in the air. Glancing around at just how much open space is here you can't help but start thinking of how this area could be used in the future...";
 	say "     Heading south will take you to the main area.";
 
-Section 1 - Events
+Chapter 1 - Events
 
-Section 2 - Features
+Chapter 2 - Features
 
-Chapter 9 - Second Floor Main Area [TDen_SFMainArea]
+Part 9 - Second Floor Main Area [TDen_SFMainArea]
+
 [The second floor main area will be how you access the other characters bedrooms, but it will also serve as a meeting area for the heads of the den to discuss what they should do next going forward.]
 
 Table of GameRoomIDs (continued)
@@ -261,58 +271,66 @@ to say TDen_SFMainArea desc:
 	say "     Stepping off the landing of the stairs, you give a cursory glance around the area. The only things of actual note are a cluttered table and a whiteboard against one of the walls. Looking first at the table, it is covered with a large guest style map of the zoo, with small animal toys spread across it, almost as if each one has a meaning for its placement. Turning your head to the side to check the whiteboard instead, you can see some familiar names along with a form of listing arrangement... could this be some sort of voting system? There are also two hallways in the back that you can only assume lead to zoo staff offices.";
 	say "     Heading down will take you to the first floor.";
 
-Section 1 - Events
+Chapter 1 - Events
 
-Section 2 - Features
+Chapter 2 - Features
 
-Chapter 10 - Chase's Bedroom [TDen_ChaseBedroom]
+Part 10 - Chase's Bedroom [TDen_ChaseBedroom]
 
-Section 1 - Events
+Chapter 1 - Events
 
-Section 2 - Features
+Chapter 2 - Features
 
-Chapter 11 - Mateo's Bedroom [TDen_TaigaBedroom]
+Part 11 - Mateo's Bedroom [TDen_TaigaBedroom]
 
-Section 1 - Events
+Chapter 1 - Events
 
-Section 2 - Features
+Chapter 2 - Features
 
-Chapter 12 - Kimani's Bedroom [TDen_KimaniBedroom]
+Part 12 - Kimani's Bedroom [TDen_KimaniBedroom]
 
-Section 1 - Events
+Chapter 1 - Events
 
-Section 2 - Features
+Chapter 2 - Features
 
-Chapter 13 - Kano's Bedroom [TDen_KanoBedroom]
+Part 13 - Kano's Bedroom [TDen_KanoBedroom]
 
-Section 1 - Events
+Chapter 1 - Events
 
-Section 2 - Features
+Chapter 2 - Features
 
-Chapter 14 - Ginger's Vent [TDen_GingerVent]
+Part 14 - Ginger's Vent [TDen_GingerVent]
 
-Section 1 - Events
+Chapter 1 - Events
 
-Section 2 - Features
+Chapter 2 - Features
 
-Chapter 15 - Twin's Bedroom [TDen_TwinsBedroom]
+Part 15 - Twin's Bedroom [TDen_TwinsBedroom]
 
-Section 1 - Events
+Chapter 1 - Events
 
-Section 2 - Features
+Chapter 2 - Features
 
 Book 2 - Monogamous Tiger Den Environment [Monogamous Dom/Sub Chase Route]
+
 [The effects of change for the tiger's den under the monogamous route will be more about building a family. These changes will often be seen as sweet and heartwarming. This will also be the only version of the tiger's den that will have the slower aging effect of offspring. The dom chase parts will be much more linear, since he is in charge of the den itself, while the sub chase route will present a decent amount of options the player can choose as the leader of the den.]
 
 Book 3 - Primal Tiger Den Environment [Primal Dom/Sub Chase Route]
+
 [The effects of change for the tiger's den under the primal route will be more about lust and sexual servitude. These changes will often be seen as intense and oppressive. This will also be the only version of the tiger's den that will have the potential loss of companions permanently. The dom chase parts will be much more linear, since he is in charge of the den itself, while the sub chase route will present a decent amount of options the player can choose as the leader of the den.]
 
 Book 4 - Tiger Den Acquisition Event
+
 [this needs to be altered to include the new characters as well as new choice points and companion reactions]
 [the tigertaur sex option should be removed or if that option is chosen chase should just leave you]
 [I will have to see if this event can be tied into the introduction of the tigertaur enemy and give a special exception to whatever that scientists name is that has a tigertaur battle since that battle doesn't even take place anywhere near the zoo]
 
-Chapter 1 - TigerVSTaur
+a postimport rule:
+	if PlayerMet of Chase is true:
+		AddNavPoint TDen_Entrance silently;
+
+Part 1 - TigerVSTaur
+
 [TODO: TigerVSTaur]
 [This needs the gender locks removed since this is meant to be a non sexual scene, the transformation moment for the bad choices are there but the players choice removes accountability]
 [TODO: this event needs to introduce the tigertaur as a regular enemy]
@@ -325,11 +343,7 @@ TigerVSTaur is a situation.
 ResolveFunction of TigerVSTaur is "[ResolveEvent TigerVSTaur]". The level of TigerVSTaur is 9.
 Sarea of TigerVSTaur is "Zoo".
 
-Section 1 - Event
-
-a postimport rule:
-	if PlayerMet of Chase is true:
-		now TDen_Entrance is known;
+Chapter 1 - Event
 
 to say ResolveEvent TigerVSTaur:
 	if ScaleValue of Player > 3:
@@ -342,22 +356,19 @@ to say ResolveEvent TigerVSTaur:
 		say "[TigerVSTaur_Intro_Companion_02]";
 		WaitLineBreak;
 		say "     The anthro tiger is definitely on the losing side of this fight and his back is literally up against a wall. The tigertaur however seems amused by the beastman's predicament and appears to be toying with its prey. Stepping forward to get a better look, a twig snaps under your foot, alerting both of the felines to your presence. Time seems to stop for a moment as the three of you stare at each other. The anthro tiger is the first to react, 'Run and get out of here!' Faster than your eyes can follow, the tiger's claws slice into the tigertaur's side, causing a loud roar to erupt from within the injured hybrid's throat. It looks like the anthro tiger's going to try and fight a losing battle to give you the chance to escape...";
-		LineBreak;
-		say "     [bold type]What should you do?[roman type][line break]";
+		say "[line break]     [bold type]What should you do?[roman type][line break]";
 		say "     [link](1)[as]1[end link] - Join the anthro tiger in attempting to fight off the tigertaur!";
 		say "     [link](2)[as]2[end link] - Turn the tables and side with the tigertaur against the anthro tiger!";
 		say "     [link](3)[as]3[end link] - Sit back and watch to see what happens.";
 		say "     [link](4)[as]4[end link] - Run as fast as you can to escape.";
 		now calcnumber is 0;
 		while calcnumber < 1 or calcnumber > 4:
-			say "Choice? (1-4)>[run paragraph on]";
+			say "Choice? (1-4)> [run paragraph on]";
 			get a number;
-			if calcnumber is 1 or calcnumber is 2 or calcnumber is 3 or calcnumber is 4:
-				break;
-			else:
-				say "Invalid choice. Type [link]1[end link] to fight the tigertaur, [link]2[end link] to fight the tiger or [link]3[end link] to watch, or [link]4[end link] to run.";
+			if calcnumber < 1 or calcnumber > 4:
+				say "Invalid choice. Type [link]1[end link] to fight the tigertaur, [link]2[end link] to fight the tiger, [link]3[end link] to watch or [link]4[end link] to run.";
+		LineBreak;
 		if calcnumber is 1: [help chase]
-			LineBreak;
 			say "[TigerVSTaur_Helped_Chase]";
 			now HP of Chase is 1;
 			now PlayerMet of Chase is true;
@@ -365,20 +376,17 @@ to say ResolveEvent TigerVSTaur:
 			AddNavPoint TDen_Entrance;
 			now Resolution of TigerVSTaur is 1;
 		else if calcnumber is 2: [help Kage]
-			LineBreak;
 			say "[TigerVSTaur_Helped_Kage]";
 			now Resolution of TigerVSTaur is 2;
 		else if calcnumber is 3: [watch]
-			LineBreak;
 			say "[TigerVSTaur_Watched]";
 			now Resolution of TigerVSTaur is 99;
-		else if calcnumber is 4: [run]
-			LineBreak;
+		else: [run]
 			say "[TigerVSTaur_Ran]";
 			now Resolution of TigerVSTaur is 99;
 		now TigerVSTaur is resolved;
 
-Section 2 - Event Choices
+Chapter 2 - Event Choices
 
 to say TigerVSTaur_Helped_Chase: [TODO: I wanna include something for the end of line 383 about if you actually have a companion or not also line 384 would need something about your team offering support rather than just you also at line 386 "the two of you rush at the tigertaur" while not bad as is could use a lil something]
 	say "     Rather than using this opportunity to run, you instead rush forward, your conscience demanding that you help the tiger. You make a beeline for the large taur, and thankfully for you the creature is still completely focused on the much smaller predator in front of it. Once you are close enough, you pull back and kick out as hard as you can into one of the hybrid's hind legs, causing a massive roar of both pain and rage to erupt from the tigertaur. You jump back to avoid a hit in return.";
@@ -441,8 +449,7 @@ to say TigerVSTaur_Helped_Kage:
 	WaitLineBreak;
 	say "     Oddly enough, Kage is now looking at you with a warm almost fond expression, 'You're an unusual person, but I like that. [']Normal['] people tend to be boring and while they live in glass houses they do so love to throw stones, don't they?' The taur's eyes flash for a moment, a hint of sadness can be seen within, but as quickly as it appears, it's gone. 'Anyway, isn't it customary for new friends to share an experience to cement their newfound bond?' The confused expression on your face must be showing as Kage is quick to explain, 'Well I already I have my prize after all, I could allow you to use it, sharing is caring and all that.' Without really thinking about what your saying, you ask the tigertaur if that's really alright? Wouldn't he prefer to keep Alex for himself? 'Haha, you are sweet to think about my perspective but, I have no plans on [']mating['] with this betrayer. I will be quite satisfied with shattering its mind, and while yes forcing myself on him would quicken that process, it would make it far too easy and thus spoil my fun little scheme of vengeance, not to mention I don't particularly want to sully myself by touching him more than needed.'";
 	say "     This is all a bit new to you, most of the people in the city seem to follow the [']fight, fuck, own['] rule. Kage seems to created a new rule just for himself, [']fight, own, break[']. While you are thinking about the implications of this ideal, Kage seems to grow impatient, 'Well? Heads or tails? All I ask is you make it... an experience to be remembered.' A cruel smile forms on the herms muzzle, and shockingly enough you find it infectious, as your own mouth mirrors his.";
-	LineBreak;
-	say "     [bold type]<Writer's Note: Ran out of time to build a full-on sex menu for this fork. It is open for later expansion through polls or commissions. Sorry about this.>[roman type][line break]";
+	say "[line break]     [bold type]<Writer's Note: Ran out of time to build a full-on sex menu for this fork. It is open for later expansion through polls or commissions. Sorry about this.>[roman type][line break]";
 	[LineBreak; [TODO: maybe se this up like a talk menu since this should also reference gender orc and bliss]
 		say "     [bold type]What should you do?[roman type][line break]";
 		say "     [link](1)[as]1[end link] - Tell Kage that you want the tiger's throat.";
@@ -451,7 +458,7 @@ to say TigerVSTaur_Helped_Kage:
 		say "     [link](4)[as]4[end link] - Tell Kage while you're appreciative you just aren't really in the mood.";
 		now calcnumber is 0;
 		while calcnumber < 1 or calcnumber > 3:
-			say "Choice? (1-4)>[run paragraph on]";
+			say "Choice? (1-4)> [run paragraph on]";
 			get a number;
 			if calcnumber is 1 or calcnumber is 2 or calcnumber is 3 or calcnumber is 4:
 				break;
@@ -490,7 +497,7 @@ to say TigerVSTaur_Watched:
 	say "     Not moving a muscle, you simply stare at the two felines. The beastman continues to shout at you to run and escape all while attempting to land attacks on the much larger cat, however after a few moments the taur eventually seems to understand that you are no threat and concentrates on its much smaller prey. While the anthro does manage to get some decent hits in, the battle is decided quickly when the tigertaur simply grabs the beastman by the throat and shakes him roughly for a moment. With the last bit of strength that the tiger has he spits in the taur's smug face, something between a chuckle and a purr reverberates through the large creatures chest, 'Now Alex is that any way to treat an old friend?' You're shocked by how masculine the thing sounds since at least by its appearance it looks to be a more feminine based herm.";
 	say "     The tiger that you now know is called Alex finally speaks, 'Kage we didn't know each other long enough to be friends, besides I don't go by Alex anymore, the names Chase bitchboy!' You can't be sure at first, but something that [']Chase['] says definitely seems to piss the bigger cat off, going by the low growl and the flattening of its ears at least. 'Bitchboy?! Wouldn't that name be more fitting for someone that actually abandoned somebody because they were too scared to act?' The bravado of the anthro dissipates almost instantly at the tigertaur's words, 'Kage... everything was happening so fast, none of us had any idea what was going on and as far as we could tell the world was ending all around us.'";
 	WaitLineBreak;
-	say "     The broken sound in Chase's voice makes you wonder what exactly did happen in those first few days, while things may be chaotic now, it had to be worse when people were still fighting for their humanity. 'You don't think that all of us wish we could go back and change how shit went down?! But it's not too late Kage, I mean your dad is with us st-hhhh' Whatever the anthro was gonna continue saying is cut off by the tightening of the taur's paw around his throat, 'Don't you dare mention that bastard to me!' The pure rage in those words is accompanied by a violent shredding of Chase's basketball shorts, leaving the poor feline completely naked  and the act makes you want to create even more distance between yourself and the large apex predator, but after a few moments of dead silence the creature finally speaks, 'Ya'know Alex, this is a perfect moment of reflection don't you think? You mentioned going back and changing how things turned out, but the truth is that life just doesn't work that way does it? In the real world there are actions and reactions and at the end of the day you have to accept responsibility for your choices, only children think they can do what they want without consequences... time to grow up peter pan.'";
+	say "     The broken sound in Chase's voice makes you wonder what exactly did happen in those first few days, while things may be chaotic now, it had to be worse when people were still fighting for their humanity. 'You don't think that all of us wish we could go back and change how shit went down?! But it's not too late Kage, I mean your dad is with us st-hhhh' Whatever the anthro was gonna continue saying is cut off by the tightening of the taur's paw around his throat, 'Don't you dare mention that bastard to me!' The pure rage in those words is accompanied by a violent shredding of Chase's basketball shorts, leaving the poor feline completely naked and the act makes you want to create even more distance between yourself and the large apex predator, but after a few moments of dead silence the creature finally speaks, 'Ya'know Alex, this is a perfect moment of reflection don't you think? You mentioned going back and changing how things turned out, but the truth is that life just doesn't work that way does it? In the real world there are actions and reactions and at the end of the day you have to accept responsibility for your choices, only children think they can do what they want without consequences... time to grow up peter pan.'";
 	say "     With those final words the tigertaur leans in closer to the terrified anthro's face and forces its long tongue into the struggling beastman's mouth. At first nothing seems to happen, well other than Chase struggling to escape Kage's grip. Then you see it, the anthro's backside seems to being growing larger and takes on the shape of a huge hump. You aren't sure exactly what the nanites are attempting to do to the beastman at first, at least until you see an extra pair of legs slowly begin to push their way out of Chase's still growing butt. That's not the only change though, your eyes darting between the feline's emerging breasts and its sheath being stretched backwards in a mimicry of Kage's.";
 	WaitLineBreak;
 	say "     The transformation happens so fast, eventually you are looking at two tigertaurs. One seemingly proud of itself, while the others eyes are filled with despair. 'There you go Alex, now you have paid for your crimes, but I wonder, will your little bitch friends welcome you back with open arms? Or view you as simply another enemy because of your form? I happen to know for a fact that that arrogant bastard at least will cut you down without a second thought.' A bit of that rage you saw before begins to resurface, but Kage simply shakes its head and continues speaking, 'I suppose I could take you with me, I mean I'm not a heartless monster after all, would you like that kitten?' Chase simply looks at the ground and nods in agreement, although it does look as if their are tears in the freshly made taur's eyes.";
@@ -499,14 +506,15 @@ to say TigerVSTaur_Watched:
 to say TigerVSTaur_Ran:
 	say "     With one final look back at the battling felines you internally say thank you for the save and quickly turn away from the carnage. Running as fast as your legs will allow, the last sound that can be heard as you get away is a loud thunderous roar of victory. But at least you escaped the chaos unscathed.";
 
-Section 3 - Companion Moments
+Chapter 3 - Companion Moments
+
 [This section will cover companion comment and action inserts]
 
-Part 1 - First Intro Moment
+Section 1 - First Intro Moment
 
 to say TigerVSTaur_Intro_Companion_01: [Reacting to the sounds of a fight]
 	if bee girl is listed in companionList of player: [Honey]
-		say "     Honey looks around the area with a scared look on her face, 'Umm, like maybe we should just get out of here! I mean whatever is making  those sounds definitely isn't friendly!' Reaching over, you slowly rub small circles around the frightened bee girl's back, being careful to avoid her wings, you're rewarded with a sweet smile from your small friend.";
+		say "     Honey looks around the area with a scared look on her face, 'Umm, like maybe we should just get out of here! I mean whatever is making those sounds definitely isn't friendly!' Reaching over, you slowly rub small circles around the frightened bee girl's back, being careful to avoid her wings, you're rewarded with a sweet smile from your small friend.";
 	if gshep is listed in companionList of player and gsd_pet >= 60 and Trucker Bar is not resolved: [Korvin] [confident, past quest not done]
 		say "     Korvin scans the area with furrowed brows, 'Sounds like a fight is going on nearby, maybe we should check it out! You know I'm always down for a little rumble and who knows, maybe we will get to have some fun after, haha!' Rolling your eyes at the German shepherd's one track mind, you can't help but join in his soft laughter.";
 	if demon brute is listed in companionList of player and DBCaptureQuestVar is 5: [Brutus] [controlled, not cleansed]
@@ -516,7 +524,7 @@ to say TigerVSTaur_Intro_Companion_01: [Reacting to the sounds of a fight]
 	if orc supersized breeder is listed in companionList of Player and PlayerFriended of Urik is true and (Loyalty of Urik < 9 or "Everything Goes" is listed in Traits of Urik or "Stud" is listed in Traits of Urik): [Urik]
 		say "     Urik raises a single eyebrow in your direction, before pointing back towards the sound you heard a moment ago, a huge tusked smile on his face 'Sounds like we're missing the party boss, why don't we go and show whoever is out there how the big boys play!' You a chuckle a bit at his comment and ask the orc exactly how do [']the big boys play[']. His face transforms into a menacing grin, 'Rough!' A large smile on your own face, you raise a fist for the large orc to bump in reply.";
 
-Part 2 - Second Intro Moment
+Section 2 - Second Intro Moment
 
 to say TigerVSTaur_Intro_Companion_02: [Reacting to the sight of the two felines]
 	if bee girl is listed in companionList of player: [Honey]
@@ -530,7 +538,8 @@ to say TigerVSTaur_Intro_Companion_02: [Reacting to the sight of the two felines
 	if orc supersized breeder is listed in companionList of Player and PlayerFriended of Urik is true and (Loyalty of Urik < 9 or "Everything Goes" is listed in Traits of Urik or "Stud" is listed in Traits of Urik): [Urik]
 		say "     A deep chuckle comes from your right, looking over you see Urik with hunger in eyes as he takes in the male tiger, 'Hey boss, that guy over there, tell me he isn't built like he was born to be a breeder! Can you imagine just grabbing him and stuffing him full of as much cock as possible? I bet he would make a great breeder, just the though of him swelling with orclings has me hard as a rock, heh!' Looking over at the male tiger, you can see what Urik is talking about, he's definitely built by orc standards to be a birther, and the image that he would make with a round tummy is a pleasant one to be sure.";
 
-Part 3 - First Help Chase Moment
+Section 3 - First Help Chase Moment
+
 [This will add the memories for the branching paths]
 
 to say TigerVSTaur_Help_Chase_Companion_01: [Fighting the tigertaur]
@@ -550,7 +559,7 @@ to say TigerVSTaur_Help_Chase_Companion_01: [Fighting the tigertaur]
 		say "     A firm hand comes down on your shoulder and looking over you see the tusked smile of Urik looking down at you, 'Mind if we switch out dance partners for a bit?' Smiling back at the huge orc, you sweep your hand out offering him the switch he desired. Rolling his eyes, the only response he gives is a sarcastic, 'Cute.' Smashing his fists together, Urik lumbers over towards the tigertaur. The big cat doesn't seem very impressed, but still amused. Without waiting for the orc to take on his fighting stance lashes out, grabbing both of Urik's nipples and applying a rough titty twister to each. The orc groans from treatment and the taur decides to mock the green man, 'You're a warrior? You look more like an overgrown muscle slut to me, haha!' Urik simply smiles back, 'Well actually I'm both. Ya see, I can deal a pimp slap with the best of [']em.' The backhand across the creatures face comes lighting fast from the right, 'But I can also dish out a pretty decent hoe punch as well!' The bone breaking punch coming from the left and the taur looking dazed, releases the orcs nipples and Urik saunters back over, 'It's always pathetic when people think they know all about ya just from your looks, haha!'";
 		add "Tiger_VS_Taur_Help_Chase" to Traits of Urik;
 
-Part 4 - Second Help Chase Moment
+Section 4 - Second Help Chase Moment
 
 to say TigerVSTaur_Help_Chase_Companion_02: [Meeting Chase]
 	if bee girl is listed in companionList of player: [Honey]
@@ -564,7 +573,7 @@ to say TigerVSTaur_Help_Chase_Companion_02: [Meeting Chase]
 	if orc supersized breeder is listed in companionList of Player and PlayerFriended of Urik is true and (Loyalty of Urik < 9 or "Everything Goes" is listed in Traits of Urik or "Stud" is listed in Traits of Urik): [Urik]
 		say "     Urik quick to go over to Alex and introduce himself, the whole time attempting to impress the tiger with light flexing of his muscles, 'Hey bro, the names Urik! So what's a pretty boy like you doing all out here on your lonesome?' Alex is caught off-guard by the blatant flirting and coughs a bit into his fist as he tries to stifle his uncomfortable laughter, 'Oh, ah just trying to survive ya'know.' Sadly Urik doesn't take the hint and continues on, 'Surviving huh? Shouldn't a cutie like you have some sort of big strong dude to protect ya?' The wink he sends Alex's way is met with a snort, 'Actually I can take care of myself, thanks for the thought though [']bro['].' The orc returns to your side looking slightly annoyed, but you lean over and tell him that you can't catch them all, his only response is, 'You can with a big enough net!'";
 
-Part 5 - Third Help Chase Moment
+Section 5 - Third Help Chase Moment
 
 to say TigerVSTaur_Help_Chase_Companion_03: [Hiding]
 	if bee girl is listed in companionList of player: [Honey]
@@ -578,7 +587,7 @@ to say TigerVSTaur_Help_Chase_Companion_03: [Hiding]
 	if orc supersized breeder is listed in companionList of Player and PlayerFriended of Urik is true and (Loyalty of Urik < 9 or "Everything Goes" is listed in Traits of Urik or "Stud" is listed in Traits of Urik): [Urik]
 		say "     Looking around and not seeing any place big enough to hide him, Urik mutters a quiet, 'I'm too fucking big to just casually hide!' Thankfully he finds a bench that he can fit under, and with his green skin almost matching the long grass, it's actually hard to see him.";
 
-Part 6 - Fourth Help Chase Moment
+Section 6 - Fourth Help Chase Moment
 
 to say TigerVSTaur_Help_Chase_Companion_04: [Reflecting on the psycho attack]
 	if bee girl is listed in companionList of player: [Honey]
@@ -592,7 +601,7 @@ to say TigerVSTaur_Help_Chase_Companion_04: [Reflecting on the psycho attack]
 	if orc supersized breeder is listed in companionList of Player and PlayerFriended of Urik is true and (Loyalty of Urik < 9 or "Everything Goes" is listed in Traits of Urik or "Stud" is listed in Traits of Urik): [Urik]
 		say "     You see the bench that Urik hid himself under begin to shake a bit, and walk over to see what the problem is. Crouching down, you are met with a very embarrassed orc's face, 'Not a word... this fucking thing is way too small for my muscles!' Reaching underneath you begin to help Urik jostle himself free, eventually he stands by side, no worse for ware, well except maybe his pride. You ask him if he's alright now, 'Yeah I'm just peachy.' The orc goes silent for a bit and his face shows that he's concentrating, 'Hey boss? That guy was pretty fucked up right?' You nod in agreement, but then ask Urik isn't that how the orcs usually work as well, 'Well yeah, but I mean we're fun! That guy was just plain creepy as fuck, I mean you heard his voice, there is definitely some screws loose in that skull of his!' You can't help but agree with Urik about the creepy part, but you're not sure if being fun is a good enough excuse to kidnap men...";
 
-Part 7 - Fifth Help Chase Moment
+Section 7 - Fifth Help Chase Moment
 
 to say TigerVSTaur_Help_Chase_Companion_05: [Reaction to Kano's growling]
 	if bee girl is listed in companionList of player: [Honey]
@@ -606,7 +615,7 @@ to say TigerVSTaur_Help_Chase_Companion_05: [Reaction to Kano's growling]
 	if orc supersized breeder is listed in companionList of Player and PlayerFriended of Urik is true and (Loyalty of Urik < 9 or "Everything Goes" is listed in Traits of Urik or "Stud" is listed in Traits of Urik): [Urik]
 		say "     Urik sends a bored look in your direction, 'If it growls first, chances are it isn't badass enough to do an outright attack.'";
 
-Part 8 - Sixth Help Chase Moment
+Section 8 - Sixth Help Chase Moment
 
 to say TigerVSTaur_Help_Chase_Companion_06: [Kano interaction]
 	if bee girl is listed in companionList of player: [Honey]
@@ -620,7 +629,7 @@ to say TigerVSTaur_Help_Chase_Companion_06: [Kano interaction]
 	if orc supersized breeder is listed in companionList of Player and PlayerFriended of Urik is true and (Loyalty of Urik < 9 or "Everything Goes" is listed in Traits of Urik or "Stud" is listed in Traits of Urik): [Urik]
 		say "     Urik spreads his arms open, 'Alright kitty man, go ahead and check me out!' The large tiger chuckles at the orc's eagerness, 'You have a very strong form, was this always the case?' The green skinned man just laughs at comment before responding, 'Well I was always a pretty big dude, but after becoming an orc well... [']everything['] got bigger!' You can tell that while Urik is answering Kano's questions, he's also going into his flirty mode. The feline must not mind it, or at the very least isn't bothered by it, 'Hmm, interesting, well if you end up becoming a regular visitor of the Tiger's Den, you should join me in some training. We would need to find a weapon that works with your form, but I think it would be a fun challenge to teach you in the way of kobudo.' The orc looks a bit confused by the tiger's offer, 'Kobudo? What the hell's that?' Kano simply chuckles at Urik's question, 'Later, right now I just need finish checking you, but like I said something to think of in the future.' With those final words Kano stops talking and finishes up his exam.";
 
-Part 9 - Seventh Help Chase Moment
+Section 9 - Seventh Help Chase Moment
 
 to say TigerVSTaur_Help_Chase_Companion_07: [Reactions to the Tiger's Den]
 	if bee girl is listed in companionList of player: [Honey]
@@ -634,7 +643,7 @@ to say TigerVSTaur_Help_Chase_Companion_07: [Reactions to the Tiger's Den]
 	if orc supersized breeder is listed in companionList of Player and PlayerFriended of Urik is true and (Loyalty of Urik < 9 or "Everything Goes" is listed in Traits of Urik or "Stud" is listed in Traits of Urik): [Urik]
 		say "     Urik has a small smile on his lips, 'Almost reminds of the lair, well with a lot less fucking going on, but still.' Chase actually laughs at the orc's comment, 'Oh trust me, people are definitely fucking. We just tend to like a bit of privacy when we have our fun.' The triumphant look in Urik's eyes tell you that he just got what he aiming for, 'So pretty boy, how often are you bustin['] your nut around here?' It still shocks you that somehow even with the fur you're able to tell when someone is blushing, and if Chase were still human, he would probably be the color of a tomato, 'That is none of your business big guy!' The way that the tiger keeps glancing in your direction afterwards leads to the large orc openly laughing as if he knows something that you don't.";
 
-Part 10 - Eighth Help Chase Moment
+Section 10 - Eighth Help Chase Moment
 
 to say TigerVSTaur_Help_Chase_Companion_08: [Reaction to Mateo]
 	if bee girl is listed in companionList of player: [Honey]
@@ -648,7 +657,7 @@ to say TigerVSTaur_Help_Chase_Companion_08: [Reaction to Mateo]
 	if orc supersized breeder is listed in companionList of Player and PlayerFriended of Urik is true and (Loyalty of Urik < 9 or "Everything Goes" is listed in Traits of Urik or "Stud" is listed in Traits of Urik): [Urik]
 		say "     Urik inserts himself between you and the tiger, 'Look boy, [SubjectPro of player] doesn't need some kid tryin['] to dry hump em['], so just keep it in your pants got it?' Mateo ignores the orc and simply steps to the side to meet your eyes, 'I didn't know that you brought your papi with ya, but I would [']love['] to continue talking with you in private when he's not around.' The following wink is a nice touch, but Urik is hardly impressed, 'Now you listen to me you little bitch, I ain't [PosAdj of player] [']papi[']! You may be a hot piece of ass, but I'm watching you...' The tiger openly laughs at this, 'Wow, never had someone threaten me and yet still be thirsty for me at the same time before! I hate to break it to ya man, but I'm just not really into papis, but thanks for the compliment.' You actually have to physically hold Urik back at this point, as he's showing signs of wanting to beat down the punk tiger that just called him a papi again.";
 
-Part 11 - Ninth Help Chase Moment
+Section 11 - Ninth Help Chase Moment
 
 to say TigerVSTaur_Help_Chase_Companion_09: [Reaction to Kimani, Ginger, and the ending]
 	if bee girl is listed in companionList of player: [Honey]
@@ -662,7 +671,8 @@ to say TigerVSTaur_Help_Chase_Companion_09: [Reaction to Kimani, Ginger, and the
 	if orc supersized breeder is listed in companionList of Player and PlayerFriended of Urik is true and (Loyalty of Urik < 9 or "Everything Goes" is listed in Traits of Urik or "Stud" is listed in Traits of Urik): [Urik]
 		say "     Urik is the first to speak up about this experience, 'I actually liked Chase and Kano, that kid Mateo though... he needs his ass kicked!' Hearing how mad the orc still is about concerning the punk tiger, you instead ask him about the girls, 'Uhh, well their bitchy, enough said.' Rolling your eyes at his expected comment, you then decide to ask about the Tiger's Den, 'Pretty nice, plus those tiger guys are hot, maybe we should look into recruiting a few for breeders, haha!'";
 
-Part 5 - First Help Kage Moment
+Section 12 - First Help Kage Moment
+
 [This will add the memories for the branching paths]
 
 [to say TigerVSTaur_Help_Kage_Companion_01:
@@ -682,7 +692,8 @@ Part 5 - First Help Kage Moment
 		say "     ";
 		add "Tiger_VS_Taur_Help_Kage" to Traits of Urik;]
 
-Part 6 - First Watch Moment
+Section 13 - First Watch Moment
+
 [This will add the memories for the branching paths]
 
 [to say TigerVSTaur_Watch_Companion_01:
@@ -702,7 +713,8 @@ Part 6 - First Watch Moment
 		say "     ";
 		add "Tiger_VS_Taur_Watch" to Traits of Urik;]
 
-Part 7 - Run Moment
+Section 14 - Run Moment
+
 [This will add the memories for the branching paths]
 
 [to say TigerVSTaur_Run_Companion:
@@ -723,6 +735,7 @@ Part 7 - Run Moment
 		add "Tiger_VS_Taur_Run" to Traits of Urik;]
 
 Book 5 - Companion Events
+
 [
 Section 1 - Honey
 [TODO I want this to be something that will trigger when you enter the tigers den with honey as your active companion]
@@ -781,6 +794,7 @@ else if demon brute is listed in companionList of Player: [Brutus's assessment]
 ]
 
 Book 6 - Tiger Den Dungeon
+
 [right now this is just a working title for the area, but the "dungeon" will be able to accessed through one of the closed off ventilation shafts. The point of the dungeon will be to gain new items that will be required for helping out the Tiger's Den(wood, metal, water, ect), as well as introducing a new NPC that will be far more "feral" than the normal tigers in the den and the player will have to decide on their fate.]
 
 [Well I finally planned things out for the dungeon and sadly the only canine that would fit would be some sort of hybrid. See there is gonna be a part of the zoo that was sectioned off for an aquarium being added to the zoo (zoo meets sea world). This will also tie into you getting the water filtration system working in the zoo again (chase showering and so on lol).]

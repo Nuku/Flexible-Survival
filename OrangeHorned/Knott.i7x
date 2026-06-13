@@ -56,93 +56,60 @@ instead of conversing Knott:
 	say "[KnottTalkMenu]";
 
 to say KnottTalkMenu:
-	LineBreak; [important. Separates the start from the question and available answers!]
-	say "Knott sees you sizing him up, 'Yes? What is it?' "; [This is what will show as the question the player must answer.]
-	now sextablerun is 0; [Tells the game to start the menu up.]
-	blank out the whole of table of fucking options; [Removes old menu options from OTHER menus. Always need this line.]
-	[] [These blank brackets help separate the options and are important to prevent a wall of text.]
-	choose a blank row in table of fucking options; [Tells the game this is an option.]
-	now title entry is "Himself"; [Tells the game the name of the option.]
-	now sortorder entry is 1; [The order in which options appear. NEVER make two options the same number!]
-	now description entry is "Try to learn a bit about Knott's time before being a Firbolg"; [Further description to tell the player what this choice entails.]
-	[]
-	choose a blank row in table of fucking options;
-	now title entry is "Current Form";
-	now sortorder entry is 2;
-	now description entry is "How has Life been after being transformed?";
-	[]
-	if HP of GivingFirbolg is 2:  [This line adds the quest option only if HP is 2]
-		choose a blank row in table of fucking options;
-		now title entry is "Missing items";
-		now sortorder entry is 3;
-		now description entry is "Ask Knott about what items might be at his old stomping grounds.";
-	[]
-	if HP of Knott is 2: [Player has the book]
-		choose a blank row in table of fucking options;
-		now title entry is "Give Knott the book";
-		now sortorder entry is 4;
-		now description entry is "Give Knott the book he asked for.";
-	[]
-	repeat with y running from 1 to number of filled rows in table of fucking options:
-		choose row y from the table of fucking options;
-		say "[link][y] - [title entry][as][y][end link][line break]";
-	say "[link]0 - Nevermind[as]0[end link][line break]";
-	while sextablerun is 0:
-		say "Pick the corresponding number> [run paragraph on]";
-		get a number;
-		if calcnumber > 0 and calcnumber <= the number of filled rows in table of fucking options:
-			now current menu selection is calcnumber;
-			choose row calcnumber in table of fucking options;
-			say "[title entry]: [description entry]?";
-			if Player consents:
-				let nam be title entry;
-				now sextablerun is 1; [Tells the game you made your choice and to show the corresponding scene.]
-				if (nam is "Himself"): [The text in quotations MUST match the text in "title entry". Case sensitive.]
-					say "[KnottTalk1]"; [Points to a scene.]
-				if (nam is "Current Form"):
-					say "[KnottTalk2]";
-				if (nam is "Missing items"):
-					say "[KnottTalk3]";
-				if (nam is "Give Knott the book"):
-					say "[KnottTalk4]";
-				wait for any key;
-		else if calcnumber is 0: [Plays if the player says nevermind.]
-			now sextablerun is 1;
-			say "     You step back from Knott, who looks at you a little funny. 'OK, never mind, I guess?' he questions."; [The text for if you say "nevermind" instead of picking an option. Can be detailed if you want!]
-			wait for any key;
-		else:
-			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
-	clear the screen and hyperlink list; [Removes the menu from the screen.]
-
-to say KnottTalk1: [The actual scene the talk menu points to!]
-	say "     The former older man seems to confusingly look at you, he carefully knits to himself with his satchel next to him- all while he keeps another eye on Giving. 'I'll keep it brief, honestly I've always been a man who would rather speak with his actions or grand speech than very basic small talk, Giving told me my new nickname Knott considering I was once a marriage priest, but I had... other urges that I had to attend to. Was visiting this place for a funeral when the whole... what did those young ones call it, the 'furry apocalypse' happened'.";
-	say "     With a palm through his new hair, he continued, 'Part of me was always interested in what was causing all those people to go insane, now I get it, this fresh feeling of old vitality coming back to me, no back pain, I feel great, like the man I was almost 50 years ago- and I know this time it ain't my brain failing me!'";
-
-to say KnottTalk2:
-	say "     'Mostly probably doing what God possibly intended me to do, these people here need guidance, someone to talk to about all that ails them, they welcomed me with open arms, so they should only expect any who have walked the path of righteousness to help them out.' You ask a side question on what caused them to give up the priest's life, Knott's face lightens up as he tries to hide his humane impulse, 'I do not wish to speak of it, especially not right now in this given time, I just.... It comes with its own baggage you see? When I get more comfortable here maybe ill be in the mood for such gab.'";
-
-to say KnottTalk3:
-	say "     You ask him about he stuff he possibly left back at where he called safe haven before becoming a Firbolg, 'You would do that for a old man like me? I mean...' He gives you a look before pausing a bit... finally pursing his lips before continuing, 'This wont be a easy journey, there's something we were trying to run from there, some people in this... city... have given into the most rabid of hedonisms. I doubt any you saw running with me went back there after the infected ferals routed us, but if you do go back... I had a book there that I was reading... if you could grab it for me, I would be forever in your debt.'";
-
-to say KnottTalk4:
-	say "     you pull out the book you found from the High Rise District 'This book ... .I left it in one of the last places I went when I was still human. I have no clue what process you might have been through to get this, but I thank you.'";
-	say "     You give him the details on what happened when you went to grab the book, about Travis and his little band of lunatics.";
-	say "     'I sadly do not know anything about this Travis you speak of, but the kid sounds familiar, him and his mom weren't bad company... Do not blame yourself wholly for not being able to do anything for them. You went into this to help me out and I thank you deeply. That's what worries me the most of just opening myself up to such things. These thoughts within my head yearn for me to spread my lusts onto the wind.'";
-	say "     He takes a deep pause, realizing another certain Firbolg was peeking behind a tree at your conversation, 'Giving asked you to do this for me, that much I know. The way this camp is set up makes me wish to push these lustful desires into something more constructive. So if you wish, I can try getting to know you a little more personally through the rubbing of skin.'";
-	say "     Wow, that was easier than expected";
-	WaitLineBreak;
-	say "     'I wasn't just being prudish, more trying to isolate myself from others, but with how abrasive Giving can be, I can tell he is just trying deeply to help out even if he needs to let people come to their own conclusions. He warned me about needing to partake in the 'sermons' they have to placate our passions together, but I for one can not stand the idea of such a pagan ritual, but if I come at it with the mindset of lowering the chances of doing these... horrid actions the intrusive thoughts would drag me to do, then I can bare it. Sangre seems to be someone who has much on his hands anyway to be the odd nail out in this new group.'";
-	say "     Happily, he puts the book neatly under his robe's belt, something about his expression grew softer.";
-	say "     'Now Giving, come out.'";
-	say "     'Wha- was it obvious?'";
-	say "     'Your build is not one meant for lurking, but I will be joining you more now, next time though don't send people to do work that both of us could do together my child.'";
-	say "     Giving's chuckle of embarrassment restores a bit of hope you have in this apocalypse, you hope things get better for the commune.";
+	say "     Knott sees you sizing him up, 'Yes? What is it?'";
+	LineBreak;
+	say "     [italic type]What do you ask him about?[roman type]";
+	LineBreak;
+	let Knotty_stuff__Choices be a list of text;
+	add "Himself." to Knotty_stuff__Choices;
+	add "Current Form." to Knotty_stuff__Choices;
+	if HP of GivingFirbolg is 2:
+		add "Missing items." to Knotty_stuff__Choices;
+	if HP of Knott is 2:
+		add "Give Knott the book." to Knotty_stuff__Choices;
+	if HP of Knott is 2:
+		add "Ask about the book." to Knotty_stuff__Choices;
+	if HP of Knott is 2:
+		add "How does he know Giving?" to Knotty_stuff__Choices;
+	if HP of Knott is 2:
+		add "What now?" to Knotty_stuff__Choices;
+	if HP of Knott is 3:
+		add "You were married?" to Knotty_stuff__Choices;
+	let Knotty_stuff__Choice be what the player chooses from Knotty_stuff__Choices;
+	if Knotty_stuff__Choice is:
+		-- "Himself.":
+			LineBreak;
+			say "     The former older man seems to confusingly look at you, he carefully knits to himself with his satchel next to him- all while he keeps another eye on Giving. 'I'll keep it brief, honestly I've always been a man who would rather speak with his actions or grand speech than very basic small talk, Giving told me my new nickname Knott considering I was once officiated weddings, but I had... other urges that I had to attend to. Was visiting this place for a funeral when the whole... what did those young ones call it, the 'furry apocalypse' happened'.";
+			say "     With a palm through his new hair, he continued, 'Part of me was always interested in what was causing all those people to go insane, now I get it, this fresh feeling of old vitality coming back to me, no back pain, I feel great, like the man I was almost 50 years ago- and I know this time it ain't my brain failing me!'";
+		-- "Current Form.":
+			LineBreak;
+			say "     'Mostly probably doing what a higher power possibly intended me to do, these people here need guidance, someone to talk to about all that ails them, they welcomed me with open arms, so they should only expect any who have walked the path of righteousness to help them out.' You ask a side question on what caused them to give up the priest's life, Knott's face lightens up as he tries to hide his humane impulse, 'I do not wish to speak of it, especially not right now in this given time, I just.... It comes with its own baggage you see? When I get more comfortable here maybe ill be in the mood for such gab.'";
+		-- "Missing items.":
+			LineBreak;
+			say "     You ask him about the stuff he possibly left back at where he called safe haven before becoming a Firbolg, 'You would do that for an old man like me? I mean...' He gives you a look before pausing a bit... finally pursing his lips before continuing, 'This won't be an easy journey, there's something we were trying to run from there, some people in this... city... have given into the most rabid forms of hedonism. I doubt any you saw running with me went back there after the infected ferals routed us, but if you do go back... I had a book there that I was reading... if you could grab it for me, I would be forever in your debt.'";
+		-- "Give Knott the book.":
+			LineBreak;
+			say "     You pull out the book you found from the High Rise District 'This book ... .I left it in one of the last places I went when I was still human. I have no clue what process you might have been through to get this, but I thank you. Nodding, you give him the details on what happened when you went to grab the book, about Travis and his little band of lunatics.'I sadly do not know anything about this Travis you speak of, but the kid sounds familiar, him and his mom weren't bad company... Do not blame yourself wholly for not being able to do anything for them. You went into this to help me out and I thank you deeply. That's what worries me the most of just opening myself up to such things. These thoughts within my head yearn for me to spread my lusts onto the wind.' He takes a deep pause, realizing another certain Firbolg was peeking behind a tree at your conversation, 'Giving asked you to do this for me, that much I know. The way this camp is set up makes me wish to push these lustful desires into something more constructive. So if you wish, I can try getting to know you a little more personally through the rubbing of skin. Wow, that was easier than expected.";
+			say "     'I wasn't just being prudish, more trying to isolate myself from others, but with how abrasive Giving can be, I can tell he is just trying deeply to help out even if he needs to let people come to their own conclusions. He warned me about needing to partake in the 'sermons' they have to placate our passions together, but I for one can not stand the idea of such a pagan ritual, but if I come at it with the mindset of lowering the chances of doing these... horrid actions the intrusive thoughts would drag me to do, then I can bare it. Sangre seems to be someone who has much on his hands anyway to be the odd nail out in this new group.' Happily, he puts the book neatly under his robe's belt, something about his expression grew softer. 'Now Giving, come out.' Knott grumbles like an exasperated parent. 'Wha- was it obvious?' The cheeky firbolg mutters as stumble out his less-then-cleaver hiding spot on the edges of the snowy trail. 'Your build is not one meant for lurking, but I will be joining you more now, next time though don't send people to do work that both of us could do together my child.' Giving's chuckle of embarrassment restores a bit of hope you have in this apocalypse, you hope things get better for the commune.";
+		-- "Ask about the book.":
+			LineBreak;
+			say "     You ask Knott about the book you nearly risked you life to retrieve, 'Oh yes, I should apologize again, for I didn't realize any of them would still be there.' Knott spoke softly as his fingers went to slide at the bridge of the book. [']A Sinner among Angels['], A book about someone with a similar life story as mine. Someone who spent a long time of their life lost, only their ending was one where they confessed to their wife their feelings of men. I cannot imagine such a unity strong enough to make a memoir as... powerful as this' He eyes light up, ears shivering with the very last words he spoke. He continues monologuing with, 'I just remember having something in my past where I wish I spoke up, told someone I loved them, held them instead of pushing them away. But time always marches on, life is... fragile' You could feel the wave of sadness wash over him, 'Forgive me, lets change the subject, is there anything else you wish to speak of?'";
+		-- "How does he know Giving?":
+			LineBreak;
+			say "     'Oh in fact I did, well, not in a way you would imagine' Knott scratches behind his floppy ear, looking away as his jovial tone becomes serious. 'I was going to kill myself, I had a yacht and paid for his services to give private lessons I... I was going to use him as means of marking my death as a freak accident, but one moment I was drowning underwater, the next I was on the shore.' Knott pauses, his eyes growing a grey milky white as stares past you towards the sea, 'Jacques, or Giving as you know him, talked with me, I don't wish to repeat a lot of it, but he made me want to live again. Part of me came back here to see him again, among other things.' Bobbing your head sagaciously, you offer some token words of compassion to the older man.' After all, even the golden state for all its talk of love or tolerance has its flaws, why only a few scant decades such admission could see Knott locked up in a padded room with no way out. Or chased out of many of the more conservative religious circles, despite it all, a part of you is just glad he feels comfortable enough to talk to you about this. Perhaps sense, Knott's cracks a disarming smile, saying. 'Uh sorry about that, I realize that may have been a lot to take in at once, please forgive me,' making a contentious bow. Brushing his gesture aside, you reassure him that it's alright, everyone has their burden to bear and there's no shame in venting.";
+			now HP of Knott is 3;
+		-- "What now?":
+			LineBreak;
+			say "     Help with the camp duties, use my story to aid anyone who's lost in this world, be a guiding light in the darkness, it's not like leaving here would *fix* me.' Knott sighs looking at his arms. 'Giving after all doesn't want to leave, so fleeing the city without him isn't something I'm prepared to do. Though I admit there are times I wonder if it's nanites making me think this, or something?' He grumbles, shaking his head. 'Perhaps it's bit of both, I can't really say anymore.";
+		-- "You were married?":
+			LineBreak;
+			say "     'Yes, I had kids too.' Curious, you ask a side question if his wife knew about him being in the closet. 'Maybe, never cheated on her, but I cried to her one day, told her how I felt and I was shocked how accepting she was. Still it's hard to shake a lifetime of dogma, even if I told her about them and kept it safe, it felt like I was sinning.' Knott chuckles, 'But there's a reason why we still talk even after breaking it off, I'd never trade a moment of raising kids with her for anything in this world.";
 
 instead of fucking Knott:	[Same as conversing, but works when the player says "Fuck Knott" in Knott's presence.]
 	if (lastfuck of Knott - turns < 6):
 		say "     'The body of mine even still needs breaks, should we have a little coffee or chat first?'";
 	else if HP of Knott < 1 or Elusive Book is not resolved:
-		say "     'I am not in the mood for that right now, I have other things on my mind.' Knott isnt going to budge until you resolve the Elusive Book quest, try checking the High Rise District.";
+		say "     'I am not in the mood for that right now, I have other things on my mind.' Knott isn't going to budge until you resolve the Elusive Book quest, try checking the High Rise District.";
 	else:
 		say "[KnottSexMenu]";
 

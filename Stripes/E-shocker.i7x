@@ -5,6 +5,11 @@ Version 2 of E-shocker by Stripes begins here.
 
 Section 1 - Encounter
 
+Electricprodstatus is a number that varies.
+eptarget is a number that varies.			[hidden number of viable charges]
+eprecharge is a number that varies.			[number of times it's been recharged]
+eprodused is a truth state that varies.		[indicates whether it's been used in a fight yet or not]
+
 Table of GameEventIDs (continued)
 Object	Name
 Electric Shockers	"Electric shockers"
@@ -14,12 +19,6 @@ Electric Shockers is a situation.
 ResolveFunction of Electric Shockers is "[ResolveEvent Electric Shockers]". The level of Electric Shockers is 10.
 [This is to restrict low-level players from unknowingly finding the superweapon.]
 Sarea of Electric Shockers is "Zoo".
-
-Electricprodstatus is a number that varies.
-eptarget is a number that varies.			[hidden number of viable charges]
-eprecharge is a number that varies.			[number of times it's been recharged]
-eprodused is a truth state that varies.		[indicates whether it's been used in a fight yet or not]
-
 
 to say ResolveEvent Electric Shockers:
 	if Electricprodstatus is 0:
@@ -32,7 +31,7 @@ to say ResolveEvent Electric Shockers:
 		now Electricprodstatus is 2;
 	else if Electricprodstatus is 2:
 		say "     You find the shack where you managed to salvage your slightly damaged electric weapon from again, and take a quick look around inside. But just like before, all you can find are spare batteries, and a number of heavily damaged electric sticks that are about as useful now as a regular stick would be. Sighing, you continue on your way.";
-	else if Electricprodstatus is 3 and carried of electric prod > 0:
+	else if carried of electric prod > 0:
 		now electric prod is fast;
 		increase eprecharge by 1;
 		say "     Finding the shack your electric weapon originally came from, you decide to see if there is anything left inside that might let you repair the nifty weapon. Glancing around, you swap the spent battery out and put it back on the charger, and begin hunting through the remains of the other electric prods. You are eventually able to cannibalize one of them in order to replace the burnt out parts in your own, but it takes a decent amount of time to perform the jury-rigged repair. At the end of it, you once more have a semi-functional electric prod[if eprecharge is 1], and while you aren't sure how much longer it can last, you are at least pretty sure that you can return here and fix it again should that happen[else if eprecharge is 2], but sadly doubt you'll be able to repair it again from the few meager parts and batteries remaining[else], and while it could fritz out on you at any moment, you are hopefully that you can return here and fix it again if you need to[end if].";
@@ -40,33 +39,24 @@ to say ResolveEvent Electric Shockers:
 		if eprecharge >= 2:
 			now Electric Shockers is resolved;
 		now Electricprodstatus is 2;
-	else if Electricprodstatus is 3:
+	else:
 		say "     Finding the shack where you'd gotten your electric weapon originally, you are reminded that you might be able to fix it with some of the parts from the other broken ones. Hopefully you still remember where you left it so you can get it and bring it back here.";
-
 
 Table of Game Objects (continued)
 name	desc	weight	object
-"electric prod"	"[electproddesc]"	5	 electric prod
-
-to say electproddesc:
-	if Electricprodstatus is 2:
-		say "A powerful electric tool designed to shock and incapacitate wild animals. It should work on the beasts around the city as well. Given how long it takes to charge up after each use, you'll only be able to use it once per fight.";
-	else:
-		say "While a powerful electric tool designed to shock and incapacitate wild animals, it is unfortunately burned out and unusable, though it may still be repaired with some replacement parts.";
+"electric prod"	"[if Electricprodstatus is 2]A powerful electric tool designed to shock and incapacitate wild animals. It should work on the beasts around the city as well. Given how long it takes to charge up after each use, you'll only be able to use it once per fight[else]While a powerful electric tool designed to shock and incapacitate wild animals, it is unfortunately burned out and unusable, though it may still be repaired with some replacement parts[end if]."	5	 electric prod
 
 electric prod is a grab object. It is fast. It is not temporary. Usedesc of electric prod is "[useelectricprod]".
-
+the scent of the electric prod is "The electric stun rod smells faintly of ozone.".
 [It has a weapon "[one of]shocking stick[or]your electric prod[at random]". Weapon Damage of electric prod is 22. Weapon Type of electric prod is "Melee". It is not temporary. Objsize of electric prod is 2.]
 
-the scent of the electric prod is "The electric stun rod smells faintly of ozone.".
-
 to say useelectricprod:
-	now battleitem is 1; [combat item chosen - retaliate to be handled internally]
 	if inafight is 1:
 		if eprodused is true:
 			say "You've already successfully used the prod once this battle. It needs time to cool down and recharge the capacitors.";
-			wait for any key;
+			AttemptToWait;
 		else:
+			now battleitem is 1; [combat item chosen - retaliate to be handled internally]
 			choose row MonsterID from the Table of Random Critters;
 			let the attack bonus be dexterity of Player + ( level of Player * 2 ) + plhitbonus + scale entry - 10;
 			let the defense bonus be dex entry + ( lev entry * 2 ) + mondodgebonus - 10;
@@ -82,18 +72,17 @@ to say useelectricprod:
 				else if the combat bonus < -22:
 					now combat bonus is -22;
 			let the roll be a random number from 1 to 50;
-			say "[line break]You roll 1d50([roll])+[combat bonus] -- [roll plus combat bonus]: ";
+			say "[line break]You roll 1d50([roll])[if combat bonus >= 0]+[end if][combat bonus] = [roll plus combat bonus]: ";
 			if the roll plus the combat bonus > 40:
 				decrease eptarget by 1;
-				say "Direct hit: You charge up the [one of]stun rod[or]electric prod[or]cattle prod[or]shock stick[or]electric shocker[at random] and thrust squarely at the [Name entry]. Getting a solid hit, the electricity courses through it and makes it stagger back, severely weakening it. Ozone hangs in the air and your electric shocker [if eptarget is 0]sputters and sparks, burning out with the smell of magic smoke[else]is overheated. It will be a while before you can use it again[end if]";
+				say "Direct hit! You charge up the [one of]stun rod[or]electric prod[or]cattle prod[or]shock stick[or]electric shocker[at random] and thrust squarely at [if enemy type entry is not 2]the [end if][EnemyNameOrTitle]. Getting a solid hit, the electricity courses through it and makes it stagger back, severely weakening it. Ozone hangs in the air and your electric shocker [if eptarget is 0]sputters and sparks, burning out with the smell of magic smoke[else]is overheated. It will be a while before you can use it again[end if]";
 				now eprodused is true;
 				decrease mondodgebonus by 2;
 				decrease monhitbonus by 2;
 				let HPdamage be a random number between 30 and 50;
 				let lvlresist be lev entry / 4;
 				if lvlresist > 5, now lvlresist is 5;
-				decrease HPdamage by lvlresist;
-				decrease HPdamage by eprecharge;
+				decrease HPdamage by lvlresist + eprecharge;
 				decrease monsterHP by ( HPdamage * monsterHP ) / 100;
 				say ". Enemy HP dropped by [special-style-2][HPdamage]%[roman type]!";
 				if eptarget is 0:
@@ -103,13 +92,12 @@ to say useelectricprod:
 					if eprecharge >= 2, ItemLoss electric prod by 1;
 			else if roll + combat bonus > 20:
 				decrease eptarget by 1;
-				say "Hit: You charge up the [one of]stun rod[or]electric prod[or]cattle prod[or]shock stick[or]electric shocker[at random] and thrust at the [Name entry]. Getting a glancing blow, the electricity shocks it and makes it stagger back, taking some of the fight out of it. Ozone hangs in the air and your electric shocker [if eptarget is 0]sputters and sparks, burning out with the smell of magic smoke[else]is overheated. It will be a while before you can use it again[end if]";
+				say "Hit! You charge up the [one of]stun rod[or]electric prod[or]cattle prod[or]shock stick[or]electric shocker[at random] and thrust at [if enemy type entry is not 2]the [end if][EnemyNameOrTitle]. Getting a glancing blow, the electricity shocks it and makes it stagger back, taking some of the fight out of it. Ozone hangs in the air and your electric shocker [if eptarget is 0]sputters and sparks, burning out with the smell of magic smoke[else]is overheated. It will be a while before you can use it again[end if]";
 				now eprodused is true;
 				let HPdamage be a random number between 20 and 40;
 				let lvlresist be lev entry / 3;
 				if lvlresist > 5, now lvlresist is 5;
-				decrease HPdamage by lvlresist;
-				decrease HPdamage by eprecharge;
+				decrease HPdamage by lvlresist + eprecharge;
 				decrease monsterHP by ( HPdamage * monsterHP ) / 100;
 				say ". Enemy HP dropped by [special-style-2][HPdamage]%[roman type]!";
 				if eptarget is 0:
@@ -118,14 +106,14 @@ to say useelectricprod:
 					now electric prod is not fast;
 					if eprecharge >= 2, ItemLoss electric prod by 1;
 			else:
-				say "Miss: You charge up the [one of]stun rod[or]electric prod[or]cattle prod[or]shock stick[or]electric shocker[at random] and thrust at the [Name entry], but end up missing.";
+				say "Miss! You charge up the [one of]stun rod[or]electric prod[or]cattle prod[or]shock stick[or]electric shocker[at random] and thrust at [if enemy type entry is not 2]the [end if][EnemyNameOrTitle], but end up missing.";
 				if a random chance of 1 in 4 succeeds and eptarget is not 1, decrease eptarget by 1;
 			choose row monstercom from table of Critter Combat;
 			if Playerpoison > 0, follow the playerpoisoned rule;
-			if there is a continuous in row monstercom of the table of Critter Combat:
+			if there is a continuous entry:
 				follow the continuous entry;
 			if combat abort is 0 and skipretaliate is false, follow the combat entry;
 	else:
-		say "Are you really into shocking yourself? That's probably not a good idea.";
+		say "     Are you really into shocking yourself? That's probably not a good idea.";
 
 E-shocker ends here.

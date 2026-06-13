@@ -41,7 +41,6 @@ to say ResolveEvent Snake Charmer:
 	else if Resolution of Snake Charmer is 1:
 		say "     Wandering through the zoo once again, you find your pace slowing to a crawl until you stop entirely. Momentarily confused, you see a vision of a hypnotic gaze in your mind, and realization floods through you. Turning on the spot, you find your eyes once again settling upon serpentine scales. The naga from before, the one who'd locked eyes with you, is staring at you through the bars of a nearby cage. They are coiled up with their arms resting upon their tail, staring at you as you stand there in confusion. As you notice them, their tongue flicks out of their mouth, waggling in the air for a moment before disappearing back within. You're nigh-instantly enraptured by their eyes, and at this close distance - only a few feet between you and the bars - you're able to note their coloration. A deep, rich emerald, almost glowing in your mind, embedding themselves into your senses.";
 		say "     The door to the cage is right in front of you and you idly think that perhaps this situation had been orchestrated by the naga. You're unable to think on the matter as a tingling suggestion fills your thoughts. 'Open the cage'. [bold type]You get the feeling that opening the cage would be a good idea, but with those emerald eyes staring so deeply into yours, you can't really be sure if that is true or not.[roman type][line break]";
-		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Open the cage. You should open the cage.";
 		say "     ([link]N[as]n[end link]) - Don't open the cage. Walk away before you do.";
 		if Player consents:
@@ -51,21 +50,20 @@ to say ResolveEvent Snake Charmer:
 			WaitLineBreak;
 			say "     The coils holding you in place slowly relax, pushing you upwards into waiting hands that tug and pull at you as much as the muscles within that undulating throat. Saliva covers your skin, lubricating you and easing your way into his mouth with every tug and pull. Serpentine as he is, his throat stretches wide to accommodate you as you slide into his mouth halfway, sinking deeper and deeper with every second that passes. Your body escapes his coils as he tilts his head back, hands gripping you and guiding you deeper, your head leading the charge down and inside. You are enveloped fully in darkness, and despite your heart hammering in your chest, you are calm. His emerald eyes still stuck with you as your lower body vanishes from outside, keeping you placated.";
 			trigger ending "Snake Charmer Consumed";
+			the Player was ended by "Vore by Naga";
 			end the story saying "You were consumed by a hypnotic naga.";
 		else:
 			LineBreak;
-			say "     Shaking your head, you back away from the cage. Making the effort of breaking eyesight with the naga, you feel the emerald burn of his eyes as he watches you turn to leave. He hisses behind you, sounding annoyed but oddly... Impressed. You have this feeling of certainty, that you will see him again.";
+			say "     Shaking your head, you back away from the cage. Making the effort of breaking eyesight with the naga, you feel the emerald burn of his eyes as he watches you turn to leave. He hisses behind you, sounding annoyed but oddly... impressed. You have this feeling of certainty, that you will see him again.";
 			now Resolution of Snake Charmer is 3;
 	else if Resolution of Snake Charmer is 3:
 		say "     Once again you find yourself wandering in the zoo, though this time with a creeping sense of anticipation. Your instincts prove to be correct when the sound of scales sliding rapidly across the ground comes from behind you. Before you can react, your [bodytype of player] body is wrapped up in strong serpentine coils, trapping your arms against your side and preventing you from mounting any sort of resistance. 'No running away this time, little prey,' the slight hiss of the naga's voice speaks directly into your ear. 'Though perhaps that title isn't quite accurate.' Moving around in front of you, you're once again face-to-face with the hypnotic naga, closer than you'd ever been before. You try to avert your eyes, but those emerald orbs are once again taking most of your focus. 'You're the first I've met able to resist my gaze.' The serpent approaches, tongue flicking against your face. 'And as such, I believe you worthy to be my mate.'";
 		say "     You feel the grip of the naga's coils tighten for a bit, becoming almost painfully tight, before suddenly relaxing. The naga moves his face a bit away from yours, giving you room to free your arms from his coils. As well as physical release, your mind also seems to be freed from the naga's hypnotic influence - for the moment, allowing you to think freely. It's clear the Naga finds your resistance attractive, enough to desire you as more than just prey. The question then becomes if you're willing to reciprocate that desire, or reject him. [bold type]You're certain that you won't see him again if you reject him.[roman type][line break]";
-		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Accept his advances, and everything that entails.";
 		say "     ([link]N[as]n[end link]) - Reject his advances; you're not interested.";
 		if Player consents:
 			LineBreak;
 			say "     The naga's face develops into a smile, genuine yet somewhat predatory. It would seem the naga is pleased that you've accepted his advances. The naga approaches you once again, looking deep into your eyes, 'Then come, my mate, and show me your acceptance.'";
-			LineBreak;
 			NagaSex;
 			now Resolution of Snake Charmer is 4;
 		else:
@@ -77,10 +75,7 @@ to say ResolveEvent Snake Charmer:
 
 Table of WalkInEvents (continued)
 Priority	Name	EventObject	EventConditions	EventRoom	LastEncounterTurn	CoolDownTurns	EncounterPercentage
-4	"Naga Mate"	Naga Mate	"[EventConditions_NagaMate]"	Zoo Entryway	2500	8	50
-
-to say EventConditions_NagaMate:
-	now CurrentWalkinEvent_ConditionsMet is true;
+4	"Naga Mate"	Naga Mate	"[EventConditions_True]"	Zoo Entryway	2500	8	50
 
 Table of GameEventIDs (continued)
 Object	Name
@@ -94,20 +89,18 @@ Sarea of Naga Mate is "Zoo".
 
 to say ResolveEvent Naga Mate:
 	say "     'Hello, my mate,' you hear a slightly hissing voice speak from behind you. Turning to look, you smile slightly as you see the naga approaching. 'It's been a short while.' You nod, responding that it has as he slithers up, letting his coils gather around you as he circles you, before soon settling in front of you. 'So, my mate, now that we're together once again, shall we show each other that we are still mates?'";
-	LineBreak;
 	say "     ([link]Y[as]y[end link]) - It's time to mate.";
 	say "     ([link]N[as]n[end link]) - Not right now.";
 	if Player consents:
 		LineBreak;
 		say "     'Well, my mate. After our first session together, I'm curious as to what you have in mind this time.' Letting you decide once again, he eagerly waits.";
-		LineBreak;
 		NagaSex;
 	else:
 		LineBreak;
 		say "     'I understand.' The naga nods, starting to pull his coils out and away from you. 'The world is cruel at the moment. Dangerous. Stay safe, my mate.' With that said, he gently slithers past you, rubbing your shoulder as he passes before disappearing whence he came into the zoo.";
 
 to NagaSex:
-	say "     The naga calls on you to show him you are his mate. How will you do so?";
+	say "[line break]     The naga calls on you to show him you are his mate. How will you do so?";
 	[Define a list of choices to display to the player]
 	let NagaSex_Choices be a list of text;
 	if player is female:
@@ -119,9 +112,9 @@ to NagaSex:
 	add "Show him with your mouth." to NagaSex_Choices;
 	[add "Maybe he should show you this time? Put that tongue to work" to NagaSex_Choices;]
 	let NagaSex_Choice be what the player chooses from NagaSex_Choices;
+	LineBreak;
 	if NagaSex_Choice is:
 		-- "Snakes have two dicks, you have two holes for them.":
-			LineBreak;
 			say "     The naga grins lecherously at the suggestion, bringing his hands to your hips as his dicks slowly emerge from the slit where his torso flows into coils, the scales there neatly parting to reveal the hidden treasure there. He speaks no words, his actions oddly romantic despite the situation. Reaching your hands out to those lengths, you gently rub at - and then grasp - one of the hemipenes, the firm length throbbing in your grip. The naga lets out a small hiss at your touch, seemingly a bit pent up as you move your other hand down, grasping and stroking at the other length. The naga's coils move a bit closer, holding you up as he moves a hand to your own crotch, reciprocating your touch with fingers sliding over your [Ass Description of player]. Poking and prodding at your rear entrance with delving, scaled fingers before moving even further to touch against your [Cunt Adjective of player] lips which are glistening with slight arousal, his touch causing you to let out a small gasp, before you refocus your attention on pleasing his lengths. Stroking and squeezing up and down the duo of dicks, any pre escaping sliding down the lengths helping with lubrication as you get him ready to fuck you silly.";
 			say "     His fingers rub at your lips for a moment, before one is spared to slide between and into you, your slit quivering around the intruding digit as it slides deeper and deeper, halfway then all the way right up to his knuckle. He swirls it around inside you for a moment before pulling it out and replacing it with another finger, getting both his fingers - and your pussy - slick with lubrication. You let your gaze wander upwards, a small moan escaping your mouth, seeing his lustful expression as he looks down upon you, his emerald orbs looking into yours with a sense of enjoyment and eagerness, though restrained for the moment.";
 			WaitLineBreak;
@@ -134,7 +127,6 @@ to NagaSex:
 			CreatureSexAftermath "Player" receives "AssFuck" from "Naga";
 			WaitLineBreak;
 		-- "Show him with your mouth.":
-			LineBreak;
 			say "     The naga raises an eyeridge at your suggestion, but doesn't complain. Instead, he relaxes back upon his coils, allowing you to inspect his form, which gives you perspective to see the tips of his hemipenes poking out of his genital slit. Spotting the beginnings of his arousal, you waste no time moving forward, leading with your hands to start rubbing at the scales there, to an amused hiss from your current partner. Despite his amused response, your touch does elicit a reaction, his tips emerging more, pushing those scales apart as they emerge. Encouraged, you keep up your rubbing, moving your hands closer and closer to that opening - and when the tips are a good bit out you start bringing your mouth into play, as planned. Poking out your tongue, you dart forward and drag it over the duo of tips before you, resulting in three things happening at once. One, you think about how interesting his taste is; two, you hear him let out a hiss of restrained pleasure; and three, you watch those lengths suddenly surge upwards out of his slit.";
 			say "     This, of course, doesn't deter you in the slightest. Far from it. Moving forward once again, you bring your tongue back to those lengths, licking up between them to get both at once as they throb before you, while you bring your hands up to press them together against your tongue, being rewarded with the shuddering of scales at your actions. When your tongue reaches those tips, pressed close together, you open your mouth wide and take both inside, immediately suckling on the tips while your tongue continues its work, licking and rubbing over those shafts, giving you his taste in full, including the pre that beads on his pent-up lengths. 'Ahh, expert mouthplay,' his voice reaches your ears, encouraging you to dive deeper onto his dick, taking it further into your mouth, which also helps you to work yourself into a rhythm, bobbing up a bit before going down again, his dicks poking at the back of your mouth, the point of no return.";
 			WaitLineBreak;
@@ -156,6 +148,5 @@ This is the Snake Charmer Consumed rule:
 	if ending "Snake Charmer Consumed" is triggered:
 		say "     Held within the naga's stomach, the muscles slowly caress and undulate over you, softening your form more and more. You soon fall asleep, lulled by the movements and the naga's hypnotizing gaze, still sticking with you. You don't wake up again, as the naga's body digests you, breaking your body down and softening you into a nutrient-rich goo, feeding the naga for days to come.";
 		the Player is dead;
-
 
 Snake Charmer ends here.

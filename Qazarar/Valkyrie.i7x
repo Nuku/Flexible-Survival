@@ -2,26 +2,24 @@ Version 1 of Valkyrie by Qazarar begins here.
 
 Section 1 - Monster Responses
 
-ValkyrieScore is a number that varies.[@Tag:NotSaved]
-ValkyrieScore is usually 0.
-ValkyrieBadEnd is a number that varies.[@Tag:NotSaved]
-ValkyrieBadEnd is usually 0.
+ValkyrieScore is a number that varies.[@Tag:NotSaved] ValkyrieScore is usually 0.
+[ValkyrieBadEnd is a number that varies.[@Tag:NotSaved] ValkyrieBadEnd is usually 0.]
 
 to say ValkyrieLoss:
 	[say "[FindValkyrieScore]";]
 	if ValkyrieScore is 0: [Steed transforms player, no direct action]
 		say "     You fall to your knees, [if HP of Player > 0]submitting to the power of[else]defeated by[end if] the warrior and her steed, accepting anything they're willing to do to you. After several moments of nothing happening, however, you look up to see the pair staring down at you with disappointment, before the stallion speaks. 'This one will make an excellent offering, but they are not ready.' The valkyrie shakes her head, and you can see a devious gleam in her eyes. 'I suppose we'll just have to fix that, won't we?' She then reaches into a pouch on her belt and pulls out a small bottle, before popping the lid off and pouring it over you. 'Try coming back when you're more suitable, and then you can help relieve my wonderful battering ram of his tensions.' Following her declaration, her mount lets out a snort and trots away, leaving you alone.";
 		infect "Valkyrie Boi";
-		increase ValkyrieScore by 1;
-	else if ((ValkyrieScore < 3) or (a random chance of 1 in 4 succeeds)): [player gives handjob]
+		now ValkyrieScore is 1;
+	else if ValkyrieScore < 3 or a random chance of 1 in 4 succeeds: [player gives handjob]
 		[submission handjob]
-		say "     In the face of the overwhelming power of the horse before you, and to a lesser extent the skill of the rider, you can only submit. The steed above you smiles when you do so, and looks at you appraisingly. 'It seems that you're starting to understand what you're truly here for[if ValkyrieScore < 3], even if your body doesn't know it yet[end if].' The valkyrie seems to be weighing her words for a moment before she speaks as well. 'Perhaps now you can be of use in relieving my lovely steed here, to help him get ready for the battles ahead. While it may not be quite as much as you can offer, why don't you go ahead and touch it for him?' Somewhat uncertainly you begin to comply with her not so gentle request, dropping to your knees before the huge horse, bringing your face to the height of his equally large member.";[update this whole scene for the new visual and stallion changes]
+		say "     In the face of the overwhelming power of the horse before you, and to a lesser extent the skill of the rider, you can only submit. The steed above you smiles when you do so, and looks at you appraisingly. 'It seems that you're starting to understand what you're truly here for[if ValkyrieScore < 3], even if your body doesn't know it yet[end if].' The valkyrie seems to be weighing her words for a moment before she speaks as well. 'Perhaps now you can be of use in relieving my lovely steed here, to help him get ready for the battles ahead. While it may not be quite as much as you can offer, why don't you go ahead and touch it for him?' Somewhat uncertainly you begin to comply with her not so gentle request, dropping to your knees before the huge horse, bringing your face to the height of his equally large member."; [update this whole scene for the new visual and stallion changes]
 		say "     Hesitantly, you reach out and place one hand against the massive rod, a welcoming heat radiating outward from the equine flesh. The sheer size easily dwarfs your hand, but even with that complication you begin attempting to offer him the relief you've been asked to provide. For a moment you simply rub back and forth with the hand resting there, but quickly realize that with something this large that would be woefully inadequate, and so your other hand joins it. Your effectiveness doubled, you start to stroke up and down the thick shaft, feeling just the slightest give as you continue the slow and methodical act. As gentle as your touch is, you can tell it is still having the desired effect, as over time the stallion above you begins to shift slightly side to side and breath more heavily, clearly pleased with your efforts.";
 		WaitLineBreak;
 		say "     For a time things continue simply, with you continuing your manual ministrations, albeit with some variation to the length and angle of your strokes to ensure greater sensations. When the beast you are servicing begins to react more energetically to your efforts you realize he must be getting closer to his climax, a fact only cemented by the murmuring encouragement of the valkyrie riding him growing more fervent. Trying to enhance the pleasure he feels, you move almost without thinking and pull closer, starting to tease his colossal member far more vigorously as you reach further with each motion. Finally he hits the peak you have been working him towards, and his majestic organ starts to jerk violently in your hands, the powerful balls behind it visibly preparing his load. In an instant, he unleashes a torrent of seed onto your waiting face, the volume so great that in seemingly no time at all the virile essence starts to be affected by its own weight and drip down the rest of your body.";
 		say "     The sounds from the steed above you leave no doubt with his satisfaction, even as the cum all over your front offers physical proof of your success. You sputter and gasp through the thick coating on your face, but despite that you feel oddly peaceful with the outcome. From atop the well endowed horse, the valkyrie you had almost forgotten completely speaks down to you. 'As I suspected, you were adequate at helping my mighty steed, and you are free to go, for the moment. The next time we see you, if you are more fitting, you will be allowed to service him far more thoroughly.' With that surprisingly tantalizing declaration made, the pair leave you as you are, drenched in seed and with a lingering desire for more.";
 		infect "Valkyrie Boi";
-		increase ValkyrieScore by 1;
+		if ValkyrieScore < 3, increase ValkyrieScore by 1;
 		[else: [forced handjob]:
 			say "     A";]
 	[else if ((ValkyrieScore < 5) or (a random chance of 1 in 3 succeeds)): [player gives oral]
@@ -29,7 +27,7 @@ to say ValkyrieLoss:
 			say "     A";
 		else: [forced oral in stocks]
 			say "     A";]
-	else if ((ValkyrieScore < 7) or (a random chance of 1 in 2 succeeds)): [player gets railed]
+	else if ValkyrieScore < 7 or a random chance of 1 in 2 succeeds: [player gets railed]
 		[if HP of Player > 0: [voluntarily put into stocks]
 			say "     A";]
 		[forced anal in stocks]
@@ -43,8 +41,9 @@ to say ValkyrieLoss:
 		say "     Time seems to go on forever as you're pounded repeatedly by the stallion, and though your pleasure is so great that you aren't certain, you think you've already peaked several times just from the powerful fucking you're receiving. On the other hand, the steed giving you so much ecstasy has yet to release at all. Your battered mind manages to dredge together enough focus to realize how unfair it is that he hasn't been able to feel as good as you do right now. As if reacting to your thoughts, you can feel his pace increase, and the valkyrie's unending moans reaching a fever pitch. 'You've been an excellent toy, so how about I give you a gift!' He makes on more mighty thrust, and you can feel the difference as his shaft throbs urgently, preparing to make a deposit.";
 		WaitLineBreak;
 		say "     Finally the moment itself arrives, and the incredible shaft impaling you begins to jerk and twitch far more than before, releasing its payload and filling you with a deep warmth. The force of the shots combined with the knowledge that you're the one who brought him this feeling are enough to make you climax again, helplessly moaning as loudly as the valkyrie. Even after that, the flow of seed continues further, combining with the member to fill you even further, the sheer weight trapped within your rear enough to bring you to the ground if you weren't already locked into this contraption. Eventually the sensation starts to slow, and you can feel the stallion dismounting, his oversized equine shaft leaving your passage even as a parting gift is left inside you. You can hear some shuffling behind you as the valkyrie moves around, and suddenly the shackles holding you in the stocks are released, though you lack the strength to move at the moment. 'Your services were appreciated, toy. I'll be waiting eagerly for the next time I see you.' With that final statement you can hear the sounds of the pair leaving, until finally the only thing left is you and the bloated bellyful the stallion left for you. Your thoughts start to return even as your energy does, and you're able to drag yourself back to your feet. Despite everything however, you can't silence the little voice in your mind that's urging you to return.";
-		increase ValkyrieScore by 1;
-	else if (ValkyrieBadEnd < 5): [belly riding]
+		if ValkyrieScore < 7, increase ValkyrieScore by 1;
+	else:
+		[if ValkyrieBadEnd < 5: [belly riding]]
 		[increase ValkyrieBadEnd by 1;]
 		[volunteering]
 		say "     Unable to resist, you submit to the powerful steed and his busty rider. The treatment you have already faced at their hands has shown you what sort of thing is in store, and you find that you're surprisingly willing to let them do what they will with you. The stallion looks at your submissive form, and tilts his head as he thinks for a moment, before speaking to the valkyrie. 'I think that this one would make an excellent addition to my saddle, don't you?' The valkyrie nods in agreement, and gets down from her position. In a flurry of action you find yourself being set upon a nearby bench, your ass out in preparation for something, though your lust-addled mind can't quite fathom what.";
@@ -77,17 +76,20 @@ to say ValkyrieVictory:
 	now title entry is "Have a taste";
 	now sortorder entry is 2;
 	now description entry is "Use your mouth on the mount's member";
-	[]
-	[if ValkyrieScore > 4:
+	[
+	if ValkyrieScore > 4:
 		choose a blank row in table of fucking options;
 		now title entry is "Ride the horse";
 		now sortorder entry is 3;
 		now description entry is "Use your ass to enjoy that horsecock";
+	[]
 	if Player is male:
 		choose a blank row in table of fucking options;
 		now title entry is "Enjoy the valkyrie";
-		now sortorder entry is 2;
-		now description entry is "Take the valkyrie's ass";]
+		now sortorder entry is 4;
+		now description entry is "Take the valkyrie's ass";
+	]
+	sort the table of fucking options in sortorder order;
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
 		say "[link][y] - [title entry][as][y][end link][line break]";
@@ -100,33 +102,32 @@ to say ValkyrieVictory:
 			choose row calcnumber in table of fucking options;
 			say "[title entry]: [description entry]?";
 			if Player consents:
-				let nam be title entry;
+				LineBreak;
 				now sextablerun is 1;
-				if (nam is "Use your hands"):
-					say "[ValkyrieWin1]";
-				if (nam is "Have a taste"):
-					say "[ValkyrieWin2]";
-				if (nam is "Ride the horse"):
-					say "[ValkyrieWin3]";
-				if (nam is "Enjoy the valkyrie"):
-					say "[ValkyrieWin4]";
-				wait for any key;
+				if title entry is:
+					-- "Use your hands":
+						say "[ValkyrieWin1]";
+					-- "Have a taste":
+						say "[ValkyrieWin2]";
+					[-- "Ride the horse":
+						say "[ValkyrieWin3]";
+					-- "Enjoy the valkyrie":
+						say "[ValkyrieWin4]";]
 		else if calcnumber is 0:
+			LineBreak;
 			now sextablerun is 1;
 			say "     You decide against taking advantage of the defeated pair, and leave.";
-			wait for any key;
 		else:
-			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
-	clear the screen and hyperlink list;
+			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options], or 0 to exit.";
 
-to say ValkyrieWin1:[handjob]
+to say ValkyrieWin1: [handjob]
 	say "     As you finally defeat the valkyrie and her mighty steed, you can't help but rest your eyes on the particularly enticing masculine endowment that belongs to him. The exhausted equine has collapsed onto his side, with the equally defeated warrior leaning against his back. In this position, his throbbing horse member is clearly both visible and at attention, it's shape and sheer size making it impossible to ignore. For several moments you simply stare at, tempted by the thought of how it would feel in your hands, before you eventually decide to give in to your curiosity. You kneel down alongside the stallion, already noting that the very air seems warmer near him, as if radiating from his flesh. Slowly you extend your hand, and rest your palm on the side of his powerful rod.";
 	say "     Even this simple act is enough to bring up several sensations at once. The warmth you felt before is even more intense with direct contact, teetering right on the edge of being too much, without ever quite reaching that point. Beneath your hand you can feel the constant thrumming of his arounsal, pulsing through the shaft, a clear sign of the sheer virility. Combined with those is the powerful scent that becomes obvious with your proximity, an overwhelming bestial masculinity. Without even thinking, you realize you have already begun to stroke your hand softly back and forth along the side of the shaft. There is a moment of conflict in the back of your mind, but it is easily dismissed as you bring your other hand up to match the first.";
 	WaitLineBreak;
 	say "     With both hands in place, you start to gradually increase your speed, the repetitive motion you use becoming smoother with each stroke. It's easy to fall into a rhythm without thinking about what you're doing—in fact you barely think at all. The only thing your focus is on is the mighty meat directly in front of you, how it looks throbbing between your hands, and how it's about to look once it starts spurting its load. The time you spend starts to blur, and in what seems like no time at all your unspoken question is answered as you can feel the shaft start to jerk and pulse, clearly about to reach a peak. Rather than your previous steady pace, you break your tempo and shift to just stroking furiously, your eagerness to bring him to his climax overcoming you.";
 	say "     Finally the moment you were waiting for happens, heralded by an even more powerful throbbing in his shaft. At the same time, the stallion lets out a powerful grunt of pleasure, clearly appreciative of your efforts. His release is as mighty as you expect from such a huge member, spewing huge torrents of warm seed onto you. Each spurt reaches far from its source, streak after streak of cum landing across your body. In no time at all he has almost covered every visible surface, yourself included. Everything has a sticky coating, and is equally drenched in the scent of his release, which is just as virile as the rest. You shudder slightly in pleasure from the sensations, before climbing back up to your feet. You've seen the admittedly impressive example of what he can do, and that's enough for you, at least for now.";
 
-to say ValkyrieWin2:[oral]
+to say ValkyrieWin2: [oral]
 	say "     As you finally defeat the valkyrie and her mighty steed, you can't help but rest your eyes on the particularly enticing masculine endowment that belongs to him. The exhausted equine has collapsed onto his side, with the equally defeated warrior leaning against his back. In this position, his throbbing horse member is clearly both visible and at attention, it's shape and sheer size making it impossible to ignore. The sight of it is enough to make your mouth water, wondering exactly how that shaft would taste if you were to use your mouth on it, and how full it would make you feel. You can only fantasize so much before it crystallizes into action, however, and so you you kneel down and gently move the steed so that he is fully on his back, legs splayed apart to grant you much easier access to his cock. He allows himself to be moved into the new position with little effort, and why wouldn't he? You're already going to give him exactly what he wants.";
 	say "     It takes several moments to work yourself up to starting properly, due to the sheer intimidating size of the member, but your curiosity eventually overcomes your nerves. You start with small experimental licks along the head, gently teasing the surface with your tongue. Even just this basic taste is a heady mix of sensations you can't get enough of, causing your mouth to water and enticing you to dive deeper into your victory. With that motivation drawing you in, you start to move on to trailing kisses down the shaft, enjoying every moment of the process. This path leads you down to where his package meets his equally sizable balls, and you take a moment to switch your attention to them. You lavish them with a similar oral treatment to what you gave the rest of his masculinity, earning an appreciative moan for your efforts.";
 	WaitLineBreak;
@@ -137,14 +138,11 @@ to say ValkyrieWin2:[oral]
 	say "     It seems that the attentions you're bestowing upon him have started to become more than he can handle, as you can feel his cock throbbing inside you, a prelude to the inevitable explosion. You mentally brace yourself just in time, as he finally hits the peak he has been working towards the whole time, and his shaft erupts inside of you. The resulting torrent of seed is vast, enough to feel like it fills your body to the brim, and sure enough it certainly pushes you to your physical limits. The flood easily fills your stomach beyond capacity, leaving you fairly bloated with cum in a way that you can't help but enjoy. When it finally stops completely, you gingerly pull yourself back off his member, gasping slightly as your mouth empties. The now significantly less fearsome dick flops back onto the stallion's belly, leaving a final spurt of equine jizz drooling out onto the surface.";
 	say "     You feel completely satisfied, with only minor discomfort from how over full you are with his release. No longer so completely occupied with your sexual endeavors, you see that the valkyrie herself had roused herself from her daze at some point, and clearly enjoyed what she saw, if how furiously she is rubbing herself is an indication. Having had more than your fill, you start gathering yourself in preparation to leave, only to be distracted for a moment by the stallion's voice, somewhat weaker than before. 'Truly, you possess a natural talent for this. You may have bested us this time, but if you ever desire to know what we can offer you, we can see once more who is the victor.' Though his offer catches your interest, it's a worry for another day. Instead, you finally begin to walk away, leaving a pleasure-stricken valkyrie and her well satisfied mount behind.";
 
-to say ValkyrieWin3:[anal]
+[to say ValkyrieWin3:[anal]
 	say "     A";
 
 to say ValkyrieWin4:[fucking the valkyrie]
-	say "     A";
-
-to say ValkyrieDesc:
-	say "     Before your eyes is the largest horse you have ever seen, [if ScaleValue of Player < 4]easily towering over you and giving you a perfect line of sight to what is undoubtedly the most attention grabbing feature: his massive erect horsecock[else]even with your large stature, though even from this angle the massive equine member hanging erect under him is visible[end if]. It almost takes you a moment to realize that the steed is not alone, and atop his back is a figure that would stand larger than an average woman, but still tiny in comparison to the hulking beast below her. She is wearing elegant armor, reminiscent of a valkyrie, with a very deadly-looking spear in hand. Unlike most depictions of valkyries however, the woman wearing this armor is an incredibly busty lizard girl with distinctive pink scales. When she spots you, a smile breaks out on her face. 'My battering ram has been in need of a new plaything, and you'll do the trick!'";
+	say "     A";]
 
 [ Because of issues with checking infections this is commented out until a later update.
 to say FindValkyrieScore:
@@ -173,7 +171,7 @@ name(text)	PrepFunction(text)
 "Valkyrie Boi"	"[PrepCombat_Valkyrie Boi]"
 
 to say PrepCombat_Valkyrie Boi:
-	say "";
+	setmongender 3; [creature is male]
 
 Table of Random Critters (continued)
 NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
@@ -188,13 +186,13 @@ When Play begins:
 	add "Valkyrie Boi" to infections of HumanList;
 	add "Valkyrie Boi" to infections of MythologicalList;
 	now Name entry is "Valkyrie";
-	now enemy title entry is "Valkyrie and her Steed"; [ Name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name. ]
+	now enemy title entry is "Valkyrie and Her Steed"; [ Name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name. ]
 	now enemy Name entry is ""; [ Specific name of unique enemy. ]
 	now enemy type entry is 1; [ 0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters. ]
 	now attack entry is "[one of]The valkyrie jabs at you with her spear.[or]The steed slams its hooves down towards you, battering you.[or]The steed charges you, knocking you aside.[at random]";
 	now defeated entry is "[ValkyrieVictory]";
 	now victory entry is "[ValkyrieLoss]";
-	now desc entry is "[ValkyrieDesc]";
+	now desc entry is "     Before your eyes is the largest horse you have ever seen, [if ScaleValue of Player < 4]easily towering over you and giving you a perfect line of sight to what is undoubtedly the most attention grabbing feature: his massive erect horsecock[else]even with your large stature, though even from this angle the massive equine member hanging erect under him is visible[end if]. It almost takes you a moment to realize that the steed is not alone, and atop his back is a figure that would stand larger than an average woman, but still tiny in comparison to the hulking beast below her. She is wearing elegant armor, reminiscent of a valkyrie, with a very deadly-looking spear in hand. Unlike most depictions of valkyries however, the woman wearing this armor is an incredibly busty lizard girl with distinctive pink scales. When she spots you, a smile breaks out on her face. 'My battering ram has been in need of a new plaything, and you'll do the trick!'[line break]";
 	now face entry is "notably reptilian, with impossibly [one of]beatiful[or]pretty[or]gorgeous[at random] feminine features"; [ Face description, format as "Your face is [Face of Player]." ]
 	now body entry is "as enticing as any model, with curves in all the right places"; [ Body description, format as "Your body is [Body of Player]." ]
 	now skin entry is "[one of]softly scaled[or]bright pink scaled[or]scaly pink[at random]"; [ Skin. Format as "Looking at yourself, your body is covered in [Skin of Player] skin." ]

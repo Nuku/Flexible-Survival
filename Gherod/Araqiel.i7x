@@ -67,12 +67,12 @@ Ambush The Purifier is a situation.
 ResolveFunction of Ambush The Purifier is "".
 Sarea of Ambush The Purifier is "Nowhere".
 
-AraqielTrackerCollege is a number that varies. AraqielTrackerCollege is usually 1. [@Tag:NotSaved]
-AraqielTrackerRedLight is a number that varies. AraqielTrackerRedLight is usually 0. [@Tag:NotSaved]
-AraqielTrackerMall is a number that varies. AraqielTrackerMall is usually 0. [@Tag:NotSaved]
-AraqielCaptureTimer is a number that varies. AraqielCaptureTimer is usually 20000. [@Tag:NotSaved]
-
 Section 1-0 - Toron Talks
+
+AraqielTrackerCollege is a number that varies. AraqielTrackerCollege is usually 1.
+AraqielTrackerRedLight is a number that varies. AraqielTrackerRedLight is usually 0.
+AraqielTrackerMall is a number that varies. AraqielTrackerMall is usually 0.
+AraqielCaptureTimer is a number that varies. AraqielCaptureTimer is usually 20000.
 
 Section 1-0-1 - Toron During Pre-Events
 
@@ -82,59 +82,51 @@ to say ToronTalkPurifier:
 		say "     'I'm sure Mogdraz would not only appreciate the addition, but would also be very happy to know that you assisted us. One thing he doesn't like is angels, says they're full of gibberish. Too arrogant, too full of themselves, and have a literal lack of sex that makes them simply unbearable... That is, until they're corrupted, then they become interesting. Heaven has such a way to make everything seem boring, if you ask me... No dick or cunt between your legs?! Bullocks.' You take a moment to consider this, as Toron might be about to ask you to lead this attempt at corrupting the angel. 'Well, I would like you to... [bold type]Observe him. From beginning to end. This means you'll have to track him down to his usual hunting grounds[roman type] and be on the lookout. I want to know exactly how he makes the first contacts, how he acts, which powers he has... Everything. It is of utmost importance if we're going to try to pull this plan off.'";
 		WaitLineBreak;
 		say "     Corrupting an angel may be a cruel act to some, or a delightful pleasure for others... but Toron assures you with a few last words. 'And... don't worry about this whole corruption thing. If what you said is true, he's beyond repair. All we'll do is ease his pain and remove the existential crisis that torments him... while benefitting from it, of course. After all, we are running a business, here.'";
-		say "     [bold type]You don't have to agree on corrupting the angel or, in Toron's words, easing his pain, but you doubt there's a better way to get closer to him if not with his help.[roman type][line break]";
-		LineBreak;
+		say "[line break]     [bold type]You don't have to agree on corrupting the angel or, in Toron's words, easing his pain, but you doubt there's a better way to get closer to him if not with his help.[roman type][line break]";
 		say "     ([link]Y[as]y[end link]) - Go along with the plan, at least for now.";
 		say "     ([link]N[as]n[end link]) - Tell him you don't want to do this.";
 		if Player consents:
 			LineBreak;
 			say "     You nod, agreeing to help the process of corrupting the angel for the time being. 'Excellent. Alright, then, look around these three areas: [bold type]the College Campus, the sewers under the Mall, and here around the Red Light District[roman type]. You will surely be able to find him before he starts the action knowing beforehand where to find him. My scouts will be ready and communicating with me, so feel free to ask me for information.' He informs you of his usual roaming spots and lets you know of his current location.";
-			if AraqielTrackerCollege is 1:
-				say "     'He's been seen lurking around the [bold type]College Campus[roman type] last time I checked. Yes, I know, I'm quick. Just go look for him there and hopefully you will find him. If not, come back to me and I'll give you an update.'";
-			else if AraqielTrackerRedLight is 1:
-				say "     'He must be currently here, in the [bold type]Red Light District[roman type], last time I checked. Yes, I know, I'm quick. Just go look for him and hopefully you will find him. If not, come back to me and I'll give you an update.'";
-			else if AraqielTrackerMall is 1:
-				say "     'He should be hunting for brutes in the [bold type]Mall Sewers[roman type] last time I checked. Yes, I know, I'm quick. Just go look for him there and hopefully you will find him. If not, come back to me and I'll give you an update.'";
+			say "     '[if AraqielTrackerCollege is 1]He's been seen lurking around the [bold type]College Campus[roman type] last time I checked. Yes, I know, I'm quick. Just go look for him there[else if AraqielTrackerRedLight is 1]He must be currently here, in the [bold type]Red Light District[roman type], last time I checked. Yes, I know, I'm quick. Just go look for him[else]He should be hunting for brutes in the [bold type]Mall Sewers[roman type] last time I checked. Yes, I know, I'm quick. Just go look for him there[end if] and hopefully you will find him. If not, come back to me and I'll give you an update.'";
 			now Resolution of Ambush The Purifier is 1;
 			now HP of Araqiel is 2;
 		else:
 			LineBreak;
 			say "     You have to be sincere and tell him you're not interested in hurting an angel. 'Hurting?! You wound me... I never mentioned hurting, did I? But well, maybe if he doesn't mess with our boys and girls, we won't have to watch out for him at all. I would have liked to give him a better ending, though...' he replies, showing a big disappointment in you, but lets you walk away. Well, you have no other way of approaching the angel, now. Toron was the only one who had the means to track him down easily.";
 			now Resolution of Ambush The Purifier is 99;
-	else if Resolution of Ambush The Purifier > 0 and Resolution of Ambush the Purifier < 3:
+	else if Resolution of Ambush the Purifier < 3:
 		say "     Regarding your hunt for the Purifier, you update Toron on your progress...";
 		WaitLineBreak;
 		if Resolution of Purifier One is 0:
-			say "     'You have yet to observe him at the [bold type]College[roman type]. Make sure you're on the lookout next time you're there if he's hunting.'";
+			say "     'You have yet to observe him at the [bold type]College[roman type]. Make sure you're on the lookout next time you're there if he's hunting.'[paragraph break]";
 		else if Resolution of Purifier One is 1:
-			say "     Following what you've witnessed at the college, you let the bartender know about every single detail that you could take from your observation. 'Oh. He really likes to crush his... targets with raw and rough sex. Kinky... I wouldn't see an angel doing that. I mean, as oppressive as their so blessed Order is, actually it doesn't really surprise me that they're as oppressive in sex as well. Oh, never mind me, I'm just babbling. Although I must say, good job...' he says, commending you for an accomplished task. 'Now we've confirmed that he is, indeed, a very physically powerful individual, and doesn't use any special power to subdue his targets. It's only sheer size and intimidation. Well, and I suppose having a big dick helps. Nonetheless, fighting him using physical methods would be dumb. I'll have to think of something around the lines of... dark magic,' he adds, while looking into the void just behind you.";
+			say "     Following what you've witnessed at the college, you let the bartender know about every single detail that you could take from your observation. 'Oh. He really likes to crush his... targets with raw and rough sex. Kinky... I wouldn't see an angel doing that. I mean, as oppressive as their so blessed Order is, actually it doesn't really surprise me that they're as oppressive in sex as well. Oh, never mind me, I'm just babbling. Although I must say, good job...' he says, commending you for an accomplished task. 'Now we've confirmed that he is, indeed, a very physically powerful individual, and doesn't use any special power to subdue his targets. It's only sheer size and intimidation. Well, and I suppose having a big dick helps. Nonetheless, fighting him using physical methods would be dumb. I'll have to think of something around the lines of... dark magic,' he adds, while looking into the void just behind you.[paragraph break]";
 			now Resolution of Purifier One is 2;
 		if Resolution of Purifier Two is 0:
-			say "     'You have yet to observe him here, in the [bold type]Red Light District[roman type]. Make sure you're on the lookout next time you're here if he's hunting.'";
+			say "     'You have yet to observe him here, in the [bold type]Red Light District[roman type]. Make sure you're on the lookout next time you're here if he's hunting.'[paragraph break]";
 		else if Resolution of Purifier Two is 1:
-			say "     Following what you've witnessed near the chapel, you let the bartender know about every single detail that you could take from your observation. 'He was staring at the chapel? And mentioned a mistress... Right after he gave in to the succubus taunting him... Interesting. Seems like his fall was previously enforced by other demons, perhaps? That would explain why he's such an angry angel,' says Toron, wondering to himself. 'So... he thinks that he can fuck all demons into submission, and that it will be enough to exact his revenge on them... while being particularly vulnerable to lust, since obviously having a dick is fairly new to him. We're dealing with a fairly more vulnerable seraphim than what I initially thought. Perhaps this one will be easy to... convert. His newfound strength is, simultaneously, his greatest weakness. A couple strokes and his dick takes over his brain. Enhance that, and he will... Hmmm... I'm having lots and lots of ideas... Thank you, once more.'";
+			say "     Following what you've witnessed near the chapel, you let the bartender know about every single detail that you could take from your observation. 'He was staring at the chapel? And mentioned a mistress... Right after he gave in to the succubus taunting him... Interesting. Seems like his fall was previously enforced by other demons, perhaps? That would explain why he's such an angry angel,' says Toron, wondering to himself. 'So... he thinks that he can fuck all demons into submission, and that it will be enough to exact his revenge on them... while being particularly vulnerable to lust, since obviously having a dick is fairly new to him. We're dealing with a fairly more vulnerable seraphim than what I initially thought. Perhaps this one will be easy to... convert. His newfound strength is, simultaneously, his greatest weakness. A couple strokes and his dick takes over his brain. Enhance that, and he will... Hmmm... I'm having lots and lots of ideas... Thank you, once more.'[paragraph break]";
 			now Resolution of Purifier Two is 2;
 		if Resolution of Purifier Three is 0:
-			say "     'You have yet to observe him in the sewers, at the [bold type]Mall[roman type]. Make sure you're on the lookout next time you're there if he's hunting.'";
+			say "     'You have yet to observe him in the sewers, at the [bold type]Mall[roman type]. Make sure you're on the lookout next time you're there if he's hunting.'[paragraph break]";
 		else if Resolution of Purifier Three is 1:
 			say "     Following what you've witnessed in the mall sewers, you let the bartender know about every single detail that you could take from your observation. 'Three?! Are you sure you counted them well?' You nod, confirming, with absolute certainty, that there were, indeed, three demon brutes. No more, and no less. 'That's crazy! How powerful is he?! Having dominated three of the burliest wandering demons, they're even a challenge to beat for the more intelligent hellfire demons... Indeed, subduing him physically won't be the answer!' You also remember the [bold type]Purifier Feather[roman type] you have collected from his wings as he walked past you. Toron seems particularly stunned by all the information you've just fed him with, so he doesn't even notice anything strange about you, namely that you didn't tell him everything, which he could at any point...";
-			say "     [bold type]This is a very important decision regarding this angel's fate[roman type]. Handing over the feather would most certainly [bold type]guarantee a success in corrupting the seraphim[roman type]. Do you wish to give Toron a feather from the Purifier's wings?";
-			LineBreak;
+			say "[line break]     [bold type]This is a very important decision regarding this angel's fate.[roman type] Handing over the feather would most certainly [bold type]guarantee a success in corrupting the seraphim[roman type]. Do you wish to give Toron a feather from the Purifier's wings?";
 			say "     ([link]Y[as]y[end link]) - Yes, you want to give them all the means to corrupt this angel.";
 			say "     ([link]N[as]n[end link]) - Keep it to yourself.";
 			if Player consents:
 				LineBreak;
-				say "     Recalling your extra spoils, you take the feather out of your pockets and just give it to Toron, whose eyes shine with joy. 'You managed to... By the hellfires, this is... This is just what I needed! Your efforts will be rewarded, I will assure you. What a great addition to my enchantments...' he says, commending you for a job well done. Now you will have to live with the fact that you most certainly guaranteed the success of the efforts made by the demons to corrupt an angel. 'I'll provide you with a [bold type]whole new drink[roman type] to choose from, just for you... Though you will still have to pay for it, of course. A... mere symbolic sum.' Well, at least if you regret this decision, you may drink to forget it in an entirely different way... but that angel was beyond help, right?";
+				say "     Recalling your extra spoils, you take the feather out of your pockets and just give it to Toron, whose eyes shine with joy. 'You managed to... By the hellfires, this is... This is just what I needed! Your efforts will be rewarded, I will assure you. What a great addition to my enchantments...' he says, commending you for a job well done. Now you will have to live with the fact that you most certainly guaranteed the success of the efforts made by the demons to corrupt an angel. 'I'll provide you with a [bold type]whole new drink[roman type] to choose from, just for you... Though you will still have to pay for it, of course. A... mere symbolic sum.' Well, at least if you regret this decision, you may drink to forget it in an entirely different way... but that angel was beyond help, right?[paragraph break]";
 				add "Created Heaven's Kiss" to traits of Toron;
 			else:
 				LineBreak;
-				say "     This is the chance to quietly forfeit this plan without making the demons mad, at least for now. You're too deep in it to completely abandon it, but this is perhaps enough to sabotage their efforts. 'Thank you so much for the work you've been doing. I will have to come up with a plan to ensure we can capture this angel... Knowing this, it will be difficult,' says Toron, who fortunately did not notice your second thoughts. You better keep it that way.";
+				say "     This is the chance to quietly forfeit this plan without making the demons mad, at least for now. You're too deep in it to completely abandon it, but this is perhaps enough to sabotage their efforts. 'Thank you so much for the work you've been doing. I will have to come up with a plan to ensure we can capture this angel... Knowing this, it will be difficult,' says Toron, who fortunately did not notice your second thoughts. You better keep it that way.[paragraph break]";
 				now Resolution of Ambush The Purifier is 2; [Araqiel will NOT be corrupted]
 			now Resolution of Purifier Three is 2;
 		WaitLineBreak;
 		if Resolution of Purifier One is 2 and Resolution of Purifier Two is 2 and Resolution of Purifier Three is 2:
 			say "     Having visited all the locations where the Purifier hunts and reported all the information you could find, Toron informs you that your job is complete. 'Good, I believe everything is in order, now. We'll handle things from here, with discretion. If you want to come back and check on how it went, I'll be happy to inform you. In the meantime, take a rest, enjoy a drink or two...' Seems like he won't let you participate in the ambush, but is happy to provide you information on if they were successful or not. It shouldn't take long, as he is very fast and efficient, usually. Now all that remains for you to do is to hope for the best as you sit and wait...";
-			WaitLineBreak;
 			say "     You see Toron taking a leave through the staff door, and you don't see him again for a good couple of hours...";
 			follow the turnpass rule;
 			WaitLineBreak;
@@ -142,33 +134,27 @@ to say ToronTalkPurifier:
 			now ToronDoneTalking is true;
 			if Resolution of Ambush The Purifier is 1: [gave the feather, so...]
 				now Resolution of Ambush The Purifier is 3; [he WILL be captured]
-			else if Resolution of Ambush The Purifier is 2: [didn't give the feather, so...]
+			else: [didn't give the feather, so...]
 				now Resolution of Ambush The Purifier is 4; [he WON'T be captured]
 			now AraqielTrackerRedLight is 0;
 			now AraqielTrackerMall is 0;
 			now AraqielTrackerCollege is 0;
 			now AraqielCaptureTimer is turns;
 		else:
-			if AraqielTrackerCollege is 1:
-				say "     'Carry on, then. He's been seen lurking around the [bold type]College Campus[roman type] last time I checked. Just go look for him there and hopefully you will find him. If not, come back to me and I'll give you an update.'";
-			else if AraqielTrackerRedLight is 1:
-				say "     'Carry on, then. He must be currently here, in the [bold type]Red Light District[roman type], last time I checked. Just go look for him and hopefully you will find him. If not, come back to me and I'll give you an update.'";
-			else if AraqielTrackerMall is 1:
-				say "     'Carry on, then. He should be hunting for brutes in the [bold type]Mall Sewers[roman type] last time I checked. Just go look for him there and hopefully you will find him. If not, come back to me and I'll give you an update.'";
-	else if Resolution of Ambush The Purifier > 2 and Resolution of Ambush the Purifier < 5:
-		say "     You've waited around for long enough, and Toron is back into business as nothing happened, so you figure it should be a good time to ask how things are going. Bringing up the subject, you ask the question directly.";
+			say "     'Carry on, then. [if AraqielTrackerCollege is 1]He's been seen lurking around the [bold type]College Campus[roman type] last time I checked. Just go look for him there[else if AraqielTrackerRedLight is 1]He must be currently here, in the [bold type]Red Light District[roman type], last time I checked. Just go look for him[else]He should be hunting for brutes in the [bold type]Mall Sewers[roman type] last time I checked. Just go look for him there[end if] and hopefully you will find him. If not, come back to me and I'll give you an update.'";
+	else:
+		say "     You've waited around for long enough, and Toron is back into business as if nothing happened, so you figure it should be a good time to ask how things are going. Bringing up the subject, you ask the question directly.";
 		if AraqielCaptureTimer - turns < 8:
 			say "     He leans over to you, speaking in a low tone, 'I have mobilized a few demons to lure him into the district, where we can safely attempt to capture him. It will take some time, so I suggest you go do something else and check back after twenty four hours or so. Might have news for you then.' With this information, you nod to him as you move onto something else.";
 		else:
 			if Resolution of Ambush The Purifier is 3: [he WAS captured]
-				say "     He leans over to you, speaking in a low tone, 'A success, thanks to your efforts. From now on, everything will be handled with Mogdraz. He might let you into some of the more juicy details,' he says, with a big smile on his face. Looks like they have [bold type]successfully captured the Purifier, and Mogdraz is taking things into his own hands.[roman type][line break]";
+				say "     He leans over to you, speaking in a low tone. 'A success, thanks to your efforts. From now on, everything will be handled with Mogdraz. He might let you into some of the more juicy details,' he says, with a big smile on his face. Looks like they have [bold type]successfully captured the Purifier, and Mogdraz is taking things into his own hands.[roman type][line break]";
 				now HP of Araqiel is 3; [Corrupted Araqiel]
 				now Resolution of Ambush The Purifier is 5; [Ambush Successful]
-			else if Resolution of Ambush The Purifier is 4: [he ESCAPED]
-				say "     He leans over to you, speaking in a low tone, 'Well... I'm embarrassed to say this. Right when we attempted to capture him, he brought all of our best demon fighters down, then a blinding light just... shone from his wings, and the entire ambush team was stunned as he flew away. Nothing we could do to predict that, unfortunately. I am terribly sorry that your work was in vain, but we won't give up. We will find this angel, eventually. It's even more imperative, now that he knows about us...' he says, clearly disappointed on the turn his efforts took. But obviously, you hold full responsibility on his failure for not giving him that feather, and your instincts proved you right. You saved this angel from permanent, irreversible corruption, but if the demons find out that you're at fault, they might not be happy...";
+			else: [he ESCAPED]
+				say "     He leans over to you, speaking in a low tone. 'Well... I'm embarrassed to say this. Right when we attempted to capture him, he brought all of our best demon fighters down, then a blinding light just... shone from his wings, and the entire ambush team was stunned as he flew away. Nothing we could do to predict that, unfortunately. I am terribly sorry that your work was in vain, but we won't give up. We will find this angel, eventually. It's even more imperative, now that he knows about us...' he says, clearly disappointed on the turn his efforts took. But obviously, you hold full responsibility on his failure for not giving him that feather, and your instincts proved you right. You saved this angel from permanent, irreversible corruption, but if the demons find out that you're at fault, they might not be happy...";
 				say "     But the question remains... Did you... really... save him?";
-				LineBreak;
-				say "[italic type]<<Pure Route ends here, for now. His pre-events will be restored and cycle through accordingly (College > Red Light > Mall) >>[roman type][line break]";
+				say "[line break][italic type]<<Pure Route ends here, for now. His pre-events will be restored and cycle through accordingly (College > Red Light > Mall)>>[roman type][line break]";
 				now HP of Araqiel is 50; [Pure Araqiel]
 				now Resolution of Ambush The Purifier is 99; [Ambush failed]
 				now AraqielTrackerCollege is 1; [events restored]
@@ -178,7 +164,6 @@ Section 1-0-2 - Toron During Corrupted Path
 to say ToronTalkMogdrazAraqiel:
 	if Resolution of Ambush The Purifier is 8:
 		say "     Out of hope that he will shed some light into this matter, you discreetly ask Toron what he knows about the big demon boss and the perverted angel's relationship with one another. He hesitates before speaking, but as you have heard their conversation before, he probably decides that there is no purpose in hiding anything else from you. 'I am sorry for deceiving you, but trust must go for both ways. We couldn't just let you know about everything and risk our own safety for being too careless. I hope you understand,' he says to you with an apologetic bow and tone.";
-		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Reassure him. They must certainly have had their reasons.";
 		say "     ([link]N[as]n[end link]) - Tell him that, honestly, you don't understand. You'd rather have known the truth from the beginning.";
 		if Player consents:
@@ -189,28 +174,26 @@ to say ToronTalkMogdrazAraqiel:
 			say "     He lowers his head, and takes a moment of silence before he resumes speaking. 'You could have also not given me that feather. It was the key component that allowed us to liberate him from Heaven's influence. Yet you did... You knew what that meant, didn't you? You must have had your own reasons to act the way you did, yet you never revealed them to me. You simply continued to do so. Perhaps out of good will, or simply a selfish goal... I guess I would never know.' Despite what he just said, he extends his reply to say one more thing. 'I understand your frustration, regardless, but I must ask you to not misjudge our caution as lack of faith in you. We simply did what had to be done.' With that, he finishes explaining himself.";
 	else:
 		say "     Curious about the big demon boss and the perverted angel's relationship with one another, you ask Toron to remind you of the story that he told you when you first asked him about this matter. He agrees to do it, once he finds the chance to sit down with you.";
-	WaitLineBreak;
 	say "     'Regarding Master Mogdraz and Araqiel... They... were old rivals. While Mogdraz was merely a High Demon, and a manservant to another Demon Lord, Araqiel served an Archangel. As you may already know, the Purifier was called as such because he could subdue most demons with his much superior might. By mixing elements from the demons into a newborn seraphim, Araqiel was born, with free will and the equipment to engage in sex, two things most, if not all, pure angels lack.' You already had the feeling Araqiel was not a pure angel from the beginning, judging by what Mogdraz said in the dungeon. 'As such, Araqiel earned his title as one of the most powerful angels ever created, a power that could compete with Mogdraz's, and commanding a force of his own. One day, their ways clashed.'";
+	WaitLineBreak;
 	say "     You take a seat by the stool as you listen to Toron. 'Araqiel wasn't always so given to carnal pleasure. There was once a time his convictions resided exclusively in Heaven's best interests of supremacy over our world. The Demon Lord Mogdraz served as the main beacon of Hell's position, who claimed to be growing day by day. It was only natural that, eventually, Araqiel would attempt to strike down the Demon Lord, and that is when Mogdraz met the Purifier. It was a harsh battle, and I witnessed it all, offering Mogdraz all the backup support I could, but indeed, the angel was incredibly powerful. They fought until both of them were forcingly disarmed and had to wrestle, using their entire bodies in an attempt to emerge victorious. By then, the battlefield was filled with flames and steam, with both taking hits so powerful that even the ground shook beneath us.'";
-	WaitLineBreak;
 	say "     'I do not know what happened, but eventually they stopped. Both were panting hard, bruised and exhausted, lying down naked as what remained of their clothes was shredded to many pieces, hugging each other. No, not in that way, they simply had their arms wrapped around each other's bodies, but so exhausted they couldn't move an inch. In all my life, I have never seen such a ferocious battle. Then... something happened, as they looked into each other's eyes. Once they managed to get up, they simply parted ways. No words spoken. Mogdraz remained silent through the entire way back home.' You blink and nod, as if encouraging Toron to continue. 'That is when Mogdraz began questioning his own Lord's ideals, and the way he treated his son. We thought he was simply a demanding man, but the poor boy was forced to train and study hard, without the chance to make any choices by himself. Mogdraz told me that he had the boy crying in his arms, one day. And that was the day everything changed.'";
-	say "     'When Mogdraz rebelled against the Demon Lord, he took his son with him, and some of the demons that were loyal to Mogdraz followed, including myself. And amidst our journey, I was amazed to find Araqiel asking Mogdraz to join the resistance force. And that is when I knew. The deal was struck right there and then, at the battle, before they parted ways. It happened within the blink of an eye, in their minds. As you should already know, our Lord is very proficient in the arts of mind reading and telepathy, a gift I also possess. It must have happened that way so nobody would be able to discover this, and this explains Mogdraz's silence. Araqiel's motives, however, remain a mystery to me until this day. He sold his soul to a demon, however... He must have had a strong cause.'";
 	WaitLineBreak;
+	say "     'When Mogdraz rebelled against the Demon Lord, he took his son with him, and some of the demons that were loyal to Mogdraz followed, including myself. And amidst our journey, I was amazed to find Araqiel asking Mogdraz to join the resistance force. And that is when I knew. The deal was struck right there and then, at the battle, before they parted ways. It happened within the blink of an eye, in their minds. As you should already know, our Lord is very proficient in the arts of mind reading and telepathy, a gift I also possess. It must have happened that way so nobody would be able to discover this, and this explains Mogdraz's silence. Araqiel's motives, however, remain a mystery to me until this day. He sold his soul to a demon, however... He must have had a strong cause.'";
 	say "     'Eventually, the demons gained influence over our world, and we were forced into exile. Recently, Heaven also went through an augmentation in power, and that is the reason of what happened to Araqiel. They managed to reach him and threw an attempt at converting him back to their side, but they did not succeed completely. This was just before we managed to escape, so Mogdraz felt he was in a pinch. Between having Araqiel betray him inevitably and leaving him back, our big boss decided to keep the angel in a chamber, hidden within the void, where they could not reach. However, he seemingly escaped on his own and followed us through the void, even in his conflicted state, and by the time he arrived, he was fully converted... So, when you discovered him.'";
 	say "     'What you did for us was the only way we had to bring him back, and I'm glad you helped. You were the only one who could get close enough to him in order to obtain something that carried his essence.' He finishes the tale with a long pause before resuming his duties.";
 	if Resolution of Ambush The Purifier is 8:
 		now Resolution of Ambush The Purifier is 9;
-	WaitLineBreak;
 
 Section 1-0-3 - Toron During Pure Path
 
 Section 1-1 - Purifier One
 
 to say ResolveEvent Purifier One:
-	if HP of Araqiel is 0 or HP of Araqiel is 1 or HP of Araqiel >= 50 or (HP of Araqiel is 2 and Resolution of Purifier One > 0): [normal cycling event for Pure Araqiel]
+	if HP of Araqiel < 2 or HP of Araqiel >= 50 or (HP of Araqiel is 2 and Resolution of Purifier One > 0): [normal cycling event for Pure Araqiel]
 		say "     While you're wandering around the College Campus, you come across a rather quiet area, just around the corner of one of the blocks, with the way leading into a narrow alley. You know for a fact that this is one of the spots where incubi from all around the campus come to do whatever they have in mind with someone they [']invited['] for a good time.";
-		WaitLineBreak;
 		if AraqielTrackerCollege is 1:
+			WaitLineBreak;
 			say "     Carefully taking your steps through this particular zone, you begin hearing moaning coming from near your position. Which isn't unusual per se, but this time it isn't just sexual grunting. Right against the wall, there's one of these demons being pinned down by[if PlayerMet of Araqiel is true]... Araqiel[else] a very large... angel[end if]? Short white hair, bright blue eyes, a clean face and fully equipped for the occasion, unlike pure angels, this one is capable of literally fucking anyone into submission. You catch them right when the enormous seraphim is shooting his holy seed - if that's even a thing at this point - inside the hell creature, his massive muscles keeping the incubus in place, smothered against the hard wall. You can barely see him through the angel's vast wings and hulking frame.";
 			say "     'You're gonna stop being a naughty boy now, aren't you? Or I'll have to come and punish you again in the only way you understand!' he says, his voice deep and a little bit raspy, what you'd expect from a man of his size, a seasoned warrior perhaps, but clearly not from an angel. Surprisingly, the incubus cowers and lowers his head, replying in an almost whispering tone, 'Y-yes, sir...' The winged holiness notices your presence shortly after, gives you a big smile and a wink, then flies away like a movie superhero. The demon doesn't even look at you, though you can't help but notice his still raging boner. He really tamed another incubus...";
 			now AraqielTrackerCollege is 0;
@@ -222,11 +205,11 @@ to say ResolveEvent Purifier One:
 			say "     Nothing out of the ordinary happens, however, so you simply walk past this area. Fortunately, no incubi or any other kind of wandering creature bothered you in the process.";
 	else if HP of Araqiel is 2 and Resolution of Purifier One is 0: [actively hunting]
 		say "     You arrived at the College Campus a while ago, in search for the Purifier, in order to observe his encounter detailedly. Though that also means you will have to find him before he's ballsdeep on a demon's ass, or you might miss a perfect opportunity to observe the powerful seraphim. Without any further ado, you search the most probable places that he would be in, without skipping any corner preferred by the incubi. You will have to rely on Toron's instructions and your own senses to hope for a chance to find him...";
-		WaitLineBreak;
 		if AraqielTrackerCollege is 1:
-			let bonus be (( perception of player minus 5 ) divided by 2);
+			WaitLineBreak;
+			let bonus be ( perception of player minus 5 ) divided by 2;
 			let diceroll be a random number from 1 to 20;
-			say "You roll 1d20([diceroll])+[bonus] = [special-style-1][diceroll + bonus][roman type] vs [special-style-2]10[roman type] (Perception Check):[line break]";
+			say "You roll 1d20([diceroll])[if bonus >= 0]+[end if][bonus] = [special-style-1][diceroll + bonus][roman type] vs [special-style-2]10[roman type] (Perception Check):[line break]";
 			if diceroll + bonus >= 10: [player finds Araqiel]
 				say "     And just your luck, you find the angel, on the roof, observing an incubus harassing a helot, inside one of the alleys between building blocks. Immediately, you take cover to hide yourself from view, before you could be detected right away, and position yourself from a perspective that allows you a clear view of the winged man and the scene happening below. Glancing over the bulky seraphim, you notice him building a rather sizable erection, and even giving it a gentle stroke as he observes the demon thoroughly caressing the poor helot, who squirms around in both revolt and lust, helpless to the lusty devil's touch. You don't see the angel acting right away, though. He seems to be enjoying the scene, rather than condemning it. Judging by his extra equipment, you can conclude that he must have fallen a good way already from getting too close with demons.";
 				say "     It's not long, however, until he descends to meet the incubus half way over his generous handjob session. 'Look at what we've got here! Brought a friend before I could join in for the fun? Naughty little devil, aren't you?' he says, taunting the demon who seems as terrified as he's horny. Looks like the angel has been bullying him for a while, now, though that doesn't stop the Purifier from getting closer and liberating the helot from the demon's hands, who seems rather confused, like most helots look all the time when they're being saved from something. As the human runs away, to probably his master, it's now time to witness some angelical punishment. 'You keep doing this, and I'll have to keep coming to punish you. That's how it works,' he says to the incubus, grabbing him by the head and pushing down to meet his raging hard-on, throbbing with anticipation.";
@@ -256,10 +239,10 @@ to say ResolveEvent Purifier One:
 Section 1-2 - Purifier Two
 
 to say ResolveEvent Purifier Two:
-	if HP of Araqiel is 0 or HP of Araqiel is 1 or HP of Araqiel >= 50 or (HP of Araqiel is 2 and Resolution of Purifier Two > 0): [normal cycling event for Pure Araqiel]
+	if HP of Araqiel < 2 or HP of Araqiel >= 50 or (HP of Araqiel is 2 and Resolution of Purifier Two > 0): [normal cycling event for Pure Araqiel]
 		say "     Making your way through the streets of the Red Light District, you take a turn around a commercial block, or what remains of it. Seems like it was a [one of]simple clothing store[or]gift store[or]jewelry[or]small sex shop[at random] and you don't pay much attention to it, except when you hear some really loud moaning from inside. This particular area is known for its many sexual predators and fetishists, but even this much vocal intensity leaves you curious. Carefully, you sneak inside to try and see what's the source of such sounds.";
-		WaitLineBreak;
 		if AraqielTrackerRedLight is 1:
+			WaitLineBreak;
 			say "     One of the voices is female, with a rather sexy deep tone, which you can almost guess whom it belongs to. When your eyes meet the scene, you encounter [if PlayerMet of Araqiel is true]Araqiel[else]a very large angel[end if] absolutely dominating a succubus, his enormous bulk pinning her down underneath him as he pounds her pussy into submission. The size difference is so big that you feel she could come close to being torn apart, but pain is the thing you don't see in her face. By the time you arrive, her womb is getting filled with holy seed as the hulking seraphim holds her down, looking into her eyes. 'Don't go out there seducing innocents and tricking them into giving you their souls. That's very naughty behavior... Next time, I might have to go rougher...'";
 			say "     She gulps down, nodding and replying, 'Y-yes... Sir...' with a breathy voice, panting with a swollen tummy. Once more, the angel notices you coming closer, and his more than a foot-long of a holy dick gives out a tingle as soon as your gaze lays on it. 'Gotta pack a big gun to handle these creatures,' he says, with a friendly chuckle, before he flies away through the window. For someone his size, he sure looks lightweight, judging by how well he travels through air. As for the succubus, she doesn't even pay attention to you, as cock-drunk as she is. She won't bother anyone anytime soon.";
 			now AraqielTrackerCollege is 0;
@@ -270,9 +253,10 @@ to say ResolveEvent Purifier Two:
 	else if HP of Araqiel is 2 and Resolution of Purifier Two is 0: [actively hunting]
 		say "     As you've been exploring the Red Light District in hopes of finding the hulking angel before he gets into any trouble, you've traveled through countless streets looking for signs of the seraphim. Between places frequently roamed by demons such as the succubi, to other types of perverts, even risking yourself into troublesome situations, you just keep looking, carefully, aware of your surroundings and anything that might lead you to a possible encounter with the Purifier and his next punishment target...";
 		if AraqielTrackerRedLight is 1:
-			let bonus be (( perception of player minus 5 ) divided by 2);
+			WaitLineBreak;
+			let bonus be ( perception of player minus 5 ) divided by 2;
 			let diceroll be a random number from 1 to 20;
-			say "You roll 1d20([diceroll])+[bonus] = [special-style-1][diceroll + bonus][roman type] vs [special-style-2]10[roman type] (Perception Check):[line break]";
+			say "You roll 1d20([diceroll])[if bonus >= 0]+[end if][bonus] = [special-style-1][diceroll + bonus][roman type] vs [special-style-2]10[roman type] (Perception Check):[line break]";
 			if diceroll + bonus >= 10: [player finds Araqiel]
 				say "     It is right in this moment that you see something flying over the sky, someone big with large white feathered wings. Looks like you've found the seraphim, who seems to be heading directly towards something, or someone... You better rush. Following him, you take a turn into the street with the chapel, and your heart races. He's by the roof, facing the entrance while lost in thought, or so it seems. You have a feeling he can't really approach that place, perhaps because it has been burned out, or something else... A demonic aura, perhaps, or enchantment. So he simply stays put, like a lynx hidden within the tall grass, awaiting an opportunity to strike... But what is he looking for, or who?";
 				say "     Suddenly, he bursts out flying towards a succubus who's leaving the chapel and into the neighboring street, and you follow with the best of your ability. You actually need to run in order to keep up with the seraphim, as he's a quite fast flier! Then, out of nowhere, you could swear the ground beneath your feet trembled as he landed, nearly throwing you off balance, and he's still several meters ahead of you! Just how heavy is he?! Nonetheless, that doesn't stop you from quietly making your approach, and what you see is a mix between shocking, terrifying... and possibly really hot. The fully naked, hulking beast of an angel is literally sitting above a clueless succubus, adjusted right after her chest - so those are not absolutely smothered by his sheer size - as the rest of him is bending forward, both his fists on the ground at each side of her head, as he's looking deeply into her eyes.";
@@ -302,10 +286,10 @@ to say ResolveEvent Purifier Two:
 Section 1-3 - Purifier Three
 
 to say ResolveEvent Purifier Three:
-	if HP of Araqiel is 0 or HP of Araqiel is 1 or HP of Araqiel >= 50 or (HP of Araqiel is 2 and Resolution of Purifier Three > 0): [normal cycling event for Pure Araqiel]
+	if HP of Araqiel < 2 or HP of Araqiel >= 50 or (HP of Araqiel is 2 and Resolution of Purifier Three > 0): [normal cycling event for Pure Araqiel]
 		say "     While exploring the sewers, in the middle of the dark, you hear some really intense grunting coming from nearby. Judging by the large quantity of demon brutes inhabiting the area, it doesn't surprise you, but you keep your presence as quiet as possible. In fact, the noise is quite the distraction to help you cross this area undetected.";
-		WaitLineBreak;
 		if AraqielTrackerMall is 1:
+			WaitLineBreak;
 			say "     However, as you gain vision of what's happening, there's actually a very curious thing going on. It's [if PlayerMet of Araqiel is true]Araqiel[else]that big angel[end if] with, indeed, a demon brute. This time, they're even on size, and you can imagine the hell brute actually posed a challenge for this strong seraphim. But in the end, as far as you can see, the angel was victorious, as he's pounding the brute hard in the ass, his grunting audibly echoing through the place, with the sound of skin on skin clashing. You can see they're both slightly bruised, as it must have been an intense fight before the winged man managed to pin the brute down under his muscled bulk and finally subdue him. Despite the demon's protests, he has no other choice but to get his ass fucked until the angel shoots his seed inside him.";
 			say "     'Ohh... That was a good workout. Looks like I won, again! And you've learned your lesson, brute!' he says, as the demon lies down, seemingly exhausted. You keep yourself hidden in the darkness as the angel walks away with a half-erection, leaving the demon covered in cum, collapsed on the floor, grunting with discontent. He surely loves to wrestle the big hell boys...";
 			now AraqielTrackerCollege is 1; [he moves to College]
@@ -315,11 +299,11 @@ to say ResolveEvent Purifier Three:
 			say "     Looks like a couple of demon brutes are having a fist argument. You won't complain, as you managed to go past them without bringing any kind of trouble for yourself.";
 	else if HP of Araqiel is 2 and Resolution of Purifier Three is 0: [actively hunting]
 		say "     While wandering around the mall sewers, you keep close attention to the noise around you in hopes to catch the Purifier before he gets into anything, since you won't be able to have an ample vision of his whereabouts while in here. Like any other place with the same characteristics, the sewers are a dark labyrinth situated underground, so you won't see him simply flying above you. Instead, you need to keep your ears up and try to detect any strange sound that might give clues about where he's located, if he's even here right now. So, you walk around for a while...";
-		WaitLineBreak;
 		if AraqielTrackerMall is 1:
-			let bonus be (( perception of player minus 5 ) divided by 2);
+			WaitLineBreak;
+			let bonus be ( perception of player minus 5 ) divided by 2;
 			let diceroll be a random number from 1 to 20;
-			say "You roll 1d20([diceroll])+[bonus] = [special-style-1][diceroll + bonus][roman type] vs [special-style-2]10[roman type] (Perception Check):[line break]";
+			say "You roll 1d20([diceroll])[if bonus >= 0]+[end if][bonus] = [special-style-1][diceroll + bonus][roman type] vs [special-style-2]10[roman type] (Perception Check):[line break]";
 			if diceroll + bonus >= 10: [player finds Araqiel]
 				say "     And you begin to hear something, or someone, violently grunting in an actual non-sexual manner. This is something quite rare around here, as you're usually expecting some sort of tainted scene starred by a pervert, a sexual beast, or well, anything but literal sounds of smashing and shouting. Could this be a sign of the seraphim you're looking for? The only way to get an answer is to investigate, and that's exactly what you do. Taking a turn on the next corner towards the source of the noise, you continue through a barely illuminated corridor - with the undesired and familiar stench of dirty waters keeping you company - and you almost can't believe what your eyes catch. Not one, not even two, but a whole trio of demon brutes, getting absolutely destroyed in a fight against the hulking angel.";
 				say "     He's panting, and very bruised, but with a big smile on his face as one of the demons remains pinned down under his foot, with the other two's heads being held in place by the angel's massive muscular arms wrapped around their necks. 'Thought you could defeat me by outnumbering me, huh?! I'm not so easy to bring down!' You remain there, eyes wide open, can't even feel your jaw dropping, while facing the tremendous physical strength this winged man is displaying. Usually a demon brute is strong enough to deal with groups of average humans for being so huge and ripped, but not for the Purifier. He's about their size, and apparently, [italic type]thrice[roman type] as strong! What's more interesting, however, is that during all this time, the angel has one massive hard-on while laughing on their faces.";
@@ -357,7 +341,7 @@ to say MogdrazTalkPurifier:
 	now Resolution of Ambush The Purifier is 6;
 	connect Hellfire Corridor;
 
-instead of going down from Hellfire Corridor while (Resolution of Ambush The Purifier is 6):
+instead of going down from Hellfire Corridor while Resolution of Ambush The Purifier is 6:
 	say "     As you approach the dungeon, just like Mogdraz told, you wait before going in. It's not long until the big demon boss appears right behind you, his footsteps heavy and audible as he walks down the stairs. 'Thank you for waiting,' he says, as he then proceeds to walk towards the door ahead of you. Though he stops, with a brief pause before starting to speak again. 'I must tell you that... Well. What you did was a tremendous help to our business. In fact, Araqiel was already... bound to me, before all this began. It's a long story... But know that you've done the right thing.' It is rather intriguing that he feels the need to tell you this, but you're listening to whatever he has to say.";
 	say "     'We do this to protect ourselves, and this angel was already on the brink of falling completely. I have no idea what he would do if his corruption came from the influence of Hell, rather than from us. Like this, we are able to take hold of his unpredictability, without completely losing what makes him... who he is. I hope you understand that I am not, by any means, one of the Hell's lackeys, and in what depends on me, I shall make him our ally, not our slave. This arrangement is merely a safety measure.' Done with the explanation, he now asks you to come with him, inside the dungeon... As he pushes the door open, he tells you one final thing. 'It is probably best that you keep your distance, too. He must spend a really long time with my hellfire demons to consolidate his... conversion safely.'";
 	WaitLineBreak;
@@ -367,7 +351,6 @@ instead of going down from Hellfire Corridor while (Resolution of Ambush The Pur
 	say "     Even Mogdraz can't help himself but give his own jockstrap covered bulge a little stroke at the sight of his boys swarming the large fallen seraphim. The hulking ex-Purifier is lying down on the floor, with one demon riding his enormous cock, another humping his face, one holding his legs and fucking his ass from behind, and still another two on each side getting handjobs from the horny corrupted angel. It nearly looks like a train of hellfire demons all clustered on top of the winged man with their sexy red bodies as they deposit their loads, one after the other, deep inside the former holiness. You are only allowed to watch it happen before your eyes, knowing this was possible thanks to you.";
 	if Libido of Mogdraz > 0 and Libido of Mogdraz < 99:
 		say "     The demon boss stands still next to you, trying his best to not start jerking off right in this moment as the great businessman of a demon that he is. But the whole setting is quite inviting, if you wanted to use this opportunity to get closer to Mogdraz in this way...";
-		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Make a move and rub his crotch yourself.";
 		say "     ([link]N[as]n[end link]) - Try to make some conversation.";
 		if Player consents:
@@ -384,7 +367,7 @@ instead of going down from Hellfire Corridor while (Resolution of Ambush The Pur
 				say "     Though it seems he is waiting for something, and you see what. His demons are now going all deep on the former angel, by either shoving their lengths fully inside his holes, or taking hold of his hands, or even the one on top of his dick completely taking in the seraphim's cock ballsdeep, and you know he's aiming to share this moment with when they make the now corrupted holiness reach his ultimate climax. Shifting your eyes to what's now happening there, it doesn't take long as that happens, his muffled grunting going loud and intense as the ex-Purifier loses himself in an almost never-ending orgasm, the display itself enough to let you loose as well, biting your underlip and helplessly moaning as Mogdraz strokes both you and himself.";
 				WaitLineBreak;
 				say "     Your loads get mixed together as they land all over you and him, painting your bodies in white as it all begins to immediately form a puddle right by your feet, all while the demon boss plants another kiss on you until both your climaxes begin to subside... But it feels like it isn't enough for you. Soon, you begin to crave more, your lust intensifying, almost as if you were addicted to the sensation. Your mind goes way and beyond thinking about the endless possible ways of further reaching pleasure satisfaction...!";
-				WaitLineBreak;
+				wait for any key;
 				clear the screen;
 				say "     Then, you hear a snap of fingers. You find yourself looking at Mogdraz, naked, covered in cum, without any memory of what happened. 'It was just a small demonstration,' he says, and he could not sound any more cryptic about that.";
 			else: [he jerks off and slides a hand over the player's privates]
@@ -396,21 +379,17 @@ instead of going down from Hellfire Corridor while (Resolution of Ambush The Pur
 				say "     Though it seems he's waiting for something, and you see what. His demons are now going all deep on the former angel, by either shoving their lengths fully inside his holes, or taking hold of his hands, or even the one on top of his dick completely taking in the seraphim's cock ballsdeep, and you know he's aiming to share this moment with when they make the now corrupted holiness reach his ultimate climax. Shifting your eyes to what's now happening there, it doesn't take long as that happens, his muffled grunting going loud and intense as the ex-Purifier loses himself in an almost never-ending orgasm, the display itself enough to let you loose as well, biting your underlip and helplessly moaning as Mogdraz masturbates both you and himself.";
 				WaitLineBreak;
 				say "     Your orgasms mix up together as his cum lands all over you, painting your body in white as it all begins to immediately form a puddle right by your feet, all while the demon boss plants another kiss on you until both your climaxes begin to subside... But it feels like it isn't enough for you. Soon, you begin to crave more, your lust intensifying, almost as if you were addicted to the sensation. Your mind goes way and beyond thinking about the endless possible ways of further reaching pleasure satisfaction...!";
-				WaitLineBreak;
+				wait for any key;
 				clear the screen;
 				say "     Then, you hear a snap of fingers. You find yourself looking at Mogdraz, naked, covered in cum, without any memory of what happened. 'It was just a peek,' he says, and he could not sound any more cryptic about that.";
 			WaitLineBreak;
 			say "     'And just in time. I think we exhausted the poor guy,' he says, as his demon lackeys look in disappointment, still with their erections throbbing and ready, facing an unconscious fallen angel covered in and leaking cum everywhere. They look at their master for further instructions. 'Uh... well, I guess you could go play outside now, your job is complete,' he tells them, and happy to obey their lord, they disperse, running off to unknown parts. 'I ask you to return upstairs and give Araqiel a moment. Ah, yes, that's his name, by the way,' he tells you, and you nod. He then lets you go as you immediately return to the lounge.";
-			now PlayerMet of Araqiel is true;
-			say "     Perhaps it won't be long until he tends to the fallen angel's condition.";
 		else:
 			say "     Things were getting a little awkward there, so you figure it should be for the best if you started asking questions about the angel, such as what is going to happen to him after this. He clears his throat as he turns to you. 'Oh, well... I haven't decided, yet. I guess I'll address the state of his mind once this session ends, and see what he could be doing around here. I'm not letting him out after this, it would be even more dangerous. To us and to him.' A few moments pass, and it's just the gangbang scene that you observe all this time in silence, until the devil turns to you. 'Alright, I guess I'm going to ask you to wait upstairs. I will have to tend to Araqiel once they're done with him... Ah, yes, that's his name, by the way,' he tells you, and you nod. He then lets you go as you immediately return to the lounge.";
-			now PlayerMet of Araqiel is true;
-			say "     Perhaps it won't be long until he tends to the fallen angel's condition.";
 	else:
 		say "     As the demon boss was standing still next to you, things were getting a little awkward there, so you figure it should be for the best if you started asking questions about the angel, such as what is going to happen to him after this. He clears his throat as he turns to you. 'Oh, well... I haven't decided, yet. I guess I'll address the state of his mind once this session ends, and see what he could be doing around here. I'm not letting him out after this, it would be even more dangerous. To us and to him.' A few moments pass, and it's just the gangbang scene that you observe all this time in silence, until the devil turns to you. 'Alright, I guess I'm going to ask you to wait upstairs. I will have to tend to Araqiel once they're done with him... Ah, yes, that's his name, by the way,' he tells you, and you nod. He then lets you go as you immediately return to the lounge.";
-		now PlayerMet of Araqiel is true;
-		say "     Perhaps it won't be long until he tends to the fallen angel's condition.";
+	now PlayerMet of Araqiel is true;
+	say "     Perhaps it won't be long until he tends to the fallen angel's condition.";
 	now Resolution of Ambush The Purifier is 7;
 	move Player to Hellfire Lounge;
 	move Araqiel to Hellfire Dungeon;
@@ -455,7 +434,7 @@ PlayerFriended of Araqiel is false.
 PlayerControlled of Araqiel is false.
 PlayerFucked of Araqiel is false.
 OralVirgin of Araqiel is false.
-Virgin of Araqiel is false.
+Virgin of Araqiel is true.
 AnalVirgin of Araqiel is false.
 PenileVirgin of Araqiel is false.
 SexuallyExperienced of Araqiel is true.
@@ -463,7 +442,7 @@ TwistedCapacity of Araqiel is false. [Twisted Characters can take any penetratio
 Sterile of Araqiel is true. [steriles can't knock people up]
 MainInfection of Araqiel is "".
 Description of Araqiel is "[Araqieldesc]".
-Conversation of Araqiel is { "<This is nothing but a placeholder!>" }.
+fuckscene of Araqiel is "[SexWithAraqiel]".
 The scent of Araqiel is "     Araqiel smells [if HP of Araqiel is 3]almost like a demon, having lost his purity to the hellfires, sharing some of their masculine musk that faintly resembles brimstone and fire[else]masculine, sweet and pure, though all of this still manages to be slightly arousing thanks to him having fallen a bit, already[end if]. Though there's always still a hint of his characteristic minty scent".
 
 to say AraqielDesc:
@@ -491,7 +470,7 @@ The level of purifier seraphim is 1.
 Dexterity of purifier seraphim is 10.
 The summondesc of purifier seraphim is "[SummonAraqiel]".
 The dismissdesc of purifier seraphim is "[DismissAraqiel]".
-The assault of purifier seraphim is "[one of]Araqiel body slams your enemy with his incredible weight, nearly crushing them. He then rolls over and stands up, avoiding any retribution.[or]The seraphim takes flight, then delivers a swift kick on your enemy as he passes by, continuing on harassing them as the fight goes by.[or]Applying one of his best cock-fu moves, the fallen angel manages to swing his heavy and thick meatlog against the enemy's face, shouting 'Bullseye!' as he flies away to prepare for the next strike.[or]The Purifier jumps on top of your enemy and delivers a powerful punch.[or]The Purifier jumps on top of your enemy and delivers a mega powerful smash with both his hands, then flies away.[or]Spreading his vast bright wings, Araqiel creates a way to conceal his next attack, delivering a surprise strike on the enemy's face as he laughs about it.[at random]".
+The assault of purifier seraphim is "[one of]Araqiel body slams your enemy with his incredible weight, nearly crushing them. He then rolls over and stands up, avoiding any retribution[or]The seraphim takes flight, then delivers a swift kick on your enemy as he passes by, continuing on harassing them as the fight goes by[or]Applying one of his best cock-fu moves, the fallen angel manages to swing his heavy and thick meatlog against the enemy's face, shouting 'Bullseye!' as he flies away to prepare for the next strike[or]The Purifier jumps on top of your enemy and delivers a powerful punch[or]The Purifier jumps on top of your enemy and delivers a mega powerful smash with both his hands, then flies away[or]Spreading his vast bright wings, Araqiel creates a way to conceal his next attack, delivering a surprise strike on the enemy's face as he laughs about it[at random].".
 the fuckscene of purifier seraphim is "[SexWithAraqiel]".
 
 to say SummonAraqiel:
@@ -514,7 +493,7 @@ Section 3 - Araqiel Talk
 instead of conversing Araqiel:
 	if HP of Araqiel is 3: [Corrupted]
 		say "     As you approach the fallen angel, he makes space for you, which in truth is just to bring his muscled arm around your shoulder and bring you to rest against his side. 'Well, hello there! Came for just a talk? Alright, that's fine, too. I'll try not to jump on top of you or anything, unless that's what you want...' He gives you a charming wink as he flexes his chest. 'Now, have you been eating well? Drinking up plenty of that manly thick juice to make you strong and healthy? Just reminding you that I can provide lots and lots of it, if you want to get big like me before I bend you ov...! Ah-... that's right! Just talking! Okay, I can do that.'";
-		say "[CAraqielTalkMenu]";
+		say "[line break][CAraqielTalkMenu]";
 	[else: [Pure]
 		say "     As you approach the hulking seraphim, he makes space for you, allowing you to take a seat right next to him as he gives you a friendly pat on the shoulder. 'Well, hello there! Came for just a talk? I'm happy to oblige! I admit, sometimes it's nice to have someone talk to...' he says, smiling at you before he lets out a chuckle. 'Hope you've been taking good care of yourself! That's always important. Eating well, too, if you want to be as strong as me! Or... well, just stronger, in general. I know I pack a good punch.'";
 		say "[PAraqielTalkMenu]";]
@@ -523,7 +502,6 @@ Section 3-1 - CORRUPTED Araqiel Talk
 
 to say CAraqielTalkMenu:
 	say "     [bold type]What do you want to talk to Araqiel about?[roman type][line break]";
-	LineBreak;
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]
@@ -537,18 +515,18 @@ to say CAraqielTalkMenu:
 		now title entry is "His process of corruption";
 		now sortorder entry is 2;
 		now description entry is "Knowing you were the responsible for his current state...";
-	[]
-	if Energy of Araqiel > 1:
-		choose a blank row in table of fucking options;
-		now title entry is "About having sex";
-		now sortorder entry is 3;
-		now description entry is "Have a good sex talk with the hulking fallen seraphim";
-	[]
-	if Energy of Araqiel > 1 and demonologist is listed in companionList of Player and "Met Xaedihr" is not listed in traits of Araqiel:
-		choose a blank row in table of fucking options;
-		now title entry is "Introduce him to Xaedihr";
-		now sortorder entry is 4;
-		now description entry is "Have Araqiel meet your half-demon companion";
+		[]
+		if Energy of Araqiel > 1:
+			choose a blank row in table of fucking options;
+			now title entry is "About having sex";
+			now sortorder entry is 3;
+			now description entry is "Have a good sex talk with the hulking fallen seraphim";
+			[]
+			if demonologist is listed in companionList of Player and "Met Xaedihr" is not listed in traits of Araqiel:
+				choose a blank row in table of fucking options;
+				now title entry is "Introduce him to Xaedihr";
+				now sortorder entry is 4;
+				now description entry is "Have Araqiel meet your half-demon companion";
 	[]
 	sort the table of fucking options in sortorder order;
 	repeat with y running from 1 to number of filled rows in table of fucking options:
@@ -563,24 +541,26 @@ to say CAraqielTalkMenu:
 			choose row calcnumber in table of fucking options;
 			say "[title entry]: [description entry]?";
 			if Player consents:
-				let nam be title entry;
+				LineBreak;
 				now sextablerun is 1;
-				if (nam is "Himself"):
-					say "[CAraqielTalkHimself]";
-				if (nam is "His process of corruption"):
-					say "[CAraqielTalkCorruption]";
-				if (nam is "About having sex"):
-					say "[CAraqielTalkSex]";
-				if (nam is "Introduce him to Xaedihr"):
-					say "[CAraqielTalkXaedihr]";
+				if title entry is:
+					-- "Himself":
+						say "[CAraqielTalkHimself]";
+					-- "His process of corruption":
+						say "[CAraqielTalkCorruption]";
+					-- "About having sex":
+						say "[CAraqielTalkSex]";
+					-- "Introduce him to Xaedihr":
+						say "[CAraqielTalkXaedihr]";
 				wait for any key;
 				say "[CAraqielTalkMenu]"; [looping back to keep talking with him]
 		else if calcnumber is 0:
+			LineBreak;
 			now sextablerun is 1;
 			say "     You excuse yourself as you have to take your leave. Araqiel smiles to you, though he can't hide the disappointment in seeing you go.";
 			wait for any key;
 		else:
-			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options], or 0 to exit.";
 	clear the screen and hyperlink list;
 
 to say CAraqielTalkHimself:
@@ -601,12 +581,7 @@ to say CAraqielTalkSex:
 	say "     Since he wants it so badly, you might as well ask him what he enjoys doing. He raises his eyebrows in interest, bringing you even closer to him as he leans his head to your side. 'Oh, what I enjoy doing? I'm flattered you ask. That means you want to please me better, right? Hah, that's what communication is for! Mogdraz tells me, nothing better than keeping open with your partner so you learn more about each other! And... well, they pay more that way,' he says, making a pause. 'Though is it bad that I sometimes just want to fuck them, regardless of their permission? In Heaven, the mere thought of that would guarantee you a kick in the ass, which is why I hated that place... But nothing gets me off more than overpowering someone. I'm just so fucking horny I wouldn't think twice, I'd destroy them! Male, female, both, of any shape and size, oh I so would absolutely ruin them.'";
 	say "     Although, you have a feeling that this is what he obviously likes, so you ask him about other things that he doesn't talk of as much. 'Hm, you mean other tastes, too? Well, uh... I guess I could experiment. Mogdraz's dick makes me curious, too... he's got a big one, actually about the size of mine. We actually never fucked, he instead had his lackeys touch me all over. Y'know what, it kinda felt good, then! Uh, I wasn't very aware of what was happening, but... It felt good. Though I wonder how it feels to get fucked by a really big dick? Hm... But now that I think of it, I think I'd like riding a smaller dude, too. Milk him until he's got nothing left. Eh, I guess I'm open to anything as long as it's sex. What about you?' he asks you, finally making a pause and waiting for an answer.";
 	WaitLineBreak;
-	if Player is dominant:
-		say "     To give him a reply, you go on about your preferred role as a dominant, wanting to have control of situations. 'Oh. Ooooh... Okay. You like dominating, then? Not sure how this would work... Uh, maybe... Maybe I could try let you take the reins, but I hope you know what you're doing! You're sure you can handle me?' he asks, a little hesitant to let you take a more dominant role towards him, but not saying no to the possibility. 'Okay, hit me up whenever you want to try some stuff, I'm down for it,' he adds. Maybe you could try some things with the fallen angel in the future.";
-	else if Player is submissive:
-		say "     To give him a reply, you go on about your preferred role as a submissive, wanting to be taken control of and serving others. His eyes gleam with excitement as you talk about it. 'Oh, a cute little submissive all for myself? I hope you're not kidding... You'd worship me...? Serve me...? You'd be my slave?' All his questions awaken your submissive instincts, and you find yourself reflexively nodding. 'You won't regret it. But I'm a big guy with big needs... Are you sure you're up for the task?' He gives you a grin as he reaches for your head, patting you on the top by the time you're saying yes. 'That's a good [boygirl]. Let me know whenever you want to service me. It will be my pleasure, and yours by extension. Guaranteed,' he adds as he chuckles.";
-	else: [player is neither, so still exploring]
-		say "     To give him a reply, you tell him you really don't know what you like the most, and that right now you're still only exploring. 'That's great! Why limit ourselves to one thing, right? You can get the best from every world! Hey, I can teach you lots of stuff. If you've never been with a strong and powerful angel with a big dick, I could be the one! I know I'm not as big as those centaur stallions - and gosh, I wish I was! - I still pack a good one, don't you think?' He makes eye movement towards his manhood, showing it off to you by grabbing it and giving it a few swings, which is enough to cause it to harden before your gaze. 'Fuck, I really just have to touch it a little to make it hard. Well, if you're down for some sex right now, let me know. I'm happy to explore with you,' he adds, as he chuckles.";
+	say "     To give him a reply, you [if Player is dominant]go on about your preferred role as a dominant, wanting to have control of situations. 'Oh. Ooooh... Okay. You like dominating, then? Not sure how this would work... Uh, maybe... Maybe I could try let you take the reins, but I hope you know what you're doing! You're sure you can handle me?' he asks, a little hesitant to let you take a more dominant role towards him, but not saying no to the possibility. 'Okay, hit me up whenever you want to try some stuff, I'm down for it,' he adds. Maybe you could try some things with the fallen angel in the future[else if Player is submissive]go on about your preferred role as a submissive, wanting to be taken control of and serving others. His eyes gleam with excitement as you talk about it. 'Oh, a cute little submissive all for myself? I hope you're not kidding... You'd worship me...? Serve me...? You'd be my slave?' All his questions awaken your submissive instincts, and you find yourself reflexively nodding. 'You won't regret it. But I'm a big guy with big needs... Are you sure you're up for the task?' He gives you a grin as he reaches for your head, patting you on the top by the time you're saying yes. 'That's a good [boygirl]. Let me know whenever you want to service me. It will be my pleasure, and yours by extension. Guaranteed,' he adds as he chuckles[else]tell him you really don't know what you like the most, and that right now you're still only exploring. 'That's great! Why limit ourselves to one thing, right? You can get the best from every world! Hey, I can teach you lots of stuff. If you've never been with a strong and powerful angel with a big dick, I could be the one! I know I'm not as big as those centaur stallions - and gosh, I wish I was! - I still pack a good one, don't you think?' He makes eye movement towards his manhood, showing it off to you by grabbing it and giving it a few swings, which is enough to cause it to harden before your gaze. 'Fuck, I really just have to touch it a little to make it hard. Well, if you're down for some sex right now, let me know. I'm happy to explore with you,' he adds, as he chuckles[end if].";
 	if Libido of Araqiel is 0:
 		now Libido of Araqiel is 1;
 
@@ -616,85 +591,80 @@ to say CAraqielTalkXaedihr:
 	WaitLineBreak;
 	say "     'Oh, well I'm a seraphim! Or was! Maybe not anymore so, though I still... feel like one? Kind of... Anyway, I was created with one objective in mind, which is purifying the lands of all evil and corruption, by any means necessary! Which is why we're given these strong muscles to pin down the naughties and teach them unforgettable lessons! Though all this started when I got too close with a harem of them and I... uh... well I... Really liked it, okay? I-it was new to me! All that... touching and... those tiny red hands, rubbing all over my muscles, so fascinated about my size and strength... There were so many, and they were so little and puny...! I could crush them so easily...' As Araqiel keeps talking, his manhood continues to harden, while Xaedihr notes everything down frantically. 'Imps. You were swarmed by imps. Typical,' the half-sorcerer makes the obvious remark, though his eyes widen as he notices the tip of the former heavenly man's cock bumping against his leg.";
 	say "     'Ah, shit! Sorry! I... T-This is difficult!' he apologizes to the sorcerer, who chuckles in response. 'Well I know I'm handsome, you didn't need to be so obvious,' says the sorcerer, though you feel like it's just to lighten the mood, as it actually makes Araqiel smile. 'Hah! I like you. Humorous! Heh...' His dick just seems to get harder the more he talks, throbbing every second, and you can see some embarrassment in the big guy. 'Well, then. I believe you should take care of him now. He seems like he needs a helping hand or two,' says the sorcerer to you, as he puts back his notepad and bows goodbye to Araqiel. 'You will get used to being a horny boy, I'm certain. Perhaps in the future we might share an intimate session, if I am allowed.' The hulking winged man is left blushing, with the biggest hard-on ever, as Xaedihr takes his leave. 'Did I screw it up? I can never keep [italic type]him[roman type] down... Ugh! Please tell me I'm allowed to fuck him? He's so damn hot...!'";
-	WaitLineBreak;
 	say "     It seems Xaedihr caused a good impression on Araqiel. Maybe in the future you can invite the half-demon for a duo activity with the fallen angel...";
 	add "Met Xaedihr" to traits of Araqiel;
 	add "Met Araqiel" to traits of Xaedihr;
 
 Section 3-2 - CORRUPTED Araqiel Sex
 
-Instead of fucking Araqiel:
-	say "[SexWithAraqiel]";
-
 to say SexWithAraqiel:
 	if Libido of Araqiel is 0:
 		say "     Maybe you should talk and get to know him before you jump right into sex...";
-	else if Libido of Araqiel > 0:
-		if lastfuck of Araqiel - turns < 4:
-			say "     You show your interest in having sex with the fallen seraphim. Though he looks at you with a receptive expression, he stops you there. 'I would love that, but... give me some time to refill, okay?' he says, giving you a suggestive smile.";
-		else:
-			say "     You show your interest in having sex with the fallen seraphim, which he gladly reciprocates. 'Oh yes? Well, pick your options... I'm sure there's plenty we can do,' he says, his massive cock slowly rising to attention.";
-			now sextablerun is 0;
-			blank out the whole of table of fucking options;
+	else if lastfuck of Araqiel - turns < 4:
+		say "     You show your interest in having sex with the fallen seraphim. Though he looks at you with a receptive expression, he stops you there. 'I would love that, but... give me some time to refill, okay?' he says, giving you a suggestive smile.";
+	else:
+		say "     You show your interest in having sex with the fallen seraphim, which he gladly reciprocates. 'Oh yes? Well, pick your options... I'm sure there's plenty we can do,' he says, his massive cock slowly rising to attention.";
+		now sextablerun is 0;
+		blank out the whole of table of fucking options;
+		[]
+		if Player is not dominant:
+			choose a blank row in table of fucking options;
+			now title entry is "Worship his cock";
+			now sortorder entry is 1;
+			now description entry is "Service the fallen angel with the best of your oral skills as he only observes you";
+		[]
+		if Player is not submissive and Player is male:
+			choose a blank row in table of fucking options;
+			now title entry is "Get him to blow you";
+			now sortorder entry is 2;
+			now description entry is "Make him get on his knees and suck your dick";
 			[]
-			if Player is not dominant:
-				choose a blank row in table of fucking options;
-				now title entry is "Worship his cock";
-				now sortorder entry is 1;
-				now description entry is "Service the fallen angel with the best of your oral skills as he only observes you";
-			[]
-			if Player is not submissive and Player is male:
-				choose a blank row in table of fucking options;
-				now title entry is "Get him to blow you";
-				now sortorder entry is 2;
-				now description entry is "Make him get on his knees and suck your dick";
-			[]
-			if Player is not submissive and Player is male and (player is in Hellfire Dungeon or player is in Hellfire Cell One):
+			if player is in Hellfire Dungeon or player is in Hellfire Cell One:
 				choose a blank row in table of fucking options;
 				now title entry is "Spitroast the incubus prisoner";
 				now sortorder entry is 3;
 				now description entry is "Get the Dungeon Master to show you some fun with Eranyd, the incubus cuntboy prisoner";
-			[]
-			sort the table of fucking options in sortorder order;
-			repeat with y running from 1 to number of filled rows in table of fucking options:
-				choose row y from the table of fucking options;
-				say "[link][y] - [title entry][as][y][end link][line break]";
-			say "[link]0 - Nevermind[as]0[end link][line break]";
-			while sextablerun is 0:
-				say "Pick the corresponding number> [run paragraph on]";
-				get a number;
-				if calcnumber > 0 and calcnumber <= the number of filled rows in table of fucking options:
-					now current menu selection is calcnumber;
-					choose row calcnumber in table of fucking options;
-					say "[title entry]: [description entry]?";
-					if Player consents:
-						let nam be title entry;
-						now sextablerun is 1;
-						if (nam is "Worship his cock"):
-							say "[CAraqielCockWorship]";
-						if (nam is "Get him to blow you"):
-							say "[CAraqielSuckDick]";
-						if (nam is "Spitroast the incubus prisoner"):
-							say "[CAraqielSpitroastEranyd]";
-						wait for any key;
-				else if calcnumber is 0:
+		[]
+		sort the table of fucking options in sortorder order;
+		repeat with y running from 1 to number of filled rows in table of fucking options:
+			choose row y from the table of fucking options;
+			say "[link][y] - [title entry][as][y][end link][line break]";
+		say "[link]0 - Nevermind[as]0[end link][line break]";
+		while sextablerun is 0:
+			say "Pick the corresponding number> [run paragraph on]";
+			get a number;
+			if calcnumber > 0 and calcnumber <= the number of filled rows in table of fucking options:
+				now current menu selection is calcnumber;
+				choose row calcnumber in table of fucking options;
+				say "[title entry]: [description entry]?";
+				if Player consents:
+					LineBreak;
 					now sextablerun is 1;
-					say "     You excuse yourself as you have to take your leave. Araqiel smiles to you, though he can't hide the disappointment in seeing you go.";
-					wait for any key;
-				else:
-					say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
-			clear the screen and hyperlink list;
+					if title entry is:
+						-- "Worship his cock":
+							say "[CAraqielCockWorship]";
+						-- "Get him to blow you":
+							say "[CAraqielSuckDick]";
+						-- "Spitroast the incubus prisoner":
+							say "[CAraqielSpitroastEranyd]";
+			else if calcnumber is 0:
+				LineBreak;
+				now sextablerun is 1;
+				say "     You excuse yourself as you have to take your leave. Araqiel smiles to you, though he can't hide the disappointment in seeing you go.";
+			else:
+				say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options], or 0 to exit.";
+		wait for any key;
+		clear the screen and hyperlink list;
 
 to say CAraqielCockWorship:
 	say "     Knowing how much he likes a dedicated mouth around his rod, you let the fallen angel know that you'd like to get on your knees and service him down below, while he simply lays back, relaxing, and sees you pleasuring him. 'Oh, fuck that's hot! Yeah, come over here... And worship this cock...' he answers, and his meaty prick is already growing to a full erection as soon as you finish speaking. Now that he's more than ready to receive your attention, you kneel before him, placing your hand around his balls at first, and feeling the entire area around his junk. You nearly can't believe how good he smells down here, a mix of manly musk and still a hint of heavenly freshness, which makes it feel as sweet as candy. He tastes like one, too, as you put your tongue to work all over his sack, with your other hand slowly stroking around the base of his shaft.";
-	say "     'Mmph... You know what I like... Slowly at first...' he says, as his manhood throbs with eagerness, '... hard and deep later... Fuck... Yes! Keep going... be a good [boygirl] for me...' Your eyes meet when you look at his face, only to see him biting his lip already, panting in need, all while you tease the hell out of him with slight fondling, licking and kissing, his nuts growing fuller by the second, the best way to measure how excited you're getting the hulking winged man. Then, you're about to slide your tongue from the base all the way to the tip through the underline of his shaft, when he moves a hand over the back of your head. He fights it, the temptation of grabbing you and having his way with you, and simply gives you a gentle tap, a stroke on the cheek, and slides it down over your shoulder affectionately.";
+	say "     'Mmph... You know what I like... Slowly at first...' he says, as his manhood throbs with eagerness, '...hard and deep later... Fuck... Yes! Keep going... be a good [boygirl] for me...' Your eyes meet when you look at his face, only to see him biting his lip already, panting in need, all while you tease the hell out of him with slight fondling, licking and kissing, his nuts growing fuller by the second, the best way to measure how excited you're getting the hulking winged man. Then, you're about to slide your tongue from the base all the way to the tip through the underline of his shaft, when he moves a hand over the back of your head. He fights it, the temptation of grabbing you and having his way with you, and simply gives you a gentle tap, a stroke on the cheek, and slides it down over your shoulder affectionately.";
 	WaitLineBreak;
 	say "     There's nothing stopping you from licking around the large tip, the glans already slick with precum. You actually have to use both your hands to get your grasp around his girth entirely, and it throbs so hard you're wondering how long he will last through your servicing. 'Why do you do this so well, it shouldn't be allowed by any natural law...' he comments, ending in a moan which he rushes to hold, trying to keep focus on observing you worshiping his cock. Though his jaw drops immediately once you get your lips around the tip, and start pushing it a little. It's a huge one, very hard to open your mouth so wide in order to take all that meat, which is constantly pulsing and begging for your attention. With so much to handle, you keep your hands working on his shaft and balls, which are growing heavier by the time.";
 	say "     You keep giving him the look, the eye contact that drives him absolutely crazy. Often you're seeing him lifting his hands, as if going to grab you, then stopping in mid-air as he clenches his fists, sometimes bringing them over to his head instead in completely desperate lust. He's fighting himself so hard, punching the wall behind him slightly, his hips trying their best to not start thrusting and turn this into a hard facefucking session. 'You're driving me crazy... I can't stand this... This is torture... Too fucking GOOD torture...' He pants slightly, letting some breathy moans escape his mouth as he squirms about, all while you suck on how deep you can get of his dong past your lips. Your tongue doesn't stop for a rest, either, you make it wiggle and caress all the sensitive spots when you pull back, before letting it in again, keeping the steady momentum as you stroke his shaft...";
 	WaitLineBreak;
 	say "     'I just want to grab you... fucking use your throat... stretch it all over my dick... make you choke... make you beg for it... F-fuck you until you pass out...' He's closing his eyes, almost crying out of the torturous pleasure you're giving him. Though figuring you're done with going slow, you proceed to pick up the pace, stroking him quicker, sucking him faster, reaching more of his dick with both your mouth and hands, and giving his massive balls a good squeeze once in a while. His precum tastes amazing, a mix of sweet and salty that makes you want more, and even you find it difficult to resist any of the large seraphim's inner desires, the ones you hear as he talks about them out loud.";
 	say "     'Oh fuck, you're going to make me cum so much... My balls are aching...' he warns you, and all you can do for now is stroke his poor, distended orbs that his corruption twisted into growing indefinitely bigger the more he holds his orgasm in. There should to be a cap, but you don't intend to find that out this time. You're keen on making him blow his load as he's getting closer and closer to cumming... The question is, [bold type]how do you want to do it?[roman type][line break]";
-	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Try your best to swallow his load.";
 	say "     ([link]N[as]n[end link]) - Make him cum all over himself.";
 	if Player consents:
@@ -707,13 +677,11 @@ to say CAraqielCockWorship:
 		LineBreak;
 		say "     An idea comes to your mind, and with that, you begin to slowly lean his throbbing member upwards, and push it in his direction as you shift your mouth over to the underline of his shaft, licking his glans and stroking the rest of his cock as fast as you can. 'Shit, I'm gonna... cuuum...!' he shouts, grunts and moans as all the heavy cargo inside his gonads is shot at a tremendous force right towards himself, one spurt enough to make an absurd amount of cum rain all over his muscular pecs, abs, and slipping onto his thighs. You don't escape the shower, though, getting some of it on your face, and obviously running down your hands as you keep stroking him for the duration of his orgasm.";
 		say "     It still takes him an additional half a minute for his climax to give signs of subsiding, but not before his entire body gets covered in his own thick layers of twisted holy cum, some having landed on his face as a result of the force he's shooting at. By the time it finally starts to wane down, he's breathing hard and deep, looking over at you. 'Holy shit... I think that's over... Fuck! You just made me cum all over myself! I should be making you lick it all off, now...' he says, rubbing his creamy jizz all over his muscular pecs, bulging biceps, down his rippling abs... down his still half-hard shaft and his powerful thighs... You nearly can't believe how much of his body he managed to bathe with a single load, but you could think about [bold type]obliging his indirect request and lick his cum off his body...[roman type][line break]";
-		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Lick him clean.";
 		say "     ([link]N[as]n[end link]) - Just laugh about it.";
 		if Player consents:
 			LineBreak;
 			say "     That's the least you can do, and don't pretend you don't want it, either. Leaning over the towering angel's body, you put your tongue to work, starting with his powerful legs, licking off any thick drop that's still making its way to the ground. 'Oooh... what a good [boygirl] you are... This is better than Toron's way of cleaning up... I want no trace left, so you better clear your schedule for today.' If he's serious, you're going to be spending a long, long time to lick his whole body clean, with the amount of muscles he has and the corners you have to cover with your mouth. You're still only on his legs and this is looking like an eternally long task...! He just puts his hands over the back of his head, takes a seat on the ground and leans back against the wall, letting you get every inch of him with relative ease. 'Fuck yes... I might get hard again during this... Don't do too well unless you want to lick off a second load...'";
-			WaitLineBreak;
 			say "     It takes really long, but you eventually manage to get through his abs, his pecs, go up his neck, and even his face he makes you lick clean. Though before you pull out, he grabs you for a kiss, pulling you and taking you in for a full body embrace. 'You're such a sweet. Here, take a rest over my pecs before you go, you'll be feeling so much better after...' As you lean your head on top of his manly pillows, you almost feel like taking a nap while he keeps stroking your ear...";
 		else:
 			LineBreak;
@@ -753,19 +721,18 @@ to say CAraqielSpitroastEranyd:
 
 Section 4 - CORRUPTED Events
 
-instead of going down from Hellfire Corridor while (Resolution of Ambush The Purifier is 7 and Energy of Araqiel > 1): [Will only trigger after player has spoken with Araqiel about most subjects]
+instead of going down from Hellfire Corridor while Resolution of Ambush The Purifier is 7 and Energy of Araqiel > 1: [Will only trigger after player has spoken with Araqiel about most subjects]
 	say "     As you were on your way down to the dungeons and go for the door's handle, you notice that it won't budge. It seems to have been locked for some reason, and since you don't have the keys, your best bet is to ask Toron what is going on... But before you decide to walk up the stairs, you hear some voices, very muffled and hard to understand from where you're standing. You manage to recognize one of them, an unmistakable deep and solid tone, a little raspy and tough, yet noble vocabulary... Undoubtedly, it is Mogdraz, and he has locked himself in with Araqiel. Now, one could ask what would they be doing which is so important that the door must be locked for that effect... Perhaps you could lean closer to have a listen of what they are saying? Or what they are actually [italic type]doing[roman type]... providing that it is some sort of activity, someone could wonder...";
-	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Eavesdrop on them.";
 	say "     ([link]N[as]n[end link]) - Some things are better left alone.";
 	if Player consents:
 		LineBreak;
 		say "     If you lean your head over the door, perhaps you could hear them more clearly... Though this seems wrong, somehow. You feel like you're wronging Mogdraz by doing this, but... There is certainly more than meets the eye between these two. Carefully, you approach the door, place your hands over the wooden surface, then your ears, and very quietly, you listen...";
+		say "     '...You have risked too much in following me here, you know that.' - that's Mogdraz speaking. Fortunately, you can hear them well - 'I only needed more time before I could reestablish our link.' The angel follows up with, 'Aw... Must we talk about this again? Here? What if your special guest decides to come visit me...?' His voice sounds lighter and clearer than Mogdraz's, so they can be distinguished well. 'Don't worry about [ObjectPro], [SubjectPro] is merely a special guest. I'm sure knowing about our deal would not sever any ties nor pose any problems.' Mogdraz confirmed they were talking about [italic type]you[roman type]... But why are they, in such manner? And what is this deal he is talking about?";
 		WaitLineBreak;
-		say "     '... You have risked too much in following me here, you know that.' - that's Mogdraz speaking. Fortunately, you can hear them well - 'I only needed more time before I could reestablish our link.' The angel follows up with, 'Aw... Must we talk about this again? Here? What if your special guest decides to come visit me...?' His voice sounds lighter and clearer than Mogdraz's, so they can be distinguished well. 'Don't worry about [ObjectPro], [SubjectPro] is merely a special guest. I'm sure knowing about our deal would not sever any ties nor pose any problems.' Mogdraz confirmed they were talking about [italic type]you[roman type]... But why are they, in such manner? And what is this deal he is talking about?";
 		say "     'Well, whatever you say. Although this job seems to be a tad bit annoying, at best! I would prefer to be roaming the streets, trying to gather some new acquisitions for your business, or crushing some rival demons into submission. Instead, I am locked in a dungeon, to serve the bottom bitches you throw at me! As if I could even be considered a decent Dungeon Master in these conditions, I cannot even go outside!' Araqiel continues to speak, clearly unhappy about his fate, or so it seems. 'At the very least, I would like permission to play with your special guest, and if [SubjectPro] ended up helping you so much, maybe you could allow [ObjectPro] to take me for a walk or so! I will get crazy if I remain here for too long...!'";
-		WaitLineBreak;
 		say "     Mogdraz replies after a while, the source of his voice having seemingly changed. He seems to be walking while talking. 'Well, of course you are free to [']play['] with my guest, and I might reconsider your situation once the dust settles. But, and I must emphasize this, remember you are under a contract. Which, by the way, it is what truly saved you from falling into Heaven's chains again. I told you, I would not enforce my will upon you, but if it has to come to that...' Now, Mogdraz is sounding very intimidating. What was that, Araqiel is bound by a contract? Does that mean Mogdraz owns Araqiel's soul...? From the very beginning, it seems. The Demon Lord finishes his sentence with a heavy tone. 'I will not hesitate.'";
+		WaitLineBreak;
 		say "     The fallen angel urges to talk. 'Whoa, okay, no need for that. I'll behave... and do as you say. I'll run this dungeon for you and make everyone feel reeeally good under my care, satisfy their desires and all that, bringing you the income and the information, take care of the prisoners... I know the rules. I'm just asking for a bit of... comprehension, you know? You wouldn't like to be locked in a room forever, would you?! The void was driving me insane! And that is, by the way, why I decided to get out. I just... thought I would fare better.' The Demon Lord does not say anything but 'You have been warned.' All this is before he walks towards the door, which you can clearly conclude by the sound of his closer footsteps.";
 		say "     It is time for you to scramble out of here...";
 		WaitLineBreak;

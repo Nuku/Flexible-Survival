@@ -2,9 +2,8 @@ Version 2 of Tristian by Verath begins here.
 [ Updated files, reordered content, renamed infection to Palomino and made it non-infectious normally ]
 [ Two new sex scenes: one random and one timed, then random after - Stripes ]
 
-an everyturn rule: [bugfix for misplaced npcs 2019-06-08] [TODO: Remove in a month or so]
-	if Tristian is in NPC Nexus:
-		move Tristian to PALOMINO Dance Club;
+a postimport rule: [bugfixing rules for players that import savegames]
+	move Tristian to PALOMINO Dance Club;
 
 Section 1 - Tristian Basics
 
@@ -13,6 +12,7 @@ object	name
 Tristian	"Tristian"
 
 Tristian is a man.
+Tristian is in PALOMINO Dance Club.
 ScaleValue of Tristian is 4. [human+ sized]
 Body Weight of Tristian is 5. [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
 Body Definition of Tristian is 8. [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
@@ -48,19 +48,11 @@ SexuallyExperienced of Tristian is true.
 TwistedCapacity of Tristian is false. [Twisted Characters can take any penetration, no matter the size]
 Sterile of Tristian is false. [steriles can't knock people up]
 MainInfection of Tristian is "Palomino Stallion".
-
-
-Description of Tristian is "[TristianDesc]".
-
-to say TristianDesc:
-	project Figure of Tristian_icon;
-	say "     Approaching one of the dim booths a rather cute stallion boy turns to look at you. His shoulder length dark hair is cut into an emo style covering his left eye. You see that he is wearing tight black leather pants with modified boots that come up to his knees that fit his digitigrade legs. He's also wearing a tight shirt that does nothing to hide his tight swimmer's build, you notice the hints of pierced nipples pushing at the fabric of his shirt. On his wrists are spiked cuffs and a few shiny bracelets. As you continue to look him over you notice the multiple rings in his ears pierced right eyebrow and his pierced lower lip. Around his neck is a necklace that incorporates an ankh and a horseshoe.";
-
-Conversation of Tristian is { "Neigh!" }.
-Tristian is in PALOMINO Dance Club.
+Description of Tristian is "     Approaching one of the dim booths a rather cute stallion boy turns to look at you. His shoulder length dark hair is cut into an emo style covering his left eye. You see that he is wearing tight black leather pants with modified boots that come up to his knees that fit his digitigrade legs. He's also wearing a tight shirt that does nothing to hide his tight swimmer's build, you notice the hints of pierced nipples pushing at the fabric of his shirt. On his wrists are spiked cuffs and a few shiny bracelets. As you continue to look him over you notice the multiple rings in his ears pierced right eyebrow and his pierced lower lip. Around his neck is a necklace that incorporates an ankh and a horseshoe.[line break]".
+[Conversation of Tristian is { "Neigh!" }.]
 The fuckscene of Tristian is "[sexwithtristian]".
-
-the scent of Tristian is "The stallion boy smells of leather and lust. The scent of gay sex with various other males clings to him.".
+icon of Tristian is Figure of Tristian_icon.
+the scent of Tristian is "     The stallion boy smells of leather and lust. The scent of gay sex with various other males clings to him.".
 
 [ HP of Tristian              ]
 [  0: not talked              ]
@@ -79,7 +71,6 @@ the scent of Tristian is "The stallion boy smells of leather and lust. The scent
 [ 13: quest reward sex done   ]
 [ 99: rescue failed           ] [formerly HP 10]
 [ 100: quest failed           ] [formerly HP 12]
-
 
 instead of conversing the Tristian:
 	project Figure of Tristian_icon;
@@ -113,7 +104,7 @@ instead of conversing the Tristian:
 	else if HP of Tristian is 7:
 		if FurryList is banned or HermList is banned or MaleList is banned:
 			say "     Tristian looks kind of down as you approach the handsome stud pony, and you are curious enough to lend him an ear and see what is bothering him. 'Well,' he says with a sigh, 'I just got word about my brother, or at least maybe I did, but it's not good. All I know is someone saw some lights and activity at his apartment in the city, but then no longer,' the horse says with a sad look on his long face.";
-			say "(This quest is inaccessible w/o furry/guy/hermaphrodite content available. Sorry.)[line break]";
+			say "(This quest is inaccessible w/o furry/guy/hermaphrodite content available. Sorry.)";
 			now HP of Tristian is 100;
 		else:
 			say "     Tristian looks kind of down as you approach the handsome stud pony, and you are curious enough to lend him an ear and see what is bothering him. 'Well,' he says with a sigh, 'I just got word about my brother, or at least maybe I did. All I know is someone saw some lights and activity near his apartment in the city,' the horse says with a sad look, making you confused. You ask if he shouldn't be happy to have news of his brother.";
@@ -130,19 +121,18 @@ instead of conversing the Tristian:
 	else:
 		say "     [one of]'Welcome to the club.'[or]'Relax, stay a while, enjoy the music.'[or]'You know, I think you would make a handsome looking horse boy...'[or]'Have you ever thought about going goth? I think it would work for you.'[or]'I wonder if my brother is OK out there in all this craziness?'[or][if HP of Tristian < 4]'Have I told you about my brother?'[else]'I can't help but worry about my brother. So many people didn't make it at all.'[end if][or]'I think that swan over there is eyeing your cute ass,' he says with a smirk as he gestures at the dance floor.[or]'Pony rides, no charge?' he says teasingly as he winks at you.[or]'Sit down, have a drink or two. No one is running a tab right now...'[or]'Ever thought about stripping?' Tristian says as he gestures to the strippers up on the stage. 'I bet you would be really good at it.'[or]'I saw some really crazy beasts roaming around out there before I ended up here in the club. You should be careful out there - though if you see any cute equine ones, be sure to give them our address,' Tristian says with an equine grin.[at random]";
 
-
 to say sexwithtristian:
+	project Figure of Tristian_icon;
 	setmonster "Palomino Stallion";
 	if HP of tristian is 0:
-		say "You might want to introduce yourself first.";
+		say "     You might want to introduce yourself first.";
 	else if lastfuck of tristian - turns < 6:
 		say "     'Sorry, there, I know you are eager to be a proper little pony for me,' Tristian says in a dominant yet teasing tone of voice, as he strokes his hand across your cheek fondly. 'But we need to let your last training session sink in before we can start on the next one. But don't worry,' Tristian adds with an equine grin as he strokes your head gently, 'I'm sure we will have you looking and acting the part of a proper little submissive goth pony for me in no time, won't we?' Tristian draws you close for a minute, before letting you go, his words and his soft touches making you pant eagerly in anticipation of your next session with the handsome male.";
 	else if HP of tristian is 1:
 		if Player is male:
 			say "     Tristian smiles mischievously at you as he draws you close, the scent of his musky sandalwood cologne washing over you. In the next instant his pretty black painted lips are locked on yours and you can feel his large tongue exploring your mouth teasingly, your own tongue responding as it tangles with the large palomino's. You can feel your head swimming with lust as you feel yourself being lowered down onto the booths cushions, his hands teasingly running across your [bodydesc of Player] body as he moves down next to you on the cushions, his soft fur rubbing against your skin and making it tingle with excitement. After what seems like hours of playing touches and deep kisses, you both come up for air and you find yourself gasping and panting with arousal as you look at the handsome male stud.";
 			say "     Breathing deep in excitement, Tristian locks gazes with you as his equine eyes stare deep into your own as he asks you, 'So are you ready to go all the way now? Ready to become my slutty, little pony for me to ride whenever I want?' The male palomino strokes your [bodytype of Player] body with his hands, his cologne washing over you as he continues. 'Once you agree then there will be no going back, you'll belong to me completely. Are you ready to be a proper little pony for me to ride? Mine in mind, body, and soul?' Tristian whispers into your ears in a low sexy voice, looking at you expectantly as you feel his hand move to your crotch where it begins to gently rub and massage your rapidly stiffening manhood through the fabric of your clothes. Your mind is still reeling from the amazingly arousing kiss and your senses assaulted and nearly overwhelmed by the flashing lights, the pounding beat of the music, and strobing images of the dancing strippers and various different beasts on the dance floor. Your mind filled with his musk and the lewd images of the dancing, it's hard to think clearly enough to decide what you should do.";
-			say "     [bold type]What do you reply?[roman type][line break]";
-			LineBreak;
+			say "[line break]     [bold type]What do you reply?[roman type][line break]";
 			say "     ([link]Y[as]y[end link]) - Submit to him.";
 			say "     ([link]N[as]n[end link]) - Refuse.";
 			if Player consents:
@@ -161,21 +151,23 @@ to say sexwithtristian:
 				palominoinfect;
 				follow the turnpass rule;
 			else:
+				LineBreak;
 				say "     The stallion gives you a disappointed look and sighs wistfully, 'You don't know what you are missing stud, but I guess I can get over it. If you change your mind, you know where you can find me.' Blowing you a kiss over his shoulder, he departs onto the packed dance floor.";
 		else:
 			say "     'So you want to play the mare for a handsome little stallion like me?' Tristian says teasingly, as his equine lips lightly brush over your own lips. The scent of his stallion-like musk and sandalwood cologne fills your head with need even as he runs his hand teasingly along the front of your body. 'I think that sounds like fun... only I prefer my [']mares['] to be a bit more well-endowed,' he says as he runs his hands along his leather-encased crotch teasingly. This sight makes your mouth water even as your need grows even more desperate. 'Fortunately, I don't think that will be much of a problem for long...' Tristian says, as he runs his hands over your body again, kissing you teasingly while you feel your body reshape itself to better suit his desires...";
 			palominoinfect;
 	else if HP of Tristian is 11 and Player is male:
 		say "     Leading you into a lounge in the back, he strips you down and gets you to lay back on the padded sofa. 'How about a special reward. I think my brother's hero deserves a rare delight.' He straddles your lap, grinding his ass down over your stiff cock. 'How about it, my precious pony - have you earned a treat?'";
-		say "     [bold type]What do you reply?[roman type][line break]";
-		LineBreak;
+		say "[line break]     [bold type]What do you reply?[roman type][line break]";
 		say "     ([link]Y[as]y[end link]) - Let him powerbottom you.";
 		say "     ([link]N[as]n[end link]) - Say you need his cock more.";
 		if Player consents:
+			LineBreak;
 			say "     Adjusting his positioning slightly, he lets your glans rub against his pucker. You can feel that tight hole slick with lube, and you realize he'd anticipated your request for sex and had prepared himself for your special reward. Twin moans of pleasure, one from each of you, come as his tight anal ring sinks down your throbbing meat. Tristian remains as dominant as ever despite being the one getting fucked, taking charge and riding your [Cock of Player] cock. In spite of his obvious preparation, he's delightfully tight around your meat, further showing what a rare treat he's providing you. This makes it all the more precious to you and so you savor every moment of it. And there's much to savor, your sexy stud being particularly sensual in his lovemaking, paying extra attention to you. Little touches or tweaks to sensitive spots, or an adjustment to the motion of his ass to better stimulate your pulsing rod. Despite the obvious lack of recent practice, his ability to ride your cock hasn't suffered, able to work your meat like a pro. You rock your hips lightly, thrusting up into your lover's tight, twitching hole while enjoying the stallion's long, pleasurable ride.";
 			say "     Eventually, the carnal delights have you moaning and panting with need, so much so that you beg Tristian to be allowed to fill him with your seed. He smiles down at you and quickens his pace, working his tight hole over your throbbing shaft harder. 'Do it. Cum in me, my pony,' he pants, rubbing your chest as he slams down hard onto your lap several times in quick succession. Unable to hold back and with your master's permission, you groan loudly and blast shot after shot of sticky semen into the riding horse. His cock bounces and slaps against your chest as it fountains gooey cream, spooging across your torso and face as he cums messily as well. You're left satisfyingly sticky with his musky seed by the time it's all over. He flops down atop you, your softening cock still buried inside him as he shares gooey kisses and cuddles with you before you both drift off for a short nap together.";
 			NPCSexAftermath Tristian receives "AssFuck" from Player;
 		else:
+			LineBreak;
 			say "     'As you wish, my pet,' he says without disappointment as he slides back between your legs. Spreading them, he boosts your rear up. 'If you're rather have my sexy cock in that hot ass of yours, I'm more than happy to oblige.' Pressing his flat, equine glans against5 your pucker, you can feel it pulse lightly as it drools precum onto your crinkled hole. As he sinks into you, one hand finds its way to your [Cock of Player] shaft while the other goes to your buttock. Twin moans of pleasure, one from each of you, come as his throbbing meat pushes fully into you. Tristian is particularly sensual in his lovemaking. While still quite dominant in his approach, there is greater attention paid to you as well. Little touches or tweaks to sensitive spots, or an adjustment to his thrusts to send twinges of delight to your prostate. You wriggle on the couch, ass squeezing and milking at his cock as it slides into you over and over again.";
 			say "     Eventually, the carnal delights have you moaning with need, begging for your stallion to fill you with his seed. He smiles down at you and quickens his pace, pounding you harder. Your cock throbs in his grip, stroked in synch with his thrusts until you cry out in orgasmic release. As your sticky seed splatters across your chest, he drives fully into you and drains his plump balls. His hot load pours into your needy ass, filling you with satisfying warmth. Once spent, he remains inside you while slowly going soft, kissing and caressing you until you both drift off for a short nap together.";
 			NPCSexAftermath Player receives "AssFuck" from Tristian;
@@ -207,15 +199,13 @@ to say sexwithtristian:
 			say "     'So my little pony wants to play the mare for a handsome little stallion like me?' Tristian says teasingly, as his equine lips lightly brush over your own lips. The scent of his stallion-like musk and sandalwood cologne fills your head with need even as he runs his hand teasingly along the front of your body. 'I think that sounds like fun... only I prefer my [']mares['] to be a bit more well-endowed,' he says as he runs his hands along his leather-encased crotch teasingly. This sight makes your mouth water even as your need grows even more desperate. 'Fortunately, I just know my little pony won't keep me waiting long before that problem gets fixed...' Tristian says with amusement, as he runs his hands over your [bodytype of Player] body again, kissing you teasingly while you feel your body reshape itself to better suit his desires...";
 			palominoinfect;
 
-
 to palominoinfect:
-	choose row MonsterID from the Table of Random Critters;
 	setmonster "Palomino Stallion";
+	choose row MonsterID from the Table of Random Critters;
 	now non-infectious entry is false;
 	now Cross-Infection entry is ""; [ Infection that this infection will give the player when they lose; can be left empty if they infect with the monster's own strain. ]
 	infect;
 	now non-infectious entry is true;
-
 
 Section 3 - Tristian's Quest
 
@@ -233,7 +223,7 @@ when play begins:
 	add Tristbrother to BadSpots of FurryList;
 
 to say ResolveEvent Tristbrother:
-	If HP of Tristian is 8:
+	if HP of Tristian is 8:
 		say "     You manage to make your way to the area where Tristian indicated his brother lived. As you're scouting out the area, you hear a loud noise from the small apartment building you're approaching. Rushing inside, you notice a couple of hyenas have broken into an apartment that someone obviously barricaded. From the sounds of things, there is someone inside who is obviously protesting... although they sound more willing by the minute. Looking inside, you see several hyenas holding down what used to be an unchanged human, one of them is already shooting her seed onto the human's chest, while another appears to be ready to take him in the ass while the others hold the young man down. Looking up, one of the hyenas notices you. 'Oh good, another new addition to the gang,' she says before attacking!";
 		Challenge "Hyena Herm";
 		if fightoutcome >= 10 and fightoutcome <= 19:
@@ -246,13 +236,12 @@ to say ResolveEvent Tristbrother:
 			say "     Picking yourself up off the floor where the hyenas left you, you look around for any sign of the hyenas who were in the apartment. They seem to be gone and you stagger over to where Tristian's brother is lying in a ball on the floor moaning, where they obviously returned and used him once they were done with you. Gently rolling him over, you discover that you are already much too late to help, as his body is changing fully into that of a hyena's. His head has already changed to that of a hyena with his once short, blond hair turning brown and spotted as it hangs messily around his shoulders. A scraggly goatee of rough hyena fur beginning to sprout on his chin as a muzzle pushes forward. Continuing to examine the young man, you see that his skin has already begun to change to a dark hyena brown with spots starting to become visible as ragged patches of fur start to sprout up all over his body. Looking lower, you notice that his cock has changed, while still mostly human it has a large knot at the base and the beginnings of a sheath enveloping the lower part of it.";
 			say "     With another moan, the changing boy rolls over and you see the beginnings of his new hyena tail erupt from his backside as his body finishes changing. With a laughing bark, the new hyena jumps up quickly, knocking your already abused form to the floor as he looks around the room. Sniffing the air, he catches the scent of the hyenas who were just here. Tristian's brother pauses only long enough to grab his skateboard and a pair of ripped jeans and a t-shirt before bolting out the door after them. As his barking laughs fade down the hallway, you lie there on the floor wondering how you are going to break the news to Tristian.";
 			now HP of Tristian is 99;
-		if fightoutcome >= 30:
+		else if fightoutcome >= 30:
 			say "     Feeling that it's a lost cause at this point and there being too many hyenas to [if level of Player < 4]risk[else]bother[end if] dealing with, you turn tail and bolt out the door. There's a lot of raucous laughter from them, soon added to as they get back to infecting their gang's newest member. With his barking laugh still ringing in your ears, you wonder how you are going to break the news to Tristian.";
 			now HP of Tristian is 11;
 		now battleground is "void";
+		now Tristbrother is resolved;
 	else:
 		say "You wander around part of the city, only to note the presence of a large amount of hyena gang members. You decide to take another route, wondering what they are all doing there.";
-	now Tristbrother is resolved;
-
 
 Tristian ends here.

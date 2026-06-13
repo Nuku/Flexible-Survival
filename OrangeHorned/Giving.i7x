@@ -51,6 +51,8 @@ Sterile of GivingFirbolg is true. [steriles can't knock people up]
 MainInfection of GivingFirbolg is "".
 Description of GivingFirbolg is "[Givingdesc]".
 
+the scent of the GivingFirbolg is "     Giving smells like he's almost drenched in what you could describe as some sort of Irish soap. Very much herbal and sea-salty in all the right ways. It might be from all the sweat caked on his body."
+
 to say Givingdesc:
 	if debugactive is 1:
 		say "     DEBUG -> HP: [HP of GivingFirbolg] <- DEBUG[line break]";
@@ -62,7 +64,7 @@ Instead of conversing the GivingFirbolg:
 
 to say GivingFirbolgTalkMenu:
 	say "[line break]";
-	say "     'Im a open book, what do you need?' Giving seems to be in a good mood for talking.";
+	say "     'I'm a open book, what do you need?' Giving seems to be in a good mood for talking.";
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]
@@ -82,6 +84,11 @@ to say GivingFirbolgTalkMenu:
 		now sortorder entry is 3;
 		now description entry is "Why does he still seem pretty apprehensive?";
 	[]
+	if HP of GivingFirbolg is 2:
+		choose a blank row in table of fucking options;
+		now title entry is "What were the sea scouts like?";
+		now sortorder entry is 4;
+		now description entry is "Giving was a sea scout leader, what could it have been like?`";
 	sort the table of fucking options in sortorder order;
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
@@ -103,6 +110,8 @@ to say GivingFirbolgTalkMenu:
 					say "[GivingTalk2]";
 				if (nam is "About Knott"):
 					say "[GivingTalk3]";
+				if (nam is "What were the sea scouts like?"):
+					say "[GivingTalk4]";
 				wait for any key;
 		else if calcnumber is 0:
 			now sextablerun is 1;
@@ -116,6 +125,7 @@ to say GivingTalk1:
 	say "     'Well, as you know, I'm Giving, had a former name but everyone just sorta called me Cappy, A Skipper for a Sea Scout Group near the port. Lotta Family members who were into sea related jobs so it kinda was a given, Apocalypse happened, I single handedly got my troop to a checkpoint to get them to safety, but I couldn't in good conscience leave survivors alone in this place, somehow didn't end up infected for a long time.' The Firbolg flexes his bicep eagerly to show off the gun show, the scars that surround its edges showing a history of rough rides and close calls with not-too-kind strangers. 'Was just near some river in the forest trying to filter the water to drink when I saw this little guy-- which I now know are called Baegs- just all alone, honestly when he confided in me about how much the others were struggling to get by, I felt this... urge you know.'";
 	WaitLineBreak;
 	say "     You don't know what he means. 'So I asked him to fuck me, call it an impulse, but its hard to explain, when I turned into this I knew I made the right choice.' There is a slight pause as Giving sighs out 'It was... really just his sweet voice and hearing their backstory that made me cave into this infection. Alongside the possibility I could become a father, although 'Daddy' is all our Fathers technically, it doesn't mean I can't take care of the more less experienced Firbolgs when their just getting over their lusts.'";
+	now HP of GivingFirbolg is 2;
 
 to say GivingTalk2:
 	if a random number between 1 and 5 is:
@@ -131,7 +141,13 @@ to say GivingTalk2:
 			say "     Let's see... the commune wanted me to get some sewing kits, since I'm the one who's mostly out and about, I usually know where to get some things. Heading off to the High Rises, I was about to check out one shop I've seen when I passed by only to see a bunch of foot soldiers scramble out of there. Luckily apparently at least some of the troops know that some blue skinned figure sometimes helps them out because they could have pumped me with lead, apparently the fire exit was a no-go and they were just trapped, only thing I asked them for is just confirmation if there's any sewing supplies left inside-- which luckily was a yes.";
 
 to say GivingTalk3:
-	say "     'Oh Knott? He's a good guy but well, he's kinda still dealing with the infection impulses as well as the fact that he is scared to show himself to the survivor group he was apart of' Giving scratches the back of his head 'Oh tell you what, I'm in trouble due to transforming him without asking Daddy, so maybe you could grab his old things and bring it to him?' You ask him what could he gather, 'Oh I'm not sure, you gotta ask him yourself, I didn't want to pry so I know the bare minimum.'";
+	say "     'Oh Knott? He's a good guy but well, he's kinda still dealing with the infection impulses as well as the fact that he is scared to show himself to the survivor group he was apart of,' Giving scratches the back of his head 'Oh tell you what, I'm in trouble due to transforming him without asking Daddy, so maybe you could grab his old things and bring it to him?' You ask him what could he gather, 'Oh I'm not sure, you gotta ask him yourself, I didn't want to pry so I know the bare minimum.'";
+to say GivingTalk4:
+	say "     So what was the sea scouts like? 'Hmm, well I guess it was mostly interesting helping a lot of kiddos get jobs and such, most of them are the type of new legs who are worried about how scary the sea might be, but being alone with a guy like me calms them down well enough,' Giving says, scratching the back of his head. 'I would never let anything happen to them, it doesn't matter what happens, I make sure everyone in my crew gets home. But, I'm saying this like it's the southern sea, in reality at best it's just showing scuba, C.P.R, how boats work, just what you would imagine sea scouts would do. I would love to set out on the water again, but a lot of people here rather stay cooped up in the community camp, which granted, it's safer than all that's happening right now, but I've fought a few infected myself, they're not to hard if you know what your doing...well the truly feral ones anyway.'  You ask him what he wants to do afterwards when all fo this was over, which he takes a moment to ponder, squishing his pecs between his biceps, 'Well... I reckon I'll try to get my job back, or become a sea time mariner. I doubt I'll be able to work around kids looking like this so at best just find something in heavy labor. These muscles feel the best when they're flexin['] anyway!'";
+	WaitLineBreak;
+	say "     Giving smirks, briefly striking a quick classical bodybuilder's pose while their waders groan in protest of his colossal bulk. Nodding along, you ask him if he worries the nanite's influence might overwhelm him one day. After all Giving told you he was more than happy to become a Firbolg by choice. 'Well I can't say I regret it a lot, to be honest hearin people fucking like animals day in and day out for a apocalypse was far from how I imagined I spend my time.' He blushes, covering his snout as their deep cyan hide flashes a smoldering purple, 'Still between the constant feral 'attacks' and contaminated food, part of me also was... curious... just their bulges. It looked painful, but once he slipped in it was-' Giving pauses, clenches his teeth so tight his lips turn a pale bony white, before waving you off, muttering about needing to take care of something. You ask him what that thing might be, 'W-well, there's no other way to describe it than utter bliss, he put the tip inside of my mouth and let me suck it to my own desire, next thing I knew I was taking him down to the base as my whole body just grew. The next moment he's just makin['] me squirt till I'm cross-eyed.' His moans with a blissful far off stare, 'I'm not encouraging anyone to just give in... but hooo weee.... I was a sweating mess. I think Father had to stop us as we kept getting stuck in... uh oh...'";
+	WaitLineBreak;
+	say "     Giving pants, fanning his face as tainted sweat down his beefy chest traces the chiseled curves of statuesque abs like shimmering motes of aquamarine. Following their trail, your eyes slowly drift to fetching hybrid's plush cunt as they thoughtlessly lean into your stare, stammering. 'Mmm... I think I gotta go for a sec, but I'll be back!' as he runs off into the camp, with his tail wagging behind him like a needy husky bitch. Shrugging, you have a feeling he's going to be paying Sangre a visit.";
 
 Section 2 - Sex
 
@@ -148,11 +164,11 @@ to say GivingSexMenu:
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]
-	if Player is Male:
+	if Player is Male: [Minor note: sometimes herms can see male scenes, if you want to change the to: if Cock count of Player >= 1 and Cunt Count of Player is 0 that should fix the issue if it pops up.]
 		choose a blank row in table of fucking options;
 		now title entry is "Firbolg Breeding";
 		now sortorder entry is 1;
-		now description entry is "Firbolg Breeding Description";
+		now description entry is "Firbolg Breeding Description"; [<= might wanna tweak this]
 	[]
 	sort the table of fucking options in sortorder order;
 	repeat with y running from 1 to number of filled rows in table of fucking options:

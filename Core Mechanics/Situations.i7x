@@ -21,8 +21,7 @@ A situation has a text called PrereqTime. The PrereqTime of a situation is usual
 A situation has a text called sarea. Sarea of a situation is usually "Outside".
 A situation has a number called level. The level of a situation is usually 0. [minimum level to encounter randomly]
 A situation has a number called minscore. The minscore of a situation is usually -2147483648.
-A featset is a kind of thing.
-inasituation is a truth state that varies. inasituation is normally false. [used to bypass standard combat start / win / loss messages when fighting a creature]
+inasituation is a truth state that varies.[@Tag:NotSaved] inasituation is normally false. [used to bypass standard combat start / win / loss messages when fighting a creature]
 Does the player mean examining a situation: it is very unlikely.
 
 to say ResolveError:
@@ -41,19 +40,16 @@ Definition: A situation (called x) is available:
 	if x is resolved, no; [the player has played through these]
 	if x is not PrereqComplete, no;
 	if x is close:
-		if score < minscore of x:
-			no;
-		else if HardMode is true:
-			yes;
-		else if the level of x < (level of Player + 1):
-			yes;
+		if score < minscore of x, no;
+		if HardMode is true, yes;
+		if the level of x < level of Player + 1, yes;
 	no;
 
 Definition: A situation (called x) is WalkinAvailable:
 	if x is inactive, no; [for banning]
 	if x is resolved, no; [the player has played through these]
 	if x is not PrereqComplete, no; [prereqcompanion, time and situations]
-	if level of x > (level of Player + 1), no; [nothing more than one level higher than the player]
+	if level of x > level of Player + 1, no; [nothing more than one level higher than the player]
 	yes;
 
 Definition: A situation (called x) is PrereqComplete:
@@ -68,26 +64,20 @@ Definition: A situation (called x) is PrereqComplete:
 	yes;
 
 Definition: A situation (called x) is close:
-	if ( sarea of x exactly matches the text battleground, case insensitively ) or ( (battleground is "Outside" or battleground is "High" or battleground is "Capitol" or battleground is "Park" or battleground is "Forest" or battleground is "Beach") and ( Sarea of x is "Allzones" or Sarea of x is "allzones" ) ):
+	if sarea of x exactly matches the text battleground, case insensitively or ((battleground is "Outside" or battleground is "High" or battleground is "Capitol" or battleground is "Park" or battleground is "Forest" or battleground is "Beach") and Sarea of x in lower case is "allzones"):
 		yes;
 	no;
 
 Definition: A scavevent (called x) is scavable:
-	if ( sarea of x exactly matches the text battleground, case insensitively ) or ( (battleground is "Outside" or battleground is "High" or battleground is "Capitol" or battleground is "Park" or battleground is "Forest" or battleground is "Beach") and ( sarea of x is "Allzones" or Sarea of x is "allzones" ) ):
-		if score < minscore of x:
-			no;
-		else if HardMode is true:
-			yes;
-		else if the level of x < (level of Player + 1):
-			yes;
+	if x is close:
+		if score < minscore of x, no;
+		if HardMode is true, yes;
+		if the level of x < level of Player + 1, yes;
 	no;
 
-
-
-
-CurrentWalkinEvent_ConditionsMet is a truth state that varies. CurrentWalkinEvent_ConditionsMet is usually false. [@Tag:NotSaved]
-CurrentWalkinEvent_WalkArrival is a truth state that varies. CurrentWalkinEvent_WalkArrival is usually false. [@Tag:NotSaved]
-CurrentWalkinEvent_NavArrival is a truth state that varies. CurrentWalkinEvent_NavArrival is usually false. [@Tag:NotSaved]
+CurrentWalkinEvent_ConditionsMet is a truth state that varies.[@Tag:NotSaved] CurrentWalkinEvent_ConditionsMet is usually false.
+CurrentWalkinEvent_WalkArrival is a truth state that varies.[@Tag:NotSaved] CurrentWalkinEvent_WalkArrival is usually false.
+CurrentWalkinEvent_NavArrival is a truth state that varies.[@Tag:NotSaved] CurrentWalkinEvent_NavArrival is usually false.
 
 Table of NavInEvents
 Priority	Name	EventObject	EventConditions	EventRoom	LastEncounterTurn	CoolDownTurns	EncounterPercentage
@@ -98,7 +88,6 @@ Table of WalkInEvents
 Priority	Name	EventObject	EventConditions	EventRoom	LastEncounterTurn	CoolDownTurns	EncounterPercentage
 1	"ExampleEvent"	ExampleEvent	"[EventConditions_ExampleEvent]"	Grey Abbey Library	2500	2	100
 with 1000 blank rows
-
 
 [ Priority Examples                                                                            ]
 [  1 - ASAP, Life or Death Situations (NOT REPEATABLE!)                                        ]
@@ -119,6 +108,9 @@ to say EventConditions_ExampleEvent:
 	if 1 > 0: [list of conditions here]
 		now CurrentWalkinEvent_ConditionsMet is true;
 
+to say EventConditions_True:
+	now CurrentWalkinEvent_ConditionsMet is true;
+
 Table of GameEventIDs (continued)
 Object	Name
 ExampleEvent	"ExampleEvent"
@@ -136,7 +128,7 @@ PrereqTime of ExampleEvent is "Day".
 Level of ExampleEvent is 1. [minimum level to encounter randomly]
 
 to say ResolveEvent ExampleEvent:
-	if DebugLevel > 4:
+	if debug is at level 5:
 		say "     DEBUG: This is the resolve text of the ExampleEvent.";
 		if CurrentWalkinEvent_WalkArrival is true:
 			say "     DEBUG: The Player walked into this event.";
@@ -147,60 +139,57 @@ to WalkInEvent_Check:
 	let CurrentRoom be the location;
 	now CurrentWalkinEvent_WalkArrival is false; [reset]
 	now CurrentWalkinEvent_NavArrival is false; [reset]
-	if DebugLevel > 4:
+	if debug is at level 5:
 		say "     DEBUG: Starting to check [CurrentRoom] for walkinevents.";
 	if there is an EventRoom of CurrentRoom in the Table of WalkinEvents: [only proceed if there are actually WalkinEvents for this room]
 		sort Table of WalkinEvents in Random order;
 		sort Table of WalkinEvents in Priority order;
-		if DebugLevel > 4:
+		if debug is at level 5:
 			say "     DEBUG: Sorted Table of WalkinEvents.";
 		repeat with X running from 1 to number of filled rows in Table of WalkinEvents:
 			choose row X from the Table of WalkinEvents;
 			now CurrentWalkinEvent_ConditionsMet is false; [reset]
-			if DebugLevel > 8:
+			if debug is at level 5:
 				say "     DEBUG: Checking Row [X]. Current Event: [name entry]; Event Room: [EventRoom Entry][line break]";
 			if EventRoom entry is not CurrentRoom, next; [skipping past any event that does not match the current room]
-			if DebugLevel > 6:
+			if debug is at level 5:
 				say "     DEBUG: Available Event in current Room, called: [name entry], ";
 			if EventObject entry is not WalkinAvailable:
-				if DebugLevel > 6:
+				if debug is at level 5:
 					say "which is NOT WalkinAvailable.";
 				next; [resolved/inactive/not prereqcomplete events are skipped]
-			if DebugLevel > 6:
+			if debug is at level 5:
 				say "which is WalkinAvailable, ";
 			if LastEncounterTurn entry - turns <= CoolDownTurns entry, next;
-			if DebugLevel > 6:
+			if debug is at level 5:
 				say "and not on cooldown.";
 			say "[EventConditions entry]";
 			if CurrentWalkinEvent_ConditionsMet is false, next;
-			if DebugLevel > 4:
+			if debug is at level 5:
 				say "     DEBUG: CurrentWalkinEvent_ConditionsMet true.";
 			if a random chance of EncounterPercentage entry in 100 succeeds:
 				now LastEncounterTurn entry is turns;
 				now CurrentWalkinEvent_WalkArrival is true; [Player walked into the event, vs Nav'ing to it]
 				say "[ResolveFunction of EventObject entry]";
 				break;
-			else:
-				next;
 	else:
-		if DebugLevel > 4:
+		if debug is at level 5:
 			say "     DEBUG: No WalkInEvents found in [CurrentRoom].";
 
-
 to NavInEvent_Check (NavTarget - a room):
-	if DebugLevel > 4:
+	if debug is at level 5:
 		say "     DEBUG: Starting to check [NavTarget] for NavInEvents.";
 	now CurrentWalkinEvent_WalkArrival is false; [reset]
 	now CurrentWalkinEvent_NavArrival is false; [reset]
 	if there is an EventRoom of NavTarget in the Table of NavInEvents: [only proceed if there are actually NavInEvents for this room]
 		sort Table of NavInEvents in Random order;
 		sort Table of NavInEvents in Priority order;
-		if DebugLevel > 4:
+		if debug is at level 5:
 			say "     DEBUG: Sorted Table of NavInEvents.";
 		repeat with X running from 1 to number of filled rows in Table of NavInEvents:
 			choose row X from the Table of NavInEvents;
 			now CurrentWalkinEvent_ConditionsMet is false;
-			if DebugLevel > 4:
+			if debug is at level 5:
 				say "     DEBUG: Checking Row [X].";
 			if EventRoom entry is not fasttravel:
 				say "     ERROR: Non-Fasttravel room [X] entered for a NavInEvent. Please report this on the FS Discord to be fixed!";
@@ -209,19 +198,16 @@ to NavInEvent_Check (NavTarget - a room):
 			if LastEncounterTurn entry - turns <= CoolDownTurns entry, next;
 			say "[EventConditions entry]";
 			if CurrentWalkinEvent_ConditionsMet is false, next;
-			if DebugLevel > 4:
+			if debug is at level 5:
 				say "     DEBUG: CurrentWalkinEvent_ConditionsMet true.";
 			if a random chance of EncounterPercentage entry in 100 succeeds:
 				now LastEncounterTurn entry is turns;
 				now CurrentWalkinEvent_NavArrival is true; [Player Nav'd into the event, vs walking to it]
 				say "[ResolveFunction of EventObject entry]";
 				break;
-			else:
-				next;
 	else:
-		if DebugLevel > 4:
+		if debug is at level 5:
 			say "     DEBUG: No NavInEvents found in [NavTarget].";
-
 
 to say LibraryEntry_NavOrWalk:
 	if CurrentWalkinEvent_NavArrival is true: [Player nav'd in]
@@ -255,7 +241,6 @@ ResolveFunction of ExampleEvent is "[ResolveEvent ExampleEvent]".
 Sarea of ExampleEvent is "Nowhere". [standard walkins that cannot be hunted for are Nowhere, but walkin events can also be made huntable as an alternate access way]
 
 to say ResolveEvent ExampleEvent:
-
 ]
 
 Situations ends here.

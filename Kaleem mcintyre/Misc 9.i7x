@@ -1,6 +1,5 @@
 Misc 9 by Kaleem mcintyre begins here.
 
-
 Section 2 - Mysterious
 
 Table of GameEventIDs (continued)
@@ -14,10 +13,9 @@ Sarea of Clotho is "Red".
 to say ResolveEvent Clotho:
 	say "     'Hold on! Don't move! Just stay right where you are!' It's the volume of the words being spoken that stops you more than the words themselves. Not knowing what's happening, you freeze in place and look around to see what the hoopla is about. What you find is a very... unusual human looking woman coming over to you and then trying to pull you out of your clothes. Not really understanding you wave the woman, who is less [']human['] than you had thought as she possesses two fluffy cat ears atop her head and a silver chain with an emblem of some kind of cat insignia embroidered into the front of a pendant hanging onto the chain itself, off as best you can. 'Oh will you stop moving around so much? I'm trying to get you out of these clothes so I can take your measurements.'";
 	say "     Asking the woman who she is nets you a grumpy growl from the other. 'My name's not as important as the fact that I have something I need to make for you. Now hold still.' Not sure, you find yourself letting the other woman do as she pleases, which ultimately nets you being stripped, measured, fondled in certain places you really don't want to be, and finally allowed to put back on your clothes after about an hour's time. 'As I thought, you are exactly what I need. [bold type]Atropis[roman type] back at our [bold type]high rise[roman type] condo is going to be so stoked about this!' The feline eared woman squeals and then rushes off like a shot, leaving you thoroughly confused.";
-	Increase score by 1;
+	increase score by 1;
 	now Clotho is resolved;
 	now Atropis is active;
-
 
 Section 3 - Crone
 
@@ -43,9 +41,8 @@ to say ResolveEvent Atropis:
 	WaitLineBreak;
 	say "     But why in hell's bells would someone...? Not sure, you don't bother to think on it long as you simply slam the top back over the box and then head on your way. Meanwhile, somewhere far away, three sisters are cracking up at a joke they're sharing right about now.";
 	ItemGain silver dress by 1;
-	Increase score by 5;
+	increase score by 5;
 	now Atropis is resolved;
-
 
 Section 4 - The Magic Cap
 
@@ -56,6 +53,7 @@ Magic Cap	"Magic Cap"
 The Magic Cap is a situation.
 ResolveFunction of The Magic Cap is "[ResolveEvent The Magic Cap]". The level of The Magic Cap is 5.
 Sarea of The Magic Cap is "Museum".
+
 When play begins:
 	Add The Magic Cap to BadSpots of FurryList;
 	Add The Magic Cap to BadSpots of HermList;
@@ -65,35 +63,34 @@ to say ResolveEvent The Magic Cap:
 	WaitLineBreak;
 	say "     Not knowing why, you reach a hand inside of the case for one of the statues and then pick it up. Looking over the falcon headed artifact you find yourself gaping at it in awe. Though you're not really an expert at hieroglyphs or anything, the characters wrapped around the statue seem... somewhat familiar to you. A growl from behind you has you whipping around just in time to see a large Cerberus Herm baring three sets of ivory fangs in your direction.";
 	say "     Obviously the sphinx woman at the front sent a guard dog to watch over the statue. By the look of the creature's six eyes glowering at you, you get the sudden impression that you've just made a key mistake in touching the statue.";
-	say "     [bold type]Maybe you should put it back?[roman type][line break]";
-	LineBreak;
+	say "[line break]     [bold type]Maybe you should put it back?[roman type][line break]";
 	say "     ([link]Y[as]y[end link]) - Yes.";
 	say "     ([link]N[as]n[end link]) - No.";
 	if Player consents:
 		LineBreak;
 		say "     Telling the Cerberus that you were just browsing, you chuckle nervously before slowly setting the statue back into the case. Seeing that you're not here to steal, the Cerberus comes over, hefts you up by your collar, and then casually walks you out of the Museum. When the beast tosses you out onto your head, you get the feeling that would-be thieves are not wanted inside of the Museum. You make a mental note to yourself that you're going to avoid that particular case from now on - right after you get an ice pack for the headache growing inside of your noggin.";
-		Decrease HP of Player by 6;
-		If HP of Player < 1, now HP of Player is 1;
+		decrease HP of Player by 6;
+		if HP of Player < 1, now HP of Player is 1;
 		now Resolution of Magic Cap is 1; [put it back]
 	else:
 		LineBreak;
 		say "     Not knowing why, you tug the statue tight against your chest and then chuckle nervously up at the three-headed guard dog before darting out the back side of the room.";
-		let bonus be (( Dexterity of Player minus 5 ) divided by 2);
+		let bonus be ( Dexterity of Player minus 5 ) divided by 2;
 		let diceroll be a random number from 1 to 20;
-		say "     You roll 1d20([diceroll])+[bonus]: [diceroll + bonus]. ";
+		say "[line break]You roll 1d20([diceroll])[if bonus >= 0]+[end if][bonus] = [special-style-1][diceroll + bonus][roman type] vs [special-style-2]15[roman type] (Dexterity Check):[line break]";
 		increase diceroll by bonus;
 		if diceroll > 14:
-			say "Running as fast as your [BodySpeciesName of Player in lower case] feet can take you, you rush through the narrow twists and turns of the Museum's hallways and then out of the rear entrance of the building, leaving your three-headed pursuer confusedly trying to follow after your scent. Moving down the alleyway and then on your way back to the bunker you accidentally [one of]trip over the side of the curb[or]slip on a can[or]slip over something hard[or]get your feet tangled over a discarded pair of pants[at random] and end up accidentally dropping the statue you're holding onto.";
+			say "     Running as fast as your [BodySpeciesName of Player in lower case] feet can take you, you rush through the narrow twists and turns of the Museum's hallways and then out of the rear entrance of the building, leaving your three-headed pursuer confusedly trying to follow after your scent. Moving down the alleyway and then on your way back to the bunker you accidentally [one of]trip over the side of the curb[or]slip on a can[or]slip over something hard[or]get your feet tangled over a discarded pair of pants[at random] and end up accidentally dropping the statue you're holding onto.";
 			WaitLineBreak;
 			say "     Cursing your luck, you watch as the falcon headed artifact sails through the air and then crashes onto the ground, breaking into a hundred different pieces. Sighing at the loss, even though you don't understand why, you find yourself gaping in awe as you look to see a bright red... baseball cap... lying amidst the rubble of the statue. Finding your balance you cautiously step over to the cap and then reach down to pick up the headwear. If things weren't already weird enough as they are you find that the cap bears the first letter of your name.";
 			say "     Not sure you understand what's going on, you shrug and then flip the headwear onto your head. Seeing that the baseball cap is a perfect fit you step over the ruined statue and then head off on your way. You never notice how the letter on the hat sparks for a second, as you can feel nothing out of place on top of your head, before going silent.";
 			ItemGain red cap by 1;
-			AttemptToWait;
+			WaitLineBreak;
 			now Resolution of Magic Cap is 2; [ran off with it]
 			increase score by 10;
 			Move player to the Bunker;
 		else:
-			say "Trying to make your way through the hallways of the Museum as fast as you can you end up getting caught by another Cerberus Herm right as the one chasing you rounds the corner you had just tried to lose it at. Flipping your head between both creatures you end up cursing your luck as the two feral guardians begin to close in on you.";
+			say "     Trying to make your way through the hallways of the Museum as fast as you can you end up getting caught by another Cerberus Herm right as the one chasing you rounds the corner you had just tried to lose it at. Flipping your head between both creatures you end up cursing your luck as the two feral guardians begin to close in on you.";
 			challenge "Cerberus";
 			if fightoutcome >= 10 and fightoutcome <= 19:
 				challenge "Cerberus";
@@ -102,7 +99,7 @@ to say ResolveEvent The Magic Cap:
 					say "     Cursing you can only watch as the falcon headed artifact sails through the air and then crashes onto the ground, breaking into a hundred different pieces. Sighing at the loss, even though you don't understand why, you find yourself gaping in awe as you look to see a bright red... baseball cap... lying amidst the rubble of the statue. Finding your balance you slowly walk over to the wreckage of the statue and then reach down to pick up the headwear before turning it over. On the front of the cap there's a single letter stitched into the material, the beginning of your name no less.";
 					say "     Not sure what's going on here, you shrug and then flip the cap onto your head. Seeing that the headwear is a perfect fit you step over the ruined statue and then head off onto your way. You never notice how the letter on the hat sparks for a second, as you can feel nothing out of place on top of your head, before going silent.";
 					ItemGain red cap by 1;
-					AttemptToWait;
+					WaitLineBreak;
 					now Resolution of Magic Cap is 3; [fought + won]
 					increase score by 10;
 					Move player to the Bunker;
@@ -114,10 +111,9 @@ to say ResolveEvent The Magic Cap:
 				now Resolution of Magic Cap is 4; [fought + lost]
 	now The Magic Cap is resolved;
 
-
 Section 5 - Fashion Statement
 
-fashionfight is a number that varies.
+[fashionfight is a number that varies.]
 
 Table of GameEventIDs (continued)
 Object	Name
@@ -130,55 +126,41 @@ Sarea of Fashion Statement is "Campus".
 to say ResolveEvent Fashion Statement:
 	say "     Wandering through the commercial area at the edge of the campus, you happen to come across a clothing store that looks as though it's just recently been ransacked. Mildly curious to know if anything has survived the merciless carnage you meander inside of the store on a whim. Looking around you find the pervasive funk of musk, both male and female, as well as mildew covered shelves, dried stains, glass littering the floor and assorted items tossed around rather appealing.";
 	say "     However, considering the state of the world, you don't really expect too much. That is, until you make your way to the back of the store and into the stockroom. Interesting enough this part of the store seems to have been kept intact. Maybe there's something salvageable here?";
-	say "     [bold type]Should you check to see?[roman type][line break]";
-	LineBreak;
+	say "[line break]     [bold type]Should you check to see?[roman type][line break]";
 	say "     ([link]Y[as]y[end link]) - Yes.";
 	say "     ([link]N[as]n[end link]) - No.";
 	if Player consents:
 		LineBreak;
 		say "     You begin scavenging around like a hungry wolf looking for food as you rifle through boxes and bins while keeping an eye and ear out for trouble. Sadly enough, it would seem that trouble has found you. Whipping around you find a mutant stalking into the back room, probably on the trail of your scent!";
-		now fashionfight is 0;
+		let fashionfight be 0;
 		while fashionfight is 0:
-			let T be a random number between one and five;
-			if T is 1:
-				now battleground is "Zoo";
-				fight;
-			if T is 2:
-				now battleground is "Outside";
-				fight;
-			if T is 3:
-				now battleground is "Red";
-				fight;
-			if T is 4 or T is 5:
-				now battleground is "Campus";
-				fight;
+			now battleground is the substituted form of "[one of]Zoo[or]Campus[or]Outside[or]Campus[or]Red[purely at random]";
+			fight;
 			now battleground is "Campus";
 			say "     With that little pest out of the way, you return to searching for your possible treasures in peace...";
 			let dice be a random number from 1 to 20;
-			let the bonus be (( Perception of Player minus 8 ) divided by 2);
+			let the bonus be ( Perception of Player minus 8 ) divided by 2;
 			if "Scavenger" is listed in feats of Player:
 				increase bonus by 4;
-			say "     You roll 1d20([dice])+[bonus] = [dice + bonus]: ";
+			say "[line break]You roll 1d20([dice])[if bonus >= 0]+[end if][bonus] = [special-style-1][dice + bonus][roman type] vs [special-style-2]16[roman type] (Perception Check):[line break]";
 			if dice + bonus > 15:
-				say "Scrounging up whatever you can you finally manage to find something worth wearing from the leftover inventory back here. Giving the apparel a quick a sniff, just to make sure it's not tainted, you smile approvingly before stuffing the items in question into your backpack. Time to head for home!";
+				say "     Scrounging up whatever you can you finally manage to find something worth wearing from the leftover inventory back here. Giving the apparel a quick a sniff, just to make sure it's not tainted, you smile approvingly before stuffing the items in question into your backpack. Time to head for home!";
 				ItemGain muscle shirt by 1;
 				increase score by 5;
 				now fashion statement is resolved;
 				now Resolution of Fashion Statement is 1; [found a shirt]
 				now fashionfight is 1;
 			else:
-				say "An annoyed grunt leaves your throat as your endeavors leave you with little more than some frustrations.";
-				say "     [bold type]You know your senses couldn't have been wrong about finding something of value in here, but should you really keep on looking?[roman type][line break]";
-				LineBreak;
+				say "     An annoyed grunt leaves your throat as your endeavors leave you with little more than some frustrations.";
+				say "[line break]     [bold type]You know your senses couldn't have been wrong about finding something of value in here, but should you really keep on looking?[roman type][line break]";
 				say "     ([link]Y[as]y[end link]) - Yes.";
 				say "     ([link]N[as]n[end link]) - No.";
 				if Player consents:
 					LineBreak;
 					say "     If at first you don't succeed, you mumble underneath your breath while continuing to look around.";
-					AttemptToWait;
 					follow the turnpass rule;
+					WaitLineBreak;
 					say "     A noise makes your head turn, and just in time too as a mutant stumbles onto your location!";
-					next;
 				else:
 					LineBreak;
 					say "     Growing too irate to be bothered with this anymore, you decide to head out. There's probably more treasure to find in better spots anyway.";
@@ -191,7 +173,6 @@ to say ResolveEvent Fashion Statement:
 		now Resolution of Fashion Statement is 99; [disinterest]
 		now Fashion Statement is resolved;
 
-
 Section 9 - Table of Game Objects
 
 Table of Game Objects (continued)
@@ -203,11 +184,8 @@ muscle shirt is not temporary.
 Traits of muscle shirt is {"sporty", "sexy"}.
 The placement of muscle shirt is "body".
 The descmod of muscle shirt is "A sexy black muscle shirt and a waist hugging pair of pants have been slipped over your body.".
-The slot of muscle shirt is "chest".
-
-instead of sniffing muscle shirt:
-	say "The muscle shirt and pants smell like musk and pheromones from long hours of working out.";
-
+The slot of muscle shirt is "body".
+Scent of muscle shirt is "The muscle shirt and pants smell like musk and pheromones from long hours of working out.".
 
 Section 9a - Red Cap
 
@@ -224,10 +202,7 @@ Traits of red cap is {"sporty"}.
 The placement of red cap is "head".
 The descmod of red cap is "A somewhat extraordinary red baseball cap rests atop your head.".
 The slot of red cap is "head".
-
-instead of sniffing cap:
-	say "The red baseball cap smells like ancient Kemet as well as something secret.";
-
+Scent of cap is "The red baseball cap smells like ancient Kemet as well as something secret.".
 
 Section 9b - Silver Dress
 
@@ -242,10 +217,7 @@ The effectiveness of silver dress is 40.
 Traits of silver dress is {"stylish"}.
 The placement of silver dress is "body".
 The descmod of silver dress is "A sparkling silver dress rests over your body.".
-The slot of silver dress is "body".
-
-instead of sniffing silver dress:
-	say "The silver dress smells like something made for a costume ball. Wait... where are the slippers for this thing...";
-
+The slot of silver dress is "chest".
+Scent of silver dress is "The silver dress smells like something made for a costume ball. Wait... where are the slippers for this thing...".
 
 Misc 9 ends here.

@@ -5,63 +5,50 @@ Version 3 of Retriever by AGentlemanCalledB begins here.
 Section 1 - Creature Responses
 
 to say losetoRetriever:
-	if HP of Karen is 4:
-		say "     Struggling to stay upright after Rex's brutal assault, he plants his feet firmly with a low growl before charging towards you, planting his shoulder squarely in the middle of your chest and knocking you to the ground.";
+	if Player is male:
+		say "     As you collapse, unable to resist the retriever girl's assault any longer, she approaches you with an expression somewhere between hunger and lust. You find yourself becoming increasingly aroused as she strips your clothes and gear from your [bodydesc of Player] body, intent on reaching the prize underneath. As soon as she has access, the sexy canine starts licking at your [cock size desc of Player] [Cock of Player] cock with her large canine tongue, quickly bringing it to full erection.";
+		say "     Once she's satisfied that you're as ready as she is, the retriever moves to bring her needy slit into position over your erect meat and slowly lowers herself onto you with a whimpering yip. As she raises and lowers herself against you, you find yourself slipping into a lust-filled haze, lost in the pleasure this sexy canine is forcing on you. Before long you feel yourself approaching your peak as the retriever quickens her pace, but just before you climax she reaches it first, howling in pleasure as she convulses above you, pushing you over the edge until you fill her needy body with your seed.";
+		say "     Afterwards, she collapses atop you, almost as exhausted as you are. The two of you lay there for some time, lost in the afterglow of your lovemaking, before she raises herself off you. She rubs her belly contently as she pads away, leaving you to recover on your own.";
+		CreatureSexAftermath "Retriever Female" receives "PussyFuck" from "Player";
 	else:
-		say "     As you collapse, unable to resist the retriever girl's assault any longer, she approaches you with an expression somewhere between hunger and lust";
-		if Player is male:
-			say ". You find yourself becoming increasingly aroused as she strips your clothes and gear from your [bodydesc of Player] body, intent on reaching the prize underneath. As soon as she has access, the sexy canine starts licking at your [cock size desc of Player] [Cock of Player] cock with her large canine tongue, quickly bringing it to full erection.";
-			say "     Once she's satisfied that you're as ready as she is, the retriever moves to bring her needy slit into position over your erect meat and slowly lowers herself onto you with a whimpering yip. As she raises and lowers herself against you, you find yourself slipping into a lust-filled haze, lost in the pleasure this sexy canine is forcing on you. Before long you feel yourself approaching your peak as the retriever quickens her pace, but just before you climax she reaches it first, howling in pleasure as she convulses above you, pushing you over the edge until you fill her needy body with your seed.";
-			WaitLineBreak;
-			say "     Afterwards, she collapses atop you, almost as exhausted as you are. The two of you lay there for some time, lost in the afterglow of your lovemaking, before she raises herself off you. She rubs her belly contently as she pads away, leaving you to recover on your own.";
-			CreatureSexAftermath "Retriever Female" receives "PussyFuck" from "Player";
-		else:
-			say ". As she strips you of your clothing and gear, you see her face overcome with disappointment as she discovers you lack the prize she's looking for. Her expression brightens again a moment later and she dives face-first into your crotch, clearly intent on making sure you're satisfied even if she quite doesn't get what she wanted.";
-			say "     As she drags her wet canine tongue across your feminine slit you can't help but shiver in delight. As her licking and nibbling continues you quickly find yourself approaching climax and as a final push to bring you over the edge the lustful canine drives her muzzle into you, licking at your depths as you scream in pleasure, soaking her muzzle and face in your juices.";
-			WaitLineBreak;
-			say "     Before getting up to leave your canine playmate gives you one last long doggy kiss, giving you a taste of your own juices then leaves you to recover alone; you watch her tail wag happily behind her as she walks away still licking your juices from her muzzle.";
-			CreatureSexAftermath "Retriever Female" receives "OralPussy" from "Player";
+		say "     As you collapse, unable to resist the retriever girl's assault any longer, she approaches you with an expression somewhere between hunger and lust. As she strips you of your clothing and gear, you see her face overcome with disappointment as she discovers you lack the prize she's looking for. Her expression brightens again a moment later and she dives face-first into your crotch, clearly intent on making sure you're satisfied even if she quite doesn't get what she wanted.";
+		say "     As she drags her wet canine tongue across your feminine slit you can't help but shiver in delight. As her licking and nibbling continues you quickly find yourself approaching climax and as a final push to bring you over the edge the lustful canine drives her muzzle into you, licking at your depths as you scream in pleasure, soaking her muzzle and face in your juices.";
+		say "     Before getting up to leave your canine playmate gives you one last long doggy kiss, giving you a taste of your own juices then leaves you to recover alone; you watch her tail wag happily behind her as she walks away still licking your juices from her muzzle.";
+		CreatureSexAftermath "Retriever Female" receives "OralPussy" from "Player";
 
 to say beattheRetriever:
-	if HP of Karen is 4:
-		say "     Still reeling from your last blow, Rex stumbles back and falls to one knee. He glances over at Karen, huddled in the corner of the room before looking up at you with his pleading eyes awaiting your final decisive strike which knocks the beaten canine to the floor.";
-	else:
-		if Libido of Player > 60 and Player is not neuter:
-			say "     As you land the final blow on the retriever girl she stumbles and falls backwards, giving you a clear view of her dripping cunt. You realize this is your opportunity to have some fun with the puppy if you wanted to (Y/N).";
-			if Player consents:
-				LineBreak;
-				say "     You decide to have some fun with the lusty canine and she realizes your intent as you approach and begin stripping off your gear. The retriever begins to pant happily and spreads her legs before you.";
-				if Player is male:
-					say "     Already fully erect by the time you reach her you waste no time in jumping on the supine canine. As you tease her outer folds with your [cock size desc of Player] [Cock of Player] cock she begins to whimper needfully, already beginning to buck against you, trying to force you inside her. You begin thrusting into her slowly, soon easily matching her own pace, each push eliciting another whimper or small bark from your retriever lover.";
-					WaitLineBreak;
-					say "     As the pace quickens you rapidly approach climax, and based on her rising pitch and increasingly forceful bucking you can tell she is as well. With one final thrust you drive your entire length into her, pushing you both over the edge. You fill her womb with your seed even as her own female juices are awash around you.";
-					say "     You both lay there for some time, basking in the afterglow before you finally pull out of her. You quickly gather your things and head on your way, leaving the retriever girl to recover alone, rubbing her belly happily with a vapid smile across her muzzle.";
-					CreatureSexAftermath "Retriever Female" receives "PussyFuck" from "Player";
-				else:
-					say "     Within moments you are on all fours in front of her taking several long licks of her already moist cunt, savoring her flavor for a moment before you change to a position that allows her to make use of that long canine tongue as well.";
-					WaitLineBreak;
-					say "     Before long, her expert ministrations have you approaching climax, and eager to return the favor, you find yourself driving deeper and deeper into your lover's sopping cunt.";
-					say "     Without warning she suddenly drives her muzzle into you, teasing your innermost folds with her tongue as your world explodes, soaking her muzzle and face.";
-					WaitLineBreak;
-					say "     As you begin to recover from your intense climax you realize your lover hasn't had hers. Hoping to catch her off guard like she did to you, you make a surprise assault on her dripping slit while she is busy licking your juices from her muzzle. You drive your tongue as deep into her as you can reach. The retriever gives a sharp yelp as she climaxes, soaking your face in her juices.";
-					say "     As she pants happily you slowly get up and collect your things, leaving her to recover on her own as you leave.";
-					CreatureSexAftermath "Retriever Female" receives "OralPussy" from "Player";
-					CreatureSexAftermath "Player" receives "OralPussy" from "Retriever Female";
+	if Libido of Player > 60 and Player is not neuter:
+		say "     As you land the final blow on the retriever girl she stumbles and falls backwards, giving you a clear view of her dripping cunt. You realize this is your opportunity to have some fun with the puppy if you wanted to.";
+		if Player consents:
+			LineBreak;
+			say "     You decide to have some fun with the lusty canine and she realizes your intent as you approach and begin stripping off your gear. The retriever begins to pant happily and spreads her legs before you.";
+			if Player is male:
+				say "     Already fully erect by the time you reach her you waste no time in jumping on the supine canine. As you tease her outer folds with your [cock size desc of Player] [Cock of Player] cock she begins to whimper needfully, already beginning to buck against you, trying to force you inside her. You begin thrusting into her slowly, soon easily matching her own pace, each push eliciting another whimper or small bark from your retriever lover.";
+				WaitLineBreak;
+				say "     As the pace quickens you rapidly approach climax, and based on her rising pitch and increasingly forceful bucking you can tell she is as well. With one final thrust you drive your entire length into her, pushing you both over the edge. You fill her womb with your seed even as her own female juices are awash around you.";
+				say "     You both lay there for some time, basking in the afterglow before you finally pull out of her. You quickly gather your things and head on your way, leaving the retriever girl to recover alone, rubbing her belly happily with a vapid smile across her muzzle.";
+				CreatureSexAftermath "Retriever Female" receives "PussyFuck" from "Player";
 			else:
-				LineBreak;
-				say "     You decide it's best to leave the defeated retriever be. As you turn to leave you see her climbing to her feet again, you brace yourself for another attack, but it never comes. She seems content to follow behind you and whine needfully, apparently trying to change your mind about playing with her. Eventually you manage to shake the lusty canine and continue on your way.";
+				say "     Within moments you are on all fours in front of her taking several long licks of her already moist cunt, savoring her flavor for a moment before you change to a position that allows her to make use of that long canine tongue as well.";
+				WaitLineBreak;
+				say "     Before long, her expert ministrations have you approaching climax, and eager to return the favor, you find yourself driving deeper and deeper into your lover's sopping cunt.";
+				say "     Without warning she suddenly drives her muzzle into you, teasing your innermost folds with her tongue as your world explodes, soaking her muzzle and face.";
+				WaitLineBreak;
+				say "     As you begin to recover from your intense climax you realize your lover hasn't had hers. Hoping to catch her off guard like she did to you, you make a surprise assault on her dripping slit while she is busy licking your juices from her muzzle. You drive your tongue as deep into her as you can reach. The retriever gives a sharp yelp as she climaxes, soaking your face in her juices.";
+				say "     As she pants happily you slowly get up and collect your things, leaving her to recover on her own as you leave.";
+				CreatureSexAftermath "Retriever Female" receives "OralPussy" from "Player";
+				CreatureSexAftermath "Player" receives "OralPussy" from "Retriever Female";
 		else:
-			say "     After you land the final blow on the poor golden furred canine you feel a wave of remorse overcome you as she turns and scampers away, tail between her legs, crying out that she had only wanted to play with you. You consider chasing after her to apologize for a moment but decide it's probably best to leave her be and continue on your way.";
+			LineBreak;
+			say "     You decide it's best to leave the defeated retriever be. As you turn to leave you see her climbing to her feet again, you brace yourself for another attack, but it never comes. She seems content to follow behind you and whine needfully, apparently trying to change your mind about playing with her. Eventually you manage to shake the lusty canine and continue on your way.";
+	else:
+		say "     After you land the final blow on the poor golden furred canine you feel a wave of remorse overcome you as she turns and scampers away, tail between her legs, crying out that she had only wanted to play with you. You consider chasing after her to apologize for a moment but decide it's probably best to leave her be and continue on your way.";
 
 to say Retrieverdesc:
 	say "     As you walk down the street you suddenly hear the sound of paws on pavement approaching you from behind. You turn towards the source just in time to avoid the golden furred canine rushing towards you from behind.";
 	say "     When the retriever circles around, you get a clearer look at your assailant; she is a curvaceous female golden retriever with digitigrade legs and paw-like hands and feet as well as four firm breasts. Her canine tail wags happily behind her, obviously looking forward to playing with you.";
 
-to say RetrieverAttack:
-	if HP of Karen is 4:
-		say "[one of]Swinging wildly[or]Lashing out[or]Striking forward[at random] [one of]with his short claws[or]with a balled fist[or]in anger[at random], Rex [one of]lands a powerful blow[or]connects painfully, nearly knocking you to the floor[or]lands a sharp strike which sends you reeling[at random].[no line break]";
-	else:
-		say "[one of]The female retriever rushes you, clipping your side as you try and dive out of her way[or]The female retriever rushes you, bowling you over as she catches you off guard, assaulting you with licks and small nibbles before you are able to push her off[or]You find yourself awe struck by the sexy female canine's body momentarily, long enough for her to close in and plant a wet doggy kiss on your cheek[or]The retriever bitch moves in quickly, raking across your shoulder and arm with her short claws before you can react[at random].[no line break]";
+Section 2 - Creature Insertion
 
 Table of CombatPrep (continued)
 name(text)	PrepFunction(text)
@@ -69,8 +56,6 @@ name(text)	PrepFunction(text)
 
 to say PrepCombat_Retriever Female:
 	setmongender 4; [creature is female]
-
-Section 2 - Creature Insertion
 
 Table of Random Critters (continued)
 NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
@@ -93,20 +78,20 @@ When Play begins:
 	now enemy title entry is "Female Retriever";
 	now enemy Name entry is "";
 	now enemy type entry is 0; [ 0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters. ]
-	now attack entry is "[RetrieverAttack]";
+	now attack entry is "[one of]The female retriever rushes you, clipping your side as you try and dive out of her way[or]The female retriever rushes you, bowling you over as she catches you off guard, assaulting you with licks and small nibbles before you are able to push her off[or]You find yourself awe struck by the sexy female canine's body momentarily, long enough for her to close in and plant a wet doggy kiss on your cheek[or]The retriever bitch moves in quickly, raking across your shoulder and arm with her short claws before you can react[at random].";
 	now defeated entry is "[beattheRetriever]";
 	now victory entry is "[losetoRetriever]";
 	now desc entry is "[Retrieverdesc]";
-	now face entry is "that of an attractive female retriever, with large folded ears atop your head and a delicate canine muzzle[if HP of Rex > 9]. Fastened around your neck, you have a thin blue leather studded collar, declaring your status as Rex's pet to the world. There's even a small, silver, bone-shaped tag with your name engraved on it[end if]";
-	now body entry is "that of a clearly female canine, with a beautiful hourglass figure leading into shapely digitigrade legs and large paws. Your hands have also become somewhat paw-like, while they have maintained some dexterity, it is clear they have become very canine, with short but slender digits topped with small claws";
-	now skin entry is "a thick, shiny coat of golden fur over your";
+	now face entry is "that of an attractive female retriever, with large folded ears atop your head and a delicate canine muzzle[if HP of Rex > 9]. Fastened around your neck, you have a thin blue leather studded collar, declaring your status as Rex's pet to the world. There's even a small, silver bone-shaped tag with your name engraved on it[end if]";
+	now body entry is "that of a clearly female canine, with a beautiful hourglass figure leading into shapely digitigrade legs and large paws. Your hands have also become somewhat paw-like; while they have maintained some dexterity, it is clear they have become very canine, with short but slender digits topped with small claws";
+	now skin entry is "[if looknow is true]a thick, shiny coat of golden fur over your[else]shiny golden-furred[end if]";
 	now tail entry is "Your tail is that of a golden retriever, long and covered with soft golden fur. It wags happily constantly without your input unless you make a conscious effort to stop it.";
 	now cock entry is "[one of]canine[or]knotted[or]sheathed[or]pointed doggy[at random]";
-	now face change entry is "you feel an immense pressure build in your head, only to have it release moments later as your face pushes out into a canine muzzle. You are distracted from your changing head when your ears begin to ring painfully, you realize why when you feel them shifting to the top of your head while the rest of your face changes to match the female retriever almost exactly";
-	now body change entry is "you stumble and fall to all fours, your legs twisting to a digitigrade configuration with canine paws. The changes continue up your body like a wave, leaving you with a stunning hourglass figure and paw-like hands, much like that retriever bitch";
+	now face change entry is "you feel an immense pressure build in your head, only to have it release moments later as your face pushes out into a canine muzzle. You are distracted from your changing head when your ears begin to ring painfully; you realize why when you feel them shifting to the top of your head while the rest of your face changes to match a female retriever almost exactly";
+	now body change entry is "you stumble and fall to all fours, your legs twisting to a digitigrade configuration with canine paws. The changes continue up your body like a wave, leaving you with a stunning hourglass figure and paw-like hands, much like one of those retriever bitches";
 	now skin change entry is "a thick coat of golden fur covers your entire body";
-	now ass change entry is "feminine curves overtake it leaving it an attractive cross between a woman and a canine. Meanwhile you feel nearby muscles working without your input, looking backwards you find they are wagging your growing retriever tail happily, regardless of your opinion";
-	now cock change entry is "your entire manhood is consumed by a growing golden furred sheath, once covered you feel an unusual pressure while it changes into that of a male retriever";
+	now ass change entry is "feminine curves overtake it, leaving it an attractive cross between a woman and a canine. Meanwhile you feel nearby muscles working without your input; looking backwards you find they are wagging your growing retriever tail happily, regardless of your opinion";
+	now cock change entry is "your entire manhood is consumed by a growing golden-furred sheath. Once covered you feel an unusual pressure while it changes into that of a male retriever";
 	now str entry is 15; [ The player's stats will move towards these values through infection. ]
 	now dex entry is 18; [ Only the monster's dexterity has any effect in combat. ]
 	now sta entry is 15; [ These numbers should reflect a fully infected player's stats, not the attacking monster's. ]
@@ -247,44 +232,6 @@ When Play begins:
 	[Clit Size Adjective is generated by a function and can be used in scenes: very small/small/average/large/very large]
 ]
 
-Table of Game Objects (continued)
-name	desc	weight	object
-"retriever cum"	"A plastic water bottle containing a moderate amount of milky white fluid. Almost could be mistaken for some sort of buttermilk, if someone hadn't written 'Retriever Cum' across the label on the bottle. You [italic type]could[roman type] drink it to quench your thirst, or you maybe just do it for fun. Who knows what else it might do to you though..."	1	retriever cum
-
-[retriever cum is a grab object.] [defined in Cum Items to prevent name conflicts]
-retriever cum is cum.
-Purified of retriever cum is "distilled cum".
-retriever cum is infectious.
-Strain of retriever cum is "Retriever Male".
-Usedesc of retriever cum is "[retriever cum use]".
-
-to say retriever cum use:
-	say "     Lifting the plastic bottle to your mouth, you take a drink from it, letting the creamy cum run over your tongue and down your throat. Tastes rich and animal-like. Swishing it around in your mouth a little, you finish the bottle off, then stuff it back into your collection of 'empties'.";
-	PlayerDrink 5;
-	SanLoss 5;
-
-instead of sniffing retriever cum:
-	say "You open the lid for a moment and take a sniff. Doesn't smell too bad actually, just kinda nutty.";
-
-Table of Game Objects (continued)
-name	desc	weight	object
-"retriever milk"	"A plastic water bottle filled with what is clearly milk. One could think it was a regular cow's milk, if someone hadn't written 'Retriever Milk' across the label on the bottle. You [italic type]could[roman type] drink it to quench your thirst. Who knows what else it might do to you though..."	1	retriever milk
-
-[retriever milk is a grab object.] [defined in Milk Items to prevent name conflicts]
-retriever milk is milky.
-Purified of retriever milk is "distilled milk".
-retriever milk is infectious.
-Strain of retriever milk is "Retriever Female".
-Usedesc of retriever milk is "[retriever milk use]".
-
-to say retriever milk use:
-	say "     Lifting the plastic bottle to your mouth, you take a drink from it, letting the canine milk run over your tongue and down your throat. Tastes rich and animal-like. Swishing it around in your mouth a little, you finish the bottle off, then stuff it back into your collection of 'empties'.";
-	PlayerDrink 15;
-
-instead of sniffing retriever milk:
-	say "You open the lid for a moment and take a sniff. Smells kinda like any other milk, really.";
-
-
 Table of CombatPrep (continued)
 name(text)	PrepFunction(text)
 "Retriever Male"	"[PrepCombat_Retriever Male]"
@@ -313,20 +260,20 @@ When Play begins:
 	now enemy title entry is "Male Retriever";
 	now enemy Name entry is "Rex";
 	now enemy type entry is 2; [ 0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters. ]
-	now attack entry is "[RetrieverAttack]";
-	now defeated entry is "[beattheRetriever]";
-	now victory entry is "[losetoRetriever]";
+	now attack entry is "[one of]Swinging wildly[or]Lashing out[or]Striking forward[at random] [one of]with his short claws[or]with a balled fist[or]in anger[at random], Rex [one of]lands a powerful blow[or]connects painfully, nearly knocking you to the floor[or]lands a sharp strike which sends you reeling[at random].";
+	now defeated entry is "     Still reeling from your last blow, Rex stumbles back and falls to one knee. He glances over at Karen, huddled in the corner of the room before looking up at you with his pleading eyes awaiting your final decisive strike which knocks the beaten canine to the floor.[line break]";
+	now victory entry is "     Struggling to stay upright after Rex's brutal assault, he plants his feet firmly with a low growl before charging towards you, planting his shoulder squarely in the middle of your chest and knocking you to the ground.[line break]";
 	now desc entry is "     Standing before you is Rex, a large male golden retriever. His long, thickly furred tail whips about in irritation behind him as he assumes an aggressive fighting stance. Clearly he isn't pleased with your little escape plan.[line break]";
-	now face entry is "that of an attractive female retriever, with large folded ears atop your head and a delicate canine muzzle[if HP of Rex > 9]. Fastened around your neck, you have a thin blue leather studded collar, declaring your status as Rex's pet to the world. There's even a small, silver, bone-shaped tag with your name engraved on it[end if]";
-	now body entry is "that of a clearly female canine, with a beautiful hourglass figure leading into shapely digitigrade legs and large paws. Your hands have also become somewhat paw-like, while they have maintained some dexterity, it is clear they have become very canine, with short but slender digits topped with small claws";
-	now skin entry is "a thick, shiny coat of golden fur over your";
+	now face entry is "that of an attractive female retriever, with large folded ears atop your head and a delicate canine muzzle[if HP of Rex > 9]. Fastened around your neck, you have a thin blue leather studded collar, declaring your status as Rex's pet to the world. There's even a small, silver bone-shaped tag with your name engraved on it[end if]";
+	now body entry is "that of a clearly female canine, with a beautiful hourglass figure leading into shapely digitigrade legs and large paws. Your hands have also become somewhat paw-like; while they have maintained some dexterity, it is clear they have become very canine, with short but slender digits topped with small claws";
+	now skin entry is "[if looknow is true]a thick, shiny coat of golden fur over your[else]shiny golden-furred[end if]";
 	now tail entry is "Your tail is that of a golden retriever, long and covered with soft golden fur. It wags happily constantly without your input unless you make a conscious effort to stop it.";
 	now cock entry is "[one of]canine[or]knotted[or]sheathed[or]pointed doggy[at random]";
-	now face change entry is "you feel an immense pressure build in your head, only to have it release moments later as your face pushes out into a canine muzzle. You are distracted from your changing head when your ears begin to ring painfully, you realize why when you feel them shifting to the top of your head while the rest of your face changes to match the female retriever almost exactly";
-	now body change entry is "you stumble and fall to all fours, your legs twisting to a digitigrade configuration with canine paws. The changes continue up your body like a wave, leaving you with a stunning hourglass figure and paw-like hands, much like that retriever bitch";
+	now face change entry is "you feel an immense pressure build in your head, only to have it release moments later as your face pushes out into a canine muzzle. You are distracted from your changing head when your ears begin to ring painfully; you realize why when you feel them shifting to the top of your head while the rest of your face changes to match a female retriever almost exactly";
+	now body change entry is "you stumble and fall to all fours, your legs twisting to a digitigrade configuration with canine paws. The changes continue up your body like a wave, leaving you with a stunning hourglass figure and paw-like hands, much like one of those retriever bitches";
 	now skin change entry is "a thick coat of golden fur covers your entire body";
-	now ass change entry is "feminine curves overtake it leaving it an attractive cross between a woman and a canine. Meanwhile you feel nearby muscles working without your input, looking backwards you find they are wagging your growing retriever tail happily, regardless of your opinion";
-	now cock change entry is "your entire manhood is consumed by a growing golden furred sheath, once covered you feel an unusual pressure while it changes into that of a male retriever";
+	now ass change entry is "feminine curves overtake it, leaving it an attractive cross between a woman and a canine. Meanwhile you feel nearby muscles working without your input; looking backwards you find they are wagging your growing retriever tail happily, regardless of your opinion";
+	now cock change entry is "your entire manhood is consumed by a growing golden-furred sheath. Once covered you feel an unusual pressure while it changes into that of a male retriever";
 	now str entry is 19; [ The player's stats will move towards these values through infection. ]
 	now dex entry is 20; [ Only the monster's dexterity has any effect in combat. ]
 	now sta entry is 15; [ These numbers should reflect a fully infected player's stats, not the attacking monster's. ]
@@ -467,23 +414,7 @@ When Play begins:
 	[Clit Size Adjective is generated by a function and can be used in scenes: very small/small/average/large/very large]
 ]
 
-Table of Game Objects (continued)
-name	desc	weight	object
-"retriever man-milk"	"A plastic water bottle filled with what is clearly milk. One could think it was a regular cow's milk, if someone hadn't written 'Retriever Man-Milk' across the label on the bottle. You [italic type]could[roman type] drink it to quench your thirst. Who knows what else it might do to you though..."	1	retriever man-milk
-
-retriever man-milk is a grab object.
-retriever man-milk is milky.
-Purified of retriever man-milk is "distilled milk".
-retriever man-milk is infectious.
-Strain of retriever man-milk is "Retriever Male".
-Usedesc of retriever man-milk is "[retriever man-milk use]".
-
-to say retriever man-milk use:
-	say "     Lifting the plastic bottle to your mouth, you take a drink from it, letting the milk run over your tongue and down your throat. Tastes rich and animal-like. Swishing it around in your mouth a little, you finish the bottle off, then stuff it back into your collection of 'empties'.";
-	PlayerDrink 15;
-
-instead of sniffing retriever man-milk:
-	say "You open the lid for a moment and take a sniff. Smells kinda like any other milk, really.";
+Section 3 - Endings
 
 Table of GameEndings (continued)
 Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
@@ -499,19 +430,13 @@ This is the Retriever Female Infection rule:
 			else if HP of Rex is 10:
 				say "     Your life as Rex's happy sexpet is a simple but strangely fulfilling one. Rex proves to be a kind owner, always ensuring you and Karen are both well cared for, with a safe home, plenty of food and water, the lustful needs instilled in you by the infection and Rex's training never go unattended.";
 				say "     Eventually when the military moves through the city they are greeted at the door by Rex, who manages to convince them none of you are dangerous. After a short stay at their camp you are allowed to leave and you move to a small, quiet home outside the city where you continue your peaceful existence for many years.";
-				if Player is fpreg_ok or Player is mpreg_ok:
-					say "     You frequently find your belly round with Rex's retriever pups, thanks to your regular fun with your master, and each litter is well trained to be perfect sexpets like Karen and yourself. It almost breaks your heart each time your pups are sent away to live with families of their own, but you are comforted knowing Rex personally ensures each and every home is just as loving and caring as your own.";
-				else:
-					say "     Frequently Karen's belly becomes round with Rex's pups, leaving you somewhat disappointed that you cannot share that special bond with your master. You do however enjoy the time you get to spend with the pups as they are trained properly to be perfect pets like Karen and yourself and you are always sad to see them go when the time comes to send them off to new families of their own, despite Karen's reassurances that Rex ensures each pup find a home as loving and caring as your own.";
+				say "     [if Player is impreg_ok]You frequently find your belly round with Rex's retriever pups, thanks to your regular fun with your master, and each litter is well trained to be perfect sexpets like Karen and yourself. It almost breaks your heart each time your pups are sent away to live with families of their own, but you are comforted knowing Rex personally ensures each and every home is just[else]Frequently Karen's belly becomes round with Rex's pups, leaving you somewhat disappointed that you cannot share that special bond with your master. You do however enjoy the time you get to spend with the pups as they are trained properly to be perfect pets like Karen and yourself and you are always sad to see them go when the time comes to send them off to new families of their own, despite Karen's reassurances that Rex ensures each pup find a home[end if] as loving and caring as your own.";
 			else if Retriever Girl is Tamed:
 				say "     As the last of your resistance fades and the bestial needs of the retriever bitch take full control you bound off happily into the city and Karen quickly follows suit. The two of you eventually catch a familiar male scent, and your bodies, eager for an alpha's touch, soon lead you to him. With your minds gone none of you are ever entirely aware of your previous relationships, but somehow you know you belong together. And so your small retriever pack sets off into the city, eager to bolster your numbers and enjoy your carefree lives as lusty canines.";
 			else if HP of Rex > 5:
 				say "     As your mental resistance begins to slip away you find yourself becoming more and more the retriever bitch your body is urging you to be. Soon you end up back at Rex's home and noting your failing struggle to maintain control he takes advantage of your weakened state of mind, offering you the collar and a place in his home once again.";
 				say "     This turns out to be the final push your mind needed, and as you reach to accept the collar the last of your resistance fades away, finally surrendering yourself to a simple life as one of Rex's happy pets.";
-				if Player is fpreg_ok or Player is mpreg_ok:
-					say "     You frequently find your belly round with Rex's retriever pups, thanks to your regular fun with your master, and each litter is well trained to be perfect sexpets like Karen and yourself. It almost breaks your heart each time your pups are sent away to live with families of their own, but you are comforted knowing Rex personally ensures each and every home is just as loving and caring as your own.";
-				else:
-					say "     Frequently Karen's belly becomes round with Rex's pups, leaving you somewhat disappointed that you cannot share that special bond with your master. You do however enjoy the time you get to spend with the pups as they are trained properly to be perfect pets like Karen and yourself and you are always sad to see them go when the time comes to send them off to new families of their own, despite Karen's reassurances that Rex ensures each pup find a home as loving and caring as your own.";
+				say "     [if Player is impreg_ok]You frequently find your belly round with Rex's retriever pups, thanks to your regular fun with your master, and each litter is well trained to be perfect sexpets like Karen and yourself. It almost breaks your heart each time your pups are sent away to live with families of their own, but you are comforted knowing Rex personally ensures each and every home is just[else]Frequently Karen's belly becomes round with Rex's pups, leaving you somewhat disappointed that you cannot share that special bond with your master. You do however enjoy the time you get to spend with the pups as they are trained properly to be perfect pets like Karen and yourself and you are always sad to see them go when the time comes to send them off to new families of their own, despite Karen's reassurances that Rex ensures each pup find a home[end if] as loving and caring as your own.";
 			else:
 				say "     As the last of your resistance fades and the bestial needs of the retriever bitch take full control you bound off happily into the city in search of new playmates to sate your canine lusts with.";
 				if HP of Rex is 4:
@@ -521,8 +446,7 @@ This is the Retriever Female Infection rule:
 					say "     You enjoy your time with the other various creatures in the city, particularly the huskies and their handsome alphas, yet you always feel something is missing. Deep down you know you will never be truly satisfied until you find a strong alpha of your own breed, to take you in and fill you with his pups like those lucky huskies.";
 		else:
 			if Retriever Girl is tamed:
-				say "     Once the military moves into the city, you and Karen are quickly processed through their refugee camp and declared safe so they can move on to more dangerous creatures in the city. The two of you stick together in your lives outside the city, eventually opening a small diner together, which ends up being quite popular with other infected survivors";
-				say ". Thanks to the success of your business and the friendly and upbeat demeanor provided by your retriever infection, neither of you ever have difficulty finding company to follow home for the night.";
+				say "     Once the military moves into the city, you and Karen are quickly processed through their refugee camp and declared safe so they can move on to more dangerous creatures in the city. The two of you stick together in your lives outside the city, eventually opening a small diner together, which ends up being quite popular with other infected survivors. Thanks to the success of your business and the friendly and upbeat demeanor provided by your retriever infection, neither of you ever have difficulty finding company to follow home for the night.";
 				if Player is male and Player is not sterile:
 					say "     However, the nights you spend in each other's company prove to be just as enjoyable, and before long Karen is happily carrying your pups as a result.";
 			else if HP of Rex > 9:
@@ -536,17 +460,14 @@ This is the Retriever Female Infection rule:
 						say "     Each time you visit you notice he has left that same blue collar out where you can see it, and each time you do you find yourself wondering about the way things could have been... the way things could still be.";
 				else if HP of Rex is 4:
 					say "     You manage to smuggle your dog-cock-shaped sex toy out of the city with you, frequently needing it to satisfy your body's strange new needs.";
-				say "     You lead [if HP of Rex is 4]an otherwise normal[else]a relatively normal[end if] life outside the city, ending up working as a [if Player is female]waitress[else]waiter[end if] in an upscale restaurant catering mostly to other infected survivors. The friendly and upbeat demeanor provided by your retriever infection proves to be a valuable asset in this line of work, and your attractive canine body ensures you never have trouble finding someone who will let you follow them home for a night of lustful fun.";
+				say "     You lead [if HP of Rex is 4]an otherwise[else]a relatively[end if] normal life outside the city, ending up working as a wait[if Player is female]ress[else]er[end if] in an upscale restaurant catering mostly to other infected survivors. The friendly and upbeat demeanor provided by your retriever infection proves to be a valuable asset in this line of work, and your attractive canine body ensures you never have trouble finding someone who will let you follow them home for a night of lustful fun.";
 
 This is the Rex' and Karen's Epilogue rule:
 	if Player has no non-shifting body of "Retriever Female":
-		if (HP of Rex > 9 and HP of Rex < 50) or (HP of Rex is 4) or (Retriever Girl is tamed):
+		if (HP of Rex > 9 and HP of Rex < 50) or HP of Rex is 4 or Retriever Girl is tamed:
 			trigger ending "Rex['] and Karen's Epilogue";
 		if HP of Rex > 9 and HP of Rex < 50:
-			if humanity of Player < 10:
-				say "     With your mind lost to another infection out in the city, you quickly forget your submission to Rex, and your place as his pet. He and Karen search the city for you for some time, even enlisting the aid of any other survivor they can find in exchange for a share of Rex's stockpiled supplies. Despite their titanic effort the pair is never able to find you among the horde of mindless mutants in the city, eventually leaving you and it behind to find a new home outside once the military moves in.";
-			else:
-				say "     When the military finally moves into the city and the retriever infection still hasn't taken hold Rex takes you aside for a private moment, realizing that, despite convincing you to submit to him and accept a place as his pet, his 'training' still hasn't managed to take hold of you. With tears welling up in his puppydog eyes Rex reaches behind your neck and unfastens the blue collar, he tenderly places it in your palms, and closes your hands tightly around it. Finally he informs you that you are free to leave and do what you wish in this new world, but you will always have a place in his home should you every truly desire it.";
+			say "     [if humanity of Player < 10]With your mind lost to another infection out in the city, you quickly forget your submission to Rex, and your place as his pet. He and Karen search the city for you for some time, even enlisting the aid of any other survivor they can find in exchange for a share of Rex's stockpiled supplies. Despite their titanic effort the pair is never able to find you among the horde of mindless mutants in the city, eventually leaving you and it behind to find a new home outside once the military moves in[else]When the military finally moves into the city and the retriever infection still hasn't taken hold Rex takes you aside for a private moment, realizing that, despite convincing you to submit to him and accept a place as his pet, his 'training' still hasn't managed to take hold of you. With tears welling up in his puppydog eyes Rex reaches behind your neck and unfastens the blue collar, he tenderly places it in your palms, and closes your hands tightly around it. Finally he informs you that you are free to leave and do what you wish in this new world, but you will always have a place in his home should you every truly desire it[end if].";
 		else if HP of Rex is 4:
 			say "     As the last of the retriever infection is worked out of your system you find the powerful urges caused by that strange bone seem to diminish as well.";
 		if Retriever Girl is tamed:

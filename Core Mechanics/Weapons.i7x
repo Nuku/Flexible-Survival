@@ -4,11 +4,9 @@ Version 1 of Weapons by Core Mechanics begins here.
 
 [X moved to Core Mechanics/Weapons.i7x]
 
-
-Book 1 - Blades
+Chapter 1 - Blades
 
 Section 1 - Small Blades
-
 
 Table of Game Objects (continued)
 name	desc	weight	object
@@ -68,7 +66,7 @@ Weapon Damage of sharp screw is 6.
 Weapon Type of sharp screw is "Melee".
 Objsize of sharp screw is 1.
 Hitbonus of sharp screw is -1. [not a weapon]
-Scent of sharp screw is "The screw smells of metal, with a hint of sawdust."
+Scent of sharp screw is "The screw smells of metal, with a hint of sawdust.".
 
 Table of Game Objects (continued)
 name	desc	weight	object
@@ -95,7 +93,7 @@ Weapon Damage of cleaver is 7.
 Weapon Type of cleaver is "Melee".
 Objsize of cleaver is 3.
 Hitbonus of cleaver is 0. [nothing special]
-Scent of the cleaver is "The heavy blade smells faintly of blood."
+Scent of the cleaver is "The heavy blade smells faintly of blood.".
 
 Table of Game Objects (continued)
 name	desc	weight	object
@@ -134,7 +132,6 @@ Hitbonus of elven knife is 1. [magic]
 Scent of the elven knife is "The knife smells pretty nice. The handle must be some sort of sandalwood.".
 
 Section 3 - Large Blades
-
 
 Table of Game Objects (continued)
 name	desc	weight	object
@@ -187,12 +184,16 @@ Weapon Type of infected sword is "Melee".
 Objsize of infected sword is 4.
 Hitbonus of infected sword is 1. [magic]
 Purified of infected sword is "Nothing".
-
 Scent of infected sword is "The infected sword smells of a myriad of musky scents, all shifting and changing. You can never seem to identify a scent before a new one appears.".
 
 instead of purifying an infected sword:
-	say "That doesn't even fit in the microwave. Also, putting metal in one is a really bad idea.";
-	stop the action;
+	say "That doesn't even fit in the microwave. Also, putting metal in one is a really bad idea." instead;
+
+An everyturn rule:
+	if the infected sword is wielded:
+		say "[line break]The sword feels slimy in your hand. Maybe you shouldn't be using it.";
+		randominfect;
+		say "The infected sword changes you.";
 
 Table of Game Objects (continued)
 name	desc	weight	object
@@ -218,8 +219,7 @@ Objsize of viking sword is 3.
 Hitbonus of viking sword is 1. [mastercraft]
 Scent of the viking sword is "The blade smells of nothing but metal. Sonya always kept it clean without fail, and you've done the same since you got it.".
 
-
-Book 2 - Impact Weapons
+Chapter 2 - Impact Weapons
 
 Section 1 - Small
 
@@ -333,7 +333,7 @@ Weapon Damage of dildo club is 5.
 Weapon Type of dildo club is "Melee".
 Objsize of dildo club is 3.
 Hitbonus of dildo club is 0. [nothing special]
-Scent of the dildo club is "The sex-toy club smells of latex and your humiliated foes."
+Scent of the dildo club is "The sex-toy club smells of latex and your humiliated foes.".
 
 Table of Game Objects (continued)
 name	desc	weight	object
@@ -346,6 +346,13 @@ Weapon Type of dirty whip is "Melee".
 Objsize of dirty whip is 3.
 Hitbonus of dirty whip is -1. [slick and goopy]
 Scent of dirty whip is "The sticky whip smells of equine cum.".
+
+An everyturn rule:
+	if the dirty whip is wielded:
+		say "The cum on the dirty whip slips down onto your hand.";
+		now researchbypass is 1;
+		infect "Black Equinoid";
+		now researchbypass is 0;
 
 Table of Game Objects (continued)
 name	desc	weight	object
@@ -405,7 +412,7 @@ Weapon Damage of nightstick is 6.
 Weapon Type of nightstick is "Melee".
 Objsize of nightstick is 3.
 Hitbonus of nightstick is 0. [nothing special]
-Scent of nightstick is "     The nightstick smells faintly of violent authority.".
+Scent of nightstick is "The nightstick smells faintly of violent authority.".
 
 Table of Game Objects (continued)
 name	desc	weight	object
@@ -414,6 +421,7 @@ name	desc	weight	object
 wukongStaff is an armament. It is not temporary.
 understand "Wukong's staff" as wukongStaff.
 understand "staff" as wukongStaff.
+printed name of wukongStaff is "Wukong's staff".
 It has a weapon "[one of]your bo staff[or]your fighting staff[or]your staff[or]your bo staff with a hard whack[or]the long pole[or]your staff with a fast jab[at random]".
 Weapon Damage of wukongStaff is 18.
 Weapon Type of wukongStaff is "Melee".
@@ -434,6 +442,14 @@ Weapon Type of awesome bat is "Melee".
 Objsize of awesome bat is 4.
 Hitbonus of awesome bat is 0. [nothing special]
 Scent of awesome bat is "The powerful bat smells faintly of wood and the strange fruits that grew on that giant tree.".
+
+to say awesome bat proc:
+	choose row MonsterID from the Table of Random Critters;
+	if Name entry is "Pod Person":
+		say "...[line break]Your bat resounds against the tree, causing the world itself to shake. The unstoppable force and the immovable object meet, however your strength behind the bat is the deciding factor";
+		now dam is 60;
+		now monsterHP is 0;
+		increase Awesome_noreward by 1;
 
 Table of Game Objects (continued)
 name	desc	weight	object
@@ -523,11 +539,10 @@ to say RiotShieldAttackDesc:
 	say "A black shield that Zephyr's riot security uses to suppress threats. This one is yours, and you've chosen to use it for bashing people out of the way. You might [link]change your mind[as]RSProtectMode[end link] though, and direct your shield to more defensive purposes instead. ";
 
 riotshieldProtectMode is an action applying to one topic.
-
 understand "RSProtectMode" as riotshieldProtectMode.
 
 check riotshieldProtectMode:
-	if carried of zephyr bashing riot shield < 1, say "     What shield? You're not holding one right now." instead;
+	if carried of zephyr bashing riot shield < 1, say "What shield? You're not holding one right now." instead;
 
 carry out riotshieldProtectMode:
 	if zephyr bashing riot shield is wielded:
@@ -538,7 +553,7 @@ carry out riotshieldProtectMode:
 	ItemLoss zephyr bashing riot shield by 1;
 	ItemGain zephyr protective riot shield by 1;
 
-Book 3 - Stabbing Weapons
+Chapter 3 - Stabbing Weapons
 
 Table of Game Objects (continued)
 name	desc	weight	object
@@ -552,7 +567,6 @@ Objsize of bronze trident is 4.
 Hitbonus of bronze trident is 1. [magic]
 Scent of bronze trident is "The trident smells like the sea, the moon, the stars and... a strong merman? Weird.".
 
-
 Table of Game Objects (continued)
 name	desc	weight	object
 "Makeshift-Spear"	"Made by binding the blade of your old pocket knife to a sturdy wooden rod, this Makeshift-Spear is a much better choice for combat than its two separate parts."	3	Makeshift-Spear
@@ -564,7 +578,6 @@ Weapon Type of Makeshift-Spear is "Melee".
 Objsize of Makeshift-Spear is 4.
 Hitbonus of Makeshift-Spear is -1. [improvised]
 Scent of the Makeshift-Spear is "The wood smells a little musty. It brings back memories of the Urban Forest.".
-
 
 Table of Game Objects (continued)
 name	desc	weight	object
@@ -602,9 +615,6 @@ Objsize of rusty nail is 1.
 Hitbonus of rusty nail is -1. [not a weapon]
 Scent of rusty nail is "The rusty nail smells like iron.".
 
-Book 4 - Ranged Weapons
-
-
-
+Chapter 4 - Ranged Weapons
 
 Weapons ends here.

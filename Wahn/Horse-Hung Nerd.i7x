@@ -9,10 +9,8 @@ NerdMeetings is a number that varies.
 Section 1 - Creature Responses
 
 to say HHNerd wins:
-	setmonster "Horseman";
-	choose row MonsterID from the Table of Random Critters;
 	if HP of Player > 0: [player submits]
-		if anallevel is 1 or (Cock Count of Player is 0): [blowjob for females, neuters and those who don't like anal]
+		if anallevel is 1 or Player is not male: [blowjob for females, neuters and those who don't like anal]
 			say "     As you submit and fall to your knees, Clyde grins down at you and says, 'So you do know how to treat your betters after all. This is how it should be - with the smartest people at the top, not the most violent. Good that you've seen the light.' Chuckling, he grabs hold of his cock, jerking its long shaft with both hands. As it quickly gets fully hard, Clyde steps up to you and says 'Now open wide...'";
 			say "     [HHNerd Sucking]";
 		else: [random fuck/suck]
@@ -25,7 +23,7 @@ to say HHNerd wins:
 		LineBreak;
 		infect "Horseman";
 	else: [player loses]
-		if anallevel is 1 or (Cock Count of Player is 0): [blowjob for females, neuters and those who don't like anal]
+		if anallevel is 1 or Player is not male: [blowjob for females, neuters and those who don't like anal]
 			say "     As you fall to your knees in front of him in exhaustion, Clyde grins down at you and says, 'See - I'm superior in every way. Mentally, as well as physically. Let this be a lesson how to treat your betters. This is how it should be - with the smartest people at the top.' Chuckling, he grabs hold of his cock, jerking its long shaft with both hands. As it quickly gets fully hard, Clyde steps up to you and says 'Now open wide...'";
 			say "     [HHNerd Sucking]";
 		else: [random fuck/suck]
@@ -76,7 +74,7 @@ to say HHNerd loses:
 		say "     Finding himself on the losing side of your confrontation, Clyde quickly pulls a small test-tube out of his pocket, popping off its cork and throwing its contents at you. You do your best to evade, but even so, some of the stuff splashes on you - and forces you almost to your knees with its stench. Man - what kind of chemical was that? A bit dazed by this unexpected attack, you stumble backwards and frantically throw off soiled clothing and try to rub the scent off your skin... which gives Clyde easily enough time to run off. The last you hear from him are the words 'You'll regret resisting against me!', shouted over his shoulder.";
 	else:
 		say "     Finding himself on the losing side of your confrontation, Clyde quickly pulls a small test-tube out of his pocket, getting ready to... do something with it you guess. As you don't want to find out, you react instantly and slap his hand to the side, sending the glass vial flying away. After that, you set an end to the fight with a punch to Clyde's nose, sending the nerdy guy sprawling on the ground. Groaning, he sits up on the ground, wiping a small amount of blood from his nose as he says 'Okay, you win. The cleverer give in, so stop hitting me.'";
-		wait for any key;
+		LineBreak;
 		say "     [HHNerdSexMenu]";
 
 to say HHNerdSexMenu:
@@ -113,21 +111,20 @@ to say HHNerdSexMenu:
 			choose row calcnumber in table of fucking options;
 			say "[title entry]: [description entry]?";
 			if Player consents:
-				let nam be title entry;
 				now sextablerun is 1;
-				if (nam is "Fuck his ass"):
-					say "[HHNerdSex1]";
-				if (nam is "Blow him off"):
-					say "[HHNerdSex2]";
-				else if (nam is "Give him a kick and leave"):
-					say "     Giving Clyde a kick, you turn around and walk away. It's doubtful that he'll learn anything from this, but sometimes kicking people just feels good.";
-				wait for any key;
+				if title entry is:
+					-- "Fuck his ass":
+						say "[HHNerdSex1]";
+					-- "Blow him off":
+						say "[HHNerdSex2]";
+					-- "Give him a kick and leave":
+						say "     Giving Clyde a kick, you turn around and walk away. It's doubtful that he'll learn anything from this, but sometimes kicking people just feels good.";
 		else if calcnumber is 0:
 			now sextablerun is 1;
 			say "     Deciding that he's not worth your time, you just turn around and walk away.";
-			wait for any key;
 		else:
-			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
+			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options], or 0 to exit.";
+	wait for any key;
 	clear the screen and hyperlink list;
 
 to say HHNerdSex1:
@@ -154,7 +151,7 @@ to say HHNerdDesc:
 		now NerdMeetings is 1;
 	else if NerdMeetings > 0:
 		say "     A tall and pretty slender guy comes into your line of sight on the campus grounds, some distance ahead of you. Dressed in tight jeans and a t-shirt, recognize Clyde again, the partly horse nerd you met before. As he walks closer to you with swaggering steps, your eyes search out and identity the signs of his partial horseman infection. He's got hooves, as well as pointed and very mobile horse's ears and hair in the shape of an equine mane. Finally, as your eyes wander lower again, you see the outline of his piece of pride again - an enormous horsecock he's got stuffed down one of the legs of his tight pants.";
-		say "     Coming to stand before you with his hands on his hips, the slender guy strikes a boastful stance, presenting his chest as if demanding that you read the inscription printed on it - [one of]'The bigger the brains, the bigger the...'[or]'My brain isn't the only thing that's big.'[or]'Sexy Nerd'[or]'I have a PHD (pretty huge dick)'[at random]. In a haughty voice, he says 'Hey there [if Player is female]baby[else]stud[end if]. Haven't seen the error of not acknowledging my genius yet? Let me show you what you're missing -' With that, he undoes his zipper and pushes his pants down his hips, freeing the enormous horsecock he had packed away and letting it swing before you. Under the equine manhood, a full and heavy pair of balls dangle, showing that he'll be able to come like a horse too.";
+		say "     Coming to stand before you with his hands on his hips, the slender guy strikes a boastful stance, presenting his chest as if demanding that you read the inscription printed on it - [one of]'The bigger the brains, the bigger the...' [or]'My brain isn't the only thing that's big.' [or]'Sexy Nerd'. [or]'I have a PHD (pretty huge dick)'. [at random]In a haughty voice, he says 'Hey there [if Player is female]baby[else]stud[end if]. Haven't seen the error of not acknowledging my genius yet? Let me show you what you're missing -' With that, he undoes his zipper and pushes his pants down his hips, freeing the enormous horsecock he had packed away and letting it swing before you. Under the equine manhood, a full and heavy pair of balls dangle, showing that he'll be able to come like a horse too.";
 		LineBreak;
 		say "     Shouting the words 'Come here and worship my cock!', Clyde throws himself on you, clearly wanting to force the issue.";
 
@@ -190,16 +187,16 @@ When Play begins:
 	now defeated entry is "[HHNerd loses]";
 	now victory entry is "[HHNerd wins]";
 	now desc entry is "[HHNerdDesc]";
-	now face entry is "<This creature is supposed to be infective with the horseman strain, how did you see this?>";
-	now body entry is "<This creature is supposed to be infective with the horseman strain, how did you see this?>";
-	now skin entry is "<This creature is supposed to be infective with the horseman strain, how did you see this?>";
-	now tail entry is "<This creature is supposed to be infective with the horseman strain, how did you see this?>";
-	now cock entry is "<This creature is supposed to be infective with the horseman strain, how did you see this?>";
-	now face change entry is "<This creature is supposed to be infective with the horseman strain, how did you see this?>";
-	now body change entry is "<This creature is supposed to be infective with the horseman strain, how did you see this?>";
-	now skin change entry is "<This creature is supposed to be infective with the horseman strain, how did you see this?>";
-	now ass change entry is "<This creature is supposed to be infective with the horseman strain, how did you see this?>";
-	now cock change entry is "<This creature is supposed to be infective with the horseman strain, how did you see this?>";
+	now face entry is "";
+	now body entry is "";
+	now skin entry is "";
+	now tail entry is "";
+	now cock entry is "";
+	now face change entry is "";
+	now body change entry is "";
+	now skin change entry is "";
+	now ass change entry is "";
+	now cock change entry is "";
 	now str entry is 12;
 	now dex entry is 14;
 	now sta entry is 14;
@@ -224,7 +221,7 @@ When Play begins:
 	now libido entry is 80; [ As part of infection, the Player will be gradually moved towards this value; also used for the creature's seduce defense as a penalty ]
 	now loot entry is ""; [ Dropped item, blank for none. Case sensitive. ]
 	now lootchance entry is 0; [ Percentage chance of dropping loot, from 0-100. ]
-	now MilkItem entry is "horse-hung nerd milk"; [ Item to be given to the player if they have this infection and milk themselves. ]
+	now MilkItem entry is ""; [ Item to be given to the player if they have this infection and milk themselves. ]
 	now CumItem entry is ""; [ Item to be given to the player if they have this infection and jerk off. ]
 	now TrophyFunction entry is "-"; [ Function to generate a list of optional loot items, of which the player can choose one after victory. ]
 	now scale entry is 3; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
@@ -339,7 +336,6 @@ When Play begins:
 	now Clit Size entry is 0; [size 1-5, see Clit Size Adjective]
 	[Clit Size Adjective is generated by a function and can be used in scenes: very small/small/average/large/very large]
 ]
-
 
 [
 Section 3 - Endings

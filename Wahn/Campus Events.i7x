@@ -31,6 +31,7 @@ Arts Department	"Arts Department"
 Arts Department is a situation.
 ResolveFunction of Arts Department is "[ResolveEvent Arts Department]". The level of Arts Department is 3.
 Sarea of Arts Department is "Campus".
+
 when play begins:
 	add Arts Department to BadSpots of FemaleList;
 	add Arts Department to BadSpots of FurryList;
@@ -40,7 +41,6 @@ to say ResolveEvent Arts Department:
 	challenge "Lizard Girl";
 	now Arts Department is resolved;
 
-
 Section 3 - Phi Iota Gamma
 
 [moved and expanded within the PIG Frat file.]
@@ -48,7 +48,6 @@ Section 3 - Phi Iota Gamma
 Section 4 - Languages Department
 
 [revised in the Misc Events file - Pandemonium]
-
 
 Section 5 - Wandering the Campus
 
@@ -60,6 +59,7 @@ Wandering the Campus is a situation.
 ResolveFunction of Wandering the Campus is "[ResolveEvent Wandering the Campus]". The level of Wandering the Campus is 9.
 Sarea of Wandering the Campus is "Campus".
 campuswander is a list of numbers that varies.
+
 when play begins:
 	add Wandering the Campus to BadSpots of FurryList;
 
@@ -119,7 +119,6 @@ to say ResolveEvent Wandering the Campus:
 	if number of entries in campuswander > 6:
 		now Wandering the Campus is resolved;
 
-
 Section 6 - Anime Club
 
 Table of GameEventIDs (continued)
@@ -139,8 +138,7 @@ to say ResolveEvent Anime Club:
 	say "     As you're going through one of the many buildings on campus, you hear some knocking and a voice coming from the next floor while climbing the stairwell. Heading towards it, you quickly start to make out the female voice getting louder and more frantic about wanting to get inside. '...from the window. Please, I just need somewhere safe to hide. Please. Quick. I can hear someth... whaaaa!'";
 	say "     Just as you're turning the corner to catch up to this other survivor, you see the door in front of her open and another female grab her. The woman from inside isn't quite human, with cartoonishly sexy proportions, perfectly smooth pink skin and oversized, expressive eyes. The survivor struggles, but is pulled inside. Cautiously approaching, you can see that the door isn't quite shut. The sign on the door says it's the college's Anime Club.";
 	say "     Inside, you can hear the sounds of both a struggle and of sex.";
-	say "     [bold type]Shall you try to rescue the poor woman?[roman type][line break]";
-	LineBreak;
+	say "[line break]     [bold type]Shall you try to rescue the poor woman?[roman type][line break]";
 	say "     ([link]Y[as]y[end link]) - Yes.";
 	say "     ([link]N[as]n[end link]) - No.";
 	if Player consents:
@@ -177,17 +175,17 @@ to say ResolveEvent Anime Club:
 to say animeclublost:
 	setmonster "Hentai Fan";
 	if Player is male:
-		say "     As those slick tendrils slide over you, squeezing sensitive spots, the animated beauty lowers her head into your lap and sets herself to licking and sucking your cock. She works eagerly to suck you off, her tongue playfully sliding over your shaft [if Cunt Count of Player > 1]while the hentai fan pushes squirming tentacles into your pussies[else if Cunt Count of Player is 1]while the hentai fan pushes a squirming tentacle into your pussy[else if anallevel > 1]as the hentai fan pushes a squirming tentacle into your ass, fucking you with it[else]as she kneads your balls[end if]. The pleasure of being assaulted by tentacles as you watch a hentai video is very arousing and quickly has you moaning lustfully. Beside you, the tentacled guy is bouncing the increasingly transformed girl in his lap, stuffing her cunt with his throbbing cock.";
+		say "     As those slick tendrils slide over you, squeezing sensitive spots, the animated beauty lowers her head into your lap and sets herself to licking and sucking your cock. She works eagerly to suck you off, her tongue playfully sliding over your shaft [if Cunt Count of Player > 1]while the hentai fan pushes squirming tentacles into your pussies[else if Player is female]while the hentai fan pushes a squirming tentacle into your pussy[else if anallevel > 1]as the hentai fan pushes a squirming tentacle into your ass, fucking you with it[else]as she kneads your balls[end if]. The pleasure of being assaulted by tentacles as you watch a hentai video is very arousing and quickly has you moaning lustfully. Beside you, the tentacled guy is bouncing the increasingly transformed girl in his lap, stuffing her cunt with his throbbing cock.";
 	else if Player is female:
 		say "     As those slick tendrils slide over you, squeezing sensitive spots, the animated beauty spreads your legs and your pussy's lips. With yourself spread open, the hentai fan shoves a tentacle cock into your cunt[sfn], stuffing your needy hole[sfn] just like you're seeing on the screen. The pleasure of being tentacle raped as you watch a hentai video is very arousing and quickly has you moaning lustfully. Beside you, the tentacled guy is bouncing the increasingly transformed girl in his lap, stuffing her cunt with his throbbing cock.";
 	else:
 		say "     As those slick tendrils slide over you, squeezing sensitive spots, the animated beauty rubs sadly over your bare groin and pushes you into a kneeling position. She keeps your head pointed towards the television as she uses her other hand to guide a tentacle cock to your ass. You groan softly in kinky pleasure as it pushes into your anus and starts to fuck you. The pleasure of being tentacle raped as you watch a hentai video is very arousing and quickly has you moaning lustfully. Beside you, the tentacled guy is bouncing the increasingly transformed girl in his lap, stuffing her cunt with his throbbing cock.";
 	if Player is female:
-		say "     After he has cum into the girl beside you and she's fully transformed into another slutty anime babe, he turns his full attention upon up. Pulling you into his lap, he stuffs his still hard and cum-slick cock into your cunt and starts giving you the same treatment he just gave his other prize[if Cunt Count of Player > 1]. He fills your other juicy holes and your mouth with tentacle cocks[else if anallevel > 1]. He crams a tentacle cock into your ass and another down your throat[else]. He gropes your chest and ass with his tentacle cocks[end if], something that's incredibly arousing to you while under the effects of the video that's captivated your attention. After a thoroughly delightful fucking, he cums in a steady rush of semen from his cocks, coating you inside and out with his tainted seed.";
+		say "     After he has cum into the girl beside you and she's fully transformed into another slutty anime babe, he turns his full attention upon up. Pulling you into his lap, he stuffs his still hard and cum-slick cock into your cunt and starts giving you the same treatment he just gave his other prize. He [if Cunt Count of Player > 1]fills your other juicy holes and your mouth with tentacle cocks[else if anallevel > 1]crams a tentacle cock into your ass and another down your throat[else]gropes your chest and ass with his tentacle cocks[end if], something that's incredibly arousing to you while under the effects of the video that's captivated your attention. After a thoroughly delightful fucking, he cums in a steady rush of semen from his cocks, coating you inside and out with his tainted seed.";
 		CreatureSexAftermath "Player" receives "PussyFuck" from "Hentai Fan";
 		CreatureSexAftermath "Player" receives "PussyFuck" from "Hentai Fan";
 	else if Player is male:
-		say "     After he's cum into the girl beside you and she's fully transformed into another slutty anime babe, he turns his full attention upon you. He restrains you with those sexy tentacles of his and has the new anime babe climb into your lap so she can ride your cock while he gropes and fondles you with his tendrils[if anallevel > 1]. As she rides you, he fucks you thoroughly with a tentacle cock up your ass and pushing another down your throat. It squirms and pumps delightfully inside you, fucking deep inside your bowels. When it starts to cum in a steady flow, you cum hard in the new anime babe's cream-filled pussy[else]. As she rides you, he even pushes a tentacle cock up your ass and another down your throat, fucking you with them until you cum hard in her cream-filled pussy[end if]. Being coated inside and out by the hentai creature's tainted seed is incredibly arousing while under the effects of the video that's captivated your attention.";
+		say "     After he's cum into the girl beside you and she's fully transformed into another slutty anime babe, he turns his full attention upon you. He restrains you with those sexy tentacles of his and has the new anime babe climb into your lap so she can ride your cock while he gropes and fondles you with his tendrils. As she rides you, he [if anallevel > 1]fucks you thoroughly with a tentacle cock up your ass and pushing another down your throat. It squirms and pumps delightfully inside you, fucking deep inside your bowels. When it starts to cum in a steady flow, you cum hard in the new anime babe's[else]even pushes a tentacle cock up your ass and another down your throat, fucking you with them until you cum hard in her[end if] cream-filled pussy. Being coated inside and out by the hentai creature's tainted seed is incredibly arousing while under the effects of the video that's captivated your attention.";
 		CreatureSexAftermath "Player" receives "AssFuck" from "Hentai Fan";
 		CreatureSexAftermath "Player" receives "AssFuck" from "Hentai Fan";
 	else:
@@ -196,7 +194,6 @@ to say animeclublost:
 		CreatureSexAftermath "Player" receives "AssFuck" from "Hentai Fan";
 	say "     Things continue on like this, the four of you having a sexy orgy of tentacular fun. Every available hole is filled repeatedly by tentacle cocks and left overflowing with the hentai fan's tainted seed. Several more videos are watched over the course of this viewing, their sexy contents sinking into your mind even as your body is changed more and more to be like those sexily animated girls getting fucked alongside you";
 	SanLoss 25;
-	[puts Anime Babe as lead monster for infection and impregnation]
 	setmonster "Anime Babe" silently;
 	turn the Player into a "Anime Babe";
 	if hellHoundLevel is 0:

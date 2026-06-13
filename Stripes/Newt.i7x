@@ -47,13 +47,13 @@ TwistedCapacity of Newt is false. [Twisted Characters can take any penetration, 
 Sterile of Newt is false. [steriles can't knock people up]
 MainInfection of Newt is "Salamander".
 Description of Newt is "[newtdesc]".
-Conversation of Newt is { "Hiss" }.
+[Conversation of Newt is { "Hiss" }.]
+the fuckscene of Newt is "[sexwithNewt]".
 The scent of Newt is "     It is difficult to smell Newt over the vapors of the magma cave, but she does have a pleasantly arousing scent when you get up close to her.".
 
 to say newtdesc:
 	say "     Looking quite similar to the other salamander girls you've seen, her body is a mix of animal and human forms. Her body is quite effeminate, with wide hips, thighs and a slender waistline. Her breasts are quite modest B-cups. Her arms and legs are quite human, but have added flexibility and agility. She's got small, dark claws on the ends of her digits. She possesses a flat, wide head with a short muzzle that often has a cheerful smile. She has a long, narrow, fleshy tail mounted atop her soft and squishy ass cheeks. Making no effort to hide it, you can also see her moderately large pussy between her legs, wet and waiting.";
 	say "     Newt's smooth skin is a rich red color with yellow and black speckling, predominantly across her breasts and extremities. A shimmer of intense heat radiates from it intensely enough to make the air ripple around her. She's got a pair of nipple rings and a clit piercing, all three made of tungsten.";
-
 
 Instead of conversing the Newt:
 	if HP of Newt < 4:
@@ -61,10 +61,7 @@ Instead of conversing the Newt:
 	else:
 		say "     [one of]'Anastasia's been so nice to me.'[or]'The other salamanders shouldn't trouble Ani again.'[or]'I apologized to Anastasia about the eggs. We didn't know they were so important,' she says, looking over at the phoenix with loving awe.[or]'This is such a lovely, warm home you've found for Ani. And I'm so lucky to be able to stay here.'[or]'The others haven't come back since the last raid. And good riddance to them if they'd leave me like that.'[or]'I want to thank you for taking me in even after we'd fought like that,' she says, snuggling up against you.[or]'Are you sure you don't want to soak in this wonderful lava? It's simply divine.'[or]'I'm helping Ani take care of her precious eggs now.'[or]'Doesn't Ani look beautiful?'[or]'Ani told me how you saved her as well,' she says, cuddling up to you.[in random order]";
 
-
 Section 2 - Sexy Times
-
-the fuckscene of Newt is "[sexwithNewt]".
 
 to say sexwithNewt:
 	if HP of Newt < 4:
@@ -77,90 +74,100 @@ to say sexwithNewt:
 	else:
 		now sextablerun is 0;
 		blank out the whole of table of fucking options;
+		[]
 		if Player is male:
 			choose a blank row in table of fucking options;
 			now title entry is "Fuck her";
 			now sortorder entry is 1;
-			now description entry is "fuck her hot cunny";
+			now description entry is "Fuck her hot cunny";
+			[]
 			choose a blank row in table of fucking options;
 			now title entry is "Blowjob";
 			now sortorder entry is 2;
-			now description entry is "have her suck your cock";
-		if Player is male and Cock Length of Player < 18:
-			choose a blank row in table of fucking options;
-			now title entry is "Titty fuck";
-			now sortorder entry is 3;
-			now description entry is "nestle your cock between her breasts";
+			now description entry is "Have her suck your cock";
+			[]
+			if Cock Length of Player < 18:
+				choose a blank row in table of fucking options;
+				now title entry is "Titty fuck";
+				now sortorder entry is 3;
+				now description entry is "Nestle your cock between her breasts";
+		[]
 		if Player is female:
 			choose a blank row in table of fucking options;
 			now title entry is "Get cunnilingus";
 			now sortorder entry is 4;
-			now description entry is "have Newt eat you out";
+			now description entry is "Have Newt eat you out";
+		[]
 		choose a blank row in table of fucking options;
 		now title entry is "Lick Newt";
 		now sortorder entry is 5;
-		now description entry is "lick Newt's snatch.";
+		now description entry is "Lick Newt's snatch";
+		[]
 		if Player is not neuter:
 			choose a blank row in table of fucking options;
 			now title entry is "69";
 			now sortorder entry is 6;
-			now description entry is "have a 69 with the salamander";
-		if Player is not neuter and lastfuck of Anastasia - turns >= 6:
-			choose a blank row in table of fucking options;
-			now title entry is "Threesome w/Anastasia (oral)";
-			now sortorder entry is 10;
-			now description entry is "share her with the phoenix";
-[		if Player is male and lastfuck of Anastasia - turns >= 6:
-			choose a blank row in table of fucking options;
-			now title entry is "Threesome w/Anastasia (fuck)";
-			now sortorder entry is 11;
-			now description entry is "have a sexy romp with both hot females";]
-		if Player is female and lastfuck of Anastasia - turns >= 6:
-			choose a blank row in table of fucking options;
-			now title entry is "Threesome w/Anastasia (dildo)";
-			now sortorder entry is 12;
-			now description entry is "share the basalt toy with both hot females";
+			now description entry is "Have a 69 with the salamander";
+			[]
+			if lastfuck of Anastasia - turns >= 6:
+				choose a blank row in table of fucking options;
+				now title entry is "Threesome w/Anastasia (oral)";
+				now sortorder entry is 7;
+				now description entry is "Share her with the phoenix";
+				[
+				if Player is male:
+					choose a blank row in table of fucking options;
+					now title entry is "Threesome w/Anastasia (fuck)";
+					now sortorder entry is 8;
+					now description entry is "have a sexy romp with both hot females";
+				]
+				if Player is female:
+					choose a blank row in table of fucking options;
+					now title entry is "Threesome w/Anastasia (dildo)";
+					now sortorder entry is 9;
+					now description entry is "Share the basalt toy with both hot females";
+		[]
 		sort the table of fucking options in sortorder order;
 		repeat with y running from 1 to number of filled rows in table of fucking options:
 			choose row y from the table of fucking options;
 			say "[link][y] - [title entry][as][y][end link][line break]";
 		while sextablerun is 0:
-			say "Pick the corresponding number> ";
+			say "Pick the corresponding number> [run paragraph on]";
 			get a number;
 			if calcnumber > 0 and calcnumber <= the number of filled rows in table of fucking options:
 				now current menu selection is calcnumber;
 				choose row calcnumber in table of fucking options;
 				say "[title entry]: [description entry]?";
 				if Player consents:
-					let nam be title entry;
+					LineBreak;
 					now sextablerun is 1;
-					if nam is "Fuck her":
-						say "[newtsex01]";
-					else if nam is "Blowjob":
-						say "[newtsex02]";
-					else if nam is "Titty fuck":
-						say "[newtsex03]";
-					else if nam is "Get cunnilingus":
-						say "[newtsex04]";
-					else if nam is "Lick Newt":
-						say "[newtsex05]";
-					else if nam is "69":
-						say "[newtsex06]";
-					else if nam is "Threesome w/Anastasia (oral)":
-						say "[NewtAnastasia3someA]";
-						now lastfuck of Anastasia is turns;
-					else if nam is "Threesome w/Anastasia (fuck)":
-						say "[NewtAnastasia3someB]";
-						now lastfuck of Anastasia is turns;
-					else if nam is "Threesome w/Anastasia (dildo)":
-						say "[NewtAnastasia3someC]";
-						now lastfuck of Anastasia is turns;
+					if title entry is:
+						-- "Fuck her":
+							say "[newtsex01]";
+						-- "Blowjob":
+							say "[newtsex02]";
+						-- "Titty fuck":
+							say "[newtsex03]";
+						-- "Get cunnilingus":
+							say "[newtsex04]";
+						-- "Lick Newt":
+							say "[newtsex05]";
+						-- "69":
+							say "[newtsex06]";
+						-- "Threesome w/Anastasia (oral)":
+							say "[NewtAnastasia3someA]";
+							now lastfuck of Anastasia is turns;
+						[-- "Threesome w/Anastasia (fuck)":
+							say "[NewtAnastasia3someB]";
+							now lastfuck of Anastasia is turns;]
+						-- "Threesome w/Anastasia (dildo)":
+							say "[NewtAnastasia3someC]";
+							now lastfuck of Anastasia is turns;
 			else:
 				say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
 		now lastfuck of Newt is turns;
 		wait for any key;
 		clear the screen and hyperlink list;
-
 
 to say newtsex01:	[fuck her]
 	say "     Putting your arms around Newt, you pull her into a kiss. Slipping a hand between her legs, you caress her wet folds and offer to fill that hot pussy of hers. She moans at this and eagerly asks for you to fuck her. Lowering her down to the floor, you run your hands across her legs and spread them. With your [cock size desc of Player] [Cock of Player] cock lined up, you enjoy the delicious sight of your manhood kissed against that juicy pussy of hers before pushing past those crimson lips and into her cunt. Her heated vagina grips and tugs at your flesh, as eager to be filled as she is. Once you've sunk your [cock size desc of Player] manhood fully into her, you take a brief pause before starting to thrust.";
@@ -205,34 +212,32 @@ to say NewtAnastasia3someA:
 			say "     While [if Cock Length of Player > 8]deep-throating[else]sucking[end if] your [Cock of Player] cock, Newt runs her hands across your thighs, hips and lower belly. As her excitement grows, her hands move to your ass and start kneading it as she pulls her short muzzle onto your manhood over and over. With that slimy tongue of hers playing across your throbbing shaft, you groan and plunge into her mouth one last time. Caressing her smooth, slick skin as you hold her head to your crotch, you pump shot after shot of your cum down her throat. Feasting on your semen, she eagerly swallows it all down while grinding hard against the phoenix's beak. From the rich scent of her arousal in the air and the sounds of juicy licking as Anastasia goes after those steam juices, you can tell the girl's just orgasmed. And when your cock's released from her sucking maw, Newt turns around to 69 with Anastasia, licking her cloacal pussy until the phoenix has cum as well.";
 		else:
 			say "     Anastasia moves up beside her, rubbing her feathery body alongside the salamander's smooth hide. She gives her neck a gentle nip and nuzzles her, signaling that she wants a turn as well. Newt withdraws from your shaft slowly, letting it slip wetly from her muzzle. The phoenix eagerly replaces her, taking your [Cock of Player] penis into her beak with care. Engulfed now in the firebird's hot mouth[if Cock Length of Player > 8] and throat[end if], you caress her feathered head while sharing a sloppy, tongue-filled kiss with Newt. And after Anastasia's had her turn, Newt swaps back in and you're kissing the phoenix instead.";
-			say "     The two fiery females take turns sucking your [Cock of Player] cock like this. While the pauses as they swap are brief, it's enough to keep you from boiling over too soon. Sensing your approaching orgasm, they each get more enthusiastic and elaborate in their attempts to be the one to finish you off. Grinning down at them, you try your best to hold back";
 			if a random chance of 1 in 2 succeeds:
-				say ". Newt ends up being the winner in their little contest, an artful twirl of her tongue pushing you over the top as it tweaks a sensitive spot at the right moment to send you over the edge. You blast shot after shot of hot seed down her throat, which she eagerly swallows down.";
+				say "     The two fiery females take turns sucking your [Cock of Player] cock like this. While the pauses as they swap are brief, it's enough to keep you from boiling over too soon. Sensing your approaching orgasm, they each get more enthusiastic and elaborate in their attempts to be the one to finish you off. Grinning down at them, you try your best to hold back. Newt ends up being the winner in their little contest, an artful twirl of her tongue pushing you over the top as it tweaks a sensitive spot at the right moment to send you over the edge. You blast shot after shot of hot seed down her throat, which she eagerly swallows down.";
 				say "     Catching your last few spurts in her pretty muzzle, Newt shares a sloppy kiss with Anastasia. Her tongue slides into the phoenix's beak, carrying your hot seed with it. Sharing this tasty treat along with the kiss, the two grind against one another. The salamander girl rubs a hand at her crotch and the other at the firebird's, working a few fingers into those heated pussies until they both share moaning orgasms all while snowballing the last of your load.";
 			else:
-				say ". Anastasia ends up being the winner in their little contest, a squeeze of her broad tongue pressing your shaft against the firmness of her beak at the right moment to send you over the edge. You blast your [Cum Load Size of Player] load down her throat.";
+				say "     The two fiery females take turns sucking your [Cock of Player] cock like this. While the pauses as they swap are brief, it's enough to keep you from boiling over too soon. Sensing your approaching orgasm, they each get more enthusiastic and elaborate in their attempts to be the one to finish you off. Grinning down at them, you try your best to hold back. Anastasia ends up being the winner in their little contest, a squeeze of her broad tongue pressing your shaft against the firmness of her beak at the right moment to send you over the edge. You blast your [Cum Load Size of Player] load down her throat.";
 				say "     After the first few blasts, Anastasia pulls back, letting your cum splatter across her beak and fiery feathers. Moving over, she lets Newt have a turn [if Ball Size of Player > 4]under the fountain of semen[else]receiving a few splatters as well[end if]. Draining your [Ball Size Adjective of Player] [Balls] across the two of them, the phoenix takes the final lick while the salamander's long, slimy tongue sets to work cleaning their faces. This turns into sloppy kisses between the two fiery females while you finger them both to moaning orgasms.";
 	else:
 		say "     Both smile at your offer and move in close to snuggle with you. After some kisses and nips are exchanged, Newt drops to her knees and buries her face between your legs. Nuzzling your thigh, she makes her way to your juicy cunny and runs her elongated tongue along it. Feeling the approaching warmth of her heated breath, you place your hands on her smooth head. She smiles up at you and presses her lips to your netherlips while her tongue wriggles against them. With a moan of pleasure, she slips her tongue right into you.";
-		let xx be a random number between 1 and 3;
-		if xx is 1:
-			say "     While the sexy salamander eats you out, Anastasia moves in behind her. Taking the basalt toy from its resting spot, she lays down on her side near Newt. Moving into position, she slides it into the girl's heated cunt. Newt hisses in delight at this and laps deeper into you. Anastasia grins up at you and drives the stone dildo in again and again, each thrust bringing another happy hiss and a tremble runs through her wriggling tongue.";
-			say "     While wriggling her lengthy tongue around inside you, Newt runs her hands across your thighs, hips and lower belly. As her excitement grows, her hands move to your ass and start kneading it as she presses her short muzzle tighter to your crotch. With that slimy tongue of hers playing across your dripping folds and pulsing clit, you groan as shivers of delight rush through you. Caressing her smooth, slick skin as you hold her head to your crotch, you grind your quivering cunt down upon her playful tongue. Lapping up your juices, she eagerly dives in again and again for more while grinding hard onto the stony dildo. From the rich scent of her arousal in the air, you can tell she's just orgasmed. A few thrusts later, Anastasia withdraws the toy so she can lick the steamy juices from the girl's pussy. And when your orgasm ebbs and you release her head, Newt turns the basalt toy loose in Anastasia's cloacal pussy. She pumps it into her while licking around it's edge until the phoenix cums with a shriek of avian delight.";
-		else if xx is 2:
-			say "     While the sexy salamander eats you out, Anastasia moves in behind her. Nuzzling her beak under Newt's tail, she nips her thighs and asks her to spread them. The girl giggles excitedly and makes more room by spreading her legs and raising her tail. The phoenix starts licking the salamander's dripping cunny. Running her broad, thick tongue over those wet folds, she sets the girl's hips quivering and she wriggles her tongue all the deeper into you.";
-			say "     While wriggling her lengthy tongue around inside you, Newt runs her hands across your thighs, hips and lower belly. As her excitement grows, her hands move to your ass and start kneading it as she presses her short muzzle tighter to your crotch. With that slimy tongue of hers playing across your dripping folds and pulsing clit, you groan as shivers of delight rush through you. Caressing her smooth, slick skin as you hold her head to your crotch, you grind your quivering cunt down upon her playful tongue. Lapping up your juices, she eagerly dives in again and again for more while grinding hard against the phoenix's beak. From the rich scent of her arousal in the air and the sounds of juicy licking as Anastasia goes after those steam juices, you can tell the girl's just orgasmed. And when your orgasm ebbs and you release her head, Newt turns around to 69 with Anastasia, licking her cloacal pussy until the phoenix has cum as well.";
-		else:
-			say "     Anastasia moves up beside her, rubbing her feathery body alongside the salamander's smooth hide. She gives her neck a gentle nip and nuzzles her, signaling that she wants a turn as well. Newt pulls her tongue free with a wet slurp and a final lick across your clit. The phoenix eagerly replaces her, nuzzling your damp folds with her beak before letting her broad tongue slather across your heated loins. Being licked now by the firebird's broad, thick tongue, you caress her feathered head while sharing a sloppy, tongue-filled kiss with Newt. And after Anastasia's had her turn, Newt swaps back in and you're kissing the phoenix instead.";
-			say "     The two fiery females take turns licking your cunny. While the pauses as they swap are brief, it's enough to keep you from boiling over too soon. Sensing your approaching orgasm, they each get more enthusiastic and elaborate in their attempts to be the one to finish you off. Grinning down at them, you try your best to hold back";
-			if a random chance of 1 in 2 succeeds:
-				say ". Newt ends up being the winner in their little contest, an artful twirl of her tongue deep inside your vagina tweaks a sensitive spot at the right moment to send you over the edge. You soak that wriggling appendage in your feminine juices with a cry of orgasmic relief.";
-				say "     After withdrawing and lapping a few last times across your quivering folds and clit, Newt shares a sloppy kiss with Anastasia. Her tongue slides into the phoenix's beak, carrying the flavor of your juices with it. Sharing this tasty treat along with the kiss, the two grind against one another. The salamander girl rubs a hand at her crotch and the other at the firebird's, working a few fingers into those heated pussies until they both share moaning orgasms all while sharing a French kiss enriched by your femcum.";
-			else:
-				say ". Anastasia ends up being the winner in their little contest, a squeeze of her broad tongue across your clit at the right moment to send you over the edge. Your pussy quivers and your hot juices run out across her tongue.";
-				say "     As your climax is ebbing, Anastasia moves over to let Newt take over. The salamander's agile tongue licks your crotch clean and slips back into your cunt for a final probing taste of your juices. Both having gotten a taste of your femcum, they turn their attention to each other. The salamander's long, slimy tongue sets to work cleaning their faces. This turns into sloppy kisses between the two fiery females while you finger them both to moaning orgasms.";
+		if a random number between 1 and 3 is:
+			-- 1:
+				say "     While the sexy salamander eats you out, Anastasia moves in behind her. Taking the basalt toy from its resting spot, she lays down on her side near Newt. Moving into position, she slides it into the girl's heated cunt. Newt hisses in delight at this and laps deeper into you. Anastasia grins up at you and drives the stone dildo in again and again, each thrust bringing another happy hiss and a tremble runs through her wriggling tongue.";
+				say "     While wriggling her lengthy tongue around inside you, Newt runs her hands across your thighs, hips and lower belly. As her excitement grows, her hands move to your ass and start kneading it as she presses her short muzzle tighter to your crotch. With that slimy tongue of hers playing across your dripping folds and pulsing clit, you groan as shivers of delight rush through you. Caressing her smooth, slick skin as you hold her head to your crotch, you grind your quivering cunt down upon her playful tongue. Lapping up your juices, she eagerly dives in again and again for more while grinding hard onto the stony dildo. From the rich scent of her arousal in the air, you can tell she's just orgasmed. A few thrusts later, Anastasia withdraws the toy so she can lick the steamy juices from the girl's pussy. And when your orgasm ebbs and you release her head, Newt turns the basalt toy loose in Anastasia's cloacal pussy. She pumps it into her while licking around it's edge until the phoenix cums with a shriek of avian delight.";
+			-- 2:
+				say "     While the sexy salamander eats you out, Anastasia moves in behind her. Nuzzling her beak under Newt's tail, she nips her thighs and asks her to spread them. The girl giggles excitedly and makes more room by spreading her legs and raising her tail. The phoenix starts licking the salamander's dripping cunny. Running her broad, thick tongue over those wet folds, she sets the girl's hips quivering and she wriggles her tongue all the deeper into you.";
+				say "     While wriggling her lengthy tongue around inside you, Newt runs her hands across your thighs, hips and lower belly. As her excitement grows, her hands move to your ass and start kneading it as she presses her short muzzle tighter to your crotch. With that slimy tongue of hers playing across your dripping folds and pulsing clit, you groan as shivers of delight rush through you. Caressing her smooth, slick skin as you hold her head to your crotch, you grind your quivering cunt down upon her playful tongue. Lapping up your juices, she eagerly dives in again and again for more while grinding hard against the phoenix's beak. From the rich scent of her arousal in the air and the sounds of juicy licking as Anastasia goes after those steam juices, you can tell the girl's just orgasmed. And when your orgasm ebbs and you release her head, Newt turns around to 69 with Anastasia, licking her cloacal pussy until the phoenix has cum as well.";
+			-- 3:
+				say "     Anastasia moves up beside her, rubbing her feathery body alongside the salamander's smooth hide. She gives her neck a gentle nip and nuzzles her, signaling that she wants a turn as well. Newt pulls her tongue free with a wet slurp and a final lick across your clit. The phoenix eagerly replaces her, nuzzling your damp folds with her beak before letting her broad tongue slather across your heated loins. Being licked now by the firebird's broad, thick tongue, you caress her feathered head while sharing a sloppy, tongue-filled kiss with Newt. And after Anastasia's had her turn, Newt swaps back in and you're kissing the phoenix instead.";
+				if a random chance of 1 in 2 succeeds:
+					say "     The two fiery females take turns licking your cunny. While the pauses as they swap are brief, it's enough to keep you from boiling over too soon. Sensing your approaching orgasm, they each get more enthusiastic and elaborate in their attempts to be the one to finish you off. Grinning down at them, you try your best to hold back. Newt ends up being the winner in their little contest, an artful twirl of her tongue deep inside your vagina tweaks a sensitive spot at the right moment to send you over the edge. You soak that wriggling appendage in your feminine juices with a cry of orgasmic relief.";
+					say "     After withdrawing and lapping a few last times across your quivering folds and clit, Newt shares a sloppy kiss with Anastasia. Her tongue slides into the phoenix's beak, carrying the flavor of your juices with it. Sharing this tasty treat along with the kiss, the two grind against one another. The salamander girl rubs a hand at her crotch and the other at the firebird's, working a few fingers into those heated pussies until they both share moaning orgasms all while sharing a French kiss enriched by your femcum.";
+				else:
+					say "     The two fiery females take turns licking your cunny. While the pauses as they swap are brief, it's enough to keep you from boiling over too soon. Sensing your approaching orgasm, they each get more enthusiastic and elaborate in their attempts to be the one to finish you off. Grinning down at them, you try your best to hold back. Anastasia ends up being the winner in their little contest, a squeeze of her broad tongue across your clit at the right moment to send you over the edge. Your pussy quivers and your hot juices run out across her tongue.";
+					say "     As your climax is ebbing, Anastasia moves over to let Newt take over. The salamander's agile tongue licks your crotch clean and slips back into your cunt for a final probing taste of your juices. Both having gotten a taste of your femcum, they turn their attention to each other. The salamander's long, slimy tongue sets to work cleaning their faces. This turns into sloppy kisses between the two fiery females while you finger them both to moaning orgasms.";
 
-to say NewtAnastasia3someB:
-	say "***threesome fucking - fuck Newt + dildo, fuck Newt + oral, fuck Newt and Anastasia";
+[to say NewtAnastasia3someB:
+	say "***threesome fucking - fuck Newt + dildo, fuck Newt + oral, fuck Newt and Anastasia";]
 
 to say NewtAnastasia3someC:
 	say "     Both smile at your offer and move in close to snuggle with you. After some kisses and nips are exchanged, Newt drops to her knees and buries her face between your legs. Nuzzling your thigh, she makes her way to your [if Player is male]hard cock and [end if]juicy cunny, running her elongated tongue along [if Player is male]them[else]it[end if]. Feeling the approaching warmth of her heated breath, you place your hands on her smooth head. She smiles up at you and presses her lips to your netherlips while her tongue wriggles against them. With a moan of pleasure, she slips her tongue right into you.";
@@ -242,13 +247,10 @@ to say NewtAnastasia3someC:
 	say "     You go like this for a couple of minutes before putting your hand on the salamander's. Taking the dildo from her, you plunge it back into the phoenix's steamy tunnel. She gives a musical cry of delight and flops back on the cave floor, letting you have your way with her. You drive the stony phallus into her energetically, working it until it's a red hot pillar. You then swap to Newt, who laying beside Anastasia and kissing her while awaiting her turn. You drive the glowing hot toy into her cunt and she nearly cums on the spot from the intensity of it. Her tongue dives into the bird's beak as she writhes in delight. She only gets about a dozen thrusts before it's out of her and back to you before she can cum.";
 	WaitLineBreak;
 	say "     As it goes into you, it's your turn to moan and spasm with near-orgasmic ecstasy from a few thrusts. You swap it back between Anastasia, Newt and yourself for a few more rounds, each getting shorter as you're all on edge and about to cum. By the time you're on the final round, the stone phallus's glow has intensified to a richer, brighter red and the basalt has softened to the point of flexing a little inside you.";
-	let xx be a random number between 1 and 3;
-	if xx is 1:
-		say "     You are the first to cum, crying out long and loud in orgasmic release as you sink that glowing hot sextoy inside you on your final round. You pump it hard and fast through your climax, steam rising from your overheated crotch as the scent of your femcum fills the air. You sag backwards to the ground as the last ripples of your orgasm run through you. Newt takes the toy from your cunt and plunges it into Anastasia and then herself, so they might also share in the great orgasmic release that you've just had. By the time it's over, the air is heavy with the steamy scent of sated females and the three of you a flopped out in a post-orgasmic haze with the sticky, overused toy resting at the center, slowly cooling.";
-	else if xx is 2:
-		say "     Anastasia is the first to cum, crying out long and loud in orgasmic release as you sink that glowing hot sextoy into her on your final round. Newt joins you in pumping it hard and fast into the phoenix's overheated cloacal pussy throughout her throws of delight. The salamander is next to receive this treatment, the glowing phallus sending her into intense orgasm. You fuck her through it as well, withdrawing it as she collapses back into the phoenix's embrace. Shifting to sit on the other side of them, you drive the now white-hot toy into yourself and have your senses blown by the intensity of your long-delayed climax. Steam rises from your overheated crotch as the scent of your femcum rises into the air and mixes with the steamy scent of the other sated females. You flop backwards onto the soft wing of your avian lover and the three of you cuddle up in a post-orgasmic haze with the sticky, overused toy resting at your feet as it slowly cools.";
-	else:
-		say "     Newt is the first to cum, crying out long and loud in orgasmic release as you sink that glowing hot sextoy into her on your final round. Anastasia is there to catch her in the soft embrace of her wing as the salamander sags backwards when her throws of delight finally subside. You are the next to receive this treatment as the glowing phallus sends you into intense orgasm. The phoenix helps brace the sextoy for you as writhe in carnal ecstasy, pumping it into you as you flop back onto the ground. Steam rises from your overheated crotch as the scent of your femcum fills the air. With the two of you sated, Anastasia turns the heated dildo on herself and plunges it forcefully into her cloacal pussy with both feet. Her musical cry is the loudest of you three as she achieves her long-delayed orgasm. By the time it's over, the air is heavy with the steamy scent of sated females and the three of you a flopped out in a post-orgasmic haze with the sticky, overused toy resting at the center, slowly cooling.";
+	if a random number between 1 and 3 is:
+		-- 1: say "     You are the first to cum, crying out long and loud in orgasmic release as you sink that glowing hot sextoy inside you on your final round. You pump it hard and fast through your climax, steam rising from your overheated crotch as the scent of your femcum fills the air. You sag backwards to the ground as the last ripples of your orgasm run through you. Newt takes the toy from your cunt and plunges it into Anastasia and then herself, so they might also share in the great orgasmic release that you've just had. By the time it's over, the air is heavy with the steamy scent of sated females and the three of you a flopped out in a post-orgasmic haze with the sticky, overused toy resting at the center, slowly cooling.";
+		-- 2: say "     Anastasia is the first to cum, crying out long and loud in orgasmic release as you sink that glowing hot sextoy into her on your final round. Newt joins you in pumping it hard and fast into the phoenix's overheated cloacal pussy throughout her throws of delight. The salamander is next to receive this treatment, the glowing phallus sending her into intense orgasm. You fuck her through it as well, withdrawing it as she collapses back into the phoenix's embrace. Shifting to sit on the other side of them, you drive the now white-hot toy into yourself and have your senses blown by the intensity of your long-delayed climax. Steam rises from your overheated crotch as the scent of your femcum rises into the air and mixes with the steamy scent of the other sated females. You flop backwards onto the soft wing of your avian lover and the three of you cuddle up in a post-orgasmic haze with the sticky, overused toy resting at your feet as it slowly cools.";
+		-- 3: say "     Newt is the first to cum, crying out long and loud in orgasmic release as you sink that glowing hot sextoy into her on your final round. Anastasia is there to catch her in the soft embrace of her wing as the salamander sags backwards when her throws of delight finally subside. You are the next to receive this treatment as the glowing phallus sends you into intense orgasm. The phoenix helps brace the sextoy for you as writhe in carnal ecstasy, pumping it into you as you flop back onto the ground. Steam rises from your overheated crotch as the scent of your femcum fills the air. With the two of you sated, Anastasia turns the heated dildo on herself and plunges it forcefully into her cloacal pussy with both feet. Her musical cry is the loudest of you three as she achieves her long-delayed orgasm. By the time it's over, the air is heavy with the steamy scent of sated females and the three of you a flopped out in a post-orgasmic haze with the sticky, overused toy resting at the center, slowly cooling.";
 
 [ HP of Newt                        ]
 [ 0 = Nothing                       ]

@@ -7,7 +7,7 @@ name(text)	PrepFunction(text)
 "Football Gorilla Male"	"[PrepCombat_Football Gorilla Male]"
 
 to say PrepCombat_Football Gorilla Male:
-	say "";
+	setmongender 3; [creature is male]
 
 Table of Random Critters (continued)
 NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
@@ -22,7 +22,7 @@ When Play begins:
 	add "Football Gorilla Male" to infections of MaleList;
 	add "Football Gorilla Male" to infections of BipedalList;
 	now Name entry is "Football Gorilla Male";
-	now enemy title entry is ""; [ Name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name. ]
+	now enemy title entry is "Male Football Gorilla"; [ Name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name. ]
 	now enemy Name entry is ""; [ Specific name of unique enemy. ]
 	now enemy type entry is 0; [ 0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters. ]
 	now attack entry is "[one of]The gorilla throws himself on you in a tackle that drives the air out of your lungs.[or]Calling out, 'Come on, let's have some fun,' the gorilla claps his strong hand against your back, with a strength that leaves you somewhat stunned.[or]You get thrown aside and fall down as the gorilla demonstrates one of his moves - by running at you at full steam and striping you with his armored shoulder-pad.[at random]"; [Text used when the monster makes an Attack]
@@ -181,12 +181,12 @@ When Play begins:
 
 Section 2 - Football Gorilla Cuntboi
 
-Table of CombatPrep (continued)
+[Table of CombatPrep (continued)
 name(text)	PrepFunction(text)
 "Football Gorilla Cuntboi"	"[PrepCombat_Football Gorilla Cuntboi]"
 
 to say PrepCombat_Football Gorilla Cuntboi:
-	say "";
+	setmongender 8;]
 
 Table of Random Critters (continued)
 NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
@@ -204,10 +204,10 @@ When Play begins:
 	now enemy title entry is ""; [ Name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name. ]
 	now enemy Name entry is ""; [ Specific name of unique enemy. ]
 	now enemy type entry is 0; [ 0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters. ]
-	now attack entry is "     ..."; [Text used when the monster makes an Attack]
-	now defeated entry is "     ..."; [ Text or say command used when Monster is defeated.]
-	now victory entry is "     ..."; [ Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block as the demonstration text shows.]
-	now desc entry is "     ..."; [ Description of the creature when you encounter it. ]
+	now attack entry is "[NonCombatError]"; [Text used when the monster makes an Attack]
+	now defeated entry is "[NonCombatError]"; [ Text or say command used when Monster is defeated.]
+	now victory entry is "[NonCombatError]"; [ Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block as the demonstration text shows.]
+	now desc entry is "[NonCombatError]"; [ Description of the creature when you encounter it. ]
 	now face entry is "that of a gorilla, with a very wide, thin-lipped mouth, almost as wide and flat as your nose along with human-like eyes under heavy brows. Short fur covers your whole head with the exception of your inner facial area";
 	now body entry is "relatively wide and burly, with strong muscles that allow you to move and run pretty fast despite the large bulk. The curve of your spine and two elongated arms make it easy to drop to all fours to do so, but you're still capable of upright walking if you chose to do so";
 	now skin entry is "[one of]black furred[or]densely furred[or]furred[at random]";
@@ -224,7 +224,7 @@ When Play begins:
 	now per entry is 14;
 	now int entry is 8;
 	now cha entry is 12;
-	now sex entry is "Male"; [ Infection will move the player towards this gender. Current: 'Male' 'Female' 'Both' ]
+	now sex entry is "Female"; [ Infection will move the player towards this gender. Current: 'Male' 'Female' 'Both' ]
 	now HP entry is 100; [ The monster's starting HP. ]
 	now lev entry is 12; [ Monster level. (Level x 2) XP for victory. (Level / 2) XP for losing. ]
 	now wdam entry is 16; [ Monster's average damage when attacking. ]
@@ -357,6 +357,5 @@ When Play begins:
 	now Clit Size entry is 0; [size 1-5, see Clit Size Adjective]
 	[Clit Size Adjective is generated by a function and can be used in scenes: very small/small/average/large/very large]
 ]
-
 
 Football Gorilla Infections ends here.

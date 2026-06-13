@@ -10,6 +10,7 @@ Orc Tag Team	"Orc Tag Team"
 Orc Tag Team is a situation.
 ResolveFunction of Orc Tag Team is "[ResolveEvent Orc Tag Team]".
 Sarea of Orc Tag Team is "Warehouse".
+
 when play begins:
 	add Orc Tag Team to BadSpots of MaleList; [male orcs]
 	add Orc Tag Team to BadSpots of TransList; [male orcs]
@@ -24,9 +25,7 @@ to say ResolveEvent Orc Tag Team:
 	WaitLineBreak;
 	say "     'Mmpphf! G-get your stinking green hands out of my NNNGHH!' the anthro panther shouts but is then rudely interrupted by Thogk's lewd fingering getting more intense and him actually shoving a thick finger into his sex. Even though the muscled feline squirms against the relentless grasp of his orc captor, he is powerless to do anything except moan helplessly. Withdrawing his finger, the orc chuckles as he sees a bit of white goop coating the end of his digit. 'Look, we got ourselves a kitty slut!' he adds with a chuckle as he shows the cum to his buddy, then wipes it off against the panther's abs. 'Shouldn't be much an adjustment then to get him used to being a breeder then, if he's walking around with a fresh load in him,' Kurl replies and pushes the athletic feline against the alley wall, then down to the anthro's knees. Impatiently, he simply rips off his own loincloth and throws it aside. 'Seriously, if you think I'm gonna just let yo- whoa! That's a really big dick!' the panther snarls while being man-handled, then confronted with the orc's big green shaft.";
 	say "     Thogk steps up beside his partner, giving the other orc a slap on the shoulders. 'Sure is, hahaha. Kurl over here is about as large as it gets in the lair. But you'll feel that soon enough. So, what's your name kitty?' Reaching over to the wide-eyed anthro feline and scuffing his hair as gently as an orc can, Kurl grins down at their captive, then even scratches behind the ears. 'We'll take [italic type]good[roman type] care of you. Just ask any breeder in the lair and they'll tell you.' Still fairly intimidated by the muscled brutes towering over him, the panther replies, 'Reese. My name's Reese.' By this time Kurl had stroked himself hard, and proceeds to wipe up a large dollop of aphrodisiac laden orc pre-cum from his dickhead. 'Now that wasn't so hard, eh? You get a treat as a reward.' With that said, he pushes his finger into the feline's still partly open mouth, smearing his pre into the trans-man's tongue.";
-	LineBreak;
-	say "     [bold type]Do you want to watch those two push Reese to his inevitable fate as an orc cum-slut?[roman type][line break]";
-	LineBreak;
+	say "[line break]     [bold type]Do you want to watch those two push Reese to his inevitable fate as an orc cum-slut?[roman type][line break]";
 	say "     ([link]Y[as]y[end link]) - Sure, it's a hot show.";
 	say "     ([link]N[as]n[end link]) - No, you don't need to see this.";
 	if Player consents:

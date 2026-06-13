@@ -54,7 +54,6 @@ Equipment has a number called skillcheck value. The skillcheck value of equipmen
 Equipment has a text called EquipFunction. EquipFunction is usually "".
 Equipment has a text called UnequipFunction. UnequipFunction is usually "".
 
-
 Part 2 - Definitions and Functions
 
 Chapter 1 - Grab Objects
@@ -65,7 +64,6 @@ Definition: A grab object (called D) is owned:
 	no;
 
 Definition: A grab object (called D) is fiveowned:
-	let count be 0;
 	if there is a name corresponding to a object of d in the table of game objects:
 		if the carried of D > 4, yes;
 	no;
@@ -81,46 +79,44 @@ Definition: A grab object (called D) is present:
 	no;
 
 before examining the grab object (called x):
-	let good be 0;
-	if x is owned, now good is 1;
-	if x is present, now good is 1;
-	if good is 0, say "I don't see any [x] around here..." instead;
+	if x is owned or x is present:
+		continue the action;
+	say "I don't see any [x] around here..." instead;
 
 instead of examining a grab object (called x):
 	say "[the desc corresponding to a object of x in the table of game objects][line break]";
-	let found be 0;
+	let found be false;
 	repeat through the table of game art:
 		if printed name of x exactly matches the text title entry, case insensitively:
 			project icon entry;
-			now found is 1;
+			now found is true;
 			break;
-	if found is 0 and x is cum:
+	if found is false and x is cum:
 		project Figure of Item_Bottle_Cum;
 	if "Weaponsmaster" is listed in feats of Player and x is an armament:
 		say "     Looking over the weapon with your expert knowledge, you assess it to be a [weapon damage of x] damage weapon.";
 	if x is an armament:
-		if (ScaleValue of Player - objsize of x) is:
-		-- 4: [4 size categories difference - huge player (5), size 1 weapon]
-			say "     Trying to use this as a weapon is utterly ridiculous, given your size. Don't even try it!";
-		-- 3: [3 categories difference]
-			say "     Trying to use this as a weapon is fairly ridiculous, given your size.";
-		-- 2: [2 categories difference]
-			say "     Trying to use this as a weapon is incredibly difficult, as it is far to small for you to comfortably hold.";
-		-- 1: [1 category difference]
-			say "     Given that it is made for someone smaller than you, this isn't all that easy to use as a weapon.";
-		-- 0: [proper size for the player]
-			say "     This is just the right size for you to wield comfortably.";
-		-- -1: [1 categories difference]
-			say "     A bit big for comfortable use, but with both hands and some effort, you'll manage.";
-		-- -2: [2 categories difference]
-			say "     Trying to use this as a weapon is incredibly difficult, as its sheer size threatens to pull you over.";
-		-- -3: [3 categories difference]
-			say "     Trying to use this as a weapon is fairly ridiculous, given your size.";
-		-- -4: [4 size categories difference - tiny player (1), size 5 weapon]
-			say "     Don't even think about using this in combat! Well, you might hide under its bulk, but that's about it.";
+		if ScaleValue of Player - objsize of x is:
+			-- 4: [4 size categories difference - huge player (5), size 1 weapon]
+				say "     Trying to use this as a weapon is utterly ridiculous, given your size. Don't even try it!";
+			-- 3: [3 categories difference]
+				say "     Trying to use this as a weapon is fairly ridiculous, given your size.";
+			-- 2: [2 categories difference]
+				say "     Trying to use this as a weapon is incredibly difficult, as it is far to small for you to comfortably hold.";
+			-- 1: [1 category difference]
+				say "     Given that it is made for someone smaller than you, this isn't all that easy to use as a weapon.";
+			-- 0: [proper size for the player]
+				say "     This is just the right size for you to wield comfortably.";
+			-- -1: [1 categories difference]
+				say "     A bit big for comfortable use, but with both hands and some effort, you'll manage.";
+			-- -2: [2 categories difference]
+				say "     Trying to use this as a weapon is incredibly difficult, as its sheer size threatens to pull you over.";
+			-- -3: [3 categories difference]
+				say "     Trying to use this as a weapon is fairly ridiculous, given your size.";
+			-- -4: [4 size categories difference - tiny player (1), size 5 weapon]
+				say "     Don't even think about using this in combat! Well, you might hide under its bulk, but that's about it.";
 
 Using is an action applying to one thing.
-
 understand "dequip [owned grab object]" as using.
 understand "take off [owned grab object]" as using.
 understand "use [owned grab object]" as using.
@@ -133,16 +129,13 @@ understand "wield [owned grab object]" as using.
 understand "write in [owned grab object]" as using.
 
 Check using a grab object (called x):
-	if HardMode is true and x is journal and (LastJournaluse minus 8) < turns:
-		say "You can't use your [x] for another [(remainder after dividing (turns minus (LastJournaluse minus 8)) by 8 ) times 3] hours.";
-		stop the action;
-	continue the action;
+	if HardMode is true and x is journal and LastJournaluse minus 8 < turns:
+		say "You can't use your [x] for another [(remainder after dividing ( turns minus LastJournaluse minus 8 ) by 8 ) times 3] hours." instead;
+	if x is not owned:
+		say "You don't see any [x] in your backpack." instead;
 
 Carry out using a grab object (called x):
-	if x is owned:
-		process x;
-	else:
-		say "You don't see any [x] in your backpack.";
+	process x;
 
 [
 instead of wearing something:
@@ -151,13 +144,13 @@ instead of wearing something:
 ]
 
 To process (x - a grab object):
-	let found be 0;
+	let found be false;
 	repeat through the table of game art:
 		if printed name of x exactly matches the text title entry, case insensitively:
 			project icon entry;
-			now found is 1;
+			now found is true;
 			break;
-	if found is 0 and x is cum:
+	if found is false and x is cum:
 		project Figure of Item_Bottle_Cum;
 	let tempHungerValue be Hunger of Player;
 	if x is temporary and x is owned:
@@ -188,33 +181,31 @@ To process (x - a grab object):
 				now x is not equipped;
 				say "[UnequipFunction of x]";
 		else:
-			if slot of x is empty:
-				increase score by 0;
-			else:
+			if slot of x is not empty:
 				repeat with z running through equipped equipment:
 					if slot of z is slot of x:
-						say "     [bold type]Your [z] is in the way![roman type][line break]";
+						say "     [bold type]Your [z] [if plural of z is true]are[else]is[end if] in the way![roman type][line break]";
 						continue the action;
 			if (slot of x is "feet" or slot of x is "legs" or slot of x is "waist") and (BodyName of Player is listed in infections of TaurList or BodyName of Player is listed in infections of NoLegList):
 				say "     [bold type]Sadly, the [x] [if plural of x is true]are[else]is[end if] incompatible with your body type![roman type][line break]";
 				continue the action;
 			if size of x > 0: [objects with size restrictions]
-				if (scalevalue of Player - size of x > 1): [clothing two size categories smaller]
+				if scalevalue of Player - size of x > 1: [clothing two size categories smaller]
 					say "     [bold type]You can't even begin to fit into the [x]. [if plural of x is true]They are meant for smaller beings than yourself[else]It is meant for smaller beings than yourself[end if].[roman type][line break]";
 					continue the action;
-				else if (scalevalue of Player - size of x is 1): [clothing one size category smaller]
+				else if scalevalue of Player - size of x is 1: [clothing one size category smaller]
 					say "     [bold type]You start wearing the [x]. [if plural of x is true]They are quite small for your body size, but still barely fit[else]It is quite small for your body size, but still barely fits[end if].[roman type][line break]";
 					now x is equipped;
 					say "[EquipFunction of x]";
-				else if (scalevalue of Player - size of x is 0): [clothing same size category]
+				else if scalevalue of Player - size of x is 0: [clothing same size category]
 					say "     [bold type]You start wearing the [x]. [if plural of x is true]They fit fairly well[else]It fits fairly well[end if].[roman type][line break]";
 					now x is equipped;
 					say "[EquipFunction of x]";
-				else if (scalevalue of Player - size of x is -1): [clothing one size category bigger]
+				else if scalevalue of Player - size of x is -1: [clothing one size category bigger]
 					say "     [bold type]You start wearing the [x]. [if plural of x is true]They are quite big for your body size, but fit more or less with some adjustments[else]It is quite big for your body size, but fits more or less with some adjustments[end if].[roman type][line break]";
 					now x is equipped;
 					say "[EquipFunction of x]";
-				else if (scalevalue of Player - size of x < -1): [clothing two size categories bigger]
+				else if scalevalue of Player - size of x < -1: [clothing two size categories bigger]
 					say "     [bold type]The [x] [if plural of x is true]are simply too big! They are meant for much larger beings than yourself[else]is simply too big! It is meant for much larger beings than yourself[end if].[roman type][line break]";
 					continue the action;
 			else:
@@ -226,11 +217,10 @@ To process (x - a grab object):
 			say "[line break][usepepperspray]";
 		else:
 			say "It would not be a good idea to use that on yourself. Spicy eyes!";
-	if tempHungerValue > Hunger of Player and "Tanuki Salts" is listed in Feats of Player:
+	if tempHungerValue > Hunger of Player and "Tanuki Salts" is listed in Feats of Player and x is not milky and x is not cum:
 		PlayerEat 5;
 		say "Dashing a little tanuki salts helped things along. Mmm, divinely tasty.";
 		increase Morale of Player by 5;
-
 
 Chapter 2 - Armaments
 
@@ -239,27 +229,24 @@ Definition: A grab object (called x) is wielded:
 	no;
 
 Definition: A grab object (called x) is unwieldy:		[applies to armaments only]
-	if grab object is journal, no;
-	if (absolute value of ( scalevalue of Player - objsize of x )) > 0, yes;
+	if x is not an armament, no;
+	if absolute value of ( scalevalue of Player - objsize of x ) > 0, yes;
 	no;
 
 Chapter 3 - Equipment
-
-
-
 
 journal is a grab object. It is not temporary.
 The carried of journal is 1. [starting item]
 journal has a number called hitbonus. hitbonus of journal is usually 0.
 Understand "book" as journal.
-
 Usedesc of journal is "[journal use]".
+the scent of journal is "The journal smells of cheap leather, paper and ink.".
 
 to say journal use:
 	follow the brain descr rule;
 	say "You settle down and start scribbling in your journal about your [descr] ";
 	if Humanity of Player < 100:
-		let healed be 10 + ( ( level of Player + perception of Player - 10 ) / 2 );
+		let healed be 10 + ( level of Player + perception of Player - 10 ) / 2;
 		if caffeinehigh of Player > 0:
 			now healed is healed / 2;
 			say "[line break]Filled with excess, manic energy, you have difficulty sitting still and focusing on your journal. ";
@@ -268,6 +255,5 @@ to say journal use:
 		SanBoost healed;
 		now Lastjournaluse is turns;
 	follow turnpass rule;
-
 
 Game Objects ends here.

@@ -25,18 +25,13 @@ To level up:
 		LineBreak;
 		if calcnumber is 7:
 			now calcnumber is a random number between 1 and 6;
-		if calcnumber is 1:
-			StatChange "strength" by 1;
-		else if calcnumber is 2:
-			StatChange "dexterity" by 1;
-		else if calcnumber is 3:
-			StatChange "stamina" by 1;
-		else if calcnumber is 4:
-			StatChange "charisma" by 1;
-		else if calcnumber is 5:
-			StatChange "intelligence" by 1;
-		else if calcnumber is 6:
-			StatChange "perception" by 1;
+		if calcnumber is:
+			-- 1: StatChange "strength" by 1;
+			-- 2: StatChange "dexterity" by 1;
+			-- 3: StatChange "stamina" by 1;
+			-- 4: StatChange "charisma" by 1;
+			-- 5: StatChange "intelligence" by 1;
+			-- 6: StatChange "perception" by 1;
 	else:
 		increase ssstash by 1;
 	increase MaxHP of Player by ( stamina of Player minus 10 ) divided by 2;

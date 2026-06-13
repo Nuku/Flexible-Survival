@@ -11,258 +11,147 @@ Version 1 of Fire Sprite by AGentlemanCalledB begins here.
 
 "Adds a Fire Sprite creature to Flexible Survival's Wandering Monsters table"
 
-Section 0 - Flags and Tags
-
 Section 1 - Creature Responses
 
-FireSpritemode is a number that varies. FireSpritemode is usually 0.
+FireSpritemode is a number that varies.[@Tag:NotSaved] FireSpritemode is usually 0.
 
 to say losetoFireSprite:
 	if FireSpritemode is 0: [female sprite]
-		if Player is male and Cock Length of Player < 12 and a random chance of 1 in 2 succeeds:
-			say "[FemaleFireSpriteVicVag]";
+		if Player is male and Cock Length of Player < 14 and a random chance of 1 in 2 succeeds:
+			say "     Beaten by the fiery sprite, you fall to the ground as she prances around gleefully. Poking and prodding you with small wicks of flame to maneuver you into the position she wants, the sprite eventually has you laying on your back with your throbbing maleness exposed. Teasing you to full erection with a fiery touch that borders between pleasure and pain, the small sprite is soon positioned above you, slowly sinking herself down onto your burning member. With a gleeful giggle she begins bouncing in your lap, riding your cock eagerly. With the heat of her drooling cunt wrapped around your glans, squeezing and clenching you as she bounces, the pleasure soon begins to overwhelm you, pushing you to a powerful climax as she soaks your crotch in her steaming juices with an orgasm of her own. A chill runs over you as she pulls herself off your exhausted member, leaving you soaked in her warm honey as she scampers off into the city.";
+			CreatureSexAftermath "Fire Sprite" receives "PussyFuck" from "Player";
 		else:
-			say "[FemaleFireSpriteVicOral]";
+			say "     Beaten by the fiery sprite, you fall to the ground as she prances around gleefully. Poking and prodding you with small wicks of flame to maneuver you into the position she wants, the sprite eventually has you slouched against [one of]a car[or]some rubble[or]a wall[at random], facing her. The excited sprite grins maniacally as she steps into your lap, pressing your face into her steaming cunt. As she grinds her lips against your own, you feel the sweet warmth of her feminine juices leaking into your mouth, compelling you to dig in for more. As you begin to lick and tease at her folds, the sprite begins grinding against your face, stroking the back of your head as she rides your tongue to a powerful climax, soaking you in her steaming hot juices. A chill runs over you as the sprite steps away, leaving you there, coated in her warm honey as she scampers off into the city.";
+			CreatureSexAftermath "Player" receives "OralPussy" from "Fire Sprite";
 	else: [male sprite]
-		if ( Player is female and anallevel is 2 and a random chance of 1 in 4 succeeds ) or ( Player is female and anallevel is 3 and a random chance of 1 in 2 succeeds ) or ( Player is not female and anallevel > 1 and a random chance of 1 in 2 succeeds ):
-			say "[MaleFireSpriteVicAnal]";
-		else if Player is female and Cunt Depth of Player < 12 and a random chance of 1 in 2 succeeds:
-			say "[MaleFireSpriteVicVag]";
+		if ( Player is female and anallevel is 2 and a random chance of 1 in 4 succeeds ) or ( anallevel > 1 and ( Player is not female or anallevel is 3 ) and a random chance of 1 in 2 succeeds ):
+			say "     Beaten by the fiery sprite, you fall to the ground as he prances around gleefully. Poking and prodding you with small wicks of flame to maneuver you into the position he wants, the sprite eventually has you on your belly with your ass propped up in the air before him. After some gentle teasing that borders between pleasure and pain with a fiery finger, the sprite finally gets on to the main event, aligning his already excited member with your ass before sinking the hot meat into you. As the small sprite pounds away at you, you feel the warmth of his cock and fiery pre sinking into your body, filling you with a pleasurable heat. With the sprite's pace quickening, the heat quickly begins to overwhelm you, pushing you to [if Player is neuter]wail out in pleasure[else]a fiery climax[end if] as the sprite fills you with his molten load. A chill runs through you as the sprite pulls out, leaving you there, his warm, glowing cum still drooling from your ass as he scampers off into the city.";
+			CreatureSexAftermath "Player" receives "AssFuck" from "Fire Sprite";
+		else if Player is female and Cunt Depth of Player < 14 and a random chance of 1 in 2 succeeds:
+			say "     Beaten by the fiery sprite, you fall to the ground as he prances around gleefully. Poking and prodding you with small wicks of flame to maneuver you into the position he wants, the sprite eventually has you on your back, legs spread before him. After some gentle teasing that borders between pleasure and pain with a fiery finger, the sprite finally gets on to the main event, aligning his already excited member with your dripping cunt before sinking the hot meat into you. As the small sprite pounds away at you, you feel the warmth of his cock and fiery pre sinking into your body, filling you with a pleasurable heat. With the sprite's pace quickening, the heat quickly begins to overwhelm you, pushing you to a fiery climax as the sprite fills you with his molten load. A chill runs through you as the sprite pulls out, leaving you there, his glowing, still-warm cum drooling from your cunt as he scampers off into the city.";
+			CreatureSexAftermath "Player" receives "PussyFuck" from "Fire Sprite";
 		else:
-			say "[MaleFireSpriteVicOral]";
-
-to say MaleFireSpriteVicVag:
-	say "     Beaten by the fiery sprite, you fall to the ground as he prances around gleefully. Poking and prodding you with small wicks of flame to maneuver you into the position he wants, the sprite eventually has you on your back, legs spread before him. After some gentle teasing that borders between pleasure and pain with a fiery finger, the sprite finally gets on to the main event, aligning his already excited member with your dripping cunt before sinking the hot meat into you. As the small sprite pounds away at you, you feel the warmth of his cock and fiery pre sinking into your body, filling you with a pleasurable heat. With the sprite's pace quickening, the heat quickly begins to overwhelm you, pushing you to a fiery climax as the sprite fills you with his molten load. A chill runs through you as the sprite pulls out, leaving you there, his glowing, still-warm cum drooling from your cunt as he scampers off into the city.";
-	CreatureSexAftermath "Player" receives "PussyFuck" from "Fire Sprite";
-
-to say MaleFireSpriteVicOral:
-	say "     Beaten by the fiery sprite, you fall to the ground as he prances around gleefully. Poking and prodding you with small wicks of flame to maneuver you into the position he wants, the sprite eventually has you slouched against [one of]a car[or]some rubble[or]a wall[at random], facing him. The excited sprite grins maniacally as he steps into your lap, pressing the tip of his warm cock between your lips as he reaches around to the back of your head, gripping you firmly. With his warm member filling your mouth, you feel the heat of his pre running down your throat as he pounds into you, fucking your face to a powerful climax, filling your belly with his molten load. A chill runs through you as the sprite pulls out, leaving you there, his warm, glowing cum dripping from the corner of your mouth as he scampers off into the city.";
-	CreatureSexAftermath "Player" receives "OralCock" from "Fire Sprite";
-
-to say MaleFireSpriteVicAnal:
-	say "     Beaten by the fiery sprite, you fall to the ground as he prances around gleefully. Poking and prodding you with small wicks of flame to maneuver you into the position he wants, the sprite eventually has you on your belly with your ass propped up in the air before him. After some gentle teasing that borders between pleasure and pain with a fiery finger, the sprite finally gets on to the main event, aligning his already excited member with your ass before sinking the hot meat into you. As the small sprite pounds away at you, you feel the warmth of his cock and fiery pre sinking into your body, filling you with a pleasurable heat. With the sprite's pace quickening, the heat quickly begins to overwhelm you, pushing you to [if Player is neuter]wail out in pleasure[else]a fiery climax[end if] as the sprite fills you with his molten load. A chill runs through you as the sprite pulls out, leaving you there, his warm, glowing cum still drooling from your ass as he scampers off into the city.";
-	CreatureSexAftermath "Player" receives "AssFuck" from "Fire Sprite";
-
-to say FemaleFireSpriteVicOral:
-	say "     Beaten by the fiery sprite, you fall to the ground as she prances around gleefully. Poking and prodding you with small wicks of flame to maneuver you into the position she wants, the sprite eventually has you slouched against [one of]a car[or]some rubble[or]a wall[at random], facing her. The excited sprite grins maniacally as she steps into your lap, pressing your face into her steaming cunt. As she grinds her lips against your own, you feel the sweet warmth of her feminine juices leaking into your mouth, compelling you to dig in for more. As you being to lick and tease at her folds, the sprite begins grinding against your face, stroking the back of your head as she rides your tongue to a powerful climax, soaking you in her steaming hot juices. A chill runs over you as the sprite steps away, leaving you there, coated in her warm honey as she scampers off into the city.";
-	CreatureSexAftermath "Player" receives "OralPussy" from "Fire Sprite";
-
-to say FemaleFireSpriteVicVag:
-	say "     Beaten by the fiery sprite, you fall to the ground as she prances around gleefully. Poking and prodding you with small wicks of flame to maneuver you into the position she wants, the sprite eventually has you laying on your back with your throbbing maleness exposed. Teasing you to full erection with a fiery touch that borders between pleasure and pain, the small sprite is soon positioned above you, slowly sinking herself down onto your burning member. With a gleeful giggle she begins bouncing in your lap, riding your cock eagerly. With the heat of her drooling cunt wrapped around your glans, squeezing and clenching you as she bounces, the pleasure soon begins to overwhelm you, pushing you to a powerful climax as she soaks your crotch in her steaming juices with an orgasm of her own. A chill runs over you as she pulls herself off your exhausted member, leaving you soaked in her warm honey as she scampers off into the city.";
-	CreatureSexAftermath "Fire Sprite" receives "PussyFuck" from "Player";
+			say "     Beaten by the fiery sprite, you fall to the ground as he prances around gleefully. Poking and prodding you with small wicks of flame to maneuver you into the position he wants, the sprite eventually has you slouched against [one of]a car[or]some rubble[or]a wall[at random], facing him. The excited sprite grins maniacally as he steps into your lap, pressing the tip of his warm cock between your lips as he reaches around to the back of your head, gripping you firmly. With his warm member filling your mouth, you feel the heat of his pre running down your throat as he pounds into you, fucking your face to a powerful climax, filling your belly with his molten load. A chill runs through you as the sprite pulls out, leaving you there, his warm, glowing cum dripping from the corner of your mouth as he scampers off into the city.";
+			CreatureSexAftermath "Player" receives "OralCock" from "Fire Sprite";
 
 to say beattheFireSprite:
 	if Player is neuter:
-		say "     With a final blow, you knock the sprite to the ground, pinning [if FireSpritemode is 0]her[else]him[end if] there with your foot. You consider having some fun with the sprite for a moment, but lacking any proper equipment to do so, you release [if FireSpritemode is 0]her[else]him[end if] and send [if FireSpritemode is 0]her[else]him[end if] scampering off into the city with a light kick in the ass.";
+		say "     With a final blow, you knock the sprite to the ground, pinning [ghim] there with your foot. You consider having some fun with the sprite for a moment, but lacking any proper equipment to do so, you release [ghim] and send [ghim] scampering off into the city with a light kick in the ass.";
 	else:
-		say "     With a final blow, you knock the sprite to the ground, pinning [if FireSpritemode is 0]her[else]him[end if] there with your foot. You could have some fun with the sprite if you wanted to (Y/N).";
+		say "     With a final blow, you knock the sprite to the ground, pinning [ghim] there with your foot. You could have some fun with the sprite if you wanted to.";
 		if Player consents:
-			if FireSpritemode is 0:
-				say "[beatFireSpritegirl]";
-			else:
-				say "[beatFireSpriteguy]";
+			LineBreak;
+			now sextablerun is 0;
+			blank out the whole of table of fucking options;
+			[]
+			if Player is male:
+				if Cock Length of Player > 24:
+					choose a blank row in table of fucking options;
+					now title entry is "Masturbation";
+					now sortorder entry is 1;
+					now description entry is "Have the sprite stroke you off";
+				else if Cock Length of Player < 14:
+					choose a blank row in table of fucking options;
+					now title entry is the substituted form of "[if FireSpritemode is 0]Fuck her[else]Anal[end if]";
+					now sortorder entry is 1;
+					now description entry is "Fuck the sprite's [if FireSpritemode is 0]pussy[else]ass[end if]";
+				[]
+				choose a blank row in table of fucking options;
+				now title entry is "Blowjob";
+				now sortorder entry is 4;
+				now description entry is "Have the sprite suck you off";
+			[]
+			if Player is female:
+				if Cunt Depth of Player < 14 and FireSpritemode is 1:
+					choose a blank row in table of fucking options;
+					now title entry is "Get fucked";
+					now sortorder entry is 2;
+					now description entry is "Ride the sprite's cock";
+				else if Cunt Depth of Player > 24:
+					choose a blank row in table of fucking options;
+					now title entry is "Insertion";
+					now sortorder entry is 2;
+					now description entry is "Use the sprite as a 'special' toy";
+				[]
+				choose a blank row in table of fucking options;
+				now title entry is "Cunnilingus";
+				now sortorder entry is 3;
+				now description entry is "Have the sprite eat you out";
+			[]
+			sort the table of fucking options in sortorder order;
+			repeat with y running from 1 to number of filled rows in table of fucking options:
+				choose row y from the table of fucking options;
+				say "[link][y] - [title entry][as][y][end link][line break]";
+			say "[link]0 - Nevermind[as]0[end link][line break]";
+			while sextablerun is 0:
+				say "Pick the corresponding number> [run paragraph on]";
+				get a number;
+				if calcnumber > 0 and calcnumber <= the number of filled rows in table of fucking options:
+					now current menu selection is calcnumber;
+					choose row calcnumber in table of fucking options;
+					say "[title entry]: [description entry]?";
+					if Player consents:
+						LineBreak;
+						now sextablerun is 1;
+						if title entry is:
+							-- "Masturbation":
+								say "[FireSpriteMasturbate]";
+							-- "Anal":
+								say "[FuckFireSprite]";
+							-- "Fuck her":
+								say "[FuckFireSprite]";
+							-- "Get fucked":
+								say "[RideFireSpriteCock]";
+							-- "Insertion":
+								say "[FireSpriteInsertion]";
+							-- "Cunnilingus":
+								say "[FireSpriteCunnilingus]";
+							-- "Blowjob":
+								say "[FireSpriteBlowJob]";
+				else if calcnumber is 0:
+					LineBreak;
+					now sextablerun is 1;
+					say "     Deciding against having some fun with the sprite, you release [ghim] and send [ghim] scampering off into the city with a light kick in the ass.";
+				else:
+					say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options], or 0 to exit.";
 		else:
 			LineBreak;
-			say "     Deciding against having some fun with the sprite, you release [if FireSpritemode is 0]her[else]him[end if] and send [if FireSpritemode is 0]her[else]him[end if] scampering off into the city with a light kick in the ass.";
-
-to say beatFireSpriteguy:
-	now sextablerun is 0;
-	blank out the whole of table of fucking options;
-	[]
-	if Player is male and Cock Length of Player > 24:
-		choose a blank row in table of fucking options;
-		now title entry is "Masturbation";
-		now sortorder entry is 1;
-		now description entry is "Have the sprite stroke you off";
-	[]
-	if Player is male and Cock Length of Player < 12:
-		choose a blank row in table of fucking options;
-		now title entry is "Anal";
-		now sortorder entry is 2;
-		now description entry is "Fuck the sprite's ass";
-	[]
-	if Player is female and Cunt Depth of Player < 12:
-		choose a blank row in table of fucking options;
-		now title entry is "Get fucked";
-		now sortorder entry is 3;
-		now description entry is "Ride the sprite's cock";
-	[]
-	if Player is female and Cunt Depth of Player > 24:
-		choose a blank row in table of fucking options;
-		now title entry is "Insertion";
-		now sortorder entry is 4;
-		now description entry is "Use the sprite as a 'special' toy";
-	[]
-	if Player is female:
-		choose a blank row in table of fucking options;
-		now title entry is "Cunnilingus";
-		now sortorder entry is 5;
-		now description entry is "Have the sprite eat you out";
-	[]
-	if Player is male:
-		choose a blank row in table of fucking options;
-		now title entry is "Blowjob";
-		now sortorder entry is 6;
-		now description entry is "Have the sprite suck you off";
-	[]
-	sort the table of fucking options in sortorder order;
-	repeat with y running from 1 to number of filled rows in table of fucking options:
-		choose row y from the table of fucking options;
-		say "[link][y] - [title entry][as][y][end link][line break]";
-	say "[link]0 - Nevermind[as]0[end link][line break]";
-	while sextablerun is 0:
-		say "Pick the corresponding number> [run paragraph on]";
-		get a number;
-		if calcnumber > 0 and calcnumber <= the number of filled rows in table of fucking options:
-			now current menu selection is calcnumber;
-			choose row calcnumber in table of fucking options;
-			say "[title entry]: [description entry]?";
-			if Player consents:
-				LineBreak;
-				let nam be title entry;
-				now sextablerun is 1;
-				if title entry is "Masturbation":
-					say "[FireSpriteMasturbate]";
-				else if title entry is "Anal":
-					say "[FuckFireSprite]";
-				else if title entry is "Get fucked":
-					say "[RideFireSpriteCock]";
-				else if title entry is "Insertion":
-					say "[FireSpriteInsertion]";
-				else if title entry is "Cunnilingus":
-					say "[FireSpriteCunnilingus]";
-				else if title entry is "Blowjob":
-					say "[FireSpriteBlowJob]";
-				wait for any key;
-		else if calcnumber is 0:
-			LineBreak;
-			now sextablerun is 1;
-			say "     Deciding against having some fun with the sprite, you release [if FireSpritemode is 0]her[else]him[end if] and send [if FireSpritemode is 0]her[else]him[end if] scampering off into the city with a light kick in the ass.";
-			wait for any key;
-		else:
-			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
-	clear the screen and hyperlink list;
-
-to say beatFireSpritegirl:
-	now sextablerun is 0;
-	blank out the whole of table of fucking options;
-	[]
-	if Player is male and Cock Length of Player > 24:
-		choose a blank row in table of fucking options;
-		now title entry is "Masturbation";
-		now sortorder entry is 1;
-		now description entry is "Have the sprite stroke you off";
-	[]
-	if Player is male and Cock Length of Player < 12:
-		choose a blank row in table of fucking options;
-		now title entry is "Fuck her";
-		now sortorder entry is 2;
-		now description entry is "Fuck the sprite's pussy";
-	[]
-	if Player is female and Cunt Depth of Player > 24:
-		choose a blank row in table of fucking options;
-		now title entry is "Insertion";
-		now sortorder entry is 3;
-		now description entry is "Use the sprite as a 'special' toy";
-	[]
-	if Player is female:
-		choose a blank row in table of fucking options;
-		now title entry is "Cunnilingus";
-		now sortorder entry is 4;
-		now description entry is "Have the sprite eat you out";
-	[]
-	if Player is male:
-		choose a blank row in table of fucking options;
-		now title entry is "Blowjob";
-		now sortorder entry is 5;
-		now description entry is "Have the sprite suck you off";
-	[]
-	sort the table of fucking options in sortorder order;
-	repeat with y running from 1 to number of filled rows in table of fucking options:
-		choose row y from the table of fucking options;
-		say "[link][y] - [title entry][as][y][end link][line break]";
-	say "[link]0 - Nevermind[as]0[end link][line break]";
-	while sextablerun is 0:
-		say "Pick the corresponding number> [run paragraph on]";
-		get a number;
-		if calcnumber > 0 and calcnumber <= the number of filled rows in table of fucking options:
-			now current menu selection is calcnumber;
-			choose row calcnumber in table of fucking options;
-			say "[title entry]: [description entry]?";
-			if Player consents:
-				LineBreak;
-				let nam be title entry;
-				now sextablerun is 1;
-				if title entry is "Masturbation":
-					say "[FireSpriteMasturbate]";
-				else if title entry is "Fuck her":
-					say "[FuckFireSprite]";
-				else if title entry is "Insertion":
-					say "[FireSpriteInsertion]";
-				else if title entry is "Cunnilingus":
-					say "[FireSpriteCunnilingus]";
-				else if title entry is "Blowjob":
-					say "[FireSpriteBlowJob]";
-				wait for any key;
-		else if calcnumber is 0:
-			LineBreak;
-			now sextablerun is 1;
-			say "     Deciding against having some fun with the sprite, you release [if FireSpritemode is 0]her[else]him[end if] and send [if FireSpritemode is 0]her[else]him[end if] scampering off into the city with a light kick in the ass.";
-			wait for any key;
-		else:
-			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
-	clear the screen and hyperlink list;
+			say "     Deciding against having some fun with the sprite, you release [ghim] and send [ghim] scampering off into the city with a light kick in the ass.";
 
 to say FuckFireSprite:
-	if FireSpritemode is 0:
-		say "     Deciding to make use of the beaten sprite, you remove your gear and prepare for some fun. Taking a seat, you lift the sprite into your lap, holding the squirming critter above your erect member. After aligning her with your member, you slowly push her form down onto your ready flesh, splitting her tight netherlips with a groan of relief. Once hilted inside her, you take hold of her waist and begin pistoning her up and down your length. Soon the warm, squeezing passage milking your cock becomes too much and you orgasm powerfully, filling the tiny sprite's womb with your load. Releasing the sprite as you slouch back into your seat, she slides limply off your member before climbing to her feet and stumbling away, your [Cum Load Size of Player] load still leaking from her cunt.";
-		CreatureSexAftermath "Fire Sprite" receives "PussyFuck" from "Player";
-	else:
-		say "     Deciding to make use of the beaten sprite, you remove your gear and prepare for some fun. Taking a seat, you lift the sprite into your lap, holding the squirming critter above your erect member. After aligning him with your member, you slowly push his form down onto your ready flesh, splitting his ass with a groan of relief. Once hilted inside him, you take hold of his waist and begin pistoning him up and down your length. Soon the warm, squeezing passage milking your cock becomes too much and you orgasm powerfully, filling the tiny sprite's bowels with your load. Releasing the sprite as you slouch back into your seat, he slides limply off your member before climbing to his feet and stumbling away, your [Cum Load Size of Player] load still leaking from his ass.";
-		CreatureSexAftermath "Fire Sprite" receives "AssFuck" from "Player";
+	say "     Deciding to make use of the beaten sprite, you remove your gear and prepare for some fun. Taking a seat, you lift the sprite into your lap, holding the squirming critter above your erect member. After aligning [if FireSpritemode is 0]her with your member, you slowly push her form down onto your ready flesh, splitting her tight netherlips with a groan of relief. Once hilted inside her, you take hold of her waist and begin pistoning her up and down your length. Soon the warm, squeezing passage milking your cock becomes too much and you orgasm powerfully, filling the tiny sprite's womb with your load. Releasing the sprite as you slouch back into your seat, she slides limply off your member before climbing to her feet and stumbling away, your [Cum Load Size of Player] load still leaking from her cunt[else]him with your member, you slowly push his form down onto your ready flesh, splitting his ass with a groan of relief. Once hilted inside him, you take hold of his waist and begin pistoning him up and down your length. Soon the warm, squeezing passage milking your cock becomes too much and you orgasm powerfully, filling the tiny sprite's bowels with your load. Releasing the sprite as you slouch back into your seat, he slides limply off your member before climbing to his feet and stumbling away, your [Cum Load Size of Player] load still leaking from his ass[end if].";
+	CreatureSexAftermath "Fire Sprite" receives "[if FireSpritemode is 0]Pussy[else]Ass[end if]Fuck" from "Player";
 
 to say FireSpriteMasturbate:
-	if FireSpritemode is 0:
-		say "     Deciding to make use of the beaten sprite, you remove your gear and prepare for some fun. After sizing the little creature up, you decide your massive member is just too much for her tiny form. Endeavoring to make use of your little plaything, you press her entire body against your throbbing cock, stroking its entire length with her small, warm form. Soon the sprite has her arms wrapped around you, grinding her body against you as you use her to stroke yourself off. Through your combined efforts, your balls are soon tensing up in anticipation as you quickly approach climax, blowing your [Cum Load Size of Player] load into the air. As your cum showers down atop the sprite, you finally release her, basking in your afterglow as she scampers off while doing her best to shake off your sticky mess.";
-	else:
-		say "     Deciding to make use of the beaten sprite, you remove your gear and prepare for some fun. After sizing the little creature up, you decide your massive member is just too much for his tiny form. Endeavoring to make use of your little plaything, you press his entire body against your throbbing cock, stroking its entire length with his small, warm form. Soon the sprite has his arms wrapped around you, grinding his body against you as you use him to stroke yourself off. Through your combined efforts, your balls are soon tensing up in anticipation as you quickly approach climax, blowing your [Cum Load Size of Player] load into the air. As your cum showers down atop the sprite, you finally release him, basking in your afterglow as he scampers off while doing his best to shake off your sticky mess.";
+	say "     Deciding to make use of the beaten sprite, you remove your gear and prepare for some fun. After sizing the little creature up, you decide your massive member is just too much for [if FireSpritemode is 0]her tiny form. Endeavoring to make use of your little plaything, you press her entire body against your throbbing cock, stroking its entire length with her small, warm form. Soon the sprite has her arms wrapped around you, grinding her body against you as you use her to stroke yourself off. Through your combined efforts, your balls are soon tensing up in anticipation as you quickly approach climax, blowing your [Cum Load Size of Player] load into the air. As your cum showers down atop the sprite, you finally release her, basking in your afterglow as she scampers off while doing her[else]his tiny form. Endeavoring to make use of your little plaything, you press his entire body against your throbbing cock, stroking its entire length with his small, warm form. Soon the sprite has his arms wrapped around you, grinding his body against you as you use him to stroke yourself off. Through your combined efforts, your balls are soon tensing up in anticipation as you quickly approach climax, blowing your [Cum Load Size of Player] load into the air. As your cum showers down atop the sprite, you finally release him, basking in your afterglow as he scampers off while doing his[end if] best to shake off your sticky mess.";
+	CreatureSexAftermath "Player" receives "Stroking" from "Fire Sprite";
 
 to say RideFireSpriteCock:
 	say "     Deciding to make use of the beaten sprite, you remove your gear and take a seat out on the ground. Pulling the little sprite towards your groin, you position his already firm prick in front of your hungry pussy and wrap your legs around his [if scalevalue of Player > 1]small [end if]form, pulling his entire body against your crotch as you press his length into your slick slit. Your body fills with warmth as you envelop his orange flesh, and soon you begin rocking his entire body against your groin as you do your best to ride his [if scalevalue of Player > 1]smaller [end if]form to climax, your spasming cunt gripping his warm member as his own climax sends powerful spurts of his warm seed deep within you. Releasing the sprite, you relax on the ground in the afterglow of your climax as he pulls out with a wet slurp, allowing some of his glowing orange semen and your own femcum to drool from your pussy as he scampers off.";
 	CreatureSexAftermath "Player" receives "PussyFuck" from "Fire Sprite";
 
 to say FireSpriteCunnilingus:
-	if FireSpritemode is 0:
-		say "     Deciding to make use of the beaten sprite, you remove your gear and stretch out on the ground. You press the little sprite's face to your groin, pressing her lips to your own damp netherlips. Having little other option, the sprite begins working her tongue into your moist passage, reaching deeper and deeper as you press harder against the back of her head, partially forcing her face inside you. With the top of her nose rubbing against your clit, you begin pistoning your hips against the sprite's head, shaking her small body roughly as you ride her face to a powerful orgasm. Releasing the sprite's head, you lay back on the ground to bask in the afterglow of your climax, allowing her to pull away from your cunt with a wet slurp and scamper off.";
-		CreatureSexAftermath "Fire Sprite" receives "OralPussy" from "Player";
-	else:
-		say "     Deciding to make use of the beaten sprite, you remove your gear and stretch out on the ground. You press the little sprite's face to your groin, pressing his lips to your own damp netherlips. Having little other option, the sprite begins working his tongue into your moist passage, reaching deeper and deeper as you press harder against the back of his head, partially forcing his face inside you. With the top of his nose rubbing against your clit, you begin pistoning your hips against the sprite's head, shaking his small body roughly as you ride his face to a powerful orgasm. Releasing the sprite's head, you lay back on the ground to bask in the afterglow of your climax, allowing him to pull away from your cunt with a wet slurp and scamper off.";
-		CreatureSexAftermath "Fire Sprite" receives "OralPussy" from "Player";
+	say "     Deciding to make use of the beaten sprite, you remove your gear and stretch out on the ground. You press the little sprite's face to your groin, pressing [if FireSpritemode is 0]her lips to your own damp netherlips. Having little other option, the sprite begins working her tongue into your moist passage, reaching deeper and deeper as you press harder against the back of her head, partially forcing her face inside you. With the top of her nose rubbing against your clit, you begin pistoning your hips against the sprite's head, shaking her small body roughly as you ride her face to a powerful orgasm. Releasing the sprite's head, you lay back on the ground to bask in the afterglow of your climax, allowing her[else]his lips to your own damp netherlips. Having little other option, the sprite begins working his tongue into your moist passage, reaching deeper and deeper as you press harder against the back of his head, partially forcing his face inside you. With the top of his nose rubbing against your clit, you begin pistoning your hips against the sprite's head, shaking his small body roughly as you ride his face to a powerful orgasm. Releasing the sprite's head, you lay back on the ground to bask in the afterglow of your climax, allowing him[end if] to pull away from your cunt with a wet slurp and scamper off.";
+	CreatureSexAftermath "Fire Sprite" receives "OralPussy" from "Player";
 
 to say FireSpriteBlowJob:
-	if FireSpritemode is 0:
-		say "     Deciding to make use of the beaten sprite, you remove your gear and stretch out on the ground. You press the little sprite's face to your groin, pressing her lips to your member. Having little other option, the sprite parts her lips, taking your [cock size desc of Player] [Cock of Player] cock into her warm, wet mouth. Gripping the back of her head, you begin humping the small creature's face, spurts of your pre running down her throat as you pound into her mouth. Soon the sprite is eagerly sucking and licking at your cock, further pushing you towards a powerful orgasm. You fill the tiny sprite's mouth with your [Cum Load Size of Player] load, most of it forced down her throat into her belly. Sated, you release the sprite's head, allowing her to scamper off into the city as you recover.";
-		CreatureSexAftermath "Fire Sprite" receives "OralCock" from "Player";
-	else:
-		say "     Deciding to make use of the beaten sprite, you remove your gear and stretch out on the ground. You press the little sprite's face to your groin, pressing his lips to your member. Having little other option, the sprite parts his lips, taking your [cock size desc of Player] [Cock of Player] cock into his warm, wet mouth. Gripping the back of his head, you begin humping the small creature's face, spurts of your pre running down his throat as you pound into his mouth. Soon the sprite is eagerly sucking and licking at your cock, further pushing you towards a powerful orgasm. You fill the tiny sprite's mouth with your [Cum Load Size of Player] load, most of it forced down his throat into his belly. Sated, you release the sprite's head, allowing him to scamper off into the city as you recover.";
-		CreatureSexAftermath "Fire Sprite" receives "OralCock" from "Player";
+	say "     Deciding to make use of the beaten sprite, you remove your gear and stretch out on the ground. You press the little sprite's face to your groin, pressing [if FireSpritemode is 0]her lips to your member. Having little other option, the sprite parts her lips, taking your [cock size desc of Player] [Cock of Player] cock into her warm, wet mouth. Gripping the back of her head, you begin humping the small creature's face, spurts of your pre running down her throat as you pound into her mouth. Soon the sprite is eagerly sucking and licking at your cock, further pushing you towards a powerful orgasm. You fill the tiny sprite's mouth with your [Cum Load Size of Player] load, most of it forced down her throat into her belly. Sated, you release the sprite's head, allowing her[else]his lips to your member. Having little other option, the sprite parts his lips, taking your [cock size desc of Player] [Cock of Player] cock into his warm, wet mouth. Gripping the back of his head, you begin humping the small creature's face, spurts of your pre running down his throat as you pound into his mouth. Soon the sprite is eagerly sucking and licking at your cock, further pushing you towards a powerful orgasm. You fill the tiny sprite's mouth with your [Cum Load Size of Player] load, most of it forced down his throat into his belly. Sated, you release the sprite's head, allowing him[end if] to scamper off into the city as you recover.";
+	CreatureSexAftermath "Fire Sprite" receives "OralCock" from "Player";
 
 to say FireSpriteInsertion:
-	if FireSpritemode is 0:
-		say "     Deciding to make use of the beaten sprite, you remove your gear and stretch out on the ground. After sizing the little creature up, you decide she is just the right size for some... special fun. Her eyes go wide as you push her head towards your gaping pussy, pressing her face against your wanton folds. Pinning the squirming sprite's arms against her waist, you grab hold of her body and press her deeper into your drooling cunt. With an audible slurp, the sprite's entire head slips inside you, sending waves of pleasure through you as you climax powerfully, soaking your little plaything's body in your feminine juices. With the afterglow of your first climax still rolling through you, you begin working the warm sprite deeper into your cunt, fresh waves of pleasure rolling through you with every inch of the little creature that disappears inside you. When you feel the squirming sprite's head pressing against your cervix, you finally stop pushing and begin pulling the creature's tiny form back out, working her back and forth inside your quivering tunnel like a living dildo. After using the poor creature to pleasure yourself to several more powerful climaxes, you finally pull her out with a long, wet slurp. Laying back on the ground to recover from your multiple orgasms, you watch the little gal stumble away, coughing and sputtering up your feminine juices as she goes.";
-		CreatureSexAftermath "Player" receives "PussyDildoFuck" from "Fire Sprite";
-	else:
-		say "     Deciding to make use of the beaten sprite, you remove your gear and stretch out on the ground. After sizing the little creature up, you decide he is just the right size for some... special fun. His eyes go wide as you push his head towards your gaping pussy, pressing his face against your wanton folds. Pinning the squirming sprite's arms against his waist, you grab hold of his body and press his deeper into your drooling cunt. With an audible slurp, the sprite's entire head slips inside you, sending waves of pleasure through you as you climax powerfully, soaking your little plaything's body in your feminine juices. With the afterglow of your first climax still rolling through you, you begin working the warm sprite deeper into your cunt, fresh waves of pleasure rolling through you with every inch of the little creature that disappears inside you. When you feel the squirming sprite's head pressing against your cervix, you finally stop pushing and begin pulling the creature's tiny form back out, working him back and forth inside your quivering tunnel like a living dildo. After using the poor creature to pleasure yourself to several more powerful climaxes, you finally pull him out with a long, wet slurp. Laying back on the ground to recover from your multiple orgasms, you watch the little guy stumble away, coughing and sputtering up your feminine juices as he goes.";
-		CreatureSexAftermath "Player" receives "PussyDildoFuck" from "Fire Sprite";
+	say "     Deciding to make use of the beaten sprite, you remove your gear and stretch out on the ground. After sizing the little creature up, you decide [if FireSpritemode is 0]she is just the right size for some... special fun. Her eyes go wide as you push her head towards your gaping pussy, pressing her face against your wanton folds. Pinning the squirming sprite's arms against her waist, you grab hold of her body and press her deeper into your drooling cunt. With an audible slurp, the sprite's entire head slips inside you, sending waves of pleasure through you as you climax powerfully, soaking your little plaything's body in your feminine juices. With the afterglow of your first climax still rolling through you, you begin working the warm sprite deeper into your cunt, fresh waves of pleasure rolling through you with every inch of the little creature that disappears inside you. When you feel the squirming sprite's head pressing against your cervix, you finally stop pushing and begin pulling the creature's tiny form back out, working her back and forth inside your quivering tunnel like a living dildo. After using the poor creature to pleasure yourself to several more powerful climaxes, you finally pull her out with a long, wet slurp. Laying back on the ground to recover from your multiple orgasms, you watch the little gal stumble away, coughing and sputtering up your feminine juices as she[else]he is just the right size for some... special fun. His eyes go wide as you push his head towards your gaping pussy, pressing his face against your wanton folds. Pinning the squirming sprite's arms against his waist, you grab hold of his body and press him deeper into your drooling cunt. With an audible slurp, the sprite's entire head slips inside you, sending waves of pleasure through you as you climax powerfully, soaking your little plaything's body in your feminine juices. With the afterglow of your first climax still rolling through you, you begin working the warm sprite deeper into your cunt, fresh waves of pleasure rolling through you with every inch of the little creature that disappears inside you. When you feel the squirming sprite's head pressing against your cervix, you finally stop pushing and begin pulling the creature's tiny form back out, working him back and forth inside your quivering tunnel like a living dildo. After using the poor creature to pleasure yourself to several more powerful climaxes, you finally pull him out with a long, wet slurp. Laying back on the ground to recover from your multiple orgasms, you watch the little guy stumble away, coughing and sputtering up your feminine juices as he[end if] goes.";
+	CreatureSexAftermath "Player" receives "PussyDildoFuck" from "Fire Sprite";
 
 to say FireSpritedesc:
 	say "     As you're working your way through the difficult terrain of the ruined capital, [one of]you hear a maniacal giggle behind you. You turn slowly[or]a fireball zips past you, narrowly missing your head. You spin around quickly[or]you turn a corner[at random] and find yourself face to face with a small elfin creature.";
 	if FireSpritemode is 0: [female sprite]
 		say "     The sprite before you is not much more than two feet tall, with bright orange flesh and slim feminine features. While decidedly small compared to many of the creatures you've seen around, her perky C cup breasts seem quite large compared to her lithe body, and her long orange and [one of]red[or]white[at random] hair seems to shimmer as she moves, flickering like a fire.";
 		say "     Small wisps of flame occasionally flare from her exposed flesh, increasing in frequency as they seem to run down her arm, pooling in her palm as a ball of flame, which she raises threateningly as she approaches you with a maniacal grin.";
-	if FireSpritemode is 1: [male sprite]
+	else: [male sprite]
 		say "     The sprite before you is not much more than two feet tall, with bright orange flesh and slim features. While his exposed six inch cock is decidedly small compared to many of the creatures around, it seems quite large compared to his lithe form. His short orange and [one of]red[or]white[at random] hair seems to shimmer as he moves, flickering like a fire.";
 		say "     Small wisps of flame occasionally flare from his exposed flesh, increasing in frequency as they seem to run down his arm, pooling in his palm as a ball of flame, which he raises threateningly as he approaches you with a maniacal grin.";
+
+Section 2 - Creature Insertion
 
 Table of CombatPrep (continued)
 name(text)	PrepFunction(text)
@@ -277,39 +166,31 @@ to say PrepCombat_Fire Sprite:
 		now fightoutcome is 19;
 		now combat abort is 1;
 		now FireSpritemode is 2;
-	else if MaleList is banned:
-		now FireSpritemode is 0;
-	else if FemaleList is banned:
-		now FireSpritemode is 1;
-	else if MaleList is warded and FemaleList is warded:
-		now FireSpritemode is a random number between 0 and 1;
-	else if ishunting is true:	[hunting results in 2/3rds chance to get unwarded option]
-		if MaleList is warded and a random chance of 1 in 3 succeeds:
-			now FireSpritemode is 0;
-		else if FemaleList is warded and a random chance of 1 in 3 succeeds:
-			now FireSpritemode is 1;
-	else if ishunting is false:
-		if MaleList is warded:
-			now FireSpritemode is 0;
-		else if FemaleList is warded:
-			now FireSpritemode is 1;
-	if FireSpritemode is 0: [female sprite]
-		setmongender 4; [creature is female]
-	else if FireSpritemode is 1: [male sprite]
-		setmongender 3; [creature is male]
-		project the figure of FireSpriteMale_icon;
-	if Player is MalePreferred:
-		now sex entry is "Male";
-	else if Player is FemalePreferred:
-		now sex entry is "Female";
-	else if Player is HermPreferred:
-		now sex entry is "Both";
-	else if FireSpritemode is 0:
-		now sex entry is "Male";
 	else:
-		now sex entry is "Female";
-
-Section 2 - Creature Insertion
+		if MaleList is banned:
+			now FireSpritemode is 0;
+		else if FemaleList is banned:
+			now FireSpritemode is 1;
+		else if MaleList is not warded or FemaleList is not warded:	[hunting results in 2/3rds chance to get unwarded option]
+			if MaleList is warded and (ishunting is false or a random chance of 1 in 3 succeeds):
+				now FireSpritemode is 0;
+			else if FemaleList is warded and (ishunting is false or a random chance of 1 in 3 succeeds):
+				now FireSpritemode is 1;
+		if Player is MalePreferred:
+			now sex entry is "Male";
+		else if Player is FemalePreferred:
+			now sex entry is "Female";
+		else if Player is HermPreferred:
+			now sex entry is "Both";
+		else if FireSpritemode is 0:
+			now sex entry is "Male";
+		else:
+			now sex entry is "Female";
+		if FireSpritemode is 0: [female sprite]
+			setmongender 4; [creature is female]
+		else: [male sprite]
+			setmongender 3; [creature is male]
+			project the figure of FireSpriteMale_icon;
 
 Table of Random Critters (continued)
 NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
@@ -334,7 +215,7 @@ When Play begins:
 	now desc entry is "[FireSpritedesc]"; [ Description of the creature when you encounter it. ]
 	now face entry is "mostly human with slim features and pointed elven ears. You have long locks of orange and red hair that seem to shimmer and flicker like fire"; [ Face description, format as "Your face is [Face of Player]." ]
 	now body entry is "that of a small, energetic sprite"; [ Body description, format as "Your body is [Body of Player]." ]
-	now skin entry is "warm, smooth orange flesh. Occasionally small wisps of flame flare from your exposed"; [ Skin. Format as "Looking at yourself, your body is covered in [Skin of Player] skin." ]
+	now skin entry is "[if looknow is true]warm, smooth orange flesh. Occasionally small wisps of flame flare from your exposed[else]warm, smooth orange[end if]"; [ Skin. Format as "Looking at yourself, your body is covered in [Skin of Player] skin." ]
 	now tail entry is ""; [ Ass/Tail. Write as a full sentence (with period) or leave blank for none. ]
 	now cock entry is "glowing orange human-like"; [ Cock. Format as "You have a 'size' [Cock of Player] cock." ]
 	now face change entry is "slim elfin features overtake it, framed by long orange and red hair"; [ Face TF text. Format as "Your face tingles as [face change entry]." ]
@@ -482,8 +363,6 @@ When Play begins:
 	[Clit Size Adjective is generated by a function and can be used in scenes: very small/small/average/large/very large]
 ]
 
-
-
 Section 3 - Alt Combat
 
 Table of Critter Combat (continued)
@@ -491,20 +370,17 @@ name	combat (rule)	preattack (rule)	postattack (rule)	altattack1 (rule)	alt1chan
 "FireSprite"	retaliation rule	--	--	FireBallBarrage rule	15	--	--	--	--	--
 
 this is the FireBallBarrage rule:		[Multiple low damage hits]
-	let N be 0;
+	let N be false;
 	let M be 1;
-	let P be 0;
+	let P be false;
 	say "The sprite winds up, preparing to launch a barrage of fireballs!";
-	while N is 0:
+	while N is false:
 		choose row MonsterID from the Table of Random Critters;
 		let dam be ( wdam entry * a random number between ( 45 - ( peppereyes * 4 ) ) and 85 ) / 100;
 		if HardMode is true and a random chance of 1 in ( 10 + peppereyes ) succeeds:
 			now dam is (dam * 150) divided by 100;
-			say "The enemy finds a particular vulnerability in your defense - [bold type]Critical Hit![roman type][line break]";
-		if P is 0:
-			say "The first fireball strikes you [one of]in the shoulder[or]squarely in the chest[or]in the leg[at random], causing a searing pain as you try and shake the embers off! You take [special-style-2][dam][roman type] damage!";
-		else if P is 1:
-			say "The sprite winds up and launches another fireball! You take [special-style-2][dam][roman type] damage!";
+			say "The enemy finds a particular vulnerability in your defense - Critical Hit!";
+		say "The [if P is false]first fireball strikes you [one of]in the shoulder[or]squarely in the chest[or]in the leg[at random], causing a searing pain as you try and shake the embers off[else]sprite winds up and launches another fireball[end if]! You take [special-style-2][dam][roman type] damage!";
 		now damagein is dam;
 		say "[normalabsorbancy]";
 		if absorb > dam:
@@ -513,16 +389,14 @@ this is the FireBallBarrage rule:		[Multiple low damage hits]
 			say "You prevent [special-style-1][absorb][roman type] damage!";
 		decrease HP of Player by dam;
 		increase HP of Player by absorb;
-		if M is 5:
-			now N is 1;
-		else if a random chance of 1 in M succeeds:
+		if M < 5 and a random chance of 1 in M succeeds:
 			increase M by 1;
 		else:
-			now N is 1;
-		now P is 1;
+			now N is true;
+		now P is true;
 		follow the player injury rule;
 		say "You are [descr].";
-		if N is 0, AttemptToWait;
+		if N is false, AttemptToWait;
 
 Section 4 - Glowing Ember
 
@@ -530,17 +404,23 @@ Table of Game Objects (continued)
 name	desc	weight	object
 "glowing ember"	"A small glowing ember, which seems to stay warm regardless of how you store it."	0	glowing ember
 
-glowing ember is a grab object. [glowing ember is infectious. Strain of glowing ember is "Fire Sprite".]
-
+glowing ember is a grab object.
 Usedesc of glowing ember is "[glowingemberuse]".
+Scent of glowing ember is "The small ember smells faintly smoky.".
 
 to say glowingemberuse:
+	setmonster "Fire Sprite";
+	choose row MonsterID from Table of Random Critters;
+	if Player is MalePreferred:
+		now sex entry is "Male";
+	else if Player is HermPreferred:
+		now sex entry is "Both";
+	else:
+		now sex entry is "Female";
 	say "     Rolling the small, warm ember between your fingers you begin to find it difficult to focus on anything but its warm light. You hear the crackling of flame in the distance as you slip further and further out of focus, your vision filling with nothing but the pleasant light and flickering of flames...";
-	AttemptToWait;
+	WaitLineBreak;
 	say "     You come to your senses some time later. Glancing around, you find the small ember missing. It is hard to shake the strange desire to light something on fire.";
-	infect "Fire Sprite";
-
-Scent of glowing ember is "The small ember smells faintly smoky.".
+	infect;
 
 Section 5 - Endings
 
@@ -555,7 +435,7 @@ This is the Fire Sprite Infection rule:
 			say "     As your fire sprite infection spreads through your mind like wildfire, you soon desire little more than to share the gift of the flame inside you with the world, delighting in the havoc and destruction wrought by the beautiful cleansing flames.";
 			if Player is male and Player is not sterile and (Player is femaleinterested or Player is not maleinterested):
 				say "     Occasionally your fiery dreamscape is broken by another like you, a female sprite who you share your flame with, filling her body with the warmth of life to further aid in the spread of your mischief.";
-			else if Player is female or (Player is maleinterested and Player is not femaleinterested):
+			else if Player is female or "MPreg" is listed in feats of Player or (Player is maleinterested and Player is not femaleinterested):
 				say "     Eventually you happen upon an excited male sprite who is diligently working to set a large structure aflame. After a short time the structure is ablaze around you, and he is atop you, filling your needy body with his hot seed, his thrusts imbued with a burning passion that easily matches the inferno around you.";
 		else:
 			say "     After being evacuated from the city by military forces, you have a hard time finding a place for yourself in the outside world; your small form and affinity for fire both prove to be challenges to overcome. Eventually, however, you find yourself falling in with a small group of other infected citizens, working as mercs for the various factions that slowly begin to pop up in the days to come, engaging in everything from daring rescues to simple exterminations. While you don't provide the team much in the way of raw power, your small, agile body and resistance to extreme heat prove to be useful on more than one occasion, and a well-placed fire is often just as effective in chasing off a feral as an unnecessary beating.";

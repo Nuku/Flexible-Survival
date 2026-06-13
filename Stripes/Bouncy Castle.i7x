@@ -50,8 +50,7 @@ when play begins:
 
 to say ResolveEvent Snared Vixen:
 	say "     As you're traveling along the beach, you can hear some giggling in the distance. As you crest the next sandy rise, you can see several bright pink dolphin girls playing with a vixen they've found. She's struggling a little, but her resistance becomes less and less as the playful inflatables tease her body while taking off what few scraps of clothes she has. As they're several hundred yards away, you'd not be able to get there in time to interfere if you wanted to. It's hard to make out all the details at this distance.";
-	say "     [bold type]Are you interested in watching or shall you just continue on your way?[roman type][line break]";
-	LineBreak;
+	say "[line break]     [bold type]Are you interested in watching or shall you just continue on your way?[roman type][line break]";
 	say "     ([link]Y[as]y[end link]) - Watch.";
 	say "     ([link]N[as]n[end link]) - Continue on your way.";
 	if Player consents: [Starts a questline to access the Bouncy Castle and save the vixen]
@@ -73,7 +72,6 @@ to say ResolveEvent Snared Vixen:
 		say "     Deciding that it's not of interest to you, you turn away and head back the way you came.";
 		now Resolution of Snared Vixen is 99; [Ignored Vixen]
 	now Snared Vixen is resolved;
-
 
 Section 2 - traveling to the Bouncy Castle
 
@@ -97,8 +95,7 @@ instead of navigating Bouncy Castle:
 		stop the action;
 	if HP of Bubble is 100 and bclatearrival is 0: [The vixen is lost while not at the castle. Updated to allow the player to return even after Bubble's demise]
 		say "     By this point, you doubt that the captured vixen can be saved, though it might be worth exploring the bouncy castle to see if you can scavenge anything of value.";
-		say "     [bold type]Do you still wish to visit the castle?[roman type][line break]";
-		LineBreak;
+		say "[line break]     [bold type]Do you still wish to visit the castle?[roman type][line break]";
 		say "     ([link]Y[as]y[end link]) - Nothing ventured, nothing gained. You may as well check it out to see if there's anything worth pilfering.";
 		say "     ([link]N[as]n[end link]) - No thanks. You'd rather not risk your life for this.";
 		if Player consents:
@@ -113,7 +110,7 @@ instead of navigating Bouncy Castle:
 to say bcnavigate:
 	if location of Player is not Beach Plaza and location of Player is not Public Beach: [Skips this if the player is already in Beach Plaza or Public Beach]
 		say "     You begin by making your way back to the beach";
-		let the bonus be (( Perception of Player minus 10 ) divided by 2);
+		let the bonus be ( Perception of Player minus 10 ) divided by 2;
 		now battleground is "Outside";
 		if a random number from 1 to 20 < 10 minus bonus:
 			say ", encountering an enemy on the way there.";
@@ -135,7 +132,7 @@ to say bcnavigate:
 			swimmingfight; [details in Hellerhound\Underwater Zone.i7x]
 		now rowing is false;
 		say "     Eventually, you make it out to the buoyant castle, rowing up close to it. Your arms are sore from all the rowing, but you have managed to arrive at your destination. Worried your boat might scrape a hole in its rubbery hide, you moor your boat to one of the tethers tying the castle between the rocks. You swim the short distance to the floating castle and make your way inside.";
-		let dam be 16 - ( strength of Player / 2 ) - (stamina of Player / 2 );
+		let dam be 16 - ( strength of Player / 2 ) - ( stamina of Player / 2 );
 		if dam < 0, now dam is 0;
 		decrease HP of Player by dam;
 		move player to Bouncy Castle;
@@ -144,12 +141,11 @@ to say bcnavigate:
 		say "     Returning to the section of beach near the floating castle, you swim out into the waters. While your aquatic affinity makes the swim easier, you still struggle against the turbulent waters in this area. As you're making your way through the rocky outcroppings on your way to the floating castle, you watch warily for any signs of the creatures infesting these waters.";
 		swimmingfight; [details in Hellerhound\Underwater Zone.i7x]
 		say "     Eventually, you make it to the buoyant castle, managing to swim to one of the lines that is keeping it tethered between the rocky outcroppings. You follow that line up to the castle and climb inside, quite tired, but having reached your destination.";
-		let dam be 20 - ( strength of Player / 2 ) - (stamina of Player / 2 );
+		let dam be 20 - ( strength of Player / 2 ) - ( stamina of Player / 2 );
 		if dam < 0, now dam is 0;
 		decrease HP of Player by dam;
 		move player to Bouncy Castle;
 		follow the turnpass rule;
-
 
 Section 3 - Bouncy Castle Layout
 
@@ -284,7 +280,7 @@ Table of GameRoomIDs (continued)
 Object	Name
 BouncyCastleExit	"BouncyCastleExit"
 
-BouncyCastleExit is a room. "Leaving the bouncy castle."
+BouncyCastleExit is a room. "     Leaving the bouncy castle.[line break]".
 BouncyCastleExit is north of Bouncy Castle.
 
 Table of GameRoomIDs (continued)
@@ -294,38 +290,37 @@ BouncyCastleSlideExit	"BouncyCastleSlideExit"
 BouncyCastleSlideExit is a room.
 BouncyCastleSlideExit is east of Eastern Parapets. BouncyCastleSlideExit is west of Western Parapets.
 
-the scent of Bouncy Castle is "This place smells of rubber and the ocean.".
+the scent of Bouncy Castle is "     This place smells of rubber and the ocean.".
 
-the scent of Fencing Room is "This place smells of rubber and the ocean.".
+the scent of Fencing Room is "     This place smells of rubber and the ocean.".
 
-the scent of Bouncing Play Room is "This place smells of rubber and the ocean, though there's a lingering scent of arousal and sex as well.".
+the scent of Bouncing Play Room is "     This place smells of rubber and the ocean, though there's a lingering scent of arousal and sex as well.".
 
-the scent of Ball Pit Room is "This place smells of rubber and the ocean.".
+the scent of Ball Pit Room is "     This place smells of rubber and the ocean.".
 
-the scent of Toy Room is "This place smells of rubber and the ocean, though there's a lingering scent of arousal and sex as well.".
+the scent of Toy Room is "     This place smells of rubber and the ocean, though there's a lingering scent of arousal and sex as well.".
 
-the scent of Great Hall is "This place smells of rubber and the ocean, though there's a lingering scent of arousal and sex as well.".
+the scent of Great Hall is "     This place smells of rubber and the ocean, though there's a lingering scent of arousal and sex as well.".
 
-the scent of King's Chambers is "This place smells of rubber and the ocean.".
+the scent of King's Chambers is "     This place smells of rubber and the ocean.".
 
-the scent of Punching Pillars is "This place smells of rubber and the ocean, though there's a lingering scent of arousal and sex as well.".
+the scent of Punching Pillars is "     This place smells of rubber and the ocean, though there's a lingering scent of arousal and sex as well.".
 
-the scent of Knight's Chambers is "This place smells of rubber and the ocean.".
+the scent of Knight's Chambers is "     This place smells of rubber and the ocean.".
 
-the scent of Lower Tower is "This place smells of rubber and the ocean.".
+the scent of Lower Tower is "     This place smells of rubber and the ocean.".
 
-the scent of Upper Tower is "This place smells of rubber and the ocean.".
+the scent of Upper Tower is "     This place smells of rubber and the ocean.".
 
-the scent of Tower Turret is "This place smells of rubber and the ocean.".
+the scent of Tower Turret is "     This place smells of rubber and the ocean.".
 
-the scent of Western Parapets is "This place smells of rubber and the ocean.".
+the scent of Western Parapets is "     This place smells of rubber and the ocean.".
 
-the scent of Eastern Parapets is "This place smells of rubber and the ocean.".
+the scent of Eastern Parapets is "     This place smells of rubber and the ocean.".
 
-the scent of Upper Hall is "This place smells of rubber and the ocean.".
+the scent of Upper Hall is "     This place smells of rubber and the ocean.".
 
-the scent of Castle Throne Room is "This place smells of rubber and the ocean.".
-
+the scent of Castle Throne Room is "     This place smells of rubber and the ocean.".
 
 Section 4 - Inside the Bouncy Castle
 
@@ -349,7 +344,6 @@ instead of going north from Bouncy Castle:
 	move player to Public Beach;
 	follow the turnpass rule;
 
-
 Chapter 2 - Fencing Room
 
 to say bcfencingroom:
@@ -364,8 +358,9 @@ to say bcfencingroom:
 			say "     Shall you: Grab one of the swords and [link]fight back (1)[as]1[end link] or make a break for the [if bcseenplayroom is true]play room[else]doorway[end if] to the [link]south (2)[as]2[end link] or back to the entrance to the [link]west (3)[as]3[end link]?";
 			now calcnumber is 0;
 			while calcnumber < 1 or calcnumber > 3:
-				say "Choose 1-3> ";
+				say "Choose 1-3> [run paragraph on]";
 				get a number;
+			LineBreak;
 			if calcnumber is 1:
 				say "     You snatch at one of the swords and easily catch it by the hilt, turning and swinging it towards with others with a loud 'Aha!' The sword parries a few strikes coming at you, but others strike you from behind. Laughing, you hop to turn around and face those, fencing with them. Soon you're hopping around the room and trying to weave around the pillars to swordfight with the boffer weapons as you laugh heartily. Having fun playing with the animated weapons, you lose track of time until you are eventually left exhausted and drop to the floor, panting to regain your breath as you giggle merrily. The swords, also appearing to be tired or content with their playtime, settle back down onto the floor.";
 				increase morale of Player by 2;
@@ -373,14 +368,14 @@ to say bcfencingroom:
 				LibidoLoss 5;
 				now bcswordplay is true;
 				follow the turnpass rule;
-			else if calcnumber is 2 or calcnumber is 3:
+			else:
 				let shieldbonus be 0;
 				let bonus be ( dexterity of Player - 10 ) / 2;
 				repeat with x running through equipped equipment:
 					if ac of x > 0 and placement of x is "shield":
 						let shieldbonus be 2;
 				let dice be a random number from 1 to 20;
-				say "     You roll 1d20([dice])+[bonus]+[shieldbonus]: [dice + bonus + shieldbonus] vs 16: ";
+				say "You roll 1d20([dice])[if bonus + shieldbonus >= 0]+[end if][bonus + shieldbonus] = [special-style-1][dice + bonus + shieldbonus][roman type] vs [special-style-2]16[roman type] (Dexterity Check):[line break]";
 				if bonus + dice + shieldbonus > 15:
 					say "     You move as best you can, weaving between the boffer swords as they swing at you. Some blows hit, but you manage to stay on your feet as they pound onto you[if shieldbonus > 0] and your shield[end if] and make your escape, diving through into the next room.";
 					if calcnumber is 2:
@@ -397,7 +392,6 @@ to say bcfencingroom:
 						move player to Bouncy Castle;
 	else:
 		say "the foam swords, still and inactive, at least for now. You have two directions you can go from here, either back to the entrance by going [link]west[end link] or heading [link]south[end link] to the next room. A preliminary peek in there shows a larger room there with only a few scattered items littering the floor.";
-
 
 Chapter 3 - Bouncing Play Room
 
@@ -418,17 +412,17 @@ to say bcplayroom:
 			let weaponbonus be weapon damage of Player / 3;
 			let bonus be ( dexterity of Player - 10 ) / 2;
 			let dice be a random number from 1 to 20;
-			say "     You roll 1d20([dice])+[bonus]+[weaponbonus]: [dice + bonus + weaponbonus] vs 14: ";
+			say "You roll 1d20([dice])[if bonus + weaponbonus >= 0]+[end if][bonus + weaponbonus] = [special-style-1][dice + bonus + weaponbonus][roman type] vs [special-style-2]14[roman type] (Dexterity Check):[line break]";
 			if bonus + dice + weaponbonus > 13:
-				say "You manage to stay standing and take a few swings at the yellow seal, popping one of its seams and sending it flopping back into the corner as it deflates with a sad whine. You can see the tear already starting to mend, though you don't expect it'll give you trouble for a little while.";
+				say "     You manage to stay standing and take a few swings at the yellow seal, popping one of its seams and sending it flopping back into the corner as it deflates with a sad whine. You can see the tear already starting to mend, though you don't expect it'll give you trouble for a little while.";
 				now lastsealfight is turns;
 			else:
 				now lastsealfight is turns;
-				say "You try to knock the seal toy away with a few blows, but you are too unsteady on your feet and the small seat squirms between your legs, tripping you onto the soft floor. Even as you're still swaying atop the yielding floor, the seal hops atop you, pressing his hindquarters to your face. You fumble to push him away, but are treated to a mouthful of his inflatable cock. As he humps your face, you find yourself submitting to just let the lonely creature have his fun. It starts to dribble some latex-like precum that becomes increasingly enjoyable and makes you all the more aroused and playful.";
+				say "     You try to knock the seal toy away with a few blows, but you are too unsteady on your feet and the small seat squirms between your legs, tripping you onto the soft floor. Even as you're still swaying atop the yielding floor, the seal hops atop you, pressing his hindquarters to your face. You fumble to push him away, but are treated to a mouthful of his inflatable cock. As he humps your face, you find yourself submitting to just let the lonely creature have his fun. It starts to dribble some latex-like precum that becomes increasingly enjoyable and makes you all the more aroused and playful.";
 				if Player is female:
 					let baby be 0;
 					if child is born or gestation of Child is not 0, now baby is 1;
-					say "     After humping your face for a while, the toy shuffles around and starts trying to nose your clothes and gear off as he nuzzles at your crotch. Knowing what he's after and too overcome to resist it, you strip down and offer to let the cute seat ride you for a little while. He hops up behind you and grips you lightly with his inflated flippers as his slick shaft slides into your juicy pussy. You moan softly and push back, letting the little guy thrust into you until he cums with a happy squeak. Spent from his orgasm, he starts to deflate somewhat and waddles back to the corner to rest and reinflate.[impregchance]";
+					say "     After humping your face for a while, the toy shuffles around and starts trying to nose your clothes and gear off as he nuzzles at your crotch. Knowing what he's after and too overcome to resist it, you strip down and offer to let the cute seat ride you for a little while. He hops up behind you and grips you lightly with his inflated flippers as his slick shaft slides into your juicy pussy. You moan softly and push back, letting the little guy thrust into you until he cums with a happy squeak. Spent from his orgasm, he starts to deflate somewhat and waddles back to the corner to rest and reinflate.[fimpregchance]";
 					say "     You stretch out on the soft floor and decide to rest for a bit, feeling happy and buoyed by the experience, losing track for a while of your intended mission.";
 					if baby is 0 and gestation of Child is not 0:
 						now FaceName of Child is "Seal Toy";
@@ -457,7 +451,6 @@ to say bcplayroom:
 					follow the turnpass rule;
 	else:
 		say "     Taking a quick glance to the [Bold Type]northwest[roman type] corner, you can see that the yellow seal is still partially deflated and isn't ready to try to play again, giving you a chance to continue undistracted. A quick glance shows two kid-sized doorways leading out of here, one to the [Bold Type]west[roman type] and other to the [Bold Type]north[roman type]. A quick glance through the hanging flaps between rooms shows the [link]north[end link] leads to the smaller room you saw earlier with the foam swords. The door to the [link]west[end link] leads to a ball pit room as big as this play room. You also notice a mesh climbing ladder at the back corner of the ball pit which heads up to the upper level.";
-
 
 Chapter 4 - Ball Pit Room
 
@@ -512,11 +505,10 @@ to say bctoyroom:
 			let bonus be ( strength of Player - 10 ) / 2;
 			if BodyName of Player is "Anime Babe", decrease bonus by 5;
 			let dice be a random number from 1 to 20;
-			say "     You roll 1d20([dice])+[bonus]: [dice + bonus] vs 17: ";
+			say "You roll 1d20([dice])[if bonus >= 0]+[end if][bonus] = [special-style-1][dice + bonus][roman type] vs [special-style-2]17[roman type] (Strength Check):[line break]";
 			if bonus + dice > 16:
 				say "     The octopus inflatable wraps a few tentacles around you, but you manage to push them off and kick them away for the moment.";
-				say "     [bold type]You have an opportunity to get away either by their heading further into the castle by heading [Bold Type]south[roman type] or going to the [Bold Type]east[roman type] to return to the castle entrance.[roman type][line break]";
-				LineBreak;
+				say "[line break]     [bold type]You have an opportunity to get away either by their heading further into the castle by heading [Bold Type]south[roman type] or going to the [Bold Type]east[roman type] to return to the castle entrance.[roman type][line break]";
 				say "     ([link]Y[as]y[end link]) - South - Further into the castle.";
 				say "     ([link]N[as]n[end link]) - East - Return to the castle entrance.";
 				if Player consents:
@@ -536,7 +528,6 @@ to say bctoyroom:
 	else:
 		say "     You glance over and notice the yellow octopus lurking among the junk, but it seems content to leave you alone for now. You can see two child-sized doors out of here. The one to the [link]east[end link] heads back to the entrance room you started in while the [link]southern[as]south[end link] one leads to a large ball pit in which you can see a mesh ladder to climb to the upper level.";
 
-
 Chapter 6 - Great Hall
 
 to say bcgreathall:
@@ -549,8 +540,7 @@ to say bcgreathall:
 			say "the large orca inflatable from earlier. It trills happily and moves in to charge at you, clearly wanting to [if orcaintense is 0]turn you into its well-fucked plaything again[else]bump you around some more[end if] as part of its game.";
 		if flotmarked is true and a random chance of 1 in 2 succeeds:
 			say "     The orca tries to charge you again, but seems to have trouble aiming at you and misses completely, bouncing harmlessly against a wall! You have a quick moment to decide which direction you'd like to go before it can recover.";
-			say "     [bold type]Shall you head through the door to the [Bold Type]north[roman type] or head back the way you came by going [Bold Type]west[roman type] back to the play room?[roman type][line break]";
-			LineBreak;
+			say "[line break]     [bold type]Shall you head through the door to the [Bold Type]north[roman type] or head back the way you came by going [Bold Type]west[roman type] back to the play room?[roman type][line break]";
 			say "     ([link]Y[as]y[end link]) - North.";
 			say "     ([link]N[as]n[end link]) - Go back west to the play room.";
 			if Player consents:
@@ -562,11 +552,10 @@ to say bcgreathall:
 		else:
 			let bonus be ( dexterity of Player - 10 ) / 2;
 			let dice be a random number from 1 to 20;
-			say "     You roll 1d20([dice])+[bonus] + [3 - scalevalue of Player]: [dice + bonus + 3 - scalevalue of Player] vs 15: ";
-			if ( bonus + dice + 3 - scalevalue of Player ) > 14:
+			say "You roll 1d20([dice])[if bonus + 3 - scalevalue of Player >= 0]+[end if][bonus + 3 - scalevalue of Player] = [special-style-1][dice + bonus + 3 - scalevalue of Player][roman type] vs [special-style-2]15[roman type] (Dexterity Check):[line break]";
+			if bonus + dice + 3 - scalevalue of Player > 14:
 				say "     You manage to weave in one direction and then push off in the other, dodging another charge from the orca which would have knocked you off your feet. You have a quick moment to decide which direction you'd like to go.";
-				say "     [bold type]Shall you head through the door to the [Bold Type]north[roman type] or head back the way you came by going [Bold Type]west[roman type] back to the play room?[roman type][line break]";
-				LineBreak;
+				say "[line break]     [bold type]Shall you head through the door to the [Bold Type]north[roman type] or head back the way you came by going [Bold Type]west[roman type] back to the play room?[roman type][line break]";
 				say "     ([link]Y[as]y[end link]) - North.";
 				say "     ([link]N[as]n[end link]) - Go back west to the play room.";
 				if Player consents:
@@ -588,29 +577,27 @@ to say bcgreathall:
 	else:
 		say "     You find yourself in a room designed as if it were a great hall, with images of banquet table on the [Bold Type]west[roman type] wall and tapestries between the windows on the [Bold Type]east[roman type]. There's a door at the [Bold Type]north[roman type] and another at the [Bold Type]southern[roman type] corner of the [Bold Type]west[roman type] wall, the one which first brought you in here. The orca you fought against earlier is still lying in the center of the room, trying to mend itself.";
 
-
 Chapter 7 - King's Chambers
 
 to say bckingschamber:
-	let compnumber be (number of filled rows in the Table of PlayerChildren + number of entries in childrenfaces);
+	let compnumber be number of filled rows in the Table of PlayerChildren + number of entries in childrenfaces;
 	if companionList of Player is not empty, increase compnumber by 1;
 	now bcplayroomlast is false;
 	say "     This room is designed to be the king's chambers. The wall designs have a pair of guards by the door, tapestries by the windows, a bed and treasure chest as large decals to show a childish representation of this. There's no exit from this room save the one you entered by. There's a window on the [Bold Type]north[roman type] wall and another two on the [Bold Type]east[roman type]. There's not much in this room - a few beach balls, some other assorted odds and ends, and ";
 	if flotmarked is true and a random chance of 1 in 2 succeeds:
 		if bcseenkingchair is false:
-			say "a very mundane looking inflatable chair resting on its side. The discarded or forgotten chair is transparent and yellow[if scalevalue of Player < 3]. It seems a little on the small side, but this makes it just about the right size for your [Body Size Adjective of Player] [bodydesc of Player] body[else if scalevalue of Player > 3]. It seems larger than normal, seeming just about the right size for your [Body Size Adjective of Player] [bodydesc of Player] body[else]. It seems just about the right size for your [bodydesc of Player] body[end if].";
+			say "a very mundane looking inflatable chair resting on its side. The discarded or forgotten chair is transparent and yellow. It seems [if scalevalue of Player < 3]a little on the small side, but this makes it just about the right size for your [Body Size Adjective of Player][else if scalevalue of Player > 3]larger than normal, seeming just about the right size for your [Body Size Adjective of Player][else]just about the right size for your[end if] [bodydesc of Player] body.";
 			say "     You're a little off-put by the chair, and feel inclined to keep your distance from it.";
 		else:
 			say "the inflatable chair. It doesn't seem aware of your presence, and subsequently makes no attempt to allure you.";
 	else:
 		if bcseenkingchair is false:
-			say "a very mundane looking inflatable chair resting on its side. The discarded or forgotten chair is transparent and yellow[if scalevalue of Player < 3]. It seems a little on the small side, but this makes it just about the right size for your [Body Size Adjective of Player] [bodydesc of Player] body[else if scalevalue of Player > 3]. It seems larger than normal, seeming just about the right size for your [Body Size Adjective of Player] [bodydesc of Player] body[else]. It seems just about the right size for your [bodydesc of Player] body[end if].";
+			say "a very mundane looking inflatable chair resting on its side. The discarded or forgotten chair is transparent and yellow. It seems [if scalevalue of Player < 3]a little on the small side, but this makes it just about the right size for your [Body Size Adjective of Player][else if scalevalue of Player > 3]larger than normal, seeming just about the right size for your [Body Size Adjective of Player][else]just about the right size for your[end if] [bodydesc of Player] body.";
 			say "     Feeling a little worn out from your trip through the castle and from evading the orca, you push the chair upright and take a seat in it, relaxing for a moment to take a break[if compnumber is 1]. Your companion takes the opportunity to unwind as well, playing with one of the beach balls[else if compnumber > 1]. Your companions take the opportunity to unwind as well, tossing around one of the beach balls[end if]. Enjoying your much-needed break, you start to doze off, only to be startled awake by a strange sensation coming over you.";
 			say "[bckingchair]";
 		else:
 			say "the inflatable chair. When you set your eyes on it, you feel an attraction towards the yellow inflatable, wanting to sit in it again, to accept joining with it this time.";
-			say "     [bold type]Shall you resist the impulse (Y) or take a seat willingly this time (N)?[roman type][line break]";
-			LineBreak;
+			say "[line break]     [bold type]Shall you [link]resist the impulse (Y)[as]y[end link] or [link]take a seat (N)[as]n[end link] willingly this time?[roman type][line break]";
 			say "     ([link]Y[as]y[end link]) - Resist.";
 			say "     ([link]N[as]n[end link]) - Take a seat.";
 			if Player consents: [FLOT - DONE]
@@ -623,7 +610,7 @@ to say bckingschamber:
 				let difficulty be 10;
 				if HardMode is true, increase difficulty by 2;
 				let dice be a random number from 1 to 20;
-				say "     You roll 1d20([dice])+[bonus] -- [dice plus bonus] vs [difficulty]: ";
+				say "     You roll 1d20([dice])[if bonus >= 0]+[end if][bonus] = [dice plus bonus] vs [difficulty]: ";
 				if dice + bonus >= difficulty:
 					say "Managing to resist the impulse and averting your eyes, you turn away from it. As there's nothing else of interest here, you should probably leave soon. The only exit is to the [link]south[end link].";
 				else:
@@ -632,18 +619,17 @@ to say bckingschamber:
 			else:
 				say "[bckingchair_accept]";
 
-
 to say bckingchair:
 	let chairescape be false;
-	let compnumber be (number of filled rows in the Table of PlayerChildren + number of entries in childrenfaces);
+	let compnumber be number of filled rows in the Table of PlayerChildren + number of entries in childrenfaces;
 	if companionList of Player is not empty, increase compnumber by 1;
 	say "     As you start awake, you realize that the inflatable chair has started to stick to you. You can see its armrests clinging to your arms, the material pulling them gradually in. As you try to stand, you can feel that the same is happening to your back and legs. There's something pleasant and appealing about the touch of the material upon you, but you try to shake it off. Unsure what its plans are, but suspecting that they're not good at all, you start to struggle";
-	if compnumber is 1:
-		say "[if bcseenkingknight is true]. Looking over at your companion for assistance, you can see that the knights have once again emerged from the wall and are keeping your companion occupied[else]. Hearing some struggling by the door, you can see that the knight designs have pulled themselves from the wall as two-dimensional figures. They slash with their swords, keeping your companion too occupied to assist you, despite several attempts to reach you[end if]";
-		now bcseenkingknight is true;
-	else if compnumber > 1:
-		say "[if bcseenkingknight is true]. Looking over at your companions for assistance, you can see that the knights have once again emerged from the wall and are keeping them occupied[else]. Hearing some struggling by the door, you can see that the knight designs have pulled themselves from the wall as two-dimensional figures. They slash with their swords, keeping your companions too occupied to assist you, despite several attempts by them to reach you[end if]";
-		now bcseenkingknight is true;
+	if compnumber > 0:
+		if bcseenkingknight is true:
+			say ". Looking over at your companion[if compnumber > 1]s[end if] for assistance, you can see that the knights have once again emerged from the wall and are keeping [if compnumber > 1]them[else]your companion[end if] occupied";
+		else:
+			say ". Hearing some struggling by the door, you can see that the knight designs have pulled themselves from the wall as two-dimensional figures. They slash with their swords, keeping your companion[if compnumber > 1]s[end if] too occupied to assist you, despite several attempts [if compnumber > 1]by them [end if]to reach you";
+			now bcseenkingknight is true;
 	say ".";
 	WaitLineBreak;
 	let playernum be a random number between 1 and strength of Player;
@@ -662,7 +648,7 @@ to say bckingchair:
 		else:
 			say "is the growing sensation of bulging rubber pressing against your rear. This pressure grows as the chair inflates a phallic dildo to push into your relaxing anus. For some reason, you've become aroused by the chair's actions and the feel of that cock-like bulge pushing into you has made you realize it.";
 		WaitLineBreak;
-		let playernum be ( 150 + humanity of Player + level of Player + strength of Player - Libido of Player);
+		let playernum be 150 + humanity of Player + level of Player + strength of Player - Libido of Player;
 		if Cunt Count of Player > 1:
 			decrease playernum by 10;
 		else if Player is neuter:
@@ -677,13 +663,12 @@ to say bckingchair:
 		else:
 			say "     You try to keep struggling, the feel of that smooth material sliding inside you becoming increasingly pleasurable and distracting. You try to keep your mind focused, but surely it wouldn't hurt to stop and enjoy this at least for a little while. Sit, relax, catch your breath. After that, you can pull free. But why bother, if this feels so good. It'll probably let you go when it's done, you think to yourself as you grind your ass down so a sensitive spot inside you can be better stimulated. You sigh softly in pleasure as relax into your seat to enjoy the moment.";
 			say "     It is a lucky glance down that has you notice that your skin is turning the same yellow as the plastic at the edges nearest its touch. The sudden realization that this chair intends to keep you or somehow transform you as part of its fun startles you from your complacency and you make a final attempt to pull free of the alluring inflatable.";
-			increase Libido of Player by 8;
+			raise Player Libido by 8;
 			decrease humanity of Player by 3;
 			if "Strong Psyche" is listed in feats of Player, increase Humanity of Player by 1;
 			if "Weak Psyche" is listed in feats of Player, decrease humanity of Player by 1;
-			if "Horny Bastard" is listed in feats of Player, increase Libido of Player by 2;
+			if "Horny Bastard" is listed in feats of Player, raise Player Libido by 2;
 			if "Cold Fish" is listed in feats of Player, decrease Libido of Player by 3;
-			if Libido of Player > 100, now Libido of Player is 100;
 			WaitLineBreak;
 			let playernum be a random number between 1 and strength of Player;
 			let chairnum be 18;
@@ -693,7 +678,7 @@ to say bckingchair:
 			if Playernum >= chairnum:
 				let chairescape be true;
 			else:
-				say "     Your final attempt to break free seems to require the last of your strength and you sag back into the seat. As the chair continues to bond with you, your thoughts fade away until they're peaceful and placid, like the chair, like your own[if compnumber > 1]. With one of your last conscious thoughts, you glance over at your companions, seeing them getting pressed up against the wall by the knights. There they are flattened out, turning into more knight decals to decorate the castle. You can't help but smile at this, feeling that it's somehow right[else if compnumber is 1]. With one of your last conscious thoughts, you glance over at your companion being pressed up against the wall by the knights. As they are flattened out, they turn into another knight decal to decorate the castle. You can't help but smile at this, feeling that it's somehow right[else]. Happiness grows and swells inside you and you smile[end if]. Your smile stretches and becomes transfixed on your face as your head becomes inflatable. You are left with a smile and big, happy eyes as permanent designs on your face.";
+				say "     Your final attempt to break free seems to require the last of your strength and you sag back into the seat. As the chair continues to bond with you, your thoughts fade away until they're peaceful and placid, like the chair, like your own. [if compnumber > 1]With one of your last conscious thoughts, you glance over at your companions, seeing them getting pressed up against the wall by the knights. There they are flattened out, turning into more knight decals to decorate the castle. You can't help but smile at this, feeling that it's somehow right[else if compnumber is 1]With one of your last conscious thoughts, you glance over at your companion being pressed up against the wall by the knights. As they are flattened out, they turn into another knight decal to decorate the castle. You can't help but smile at this, feeling that it's somehow right[else]Happiness grows and swells inside you and you smile[end if]. Your smile stretches and becomes transfixed on your face as your head becomes inflatable. You are left with a smile and big, happy eyes as permanent designs on your face.";
 				say "     As you and the chair continue to merge, your [bodytype of Player] body becomes one with it, reshaping it as you and it become one happy whole. You're now a yellow inflatable chair version of a [BodySpeciesName of Player in lower case] with a matching head. There's even cute matching prints at the end of the chair's arms to complete the look.";
 				WaitLineBreak;
 				now bcfinalchairform is BodyName of Player;
@@ -711,15 +696,16 @@ to say bckingchair:
 			now bcseenkingchair is true;
 		follow the turnpass rule;
 
-
 to say bckingchair_accept:
-	let compnumber be (number of filled rows in the Table of PlayerChildren + number of entries in childrenfaces);
+	let compnumber be number of filled rows in the Table of PlayerChildren + number of entries in childrenfaces;
 	if companionList of Player is not empty, increase compnumber by 1;
 	say "     Choosing not to resist the chair's call this time, you drop your gear and flop down onto it. Its plastic material gives a happy squeak as it rubs against the rubbery floor. Settling into it, you rub your body against the padded seat and grip the arm rests, pressing yourself lightly against the chair's material. Sure enough, it starts to slide over you as your body starts to sink into it with a pleasant sensation";
-	if compnumber is 1:
-		say "[if bcseenkingknight is true]. Looking over at your companion, you can see that the knights have once again emerged from the wall and are keeping your companion at bay. Thus occupied, they're unable to reach you to save you, not that you want rescue from this lovely thing[else]. Hearing some struggling by the door, you can see that the knight designs have pulled themselves from the wall as two-dimensional figures. They slash with their swords, keeping your companion too occupied to come rescue you, not that you want rescue from this lovely thing[end if]";
-	else if compnumber > 1:
-		say "[if bcseenkingknight is true]. Looking over at your companion, you can see that the knights have once again emerged from the wall and are keeping your companion at bay. Thus occupied, they're unable to reach you to save you, not that you want rescue from this lovely thing[else]. Hearing some struggling by the door, you can see that the knight designs have pulled themselves from the wall as two-dimensional figures. They slash with their swords, keeping your companion too occupied to come rescue you, not that you want rescue from this lovely thing[end if]";
+	if compnumber > 0:
+		if bcseenkingknight is true:
+			say ". Looking over at your companion[if compnumber > 1]s[end if], you can see that the knights have once again emerged from the wall and are keeping [if compnumber > 1]them[else]your companion[end if] at bay. Thus occupied, they're unable to reach you to save you, not that you want rescue from this lovely thing";
+		else:
+			say ". Hearing some struggling by the door, you can see that the knight designs have pulled themselves from the wall as two-dimensional figures. They slash with their swords, keeping your companion[if compnumber > 1]s[end if] too occupied to come rescue you, not that you want rescue from this lovely thing";
+			now bcseenkingknight is true;
 	say ".";
 	WaitLineBreak;
 	say "     As the clear yellow plastic continues to creep further around you, another sensation starts to well up at your rear";
@@ -731,14 +717,13 @@ to say bckingchair_accept:
 		say ". To further make you happy, the chair grows some bulging rubber that inflates into a phallic dildo to push into your relaxing anus. Already quite aroused by the chair's actions, having that cock-like bulge pushing into you feels all the better, filling a needy ache inside you.";
 	say "     Squirming happily in your seat, the feel of the smooth material inside you becomes increasingly pleasurable and distracting. You let your mind wander, simply basking in the simple pleasure of sitting in the chair. It is so soft, so comfy. There's no reason to resist, you feel. It'll probably let you go when it's done, you think to yourself as you grind your ass down so a sensitive spot inside you can be better stimulated. You sigh softly in pleasure and relax into your seat to enjoy the moment.";
 	WaitLineBreak;
-	say "     As your mind fades away further, you notice that your skin is turning the same yellow as the plastic at the edges nearest its touch. Lost in the relaxing pleasure of the chair, you can't help but smile. Sitting in this wonderful chair feels so good, so being this wonderful chair must be even better. As the chair continues to bond with you, your thoughts fade away until they're peaceful and placid, like the chair, like your own[if compnumber > 1]. With one of your last conscious thoughts, you glance over at your companions, seeing them getting pressed up against the wall by the knights. Seeing you giving in, they give in as well, letting themselves be groped and fondled while they are flattened out, turning into more knight decals to decorate the castle. You can't help but smile at this, feeling that it's somehow right[else if compnumber is 1]. With one of your last conscious thoughts, you glance over at your companion being pressed up against the wall by the knights. Seeing you giving in, they give in as well, letting themselves be groped and fondled while they are flattened out, turning into another knight decal to decorate the castle. You can't help but smile at this, feeling that it's somehow right[else]. Happiness grows and swells inside you and you smile[end if]. Your smile stretches and becomes transfixed on your face as your head becomes inflatable. You are left with a smile and big, happy eyes as permanent designs on your face.";
+	say "     As your mind fades away further, you notice that your skin is turning the same yellow as the plastic at the edges nearest its touch. Lost in the relaxing pleasure of the chair, you can't help but smile. Sitting in this wonderful chair feels so good, so being this wonderful chair must be even better. As the chair continues to bond with you, your thoughts fade away until they're peaceful and placid, like the chair, like your own. [if compnumber > 1]With one of your last conscious thoughts, you glance over at your companions, seeing them getting pressed up against the wall by the knights. Seeing you giving in, they give in as well, letting themselves be groped and fondled while they are flattened out, turning into more knight decals to decorate the castle. You can't help but smile at this, feeling that it's somehow right[else if compnumber is 1]With one of your last conscious thoughts, you glance over at your companion being pressed up against the wall by the knights. Seeing you giving in, they give in as well, letting themselves be groped and fondled while they are flattened out, turning into another knight decal to decorate the castle. You can't help but smile at this, feeling that it's somehow right[else]Happiness grows and swells inside you and you smile[end if]. Your smile stretches and becomes transfixed on your face as your head becomes inflatable. You are left with a smile and big, happy eyes as permanent designs on your face.";
 	say "     As you and the chair continue to merge, your [bodytype of Player] body becomes one with it, reshaping it as you and it become one happy whole. You're now a yellow inflatable chair version of a [BodySpeciesName of Player in lower case] with a matching head. There's even cute matching prints at the end of the chair's arms to complete the look.";
 	WaitLineBreak;
 	now bcfinalchairform is BodyName of Player;
 	now humanity of Player is 0;
 	trigger ending "Bouncy Castle New Chair";
 	end the story saying "You are transformed into an inflatable [bcfinalchairform] chair.";
-
 
 Chapter 8 - Punching Pillars
 
@@ -751,8 +736,7 @@ to say bcpunchingpillars:
 	say "     This side room is designed as if it were a training hall, with images of training knights and straw dummies on the [Bold Type]east[roman type] wall and weapon racks between the windows on the [Bold Type]west[roman type]. The room itself has several shoulder-height pillars which seem padded for punching. These pillars come in several bright colors and have designs of wolf men, orcs, cat people and other aggressive foes. As you walk further into the room, the pillars ";
 	if flotmarked is true and a random chance of 1 in 2 succeeds:
 		say "start to rock [if bcseenpunchingpillars is true]again[else]a little[end if] before thick tendrils of gooey latex flow out of them. They seem to fumble around a bit, but even as they occasionally graze past you, they seem wholly unaware of your presence... You should probably make a break for it before they finally lock onto your [']scent[']. You have two options for exit from this room.";
-		say "     [bold type]Shall you head through the door to the [Bold Type]north[roman type] or head back the way you came by going [Bold Type]east[roman type] back to the ball pit?[roman type][line break]";
-		LineBreak;
+		say "[line break]     [bold type]Shall you head through the door to the [Bold Type]north[roman type] or head back the way you came by going [Bold Type]east[roman type] back to the ball pit?[roman type][line break]";
 		say "     ([link]Y[as]y[end link]) - North.";
 		say "     ([link]N[as]n[end link]) - East - Back to the ball pit.";
 		if Player consents:
@@ -773,8 +757,7 @@ to say bcpunchingpillars:
 		if bcseenpunchingpillars is false:
 			say "[bcpptendril]";
 		else:
-			say "     [bold type]Shall you attempt to fight off these flowing tentacles or accept their embrace and see what comes?[roman type][line break]";
-			LineBreak;
+			say "[line break]     [bold type]Shall you attempt to fight off these flowing tentacles or accept their embrace and see what comes?[roman type][line break]";
 			say "     ([link]Y[as]y[end link]) - Fight.";
 			say "     ([link]N[as]n[end link]) - Accept their embrace.";
 			if Player consents:
@@ -784,7 +767,7 @@ to say bcpunchingpillars:
 
 to say bcpptendril:
 	let tendrilescape be false;
-	let compnumber be (number of filled rows in the Table of PlayerChildren + number of entries in childrenfaces);
+	let compnumber be number of filled rows in the Table of PlayerChildren + number of entries in childrenfaces;
 	if companionList of Player is not empty, increase compnumber by 1;
 	sort primarycolorlist in random order;
 	now ppcolor is entry 1 in primarycolorList;
@@ -805,8 +788,8 @@ to say bcpptendril:
 			say ". You feel an uncontrolled wave of pleasure as liquid latex flows into your vagina[sfn] and asshole, as if trying coat you inside and out[if Player is male] while it ripples and flows over your hard manhood[smn][end if].";
 		else:
 			say ". You feel an uncontrolled wave of pleasure as liquid latex flows into your rectum, as if trying coat you inside and out[if Player is male] while it ripples and flows over your hard manhood[smn][end if].";
-		let playernum be ( 150 + humanity of Player + level of Player + strength of Player - Libido of Player);
-		if ( Cunt Count of Player + Cock Count of Player ) > 1:
+		let playernum be 150 + humanity of Player + level of Player + strength of Player - Libido of Player;
+		if Cunt Count of Player + Cock Count of Player > 1:
 			decrease playernum by 10;
 		else if Player is neuter:
 			increase playernum by 10;
@@ -829,13 +812,12 @@ to say bcpptendril:
 			else:
 				say "pumps and pushes inside your rectum, sending debilitating waves of pleasure through you[if anallevel > 1]. As this orgasmic rush has your body quivering, you can feel the gooey flow working its way further into your bowels[end if].";
 			say "     As you're coming down from your climax, you notice that you've been dragged much closer to the pillar and that it's about to grab you with another set of tentacles. Trying your best to shake off the afterglow, you try to grip the padded floor as best you can and pull out of its grip before it's too late. With the [ppcolor] stuff climbing quickly up your chest and more about to latch onto your arms, you know this is probably your last chance to get away before it does... whatever kinky, delightful - no, terrible! - thing it has planned for you.";
-			increase Libido of Player by 8;
+			raise Player Libido by 8;
 			decrease humanity of Player by 3;
 			if "Strong Psyche" is listed in feats of Player, increase Humanity of Player by 1;
 			if "Weak Psyche" is listed in feats of Player, decrease humanity of Player by 1;
-			if "Horny Bastard" is listed in feats of Player, increase Libido of Player by 2;
+			if "Horny Bastard" is listed in feats of Player, raise Player Libido by 2;
 			if "Cold Fish" is listed in feats of Player, decrease Libido of Player by 3;
-			if Libido of Player > 100, now Libido of Player is 100;
 			WaitLineBreak;
 			let playernum be a random number between 1 and ( strength of Player + scalevalue of Player );
 			let tendrilnum be 18;
@@ -855,8 +837,7 @@ to say bcpptendril:
 				end the story saying "You are transformed into another [ppcolor] pillar.";
 	if tendrilescape is true:
 		say "     Focusing on your escape, you pull free of the liquid latex attempting to engulf you with a wet, slurping sound. The pillar makes a few more weak attempts to grab you, but it seems your escape has worn it out too much for the moment[if compnumber is 1]. You rush over to your companion and assist them in getting free, having gotten themselves mostly engulfed by the pillar which caught them[else if compnumber > 1]. You rush over to your companions, well on their way to being engulfed by pillars themselves, and help them break free[end if]. You don't have time to take a break though, as the other pillars around you are also making grabs for you now that you're unclaimed. You have two options for exit from this room.";
-		say "     [bold type]Shall you head through the door to the [Bold Type]north[roman type] or head back the way you came by going [Bold Type]east[roman type] back to the ball pit?[roman type][line break]";
-		LineBreak;
+		say "[line break]     [bold type]Shall you head through the door to the [Bold Type]north[roman type] or head back the way you came by going [Bold Type]east[roman type] back to the ball pit?[roman type][line break]";
 		say "     ([link]Y[as]y[end link]) - North.";
 		say "     ([link]N[as]n[end link]) - East - Back to the ball pit.";
 		if Player consents:
@@ -867,9 +848,8 @@ to say bcpptendril:
 			move player to Ball Pit Room;
 	now bcseenpunchingpillars is true;
 
-
 to say bcpptendril_accept:
-	let compnumber be (number of filled rows in the Table of PlayerChildren + number of entries in childrenfaces);
+	let compnumber be number of filled rows in the Table of PlayerChildren + number of entries in childrenfaces;
 	if companionList of Player is not empty, increase compnumber by 1;
 	say "     Choosing not to resist the pillar's attempt to ensnare you this time, you drop your gear and step towards the tentacles, allowing them to latch onto you. The wolf design on it seems to smile as you acquiesce and it rubs its gooey tentacles across your flesh, leaving trails of [ppcolor] latex[if compnumber is 1]. Your companion, also ensnared, struggles at first, but soon relents as they see you accepting the tentacles[else if compnumber > 1]. Your companions, also ensnared, struggle at first, but soon relent as they see you accepting the tentacles[end if]. Some of the tendrils slide across your arms and legs while others wrap around your chest.";
 	say "     You can't help but moan as one goes to your waist and [ppcolor] latex flows over your [if Player is neuter]barren crotch[else]loins[end if], sending a rush of arousal through you as the goo spreads across your [if Player is herm]cock[smn] and even into your puss[yfn][else if Player is male]cock[smn][else if Player is female]cunt[sfn][else]ass and pushes into your asshole[end if]";
@@ -895,7 +875,6 @@ to say bcpptendril_accept:
 	trigger ending "Bouncy Castle New Pillar";
 	end the story saying "You are transformed into another [ppcolor] pillar.";
 
-
 Chapter 9 - Knight's Chambers
 
 floatertaken is a truth state that varies. floatertaken is usually false.
@@ -904,8 +883,7 @@ to say bcknightschambers:
 	say "     This room is designed to be a knight's chambers. The wall designs have a knight donning his armor, tapestries by the windows, a bed and a rack of weapons as large decals to show a childish representation of this. There's no exit from this room save the one you entered by, meaning you'll need to once again face those pillars to get out of here. There's a window on the [Bold Type]north[roman type] wall and another two on the [Bold Type]west[roman type]. There's not much in this room, scattered beach toys that were probably forgotten by the dolphins in this far corner of the castle.";
 	if floatertaken is false:
 		say "     Also in this room is an inflatable floater shaped like a cute, white ducky. The swim ring looks like one meant to be worn around a kid's waist to help them float, but large enough to [if scalevalue of Player > 2]even [end if]fit you. It has a cute duck head on a short neck at the front, a tuft of a tail at its back and a tiny pair of wings at its sides. These latter are the main reason you noticed it, as it's waving them around frantically, making the floater shift around a bit on the floor. As you cautiously move closer, it looks up at your with a strangely plaintive look in its eyes as it wobbles around. Odd behavior when compared to that of the other creatures you've seen here.";
-		say "     [bold type]Shall you pick it up?[roman type][line break]";
-		LineBreak;
+		say "[line break]     [bold type]Shall you pick it up?[roman type][line break]";
 		say "     ([link]Y[as]y[end link]) - Yes.";
 		say "     ([link]N[as]n[end link]) - No.";
 		if Player consents:
@@ -916,18 +894,15 @@ to say bcknightschambers:
 		else:
 			say "     Worried that this might be some new form of trap laid by the castle, you take a step back and leave the duck swim ring where it is. It seems a little sad that you've not touched it, but continues to try and get your attention by what little movement it is capable of.";
 
-
 Table of Game Objects (continued)
 name	desc	weight	object
 "ducky swimring"	"A child's swim ring shaped like a duck with a cute head, puffy little wings on its sides and a tuft of a tail at its back[if ducky swimring is equipped]. It always seems to be sized right to fit you[else] when it's inflated. At the moment, you've got it deflated for easier storage, though you could always put it on[end if]."	1	ducky swimring
 
 ducky swimring is equipment. It is not temporary.
-The placement of ducky swimring is "waist".
+The placement of ducky swimring is "body".
 The descmod of ducky swimring is "You are wearing your cute ducky inflatable around your waist. Sure, it looks a little silly, but it's a mad world out there.".
 The slot of ducky swimring is "waist".
-
 the scent of ducky swimring is "The ducky smells of latex.".
-
 
 Book 2 - The Tower
 
@@ -935,7 +910,6 @@ Chapter 10 - Lower Tower
 
 to say bclowertower:
 	say "     This yellow room is the bottom floor of a drum tower at the back wall of the bouncy castle. This place, some strange mishmash of a children's play area and a medieval fortress, rises up to the next level with a mesh ladder fit for climbing and cartoonish designs of circular stairs with knights fighting on them. Feeling a little like you're attacking the castle yourself, you can't help but feel a little ill at ease with how well defended it seems. Your choices for exits are either the archway to the [link]northwest[end link] leading back to the ball pit room or [link]up[end link] to the next level of the tower.";
-
 
 Chapter 11 - Upper Tower
 
@@ -949,12 +923,10 @@ to say bcuppertower:
 			move Stuffed Otter Suit to Upper Hall;
 			now InflatableOtterSuitMode is 2;
 
-
 Chapter 12 - Tower Turret
 
 to say bctowerturret:
 	say "     Having ascended to the top of the castle's tallest tower, you are able to look out through several mesh-screened windows. You're able to see out across the water for some distance, including the far-off beach and the city from one of them. Heading to the others, you're able to look down over the top of the castle and view its parapets. One the [Bold Type]eastern[roman type] size, you spot a couple of balloon creatures moving around, though the [Bold Type]western[roman type] side seems peaceful and clear. Separating the two is a roofed off section, probably leading to that upper hall you saw and the other rooms on that floor. Your only option from here is to climb back [link]down[end link] the mesh ladder.";
-
 
 Book 3 - Upper Floor
 
@@ -963,11 +935,10 @@ Chapter 13 - Upper Hall
 to say bcupperhall:
 	say "     This rectangular room is another bouncing play area which acts as a hall and a funneling point for excited children to head off towards either side of the castle. It is done in the same colors as the main floor rooms, with yellow stone-patterned archways heading both [link]east[end link] and [link]west[end link] to the parapets on either side of the castle and their slides down into the sea. You can also head back [link]south[end link] to re-enter the tower you took to get up here.";
 
-
 Chapter 14 - Western Parapets
 
 to say bcwestparapets:
-	let compnumber be (number of filled rows in the Table of PlayerChildren + number of entries in childrenfaces);
+	let compnumber be number of filled rows in the Table of PlayerChildren + number of entries in childrenfaces;
 	if companionList of Player is not empty, increase compnumber by 1;
 	say "     Up at the top level of the castle, this room is designed to look like its [Bold Type]western[roman type] parapets. This section covers roughly the [Bold Type]western[roman type] third of the bouncy castle with a wall dividing the two parts and a pair of arched doorways leading to the middle section. The floor is covered in a regular pattern of large, red dots, and while springy and swaying, seems just as solid as those below despite being the inflatable ceiling to the area below. The floor and walls here are sky blue, as are the towers rising up to enclose the room between mesh netting to keep excited children from falling. The netting around the parapets extends above you as well, enclosing the space for safety. The only gap in this outer mesh allows access to the blue waterslide down into the sea below.";
 	say "     There is a constant flow of water and even some sprinklers running on the way down despite the lack of any motor or pump you could hear anywhere in the castle to keep it inflated or to send water up here.";
@@ -979,11 +950,12 @@ to say bcwestparapets:
 		while calcnumber < 1 or calcnumber > 3:
 			say "Choice? (1-3)>";
 			get a number;
+		LineBreak;
 		if calcnumber is 1:
 			move player to Castle Throne Room;
 		else if calcnumber is 2:
 			move player to Upper Hall;
-		else if calcnumber is 3:
+		else:
 			try bcsliding;
 	else:
 		if lastbcchair is 255: [FLOT - DONE]
@@ -1007,11 +979,12 @@ to say bcwestparapets:
 				while calcnumber < 1 or calcnumber > 3:
 					say "Choice? (1-3)>";
 					get a number;
+				LineBreak;
 				if calcnumber is 1:
 					move player to Castle Throne Room;
 				else if calcnumber is 2:
 					move player to Upper Hall;
-				else if calcnumber is 3:
+				else:
 					try bcsliding;
 			else:
 				say "     You take care as you navigate the room, planning to avoid the red spots in the hopes of not activating the chair again. But you are suddenly surprised as one of the spots slides across the floor, moving quickly under your foot as you're bringing it down. Your foot sinks into the flesh-like hole that forms and your other foot is similarly caught moments later[if compnumber > 1]. Nearby, you can hear your companions struggling against bands of material growing out of the mesh safety walls[else if compnumber is 1]. Nearby, you can hear your companion struggling against bands of material growing out of the mesh safety walls[end if][if weapon object of Player is not journal]. You end up dropping your [weapon object of Player] when the spots shift quickly back to their original positions and you're sent tumbling forwards[end if].";
@@ -1028,18 +1001,18 @@ to say bcwestparapets:
 			while calcnumber < 1 or calcnumber > 3:
 				say "Choice? (1-3)>";
 				get a number;
+			LineBreak;
 			if calcnumber is 1:
 				move player to Castle Throne Room;
 			else if calcnumber is 2:
 				move player to Upper Hall;
-			else if calcnumber is 3:
+			else:
 				try bcsliding;
 
 to chairboundstate:
-	let compnumber be (number of filled rows in the Table of PlayerChildren + number of entries in childrenfaces);
+	let compnumber be number of filled rows in the Table of PlayerChildren + number of entries in childrenfaces;
 	if companionList of Player is not empty, increase compnumber by 1;
 	now lustatt is Libido of Player;
-	now calcnumber is -1;
 	let Trixieexit be 0;
 	while Trixieexit is 0:
 		if clearnomore is 0, clear the screen;
@@ -1087,8 +1060,9 @@ to chairboundstate:
 		say "[bold type]1[roman type] - [link]Struggle[as]1[end link][line break]";
 		say "[bold type]2[roman type] - [link][if obliging is true]Oblige[else]Abide[end if][as]2[end link][line break]";
 		say "[bold type]3[roman type] - [link][if boundrecover is false]Endure[else]Recover[end if][as]3[end link][line break]";
-		say "Sanity: [humanity of Player]/ 100	Lust: [lustatt]/100	Struggle: [chairstrugglebar][line break]";
+		say "Sanity: [humanity of Player]/100  Lust: [lustatt]/100  Struggle: [chairstrugglebar][line break]";
 		if humanity of Player < 1:
+			LineBreak;
 			if boundsegment < 3:
 				say "     Too weak-willed to go on, the trap exploits this moment of weakness almost immediately";
 				if boundsegment is 0:
@@ -1100,8 +1074,8 @@ to chairboundstate:
 					say "     Blatantly aroused from breathing in the aphrodisiac, the motion of the strange chair increases[if Player is male]. Your stiffening, [cock size desc of Player] cock[smn] slide into slick orifices which form in the seat beneath you, which squeezes and milks at your erection[smn], increasing your pleasure and making it harder to stay focused[end if][if Player is female and anallevel is 3]. You feel some of the rubbery material bulge up and push its way into your damp puss[yfn] and asshole. Inflating slowly, you're filled with the pulsing dildos that shiver delightfully inside you from the chair's vibrations[else if Player is female]. You feel some of the rubbery material bulge up and push its way into your damp puss[yfn]. Inflating slowly, you're filled with the pulsing dildo[sfn] that shiver delightfully inside you from the chair's vibrations[end if][if Player is neuter]. The chair's material probes at your bare groin, and finding no genitals, forms rippling protrusions which stroke and rub against your flat crotch, sending soft shivers of delight through you[end if][if Player is not female and anallevel > 1]. You feel some of the rubbery material bulge up and push its way into your quivering asshole. Inflating slowly, you're filled with the pulsing dildo that shivers delightfully inside you from the chair's vibrations[end if].";
 				else if boundsegment is 2:
 					say "! Blatantly aroused from breathing in the aphrodisiac, the motion of the strange chair increases[if Player is male]. Your stiffening, [cock size desc of Player] cock[smn] slide into slick orifices which form in the seat beneath you, which squeezes and milks at your erection[smn], increasing your pleasure and making it harder to stay focused[end if][if Player is female and anallevel is 3]. You feel some of the rubbery material bulge up and push its way into your damp puss[yfn] and asshole. Inflating slowly, you're filled with the pulsing dildos that shiver delightfully inside you from the chair's vibrations[else if Player is female]. You feel some of the rubbery material bulge up and push its way into your damp puss[yfn]. Inflating slowly, you're filled with the pulsing dildo[sfn] that shiver delightfully inside you from the chair's vibrations[end if][if Player is neuter]. The chair's material probes at your bare groin, and finding no genitals, forms rippling protrusions which stroke and rub against your flat crotch, sending soft shivers of delight through you[end if][if Player is not female and anallevel > 1]. You feel some of the rubbery material bulge up and push its way into your quivering asshole. Inflating slowly, you're filled with the pulsing dildo that shivers delightfully inside you from the chair's vibrations[end if].";
-			say "     With the grip on your limbs too strong now to simply break free, your sex-addled mind throws itself into the pursuit of pleasure in the hopes of satisfying this strange chair's needs or overloading it. You begin to ride it, telling yourself that nothing stops you from enjoying this ride as well. You move yourself with the chair's rocking motion as best you can, pushing yourself [if Cunt Count of Player > 1 or (Player is female and anallevel > 1)]onto those wonderfully thrusting dildos it had stuffed inside you[else]against it while licking and sucking lustfully at that throbbing projection stuffed into your mouth[end if][if Cock Count of Player > 1]. You pound your cocks into those gripping holes of its, losing yourself in the pleasure of fucking those slick, squeezing orifices for all they're worth[else if Cock Count of Player is 1]. You pound your cock into that gripping hole of its, losing yourself in the pleasure of fucking that slick, squeezing orifice for all it's worth[end if][if Player is female]. You squeeze with your thighs, tightening your inner muscles around the rubbery flesh stuffed inside you, taking delight in the pulsing probes filling you so wonderfully[end if][if anallevel > 1]. You eagerly squeeze down on the inflating butt plug inside you, the feel of it swelling deeper as it slides along your silky inner walls feeling great to your lust-clouded body[end if].";
-			say "     You push yourself to further heights, your sex-crazed mind only seeking another release, your thoughts of escape momentarily forgotten. When your climax finally comes[if Player is male] and you pump your hot seed into the sex chair[end if], your cries are muffled by the thick rod stuffed into your mouth[if Cunt Count of Player > 1]. Your cunts clamp down around the throbbing dildos inside you as you release another flow of your hot juices over them, soaking yourself and the seat[else if Cunt Count of Player is 1]. Your cunt clamps down around the throbbing dildo inside you as you release another flow of your hot juices over it, soaking yourself and the seat[end if]. Once spent, you collapse onto the seat, basking in the powerful afterglow and breathing in more of that arousing gas as you pant for breath.";
+			say "     With the grip on your limbs too strong now to simply break free, your sex-addled mind throws itself into the pursuit of pleasure in the hopes of satisfying this strange chair's needs or overloading it. You begin to ride it, telling yourself that nothing stops you from enjoying this ride as well. You move yourself with the chair's rocking motion as best you can, pushing yourself [if Cunt Count of Player > 1 or (Player is female and anallevel > 1)]onto those wonderfully thrusting dildos it had stuffed inside you[else]against it while licking and sucking lustfully at that throbbing projection stuffed into your mouth[end if][if Cock Count of Player > 1]. You pound your cocks into those gripping holes of its, losing yourself in the pleasure of fucking those slick, squeezing orifices for all they're worth[else if Player is male]. You pound your cock into that gripping hole of its, losing yourself in the pleasure of fucking that slick, squeezing orifice for all it's worth[end if][if Player is female]. You squeeze with your thighs, tightening your inner muscles around the rubbery flesh stuffed inside you, taking delight in the pulsing probes filling you so wonderfully[end if][if anallevel > 1]. You eagerly squeeze down on the inflating butt plug inside you, the feel of it swelling deeper as it slides along your silky inner walls feeling great to your lust-clouded body[end if].";
+			say "     You push yourself to further heights, your sex-crazed mind only seeking another release, your thoughts of escape momentarily forgotten. When your climax finally comes[if Player is male] and you pump your hot seed into the sex chair[end if], your cries are muffled by the thick rod stuffed into your mouth[if Cunt Count of Player > 1]. Your cunts clamp down around the throbbing dildos inside you as you release another flow of your hot juices over them, soaking yourself and the seat[else if Player is female]. Your cunt clamps down around the throbbing dildo inside you as you release another flow of your hot juices over it, soaking yourself and the seat[end if]. Once spent, you collapse onto the seat, basking in the powerful afterglow and breathing in more of that arousing gas as you pant for breath.";
 			say "     By the time the haze lifts, you realize that the chair has recovered and is resuming to engulf you. The tubes have continued to climb up your arms and legs. They join up with the other material from the seat itself, starting to seal you in seamlessly. The vinyl flows up across your back and melds with the hood, encapsulating you fully. While it is hard to tell from within your latex prison, you get the feeling that you're sinking. Even as your mind sinks away, fading away beneath the gas that keeps you constantly aroused, so does the pod encapsulating you fade back into the floor. Slick liquid flows in around you and your gear is either dissolved or expelled from the pod, leaving you naked and able to enjoy smooth stimulation over every square inch of your body. You give in to the pleasure, succumbing as a mindless prisoner of lust as you enjoy orgasm after orgasm in the hidden safety of your new home.";
 			WaitLineBreak;
 			now humanity of Player is 0;
@@ -1109,6 +1083,7 @@ to chairboundstate:
 			end the story saying "You are imprisoned by the Bouncy Castle.";
 			now Trixieexit is 1;
 		else:
+			say "> [run paragraph on]";
 			let k be 0;
 			now keychar is "INVALID";
 			change the text of the player's command to "";
@@ -1117,7 +1092,7 @@ to chairboundstate:
 				translate k;
 				if the player's command matches "[number]":
 					now keychar is "[number understood]";
-			if keychar in lower case exactly matches the text "s" or keychar in lower case exactly matches the text "1" or keychar in lower case exactly matches the text "return" or keychar in lower case matches the text "struggle":
+			if keychar is "s" or keychar is "1" or keychar is "return" or keychar in lower case matches the text "struggle":
 				LineBreak;
 				increase struggleatt by 1;
 				if struggleatt < (boundsegment + 3):
@@ -1134,6 +1109,7 @@ to chairboundstate:
 					while calcnumber < 1 or calcnumber > 3:
 						say "Choice? (1-3)>";
 						get a number;
+					LineBreak;
 					if calcnumber is 1:
 						say "     Stepping carefully, you move around the deflating sex chair and avoid the other red spots in case this castle had more surprises. You head to the separating wall and move through the archway into the other room.";
 						move player to Castle Throne Room;
@@ -1142,11 +1118,10 @@ to chairboundstate:
 						say "     Stepping carefully, you move around the deflating sex chair and avoid the other red spots in case this castle had more surprises. You head to the separating wall and return to the safety of the upper hall to consider your next course of action.";
 						move player to Upper Hall;
 						follow the turnpass rule;
-					else if calcnumber is 3:
+					else:
 						try bcsliding;
 				WaitLineBreak;
-				next;
-			else if (obliging is true and (keychar in lower case exactly matches the text "o" or keychar in lower case matches the text "oblige")) or (obliging is false and (keychar in lower case exactly matches the text "a" or keychar in lower case matches the text "abide")) or keychar in lower case exactly matches the text "2":
+			else if (obliging is true and (keychar is "o" or keychar in lower case matches the text "oblige")) or (obliging is false and (keychar is "a" or keychar in lower case matches the text "abide")) or keychar is "2":
 				LineBreak;
 				if obliging is true:
 					say "     You actively submit to the trap's influence, [one of]groaning and creaking loudly against your eager motions[or]squeaking and stretching against your writhing form[or]tightening around you before you have any second thoughts[at random].";
@@ -1159,7 +1134,6 @@ to chairboundstate:
 					chairpassivelosses;
 					increase boundcounter by 1;
 				WaitLineBreak;
-				next;
 			else:
 				now enduring is true;
 				LineBreak;
@@ -1173,18 +1147,14 @@ to chairboundstate:
 					LineBreak;
 					chairpassivelosses;
 				WaitLineBreak;
-				next;
 
 to say chairstrugglebar:
-	say "[close bracket]";
-	if boundsegment > 2:
-		say "-";
+	say "[close bracket][if boundsegment > 2]-[end if]";
 	if boundsegment > 1:
 		say "[if struggleatt > 4]X[else]-[end if]";
 	if boundsegment > 0:
 		say "[if struggleatt > 3]X[else]-[end if]";
 	say "[if struggleatt > 2]X[else]-[end if][if struggleatt > 1]X[else]-[end if][if struggleatt > 0]X[else]-[end if][bracket]";
-
 
 to chairpassivelosses:
 	if enduring is true:
@@ -1198,18 +1168,15 @@ to chairpassivelosses:
 		if boundsegment < 2:
 			increase lustatt by 10 + (lustadjust * 2);
 		else:
-			increase Libido of Player by 1;
-			if Libido of Player > 100, now Libido of Player is 99;
+			raise Player Libido by 1;
 			increase lustatt by 20 + (lustadjust * 3);
 	else:
 		if boundsegment < 2:
-			increase Libido of Player by 1;
-			if Libido of Player > 100, now Libido of Player is 99;
+			raise Player Libido by 1;
 			decrease humanity of Player by 2 + psycheadjust;
 			increase lustatt by 17 + (lustadjust * 3);
 		else:
-			increase Libido of Player by 2;
-			if Libido of Player > 100, now Libido of Player is 99;
+			raise Player Libido by 2;
 			decrease humanity of Player by 4 + psycheadjust;
 			increase lustatt by 35 + (lustadjust * 5);
 
@@ -1368,7 +1335,6 @@ to chairpassivelosses:
 		else if calcnumber is 3:
 			try bcsliding;
 
-
 to say bcchairsubmit:
 	say "     You don't resist and let yourself fall forward, your hands landing squarely on two more large red spots. There transform immediately into flesh-like orifices made from the same latex-vinyl material as everything else here and your hands sink into them. You watch as the red spots start to inflate, stretching upwards into pink tubes that pleasantly squeeze and grip around your arms and legs as they climb up a few inches. Beneath you, the blue material starts to inflate into a large, padded seat. With this support beneath you, you rub yourself onto it. You are momentarily concerned as a sheet of it flows up over your head, covering your face in a mask, but the gas it releases causes your worries to fade as its aphrodisiac qualities kick in, getting you instantly aroused.";
 	say "     As the thick gas makes you feel lightheaded and aroused, it also increases the pleasure you feel from the smooth vinyl rubbing against your [bodytype of Player] body. Breathing in the aphrodisiac, you can't help but become aroused as the motion of the strange chair increases[if Cock Count of Player > 1]. Your stiffening cocks slide into slick orifices which form in the seat beneath you. These squeeze and milk at your erections, increasing your pleasure and making it harder to stay focused on escape[else if Cock Count of Player is 1]. Your stiffening cock slides into a slick orifice which forms in the seat beneath you. This squeezes and milks at your erection, increasing your pleasure and making it harder to stay focused on escape[end if][if Cunt Count of Player > 1]. You feel some of the rubbery material bulge up and push its way into your damp pussies. These inflate slowly, filling you with pulsing dildos that shiver delightfully inside you from the chair's vibrations[else if Cunt Count of Player is 1]. You feel some of the rubbery material bulge up and push its way into your damp pussy. This inflates slowly, filling you with a pulsing dildo that shivers delightfully inside you from the chair's vibrations[end if][if Player is neuter]. The chair's material probes at your bare groin, and finding no genitals, forms rippling protrusions which stroke and rub against your flat crotch, sending soft shivers of delight through you[end if]. Taking all these pleasures the chair has to offer, you grind yourself down atop it, moaning happily.";
@@ -1384,7 +1350,6 @@ to say bcchairsubmit:
 	now humanity of Player is 0;
 	trigger ending "Bouncy Castle Exhibit";
 	end the story saying "You become part of the Bouncy Castle.";]
-
 
 Chapter 15 - Eastern Parapets
 
@@ -1414,7 +1379,6 @@ to say bceastparapets:
 				now lastbcduobeaten is 254;
 				say "[bcduofight]";
 
-
 to say bcduofight:
 	challenge "Sea Lion and Orca Toys";
 	if fightoutcome >= 10 and fightoutcome <= 19:
@@ -1422,7 +1386,7 @@ to say bcduofight:
 		now lastbcduobeaten is turns;
 	else if fightoutcome >= 20 and fightoutcome <= 29:
 		say "     Now that they've got you pinned down, the two inflatables start to fondle and grope you with their flippers. The sea lion's cock and the orca's pussy rub against you as well. As you grow aroused from their touch, the rubbery duo slowly pushes off your gear and clothes, leaving you bare so they may have some fun with you.";
-		if Player is male and ( Cunt Count of Player is 0 or ( Player is female and a random chance of 3 in 5 succeeds ) ):
+		if Player is male and ( Player is not female or ( Player is female and a random chance of 3 in 5 succeeds ) ):
 			say "     After a few trills and barks between them, a decision seems to be reached and the orca moves herself over your crotch, rubbing her rubbery pussy down onto your cock. Growing hard despite the trouble you're in, you're soon ready and she sinks her slick cunt down over your [cock size desc of Player] [Cock of Player] shaft. Her cunt stretched to squeeze around you just right as she takes you in inch by inch until you're fully sheathed in her and her air nozzle clit is rubbing against your crotch. She trills happily and starts bouncing atop you, working her squeezing vinyl walls down around you.";
 			say "     Not to be left out, the sea lion moves up beside you and pulls your face into his crotch. Presented with his dark purple cock, you can see it's similarly got an air nozzle at its tip and that some slick, oily pre is leaking out around the edges of it. For some reason, perhaps the growing arousal you're feeling from having the eager orca atop you, you open your mouth and willingly accept the strange balloon-cock into your mouth. As the sea lion pulls your face into his groin as he fucks your mouth, you lick and suck at his pulsing rod, moaning softly.";
 			say "     They go at it for quite a while until you're pushed past your limit and cum hard, shooting your [Cum Load Size of Player] load into the inflatable female while she trills happily. Moments later the sea lion is set off, shooting a jet of air-driven semen right down your throat. The orgasm, the gas and the semen all work to leave you momentarily dazed and weak, unable to resist as they push you into the [if bcseenthroneroom is true]throne room[else]next room[end if].";
@@ -1457,22 +1421,18 @@ to say bcduofight:
 			say "     Unfortunately though, your escape sends you tumbling right into one of the inflatable dolphin suits. Moving under its own power, it tries to ensnare you while you're still surprised. It's almost like they planned this.";
 			say "[dolcheckA]";
 
-
-
 Chapter 16 - Castle Throne Room
 
 to say bcthroneroom:
 	now bcseenthroneroom is true;
 	say "     The central portion of the bouncy castle's upper level has the same bright, colorful walls with a pair of arched windows along the [Bold Type]northern[roman type] wall. There's a doorway out of her on either side of the room, one to the [link]east[end link] and one to the [link]west[end link], each heading out onto the parapets. Despite the bright colors and soft, rounded shapes of this place, you cannot help but be disturbed. For while the bouncy castle looks fun and safe enough as a kiddy play area, it is the [if HP of Bubble is 2]contents of this room which draw your eyes. You came hoping to find the captured vixen in her inflatable dolphin prison, but you instead find a dozen of the inflatable dolphin suits hanging along the walls[else]dozen of so inflatable dolphin suits hanging along the walls which draw your eyes[end if].";
 	say "     As you try to remain standing, the dolphins on the wall seem to shift about, perhaps from the feeble struggles of their occupants or from the simple swaying brought on by the waves. You look over the inflated dolphin suits[if HP of Bubble is 2], trying to decide which to search first, as these are more opaque than the ones you've seen on the beach. Since they're all inflated and full, you can't tell for certain which may hold the vixen you seek, or[else] and wonder if you should search through them for any survivors. Since they're all inflated and full, you can't even tell[end if] if they hold anyone at all.";
-	say "     There are a dozen inflated dolphins [if HP of Bubble is 2]like the one you saw the vixen being stuffed into. You will have to start checking them if you want to find her[else]to search through[end if]. (Type [link]check dolphin[as]dolchecklist[end link] followed by the number you'd like to check out.)[line break]";
-
+	say "     There are a dozen inflated dolphins [if HP of Bubble is 2]like the one you saw the vixen being stuffed into. You will have to start checking them if you want to find her[else]to search through[end if]. (Type [link]check dolphin[as]dolchecklist[end link] followed by the number you'd like to check out.)";
 
 Book 4 - Sliding
 
-understand "take slide" and "take the slide" and "use slide" and "use the slide" as bcsliding.
-
 bcsliding is an action applying to nothing.
+understand "take slide" and "take the slide" and "use slide" and "use the slide" as bcsliding.
 
 check bcsliding:
 	if location of Player is not Eastern Parapets and player is not in Western Parapets:
@@ -1490,13 +1450,11 @@ instead of going east from Eastern Parapets:
 instead of going west from Western Parapets:
 	try bcsliding;
 
-
 Section 5 - Checking the Dolphin Suits
 
+dolchecklisting is an action applying to nothing.
 understand "dolchecklist" as dolchecklisting.
 understand "dolphin list" as dolchecklisting.
-
-dolchecklisting is an action applying to nothing.
 
 check dolchecklisting:
 	if location of Player is not Castle Throne Room, say "You don't see those here." instead;
@@ -1504,10 +1462,8 @@ check dolchecklisting:
 carry out dolchecklisting:
 	say "check dolphin: [link][bracket]1[close bracket][as]check dolphin 1[end link] [link][bracket]2[close bracket][as]check dolphin 2[end link] [link][bracket]3[close bracket][as]check dolphin 3[end link] [link][bracket]4[close bracket][as]check dolphin 4[end link] [link][bracket]5[close bracket][as]check dolphin 5[end link] [link][bracket]6[close bracket][as]check dolphin 6[end link] [link][bracket]7[close bracket][as]check dolphin 7[end link] [link][bracket]8[close bracket][as]check dolphin 8[end link] [link][bracket]9[close bracket][as]check dolphin 9[end link] [link][bracket]10[close bracket][as]check dolphin 10[end link] [link][bracket]11[close bracket][as]check dolphin 11[end link] [link][bracket]12[close bracket][as]check dolphin 12[end link][line break]";
 
-
-understand "check dolphin [number]" as dolchecking.
-
 dolchecking is an action applying to one number.
+understand "check dolphin [number]" as dolchecking.
 
 check dolchecking:
 	if location of Player is not Castle Throne Room, say "You don't see those here." instead;
@@ -1545,14 +1501,10 @@ carry out dolchecking: [Picks events from dolphinlist, defined earlier in the do
 		say "Error - unknown variation.";
 
 to dolboundstate:
+	setmonster "Bottlenose Toy";
+	choose row MonsterID from Table of Random Critters;
 	let partialengulf be 0;
-	repeat with y running from 1 to number of filled rows in Table of Random Critters:
-		choose row y in Table of Random Critters;
-		if Name entry is "Bottlenose Toy":
-			now MonsterID is y;
-			break;
 	now lustatt is Libido of Player;
-	now calcnumber is -1;
 	let Trixieexit be 0;
 	while Trixieexit is 0:
 		if clearnomore is 0, clear the screen;
@@ -1590,8 +1542,9 @@ to dolboundstate:
 			say "[bold type]1[roman type] - [link]Struggle[as]1[end link][line break]";
 			say "[bold type]2[roman type] - [link][if obliging is true]Oblige[else]Abide[end if][as]2[end link][line break]";
 			say "[bold type]3[roman type] - [link][if boundrecover is false]Endure[else]Recover[end if][as]3[end link][line break]";
-			say "Sanity: [humanity of Player]/ 100	Lust: [lustatt]/100	Struggle: [bottlestrugglebar][line break]";
+			say "Sanity: [humanity of Player]/100  Lust: [lustatt]/100  Struggle: [bottlestrugglebar][line break]";
 			if humanity of Player < 1:
+				LineBreak;
 				say "     You moan and squirm within the dolphin suit, lost in the lust of the physical pleasure it's providing when you feel something touch the outside of the suit. Looking through the green eyes, you can see one of the dolphin girls has come along and you can hear others playing in the water outside. The hope that she's here to play with you pops into your mind. Her fin-hands slide over the suit, opening it a little to adjust its position. She even slides off the head to give you a kiss before helpfully fitting the breather on properly and sliding the head back overtop of you so you can see properly.";
 				say "     She rubs firmly over your groin as she zips you back up, making you cum again. Once you're well-fitted into the inflatable dolphin suit, you are delighted as she pulls you by the suit's handles into the water. She and the other dolphin girls giggle happily, swimming and playing around you. The motion of the strange suit riding the rolling ocean waves sends shocks of pleasure through your body, and the pleasure only intensifies when the one who found you grabs the toy's handles and pulls herself out of the water to ride atop it. The dolphin girl rides the toy for some time, stroking and hugging its vinyl exterior, each motion sending another echo of pleasure through you.";
 				say "     After playing in the water for a while, the girls decide to frolic in the bouncy castle and you're pulled back inside[if Player is not neuter]. You cum several more times as the girls push, pull and squeeze the inflatable suit, dragging you out of the ocean into their floating castle[end if]. With you safely aboard, the excited girls resume their giggling playtime with you as their new toy. The dolphin girls bounce around the castle happily, occasionally stopping to squeeze each other's inflatable bodies, or lick at the slits between their legs, but there are always several girls focusing on you, lavishing attention on the inflatable suit.";
@@ -1626,6 +1579,7 @@ to dolboundstate:
 				trigger ending "Dolphin Suit Trapped";
 				end the story saying "Trapped in the inflatable dolphin suit, your mind slowly fades away until there are no thoughts left in your air-filled head but that of playing at the beach.";
 			else:
+				say "> [run paragraph on]";
 				let k be 0;
 				now keychar is "INVALID";
 				change the text of the player's command to "";
@@ -1634,23 +1588,18 @@ to dolboundstate:
 					translate k;
 					if the player's command matches "[number]":
 						now keychar is "[number understood]";
-				if keychar in lower case exactly matches the text "s" or keychar in lower case exactly matches the text "1" or keychar in lower case exactly matches the text "return" or keychar in lower case matches the text "struggle":
+				if keychar is "s" or keychar is "1" or keychar is "return" or keychar in lower case matches the text "struggle":
 					LineBreak;
 					if struggleatt < (dolphinbundle + 1):
 						increase struggleatt by 1;
-						say "     You struggle to pull yourself free, [one of]creaking loudly against your writhing protests[or]the suit groaning as you try to wrench it from you[or]the suit desperately trying to keep you within its grasp[at random]";
 						if struggleatt is dolphinbundle:
-							say ". You finally manage to wrench the suit free of you, but it still manages to partially cling to your form, hellbent on keeping a hold on you and maintaining its toxic influence...";
-						else:
-							say ".";
-						LineBreak;
+							say "     You struggle to pull yourself free, [one of]creaking loudly against your writhing protests[or]the suit groaning as you try to wrench it from you[or]the suit desperately trying to keep you within its grasp[at random][if struggleatt is dolphinbundle]. You finally manage to wrench the suit free of you, but it still manages to partially cling to your form, hellbent on keeping a hold on you and maintaining its toxic influence...[else].[end if]";
 						if BodyName of Player is "Bottlenose Toy":
 							if a random chance of 1 in 3 succeeds:
 								infect;
 						else if a random chance of 2 in 3 succeeds:
 							infect;
-						increase Libido of Player by 2;
-						if Libido of Player > 100, now Libido of Player is 99;
+						raise Player Libido by 2;
 						decrease humanity of Player by 4 + psycheadjust;
 						increase lustatt by 35 + (lustadjust * 5);
 					else:
@@ -1663,8 +1612,7 @@ to dolboundstate:
 									infect;
 							else if a random chance of 2 in 3 succeeds:
 								infect;
-							increase Libido of Player by 2;
-							if Libido of Player > 100, now Libido of Player is 99;
+							raise Player Libido by 2;
 							decrease humanity of Player by 4 + psycheadjust;
 							increase lustatt by 35 + (lustadjust * 5);
 						else:
@@ -1679,8 +1627,7 @@ to dolboundstate:
 					else if dolphinbundle is 1 and a random chance of 1 in 2 succeeds:
 						increase boundmod by 1;
 					WaitLineBreak;
-					next;
-				else if (obliging is true and (keychar in lower case exactly matches the text "o" or keychar in lower case matches the text "oblige")) or (obliging is false and (keychar in lower case exactly matches the text "a" or keychar in lower case matches the text "abide")) or keychar in lower case exactly matches the text "2":
+				else if (obliging is true and (keychar is "o" or keychar in lower case matches the text "oblige")) or (obliging is false and (keychar is "a" or keychar in lower case matches the text "abide")) or keychar is "2":
 					LineBreak;
 					if obliging is true:
 						say "     You actively submit to these overwhelming circumstances, [one of]mind quickly drowning in a haze of dizzying lust[or]loudly moaning and panting in a dizzying haze of rapidly rising need[or]tight suit squeezing shamelessly against your eager, [bodytype of Player] form[at random].";
@@ -1690,8 +1637,7 @@ to dolboundstate:
 								infect;
 						else if a random chance of 2 in 3 succeeds:
 							infect;
-						increase Libido of Player by 2;
-						if Libido of Player > 100, now Libido of Player is 99;
+						raise Player Libido by 2;
 						decrease humanity of Player by 4 + psycheadjust;
 						increase lustatt by 60 + (lustadjust * 10);
 					else:
@@ -1702,8 +1648,7 @@ to dolboundstate:
 								infect;
 						else if a random chance of 2 in 3 succeeds:
 							infect;
-						increase Libido of Player by 2;
-						if Libido of Player > 100, now Libido of Player is 99;
+						raise Player Libido by 2;
 						decrease humanity of Player by 4 + psycheadjust;
 						increase lustatt by 35 + (lustadjust * 5);
 					if dolphinbundle is 0:
@@ -1711,7 +1656,6 @@ to dolboundstate:
 					else if dolphinbundle is 1 and a random chance of 1 in 2 succeeds:
 						increase boundmod by 1;
 					WaitLineBreak;
-					next;
 				else:
 					now enduring is true;
 					LineBreak;
@@ -1734,8 +1678,7 @@ to dolboundstate:
 								infect;
 						else if a random chance of 2 in 3 succeeds:
 							infect;
-						increase Libido of Player by 1;
-						if Libido of Player > 100, now Libido of Player is 99;
+						raise Player Libido by 1;
 						decrease humanity of Player by 2;
 						increase lustatt by 20 + (lustadjust * 3);
 					if dolphinbundle is 0:
@@ -1743,7 +1686,6 @@ to dolboundstate:
 					else if dolphinbundle is 1 and a random chance of 1 in 2 succeeds:
 						increase boundmod by 1;
 					WaitLineBreak;
-					next;
 
 to say bottlestrugglebar:
 	say "[if boundmod > 1]}[end if][if boundmod > 0]}[end if] ";
@@ -1757,8 +1699,7 @@ to say bottlestrugglebar:
 
 to say dolcheckA: [empty]
 	setmonster "Bottlenose Toy";
-	say "     [bold type]Shall you resist?[roman type][line break]";
-	LineBreak;
+	say "[line break]     [bold type]Shall you resist?[roman type][line break]";
 	say "     ([link]Y[as]y[end link]) - Yes.";
 	say "     ([link]N[as]n[end link]) - No.";
 	if Player consents:
@@ -1872,7 +1813,7 @@ to say dolcheckD:		[complete tf - fight]
 		say "     After having had its fun, the inflatable dolphin dives into the water to frolic and look for some new amusement. Still a little fuzzy headed after the romp with the dolphin toy, you momentarily forget about the dolphin suit which once held your recent playmate. It makes a grab for you and wraps itself partially over you before you have a chance to react. Moving under its own power, the strange suit tries to envelop you within itself.";
 		say "[dolcheckA]";
 	else if fightoutcome is 30: [fled]
-		say "     Taking your only option for escape from the fight, you dive out onto the parapets and quickly rush to the waterslide. You hop onto the slide, take it down into the water and start swimming for it[if boatfound is 3]. You swim as quickly as you can to your boat. The dolphin toy, thinking this is all part of some game or race, she swims along with you, bumping her nose against you and nuzzling your groin. You manage to stay focused despite this distraction and make it to the boat, pull up your anchor and sail off, much to the playful creature's momentary disappointment before the thought leaves its airy mind and it splashes off for fun elsewhere. You pull back to shore to take a break before possibly returning, hoping the dolphin will have left the waters around the castle by then[else if boatfound is 2]. You swim the short distance to your rowboat and detach your line. You begin the hard row back to shore while the playful dolphin swims and dives around and even over your boat. As you're approaching the shore, its airy mind thankfully gets distracted and it splashes off for fun elsewhere. You continue to shore and pull your boat aground to take a break to recover your strength after your rush to shore before possibly returning[else]. You swim as quickly as you can back to shore, but it is a long trip with the dolphin toy harassing you the whole time. Thinking this is all part of some game or race, she swims along with you, bumping her nose against you and nuzzling your groin. You manage to stay focused with some effort despite the distraction and eventually make it back to shore. The playful creature follows you all the way back, only getting distracted and splashing off for fun elsewhere as you're approaching the beach. Tired after the long swim, you pull yourself onto the sandy shore and have to take a break before possibly returning[end if].";
+		say "     Taking your only option for escape from the fight, you dive out onto the parapets and quickly rush to the waterslide. You hop onto the slide, take it down into the water and start swimming for it. You swim [if boatfound is 3]as quickly as you can to your boat. The dolphin toy, thinking this is all part of some game or race, she swims along with you, bumping her nose against you and nuzzling your groin. You manage to stay focused despite this distraction and make it to the boat, pull up your anchor and sail off, much to the playful creature's momentary disappointment before the thought leaves its airy mind and it splashes off for fun elsewhere. You pull back to shore to take a break before possibly returning, hoping the dolphin will have left the waters around the castle by then[else if boatfound is 2]the short distance to your rowboat and detach your line. You begin the hard row back to shore while the playful dolphin swims and dives around and even over your boat. As you're approaching the shore, its airy mind thankfully gets distracted and it splashes off for fun elsewhere. You continue to shore and pull your boat aground to take a break to recover your strength after your rush to shore before possibly returning[else]as quickly as you can back to shore, but it is a long trip with the dolphin toy harassing you the whole time. Thinking this is all part of some game or race, she swims along with you, bumping her nose against you and nuzzling your groin. You manage to stay focused with some effort despite the distraction and eventually make it back to shore. The playful creature follows you all the way back, only getting distracted and splashing off for fun elsewhere as you're approaching the beach. Tired after the long swim, you pull yourself onto the sandy shore and have to take a break before possibly returning[end if].";
 		if boatfound is not 3:
 			let dam be 15 - ( strength of Player / 2 ) - ( stamina of Player / 2 );
 			if dam < 0, now dam is 0;
@@ -1883,15 +1824,14 @@ to say dolcheckD:		[complete tf - fight]
 		follow the turnpass rule;
 
 to say dolcheckE:		[vixen]
-	let compnumber be ( (number of filled rows in the Table of PlayerChildren + number of entries in childrenfaces) / 3 );
+	let compnumber be ( number of filled rows in the Table of PlayerChildren + number of entries in childrenfaces ) / 3;
 	if companionList of Player is not empty, increase compnumber by 1;
 	project Figure of Bubble_icon;
 	say "     With some effort, you make your way over to one of the large dolphin inflatables and start looking for the seam to open it. It takes a little time to find it, having partially melded itself shut, but you manage to start working it open. As you begin to get it open, it starts to shift and move with the struggles of someone inside. When you get it open, you're pleased to see the orange color of the vixen you seek. Her fur has become a smooth, latex skin, but you continue on in the hope that it's not already too late. As you get her head free and pull the breathing tube from her muzzle, her struggles grow all the more fervent.";
 	say "     'Mmm... Can we play now? No! Ah! Get me out of this silly thing!' she yips with a definite squeak to her voice. You inform her that you're trying to free her, but that you want something in return. 'Oh! That'd be fun!' she giggles. 'This thing's been teasing me for so long, I could certainly go for the real thing,' she adds with a moan. After elaborating that you're actually after her stash of supplies, she nods and manages to focus enough to be more serious. 'No prob. We'll split it if you can get me out of this mess,' she says eagerly, still fighting against the suit which seems very reluctant to release her. With the both of you working at it, she's able to keep the suit from resealing her while you struggle to deflate it to the point it can no longer strive to hold her.";
 	WaitLineBreak;
 	say "     Now that you've found the vixen and have managed to get her free, you still need to escape with her. Looking around the room, you know you've only got the two options, to head to either of the slides.";
-	say "     [bold type]Shall you attempt to make your escape to the east or to the west?[roman type][line break]";
-	LineBreak;
+	say "[line break]     [bold type]Shall you attempt to make your escape to the east or to the west?[roman type][line break]";
 	say "     ([link]Y[as]y[end link]) - East.";
 	say "     ([link]N[as]n[end link]) - West.";
 	if Player consents:
@@ -1923,15 +1863,14 @@ to say dolcheckE:		[vixen]
 		else:
 			say "[bcchairfinal2]";
 
-
 Chapter 1 - Western Chair Escape
 
 to say bcchairfinal1: [FLOT - Check?]
-	let compnumber be ( (number of filled rows in the Table of PlayerChildren + number of entries in childrenfaces) / 3 );
+	let compnumber be ( number of filled rows in the Table of PlayerChildren + number of entries in childrenfaces ) / 3;
 	if companionList of Player is not empty, increase compnumber by 1;
 	let bcchairescape be 0;
 	let bcchairstage be 1;
-	let playernum be ( 150 + humanity of Player - Libido of Player + ( level of Player * 2 ) );
+	let playernum be 150 + humanity of Player - Libido of Player + ( level of Player * 2 );
 	let playernum be a random number between 1 and playernum;
 	let chairnum be 175;
 	if HardMode is true, increase chairnum by level of Player;
@@ -1951,7 +1890,7 @@ to say bcchairfinal1: [FLOT - Check?]
 	if t is 1:		[strength]
 		let playernum be a random number between 1 and strength of Player;
 		let chairnum be 15;
-		if HardMode is true, increase chairnum by ( level of Player / 4 );
+		if HardMode is true, increase chairnum by level of Player / 4;
 		let chairnum be a random number between 1 and chairnum;
 [		say "Str: Playernum: [playernum] vs Chairnum: [chairnum]";]
 		if Playernum >= chairnum:
@@ -1964,7 +1903,7 @@ to say bcchairfinal1: [FLOT - Check?]
 	else if t is 2:	[stamina]
 		let playernum be a random number between 1 and stamina of Player;
 		let chairnum be 17;
-		if HardMode is true, increase chairnum by ( level of Player / 4 );
+		if HardMode is true, increase chairnum by level of Player / 4;
 		let chairnum be a random number between 1 and chairnum;
 [		say "Sta: Playernum: [playernum] vs Chairnum: [chairnum]";]
 		if Playernum >= chairnum:
@@ -1975,7 +1914,7 @@ to say bcchairfinal1: [FLOT - Check?]
 	else if t is 3:	[dexterity]
 		let playernum be a random number between 1 and dexterity of Player;
 		let chairnum be 18;
-		if HardMode is true, increase chairnum by ( level of Player / 4 );
+		if HardMode is true, increase chairnum by level of Player / 4;
 		let chairnum be a random number between 1 and chairnum;
 [		say "Dex: Playernum: [playernum] vs Chairnum: [chairnum]";]
 		if Playernum >= chairnum:
@@ -1987,10 +1926,10 @@ to say bcchairfinal1: [FLOT - Check?]
 			say "     You try your best to set up a rhythm to time your movements. You shift your weight from one limb to the next in an attempt to throw off the gripping orifices. Unfortunately with the swaying of the floor with the waves, you find it too hard to get into any kind of consistent rhythm and you make little progress in escaping.";
 	if bcchairescape < 2:
 		say "     With the pink tubes reaching the top of the seat, the sections begin to more fully merge. If the vixen were even willing to struggle against the inflatable chair, there would be little chance of escape now. As you watch, the material flows over her back, joining with the hood over her head and sealing her in. As it is doing so, the capsule starts to lower itself down, slowly dropping down into the floor. Time is running out if you're going to be able to rescue her - or yourself for that matter, as the vinyl material holding your limbs starts to rise up, preparing to repeat the process on you.";
-		say "     The mask over your head releases a fresh lungful of the arousing gas into you, increasing the pleasure of the smooth vinyl rubbing against your [bodytype of Player] body. Breathing in the aphrodisiac, you can't help but become aroused as the motion of the strange chair increases[if Cock Count of Player > 1]. Your stiffening cocks slide into slick orifices which form in the seat beneath you. These squeeze and milk at your erections, increasing your pleasure and making it harder to stay focused on escape[else if Cock Count of Player is 1]. Your stiffening cock slides into a slick orifice which forms in the seat beneath you. This squeezes and milks at your erection, increasing your pleasure and making it harder to stay focused on escape[end if][if Cunt Count of Player > 1]. You feel some of the rubbery material bulge up and push its way into your damp pussies. These inflate slowly, filling you with pulsing dildos that shiver delightfully inside you from the chair's vibrations[else if Cunt Count of Player is 1]. You feel some of the rubbery material bulge up and push its way into your damp pussy. This inflates slowly, filling you with a pulsing dildo that shivers delightfully inside you from the chair's vibrations[end if][if Player is neuter]. The chair's material probes at your bare groin, and finding no genitals, forms rippling protrusions which stroke and rub against your flat crotch, sending soft shivers of delight through you[end if].";
+		say "     The mask over your head releases a fresh lungful of the arousing gas into you, increasing the pleasure of the smooth vinyl rubbing against your [bodytype of Player] body. Breathing in the aphrodisiac, you can't help but become aroused as the motion of the strange chair increases[if Cock Count of Player > 1]. Your stiffening cocks slide into slick orifices which form in the seat beneath you. These squeeze and milk at your erections, increasing your pleasure and making it harder to stay focused on escape[else if Player is male]. Your stiffening cock slides into a slick orifice which forms in the seat beneath you. This squeezes and milks at your erection, increasing your pleasure and making it harder to stay focused on escape[end if][if Cunt Count of Player > 1]. You feel some of the rubbery material bulge up and push its way into your damp pussies. These inflate slowly, filling you with pulsing dildos that shiver delightfully inside you from the chair's vibrations[else if Player is female]. You feel some of the rubbery material bulge up and push its way into your damp pussy. This inflates slowly, filling you with a pulsing dildo that shivers delightfully inside you from the chair's vibrations[end if][if Player is neuter]. The chair's material probes at your bare groin, and finding no genitals, forms rippling protrusions which stroke and rub against your flat crotch, sending soft shivers of delight through you[end if].";
 		WaitLineBreak;
 		now bcchairstage is 3;
-		let playernum be ( 150 + humanity of Player - Libido of Player + ( level of Player * 2 ) );
+		let playernum be 150 + humanity of Player - Libido of Player + ( level of Player * 2 );
 		let playernum be a random number between 1 and playernum;
 		let chairnum be 180;
 		if HardMode is true, increase chairnum by level of Player;
@@ -2012,7 +1951,7 @@ to say bcchairfinal1: [FLOT - Check?]
 			if x is 1:				[intelligence]
 				let playernum be a random number between 1 and intelligence of Player;
 				let chairnum be 15;
-				if HardMode is true, increase chairnum by ( level of Player / 4 );
+				if HardMode is true, increase chairnum by level of Player / 4;
 				let chairnum be a random number between 1 and chairnum;
 [				say "Int: Playernum: [playernum] vs Chairnum: [chairnum]";]
 				if Playernum >= chairnum:
@@ -2025,7 +1964,7 @@ to say bcchairfinal1: [FLOT - Check?]
 			else if x is 2:		[dexterity]
 				let playernum be a random number between 1 and dexterity of Player;
 				let chairnum be 17;
-				if HardMode is true, increase chairnum by ( level of Player / 4 );
+				if HardMode is true, increase chairnum by level of Player / 4;
 				let chairnum be a random number between 1 and chairnum;
 [				say "Dex: Playernum: [playernum] vs Chairnum: [chairnum]";]
 				if Playernum >= chairnum:
@@ -2038,7 +1977,7 @@ to say bcchairfinal1: [FLOT - Check?]
 			else:				[strength]
 				let playernum be a random number between 1 and strength of Player;
 				let chairnum be 18;
-				if HardMode is true, increase chairnum by ( level of Player / 4 );
+				if HardMode is true, increase chairnum by level of Player / 4;
 				let chairnum be a random number between 1 and chairnum;
 [				say "Str: Playernum: [playernum] vs Chairnum: [chairnum]";]
 				if Playernum >= chairnum:
@@ -2053,7 +1992,7 @@ to say bcchairfinal1: [FLOT - Check?]
 				say "     As it is, the chair's vinyl tubes are climbing further up your limbs, now having your forearms and lower legs completely enclosed. The material around your lower body grips your tighter, pulling you down into the seat[if anallevel > 1] as it presses a swelling bulge against your anus. With it tightly gripping your lower half, your struggles are in vain as your pucker is spread open a swelling, cock-like bulge inflates inside you, causing you to moan. With this new anchor-point stuffed inside you[else]. With you further restrained by the material wrapped around your hips[end if], its motion starts up again in earnest again, sending fresh waves of pleasure as another blast of the aphrodisiac gas fills your lungs.";
 				WaitLineBreak;
 				now bcchairstage is 5;
-				let playernum be ( 150 + humanity of Player - Libido of Player + ( level of Player * 2 ) );
+				let playernum be 150 + humanity of Player - Libido of Player + ( level of Player * 2 );
 				let playernum be a random number between 1 and playernum;
 				let chairnum be 185;
 				if HardMode is true, increase chairnum by level of Player;
@@ -2062,12 +2001,12 @@ to say bcchairfinal1: [FLOT - Check?]
 				if Playernum >= chairnum:
 					now bcchairescape is 2;
 [					say " [special-style-1]Success[roman type].";]
-					say "     With the grip on your limbs too strong now to simply break free, your sex-addled mind can see no other alternative but to give the strange chair exactly what it wants and more. Hoping to overload it with pleasure, you throw yourself into riding it as long and as hard as you can. You move yourself with the chair's rocking motion, pushing yourself [if Cunt Count of Player > 1 or (Player is female and anallevel > 1)]onto those wonderfully thrusting dildos it had stuffed inside you[else]to lick and suck at that throbbing projection stuffed into your mouth[end if][if Cock Count of Player > 1]. You drive your cocks into those gripping holes of its, nearly losing yourself in the pleasure of fucking those slick, squeezing orifices[else if Cock Count of Player is 1]. You drive your cock into that gripping hole of its, nearly losing yourself in the pleasure of fucking that slick, squeezing orifice[end if][if Player is female]. You squeeze with your thighs, tightening your inner muscles around the rubbery flesh stuffed inside you, taking delight in the pulsing probes filling you so wonderfully[end if][if anallevel > 1]. You even squeeze down on the inflating butt plug inside you, the feel of it swelling deeper as it slides along your silky inner walls feeling great to your lust-clouded body[end if].";
-					say "     You try your best to hold back as long as you can, constantly reminding yourself your need to escape. When your climax finally comes[if Player is male] and you pump your hot seed into the sex chair[end if], your cries are muffled by the thick rod stuffed into your mouth[if Cunt Count of Player > 1]. Your cunts clamp down around the throbbing dildos inside you as you release another flow of your hot juices over them, soaking yourself and the seat[else if Cunt Count of Player is 1]. Your cunt clamps down around the throbbing dildo inside you as you release another flow of your hot juices over it, soaking yourself and the seat[end if]. Through all this, you barely manage to keep your mind on track. With thoughts of escape returning, you resume your struggles as your powerful climax comes to an end. As you'd hoped, the chair's grip on you has relaxed. Whether you believe it merely thinks you complacent and accepting now or that it has somehow been momentarily overloaded by your powerful release doesn't matter, only that you must seize this window of opportunity.";
+					say "     With the grip on your limbs too strong now to simply break free, your sex-addled mind can see no other alternative but to give the strange chair exactly what it wants and more. Hoping to overload it with pleasure, you throw yourself into riding it as long and as hard as you can. You move yourself with the chair's rocking motion, pushing yourself [if Cunt Count of Player > 1 or (Player is female and anallevel > 1)]onto those wonderfully thrusting dildos it had stuffed inside you[else]to lick and suck at that throbbing projection stuffed into your mouth[end if][if Cock Count of Player > 1]. You drive your cocks into those gripping holes of its, nearly losing yourself in the pleasure of fucking those slick, squeezing orifices[else if Player is male]. You drive your cock into that gripping hole of its, nearly losing yourself in the pleasure of fucking that slick, squeezing orifice[end if][if Player is female]. You squeeze with your thighs, tightening your inner muscles around the rubbery flesh stuffed inside you, taking delight in the pulsing probes filling you so wonderfully[end if][if anallevel > 1]. You even squeeze down on the inflating butt plug inside you, the feel of it swelling deeper as it slides along your silky inner walls feeling great to your lust-clouded body[end if].";
+					say "     You try your best to hold back as long as you can, constantly reminding yourself your need to escape. When your climax finally comes[if Player is male] and you pump your hot seed into the sex chair[end if], your cries are muffled by the thick rod stuffed into your mouth[if Cunt Count of Player > 1]. Your cunts clamp down around the throbbing dildos inside you as you release another flow of your hot juices over them, soaking yourself and the seat[else if Player is female]. Your cunt clamps down around the throbbing dildo inside you as you release another flow of your hot juices over it, soaking yourself and the seat[end if]. Through all this, you barely manage to keep your mind on track. With thoughts of escape returning, you resume your struggles as your powerful climax comes to an end. As you'd hoped, the chair's grip on you has relaxed. Whether you believe it merely thinks you complacent and accepting now or that it has somehow been momentarily overloaded by your powerful release doesn't matter, only that you must seize this window of opportunity.";
 				else:
 [					say " [special-style-2]Fail[roman type].";]
-					say "     With the grip on your limbs too strong now to simply break free, your sex-addled mind throws itself into the pursuit of pleasure in the hopes of satisfying this strange chair's needs or overloading it. You begin to ride it, telling yourself that nothing stops you from enjoying this ride as well. You move yourself with the chair's rocking motion as best you can, pushing yourself [if Cunt Count of Player > 1 or (Player is female and anallevel > 1)]onto those wonderfully thrusting dildos it had stuffed inside you[else]against it while licking and sucking lustfully at that throbbing projection stuffed into your mouth[end if][if Cock Count of Player > 1]. You pound your cocks into those gripping holes of its, losing yourself in the pleasure of fucking those slick, squeezing orifices for all they're worth[else if Cock Count of Player is 1]. You pound your cock into that gripping hole of its, losing yourself in the pleasure of fucking that slick, squeezing orifice for all it's worth[end if][if Player is female]. You squeeze with your thighs, tightening your inner muscles around the rubbery flesh stuffed inside you, taking delight in the pulsing probes filling you so wonderfully[end if][if anallevel > 1]. You eagerly squeeze down on the inflating butt plug inside you, the feel of it swelling deeper as it slides along your silky inner walls feeling great to your lust-clouded body[end if].";
-					say "     You push yourself to further heights, your sex-crazed mind only seeking another release, your thoughts of escape momentarily forgotten. When your climax finally comes[if Player is male] and you pump your hot seed into the sex chair[end if], your cries are muffled by the thick rod stuffed into your mouth[if Cunt Count of Player > 1]. Your cunts clamp down around the throbbing dildos inside you as you release another flow of your hot juices over them, soaking yourself and the seat[else if Cunt Count of Player is 1]. Your cunt clamps down around the throbbing dildo inside you as you release another flow of your hot juices over it, soaking yourself and the seat[end if]. Once spent, you collapse onto the seat, basking in the powerful afterglow and breathing in more of that arousing gas as you pant for breath.";
+					say "     With the grip on your limbs too strong now to simply break free, your sex-addled mind throws itself into the pursuit of pleasure in the hopes of satisfying this strange chair's needs or overloading it. You begin to ride it, telling yourself that nothing stops you from enjoying this ride as well. You move yourself with the chair's rocking motion as best you can, pushing yourself [if Cunt Count of Player > 1 or (Player is female and anallevel > 1)]onto those wonderfully thrusting dildos it had stuffed inside you[else]against it while licking and sucking lustfully at that throbbing projection stuffed into your mouth[end if][if Cock Count of Player > 1]. You pound your cocks into those gripping holes of its, losing yourself in the pleasure of fucking those slick, squeezing orifices for all they're worth[else if Player is male]. You pound your cock into that gripping hole of its, losing yourself in the pleasure of fucking that slick, squeezing orifice for all it's worth[end if][if Player is female]. You squeeze with your thighs, tightening your inner muscles around the rubbery flesh stuffed inside you, taking delight in the pulsing probes filling you so wonderfully[end if][if anallevel > 1]. You eagerly squeeze down on the inflating butt plug inside you, the feel of it swelling deeper as it slides along your silky inner walls feeling great to your lust-clouded body[end if].";
+					say "     You push yourself to further heights, your sex-crazed mind only seeking another release, your thoughts of escape momentarily forgotten. When your climax finally comes[if Player is male] and you pump your hot seed into the sex chair[end if], your cries are muffled by the thick rod stuffed into your mouth[if Cunt Count of Player > 1]. Your cunts clamp down around the throbbing dildos inside you as you release another flow of your hot juices over them, soaking yourself and the seat[else if Player is female]. Your cunt clamps down around the throbbing dildo inside you as you release another flow of your hot juices over it, soaking yourself and the seat[end if]. Once spent, you collapse onto the seat, basking in the powerful afterglow and breathing in more of that arousing gas as you pant for breath.";
 					say "     By the time the haze lifts, you realize that the chair has recovered and is resuming to engulf you. The tubes have continued to climb up your arms and legs. They join up with the other material from the seat itself, starting to seal you in seamlessly. The vinyl flows up across your back and melds with the mask, encapsulating you fully. While it is hard to tell from within your latex prison, you get the feeling that you're sinking. Realizing that the chair pod, and you with it, is being drawn into the castle itself as the vixen's already has been, you push yourself to continue struggling.";
 					WaitLineBreak;
 					let x be a random number between 1 and 3;
@@ -2085,7 +2024,7 @@ to say bcchairfinal1: [FLOT - Check?]
 			else:
 				say "     As you continue fighting, you can feel the sex chair's grip on you loosen and you pull hard to get free.";
 	if bcchairescape is 2:	[escape]
-		say "     Your effort finally pays off as you're able to pull your [one of]left[or]right[purely at random] arm free[if bcchairstage is 2]. You grab the back of the mask, stretching the rubbery straps until you're able to pull them off your head[else]. You grab the back of the mask and pull it from your face, popping the thick, rubbery phallus from your mouth[end if]. Gasping in the fresh sea air, your head starts to clear and you turn your focus to getting out of this trap. Grabbing the inflated tube around your other hand, you squeeze it firmly, partially deflating it. When you release it, it is looser momentarily, allowing you to pull your arm free. You do the same for your legs and push yourself off the seat before it can devise some new means to hold you[if bcchairstage > 2 and bcchairstage < 5 and (Player is not neuter)]. There is a wet, slick sound as you pull your groin free of the sticky seat and its stimulating devices[end if]."; [This last conditional is included here instead of in the following 'else if' check to avoid strange paragraph spacing]
+		say "     Your effort finally pays off as you're able to pull your [one of]left[or]right[purely at random] arm free. You grab the back of the mask[if bcchairstage is 2], stretching the rubbery straps until you're able to pull them off your head[else] and pull it from your face, popping the thick, rubbery phallus from your mouth[end if]. Gasping in the fresh sea air, your head starts to clear and you turn your focus to getting out of this trap. Grabbing the inflated tube around your other hand, you squeeze it firmly, partially deflating it. When you release it, it is looser momentarily, allowing you to pull your arm free. You do the same for your legs and push yourself off the seat before it can devise some new means to hold you[if bcchairstage > 2 and bcchairstage < 5 and (Player is not neuter)]. There is a wet, slick sound as you pull your groin free of the sticky seat and its stimulating devices[end if]."; [This last conditional is included here instead of in the following 'else if' check to avoid strange paragraph spacing]
 		if bcchairstage is 2:		[fast escape]
 			LineBreak;
 			say "     You quickly rush over to the seat trying to engulf the vixen and repeat the same means of escape for her. At first, she's too focused on trying to enjoy the chair to realize what's going on. You have to give her ass a squeeze and her muzzle a kiss after pulling off her mask to get her to focus on you long enough for you to remind her that you both need to leave before you're caught again. Nodding in agreement, she pulls her limbs free after you deflate each of the pink tubes. Once released, you help her off the seat, a wet, slick pop coming as the inflatable dildo inside her is pulled out[if compnumber > 1]. You then proceed to assist your companions, who have been making headway in freeing themselves thanks to the distraction your escape has caused and finish pulling them free[end if].";
@@ -2096,8 +2035,7 @@ to say bcchairfinal1: [FLOT - Check?]
 		else:		[too late]
 			say "     You quickly rush over to the floor into which the vixen's capsule has disappeared, but it is too late. The material has seamlessly returned to its initial state and you can barely hear her muffled moans of vulpine delight. You try to tear and cut at the material, but it won't yield, any marks you make rapidly sealing back up. Not wanting to risk the strange castle trying to catch you again, you decide to leave this place as quickly as possible, diving onto the slide and taking it down into the sea.";
 			say "     Frustrated with the time you've wasted on this project, you [if boatfound is 3 or boatfound is 2]return to your boat[else]leap back into the water[end if] and take a moment to gather your bearings. You're reminded of the mooring lines securing the castle and wonder if it would be wise to send the whole place out to sea. Releasing it may prevent more local lifeforms from falling prey to its influence, but there's also the risk that you'll spread the infection further if it drifts to another populated area.";
-			say "     [bold type]Do you cut the rope?[roman type][line break]";
-			LineBreak;
+			say "[line break]     [bold type]Do you cut the rope?[roman type][line break]";
 			say "     ([link]Y[as]y[end link]) - Yes. The castle poses a serious threat to yourself and other beach-goers.";
 			say "     ([link]N[as]n[end link]) - No. You don't want to risk causing trouble elsewhere.";
 			if Player consents:
@@ -2111,7 +2049,6 @@ to say bcchairfinal1: [FLOT - Check?]
 			now HP of Bubble is 99;
 			decrease score by 10;
 
-
 to say bcchairfinal2:
 	say "     You don't resist and let yourself deeply breathe in the arousing gas being pumped by the mask, your eyes drawn to the sight of the vixen slowly being trapped by the chair. The padded front of the seat forms a phallic tube that gets pressed into her muzzle. She doesn't struggle long and is soon moaning softly and sucking at the breathing tube even as more flowing rubber slides over her head, encapsulating it entirely. She grinds her crotch down harder on the chair and cries out, wet juices soaking the seat as the tubes resume their climb up her trapped limbs.";
 	say "     Those tubes pause briefly in their growth at her elbows and knees. For a moment, you think they're gathering pressure before continuing, but you notice that the activity's not stopped entirely. Instead, the seat at her crotch is growing [if anallevel is 3]a pair of phallic bulges of its own, extending them into its victim's juicy cunt and stretchable asshole[else]a phallic bulge of its own, extending it into its victim's juicy, stretchable cunt[end if], drawing fresh moans of delight from her. These rubbery cocks pulse and vibrate as the chair fucks the latex vixen, keeping her lustfully distracted as it resumes encapsulating her. You moan in pleasure at the sight, grinding your groin firmly down onto the seat, eager for some stimulation of your own. In your lust-addled state, you find yourself hoping you'll get your turn soon.";
@@ -2120,20 +2057,19 @@ to say bcchairfinal2:
 	say "     As those pink tubes reach the top of the seat, the sections begin to more full merge. If the vixen were even willing to struggle against the inflatable chair, there would be little chance of escape now. As you watch with increasing excitement, the material flows over her back, joining with the hood over her head and sealing her in. As it is doing so, the capsule starts to lower itself down, slowly dropping down into the floor.";
 	WaitLineBreak;
 	say "     Realizing that you won't be released for a long time, if ever, you momentarily consider struggling. This is put a stop to by a fresh wave of gas that muddles your thoughts even as the vinyl material holding your limbs starts to rise up, preparing to repeat the process on you.";
-	say "     As the thick gas makes you feel lightheaded and aroused, it also increases the pleasure you feel from the smooth vinyl rubbing against your [bodytype of Player] body. Breathing in the aphrodisiac, you can't help but become aroused as the motion of the strange chair increases[if Cock Count of Player > 1]. Your stiffening cocks slide into slick orifices which form in the seat beneath you. These squeeze and milk at your erections, increasing your pleasure and making it harder to stay focused on escape[else if Cock Count of Player is 1]. Your stiffening cock slides into a slick orifice which forms in the seat beneath you. This squeezes and milks at your erection, increasing your pleasure and making it harder to stay focused on escape[end if][if Cunt Count of Player > 1]. You feel some of the rubbery material bulge up and push its way into your damp pussies. These inflate slowly, filling you with pulsing dildos that shiver delightfully inside you from the chair's vibrations[else if Cunt Count of Player is 1]. You feel some of the rubbery material bulge up and push its way into your damp pussy. This inflates slowly, filling you with a pulsing dildo that shivers delightfully inside you from the chair's vibrations[end if][if Player is neuter]. The chair's material probes at your bare groin, and finding no genitals, forms rippling protrusions which stroke and rub against your flat crotch, sending soft shivers of delight through you[end if]. Taking all these pleasures the chair has to offer, you grind yourself down atop it, moaning happily.";
+	say "     As the thick gas makes you feel lightheaded and aroused, it also increases the pleasure you feel from the smooth vinyl rubbing against your [bodytype of Player] body. Breathing in the aphrodisiac, you can't help but become aroused as the motion of the strange chair increases[if Cock Count of Player > 1]. Your stiffening cocks slide into slick orifices which form in the seat beneath you. These squeeze and milk at your erections, increasing your pleasure and making it harder to stay focused on escape[else if Player is male]. Your stiffening cock slides into a slick orifice which forms in the seat beneath you. This squeezes and milks at your erection, increasing your pleasure and making it harder to stay focused on escape[end if][if Cunt Count of Player > 1]. You feel some of the rubbery material bulge up and push its way into your damp pussies. These inflate slowly, filling you with pulsing dildos that shiver delightfully inside you from the chair's vibrations[else if Player is female]. You feel some of the rubbery material bulge up and push its way into your damp pussy. This inflates slowly, filling you with a pulsing dildo that shivers delightfully inside you from the chair's vibrations[end if][if Player is neuter]. The chair's material probes at your bare groin, and finding no genitals, forms rippling protrusions which stroke and rub against your flat crotch, sending soft shivers of delight through you[end if]. Taking all these pleasures the chair has to offer, you grind yourself down atop it, moaning happily.";
 	WaitLineBreak;
 	say "     Making no attempt to resist the pleasures the chair brings, you become quite aroused and respond to the stimulation with moans of pleasure. As a protrusion swells up in the mask, it slides into your mouth with a decidedly phallic shape to stuff your mouth and throat. You lick and suck at this, eager to show the chair how much you appreciate the wonderful delight it's bringing you. In your hyper-aroused state, the moans of pleasure coming from the vixen's descending capsule are not a source for concern, but a promise of the ecstasy soon to come.";
 	say "     The sex chair stimulates you without stop - its motion against you, the feel of its [if Player is female]probes[else]probe[end if] throbbing inside you[if Player is male], those gripping holes around your maleness[end if] - all work without tire to pleasure you[if Player is male]. Your man meat pulses and throbs as the rubbery flesh squeezes and milks at you until you finally cum hard. You groan around that phallic protrusion in your mouth as your balls are drained and the pleasure of orgasm overtakes you[end if][if Player is female]. Those throbbing probes inside you inflate to fill you to your limits and even a little further each time they pulse inside you, sending waves of delight through you. You soak them and seat beneath you with your juices as you climax[end if][if Player is neuter]. Your body is rubbed and rocked against the seat beneath you, the smooth surface sliding wonderfully against your body while those stimulating bumps send shivers through your bare groin, making you cry out in delight[end if]. You pant and sag down atop the seat as the pleasure of your afterglow fills you even as the vixen's rubbery bubble sinks out of sight.";
 	WaitLineBreak;
 	say "     The chair's motion slows and your mind becomes further clouded as you continue to breathe in that wonderfully euphoric gas. Noticing the tubes continuing to inflate and rise up your arms, you wait patiently, letting the chair continue to grow up your limbs, contenting yourself for the moment with licking and sucking at the dildo tube in your mouth. Sensing your compliance, the chair continues to envelop you, flowing up over your arms and legs to fully encase them. It also forms a snug enclosure around your body, flowing up over your hips and back. This eventually joins in with the mask over your head and the fully grown tubes covering your limbs, sealing you in fully[if anallevel > 1]. Feeling a light pressure at your ass, you relax your anal ring, allowing another delightful probe to push into your backside, stuffing that hole as well[end if].";
-	say "     You start to rub and grind yourself against the seat for further stimulation, setting the strange sex chair into motion again, building you up towards another climax even as you can feel it slowly sinking down into the floor, taking you with it. Your sex-addled mind does not care at this point, willingly enjoying this strange capsule's delights and accepting whatever it may wish to do with you. You move yourself with the chair's rocking motion as best you can, pushing yourself [if Cunt Count of Player > 1 or (Player is female and anallevel > 1)]onto those wonderfully thrusting dildos it had stuffed inside you[else]against it while licking and sucking lustfully at that throbbing projection stuffed into your mouth[end if][if Cock Count of Player > 1]. You pound your cocks into those gripping holes of its, losing yourself in the pleasure of fucking those slick, squeezing orifices for all they're worth[else if Cock Count of Player is 1]. You pound your cock into that gripping hole of its, losing yourself in the pleasure of fucking that slick, squeezing orifice for all it's worth[end if][if Player is female]. You squeeze with your thighs, tightening your inner muscles around the rubbery flesh stuffed inside you, taking delight in the pulsing probes filling you so wonderfully[end if][if anallevel > 1]. You eagerly squeeze down on the inflating butt plug inside you, the feel of it swelling deeper as it slides along your silky inner walls feeling great to your lust-clouded body[end if].";
+	say "     You start to rub and grind yourself against the seat for further stimulation, setting the strange sex chair into motion again, building you up towards another climax even as you can feel it slowly sinking down into the floor, taking you with it. Your sex-addled mind does not care at this point, willingly enjoying this strange capsule's delights and accepting whatever it may wish to do with you. You move yourself with the chair's rocking motion as best you can, pushing yourself [if Cunt Count of Player > 1 or (Player is female and anallevel > 1)]onto those wonderfully thrusting dildos it had stuffed inside you[else]against it while licking and sucking lustfully at that throbbing projection stuffed into your mouth[end if][if Cock Count of Player > 1]. You pound your cocks into those gripping holes of its, losing yourself in the pleasure of fucking those slick, squeezing orifices for all they're worth[else if Player is male]. You pound your cock into that gripping hole of its, losing yourself in the pleasure of fucking that slick, squeezing orifice for all it's worth[end if][if Player is female]. You squeeze with your thighs, tightening your inner muscles around the rubbery flesh stuffed inside you, taking delight in the pulsing probes filling you so wonderfully[end if][if anallevel > 1]. You eagerly squeeze down on the inflating butt plug inside you, the feel of it swelling deeper as it slides along your silky inner walls feeling great to your lust-clouded body[end if].";
 	WaitLineBreak;
-	say "     You push yourself to further heights, your sex-crazed mind only seeking another release and more pleasure. When your climax finally comes[if Player is male] and you pump your hot seed into the sex chair[end if], your cries are muffled by the thick rod stuffed into your mouth[if Cunt Count of Player > 1]. Your cunts clamp down around the throbbing dildos inside you as you release another flow of your hot juices over them, soaking yourself and the seat[else if Cunt Count of Player is 1]. Your cunt clamps down around the throbbing dildo inside you as you release another flow of your hot juices over it, soaking yourself and the seat[end if]. Once spent, you collapse onto the seat, basking in the powerful afterglow and breathing in more of that arousing gas as you pant for breath. Even as your mind sinks away, fading away beneath the gas that keeps you constantly aroused, so does the pod encapsulating you fade back into the floor. Slick liquid flows in around you and your gear is either dissolved or expelled from the pod, leaving you naked and able to enjoy smooth stimulation over every square inch of your body. You give in to the pleasure, giving yourself over to become a part of this wonderful castle and to the wonderful delights your new home can give.";
+	say "     You push yourself to further heights, your sex-crazed mind only seeking another release and more pleasure. When your climax finally comes[if Player is male] and you pump your hot seed into the sex chair[end if], your cries are muffled by the thick rod stuffed into your mouth[if Cunt Count of Player > 1]. Your cunts clamp down around the throbbing dildos inside you as you release another flow of your hot juices over them, soaking yourself and the seat[else if Player is female]. Your cunt clamps down around the throbbing dildo inside you as you release another flow of your hot juices over it, soaking yourself and the seat[end if]. Once spent, you collapse onto the seat, basking in the powerful afterglow and breathing in more of that arousing gas as you pant for breath. Even as your mind sinks away, fading away beneath the gas that keeps you constantly aroused, so does the pod encapsulating you fade back into the floor. Slick liquid flows in around you and your gear is either dissolved or expelled from the pod, leaving you naked and able to enjoy smooth stimulation over every square inch of your body. You give in to the pleasure, giving yourself over to become a part of this wonderful castle and to the wonderful delights your new home can give.";
 	WaitLineBreak;
 	now humanity of Player is 0;
 	trigger ending "Bouncy Castle Exhibit";
 	end the story saying "You become part of the Bouncy Castle.";
-
 
 Chapter 2 - Eastern Inflatables Escape
 
@@ -2143,7 +2079,7 @@ to say bcfinal1:		[Success - leave w/vixen]
 
 to say bcfinal2:		[Fail - caught w/vixen]
 	say "     Now that they've got you pinned down, the vixen squeaks happily and comes over to join in the fun. You try to tell her to help you, but she's having trouble focusing and as the pair start to fondle and grope you with their flippers, it becomes harder for you to resist as well. The sea lion's cock and the orca's pussy rub against you as well. As you grow aroused from their touch, the slowly push off your gear and clothes, leaving you bare so they may have some fun with you. You may as well just relax and enjoy the fun, you tell yourself.";
-	if Player is male and ( Cunt Count of Player is 0 or ( Player is female and a random chance of 3 in 5 succeeds ) ):
+	if Player is male and ( Player is not female or ( Player is female and a random chance of 3 in 5 succeeds ) ):
 		say "     After a few trills and barks between them, a decision seems to be reached and the orca moves herself over your crotch, rubbing her rubbery pussy down onto your cock. Growing hard despite the trouble you're in, you're soon ready and she sinks her slick cunt down over your [cock size desc of Player] [Cock of Player] shaft. Her cunt stretched to squeeze around you just right as she takes you in inch by inch until you're fully sheathed in her and her air nozzle clit is rubbing against your crotch. She trills happily and starts bouncing atop you, working her squeezing vinyl walls down around you. You can feel the smooth, wet touch of the vixen's tongue as well as she licks at your rod and the stretched pussy around it.";
 		say "     Not to be left out, the sea lion moves up beside you and pulls your face into his crotch. Presented with his dark purple cock, you can see it's similarly got an air nozzle at its tip and that some slick, oily pre is leaking out around the edges of it. For some reason, perhaps the growing arousal you're feeling from having the eager orca atop you, you open your mouth and willingly accept the strange balloon-cock into your mouth. As the sea lion pulls your face into his groin as he fucks your mouth, you lick and suck at his pulsing rod, moaning softly.";
 		say "     They go at it for quite a while until you're pushed past your limit and cum hard, shooting your [Cum Load Size of Player] load into the inflatable female while she trills happily. Moments later the sea lion is set off, shooting a jet of air-driven semen right down your throat. The orgasm, the gas and the semen all work to leave you momentarily dazed and weak, unable to resist as they move to dealing with the vixen. She's mounted in turn and fucked while eating your hot load from the orca's pussy.";
@@ -2165,12 +2101,10 @@ to say bcfinal2:		[Fail - caught w/vixen]
 	trigger ending "Bouncy Castle New Pool Toys";
 	end the story saying "You and the vixen failed to escape your latex fate.";
 
-
 to say bcfinal3:		[Escape - leave w/o vixen]
 	say "     With the whole plan falling part - the vixen now an airhead, sex-crazed pool toys, and an animated bouncy castle - you decide to bail out. Seeing an opening, you dive onto the slide and take it down into the cool water. When you surface, you start to swim away from the castle, hearing the sounds of pleasure coming from the vixen and the other two inflatables. You suspect they're going to make sure she's finished off, but at least she's providing you a distraction.";
 	say "     Frustrated with the time you've wasted on this project, you [if boatfound is 3 or boatfound is 2]return to your boat[else]leap back into the water[end if] and take a moment to gather your bearings. You're reminded of the mooring lines securing the castle and wonder if it would be wise to send the whole place out to sea. Releasing it may prevent more local lifeforms from falling prey to its influence, but there's also the risk that you'll spread the infection further if it drifts to another populated area.";
-	say "     [bold type]Do you cut the rope?[roman type][line break]";
-	LineBreak;
+	say "[line break]     [bold type]Do you cut the rope?[roman type][line break]";
 	say "     ([link]Y[as]y[end link]) - Yes. The castle poses a serious threat to yourself and other beach-goers.";
 	say "     ([link]N[as]n[end link]) - No. You don't want to risk causing trouble elsewhere.";
 	if Player consents:
@@ -2184,13 +2118,11 @@ to say bcfinal3:		[Escape - leave w/o vixen]
 	now HP of Bubble is 99;
 	decrease score by 10;
 
-
 Chapter 3 - Successful Escape
 
 to say bcfinalsuccess:
 	say "     She dives happily down the slide with a giggling 'Wheeeee!' and into the water. Her new form takes to it readily as she happily floats across the waves. You grab your stuff and head down after her, splashing into the water as she frolics about. Just as you're about to leave, you're reminded of the mooring lines securing the castle and wonder if it would be wise to send the whole place out to sea. Releasing it may prevent more local lifeforms from falling prey to its influence, but there's also the risk that you'll spread the infection further if it drifts to another populated area.";
-	say "     [bold type]Do you cut the rope?[roman type][line break]";
-	LineBreak;
+	say "[line break]     [bold type]Do you cut the rope?[roman type][line break]";
 	say "     ([link]Y[as]y[end link]) - Yes. The castle poses a serious threat to yourself and other beach-goers.";
 	say "     ([link]N[as]n[end link]) - No. You don't want to risk causing trouble elsewhere.";
 	if Player consents:
@@ -2226,13 +2158,12 @@ to say bcfinalsuccess:
 		now Bouncy Castle is unknown;
 	follow the turnpass rule;
 
-
 Section 6 - Rules Modifications and Everyturn Rule
 
-Instead of exploring while player is in Bouncy Castle:
+instead of exploring while player is in Bouncy Castle:
 	say "There is nowhere to explore out here.";
 
-Instead of ScavengingAction while player is in Bouncy Castle:
+instead of ScavengingAction while player is in Bouncy Castle:
 	say "There is nowhere to scavenge out here.";
 
 an everyturn rule:
@@ -2241,8 +2172,7 @@ an everyturn rule:
 		if vixcountdown <= 0:
 			say "     You hear some noise coming from one of the suspended dolphins. Following the moans, you struggle to open it up. Inside you discover the vixen you were seeking, writhing in the throes of a rather powerful orgasm. She's already become an inflatable and her arms seem to be fusing to her sides. You quickly pull off the mouthpiece, but her eyes have gone vacant and she simply moans and trills happily as you try and ask her about her cache of supplies. With her mind gone and her body well on its way to becoming just another inflatable dolphin toy, you grumble and seal her back up.";
 			say "     Frustrated with the time you've wasted on this project, you [if boatfound is 3 or boatfound is 2]return to your boat[else]leap back into the water[end if] and take a moment to gather your bearings. You're reminded of the mooring lines securing the castle and wonder if it would be wise to send the whole place out to sea. Releasing it may prevent more local lifeforms from falling prey to its influence, but there's also the risk that you'll spread the infection further if it drifts to another populated area.";
-			say "     [bold type]Do you cut the rope?[roman type][line break]";
-			LineBreak;
+			say "[line break]     [bold type]Do you cut the rope?[roman type][line break]";
 			say "     ([link]Y[as]y[end link]) - Yes. The castle poses a serious threat to yourself and other beach-goers.";
 			say "     ([link]N[as]n[end link]) - No. You don't want to risk causing trouble elsewhere.";
 			if Player consents:
@@ -2260,8 +2190,7 @@ an everyturn rule:
 		if vixcountdown <= 0:
 			say "     As you pause for a moment to catch your breath, you hear loud, muffled cries of ecstasy coming from somewhere on the upper level of the castle. Given the mix of yiffs and trills to the sound and how they finish by becoming purely trills of delight, you sadly have to assume that was the vixen girl finally giving in to whatever is happening to her. Deciding there's little point in remaining here any longer, you push your way back to the entrance.";
 			say "     Frustrated with the time you've wasted on this project, you [if boatfound is 3 or boatfound is 2]return to your boat[else]leap back into the water[end if] and take a moment to gather your bearings. You're reminded of the mooring lines securing the castle and wonder if it would be wise to send the whole place out to sea. Releasing it may prevent more local lifeforms from falling prey to its influence, but there's also the risk that you'll spread the infection further if it drifts to another populated area.";
-			say "     [bold type]Do you cut the rope?[roman type][line break]";
-			LineBreak;
+			say "[line break]     [bold type]Do you cut the rope?[roman type][line break]";
 			say "     ([link]Y[as]y[end link]) - Yes. The castle poses a serious threat to yourself and other beach-goers.";
 			say "     ([link]N[as]n[end link]) - No. You don't want to risk causing trouble elsewhere.";
 			if Player consents:
@@ -2281,7 +2210,6 @@ an everyturn rule:
 			decrease score by 10;
 			now HP of Bubble is 100;
 
-
 [
 Section X - Debug - Not for release
 ]
@@ -2293,7 +2221,6 @@ carry out dolphincastletesting:
 	say "[ResolveFunction of Snared Vixen]";
 	WaitLineBreak;
 	move player to Bouncy Castle;
-
 
 Section 7 - Endings
 
@@ -2308,9 +2235,9 @@ Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered
 This is the Bouncy Castle Prisoner rule:
 	if ending "Bouncy Castle Prisoner" is triggered:
 		say "     Your pod ends up hidden beneath the bouncy castle, attached to the underside. There, your life becomes one of unending pleasure as the sex chair that's become your whole world stimulates you. You have orgasm after unending orgasm, as somehow your pleasure satisfies some need of the giant inflatable play area. You consciousness largely fades away under the constant treatment of the aphrodisiacs pumped into you as it sustains you with a sweet, nourishing liquid and air heavily laced with the mind-altering gasses. You become its eternal prisoner, but somehow that doesn't matter, as long as it continues to let you [if Player is not neuter]cum[else]climax[end if].";
-		if Player is female or Player is mpreg_ok:
+		if Player is impreg_ok:
 			say "     You are vaguely aware that there are other pods down there as well despite being fully enclosed and unable to see or sense anything but the pleasures provided. Your womb is periodically pumped full of semen from these other prisoners, impregnating you with their offspring, providing your broken mind with another delight to enjoy. Your children are born as inflatable versions of their sires. They are removed from your pod as they are pushed from your [if Player is female]vagina[else]ass as latex eggs[end if] and released as more servants for the bouncy castle[if Player is male]. Also being male, you take added pleasure in knowing your seed is similarly being used to impregnate females in other pods[end if].";
-		else if Player is male:
+		else if Player is male and Player is not sterile:
 			say "     You are vaguely aware that there are other pods down there as well despite being fully enclosed and unable to see or sense anything but the pleasures provided. Your semen is pumped out of you and periodically provided to the others, used to breed the female prisoners to sire inflatable young inside them to be more servants for the bouncy castle.";
 		the Player is imprisoned;
 
@@ -2337,11 +2264,10 @@ This is the Bouncy Castle New Pool Toys rule:
 
 This is the Bouncy Castle New Pillar rule:
 	if ending "Bouncy Castle New Pillar" is triggered:
-		let compnumber be (number of filled rows in the Table of PlayerChildren + number of entries in childrenfaces);
+		let compnumber be number of filled rows in the Table of PlayerChildren + number of entries in childrenfaces;
 		if companionList of Player is not empty, increase compnumber by 1;
 		say "     An uncertain amount of time later, you flow out from the pillar which engulfed you as a mass of [ppcolor] latex. Moving across the inflated floor, your simple mind chooses an open spot for yourself and you form yourself into another pillar. Soon enough, you're rooted in place among the others of your kind in the room. On your front, you have the design of an aggressive [bcfinalpillarform] on your padded [ppcolor] surface[if compnumber is 1]. Your companion, similarly transformed, has become a green pillar with a design suiting their previous form[else if compnumber > 1]. Your companions, similarly transformed, have become colorful pillars with designs suiting their previous forms[end if].";
 		say "     Your existence is a simple one, your previous mind erased and left empty save for thoughts of lust and transforming others into joining with the bouncy castle as you have. Pleasure mostly comes in the form of dolphin girls who wander into the room to be sexually assaulted by your tendrils until you're both satiated. On other occasions, you send out tendrils to some of the other pillars and pleasure one another, forming phalli and orifices for them, spraying your latex cum onto and into each other. But sometimes, your greatest delight will come when some wanderer makes their way into your room. When this happens, you grapple them with tentacles of [ppcolor] goo, sexually pleasuring yourself and them as you draw them inexorably into you to be consumed and transformed into another punching pillar, as was done to you on that fateful day.";
 		the Player is gone;
-
 
 Bouncy Castle ends here.

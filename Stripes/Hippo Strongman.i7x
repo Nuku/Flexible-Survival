@@ -3,14 +3,13 @@ Version 1 of Hippo Strongman by Stripes begins here.
 
 "Adds a Hippo Strongman creature to Flexible Survival's Wandering Monsters table, with impreg chance"
 
-
 Section 1 - Creature Responses
 
 to say losetohippo:
-	if BodyName of Player is "Hippo" and ( ( Player is female and a random chance of 3 in 5 succeeds ) or ( Cunt Count of Player is 0 and a random chance of anallevel in 5 succeeds ) ):
+	if BodyName of Player is "Hippo" and ( ( Player is female and a random chance of 3 in 5 succeeds ) or ( Player is not female and a random chance of anallevel in 5 succeeds ) ):
 		say "     The victorious strongman knocks you to the ground with a cheer. Raising his arms in the air in triumph, he brags about how he is the strongest of all. He then brushes aside his loincloth to release his throbbing cock. With his 16 inch member on display, you can't help but become aroused, your body starting to respond to the victor's urges. When he moves you onto all fours, you grind back against his thick, bulging member, moaning for him to prove his might again. Running his meaty hands along your muscled back and grabbing your strong shoulders, he [if Player is female]thrusts into your juicy cunt[else]ploughs into your tight asshole[end if] with a raucous laugh.";
 		if Player is female:
-			say "     He pumps his hips steadily, sliding that gray cock of his into your juicy hole while his huge balls slap against you. The feel of the strongman's pole ringing your bell has you moaning beneath him with ever-expanding desire. With thoughts of the big, strong children such a mighty stud could give you, you push back into his thrusts and work your inner muscles around his mighty rod. Eventually he gives you what you're craving, pumping his hot load into your needy cunt and flooding your womb with his virile, steroid-rich semen. After pulling out, he has you lick him clean before sending you on your way with a warm feeling filling your tummy.[impregchance]";
+			say "     He pumps his hips steadily, sliding that gray cock of his into your juicy hole while his huge balls slap against you. The feel of the strongman's pole ringing your bell has you moaning beneath him with ever-expanding desire. With thoughts of the big, strong children such a mighty stud could give you, you push back into his thrusts and work your inner muscles around his mighty rod. Eventually he gives you what you're craving, pumping his hot load into your needy cunt and flooding your womb with his virile, steroid-rich semen. After pulling out, he has you lick him clean before sending you on your way with a warm feeling filling your tummy.[fimpregchance]";
 		else:
 			say "     He pumps his hips vigorously, stuffing that gray cock of his into your tight hole while his huge balls slap against you. The feel of the strongman's pole driving into you has you moaning beneath him with ever-expanding desire. With growing lust and admiration for the mighty stud who's bested you, you push back into his thrusts and squeeze your anal muscles around his mighty rod. Eventually he gives you what you're craving, that final proof of his superior might, as he climaxes and pumps his hot load into your ass. His virile, steroid-rich semen floods your bowels. After pulling out, he has you lick him clean before sending you on your way with a warm feeling filling your belly.[mimpregchance]";
 	else:
@@ -18,21 +17,14 @@ to say losetohippo:
 		say "     Feeling quite satisfied from the ample load in your belly, you wander off without direction before finally ending back where you started. You feel a little better from the effects of his powerful, steroid-filled cum, but also hornier as well.";
 		increase HP of Player by ( Stamina of Player / 2 ) + a random number between 2 and 4;
 		if HP of Player > MaxHP of Player, now HP of Player is MaxHP of Player;
-		increase Libido of Player by a random number between 6 and 12;
-		if "Horny Bastard" is listed in feats of Player, increase Libido of Player by 2;
-		if "Cold Fish" is listed in feats of Player, decrease Libido of Player by a random number between 1 and 4;
-		if Libido of Player > 100, now Libido of Player is 100;
+		raise Player Libido by a random number between 6 and 12;
+		if "Horny Bastard" is listed in feats of Player, raise Player Libido by 2;
+		if "Cold Fish" is listed in feats of Player, lower Player Libido by a random number between 1 and 4;
 		decrease humanity of Player by a random number from 1 to 3;
 		if "Strong Psyche" is listed in feats of Player, increase humanity of Player by a random number between 0 and 1;
 		if "Weak Psyche" is listed in feats of Player, decrease humanity of Player by a random number between 0 and 1;
 
-to say beatthehippo:
-	say "     Your last blow sends the big hippo staggering back. 'Impossible! None is stronger than the Great [one of]Crusher[or]Giganticus[or]Monstro[or]Ultro[or]Steelfist[or]Ivan[or]Samson[in random order]!' he yells, grabbing up his show items with ease and running off with them. 'You've not seen the last of me!' he yells. Wait... didn't he have a different name earlier?";
-
 Section 2 - Creature Insertion
-
-to say hippodesc:
-	say "     Traveling through the fairgrounds, your path is suddenly blocked by the appearance of a large, muscled figure. The hippo-headed man flexes his bare muscles. 'I am the Mighty [one of]Bruno[or]Maximus[or]Supremo[or]Atlas[or]Gigantus[or]Goliath[or]Granite[in random order]!' he exclaims. 'Strongest of the strong, mightiest of the mighty!' he cries out, flexing again. As this bizarre strongman continues his showman spiel, he flexes to display his impressive muscles. You spot his stall nearby and see that a crude hippo head has been painted onto the strongman poster and the name has been re-written a few times already. He's even given the crudely drawn face the same little mustache and chin beard. Aside from his hippo head and big muscles, he has gray skin and is wearing nothing but a few leather straps and an ill-fitting loincloth that cannot contain his infection-enhanced maleness. As his babbling comes to an end, you catch him saying something about fighting you to prove his strength before he charges.";
 
 Table of CombatPrep (continued)
 name(text)	PrepFunction(text)
@@ -59,19 +51,19 @@ When Play begins:
 	now enemy Name entry is ""; [ Specific name of unique enemy. ]
 	now enemy type entry is 0; [ 0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters. ]
 	now attack entry is "[one of]The hippo strongman crushes you with his muscly arms![or]The strongman delivers a pair of powerful blows with his meaty fists![or]The hippo strongman grabs you roughly and slams you down so hard onto his strength test that he rings the bell... or maybe that's just the ringing in your head![or]The big hippo bashes you with the large mallet for his strength test![or]Grabbing one of his heavy barbells, he heaves it at you. You manage to get partially out of the way, but are still struck hard by one of the metal ends![or]The strongman lobs several of his dumbbells at you, painfully slamming the weights into you![or]The muscled hippoman strikes your jaw with a fist as hard as stone![at random]"; [ Successful attack message ]
-	now defeated entry is "[beatthehippo]"; [ Text when monster loses. ]
+	now defeated entry is "     Your last blow sends the big hippo staggering back. 'Impossible! None is stronger than the Great [one of]Crusher[or]Giganticus[or]Monstro[or]Ultro[or]Steelfist[or]Ivan[or]Samson[in random order]!' he yells, grabbing up his show items with ease and running off with them. 'You've not seen the last of me!' he yells. Wait... didn't he have a different name earlier?[line break]"; [ Text when monster loses. ]
 	now victory entry is "[losetohippo]"; [ Text when monster wins. ]
-	now desc entry is "[hippodesc]"; [ Description of the creature when you encounter it. ]
+	now desc entry is "     Traveling through the fairgrounds, your path is suddenly blocked by the appearance of a large, muscled figure. The hippo-headed man flexes his bare muscles. 'I am the Mighty [one of]Bruno[or]Maximus[or]Supremo[or]Atlas[or]Gigantus[or]Goliath[or]Granite[in random order]!' he exclaims. 'Strongest of the strong, mightiest of the mighty!' he cries out, flexing again. As this bizarre strongman continues his showman spiel, he flexes to display his impressive muscles. You spot his stall nearby and see that a crude hippo head has been painted onto the strongman poster and the name has been re-written a few times already. He's even given the crudely drawn face the same little mustache and chin beard. Aside from his hippo head and big muscles, he has gray skin and is wearing nothing but a few leather straps and an ill-fitting loincloth that cannot contain his infection-enhanced maleness. As his babbling comes to an end, you catch him saying something about fighting you to prove his strength before he charges.[line break]"; [ Description of the creature when you encounter it. ]
 	now face entry is "the broad head and large mouth of a hippo";
 	now body entry is "big and muscled, with oversized definition and impressive muscle tone. Your fingers have become short and meaty, making it a little harder for you to do delicate work with them";
 	now skin entry is "a thick, gray hide and glistens as if some body oil has been spread across your";
 	now tail entry is "You have a short, thick tail ending in a clump of ragged hair.";
 	now cock entry is "[one of]gray[or]purplish-gray[at random]";
 	now face change entry is "your head distorts and a giant maw forms. Your jaw aches from this transition as it progresses, spreading up over the rest of your head until you have a big hippo head on your shoulders";
-	now body change entry is "becomes large and hugely muscled, swelling with strength. Your hands change as your fingers become short and thick, giving you strong, but clumsy fists";
+	now body change entry is "it becomes large and hugely muscled, swelling with strength. Your hands change as your fingers become short and thick, giving you strong, but clumsy fists";
 	now skin change entry is "it turns rough and gray in color";
 	now ass change entry is "a small tail forms behind you. It is short and thick, with a clump of ragged hair at its tip";
-	now cock change entry is "becomes a dark, purplish-gray in color but is mostly human in shape";
+	now cock change entry is "it becomes a dark, purplish-gray in color but is mostly human in shape";
 	now str entry is 24; [ These are now the creature's stats... ]
 	now dex entry is 12; [ ...and are only altered onto the player via Shifting or the Mighty Mutation feat ]
 	now sta entry is 16; [ These values may be used as part of alternate combat.]
@@ -211,8 +203,6 @@ When Play begins:
 	now Clit Size entry is 0; [size 1-5, see Clit Size Adjective]
 	[Clit Size Adjective is generated by a function and can be used in scenes: very small/small/average/large/very large]
 ]
-
-
 
 Section 3 - Endings
 

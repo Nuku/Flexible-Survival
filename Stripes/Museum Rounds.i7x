@@ -1,7 +1,7 @@
 Version 1 of Museum Rounds by Stripes begins here.
 [Version 1 - Initial set, notes for possible others]
 
-Section 1 - Mechanics
+Book 1 - Mechanics
 
 mrevents is a list of numbers that varies. mrevents is usually { 1, 2, 3, 4, 5, 8, 11, 12 }.
 mre01 is a number that varies.
@@ -10,13 +10,9 @@ mre04 is a truth state that varies. mre04 is usually false.
 HP of Valerie is usually 255.
 
 museumrounding is an action applying to nothing.
-
-understand "museum rounds" as museumrounding.
-understand "rounds with valerie" as museumrounding.
-understand "valerie rounds" as museumrounding.
-understand "rounds valerie" as museumrounding.
-understand "museum round" as museumrounding.
-understand "valerie round" as museumrounding.
+understand "museum rounds/round" as museumrounding.
+understand "rounds with/-- valerie" as museumrounding.
+understand "valerie rounds/round" as museumrounding.
 
 check museumrounding:
 	if Valerie is not visible, say "You go around and around, but don't find who you're looking for." instead;
@@ -33,52 +29,34 @@ carry out museumrounding:
 	else if HP of Valerie - turns < 8:
 		say "     'We checked on stuff a while ago. I can't be leaving the front desk all the time or unsavory people'll be sneaking into the museum.'";
 	else:
-		if 1 is not listed in mrevents, add 1 to mrevents;
-		if 2 is not listed in mrevents, add 2 to mrevents;
-		if 3 is not listed in mrevents, add 3 to mrevents;
+		add { 1, 2, 3 } to mrevents, if absent;
 		now battleground is "Museum";
 		say "     You offer to join Valerie on her rounds of the museum. She smiles and says she'd welcome the company. 'The creatures of the museum, with few exceptions, do not offer intelligent or stimulating conversation,' she says with an enigmatic smile and a swish of her feline rump. Thinking of some 'stimulating conversation' you could have with that sexy ass of hers, you follow along on a meandering path through part of the museum.";
 		sort mrevents in random order;
-		if entry 1 in mrevents is 1:
-			say "[mrevent01]";
-		else if entry 1 in mrevents is 2:
-			say "[mrevent02]";
-		else if entry 1 in mrevents is 3:
-			say "[mrevent03]";
-		else if entry 1 in mrevents is 4:
-			say "[mrevent04]";
-		else if entry 1 in mrevents is 5:
-			say "[mrevent05]";
-		else if entry 1 in mrevents is 6:
-			say "[mrevent06]";
-		else if entry 1 in mrevents is 7:
-			say "[mrevent07]";
-		else if entry 1 in mrevents is 8:
-			say "[mrevent08]";
-		else if entry 1 in mrevents is 9:
-			say "[mrevent09]";
-		else if entry 1 in mrevents is 10:
-			say "[mrevent10]";
-		else if entry 1 in mrevents is 11:
-			say "[mrevent11]";
-		else if entry 1 in mrevents is 12:
-			say "[mrevent12]";
-		else if entry 1 in mrevents is 13:
-			say "[mrevent13]";
-		else if entry 1 in mrevents is 14:
-			say "[mrevent14]";
-		else if entry 1 in mrevents is 15:
-			say "[mrevent15]";
+		if entry 1 in mrevents is:
+			-- 1: say "[mrevent01]";
+			-- 2: say "[mrevent02]";
+			-- 3: say "[mrevent03]";
+			-- 4: say "[mrevent04]";
+			-- 5: say "[mrevent05]";
+			[-- 6: say "[mrevent06]";
+			-- 7: say "[mrevent07]";]
+			-- 8: say "[mrevent08]";
+			[-- 9: say "[mrevent09]";
+			-- 10: say "[mrevent10]";]
+			-- 11: say "[mrevent11]";
+			-- 12: say "[mrevent12]";
+			[-- 13: say "[mrevent13]";
+			-- 14: say "[mrevent14]";
+			-- 15: say "[mrevent15]";]
 		increase XP of valerie by 1;
 		now HP of valerie is turns;
 		follow the turnpass rule;
 
-
 [ XP of valerie = number of times doing rounds with her. ]
 [ HP of valerie = last turn museum rounds were made. ]
 
-
-Section 2 - Doing the Rounds
+Book 2 - Doing the Rounds
 
 Part 1 - Basic Rounds
 
@@ -86,50 +64,45 @@ Chapter 1 - Background 1
 
 to say mrevent01:
 	if mre01 is 0, now mre01 is a random number between 1 and 6;
-	if mre01 is 1:
-		say "     You and Valerie pass through the halls of the museum, checking on several of the exhibits while she talks about them. You're taken through several of the historical wings and she discusses the significant points of the various societies and events of the era. You have an enjoyable time with sphinx, the walk through time with her a pleasant break from your current troubles. Certainly she enjoys your company as well, giving your [bodydesc of Player] form the occasional appraising or appreciative glance.";
-	else if mre01 is 2:
-		say "     You and Valerie pass through the halls of the museum on no discernible path while she discusses the exhibits. The tour is fairly uneventful except for a group of feline ninjas you spot watching you from the shadows. Their eyes narrow as they glare at you. One slips a few inches of his blade from its sheath and narrows its eyes to glare at you. It seems that were it not for Valerie's presence, you'd be subject to attack.";
-	else if mre01 is 3:
-		say "     You and Valerie wander the halls of the museum, passing through a medley of exhibits as she discusses them with you. As you pass through the exhibit on the Wild West, you can't help but notice that any display that held guns has been broken into and raided. Perhaps it was earlier survivors trying to defend themselves, though you're concerned there might be some crazed gunmen running around out there. You try to ask Val about this, but she only smiles enigmatically and says that 'boys will be boys.'";
-	else if mre01 is 4:
-		say "     You and Valerie wander the halls of the museum, passing through a medley of exhibits as she discusses them with you. You can't help but notice that several of the exhibits seem to be been partially denuded, mainly of clothing or weapons. You suspect that some of the infected have become focused on those time periods or ancient civilizations and are now running around armed and crazed somewhere. You try to ask Val about this, but she only smiles enigmatically and says that she's sure they're just off having fun.";
-	else if mre01 is 5:
-		say "     You and Valerie wander the halls of the museum, passing through an assortment of exhibits as she discusses them with you. This rambling tour is largely uneventful save when Valerie comes across a new set of graffiti defacing the walls and artwork with drawings of breasts and cocks. She grumbles at this about, mumbling something about drunk satyrs and continues on her way.";
-	else if mre01 is 6:
-		say "     Valerie leads on you a rambling, seemingly aimless path through part of the museum. As she passes various exhibits and wings, she discusses the items on display. It is rather uneventful save when you end up passing briefly through an employees-only area as a shortcut to get to a different wing. There you pass a heavily muscled wolverine in a security guard hat and jacket. He's leaning against the wall, munching on a doughnut. He tips his hat to Valerie as she passes, but growls at you as you step past. He chomps violently into his doughnut while glaring at you.";
-	increase mre01 by 1;
-	if mre01 > 6, now mre01 is 1;
-
+	if mre01 is:
+		-- 1: say "     You and Valerie pass through the halls of the museum, checking on several of the exhibits while she talks about them. You're taken through several of the historical wings and she discusses the significant points of the various societies and events of the era. You have an enjoyable time with sphinx, the walk through time with her a pleasant break from your current troubles. Certainly she enjoys your company as well, giving your [bodydesc of Player] form the occasional appraising or appreciative glance.";
+		-- 2: say "     You and Valerie pass through the halls of the museum on no discernible path while she discusses the exhibits. The tour is fairly uneventful except for a group of feline ninjas you spot watching you from the shadows. Their eyes narrow as they glare at you. One slips a few inches of his blade from its sheath and narrows its eyes to glare at you. It seems that were it not for Valerie's presence, you'd be subject to attack.";
+		-- 3: say "     You and Valerie wander the halls of the museum, passing through a medley of exhibits as she discusses them with you. As you pass through the exhibit on the Wild West, you can't help but notice that any display that held guns has been broken into and raided. Perhaps it was earlier survivors trying to defend themselves, though you're concerned there might be some crazed gunmen running around out there. You try to ask Val about this, but she only smiles enigmatically and says that 'boys will be boys.'";
+		-- 4: say "     You and Valerie wander the halls of the museum, passing through a medley of exhibits as she discusses them with you. You can't help but notice that several of the exhibits seem to be been partially denuded, mainly of clothing or weapons. You suspect that some of the infected have become focused on those time periods or ancient civilizations and are now running around armed and crazed somewhere. You try to ask Val about this, but she only smiles enigmatically and says that she's sure they're just off having fun.";
+		-- 5: say "     You and Valerie wander the halls of the museum, passing through an assortment of exhibits as she discusses them with you. This rambling tour is largely uneventful save when Valerie comes across a new set of graffiti defacing the walls and artwork with drawings of breasts and cocks. She grumbles at this about, mumbling something about drunk satyrs and continues on her way.";
+		-- 6: say "     Valerie leads on you a rambling, seemingly aimless path through part of the museum. As she passes various exhibits and wings, she discusses the items on display. It is rather uneventful save when you end up passing briefly through an employees-only area as a shortcut to get to a different wing. There you pass a heavily muscled wolverine in a security guard hat and jacket. He's leaning against the wall, munching on a doughnut. He tips his hat to Valerie as she passes, but growls at you as you step past. He chomps violently into his doughnut while glaring at you.";
+	if mre01 < 6:
+		increase mre01 by 1;
+	else:
+		now mre01 is 1;
 
 Chapter 2 - Background 2
 
 to say mrevent02:
 	if mre02 is 0, now mre02 is a random number between 1 and 6;
-	if mre02 is 1:
-		say "     You and Valerie pass through the halls of the museum, checking on several of the exhibits while she talks about them. You're taken through several of the art wings and she discusses the significant differences of the various artists and art movements. You have an enjoyable time with sphinx, the walk through time with her a pleasant break from your current troubles. Certainly she enjoys your company as well, giving your [bodydesc of Player] form the occasional appraising or appreciative glance.";
-	else if mre02 is 2:
-		say "     You and Valerie pass through the halls of the museum on no discernible path while she discusses the exhibits. The tour is fairly uneventful except for a clockwork [one of]fox[or]vixen[at random] who eyes you with its mechanical eyes. From the leaking lubricant and the way it runs its paws over itself, it seems that were it not for Valerie's presence, you'd be the subject to its lustful advances.";
-	else if mre02 is 3:
-		say "     You and Valerie pass through the halls of the museum on no discernible path while she discusses the exhibits. The tour is fairly uneventful except for a brief interruption when some cavorting nymphs dance past with a group of satyrs in hot pursuit. ";
-		if BodyName of Player is "Greek Nymph":
-			say "You are given a few lewd looks from the passing satyrs, but they give you a wide berth, probably due to Valerie's presence.";
-		else if BodyName of Player is "Satyr":
-			say "You feel a pull to join in the pursuit, but rein it in and continue along with Valerie once the group is past.";
-		else:
-			say "You and Valerie are given a wide berth by the drunken revelers.";
-	else if mre02 is 4:
-		say "     You and Valerie wander the halls of the museum, passing through a variety of exhibits as she tells you about them. As you're approaching the historical wing dealing with the Middle Ages, there comes the clanging of metal on metal and the sounds of fighting. The sphinx seems unsurprised by this and casually heads towards it. Inside, you find a pair of living knights with armored skin and bulging codpieces swordfighting with one another. Seeing her, they pause in their battle and rush over to kneel at her feet.";
-		say "     'Ah, Lady Valerie. It bringeth me grand joy to see thee again. I was just doing battle with this knave to win thy hand.'";
-		say "     'Nay, fool! For tis I who shall defeat thee and earn the maiden's love.'";
-		say "     'Never, varlet! Have at thee!' the first cries, rising to his feet and drawing raising his sword again. Soon they're back at it again.";
-		say "     Valerie seems unsurprised by this behavior and moves to walk away, calling out for them to 'Have fun and don't break anything.'";
-		say "     'We won't, my lady,' they both respond, then clash swords all the harder with accusations of having been copied.";
-	else if mre02 is 5:
-		say "     You and Valerie travel through several wings of the museum as she makes her rambling rounds, checking up on some of the denizens between telling you about the exhibits she comes across. Partway through your journey, you come across a pair of the creatures having hot, sticky sex in the middle of the hall. The [one of]hugely hung mammoth[or]chiseled Amazonian huntress[or]large sabretoothed cat[at random] has captured one of the [one of]clockwork vixens[or]drunken satyr[or]busty nymph[at random] and is having its lustful way with its fallen foe's body, much to the victim's visible delight. Valerie seems unfazed by this raw display of lust, though she does pause to watch momentarily while reminding them to be careful of getting cum on the carpet, to which they nod.";
-	else if mre02 is 6:
-		say "     Valerie leads on you a rambling, seemingly aimless path through part of the museum. As she passes various exhibits and wings, she discusses the items on display. It is rather uneventful save when you end up passing briefly through an employees-only area as a shortcut to get to a different wing. There you pass a stairwell leading down into the basement. There is a large three-headed dog creature resting in front of the door. Val tosses it a large chunk of meat from a bag she's been carrying and the beast tears into it with all three heads. It seems, like Cerberus of myth, this three-headed beast guards the gates to the underworld in its own way.";
-
+	if mre02 is:
+		-- 1:
+			say "     You and Valerie pass through the halls of the museum, checking on several of the exhibits while she talks about them. You're taken through several of the art wings and she discusses the significant differences of the various artists and art movements. You have an enjoyable time with sphinx, the walk through time with her a pleasant break from your current troubles. Certainly she enjoys your company as well, giving your [bodydesc of Player] form the occasional appraising or appreciative glance.";
+		-- 2:
+			say "     You and Valerie pass through the halls of the museum on no discernible path while she discusses the exhibits. The tour is fairly uneventful except for a clockwork [one of]fox[or]vixen[at random] who eyes you with its mechanical eyes. From the leaking lubricant and the way it runs its paws over itself, it seems that were it not for Valerie's presence, you'd be the subject to its lustful advances.";
+		-- 3:
+			if BodyName of Player is "Greek Nymph":
+				say "     You and Valerie pass through the halls of the museum on no discernible path while she discusses the exhibits. The tour is fairly uneventful except for a brief interruption when some cavorting nymphs dance past with a group of satyrs in hot pursuit. You are given a few lewd looks from the passing satyrs, but they give you a wide berth, probably due to Valerie's presence.";
+			else if BodyName of Player is "Satyr":
+				say "     You and Valerie pass through the halls of the museum on no discernible path while she discusses the exhibits. The tour is fairly uneventful except for a brief interruption when some cavorting nymphs dance past with a group of satyrs in hot pursuit. You feel a pull to join in the pursuit, but rein it in and continue along with Valerie once the group is past.";
+			else:
+				say "     You and Valerie pass through the halls of the museum on no discernible path while she discusses the exhibits. The tour is fairly uneventful except for a brief interruption when some cavorting nymphs dance past with a group of satyrs in hot pursuit. You and Valerie are given a wide berth by the drunken revelers.";
+		-- 4:
+			say "     You and Valerie wander the halls of the museum, passing through a variety of exhibits as she tells you about them. As you're approaching the historical wing dealing with the Middle Ages, there comes the clanging of metal on metal and the sounds of fighting. The sphinx seems unsurprised by this and casually heads towards it. Inside, you find a pair of living knights with armored skin and bulging codpieces swordfighting with one another. Seeing her, they pause in their battle and rush over to kneel at her feet.";
+			say "     'Ah, Lady Valerie. It bringeth me grand joy to see thee again. I was just doing battle with this knave to win thy hand.'";
+			say "     'Nay, fool! For tis I who shall defeat thee and earn the maiden's love.'";
+			say "     'Never, varlet! Have at thee!' the first cries, rising to his feet and drawing raising his sword again. Soon they're back at it again.";
+			say "     Valerie seems unsurprised by this behavior and moves to walk away, calling out for them to 'Have fun and don't break anything.'";
+			say "     'We won't, my lady,' they both respond, then clash swords all the harder with accusations of having been copied.";
+		-- 5:
+			say "     You and Valerie travel through several wings of the museum as she makes her rambling rounds, checking up on some of the denizens between telling you about the exhibits she comes across. Partway through your journey, you come across a pair of the creatures having hot, sticky sex in the middle of the hall. The [one of]hugely hung mammoth[or]chiseled Amazonian huntress[or]large sabretoothed cat[at random] has captured one of the [one of]clockwork vixens[or]drunken satyr[or]busty nymph[at random] and is having its lustful way with its fallen foe's body, much to the victim's visible delight. Valerie seems unfazed by this raw display of lust, though she does pause to watch momentarily while reminding them to be careful of getting cum on the carpet, to which they nod.";
+		-- 6:
+			say "     Valerie leads on you a rambling, seemingly aimless path through part of the museum. As she passes various exhibits and wings, she discusses the items on display. It is rather uneventful save when you end up passing briefly through an employees-only area as a shortcut to get to a different wing. There you pass a stairwell leading down into the basement. There is a large three-headed dog creature resting in front of the door. Val tosses it a large chunk of meat from a bag she's been carrying and the beast tears into it with all three heads. It seems, like Cerberus of myth, this three-headed beast guards the gates to the underworld in its own way.";
 
 Chapter 3 - Random Fight
 
@@ -138,7 +111,6 @@ to say mrevent03:
 	now battleground is "Museum";
 	fight;
 	say "     Not long after your encounter is over, Valerie returns. Her fur's a little ruffled and she's angry about the monsters risking damaging the exhibits with their 'fun', but seems unharmed.";
-
 
 Chapter 4 - Bedroom Sex
 
@@ -162,8 +134,7 @@ to say mrevent04:
 		infect "Sphinx";
 		now lastfuck of Valerie is turns;
 
-
-Section 3 - One-Time Rounds
+Part 2 - One-Time Rounds
 
 Chapter 5 - Caveman Hunt
 
@@ -177,8 +148,7 @@ to say mrevent05:
 		say "[mre05_prey]";
 	else:
 		say "     Seeing them in such good spirits, you consider going over to join them in their celebration. It looks like they've got a fun time planned.";
-		say "     [bold type]Shall you go join the victorious hunting party for some wild, primitive fun?[roman type][line break]";
-		LineBreak;
+		say "[line break]     [bold type]Shall you go join the victorious hunting party for some wild, primitive fun?[roman type][line break]";
 		say "     ([link]Y[as]y[end link]) - Yes.";
 		say "     ([link]N[as]n[end link]) - No.";
 		if Player consents:
@@ -189,12 +159,12 @@ to say mrevent05:
 			if Breast Size of Player > 3, increase sexbonus by 1;
 			if Cock Length of Player > 12, increase sexbonus by 1;
 			let dice be a random number from 1 to 20;
-			say "You roll 1d20([dice])+[bonus]+[sexbonus] -- [dice + bonus + sexbonus] vs 15: ";
+			say "You roll 1d20([dice])[if bonus + sexbonus >= 0]+[end if][bonus + sexbonus] = [special-style-1][dice + bonus + sexbonus][roman type] vs [special-style-2]15[roman type] (Charisma Check):[line break]";
 			if bonus + dice + sexbonus > 14:
-				say "     You approach the group in a friendly manner, trying to convince them through soft words and lewd gestures that you would like to join in on the fun. At first they seem wary, but then huddle together to grunt and hoot at one another quickly. One gestures to your face, then pokes his own cromagnon features and shakes his head. [if Player is female]. Another points back at you and then grunts emphatically while hip-thrusting, to much nodding from the group[else if Breast Size of Player > 3]. Another cups imaginary [breast size desc of Player] breasts in front of his chest and whistles, much to the delight of his peers[else if Cock Length of Player > 12]. Glances are made at your [cock size desc of Player] cock while they debate your merits[else]. Occasional glances back at you are made as they debate the matter[end if]. Finally, one of them shrugs and motions for you to come along. Pleased with your success, you follow off after the hunting party while Valerie smiles and tells you to have fun, though you barely notice in your excitement.";
+				say "     You approach the group in a friendly manner, trying to convince them through soft words and lewd gestures that you would like to join in on the fun. At first they seem wary, but then huddle together to grunt and hoot at one another quickly. One gestures to your face, then pokes his own cromagnon features and shakes his head. [if Player is female]Another points back at you and then grunts emphatically while hip-thrusting, to much nodding from the group[else if Breast Size of Player > 3]Another cups imaginary [breast size desc of Player] breasts in front of his chest and whistles, much to the delight of his peers[else if Cock Length of Player > 12]Glances are made at your [cock size desc of Player] cock while they debate your merits[else]Occasional glances back at you are made as they debate the matter[end if]. Finally, one of them shrugs and motions for you to come along. Pleased with your success, you follow off after the hunting party while Valerie smiles and tells you to have fun, though you barely notice in your excitement.";
 				say "[mre05_hunter]";
 			else:
-				say "     You approach the group in a friendly manner, trying to convince them through soft words and lewd gestures that you would like to join in on the fun. At first they seem wary, but then huddle together to grunt and hoot at one another quickly. One gestures to your face, then pokes his own cromagnon features and shakes his head. Several nod at this. [if Player is female]. Another points back at you and then grunts emphatically while hip-thrusting, to much nodding from the group[else if Breast Size of Player > 3]. Another cups imaginary [breast size desc of Player] breasts in front of his chest and whistles, much to the delight of his peers[else if Cock Length of Player > 12]. Glances are made at your [cock size desc of Player] cock while they debate your merits[else]. Occasional glances back at you are made as they debate the matter[end if]. Finally, they nod as a group and turn to rush at you, spears and clubs waving wildly. Before you even realize what's going on, they're tackling you to the ground. Soon you're trussed up and hanging upside down from a pole. As you're carried away alongside their original prize, Valerie just smiles and tells you to have fun, though you barely notice in all the excitement.";
+				say "     You approach the group in a friendly manner, trying to convince them through soft words and lewd gestures that you would like to join in on the fun. At first they seem wary, but then huddle together to grunt and hoot at one another quickly. One gestures to your face, then pokes his own cromagnon features and shakes his head. Several nod at this. [if Player is female]Another points back at you and then grunts emphatically while hip-thrusting, to much nodding from the group[else if Breast Size of Player > 3]Another cups imaginary [breast size desc of Player] breasts in front of his chest and whistles, much to the delight of his peers[else if Cock Length of Player > 12]Glances are made at your [cock size desc of Player] cock while they debate your merits[else]Occasional glances back at you are made as they debate the matter[end if]. Finally, they nod as a group and turn to rush at you, spears and clubs waving wildly. Before you even realize what's going on, they're tackling you to the ground. Soon you're trussed up and hanging upside down from a pole. As you're carried away alongside their original prize, Valerie just smiles and tells you to have fun, though you barely notice in all the excitement.";
 				say "[mre05_prey]";
 		else:
 			LineBreak;
@@ -207,15 +177,16 @@ to say mre05_prey:
 	SanLoss 25;
 	if "Strong Psyche" is listed in feats of Player, increase humanity of Player by a random number between 0 and 5;
 	if "Weak Psyche" is listed in feats of Player, decrease humanity of Player by a random number between 0 and 5;
-	setmonster "Caveman";
+	setmonster "Caveman" silently;
 	turn the Player into a "Caveman";
 	if hellHoundLevel is 0:
+		say "[run paragraph on]";
 		follow the sex change rule;
 		follow the sex change rule;
 	if Libido of Player < 45, now Libido of Player is 45;
 	if humanity of Player < 10:
 		say "     Your mind, lost in a haze of primitive thoughts, only momentarily considers leaving before you turn back to the other cavemen. Why would you want to leave your tribe? Are they not your brothers? Did they not spend hours showing you how much they want you to be with them? With even these thoughts fading away into a desire for rest alongside the hunting party, you spoon with one of the strong males and let the last of your human mind drift off into sleep.";
-		WaitLineBreak;
+		wait for any key;
 		end the story saying "You join the caveman tribe as another muscled brute.";
 		now battleground is "void";
 		wait for any key;
@@ -225,32 +196,26 @@ to say mre05_prey:
 	else:
 		say "     You are briefly confused by the primitive thoughts trying to settle into your mind, but you manage to reassert enough self-control to stagger off, deeply changed, but still sane. At least for the moment.[impregchance][impregchance]";
 
-
 to say mre05_hunter:
-	let y be 0;
-	if BodyName of Player is "Caveman" and the Player is pure, let y be 1;
+	let y be false;
+	if BodyName of Player is "Caveman" and the Player is pure, let y be true;
 	say "     The group is quite excited at both their successful hunt and their visitor this day. You are lead back to their home in the display showing caveman life. The pole holding up the snarling feline is placed on forked rods, leaving it suspended in the air while they start to grope and fondle their prize. As you watch one place his misshapen mouth around the sabretooth's cock, you're greeted with the affectionate grunt of one of the cavemen as he puts his strong arms around you. One hand slips down between your legs to [if Player is female]rub your pussy[else if Player is male]squeeze your cock[else]rub your bare groin[end if]. You feel a brief moment of concern as that thick club of a cock of his grinds against you, but the excitement of watching a pair of the big cavemen taking the big cat from both ends has gotten you too turned on to object. Soon you're pulled into the cromagnon's lap as he sits to watch the show, pulling you down onto that pillar of manhood.";
 	say "     The caveman's big hands roam over your body as he bounces you in his lap roughly, driving that big cock of his deeper and deeper into you until it's fully buried inside you. As his pace quickens, you can't help but groan and grunt as you're [if Player is female]fucked in your juicy hole until you feel that hot, creamy load of his fill your womb with his primitive seed[else]buggered in your tight hole until you feel that hot, creamy load of his fill your ass with his primitive seed[end if]. His hefty balls deliver a large rush of sticky semen into you, filling you with a rush of primal passion that [if Player is male]has you cumming messily in a high arc[else if Player is female]has you cumming messily, your juices adding to the wet mess staining your thighs[else]has you cry out loudly as your body quivers and shakes without a clear outlet for your lusts[end if]. Your belly is left full and warm with his virile output as the tingle of nanites floods your system.";
-	say "     Once done with your ride, you pull yourself off of him with a wet plop and push your way to their captured prey. Already starting to change, he's converted some of his russet-brown fur into scruffy body hair and become partially humanoid. His oversized canines have shrunk down, but are still quite prominent at this point, though the muzzle holding them's almost gone. With one of the cavemen finishing at his mouth, you replace him there and pull the changing mouth ";
-	if Player is male:
-		say "around your shaft so you can start fucking his face. As you watch him get buggered up the ass again by the lustful caveman opposite you, you rub your hand over his changing head, feeling his skull reshaping itself and his ears shifting position and becoming human-like. His tail seems to shrink away more with every thrust that cromagnon cock makes into him. It is the sight of his feline erection changing, becoming more humanoid, but enlarged and throbbing, that really captivates your attention. In the end, you feed him your load not long after your counterpart stuffs the increasingly humanoid creature with another ass-filling rush of caveman cum.";
-	else if Player is female:
-		say "to your cream-filled pussy. With your pussy pressed to his changing lips, he starts to lap at your folds, his feline tongue becoming more human-like as he licks away the infected semen from your well-fucked hole. As he's eating you out eagerly while he's buggered up the ass again by the lustful caveman opposite you, you rub your hand over his changing head, feeling his skull reshaping itself and his ears shifting position and becoming human-like. His tail seems to shrink away more with every thrust that cromagnon cock makes into him. It is the sight of his feline erection changing, becoming more humanoid, but enlarged and throbbing, that really captivates your attention. In the end, you releasing a groaning cry as you orgasm, the fresh rush of your hot juices washing a mix of your feminine cum and caveman spunk into his open mouth and across his face. As your climax is waning, your counterpart stuffs the increasingly humanoid creature with another ass-filling rush of caveman cum.";
-	else:
-		say "to your cream-filled asshole. With your tight ring pressed to his changing lips, he starts to lap at your puckered ring, his feline tongue becoming more human-like as he licks away the infected semen from your well-fucked hole. As he's eating your ass out while being buggered by the ass again by another lustful caveman, you reach back to rub your hand over his changing head, feeling his skull reshaping itself and his ears shifting position and becoming human-like. Watching over your shoulder, his tail seems to shrink away more with every thrust that cromagnon cock makes into him. It is the sight of his feline erection changing, becoming more humanoid, but enlarged and throbbing, that really captivates your attention. In the end, he's cleaned your hole thoroughly by the time your counterpart stuffs the increasingly humanoid creature with another ass-filling rush of caveman cum.";
-	say "     You end up playing around with the others like this for quite some time, sucking or riding their cocks[if Player is male] and sometimes having the favor returned[end if], or having another go at the rapidly changing feline[if y is 0]. You are not left unchanged by this either, steadily transformed to become more and more like the lustful cavemen around you. Eventually the long fuck session turns you both into slouching, muscular cavemen[else]. Eventually the long fuck session transforms the sabretooth tiger into another slouching, muscular caveman like the rest of you[end if]. At some point well into his transformation, he is released though the orgy only continues with new sexual positions being possible. No thought of taking a break or leaving enters either of your minds, too lost in the lustful excitement of sex. Eventually the celebration winds down as all involved as sated to the point of passing out";
+	say "     Once done with your ride, you pull yourself off of him with a wet plop and push your way to their captured prey. Already starting to change, he's converted some of his russet-brown fur into scruffy body hair and become partially humanoid. His oversized canines have shrunk down, but are still quite prominent at this point, though the muzzle holding them's almost gone. With one of the cavemen finishing at his mouth, you replace him there and pull the changing mouth [if Player is male]around your shaft so you can start fucking his face. As you watch him get buggered up the ass again by the lustful caveman opposite you, you rub your hand over his changing head, feeling his skull reshaping itself and his ears shifting position and becoming human-like. His tail seems to shrink away more with every thrust that cromagnon cock makes into him. It is the sight of his feline erection changing, becoming more humanoid, but enlarged and throbbing, that really captivates your attention. In the end, you feed him your load not long after[else if Player is female]to your cream-filled pussy. With your pussy pressed to his changing lips, he starts to lap at your folds, his feline tongue becoming more human-like as he licks away the infected semen from your well-fucked hole. As he's eating you out eagerly while he's buggered up the ass again by the lustful caveman opposite you, you rub your hand over his changing head, feeling his skull reshaping itself and his ears shifting position and becoming human-like. His tail seems to shrink away more with every thrust that cromagnon cock makes into him. It is the sight of his feline erection changing, becoming more humanoid, but enlarged and throbbing, that really captivates your attention. In the end, you releasing a groaning cry as you orgasm, the fresh rush of your hot juices washing a mix of your feminine cum and caveman spunk into his open mouth and across his face. As your climax is waning,[else]to your cream-filled asshole. With your tight ring pressed to his changing lips, he starts to lap at your puckered ring, his feline tongue becoming more human-like as he licks away the infected semen from your well-fucked hole. As he's eating your ass out while being buggered by the ass again by another lustful caveman, you reach back to rub your hand over his changing head, feeling his skull reshaping itself and his ears shifting position and becoming human-like. Watching over your shoulder, his tail seems to shrink away more with every thrust that cromagnon cock makes into him. It is the sight of his feline erection changing, becoming more humanoid, but enlarged and throbbing, that really captivates your attention. In the end, he's cleaned your hole thoroughly by the time[end if] your counterpart stuffs the increasingly humanoid creature with another ass-filling rush of caveman cum.";
+	say "     You end up playing around with the others like this for quite some time, sucking or riding their cocks[if Player is male] and sometimes having the favor returned[end if], or having another go at the rapidly changing feline. [if y is false]You are not left unchanged by this either, steadily transformed to become more and more like the lustful cavemen around you. Eventually the long fuck session turns you both into slouching, muscular cavemen[else]Eventually the long fuck session transforms the sabretooth tiger into another slouching, muscular caveman like the rest of you[end if]. At some point well into his transformation, he is released though the orgy only continues with new sexual positions being possible. No thought of taking a break or leaving enters either of your minds, too lost in the lustful excitement of sex. Eventually the celebration winds down as all involved as sated to the point of passing out";
 	SanLoss 25;
 	if "Strong Psyche" is listed in feats of Player, increase humanity of Player by a random number between 0 and 5;
 	if "Weak Psyche" is listed in feats of Player, decrease humanity of Player by a random number between 0 and 5;
-	setmonster "Caveman";
+	setmonster "Caveman" silently;
 	turn the Player into a "Caveman";
 	if hellHoundLevel is 0:
+		say "[run paragraph on]";
 		follow the sex change rule;
 		follow the sex change rule;
 	if Libido of Player < 45, now Libido of Player is 45;
 	if humanity of Player < 10:
 		say "     Your mind, lost in a haze of primitive thoughts, only momentarily considers leaving before you turn back to the other cavemen. Why would you want to leave your tribe? Are they not your brothers? Did they not spend hours showing you how much they want you to be with them? With even these thoughts fading away into a desire for rest alongside the hunting party, you spoon with one of the strong males and let the last of your human mind drift off into sleep.";
-		WaitLineBreak;
+		wait for any key;
 		end the story saying "You join the caveman tribe as another muscled brute.";
 		now battleground is "void";
 		wait for any key;
@@ -260,10 +225,9 @@ to say mre05_hunter:
 	else:
 		say "     You are briefly confused by the primitive thoughts trying to settle into your mind, but you manage to reassert enough self-control to stagger off, deeply changed, but still sane. At least for the moment.[impregchance][impregchance]";
 
-
 Chapter 6 - Art Battle
 
-to say mrevent06:
+[to say mrevent06:
 	say "***art battle: classical v. modern";
 	say "***Valerie enters to break it up, warns against entering.";
 	say "Options: Charge in, peek in or wait?";
@@ -275,15 +239,13 @@ to say mrevent06:
 		skin redescribed as painted?
 	2> Peek in, improved stat check w/lesser sanity loss
 	3> Noises pick up, leonine roaring, fighting and groaning. Eventually emerges, messy w/paint.	]
-	remove 6 from mrevents;
-
+	remove 6 from mrevents;]
 
 Chapter 7 - Tea with Ninjas
 
-to say mrevent07:
+[to say mrevent07:
 	say "***tea with ninjas";
-	remove 7 from mrevents;
-
+	remove 7 from mrevents;]
 
 Chapter 8 - Lubricating the Gears
 
@@ -298,12 +260,16 @@ to say mrevent08:
 		while calcnumber < 0 or calcnumber > 2:
 			say "Choice? (0-2)>";
 			get a number;
+		LineBreak;
+		setmonster "Clockwork Fox";
+		choose row MonsterID from the Table of Random Critters;
 		if calcnumber is 1:
-			setmonster "Clockwork Fox";
-			choose row MonsterID from the Table of Random Critters;
-			now sex entry is "Female";
-			if Player is MalePreferred, now sex entry is "Male";
-			if "Herm Preferred" is listed in the feats of Player, now sex entry is "Both";
+			if Player is MalePreferred:
+				now sex entry is "Male";
+			else if Player is HermPreferred:
+				now sex entry is "Both";
+			else:
+				now sex entry is "Female";
 			say "     The clockwork fox guy runs his paws over your [bodydesc of Player] body, caressing and cuddling you. His motions are smooth and precise thanks to his recent oiling, only soft whirrs and clicks as the gears move inside him. His cool muzzle slides across your neck, giving you soft nips as he helps you out of your gear and guides you to one of the workbenches. Val gives you a quick wave and tells you to have fun, though you have little chance to respond before the fox's muzzle is pressed to your lips in a kiss. A curved brass tongue slides out to brush across yours while the lustful tod [if Player is female]dips a pair of fingers into your pussy[else]grabs your ass and fingers your tight pucker[end if]. Once the kiss is broken, the fox gets you to lean over the bench, chirring in a soft, musically chiming voice about how he'll give you a winding you'll never forget.";
 			say "     The brassworks fox runs his paws down your back and grabs your ass as he moves to get his mechanical cock lined up with your [if Player is female]juicy pussy[else]puckered hole[end if]. He starts slow, letting his cool, brass erection brush against you a few times so it may leak its oily precum onto it. His paws wander back up your [bodytype of Player] body as he thrusts into you with a happy chiming. The brass rod warms up quickly as he pumps into you, making you moan in pleasure. His oily pre leaks into you, making the metallic flesh's passing smooth and sensual.";
 			say "     Your enjoyment of this unusual mating only grows as the tod's nimble paws tweak and tease at your body[if Player is male]. One paw finds its way to your cock[smn] and sets itself to caressing your manhood in time to the rhythmic motion of his pistoning rod[end if][if Breast Size of Player > 0]. He places a paw at your bosom, groping your breasts and pinching your nipples[end if]. While those diligent paws tease you to even greater heights of pleasure, he softly chirrs and clicks in your ear about how a fresh oiling always makes him so horny. Certainly it's made his penile system run smoothly and quickly.";
@@ -312,8 +278,7 @@ to say mrevent08:
 			else:
 				say "     The metallic fox guy pumps his cock into you mechanically, driven by the hidden clockworks in his hips, keeping his motions steady as he pounds your prostate. His cock having quickly warmed up while pounding your ass, the mechanical fucking only gets increasingly enjoyable for you both. When his internal pressure finally builds up enough, his warmed, oily cum is shot into you, filling your ass with his mechanical vulpine seed. Having received a fresh oiling, his load is quite slick and sizable. The feel of it flowing into you, spreading smoothly to coat your inner walls as he drives into your prostate again and again finally sets you off and you paint the floor with your own cum. Once his metal ballsack is drained, he withdraws from you and gives your ear an affectionate nibble, chiming happily that he looks forward to winding you up again soon.[mimpregchance]";
 			say "     As you're trying to recover from your enjoyable orgasm, you're met with affections of several of the other clockwork foxes and vixens. They run their paws over your [bodydesc of Player] body and whirr musically as they lick, kiss and grope at you. Their mechanical attentions are varied, but diligent, working steadily to bring you back to arousal for more fun.";
-			say "     [bold type]Shall you give in and continue playing with these mechanical marvels of vulpine voluptuousness and virility?[roman type][line break]";
-			LineBreak;
+			say "[line break]     [bold type]Shall you give in and continue playing with these mechanical marvels of vulpine voluptuousness and virility?[roman type][line break]";
 			say "     ([link]Y[as]y[end link]) - Yes.";
 			say "     ([link]N[as]n[end link]) - No.";
 			if Player consents:
@@ -325,7 +290,7 @@ to say mrevent08:
 					follow the sex change rule;
 					follow the sex change rule;
 				if Libido of Player < 40, now Libido of Player is 40;
-				WaitLineBreak;
+				wait for any key;
 				end the story saying "You join the clockwork skulk as another vulpine member.";
 				now battleground is "void";
 				wait for any key;
@@ -335,24 +300,23 @@ to say mrevent08:
 			else:
 				LineBreak;
 				say "     You do your best to politely refuse more fun with the foxes, though you have to push a couple of the overeager vulpines back so you can free yourself from their clockwork embraces. They seem a little displeased that you're leaving, but are having quite a bit of fun themselves with their fresh supply of oil to lubricate their lustful loins. You are not left unaffected by your fun with the foxes though.";
-				infect "Clockwork Fox";
-				infect "Clockwork Fox";
+				MultiInfect "Clockwork Fox" repeats 2;
 		else if calcnumber is 2:
-			setmonster "Clockwork Fox";
-			choose row MonsterID from the Table of Random Critters;
-			now sex entry is "Male";
-			if Player is FemalePreferred, now sex entry is "Female";
-			if "Herm Preferred" is listed in the feats of Player, now sex entry is "Both";
+			if Player is FemalePreferred:
+				now sex entry is "Female";
+			else if Player is HermPreferred:
+				now sex entry is "Both";
+			else:
+				now sex entry is "Male";
 			say "     The clockwork fox girl runs her paws over your [bodydesc of Player] body, caressing and cuddling you. Her motions are smooth and precise thanks to her recent oiling, only soft whirrs and clicks as the gears move inside her. Her cool muzzle slides across your neck, giving you soft nips as she helps you out of your gear and tugs you over to one of the workbenches. Val gives you a quick wave and tells you to have fun, though you have little chance to respond before the vixen's muzzle is pressed to your lips in a kiss. A curved brass tongue slides out to brush across yours while the lustful fox girl [if Player is female]dips a pair of fingers into your pussy[else]takes hold of your cock and strokes it[end if]. Once the kiss is broken, the fox gets you to lean over the bench, chirring in a soft, musically chiming voice about how she [if Player is male]wants you to wind her so tight she'll scream when her mainspring pops[else]wants you to get her pussy nice and lubed up so one of the tods can wind her up[end if].";
 			if Player is male:
 				say "     The clockwork vixen takes your [Cock of Player] cock in hand and starts stroking it as she pours some of the new oil onto it. After some playful stroking that leaves your shaft fully hard and glistening, she bends over the workbench and raises her mechanized tail with a musical moan. She chimes happily as you drive your [cock size desc of Player] shaft into her cunt. It is somewhat cool at first as she guides you into a chair. She's well lubricated by the scented oils she's producing, her recent oiling making her sexual mechanism run smoothly and quickly. It grips around your cock like flesh would, but squeezes and milks at your cock in a rhythmic, mechanical manner. Finding it quite pleasurable, you run your hands over her metallic fur and start pounding away at her. Reaching around, you take hold of her lovely breasts and fondle them to chiming moans and giggles as she urges you to wind her faster.";
 				say "     The pleasure builds and builds as the vixen's clockwork cunny works your manhood with a steadily increasing pace as it warms up. The motion of it grows more and more enjoyable for you as you give yourself over to the lustful excitement of fucking the exotic creature. When you finally cum and add your sticky load to the lubricating fluids, she cries out happily with those music box tones of hers intermixed with the moans and pants you're more used to hearing. She releases as well, the pressure built up inside until her oily female juices are sent pouring out over your shaft and crotch. Having received a fresh oiling, she cums copiously, the slick, musky fluid running down her shiny legs and clinging to your crotch and thighs with a glistening sheen. Once her climactic spasms of joy wind down and her vagina's frantic milking of your shaft returns to a more casual stroking, you slip from her pussy and give her sexy ass a pat. Getting up, she licks your cheek and chimes happily that she really enjoyed the winding and looks forward to getting you to wind her up again soon.";
 			else:
-				say "     The clockwork vixen takes your hand in hers and pours some of the new oil onto it before guiding it to her mechanized cunt. She releases a musical moan as you slip a pair of digits into her and start lubricating her squeezing, sliding passage. As you fingerfuck the vixen, the movement of her vaginal walls becomes smoother and faster, as does her panting moans. Her cool fingers, slick with oil themselves, are guided into your cunny as she returns the favor to you. Her brass digits warm up quickly as she pumps them into you, making you moan with pleasure as she artfully teases your clit and sensitive inner walls while lubing you up[if Nipple Count of Player > 0]. Her free paw, after another liberal application of oil on both playful hands, moves to your chest and starts playing with your nipples[else]. Her free paw, after another liberal application of oil on both playful hands, moves to your ass and gropes your rear[end if]. Kissing her again, you grab her bosom and start fondling her breasts while pumping all the harder. While those diligent paws tease you to even greater heights of pleasure, she chirrs softly and clicks in your ear about how a fresh oiling always makes her so horny. Certainly, it's made her vaginal passage run smoothly and quickly, growing wetter with her own lubrication as well.";
+				say "     The clockwork vixen takes your hand in hers and pours some of the new oil onto it before guiding it to her mechanized cunt. She releases a musical moan as you slip a pair of digits into her and start lubricating her squeezing, sliding passage. As you fingerfuck the vixen, the movement of her vaginal walls becomes smoother and faster, as does her panting moans. Her cool fingers, slick with oil themselves, are guided into your cunny as she returns the favor to you. Her brass digits warm up quickly as she pumps them into you, making you moan with pleasure as she artfully teases your clit and sensitive inner walls while lubing you up. Her free paw, after another liberal application of oil on both playful hands, moves to your [if Nipple Count of Player > 0]chest and starts playing with your nipples[else]ass and gropes your rear[end if]. Kissing her again, you grab her bosom and start fondling her breasts while pumping all the harder. While those diligent paws tease you to even greater heights of pleasure, she chirrs softly and clicks in your ear about how a fresh oiling always makes her so horny. Certainly, it's made her vaginal passage run smoothly and quickly, growing wetter with her own lubrication as well.";
 				say "     The pleasure builds and builds as the clockwork vixen fingers with you, his now-warm fingers running through a series of pleasurable motions that excite numerous erogenous spots. Your cunt squeezes and quivers around those digits as your lustful pleasure grows. The motion of the mechanically-driven cunny grows faster as she warms up as well, making the squeezing motion of her vulpine vagina increasingly enjoyable. When you finally cum, she cries out happily with those music box tones of hers intermixed with the moans and pants you're more used to hearing. She releases as well, the pressure built up inside until her oily female juices are sent pouring out over your hand. Having received a fresh oiling, she cums copiously, the slick, musky fluid running down her shiny legs and clinging to your hand with a glistening sheen. Once her climactic spasms of joy wind down, she slips her paw from you and eases herself off your fingers. She licks your cheek and chimes happily that she's all ready to get a proper winding and hopes to watch you get one as well.";
 			say "     As you're trying to recover from your enjoyable orgasm, you're met with affections of several of the other clockwork foxes and vixens. They run their paws over your [bodydesc of Player] body and whirr musically as they lick, kiss and grope at you. Their mechanical attentions are varied, but diligent, working steadily to bring you back to arousal for more fun.";
-			say "     [bold type]Shall you give in and continue playing with these mechanical marvels of vulpine voluptuousness and virility?[roman type][line break]";
-			LineBreak;
+			say "[line break]     [bold type]Shall you give in and continue playing with these mechanical marvels of vulpine voluptuousness and virility?[roman type][line break]";
 			say "     ([link]Y[as]y[end link]) - Yes.";
 			say "     ([link]N[as]n[end link]) - No.";
 			if Player consents:
@@ -364,7 +328,7 @@ to say mrevent08:
 					follow the sex change rule;
 					follow the sex change rule;
 				if Libido of Player < 40, now Libido of Player is 40;
-				WaitLineBreak;
+				wait for any key;
 				end the story saying "You join the clockwork skulk as another vulpine member.";
 				now battleground is "void";
 				wait for any key;
@@ -374,17 +338,15 @@ to say mrevent08:
 			else:
 				LineBreak;
 				say "     You do your best to politely refuse more fun with the foxes, though you have to push a couple of the overeager vulpines back so you can free yourself from their clockwork embraces. They seem a little displeased that you're leaving, but are having quite a bit of fun themselves with their fresh supply of oil to lubricate their lustful loins. You are not left unaffected by your fun with the foxes though.";
-				infect "Clockwork Fox";
-				infect "Clockwork Fox";
+				MultiInfect "Clockwork Fox" repeats 2;
 		else:
 			say "     Deciding it'd be best not to get involved in any sexual escapades with the mechanical vulpines while in their lair, you politely decline. You and Val remain for a while, watching their oiling session descend further from needed maintenance to mechanical testing of their clockwork reproductive systems. It is quite the unusual, if tantalizing, sexual display and you reconsider your earlier decision a few times. By the time the whirring, clicking orgy is in full swing, Val merely smiles and walks off with you following along.";
-			increase Libido of Player by 5;
+			raise Player Libido by 5;
 	remove 8 from mrevents;
-
 
 Chapter 9 - Satyr Party
 
-to say mrevent09:
+[to say mrevent09:
 	say "***satyr party";
 	say "     'Oh, lovely Valerie. Muse to our souls and protector of our grand party hall. We are well into our cups, but shall you and your companion join us for a drink?'";
 	say "join in?";
@@ -393,12 +355,11 @@ to say mrevent09:
 		say "***if on quest, nick a little wine.";
 	else:
 		say "***continue on, leaving revelers behind.";
-	remove 9 from mrevents;
-
+	remove 9 from mrevents;]
 
 Chapter 10 - Dino Discards
 
-to say mrevent10:
+[to say mrevent10:
 	say "***found some discarded 70's item. Brought back to dino.";
 	say "***offer to dance";
 	if Player consents:
@@ -406,8 +367,7 @@ to say mrevent10:
 		infect "Triceratops";
 		say "***if high dex and on quest, pinch lava lamp.";
 	else:
-		say "***continue on your way.";
-
+		say "***continue on your way.";]
 
 Chapter 11 - Mammoth Mistake
 
@@ -416,7 +376,6 @@ to say mrevent11:
 	say "     The whole scene freezes as those assembled take in a sharp breath and turn wide-eyed first to the destruction and then to Valerie. The mammoth's massive cock wilts rapidly, returning to a more sedate (for it) four feet of unerect flesh. Even the feline embedded in the broken case dares not move a hair despite bleeding from the broken glass jabbed into it. The sphinx bristles as she surveys the scene with increasing ire before finally releasing a loud, leonine roar. At her cry, the group scatters to the four winds, sabretooths rushing away with their ears low and their tails between their legs. The one in the case scrambles free with little regard for the fact that it's exacerbating its wounds. The mammoth herm shuffles as quickly as she can out the door, clutching her oversized endowments to keep them from knocking into anything else.";
 	say "     When they've all cleared the room, Val huffs and growls, tearing her claws free of the stone floor. She stomps around the room, surveying the damage. In the end, she storms off in a foul mood for the rest of her rounds. Certainly, all the creatures of the museum give her a wide berth, fearful of the sphinx's wrath. Clearly she's a force to be reckoned with that these mighty beasts dare not upset.";
 	remove 11 from mrevents;
-
 
 Chapter 12 - Intruder Alert
 
@@ -429,27 +388,24 @@ to say mrevent12:
 	say "     The commotion draws the sphinx, who ensures that the unexpected intruder is forced from the museum. She thanks you for your assistance and gives you a kiss on the cheek.";
 	remove 12 from mrevents;
 
-
-Section 4 - Activated Rounds
+Part 3 - Activated Rounds
 
 Chapter 13 - Viking Ship Wreckage
 
-to say mrevent13:
+[to say mrevent13:
 	say "***wrecked viking ship";
-	remove 13 from mrevents;
-
+	remove 13 from mrevents;]
 
 Chapter 14 - Cerberus Guard
 
-to say mrevent14:
+[to say mrevent14:
 	say "***intimidate/tlc cerberus to prevent getting ratted on";
-	remove 14 from mrevents;
-
+	remove 14 from mrevents;]
 
 Chapter 15 - Hyena Damage Control
 
-to say mrevent15:
+[to say mrevent15:
 	say "***repair hyena break-in";
-	remove 15 from mrevents;
+	remove 15 from mrevents;]
 
 Museum Rounds ends here.

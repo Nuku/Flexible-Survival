@@ -3,34 +3,30 @@ Version 1 of Fluffy Owl by Stripes begins here.
 
 "Adds a Fluffy Owl creature to Flexible Survival's Wandering Monsters table"
 
-
 Section 1 - Creature Responses
 
 to say losetofluffyowl:
 	project Figure of FluffyOwl2_icon;
 	if HP of Player > 0:		[SUBMIT]
-		say "     Unable to resist her alluring assets any longer, you surrender to the big-chested bird. She releases a happy hoot and snuggles you up in her wing arms, burying your face in her bosom. You moan softly and nuzzle at the soft feathers and warm breasts. You run your fingers through her down, stroking her breasts and teasing the hidden nipples. ";
 		if Player is male:
 			if a random chance of 1 in 2 succeeds:
-				say "While you play with her giant tits, you can feel her taloned hand slip down to your cock and stroke it. She alternates between brushing her feathers over it and pumping at it until you're hard and leaking precum steadily.";
+				say "     Unable to resist her alluring assets any longer, you surrender to the big-chested bird. She releases a happy hoot and snuggles you up in her wing arms, burying your face in her bosom. You moan softly and nuzzle at the soft feathers and warm breasts. You run your fingers through her down, stroking her breasts and teasing the hidden nipples. While you play with her giant tits, you can feel her taloned hand slip down to your cock and stroke it. She alternates between brushing her feathers over it and pumping at it until you're hard and leaking precum steadily.";
 				say "     She pushes you back and takes a seat in your lap, sinking her wet hole down around your erection. Being part avian, her pussy feels different around your cock, having become more like a bird's cloaca. Lost in your arousal, you find this quite pleasurable and enjoy the different ways it seems to grip and slide over your penis. You fuck her with your face buried in her soft feathers, suckling at a nipple until you cum, pumping your hot seed into her until you're both satisfied and part ways.";
 			else:
-				say "She caresses your head and guides your mouth to one of those perky nipples, encouraging you to suckle it. She gives a hoot of delight when you do so and hugs you all the tighter.";
+				say "     Unable to resist her alluring assets any longer, you surrender to the big-chested bird. She releases a happy hoot and snuggles you up in her wing arms, burying your face in her bosom. You moan softly and nuzzle at the soft feathers and warm breasts. You run your fingers through her down, stroking her breasts and teasing the hidden nipples. She caresses your head and guides your mouth to one of those perky nipples, encouraging you to suckle it. She gives a hoot of delight when you do so and hugs you all the tighter.";
 				say "     The fluffy owl slides a hand down between your legs, taking hold of your rising manhood. Once she's gotten you to full erection, she guides you both down onto the ground and lays out on her back, all while keeping your face pressed to her massive tits. Knowing what's needed of you, you suck down harder and drive your [Cock of Player] cock right into her juices folds as soon as she's gotten you lined up. Her avian pussy squeezes and quivers around your meat, milking at it as she hoots happily. You fuck the soft, pillowy bird with your hands and lips playing with those fluffy breasts and swollen nipples. Eventually you can hold out no longer and cum hard, pumping your hot seed right into her until you're drained and the big breasted bird is sated. After that, you part amicably, the busty owl satisfied after a good, hard fuck.";
 		else:
-			say "She takes one of your hands and guides it between her legs. Sliding over the very soft feathers there, you find her wet pussy and run your fingers over it.";
+			say "     Unable to resist her alluring assets any longer, you surrender to the big-chested bird. She releases a happy hoot and snuggles you up in her wing arms, burying your face in her bosom. You moan softly and nuzzle at the soft feathers and warm breasts. You run your fingers through her down, stroking her breasts and teasing the hidden nipples. She takes one of your hands and guides it between her legs. Sliding over the very soft feathers there, you find her wet pussy and run your fingers over it.";
 			say "     With a soft hoot, she prompts you to push a few fingers into her and she squirms in pleasure. Being part avian, her pussy feels different to your touch, having become more like a bird's cloaca. Lost in your arousal, you find this quite pleasurable and enjoy the different ways it seems to grip and slide over your pumping digits. You work three fingers into her faster and faster with your face buried in her soft feathers, sucking at a nipple until she cums over your hand and you soak your thighs with your cum as well. You nibble and suck at her breast as you both enjoy the afterglow before separating and parting ways.";
 	else:				[LOSE]
 		say "     Your fight with the fluffy bird comes to an end with her grabbing you and stuffing your face between her ample breasts, suffocating you in her soft scent and warm downy fluff. You try to push away, but you're too worn out and eventually pass out. When you come to, your crotch is soaked in sticky, feminine juices and the bird is nowhere to be found. Her soft, lingering scent is quite arousing, making you feel a little more willing to play with one of the lovely birds next time.";
-		increase Libido of Player by 5;
+		raise Player Libido by 5;
 
 to say beatthefluffyowl:		[WIN]
 	project Figure of FluffyOwl2_icon;
-	say "     With the fluffy bird knocked down, ";
 	if Libido of Player > 29 or (BodyName of Player is listed in infections of AvianList and Libido of Player > 14) or "Dominant" is listed in feats of Player:
-		say "you look over her shapely body, tempted by those huge breasts and that feather-padded bottom.";
-		say "     [bold type]Shall you play with the captured birdy?[roman type][line break]";
-		LineBreak;
+		say "     With the fluffy bird knocked down, you look over her shapely body, tempted by those huge breasts and that feather-padded bottom.";
+		say "[line break]     [bold type]Shall you play with the captured birdy?[roman type][line break]";
 		say "     ([link]Y[as]y[end link]) - Yes.";
 		say "     ([link]N[as]n[end link]) - No.";
 		if Player consents:
@@ -46,12 +42,9 @@ to say beatthefluffyowl:		[WIN]
 				LineBreak;
 				say "     Pulling her up, you find her surprisingly light and easily lift her over to a nearby examination table. You sit her down on it, spreading her legs. You slide one hand down between her legs while the other continues to fondle her oversized bosom. Finding her wet slit under those soft feathers, you run your fingers over it before slipping them into her. Her cloaca-like pussy is wet and shaped a little different from a normal cunt, but quivers with delight all the same as you drive a pair of fingers into her. The way it feels and the way it grips around your fingers is a little different, but still quite enjoyable, especially as you watch the bird woman moan and squirm in ecstasy when she cums. Her hot juices soak your fingers and you brush them off onto her fluffy breast before you part ways.";
 	else:
-		say "you choose to part ways before she recovers.";
+		say "     With the fluffy bird knocked down, you choose to part ways before she recovers.";
 
 Section 2 - Creature Insertion
-
-to say fluffyowldesc:
-	say "     With a soft hoot, a fluffy owl creature comes swooping out at you from a dark corner. She has soft, fluffy looking feathers covering her body. Her arms are partially wings, but have taloned hands at the end. Her feet end in large, taloned bird's feet. Her piercing eyes seem to flash brightly in the dim corridors and her beak looks quite sharp. As she swoops in close, you can't ignore them any longer. On her chest are an enormous, simply titanic pair of boobs. Each the size of a large pumpkin, you have no idea how she can stand upright and walk, let alone fly with them. But somehow she does, moving with a strange lightness and grace despite her ample assets. She seems to smile at her beak as she notices your gaze and runs her taloned fingers over her huge breasts, jiggling them tantalizingly at you.";
 
 Table of CombatPrep (continued)
 name(text)	PrepFunction(text)
@@ -76,6 +69,7 @@ When Play begins:
 	add "Fluffy Owl" to infections of FemaleList;
 	add "Fluffy Owl" to infections of TaperedCockList;
 	add "Fluffy Owl" to infections of InternalCockList;
+	add "Fluffy Owl" to infections of InternalBallsList;
 	add "Fluffy Owl" to infections of BipedalList;
 	add "Fluffy Owl" to infections of FlightList;
 	add "Fluffy Owl" to infections of TailList;
@@ -87,7 +81,7 @@ When Play begins:
 	now attack entry is "[one of]The big-breasted owl grabs you and buries your face in her downy bosom, trying to smother you with them![or]The fluffy owl slashes at you with a taloned hand![or]The stacked avian emits a high-pitched shriek that hurts your ears and makes you wobble unsteadily as it scrambles your inner ear![or]The owl woman makes a gliding swoop around you, then comes in to slash at you with her taloned feet![or]The owl creature presses her soft, fluffy body against yours, rubbing those huge breasts against you, hooting softly with need![or]The bird woman angrily snaps at you with her sharp beak![or]The avian woman grabs her big breasts and shakes them enticingly at you![at random]";
 	now defeated entry is "[beatthefluffyowl]"; [ Text when monster loses. ]
 	now victory entry is "[losetofluffyowl]"; [ Text when monster wins. ]
-	now desc entry is "[fluffyowldesc]"; [ Description of the creature when you encounter it. ]
+	now desc entry is "     With a soft hoot, a fluffy owl creature comes swooping out at you from a dark corner. She has soft, fluffy looking feathers covering her body. Her arms are partially wings, but have taloned hands at the end. Her feet end in large, taloned bird's feet. Her piercing eyes seem to flash brightly in the dim corridors and her beak looks quite sharp. As she swoops in close, you can't ignore them any longer. On her chest are an enormous, simply titanic pair of boobs. Each the size of a large pumpkin, you have no idea how she can stand upright and walk, let alone fly with them. But somehow she does, moving with a strange lightness and grace despite her ample assets. She seems to smile at her beak as she notices your gaze and runs her taloned fingers over her huge breasts, jiggling them tantalizingly at you.[line break]"; [ Description of the creature when you encounter it. ]
 	now face entry is "now the head of a fluffy barn owl with sharp eyes and a sharp beak. You have a faint trace of lips as well, though they are hard to see at first glance";
 	now body entry is "light and slender, but still having strong muscles. This fitness can mostly be felt in your chest and arms, running to the feathery wings that your arms have become. Your hands have reshaped themselves into bird-like talons, as have your feet";
 	now skin entry is "fluffy, brown and cream feathers cover your";
@@ -238,7 +232,6 @@ When Play begins:
 	[Clit Size Adjective is generated by a function and can be used in scenes: very small/small/average/large/very large]
 ]
 
-
 Section 3 - Endings
 
 Table of GameEndings (continued)
@@ -249,22 +242,15 @@ This is the Fluffy Owl Infection rule:
 	if Player has a body of "Fluffy Owl":
 		trigger ending "Fluffy Owl Infection"; [Here it states, that the ending has been played.]
 		if humanity of Player < 10:
-			say "     Losing yourself to your new instincts and a renewed wave of changes because of it, you head out into the city. You make your way to the roof of a small office building and with only a little trepidation, leap off into the air. You glide clumsily at first, but somehow manage to fly soon enough. You soar through the night air, drawn back to the hospital. There, you join the other fluffy owls in the nest that they have set up in one wing, ";
-			if Player is herm:
-				say "enjoying a life of mating with the many females and being mated to lay more eggs for the parliament.";
-			else if Player is male:
-				say "enjoying a life of mating with the many females so they may lay more eggs for the parliament.";
-			else:
-				say "enjoying a life of being mated by one of the group's few males so you may lay more eggs for the parliament.";
+			say "     Losing yourself to your new instincts and a renewed wave of changes because of it, you head out into the city. You make your way to the roof of a small office building and with only a little trepidation, leap off into the air. You glide clumsily at first, but somehow manage to fly soon enough. You soar through the night air, drawn back to the hospital. There, you join the other fluffy owls in the nest that they have set up in one wing, enjoying a life of [if Player is herm]mating with the many females and being mated to[else if Player is male]mating with the many females so they may[else]being mated by one of the group's few males so you may[end if] lay more eggs for the parliament.";
 		else:
-			say "     You manage to survive your time in the city, but not unchanged by the strange infection. With your bird-like body, you are quite an unusual sight and it makes your life back in society difficult. With avian infections being rarer and with your wing-like arms, you stand out all the more. You do manage to find a career that you can be satisfied with when ";
 			if FaceName of Player is "Fluffy Owl" and SkinName of Player is "Fluffy Owl" and TailName of Player is "Fluffy Owl" and CockName of Player is "Fluffy Owl" and Breast Size of Player > 5:
-				say "you become the mascot for a restaurant change. You get a rather cushy life of a minor celebrity with appearances and commercials. Despite your altered appearance, you are a welcome sight at the restaurants and the lovely, big-breasted girls who work there are always fun to see. And there's always at least one who's willing to sneak off to snuggle up to the cute, fluffy owl and her big, soft breasts.";
+				say "     You manage to survive your time in the city, but not unchanged by the strange infection. With your bird-like body, you are quite an unusual sight and it makes your life back in society difficult. With avian infections being rarer and with your wing-like arms, you stand out all the more. You do manage to find a career that you can be satisfied with when you become the mascot for a restaurant change. You get a rather cushy life of a minor celebrity with appearances and commercials. Despite your altered appearance, you are a welcome sight at the restaurants and the lovely, big-breasted girls who work there are always fun to see. And there's always at least one who's willing to sneak off to snuggle up to the cute, fluffy owl and her big, soft breasts.";
 			else if FaceName of Player is "Fluffy Owl":
-				say "you decide to become a prosecuting attorney. You are quite effective at questioning people on the stand, as many witnesses aren't prepared to deal with your appearance. And your habit, when the questioning is reaching its peak, of turning your back on them casually and then slowly twisting your head around backwards to stare at them makes many of the weak-willed criminals snap and make a fatal mistake under your steely, predatory gaze. In your later years, when you become a judge, you use this technique as well, throwing off witnesses and lawyers alike to get to the real truth of the matter so you can mete out harsh justice.";
+				say "     You manage to survive your time in the city, but not unchanged by the strange infection. With your bird-like body, you are quite an unusual sight and it makes your life back in society difficult. With avian infections being rarer and with your wing-like arms, you stand out all the more. You do manage to find a career that you can be satisfied with when you decide to become a prosecuting attorney. You are quite effective at questioning people on the stand, as many witnesses aren't prepared to deal with your appearance. And your habit, when the questioning is reaching its peak, of turning your back on them casually and then slowly twisting your head around backwards to stare at them makes many of the weak-willed criminals snap and make a fatal mistake under your steely, predatory gaze. In your later years, when you become a judge, you use this technique as well, throwing off witnesses and lawyers alike to get to the real truth of the matter so you can mete out harsh justice.";
 				if lastfuck of Alex is not 255:
 					say "     You remain the friend and occasional lover of Alex, the ferrety lawyer, throughout your life. He always squirms so cutely when you nip at him with your beak or brush your feathers across his cock. You do have to keep some distance from him, for professional reasons, and always take care against any conflict on your cases. But you are able to 'consult' with him from time to time, valuing both his advice and his company at those times. His more easy-going attitude and advice helps offset your sometimes harsh urges for swift and strong decisions, helping you to reach a more sound and balanced verdict on many cases.";
 			else:
-				say "you become a pilot, having an instinctual longing to fly, but aren't quite able to do it on your own. As the pilot, you can remain unseen by the passengers. The flight crew all soon grow used to your appearance and accept you readily enough. Your willingness to work the red-eye flights, which are better for your nocturnal body, helps quite a bit too. You become popular with several of the flight attendants as well[if Player is herm], both male and female[end if]. You enjoy many an opportunity to renew your membership in the Mile High Club.";
+				say "     You manage to survive your time in the city, but not unchanged by the strange infection. With your bird-like body, you are quite an unusual sight and it makes your life back in society difficult. With avian infections being rarer and with your wing-like arms, you stand out all the more. You do manage to find a career that you can be satisfied with when you become a pilot, having an instinctual longing to fly, but aren't quite able to do it on your own. As the pilot, you can remain unseen by the passengers. The flight crew all soon grow used to your appearance and accept you readily enough. Your willingness to work the red-eye flights, which are better for your nocturnal body, helps quite a bit too. You become popular with several of the flight attendants as well[if Player is herm], both male and female[end if]. You enjoy many an opportunity to renew your membership in the Mile High Club.";
 
 Fluffy Owl ends here.

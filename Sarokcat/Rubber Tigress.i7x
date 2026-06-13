@@ -1,9 +1,7 @@
 Version 2 of Rubber Tigress by Sarokcat begins here.
 [ Version 2.1 - Added M/F oral player loss ]
 
-
 "Adds a Rubber Tigress to Flexible Survival's Wandering Monsters table."
-
 
 Section 1 - Creature Responses
 
@@ -20,21 +18,16 @@ to say Rubber Tigress attack:
 	else:
 		say "     [if HP of Player > 0]Despite your surrender, the tigress doesn't let up, bowling you over with one last charge, the two of you tumbling[else]With one last charge, the two of you tumble[end if] to the ground of the carnival. As you lie there, stunned, the squeaky tigress moves her way down your body, until you find her spreading your legs wide as she examines your crotch with her rubber head. Seemingly somewhat disappointed at your lack of rubbery toys for her to play with down below, she lets out a squeaky sigh, before lowering her soft, rubbery head to your gaping cunt. You gasp as her long feline tongue works its way inside you, its smooth texture feeling wonderful as it parts your feminine folds. Soon the rubbery beast is rubbing her soft paws along the inside of your legs, while her rubbery whiskers tickle at your thighs as she laps up your juices like the most delicious cream. Your hands run along the back of her smooth rubbery head as you look for something to hold onto as she brings you to orgasm again and again, until you pass out, helpless under her expert ministrations. Eventually you wake up in the carnival to find yourself alone, and start to pull yourself back together.";
 		CreatureSexAftermath "Rubber Tigress" receives "OralPussy" from "Player";
-	rubtigify;
-
-To say Rubber Tigress loss:
-	say "     With a strange squeaking noise, the large rubber tigress seems to deflate slightly, her body seeming to shrink in on itself as she staggers away, looking desperately for a rubber patch kit. She gives you one last longing look over her shoulder as she flicks her tail to the side, giving you a glimpse of what you might have had before she disappears into the midway.";
+	infect "Rubber Tigress";
 
 Section 2 - Creature Insertion
-
-to say RubberTigress_Desc:
-	say "     A large and shiny tigress appears in front of you, stalking forward on two legs with an evil grin on her sleek rubber muzzle, her stripes sleek and her rubbery nipples standing out visibly in the colored fair lighting.";
 
 Table of CombatPrep (continued)
 name(text)	PrepFunction(text)
 "Rubber Tigress"	"[PrepCombat_Rubber Tigress]"
 
 to say PrepCombat_Rubber Tigress:
+	setmongender 4; [creature is female]
 	project the Figure of RubberTigress_icon;
 
 Table of Random Critters (continued)
@@ -58,16 +51,16 @@ When Play begins:
 	now enemy Name entry is ""; [ Specific name of unique enemy. ]
 	now enemy type entry is 0; [ 0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters. ]
 	now attack entry is "[one of]She swipes at you with her surprisingly sharp claws.[or]The rubber beast rubs itself on you, leaving a patch of orange and black rubber attached to your skin.[or]The beast draws back for a second, and then springs forward in a rush, knocking you to the ground.[or]Crouching low for a second, the tigress explodes into motion as she lashes you again and again with her rubber paws.[or]She opens her muzzle wide, revealing the inside of her pink rubber mouth, and her soft rubber teeth, before clamping her jaws down on your arm, strangely for being bitten by the squeaky rubber beast, it actually feels kind of good.[or]The tigress grabs some nearby fair prizes, and starts throwing them at you![or]Panting as she shows off her body, she turns to wiggle her ass at you, it isn't until you feel something on your leg that you realize she has rubbed her tail up the inside of your thighs, leaving a trail of rubber behind.[or]She slams herself into you recklessly, her hands moving to do all she can to spread her orange rubber-like coating to your body as well.[at random]";
-	now defeated entry is "[Rubber Tigress loss]";
+	now defeated entry is "     With a strange squeaking noise, the large rubber tigress seems to deflate slightly, her body seeming to shrink in on itself as she staggers away, looking desperately for a rubber patch kit. She gives you one last longing look over her shoulder as she flicks her tail to the side, giving you a glimpse of what you might have had before she disappears into the midway.[line break]";
 	now victory entry is "[Rubber Tigress attack]";
-	now desc entry is "[RubberTigress_Desc]";
+	now desc entry is "     A large and shiny tigress appears in front of you, stalking forward on two legs with an evil grin on her sleek rubber muzzle, her stripes sleek and her rubbery nipples standing out visibly in the colored fair lighting.[line break]";
 	now face entry is "bright and shiny orange and black striped face, its tiger-like appearance somehow conveying both sexiness and cuteness at the same time. With an overlarge muzzle and soft rubber whiskers, your rubber tiger ears cocked forward while your overlarge cat-like eyes stare out of your tiger"; [ Face description, format as "Your face is [Face of Player]." ]
 	now body entry is "sleek and smooth, your body is built for stalking and hunting, with large exaggerated muscles and your hands and feet converted into overlarge tiger paws"; [ Body Description, format as "Your Body is [Body of Player]." ]
 	now skin entry is "[one of]orange and black striped[or]squeaky rubber[or]tiger-striped[or]tight rubberized[at random]"; [ Skin Description, format as "Looking at yourself, your body is covered in [Skin of Player] skin." ]
 	now tail entry is "You have long, tiger-like tail curling behind you, its orange and black stripes shining like the fine rubber it's made of in the light. As it lashes behind you, you can swear the thick rubber appendage is almost eagerly waiting for a chance to rub itself up against a partner."; [ Tail description, write a whole Sentence or leave blank. ]
 	now cock entry is "[one of]black rubber[or]tiger[or]rubber tiger[or]barbed rubber[or]sheathed rubber feline[at random]"; [ Cock Description, format as you have a 'size' (your text) cock]
 	now face change entry is "it seems to melt and reshape itself, your mouth opening wide in a yawn as it seems to stretch forward in a blob of rubber that slowly resolves itself into a new feline muzzle soft rubber whiskers springing out from the sides of your muzzle with soft sproinging noises. Your longer tongue explores your new mouth, finding the strange rubbery taste not at all displeasing as you play with your rubbery teeth, and your eyes go wide as they change to a more exaggerated feline look, while your ears change to stick out perkily from the top of your head"; [ Face change text, format as "Your face feels funny as [face change entry]." ]
-	now body change entry is "Your body seems to lengthen and change, becoming much more flexible and rubbery, as your hands and feet stretch out into overlarge tiger paws, making walking and picking things up slightly more difficult, although you get the hang of your new appendages after a minute"; [ Body change text, format as "Your body feels funny as [body change entry]." ]
+	now body change entry is "your body seems to lengthen and change, becoming much more flexible and rubbery, as your hands and feet stretch out into overlarge tiger paws, making walking and picking things up slightly more difficult, although you get the hang of your new appendages after a minute"; [ Body change text, format as "Your body feels funny as [body change entry]." ]
 	now skin change entry is "it seems to stretch itself tight over your frame, its colors blending and blurring until you find yourself completely covered in orange and black striped rubber. The squeaky and smooth texture feeling amazing on you as stroke it in amazement"; [ Skin change text, format as "Your skin feels funny as [skin change entry]." ]
 	now ass change entry is "you stumble for a minute, the rubber on your body seeming to pool itself together in a large blob hanging off your ass, your balance is thrown off for a second as the rubber stretches out and for a minute you think it is going to fall right off you to the ground. To your surprise however, the mass of rubber seems to lengthen into a long cylinder hanging off of you, and the telltale orange and black stripes soon show up on your new tiger-like tail. The mass of rubber seeming almost a part of you now as you adjust your balance to having a rubber tail lashing excitedly behind you"; [ Ass/tail change text, format as "Your ass feels funny as [ass change entry]." ]
 	now cock change entry is "you gasp and moan, feeling like something is massaging your cock, it feels as if your cock has been stuffed into a mold and is now reshaping itself under the invisible pressure, and it feels so good while it does so. Looking down you can see your cock narrowing into a long tapered point, with soft barbs covering it from the tip until the midpoint, more surprisingly though, it seems made entirely of black rubber, like some strange sort of exotic dildo, as it sticks out of your new white rubber sheath"; [ cock change text. format as "Your cock feels funny as (your text)." ]
@@ -211,23 +204,19 @@ When Play begins:
 	[Clit Size Adjective is generated by a function and can be used in scenes: very small/small/average/large/very large]
 ]
 
-to rubtigify:
-	infect "Rubber Tigress";
-
-
 Section 3 - Tiger Patch
 
 Table of Game Objects (continued)
 name	desc	weight	object
 "Tiger patch"	"A strange swatch of sticky rubber that looks somewhat like a bandage or clothing patch, it looks like it could be useful to seal up wounds or for patching things, interestingly enough, it seems to have orange and black tiger stripes on it."	1	Tiger patch
 
-Tiger patch is a grab object. Understand "patch" as Tiger patch. Tiger patch is infectious. Strain of Tiger patch is "Rubber Tigress".
+Tiger patch is a grab object. Understand "patch" as Tiger patch.
+Usedesc of Tiger patch is "[Tiger patch use]".
+Scent of Tiger patch is "The stuff smells of rubber and felines.".
 
-Usedesc of Tiger patch is "Taking out the small piece of tiger-striped material, you note it could be useful as either a patch or a stylish accessory or even a bandage. Holding it up to your skin for a minute you smile at how natural it seems to look, almost like part of your body. You blink as you try to pull it away only to realize that it has actually become part of you! You tug futilely on the soft striped rubber, even as you can feel the infection spreading through your body.";
-
-instead of sniffing Tiger patch:
-	say "The stuff smells of rubber and felines.";
-
+to say Tiger patch use:
+	say "     Taking out the small piece of tiger-striped material, you note it could be useful as either a patch or a stylish accessory or even a bandage. Holding it up to your skin for a minute you smile at how natural it seems to look, almost like part of your body. You blink as you try to pull it away only to realize that it has actually become part of you! You tug futilely on the soft striped rubber, even as you can feel the infection spreading through your body.";
+	infect "Rubber Tigress";
 
 Section 4 - Endings
 
@@ -255,6 +244,5 @@ This is the Rubber Tigress Infection rule:
 				say "     Soon your smugness is vindicated as you are picked up and moved out of the city, and eventually shipped on your way after a postal hold, the look on your friends face when he receives you is absolutely priceless. However the look on your friends new rubbery muzzle after you finish wrapping your lithe form around his is even better, soon you and your new rubber tigress friend begin converting the rest of the building, passing your forms off as fetishwear until your prey are too close to know better. Eventually there is a response to your rubbery spread, but once more you all gather yourself up and mail yourself out to new locations, leaving the military response to shake their heads over the empty buildings with the strange rubbery smell, while you begin again in a new location...";
 		else:
 			say "     When the military arrives they seem surprised at your strange form, but you manage to convince them to take you with them anyways. After several experiments to see how you can survive with most of your body made out of rubber, eventually they give up and have to let you go. You wander around trying to find a job, but your strange looks make it hard for you to fit in with normal society, and your lustful appetites make it hard for others to trust you. Eventually though you do manage to find a job, strangely enough in the porn industry, where your amusing features and ability to go for hours on end seems to be a major benefit in the newly found market of infected porn. Eventually you manage to come to an arrangement with a few of your other co stars, and end up moving in together and forming your own little company, Living Toys inc. The future seems bright for you and your fellow sex toy beasts, even if you always keep looking for that wonderful tigress who transformed you...";
-
 
 Rubber Tigress ends here.
