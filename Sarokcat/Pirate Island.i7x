@@ -13,6 +13,8 @@ Description of Pirate Island is "     Finally, the island with the treasure mark
 Scent of Pirate Island is "     The island smells of the ocean and fetid sea caves.".
 Pirate Island is west of Sandbar.
 
+Pirate Island is west of Sandbar.
+
 Table of GameCharacterIDs (continued)
 object	name
 Treasure cave	"Treasure cave"
