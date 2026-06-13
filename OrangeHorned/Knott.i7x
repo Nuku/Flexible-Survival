@@ -6,6 +6,11 @@ Version 1 of Knott by OrangeHorned begins here.
 [   3 - Player gave him the book                         ]
 [ 100 - Player failed to get the book                    ]
 
+a postimport rule: [bugfixing rules for players that import savegames]
+	now SexuallyExperienced of Knott is true;
+	now Sterile of Knott is false;
+	now MainInfection of Knott is "Beag";
+
 Table of GameCharacterIDs (continued)
 object	name
 Knott	"Knott"
@@ -43,153 +48,149 @@ AnalVirgin of Knott is false. [Same as above but for butts.]
 PenileVirgin of Knott is false. [Same as above but for dicks.]
 SexuallyExperienced of Knott is true. [How slutty a character is.]
 TwistedCapacity of Knott is true. [Twisted Characters can take any penetration, no matter the size. Can be changed to allow you to make stomach bulging and other such scenes.]
-Sterile of Knott is true. [steriles can't knock people up. Use to prevent pregnancies from a character.]
-MainInfection of Knott is "". [A character's infection. Case sensitive. Put the infection name here and that NPC may now infect the player, if the infection itself is infectious.]
-Description of Knott is "[Knottdesc]"; [Points to the character description.]
-
-to say Knottdesc:
-	say "     The former terra-cotta skinned priest shyly stands around 7 feet, his clothes are what you imagine what some male stripper in a priest getup would use at a burlesque show- hugging onto this masculine body to accentuate the changes. You see a blue colored blanket wrapped around his crotch to at least 'try' to keep his bulge hidden, yet the python still manages to peek out when he shuffles his feet. He sees you looking at his unkempt shoulder length hair, giving a grunt of annoyance as his mostly more human kept face presses into a pout, their bovine ears drooping. The last thing you can see of note is a colorful rosary just above their collarbone.";
-
-Scent of Knott is "Knott smells like  the inside of some antique store mixed with some earthy hints, the best way to describe it is some church mixed with some herbal spring. Oddly enough those two conflicting things actually go well to him.". [How the character smells. Can be detailed or not.]
+Sterile of Knott is false. [steriles can't knock people up. Use to prevent pregnancies from a character.]
+MainInfection of Knott is "Beag". [A character's infection. Case sensitive. Put the infection name here and that NPC may now infect the player, if the infection itself is infectious.]
+Description of Knott is "     The former terra-cotta skinned priest shyly stands around 7 feet, his clothes are what you imagine what some male stripper in a priest getup would use at a burlesque show- hugging onto this masculine body to accentuate the changes. You see a blue colored blanket wrapped around his crotch to at least 'try' to keep his bulge hidden, yet the python still manages to peek out when he shuffles his feet. He sees you looking at his unkempt shoulder length hair, giving a grunt of annoyance as his mostly more human kept face presses into a pout, their bovine ears drooping. The last thing you can see of note is a colorful rosary just above their collarbone.[line break]". [Points to the character description.]
+Scent of Knott is "     Knott smells like the inside of some antique store mixed with some earthy hints, the best way to describe it is some church mixed with some herbal spring. Oddly enough those two conflicting things actually go well to him.". [How the character smells. Can be detailed or not.]
+icon of Knott is Figure of Knott_robes_icon.
 
 instead of conversing Knott:
-	say "[KnottTalkMenu]";
-
-to say KnottTalkMenu:
-	say "     Knott sees you sizing him up, 'Yes? What is it?'";
-	LineBreak;
-	say "     [italic type]What do you ask him about?[roman type]";
-	LineBreak;
+	project Figure of Knott_robes_icon;
+	say "     Knott sees you sizing him up. 'Yes? What is it?'";
+	say "[line break]     [bold type]What do you ask him about?[roman type][line break]";
 	let Knotty_stuff__Choices be a list of text;
 	add "Himself." to Knotty_stuff__Choices;
-	add "Current Form." to Knotty_stuff__Choices;
-	if HP of GivingFirbolg is 2:
+	add "Current form." to Knotty_stuff__Choices;
+	if HP of Knott < 2 and HP of GivingFirbolg is 2:
 		add "Missing items." to Knotty_stuff__Choices;
-	if HP of Knott is 2:
-		add "Give Knott the book." to Knotty_stuff__Choices;
-	if HP of Knott is 2:
-		add "Ask about the book." to Knotty_stuff__Choices;
-	if HP of Knott is 2:
-		add "How does he know Giving?" to Knotty_stuff__Choices;
-	if HP of Knott is 2:
-		add "What now?" to Knotty_stuff__Choices;
-	if HP of Knott is 3:
-		add "You were married?" to Knotty_stuff__Choices;
+	else if HP of Knott < 100:
+		if Loyalty of Knott is 0:
+			add "Give Knott the book." to Knotty_stuff__Choices;
+		else:
+			add "Ask about the book." to Knotty_stuff__Choices;
+			add "How does he know Giving?" to Knotty_stuff__Choices;
+			add "What now?" to Knotty_stuff__Choices;
+			if HP of Knott > 2:
+				add "You were married?" to Knotty_stuff__Choices;
 	let Knotty_stuff__Choice be what the player chooses from Knotty_stuff__Choices;
+	LineBreak;
 	if Knotty_stuff__Choice is:
 		-- "Himself.":
-			LineBreak;
-			say "     The former older man seems to confusingly look at you, he carefully knits to himself with his satchel next to him- all while he keeps another eye on Giving. 'I'll keep it brief, honestly I've always been a man who would rather speak with his actions or grand speech than very basic small talk, Giving told me my new nickname Knott considering I was once officiated weddings, but I had... other urges that I had to attend to. Was visiting this place for a funeral when the whole... what did those young ones call it, the 'furry apocalypse' happened'.";
-			say "     With a palm through his new hair, he continued, 'Part of me was always interested in what was causing all those people to go insane, now I get it, this fresh feeling of old vitality coming back to me, no back pain, I feel great, like the man I was almost 50 years ago- and I know this time it ain't my brain failing me!'";
-		-- "Current Form.":
-			LineBreak;
-			say "     'Mostly probably doing what a higher power possibly intended me to do, these people here need guidance, someone to talk to about all that ails them, they welcomed me with open arms, so they should only expect any who have walked the path of righteousness to help them out.' You ask a side question on what caused them to give up the priest's life, Knott's face lightens up as he tries to hide his humane impulse, 'I do not wish to speak of it, especially not right now in this given time, I just.... It comes with its own baggage you see? When I get more comfortable here maybe ill be in the mood for such gab.'";
+			say "     The former older man seems to confusingly look at you. He carefully knits to himself with his satchel next to him, all while he keeps another eye on Giving. 'I'll keep it brief; honestly I've always been a man who would rather speak with his actions or grand speech than very basic small talk. Giving gave me my new nickname [']Knott['] considering I once officiated weddings, but I had... other urges that I had to attend to. Was visiting this place for a funeral when the whole... what did those young ones call it... the [']furry apocalypse['] happened'.";
+			say "     With a palm through his new hair, he continues, 'Part of me was always interested in what was causing all those people to go insane; now I get it, this fresh feeling of old vitality coming back to me, no back pain. I feel great, like the man I was almost 50 years ago- and I know this time it ain't my brain failing me!'";
+		-- "Current form.":
+			say "     'Mostly probably doing what a higher power possibly intended me to do. These people here need guidance, someone to talk to about all that ails them; they welcomed me with open arms, so they should only expect any who have walked the path of righteousness to help them out.' You ask a side question on what caused him to give up the priest's life. Knott's face lightens up as he tries to hide his humane impulse. 'I do not wish to speak of it, especially not right now in this given time. I just.... it comes with its own baggage, you see? When I get more comfortable here maybe I'll be in the mood for such gab.'";
 		-- "Missing items.":
-			LineBreak;
-			say "     You ask him about the stuff he possibly left back at where he called safe haven before becoming a Firbolg, 'You would do that for an old man like me? I mean...' He gives you a look before pausing a bit... finally pursing his lips before continuing, 'This won't be an easy journey, there's something we were trying to run from there, some people in this... city... have given into the most rabid forms of hedonism. I doubt any you saw running with me went back there after the infected ferals routed us, but if you do go back... I had a book there that I was reading... if you could grab it for me, I would be forever in your debt.'";
+			say "     You ask him about the stuff he possibly left back at where he called safe haven before becoming a Firbolg. 'You would do that for an old man like me? I mean...' He gives you a look before pausing a bit, finally pursing his lips before continuing, 'This won't be an easy journey. There's something we were trying to run from there; some people in this... city... have given in to the most rabid forms of hedonism. I doubt any you saw running with me went back there after the infected ferals routed us, but if you do go back... I had a book there that I was reading; if you could grab it for me, I would be forever in your debt.'";
 		-- "Give Knott the book.":
-			LineBreak;
-			say "     You pull out the book you found from the High Rise District 'This book ... .I left it in one of the last places I went when I was still human. I have no clue what process you might have been through to get this, but I thank you. Nodding, you give him the details on what happened when you went to grab the book, about Travis and his little band of lunatics.'I sadly do not know anything about this Travis you speak of, but the kid sounds familiar, him and his mom weren't bad company... Do not blame yourself wholly for not being able to do anything for them. You went into this to help me out and I thank you deeply. That's what worries me the most of just opening myself up to such things. These thoughts within my head yearn for me to spread my lusts onto the wind.' He takes a deep pause, realizing another certain Firbolg was peeking behind a tree at your conversation, 'Giving asked you to do this for me, that much I know. The way this camp is set up makes me wish to push these lustful desires into something more constructive. So if you wish, I can try getting to know you a little more personally through the rubbing of skin. Wow, that was easier than expected.";
-			say "     'I wasn't just being prudish, more trying to isolate myself from others, but with how abrasive Giving can be, I can tell he is just trying deeply to help out even if he needs to let people come to their own conclusions. He warned me about needing to partake in the 'sermons' they have to placate our passions together, but I for one can not stand the idea of such a pagan ritual, but if I come at it with the mindset of lowering the chances of doing these... horrid actions the intrusive thoughts would drag me to do, then I can bare it. Sangre seems to be someone who has much on his hands anyway to be the odd nail out in this new group.' Happily, he puts the book neatly under his robe's belt, something about his expression grew softer. 'Now Giving, come out.' Knott grumbles like an exasperated parent. 'Wha- was it obvious?' The cheeky firbolg mutters as stumble out his less-then-cleaver hiding spot on the edges of the snowy trail. 'Your build is not one meant for lurking, but I will be joining you more now, next time though don't send people to do work that both of us could do together my child.' Giving's chuckle of embarrassment restores a bit of hope you have in this apocalypse, you hope things get better for the commune.";
+			say "     You pull out the book you found from the High Rise District. 'This book... I left it in one of the last places I went when I was still human. I have no clue what ordeal you might have been through to get this, but I thank you.' Nodding, you give him the details on what happened when you went to grab the book, about Travis and his little band of lunatics. 'I sadly do not know anything about this Travis you speak of, but the kid sounds familiar- him and his mom weren't bad company. Do not blame yourself wholly for not being able to do anything for them. You went into this to help me out and I thank you deeply. That's what worries me the most of just opening myself up to such things. These thoughts within my head yearn for me to spread my lusts onto the wind.' He takes a deep pause, realizing another certain Firbolg is peeking behind a tree at your conversation. 'Giving asked you to do this for me, that much I know. The way this camp is set up makes me wish to push these lustful desires into something more constructive. So if you wish, I can try getting to know you a little more personally through the rubbing of skin.' Wow, that was easier than expected.";
+			say "     'I wasn't just being prudish, more trying to isolate myself from others, but with how abrasive Giving can be, I can tell he is just trying deeply to help out even if he needs to let people come to their own conclusions. He warned me about needing to partake in the [']sermons['] they have to placate our passions together, but I for one cannot stand the idea of such a pagan ritual, but if I come at it with the mindset of lowering the chances of doing these... horrid actions the intrusive thoughts would drag me to do, then I can bare it. Sangre seems to be someone who has much on his hands anyway to be the odd nail out in this new group.' Happily, he puts the book neatly under his robe's belt, something about his expression growing softer. 'Now, Giving, come out,' Knott grumbles like an exasperated parent. 'Wha- was it obvious?' the cheeky Firbolg mutters as he stumbles out of his less-than-clever hiding spot on the edges of the snowy trail. 'Your build is not one meant for lurking, but I will be joining you more now; next time, though, don't send people to do work that both of us could do together, my child.' Giving's chuckle of embarrassment restores a bit of hope you have in this apocalypse; you hope things get better for the commune.";
+			now Loyalty of Knott is 1;
 		-- "Ask about the book.":
-			LineBreak;
-			say "     You ask Knott about the book you nearly risked you life to retrieve, 'Oh yes, I should apologize again, for I didn't realize any of them would still be there.' Knott spoke softly as his fingers went to slide at the bridge of the book. [']A Sinner among Angels['], A book about someone with a similar life story as mine. Someone who spent a long time of their life lost, only their ending was one where they confessed to their wife their feelings of men. I cannot imagine such a unity strong enough to make a memoir as... powerful as this' He eyes light up, ears shivering with the very last words he spoke. He continues monologuing with, 'I just remember having something in my past where I wish I spoke up, told someone I loved them, held them instead of pushing them away. But time always marches on, life is... fragile' You could feel the wave of sadness wash over him, 'Forgive me, lets change the subject, is there anything else you wish to speak of?'";
+			say "     You ask Knott about the book you nearly risked your life to retrieve. 'Oh yes, I should apologize again, for I didn't realize any of them would still be there.' Knott speaks softly as his fingers go to slide at the bridge of the book. '[']A Sinner among Angels['], a book about someone with a similar life story as mine. Someone who spent a long time of his life lost- only his ending was one where he confessed to his wife his feelings for men. I cannot imagine such a unity strong enough to make a memoir as... powerful as this.' His eyes light up, ears shivering with the very last words he spoke. He continues monologuing with, 'I just remember having something in my past where I wish I spoke up, told someone I loved them, held them instead of pushing them away. But time always marches on; life is... fragile.' You can feel the wave of sadness wash over him. 'Forgive me; let's change the subject. Is there anything else you wish to speak of?'";
 		-- "How does he know Giving?":
-			LineBreak;
-			say "     'Oh in fact I did, well, not in a way you would imagine' Knott scratches behind his floppy ear, looking away as his jovial tone becomes serious. 'I was going to kill myself, I had a yacht and paid for his services to give private lessons I... I was going to use him as means of marking my death as a freak accident, but one moment I was drowning underwater, the next I was on the shore.' Knott pauses, his eyes growing a grey milky white as stares past you towards the sea, 'Jacques, or Giving as you know him, talked with me, I don't wish to repeat a lot of it, but he made me want to live again. Part of me came back here to see him again, among other things.' Bobbing your head sagaciously, you offer some token words of compassion to the older man.' After all, even the golden state for all its talk of love or tolerance has its flaws, why only a few scant decades such admission could see Knott locked up in a padded room with no way out. Or chased out of many of the more conservative religious circles, despite it all, a part of you is just glad he feels comfortable enough to talk to you about this. Perhaps sense, Knott's cracks a disarming smile, saying. 'Uh sorry about that, I realize that may have been a lot to take in at once, please forgive me,' making a contentious bow. Brushing his gesture aside, you reassure him that it's alright, everyone has their burden to bear and there's no shame in venting.";
-			now HP of Knott is 3;
+			say "     'Oh, in fact I did, well, not in a way you would imagine...' Knott scratches behind his floppy ear, looking away as his jovial tone becomes serious. 'I was going to kill myself. I had a yacht and paid for his services to give private lessons. I... I was going to use him as a means of marking my death as a freak accident, but one moment I was drowning underwater, the next I was on the shore.' Knott pauses, his eyes growing a grey milky white as stares past you towards the sea. 'Jacques, or Giving as you know him, talked with me. I don't wish to repeat a lot of it, but he made me want to live again. Part of me came back here to see him again, among other things.' Bobbing your head sagaciously, you offer some token words of compassion to the older man. After all, even the golden state for all its talk of love or tolerance has its flaws- why only a few scant decades ago such admission could see Knott locked up in a padded room with no way out, or chased out of many of the more conservative religious circles. Despite it all, a part of you is just glad he feels comfortable enough to talk to you about this. Perhaps sensing this, Knott cracks a disarming smile, saying, 'Uh, sorry about that. I realize that may have been a lot to take in at once... please forgive me,' making a contentious bow. Brushing his gesture aside, you reassure him that it's alright- everyone has their burden to bear and there's no shame in venting.";
+			if HP of Knott is 2, now HP of Knott is 3;
 		-- "What now?":
-			LineBreak;
-			say "     Help with the camp duties, use my story to aid anyone who's lost in this world, be a guiding light in the darkness, it's not like leaving here would *fix* me.' Knott sighs looking at his arms. 'Giving after all doesn't want to leave, so fleeing the city without him isn't something I'm prepared to do. Though I admit there are times I wonder if it's nanites making me think this, or something?' He grumbles, shaking his head. 'Perhaps it's bit of both, I can't really say anymore.";
+			say "     'Help with the camp duties, use my story to aid anyone who's lost in this world, be a guiding light in the darkness... it's not like leaving here would [']fix['] me.' Knott sighs, looking at his arms. 'Giving after all doesn't want to leave, and fleeing the city without him isn't something I'm prepared to do. Though I admit there are times I wonder if it's nanites making me think this, or something else?' He grumbles, shaking his head. 'Perhaps it's a bit of both; I can't really say anymore.'";
 		-- "You were married?":
-			LineBreak;
-			say "     'Yes, I had kids too.' Curious, you ask a side question if his wife knew about him being in the closet. 'Maybe, never cheated on her, but I cried to her one day, told her how I felt and I was shocked how accepting she was. Still it's hard to shake a lifetime of dogma, even if I told her about them and kept it safe, it felt like I was sinning.' Knott chuckles, 'But there's a reason why we still talk even after breaking it off, I'd never trade a moment of raising kids with her for anything in this world.";
+			say "     'Yes, I had kids too.' Curious, you ask a side question if his wife knew about him being in the closet. 'Maybe... never cheated on her, but I cried to her one day, told her how I felt, and I was shocked how accepting she was. Still it's hard to shake a lifetime of dogma; even if I told her about it and kept them safe, it felt like I was sinning.' Knott chuckles, 'But there's a reason why we still talk even after breaking it off; I'd never trade a moment of raising kids with her for anything in this world.'";
 
 instead of fucking Knott:	[Same as conversing, but works when the player says "Fuck Knott" in Knott's presence.]
-	if (lastfuck of Knott - turns < 6):
-		say "     'The body of mine even still needs breaks, should we have a little coffee or chat first?'";
+	if lastfuck of Knott - turns < 6:
+		project Figure of Knott_robes_icon;
+		say "     'Even this body of mine still needs breaks. Should we have a little coffee or chat first?'";
 	else if HP of Knott < 1 or Elusive Book is not resolved:
-		say "     'I am not in the mood for that right now, I have other things on my mind.' Knott isn't going to budge until you resolve the Elusive Book quest, try checking the High Rise District.";
+		project Figure of Knott_robes_icon;
+		say "     'I am not in the mood for that right now. I have other things on my mind.' Knott isn't going to budge until you resolve the Elusive Book quest; try [if Elusive Book is active]checking the High Rise District[else]talking to Giving[end if].";
 	else:
-		say "[KnottSexMenu]";
-
-to say KnottSexMenu:
-	LineBreak; [important. Separates the start from the question and available answers!]
-	say "How do you want to fuck Knot?"; [This is what will show as the question the player must answer.]
-	now sextablerun is 0; [Tells the game to start the menu up.]
-	blank out the whole of table of fucking options; [Removes old menu options from OTHER menus. Always need this line.]
-	[
-	if Player is male: [Add this line if a specific scene requires a penis! You can add all sorts of conditions like this. Including female for vaginas, and even reference variables to make scenes appear after a certain point!]
-		choose a blank row in table of fucking options; [Tells the game this is an option.]
-		now title entry is "Give Anal"; [Tells the game the name of the option.]
-		now sortorder entry is 1; [The order in which options appear. NEVER make two options the same number!]
-		now description entry is "Stuff Knott's butt."; [Further description to tell the player what this choice entails.]
-	[]
-	choose a blank row in table of fucking options;
-	now title entry is "Hand Stuff";
-	now sortorder entry is 2;
-	now description entry is "Finger all the things.";
-	]
-	if player is Female:
+		project Figure of Knott_naked_icon;
+		say "     How do you want to fuck Knot?"; [This is what will show as the question the player must answer.]
+		now sextablerun is 0; [Tells the game to start the menu up.]
+		blank out the whole of table of fucking options; [Removes old menu options from OTHER menus. Always need this line.]
+		[
+		if Player is male: [Add this line if a specific scene requires a penis! You can add all sorts of conditions like this. Including female for vaginas, and even reference variables to make scenes appear after a certain point!]
+			choose a blank row in table of fucking options; [Tells the game this is an option.]
+			now title entry is "Give Anal"; [Tells the game the name of the option.]
+			now sortorder entry is 1; [The order in which options appear. NEVER make two options the same number!]
+			now description entry is "Stuff Knott's butt."; [Further description to tell the player what this choice entails.]
+		[]
 		choose a blank row in table of fucking options;
-		now title entry is "Receive Vaginal";
-		now sortorder entry is 1;
-		now description entry is "Ask Knott to penetrate you vaginally";
-	[]
-	choose a blank row in table of fucking options;
-	now title entry is "Receive Anal";
-	now sortorder entry is 2;
-	now description entry is "Ask Knott to penetrate you anally";
-	[]
-	sort the table of fucking options in sortorder order;
-	repeat with y running from 1 to number of filled rows in table of fucking options:
-		choose row y from the table of fucking options;
-		say "[link][y] - [title entry][as][y][end link][line break]";
-	say "[link]0 - Nevermind[as]0[end link][line break]";
-	while sextablerun is 0:
-		say "Pick the corresponding number> [run paragraph on]";
-		get a number;
-		if calcnumber > 0 and calcnumber <= the number of filled rows in table of fucking options:
-			now current menu selection is calcnumber;
-			choose row calcnumber in table of fucking options;
-			say "[title entry]: [description entry]?";
-			if Player consents:
-				let nam be title entry;
+		now title entry is "Hand Stuff";
+		now sortorder entry is 3;
+		now description entry is "Finger all the things.";
+		]
+		if player is Female:
+			choose a blank row in table of fucking options;
+			now title entry is "Receive Vaginal";
+			now sortorder entry is 2;
+			now description entry is "Ask Knott to penetrate you vaginally";
+		[]
+		choose a blank row in table of fucking options;
+		now title entry is "Receive Anal";
+		now sortorder entry is 4;
+		now description entry is "Ask Knott to penetrate you anally";
+		[]
+		sort the table of fucking options in sortorder order;
+		repeat with y running from 1 to number of filled rows in table of fucking options:
+			choose row y from the table of fucking options;
+			say "[link][y] - [title entry][as][y][end link][line break]";
+		say "[link]0 - Nevermind[as]0[end link][line break]";
+		while sextablerun is 0:
+			say "Pick the corresponding number> [run paragraph on]";
+			get a number;
+			if calcnumber > 0 and calcnumber <= the number of filled rows in table of fucking options:
+				now current menu selection is calcnumber;
+				choose row calcnumber in table of fucking options;
+				say "[title entry]: [description entry]?";
+				if Player consents:
+					LineBreak;
+					now sextablerun is 1;
+					if title entry is:
+						-- "Receive Vaginal":
+							say "[KnottSex1]";
+						-- "Receive Anal":
+							say "[KnottSex2]";
+			else if calcnumber is 0:
+				LineBreak;
 				now sextablerun is 1;
-				if (nam is "Receive Vaginal"):
-					say "[KnottSex1]";
-				if (nam is "Receive Anal"):
-					say "[KnottSex2]";
-				wait for any key;
-		else if calcnumber is 0:
-			now sextablerun is 1;
-			say "     You step back from the firbolg, shaking your head slightly as he gives a questioning look. 'Nothing coming to mind? That's alright, there's always next time,' Knott says with a friendly smile.";
-			wait for any key;
-		else:
-			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
-	clear the screen and hyperlink list;
+				say "     You step back from the Firbolg, shaking your head slightly as he gives a questioning look. 'Nothing coming to mind? That's alright, there's always next time,' Knott says with a friendly smile.";
+			else:
+				say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options], or 0 to exit.";
+		wait for any key;
+		clear the screen and hyperlink list;
 
 to say KnottSex1: [Vaginal]
-	say "     You ask him to sink his cock into your pussy, and not to worry if he stretches you out a bit; the nanites should fix it anyway. He grins at your request. 'In the mood for something vigorous, are you? Well, I think that I can oblige,' he replies. 'I hope that you won't mind if I take charge for this,' he continues. The moment you consent, he pushes you to the ground with your groin high in the air, vulgar and inviting. He takes a moment to appreciate it before he slides his bulky fingers past your labia and twists them in an exquisite manner. 'I will admit, I've only done this with Giving a few times, so my apologies if my technique is a little rusty,' Knott informs you. You don't even need to reply properly, a lustful purr signaling your enjoyment as his middle finger stimulates at the edges of your nether lips, quickly testing out the depth.";
-	say "     It doesn't take long for your pussy to slicken enough for a second finger to be added, the friction of his knuckles brushing over your clit stimulating more juices of arousal. Despite his claims of inexperience, Knott seems to know exactly how to use his fingers, acclimating your vagina to his touch before advancing deeper. It isn't just the penetration either, as his other hand caresses over your body, stroking your tummy, tweaking your nipples, and teasing [if player is Male]your cock[else]your groin[end if]. All in all, it is far more affection than the majority of creatures in the city would provide you with. 'Tell me if you want me to speed up or slow down. Everyone is different after all,' the firbolg tells you. Looking at him, you are reminded of how gentle he is despite his size and you are sure that he'll be just as attentive once he has you speared on his cock.";
+	say "     You ask him to sink his cock into your pussy, and not to worry if he stretches you out a bit- the nanites should fix it anyway. He grins at your request. 'In the mood for something vigorous, are you? Well, I think that I can oblige,' he replies. 'I hope that you won't mind if I take charge for this,' he continues. The moment you consent, he pushes you to the ground with your groin high in the air, vulgar and inviting. He takes a moment to appreciate it before he slides his bulky fingers past your labia and twists them in an exquisite manner. 'I will admit, I've only done this with Giving a few times, so my apologies if my technique is a little rusty,' Knott informs you. You don't even need to reply properly, a lustful purr signaling your enjoyment as his middle finger stimulates at the edges of your nether lips, quickly testing out the depth.";
+	say "     It doesn't take long for your pussy to slicken enough for a second finger to be added, the friction of his knuckles brushing over your clit stimulating more juices of arousal. Despite his claims of inexperience, Knott seems to know exactly how to use his fingers, acclimating your vagina to his touch before advancing deeper. It isn't just the penetration either, as his other hand caresses over your body, stroking your tummy, tweaking your nipples and teasing your [if player is Male]cock[else]groin[end if]. All in all, it is far more affection than the majority of creatures in the city would provide you with. 'Tell me if you want me to speed up or slow down. Everyone is different after all,' the Firbolg tells you. Looking at him, you are reminded of how gentle he is despite his size and you are sure that he'll be just as attentive once he has you speared on his cock.";
 	WaitLineBreak;
-	say "     Thanks to the nanites spreading from him, your cunt no matter the size is able to able to take such a large shaft. Knott quickly throwing his head back as he takes pace with pounding away at your [CockSpeciesName of Player in lower case] pussy, 'oh.... [if Player is not defaultnamed][Name of Player][else]please[end if] take my young...' a low moan bellows from his throat from all the pleasure coursing through his body, giving into what the nanites have been possibly telling him to do constantly. Its only a amazement he could last against such a seductive song for so long when every push and tug of his cock in you is spraying hot pre all over your fertile depths.";
-	say "     You can't hold for much longer, quickly you start squirting hot femcum all over the place[if player is Male], your cock following after with alabaster cum spraying the floor[end if] and a few thrusts later your tryst companion reaches his own limit, balls flexing intensely before sending large batches of virile cum straight to your womb. His body lays on top of you- warmly caressing you as both of you take time to recover... his cock still standing hard as ever deep inside. With his sweat getting all over you, your vitality slowly returns to you after a while.";
+	say "     Thanks to the nanites spreading from him, your cunt no matter the size is able to take such a large shaft, Knott quickly throwing his head back as he takes pace with pounding away at your [CockSpeciesName of Player in lower case] pussy. 'Oh.... [if Player is not defaultnamed][Name of Player],[else]please[end if] take my young...' A low moan bellows from his throat from all the pleasure coursing through his body, giving into what the nanites have been possibly telling him to do constantly. It's only an amazement he could last against such a seductive song for so long when every push and tug of his cock in you is spraying hot pre all over your fertile depths.";
+	say "     You can't hold for much longer; quickly you start squirting hot femcum all over the place[if player is Male], your cock following after with alabaster cum spraying the floor,[end if] and a few thrusts later your tryst companion reaches his own limit, balls flexing intensely before sending large batches of virile cum straight to your womb. His body lays on top of you, warmly caressing you as both of you take time to recover, his cock still standing hard as ever deep inside. With his sweat getting all over you, your vitality slowly returns to you after a while.";
 	WaitLineBreak;
-	say "     'You're enjoyable to be inside... do come back sometime on your adventures, my cock can have a mind of its own...' your cunt trembles at the thought of him inside of you again, you may have been infected with Beag nanites, but you know you would love to do it again.";
-	CreatureSexAftermath "Player" receives "PussyFuck" from "Knott";
+	say "     'You're enjoyable to be inside... do come back sometime on your adventures; my cock can have a mind of its own...' Your cunt trembles at the thought of him inside of you again- you may have been infected with Beag nanites, but you know you would love to do it again.";
+	NPCSexAftermath Player receives "PussyFuck" from Knott;
+	infect "Beag";
 
 to say KnottSex2: [Anal]
 	say "     You tell him that you want to feel his cock in your ass. 'Is that so? I think that I can accommodate such a request, but don't blame me if you can't sit quite as comfortably afterwards,' Knott chuckles. 'Leave yourself in my capable hands and I promise that you won't regret it. Now, if you wouldn't mind bending over and I'll try to prepare you a bit before we get to the main course,' he suggests. You obey without hesitation, presenting yourself to him, even spreading your buttocks apart to give him an unsurpassed view of his objective. He spends several seconds drinking in the sight before him before stepping up to you and caressing a hand over your flank and briefly rubbing his fingers against your hole. 'Can't say that I'm particularly experienced with this, but hopefully you'll enjoy my learning experience too. The reward will certainly be worth it,' Knott grins, feeling the give of your pucker before bringing his hand away again.";
-	say "     'I regret that I don't have any proper lubricant for this, so we'll have to make do with saliva,' the firbolg apologizes. 'Don't worry, there shouldn't be any risk of transformation. If there was, I'm sure that semen would be worse.' He quickly sucks a couple of his fingers to slicken them before sliding them against your anus. Starting with one finger, he slips it inside and you feel the walls of your ass squeeze and constrict around it as it gently burrows deeper. 'You don't seem to be having much trouble with that, maybe this will be easier than I thought.'";
-	say "     Knott comments, pressing a second finger in alongside the first, steadily thrusting them in and out to stretch and lubricate you. You can feel how careful he is being, unnecessary as it seems to be, but if it makes him feel better, you're happy to be patient. It's strangely comforting that he is so focused on your wellbeing when so many in the city wouldn't have even thought twice before mounting you and going in dry. Fortunately the nanites seem to adapt for that, but this... this is nice too.";
+	say "     'I regret that I don't have any proper lubricant for this, so we'll have to make do with saliva,' the firbolg apologizes. 'Don't worry, there shouldn't be any risk of transformation. If there was, I'm sure that semen would be worse.' He quickly sucks a couple of his fingers to slicken them before sliding them against your anus. Starting with one finger, he slips it inside and you feel the walls of your ass squeeze and constrict around it as it gently burrows deeper.";
+	say "     'You don't seem to be having much trouble with that; maybe this will be easier than I thought,' Knott comments, pressing a second finger in alongside the first, steadily thrusting them in and out to stretch and lubricate you. You can feel how careful he is being, unnecessary as it seems to be, but if it makes him feel better, you're happy to be patient. It's strangely comforting that he is so focused on your wellbeing when so many in the city wouldn't have even thought twice before mounting you and going in dry. Fortunately the nanites seem to adapt for that, but this... this is nice too.";
 	WaitLineBreak;
-	say "     Such niceness is only coupled to the fact that the said man your banging is also still a big fella who is ready to turn you with your ass above your head as your pinned to the ground with your legs above you. Knott quickly moves ontop of you to get in position before pushing himself into the slightly lubed hole, quickly getting a moan from both of you as his large shaft hits your prostate. With a few more guiding thrusts, your hole vibrates with nanites as the Firbolgs sweaty body begins to make you feel all giddy as the pain that should be there is only making you want to cum hard.";
-	say "     Your new mate bucks deep into you while your in a trance, both of you frantically breathing as you silently chase your orgasms, Knott fervently holds your [bodySpeciesName of Player] body sensually, caressing the curves as he leans over to look you in the face. With a few more tugs you feel a rush of cum flowing from the base of his shaft all the way to your belly- quickly expanding it from the volume before spilling back out. Knott's tongue hangs out as he holds onto your body for support.";
+	say "     Such niceness is only coupled to the fact that the said man you're banging is also still a big fella who is ready to turn you with your ass above your head as you're pinned to the ground with your legs above you. Knott quickly moves on top of you to get in position before pushing himself into the slightly lubed hole, quickly getting a moan from both of you[if Player is male] as his large shaft hits your prostate[end if]. With a few more guiding thrusts, your hole vibrates with nanites as the Firbolg's sweaty body begins to make you feel all giddy as the pain that should be there is only making you want to cum hard.";
+	say "     Your new mate bucks deep into you while you're in a trance, both of you frantically breathing as you silently chase your orgasms. Knott fervently holds your [bodySpeciesName of Player] body sensually, caressing the curves as he leans over to look you in the face. With a few more tugs you feel a rush of cum flowing from the base of his shaft all the way to your belly, quickly expanding it from the volume before spilling back out. Knott's tongue hangs out as he holds on to your body for support.";
 	WaitLineBreak;
-	say "     'You're enjoyable to be inside... do come back sometime on your adventures, my cock can have a mind of its own...' your ass gets tingly when he motions to his meat, you may have been infected with Beag nanites, but you know you would love to do it again.";
-	CreatureSexAftermath "Player" receives "AssFuck" from "Knott";
+	say "     'You're enjoyable to be inside... do come back sometime on your adventures; my cock can have a mind of its own...' Your ass gets tingly when he motions to his meat- you may have been infected with Beag nanites, but you know you would love to do it again.";
+	NPCSexAftermath Player receives "AssFuck" from Knott;
+	infect "Beag";
 
-Section 3 - Events
+[
+an everyturn rule:
+	if level of Knott >= 1 and xp of Knott < 29: [I’m using level as a way to say is the NPC knocked up, and XP as a counter, you can change these as you like.]
+		increase XP of Knott by 1;
+	else if XP of Knott is 29:
+		now level of Knott is 0;
+		now XP of Knott is 0;
+		[increase (state name here) of Knott by (number of desired children):] [Note: you can make this a random swapping in, by a random number between X and Y for the final variable.]
+]
 
 Knott ends here.

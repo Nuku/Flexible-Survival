@@ -287,12 +287,12 @@ to RoomRestore:
 					if RoomObject is private, now RoomObject is not private;
 				if ExplorationStatus entry is "Known":
 					if RoomObject is unknown, now RoomObject is known;
+					if RestSafety entry is "Safe":
+						if RoomObject is not sleepsafe, now RoomObject is sleepsafe;
+					else:
+						if RoomObject is sleepsafe, now RoomObject is not sleepsafe;
 				else:
 					if RoomObject is known, now RoomObject is unknown;
-				if RestSafety entry is "Safe":
-					if RoomObject is not sleepsafe, now RoomObject is sleepsafe;
-				else:
-					if RoomObject is sleepsafe, now RoomObject is not sleepsafe;
 				[
 				if debug is at level 10:
 					say "DEBUG -> [x]: RoomIdName: [RoomIdName] found and set to: [Reachability entry]; [ExplorationStatus entry]; [RestSafety entry]";

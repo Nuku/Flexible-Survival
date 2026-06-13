@@ -13,8 +13,8 @@ Version 1 of Fire Alicorn by Shiru begins here.
 Section 1 - NPC Declaration
 
 a postimport rule: [bugfixing rules for players that import savegames]
-	[if Meeting Fire is Resolved:
-		move FireAlicorn to Restaurant;]
+	if Meeting Fire is Resolved:
+		move FireAlicorn to Restaurant;
 	now SexuallyExperienced of FireAlicorn is true;
 
 Table of GameCharacterIDs (continued)
@@ -68,7 +68,7 @@ the scent of the FireAlicorn is "     He smells somewhat earthy, with the smell 
 to say FireDesc:
 	if debugactive is 1:
 		say "     DEBUG -> HP: [HP of FireAlicorn] <- DEBUG[line break]";
-	say "     Fire is an alicorn - like a pegasus mixed with a unicorn, he has both broad, feathery wings furled up at his back and a long, red horn atop his forehead. He's tall, around seven feet or so, and his body is covered in short, pale red fur that does little to hide the definition of a muscular six-pack adorning his chest. His legs end in thick, black hooves, and a long, fluffy horse tail stretches out from his rear. Tustled ginger hair crowns an expression that seems gentle and caring, but based on how toned his body is, he'd likely have no trouble showing a tougher side when need be. On his groin sits a thick, furred sheath, with a sizable pair of balls dangling below. He isn't wearing anything to cover any of this up.";
+	say "     Fire is an alicorn - like a pegasus mixed with a unicorn, he has both broad, feathery wings furled up at his back and a long, red horn atop his forehead. He's tall, around seven feet or so, and his body is covered in short, pale red fur that does little to hide the definition of a muscular six pack adorning his chest. His legs end in thick, black hooves, and a long, fluffy horse tail stretches out from his rear. Tustled ginger hair crowns an expression that seems gentle and caring, but based on how toned his body is, he'd likely have no trouble showing a tougher side when need be. On his groin sits a thick, furred sheath, with a sizable pair of balls dangling below. He isn't wearing anything to cover any of this up.";
 
 instead of conversing the FireAlicorn:
 	say "     Heading over to the bar, you give Fire a small wave and a smile, greeting him and taking a seat on the closest stool next to him. He wanders over to you, black hooves clopping against the floor of the restaurant before sitting down next to you.";
@@ -110,17 +110,19 @@ instead of conversing the FireAlicorn:
 				if title entry is:
 					-- "Just Chat":
 						say "[FireAlicornTalk1]";
+						wait for any key;
 					-- "Ask to Bang":
 						say "[FireAlicornSexMenu]";
 					-- "Get Wasted":
 						say "[FireAlicornTalk2]";
+						wait for any key;
 		else if calcnumber is 0:
 			LineBreak;
 			now sextablerun is 1;
 			say "     Deciding that you'd just like to hang and chat with the alicorn, you order a couple of lighter drinks and turn to him, smiling.";
+			wait for any key;
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options], or 0 to exit.";
-	wait for any key;
 	clear the screen and hyperlink list;
 
 to say FireAlicornTalk1:
@@ -150,7 +152,7 @@ to say FireAlicornTalk1:
 			say "     I was about to go back there to check what the hell was happening, when both of them storm out of the room, yelling... one running away from the other. From what I could gather from the slurred screaming... both of them thought the other had a dick and they were both expecting to get fucked after all the drink buying, only to find out they were both just women! Wouldn't seem like a big deal to me, but after getting so shitfaced... both of them seemed pretty irate at getting 'tricked' by the other. I didn't even have to kick them out after that... they ended up chasing each other out and going off to fight someplace else. Either that, or they went to go find someone to fill both of them out... I don't even know, heh. I don't see why it was such a big deal - I mean, you can hardly walk around nowadays without tripping over the dick of someone who wants a quick fuck. But some people get wacky when they're drunk...'";
 			WaitLineBreak;
 			say "     He shrugs, taking a swig of his own drink before continuing. 'It's why I don't like to drink too much myself - I usually stick to only one or two, and only socially - like I have with you! It's nice having someone around to just chat to, like old times... before all this, when people'd go down to bars with friends for a night out.' He grins as he reminisces. 'Though, when I used to get drunk back then... I'd wake up and I couldn't remember a single thing from the night before, no matter how hard I tried! It's why I mostly cut down now... no good doing fun shit and not being able to remember a second of it after, heh. Maybe when the world gets fixed... if it ever does, we can go back to being careless like we used to.' He sighs at the thought, then offers you a weak smile. You give him a sympathetic one of your own, giving him a pat or two on his fuzzy shoulder for reassurance, which he seems to appreciate. You finish up your drink while telling him about the things you used to do for fun with your friends before the infections broke out, which he enjoys. Afterwards, you grab your stuff and head out after telling him you'd be happy to come back for more chats soon.";
-		-- 6: [Chat 5]
+		-- 6: [Chat 6]
 			say "     You think of a question that seems a little silly to ask, but decide to do it anyway. You ask Fire if the horn on his head can do anything special, or if it's just for show. He raises an eyebrow at the question, before you explain to him that unicorns had been depicted in a lot of media as having magical powers that seemed to stem from their horns. He chuckles, taking a swig of his drink before answering you. 'Might surprise you, but actually... yeah, kinda, heh.' He begins. 'Not magic, per se, but... well, I can do a couple things. Y'know all the nanites that caused this shit...? I can sorta... manipulate them a little bit with this.' He reaches up, tapping a finger against the horn on his head. 'Not much, before you ask. And it only really extends to my own body. I can't change my species or anything, or grow gigantic, or anything like that, but... I can do small stuff. You know, make my muscles bigger, or my dick, or anything like that. I don't know why, maybe unicorns do have magic powers... but if I concentrate hard enough on it, I can do stuff like that. It takes a bit for it to work though, heh... and I've gotta be in a good mood. But hey... it's something!'";
 			say "     He smiles at you before drinking, chugging down the rest of his glass before thumping it down on the bar with a thud. 'Maybe it'll come in properly useful someday! Makes me wonder... if the world ever goes back to normal, I wonder what we'll all do? Maybe we'll all get jobs fitting our transformations, or something... that is, if we don't turn back. I dunno if the world will be like this forever, or if 'humans' will end up back as the dominant species, or form, or whatever... but I guess we'll have to see. I imagine things like wings would be in fairly popular demand for the utility they'd bring...' The two of you continue pondering the state of the outside world for a while while you finish your drink, before you eventually stretch and get yourself up off of the stool, starting to say your goodbyes for now. Fire smiles up at you and nods, getting up himself and heading over to his favorite spot against the wall to lean against, before giving you a small wave as you head back out into the world.";
 	if Loyalty of FireAlicorn < 10:
@@ -222,17 +224,17 @@ to say FireAlicornSexMenu:
 			choose a blank row in table of fucking options;
 			now title entry is "Vaginal";
 			now sortorder entry is 1;
-			now description entry is "Be penetrated vaginally (TF Warning)";
+			now description entry is "(TF Warning) Be penetrated vaginally";
 		[]
 		choose a blank row in table of fucking options;
 		now title entry is "Anal";
 		now sortorder entry is 2;
-		now description entry is "Be penetrated anally (TF Warning)";
+		now description entry is "(TF Warning) Be penetrated anally";
 		[]
 		choose a blank row in table of fucking options;
 		now title entry is "Transform me into your Cock";
 		now sortorder entry is 3;
-		now description entry is "Ask Fire to transform you into his shaft (TF Warning)";
+		now description entry is "(TF Warning) Ask Fire to transform you into his shaft";
 		[]
 		sort the table of fucking options in sortorder order;
 		repeat with y running from 1 to number of filled rows in table of fucking options:
@@ -290,7 +292,7 @@ to say FireAlicornSex1: [Vaginal]
 	say "     A short while later, you awaken, back in your usual body again! You're laying in Fire's embrace, his arms wrapped around your torso while he spoons you, keeping you nice and warm, while his sheath and balls press gently against your groin. Seeing you awake, Fire smiles at you kindly, pulling back a little to talk to you. 'Good, you're awake! Sorry again, heheh... I just get really worked up when I'm getting close to cumming, and what happened is, uhh... the natural reaction that usually ends up happening. Still... hope you enjoyed it, and I meant what I said...~' he teases, stroking one of his hands down your front in much the same manner as he did before. 'Maybe if you want to, you can come back and we can... do it again. Or something else...'";
 	say "     Smiling back at him, you nod gently in return, telling Fire how much you enjoyed your time with him. You lay happily in his embrace for a few more minutes, cherishing your intimate time with him, before you eventually force yourself to get up and get ready to head back out into the world. Fire does the same, getting up with a stretch and heading to the bathroom to wash himself off before returning to the restaurant... but not before cleaning up the mess the two of you made all over the room. Giving him a wave as you depart, you ponder to yourself what a unique experience that whole thing was...";
 	NPCSexAftermath Player receives "PussyFuck" from FireAlicorn;
-	if Loyalty of FireAlicorn < 9:
+	if Loyalty of FireAlicorn < 8:
 		increase Loyalty of FireAlicorn by 2;
 	else:
 		now Loyalty of FireAlicorn is 10;
@@ -323,7 +325,7 @@ to say FireAlicornSex2: [Anal]
 	say "     ...Shortly after, you feel everything returning. You open your eyes slowly, looking around... you're still in Fire's room, safe and sound in his arms as he nuzzles into your back. Your movements stir the stallion, his eyes slowly opening alongside you as he caresses your form... you were back to how you were previously! Everything was intact, thankfully... though, Fire teases you by stroking his hands over your hips, gently caressing you as if you were still his. 'Mmm... that was fun, phew. Sorry about that, again, but... I hope you enjoyed it, heheh. You certainly seemed to, down there... and, like I said... that was a good look for you. If you want... come back anytime I'd be happy to give you another go...~'";
 	say "     You smile back at him, assuring him that you did indeed enjoy your time with him, and that you'd think about his offer. Satisfied, the two of you snuggle for a few more minutes, before duty calls and you pry yourself from his warm embrace. Understanding that you had to leave, Fire gets up too, the two of you heading first to the bathroom to wash up before going back to the restaurant. As you go to leave, you give Fire one last wave and a knowing smile, which the stallion eagerly returns, having enjoyed his time with you very much.";
 	NPCSexAftermath Player receives "AssFuck" from FireAlicorn;
-	if Loyalty of FireAlicorn < 9:
+	if Loyalty of FireAlicorn < 8:
 		increase Loyalty of FireAlicorn by 2;
 	else:
 		now Loyalty of FireAlicorn is 10;
@@ -355,7 +357,7 @@ to say FireAlicornSex3: [Cock TF]
 	WaitLineBreak;
 	say "     Fire slumps backwards on the bed, panting loudly and gulping down lungfuls of air as jizz slowly drips from the ceiling onto his body and the bed around you. Seeming not to care, his hands slowly ease up on your body, grip loosening and slowly sliding down off of you, his strength having left his body after such a mind-blowing climax. One falls down into his lap, while the other remains on your underside, cupping you gently towards him as the last of your seed seeps slowly from your entrance and drips down onto his chest. 'I just... hrrf... n-need to rest a little...' he breathes out to you, his panting gradually beginning to slow as the alicorn passes out. After such an intense couple of orgasms and session of teasing, you wouldn't have blamed him even if you could... but as he falls asleep, you feel a similar weight of drowsiness hanging over you. As you also pass out, your consciousness fading, the last thing you feel is your body slowly starting to droop, your immense weight hanging down and gradually pressing down against Fire's chest as you shrink.";
 	say "     ...A while later, you awaken, feeling groggy. Your eyes slowly blink open, and you look around - only to realize you were draped over Fire's body, back in your proper body, weight pressing down on top of him. The stallion slowly opens his eyes at your movements, hands moving up to find your body and hug you gently against him. The two of you lay there wordlessly for a few moments, enjoying the subtle euphoria that seems to hang over the two of you still... before you eventually shift together, rolling over in order to sit up and look around properly. The room was a mess, cum covering the floor, the ceiling, one of the walls... and the both of you, too. Fire chuckles as you survey the damage. 'Heh... phew. This'll be a lot to clean up... but it was worth it. That was incredible... Needless to say, I hope you come back and do it again. Did it feel as amazing as I hoped it would...?' He questions, to which you reply very affirmatively. Grinning sleepily at you, the stallion embraces you for just a few more moments, before helping you get up and head to the washroom with him. The two of you clean yourselves up, and you leave him to clean up the mess he made in his room. Before leaving, you give Fire one last wave and a smile, a blush faintly teasing your cheeks as you relive your time together in your head. You're sure that if you came back for more, it would be another unforgettable experience.";
-	if Loyalty of FireAlicorn < 6:
+	if Loyalty of FireAlicorn < 5:
 		increase Loyalty of FireAlicorn by 5;
 	else:
 		now Loyalty of FireAlicorn is 10;
@@ -389,6 +391,6 @@ to say ResolveEvent Meeting Fire:
 	say "     You describe some of the adventures you've been having, and tell him about how it's mostly just been trying to survive, while attempting to find some of the few decent people left around who didn't want to just fuck you and move on. Fire nods along, following your stories and listening happily while finishing his mug of beer. 'Sounds like you move around a lot. I guess there are plenty of places in the city to go check out, after all... in a way, it's sort of interesting to see all the different infections that have populated the different areas... well, I'd find it more intriguing if they weren't all hostile, at least. Still!' He gets up, having finished his beer, and he goes back to the edge of the wall, leaning against it and surveying the area once more. 'At least there's some decent people around. Hey, if you ever end up coming back here... we can chat again, if you'd like. I'd appreciate having a beer buddy in times like these...' You nod to him, getting up off of the stool yourself and telling him that you'd like to talk more to him sometime. He smiles and nods to you, and you make a mental note to give him a visit next time you found yourself in the area.";
 	now Meeting Fire is Resolved;
 	now HP of FireAlicorn is 1;
-	[move FireAlicorn to Restaurant;]
+	move FireAlicorn to Restaurant;
 
 Fire Alicorn ends here.
