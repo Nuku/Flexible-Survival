@@ -3547,7 +3547,7 @@ Table of Game Objects (continued)
 name	desc	weight	object
 "Snuggle Fox cum"	"A plastic water bottle containing a moderate amount of milky white fluid. Almost could be mistaken for some sort of buttermilk or off-brand creamer, if someone hadn't written 'Snuggle Fox Cum' across the label on the bottle. You [italic type]could[roman type] drink it to quench your thirst, or you maybe just do it for fun. Who knows what else it might do to you though..."	1	Snuggle Fox cum
 
-Snuggle Fox cum is a infectious cum grab object.
+Snuggle Fox cum is a cum grab object.
 Strain of Snuggle Fox cum is "Snuggle Fox".
 Usedesc of Snuggle Fox cum is "[Snuggle Fox cum use]".
 Scent of Snuggle Fox cum is "[cumjar smell]".

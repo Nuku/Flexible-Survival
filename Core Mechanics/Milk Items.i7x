@@ -3540,30 +3540,6 @@ to say husky bitch milk use:
 
 Table of Game Objects (continued)
 name	desc	weight	object
-"Snuggle Fox milk"	"A simple bottle filled to the brim with your rich, thick, and one of kind Snuggly fox milk. Given the unusual nature of your form, its anyone's guess what will happen if you drink, or if it will have an effect at all."	1	Snuggle Fox milk
-
-Snuggle Fox milk is a grab object.
-Snuggle Fox milk is milky.
-Usedesc of Snuggle Fox milk is "[Snuggle Fox milk use]".
-Scent of Snuggle Fox milk is "[breastmilk smell]".
-
-to say Snuggle Fox milk use:
-	say "     Smacking your parched lips, you pop open a bottle of snuggly fox milk and down the devilishly rich cream with a few loud, hungry gulps, savoring the nice fatty texture clinging to your tongue. Sated, you lick your chops in simpleminded delight at the sudden feeling soothing warmth sloshing about your belly while your chest and groan begin to tingle.";
-	PlayerDrink 15;
-	PlayerEat 15;
-	increase Breast Size of Player by 3;
-	if Cock count of Player >= 1:
-		increase Cock length of Player by 3;
-	if cunt count of Player is 0:
-		increase Cunt Count of Player by 1;
-	increase Cunt Depth of Player by 3;
-	increase Cunt Tightness of Player by 3;
-	if "Passing Grade Chest" is listed in feats of Player:
-		featloss "Passing Grade Chest";
-
-
-Table of Game Objects (continued)
-name	desc	weight	object
 "Limbo Fox Milk"	"A glass bottle filled to the brim with suspiciously normal-looking milk, considering it's the product of an eldritch fox. Oddly, the bottle and its contents never seem to get warm or even go off when left out in the sun."	1	Limbo Fox Milk
 
 Limbo Fox Milk is a milky grab object.
@@ -3675,6 +3651,29 @@ skunk milk is a infectious milky grab object.
 Strain of skunk milk is "Skunk Female".
 Usedesc of skunk milk is "[breastmilk use]".
 Scent of skunk milk is "[breastmilk smell]".
+
+Table of Game Objects (continued)
+name	desc	weight	object
+"Snuggle Fox milk"	"A simple bottle filled to the brim with your rich, thick, and one of kind Snuggly fox milk. Given the unusual nature of your form, its anyone's guess what will happen if you drink, or if it will have an effect at all."	1	Snuggle Fox milk
+
+Snuggle Fox milk is a milky grab object.
+Strain of Snuggle Fox milk is "Snuggle Fox".
+Usedesc of Snuggle Fox milk is "[Snuggle Fox milk use]".
+Scent of Snuggle Fox milk is "[breastmilk smell]".
+
+to say Snuggle Fox milk use:
+	say "     Smacking your parched lips, you pop open a bottle of snuggly fox milk and down the devilishly rich cream with a few loud, hungry gulps, savoring the nice fatty texture clinging to your tongue. Sated, you lick your chops in simpleminded delight at the sudden feeling of soothing warmth sloshing about your belly while your chest and groin begin to tingle.";
+	PlayerDrink 15;
+	PlayerEat 15;
+	increase Breast Size of Player by 3;
+	if Cock count of Player >= 1:
+		increase Cock length of Player by 3;
+	if cunt count of Player is 0:
+		increase Cunt Count of Player by 1;
+	increase Cunt Depth of Player by 3;
+	increase Cunt Tightness of Player by 3;
+	if "Passing Grade Chest" is listed in feats of Player:
+		featloss "Passing Grade Chest";
 
 Table of Game Objects (continued)
 name	desc	weight	object
