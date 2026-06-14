@@ -4,10 +4,12 @@ Version 1 of Clayton by Gherod begins here.
 
 [Version 1 - File created]
 
-Section 1 - Pre-events
-
-a postimport rule:
+a postimport rule: [bugfixing rules for players that import savegames]
+	if resolution of MeetingClayton >= 2: [event resolved the right way, room not connected yet]
+		AddNavPoint Clayton's Front Yard silently;
 	now sarea of MeetingClayton is "Nowhere";
+
+Chapter 1 - Pre-events
 
 Table of GameEventIDs (continued)
 Object	Name
@@ -73,11 +75,7 @@ to say CherryTalkClayton:
 		LineBreak;
 		say "     Unfortunately, you do not have the time nor disposition to accept her request, and tell her that you, indeed, have things to do for today. 'That's alright, I'll find another way to get this done, so you don't need to trouble yourself. But, if by any chance, you end up changing your mind, I would still be thankful for your help.' You nod, take note of this, and eventually, the subject changes.";
 
-Section 2 - Rooms
-
-a postimport rule: [bugfixing rules for players that import savegames]
-	if resolution of MeetingClayton >= 2: [event resolved the right way, room not connected yet]
-		AddNavPoint Clayton's Front Yard silently;
+Chapter 2 - Rooms
 
 Table of GameRoomIDs (continued)
 Object	Name
@@ -140,7 +138,7 @@ instead of going north from Clayton's Front Yard:
 		LineBreak;
 		say "     You have decided to stay where you are.";
 
-Section 3 - Clayton NPC
+Chapter 3 - Clayton NPC
 
 Table of GameCharacterIDs (continued)
 object	name
@@ -186,7 +184,7 @@ Description of Clayton is "     This sturdy, towering and muscular anthropomorph
 [Conversation of Clayton is { "Moo." }.]
 Scent of Clayton is "     The massive bull has a strong animalistic musk, loaded with pheromones that immediately fill your nostrils. No matter what you are normally into, his scent arouses you and makes you think of sex.".
 
-Section 3-1 - Clayton Talk
+Section 1 - Clayton Talk
 
 [ClaytonDoneTalking is a truth state that varies.[@Tag:NotSaved]]
 
@@ -281,9 +279,9 @@ to say ClaytonTalkSex:
 	if Libido of Clayton is 0:
 		now Libido of Clayton is 1;
 
-Section 3-2 - Clayton Sex
+Section 2 - Clayton Sex
 
-Instead of fucking Clayton:
+instead of fucking Clayton:
 	if Libido of Clayton is 0:
 		say "     Well, certainly you can speak with the big naked bull before moving right into sex? Even though it is quite understandable why one would want to engage in intimate acts with him right away, perhaps speaking to him about it first could lead to a better experience.";
 	else:

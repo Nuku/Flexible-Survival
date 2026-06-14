@@ -413,8 +413,77 @@ name	desc	weight	object
 
 ceryneian deer-taur milk is a infectious milky grab object.
 Strain of ceryneian deer-taur milk is "Ceryneian Deer-taur".
-Usedesc of ceryneian deer-taur milk is "[breastmilk use]".
-Scent of ceryneian deer-taur milk is "[breastmilk smell]".
+Usedesc of ceryneian deer-taur milk is "[ceryneian deer-taur milk use]".
+
+to say ceryneian deer-taur milk use:
+	say "Lifting the plastic bottle to your mouth, you take a drink from it, letting the milk run over your tongue and down your throat. Tastes rich and animal-like. Swishing it around in your mouth a little, you finish the bottle off, then stuff it back into your collection of 'empties'.";
+	PlayerDrink 5;
+	SanLoss 5;
+
+instead of sniffing ceryneian deer-taur milk:
+	say "You open the lid for a moment and take a sniff. Smells kinda like any other milk, really.";
+
+
+Table of Game Objects (continued)
+name	desc	weight	object
+"Champion's Milk"	"A plastic water bottle filled with what is clearly milk. One could think it was a regular cow's milk, if someone hadn't written 'Champion's Milk' across the label on the bottle. You [italic type]could[roman type] drink it to quench your thirst, or you maybe just do it for fun. Who knows what else it might do to you though..."	1	Champion's milk
+
+Champion's Milk is a grab object.
+Champion's Milk is milky.
+Champion's milk is infectious.
+Strain of Champion's Milk is "Ipotane".
+Usedesc of Champion's Milk is "[Champion's Milk use]".
+
+to say Champion's Milk use:
+	say "Lifting the plastic bottle to your mouth, you take a drink from it, letting the milk run over your tongue and down your throat. Tastes rich and animal-like. Swishing it around in your mouth a little, you finish the bottle off, then stuff it back into your collection of 'empties'.";
+	PlayerDrink 15;
+	if HP of Best Pony >= 1:
+		decrease gestation of child by a random number from 3 to 5;
+		if gestation of child < 1, now gestation of Child is 1;
+	if HP of Best Pony >= 2:
+		now scalevalue of Player is 4;
+
+instead of sniffing Champion's milk:
+	say "You open the lid for a moment and take a sniff. Smells kinda like any other milk, really.";
+
+
+
+Table of Game Objects (continued)
+name	desc	weight	object
+"cheesecake milk"	"A plastic water bottle filled with what is clearly milk. One could think it was a regular cow's milk, if someone hadn't written 'Cheesecake Milk' across the label on the bottle. You [italic type]could[roman type] drink it to quench your thirst, or you maybe just do it for fun. Who knows what else it might do to you though..."	1	cheesecake milk
+
+cheesecake milk is a grab object.
+cheesecake milk is milky.
+cheesecake milk is infectious.
+Strain of cheesecake milk is "Cheesecake".
+Usedesc of cheesecake milk is "[cheesecake milk use]".
+
+to say cheesecake milk use:
+	say "Lifting the plastic bottle to your mouth, you take a drink from it, letting the milk run over your tongue and down your throat. Tastes rich and animal-like. Swishing it around in your mouth a little, you finish the bottle off, then stuff it back into your collection of 'empties'.";
+	PlayerDrink 5;
+	SanLoss 5;
+
+instead of sniffing cheesecake milk:
+	say "You open the lid for a moment and take a sniff. Smells kinda like any other milk, really.";
+
+
+Table of Game Objects (continued)
+name	desc	weight	object
+"cheetah woman milk"	"A plastic water bottle filled with what is clearly milk. One could think it was a regular cow's milk, if someone hadn't written 'Cheetah Woman Milk' across the label on the bottle. You [italic type]could[roman type] drink it to quench your thirst, or you maybe just do it for fun. Who knows what else it might do to you though..."	1	cheetah woman milk
+
+cheetah woman milk is a grab object.
+cheetah woman milk is milky.
+cheetah woman milk is infectious.
+Strain of cheetah woman milk is "Cheetah Woman".
+Usedesc of cheetah woman milk is "[cheetah woman milk use]".
+
+to say cheetah woman milk use:
+	say "Lifting the plastic bottle to your mouth, you take a drink from it, letting the milk run over your tongue and down your throat. Tastes rich and animal-like. Swishing it around in your mouth a little, you finish the bottle off, then stuff it back into your collection of 'empties'.";
+	PlayerDrink 5;
+	SanLoss 5;
+
+instead of sniffing cheetah woman milk:
+	say "You open the lid for a moment and take a sniff. Smells kinda like any other milk, really.";
 
 Table of Game Objects (continued)
 name	desc	weight	object
@@ -3540,6 +3609,30 @@ to say husky bitch milk use:
 
 Table of Game Objects (continued)
 name	desc	weight	object
+"Snuggle Fox milk"	"A simple bottle filled to the brim with your rich, thick, and one of kind Snuggly fox milk. Given the unusual nature of your form, its anyone's guess what will happen if you drink, or if it will have an effect at all."	1	Snuggle Fox milk
+
+Snuggle Fox milk is a grab object.
+Snuggle Fox milk is milky.
+Usedesc of Snuggle Fox milk is "[Snuggle Fox milk use]".
+Scent of Snuggle Fox milk is "[breastmilk smell]".
+
+to say Snuggle Fox milk use:
+	say "     Smacking your parched lips, you pop open a bottle of snuggly fox milk and down the devilishly rich cream with a few loud, hungry gulps, savoring the nice fatty texture clinging to your tongue. Sated, you lick your chops in simpleminded delight at the sudden feeling soothing warmth sloshing about your belly while your chest and groan begin to tingle.";
+	PlayerDrink 15;
+	PlayerEat 15;
+	increase Breast Size of Player by 3;
+	if Cock count of Player >= 1:
+		increase Cock length of Player by 3;
+	if cunt count of Player is 0:
+		increase Cunt Count of Player by 1;
+	increase Cunt Depth of Player by 3;
+	increase Cunt Tightness of Player by 3;
+	if "Passing Grade Chest" is listed in feats of Player:
+		featloss "Passing Grade Chest";
+
+
+Table of Game Objects (continued)
+name	desc	weight	object
 "Limbo Fox Milk"	"A glass bottle filled to the brim with suspiciously normal-looking milk, considering it's the product of an eldritch fox. Oddly, the bottle and its contents never seem to get warm or even go off when left out in the sun."	1	Limbo Fox Milk
 
 Limbo Fox Milk is a milky grab object.
@@ -3714,6 +3807,19 @@ to say hellfire demon man-milk use:
 	if "Iron Stomach" is not listed in Feats of Player:
 		say "[line break]     It seems to cause a raction with the nanites in your system...";
 		HellfireDemonInfect;
+
+Table of Game Objects (continued)
+name	desc	weight	object
+"peculiar dragon man-milk"	"[manmilk Strain of peculiar dragon man-milk]"	1	peculiar dragon man-milk
+
+peculiar dragon man-milk is a infectious milky grab object.
+Strain of peculiar dragon man-milk is "Peculiar Dragon".
+Usedesc of peculiar dragon man-milk is "[peculiar dragon man-milk use]".
+Scent of peculiar dragon man-milk is "[breastmilk smell]".
+
+to say peculiar dragon man-milk use:
+	say "     Lifting the plastic bottle to your mouth, you take a drink from it, letting the draconic man-milk run over your tongue and down your throat. Tastes rich and animal-like. Swishing it around in your mouth a little, you finish the bottle off, then stuff it back into your collection of 'empties'.";
+	PlayerDrink 15;
 
 Table of Game Objects (continued)
 name	desc	weight	object

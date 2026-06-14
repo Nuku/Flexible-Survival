@@ -50,7 +50,7 @@ The file of flexiblestory is called "flexible1".
 
 The parser error count is a number that varies.[@Tag:NotSaved] The parser error count is 0.
 
-After printing a parser error when the parser error count is at least 0:
+after printing a parser error when the parser error count is at least 0:
 	increment the parser error count;
 	if the turn count divided by the parser error count < three:
 		say "(If you are feeling lost, try typing [italic type]help[roman type] for suggestions.)";
@@ -77,15 +77,14 @@ Include (-
 		YES_OR_NO_QUESTION_INTERNAL_RM('A'); print "> ";
 	}
 ];
-[ YES_OR_NO_QUESTION_INTERNAL_R; ];
--) instead of "Yes/No Questions" in "Parser.i6t".
+[ YES_OR_NO_QUESTION_INTERNAL_R; ]; -) instead of "Yes/No Questions" in "Parser.i6t".
 
 [The yes or no message is a text that varies.[@Tag:NotSaved]]
 The yes or no message is always "[link]yes[end link] or [link]no[end link]> [run paragraph on]".
 
 playerinput is a snippet that varies.[@Tag:NotSaved]
 
-To select an option from (curtable - a table name):
+to select an option from (curtable - a table name):
 	while 1 is 1:
 		repeat with y running from 1 to number of filled rows in curtable:
 			choose row y from curtable;
@@ -101,18 +100,16 @@ To select an option from (curtable - a table name):
 			say "Invalid Selection. Pick between 1 and [the number of filled rows in curtable].";
 	say "[line break]";
 
-To get typed command as (S - a snippet): (-
+to get typed command as (S - a snippet): (-
 	KeyboardPrimitive(buffer, parse);
-	{S} = 100 + WordCount();  -)
+	{S} = 100 + WordCount(); -)
 
-To get next key as (S - a snippet): (-
-	{S} = VM_KeyChar();  -)
+to get next key as (S - a snippet): (- {S} = VM_KeyChar(); -)
 
 Include (-
 [ Serial s;
 	for (s=0 : s<6 : s++) print (char) ROM_GAMESERIAL->s;
-];
--)
+]; -)
 
 Book 1 -  Core Game Files
 
@@ -698,6 +695,7 @@ Include Smilodon Male by Gherod.
 Include Snake by Stripes.
 Include Snow Bat by Stripes.
 Include Snow Leopard by Stripes.
+Include Snuggle Fox by Sundered Dragon.
 Include Spartan by Wahn.
 Include Sphinx by Sarokcat.
 Include Spidergirl by Guest Writers.
@@ -959,6 +957,7 @@ Include Meredith by Prometheus.
 Include Micaela by Stripes.
 Include Midnight by Luneth.
 Include Milo by CrimsonAsh.
+Include Mistress Snuggle by Sundered Dragon.
 Include Mogdraz by Gherod.
 Include Monty by Wahn.
 Include Moreau by Wahn.
@@ -1086,7 +1085,7 @@ Book 4 - Starting the Game
 
 [Game start autofires]
 
-When play begins:
+when play begins:
 	adjustdefaulthelp; [adjusts help menu]
 	let tempname be indexed text;
 	repeat with q running from 1 to the number of rows in the table of game objects:
@@ -1123,7 +1122,7 @@ When play begins:
 	choose row MonsterID in Table of Random Critters;
 	regularstart; [original start method. easier to move everything then leave here]
 
-When play begins (this is the graphics window construction rule):
+when play begins (this is the graphics window construction rule):
 	if NewGraphics is true: [Build window regardless in case player decides to turn it on later]
 		now the graphics window proportion is NewGraphicsRatio;
 		if NewGraphicsPosition is:

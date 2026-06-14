@@ -10,14 +10,10 @@ Version 1 of Pericles by Rikaeus begins here.
 [   5: Has seen his fifth event, now available in room     ]
 [   6: Managed to convince Bjorn to apologize, share rooms ]
 
-
-PericlesRoomConnection is a number that varies.[@Tag:NotSaved]
-
-an everyturn rule:
-	if History Video is resolved and PericlesRoomConnection is 0:
+a postimport rule: [bugfixing rules for players that import savegames]
+	if History Video is resolved:
 		change the west exit of Second Floor Male Dorms to Pericles' Room; [connecting the location to the travel room]
 		change the east exit of Pericles' Room to Second Floor Male Dorms; [connecting the location to the travel room]
-		now PericlesRoomConnection is 1; [room connected]
 
 Table of GameEventIDs (continued)
 Object	Name
@@ -31,8 +27,8 @@ Sarea of Daily Training Session is "Campus".
 when play begins:
 	add Daily Training Session to BadSpots of MaleList;
 
-instead of going to Athletic Street while (Daily Training Session is active and Daily Training Session is not resolved and LastCampusWalkin - turns > 0 and PericlesRelationship is 1 and a random chance of 1 in 3 succeeds):
-	move player to Athletic Street;
+after going to Athletic Street while Daily Training Session is active and Daily Training Session is not resolved and LastCampusWalkin - turns > 0 and PericlesRelationship is 1 and a random chance of 1 in 3 succeeds:
+	[move player to Athletic Street;]
 	FirstPericlesEvent;
 
 to say ResolveEvent Daily Training Session:
@@ -40,7 +36,7 @@ to say ResolveEvent Daily Training Session:
 	FirstPericlesEvent;
 
 to FirstPericlesEvent:
-	say "     Upon entering the street holding all of the athletic buildings, you notice an odd sight. A familiar-looking and well dressed Spartan is leading a large group of Spartans. Upon closer examination you realize that it's Pericles, the Spartan leader you encountered before. He actually ends up noticing you and waves you over with a wide smile on his face. With a shrug of your shoulders you head over to him. 'Hey, I remember you [if BjornRelationship > 0 and BjornRelationship < 99]intervened to save that novice viking from me.'[else if BjornRelationship is 99]were there when I dispatched that novice viking.'[end if] He then gives you a once over and nods. 'I felt there was a certain something that drew my eyes to you,' he says and shakes your hand.";
+	say "     Upon entering the street holding all of the athletic buildings, you notice an odd sight. A familiar-looking and well dressed Spartan is leading a large group of Spartans. Upon closer examination you realize that it's Pericles, the Spartan leader you encountered before. He actually ends up noticing you and waves you over with a wide smile on his face. With a shrug of your shoulders you head over to him. 'Hey, I remember you [if BjornRelationship > 0 and BjornRelationship < 99]intervened to save that novice viking from me.' [else if BjornRelationship is 99]were there when I dispatched that novice viking.' [end if]He then gives you a once over and nods. 'I felt there was a certain something that drew my eyes to you,' he says and shakes your hand.";
 	say "     A quick second later the male turns towards the Spartans and yells at them to drop and give him fifty before he returns his attention to you. 'As you've probably guessed I'm the leader of all the Spartans and Helots, Pericles,' the buff male says. You give him an odd look which prompts a sigh. 'Yes I know, it's stupid for the leader of the Spartans to be named Pericles who was Athenian, blame my parents for not calling me Leonidas or something,' he says with a roll of his eyes. You mention to the human-like male that you weren't giving him the look for that. Rather, you were confused as to why he appears to be more in touch with the world around him than his subordinates. This causes the guy to blush beet red at his mistake. 'I'm sorry. I've just had so many people ask me about my name, especially my soldiers,' he says with a shrug of his shoulders.";
 	WaitLineBreak;
 	say "     Quickly after that though he turns to his subordinates whom he orders to start their mock fights. To be honest, it's rather difficult to tell who's who because of all the Spartans looking rather similar, which you guess is another downside of the nanite infections. But nevertheless both of the warriors begin to spar, clashing at each other with real swords, something that you give a concerned look to Pericles about. 'Oh, don't worry. They're ordered not to try to kill and the nanites will heal anything that happens,' he explains to you. When you think about it, it makes sense so you just nod and go along with it. As you're watching the soldiers fight, one of them manages to overwhelm his opponent completely. This seems to trigger something in the young man, as he doesn't stop with that - no, he calls the loser names, insults him and brags loudly, turning the other Spartan over onto all fours with a harsh shove. Then he rams his hard cock home, fucking the other student with harsh thrusts. Before your very eyes, the fucked gasping bottom starts to transform into a helot, his cloak and sandals simply crumbling away.";
@@ -64,8 +60,8 @@ Sarea of History Class Lesson is "Campus".
 when play begins:
 	add History Class Lesson to BadSpots of MaleList;
 
-instead of going to Lecture Street while (History Class Lesson is active and History Class Lesson is not resolved and LastCampusWalkin - turns > 0 and PericlesRelationship is 2 and a random chance of 1 in 3 succeeds):
-	move player to Lecture Street;
+after going to Lecture Street while History Class Lesson is active and History Class Lesson is not resolved and LastCampusWalkin - turns > 0 and PericlesRelationship is 2 and a random chance of 1 in 3 succeeds:
+	[move player to Lecture Street;]
 	SecondPericlesEvent;
 
 to say ResolveEvent History Class Lesson:
@@ -95,8 +91,8 @@ Sarea of Private Masturbation is "Campus".
 when play begins:
 	add Private Masturbation to BadSpots of MaleList;
 
-instead of going to Tenvale College Library while (Private Masturbation is active and Private Masturbation is not resolved and LastCampusWalkin - turns > 0 and PericlesRelationship is 3 and a random chance of 1 in 3 succeeds):
-	move player to Tenvale College Library;
+after going to Tenvale College Library while Private Masturbation is active and Private Masturbation is not resolved and LastCampusWalkin - turns > 0 and PericlesRelationship is 3 and a random chance of 1 in 3 succeeds:
+	[move player to Tenvale College Library;]
 	ThirdPericlesEvent;
 
 to say ResolveEvent Private Masturbation:
@@ -113,21 +109,18 @@ to ThirdPericlesEvent:
 		now PericlesRelationship is 4;
 	else:
 		say "     When he sees you in the doorway he smiles and continues to masturbate, although at a slower pace now. He takes his free hand and runs it through his hair before he speaks up. 'Mmm I was actually hoping you'd show up. Do you want to help me friend? Or you could just watch,' he asks, gesturing to his cock and balls. The Spartan's assets are rather amazing. His dick looks to be maybe ten inches long, not as long as some of the weirder ones you see, and about maybe five inches around. His balls are rather large as well, looking full and ready to pump out a huge load of cum. It is very clear that the infection apocalypse did good for him, though he could have looked like this before it. Nonetheless, you think about his offer.";
-		LineBreak;
-		say "     [bold type]What now?[roman type][line break]";
+		say "[line break]     [bold type]What now?[roman type][line break]";
 		say "     [link](1)[as]1[end link] - Help the Spartan with his problem. (From what you've seen, the male is rather dominant when it comes to sex.)";
 		say "     [link](2)[as]2[end link] - Watch him finish himself off.";
 		say "     [link](3)[as]3[end link] - Just leave.";
 		now calcnumber is 0;
 		while calcnumber < 1 or calcnumber > 3:
-			say "Choice? (1-3)>[run paragraph on]";
+			say "Choice? (1-3)> [run paragraph on]";
 			get a number;
-			if calcnumber is 1 or calcnumber is 2 or calcnumber is 3:
-				break;
-			else:
+			if calcnumber < 1 or calcnumber > 3:
 				say "Invalid choice. Type [link]1[end link] to go down on him, [link]2[end link] to watch him or [link]3[end link] to leave.";
+		LineBreak;
 		if calcnumber is 1:
-			LineBreak;
 			say "     When you nod your head he smirks at you before he barks out an order. 'Good! Now get over here and on your knees,' he says firmly, something that sends shivers throughout your body. Of course, you comply and are soon kneeling with the large cock in front of your face, the scent of manly musk filling your nose and making you groan out loud. 'Hm? Do you like the smell? If you like it so much then bury your nose into my balls and start licking,' he tells you rather sternly. Nevertheless you push your head nose first into his large ballsack and inhale before starting to lavish it with your tongue, moaning when the sweaty taste enters your mouth. Your attention to his balls makes your friend let out sounds of pleasure as well, with him beginning to grind it against your face.";
 			say "     This whole process continues for a couple of minutes before Pericles pushes your head back and presents you with the tip of his cock. 'Suck bitch,' he orders you roughly, pushing his dick forward until it hits the opening of your mouth. You eagerly open up, allowing the musky manhood to enter your oral cavity, the delicious taste of his precum lighting up your tastebuds in pleasure. Inch by inch the length goes until it is buried deep into your throat. 'Mmm you have a nice tight throat slut,' he compliments you before pulling out and quickly slamming back in. You gag for a second but soldier on, eager to please the powerful male above you.";
 			WaitLineBreak;
@@ -138,7 +131,6 @@ to ThirdPericlesEvent:
 			now History Video is active;
 			now PericlesRelationship is 4;
 		else if calcnumber is 2:
-			LineBreak;
 			say "     You shake your head and instead decide to just watch. He shrugs his shoulder and then smirks at you. He raises his free hand to one of his nipples before starting to tweak it as he's masturbating, making him moan out loud. The virile male appears eager to put on a show for you. However, you feel as if the male is rather close already, possibly from you watching him. This is evidenced by the fact that he looks to be rubbing his cock even faster and pinching his nipples even harder. Minutes later he's moaning loudly and humping his hand, rather shortly after that the Spartan starts swearing up a storm, his head thrown back in pleasure.";
 			say "     Quickly after that Pericles['] hand leaves his cock as cum shoots all over his body, practically coating the male with it. Some of it even lands in his mouth to which he eagerly gulps it down. A minute later he comes down from his orgasmic high and begins cleaning up as he'd probably be yelled at by the librarians here, Spartan leader or not. Once he's done he walks up to you and smiles before leading you out of the room. 'If you could, please visit my room sometime later, I have something to show you,' the male tells you. You nod at him and watch him head off on his own before you continue to do whatever you were doing before.";
 			now Private Masturbation is resolved;
@@ -146,7 +138,6 @@ to ThirdPericlesEvent:
 			now History Video is active;
 			now PericlesRelationship is 4;
 		else:
-			LineBreak;
 			say "     You quietly excuse yourself and just slip out of the room, leaving Pericles to finish himself off on his own.";
 			now Resolution of Private Masturbation is 3; [player didn't watch]
 	now LastCampusWalkin is turns;
@@ -163,8 +154,8 @@ Sarea of History Video is "Campus".
 when play begins:
 	add History Video to BadSpots of MaleList;
 
-instead of going to Tenvale College Male Dorms while (History Video is active and History Video is not resolved and LastCampusWalkin - turns > 0 and PericlesRelationship is 4 and a random chance of 1 in 3 succeeds):
-	move player to Tenvale College Male Dorms;
+after going to Tenvale College Male Dorms while History Video is active and History Video is not resolved and LastCampusWalkin - turns > 0 and PericlesRelationship is 4 and a random chance of 1 in 3 succeeds:
+	[move player to Tenvale College Male Dorms;]
 	FourthPericlesEvent;
 
 to say ResolveEvent History Video:
@@ -228,7 +219,7 @@ TwistedCapacity of Pericles is false. [Twisted Characters can take any penetrati
 Sterile of Pericles is false. [steriles can't knock people up]
 MainInfection of Pericles is "Spartan".
 Description of Pericles is "[PericlesDesc]".
-Conversation of Pericles is { "<This is nothing but a placeholder!>" }.
+fuckscene of Pericles is "[PericlesSexMenu]".
 The scent of Pericles is "     Pericles smells like sweat and hard work, something to be expected of the leader of the Spartans and Helots. Beyond that he smells like the pages of a book.".
 
 to say PericlesDesc:
@@ -236,7 +227,7 @@ to say PericlesDesc:
 		say "     The Spartan-Helot leader is very much a different look than all the others. First and foremost from your personal information it partially has to do with the fact that Pericles is in fact both a Helot and a Spartan, thus has a mix of a lithe and muscular form that seems to fit for the male. Secondly it is what he is wearing that makes the leader appear different. Unlike his subordinates he is wearing a full set of clothing, well armor. Said set of metal is well polished and wouldn't be out of sight of the Sparta era of Greece. Soon enough Pericles notices you staring at him and he smiles in your direction.";
 	else if PericlesRelationship is 6:
 		say "     The Spartan-Helot leader is very much a different look than all the others. First and foremost from your personal information it partially has to do with the fact that Pericles is in fact both a Helot and a Spartan, thus has a mix of a lithe and muscular form that seems to fit for the male. Secondly it is what he is wearing that makes the leader appear different. Unlike his subordinates he is wearing a full set of clothing, well armor. Said set of metal is well polished and wouldn't be out of sight of the Sparta era of Greece. Pericles appears to be cautiously watching Bjorn as if expecting him to do something bad, though when he sees you looking at him he smiles half-heartedly and waves.";
-	else if PericlesRelationship > 6:
+	else:
 		say "     Compared to what you've seen him wearing before, Pericles appears to be far more relaxed in both attire and attitude. First and foremost, his armor is no longer on him twenty-four-seven, having traded it for a toga-esque outfit for downtime. Although, he does keep the red cape that adorned the metal regalia he wore prior to the war and Bjorn cause he thinks it looks cool and you can't help but agree. With the helmet finally gone though, you can finally see his face and hair, revealing that he has brownish-red hair that nears an almost auburn color as well as dark green eyes. Overall he seems pretty happy and less stressed though, he doesn't look any less lethal or dominant. Especially when you catch him sending lustful looks over towards a studying Bjorn. However, those looks are also filled with a certain love that balances it out, though you don't doubt their intimate times are rough and rowdy. When he catches you looking his way he sends a confident smile and waves.";
 
 Section 2 - Talking with Pericles
@@ -244,55 +235,50 @@ Section 2 - Talking with Pericles
 instead of conversing the Pericles:
 	if PericlesRelationship < 5: [should be not yet available]
 		say "     ERROR: Pericles shouldn't be where a player can see him yet, heck you shouldn't even have access to this room yet! Please report to Rikaeus on the FS Discord and quote this tracking number for easier bugfixing: [PericlesRelationship]";
-	else if PericlesRelationship > 6:
-		say "     When you approach the Spartan-Helot he's currently working on his paperwork. Seeing your shadow hover over his sheets he looks up and smiles. 'Is there anything you need friend?' he asks, speaking in a warm tone.";
-		say "[PericlesTalkMenu]";
 	else:
-		say "     As you walk up to Pericles, who has been wandering around his room, he looks up at you and smiles. 'What do you want?' he asks, clearly happy to see you.";
-		say "[PericlesTalkMenu]";
-
-to say PericlesTalkMenu:
-	LineBreak;
-	say "What do you wish to talk about with the Spartan?";
-	now sextablerun is 0;
-	blank out the whole of table of fucking options;
-	[]
-	choose a blank row in table of fucking options;
-	now title entry is "Pre Apocalypse";
-	now sortorder entry is 1;
-	now description entry is "Ask him what his life was before the apocalypse";
-	[]
-	choose a blank row in table of fucking options;
-	now title entry is "Current College Life";
-	now sortorder entry is 2;
-	now description entry is "Ask him about his current college life";
-	[]
-	repeat with y running from 1 to number of filled rows in table of fucking options:
-		choose row y from the table of fucking options;
-		say "[link][y] - [title entry][as][y][end link][line break]";
-	say "[link]0 - Nevermind[as]0[end link][line break]";
-	while sextablerun is 0:
-		say "Pick the corresponding number> [run paragraph on]";
-		get a number;
-		if calcnumber > 0 and calcnumber <= the number of filled rows in table of fucking options:
-			now current menu selection is calcnumber;
-			choose row calcnumber in table of fucking options;
-			say "[title entry]: [description entry]?";
-			if Player consents:
-				let nam be title entry;
+		say "     [if PericlesRelationship > 6]When you approach the Spartan-Helot he's currently working on his paperwork. Seeing your shadow hover over his sheets he looks up and smiles. 'Is there anything you need friend?' he asks, speaking in a warm tone[else]As you walk up to Pericles, who has been wandering around his room, he looks up at you and smiles. 'What do you want?' he asks, clearly happy to see you[end if].";
+		say "[line break]     What do you wish to talk about with the Spartan?";
+		now sextablerun is 0;
+		blank out the whole of table of fucking options;
+		[]
+		choose a blank row in table of fucking options;
+		now title entry is "Pre Apocalypse";
+		now sortorder entry is 1;
+		now description entry is "Ask him what his life was before the apocalypse";
+		[]
+		choose a blank row in table of fucking options;
+		now title entry is "Current College Life";
+		now sortorder entry is 2;
+		now description entry is "Ask him about his current college life";
+		[]
+		sort the table of fucking options in sortorder order;
+		repeat with y running from 1 to number of filled rows in table of fucking options:
+			choose row y from the table of fucking options;
+			say "[link][y] - [title entry][as][y][end link][line break]";
+		say "[link]0 - Nevermind[as]0[end link][line break]";
+		while sextablerun is 0:
+			say "Pick the corresponding number> [run paragraph on]";
+			get a number;
+			if calcnumber > 0 and calcnumber <= the number of filled rows in table of fucking options:
+				now current menu selection is calcnumber;
+				choose row calcnumber in table of fucking options;
+				say "[title entry]: [description entry]?";
+				if Player consents:
+					LineBreak;
+					now sextablerun is 1;
+					if title entry is:
+						-- "Pre Apocalypse":
+							say "[PericlesApocalypse]";
+						-- "Current College Life":
+							say "[PericlesCollege]";
+			else if calcnumber is 0:
+				LineBreak;
 				now sextablerun is 1;
-				if (nam is "Pre Apocalypse"):
-					say "[PericlesApocalypse]";
-				if (nam is "Current College Life"):
-					say "[PericlesCollege]";
-				wait for any key;
-		else if calcnumber is 0:
-			now sextablerun is 1;
-			say "     You apologize and tell him you that you don't have anything to say. He raises a brow but gets back to what he was doing.";
-			wait for any key;
-		else:
-			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
-	clear the screen and hyperlink list;
+				say "     You apologize and tell him you that you don't have anything to say. He raises a brow but gets back to what he was doing.";
+			else:
+				say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options], or 0 to exit.";
+		wait for any key;
+		clear the screen and hyperlink list;
 
 to say PericlesApocalypse:
 	say "     'My life before everything?' he asks, moving to his bed before laying on it. 'It was rather simple, I went to classes, I read my favorite books, I had friends...' Pericles says with a reminiscing look. You raise a brow at him, wondering if his life could be really that simple. Seeing this, the Spartan-Helot chuckles at you. 'Well, it wasn't that boring. I mean, my parents were archaeologists, particularly of the Ancient Greece, hence my name. That always led to odd conversations,' he mumbles. That in turn causes you to let out a laugh, which surprisingly makes him blush. However, he soldiers on and finishes talking. 'Thankfully though, it made my parents super accepting of me being gay, other than that nothing too insane happened to me before the apocalypse,' he says, deciding to stay laying on the bed after he finishes.";
@@ -303,70 +289,64 @@ to say PericlesCollege:
 
 Section 3 - Sex
 
-instead of fucking Pericles:
+to say PericlesSexMenu:
 	if PericlesRelationship is 7:
 		say "     The Spartan gives you a disapproving look before shaking his head. 'I'm sorry friend, but you have to prove yourself again to me somehow after those failures in the war,' he says before returning to what he was doing.";
 	else if BjornRelationship is 3:
 		say "     He shakes his head as he looks towards Bjorn who is standing inside the room. 'I'm sorry friend but I'd rather not do it with the viking here,' Pericles says to you, making you rather disappointed.";
-	else if (lastfuck of Pericles - turns < 3): [he got fucked in the last 9 hours = 3 turns]
+	else if lastfuck of Pericles - turns < 3: [he got fucked in the last 9 hours = 3 turns]
 		say "     Pericles raises a brow and shakes his head at you. 'Even with my mutation I need some time to rest friend,' he says, chuckling at the end.";
-	else if PericlesRelationship > 7 and Cock Count of Player > 0 and Cunt Count of Player < 1:
+	else if PericlesRelationship > 7 and Player is puremale:
 		say "     Pericles eyes you up and then directs his attention towards Bjorn who's studying in his corner of the room. He gives you a smirk and asks what you had in mind.";
-		wait for any key;
 		say "[PericlesBjornSexMenu]";
-	else if Cunt Count of Player > 1: [Player has a vagina]
+	else if Player is purefemale: [Player has a vagina]
 		say "     The buff male shakes his head at you and apologizes. 'I'm sorry but womanly parts aren't my thing, sorry.' Pericles then tells you that if you wish to have fun with him then come back as a male.";
 	else if Player is neuter: [Player is genderless]
 		say "     When you approach him Pericles suddenly blushes and stutters out a response. 'I'm so sorry! I would love to but it's just awkward without a cock there to play with during sex,' he blurts out, looking embarrassed. You get the feeling that he'll only really have fun with you if you have a cock and only that.";
 	else:
 		say "     When Pericles wanders on over to the window to look over the entire campus a thought pops into your head, a rather dirty thought... What do you want to do to the man?";
-		wait for any key;
-		say "[PericlesSexMenu]";
-
-to say PericlesSexMenu:
-	LineBreak;
-	now sextablerun is 0;
-	blank out the whole of table of fucking options;
-	[]
-	if Player is male and Cunt Count of Player < 1:
-		choose a blank row in table of fucking options;
-		now title entry is "Ride the Spartan cock";
-		now sortorder entry is 1;
-		now description entry is "Take the Spartan-Helot leader for a ride";
-	[]
-	if Player is male and Cunt Count of Player < 1:
-		choose a blank row in table of fucking options;
-		now title entry is "Suck Pericles off"; [only males can suck him off]
-		now sortorder entry is 2;
-		now description entry is "Give Pericles a good time with your lips";
-	[]
-	Sort the table of fucking options in sortorder order;
-	repeat with y running from 1 to number of filled rows in table of fucking options:
-		choose row y from the table of fucking options;
-		say "[link][y] - [title entry][as][y][end link][line break]";
-	say "[link]0 - Nevermind[as]0[end link][line break]";
-	while sextablerun is 0:
-		say "Pick the corresponding number> [run paragraph on]";
-		get a number;
-		if calcnumber > 0 and calcnumber <= the number of filled rows in table of fucking options:
-			now current menu selection is calcnumber;
-			choose row calcnumber in table of fucking options;
-			say "[title entry]: [description entry]?";
-			if Player consents:
-				let nam be title entry;
+		now sextablerun is 0;
+		blank out the whole of table of fucking options;
+		[]
+		if Player is puremale:
+			choose a blank row in table of fucking options;
+			now title entry is "Ride the Spartan cock";
+			now sortorder entry is 1;
+			now description entry is "Take the Spartan-Helot leader for a ride";
+			[]
+			choose a blank row in table of fucking options;
+			now title entry is "Suck Pericles off"; [only males can suck him off]
+			now sortorder entry is 2;
+			now description entry is "Give Pericles a good time with your lips";
+		[]
+		sort the table of fucking options in sortorder order;
+		repeat with y running from 1 to number of filled rows in table of fucking options:
+			choose row y from the table of fucking options;
+			say "[link][y] - [title entry][as][y][end link][line break]";
+		say "[link]0 - Nevermind[as]0[end link][line break]";
+		while sextablerun is 0:
+			say "Pick the corresponding number> [run paragraph on]";
+			get a number;
+			if calcnumber > 0 and calcnumber <= the number of filled rows in table of fucking options:
+				now current menu selection is calcnumber;
+				choose row calcnumber in table of fucking options;
+				say "[title entry]: [description entry]?";
+				if Player consents:
+					LineBreak;
+					now sextablerun is 1;
+					if title entry is:
+						-- "Ride the Spartan cock":
+							say "[PericlesSex1]";
+						-- "Suck Pericles off":
+							say "[PericlesSex2]";
+			else if calcnumber is 0:
+				LineBreak;
 				now sextablerun is 1;
-				if (nam is "Ride the Spartan cock"):
-					say "[PericlesSex1]";
-				if (nam is "Suck Pericles off"):
-					say "[PericlesSex2]";
-				wait for any key;
-		else if calcnumber is 0:
-			now sextablerun is 1;
-			say "     You shake your head and decide against sexing up the buff Spartan leader.";
-			wait for any key;
-		else:
-			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
-	clear the screen and hyperlink list;
+				say "     You shake your head and decide against sexing up the buff Spartan leader.";
+			else:
+				say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options], or 0 to exit.";
+		wait for any key;
+		clear the screen and hyperlink list;
 
 to say PericlesSex1:
 	if BodyName of Player is "Helot Manservant" and FaceName of Player is "Helot Manservant":
@@ -376,7 +356,7 @@ to say PericlesSex1:
 		say "     'You like that, don't you, Helot?' Pericles asks, pushing another finger in, making you groan out loud. He quickly then proceeds to scissor your hole open, the pleasure causing moans to pour out of your mouth. 'You won't need much preparation, but then again Helots never do,' he says, proving that by slipping in another digit, the action not incurring much pain. About a minute later the Spartan-infection progenitor removes his fingers and promptly orders you hold up your legs, something that you hurriedly do, happy to get onto the sex. While you're doing this Pericles is lubing up his cock so he doesn't have to go in dry, a gesture that you no doubt appreciate. After doing that he climbs on up to the bed and positions himself at your entrance. With one quick thrust he hilts himself fully into you, filling your vision with stars, something that causes you to gasp loudly.";
 		say "     'Fuck, I never really understood why you Helots were always still so tight despite being fucked silly every day,' Pericles grunts, clearly enjoying the velvety feeling of your tight hole. You on the other hand are groaning in pleasure at just being filled by the male's rather large cock. Though, the Spartan-Helot doesn't stay still for long, rather he soon pulls out to just the tip before slamming back into you, his cum-filled balls slapping loudly against your ass-cheeks. This action sends more stars shooting through your vision as you let out a loud moan, but you aren't allowed any respite as he begins to fuck you as rough as he can, grabbing at your legs to hold onto as he does this. The sounds and smells of sex fill the room as Pericles pounds your hole, creating a sight that would arouse anyone that saw.";
 		WaitLineBreak;
-		say "     It doesn't take him long to find your prostrate, the sheer action putting you out of commission by making you look like somebody fucked your brains out, which is one hundred percent the truth. With your mental leave of absence, Pericles repositions you so that you are now face to face with him as he is slamming his cock in and out of you, though he soon makes a comment about your state of mind. 'You look like you're right where you belong slave, both mentally and physically,' he says with a grunt as his thrusts get more frantic, signifying that he's getting close to orgasm. However, in a sporadic action, the Spartan-Helot bites you on the neck, causing you to let out a moan mixed with a yelp as well as suddenly cumming hard, shooting your load all over the two of you. This causes your hole to tighten around the male fucking you, which appears to cause him to reach his climax as well.";
+		say "     It doesn't take him long to find your prostate, the sheer action putting you out of commission by making you look like somebody fucked your brains out, which is one hundred percent the truth. With your mental leave of absence, Pericles repositions you so that you are now face to face with him as he is slamming his cock in and out of you, though he soon makes a comment about your state of mind. 'You look like you're right where you belong slave, both mentally and physically,' he says with a grunt as his thrusts get more frantic, signifying that he's getting close to orgasm. However, in a sporadic action, the Spartan-Helot bites you on the neck, causing you to let out a moan mixed with a yelp as well as suddenly cumming hard, shooting your load all over the two of you. This causes your hole to tighten around the male fucking you, which appears to cause him to reach his climax as well.";
 		say "     'Fuck!' he roars, slamming into you one last time before spilling his seed into your hole and then promptly slumping over your body, panting hard. The two of you lay there for a good while, just enjoying the orgasmic bliss of your post-coitus. It isn't until about an hour later that you both come to your senses and sit up. This time, instead of you, it's Pericles who's blushing. 'I'm sorry about how I acted. The nanites make me react weirdly towards the Helot infection, at least sexually,' he admits. You tell him that it's perfectly fine and that you understand, especially considering that he is the originator of that particular strain of infection and then tell him that you enjoyed it thoroughly. When you say that he gives you a beaming smile before he helps you clean up. Once the both of you are cum free and have your clothes back the two of you return to what you were doing prior to the sex.";
 	else:
 		say "     A few seconds later you finally figure out what you want to do with Pericles, but you end up wondering how you'll go about it. You know that if you offer the Spartan-Helot your ass he'd probably gladly take it but you would rather not be so easy. So, instead you step behind the well-built male and position your head close to his ear, your hot breath coming into contact with it. Promptly after you ask him if he'd like to have a bit of fun, saying this as you snake your hand around to grab at his crotch, his cock responding well to your touch. 'You're quite the eager beaver, I don't mind at all,' he purrs, the sensuality of the way he said it causing you to blush but soldier on, grasping harder at his dick. It appears that Pericles enjoys it, as by now he's fully hard.";

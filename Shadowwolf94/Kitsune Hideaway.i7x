@@ -14,10 +14,9 @@ Foxy Hideaway	"Foxy Hideaway"
 
 Foxy Hideaway is a room. It is fasttravel. It is private.
 
-Description of Foxy Hideaway is "All around you the scents of flora and fauna surround the small, enclosed area kept hidden behind a single door. The smells of the various plants range from jasmine, to lavender, to roses, to honeysuckles, filling up the silver vulpine's den. From what you can see, Kitsune has placed a large four-poster bed in the middle of his hideaway - strange considering that there is grass growing from the floor around the feet of the plush sleeping pallet. There are also two nightstands on either side of the room with elegant lamps dominating the top of said stand; both are on, but running at a low lighting. On both the left and right sides of the walls are tapestries with silver and white nine-tailed kitsunes standing regal in place, almost as though they were watching the room for intruders. Besides the flowers growing throughout the room, there are small ornaments, such as vases and other assorted pottery, placed onto the floor with incense sticks burning within them. With all of this grandiose ensemble collected together, the room should feel oppressive, but it instead feels... open, for some reason.".
+Description of Foxy Hideaway is "     All around you the scents of flora and fauna surround the small, enclosed area kept hidden behind a single door. The smells of the various plants range from jasmine, to lavender, to roses, to honeysuckles, filling up the silver vulpine's den. From what you can see, Kitsune has placed a large four-poster bed in the middle of his hideaway - strange considering that there is grass growing from the floor around the feet of the plush sleeping pallet. There are also two nightstands on either side of the room with elegant lamps dominating the top of said stand; both are on, but running at a low lighting. On both the left and right sides of the walls are tapestries with silver and white nine-tailed kitsunes standing regal in place, almost as though they were watching the room for intruders. Besides the flowers growing throughout the room, there are small ornaments, such as vases and other assorted pottery, placed onto the floor with incense sticks burning within them. With all of this grandiose ensemble collected together, the room should feel oppressive, but it instead feels... open, for some reason.[line break]".
 
-instead of sniffing Foxy Hideaway:
-	say "The scent of a male vulpine wafts gently throughout the room. This pleasant smell is chased by the strong musk of incense endlessly burning away inside of small ornamental jars.";
+Scent of Foxy Hideaway is "     The scent of a male vulpine wafts gently throughout the room. This pleasant smell is chased by the strong musk of incense endlessly burning away inside of small ornamental jars.".
 
 Section 2 - Kitsune
 
@@ -63,9 +62,9 @@ SexuallyExperienced of Kitsune is true.
 TwistedCapacity of Kitsune is true. [Twisted Characters can take any penetration, no matter the size]
 Sterile of Kitsune is false. [steriles can't knock people up]
 MainInfection of Kitsune is "Kitsune".
-Description of Kitsune is "A beautiful silver vulpine stands on two digitigrade legs while looking at you with heated, but controlled eyes. Nine tails dance teasingly behind the fox-man's back as he smiles at you good-naturedly. His long and lithe form seems to almost sway slightly with the subtle motions of Kitsune rocking his hips from side to side. His smile soon turns saucy as Kitsune looks you up and down, his eyes lingering a particularly long time on your groin as though studying a tempting morsel, before he looks up to your face once again. With a predatory grin crossing his muzzle, you can't help but feel slightly on edge as the feral nature of the other shines through the graceful visage that the vulpine puts on for you. Though somewhat human-like in appearance, there is no doubt of the fox-man's animal nature as Kitsune stares at you with a growing hunger. A slow sweep of a red tongue along full and pale lips lets you know not to forget this.".
-Conversation of Kitsune is { "Hmmm!" }.
-
+Description of Kitsune is "     A beautiful silver vulpine stands on two digitigrade legs while looking at you with heated, but controlled eyes. Nine tails dance teasingly behind the fox-man's back as he smiles at you good-naturedly. His long and lithe form seems to almost sway slightly with the subtle motions of Kitsune rocking his hips from side to side. His smile soon turns saucy as Kitsune looks you up and down, his eyes lingering a particularly long time on your groin as though studying a tempting morsel, before he looks up to your face once again. With a predatory grin crossing his muzzle, you can't help but feel slightly on edge as the feral nature of the other shines through the graceful visage that the vulpine puts on for you. Though somewhat human-like in appearance, there is no doubt of the fox-man's animal nature as Kitsune stares at you with a growing hunger. A slow sweep of a red tongue along full and pale lips lets you know not to forget this.[line break]".
+[Conversation of Kitsune is { "Hmmm!" }.]
+Scent of Kitsune is "     Kitsune smells somewhat otherworldly, sweetly masculine and yet dangerous at the same time. The odor makes you wonder about the other's true nature.".
 Kitsunetalk is a number that varies.
 Kitsunearoused is a number that varies.
 
@@ -73,9 +72,6 @@ Kitsunearoused is a number that varies.
 instead of linkactioning Kitsune when kitsunetalk > 0:
 	say "Possible Actions: [link]talk[as]talk Kitsune[end link], [link]smell[as]smell Kitsune[end link], [link]fuck[as]fuck Kitsune[end link][if Kitsunefood < 5], [link]food[as]ask for food[end link][end if][if Kitsunewater < 5], [link]water[as]ask for water[end link][end if][line break]";
 ]
-
-instead of sniffing Kitsune:
-	say "Kitsune smells somewhat otherworldly, sweetly masculine and yet dangerous at the same time. The odor makes you wonder about the other's true nature.";
 
 instead of conversing the Kitsune:
 	if Kitsunetalk is 0: [first time you encounter the NPC text]
@@ -114,19 +110,18 @@ to say KitsuneTalkMenu:
 			choose row calcnumber in table of fucking options;
 			say "[title entry]: [description entry]?";
 			if Player consents:
-				let nam be title entry;
 				now sextablerun is 1;
-				[if (nam is "Knowledge of the City"):
-					say "[KitsuneTalk1]";]
-				if (nam is "His impression of you"):
-					say "[KitsuneTalk2]";
-				WaitLineBreak;
+				if title entry is:
+					[-- "Knowledge of the City":
+						say "[KitsuneTalk1]";]
+					-- "His impression of you":
+						say "[KitsuneTalk2]";
 		else if calcnumber is 0:
 			now sextablerun is 1;
 			say "     You stand up, indicating an end to the conversation. The Kitsune smiles at you, gracefully fanning his tail behind him.";
-			WaitLineBreak;
 		else:
-			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options], or 0 to exit.";
+	wait for any key;
 	clear the screen and hyperlink list;
 
 [to say KitsuneTalk1:
@@ -135,8 +130,7 @@ to say KitsuneTalkMenu:
 
 to say KitsuneTalk2:
 	say "     'Aren't you self-centered?' the Kitsune chuckles before looking at you properly. 'Looking for my approval, or are you hoping to show off? Stand still and let me have a look at both your outward as well as inward form. After all, this seems like something that it is worth being thorough for. [if Player is not naked]Remove your clothes for me please. I don't know why you lot insist on wearing anything beyond a collar or jewelry anyway. It just gets in the way.' Complying, you quickly strip and give the vulpine an unimpeded view of your naked body, turning when directed. [else]I must commend you on how liberated you are. Most of your kind seem to try and hide their bodies beneath cloth and armor, so it is refreshing to find someone like you who understands that it just gets in the way when you want to 'frolic'. You unabashedly display your naked form to the vulpine, turning when directed. [end if]'Hmm. Very nice. I haven't seen a soul quite like this for a while... Alright, what did you want to know? My impression of your physical state, or your mental condition?'";
-	say "     [bold type]Would you rather his opinion on your form or your mind? (Only Form available at the moment, sorry.)[roman type][line break]"; [Mind yet to be added]
-	LineBreak;
+	say "[line break]     [bold type]Would you rather his opinion on your form or your mind? (Only Form available at the moment, sorry.)[roman type][line break]"; [Mind yet to be added]
 	say "     ([link]Y[as]y[end link]) - Form. What is his impression on your outward appearance?";
 	[say "     ([link]N[as]n[end link]) - Mind. You are curious what he can tell about your psyche.";]
 	if Player consents: [Physical]
@@ -147,7 +141,6 @@ to say KitsuneTalk2:
 		say "     [KitsuneFeatComment]";]
 	[WaitLineBreak;
 	say "     [KitsuneClothesComment] [KitsuneWeaponComment] [KitsunePetComment]";]
-
 
 Section 3 - Kitsune Comments
 
@@ -241,7 +234,7 @@ to say KitsuneSpeciesComment: [Comments on player's species]
 	else if BodyName of Player is listed in infections of MachineList:
 		say "     'You seem to have taken on a more mechanical appearance, and I'm not sure whether I would consider you a cyborg now considering your severely reduced organic matter. I'm a little saddened by this to be honest. Your world places greater importance on engineering marvels and less on the wonders of nature that are already surrounding you. I will however admit that you're less machine as much as inorganic life, so you do have some redeeming factors. Be careful of people offering you upgrades. You don't want to sacrifice autonomy for such tawdry features such as flashy lights or larger genitals. ";
 	else if BodyName of Player is listed in infections of SlimeList:
-		say "     Aren't you the cutest jelly I've ever seen. Or do you prefer to be called a pudding, flan, or slime? Whatever you call yourself, you look soft and wobbly, desirable traits in the current climate of the city. Do you have a flavor, or are you merely gelatinous? Sorry, my curiosity is overwhelming my manners. Your form looks like it would make squeezing through small gaps a lot easier, though you probably also need to be careful of gratings and drains. I won't even pretend to understand how your insides work, but you look happy and moderately healthy, so I shall leave it at that. ";
+		say "     Aren't you the cutest jelly I've ever seen. Or do you prefer to be called a pudding, flan or slime? Whatever you call yourself, you look soft and wobbly, desirable traits in the current climate of the city. Do you have a flavor, or are you merely gelatinous? Sorry, my curiosity is overwhelming my manners. Your form looks like it would make squeezing through small gaps a lot easier, though you probably also need to be careful of gratings and drains. I won't even pretend to understand how your insides work, but you look happy and moderately healthy, so I shall leave it at that. ";
 	else if BodyName of Player is listed in infections of HumanList:
 		say "     'Well, aren't you the adventurous one? With all the beasts roaming the city and you still look human. Is there a particular reason behind this? A strong fondness for such a mundane appearance, or perhaps you haven't found the form which you desire? Might I suggest a certain fluffy vulpine form with the potential to gain an ever increasing number of tails as you age? I'd be more than willing to assist you. Though if you are sentimental about being human, I must say that I admire your willpower when surrounded by so much temptation. ";
 	else if BodyName of Player is listed in infections of AmphibianList:
@@ -255,7 +248,7 @@ to say KitsuneSpeciesComment: [Comments on player's species]
 	else if BodyName of Player is listed in infections of BovineList:
 		say "     'I was unaware that there were any farms nearby, or did you wander here from the plains? I jest, but with the number of wolves stalking the streets, a herbivore such as yourself is likely in a considerable amount of danger of becoming prey. Luckily, in the current situation, they are more likely to sate their lusts than their appetites, and with how you pull off the look, even I'm considering letting my instincts loose and basting you in sauce. I hope that I'm not making you uncomfortable. I wouldn't ever do something like that. At least not without your consent. ";
 	else if BodyName of Player is listed in infections of CanineList:
-		say "     'Who's a good [if Player is male]boy[else if Player is female]girl[else]doggy[end if]? Yes, it's you. Yes it's you. I'm sure I have some balls around here somewhere that you could play with if you wanted. You just have that look that makes me want to rub your tummy and maybe a bit more. Endearing eyes, soft fur, and such an expressive tail. Do you have a preference for herding sheep, hunting deer, or strengthening your bond with a companion? If so, make sure that these are your own thoughts, and not the programming of the nanites taking control of you. ";
+		say "     'Who's a good [if Player is male]boy[else if Player is female]girl[else]doggy[end if]? Yes, it's you. Yes it's you. I'm sure I have some balls around here somewhere that you could play with if you wanted. You just have that look that makes me want to rub your tummy and maybe a bit more. Endearing eyes, soft fur, and such an expressive tail. Do you have a preference for herding sheep, hunting deer or strengthening your bond with a companion? If so, make sure that these are your own thoughts, and not the programming of the nanites taking control of you. ";
 	else if BodyName of Player is listed in infections of CervineList:
 		say "     'You're slightly more adventurous with your form than I would expect from a mortal. Deer and elk are usually for the extra horny, if I might make an observation. With such muscular haunches, you must be quite the hit with the lupine community skulking around the city, though I imagine that a few other people will have also expressed interest in you. Don't be afraid to stand up for what you want. A moose with sharp hooves and hard antlers is no easy prey, even for a pack of wolves. So as long as you can mimic their strength, there will be few who can refuse your desires. ";
 	else if BodyName of Player is listed in infections of EquineList:
@@ -305,22 +298,21 @@ to say KitsuneSizeComment: [Comments on player's size]
 	else: [Size 5]
 		say "You... are big. And even that feels like an understatement. Forget about looking over people, you could look over vehicular transports. I can't imagine how much you need to consume to sustain yourself, but I really hope that you haven't been feeding on other people. I doubt that the infected run at the sight of you, but if they could still think logically, they probably would.'";
 
-
 Section 4 - Kitsune requests
 
 [This is blocked for the moment, as it conflicts with the same request from Steven]
 [
 kitfoodrequest is an action applying to nothing.
-Understand "ask for food" as kitfoodrequest.
+understand "ask for food" as kitfoodrequest.
 kitwaterrequest is an action applying to nothing.
-Understand "ask for water" as kitwaterrequest.
+understand "ask for water" as kitwaterrequest.
 
 Lastfoodrun is a number that varies.[@Tag:NotSaved] Lastfoodrun is usually 250.
 Kitsunefood is a number that varies.[@Tag:NotSaved]
 Lastwaterrun is a number that varies.[@Tag:NotSaved] Lastwaterrun is usually 250.
 Kitsunewater is a number that varies.[@Tag:NotSaved]
 
-Check kitfoodrequest:
+check kitfoodrequest:
 	if Kitsune is not visible:
 		say "From whom?" instead;
 	else if Kitsunefood is 5:
@@ -328,13 +320,13 @@ Check kitfoodrequest:
 	else if lastfoodrun - turns < 8:
 		say "'I'm afraid you'll have to be patient. I need to make a run to see if there is any more food left in this city.'" instead;
 
-Carry out kitfoodrequest:
+carry out kitfoodrequest:
 	say "Kitsune smirks at you before going off... somewhere... and then returning with a bit of food for you. 'Please, take this and take care.'";
 	ItemGain food by 1;
 	now lastfoodrun is turns;
 	increase Kitsunefood by 1;
 
-Check kitwaterrequest:
+check kitwaterrequest:
 	if Kitsune is not visible:
 		say "From whom?" instead;
 	else if Kitsunewater is 5:
@@ -342,7 +334,7 @@ Check kitwaterrequest:
 	else if lastwaterrun - turns < 8:
 		say "Water, water everywhere, but not a drop to drink.' Kitsune chuckles at this before waving a hand in front of you. 'Forgive me, but I have always liked that verse more than I should. I have no water for you at this moment, little one.'" instead;
 
-Carry out kitwaterrequest:
+carry out kitwaterrequest:
 	say "Kitsune nods to you and then goes about his way to collect some water. It takes a minute but soon the other returns to gracefully hand you a bottle of water. 'May this help you on your journey, little one.'";
 	ItemGain water bottle by 1;
 	now lastwaterrun is turns;
@@ -351,7 +343,7 @@ Carry out kitwaterrequest:
 
 Section 5 - Fucking Kitsune
 
-Instead of fucking Kitsune:
+instead of fucking Kitsune:
 	setmonster "Kitsune";
 	if lastfuck of Kitsune - turns < 4:
 		say "     'Forgive me little one, but I'm afraid my energy reserves are a bit low at the moment.' Kitsune bows to you somewhat sadly. 'If you'll come back, then I'll be ready to [']wrestle['] under the covers with you again.' A devious smile plays out across the handsome kitsune's face, and you get the feeling that something is going on behind those azure eyes of his. 'Perhaps when we do, I can give you a more suitable form to play with?' A slow caress of one of the silver vulpine's tails across your shoulder lets you know what the other means by this.";
@@ -361,8 +353,7 @@ Instead of fucking Kitsune:
 		now Kitsunearoused is 1;
 	else if Kitsunearoused >= 1:
 		say "     'Well, I see that someone has gotten a little feisty at the moment,' Kitsune snickers as he looks at you with smoldering azure eyes, glowing with lustful intent.";
-		say "     [bold type]'How would you like to play with me today?'[roman type][line break]";
-		LineBreak;
+		say "[line break]     [bold type]'How would you like to play with me today?'[roman type][line break]";
 		say "     ([link]Y[as]y[end link]) - Kitsune Submissive.";
 		say "     ([link]N[as]n[end link]) - Kitsune Dominant.";
 		if Player consents:
@@ -373,7 +364,7 @@ Instead of fucking Kitsune:
 			say "[Kitsune_NewMaleDomScenes]";
 
 to say PlayerDominant_Kitsune Scenes:
-	say "     [if Player is dominant]With a lascivious grin, you tell the kitsune that you're feeling horny and that he is going to help you remedy this.[else]Asking the silver fox to allow you to be dominant today, you realize you should let the vulpine know what you want.[end if] He responds with a suggestive growl and licks his lips tauntingly before lying on his side, revealing his body to you for your approval. [if Player is dominant]You smirk at the vulpine baring all before you and envision how he shall sate you.[else if Player is submissive]Unused to being the dominant partner but curious to try it out in a safe environment, you shyly look at your partner and think of what you want to do.[else]You gaze appreciatevely over the kitsune's pleasing form, from his elegant muzzle, over his firm chest, and giving a glance at his stirring sheath, the tip of his cock easing its way out. What are you going to do with your foxy mate?[end if]";
+	say "     [if Player is dominant]With a lascivious grin, you tell the kitsune that you're feeling horny and that he is going to help you remedy this[else]Asking the silver fox to allow you to be dominant today, you realize you should let the vulpine know what you want[end if]. He responds with a suggestive growl and licks his lips tauntingly before lying on his side, revealing his body to you for your approval. [if Player is dominant]You smirk at the vulpine baring all before you and envision how he shall sate you.[else if Player is submissive]Unused to being the dominant partner but curious to try it out in a safe environment, you shyly look at your partner and think of what you want to do.[else]You gaze appreciatevely over the kitsune's pleasing form, from his elegant muzzle, over his firm chest, and giving a glance at his stirring sheath, the tip of his cock easing its way out. What are you going to do with your foxy mate?[end if]";
 	blank out the whole of table of fucking options;
 	now sextablerun is 0;
 	choose a blank row from table of fucking options;
@@ -411,9 +402,8 @@ to say PlayerDominant_Kitsune Scenes:
 			choose row calcnumber from table of fucking options;
 			say "[title entry]: [description entry]?";
 			if Player consents:
-				let nam be title entry;
 				now sextablerun is 1;
-				if nam is:
+				if title entry is:
 					-- "Service each other orally":
 						say "[Kitsune_DomMutualServicing]";
 					-- "Ride him anally":
@@ -422,13 +412,12 @@ to say PlayerDominant_Kitsune Scenes:
 						say "[Kitsune_DomDoggystyleAnal]";
 					-- "Ride him vaginally":
 						say "[Kitsune_DomRidingVag]";
-				wait for any key;
 		else if calcnumber is 0:
 			say "     Kitsune is wagging his tails with a sly smile.";
 			now sextablerun is 1;
-			wait for any key;
 		else:
 			say "Invalid selection made. Please pick an option from 0 to [the number of filled rows in the table of fucking options].";
+	wait for any key;
 	clear the screen and hyperlink list;
 
 to say Kitsune_DomMutualServicing:
@@ -443,17 +432,17 @@ to say Kitsune_DomMutualServicing:
 		say "     The Kitsune lets out a soft whine and humps pitifully at the air, begging you to return to pleasuring him, his apology for teasing you remaining unspoken but unquestionably clear. Relenting, and eager to taste his cock properly, you spear your face on his turgid flesh, eagerly slavering it and tasting his unique flavor. The act of leaning forward again causes the vulpine's whiskers to tickle your anus, making it clench in response and squeezing his tongue deep within your passage. However, it does not stop moving, fluttering within your bowels. A moment later you are able to relax your instinctual reaction, allowing the both of you to continue pleasuring each other. You must look a sight, with a direwolf-sized fox lying on his back thrusting his tongue into your rear while you return the favor by repeatedly bobbing your head on his shaft, both emitting sounds of satisfaction and eagerness.";
 		WaitLineBreak;
 		say "     The Kitsune's pre coats his length and your tongue as it slides between your lips and into your throat. Fresh spurts help to ease its passage and to goad you into trying to earn more, the flavor of it different to what you have experienced before. You try to time your bobbing with the strokes of the fox's tongue as he vigorously rims you, gulping noises squeezing from your mouth as he thrusts as deep as he can, his climax approaching. You doubt that your equivalent will be far behind, the cocky vulpine seemingly well practiced at anal play, simultaneously stimulating your prostate, the rim, and deeper within your bowels with his talented tongue. You realize that you have been neglecting his knot and begin to rub it with your hands even as you press your head further down his length so that your lips can kiss at it too. You hear an appreciative murmur behind you and redouble your efforts, determined to prove yourself a fair master over the experienced fox.";
-		say "     The sensations becoming too much, the Kitsune sits up, his tongue still rhythmically darting into your anus as you begin to get folded in half. As he places his forepaws on the back of your head, you allow him to hammer his cock down your throat, knot popping in and out from between your lips as you moan ecstatically, gaining pleasure from what you have driven him to. His howl of climax is muffled by your backside, sending his tongue flailing without control inside you and bringing you to orgasm as well. Pulling your head back to avoid him knotting your mouth, thick jets of cum spurt directly down your throat, the back wash allowing you a better taste as it spills over your tongue and past your lips. You shudder against his warm fur, your own more discrete climax no less intense for you, the muscles inside of you clenching and releasing, especially the walls of your anus around the slick organ that is fluttering within you. The both of you cling to each other as you wait for your orgasms to relent, the escaped semen pooling on the ground beside you after spilling over the fox's fur.";
+		say "     The sensations becoming too much, the Kitsune sits up, his tongue still rhythmically darting into your anus as you begin to get folded in half. As he places his forepaws on the back of your head, you allow him to hammer his cock down your throat, knot popping in and out from between your lips as you moan ecstatically, gaining pleasure from what you have driven him to. His howl of climax is muffled by your backside, sending his tongue flailing without control inside you and bringing you to orgasm as well. Pulling your head back to avoid him knotting your mouth, thick jets of cum spurt directly down your throat, the back wash allowing you a better taste as it spills over your tongue and past your lips. You shudder against his warm fur, your own more discreet climax no less intense for you, the muscles inside of you clenching and releasing, especially the walls of your anus around the slick organ that is fluttering within you. The both of you cling to each other as you wait for your orgasms to relent, the escaped semen pooling on the ground beside you after spilling over the fox's fur.";
 	else: [Has Genitals]
-		if (scalevalue of Player > 3) or "Less Anal" is listed in feats of Player: [Blowjob or Cunnilingus]
+		if scalevalue of Player > 3 or "Less Anal" is listed in feats of Player: [Blowjob or Cunnilingus]
 			if Player is male:
-				say "     The Kitsune's tongue flicks over your twitching shaft, the warm and dexterous muscle circling the head of your cock causing you to elicit a heated moan, the fox grinning in response. For a moment, you forget about reciprocating the pleasure, your focus being directed entirely at thrusting down into the embrace of his maw. Your partner continues on regardless, slurping enthusiastically and savoring how your cock tastes, saliva dribbling from his mouth accompanied by your precum, the mess trickling over his snout before pooling on the ground beside his head. Feeling that you have neglected the vulpine for long enough, you begin to treat his erection with equal fervor, occasionally letting out a soft grunt as you lose yourself in your task. You tune out the sounds of the city, listening only to the slurps, murmurs, and pops of your mutual pleasuring, chuckling at one point when the Kitsune inadvertently starts to wag his tail against the floor[if Player is dominant], an action you encourage to establish your control over him.[else if Player is submissive] the appendage moving in time with his mouth on your cock.[else], an action you encourage, whispering what a good boy he is.[end if]";
+				say "     The Kitsune's tongue flicks over your twitching shaft, the warm and dexterous muscle circling the head of your cock causing you to elicit a heated moan, the fox grinning in response. For a moment, you forget about reciprocating the pleasure, your focus being directed entirely at thrusting down into the embrace of his maw. Your partner continues on regardless, slurping enthusiastically and savoring how your cock tastes, saliva dribbling from his mouth accompanied by your precum, the mess trickling over his snout before pooling on the ground beside his head. Feeling that you have neglected the vulpine for long enough, you begin to treat his erection with equal fervor, occasionally letting out a soft grunt as you lose yourself in your task. You tune out the sounds of the city, listening only to the slurps, murmurs, and pops of your mutual pleasuring, chuckling at one point when the Kitsune inadvertently starts to wag his tail against the floor[if Player is dominant], an action you encourage to establish your control over him[else if Player is submissive] the appendage moving in time with his mouth on your cock[else], an action you encourage, whispering what a good boy he is[end if].";
 				say "     Over time, you begin to press your head further down the fox's shaft, the tip reaching deeper into your throat as he thrusts in time with you. Miraculously, you don't choke despite the impressive size of it, and you wonder whether he is perhaps using magic to allow this. This thought is quickly brushed from your mind as the Kitsune completely hilts you in his mouth, encircling his tongue around your girth and squeezing. Your gasp is stifled by the cock in your throat, but the vibrations that you send through his flesh causes his breath to quicken and his paws to peddle futilely in the air. You smirk to yourself as you repeat this treatment intermittently, rewarding him when he succeeds in giving you similar stimulation. You must look a sight, with a bear-sized fox lying on his back swallowing your length while you return the favor, both of emitting sounds of satisfaction and eagerness.";
 				WaitLineBreak;
 				say "     As your coupling progresses, the pre coating the Kitsune's length becomes more copious, allowing you to more easily slide it into your throat. You begin to experiment with ways to further excite him, a fresh spurt of pre rewarding you each time you do, the flavor different to any that you have experienced before. The two of you begin to sync your head movements, gulping noises squeezing from your mouth as he thrusts as deep as he can, his climax approaching. You doubt that your own will be far behind, the cocky vulpine seemingly well practiced at orally pleasuring his partners, simultaneously stimulating your [if Player is knotted]knot, [end if]shaft, tip, and balls with his talented tongue. Realizing that you have been neglecting his [if Player is knotted]own [end if]knot, you begin to rub it with your fingers even as you press your head further down his length so that your lips can kiss at it too. You hear an appreciative murmur behind you and redouble your efforts, determined to prove yourself a fair master over the experienced fox.";
 				say "     The sensations becoming too much, the Kitsune starts to quiver as his climax approaches, the suction on your shaft becoming increasingly frantic. As he places his forepaws on the back of your head, you allow him to hammer his cock down your throat, knot popping in and out from between your lips as you moan ecstatically, gaining pleasure from what you have driven him to. His howl of climax is muffled by your backside, sending his tongue flailing without control inside you and bringing you to orgasm as well. Pulling your head back to avoid him knotting your mouth, thick jets of cum spurt directly down your throat, the back wash allowing you a better taste as it spills over your tongue and past your lips. You shudder against his warm fur, your own semen spurting over his tongue and down his greedy gullet, the both of you clinging to each other as you wait for your orgasms to relent, the mess from your union pooling on the ground beside you after spilling over the fox's fur.";
 			else:
-				say "     The Kitsune's tongue flicks over your wet cunt, the warm and dexterous muscle parting your lips and tickling your clit, evoking a soft moan from you, the fox grinning in response. For a moment, you forget about reciprocating the pleasure, your focus being directed entirely at grinding your quim against his thirsty maw. Your partner continues on regardless, slurping enthusiastically and savoring how your pussy tastes, saliva dribbling from his mouth accompanied by your juices, the mess trickling over his snout before pooling on the ground beside his head. Feeling that you have neglected the vulpine for long enough, you begin to treat his erection with equal fervor, occasionally letting out a soft grunt as you lose yourself in your task. You tune out the sounds of the city, listening only to the slurps, murmurs, and pops of your mutual pleasuring, chuckling at one point when the Kitsune inadvertently starts to wag his tail against the floor[if Player is dominant], an action you encourage to establish your control over him.[else if Player is submissive] the appendage moving in sync with his tongue in your slit.[else], an action you encourage, whispering what a good boy he is.[end if]";
+				say "     The Kitsune's tongue flicks over your wet cunt, the warm and dexterous muscle parting your lips and tickling your clit, evoking a soft moan from you, the fox grinning in response. For a moment, you forget about reciprocating the pleasure, your focus being directed entirely at grinding your quim against his thirsty maw. Your partner continues on regardless, slurping enthusiastically and savoring how your pussy tastes, saliva dribbling from his mouth accompanied by your juices, the mess trickling over his snout before pooling on the ground beside his head. Feeling that you have neglected the vulpine for long enough, you begin to treat his erection with equal fervor, occasionally letting out a soft grunt as you lose yourself in your task. You tune out the sounds of the city, listening only to the slurps, murmurs, and pops of your mutual pleasuring, chuckling at one point when the Kitsune inadvertently starts to wag his tail against the floor[if Player is dominant], an action you encourage to establish your control over him[else if Player is submissive] the appendage moving in sync with his tongue in your slit[else], an action you encourage, whispering what a good boy he is[end if].";
 				say "     Over time, you begin to press your head further down the fox's shaft, the tip reaching deeper into your throat as he thrusts in time with licking you. Miraculously, you don't choke despite the impressive size of it, and you wonder whether he is perhaps using magic to allow this. This thought is quickly brushed from your mind as the Kitsune penetrates you with his tongue, sending it spearing deep inside of you. Your gasp is stifled by the cock in your throat, but the vibrations that you send through his flesh causes his breath to quicken and his paws to peddle futilely in the air. You smirk to yourself as you repeat this treatment intermittently, rewarding him when he succeeds in giving you similar stimulation. You must look a sight, with a bear-sized fox lying on his back with his tongue deep in your pussy while you return the favor by repeatedly bobbing your head on his shaft, both of emitting sounds of satisfaction and eagerness.";
 				WaitLineBreak;
 				say "     As your coupling progresses, the pre coating the Kitsune's length becomes more copious, allowing you to more easily slide it into your throat. You begin to experiment with ways to further excite him, a fresh spurt of pre rewarding you each time you do, the flavor different to any that you have experienced before. The two of you begin to sync your head movements, gulping noises squeezing from your mouth as he thrusts as deep as he can, his climax approaching. You doubt that your own will be far behind, the cocky vulpine seemingly well practiced at orally pleasuring his partners, simultaneously stimulating your clitoris, vaginal walls, and vulva with his talented tongue. Realizing that you have been neglecting his knot, you begin to rub it with your fingers even as you press your head further down his length so that your lips can kiss at it too. You hear an appreciative murmur behind you and redouble your efforts, determined to prove yourself a fair master over the experienced fox.";
@@ -525,20 +514,20 @@ to say Kitsune_DomRidingVag:
 	infect "Kitsune";
 	now non-infectious entry is true;]
 
-Section 6 - Creature Insertion
-
 to say Kitsune loss:
 	say "These are filler messages and should not be seen, as there's no fight with Kitsune.";
 
 to say Kitsune attack:
 	say "These are filler messages and should not be seen, as there's no fight with Kitsune.";
 
+Section 6 - Creature Insertion
+
 Table of CombatPrep (continued)
 name(text)	PrepFunction(text)
 "Kitsune"	"[PrepCombat_Kitsune]"
 
 to say PrepCombat_Kitsune:
-	say "";
+	setmongender 3; [creature is male]
 
 Table of Random Critters (continued)
 NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
@@ -560,10 +549,10 @@ When Play begins:
 	add "Kitsune" to infections of BipedalList;
 	add "Kitsune" to infections of TailList;
 	now Name entry is "Kitsune";
-	now enemy title entry is "Kitsune";
+	now enemy title entry is "";
 	now enemy Name entry is "Honoka";
 	now enemy type entry is 1; [ 0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters. ]
-	now attack entry is "[one of]The tall fox man laughs while shooing you away playfully. A blue ball of flame appears in his hand when you don't back down.[at random]";
+	now attack entry is "The tall fox man laughs while shooing you away playfully. A blue ball of flame appears in his hand when you don't back down.";
 	now defeated entry is "[Kitsune loss]";
 	now victory entry is "[Kitsune attack]";
 	now desc entry is "     A silver furred vulpine stands on two digitigrade legs while looking at you calculatingly. Piercing azure eyes glare at you somewhat hotly as if the fox-man is trying to undress you with his eyes. Just exactly who or what is this creature that stands with nine soft and flowing tails at his backside? The loincloth tied over his waist tells you nothing, save that the other is well endowed."; [ Description of the creature when you encounter it.]
@@ -574,7 +563,7 @@ When Play begins:
 	now cock entry is "[one of]vulpine[or]canid[or]tapered[or]sheathed[or]thickly knotted[at random]"; [ Cock Description, format as you have a 'size' (your text) cock]
 	now face change entry is "your eyes blink as you notice that your face has pushed out to form a narrow fox muzzle colored with moonlight silver fur. Cocking your head to the side you notice that you can hear the wind blowing around you and gape when you realize that your ears have pushed up on top of your head. Long and furry, the twitching folds flip up and down as you move them out of instinct, not to mention curiosity. Looking between your face you notice that you have a black dotted nose, a few whiskers on each side of your snout and finally that your tongue is now long and thick as you pop the organ out from your muzzle"; [ Face change text, format as "Your face feels funny as [face change entry]." ]
 	now body change entry is "you notice that the form you now support is one that is covered from neck down to toe in silver fur. Slightly confused as to what has happened to you, you find that your body now has taken on the form of a silver kitsune, the same as Kitsune himself. Tall and imposingly powerful, you feel as the your heart is beating somewhat slower as your senses seem to come alive in a newfound way as you can literally [italic type]feel[roman type] things that you never had before"; [ Body change text, format as "Your body feels funny as [body change entry]." ]
-	now skin change entry is "scratch at yourself lightly while trying very, very hard not to. What you come to find by looking down at yourself is that you now have a silver pelt of fur gracing your body. The itching was from the fur pushing out from beneath your skin"; [ Skin change text, format as "Your skin feels funny as [skin change entry]." ]
+	now skin change entry is "you scratch at yourself lightly while trying very, very hard not to. What you come to find by looking down at yourself is that you now have a silver pelt of fur gracing your body. The itching was from the fur pushing out from beneath your skin"; [ Skin change text, format as "Your skin feels funny as [skin change entry]." ]
 	now ass change entry is "you wiggle your rump around as though trying to get something from off of your backside. Grunting and finally reaching back to take a scratch you find that you now have a single silver vulpine tail wagging behind you somewhat happily as you stare at it intensely"; [ Ass/tail change text, format as "Your ass feels funny as [ass change entry]." ]
 	now cock change entry is "you shuffle your legs together as you feel something pushing and changing down between your legs. Not wanting to look, but knowing that you have to, you let your vision stray down and then gasp at the sight of a silver sheath and tapered shaft both starting up at you. Faintly you wonder if a knot has come included with this package but upon pulling your sheath back you realize that - yep - you have a small bulb at the end of your vulpine dick"; [ cock change text. format as "Your cock feels funny as (your text)." ]
 	now str entry is 14;
@@ -716,7 +705,6 @@ When Play begins:
 	now Clit Size entry is 0; [size 1-5, see Clit Size Adjective]
 	[Clit Size Adjective is generated by a function and can be used in scenes: very small/small/average/large/very large]
 ]
-
 
 Section 7 - Endings
 

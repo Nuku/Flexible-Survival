@@ -88,8 +88,6 @@ to say horsemazonDefeat:           [Scene for when the player defeats the Horsem
 			now sextablerun is 1;
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options], or 0 to exit.";
-	wait for any key;
-	clear the screen and hyperlink list;
 	decrease XP of Jana by 1;
 
 Section 4 - Monster Sex Scenes

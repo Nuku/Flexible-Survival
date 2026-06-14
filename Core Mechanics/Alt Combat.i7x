@@ -142,13 +142,16 @@ to prepforfight:		[Do all the pre-fight setup, reset values, and then display th
 	if weapon object of Player is bo staff or weapon object of Player is wukongStaff:
 		if "Martial Artist" is listed in feats of Player, increase plhitbonus by 1;
 		if "Black Belt" is listed in feats of Player, increase plhitbonus by 1;
-	if weapon object of Player is chair and Name entry is "Wrestling Wolf":
-		increase plhitbonus by 2;
-	if weapon object of Player is riding crop and ( BodyName of Player is "Latex Mistress" or player is dominant ):
-		increase plhitbonus by 2;
-	if ( weapon object of Player is pistol or weapon object of Player is banana peel gun ) and BodyName of Player is "Gunbunny":
-		increase plhitbonus by 2;
-	if weapon object of Player is journal:
+	else if weapon object of Player is chair:
+		if Name entry is "Wrestling Wolf":
+			increase plhitbonus by 2;
+	else if weapon object of Player is riding crop:
+		if BodyName of Player is "Latex Mistress" or player is dominant:
+			increase plhitbonus by 2;
+	else if weapon object of Player is pistol or weapon object of Player is banana peel gun:
+		if BodyName of Player is "Gunbunny":
+			increase plhitbonus by 2;
+	else if weapon object of Player is journal:
 		if "Black Belt" is listed in feats of Player, increase plhitbonus by 1;
 	if "Know Thyself" is listed in feats of Player:
 		let mmb be 0;
@@ -219,7 +222,7 @@ Part 2 - Combat
 
 Chapter 1 - Combat Menu
 
-To Combat Menu:
+to Combat Menu:
 	say "[run paragraph on]";
 	follow the cock descr rule;
 	follow the cunt descr rule;
@@ -246,8 +249,7 @@ To Combat Menu:
 			say "[line break]Your [one of]weak-willed[or]submissive[or]easily-influenced[as decreasingly likely outcomes] nature gets the better of you and you offer yourself to your opponent."; [text telling player why they lost the fight]
 			AttemptToWait;
 			follow the submit rule;
-			next;
-		if autoattackmode is 1: [always attacks in combat, no player input needed]
+		else if autoattackmode is 1: [always attacks in combat, no player input needed]
 			[now automaticcombatcheck is 1;]
 			follow the player attack rule;
 		else if autoattackmode is 2: [always seduces in combat, no player input needed]
@@ -500,7 +502,7 @@ This is the player attack rule:
 		say "You miss!";
 	if Player is not lonely and monsterHP > 0:
 		LineBreak;
-		Repeat with z running through companionList of Player:
+		repeat with z running through companionList of Player:
 			if z is not NullPet:
 				if "LustAttacks" is not listed in Traits of z or seduceimmune is true: [normal combat]
 					now the attack bonus is dexterity of z + ( level of z * 2 ) + pethitbonus - 10;
@@ -635,7 +637,7 @@ This is the player seduce rule:
 			say "Your seduction attempt fails!";
 	LineBreak;
 	if Player is not lonely and monsterLibido - monsterLibidoPenalty < 100:
-		Repeat with z running through companionList of Player:
+		repeat with z running through companionList of Player:
 			if z is not NullPet:
 				if "LustAttacks" is not listed in Traits of z or seduceimmune is true: [normal combat]
 					now the attack bonus is dexterity of z + ( level of z * 2 ) + pethitbonus - 10;
@@ -1443,7 +1445,7 @@ to win:
 	follow the ngraphics_blank rule;
 	rule succeeds;
 
-To lose:
+to lose:
 	choose row MonsterID from the Table of Random Critters;
 	if Name entry is not listed in EncounteredEnemies of Player:
 		add Name entry to EncounteredEnemies of Player;

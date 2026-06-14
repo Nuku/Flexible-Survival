@@ -25,10 +25,9 @@ Section 1 - Declaring variables and initial event
 BjornRelationship is a number that varies.
 PericlesRelationship is a number that varies.
 
-instead of going North from College Campus Entrance while BjornRelationship is 0:
+check going North from College Campus Entrance while BjornRelationship is 0:
 	say "     While making your way to the Campus Fountain you hear what sounds like the noises of swords clashing. Intrigued, you quickly try to find where it's coming from. To your surprise you see a well-decorated Spartan fighting a young adult male Viking. From what you can see the sea warrior is losing rather spectacularly. 'What made you think you could challenge the Spartan-Helot leader Pericles with such skills?' the Greek man asked. The other guy, instead of replying simply glares at his opponent who is beating him soundly. As you focus on the scene before you, an idea pops into your head. You could save the Viking or just watch, what exactly will you do?";
-	say "     [bold type]Do you wish to save the Viking?[roman type][line break]";
-	LineBreak;
+	say "[line break]     [bold type]Do you wish to save the Viking?[roman type][line break]";
 	say "     ([link]Y[as]y[end link]) - He's getting beaten rather badly, why not?";
 	say "     ([link]N[as]n[end link]) - No, it's none of your business getting involved.";
 	if Player consents:
@@ -39,24 +38,23 @@ instead of going North from College Campus Entrance while BjornRelationship is 0
 		say "     Oh, well you can partially understand what he's talking about but why does he need to prove himself exactly? 'My fellow Vikings think I might be gay,' he mutters, causing you to raise an eyebrow, not exactly understanding what that means. Seeing this, Bjorn explains even further. 'In our culture if you're gay, you're considered to be weaker than other warriors, because you take it up the ass,' he says flatly. Huh, interesting, you wouldn't exactly say that as you feel it would take more strength to do so. However, before you can say so, the male continues. 'I mean I do like women but... I prefer men,' he rants, making you rather confused as to why he's saying this to a stranger. He blushes and stutters at that before he tells you something. 'Ah, uh if you want to talk to me you can find me at the Rocky Cliffs on the beach at night time,' he hurriedly says before running away. You shrug your shoulders before continuing on your way.";
 		now BjornRelationship is 1;
 		now PericlesRelationship is 1;
-		move player to College Fountain;
+		[move player to College Fountain;]
 		move Bjorn to Rocky Cliff;
 	else:
 		LineBreak;
 		say "     You shake your head and decide against it. The Spartan slams the butt of his pommel against the head of the viking, knocking him back before speaking. 'Go! Never return,' Pericles orders. The male scrambles back before running off, leaving you alone with the Greek warrior. Said guy looks at you with an intrigued look before walking off to talk with some of his soldiers. With a shrug of your shoulders you go on your way.";
 		now PericlesRelationship is 1;
 		now BjornRelationship is 99;
-		move player to College Fountain;
+		[move player to College Fountain;]
 	now Daily Training Session is active;
 
 An everyturn rule:
 	if BjornRelationship > 0 and BjornRelationship < 3:
 		if daytimer is night:
-			move Bjorn to Rocky Cliff;
-		else if daytimer is day:
+			if Bjorn is not in Rocky Cliff:
+				move Bjorn to Rocky Cliff;
+		else if Bjorn is in Rocky Cliff:
 			move Bjorn to Viking Ship;
-
-
 
 Section 2 - Declaring Bjorn
 
@@ -101,15 +99,15 @@ TwistedCapacity of Bjorn is false. [Twisted Characters can take any penetration,
 Sterile of Bjorn is true. [steriles can't knock people up]
 MainInfection of Bjorn is "Viking Man".
 Description of Bjorn is "[BjornDesc]".
-Conversation of Bjorn is { "<This is nothing but a placeholder!>" }.
-The scent of Bjorn is "He smells of the sea and sweat, the later proving that he does work out.".
+fuckscene of Bjorn is "[BjornSexMenu]".
+The scent of Bjorn is "     He smells of the sea and sweat, the later proving that he does work out.".
 
 to say BjornDesc:
 	if BjornRelationship < 3:
 		say "     Your viking friend has shoulder length, shaggy, dirty blonde hair that is currently tied into a ponytail and bright blue eyes. He is wearing scale-mail armor that doesn't exactly cover everything, mainly his arms which are open to the world, showing off his well-enough muscles. Pants-wise he has leather trousers that one would see on a medieval warrior. You can tell that he's not that experienced when you notice that he doesn't have any scars on his body compared to what you'd expect of a viking. When he sees you he blushes lightly and waves at you.";
-	if BjornRelationship is 3:
+	else if BjornRelationship is 3:
 		say "     Bjorn has undergone quite a change in the short time he's been with the Spartans. His once shaggy, shoulder length blonde hair is shortened to just below the ears, though he still has his bright blue eyes. His scale-mail armor is replaced with what looks to be a golden platebody that is missing, well the body part so only really his arms are covered. Instead of his leather trousers he's wearing armored pants that cover everything but his large cock that match the upper body. Upon noticing you looking at him he blushes at you staring and waves.";
-	if BjornRelationship > 3 and BjornRelationship < 99:
+	else if BjornRelationship < 99:
 		say "     The viking you've grown familiar with is no longer wearing the Spartan outfit he was forced to before. Instead he appears to have gone... deep into the college culture. That is, as deep as he can while retaining some of his viking qualities. First and foremost, the blonde-haired male is wearing a black tank top with the college's school logo emblazoned on it that heavily emphasizes his musculature. Next, instead of the leather pants he wore at the beginning of your relationship with him, he's now wearing tight leather pants that cling very tightly to his bulge, leaving no room to imagination. In his ears is a set of piercings that add to the overall look, though you swear one of them has a 'P' engraved on it. Lastly he has a large double-headed axe hanging on his back that he appears very comfortable with. Overall you are pretty damn sure that Pericles chose all of his attire for him. When your friend sees you staring he waves, causing his muscles to ripple under the tank top.";
 
 Section 3 - Talking with Bjorn
@@ -117,24 +115,13 @@ Section 3 - Talking with Bjorn
 instead of conversing the Bjorn:
 	if BjornRelationship is 3:
 		say "     Although he's looking a bit tired from his training with the Spartans, Bjorn still smiles and waves at you before asking what you want to talk about.";
-		wait for any key;
-		say "[BjornTalkMenu]";
 	else if BjornRelationship > 3:
 		say "     Looking up from his textbook the viking gives you a warm smile and asks you what you want, saying that he does have to get back to studying soon.";
-		wait for any key;
-		say "[BjornTalkMenu]";
 	else if Bjorn is in Viking Ship:
 		say "     Surrounded by his fellow vikings, Bjorn gives a gruff hello before asking you what you request of him, his personality far different from how he is at the cliff.";
-		wait for any key;
-		say "[BjornTalkMenu]";
 	else if Bjorn is in Rocky Cliff:
 		say "     The viking smiles at you, pushing himself off the side of the cliff, before asking you what you want, giving you a nice warm smile.";
-		wait for any key;
-		say "[BjornTalkMenu]";
-
-to say BjornTalkMenu:
-	LineBreak;
-	say "What do you wish to talk about with Bjorn?";
+	say "[line break]     What do you wish to talk about with Bjorn?";
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]
@@ -143,17 +130,20 @@ to say BjornTalkMenu:
 	now sortorder entry is 1;
 	now description entry is "Ask him about his tribe";
 	[]
-	if Cock Count of Player > 0 and Bjorn is in Rocky Cliff:
-		choose a blank row in table of fucking options;
-		now title entry is "Spar";
-		now sortorder entry is 2;
-		now description entry is "Spar with the Viking";
+	if Bjorn is in Rocky Cliff:
+		if Player is male:
+			choose a blank row in table of fucking options;
+			now title entry is "Spar";
+			now sortorder entry is 2;
+			now description entry is "Spar with the Viking";
+		[]
+		if BjornRelationship is 2:
+			choose a blank row in table of fucking options;
+			now title entry is "Pericles";
+			now sortorder entry is 3;
+			now description entry is "Convince the Viking to go apologize";
 	[]
-	if BjornRelationship is 2 and Bjorn is in Rocky Cliff:
-		choose a blank row in table of fucking options;
-		now title entry is "Pericles";
-		now sortorder entry is 3;
-		now description entry is "Convince the Viking to go apologize";
+	sort the table of fucking options in sortorder order;
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
 		say "[link][y] - [title entry][as][y][end link][line break]";
@@ -166,21 +156,22 @@ to say BjornTalkMenu:
 			choose row calcnumber in table of fucking options;
 			say "[title entry]: [description entry]?";
 			if Player consents:
-				let nam be title entry;
+				LineBreak;
 				now sextablerun is 1;
-				if (nam is "Viking Woman"):
-					say "[BjornViking]";
-				if (nam is "Spar"):
-					say "[BjornSpar]";
-				if (nam is "Pericles"):
-					say "[BjornPericles]";
-				wait for any key;
+				if title entry is:
+					-- "Viking Woman":
+						say "[BjornViking]";
+					-- "Spar":
+						say "[BjornSpar]";
+					-- "Pericles":
+						say "[BjornPericles]";
 		else if calcnumber is 0:
+			LineBreak;
 			now sextablerun is 1;
 			say "     You shake your head, which creates a confused look on Bjorn's face before he shrugs.";
-			wait for any key;
 		else:
-			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options], or 0 to exit.";
+	wait for any key;
 	clear the screen and hyperlink list;
 
 to say BjornViking:
@@ -189,8 +180,7 @@ to say BjornViking:
 to say BjornSpar:
 	say "     You offer a spar to the muscular viking male, something that makes his eyes light up with eagerness. 'Really? That'd be great!' he says with a smile as he readies his equipment. You ready yourself for a fight as well but something pops up in your thoughts as you're doing this. You ask him what the prize will be for the one who wins. Bjorn thinks for a minute before he finally comes up with something. 'Winner gets to fuck the other?' he offers hesitantly. Your smirk at that offer, it being something that appeals to you. So you readily agree to it, vocally saying this out loud. 'Alrighty, so uh, rules are to knock either one of us to the ground and keep us there for fifteen seconds?' he asks, as if wondering if it was okay. You nod which prompts him to begin.";
 	say "     When he starts you realize you're at a slight disadvantage with no weapon to match up to a sword. However, you're thankful because you notice he's using a wooden sword instead of the real one leaning against the side of the cliff. Nevertheless you block the sword strike with your hands but get pushed back in the sand, stunned a bit by how much strength he put in the attack. You quickly push forward on his weapon causing Bjorn to stumble back. Using this momentum you charge forward and throw a punch at him. You successfully hit him, causing him to fall to the ground. You realize that right now you could end it by holding him to the ground.";
-	say "     [bold type]Do you wish to throw the fight?[roman type][line break]";
-	LineBreak;
+	say "[line break]     [bold type]Do you wish to throw the fight?[roman type][line break]";
 	say "     ([link]Y[as]y[end link]) - Yeah, I want that dick up my ass.";
 	say "     ([link]N[as]n[end link]) - No, it's my turn to top.";
 	if Player consents:
@@ -204,9 +194,9 @@ to say BjornSpar:
 		say "     Sure enough it doesn't take long before you let out a loud grunt and shoot your load across both your stomachs. This causes you to clench your hole on the thick cock you're currently riding, driving Bjorn over the edge. With one last groan, the viking lets loose his cum deep into your ass. While riding out the bliss of your orgasms the two of you lazily swap kisses, simply enjoying each other's presence. Once you're out of your post-coitus haze you ease yourself off his softening cock and begin to clean yourself up. Once done you help him up from the sand. 'That was wonderful, maybe we could try sparing again another time?' he asks. You tell Bjorn that you'll let him know if you wish to spar again before wondering what you'll do next.";
 	else:
 		LineBreak;
-		let bonus be (( strength of Player minus 10 ) divided by 2);
+		let bonus be ( strength of Player minus 10 ) divided by 2;
 		let diceroll be a random number from 1 to 20;
-		say "You roll 1d20([diceroll])+[bonus] = [special-style-1][diceroll + bonus][roman type] vs [special-style-2]18[roman type] (Strength Check):[line break]";
+		say "You roll 1d20([diceroll])[if bonus >= 0]+[end if][bonus] = [special-style-1][diceroll + bonus][roman type] vs [special-style-2]18[roman type] (Strength Check):[line break]";
 		if diceroll + bonus >= 18:
 			say "     You launch yourself onto the viking and try to hold him down. First of all you pin his arms to the sand, wrapping your legs around his. The male struggles to push you off but your strength is too much for him. It doesn't take long for Bjorn to stop trying before he slumps to the ground. You smile widely on him as you reposition yourself so that you're sitting on him and then proudly tell him that you win. 'Yes, yes, you win,' he grumbles as he pushes you off him and stands up. With a sigh he begins to strip himself naked, revealing his sexy body in all of its glory. His soft cock is slowly hardening despite his reluctance, showing that he is as eager for this as you are. He quickly positions himself so that he's up against the cliff wall, leaving his ass open for you to play with.";
 			say "     You eagerly approach your viking friend and move your hand to his ass, placing a finger at his pucker. Bjorn groans when you push your digit into his hole, enjoying the feeling. [if BjornRelationship is 1]Based on the tightness you can tell he's a virgin, something you relish in[else]Despite you having already fucked him he's still rather tight, something you enjoy[end if]. Once the male gets used to a single finger, you push another in and begin to scissor his opening, to help loosen it up. By now Bjorn appears to be moaning and groaning on your digits, clearly aroused by the fingering. Soon enough though you feel as if he's ready for your dick thus removing your fingers and positioning yourself at his entrance.";
@@ -244,6 +234,7 @@ to say BjornPericles:
 		say "     Pericles lets out a sigh before giving you a withering look for putting him in this situation, after which he turns to Bjorn. 'Alright, fine I know how you can make it up to me,' the Spartan-Helot says, gesturing for you two to come on in. He heads over to one of his dresser drawers and starts shuffling in it. 'You will send a message to your family and tell them that you're... on an exploration or something. What will really be happening is that you'll be training with my army,' Pericles says, tossing a Spartan uniform at the viking's face, albeit a tad more clothed than the ones you see run around the campus.";
 		WaitLineBreak;
 		say "     You give your Greek warrior friend a look, staring at him and then at the outfit, practically asking about the nanites. Once more Pericles rolls his eyes before explaining. 'It shouldn't transform him, all it is, is a piece of clothing,' the male says, sounding exasperated. Bjorn however looks really happy and repeatedly thanks him for the opportunity. As your strong seafaring companion does this, your other friend sends you a glare as if blaming you for his plight, which to be honest, it is your fault. Wanting to quickly leave before Pericles decides to stab you with his sword, and not in the fun way, you make your way out of his room, the last thing you hear being that apparently the viking is staying with the Spartan-Helot leader.";
+		WaitLineBreak;
 		move player to Second Floor Male Dorms;
 		now BjornRelationship is 3;
 		now PericlesRelationship is 6;
@@ -252,72 +243,67 @@ to say BjornPericles:
 
 Section 4 - Having Sex With Bjorn
 
-instead of fucking Bjorn:
+to say BjornSexMenu:
 	if BjornRelationship is 4:
 		say "     Bjorn frowns and looks in Pericles['] direction. 'I'm sorry but if we were to do anything he would be mad at me... perhaps you should prove yourself again to him somehow?' the viking says, biting his lip and speaking in a worried tone.";
 	else if Bjorn is in Viking Ship:
 		say "     He shakes his head vigorously, as if hinting that he'd rather not have sex here where his fellow tribe could see.";
-	else if (lastfuck of Bjorn - turns < 3): [he got fucked in the last 9 hours = 3 turns]
+	else if lastfuck of Bjorn - turns < 3: [he got fucked in the last 9 hours = 3 turns]
 		say "     He chuckles at your eagerness. 'As much as I'd love to have fun with you, I need rest from last time,' he says with a smile.";
 	else if BjornRelationship > 4 and Player is neuter:
 		say "     Bjorn gives an apologizing look at you as he stares at you up from his books. 'I'm sorry but I'd rather not exclude Pericles and he... finds it weird when there's not a cock to play with,' the Viking says to you. Perhaps you'd have a better chance with the couple if you were to the dominant's likes?";
-	else if BjornRelationship > 4 and Cock Count of Player > 0 and Cunt Count of Player < 1:
+	else if BjornRelationship > 4 and Player is puremale:
 		say "     He looks up at you from his books and then over at the Spartan-Helot, who is currently working on some paperwork. 'What do you wish to do? I'm sure me and Pericles would love to have fun with you,' he says with a sly smirk.";
-		wait for any key;
 		say "[PericlesBjornSexMenu]";
 	else:
 		say "     The male viking looks at you with interest. 'What do you have in mind my friend?' he asks you.";
-		wait for any key;
-		say "[BjornSexMenu]";
-
-to say BjornSexMenu:
-	LineBreak;
-	now sextablerun is 0;
-	blank out the whole of table of fucking options;
-	[]
-	choose a blank row in table of fucking options;
-	now title entry is "Suck him off";
-	now sortorder entry is 1;
-	now description entry is "Give the viking a blowjob";
-	[]
-	choose a blank row in table of fucking options;
-	now title entry is "Take Bjorn's shaft in your ass";
-	now sortorder entry is 3;
-	now description entry is "Take Bjorn's cock for a ride";
-	[]
-	Sort the table of fucking options in sortorder order;
-	repeat with y running from 1 to number of filled rows in table of fucking options:
-		choose row y from the table of fucking options;
-		say "[link][y] - [title entry][as][y][end link][line break]";
-	say "[link]0 - Nevermind[as]0[end link][line break]";
-	while sextablerun is 0:
-		say "Pick the corresponding number> [run paragraph on]";
-		get a number;
-		if calcnumber > 0 and calcnumber <= the number of filled rows in table of fucking options:
-			now current menu selection is calcnumber;
-			choose row calcnumber in table of fucking options;
-			say "[title entry]: [description entry]?";
-			if Player consents:
-				let nam be title entry;
+		now sextablerun is 0;
+		blank out the whole of table of fucking options;
+		[]
+		choose a blank row in table of fucking options;
+		now title entry is "Suck him off";
+		now sortorder entry is 1;
+		now description entry is "Give the viking a blowjob";
+		[]
+		choose a blank row in table of fucking options;
+		now title entry is "Take Bjorn's shaft in your ass";
+		now sortorder entry is 2;
+		now description entry is "Take Bjorn's cock for a ride";
+		[]
+		sort the table of fucking options in sortorder order;
+		repeat with y running from 1 to number of filled rows in table of fucking options:
+			choose row y from the table of fucking options;
+			say "[link][y] - [title entry][as][y][end link][line break]";
+		say "[link]0 - Nevermind[as]0[end link][line break]";
+		while sextablerun is 0:
+			say "Pick the corresponding number> [run paragraph on]";
+			get a number;
+			if calcnumber > 0 and calcnumber <= the number of filled rows in table of fucking options:
+				now current menu selection is calcnumber;
+				choose row calcnumber in table of fucking options;
+				say "[title entry]: [description entry]?";
+				if Player consents:
+					LineBreak;
+					now sextablerun is 1;
+					if title entry is:
+						-- "Suck him off":
+							say "[BjornSex1]";
+						-- "Take Bjorn's shaft in your ass":
+							say "[BjornSex2]";
+			else if calcnumber is 0:
+				LineBreak;
 				now sextablerun is 1;
-				if (nam is "Suck him off"):
-					say "[BjornSex1]";
-				if (nam is "Take Bjorn's shaft in your ass"):
-					say "[BjornSex2]";
-				wait for any key;
-		else if calcnumber is 0:
-			now sextablerun is 1;
-			say "     You step away from the viking who gives you a disappointed and frustrated look. It appears he really wanted sex.";
-			wait for any key;
-		else:
-			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
-	clear the screen and hyperlink list;
+				say "     You step away from the viking who gives you a disappointed and frustrated look. It appears he really wanted sex.";
+			else:
+				say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options], or 0 to exit.";
+		wait for any key;
+		clear the screen and hyperlink list;
 
 to say BjornSex1:
 	say "     The viking perks up when you mention that you want to blow him. 'That sounds like a great idea,' he says, a wide smile on his face. Eager to get started the buff male begins to shuck off his scale-mail armor, revealing his muscular body. He tosses it on the sand by the cliff before walking over there and leaning against the rocky wall. He promptly undoes his pants enough to reveal his slowly hardening cock. You walk over to Bjorn and get on your knees making you now face first with the big cock. Just from your position you can easily smell his masculine musk, something that you inhale before moving your face to his dick.";
-	say "     You first focus your attention on his balls, lavishing it with your tongue, taking in the sweaty taste of his sack. Judging by that, you can tell he recently worked out, causing thoughts of the buff viking training with his sword to appear in your head. Spurred on by the sexy images popping up in your mind, you begin to drag your tongue up Bjorn's length, enjoying the moans coming from the male. When you reach the tip of the cock, you swirl your tongue around it, savoring the musky taste. This ends up making him grasp at your head, his fingers gripping not too hard. To tease your friend you begin to lick repeatedly at his cock-head, the viking moaning and groaning at the feeling. While you're doing this, his cock is starting to drip precum, which you eagerly lap up.";
+	say "     You first focus your attention on his balls, lavishing it with your tongue, taking in the sweaty taste of his sack. Judging by that, you can tell he recently worked out, causing thoughts of the buff viking training with his sword to appear in your head. Spurred on by the sexy images popping up in your mind, you begin to drag your tongue up Bjorn's length, enjoying the moans coming from the male. When you reach the tip of the cock, you swirl your tongue around it, savoring the musky taste. This ends up making him grasp at your head, his fingers gripping not too hard. To tease your friend you begin to lick repeatedly at his cockhead, the viking moaning and groaning at the feeling. While you're doing this, his cock is starting to drip precum, which you eagerly lap up.";
 	WaitLineBreak;
-	say "     Deciding that you've teased him long enough you engulf the cock-head with your mouth and begin to slowly deep-throat him. Bjorn lets out a grunt when you do so, clearly enjoying your efforts. 'Fuck that's great,' he says, clearly resisting the urge to fuck your face. When your face is finally pressed against his crotch, you reach your hand to his balls and start to fondle them, increasing the pleasure that your friend is feeling. From there you start to fuck your own face on his dick, an action that the viking obviously enjoys if his moans and groans tell you anything[if Player is female]. You slip your free hand into your clothing and promptly insert a finger into your pussy, fingering yourself so that you can get off with the buff male[else if Player is male]. You fish out your own cock from your clothes and begin to masturbate as you suck the buff male's manhood, eager to get off with him[end if].";
+	say "     Deciding that you've teased him long enough you engulf the cockhead with your mouth and begin to slowly deep-throat him. Bjorn lets out a grunt when you do so, clearly enjoying your efforts. 'Fuck that's great,' he says, clearly resisting the urge to fuck your face. When your face is finally pressed against his crotch, you reach your hand to his balls and start to fondle them, increasing the pleasure that your friend is feeling. From there you start to fuck your own face on his dick, an action that the viking obviously enjoys if his moans and groans tell you anything[if Player is female]. You slip your free hand into your clothing and promptly insert a finger into your pussy, fingering yourself so that you can get off with the buff male[else if Player is male]. You fish out your own cock from your clothes and begin to masturbate as you suck the buff male's manhood, eager to get off with him[end if].";
 	say "     By now Bjorn is unable to resist and begins to thrust in and out of your mouth at a rapid pace, clearly getting closer and closer to his own orgasm. You ride it out, not minding the face-fucking as your friend thankfully doesn't keep his dick in your throat too long, allowing you to take small breaths in between each push. Soon enough though the viking lets out a loud groan as he pulls back enough so that his tip is resting on your tongue. Immediately after that shot after shot of cum pools in your mouth, Bjorn coating your oral cavity with his seed[if Player is female]. You greedily swallow it all as you moan loudly, your juices spilling from your pussy[else if Player is male]. You greedily swallow it down as you let out your own grunt of pleasure, your load spilling onto the sand below you[end if].";
 	WaitLineBreak;
 	say "     Bjorn kind of just slumps against the cliff wall, still clearly in post-coital bliss. To your surprise the male helps you up and gives you a kiss on the mouth, taking some of the cum left over into his own oral cavity. When he swallows it, he pulls back and gives you a smile. 'That was a great blowjob,' he remarks happily. Following that the buff viking re-buttons his pants and throws his shirt back on. [if Player is not neuter]You do the same, readjusting your clothes so that you look presentable. [end if]Once the two of you are fully dressed, he gives you another kiss and goes back to leaning against the wall. You, however, are left to wonder what you'll do now.";
