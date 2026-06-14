@@ -1026,8 +1026,6 @@ Table of Game Objects (continued)
 name	desc	weight	object
 "feral cheetah milk"	"[breastmilk Strain of feral cheetah milk]"	1	feral cheetah milk
 
-cheetah milk is a grab object. [define early to resolve name conflicts]
-
 feral cheetah milk is a infectious milky grab object.
 Strain of feral cheetah milk is "Feral Cheetah".
 Usedesc of feral cheetah milk is "[breastmilk use]".
