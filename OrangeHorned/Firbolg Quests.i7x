@@ -49,15 +49,15 @@ to say ResolveEvent Act of Kindness:
 					else if fightoutcome is 30: [fled]
 						say "     You realize the tides are changing and run for the hills. You see the giant looking at you in confusion, but before he can say anything, he looks back to what you're running from. What follows is the sound of smashing metal and the bestial bleats of the feral, though you don't know who will come out the victor... you hope Giving and Samson won't hate you for fleeing.";
 						now Resolution of Act of Kindness is 1; [Helped. Fled.]
+					now HP of GivingFirbolg is 1;
+					AddNavPoint Encampment Tree;
+					move Knott to Encampment Tree;
+					move GivingFirbolg to Encampment Tree;
+					now Act of Kindness is resolved;
 				-- "Save yourself.":
 					LineBreak;
 					say "     You make a break for it... you don't know them enough and it can all be some giant plot to slowly transform the remaining uninfected for all you know. You see the giant looking at you in confusion, but before he can say anything, he looks back to what you're running from. What follows is the sound of smashing metal and the bestial bleats of the feral, though you don't know who will come out the victor; you hope Giving and Samson won't hate you for fleeing.";
 					now Resolution of Act of Kindness is 100; [Saved Yourself]
-				now HP of GivingFirbolg is 1;
-				AddNavPoint Encampment Tree;
-				move Knott to Encampment Tree;
-				move GivingFirbolg to Encampment Tree;
-				now Act of Kindness is resolved;
 		-- "Leave.":
 			say "     You turn away from the scene and make an exit.";
 			now HP of GivingFirbolg is 100;
