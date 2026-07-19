@@ -85,7 +85,7 @@ instead of conversing Teas:
 	if HP of Teas > 1: [player has trained with him]
 		add "Ask about his worries." to Teas_Gab_Choices;
 	if HP of WeaselFirbolg > 0 and Hunger of WeaselFirbolg < 2: [Weasel encountered in Blossom Yard]
-		add "Ask him about why he's so angry at Weasel." to Teas_Gab_Choices;
+		add "Ask why he's so angry at Weasel." to Teas_Gab_Choices;
 	let Teas_Gab_Choice be what the player chooses from Teas_Gab_Choices;
 	LineBreak;
 	if Teas_Gab_Choice is:
@@ -108,7 +108,7 @@ instead of conversing Teas:
 		-- "Ask about his worries.":
 			say "     'Well... since I know you more, I'll let you know, little friend. There are a group of infected artists that seem dead-set on capturing those who can't see the beauty of this apocalypse.' This is the first you've likely heard about [']artists[']; you inquire further on what he might mean. 'They are hunting around to make art out of the ferals. As far as what the people around me have been saying, they might be seeking our camp or anywhere there's pockets of those who are not mindless sex machines yet.' Another group to look out for in this city... Maybe Giving could tell you more.";
 			if HP of Teas is 2, now HP of Teas is 3;
-		-- "Ask him about why he's so angry at Weasel.":
+		-- "Ask why he's so angry at Weasel.":
 			say "     'I don't know if you can tell yourself, but he's dealing with a... there's no term for it in the DSM yet, but he's suffering from the use of drugs[if Morale of WeaselFirbolg < 0].' You feel almost sick; the behavior you witnessed with him all starts connecting quickly- you helped him to feed his vices.[else].'[end if]";
 			say "     Teas continues speaking on the matter of Weasel. 'Thing is, he's always been like this, even before the infection- he just traded hard drugs for orc cum. Which, I mean I'm glad he's not on narcotics anymore, but it doesn't help that he only just traded one thing for another. There was another firbolg here by the name of Geimheal that got him addicted to it; among other things it ended up forcing Daddy's hand in kicking him out. Just know that whenever you give him anything, he's likely running off to the [bold type]Capitol District[roman type] to trade with him.'";
 			if Hunger of WeaselFirbolg is 0, now Hunger of WeaselFirbolg is 1;
@@ -159,7 +159,7 @@ to say TeasTrainingMenu:
 						-- "Stamina Training":
 							say "[TeasStaminaTraining]";
 					now Energy of Teas is turns;
-				if HP of Teas is 1, now HP of Teas is 2;
+					if HP of Teas is 1, now HP of Teas is 2;
 			else if calcnumber is 0:
 				LineBreak;
 				now sextablerun is 1;
