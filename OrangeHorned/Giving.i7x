@@ -197,6 +197,7 @@ to say sexwithGiving:
 	else if lastfuck of GivingFirbolg - turns < 3:
 		say "     'Hooooh, you're a eager beaver?' Giving rubs at his still-drooling clit behind his rubber overalls. 'I might go feral if I don't restrain myself, but come back when I'm more closed, [']cause I still want a piece of what you have... i-if your offering it of course.' Giving has to pull himself back- you're playing with fire if you have sex again so soon; give it time.";
 	else:
+		say "     Giving blushes. 'O-oh... That's forward.' What do you wish to do with him?";
 		now sextablerun is 0;
 		blank out the whole of table of fucking options;
 		[]
