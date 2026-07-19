@@ -306,8 +306,8 @@ Include Fair Events by Sarokcat.
 Include Female Dorm Events by Prometheus.
 Include Feral Events by Guest Writers.
 Include Fire House by Kaleem Mcintyre.
-Include Firbolg Quests by Orangehorned.
-Include Firbolg Tapes by Orangehorned.
+Include Firbolg Quests by OrangeHorned.
+Include Firbolg Tapes by OrangeHorned.
 Include Food and Water Finding by Nuku Valente.
 Include Forest Events by Aureas Gigas.
 Include Forest Events by Defth.
@@ -868,11 +868,12 @@ Include Friesian Twin Isaac by Wahn.
 Include Friesian Twin Karel by Wahn.
 Include G-Shep Squad by Rikaeus.
 Include Galaxite by Sundered Dragon.
+Include Geimheal by OrangeHorned.
 Include Genevieve by Prometheus.
 Include Garrett by SgtPepper234.
 Include Gerty by Qazarar.
 Include Glory by Wahn.
-Include Giving by Orangehorned.
+Include Giving by OrangeHorned.
 Include Good Alexandra by Prometheus.
 Include Gordon by Rikaeus.
 Include Gregory by Wahn.
@@ -924,7 +925,7 @@ Include Kathy by Sundered Dragon.
 Include Keiran by Voidsnaps.
 Include Kerr & Talov by Wahn.
 Include Kerry by Voidsnaps.
-Include Knott by Orangehorned.
+Include Knott by OrangeHorned.
 Include Kosk by Voidsnaps.
 Include Krampus by Wahn.
 Include Kristen by Stripes.
@@ -1035,6 +1036,7 @@ Include Sven by Stripes.
 Include Sylvia by Prometheus.
 Include Sylvanus by Wahn.
 Include Tanuki by Nuku Valente.
+Include Teas by OrangeHorned.
 Include Tehuantl by Wahn.
 Include Tenvale Silverbacks Football Team by Kernog.
 Include The-Voice by Luneth.
@@ -1053,6 +1055,7 @@ Include Vent Fox by Dys.
 Include Vincent by Wahn.
 Include Voria by Kurainyx.
 Include Wally by Rikaeus.
+Include Weasel by OrangeHorned.
 Include Wendis by Prometheus.
 Include Wendy by Wahn.
 Include Wild Mustang by Wahn.

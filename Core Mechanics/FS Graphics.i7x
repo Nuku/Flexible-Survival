@@ -764,6 +764,8 @@ Figure of Sylvia_naked_icon is the file "Sylvia_naked.jpg".
 Figure of Sylvia_naked_tongue_icon is the file "Sylvia_naked_tongue.jpg".
 Figure of Tanuki_Dad_hard_icon is the file "Tanuki_Dad_hard.jpg".
 Figure of Tanuki_Dad_soft_icon is the file "Tanuki_Dad_soft.jpg".
+Figure of Teas_clothed_icon is the file "Teas_clothed.jpg".
+Figure of Teas_naked_icon is the file "Teas_naked.jpg".
 Figure of Tehuantl_Male_Face_icon is the file "Tehuantl_Male_Face.jpg".
 Figure of Tehuantl_Male_clothed_icon is the file "Tehuantl_Male_clothed.jpg".
 Figure of Tehuantl_Male_hard_icon is the file "Tehuantl_Male_hard.jpg".
@@ -823,6 +825,10 @@ Figure of Violet_face_icon is the file "Violet_face.jpg".
 Figure of Voodoo_Gecko_icon is the file "Voodoo_Gecko.jpg".
 Figure of Chris_warrior_clothed_icon is the file "Chris_warrior_clothed.jpg".
 Figure of Chris_warrior_naked_icon is the file "Chris_warrior_naked.jpg".
+Figure of WeaselFirbolg_clothed_icon is the file "WeaselFirbolg_clothed.jpg".
+[Figure of WeaselFirbolg_naked_cock_icon is the file "WeaselFirbolg_naked_cock.jpg".]
+Figure of WeaselFirbolg_pregnancy_icon is the file "WeaselFirbolg_pregnancy.jpg".
+Figure of WeaselFirbolg_pussy_icon is the file "WeaselFirbolg_pussy.jpg".
 Figure of Xaedihr_Full_icon is the file "Xaedihr_Full.jpg".
 Figure of Xaedihr_FullMagic_icon is the file "Xaedihr_FullMagic.jpg".
 Figure of Xaedihr_FullNoRuby_icon is the file "Xaedihr_FullNoRuby.jpg".
@@ -2160,6 +2166,8 @@ title	icon(figure name)	artist	backgroundcolor	formatrule
 "Talov_Kerr_Party"	Figure of Talov_Kerr_Party_icon	"Kupo Klein"	g-black	"normal"
 "Tanuki Dad_soft"	Figure of Tanuki_Dad_soft_icon	"SteppeCrow"	g-White	"normal"
 "Tanuki Dad_hard"	Figure of Tanuki_Dad_hard_icon	"SteppeCrow"	g-White	"normal"
+"Teas clothed"	Figure of Teas_clothed_icon	""	g-white	"normal"
+"Teas naked"	Figure of Teas_naked_icon	""	g-white	"normal"
 "Tehuantl_Male_face"	Figure of Tehuantl_Male_face_icon	"Vashaa"	g-black	"normal"
 "Tehuantl_Male_clothed"	Figure of Tehuantl_Male_clothed_icon	"Yora"	g-black	"normal"
 "Tehuantl_Male_hard"	Figure of Tehuantl_Male_hard_icon	"Yora"	g-black	"normal"
@@ -2235,6 +2243,10 @@ title	icon(figure name)	artist	backgroundcolor	formatrule
 "Voodoo Gecko"	Figure of Voodoo_Gecko_icon	"Waxraven/WXRVN"	g-white	"normal"
 "Chris_warrior_clothed"	Figure of Chris_warrior_clothed_icon	"Kupo Klein"	g-white	"normal"
 "Chris_warrior_naked"	Figure of Chris_warrior_naked_icon	"Kupo Klein"	g-white	"normal"
+"Weasel clothed"	Figure of WeaselFirbolg_clothed_icon	""	g-white	"normal"
+["Weasel naked cock"	Figure of WeaselFirbolg_naked_cock_icon	""	g-white	"normal"]
+"Weasel pregnancy"	Figure of WeaselFirbolg_pregnancy_icon	""	g-white	"normal"
+"Weasel pussy"	Figure of WeaselFirbolg_pussy_icon	""	g-white	"normal"
 "Werewolf (female)"	Figure of Werewolf_female_icon	"Watsup"	g-white	"normal"
 "Werewolf clothed"	Figure of Werewolf_clothed_icon	"SteppeCrow"	g-white	"normal"
 "Werewolf naked"	Figure of Werewolf_hard_icon	"SteppeCrow"	g-white	"normal"

@@ -139,7 +139,7 @@ instead of conversing Randy:
 			wait for any key;
 			clear the screen and hyperlink list;
 		else:
-			say "     You can't afford training right now...";
+			say "[line break]     You can't afford training right now...";
 
 to say randysex:
 	if HP of Randy < 2:
@@ -264,13 +264,14 @@ to say wrestlesex:
 	say "     'C'mon, then, we've got private rooms for just this sort of thing!' he says with a wide grin. He takes your hand and leads you to one of the rooms in the back of the gym. The room has mirrored walls and a padded floor - it was probably used for teaching private classes before. Upon closing the door, Randy starts shedding his clothing, motioning for you to do the same. You raise an eyebrow at him before following suit. 'Not one for foreplay, are you?' you quip as he adopts an odd, wide stance. 'This [italic type]is[roman type] the foreplay!' he responds before launching himself at you!";
 	say "     Thankfully, your experience in the city has prepared you for surprise attacks and you quickly lower yourself as well, stopping the flying mass of gray flesh - just barely. 'Wait - you meant actual wrestling?' you ask. Randy laughs before responding: 'Yeah! How else are we going to decide who goes where?!' He switches to a grapple, attempting to take you down to the mat. You could actually [link]wrestle him (Y)[as]y[end link]... Or just throw the fight to get him [link]inside you (N)[as]n[end link].";
 	[adjusting chance of coming out on top]
-	now wrestlechance is 50;
-	if strength of Player > 15:
-		increase wrestlechance by 10;
-		if strength of Player > 20:
-			increase wrestlechance by 10;
-			if strength of Player > 25:
-				increase wrestlechance by 10;
+	if strength of Player > 25:
+		now wrestlechance is 80;
+	else if strength of Player > 20:
+		now wrestlechance is 70;
+	else if strength of Player > 15:
+		now wrestlechance is 60;
+	else:
+		now wrestlechance is 50;
 	if bodytype of Player is "Wrestling Wolf", increase wrestlechance by 15;
 	if Player is submissive, decrease wrestlechance by 25;
 	if Player consents:
