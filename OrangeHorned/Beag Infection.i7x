@@ -47,7 +47,7 @@ to say beatthebeag:
 
 to say Ride_Beag:
 	say "     As you tell the beag that you want to ride his cock, his cocky smirk returns. 'Why didn't you say so earlier? We could have skipped the fighting,' he laughs. That may be, but you don't intend to give him full control of your coupling; you are the victor, after all. 'Fair, fair,' he concedes, sitting down with his back to [one of]a lamp post[or]the side of a building[or]the husk of a truck[at random] and tugging his underwear out of the way. 'Hop on, we can start sharing the love.'";
-	say "     You reach down, your hand closing around his throbbing cock. His dickhead pulsates warmly in your palm- a testament to the intensity of this breeder's arousal. Lining the flared tip to your inner folds makes you moan out in desire; gleefully, you ride the bull like there's no tomorrow. Your womb grows full of beag precum, quickly escaping out of the sides as you wetly plap away, his face contorting to try to hold back. With one last slam of your hips, he cums before you, bloating you up with Firbolg seed, making you more awake and alert than ever. You jump a few more times for your own orgasm before you leave, the beag splayed on the ground only making a few quiet grumbles as you walk away.";
+	say "     You reach down, your hand closing around his throbbing cock. His dickhead pulsates warmly in your palm- a testament to the intensity of this breeder's arousal. Lining the flared tip to your inner folds makes you moan out in desire; gleefully, you ride the bull like there's no tomorrow. Your womb grows full of beag precum, quickly escaping out of the sides as you wetly plap away, his face contorting to try to hold back. With one last slam of your hips, he cums before you, bloating you up with firbolg seed, making you more awake and alert than ever. You jump a few more times for your own orgasm before you leave, the beag splayed on the ground only making a few quiet grumbles as you walk away.";
 	CreatureSexAftermath "Player" receives "PussyFuck" from "Beag";
 
 to say AssFuck_Beag:
@@ -82,7 +82,7 @@ NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Ty
 when play begins:
 	Choose a blank row from Table of Random Critters;
 	now NewTypeInfection entry is false; [This should always say False. You don't need to know why, just remember it!]
-	now Species Name entry is "Beag"; [ Name of the overall species of the infection, used so a "male x" and "female x" have "pureblood X" children. ]
+	now Species Name entry is "Firbolg"; [ Name of the overall species of the infection, used so a "male x" and "female x" have "pureblood X" children. ]
 	add "Beag" to infections of FurryList;
 	add "Beag" to infections of OtherworldlyList;
 	add "Beag" to infections of NatureList;
@@ -131,14 +131,14 @@ when play begins:
 	now Cunt Tightness entry is 0; [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping] [ Width of female sex the infection will try to give a Player. ]
 	now SeductionImmune entry is false; [Whether or not the creature is immune to the the "tease" command.]
 	now libido entry is 40; [ Target libido the infection will rise towards. ]
-	now loot entry is "Beag fur"; [ Dropped item, blank for none. Case sensitive. ]
+	now loot entry is "beag fur"; [ Dropped item, blank for none. Case sensitive. ]
 	now lootchance entry is 42; [ Percentage chance of dropping loot, from 0-100. ]
-	now MilkItem entry is "Beag milk"; [Item given when using the "milk yourself" command in game.]
-	now CumItem entry is "Beag cum"; [Item given when using the "Jerk Off" command in game.]
+	now MilkItem entry is "beag milk"; [Item given when using the "milk yourself" command in game.]
+	now CumItem entry is "beag cum"; [Item given when using the "Jerk Off" command in game.]
 	now TrophyFunction entry is "[GenerateTrophyList_Beag]"; [Points to a list of items you can get whe the creature is defeated.]
 	now scale entry is 4; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]muscled[or]beefy[or]muscular[at random]";
-	now type entry is "Beag"; [ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
+	now type entry is "beag"; [ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
 	now magic entry is true; [Whether the creature is magical or not.]
 	now resbypass entry is false; [Determines whether the creature can infect while ignoring the researcher feat. Usually false.]
 	now non-infectious entry is false; [A switch to determine whether the creature infects players who have sex with them.]
@@ -171,7 +171,7 @@ This is the Beag Infection rule:
 	if Player has a body of "Beag":
 		trigger ending "Beag Infection";
 		if humanity of Player < 10:
-			say "     You succumb to the infection, the urge to stuff your cock into anything. The constant rut leads to you becoming a mindless beast who pins down any hole he can find,  breeding them until they look six months pregnant. When you find a military scout with a cunt stumbling around, likely from an escape from another feral, your firbolg instincts take over, giving him the best leg-shaking orgasms as you plow him day and night. It shifts to a relationship where you're searching the city in his stead as he spends most of his time at your makeshift house with a belly full of calves. When he starts shifting, he takes on the appearance of a Fathnach, making his pecs balloon out to feed you and any children he pushes. Just like you, he loses himself as you spend the rest of your days spreading your children all over the city.";
+			say "     You succumb to the infection, the urge to stuff your cock into anything. The constant rut leads to you becoming a mindless beast who pins down any hole he can find,  breeding them until they look six months pregnant. When you find a military scout with a cunt stumbling around, likely from an escape from another feral, your firbolg instincts take over, giving him the best leg-shaking orgasms as you plow him day and night. It shifts to a relationship where you're searching the city in his stead as he spends most of his time at your makeshift house with a belly full of calves. When he starts shifting, he takes on the appearance of a fathnach, making his pecs balloon out to feed you and any children he pushes. Just like you, he loses himself as you spend the rest of your days spreading your children all over the city.";
 		else:
 			say "     The military arrives; after quarantine and safety protocols you're able to venture the world again, somehow ending up in Ireland with other cowmen who had the same idea. You all make another home far from the chaos of the world, and you couldn't be happier.";
 

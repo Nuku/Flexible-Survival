@@ -2,6 +2,15 @@ Version 1 of Firbolg Quests by OrangeHorned begins here.
 
 Section 1 - Events
 
+a postimport rule: [bugfixing rules for players that import savegames]
+	if Act of Kindness is resolved:
+		connect Encampment Tree;
+		if HP of GivingFirbolg is 0:
+			now HP of GivingFirbolg is 1;
+			AddNavPoint Encampment Tree silently;
+			move Knott to Encampment Tree;
+			move GivingFirbolg to Encampment Tree;
+
 Table of GameEventIDs (continued)
 Object	Name
 Act of Kindness	"Act of Kindness"
@@ -21,7 +30,7 @@ to say ResolveEvent Act of Kindness:
 	LineBreak; [Makes sure that the following line doesn't join onto the previous one]
 	if Firbolg_Observation_Choice is:
 		-- "Explore the scene.":
-			say "     You're able to get behind a car with ripped doors, the scene in front of you played out as a giant-kin weeps for his fallen buddy. His teeth dig into his bottom lip, choking the words, 'Father Samson... If I was just a little faster you wouldn't have...' The cowman whimpers as they hunch closer. The wrinkled hand reaches his chin, comforting his grief. 'Please, my child... I no longer hold that title, but if I have brought some into the light of God, then I will be at peace with this... demonic possession. I...' His eyes flicker into cat pupils as he speaks again. The azure beast almost pauses as he grasps at his pecs, contemplating something with his eyebrows. 'Please trust me... when I tell you that this isn't the way you're supposed to serve the world. I can fix this...' The darker-skinned man watches the colossal cowman shift his position so that his smaller body is pushed up into their azure-skinned underboob. '...Giving?' The big fisherman unclicks his straps, pecs bouncing from their prison, right onto the priest's face. 'If you become a Firbolg, you won't have to worry about your lusts- I will always be here to keep you from becoming those bastards on the streets.'";
+			say "     You're able to get behind a car with ripped doors, the scene in front of you played out as a giant-kin weeps for his fallen buddy. His teeth dig into his bottom lip, choking the words, 'Father Samson... If I was just a little faster you wouldn't have...' The cowman whimpers as they hunch closer. The wrinkled hand reaches his chin, comforting his grief. 'Please, my child... I no longer hold that title, but if I have brought some into the light of God, then I will be at peace with this... demonic possession. I...' His eyes flicker into cat pupils as he speaks again. The azure beast almost pauses as he grasps at his pecs, contemplating something with his eyebrows. 'Please trust me... when I tell you that this isn't the way you're supposed to serve the world. I can fix this...' The darker-skinned man watches the colossal cowman shift his position so that his smaller body is pushed up into their azure-skinned underboob. '...Giving?' The big fisherman unclicks his straps, pecs bouncing from their prison, right onto the priest's face. 'If you become a firbolg, you won't have to worry about your lusts- I will always be here to keep you from becoming those bastards on the streets.'";
 			say "     'Your body... I could nyyot wish to...' Samson grits his teeth as his chest pops out fur, slowly growing breasts, '...to...haa...this meeerooowing... heat... I can't... Giving...' The bigger mutant straigtens his back, his pecs obscuring your angle of the priest's head as his hands fondle at his right breast. 'You told me yourself, the Lord works in mysterious ways... you gave me hope to help you. I'm sure you were right that eventually this apocalypse will end, but I don't want you defiling yourself, not here.' The growing tail on the priest's back pushes Samson to agree, his lips wrapped carefully around the swollen areola. At first it was just a small few suckles of nipple from a man who clearly is not well versed in sex, but slowly the sucking becomes more fervorous as his other hand squeezes milk from the other nipple in a ravage lust. His darker-skinned body grows blue fur around the legs and arms, the tail morphing like oil into a more bovine-themed appendage...";
 			say "[line break]     [bold type]As stunning at the display is, it looks like his rump is about to be rudely interrupted by some mutants who heard the commotion. These opportunistic ferals are ready to finish the job their companion knocked out in the dumpster couldn't finish. What do you wish to do?[roman type][line break]";
 			let Firbolg_Explore_Choices be a list of text;
@@ -37,27 +46,28 @@ to say ResolveEvent Act of Kindness:
 					if fightoutcome < 20: [player won]
 						project Figure of Knott_sneak_peak_icon;
 						say "     Having defeated the tryst-stoppers, you turn back to see... well, something somewhat unexpected? You don't know what part of you expected Giving to be the one to top, but there they are on the pavement, pressed in missionary, his mancunt wetly squirting on the priest's new cock, a passionate lovemaking that cares not for the world around them. 'OOoooooh, i-it's OK... just let it out.' The giant's calloused hand comforts his partner's back, his clit squirting enough to cover the road around them in thick cum, its masculine pheromones warming the air. 'T-this lust... so... vile... How can one feel like this and hold themselves back? It feels too good...' In any other circumstance, you would look at this scene in solemn regret, another claimed by the madness. You partly wonder from all the clear cum and stray milk if the cowman had even pleasured himself in a long time, or even how his cunt can take such a womb-churning cock with ease.";
-						say "     But however he's able to, Giving is just gone, tongue out as his small but hung partner slams his breeder nuts on his ass over and over again. 'C-cum in me... Big Brother needs a child.' The former human can't even process that sentence fully, only increasing his pace before the two cum-bloated orbs distend the elder-kin's womb with a cannonball onslaught of seed that leaks slowly out of the stuffed cunt. The gigantic brother whimpers as his subtly tinted sweat pours from every orifice to cool down from the intense tryst. 'Such a big squirt... Pumping it all so deep in... Big Bro's so happy...' The former elderly man licks at his new brother's body, lapping up the addicting sweat, the enlarged meat inside of Giving throbbing to life again in seconds. The big fisherman scratches the back of his head as he goes into deep thought. 'I think Knott's a good name for you!' The newly anointed Knott lies in Giving's body, still dazed from cumming his heart out. '...Giving... It feels amazing... Why does it feel like it's hard again?' Giving gives a hearty chuckle, patting Knott's slim back. 'Firbolg sweat makes you super horny; as much as I want to continue this fuck... we should go somewhere safer...'";
+						say "     But however he's able to, Giving is just gone, tongue out as his small but hung partner slams his breeder nuts on his ass over and over again. 'C-cum in me... Big Brother needs a child.' The former human can't even process that sentence fully, only increasing his pace before the two cum-bloated orbs distend the elder-kin's womb with a cannonball onslaught of seed that leaks slowly out of the stuffed cunt. The gigantic brother whimpers as his subtly tinted sweat pours from every orifice to cool down from the intense tryst. 'Such a big squirt... Pumping it all so deep in... Big Bro's so happy...' The former elderly man licks at his new brother's body, lapping up the addicting sweat, the enlarged meat inside of Giving throbbing to life again in seconds. The big fisherman scratches the back of his head as he goes into deep thought. 'I think Knott's a good name for you!' The newly anointed Knott lies in Giving's body, still dazed from cumming his heart out. '...Giving... It feels amazing... Why does it feel like it's hard again?' Giving gives a hearty chuckle, patting Knott's slim back. 'firbolg sweat makes you super horny; as much as I want to continue this fuck... we should go somewhere safer...'";
 						WaitLineBreak;
-						say "     With a wet pop, the new Firbolg wobblily stands, admiring his new, younger body. Knott looks himself over in awe, feeling the youth of his skin, the rejuvenation of his hair, and even the definition of muscles. 'I'm like a brand new man... For the cost of my feet I'd say it's a fair trade, oh to no longer dream of reliving my- wh-HEY!' Giving grabs his hand as he's quick to shove two fingers in his cunt- running off to take his new mate somewhere toward the forest... you're pretty sure the Giant acknowledged your effort but was too focused on getting more cock to talk to you; maybe you should find them later.";
+						say "     With a wet pop, the new firbolg wobblily stands, admiring his new, younger body. Knott looks himself over in awe, feeling the youth of his skin, the rejuvenation of his hair, and even the definition of muscles. 'I'm like a brand new man... For the cost of my feet I'd say it's a fair trade, oh to no longer dream of reliving my- wh-HEY!' Giving grabs his hand as he's quick to shove two fingers in his cunt- running off to take his new mate somewhere toward the forest... you're pretty sure the giant acknowledged your effort but was too focused on getting more cock to talk to you; maybe you should find them later.";
 						now Resolution of Act of Kindness is 2; [Helped. Won.]
 						now HP of Knott is 1; [player won and saw him named]
 					else if fightoutcome > 19 and fightoutcome < 30: [lost] [Player lost needs to be fixed but for now lets focus on the player winning]
 						project Figure of Knott_sneak_peak_icon;
-						say "     Just as you're about to be molested, you hear a 'Heads Up!' as the [']creature['] looks up too late to see a broken car smash face first into their body. As much as nanites can repair even the most grievous of wounds, they're definitely down for the count. '...Mmm, you alright there?' Thundering footsteps march over to look down at your fallen self; you hastily put back on your wares in slight shame. 'Woof, good thing all that fighting happened, otherwise I wouldn't have heard them.' Before you're able to introduce yourself, the fully transformed priest pumps mindlessly into the air, his moans stopping your speech. 'Oh, right... Just because we Firbolg are civilized doesn't mean we aren't also victims to these nanite things; I still gotta help him get used to his new body... Tell ya what, meet us at the forest, we can talk a little bit more there, new buddy!'";
+						say "     Just as you're about to be molested, you hear a 'Heads Up!' as the [']creature['] looks up too late to see a broken car smash face first into their body. As much as nanites can repair even the most grievous of wounds, they're definitely down for the count. '...Mmm, you alright there?' Thundering footsteps march over to look down at your fallen self; you hastily put back on your wares in slight shame. 'Woof, good thing all that fighting happened, otherwise I wouldn't have heard them.' Before you're able to introduce yourself, the fully transformed priest pumps mindlessly into the air, his moans stopping your speech. 'Oh, right... Just because we firbolg are civilized doesn't mean we aren't also victims to these nanite things; I still gotta help him get used to his new body... Tell ya what, meet us at the forest, we can talk a little bit more there, new buddy!'";
 						now Resolution of Act of Kindness is 3; [Helped. Lost.]
 					else if fightoutcome is 30: [fled]
 						say "     You realize the tides are changing and run for the hills. You see the giant looking at you in confusion, but before he can say anything, he looks back to what you're running from. What follows is the sound of smashing metal and the bestial bleats of the feral, though you don't know who will come out the victor... you hope Giving and Samson won't hate you for fleeing.";
 						now Resolution of Act of Kindness is 1; [Helped. Fled.]
-					now HP of GivingFirbolg is 1;
-					AddNavPoint Encampment Tree;
-					move Knott to Encampment Tree;
-					move GivingFirbolg to Encampment Tree;
-					now Act of Kindness is resolved;
 				-- "Save yourself.":
 					LineBreak;
 					say "     You make a break for it... you don't know them enough and it can all be some giant plot to slowly transform the remaining uninfected for all you know. You see the giant looking at you in confusion, but before he can say anything, he looks back to what you're running from. What follows is the sound of smashing metal and the bestial bleats of the feral, though you don't know who will come out the victor; you hope Giving and Samson won't hate you for fleeing.";
 					now Resolution of Act of Kindness is 100; [Saved Yourself]
+			connect Encampment Tree;
+			now HP of GivingFirbolg is 1;
+			AddNavPoint Encampment Tree;
+			move Knott to Encampment Tree;
+			move GivingFirbolg to Encampment Tree;
+			now Act of Kindness is resolved;
 		-- "Leave.":
 			say "     You turn away from the scene and make an exit.";
 			now HP of GivingFirbolg is 100;
@@ -79,7 +89,7 @@ when play begins: [Any tags that the player can ban that are relevant to the eve
 
 to say ResolveEvent Elusive Book:
 	say "     Something about the circumstances as to why you are here has your body in a cold sweat to every random noise in this oddly quiet section of the city. From what Knott and Giving had said, the book is in some building with a large broken hole in it. The moment you find the most similar thing to that, you peer inside to see a space that is almost like a model apartment; everything here is either torn up, musky or moldy from all the fluids all over the place. Grazing over the place, you spend the next few minutes in silence going up floors of quiet nothingness, until eventually you spot what remains of some survivor hangout on the fifth floor. Finding the book is the easy part as it lies on one of the tables to a kitchen set; the hard part is the current problem now of someone else on the floor stumbling in in a hazed panic from something.";
-	say "     It looks like a college survivor; the last few days have not treated them well, his torn shirt, sunken eyes and frail body a product of his time in the city. 'Hmhm, I don't know why you're running. I said I would help you, didn't I?' a baritone voice calls out from the stairwell the man ran out of. The next person.... no, [']humanoid['], you correct yourself... casually strides out, their black sclera and golden iris showing their otherworldly nature- well-built body shimmering under the light. 'Fuck! I don't need any more help, OK!?? Just leave!' the survivor cries out as the impish hunk prowls. 'What kind of man would I be to leave a boy like you all alone in this dangerous place?~' The man continues clicking his boots on the floor, stalking his prey. 'I saw what you did to her... to them! Get away!' With a ballpoint pen, he aims it at the incubi's throat, to which he responds in turn with some fingers under his chin. 'So you did see what I did to your cock-tease of a mother then... no need to play coy now, is there?' An empty trash bin crashes into the demon's face, his body not flinching at all from the impact. 'I don't even care if I win or lose, I swear I'll kill you if you get any closer!' the survivor bellows, his breath frantic and hands trembling despite his bellicose claim. Dimly, as you look upon the frightened student, you suspect whatever transpired between these two has rattled this poor man to the core";
+	say "     It looks like a college survivor; the last few days have not treated them well, his torn shirt, sunken eyes and frail body a product of his time in the city. 'Hmhm, I don't know why you're running. I said I would help you, didn't I?' a baritone voice calls out from the stairwell the man ran out of. The next person.... no, [']humanoid['], you correct yourself... casually strides out, their black sclera and golden iris showing their otherworldly nature- well-built body shimmering under the light. 'Fuck! I don't need any more help, OK!?? Just leave!' the survivor cries out as the impish hunk prowls. 'What kind of man would I be to leave a boy like you all alone in this dangerous place?~' The man continues clicking his boots on the floor, stalking his prey. 'I saw what you did to her... to them! Get away!' With a ballpoint pen, he aims it at the incubi's throat, to which he responds in turn with some fingers under his chin. 'So you did see what I did to your cock-tease of a mother then... no need to play coy now, is there?' An empty trash bin crashes into the demon's face, his body not flinching at all from the impact. 'I don't even care if I win or lose, I swear I'll kill you if you get any closer!' the survivor bellows, his breath frantic and hands trembling despite his bellicose claim. Dimly, as you look upon the frightened student, you suspect whatever transpired between these two has rattled this poor man to the core.";
 	WaitLineBreak;
 	say "     The blue-skinned incubi gives a deep-hearted chuckle, fiddling with a whip on his waist- tied around only a fundoshi that has strange markings all over. His steps on the floor circle his prey into a corner. 'Boy, listen, you must know this is the end of days, right? Everyone is having fun while you keep struggling fruitlessly; it's just pathetic. If anything, I'm saving you from your boredom to see a new world that you once feared with all your heart- see, your mother thought the same when I was on top... didn't you hear how her terror turned quickly into enjoyment? If you stayed longer, you would have heard her beg me to do the same to you~' The poor man's eyes deject from the situation, tears flow down his cheeks... yet no cry is heard. After losing all hope, he falls to his knees, giving his enemy the advantage.";
 	say "     The demon shifts his form and bubbles like hot tar into a centaur's lower body with large hooves, quickly closing the distance and trapping the human. The predator stands over the starving human with the same calm expression. 'You humans and happiness... you're always afraid of being too happy; this nanite infection really has opened many of your eyes... and it's going to open yours too in a moment.' 'Travis... why... why are you doing this, why are any of you doing this?' The student wails out, his weakened body unable to move an inch under the incubi. 'What was it your founding fathers said? The Pursuit of Happiness? I just wanted to, that's all~' You need to leave- he's clearly the one the two warned you about, but the poor man looks far too dejected to escape his pursuer.";
@@ -107,7 +117,7 @@ to say ResolveEvent Elusive Book:
 			now HP of Knott is 2; [Player has the book]
 		-- "Observe what happens.":
 			say "     As no one can see your sinful eyes upon this fleshy horror, you wish to watch the depravity of the city up close before you finally head back- such a giant drooling cock has you far too aroused. Carefully, the demonic horseman aims himself for the man's newly shaped hole, smooshing him into a couch as his quiet sobs turn into a deep-seated moan. 'Mmm... having your mother's juices all over my cock really helps me dig deep; just lie there and let me show you the world you thought to reject.' With a satisfied grunt, Travis pounds away at the man, indenting his stomach as his heavy balls smack into his captive. Very immediately his body melts and reforms from the nanites hooking into his very flesh. 'W-Wuh wait!' the human in a panic tries squealing anything out to make his captor stop. 'Mhm?' Travis slowly pulls his long shaft out with a wet pop, the boy cumming all over the couch. The nanites take hold to his defeat- his skin turning a vibrant red, while a drooling pussy glistening with neon femcum forms beneath his expanding golfball balls. You see his facial expression change over, breathing catching up from almost losing himself- the bastard is clearly playing with his food- his last real semblance of humanity being one line: 'I don't wanna... become... a freak...'";
-			say "     'Then if you can, tell me where is this little woods camp your family talked about going to. If you do that, I'll stop,' the otherworldly centaur tempts as the fervent pumping stops, and you realize he must be referring to the Firbolg settlement. 'I... I cuh-can't... remember... My ass is throbbing... My brain is foggy...' The herm moans and drools carelessly, his eyes glazed over as Travis clicks his tongue in annoyance. 'Guess the nanites have already made you useless to me beyond being a cumdump then.' The drooling horse cock splits off into two, Travis piercing deep within his womb and prostate at the same time as the final strings of sanity in the herm's head break. 'O-oh, goodness sake!' the defeated red-skinned herm simpers as he drops pretense of resistance and the two descend into a heated breeding tryst, the former male begging for his new womb to be hosed with cum as his glow-in-the dark femcum gets all over the couch and floor.";
+			say "     'Then if you can, tell me where is this little woods camp your family talked about going to. If you do that, I'll stop,' the otherworldly centaur tempts as the fervent pumping stops, and you realize he must be referring to the firbolg settlement. 'I... I cuh-can't... remember... My ass is throbbing... My brain is foggy...' The herm moans and drools carelessly, his eyes glazed over as Travis clicks his tongue in annoyance. 'Guess the nanites have already made you useless to me beyond being a cumdump then.' The drooling horse cock splits off into two, Travis piercing deep within his womb and prostate at the same time as the final strings of sanity in the herm's head break. 'O-oh, goodness sake!' the defeated red-skinned herm simpers as he drops pretense of resistance and the two descend into a heated breeding tryst, the former male begging for his new womb to be hosed with cum as his glow-in-the dark femcum gets all over the couch and floor.";
 			WaitLineBreak;
 			if "Weak Psyche" is listed in Feats of Player:
 				say "     Watching them go, a part of you can't help but want to trade places with the former human. After all, he doesn't seem to appreciate the pleasures such a studly demon can offer. Some lustful facet of your tainted psyche temps as thoughts of being forever chained to his will flicker through your mind's eye like fresh sparks over kindling... If only it was you on that leash, you muse, absentmindedly running a finger across your neck, picturing a nice sturdy band of smooth, thick and shiny leather digging in your flesh with each thrust of the dominant demon's equine spire. Unbidden, but not unwanted, images of your needy hole being ravished by his lengthy horse-like cock while the rolling nubs bejeweling his indigo dick caress your desperate depths wash over you. Briefly shutting your eyes, you can almost smell the arousal pouring off your master as he cums and the well-earned words of praise pouring from his lips as you suckle those huge balls of his right after he's done with you.";
@@ -118,39 +128,67 @@ to say ResolveEvent Elusive Book:
 			now HP of Knott is 100; [lost the book]
 	now Elusive Book is resolved;
 
-[Table of GameEventIDs (continued)
-ObjectName
-The Firbolgs Commune "The Firbolgs Commune"
-
-Table of WalkInEvents (continued)
-Priority Name	 EventObject	EventConditions	EventRoom	 LastEncounter	 TurnCoolDown  	TurnsEncounterPercentage
-1	"The Firbolgs Commune"	The Firbolgs Commune"	[EventConditions_Act of Kindness]"	tile name here25002100
-
-to say EventConditions_Event_name_here:
-if stat here of NPC name here is X: Giving
-now CurrentWalkinEvent_ConditionsMet is true;
-
-The Firbolgs Commune here is a situation.
-ResolveFunction of Event name here is "[ResolveEvent The Firbolgs Commune]".
-Sarea of Event name here is "Urban Forest".
-
-stat plus inactive format
-
 Table of GameEventIDs (continued)
-ObjectName
-The Firbolgs Commune"The Firbolgs Commune"
+Object	Name
+Weasel_and_His_Fixer	"Weasel_and_His_Fixer"
+Weasel_and_His_Fixer	"Weasel and His Fixer"
 
-Table of WalkInEvents (continued)
-PriorityName	EventObject	EventConditions	EventRoom	LastEncounter	TurnCoolDown  TurnsEncounterPercentage
-1	"The Firbolgs Commune"	The Firbolgs Commune"	[EventConditions_Act of Kindness]"	tile name here25002100
+Weasel_and_His_Fixer is a situation.
+printed name of Weasel_and_His_Fixer is "Weasel and His Fixer".
+understand "Weasel and His Fixer" as Weasel_and_His_Fixer.
+Weasel_and_His_Fixer is inactive.
+ResolveFunction of Weasel_and_His_Fixer is "[ResolveEvent Weasel_and_His_Fixer]".
+The level of Weasel_and_His_Fixer is 9.
+Sarea of Weasel_and_His_Fixer is "Capitol".
 
-to say EventConditions_Event_name_here:
-if stat here of NPC name here is X: Knott
-now CurrentWalkinEvent_ConditionsMet is true;
+when play begins:
+	add Weasel_and_His_Fixer to BadSpots of MaleList;
+	add Weasel_and_His_Fixer to BadSpots of FurryList;
 
-Event name here is a situation.
-ResolveFunction of Event name here is "[ResolveEvent The Firbolgs Commune]". It is inactive.
-Sarea of Event name here is "Urban Forest".
-Event name here is inactive.]
+to say ResolveEvent Weasel_and_His_Fixer:
+	say "     You spot Weasel, the addicted firbolg, hastily chugging down bottles of something white in front of what looks to be an orc with cow features. The person with him is a man dressed up as if he is part of a gang, covered in magical chains as well as cuffs that keep both of his hands bound together by the wrists. He shuffles through a satchel with the items he got from Weasel as he watches his customer walk off. You spot him heading towards an abandoned building- likely his lair.";
+	say "     Although Teas told you not to, the man could be someone you could reason with... if a giant like him can be reasoned with. Maybe talking sense into him through violence might get him to stop hurting Weasel?";
+	say "[line break]     [bold type]What do you do?[roman type][line break]";
+	say "     ([link]Y[as]y[end link]) - Chase after him.";
+	say "     ([link]N[as]n[end link]) - Leave him be.";
+	if Player consents:
+		LineBreak;
+		say "     You go to chase after him, only to hear the sound of quickly shifting shackles as metal whizzes above your head, cracking the wall near you with ease. [bold type]That would have killed you.[roman type] 'Bitch ass motherfucker!'";
+		say "     A deep voice grunts as he pulls back the metal, quickly following up as he tackles you through the stone building into the outside, your body colliding with the stone pavement with a crack you never expected. He follows up again by binding you in his chain, yoinking you up and choking the life out of you. He just moves so fast!";
+		PlayerWounded 10;
+		WaitLineBreak;
+		say "     'Do I look like I'm Boo-Boo the Fucking Fool? I knew Weasel was eventually gonna bring one of you fuckers to come find me.' He speaks deliberately, every word like a report being given to you about your lack of prep. 'Aw, well. You don't look like anyone is gonna miss you whoever you are.'";
+		say "     You're able to finally escape his grasp, absolutely wrecked from the surprise attack. 'Stand still. You ain't gettin' in the way of my cash flow- some goody-two-shoes like you shoulda minded your own business.' This... isn't good.";
+		challenge "Geimheal";
+		if fightoutcome >= 20 and fightoutcome <= 29:
+			say "     With another slam of your body, the lights go out. You feel yourself bound by chains and hoisted to some other location. When you wake up, you're dangling over a broken street above a bunch of ferals who reach out to you like zombies- only these zombies catcall you as they try to shoot cum as high up as you are. The orcish cowman dangles you lower like a carrot on a stick, enjoying your struggles as you find there's no way out. 'Aw, you're back up. Too bad you're about to join the orgy. I already been riling them up juuuust for you.'";
+			say "     'I've been told going feral is basically like an ego death... you forget who you are and become nothing but some whore who wants their holes filled. You'll be too busy wanting cock or pussy to bother me anymore- take pride in knowing Teas at least taught me that.'";
+			say "     You want to beg, but he lets go of the chain... Your last view of anything is him walking off as a bunch of hands, cocks, claws, mouths and asses submerge you.";
+			now Resolution of Weasel_and_His_Fixer is 2; [fought, lost]
+			wait for any key;
+			trigger ending "Geimheal Defeat";
+			end the story saying "You are pinned down by force and sucked, fucked, milked and bred until your brain is nothing but mush. You join the infected today...";
+		else if fightoutcome >= 10 and fightoutcome <= 19:
+			say "     'FUCK!' Geimheal holds himself tightly, the chains that bind his hands shaking as he goes to hold them above his head. 'You think ya won, big head? You're nothing but a scrawny nobody compared to me... I'm about to knock you into a new zip code!'";
+			say "     The chains around his arms break as he pulls both of his muscular biceps apart. Freeing them from their binding, he gazes upon you with nothing but contempt and hatred, but the sound of something nearby snaps him from his bloodlust.";
+			WaitLineBreak;
+			say "     'Consider yourself lucky- you didn't win, you merely got lucky I wanna fight something more than I wanna knock you out. Next time we meet, I'll pound that lesson into you personally.' He jumps off... excited... to fight? 'Heh...'";
+			say "     You really just want to get the hell out of here after a life-or-death battle- places you never thought could hurt are pulsating. Despite everything, you survived.";
+			now Resolution of Weasel_and_His_Fixer is 1; [fought, won]
+		else if fightoutcome >= 30:
+			say "     As you attempt to turn and run, your head gets crushed into the grip of a giant's palm. 'Oh, you're tryin['] to duck a fade? Not happening, pussy!' Lifting you off the ground, he trades the hand on your head, making you face him directly before slamming his head into your forehead with all his might. Everything goes dark...";
+			say "     You feel yourself bound by chains and hoisted to some other location. When you wake up, you're dangling over a broken street above a bunch of ferals who reach out to you like zombies- only these zombies catcall you as they try to shoot cum as high up as you are. The orcish cowman dangles you lower like a carrot on a stick, enjoying your struggles as you find there's no way out. 'Aw, you're back up. Too bad you're about to join the orgy. I already been riling them up juuuust for you.'";
+			WaitLineBreak;
+			say "     'I've been told going feral is basically like an ego death... you forget who you are and become nothing but some whore who wants their holes filled. You'll be too busy wanting cock or pussy to bother me anymore- take pride in knowing Teas at least taught me that.'";
+			say "     You want to beg, but he lets go of the chain... Your last view of anything is him walking off as a bunch of hands, cocks, claws, mouths and asses submerge you.";
+			now Resolution of Weasel_and_His_Fixer is 3; [fought, fled]
+			wait for any key;
+			trigger ending "Geimheal Defeat";
+			end the story saying "You are pinned down by force and sucked, fucked, milked and bred until your brain is nothing but mush. You join the infected today...";
+	else:
+		LineBreak;
+		say "     You decide not to chase him- like Teas said, he's far too dangerous to try to pursue directly. But you're sure you'll have to deal with him again in due time.";
+		now Resolution of Weasel_and_His_Fixer is 100; [player didn't chase him]
+	now Weasel_and_His_Fixer is resolved;
 
 Firbolg Quests ends here.
