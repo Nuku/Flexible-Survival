@@ -233,6 +233,7 @@ SexuallyExperienced of Angie is true.
 MainInfection of Angie is "Panther Herm".
 Description of Angie is "[AngieAppearance]".
 [Conversation of Angie is { "Mewl!" }.]
+fuckscene of Angie is "[AngieSexMenu]".
 The icon of Angie is the figure of Angie_icon.
 the scent of Angie is "     Angie's scent is that of a hermaphrodite panther[if AngieAroused > 1], heavy with the smell of sex and[else] with a hidden scent of suppressed[end if] arousal.".
 
