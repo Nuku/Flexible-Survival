@@ -68,7 +68,7 @@ When Play begins:
 	now TrophyFunction entry is "[GenerateTrophyList_Capybara]"; [ Function to generate a list of optional loot items, of which the player can choose one after victory. ]
 	now scale entry is 3; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "";
-	now type entry is "antelope";
+	now type entry is "capybara";
 	now magic entry is false; [ Is this a magic creature? true/false (normally false) ]
 	now resbypass entry is false; [ Bypasses Researcher bonus? true/false (almost invariably false) ]
 	now non-infectious entry is true;
