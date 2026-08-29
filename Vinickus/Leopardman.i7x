@@ -35,7 +35,7 @@ to say Leopardman wins:
 
 To say Leopardman loses:
 	project Figure of Leopardman_hard_icon;
-	say "     The leopardman staggers back, his feline muzzle scrunched up in pain as he clutches at his wounds and glares at you for a minute. You don't give him a chance to react. With quick reflexes, you soon have him pinned to a nearby brick wall. It's got holes galore, and frankly isn't that stable, but you have the advantage, and you doubt he can topple anything in his weekend state.";
+	say "     The leopardman staggers back, his feline muzzle scrunched up in pain as he clutches at his wounds and glares at you for a minute. You don't give him a chance to react. With quick reflexes, you soon have him pinned to a nearby brick wall. It's got holes galore, and frankly isn't that stable, but you have the advantage, and you doubt he can topple anything in his weakened state.";
 	say "[line break]     [bold type]What do you want to do with the Leopardman?[roman type][line break]";
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
