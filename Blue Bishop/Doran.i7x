@@ -3524,11 +3524,11 @@ to say DoranDiscuss_1: [Of One's Past]
 			say "     'Ah... Trust. There isn't a thing I find more valuable...' [gche] seems to reminisce over this notion for a moment before returning to the topic at hand, '[DoranPlayerRegard], be assured that, if I was lacking for care in trust, I would have lied. I feel blatant obfuscation is a kinder disservice than true deception, and better that I wound one's pride than plant any seed of distrust.'";
 			let DoranDiscussionExit be false;
 			while DoranDiscussionExit is false:
-				say "[link](1) 'Trust works both ways; why should I trust you if you won't trust me with this?'[as]1[end link]";
+				say "[link](1) 'Trust works both ways; why should I trust you if you won't trust me with this?'[as]1[end link][line break]";
 				if charisma of Player > 14:
-					say "[link](2) 'And yet, you could argue that this blatant obfuscation inspires less trust than a good deception.'[as]2[end link]";
+					say "[link](2) 'And yet, you could argue that this blatant obfuscation inspires less trust than a good deception.'[as]2[end link][line break]";
 				else:
-					say "(2) (Charisma: [charisma of Player]/15) (Insufficient charisma!)";
+					say "(2) (Charisma: [charisma of Player]/15) (Insufficient charisma!)[line break]";
 				say "[link](3) (Return to the main topic)[as]3[end link][line break]";
 				now calcnumber is 0;
 				while calcnumber < 1 or calcnumber > 3:
