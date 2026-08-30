@@ -28,7 +28,7 @@ This will give you syntax highlighting, so you can tell which parts are text tha
 
 Install packages by going to: Extensions (lefthand bar, or click Ctrl+Shift+X)
 
-### c. install the extension `Live Share`
+### b. install the extension `Live Share`
 This package lets you connect to other FS writers and work together in the same file. Great for looking for bugs together!
 
 ## 6. Install Inform 7
@@ -50,10 +50,10 @@ https://blog.flexiblesurvival.com/p/links.html
 
 | Action                      | File/Folder                        | To  |
 | --------------------------- | ---------------------------------- | --- |
-| Copy the file from the folder `Documents\Github\Flexible-Surival\Inform` | `story.ni` | `Documents\Inform\Projects\Flexible Survival.inform\Source` |
+| Copy the file from the folder `Documents\Github\Flexible-Survival\Inform` | `story.ni` | `Documents\Inform\Projects\Flexible Survival.inform\Source` |
 | Create a new folder called  | `Flexible Survival.materials` | `Documents\Inform\Projects\` |
-| Copy the folder from the folder `Documents\Github\Flexible-Surival\` | `Figures` | `Documents\Inform\Projects\Flexible Survival.materials` |
-| Copy the folders from the folder `Documents\Github\Flexible-Surival\` | Every folder that is not `Figures` or `Inform` | `Documents\Inform\Extensions` |
+| Copy the folder from the folder `Documents\Github\Flexible-Survival\` | `Figures` | `Documents\Inform\Projects\Flexible Survival.materials` |
+| Copy the folders from the folder `Documents\Github\Flexible-Survival\` | Every folder that is not `Figures` or `Inform` | `Documents\Inform\Extensions` |
 
 ## 10. Make your changes!
 Now whenever you make changes in VSCODE, you should be able to then open Inform and re-compile the game to test it. You can do it in the Inform editor by clicking `Go` or to export it to another interpreter with `Release`. Compiling takes a very long time! Expect to wait 5-20 minutes!
