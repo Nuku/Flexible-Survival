@@ -3426,6 +3426,24 @@ to say automaton milk use:
 
 Table of Game Objects (continued)
 name	desc	weight	object
+"Champion's Milk"	"A plastic water bottle filled with what is clearly milk. One could think it was a regular cow's milk, if someone hadn't written 'Champion's Milk' across the label on the bottle. You [italic type]could[roman type] drink it to quench your thirst. Who knows what else it might do to you though..."	1	Champion's milk
+
+Champion's Milk is a infectious milky grab object.
+Strain of Champion's Milk is "Ipotane".
+Usedesc of Champion's Milk is "[Champion's Milk use]".
+Scent of Champion's Milk is "[breastmilk smell]".
+
+to say Champion's Milk use:
+	say "     Lifting the plastic bottle to your mouth, you take a drink from it, letting the milk run over your tongue and down your throat. Tastes rich and animal-like. Swishing it around in your mouth a little, you finish the bottle off, then stuff it back into your collection of 'empties'.";
+	PlayerDrink 15;
+	if HP of Best Pony >= 1:
+		decrease gestation of child by a random number from 3 to 5;
+		if gestation of child < 1, now gestation of Child is 1;
+	if HP of Best Pony >= 2:
+		now scalevalue of Player is 4;
+
+Table of Game Objects (continued)
+name	desc	weight	object
 "cheesecake milk"	"[breastmilk Strain of cheesecake milk]"	1	cheesecake milk
 
 cheesecake milk is a infectious milky grab object.
