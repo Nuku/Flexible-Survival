@@ -741,6 +741,7 @@ to say sexwithJoanna:
 		say "[joannaselection]";
 
 to say joannaselection:
+	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]
 	if HP of joanna is not 2:
@@ -748,21 +749,18 @@ to say joannaselection:
 		now title entry is "Bukkake";
 		now sortorder entry is 1;
 		now description entry is "Lavish attention on her numerous genitalia to get a messy finish";
-		now toggle entry is joannasexy rule;
 		[]
 		if Player is male:
 			choose a blank row in table of fucking options;
 			now title entry is "Fellatio";
 			now sortorder entry is 2;
 			now description entry is "Have her suck you off";
-			now toggle entry is joannasexy rule;
 		[]
 		if Player is female:
 			choose a blank row in table of fucking options;
 			now title entry is "Cunnilingus";
 			now sortorder entry is 3;
 			now description entry is "Get that wondrous tongue in your womanly flower";
-			now toggle entry is joannasexy rule;
 	[]
 	if HP of Joanna > 1:
 		if Player is male:
@@ -770,7 +768,6 @@ to say joannaselection:
 			now title entry is "Fuck Joanna";
 			now sortorder entry is 4;
 			now description entry is "Stuff her lovely flowers with your cock(s)";
-			now toggle entry is joannasexy rule;
 		[]
 		choose a blank row in table of fucking options;
 		if Player is female:
@@ -780,7 +777,6 @@ to say joannaselection:
 			now title entry is "Anal";
 			now description entry is "Try one of those squirming tentacle cocks up your ass";
 		now sortorder entry is 5;
-		now toggle entry is joannasexy rule;
 		[]
 		if HP of Joanna >= 5:
 			if Player is male:
@@ -788,27 +784,102 @@ to say joannaselection:
 				now title entry is "Mutual Fucking";
 				now sortorder entry is 6;
 				now description entry is "Fuck Joanna while she does you";
-				now toggle entry is joannasexy rule;
 				[]
 				if Cock Count of Player > 1 and Cock Length of Player * Cock Count of Player <= 64:
 					choose a blank row in table of fucking options;
 					now title entry is "Multi-stuff Joanna";
 					now sortorder entry is 7;
 					now description entry is "Put several cocks in one pussy";
-					now toggle entry is joannasexy rule;
 			[]
 			if Player is not female or Cunt Tightness of Player > 4:
 				choose a blank row in table of fucking options;
 				now title entry is "Multi-stuff player";
 				now sortorder entry is 8;
 				now description entry is "Take those tendrils all in one hole";
-				now toggle entry is joannasexy rule;
 	[]
 	sort the table of fucking options in sortorder order;
-	select an option from table of fucking options;
-	clear the screen;
+	repeat with y running from 1 to number of filled rows in table of fucking options:
+		choose row y from the table of fucking options;
+		say "[link][y] - [title entry][as][y][end link][line break]";
+	say "Pick the corresponding number> [run paragraph on]";
+	while sextablerun is 0:
+		get a number;
+		if calcnumber > 0 and calcnumber <= the number of filled rows in table of fucking options:
+			now current menu selection is calcnumber;
+			choose row calcnumber in table of fucking options;
+			say "[title entry]: [description entry]?";
+			if Player consents:
+				LineBreak;
+				now sextablerun is 1;
+				if title entry is:
+					-- "Bukkake":
+						say "[joannasex1]";
+					-- "Fellatio":
+						say "[joannasex2]";
+					-- "Cunnilingus":
+						say "[joannasex3]";
+					-- "Fuck Joanna":
+						say "[joannasex4]";
+					-- "Pussy fucked":
+						say "[joannasex5]";
+					-- "Anal":
+						say "[joannasex6]";
+					-- "Mutual Fucking":
+						say "[joannasex7]";
+					-- "Multi-stuff Joanna":
+						say "[joannasex8]";
+					-- "Multi-stuff player":
+						say "[joannasex9]";
+				WaitLineBreak;
+				if HP of Joanna < 5, increase HP of Joanna by 1;
+				now lastfuck of joanna is turns;
+				if lastjoannajuice is turns:
+					if lust of Joanna is 2:
+						say "     You can feel an oddly pleasant sensation suffusing you. Centered on your belly to begin, it spreads out through your body as Joanna's juice and her sexual fluids seep into you. You feel the telltale tingles of transformation as she's spread her plant-like infection to you from her juicy breasts. In the warmth of the afterglow in the sunny garden, you find it all pleasant and aren't upset by her actions. If anything, you find yourself feeling closer to her and looking forward to your next drink.";
+						now lust of Joanna is 3;
+					else:
+						say "     You can feel an oddly pleasant sensation suffusing you as Joanna's juice and her sexual fluids are absorbed into your body, spreading her plant-like infection into you.";
+					infect "Parasitic Plant";
+				else if lust of joanna > 1:
+					say "     You can feel an oddly pleasant sensation suffusing you as Joanna's sexual fluids are absorbed into your body, reacting with the latent plant-like infection she's bestowed upon you.";
+					if a random chance of 2 in 3 succeeds:
+						infect "Parasitic Plant";
+					else if "Microwaved" is listed in feats of Player:
+						say "[line break]WARNING: Sex shifting nanites detected! Allow?";
+						if Player consents:
+							LineBreak;
+							now skipcockchange is true;
+							follow the sex change rule;
+							now skipcockchange is false;
+						else:
+							LineBreak;
+							say "You wave a tiny microwave transmitter over the affected area. Ahhh, all clean!";
+					else:
+						now skipcockchange is true;
+						follow the sex change rule;
+						now skipcockchange is false;
+				else:
+					say "     You can feel an oddly pleasant sensation as Joanna's sweet saliva and fluids seep further into your body, warming your groin and exciting you.";
+					if "Microwaved" is listed in feats of Player:
+						say "[line break]WARNING: Sex shifting nanites detected! Allow?";
+						if Player consents:
+							LineBreak;
+							now skipcockchange is true;
+							follow the sex change rule;
+							now skipcockchange is false;
+						else:
+							LineBreak;
+							say "You wave a tiny microwave transmitter over the affected area. Ahhh, all clean!";
+					else:
+						now skipcockchange is true;
+						follow the sex change rule;
+						now skipcockchange is false;
+		else:
+			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
+	wait for any key;
+	clear the screen and hyperlink list;
 
-This is the joannasexy rule:
+[This is the joannasexy rule:
 	choose row Current Menu Selection in table of fucking options;
 	say "[title entry]: [description entry]?";
 	if Player consents:
@@ -881,7 +952,7 @@ This is the joannasexy rule:
 				now skipcockchange is true;
 				follow the sex change rule;
 				now skipcockchange is false;
-		wait for any key;
+		wait for any key;]
 
 to say joannasex1:
 	say "     Deciding the please the garden's loveliest flower, you break the deep-throating kiss and lower yourself to your knees. Her numerous genitalia offer plenty of choices for you to play with. You start by running your tongue over one of her cocks while your fingers stroke her thighs, then move to stroke the folds of her wet pussies. Dripping with sweet nectar, you stroke those lovely flowers, dipping a few fingers into each of them, switching from one to the next after a few strokes. Your mouth meanwhile has taken her cock in and the green tendril squirms down your throat, leaking her sweet, arousing juices into you. She runs her paws over your head while her other green shafts move on their own, rubbing against your face, smearing precum over you. After a good long suck on that one, you move to another cock, and then another. As you're switching to the last one, Joanna moans and sends the tendril down your throat moments before she cums hard. Her sweet cum blasts down into your belly and blasts across your face, painting you in her semen. Once the cumming tendrils have released you, you sit back and wipe her sugary semen from your face with one hand and lick it up. The other is firmly between your legs, playing with your aching loins until you cum moments later.";
