@@ -416,6 +416,16 @@ Strain of ceryneian deer-taur milk is "Ceryneian Deer-taur".
 Usedesc of ceryneian deer-taur milk is "[breastmilk use]".
 Scent of ceryneian deer-taur milk is "[breastmilk smell]".
 
+
+Table of Game Objects (continued)
+name	desc	weight	object
+"cheetah woman milk"	"[breastmilk Strain of cheetah woman milk]"	1	cheetah woman milk
+
+cheetah woman milk is a infectious milky grab object.
+Strain of cheetah woman milk is "Cheetah Woman".
+Usedesc of cheetah woman milk is "[breastmilk use]".
+Scent of cheetah woman  milk is "[breastmilk smell]".
+
 Table of Game Objects (continued)
 name	desc	weight	object
 "chinchilla milk"	"[breastmilk Strain of chinchilla milk]"	1	chinchilla milk
@@ -956,8 +966,6 @@ Scent of feral ceryneian deer milk is "[breastmilk smell]".
 Table of Game Objects (continued)
 name	desc	weight	object
 "feral cheetah milk"	"[breastmilk Strain of feral cheetah milk]"	1	feral cheetah milk
-
-cheetah milk is a grab object. [define early to resolve name conflicts]
 
 feral cheetah milk is a infectious milky grab object.
 Strain of feral cheetah milk is "Feral Cheetah".
