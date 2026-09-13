@@ -36,13 +36,13 @@ Definition: A person is fastlearning:
 Definition: A person (called x) is MalePreferred: [player wants to or must remain male]
 	if "Male Preferred" is listed in feats of x, yes;
 	if "Female Preferred" is listed in feats of x or "Herm Preferred" is listed in feats of x, no;
-	if "Single Sexed" is listed in feats of x and x is puremale, yes;
+	if "Single Sexed" is listed in feats of x and x is puremale and "Always Cocky" is listed in feats of x, yes;
 	no;
 
 Definition: A person (called x) is FemalePreferred: [player wants to or must remain female]
 	if "Female Preferred" is listed in feats of x, yes;
 	if "Male Preferred" is listed in feats of x or "Herm Preferred" is listed in feats of x, no;
-	if "Single Sexed" is listed in feats of x and x is purefemale, yes;
+	if "Single Sexed" is listed in feats of x and x is purefemale and "Always A Pussy" is listed in feats of x, yes;
 	no;
 
 Definition: A person (called x) is HermPreferred: [player wants to or must remain herm]

@@ -238,7 +238,8 @@ Table of Game Objects (continued)
 name	desc	weight	object
 "cheetah milk"	"The creamy milk collected from a Cheetah. It has a potent smell to it, yet it's slightly enticing."	1	cheetah milk
 
-cheetah milk is a grab object. It is milky. Understand "milk" as cheetah milk. cheetah milk is infectious. Strain of cheetah milk is "Cheetah Woman".
+[cheetah milk is a grab object.] [defined in Milk Items to prevent name conflicts]
+cheetah milk is milky. Understand "milk" as cheetah milk. cheetah milk is infectious. Strain of cheetah milk is "Cheetah Woman".
 the scent of cheetah milk is "The milk has a strongly feline scent that's rather enticing.".
 Usedesc of cheetah milk is "[drinkcheetahmilk]".
 

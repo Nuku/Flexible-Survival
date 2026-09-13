@@ -15,6 +15,7 @@ to say ResolveEvent Womanizing Husky:
 		add "Retreat, for now." to Husky_BadEnd_Choices1;
 		add "Avoid this area for good." to Husky_BadEnd_Choices1;
 		let Husky_BadEnd_Choice1 be what the player chooses from Husky_BadEnd_Choices1;
+		LineBreak;
 		if Husky_BadEnd_Choice1 is:
 			-- "Retreat, for now.":
 				say "     You turn around and leave, for now.";
@@ -27,14 +28,14 @@ to say ResolveEvent Womanizing Husky:
 		WaitLineBreak;
 		say "     Their form changes rapidly, rounder around the hips, a softer muzzle, longer fur on the head... Legs kneel in submission, tail low but wagging softly... Then, a pair of breasts begins to take form in their chest, growing as their last vestige of masculinity shrinks into a clit, the rest replaced with engorged labia, dripping excessively down their legs and onto the floor beneath them. It is safe to say that they became fully female as their, or her, maw got relentlessly assaulted by this beast of a male, cock so thick she has to open it to its full limit to fit all of that girth inside, with the alpha's balls heavily swinging back and forth with each thrust. Such a rapid transformation offers an evident conclusion, that this alpha husky is not only physically stronger, he is also far more infectious than others, [bold type]dangerously so[roman type], commanding utmost caution.";
 		say "     Neither of them have noticed you so far, though there is still a remote possibility that, were you to intervene, you could save the now female husky from certain enslavement. Losing this fight could, however and most certainly, carry [bold type]permanent consequences[roman type] for yourself.";
-		say "Knowing this, [bold type]what do you wish to do[roman type]?";
+		say "[line break]     Knowing this, [bold type]what do you wish to do[roman type]?";
 		let Husky_BadEnd_Choices2 be a list of text;
 		add "Confront the husky." to Husky_BadEnd_Choices2;
 		add "Retreat unnoticed." to Husky_BadEnd_Choices2;
 		let Husky_BadEnd_Choice2 be what the player chooses from Husky_BadEnd_Choices2;
+		LineBreak;
 		if Husky_BadEnd_Choice2 is:
 			-- "Confront the husky.":
-				LineBreak;
 				say "     You won't let this keep happening while you have something to say about it. What if there are more of them? What if there [italic type]could[roman type] be more of them? Saving this person is not only a good deed, it could also help keep your travels safer. You vault over your immediate obstacle and call out to the alpha husky, as you do not want to risk hurting the female. Standing now in his plain sight, he... does not stop doing what he's doing, merely looking at you with a grin. 'An audience! Or are you getting in line?' he taunts, and you respond by threatening him, announcing your intentions clearly. 'Picking up a fight with me, are you? I'm a bit busy here, but...' he then pushes the female away, his thick cock bobbing as he takes a step towards you. His stance suggests that he knows how to handle himself in a fight. 'You're a better catch, anyway.' The alpha husky smirks, exuding confidence, his canine dick throbbing as he takes another step in your direction. You look at the female, she seems stunned at first, confused, but a moment of clarity prompts her to run once the male turns away from her.";
 				say "     Now, it is you who are in a predicament...";
 				now inasituation is true;
@@ -59,12 +60,12 @@ to say ResolveEvent Womanizing Husky:
 					say "     The husky slows down for a bit, trying to catch his breath as his cock pulsates harder than ever, his knot swelling as he reaches the very edge of his orgasm. You look up at him, hazed in your own overwhelming lust for him, and continue to suck on it, encouraging him to let go. He does as his grip tightens around your head, pulling to against his knot as he cums directly into your throat. If it was hard to think before, now you find yourself in a sea of bliss and joy, like you have just found the place where you truly belong. With each spurt, a thick gush of cum travels down your gullet as you swallow, causing you to feel something below your belly. A craving of sorts, something that needs to be filled... your womb.";
 					say "     'I'll be keeping you...' he utters, panting after his orgasm subsides, 'you won't have to worry about anything.' He then urges you to stand up by grabbing your chin, pulling you to him for a kiss. It isn't gentle, he is rough with it, dominant, like he owns you. He does. 'You'll be joining the others, but I think you'll become my favorite...' the husky whispers, kissing you again, licking your face, his strong, fur-coated body embracing you, a warmth you don't want to see yourself without. 'A shame the other one has fled, but oh well... you'll do better. I'll collar you, pick a nice name for you, then knock you up at least twice a day. You'd like that, wouldn't you?' he asks you, almost as if he was talking to a dog. And you can't say no, because... you like it. You want all of that. You want his attention, his praising, his domination...";
 					say "     At last, he puts his furred arm around your neck as you two walk out of here. 'Let's go home. I'll finish claiming you there.'";
+					wait for any key;
 					trigger ending "Womanized Husky Slut";
 					end the story saying "You've been turned into a receptive feminine husky slut!";
 				else if fightoutcome is 30: [fled]
 					say "     Seeing this is probably too much to handle right now, you perform an evasive maneuver that leaves the husky blinking away in confusion, then start running. You hear him taunt you in the distance, and he chases you for a while, but you're faster and manage to lose him with a few creative diversions. Well now, it is best to take note of these hunting grounds and, perhaps, be more careful in the future.";
 			-- "Retreat unnoticed.":
-				LineBreak;
 				say "     This is more trouble than it's worth, and for someone who should've been more careful, like you. You are careful to not fall into situations like these, right? Well, you are cautious now, so you sneak out of here and hope you shall not cross paths with this one again.";
 		now Womanizing Husky is resolved;
 
@@ -75,7 +76,7 @@ Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered
 
 This is the Womanized Husky Slut rule:
 	if ending "Womanized Husky Slut" is triggered:
-		say "     The alpha husky that captured you continued to break down both your mind and body. Eventually, he was able to build you into his perfect submissive feminine partner, forgetting your previous masculine self entirely.";
+		say "     The alpha husky that captured you continues to break down both your mind and body. Eventually, he is able to build you into his perfect submissive feminine partner, forgetting your previous masculine self entirely.";
 		the Player is enslaved;
 
 Husky BadEnd ends here.
