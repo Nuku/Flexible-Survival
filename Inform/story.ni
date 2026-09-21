@@ -247,6 +247,7 @@ Include Sinking Swamp by Voidsnaps.
 Include SlutStorage by Wahn.
 Include SlutStorage_Eric by Wahn.
 Include Snapjaw Beach Camp by Gherod.
+Include Snuggle's loft by Sundered Dragon.
 Include Stablemasters by Sarokcat.
 Include Stables Hotel by Sarokcat.
 Include State Fair by Sarokcat.

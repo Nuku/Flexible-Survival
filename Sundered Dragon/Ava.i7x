@@ -8576,6 +8576,7 @@ to say SCUse:
 		add "Fox mods?" to Codex_section_Choices;
 	if "Touched by Madness" is listed in feats of Player:
 		add "Cyn?" to Codex_section_Choices;
+	add "Firbogs by Orange Horned?" to Codex_section_Choices;
 	let Codex_section_Choice be what the player chooses from Codex_section_Choices;
 	if Codex_section_Choice is:
 		-- "Only the Lonely?":
@@ -8805,7 +8806,7 @@ to say SCUse:
 						-- "Azure blue?":
 							say "     Remodulating your eyes.";
 							now Intelligence of Mistress Snuggle is 2;
-						-- "Ruby red":
+						-- "Ruby red?":
 							say "     Skrati will like these.";
 							now Intelligence of Mistress Snuggle is 3;
 						-- "Phosphorescent pink?":
@@ -8834,25 +8835,25 @@ to say SCUse:
 					if Fur_Choice is:
 						-- "Reddish-orange?":
 							say "     Rebooting.";
-							now Intelligence of Mistress Snuggle is 0;
+							now Libido of Mistress Snuggle is 0;
 						-- "Lustrous golden?":
 							say "     Oh, Al will love that.";
-							now Intelligence of Mistress Snuggle is 1;
+							now Libido of Mistress Snuggle is 1;
 						-- "Velvty black?":
 							say "     Well aren't you a sneaky fox.";
-							now Intelligence of Mistress Snuggle is 2;
+							now Libido of Mistress Snuggle is 2;
 						-- "Smokey grey?":
 							say "     Somewhere, Cyn takes note of your actions.";
-							now Intelligence of Mistress Snuggle is 3;
+							now Libido of Mistress Snuggle is 3;
 						-- "Striking silver?":
 							say "     That's one way to become a silver fox!";
-							now Intelligence of Mistress Snuggle is 4;
+							now Libido of Mistress Snuggle is 4;
 						-- "Sandy yellow?":
 							say "     Ryan would be flattered.";
-							now Intelligence of Mistress Snuggle is 5;
+							now Libido of Mistress Snuggle is 5;
 						-- "Sapphire blue?":
 							say "     Someone was a sparkle dog once.";
-							now Intelligence of Mistress Snuggle is 6;
+							now Libido of Mistress Snuggle is 6;
 						-- "Actually nevermind.":
 							say "     Ok, dye jobs are overated.";
 				-- "Pelt markings?":
@@ -8965,6 +8966,8 @@ to say SCUse:
 							say "     The books seems to sigh as the page go blank.";
 		-- "Cyn?":
 			say "     Though she is not one of Sundered_Dragon's creations, this glitchy fox herm can be recruited in the Ghost Fair section of the State Fair via walk-in once the Player has reached level 20 and gained the Touched by Madness feat. On arrival to this unusual place, the Player will be assaulted by vulpine Hallucination who, if defeated and fucked several times will join the Player as a potent pet and mobile shopkeeper. Though her little shop of horror may be pricey her services are quite powerful, additionally some of her scenes and items have been Co-authored by Sundered_Dragon. However, should the Player beat her without playing with Cyn too many times, she will become permanently hostile towards them in her own eldritch way.";
+		-- "Firbogs by Orange Horned?":
+			say "     Outside Event 'Act of Kindness' lv 7 unlocks Encampment Tree along with Giving and Knott. Talk with Giving who will ask for help about Knott. Givings Sex scenes are unlocked from the get go, to unlock Knotts you do the next quest. Knott will give the next mission 'Elusive Book' inside of the High Rise, this unlocks Knott's sex scenes. Inside the encampment tree there's a Bonfire and a Blossom Yard, at any time post unlocking the fast travel to the encampment tree you can access Teas and Weasel. Teas helps with training the player with no cost, along with giving the player about a quest. 'Weasel and His Fixer' is a lv 9 event that happens when you give Weasel food or water, he vanishes off to meet someone post event currently provides no reward, but Teas will inform the player about current matters regardless as he trusts the player more to where Giving currently stonewalls the player about the 'Artists' for the Fathnach and Beags, both are in the High Rise District. (sic)";
 
 
 Ava ends here.
