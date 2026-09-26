@@ -309,7 +309,7 @@ to say clamhatplus: [Note to Future Sunder: add the female Big Sis content when 
 				if nipple count of Player < 12:
 					increase nipple count of Player by 2;
 				if Breast size of Player < 20:
-					increase Breast size of Player is 4;
+					increase Breast size of Player by 4;
 				else:
 					increase Breast size of Player by 4;
 				say "     [italic type]An indeterminate amount of time later[roman type], you feel light dancing upon your eye lips and cold surface supporting you, while a jubilant choir of catty voices cheer around: 'Big Sis! Big Sis! 'Big Sis!' and roiling hunger you've rarely felt gnaws at the pit of your belly. Unable to open your eyes, you merely grope the air about, mewing for food. 'There-there Mommy's got you,' a loving familiar voice, purrs as you feel a set of massive paws clasping your core as heft into the air and deposited on a soft bed of snuggly fur. Sniffing the air, a sudden sense connection with this voice washes over as the scent of milk wafts about your nose, too hungry to fret over the hows and why. You lurch forward toward the source and latch on to a silky perky nub like a woman possessed as you lap at the cream. In that instant, you sense your body growing heavier as the cheering intensifies. Annoyed, you crack open an eye and whistle in surprise as you take in the sight of several margays crowded around you, alongside the reclining figure of the Megakitty nestled beneath you. 'Wow Big Sis is hungry! One purrs. 'I'll say she's almost bigger than Big Momma,' a second preens.";
@@ -328,7 +328,7 @@ to say clamhatplus: [Note to Future Sunder: add the female Big Sis content when 
 				if nipple count of Player < 12:
 					increase nipple count of Player by 2;
 				if Breast size of Player < 20:
-					increase Breast size of Player is 4;
+					increase Breast size of Player by 4;
 				else:
 					Increase Breast size of Player by 4;
 				if Cock count of Player >= 1 and cock length of Player >= 12:
