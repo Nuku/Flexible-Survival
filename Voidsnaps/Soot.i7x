@@ -95,6 +95,25 @@ to say SootConversationMenu:
 		now sortorder entry is 4;
 		now description entry is "Tell Soot that it seems like you've birthed quite a few eggs for him.";
 		sort the table of fucking options in sortorder order;
+	if "Captured Alon" is listed in Traits of Soot and resolution of Hard Bargain is 1 and "Hunting Seb" is not listed in Traits of Soot and Seb is not in Crystalline Crater:
+		choose a blank row in table of fucking options;
+		now title entry is "Ask Soot for your next target after Alon";
+		now sortorder entry is 5;
+		now description entry is "Ask Soot who the third addition to the dragon harem should be.";
+		sort the table of fucking options in sortorder order;
+	if "Captured Seb" is listed in Traits of Soot and resolution of Hard Bargain is 1 and "Hunting Caelus" is not listed in Traits of Soot and Caelus is not in Cloudy Castle:
+		choose a blank row in table of fucking options;
+		now title entry is "Ask Soot for your final target";
+		now sortorder entry is 6;
+		now description entry is "Ask Soot who the final addition to the dragon harem should be.";
+		sort the table of fucking options in sortorder order;
+	[]
+	if OffSpringCount of Seb is 4 and OffSpringCount of Caelus is 4 and OffSpringCount of Helios is 4 and OffSpringCount of Alon is 4:
+		choose a blank row in table of fucking options;
+		now title entry is "Ask Soot how his magical transformation is progressing";
+		now sortorder entry is 7;
+		now description entry is "It won't be long now before Soot becomes a full dragon. Ask him how things are going.";
+		sort the table of fucking options in sortorder order;
 	[]
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
@@ -118,6 +137,12 @@ to say SootConversationMenu:
 					say "[AlonHuntStart]";
 				else if (nam is "Tell Soot you've been upholding your end of the bargain"):
 					say "[QuestPartOneDone]";
+				else if (nam is "Ask Soot for your next target after Alon"):
+					say "[SebHuntStart]";
+				else if (nam is "Ask Soot for your final target"):
+					say "[CaelusHuntStart]";
+				else if (nam is "Ask Soot how his magical transformation is progressing"):
+					say "[QuestPartTwoDone]";
 				wait for any key;
 		else if calcnumber is 0:
 			now sextablerun is 1;
@@ -187,7 +212,7 @@ When Play begins:
 	now libido entry is 25; [ Target libido the infection will rise towards. ]
 	now loot entry is ""; [ Dropped item, blank for none. Case sensitive. ]
 	now lootchance entry is 0; [ Percentage chance of dropping loot, from 0-100. ]
-	now MilkItem entry is ""; [ Item to be given to the player if they have this infection and milk themselves. ]
+	now MilkItem entry is "dragonmancer milk"; [ Item to be given to the player if they have this infection and milk themselves. ]
 	now CumItem entry is ""; [ Item to be given to the player if they have this infection and jerk off. ]
 	now TrophyFunction entry is "-"; [ Function to generate a list of optional loot items, of which the player can choose one after victory. ]
 	now scale entry is 3; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
@@ -218,6 +243,10 @@ carry out DragonParchment:
 		say "     You pull out the parchment and say Soot's name. Almost immediately, the paper lights up, and words appear one at a time, etched in a glowing ink. 'Helios. The first. A prideful sort. Seek him where the fire still burns.' At the same time, an arrow appears below the text, swirling for a moment, before swiveling to point toward the [bold type]Capitol Building. [roman type]Maybe you should look there? The text hints that you'll find the dragon in a [bold type]hot place, like a vocanic crater.[roman type][line break]";
 	else if "Hunting Alon" is listed in Traits of Soot:
 		say "     You pull out the parchment and say Soot's name. Almost immediately, the paper lights up, and words appear one at a time, etched in a glowing ink. 'Alon. The second. Playful to a fault. Seek him where the water pools.' At the same time, an arrow appears below the text, swirling for a moment, before swiveling to point toward the [bold type]Reservoir. [roman type]Maybe you should look there? The text hints that you'll find the dragon in a [bold type]wet place, like the swamps.[roman type][line break]";
+	else if "Hunting Seb" is listed in Traits of Soot:
+		say "     Once again, you pull out the parchment and say Soot's name. The showy nature of the slowly scrawling, glowing calligraphy is lost on you by now, but you appreciate the effort all the same as you mumble the contents of the message to yourself. 'Seb. The third. The lazy king. Seek him where riches concentrate. The arrow this time is far more detailed than the last, and you can't help but feel like Soot's showing off his skills as it elegantly sweeps to point toward the [bold type]High Rise District.[roman type] It seems like you should look for some place with lots of [bold type]status symbols, or other things rich people might spend their money on.[roman type][line break]";
+	else if "Hunting Caelus" is listed in Traits of Soot:
+		say "     You open the parchment as usual and say Soot's name, but notice that the words take far longer to appear, flickering out and then regaining their bold magical glow. You wonder what that might mean as you murmur their meaning aloud. 'Caelus. The last. The golden child. Seek him where the sky stretches as far as the eye can see.' An elegantly filligried arrow appears beneath the words, and you're sure that must be what's taking up the lion's share of the magic. It spins slowly, pointing to the north, then the south, then sweeping in all directions before pointing to the [bold type]warehouse district[roman type]. After a moment, it spins again, seeming confused, but always returning to that same direction. Is it broken? Or is your target on the move?";
 	else:
 		say "     You pull out the parchment and say Soot's name, but strangely, the paper appears unreactive, staying its usual yellow color. Shrugging, you put it away. Maybe you should [bold type]Check whether there are any more dragons Soot wants you to find first.[roman type][line break]";
 
@@ -228,6 +257,14 @@ to say SootIntroduction:
 to say AlonHuntStart:
 	say "     Asking Soot whether he has another target for you to hunt, you eagerly lean over the desk, wondering aloud if they'll be as hard to fight as Helios was. Soot sips at a cup of tea, waving his hand to stop your questions and pulling your palm over to inspect the spot where the rune was before you used it on Helios. Drawing another, more intricate series of symbols, he releases it and waves you toward the exit. 'You know what to do! Find him, touch him, and I'll bring him here once you defeat him!' Despite his dismissive and jovial attitude, you can see the cup shake in his hands. Is he excited about getting to leave this place?";
 	TraitGain "Hunting Alon" for Soot;
+
+to say SebHuntStart:
+	say "     After the easy time you had convincing Alon to move to the pocket dimension, you feel confident in this whole 'dragon hunting' endeavor, so you decide that it's time to ask Soot for another target. After all, he needs two more to finish his ritual, and you can't wait to 'play your part.' Soot seems to pick up on your confidence, nodding along with your cocky speech, but you sense that he's slightly exasperated as he reaches over his table, adding more runic scribblings to the rune on your hand and returning to his increasing pile of parchment. You sneak a quick peek, but all you can understand is vague diagrams that appear to swim before your eyes, as though daring you to understand them. Unfortunately, all it causes is a headache, and you decide to leave while that's all that's happening.";
+	TraitGain "Hunting Seb" for Soot;
+
+to say CaelusHuntStart:
+	say "     With the end in sight, you ask Soot who the 4th target will be, hoping that you'll be able to capture him as easily as Seb. The dragomancer shakes his head with a small smile as you speak, then politely responds. 'I'm afraid the location of the final dragon has been a bit hard to pin down. I can hazard a guess where he roosts, but I can't be certain.' He takes your hand as usual, but you can't help but feel a certain wistfulness in his eyes as he draws an unfamiliar pattern in runes. 'Do be careful. I've grown somewhat attached to our little conversations.' Unlike before, he watches as you walk away, though the book in front of him remains open and he balances a quill between his scaled fingers, idly twirling it.";
+	TraitGain "Hunting Caelus" for Soot;
 
 Section 2 - After Defeating Helios
 
@@ -295,7 +332,7 @@ Priority	Name	EventObject	EventConditions	EventRoom	LastEncounterTurn	CoolDownTu
 1	"Whatever Works"	Whatever Works	"[EventConditions_WhateverWorks]"	Pocket Universe	2500	2	100
 
 to say EventConditions_WhateverWorks:
-	if "Alon Captured" is listed in traits of Soot and "Whatever Works" is not listed in traits of Alon: [list of conditions here]
+	if "Captured Alon" is listed in traits of Soot and "Whatever Works" is not listed in traits of Alon: [list of conditions here]
 		now CurrentWalkinEvent_ConditionsMet is true;
 
 Table of GameEventIDs (continued)
@@ -303,7 +340,7 @@ Object	Name
 Whatever Works	"Whatever Works"
 
 Whatever Works is a situation.
-ResolveFunction of A Whatever Works is "[ResolveEvent Whatever Works]".
+ResolveFunction of Whatever Works is "[ResolveEvent Whatever Works]".
 Sarea of Whatever Works is "Nowhere". [standard walkins that cannot be hunted for are Nowhere, but walkin events can also be made huntable as an alternate access way]
 Level of Whatever Works is 0. [minimum level to encounter randomly]
 
@@ -315,7 +352,66 @@ to say ResolveEvent Whatever Works:
 Section 4 - Interactions After Enough Egg Births
 
 to say QuestPartOneDone:
-	say "     Feeling a bit of pride at your productive capacity, you tell Soot that you've managed to fulfill quite a quota of dragon eggs so far. Is there much more that you need to do to give him a foothold in your world? Soot shakes his head at your exhuberance, letting out a wry chuckle. 'You've certainly done your part, but you've only finished roughly half of what's needed.' Tugging at the bandage on his arm, he shows off a fully dragconic appendage, free of the twisted appearance you're used to. 'As you can see, it's offered me a sort of stability I haven't seen in years, but I'm not quite finished.' Standing with a bashful smile, the dragomancer's newfound silhouette surprises you. He's much taller, and the robe around his body seems smaller on his frame. Are those claws peeking out under the hem? It seems he's trending more toward dragon features despite the peeking bits of humanity still showing under his bandaged face.";
+	say "     Feeling a bit of pride at your productive capacity, you tell Soot that you've managed to fulfill quite a quota of dragon eggs so far. Is there much more that you need to do to give him a foothold in your world? Soot shakes his head at your exhuberance, letting out a wry chuckle. 'You've certainly done your part, but you've only finished roughly half of what's needed.' Tugging at the bandage on his arm, he shows off a fully draconic appendage, free of the twisted appearance you're used to. 'As you can see, it's offered me a sort of stability I haven't seen in years, but I'm not quite finished.' Standing with a bashful smile, the dragomancer's newfound silhouette surprises you. He's much taller, and the robe around his body seems smaller on his frame. Are those claws peeking out under the hem? It seems he's trending more toward dragon features despite the peeking bits of humanity still showing under his bandaged face.";
 	TraitGain "Half-transformed" for Soot;
+
+to say QuestPartTwoDone:
+	say "     Beaming with pride, Soot listens to you as you ask him how his transformation's coming along. He pulls out a gigantic piece of parchment, tossing aside everything else and excitedly pointing to an unreadable arcane circle in the middle. 'At last, I have enough energy to fix this broken form. All thanks to you, friend!' Without wasting another moment, he begins to chant something low and oddly echoing, grimacing as bones crack and his body contorts. He places both hands on either side of the parchment, and a glow suffuses his fingers, flowing from the paper into his hands, then up and along his body. Patches of bare skin melt away, replaced by smooth scales, and his odd, misshapen body regains symmetry moment by moment, until, with a gasp, he stands bolt upright, the wings on his back spreading triumphantly. He pants, nearly falling forward, and brings a shaky hand in front of his face, flexing his fingers with a pleased laugh. 'I'm whole. I'm finally whole!' Crossing the table in a sudden lunge, he presses scaly lips to yours, kissing you fully on the mouth. He lingers there for a moment, then pulls back, clearing his throat. 'Ahem. It'll be a while before I can leave this place with you, but if you'll have me, I'd love to accompany you. This world is so strange.' Is he asking you out on a date? You'll have to think it over."; [Content ends here as of October 2026. I (Voidsnaps) will not be writing for Flexible Survival anymore, but anyone can feel free to take on this character! I believe this should be just enough of a dangling plot thread to let you take it where you like.]
+
+Section 5 - After Capturing Seb
+
+Table of NavInEvents (continued)
+Priority	Name	EventObject	EventConditions	EventRoom	LastEncounterTurn	CoolDownTurns	EncounterPercentage
+1	"Almost There"	Almost There	"[EventConditions_AlmostThere]"	Pocket Universe	2500	2	100
+
+to say EventConditions_AlmostThere:
+	if "Captured Seb" is listed in traits of Soot and "Almost There" is not listed in traits of Seb: [list of conditions here]
+		now CurrentWalkinEvent_ConditionsMet is true;
+
+
+Table of GameEventIDs (continued)
+Object	Name
+Almost There	"Almost There"
+
+Almost There is a situation.
+ResolveFunction of A Almost There is "[ResolveEvent Almost There]".
+Sarea of Almost There is "Nowhere". [standard walkins that cannot be hunted for are Nowhere, but walkin events can also be made huntable as an alternate access way]
+Level of Almost There is 0. [minimum level to encounter randomly]
+
+to say ResolveEvent Almost There:
+	say "     Wiping sweat off his brow as if he's just finished moving something heavy (and possibly sleeping...), Soot meets you at the entrance to the pocket dimension. 'Ah, excellent, you're here. You've been working quite hard. We're almost there.' The half-dragon smiles, his eyes slightly weary, but blazing with excitement. 'Let me know once you're ready for the final stretch of our little journey. I wouldn't dare rush someone so committed to helping me escape this place.' You return the mage's gratitude, stating that you're having quite a fun time fulfilling his requests, and promise not to keep him waiting for long.";
+	now Almost There is Resolved;
+	TraitGain "Almost There" for Seb;
+
+Table of NavInEvents (continued)
+Priority	Name	EventObject	EventConditions	EventRoom	LastEncounterTurn	CoolDownTurns	EncounterPercentage
+1	"Final Catch"	Final Catch	"[EventConditions_AlmostThere]"	Pocket Universe	2500	2	100
+
+to say EventConditions_AlmostThere:
+	if "Captured Caelus" is listed in traits of Soot and "Final Catch" is not listed in traits of Seb: [list of conditions here]
+		now CurrentWalkinEvent_ConditionsMet is true;
+
+
+Table of GameEventIDs (continued)
+Object	Name
+Final Catch	"Final Catch"
+
+Final Catch is a situation.
+ResolveFunction of A Final Catch is "[ResolveEvent Final Catch]".
+Sarea of Final Catch is "Nowhere". [standard walkins that cannot be hunted for are Nowhere, but walkin events can also be made huntable as an alternate access way]
+Level of Final Catch is 0. [minimum level to encounter randomly]
+
+to say ResolveEvent Final Catch:
+	if "Caelus Irate" is listed in Traits of Soot:
+		say "     Clapping for you as you walk in, Soot shakes his head with a rueful grin. 'I'm not certain exactly what you said to our newest guest, but he seems rather angry with you. Keeps calling you the village idiot. It seems he's satisfied with the cloud castle he made me shape for him, though...' Clasping your shoulder, Soot smiles warmly. 'Whenever you're ready, if you could... You know?' He seems excited by the prospect of completing his transformation, but he remains diplomatic.";
+	else if "Didn't Trick Caelus" is listed in Traits of Soot:
+		say "     Clapping for you as you walk in, Soot shakes his head with a rueful grin. 'I'm not certain exactly what you said to our newest guest, but he seems rather angry with you. This is the first time I've been given a review of a 'staff member.' It seems he's satisfied with the cloud castle he made me shape for him, though...' Clasping your shoulder, Soot smiles warmly. 'Whenever you're ready, if you could... You know?' He seems excited by the prospect of completing his transformation, but he remains diplomatic.";
+	else if "Tricked Caelus" is listed in Traits of Soot:
+		say "     Clapping for you as you walk in, Soot shakes his head with a rueful grin. 'I'm not certain exactly what you said to our newest guest, but he seems rather pleased with you. Keeps asking for you specifically. It seems he wants to make you his servant? I don't think I've ever met anyone quite this blinded by their own inflated sense of importance.' Clasping your shoulder, Soot smiles warmly. 'Whenever you're ready, if you could... You know?' He seems excited by the prospect of completing his transformation, but he remains diplomatic.";
+	now Final Catch is Resolved;
+	TraitGain "Final Catch" for Seb;
+
+
+
 
 Soot ends here.

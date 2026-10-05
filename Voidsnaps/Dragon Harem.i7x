@@ -67,8 +67,12 @@ to say Pocket Universedesc:
 	say "     A long hallway stretches before you, covered in doors. Most of them have chains across them and a vaguely unpleasant aura, as though someone or something is telling you to leave them alone. Four doors at the end of the hall appear to be different though, adorned with elaborate filligree that evokes elemental themes. Twisting flames of gold, sylized, faintly glowing wind in some sort of light green gemstone, dripping water that almost seems real until further inspection reveals it's various colors of diamond, and crystalline outcroppings covered with earth cover the respective doors, though you get the feeling that they're dull compared to their usual appearance. An ornate desk sits against the far wall, with Soot sitting patiently behind it.";
 	if "Helios Captured" is listed in Traits of Soot:
 		say "     The flaming door that contains Helios sits to the Northwest, with heat leaking out around its edges. ";
-		if "Alon Captured" is listed in Traits of Soot:
-			say "To the Southeast Alon's watery door stands, with the slightest bit of artificial sunshine filtering around the edges.";
+		if "Captured Alon" is listed in Traits of Soot:
+			say "To the Southeast, Alon's watery door stands, with the slightest bit of artificial sunshine filtering around the edges. ";
+			if "Captured Seb" is listed in Traits of Soot:
+				say "To the Southwest, a third door has taken on a life of its own, glittering like a gemstone and carved with intricate patterns. An earthy scent surrounds it, reminding you of moist soil. Seb is most definitely inside. ";
+				if "Captured Caelus" is listed in Traits of Soot:
+					say "The final door to the Northeast now matches its brethren, shining brightly and releasing a pleasant draft of the cleanest air you've smelled in a long time from whatever's on the other side. You can only assume that Caelus waits for you within.";
 
 Section 3 - Dragon Rooms
 
@@ -100,8 +104,8 @@ Southwest of Pocket Universe is Crystalline Crater.
 
 to say Crystalline Craterdesc:
 	say "     A starry sky stretches above you, and you find yourself staring down into a crater lined with deposits of various precious ores. A depression sits at the bottom, lined with the most shiny of gemstone clusters. Something about the place is quite calming, as though you could lie down on any patch of dirt and have the most comfortable nap of your life. ";
-	[if Seb is in Crystalline Crater:
-		say "Seb lies on his side in the nest at the bottom, stretching languidly and yawning as he notices you. One eye flicks open for a moment before he goes back to snoozing. A hint of arrogance permeates his behavior, as though he doesn't see you as a threat, despite your earlier clash.";]
+	if Seb is in Crystalline Crater:
+		say "Seb lies on his side in the nest at the bottom, stretching languidly and yawning as he notices you. One eye flicks open for a moment before he goes back to snoozing. A hint of arrogance permeates his behavior, as though he doesn't see you as a threat, despite your earlier clash.";
 
 [Water]
 Table of GameRoomIDs (continued)
@@ -118,6 +122,8 @@ to say Glittering Gatedesc:
 	if Alon is in Glittering Gate:
 		say "A familiar form lazes in the largest of the pools, floating on his back. Alon seems unperturbed by his captivity, giving off the vibe of a poolside tourist. You catch him looking at you with his tongue running over his lips, and you get the feeling that he's thinking of something interesting.";
 
+[Air]
+
 Table of GameRoomIDs (continued)
 Object	Name
 Cloudy Castle	"Cloudy Castle"
@@ -131,6 +137,6 @@ Northeast of Pocket Universe is Cloudy Castle.
 to say Cloudy Castledesc:
 	say "     Past the green filligree of the windy door, a breathtaking display stretches before you. Clouds have been shaped into something more solid, holding under your feet, but all directions appear to be open air, with a sunny sky above and nothing below. Breezy winds lick at your face as you look around, and the clouds pile on top of each other in the distance, creating an impressive castle. From the looks of it, there aren't many rooms, with the center mostly hollow, with a bowl-shaped depression. ";
 	[if Caelus is in Cloudy Castle:
-		say "Caelus lounges in the cloudy nest, looking up at you with disinterest and stretching his wings. His wingtip catches a gust and he hums a small tune in draconic baritone.";]
+		say "Caelus lounges in the cloudy nest, looking up at you with feigned disinterest and stretching his wings. His wingtip catches a gust and he hums a small tune in draconic baritone.";]
 
 Dragon Harem ends here.
