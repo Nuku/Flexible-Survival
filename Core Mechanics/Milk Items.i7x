@@ -412,9 +412,17 @@ name	desc	weight	object
 "ceryneian deer-taur milk"	"[breastmilk Strain of ceryneian deer-taur milk]"	1	ceryneian deer-taur milk
 
 ceryneian deer-taur milk is a infectious milky grab object.
-Strain of ceryneian deer-taur milk is "Ceryneian Deer-taur".
 Usedesc of ceryneian deer-taur milk is "[breastmilk use]".
 Scent of ceryneian deer-taur milk is "[breastmilk smell]".
+
+Table of Game Objects (continued)
+name	desc	weight	object
+"cheetah woman milk"	"[breastmilk Strain of cheetah woman milk]"	1	cheetah woman milk
+
+cheetah woman milk is a infectious milky grab object.
+Strain of cheetah woman milk is "Cheetah Woman".
+Usedesc of cheetah woman milk is "[breastmilk use]".
+Scent of cheetah woman  milk is "[breastmilk smell]".
 
 Table of Game Objects (continued)
 name	desc	weight	object
@@ -956,8 +964,6 @@ Scent of feral ceryneian deer milk is "[breastmilk smell]".
 Table of Game Objects (continued)
 name	desc	weight	object
 "feral cheetah milk"	"[breastmilk Strain of feral cheetah milk]"	1	feral cheetah milk
-
-cheetah milk is a grab object. [define early to resolve name conflicts]
 
 feral cheetah milk is a infectious milky grab object.
 Strain of feral cheetah milk is "Feral Cheetah".
@@ -3423,6 +3429,24 @@ Scent of automaton milk is "[breastmilk smell]".
 to say automaton milk use:
 	say "     Lifting the plastic bottle to your mouth, you take a drink from it, letting the automaton milk run over your tongue and down your throat. Tastes rich and a little like metal. Swishing it around in your mouth a little, you finish the bottle off, then stuff it back into your collection of 'empties'.";
 	PlayerDrink 15;
+
+Table of Game Objects (continued)
+name	desc	weight	object
+"Champion's Milk"	"A plastic water bottle filled with what is clearly milk. One could think it was a regular cow's milk, if someone hadn't written 'Champion's Milk' across the label on the bottle. You [italic type]could[roman type] drink it to quench your thirst. Who knows what else it might do to you though..."	1	Champion's milk
+
+Champion's Milk is a infectious milky grab object.
+Strain of Champion's Milk is "Ipotane".
+Usedesc of Champion's Milk is "[Champion's Milk use]".
+Scent of Champion's Milk is "[breastmilk smell]".
+
+to say Champion's Milk use:
+	say "     Lifting the plastic bottle to your mouth, you take a drink from it, letting the milk run over your tongue and down your throat. Tastes rich and animal-like. Swishing it around in your mouth a little, you finish the bottle off, then stuff it back into your collection of 'empties'.";
+	PlayerDrink 15;
+	if HP of Best Pony >= 1:
+		decrease gestation of child by a random number from 3 to 5;
+		if gestation of child < 1, now gestation of Child is 1;
+	if HP of Best Pony >= 2:
+		now scalevalue of Player is 4;
 
 Table of Game Objects (continued)
 name	desc	weight	object
