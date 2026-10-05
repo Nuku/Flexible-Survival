@@ -807,6 +807,7 @@ Include Bryony by Song.
 Include Bucky by Wahn.
 Include Bubble by Stripes.
 Include Cadmea by Prometheus.
+Include Caelus by Voidsnaps.
 Include Campus Gym by UrsaOmega.
 Include Callidora by Prometheus.
 Include Carl2.0 by Wahn.
@@ -1013,6 +1014,7 @@ Include Santa Claws by Wahn.
 Include Sarah by Wahn.
 Include Sascha by Voidsnaps.
 Include Savina by Kurainyx.
+Include Seb by Voidsnaps.
 Include Segis by Gherod.
 Include Serafino by Rikaeus.
 Include Seraphis by Vinickus.
