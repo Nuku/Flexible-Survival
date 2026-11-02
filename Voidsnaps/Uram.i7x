@@ -43,10 +43,10 @@ When Play begins:
 	Choose a blank row from Table of Random Critters;
 	now NewTypeInfection entry is false;
 	now Species Name entry is "Orog";
-	now Name entry is "Incestuous Orog Father";
 	add "Incestuous Orog Father" to infections of HumanoidList;
 	add "Incestuous Orog Father" to infections of MaleList;
 	add "Incestuous Orog Father" to infections of BipedalList;
+	now Name entry is "Incestuous Orog Father";
 	now enemy title entry is ""; [ Name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name. ]
 	now enemy Name entry is ""; [ Specific name of unique enemy. ]
 	now enemy type entry is 1; [ 0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters. ]
@@ -120,10 +120,10 @@ When Play begins:
 	Choose a blank row from Table of Random Critters;
 	now NewTypeInfection entry is false;
 	now Species Name entry is "Orog";
-	now Name entry is "Incestuous Orog Son";
 	add "Incestuous Orog Son" to infections of HumanoidList;
 	add "Incestuous Orog Son" to infections of MaleList;
 	add "Incestuous Orog Son" to infections of BipedalList;
+	now Name entry is "Incestuous Orog Son";
 	now enemy title entry is ""; [ Name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name. ]
 	now enemy Name entry is ""; [ Specific name of unique enemy. ]
 	now enemy type entry is 1; [ 0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters. ]
@@ -197,19 +197,17 @@ name	desc	weight	object
 
 orog man-milk is a grab object.
 orog man-milk is milky.
-Purified of orog man-milk is "distilled milk".
 orog man-milk is infectious.
 Strain of orog man-milk is "Incestuous Orog Son".
-Usedesc of orog man-milk is "[orog man-milk use]";
+Usedesc of orog man-milk is "[orog man-milk use]".
+Scent of orog man-milk is "You open the lid for a moment and take a sniff. Smells kinda like any other milk, really.".
 
 to say orog man-milk use:
-	say "Lifting the plastic bottle to your mouth, you take a drink from it, letting the milk run over your tongue and down your throat. Tastes rich, sweet, and comforting. Swishing it around in your mouth a little, you finish the bottle off, then stuff it back into your collection of 'empties'. As you stand there, a sudden wave of vertigo comes over you, and to your amazement, you watch as your body morphs, beoming slim and grey-skinned, with a healthy amount of muscle. Your cock grows to an obscene size for your body type, and your face morphs into a humanoid shape, with a square jaw and fluffy unkempt hair. You're unmistakably masculine, and there's no doubt that you're a pure male now. The lingering taste of milk on your tongue swells your manhood, and you can't shake the desire to fuck someone while drinking more. Idly, you wonder if you could find a daddy to take your cock.";
+	say "     Lifting the plastic bottle to your mouth, you take a drink from it, letting the milk run over your tongue and down your throat. Tastes rich, sweet, and comforting. Swishing it around in your mouth a little, you finish the bottle off, then stuff it back into your collection of 'empties'. As you stand there, a sudden wave of vertigo comes over you, and to your amazement, you watch as your body morphs, beoming slim and grey-skinned, with a healthy amount of muscle. Your cock grows to an obscene size for your body type, and your face morphs into a humanoid shape, with a square jaw and fluffy unkempt hair. You're unmistakably masculine, and there's no doubt that you're a pure male now. The lingering taste of milk on your tongue swells your manhood, and you can't shake the desire to fuck someone while drinking more. Idly, you wonder if you could find a daddy to take your cock.";
 	PlayerDrink 15;
 	LibidoBoost 15;
-	Orog_Son_Transformation;
-
-instead of sniffing orog man-milk:
-	say "You open the lid for a moment and take a sniff. Smells kinda like any other milk, really.";
+	if "Iron Stomach" is not listed in feats of Player:
+		Orog_Son_Transformation;
 
 to Orog_Son_Transformation:
 	turn player into "Incestuous Orog Son" silently;
@@ -227,16 +225,15 @@ orog cum is a grab object.
 orog cum is cum.
 orog cum is infectious.
 Strain of orog cum is "Incestuous Orog Father".
-Usedesc of orog cum is "[orog cum use]";
+Usedesc of orog cum is "[orog cum use]".
+Scent of orog cum is "You open the lid for a moment and take a sniff. Doesn't smell too bad actually, just kinda nutty and a little sweet.".
 
 to say orog cum use:
-	say "Lifting the plastic bottle to your mouth, you take a drink from it, letting the creamy cum run over your tongue and down your throat. Tastes rich and salty, with a vaguely addictive flavor. Swishing it around in your mouth a little, you finish the bottle off, then stuff it back into your collection of 'empties'. Seconds after you zip your pack closed, you feel a vibrating tingle wash over your body, doubling over as the intense sensation of a full-body change comes over you. Your skin ripples, changing to a dull grey hue that's perfectly smooth and hairless, while your body morphs into a larger form, swelling your chest into bouncy pecs even as your ass follows suit, jiggling as though begging to be touched. Your cock swells to an obscene size, and as you lie their stroking it, you can't help but lick your lips of leftover cum, the warm feeling it leaves you with demanding that you suck some more straight from the source. Idly, you wonder if you have any sons wandering the city that you can lavish your brand of fatherly affection on.";
+	say "     Lifting the plastic bottle to your mouth, you take a drink from it, letting the creamy cum run over your tongue and down your throat. Tastes rich and salty, with a vaguely addictive flavor. Swishing it around in your mouth a little, you finish the bottle off, then stuff it back into your collection of 'empties'. Seconds after you zip your pack closed, you feel a vibrating tingle wash over your body, doubling over as the intense sensation of a full-body change comes over you. Your skin ripples, changing to a dull grey hue that's perfectly smooth and hairless, while your body morphs into a larger form, swelling your chest into bouncy pecs even as your ass follows suit, jiggling as though begging to be touched. Your cock swells to an obscene size, and as you lie their stroking it, you can't help but lick your lips of leftover cum, the warm feeling it leaves you with demanding that you suck some more straight from the source. Idly, you wonder if you have any sons wandering the city that you can lavish your brand of fatherly affection on.";
 	PlayerDrink 15;
 	SanLoss 5;
-	Orog_Son_Transformation;
-
-instead of sniffing orog cum:
-	say "You open the lid for a moment and take a sniff. Doesn't smell too bad actually, just kinda nutty and a little sweet.";
+	if "Iron Stomach" is not listed in feats of Player:
+		Orog_Son_Transformation;
 
 Chapter 3 - NPCs
 
@@ -245,6 +242,7 @@ object	name
 Uram	"Uram"
 
 Uram is a man.
+Uram is in Dam Control Center.
 ScaleValue of Uram is 4. [human sized]
 Body Weight of Uram is 7. [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
 Body Definition of Uram is 8. [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
@@ -281,10 +279,9 @@ TwistedCapacity of Uram is true. [Twisted Characters can take any penetration, n
 Sterile of Uram is true. [steriles can't knock people up]
 MainInfection of Uram is "Incestuous Orog Father". []
 Description of Uram is "[UramDesc]".
-Conversation of Uram is { "<This is nothing but a placeholder!>" }.
-The scent of Uram is "[UramScent]".
-Uram is in Dam Control Center.
+The scent of Uram is "     Uram smells like masculine musk with a hint of milky sweetness, due to the never-ending leakage from his bare chest.".
 ImpregFunction of Uram is "[ImpregUram]".
+Icon of Uram is Figure of Uram_Clothes_icon.
 
 to say ImpregUram:
 	if ImpregTimer of Uram is 0: [not already pregnant]
@@ -302,10 +299,6 @@ to say UramDesc:
 	else if ImpregTimer of Uram > 0:
 		say "His stomach has a slight bulge, filled with the seeds of your incestuous union. You often catch him rubbing his stomach, and he seems to be walking around in a permanent state of arousal, letting his cockhead drool down his thigh from his ill-fitting loincloth. He openly stares at your cock, showing his pregnancy cravings.";
 
-to say UramScent:
-	say "     Uram smells like masculine musk with a hint of milky sweetness, due to the never-ending leakage from his bare chest.";
-
-
 Section 2 - First Meeting
 
 Table of GameEventIDs (continued)
@@ -315,6 +308,7 @@ Daddy's Here	"Daddy's Here"
 Daddy's Here is a situation.
 ResolveFunction of Daddy's Here is "[ResolveEvent Daddy's Here]".
 Sarea of Daddy's Here is "Sinking Swamps".
+
 when play begins:
 	add Daddy's Here to BadSpots of MaleList;
 	add Daddy's Here to BadSpots of IncestList;
@@ -322,24 +316,21 @@ when play begins:
 
 to say ResolveEvent Daddy's Here:
 	say "     As you explore the swamps, you fall into a sort of stupor. The singing cicadas and warmth of the air around you blur into the sound of your feet squishing on the muddy ground, and before you realize where you are, you've wandered off the beaten path. Broken from the mild trance, you look around, sighing as you recognize how utterly lost you are. 'Aw. Don't cry, sweetie. Are you lost?' An unfamiliar voice makes you jump, and you whirl to meet the newcomer, finding your face squished in two grey, soft mountains. 'Don't worry, Daddy's here.' The tall man coos, dragging you close and placing you in a bear hug. Despite the crushing strength surrounding you, you think you could manage to wriggle free if you wanted to, though the sweet scent wafting from those pecs isn't all that unpleasant. Maybe you should see what he wants?";
-	LineBreak;
-	say "     [bold type]Should you try to wiggle free?[roman type][line break]";
-	LineBreak;
-	say "     [link](Y)[as]y[end link] - Yes. You want no part of this!";
-	say "     [link](N)[as]n[end link] - No. The hug feels kinda nice, and you might get to feel up those pecs!";
+	say "[line break]     [bold type]Should you try to wiggle free?[roman type][line break]";
+	say "     ([link]Y[as]y[end link]) - Yes. You want no part of this!";
+	say "     ([link]N[as]n[end link]) - No. The hug feels kinda nice, and you might get to feel up those pecs!";
 	if Player consents: [Bye bye daddy orc]
 		LineBreak;
 		say "     Pushing with all your might, you extricate yourself from the man's grip. Without sparing him another glance, you run in the opposite direction, stumbling over muddy banks and nearly landing in dirty swamp water. You run for a few minutes before deciding you're far enough away, and the hum of cicadas is all you can hear. Pausing to catch your breath, you realize you've returned to the main path. Breathing a sigh of relief, you shoulder your pack, then continue, thankful that you didn't let yourself fall into whatever debauchery the mystery man had in mind. No one calls themselves 'daddy' without sexual motives!";
 		now Resolution of Daddy's Here is 100; [choked off content]
 	else: [Hello new daddy.]
-		LineBreak;
+		project Figure of Uram_Clothes_icon;
 		say "     Despite your misgivings, you can't shake just how comfortable the grey pillows sandwiching your face are, so you melt against them, nodding and squeaking out an affirmation that you ARE lost. Sadly, you have to come up for air eventually, and you struggle slightly, popping your face free of soft grey mountains and sucking in a grateful breath. 'Silly thing.' Pressing grey lips to your forehead, the orc-like man sweeps a ham hand underneath your rump as though you were a child, his bare chest jiggling as he steps forward. 'Can't leave you out here~. Let's take you home where it's warm and dry.' Humming to himself, he continues with leisurely strides, carrying you further from where he first grabbed you until you don't recognize the area around you. You feel a bit of trepidation at being treated like a child, but something about the fatherly presence hugging you to his pecs soothes you, and you feel a blush coloring your cheeks as you scan his masculine face. He does remind you of what you thought your dad looked like when you were a child, though you didn't feel the same heat in your lower half back then, and your father didn't have two upward-pointing tusks jutting from his lower lip. Do you secretly have daddy issues?";
 		say "     As you ponder the ramifications of this revelation, you notice that the sound of muddy steps changed to the wet slap of feet on concrete. Looking around, you realize that you've ended up somewhere new. The grey hulk has carried you into a spacious concrete room filled with desks and machinery. With a start, you realize that you must be inside the dam's control room. How long did you zone out? Gently, the orc sets you down in a nearby chair, his pecs wobbling as you get a better view of the man that calls himself 'daddy.' He's bigger than an average human- at least 7 feet tall, with a physique that would put most bodybuilders to shame, but an unmistakable softness to every part of him. Black hair cascades down his shoulders like a lion's mane, framing his doting green eyes. Not a stitch of clothing covers his body save a heroically strained leather loincloth that leaves nothing to the imagination.";
 		WaitLineBreak;
 		say "     'Now, why was a cutie like you lost in those scary woods?' the orc asks, kneeling to your level. 'You'll catch a cold or get captured by one of those mean froggies.' The orc is uncomfortably close, so much so you can feel the heat pouring off his skin. Fuck, why do you want to bury your face in those ridiculously juicy pecs? Stammering, you tear your eyes away from that glorious set of masculine tits. Explaining your situation, you feel like a child lost at a grocery store talking to a clerk- if the clerk were a barely clothed hunk. There's just something about him that disarms you. 'Oh, you must be so hungry after wandering for so long.' The orc coos with the air of a parent listening to a long-winded story. 'Why don't I give you a drink~?' Before you can stop him, the orc shoves his chest toward your face, intensifying the sweet scent you smelled before until you see its source, a gentle trickle dripping from the man's grey nipple.";
 		LineBreak;
 		say "     He doesn't force you to drink, but you get the idea you might hurt your host's feelings if you decline. [bold type]Do you want to risk whatever infection may come with sucking down some orc milk?[roman type][line break]";
-		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Yes. You can't resist the sweet, almost ice-cream-like scent pouring off of that muscular chest.";
 		say "     ([link]N[as]n[end link]) - No. You know better to ingest anything a mutant offers you these days.";
 		if Player consents:
@@ -363,19 +354,13 @@ Object	Name
 Dam Control Center	"Dam Control Center"
 
 Dam Control Center is a room.
-Description of Dam Control Center is "[DamControldesc]".
-
-to say DamControldesc:
-	say "     A cozy, well-kept control room with a huge window overlooking the reservoir on one side and various desks with control panels littered with buttons. The reservoir looks a little low, but thankfully whatever is draining it seems to be holding steady a few feet above the max waterline. Could this be what flooded the swamps? Puttering around the control room is Uram, still half nude and humming to himself as he keeps things well-kept. In one corner, you can see Uram's bed, a cot that's collapsed but still seems usable.";
+Description of Dam Control Center is "     A cozy, well-kept control room with a huge window overlooking the reservoir on one side and various desks with control panels littered with buttons. The reservoir looks a little low, but thankfully whatever is draining it seems to be holding steady a few feet above the max waterline. Could this be what flooded the swamps? Puttering around the control room is Uram, still half nude and humming to himself as he keeps things well-kept. In one corner, you can see Uram's bed, a cot that's collapsed but still seems usable.[line break]".
 
 Section 4 - Introduction
 
 Table of WalkinEvents (continued)
 Priority	Name	EventObject	EventConditions	EventRoom	LastEncounterTurn	CoolDownTurns	EncounterPercentage
-1	"Daddy Dearest"	Daddy Dearest	"[EventConditions_Daddy Dearest]"	Dam Control Center	2500	2	100
-
-to say EventConditions_Daddy Dearest:
-	now CurrentWalkinEvent_ConditionsMet is true;
+1	"Daddy Dearest"	Daddy Dearest	"[EventConditions_True]"	Dam Control Center	2500	2	100
 
 Table of GameEventIDs (continued)
 Object	Name
@@ -383,10 +368,10 @@ Daddy Dearest	"Daddy Dearest"
 
 Daddy Dearest is a situation.
 ResolveFunction of Daddy Dearest is "[ResolveEvent Daddy Dearest]".
-The level of Daddy Dearest is 0.
 Sarea of Daddy Dearest is "Nowhere".
 
 to say ResolveEvent Daddy Dearest:
+	project Figure of Uram_Clothes_icon;
 	if Resolution of Daddy's Here is 2:
 		say "     As you open the creaking metal door that to the hallway leading to the reservoir dam's control room, you come face to face with the orc from earlier. Actually, now that you've gotten a closer look, he seems to be heavier than the orcs you've seen. Maybe he's an orog? You think you've seen something about a grey skinned orc called an orog in a book you read once... Stammering an awkward hello, you swallow, trying to meet his eyes instead of staring at his bare chest. With a wide grin and a chuckle, the orc crosses his arms, accenting his pendulous pecs even more and drawing your attention to the twin streams of milk leaking from his nipples like a multispout sprinkler. 'Oh! Welcome back, sweetheart. Come right in~. I'm Uram, by the way, but you can just call me Daddy~.' He coos his words, turning to the side and flashing you a view of an ass that could crush a small animal, covered in only a loincloth that wedges those plush cheeks apart, as he makes his way back to the Dam Control Center.";
 	else if Resolution of Daddy's Here is 1:
@@ -397,7 +382,6 @@ to say ResolveEvent Daddy Dearest:
 			say "before you can stop yourself, letting your natural instincts take over. Thankfully he doesn't seem to care that you're being so forward, patiently returning your oral affection and cupping your ass to hold you on his lap. ";
 		say "     'Aw, daddy missed you too~.' the orc coos as he massages your rear, his hardening bulge brazenly flopped over your crotch and drooling through the loicloth that barely holds it at bay. 'Though I'm not a very good daddy, am I? I didn't even tell my boy what my name is! My name's Uram, but just call me Daddy.'";
 	now Daddy Dearest is Resolved;
-
 
 Section 5 -  Sex Scenes
 
@@ -413,16 +397,15 @@ to say OrogBreastFeed:
 	else if Resolution of Daddy's Here is 2: [Declined at first, asked about it later.]
 		say "     Ever since you saw Uram's dripping pec inches in front of your face, you've been unable to clear the image from your mind. Quietly, you ask Uram if his offer still stands, shuffling in place as he seems confused at your words. With your cheeks burning, you explain that you're thirsty and wonder aloud if he wants to let you drink from his leaky pecs. 'Daddy's always got time for you!' The bubbly orog says with a bright grin. Patting his lap, he kneels on the floor before you with his loincloth tented slightly to show his excitement. 'Such a good boy.' Uram coos as you settle into his lap, his breath coming in soft pants that cause his chest to jiggle, drawing your eye to his untouched pec. You latch onto it just as you feel his fist settle around your cock, and you chew at his nipple as he settles into a slow stroke, holding you to his freely flowing milk dispenser. It's clear that he's enjoying himself as much as you are, and you can feel a massive member drooling onto your stomach, pressed against your side, as you suck down impossibly rich, sweet milk. 'Cum for daddy, sweetheart.'";
 		say "     Those words are so perverse that you can't help yourself, fucking your daddy orc's hand with increasingly aggressive thrusts until you feel your full stomach coiling into knots, then releasing your hold on his tooth-marked pec to groan your satisfaction into the cleft between those pillowy mounds. You cum like a firehose, soaking the nude orc in thick ropes of jizz and painting his open mouth alongside a good swathe of his heaving chest, thrusting helplessly against his milking strokes. The hunky hulk sets you in a nearby chair, kneeling between your legs and cooing as he drags his tongue along your physique, gathering your seed and swallowing it gratefully. 'You're going to be such a good boy for Daddy. You'll come back and show me how much you love me, won't you?' He murmurs as he takes your softening cock between talented lips, cleaning off the last drips of your finish.";
-		say "    Wordlessly, you nod, lost in the afterglow and too tired from your sated stomach and emptied balls to protest the pleasure of being licked clean. You let your eyes drift closed as the transformation takes its toll, and before long, you're asleep.";
+		say "     Wordlessly, you nod, lost in the afterglow and too tired from your sated stomach and emptied balls to protest the pleasure of being licked clean. You let your eyes drift closed as the transformation takes its toll, and before long, you're asleep.";
 		now Resolution of Daddy's Here is 3;
 		NPCSexAftermath Player receives "Stroking" from Uram;
 	else if BodyName of Player is "Incestuous Orog Son" and Player is pure and Player is male: [Repeatable scene. Resolution of Daddy's Here must be 3. Can't get here without the resolution being 3 anyway, so it's not needed in the conditions.]
 		say "     Fascinated as always by your orog daddy's bountiful pecs, you waste no time grabbing them. They're your property, just like your slut of a father. With a cocky grin, you tell your father to take off his pants, tossing aside your gear and shoving him against a nearby counter, then mashing your hardening cock against his lazy behemoth. Darting your head forward, you clamp your mouth over his squishy pec, digging your teeth in and suckling at the milk that gushes forth from his savaged nipple with a satisfied growl. 'Such a hungry boy. Slow down, sweetie. Daddy's here.' Uram groans as he follows your orders, his hard-hard cock draping over your raging erection and drooling pre. One grey hand cups the back of your head as he spreads his thighs, letting your cock explore the space behind his balls until you feel the unmistakable heat of a needy pucker. 'That's it, baby. Daddy will take care of you.' He says as your cock teases his hole, welcoming you to ravage him.";
 		LineBreak;
 		say "     You could fill Uram up, if you wanted to. Your orog instincts are calling for you to breed his fertile hole, and with how full your balls feel, you're sure you'll fuck a son into him. [bold type]Do you want to fuck him?[roman type][line break]";
-		LineBreak;
-		say "     [link](Y)[as]y[end link] - Yes. Fuck him.";
-		say "     [link](N)[as]n[end link] - No. You just want to tease him.";
+		say "     ([link]Y[as]y[end link]) - Yes. Fuck him.";
+		say "     ([link]N[as]n[end link]) - No. You just want to tease him.";
 		if Player consents: [Pregnant daddy.]
 			LineBreak;
 			say "     With a needy moan, you surge forward, claiming the orog daddy's hole and forcing his legs into the air. Still, you greedily gulp from his chest, slapping your balls against his upturned ass and making a mess of the control board beneath you with sweat and milk that breaks through the sucking seal. He's so slick inside that you bottom out instantly, but his ass is so well-trained that it strokes your cock, sucking it like a talented mouth and massaging your length. Your coupling grows wetter by the second, aided by the softness welcoming your cock and milking every drop of pre. Like a sticky spiderweb, it connects your slapping balls to the orog's cheeks, marking Uram with a musky reminder of his son's love. It's impossible to slow down, and you doubt you would if you could. You're too full of energy from your gluttonous slurping and too turned on by the incestuous situation you've found yourself in.";
@@ -435,7 +418,7 @@ to say OrogBreastFeed:
 				TraitGain "Pregnancy Cravings" for Uram;
 		else: [Cum on his ass.]
 			LineBreak;
-			say "     You shake your head. While Uram's offer is tempting, you don't want to fuck oroglings into him right now. The sensation against your cockhead is divine, though, and your thoughts turn from suckling to your orog daddy's ass. How would it feel wrapped around your cock? Goaded by your inner perversion, you pull free of Uram's pec, admiring the bite marks you left on the otherwise pristine skin, then summoning your strength to flip the bulky orog onto his stomach, giving you a better view of his pre-streaked grey rump and dangling, half-hard cock  with big hairless balls. With a greedy groan, you sandwich your cock between those grey mountains, grinding your cock's underbelly against his puffy hole.";
+			say "     You shake your head. While Uram's offer is tempting, you don't want to fuck oroglings into him right now. The sensation against your cockhead is divine, though, and your thoughts turn from suckling to your orog daddy's ass. How would it feel wrapped around your cock? Goaded by your inner perversion, you pull free of Uram's pec, admiring the bite marks you left on the otherwise pristine skin, then summoning your strength to flip the bulky orog onto his stomach, giving you a better view of his pre-streaked grey rump and dangling, half-hard cock with big hairless balls. With a greedy groan, you sandwich your cock between those grey mountains, grinding your cock's underbelly against his puffy hole.";
 			say "     'Aw. Come on, baby. Fill daddy up~.' Uram pouts as you fuck his cheeks, wiggling his rear and looking over his shoulder at you. He has to bend his legs slightly for you, but he doesn't seem to mind, letting you do as you like as his chest presses against the control board, ruining the dials with incessantly leaking milk. 'You don't have to be gentle. Daddy wants every inch.' Gritting your teeth and barely resisting the urge to fuck that slutty hole into oblivion, you smack the orog daddy's ass, growling at him to shut up. You want to sample his ass before you fuck it, and you plan to make a mess. If he gets you off, you might let him take your dick next time. 'You're so mean to your daddy.' Uram whimpers, wiggling his ass and resting his cheek on his bicep, fixing you with those pretty green eyes. 'Oh well. Daddy loves you anyway. As long as you're happy~.'";
 			WaitLineBreak;
 			say "     Fuck. What was it about Uram's tone that set your balls churning? Hearing him so casually refer to himself as your father in the same sentence as begging for your cock makes your rock-hard tool ready to paint that ample canvas. As he reaches down to stroke himself, you double your efforts to get off, watching your cockhead appear between his cheeks and then disappear into the sticky heat between them. Finally, with a panting groan, you slap his ass cheeks, letting your cockhead follow his crack upward and painting his back with the evidence of your enjoyment. As you feel exhaustion settle over you, courtesy of your bulging, milk-stuffed stomach and the warm heat of the orog's hole against your still leaking tip, you collapse against his back, yawning and settling your arms around his waist. A short nap couldn't hurt.";
@@ -465,11 +448,12 @@ ResolveFunction of Hungry Daddy is "[ResolveEvent Hungry Daddy]".
 Sarea of Hungry Daddy is "Nowhere". [standard walkins that cannot be hunted for are Nowhere, but walkin events can also be made huntable as an alternate access way]
 
 to say ResolveEvent Hungry Daddy:
+	project Figure of Uram_Preg_icon;
 	say "     'There's my sweet boy~.' Uram gushes as you enter his home, crossing the distance between you and kneeling in front of you with difficulty, cradling his stomach. [if Player is not barecrotch]Tugging your pants down, he [else]He [end if]nuzzles your cock without delay, his tongue eagerly teasing its tip until you feel yourself hardening against his lips, spurred on by hot breath and eager kisses. 'Daddy's missed you so much. And I'm just so hungry.' He pants, letting your cock rest between his eyes and breathing deeply from your hairless sack. Licking your lips, you watch the desperate orog and tease him by waggling your cock from side to side, watching him follow it. The pregnancy hormones must have him bent out of shape, and you can't deny that the sight of him on his knees begging for dick has you feeling similarly. With a grin, you slot your cock between his lips, wordlessly agreeing to satisfy his craving.";
 	say "     A needy gag follows your cock sliding home, and greedy eyes stare up at you as Uram's hands clutch your rear, holding you there while he gulps hungrily, swallowing your pre like a man in the desert desperate for water. He wastes no time, sloppily pleasing your manhood, his lips growing slick with drool until you feel so slippery you worry you'll glide free of his lips. The intense suction pulling you deeper prevents that, though, greedily guiding every drop of your arousal down his throat. Taking fistfuls of your greedy daddy's hair, you take advantage of his position to thrust forward, reveling in the hot, twisting silk assaulting your shaft. Soon enough, you're pounding his throat, biting your lower lip, and watching his full, milky pecs bounce in time with every slap of your balls against his chin. You doubt you'll last long, but you plan to squeeze every bit of sensation out of his mouth before you finish!";
 	WaitLineBreak;
 	say "     Gurgling happily with every hilt of your painfully hard cock, the orog squeezes your ass, meeting every thrust as drool drips down your balls to mess up his chest with the result of his tender oral ministrations. His eyes have drifted closed, but every time you pull back, they flutter slightly, opening to be sure you're not pulling away from him. Warning your daddy as you feel your balls draw up, you slam home, fucking his face with shallow thrusts that wring desperate strangled noises from his stuffed throat. When you erupt, you worry that you'll drown him, but your fears seem unfounded as the orog swallows loudly, his nose dripping with the overflow and his eyes tearing up, staring up at you with desperate desire. Until your cock softens enough to flop free, the orog suckles at it, slurping up every twitching dribble. So desperate for every drop, Uram follows them down your balls, licking up the mess he made and thanking each orb with whorish suckles that mess his face further. With his face smeared in cum and his chest not much better, he licks his lips, murmuring in a hoarse voice. 'Thank you, baby,' he coos, chest heaving and cock messing the floor beneath his swollen stomach.";
-	say "     You let the heavily pregnant orog nurse on your softened cock until it grows too sensitive to continue, then pat his head, stating that you have other things to do. You'll feed him again soon, but for now, he has to be content with the load you gave him. it's hard to walk away from that pouting expression, but you're sure your daddy will understand.";
+	say "     You let the heavily pregnant orog nurse on your softened cock until it grows too sensitive to continue, then pat his head, stating that you have other things to do. You'll feed him again soon, but for now, he has to be content with the load you gave him. It's hard to walk away from that pouting expression, but you're sure your daddy will understand.";
 	TraitGain "Pregnancy Cravings" for Uram;
 	now Hungry Daddy is Resolved;
 
@@ -478,22 +462,27 @@ to say OrogFaceFuck:
 	say "     A needy gag follows your cock sliding home, and greedy eyes stare up at you as Uram's hands clutch your rear, holding you there while he gulps hungrily, swallowing your pre like a man in the desert desperate for water. He wastes no time, sloppily pleasing your manhood, his lips growing slick with drool until you feel so slippery you worry you'll glide free of his lips. The intense suction pulling you deeper prevents that, though, greedily guiding every drop of your arousal down his throat. Taking fistfuls of your greedy daddy's hair, you take advantage of his position to thrust forward, reveling in the hot, twisting silk assaulting your shaft. Soon enough, you're pounding his throat, biting your lower lip, and watching his full, milky pecs bounce in time with every slap of your balls against his chin. You doubt you'll last long, but you plan to squeeze every bit of sensation out of his mouth before you finish!";
 	WaitLineBreak;
 	say "     Gurgling happily with every hilt of your painfully hard cock, the orog squeezes your ass, meeting every thrust as drool drips down your balls to mess up his chest with the result of his tender oral ministrations. His eyes have drifted closed, but every time you pull back, they flutter slightly, opening to be sure you're not pulling away from him. Warning your daddy as you feel your balls draw up, you slam home, fucking his face with shallow thrusts that wring desperate strangled noises from his stuffed throat. When you erupt, you worry that you'll drown him, but your fears seem unfounded as the orog swallows loudly, his nose dripping with the overflow and his eyes tearing up, staring up at you with desperate desire. Until your cock softens enough to flop free, the orog suckles at it, slurping up every twitching dribble. So desperate for every drop, Uram follows them down your balls, licking up the mess he made and thanking each orb with whorish suckles that mess his face further. With his face smeared in cum and his chest not much better, he licks his lips, murmuring in a hoarse voice. 'Thank you, baby,' he coos, chest heaving and cock messing the floor beneath his swollen stomach.";
-	say "     You let the heavily pregnant orog nurse on your softened cock until it grows too sensitive to continue, then pat his head, stating that you have other things to do. You'll feed him again soon, but for now, he has to be content with the load you gave him. it's hard to walk away from that pouting expression, but you're sure your daddy will understand.";
+	say "     You let the heavily pregnant orog nurse on your softened cock until it grows too sensitive to continue, then pat his head, stating that you have other things to do. You'll feed him again soon, but for now, he has to be content with the load you gave him. It's hard to walk away from that pouting expression, but you're sure your daddy will understand.";
 	NPCSexAftermath Uram receives "OralCock" from Player;
 
 Section 6 - Talk and Fuck Menus
 
-Instead of conversing Uram:
+instead of conversing Uram:
+	project Figure of Uram_Clothes_icon;
 	say "[UramTalkMenu]";
 
-Instead of fucking Uram:
+instead of fucking Uram:
 	if lastfuck of Uram - turns < 3:
-		say "     The orog daddy frowns and pats your cheeks, kissing your forehead. 'Sorry, baby. I know you're hungry, but Daddy needs a little while to build up a good supply. I don't want you going hungry! Come back in just a little while and you can do whatever you want to me.' Blatantly staring at your crotch, ram licks his lips, his expression promising that he's as disappointed as you are.";
+		project Figure of Uram_Clothes_icon;
+		say "     The orog daddy frowns and pats your cheeks, kissing your forehead. 'Sorry, baby. I know you're hungry, but Daddy needs a little while to build up a good supply. I don't want you going hungry! Come back in just a little while and you can do whatever you want to me.' Blatantly staring at your crotch, Uram licks his lips, his expression promising that he's as disappointed as you are.";
 	else:
+		if impregtimer of Uram > 12:
+			project Figure of Uram_Preg_icon;
+		else:
+			project Figure of Uram_Naked_icon;
 		say "[UramFuckMenu]";
 
 to say UramFuckMenu:
-	LineBreak;
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]
@@ -508,6 +497,7 @@ to say UramFuckMenu:
 		now sortorder entry is 2;
 		now description entry is "Uram looks hungry. Offer him your cock";
 	[]
+	sort the table of fucking options in sortorder order;
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
 		say "[link][y] - [title entry][as][y][end link][line break]";
@@ -520,23 +510,21 @@ to say UramFuckMenu:
 			choose row calcnumber in table of fucking options;
 			say "[title entry]: [description entry]?";
 			if Player consents:
-				let nam be title entry;
 				now sextablerun is 1;
-				if (nam is "Ask for a drink"):
-					say "[OrogBreastFeed]";
-				else if (nam is "Feed the Pregnant Orog"):
-					say "[OrogFaceFuck]";
-				wait for any key;
+				if title entry is:
+					-- "Ask for a drink":
+						say "[OrogBreastFeed]";
+					-- "Feed the Pregnant Orog":
+						say "[OrogFaceFuck]";
 		else if calcnumber is 0:
 			now sextablerun is 1;
 			say "     You step back from the Orog Daddy, shaking your head slightly as he gives a questioning look.";
-			wait for any key;
 		else:
-			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options], or 0 to exit.";
+	wait for any key;
 	clear the screen and hyperlink list;
 
 to say UramTalkMenu:
-	LineBreak;
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]
@@ -545,6 +533,7 @@ to say UramTalkMenu:
 	now sortorder entry is 1;
 	now description entry is "How did Uram get into this place? Why is he in the Dam Control Center";
 	[]
+	sort the table of fucking options in sortorder order;
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
 		say "[link][y] - [title entry][as][y][end link][line break]";
@@ -557,21 +546,19 @@ to say UramTalkMenu:
 			choose row calcnumber in table of fucking options;
 			say "[title entry]: [description entry]?";
 			if Player consents:
-				let nam be title entry;
 				now sextablerun is 1;
-				if (nam is "Ask about Uram's past"):
+				if title entry is "Ask about Uram's past":
 					say "[UramPast]";
-				wait for any key;
 		else if calcnumber is 0:
 			now sextablerun is 1;
 			say "     You step back from the Orog Daddy, shaking your head slightly as he gives a questioning look.";
-			wait for any key;
 		else:
-			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options], or 0 to exit.";
+	wait for any key;
 	clear the screen and hyperlink list;
 
 to say UramPast:
 	say "     Curiosity gets the better of you, and you ask Uram how he came to be in this place- and why he was wandering the swamps when you got lost. How is the reservoir dam connected to him? 'I dunno.' He says with a shrug. 'I woke up in this place, surrounded by all these little yellow notes. They said all sorts of weird stuff, like how to work the dials, and one of them was really sad. Anyway, I just started wandering around because I was bored!' Rooting around in a nearby drawer, he pulls out out a stack of post its and hands them to you. Shaky handwriting covers the papers in varying levels of coherency, filled with technical jargon, and one of them reads a bit like a dying man's note.";
-	say "     'These may be my last  words. It's been a few days since I watched the others melt away and disappear into the water. I can only assume that I'm next. I've left instructions to control the water level in the dam. My only regret is that I never started a family of my own.' The note ends abruptly, trailing off the page. As you finish reading, you feel your eyes drawn to the drawer, and with a start, you notice Uram's likeness on a book. It proudly declares 'Mathfinder: Dragons and Drudgery! Racial Expansion.' With a start, you realize that Uram may have written this note before he transformed. Maybe his love of fantasy and desire to start a family combined to make him the way he is? You debate telling him the truth, but you doubt it would accomplish anything, and he seems happy enough.";
+	say "     'These may be my last words. It's been a few days since I watched the others melt away and disappear into the water. I can only assume that I'm next. I've left instructions to control the water level in the dam. My only regret is that I never started a family of my own.' The note ends abruptly, trailing off the page. As you finish reading, you feel your eyes drawn to the drawer, and with a start, you notice Uram's likeness on a book. It proudly declares 'Mathfinder: Dragons and Drudgery! Racial Expansion.' With a start, you realize that Uram may have written this note before he transformed. Maybe his love of fantasy and desire to start a family combined to make him the way he is? You debate telling him the truth, but you doubt it would accomplish anything, and he seems happy enough.";
 
 Uram ends here.

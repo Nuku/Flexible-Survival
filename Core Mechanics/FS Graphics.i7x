@@ -790,6 +790,9 @@ Figure of TSW_naked_icon is the file "TSW_naked.jpg".
 Figure of TSW_sansNecklace_icon is the file "TSW_sansNecklace.jpg".
 Figure of Tyke_clothed_icon is the file "Tyke_clothed.jpg".
 Figure of Tyke_naked_icon is the file "Tyke_naked.jpg".
+Figure of Uram_Clothes_icon is the file "Uram_Clothes.jpg".
+Figure of Uram_Naked_icon is the file "Uram_Naked.jpg".
+Figure of Uram_Preg_icon is the file "Uram_Preg.jpg".
 Figure of Urik_ass_icon is the file "Urik_ass.jpg".
 Figure of Urik_clothed_icon is the file "Urik_clothed.jpg".
 Figure of Urik_naked_icon is the file "Urik_naked.jpg".
@@ -2202,6 +2205,9 @@ title	icon(figure name)	artist	backgroundcolor	formatrule
 "Tristian"	Figure of Tristian_icon	"Enaya-TheWhiteWolfen"	g-black	"normal"
 "Tyke_clothed"	Figure of Tyke_clothed_icon	"TylerAz"	g-white	"normal"
 "Tyke_naked"	Figure of Tyke_naked_icon	"TylerAz"	g-white	"normal"
+"Uram_Clothes"	Figure of Uram_Clothes_icon	"UbeNYamz"	g-white	"normal"
+"Uram_Naked"	Figure of Uram_Naked_icon	"UbeNYamz"	g-white	"normal"
+"Uram_Preg"	Figure of Uram_Preg_icon	"UbeNYamz"	g-white	"normal"
 "Urik_ass"	Figure of Urik_ass_icon	"Kupo Klein"	g-white	"normal"
 "Urik_clothed"	Figure of Urik_clothed_icon	"Kupo Klein"	g-white	"normal"
 "Urik_happy_face"	Figure of Urik_happy_face_icon	"SineAlas"	g-black	"normal"
